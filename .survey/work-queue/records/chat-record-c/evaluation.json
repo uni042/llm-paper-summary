@@ -1,70 +1,54 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-55fa2104d18bc1f9a648de40",
+  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "evaluation",
-  "attempt_id": "attempt-257f6eb558ebdd1e9a226b04",
-  "job_id": "job-research-d09e1c8e52097070",
   "data": {
     "hardware": [
-      "AWS EC2 g6e.48xlarge: 384 CPUコア、1536GB RAM、8×NVIDIA L40S",
-      "4×AWS EC2 g6e.24xlarge: 合計768 CPUコア、3072GB RAM、16×NVIDIA L40S"
+      "2×NVIDIA A100 SXM4 40GB（二地域実機試験）",
+      "2×NVIDIA H100 SXM5 80GB（二地域方向確認）",
+      "19地域の均質H100相当（履歴再生モデル）"
     ],
     "software": [
-      "PyTorch",
-      "HuggingFace Transformers",
-      "CUDA IPCプラグイン",
-      "Python約5,500行 + CUDA約600行の試作実装"
+      "vLLM",
+      "NVIDIA DCGM",
+      "WattTime V3 MOER API",
+      "Solyx AI Grid本番圧力ルータ"
     ],
     "model": [
-      "Llama2-7B",
-      "Llama2-13B",
-      "各モデル4種類のLoRAアダプタ"
+      "Llama-3.1-8B-Instruct"
     ],
     "datasets": [
-      "GSM8Kプロンプト",
-      "Azure Functions 14日生産トレースから抽出した到着系列"
+      "約48時間の合成・持続到着ワークロード（約196万要求ターン）",
+      "2025-07-06〜2026-07-06の19地域・8760時間MOER系列"
     ],
     "baselines": [
-      "InstaInfer",
-      "ServerlessLLM",
-      "dLoRA",
-      "vLLM"
+      "ラウンドロビン",
+      "炭素補正なしの本番圧力ルータ",
+      "モデル化した炭素非認識serve-local/spill負荷分散"
     ],
-    "correctness": "生成品質の近似は導入せず、基盤重みとLoRA更新を未結合で計算する。主評価はシステム遅延・費用・SLOであり、生成精度の比較実験は中心ではない。",
+    "correctness": "目的は出力品質ではなく配送機構・炭素帰属の妥当性である。実機では約196万要求ターンを配送失敗0件で処理し、各要求の配送時予測MOERと実行後履歴MOERを記録して精算する。モデルや生成手法は腕間で固定し、炭素配置以外の変数を可能な範囲で分離する。",
     "settings": [
       {
-        "name": "到着パターン",
-        "description": "Azure Functionsトレースを到着間隔の変動係数で、予測可能（CoV≤1）、通常（1<CoV≤4）、バースト（CoV>4）に分類し、各類型から8本の4時間区間を無作為抽出して関数へ割り当てる。"
+        "name": "A100二地域実機",
+        "description": "AZPSとPJM-DC、2×A100 SXM4 40GB、約48時間。5 arrivals/sのセッション開始率、最大同時進行256。5配送腕を同時実行し、主要比較は炭素重み1.0と補正なし圧力ルータ。"
       },
       {
-        "name": "SLO",
-        "description": "先頭トークン到達時間のSLOを7Bで2.5秒、13Bで4秒に設定し、適応バッチが制約内に収まるかを測る。"
+        "name": "H100二地域実機",
+        "description": "ERCOT North-CentralとSOCO、2×H100 SXM5 80GB。初期signal-index方式の地域順位逆転を発見し、絶対MOER方式で清浄地域への移動方向を確認。期間が短く精算削減率は主張しない。"
       },
       {
-        "name": "クラスタ評価",
-        "description": "単一8 GPUノードと4ノード16 GPUクラスタを使い、8関数同時実行、強スケーリング、弱スケーリング、2 GPU上4関数のスループットを評価する。"
+        "name": "1年履歴再生",
+        "description": "19 CONUS地域、8760時間。地域当たり瞬間需要50%上限、40%の多ターン負荷を起点地域へ平均2時間固定。固定0.104 J/出力トークンのH100飽和相当を用い、5日ブロック・1万回ブートストラップで信頼区間を算出。"
       }
     ],
-    "methodology": "モデルとアダプタの組合せを独立サーバレス関数として扱い、実トレース由来の到着時系列で呼び出す。コールドスタート、TTFT、TPOT、全体遅延、GPU/ホスト使用量、金銭費用、費用効率、トークン/要求スループットを測る。基盤共有、事前読み込み、動的退避、適応バッチの各機構を無効化する切り分け実験も行う。",
-    "scope": "Llama2-7B/13BとL40Sを中心とする2025年時点の単一・小規模クラスタ評価で、最新MoE、異種GPU、巨大モデル、複数リージョンは未検証。到着はAzure Functions一般トレースでありLLM専用生産トレースではなく、入力内容はGSM8Kを使う。",
-    "workloads": [
-      "予測可能到着",
-      "通常到着",
-      "バースト到着",
-      "8 LoRA関数クラスタ実行",
-      "強・弱スケーリング"
-    ],
-    "metrics": [
-      "TTFT",
-      "TPOT",
-      "end-to-end latency",
-      "cold-start rate/time",
-      "monetary cost",
-      "cost-effectiveness",
-      "token throughput",
-      "request throughput",
-      "SLO violation"
-    ],
-    "reproducibility": "ハードウェア、モデル、LoRA数、到着トレース処理、SLO、主要アルゴリズム、実装規模は本文に記載される。一方、著者公式コードURLは一次資料から確認できず、完全な再実行性は公開実装付き研究より低い。"
+    "methodology": "実機試験は同じワークロードを要求単位で無作為に各腕へ割り当てるが、腕同士は同じGPU・待ち行列・圧力状態を共有するため相互干渉がある。したがって実機の遅延差・1.45%排出差は記述的結果として扱う。長期再生は実機で測れない季節・地域多様性を補う一方、履歴MOERを配送にも直接使う完全予見条件なので、予測誤差を含む本番削減率の推定ではなく機会上限として解釈する。",
+    "scope": "GPUに帰属する運用時CO2のみを評価し、施設PUE、ネットワーク、ハードウェア製造時排出は除外する。再生では均質GPU、固定J/トークン、概ね均等な起点需要を仮定し、地域別実GPU台数、通信遅延、接頭辞キャッシュ喪失、物理的な再生可能電力余力を含めない。"
+  },
+  "reservation": {
+    "claim_id": "claim-55fa2104d18bc1f9a648de40",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
   }
 }

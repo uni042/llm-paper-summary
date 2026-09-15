@@ -2,21 +2,96 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c6850610f1696da302c47466",
-  "job_id": "job-research-78cb8002e7b50e8e",
+  "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
+  "job_id": "job-research-77f3e91a5c224daf",
   "data": {
-    "overview": "16並列の学習ロールアウトではAgentZipが平均サンドボックス所有メモリを88.55%削減し、zswapの48.66%とKSM+zswapの51.24%を大幅に上回る。同時に壁時計時間は無圧縮比1.403倍で、zswapの1.436倍、KSM+zswapの1.517倍より短い。4候補の生成・選別ではメモリを64.29%削減し、比較方式の4.86〜21.25%を上回る一方、壁時計時間は1.468倍でzswap/KSM+zswapより遅く、容量との交換条件が残る。復元先読みを外して温かいページまで積極圧縮するとロールアウトのメモリ削減は94.22%まで増えるが3.052倍へ減速する。複数の先読みを重ねると減速を1.403倍まで戻せるため、AgentZipの容量利得を実用的な遅延へ近づける主要因は圧縮率そのものより需要復元を重要経路から外すことにある。",
+    "overview": "P-LoRAは、予測でアダプタ転送を要求到着前へ移し、固定ページで異種rankの断片化を抑えることで、反応型LoRAサービングのコールドスタートとメモリ管理遅延を同時に削減した。Llama2-7Bの中央値コールドスタートはS-LoRAの68msから22msへ68%短縮し、1000アダプタ時のスループットはS-LoRAの95 req/sから145 req/sへ1.52倍になった。500 req/sでは平均TTFTがS-LoRA 520msから340msへ35%短縮し、TPOTも68.5msから52.3msへ低下する。メモリ面では平均断片化率12%で、従来ブロック35%、S-LoRA 25%より低く、混合rankの利用率はS-LoRA 68%に対して87%を維持した。",
     "key_results": [
-      {"metric":"平均サンドボックス所有メモリ","value":"Rolloutで88.55%削減、GAFで64.29%削減","baseline":"無圧縮","condition":"16並列Rollout / 4並列GAF","interpretation":"テンプレート差分と兄弟群辞書が、ページ単独圧縮や完全一致共有では使えない冗長性を回収する。"},
-      {"metric":"既存Linux構成との容量差","value":"Rollout: zswap 48.66%、KSM+zswap 51.24%に対し88.55%","baseline":"zswap、KSM+zswap","condition":"R2E-Gym parallel rollout","interpretation":"コピーオンライト後に残る近似的ページ間類似性を使うことが大きな差になる。"},
-      {"metric":"壁時計時間倍率","value":"Rollout 1.403倍、GAF 1.468倍","baseline":"無圧縮=1.0","condition":"完全AgentZip","interpretation":"Rolloutでは既存圧縮方式より容量と遅延の双方で優れるが、GAFでは大きな容量削減と引き換えにzswapより遅い。"},
-      {"metric":"復元先読みの効果","value":"Rolloutの減速3.052倍→1.403倍、需要復元増幅0.419→0.147","baseline":"先読みなしAgentZip","condition":"stride→local temporal→cohort temporal→tool hotsetを累積","interpretation":"温かいページを圧縮対象へ含めるために発生する需要復元の多くを事前復元へ移す。"},
-      {"metric":"圧縮方式の組合せ","value":"辞書符号化ページ約60%削減、メモリ削減88.63%→88.55%をほぼ維持、減速2.703倍→1.403倍","baseline":"cohort dictionary only","condition":"Rollout","interpretation":"安価なテンプレート差分と連長圧縮を先に使い、共有辞書の高いCPU費用を必要なページへ限定する。"},
-      {"metric":"需要復元の尾部遅延","value":"p50 3.47 ms、p95 110.52 ms、p99 223.27 ms","baseline":"非同期先読み復元 p50 0.16 ms、p95 1.50 ms、p99 8.09 ms","condition":"圧縮ページ復元経路","interpretation":"復号計算より、需要フォルトでゲストを止めることの尾部費用が大きいため先読みが重要になる。"}
+      {
+        "metric": "Llama2-7Bの中央値コールドスタート",
+        "value": "68 ms → 22 ms（68%削減）",
+        "baseline": "S-LoRA",
+        "condition": "要求前プリフェッチを有効化",
+        "interpretation": "予測が当たった要求ではCPU→GPUアダプタ転送をTTFTのクリティカルパスから外せる。"
+      },
+      {
+        "metric": "予測精度",
+        "value": "全時間帯平均86%、30秒窓で最大89%",
+        "baseline": "LSTM予測器",
+        "condition": "Azure Functions由来アクセス系列",
+        "interpretation": "平日日中88〜92%に対し週末夜間70〜78%で、先読み利益がワークロード規則性に依存する。"
+      },
+      {
+        "metric": "1000アダプタ時スループット",
+        "value": "145 req/s vs 95 req/s（1.52倍）",
+        "baseline": "S-LoRA",
+        "condition": "同時アダプタ数を最大1000まで増加",
+        "interpretation": "反応型読み込みと断片化管理の費用がアダプタ数とともに増える条件で差が広がる。"
+      },
+      {
+        "metric": "アダプタ読み込み遅延",
+        "value": "45 ms → 8 ms",
+        "baseline": "vLLM",
+        "condition": "遅延内訳",
+        "interpretation": "多くの転送を要求到着前へ隠すため、要求経路上に残る読み込み時間が約82%減る。"
+      },
+      {
+        "metric": "メモリ管理遅延",
+        "value": "15 ms → 6 ms",
+        "baseline": "vLLM",
+        "condition": "遅延内訳",
+        "interpretation": "固定ページ化により可変長領域の探索・圧縮・追い出しに伴う待ちを削減する。"
+      },
+      {
+        "metric": "平均メモリ断片化率",
+        "value": "P-LoRA 12%、従来ブロック35%、S-LoRA 25%",
+        "baseline": "従来ブロック / S-LoRA",
+        "condition": "24時間の高churnアダプタ入替え",
+        "interpretation": "物理連続領域を要求しない固定ページが外部断片化を抑える。"
+      },
+      {
+        "metric": "混合rankのGPUメモリ利用率",
+        "value": "87% vs 68%",
+        "baseline": "S-LoRA",
+        "condition": "rank 8/16/32/64混在",
+        "interpretation": "異種サイズでも小さな空きページを再利用できるため、総空き容量を実際の常駐アダプタへ変換しやすい。"
+      },
+      {
+        "metric": "500 req/sの平均TTFT",
+        "value": "340 ms vs S-LoRA 520 ms / vLLM 820 ms",
+        "baseline": "S-LoRA / vLLM",
+        "condition": "最大要求率",
+        "interpretation": "高負荷で転送・管理待ちが増えるほど、先読みと断片化抑制の両方がTTFTへ効く。"
+      },
+      {
+        "metric": "500 req/sのTPOT",
+        "value": "52.3 ms vs 68.5 ms",
+        "baseline": "S-LoRA",
+        "condition": "最大要求率",
+        "interpretation": "アダプタ管理によるGPU実行の中断や待ちを減らし、逐次生成段階にも改善が残る。"
+      },
+      {
+        "metric": "構成除去の平均遅延改善",
+        "value": "予測のみ14%減、プリフェッチ追加でさらに21%、ページ管理追加でさらに15%、全体50%減",
+        "baseline": "vLLMベース基準",
+        "condition": "Figure 7 ablation",
+        "interpretation": "予測だけでは転送を消せず、実際の先読みとページ式割当が独立に追加利益を与える。"
+      },
+      {
+        "metric": "追加管理オーバーヘッド",
+        "value": "合計3.5 ms / 58 MB",
+        "baseline": "追加機構なし",
+        "condition": "LSTM 2.3ms/18MB、ページ表0.4ms/32MB、プリフェッチ0.8ms/8MB",
+        "interpretation": "主要な数十〜数百ms規模の待ち削減に対して制御費用は小さい。"
+      }
     ],
-    "negative_results": "GAFではAgentZipの壁時計時間1.468倍がzswapの1.118倍、KSM+zswapの1.159倍より悪く、常に遅延でも優位ではない。兄弟候補の多様性が高いGAFでは辞書の兄弟数を1から4へ増やすと辞書単独のメモリ削減が85.81%から71.39%へ低下し、辞書容量も大きければ良いわけではない。先読みなしの積極圧縮は3倍前後の大幅減速を生み、予測の網羅率が不足するワークロードでは同様のリスクがある。",
-    "interpretation": "容量削減はサンドボックス間の類似性が高いほど強く、同じ課題から16軌跡を作るRolloutで特に大きい。GAFは役割指示を変えて軌跡を意図的に多様化するため兄弟間辞書の効率が落ちるが、テンプレート差分は依然として高い圧縮可能率を保つ。遅延面ではLLM待ち時間が長いほど重い圧縮を隠しやすく、復元アクセスが兄弟間やツール位置で再現しやすいほど先読みが需要フォルトを消せる。",
-    "quality_impact": "ページ内容を可逆復元する無損失のメモリ管理で、LLMやツール計算の数値品質は変えない。観測される影響はCPU消費、ページ復元停止、壁時計時間、実行可能な同時サンドボックス数である。"
+    "negative_results": "予測精度は時間帯に依存し、週末夜間では70〜78%まで低下するため、68%のコールドスタート削減を常に期待できない。30秒窓が89%で最良で、短すぎる窓は履歴不足、長すぎる窓は古いパターン混入で精度が落ちる。ページングはアドレス変換とscatter-gatherを追加し、論文自身も小さなオーバーヘッドと適応ページサイズの未検討を認める。評価は合成LoRA・主に単一GPUであり、誤予測がPCIe帯域を浪費して活動中推論と競合する最悪条件、複数GPU間の配置、実サーバーレス課金に対する費用効果は示されない。",
+    "interpretation": "P-LoRAの主要な利得はLoRA行列積そのものを高速化することではなく、『次に必要になる重みを要求の前に動かす』ことで転送待ちをクリティカルパスから外し、『可変長重みを固定ページへ分解する』ことで同じGPU容量をより高い常駐率へ変換することにある。予測が時間方向の待ちを、ページングが空間方向の無駄を減らし、常駐アダプタが増えるほど再読込も減るため相乗効果が出る。",
+    "quality_impact": "モデル重みの値やLoRA演算を近似せず、転送時刻と物理配置だけを変えるため、理論上は同じアダプタなら生成結果を変えない設計である。ただし論文は合成LoRAを用いた性能評価で、実タスク精度、数値一致、scatter-gatherカーネルによる誤差を独立検証していない。"
   },
-  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3956cc3669cdbe211fc51d98",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

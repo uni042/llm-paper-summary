@@ -2,46 +2,112 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c6850610f1696da302c47466",
-  "job_id": "job-research-78cb8002e7b50e8e",
+  "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
+  "job_id": "job-research-77f3e91a5c224daf",
   "data": {
-    "canonical_id": "arXiv:2609.11294",
-    "arxiv_id": "2609.11294",
-    "doi": "10.48550/arXiv.2609.11294",
+    "canonical_id": "arXiv:2512.20210",
+    "arxiv_id": "2512.20210",
+    "doi": "10.48550/arXiv.2512.20210",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.AI","cross_list":["cs.OS"]},
-    "title": "Memory Compression for High-Fanout Agent Sandboxes",
-    "summary": "AgentZipは、1つのエージェント課題から多数のサンドボックスを並列生成するとCPU計算より先にメモリ容量が詰まる問題に対し、同じテンプレートから派生したページと兄弟サンドボックス間の類似性を利用して物理メモリを圧縮する。各4KiBページについて、テンプレートとの差分、同一課題のサンドボックス群から学習した共有Zstd辞書、ページ内の連長圧縮を比較し、最小表現を選ぶ。従来のように温かいページを圧縮対象から外さず、復元時のストライド・時間相関・ツール位置予測で先読みして停止時間を抑える。さらに軽い候補探索はツール実行中、重い圧縮はLLM応答待ち中へ移す。実機のエージェント学習・推論再生で平均サンドボックス所有メモリを最大88.55%削減し、積極圧縮だけでは3.052倍になる壁時計時間を1.403倍まで抑える。",
-    "list_summary": "共有テンプレートと兄弟エージェントの類似ページを差分・共有辞書で圧縮し、LLM待ち時間への圧縮移動と復元先読みで、平均サンドボックス所有メモリを最大88.55%削減する。",
-    "authors": ["Mengming Li","Ceyu Xu","Qijun Zhang","Jiangnan Yu","Xiangfeng Sun","Haohui Mai","Zhiyao Xie"],
-    "authors_affiliations": "Hong Kong University of Science and Technology (HKUST)。",
-    "published": "2026-09-10",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "agent sandbox memory compression and operating-system memory management",
-    "topics": ["エージェントサンドボックス","メモリ圧縮","ページ復元先読み","コピーオンライト","実行段階連動スケジューリング"],
-    "importance": "LLM本体ではなく高ファンアウトのエージェント実行環境を第一級のメモリ階層問題として扱い、サンドボックス固有の類似性とLLM待ち時間を容量増幅へ使う点が重要。",
-    "hardware_evaluation": "Intel Xeon Platinum 8480C搭載サーバ、Linux 5.15.0、KVM/Firecrackerメモリスナップショットを使うZeroboot上の実機評価。",
-    "source": "https://arxiv.org/abs/2609.11294",
-    "sources": ["https://arxiv.org/abs/2609.11294","https://arxiv.org/html/2609.11294"],
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
+    "summary": "本研究は、複数の低ランク適応（Low-Rank Adaptation; LoRA）アダプタを一つの基盤モデルで共有するサーバーレス推論で、要求到着後にアダプタをCPU側メモリからGPUへ読む反応型管理がコールドスタートを生み、異なるランクのアダプタを頻繁に入れ替えるとGPUメモリに外部断片化が蓄積する問題を扱う。Llama2-7Bではrank 64のアダプタ転送だけで約28〜45msを要し、著者のプロファイルでは高並列時にアダプタ読み込みがエンドツーエンド遅延の最大35%を占める。P-LoRAは、過去のアダプタ別アクセス回数から次区間の需要を予測する2層LSTM、予測確率に基づいてアイドル区間や現在バッチ実行中に次のホットアダプタを先読みするプリフェッチ機構、2MB固定ページで異種サイズのアダプタ重みを非連続配置するページ式メモリ管理を統合する。追い出しは最近性・頻度・将来予測を合わせたスコアで決め、先読みは二重バッファで実推論と干渉しにくくする。vLLMを約3,200行のPythonと800行のCUDAで拡張し、Azure Functions由来の到着パターン、ShareGPT由来の入出力長、Llama2-7B/13B・Mistral-7B、rank 8〜64の合成LoRAを用いて評価した。1000アダプタ条件でS-LoRAの95 req/sに対して145 req/s（1.52倍）、500 req/s時の平均TTFTを520msから340msへ35%短縮し、混合rankでもGPUメモリ利用率87%を維持した。一方、予測精度は規則的な平日日中では88〜92%だが週末夜間では70〜78%へ下がり、不規則・敵対的なアクセスでは先読み利益が縮む。評価は主に合成LoRAと単一GPUで、生成品質、予測誤りによる帯域競合、複数GPU間アダプタ配置、費用削減の実運用効果は十分検証していない。",
+    "list_summary": "LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。",
+    "authors": [
+      "Yinan Ni",
+      "Xiao Yang",
+      "Yuqi Tang",
+      "Zhimin Qiu",
+      "Chen Wang",
+      "Tingzhou Yuan"
+    ],
+    "authors_affiliations": "University of Illinois at Urbana–Champaign、Santa Clara University、New York University、University of Southern California、University of Missouri–Kansas City、Boston University。",
+    "published": "2025-12-23",
+    "publication": "arXiv:2512.20210v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2025-12-23）。2026-09-14時点で査読済み採録先は一次資料から確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "LoRAサービング",
+      "サーバーレス推論",
+      "予測型プリフェッチ",
+      "アダプタメモリ管理",
+      "GPUメモリ断片化",
+      "ページング",
+      "コールドスタート",
+      "複数アダプタ"
+    ],
+    "importance": "中〜高。複数LoRAサービングの計算カーネル最適化だけでなく、アダプタ需要を将来予測して転送時刻を前倒しし、KVキャッシュとは別種の静的重み断片化をページングで扱う。予測・転送・GPUメモリ割当を一つのサーバーレス実行経路に結合した点に価値がある。",
+    "hardware_evaluation": "8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763を備えるサーバー。特記がない主要結果は単一GPUで測定。",
+    "hardware_details": "基盤サーバーは8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763。Llama2-7B/13BとMistral-7Bを使用し、Q/V投影へrank 8/16/32/64の合成LoRAアダプタを適用する。rank 8は約13MB、rank 64は100MB超で、rank 64のCPU→GPU転送は約28〜45msと報告する。",
+    "quality_effect": "P-LoRAはLoRA重み自体を量子化・近似せず、予測、先読み、物理メモリ配置を変えるため、意図的な生成品質低下は導入しない。ただし評価アダプタは合成で、出力一致やタスク精度を比較していないため、実装のscatter-gather経路を含む数値同等性や実アダプタ品質は独立には検証されていない。",
+    "storage_targets": [
+      "GPUメモリ上のLoRAアダプタページ",
+      "CPUホストメモリ上のLoRAプール",
+      "固定基盤モデルのGPU重み",
+      "ページ表を置くピン留めCPUメモリ"
+    ],
+    "bottlenecks": [
+      "要求後の反応型LoRA読み込みによるコールドスタート",
+      "PCIe経由のアダプタ転送",
+      "異種rankアダプタの外部断片化",
+      "頻繁なアダプタ追い出しと再読込",
+      "高並列時のアダプタ管理遅延"
+    ],
+    "evidence_locations": [
+      "§I Introduction",
+      "§II-B–C Serverless Challenges / Workload Predictability",
+      "§III-A–C Traffic Prediction / Proactive Prefetching / Page-Based Memory Management",
+      "§IV Implementation",
+      "§V-A–G Evaluation",
+      "Figures 3–7",
+      "Table I",
+      "§VII Discussion"
+    ],
+    "source": "https://arxiv.org/abs/2512.20210",
+    "sources": [
+      "https://arxiv.org/abs/2512.20210",
+      "https://arxiv.org/pdf/2512.20210"
+    ],
     "code": null,
-    "implementation": "Zeroboot上にユーザー空間圧縮プールとLinux userfaultfdを用いてAgentZipを実装し、E2B互換の制御・コマンド入口も提供する。論文は実装評価を示すが、一次資料でAgentZip本体の公式公開コードURLは確認できない。",
+    "implementation": "vLLMを約3,200行のPythonと800行のCUDAで拡張した研究実装。LSTM予測器をCPUで非同期実行し、100msごとに共有メモリ経由で予測をスケジューラへ渡す。vLLMのブロック管理をアダプタ用固定ページへ拡張し、非連続ページを読むscatter-gather CUDAカーネルを追加する。2026-09-14時点で論文・検索から著者公式の公開コードリポジトリは確認できない。",
     "last_checked": "2026-09-14",
-    "storage_targets": ["sandbox private physical pages","user-space compressed page pool","cohort compression dictionaries"],
-    "bottlenecks": ["高ファンアウト時のサンドボックス物理メモリ","ページ単独圧縮が見逃す近似的なページ間冗長性","温かいページを避ける保守的な圧縮範囲","前景ツール実行と圧縮処理の競合","需要復元の尾部遅延"],
-    "hardware_details": "Intel Xeon Platinum 8480C、Linux 5.15.0。ZerobootのKVMベースサンドボックスをFirecrackerメモリスナップショットからコピーオンライトで複製。",
-    "quality_effect": "サンドボックスのメモリ表現を可逆に圧縮・復元するためLLM出力やツール計算結果の意味論は変えない。性能上は復元待ちによる壁時計時間増加が交換条件になる。",
-    "evidence_locations": ["arXiv v1 §3–4 AgentZip Design","arXiv v1 §5 Experimental Methodology","arXiv v1 §6 Evaluation","arXiv v1 References"],
     "references": [
-      {"canonical_id":"arXiv:2504.07164","arxiv_id":"2504.07164"},
-      {"canonical_id":"arXiv:2603.22206","arxiv_id":"2603.22206"},
-      {"canonical_id":"arXiv:2606.19348","arxiv_id":"2606.19348"},
-      {"canonical_id":"arXiv:2603.18815","arxiv_id":"2603.18815"}
+      {
+        "canonical_id": "arXiv:2106.09685",
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+      },
+      {
+        "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2310.18547",
+        "title": "Punica: Multi-Tenant LoRA Serving"
+      },
+      {
+        "title": "ServerlessLLM: Low-Latency Serverless Inference for Large Language Models"
+      },
+      {
+        "title": "dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving"
+      },
+      {
+        "title": "Serverless in the Wild: Characterizing and Optimizing the Serverless Workload at a Large Cloud Provider"
+      }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版参考文献節",
-    "references_total": 29
+    "references_source": "arXiv:2512.20210v1一次資料の参考文献節",
+    "references_total": 15
   },
-  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3956cc3669cdbe211fc51d98",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

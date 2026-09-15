@@ -2,46 +2,111 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
-  "job_id": "job-research-02e232341d4ef088",
+  "attempt_id": "attempt-d87ac0583b3b3fb6f0fcba35",
+  "job_id": "job-research-d09e1c8e52097070",
   "data": {
-    "canonical_id": "arXiv:2608.14376",
-    "arxiv_id": "2608.14376",
-    "doi": "10.48550/arXiv.2608.14376",
+    "canonical_id": "arXiv:2505.14468",
+    "arxiv_id": "2505.14468",
+    "doi": "10.48550/arXiv.2505.14468",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.OS","cross_list":["cs.PF"]},
-    "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
-    "summary": "CoRunは、同じ乱数種と入力を与えても、動的バッチに同居する別要求によってGPUカーネルの形状、タイル分割、縮約順序が変わり、浮動小数点の丸め差から生成結果が変化する問題を扱う。すべての演算をバッチ不変カーネルへ置き換える既存方式は再現性を得る代わりに高速な形状依存最適化を失う。CoRunは、多くの通常カーネルが固定形状の中ではバッチ位置に依存しない点を利用し、プリフィルは要求ごとに単独実行、デコードとサンプリングは最大同時数までダミー要求で埋めて常に同じ形状で実行する。vLLM 0.25.0上で全32プロンプト×3モデルの決定性を確認し、バッチ不変方式比でスループットを15〜324%改善、平均TTFTを51.8%、TPOTを48.6%削減する。",
-    "list_summary": "動的バッチによるカーネル形状変化を、単独プリフィルと固定形状のパディング付きデコードで封じ、全カーネルを低速なバッチ不変実装へ置換せず決定論的推論を実現する。",
-    "authors": ["Shiju Zhao","Jiacheng Yang","Qihang Chen","Junhao Hu","Jiaqi Zheng","Guihai Chen","Xusheng Chen"],
-    "authors_affiliations": "Nanjing University、Tencent Hunyuan Team、Peking University。",
-    "published": "2026-08-14",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "deterministic LLM inference runtime and serving scheduling",
-    "topics": ["決定論的LLM推論","固定形状デコード","パディング","CUDA Graph","vLLM"],
-    "importance": "決定性をカーネル全面改修ではなくスケジューラが保証する実行形状の不変性へ変換し、既存の高速カーネル資産をほぼそのまま利用できる点が重要。",
-    "hardware_evaluation": "GPU実機上のvLLM評価。Qwen3-235B-A22B、DeepSeek-V3、Hy3を用い、BurstGPT、Blazedit、合成ワークロードで測定。",
-    "source": "https://arxiv.org/abs/2608.14376",
-    "sources": ["https://arxiv.org/abs/2608.14376","https://arxiv.org/html/2608.14376"],
-    "code": null,
-    "implementation": "vLLM 0.25.0へスケジューラ層として実装。プリフィル単独実行、最大同時数256の固定形状デコード、固定形状サンプリング、CUDA Graph、決定論的集合通信を組み合わせる。一次資料で著者公式コードURLは確認できない。",
-    "last_checked": "2026-09-14",
-    "storage_targets": [],
-    "bottlenecks": ["動的バッチ形状による縮約順序変化","バッチ不変カーネルの低い性能","プリフィルとデコード混在による形状変化","固定最大同時数でのパディング費用"],
-    "hardware_details": "大規模GPUサービング環境。Qwen3-235B-A22B、DeepSeek-V3、Hy3をvLLM 0.25.0で実行し、デコード最大同時数256のCUDA Graphを利用。",
-    "quality_effect": "同一ハードウェア、同一ソフトウェア、同一テンソル並列度、同一乱数条件では同居要求に依存しない同一トークン列とサンプル済みトークンのlogprobを狙う。異なるGPU世代やカーネル版をまたぐビット完全一致は保証範囲外。",
-    "evidence_locations": ["arXiv v1 Method","arXiv v1 Evaluation","arXiv v1 Limitations","arXiv v1 References"],
-    "references": [
-      {"canonical_id":"arXiv:2601.17768","arxiv_id":"2601.17768"},
-      {"canonical_id":"arXiv:2605.30218","arxiv_id":"2605.30218"},
-      {"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},
-      {"canonical_id":"arXiv:2606.19348","arxiv_id":"2606.19348"}
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+    "summary": "ServerlessLoRAは、低ランク適応（Low-Rank Adaptation; LoRA）ごとに独立したサーバレス関数を用意すると、99%以上を共有する基盤モデル重みまで関数ごとに複製され、GPUメモリと起動費用が浪費される問題を扱う。基盤重みを読み取り専用データとして1回だけGPUへ置き、CUDAのプロセス間通信（Inter-Process Communication; IPC）ハンドルで独立プロセスへゼロコピー共有する一方、各関数は独自のCUDA文脈、LoRA、KVキャッシュ、活性値を保持して隔離性を残す。さらに、到着率と読み込み遅延から将来価値を見積もる事前読み込み、SLOから逆算した充足または期限切れ型の適応バッチ、GPU逼迫時の動的退避を組み合わせる。Llama2-7B/13B、L40S、Azure Functions由来14日トレースを用いた評価では、ServerlessLLM比でTTFTを最大4.7倍、InstaInfer比で最大7.1倍短縮し、費用効率をそれぞれ最大19.3倍、12.7倍に改善する。抽象ではTTFT最大86%、金銭費用最大89%削減を報告する。",
+    "list_summary": "LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。",
+    "authors": [
+      "Yifan Sui",
+      "Hao Wang",
+      "Hanfei Yu",
+      "Yitao Hu",
+      "Jianxun Li",
+      "Hao Wang"
     ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版参考文献節",
-    "references_total": 34
+    "authors_affiliations": "Shanghai Jiao Tong University、Stevens Institute of Technology、Tianjin University。本文の著者欄では同姓同名のHao Wangが別所属・別連絡先として2名記載される。",
+    "published": "2025-05-20",
+    "publication": "arXiv:2505.14468v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1 (2025-05-20)。査読済み会議・雑誌への採録は一次資料から確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "サーバレスLLM推論",
+      "LoRAサービング",
+      "コールドスタート",
+      "基盤重み共有",
+      "CUDA IPC",
+      "事前読み込み",
+      "適応バッチ",
+      "動的退避"
+    ],
+    "importance": "高。サーバレスのプロセス隔離を保ったまま巨大な基盤モデル重みだけをデータ層で共有し、モデル配置・起動・バッチング・退避を一つの制御面へ接続する。多LoRAサービングとサーバレス弾力性を直接結ぶシステム設計として比較価値が高い。",
+    "hardware_evaluation": "実機。単一AWS EC2 g6e.48xlarge（384 CPUコア、1536GBメモリ、8×NVIDIA L40S）と、4台のg6e.24xlargeからなる計16×L40Sクラスタ。",
+    "hardware_details": "Llama2-7B/13Bと各モデル4種類のLoRAアダプタをPyTorch/Transformersで実行する。単一ノードと4ノード構成を使い、Azure Functionsの14日生産トレースから予測可能・通常・バースト型の到着系列を抽出して関数へ割り当てる。",
+    "quality_effect": "基盤モデルとLoRAの数値計算を近似せず、未結合LoRA推論として基盤経路とアダプタ経路を別計算して合成するため、モデル品質そのものを変更する方式ではない。交換条件は主に待機時間、バッチサイズ、TPOT、メモリ占有であり、適応バッチによりTPOTは比較対象より約12%増える条件がある。",
+    "storage_targets": [
+      "GPU上の共有基盤モデル重み",
+      "関数固有LoRAアダプタ",
+      "CUDA/JITカーネル",
+      "コンテナ内ライブラリ",
+      "KVキャッシュと活性値",
+      "ホストメモリへ退避するモデル・カーネル成果物"
+    ],
+    "bottlenecks": [
+      "関数ごとの基盤モデル重複保持",
+      "ライブラリ・LoRA・CUDA文脈・JITカーネルを含むコールドスタート",
+      "多LoRA同時実行時のGPUメモリ競合",
+      "固定バッチによるSLO未活用",
+      "バースト到着時の事前読み込み陳腐化"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§2",
+      "§3.1–3.4",
+      "§4",
+      "§5",
+      "Figures 1–15",
+      "Table 1"
+    ],
+    "source": "https://arxiv.org/abs/2505.14468",
+    "sources": [
+      "https://arxiv.org/abs/2505.14468",
+      "https://arxiv.org/html/2505.14468v1"
+    ],
+    "code": null,
+    "implementation": "PyTorch/Transformersを基盤とする試作実装として約5,500行のPythonと約600行のCUDAを追加し、基盤重み共有用のCUDA IPCプラグイン、制御器、事前読み込みエージェント、動的退避、REST通信を実装したと本文で説明する。arXiv一次資料から著者公式コード公開URLは確認できない。",
+    "last_checked": "2026-09-13",
+    "references": [
+      {
+        "canonical_id": "arXiv:2308.16369",
+        "arxiv_id": "2308.16369"
+      },
+      {
+        "canonical_id": "arXiv:2310.18547",
+        "arxiv_id": "2310.18547"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168"
+      },
+      {
+        "canonical_id": "arXiv:2307.09288",
+        "arxiv_id": "2307.09288"
+      }
+    ],
+    "references_checked_at": "2026-09-13",
+    "references_source": "arXiv v1 HTML版参考文献節から、識別子を安全に確認できた関連文献のみ構造化",
+    "references_total": null
   },
-  "reservation": {"claim_id":"claim-c66591cb8cc3d72be4a20c91","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d87ac0583b3b3fb6f0fcba35",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

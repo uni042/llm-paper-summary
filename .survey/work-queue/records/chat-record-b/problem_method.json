@@ -2,12 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-58a2532460c79d2021bd7417",
-  "job_id": "job-research-e3f30981ea631700",
-  "data": {},
+  "attempt_id": "attempt-168ebbd3b3d17754a00e3f50",
+  "job_id": "job-research-382442b3f5faa67f",
+  "data": {
+    "problem": "LLMエージェントは外部メモリから関連情報を検索し、生成途中の結果や履歴を継続的に挿入・更新する。既存のエージェントメモリ実装は機能性を優先し、大規模化するとメモリ処理が推論時間の82%以上を占め得る。一方、一般的なベクトルデータベースは静的索引または周期的・バッチ的な更新を想定するため、検索と小規模更新が細かく交互に発生するエージェント負荷では、新規ベクトルが高次元空間の複数クラスタへ散らばり、検索量とrecallが悪化する。複数エージェントでは個別索引を順番にたどる粗粒度探索コスト、共有メモリで異なるアクセス傾向が混ざる問題も加わり、さらにGPUはLLM推論と容量を奪い合うため索引全体を常駐させにくい。",
+    "novelty": "Pancakeはエージェント固有の時間的・意味的局所性を索引の保守方針そのものへ組み込み、単一エージェント、複数エージェント、CPU-GPUの三階層を一体設計する。単一エージェントではアクセス系列を有限状態機械（FSM）で継続的に学習し、関連クラスタを多段キャッシュへ昇格させる。複数エージェントでは各粗粒度索引をportalで接続したハイブリッドグラフにより一度のグラフ探索で対象範囲を横断し、共有クラスタにはエージェント別プロファイルを保持する。GPU側は静的全常駐ではなく、ホットクラスタだけをキャッシュし、更新用bufferと非同期転送で頻繁な挿入を吸収する。",
+    "method_overview": "基底索引はIVF系のクラスタ構造を利用しつつ、Pancakeは検索・更新履歴からエージェントの局所性を抽出する。検索で繰り返し共起するクラスタや直近にアクセスされたクラスタを上位の多段キャッシュへ昇格し、検索順序を改善して早期終了を可能にする。FSMはメモリアクセス状態間の遷移を記録し、連続するリクエストや推論ステップ間の局所性を索引構成へ反映する。複数エージェントでは、各agent/scopeの粗粒度索引を独立に全走査する代わりにportal nodeを介したhybrid graphで接続し、問い合わせ対象scopeを一回のgraph traversalで絞る。共有領域では同じ物理ベクトルを重複保存せず、クラスタ単位のagent profileで各agentの頻度・選好を追跡する。GPUでは頻繁に参照されるclusterを容量制限付きcacheへ置き、LLM生成と共存できる範囲だけを加速する。insertはCPU側bufferへ一旦蓄え、非同期転送・cluster split処理を行うことでonline updateを検索のcritical pathから外す。",
+    "components": [
+      {
+        "name": "単一エージェント多段インデックスキャッシュ",
+        "description": "高頻度の小規模挿入で意味的に近いベクトルが既存IVFクラスタへ散在する問題に対し、検索・更新履歴からアクセス局所性を学習し、関連クラスタを上位cache levelへ段階的に昇格する。アクセス系列は有限状態機械でモデル化して継続更新・統合し、次に参照されやすいclusterを先に探索することでscan量を減らし、十分な候補が集まった時点の早期終了を可能にする。固定IVFや閾値到達時だけsplitする方式より、長い収束待ちなしに動的負荷へ追従する。"
+      },
+      {
+        "name": "複数エージェント協調インデックス",
+        "description": "agentごとに独立したcoarse indexを持つだけではagent数にほぼ比例して上位探索コストが増えるため、各索引の代表点をportalとして結ぶhybrid graphを構築し、一回のgraph traversalで複数agent/scopeを横断する。共有memoryは物理ベクトルを一度だけ保持しつつclusterごとにagent-specific access profileを持ち、同じ共有データでもagentごとに異なる検索選好を細粒度探索へ反映する。Python APIはfully shared、partially shared、localなど任意scopeを検索・挿入・更新・削除できる。"
+      },
+      {
+        "name": "CPU-GPU協調インデックス管理",
+        "description": "LLM推論がGPUメモリを大きく消費するためANN索引全体のGPU常駐を前提にせず、CPUを正本の大容量階層、GPUをhot clusterの計算cacheとして扱う。GPU cacheはアクセス頻度に応じてclusterを動的配置し、更新は挿入bufferに集約して非同期にGPUへ反映する。これにより検索cache hitはGPUで高速処理しつつ、streaming insertやcluster splitがLLM生成・検索処理を長時間停止させない。"
+      },
+      {
+        "name": "非同期実行と既存フレームワーク統合",
+        "description": "search、insert、update、deleteをPython interfaceとして公開し、既存Faiss IVFの読み込みにも対応する。search/update/cache/GPU workerを分離し、隣接する小さな操作は内部でbatch化、共有clusterはlockで保護する。メモリ操作はLLM呼び出しと非同期に進められるため、MemGPT型workflowやLangChain/LlamaIndexのような既存agent frameworkへ外部memory backendとして組み込みやすい設計になっている。"
+      }
+    ],
+    "system_design": "CPU側が大容量ベクトル索引、アクセス状態、hybrid graph、更新制御を保持し、GPU側はLLM推論に残された容量の範囲でhot clusterをcacheする階層構成である。検索要求はscopeとagent identityを使ってhybrid graph上で粗粒度候補を絞り、multi-level cacheとagent profileを使ってfine-grained scan順を決める。更新はCPU側へ即時受理して索引状態とFSM/profileを更新し、必要なGPU反映を非同期化する。これにより大容量・動的更新・multi-agent共有・GPU容量制約を単一のmemory serving layerで扱う。"
+  },
   "reservation": {
-    "claim_id": "claim-58a2532460c79d2021bd7417",
-    "worker_id": "scheduled-chat-paper-20260915T1930JST",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-168ebbd3b3d17754a00e3f50",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
   }
 }

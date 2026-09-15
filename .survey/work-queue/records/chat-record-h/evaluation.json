@@ -2,17 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1a2f27db29cc21845919957d",
-  "job_id": "job-research-2b6e9eed52cd4c32",
+  "attempt_id": "attempt-d9a35dbb4281d8a1c02121dd",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "hardware": "単一ノード8×NVIDIA H800 80GB（約3.3TB/s HBM、PCIe Gen5 x16）、2×Intel Xeon Platinum 8468V、2TB DDR、14TB NVMe RAID-0。PD分離は4本のRoCE v2、単方向約200Gbps。",
-    "software": "Ubuntu 24.04、CUDA 12.9、PyTorch 2.9.1、Triton 3.5.1、Transformers 4.57.1、Transformer Engine 2.10.0、SGLang。PD分離ではcustomized vLLM 0.13.0。",
-    "methodology": "Mistral-7B、Qwen3-32B、Llama-3.3-70B、Qwen3.5-397B-A17B、DeepSeek-V4-Flashを対象に、HotpotQA、MuSiQue、2WikiMQA、TriviaQA、MultiFieldQA、Qasper、NarrativeQA、GovReport等を8K〜128Kへ構成する。品質はF1、EM、dense recomputeに対するfirst-token logit cosine、top-1/top-10 agreementで測る。性能はTTFT、prefill FLOPs、KV転送量、QPS/GPU、GPU当たり同時session数、SegPagedAttention単体kernel latencyを測り、dense HuggingFace/FlashAttention-3、SGLang、vLLM型PD、CacheBlend、ProphetKVと比較する。オフラインsegment prefillはonline TTFTから除外し、必要な実験では別途計上する。",
-    "scope": "主要性能評価は8×H800単一ノードであり、複数ノードに跨る分散KV配置の完全な評価ではない。head分類とsparse FFN閾値はcalibration RAG promptから決めるため、モデル・task分布が変われば再profileが必要。品質と速度の両立は選択したglobal-head比率・local window・FFN sparsityに依存する。",
-    "workloads": ["8K–128K RAG/long-context QA","position-independent chunk reuse","SegPagedAttention microbenchmarks","PD-disaggregated KV transfer","MuSiQue real request-stream cache lifecycle replay","bursty serving concurrency"],
-    "baselines": ["dense HuggingFace SDPA","FlashAttention-3 dense recompute","SGLang","vLLM-style PD serving","CacheBlend","ProphetKV"],
-    "metrics": ["TTFT and TTFT speedup","F1 and EM","first-token logit cosine","top-1/top-10 agreement","prefill FLOPs","QPS/GPU","KV transfer bytes/time","concurrent sessions/GPU","attention kernel latency"],
-    "reproducibility": "ハードウェア・ソフトウェア版、各モデルのTP/PP構成、head budget、window、sparse-FFN閾値、dataset、比較方式が本文に明記され、公式GitHubも公開されている。"
+    "hardware": [
+      "NVIDIA RTX 4090"
+    ],
+    "software": [
+      "CUDA/C++",
+      "NVIDIA Nsight Compute",
+      "MSKernelBench",
+      "CUDAMaster"
+    ],
+    "model": [
+      "OpenAI o4-mini",
+      "DeepSeek-V3.2"
+    ],
+    "datasets": "MSKernelBenchの50演算。密行列7、疎行列8、正規化4、活性化7、損失3、LLM演算列6、テンソル処理4、ステンシル5、数学・アルゴリズム6。各演算をFP32/BF16で評価し、合計100課題。",
+    "baselines": [
+      "MSKernelBenchの素朴/参照CUDA実装",
+      "cuBLAS",
+      "cuDNN",
+      "cuSPARSE",
+      "Astraで最適化したSGLang演算"
+    ],
+    "correctness": "各入力規模でランダム試験を生成し、ground-truth実装との数値誤差が許容値内であることを要求する。関数名・引数などCインターフェースも固定し、コンパイル失敗は不正解。累積成功率のτ=0は機能正当性を表す。",
+    "settings": [
+      {
+        "name": "全体評価",
+        "description": "50演算×FP32/BF16の100課題をRTX 4090で最適化。CUDAMasterはR=3反復、候補ごとにD=3デバッグ試行。"
+      },
+      {
+        "name": "性能計測",
+        "description": "各入力規模で3回ウォームアップ後50回実行し平均時間を計測。最終性能スコアは理論計算量に基づく複雑度加重平均速度向上。"
+      },
+      {
+        "name": "代表演算比較",
+        "description": "SpMV CSR、2D Convolution、Dot ProductをcuSPARSE/cuDNN/cuBLASと、RMSNorm、SiLU&Mul、Merge Attention StatesをAstra最適化カーネルと比較。"
+      },
+      {
+        "name": "アブレーション",
+        "description": "反復/デバッグのFull、No Debug、Single Iteration、Single Runを比較し、さらにFiltered Profile、No Profile、Full Profileを比較。"
+      }
+    ],
+    "methodology": "マクロ指標は性能閾値τを超える正当な課題の割合。τ=0は正当性、τ=1は素朴基準を上回る割合、τ=2/4/8以上は高い速度向上の達成率を示す。ミクロ指標は同一の素朴基準に対するCUDAMasterと既存ライブラリ/研究実装の速度向上を直接比較する。",
+    "scope": "評価ハードウェアはRTX 4090の単一GPU、生成モデルはo4-miniとDeepSeek-V3.2の2系統、ベンチマークは50演算である。H100など別GPUや、実運用のLLMサービング全体での端から端効果は直接評価していない。"
   },
-  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d9a35dbb4281d8a1c02121dd",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

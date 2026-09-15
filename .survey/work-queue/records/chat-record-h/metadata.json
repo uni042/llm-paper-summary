@@ -2,48 +2,98 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1a2f27db29cc21845919957d",
-  "job_id": "job-research-2b6e9eed52cd4c32",
+  "attempt_id": "attempt-d9a35dbb4281d8a1c02121dd",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "canonical_id": "arXiv:2606.06256",
-    "arxiv_id": "2606.06256",
-    "doi": "10.48550/arXiv.2606.06256",
+    "canonical_id": "arXiv:2603.07169",
+    "arxiv_id": "2603.07169",
+    "doi": "10.48550/arXiv.2603.07169",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.AI","cross_list":[]},
-    "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
-    "summary": "RedKnotは、長文LLMサービングのKVキャッシュを全ヘッド・全トークンで均質な一枚のテンソルとして扱う従来設計を、層・KVヘッド・区間ごとの再利用可能状態へ分解する。オフライン計測で長距離依存を必要とする大域ヘッドと局所窓だけで足りる局所ヘッドを分類し、再利用時はRoPE位置を補正した上で大域ヘッドだけを再計算し、局所ヘッドはsinkと直近窓を再利用する。さらに深層では重要トークンだけFFNを実行し、SegPagedAttentionがヘッドごとに異なる生存KVページを物理的に保持してmaskなしの可変長FlashAttentionへ渡す。8×H800で8K〜128Kを評価し、密再計算比でTTFTを最大約5.2倍高速化、KV容量制約下の同時セッションを4.7〜7.8倍へ増やし、前処理FLOPsを67〜79.5%削減しつつ、F1は通常密実行の95%以上を維持する。",
-    "list_summary": "KVをヘッド別の再利用可能状態へ分解し、大域ヘッドだけ再計算、局所ヘッドは窓付き再利用し、SegPagedAttentionで疎なKVを物理配置まで反映して長文TTFTと同時実行数を改善する。",
-    "authors": ["Yang Liu","Zhaokai Luo","Huayi Jin","Ruozhou He","Chenchen Hong","Zhiyong Wang","Boyu Wang","Guanjie Chen","Tao Xie","Junhao Hu"],
-    "authors_affiliations": "Xiaohongshu Inc.、Peking University、Huawei Cloud、Beijing Tongming Lake Information Technology Application Innovation Center。",
-    "published": "2026-06-04",
-    "publication": "arXiv",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+    "summary": "GPUカーネルの自動最適化研究がPyTorch由来のLLM演算へ偏り、疎行列・科学計算など不規則なメモリアクセスを十分に評価していない問題に対し、50演算×FP32/BF16のMSKernelBenchと、ハードウェア計測を選別して複数エージェントへ渡すCUDAMasterを提案する。CUDAMasterは計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、Planner/Coder/Compiler/Debugの4役が反復してコードと実行ツールチェーンを生成する。RTX 4090上の100最適化課題で、o4-miniは機能正当性100%、素朴基準を上回る成功率94%、2倍超60%を達成し、代表演算ではAstraやcuBLAS/cuSPARSE/cuDNNと同等以上のケースを示す。",
+    "list_summary": "50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報をPlanner/Coder/Compiler/Debugへ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。",
+    "authors": [
+      "Yuxuan Han",
+      "Meng-Hao Guo",
+      "Zhengning Liu",
+      "Wenguang Chen",
+      "Shi-Min Hu"
+    ],
+    "authors_affiliations": "Tsinghua University; Proxseer Inc.",
+    "published": "2026-03-07",
+    "publication": "arXiv:2603.07169v1",
     "publication_type": "Preprint",
-    "publication_status": "Preprint; arXiv v3 2026-07-29",
-    "lineage": "head-aware KV cache reuse, sparse attention, and long-context serving",
-    "topics": ["KVキャッシュ再利用","位置非依存KVキャッシュ","ヘッド別疎化","SegPagedAttention","長文LLMサービング","プリフィル高速化"],
-    "importance": "再利用判定、物理KV格納、注意カーネル、FFN疎化を同じヘッド別状態抽象へそろえ、アルゴリズム上のKV削減を実際のHBM容量と帯域削減へ変換する点が重要。",
-    "hardware_evaluation": "単一サーバの8×NVIDIA H800 80GB。CPUは2×Intel Xeon Platinum 8468V、DDR 2TB、NVMe RAID-0 14TB、PD分離評価は約200GbpsのRoCE v2を使用。",
-    "source": "https://arxiv.org/abs/2606.06256",
-    "sources": ["https://arxiv.org/abs/2606.06256","https://arxiv.org/html/2606.06256","https://github.com/rednote-machine-learning/RedKnot"],
-    "code": "https://github.com/rednote-machine-learning/RedKnot",
-    "implementation": "SGLang上へRedKnotを実装し、PD分離評価ではvLLM 0.13.0も利用する。ヘッド別状態を扱うSegPagedAttentionは各ヘッドの仮想ページ列を可変長メタデータへ変換し、単一の融合可変長注意カーネルで処理する。著者はRedKnotをオープンソースで継続保守すると明記している。",
-    "last_checked": "2026-09-14",
-    "storage_targets": ["GPU HBM KV cache","per-head paged KV segments","prefill-decode transferred KV states","reusable offline chunk states"],
-    "bottlenecks": ["長文プリフィルTTFT","KVキャッシュ容量","token単位再計算が生むhead間union","dense+maskによるFlashAttention経路喪失","短中長文で残るFFN計算","PD間KV転送量"],
-    "hardware_details": "8×NVIDIA H800 80GB、約3.3TB/s HBM、PCIe Gen5 x16。2×Xeon Platinum 8468V、96 cores/192 threads、2TB DDR、14TB NVMe RAID-0。Ubuntu 24.04、CUDA 12.9、PyTorch 2.9.1、Triton 3.5.1、Transformers 4.57.1、Transformer Engine 2.10.0。",
-    "quality_effect": "疎化を含むため完全な数値等価を常に主張する方式ではないが、QAのF1/EMとlogit一致率で品質を測り、通常は密再計算F1の95%以上を維持する。長文では不要情報を抑えることで密実行より精度が上がる条件も報告する。",
-    "evidence_locations": ["arXiv v3 §3 Motivation and Opportunity","§4 RedKnot Design","§5 Evaluation","§5.5 KV Cache Lifecycle Management","§5.6 Other System-Level Benefits","References"],
+    "publication_status": "プレプリント（arXiv v1、2026-03-07提出）",
+    "lineage": "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
+    "topics": [
+      "CUDA",
+      "GPUカーネル",
+      "自動最適化",
+      "LLMエージェント",
+      "Nsight Compute",
+      "ハードウェアプロファイル",
+      "HPC",
+      "LLM推論カーネル"
+    ],
+    "importance": "既存のKernelBench系評価をLLM演算だけでなく疎行列・ステンシル・数値計算へ広げ、単一入力サイズではなく複数規模を複雑度加重で評価する。さらに大量のプロファイルをそのままLLMへ投入せず、律速分類に応じた指標だけを選別し、コード生成だけでなくコンパイル・実行・デバッグまで閉ループ化する点が、低層推論カーネルの自動最適化基盤として重要。",
+    "hardware_evaluation": "NVIDIA RTX 4090で全カーネルのコンパイル、実行、NVIDIA Nsight Computeによる計測を実施。",
+    "hardware_details": "評価GPUはNVIDIA RTX 4090。ハードウェア分析はNsight Computeの計算スループット、DRAM/メモリスループット、キャッシュヒット率、IPC、SM稼働率等を使用する。",
+    "quality_effect": "モデル推論品質を近似する方式ではなく、CUDAカーネルの数値正当性を保ったまま実行時間を短縮する。各入力規模で参照実装と出力誤差を検証し、許容範囲内の候補だけを性能評価する。",
+    "storage_targets": [],
+    "bottlenecks": [
+      "計算律速",
+      "メモリ遅延律速",
+      "メモリ帯域律速",
+      "過剰なハードウェアプロファイル文脈",
+      "コンパイル・実行・デバッグのツール切替"
+    ],
+    "evidence_locations": [
+      "§3 MSKernelBench",
+      "§4 CUDAMaster",
+      "§5 Experiment",
+      "Table 2",
+      "Figure 4",
+      "Figure 5",
+      "Table 3-5",
+      "Appendix A/C"
+    ],
     "references": [
-      {"canonical_id":"arXiv:2405.16444","arxiv_id":"2405.16444"},
-      {"canonical_id":"arXiv:2407.08608","arxiv_id":"2407.08608"},
-      {"canonical_id":"arXiv:2602.02579","arxiv_id":"2602.02579"},
-      {"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388"},
-      {"canonical_id":"arXiv:2307.09288","arxiv_id":"2307.09288"},
-      {"canonical_id":"arXiv:1911.02150","arxiv_id":"1911.02150"}
+      {
+        "canonical_id": "arXiv:2507.11948",
+        "arxiv_id": "2507.11948"
+      },
+      {
+        "canonical_id": "arXiv:2506.09092",
+        "arxiv_id": "2506.09092"
+      },
+      {
+        "canonical_id": "arXiv:2511.01884",
+        "arxiv_id": "2511.01884"
+      }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v3 HTML版参考文献節",
-    "references_total": 73
+    "references_source": "primary-reference-section",
+    "source": "https://arxiv.org/abs/2603.07169",
+    "sources": [
+      "https://arxiv.org/abs/2603.07169",
+      "https://arxiv.org/pdf/2603.07169",
+      "https://hanyx2021.github.io/MSKernelBenchDemo/"
+    ],
+    "code": null,
+    "implementation": "論文はMSKernelBenchとCUDAMasterをオープンソース化すると記載し、公開デモでは50演算のFP32/BF16を閲覧できる。今回確認できた一次公開URLはデモページで、フレームワーク本体のGitHubリポジトリURLは確認できなかった。",
+    "implementation_status": "公開デモあり。論文はフレームワークとベンチマークのオープンソース化を宣言するが、本体コードのリポジトリURLは今回の確認では特定できず。",
+    "evaluation_type": "実機測定",
+    "last_checked": "2026-09-14",
+    "last_audited": null,
+    "audit_version": 0
   },
-  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d9a35dbb4281d8a1c02121dd",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

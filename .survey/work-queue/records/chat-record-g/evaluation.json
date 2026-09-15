@@ -2,16 +2,74 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
-  "job_id": "job-research-02e232341d4ef088",
+  "attempt_id": "attempt-d87ac0583b3b3fb6f0fcba35",
+  "job_id": "job-research-d09e1c8e52097070",
   "data": {
-    "hardware": "大規模GPU環境でQwen3-235B-A22B、DeepSeek-V3、Hy3を実行。vLLM 0.25.0を基盤とし、固定形状デコードでは最大同時要求数256のCUDA Graphを用いる。",
-    "software": "vLLM 0.25.0。比較は標準vLLM、全面的なバッチ不変カーネルを使う決定論的構成、CoRun。",
-    "methodology": "BurstGPT由来のAzure OpenAI要求トレース、Blazeditコード編集ワークロード、固定入出力長の合成負荷を各300要求で評価する。再現性試験では各モデル32プロンプトについて、バッチ1とバッチ32を温度0.6、乱数種42、最大8生成トークンで比較し、トークン列とサンプル済みトークンのlogprobが一致するか確認する。さらに最大同時数、入力長分布、Split-KVの有無、プリフィル隔離の影響を除去・感度実験で測る。",
-    "scope": "同一ハードウェア、同一ソフトウェア、同一テンソル並列構成の内部で、同居要求、到着順、バッチ位置に対する再現性を対象にする。GPU世代、数値形式、カーネル版、テンソル並列度が変わる場合のビット完全一致は保証対象外。固定形状パディングは高同時実行を主対象とし、疎な対話型トラフィックには不利になり得る。",
-    "workloads": ["BurstGPT Azure OpenAI trace","Blazedit code-editing","synthetic fixed-length workload","32-prompt determinism test"],
-    "baselines": ["標準vLLM","batch-invariant deterministic vLLM","LLM-42 verified-speculation approach in sparse deterministic traffic analysis"],
-    "metrics": ["throughput","TTFT","TPOT","deterministic match rate","sampled-token logprob equality","kernel latency","padding efficiency"]
+    "hardware": [
+      "AWS EC2 g6e.48xlarge: 384 CPUコア、1536GB RAM、8×NVIDIA L40S",
+      "4×AWS EC2 g6e.24xlarge: 合計768 CPUコア、3072GB RAM、16×NVIDIA L40S"
+    ],
+    "software": [
+      "PyTorch",
+      "HuggingFace Transformers",
+      "CUDA IPCプラグイン",
+      "Python約5,500行 + CUDA約600行の試作実装"
+    ],
+    "model": [
+      "Llama2-7B",
+      "Llama2-13B",
+      "各モデル4種類のLoRAアダプタ"
+    ],
+    "datasets": [
+      "GSM8Kプロンプト",
+      "Azure Functions 14日生産トレースから抽出した到着系列"
+    ],
+    "baselines": [
+      "InstaInfer",
+      "ServerlessLLM",
+      "dLoRA",
+      "vLLM"
+    ],
+    "correctness": "生成品質の近似は導入せず、基盤重みとLoRA更新を未結合で計算する。主評価はシステム遅延・費用・SLOであり、生成精度の比較実験は中心ではない。",
+    "settings": [
+      {
+        "name": "到着パターン",
+        "description": "Azure Functionsトレースを到着間隔の変動係数で、予測可能（CoV≤1）、通常（1<CoV≤4）、バースト（CoV>4）に分類し、各類型から8本の4時間区間を無作為抽出して関数へ割り当てる。"
+      },
+      {
+        "name": "SLO",
+        "description": "先頭トークン到達時間のSLOを7Bで2.5秒、13Bで4秒に設定し、適応バッチが制約内に収まるかを測る。"
+      },
+      {
+        "name": "クラスタ評価",
+        "description": "単一8 GPUノードと4ノード16 GPUクラスタを使い、8関数同時実行、強スケーリング、弱スケーリング、2 GPU上4関数のスループットを評価する。"
+      }
+    ],
+    "methodology": "モデルとアダプタの組合せを独立サーバレス関数として扱い、実トレース由来の到着時系列で呼び出す。コールドスタート、TTFT、TPOT、全体遅延、GPU/ホスト使用量、金銭費用、費用効率、トークン/要求スループットを測る。基盤共有、事前読み込み、動的退避、適応バッチの各機構を無効化する切り分け実験も行う。",
+    "scope": "Llama2-7B/13BとL40Sを中心とする2025年時点の単一・小規模クラスタ評価で、最新MoE、異種GPU、巨大モデル、複数リージョンは未検証。到着はAzure Functions一般トレースでありLLM専用生産トレースではなく、入力内容はGSM8Kを使う。",
+    "workloads": [
+      "予測可能到着",
+      "通常到着",
+      "バースト到着",
+      "8 LoRA関数クラスタ実行",
+      "強・弱スケーリング"
+    ],
+    "metrics": [
+      "TTFT",
+      "TPOT",
+      "end-to-end latency",
+      "cold-start rate/time",
+      "monetary cost",
+      "cost-effectiveness",
+      "token throughput",
+      "request throughput",
+      "SLO violation"
+    ],
+    "reproducibility": "ハードウェア、モデル、LoRA数、到着トレース処理、SLO、主要アルゴリズム、実装規模は本文に記載される。一方、著者公式コードURLは一次資料から確認できず、完全な再実行性は公開実装付き研究より低い。"
   },
-  "reservation": {"claim_id":"claim-c66591cb8cc3d72be4a20c91","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d87ac0583b3b3fb6f0fcba35",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

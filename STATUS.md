@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 06:44:45 JST**
+> 自動生成: **2026-09-16 07:01:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
+| Research | **0** | **5** | **2** | **3** | **7** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **15** | **1** | **14** | **0** | **0** | **27** |
-| 合計 | **5** | **20** | **3** | **17** | **0** | **0** | **27** |
+| 合計 | **5** | **20** | **3** | **17** | **7** | **0** | **27** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -129,8 +129,28 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **7件** / 直近15分heartbeat: **0件**
+- `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-382442b3f5faa67f.json`
+- `arXiv:2608.06188` — Routing LLM Inference to the Cleanest Grid in Real Time / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-705b1ab26eb807b1.json`
+- `arXiv:2512.20210` — Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-77f3e91a5c224daf.json`
+- `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c6ac42b8bcec8aab.json`
+- `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d09e1c8e52097070.json`
+- `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d66acc5736f090e9.json`
+- `arXiv:2609.09787` — Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints / worker `work-library-repair-20260916`
+  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ea263cc3cccbe57a.json`
 
 #### Audit
 

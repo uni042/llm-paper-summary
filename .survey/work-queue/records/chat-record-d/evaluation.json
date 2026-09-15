@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
   "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
     "hardware": "制御実験: 96-core node、NVIDIA H100 94GB HBM×1。production characterization: 商用platformの10 LLM serving instanceと100超agent sandbox。",
@@ -39,8 +39,8 @@
     "reproducibility": "論文はAries code/toolchainと匿名化production tracesをGitHubで公開すると明記。公開harness/benchmark、モデル、GPU、反復数、sampling粒度を記載。一方、商用traceはプライバシー上normalization/anonymizationされ、詳細platform構成と完全同期イベントは非公開。"
   },
   "reservation": {
-    "claim_id": "claim-c17275f5e497400ac1b9feba",
-    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "claim_id": "claim-d53062f6ce8af0e476180ce0",
+    "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
 }

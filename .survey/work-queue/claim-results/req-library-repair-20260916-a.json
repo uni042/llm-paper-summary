@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-library-repair-20260916-a",
+  "worker_id": "work-library-repair-20260916",
+  "worker_kind": "work",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-705b1ab26eb807b1",
+      "claim_id": "claim-55fa2104d18bc1f9a648de40",
+      "worker_id": "work-library-repair-20260916",
+      "worker_kind": "work",
+      "attempt_id": "attempt-55fa2104d18bc1f9a648de40",
+      "claimed_at": "2026-09-15T22:01:34+00:00",
+      "expires_at": "2026-09-16T10:01:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-705b1ab26eb807b1"
+      ],
+      "job": {
+        "job_id": "job-research-705b1ab26eb807b1",
+        "type": "research",
+        "parent_job_id": "job-e15f3a03ac140338",
+        "priority": 80,
+        "canonical_id": "arXiv:2608.06188",
+        "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+        "source_url": "https://arxiv.org/abs/2608.06188",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md",
+        "selection_reason": "地理分散LLM inference routingへ電力網の限界排出原単位をproduction pressure routerのoverlayとして導入し、GPU telemetry由来のrequest energyと実績MOERでsettlementする。一次資料はlive multi-region GPU testbedでdispatch failureなしを確認し、年間replayではround-robin比50.9%のmodeled operational emissions削減を報告する。モデル変更なしのplacement policyとして分散サービングの運用評価に独立の観点を加える。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:42:52+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.references[5] requires a normalized identity | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short",
+        "validation_errors": [
+          "metadata.references[5] requires a normalized identity",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-14T22:16:57+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-b8bf85a356cf73aca16f3bb9"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-b8bf85a356cf73aca16f3bb9.json"
+    },
+    {
+      "job_id": "job-research-382442b3f5faa67f",
+      "claim_id": "claim-168ebbd3b3d17754a00e3f50",
+      "worker_id": "work-library-repair-20260916",
+      "worker_kind": "work",
+      "attempt_id": "attempt-168ebbd3b3d17754a00e3f50",
+      "claimed_at": "2026-09-15T22:01:34+00:00",
+      "expires_at": "2026-09-16T10:01:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-382442b3f5faa67f"
+      ],
+      "job": {
+        "job_id": "job-research-382442b3f5faa67f",
+        "type": "research",
+        "parent_job_id": "job-bddc9082393babd6",
+        "priority": 80,
+        "canonical_id": "arXiv:2602.21477",
+        "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+        "source_url": "https://arxiv.org/abs/2602.21477",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
+        "selection_reason": "multi-agentの外部agentic memoryで、large-scale storage・頻繁なupdate・複数agent共存に伴うANN searchを対象に、single-agent multi-level index cache、cross-agent coordinated index management、GPU-CPU collaborative accelerationを統合する。realistic agent workloadでend-to-end throughput 4.29倍超を報告し、KV cache外のagent memory hierarchyという隣接systems軸を補完する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:51:14+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[2].description is too short | Japanese-first prose ratio is too low: 60.6% < 70% (Japanese=4537, Latin=2954)",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[2].description is too short",
+          "Japanese-first prose ratio is too low: 60.6% < 70% (Japanese=4537, Latin=2954)"
+        ],
+        "last_validation_failed_at": "2026-09-14T22:19:20+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-08e554d84abc317af5940c6f"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-08e554d84abc317af5940c6f.json"
+    },
+    {
+      "job_id": "job-research-ea263cc3cccbe57a",
+      "claim_id": "claim-c19e8b1bd866fea8c2bd2b11",
+      "worker_id": "work-library-repair-20260916",
+      "worker_kind": "work",
+      "attempt_id": "attempt-c19e8b1bd866fea8c2bd2b11",
+      "claimed_at": "2026-09-15T22:01:34+00:00",
+      "expires_at": "2026-09-16T10:01:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-ea263cc3cccbe57a"
+      ],
+      "job": {
+        "job_id": "job-research-ea263cc3cccbe57a",
+        "type": "research",
+        "parent_job_id": "job-afb5dd5149abfe18",
+        "priority": 80,
+        "canonical_id": "arXiv:2609.09787",
+        "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints",
+        "source_url": "https://arxiv.org/abs/2609.09787",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md",
+        "selection_reason": "電力制約下の複数データセンター間LLM workload shiftingで、モデルreplicaのload時間を無視した即時routingを避け、model deploymentとcross-site request routingを共同最適化する。prefill/decode latency要求も容量制約へ変換し、電力・配置・servingをcross-layerで扱う隣接systems候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:08:31+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-14T22:19:21+00:00"
+      },
+      "record_bank_fallback": "library"
+    },
+    {
+      "job_id": "job-research-77f3e91a5c224daf",
+      "claim_id": "claim-3956cc3669cdbe211fc51d98",
+      "worker_id": "work-library-repair-20260916",
+      "worker_kind": "work",
+      "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
+      "claimed_at": "2026-09-15T22:01:34+00:00",
+      "expires_at": "2026-09-16T10:01:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-77f3e91a5c224daf"
+      ],
+      "job": {
+        "job_id": "job-research-77f3e91a5c224daf",
+        "type": "research",
+        "parent_job_id": "job-c6d3963bf6f5f699",
+        "priority": 80,
+        "canonical_id": "arXiv:2512.20210",
+        "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
+        "source_url": "https://arxiv.org/abs/2512.20210",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md",
+        "selection_reason": "multi-LoRA serverless servingでtraffic予測に基づくadapter prefetchとpage-based GPU adapter memory管理を組み合わせ、cold startとfragmentationを同時に扱う。adapter demand予測でcold startを最大68%削減し、異種rankでもGPU memory utilization 87%以上、S-LoRA比1.52倍throughput・高並列時TTFT 35%削減を報告する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:15:00+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.references[1] requires a normalized identity | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "metadata.references[1] requires a normalized identity",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-14T22:22:36+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-303dac5e3c1a671043d00ee0"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-303dac5e3c1a671043d00ee0.json"
+    }
+  ],
+  "processed_at": "2026-09-15T22:01:34+00:00",
+  "checkpoint_released": 0
+}

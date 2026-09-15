@@ -2,12 +2,113 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-58a2532460c79d2021bd7417",
-  "job_id": "job-research-e3f30981ea631700",
-  "data": {},
+  "attempt_id": "attempt-168ebbd3b3d17754a00e3f50",
+  "job_id": "job-research-382442b3f5faa67f",
+  "data": {
+    "canonical_id": "arXiv:2602.21477",
+    "arxiv_id": "2602.21477",
+    "doi": "10.48550/arXiv.2602.21477",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.MA",
+      "cross_list": []
+    },
+    "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+    "summary": "LLMエージェントの外部メモリは、記憶規模の拡大、検索と細粒度更新の高頻度な交互実行、複数エージェントによる共有・局所メモリの併存により、近似最近傍探索（ANN）が推論全体の主要ボトルネックになり得る。Pancakeは、単一エージェント向けの多段インデックスキャッシュ、複数エージェントの粗粒度インデックスをつなぐハイブリッドグラフとエージェント別アクセスプロファイル、CPU-GPU協調キャッシュを統合した階層型エージェントメモリ基盤である。8M件のMS MARCO知識ベースと複数の実エージェントデータセットを使ったCPU-GPUサーバ評価で、既存メモリライブラリに対し単一エージェントの端から端までの性能を1.12〜26.18倍、平均4.29倍超改善し、メモリ処理時間を平均3.2%まで抑える。",
+    "list_summary": "動的なエージェント記憶向けに多段インデックスキャッシュ、複数エージェント協調インデックス、CPU-GPU協調を統合し、既存メモリ基盤比で端から端まで平均4.29倍超の性能向上を示す。",
+    "authors": [
+      "Zhengding Hu",
+      "Zaifeng Pan",
+      "Prabhleen Kaur",
+      "Vibha Murthy",
+      "Zhongkai Yu",
+      "Yue Guan",
+      "Zhen Wang",
+      "Steven Swanson",
+      "Yufei Ding"
+    ],
+    "authors_affiliations": "Computer Science and Engineering, University of California, San Diego",
+    "published": "2026-02-25",
+    "publication": "arXiv:2602.21477v1",
+    "publication_type": "Preprint",
+    "publication_status": "プレプリント（arXiv v1、2026-02-25）",
+    "lineage": "エージェントメモリ、動的ベクトル検索、ANNインデックス、マルチエージェント基盤、CPU-GPU階層メモリ",
+    "topics": [
+      "エージェントメモリ",
+      "マルチエージェント",
+      "近似最近傍探索",
+      "ベクトルデータベース",
+      "階層インデックス",
+      "GPUキャッシュ",
+      "動的更新",
+      "LLMサービング"
+    ],
+    "importance": "KVキャッシュやモデル重みではなく、エージェントが推論中に継続的に読み書きする外部ベクトル記憶をシステム資源として扱う。検索局所性をエージェント固有のアクセス履歴から学習し、複数エージェントの索引共有とGPU容量制約を同時に扱うため、今後の長寿命・多エージェントLLMサービングにおける外部メモリ階層の設計点を具体化している。",
+    "hardware_evaluation": "64コアAMD EPYC 9534 CPUと80GB NVIDIA H100 GPU×8を備えるCPU-GPUハイブリッドサーバで実測。LLM生成とGPUキャッシュはH100、制御・スケジューリング・主要インデックス処理はCPUを使用。",
+    "hardware_details": "1ノード当たりAMD EPYC 9534 64-core、NVIDIA H100 80GB×8。GPUキャッシュ容量を変化させる実験も実施。",
+    "quality_effect": "生成モデル自体の近似・量子化手法ではない。検索再現率と検索レイテンシのトレードオフを評価し、動的更新下でも高いrecallを維持しながら検索量を削減することを狙う。",
+    "storage_targets": [
+      "エージェント外部メモリ",
+      "MS MARCO 8Mベクトル知識ベース",
+      "CPU側ANNインデックス",
+      "GPUホットクラスタキャッシュ",
+      "挿入バッファ"
+    ],
+    "bottlenecks": [
+      "細粒度挿入でベクトルが多数クラスタへ散逸",
+      "複数エージェントごとの粗粒度索引探索",
+      "共有メモリでのアクセスパターン不一致",
+      "GPU容量とLLM推論の競合",
+      "検索と更新の高頻度インターリーブ"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§4 Single-Agent Index Management",
+      "§5 Multi-Agent and CPU-GPU Index Management",
+      "§6 Evaluation",
+      "§7 Conclusion"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:2502.12110",
+        "arxiv_id": "2502.12110"
+      },
+      {
+        "canonical_id": "arXiv:2506.03437",
+        "arxiv_id": "2506.03437"
+      },
+      {
+        "canonical_id": "arXiv:2411.00970",
+        "arxiv_id": "2411.00970"
+      },
+      {
+        "canonical_id": "arXiv:2504.19413",
+        "arxiv_id": "2504.19413"
+      },
+      {
+        "canonical_id": "arXiv:2404.13501",
+        "arxiv_id": "2404.13501"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 88,
+    "source": "https://arxiv.org/abs/2602.21477",
+    "sources": [
+      "https://arxiv.org/abs/2602.21477",
+      "https://arxiv.org/pdf/2602.21477"
+    ],
+    "code": null,
+    "implementation": "Python APIとしてsearch/insert/update/deleteと複数memory scopeを実装し、既存Faiss IVFインデックスを読み込める。検索、更新、キャッシュ、GPU処理を独立スレッド化し、隣接操作のbatching、共有クラスタのlock、非同期GPU転送・挿入bufferを備える。論文本文およびarXivページからPancake本体の公開コードURLは確認できない。",
+    "implementation_status": "CPU-GPUサーバ上の実装・実機評価あり。論文本文でPancake本体の公開リポジトリは確認できない。",
+    "evaluation_type": "実機測定",
+    "last_checked": "2026-09-14",
+    "last_audited": null,
+    "audit_version": 0
+  },
   "reservation": {
-    "claim_id": "claim-58a2532460c79d2021bd7417",
-    "worker_id": "scheduled-chat-paper-20260915T1930JST",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-168ebbd3b3d17754a00e3f50",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
   "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
     "problem": "従来のLLMサービング基盤は一回のprompt→decodeを独立要求として扱い、TTFT/TPOT・トークンスループット・GPUメモリを中心に最適化する。しかしエージェントでは、1ユーザー課題が多数のLLM呼び出し、ハーネス判断、ツール呼び出し、状態更新を順序依存で繰り返す。ツールやハーネスで止まっている間も長期文脈やサンドボックス状態を保持するため、GPUだけ高速化しても課題完了時間は縮まらず、個別コンポーネントのログではどの停止がタスク進捗を妨げたかを因果的に追えない。さらにツール環境は状態付きでsandbox substrateごとにライフサイクル/観測IFが異なるため、公平な比較が難しい。",
@@ -35,8 +35,8 @@
     "failure_modes": "production traceは匿名化され、LLM側とsandbox側の完全同期cross-layer eventを持たないため、詳細因果は公開環境で再現した傾向に依存する。公開評価は各benchmark 20 task×5反復、主GPU 1×H100と限られ、複数GPU/分散sandboxでのAries自身のオーバーヘッドやスケール限界は主評価ではない。将来制御planeは測定に基づく方向性で、context効用推定やelastic sandbox policyそのものを実装・比較した研究ではない。"
   },
   "reservation": {
-    "claim_id": "claim-c17275f5e497400ac1b9feba",
-    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "claim_id": "claim-d53062f6ce8af0e476180ce0",
+    "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
 }

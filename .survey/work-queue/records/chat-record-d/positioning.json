@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
   "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
     "novelty_vs_prior": "vLLM/SGLang/DistServeなどはmodel requestを中心にGPUスケジューリング・KV・prefill/decodeを最適化し、Agentix/Kairos/Continuumなどはagent programやmulti-turn stateを扱う。Ariesは新しいscheduler自体ではなく、agent task semanticsとexecution stackを分離し、LLM・harness・sandboxのcross-layer telemetryを単一trajectoryへ結ぶ再現実験frameworkとproduction characterizationを提供する点が異なる。SideQuest/ACONなどのcontext管理やAgentCgroup/AgentServeSimなどのhost-side resource管理を評価・設計する共通観測層として補完的。",
@@ -13,8 +13,8 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-c17275f5e497400ac1b9feba",
-    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "claim_id": "claim-d53062f6ce8af0e476180ce0",
+    "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
 }

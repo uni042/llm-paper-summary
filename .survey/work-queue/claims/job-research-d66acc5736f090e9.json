@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-3c42eb75bc9ae2ee431ee157",
+  "claim_id": "claim-d9a35dbb4281d8a1c02121dd",
   "job_id": "job-research-d66acc5736f090e9",
-  "worker_id": "scheduled-chat-paper-20260915T0330JST",
-  "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
-  "request_id": "claim-20260914T184924Z-scheduled-chat-paper-0330-10",
-  "claimed_at": "2026-09-14T18:49:47+00:00",
-  "expires_at": "2026-09-14T18:51:47+00:00",
+  "worker_id": "work-library-repair-20260916",
+  "worker_kind": "work",
+  "attempt_id": "attempt-d9a35dbb4281d8a1c02121dd",
+  "request_id": "req-library-repair-20260916-b",
+  "claimed_at": "2026-09-15T22:01:34+00:00",
+  "expires_at": "2026-09-16T10:01:34+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-d66acc5736f090e9"
   ],
-  "previous_claim_id": "claim-f71602f3c26ac543bbf71cde",
-  "record_bank": "a",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-14T18:51:47+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157.json",
-  "checkpoint_release_request_id": "claim-20260914T185126Z-scheduled-chat-paper-0330-11"
+  "previous_claim_id": "claim-3c42eb75bc9ae2ee431ee157",
+  "record_bank": "h",
+  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-3c42eb75bc9ae2ee431ee157"
+  ],
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-3c42eb75bc9ae2ee431ee157.json"
 }

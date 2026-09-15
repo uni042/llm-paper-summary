@@ -2,16 +2,41 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c6850610f1696da302c47466",
-  "job_id": "job-research-78cb8002e7b50e8e",
+  "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
+  "job_id": "job-research-77f3e91a5c224daf",
   "data": {
-    "hardware": "Intel Xeon Platinum 8480C搭載サーバ、Linux 5.15.0。KVMベースのZerobootがFirecrackerメモリスナップショットをコピーオンライトで複製する実機環境。",
-    "software": "AgentZipをZeroboot上へ実装し、Linux userfaultfdで回収ページの復元を処理する。比較は無圧縮、zswap、KSM+zswap、圧縮時機や復元先読みの除去構成を含む。",
-    "methodology": "R2E-Gymの10個のPythonリポジトリを用いる。学習側は各課題16本の独立軌跡をDeepSeek-V4で作る並列ロールアウト、推論側は異なる役割指示と温度から4本の候補を走らせる生成・選別構成を再現する。収集済みツール操作列と各ツール前のLLM待ち時間を同一に再生し、毎秒のサンドボックス所有物理メモリと、全サンドボックス終了までの壁時計時間を測る。",
-    "scope": "CPU上のサンドボックスメモリ管理を対象にした単一ホスト実機評価。LLM本体のGPUメモリやKVキャッシュを圧縮する研究ではない。評価はR2E-Gym由来のソフトウェア開発エージェント軌跡が中心で、ブラウザ操作など異なるページ局所性を持つエージェントへの一般化は未検証。",
-    "workloads": ["16-way parallel rollout for agent training","4-way generate-and-filter for agent inference","R2E-Gymの10 Python repositories"],
-    "baselines": ["NoComp","zswap","KSM+zswap","reactive compression","generic proactive compression","dictionary-only compression","prefetch ablations"],
-    "metrics": ["平均サンドボックス所有メモリ削減率","壁時計時間倍率","需要復元増幅率","復元予測の網羅率と適合率","圧縮プール補助メタデータ比率","復元遅延分位点"]
+    "hardware": "8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763。特記のない主要グラフは単一GPU結果。",
+    "software": "vLLMを約3,200行のPythonと800行のCUDAで拡張。CPU非同期LSTM予測器、共有メモリ連携、固定ページ式アダプタ管理、scatter-gather CUDAカーネル、予測連携バッチスケジューラを実装。",
+    "methodology": "Llama2-7B、Llama2-13B、Mistral-7Bに、Q/V投影へrank 8/16/32/64の合成LoRAアダプタを適用する。Azure Functionsの公開トレースで各関数IDを一つのアダプタへ対応付け、到着間隔を縮尺して10〜500 req/sを作る。入出力長はShareGPTから標本化する。vLLM、S-LoRA、dLoRAと比較し、スループット、TTFT、1出力トークン当たり時間（Time Per Output Token; TPOT）、GPUメモリ利用率、断片化率を測る。アダプタ数を最大1000まで増やす拡張性、24時間の断片化推移、rank別/混合rankメモリ利用率、要求率感度、構成除去、予測窓感度、追加管理オーバーヘッドを評価する。",
+    "scope": "実機サーバーは8×A100だが主要値は単一GPU。ワークロード到着は実Azure Functionsトレース由来でも、LLMアダプタへの対応は関数IDを人工的に割り当て、LoRAも合成である。実アダプタ品質、複数GPU間のアダプタ配置・転送、本番サーバーレスの課金・スケールアウト、障害条件は主評価外。論文は反復回数や信頼区間を主要結果で明示していない。",
+    "workloads": [
+      "Azure Functionsトレース由来のアダプタ到着系列",
+      "ShareGPT由来の入出力長",
+      "10〜500 requests/s",
+      "最大1000 LoRAアダプタ",
+      "rank 8/16/32/64および混合rank"
+    ],
+    "baselines": [
+      "vLLM",
+      "S-LoRA",
+      "dLoRA",
+      "従来の可変長ブロック割当"
+    ],
+    "metrics": [
+      "スループット",
+      "TTFT",
+      "TPOT",
+      "コールドスタート遅延",
+      "予測精度",
+      "GPUメモリ利用率",
+      "メモリ断片化率",
+      "管理オーバーヘッド"
+    ],
+    "reproducibility": "ハードウェア、モデル、rank、到着トレース、入出力長分布、主要ハイパーパラメータ（2層LSTM、64隠れ、2MBページ、100ms予測周期、10,000観測再生バッファ）と実装規模は記載される。一方、著者公式コード公開URL、追い出し重みα/β/γ、プリフェッチ閾値θの具体値、反復回数・乱数種・信頼区間などは本文から確認できず、完全再現には不足がある。"
   },
-  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3956cc3669cdbe211fc51d98",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

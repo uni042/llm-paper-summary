@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
   "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
     "overview": "Ariesの測定ではagent servingのcritical pathがGPU推論だけで決まらない。tool executionは13〜48%のend-to-end latency、harnessはさらに最大9%を占め、tool latencyは複数桁にまたがるlong tailを持つ。agent contextは通常会話より大きく、Qwen3.6で25GB KV budgetを固定すると最大resident capacityが176超から40へ約4.4倍低下する。DeepResearch/OpenClawはcontext overflowを消す160Kで95%成功に達するが、他workloadは中小windowでplateau/degradeし、最大history保持は常に有益ではない。32-session backlogではtoken pool utilizationが97%へ達する一方median concurrent requestは22、p95 internal queue delayは7.9s。sandboxはCPU 80%以上、memory 50%以上の時間idleだがtool call中はidle率20%未満へ落ちる。毎tool call後に停止するとinstance costは65%下がるもののsnapshot C/R込み総費用はpersistent baselineの4.9倍で、理想的state managementならbaseline比3倍まで総費用を下げる余地がある。",
@@ -90,8 +90,8 @@
     "quality_impact": "Ariesは性能改善のためにモデル出力を近似しない。context managementの候補政策は将来方向であり、測定結果はcontext削減が成功率へ影響するためworkload-specific thresholdを越えて攻撃的に圧縮すべきでないことを示す。"
   },
   "reservation": {
-    "claim_id": "claim-c17275f5e497400ac1b9feba",
-    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "claim_id": "claim-d53062f6ce8af0e476180ce0",
+    "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
 }
