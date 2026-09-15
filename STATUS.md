@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:34:42 JST**
+> 自動生成: **2026-09-16 07:36:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -156,7 +156,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.09787` — Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints / worker `work-library-repair-20260916`
-  - claim: **09-16 07:33:15 JST** / heartbeat: **—** / lease expiry: **09-16 19:33:15 JST**
+  - claim: **09-16 07:36:05 JST** / heartbeat: **—** / lease expiry: **09-16 19:36:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-ea263cc3cccbe57a.json`
 
 #### Audit

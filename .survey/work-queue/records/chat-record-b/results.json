@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a9db9f15ee8854630c93a0fa",
+  "attempt_id": "attempt-bbb785cdc85c31e832c84d96",
   "job_id": "job-research-ea263cc3cccbe57a",
   "data": {
     "overview": "提案MCは100%のservice rate、未処理penalty 0、total cost 8.92kドル、electricity cost 29.48ドル/10^9 tokensを達成する。論文が報告する総運用費削減は29.0%。30分先読みのMyopicはservice rate 95.43%、Staticは97.66%で、完全先読みと配置変更の価値が出る。特に読込時間を無視するZeroLeadTimeは物理制約再生時67.40%、TTFT無視は56.89%、TPOT無視は78.04%まで落ち、LLM固有制約を抜いた最適化が実行不能になることを示す。",
@@ -72,7 +72,7 @@
     "quality_impact": "生成品質そのものは変更しない。品質に近い運用保証としてSLOを扱い、TTFT/TPOTを満たせない需要を処理可能容量として数えない点が重要である。ただし平均TTFTモデルと較正係数に依存するため、tail latencyや複雑なbatching挙動を直接シミュレートした保証ではない。"
   },
   "reservation": {
-    "claim_id": "claim-a9db9f15ee8854630c93a0fa",
+    "claim_id": "claim-bbb785cdc85c31e832c84d96",
     "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }

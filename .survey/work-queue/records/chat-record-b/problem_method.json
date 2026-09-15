@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-a9db9f15ee8854630c93a0fa",
+  "attempt_id": "attempt-bbb785cdc85c31e832c84d96",
   "job_id": "job-research-ea263cc3cccbe57a",
   "data": {
     "problem": "地理分散データセンター間のLLM要求配送では、計算資源が空いていても対象モデルのレプリカが宛先で準備完了していなければ要求を処理できない。特に大規模モデルは重み転送、初期化、コンパイル、ウォームアップに長時間を要し、DeepSeek-V3級では設定上1時間を見込む。この先行時間を無視した即時配送計画は、後から実制約で再生すると大量の未処理需要を生む。また、単にモデルが配置済みでも、プリフィルの待ち行列によるTTFTとデコードのTPOT上限を満たせる需要量には上限がある。",
@@ -33,7 +33,7 @@
     "system_design": "中央の計画器が将来期間の需要、各拠点の電力上限と価格、モデル別読込時間、GPU・メモリ要件、TTFT・TPOTの較正値を入力に、拠点ごとのモデル配置と要求配送を同時に決める。オンライン要求スケジューラ単体ではなく、分〜時間スケールの容量計画と秒以下のサービングSLOを結ぶ上位制御層として位置付けられる。"
   },
   "reservation": {
-    "claim_id": "claim-a9db9f15ee8854630c93a0fa",
+    "claim_id": "claim-bbb785cdc85c31e832c84d96",
     "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
