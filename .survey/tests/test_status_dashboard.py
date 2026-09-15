@@ -183,6 +183,79 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertNotIn("Already Done", current)
             self.assertIn("生存そのものまでは証明しない", current)
 
+    def test_summary_splits_research_audit_discovery_and_moves_evidence_below(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _research_success(repo)
+
+            _write_json(repo / ".survey/work-queue/jobs/job-a.json", {
+                "job_id": "job-a", "type": "audit", "title": "Audit Item",
+                "status": "completed", "completed_at": "2026-09-15T09:37:00+00:00",
+            })
+            _write_json(repo / ".survey/work-queue/submissions/audit/attempt-a.json", {
+                "kind": "audit", "attempt_id": "attempt-a", "job_id": "job-a",
+                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+            })
+            _write_json(repo / ".survey/work-queue/results/audit/attempt-a.json", {
+                "ok": True, "attempt_id": "attempt-a", "job_id": "job-a",
+                "job_type": "audit", "job_status": "completed",
+                "submission": ".survey/work-queue/submissions/audit/attempt-a.json",
+                "processed_at": "2026-09-15T09:37:00+00:00",
+            })
+
+            discovery_submission = ".survey/work-queue/submissions/20260915T1800JST-discovery.json"
+            _write_json(repo / ".survey/work-queue/jobs/job-d.json", {
+                "job_id": "job-d", "type": "discovery", "status": "completed",
+                "completed_at": "2026-09-15T09:02:53+00:00",
+            })
+            _write_json(repo / discovery_submission, {
+                "job_id": "job-d",
+                "candidates": [{"canonical_id": "arXiv:2609.04895"}],
+                "discovery_stats": {
+                    "run_key": "2026-09-15T18:00:00+09:00",
+                    "axis": "MoE expert cache",
+                    "candidate_count": 1,
+                },
+            })
+            _write_json(repo / ".survey/work-queue/results/20260915T1800JST-discovery.json", {
+                "ok": True, "job_id": "job-d", "job_type": "discovery",
+                "job_status": "completed", "processed_at": "2026-09-15T09:02:53+00:00",
+                "submission": "work-queue/submissions/20260915T1800JST-discovery.json",
+            })
+
+            for kind, job_id, title in [
+                ("research", "job-live-r", "Reading Now"),
+                ("audit", "job-live-a", "Auditing Now"),
+                ("discovery", "job-live-d", "Searching Now"),
+            ]:
+                _write_json(repo / f".survey/work-queue/jobs/{job_id}.json", {
+                    "job_id": job_id, "type": kind, "title": title, "status": "ready",
+                })
+                _write_json(repo / f".survey/work-queue/claims/{job_id}.json", {
+                    "job_id": job_id, "worker_id": f"worker-{kind}",
+                    "claimed_at": "2026-09-15T09:40:00+00:00",
+                    "heartbeat_at": "2026-09-15T09:43:00+00:00",
+                    "expires_at": "2026-09-15T11:10:00+00:00",
+                })
+
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            summary, details = text.split("## 詳細証拠", 1)
+            self.assertIn("## 件数サマリー", summary)
+            self.assertIn("| Research | **1** | **1** | **1** | **0** | **1** | **1** | — |", summary)
+            self.assertIn("| Audit | **1** | **1** | **1** | **0** | **1** | **1** | — |", summary)
+            self.assertIn("| Discovery | **1** | **1** | **1** | **0** | **1** | **1** | **1** |", summary)
+            self.assertIn("| 合計 | **3** | **3** | **3** | **0** | **3** | **3** | **1** |", summary)
+            self.assertNotIn("job-r", summary)
+            self.assertNotIn("papers/inference", summary)
+            self.assertIn("### Research", details)
+            self.assertIn("### Audit", details)
+            self.assertIn("### Discovery", details)
+            self.assertIn("Reading Now", details)
+            self.assertIn("Auditing Now", details)
+            self.assertIn("Searching Now", details)
+
     def test_legacy_aggregate_changes_cannot_change_direct_count(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
