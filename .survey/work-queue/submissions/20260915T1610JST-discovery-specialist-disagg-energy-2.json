@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e03097d2e4181243",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.18755",
+      "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS",
+      "source_url": "https://arxiv.org/abs/2602.18755",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-energy-efficient-disaggregated-serving-dvfs.md",
+      "priority": 82,
+      "reason": "prefill/decode分離サービングで配置とGPU動的電圧周波数制御を二つの時間尺度で共同最適化する。粗粒度ではphase-aware placementと基準周波数、細粒度ではprefillにモデル予測制御、decodeにslack-aware制御を適用し、16基H100・Llama 3.3 70BでSLOを維持しながらDistServe比でprefill最大39%、decode最大48%のenergy削減を報告する。性能だけでなく電力を含む分離サービング制御として既存scheduler系を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T16:00:00+09:00",
+    "round": "specialist-disagg-energy-2",
+    "axis": "重要分離サービング研究の派生・energy-aware placement/DVFS",
+    "query_summary": "DistServe/PagedAttention/SGLang周辺の2026年派生研究をforward-citation相当の検索軸で軽量探索し、分離prefill/decodeの配置とDVFSを統合するBiScaleを未収録候補として選別した。比較のみのframework study等はシステム新規性が弱いため投入しなかった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はOS/storage/HPC隣接からGPU direct storage・CXL・collective communicationのLLM inference転用を探索する",
+    "empty_round_reason": null
+  }
+}
