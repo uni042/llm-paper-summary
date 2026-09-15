@@ -8,6 +8,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import apply_library_checkpoint_barriers  # noqa: E402
 import claim_worker  # noqa: E402
 
 
@@ -62,7 +63,8 @@ class RepairCheckpointDeadlockTests(unittest.TestCase):
                 "error": "RecordValidationError: repair required",
             })
             request_id = "req-repair"
-            write_json(root / ".survey/work-queue/claim-requests" / f"{request_id}.json", {
+            request_path = root / ".survey/work-queue/claim-requests" / f"{request_id}.json"
+            write_json(request_path, {
                 "schema_version": 1,
                 "request_id": request_id,
                 "worker_id": "scheduled-chat-llm-survey-20260915T1200JST",
@@ -73,6 +75,12 @@ class RepairCheckpointDeadlockTests(unittest.TestCase):
                 "job_types": ["research"],
                 "checkpointed_jobs": [{"job_id": job_id, "checkpoint_ref": checkpoint_ref}],
             })
+
+            barrier_result = apply_library_checkpoint_barriers.apply(root)
+            filtered_request = json.loads(request_path.read_text())
+            self.assertNotIn("checkpointed_jobs", filtered_request)
+            self.assertEqual(barrier_result["repairable_jobs"], 1)
+            self.assertEqual(barrier_result["repair_barriers_cleared"], 1)
 
             claim_worker.process_requests(root, at=AT)
 
