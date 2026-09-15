@@ -21,6 +21,7 @@ DEFAULT_LEASE_SECONDS = 5400
 MIN_LEASE_SECONDS = 300
 MAX_LEASE_SECONDS = 43200
 MAX_CHECKPOINTED_JOBS = 128
+MAX_REQUESTED_JOB_IDS = 128
 LIBRARY_CHECKPOINT_PREFIX = "/LLM-survey-outbox/pending/"
 
 
@@ -56,6 +57,22 @@ def _safe(value: Any, label: str) -> str:
     if not isinstance(value, str) or not SAFE_ID_RE.fullmatch(value):
         raise ValueError(f"{label} must match [A-Za-z0-9][A-Za-z0-9._-]{{0,159}}")
     return value
+
+
+def _normalize_job_ids(raw: Any) -> list[str] | None:
+    if raw is None:
+        return None
+    if not isinstance(raw, list) or len(raw) > MAX_REQUESTED_JOB_IDS:
+        raise ValueError(f"job_ids must be a list with at most {MAX_REQUESTED_JOB_IDS} items")
+    normalized: list[str] = []
+    seen: set[str] = set()
+    for index, item in enumerate(raw):
+        job_id = _safe(item, f"job_ids[{index}]")
+        if job_id in seen:
+            raise ValueError("job_ids must not repeat job_id")
+        seen.add(job_id)
+        normalized.append(job_id)
+    return normalized
 
 
 def _normalize_checkpointed_jobs(raw: Any) -> list[dict[str, str]]:
@@ -122,12 +139,14 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     job_types = raw.get("job_types", ["research", "audit"])
     if not isinstance(job_types, list) or not job_types or any(kind not in JOB_TYPES for kind in job_types):
         raise ValueError("job_types must contain only research or audit")
+    job_ids = _normalize_job_ids(raw.get("job_ids"))
     checkpointed_jobs = _normalize_checkpointed_jobs(raw.get("checkpointed_jobs"))
     return {
         "schema_version": 1, "request_id": request_id, "worker_id": worker_id,
         "worker_kind": worker_kind, "requested_at": _iso(requested_at),
         "max_jobs": max_jobs, "lease_seconds": lease_seconds,
         "job_types": sorted(set(job_types)),
+        "job_ids": job_ids,
         "checkpointed_jobs": checkpointed_jobs,
     }
 
@@ -595,9 +614,12 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 continue
 
         checkpointed_ids = set(_checkpoint_map(request))
+        requested_job_ids = set(request["job_ids"]) if request["job_ids"] is not None else None
         available = []
         for item in jobs:
             job_id = str(item.get("job_id") or "")
+            if requested_job_ids is not None and job_id not in requested_job_ids:
+                continue
             if item.get("status") != "ready" or item.get("type") not in request["job_types"]:
                 continue
             if job_id in submitted_jobs or job_id in checkpointed_ids:
