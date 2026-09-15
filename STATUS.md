@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 04:20:40 JST**
+> 自動生成: **2026-09-16 06:01:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **9** | **2** | **7** | **0** | **0** | **27** |
-| 合計 | **4** | **14** | **4** | **10** | **0** | **0** | **27** |
+| Discovery | **4** | **2** | **0** | **2** | **0** | **0** | **2** |
+| 合計 | **4** | **7** | **2** | **5** | **0** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -77,41 +77,16 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-16 03:00 JST**
-- 耐久探索round: **8件** / immutable submission: **9件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **7件** / 候補: **27件**
-- round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
-- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier / power/energy/thermal-aware LLM serving / agentic serving・sandbox state・agent-aware KV reuse / distributed/remote-drafter speculative decoding・serving負荷モデル / network topology-aware KV transfer・peer GPU cache・non-uniform KV system / GPU L2 prefetch・CPU layer-ahead attention・persistent KV decode kernel
-- round `specialist-hw-scheduling-1` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json`
-  - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
-  - 個別result照合: あり / `.survey/work-queue/results/20260916T0308JST-discovery-specialist-hw-scheduling-1.json` (`ok=true`)
-- round `specialist-moe-io-2` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0312JST-discovery-specialist-moe-io-2.json`
-  - 探索軸: MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch
+- 最新観測run: **2026-09-16 06:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **2件**
+- 探索軸: 新着KV圧縮・制約適応ポリシー / multi-round agent workload・P/D分離・適応resource allocation
+- round `specialist-adaptive-kv-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0607JST-discovery-specialist-adaptive-kv-1.json`
+  - 探索軸: 新着KV圧縮・制約適応ポリシー
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cxl-context-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0317JST-discovery-specialist-cxl-context-3.json`
-  - 探索軸: CXL・NVMe/JBOF共有KV/context tier
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-power-4` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260916T0322JST-discovery-specialist-power-4.json`
-  - 探索軸: power/energy/thermal-aware LLM serving
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-agentic-5` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0327JST-discovery-specialist-agentic-5.json`
-  - 探索軸: agentic serving・sandbox state・agent-aware KV reuse
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-speculative-6` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0332JST-discovery-specialist-speculative-6.json`
-  - 探索軸: distributed/remote-drafter speculative decoding・serving負荷モデル
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-topology-kv-7` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0337JST-discovery-specialist-topology-kv-7.json`
-  - 探索軸: network topology-aware KV transfer・peer GPU cache・non-uniform KV system
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-kernel-memory-8` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0342JST-discovery-specialist-kernel-memory-8.json`
-  - 探索軸: GPU L2 prefetch・CPU layer-ahead attention・persistent KV decode kernel
+- round `specialist-multiround-disagg-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0610JST-discovery-specialist-multiround-disagg-2.json`
+  - 探索軸: multi-round agent workload・P/D分離・適応resource allocation
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
