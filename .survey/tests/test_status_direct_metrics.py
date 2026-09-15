@@ -99,7 +99,7 @@ class DirectStatusMetricTests(unittest.TestCase):
                 "paper_path": "papers/inference/01-offload/missing.md",
             })
 
-            # Orphan durable records are direct consistency anomalies. The orphan result
+            # Research orphan records are direct consistency anomalies. The orphan result
             # violates two checks but must count as one anomalous record in the top total.
             _write_json(repo / ".survey/work-queue/submissions/research/orphan-submission.json", {
                 "kind": "research", "attempt_id": "orphan-sub", "job_id": "missing-job-sub",
@@ -108,6 +108,21 @@ class DirectStatusMetricTests(unittest.TestCase):
                 "ok": True, "attempt_id": "orphan-result", "job_id": "missing-job-result",
                 "job_type": "research", "job_status": "completed",
                 "processed_at": "2026-09-15T23:40:00+00:00",
+            })
+
+            # A Discovery submission with durable run_key+round is itself the canonical
+            # round record. It can legitimately have no queue job and must not be called
+            # a direct consistency anomaly merely because job_id is absent from jobs/.
+            _write_json(repo / ".survey/work-queue/submissions/discovery-round.json", {
+                "kind": "discovery",
+                "job_id": "job-discovery-round-only",
+                "candidates": [{"canonical_id": "arXiv:2609.20001"}],
+                "discovery_stats": {
+                    "run_key": "2026-09-16T08:00:00+09:00",
+                    "round": "specialist-round-only-1",
+                    "axis": "round-only fixture",
+                    "candidate_count": 1,
+                },
             })
 
             # Physical paper count covers inference/training/survey, but excludes indexes,
@@ -139,7 +154,7 @@ class DirectStatusMetricTests(unittest.TestCase):
             self.assertIn("| title欠損 | **1** |", details)
             self.assertIn("| source URL欠損 | **2** |", details)
             self.assertIn("| inference/training/survey配下の論文Markdown実体 | **3** |", details)
-            self.assertIn("| 成功result未照合のimmutable submission | **2** |", details)
+            self.assertIn("| 成功result未照合のimmutable submission | **3** |", details)
             self.assertIn("| completed Research/Audit jobで厳格検証未成立 | **1** |", details)
             self.assertIn("| completed Research jobで指定paper実体なし | **1** |", details)
             self.assertIn("| 対応jobなしsubmission | **1** |", details)
