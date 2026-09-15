@@ -5,6 +5,10 @@
   "payload_id_list_sha256": "464fc3bafa23e9d8c4daf32a50ad48c3255ce71746f15577850bd84080c9d812",
   "bundle_count": 48,
   "added": [
+    "claimed-run1630-loquetier",
+    "claimed-sc-20260913T1130-witcert-run7b"
+  ],
+  "already_present_same_payload": [
     "20260913T130000JST-research-2512.14946-evicpress",
     "20260913T141800JST-repair-research-2310.18547-punica",
     "20260913T141800JST-repair-research-2608.15018-s2moe",
@@ -16,9 +20,16 @@
     "20260913T192100JST-flowprefill-repair-attempt-99723503426c5788a7e59245",
     "20260913T192400JST-tile-overlap-rekey-attempt-f5fa8bcb7840f2a296e02da3",
     "20260913T193000JST-hypic-rekey-attempt-12a18d43566c98c47ce6f48f",
+    "20260913T193000JST-s2moe-rekey-attempt-e4b101ef33235c07de2199f9",
     "20260913T193200JST-edgeflow-rekey-attempt-7a42189aee1eb783aa06614f",
     "20260913T193500JST-nanospec-rekey-attempt-1ca79ba4771a1fec9779992c",
     "20260913T194100JST-faser-rekey-attempt-7078e587f822720e4429d054",
+    "20260913T194700JST-shannon-rekey-attempt-1264cc173941fe1a761b82a9",
+    "20260913T195300JST-s2moe-japanese-repair-attempt-dd9aa362d5055303d01704ff",
+    "20260913T195600JST-evicpress-deep-repair-attempt-8c395a404053cd16b7142dd7",
+    "20260915T034600JST-research-2608.06188-carbon-routing-attempt-b8bf85a356cf73aca16f3bb9",
+    "20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157",
+    "20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8",
     "claimed-attempt-0929d1d9c3d2c5b53222d046-run1700-scorpio",
     "claimed-attempt-290db7fbb3f121b1c152a3f2-run1630-edgeflow-repair",
     "claimed-run1630-failsafe",
@@ -38,17 +49,7 @@
     "claimed-attempt-caeba9e84ff57a8ab2b7dea8-run7d",
     "claimed-attempt-4a7d9764a5e18b2f6009dd53-run7d",
     "claimed-sc-20260913T1130-vortex-repair1",
-    "claimed-sc-20260913T1130-witcert-run7b",
     "claimed-attempt-833474830031f73717dc2fff-run1357"
-  ],
-  "already_present_same_payload": [
-    "20260913T193000JST-s2moe-rekey-attempt-e4b101ef33235c07de2199f9",
-    "20260913T194700JST-shannon-rekey-attempt-1264cc173941fe1a761b82a9",
-    "20260913T195300JST-s2moe-japanese-repair-attempt-dd9aa362d5055303d01704ff",
-    "20260913T195600JST-evicpress-deep-repair-attempt-8c395a404053cd16b7142dd7",
-    "20260915T034600JST-research-2608.06188-carbon-routing-attempt-b8bf85a356cf73aca16f3bb9",
-    "20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157",
-    "20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8"
   ],
   "conflicts_not_overwritten": [
     {
@@ -79,12 +80,6 @@
       "id": "20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0",
       "paths": [
         ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json"
-      ]
-    },
-    {
-      "id": "claimed-run1630-loquetier",
-      "paths": [
-        ".survey/work-queue/fallback-failed/claimed-run1630-loquetier.json"
       ]
     }
   ],
