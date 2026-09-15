@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.12551",
+      "title": "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems",
+      "source_url": "https://arxiv.org/abs/2609.12551",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
+      "priority": 88,
+      "reason": "LLM推論システムの設計空間を実装スタック依存のプロファイリングから切り離すDSLと評価器を提案し、AIによるアーキテクチャ探索を可能にするシステム研究。NVIDIA B300上のDeepSeek V4 Proで探索された新構成がthroughputとinteractivityを6.23–50.1%改善したと報告しており、推論基盤の自動設計という新しい系統として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11744",
+      "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+      "source_url": "https://arxiv.org/abs/2609.11744",
+      "paper_path": "papers/inference/03-kv-cache-offload-storage/2026-2609.11744-py-kvcache-vllm-nvme-external-kv-cache.md",
+      "priority": 94,
+      "reason": "vLLMのGPU/CPU/NVMe階層KVキャッシュを実測し、非同期direct I/O、bounded staging、scheduler-aware preloadを備えるpy-kvcacheを実装。80k tokenでLMCacheのdisk loadより2.0倍高速、GPU/CPU/disk併用でも1.23倍高速と報告し、SSD/NVMe活用と推論schedulerの協調という重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.12449",
+      "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+      "source_url": "https://arxiv.org/abs/2609.12449",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12449-heatcache-thermal-aware-llm-inference-scheduling.md",
+      "priority": 76,
+      "reason": "液冷シャーシの熱状態とエネルギー効率を推論スケジューリングへ組み込む新着システム研究。通常のlatency/throughput中心のserving schedulingとは異なる資源制約を扱い、edge server roomでの持続可能な推論運用という隣接軸を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-new-systems-1",
+    "axis": "9月新着・推論基盤・NVMe KV・熱制約スケジューリング",
+    "query_summary": "arXivの直近cs.DC新着からLLM inference systemを横断し、AI駆動推論アーキテクチャ設計、vLLM向けNVMe外部KVキャッシュ、熱制約付き推論schedulerを軽量評価した。canonical IDをGitHub default branchで事前照合し未収録3件を送信する。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "新着とは独立に、既収録重要KV/serving論文のforward citationと関連実装から未収録システムを追う",
+    "empty_round_reason": null
+  }
+}
