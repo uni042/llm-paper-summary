@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T11:10:22.293957+00:00",
+  "updated_at": "2026-09-15T11:46:27.457329+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T11:10:22.293957+00:00",
+      "last_recorded_at": "2026-09-15T11:46:27.457329+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 33,
         "new_papers": 88,
-        "fallback_archived": 32
+        "fallback_archived": 36
       },
       "events": [
-        {
-          "event_id": "34880006452:1",
-          "recorded_at": "2026-09-14T18:18:47.159132+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34880006452",
-            "run_attempt": "1",
-            "source_sha": "7ecf042a4f71fb16142d44e1b99826058c0f4052"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34880086264:1",
           "recorded_at": "2026-09-14T18:19:35.759275+00:00",
@@ -19599,6 +19585,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34964810320:1",
+          "recorded_at": "2026-09-15T11:46:27.457329+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "34964810320",
+            "run_attempt": "1",
+            "source_sha": "72c03204fb9fadc208cd2d11938d2006aa96dce2"
+          },
+          "signals": [
+            "fallback_archived"
           ]
         }
       ],
@@ -20878,11 +20878,15 @@
         ".survey/work-queue/fallback-archive/20260915T034600JST-research-2608.06188-carbon-routing-attempt-b8bf85a356cf73aca16f3bb9.json",
         ".survey/work-queue/fallback-archive/20260915T034700JST-research-2602.21477-pancake-attempt-08e554d84abc317af5940c6f.json",
         ".survey/work-queue/fallback-archive/20260915T034800JST-research-2609.09787-model-commitment-attempt-8628bbc30b4a472434609741.json",
-        ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json"
+        ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json",
+        ".survey/work-queue/fallback-archive/20260913T193000JST-s2moe-rekey-attempt-e4b101ef33235c07de2199f9.json",
+        ".survey/work-queue/fallback-archive/20260913T194700JST-shannon-rekey-attempt-1264cc173941fe1a761b82a9.json",
+        ".survey/work-queue/fallback-archive/20260913T195300JST-s2moe-japanese-repair-attempt-dd9aa362d5055303d01704ff.json",
+        ".survey/work-queue/fallback-archive/20260913T195600JST-evicpress-deep-repair-attempt-8c395a404053cd16b7142dd7.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 548,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
