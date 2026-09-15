@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.03910",
+      "title": "NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.03910",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03910-netkv-network-aware-decode-routing.md",
+      "priority": 83,
+      "reason": "P/D分離推論でKV転送のネットワーク距離・混雑をdecode worker選択へ直接組み込み、64 GPU fat-treeシミュレーションでmean TTFTを最大21.2%、SLO達成率を最大20.1ポイント改善。計算負荷やprefix localityだけでなくネットワークを一級資源として扱うrouting研究として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2604.02715",
+      "title": "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+      "source_url": "https://arxiv.org/abs/2604.02715",
+      "paper_path": "papers/inference/04-moe-offload-expert-cache/2026-2604.02715-fluxmoe-decoupled-expert-residency.md",
+      "priority": 90,
+      "reason": "MoE expertを永続HBM常駐から切り離してページング対象の一時資源として扱い、空いたHBMをKV cacheへ優先配分するvLLM実装。厳しいメモリ制約下で最大3.0倍throughputを報告し、expert streamingとKV容量の競合を統合的に扱う重点テーマ。"
+    },
+    {
+      "canonical_id": "arXiv:2606.22541",
+      "title": "ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill",
+      "source_url": "https://arxiv.org/abs/2606.22541",
+      "paper_path": "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md",
+      "priority": 87,
+      "reason": "MoE prefillのattentionとexpert段を分離し、DP不均衡によるglobal synchronization barrierを非同期通信と実行パイプラインで除去するシステム。CloudMatrix384上でSLO準拠prefill throughputを90%改善と報告し、MoE servingの通信・同期設計を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-related-serving-2",
+    "axis": "分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill",
+    "query_summary": "新着軸から離れ、既存のP/D分離・MoE serving系統に近い関連研究を検索し、network-aware decode routing、expert paging、attention/MoE非同期分離の3方向を軽量評価した。各arXiv IDを最新GitHubで再照合し未収録だった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/Kubernetes共有メモリやexpert-locality routingなど、memory fabricと配置制御の隣接軸へ移る",
+    "empty_round_reason": null
+  }
+}
