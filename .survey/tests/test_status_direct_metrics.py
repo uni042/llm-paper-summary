@@ -51,6 +51,7 @@ def _write_research_success(repo: Path) -> None:
     _write_text(repo / paper)
 
 
+# Keep the compact top summary and the longer lower-page diagnostics tied to the same durable fixture.
 class DirectStatusMetricTests(unittest.TestCase):
     def test_adds_compact_top_metrics_and_detailed_direct_evidence_metrics(self):
         with tempfile.TemporaryDirectory() as td:
