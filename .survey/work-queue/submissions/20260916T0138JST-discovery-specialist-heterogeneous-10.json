@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f190af78c754c7c2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.03770",
+      "title": "E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments",
+      "source_url": "https://arxiv.org/abs/2606.03770",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
+      "priority": 74,
+      "reason": "異種edge/fog deviceをgroup化し、replica内model parallelismとpartitioningを組み合わせてLLM servingを行うframework。resource-constrained heterogeneous環境で待ち時間を抑える問題設定はdatacenter中心の既存系統を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07472",
+      "title": "Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference",
+      "source_url": "https://arxiv.org/abs/2604.07472",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-mixed-scale-allocation.md",
+      "priority": 77,
+      "reason": "異なる規模のLLM、GPU provisioning、parallelism、workload routingをSLO・quality・memory・budget制約下で共同最適化するheterogeneous serving研究。mixed-scale model fleetのresource allocationを扱い、単一model serving schedulerとは異なる系統を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-heterogeneous-10",
+    "axis": "heterogeneous edge/fog・mixed-scale model fleet allocation",
+    "query_summary": "power/co-servingからheterogeneous resource provisioningへ軸を移し、edge/fog device groupingとmixed-scale model/GPU allocationの2研究を軽量評価した。最新GitHub検索でcanonical ID未収録を確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "今回のrunでは新着、関連/forward、memory fabric、runtime、backward reference、OS/PF、framework逆引き、新workload、power/co-serving、heterogeneous provisioningを一巡した。次回は新着差分または今回候補のcitation expansionを優先する",
+    "empty_round_reason": null
+  }
+}
