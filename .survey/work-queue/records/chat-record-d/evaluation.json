@@ -1,1 +1,45 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ebdfe1bfc6bf08876f45688e","job_id":"job-research-cff945d042003c88","data":{"hardware":"NVIDIA H100 SXM5 GPU（各80GB HBM3）を使用し、複数GPUはNVLinkで接続する。OPT-66Bの端末間評価は提案方式で2 GPU、FlashLLMはメモリ使用量のため4 GPUを使用する。疎形式変換のCPU評価はIntel Xeon Platinum 8460Y+。","software":"カスタムSpMM実装はGCC 12.3.0、NVCC 12.6でコンパイル。比較対象はCUDA Core系Sputnik、Tensor Core系SparTA・FlashLLM・SpInfer、および密行列積cuBLAS。端末間モデルの重み枝刈りにはWandaを用いる。著者公式コードは moui0/cudac。","methodology":"カーネル評価ではOPT-30B/66B由来を中心とした複数のM×K重み形状を用い、デコードを想定したN=16/32で50%、60%、70%の非構造疎性を比較する。端末間評価はOPT-30B/66B、バッチ8/16/32、入力512トークン、出力512トークン。50%と60%疎性でGPU当たりスループットを測る。さらにピークGPUメモリと、CPUでの一回限りの形式変換時間を測定する。","scope":"主対象は小さなNで重み読出しが支配的なデコードである。大きなNのプリフィルは計算律速となり、提案方式はcuBLASより遅くなる。高疎性では空きスロットが増えて再配置すべき余剰値が減るためSlot-Fillingの利点が薄れ、FlashLLMを上回らない領域がある。評価GPUはH100に集中し、AmpereやAMD MI300への適用可能性は議論するが実測比較は提示しない。"},"reservation":{"claim_id":"claim-ebdfe1bfc6bf08876f45688e","worker_id":"scheduled-chat-llm-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "attempt_id": "attempt-99472a28aecd6daa3d12d9ad",
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "slot": "evaluation",
+  "data": {
+    "hardware": "Samsung 28nm FDSOI向けRTL合成。800MHz、1.0V、A8W4、8K MAC、512KB共有SRAM、8クラスタ、LPDDR4X 16GB/s。総投影面積9.3mm²、EMAを除くピーク電力1.52W、ピーク13.1 TOPS。",
+    "software": "Synopsys Design Compiler/PrimeTimeで合成・電力評価し、提案モジュールを行動モデル化した命令レベル専用シミュレータで最終アクセスパターン、命令列、DRAMトラフィックから遅延・エネルギーを積算。公開PyTorch成果物はLinux/Python 3.13、RTX A6000で機能確認可能。",
+    "methodology": "Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BをEAGLE-3と組み合わせ、64候補・最大深さ6で単一バッチ評価。比較対象はMoE-Pruner、EdgeMoE、SMoLPUで、28nm、800MHz、外部帯域16GB/sへ正規化する。MT-Bench、GSM8K、MMLU、HellaSwag、ARC-Challenge、WinoGrande、PIQAで品質と採択長を測り、プリフィル再利用、チャネル統合、計算補正を段階的に有効化する除去評価も行う。",
+    "scope": "実シリコンではなく合成とシミュレーションが主評価。外部メモリはLPDDR4X 16GB/s固定、単一バッチのエッジ推論を対象とし、連続バッチ、多ユーザー、熱スロットリング、実端末OS干渉、より高速なLPDDR5X/HBM環境は直接評価しない。",
+    "workloads": [
+      "Granite-1B-A400M",
+      "OLMoE-1B-7B",
+      "DeepSeek-V2-Lite",
+      "Qwen3-30B-A3B",
+      "MT-Bench",
+      "GSM8K",
+      "MMLU",
+      "HellaSwag",
+      "ARC-Challenge",
+      "WinoGrande",
+      "PIQA"
+    ],
+    "baselines": [
+      "MoE+EAGLE-3無最適化",
+      "SMoLPU",
+      "EdgeMoE",
+      "MoE-Pruner",
+      "自己回帰版のEdgeMoE/MoE-Pruner"
+    ],
+    "metrics": [
+      "端から端までの遅延",
+      "TTFT",
+      "TPOT",
+      "総エネルギー",
+      "外部メモリアクセス量",
+      "投機採択長",
+      "7ベンチマーク品質",
+      "面積",
+      "電力"
+    ],
+    "reproducibility": "モデル・ハードウェア条件・比較正規化・校正データ・主要ハイパーパラメータ・公開ソフトウェア成果物が明記される。Zenodo成果物は公開だがbf16のソフトウェア実装であり、論文のA8W4専用ハードウェア性能値をそのまま再現するRTL/シミュレータ公開範囲は付録だけでは完全には確認できない。"
+  }
+}

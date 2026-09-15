@@ -1,1 +1,15 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ebdfe1bfc6bf08876f45688e","job_id":"job-research-cff945d042003c88","data":{"limitations":"最適化対象はメモリ律速のデコードであり、プリフィルの大きなNでは密cuBLASに負ける。70%を超えるような高疎性では空スロットが多く余剰非零値が少ないため再配置方式の費用対効果が悪化し、FlashLLMに対する優位を失う。主評価はH100 SXM5に集中しており、A100やMI300を対応可能ハードウェアとして挙げるものの同じ実装の実測移植性は示していない。端末間モデルはOPT-30B/66B、固定入力・出力長512に限られ、近年のGQA/MoEモデルや長文・実サービング到着分布は未評価である。OPT-66B比較ではGPU台数が方式ごとに異なる。形式変換は一回限りとはいえ30Bで41.1秒、66Bで92.6秒を要する。","differences":"SparTAは非構造重みを2:4部分と不規則残差へ二分するため、50%程度では残差が大きくなりCUDA Core側が詰まる。FlashLLMはHBMから疎に読むがTensor Core計算前に密へ展開し、CSLメタデータも中程度疎性では重くなる。SpInferはビットマップで索引帯域を削減する一方、CUDA Core上のオンチップ復号がH100の高HBM帯域に追いつきにくい。提案は2:4へ入り切らない値を別の空き2:4スロットへ再配置してPDDだけで元位置を復元し、残差を1%未満へ押し込む。そのうえ復号とTensor Core演算を非同期化し、疎に読んだデータを密へ戻さず疎のまま計算する点が差分である。","implementation_status":"論文はカーネル単体とOPT-30B/66B端末間推論の双方を実装し、著者公式コードを https://github.com/moui0/cudac で公開している。H100向け実装はwgmma、疎Tensor Core、CUDA Core、L2/HBM階層を直接利用するため、一般的な高水準フレームワークだけで再現できる方式ではない。arXiv本文はNVIDIA Ampere/HopperやAMD MI300のような疎Tensor CoreとHBMを持つ機器への実用可能性を述べるが、公開評価はH100中心である。","research_positioning":"LLM推論システムの中では、スケジューリングやKVキャッシュではなく、重みをHBMから読みTensor Coreへ供給するデコード内側のカーネル層を改善する研究である。特に『中程度非構造疎性』という、品質面では実用的だがGPU上では既存疎カーネルが密GEMMに負けやすかった領域を埋める。メモリ階層研究との関係では、SSD/CPUオフロードで重み転送量を減らす前段または後段として、GPUへ到着した疎重みのHBM帯域と復号費をさらに圧縮する補完技術に位置付けられる。MoEでは各エキスパート重みを同様に枝刈りできれば適用余地があるが、本論文自体はMoE配置・専門家キャッシュを評価していない。","relation_to_existing_repository":"FlashLLM、SpInfer、SparTAなど既収録または関連する疎推論・GPUカーネル系統に対し、本論文は約50%という中程度の非構造疎性で密GEMMを上回れない原因を、索引帯域・オンチップ復号・Tensor Core利用率の三者として分解し、三層格納形式とTensor Core/CUDA Core協調実行で解く。オフロードや階層メモリ系統とは、GPUへ到着した重みのHBM転送量と復号費を下げる補完関係にある。","audit_required":false},"reservation":{"claim_id":"claim-ebdfe1bfc6bf08876f45688e","worker_id":"scheduled-chat-llm-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "attempt_id": "attempt-99472a28aecd6daa3d12d9ad",
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "slot": "positioning",
+  "data": {
+    "limitations": "主性能評価は28nm合成と命令レベルシミュレーションで、実シリコンのメモリ競合・配線・熱・OS影響を測ったものではない。LPDDR4X 16GB/sと単一バッチを固定しており、より高速な外部メモリや連続バッチではEMA支配度が変化する可能性がある。近似ルーティング・チャネル統合は品質無損失ではなく、非thinking GSM8Kで3〜4%程度の低下が残る。軽量エンコーダによるプリフィル重要度判定とモデル別ハイパーパラメータ校正も追加構成要素である。公開成果物はbf16ソフトウェア実装で、論文のA8W4ハードウェア性能を直接再現するものではない。",
+    "differences": "EdgeMoEは専門家ごとの重要度に応じた混合精度で重み容量・EMAを減らし、MoE-Prunerは専門家内部の静的疎性を利用する。SMoLPUはMoE+投機的復号で粗粒度専門家枝刈りと細粒度チャネル枝刈りを行うが、主にデコード計算削減であり、複数候補のチャネル和集合を読む問題やプリフィルEMAを十分に扱わない。EdgeXpertはプリフィルでルーティング自体を共有集合形成へ変え、デコードでは候補深さの構造を使って『読まないチャネル』を決めるため、疎性を実際の外部メモリアクセス削減へ変換する。",
+    "implementation_status": "Samsung 28nm FDSOI向けRTL合成・電力解析と専用命令レベルシミュレータで評価。加えてPyTorch/HuggingFace上のソフトウェア成果物をZenodo DOI 10.5281/zenodo.21481269で公開し、4種MoE+EAGLE-3に五つの最適化を個別切替できる。",
+    "research_positioning": "エッジ向けLLMアクセラレータ、MoE推論、投機的復号の交点にあるソフトウェア・ハードウェア協調研究。専門家オフロードやキャッシュのように既に発生した転送を隠蔽するのではなく、ルーティングと候補構造を使って外部メモリ要求そのものを発生前に削る。",
+    "relation_to_existing_repository": "MoE並列・専門家キャッシュ系統とは専門家の局所性を高める点を共有するが、EdgeXpertは数MB級SRAMでは複数専門家常駐が非現実的という前提から、キャッシュヒットではなく1要求中の専門家集合を縮小する。投機的復号系統とは採択長と候補木を扱うが、速度上限を計算ではなくEMAで捉える。SSD/CPU専門家オフロード研究へは、共有専門家集合や深さ別チャネル価値をプリフェッチ・階層配置の優先度信号として利用できる可能性があり、転送量自体を減らす補完的手法として位置付けられる。",
+    "audit_required": false
+  }
+}

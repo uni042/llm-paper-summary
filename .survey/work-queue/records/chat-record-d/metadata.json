@@ -1,72 +1,116 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-99472a28aecd6daa3d12d9ad",
+  "job_id": "job-research-ad7e8d527bf159c7",
   "slot": "metadata",
-  "attempt_id": "attempt-ebdfe1bfc6bf08876f45688e",
-  "job_id": "job-research-cff945d042003c88",
   "data": {
-    "canonical_id": "arXiv:2607.08786",
-    "arxiv_id": "2607.08786",
-    "doi": "10.1145/3770743.3804227",
+    "canonical_id": "arXiv:2608.05303",
+    "arxiv_id": "2608.05303",
+    "doi": "10.48550/arXiv.2608.05303",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.LG",
+      "primary": "cs.AR",
       "cross_list": [
-        "cs.AI",
-        "cs.AR"
+        "cs.CL",
+        "cs.LG"
       ]
     },
-    "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices",
-    "summary": "本論文は、品質を保ちやすい約50%の非構造枝刈りで重みを半減しても、位置メタデータと復号処理のため既存GPU疎行列積が密行列積を上回れない問題を扱う。非零要素を、2:4制約へ直接載せるSparse-TC層、2:4窓の余剰要素を空きスロットへ再配置して4ビット差分距離で位置を圧縮するSlot-Filling層、残り1%未満をCSRで処理するResidual層へ分解する。さらに、疎Tensor Coreで主計算を行う間にCUDA Coreで次タイルの位置復号と残差処理を進め、HBMからの疎重み読出し、L2上の活性値再利用、オンチップ計算を重ねる。H100 SXM5上では50%疎性でSpInfer比最大1.64倍のカーネル高速化、OPT-30BではFlashLLM比41.4%高い端末間スループットを示す。一方、プリフィルの大きなNや高疎性では再配置の利点が薄れ、密cuBLASやFlashLLMに劣る境界も明示する。",
-    "list_summary": "約50%の非構造疎重みを2:4疎テンソルコア層・差分距離で再配置する補助層・微小残差層へ分解し、疎テンソルコアとCUDAコアを重ねて実行してSpInfer比最大1.64倍を達成する。",
+    "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+    "summary": "EdgeXpertは、エッジ端末上で専門家混合（Mixture-of-Experts; MoE）と投機的復号を組み合わせると、候補トークン数の増加によって同一段階で多数の専門家・チャネルが活性化し、外部メモリアクセス（external memory access; EMA）が逆に増える問題を扱う。プリフィルでは軽量な双方向エンコーダのCLS注意重みでトークンを重要度別に分け、重要トークンが形成した共有専門家集合を低重要度トークンに再利用させる。デコードでは同一深さ候補の文脈類似性と相互排他性を利用し、必要チャネルの単純な和集合を読まず重要チャネルだけを読み、既に読んだチャネル上で全候補を再計算する補正で精度と採択長を回復する。Samsung 28nm FDSOI、800MHz、LPDDR4X 16GB/sを想定した合成・命令レベルシミュレーションで、従来方式比最大56.3%の端から端までの遅延削減と44.1%のエネルギー削減を報告する。",
+    "list_summary": "MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。",
     "authors": [
-      "Tao Lu",
-      "Haoyu Wang",
-      "Zonghui Wang",
-      "Keshen Xiang",
-      "Jiaheng Zhang",
-      "Wenzhi Chen"
+      "Sangwoo Ha",
+      "Hyunwoo Seo",
+      "Yurim Jo",
+      "Youngjin Moon",
+      "Hoi-Jun Yoo"
     ],
-    "authors_affiliations": "National University of Singapore; Zhejiang University",
-    "published": "2026-06-13",
-    "publication": "63rd ACM/IEEE Design Automation Conference (DAC 2026)",
-    "publication_type": "Conference paper",
-    "publication_status": "Published",
-    "lineage": "unstructured sparse LLM inference / sparse matrix multiplication kernels / Tensor Core-CUDA Core co-execution",
+    "authors_affiliations": "KAIST, Daejeon, South Korea",
+    "published": "2026-08-05",
+    "publication": "MICRO 2026 / arXiv:2608.05303v1",
+    "publication_type": "査読済み会議論文",
+    "publication_status": "59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026) 採録。arXiv v1は2026-08-05。",
+    "lineage": "hardware-accelerators",
     "topics": [
-      "非構造疎性",
-      "疎行列積",
-      "Tensor Core",
-      "CUDA Core",
-      "重み枝刈り",
-      "GPUカーネル",
-      "メタデータ圧縮"
+      "エッジLLM推論",
+      "専門家混合",
+      "投機的復号",
+      "外部メモリアクセス",
+      "専門家再利用",
+      "チャネル統合",
+      "ソフトウェア・ハードウェア協調設計"
     ],
-    "importance": "中程度の非構造疎性では計算量削減よりメタデータ転送・復号が支配的になるという実装上の逆転を、格納形式とGPU実行パイプラインの共同設計で解消し、H100のHBM環境で密行列積を上回る領域を実測した点が重要である。",
-    "hardware_evaluation": "NVIDIA H100 SXM5 80GB HBM3。GPU間はNVLink。カーネル評価は主にOPT-30B/66B由来行列、バッチ16/32、50/60/70%疎性。端末間評価はOPT-30B/66B、バッチ8/16/32、入力512・出力512。疎形式変換時間のみIntel Xeon Platinum 8460Y+ CPUで測定。",
-    "quality_effect": "枝刈り方式そのものの品質改善は主張せず、既存のWandaで生成した疎モデルを高速実行する。論文のTable 1では50%非構造疎性が60〜70%よりパープレキシティ悪化を抑えやすいことを示すが、端末間性能評価では生成品質指標を別途測定していない。",
-    "source": "https://arxiv.org/abs/2607.08786",
-    "sources": [
-      "https://arxiv.org/abs/2607.08786",
-      "https://arxiv.org/html/2607.08786v1",
-      "https://doi.org/10.1145/3770743.3804227"
+    "importance": "高。MoEと投機的復号を別々に高速化するのではなく、両者を併用したときに投機候補が専門家集合を膨張させるという相互作用を主ボトルネックとして定式化し、プリフィルとデコードの双方で外部メモリアクセスが発生する前に不要な専門家・チャネルを排除する。",
+    "hardware_evaluation": "実シリコンではなくSamsung 28nm FDSOI向けRTL合成と命令レベルの専用シミュレータ。800MHz、1.0V、A8W4、LPDDR4X 16GB/s、ピーク13.1 TOPS。ソフトウェア成果物の機能確認はRTX A6000 48GBを使用。",
+    "hardware_details": "8K MAC、512KB共有SRAM、8クラスタ。合成ロジック3.8mm²、60%セル利用率を仮定したロジック投影6.3mm²、SRAM 3.0mm²、総面積9.3mm²。EMAを除くピーク電力1.52W。",
+    "quality_effect": "近似を導入する。最終構成ではMT-Bench低下は最大0.1点程度に回復する一方、非thinking設定のGSM8Kでは約3〜4%の低下が残る。Qwen3 thinking設定ではGSM8Kの追加低下は見られない。MMLU/HellaSwag/ARC-C/WinoGrande/PIQAでもモデルにより小幅な低下がある。",
+    "storage_targets": [
+      "LPDDR4X上のMoE専門家重み",
+      "オンチップSRAMへ流入する専門家・チャネル重み",
+      "プリフィル時の共有専門家集合",
+      "デコード時のチャネルマスクとルーティング情報"
     ],
-    "code": "https://github.com/moui0/cudac",
-    "implementation": "著者公式の公開コードリポジトリ moui0/cudac が存在する。論文はカスタムSpMMカーネルとOPT-30B/66Bの端末間推論統合を実装し、GCC 12.3.0とNVCC 12.6でH100上評価している。",
-    "last_checked": "2026-09-14",
-    "references": [],
-    "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 36,
+    "bottlenecks": [
+      "MoE専門家重みの外部メモリアクセス",
+      "投機候補増加による活性専門家集合の膨張",
+      "個別チャネル枝刈り後も和集合を読むため残るEMA",
+      "エッジSRAM容量不足により複数専門家を常駐できないこと"
+    ],
     "evidence_locations": [
-      "arXiv HTML lines 38-49: 書誌・カテゴリ・コード",
-      "arXiv HTML lines 108-168: 三層格納形式とGPUパイプライン",
-      "arXiv HTML lines 169-196: H100評価、端末間結果、制約"
-    ]
-  },
-  "reservation": {
-    "claim_id": "claim-ebdfe1bfc6bf08876f45688e",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
-    "worker_kind": "scheduled_chat"
+      "§I–II",
+      "§III Motivation",
+      "§IV EdgeXpert",
+      "§V Evaluation",
+      "Table II–V",
+      "Figure 8–13",
+      "Appendix Artifact"
+    ],
+    "source": "https://arxiv.org/abs/2608.05303",
+    "sources": [
+      "https://arxiv.org/abs/2608.05303",
+      "https://arxiv.org/pdf/2608.05303",
+      "https://doi.org/10.5281/zenodo.21481269"
+    ],
+    "code": "https://doi.org/10.5281/zenodo.21481269",
+    "implementation": "論文付録で五つの最適化をPyTorch/HuggingFace上に実装した公開成果物を提供する。Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BとEAGLE-3を対象にrun.pyから各手法を切替可能。論文性能値はA8W4専用ハードウェアシミュレーションで、公開ソフトウェア成果物はbf16動作。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "canonical_id": "arXiv:2410.12013",
+        "arxiv_id": "2410.12013"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066"
+      },
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2401.10774",
+        "arxiv_id": "2401.10774"
+      },
+      {
+        "canonical_id": "arXiv:2203.16487",
+        "arxiv_id": "2203.16487"
+      },
+      {
+        "canonical_id": "arXiv:2302.01318",
+        "arxiv_id": "2302.01318"
+      },
+      {
+        "canonical_id": "arXiv:2602.16052",
+        "arxiv_id": "2602.16052"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv:2608.05303v1一次資料の参考文献節",
+    "references_total": 68
   }
 }
