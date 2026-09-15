@@ -109,15 +109,26 @@ def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> bool:
     return True
 
 
-def _precheck_paper(repo_root: Path, descriptor: dict[str, Any]) -> None:
+def _precheck_paper(
+    repo_root: Path,
+    descriptor: dict[str, Any],
+    *,
+    rendered_content: str | None = None,
+) -> None:
     paper = repo_root / descriptor["paper_path"]
     expected = descriptor.get("expected_blob_sha")
     if not paper.exists():
         return
     if not expected:
         raise ValueError("expected_blob_sha is required when updating an existing paper")
-    current = immutable_submission.git_blob_sha(paper.read_bytes())
+    current_bytes = paper.read_bytes()
+    current = immutable_submission.git_blob_sha(current_bytes)
     if current != expected:
+        desired_bytes = None
+        if rendered_content is not None:
+            desired_bytes = (rendered_content.rstrip() + "\n").encode("utf-8")
+        if desired_bytes is not None and current_bytes == desired_bytes:
+            return
         raise ValueError(f"paper blob changed: expected {expected}, current {current}")
 
 
@@ -378,8 +389,9 @@ def process(
     sub["_file"] = relative_submission
     sub["status"] = status
     if status == "completed":
-        _precheck_paper(repo_root, descriptor)
-        sub["content"] = render_descriptor(repo_root, descriptor)
+        rendered_content = render_descriptor(repo_root, descriptor)
+        _precheck_paper(repo_root, descriptor, rendered_content=rendered_content)
+        sub["content"] = rendered_content
 
     st = _empty_effect_state() if defer_shared_state else queue_worker.load_state()
     mutable_job = dict(job)
