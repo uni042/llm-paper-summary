@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 01:05:40 JST**
+> 自動生成: **2026-09-16 01:06:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **8** | **1** | **7** | **0** | **0** | **15** |
-| 合計 | **2** | **13** | **3** | **10** | **0** | **0** | **15** |
+| Discovery | **2** | **10** | **1** | **9** | **0** | **0** | **19** |
+| 合計 | **2** | **15** | **3** | **12** | **0** | **0** | **19** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -70,8 +70,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 01:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **7件** / 候補: **15件**
-- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング / 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill / CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing / GPU runtime・fused decompression kernel・L2 KV prefetch / SSD/GDS・expert streamingの関連基礎研究再確認 / cs.OS/cs.PF隣接・GPU dispatch・OS-level inference primitives / framework実装起点・GPU/SmartNIC serving・adaptive TP・geometry-aware scheduler / agentic workflow・diffusion LLMという新workload形態のserving
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **9件** / 候補: **19件**
+- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング / 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill / CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing / GPU runtime・fused decompression kernel・L2 KV prefetch / SSD/GDS・expert streamingの関連基礎研究再確認 / cs.OS/cs.PF隣接・GPU dispatch・OS-level inference primitives / framework実装起点・GPU/SmartNIC serving・adaptive TP・geometry-aware scheduler / agentic workflow・diffusion LLMという新workload形態のserving / power-aware disaggregation・inference/fine-tuning co-serving / heterogeneous edge/fog・mixed-scale model fleet allocation
 - round `specialist-new-systems-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
   - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
@@ -103,6 +103,14 @@
 - round `specialist-new-workloads-8` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0131JST-discovery-specialist-new-workloads-8.json`
   - 探索軸: agentic workflow・diffusion LLMという新workload形態のserving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-power-coserving-9` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0135JST-discovery-specialist-power-coserving-9.json`
+  - 探索軸: power-aware disaggregation・inference/fine-tuning co-serving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-heterogeneous-10` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0138JST-discovery-specialist-heterogeneous-10.json`
+  - 探索軸: heterogeneous edge/fog・mixed-scale model fleet allocation
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
