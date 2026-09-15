@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-043db24bbe0099ae5a65a1e3",
-  "job_id": "job-research-3540240bb76e82ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-043db24bbe0099ae5a65a1e3",
-    "worker_id": "scheduled-chat-paper-20260915T1430JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-043db24bbe0099ae5a65a1e3","job_id":"job-research-3540240bb76e82ea",
+ "data":{
+  "problem":"マルチターン対話では休眠中の会話KVをGPUから退避する必要があり、再開時に履歴を全prefillしてKVを再計算すると履歴長に比例してTTFTが増える。全KVをCPUへ保存して再ロードすれば計算は省けるが、Qwen1.5-7Bでは2000 tokenの1 turnだけで平均約1GBとなり、多数対話でDRAMを圧迫し、溢れればSSDロードも必要になる。層間で似た注意パターンを利用する固定KV圧縮は保存量を減らせるが、注意類似度は対話内容ごとに変わり、将来のユーザー入力が参照する重要情報を固定共有が壊す場合がある。さらに対話ごとの共有層を選ぶには巨大なattention weightの保存と類似度計算が必要で、4000 token・7Bモデルでは単純保持が約30GB GPUメモリを要求する。圧縮後は層ごとのロード量と再計算量も不均衡になるため、固定比率の再計算・ロードパイプラインにはbubbleが生じる。",
+  "novelty":"Krulは層間KV共有を固定配置ではなく会話ごとのattention similarityに基づく動的戦略へ変え、将来入力に敏感な層を事前に圧縮対象から除外する。さらにprefillとdecodeの注意重み特性の非対称性を利用して、prefill側の大きなattention weightはCPUへ非同期退避して類似度を計算し、decode側は最新token分だけGPU上で逐次計算する。復元時には圧縮マップから生じる層別の再計算量減少・ロード量増加を利用し、再計算とロードをピラミッド状に重畳するbubble-free schedulerを構成する。",
+  "method_overview":"各対話の生成中、Krulはまずattention patternを観測して入力依存性の高い層を識別する。sequenceの先頭10%と末尾10%への平均attentionが閾値以下となる層を非I-R層として圧縮対象から外し、将来入力により注目先が変わりやすい層のKVを保持する。残るI-R層では各層・headのattention weightをflattenし、層ペア間Euclidean distanceを計算して類似度順に並べ、同じ層を重複利用しない制約の下で指定圧縮率まで共有層ペアを選ぶ。類似度推定のメモリ負荷を抑えるため、prefillで生成される大きなattention weightはCUDA streamでCPUへ送り非同期計算し、decodeでは最新tokenのattentionだけをGPUに残して毎token類似度を加算し、最後に両者を統合する。対話終了時には選択したmapに従ってKVを層間共有・圧縮してCPUへ退避する。次のturnが到着すると、保存されていない前段KVはhidden stateから再計算し、共有済み後段KVはCPUからGPUへロードする。schedulerは層が深くなるほど再計算量を減らしロード量を増やすようtaskを配置し、複数CUDA streamとI/O threadで両streamを同時進行させる。必要hidden stateは前段で計算済みのより長い状態からsliceできるため依存関係を保ち、最後に再計算KVとロードKVを結合して通常decodeへ接続する。これにより入力の対話履歴から圧縮戦略選択、休眠時保存、再開時復元、次token生成までが一つのend-to-end経路になる。",
+  "components":[
+   {"name":"事前圧縮戦略選択器","description":"将来のuser inputそのものは未知なので、現在のqueryだけで重要tokenを捨てるのではなく、attention patternが入力変化へ敏感かどうかを層単位で先に分類する。sequence先頭10%と末尾10%への平均attentionからI-P/I-E型の入力依存層を検出して共有対象外とし、比較的入力に頑健なI-R層だけを候補にする。その候補間でattention weightのEuclidean distanceを計算し、類似度の高い層ペアから、同一層を複数ペアに使わない制約と圧縮率を満たすまでgreedyに選択する。固定して後半隣接層を共有するMiniCache型と異なり、各conversationが異なるlayer mapを持つため、将来turnで必要になる文脈を壊す確率を下げながら保存量を削減する。"},
+   {"name":"token-wise異種attention類似度推定器","description":"prefill attentionは全prompt token間を含むため大きくGPU保存が高価だが、一度にまとまって生成されるのでCPUへ非同期転送して類似度を計算できる。一方decode attentionは1 token分ずつ小さいが、ShareGPT分析ではoutputがinputより平均6.56倍長く頻繁に発生するため、最新token分だけGPUでtorch.cdist等を使って逐次計算し直ちに破棄する。prefill側CPU計算とdecode側GPU計算を生成本体と重畳し、最後に距離統計を合算することで、全attention historyをGPUへ保持せず対話固有のlayer similarityを得る。これにより圧縮戦略選択の追加メモリと遅延を生成経路の背後へ隠す。"},
+   {"name":"層間動的KV共有","description":"I-R層の高類似layer pairでは一方のKVを他方と共有し、休眠対話で保存するKV量を削減する。共有mapはconversationごとに異なり、共有されなかったKVと必要hidden stateだけをCPUへ保持する。再開時には欠落KVをすべてロードするのではなく、保存済みKVのloadと欠落部分のrecomputeを組み合わせるため、圧縮がstorageだけでなく復元仕事量の構成そのものを変える。"},
+   {"name":"bubble-free復元scheduler","description":"圧縮mapにより浅い層ほど再計算対象が多く、深い層ほど共有済みKVのロード対象が多いピラミッド型分布になることを利用する。浅い層でGPU計算を進める間に後段KVをCPUからGPUへロードし、層が進むにつれて計算量を減らしロード帯域利用を増やす。固定recompute/load比で両streamの長さが合わず待ちが生じる方式と異なり、layer mapに応じてtaskを再配置して長い方のstreamが支配する時間を縮める。"}
+  ],
+  "system_design":"生成時にattention統計をCPU/GPUへ分担して蓄積し、turn終了時にconversation-specific layer mapを確定して圧縮KVをCPUへ保存する。再開requestではmapから必要なrecompute/load量を層ごとに導出し、CUDA streamとI/O threadで復元を重畳する。復元後はtorch.cat等でKVを統合し通常のprefill/decode engineへ戻す。",
+  "why_it_works":"KV共有の品質損失は共有する層のattention patternが将来queryでも十分近いかに依存するため、入力依存層を避けたconversation-specific選択が固定戦略より安全である。同時に圧縮で減ったロード量を再計算へ振り分け、GPU computeとPCIe/DRAM loadを並列化すると、storage節約がそのままTTFT悪化へ転化するのを防げる。",
+  "failure_modes":"attention patternの入力依存性判定が外れるconversationでは重要文脈を共有KVが十分保持できず品質が低下し得る。CPU-GPU帯域やCPU類似度計算が遅く生成と重畳できない環境では追加overheadが露出する。極端に短い履歴では復元最適化の固定費が相対的に大きく、逆にCPU DRAMも不足する大規模deploymentではSSD階層の影響が増える。"
+ },
+ "reservation":{"claim_id":"claim-043db24bbe0099ae5a65a1e3","worker_id":"scheduled-chat-paper-20260915T1430JST","worker_kind":"scheduled_chat"}
 }
