@@ -23,12 +23,23 @@ jobs:
       - name: Replay exact Library payloads safely
         run: |
           python - <<'PY'
-          import base64, io, json, pathlib, tarfile
+          import base64, io, json, pathlib, tarfile, hashlib
           q = pathlib.Path('.survey/work-queue')
-          parts = sorted(q.glob('library-replay-bundle.part-*'))
-          if not parts: raise SystemExit('bundle parts missing')
-          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
-          raw = base64.b64decode(encoded, validate=True)
+          binary_parts = sorted(q.glob('library-replay-binary.part-*'))
+          if binary_parts:
+              raw = b''.join(p.read_bytes() for p in binary_parts)
+          else:
+              parts = sorted(q.glob('library-replay-bundle.part-*'))
+              if not parts: raise SystemExit('bundle parts missing')
+              encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+              raw = base64.b64decode(encoded, validate=True)
+          manifest_path = q/'library-replay-binary-manifest.json'
+          if binary_parts and manifest_path.is_file():
+              manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+              if len(binary_parts) != manifest.get('part_count'):
+                  raise SystemExit('binary bundle part count mismatch')
+              if hashlib.sha256(raw).hexdigest() != manifest.get('sha256'):
+                  raise SystemExit('binary bundle sha256 mismatch')
           added, skipped, conflicts = [], [], []
           with tarfile.open(fileobj=io.BytesIO(raw), mode='r:*') as tf:
               for member in tf.getmembers():
@@ -63,6 +74,7 @@ jobs:
                   added.append(envelope_id)
           report={
               'schema_version':1,
+              'bundle_count': len(added) + len(skipped) + len(conflicts),
               'added':added,
               'already_present_same_payload':skipped,
               'conflicts_not_overwritten':conflicts,
