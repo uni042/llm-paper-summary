@@ -1,22 +1,54 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-043db24bbe0099ae5a65a1e3","job_id":"job-research-3540240bb76e82ea",
- "data":{
-  "limitations":[
-   {"name":"単一server testbed","description":"4×A100 80GB、128GB DRAM、PCIe Gen4の単一serverで評価しており、remote KV store、RDMA、CXL、複数nodeやheterogeneous GPUでのrestorationは未評価。"},
-   {"name":"将来入力の間接推定","description":"future user input自体は観測できないため、現在までのattention patternからinput-sensitive layerを除外する。会話分布が大きく変化すると判定が外れ、重要contextを共有KVで十分保持できない可能性がある。"},
-   {"name":"CPU/DRAM前提","description":"inactive KVをCPU DRAMへ置きCPUでprefill similarityを非同期計算できることを前提とする。CPU計算資源やPCIe帯域が不足するとoverlapが崩れ、SSD主体の大規模KV階層では追加設計が必要。"},
-   {"name":"artifact公開不明","description":"本文のartifact availability URLがplaceholderのため、一次資料から有効な公式code repositoryを確認できない。"}
-  ],
-  "differences":[
-   {"name":"Full KV loadとの差","description":"全KVを保存・ロードせず、conversation-specific cross-layer sharingと一部recomputeで保存量とload量を減らす。"},
-   {"name":"Pensieve/Cake等との差","description":"固定したsuffix recompute/load比ではなく、圧縮layer mapに応じて層ごとのrecomputeとloadを動的配置しbubbleを抑える。"},
-   {"name":"MiniCacheとの差","description":"後半隣接層を固定共有せず、input-sensitive layerを除外したI-R層全体からconversationごとに高類似pairを選ぶため、同じ圧縮式でも品質低下を抑える。"},
-   {"name":"H2O等sparse attentionとの差","description":"現在queryだけでtoken KVをevictせず、future inputを考慮できないtoken-level evictionの品質riskを避け、layer間共有で情報を保持する。"}
-  ],
-  "implementation_status":"PyTorch/Python/Transformers上のprototypeを本文で説明し、複数CUDA stream、CPU attention similarity、GPU token-wise similarity、KV prefetch/recompute pipelineを実装。公式artifact URLはplaceholderで公開実装は確認できない。",
-  "research_positioning":"KV cache memory managementとmulti-turn state restorationの交点に位置する。外部階層へKVを単純offloadする研究に対し、保存前にconversation-specific cross-layer redundancyを利用してKV量を減らし、その圧縮構造をrecompute/load schedulingへ伝える点が特徴である。",
-  "relation_to_existing_repository":"AttentionStore型のKV保存、Pensieve/Cake型のrecompute-load overlap、MiniCache型のcross-layer KV compressionを統合的に接続する位置付けである。特に外部KV階層をSSD/CXL/RDMAへ拡張する場合、Krulの『どのKVを保存しどこを再計算するか』というmapを階層placementやprefetch schedulerの入力へ利用できるため、既存のKV offload研究と補完関係にある。",
-  "audit_required":false
- },
- "reservation":{"claim_id":"claim-043db24bbe0099ae5a65a1e3","worker_id":"scheduled-chat-paper-20260915T1430JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-799320e651c4286ff39ecfa7",
+  "job_id": "job-research-3540240bb76e82ea",
+  "data": {
+    "limitations": [
+      {
+        "name": "単一server testbed",
+        "description": "4×A100 80GB、128GB DRAM、PCIe Gen4の単一serverで評価しており、remote KV store、RDMA、CXL、複数nodeやheterogeneous GPUでのrestorationは未評価。"
+      },
+      {
+        "name": "将来入力の間接推定",
+        "description": "future user input自体は観測できないため、現在までのattention patternからinput-sensitive layerを除外する。会話分布が大きく変化すると判定が外れ、重要contextを共有KVで十分保持できない可能性がある。"
+      },
+      {
+        "name": "CPU/DRAM前提",
+        "description": "inactive KVをCPU DRAMへ置きCPUでprefill similarityを非同期計算できることを前提とする。CPU計算資源やPCIe帯域が不足するとoverlapが崩れ、SSD主体の大規模KV階層では追加設計が必要。"
+      },
+      {
+        "name": "artifact公開不明",
+        "description": "本文のartifact availability URLがplaceholderのため、一次資料から有効な公式code repositoryを確認できない。"
+      }
+    ],
+    "differences": [
+      {
+        "name": "Full KV loadとの差",
+        "description": "全KVを保存・ロードせず、conversation-specific cross-layer sharingと一部recomputeで保存量とload量を減らす。"
+      },
+      {
+        "name": "Pensieve/Cake等との差",
+        "description": "固定したsuffix recompute/load比ではなく、圧縮layer mapに応じて層ごとのrecomputeとloadを動的配置しbubbleを抑える。"
+      },
+      {
+        "name": "MiniCacheとの差",
+        "description": "後半隣接層を固定共有せず、input-sensitive layerを除外したI-R層全体からconversationごとに高類似pairを選ぶため、同じ圧縮式でも品質低下を抑える。"
+      },
+      {
+        "name": "H2O等sparse attentionとの差",
+        "description": "現在queryだけでtoken KVをevictせず、future inputを考慮できないtoken-level evictionの品質riskを避け、layer間共有で情報を保持する。"
+      }
+    ],
+    "implementation_status": "PyTorch/Python/Transformers上のprototypeを本文で説明し、複数CUDA stream、CPU attention similarity、GPU token-wise similarity、KV prefetch/recompute pipelineを実装。公式artifact URLはplaceholderで公開実装は確認できない。",
+    "research_positioning": "KV cache memory managementとmulti-turn state restorationの交点に位置する。外部階層へKVを単純offloadする研究に対し、保存前にconversation-specific cross-layer redundancyを利用してKV量を減らし、その圧縮構造をrecompute/load schedulingへ伝える点が特徴である。",
+    "relation_to_existing_repository": "AttentionStore型のKV保存、Pensieve/Cake型のrecompute-load overlap、MiniCache型のcross-layer KV compressionを統合的に接続する位置付けである。特に外部KV階層をSSD/CXL/RDMAへ拡張する場合、Krulの『どのKVを保存しどこを再計算するか』というmapを階層placementやprefetch schedulerの入力へ利用できるため、既存のKV offload研究と補完関係にある。",
+    "audit_required": false
+  },
+  "reservation": {
+    "claim_id": "claim-799320e651c4286ff39ecfa7",
+    "worker_id": "scheduled-chat-paper-20260915T1430JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -1,24 +1,81 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-043db24bbe0099ae5a65a1e3","job_id":"job-research-3540240bb76e82ea",
- "data":{
-  "hardware":["4×NVIDIA A100 80GB","128GB host DRAM","10TB SSD","PCIe Gen4"],
-  "software":["PyTorch","Hugging Face Transformers","CUDA streams"],
-  "model":["LLaMA-7B","LLaMA-30B","Qwen1.5-7B","Qwen2-72B (8-bit model quantization)"],
-  "datasets":["LongBench","ShareGPT"],
-  "baselines":["Full KV recompute","Full KV load / AttentionStore-style","Partial KV recompute","H2O KV eviction","MiniCache fixed KV compression"],
-  "correctness":"LongBenchで生成品質を比較し、Krulは平均accuracy lossを1%未満に抑える。Qwen1.5-7Bの詳細表では14 task平均26.70で、非圧縮baseline 26.94、MiniCache 25.82、固定化したKrul戦略25.72に対し動的選択が最もbaselineへ近い。",
-  "settings":[
-   {"name":"LongBench accuracy","description":"context末尾128 tokenを新user inputとして分離し、それ以前をhistorical conversationとしてKV圧縮して品質を評価する。"},
-   {"name":"TTFT comparison","description":"4 modelでfull recompute、full load、partial recompute、KV eviction、fixed KV compressionと比較する。"},
-   {"name":"prompt length sensitivity","description":"LLaMA-7Bでhistorical prompt lengthを500〜4000 tokenへ変えTTFTとKV storageの伸びを比較する。"},
-   {"name":"throughput","description":"ShareGPT workloadを使いprefill throughputを測定し、複数requestのcontinuous batchを有効化する。"},
-   {"name":"similarity overhead","description":"CPUでのprefill attention similarity計算、GPU decode、GPU decode+similarityの遅延をsequence lengthごとに比較する。"}
-  ],
-  "methodology":"同一testbed上で状態復元方式を切り替え、TTFT、prefill throughput、KV storage、LongBench accuracyを測定する。復元方式の差を明確にするためfull recompute/load、固定圧縮、partial recompute/load pipeline、sparse evictionを比較し、Krulのdynamic layer sharingとschedulerの組合せを評価する。",
-  "scope":"A100 PCIe serverでの実機評価。CPU DRAMを休眠KVの主要退避先とする構成で、分散KV store、NVMe主体の復元、CXL、異種GPU、production traceでの大規模multi-tenant運用は直接評価していない。",
-  "workloads":["multi-turn conversation restoration","LongBench quality tasks","ShareGPT throughput workload","500-4000 token historical contexts"],
-  "metrics":["TTFT","prefill throughput","KV cache storage","LongBench accuracy","attention similarity overhead"],
-  "reproducibility":"model、hardware、dataset、baseline、主要実装APIは本文に記載される。一方、本文のartifact URLはplaceholderで有効な公式code repositoryを一次資料から確認できないため、完全再現性には制約がある。"
- },
- "reservation":{"claim_id":"claim-043db24bbe0099ae5a65a1e3","worker_id":"scheduled-chat-paper-20260915T1430JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-799320e651c4286ff39ecfa7",
+  "job_id": "job-research-3540240bb76e82ea",
+  "data": {
+    "hardware": [
+      "4×NVIDIA A100 80GB",
+      "128GB host DRAM",
+      "10TB SSD",
+      "PCIe Gen4"
+    ],
+    "software": [
+      "PyTorch",
+      "Hugging Face Transformers",
+      "CUDA streams"
+    ],
+    "model": [
+      "LLaMA-7B",
+      "LLaMA-30B",
+      "Qwen1.5-7B",
+      "Qwen2-72B (8-bit model quantization)"
+    ],
+    "datasets": [
+      "LongBench",
+      "ShareGPT"
+    ],
+    "baselines": [
+      "Full KV recompute",
+      "Full KV load / AttentionStore-style",
+      "Partial KV recompute",
+      "H2O KV eviction",
+      "MiniCache fixed KV compression"
+    ],
+    "correctness": "LongBenchで生成品質を比較し、Krulは平均accuracy lossを1%未満に抑える。Qwen1.5-7Bの詳細表では14 task平均26.70で、非圧縮baseline 26.94、MiniCache 25.82、固定化したKrul戦略25.72に対し動的選択が最もbaselineへ近い。",
+    "settings": [
+      {
+        "name": "LongBench accuracy",
+        "description": "context末尾128 tokenを新user inputとして分離し、それ以前をhistorical conversationとしてKV圧縮して品質を評価する。"
+      },
+      {
+        "name": "TTFT comparison",
+        "description": "4 modelでfull recompute、full load、partial recompute、KV eviction、fixed KV compressionと比較する。"
+      },
+      {
+        "name": "prompt length sensitivity",
+        "description": "LLaMA-7Bでhistorical prompt lengthを500〜4000 tokenへ変えTTFTとKV storageの伸びを比較する。"
+      },
+      {
+        "name": "throughput",
+        "description": "ShareGPT workloadを使いprefill throughputを測定し、複数requestのcontinuous batchを有効化する。"
+      },
+      {
+        "name": "similarity overhead",
+        "description": "CPUでのprefill attention similarity計算、GPU decode、GPU decode+similarityの遅延をsequence lengthごとに比較する。"
+      }
+    ],
+    "methodology": "同一testbed上で状態復元方式を切り替え、TTFT、prefill throughput、KV storage、LongBench accuracyを測定する。復元方式の差を明確にするためfull recompute/load、固定圧縮、partial recompute/load pipeline、sparse evictionを比較し、Krulのdynamic layer sharingとschedulerの組合せを評価する。",
+    "scope": "A100 PCIe serverでの実機評価。CPU DRAMを休眠KVの主要退避先とする構成で、分散KV store、NVMe主体の復元、CXL、異種GPU、production traceでの大規模multi-tenant運用は直接評価していない。",
+    "workloads": [
+      "multi-turn conversation restoration",
+      "LongBench quality tasks",
+      "ShareGPT throughput workload",
+      "500-4000 token historical contexts"
+    ],
+    "metrics": [
+      "TTFT",
+      "prefill throughput",
+      "KV cache storage",
+      "LongBench accuracy",
+      "attention similarity overhead"
+    ],
+    "reproducibility": "model、hardware、dataset、baseline、主要実装APIは本文に記載される。一方、本文のartifact URLはplaceholderで有効な公式code repositoryを一次資料から確認できないため、完全再現性には制約がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-799320e651c4286ff39ecfa7",
+    "worker_id": "scheduled-chat-paper-20260915T1430JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
