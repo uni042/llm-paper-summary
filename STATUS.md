@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:05:14 JST**
+> 自動生成: **2026-09-16 07:05:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,12 +11,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **5** | **2** | **3** | **7** | **0** | — |
+| Research | **1** | **5** | **2** | **3** | **6** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **6** | **0** | **6** | **0** | **0** | **8** |
-| 合計 | **4** | **11** | **2** | **9** | **7** | **0** | **8** |
+| Discovery | **4** | **7** | **0** | **7** | **0** | **0** | **9** |
+| 合計 | **5** | **12** | **2** | **10** | **6** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -24,7 +24,11 @@
 
 ### Research
 
-- 検証済み完了なし。
+- **09-16 07:05:29 JST** [research] `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
+  - job: `.survey/work-queue/jobs/job-research-d09e1c8e52097070.json`
+  - result: `.survey/work-queue/results/research/attempt-d87ac0583b3b3fb6f0fcba35.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d87ac0583b3b3fb6f0fcba35.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md`
 
 ### Audit
 
@@ -78,8 +82,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 07:00 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **8件**
-- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **9件**
+- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着・適応型KV圧縮・制約付き推論
@@ -104,12 +108,16 @@
   - submission: `.survey/work-queue/submissions/20260916T0718JST-discovery-specialist-storage-foundations-6.json`
   - 探索軸: backward reference・near-data/near-storage・CXL基盤
   - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-elastic-memory-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0722JST-discovery-specialist-elastic-memory-7b.json`
+  - 探索軸: OS隣接・統合GPUメモリ管理・ballooning
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **7件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **0件**
 - `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-382442b3f5faa67f.json`
@@ -122,9 +130,6 @@
 - `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-c6ac42b8bcec8aab.json`
-- `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs / worker `work-library-repair-20260916`
-  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d09e1c8e52097070.json`
 - `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-d66acc5736f090e9.json`

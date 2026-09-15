@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T21:11:18.036023+00:00",
+  "updated_at": "2026-09-15T22:05:31.712006+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T21:11:18.036023+00:00",
+      "last_recorded_at": "2026-09-15T22:05:31.712006+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 84,
+        "research_completed": 85,
         "audit_completed": 0,
         "discovery_completed": 26,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34897918157:1",
-          "recorded_at": "2026-09-14T21:17:19.123339+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34897918157",
-            "run_attempt": "1",
-            "source_sha": "5cd78fdfba748a257dc96368fd7a2c2a5cbe917c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34899002955:1",
           "recorded_at": "2026-09-14T21:35:11.590429+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35029137061:1",
+          "recorded_at": "2026-09-15T22:05:31.712006+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35029137061",
+            "run_attempt": "1",
+            "source_sha": "4f9563c497534f9d3dd420512d4dd81e81d4efe4"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -20489,6 +20489,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-d09e1c8e52097070",
+          "type": "research",
+          "canonical_id": "arXiv:2505.14468",
+          "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21037,7 +21045,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 548,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
