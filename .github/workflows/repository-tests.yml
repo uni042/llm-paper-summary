@@ -6,6 +6,8 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
+      - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
+      - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
       - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
       - 'papers/**/*.md'
@@ -14,6 +16,8 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
+      - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
+      - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
       - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
       - 'papers/**/*.md'
@@ -57,11 +61,11 @@ jobs:
       - name: Run all regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*.py'
 
-      - name: Validate current paper metadata
-        run: python .survey/scripts/validate_metadata.py --root .
+      - name: Audit live metadata coverage
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
 
-      - name: Build current repository inventory
-        run: python .survey/scripts/build_inventory.py --root .
+      - name: Build live repository inventory
+        run: python .survey/scripts/build_repository_inventory.py
 
-      - name: Run current repository structural check
-        run: python .survey/scripts/survey.py --root .survey check
+      - name: Run live repository consistency check
+        run: python .survey/scripts/check_repository.py
