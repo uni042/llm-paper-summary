@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 18:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 19:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
