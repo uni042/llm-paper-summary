@@ -66,6 +66,57 @@ class FallbackDispatchBatchTests(unittest.TestCase):
             self.assertFalse((inbox / "env-b.json").exists())
             self.assertEqual(result["deferred"][0]["id"], "env-a")
 
+    def test_direct_discovery_payload_is_recovered_as_submission(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            inbox = root / ft.FALLBACK_INBOX
+            raw = {
+                "schema_version": 1,
+                "id": "20260915T1204JST-discovery-crosspool",
+                "kind": "discovery",
+                "job_id": "job-0d079aa6f4091078",
+                "created_at": "2026-09-15T03:04:00Z",
+                "candidates": [
+                    {
+                        "canonical_id": "arXiv:2606.24506",
+                        "title": "CrossPool",
+                        "source_url": "https://arxiv.org/abs/2606.24506",
+                        "priority": 88,
+                        "reason": "candidate",
+                    }
+                ],
+                "discovery_stats": {
+                    "run_key": "2026-09-15T12:00:00+09:00",
+                    "round": "specialist-cold-moe-pooling-1",
+                    "axis": "cold MoE",
+                    "candidate_count": 1,
+                    "duplicate_filtered_count": 0,
+                    "duplicate_canonical_ids": [],
+                    "next_axis_hint": "another axis",
+                    "empty_round_reason": None,
+                },
+            }
+            write_json(inbox / f"{raw['id']}.json", raw)
+
+            result = dispatcher.dispatch(root)
+
+            submission_path = root / ".survey/work-queue/submissions" / f"{raw['id']}.json"
+            self.assertEqual(result["processed_count"], 1)
+            self.assertEqual(result["invalid"], [])
+            self.assertEqual(result["processed"][0]["envelope_id"], raw["id"])
+            self.assertEqual(result["changed_paths"], [str(submission_path.relative_to(root))])
+            self.assertEqual(
+                json.loads(submission_path.read_text(encoding="utf-8")),
+                {
+                    "schema_version": 1,
+                    "job_id": raw["job_id"],
+                    "candidates": raw["candidates"],
+                    "discovery_stats": raw["discovery_stats"],
+                },
+            )
+            self.assertTrue((root / ft.FALLBACK_ARCHIVE / f"{raw['id']}.json").is_file())
+            self.assertFalse((root / ft.FALLBACK_FAILED / f"{raw['id']}.json").exists())
+
 
 if __name__ == "__main__":
     unittest.main()
