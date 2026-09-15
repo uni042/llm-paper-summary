@@ -1,50 +1,56 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-1829cd0996ad73e7ae285518",
-  "job_id": "job-research-ad7e8d527bf159c7",
   "slot": "evaluation",
+  "attempt_id": "attempt-03c435abd5722f66e988d0a4",
+  "job_id": "job-research-22ee1955e766f2b1",
   "data": {
-    "hardware": "Samsung 28nm FDSOI向けRTL合成。800MHz、1.0V、A8W4、8K MAC、512KB共有SRAM、8クラスタ、LPDDR4X 16GB/s。総投影面積9.3mm²、EMAを除くピーク電力1.52W、ピーク13.1 TOPS。",
-    "software": "Synopsys Design Compiler/PrimeTimeで合成・電力評価し、提案モジュールを行動モデル化した命令レベル専用シミュレータで最終アクセスパターン、命令列、DRAMトラフィックから遅延・エネルギーを積算。公開PyTorch成果物はLinux/Python 3.13、RTX A6000で機能確認可能。",
-    "methodology": "Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BをEAGLE-3と組み合わせ、64候補・最大深さ6で単一バッチ評価。比較対象はMoE-Pruner、EdgeMoE、SMoLPUで、28nm、800MHz、外部帯域16GB/sへ正規化する。MT-Bench、GSM8K、MMLU、HellaSwag、ARC-Challenge、WinoGrande、PIQAで品質と採択長を測り、プリフィル再利用、チャネル統合、計算補正を段階的に有効化する除去評価も行う。",
-    "scope": "実シリコンではなく合成とシミュレーションが主評価。外部メモリはLPDDR4X 16GB/s固定、単一バッチのエッジ推論を対象とし、連続バッチ、多ユーザー、熱スロットリング、実端末OS干渉、より高速なLPDDR5X/HBM環境は直接評価しない。",
+    "hardware": "最大8ノードの異種GPU構成。RTX3090、RTX4090、NVIDIA L40S、RTX Ada 6000、A100を使用し、一部モデルは4×A100で実行する。",
+    "software": "WWW.Serve公開実装。SGLangとvLLMを混在させ、通信はZeroMQ、モデル接続はAsyncOpenAI互換クライアント。評価時は完全ブロックチェーンではなく共有信用台帳を使用する。",
+    "methodology": "OpenR1-Math-220kのプロンプトを用い、Qwen3、DeepSeek-Qwen、Llama 3.1を異なるGPU・実行系へ配置する4設定を作る。各ノードの要求到着率を区分的に変更し、単一ノード、信頼された集中スケジューラ、WWW.Serveを比較する。SLO達成率と平均遅延に加え、ノード参加・離脱、モデル規模、量子化、注意バックエンド、GPU種別、対戦率、利用者方針のアブレーションを行う。",
+    "scope": "主要なスケジューリング評価は4〜8ノード、約750秒の区分的負荷で実施する。全ノードの方針は主評価で委譲80%、受入80%、目標利用率70%、最大8192トークン、temperature 0、top-p 0.95に統一。世界規模WANや大規模障害、完全分散台帳の性能は直接評価していない。",
     "workloads": [
-      "Granite-1B-A400M",
-      "OLMoE-1B-7B",
-      "DeepSeek-V2-Lite",
-      "Qwen3-30B-A3B",
-      "MT-Bench",
-      "GSM8K",
-      "MMLU",
-      "HellaSwag",
-      "ARC-Challenge",
-      "WinoGrande",
-      "PIQA"
+      "OpenR1-Math-220k",
+      "Qwen3 4B/8B/32B",
+      "DeepSeek-Qwen 7B",
+      "Llama 3.1 8B"
     ],
     "baselines": [
-      "MoE+EAGLE-3無最適化",
-      "SMoLPU",
-      "EdgeMoE",
-      "MoE-Pruner",
-      "自己回帰版のEdgeMoE/MoE-Pruner"
+      "単一ノード実行",
+      "集中スケジューリング",
+      "WWW.Serve分散スケジューリング"
     ],
     "metrics": [
-      "端から端までの遅延",
-      "TTFT",
-      "TPOT",
-      "総エネルギー",
-      "外部メモリアクセス量",
-      "投機採択長",
-      "7ベンチマーク品質",
-      "面積",
-      "電力"
+      "SLO達成率",
+      "平均要求遅延",
+      "対戦勝率",
+      "処理要求数",
+      "信用量推移",
+      "動的参加時の遅延"
     ],
-    "reproducibility": "モデル・ハードウェア条件・比較正規化・校正データ・主要ハイパーパラメータ・公開ソフトウェア成果物が明記される。Zenodo成果物は公開だがbf16のソフトウェア実装であり、論文のA8W4専用ハードウェア性能値をそのまま再現するRTL/シミュレータ公開範囲は付録だけでは完全には確認できない。"
+    "settings": [
+      {
+        "name": "同質4ノード",
+        "description": "Qwen3-8B、Ada 6000、SGLangを4ノードで使用し、ノード1と4だけ負荷を途中で高低切替する。"
+      },
+      {
+        "name": "モデル・GPU異種4ノード",
+        "description": "Qwen3-8B/Ada 6000とQwen3-4B/RTX3090を混在させ、全てSGLangで負荷変動を与える。"
+      },
+      {
+        "name": "実行系も異なる4ノード",
+        "description": "Qwen3-32B/4×A100、Qwen3-8B/L40S、DeepSeek-Qwen-7B/RTX3090、Llama3.1-8B/Ada6000をSGLang/vLLM混在で運用する。"
+      },
+      {
+        "name": "異種8ノード",
+        "description": "L40S、Ada6000、RTX4090、RTX3090へLlama3.1-8B、DeepSeek-Qwen-7B、Qwen3-4Bを配置し、区分的Poisson到着で負荷を変動させる。"
+      }
+    ],
+    "reproducibility": "公開GitHubとYAML設定方式があり、モデル・GPU・バックエンド・到着スケジュール・主要方針値を論文に明記する。一方、主評価は共有台帳へ簡略化され、実世界のピア間ネットワーク遅延・障害分布・悪意参加者比率の詳細条件は不足する。"
   },
   "reservation": {
-    "claim_id": "claim-1829cd0996ad73e7ae285518",
-    "worker_id": "scheduled-chat-paper-20260915T1430JST",
+    "claim_id": "claim-03c435abd5722f66e988d0a4",
+    "worker_id": "scheduled-chat-paper-20260915T1530JST",
     "worker_kind": "scheduled_chat"
   }
 }
