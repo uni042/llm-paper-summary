@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-a88806a6b69afa14faffe306",
-  "job_id": "job-research-229f0f103fc45c25",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a88806a6b69afa14faffe306",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a88806a6b69afa14faffe306","job_id":"job-research-229f0f103fc45c25","data":{"problem":"既存MoEオフロードはCPUメモリをGPU外部の高速階層として想定するが、Jetson等のUMA型端末ではCPU/GPUが同じDRAMを共有し、容量不足分は1–5 GB/s級NVMeへ落ちる。batch=1中心ではパイプラインも効きにくく、edge移行時のI/O stallはdecoder-onlyで38.5%→80.1%、encoder-decoderで15.8%→41.7%へ増える。量子化は容量を減らせるがモデル挙動を変える可能性がある。","novelty":"BF16の指数8bitだけが低エントロピーであることを利用し、指数部をK shardへ分けて無損失圧縮、符号+仮数部を別chunkとして保存する。完全、両成分圧縮、SMのみ、Eのみの4キャッシュ状態を設け、SSD I/OとCPU展開をDAG化して並列実行する。さらにexpert人気順位の確率分布から各pool容量を動的計画し、I/O律速と展開可能タスクを組み合わせるschedulerに(3-1/L)近似保証を与える。","method_overview":"offlineで各expert tensorを指数E-chunkと符号・仮数SM-chunkへ分解し、EをLZ4/ZSTD等で圧縮してNVMeへ保存する。runtimeではgate選択後、現在のcache stateに応じてtensorごとのI/O・展開・復元DAGを作る。専用I/O threadがSSDを読み、L本のCPU workerがEを並列展開し、GPU kernelがzero-copyでSM/EをBF16へ再構成する。cache managerはfull(F)、compressed(C)、SM(S)、E(E) poolを持ち、履歴のexpert人気順位からPoisson-binomial分布をDPで求め、期待makespan最小のpool partitionをgrid searchする。","components":[{"name":"bit-field無損失圧縮","description":"BF16を符号、指数、仮数へ分け、低エントロピーな指数だけ圧縮する。LZ4HCで全体74%、ZSTDで68%まで縮み、Shannon下限約66%に近い。"},{"name":"圧縮状態キャッシュ","description":"full tensor、E+SM、SMのみ、Eのみを別poolとして保持する。SMだけなら同じ容量で約2倍のexpertを覆い、missしたEをCPU展開して他expertのSSD読出しに隠せる。"},{"name":"cache-affinity scheduler","description":"SM読出しが必要なType-Iと不要なType-IIをexpert GPU実行時間順に並べ、block内へType-IIを挿入してI/Oと展開を重畳する。compute-boundになればblockを確定し、理論上OPTの(3-1/L)以内。"},{"name":"rank-based cache planning","description":"expert IDそのものではなく人気順位の周辺選択確率を学習し、各poolへ連続rank区間を割り当てる。Poisson-binomial DPでhit組合せ確率を計算し、期待sparse-layer makespan最小の容量配分を選ぶ。"},{"name":"zero-copy GPU復元","description":"SMをGPUから直接参照できるhost-pinned memoryへ読み、vectorized load/storeでEとSMをregister上でBF16へ再構成してDRAM帯域を活用する。"}],"system_design":"offline圧縮→NVMe保存→起動時pool計画→gateでexpert判明→cache state別DAG生成→SSD I/OとCPU展開のblock scheduling→GPU上でBF16復元→expert実行、という流れ。runtime頻度に応じてexpertをF/C/S/E poolへ移し、低頻度expertは実行後即追い出す。"},"reservation":{"claim_id":"claim-a88806a6b69afa14faffe306","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
