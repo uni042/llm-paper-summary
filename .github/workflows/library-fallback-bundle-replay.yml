@@ -1,0 +1,90 @@
+name: Library fallback bundle replay
+
+on:
+  push:
+    paths:
+      - '.survey/work-queue/library-replay-bundle.b64'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-library-fallback-bundle-replay
+  cancel-in-progress: false
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Replay exact Library payloads safely
+        run: |
+          python - <<'PY'
+          import base64, io, json, pathlib, tarfile
+          root = pathlib.Path('.')
+          q = root / '.survey/work-queue'
+          bundle = q / 'library-replay-bundle.b64'
+          raw = base64.b64decode(bundle.read_text(encoding='ascii'))
+          added = []
+          skipped = []
+          conflicts = []
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
+              for member in tf.getmembers():
+                  if not member.isfile() or '/' in member.name or not member.name.endswith('.json'):
+                      raise SystemExit(f'unsafe bundle member: {member.name!r}')
+                  data = tf.extractfile(member).read()
+                  obj = json.loads(data)
+                  if not isinstance(obj, dict):
+                      raise SystemExit(f'payload is not object: {member.name}')
+                  envelope_id = obj.get('id')
+                  if member.name != f'{envelope_id}.json':
+                      raise SystemExit(f'filename/id mismatch: {member.name}')
+                  for key in ('id','kind','job_id','attempt_id'):
+                      if not isinstance(obj.get(key), str) or not obj[key]:
+                          raise SystemExit(f'missing identity {key}: {member.name}')
+                  writes = obj.get('writes')
+                  if not isinstance(writes, list) or len(writes) < 5:
+                      raise SystemExit(f'incomplete writes: {member.name}')
+                  found = []
+                  for dirname in ('fallback-inbox','fallback-archive','fallback-failed'):
+                      p = q / dirname / member.name
+                      if p.is_file(): found.append(p)
+                  if found:
+                      mismatch = []
+                      for p in found:
+                          try: same = json.loads(p.read_text(encoding='utf-8')) == obj
+                          except Exception: same = False
+                          if not same: mismatch.append(str(p))
+                      if mismatch:
+                          conflicts.append({'id': envelope_id, 'paths': mismatch})
+                      else:
+                          skipped.append(envelope_id)
+                      continue
+                  dest = q / 'fallback-inbox' / member.name
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(data)
+                  added.append(envelope_id)
+          report = {
+              'schema_version': 1,
+              'added': added,
+              'already_present_same_payload': skipped,
+              'conflicts_not_overwritten': conflicts,
+          }
+          (q / 'library-replay-last-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          if conflicts:
+              print(json.dumps(report, ensure_ascii=False, indent=2))
+              raise SystemExit('payload conflicts detected; nothing conflicting was overwritten')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit replayed payloads
+        run: |
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add .survey/work-queue/fallback-inbox .survey/work-queue/library-replay-last-report.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'survey: replay durable Library fallback payloads'
+          git pull --rebase origin main
+          git push origin HEAD:main
