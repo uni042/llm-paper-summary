@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T07:15:18.300263+00:00",
+  "updated_at": "2026-09-15T08:36:09.633628+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T07:15:18.300263+00:00",
+      "last_recorded_at": "2026-09-15T08:36:09.633628+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 81,
+        "research_completed": 82,
         "audit_completed": 0,
         "discovery_completed": 18,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34874263130:1",
-          "recorded_at": "2026-09-14T17:24:44.739518+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34874263130",
-            "run_attempt": "1",
-            "source_sha": "42f33044d2eed37263dda3374e5f5dc0ffe4e000"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34874559118:1",
           "recorded_at": "2026-09-14T17:28:12.393703+00:00",
@@ -19601,6 +19587,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34947814135:1",
+          "recorded_at": "2026-09-15T08:36:09.633628+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34947814135",
+            "run_attempt": "1",
+            "source_sha": "a6cc598fae34b1d6498f24808b3e7487ac9b0e0f"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20403,6 +20403,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-64153047cf155e5c",
+          "type": "research",
+          "canonical_id": "arXiv:2503.08461",
+          "title": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20795,7 +20803,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 545,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
