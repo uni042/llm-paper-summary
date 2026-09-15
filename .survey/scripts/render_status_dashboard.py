@@ -3,9 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 
 import build_status_dashboard as evidence
 
@@ -17,10 +22,6 @@ LABELS = {
     "discovery": "Discovery",
     "other": "Other/Unknown",
 }
-
-
-def _group(rows: list[dict[str, Any]], kind: str) -> list[dict[str, Any]]:
-    return [row for row in rows if row["job"]["kind"] == kind]
 
 
 def _active_kind(row: dict[str, Any]) -> str:
