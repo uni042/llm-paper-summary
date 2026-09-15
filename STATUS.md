@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 10:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 12:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,12 +41,12 @@
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **45** |
-| 有効claim（lease） | **2** |
-| 今すぐ着手可能（Claimable） | **45** |
-| 有効leaseを持つworker run | **2** |
-| :30 最新worker run | **2026-09-15T10:30:00+09:00** |
-| :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **1** |
+| 有効claim（lease） | **0** |
+| 今すぐ着手可能（Claimable） | **47** |
+| 有効leaseを持つworker run | **0** |
+| :30 最新worker run | **2026-09-14T05:30:00+09:00** |
+| :30 最新run由来の有効claim | **0** |
+| :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **2026-09-15T10:00:00+09:00** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
@@ -58,7 +58,7 @@
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T10:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **5 min** |
+| 最古の有効claimの経過時間 | **—** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -97,11 +97,11 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P94 `arXiv:2607.13095` — Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit
+- P87 `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
-- P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
 
 ## 参考情報
 
