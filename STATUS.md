@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:01:48 JST**
+> 自動生成: **2026-09-16 07:02:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **7** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **15** | **1** | **14** | **0** | **0** | **27** |
-| 合計 | **5** | **20** | **3** | **17** | **7** | **0** | **27** |
+| Discovery | **4** | **15** | **1** | **14** | **0** | **0** | **27** |
+| 合計 | **4** | **20** | **3** | **17** | **7** | **0** | **27** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -44,10 +44,6 @@
   - result: `.survey/work-queue/results/20260916T0348JST-discovery-specialist-moe-io-2b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0348JST-discovery-specialist-moe-io-2b.json`
   - 探索軸: MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch
-- **09-16 01:02:02 JST** job `job-61879864be39f17f` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260916T0108JST-discovery-specialist-new-systems-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
-  - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
 - **09-16 01:07:57 JST** job `job-f190af78c754c7c2` / 候補 **2件**
   - result: `.survey/work-queue/results/20260916T0131JST-discovery-specialist-new-workloads-8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0131JST-discovery-specialist-new-workloads-8.json`
