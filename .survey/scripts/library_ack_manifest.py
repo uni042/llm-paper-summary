@@ -244,7 +244,7 @@ def _superseded_disposition(
     ):
         return None
 
-    result_path = queue / "results" / kind / f"{canonical_attempt}.json"
+    result_path = queue / "results" / kind / descriptor_path.name
     result = _read_object(result_path)
     if not result or result.get("ok") is not True:
         return None
