@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:05:52 JST**
+> 自動生成: **2026-09-15 20:07:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **7** | **0** | **7** | **0** | **0** | **7** |
-| 合計 | **11** | **12** | **2** | **10** | **1** | **0** | **7** |
+| Discovery | **5** | **7** | **1** | **6** | **0** | **0** | **7** |
+| 合計 | **12** | **12** | **3** | **9** | **1** | **0** | **7** |
 
 ## 詳細証拠
 
@@ -64,6 +64,10 @@
 
 ### Discovery
 
+- **09-15 20:04:28 JST** job `job-3f9a46ee08846bcd` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
+  - 探索軸: 適応KV圧縮・プロンプト別資源制約選択
 - **09-15 19:01:33 JST** job `job-6490b6dae61c1d16` / 候補 **1件**
   - result: `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
@@ -110,9 +114,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-15 20:00 JST**
-- immutable submission: **7件** / 検証済み成功result: **0件** / 未完了・未検証: **7件** / 候補: **7件**
+- immutable submission: **7件** / 検証済み成功result: **1件** / 未完了・未検証: **6件** / 候補: **7件**
 - 探索軸: 適応KV圧縮・プロンプト別資源制約選択 / MoE・GPU-NDP協調・expert scheduling / MoE・CPU AMX/GPU協調・expert coalescing / 実運用LLM serving framework採用・empirical systems survey / agentic serving・sandbox・trajectory-level telemetry / agent serving・program-level simulation・KV residency / CXL階層メモリ・transparent NDP・weight/KV圧縮
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (job `job-3f9a46ee08846bcd`)
+- **09-15 20:04:28 JST** job `job-3f9a46ee08846bcd` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
+  - 探索軸: 適応KV圧縮・プロンプト別資源制約選択
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2008JST-discovery-specialist-moe-ndp-2.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2010JST-discovery-specialist-moe-amx-3.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2012JST-discovery-specialist-serving-empirical-4.json` (job `job-3f9a46ee08846bcd`)
