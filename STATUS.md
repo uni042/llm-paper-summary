@@ -1,23 +1,26 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 19:59:59 JST**
+> 自動生成: **2026-09-15 20:00:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
 
-## 1. ここ数時間で論文読解・サーベイが成功しているか
+## 件数サマリー
 
-| 指標 | 検証済み実績 |
-|---|---:|
-| 直近6時間 Research完了 | **7** |
-| 直近6時間 Audit完了 | **0** |
-| 直近6時間 検証済み完了合計 | **7** |
-| 最終検証済み完了 | **09-15 18:38:20 JST** |
-| 最終完了から | **1時間21分前** |
+直近6時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。
 
-成功として数えるのは、対応する **job=completed / result.ok=true / immutable submission** が一致し、Researchではさらにpaper実体が存在するものだけです。
+| 区分 | 直近6h成功 | 最新run submission | 最新run成功 | 最新run未完了/未検証 | 現在claim | 直近15分heartbeat | 最新run候補 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
+| Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
+| Discovery | **5** | **1** | **1** | **0** | **0** | **0** | **1** |
+| 合計 | **12** | **6** | **3** | **3** | **1** | **0** | **1** |
 
-### 直近の検証済み完了
+## 詳細証拠
+
+### 直近6時間の検証済み完了
+
+### Research
 
 - **09-15 18:38:20 JST** [research] `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation
   - job: `.survey/work-queue/jobs/job-research-1fc8cd177d28f575.json`
@@ -55,44 +58,101 @@
   - submission: `.survey/work-queue/submissions/research/attempt-64f5834724b23a881c8f959c.json`
   - paper: `papers/inference/06-expert-offloading/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md`
 
-## 2. 直近タスクが実際に処理成功している証拠
+### Audit
 
-### :30 論文worker
+- 検証済み完了なし。
+
+### Discovery
+
+- **09-15 19:01:33 JST** job `job-6490b6dae61c1d16` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
+  - 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
+- **09-15 18:02:53 JST** job `job-910b55f3735ab895` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1808JST-discovery-specialist-moe-cache-router-1.json`
+  - 探索軸: 2026年9月新着・MoE expert cache・cache-aware routing
+- **09-15 16:08:51 JST** job `job-e03097d2e4181243` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json`
+  - 探索軸: 新着KV適応制御・agentic serving characterization
+- **09-15 15:03:41 JST** job `job-57c04f370a9f4d4d` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260915T1508JST-discovery-specialist-scheduling-agent-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1508JST-discovery-specialist-scheduling-agent-1.json`
+  - 探索軸: エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
+- **09-15 14:02:44 JST** job `job-d86e69d5d52d3a55` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1407JST-discovery-specialist-moe-cache-router-1.json`
+  - 探索軸: MoE expert cache・router adaptation・weight traffic
+
+### 直近タスク
+
+#### Research (:30)
 
 - 最新観測run: **2026-09-15 18:30 JST** / worker `scheduled-chat-paper-20260915T1830JST`
-- immutable submission: **5件** / 検証済み成功: **2件**
-  - **成功** `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving / result `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` / paper `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
-  - **成功** `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation / result `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` / paper `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
-  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-817bd95f2c782ad4248fa08d.json` (job `job-research-3df42686de08919b`)
-  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a88806a6b69afa14faffe306.json` (job `job-research-229f0f103fc45c25`)
-  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-acc918e244bc8cbe6bfce5af.json` (job `job-research-3df42686de08919b`)
+- immutable submission: **5件** / 検証済み成功: **2件** / 未完了・未検証: **3件**
+- **成功** `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-b22f71500ae1903a.json`
+  - result: `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-005c2488539329fa13df896f.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
+- **成功** `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation
+  - job: `.survey/work-queue/jobs/job-research-1fc8cd177d28f575.json`
+  - result: `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2767bee85a3612f009a3c651.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-817bd95f2c782ad4248fa08d.json` (job `job-research-3df42686de08919b`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a88806a6b69afa14faffe306.json` (job `job-research-229f0f103fc45c25`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-acc918e244bc8cbe6bfce5af.json` (job `job-research-3df42686de08919b`)
 
-### :00 探索worker
+#### Audit (:30)
+
+- 最新観測run: **2026-09-15 18:30 JST** / worker `scheduled-chat-paper-20260915T1830JST`
+- immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
+- このrunにAudit submissionはありません。
+
+#### Discovery (:00)
 
 - 最新観測run: **2026-09-15 19:00 JST**
-- immutable submission: **1件** / 検証済み成功result: **1件** / 候補: **1件**
+- immutable submission: **1件** / 検証済み成功result: **1件** / 未完了・未検証: **0件** / 候補: **1件**
 - 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
-  - **成功** job `job-6490b6dae61c1d16` / result `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` / submission `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
+- **09-15 19:01:33 JST** job `job-6490b6dae61c1d16` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
+  - 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
 
-## 3. 今何をやっているか
+### 現在処理中
 
-- 未失効かつ非terminal jobのclaim: **1件**
-- うち直近15分にheartbeat記録あり: **0件**
+#### Research
 
-- `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention [research] / worker `scheduled-chat-paper-20260915T1930JST`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-paper-20260915T1930JST`
   - claim: **09-15 19:31:56 JST** / heartbeat: **—** / lease expiry: **09-15 21:01:56 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
 
+#### Audit
+
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
+
+#### Discovery
+
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
+
 > claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。
 
-## このSTATUSが採用する証拠
+### このSTATUSが採用する証拠
 
 - **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。
 - **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。
-- **探索成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。
+- **Audit完了**: job/result/submissionの対応と成功状態を照合します。
+- **Discovery成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
 - **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
 
 ---
 
-生成ロジック: `.survey/scripts/build_status_dashboard.py`
+証拠収集: `.survey/scripts/build_status_dashboard.py`
+
+表示生成: `.survey/scripts/render_status_dashboard.py`
