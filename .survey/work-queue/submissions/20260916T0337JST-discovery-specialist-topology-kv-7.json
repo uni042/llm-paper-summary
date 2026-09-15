@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28633",
+      "title": "Topology-Aware Data Movement for Disaggregated GPU Inference",
+      "source_url": "https://arxiv.org/abs/2607.28633",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28633-topology-aware-data-movement.md",
+      "priority": 84,
+      "reason": "prefill/decode分離でuniform RDMAがNVLink/InfiniBand/TCPの大きな帯域差を無視する問題を扱い、layer-wise pipelined transfer、NVLink-domain-aware MoE placement、CXL overflow tierを組み合わせる。実機大規模評価に制約はあるが、KV transferとtopology-aware placementを統合する設計として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2606.06302",
+      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.06302",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2606.06302-tangram-nonuniform-kv-serving.md",
+      "priority": 82,
+      "reason": "headごとに異なるKV retentionを実システムで扱う際のfragmentation、scheduling、kernel utilization低下を、deterministic budget、head-group page、AOT load balancingで解消する。throughput最大2.6倍を報告し、非一様KV圧縮をserving systemへ落とす実装研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2602.00328",
+      "title": "Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.00328",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2602.00328-harvest-peer-gpu-cache.md",
+      "priority": 81,
+      "reason": "host offloadではなく未使用peer GPU memoryを一時cache tierとしてweightとKV cacheの双方に利用し、高帯域P2P interconnectでデータ移動を削減する。expert weightとKVの取得で2倍超のthroughput改善を示し、SwiftCacheとは異なる汎用peer-GPU tiering設計として比較価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-topology-kv-7",
+    "axis": "network topology-aware KV transfer・peer GPU cache・non-uniform KV system",
+    "query_summary": "RDMA/NVLink/CXLを跨ぐtopology-aware data movement、peer GPU memoryをcache tierにする設計、非一様KVのpage/scheduler実装へ展開。TuttiとSwiftCacheは既存履歴/queueで重複のため除外し、3候補をGitHub検索で未登録確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2606.16135"],
+    "next_axis_hint": "推論runtime/kernel側のmemory-bandwidth hiding、L2 prefetch、persistent decode kernelへ移る",
+    "empty_round_reason": null
+  }
+}
