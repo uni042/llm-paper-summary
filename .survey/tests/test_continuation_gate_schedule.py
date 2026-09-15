@@ -41,23 +41,41 @@ def make_args(**overrides):
 
 
 class ContinuationGateScheduleTests(unittest.TestCase):
-    def test_normal_worker_stops_when_next_scheduled_invocation_is_within_guard(self):
+    def test_normal_worker_uses_actual_start_deadline_instead_of_nearby_schedule_boundary(self):
+        result = mod.decide(make_args(
+            worker_kind="normal",
+            seconds_to_next_scheduled_task=90,
+            seconds_to_run_deadline=3600,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["handoff_time_source"], "run_deadline")
+        self.assertEqual(result["effective_seconds_to_handoff"], 3600)
+        self.assertNotIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
+        self.assertNotIn("run_deadline_within_handoff_guard", result["stop_reasons"])
+
+    def test_normal_worker_run_deadline_guard_is_stop(self):
+        result = mod.decide(make_args(
+            worker_kind="normal",
+            seconds_to_next_scheduled_task=3500,
+            seconds_to_run_deadline=600,
+        ))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertIn("run_deadline_within_handoff_guard", result["stop_reasons"])
+        self.assertEqual(result["handoff_time_source"], "run_deadline")
+
+    def test_schedule_boundary_is_compatibility_fallback_when_run_deadline_missing(self):
         result = mod.decide(make_args(seconds_to_next_scheduled_task=599))
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
         self.assertEqual(result["handoff_time_source"], "next_scheduled_task")
 
-    def test_normal_worker_guard_boundary_is_stop(self):
-        result = mod.decide(make_args(seconds_to_next_scheduled_task=600))
-        self.assertEqual(result["decision"], "STOP_RUN")
-
-    def test_normal_worker_continues_when_next_scheduled_invocation_is_outside_guard(self):
-        result = mod.decide(make_args(seconds_to_next_scheduled_task=601))
+    def test_unknown_handoff_time_keeps_existing_behavior(self):
+        result = mod.decide(make_args(
+            seconds_to_next_scheduled_task=None,
+            seconds_to_run_deadline=None,
+        ))
         self.assertEqual(result["decision"], "CONTINUE")
-
-    def test_unknown_next_task_time_keeps_existing_behavior(self):
-        result = mod.decide(make_args(seconds_to_next_scheduled_task=None))
-        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["handoff_time_source"], "unknown")
 
     def test_discovery_uses_actual_start_deadline_instead_of_nearby_schedule_boundary(self):
         result = mod.decide(make_args(
