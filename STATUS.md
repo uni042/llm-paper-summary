@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 23:06:53 JST**
+> 自動生成: **2026-09-15 23:57:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **5** | **2** | **3** | **0** | **0** | — |
+| Research | **2** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **6** | **12** | **3** | **9** | **0** | **0** | **7** |
+| 合計 | **5** | **12** | **3** | **9** | **0** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -34,11 +34,6 @@
   - result: `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-005c2488539329fa13df896f.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
-- **09-15 17:36:05 JST** [research] `arXiv:2503.08461` — FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework
-  - job: `.survey/work-queue/jobs/job-research-64153047cf155e5c.json`
-  - result: `.survey/work-queue/results/research/attempt-8857271141ba7926ae6b21f2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8857271141ba7926ae6b21f2.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.08461-fastcache-multimodal-kv-compression-serving.md`
 
 ### Audit
 
