@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-77b80f25abc6b04f10855b93",
+  "attempt_id": "attempt-6ecd1c6efec5654348935adc",
   "job_id": "job-research-229f0f103fc45c25",
   "data": {
     "overview": "offload必須条件でdecoder-onlyのTPOTを62.65–97.97%、TTFTを53.25–87.90%削減し、encoder-decoderでもTPOT 4.99–81.24%、TTFT最大83.45%削減。batch推論ではdecoder-only throughput 1.79–42.49倍、encoder-decoder 1.31–5.82倍。E2Eはdecoder-only 3.03–42.49倍、encoder-decoder 1.11–5.64倍。cache管理の寄与分解ではcore systemが総throughput gainの約76%、heterogeneous cache+planningが残り約24%。OS page cacheをほぼ消した32GB background占有でもMoE-Infinity比TTFT 56.64%、TPOT 53.32%削減を維持する。",
@@ -75,7 +75,7 @@
     "quality_impact": "BF16値を完全復元する無損失方式で、量子化によるperplexityや安全性変化を避ける。性能との主な交換条件はCPU core、DRAM/cache容量、圧縮率、SSD帯域。"
   },
   "reservation": {
-    "claim_id": "claim-77b80f25abc6b04f10855b93",
+    "claim_id": "claim-6ecd1c6efec5654348935adc",
     "worker_id": "scheduled-chat-paper-20260915T1030JST",
     "worker_kind": "scheduled_chat"
   }
