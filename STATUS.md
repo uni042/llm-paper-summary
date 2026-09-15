@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 01:03:57 JST**
+> 自動生成: **2026-09-16 01:04:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **4** | **0** | **4** | **0** | **0** | **10** |
-| 合計 | **1** | **9** | **2** | **7** | **0** | **0** | **10** |
+| Discovery | **2** | **5** | **1** | **4** | **0** | **0** | **10** |
+| 合計 | **2** | **10** | **3** | **7** | **0** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -32,6 +32,10 @@
 
 ### Discovery
 
+- **09-16 01:02:02 JST** job `job-61879864be39f17f` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260916T0108JST-discovery-specialist-new-systems-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
+  - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
 - **09-15 20:04:28 JST** job `job-3f9a46ee08846bcd` / 候補 **1件**
   - result: `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
@@ -66,12 +70,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 01:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **10件**
-- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング / 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill / CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing / GPU runtime・fused decompression kernel・L2 KV prefetch
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **10件**
+- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング / 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill / CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing / GPU runtime・fused decompression kernel・L2 KV prefetch / SSD/GDS・expert streamingの関連基礎研究再確認
 - round `specialist-new-systems-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
   - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260916T0108JST-discovery-specialist-new-systems-1.json` (`ok=true`)
 - round `specialist-related-serving-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260916T0111JST-discovery-specialist-related-serving-2.json`
   - 探索軸: 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill
@@ -83,6 +87,10 @@
 - round `specialist-runtime-kernel-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0117JST-discovery-specialist-runtime-kernel-4.json`
   - 探索軸: GPU runtime・fused decompression kernel・L2 KV prefetch
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-backward-storage-5` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260916T0120JST-discovery-specialist-backward-storage-5.json`
+  - 探索軸: SSD/GDS・expert streamingの関連基礎研究再確認
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中

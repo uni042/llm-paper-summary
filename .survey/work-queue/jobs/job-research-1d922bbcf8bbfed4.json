@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1d922bbcf8bbfed4",
+  "type": "research",
+  "parent_job_id": "job-61879864be39f17f",
+  "priority": 88,
+  "canonical_id": "arXiv:2609.12551",
+  "title": "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems",
+  "source_url": "https://arxiv.org/abs/2609.12551",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
+  "selection_reason": "LLM推論システムの設計空間を実装スタック依存のプロファイリングから切り離すDSLと評価器を提案し、AIによるアーキテクチャ探索を可能にするシステム研究。NVIDIA B300上のDeepSeek V4 Proで探索された新構成がthroughputとinteractivityを6.23–50.1%改善したと報告しており、推論基盤の自動設計という新しい系統として価値が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-15T16:02:02+00:00"
+}
