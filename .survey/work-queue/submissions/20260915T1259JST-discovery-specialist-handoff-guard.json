@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4c9c63546edaeacb",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-15T12:00:00+09:00",
+    "round": "specialist-handoff-guard",
+    "axis": "handoff guard before new discovery axis",
+    "query_summary": "Latest GitHub canonical state was read first. candidate_inventory was 44 ready research candidates and actionable Research/Audit existed, so Discovery mode applied. At mode entry, less than 180 seconds remained until the next :00 Scheduled Chat slot, so discovery-exhaustive-run-policy prohibited starting a new independent discovery round; this empty durable submission records the run before handoff.",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する",
+    "empty_round_reason": "handoff_guard_le_180_seconds_before_next_scheduled_slot"
+  }
+}
