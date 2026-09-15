@@ -1,13 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-043db24bbe0099ae5a65a1e3",
-  "job_id": "job-research-3540240bb76e82ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-043db24bbe0099ae5a65a1e3",
-    "worker_id": "scheduled-chat-paper-20260915T1430JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-043db24bbe0099ae5a65a1e3","job_id":"job-research-3540240bb76e82ea",
+ "data":{
+  "overview":"KrulはLongBenchで平均accuracy lossを1%未満に保ちながら、既存state-restoration方式に対して平均TTFTを1.28〜2.68倍高速化する。full recompute比ではLLaMA-7B/30B/Qwen1.5-7Bで平均2.65倍、Qwen2-72Bで6.62倍、full KV load比2.35倍、fixed KV compression比1.76倍、partial KV recompute比1.5倍のTTFT speedupを報告する。prefill throughputもfull recompute/load/fixed compression/partial recompute比でそれぞれ平均2.5倍、1.9倍、1.41倍、1.29倍。休眠時KV storageはfull KV比平均2.35倍、fixed compression比1.75倍削減する。",
+  "key_results":[
+   {"metric":"TTFT vs SOTA","value":"平均1.28×〜2.68× speedup","baseline":"state-restoration baselines","condition":"4 models / LongBench-style restoration","interpretation":"dynamic compressionとrecompute-load overlapを組み合わせることで品質を維持しつつ復元を高速化。"},
+   {"metric":"TTFT vs full recompute","value":"LLaMA-7B/30B/Qwen1.5-7B平均2.65×、Qwen2-72B 6.62×","baseline":"Full KV recompute","condition":"A100 testbed","interpretation":"履歴prefillの大部分をKV load/shared KVで回避する。"},
+   {"metric":"TTFT vs load/compression/pipeline","value":"full KV load比2.35×、fixed KV compression比1.76×、partial KV recompute比1.5×","baseline":"Full load / MiniCache-style fixed compression / partial recompute","condition":"overall evaluation","interpretation":"圧縮量だけでなくlayer-aware pipeline再配置が復元bubbleを削減する。"},
+   {"metric":"Prefill throughput","value":"full recompute 2.5×、full load 1.9×、fixed compression 1.41×、partial recompute 1.29×","baseline":"各方式","condition":"ShareGPT workload","interpretation":"recomputeとloadの並列復元がprompt処理能力を高める。"},
+   {"metric":"KV storage","value":"full KV比2.35×、fixed KV compression比1.75× reduction","baseline":"Full KV / fixed compression","condition":"inactive conversations","interpretation":"一部KVを再計算へ回し、I-R層ではcross-layer sharingするため保存量が減る。"},
+   {"metric":"LongBench average accuracy","value":"Baseline 26.94、MiniCache 25.82、Krul(Fix) 25.72、Krul 26.70","baseline":"uncompressed / fixed compression","condition":"Qwen1.5-7B, 14 tasks","interpretation":"conversation-specific dynamic strategyが固定共有よりbaseline品質へ近い。"},
+   {"metric":"Recompute/load ratio example","value":"2:3でfull recompute比2×、full load比1.35× speedup","baseline":"full recompute / full load","condition":"LLaMA-7B ratio analysis","interpretation":"computeとloadの長さを近づけるとoverlap効率が最大化する。"}
+  ],
+  "negative_results":"固定化したKrul共有範囲はLongBench平均25.72でMiniCache 25.82よりわずかに低く、layer rangeを広げるだけでは品質改善にならない。動的conversation-specific選択が必要である。またQwen2-72BはMQAかつ8-bit量子化を使うため他modelと条件が完全同一ではない。CPU similarity計算はdecodeへ重畳できる条件では隠れるが、CPUが遅い環境やdecodeが短いworkloadではoverheadが表面化し得る。",
+  "interpretation":"Krulの利得は、保存量を減らす圧縮と復元時間を減らすschedulerを別々に最適化せず、圧縮mapが生むlayer別load/recompute量をschedulerへ直接渡す点にある。conversation-specific attention similarityで品質を守りながら共有KVを増やし、減ったloadをrecomputeとのoverlap余地へ変換するため、storageとTTFTを同時に改善できる。",
+  "quality_impact":"動的KrulはLongBench平均26.70対baseline 26.94で平均accuracy loss 1%未満。固定圧縮やKV evictionより品質維持を優先する設計で、性能改善をtoken evictionによる大きなaccuracy lossへ転嫁しない。"
+ },
+ "reservation":{"claim_id":"claim-043db24bbe0099ae5a65a1e3","worker_id":"scheduled-chat-paper-20260915T1430JST","worker_kind":"scheduled_chat"}
 }
