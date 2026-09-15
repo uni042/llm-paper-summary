@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15127",
+      "title": "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems",
+      "source_url": "https://arxiv.org/abs/2608.15127",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.15127-agentsysbench-agentic-serving-characterization.md",
+      "priority": 86,
+      "reason": "10種類のagentic applicationとproduction traceを用いて、LLM外処理、sandbox memory、異種resource affinity、idle state、control-plane tax、cross-request redundancyをsystem-levelに定量化するAgentSysBench。state offloadでmemory 4.6倍削減、task-aware servingでlatency 29〜40%削減などを示し、agentic serving設計の基礎データとして強い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.27744",
+      "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.27744",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2605.27744-policy-driven-agentic-serving-runtime.md",
+      "priority": 83,
+      "reason": "agent frameworkとserving engineの間にobserve/score/predict/actを提供するruntime layerを挿入し、prefix caching、batch shaping、speculation、fairness等をagent identityで統合する設計。CacheSage実装ではcache hit-rate +13〜37pp、mean TTFT 12〜29%低減を報告し、agent-aware serving abstractionとして有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.14624",
+      "title": "Learning Agent Execution for KV-Cache Management in Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2608.14624",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2608.14624-cachescout-agent-aware-kv-cache.md",
+      "priority": 85,
+      "reason": "multi-agent workflowで固定system prompt/tool定義等の再利用がrecency-based evictionで失われる問題に対し、agent transitionをonline学習してKV evictionとproactive prefetchへ利用するCacheScoutを提案する。agent execution semanticsをcache policyへ直接組み込む点が通常prefix cacheとの差分。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-agentic-5",
+    "axis": "agentic serving・sandbox state・agent-aware KV reuse",
+    "query_summary": "agentic workloadのsystem characterization、framework/engine間runtime、agent transition学習によるKV管理を探索。Irminsulは最新queueに既存research jobがあるため重複除外した。残る3候補はGitHub canonical ID検索で未登録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2605.05696"],
+    "next_axis_hint": "speculative decodingのdistributed drafter/verification scheduling、またはnetwork-aware KV transferへ移る",
+    "empty_round_reason": null
+  }
+}
