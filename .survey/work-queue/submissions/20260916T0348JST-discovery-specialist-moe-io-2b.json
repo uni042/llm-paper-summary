@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "job_id": "job-89615180da84d5c4",
+  "candidates": [
+    {"canonical_id":"arXiv:2605.20179","title":"TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload","source_url":"https://arxiv.org/abs/2605.20179","paper_path":"papers/inference/04-moe-offload-routing/2026-2605.20179-tide-io-aware-moe-diffusion-offload.md","priority":88,"reason":"MoE diffusion LLMのblock内expert activation安定性を利用し、expert placement更新間隔をI/O-awareに最適化するlossless offload。単一GPU-CPUでthroughput最大1.4〜1.5倍を報告し、expert streaming/I/O schedulingに直接関連する。"},
+    {"canonical_id":"arXiv:2605.17889","title":"CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution","source_url":"https://arxiv.org/abs/2605.17889","paper_path":"papers/inference/04-moe-offload-routing/2026-2605.17889-cox-moe-amx-cpu-gpu-coexecution.md","priority":84,"reason":"AMX対応CPU-GPU協調とcoalesced expert executionでmicro-batching由来の低演算密度とPCIe制約を扱う。expert cacheとは異なる異種計算資源活用として比較価値がある。"},
+    {"canonical_id":"arXiv:2606.15453","title":"A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference","source_url":"https://arxiv.org/abs/2606.15453","paper_path":"papers/inference/04-moe-offload-routing/2026-2606.15453-spatio-temporal-expert-prefetching.md","priority":83,"reason":"cross-layer correlationと履歴を使うexpert予測とhardware prefetchを統合し、routingを変えずにexpert移動を隠蔽する。expert prediction約85%、GPU比平均2.5倍speedupを報告する。"}
+  ],
+  "discovery_stats":{"run_key":"2026-09-16T03:00:00+09:00","round":"specialist-moe-io-2","axis":"MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch","query_summary":"round 1の正本反映後に新しいdiscovery jobを取得し、MoE I/O軸をmaterially distinctなroundとして送信。投入直前に最新queueを再取得した。","candidate_count":3,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"CXL/NVMe/JBOF共有KV/context tierへ移る","empty_round_reason":null}
+}
