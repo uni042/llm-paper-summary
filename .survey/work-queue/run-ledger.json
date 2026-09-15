@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:16:22.681923+00:00",
+  "updated_at": "2026-09-15T22:24:35.051403+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:16:22.681923+00:00",
+      "last_recorded_at": "2026-09-15T22:24:35.051403+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 89,
         "audit_completed": 0,
-        "discovery_completed": 26,
+        "discovery_completed": 27,
         "blocked": 1,
-        "new_jobs": 39,
-        "new_papers": 88,
+        "new_jobs": 40,
+        "new_papers": 93,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34901318877:1",
-          "recorded_at": "2026-09-14T21:57:18.961889+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34901318877",
-            "run_attempt": "1",
-            "source_sha": "bc19168267b84726ead73ce64da6248967b3dfb3"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34901516934:1",
           "recorded_at": "2026-09-14T22:00:30.587202+00:00",
@@ -19598,6 +19584,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35030447338:1",
+          "recorded_at": "2026-09-15T22:24:35.051403+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "35030447338",
+            "run_attempt": "1",
+            "source_sha": "21789d806d7af7a61dd976b7fa015139dab595fd"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -20529,6 +20530,14 @@
           "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-6ff919b9f51ccf92",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20804,6 +20813,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-b6f805c0cbcee3d4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20894,7 +20910,12 @@
         "arXiv:2603.20661",
         "arXiv:2503.08461",
         "arXiv:2504.07494",
-        "arXiv:2601.17768"
+        "arXiv:2601.17768",
+        "arXiv:2505.14468",
+        "arXiv:2512.20210",
+        "arXiv:2602.21477",
+        "arXiv:2603.07169",
+        "arXiv:2608.06188"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -20999,7 +21020,24 @@
         ".survey/work-queue/results/20260916T0640JST-discovery-specialist-multilora-kv-12.json",
         ".survey/work-queue/results/20260916T0643JST-discovery-specialist-moe-serving-13.json",
         ".survey/work-queue/results/20260916T0646JST-discovery-specialist-moe-comm-kernel-14.json",
-        ".survey/work-queue/results/20260916T0649JST-discovery-specialist-hybrid-attention-15.json"
+        ".survey/work-queue/results/20260916T0649JST-discovery-specialist-hybrid-attention-15.json",
+        ".survey/work-queue/results/20260916T0703JST-discovery-specialist-adaptive-kv-1.json",
+        ".survey/work-queue/results/20260916T0706JST-discovery-specialist-moe-os-cache-2.json",
+        ".survey/work-queue/results/20260916T0709JST-discovery-specialist-network-kv-3.json",
+        ".survey/work-queue/results/20260916T0712JST-discovery-specialist-runtime-batching-4.json",
+        ".survey/work-queue/results/20260916T0715JST-discovery-specialist-cxl-k8s-5.json",
+        ".survey/work-queue/results/20260916T0718JST-discovery-specialist-storage-foundations-6.json",
+        ".survey/work-queue/results/20260916T0722JST-discovery-specialist-elastic-memory-7b.json",
+        ".survey/work-queue/results/20260916T0725JST-discovery-specialist-moe-nearmem-8b.json",
+        ".survey/work-queue/results/20260916T0727JST-discovery-specialist-runtime-semantics-9.json",
+        ".survey/work-queue/results/20260916T0730JST-discovery-specialist-agent-kv-10.json",
+        ".survey/work-queue/results/20260916T0733JST-discovery-specialist-sparse-hierarchy-11.json",
+        ".survey/work-queue/results/20260916T0736JST-discovery-specialist-energy-12.json",
+        ".survey/work-queue/results/20260916T0739JST-discovery-specialist-lossless-13.json",
+        ".survey/work-queue/results/20260916T0742JST-discovery-specialist-edge-ndp-14.json",
+        ".survey/work-queue/results/20260916T0745JST-discovery-specialist-cache-security-15.json",
+        ".survey/work-queue/results/20260916T0748JST-discovery-specialist-seqcomm-16.json",
+        ".survey/work-queue/results/20260916T0751JST-discovery-specialist-speculative-17.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -21076,8 +21114,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 548,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 553,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
