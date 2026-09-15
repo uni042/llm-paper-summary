@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-eff39fce395692aeefdea477",
-  "job_id": "job-research-bd7341cf457984b7",
-  "data": {
-    "hardware": "Intel Core i9-13900K、128GB RAM、RTX 4090 24GB×4のワークステーション。4 GPUをAIO水冷へ改造し、2m×2mの囲いで18〜48℃の室温設定を再現する。",
-    "software": "HeatCacheをvLLM上のユーザー空間プラグインとして実装。Kubernetes、KServe、NVIDIA DCGM、軽量Kubeletプラグインを利用し、バッチ調整、SLO付きルーティング、GPU周波数制御、熱状態監視を統合する。",
-    "methodology": "Chat、Code、Sumの3種のトレース駆動ワークロードを用い、暖かい室温を含む条件で計算エネルギー、TTFT/TPOTのSLO違反率、熱スロットリング曝露率を比較する。ChatはLMSYS-Chat-1MとLlama-3.1でバースト到着、CodeはCodeAlpaca-20KとQwen2.5-CoderでPoisson到着、SumはQReCCとDeepSeek-R1でPoisson到着。TTFT上限は順に800/1500/2000ms、TPOT上限は50/60/80ms。18℃の空冷vLLMをエネルギー正規化基準とし、48±2℃の持続設定でも比較する。AIOの既定冷却液量は600mLで、ポンプ/ファンは各ループ平均約25W。計算エネルギー比較ではこの補機電力を除外する一方、総システムエネルギーには含める。モデルは24GB GPUへ収めるため量子化して提供する。",
-    "scope": "単一のinstitution-scaleエッジサーバで、シャーシ内AIO液冷の短時間熱容量を活用したLLM推論スケジューリングを評価する。設備配管型direct-to-chip/CDU、浸漬冷却、複数サーバの配置・移行、共有ラック電力上限、HVAC/CRACとの共同最適化は主対象外。",
-    "workloads": [
-      "LMSYS-Chat-1M / Llama-3.1 / bursty arrivals / TTFT<=800ms / TPOT<=50ms",
-      "CodeAlpaca-20K / Qwen2.5-Coder / Poisson arrivals / TTFT<=1500ms / TPOT<=60ms",
-      "QReCC / DeepSeek-R1 / Poisson arrivals / TTFT<=2000ms / TPOT<=80ms"
-    ],
-    "baselines": [
-      "vLLM-A: 空冷vLLM",
-      "vLLM-W: AIO水冷vLLM",
-      "DSO: SLOを満たす固定GPU周波数制御",
-      "TAPAS: 予測温度・電力に基づき低温GPUへ振り分ける熱対応配置",
-      "GreenLLM: プリフィル/デコード別DVFSと入力長対応ルーティング",
-      "CoolEdge: 冷却液供給を調整する液冷エネルギー制御"
-    ],
-    "metrics": [
-      "平均ジョブ当たりGPU計算エネルギー",
-      "TTFT SLO違反率",
-      "TPOT SLO違反率",
-      "高温閾値を超えた実行時間割合としての熱スロットリング曝露率",
-      "アブレーション時のSLO・熱安全・エネルギー変化"
-    ],
-    "reproducibility": "CPU、GPU数/VRAM、AIO構成、冷却液量、室温範囲、データセット、モデル、到着分布、SLO閾値、比較方式、実装スタックを本文で記載する。RCモデルは各GPU/AIO構成ごとに定電力ステップ負荷でオフライン校正する。専用実装の公開コードURLは一次資料から確認できず、再現には改造AIO水冷テストベッドと環境温度制御が必要。"
-  },
+  "attempt_id": "attempt-817bd95f2c782ad4248fa08d",
+  "job_id": "job-research-3df42686de08919b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-eff39fce395692aeefdea477",
-    "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
+    "claim_id": "claim-817bd95f2c782ad4248fa08d",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }
 }
