@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-14T23:29:06+00:00",
-  "last_run_key": "2026-09-15T08:00:00+09:00",
-  "last_round": "specialist-mimo-production-24",
+  "updated_at": "2026-09-15T00:03:19+00:00",
+  "last_run_key": "2026-09-15T09:00:00+09:00",
+  "last_round": "specialist-adaptive-kv-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3320,6 +3320,25 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。",
       "source_submission": "work-queue/submissions/20260915T0844JST-discovery-specialist-mimo-production-24.json"
+    },
+    {
+      "run_key": "2026-09-15T09:00:00+09:00",
+      "round": "specialist-adaptive-kv-1",
+      "axis": "新着KV圧縮・制約適応runtime policy",
+      "query_summary": "直近arXivのLLM serving/KV cache/MoE inferenceを横断検索し、MetaKV、既収録のTutti・Robust KV、既知のSPICE等を軽量評価した。MetaKVはarXiv IDと題名で最新default branchを再検索し未収録を確認したため1件のみ投入する。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2607.16892",
+        "arXiv:2608.21240"
+      ],
+      "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260915T0903JST-discovery-specialist-adaptive-kv-1.json"
     }
   ],
   "axes": {
@@ -5192,6 +5211,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。"
+    },
+    "新着KV圧縮・制約適応runtime policy": {
+      "last_run_key": "2026-09-15T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
