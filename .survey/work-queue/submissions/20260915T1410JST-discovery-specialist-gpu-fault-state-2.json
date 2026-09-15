@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d86e69d5d52d3a55",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.23521",
+      "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.23521",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.23521-concordia-persistent-kernel-checkpointing.md",
+      "priority": 82,
+      "reason": "長時間稼働するLLM agentのKV cache・scheduler・communication state・adapter等のGPU常駐状態を、framework個別実装ではなくdevice-resident persistent kernelとPTX/SASS instrumentationでcheckpoint/recoveryするruntime。状態領域ごとにdelta-checkpoint handlerをJIT生成し、CXL memoryまたはhost DRAMへのcommit logと接続するため、LLM推論の耐障害性と階層メモリの交点にあるシステム候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T14:00:00+09:00",
+    "round": "specialist-gpu-fault-state-2",
+    "axis": "GPU persistent kernel・LLM state checkpoint・CXL recovery",
+    "query_summary": "MoE cache-router軸から独立してGPU runtime/kernel側へ移り、LLM推論の常駐状態管理とfault toleranceを探索した。ConcordiaはGitHub code searchでarXiv ID未収録を確認し、一次arXivの書誌・abstractに基づき軽量評価した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は収録済み重要KV/serving論文のforward citation、またはnetwork/RDMA隣接分野からKV transfer schedulingを探索する",
+    "empty_round_reason": null
+  }
+}
