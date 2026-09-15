@@ -1,116 +1,112 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-99472a28aecd6daa3d12d9ad",
-  "job_id": "job-research-ad7e8d527bf159c7",
   "slot": "metadata",
+  "attempt_id": "attempt-61d3ec810a2f30bc516f1a9c",
+  "job_id": "job-research-22ee1955e766f2b1",
   "data": {
-    "canonical_id": "arXiv:2608.05303",
-    "arxiv_id": "2608.05303",
-    "doi": "10.48550/arXiv.2608.05303",
+    "canonical_id": "arXiv:2603.20661",
+    "arxiv_id": "2603.20661",
+    "doi": "10.48550/arXiv.2603.20661",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": [
-        "cs.CL",
-        "cs.LG"
-      ]
+      "primary": "cs.DC",
+      "cross_list": []
     },
-    "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
-    "summary": "EdgeXpertは、エッジ端末上で専門家混合（Mixture-of-Experts; MoE）と投機的復号を組み合わせると、候補トークン数の増加によって同一段階で多数の専門家・チャネルが活性化し、外部メモリアクセス（external memory access; EMA）が逆に増える問題を扱う。プリフィルでは軽量な双方向エンコーダのCLS注意重みでトークンを重要度別に分け、重要トークンが形成した共有専門家集合を低重要度トークンに再利用させる。デコードでは同一深さ候補の文脈類似性と相互排他性を利用し、必要チャネルの単純な和集合を読まず重要チャネルだけを読み、既に読んだチャネル上で全候補を再計算する補正で精度と採択長を回復する。Samsung 28nm FDSOI、800MHz、LPDDR4X 16GB/sを想定した合成・命令レベルシミュレーションで、従来方式比最大56.3%の端から端までの遅延削減と44.1%のエネルギー削減を報告する。",
-    "list_summary": "MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。",
+    "title": "WWW.Serve: Interconnecting Global LLM Services through Decentralization",
+    "summary": "WWW.Serveは、独立した大規模言語モデル（LLM）サービス提供者が匿名のまま参加・離脱し、自分の計算資源と受入・委譲方針を保持したまま、中央調停なしで余剰GPU資源を融通する分散サービング基盤である。各ノードは計算貢献を信用量として記録し、信用量を賭けた持分証明型の実行者選択で要求を委譲する。さらに一部要求を二つの実行者へ送り、複数の審判が応答品質を比較する対戦・審判機構で高品質サービスへ信用を再配分し、ゴシップ同期で参加状況を共有する。Qwen3、DeepSeek-Qwen、Llama 3.1、SGLang/vLLM、RTX3090/4090、L40S、Ada 6000、A100を混在させた評価では、単一ノード運用に比べ世界全体のSLO達成率を最大1.5倍、平均遅延を最大27.6%削減し、集中スケジューラに近い性能を示す。",
+    "list_summary": "信用量・持分証明・対戦評価・ゴシップ同期を組み合わせ、独立したLLM提供者が中央管理なしで要求を相互委譲しつつ、単一ノード比でSLO達成率最大1.5倍・遅延最大27.6%改善する。",
     "authors": [
-      "Sangwoo Ha",
-      "Hyunwoo Seo",
-      "Yurim Jo",
-      "Youngjin Moon",
-      "Hoi-Jun Yoo"
+      "Huanyu Wang",
+      "Ziyu Xia",
+      "Zhuoming Chen",
+      "Beidi Chen"
     ],
-    "authors_affiliations": "KAIST, Daejeon, South Korea",
-    "published": "2026-08-05",
-    "publication": "MICRO 2026 / arXiv:2608.05303v1",
-    "publication_type": "査読済み会議論文",
-    "publication_status": "59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026) 採録。arXiv v1は2026-08-05。",
-    "lineage": "hardware-accelerators",
+    "authors_affiliations": "Carnegie Mellon University",
+    "published": "2026-03-21",
+    "publication": "arXiv:2603.20661v2",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v2（2026-03-24）。v1は2026-03-21。一次資料では査読済み採録先の記載を確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "エッジLLM推論",
-      "専門家混合",
-      "投機的復号",
-      "外部メモリアクセス",
-      "専門家再利用",
-      "チャネル統合",
-      "ソフトウェア・ハードウェア協調設計"
+      "分散LLMサービング",
+      "非中央集権スケジューリング",
+      "要求委譲",
+      "持分証明",
+      "信用台帳",
+      "ゴシップ同期",
+      "サービス品質評価",
+      "異種GPU"
     ],
-    "importance": "高。MoEと投機的復号を別々に高速化するのではなく、両者を併用したときに投機候補が専門家集合を膨張させるという相互作用を主ボトルネックとして定式化し、プリフィルとデコードの双方で外部メモリアクセスが発生する前に不要な専門家・チャネルを排除する。",
-    "hardware_evaluation": "実シリコンではなくSamsung 28nm FDSOI向けRTL合成と命令レベルの専用シミュレータ。800MHz、1.0V、A8W4、LPDDR4X 16GB/s、ピーク13.1 TOPS。ソフトウェア成果物の機能確認はRTX A6000 48GBを使用。",
-    "hardware_details": "8K MAC、512KB共有SRAM、8クラスタ。合成ロジック3.8mm²、60%セル利用率を仮定したロジック投影6.3mm²、SRAM 3.0mm²、総面積9.3mm²。EMAを除くピーク電力1.52W。",
-    "quality_effect": "近似を導入する。最終構成ではMT-Bench低下は最大0.1点程度に回復する一方、非thinking設定のGSM8Kでは約3〜4%の低下が残る。Qwen3 thinking設定ではGSM8Kの追加低下は見られない。MMLU/HellaSwag/ARC-C/WinoGrande/PIQAでもモデルにより小幅な低下がある。",
+    "importance": "高。単一クラスタ内で管理者が全GPUと待ち行列を掌握する既存サービングと異なり、互いに競争する独立提供者を第一級の主体として扱い、資源融通・品質評価・報酬設計を同じ要求ルーティング系へ統合する。",
+    "hardware_evaluation": "実機を用いた複数ノード評価。RTX3090、RTX4090、NVIDIA L40S、RTX Ada 6000、A100を混在させ、最大8ノード構成を評価する。",
+    "hardware_details": "Qwen3-4B/8B/32B、DeepSeek-Qwen-7B、Llama 3.1-8BをSGLangまたはvLLMで提供する。設定3ではQwen3-32Bを4×A100で実行し、他ノードはL40S、RTX3090、Ada 6000を使用。要求はOpenR1-Math-220kから取り、区分的に変化するPoisson到着を用いる。",
+    "quality_effect": "近似計算を強制する方式ではない。品質面は対戦・審判機構で高品質モデルや軽度量子化をより多く報酬する設計であり、Qwen3のモデル規模やTorchAO量子化条件を変えた実験で勝率と信用蓄積の相関を検証する。ただし審判自体の誤判定・共謀・評価モデル偏りを実世界規模で十分検証したわけではない。",
     "storage_targets": [
-      "LPDDR4X上のMoE専門家重み",
-      "オンチップSRAMへ流入する専門家・チャネル重み",
-      "プリフィル時の共有専門家集合",
-      "デコード時のチャネルマスクとルーティング情報"
+      "各ノードの信用台帳",
+      "ピア可用性ビュー",
+      "要求待ち行列",
+      "LLMバックエンド状態"
     ],
     "bottlenecks": [
-      "MoE専門家重みの外部メモリアクセス",
-      "投機候補増加による活性専門家集合の膨張",
-      "個別チャネル枝刈り後も和集合を読むため残るEMA",
-      "エッジSRAM容量不足により複数専門家を常駐できないこと"
+      "中央管理なしの要求配置",
+      "匿名参加者の品質保証",
+      "動的な参加・離脱",
+      "異種GPU・モデル・実行系の負荷偏り",
+      "台帳合意と対戦評価の追加負荷"
     ],
     "evidence_locations": [
-      "§I–II",
-      "§III Motivation",
-      "§IV EdgeXpert",
-      "§V Evaluation",
-      "Table II–V",
-      "Figure 8–13",
-      "Appendix Artifact"
+      "§3 WWW.Serve’s Overview",
+      "§4 Core Mechanisms",
+      "§5 Game-Theory Analysis",
+      "§6 Empirical Evaluation",
+      "§7 Ablation Study",
+      "Appendix §10 Implementation",
+      "Appendix §11 Experimental Settings"
     ],
-    "source": "https://arxiv.org/abs/2608.05303",
+    "source": "https://arxiv.org/abs/2603.20661",
     "sources": [
-      "https://arxiv.org/abs/2608.05303",
-      "https://arxiv.org/pdf/2608.05303",
-      "https://doi.org/10.5281/zenodo.21481269"
+      "https://arxiv.org/abs/2603.20661",
+      "https://arxiv.org/html/2603.20661v2",
+      "https://arxiv.org/pdf/2603.20661",
+      "https://github.com/Infini-AI-Lab/WWW.Serve",
+      "https://infini-ai-lab.github.io/WWW.Serve"
     ],
-    "code": "https://doi.org/10.5281/zenodo.21481269",
-    "implementation": "論文付録で五つの最適化をPyTorch/HuggingFace上に実装した公開成果物を提供する。Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BとEAGLE-3を対象にrun.pyから各手法を切替可能。論文性能値はA8W4専用ハードウェアシミュレーションで、公開ソフトウェア成果物はbf16動作。",
+    "code": "https://github.com/Infini-AI-Lab/WWW.Serve",
+    "implementation": "公開実装あり。ZeroMQのROUTER型通信、非同期要求キュー、AsyncOpenAI互換クライアントによるバックエンド抽象化、信用・持分証明ルーティング、利用者方針、YAML構成を実装し、SGLang/vLLMなどOpenAI互換サーバを接続できる。",
     "last_checked": "2026-09-14",
     "references": [
       {
-        "canonical_id": "arXiv:2410.12013",
-        "arxiv_id": "2410.12013"
+        "canonical_id": "arXiv:2504.20101",
+        "title": "GenTorrent: Scaling Large Language Model Serving with an Overlay Network"
       },
       {
-        "canonical_id": "arXiv:2505.09388",
-        "arxiv_id": "2505.09388"
+        "canonical_id": "arXiv:2501.14784",
+        "title": "DeServe: Towards Affordable Offline LLM Inference via Decentralization"
       },
       {
-        "canonical_id": "arXiv:2401.06066",
-        "arxiv_id": "2401.06066"
+        "canonical_id": "arXiv:2209.01188",
+        "title": "Petals: Collaborative Inference and Fine-tuning of Large Models"
       },
       {
-        "canonical_id": "arXiv:2401.04088",
-        "arxiv_id": "2401.04088"
+        "canonical_id": "arXiv:2312.07104",
+        "title": "SGLang: Efficient Execution of Structured Language Model Programs"
       },
       {
-        "canonical_id": "arXiv:2401.10774",
-        "arxiv_id": "2401.10774"
+        "canonical_id": "arXiv:2401.09670",
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
       },
       {
-        "canonical_id": "arXiv:2203.16487",
-        "arxiv_id": "2203.16487"
+        "canonical_id": "arXiv:2406.01566",
+        "title": "Helix: Serving Large Language Models over Heterogeneous GPUs and Network via Max-Flow"
       },
       {
-        "canonical_id": "arXiv:2302.01318",
-        "arxiv_id": "2302.01318"
-      },
-      {
-        "canonical_id": "arXiv:2602.16052",
-        "arxiv_id": "2602.16052"
+        "canonical_id": "arXiv:2311.11514",
+        "title": "HexGen: Generative Inference of Large Language Model over Heterogeneous Environment"
       }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2608.05303v1一次資料の参考文献節",
-    "references_total": 68
+    "references_source": "arXiv v2 HTML版の参考文献節",
+    "references_total": null
   }
 }
