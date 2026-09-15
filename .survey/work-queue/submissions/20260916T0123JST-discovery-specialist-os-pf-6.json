@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-os-pf-6",
+    "axis": "cs.OS/cs.PF隣接・GPU dispatch・OS-level inference primitives",
+    "query_summary": "新着/関連servingから離れてOS・performance隣接を探索し、WebGPU dispatch overheadのLLM characterizationとOS kernel内logit primitiveを軽量評価した。前者はブラウザ/WebGPU性能characterization中心、後者はgovernance中心で、現在の推論システム重点テーマへの直接寄与が弱いためcandidate投入を見送った。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "framework releaseから論文を逆引きする実装起点探索、または最近のserving論文のreferenceから未収録基礎システムを追う",
+    "empty_round_reason": "未収録候補は見つかったが、repositoryのLLM inference system重点テーマに対する直接性が不足し、強候補基準を満たさなかった。"
+  }
+}
