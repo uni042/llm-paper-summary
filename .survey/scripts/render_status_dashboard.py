@@ -42,6 +42,39 @@ def _candidate_count(submissions: list[dict[str, Any]]) -> int:
     return count
 
 
+def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int]:
+    """Count current research candidates only from durable job records.
+
+    The number of papers is only asserted for rows with a durable canonical_id.
+    Nonterminal research jobs without canonical_id are reported separately rather
+    than guessed to be distinct papers.
+    """
+    canonical_ids: set[str] = set()
+    nonterminal_jobs = 0
+    missing_canonical = 0
+
+    for job in jobs.values():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status in evidence.TERMINAL_STATUSES:
+            continue
+
+        nonterminal_jobs += 1
+        canonical_id = str(payload.get("canonical_id") or "").strip()
+        if canonical_id:
+            canonical_ids.add(canonical_id.casefold())
+        else:
+            missing_canonical += 1
+
+    return {
+        "canonical_candidates": len(canonical_ids),
+        "missing_canonical": missing_canonical,
+        "nonterminal_jobs": nonterminal_jobs,
+    }
+
+
 def _axes(submissions: list[dict[str, Any]]) -> list[str]:
     axes: list[str] = []
     for submission in submissions:
@@ -206,6 +239,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     verified_by_submission = evidence._verified_by_submission(verified)
     verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)
     active = evidence._active_claims(repo_root, jobs, now)
+    candidate_backlog = _durable_candidate_backlog(jobs)
 
     cutoff = now - timedelta(hours=evidence.RECENT_HOURS)
     recent_verified = [row for row in verified if cutoff <= row["completed_at"] <= now]
@@ -278,6 +312,18 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
         "このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。",
         "`run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。",
+        "",
+        "## 現在の収録候補",
+        "",
+        "`jobs/*.json` に耐久保存された非終端Research jobだけを対象にし、論文数は `canonical_id` で一意に確認できるものだけを数えます。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| canonical_id確認済みの一意な候補論文 | **{candidate_backlog['canonical_candidates']}** |",
+        f"| canonical_idなしの候補Research job | **{candidate_backlog['missing_canonical']}** |",
+        f"| 非終端Research job合計 | **{candidate_backlog['nonterminal_jobs']}** |",
+        "",
+        "`canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。",
         "",
         "## 件数サマリー",
         "",
@@ -429,6 +475,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
         "### このSTATUSが採用する証拠",
         "",
+        "- **収録候補**: `jobs/*.json` の非終端Research jobだけを対象にし、`canonical_id` の一意数を候補論文数として数えます。`canonical_id` 欠損jobは別件数で表示し、論文数へ推定加算しません。",
         "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
         "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
         "- **Audit完了**: job/result/submissionの対応と成功状態を照合します。",
