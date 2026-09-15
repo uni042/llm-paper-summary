@@ -2,55 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c49070062ccb7f1cec99a5aa",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-8857271141ba7926ae6b21f2",
+  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "hardware": "最大8ノードの異種GPU構成。RTX3090、RTX4090、NVIDIA L40S、RTX Ada 6000、A100を使用し、一部モデルは4×A100で実行する。",
-    "software": "WWW.Serve公開実装。SGLangとvLLMを混在させ、通信はZeroMQ、モデル接続はAsyncOpenAI互換クライアント。評価時は完全ブロックチェーンではなく共有信用台帳を使用する。",
-    "methodology": "OpenR1-Math-220kのプロンプトを用い、Qwen3、DeepSeek-Qwen、Llama 3.1を異なるGPU・実行系へ配置する4設定を作る。各ノードの要求到着率を区分的に変更し、単一ノード、信頼された集中スケジューラ、WWW.Serveを比較する。SLO達成率と平均遅延に加え、ノード参加・離脱、モデル規模、量子化、注意バックエンド、GPU種別、対戦率、利用者方針のアブレーションを行う。",
-    "scope": "主要なスケジューリング評価は4〜8ノード、約750秒の区分的負荷で実施する。全ノードの方針は主評価で委譲80%、受入80%、目標利用率70%、最大8192トークン、temperature 0、top-p 0.95に統一。世界規模WANや大規模障害、完全分散台帳の性能は直接評価していない。",
+    "hardware": "NVIDIA H100 80GB HBM3を1基使用。",
+    "software": "LLaVA-1.5-7Bと約6.5K行のPython FastCache試作。提案圧縮器、KVメモリプール、動的バッチング、ゼロコピー参照管理を実装。",
+    "methodology": "GQAとMileBenchの画像を単純説明プロンプトと組み合わせ、1〜10 req/sでFullCacheおよび複数KV圧縮方式を比較。静的バッチp1c1d8・p2c2d8と動的バッチを比較し、高負荷10〜40 req/sではp3c3d6・p4c4d8とも比較する。圧縮品質はFullCache応答に対するBLEU/ROUGE、性能はTTFT、TPOT、throughput、時間利用率、GPUメモリを測る。",
+    "scope": "単一GPU・単一MLLM。MileBenchは平均15.2画像・422.3語、6,440事例を持つが、評価では画像成分と単純な説明文プロンプトを用いてシステム負荷を制御する。実サービスの複雑な会話履歴や多種モデル同居は対象外。",
     "workloads": [
-      "OpenR1-Math-220k",
-      "Qwen3 4B/8B/32B",
-      "DeepSeek-Qwen 7B",
-      "Llama 3.1 8B"
+      "GQA",
+      "MileBench",
+      "LLaVA-1.5-7B",
+      "1〜40 requests/s"
     ],
     "baselines": [
-      "単一ノード実行",
-      "集中スケジューリング",
-      "WWW.Serve分散スケジューリング"
+      "FullCache",
+      "SnapKV",
+      "Knorm",
+      "ExpectedAttention",
+      "StreamingLLM",
+      "NVIDIA KV-cache compression",
+      "FCFS",
+      "固定バッチ構成"
     ],
     "metrics": [
-      "SLO達成率",
-      "平均要求遅延",
-      "対戦勝率",
-      "処理要求数",
-      "信用量推移",
-      "動的参加時の遅延"
+      "TTFT",
+      "TPOT",
+      "throughput",
+      "BLEU",
+      "ROUGE-1",
+      "ROUGE-L",
+      "GPUメモリ使用量",
+      "時間利用率"
     ],
-    "settings": [
-      {
-        "name": "同質4ノード",
-        "description": "Qwen3-8B、Ada 6000、SGLangを4ノードで使用し、ノード1と4だけ負荷を途中で高低切替する。"
-      },
-      {
-        "name": "モデル・GPU異種4ノード",
-        "description": "Qwen3-8B/Ada 6000とQwen3-4B/RTX3090を混在させ、全てSGLangで負荷変動を与える。"
-      },
-      {
-        "name": "実行系も異なる4ノード",
-        "description": "Qwen3-32B/4×A100、Qwen3-8B/L40S、DeepSeek-Qwen-7B/RTX3090、Llama3.1-8B/Ada6000をSGLang/vLLM混在で運用する。"
-      },
-      {
-        "name": "異種8ノード",
-        "description": "L40S、Ada6000、RTX4090、RTX3090へLlama3.1-8B、DeepSeek-Qwen-7B、Qwen3-4Bを配置し、区分的Poisson到着で負荷を変動させる。"
-      }
-    ],
-    "reproducibility": "公開GitHubとYAML設定方式があり、モデル・GPU・バックエンド・到着スケジュール・主要方針値を論文に明記する。一方、主評価は共有台帳へ簡略化され、実世界のピア間ネットワーク遅延・障害分布・悪意参加者比率の詳細条件は不足する。"
+    "reproducibility": "GPU、モデル、データセット、静的バッチ記法、主要リクエスト率、圧縮率、実装規模を記載するが、著者公式コードURLは一次資料に見当たらず、圧縮器学習データ・訓練ハイパーパラメータや要求生成の完全な再現条件は不足する。"
   },
   "reservation": {
-    "claim_id": "claim-c49070062ccb7f1cec99a5aa",
-    "worker_id": "scheduled-chat-paper-20260915T1530JST",
+    "claim_id": "claim-8857271141ba7926ae6b21f2",
+    "worker_id": "scheduled-chat-paper-20260915T1730JST",
     "worker_kind": "scheduled_chat"
   }
 }
