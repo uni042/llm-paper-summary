@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:06:33 JST**
+> 自動生成: **2026-09-16 07:06:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **1** | **5** | **2** | **3** | **6** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **11** | **0** | **11** | **0** | **0** | **15** |
-| 合計 | **5** | **16** | **2** | **14** | **6** | **0** | **15** |
+| Discovery | **4** | **12** | **0** | **12** | **0** | **0** | **16** |
+| 合計 | **5** | **17** | **2** | **15** | **6** | **0** | **16** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -82,8 +82,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 07:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **15件**
-- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning / HPC/architecture隣接・MoE near-memory・FFN disaggregation / vLLM/SGLang/TensorRT-LLM・KV runtime semantics / agentic serving・pause/resume・KV retention/prefetch / sparse attention・階層KV・PNM/SGLang
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **12件** / 候補: **16件**
+- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning / HPC/architecture隣接・MoE near-memory・FFN disaggregation / vLLM/SGLang/TensorRT-LLM・KV runtime semantics / agentic serving・pause/resume・KV retention/prefetch / sparse attention・階層KV・PNM/SGLang / energy-aware serving・shared GPU・SLO scheduling
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着・適応型KV圧縮・制約付き推論
