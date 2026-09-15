@@ -85,8 +85,8 @@ class DirectStatusMetricTests(unittest.TestCase):
                 "expires_at": "2026-09-16T01:00:00+00:00",
             })
 
-            # One completed Research job is inconsistent: immutable submission exists,
-            # but there is no success result and the referenced paper does not exist.
+            # This completed job is both strictly unverifiable and directly inconsistent:
+            # it declares a paper path whose file does not exist.
             _write_json(repo / ".survey/work-queue/jobs/job-broken.json", {
                 "job_id": "job-broken", "type": "research", "status": "completed",
                 "canonical_id": "arXiv:2609.10003", "title": "Broken",
@@ -99,7 +99,8 @@ class DirectStatusMetricTests(unittest.TestCase):
                 "paper_path": "papers/inference/01-offload/missing.md",
             })
 
-            # Orphan durable records are direct consistency anomalies.
+            # Orphan durable records are direct consistency anomalies. The orphan result
+            # violates two checks but must count as one anomalous record in the top total.
             _write_json(repo / ".survey/work-queue/submissions/research/orphan-submission.json", {
                 "kind": "research", "attempt_id": "orphan-sub", "job_id": "missing-job-sub",
             })
@@ -109,11 +110,13 @@ class DirectStatusMetricTests(unittest.TestCase):
                 "processed_at": "2026-09-15T23:40:00+00:00",
             })
 
-            # A second real paper file proves the physical paper-file count is independent
-            # from verified completion count. README/comparison files must not be counted.
+            # Physical paper count covers inference/training/survey, but excludes indexes,
+            # comparison pages, and moved stubs.
             _write_text(repo / "papers/training/02-systems/physical-only.md")
+            _write_text(repo / "papers/survey/01-systems/survey-only.md")
             _write_text(repo / "papers/inference/README.md")
             _write_text(repo / "papers/training/comparison.md")
+            _write_text(repo / "papers/survey/02-old/moved-stub.md", "# Moved\n\nSee elsewhere.\n")
 
             text = _load_renderer().build_dashboard(repo, now=now)
 
@@ -123,7 +126,7 @@ class DirectStatusMetricTests(unittest.TestCase):
             self.assertIn("| 未claim Research job | **3** |", top)
             self.assertIn("| 直近24hの検証済みResearch収録 | **1** |", top)
             self.assertIn("| 最終検証済みResearch収録 | **09-16 08:30:00 JST（30分前）** |", top)
-            self.assertIn("| 整合性異常 | **4** |", top)
+            self.assertIn("| 整合性異常 | **3** |", top)
 
             self.assertIn("## 耐久証拠の詳細集計", rest)
             details = rest.split("## 耐久証拠の詳細集計", 1)[1]
@@ -134,12 +137,14 @@ class DirectStatusMetricTests(unittest.TestCase):
             self.assertIn("| canonical_id欠損 | **1** |", details)
             self.assertIn("| title欠損 | **1** |", details)
             self.assertIn("| source URL欠損 | **2** |", details)
-            self.assertIn("| inference/training配下の論文Markdown実体 | **2** |", details)
+            self.assertIn("| inference/training/survey配下の論文Markdown実体 | **3** |", details)
             self.assertIn("| 成功result未照合のimmutable submission | **2** |", details)
-            self.assertIn("| completed Research/Audit jobで検証済み完了なし | **1** |", details)
+            self.assertIn("| completed Research/Audit jobで厳格検証未成立 | **1** |", details)
+            self.assertIn("| completed Research jobで指定paper実体なし | **1** |", details)
             self.assertIn("| 対応jobなしsubmission | **1** |", details)
             self.assertIn("| 対応jobなし成功result | **1** |", details)
             self.assertIn("| 対応submissionなし成功result | **1** |", details)
+            self.assertIn("| 異常レコード合計（重複排除） | **3** |", details)
 
             # Detailed/long tables stay below the existing evidence section.
             self.assertGreater(text.index("## 耐久証拠の詳細集計"), text.index("## 詳細証拠"))
