@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:05:07 JST**
+> 自動生成: **2026-09-15 20:05:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **11** | **11** | **2** | **9** | **1** | **0** | **6** |
+| Discovery | **4** | **7** | **0** | **7** | **0** | **0** | **7** |
+| 合計 | **11** | **12** | **2** | **10** | **1** | **0** | **7** |
 
 ## 詳細証拠
 
@@ -110,14 +110,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-15 20:00 JST**
-- immutable submission: **6件** / 検証済み成功result: **0件** / 未完了・未検証: **6件** / 候補: **6件**
-- 探索軸: 適応KV圧縮・プロンプト別資源制約選択 / MoE・GPU-NDP協調・expert scheduling / MoE・CPU AMX/GPU協調・expert coalescing / 実運用LLM serving framework採用・empirical systems survey / agentic serving・sandbox・trajectory-level telemetry / agent serving・program-level simulation・KV residency
+- immutable submission: **7件** / 検証済み成功result: **0件** / 未完了・未検証: **7件** / 候補: **7件**
+- 探索軸: 適応KV圧縮・プロンプト別資源制約選択 / MoE・GPU-NDP協調・expert scheduling / MoE・CPU AMX/GPU協調・expert coalescing / 実運用LLM serving framework採用・empirical systems survey / agentic serving・sandbox・trajectory-level telemetry / agent serving・program-level simulation・KV residency / CXL階層メモリ・transparent NDP・weight/KV圧縮
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2008JST-discovery-specialist-moe-ndp-2.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2010JST-discovery-specialist-moe-amx-3.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2012JST-discovery-specialist-serving-empirical-4.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2015JST-discovery-specialist-agent-aries-5.json` (job `job-3f9a46ee08846bcd`)
 - **未完了または未検証** `.survey/work-queue/submissions/20260915T2017JST-discovery-specialist-agent-sim-6.json` (job `job-3f9a46ee08846bcd`)
+- **未完了または未検証** `.survey/work-queue/submissions/20260915T2020JST-discovery-specialist-cxl-ndp-7.json` (job `job-3f9a46ee08846bcd`)
 
 ### 現在処理中
 
