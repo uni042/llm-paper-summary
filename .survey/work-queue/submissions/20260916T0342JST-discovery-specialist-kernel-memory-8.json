@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2504.06319",
+      "title": "Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching",
+      "source_url": "https://arxiv.org/abs/2504.06319",
+      "paper_path": "papers/inference/03-kv-cache-memory/2025-2504.06319-l2-asynchronous-kv-prefetching.md",
+      "priority": 82,
+      "reason": "HopperのL2 asynchronous prefetchを使い、attention計算中のidle memory bandwidthで次KV blockをL2へ先読みしてHBM待ちを隠蔽するkernel-level手法。H20実測でattention kernel最大2.15倍、end-to-end throughput最大1.97倍を報告し、階層メモリ最適化をGPU cache階層まで広げる重要な比較点。"
+    },
+    {
+      "canonical_id": "arXiv:2603.27138",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.27138",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2603.27138-scoutattention-layer-ahead-cpu-precompute.md",
+      "priority": 84,
+      "reason": "KVをDRAMへoffloadする際、GPU-CPU block-wise sparse attentionと1 layer先行CPU pre-computationを組み合わせてI/O/CPU待ちを隠す。既存offload比2.1倍speedup、accuracy差2.4%以内を報告し、CPU offloadのprefetch/scheduling設計として重点テーマに直結する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2606.26666",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2606.26666-persistentkv-page-aware-decode-scheduling.md",
+      "priority": 77,
+      "reason": "native block table上でKV-head group単位のpersistent decode attentionとworkqueue schedulingを行い、active batch/context長に応じてFlashInferとsequence split/workqueueを選択する。commodity RTX 3060を対象にpaged KVのkernelとserving scheduleの境界を扱うため、実装系比較として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-kernel-memory-8",
+    "axis": "GPU L2 prefetch・CPU layer-ahead attention・persistent KV decode kernel",
+    "query_summary": "memory-bandwidth hidingをkernel/runtime側から探索し、L2 async prefetch、CPU layer-ahead precompute、page-aware persistent decode schedulingを評価。HillInfer等の既収録storage系は除外し、3候補をGitHub canonical ID検索で未登録確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2602.18750"],
+    "next_axis_hint": "fault tolerance/checkpointing、failure-aware serving、state migrationへ軸を移す",
+    "empty_round_reason": null
+  }
+}
