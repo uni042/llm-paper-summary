@@ -2,18 +2,18 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8857271141ba7926ae6b21f2",
-  "job_id": "job-research-64153047cf155e5c",
+  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
+  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "limitations": "評価は単一H100 80GBとLLaVA-1.5-7Bに限定される。複数GPU間KV移動、異種アクセラレータ、CPU/SSDへの階層退避、ネットワーク分離prefill/decodeは未評価。MileBenchでは単純説明プロンプトを使うため、本来の長文マルチ画像推論を全面的に評価していない。提案MLP圧縮器の訓練コスト・モデル移植性、要求間公平性、P99待ち時間、失敗時のメモリ回収についても情報が少ない。著者公式実装URLを一次資料から確認できない。",
-    "differences": "SnapKVやKnormなどはどのKVを残すかという圧縮規則が中心で、vLLMやDistServeは未圧縮KVを前提にメモリ・prefill/decodeを管理する。FastCacheは圧縮演算が追加されたことで生じる第三段階の待ち行列とKV寿命問題を対象にし、圧縮器自体をバッチしやすいMLPへ変え、prefill/compress/decode全体を共同スケジューリングする。",
-    "implementation_status": "約6.5K行のPython試作を論文で評価。SPSCオンライン処理、動的バッチング、KVメモリプール、ゼロコピー参照管理を実装。一次資料から公開コードURLは確認できない。",
-    "research_positioning": "KVキャッシュ圧縮とLLMサービングの接点にあるシステム研究。圧縮品質研究を、キューイング・GPU利用率・メモリ断片化・SLOというオンライン実行問題へ拡張する。",
-    "relation_to_existing_repository": "KV-cache-offload-recomputation系統では、圧縮率・量子化・追い出し・再計算を扱う論文が多い。FastCacheはGPU内で圧縮前後状態が共存する期間と圧縮処理のバッチ性を明示的に扱うため、CPU/SSD階層化とは補完的である。将来はFastCacheのメモリプールをGPU/CPU/NVMeへ拡張し、圧縮率・配置階層・prefetchを同じメモリ地図から決める方向が考えられる。",
+    "limitations": "主評価はA100同質サーバとOPT系列に集中し、到着時刻はPoisson/Gammaで合成されるため、本番の相関・日内変動や異種GPUクラスタでの外挿には注意が必要。cache type切替時は既存キャッシュを破棄してprefillを再実行する。SLO最大化目的のfallbackは既に違反した要求を強く降格するため、約10%で飢餓が観測される。論文自身も複数インスタンスを将来課題としている。",
+    "differences": "PagedAttention/vLLMはKVの断片化を抑えて容量を効率利用するが、保存表現自体はKVのまま。Sarathi-Serve/FastGenはprefill/decode混在で計算干渉を抑えるが、キャッシュ表現と要求選択を共同最適化しない。Apt-Serveはhidden stateという半容量の正確な代替表現を導入し、要求採用と表現選択を一つのメモリ制約付き最適化として反復ごとに解く。",
+    "implementation_status": "vLLM上の実装を著者がGitHub（eddiegaoo/Apt-Serve）で公開。専用CUDAカーネルとスケジューラを含む。査読済みPACMMOD/SIGMOD 2025論文。",
+    "research_positioning": "KVキャッシュ管理とSLO認識サービング・スケジューリングの境界にある。キャッシュ圧縮・オフロードのように容量だけを下げるのではなく、正確な中間表現を切り替えて計算量と容量を動的に交換する。",
+    "relation_to_existing_repository": "KV-cache offload/recomputation系の『低速階層へ退避するか再計算するか』という交換関係と近いが、Apt-ServeはGPU HBM内で表現粒度を変える。FlowKVのような転送最適化、Agent MemoryのようなSSD永続化、SAECacheの追い出し優先度とは相補的で、将来はKV/hidden/CPU/SSDを複数段階の候補として同じ限界価値/メモリ・I/O費用に拡張できる。Sarathi-Serveとの組合せで元方式よりさらに改善することも論文が実証している。",
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-8857271141ba7926ae6b21f2",
+    "claim_id": "claim-c4aaea90c49c672188d92cfd",
     "worker_id": "scheduled-chat-paper-20260915T1730JST",
     "worker_kind": "scheduled_chat"
   }

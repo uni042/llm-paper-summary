@@ -2,43 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8857271141ba7926ae6b21f2",
-  "job_id": "job-research-64153047cf155e5c",
+  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
+  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "hardware": "NVIDIA H100 80GB HBM3を1基使用。",
-    "software": "LLaVA-1.5-7Bと約6.5K行のPython FastCache試作。提案圧縮器、KVメモリプール、動的バッチング、ゼロコピー参照管理を実装。",
-    "methodology": "GQAとMileBenchの画像を単純説明プロンプトと組み合わせ、1〜10 req/sでFullCacheおよび複数KV圧縮方式を比較。静的バッチp1c1d8・p2c2d8と動的バッチを比較し、高負荷10〜40 req/sではp3c3d6・p4c4d8とも比較する。圧縮品質はFullCache応答に対するBLEU/ROUGE、性能はTTFT、TPOT、throughput、時間利用率、GPUメモリを測る。",
-    "scope": "単一GPU・単一MLLM。MileBenchは平均15.2画像・422.3語、6,440事例を持つが、評価では画像成分と単純な説明文プロンプトを用いてシステム負荷を制御する。実サービスの複雑な会話履歴や多種モデル同居は対象外。",
+    "hardware": "NVIDIA A100 40GB。OPT-13Bは1 GPU、OPT-30Bは2 GPU、OPT-66Bは4 GPU。GPU間NVLink。",
+    "software": "vLLMベースの公開Apt-Serve実装。FP16、FlashAttention、iteration-level batching、NCCLテンソル並列、専用hidden-cache CUDAカーネル。",
+    "methodology": "ShareGPT（チャット）、HumanEval（コード補完）、LongBench（要約）から各1,000要求を無作為抽出し、Poisson到着率を掃引。OPT-13B/30B/66BでvLLM、Sarathi-Serve、DeepSpeed-FastGenと比較し、全方式でキャッシュ用GPUメモリ利用率を揃える。TTFTと各要求のP99 TBTの双方を満たす要求割合をSLO達成率とし、同一達成率で維持可能な最大到着率を有効スループットとする。Gamma到着でburstiness、構成除去、スケジューラオーバーヘッド、Sarathi統合、超長文モデル・データも追加評価。",
+    "scope": "主評価は単一サーバ内A100とOPT 13B–66B。超長文ではLLaMA3-8B-Instruct-262KとYi-6B-200Kへ拡張するが、異種GPU、複数サーバの独立インスタンス間ルーティング、本番到着トレースは主評価外。",
     "workloads": [
-      "GQA",
-      "MileBench",
-      "LLaVA-1.5-7B",
-      "1〜40 requests/s"
+      "ShareGPT",
+      "HumanEval",
+      "LongBench",
+      "WikiText（超長文追加評価）",
+      "Arxiv（超長文追加評価）",
+      "BookCorpus（超長文追加評価）"
     ],
     "baselines": [
-      "FullCache",
-      "SnapKV",
-      "Knorm",
-      "ExpectedAttention",
-      "StreamingLLM",
-      "NVIDIA KV-cache compression",
-      "FCFS",
-      "固定バッチ構成"
+      "vLLM",
+      "Sarathi-Serve",
+      "DeepSpeed-FastGen"
     ],
     "metrics": [
+      "SLO達成率",
+      "有効スループット（req/s）",
       "TTFT",
-      "TPOT",
-      "throughput",
-      "BLEU",
-      "ROUGE-1",
-      "ROUGE-L",
-      "GPUメモリ使用量",
-      "時間利用率"
+      "P99 TBT",
+      "tail latency",
+      "スケジューリング時間"
     ],
-    "reproducibility": "GPU、モデル、データセット、静的バッチ記法、主要リクエスト率、圧縮率、実装規模を記載するが、著者公式コードURLは一次資料に見当たらず、圧縮器学習データ・訓練ハイパーパラメータや要求生成の完全な再現条件は不足する。"
+    "reproducibility": "公開GitHub実装、モデル/GPU構成、SLO、データセット、到着生成法、主要比較方式を明示。実運用トレースではなく合成Poisson/Gamma到着である点は外的妥当性の制約。"
   },
   "reservation": {
-    "claim_id": "claim-8857271141ba7926ae6b21f2",
+    "claim_id": "claim-c4aaea90c49c672188d92cfd",
     "worker_id": "scheduled-chat-paper-20260915T1730JST",
     "worker_kind": "scheduled_chat"
   }

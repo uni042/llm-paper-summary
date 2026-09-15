@@ -2,74 +2,67 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8857271141ba7926ae6b21f2",
-  "job_id": "job-research-64153047cf155e5c",
+  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
+  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "overview": "動的バッチ付きFastCacheはGQA/MileBenchの両方で高負荷ほど大きな利得を示す。MileBenchではp1c1d8の10 req/s条件でTTFT最大19.3倍短縮、throughput最大10.9倍、p2c2d8ではTPOT最大2.4倍改善する。GQAではthroughput最大12.1倍を報告する。圧縮品質も比較対象より高く、メモリプールは平均使用量を20%削減する。",
+    "overview": "Apt-Serveは全モデル・全データセットで基準方式より高いSLO維持可能到着率を示し、特に長い出力や長い入力でKV寿命・容量が支配的になるShareGPT/LongBenchで差が大きい。90% SLO達成点ではvLLM/Sarathi/FastGen比の平均が2.3/1.9/1.8倍、最大4.0/3.4/3.3倍。60%点では平均4.9/4.4/4.3倍、最大8.8/7.9/7.5倍。",
     "key_results": [
       {
-        "metric": "TTFT",
-        "value": "最大19.3倍短縮",
-        "baseline": "KV圧縮比較方式",
-        "condition": "MileBench、p1c1d8、10 req/s",
-        "interpretation": "圧縮を個別処理せず多段動的バッチへまとめることで高負荷時の待ち行列を抑える。"
+        "metric": "最大有効スループット改善",
+        "value": "8.8倍",
+        "baseline": "vLLM",
+        "condition": "60% SLO達成点、3モデル×3データセット中の最大値",
+        "interpretation": "HBM容量とバッチ構成が強い制約になる高負荷域で最大差が出る。"
       },
       {
-        "metric": "throughput",
-        "value": "最大12.1倍向上",
-        "baseline": "比較方式",
-        "condition": "GQA、p1c1d8系",
-        "interpretation": "圧縮段階を含めたGPU演算をまとめ、並列度を引き上げる。"
+        "metric": "90% SLO達成点の平均到着率倍率",
+        "value": "2.3倍 / 1.9倍 / 1.8倍",
+        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
+        "condition": "ShareGPT・HumanEval・LongBench、OPT-13B/30B/66B平均",
+        "interpretation": "厳しいSLO達成率でも一貫して有効スループットを改善。"
       },
       {
-        "metric": "MileBench throughput",
-        "value": "最大10.9倍 / 6.9倍",
-        "baseline": "比較方式",
-        "condition": "p1c1d8 / p2c2d8",
-        "interpretation": "固定されたprefill/compress/decodeバッチより動的構成が高負荷へ適応する。"
+        "metric": "ShareGPT 60%点",
+        "value": "7.4倍 / 6.8倍 / 6.4倍",
+        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
+        "condition": "3モデル平均",
+        "interpretation": "長い出力でKV寿命が長くなるほどhybrid cacheの同時実行数増加が効く。"
       },
       {
-        "metric": "TPOT",
-        "value": "最大2.4倍改善",
-        "baseline": "比較方式",
-        "condition": "MileBench、p2c2d8",
-        "interpretation": "デコード段階にもメモリ余力に合わせたバッチ形成が効く。"
+        "metric": "LongBench 90%点",
+        "value": "2.8倍 / 2.5倍 / 2.3倍",
+        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
+        "condition": "3モデル平均",
+        "interpretation": "長い入力による大きなキャッシュ占有をhidden cacheで緩和。"
       },
       {
-        "metric": "SLO",
-        "value": "4〜10 req/sで全統合圧縮方式がTTFT 2秒未満、10 req/sでは1秒未満",
-        "baseline": "統合前Knormは高負荷時TTFT約42秒",
-        "condition": "LLaVA-1.5-7B",
-        "interpretation": "FastCacheのスケジューリング層を既存圧縮へ組み込むだけでも待ち時間を大きく減らせる。"
+        "metric": "burst到着のSLO達成率",
+        "value": "最大7.5倍",
+        "baseline": "vLLM/Sarathi-Serve",
+        "condition": "OPT-13B、Gamma到着のCV掃引",
+        "interpretation": "到着のバースト性が増すほど適応バッチ再編の価値が高まる。"
       },
       {
-        "metric": "時間利用率",
-        "value": "10 req/sで80.03%",
-        "baseline": "単純prefill/decode分離55.80%",
-        "condition": "同リクエスト率",
-        "interpretation": "実処理以外のキュー待ち割合を削減する。"
+        "metric": "適応スケジューリングの除去影響",
+        "value": "LongBench 1.5 req/s, CV=1: 11.8%→98.2%",
+        "baseline": "FCFS → adaptive",
+        "condition": "hybrid cacheは維持",
+        "interpretation": "利得の大部分はキャッシュだけでなくバッチ構成最適化にも依存。"
       },
       {
-        "metric": "平均GPUメモリ",
-        "value": "35.1GB→28.1GB（20%削減）",
-        "baseline": "メモリプールなし",
-        "condition": "同一モデル・負荷",
-        "interpretation": "圧縮前ゾンビKVを即時回収し、断片化を抑える。"
-      },
-      {
-        "metric": "圧縮品質",
-        "value": "BLEU 23.8、ROUGE-1 32.1、ROUGE-L 23.9",
-        "baseline": "次点BLEU Knorm 18.9、ROUGE-1 Knorm 19.7、ROUGE-L ExpectedAttention 12.3",
-        "condition": "GQA",
-        "interpretation": "軽量圧縮が性能向上だけでなく比較圧縮方式以上の出力一致度を示す。"
+        "metric": "スケジューラ実行時間",
+        "value": "1,600候補で10.8 ms",
+        "baseline": "50候補で0.3 ms",
+        "condition": "OPT-13B単一GPU",
+        "interpretation": "50要求decode反復約120 msに対し大規模候補でも制御オーバーヘッドは小さい。"
       }
     ],
-    "negative_results": "固定バッチ構成は要求率が上がると遅延が大きく変動し、40 req/sではFastCache正規化遅延0.17秒に対してp3c3d6は0.46秒、p4c4d8は0.33秒。既存圧縮を単純に挿入すると4 req/sだけでも圧縮段階が3.662秒を追加し、圧縮によるメモリ節約がSLO悪化へ転じる。",
-    "interpretation": "FastCacheの主要メッセージは『圧縮率が高いほど良い』ではなく、圧縮をオンラインサービングの一段階としてスケジュールし、解放されたメモリを即座に次の並列要求へ再投資する必要があるという点にある。軽量圧縮、段階別バッチング、寿命管理の三者が循環して性能を作る。",
-    "quality_impact": "5倍KV圧縮を行うが、GQAのBLEU/ROUGEでは比較圧縮方式より良好。ただしFullCacheに対する一般的タスク正答率や人手品質評価ではなく文字列重複指標中心であり、圧縮がすべてのマルチモーダル推論品質を維持するとは言えない。"
+    "negative_results": "HumanEvalは出力が短く長さ分散も小さいため改善幅が小さく、90% SLO点でvLLM/Sarathi/FastGen比平均1.7/1.4/1.4倍に留まる。また元のSLO-aware fallbackは一部（約10%）要求を飢餓させ高いtail latencyを生む。hidden cacheのみでは改善が限定的な条件もあり、例えばShareGPT 3 req/s, CV=1ではKVのみ/Hybridとも99.5%で差がない。",
+    "interpretation": "Apt-Serveの主要な示唆は、LLMサービングのキャッシュを『保持する/捨てる』だけでなく、再計算費用の異なる複数の正確な中間表現として扱い、スケジューラが同時実行数と反復速度の交換点を選べることにある。メモリ最適化とスケジューリングを別々に行うより、同じ目的関数で共同最適化する方が高負荷で有効。",
+    "quality_impact": "hidden cacheは同じTransformer隠れ状態からK/Vを再生成するためモデル出力品質の近似を導入しない。主な品質外の代償はTBT、tail latency、再prefill費用。"
   },
   "reservation": {
-    "claim_id": "claim-8857271141ba7926ae6b21f2",
+    "claim_id": "claim-c4aaea90c49c672188d92cfd",
     "worker_id": "scheduled-chat-paper-20260915T1730JST",
     "worker_kind": "scheduled_chat"
   }
