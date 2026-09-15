@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T08:36:09.633628+00:00",
+  "updated_at": "2026-09-15T09:06:44.959714+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T08:36:09.633628+00:00",
+      "last_recorded_at": "2026-09-15T09:06:44.959714+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 82,
         "audit_completed": 0,
-        "discovery_completed": 18,
+        "discovery_completed": 19,
         "blocked": 1,
-        "new_jobs": 29,
-        "new_papers": 85,
+        "new_jobs": 30,
+        "new_papers": 86,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34874559118:1",
-          "recorded_at": "2026-09-14T17:28:12.393703+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34874559118",
-            "run_attempt": "1",
-            "source_sha": "9d2fbe3fbaf94b965d34998ac20b717806c32ac1"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34874762713:1",
           "recorded_at": "2026-09-14T17:31:19.016988+00:00",
@@ -19601,6 +19587,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34950297819:1",
+          "recorded_at": "2026-09-15T09:06:44.959714+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34950297819",
+            "run_attempt": "1",
+            "source_sha": "b5e90f75dd805d54b786cccea2af0210f9167094"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20411,6 +20412,14 @@
           "title": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-910b55f3735ab895",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20616,6 +20625,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-6490b6dae61c1d16",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20703,7 +20719,8 @@
         "arXiv:2507.08045",
         "arXiv:2601.21198",
         "arXiv:2608.05303",
-        "arXiv:2603.20661"
+        "arXiv:2603.20661",
+        "arXiv:2503.08461"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -20765,7 +20782,8 @@
         ".survey/work-queue/results/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json",
         ".survey/work-queue/results/20260915T1610JST-discovery-specialist-disagg-energy-2.json",
         ".survey/work-queue/results/20260915T1612JST-discovery-specialist-cxl-ndp-3.json",
-        ".survey/work-queue/results/20260915T1614JST-discovery-specialist-network-flow-4.json"
+        ".survey/work-queue/results/20260915T1614JST-discovery-specialist-network-flow-4.json",
+        ".survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20802,8 +20820,8 @@
         ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 545,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 546,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
