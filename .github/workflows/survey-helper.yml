@@ -60,6 +60,7 @@ jobs:
             .survey/scripts/refresh_queue_snapshot.py \
             .survey/scripts/status_publish_gate.py \
             .survey/scripts/build_status_dashboard.py \
+            .survey/scripts/render_status_dashboard.py \
             .survey/scripts/append_research_throughput_status.py \
             .survey/scripts/refine_status_observability.py \
             .survey/scripts/ensure_dashboard_history.py \
@@ -235,7 +236,7 @@ jobs:
             fi
 
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
-            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
             python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
             git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
