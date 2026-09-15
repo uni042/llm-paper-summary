@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "paper_path": "papers/inference/03-kv-cache-offload-storage/2026-2609.10790-composable-cxl-kubernetes-shared-kv-memory.md",
+      "priority": 93,
+      "reason": "Composable CXL memoryをKubernetes DRAでクラスタ共有資源化し、vLLM/llm-dのcross-node KV cache tierとして利用する実装。512 GiB CXL applianceでcross-node prefix reuseによりTTFTを5.5–36.6倍短縮し、memory disaggregationをserving基盤へ統合する重点テーマ。"
+    },
+    {
+      "canonical_id": "arXiv:2607.00466",
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "source_url": "https://arxiv.org/abs/2607.00466",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-aware-decode-routing.md",
+      "priority": 88,
+      "reason": "prefill時のexpert activationから生成時expert localityを予測し、PD分離MoEのdecode routingを負荷だけでなくexpert localityで制御するvLLM実装。最大40 GPU評価でmedian TPOTを5.9–13.9%削減し、expert placement/cacheとrequest routingの接続として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-memory-fabric-3",
+    "axis": "CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing",
+    "query_summary": "storage/network軸からmemory fabricと配置制御へ展開し、Composable CXLをKubernetes共有KV tierにする新着研究と、MoE expert localityをPD decode routingへ使うvLLM研究を軽量評価した。最新GitHub検索でcanonical ID未収録を確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "forward citationとは別に、OS/GPU runtime隣接からI/O scheduling・memory pressure・kernel/runtime co-designを探索する",
+    "empty_round_reason": null
+  }
+}
