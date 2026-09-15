@@ -109,16 +109,37 @@ def _slot_from_claim_time(claim: dict[str, Any], lane: str) -> datetime | None:
     return None
 
 
+def _run_key_is_plausible(stamp: datetime, claim: dict[str, Any], lane: str) -> bool:
+    """Reject run timestamps that are impossible relative to durable claim time."""
+    local = stamp.astimezone(JST)
+    if lane == "normal" and local.minute != 30:
+        return False
+    if lane == "aux" and local.minute != 0:
+        return False
+    claimed = _dt(claim.get("claimed_at"))
+    if claimed is not None and stamp.astimezone(timezone.utc) > claimed + timedelta(minutes=5):
+        return False
+    return True
+
+
 def _claim_run_key(claim: dict[str, Any]) -> str | None:
     worker_id = str(claim.get("worker_id") or "")
+    lane = _worker_lane(worker_id)
+
+    explicit = _dt(claim.get("run_key"))
+    if explicit is not None and _run_key_is_plausible(explicit, claim, lane):
+        return explicit.astimezone(JST).isoformat(timespec="seconds")
+
     match = WORKER_RUN_RE.search(worker_id)
     if match is not None:
         try:
             local = datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M").replace(tzinfo=JST)
         except ValueError:
-            return None
-        return local.isoformat(timespec="seconds")
-    local = _slot_from_claim_time(claim, _worker_lane(worker_id))
+            local = None
+        if local is not None and _run_key_is_plausible(local, claim, lane):
+            return local.isoformat(timespec="seconds")
+
+    local = _slot_from_claim_time(claim, lane)
     return local.isoformat(timespec="seconds") if local is not None else None
 
 
@@ -214,7 +235,45 @@ def active_claim_rows(repo_root: Path, now: datetime) -> list[dict[str, Any]]:
     return rows
 
 
-def _run_breakdown(rows: list[dict[str, Any]], lane: str) -> dict[str, Any]:
+def _latest_persisted_run_key(repo_root: Path, lane: str, now: datetime) -> str | None:
+    """Return the latest persisted Scheduled Chat run even when it owns no active lease."""
+    candidates: list[tuple[datetime, str]] = []
+
+    def add(value: Any) -> None:
+        stamp = _dt(value)
+        if stamp is None or stamp > now:
+            return
+        local = stamp.astimezone(JST)
+        if lane == "normal":
+            if local.minute != 30 or local.hour == 8:
+                return
+        elif lane == "aux":
+            if local.minute != 0:
+                return
+        else:
+            return
+        candidates.append((stamp, local.isoformat(timespec="seconds")))
+
+    if lane == "normal":
+        ledger = _load(repo_root / ".survey/work-queue/run-ledger.json")
+        for entry in ledger.get("entries") or []:
+            if isinstance(entry, dict):
+                add(entry.get("run_key") or entry.get("last_recorded_at"))
+    elif lane == "aux":
+        discovery = _load(repo_root / ".survey/work-queue/discovery-state.json")
+        add(discovery.get("last_run_key"))
+        for entry in discovery.get("history") or []:
+            if isinstance(entry, dict):
+                add(entry.get("run_key"))
+
+    return max(candidates)[1] if candidates else None
+
+
+def _run_breakdown(
+    rows: list[dict[str, Any]],
+    lane: str,
+    latest_hint: str | None = None,
+) -> dict[str, Any]:
     lane_rows = [row for row in rows if row.get("lane") == lane]
     candidates: list[tuple[datetime, str]] = []
     for row in lane_rows:
@@ -222,6 +281,9 @@ def _run_breakdown(rows: list[dict[str, Any]], lane: str) -> dict[str, Any]:
         stamp = _dt(run_key)
         if run_key and stamp:
             candidates.append((stamp, str(run_key)))
+    hint_stamp = _dt(latest_hint)
+    if latest_hint and hint_stamp:
+        candidates.append((hint_stamp, str(latest_hint)))
     latest_run = max(candidates)[1] if candidates else None
     latest_count = sum(1 for row in lane_rows if latest_run and row.get("run_key") == latest_run)
     return {
@@ -241,8 +303,8 @@ def worker_observability(repo_root: Path, now: datetime) -> dict[str, Any]:
     return {
         "valid_claims": len(rows),
         "run_count": len(run_ids),
-        "normal": _run_breakdown(rows, "normal"),
-        "aux": _run_breakdown(rows, "aux"),
+        "normal": _run_breakdown(rows, "normal", _latest_persisted_run_key(repo_root, "normal", now)),
+        "aux": _run_breakdown(rows, "aux", _latest_persisted_run_key(repo_root, "aux", now)),
         "unknown_claims": unknown,
     }
 
@@ -370,7 +432,8 @@ def _replace_worker_section(text: str, metrics: dict[str, Any]) -> str:
         "",
         CLAIM_NOTE_PREFIX
         + "Scheduled Chatプロセスの生存そのものではありません。"
-        "ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。",
+        "最新worker runはrun-ledger/discovery-stateも参照し、active leaseがない実行も表示します。"
+        "claim由来のrun時刻はclaimed_atとの整合性を検証し、最新run由来のleaseと旧run由来の残存leaseを分離します。",
     ]
     body = "\n".join(lines).strip("\n")
     return prefix + START + "\n" + body + "\n" + END + suffix

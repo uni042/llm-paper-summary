@@ -154,18 +154,37 @@ def _slot_from_claim_time(claim: dict[str, Any], lane: str) -> datetime | None:
     return None
 
 
+def _run_key_is_plausible(stamp: datetime, claim: dict[str, Any], lane: str) -> bool:
+    """Reject run timestamps that are impossible relative to durable claim time."""
+    local = stamp.astimezone(JST)
+    if lane == "normal" and local.minute != 30:
+        return False
+    if lane == "aux" and local.minute != 0:
+        return False
+    claimed = _dt(claim.get("claimed_at"))
+    if claimed is not None and stamp.astimezone(timezone.utc) > claimed + timedelta(minutes=5):
+        return False
+    return True
+
+
 def _claim_run_key(claim: dict[str, Any]) -> str | None:
     """Recover the originating Scheduled Chat run from durable claim metadata."""
     worker_id = str(claim.get("worker_id") or "")
+    lane = _worker_lane(worker_id)
+
+    explicit = _dt(claim.get("run_key"))
+    if explicit is not None and _run_key_is_plausible(explicit, claim, lane):
+        return explicit.astimezone(JST).isoformat(timespec="seconds")
+
     match = WORKER_RUN_RE.search(worker_id)
     if match is not None:
         try:
             local = datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M").replace(tzinfo=JST)
         except ValueError:
-            return None
-        return local.isoformat(timespec="seconds")
+            local = None
+        if local is not None and _run_key_is_plausible(local, claim, lane):
+            return local.isoformat(timespec="seconds")
 
-    lane = _worker_lane(worker_id)
     local = _slot_from_claim_time(claim, lane)
     return local.isoformat(timespec="seconds") if local is not None else None
 
@@ -372,7 +391,8 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 最新通常runのResearch完了 | **{latest_completed}** |\n"
         f"| 最古の有効claimの経過時間 | **{age_text}** |\n\n"
         "run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。"
-        "新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。\n\n"
+        "claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。"
+        "不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。\n\n"
         f"Research readyが **{SPECIALIST_RESEARCH_SWITCH}本を超える間は`:00` workerも論文精読側** に回り、"
         f"**{SPECIALIST_RESEARCH_SWITCH}本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、"
         f"readyが **{HIGH_BACKLOG}本以上** で処理可能なResearchがある間はResearch/Auditを優先します。\n\n"
