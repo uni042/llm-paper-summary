@@ -13,9 +13,13 @@ valid checkpoint_ref already persisted on a non-terminal ready job into each unp
 claim request. Request-provided entries win, because they can point at a newer Library
 attempt than the historical claim file.
 
-A checkpoint stops being a barrier once its immutable replay has durably failed and the
-job has deliberately reopened with ``repair_required``. Keeping that stale barrier would
-prevent the repair claim that is supposed to fix the failed structured record.
+A durable checkpoint has two independent meanings: the expensive paper read is already
+complete, while the structured record may still need a repair claim after validation
+failure. ``checkpointed_jobs`` is an allocation barrier for ordinary claims. For a
+``repair_required`` job whose immutable failures are durable, this script moves the
+entry to the internal ``repair_checkpointed_jobs`` provenance list instead of deleting
+it. The allocator can then issue the repair claim, while the post-allocation recovery
+pass can prove that the claim must reuse existing research rather than re-read the paper.
 """
 from __future__ import annotations
 
@@ -120,7 +124,7 @@ def apply(repo_root: Path) -> dict[str, int]:
     results_root = queue / "claim-results"
     barriers = _persisted_barriers(repo_root)
     repairable_jobs = _repairable_jobs(repo_root)
-    scanned = changed = protected = skipped_processed = repair_barriers_cleared = 0
+    scanned = changed = protected = skipped_processed = repair_barriers_demoted = 0
 
     for path in sorted(requests_root.glob("*.json")) if requests_root.is_dir() else []:
         scanned += 1
@@ -132,24 +136,37 @@ def apply(repo_root: Path) -> dict[str, int]:
             continue
 
         raw_entries = _request_entries(request.get("checkpointed_jobs"))
-        entries = [item for item in raw_entries if item["job_id"] not in repairable_jobs]
-        repair_barriers_cleared += len(raw_entries) - len(entries)
+        repair_entries = _request_entries(request.get("repair_checkpointed_jobs"))
+        repair_by_job = {item["job_id"]: item for item in repair_entries}
+        entries = []
+        for item in raw_entries:
+            if item["job_id"] in repairable_jobs:
+                repair_by_job[item["job_id"]] = item
+                repair_barriers_demoted += 1
+            else:
+                entries.append(item)
+
         seen = {item["job_id"] for item in entries}
         for job_id in sorted(barriers):
-            if job_id in repairable_jobs or job_id in seen:
+            if job_id in repairable_jobs:
+                repair_by_job.setdefault(job_id, {"job_id": job_id, "checkpoint_ref": barriers[job_id]})
+                continue
+            if job_id in seen:
                 continue
             entries.append({"job_id": job_id, "checkpoint_ref": barriers[job_id]})
             seen.add(job_id)
             protected += 1
 
-        if len(entries) > MAX_CHECKPOINTED_JOBS:
-            raise RuntimeError(
-                f"checkpoint barrier count {len(entries)} exceeds claim contract limit {MAX_CHECKPOINTED_JOBS}"
-            )
+        if len(entries) > MAX_CHECKPOINTED_JOBS or len(repair_by_job) > MAX_CHECKPOINTED_JOBS:
+            raise RuntimeError("checkpoint barrier count exceeds claim contract limit")
         if entries:
             request["checkpointed_jobs"] = entries
         else:
             request.pop("checkpointed_jobs", None)
+        if repair_by_job:
+            request["repair_checkpointed_jobs"] = [repair_by_job[job_id] for job_id in sorted(repair_by_job)]
+        else:
+            request.pop("repair_checkpointed_jobs", None)
         if _write(path, request):
             changed += 1
 
@@ -159,7 +176,7 @@ def apply(repo_root: Path) -> dict[str, int]:
         "requests_scanned": scanned,
         "requests_changed": changed,
         "barriers_merged": protected,
-        "repair_barriers_cleared": repair_barriers_cleared,
+        "repair_barriers_demoted": repair_barriers_demoted,
         "processed_requests_skipped": skipped_processed,
     }
 
