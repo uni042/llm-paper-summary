@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T06:03:41+00:00",
-  "last_run_key": "2026-09-15T15:00:00+09:00",
-  "last_round": "specialist-scheduling-agent-1",
+  "updated_at": "2026-09-15T07:08:51+00:00",
+  "last_run_key": "2026-09-15T16:00:00+09:00",
+  "last_round": "specialist-adaptive-kv-agent-systems-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3418,6 +3418,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "新着・recent revisionからdisaggregated servingのnetwork/KV transfer、次いで重要serving論文のforward citationとstorage/OS隣接軸を探索する",
       "source_submission": "work-queue/submissions/20260915T1508JST-discovery-specialist-scheduling-agent-1.json"
+    },
+    {
+      "run_key": "2026-09-15T16:00:00+09:00",
+      "round": "specialist-adaptive-kv-agent-systems-1",
+      "axis": "新着KV適応制御・agentic serving characterization",
+      "query_summary": "直前のscheduling/agent軸をそのまま反復せず、2026年9月新着のKV圧縮実行時適応と、agentic workloadのsystems characterizationへ分岐して一次arXiv書誌・abstractを軽量評価した。既存identity/jobをGitHub検索で再確認し、未収録の強い2候補のみ送信する。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は独立経路としてrecent revisionのMoE expert placement/cache/prefetch、または重要serving論文のforward citationを探索する",
+      "source_submission": "work-queue/submissions/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json"
     }
   ],
   "axes": {
@@ -5350,6 +5365,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "新着・recent revisionからdisaggregated servingのnetwork/KV transfer、次いで重要serving論文のforward citationとstorage/OS隣接軸を探索する"
+    },
+    "新着KV適応制御・agentic serving characterization": {
+      "last_run_key": "2026-09-15T16:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は独立経路としてrecent revisionのMoE expert placement/cache/prefetch、または重要serving論文のforward citationを探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

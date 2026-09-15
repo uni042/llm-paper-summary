@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 16:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 16:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -47,7 +47,7 @@
 | :30 最新worker run | **2026-09-14T05:30:00+09:00** |
 | :30 最新run由来の有効claim | **0** |
 | :30 旧run由来の有効claim | **0** |
-| :00 最新worker run | **2026-09-15T15:00:00+09:00** |
+| :00 最新worker run | **2026-09-15T16:00:00+09:00** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
@@ -80,18 +80,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **0** |
 | Repo収録 | **0** |
 | Audit完了 | **0** |
-| 探索評価候補 | **42** |
+| 探索評価候補 | **44** |
 | Research候補採用 | **9** |
 | 重複除外 | **12** |
-| 重複率 | **28.6%** |
-| :00 補助worker Discovery run（毎時枠） | **9** |
-| :00 補助worker Discovery round（stats観測） | **17** |
+| 重複率 | **27.3%** |
+| :00 補助worker Discovery run（毎時枠） | **10** |
+| :00 補助worker Discovery round（stats観測） | **18** |
 | 通常worker run（ledger観測） | **0** |
 | Fallback archive（全helper） | **0** |
 
 ### 24時間の流れ
 
-**探索評価 42 → 重複除外後 30 → Research候補採用 9 → Research完了 0 → Repo収録 0**
+**探索評価 44 → 重複除外後 32 → Research候補採用 9 → Research完了 0 → Repo収録 0**
 
 ## 次に処理する候補
 
@@ -109,16 +109,16 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 直近の:00 補助worker Discovery
 
-Run: **2026-09-15T15:00:00+09:00**
+Run: **2026-09-15T16:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
 | 探索round | **1** |
-| 探索軸 | エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving |
-| 評価候補 | **4** |
+| 探索軸 | 新着KV適応制御・agentic serving characterization |
+| 評価候補 | **2** |
 | 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **1** |
+| Novel候補 | **2** |
+| Research候補採用 | **0** |
 | 重複率 | **0.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
@@ -135,6 +135,7 @@ Run: **2026-09-15T15:00:00+09:00**
 | 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
 | MoE lossless compression/cache-affinity・expert-locality-aware decode routing | 2 | 0 | 1 | 0.0% | 50.0% |
+| 新着KV適応制御・agentic serving characterization | 2 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
 | Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling | 1 | 0 | 1 | 0.0% | 100.0% |
@@ -145,11 +146,11 @@ Run: **2026-09-15T15:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
+- 2026-09-15T16:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 0 / 軸 新着KV適応制御・agentic serving characterization
 - 2026-09-15T15:00:00+09:00 — 1 round: 評価 4 / 重複 0 / 採用 1 / 軸 エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
 - 2026-09-15T14:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache・router adaptation・weight traffic
 - 2026-09-15T12:00:00+09:00 — 2 round: 評価 4 / 重複 3 / 採用 0 / 軸 cold MoE multi-model serving・weight/KV disaggregation / handoff guard before new discovery axis
 - 2026-09-15T10:00:00+09:00 — 1 round: 評価 5 / 重複 0 / 採用 0 / 軸 KV復元・分離serving network scheduling・MoE elastic/offload・KV survey
-- 2026-09-15T09:00:00+09:00 — 1 round: 評価 4 / 重複 3 / 採用 0 / 軸 新着KV圧縮・制約適応runtime policy
 
 ### 最近完了した論文
 
