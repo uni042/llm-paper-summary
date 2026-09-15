@@ -157,7 +157,7 @@ class DirectStatusMetricTests(unittest.TestCase):
             self.assertIn("| 成功result未照合のimmutable submission | **3** |", details)
             self.assertIn("| completed Research/Audit jobで厳格検証未成立 | **1** |", details)
             self.assertIn("| completed Research jobで指定paper実体なし | **1** |", details)
-            self.assertIn("| 対応jobなしsubmission | **1** |", details)
+            self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **1** |", details)
             self.assertIn("| 対応jobなし成功result | **1** |", details)
             self.assertIn("| 対応submissionなし成功result | **1** |", details)
             self.assertIn("| 異常レコード合計（重複排除） | **3** |", details)
