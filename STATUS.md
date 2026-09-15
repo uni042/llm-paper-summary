@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 08:26 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 09:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,7 +15,7 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **44** |
+| 未処理の論文候補（Research ready） | **45** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **351** |
@@ -30,7 +30,7 @@
 
 ### 要注意
 
-- Research消化が:00 補助workerのDiscovery候補補充を上回っています。candidate枯渇に注意。
+- 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -40,9 +40,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **44** |
+| 未処理候補（Research ready） | **45** |
 | 有効claim（lease） | **0** |
-| 今すぐ着手可能（Claimable） | **46** |
+| 今すぐ着手可能（Claimable） | **47** |
 | 有効leaseを持つworker run | **0** |
 | :30 最新worker run | **—** |
 | :30 最新run由来の有効claim | **0** |
@@ -53,8 +53,8 @@
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-15 06:49 JST** |
 | :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
-| 直近24h Research完了（:30 通常worker） | **49** |
-| 直近24h Research完了（:00 補助worker） | **27** |
+| 直近24h Research完了（:30 通常worker） | **0** |
+| 直近24h Research完了（:00 補助worker） | **0** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T06:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
@@ -75,31 +75,31 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **76** |
-| Repo収録 | **79** |
+| Research完了 | **0** |
+| Repo収録 | **0** |
 | Audit完了 | **0** |
-| 探索評価候補 | **23** |
-| Research候補採用 | **7** |
+| 探索評価候補 | **24** |
+| Research候補採用 | **8** |
 | 重複除外 | **6** |
-| 重複率 | **26.1%** |
+| 重複率 | **25.0%** |
 | :00 補助worker Discovery run（毎時枠） | **4** |
-| :00 補助worker Discovery round（stats観測） | **10** |
-| 通常worker run（ledger観測） | **1** |
-| Fallback archive（全helper） | **32** |
+| :00 補助worker Discovery round（stats観測） | **11** |
+| 通常worker run（ledger観測） | **0** |
+| Fallback archive（全helper） | **0** |
 
 ### 24時間の流れ
 
-**探索評価 23 → 重複除外後 17 → Research候補採用 7 → Research完了 76 → Repo収録 79**
+**探索評価 24 → 重複除外後 18 → Research候補採用 8 → Research完了 0 → Repo収録 0**
 
 ## 次に処理する候補
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P94 `arXiv:2607.13095` — Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit
 - P87 `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
-- P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
 
 ## 参考情報
 
@@ -111,13 +111,13 @@ Run: **2026-09-15T08:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **4** |
-| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing |
-| 評価候補 | **9** |
+| 探索round | **5** |
+| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing / Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling |
+| 評価候補 | **10** |
 | 重複除外 | **2** |
-| Novel候補 | **7** |
-| Research候補採用 | **2** |
-| 重複率 | **22.2%** |
+| Novel候補 | **8** |
+| Research候補採用 | **3** |
+| 重複率 | **20.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
@@ -131,12 +131,13 @@ Run: **2026-09-15T08:00:00+09:00**
 | MoE lossless compression/cache-affinity・expert-locality-aware decode routing | 2 | 0 | 1 | 0.0% | 50.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
+| Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling | 1 | 0 | 1 | 0.0% | 100.0% |
 | MoE expert cache所有権・OS page cache・階層メモリ | 1 | 0 | 0 | 0.0% | 0.0% |
 | multi-turn KV restoration・cross-layer sharing・recompute/load pipeline | 1 | 0 | 1 | 0.0% | 100.0% |
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T08:00:00+09:00 — 4 round: 評価 9 / 重複 2 / 採用 2 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing
+- 2026-09-15T08:00:00+09:00 — 5 round: 評価 10 / 重複 2 / 採用 3 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing / Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling
 - 2026-09-15T07:00:00+09:00 — 3 round: 評価 9 / 重複 3 / 採用 4 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム / GPU・ホストメモリ間の複数経路転送と分離サービング通信
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
 - 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
@@ -144,14 +145,7 @@ Run: **2026-09-15T08:00:00+09:00**
 
 ### 最近完了した論文
 
-- `arXiv:2609.12449` — HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms
-- `arXiv:2604.22906` — Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities
-- `arXiv:2605.31464` — GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization
-- `arXiv:2601.17855` — A Universal Load Balancing Principle and Its Application to Large Language Model Serving
-- `arXiv:2504.15364` — KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments
-- `arXiv:2411.07447` — Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies
-- `arXiv:2507.21276` — LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems
-- `arXiv:2606.11916` — Characterizing Software Aging in GPU-Based LLM Serving Systems
+- 直近24hの完了記録なし
 
 ### 7日比較
 
