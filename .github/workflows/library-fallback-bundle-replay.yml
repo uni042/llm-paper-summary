@@ -2,6 +2,7 @@ name: Library fallback bundle replay
 
 on:
   push:
+    branches: [main]
     paths:
       - '.survey/work-queue/library-replay-trigger.txt'
   workflow_dispatch:
