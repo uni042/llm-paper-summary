@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T00:03:19+00:00",
-  "last_run_key": "2026-09-15T09:00:00+09:00",
-  "last_round": "specialist-adaptive-kv-1",
+  "updated_at": "2026-09-15T01:01:26+00:00",
+  "last_run_key": "2026-09-15T10:00:00+09:00",
+  "last_round": "specialist-serving-restoration-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -3339,6 +3339,21 @@
       ],
       "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す",
       "source_submission": "work-queue/submissions/20260915T0903JST-discovery-specialist-adaptive-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-15T10:00:00+09:00",
+      "round": "specialist-serving-restoration-1",
+      "axis": "KV復元・分離serving network scheduling・MoE elastic/offload・KV survey",
+      "query_summary": "直前のadaptive KV軸からずらし、KV cache restorationのcompute/I/O協調、分離servingのmulti-stage network flow、MoE expertのserverless elasticityとfine-grained offload、system-aware KV surveyを探索した。投入直前に最新mainとGitHub repository searchでcanonical arXiv IDの既登録を再確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る",
+      "source_submission": "work-queue/submissions/20260915T1000JST-discovery-specialist-serving-restoration-1.json"
     }
   ],
   "axes": {
@@ -5221,6 +5236,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す"
+    },
+    "KV復元・分離serving network scheduling・MoE elastic/offload・KV survey": {
+      "last_run_key": "2026-09-15T10:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
