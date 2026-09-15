@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/07-speculative-decoding/2026-2605.08151-spectre-remote-drafter-serving.md",
+      "priority": 87,
+      "reason": "multi-model cloudで低利用率のtail model serviceをremote drafterとして再利用し、draft生成とtarget verificationを並列化するSGLang実装。Qwen3-235B-A22Bを含む評価でautoregressive比最大2.28倍、強いSD baseline比でも最大66%相対改善を報告し、resource sharingとspeculative servingの交差として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/07-speculative-decoding/2026-2605.15051-speculative-decoding-serving-latency-model.md",
+      "priority": 78,
+      "reason": "production servingでrequest loadからeffective batch sizeが内生的に決まるためSD speedupが負荷増加で崩れる現象を、Little's Lawとprefill/draft/verifyの負荷依存成分で説明する実測モデル。vLLM上でdrafter/verifier size、batch、acceptance等を広く検証し、SD scheduler/configurationの基礎モデルとして有用。"
+    },
+    {
+      "canonical_id": "arXiv:2511.21669",
+      "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
+      "source_url": "https://arxiv.org/abs/2511.21669",
+      "paper_path": "papers/inference/07-speculative-decoding/2025-2511.21669-dsd-distributed-edge-cloud-speculative-decoding.md",
+      "priority": 76,
+      "reason": "speculative decodingをedge-cloud multi-deviceへ拡張し、network/batching/schedulingを含むDSD-SimとAdaptive Window Controlでspeculation windowを動的調整する。速度改善自体は最大1.1倍と控えめだが、distributed SDの通信・scheduler設計を定量化する比較基準として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-speculative-6",
+    "axis": "distributed/remote-drafter speculative decoding・serving負荷モデル",
+    "query_summary": "remote drafterを使うmulti-tenant speculative serving、production負荷下のSD latency modeling、edge-cloud distributed SDへ探索軸を変更。3候補をGitHub canonical ID検索で未登録確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "network topology-aware KV transfer、RDMA/NVLink/NIXLのflow schedulingとplacementへ移る",
+    "empty_round_reason": null
+  }
+}
