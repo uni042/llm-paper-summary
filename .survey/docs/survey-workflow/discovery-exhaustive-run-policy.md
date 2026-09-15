@@ -2,16 +2,17 @@
 
 この文書は毎時`:00` JSTの **探索主体Scheduled Chat worker** が1回の実行枠をどう使うかを定める。役割分離は `discovery-specialist-worker.md`、candidate水位とoverflow切替は `candidate-buffer-policy.md`、一般的な継続条件は `discovery-continuation-policy.md` を正本とする。
 
-## 次回Scheduled Chat枠への引き継ぎガード
+## 実開始基準のScheduled Chat引き継ぎガード
 
-探索主体workerは、同じScheduled Chatの次回`:00`実行と重ならないことを優先する。overflow research modeへ切り替わった場合も同じルールを使う。
+探索主体workerは、**実際にそのScheduled Chat invocationが開始した時刻をrun開始時刻として1回だけ固定し、run開始時刻 + 3600秒をrun deadlineとする。** overflow research modeへ切り替わった場合も同じrun-local deadlineを使う。プラットフォーム都合で予定`:00`より数分早く、または遅く起動しても、そのずれで今回runの持ち時間を削らない。
 
-- 新しいdiscovery round、新しい探索軸、新しいsubmission作成単位、または新しいResearch/Audit claimを開始する直前に、JSTで同じScheduled Chatの次回`:00`予定枠までの残り時間を確認する。
-- 次回`:00`予定枠まで **600秒以下** なら新しい独立作業を開始しない。現在までの成果・観測値・次探索軸ヒントを耐久保存し、新しいclaimを発行せずrunを終了する。
-- 次回`:00`予定枠まで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など最低限の終了処理だけを行う。
+- 新しいdiscovery round、新しい探索軸、新しいsubmission作成単位、または新しいResearch/Audit claimを開始する直前に、予定`:00`までではなく **run deadlineまでの残り時間** を確認する。
+- run deadlineまで **600秒以下** なら新しい独立作業を開始しない。現在までの成果・観測値・次探索軸ヒントを耐久保存し、新しいclaimを発行せずrunを終了する。
+- run deadlineまで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など最低限の終了処理だけを行う。
+- 予定`:00`が近い、または既に通過していること自体は、run-local deadlineがまだ十分先なら停止理由にしない。
 - この600秒ガードは、固定上限を設けないという通常の継続原則、overflow research modeの処理継続、探索空間を回し続ける規則より優先する。
 - すでに進行中で未保存の作業を捨てるための規則ではない。まず安全な耐久保存地点まで進め、その後は次の独立作業を開始しない。
-- `continuation_gate.py` を使う場合、同じScheduled Chatの次回`:00`予定枠までの秒数を `--seconds-to-next-scheduled-task` に渡す。既定ガードは600秒である。
+- `continuation_gate.py` を使う場合、実開始時に確定したrun deadlineまでの秒数を `--seconds-to-run-deadline` に渡す。既定ガードは600秒である。`--seconds-to-next-scheduled-task` はrun deadlineを確定できない古いcaller向けのcompatibility fallbackに限る。
 
 ## 最重要原則
 
@@ -35,7 +36,7 @@ Discovery modeでは次をループする。
 8. `discovery_stats` にrun_key、round、axis、query summary、candidate数、重複数、next-axis hintを残す。
 9. 最新stateを再取得し、overflow条件を満たせばResearch modeへ、満たさなければ引き継ぎガードを再評価して別探索軸へ進む。
 
-固定round数、固定総candidate数、固定submission数は設けない。ただし同じScheduled Chatの次回`:00`予定枠まで600秒以下になった場合は引き継ぎガードを優先する。
+固定round数、固定総candidate数、固定submission数は設けない。ただしrun deadlineまで600秒以下になった場合は引き継ぎガードを優先する。
 
 ## 耐久実行記録の不変条件
 
@@ -68,7 +69,7 @@ Overflow research modeでは新規discoveryを一時停止し、次を繰り返�
 
 ## GitHub Actions待ちのパイプライン
 
-Discovery submission後、新しいdiscovery jobがActionsでmaterializeされるまで短い待ちが発生し得る。この待ちをrun終了理由にしない。別探索軸の検索・軽量評価を先行してよいが、次submission直前には最新HEAD / identity / queueを再取得して再dedupeする。ただし同じScheduled Chatの次回`:00`予定枠まで600秒以下なら別探索軸を新しく開始せず、引き継ぎガードに従って終了する。
+Discovery submission後、新しいdiscovery jobがActionsでmaterializeされるまで短い待ちが発生し得る。この待ちをrun終了理由にしない。別探索軸の検索・軽量評価を先行してよいが、次submission直前には最新HEAD / identity / queueを再取得して再dedupeする。ただしrun deadlineまで600秒以下なら別探索軸を新しく開始せず、引き継ぎガードに従って終了する。
 
 一方、overflow条件を満たした場合は次のdiscovery job materializationを待たずResearch modeへ切り替える。ただし新しいResearch/Audit claimの直前にも引き継ぎガードを評価する。
 
@@ -101,7 +102,7 @@ candidate在庫が50を超えた場合は「探索空間を使い切った」と
 
 runを終了してよいのは次だけである。
 
-1. 同じ探索Scheduled Chatの次回`:00`予定枠まで600秒以下となり、引き継ぎガードが成立した。
+1. 今回runの実開始時刻 + 3600秒で定義したrun deadlineまで600秒以下となり、引き継ぎガードが成立した。
 2. 最新の正本・identity・queueを十分読めず、安全な重複判定やclaimができない。
 3. GitHub directと承認済みLibrary fallbackの両方で必要な状態・成果を耐久保存できない。
 4. hard platform/runtime/tool limitに達し、追加の有用作業を実行できない。
@@ -109,6 +110,7 @@ runを終了してよいのは次だけである。
 
 以下は単独ではstop条件ではない。
 
+- 予定`:00`までの残りが少ないが、実開始基準のrun deadlineには十分な時間が残っている
 - 1軸で0件
 - 全候補が重複
 - 低採用率

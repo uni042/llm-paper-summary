@@ -6,6 +6,10 @@ worker, whether the next action must be another discovery round. Transport
 backlogs, claim-result propagation delay, and job-local failures are not stop
 conditions when repository state remains readable and no explicit hard condition
 holds.
+
+Hourly Scheduled Chat workers use a one-hour run window measured from the actual
+invocation start. The nominal :00/:30 schedule boundary is retained only as a
+compatibility fallback when a caller cannot provide the actual-start deadline.
 """
 from __future__ import annotations
 
@@ -38,9 +42,33 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         reasons.append("platform_limit_reached")
 
     seconds_to_next = getattr(args, "seconds_to_next_scheduled_task", None)
+    seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
     handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
-    if seconds_to_next is not None and int(seconds_to_next) <= handoff_guard:
-        reasons.append("next_scheduled_task_within_handoff_guard")
+
+    # Preferred semantics for hourly Scheduled Chat workers: the run receives a
+    # fresh one-hour budget at the actual invocation start, even when the
+    # platform starts it a few minutes before or after the nominal schedule.
+    # The schedule-boundary value remains a compatibility fallback for older
+    # callers that have not yet captured an invocation-local deadline.
+    if seconds_to_deadline is not None:
+        effective_seconds_to_handoff = int(seconds_to_deadline)
+        handoff_time_source = "run_deadline"
+        handoff_reason = "run_deadline_within_handoff_guard"
+    elif seconds_to_next is not None:
+        effective_seconds_to_handoff = int(seconds_to_next)
+        handoff_time_source = "next_scheduled_task"
+        handoff_reason = "next_scheduled_task_within_handoff_guard"
+    else:
+        effective_seconds_to_handoff = None
+        handoff_time_source = "unknown"
+        handoff_reason = None
+
+    if (
+        effective_seconds_to_handoff is not None
+        and effective_seconds_to_handoff <= handoff_guard
+        and handoff_reason is not None
+    ):
+        reasons.append(handoff_reason)
 
     if not args.github_read:
         reasons.append("github_read_unavailable_for_repo_state")
@@ -135,17 +163,22 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
+        "seconds_to_run_deadline": seconds_to_deadline,
         "seconds_to_next_scheduled_task": seconds_to_next,
+        "effective_seconds_to_handoff": effective_seconds_to_handoff,
+        "handoff_time_source": handoff_time_source,
         "scheduled_handoff_guard_seconds": handoff_guard,
         "scheduled_handoff_active": bool(
-            seconds_to_next is not None and int(seconds_to_next) <= handoff_guard
+            effective_seconds_to_handoff is not None
+            and effective_seconds_to_handoff <= handoff_guard
         ),
         "rule": (
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
-            "or discovery submission is never by itself a whole-run stop condition. Discovery "
-            "specialist runs must satisfy their minimum progression floor before exhaustion can "
-            "be a voluntary stop reason; hard handoff/platform/durability/read failures override "
-            "that floor."
+            "or discovery submission is never by itself a whole-run stop condition. Hourly "
+            "Scheduled Chat workers prefer an actual-invocation-start + 3600 second run deadline "
+            "over the nominal schedule boundary. Discovery specialist runs must satisfy their "
+            "minimum progression floor before exhaustion can be a voluntary stop reason; hard "
+            "handoff/platform/durability/read failures override that floor."
         ),
     }
 
@@ -167,6 +200,7 @@ def main() -> int:
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
+    ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
     ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
     ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
     ap.add_argument("--worker-kind", choices=("normal", "discovery"), default="normal")
