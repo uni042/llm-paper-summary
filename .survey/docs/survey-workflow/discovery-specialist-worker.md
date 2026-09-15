@@ -11,6 +11,26 @@
 
 通常探索モードではresearch、audit、5-slot structured research record作成、論文Markdown生成を行わない。候補発見後に全文精読へ進まず、candidate poolへ安全に投入して次の探索軸へ進む。overflow research modeではこの制約を解除し、`always-on-worker.md` / `claim-serial-policy.md` / `candidate-buffer-policy.md` に従ってpriority上位のresearch / auditを処理する。
 
+## 同一run内の継続不変条件
+
+**1 discovery round / 1 discovery submission の完了はScheduled Chat runの完了ではない。** roundごとの耐久保存は中間checkpointとして扱い、その直後に最新HEAD、queue、`discovery-state.json`、candidate inventoryを再取得して、同じrun内の次の行動を必ず決める。
+
+Discovery modeのままで、次回同一`:00` Scheduled Chat枠まで600秒より多く残り、正本読取と耐久保存が可能で、`next_axis_hint` または他の独立した有望探索軸が残る場合は、**同じrun内で直ちに次の異なるdiscovery roundへ進む**。`next_axis_hint` を書いたこと自体は終了理由ではなく、原則として同一runで次に試す候補軸を示す。
+
+次は単独ではrun停止条件にしない。
+
+- 1 round / 1 submissionを完了した。
+- candidateを5本送信した。
+- acceptedが0件だった。
+- 全候補が重複だった、または採用率が低かった。
+- Actionsが次jobをmaterializeするのを待っている。
+- 1 discovery jobがcompletedになった。
+- 1 Research/Auditを完了した。
+
+runを終了する直前には必ず **終了監査** を行い、`discovery-exhaustive-run-policy.md` のRun-level stop conditionsのいずれかに明確に一致することを確認する。一致しない場合は終了禁止で、次のdiscovery roundまたはoverflow research modeへ進む。特に、次回`:00`まで600秒より多く残り、未試行の有望な`next_axis_hint`があるのにDiscoveryを1 roundだけで終了してはならない。
+
+探索空間枯渇を終了理由にできるのは、`discovery-exhaustive-run-policy.md` の独立探索経路の一巡条件を満たした場合だけとする。1 round終了直後や、未試行の有望軸が明示されている状態を「枯渇」とみなしてはならない。
+
 ## 実行時刻
 
 探索主体workerは毎時 `:00` JSTに実行する。既存の論文workerは従来どおり毎時 `:30` JSTで動作する。平常時は30分ずらすことでdiscoveryとpaper workerのqueue/state write競合を減らす。overflow research modeでは`:00` workerが長く動けば`:30` workerと自然に重なり、異なるworker IDで別jobをclaimして並列readerとして動く。
