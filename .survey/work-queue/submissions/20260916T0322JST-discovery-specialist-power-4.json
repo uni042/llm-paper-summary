@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-power-control.md",
+      "priority": 88,
+      "reason": "prefill/decode分離環境で一律Max-Q設定がphaseごとの異なるhardware regimeを無視する問題を扱い、model/quantization/engine/hardwareごとのcalibrationとlane別power settingを提案する新着研究。B200実測を含み、disaggregated servingのresource controlに電力制約を組み込む比較対象として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.30391",
+      "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2606.30391",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-festina-energy-aware-serverless-llm-serving.md",
+      "priority": 84,
+      "reason": "Festinaはserverless multi-model servingでrequest placement、SM partitioning、GPU operating point、workload consolidationをTTFT/TBT SLO下で共同制御する。4つのSOTA serving system等との比較でenergy最大56%削減を報告し、multi-model schedulerとpower-aware controlの接点として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.12449",
+      "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+      "source_url": "https://arxiv.org/abs/2609.12449",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12449-heatcache-thermal-aware-llm-scheduling.md",
+      "priority": 76,
+      "reason": "液冷AIO loopを一時的heat bufferとしてモデル化し、thermal safetyとSLO制約下でrequest schedulingを行うvLLM実装。compute energy最大18%削減、thermal-throttle exposure 81.7%削減を報告しており、電力だけでなく熱制約まで含むresource-aware servingの新しい隣接軸。"
+    },
+    {
+      "canonical_id": "arXiv:2605.21427",
+      "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2605.21427",
+      "paper_path": "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
+      "priority": 82,
+      "reason": "MoE servingでGPU power capをbatch size等のsoftware parameterと共同最適化するruntime。power-performance modelとfeedback controllerを組み合わせ、energy efficiency最大26.3%改善とQoS violation低減を報告しており、MoE expert実行と電力制御の交差領域として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-power-4",
+    "axis": "power/energy/thermal-aware LLM serving",
+    "query_summary": "分離servingのphase別power control、serverless shared-GPU energy scheduling、液冷thermal-aware scheduling、MoE power-aware runtimeを独立軸として探索し、BiScaleは既存履歴で重複と確認した。4候補はGitHub canonical ID検索で未登録を再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2602.18755"],
+    "next_axis_hint": "agentic workload向けprefix/KV再利用、tool-use sandbox memory、cross-instance context sharingへ移る",
+    "empty_round_reason": null
+  }
+}
