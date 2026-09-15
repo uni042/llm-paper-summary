@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T16:13:38.917303+00:00",
+  "updated_at": "2026-09-15T17:24:02.896757+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T16:13:38.917303+00:00",
+      "last_recorded_at": "2026-09-15T17:24:02.896757+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 36,
         "new_papers": 88,
-        "fallback_archived": 71
+        "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34885858147:1",
-          "recorded_at": "2026-09-14T19:16:27.339793+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34885858147",
-            "run_attempt": "1",
-            "source_sha": "f023efdbfb36bb5ee7f4856cd1843990fa89d3da"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34886596397:1",
           "recorded_at": "2026-09-14T19:27:26.008581+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "34993287316",
             "run_attempt": "1",
             "source_sha": "ba4c38f492b8606bbda3588cb779328a6d30b4e6"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
+        },
+        {
+          "event_id": "35000743303:1",
+          "recorded_at": "2026-09-15T17:24:02.896757+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey helper worker",
+            "run_id": "35000743303",
+            "run_attempt": "1",
+            "source_sha": "8d17f2c9c066753f5a1c50cfcb51cdd4717b5227"
           },
           "signals": [
             "fallback_archived"
@@ -20963,7 +20963,8 @@
         ".survey/work-queue/fallback-archive/claimed-sc-20260913T1130-mixserve-run7c.json",
         ".survey/work-queue/fallback-archive/claimed-sc-20260913T1130-pcr-run7b.json",
         ".survey/work-queue/fallback-archive/claimed-sc-20260913T1130-vortex-repair1.json",
-        ".survey/work-queue/fallback-archive/claimed-run1630-loquetier.json"
+        ".survey/work-queue/fallback-archive/claimed-run1630-loquetier.json",
+        ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 548,
