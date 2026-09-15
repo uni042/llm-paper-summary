@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.03992",
+      "title": "A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems",
+      "source_url": "https://arxiv.org/abs/2601.03992",
+      "paper_path": "papers/inference/05-moe-inference-systems/2026-2601.03992-scheduling-framework-moe-edge-gpu-ndp.md",
+      "priority": 82,
+      "reason": "エッジGPU-NDP環境でMoE expertを複数NDPとGPUへ割り当て、tensor parallelism、負荷分散スケジューリング、dataset-free prefetchを統合する実行系。既存方式比で平均2.41倍・最大2.56倍のend-to-end latency speedupを報告し、expert cache中心とは異なるnear-data processing協調の系統として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-moe-ndp-2",
+    "axis": "MoE・GPU-NDP協調・expert scheduling",
+    "query_summary": "KV圧縮軸から切り替え、MoEのedge GPU/NDP協調、expert負荷分散、prefetchを探索した。arXiv:2601.03992はrepo内ID検索で既存表現を確認できず、実測を伴うシステム研究として候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CPU AMXとGPUの協調MoE実行、expert coalescing・attention offloadへ軸を移す",
+    "empty_round_reason": null
+  }
+}
