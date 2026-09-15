@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:46:28 JST**
+> 自動生成: **2026-09-15 23:06:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **5** | **2** | **3** | **1** | **0** | — |
+| Research | **3** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **9** | **12** | **3** | **9** | **1** | **0** | **7** |
+| Discovery | **3** | **7** | **1** | **6** | **0** | **0** | **7** |
+| 合計 | **6** | **12** | **3** | **9** | **0** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -39,11 +39,6 @@
   - result: `.survey/work-queue/results/research/attempt-8857271141ba7926ae6b21f2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8857271141ba7926ae6b21f2.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.08461-fastcache-multimodal-kv-compression-serving.md`
-- **09-15 16:06:40 JST** [research] `arXiv:2603.20661` — WWW.Serve: Interconnecting Global LLM Services through Decentralization
-  - job: `.survey/work-queue/jobs/job-research-22ee1955e766f2b1.json`
-  - result: `.survey/work-queue/results/research/attempt-c49070062ccb7f1cec99a5aa.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c49070062ccb7f1cec99a5aa.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md`
 
 ### Audit
 
@@ -63,14 +58,6 @@
   - result: `.survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T1808JST-discovery-specialist-moe-cache-router-1.json`
   - 探索軸: 2026年9月新着・MoE expert cache・cache-aware routing
-- **09-15 16:08:51 JST** job `job-e03097d2e4181243` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260915T1609JST-discovery-specialist-adaptive-kv-agent-systems-1.json`
-  - 探索軸: 新着KV適応制御・agentic serving characterization
-- **09-15 15:03:41 JST** job `job-57c04f370a9f4d4d` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260915T1508JST-discovery-specialist-scheduling-agent-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260915T1508JST-discovery-specialist-scheduling-agent-1.json`
-  - 探索軸: エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
 
 ### 直近タスク
 
@@ -136,10 +123,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-paper-20260915T1930JST`
-  - claim: **09-15 19:31:56 JST** / heartbeat: **—** / lease expiry: **09-15 21:01:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
