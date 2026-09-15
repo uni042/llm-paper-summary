@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.23389",
+      "title": "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2605.23389",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+      "priority": 84,
+      "reason": "decode iteration内でKV長の異なるrequestが同一batchに混在することによるbubbleを対象に、KV長が近いrequestをまとめるprefix-aware batchingとCPU側in-flight pool、GPU間KV prefetchを組み合わせる。decode throughput最大1.98倍、latency最大7.4倍改善を報告し、continuous batchingの粒度を掘るserving systemとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2606.28565",
+      "title": "KernelSight-LM: A Kernel-Level LLM Inference Simulator",
+      "source_url": "https://arxiv.org/abs/2606.28565",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md",
+      "priority": 80,
+      "reason": "serving policyとGPU kernel実行をtoken/step単位で結び、roofline+learned efficiency、通信、host overheadを離散event schedulerで合成する推論simulator。未計測GPU世代でもkernel latency予測とTTFT/TPOT/throughput推定を行え、hardware/software co-designやcapacity planningの基盤として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-runtime-batching-9",
+    "axis": "continuous batching・iteration bubble・kernel-level runtime modeling",
+    "query_summary": "speculative servingからruntime/batchingへ軸を変更し、prefix-aware batchingとkernel-level simulatorを評価。diffusion LLM専用BlockServeは今回の通常autoregressive inference中心スコープでは優先度を下げ、2件を送信する。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "hardware-aware weight compression/kernel fusion、またはheterogeneous GPU servingとcapacity planningへ展開する",
+    "empty_round_reason": null
+  }
+}
