@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-72baa27379be8494d8497773",
-  "job_id": "job-research-3df42686de08919b",
-  "data": {
-    "problem": "Hybrid SWAは大半の層を局所窓だけに限定するため、理論上はFull Attentionより注意計算とKVキャッシュを約7分の1へ減らせる。しかし従来のHiCache/SGLang初期実装のように互換性のためSWA層でも全系列KVを保持すると、GPU・host・L3の各階層でO(N)容量と転送が残り、モデル構造の利点が消える。さらにFull Attentionでは同一token prefixならKVを再利用できるが、SWAではprefix treeの論理nodeが残っていても窓外KVが物理poolから既に追い出され得る。この不一致を無視すると無効slotをhitとして読みモデル正当性まで損なう。加えて非同期L1/L2/L3転送の状態ずれ、長さの異なるrequestのDP同期、MoE通信、decode KV容量、画像・動画前処理が別々の律速となるため、単一cache最適化や単純なSWA kernelだけでは本番全体を効率化できない。",
-    "novelty": "Full AttentionとSWAの異なるKV寿命を物理的に別poolへ分離し、上位層にはFull索引を正本とした単一sequence viewを見せながらSWA slot mappingを保持する。これをL1/L2/L3へ拡張し、window-safe prefix matching、層単位先読み、tier間整合性修復を組み合わせる。さらにmemory/NVMe/remoteを統合するGCache、KV親和性と負荷を同時に見るstateless router、EP縮小と長さbucket、decode memory/MTP、multimodal encoder最適化を同一production pipelineへ統合する。",
-    "method_overview": "要求到着時、LLM-Routerは各prefill workerのprefix一致率と負荷を比較して配置する。選ばれたworkerではSWA対応prefix treeがFull KVの論理prefixとSWA末尾W tokenの物理slot生存を同時に確認し、安全な再利用長を決める。必要なKVはGPU L1、host L2、GCache L3から取得するが、SWAは有効windowだけを転送し、各layerの計算と次layerのH2D先読みを重ねる。GCacheはGPU node上のmemory/NVMeとremote backendをconsistent hashingで束ね、RDMA/GDRで供給する。prefillではSWA容量削減でEPを半減し、0–64K/64K–256K/256K–1Mに長さを分けて長短requestの同期干渉を抑える。decodeへ移るとSWA KV、CPU側事前確保、CUDA Graph調整で同時実行容量を増やし、prefill段階からMTP layer KVを作って初期decodeの受理率を高める。画像・動画は分離encoderでbatch化・GPU前処理・並列復号し、embedding cacheをconsistent hashingと共有memoryで再利用する。",
-    "components": [
-      {
-        "name": "Full/SWA二重KVプール",
-        "description": "Full Attention層は全prefixを必要とするためO(N)のFull poolへ、SWA層は末尾windowだけでよいためO(W)のSWA poolへ分離する。schedulerは両方の空き容量を同時に確認してadmissionし、tier間転送でもSWA maskを適用して有効slotだけを動かす。上位のsequence管理は一つに保ちながら物理配置だけを分離するため、既存schedulerとの互換性を保ちつつSWA層で全token分を確保する無駄を除ける。論文ではこの設計により約7倍のKV容量効率を得ており、単なるkernel高速化ではなくGPU・CPU・L3の保存量と転送量をモデルの局所窓意味論へ一致させる基盤になっている。"
-      },
-      {
-        "name": "SWA対応prefix treeと層単位先読み",
-        "description": "token列が一致するだけではcache hitにせず、末尾W tokenに対応するSWA slotが物理poolでまだ生存している範囲へmatch lengthを切り詰める。各tree nodeはFull segmentとSWA mappingの二重索引を持つため、論理prefixを維持したまま窓外SWAだけを独立にevictでき、既に追い出されたKVを誤って再利用するpseudo-hitを防ぐ。さらにSWAでは各層で必要な転送量が小さいことを利用し、現在layerの計算中に次layerのhost-to-device loadを非同期に先読みする。正当性を守るwindow-safe matchingと転送待ち隠蔽を同じ索引・slot管理上で行う点が重要である。"
-      },
-      {
-        "name": "GCache",
-        "description": "consistent hashingでkeyの保存先を決め、masterはheartbeat/service discoveryだけを担いI/O pathから外す。server memoryとNVMeのhot/cold昇降格、remote object storage、shared-memory persistence、request slicing、非同期callbackを備える。GPU NIC、NUMA、same-rail affinityを使うRDMA/GDRによりL3 KVを高帯域で供給し、GPU node内蔵SSDとのco-locationで専用storage machineを避ける。"
-      },
-      {
-        "name": "KV親和ルータ",
-        "description": "Redisに共有状態を置くstateless LLM-Routerが、各prefill nodeに既に存在するprefix割合を正のscoreとして加え、normalized loadを減点してworkerを選ぶ。単純なleast-loaded routingではcache済みKVを捨てて遠隔L3取得や再計算を増やし、逆にcache localityだけを最大化するとhot nodeへ要求が集中するため、両者を同一scoreで調停する。waiting queueでは未cache tokenが少ないrequestを先に流してTTFTを短縮しつつ、長時間待つrequestにはwait-time penaltyを加えて飢餓を防ぐ。本番評価ではL2 hit rate約25%とnode input throughput約30%の改善につながり、保存階層の最適化を実際の要求配置へ反映する制御面を構成する。"
-      },
-      {
-        "name": "プリフィル・デコード最適化",
-        "description": "SWA KV削減でmemory余裕が増えた結果、prefillのexpert parallelismを従来の半分へ縮め、machine間通信とDP数を減らす。長さbucketは長prefix requestが短requestをDP synchronizationやchunked prefillで待たせる問題を緩和する。decodeではSWA KV、CPU preallocation、CUDA Graph memory tuningでKV容量を増やし、prefill時MTP対応により生成開始直後からmulti-token predictionを有効化する。"
-      },
-      {
-        "name": "マルチモーダル最適化",
-        "description": "encoderをTP=1のdata parallelで配置し、複数requestの画像・音声を同一forwardへまとめる。画像resize/normalize/patchifyをGPUへ移し、downloadとforwardをmessage queueで重畳、長動画はframe indexを分割して並列decodeする。同一content keyを同じencoderへ送るconsistent hashingとnode内shared-memory embedding cacheで再計算を減らす。"
-      },
-      {
-        "name": "階層cache整合性修復",
-        "description": "L1/L2/L3でFull hitとSWA slot生存状態がずれた場合、device側にだけ残る有効SWAをhostへ非同期補充し、階層間の再利用可能範囲を再び一致させる。またL1/L2で頻繁に参照されるprefixでもL3側のLRU時刻が更新されないと、下位tierだけがhot entryを早期evictして将来のmissを増やすため、上位tier access時にL3 metadataもtouchする。中短sequenceでは固定位置に比較的密なSWA KVを残し、shared system promptなどの再利用を優先する。容量削減だけでなく、非同期tier間移動で生じる状態ずれ、TTL、実効hit lengthまで継続的に修復する補助機構である。"
-      }
-    ],
-    "system_design": "routing→SWA-safe prefix照合→L1/L2/GCacheからlayerwise KV取得→prefill→PD transfer→decodeというLLM経路と、download/decode→encoder→embedding cache→prefillというmultimodal経路を統合する。各段階でSWAのO(W)物理寿命を維持し、cache localityをroutingへ返すことで、model architecture・storage hierarchy・schedulerを閉ループで協調させる。"
-  },
+  "attempt_id": "attempt-e9b78b3aa26480cd8c0307f1",
+  "job_id": "job-research-229f0f103fc45c25",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-72baa27379be8494d8497773",
+    "claim_id": "claim-e9b78b3aa26480cd8c0307f1",
     "worker_id": "scheduled-chat-paper-20260915T1230JST",
     "worker_kind": "scheduled_chat"
   }
