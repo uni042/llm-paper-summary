@@ -2,85 +2,106 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-384005d4349fb390e83aeabb",
-  "job_id": "job-research-229f0f103fc45c25",
+  "attempt_id": "attempt-257f6eb558ebdd1e9a226b04",
+  "job_id": "job-research-d09e1c8e52097070",
   "data": {
-    "canonical_id": "arXiv:2601.21198",
-    "arxiv_id": "2601.21198",
-    "doi": "10.48550/arXiv.2601.21198",
+    "canonical_id": "arXiv:2505.14468",
+    "arxiv_id": "2505.14468",
+    "doi": "10.48550/arXiv.2505.14468",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
     },
-    "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling",
-    "summary": "共有メモリ型SoCではCPU用DRAMをGPU外の別階層として使えず、MoEエキスパートをNVMeから読む入出力が支配的になる。ZipMoEはBF16の低エントロピーな指数部だけを無損失圧縮し、符号・仮数部と分離して保存する。実行時は完全テンソル、圧縮済み両成分、符号・仮数のみ、指数のみの4種キャッシュを使い分け、SSD読出しとCPU並列展開を有向非巡回グラフとして重畳する。人気順位の確率モデルから各キャッシュ容量を計画し、キャッシュ親和性スケジューラが入出力律速タスクと計算側タスクを組み合わせる。Jetson AGX Orin 32/64GB、Samsung 970 EVO、DeepSeekV2-Lite/Qwen1.5-MoE/SwitchTransformersで、既存オフロード系よりトークン間遅延・初回トークン遅延・スループット・端から端遅延を大幅改善し、モデルのBF16値を変更しない。",
-    "list_summary": "BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEを入出力律速から計算中心へ移す。",
+    "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+    "summary": "ServerlessLoRAは、低ランク適応（Low-Rank Adaptation; LoRA）ごとに独立したサーバレス関数を用意すると、99%以上を共有する基盤モデル重みまで関数ごとに複製され、GPUメモリと起動費用が浪費される問題を扱う。基盤重みを読み取り専用データとして1回だけGPUへ置き、CUDAのプロセス間通信（Inter-Process Communication; IPC）ハンドルで独立プロセスへゼロコピー共有する一方、各関数は独自のCUDA文脈、LoRA、KVキャッシュ、活性値を保持して隔離性を残す。さらに、到着率と読み込み遅延から将来価値を見積もる事前読み込み、SLOから逆算した充足または期限切れ型の適応バッチ、GPU逼迫時の動的退避を組み合わせる。Llama2-7B/13B、L40S、Azure Functions由来14日トレースを用いた評価では、ServerlessLLM比でTTFTを最大4.7倍、InstaInfer比で最大7.1倍短縮し、費用効率をそれぞれ最大19.3倍、12.7倍に改善する。抽象ではTTFT最大86%、金銭費用最大89%削減を報告する。",
+    "list_summary": "LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。",
     "authors": [
-      "Yuchen Yang",
-      "Yaru Zhao",
-      "Pu Yang",
-      "Shaowei Wang",
-      "Zhi-Hua Zhou"
+      "Yifan Sui",
+      "Hao Wang",
+      "Hanfei Yu",
+      "Yitao Hu",
+      "Jianxun Li",
+      "Hao Wang"
     ],
-    "authors_affiliations": "Nanjing University / LAMDA（論文著者所属）",
-    "published": "2026-05-22",
-    "publication": "arXiv:2601.21198v2",
-    "publication_type": "Preprint",
-    "publication_status": "プレプリント（arXiv v2、2026-05-22）",
-    "lineage": "端末MoE推論、エキスパートオフロード、無損失圧縮、階層キャッシュ、異種資源スケジューリング",
+    "authors_affiliations": "Shanghai Jiao Tong University、Stevens Institute of Technology、Tianjin University。本文の著者欄では同姓同名のHao Wangが別所属・別連絡先として2名記載される。",
+    "published": "2025-05-20",
+    "publication": "arXiv:2505.14468v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1 (2025-05-20)。査読済み会議・雑誌への採録は一次資料から確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "MoE",
-      "端末推論",
-      "NVMe",
-      "無損失圧縮",
-      "エキスパートキャッシュ",
-      "UMA",
-      "Jetson"
+      "サーバレスLLM推論",
+      "LoRAサービング",
+      "コールドスタート",
+      "基盤重み共有",
+      "CUDA IPC",
+      "事前読み込み",
+      "適応バッチ",
+      "動的退避"
     ],
-    "importance": "量子化でモデル挙動を変えず、端末SoC特有の共有メモリと余剰CPUコアを利用してNVMe入出力を圧縮と並列展開へ置き換える。圧縮状態ごとのキャッシュ容量計画とスケジューリングを共同設計する点が特徴。",
-    "hardware_evaluation": "Jetson AGX Orin 64GB/32GB、JetPack 6.2.1、Ubuntu 22.04、Samsung 970 EVO SSD（3.5 GB/s）。",
-    "hardware_details": "共有メモリ型Jetson上でCPU/GPU共有物理メモリを利用。SSD読出しと3本以上のCPU展開スレッドを重畳し、GPUはゼロコピーとメモリ結合アクセスを使う復元カーネルを使用。",
-    "quality_effect": "量子化・枝刈りを使わずBF16パラメータをビット単位で可逆分解・圧縮・復元するため、アルゴリズム上のモデル挙動を保持する。",
+    "importance": "高。サーバレスのプロセス隔離を保ったまま巨大な基盤モデル重みだけをデータ層で共有し、モデル配置・起動・バッチング・退避を一つの制御面へ接続する。多LoRAサービングとサーバレス弾力性を直接結ぶシステム設計として比較価値が高い。",
+    "hardware_evaluation": "実機。単一AWS EC2 g6e.48xlarge（384 CPUコア、1536GBメモリ、8×NVIDIA L40S）と、4台のg6e.24xlargeからなる計16×L40Sクラスタ。",
+    "hardware_details": "Llama2-7B/13Bと各モデル4種類のLoRAアダプタをPyTorch/Transformersで実行する。単一ノードと4ノード構成を使い、Azure Functionsの14日生産トレースから予測可能・通常・バースト型の到着系列を抽出して関数へ割り当てる。",
+    "quality_effect": "基盤モデルとLoRAの数値計算を近似せず、未結合LoRA推論として基盤経路とアダプタ経路を別計算して合成するため、モデル品質そのものを変更する方式ではない。交換条件は主に待機時間、バッチサイズ、TPOT、メモリ占有であり、適応バッチによりTPOTは比較対象より約12%増える条件がある。",
     "storage_targets": [
-      "共有DRAM",
-      "NVMe SSD"
+      "GPU上の共有基盤モデル重み",
+      "関数固有LoRAアダプタ",
+      "CUDA/JITカーネル",
+      "コンテナ内ライブラリ",
+      "KVキャッシュと活性値",
+      "ホストメモリへ退避するモデル・カーネル成果物"
     ],
     "bottlenecks": [
-      "NVMeエキスパート入出力",
-      "バッチ1でのパイプライン不足",
-      "CPU/GPU共有メモリ制約",
-      "エキスパートキャッシュ容量"
+      "関数ごとの基盤モデル重複保持",
+      "ライブラリ・LoRA・CUDA文脈・JITカーネルを含むコールドスタート",
+      "多LoRA同時実行時のGPUメモリ競合",
+      "固定バッチによるSLO未活用",
+      "バースト到着時の事前読み込み陳腐化"
     ],
     "evidence_locations": [
-      "§2.1-2.3",
-      "§3.1-3.4",
+      "§1",
+      "§2",
+      "§3.1–3.4",
       "§4",
       "§5",
-      "Table 1-2",
-      "Figures 7-11"
+      "Figures 1–15",
+      "Table 1"
     ],
-    "references": [],
-    "references_total": 0,
-    "references_checked_at": "2026-09-15",
-    "references_source": "primary-reference-section",
-    "source": "https://arxiv.org/abs/2601.21198",
+    "source": "https://arxiv.org/abs/2505.14468",
     "sources": [
-      "https://arxiv.org/abs/2601.21198",
-      "https://arxiv.org/pdf/2601.21198",
-      "https://github.com/npnothard/ZipMoE-ICML26"
+      "https://arxiv.org/abs/2505.14468",
+      "https://arxiv.org/html/2505.14468v1"
     ],
-    "code": "https://github.com/npnothard/ZipMoE-ICML26",
-    "implementation": "Hugging Face Transformers上の試作実装。Python約2.6K行、C++/CUDA約8K行。LZ4/LZ4HC/ZSTD対応。",
-    "implementation_status": "コード公開済み。",
-    "evaluation_type": "実機測定",
-    "last_checked": "2026-09-15",
-    "last_audited": null,
-    "audit_version": 0
-  },
-  "reservation": {
-    "claim_id": "claim-384005d4349fb390e83aeabb",
-    "worker_id": "scheduled-chat-paper-20260915T1230JST",
-    "worker_kind": "scheduled_chat"
+    "code": null,
+    "implementation": "PyTorch/Transformersを基盤とする試作実装として約5,500行のPythonと約600行のCUDAを追加し、基盤重み共有用のCUDA IPCプラグイン、制御器、事前読み込みエージェント、動的退避、REST通信を実装したと本文で説明する。arXiv一次資料から著者公式コード公開URLは確認できない。",
+    "last_checked": "2026-09-13",
+    "references": [
+      {
+        "canonical_id": "arXiv:2308.16369",
+        "arxiv_id": "2308.16369"
+      },
+      {
+        "canonical_id": "arXiv:2310.18547",
+        "arxiv_id": "2310.18547"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168"
+      },
+      {
+        "canonical_id": "arXiv:2307.09288",
+        "arxiv_id": "2307.09288"
+      }
+    ],
+    "references_checked_at": "2026-09-13",
+    "references_source": "arXiv v1 HTML版参考文献節から、識別子を安全に確認できた関連文献のみ構造化",
+    "references_total": null
   }
 }

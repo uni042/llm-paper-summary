@@ -2,62 +2,69 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-384005d4349fb390e83aeabb",
-  "job_id": "job-research-229f0f103fc45c25",
+  "attempt_id": "attempt-257f6eb558ebdd1e9a226b04",
+  "job_id": "job-research-d09e1c8e52097070",
   "data": {
     "hardware": [
-      "Jetson AGX Orin 64GB",
-      "Jetson AGX Orin 32GB",
-      "Samsung 970 EVO SSD 3.5 GB/s"
+      "AWS EC2 g6e.48xlarge: 384 CPUコア、1536GB RAM、8×NVIDIA L40S",
+      "4×AWS EC2 g6e.24xlarge: 合計768 CPUコア、3072GB RAM、16×NVIDIA L40S"
     ],
     "software": [
-      "JetPack 6.2.1",
-      "Ubuntu 22.04",
-      "Hugging Face Transformers",
-      "LZ4/LZ4HC",
-      "ZSTD",
-      "C++/CUDA"
+      "PyTorch",
+      "HuggingFace Transformers",
+      "CUDA IPCプラグイン",
+      "Python約5,500行 + CUDA約600行の試作実装"
     ],
     "model": [
-      "DeepSeekV2-Lite",
-      "Qwen1.5-MoE",
-      "SwitchTransformers-Large-128"
+      "Llama2-7B",
+      "Llama2-13B",
+      "各モデル4種類のLoRAアダプタ"
     ],
-    "datasets": "ShareGPTからランダム抽出したpromptを全baselineへ揃えて投入。decoder-only 2種とencoder-decoder 1種を評価。",
+    "datasets": [
+      "GSM8Kプロンプト",
+      "Azure Functions 14日生産トレースから抽出した到着系列"
+    ],
     "baselines": [
-      "MoE-Infinity",
-      "DeepSpeed ZeRO-3 SSD offload",
-      "Hugging Face Accelerate"
+      "InstaInfer",
+      "ServerlessLLM",
+      "dLoRA",
+      "vLLM"
     ],
-    "correctness": "全圧縮は可逆で、復元後BF16 tensorを元モデルと同一に保つ。モデル自体はHugging Face配布版を変更せず使用。",
+    "correctness": "生成品質の近似は導入せず、基盤重みとLoRA更新を未結合で計算する。主評価はシステム遅延・費用・SLOであり、生成精度の比較実験は中心ではない。",
     "settings": [
       {
-        "name": "対話応答",
-        "description": "memory budgetを変えてTPOT/TTFTを比較。"
+        "name": "到着パターン",
+        "description": "Azure Functionsトレースを到着間隔の変動係数で、予測可能（CoV≤1）、通常（1<CoV≤4）、バースト（CoV>4）に分類し、各類型から8本の4時間区間を無作為抽出して関数へ割り当てる。"
       },
       {
-        "name": "throughput",
-        "description": "batch size 1/4/16。ZipMoE/MoE-Infinity/AccelerateはOrin64で20GB、Orin32で10GB。"
+        "name": "SLO",
+        "description": "先頭トークン到達時間のSLOを7Bで2.5秒、13Bで4秒に設定し、適応バッチが制約内に収まるかを測る。"
       },
       {
-        "name": "E2E latency",
-        "description": "複数output token limitで平均と上下10%範囲を比較。"
-      },
-      {
-        "name": "cache ablation",
-        "description": "10GB、batch=16でFIFO/Marking/LRU、heterogeneous pool、pool planningを比較。"
-      },
-      {
-        "name": "page cache isolation",
-        "description": "background RAM占有0–32GBを注入しOS page cacheの寄与を分離。"
+        "name": "クラスタ評価",
+        "description": "単一8 GPUノードと4ノード16 GPUクラスタを使い、8関数同時実行、強スケーリング、弱スケーリング、2 GPU上4関数のスループットを評価する。"
       }
     ],
-    "methodology": "同一prompt・同程度DRAM footprintで既存SSD offload systemと比較し、TPOT、TTFT、tokens/s、E2E latencyを測定。core engine、heterogeneous cache、planningの寄与を段階的に分解する。",
-    "scope": "UMA型NVIDIA Jetsonでのon-device MoE。Apple Silicon等への適用可能性は議論するが実測していない。"
-  },
-  "reservation": {
-    "claim_id": "claim-384005d4349fb390e83aeabb",
-    "worker_id": "scheduled-chat-paper-20260915T1230JST",
-    "worker_kind": "scheduled_chat"
+    "methodology": "モデルとアダプタの組合せを独立サーバレス関数として扱い、実トレース由来の到着時系列で呼び出す。コールドスタート、TTFT、TPOT、全体遅延、GPU/ホスト使用量、金銭費用、費用効率、トークン/要求スループットを測る。基盤共有、事前読み込み、動的退避、適応バッチの各機構を無効化する切り分け実験も行う。",
+    "scope": "Llama2-7B/13BとL40Sを中心とする2025年時点の単一・小規模クラスタ評価で、最新MoE、異種GPU、巨大モデル、複数リージョンは未検証。到着はAzure Functions一般トレースでありLLM専用生産トレースではなく、入力内容はGSM8Kを使う。",
+    "workloads": [
+      "予測可能到着",
+      "通常到着",
+      "バースト到着",
+      "8 LoRA関数クラスタ実行",
+      "強・弱スケーリング"
+    ],
+    "metrics": [
+      "TTFT",
+      "TPOT",
+      "end-to-end latency",
+      "cold-start rate/time",
+      "monetary cost",
+      "cost-effectiveness",
+      "token throughput",
+      "request throughput",
+      "SLO violation"
+    ],
+    "reproducibility": "ハードウェア、モデル、LoRA数、到着トレース処理、SLO、主要アルゴリズム、実装規模は本文に記載される。一方、著者公式コードURLは一次資料から確認できず、完全な再実行性は公開実装付き研究より低い。"
   }
 }

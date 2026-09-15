@@ -2,51 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-384005d4349fb390e83aeabb",
-  "job_id": "job-research-229f0f103fc45c25",
+  "attempt_id": "attempt-257f6eb558ebdd1e9a226b04",
+  "job_id": "job-research-d09e1c8e52097070",
   "data": {
-    "limitations": [
-      {
-        "name": "Jetsonのみ実測",
-        "description": "64GB/32GB AGX Orinだけで評価し、Apple Silicon、Raspberry Pi、スマートフォンSoCでは未検証。"
-      },
-      {
-        "name": "NVMe依存",
-        "description": "Samsung 970 EVO 3.5GB/sを使用し、UFSや低速SSDではI/O/展開の相対関係と最適thread数が変わる。"
-      },
-      {
-        "name": "圧縮対象の前提",
-        "description": "BF16指数部の低entropyを利用するため、別精度・別weight分布では圧縮率と最適cache stateが変化する。"
-      },
-      {
-        "name": "workload stationarity",
-        "description": "cache planningはexpert人気順位の履歴分布を使うため、急激なprompt分布変化では事前partitionが最適でなくなる可能性がある。"
-      }
-    ],
-    "differences": [
-      {
-        "name": "MoE-Infinity等との差",
-        "description": "CPU DRAMをoffload tierとしてprefetchするのではなく、UMA端末ではNVMe bytes自体を無損失圧縮し、CPU decompressionをSSD I/Oと重畳する。"
-      },
-      {
-        "name": "量子化系との差",
-        "description": "bit幅を落とさずBF16を可逆圧縮するためモデル挙動を保持し、accuracy-security trade-offを避ける。"
-      },
-      {
-        "name": "一般lossless compressorとの差",
-        "description": "圧縮するだけでなくE/SM/fullというresident stateをcache階層に組み込み、expert activationと異種resource schedulingへ共同設計する。"
-      },
-      {
-        "name": "単純LRUとの差",
-        "description": "人気順位の確率モデルとsparse-layer makespanからF/C/S/E pool容量を事前計画し、runtime頻度で各poolへdispatchする。"
-      }
-    ],
-    "implementation_status": "公開GitHub prototypeあり。Transformers + Python/C++/CUDA、LZ4系/ZSTD対応。",
-    "research_positioning": "MoE expert offloading系統の端末向け派生で、SSD/NVMeを最下層に置きつつ、転送予測やGPU prefetchではなく『保存情報量を可逆に減らしCPU計算へ変換する』設計。階層メモリ研究としては、cache entryを完全expertだけでなくbit-field単位の圧縮状態へ細分化し、CPU core数・SSD帯域・memory budgetを同時に割り当てる点が特徴。"
-  },
-  "reservation": {
-    "claim_id": "claim-384005d4349fb390e83aeabb",
-    "worker_id": "scheduled-chat-paper-20260915T1230JST",
-    "worker_kind": "scheduled_chat"
+    "limitations": "評価はLlama2-7B/13BとNVIDIA L40S中心で、最新の大規模MoE、100B超モデル、異種GPUクラスタ、複数リージョンのサーバレス環境には一般化を確認していない。到着系列はAzure Functionsの一般的な関数トレースをLLM関数へ対応付けたもので、実際のLoRAサービス固有の到着・アダプタ人気変動ではない。入力はGSM8Kを使い、LoRAアダプタはHuggingFace人気に基づいて選ぶため、企業本番の長文・RAG・エージェント負荷は未評価である。基盤共有はCUDA IPCと同一ホストGPUを前提にし、ホストを跨ぐ共有には使えない。独立プロセスを残すことを隔離性の根拠とするが、CUDA IPCで同じ読み取り重みを露出する方式について形式的なセキュリティ証明や悪意あるテナント試験はない。費用はAWS実機測定をAlibaba Cloudの単価へ換算しており、実クラウド請求と完全一致しない。著者公式コードURLも一次資料から確認できない。",
+    "differences": "vLLMは継続バッチとページ化KVで単一・少数モデルの高密度推論を効率化するが、関数隔離を持つサーバレスLoRAの起動成果物配置は扱わない。Punica、S-LoRA、dLoRAは多数LoRAを一つのサービング基盤へ集約し基盤重みを共有するため高速だが、同一プロセスやCUDA文脈を共有する設計がサーバレス関数境界と衝突する。ServerlessLLMとInstaInferはサーバレスLLMのコールドスタートをモデル読み込み中心に短縮する一方、LoRA関数間で同一基盤を安全に共有すること、アダプタ・ライブラリ・カーネルまでまとめて事前配置すること、複数LoRAの競合をSLO適応バッチで制御することは主眼でない。ServerlessLoRAはその間を埋め、関数プロセスは分離したままデータ層だけを共有する。",
+    "implementation_status": "本文はPyTorch/Transformers上へ約5,500行のPythonと約600行のCUDAを追加し、CUDA IPC基盤共有、事前読み込み制御器、ワーカエージェント、適応バッチ、動的退避を実装した試作を説明する。arXiv v1から著者公式の公開コードURLは確認できない。",
+    "research_positioning": "LLMサービング・スケジューリング系統のうち、多LoRAサービングとサーバレス弾力性の交点に位置する。処理カーネル自体を高速化するのではなく、共有可能な基盤モデルの所有境界を再設計し、そのメモリ節約を配置・起動・バッチ制御へ連鎖させる資源管理研究である。",
+    "relation_to_existing_repository": "PunicaやLoquetierなどの多LoRA系統は、異なるアダプタを同じ基盤モデル上で効率よく実行する演算・仮想化を提供する。ServerlessLoRAは、それらより外側の関数配置・コールドスタート・クラウド費用に焦点を移し、独立プロセス間で基盤重みのみを共有する。ServerlessLLM系の高速モデルロードとは補完関係にあり、より高速なストレージ読込みを使っても避けられない『同じ基盤を関数ごとに保持する容量重複』を削る。将来はLoRAアダプタ自体をCPU/SSDへ階層化するキャッシュや、Loquetier型仮想モジュールと本方式の関数隔離を組み合わせる余地がある。",
+    "audit_required": false
   }
 }
