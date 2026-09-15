@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 03:04:17 JST**
+> 自動生成: **2026-09-16 03:04:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **3** | **0** | **3** | **0** | **0** | **8** |
-| 合計 | **2** | **8** | **2** | **6** | **0** | **0** | **8** |
+| Discovery | **2** | **4** | **0** | **4** | **0** | **0** | **12** |
+| 合計 | **2** | **9** | **2** | **7** | **0** | **0** | **12** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -70,8 +70,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 03:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **8件**
-- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **12件**
+- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier / power/energy/thermal-aware LLM serving
 - round `specialist-hw-scheduling-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json`
   - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
@@ -83,6 +83,10 @@
 - round `specialist-cxl-context-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0317JST-discovery-specialist-cxl-context-3.json`
   - 探索軸: CXL・NVMe/JBOF共有KV/context tier
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-power-4` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260916T0322JST-discovery-specialist-power-4.json`
+  - 探索軸: power/energy/thermal-aware LLM serving
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
