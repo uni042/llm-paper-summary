@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:08:33.971785+00:00",
+  "updated_at": "2026-09-15T22:12:00.795863+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:08:33.971785+00:00",
+      "last_recorded_at": "2026-09-15T22:12:00.795863+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 86,
+        "research_completed": 87,
         "audit_completed": 0,
         "discovery_completed": 26,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34900084369:1",
-          "recorded_at": "2026-09-14T21:40:26.982363+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34900084369",
-            "run_attempt": "1",
-            "source_sha": "74413d147dba5fecf06d03931e8aacdc41b19f47"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34900852105:1",
           "recorded_at": "2026-09-14T21:49:12.086255+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35029360264",
             "run_attempt": "1",
             "source_sha": "397818377d4a4862bbf0c973002a15f836b90e19"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35029698303:1",
+          "recorded_at": "2026-09-15T22:12:00.795863+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35029698303",
+            "run_attempt": "1",
+            "source_sha": "5cded47ec7e3e3076f85e3f0fbf2292cd83f6653"
           },
           "signals": [
             "research_completed"
@@ -20503,6 +20503,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.06188",
           "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-77f3e91a5c224daf",
+          "type": "research",
+          "canonical_id": "arXiv:2512.20210",
+          "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
           "from": "ready",
           "to": "completed"
         }
