@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f190af78c754c7c2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.12241",
+      "title": "Power-Aware Dynamic Reallocation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.12241",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md",
+      "priority": 79,
+      "reason": "P/D分離推論でGPU roleだけでなくpower budgetも動的再配分し、固定電力上限下のgoodput/SLOを最適化するRAPIDを提案。peak loadでSLO attainment最大2倍を報告し、compute/memory以外のdatacenter power制約をserving controlへ統合する隣接研究。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28848",
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "source_url": "https://arxiv.org/abs/2607.28848",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "priority": 81,
+      "reason": "推論のidle GPU capacityをLoRA fine-tuningへ安全に転用し、CUDA-graph-aware latency modelとSLO-aware admissionでvLLM/SGLang/S-LoRAにhost-agnostic統合する。production traceで100% inference SLO complianceを保ちfine-tuning throughput 2.9倍を報告し、co-serving資源利用の系統として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-power-coserving-9",
+    "axis": "power-aware disaggregation・inference/fine-tuning co-serving",
+    "query_summary": "新workload軸からdatacenter resource policyへ移り、電力上限下のP/D動的再配分と、推論SLOを維持したLoRA fine-tuning co-servingを軽量評価した。canonical IDは最新GitHub検索で未収録。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "最後にheterogeneous GPU/edge provisioningとmulti-model routingを確認し、強候補がなければ今回の独立経路一巡を監査する",
+    "empty_round_reason": null
+  }
+}
