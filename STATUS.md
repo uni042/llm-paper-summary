@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 02:24:04 JST**
+> 自動生成: **2026-09-16 03:03:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **10** | **2** | **8** | **0** | **0** | **19** |
-| 合計 | **2** | **15** | **4** | **11** | **0** | **0** | **19** |
+| Discovery | **2** | **1** | **0** | **1** | **0** | **0** | **3** |
+| 合計 | **2** | **6** | **2** | **4** | **0** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -69,48 +69,12 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-16 01:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **8件** / 候補: **19件**
-- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング / 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill / CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing / GPU runtime・fused decompression kernel・L2 KV prefetch / SSD/GDS・expert streamingの関連基礎研究再確認 / cs.OS/cs.PF隣接・GPU dispatch・OS-level inference primitives / framework実装起点・GPU/SmartNIC serving・adaptive TP・geometry-aware scheduler / agentic workflow・diffusion LLMという新workload形態のserving / power-aware disaggregation・inference/fine-tuning co-serving / heterogeneous edge/fog・mixed-scale model fleet allocation
-- round `specialist-new-systems-1` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
-  - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
-  - 個別result照合: あり / `.survey/work-queue/results/20260916T0108JST-discovery-specialist-new-systems-1.json` (`ok=true`)
-- round `specialist-related-serving-2` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0111JST-discovery-specialist-related-serving-2.json`
-  - 探索軸: 分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-memory-fabric-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0114JST-discovery-specialist-memory-fabric-3.json`
-  - 探索軸: CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-runtime-kernel-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0117JST-discovery-specialist-runtime-kernel-4.json`
-  - 探索軸: GPU runtime・fused decompression kernel・L2 KV prefetch
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-backward-storage-5` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260916T0120JST-discovery-specialist-backward-storage-5.json`
-  - 探索軸: SSD/GDS・expert streamingの関連基礎研究再確認
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-os-pf-6` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260916T0123JST-discovery-specialist-os-pf-6.json`
-  - 探索軸: cs.OS/cs.PF隣接・GPU dispatch・OS-level inference primitives
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-framework-reverse-7` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260916T0127JST-discovery-specialist-framework-reverse-7.json`
-  - 探索軸: framework実装起点・GPU/SmartNIC serving・adaptive TP・geometry-aware scheduler
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-new-workloads-8` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0131JST-discovery-specialist-new-workloads-8.json`
-  - 探索軸: agentic workflow・diffusion LLMという新workload形態のserving
-  - 個別result照合: あり / `.survey/work-queue/results/20260916T0131JST-discovery-specialist-new-workloads-8.json` (`ok=true`)
-- round `specialist-power-coserving-9` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0135JST-discovery-specialist-power-coserving-9.json`
-  - 探索軸: power-aware disaggregation・inference/fine-tuning co-serving
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-heterogeneous-10` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T0138JST-discovery-specialist-heterogeneous-10.json`
-  - 探索軸: heterogeneous edge/fog・mixed-scale model fleet allocation
+- 最新観測run: **2026-09-16 03:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
+- round `specialist-hw-scheduling-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json`
+  - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
