@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28848",
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "source_url": "https://arxiv.org/abs/2607.28848",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "priority": 82,
+      "reason": "peak向けに確保したinference GPUのidle computeをLoRA fine-tuningへ回しつつSLOを守るco-serving system。vLLM/SGLang/S-LoRAへ小さなhook interfaceで統合し、CUDA-graph-aware latency modelでadmission制御する。production traceで100% inference SLOを維持しつつfine-tuning throughput 2.9倍を報告し、serving resource utilization研究として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-coserving-11",
+    "axis": "LoRA・inference/fine-tuning co-serving・idle GPU利用",
+    "query_summary": "heterogeneous allocationからadapter/LoRA servingへ展開。ServerlessLoRAは既にready researchに存在するため重複除外し、inference SLO下でidle GPUをLoRA fine-tuningへ転用するDeltaServeを未収録確認して送信する。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2505.14468"],
+    "next_axis_hint": "multi-LoRA adapter paging/cache、serverless model loading、heterogeneous GPU placementへ展開する",
+    "empty_round_reason": null
+  }
+}
