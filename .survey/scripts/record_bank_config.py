@@ -28,7 +28,11 @@ REGISTRY = _load_registry()
 BANK_ROOTS = {str(k).lower(): str(v) for k, v in REGISTRY["banks"].items()}
 BANK_IDS = tuple(BANK_ROOTS)
 SLOT_NAMES = tuple(str(slot) for slot in REGISTRY["slots"])
-BANK_PATH_PREFIXES = tuple(root.rstrip("/") + "/" for root in BANK_ROOTS.values())
+# Historical workflow-v10 bundles used ``chat-record-a`` for bank A before the
+# canonical root was renamed to ``chat-record``. Keep the old prefix readable
+# for durable Library fallback replay; new writes still use BANK_ROOTS only.
+LEGACY_BANK_PATH_PREFIXES = (".survey/work-queue/records/chat-record-a/",)
+BANK_PATH_PREFIXES = tuple(root.rstrip("/") + "/" for root in BANK_ROOTS.values()) + LEGACY_BANK_PATH_PREFIXES
 
 
 def bank_root(bank: str) -> str:
