@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-57c04f370a9f4d4d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.02230",
+      "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+      "source_url": "https://arxiv.org/abs/2511.02230",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+      "priority": 91,
+      "reason": "エージェント型ワークロードのツール呼び出し間隔でKVキャッシュを即時破棄すると再計算・再ロードが増える問題を、KV保持期限とプログラム単位スケジューリングで扱うサービング研究。2026-09-08改訂版では実エージェントを用いた評価で平均ジョブ完了時間8倍超の改善を報告しており、agentic servingとKV保持政策の接点として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28848",
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "source_url": "https://arxiv.org/abs/2607.28848",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "priority": 86,
+      "reason": "推論向けにピーク負荷で確保したGPUの遊休時間をLoRA微調整へ回しつつ推論SLOを維持するco-serving方式。CUDA Graphを考慮した遅延モデルとSLO-aware schedulerをvLLM/SGLang/S-LoRAへ統合し、追加GPUなしで微調整throughputを改善するため、推論基盤の資源共有・スケジューリング研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.11001",
+      "title": "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees",
+      "source_url": "https://arxiv.org/abs/2604.11001",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md",
+      "priority": 82,
+      "reason": "未知の生成長によりKV使用量が成長しサービング系が不安定化する問題に対し、active setへのprompt流入率を制御するflow-controlを導入し、安定性の必要・十分条件を与える。throughput/latencyだけでなくKV利用率の安定性を明示的に扱うため、既存の長さ予測型schedulerとは異なる理論・システム軸を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.09248",
+      "title": "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+      "source_url": "https://arxiv.org/abs/2607.09248",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md",
+      "priority": 78,
+      "reason": "応答長未知かつhard KV memory budget下のbatched inferenceを、memory-growth regime別sub-schedulerとmeta-schedulerで扱い、任意prompt/response長に対するconstant-competitive保証を狙う理論研究。実装系より優先度は抑えるが、未知生成長下のKVスケジューリング設計に理論的基準を与える。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T15:00:00+09:00",
+    "round": "specialist-scheduling-agent-1",
+    "axis": "エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving",
+    "query_summary": "直前のMoE cache/router軸を避け、agentic multi-turn KV retention、未知出力長下のKV scheduling、GPU遊休資源を使うinference/fine-tuning co-servingを一次arXiv情報中心に探索した。投入直前に最新HEADと各arXiv IDのrepo検索を再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "新着・recent revisionからdisaggregated servingのnetwork/KV transfer、次いで重要serving論文のforward citationとstorage/OS隣接軸を探索する",
+    "empty_round_reason": null
+  }
+}
