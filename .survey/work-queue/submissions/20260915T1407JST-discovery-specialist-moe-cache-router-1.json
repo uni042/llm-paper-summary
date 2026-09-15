@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d86e69d5d52d3a55",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/04-moe-inference-expert-offloading/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "priority": 91,
+      "reason": "GPUメモリに全expertを保持できないMoE推論で、キャッシュ置換をruntime側だけの問題として扱わず、native Top-K選択を維持したままMoE本体と軽量cache routerをpost-trainingで共同適応する。Temporal Routerは同一layerの将来再利用を予測し、Spatio-Temporal Routerは直前tokenのhidden stateで事前cache構成を改善する。Qwen3/GPT-OSS評価で強いprefetch baseline比のload-adjusted hit rateを最大18.03ポイント改善し、expert weight trafficを最大53.3%削減と報告しており、expert cache・prefetch・routing localityの重点系統に直接つながる新着候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T14:00:00+09:00",
+    "round": "specialist-moe-cache-router-1",
+    "axis": "MoE expert cache・router adaptation・weight traffic",
+    "query_summary": "直近のcold MoE multi-model serving軸を反復せず、2026年9月のMoE推論でexpert cache hit率とweight transferを直接改善する新着を探索した。arXiv:2609.04895についてGitHub code searchと最新queueで未収録を確認し、abstract・書誌・一次資料URLを軽量評価して候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は新着のGPU runtime/kernel・量子化実行系、または収録済みexpert offload論文のforward citationからI/O schedulingとcache ownershipへ軸を移す",
+    "empty_round_reason": null
+  }
+}
