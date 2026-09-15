@@ -1,171 +1,96 @@
-# 運用ダッシュボード
+# LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 19:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 19:12:12 JST**
 
-## このページの見方
+このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
+`run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
 
-上から順に、**現在の詰まり具合 → workerの稼働状況 → 直近24時間の処理量 → 最新run → 次に読む論文** を確認できます。日常確認はここまでで十分です。下部の「参考情報」は探索効率や履歴を詳しく見るための欄です。
+## 1. ここ数時間で論文読解・サーベイが成功しているか
 
-- **Research ready**: まだ全文精読が終わっていない論文候補。値が大きいほど「読む仕事」が溜まっています。
-- **Claim**: workerが処理権を確保するdurable lease。有効claimはleaseが未失効という意味で、実際に生存しているworkerプロセス数とは一致しません。Claimableは今すぐ別workerが着手できる件数です。
-- **Audit**: 既存の論文ページや要約の品質点検。新規論文の全文精読（Research）とは別工程です。
-- **Maintenance / Consistency**: queueやstateの定期保守と、リポジトリ全体の整合性チェックです。
-
-## 現在の状態
-
-| 指標 | 状態 |
+| 指標 | 検証済み実績 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **39** |
-| 現在処理不能（Research blocked） | **0** |
-| 保留中（Research deferred） | **3** |
-| GitHub反映済みResearch完了（job） | **359** |
-| 耐久checkpoint済み・GitHub未反映（job） | **13** |
-| 精読済みユニーク論文（推定） | **372** |
-| 保守状態（Maintenance） | **passed** |
-| 直近整合性チェック結果 | **passed** |
-| 直近整合性チェック時刻 | **09-14 09:53 JST** |
-| 保守カウンタ（通常run） | **0 / 24** |
+| 直近6時間 Research完了 | **7** |
+| 直近6時間 Audit完了 | **0** |
+| 直近6時間 検証済み完了合計 | **7** |
+| 最終検証済み完了 | **09-15 18:38:20 JST** |
+| 最終完了から | **33分前** |
 
-> **精読数の数え方**: 「GitHub反映済み」はResearch jobのterminal state、「耐久checkpoint済み・GitHub未反映」はworkerがcheckpoint_refをGitHubへ記録済みだがterminal stateが未反映のjobです。「精読済みユニーク論文（推定）」は両者をcanonical IDで重複排除して数えます。
+成功として数えるのは、対応する **job=completed / result.ok=true / immutable submission** が一致し、Researchではさらにpaper実体が存在するものだけです。
 
-### 要注意
+### 直近の検証済み完了
 
-- 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
+- **09-15 18:38:20 JST** [research] `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation
+  - job: `.survey/work-queue/jobs/job-research-1fc8cd177d28f575.json`
+  - result: `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2767bee85a3612f009a3c651.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
+- **09-15 18:36:58 JST** [research] `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-b22f71500ae1903a.json`
+  - result: `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-005c2488539329fa13df896f.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
+- **09-15 17:36:05 JST** [research] `arXiv:2503.08461` — FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework
+  - job: `.survey/work-queue/jobs/job-research-64153047cf155e5c.json`
+  - result: `.survey/work-queue/results/research/attempt-8857271141ba7926ae6b21f2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8857271141ba7926ae6b21f2.json`
+  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.08461-fastcache-multimodal-kv-compression-serving.md`
+- **09-15 16:06:40 JST** [research] `arXiv:2603.20661` — WWW.Serve: Interconnecting Global LLM Services through Decentralization
+  - job: `.survey/work-queue/jobs/job-research-22ee1955e766f2b1.json`
+  - result: `.survey/work-queue/results/research/attempt-c49070062ccb7f1cec99a5aa.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c49070062ccb7f1cec99a5aa.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md`
+- **09-15 14:40:22 JST** [research] `arXiv:2608.05303` — EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-ad7e8d527bf159c7.json`
+  - result: `.survey/work-queue/results/research/attempt-1829cd0996ad73e7ae285518.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1829cd0996ad73e7ae285518.json`
+  - paper: `papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md`
+- **09-15 14:39:13 JST** [research] `arXiv:2507.08045` — Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing
+  - job: `.survey/work-queue/jobs/job-research-3540240bb76e82ea.json`
+  - result: `.survey/work-queue/results/research/attempt-799320e651c4286ff39ecfa7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-799320e651c4286ff39ecfa7.json`
+  - paper: `papers/inference/05-kv-cache-memory-management/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md`
+- **09-15 14:34:26 JST** [research] `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
+  - job: `.survey/work-queue/jobs/job-research-229f0f103fc45c25.json`
+  - result: `.survey/work-queue/results/research/attempt-64f5834724b23a881c8f959c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-64f5834724b23a881c8f959c.json`
+  - paper: `papers/inference/06-expert-offloading/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md`
 
-<!-- research-throughput-status:start -->
-## ワーカー稼働状況
+## 2. 直近タスクが実際に処理成功している証拠
 
-| 指標 | 状態 |
-|---|---:|
-| :30 通常worker | **Research/Audit優先（高在庫）** |
-| :00 補助worker | **Discovery優先** |
-| 処理速度 | **OK** |
-| 未処理候補（Research ready） | **39** |
-| 有効claim（lease） | **0** |
-| 今すぐ着手可能（Claimable） | **41** |
-| 有効leaseを持つworker run | **0** |
-| :30 最新worker run | **2026-09-14T05:30:00+09:00** |
-| :30 最新run由来の有効claim | **0** |
-| :30 旧run由来の有効claim | **0** |
-| :00 最新worker run | **2026-09-15T19:00:00+09:00** |
-| :00 最新run由来の有効claim | **0** |
-| :00 旧run由来の有効claim | **0** |
-| その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 18:37 JST** |
-| :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
-| 直近24h Research完了（:30 通常worker） | **0** |
-| 直近24h Research完了（:00 補助worker） | **0** |
-| 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-15T18:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **—** |
+### :30 論文worker
 
-run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
+- 最新観測run: **2026-09-15 18:30 JST** / worker `scheduled-chat-paper-20260915T1830JST`
+- immutable submission: **5件** / 検証済み成功: **2件**
+  - **成功** `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving / result `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` / paper `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
+  - **成功** `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation / result `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` / paper `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
+  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-817bd95f2c782ad4248fa08d.json` (job `job-research-3df42686de08919b`)
+  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a88806a6b69afa14faffe306.json` (job `job-research-229f0f103fc45c25`)
+  - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-acc918e244bc8cbe6bfce5af.json` (job `job-research-3df42686de08919b`)
 
-Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
+### :00 探索worker
 
-高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
+- 最新観測run: **2026-09-15 19:00 JST**
+- immutable submission: **1件** / 検証済み成功result: **1件** / 候補: **1件**
+- 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
+  - **成功** job `job-6490b6dae61c1d16` / result `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` / submission `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
 
-Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
+## 3. 今何をやっているか
 
-有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。最新worker runはrun-ledger/discovery-stateも参照し、active leaseがない実行も表示します。claim由来のrun時刻はclaimed_atとの整合性を検証し、最新run由来のleaseと旧run由来の残存leaseを分離します。
-<!-- research-throughput-status:end -->
+- 未失効かつ非terminal jobのclaim: **0件**
+- うち直近15分にheartbeat記録あり: **0件**
 
-## 直近24時間の処理量
+- 現在処理中と判定できる有効claimはありません。
 
-| 指標 | 件数 / 率 |
-|---|---:|
-| Research完了 | **0** |
-| Repo収録 | **0** |
-| Audit完了 | **0** |
-| 探索評価候補 | **47** |
-| Research候補採用 | **10** |
-| 重複除外 | **12** |
-| 重複率 | **25.5%** |
-| :00 補助worker Discovery run（毎時枠） | **12** |
-| :00 補助worker Discovery round（stats観測） | **20** |
-| 通常worker run（ledger観測） | **0** |
-| Fallback archive（全helper） | **0** |
+> claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。
 
-### 24時間の流れ
+## このSTATUSが採用する証拠
 
-**探索評価 47 → 重複除外後 35 → Research候補採用 10 → Research完了 0 → Repo収録 0**
-
-## 次に処理する候補
-
-`next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
-
-- P91 `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention
-- P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
-- P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
-- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
-- P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-
-## 参考情報
-
-ここから下は、探索経路の良し悪しや履歴を詳しく確認するときに使う情報です。通常の稼働確認では上部だけ見れば十分です。
-
-### 直近の:00 補助worker Discovery
-
-Run: **2026-09-15T19:00:00+09:00**
-
-| 指標 | 値 |
-|---|---:|
-| 探索round | **1** |
-| 探索軸 | subquadratic attention・DRAM/SRAM異種分離サービング |
-| 評価候補 | **2** |
-| 重複除外 | **0** |
-| Novel候補 | **2** |
-| Research候補採用 | **1** |
-| 重複率 | **0.0%** |
-
-### :00 補助workerのDiscovery効率（直近24時間）
-
-| 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
-|---|---:|---:|---:|---:|---:|
-| KV復元・分離serving network scheduling・MoE elastic/offload・KV survey | 5 | 0 | 0 | 0.0% | 0.0% |
-| GPU・ホストメモリ間の複数経路転送と分離サービング通信 | 4 | 3 | 1 | 75.0% | 25.0% |
-| cold MoE multi-model serving・weight/KV disaggregation | 4 | 3 | 0 | 75.0% | 0.0% |
-| エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving | 4 | 0 | 1 | 0.0% | 25.0% |
-| 新着KV圧縮・制約適応runtime policy | 4 | 3 | 0 | 75.0% | 0.0% |
-| MoE expert cache placement・PCIe window scheduling・fine-grained expert migration | 3 | 0 | 0 | 0.0% | 0.0% |
-| 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 | 3 | 2 | 0 | 66.7% | 0.0% |
-| 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
-| 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
-| MoE lossless compression/cache-affinity・expert-locality-aware decode routing | 2 | 0 | 1 | 0.0% | 50.0% |
-| subquadratic attention・DRAM/SRAM異種分離サービング | 2 | 0 | 1 | 0.0% | 50.0% |
-| 新着KV適応制御・agentic serving characterization | 2 | 0 | 0 | 0.0% | 0.0% |
-| 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
-| 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
-| 2026年9月新着・MoE expert cache・cache-aware routing | 1 | 0 | 0 | 0.0% | 0.0% |
-| Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling | 1 | 0 | 1 | 0.0% | 100.0% |
-| MoE expert cache・router adaptation・weight traffic | 1 | 0 | 0 | 0.0% | 0.0% |
-| MoE expert cache所有権・OS page cache・階層メモリ | 1 | 0 | 0 | 0.0% | 0.0% |
-| multi-turn KV restoration・cross-layer sharing・recompute/load pipeline | 1 | 0 | 1 | 0.0% | 100.0% |
-| handoff guard before new discovery axis | 0 | 0 | 0 | — | — |
-
-### 直近5件の:00 補助worker Discovery run
-
-- 2026-09-15T19:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 1 / 軸 subquadratic attention・DRAM/SRAM異種分離サービング
-- 2026-09-15T18:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 2026年9月新着・MoE expert cache・cache-aware routing
-- 2026-09-15T16:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 0 / 軸 新着KV適応制御・agentic serving characterization
-- 2026-09-15T15:00:00+09:00 — 1 round: 評価 4 / 重複 0 / 採用 1 / 軸 エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
-- 2026-09-15T14:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache・router adaptation・weight traffic
-
-### 最近完了した論文
-
-- 直近24hの完了記録なし
-
-### 7日比較
-
-**履歴不足** — durable run ledgerがまだ7日間を覆っていないため、7日平均との比較は表示しません。
-
-### 集計上の注意
-
-- Discoveryのworker帰属は `discovery-state.json` のworker識別子とrun_keyで判定します。run-ledgerのDiscovery/new_jobsはhelper処理が混ざり得るため、通常workerのDiscovery件数には直接使いません。
-- `next-jobs.json` は優先スナップショットです。表示外にready jobが残っている場合があります。
-- 探索専用workerのcandidate最大5本は1探索軸・1 submissionのtransport batch上限で、run全体の上限ではありません。
+- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。
+- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。
+- **探索成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。
+- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
+- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
 
 ---
 
-このページは自動生成物です。手編集せず、集計ロジックは `.survey/scripts/build_status_dashboard.py` を修正してください。
+生成ロジック: `.survey/scripts/build_status_dashboard.py`
