@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 03:04:55 JST**
+> 自動生成: **2026-09-16 03:05:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **4** | **1** | **3** | **0** | **0** | **12** |
-| 合計 | **3** | **9** | **3** | **6** | **0** | **0** | **12** |
+| Discovery | **3** | **5** | **1** | **4** | **0** | **0** | **15** |
+| 合計 | **3** | **10** | **3** | **7** | **0** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -74,8 +74,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 03:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **12件**
-- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier / power/energy/thermal-aware LLM serving
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **15件**
+- 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier / power/energy/thermal-aware LLM serving / agentic serving・sandbox state・agent-aware KV reuse
 - round `specialist-hw-scheduling-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json`
   - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
@@ -91,6 +91,10 @@
 - round `specialist-power-4` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260916T0322JST-discovery-specialist-power-4.json`
   - 探索軸: power/energy/thermal-aware LLM serving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agentic-5` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260916T0327JST-discovery-specialist-agentic-5.json`
+  - 探索軸: agentic serving・sandbox state・agent-aware KV reuse
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
