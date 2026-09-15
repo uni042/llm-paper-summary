@@ -9,14 +9,6 @@ from pathlib import Path
 SCRIPT = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"
 
 
-def _load_module(repo_root: Path):
-    path = repo_root / ".survey" / "scripts" / "build_status_dashboard.py"
-    spec = importlib.util.spec_from_file_location("build_status_dashboard", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-
 def _write_json(path: Path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
@@ -27,140 +19,187 @@ def _write_text(path: Path, text="x"):
     path.write_text(text, encoding="utf-8")
 
 
-def _install_script(repo: Path):
-    dst = repo / ".survey" / "scripts" / "build_status_dashboard.py"
+def _load(repo: Path):
+    dst = repo / ".survey/scripts/build_status_dashboard.py"
     dst.parent.mkdir(parents=True, exist_ok=True)
     dst.write_text(SCRIPT.read_text(encoding="utf-8"), encoding="utf-8")
+    spec = importlib.util.spec_from_file_location("build_status_dashboard_direct", dst)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
 
 
-class StatusDashboardTests(unittest.TestCase):
-    def test_recent_reading_uses_completed_jobs_not_aggregate_ledger(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = Path(tmp)
-            _install_script(repo)
+def _research_success(repo: Path, *, job_id="job-r", attempt="attempt-r",
+                      worker="scheduled-chat-paper-20260915T1830JST",
+                      completed="2026-09-15T09:38:20+00:00",
+                      canonical="arXiv:2609.12345", title="Verified Paper"):
+    paper = f"papers/inference/{job_id}.md"
+    submission = f".survey/work-queue/submissions/research/{attempt}.json"
+    result = f".survey/work-queue/results/research/{attempt}.json"
+    _write_json(repo / f".survey/work-queue/jobs/{job_id}.json", {
+        "job_id": job_id, "type": "research", "canonical_id": canonical,
+        "title": title, "status": "completed", "completed_at": completed,
+        "paper_path": paper, "artifact_submission": submission,
+    })
+    _write_json(repo / submission, {
+        "kind": "research", "attempt_id": attempt, "job_id": job_id,
+        "worker_id": worker, "paper_path": paper,
+    })
+    _write_json(repo / result, {
+        "ok": True, "attempt_id": attempt, "job_id": job_id,
+        "job_type": "research", "job_status": "completed",
+        "artifact": {"paper": paper}, "submission": submission,
+        "processed_at": completed,
+    })
+    _write_text(repo / paper, "# paper")
+
+
+class DirectEvidenceStatusTests(unittest.TestCase):
+    def test_verified_research_ignores_conflicting_aggregate_files(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _research_success(repo)
             _write_json(repo / ".survey/work-queue/run-ledger.json", {
-                "entries": [{
-                    "run_key": "2026-09-15T18:30:00+09:00",
-                    "counts": {"research_completed": 0, "audit_completed": 0},
-                }]
+                "entries": [{"counts": {"research_completed": 0}}]
             })
-            _write_json(repo / ".survey/work-queue/jobs/job-research-a.json", {
-                "id": "job-research-a",
-                "type": "research",
-                "canonical_id": "arXiv:2609.99999",
-                "title": "Direct Evidence Paper",
-                "status": "completed",
-                "completed_at": "2026-09-15T09:38:20+00:00",
-                "paper_path": "papers/inference/direct-evidence-paper.md",
-                "artifact_submission": ".survey/work-queue/submissions/research/attempt-a.json",
+            _write_json(repo / ".survey/work-queue/next-jobs.json", {
+                "counts": {"research": {"completed": 999}}
             })
-            _write_json(repo / ".survey/work-queue/submissions/research/attempt-a.json", {
-                "kind": "research",
-                "attempt_id": "attempt-a",
-                "job_id": "job-research-a",
-                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+            _write_json(repo / ".survey/work-queue/discovery-state.json", {
+                "research_completed": 999
             })
-            _write_text(repo / "papers/inference/direct-evidence-paper.md", "# Direct Evidence Paper")
-            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
 
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
-
-            self.assertIn("## 1. ここ数時間で論文読解・サーベイができているか", text)
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
             self.assertIn("直近6時間 Research完了 | **1**", text)
-            self.assertIn("Direct Evidence Paper", text)
-            self.assertIn("job=completed / submission=存在 / paper=存在", text)
-            self.assertNotIn("直近6時間 Research完了 | **0**", text)
+            self.assertIn("result:", text)
+            self.assertIn("submission:", text)
+            self.assertIn("paper:", text)
+            self.assertNotIn("**999**", text)
+            self.assertIn("run-ledger", text)
 
-    def test_terminal_job_never_counts_as_current_work_even_if_claim_unexpired(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = Path(tmp)
-            _install_script(repo)
-            _write_json(repo / ".survey/work-queue/jobs/job-research-done.json", {
-                "id": "job-research-done",
-                "type": "research",
-                "title": "Already Done",
-                "status": "completed",
-                "completed_at": "2026-09-15T09:37:00+00:00",
-            })
-            _write_json(repo / ".survey/work-queue/claims/job-research-done.json", {
-                "job_id": "job-research-done",
-                "claim_id": "claim-done",
-                "worker_id": "scheduled-chat-paper-20260915T1830JST",
-                "kind": "research",
-                "claimed_at": "2026-09-15T09:35:00+00:00",
-                "expires_at": "2026-09-15T11:05:00+00:00",
-            })
-            _write_json(repo / ".survey/work-queue/jobs/job-research-live.json", {
-                "id": "job-research-live",
-                "type": "research",
-                "canonical_id": "arXiv:2609.12345",
-                "title": "Currently Reading",
-                "status": "ready",
-            })
-            _write_json(repo / ".survey/work-queue/claims/job-research-live.json", {
-                "job_id": "job-research-live",
-                "claim_id": "claim-live",
-                "worker_id": "scheduled-chat-paper-20260915T1830JST",
-                "kind": "research",
-                "claimed_at": "2026-09-15T09:40:00+00:00",
-                "expires_at": "2026-09-15T11:10:00+00:00",
-            })
-            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
-
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
-
-            self.assertIn("## 3. 今何をやっているか", text)
-            self.assertIn("Currently Reading", text)
-            current_section = text.split("## 3. 今何をやっているか", 1)[1]
-            self.assertNotIn("Already Done", current_section)
-
-    def test_latest_task_proof_comes_from_immutable_submission_and_terminal_job(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = Path(tmp)
-            _install_script(repo)
-            _write_json(repo / ".survey/work-queue/jobs/job-research-proof.json", {
-                "id": "job-research-proof",
-                "type": "research",
-                "canonical_id": "arXiv:2601.17768",
-                "title": "LLM-42",
-                "status": "completed",
+    def test_completed_job_without_success_result_is_not_counted(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = "papers/inference/unverified.md"
+            submission = ".survey/work-queue/submissions/research/attempt-u.json"
+            _write_json(repo / ".survey/work-queue/jobs/job-u.json", {
+                "job_id": "job-u", "type": "research", "status": "completed",
                 "completed_at": "2026-09-15T09:38:20+00:00",
-                "paper_path": "papers/inference/llm42.md",
-                "artifact_submission": ".survey/work-queue/submissions/research/attempt-proof.json",
+                "paper_path": paper,
             })
-            _write_json(repo / ".survey/work-queue/submissions/research/attempt-proof.json", {
-                "kind": "research",
-                "attempt_id": "attempt-proof",
-                "job_id": "job-research-proof",
+            _write_json(repo / submission, {
+                "kind": "research", "attempt_id": "attempt-u", "job_id": "job-u",
                 "worker_id": "scheduled-chat-paper-20260915T1830JST",
+                "paper_path": paper,
             })
-            _write_text(repo / "papers/inference/llm42.md", "# LLM-42")
-            _write_json(repo / ".survey/work-queue/submissions/20260915T1808JST-discovery-specialist.json", {
-                "job_id": "job-discovery-proof",
-                "candidates": [{"canonical_id": "arXiv:2609.04895", "title": "Cache-Aware Router"}],
+            _write_text(repo / paper, "# paper")
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            self.assertIn("直近6時間 Research完了 | **0**", text)
+            self.assertIn("未完了または未検証", text)
+
+    def test_latest_paper_worker_requires_result_submission_job_and_paper(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _research_success(
+                repo, job_id="job-proof", attempt="attempt-proof",
+                canonical="arXiv:2601.17768", title="LLM-42"
+            )
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            self.assertIn("2026-09-15 18:30 JST", text)
+            self.assertIn("scheduled-chat-paper-20260915T1830JST", text)
+            self.assertIn("検証済み成功: **1件**", text)
+            self.assertIn("LLM-42", text)
+            self.assertIn("result `", text)
+            self.assertIn("/ paper `", text)
+
+    def test_latest_discovery_success_requires_result_and_completed_job(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            submission = ".survey/work-queue/submissions/20260915T1808JST-discovery.json"
+            result = ".survey/work-queue/results/20260915T1808JST-discovery.json"
+            _write_json(repo / ".survey/work-queue/jobs/job-d.json", {
+                "job_id": "job-d", "type": "discovery", "status": "completed",
+                "completed_at": "2026-09-15T09:02:53+00:00",
+            })
+            _write_json(repo / submission, {
+                "job_id": "job-d",
+                "candidates": [{"canonical_id": "arXiv:2609.04895"}],
                 "discovery_stats": {
                     "run_key": "2026-09-15T18:00:00+09:00",
-                    "round": "specialist-moe-cache-router-1",
-                    "axis": "2026年9月新着・MoE expert cache・cache-aware routing",
+                    "axis": "MoE expert cache",
                     "candidate_count": 1,
-                    "duplicate_filtered_count": 0,
                 },
             })
-            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
-
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
-
-            self.assertIn("## 2. 直近タスクが成功している証拠", text)
-            self.assertIn("18:30 通常worker", text)
-            self.assertIn("scheduled-chat-paper-20260915T1830JST", text)
-            self.assertIn("LLM-42", text)
-            self.assertIn("完了job + immutable submission + paper", text)
-            self.assertIn("18:00 探索worker", text)
+            _write_json(repo / result, {
+                "ok": True, "job_id": "job-d", "job_type": "discovery",
+                "job_status": "completed",
+                "submission": "work-queue/submissions/20260915T1808JST-discovery.json",
+            })
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            self.assertIn("2026-09-15 18:00 JST", text)
+            self.assertIn("検証済み成功result: **1件**", text)
+            self.assertIn("候補: **1件**", text)
             self.assertIn("MoE expert cache", text)
-            self.assertIn("immutable discovery submission", text)
+
+    def test_active_work_excludes_terminal_claim_and_shows_nonterminal_heartbeat(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write_json(repo / ".survey/work-queue/jobs/job-done.json", {
+                "job_id": "job-done", "type": "research", "title": "Already Done",
+                "status": "completed", "completed_at": "2026-09-15T09:37:00+00:00",
+            })
+            _write_json(repo / ".survey/work-queue/claims/job-done.json", {
+                "job_id": "job-done", "worker_id": "worker-old",
+                "claimed_at": "2026-09-15T09:35:00+00:00",
+                "heartbeat_at": "2026-09-15T09:42:00+00:00",
+                "expires_at": "2026-09-15T11:05:00+00:00",
+            })
+            _write_json(repo / ".survey/work-queue/jobs/job-live.json", {
+                "job_id": "job-live", "type": "research", "title": "Currently Reading",
+                "status": "ready",
+            })
+            _write_json(repo / ".survey/work-queue/claims/job-live.json", {
+                "job_id": "job-live", "worker_id": "scheduled-chat-paper-20260915T1830JST",
+                "claimed_at": "2026-09-15T09:40:00+00:00",
+                "heartbeat_at": "2026-09-15T09:43:00+00:00",
+                "expires_at": "2026-09-15T11:10:00+00:00",
+            })
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            current = text.split("## 3. 今何をやっているか", 1)[1]
+            self.assertIn("未失効かつ非terminal jobのclaim: **1件**", current)
+            self.assertIn("直近15分にheartbeat記録あり: **1件**", current)
+            self.assertIn("Currently Reading", current)
+            self.assertNotIn("Already Done", current)
+            self.assertIn("生存そのものまでは証明しない", current)
+
+    def test_legacy_aggregate_changes_cannot_change_direct_count(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _research_success(repo, canonical="arXiv:2609.54321")
+            module = _load(repo)
+            now = datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+
+            _write_json(repo / ".survey/work-queue/run-ledger.json", {"research_completed": 0})
+            first = module.build_dashboard(repo, now=now)
+            _write_json(repo / ".survey/work-queue/run-ledger.json", {"research_completed": 5000})
+            _write_json(repo / ".survey/work-queue/next-jobs.json", {"completed": 5000})
+            second = module.build_dashboard(repo, now=now)
+
+            marker = "直近6時間 Research完了 | **1**"
+            self.assertIn(marker, first)
+            self.assertIn(marker, second)
+            self.assertNotIn("**5000**", second)
 
 
 if __name__ == "__main__":
