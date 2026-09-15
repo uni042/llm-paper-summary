@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Build deterministic acknowledgements for ChatGPT Library fallback payloads.
+"""Build deterministic Library fallback dispositions from canonical GitHub state.
 
 The Library transport is outside GitHub Actions, so GitHub cannot move Library files
-itself. This script publishes a derived manifest containing only fallback envelopes
-whose content is proven reflected on the canonical repo.
+itself. This script publishes a derived manifest with three disjoint dispositions:
 
-Normally proof is the exact immutable attempt. A historical stale-attempt fallback may
-instead be rebound to a newer released claim that explicitly adopted its checkpoint.
-Such a rebound is acknowledged only when the canonical successful descriptor records
-provenance back to the exact source envelope and source attempt.
+* acknowledgements: this exact fallback payload (or an explicit provenance rebound)
+  produced the canonical publication and may move pending/ -> processed/;
+* superseded: the same canonical job was successfully published by a different
+  immutable attempt, so this old payload is no longer needed and may move
+  pending/ -> superseded/;
+* waiting: publication/recovery is still unresolved and the payload must remain pending.
+
+Archive presence alone is never sufficient for either terminal disposition.
 """
 from __future__ import annotations
 
@@ -101,6 +104,38 @@ def _ack_row(
     return row
 
 
+def _superseded_row(
+    repo_root: Path,
+    archive_path: Path,
+    envelope: dict[str, Any],
+    descriptor_path: Path,
+    result_path: Path,
+    job_path: Path,
+    *,
+    canonical_attempt_id: str,
+    paper_path: str | None,
+) -> dict[str, Any]:
+    envelope_id = str(envelope["id"])
+    row: dict[str, Any] = {
+        "envelope_id": envelope_id,
+        "job_id": envelope["job_id"],
+        "attempt_id": envelope["attempt_id"],
+        "kind": envelope["kind"],
+        "status": "superseded",
+        "reason": "job_published_by_different_attempt",
+        "canonical_attempt_id": canonical_attempt_id,
+        "pending_path": f"/LLM-survey-outbox/pending/{envelope_id}.json",
+        "superseded_path": f"/LLM-survey-outbox/superseded/{envelope_id}.json",
+        "archive_path": _relative(repo_root, archive_path),
+        "canonical_submission_path": _relative(repo_root, descriptor_path),
+        "canonical_result_path": _relative(repo_root, result_path),
+        "job_path": _relative(repo_root, job_path),
+    }
+    if paper_path is not None:
+        row["paper_path"] = paper_path
+    return row
+
+
 def _rebound_ack(
     repo_root: Path,
     archive_path: Path,
@@ -167,6 +202,83 @@ def _rebound_ack(
     )
 
 
+def _superseded_disposition(
+    repo_root: Path,
+    archive_path: Path,
+    envelope: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Prove that another successful immutable attempt made this fallback obsolete."""
+    queue = repo_root / QUEUE_REL
+    job_id = envelope.get("job_id")
+    source_attempt = envelope.get("attempt_id")
+    kind = envelope.get("kind")
+    if not all(isinstance(value, str) and value for value in (job_id, source_attempt, kind)):
+        return None
+    if kind not in {"research", "audit"}:
+        return None
+
+    job_path = queue / "jobs" / f"{job_id}.json"
+    job = _read_object(job_path)
+    if not job or job.get("job_id") != job_id:
+        return None
+    job_status = job.get("status")
+    if job_status not in {"completed", "rejected"}:
+        return None
+
+    ownership_field = "artifact_submission" if job_status == "completed" else "status_submission"
+    submission = job.get(ownership_field)
+    expected_prefix = f".survey/work-queue/submissions/{kind}/"
+    if not isinstance(submission, str) or not submission.startswith(expected_prefix):
+        return None
+    descriptor_path = repo_root / submission
+    descriptor = _read_object(descriptor_path)
+    if not descriptor:
+        return None
+    canonical_attempt = descriptor.get("attempt_id")
+    if (
+        not isinstance(canonical_attempt, str)
+        or not canonical_attempt
+        or canonical_attempt == source_attempt
+        or descriptor.get("job_id") != job_id
+        or descriptor.get("kind") != kind
+    ):
+        return None
+
+    result_path = queue / "results" / kind / f"{canonical_attempt}.json"
+    result = _read_object(result_path)
+    if not result or result.get("ok") is not True:
+        return None
+    if (
+        result.get("job_id") != job_id
+        or result.get("attempt_id") != canonical_attempt
+        or result.get("job_status") != job_status
+        or result.get("submission") != submission
+    ):
+        return None
+
+    paper_path: str | None = None
+    if job_status == "completed":
+        artifact = result.get("artifact")
+        if not isinstance(artifact, dict):
+            return None
+        paper_path = _paper_path(envelope, descriptor, job)
+        if paper_path is None or artifact.get("paper") != paper_path:
+            return None
+        if kind == "research" and not (repo_root / paper_path).is_file():
+            return None
+
+    return _superseded_row(
+        repo_root,
+        archive_path,
+        envelope,
+        descriptor_path,
+        result_path,
+        job_path,
+        canonical_attempt_id=canonical_attempt,
+        paper_path=paper_path,
+    )
+
+
 def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[str, Any]]:
     queue = repo_root / QUEUE_REL
     envelope = _read_object(archive_path)
@@ -185,6 +297,10 @@ def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[st
     rebound = _rebound_ack(repo_root, archive_path, envelope)
     if rebound is not None:
         return "ack", rebound
+
+    superseded = _superseded_disposition(repo_root, archive_path, envelope)
+    if superseded is not None:
+        return "superseded", superseded
 
     descriptor_path = queue / "submissions" / kind / f"{attempt_id}.json"
     descriptor = _read_object(descriptor_path)
@@ -257,6 +373,7 @@ def build_manifest(repo_root: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     archive_root = repo_root / QUEUE_REL / "fallback-archive"
     acknowledgements: list[dict[str, Any]] = []
+    superseded: list[dict[str, Any]] = []
     waiting: list[dict[str, Any]] = []
 
     paths = sorted(archive_root.glob("*.json")) if archive_root.is_dir() else []
@@ -264,15 +381,20 @@ def build_manifest(repo_root: Path) -> dict[str, Any]:
         category, row = _evaluate_archive(repo_root, archive_path)
         if category == "ack":
             acknowledgements.append(row)
+        elif category == "superseded":
+            superseded.append(row)
         else:
             waiting.append(row)
 
-    acknowledgements.sort(key=lambda row: (str(row.get("envelope_id")), str(row.get("attempt_id"))))
-    waiting.sort(key=lambda row: (str(row.get("envelope_id")), str(row.get("attempt_id"))))
+    sort_key = lambda row: (str(row.get("envelope_id")), str(row.get("attempt_id")))
+    acknowledgements.sort(key=sort_key)
+    superseded.sort(key=sort_key)
+    waiting.sort(key=sort_key)
     return {
         "schema_version": SCHEMA_VERSION,
         "source": "github-canonical-publication-state",
         "acknowledgements": acknowledgements,
+        "superseded": superseded,
         "waiting": waiting,
     }
 
@@ -306,6 +428,7 @@ def main() -> int:
             {
                 "changed": changed,
                 "acknowledgements": len(manifest["acknowledgements"]),
+                "superseded": len(manifest["superseded"]),
                 "waiting": len(manifest["waiting"]),
                 "output": str(args.output),
             },
