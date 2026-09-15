@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.08635",
+      "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.08635",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.08635-spectrumkv-mixed-precision-kv-transfer.md",
+      "priority": 82,
+      "reason": "P/D分離でKVをnetwork payloadとして扱い、tokenごとにFP16/INT8/INT4精度を割り当てることで単純token pruningより転送量と品質を両立する。modelごとのINT4耐性をdeployment-time probeで判定し、転送pathのGPU timingでTTFT 50–62%削減を報告しており、network-aware KV transportとして差分が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-kv-network-7",
+    "axis": "P/D分離・network-aware KV transfer・mixed precision",
+    "query_summary": "KV surveyのplacement/migration分類をseedにnetwork転送へ展開。KVDriveとPallasは既知候補として除外し、per-token mixed-precisionでP/D間KV payloadを削減するSpectrumKVを未収録確認して送信する。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2605.18071", "arXiv:2608.16477"],
+    "next_axis_hint": "RDMA/NVLink/CXL上のKV transport scheduling、またはmulti-agent/test-time scalingでのKV state reuseへ展開する",
+    "empty_round_reason": null
+  }
+}
