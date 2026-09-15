@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T01:01:26+00:00",
-  "last_run_key": "2026-09-15T10:00:00+09:00",
-  "last_round": "specialist-serving-restoration-1",
+  "updated_at": "2026-09-15T03:55:33+00:00",
+  "last_run_key": "2026-09-15T12:00:00+09:00",
+  "last_round": "specialist-cold-moe-pooling-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -3354,6 +3354,25 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る",
       "source_submission": "work-queue/submissions/20260915T1000JST-discovery-specialist-serving-restoration-1.json"
+    },
+    {
+      "run_key": "2026-09-15T12:00:00+09:00",
+      "round": "specialist-cold-moe-pooling-1",
+      "axis": "cold MoE multi-model serving・weight/KV disaggregation",
+      "query_summary": "直近のLLM serving、MoE、KV cache、disaggregationを一次資料中心に探索し、既存queue/repositoryのcanonical IDを再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2608.16477",
+        "arXiv:2606.02964"
+      ],
+      "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す",
+      "source_submission": "work-queue/submissions/20260915T1204JST-discovery-crosspool.json"
     }
   ],
   "axes": {
@@ -5246,6 +5265,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る"
+    },
+    "cold MoE multi-model serving・weight/KV disaggregation": {
+      "last_run_key": "2026-09-15T12:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
