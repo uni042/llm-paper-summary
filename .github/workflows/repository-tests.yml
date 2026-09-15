@@ -6,8 +6,7 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
-      - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
+      - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
       - 'papers/**/*.md'
   pull_request:
@@ -15,8 +14,7 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
-      - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
+      - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
       - 'papers/**/*.md'
   workflow_dispatch:
@@ -60,26 +58,10 @@ jobs:
         run: python -m unittest discover -s .survey/tests -p 'test_*.py'
 
       - name: Validate current paper metadata
-        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
+        run: python .survey/scripts/validate_metadata.py --root .
 
       - name: Build current repository inventory
-        run: |
-          python .survey/scripts/build_repository_inventory.py \
-            --root . \
-            --output /tmp/repo-inventory.json \
-            --source-commit "$GITHUB_SHA"
+        run: python .survey/scripts/build_inventory.py --root .
 
       - name: Run current repository structural check
-        shell: bash
-        run: |
-          set +e
-          python .survey/scripts/check_repository.py \
-            --root . \
-            --inventory /tmp/repo-inventory.json \
-            --report /tmp/consistency.json
-          rc=$?
-          if [ "$rc" -ne 0 ]; then
-            echo 'Repository structural findings:'
-            cat /tmp/consistency.json
-            exit "$rc"
-          fi
+        run: python .survey/scripts/survey.py --root .survey check
