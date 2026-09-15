@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a88806a6b69afa14faffe306",
-  "job_id": "job-research-229f0f103fc45c25",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a88806a6b69afa14faffe306",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a88806a6b69afa14faffe306","job_id":"job-research-229f0f103fc45c25","data":{"hardware":["Jetson AGX Orin 64GB","Jetson AGX Orin 32GB","Samsung 970 EVO SSD 3.5 GB/s"],"software":["JetPack 6.2.1","Ubuntu 22.04","Hugging Face Transformers","LZ4/LZ4HC","ZSTD","C++/CUDA"],"model":["DeepSeekV2-Lite","Qwen1.5-MoE","SwitchTransformers-Large-128"],"datasets":"ShareGPTからランダム抽出したpromptを全baselineへ揃えて投入。decoder-only 2種とencoder-decoder 1種を評価。","baselines":["MoE-Infinity","DeepSpeed ZeRO-3 SSD offload","Hugging Face Accelerate"],"correctness":"全圧縮は可逆で、復元後BF16 tensorを元モデルと同一に保つ。モデル自体はHugging Face配布版を変更せず使用。","settings":[{"name":"対話応答","description":"memory budgetを変えてTPOT/TTFTを比較。"},{"name":"throughput","description":"batch size 1/4/16。ZipMoE/MoE-Infinity/AccelerateはOrin64で20GB、Orin32で10GB。"},{"name":"E2E latency","description":"複数output token limitで平均と上下10%範囲を比較。"},{"name":"cache ablation","description":"10GB、batch=16でFIFO/Marking/LRU、heterogeneous pool、pool planningを比較。"},{"name":"page cache isolation","description":"background RAM占有0–32GBを注入しOS page cacheの寄与を分離。"}],"methodology":"同一prompt・同程度DRAM footprintで既存SSD offload systemと比較し、TPOT、TTFT、tokens/s、E2E latencyを測定。core engine、heterogeneous cache、planningの寄与を段階的に分解する。","scope":"UMA型NVIDIA Jetsonでのon-device MoE。Apple Silicon等への適用可能性は議論するが実測していない。"},"reservation":{"claim_id":"claim-a88806a6b69afa14faffe306","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
