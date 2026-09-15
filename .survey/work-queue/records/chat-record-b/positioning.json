@@ -1,53 +1,19 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-1829cd0996ad73e7ae285518",
+  "job_id": "job-research-ad7e8d527bf159c7",
   "slot": "positioning",
-  "attempt_id": "attempt-799320e651c4286ff39ecfa7",
-  "job_id": "job-research-3540240bb76e82ea",
   "data": {
-    "limitations": [
-      {
-        "name": "単一server testbed",
-        "description": "4×A100 80GB、128GB DRAM、PCIe Gen4の単一serverで評価しており、remote KV store、RDMA、CXL、複数nodeやheterogeneous GPUでのrestorationは未評価。"
-      },
-      {
-        "name": "将来入力の間接推定",
-        "description": "future user input自体は観測できないため、現在までのattention patternからinput-sensitive layerを除外する。会話分布が大きく変化すると判定が外れ、重要contextを共有KVで十分保持できない可能性がある。"
-      },
-      {
-        "name": "CPU/DRAM前提",
-        "description": "inactive KVをCPU DRAMへ置きCPUでprefill similarityを非同期計算できることを前提とする。CPU計算資源やPCIe帯域が不足するとoverlapが崩れ、SSD主体の大規模KV階層では追加設計が必要。"
-      },
-      {
-        "name": "artifact公開不明",
-        "description": "本文のartifact availability URLがplaceholderのため、一次資料から有効な公式code repositoryを確認できない。"
-      }
-    ],
-    "differences": [
-      {
-        "name": "Full KV loadとの差",
-        "description": "全KVを保存・ロードせず、conversation-specific cross-layer sharingと一部recomputeで保存量とload量を減らす。"
-      },
-      {
-        "name": "Pensieve/Cake等との差",
-        "description": "固定したsuffix recompute/load比ではなく、圧縮layer mapに応じて層ごとのrecomputeとloadを動的配置しbubbleを抑える。"
-      },
-      {
-        "name": "MiniCacheとの差",
-        "description": "後半隣接層を固定共有せず、input-sensitive layerを除外したI-R層全体からconversationごとに高類似pairを選ぶため、同じ圧縮式でも品質低下を抑える。"
-      },
-      {
-        "name": "H2O等sparse attentionとの差",
-        "description": "現在queryだけでtoken KVをevictせず、future inputを考慮できないtoken-level evictionの品質riskを避け、layer間共有で情報を保持する。"
-      }
-    ],
-    "implementation_status": "PyTorch/Python/Transformers上のprototypeを本文で説明し、複数CUDA stream、CPU attention similarity、GPU token-wise similarity、KV prefetch/recompute pipelineを実装。公式artifact URLはplaceholderで公開実装は確認できない。",
-    "research_positioning": "KV cache memory managementとmulti-turn state restorationの交点に位置する。外部階層へKVを単純offloadする研究に対し、保存前にconversation-specific cross-layer redundancyを利用してKV量を減らし、その圧縮構造をrecompute/load schedulingへ伝える点が特徴である。",
-    "relation_to_existing_repository": "AttentionStore型のKV保存、Pensieve/Cake型のrecompute-load overlap、MiniCache型のcross-layer KV compressionを統合的に接続する位置付けである。特に外部KV階層をSSD/CXL/RDMAへ拡張する場合、Krulの『どのKVを保存しどこを再計算するか』というmapを階層placementやprefetch schedulerの入力へ利用できるため、既存のKV offload研究と補完関係にある。",
+    "limitations": "主性能評価は28nm合成と命令レベルシミュレーションで、実シリコンのメモリ競合・配線・熱・OS影響を測ったものではない。LPDDR4X 16GB/sと単一バッチを固定しており、より高速な外部メモリや連続バッチではEMA支配度が変化する可能性がある。近似ルーティング・チャネル統合は品質無損失ではなく、非thinking GSM8Kで3〜4%程度の低下が残る。軽量エンコーダによるプリフィル重要度判定とモデル別ハイパーパラメータ校正も追加構成要素である。公開成果物はbf16ソフトウェア実装で、論文のA8W4ハードウェア性能を直接再現するものではない。",
+    "differences": "EdgeMoEは専門家ごとの重要度に応じた混合精度で重み容量・EMAを減らし、MoE-Prunerは専門家内部の静的疎性を利用する。SMoLPUはMoE+投機的復号で粗粒度専門家枝刈りと細粒度チャネル枝刈りを行うが、主にデコード計算削減であり、複数候補のチャネル和集合を読む問題やプリフィルEMAを十分に扱わない。EdgeXpertはプリフィルでルーティング自体を共有集合形成へ変え、デコードでは候補深さの構造を使って『読まないチャネル』を決めるため、疎性を実際の外部メモリアクセス削減へ変換する。",
+    "implementation_status": "Samsung 28nm FDSOI向けRTL合成・電力解析と専用命令レベルシミュレータで評価。加えてPyTorch/HuggingFace上のソフトウェア成果物をZenodo DOI 10.5281/zenodo.21481269で公開し、4種MoE+EAGLE-3に五つの最適化を個別切替できる。",
+    "research_positioning": "エッジ向けLLMアクセラレータ、MoE推論、投機的復号の交点にあるソフトウェア・ハードウェア協調研究。専門家オフロードやキャッシュのように既に発生した転送を隠蔽するのではなく、ルーティングと候補構造を使って外部メモリ要求そのものを発生前に削る。",
+    "relation_to_existing_repository": "MoE並列・専門家キャッシュ系統とは専門家の局所性を高める点を共有するが、EdgeXpertは数MB級SRAMでは複数専門家常駐が非現実的という前提から、キャッシュヒットではなく1要求中の専門家集合を縮小する。投機的復号系統とは採択長と候補木を扱うが、速度上限を計算ではなくEMAで捉える。SSD/CPU専門家オフロード研究へは、共有専門家集合や深さ別チャネル価値をプリフェッチ・階層配置の優先度信号として利用できる可能性があり、転送量自体を減らす補完的手法として位置付けられる。",
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-799320e651c4286ff39ecfa7",
+    "claim_id": "claim-1829cd0996ad73e7ae285518",
     "worker_id": "scheduled-chat-paper-20260915T1430JST",
     "worker_kind": "scheduled_chat"
   }

@@ -1,25 +1,121 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-799320e651c4286ff39ecfa7","job_id":"job-research-3540240bb76e82ea",
- "data":{
-  "canonical_id":"arXiv:2507.08045","arxiv_id":"2507.08045","doi":"10.48550/arXiv.2507.08045","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},
-  "title":"Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing",
-  "summary":"Krulは休眠したマルチターン対話を再開するとき、履歴全体の鍵・値キャッシュを再計算または全量ロードするコストを削減する推論システムである。既存の層間共有は後段の隣接層など固定した圧縮組合せを全対話へ適用するため、対話ごとに異なる注意パターンを無視して生成品質を落とし得る。Krulは将来入力に敏感な層を圧縮対象から事前除外し、残る入力非依存層について対話ごとの注意類似度から共有層ペアを動的選択する。注意類似度計算は入力処理段階の大きな注意重みを中央処理装置へ非同期退避して計算し、逐次生成段階では最新トークン分だけ画像処理装置で逐次計算する。復元時は圧縮によって層ごとに不均衡になった再計算量とロード量をピラミッド状に配分し、複数の非同期実行流で重畳する。4基のA100 80GB、128GB主記憶、PCIe第4世代環境でLLaMA-7B/30B、Qwen1.5-7B、Qwen2-72Bを評価し、平均精度損失1%未満を維持しながら既存方式比で最初のトークンまでの時間を1.28〜2.68倍高速化し、完全保存比で平均2.35倍のキャッシュ容量削減を報告する。",
-  "list_summary":"対話ごとの注意類似度から層間の鍵・値共有を動的選択し、注意類似度計算を中央処理装置と画像処理装置へ分担、圧縮後の再計算とロードを層間パイプラインで重畳してマルチターン状態復元を高速・省容量化する。",
-  "authors":["Junyi Wen","Junyuan Liang","Zicong Hong","Wuhui Chen","Ting Cai","Zibin Zheng"],
-  "authors_affiliations":"中山大学、香港科技大学、鵬城実験室、湖北工業大学。",
-  "published":"2025-07-10","publication":"arXiv:2507.08045v2","publication_type":"プレプリント","publication_status":"arXiv第2版（2025-08-26）。本文にはPVLDB書式の仮置き表記が残っており、一次資料から確定した査読済み採録情報は確認できない。",
-  "lineage":"kv-cache-memory-management","topics":["マルチターン対話","鍵・値キャッシュ復元","層間共有","キャッシュ圧縮","再計算とロードの重畳","注意類似度"],
-  "importance":"高。鍵・値キャッシュを単純に保存・再計算する二択ではなく、対話依存の層間共有で保存量を減らし、その圧縮構造を復元スケジューリングへ接続するため、外部キャッシュ階層・再計算・圧縮を統合する研究として比較価値が高い。",
-  "hardware_evaluation":"4基のNVIDIA A100 80GB、128GB主記憶、10TB補助記憶、PCIe第4世代。",
-  "hardware_details":"PyTorchとTransformers上で複数の非同期実行流を用い、中央処理装置から画像処理装置へのキャッシュロードと再計算を重畳する。Qwen2-72Bのみ8ビットのモデル量子化を使用。",
-  "quality_effect":"LongBenchで動的圧縮後の生成品質を評価し、全体として平均精度損失1%未満を報告する。固定圧縮より対話依存の共有層選択で品質低下を抑える。",
-  "storage_targets":["画像処理装置の高帯域メモリ","中央処理装置の主記憶","補助記憶装置"],
-  "bottlenecks":["休眠対話キャッシュの主記憶容量","装置間キャッシュロード","履歴入力処理の再計算","注意重み保存","圧縮後の再計算とロードの不均衡"],
-  "evidence_locations":["第1節","第2.2〜2.3節","第4〜6節","第7節","第8.1〜8.6節","図13〜21","表4"],
-  "references":[],"references_total":43,"references_checked_at":"2026-09-15","references_source":"arXiv第2版の参考文献節を確認。参考文献番号は43まで存在する。",
-  "source":"https://arxiv.org/abs/2507.08045","sources":["https://arxiv.org/abs/2507.08045","https://arxiv.org/pdf/2507.08045"],"code":null,
-  "implementation":"Python、PyTorch、Hugging Face Transformersを基盤に実装。複数の非同期実行流、中央処理装置での注意類似度計算、画像処理装置での逐次類似度計算、装置間キャッシュ先読み、復元キャッシュ結合を使用する。本文の成果物URLは仮置き表記で、一次資料から有効な公開コードURLは確認できない。",
-  "implementation_status":"論文内で試作実装を説明するが、有効な公開コードURLは一次資料から確認できない。","evaluation_type":"実機測定","last_checked":"2026-09-15","last_audited":null,"audit_version":0
- },
- "reservation":{"claim_id":"claim-799320e651c4286ff39ecfa7","worker_id":"scheduled-chat-paper-20260915T1430JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "attempt_id": "attempt-1829cd0996ad73e7ae285518",
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2608.05303",
+    "arxiv_id": "2608.05303",
+    "doi": "10.48550/arXiv.2608.05303",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+    "summary": "EdgeXpertは、エッジ端末上で専門家混合（Mixture-of-Experts; MoE）と投機的復号を組み合わせると、候補トークン数の増加によって同一段階で多数の専門家・チャネルが活性化し、外部メモリアクセス（external memory access; EMA）が逆に増える問題を扱う。プリフィルでは軽量な双方向エンコーダのCLS注意重みでトークンを重要度別に分け、重要トークンが形成した共有専門家集合を低重要度トークンに再利用させる。デコードでは同一深さ候補の文脈類似性と相互排他性を利用し、必要チャネルの単純な和集合を読まず重要チャネルだけを読み、既に読んだチャネル上で全候補を再計算する補正で精度と採択長を回復する。Samsung 28nm FDSOI、800MHz、LPDDR4X 16GB/sを想定した合成・命令レベルシミュレーションで、従来方式比最大56.3%の端から端までの遅延削減と44.1%のエネルギー削減を報告する。",
+    "list_summary": "MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。",
+    "authors": [
+      "Sangwoo Ha",
+      "Hyunwoo Seo",
+      "Yurim Jo",
+      "Youngjin Moon",
+      "Hoi-Jun Yoo"
+    ],
+    "authors_affiliations": "KAIST, Daejeon, South Korea",
+    "published": "2026-08-05",
+    "publication": "MICRO 2026 / arXiv:2608.05303v1",
+    "publication_type": "査読済み会議論文",
+    "publication_status": "59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026) 採録。arXiv v1は2026-08-05。",
+    "lineage": "hardware-accelerators",
+    "topics": [
+      "エッジLLM推論",
+      "専門家混合",
+      "投機的復号",
+      "外部メモリアクセス",
+      "専門家再利用",
+      "チャネル統合",
+      "ソフトウェア・ハードウェア協調設計"
+    ],
+    "importance": "高。MoEと投機的復号を別々に高速化するのではなく、両者を併用したときに投機候補が専門家集合を膨張させるという相互作用を主ボトルネックとして定式化し、プリフィルとデコードの双方で外部メモリアクセスが発生する前に不要な専門家・チャネルを排除する。",
+    "hardware_evaluation": "実シリコンではなくSamsung 28nm FDSOI向けRTL合成と命令レベルの専用シミュレータ。800MHz、1.0V、A8W4、LPDDR4X 16GB/s、ピーク13.1 TOPS。ソフトウェア成果物の機能確認はRTX A6000 48GBを使用。",
+    "hardware_details": "8K MAC、512KB共有SRAM、8クラスタ。合成ロジック3.8mm²、60%セル利用率を仮定したロジック投影6.3mm²、SRAM 3.0mm²、総面積9.3mm²。EMAを除くピーク電力1.52W。",
+    "quality_effect": "近似を導入する。最終構成ではMT-Bench低下は最大0.1点程度に回復する一方、非thinking設定のGSM8Kでは約3〜4%の低下が残る。Qwen3 thinking設定ではGSM8Kの追加低下は見られない。MMLU/HellaSwag/ARC-C/WinoGrande/PIQAでもモデルにより小幅な低下がある。",
+    "storage_targets": [
+      "LPDDR4X上のMoE専門家重み",
+      "オンチップSRAMへ流入する専門家・チャネル重み",
+      "プリフィル時の共有専門家集合",
+      "デコード時のチャネルマスクとルーティング情報"
+    ],
+    "bottlenecks": [
+      "MoE専門家重みの外部メモリアクセス",
+      "投機候補増加による活性専門家集合の膨張",
+      "個別チャネル枝刈り後も和集合を読むため残るEMA",
+      "エッジSRAM容量不足により複数専門家を常駐できないこと"
+    ],
+    "evidence_locations": [
+      "§I–II",
+      "§III Motivation",
+      "§IV EdgeXpert",
+      "§V Evaluation",
+      "Table II–V",
+      "Figure 8–13",
+      "Appendix Artifact"
+    ],
+    "source": "https://arxiv.org/abs/2608.05303",
+    "sources": [
+      "https://arxiv.org/abs/2608.05303",
+      "https://arxiv.org/pdf/2608.05303",
+      "https://doi.org/10.5281/zenodo.21481269"
+    ],
+    "code": "https://doi.org/10.5281/zenodo.21481269",
+    "implementation": "論文付録で五つの最適化をPyTorch/HuggingFace上に実装した公開成果物を提供する。Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BとEAGLE-3を対象にrun.pyから各手法を切替可能。論文性能値はA8W4専用ハードウェアシミュレーションで、公開ソフトウェア成果物はbf16動作。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "canonical_id": "arXiv:2410.12013",
+        "arxiv_id": "2410.12013"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066"
+      },
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2401.10774",
+        "arxiv_id": "2401.10774"
+      },
+      {
+        "canonical_id": "arXiv:2203.16487",
+        "arxiv_id": "2203.16487"
+      },
+      {
+        "canonical_id": "arXiv:2302.01318",
+        "arxiv_id": "2302.01318"
+      },
+      {
+        "canonical_id": "arXiv:2602.16052",
+        "arxiv_id": "2602.16052"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv:2608.05303v1一次資料の参考文献節",
+    "references_total": 68
+  },
+  "reservation": {
+    "claim_id": "claim-1829cd0996ad73e7ae285518",
+    "worker_id": "scheduled-chat-paper-20260915T1430JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
