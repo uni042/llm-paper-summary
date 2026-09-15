@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.14516",
+      "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+      "source_url": "https://arxiv.org/abs/2602.14516",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.14516-ampd-multiround-disaggregated-serving.md",
+      "priority": 84,
+      "reason": "エージェント等のmulti-round workloadでprefill/decodeが交互に現れる点を対象に、incremental prefillの実行場所とscheduleを実時間負荷に応じて適応し、P/D両相のresource allocation・parallel strategyも計画するAMPDを提案する。通常の単発P/D分離では扱いにくいmulti-round servingのSLO最適化として既存系統との差分が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-multiround-disagg-2",
+    "axis": "multi-round agent workload・P/D分離・適応resource allocation",
+    "query_summary": "新着scheduler軸からP/D disaggregationへ拡張し、multi-round workload特有のincremental prefill配置・scheduleとresource planningを扱うAMPDを評価した。canonical IDを最新repo検索で再確認し未収録として送信する。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2607.28150"],
+    "next_axis_hint": "既存重要serving論文のforward citationと、agentic servingのinterruption/resume・state migrationへ軸を移す",
+    "empty_round_reason": null
+  }
+}
