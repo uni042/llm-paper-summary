@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 06:02:45 JST**
+> 自動生成: **2026-09-16 06:03:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **6** | **0** | **6** | **0** | **0** | **9** |
-| 合計 | **4** | **11** | **2** | **9** | **0** | **0** | **9** |
+| Discovery | **4** | **8** | **0** | **8** | **0** | **0** | **12** |
+| 合計 | **4** | **13** | **2** | **11** | **0** | **0** | **12** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -78,8 +78,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 06:00 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **9件**
-- 探索軸: 新着KV圧縮・制約適応ポリシー / multi-round agent workload・P/D分離・適応resource allocation / agentic serving・session scheduling・agent memory KV reuse / OS/CUDA VMM型KV memory reclamation・KV restoration scheduling / MoE expert paging・KVとのVRAM競合・PCIe I/O律速 / system-aware KV infrastructure survey・隣接研究マッピング
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **8件** / 候補: **12件**
+- 探索軸: 新着KV圧縮・制約適応ポリシー / multi-round agent workload・P/D分離・適応resource allocation / agentic serving・session scheduling・agent memory KV reuse / OS/CUDA VMM型KV memory reclamation・KV restoration scheduling / MoE expert paging・KVとのVRAM競合・PCIe I/O律速 / system-aware KV infrastructure survey・隣接研究マッピング / P/D分離・network-aware KV transfer・mixed precision / speculative decoding・production serving負荷・性能モデル
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0607JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着KV圧縮・制約適応ポリシー
@@ -103,6 +103,14 @@
 - round `specialist-kv-survey-6` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0622JST-discovery-specialist-kv-survey-6.json`
   - 探索軸: system-aware KV infrastructure survey・隣接研究マッピング
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-kv-network-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0625JST-discovery-specialist-kv-network-7.json`
+  - 探索軸: P/D分離・network-aware KV transfer・mixed precision
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-specdecode-serving-8` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0628JST-discovery-specialist-specdecode-serving-8.json`
+  - 探索軸: speculative decoding・production serving負荷・性能モデル
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
