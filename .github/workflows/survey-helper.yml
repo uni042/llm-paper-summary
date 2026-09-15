@@ -58,6 +58,11 @@ jobs:
             .survey/scripts/normalize_required_metadata.py \
             .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/refresh_queue_snapshot.py \
+            .survey/scripts/status_publish_gate.py \
+            .survey/scripts/build_status_dashboard.py \
+            .survey/scripts/append_research_throughput_status.py \
+            .survey/scripts/refine_status_observability.py \
+            .survey/scripts/ensure_dashboard_history.py \
             .survey/scripts/queue_worker.py \
             .survey/scripts/blocked_retry.py
 
@@ -215,12 +220,44 @@ jobs:
             fi
           }
 
+          refresh_status_dashboard() {
+            local commit_message
+            local should_publish
+
+            commit_message="$(git log -1 --pretty=%B)"
+            should_publish="$(
+              git diff --name-only origin/main..HEAD \
+                | python .survey/scripts/status_publish_gate.py --commit-message "$commit_message"
+            )"
+            if [ "$should_publish" != 'true' ]; then
+              echo 'No authoritative helper state change requires a dashboard refresh.'
+              return 0
+            fi
+
+            python .survey/scripts/ensure_dashboard_history.py --repo-root .
+            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
+            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
+            git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
+
+            if git diff --cached --quiet; then
+              echo 'Dashboard is already current for this helper commit.'
+              return 0
+            fi
+            if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
+              git commit -m 'survey-helper: refresh dashboard after queue processing'
+            else
+              git commit --amend --no-edit
+            fi
+          }
+
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               recover_derived_snapshot_conflict || exit 1
             fi
             refresh_derived_snapshot
+            refresh_status_dashboard
             if git push origin HEAD:main; then
               exit 0
             fi
