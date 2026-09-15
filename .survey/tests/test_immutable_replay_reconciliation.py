@@ -45,6 +45,18 @@ class ImmutableReplayReconciliationTests(unittest.TestCase):
                     rendered_content=("desired rendered record\n" * 40),
                 )
 
+    def test_precheck_still_requires_expected_blob_for_existing_paper(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = repo / "papers/inference/test/no-expected.md"
+            paper.parent.mkdir(parents=True, exist_ok=True)
+            rendered = ("exact rendered record\n" * 40).rstrip() + "\n"
+            paper.write_text(rendered, encoding="utf-8")
+            descriptor = {"paper_path": "papers/inference/test/no-expected.md"}
+
+            with self.assertRaisesRegex(ValueError, "expected_blob_sha is required"):
+                processor._precheck_paper(repo, descriptor, rendered_content=rendered)
+
     def test_apply_artifact_accepts_exact_already_applied_content(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
