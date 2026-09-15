@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:08:19 JST**
+> 自動生成: **2026-09-16 07:08:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **5** | **2** | **3** | **6** | **0** | — |
+| Research | **2** | **5** | **2** | **3** | **5** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **17** | **0** | **17** | **0** | **0** | **21** |
-| 合計 | **4** | **22** | **2** | **20** | **6** | **0** | **21** |
+| 合計 | **5** | **22** | **2** | **20** | **5** | **0** | **21** |
 
 - 最新Discovery runの耐久探索round: **17件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -24,6 +24,11 @@
 
 ### Research
 
+- **09-16 07:08:30 JST** [research] `arXiv:2608.06188` — Routing LLM Inference to the Cleanest Grid in Real Time
+  - job: `.survey/work-queue/jobs/job-research-705b1ab26eb807b1.json`
+  - result: `.survey/work-queue/results/research/attempt-55fa2104d18bc1f9a648de40.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-55fa2104d18bc1f9a648de40.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md`
 - **09-16 07:05:29 JST** [research] `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
   - job: `.survey/work-queue/jobs/job-research-d09e1c8e52097070.json`
   - result: `.survey/work-queue/results/research/attempt-d87ac0583b3b3fb6f0fcba35.json` (`ok=true`)
@@ -125,13 +130,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **0件**
 - `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-382442b3f5faa67f.json`
-- `arXiv:2608.06188` — Routing LLM Inference to the Cleanest Grid in Real Time / worker `work-library-repair-20260916`
-  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-705b1ab26eb807b1.json`
 - `arXiv:2512.20210` — Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-77f3e91a5c224daf.json`
