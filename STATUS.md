@@ -51,14 +51,14 @@
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 16:01 JST** |
+| :30 通常worker 直近lease活動 | **09-15 16:04 JST** |
 | :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **0** |
 | 直近24h Research完了（:00 補助worker） | **0** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T15:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **3 min** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
