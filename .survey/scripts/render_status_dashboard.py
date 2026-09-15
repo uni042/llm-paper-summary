@@ -75,6 +75,253 @@ def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int
     }
 
 
+def _source_url(payload: dict[str, Any]) -> str:
+    for key in ("url", "source_url", "paper_url", "primary_url", "arxiv_url", "pdf_url"):
+        value = payload.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    source = payload.get("source")
+    if isinstance(source, dict):
+        for key in ("url", "source_url", "paper_url"):
+            value = source.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+    return ""
+
+
+def _paper_markdown_files(repo_root: Path) -> list[Path]:
+    files: list[Path] = []
+    for area in ("inference", "training"):
+        root = repo_root / "papers" / area
+        if not root.is_dir():
+            continue
+        for path in root.rglob("*.md"):
+            name = path.name.casefold()
+            stem = path.stem.casefold()
+            if name == "readme.md" or stem == "comparison" or stem.startswith("comparison-"):
+                continue
+            files.append(path)
+    return sorted(files)
+
+
+def _direct_evidence_metrics(
+    repo_root: Path,
+    *,
+    jobs: dict[str, dict[str, Any]],
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+    verified: list[dict[str, Any]],
+    verified_discovery: list[dict[str, Any]],
+    active: list[dict[str, Any]],
+    now: datetime,
+) -> dict[str, Any]:
+    nonterminal: list[tuple[str, dict[str, Any]]] = []
+    status_counts: dict[str, int] = {}
+    canonical_counts: dict[str, int] = {}
+    missing_canonical = 0
+    missing_title = 0
+    missing_source_url = 0
+
+    for job_id, job in jobs.items():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status in evidence.TERMINAL_STATUSES:
+            continue
+        nonterminal.append((job_id, job))
+        status_key = status or "(未設定)"
+        status_counts[status_key] = status_counts.get(status_key, 0) + 1
+
+        canonical = str(payload.get("canonical_id") or "").strip()
+        if canonical:
+            key = canonical.casefold()
+            canonical_counts[key] = canonical_counts.get(key, 0) + 1
+        else:
+            missing_canonical += 1
+        if not str(payload.get("title") or "").strip():
+            missing_title += 1
+        if not _source_url(payload):
+            missing_source_url += 1
+
+    duplicate_groups = sum(count > 1 for count in canonical_counts.values())
+    duplicate_jobs = sum(max(0, count - 1) for count in canonical_counts.values())
+    active_research_ids = {
+        str(row["job_id"])
+        for row in active
+        if _active_kind(row) == "research"
+    }
+    unclaimed_jobs = sum(job_id not in active_research_ids for job_id, _ in nonterminal)
+
+    verified_research = [row for row in verified if row["kind"] == "research"]
+    cutoff_24h = now - timedelta(hours=24)
+    recent_research_24h = [
+        row for row in verified_research if cutoff_24h <= row["completed_at"] <= now
+    ]
+    last_research_completed_at = max(
+        (row["completed_at"] for row in verified_research if row["completed_at"] <= now),
+        default=None,
+    )
+
+    verified_submission_paths = {row["submission"]["path"] for row in verified}
+    verified_submission_paths.update(
+        row["submission"]["path"] for row in verified_discovery
+    )
+    unmatched_submissions = [
+        row for row in submissions if row["path"] not in verified_submission_paths
+    ]
+    unmatched_by_kind: dict[str, int] = {}
+    for row in unmatched_submissions:
+        kind = row["kind"] if row["kind"] in KINDS else "other"
+        unmatched_by_kind[kind] = unmatched_by_kind.get(kind, 0) + 1
+
+    verified_job_ids = {row["job_id"] for row in verified}
+    completed_without_verified = 0
+    for job_id, job in jobs.items():
+        if job["kind"] not in {"research", "audit"}:
+            continue
+        status = str(job["payload"].get("status") or "").strip().lower()
+        if status == "completed" and job_id not in verified_job_ids:
+            completed_without_verified += 1
+
+    orphan_submissions = sum(
+        not row["job_id"] or row["job_id"] not in jobs
+        for row in submissions
+    )
+    success_results = [
+        row
+        for row in results
+        if row["payload"].get("ok") is True
+        and str(row["payload"].get("job_status") or "").strip().lower() == "completed"
+    ]
+    orphan_success_results = sum(
+        not row["job_id"] or row["job_id"] not in jobs
+        for row in success_results
+    )
+    success_results_without_submission = sum(
+        evidence._submission_for_result(repo_root, row, submissions) is None
+        for row in success_results
+    )
+    consistency = {
+        "completed_without_verified": completed_without_verified,
+        "orphan_submissions": orphan_submissions,
+        "orphan_success_results": orphan_success_results,
+        "success_results_without_submission": success_results_without_submission,
+    }
+    consistency_total = sum(consistency.values())
+
+    return {
+        "candidate_papers": len(canonical_counts),
+        "nonterminal_jobs": len(nonterminal),
+        "unclaimed_jobs": unclaimed_jobs,
+        "status_counts": status_counts,
+        "duplicate_groups": duplicate_groups,
+        "duplicate_jobs": duplicate_jobs,
+        "missing_canonical": missing_canonical,
+        "missing_title": missing_title,
+        "missing_source_url": missing_source_url,
+        "paper_markdown_count": len(_paper_markdown_files(repo_root)),
+        "research_24h": len(recent_research_24h),
+        "last_research_completed_at": last_research_completed_at,
+        "unmatched_submissions": len(unmatched_submissions),
+        "unmatched_by_kind": unmatched_by_kind,
+        "consistency": consistency,
+        "consistency_total": consistency_total,
+    }
+
+
+def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
+    last = metrics["last_research_completed_at"]
+    if last is None:
+        last_text = "—"
+    else:
+        last_text = f"{evidence._fmt_time(last)}（{evidence._fmt_age(now, last)}）"
+    return [
+        "## 重要指標",
+        "",
+        "すべて耐久保存された直接証拠から算出します。未claimは論文数ではなくResearch job数です。",
+        "",
+        "| 指標 | 現在値 |",
+        "|---|---:|",
+        f"| 収録候補論文 | **{metrics['candidate_papers']}** |",
+        f"| 未claim Research job | **{metrics['unclaimed_jobs']}** |",
+        f"| 直近24hの検証済みResearch収録 | **{metrics['research_24h']}** |",
+        f"| 最終検証済みResearch収録 | **{last_text}** |",
+        f"| 整合性異常 | **{metrics['consistency_total']}** |",
+        "",
+    ]
+
+
+def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
+    lines = [
+        "",
+        "## 耐久証拠の詳細集計",
+        "",
+        "### 未処理Research jobの状態内訳",
+        "",
+        "| status | 件数 |",
+        "|---|---:|",
+    ]
+    if metrics["status_counts"]:
+        for status, count in sorted(metrics["status_counts"].items()):
+            lines.append(f"| {status} | **{count}** |")
+    else:
+        lines.append("| （なし） | **0** |")
+
+    lines += [
+        "",
+        "### 候補の重複・識別情報欠損",
+        "",
+        "非終端Research jobだけを対象にしています。source URLは `url/source_url/paper_url/primary_url/arxiv_url/pdf_url/source.url` のいずれかで確認します。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 重複canonical_idグループ | **{metrics['duplicate_groups']}** |",
+        f"| 重複分のResearch job | **{metrics['duplicate_jobs']}** |",
+        f"| canonical_id欠損 | **{metrics['missing_canonical']}** |",
+        f"| title欠損 | **{metrics['missing_title']}** |",
+        f"| source URL欠損 | **{metrics['missing_source_url']}** |",
+        "",
+        "### 収録済み論文実体",
+        "",
+        "`papers/inference/**` と `papers/training/**` のMarkdown実体を数え、READMEとcomparison系ファイルは除外します。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| inference/training配下の論文Markdown実体 | **{metrics['paper_markdown_count']}** |",
+        "",
+        "### immutable submissionの未照合",
+        "",
+        "検証済み成功としてjob/result/submission（Researchはpaper実体も）を照合できないimmutable submissionを数えます。処理待ちも含み得るため、整合性異常とは別指標です。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 成功result未照合のimmutable submission | **{metrics['unmatched_submissions']}** |",
+    ]
+    for kind in (*KINDS, "other"):
+        count = metrics["unmatched_by_kind"].get(kind, 0)
+        if count:
+            lines.append(f"| └ {LABELS.get(kind, kind)} | **{count}** |")
+
+    consistency = metrics["consistency"]
+    lines += [
+        "",
+        "### 整合性異常",
+        "",
+        "同じ壊れた記録が複数条件に該当する場合は各検出項目へ1件ずつ計上します。したがって合計は一意job数ではなく検出項目数です。",
+        "",
+        "| 検出項目 | 件数 |",
+        "|---|---:|",
+        f"| completed Research/Audit jobで検証済み完了なし | **{consistency['completed_without_verified']}** |",
+        f"| 対応jobなしsubmission | **{consistency['orphan_submissions']}** |",
+        f"| 対応jobなし成功result | **{consistency['orphan_success_results']}** |",
+        f"| 対応submissionなし成功result | **{consistency['success_results_without_submission']}** |",
+        f"| 合計検出項目 | **{metrics['consistency_total']}** |",
+        "",
+    ]
+    return lines
+
+
 def _axes(submissions: list[dict[str, Any]]) -> list[str]:
     axes: list[str] = []
     for submission in submissions:
@@ -240,6 +487,16 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)
     active = evidence._active_claims(repo_root, jobs, now)
     candidate_backlog = _durable_candidate_backlog(jobs)
+    direct_metrics = _direct_evidence_metrics(
+        repo_root,
+        jobs=jobs,
+        submissions=submissions,
+        results=results,
+        verified=verified,
+        verified_discovery=verified_discovery,
+        active=active,
+        now=now,
+    )
 
     cutoff = now - timedelta(hours=evidence.RECENT_HOURS)
     recent_verified = [row for row in verified if cutoff <= row["completed_at"] <= now]
@@ -313,6 +570,9 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。",
         "`run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。",
         "",
+    ]
+    lines.extend(_render_top_metrics(direct_metrics, now))
+    lines += [
         "## 現在の収録候補",
         "",
         "`jobs/*.json` に耐久保存された非終端Research jobだけを対象にし、論文数は `canonical_id` で一意に確認できるものだけを数えます。",
@@ -472,13 +732,19 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     lines += [
         "> claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。"
         "Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。",
-        "",
+    ]
+    lines.extend(_render_direct_metric_details(direct_metrics))
+    lines += [
         "### このSTATUSが採用する証拠",
         "",
+        "- **重要指標**: 候補・未claim・24h収録・最終収録・整合性異常を、jobs/submissions/results/claims/paper実体から直接再計算します。",
         "- **収録候補**: `jobs/*.json` の非終端Research jobだけを対象にし、`canonical_id` の一意数を候補論文数として数えます。`canonical_id` 欠損jobは別件数で表示し、論文数へ推定加算しません。",
         "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
         "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
         "- **Audit完了**: job/result/submissionの対応と成功状態を照合します。",
+        "- **論文実体数**: `papers/inference/**` と `papers/training/**` のMarkdown実体を数え、README/comparison系を除外します。",
+        "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちを含み得るため整合性異常とは分離します。",
+        "- **整合性異常**: completed Research/Audit jobの未検証、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出します。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
