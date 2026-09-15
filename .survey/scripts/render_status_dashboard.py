@@ -116,6 +116,17 @@ def _paper_markdown_files(repo_root: Path) -> list[Path]:
     return sorted(files)
 
 
+def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
+    stats = submission["payload"].get("discovery_stats")
+    if not isinstance(stats, dict):
+        return None
+    run_key = str(stats.get("run_key") or "").strip()
+    round_id = str(stats.get("round") or "").strip()
+    if not run_key or not round_id:
+        return None
+    return run_key, round_id
+
+
 def _direct_evidence_metrics(
     repo_root: Path,
     *,
@@ -211,7 +222,11 @@ def _direct_evidence_metrics(
     orphan_submission_paths = {
         row["path"]
         for row in submissions
-        if not row["job_id"] or row["job_id"] not in jobs
+        if (not row["job_id"] or row["job_id"] not in jobs)
+        and not (
+            row["kind"] == "discovery"
+            and _discovery_round_identity(row) is not None
+        )
     }
     success_results = [
         row
@@ -352,12 +367,12 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
         "",
         "### 整合性異常",
         "",
-        "直接矛盾を確認できる耐久レコードだけを異常とします。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
+        "直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
         "",
         "| 検出項目 | 件数 |",
         "|---|---:|",
         f"| completed Research jobで指定paper実体なし | **{consistency['completed_research_missing_paper']}** |",
-        f"| 対応jobなしsubmission | **{consistency['orphan_submissions']}** |",
+        f"| 対応jobなしsubmission（有効Discovery round除外） | **{consistency['orphan_submissions']}** |",
         f"| 対応jobなし成功result | **{consistency['orphan_success_results']}** |",
         f"| 対応submissionなし成功result | **{consistency['success_results_without_submission']}** |",
         f"| 異常レコード合計（重複排除） | **{metrics['consistency_total']}** |",
@@ -376,17 +391,6 @@ def _axes(submissions: list[dict[str, Any]]) -> list[str]:
         if axis and axis not in axes:
             axes.append(axis)
     return axes
-
-
-def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
-    stats = submission["payload"].get("discovery_stats")
-    if not isinstance(stats, dict):
-        return None
-    run_key = str(stats.get("run_key") or "").strip()
-    round_id = str(stats.get("round") or "").strip()
-    if not run_key or not round_id:
-        return None
-    return run_key, round_id
 
 
 def _durable_discovery_rounds(
@@ -789,7 +793,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **論文実体数**: `papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README/comparison系/Movedスタブを除外します。",
         "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちや失敗済みを含み得るため整合性異常とは分離します。",
         "- **completed未検証**: completedでも現行の厳格な照合条件が成立しないjobを別計上し、過去形式や移行履歴を含み得るため異常とは断定しません。",
-        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。",
+        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submissionは対応job欠損だけでは異常にしません。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
