@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6490b6dae61c1d16",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13134",
+      "title": "Rethinking Heterogeneous System Disaggregation for Subquadratic Attention",
+      "source_url": "https://arxiv.org/abs/2609.13134",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md",
+      "priority": 91,
+      "reason": "現代LLMで増えているsparse/linear/sliding-windowなどのsubquadratic attentionに対し、従来のprefill/decode分離やattention/FFN分離ではなく、context依存で全KVを参照するquadratic側と固定・有界stateを持つsubquadratic attention+FFN側をDRAM GPU/SRAM acceleratorへ分けるSQDを提案する。GLM 5.2、Nemotron 3 Ultra、Gemma 4 31Bを対象に、B200 proxyでGPU-only比tokens/Jを31–56%改善し、Rubin+LPX解析ではattention-FFN分離比で最大3.6x throughputを報告しており、異種メモリ階層・分離サービング・KV配置をattention構造と協調設計する新しいsystems軸として優先度が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T19:00:00+09:00",
+    "round": "specialist-subquadratic-disagg-1",
+    "axis": "subquadratic attention・DRAM/SRAM異種分離サービング",
+    "query_summary": "直前のMoE cache/router軸を反復せず、2026年9月の新着からLLM inference serving、KV cache、MoE、disaggregationを横断検索した。既知KV候補が多い中、subquadratic attentionの計算・state特性を異種DRAM/SRAM配置へ直接結び付ける新規systems論文SQDを抽出し、arXiv IDを最新GitHub正本で再検索して未収録を確認した。SAS (2609.13141) はattention学習手法が中心のため今回のsystems候補からは除外した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はSQDと重ならないGPU runtime/kernel・通信collectiveの新着、または既収録disaggregation論文のforward citationからKV転送・interconnect schedulingへ展開する",
+    "empty_round_reason": null
+  }
+}
