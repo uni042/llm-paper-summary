@@ -1,68 +1,68 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-2767bee85a3612f009a3c651",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "results",
-  "attempt_id": "attempt-005c2488539329fa13df896f",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "overview": "Apt-Serveは全モデル・全データセットで基準方式より高いSLO維持可能到着率を示し、特に長い出力や長い入力でKV寿命・容量が支配的になるShareGPT/LongBenchで差が大きい。90% SLO達成点ではvLLM/Sarathi/FastGen比の平均が2.3/1.9/1.8倍、最大4.0/3.4/3.3倍。60%点では平均4.9/4.4/4.3倍、最大8.8/7.9/7.5倍。",
+    "overview": "SGLangのバッチ不変決定的モードはオフラインで非決定的モードより24〜36%スループットが低下した。LLM-42は通常カーネルを維持するため、決定的要求比率が低いほど非決定的上限へ近づく。ArXivでは決定的要求5/10/20/50%で上限との差がそれぞれ8/2/1/1%となり、10%決定的時にはShareGPTでSGLang決定的モードより33%高速、別の長さ構成では最大48%高速だった。巻き戻しは多くの条件で少なく、全要求決定的な最悪ArXivでも4096要求に3351回、再計算トークン割合10.97%だった。",
     "key_results": [
       {
-        "metric": "最大有効スループット改善",
-        "value": "8.8倍",
-        "baseline": "vLLM",
-        "condition": "60% SLO達成点、3モデル×3データセット中の最大値",
-        "interpretation": "HBM容量とバッチ構成が強い制約になる高負荷域で最大差が出る。"
+        "metric": "SGLang決定的モードのオフライン性能損失",
+        "value": "24〜36%低下",
+        "baseline": "SGLang非決定的モード",
+        "condition": "8オフライン構成",
+        "interpretation": "バッチ不変カーネルを全要求へ常時適用する固定費用が大きい。"
       },
       {
-        "metric": "90% SLO達成点の平均到着率倍率",
-        "value": "2.3倍 / 1.9倍 / 1.8倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "ShareGPT・HumanEval・LongBench、OPT-13B/30B/66B平均",
-        "interpretation": "厳しいSLO達成率でも一貫して有効スループットを改善。"
+        "metric": "LLM-42の選択的決定性スループット",
+        "value": "最大48%高速",
+        "baseline": "SGLang決定的モード",
+        "condition": "10%決定的トラフィック、入力2048/出力256等",
+        "interpretation": "対象要求だけ検証するため、決定性が少数なら通常高速経路の性能をほぼ維持する。"
       },
       {
-        "metric": "ShareGPT 60%点",
-        "value": "7.4倍 / 6.8倍 / 6.4倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "3モデル平均",
-        "interpretation": "長い出力でKV寿命が長くなるほどhybrid cacheの同時実行数増加が効く。"
+        "metric": "ArXivで非決定的上限との差",
+        "value": "5%時8%、10%時2%、20%時1%、50%時1%",
+        "baseline": "SGLang非決定的モード",
+        "condition": "オフラインArXiv",
+        "interpretation": "トラフィック構成に応じて検証費用が滑らかに増える。"
       },
       {
-        "metric": "LongBench 90%点",
-        "value": "2.8倍 / 2.5倍 / 2.3倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "3モデル平均",
-        "interpretation": "長い入力による大きなキャッシュ占有をhidden cacheで緩和。"
+        "metric": "最悪の巻き戻し頻度",
+        "value": "3351回 / 4096要求",
+        "baseline": "なし",
+        "condition": "ArXiv、100%決定的",
+        "interpretation": "最悪構成でも平均1要求1回未満で、高速経路候補の大半は採用できる。"
       },
       {
-        "metric": "burst到着のSLO達成率",
-        "value": "最大7.5倍",
-        "baseline": "vLLM/Sarathi-Serve",
-        "condition": "OPT-13B、Gamma到着のCV掃引",
-        "interpretation": "到着のバースト性が増すほど適応バッチ再編の価値が高まる。"
+        "metric": "最悪の再計算割合",
+        "value": "10.97%",
+        "baseline": "総生成トークン",
+        "condition": "ArXiv、100%決定的",
+        "interpretation": "不一致修復の追加計算は有限で、多くの他構成ではさらに小さい。"
       },
       {
-        "metric": "適応スケジューリングの除去影響",
-        "value": "LongBench 1.5 req/s, CV=1: 11.8%→98.2%",
-        "baseline": "FCFS → adaptive",
-        "condition": "hybrid cacheは維持",
-        "interpretation": "利得の大部分はキャッシュだけでなくバッチ構成最適化にも依存。"
+        "metric": "高負荷TTFT",
+        "value": "P90 101.2ms vs 171.6ms",
+        "baseline": "SGLang決定的モード",
+        "condition": "18 QPS、100%決定的",
+        "interpretation": "全要求が決定的でも高負荷では固定バッチ不変方式より先頭応答の裾を抑えられる。"
       },
       {
-        "metric": "スケジューラ実行時間",
-        "value": "1,600候補で10.8 ms",
-        "baseline": "50候補で0.3 ms",
-        "condition": "OPT-13B単一GPU",
-        "interpretation": "50要求decode反復約120 msに対し大規模候補でも制御オーバーヘッドは小さい。"
+        "metric": "グループ検証P99",
+        "value": "34〜35秒",
+        "baseline": "単一要求検証の最良56.18秒",
+        "condition": "12 QPS、100%決定的、総256検証トークン",
+        "interpretation": "短い窓を複数要求でまとめることで再計算増加を抑えながらGPU利用効率を上げる。"
       }
     ],
-    "negative_results": "HumanEvalは出力が短く長さ分散も小さいため改善幅が小さく、90% SLO点でvLLM/Sarathi/FastGen比平均1.7/1.4/1.4倍に留まる。また元のSLO-aware fallbackは一部（約10%）要求を飢餓させ高いtail latencyを生む。hidden cacheのみでは改善が限定的な条件もあり、例えばShareGPT 3 req/s, CV=1ではKVのみ/Hybridとも99.5%で差がない。",
-    "interpretation": "Apt-Serveの主要な示唆は、LLMサービングのキャッシュを『保持する/捨てる』だけでなく、再計算費用の異なる複数の正確な中間表現として扱い、スケジューラが同時実行数と反復速度の交換点を選べることにある。メモリ最適化とスケジューリングを別々に行うより、同じ目的関数で共同最適化する方が高負荷で有効。",
-    "quality_impact": "hidden cacheは同じTransformer隠れ状態からK/Vを再生成するためモデル出力品質の近似を導入しない。主な品質外の代償はTBT、tail latency、再prefill費用。"
+    "negative_results": "100%決定的かつ低いQPSでは、現実装の検証が全進行中要求を一時停止することとプリフィルを要求間でバッチ化しないことにより、LLM-42がSGLang決定的モードより遅くなる条件がある。ShareGPTの100%決定的オフラインでもSGLang決定的モードより6%遅い。単一要求検証で窓を512まで広げると再計算費用42.33%となり、P99も128窓の56.18秒から99.94秒へ悪化する。",
+    "interpretation": "決定性のためにすべての演算を最悪条件へ固定する必要はなく、通常は一致するというLLMデコードの性質を利用して、まれな不一致だけを検証・修復すればよいことを示す。特に決定性が評価・監査等の一部トラフィックだけに必要な運用では、固定費用型のバッチ不変方式より有利である。",
+    "quality_impact": "出力意味品質を近似する方式ではない。固定サンプリング条件での実行間再現性を強制し、不一致候補は利用者へ返さず再計算する。"
   },
   "reservation": {
-    "claim_id": "claim-005c2488539329fa13df896f",
+    "claim_id": "claim-2767bee85a3612f009a3c651",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }

@@ -1,1 +1,109 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-005c2488539329fa13df896f","job_id":"job-research-b22f71500ae1903a","data":{"canonical_id":"arXiv:2504.07494","arxiv_id":"2504.07494","doi":"10.1145/3725394","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving","summary":"Apt-Serveは、高負荷な大規模言語モデル（LLM）サービングで最初のトークンまでの時間（Time To First Token; TTFT）のサービス水準目標（Service-Level Objective; SLO）達成率が急落し、有効スループットが頭打ちになる問題を、キャッシュ表現と要求スケジューリングを一体化して解く。各層のキー・値を保持するKVキャッシュに加え、同じ層の入力隠れ状態だけを保持するhidden cacheを導入する。hidden cacheはKVの約半分のメモリで済む代わりに復号時にK/V投影を再計算する。このメモリ・計算交換を要求ごと・反復ごとに選び、待機時間とキャッシュ所要量からバッチ構成をナップサック型最適化として定式化し、近似比2の貪欲法で解く。vLLM上の実装をA100 40GB、OPT-13B/30B/66B、ShareGPT・HumanEval・LongBenchで評価し、60% SLO達成点でvLLM比最大8.8倍、90%点で最大4.0倍の有効スループット向上を示す。","list_summary":"KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。","authors":["Shihong Gao","Xin Zhang","Yanyan Shen","Lei Chen"],"authors_affiliations":"The Hong Kong University of Science and Technology; Shanghai Jiao Tong University; The Hong Kong University of Science and Technology (Guangzhou).","published":"2025-04-10","publication":"Proceedings of the ACM on Management of Data (PACMMOD), Vol. 3, No. 3 (SIGMOD), Article 130, June 2025","publication_type":"査読済み国際会議論文・arXivプレプリント","publication_status":"PACMMOD Vol.3 No.3 (SIGMOD 2025), DOI 10.1145/3725394。arXiv v1は2025-04-10。","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMサービング","適応スケジューリング","KVキャッシュ","隠れ状態キャッシュ","有効スループット","TTFT","SLO"],"importance":"高。キャッシュの省メモリ化を単なる圧縮ではなく、反復ごとのバッチ選択と同じ最適化問題へ組み込み、計算量増加と同時実行数増加の交換関係を明示的に制御する。","hardware_evaluation":"実機。NVIDIA A100 40GBを1/2/4 GPU構成で使用し、NVLinkを利用。","hardware_details":"OPT-13Bは1×A100 40GB、OPT-30Bは2×A100 80GB、OPT-66Bは4×A100 160GB。FP16、複数GPU時はテンソル並列。","quality_effect":"モデル重みや生成確率を近似しないため出力品質を意図的に変更しない。hidden cacheは過去K/Vを再計算する実行方式であり、主な代償は復号計算量とTBTの増加。評価は品質スコアではなくSLO達成率を主対象とする。","storage_targets":["GPU HBM上のKVキャッシュ","GPU HBM上の入力隠れ状態キャッシュ","ブロック単位キャッシュメモリプール"],"bottlenecks":["KVキャッシュ容量によるバッチサイズ上限","高負荷時のTTFT待ち行列遅延","FCFSによる硬直したバッチ構成","hidden cache利用時のK/V再投影計算","キャッシュ形式切替時の再prefill"],"evidence_locations":["§3.1–3.2","§4.1–4.3","§5","§6.1–6.7","Tables 2–6","Figures 8–12"],"source":"https://arxiv.org/abs/2504.07494","sources":["https://arxiv.org/abs/2504.07494","https://arxiv.org/html/2504.07494v1","https://arxiv.org/pdf/2504.07494","https://github.com/eddiegaoo/Apt-Serve","https://doi.org/10.1145/3725394"],"code":"https://github.com/eddiegaoo/Apt-Serve","implementation":"vLLM上に公開実装。反復ごとの実行時情報追跡、適応スケジューラ、KV/hidden cache共用のブロック型メモリプール、断片化したhidden cacheのreshapeと読み書きを融合する専用CUDAカーネルを追加し、複数GPUではNCCLテンソル並列を用いる。","last_checked":"2026-09-15","references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve","canonical_id":"arXiv:2403.02310","arxiv_id":"2403.02310"},{"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving","canonical_id":"arXiv:2401.09670","arxiv_id":"2401.09670"},{"canonical_id":"arXiv:2308.14508","title":"LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"}],"references_checked_at":"2026-09-15","references_source":"arXiv v1 HTML参考文献節","references_total":91},"reservation":{"claim_id":"claim-005c2488539329fa13df896f","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "attempt_id": "attempt-2767bee85a3612f009a3c651",
+  "job_id": "job-research-1fc8cd177d28f575",
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2601.17768",
+    "arxiv_id": "2601.17768",
+    "doi": "10.48550/arXiv.2601.17768",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.DC"
+      ]
+    },
+    "title": "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+    "summary": "LLM-42は、動的バッチ処理によって同じトークン位置でもGPUカーネルの浮動小数点加算順序が変わり、同一プロンプトの出力が実行ごとに分岐する問題を、全カーネルをバッチ不変へ書き換えずに解くサービング方式である。通常の高速デコードでは既存の最適化済みカーネルをそのまま使い、一定数の候補トークンがたまった時だけ固定形状で再実行する検証を挟む。検証結果と候補が一致する範囲だけを確定し、不一致が出た位置以降を巻き戻してKVキャッシュも検証側の値へ置き換える。さらに複数要求の短い検証窓をまとめるグループ検証により、短窓の低い再計算量と大きなバッチの高いGPU効率を両立する。SGLang 0.5.3rc0上で4基のH100 PCIeを用い、Llama-3.1-8B-Instructを評価した結果、バッチ不変SGLangがオフラインで24〜36%のスループット低下を受けるのに対し、決定的要求が少ないと非決定的SGLangの性能へ近づき、10%決定的トラフィックではShareGPTでSGLang決定的モードより33%高速、別条件では最大48%高速だった。",
+    "list_summary": "動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。",
+    "authors": [
+      "Raja Gond",
+      "Aditya K Kamath",
+      "Ramachandran Ramjee",
+      "Ashish Panwar"
+    ],
+    "authors_affiliations": "Microsoft Research; University of Washington",
+    "published": "2026-01-25",
+    "publication": "SOSP 2026 / arXiv:2601.17768v2",
+    "publication_type": "査読付き国際会議論文",
+    "publication_status": "SOSP 2026採録。arXiv初稿は2026-01-25、v2は2026-01-30。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "決定的LLM推論",
+      "動的バッチ処理",
+      "検証付き投機実行",
+      "デコード・検証・巻き戻し",
+      "SGLang",
+      "再現性"
+    ],
+    "importance": "高。決定性をGPUカーネル固有の性質からスケジューラへ移し、決定性が必要な要求だけに検証費用を課す設計を示すため、再現可能推論と高スループットの両立という新しいサービング設計点を提供する。",
+    "hardware_evaluation": "4×NVIDIA H100 PCIe 80GB HBM3、各GPU 114 SM。ホストは64物理コア/128ハードウェアスレッド、約1.65TB DRAM。",
+    "hardware_details": "主性能評価はLlama-3.1-8B-Instruct、SGLang 0.5.3rc0、FlashAttention-3。検証時はKV分割数を1に固定し、通常デコードは既定設定を使う。",
+    "quality_effect": "固定したサンプリング条件に対してビットレベルの再現性を保証することが目的で、モデル近似による意味品質低下を導入する方式ではない。非貪欲サンプリングではSGLangのseed付き決定的サンプラを用いる。",
+    "storage_targets": [
+      "GPU HBM上のKVキャッシュ",
+      "検証窓の候補トークンと状態",
+      "巻き戻し時に修復されるKVエントリ"
+    ],
+    "bottlenecks": [
+      "バッチ不変カーネルによる固定性能損失",
+      "検証再実行の計算費用",
+      "不一致時の巻き戻しと再計算",
+      "オンライン負荷変動による検証効率低下"
+    ],
+    "evidence_locations": [
+      "§3 Observations",
+      "§4 LLM-42",
+      "§4.2 Decode-Verify-Rollback",
+      "§4.3 Grouped Verification",
+      "§5 Evaluation",
+      "Table 4-5",
+      "Figure 10-12",
+      "§5 Discussion"
+    ],
+    "source": "https://arxiv.org/abs/2601.17768",
+    "sources": [
+      "https://arxiv.org/abs/2601.17768",
+      "https://arxiv.org/pdf/2601.17768",
+      "https://github.com/microsoft/llm-42"
+    ],
+    "code": "https://github.com/microsoft/llm-42",
+    "implementation": "SGLang v0.5.3系を基盤に実装され、Microsoftの公開リポジトリにデコード・検証・巻き戻し本体、バッチ不変比較実装、ベンチマーク、SOSP 2026成果物再現スクリプトが公開されている。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "canonical_id": "arXiv:2302.01318",
+        "title": "Accelerating Large Language Model Decoding with Speculative Sampling"
+      },
+      {
+        "canonical_id": "arXiv:2505.09056",
+        "title": "A Comprehensive Analysis of Large Language Model Outputs: Similarity, Diversity, and Bias"
+      },
+      {
+        "canonical_id": "arXiv:2001.08361",
+        "title": "Scaling Laws for Neural Language Models"
+      },
+      {
+        "canonical_id": "arXiv:2506.09501",
+        "title": "Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning"
+      },
+      {
+        "canonical_id": "arXiv:2407.03582",
+        "title": "Integrating Randomness in Large Language Models"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv:2601.17768v2一次資料の参考文献節",
+    "references_total": 48,
+    "last_audited": null,
+    "audit_version": 0
+  },
+  "reservation": {
+    "claim_id": "claim-2767bee85a3612f009a3c651",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

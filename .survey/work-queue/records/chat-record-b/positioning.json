@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-2767bee85a3612f009a3c651",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "positioning",
-  "attempt_id": "attempt-005c2488539329fa13df896f",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "limitations": "主評価はA100同質サーバとOPT系列に集中し、到着時刻はPoisson/Gammaで合成されるため、本番の相関・日内変動や異種GPUクラスタでの外挿には注意が必要。cache type切替時は既存キャッシュを破棄してprefillを再実行する。SLO最大化目的のfallbackは既に違反した要求を強く降格するため、約10%で飢餓が観測される。論文自身も複数インスタンスを将来課題としている。",
-    "differences": "PagedAttention/vLLMはKVの断片化を抑えて容量を効率利用するが、保存表現自体はKVのまま。Sarathi-Serve/FastGenはprefill/decode混在で計算干渉を抑えるが、キャッシュ表現と要求選択を共同最適化しない。Apt-Serveはhidden stateという半容量の正確な代替表現を導入し、要求採用と表現選択を一つのメモリ制約付き最適化として反復ごとに解く。",
-    "implementation_status": "vLLM上の実装を著者がGitHub（eddiegaoo/Apt-Serve）で公開。専用CUDAカーネルとスケジューラを含む。査読済みPACMMOD/SIGMOD 2025論文。",
-    "research_positioning": "KVキャッシュ管理とSLO認識サービング・スケジューリングの境界にある。キャッシュ圧縮・オフロードのように容量だけを下げるのではなく、正確な中間表現を切り替えて計算量と容量を動的に交換する。",
-    "relation_to_existing_repository": "KV-cache offload/recomputation系の『低速階層へ退避するか再計算するか』という交換関係と近いが、Apt-ServeはGPU HBM内で表現粒度を変える。FlowKVのような転送最適化、Agent MemoryのようなSSD永続化、SAECacheの追い出し優先度とは相補的で、将来はKV/hidden/CPU/SSDを複数段階の候補として同じ限界価値/メモリ・I/O費用に拡張できる。Sarathi-Serveとの組合せで元方式よりさらに改善することも論文が実証している。",
+    "limitations": "性能評価はLlama-3.1-8B-Instructが中心で、追加Qwenモデルは正しさ確認に限られる。現H100 PCIe環境はmultimem/NVLSを利用できず、公平な多GPU性能比較をしていない。検証は全要求へ一時停止を波及させ、選択的決定性でも非対象要求に遅延を加える。プリフィルとデコードが異なる削減戦略を使うため接頭辞KV共有をサポートせず、通常の投機的復号とも未統合である。",
+    "differences": "既存のバッチ不変推論はGEMM等をバッチ形状に依存しない削減順序へ全面的に置き換え、全要求を常に決定的にする。LLM-42は通常の高速カーネルと動的バッチを候補生成に残し、固定形状の検証だけを決定的な基準実行にするため、カーネル改変を減らし、決定的要求比率に応じて費用を支払う。通常の投機的復号が小型ドラフト等の近似計算から候補を作るのに対し、LLM-42は同一モデルの通常計算で候補を作り、浮動小数点削減順序の違いだけを検証する。",
+    "implementation_status": "公開実装あり。MicrosoftのGitHubリポジトリはSGLang派生コード、LLM-42本体、カーネル、ベンチマーク、SOSP 2026成果物評価用スクリプトを含む。",
+    "research_positioning": "LLMサービングのスケジューリングと再現可能推論の交点に位置する。連続バッチ、PagedAttention、分離サービング等が通常は非決定性を前提に性能を追求するのに対し、LLM-42は高性能な動的実行を維持しつつ、必要な要求だけに再現性を後付けする。",
+    "relation_to_existing_repository": "SGLang/vLLMのバッチ不変推論系統とは目的を共有するが、決定性をカーネル設計からスケジューラの検証へ移す点で補完・対照関係にある。投機的復号系統からは候補生成・検証・巻き戻しという制御構造を借りる一方、候補生成の近似や小型モデルは使わない。サービングスケジューリング系統に対しては、要求属性としての決定性を優先度・バッチ編成へ組み込む新しい制約を与える。",
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-005c2488539329fa13df896f",
+    "claim_id": "claim-2767bee85a3612f009a3c651",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }

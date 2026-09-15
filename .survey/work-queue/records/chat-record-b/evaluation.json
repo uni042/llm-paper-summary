@@ -1,39 +1,52 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-2767bee85a3612f009a3c651",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "evaluation",
-  "attempt_id": "attempt-005c2488539329fa13df896f",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "hardware": "NVIDIA A100 40GB。OPT-13Bは1 GPU、OPT-30Bは2 GPU、OPT-66Bは4 GPU。GPU間NVLink。",
-    "software": "vLLMベースの公開Apt-Serve実装。FP16、FlashAttention、iteration-level batching、NCCLテンソル並列、専用hidden-cache CUDAカーネル。",
-    "methodology": "ShareGPT（チャット）、HumanEval（コード補完）、LongBench（要約）から各1,000要求を無作為抽出し、Poisson到着率を掃引。OPT-13B/30B/66BでvLLM、Sarathi-Serve、DeepSpeed-FastGenと比較し、全方式でキャッシュ用GPUメモリ利用率を揃える。TTFTと各要求のP99 TBTの双方を満たす要求割合をSLO達成率とし、同一達成率で維持可能な最大到着率を有効スループットとする。Gamma到着でburstiness、構成除去、スケジューラオーバーヘッド、Sarathi統合、超長文モデル・データも追加評価。",
-    "scope": "主評価は単一サーバ内A100とOPT 13B–66B。超長文ではLLaMA3-8B-Instruct-262KとYi-6B-200Kへ拡張するが、異種GPU、複数サーバの独立インスタンス間ルーティング、本番到着トレースは主評価外。",
-    "workloads": [
-      "ShareGPT",
-      "HumanEval",
-      "LongBench",
-      "WikiText（超長文追加評価）",
-      "Arxiv（超長文追加評価）",
-      "BookCorpus（超長文追加評価）"
+    "hardware": [
+      "NVIDIA H100 PCIe 80GB HBM3 ×4（各114 SM）",
+      "64物理コア/128スレッドCPU",
+      "約1.65TB DRAM"
+    ],
+    "software": [
+      "SGLang 0.5.3rc0",
+      "FlashAttention-3",
+      "公開LLM-42実装"
+    ],
+    "model": [
+      "Llama-3.1-8B-Instruct"
+    ],
+    "datasets": [
+      "ShareGPT 92,812要求",
+      "ArXiv test split 5,941要求",
+      "入力/出力長を変えた合成ワークロード"
     ],
     "baselines": [
-      "vLLM",
-      "Sarathi-Serve",
-      "DeepSpeed-FastGen"
+      "SGLang非決定的モード",
+      "SGLang決定的モード（バッチ不変計算）"
     ],
-    "metrics": [
-      "SLO達成率",
-      "有効スループット（req/s）",
-      "TTFT",
-      "P99 TBT",
-      "tail latency",
-      "スケジューリング時間"
+    "correctness": "固定したサンプリング条件で、検証済みトークンだけを利用者へ返し、内部KV状態も検証パスへ修復することで実行間の同一出力を保証する。追加モデルではQwen-4B-Instruct-2507、Qwen3-14B、Qwen3-30B-A3B-Instruct-2507でも正しさを確認したが、性能値はLlama-3.1-8Bのみ。",
+    "settings": [
+      {
+        "name": "オフライン",
+        "description": "8構成、各4096要求。決定的要求割合を2/5/10/20/50/100%に変化。グループ検証の代表設定は8要求×64トークン。"
+      },
+      {
+        "name": "オンライン",
+        "description": "ShareGPTで各4096要求、12/14/16/18 QPS。エンドツーエンド遅延と先頭トークン時間を測定。"
+      },
+      {
+        "name": "グループ検証除去評価",
+        "description": "12 QPS、全要求決定的。要求ごとの窓を16〜512、同時検証要求数を1〜32へ掃引。"
+      }
     ],
-    "reproducibility": "公開GitHub実装、モデル/GPU構成、SLO、データセット、到着生成法、主要比較方式を明示。実運用トレースではなく合成Poisson/Gamma到着である点は外的妥当性の制約。"
+    "methodology": "決定的トラフィック比率を変えて、バッチ不変方式が全要求へ固定費用を課すのに対し、LLM-42の費用が対象要求量に追随するかを比較する。巻き戻し回数と再計算トークン数も測定して高速経路の一致率を検証する。",
+    "scope": "主性能評価は単一モデルかつH100 PCIe 4基の環境。追加モデルと1〜4GPUでは正しさのみ確認し、NVLS/multimemを使う公平な多GPU性能比較は未実施。"
   },
   "reservation": {
-    "claim_id": "claim-005c2488539329fa13df896f",
+    "claim_id": "claim-2767bee85a3612f009a3c651",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }
