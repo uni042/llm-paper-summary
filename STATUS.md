@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:38:48 JST**
+> 自動生成: **2026-09-15 20:40:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **5** | **2** | **3** | **1** | **0** | — |
+| Research | **4** | **5** | **2** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **11** | **12** | **3** | **9** | **1** | **0** | **7** |
+| 合計 | **9** | **12** | **3** | **9** | **1** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -44,16 +44,6 @@
   - result: `.survey/work-queue/results/research/attempt-c49070062ccb7f1cec99a5aa.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c49070062ccb7f1cec99a5aa.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md`
-- **09-15 14:40:22 JST** [research] `arXiv:2608.05303` — EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-ad7e8d527bf159c7.json`
-  - result: `.survey/work-queue/results/research/attempt-1829cd0996ad73e7ae285518.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1829cd0996ad73e7ae285518.json`
-  - paper: `papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md`
-- **09-15 14:39:13 JST** [research] `arXiv:2507.08045` — Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing
-  - job: `.survey/work-queue/jobs/job-research-3540240bb76e82ea.json`
-  - result: `.survey/work-queue/results/research/attempt-799320e651c4286ff39ecfa7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-799320e651c4286ff39ecfa7.json`
-  - paper: `papers/inference/05-kv-cache-memory-management/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md`
 
 ### Audit
 
