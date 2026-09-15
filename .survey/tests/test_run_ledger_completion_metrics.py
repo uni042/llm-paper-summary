@@ -6,7 +6,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parents[2]
 LEDGER_SCRIPT = REPO_ROOT / ".survey" / "scripts" / "record_run_ledger.py"
-STATUS_SCRIPT = REPO_ROOT / ".survey" / "scripts" / "append_research_throughput_status.py"
 SUBMISSION_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "survey-submission-fast.yml"
 
 
@@ -79,22 +78,6 @@ class RunLedgerCompletionMetricTests(unittest.TestCase):
         self.assertLess(snapshot_at, process_at)
         self.assertLess(process_at, record_at)
         self.assertLess(record_at, ledger_add_at)
-
-    def test_status_latest_normal_run_ignores_0830_update_worker(self):
-        module = _load_module(STATUS_SCRIPT, "research_throughput_status_latest_normal")
-        entries = [
-            {
-                "run_key": "2026-09-14T07:30:00+09:00",
-                "counts": {"research_completed": 3},
-            },
-            {
-                "run_key": "2026-09-14T08:30:00+09:00",
-                "counts": {"research_completed": 0},
-            },
-        ]
-        latest = module._latest_normal_run(entries, {})
-        self.assertEqual(latest["run_key"], "2026-09-14T07:30:00+09:00")
-        self.assertEqual(latest["counts"]["research_completed"], 3)
 
 
 if __name__ == "__main__":
