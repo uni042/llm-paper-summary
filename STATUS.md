@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 08:28:31 JST**
+> 自動生成: **2026-09-16 08:46:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **32** |
 | 未claim Research job | **33** |
 | 直近24hの検証済みResearch収録 | **15** |
-| 最終検証済みResearch収録 | **09-16 07:37:12 JST（51分前）** |
-| 整合性異常 | **28** |
+| 最終検証済みResearch収録 | **09-16 07:37:12 JST（1時間9分前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -246,15 +246,15 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 ### 整合性異常
 
-直接矛盾を確認できる耐久レコードだけを異常とします。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。
+直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。
 
 | 検出項目 | 件数 |
 |---|---:|
-| completed Research jobで指定paper実体なし | **17** |
-| 対応jobなしsubmission | **11** |
+| completed Research jobで指定paper実体なし | **0** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **28** |
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
@@ -266,7 +266,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - **論文実体数**: `papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README/comparison系/Movedスタブを除外します。
 - **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちや失敗済みを含み得るため整合性異常とは分離します。
 - **completed未検証**: completedでも現行の厳格な照合条件が成立しないjobを別計上し、過去形式や移行履歴を含み得るため異常とは断定しません。
-- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。
+- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submissionは対応job欠損だけでは異常にしません。
 - **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
 - **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
