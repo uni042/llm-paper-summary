@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.03036",
+      "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+      "source_url": "https://arxiv.org/abs/2608.03036",
+      "paper_path": "papers/survey/2026-2608.03036-llm-serving-in-the-wild.md",
+      "priority": 76,
+      "reason": "vLLM、SGLang、TensorRT-LLM、LMDeploy、FlashInferの実OSS採用を大規模に分析し、serving手法の組合せ、モデル種別・用途別採用、複数framework併用の実態を整理するempirical study。新規推論手法ではないが、研究系統と実運用採用のギャップを確認するsurvey資料として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-serving-empirical-4",
+    "axis": "実運用LLM serving framework採用・empirical systems survey",
+    "query_summary": "MoE実装軸から独立して、OSS上のserving framework採用とシステム設計を実証的に分析する研究を探索。arXiv:2608.03036はrepo内ID検索で既存表現を確認できず、Survey系候補として評価した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "新着2609のagentic serving、interruption/resume、sandbox memory管理などagent workload特有の推論システムへ展開する",
+    "empty_round_reason": null
+  }
+}
