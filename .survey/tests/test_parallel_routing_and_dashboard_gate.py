@@ -12,6 +12,8 @@ HELPER_WORKFLOW = ROOT / ".github/workflows/survey-helper.yml"
 CLAIM_WORKFLOW = ROOT / ".github/workflows/survey-claim-fast.yml"
 SUBMISSION_WORKFLOW = ROOT / ".github/workflows/survey-submission-fast.yml"
 REPOSITORY_TESTS = ROOT / ".github/workflows/repository-tests.yml"
+CANONICAL_RENDER = "render_status_dashboard.py --repo-root . --output STATUS.md"
+LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
 class SpecialistOverflowRoutingTests(unittest.TestCase):
@@ -92,25 +94,28 @@ class StatusPublishGateTests(unittest.TestCase):
             "false",
         )
 
-    def test_status_workflow_is_direct_builder_only(self):
+    def test_status_workflow_uses_canonical_renderer_only(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("build_status_dashboard.py", text)
+        self.assertIn("render_status_dashboard.py", text)
+        self.assertNotIn(LEGACY_RENDER, text)
         self.assertNotIn("append_research_throughput_status.py", text)
         self.assertNotIn("refine_status_observability.py", text)
 
-    def test_fast_lanes_keep_compatibility_shims_inert_after_direct_build(self):
+    def test_fast_lanes_use_canonical_renderer_with_inert_compatibility_shims(self):
         for workflow in (CLAIM_WORKFLOW, SUBMISSION_WORKFLOW):
             text = workflow.read_text(encoding="utf-8")
             with self.subTest(workflow=workflow.name):
-                self.assertIn("build_status_dashboard.py --repo-root . --output STATUS.md", text)
+                self.assertIn(CANONICAL_RENDER, text)
+                self.assertNotIn(LEGACY_RENDER, text)
                 self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
                 self.assertIn("STATUS.md", text)
 
-    def test_background_helper_keeps_compatibility_shims_inert_after_direct_build(self):
+    def test_background_helper_uses_canonical_renderer_with_inert_compatibility_shims(self):
         text = HELPER_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("refresh_status_dashboard", text)
         self.assertIn("status_publish_gate.py", text)
-        self.assertIn("build_status_dashboard.py --repo-root . --output STATUS.md", text)
+        self.assertIn(CANONICAL_RENDER, text)
+        self.assertNotIn(LEGACY_RENDER, text)
         self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
         self.assertIn("refine_status_observability.py --repo-root . --status STATUS.md", text)
         self.assertIn("git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json", text)
