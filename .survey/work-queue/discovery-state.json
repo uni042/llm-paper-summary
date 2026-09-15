@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T03:59:37+00:00",
-  "last_run_key": "2026-09-15T12:00:00+09:00",
-  "last_round": "specialist-handoff-guard",
+  "updated_at": "2026-09-15T05:02:44+00:00",
+  "last_run_key": "2026-09-15T14:00:00+09:00",
+  "last_round": "specialist-moe-cache-router-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "handoff_guard_le_180_seconds_before_next_scheduled_slot",
+  "consecutive_empty_rounds": 5,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3388,6 +3388,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する",
       "source_submission": "work-queue/submissions/20260915T1259JST-discovery-specialist-handoff-guard.json"
+    },
+    {
+      "run_key": "2026-09-15T14:00:00+09:00",
+      "round": "specialist-moe-cache-router-1",
+      "axis": "MoE expert cache・router adaptation・weight traffic",
+      "query_summary": "直近のcold MoE multi-model serving軸を反復せず、2026年9月のMoE推論でexpert cache hit率とweight transferを直接改善する新着を探索した。arXiv:2609.04895についてGitHub code searchと最新queueで未収録を確認し、abstract・書誌・一次資料URLを軽量評価して候補化した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は新着のGPU runtime/kernel・量子化実行系、または収録済みexpert offload論文のforward citationからI/O schedulingとcache ownershipへ軸を移す",
+      "source_submission": "work-queue/submissions/20260915T1407JST-discovery-specialist-moe-cache-router-1.json"
     }
   ],
   "axes": {
@@ -5300,6 +5315,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する"
+    },
+    "MoE expert cache・router adaptation・weight traffic": {
+      "last_run_key": "2026-09-15T14:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は新着のGPU runtime/kernel・量子化実行系、または収録済みexpert offload論文のforward citationからI/O schedulingとcache ownershipへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

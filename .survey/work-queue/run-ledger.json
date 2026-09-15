@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T04:01:42.024315+00:00",
+  "updated_at": "2026-09-15T05:05:33.813327+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T04:01:42.024315+00:00",
+      "last_recorded_at": "2026-09-15T05:05:33.813327+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 77,
         "audit_completed": 0,
-        "discovery_completed": 15,
+        "discovery_completed": 16,
         "blocked": 1,
-        "new_jobs": 25,
+        "new_jobs": 26,
         "new_papers": 81,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34870282339:1",
-          "recorded_at": "2026-09-14T16:42:55.635692+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34870282339",
-            "run_attempt": "1",
-            "source_sha": "91f0ed279ae7047001135f6640f5bf449f83b933"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34870777709:1",
           "recorded_at": "2026-09-14T16:47:49.567140+00:00",
@@ -19600,6 +19586,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34931141860:1",
+          "recorded_at": "2026-09-15T05:05:33.813327+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34931141860",
+            "run_attempt": "1",
+            "source_sha": "1da237e6cc5244c1fd7cd9b490c72dc353e161f5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20346,6 +20346,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-d86e69d5d52d3a55",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20523,6 +20531,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-57c04f370a9f4d4d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20660,7 +20675,8 @@
         ".survey/work-queue/results/20260915T0903JST-discovery-specialist-adaptive-kv-1.json",
         ".survey/work-queue/results/20260915T1000JST-discovery-specialist-serving-restoration-1.json",
         ".survey/work-queue/results/20260915T1204JST-discovery-crosspool.json",
-        ".survey/work-queue/results/20260915T1259JST-discovery-specialist-handoff-guard.json"
+        ".survey/work-queue/results/20260915T1259JST-discovery-specialist-handoff-guard.json",
+        ".survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
