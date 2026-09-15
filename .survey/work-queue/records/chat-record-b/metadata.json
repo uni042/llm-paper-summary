@@ -1,9 +1,100 @@
 {
-  "schema_version":1,
-  "transport_version":10,
-  "slot":"metadata",
-  "attempt_id":"attempt-c4aaea90c49c672188d92cfd",
-  "job_id":"job-research-b22f71500ae1903a",
-  "data":{"canonical_id":"arXiv:2504.07494","arxiv_id":"2504.07494","doi":"10.1145/3725394","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving","summary":"Apt-Serveは、高負荷な大規模言語モデル（LLM）サービングで最初のトークンまでの時間（Time To First Token; TTFT）のサービス水準目標（Service-Level Objective; SLO）達成率が急落し、有効スループットが頭打ちになる問題を、キャッシュ表現と要求スケジューリングを一体化して解く。各層のキー・値を保持するKVキャッシュに加え、同じ層の入力隠れ状態だけを保持するhidden cacheを導入する。hidden cacheはKVの約半分のメモリで済む代わりに復号時にK/V投影を再計算する。このメモリ・計算交換を要求ごと・反復ごとに選び、待機時間とキャッシュ所要量からバッチ構成をナップサック型最適化として定式化し、近似比2の貪欲法で解く。vLLM上の実装をA100 40GB、OPT-13B/30B/66B、ShareGPT・HumanEval・LongBenchで評価し、60% SLO達成点でvLLM比最大8.8倍、90%点で最大4.0倍の有効スループット向上を示す。","list_summary":"KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。","authors":["Shihong Gao","Xin Zhang","Yanyan Shen","Lei Chen"],"authors_affiliations":"The Hong Kong University of Science and Technology; Shanghai Jiao Tong University; The Hong Kong University of Science and Technology (Guangzhou).","published":"2025-04-10","publication":"Proceedings of the ACM on Management of Data (PACMMOD), Vol. 3, No. 3 (SIGMOD), Article 130, June 2025","publication_type":"査読済み国際会議論文・arXivプレプリント","publication_status":"PACMMOD Vol.3 No.3 (SIGMOD 2025), DOI 10.1145/3725394。arXiv v1は2025-04-10。","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMサービング","適応スケジューリング","KVキャッシュ","隠れ状態キャッシュ","有効スループット","TTFT","SLO"],"importance":"高。キャッシュの省メモリ化を単なる圧縮ではなく、反復ごとのバッチ選択と同じ最適化問題へ組み込み、計算量増加と同時実行数増加の交換関係を明示的に制御する。","hardware_evaluation":"実機。NVIDIA A100 40GBを1/2/4 GPU構成で使用し、NVLinkを利用。","hardware_details":"OPT-13Bは1×A100 40GB、OPT-30Bは2×A100 80GB、OPT-66Bは4×A100 160GB。FP16、複数GPU時はテンソル並列。","quality_effect":"モデル重みや生成確率を近似しないため出力品質を意図的に変更しない。hidden cacheは過去K/Vを再計算する実行方式であり、主な代償は復号計算量とTBTの増加。評価は品質スコアではなくSLO達成率を主対象とする。","storage_targets":["GPU HBM上のKVキャッシュ","GPU HBM上の入力隠れ状態キャッシュ","ブロック単位キャッシュメモリプール"],"bottlenecks":["KVキャッシュ容量によるバッチサイズ上限","高負荷時のTTFT待ち行列遅延","FCFSによる硬直したバッチ構成","hidden cache利用時のK/V再投影計算","キャッシュ形式切替時の再prefill"],"evidence_locations":["§3.1–3.2","§4.1–4.3","§5","§6.1–6.7","Tables 2–6","Figures 8–12"],"source":"https://arxiv.org/abs/2504.07494","sources":["https://arxiv.org/abs/2504.07494","https://arxiv.org/html/2504.07494v1","https://arxiv.org/pdf/2504.07494","https://github.com/eddiegaoo/Apt-Serve","https://doi.org/10.1145/3725394"],"code":"https://github.com/eddiegaoo/Apt-Serve","implementation":"vLLM上に公開実装。反復ごとの実行時情報追跡、適応スケジューラ、KV/hidden cache共用のブロック型メモリプール、断片化したhidden cacheのreshapeと読み書きを融合する専用CUDAカーネルを追加し、複数GPUではNCCLテンソル並列を用いる。","last_checked":"2026-09-15","references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"},{"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"},{"canonical_id":"arXiv:2308.14508","title":"LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"}],"references_checked_at":"2026-09-15","references_source":"arXiv v1 HTML参考文献節","references_total":91},
-  "reservation":{"claim_id":"claim-c4aaea90c49c672188d92cfd","worker_id":"scheduled-chat-paper-20260915T1730JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-005c2488539329fa13df896f",
+  "job_id": "job-research-b22f71500ae1903a",
+  "data": {
+    "canonical_id": "arXiv:2504.07494",
+    "arxiv_id": "2504.07494",
+    "doi": "10.1145/3725394",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
+    "summary": "Apt-Serveは、高負荷な大規模言語モデル（LLM）サービングで最初のトークンまでの時間（Time To First Token; TTFT）のサービス水準目標（Service-Level Objective; SLO）達成率が急落し、有効スループットが頭打ちになる問題を、キャッシュ表現と要求スケジューリングを一体化して解く。各層のキー・値を保持するKVキャッシュに加え、同じ層の入力隠れ状態だけを保持するhidden cacheを導入する。hidden cacheはKVの約半分のメモリで済む代わりに復号時にK/V投影を再計算する。このメモリ・計算交換を要求ごと・反復ごとに選び、待機時間とキャッシュ所要量からバッチ構成をナップサック型最適化として定式化し、近似比2の貪欲法で解く。vLLM上の実装をA100 40GB、OPT-13B/30B/66B、ShareGPT・HumanEval・LongBenchで評価し、60% SLO達成点でvLLM比最大8.8倍、90%点で最大4.0倍の有効スループット向上を示す。",
+    "list_summary": "KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。",
+    "authors": [
+      "Shihong Gao",
+      "Xin Zhang",
+      "Yanyan Shen",
+      "Lei Chen"
+    ],
+    "authors_affiliations": "The Hong Kong University of Science and Technology; Shanghai Jiao Tong University; The Hong Kong University of Science and Technology (Guangzhou).",
+    "published": "2025-04-10",
+    "publication": "Proceedings of the ACM on Management of Data (PACMMOD), Vol. 3, No. 3 (SIGMOD), Article 130, June 2025",
+    "publication_type": "査読済み国際会議論文・arXivプレプリント",
+    "publication_status": "PACMMOD Vol.3 No.3 (SIGMOD 2025), DOI 10.1145/3725394。arXiv v1は2025-04-10。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "LLMサービング",
+      "適応スケジューリング",
+      "KVキャッシュ",
+      "隠れ状態キャッシュ",
+      "有効スループット",
+      "TTFT",
+      "SLO"
+    ],
+    "importance": "高。キャッシュの省メモリ化を単なる圧縮ではなく、反復ごとのバッチ選択と同じ最適化問題へ組み込み、計算量増加と同時実行数増加の交換関係を明示的に制御する。",
+    "hardware_evaluation": "実機。NVIDIA A100 40GBを1/2/4 GPU構成で使用し、NVLinkを利用。",
+    "hardware_details": "OPT-13Bは1×A100 40GB、OPT-30Bは2×A100 80GB、OPT-66Bは4×A100 160GB。FP16、複数GPU時はテンソル並列。",
+    "quality_effect": "モデル重みや生成確率を近似しないため出力品質を意図的に変更しない。hidden cacheは過去K/Vを再計算する実行方式であり、主な代償は復号計算量とTBTの増加。評価は品質スコアではなくSLO達成率を主対象とする。",
+    "storage_targets": [
+      "GPU HBM上のKVキャッシュ",
+      "GPU HBM上の入力隠れ状態キャッシュ",
+      "ブロック単位キャッシュメモリプール"
+    ],
+    "bottlenecks": [
+      "KVキャッシュ容量によるバッチサイズ上限",
+      "高負荷時のTTFT待ち行列遅延",
+      "FCFSによる硬直したバッチ構成",
+      "hidden cache利用時のK/V再投影計算",
+      "キャッシュ形式切替時の再prefill"
+    ],
+    "evidence_locations": [
+      "§3.1–3.2",
+      "§4.1–4.3",
+      "§5",
+      "§6.1–6.7",
+      "Tables 2–6",
+      "Figures 8–12"
+    ],
+    "source": "https://arxiv.org/abs/2504.07494",
+    "sources": [
+      "https://arxiv.org/abs/2504.07494",
+      "https://arxiv.org/html/2504.07494v1",
+      "https://arxiv.org/pdf/2504.07494",
+      "https://github.com/eddiegaoo/Apt-Serve",
+      "https://doi.org/10.1145/3725394"
+    ],
+    "code": "https://github.com/eddiegaoo/Apt-Serve",
+    "implementation": "vLLM上に公開実装。反復ごとの実行時情報追跡、適応スケジューラ、KV/hidden cache共用のブロック型メモリプール、断片化したhidden cacheのreshapeと読み書きを融合する専用CUDAカーネルを追加し、複数GPUではNCCLテンソル並列を用いる。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
+      },
+      {
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+      },
+      {
+        "canonical_id": "arXiv:2308.14508",
+        "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
+      }
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 91
+  },
+  "reservation": {
+    "claim_id": "claim-005c2488539329fa13df896f",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

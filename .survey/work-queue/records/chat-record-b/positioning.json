@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
+  "attempt_id": "attempt-005c2488539329fa13df896f",
   "job_id": "job-research-b22f71500ae1903a",
   "data": {
     "limitations": "主評価はA100同質サーバとOPT系列に集中し、到着時刻はPoisson/Gammaで合成されるため、本番の相関・日内変動や異種GPUクラスタでの外挿には注意が必要。cache type切替時は既存キャッシュを破棄してprefillを再実行する。SLO最大化目的のfallbackは既に違反した要求を強く降格するため、約10%で飢餓が観測される。論文自身も複数インスタンスを将来課題としている。",
@@ -13,8 +13,8 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-c4aaea90c49c672188d92cfd",
-    "worker_id": "scheduled-chat-paper-20260915T1730JST",
+    "claim_id": "claim-005c2488539329fa13df896f",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }
 }

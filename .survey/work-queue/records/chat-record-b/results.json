@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
+  "attempt_id": "attempt-005c2488539329fa13df896f",
   "job_id": "job-research-b22f71500ae1903a",
   "data": {
     "overview": "Apt-Serveは全モデル・全データセットで基準方式より高いSLO維持可能到着率を示し、特に長い出力や長い入力でKV寿命・容量が支配的になるShareGPT/LongBenchで差が大きい。90% SLO達成点ではvLLM/Sarathi/FastGen比の平均が2.3/1.9/1.8倍、最大4.0/3.4/3.3倍。60%点では平均4.9/4.4/4.3倍、最大8.8/7.9/7.5倍。",
@@ -62,8 +62,8 @@
     "quality_impact": "hidden cacheは同じTransformer隠れ状態からK/Vを再生成するためモデル出力品質の近似を導入しない。主な品質外の代償はTBT、tail latency、再prefill費用。"
   },
   "reservation": {
-    "claim_id": "claim-c4aaea90c49c672188d92cfd",
-    "worker_id": "scheduled-chat-paper-20260915T1730JST",
+    "claim_id": "claim-005c2488539329fa13df896f",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 18:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 18:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -44,21 +44,21 @@
 | 有効claim（lease） | **1** |
 | 今すぐ着手可能（Claimable） | **41** |
 | 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **2026-09-15T17:30:00+09:00** |
+| :30 最新worker run | **2026-09-15T18:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **2026-09-15T18:00:00+09:00** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 17:35 JST** |
+| :30 通常worker 直近lease活動 | **09-15 18:35 JST** |
 | :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **0** |
 | 直近24h Research完了（:00 補助worker） | **0** |
 | 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-15T17:30:00+09:00** |
-| 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **30 min** |
+| 最新通常run | **2026-09-15T18:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -68,7 +68,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=40 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=40 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。最新worker runはrun-ledger/discovery-stateも参照し、active leaseがない実行も表示します。claim由来のrun時刻はclaimed_atとの整合性を検証し、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
