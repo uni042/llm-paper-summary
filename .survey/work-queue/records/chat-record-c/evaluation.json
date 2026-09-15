@@ -1,53 +1,55 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-55fa2104d18bc1f9a648de40",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "evaluation",
+  "attempt_id": "attempt-2920381fc7a4e8f0d505a36f",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
     "hardware": [
-      "2×NVIDIA A100 SXM4 40GB（二地域実機試験）",
-      "2×NVIDIA H100 SXM5 80GB（二地域方向確認）",
-      "19地域の均質H100相当（履歴再生モデル）"
+      "NVIDIA RTX 4090"
     ],
     "software": [
-      "vLLM",
-      "NVIDIA DCGM",
-      "WattTime V3 MOER API",
-      "Solyx AI Grid本番圧力ルータ"
+      "CUDA/C++",
+      "NVIDIA Nsight Compute",
+      "MSKernelBench",
+      "CUDAMaster"
     ],
     "model": [
-      "Llama-3.1-8B-Instruct"
+      "OpenAI o4-mini",
+      "DeepSeek-V3.2"
     ],
-    "datasets": [
-      "約48時間の合成・持続到着ワークロード（約196万要求ターン）",
-      "2025-07-06〜2026-07-06の19地域・8760時間MOER系列"
-    ],
+    "datasets": "MSKernelBenchの50演算。密行列7、疎行列8、正規化4、活性化7、損失3、LLM演算列6、テンソル処理4、ステンシル5、数学・アルゴリズム6。各演算をFP32/BF16で評価し、合計100課題。",
     "baselines": [
-      "ラウンドロビン",
-      "炭素補正なしの本番圧力ルータ",
-      "モデル化した炭素非認識serve-local/spill負荷分散"
+      "MSKernelBenchの素朴/参照CUDA実装",
+      "cuBLAS",
+      "cuDNN",
+      "cuSPARSE",
+      "Astraで最適化したSGLang演算"
     ],
-    "correctness": "目的は出力品質ではなく配送機構・炭素帰属の妥当性である。実機では約196万要求ターンを配送失敗0件で処理し、各要求の配送時予測MOERと実行後履歴MOERを記録して精算する。モデルや生成手法は腕間で固定し、炭素配置以外の変数を可能な範囲で分離する。",
+    "correctness": "各入力規模でランダム試験を生成し、ground-truth実装との数値誤差が許容値内であることを要求する。関数名・引数などCインターフェースも固定し、コンパイル失敗は不正解。累積成功率のτ=0は機能正当性を表す。",
     "settings": [
       {
-        "name": "A100二地域実機",
-        "description": "AZPSとPJM-DC、2×A100 SXM4 40GB、約48時間。5 arrivals/sのセッション開始率、最大同時進行256。5配送腕を同時実行し、主要比較は炭素重み1.0と補正なし圧力ルータ。"
+        "name": "全体評価",
+        "description": "50演算×FP32/BF16の100課題をRTX 4090で最適化。CUDAMasterはR=3反復、候補ごとにD=3デバッグ試行。"
       },
       {
-        "name": "H100二地域実機",
-        "description": "ERCOT North-CentralとSOCO、2×H100 SXM5 80GB。初期signal-index方式の地域順位逆転を発見し、絶対MOER方式で清浄地域への移動方向を確認。期間が短く精算削減率は主張しない。"
+        "name": "性能計測",
+        "description": "各入力規模で3回ウォームアップ後50回実行し平均時間を計測。最終性能スコアは理論計算量に基づく複雑度加重平均速度向上。"
       },
       {
-        "name": "1年履歴再生",
-        "description": "19 CONUS地域、8760時間。地域当たり瞬間需要50%上限、40%の多ターン負荷を起点地域へ平均2時間固定。固定0.104 J/出力トークンのH100飽和相当を用い、5日ブロック・1万回ブートストラップで信頼区間を算出。"
+        "name": "代表演算比較",
+        "description": "SpMV CSR、2D Convolution、Dot ProductをcuSPARSE/cuDNN/cuBLASと、RMSNorm、SiLU&Mul、Merge Attention StatesをAstra最適化カーネルと比較。"
+      },
+      {
+        "name": "アブレーション",
+        "description": "反復/デバッグのFull、No Debug、Single Iteration、Single Runを比較し、さらにFiltered Profile、No Profile、Full Profileを比較。"
       }
     ],
-    "methodology": "実機試験は同じワークロードを要求単位で無作為に各腕へ割り当てるが、腕同士は同じGPU・待ち行列・圧力状態を共有するため相互干渉がある。したがって実機の遅延差・1.45%排出差は記述的結果として扱う。長期再生は実機で測れない季節・地域多様性を補う一方、履歴MOERを配送にも直接使う完全予見条件なので、予測誤差を含む本番削減率の推定ではなく機会上限として解釈する。",
-    "scope": "GPUに帰属する運用時CO2のみを評価し、施設PUE、ネットワーク、ハードウェア製造時排出は除外する。再生では均質GPU、固定J/トークン、概ね均等な起点需要を仮定し、地域別実GPU台数、通信遅延、接頭辞キャッシュ喪失、物理的な再生可能電力余力を含めない。"
+    "methodology": "マクロ指標は性能閾値τを超える正当な課題の割合。τ=0は正当性、τ=1は素朴基準を上回る割合、τ=2/4/8以上は高い速度向上の達成率を示す。ミクロ指標は同一の素朴基準に対するCUDAMasterと既存ライブラリ/研究実装の速度向上を直接比較する。",
+    "scope": "評価ハードウェアはRTX 4090の単一GPU、生成モデルはo4-miniとDeepSeek-V3.2の2系統、ベンチマークは50演算である。H100など別GPUや、実運用のLLMサービング全体での端から端効果は直接評価していない。"
   },
   "reservation": {
-    "claim_id": "claim-55fa2104d18bc1f9a648de40",
+    "claim_id": "claim-2920381fc7a4e8f0d505a36f",
     "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }

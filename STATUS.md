@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:14:32 JST**
+> 自動生成: **2026-09-16 07:14:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -137,14 +137,14 @@
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
 - `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving / worker `work-library-repair-20260916`
-  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
+  - claim: **09-16 07:14:57 JST** / heartbeat: **—** / lease expiry: **09-16 19:14:57 JST**
   - evidence: `.survey/work-queue/claims/job-research-382442b3f5faa67f.json`
+- `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts / worker `work-library-repair-20260916`
+  - claim: **09-16 07:14:57 JST** / heartbeat: **—** / lease expiry: **09-16 19:14:57 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d66acc5736f090e9.json`
 - `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-c6ac42b8bcec8aab.json`
-- `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts / worker `work-library-repair-20260916`
-  - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d66acc5736f090e9.json`
 - `arXiv:2609.09787` — Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-ea263cc3cccbe57a.json`

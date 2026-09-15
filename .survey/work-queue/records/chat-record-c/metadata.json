@@ -1,50 +1,100 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-55fa2104d18bc1f9a648de40",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "metadata",
+  "attempt_id": "attempt-2920381fc7a4e8f0d505a36f",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "canonical_id": "arXiv:2608.06188",
-    "arxiv_id": "2608.06188",
-    "doi": "10.48550/arXiv.2608.06188",
+    "canonical_id": "arXiv:2603.07169",
+    "arxiv_id": "2603.07169",
+    "doi": "10.48550/arXiv.2603.07169",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.PF"]},
-    "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
-    "summary": "本研究は、地理的に分散したLLM推論要求を、その時点で追加電力需要を担う発電源の排出強度が低い地域へ寄せることで、モデルやGPUを変更せず運用時排出量を減らせるかを検証する。既存の本番圧力ルータを置き換えず、各地域の待ち行列・負荷・容量から得る配置重みに、限界運用排出率（Marginal Operating Emissions Rate; MOER）由来の乗数を掛ける可逆な追加層として実装する。推論要求の電力消費はGPUの公称消費電力ではなくNVIDIA DCGMの実測並行度曲線から要求単位へ配賦し、配置時の予測MOERではなく実行後の履歴MOERで炭素量を精算する。A100を用いた約48時間・約196万要求ターンの二地域実機試験では配送失敗0件で実際に負荷配分が変化し、最強設定は通常の圧力ルータ比で実測配賦排出量を1.45%減らした一方、p95遅延は18.7秒から20.9秒へ11.7%増加した。さらに19地域・1年分の履歴MOER再生では、運用寄りの緩やかな乗数方式で約22.7%、容量上限付き最清浄地域優先方式で50.9%のモデル化排出削減を示す。ただし後者は履歴値を直接見て配送する完全予見上限で、地域容量、接頭辞キャッシュ、通信遅延、施設PUE、実際の再生可能電力余力などを十分にモデル化していない。",
-    "list_summary": "本番の負荷圧力ルータへ絶対MOER由来の可逆な配置補正を重ね、実機二地域で配送失敗なく負荷を移動できることを確認し、19地域・1年再生では仮定依存ながら約23〜51%のGPU運用排出削減余地を示す。",
-    "authors": ["Aleks Bernhard", "Arif Baran Yardimci"],
-    "authors_affiliations": "Solyx AI, Inc.",
-    "published": "2026-08-06",
-    "publication": "arXiv:2608.06188v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-08-06）。18ページ、4図。査読済み採録先は一次資料から確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["地理分散LLM推論", "炭素認識ルーティング", "限界運用排出率", "GPU電力計測", "負荷分散", "多地域サービング"],
-    "importance": "中〜高。新しい推論カーネルやスケジューラ算法ではなく、本番ルータへの小さな配置補正だけで実負荷が動くことを実機で示し、炭素指標の選び方・GPU利用率依存の電力・事後精算まで含めた運用方法を具体化する。特に地域間比較では各地域内の百分位ではなく絶対MOERを使う必要があるという失敗例を実測で示す点が有用。",
-    "hardware_evaluation": "実機試験は2地域×各1GPUのA100構成とH100構成。主要なA100試験は2×NVIDIA A100 SXM4 40GB、H100試験は2×NVIDIA H100 SXM5 80GB。履歴再生は19地域の均質H100相当を仮定するモデル評価。",
-    "hardware_details": "Llama-3.1-8B-InstructをvLLMで提供。DCGMによる並行度掃引でA100は低並行3.51 J/出力トークンから飽和時0.123 J/トークン、H100は3.37から0.104 J/トークンへ低下した。主要A100実機試験はAZPSとPJM-DCの二地域、約48時間。",
-    "quality_effect": "モデル、量子化、推論計算自体は変更しないため、意味品質を近似して排出量を下げる方式ではない。一方、地域移動で接頭辞キャッシュが失われる場合の再計算や地域間遅延は十分に評価されておらず、応答性能への影響は配置条件に依存する。",
-    "storage_targets": ["地域別GPU待ち行列・負荷・容量状態", "要求ごとの配送時予測MOERと実行後履歴MOER", "GPUテレメトリから作る並行度別J/トークン曲線", "会話セッションの地域固定状態"],
-    "bottlenecks": ["炭素の低い地域への集中による待ち行列増加", "地域ごとのMOER変動と予測誤差", "低並行度で急増するGPU当たり消費エネルギー", "地域間移動による接頭辞キャッシュ喪失", "実際の再生可能電力余力と地域容量の不確実性"],
-    "evidence_locations": ["§3 System design", "§4 Experimental methodology", "§5.1 Systems viability", "§5.2 A100 live results", "§5.3 absolute MOER interpretation", "§5.4 Energy characterization", "§6 Historical replay", "§7 Discussion and limitations", "Table 1-3"],
-    "source": "https://arxiv.org/abs/2608.06188",
-    "sources": ["https://arxiv.org/abs/2608.06188", "https://arxiv.org/html/2608.06188v1", "https://arxiv.org/pdf/2608.06188"],
-    "code": null,
-    "implementation": "Solyx AI Gridの既存本番圧力ルータへ炭素乗数を重ねる形で実装し、WattTime V3とNVIDIA DCGM、vLLMを用いた実機試験を行っている。論文は配送・再生ロジックを説明するが、ルーティング／配置ロジックは特許出願中で公開されておらず、公式コード公開URLも一次資料では確認できない。",
-    "last_checked": "2026-09-14",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+    "summary": "GPUカーネルの自動最適化研究がPyTorch由来のLLM演算へ偏り、疎行列・科学計算など不規則なメモリアクセスを十分に評価していない問題に対し、50演算×FP32/BF16のMSKernelBenchと、ハードウェア計測を選別して複数エージェントへ渡すCUDAMasterを提案する。CUDAMasterは計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、Planner/Coder/Compiler/Debugの4役が反復してコードと実行ツールチェーンを生成する。RTX 4090上の100最適化課題で、o4-miniは機能正当性100%、素朴基準を上回る成功率94%、2倍超60%を達成し、代表演算ではAstraやcuBLAS/cuSPARSE/cuDNNと同等以上のケースを示す。",
+    "list_summary": "50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報をPlanner/Coder/Compiler/Debugへ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。",
+    "authors": [
+      "Yuxuan Han",
+      "Meng-Hao Guo",
+      "Zhengning Liu",
+      "Wenguang Chen",
+      "Shi-Min Hu"
+    ],
+    "authors_affiliations": "Tsinghua University; Proxseer Inc.",
+    "published": "2026-03-07",
+    "publication": "arXiv:2603.07169v1",
+    "publication_type": "Preprint",
+    "publication_status": "プレプリント（arXiv v1、2026-03-07提出）",
+    "lineage": "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
+    "topics": [
+      "CUDA",
+      "GPUカーネル",
+      "自動最適化",
+      "LLMエージェント",
+      "Nsight Compute",
+      "ハードウェアプロファイル",
+      "HPC",
+      "LLM推論カーネル"
+    ],
+    "importance": "既存のKernelBench系評価をLLM演算だけでなく疎行列・ステンシル・数値計算へ広げ、単一入力サイズではなく複数規模を複雑度加重で評価する。さらに大量のプロファイルをそのままLLMへ投入せず、律速分類に応じた指標だけを選別し、コード生成だけでなくコンパイル・実行・デバッグまで閉ループ化する点が、低層推論カーネルの自動最適化基盤として重要。",
+    "hardware_evaluation": "NVIDIA RTX 4090で全カーネルのコンパイル、実行、NVIDIA Nsight Computeによる計測を実施。",
+    "hardware_details": "評価GPUはNVIDIA RTX 4090。ハードウェア分析はNsight Computeの計算スループット、DRAM/メモリスループット、キャッシュヒット率、IPC、SM稼働率等を使用する。",
+    "quality_effect": "モデル推論品質を近似する方式ではなく、CUDAカーネルの数値正当性を保ったまま実行時間を短縮する。各入力規模で参照実装と出力誤差を検証し、許容範囲内の候補だけを性能評価する。",
+    "storage_targets": [],
+    "bottlenecks": [
+      "計算律速",
+      "メモリ遅延律速",
+      "メモリ帯域律速",
+      "過剰なハードウェアプロファイル文脈",
+      "コンパイル・実行・デバッグのツール切替"
+    ],
+    "evidence_locations": [
+      "§3 MSKernelBench",
+      "§4 CUDAMaster",
+      "§5 Experiment",
+      "Table 2",
+      "Figure 4",
+      "Figure 5",
+      "Table 3-5",
+      "Appendix A/C"
+    ],
     "references": [
-      {"canonical_id": "arXiv:2606.15050", "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters"},
-      {"canonical_id": "arXiv:2502.05043", "title": "EcoServe: Designing Carbon-Aware AI Inference Systems"},
-      {"canonical_id": "arXiv:2502.14617", "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale (SAGESERVE)"},
-      {"canonical_id": "arXiv:2605.11603", "title": "GAR: Carbon-Aware Routing for LLM Inference via Constrained Optimization"},
-      {"canonical_id": "arXiv:2408.00741", "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"}
+      {
+        "canonical_id": "arXiv:2507.11948",
+        "arxiv_id": "2507.11948"
+      },
+      {
+        "canonical_id": "arXiv:2506.09092",
+        "arxiv_id": "2506.09092"
+      },
+      {
+        "canonical_id": "arXiv:2511.01884",
+        "arxiv_id": "2511.01884"
+      }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2608.06188v1一次資料の参考文献節。構造化リストには正規化識別子を確認できた文献のみ収録。",
-    "references_total": 29,
+    "references_source": "primary-reference-section",
+    "references_total": 3,
+    "source": "https://arxiv.org/abs/2603.07169",
+    "sources": [
+      "https://arxiv.org/abs/2603.07169",
+      "https://arxiv.org/pdf/2603.07169",
+      "https://hanyx2021.github.io/MSKernelBenchDemo/"
+    ],
+    "code": null,
+    "implementation": "論文はMSKernelBenchとCUDAMasterをオープンソース化すると記載し、公開デモでは50演算のFP32/BF16を閲覧できる。今回確認できた一次公開URLはデモページで、フレームワーク本体のGitHubリポジトリURLは確認できなかった。",
+    "implementation_status": "公開デモあり。論文はフレームワークとベンチマークのオープンソース化を宣言するが、本体コードのリポジトリURLは今回の確認では特定できず。",
+    "evaluation_type": "実機測定",
+    "last_checked": "2026-09-14",
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {"claim_id": "claim-55fa2104d18bc1f9a648de40", "worker_id": "work-library-repair-20260916", "worker_kind": "work"}
+  "reservation": {
+    "claim_id": "claim-2920381fc7a4e8f0d505a36f",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }

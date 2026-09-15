@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-168ebbd3b3d17754a00e3f50",
+  "attempt_id": "attempt-021f1dea5f61fa1de4a2409e",
   "job_id": "job-research-382442b3f5faa67f",
   "data": {
     "limitations": [
@@ -49,7 +49,7 @@
     "research_positioning": "LLM推論システムの中では、agentic servingにより新たに生じる外部memory I/O・ANN計算をfirst-class resourceとして扱う研究である。KV cache、モデルoffload、RAG retrievalが主に一回の推論要求内のstateやstatic corpusを扱うのに対し、Pancakeは複数agentが長期間にわたり同じmemory baseへ細粒度にread/writeする状態を対象とする。SSD/NVMeを直接最適化する論文ではないが、将来memory corpusがDRAMを超える場合にはCPU/GPU tierの下へstorage tierを追加する自然な接続点があり、agent memoryの階層配置・prefetch・update schedulingを考える基盤になる。"
   },
   "reservation": {
-    "claim_id": "claim-168ebbd3b3d17754a00e3f50",
+    "claim_id": "claim-021f1dea5f61fa1de4a2409e",
     "worker_id": "work-library-repair-20260916",
     "worker_kind": "work"
   }
