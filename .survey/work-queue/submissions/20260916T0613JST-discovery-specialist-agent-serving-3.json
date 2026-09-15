@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.08565",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+      "priority": 86,
+      "reason": "実運用agent traceで80%以上のtokenがKV再利用可能という特性を捉え、session最初のrequestだけを純粋にload balanceし後続をcache-aware routingすることで局所KV再利用とcluster balanceを両立する。prefill/decode同居でcluster TPS 10–16%、分離構成でprefill TPS 2–34%改善しており、agentic serving固有schedulerとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2607.21604",
+      "title": "AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems",
+      "source_url": "https://arxiv.org/abs/2607.21604",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md",
+      "priority": 83,
+      "reason": "構造化agent memory再取得時のKV再計算を対象に、memory単位の共有residualを少数probeから推定して再利用KV全体を補正するtraining-free方式。10–30% refreshでfull recompute近傍の品質、prefill 2–3.5倍高速化を報告し、通常RAG向けKV reuseとの差分が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-agent-serving-3",
+    "axis": "agentic serving・session scheduling・agent memory KV reuse",
+    "query_summary": "multi-round servingからagentic workload固有のsession locality、KV再利用、stateful memoryへ探索軸を変更。SMetricとAgentKVShiftを評価し、Pallasは既知重複候補として除外した。送信直前にcanonical IDを最新repo検索で再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2608.16477"],
+    "next_axis_hint": "agent interruption/resumeからOS・serverlessのstate spill/reclamation、またはforward citation経由の新しいcache-aware schedulerへ展開する",
+    "empty_round_reason": null
+  }
+}
