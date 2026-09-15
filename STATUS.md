@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 12:59 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 13:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -58,7 +58,7 @@
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T12:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **25 min** |
+| 最古の有効claimの経過時間 | **29 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -85,7 +85,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 重複除外 | **12** |
 | 重複率 | **32.4%** |
 | :00 補助worker Discovery run（毎時枠） | **7** |
-| :00 補助worker Discovery round（stats観測） | **14** |
+| :00 補助worker Discovery round（stats観測） | **15** |
 | 通常worker run（ledger観測） | **0** |
 | Fallback archive（全helper） | **0** |
 
@@ -113,8 +113,8 @@ Run: **2026-09-15T12:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **1** |
-| 探索軸 | cold MoE multi-model serving・weight/KV disaggregation |
+| 探索round | **2** |
+| 探索軸 | cold MoE multi-model serving・weight/KV disaggregation / handoff guard before new discovery axis |
 | 評価候補 | **4** |
 | 重複除外 | **3** |
 | Novel候補 | **1** |
@@ -139,10 +139,11 @@ Run: **2026-09-15T12:00:00+09:00**
 | Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling | 1 | 0 | 1 | 0.0% | 100.0% |
 | MoE expert cache所有権・OS page cache・階層メモリ | 1 | 0 | 0 | 0.0% | 0.0% |
 | multi-turn KV restoration・cross-layer sharing・recompute/load pipeline | 1 | 0 | 1 | 0.0% | 100.0% |
+| handoff guard before new discovery axis | 0 | 0 | 0 | — | — |
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T12:00:00+09:00 — 1 round: 評価 4 / 重複 3 / 採用 0 / 軸 cold MoE multi-model serving・weight/KV disaggregation
+- 2026-09-15T12:00:00+09:00 — 2 round: 評価 4 / 重複 3 / 採用 0 / 軸 cold MoE multi-model serving・weight/KV disaggregation / handoff guard before new discovery axis
 - 2026-09-15T10:00:00+09:00 — 1 round: 評価 5 / 重複 0 / 採用 0 / 軸 KV復元・分離serving network scheduling・MoE elastic/offload・KV survey
 - 2026-09-15T09:00:00+09:00 — 1 round: 評価 4 / 重複 3 / 採用 0 / 軸 新着KV圧縮・制約適応runtime policy
 - 2026-09-15T08:00:00+09:00 — 5 round: 評価 10 / 重複 2 / 採用 3 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing / Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling
