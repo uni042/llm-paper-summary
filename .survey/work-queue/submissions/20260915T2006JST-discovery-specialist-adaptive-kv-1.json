@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression.md",
+      "priority": 84,
+      "reason": "プロンプトごとに遅延・ピークメモリ制約を満たすKV圧縮構成を予測選択する適応フレームワーク。KVQuant/H2O/RocketKV等の固定構成より制約下成功率を平均約0.07、最大0.135改善し、圧縮手法そのものではなく実行時の資源制約適応というシステム層の差分がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-adaptive-kv-1",
+    "axis": "適応KV圧縮・プロンプト別資源制約選択",
+    "query_summary": "2026年9月のKV cache推論システム新着を探索し、遅延・ピークメモリ予算に応じて圧縮構成をプロンプト単位で選ぶMetaKVを軽量評価した。repo内arXiv ID検索では既存表現を確認できなかった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "KV圧縮から離れ、MoEのCPU/GPU/NDP協調実行とexpert schedulingを探索する",
+    "empty_round_reason": null
+  }
+}
