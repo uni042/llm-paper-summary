@@ -1,9 +1,21 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 08:03:23 JST**
+> 自動生成: **2026-09-16 08:11:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
+
+## 現在の収録候補
+
+`jobs/*.json` に耐久保存された非終端Research jobだけを対象にし、論文数は `canonical_id` で一意に確認できるものだけを数えます。
+
+| 指標 | 件数 |
+|---|---:|
+| canonical_id確認済みの一意な候補論文 | **32** |
+| canonical_idなしの候補Research job | **1** |
+| 非終端Research job合計 | **33** |
+
+`canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
 ## 件数サマリー
 
@@ -176,6 +188,7 @@
 
 ### このSTATUSが採用する証拠
 
+- **収録候補**: `jobs/*.json` の非終端Research jobだけを対象にし、`canonical_id` の一意数を候補論文数として数えます。`canonical_id` 欠損jobは別件数で表示し、論文数へ推定加算しません。
 - **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。
 - **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。
 - **Audit完了**: job/result/submissionの対応と成功状態を照合します。
