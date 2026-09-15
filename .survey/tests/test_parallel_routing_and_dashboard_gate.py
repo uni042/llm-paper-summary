@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / ".survey/docs/survey-workflow"
 GATE = ROOT / ".survey/scripts/status_publish_gate.py"
 WORKFLOW = ROOT / ".github/workflows/status-dashboard.yml"
+HELPER_WORKFLOW = ROOT / ".github/workflows/survey-helper.yml"
 CLAIM_WORKFLOW = ROOT / ".github/workflows/survey-claim-fast.yml"
 SUBMISSION_WORKFLOW = ROOT / ".github/workflows/survey-submission-fast.yml"
 REPOSITORY_TESTS = ROOT / ".github/workflows/repository-tests.yml"
@@ -103,6 +104,16 @@ class StatusPublishGateTests(unittest.TestCase):
                 self.assertIn("build_status_dashboard.py --repo-root . --output STATUS.md", text)
                 self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
                 self.assertIn("STATUS.md", text)
+
+    def test_background_helper_publishes_dashboard_in_its_authoritative_commit(self):
+        text = HELPER_WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("refresh_status_dashboard", text)
+        self.assertIn("status_publish_gate.py", text)
+        self.assertIn("build_status_dashboard.py --repo-root . --output STATUS.md", text)
+        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+        self.assertIn("refine_status_observability.py --repo-root . --status STATUS.md", text)
+        self.assertIn("git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json", text)
+        self.assertIn("git commit --amend --no-edit", text)
 
 
 if __name__ == "__main__":
