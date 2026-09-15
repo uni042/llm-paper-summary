@@ -68,6 +68,16 @@ def _create_recovery_job(source_submission: str, old_job: dict) -> dict:
     raise RuntimeError("unable to allocate a unique Discovery recovery job")
 
 
+def _result_allows_terminal_recovery(existing_result: dict) -> bool:
+    """Recover only an unprocessed submission or the known terminal-job failure mode."""
+    if not existing_result:
+        return True
+    if existing_result.get("ok") is True:
+        return False
+    error = str(existing_result.get("error") or "")
+    return "job already terminal" in error
+
+
 def recover(root: Path) -> dict[str, Any]:
     _configure(root)
     queue_worker.SUBMISSIONS.mkdir(parents=True, exist_ok=True)
@@ -78,7 +88,7 @@ def recover(root: Path) -> dict[str, Any]:
     for submission_path in sorted(queue_worker.SUBMISSIONS.glob("*.json")):
         result_path = queue_worker.RESULTS / submission_path.name
         existing_result = _read(result_path, {}) or {}
-        if existing_result.get("ok") is True:
+        if not _result_allows_terminal_recovery(existing_result):
             continue
 
         sub = _read(submission_path, {}) or {}
