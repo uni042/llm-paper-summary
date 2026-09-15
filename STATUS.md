@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:05:37 JST**
+> 自動生成: **2026-09-16 07:06:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **1** | **5** | **2** | **3** | **6** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **7** | **0** | **7** | **0** | **0** | **9** |
-| 合計 | **5** | **12** | **2** | **10** | **6** | **0** | **9** |
+| Discovery | **4** | **11** | **0** | **11** | **0** | **0** | **15** |
+| 合計 | **5** | **16** | **2** | **14** | **6** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -82,8 +82,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 07:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **9件**
-- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning
+- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **15件**
+- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning / HPC/architecture隣接・MoE near-memory・FFN disaggregation / vLLM/SGLang/TensorRT-LLM・KV runtime semantics / agentic serving・pause/resume・KV retention/prefetch / sparse attention・階層KV・PNM/SGLang
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着・適応型KV圧縮・制約付き推論
@@ -111,6 +111,18 @@
 - round `specialist-elastic-memory-7` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0722JST-discovery-specialist-elastic-memory-7b.json`
   - 探索軸: OS隣接・統合GPUメモリ管理・ballooning
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-nearmem-8` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0725JST-discovery-specialist-moe-nearmem-8b.json`
+  - 探索軸: HPC/architecture隣接・MoE near-memory・FFN disaggregation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-runtime-semantics-9` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0727JST-discovery-specialist-runtime-semantics-9.json`
+  - 探索軸: vLLM/SGLang/TensorRT-LLM・KV runtime semantics
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-kv-10` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0730JST-discovery-specialist-agent-kv-10.json`
+  - 探索軸: agentic serving・pause/resume・KV retention/prefetch
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
