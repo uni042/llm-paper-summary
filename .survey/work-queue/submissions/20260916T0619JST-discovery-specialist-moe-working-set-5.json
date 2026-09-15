@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.21868",
+      "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware",
+      "source_url": "https://arxiv.org/abs/2606.21868",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2606.21868-wisp-moe-working-set-paging.md",
+      "priority": 87,
+      "reason": "MoE expert weightsとKV cacheを同じVRAM working-set競合として扱うrouting-aware expert pagerを実装し、RTX 3090 24GBでstatic offload比decode throughput最大2倍。さらにPCIe帯域律速ではexpert予測prefetchが効かないnegative resultを示し、marginal latency benefit/byteでexpert/KV容量を分割するMV-WSAを提案する。低資源MoEと階層memoryの接点として非常に関連度が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-moe-working-set-5",
+    "axis": "MoE expert paging・KVとのVRAM競合・PCIe I/O律速",
+    "query_summary": "KV memory管理からMoE expert I/Oへ軸を変更し、SSD/CPU offload・expert cache/prefetchを探索。FlashMoE、OD-MoE、SSD energy研究は既知候補として除外し、expertとKVを統一working-setとして扱うWiSPを未収録確認して送信する。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2601.17063", "arXiv:2512.03927", "arXiv:2508.06978"],
+    "next_axis_hint": "GPU-initiated storage / GDS / io_uringのforward citation、またはnetwork/CXLを跨ぐexpert placementへ展開する",
+    "empty_round_reason": null
+  }
+}
