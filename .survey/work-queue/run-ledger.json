@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:24:35.051403+00:00",
+  "updated_at": "2026-09-15T22:30:11.562808+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:24:35.051403+00:00",
+      "last_recorded_at": "2026-09-15T22:30:11.562808+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 89,
+        "research_completed": 90,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34901516934:1",
-          "recorded_at": "2026-09-14T22:00:30.587202+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34901516934",
-            "run_attempt": "1",
-            "source_sha": "e4dc6bc9733dc56bb45524d95be72566312b3fe3"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34902464996:1",
           "recorded_at": "2026-09-14T22:07:24.693328+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35031261367:1",
+          "recorded_at": "2026-09-15T22:30:11.562808+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35031261367",
+            "run_attempt": "1",
+            "source_sha": "9b2648604da97ffc6107eaae88e3eaa024c39093"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -20538,6 +20538,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-c6ac42b8bcec8aab",
+          "type": "research",
+          "canonical_id": "arXiv:2607.29069",
+          "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21115,7 +21123,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
