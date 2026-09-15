@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T05:40:24.901306+00:00",
+  "updated_at": "2026-09-15T06:06:55.852206+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T05:40:24.901306+00:00",
+      "last_recorded_at": "2026-09-15T06:06:55.852206+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 80,
         "audit_completed": 0,
-        "discovery_completed": 16,
+        "discovery_completed": 17,
         "blocked": 1,
-        "new_jobs": 26,
-        "new_papers": 81,
+        "new_jobs": 28,
+        "new_papers": 84,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34872794789:1",
-          "recorded_at": "2026-09-14T17:07:31.528629+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34872794789",
-            "run_attempt": "1",
-            "source_sha": "ac0d6808d840cadadebaddcc4d4719c28310a952"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34873389973:1",
           "recorded_at": "2026-09-14T17:13:42.261077+00:00",
@@ -19599,6 +19585,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34935257932:1",
+          "recorded_at": "2026-09-15T06:06:55.852206+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "34935257932",
+            "run_attempt": "1",
+            "source_sha": "d725fce905d033706db15f8088730e8c543747a5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20377,6 +20378,14 @@
           "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-57c04f370a9f4d4d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20561,6 +20570,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-e03097d2e4181243",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-d9c67ca63b6b0f25",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.09248",
+          "title": "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
         }
       ],
       "new_paper_ids": [
@@ -20644,7 +20667,10 @@
         "arXiv:2604.22906",
         "arXiv:2605.31464",
         "arXiv:2609.12449",
-        "arXiv:2607.13095"
+        "arXiv:2607.13095",
+        "arXiv:2507.08045",
+        "arXiv:2601.21198",
+        "arXiv:2608.05303"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -20701,7 +20727,8 @@
         ".survey/work-queue/results/20260915T1259JST-discovery-specialist-handoff-guard.json",
         ".survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json",
         ".survey/work-queue/results/20260915T1410JST-discovery-specialist-gpu-fault-state-2.json",
-        ".survey/work-queue/results/20260915T1413JST-discovery-specialist-network-kv-3.json"
+        ".survey/work-queue/results/20260915T1413JST-discovery-specialist-network-kv-3.json",
+        ".survey/work-queue/results/20260915T1508JST-discovery-specialist-scheduling-agent-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20738,8 +20765,8 @@
         ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 541,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 544,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

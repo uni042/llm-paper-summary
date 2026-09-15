@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T05:02:44+00:00",
-  "last_run_key": "2026-09-15T14:00:00+09:00",
-  "last_round": "specialist-moe-cache-router-1",
+  "updated_at": "2026-09-15T06:03:41+00:00",
+  "last_run_key": "2026-09-15T15:00:00+09:00",
+  "last_round": "specialist-scheduling-agent-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 5,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3403,6 +3403,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は新着のGPU runtime/kernel・量子化実行系、または収録済みexpert offload論文のforward citationからI/O schedulingとcache ownershipへ軸を移す",
       "source_submission": "work-queue/submissions/20260915T1407JST-discovery-specialist-moe-cache-router-1.json"
+    },
+    {
+      "run_key": "2026-09-15T15:00:00+09:00",
+      "round": "specialist-scheduling-agent-1",
+      "axis": "エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving",
+      "query_summary": "直前のMoE cache/router軸を避け、agentic multi-turn KV retention、未知出力長下のKV scheduling、GPU遊休資源を使うinference/fine-tuning co-servingを一次arXiv情報中心に探索した。投入直前に最新HEADと各arXiv IDのrepo検索を再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "新着・recent revisionからdisaggregated servingのnetwork/KV transfer、次いで重要serving論文のforward citationとstorage/OS隣接軸を探索する",
+      "source_submission": "work-queue/submissions/20260915T1508JST-discovery-specialist-scheduling-agent-1.json"
     }
   ],
   "axes": {
@@ -5325,6 +5340,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は新着のGPU runtime/kernel・量子化実行系、または収録済みexpert offload論文のforward citationからI/O schedulingとcache ownershipへ軸を移す"
+    },
+    "エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving": {
+      "last_run_key": "2026-09-15T15:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "新着・recent revisionからdisaggregated servingのnetwork/KV transfer、次いで重要serving論文のforward citationとstorage/OS隣接軸を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
