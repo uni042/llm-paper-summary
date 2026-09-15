@@ -6,7 +6,7 @@
   "canonical_id": "arxiv:2609.05228",
   "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
   "source_url": "https://arxiv.org/abs/2609.05228",
-  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/ace.md",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md",
   "selection_reason": "training/calibration不要でtokenごとにexpert slotをskipし、offline spectral proxyとrouter-conditioned refinementをruntime gateに統合する。MoE adaptive computationの中心テーマ。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
