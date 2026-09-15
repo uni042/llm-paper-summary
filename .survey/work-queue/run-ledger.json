@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T09:06:44.959714+00:00",
+  "updated_at": "2026-09-15T09:37:02.252016+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T09:06:44.959714+00:00",
+      "last_recorded_at": "2026-09-15T09:37:02.252016+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 82,
+        "research_completed": 83,
         "audit_completed": 0,
         "discovery_completed": 19,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34874762713:1",
-          "recorded_at": "2026-09-14T17:31:19.016988+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34874762713",
-            "run_attempt": "1",
-            "source_sha": "3693b0ca684ca41c52c1c81c863cb35baa9deb7a"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34875583637:1",
           "recorded_at": "2026-09-14T17:40:43.338391+00:00",
@@ -19602,6 +19588,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34953454446:1",
+          "recorded_at": "2026-09-15T09:37:02.252016+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34953454446",
+            "run_attempt": "1",
+            "source_sha": "e31a63442e4d7638a4ae93357eb382b58c144242"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20420,6 +20420,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-b22f71500ae1903a",
+          "type": "research",
+          "canonical_id": "arXiv:2504.07494",
+          "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20821,7 +20829,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 546,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
