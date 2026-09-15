@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.01299",
+      "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
+      "source_url": "https://arxiv.org/abs/2607.01299",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md",
+      "priority": 88,
+      "reason": "linear+full attention混在modelへposition-independent cachingを拡張し、linear layerではsegment cumulative transition operatorをcache、full attentionではsegment boundaryだけを再計算する。cold cache miss prefillもsegment単位で並列化し、TTFT平均2.45倍、peak throughput最大2倍改善。subquadratic attention時代のcache servingとして重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-hybrid-attention-15",
+    "axis": "hybrid/linear attention serving・position-independent caching",
+    "query_summary": "MoE kernelからattention architecture/system co-designへ軸を変更。最新2609のSQDは既にpriority 91 research readyのため重複除外し、hybrid-attention modelへPICを拡張するHYPICを未収録確認して送信する。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2609.13134"],
+    "next_axis_hint": "linear/sliding-window attentionのstate offload、recurrent-state caching、subquadratic serving kernelへ展開する",
+    "empty_round_reason": null
+  }
+}
