@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 08:00:18 JST**
+> 自動生成: **2026-09-16 08:00:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **2** | **0** | **2** | **0** | **0** | **4** |
-| 合計 | **11** | **7** | **2** | **5** | **0** | **0** | **4** |
+| Discovery | **4** | **3** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **11** | **8** | **2** | **6** | **0** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -112,8 +112,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 08:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **4件**
-- 探索軸: 2609最新新着・分離サービングと熱制約スケジューリング / 動的KV容量・cross-context/checkpoint KV再利用
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **6件**
+- 探索軸: 2609最新新着・分離サービングと熱制約スケジューリング / 動的KV容量・cross-context/checkpoint KV再利用 / latent-space inference・constant-memory long-context recall
 - round `specialist-new-arrivals-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0808JST-discovery-specialist-new-arrivals-1.json`
   - 探索軸: 2609最新新着・分離サービングと熱制約スケジューリング
@@ -121,6 +121,10 @@
 - round `specialist-kv-adaptive-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0813JST-discovery-specialist-kv-adaptive-2.json`
   - 探索軸: 動的KV容量・cross-context/checkpoint KV再利用
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-latent-memory-3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0818JST-discovery-specialist-latent-memory-3.json`
+  - 探索軸: latent-space inference・constant-memory long-context recall
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
