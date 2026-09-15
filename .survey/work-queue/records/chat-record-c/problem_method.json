@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-6ecd1c6efec5654348935adc",
+  "attempt_id": "attempt-384005d4349fb390e83aeabb",
   "job_id": "job-research-229f0f103fc45c25",
   "data": {
     "problem": "既存のMoEオフロード方式は、CPU側メモリをGPU外部の比較的高速な第2階層として使えることを暗黙に前提とする。しかしJetson等の共有メモリ型端末ではCPUとGPUが同じDRAM容量を奪い合うため、容量不足分は1〜5 GB/s級のNVMeへ直接退避せざるを得ない。さらに端末推論で多いバッチ1では複数要求による入出力隠蔽が効きにくく、エッジ移行時の入出力停止時間はdecoder-onlyで38.5%から80.1%、encoder-decoderで15.8%から41.7%へ増える。従来の量子化は保存量を減らせる一方、重み値そのものを変更して品質や挙動へ影響する可能性があり、単純なキャッシュ拡大も共有DRAM容量という物理制約を解消しない。そのためモデルをビット単位で保持したままNVMe転送量を減らし、余っているCPU計算を使って展開時間をGPU計算へ隠す共同設計が必要になる。",
@@ -33,8 +33,8 @@
     "system_design": "事前圧縮、NVMe保存、起動時のキャッシュ領域計画、ゲートによるエキスパート決定、状態別タスクグラフ生成、SSD入出力とCPU展開のブロックスケジューリング、GPU上でのBF16復元、エキスパート実行という順で処理する。実行履歴に応じてエキスパートを4領域へ再配置し、低頻度のものは必要時に読み込んで実行後に追い出す。"
   },
   "reservation": {
-    "claim_id": "claim-6ecd1c6efec5654348935adc",
-    "worker_id": "scheduled-chat-paper-20260915T1030JST",
+    "claim_id": "claim-384005d4349fb390e83aeabb",
+    "worker_id": "scheduled-chat-paper-20260915T1230JST",
     "worker_kind": "scheduled_chat"
   }
 }
