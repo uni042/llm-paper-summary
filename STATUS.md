@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:07:38 JST**
+> 自動生成: **2026-09-16 07:07:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **1** | **5** | **2** | **3** | **6** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **15** | **0** | **15** | **0** | **0** | **19** |
-| 合計 | **5** | **20** | **2** | **18** | **6** | **0** | **19** |
+| Discovery | **3** | **16** | **0** | **16** | **0** | **0** | **20** |
+| 合計 | **4** | **21** | **2** | **19** | **6** | **0** | **20** |
 
-- 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -48,10 +48,6 @@
   - result: `.survey/work-queue/results/20260916T0348JST-discovery-specialist-moe-io-2b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0348JST-discovery-specialist-moe-io-2b.json`
   - 探索軸: MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch
-- **09-16 01:07:57 JST** job `job-f190af78c754c7c2` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260916T0131JST-discovery-specialist-new-workloads-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T0131JST-discovery-specialist-new-workloads-8.json`
-  - 探索軸: agentic workflow・diffusion LLMという新workload形態のserving
 
 ### 直近タスク
 
@@ -82,8 +78,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 07:00 JST**
-- 耐久探索round: **15件** / immutable submission: **15件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **15件** / 候補: **19件**
-- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning / HPC/architecture隣接・MoE near-memory・FFN disaggregation / vLLM/SGLang/TensorRT-LLM・KV runtime semantics / agentic serving・pause/resume・KV retention/prefetch / sparse attention・階層KV・PNM/SGLang / energy-aware serving・shared GPU・SLO scheduling / hardware-aware lossless compression・weight bandwidth / edge MoE・GPU-NDP・expert scheduling/prefetch / multi-tenant KV/prefix cache・security/isolation
+- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **16件** / 候補: **20件**
+- 探索軸: 新着・適応型KV圧縮・制約付き推論 / MoE expert cache・OS管理階層・prefetch / 分離サービング・ネットワークKV配布・転送 / GPU runtime・prefix-aware batching・QoS scheduling / CXL共有メモリ・Kubernetes・cross-node KV reuse / backward reference・near-data/near-storage・CXL基盤 / OS隣接・統合GPUメモリ管理・ballooning / HPC/architecture隣接・MoE near-memory・FFN disaggregation / vLLM/SGLang/TensorRT-LLM・KV runtime semantics / agentic serving・pause/resume・KV retention/prefetch / sparse attention・階層KV・PNM/SGLang / energy-aware serving・shared GPU・SLO scheduling / hardware-aware lossless compression・weight bandwidth / edge MoE・GPU-NDP・expert scheduling/prefetch / multi-tenant KV/prefix cache・security/isolation / model-parallel communication・sequence parallel serving
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着・適応型KV圧縮・制約付き推論
