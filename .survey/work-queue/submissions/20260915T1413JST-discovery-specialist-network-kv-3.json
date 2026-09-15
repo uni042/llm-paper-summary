@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d86e69d5d52d3a55",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.03910",
+      "title": "NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.03910",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03910-netkv-network-aware-decode-selection.md",
+      "priority": 84,
+      "reason": "prefill/decode分離でKV転送時間がTTFTへ直接入るのに、compute loadとprefix locality中心の既存routingがネットワーク距離・混雑を無視する問題を扱う。network cost oracleをschedulerへ与え、O(|D|)のdecode instance選択を行う。64-GPU fat-tree simulatorとMooncake traceでmean TTFT最大21.2%削減、SLO attainment最大20.1ポイント改善を報告しており、KV transfer・network scheduling系統の隣接候補として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T14:00:00+09:00",
+    "round": "specialist-network-kv-3",
+    "axis": "分離サービングのnetwork-aware KV transfer scheduling",
+    "query_summary": "GPU runtime軸からnetwork/RDMA隣接へ切り替え、prefill/decode間KV転送のtopology・congestionをscheduler判断へ取り込む研究を探索した。SmartGen等の既知候補を避け、NetKVはGitHub code searchでarXiv ID未収録を確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arxiv:2607.28150"],
+    "next_axis_hint": "次は重要serving論文のbackward referenceから基礎的network/placement手法、または新着のagent memory physical storageへ移る",
+    "empty_round_reason": null
+  }
+}
