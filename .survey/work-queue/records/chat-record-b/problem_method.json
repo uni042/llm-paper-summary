@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a88806a6b69afa14faffe306","job_id":"job-research-229f0f103fc45c25","data":{"problem":"既存MoEオフロードはCPUメモリをGPU外部の高速階層として想定するが、Jetson等のUMA型端末ではCPU/GPUが同じDRAMを共有し、容量不足分は1–5 GB/s級NVMeへ落ちる。batch=1中心ではパイプラインも効きにくく、edge移行時のI/O stallはdecoder-onlyで38.5%→80.1%、encoder-decoderで15.8%→41.7%へ増える。量子化は容量を減らせるがモデル挙動を変える可能性がある。","novelty":"BF16の指数8bitだけが低エントロピーであることを利用し、指数部をK shardへ分けて無損失圧縮、符号+仮数部を別chunkとして保存する。完全、両成分圧縮、SMのみ、Eのみの4キャッシュ状態を設け、SSD I/OとCPU展開をDAG化して並列実行する。さらにexpert人気順位の確率分布から各pool容量を動的計画し、I/O律速と展開可能タスクを組み合わせるschedulerに(3-1/L)近似保証を与える。","method_overview":"offlineで各expert tensorを指数E-chunkと符号・仮数SM-chunkへ分解し、EをLZ4/ZSTD等で圧縮してNVMeへ保存する。runtimeではgate選択後、現在のcache stateに応じてtensorごとのI/O・展開・復元DAGを作る。専用I/O threadがSSDを読み、L本のCPU workerがEを並列展開し、GPU kernelがzero-copyでSM/EをBF16へ再構成する。cache managerはfull(F)、compressed(C)、SM(S)、E(E) poolを持ち、履歴のexpert人気順位からPoisson-binomial分布をDPで求め、期待makespan最小のpool partitionをgrid searchする。","components":[{"name":"bit-field無損失圧縮","description":"BF16を符号、指数、仮数へ分け、低エントロピーな指数だけ圧縮する。LZ4HCで全体74%、ZSTDで68%まで縮み、Shannon下限約66%に近い。"},{"name":"圧縮状態キャッシュ","description":"full tensor、E+SM、SMのみ、Eのみを別poolとして保持する。SMだけなら同じ容量で約2倍のexpertを覆い、missしたEをCPU展開して他expertのSSD読出しに隠せる。"},{"name":"cache-affinity scheduler","description":"SM読出しが必要なType-Iと不要なType-IIをexpert GPU実行時間順に並べ、block内へType-IIを挿入してI/Oと展開を重畳する。compute-boundになればblockを確定し、理論上OPTの(3-1/L)以内。"},{"name":"rank-based cache planning","description":"expert IDそのものではなく人気順位の周辺選択確率を学習し、各poolへ連続rank区間を割り当てる。Poisson-binomial DPでhit組合せ確率を計算し、期待sparse-layer makespan最小の容量配分を選ぶ。"},{"name":"zero-copy GPU復元","description":"SMをGPUから直接参照できるhost-pinned memoryへ読み、vectorized load/storeでEとSMをregister上でBF16へ再構成してDRAM帯域を活用する。"}],"system_design":"offline圧縮→NVMe保存→起動時pool計画→gateでexpert判明→cache state別DAG生成→SSD I/OとCPU展開のblock scheduling→GPU上でBF16復元→expert実行、という流れ。runtime頻度に応じてexpertをF/C/S/E poolへ移し、低頻度expertは実行後即追い出す。"},"reservation":{"claim_id":"claim-a88806a6b69afa14faffe306","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-acc918e244bc8cbe6bfce5af",
+  "job_id": "job-research-3df42686de08919b",
+  "data": {
+    "problem": "Hybrid SWAは大半の層を局所窓だけに限定するため理論上は注意計算とKVキャッシュを約7分の1へ減らせるが、既存サービング基盤が全トークン分のKVを保持すると利点が消える。さらにSWAでは論理prefixが残っていても窓外KVが既に追い出され得るため、通常の『同じトークン列ならKV再利用可能』という前提が崩れる。階層キャッシュの非同期転送、複数ノードの状態差、MoE並列通信、長さの異なる要求の混在、マルチモーダル前処理も本番性能を制約する。",
+    "novelty": "Full Attention層とSWA層のKVを物理的に別プールへ分離し、論理上はFull側索引を正本としてSWA窓への写像を持つことで、SWA容量を厳密にO(W)へ抑える。これをL1/L2/L3へ拡張し、層単位先読みとSWA対応prefix treeで正当な再利用だけを許す。さらにメモリ・NVMe・遠隔ストレージを統合するGCache、KV親和性と負荷を同時に見るルータ、プリフィル/デコード/MoE/マルチモーダルの最適化を同一の本番パイプラインへ統合する。",
+    "method_overview": "MiMo-V2.5-Proは70層中10層がFull Attention、60層が窓幅128のSWAである。KV管理ではFull/SWA二重プールを設け、要求受理時に両容量を検査し、階層間転送はSWAマスクで有効な窓だけを動かす。prefix treeはトークン一致だけでなく末尾WトークンのSWA slot生存を確認し、再利用長をwindow-safe境界へ切り詰める。GCacheはconsistent hashing、メモリ/SSD昇降格、非同期I/O、RDMA/GDRを使うL3キャッシュで、ルータはprefix一致率と正規化負荷から配置を決める。プリフィルではEP縮小、長さバケット、NUMA調整を行い、デコードではSWA KV、CPU側事前確保、CUDA Graph調整、プリフィル時MTPを導入する。マルチモーダル側は符号器分離、要求横断バッチ、GPU画像前処理、並列動画復号、consistent hashingと共有メモリキャッシュを使う。",
+    "components": [
+      {
+        "name": "Full/SWA二重KVプール",
+        "description": "Full Attentionは全系列O(N)、SWAは窓O(W)だけを保持する別プールへ分離する。上位層には単一系列として見せ、Full索引からSWA slotへの写像を維持するため、窓外SWAだけ独立に追い出しつつFull prefixは残せる。"
+      },
+      {
+        "name": "SWA対応prefix treeと層単位先読み",
+        "description": "prefix一致に加えて末尾WトークンのSWA KVが実在するか確認し、安全な一致長だけを再利用する。SWA転送量が小さいことを利用し、各層の計算とHost→Device先読みを重ねて転送待ちを隠す。"
+      },
+      {
+        "name": "GCache",
+        "description": "キーのconsistent hashingでI/O経路を分散し、サーバ側メモリとNVMeを自動昇降格、遠隔オブジェクトストレージも接続するL3キャッシュ。要求分割・非同期コールバック、NUMA/rail親和、RDMA/GDRで高帯域転送し、GPUノードへの同居で追加ストレージ機を避ける。"
+      },
+      {
+        "name": "KV親和ルータ",
+        "description": "各プリフィルノードのprefix一致率をRadix treeで追跡し、一致率を加点、負荷を減点したスコアで配置する。待ち行列では未キャッシュトークンが少ない要求を優先しつつ、待ち時間ペナルティで飢餓を抑える。"
+      },
+      {
+        "name": "プリフィル・デコード最適化",
+        "description": "SWA容量削減でEPを半減し、0–64K/64K–256K/256K–1Mの長さバケットでDP同期とchunked prefillの長短干渉を抑える。デコードではSWA KV、CPU事前確保、CUDA Graph調整で容量を増やし、プリフィル段階からMTP層KVを作って初期生成の受理率を高める。"
+      },
+      {
+        "name": "マルチモーダル最適化",
+        "description": "符号器をTP=1のデータ並列で動かし、要求横断バッチ、GPU画像前処理、ダウンロードと推論の重畳、動画フレーム並列復号を行う。同一キーを同じ符号器へ送るconsistent hashingとノード内共有メモリで埋め込みキャッシュを再利用する。"
+      }
+    ],
+    "system_design": "要求はLLM-RouterでKV親和性と負荷に基づきプリフィルノードへ送られる。プリフィル側はSWA対応prefix treeで安全な再利用範囲を決め、L1 GPU、L2 host、GCache L3から必要なFull/SWA KVだけを先読みする。GCacheはメモリ/NVMe/遠隔層を透過的に扱う。プリフィル後はデコードへKVを渡し、SWA容量削減とMTPで生成効率を高める。画像・動画等は分離符号器で前処理・バッチ・キャッシュされ、埋め込み転送をプリフィル計算と重ねる。"
+  },
+  "reservation": {
+    "claim_id": "claim-acc918e244bc8cbe6bfce5af",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

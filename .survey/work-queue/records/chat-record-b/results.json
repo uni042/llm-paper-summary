@@ -1,1 +1,110 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a88806a6b69afa14faffe306","job_id":"job-research-229f0f103fc45c25","data":{"overview":"offload必須条件でdecoder-onlyのTPOTを62.65–97.97%、TTFTを53.25–87.90%削減し、encoder-decoderでもTPOT 4.99–81.24%、TTFT最大83.45%削減。batch推論ではdecoder-only throughput 1.79–42.49倍、encoder-decoder 1.31–5.82倍。E2Eはdecoder-only 3.03–42.49倍、encoder-decoder 1.11–5.64倍。cache管理の寄与分解ではcore systemが総throughput gainの約76%、heterogeneous cache+planningが残り約24%。OS page cacheをほぼ消した32GB background占有でもMoE-Infinity比TTFT 56.64%、TPOT 53.32%削減を維持する。","key_results":[{"metric":"decoder-only TPOT","value":"62.65–97.97%削減","baseline":"MoE-Infinity/DeepSpeed/Accelerate","condition":"offload必須memory budget","interpretation":"NVMe待ちを圧縮+CPU展開へ変換する効果が大きい。"},{"metric":"decoder-only TTFT","value":"53.25–87.90%削減","baseline":"既存system","condition":"offload必須","interpretation":"初回expert取得も高速化。"},{"metric":"decoder-only throughput","value":"1.79–42.49×","baseline":"既存system","condition":"batch 1/4/16","interpretation":"expert数が増えるほど展開並列性を活用しやすい。"},{"metric":"decoder-only E2E","value":"3.03–42.49×","baseline":"既存system","condition":"複数output limit","interpretation":"対話全体でも改善が持続。"},{"metric":"DeepSeekV2-Lite throughput","value":"1.60→5.30 tokens/s","baseline":"平均basic cache 4.43","condition":"10GB、batch=16","interpretation":"core engineが大半を稼ぎ、cache構成が追加改善。"},{"metric":"Qwen1.5-MoE throughput","value":"1.99→7.79 tokens/s","baseline":"平均basic cache 6.39","condition":"10GB、batch=16","interpretation":"planningの追加利得は小さいがPareto改善。"},{"metric":"page cacheなし近似条件","value":"TTFT 56.64%、TPOT 53.32%削減","baseline":"MoE-Infinity","condition":"background RAM 32GB","interpretation":"OS page cacheだけに依存しない。"}],"negative_results":[{"name":"encoder-decoderで利得縮小","description":"expert activationが強く偏りI/O量も少ないため、decoder-onlyよりZipMoEの優位が小さい。"},{"name":"planning単体の利得は中程度","description":"総throughput gainの約76%はcore decompression/scheduling engine由来で、cache management全体は約24%。"},{"name":"UMA外は未実測","description":"CPU/GPU分離memoryでは追加H2D tierが必要で、論文は将来拡張として議論するのみ。"}],"interpretation":"ZipMoEはSSDから完全expertを読む代わりに、情報量の少ない指数部を圧縮してI/O bytesを減らし、端末で余りがちなCPU coreへ展開計算を移す。これによりI/O-bound処理を並列computeへ変換する。cacheは単なるhit/missではなく、どのbit-fieldがresidentかを性能状態として扱う点が重要。","quality_impact":"BF16値を完全復元する無損失方式で、量子化によるperplexityや安全性変化を避ける。性能との主な交換条件はCPU core、DRAM/cache容量、圧縮率、SSD帯域。"},"reservation":{"claim_id":"claim-a88806a6b69afa14faffe306","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-acc918e244bc8cbe6bfce5af",
+  "job_id": "job-research-3df42686de08919b",
+  "data": {
+    "overview": "Hybrid SWAのFull/SWA二重KVプールはSWA KV容量効率を約7倍にし、サーバ側KVヒット率は通常93%、高負荷利用者で95%以上と報告される。GCacheは1MB RDMA readで170 GB/s・280マイクロ秒、GDRで約350 GB/s。KV親和ルーティングはL2ヒット率を約25%、ノード入力スループットを約30%改善し、未キャッシュ量優先の待ち行列制御は長要求TTFT P90を30.5%低下させた。SWA KV削減によりプリフィルEPを半減してエンドツーエンド性能約40%改善、NUMA競合解消で約10%改善。デコードKV容量は約5倍、MTPは0–128生成で2.3倍、128–256で1.5倍。マルチモーダル符号器はQPS 15→30、1時間動画復号156→23秒、consistent hashingでキャッシュヒット率30%改善。",
+    "key_results": [
+      {
+        "metric": "SWA KV容量効率",
+        "value": "約7×",
+        "baseline": "全系列KVを保持する実装",
+        "condition": "Full/SWA二重プール",
+        "interpretation": "SWA層を厳密なO(W)保存にすることで理論的容量利得をシステム上でも実現。"
+      },
+      {
+        "metric": "GCache RDMA read",
+        "value": "170 GB/s、280 µs",
+        "baseline": null,
+        "condition": "1MB I/O、単一プロセス",
+        "interpretation": "L3 KV転送に十分な高帯域を示す。"
+      },
+      {
+        "metric": "GCache GDR帯域",
+        "value": "約350 GB/s",
+        "baseline": null,
+        "condition": "GDR条件",
+        "interpretation": "GPU HBMを直接使う経路でさらに帯域が上がる。"
+      },
+      {
+        "metric": "L2キャッシュヒット率",
+        "value": "約25%改善",
+        "baseline": "KV親和ルーティング導入前",
+        "condition": "本番ルータ",
+        "interpretation": "prefix再利用可能なノードへ寄せることでL3同期取得を減らす。"
+      },
+      {
+        "metric": "ノード入力スループット",
+        "value": "約30%改善",
+        "baseline": "導入前",
+        "condition": "KV親和ルーティング",
+        "interpretation": "L2 miss待ちと再計算の削減が入力処理能力へ反映。"
+      },
+      {
+        "metric": "長要求TTFT P90",
+        "value": "30.5%低下",
+        "baseline": "FCFS",
+        "condition": "未キャッシュトークン量優先+待ち時間ペナルティ",
+        "interpretation": "計算量の少ないcache-friendly要求のhead-of-line blockingを減らす。"
+      },
+      {
+        "metric": "プリフィル性能",
+        "value": "約40%改善",
+        "baseline": "従来EP構成",
+        "condition": "SWA KV削減でEPを半分へ縮小",
+        "interpretation": "通信範囲とDP数を減らしMoE負荷均衡も改善。"
+      },
+      {
+        "metric": "デコードKV容量",
+        "value": "約5×",
+        "baseline": "SWA非対応デコードKV",
+        "condition": "SWA KV対応ほかメモリ最適化",
+        "interpretation": "長文agentic要求の同時実行数を増やせる。"
+      },
+      {
+        "metric": "MTP高速化",
+        "value": "2.3× / 1.5×",
+        "baseline": "プリフィルでMTP KVを作らない方式",
+        "condition": "生成0–128 / 128–256トークン",
+        "interpretation": "短いagent出力で初期MTP受理率を改善。"
+      },
+      {
+        "metric": "マルチモーダル符号器QPS",
+        "value": "15→30",
+        "baseline": "最適化前",
+        "condition": "平均遅延78.39→80.28 ms、P90 100.76→82.94 ms",
+        "interpretation": "平均遅延をほぼ維持しつつ処理量を2倍にした。"
+      },
+      {
+        "metric": "1時間動画復号",
+        "value": "156 s→23 s",
+        "baseline": "逐次寄りの復号",
+        "condition": "フレーム索引をN分割して並列復号",
+        "interpretation": "長動画の符号器前処理ボトルネックを大幅削減。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "長prefixでプリフィル低下",
+        "description": "固定16K chunkではprefixがほぼ0の1×から1Mトークンprefixで約0.12×まで低下し、Hybrid SWAでも長さ依存の計算・同期負荷は残る。"
+      },
+      {
+        "name": "SWA安全化で生ヒット率低下",
+        "description": "window-safe一致規則は無効KV再利用を防ぐ代わりに、同一トークン容量で見た生の一致長を少し短くする。容量増加込みの固定ストレージ予算では有効ヒット率が改善する。"
+      },
+      {
+        "name": "MoE追加均衡を未使用",
+        "description": "平均expert load factorが約0.8495と十分均衡していたため、推論時の追加expert balancingは導入していない。別ワークロードで同じとは限らない。"
+      }
+    ],
+    "interpretation": "本論文の主要な示唆は、Hybrid SWAの理論的な約7倍削減だけでは本番効率にならず、KVの物理寿命とprefix treeの論理寿命を一致させ、階層転送とルーティングをSWA semanticsへ合わせる必要がある点にある。容量増加は単なるメモリ節約だけでなくTTL延長と再利用率向上へ波及し、さらにEP縮小やデコード同時実行数増加を可能にする。一方、各改善値は異なる節・条件の前後比較であり、単純に掛け合わせて全体高速化倍率とみなすべきではない。",
+    "quality_impact": "量子化や近似attentionによる品質低下ではなく、既存Hybrid SWAの意味論を正しく実装する最適化が中心。window-safe prefix判定は性能より正当性を優先する境界条件であり、無効SWA KVの誤再利用を防ぐ。"
+  },
+  "reservation": {
+    "claim_id": "claim-acc918e244bc8cbe6bfce5af",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
