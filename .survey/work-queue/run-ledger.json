@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T05:05:33.813327+00:00",
+  "updated_at": "2026-09-15T05:07:48.602153+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T05:05:33.813327+00:00",
+      "last_recorded_at": "2026-09-15T05:07:48.602153+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34870777709:1",
-          "recorded_at": "2026-09-14T16:47:49.567140+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34870777709",
-            "run_attempt": "1",
-            "source_sha": "2e3fd7cc72f2a177ce8d2faad069403619e7f5de"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34870955229:1",
           "recorded_at": "2026-09-14T16:52:57.642167+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "34931141860",
             "run_attempt": "1",
             "source_sha": "1da237e6cc5244c1fd7cd9b490c72dc353e161f5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34931183100:1",
+          "recorded_at": "2026-09-15T05:07:48.602153+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34931183100",
+            "run_attempt": "1",
+            "source_sha": "156008e6d0514d78c0ef00e056259c00fd97adae"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -20676,7 +20676,9 @@
         ".survey/work-queue/results/20260915T1000JST-discovery-specialist-serving-restoration-1.json",
         ".survey/work-queue/results/20260915T1204JST-discovery-crosspool.json",
         ".survey/work-queue/results/20260915T1259JST-discovery-specialist-handoff-guard.json",
-        ".survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json"
+        ".survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json",
+        ".survey/work-queue/results/20260915T1410JST-discovery-specialist-gpu-fault-state-2.json",
+        ".survey/work-queue/results/20260915T1413JST-discovery-specialist-network-kv-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
