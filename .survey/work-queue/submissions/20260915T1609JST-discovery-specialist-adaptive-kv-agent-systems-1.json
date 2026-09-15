@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e03097d2e4181243",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression.md",
+      "priority": 82,
+      "reason": "複数のKV圧縮方式・設定からpromptごとに遅延とピークメモリ制約を満たす構成を予測選択する適応制御層。KVQuant/H2O/RocketKV等10構成と非圧縮を横断し、固定構成より制約付き成功率を平均約0.07、最大0.135改善すると報告しており、単一圧縮アルゴリズムではなく実行時の資源制約に応じた方式選択というシステム観点が既存KV圧縮群を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.15127",
+      "title": "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems",
+      "source_url": "https://arxiv.org/abs/2608.15127",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.15127-agentic-workloads-characterization-serving-systems.md",
+      "priority": 84,
+      "reason": "10種類のagentic applicationとproduction traceをsystems-levelに計測し、LLM単体推論とは異なるstateful sandbox、異種resource affinity、長いidle state、control-plane tax、tool-result redundancyを定量化する。task-aware servingで29-40% latency削減、communication-aware placementで最大4.5倍、state offloadで4.6倍メモリ削減等のdesign explorationも含み、agent serving向けscheduler・memory hierarchy設計の基礎データとして価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T16:00:00+09:00",
+    "round": "specialist-adaptive-kv-agent-systems-1",
+    "axis": "新着KV適応制御・agentic serving characterization",
+    "query_summary": "直前のscheduling/agent軸をそのまま反復せず、2026年9月新着のKV圧縮実行時適応と、agentic workloadのsystems characterizationへ分岐して一次arXiv書誌・abstractを軽量評価した。既存identity/jobをGitHub検索で再確認し、未収録の強い2候補のみ送信する。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は独立経路としてrecent revisionのMoE expert placement/cache/prefetch、または重要serving論文のforward citationを探索する",
+    "empty_round_reason": null
+  }
+}
