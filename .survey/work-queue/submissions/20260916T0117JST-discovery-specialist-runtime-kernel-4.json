@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.17435",
+      "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
+      "source_url": "https://arxiv.org/abs/2603.17435",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-hardware-aware-lossless-compression.md",
+      "priority": 82,
+      "reason": "可変長entropy codecがGPU SIMT実行を壊す問題に対し固定長bitmap表現とfused decompression-GEMM kernelを共同設計し、圧縮重みをTensor Core registerへ直接展開する。model size最大30%削減、kernel最大2.21倍、vLLM比end-to-end平均1.22倍を報告し、GPU runtime/kernelとメモリ帯域の隣接系統として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2504.06319",
+      "title": "Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching",
+      "source_url": "https://arxiv.org/abs/2504.06319",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md",
+      "priority": 78,
+      "reason": "HBMからGPU L2 cacheへのKV prefetchをcomputeと非同期overlapし、idle memory bandwidthを利用してattentionのmemory latencyを隠すkernel/runtime寄り研究。H20でattention kernel 2.15倍、end-to-end throughput最大1.97倍を報告し、階層メモリprefetchの基礎的隣接研究として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-runtime-kernel-4",
+    "axis": "GPU runtime・fused decompression kernel・L2 KV prefetch",
+    "query_summary": "OS/GPU runtime隣接へ軸を移し、推論時の重み展開とGEMM融合、KVをGPU L2へ非同期prefetchする2研究を軽量評価した。SwiftCache等の既知収録候補は除外し、canonical IDがGitHub検索で未収録の2件だけを送信する。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2606.16135"],
+    "next_axis_hint": "最低4軸到達後も、reference/backward citationからSSD/GDS・expert streamingの基礎研究、または最新framework実装に対応する論文を探索可能",
+    "empty_round_reason": null
+  }
+}
