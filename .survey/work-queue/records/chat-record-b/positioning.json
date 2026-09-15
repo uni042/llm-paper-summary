@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
+  "attempt_id": "attempt-72baa27379be8494d8497773",
   "job_id": "job-research-3df42686de08919b",
   "data": {
     "limitations": [
@@ -49,8 +49,8 @@
     "research_positioning": "LLMサービング研究の中では、Hybrid SWAというモデル構造を本番システムのキャッシュ意味論・階層ストレージ・ルータ・並列構成へ共同設計するモデル/システム協調最適化に位置する。特にSWAの窓外KV追い出しとprefix再利用の整合性は、Full Attention前提のRadixAttention/HiCacheをそのまま適用できない具体例である。またGCacheのGPUノード同居NVMe利用は、専用ストレージ機を増やさずL3容量を確保する設計であり、SSD/NVMeを推論階層へ組み込む系統とも直接関連する。"
   },
   "reservation": {
-    "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-72baa27379be8494d8497773",
+    "worker_id": "scheduled-chat-paper-20260915T1230JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
+  "attempt_id": "attempt-72baa27379be8494d8497773",
   "job_id": "job-research-3df42686de08919b",
   "data": {
     "problem": "Hybrid SWAは大半の層を局所窓だけに限定するため、理論上はFull Attentionより注意計算とKVキャッシュを約7分の1へ減らせる。しかし従来のHiCache/SGLang初期実装のように互換性のためSWA層でも全系列KVを保持すると、GPU・host・L3の各階層でO(N)容量と転送が残り、モデル構造の利点が消える。さらにFull Attentionでは同一token prefixならKVを再利用できるが、SWAではprefix treeの論理nodeが残っていても窓外KVが物理poolから既に追い出され得る。この不一致を無視すると無効slotをhitとして読みモデル正当性まで損なう。加えて非同期L1/L2/L3転送の状態ずれ、長さの異なるrequestのDP同期、MoE通信、decode KV容量、画像・動画前処理が別々の律速となるため、単一cache最適化や単純なSWA kernelだけでは本番全体を効率化できない。",
@@ -41,8 +41,8 @@
     "system_design": "routing→SWA-safe prefix照合→L1/L2/GCacheからlayerwise KV取得→prefill→PD transfer→decodeというLLM経路と、download/decode→encoder→embedding cache→prefillというmultimodal経路を統合する。各段階でSWAのO(W)物理寿命を維持し、cache localityをroutingへ返すことで、model architecture・storage hierarchy・schedulerを閉ループで協調させる。"
   },
   "reservation": {
-    "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-72baa27379be8494d8497773",
+    "worker_id": "scheduled-chat-paper-20260915T1230JST",
     "worker_kind": "scheduled_chat"
   }
 }

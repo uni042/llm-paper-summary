@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
+  "attempt_id": "attempt-72baa27379be8494d8497773",
   "job_id": "job-research-3df42686de08919b",
   "data": {
     "overview": "Hybrid SWAのFull/SWA二重KVプールはSWA KV容量効率を約7倍にし、サーバ側KVヒット率は通常93%、高負荷利用者で95%以上と報告される。GCacheは1MB RDMA readで170 GB/s・280マイクロ秒、GDRで約350 GB/s。KV親和ルーティングはL2ヒット率を約25%、ノード入力スループットを約30%改善し、長要求TTFT P90を30.5%低下。SWA KV削減でプリフィルEPを半減して約40%改善、デコードKV容量約5倍、MTPは0–128生成2.3倍、128–256で1.5倍。符号器QPSは15→30。",
@@ -103,8 +103,8 @@
     "quality_impact": "近似ではなくHybrid SWAの意味論を正しく実装し、無効SWA KVの誤再利用を防ぐ。"
   },
   "reservation": {
-    "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-72baa27379be8494d8497773",
+    "worker_id": "scheduled-chat-paper-20260915T1230JST",
     "worker_kind": "scheduled_chat"
   }
 }
