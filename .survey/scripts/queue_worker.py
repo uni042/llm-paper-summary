@@ -537,7 +537,8 @@ def apply_artifact(sub: dict, job: dict):
         p = subprocess.run(["git", "rev-parse", f"HEAD:{paper}"], cwd=ROOT.parent, text=True, capture_output=True)
         current = p.stdout.strip() if p.returncode == 0 else None
         if current != expected_sha:
-            raise ValueError(f"paper blob changed: expected {expected_sha}, current {current}")
+            if target.read_bytes() != content.encode("utf-8"):
+                raise ValueError(f"paper blob changed: expected {expected_sha}, current {current}")
     existed = target.exists()
     previous_text = target.read_text(encoding="utf-8") if existed else None
     target.parent.mkdir(parents=True, exist_ok=True)
