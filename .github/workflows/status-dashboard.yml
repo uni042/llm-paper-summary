@@ -5,33 +5,14 @@ on:
     paths:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
-      - '.survey/scripts/append_research_throughput_status.py'
-      - '.survey/scripts/refine_status_observability.py'
-      - '.survey/scripts/ensure_dashboard_history.py'
-      - '.survey/scripts/status_publish_gate.py'
       - '.survey/tests/test_status_dashboard.py'
-      - '.survey/tests/test_research_throughput_status.py'
-      - '.survey/tests/test_status_observability.py'
-      - '.survey/tests/test_status_activity_labels.py'
-      - '.survey/tests/test_dashboard_history.py'
-      - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
-      - '.survey/docs/survey-workflow/discovery-continuation-policy.md'
       - '.github/workflows/status-dashboard.yml'
   push:
     branches: [main]
     paths:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
-      - '.survey/scripts/append_research_throughput_status.py'
-      - '.survey/scripts/refine_status_observability.py'
-      - '.survey/scripts/ensure_dashboard_history.py'
-      - '.survey/scripts/status_publish_gate.py'
       - '.survey/tests/test_status_dashboard.py'
-      - '.survey/tests/test_research_throughput_status.py'
-      - '.survey/tests/test_status_observability.py'
-      - '.survey/tests/test_status_activity_labels.py'
-      - '.survey/tests/test_dashboard_history.py'
-      - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
       - '.github/workflows/status-dashboard.yml'
   workflow_dispatch:
 
@@ -50,16 +31,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Dashboard regression tests
-        run: |
-          python -m unittest discover -s .survey/tests -p 'test_*dashboard*.py'
-          python -m unittest discover -s .survey/tests -p 'test_status_observability.py'
-          python -m unittest discover -s .survey/tests -p 'test_status_activity_labels.py'
+      - name: Direct-evidence dashboard regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_status_dashboard.py'
       - name: Render dashboard in check mode
-        run: |
-          python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
-          python .survey/scripts/append_research_throughput_status.py --repo-root . --status /tmp/STATUS.md
-          python .survey/scripts/refine_status_observability.py --repo-root . --status /tmp/STATUS.md
+        run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
 
   publish:
     if: >-
@@ -75,28 +50,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Decide whether authoritative state changed
-        id: publish_gate
-        shell: bash
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          TRIGGER_SHA: ${{ github.sha }}
-          TRIGGER_MESSAGE: ${{ github.event.head_commit.message }}
-        run: |
-          set -euo pipefail
-          if [ "$EVENT_NAME" = 'workflow_dispatch' ]; then
-            should_publish=true
-          else
-            git diff-tree --no-commit-id --name-only -r -m "$TRIGGER_SHA" \
-              | sort -u \
-              | python .survey/scripts/status_publish_gate.py --commit-message "$TRIGGER_MESSAGE" \
-              > /tmp/status-publish-gate.txt
-            should_publish="$(cat /tmp/status-publish-gate.txt)"
-          fi
-          echo "should_publish=$should_publish" >> "$GITHUB_OUTPUT"
-          echo "Dashboard publish gate: $should_publish"
-      - name: Refresh STATUS.md against latest main
-        if: steps.publish_gate.outputs.should_publish == 'true'
+      - name: Refresh STATUS.md from direct durable evidence
         shell: bash
         run: |
           set -euo pipefail
@@ -105,11 +59,8 @@ jobs:
           for attempt in 1 2 3 4; do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
-            python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
-            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
-            git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
+            git add STATUS.md
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
               exit 0
