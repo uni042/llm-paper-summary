@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:15:55 JST**
+> 自動生成: **2026-09-16 07:16:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **5** | **2** | **3** | **4** | **0** | — |
+| Research | **5** | **5** | **2** | **3** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **17** | **0** | **17** | **0** | **0** | **21** |
-| 合計 | **6** | **22** | **2** | **20** | **4** | **0** | **21** |
+| 合計 | **8** | **22** | **2** | **20** | **2** | **0** | **21** |
 
 - 最新Discovery runの耐久探索round: **17件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -24,6 +24,16 @@
 
 ### Research
 
+- **09-16 07:16:18 JST** [research] `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-382442b3f5faa67f.json`
+  - result: `.survey/work-queue/results/research/attempt-021f1dea5f61fa1de4a2409e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-021f1dea5f61fa1de4a2409e.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md`
+- **09-16 07:16:18 JST** [research] `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts
+  - job: `.survey/work-queue/jobs/job-research-d66acc5736f090e9.json`
+  - result: `.survey/work-queue/results/research/attempt-2920381fc7a4e8f0d505a36f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2920381fc7a4e8f0d505a36f.json`
+  - paper: `papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md`
 - **09-16 07:11:56 JST** [research] `arXiv:2512.20210` — Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs
   - job: `.survey/work-queue/jobs/job-research-77f3e91a5c224daf.json`
   - result: `.survey/work-queue/results/research/attempt-3956cc3669cdbe211fc51d98.json` (`ok=true`)
@@ -135,13 +145,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving / worker `work-library-repair-20260916`
-  - claim: **09-16 07:14:57 JST** / heartbeat: **—** / lease expiry: **09-16 19:14:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-382442b3f5faa67f.json`
-- `arXiv:2603.07169` — Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts / worker `work-library-repair-20260916`
-  - claim: **09-16 07:14:57 JST** / heartbeat: **—** / lease expiry: **09-16 19:14:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d66acc5736f090e9.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework / worker `work-library-repair-20260916`
   - claim: **09-16 07:01:34 JST** / heartbeat: **—** / lease expiry: **09-16 19:01:34 JST**
   - evidence: `.survey/work-queue/claims/job-research-c6ac42b8bcec8aab.json`

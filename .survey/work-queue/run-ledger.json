@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:12:00.795863+00:00",
+  "updated_at": "2026-09-15T22:16:22.681923+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:12:00.795863+00:00",
+      "last_recorded_at": "2026-09-15T22:16:22.681923+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 87,
+        "research_completed": 89,
         "audit_completed": 0,
         "discovery_completed": 26,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34900852105:1",
-          "recorded_at": "2026-09-14T21:49:12.086255+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34900852105",
-            "run_attempt": "1",
-            "source_sha": "208588311b71dee4077687b77802aae111bccab5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34901318877:1",
           "recorded_at": "2026-09-14T21:57:18.961889+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35029698303",
             "run_attempt": "1",
             "source_sha": "5cded47ec7e3e3076f85e3f0fbf2292cd83f6653"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35030094754:1",
+          "recorded_at": "2026-09-15T22:16:22.681923+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35030094754",
+            "run_attempt": "1",
+            "source_sha": "a2c7b00a7bb5d22af94df84cde991b3e1a999081"
           },
           "signals": [
             "research_completed"
@@ -20511,6 +20511,22 @@
           "type": "research",
           "canonical_id": "arXiv:2512.20210",
           "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-382442b3f5faa67f",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21477",
+          "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d66acc5736f090e9",
+          "type": "research",
+          "canonical_id": "arXiv:2603.07169",
+          "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
           "from": "ready",
           "to": "completed"
         }
