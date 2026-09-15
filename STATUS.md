@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 00:46:52 JST**
+> 自動生成: **2026-09-16 01:01:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **2** | **12** | **3** | **9** | **0** | **0** | **7** |
+| Discovery | **1** | **1** | **0** | **1** | **0** | **0** | **3** |
+| 合計 | **1** | **6** | **2** | **4** | **0** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -36,10 +36,6 @@
   - result: `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 適応KV圧縮・プロンプト別資源制約選択
-- **09-15 19:01:33 JST** job `job-6490b6dae61c1d16` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
-  - 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
 
 ### 直近タスク
 
@@ -69,36 +65,12 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-15 20:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **7件**
-- 探索軸: 適応KV圧縮・プロンプト別資源制約選択 / MoE・GPU-NDP協調・expert scheduling / MoE・CPU AMX/GPU協調・expert coalescing / 実運用LLM serving framework採用・empirical systems survey / agentic serving・sandbox・trajectory-level telemetry / agent serving・program-level simulation・KV residency / CXL階層メモリ・transparent NDP・weight/KV圧縮
-- round `specialist-adaptive-kv-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
-  - 探索軸: 適応KV圧縮・プロンプト別資源制約選択
-  - 個別result照合: あり / `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
-- round `specialist-moe-ndp-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2008JST-discovery-specialist-moe-ndp-2.json`
-  - 探索軸: MoE・GPU-NDP協調・expert scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-moe-amx-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2010JST-discovery-specialist-moe-amx-3.json`
-  - 探索軸: MoE・CPU AMX/GPU協調・expert coalescing
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-serving-empirical-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2012JST-discovery-specialist-serving-empirical-4.json`
-  - 探索軸: 実運用LLM serving framework採用・empirical systems survey
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-agent-aries-5` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2015JST-discovery-specialist-agent-aries-5.json`
-  - 探索軸: agentic serving・sandbox・trajectory-level telemetry
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-agent-sim-6` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2017JST-discovery-specialist-agent-sim-6.json`
-  - 探索軸: agent serving・program-level simulation・KV residency
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cxl-ndp-7` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260915T2020JST-discovery-specialist-cxl-ndp-7.json`
-  - 探索軸: CXL階層メモリ・transparent NDP・weight/KV圧縮
+- 最新観測run: **2026-09-16 01:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
+- round `specialist-new-systems-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
+  - 探索軸: 9月新着・推論基盤・NVMe KV・熱制約スケジューリング
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
