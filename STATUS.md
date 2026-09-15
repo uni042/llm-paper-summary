@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 03:08:19 JST**
+> 自動生成: **2026-09-16 03:11:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **9** | **1** | **8** | **0** | **0** | **27** |
-| 合計 | **3** | **14** | **3** | **11** | **0** | **0** | **27** |
+| Discovery | **4** | **9** | **2** | **7** | **0** | **0** | **27** |
+| 合計 | **4** | **14** | **4** | **10** | **0** | **0** | **27** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -36,6 +36,10 @@
   - result: `.survey/work-queue/results/20260916T0308JST-discovery-specialist-hw-scheduling-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json`
   - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler
+- **09-16 03:08:47 JST** job `job-89615180da84d5c4` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260916T0348JST-discovery-specialist-moe-io-2b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T0348JST-discovery-specialist-moe-io-2b.json`
+  - 探索軸: MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch
 - **09-16 01:02:02 JST** job `job-61879864be39f17f` / 候補 **3件**
   - result: `.survey/work-queue/results/20260916T0108JST-discovery-specialist-new-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0108JST-discovery-specialist-new-systems-1.json`
@@ -74,7 +78,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 03:00 JST**
-- 耐久探索round: **8件** / immutable submission: **9件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **8件** / 候補: **27件**
+- 耐久探索round: **8件** / immutable submission: **9件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **7件** / 候補: **27件**
 - round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
 - 探索軸: 異種推論ハードウェア・multi-model offload・分離serving通信scheduler / MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch / CXL・NVMe/JBOF共有KV/context tier / power/energy/thermal-aware LLM serving / agentic serving・sandbox state・agent-aware KV reuse / distributed/remote-drafter speculative decoding・serving負荷モデル / network topology-aware KV transfer・peer GPU cache・non-uniform KV system / GPU L2 prefetch・CPU layer-ahead attention・persistent KV decode kernel
 - round `specialist-hw-scheduling-1` / 候補 **3件**
