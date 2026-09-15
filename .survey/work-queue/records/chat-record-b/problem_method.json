@@ -1,38 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-c4aaea90c49c672188d92cfd",
-  "job_id": "job-research-b22f71500ae1903a",
-  "data": {
-    "problem": "オンラインLLMサービングでは要求到着率を上げると、KVキャッシュがGPUメモリを圧迫してバッチサイズが上限へ張り付き、新規要求のprefill開始が遅れてTTFT SLO達成率が崩れる。OPT-13B/A100 40GBのShareGPT例では90% SLO達成点が約2.6 req/sで、その時点でも全処理時間の約60%を最大バッチサイズで過ごし、3 req/sでは80%以上が上限状態となってSLO達成率が約70%まで低下する。またFCFSは到着順だけでバッチを固定し、長さの異なる要求を柔軟に組み替えられず、同じ負荷で無作為スケジューリングよりTTFT違反を増やす。",
-    "novelty": "KVキャッシュを圧縮するのではなく、各Transformer層の入力隠れ状態を保存するhidden cacheを第二の正確なキャッシュ表現として導入し、メモリ約1/2と追加K/V投影計算を交換する。さらに各要求をKVかhiddenのどちらで保持するか、どの要求を現在バッチへ入れるか、prefill/decodeのどちらを優先するかを実行時情報から反復ごとに共同決定する。",
-    "method_overview": "各反復で待機キューと実行中キューの累積pending timeを比較してprefillまたはdecode側の候補集合を決める。各候補について現在までの待機時間、最大キャッシュメモリ要求、hidden cacheによる計算罰則を値へ変換する。スケジューリングはメモリ制約下で総pending time削減価値を最大化する0-1ナップサック拡張として定式化し、要求のKV割当を1、hidden割当を1/2メモリとして扱う。候補の限界価値/追加メモリを用いた貪欲法で近似し、理論上の近似比2を与える。",
-    "components": [
-      {
-        "name": "ハイブリッドキャッシュ",
-        "description": "各層のK/V対を保存する通常KVキャッシュと、同じ層への入力hidden vectorだけを保存するhidden cacheを併用する。hiddenはK/V二本ではなく一本分のベクトルなので概ね半分のメモリで済むが、復号時に過去位置のK/V線形投影を再実行する。メモリ飽和時に一部要求をhiddenへ移すことで、同じHBM容量により多くの要求を保持できる。"
-      },
-      {
-        "name": "適応要求スケジューラ",
-        "description": "各反復で要求のpending timeと実測メモリ需要を更新し、待機・実行中どちらのキューがより切迫しているかを累積pending timeから決める。その候補に対して要求採用とKV/hidden形式を同時選択し、FCFSの固定順序ではなく現在の混雑状態へバッチ構成を追従させる。"
-      },
-      {
-        "name": "近似比2の貪欲最適化",
-        "description": "要求をhiddenで採用する半量メモリ段階と、KVへ昇格する残り半量段階に分け、限界スケジューリング価値/限界メモリを計算する。価値密度の高い候補から選ぶことでNP困難な混合キャッシュ・バッチ選択を低オーバーヘッドで近似し、著者らは近似比2を証明する。"
-      },
-      {
-        "name": "ブロック型キャッシュ実装",
-        "description": "KVとhiddenをいずれもブロック単位で保持し、要求の動的追加・形式切替に対応する。hidden blockの物理断片化による不規則アクセスを抑えるため、reshapeとread/writeを融合した専用CUDAカーネルを実装する。キャッシュ形式を切り替える必要が生じた要求は既存キャッシュを捨ててprefillで再構築する。"
-      }
-    ],
-    "system_design": "vLLMのiteration-level batching、FlashAttention、テンソル並列を土台に、Request Managerが実行時統計とスケジュール値を管理し、Hybrid Cache Assigner/Cache EngineがKV/hidden blockを割り当てる。Inference Engineは選択された形式でキャッシュを読み、hiddenの場合はK/V投影を追加計算する。",
-    "why_it_works": "高負荷ではTTFT違反の主因が計算能力不足よりHBM容量でバッチへ入れない待ち時間になるため、1要求あたりキャッシュ容量を半分にできるhidden cacheは追加演算を払っても待ち行列を縮める価値がある。一方、すべてをhiddenにするとTBTが悪化するので、pending timeとメモリ圧迫を反映したスケジューラが必要な要求だけをhiddenへ回す。",
-    "failure_modes": "hidden cacheを多用するとK/V再投影が増え、TBTと反復時間が悪化する。形式切替には再prefillが必要。SLO達成済み要求を優先する目的関数は、既にSLOを破った要求の値をほぼゼロへ落とすため、約10%の要求で飢餓と高いtail latencyを生み得る。単一サーバ内を主対象としており、複数インスタンス・クラスタ間の配置は未解決。"
-  },
-  "reservation": {
-    "claim_id": "claim-c4aaea90c49c672188d92cfd",
-    "worker_id": "scheduled-chat-paper-20260915T1730JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-c4aaea90c49c672188d92cfd","job_id":"job-research-b22f71500ae1903a",
+  "data":{"problem":"オンラインLLMサービングでは要求到着率を上げると、KVキャッシュがGPUメモリを圧迫してバッチサイズが上限へ張り付き、新規要求のprefill開始が遅れてTTFT SLO達成率が崩れる。OPT-13B/A100 40GBのShareGPT例では90% SLO達成点が約2.6 req/sで、その時点でも全処理時間の約60%を最大バッチサイズで過ごし、3 req/sでは80%以上が上限状態となってSLO達成率が約70%まで低下する。またFCFSは到着順だけでバッチを固定し、長さの異なる要求を柔軟に組み替えられず、同じ負荷で無作為スケジューリングよりTTFT違反を増やす。PagedAttention等のブロック型KV管理は断片化を減らしても、各トークン・各層でKとVの二系列を保持する容量自体は系列長に比例して増え続ける。prefill/decode分離やchunked prefillも計算干渉を改善するが、HBM容量が原因で新規要求をバッチへ入れられない状態と、FCFSによる硬直した構成選択は直接解かない。したがって高負荷時には、キャッシュ表現のメモリ量と要求採用順序を同じ反復単位で共同最適化する必要がある。","novelty":"KVキャッシュを圧縮するのではなく、各Transformer層の入力隠れ状態を保存するhidden cacheを第二の正確なキャッシュ表現として導入し、メモリ約1/2と追加K/V投影計算を交換する。さらに各要求をKVかhiddenのどちらで保持するか、どの要求を現在バッチへ入れるか、prefill/decodeのどちらを優先するかを実行時情報から反復ごとに共同決定する。","method_overview":"Apt-ServeはvLLMのiteration-level batching上で、各反復の開始時にRequest Managerが待機中・実行中要求のpending time、現在までの系列長、キャッシュ所要量、SLO状態を更新する。まず待機キューと実行中キューの累積pending timeを比較して、今回prefill候補を増やすかdecode中要求を進めるかの候補集合を作る。次にHybrid Cache Assignerは各候補について、通常KVキャッシュならK/V二系列をそのまま保持して追加投影を避ける選択と、各層入力hidden vectorだけを保持して約半分のメモリで済ませる代わりにdecode時に過去K/V投影を再計算する選択を用意する。要求採用とキャッシュ形式選択を、GPUの利用可能キャッシュメモリ制約下で総pending time削減価値を最大化する0-1ナップサック拡張として定式化し、hidden採用を半量メモリ段階、KVへの昇格を残り半量段階として価値密度順に選ぶ近似比2の貪欲法で実時間に解く。選択結果に従ってCache Engineがブロック単位でKV/hidden領域を割り当て、Inference Engineがバッチを実行する。hidden要求では各decode反復で保存済み入力hiddenからK/V線形投影を再計算して正確なattention入力を復元する。キャッシュ形式変更が必要な場合は既存形式を破棄してprefillで再構築する。実行後の待機時間・系列長・空きメモリを次反復へ戻すことで、HBM逼迫時はhiddenを増やして同時実行数を稼ぎ、余裕がある時はKVを増やして追加計算を抑える閉ループ制御になる。","components":[{"name":"ハイブリッドキャッシュ","description":"各Transformer層について、通常のKVキャッシュと入力hidden stateを保存するhidden cacheを同じブロック型メモリ管理下で併用する。KVは過去トークンのKとVを直接保持するためdecode時の再投影が不要だが二系列分の容量を使う。hidden cacheはそのK/Vを生成する直前の入力hidden vectorだけを保持するため概ね半分のメモリで済み、HBMがバッチ上限を決める高負荷時に同時保持できる要求数を増やせる。代わりにdecodeでは保存hiddenからK/V線形投影を再実行するため計算量とTBTが増える。Apt-Serveはこの二形式を要求ごとに選択し、単純な近似圧縮ではなく同じモデル出力を保ったままメモリ容量と再計算を交換する。"},{"name":"適応要求スケジューラ","description":"各推論反復でRequest Managerが待機要求と実行中要求のpending time、系列長、現在キャッシュ量を更新し、待機側と実行側の累積pending timeからprefill候補またはdecode候補を構成する。候補ごとに『今この要求を進めることで減らせる待機価値』と必要メモリを計算し、要求を採用するか、採用するならKVかhiddenのどちらを割り当てるかを同時に決める。これによりFCFSのように到着順を固定せず、長短要求や混雑度が変わるたびにバッチ構成を反復単位で組み替える。HBM逼迫時にはhiddenを使って新規prefillを早く開始し、余裕が戻ればKVを選んで追加投影を抑えるため、TTFT待ち時間とdecode計算負荷を状況に応じて釣り合わせる。"},{"name":"近似比2の貪欲最適化","description":"要求選択と二種類のキャッシュ割当を含む最適化はNP困難なので、各要求を『hiddenで採用する半量メモリ段階』と『hiddenからKVへ昇格する残り半量メモリ段階』に分解する。各段階についてpending time削減に基づく限界スケジューリング価値を追加メモリ量で割った価値密度を求め、利用可能HBMを超えない範囲で高い順に選ぶ。単純に小さい要求だけを詰めるのではなく、待たされている要求を進める効果とキャッシュ容量を同じ指標へ変換する点が重要である。著者らはこの貪欲解について理論的な近似比2を示し、反復ごとに厳密ナップサックを解くコストを避けながら、実時間でキャッシュ形式とバッチを共同更新できるようにする。"},{"name":"ブロック型キャッシュ実装","description":"vLLMのPagedAttention系ブロック管理を拡張し、KV blockとhidden blockを共通のCache Engineから動的に割り当てる。要求ごとのhidden stateは物理メモリ上で断片化し得るため、そのままでは再投影時のgather/scatterがボトルネックになる。そこでApt-Serveはhidden blockのreshapeとread/writeを融合する専用CUDAカーネルを実装し、不規則なブロック配置から推論エンジンが必要とする形への変換回数と中間コピーを減らす。複数GPUでは既存vLLMのテンソル並列とNCCLを利用する。キャッシュ形式を切り替える要求では互換でない旧キャッシュを破棄してprefillで再構築するため、その切替コストもスケジューラが頻繁な形式変更を避けるべき実行上の交換条件になる。"}],"system_design":"vLLMのiteration-level batching、FlashAttention、テンソル並列を土台に、Request Managerが実行時統計とスケジュール値を管理し、Hybrid Cache Assigner/Cache EngineがKV/hidden blockを割り当てる。Inference Engineは選択された形式でキャッシュを読み、hiddenの場合はK/V投影を追加計算する。","why_it_works":"高負荷ではTTFT違反の主因が計算能力不足よりHBM容量でバッチへ入れない待ち時間になるため、1要求あたりキャッシュ容量を半分にできるhidden cacheは追加演算を払っても待ち行列を縮める価値がある。一方、すべてをhiddenにするとTBTが悪化するので、pending timeとメモリ圧迫を反映したスケジューラが必要な要求だけをhiddenへ回す。","failure_modes":"hidden cacheを多用するとK/V再投影が増え、TBTと反復時間が悪化する。形式切替には再prefillが必要。SLO達成済み要求を優先する目的関数は、既にSLOを破った要求の値をほぼゼロへ落とすため、約10%の要求で飢餓と高いtail latencyを生み得る。単一サーバ内を主対象としており、複数インスタンス・クラスタ間の配置は未解決。"},
+  "reservation":{"claim_id":"claim-c4aaea90c49c672188d92cfd","worker_id":"scheduled-chat-paper-20260915T1730JST","worker_kind":"scheduled_chat"}
 }
