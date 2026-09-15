@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:37:15.044687+00:00",
+  "updated_at": "2026-09-15T23:18:35.856816+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:37:15.044687+00:00",
+      "last_recorded_at": "2026-09-15T23:18:35.856816+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34902524938:1",
-          "recorded_at": "2026-09-14T22:11:04.814869+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34902524938",
-            "run_attempt": "1",
-            "source_sha": "55f643ea6d36850194b1bbff4cfaac96bd8e3421"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34902774078:1",
           "recorded_at": "2026-09-14T22:13:41.847570+00:00",
@@ -19599,6 +19585,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35033886396:1",
+          "recorded_at": "2026-09-15T23:18:35.856816+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35033886396",
+            "run_attempt": "1",
+            "source_sha": "3d7d62aee9b2f95b7e5fda7123b1b62eb1b75faa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21053,7 +21053,18 @@
         ".survey/work-queue/results/20260916T0742JST-discovery-specialist-edge-ndp-14.json",
         ".survey/work-queue/results/20260916T0745JST-discovery-specialist-cache-security-15.json",
         ".survey/work-queue/results/20260916T0748JST-discovery-specialist-seqcomm-16.json",
-        ".survey/work-queue/results/20260916T0751JST-discovery-specialist-speculative-17.json"
+        ".survey/work-queue/results/20260916T0751JST-discovery-specialist-speculative-17.json",
+        ".survey/work-queue/results/20260916T0808JST-discovery-specialist-new-arrivals-1.json",
+        ".survey/work-queue/results/20260916T0813JST-discovery-specialist-kv-adaptive-2.json",
+        ".survey/work-queue/results/20260916T0818JST-discovery-specialist-latent-memory-3.json",
+        ".survey/work-queue/results/20260916T0821JST-discovery-specialist-recurrent-memory-4.json",
+        ".survey/work-queue/results/20260916T0825JST-discovery-specialist-moe-offload-5.json",
+        ".survey/work-queue/results/20260916T0829JST-discovery-specialist-moe-placement-6.json",
+        ".survey/work-queue/results/20260916T0833JST-discovery-specialist-pd-routing-7.json",
+        ".survey/work-queue/results/20260916T0836JST-discovery-specialist-kv-transfer-8.json",
+        ".survey/work-queue/results/20260916T0841JST-discovery-specialist-smartnic-storage-9.json",
+        ".survey/work-queue/results/20260916T0845JST-discovery-specialist-cxl-kv-10.json",
+        ".survey/work-queue/results/20260916T0850JST-discovery-specialist-gpu-runtime-11.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -21131,7 +21142,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
