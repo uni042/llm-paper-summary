@@ -92,12 +92,13 @@ class StatusPublishGateTests(unittest.TestCase):
             "false",
         )
 
-    def test_workflow_allows_authoritative_bot_push_and_uses_gate(self):
+    def test_status_workflow_is_direct_builder_only(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertNotIn("github.actor != 'github-actions[bot]'", text)
-        self.assertIn("status_publish_gate.py", text)
+        self.assertIn("build_status_dashboard.py", text)
+        self.assertNotIn("append_research_throughput_status.py", text)
+        self.assertNotIn("refine_status_observability.py", text)
 
-    def test_fast_lanes_publish_dashboard_in_the_authoritative_commit(self):
+    def test_fast_lanes_keep_compatibility_shims_inert_after_direct_build(self):
         for workflow in (CLAIM_WORKFLOW, SUBMISSION_WORKFLOW):
             text = workflow.read_text(encoding="utf-8")
             with self.subTest(workflow=workflow.name):
@@ -105,7 +106,7 @@ class StatusPublishGateTests(unittest.TestCase):
                 self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
                 self.assertIn("STATUS.md", text)
 
-    def test_background_helper_publishes_dashboard_in_its_authoritative_commit(self):
+    def test_background_helper_keeps_compatibility_shims_inert_after_direct_build(self):
         text = HELPER_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("refresh_status_dashboard", text)
         self.assertIn("status_publish_gate.py", text)
