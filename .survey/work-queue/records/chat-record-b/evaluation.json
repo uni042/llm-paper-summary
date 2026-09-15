@@ -2,24 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-021f1dea5f61fa1de4a2409e",
-  "job_id": "job-research-382442b3f5faa67f",
+  "attempt_id": "attempt-a9db9f15ee8854630c93a0fa",
+  "job_id": "job-research-ea263cc3cccbe57a",
   "data": {
-    "hardware": ["AMD EPYC 9534 64-core CPU", "NVIDIA H100 80GB GPU ×8"],
-    "software": ["Pancake Python interface", "Faiss IVF-compatible index", "vLLM for Llama models", "GPT-5 API for remote model condition"],
-    "model": ["Llama3.1-8B", "Llama3.1-70B", "GPT-5 API"],
-    "datasets": "AgentGym、GSM8K、PRM800K、UltraChat、UltraFeedback、APIGenをエージェント負荷として使用。静的知識ベースはMS MARCO 8M passagesをE5（1024次元）で埋め込み。",
-    "baselines": ["A-Mem", "MemGPT", "LlamaIndex", "LangMem/LangChain", "Quake", "SpFresh", "DiskANN", "Pancake-IVF-Static", "Pancake-IVF-Split"],
-    "correctness": "ANN検索の品質は再現率と遅延のトレードオフで検証する。検索のみの条件では素のIVFが再現率0.9超を得るため最大128クラスタを走査する必要があり、検索と更新が混在する条件では挿入ベクトルの散在によって再現率がさらに低下する。Pancakeが高い再現率を維持しながら走査クラスタ数と検索遅延を削減できるかを比較し、単なる高速化で検索品質を犠牲にしていないことを確認する。",
-    "settings": [
-      {"name": "単一エージェントの端から端までの評価", "description": "複数のエージェントデータセット、Llama3.1-8B/70BとGPT-5 API、局所・共有メモリ条件で既存のエージェントメモリ基盤とスループット・メモリ処理時間を比較する。"},
-      {"name": "複数エージェント混合・スケーリング", "description": "異なるデータセットを組み合わせた2エージェント混合負荷と、最大20同時エージェントまでの条件で、既存メモリ基盤の干渉とPancakeのスループット低下を測る。"},
-      {"name": "ベクトルDB単体性能", "description": "実エージェント負荷から生成されたメモリ操作ベクトルを入力し、バッチサイズ8でSpFresh、DiskANN、Quake、IVF派生方式と問い合わせスループットを比較する。"},
-      {"name": "再現率と動的更新", "description": "検索のみと検索・挿入混在条件で走査クラスタ数、遅延、再現率を比較し、固定IVF、分割型保守、多段キャッシュ、GPU協調の差を評価する。"},
-      {"name": "機構別寄与とGPUキャッシュ", "description": "多段キャッシュ、ハイブリッドグラフ、エージェント別プロファイルの寄与を分離し、GPUキャッシュ容量を0〜30GB程度で変化させてCPU版からの高速化倍率、ウォームアップ、クラスタ分割時の遅延急増を測定する。"}
+    "hardware": [
+      "3 data centers, each with 24,576 NVIDIA H100 GPUs"
     ],
-    "methodology": "機能的なエージェントメモリ基盤とのエンドツーエンド比較と、動的ANN索引との単体比較を分けて評価する。前者ではLLM生成を含むスループット、メモリ操作時間比率、複数エージェント間干渉を測り、後者では問い合わせスループット、再現率、走査量を測る。さらに索引保守、エージェント間協調、GPUキャッシュを個別に無効化・置換する機構別評価により、各機構の寄与と動的負荷への収束速度を検証する。",
-    "scope": "評価は単一種類のCPU-GPUサーバ構成を中心とし、初期知識ベースはMS MARCO 8M passagesである。最大20エージェントまでの評価であり、数百〜数千エージェント規模、分散ノードを跨ぐ索引、障害回復、永続ストレージ入出力の詳細は対象外である。GPT-5条件は遠隔APIを利用するため、ネットワークおよびAPI側の変動もエンドツーエンド値へ含まれ得る。"
+    "software": [
+      "Mixed-integer linear programming model commitment formulation",
+      "public parameter configuration repository"
+    ],
+    "model": [
+      "Qwen2.5-32B",
+      "Llama-3.3-70B",
+      "DeepSeek-V3",
+      "Qwen2.5-72B for TPOT calibration"
+    ],
+    "datasets": "要求到着はAzure OpenAI系の実運用トレースを含むBurstGPTに基づく。電力価格はISO New England、CAISO、ERCOTの米国3地域の実価格系列を利用。",
+    "baselines": [
+      "B1-Myopic: 30分先読み",
+      "B2-Static: 配置固定",
+      "B3-ZeroLeadTime: 読込時間無視",
+      "B4-NoPriceSignal: 地域価格差無視",
+      "B5-NoTTFT: TTFT制約なし",
+      "B6-NoTPOT: TPOT制約なし"
+    ],
+    "correctness": "楽観的なablation B3/B5/B6は最適化結果をそのまま採点せず、完全な物理制約下で再生して実際に処理可能か検証する。これにより読込時間やSLOを無視した解が見かけ上安価でも実サービスでは未処理需要を生むことを測る。",
+    "settings": [
+      {
+        "name": "時間解像度",
+        "description": "15分刻みでモデル配置と地域間要求配送を決定し、読込完了が区間途中の場合は残り時間の処理能力を分数として扱う。"
+      },
+      {
+        "name": "モデル読込時間",
+        "description": "Qwen2.5-32B 240秒、Llama-3.3-70B 600秒、DeepSeek-V3 3,600秒。公開運用報告やServerlessLLM、page-cache研究などから較正する。"
+      },
+      {
+        "name": "SLO",
+        "description": "3モデルとも平均TTFT上限2秒、TPOT上限50ms。モデル別最大output-token throughputと50ms下の安全利用率を公開測定・実験から設定する。"
+      },
+      {
+        "name": "データセンター規模",
+        "description": "米国北東・西部・南部を想定した3拠点、各H100 24,576基、PUE 1.09。拠点別の実nodal priceと時変power limitを与える。"
+      }
+    ],
+    "methodology": "完全MCと2つの運用baseline、4つのablationを同一需要・電力条件で比較し、service rate、unserved-token penalty、total cost、10^9 tokens当たりelectricity costを測定する。さらにDeepSeek-V3の時系列配置を可視化し、需要ピーク前にどの程度先行してレプリカ移動を開始するかを確認する。",
+    "scope": "3ページのletterで、評価はシミュレーション・最適化中心。実際の複数データセンターへmodel replicaを展開してroutingする本番実験ではなく、主要性能値と読込時間は公開データ・実験値から較正している。需要予測誤差、障害、モデル切替頻度の不確実性などは明示的な確率モデルとして扱わない。"
   },
-  "reservation": {"claim_id": "claim-021f1dea5f61fa1de4a2409e", "worker_id": "work-library-repair-20260916", "worker_kind": "work"}
+  "reservation": {
+    "claim_id": "claim-a9db9f15ee8854630c93a0fa",
+    "worker_id": "work-library-repair-20260916",
+    "worker_kind": "work"
+  }
 }
