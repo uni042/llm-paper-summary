@@ -1,20 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-2767bee85a3612f009a3c651",
-  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "positioning",
-  "data": {
-    "limitations": "性能評価はLlama-3.1-8B-Instructが中心で、追加Qwenモデルは正しさ確認に限られる。現H100 PCIe環境はmultimem/NVLSを利用できず、公平な多GPU性能比較をしていない。検証は全要求へ一時停止を波及させ、選択的決定性でも非対象要求に遅延を加える。プリフィルとデコードが異なる削減戦略を使うため接頭辞KV共有をサポートせず、通常の投機的復号とも未統合である。",
-    "differences": "既存のバッチ不変推論はGEMM等をバッチ形状に依存しない削減順序へ全面的に置き換え、全要求を常に決定的にする。LLM-42は通常の高速カーネルと動的バッチを候補生成に残し、固定形状の検証だけを決定的な基準実行にするため、カーネル改変を減らし、決定的要求比率に応じて費用を支払う。通常の投機的復号が小型ドラフト等の近似計算から候補を作るのに対し、LLM-42は同一モデルの通常計算で候補を作り、浮動小数点削減順序の違いだけを検証する。",
-    "implementation_status": "公開実装あり。MicrosoftのGitHubリポジトリはSGLang派生コード、LLM-42本体、カーネル、ベンチマーク、SOSP 2026成果物評価用スクリプトを含む。",
-    "research_positioning": "LLMサービングのスケジューリングと再現可能推論の交点に位置する。連続バッチ、PagedAttention、分離サービング等が通常は非決定性を前提に性能を追求するのに対し、LLM-42は高性能な動的実行を維持しつつ、必要な要求だけに再現性を後付けする。",
-    "relation_to_existing_repository": "SGLang/vLLMのバッチ不変推論系統とは目的を共有するが、決定性をカーネル設計からスケジューラの検証へ移す点で補完・対照関係にある。投機的復号系統からは候補生成・検証・巻き戻しという制御構造を借りる一方、候補生成の近似や小型モデルは使わない。サービングスケジューリング系統に対しては、要求属性としての決定性を優先度・バッチ編成へ組み込む新しい制約を与える。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-58a2532460c79d2021bd7417",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2767bee85a3612f009a3c651",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-58a2532460c79d2021bd7417",
+    "worker_id": "scheduled-chat-paper-20260915T1930JST",
     "worker_kind": "scheduled_chat"
   }
 }

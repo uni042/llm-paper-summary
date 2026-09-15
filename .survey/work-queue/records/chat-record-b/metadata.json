@@ -1,109 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-2767bee85a3612f009a3c651",
-  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "metadata",
-  "data": {
-    "canonical_id": "arXiv:2601.17768",
-    "arxiv_id": "2601.17768",
-    "doi": "10.48550/arXiv.2601.17768",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.AI",
-        "cs.DC"
-      ]
-    },
-    "title": "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
-    "summary": "LLM-42は、動的バッチ処理によって同じトークン位置でもGPUカーネルの浮動小数点加算順序が変わり、同一プロンプトの出力が実行ごとに分岐する問題を、全カーネルをバッチ不変へ書き換えずに解くサービング方式である。通常の高速デコードでは既存の最適化済みカーネルをそのまま使い、一定数の候補トークンがたまった時だけ固定形状で再実行する検証を挟む。検証結果と候補が一致する範囲だけを確定し、不一致が出た位置以降を巻き戻してKVキャッシュも検証側の値へ置き換える。さらに複数要求の短い検証窓をまとめるグループ検証により、短窓の低い再計算量と大きなバッチの高いGPU効率を両立する。SGLang 0.5.3rc0上で4基のH100 PCIeを用い、Llama-3.1-8B-Instructを評価した結果、バッチ不変SGLangがオフラインで24〜36%のスループット低下を受けるのに対し、決定的要求が少ないと非決定的SGLangの性能へ近づき、10%決定的トラフィックではShareGPTでSGLang決定的モードより33%高速、別条件では最大48%高速だった。",
-    "list_summary": "動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。",
-    "authors": [
-      "Raja Gond",
-      "Aditya K Kamath",
-      "Ramachandran Ramjee",
-      "Ashish Panwar"
-    ],
-    "authors_affiliations": "Microsoft Research; University of Washington",
-    "published": "2026-01-25",
-    "publication": "SOSP 2026 / arXiv:2601.17768v2",
-    "publication_type": "査読付き国際会議論文",
-    "publication_status": "SOSP 2026採録。arXiv初稿は2026-01-25、v2は2026-01-30。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "決定的LLM推論",
-      "動的バッチ処理",
-      "検証付き投機実行",
-      "デコード・検証・巻き戻し",
-      "SGLang",
-      "再現性"
-    ],
-    "importance": "高。決定性をGPUカーネル固有の性質からスケジューラへ移し、決定性が必要な要求だけに検証費用を課す設計を示すため、再現可能推論と高スループットの両立という新しいサービング設計点を提供する。",
-    "hardware_evaluation": "4×NVIDIA H100 PCIe 80GB HBM3、各GPU 114 SM。ホストは64物理コア/128ハードウェアスレッド、約1.65TB DRAM。",
-    "hardware_details": "主性能評価はLlama-3.1-8B-Instruct、SGLang 0.5.3rc0、FlashAttention-3。検証時はKV分割数を1に固定し、通常デコードは既定設定を使う。",
-    "quality_effect": "固定したサンプリング条件に対してビットレベルの再現性を保証することが目的で、モデル近似による意味品質低下を導入する方式ではない。非貪欲サンプリングではSGLangのseed付き決定的サンプラを用いる。",
-    "storage_targets": [
-      "GPU HBM上のKVキャッシュ",
-      "検証窓の候補トークンと状態",
-      "巻き戻し時に修復されるKVエントリ"
-    ],
-    "bottlenecks": [
-      "バッチ不変カーネルによる固定性能損失",
-      "検証再実行の計算費用",
-      "不一致時の巻き戻しと再計算",
-      "オンライン負荷変動による検証効率低下"
-    ],
-    "evidence_locations": [
-      "§3 Observations",
-      "§4 LLM-42",
-      "§4.2 Decode-Verify-Rollback",
-      "§4.3 Grouped Verification",
-      "§5 Evaluation",
-      "Table 4-5",
-      "Figure 10-12",
-      "§5 Discussion"
-    ],
-    "source": "https://arxiv.org/abs/2601.17768",
-    "sources": [
-      "https://arxiv.org/abs/2601.17768",
-      "https://arxiv.org/pdf/2601.17768",
-      "https://github.com/microsoft/llm-42"
-    ],
-    "code": "https://github.com/microsoft/llm-42",
-    "implementation": "SGLang v0.5.3系を基盤に実装され、Microsoftの公開リポジトリにデコード・検証・巻き戻し本体、バッチ不変比較実装、ベンチマーク、SOSP 2026成果物再現スクリプトが公開されている。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "title": "Accelerating Large Language Model Decoding with Speculative Sampling"
-      },
-      {
-        "canonical_id": "arXiv:2505.09056",
-        "title": "A Comprehensive Analysis of Large Language Model Outputs: Similarity, Diversity, and Bias"
-      },
-      {
-        "canonical_id": "arXiv:2001.08361",
-        "title": "Scaling Laws for Neural Language Models"
-      },
-      {
-        "canonical_id": "arXiv:2506.09501",
-        "title": "Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning"
-      },
-      {
-        "canonical_id": "arXiv:2407.03582",
-        "title": "Integrating Randomness in Large Language Models"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2601.17768v2一次資料の参考文献節",
-    "references_total": 48,
-    "last_audited": null,
-    "audit_version": 0
-  },
+  "attempt_id": "attempt-58a2532460c79d2021bd7417",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2767bee85a3612f009a3c651",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-58a2532460c79d2021bd7417",
+    "worker_id": "scheduled-chat-paper-20260915T1930JST",
     "worker_kind": "scheduled_chat"
   }
 }

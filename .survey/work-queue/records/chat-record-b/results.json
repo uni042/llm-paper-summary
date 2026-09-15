@@ -1,69 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-2767bee85a3612f009a3c651",
-  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "results",
-  "data": {
-    "overview": "SGLangのバッチ不変決定的モードはオフラインで非決定的モードより24〜36%スループットが低下した。LLM-42は通常カーネルを維持するため、決定的要求比率が低いほど非決定的上限へ近づく。ArXivでは決定的要求5/10/20/50%で上限との差がそれぞれ8/2/1/1%となり、10%決定的時にはShareGPTでSGLang決定的モードより33%高速、別の長さ構成では最大48%高速だった。巻き戻しは多くの条件で少なく、全要求決定的な最悪ArXivでも4096要求に3351回、再計算トークン割合10.97%だった。",
-    "key_results": [
-      {
-        "metric": "SGLang決定的モードのオフライン性能損失",
-        "value": "24〜36%低下",
-        "baseline": "SGLang非決定的モード",
-        "condition": "8オフライン構成",
-        "interpretation": "バッチ不変カーネルを全要求へ常時適用する固定費用が大きい。"
-      },
-      {
-        "metric": "LLM-42の選択的決定性スループット",
-        "value": "最大48%高速",
-        "baseline": "SGLang決定的モード",
-        "condition": "10%決定的トラフィック、入力2048/出力256等",
-        "interpretation": "対象要求だけ検証するため、決定性が少数なら通常高速経路の性能をほぼ維持する。"
-      },
-      {
-        "metric": "ArXivで非決定的上限との差",
-        "value": "5%時8%、10%時2%、20%時1%、50%時1%",
-        "baseline": "SGLang非決定的モード",
-        "condition": "オフラインArXiv",
-        "interpretation": "トラフィック構成に応じて検証費用が滑らかに増える。"
-      },
-      {
-        "metric": "最悪の巻き戻し頻度",
-        "value": "3351回 / 4096要求",
-        "baseline": "なし",
-        "condition": "ArXiv、100%決定的",
-        "interpretation": "最悪構成でも平均1要求1回未満で、高速経路候補の大半は採用できる。"
-      },
-      {
-        "metric": "最悪の再計算割合",
-        "value": "10.97%",
-        "baseline": "総生成トークン",
-        "condition": "ArXiv、100%決定的",
-        "interpretation": "不一致修復の追加計算は有限で、多くの他構成ではさらに小さい。"
-      },
-      {
-        "metric": "高負荷TTFT",
-        "value": "P90 101.2ms vs 171.6ms",
-        "baseline": "SGLang決定的モード",
-        "condition": "18 QPS、100%決定的",
-        "interpretation": "全要求が決定的でも高負荷では固定バッチ不変方式より先頭応答の裾を抑えられる。"
-      },
-      {
-        "metric": "グループ検証P99",
-        "value": "34〜35秒",
-        "baseline": "単一要求検証の最良56.18秒",
-        "condition": "12 QPS、100%決定的、総256検証トークン",
-        "interpretation": "短い窓を複数要求でまとめることで再計算増加を抑えながらGPU利用効率を上げる。"
-      }
-    ],
-    "negative_results": "100%決定的かつ低いQPSでは、現実装の検証が全進行中要求を一時停止することとプリフィルを要求間でバッチ化しないことにより、LLM-42がSGLang決定的モードより遅くなる条件がある。ShareGPTの100%決定的オフラインでもSGLang決定的モードより6%遅い。単一要求検証で窓を512まで広げると再計算費用42.33%となり、P99も128窓の56.18秒から99.94秒へ悪化する。",
-    "interpretation": "決定性のためにすべての演算を最悪条件へ固定する必要はなく、通常は一致するというLLMデコードの性質を利用して、まれな不一致だけを検証・修復すればよいことを示す。特に決定性が評価・監査等の一部トラフィックだけに必要な運用では、固定費用型のバッチ不変方式より有利である。",
-    "quality_impact": "出力意味品質を近似する方式ではない。固定サンプリング条件での実行間再現性を強制し、不一致候補は利用者へ返さず再計算する。"
-  },
+  "attempt_id": "attempt-58a2532460c79d2021bd7417",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2767bee85a3612f009a3c651",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "claim_id": "claim-58a2532460c79d2021bd7417",
+    "worker_id": "scheduled-chat-paper-20260915T1930JST",
     "worker_kind": "scheduled_chat"
   }
 }
