@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Insert concise worker-routing and claim-health metrics near the top of STATUS.md."""
+"""Insert concise worker-routing and claim-health metrics near the top of legacy STATUS.md.
+
+The direct-evidence dashboard introduced in 2026-09 is authoritative. Existing
+workflows still invoke this script for compatibility, so append_section detects
+that dashboard and leaves it unchanged instead of reintroducing secondary
+ledger-derived metrics.
+"""
 from __future__ import annotations
 
 import argparse
@@ -12,6 +18,7 @@ from typing import Any
 
 START = "<!-- research-throughput-status:start -->"
 END = "<!-- research-throughput-status:end -->"
+DIRECT_DASHBOARD_HEADER = "# LLM論文サーベイ 稼働状況"
 HIGH_BACKLOG = 25
 SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
@@ -122,9 +129,6 @@ def _worker_lane(worker_id: Any) -> str:
     value = str(worker_id or "").lower()
     if not value:
         return "unknown"
-    # The :00 discovery worker may stay alive well past the hour while working
-    # overflow Research. Its historical ids contain "discovery-router", so this
-    # check must precede the generic "router" fallback below.
     if "discovery" in value or "aux" in value or "specialist" in value:
         return "aux"
     if "scheduled-chat-llm-survey" in value:
@@ -408,11 +412,20 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
 
 
 def append_section(repo_root: Path, status_path: Path, now: datetime | None = None) -> None:
-    section = render_section(repo_root, now=now).rstrip()
     try:
         text = status_path.read_text(encoding="utf-8")
     except OSError:
         text = ""
+
+    # Compatibility barrier: the rebuilt dashboard intentionally has no legacy
+    # throughput block. Existing worker workflows may still call this script,
+    # but they must not mutate the direct-evidence STATUS.md.
+    if text.lstrip().startswith(DIRECT_DASHBOARD_HEADER):
+        if text and not text.endswith("\n"):
+            status_path.write_text(text + "\n", encoding="utf-8")
+        return
+
+    section = render_section(repo_root, now=now).rstrip()
     text = _modernize_dashboard_labels(text)
 
     if START in text and END in text:
