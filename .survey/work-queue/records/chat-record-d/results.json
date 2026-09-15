@@ -2,77 +2,96 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-61d3ec810a2f30bc516f1a9c",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "overview": "WWW.Serveは4つの異種・変動負荷設定すべてで単一ノード実行より高いSLO達成率を示し、集中スケジューリングに近いか一部で上回った。平均遅延も全設定で単一ノードより短く、最大27.6%削減した。品質評価では大きいモデル、軽い量子化、速い注意実装、強いGPUほど対戦勝率または処理要求数を通じて信用蓄積が速くなった。",
+    "overview": "Ariesの測定ではagent servingのcritical pathがGPU推論だけで決まらない。tool executionは13〜48%のend-to-end latency、harnessはさらに最大9%を占め、tool latencyは複数桁にまたがるlong tailを持つ。agent contextは通常会話より大きく、Qwen3.6で25GB KV budgetを固定すると最大resident capacityが176超から40へ約4.4倍低下する。DeepResearch/OpenClawはcontext overflowを消す160Kで95%成功に達するが、他workloadは中小windowでplateau/degradeし、最大history保持は常に有益ではない。32-session backlogではtoken pool utilizationが97%へ達する一方median concurrent requestは22、p95 internal queue delayは7.9s。sandboxはCPU 80%以上、memory 50%以上の時間idleだがtool call中はidle率20%未満へ落ちる。毎tool call後に停止するとinstance costは65%下がるもののsnapshot C/R込み総費用はpersistent baselineの4.9倍で、理想的state managementならbaseline比3倍まで総費用を下げる余地がある。",
     "key_results": [
       {
-        "metric": "世界全体SLO達成率",
-        "value": "最大1.5倍",
-        "baseline": "単一ノード実行",
-        "condition": "4つの異種・変動負荷設定",
-        "interpretation": "局所的に余った計算資源へ要求を委譲することで、中央管理なしでもSLO内完了要求を増やす。"
+        "metric": "tool execution latency share",
+        "value": "13〜48%",
+        "baseline": "end-to-end trajectory latency",
+        "condition": "公開3 benchmark×複数harness",
+        "interpretation": "GPU token生成だけを改善しても最大半分近いcritical pathが残る。"
       },
       {
-        "metric": "平均要求遅延",
-        "value": "最大27.6%削減",
-        "baseline": "単一ノード実行",
-        "condition": "設定2: 226.578秒→168.485秒",
-        "interpretation": "負荷交換が局所飽和を緩和し、集中スケジューラ168.221秒とほぼ同等。"
+        "metric": "harness overhead share",
+        "value": "最大9%",
+        "baseline": "end-to-end trajectory latency",
+        "condition": "公開harness controlled profiling",
+        "interpretation": "tool以外のorchestrationもLLM呼び出し間を延ばし、state residencyを長期化する。"
       },
       {
-        "metric": "設定1平均遅延",
-        "value": "184.400秒",
-        "baseline": "単一200.380秒、集中188.419秒",
-        "condition": "同質4ノード",
-        "interpretation": "この条件では分散方式が集中方式を約2.1%上回る。"
+        "metric": "resident capacity",
+        "value": "176超→40（約4.4倍低下）",
+        "baseline": "conventional request vs agent context",
+        "condition": "Qwen3.6、固定25GB KV budget",
+        "interpretation": "trajectory state amplificationが同時実行容量を大幅に削る。"
       },
       {
-        "metric": "設定3平均遅延",
-        "value": "198.306秒",
-        "baseline": "単一237.925秒、集中206.123秒",
-        "condition": "モデル・GPU・実行系が異なる4ノード",
-        "interpretation": "異種構成でも分散方式が集中方式より短い平均遅延を示す。"
+        "metric": "DeepResearch task success",
+        "value": "160K contextで95%",
+        "baseline": "小さいcontext window",
+        "condition": "OpenClaw、context sweep",
+        "interpretation": "overflow回避まではcontext増加が効くが、その先は効用が頭打ちになる。"
       },
       {
-        "metric": "モデル規模と対戦勝率",
-        "value": "Qwen3 8B/4B/0.6B = 0.57/0.53/0.39",
-        "baseline": "同一対戦機構",
-        "condition": "各クラス2複製",
-        "interpretation": "高品質モデルほど対比較で勝ち、信用蓄積が速い。"
+        "metric": "KV/token-pool pressure",
+        "value": "utilization peak 97%、median concurrency 22",
+        "baseline": "32-session backlog",
+        "condition": "256K context、controlled serving",
+        "interpretation": "backlogがあっても長寿命状態がbatching可能数を制限する。"
       },
       {
-        "metric": "量子化と対戦勝率",
-        "value": "fp8wo/int4wo-128/int4wo-32 = 0.54/0.49/0.47",
-        "baseline": "Qwen3-8B",
-        "condition": "TorchAO量子化",
-        "interpretation": "量子化が強いほど品質側の報酬が低下する。"
+        "metric": "internal queue p95",
+        "value": "7.9秒",
+        "baseline": "controlled serving",
+        "condition": "高KV圧力、32 active sessions",
+        "interpretation": "状態保持はtoken throughput以外のtail latencyとして表面化する。"
       },
       {
-        "metric": "注意バックエンド処理量",
-        "value": "FlashInfer/Triton/SDPA = 788/786/426要求",
-        "baseline": "同じQwen3-8B",
-        "condition": "品質勝率は概ね同等",
-        "interpretation": "同品質なら高スループット実装が多くの要求を処理し信用を多く得る。"
+        "metric": "sandbox idle fraction",
+        "value": "CPU >80%、memory >50%の時間idle",
+        "baseline": "trajectory time",
+        "condition": "OpenClaw/Hermesおよびproduction傾向",
+        "interpretation": "peak固定割当は大きなstranded capacityを生む。"
       },
       {
-        "metric": "GPU別処理量",
-        "value": "A100/RTX4090/RTX3090 = 1717/1195/1088要求",
-        "baseline": "同じQwen3-8B",
-        "condition": "ハードウェア比較",
-        "interpretation": "強いGPUほど処理量を通じて信用蓄積が速い。"
+        "metric": "per-tool-call teardown instance cost",
+        "value": "65%低下",
+        "baseline": "persistent sandbox",
+        "condition": "AWS Lambda MicroVM pricing replay",
+        "interpretation": "短keepalive自体はidle課金を下げる。"
       },
       {
-        "metric": "対戦率オーバーヘッド",
-        "value": "5%、10%、25%で遅延CDFとSLO曲線はほぼ同等",
-        "baseline": "4ノード、審判2",
-        "condition": "要求者専用ノードから一様発行",
-        "interpretation": "中程度の対戦率では追加推論・審判処理の性能負担が小さい。"
+        "metric": "snapshot C/R込みtotal cost",
+        "value": "persistent比4.9倍",
+        "baseline": "persistent sandbox",
+        "condition": "tool callごとteardown",
+        "interpretation": "現行capture/restoreが細粒度scale-to-zeroを逆に高価にする。"
+      },
+      {
+        "metric": "ideal sandbox total-cost opportunity",
+        "value": "persistent baseline比最大3倍削減余地",
+        "baseline": "persistent sandbox",
+        "condition": "snapshot/state overheadを理想化",
+        "interpretation": "状態と実行資源を分離したelasticityには大きな余地がある。"
+      },
+      {
+        "metric": "Linux CVE trend",
+        "value": "2026 Q2 published CVEがprevious record比3.5倍",
+        "baseline": "previous records",
+        "condition": "AI-assisted discovery proxy",
+        "interpretation": "agent tool sandboxは性能だけでなく攻撃面最小化が必要。"
       }
     ],
-    "negative_results": "委譲率を50%から75%、100%へ増やしてもSLO改善は飽和し、過剰委譲は信用支出を増やして長期蓄積を悪化させ得る。ノード離脱では残存ノードが飽和すると遅延が急増する。また完全な分散信用台帳は評価で共有台帳へ簡略化されており、提示された性能値はブロック合意や大規模WANの費用を含まない。",
-    "interpretation": "主な利得はモデル内部カーネルの高速化ではなく、独立した複数サービス間で負荷を市場的に融通し、局所ピークと遊休時間を相殺することから生じる。信用量を将来の要求委譲権と結びつけることで、短期負荷分散と長期的な品質・資源提供インセンティブを同じ状態変数へ集約している。",
-    "quality_impact": "出力品質を直接近似する方式ではなく、品質の異なる提供者を対戦評価で選別する。論文の制御実験ではモデル規模と量子化の差が対戦勝率へ反映されるが、審判方式そのものの絶対的な評価精度は主性能評価の対象ではない。"
+    "negative_results": "文脈を最大まで保持しても全workloadで精度が上がるわけではなく、Terminal-Bench 2/SWE-Bench Proはoverflow解消後にplateauまたは悪化する。snapshot-based stateful scale-to-zeroは短keepaliveほどinstance費を減らすがcapture/restore費が支配し、tool callごとの停止はpersistentより総費用が高い。token throughputはtask goodput/solved tasks per hourと乖離し得るため、従来指標単独では最適化方向を誤る。",
+    "interpretation": "Agent workloadでは資源需要がtrajectory phaseに応じてGPU inference→host orchestration→tool sandboxへ移動し、contextはその間も残る。したがって最適化対象をtoken生成へ限定せず、進捗価値とstate costをtrajectory単位で測り、将来効用の低いcontextを圧縮/階層化し、tool burstだけCPU/memoryを垂直拡張する設計が合理的である。",
+    "quality_impact": "Ariesは性能改善のためにモデル出力を近似しない。context managementの候補政策は将来方向であり、測定結果はcontext削減が成功率へ影響するためworkload-specific thresholdを越えて攻撃的に圧縮すべきでないことを示す。"
+  },
+  "reservation": {
+    "claim_id": "claim-c17275f5e497400ac1b9feba",
+    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "worker_kind": "work"
   }
 }

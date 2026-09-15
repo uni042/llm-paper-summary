@@ -2,50 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-61d3ec810a2f30bc516f1a9c",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "hardware": "最大8ノードの異種GPU構成。RTX3090、RTX4090、NVIDIA L40S、RTX Ada 6000、A100を使用し、一部モデルは4×A100で実行する。",
-    "software": "WWW.Serve公開実装。SGLangとvLLMを混在させ、通信はZeroMQ、モデル接続はAsyncOpenAI互換クライアント。評価時は完全ブロックチェーンではなく共有信用台帳を使用する。",
-    "methodology": "OpenR1-Math-220kのプロンプトを用い、Qwen3、DeepSeek-Qwen、Llama 3.1を異なるGPU・実行系へ配置する4設定を作る。各ノードの要求到着率を区分的に変更し、単一ノード、信頼された集中スケジューラ、WWW.Serveを比較する。SLO達成率と平均遅延に加え、ノード参加・離脱、モデル規模、量子化、注意バックエンド、GPU種別、対戦率、利用者方針のアブレーションを行う。",
-    "scope": "主要なスケジューリング評価は4〜8ノード、約750秒の区分的負荷で実施する。全ノードの方針は主評価で委譲80%、受入80%、目標利用率70%、最大8192トークン、temperature 0、top-p 0.95に統一。世界規模WANや大規模障害、完全分散台帳の性能は直接評価していない。",
+    "hardware": "制御実験: 96-core node、NVIDIA H100 94GB HBM×1。production characterization: 商用platformの10 LLM serving instanceと100超agent sandbox。",
+    "software": "Aries、OpenHands、Hermes Agent、OpenClaw、SGLang、Qwen3.6-35B-A3B-FP8。sandbox弾力性の解析ではAWS Lambda MicroVM pricing model、別のtool utilization再現ではcloud DeepSeek V4 Flash API。",
+    "methodology": "商用platformの8時間workday traceから10 serving instanceのrequest/context長と、100超sandboxのCPU/メモリを1分粒度で収集する。詳細cross-layer分析はSWE-Bench Pro、Terminal-Bench 2、DeepResearch Benchから各20 taskを選び、OpenClawで概ね50%成功になるセットを各5回反復。OpenClaw/Hermes/OpenHandsを比較し、trajectory breakdownを取る。context budget sweepではOpenClaw/Hermesでwindowを変え成功率・overflow/compactionを測定し、32 active session/256K windowで1秒ごとのbackend資源を計測。sandboxではOpenClaw/Hermesを1秒計測し、tool traceをAWS Lambda MicroVMのkeepalive/capture-restore費用モデルへreplayする。",
+    "scope": "実運用traceと公開benchmarkのcharacterization/measurement framework。Ariesは新しいLLM scheduler、KV圧縮アルゴリズム、sandbox autoscalerを実装して性能改善を直接競うものではなく、それらを設計するための観測基盤と問題設定を提供する。",
     "workloads": [
-      "OpenR1-Math-220k",
-      "Qwen3 4B/8B/32B",
-      "DeepSeek-Qwen 7B",
-      "Llama 3.1 8B"
+      "SWE-Bench Pro 20 task",
+      "Terminal-Bench 2 20 task",
+      "DeepResearch Bench 20 task",
+      "各task 5反復",
+      "production 8-hour trace",
+      "100超production agent sandbox"
     ],
     "baselines": [
-      "単一ノード実行",
-      "集中スケジューリング",
-      "WWW.Serve分散スケジューリング"
+      "token-centric LLM metrics (TTFT/TPOT/token throughput)",
+      "conventional request-centric capacity",
+      "persistent sandbox",
+      "snapshot-based stateful scale-to-zero with multiple keepalive timeout"
     ],
     "metrics": [
-      "SLO達成率",
-      "平均要求遅延",
-      "対戦勝率",
-      "処理要求数",
-      "信用量推移",
-      "動的参加時の遅延"
+      "end-to-end latency breakdown",
+      "tool/harness latency share",
+      "context overflow/compaction count",
+      "task success rate",
+      "KV/token-pool utilization",
+      "resident/concurrent request count",
+      "internal queueing delay",
+      "CPU/memory utilization CDF",
+      "sandbox instance cost",
+      "snapshot capture/restore cost",
+      "task goodput/solved tasks per token/hour"
     ],
-    "settings": [
-      {
-        "name": "同質4ノード",
-        "description": "Qwen3-8B、Ada 6000、SGLangを4ノードで使用し、ノード1と4だけ負荷を途中で高低切替する。"
-      },
-      {
-        "name": "モデル・GPU異種4ノード",
-        "description": "Qwen3-8B/Ada 6000とQwen3-4B/RTX3090を混在させ、全てSGLangで負荷変動を与える。"
-      },
-      {
-        "name": "実行系も異なる4ノード",
-        "description": "Qwen3-32B/4×A100、Qwen3-8B/L40S、DeepSeek-Qwen-7B/RTX3090、Llama3.1-8B/Ada6000をSGLang/vLLM混在で運用する。"
-      },
-      {
-        "name": "異種8ノード",
-        "description": "L40S、Ada6000、RTX4090、RTX3090へLlama3.1-8B、DeepSeek-Qwen-7B、Qwen3-4Bを配置し、区分的Poisson到着で負荷を変動させる。"
-      }
-    ],
-    "reproducibility": "公開GitHubとYAML設定方式があり、モデル・GPU・バックエンド・到着スケジュール・主要方針値を論文に明記する。一方、主評価は共有台帳へ簡略化され、実世界のピア間ネットワーク遅延・障害分布・悪意参加者比率の詳細条件は不足する。"
+    "reproducibility": "論文はAries code/toolchainと匿名化production tracesをGitHubで公開すると明記。公開harness/benchmark、モデル、GPU、反復数、sampling粒度を記載。一方、商用traceはプライバシー上normalization/anonymizationされ、詳細platform構成と完全同期イベントは非公開。"
+  },
+  "reservation": {
+    "claim_id": "claim-c17275f5e497400ac1b9feba",
+    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "worker_kind": "work"
   }
 }

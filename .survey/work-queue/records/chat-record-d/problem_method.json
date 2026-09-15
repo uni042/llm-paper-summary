@@ -2,28 +2,41 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-61d3ec810a2f30bc516f1a9c",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "problem": "LLMサービング研究の多くは、単一事業者または信頼された中央管理者が全GPU、待ち行列、モデル配置を把握し、要求を強制的に割り当てられる前提を置く。しかし世界中の独立提供者を束ねる場合、各提供者は自分の利用者と利益を優先し、参加時刻、使用GPU、実行系、受入率、委譲率を自ら決めたい。匿名参加者の中には低品質モデルや遅い実装で報酬だけ得ようとする者も存在し得るため、中央管理を外すだけでは負荷分散・信頼・品質保証・動的参加を同時に成立させられない。",
-    "novelty": "WWW.Serveは独立提供者を協力者ではなく競争的な市場参加者として扱い、計算貢献を信用量へ変換する取引系、信用量を賭けて実行者候補を選ぶ持分証明型ルーティング、一部応答を相互比較して品質差を報酬へ反映する対戦・審判機構、参加状態を拡散するゴシップ同期、各提供者が受入・委譲・賭け量を自分で決める方針層を統合する。これにより中央が全資源を所有しなくても負荷交換と品質インセンティブを同じ制御ループで扱う。",
-    "method_overview": "利用者要求はまず発生元ノードの非同期待ち行列へ入り、そのノードの方針管理器がローカル実行か委譲かを決める。委譲時はピアの賭け信用量に比例して候補を抽出し、候補自身の受入方針を確認してから送信する。完了した委譲は信用取引として記録される。一部の委譲要求は対戦対象となり、別の実行者にも同じ要求を送り、持分証明で選ばれた複数審判が二応答を比較する。勝者と審判へ信用を付与し、敗者の賭けを減らす。参加・離脱情報はピア間ゴシップで収束させる。",
+    "problem": "従来のLLMサービング基盤は一回のprompt→decodeを独立要求として扱い、TTFT/TPOT・トークンスループット・GPUメモリを中心に最適化する。しかしエージェントでは、1ユーザー課題が多数のLLM呼び出し、ハーネス判断、ツール呼び出し、状態更新を順序依存で繰り返す。ツールやハーネスで止まっている間も長期文脈やサンドボックス状態を保持するため、GPUだけ高速化しても課題完了時間は縮まらず、個別コンポーネントのログではどの停止がタスク進捗を妨げたかを因果的に追えない。さらにツール環境は状態付きでsandbox substrateごとにライフサイクル/観測IFが異なるため、公平な比較が難しい。",
+    "novelty": "Ariesはagent trajectoryを第一級の観測単位とし、(1) task specificationとexecution specificationを分離して同じ課題意味のままハーネス/モデル/sandboxを差し替え、(2) trajectory/event identifierと因果・順序メタデータをLLM/ツール境界へ伝播してcross-layer telemetryを再構成し、(3) 状態付きツールのsetup/invocation/state continuity/result/telemetryをsubstrate-independent interfaceへ統一する。単なるagent benchmarkでもLLM serving benchmarkでもなく、タスク成功と低水準資源挙動を同じ軌跡に結び付ける。",
+    "method_overview": "task loaderがワークロードと成功条件を、execution loaderがharness/model backend/sandbox/telemetry stackを検証する。runnerはadapter越しにLLM backendとsandboxを呼び、共通event schemaへtrajectory ID、event ID、因果/順序関係を記録する。telemetry collectorはモデル、ホスト、sandboxのメトリクスをeventへ対応付ける。これを公開agent stackの再現実験と商用platform traceのcharacterizationに使い、critical-path、context budget、sandbox utilization/cost/securityを分析する。",
     "components": [
       {
-        "name": "信用取引と持分証明型要求委譲",
-        "description": "各提供者の計算貢献を譲渡可能な信用量として表し、他ノードへ要求を委譲すると信用を消費し、外部要求を処理すると信用を得る。実行候補の選択確率は賭けた信用量に比例するため、余力のあるノードは処理を引き受けて将来の委譲余力を獲得できる。論文設計では暗号学的に連結したブロックをピア多数決で検証し、二重支払いなどを防ぐ。"
+        "name": "タスク/実行仕様の分離",
+        "description": "タスク入力・成功判定をharness固有設定から分離し、model backendやsandboxを差し替えても評価する意味を変えない。"
       },
       {
-        "name": "対戦・審判による品質インセンティブ",
-        "description": "委譲要求の一部を対戦対象にし、二つの実行者へ同一要求を送る。持分証明で選ばれた複数審判が二応答を絶対点ではなく対比較し、勝者へ追加報酬、敗者へ罰則、審判へ報酬を与える。モデル規模、量子化、実行系、GPU性能による品質・処理量の差が長期的な信用蓄積と次回選択確率へ反映される。"
+        "name": "軌跡相関テレメトリ",
+        "description": "LLM呼び出し、tool call/result、harness decisionに共通trajectory/event IDと因果関係を付与し、CPU/GPU/メモリ等の局所メトリクスを課題進捗へ結び付ける。"
       },
       {
-        "name": "ゴシップ同期と提供者別方針",
-        "description": "各ノードはピアの識別子、オンライン状態、通信先などの局所ビューを保持し、定期的な軽量ゴシップで差分を拡散して参加・離脱へ追従する。提供者は賭け量、外部要求の受入頻度、ローカル要求の委譲頻度、負荷閾値を独自に設定できるため、中央システムが個別事業者のGPUや待ち行列を強制制御しなくても市場参加を調整できる。"
+        "name": "状態付きsandbox adapter",
+        "description": "環境setup、tool invocation、状態継続、結果回収、telemetry hookを共通IF化し、異なるsandbox substrate上でもstateful tool executionを比較可能にする。"
+      },
+      {
+        "name": "production+controlled triangulation",
+        "description": "商用8時間traceで実運用分布を押さえ、同期イベントが不足する箇所は公開harness/benchmarkをAries上で再現して秒以下の因果分析を行う。"
+      },
+      {
+        "name": "agent-native control-plane vision",
+        "description": "測定結果を基に、trajectory progress指標、将来効用に応じたcontext retention/階層配置、モデル信号を用いたsandbox vertical scaling、state externalization、minimal attack surfaceを将来制御面として整理する。"
       }
     ],
-    "system_design": "単一ノードはRequest、Policy、Ledger、Model、Communicationの5管理器で構成される。通信はZeroMQ、要求管理は非同期キュー、モデル管理はAsyncOpenAI互換APIでSGLang/vLLM等を抽象化する。各バックエンドから実行中・待機要求数、メモリ利用率を取得し、方針判断へ利用する。",
-    "why_it_works": "負荷が時間・場所で偏ると、混雑ノードが信用を支払って余力ノードへ要求を逃がすことでGPU遊休と局所飽和を同時に減らせる。品質の低いノードは対戦で信用を失い選択確率が下がる一方、高品質または高スループットのノードは信用を蓄積しやすい。これにより中央最適化器なしでも、信用量を媒介に負荷と品質が自己組織的に調整される。",
-    "failure_modes": "完全分散台帳の実コスト、悪意ある多数派、審判共謀、Sybil攻撃、ネットワーク分断、信用と実通貨の交換設計は小規模実験で十分検証されていない。評価では完全な信用ブロックチェーンを共有台帳へ簡略化しており、世界規模ネットワーク遅延や数百〜数千提供者での収束性も未評価である。過剰な委譲は短期SLOを改善しても信用消費を増やし、長期利益を悪化させ得る。"
+    "system_design": "Aries runnerの上位にtask/execution specification、下位にLLM backendとsandbox adapter、横断的にtelemetry collectorを置く。軌跡IDを全段で共有することで、同じユーザー課題の中でLLM待ち、harness処理、tool実行、context占有、sandbox資源を時系列に統合する。",
+    "why_it_works": "エージェントのボトルネックは呼び出しごとにGPU、CPU、外部tool、状態保持へ移るため、単一層の利用率やtoken/sではcritical pathを誤認する。因果ID付きの軌跡へ各層を投影すれば『遅いが進捗に必要な処理』『高速だが繰返して進まない処理』をタスク成果と結び付けられ、実装差とタスク差も分離できる。",
+    "failure_modes": "production traceは匿名化され、LLM側とsandbox側の完全同期cross-layer eventを持たないため、詳細因果は公開環境で再現した傾向に依存する。公開評価は各benchmark 20 task×5反復、主GPU 1×H100と限られ、複数GPU/分散sandboxでのAries自身のオーバーヘッドやスケール限界は主評価ではない。将来制御planeは測定に基づく方向性で、context効用推定やelastic sandbox policyそのものを実装・比較した研究ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-c17275f5e497400ac1b9feba",
+    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "worker_kind": "work"
   }
 }

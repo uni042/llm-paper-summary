@@ -2,111 +2,129 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-61d3ec810a2f30bc516f1a9c",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-c17275f5e497400ac1b9feba",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "canonical_id": "arXiv:2603.20661",
-    "arxiv_id": "2603.20661",
-    "doi": "10.48550/arXiv.2603.20661",
+    "canonical_id": "arXiv:2607.29069",
+    "arxiv_id": "2607.29069",
+    "doi": "10.48550/arXiv.2607.29069",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
       "cross_list": []
     },
-    "title": "WWW.Serve: Interconnecting Global LLM Services through Decentralization",
-    "summary": "WWW.Serveは、独立した大規模言語モデル（LLM）サービス提供者が匿名のまま参加・離脱し、自分の計算資源と受入・委譲方針を保持したまま、中央調停なしで余剰GPU資源を融通する分散サービング基盤である。各ノードは計算貢献を信用量として記録し、信用量を賭けた持分証明型の実行者選択で要求を委譲する。さらに一部要求を二つの実行者へ送り、複数の審判が応答品質を比較する対戦・審判機構で高品質サービスへ信用を再配分し、ゴシップ同期で参加状況を共有する。Qwen3、DeepSeek-Qwen、Llama 3.1、SGLang/vLLM、RTX3090/4090、L40S、Ada 6000、A100を混在させた評価では、単一ノード運用に比べ世界全体のSLO達成率を最大1.5倍、平均遅延を最大27.6%削減し、集中スケジューラに近い性能を示す。",
-    "list_summary": "信用量・持分証明・対戦評価・ゴシップ同期を組み合わせ、独立したLLM提供者が中央管理なしで要求を相互委譲しつつ、単一ノード比でSLO達成率最大1.5倍・遅延最大27.6%改善する。",
+    "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+    "summary": "Ariesは、従来のLLMサービングが個々のモデル呼び出しを単位に最初のトークンまでの時間（TTFT）、1出力トークン当たり時間（TPOT）、トークンスループットを最適化する一方、自律エージェントではLLM推論・長寿命コンテキスト・ハーネス処理・状態付きツール実行が一つの長い因果系列を構成するため、要求単位の指標だけでは実際の停滞箇所を捉えられない問題を扱う。Ariesはタスク仕様と実行仕様を分離し、モデル呼び出し・ツール呼び出し・ハーネス判断へ共通の軌跡/イベントIDを伝播させ、LLMバックエンドと複数サンドボックス基盤をアダプタで統一して、意味的なタスク進捗とCPU/GPU/メモリ等のテレメトリを同一のエージェント軌跡へ再構成する実験基盤である。商用プラットフォームの8時間トレースと100超のサンドボックス、OpenClaw・Hermes Agent・OpenHands、SWE-Bench Pro・Terminal-Bench 2・DeepResearch Benchを用いて特性を調べ、ツール実行だけでエンドツーエンド時間の13〜48%、ハーネス処理で最大9%を占めること、25GBのKV予算でエージェント状態により最大常駐要求数が176超から40へ4.4倍減ること、DeepResearchでは160K文脈で成功率95%へ達した後に追加履歴の効用が頭打ちになることを示す。さらにツールサンドボックスはCPUが80%以上、メモリが50%以上の時間アイドルである一方ツール呼び出し時だけ急激に資源を使い、各呼び出し後に停止する現行スナップショット方式ではインスタンス費を65%下げてもcapture/restore費により総費用が常駐比4.9倍になる。これらから、軌跡単位の指標、適応的コンテキスト管理、垂直伸縮可能な状態付きサンドボックス、攻撃面を限定した実行環境をエージェントネイティブな制御面として共同設計すべきと論じる。",
+    "list_summary": "AriesはLLM・ハーネス・状態付きツールを一つのエージェント軌跡として計測する実験基盤。実トレースと公開ベンチで、ツール/ハーネスが最大57%級の遅延要因、長期文脈が常駐容量を4.4倍圧迫、サンドボックスが大半アイドルだが瞬間的にバーストすることを示し、軌跡指標・適応コンテキスト・弾力的サンドボックスを提案する。",
     "authors": [
-      "Huanyu Wang",
-      "Ziyu Xia",
-      "Zhuoming Chen",
-      "Beidi Chen"
+      "Leonid Kondrashov",
+      "Hongrui Liu",
+      "JooYoung Park",
+      "Boxi Zhou",
+      "Zonghao Liu",
+      "Chengzhi Lu",
+      "Riccardo Mancini",
+      "Esha Choukse",
+      "Haris Javaid",
+      "German Sviridov",
+      "Tao Peng",
+      "Chen Zhao",
+      "Anastasia Avdeeva",
+      "Aleksei Gusev",
+      "Marios Kogias",
+      "Luo Mai",
+      "Dmitrii Ustiugov"
     ],
-    "authors_affiliations": "Carnegie Mellon University",
-    "published": "2026-03-21",
-    "publication": "arXiv:2603.20661v2",
+    "authors_affiliations": "NTU Singapore、AWS、Microsoft、AMD Singapore、Ant Group、NCSpeech、Imperial College London、University of Edinburgh。",
+    "published": "2026-07-31",
+    "publication": "arXiv:2607.29069v1",
     "publication_type": "プレプリント",
-    "publication_status": "arXiv v2（2026-03-24）。v1は2026-03-21。一次資料では査読済み採録先の記載を確認できない。",
+    "publication_status": "arXiv v1（2026-07-31提出）。一次資料から査読済み採録は確認できない。",
     "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "分散LLMサービング",
-      "非中央集権スケジューリング",
-      "要求委譲",
-      "持分証明",
-      "信用台帳",
-      "ゴシップ同期",
-      "サービス品質評価",
-      "異種GPU"
+      "エージェント型LLMサービング",
+      "軌跡テレメトリ",
+      "長期コンテキスト",
+      "KVキャッシュ容量",
+      "サンドボックス",
+      "弾力的資源管理",
+      "タスクgoodput",
+      "セキュリティ"
     ],
-    "importance": "高。単一クラスタ内で管理者が全GPUと待ち行列を掌握する既存サービングと異なり、互いに競争する独立提供者を第一級の主体として扱い、資源融通・品質評価・報酬設計を同じ要求ルーティング系へ統合する。",
-    "hardware_evaluation": "実機を用いた複数ノード評価。RTX3090、RTX4090、NVIDIA L40S、RTX Ada 6000、A100を混在させ、最大8ノード構成を評価する。",
-    "hardware_details": "Qwen3-4B/8B/32B、DeepSeek-Qwen-7B、Llama 3.1-8BをSGLangまたはvLLMで提供する。設定3ではQwen3-32Bを4×A100で実行し、他ノードはL40S、RTX3090、Ada 6000を使用。要求はOpenR1-Math-220kから取り、区分的に変化するPoisson到着を用いる。",
-    "quality_effect": "近似計算を強制する方式ではない。品質面は対戦・審判機構で高品質モデルや軽度量子化をより多く報酬する設計であり、Qwen3のモデル規模やTorchAO量子化条件を変えた実験で勝率と信用蓄積の相関を検証する。ただし審判自体の誤判定・共謀・評価モデル偏りを実世界規模で十分検証したわけではない。",
+    "importance": "高。単発LLM要求ではなく、モデル・ハーネス・ツール・長期状態をまたぐ軌跡をシステム最適化の単位へ引き上げ、既存のトークン中心サービング指標が見逃すCPU/ツール待ち、KV状態保持、サンドボックス弾力性を実運用トレースと制御実験で同時に定量化する。",
+    "hardware_evaluation": "制御実験は96 CPUコアのノードとNVIDIA H100 94GB HBM 1基。加えて商用プラットフォームの10 LLM-serving instanceと100超のagent sandboxから8時間の運用トレースを解析。",
+    "hardware_details": "主制御実験はQwen3.6-35B-A3B-FP8をSGLangでH100 94GB上にローカル配備。文脈保持実験では32同時セッションと256K最大文脈、25GB KV予算を使用。サンドボックス特性は商用トレースを1分粒度、制御環境を1秒粒度でCPU/メモリ計測。",
+    "quality_effect": "Aries自体はモデル近似方式ではない。文脈予算の変更に伴うタスク成功率を直接測定し、DeepResearch BenchではOpenClawの成功率が文脈オーバーフロー解消とともに160Kで95%に達する一方、Terminal-Bench 2/SWE-Bench Proでは最大文脈まで増やしても改善が頭打ちまたは悪化するため、状態削減にはタスク依存の品質境界がある。",
     "storage_targets": [
-      "各ノードの信用台帳",
-      "ピア可用性ビュー",
-      "要求待ち行列",
-      "LLMバックエンド状態"
+      "GPU HBM上の長寿命KVキャッシュ/トークンプール",
+      "ハーネスが保持するメッセージ/イベント履歴",
+      "サンドボックスのファイル・プロセス・キャッシュ・ネットワーク状態",
+      "低コスト階層へ移動可能な将来の軌跡状態"
     ],
     "bottlenecks": [
-      "中央管理なしの要求配置",
-      "匿名参加者の品質保証",
-      "動的な参加・離脱",
-      "異種GPU・モデル・実行系の負荷偏り",
-      "台帳合意と対戦評価の追加負荷"
+      "ツール実行の長い裾を持つ待ち時間",
+      "ハーネスのホスト側オーケストレーション",
+      "長期文脈によるKVプール占有と同時実行数低下",
+      "高KV圧力時のプリエンプションと内部キュー待ち",
+      "大半アイドルだが瞬間的にバーストするCPU/メモリ需要",
+      "状態付きサンドボックスのスナップショットcapture/restore費",
+      "サンドボックス攻撃面"
     ],
     "evidence_locations": [
-      "§3 WWW.Serve’s Overview",
-      "§4 Core Mechanisms",
-      "§5 Game-Theory Analysis",
-      "§6 Empirical Evaluation",
-      "§7 Ablation Study",
-      "Appendix §10 Implementation",
-      "Appendix §11 Experimental Settings"
+      "§1–3",
+      "§4.1 Harnesses & Tools",
+      "§4.2 Long Context",
+      "§4.3 Tool Sandboxes",
+      "§4.4 Security",
+      "Figures 3–13",
+      "§5 Future Research Directions"
     ],
-    "source": "https://arxiv.org/abs/2603.20661",
+    "source": "https://arxiv.org/abs/2607.29069",
     "sources": [
-      "https://arxiv.org/abs/2603.20661",
-      "https://arxiv.org/html/2603.20661v2",
-      "https://arxiv.org/pdf/2603.20661",
-      "https://github.com/Infini-AI-Lab/WWW.Serve",
-      "https://infini-ai-lab.github.io/WWW.Serve"
+      "https://arxiv.org/abs/2607.29069",
+      "https://arxiv.org/html/2607.29069v1",
+      "https://arxiv.org/pdf/2607.29069",
+      "https://github.com/hyscale-lab/aries"
     ],
-    "code": "https://github.com/Infini-AI-Lab/WWW.Serve",
-    "implementation": "公開実装あり。ZeroMQのROUTER型通信、非同期要求キュー、AsyncOpenAI互換クライアントによるバックエンド抽象化、信用・持分証明ルーティング、利用者方針、YAML構成を実装し、SGLang/vLLMなどOpenAI互換サーバを接続できる。",
+    "code": "https://github.com/hyscale-lab/aries",
+    "implementation": "論文はAriesのコード、ツールチェーン、匿名化したproduction tracesをGitHubで公開したと明記する。実装はtask/execution specification loader、runner、LLM backend adapter、sandbox adapter、trajectory/event IDを伝播するtelemetry collectorからなり、OpenHands・Hermes Agent・OpenClawと複数sandbox substrateを統一して実験できる。",
     "last_checked": "2026-09-14",
     "references": [
       {
-        "canonical_id": "arXiv:2504.20101",
-        "title": "GenTorrent: Scaling Large Language Model Serving with an Overlay Network"
+        "canonical_id": "arXiv:2511.02230",
+        "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live"
       },
       {
-        "canonical_id": "arXiv:2501.14784",
-        "title": "DeServe: Towards Affordable Offline LLM Inference via Decentralization"
+        "canonical_id": "arXiv:2602.22603",
+        "title": "SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning"
       },
       {
-        "canonical_id": "arXiv:2209.01188",
-        "title": "Petals: Collaborative Inference and Fine-tuning of Large Models"
+        "canonical_id": "arXiv:2507.07400",
+        "title": "KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows"
       },
       {
-        "canonical_id": "arXiv:2312.07104",
-        "title": "SGLang: Efficient Execution of Structured Language Model Programs"
+        "canonical_id": "arXiv:2406.17565",
+        "title": "MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool"
       },
       {
-        "canonical_id": "arXiv:2401.09670",
-        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+        "canonical_id": "arXiv:2508.06948",
+        "title": "Kairos: Low-Latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud"
       },
       {
-        "canonical_id": "arXiv:2406.01566",
-        "title": "Helix: Serving Large Language Models over Heterogeneous GPUs and Network via Max-Flow"
+        "title": "Agentix: An Efficient Serving Engine for LLM Agents as General Programs"
       },
       {
-        "canonical_id": "arXiv:2311.11514",
-        "title": "HexGen: Generative Inference of Large Language Model over Heterogeneous Environment"
+        "canonical_id": "arXiv:2510.00615",
+        "title": "ACON: Optimizing Context Compression for Long-Horizon LLM Agents"
       }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v2 HTML版の参考文献節",
+    "references_source": "arXiv:2607.29069v1参考文献節",
     "references_total": null
+  },
+  "reservation": {
+    "claim_id": "claim-c17275f5e497400ac1b9feba",
+    "worker_id": "manual-repair-verifier-20260915T121304JST",
+    "worker_kind": "work"
   }
 }
