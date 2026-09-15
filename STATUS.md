@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 23:57:46 JST**
+> 自動生成: **2026-09-16 00:04:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **2** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **5** | **12** | **3** | **9** | **0** | **0** | **7** |
+| Discovery | **2** | **7** | **1** | **6** | **0** | **0** | **7** |
+| 合計 | **4** | **12** | **3** | **9** | **0** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -49,10 +49,6 @@
   - result: `.survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json`
   - 探索軸: subquadratic attention・DRAM/SRAM異種分離サービング
-- **09-15 18:02:53 JST** job `job-910b55f3735ab895` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260915T1808JST-discovery-specialist-moe-cache-router-1.json`
-  - 探索軸: 2026年9月新着・MoE expert cache・cache-aware routing
 
 ### 直近タスク
 
