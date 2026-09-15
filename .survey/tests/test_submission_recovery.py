@@ -44,6 +44,10 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
                 "job_id": "job-old",
                 "candidates": [],
             })
+            write_json(results / "stale.json", {
+                "ok": False,
+                "error": "ValueError: job already terminal: completed",
+            })
 
             summary = recovery.recover(sr)
 
@@ -96,6 +100,43 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
                 if json.loads(path.read_text(encoding="utf-8")).get("status") == "ready"
             ]
             self.assertTrue(any(job.get("type") == "discovery" for job in active))
+
+    def test_other_discovery_failure_is_not_replayed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            sr = survey_root(root)
+            jobs = sr / "work-queue/jobs"
+            submissions = sr / "work-queue/submissions"
+            results = sr / "work-queue/results"
+            write_json(jobs / "job-old.json", {
+                "job_id": "job-old",
+                "type": "discovery",
+                "lane": "discovery",
+                "status": "completed",
+            })
+            write_json(submissions / "bad.json", {
+                "job_id": "job-old",
+                "candidates": [],
+            })
+            original_result = {
+                "ok": False,
+                "error": "ValueError: discovery submission may contain at most 5 candidates",
+            }
+            write_json(results / "bad.json", original_result)
+
+            summary = recovery.recover(sr)
+
+            self.assertEqual(summary["recovered_count"], 0)
+            self.assertEqual(
+                json.loads((results / "bad.json").read_text(encoding="utf-8")),
+                original_result,
+            )
+            recovery_jobs = [
+                json.loads(path.read_text(encoding="utf-8"))
+                for path in jobs.glob("*.json")
+                if json.loads(path.read_text(encoding="utf-8")).get("recovery_only")
+            ]
+            self.assertEqual(recovery_jobs, [])
 
     def test_non_discovery_terminal_job_is_never_rebound(self):
         with tempfile.TemporaryDirectory() as td:
