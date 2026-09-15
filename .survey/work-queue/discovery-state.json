@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T18:08:47+00:00",
-  "last_run_key": "2026-09-16T03:00:00+09:00",
-  "last_round": "specialist-moe-io-2",
+  "updated_at": "2026-09-15T21:01:47+00:00",
+  "last_run_key": "2026-09-16T06:00:00+09:00",
+  "last_round": "specialist-adaptive-kv-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
+  "consecutive_empty_rounds": 4,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -3538,6 +3538,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "CXL/NVMe/JBOF共有KV/context tierへ移る",
       "source_submission": "work-queue/submissions/20260916T0348JST-discovery-specialist-moe-io-2b.json"
+    },
+    {
+      "run_key": "2026-09-16T06:00:00+09:00",
+      "round": "specialist-adaptive-kv-1",
+      "axis": "新着KV圧縮・制約適応ポリシー",
+      "query_summary": "直近arXivのKV cache/LLM inference新着を探索し、既知のSSD-backed KVや圧縮研究と分離して、入力ごとに遅延・メモリ制約へ適応するMetaKVを軽量評価した。canonical IDを最新repo検索で再確認し未収録として送信する。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "最新2609系のserving scheduler・disaggregation・resource allocationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T0607JST-discovery-specialist-adaptive-kv-1.json"
     }
   ],
   "axes": {
@@ -5550,6 +5565,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "CXL/NVMe/JBOF共有KV/context tierへ移る"
+    },
+    "新着KV圧縮・制約適応ポリシー": {
+      "last_run_key": "2026-09-16T06:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "最新2609系のserving scheduler・disaggregation・resource allocationへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
