@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""List immutable descriptors that still need a durable matching result.
+"""List immutable descriptors that still need a durable successful result.
 
-This is the backlog-drain view used by the serialized submission workflow. Both a
-successful and a failed exact result settle one immutable attempt; failed attempts
-are repaired by a new descriptor rather than replaying the same immutable input on
-every unrelated submission run. Descriptors that cannot expose attempt/job identity
-are settled only by a failure tombstone bound to the exact descriptor bytes.
+Successful exact results settle an immutable attempt. Failed exact results remain
+settled by default for backward compatibility, but failures explicitly classified as
+retryable are returned to the drain queue until the bounded recovery budget is
+exhausted. Malformed descriptors are settled only by a failure tombstone bound to the
+exact descriptor bytes.
 """
 from __future__ import annotations
 
@@ -16,6 +16,8 @@ from pathlib import Path
 from typing import Any
 
 import immutable_submission
+
+MAX_AUTO_RECOVERY_FAILURES = 3
 
 
 def _read(path: Path) -> Any:
@@ -30,6 +32,19 @@ def _digest(path: Path) -> str | None:
         return hashlib.sha256(path.read_bytes()).hexdigest()
     except OSError:
         return None
+
+
+def _matching_failure_is_retryable(result: Any, descriptor: dict[str, Any]) -> bool:
+    if not isinstance(result, dict):
+        return False
+    if not immutable_submission.result_matches_identity(result, descriptor):
+        return False
+    if result.get("ok") is not False or result.get("retryable") is not True:
+        return False
+    failures = result.get("recovery_failures", 0)
+    if isinstance(failures, bool) or not isinstance(failures, int):
+        return False
+    return 0 <= failures < MAX_AUTO_RECOVERY_FAILURES
 
 
 def unsettled_paths(repo_root: Path) -> list[str]:
@@ -47,7 +62,10 @@ def unsettled_paths(repo_root: Path) -> list[str]:
 
             if isinstance(descriptor, dict):
                 if immutable_submission.result_matches_identity(result, descriptor):
-                    # Exact success and exact durable failure are both settled attempts.
+                    if _matching_failure_is_retryable(result, descriptor):
+                        out.append(relative)
+                    # Exact success, non-retryable failure, exhausted recovery, and
+                    # legacy failures without retry metadata are settled attempts.
                     continue
             else:
                 digest = _digest(descriptor_path)
