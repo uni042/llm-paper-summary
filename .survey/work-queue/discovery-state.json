@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T03:55:33+00:00",
+  "updated_at": "2026-09-15T03:59:37+00:00",
   "last_run_key": "2026-09-15T12:00:00+09:00",
-  "last_round": "specialist-cold-moe-pooling-1",
+  "last_round": "specialist-handoff-guard",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "handoff_guard_le_180_seconds_before_next_scheduled_slot",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3373,6 +3373,21 @@
       ],
       "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す",
       "source_submission": "work-queue/submissions/20260915T1204JST-discovery-crosspool.json"
+    },
+    {
+      "run_key": "2026-09-15T12:00:00+09:00",
+      "round": "specialist-handoff-guard",
+      "axis": "handoff guard before new discovery axis",
+      "query_summary": "Latest GitHub canonical state was read first. candidate_inventory was 44 ready research candidates and actionable Research/Audit existed, so Discovery mode applied. At mode entry, less than 180 seconds remained until the next :00 Scheduled Chat slot, so discovery-exhaustive-run-policy prohibited starting a new independent discovery round; this empty durable submission records the run before handoff.",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する",
+      "source_submission": "work-queue/submissions/20260915T1259JST-discovery-specialist-handoff-guard.json"
     }
   ],
   "axes": {
@@ -5275,6 +5290,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す"
+    },
+    "handoff guard before new discovery axis": {
+      "last_run_key": "2026-09-15T12:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
