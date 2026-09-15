@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:19:59 JST**
+> 自動生成: **2026-09-15 20:22:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -9,12 +9,14 @@
 
 直近6時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。
 
-| 区分 | 直近6h成功 | 最新run submission | 最新run成功 | 最新run未完了/未検証 | 現在claim | 直近15分heartbeat | 最新run候補 |
+| 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **7** | **1** | **6** | **0** | **0** | **7** |
 | 合計 | **12** | **12** | **3** | **9** | **1** | **0** | **7** |
+
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -114,18 +116,36 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-15 20:00 JST**
-- immutable submission: **7件** / 検証済み成功result: **1件** / 未完了・未検証: **6件** / 候補: **7件**
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **7件**
 - 探索軸: 適応KV圧縮・プロンプト別資源制約選択 / MoE・GPU-NDP協調・expert scheduling / MoE・CPU AMX/GPU協調・expert coalescing / 実運用LLM serving framework採用・empirical systems survey / agentic serving・sandbox・trajectory-level telemetry / agent serving・program-level simulation・KV residency / CXL階層メモリ・transparent NDP・weight/KV圧縮
-- **09-15 20:04:28 JST** job `job-3f9a46ee08846bcd` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
+- round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260915T2006JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 適応KV圧縮・プロンプト別資源制約選択
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2008JST-discovery-specialist-moe-ndp-2.json` (job `job-3f9a46ee08846bcd`)
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2010JST-discovery-specialist-moe-amx-3.json` (job `job-3f9a46ee08846bcd`)
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2012JST-discovery-specialist-serving-empirical-4.json` (job `job-3f9a46ee08846bcd`)
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2015JST-discovery-specialist-agent-aries-5.json` (job `job-3f9a46ee08846bcd`)
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2017JST-discovery-specialist-agent-sim-6.json` (job `job-3f9a46ee08846bcd`)
-- **未完了または未検証** `.survey/work-queue/submissions/20260915T2020JST-discovery-specialist-cxl-ndp-7.json` (job `job-3f9a46ee08846bcd`)
+  - 個別result照合: あり / `.survey/work-queue/results/20260915T2006JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
+- round `specialist-moe-ndp-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2008JST-discovery-specialist-moe-ndp-2.json`
+  - 探索軸: MoE・GPU-NDP協調・expert scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-amx-3` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2010JST-discovery-specialist-moe-amx-3.json`
+  - 探索軸: MoE・CPU AMX/GPU協調・expert coalescing
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-serving-empirical-4` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2012JST-discovery-specialist-serving-empirical-4.json`
+  - 探索軸: 実運用LLM serving framework採用・empirical systems survey
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-aries-5` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2015JST-discovery-specialist-agent-aries-5.json`
+  - 探索軸: agentic serving・sandbox・trajectory-level telemetry
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-sim-6` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2017JST-discovery-specialist-agent-sim-6.json`
+  - 探索軸: agent serving・program-level simulation・KV residency
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cxl-ndp-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260915T2020JST-discovery-specialist-cxl-ndp-7.json`
+  - 探索軸: CXL階層メモリ・transparent NDP・weight/KV圧縮
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -153,7 +173,8 @@
 - **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。
 - **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。
 - **Audit完了**: job/result/submissionの対応と成功状態を照合します。
-- **Discovery成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。
+- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
+- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
 - **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
 
