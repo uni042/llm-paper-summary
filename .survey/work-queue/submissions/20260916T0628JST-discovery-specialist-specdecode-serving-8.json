@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2605.15051-interpretable-speculative-decoding-serving-latency.md",
+      "priority": 79,
+      "reason": "production servingでbatch sizeが負荷から内生的に決まる点を含め、Little's Lawでeffective batchを推定しprefill/draft/verificationのlatencyを分解する解釈可能モデル。vLLM実測で負荷増大時にspeculative decodingのspeedupが縮む理由を説明し、MoEにも拡張するため実運用設定指針として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2601.11580",
+      "title": "Speculative Decoding: Performance or Illusion?",
+      "source_url": "https://arxiv.org/abs/2601.11580",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+      "priority": 81,
+      "reason": "production-grade vLLM上でn-gram、EAGLE/EAGLE-3、draft model、MTPをモデル規模・batch・workload横断で系統評価し、target verification支配や理論上限との大きなgapを示す。新規アルゴリズムではなくても、serving条件でのSD実効性を検証する重要なsystem characterization。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-specdecode-serving-8",
+    "axis": "speculative decoding・production serving負荷・性能モデル",
+    "query_summary": "KV/network系から独立したspeculative decoding servingへ軸を変更。production vLLMにおける負荷依存latency modelと複数SD方式のsystematic characterizationを評価し、両canonical IDを最新repo検索で未収録確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "推論kernel/runtime、continuous batching、deterministic serving、またはframework実装論文へ軸を移す",
+    "empty_round_reason": null
+  }
+}
