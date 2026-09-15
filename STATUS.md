@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 19:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 19:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,7 +15,7 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **38** |
+| 未処理の論文候補（Research ready） | **39** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **359** |
@@ -40,14 +40,14 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **38** |
+| 未処理候補（Research ready） | **39** |
 | 有効claim（lease） | **0** |
-| 今すぐ着手可能（Claimable） | **40** |
+| 今すぐ着手可能（Claimable） | **41** |
 | 有効leaseを持つworker run | **0** |
 | :30 最新worker run | **2026-09-14T05:30:00+09:00** |
 | :30 最新run由来の有効claim | **0** |
 | :30 旧run由来の有効claim | **0** |
-| :00 最新worker run | **2026-09-15T18:00:00+09:00** |
+| :00 最新worker run | **2026-09-15T19:00:00+09:00** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
@@ -78,28 +78,28 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **0** |
 | Repo収録 | **0** |
 | Audit完了 | **0** |
-| 探索評価候補 | **45** |
-| Research候補採用 | **9** |
+| 探索評価候補 | **47** |
+| Research候補採用 | **10** |
 | 重複除外 | **12** |
-| 重複率 | **26.7%** |
-| :00 補助worker Discovery run（毎時枠） | **11** |
-| :00 補助worker Discovery round（stats観測） | **19** |
+| 重複率 | **25.5%** |
+| :00 補助worker Discovery run（毎時枠） | **12** |
+| :00 補助worker Discovery round（stats観測） | **20** |
 | 通常worker run（ledger観測） | **0** |
 | Fallback archive（全helper） | **0** |
 
 ### 24時間の流れ
 
-**探索評価 45 → 重複除外後 33 → Research候補採用 9 → Research完了 0 → Repo収録 0**
+**探索評価 47 → 重複除外後 35 → Research候補採用 10 → Research完了 0 → Repo収録 0**
 
 ## 次に処理する候補
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P91 `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
 
 ## 参考情報
 
@@ -107,16 +107,16 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 直近の:00 補助worker Discovery
 
-Run: **2026-09-15T18:00:00+09:00**
+Run: **2026-09-15T19:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
 | 探索round | **1** |
-| 探索軸 | 2026年9月新着・MoE expert cache・cache-aware routing |
-| 評価候補 | **1** |
+| 探索軸 | subquadratic attention・DRAM/SRAM異種分離サービング |
+| 評価候補 | **2** |
 | 重複除外 | **0** |
-| Novel候補 | **1** |
-| Research候補採用 | **0** |
+| Novel候補 | **2** |
+| Research候補採用 | **1** |
 | 重複率 | **0.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
@@ -133,6 +133,7 @@ Run: **2026-09-15T18:00:00+09:00**
 | 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
 | MoE lossless compression/cache-affinity・expert-locality-aware decode routing | 2 | 0 | 1 | 0.0% | 50.0% |
+| subquadratic attention・DRAM/SRAM異種分離サービング | 2 | 0 | 1 | 0.0% | 50.0% |
 | 新着KV適応制御・agentic serving characterization | 2 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
@@ -145,11 +146,11 @@ Run: **2026-09-15T18:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
+- 2026-09-15T19:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 1 / 軸 subquadratic attention・DRAM/SRAM異種分離サービング
 - 2026-09-15T18:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 2026年9月新着・MoE expert cache・cache-aware routing
 - 2026-09-15T16:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 0 / 軸 新着KV適応制御・agentic serving characterization
 - 2026-09-15T15:00:00+09:00 — 1 round: 評価 4 / 重複 0 / 採用 1 / 軸 エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
 - 2026-09-15T14:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache・router adaptation・weight traffic
-- 2026-09-15T12:00:00+09:00 — 2 round: 評価 4 / 重複 3 / 採用 0 / 軸 cold MoE multi-model serving・weight/KV disaggregation / handoff guard before new discovery axis
 
 ### 最近完了した論文
 

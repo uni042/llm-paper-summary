@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T09:02:53+00:00",
-  "last_run_key": "2026-09-15T18:00:00+09:00",
-  "last_round": "specialist-moe-cache-router-1",
+  "updated_at": "2026-09-15T10:01:33+00:00",
+  "last_run_key": "2026-09-15T19:00:00+09:00",
+  "last_round": "specialist-subquadratic-disagg-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3448,6 +3448,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "2026年9月新着のKV cache・分離サービング・agent serving systemへ軸を移し、その後forward citation/backward referenceを回す",
       "source_submission": "work-queue/submissions/20260915T1808JST-discovery-specialist-moe-cache-router-1.json"
+    },
+    {
+      "run_key": "2026-09-15T19:00:00+09:00",
+      "round": "specialist-subquadratic-disagg-1",
+      "axis": "subquadratic attention・DRAM/SRAM異種分離サービング",
+      "query_summary": "直前のMoE cache/router軸を反復せず、2026年9月の新着からLLM inference serving、KV cache、MoE、disaggregationを横断検索した。既知KV候補が多い中、subquadratic attentionの計算・state特性を異種DRAM/SRAM配置へ直接結び付ける新規systems論文SQDを抽出し、arXiv IDを最新GitHub正本で再検索して未収録を確認した。SAS (2609.13141) はattention学習手法が中心のため今回のsystems候補からは除外した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はSQDと重ならないGPU runtime/kernel・通信collectiveの新着、または既収録disaggregation論文のforward citationからKV転送・interconnect schedulingへ展開する",
+      "source_submission": "work-queue/submissions/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json"
     }
   ],
   "axes": {
@@ -5400,6 +5415,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "2026年9月新着のKV cache・分離サービング・agent serving systemへ軸を移し、その後forward citation/backward referenceを回す"
+    },
+    "subquadratic attention・DRAM/SRAM異種分離サービング": {
+      "last_run_key": "2026-09-15T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はSQDと重ならないGPU runtime/kernel・通信collectiveの新着、または既収録disaggregation論文のforward citationからKV転送・interconnect schedulingへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

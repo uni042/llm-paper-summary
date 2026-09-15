@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T09:38:22.098715+00:00",
+  "updated_at": "2026-09-15T10:03:34.448529+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T09:38:22.098715+00:00",
+      "last_recorded_at": "2026-09-15T10:03:34.448529+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 84,
         "audit_completed": 0,
-        "discovery_completed": 19,
+        "discovery_completed": 20,
         "blocked": 1,
-        "new_jobs": 30,
+        "new_jobs": 32,
         "new_papers": 86,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34876343042:1",
-          "recorded_at": "2026-09-14T17:45:16.582570+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34876343042",
-            "run_attempt": "1",
-            "source_sha": "2d12baf549d1b2b3689ac178d30dd567a7b7726b"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34878973202:1",
           "recorded_at": "2026-09-14T18:08:30.324167+00:00",
@@ -19601,6 +19587,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34955671237:1",
+          "recorded_at": "2026-09-15T10:03:34.448529+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34955671237",
+            "run_attempt": "1",
+            "source_sha": "14de439e4fc0aa1b496552c148b1cce4e9eea44c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20435,6 +20435,14 @@
           "title": "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-6490b6dae61c1d16",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20647,6 +20655,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-3f9a46ee08846bcd",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-e3f30981ea631700",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13134",
+          "title": "Rethinking Heterogeneous System Disaggregation for Subquadratic Attention"
         }
       ],
       "new_paper_ids": [
@@ -20798,7 +20820,8 @@
         ".survey/work-queue/results/20260915T1610JST-discovery-specialist-disagg-energy-2.json",
         ".survey/work-queue/results/20260915T1612JST-discovery-specialist-cxl-ndp-3.json",
         ".survey/work-queue/results/20260915T1614JST-discovery-specialist-network-flow-4.json",
-        ".survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json"
+        ".survey/work-queue/results/20260915T1808JST-discovery-specialist-moe-cache-router-1.json",
+        ".survey/work-queue/results/20260915T1900JST-discovery-specialist-subquadratic-disagg-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20836,7 +20859,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 546,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
