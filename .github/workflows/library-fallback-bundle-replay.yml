@@ -30,7 +30,7 @@ jobs:
           encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
           raw = base64.b64decode(encoded, validate=True)
           added, skipped, conflicts = [], [], []
-          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:*') as tf:
               for member in tf.getmembers():
                   if not member.isfile() or '/' in member.name or not member.name.endswith('.json'):
                       raise SystemExit(f'unsafe bundle member: {member.name!r}')
