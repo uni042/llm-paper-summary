@@ -2,35 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
-  "job_id": "job-research-d66acc5736f090e9",
+  "attempt_id": "attempt-5538c6a8f37cf0655251fbdf",
+  "job_id": "job-research-229f0f103fc45c25",
   "data": {
-    "problem": "LLMによるGPUカーネル自動最適化はKernelBenchのようなPyTorch・深層学習演算へ集中しており、疎行列や科学計算のような不規則アクセスを含む一般GPUワークロードでの一般化能力を測りにくい。さらに単一入力サイズだけの速度比較では、最適化が規模に応じてどう効くかを隠しやすい。最適化側でも、Nsight Computeが出す大量の計測値から真の律速を選ぶ作業と、正当性確認・コード修正・コンパイル・実行の往復が専門家の手作業になっている。",
-    "novelty": "第一に、50種類の演算を密行列、疎行列、正規化、活性化、損失、LLM演算列、テンソル処理、ステンシル、数値計算へ分散し、各演算をFP32/BF16で複数入力規模に評価するMSKernelBenchを構築する。第二に、Nsight Computeの全出力をLLMへ投入せず、Otsu法と経験的条件で計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、律速に必要な指標だけを残す。第三に、Planner・Coder・Compiler・Debugの4エージェントで、最適化案、CUDA実装、コンパイル/実行スクリプト、失敗修正を閉ループ化し、最良候補を継続更新する。",
-    "method_overview": "MSKernelBenchは純C/CUDAの共通ラッパーとテスト雛形を持ち、各演算にFP32/BF16の別実装を用意する。候補は全入力規模で参照実装との数値一致を確認し、3回のウォームアップ後に50回実行した平均時間から速度向上を測る。最終スコアは入力規模ごとの理論計算量で加重する。CUDAMasterはまず元カーネルを実行してNsight Compute計測を収集し、計算/DRAM/メモリのスループット閾値で律速を分類する。分類ごとにSM稼働率・IPC、L1/L2ヒット率、DRAM帯域など必要な指標だけを残し、Plannerが改善方針、Coderが実装、Compilerがビルド・実行系、Debugが不正解・ビルド失敗を修正する。評価では反復回数R=3、候補ごとのデバッグ回数D=3とし、正当かつ従来最良より高速な候補だけを採用する。",
+    "problem": "既存MoEオフロードはCPUメモリをGPU外部の高速階層として想定するが、Jetson等のUMA型端末ではCPU/GPUが同じDRAMを共有し、容量不足分は1–5 GB/s級NVMeへ落ちる。batch=1中心ではパイプラインも効きにくく、edge移行時のI/O stallはdecoder-onlyで38.5%→80.1%、encoder-decoderで15.8%→41.7%へ増える。量子化は容量を減らせるがモデル挙動を変える可能性がある。",
+    "novelty": "BF16の指数8bitだけが低エントロピーであることを利用し、指数部をK shardへ分けて無損失圧縮、符号+仮数部を別chunkとして保存する。完全、両成分圧縮、SMのみ、Eのみの4キャッシュ状態を設け、SSD I/OとCPU展開をDAG化して並列実行する。さらにexpert人気順位の確率分布から各pool容量を動的計画し、I/O律速と展開可能タスクを組み合わせるschedulerに(3-1/L)近似保証を与える。",
+    "method_overview": "offlineで各expert tensorを指数E-chunkと符号・仮数SM-chunkへ分解し、EをLZ4/ZSTD等で圧縮してNVMeへ保存する。runtimeではgate選択後、現在のcache stateに応じてtensorごとのI/O・展開・復元DAGを作る。専用I/O threadがSSDを読み、L本のCPU workerがEを並列展開し、GPU kernelがzero-copyでSM/EをBF16へ再構成する。cache managerはfull(F)、compressed(C)、SM(S)、E(E) poolを持ち、履歴のexpert人気順位からPoisson-binomial分布をDPで求め、期待makespan最小のpool partitionをgrid searchする。",
     "components": [
       {
-        "name": "MSKernelBench",
-        "description": "50演算を9カテゴリから選び、各演算をFP32とBF16で実装するため100最適化課題となる。単一サイズではなく複数規模を使い、各規模でランダム試験を生成して参照実装との数値誤差を確認する。性能は3回ウォームアップ後50回の平均実行時間を測り、理論計算量に比例する重みで規模ごとの速度向上を集約するため、特定の小サイズだけに効く最適化を過大評価しにくい。"
+        "name": "bit-field無損失圧縮",
+        "description": "BF16を符号、指数、仮数へ分け、低エントロピーな指数だけ圧縮する。LZ4HCで全体74%、ZSTDで68%まで縮み、Shannon下限約66%に近い。"
       },
       {
-        "name": "ハードウェア分析フィルタ",
-        "description": "Nsight Computeの計測を基に、計算スループット30%を境に計算律速を判定し、低計算利用時はDRAM/メモリスループット30%を用いてメモリ遅延律速と帯域律速を分ける。計算律速にはSMスループットやIPC、遅延律速にはL1/L2ヒット率やMem Busy、帯域律速にはDRAM/メモリ帯域など、診断に必要な項目だけをエージェントへ渡す。"
+        "name": "圧縮状態キャッシュ",
+        "description": "full tensor、E+SM、SMのみ、Eのみを別poolとして保持する。SMだけなら同じ容量で約2倍のexpertを覆い、missしたEをCPU展開して他expertのSSD読出しに隠せる。"
       },
       {
-        "name": "4エージェント閉ループ",
-        "description": "Plannerが過去の最良コードと選別済み計測から高位の最適化案を作り、CoderがCUDAへ実装し、Compilerがコンパイルコマンド・実行スクリプト・コンパイラ最適化を管理する。候補がコンパイルまたは数値正当性で失敗するとDebugが原因を診断し、最大D回修正する。正当で性能が改善した候補のみ最良状態へ昇格させ、R回の反復で探索する。"
+        "name": "cache-affinity scheduler",
+        "description": "SM読出しが必要なType-Iと不要なType-IIをexpert GPU実行時間順に並べ、block内へType-IIを挿入してI/Oと展開を重畳する。compute-boundになればblockを確定し、理論上OPTの(3-1/L)以内。"
       },
       {
-        "name": "完全ツールチェーン生成",
-        "description": "最終成果をカーネル断片だけにせず、ベンチマーク固定のテスト論理を変更しない範囲で、必要なコンパイル・実行スクリプトまで生成・修正する。これにより、LLMがコードを提案して人間がビルド環境を手直しする断絶を減らし、実行可能な最適化候補を反復評価できる。"
+        "name": "rank-based cache planning",
+        "description": "expert IDそのものではなく人気順位の周辺選択確率を学習し、各poolへ連続rank区間を割り当てる。Poisson-binomial DPでhit組合せ確率を計算し、期待sparse-layer makespan最小の容量配分を選ぶ。"
+      },
+      {
+        "name": "zero-copy GPU復元",
+        "description": "SMをGPUから直接参照できるhost-pinned memoryへ読み、vectorized load/storeでEとSMをregister上でBF16へ再構成してDRAM帯域を活用する。"
       }
     ],
-    "system_design": "各課題の元コードと実行スクリプトをローカル実行し、RTX 4090のNsight Compute計測をフィルタへ通す。フィルタ結果、過去の最良コード、過去の方針をPlannerへ入力し、Coder→Compiler→実行・正当性検証を進める。失敗時だけDebug分岐を使い、成功時は性能比較を行う。テストハーネスと正当性条件はエージェントから固定し、最適化対象とツールチェーンだけを変更する。"
+    "system_design": "offline圧縮→NVMe保存→起動時pool計画→gateでexpert判明→cache state別DAG生成→SSD I/OとCPU展開のblock scheduling→GPU上でBF16復元→expert実行、という流れ。runtime頻度に応じてexpertをF/C/S/E poolへ移し、低頻度expertは実行後即追い出す。"
   },
   "reservation": {
-    "claim_id": "claim-f8c2699054e47548a5216a21",
-    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
+    "claim_id": "claim-5538c6a8f37cf0655251fbdf",
+    "worker_id": "scheduled-chat-paper-20260915T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

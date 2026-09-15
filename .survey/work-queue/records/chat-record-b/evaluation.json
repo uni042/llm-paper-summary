@@ -4,7 +4,57 @@
   "slot": "evaluation",
   "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
   "job_id": "job-research-3df42686de08919b",
-  "data": {},
+  "data": {
+    "hardware": [
+      "本番GPUクラスタ",
+      "8×400G NIC級GPUノード"
+    ],
+    "software": [
+      "SGLang v0.5.5/v0.5.7",
+      "HiCache",
+      "GCache",
+      "LLM-Router",
+      "Redis",
+      "CUDA Graph"
+    ],
+    "model": [
+      "MiMo-V2.5",
+      "MiMo-V2.5-Pro"
+    ],
+    "datasets": "公開ベンチマーク集合ではなく、Xiaomiの本番APIトラフィック、長文agentic要求、マルチモーダル要求、およびGCacheの1MB I/Oマイクロベンチマークを中心に評価する。",
+    "baselines": [
+      "Full Attentionの理論計算・KV容量",
+      "SWAを全系列KV保存で扱う従来HiCache",
+      "FCFSスケジューリング",
+      "KV親和ルーティング導入前",
+      "マルチモーダル符号器最適化前"
+    ],
+    "correctness": "SWA prefix再利用ではトークン一致だけでなく末尾WトークンのSWA slot生存を確認し、無効KVを読むpseudo-hitを禁止する。性能改善のための近似品質低下は報告していない。",
+    "settings": [
+      {
+        "name": "Hybrid SWA理論分析",
+        "description": "MiMo-V2.5-Proの70層（Full 10、SWA 60）、窓幅128を基にFull Attentionとの注意計算量とKV容量を比較。"
+      },
+      {
+        "name": "GCacheネットワーク",
+        "description": "1MB I/Oで単一プロセスRDMA readとGDR条件の帯域・遅延を測定。"
+      },
+      {
+        "name": "本番ルーティング",
+        "description": "KV親和ルータ導入前後のL2キャッシュヒット率、ノード入力スループット、TTFT分位点を比較。"
+      },
+      {
+        "name": "プリフィル・デコード",
+        "description": "SWA KV対応後のEP縮小、NUMA設定、デコードKV容量、MTPの生成区間別高速化を測定。"
+      },
+      {
+        "name": "マルチモーダル",
+        "description": "符号器QPS/平均/P90遅延、1時間動画復号時間、consistent hashing導入後のキャッシュヒット率を比較。"
+      }
+    ],
+    "methodology": "理論上限、部品マイクロベンチマーク、本番A/Bに近い前後比較を組み合わせる。論文は複数最適化を一体で報告しており、全項目について統一されたハードウェア型番・要求分布・反復数・信頼区間は提示しないため、数値は各節で示された条件に限定して解釈する。",
+    "scope": "Hybrid SWA + sparse MoE + multimodal encoderを持つMiMo-V2.5系の大規模本番サービングが対象。一般モデル、異なるGPU世代、独立再現環境への一般化は直接検証していない。"
+  },
   "reservation": {
     "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",

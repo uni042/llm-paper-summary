@@ -4,7 +4,50 @@
   "slot": "positioning",
   "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
   "job_id": "job-research-3df42686de08919b",
-  "data": {},
+  "data": {
+    "limitations": [
+      {
+        "name": "統一的な実験条件が不足",
+        "description": "本番最適化の技術報告として多くの前後比較を示す一方、全評価で共通するGPU型番、クラスタ規模、要求分布、反復数、分散などは十分に開示されず、独立再現性は限定的。"
+      },
+      {
+        "name": "単一モデル系列中心",
+        "description": "MiMo-V2.5/MiMo-V2.5-ProのHybrid SWA + MoE + multimodal構成に最適化され、他のSWA比率、窓幅、注意方式、GPU世代へ同じ効果が出るかは未検証。"
+      },
+      {
+        "name": "複数変更の寄与分離が限定的",
+        "description": "KV、ルータ、プリフィル、デコード、符号器を段階的に改善するが、全パイプラインを統一ベースラインに対して要因分解したアブレーションはない。"
+      },
+      {
+        "name": "全実装は公開されていない",
+        "description": "一部をSGLangへ上流化すると記載するが、GCacheやLLM-Routerを含む本番スタック全体の公開コードは確認できず、同一構成の再現は難しい。"
+      },
+      {
+        "name": "長prefixの残存ボトルネック",
+        "description": "1Mトークンprefixでは固定16K chunkの相対プリフィルスループットが約0.12×まで低下し、SWAでも超長文の同期・計算負荷は残る。"
+      }
+    ],
+    "differences": [
+      {
+        "name": "一般的な階層KVキャッシュとの差",
+        "description": "単にGPU→CPU→SSDへKVを退避するだけでなく、Full AttentionとSWAで異なる寿命・容量を別プールにし、prefix treeの再利用可能長までSWA窓の物理生存状態へ結び付ける。"
+      },
+      {
+        "name": "単一キャッシュ最適化との差",
+        "description": "GCacheのL3帯域だけでなく、L1/L2/L3整合性、TTL、KV親和ルーティング、TTFT待ち行列制御を一体化し、容量増加を再利用率とスループットへつなげる。"
+      },
+      {
+        "name": "プリフィル・デコード分離研究との差",
+        "description": "PD分離そのものより、Hybrid SWAによるKV容量削減をEP縮小、CPU側事前確保、MTP初期KV生成など各段階の構成変更へ波及させる点が中心。"
+      },
+      {
+        "name": "マルチモーダル推論研究との差",
+        "description": "画像/動画符号器だけを高速化するのではなく、符号器分離、要求横断バッチ、GPU前処理、ダウンロード重畳、埋め込みキャッシュをLLM側のKV最適化と同一production stackで扱う。"
+      }
+    ],
+    "implementation_status": "XiaomiのMiMo API本番環境で稼働。SGLangを基盤とし一部修正を上流化中。GCache/LLM-Router等の全実装公開は確認できない。",
+    "research_positioning": "LLMサービング研究の中では、Hybrid SWAというモデル構造を本番システムのキャッシュ意味論・階層ストレージ・ルータ・並列構成へ共同設計するモデル/システム協調最適化に位置する。特にSWAの窓外KV追い出しとprefix再利用の整合性は、Full Attention前提のRadixAttention/HiCacheをそのまま適用できない具体例である。またGCacheのGPUノード同居NVMe利用は、専用ストレージ機を増やさずL3容量を確保する設計であり、SSD/NVMeを推論階層へ組み込む系統とも直接関連する。"
+  },
   "reservation": {
     "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",

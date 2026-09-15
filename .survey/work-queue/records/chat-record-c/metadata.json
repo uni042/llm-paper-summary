@@ -2,98 +2,84 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
-  "job_id": "job-research-d66acc5736f090e9",
+  "attempt_id": "attempt-5538c6a8f37cf0655251fbdf",
+  "job_id": "job-research-229f0f103fc45c25",
   "data": {
-    "canonical_id": "arXiv:2603.07169",
-    "arxiv_id": "2603.07169",
-    "doi": "10.48550/arXiv.2603.07169",
+    "canonical_id": "arXiv:2601.21198",
+    "arxiv_id": "2601.21198",
+    "doi": "10.48550/arXiv.2601.21198",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.LG",
+      "primary": "cs.DC",
       "cross_list": []
     },
-    "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
-    "summary": "GPUカーネルの自動最適化研究がPyTorch由来のLLM演算へ偏り、疎行列・科学計算など不規則なメモリアクセスを十分に評価していない問題に対し、50演算×FP32/BF16のMSKernelBenchと、ハードウェア計測を選別して複数エージェントへ渡すCUDAMasterを提案する。CUDAMasterは計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、Planner/Coder/Compiler/Debugの4役が反復してコードと実行ツールチェーンを生成する。RTX 4090上の100最適化課題で、o4-miniは機能正当性100%、素朴基準を上回る成功率94%、2倍超60%を達成し、代表演算ではAstraやcuBLAS/cuSPARSE/cuDNNと同等以上のケースを示す。",
-    "list_summary": "50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報をPlanner/Coder/Compiler/Debugへ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。",
+    "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling",
+    "summary": "共有メモリ型SoCではCPU DRAMを別階層として使えず、MoEエキスパートをNVMeから読むI/Oが支配的になる問題に対し、ZipMoEはBF16の低エントロピーな指数部だけを無損失圧縮し、符号・仮数部と分離して保存する。実行時は完全テンソル、圧縮済み両成分、符号・仮数のみ、指数のみの4種キャッシュを使い分け、SSD読出しとCPU並列展開をDAGとして重畳する。人気順位の確率モデルから各キャッシュ容量を計画し、cache-affinity schedulerがI/O律速タスクと計算側タスクを組み合わせる。Jetson AGX Orin 32/64GB、Samsung 970 EVO、DeepSeekV2-Lite/Qwen1.5-MoE/SwitchTransformersで、既存オフロード系よりTPOT・TTFT・スループット・端から端遅延を大幅改善し、モデルのBF16値を変更しない。",
+    "list_summary": "BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEをI/O律速から計算中心へ移す。",
     "authors": [
-      "Yuxuan Han",
-      "Meng-Hao Guo",
-      "Zhengning Liu",
-      "Wenguang Chen",
-      "Shi-Min Hu"
+      "Yuchen Yang",
+      "Yaru Zhao",
+      "Pu Yang",
+      "Shaowei Wang",
+      "Zhi-Hua Zhou"
     ],
-    "authors_affiliations": "Tsinghua University; Proxseer Inc.",
-    "published": "2026-03-07",
-    "publication": "arXiv:2603.07169v1",
+    "authors_affiliations": "Nanjing University / LAMDA（論文著者所属）",
+    "published": "2026-05-22",
+    "publication": "arXiv:2601.21198v2",
     "publication_type": "Preprint",
-    "publication_status": "プレプリント（arXiv v1、2026-03-07提出）",
-    "lineage": "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
+    "publication_status": "プレプリント（arXiv v2、2026-05-22）",
+    "lineage": "端末MoE推論、エキスパートオフロード、無損失圧縮、階層キャッシュ、異種資源スケジューリング",
     "topics": [
-      "CUDA",
-      "GPUカーネル",
-      "自動最適化",
-      "LLMエージェント",
-      "Nsight Compute",
-      "ハードウェアプロファイル",
-      "HPC",
-      "LLM推論カーネル"
+      "MoE",
+      "端末推論",
+      "NVMe",
+      "無損失圧縮",
+      "エキスパートキャッシュ",
+      "UMA",
+      "Jetson"
     ],
-    "importance": "既存のKernelBench系評価をLLM演算だけでなく疎行列・ステンシル・数値計算へ広げ、単一入力サイズではなく複数規模を複雑度加重で評価する。さらに大量のプロファイルをそのままLLMへ投入せず、律速分類に応じた指標だけを選別し、コード生成だけでなくコンパイル・実行・デバッグまで閉ループ化する点が、低層推論カーネルの自動最適化基盤として重要。",
-    "hardware_evaluation": "NVIDIA RTX 4090で全カーネルのコンパイル、実行、NVIDIA Nsight Computeによる計測を実施。",
-    "hardware_details": "評価GPUはNVIDIA RTX 4090。ハードウェア分析はNsight Computeの計算スループット、DRAM/メモリスループット、キャッシュヒット率、IPC、SM稼働率等を使用する。",
-    "quality_effect": "モデル推論品質を近似する方式ではなく、CUDAカーネルの数値正当性を保ったまま実行時間を短縮する。各入力規模で参照実装と出力誤差を検証し、許容範囲内の候補だけを性能評価する。",
-    "storage_targets": [],
+    "importance": "量子化でモデル挙動を変えず、端末SoC特有の共有メモリと余剰CPUコアを利用してNVMe I/Oを圧縮+並列展開へ置き換える。圧縮状態ごとのキャッシュ容量計画とスケジューリングを共同設計する点が特徴。",
+    "hardware_evaluation": "Jetson AGX Orin 64GB/32GB、JetPack 6.2.1、Ubuntu 22.04、Samsung 970 EVO SSD（3.5 GB/s）。",
+    "hardware_details": "UMA型Jetson上でCPU/GPU共有物理メモリを利用。SSD読出しと3本以上のCPU展開スレッドを重畳し、GPUはzero-copyとmemory-coalesced復元kernelを使用。",
+    "quality_effect": "量子化・枝刈りを使わずBF16パラメータをビット単位で可逆分解・圧縮・復元するため、アルゴリズム上のモデル挙動を保持する。",
+    "storage_targets": [
+      "共有DRAM",
+      "NVMe SSD"
+    ],
     "bottlenecks": [
-      "計算律速",
-      "メモリ遅延律速",
-      "メモリ帯域律速",
-      "過剰なハードウェアプロファイル文脈",
-      "コンパイル・実行・デバッグのツール切替"
+      "NVMeエキスパートI/O",
+      "batch=1でのパイプライン不足",
+      "CPU/GPU共有メモリ制約",
+      "エキスパートキャッシュ容量"
     ],
     "evidence_locations": [
-      "§3 MSKernelBench",
-      "§4 CUDAMaster",
-      "§5 Experiment",
-      "Table 2",
-      "Figure 4",
-      "Figure 5",
-      "Table 3-5",
-      "Appendix A/C"
+      "§2.1-2.3",
+      "§3.1-3.4",
+      "§4",
+      "§5",
+      "Table 1-2",
+      "Figures 7-11"
     ],
-    "references": [
-      {
-        "canonical_id": "arXiv:2507.11948",
-        "arxiv_id": "2507.11948"
-      },
-      {
-        "canonical_id": "arXiv:2506.09092",
-        "arxiv_id": "2506.09092"
-      },
-      {
-        "canonical_id": "arXiv:2511.01884",
-        "arxiv_id": "2511.01884"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-15",
     "references_source": "primary-reference-section",
-    "source": "https://arxiv.org/abs/2603.07169",
+    "source": "https://arxiv.org/abs/2601.21198",
     "sources": [
-      "https://arxiv.org/abs/2603.07169",
-      "https://arxiv.org/pdf/2603.07169",
-      "https://hanyx2021.github.io/MSKernelBenchDemo/"
+      "https://arxiv.org/abs/2601.21198",
+      "https://arxiv.org/pdf/2601.21198",
+      "https://github.com/npnothard/ZipMoE-ICML26"
     ],
-    "code": null,
-    "implementation": "論文はMSKernelBenchとCUDAMasterをオープンソース化すると記載し、公開デモでは50演算のFP32/BF16を閲覧できる。今回確認できた一次公開URLはデモページで、フレームワーク本体のGitHubリポジトリURLは確認できなかった。",
-    "implementation_status": "公開デモあり。論文はフレームワークとベンチマークのオープンソース化を宣言するが、本体コードのリポジトリURLは今回の確認では特定できず。",
+    "code": "https://github.com/npnothard/ZipMoE-ICML26",
+    "implementation": "Hugging Face Transformers上のprototype。Python約2.6K行、C++/CUDA約8K行。LZ4/LZ4HC/ZSTD対応。",
+    "implementation_status": "コード公開済み。",
     "evaluation_type": "実機測定",
-    "last_checked": "2026-09-14",
+    "last_checked": "2026-09-15",
     "last_audited": null,
     "audit_version": 0
   },
   "reservation": {
-    "claim_id": "claim-f8c2699054e47548a5216a21",
-    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
+    "claim_id": "claim-5538c6a8f37cf0655251fbdf",
+    "worker_id": "scheduled-chat-paper-20260915T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

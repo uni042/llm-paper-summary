@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 10:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 10:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,24 +41,24 @@
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **45** |
-| 有効claim（lease） | **1** |
-| 今すぐ着手可能（Claimable） | **46** |
-| 有効leaseを持つworker run | **1** |
+| 有効claim（lease） | **2** |
+| 今すぐ着手可能（Claimable） | **45** |
+| 有効leaseを持つworker run | **2** |
 | :30 最新worker run | **2026-09-15T18:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **0** |
+| :30 旧run由来の有効claim | **1** |
 | :00 最新worker run | **—** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 09:34 JST** |
+| :30 通常worker 直近lease活動 | **09-15 10:32 JST** |
 | :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **0** |
 | 直近24h Research完了（:00 補助worker） | **0** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **26 min** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -80,28 +80,28 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **0** |
 | Repo収録 | **0** |
 | Audit完了 | **0** |
-| 探索評価候補 | **28** |
+| 探索評価候補 | **33** |
 | Research候補採用 | **8** |
 | 重複除外 | **9** |
-| 重複率 | **32.1%** |
-| :00 補助worker Discovery run（毎時枠） | **5** |
-| :00 補助worker Discovery round（stats観測） | **12** |
+| 重複率 | **27.3%** |
+| :00 補助worker Discovery run（毎時枠） | **6** |
+| :00 補助worker Discovery round（stats観測） | **13** |
 | 通常worker run（ledger観測） | **0** |
 | Fallback archive（全helper） | **0** |
 
 ### 24時間の流れ
 
-**探索評価 28 → 重複除外後 19 → Research候補採用 8 → Research完了 0 → Repo収録 0**
+**探索評価 33 → 重複除外後 24 → Research候補採用 8 → Research完了 0 → Repo収録 0**
 
 ## 次に処理する候補
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
+- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
 
 ## 参考情報
 
@@ -109,22 +109,23 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 直近の:00 補助worker Discovery
 
-Run: **2026-09-15T09:00:00+09:00**
+Run: **2026-09-15T10:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
 | 探索round | **1** |
-| 探索軸 | 新着KV圧縮・制約適応runtime policy |
-| 評価候補 | **4** |
-| 重複除外 | **3** |
-| Novel候補 | **1** |
+| 探索軸 | KV復元・分離serving network scheduling・MoE elastic/offload・KV survey |
+| 評価候補 | **5** |
+| 重複除外 | **0** |
+| Novel候補 | **5** |
 | Research候補採用 | **0** |
-| 重複率 | **75.0%** |
+| 重複率 | **0.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
+| KV復元・分離serving network scheduling・MoE elastic/offload・KV survey | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU・ホストメモリ間の複数経路転送と分離サービング通信 | 4 | 3 | 1 | 75.0% | 25.0% |
 | 新着KV圧縮・制約適応runtime policy | 4 | 3 | 0 | 75.0% | 0.0% |
 | MoE expert cache placement・PCIe window scheduling・fine-grained expert migration | 3 | 0 | 0 | 0.0% | 0.0% |
@@ -140,11 +141,11 @@ Run: **2026-09-15T09:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
+- 2026-09-15T10:00:00+09:00 — 1 round: 評価 5 / 重複 0 / 採用 0 / 軸 KV復元・分離serving network scheduling・MoE elastic/offload・KV survey
 - 2026-09-15T09:00:00+09:00 — 1 round: 評価 4 / 重複 3 / 採用 0 / 軸 新着KV圧縮・制約適応runtime policy
 - 2026-09-15T08:00:00+09:00 — 5 round: 評価 10 / 重複 2 / 採用 3 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing / Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling
 - 2026-09-15T07:00:00+09:00 — 3 round: 評価 9 / 重複 3 / 採用 4 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム / GPU・ホストメモリ間の複数経路転送と分離サービング通信
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
-- 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
 
 ### 最近完了した論文
 

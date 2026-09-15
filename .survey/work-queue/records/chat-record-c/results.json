@@ -2,99 +2,81 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
-  "job_id": "job-research-d66acc5736f090e9",
+  "attempt_id": "attempt-5538c6a8f37cf0655251fbdf",
+  "job_id": "job-research-229f0f103fc45c25",
   "data": {
-    "overview": "o4-miniは100課題でτ=0の正当性100%、τ=1の基準超え94%、τ=2で60%、τ=4で47%、τ≥8で25%を達成し、DeepSeek-V3.2はそれぞれ95%、80%、49%、40%、22%だった。代表演算では両モデルがSpMV CSRでcuSPARSEを上回り、2D畳み込みとDot ProductではcuDNN/cuBLASを上回る規模がある。Astraに対してはRMSNormでo4-miniが約35%優位で、SiLU&MulやMerge Attention Statesでも同等以上の規模を示す。選別プロファイルは全量プロファイルと同等の成功率を保ちつつ、API費用を最大32%、トークン量を30〜40%削減する。",
+    "overview": "offload必須条件でdecoder-onlyのTPOTを62.65–97.97%、TTFTを53.25–87.90%削減し、encoder-decoderでもTPOT 4.99–81.24%、TTFT最大83.45%削減。batch推論ではdecoder-only throughput 1.79–42.49倍、encoder-decoder 1.31–5.82倍。E2Eはdecoder-only 3.03–42.49倍、encoder-decoder 1.11–5.64倍。cache管理の寄与分解ではcore systemが総throughput gainの約76%、heterogeneous cache+planningが残り約24%。OS page cacheをほぼ消した32GB background占有でもMoE-Infinity比TTFT 56.64%、TPOT 53.32%削減を維持する。",
     "key_results": [
       {
-        "metric": "機能正当性成功率",
-        "value": "100%",
-        "baseline": "DeepSeek-V3.2 95%",
-        "condition": "o4-mini、τ=0、100課題",
-        "interpretation": "多領域・二精度でも全課題で正当な候補を生成できた。"
+        "metric": "decoder-only TPOT",
+        "value": "62.65–97.97%削減",
+        "baseline": "MoE-Infinity/DeepSpeed/Accelerate",
+        "condition": "offload必須memory budget",
+        "interpretation": "NVMe待ちを圧縮+CPU展開へ変換する効果が大きい。"
       },
       {
-        "metric": "素朴基準を上回る成功率",
-        "value": "94%",
-        "baseline": "DeepSeek-V3.2 80%",
-        "condition": "o4-mini、τ=1",
-        "interpretation": "単に動くだけでなく大半の課題で速度改善を実現する。"
+        "metric": "decoder-only TTFT",
+        "value": "53.25–87.90%削減",
+        "baseline": "既存system",
+        "condition": "offload必須",
+        "interpretation": "初回expert取得も高速化。"
       },
       {
-        "metric": "2倍超の成功率",
-        "value": "60%",
-        "baseline": "DeepSeek-V3.2 49%",
-        "condition": "τ=2",
-        "interpretation": "大幅改善も半数超の課題で得られる。"
+        "metric": "decoder-only throughput",
+        "value": "1.79–42.49×",
+        "baseline": "既存system",
+        "condition": "batch 1/4/16",
+        "interpretation": "expert数が増えるほど展開並列性を活用しやすい。"
       },
       {
-        "metric": "8倍以上の成功率",
-        "value": "25%",
-        "baseline": "DeepSeek-V3.2 22%",
-        "condition": "τ≥8",
-        "interpretation": "一部課題ではアルゴリズム・メモリアクセスを大きく改善できる。"
+        "metric": "decoder-only E2E",
+        "value": "3.03–42.49×",
+        "baseline": "既存system",
+        "condition": "複数output limit",
+        "interpretation": "対話全体でも改善が持続。"
       },
       {
-        "metric": "RMSNorm",
-        "value": "o4-miniがAstra比およそ35%高い速度向上",
-        "baseline": "Astra",
-        "condition": "複数入力規模",
-        "interpretation": "既存LLM向け自動最適化と比較しても優位な代表例。"
+        "metric": "DeepSeekV2-Lite throughput",
+        "value": "1.60→5.30 tokens/s",
+        "baseline": "平均basic cache 4.43",
+        "condition": "10GB、batch=16",
+        "interpretation": "core engineが大半を稼ぎ、cache構成が追加改善。"
       },
       {
-        "metric": "2D Convolution",
-        "value": "生成カーネルが約1.8×前後の速度向上",
-        "baseline": "cuDNNは同一素朴基準比およそ1×",
-        "condition": "代表規模",
-        "interpretation": "閉源の高度最適化ライブラリを上回る規模がある。"
+        "metric": "Qwen1.5-MoE throughput",
+        "value": "1.99→7.79 tokens/s",
+        "baseline": "平均basic cache 6.39",
+        "condition": "10GB、batch=16",
+        "interpretation": "planningの追加利得は小さいがPareto改善。"
       },
       {
-        "metric": "Dot Product",
-        "value": "最大およそ52.45×",
-        "baseline": "cuBLASは同一素朴基準比およそ25〜27×",
-        "condition": "図5の複数規模",
-        "interpretation": "単純演算では専用実装が汎用ライブラリ呼び出しを大きく上回る場合がある。"
-      },
-      {
-        "metric": "反復・デバッグの効果",
-        "value": "τ=1で94%",
-        "baseline": "No Debug 77%、Single Iteration 74%、Single Run 77%",
-        "condition": "o4-mini",
-        "interpretation": "計画の反復と体系的デバッグが両方重要。"
-      },
-      {
-        "metric": "選別プロファイルのコスト",
-        "value": "o4-mini平均$0.2707/123,036 tokens",
-        "baseline": "Full Profile $0.3804/172,917 tokens",
-        "condition": "1課題平均",
-        "interpretation": "成功率をほぼ維持し、費用最大32%、トークン30〜40%を削減。"
+        "metric": "page cacheなし近似条件",
+        "value": "TTFT 56.64%、TPOT 53.32%削減",
+        "baseline": "MoE-Infinity",
+        "condition": "background RAM 32GB",
+        "interpretation": "OS page cacheだけに依存しない。"
       }
     ],
     "negative_results": [
       {
-        "name": "モデル差が大きい",
-        "description": "同一CUDAMasterでもDeepSeek-V3.2はτ=1で80%、o4-miniは94%で、基盤モデルのコード生成・推論能力が最終性能を強く左右する。"
+        "name": "encoder-decoderで利得縮小",
+        "description": "expert activationが強く偏りI/O量も少ないため、decoder-onlyよりZipMoEの優位が小さい。"
       },
       {
-        "name": "高倍率達成は限定的",
-        "description": "τ≥8の成功率はo4-miniでも25%であり、全演算を専門ライブラリ級へ自動最適化できるわけではない。"
+        "name": "planning単体の利得は中程度",
+        "description": "総throughput gainの約76%はcore decompression/scheduling engine由来で、cache management全体は約24%。"
       },
       {
-        "name": "単一GPU評価",
-        "description": "全性能計測がRTX 4090で、別GPU世代やデータセンターGPUへ同一方針・閾値がそのまま一般化するかは未検証。"
-      },
-      {
-        "name": "全量プロファイルは高コスト",
-        "description": "o4-miniではFull Profileが平均$0.3804・172,917 tokenで、Filteredの$0.2707・123,036 tokenより重い。情報量を増やせば改善するとは限らず、選別が必要。"
+        "name": "UMA外は未実測",
+        "description": "CPU/GPU分離memoryでは追加H2D tierが必要で、論文は将来拡張として議論するのみ。"
       }
     ],
-    "interpretation": "CUDAMasterの価値は、LLMへ『もっと速くせよ』と直接依頼することより、専門家の診断工程を構造化して提供する点にある。律速タイプに応じて必要なハードウェア指標だけを渡し、計画・実装・ビルド・デバッグを別役割に分けることで、長いプロファイル文脈とツール操作の混線を減らす。LLM推論システムへの直接的な意義は、RMSNorm、SiLU、Attention state mergeなど頻出カーネルについて、GPUごとの低層チューニングを自動化できる可能性にある。一方、サービング全体のTTFT/TPOT/throughputは測っておらず、カーネル速度向上がそのまま端から端性能へ等倍で反映されるとは限らない。",
-    "quality_impact": "数値精度を落として性能を得る方式ではない。FP32とBF16は別課題として評価され、それぞれ参照実装との誤差許容を満たすことが必須。したがって主なトレードオフは生成API費用、プロファイル量、探索反復時間、GPU世代への適応である。"
+    "interpretation": "ZipMoEはSSDから完全expertを読む代わりに、情報量の少ない指数部を圧縮してI/O bytesを減らし、端末で余りがちなCPU coreへ展開計算を移す。これによりI/O-bound処理を並列computeへ変換する。cacheは単なるhit/missではなく、どのbit-fieldがresidentかを性能状態として扱う点が重要。",
+    "quality_impact": "BF16値を完全復元する無損失方式で、量子化によるperplexityや安全性変化を避ける。性能との主な交換条件はCPU core、DRAM/cache容量、圧縮率、SSD帯域。"
   },
   "reservation": {
-    "claim_id": "claim-f8c2699054e47548a5216a21",
-    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
+    "claim_id": "claim-5538c6a8f37cf0655251fbdf",
+    "worker_id": "scheduled-chat-paper-20260915T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

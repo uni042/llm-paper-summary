@@ -2,55 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
-  "job_id": "job-research-d66acc5736f090e9",
+  "attempt_id": "attempt-5538c6a8f37cf0655251fbdf",
+  "job_id": "job-research-229f0f103fc45c25",
   "data": {
     "limitations": [
       {
-        "name": "単一GPU世代",
-        "description": "評価はRTX 4090のみで、H100/B200などアーキテクチャが異なるGPUでは律速閾値、最適化パターン、既存ライブラリとの相対性能が変わり得る。"
+        "name": "Jetsonのみ実測",
+        "description": "64GB/32GB AGX Orinだけで評価し、Apple Silicon、Raspberry Pi、スマートフォンSoCでは未検証。"
       },
       {
-        "name": "基盤モデルが2種類",
-        "description": "o4-miniとDeepSeek-V3.2だけを主評価しており、他の商用/公開モデルで同じ成功率や費用特性が出るかは示されていない。"
+        "name": "NVMe依存",
+        "description": "Samsung 970 EVO 3.5GB/sを使用し、UFSや低速SSDではI/O/展開の相対関係と最適thread数が変わる。"
       },
       {
-        "name": "ベンチマーク範囲",
-        "description": "50演算は多領域だが有限であり、通信カーネル、複数GPU協調、動的shape、実際の推論サーバ全体のスケジューリング等は中心対象ではない。"
+        "name": "圧縮対象の前提",
+        "description": "BF16指数部の低entropyを利用するため、別精度・別weight分布では圧縮率と最適cache stateが変化する。"
       },
       {
-        "name": "端から端効果の未評価",
-        "description": "個別カーネルの速度向上は測るが、vLLM/SGLangなどサービング基盤へ組み込んだ際のTTFT、TPOT、throughput、電力、コンパイル償却時間は評価していない。"
-      },
-      {
-        "name": "実装公開位置の不明確さ",
-        "description": "論文はフレームワークとベンチマークをオープンソース化すると述べるが、確認できた一次公開先はデモページで、本体リポジトリURLは今回特定できなかった。"
+        "name": "workload stationarity",
+        "description": "cache planningはexpert人気順位の履歴分布を使うため、急激なprompt分布変化では事前partitionが最適でなくなる可能性がある。"
       }
     ],
     "differences": [
       {
-        "name": "KernelBench系との差",
-        "description": "PyTorch/LLM演算中心ではなく、純C/CUDAで疎行列、ステンシル、数値計算を含め、各演算を複数規模・FP32/BF16で評価する。"
+        "name": "MoE-Infinity等との差",
+        "description": "CPU DRAMをoffload tierとしてprefetchするのではなく、UMA端末ではNVMe bytes自体を無損失圧縮し、CPU decompressionをSSD I/Oと重畳する。"
       },
       {
-        "name": "CudaForge等との差",
-        "description": "単にプロファイルをLLMへ返すのではなく、全課題の計測分布から律速分類閾値を作り、タイプ別に必要な指標だけを選択することで文脈量を抑える。"
+        "name": "量子化系との差",
+        "description": "bit幅を落とさずBF16を可逆圧縮するためモデル挙動を保持し、accuracy-security trade-offを避ける。"
       },
       {
-        "name": "Astraとの差",
-        "description": "SGLang由来カーネルに限定せず一般HPC演算まで対象にし、カーネルコードに加えてコンパイル・実行ツールチェーンの生成/修正もエージェント系へ含める。"
+        "name": "一般lossless compressorとの差",
+        "description": "圧縮するだけでなくE/SM/fullというresident stateをcache階層に組み込み、expert activationと異種resource schedulingへ共同設計する。"
       },
       {
-        "name": "学習型CUDA生成との差",
-        "description": "KevinやCUDA-L1/L2のように専用モデルを強化学習するのではなく、既存の強力な基盤モデルへ構造化プロファイルと複数エージェントの反復手順を与える訓練不要の実行時最適化である。"
+        "name": "単純LRUとの差",
+        "description": "人気順位の確率モデルとsparse-layer makespanからF/C/S/E pool容量を事前計画し、runtime頻度で各poolへdispatchする。"
       }
     ],
-    "implementation_status": "MSKernelBench/CUDAMasterの公開デモあり。論文はフレームワークとベンチマークのオープンソース化を明記するが、今回確認できた一次URLから本体GitHubリポジトリは特定できない。",
-    "research_positioning": "推論カーネル最適化系統では、FlashAttentionや手書きCUDAの個別アルゴリズムではなく、『ハードウェア計測を使ってLLMがGPUごとの実装を自動改良するメタシステム』に位置する。特にLLM演算以外の不規則ワークロードを含む評価を導入したことで、既知のLLM最適化コードを記憶から再現しただけか、それとも律速に応じて新しい変換を選べるかを検証しやすい。将来的にはSGLang/vLLM等のカーネル更新をGPU世代ごとに自動再調整する仕組みへ接続し得るが、本論文自体はサービング統合までは扱わない。"
+    "implementation_status": "公開GitHub prototypeあり。Transformers + Python/C++/CUDA、LZ4系/ZSTD対応。",
+    "research_positioning": "MoE expert offloading系統の端末向け派生で、SSD/NVMeを最下層に置きつつ、転送予測やGPU prefetchではなく『保存情報量を可逆に減らしCPU計算へ変換する』設計。階層メモリ研究としては、cache entryを完全expertだけでなくbit-field単位の圧縮状態へ細分化し、CPU core数・SSD帯域・memory budgetを同時に割り当てる点が特徴。"
   },
   "reservation": {
-    "claim_id": "claim-f8c2699054e47548a5216a21",
-    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
+    "claim_id": "claim-5538c6a8f37cf0655251fbdf",
+    "worker_id": "scheduled-chat-paper-20260915T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -4,7 +4,104 @@
   "slot": "results",
   "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
   "job_id": "job-research-3df42686de08919b",
-  "data": {},
+  "data": {
+    "overview": "Hybrid SWAのFull/SWA二重KVプールはSWA KV容量効率を約7倍にし、サーバ側KVヒット率は通常93%、高負荷利用者で95%以上と報告される。GCacheは1MB RDMA readで170 GB/s・280マイクロ秒、GDRで約350 GB/s。KV親和ルーティングはL2ヒット率を約25%、ノード入力スループットを約30%改善し、長要求TTFT P90を30.5%低下。SWA KV削減でプリフィルEPを半減して約40%改善、デコードKV容量約5倍、MTPは0–128生成2.3倍、128–256で1.5倍。符号器QPSは15→30。",
+    "key_results": [
+      {
+        "metric": "SWA KV容量効率",
+        "value": "約7×",
+        "baseline": "全系列KVを保持する実装",
+        "condition": "Full/SWA二重プール",
+        "interpretation": "SWA層を厳密なO(W)保存にする。"
+      },
+      {
+        "metric": "GCache RDMA read",
+        "value": "170 GB/s、280 µs",
+        "baseline": "論文は比較baselineを提示せず絶対値のみ報告",
+        "condition": "1MB I/O、単一プロセス",
+        "interpretation": "L3 KV転送向けの高帯域マイクロベンチマーク。"
+      },
+      {
+        "metric": "GCache GDR帯域",
+        "value": "約350 GB/s",
+        "baseline": "通常RDMA read 170 GB/s",
+        "condition": "GDR条件",
+        "interpretation": "GPU HBM直接経路で帯域が増える。"
+      },
+      {
+        "metric": "L2キャッシュヒット率",
+        "value": "約25%改善",
+        "baseline": "KV親和ルーティング導入前",
+        "condition": "本番ルータ",
+        "interpretation": "L3同期取得を減らす。"
+      },
+      {
+        "metric": "ノード入力スループット",
+        "value": "約30%改善",
+        "baseline": "導入前",
+        "condition": "KV親和ルーティング",
+        "interpretation": "cache locality改善が入力処理能力へ反映。"
+      },
+      {
+        "metric": "長要求TTFT P90",
+        "value": "30.5%低下",
+        "baseline": "FCFS",
+        "condition": "未cache token優先+待ち時間penalty",
+        "interpretation": "head-of-line blockingを減らす。"
+      },
+      {
+        "metric": "プリフィル性能",
+        "value": "約40%改善",
+        "baseline": "従来EP構成",
+        "condition": "EPを半分へ縮小",
+        "interpretation": "通信範囲とDP数を減らす。"
+      },
+      {
+        "metric": "デコードKV容量",
+        "value": "約5×",
+        "baseline": "SWA非対応デコードKV",
+        "condition": "SWA KVほかmemory最適化",
+        "interpretation": "同時実行数を増やす。"
+      },
+      {
+        "metric": "MTP高速化",
+        "value": "2.3× / 1.5×",
+        "baseline": "prefillでMTP KVを作らない方式",
+        "condition": "生成0–128 / 128–256 token",
+        "interpretation": "初期MTP受理率を改善。"
+      },
+      {
+        "metric": "マルチモーダル符号器QPS",
+        "value": "15→30",
+        "baseline": "最適化前15 QPS",
+        "condition": "平均遅延78.39→80.28 ms、P90 100.76→82.94 ms",
+        "interpretation": "平均遅延をほぼ維持し処理量2倍。"
+      },
+      {
+        "metric": "1時間動画復号",
+        "value": "156 s→23 s",
+        "baseline": "最適化前156 s",
+        "condition": "frame index分割並列復号",
+        "interpretation": "長動画前処理を大幅短縮。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "長prefixでプリフィル低下",
+        "description": "固定16K chunkではprefixほぼ0の1×から1M token prefixで約0.12×まで低下する。"
+      },
+      {
+        "name": "SWA安全化で生ヒット率低下",
+        "description": "window-safe一致規則は無効KV再利用を防ぐ代わりに同一token容量での生hit長を少し短くする。"
+      },
+      {
+        "name": "MoE追加均衡を未使用",
+        "description": "平均expert load factor約0.8495で追加balancingを導入していない。"
+      }
+    ],
+    "interpretation": "Hybrid SWAの理論削減だけでは本番効率にならず、KVの物理寿命とprefix treeの論理寿命を一致させ、階層転送とroutingをSWA意味論へ合わせる必要がある。各改善値は異なる条件なので掛け合わせて全体倍率とはみなせない。",
+    "quality_impact": "近似ではなくHybrid SWAの意味論を正しく実装し、無効SWA KVの誤再利用を防ぐ。"
+  },
   "reservation": {
     "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
     "worker_id": "scheduled-chat-paper-20260915T1830JST",
