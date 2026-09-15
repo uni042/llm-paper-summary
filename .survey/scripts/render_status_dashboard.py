@@ -385,6 +385,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         lines.append(
             f"- 耐久探索round: **{len(latest_discovery_rounds)}件** / "
             f"immutable submission: **{len(latest_discovery_submissions)}件** / "
+            f"検証済み成功result: **{len(discovery_succeeded)}件** / "
             f"個別result照合: **{len(discovery_succeeded)}件** / "
             f"個別result未照合: **{len(latest_discovery_submissions) - len(discovery_succeeded)}件** / "
             f"候補: **{candidate_count}件**"
