@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.09613",
+      "title": "AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving",
+      "source_url": "https://arxiv.org/abs/2606.09613",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09613-agentservesim-hardware-aware-agent-serving-simulator.md",
+      "priority": 80,
+      "reason": "multi-turn agent servingをprogram granularityで評価するhardware-aware simulatorで、tool gap、session affinity、HBM/host DRAM/CXL上のKV residencyを明示的にモデル化する。実システム主要指標を6%以内の誤差で再現すると報告しており、agent serving schedulerや階層KV policyをGPU実機なしで探索する基盤として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-agent-sim-6",
+    "axis": "agent serving・program-level simulation・KV residency",
+    "query_summary": "Ariesのfull-stack実測軸と区別し、agent programのtool gap、session-aware routing、KV residencyを再現するhardware-aware simulatorを探索。AGENTSERVESIMはrepo内ID検索で既存表現を確認できなかった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "agent workloadから離れ、GPU collective/runtime adaptationやnetwork topology-aware inference communicationへ軸を変更する",
+    "empty_round_reason": null
+  }
+}
