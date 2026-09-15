@@ -15,7 +15,7 @@
 
 **1 discovery round / 1 discovery submission の完了はScheduled Chat runの完了ではない。** roundごとの耐久保存は中間checkpointとして扱い、その直後に最新HEAD、queue、`discovery-state.json`、candidate inventoryを再取得して、同じrun内の次の行動を必ず決める。
 
-Discovery modeのままで、次回同一`:00` Scheduled Chat枠まで600秒より多く残り、正本読取と耐久保存が可能で、`next_axis_hint` または他の独立した有望探索軸が残る場合は、**同じrun内で直ちに次の異なるdiscovery roundへ進む**。`next_axis_hint` を書いたこと自体は終了理由ではなく、原則として同一runで次に試す候補軸を示す。
+Discovery modeのままで、**実際のScheduled Chat invocation開始時刻 + 3600秒で定義したrun deadline** まで600秒より多く残り、正本読取と耐久保存が可能で、`next_axis_hint` または他の独立した有望探索軸が残る場合は、**同じrun内で直ちに次の異なるdiscovery roundへ進む**。予定`:00`までの残り時間は、run deadlineを確定できない古いcaller向けのcompatibility fallbackに限る。`next_axis_hint` を書いたこと自体は終了理由ではなく、原則として同一runで次に試す候補軸を示す。
 
 次は単独ではrun停止条件にしない。
 
@@ -26,14 +26,17 @@ Discovery modeのままで、次回同一`:00` Scheduled Chat枠まで600秒よ�
 - Actionsが次jobをmaterializeするのを待っている。
 - 1 discovery jobがcompletedになった。
 - 1 Research/Auditを完了した。
+- 予定`:00`が近いが、実開始基準のrun deadlineには十分な時間が残っている。
 
-runを終了する直前には必ず **終了監査** を行い、`discovery-exhaustive-run-policy.md` のRun-level stop conditionsのいずれかに明確に一致することを確認する。一致しない場合は終了禁止で、次のdiscovery roundまたはoverflow research modeへ進む。特に、次回`:00`まで600秒より多く残り、未試行の有望な`next_axis_hint`があるのにDiscoveryを1 roundだけで終了してはならない。
+runを終了する直前には必ず **終了監査** を行い、`discovery-exhaustive-run-policy.md` のRun-level stop conditionsのいずれかに明確に一致することを確認する。一致しない場合は終了禁止で、次のdiscovery roundまたはoverflow research modeへ進む。特に、run deadlineまで600秒より多く残り、未試行の有望な`next_axis_hint`があるのにDiscoveryを1 roundだけで終了してはならない。
 
 探索空間枯渇を終了理由にできるのは、`discovery-exhaustive-run-policy.md` の独立探索経路の一巡条件を満たした場合だけとする。1 round終了直後や、未試行の有望軸が明示されている状態を「枯渇」とみなしてはならない。
 
 ## 実行時刻
 
 探索主体workerは毎時 `:00` JSTに実行する。既存の論文workerは従来どおり毎時 `:30` JSTで動作する。平常時は30分ずらすことでdiscoveryとpaper workerのqueue/state write競合を減らす。overflow research modeでは`:00` workerが長く動けば`:30` workerと自然に重なり、異なるworker IDで別jobをclaimして並列readerとして動く。
+
+予定時刻はrunの識別・起動契機に使うが、**runのhandoff時間計算には使わない。** Scheduled Chatが実際に開始した時刻を1回だけ記録し、その時刻 + 3600秒を今回runのdeadlineとして固定する。数分の早起動・遅延起動があっても、このrun-local deadlineを短縮しない。
 
 探索主体workerは既存の24-run maintenance counterへ加算しない。overflow research modeへ切り替わってもこの扱いは変えない。maintenance gateは既存の論文worker側の正本に従う。
 
@@ -135,6 +138,8 @@ priorityは少なくとも以下を考慮する。
 各discovery submissionには、通常の `job_id` と `candidates` に加えて、トップレベルに `discovery_stats` を含める。
 
 1回の探索主体Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
+
+`run_key` は集計上の予定枠識別子であり、handoff guardの時間基準ではない。handoff guardは別途、実際のScheduled Chat invocation開始時刻 + 3600秒で固定したrun deadlineを使う。
 
 これにより `STATUS.md` は複数の探索roundを「毎時の探索主体worker 1回がどれだけ探索したか」という単位で集計できる。旧データで同一時間帯に複数 `run_key` が残っている場合、dashboard側はJSTの毎時枠へbest-effortで集約する。
 
