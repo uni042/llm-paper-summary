@@ -9,77 +9,38 @@
     "arxiv_id": "2601.21198",
     "doi": "10.48550/arXiv.2601.21198",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
     "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling",
-    "summary": "共有メモリ型SoCではCPU DRAMを別階層として使えず、MoEエキスパートをNVMeから読むI/Oが支配的になる問題に対し、ZipMoEはBF16の低エントロピーな指数部だけを無損失圧縮し、符号・仮数部と分離して保存する。実行時は完全テンソル、圧縮済み両成分、符号・仮数のみ、指数のみの4種キャッシュを使い分け、SSD読出しとCPU並列展開をDAGとして重畳する。人気順位の確率モデルから各キャッシュ容量を計画し、cache-affinity schedulerがI/O律速タスクと計算側タスクを組み合わせる。Jetson AGX Orin 32/64GB、Samsung 970 EVO、DeepSeekV2-Lite/Qwen1.5-MoE/SwitchTransformersで、既存オフロード系よりTPOT・TTFT・スループット・端から端遅延を大幅改善し、モデルのBF16値を変更しない。",
-    "list_summary": "BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEをI/O律速から計算中心へ移す。",
-    "authors": [
-      "Yuchen Yang",
-      "Yaru Zhao",
-      "Pu Yang",
-      "Shaowei Wang",
-      "Zhi-Hua Zhou"
-    ],
+    "summary": "共有メモリ型SoCではCPU用DRAMをGPU外の別階層として使えず、MoEエキスパートをNVMeから読む入出力が支配的になる。ZipMoEはBF16の低エントロピーな指数部だけを無損失圧縮し、符号・仮数部と分離して保存する。実行時は完全テンソル、圧縮済み両成分、符号・仮数のみ、指数のみの4種キャッシュを使い分け、SSD読出しとCPU並列展開を有向非巡回グラフとして重畳する。人気順位の確率モデルから各キャッシュ容量を計画し、キャッシュ親和性スケジューラが入出力律速タスクと計算側タスクを組み合わせる。Jetson AGX Orin 32/64GB、Samsung 970 EVO、DeepSeekV2-Lite/Qwen1.5-MoE/SwitchTransformersで、既存オフロード系よりトークン間遅延・初回トークン遅延・スループット・端から端遅延を大幅改善し、モデルのBF16値を変更しない。",
+    "list_summary": "BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEを入出力律速から計算中心へ移す。",
+    "authors": ["Yuchen Yang", "Yaru Zhao", "Pu Yang", "Shaowei Wang", "Zhi-Hua Zhou"],
     "authors_affiliations": "Nanjing University / LAMDA（論文著者所属）",
     "published": "2026-05-22",
     "publication": "arXiv:2601.21198v2",
     "publication_type": "Preprint",
     "publication_status": "プレプリント（arXiv v2、2026-05-22）",
     "lineage": "端末MoE推論、エキスパートオフロード、無損失圧縮、階層キャッシュ、異種資源スケジューリング",
-    "topics": [
-      "MoE",
-      "端末推論",
-      "NVMe",
-      "無損失圧縮",
-      "エキスパートキャッシュ",
-      "UMA",
-      "Jetson"
-    ],
-    "importance": "量子化でモデル挙動を変えず、端末SoC特有の共有メモリと余剰CPUコアを利用してNVMe I/Oを圧縮+並列展開へ置き換える。圧縮状態ごとのキャッシュ容量計画とスケジューリングを共同設計する点が特徴。",
+    "topics": ["MoE", "端末推論", "NVMe", "無損失圧縮", "エキスパートキャッシュ", "UMA", "Jetson"],
+    "importance": "量子化でモデル挙動を変えず、端末SoC特有の共有メモリと余剰CPUコアを利用してNVMe入出力を圧縮と並列展開へ置き換える。圧縮状態ごとのキャッシュ容量計画とスケジューリングを共同設計する点が特徴。",
     "hardware_evaluation": "Jetson AGX Orin 64GB/32GB、JetPack 6.2.1、Ubuntu 22.04、Samsung 970 EVO SSD（3.5 GB/s）。",
-    "hardware_details": "UMA型Jetson上でCPU/GPU共有物理メモリを利用。SSD読出しと3本以上のCPU展開スレッドを重畳し、GPUはzero-copyとmemory-coalesced復元kernelを使用。",
+    "hardware_details": "共有メモリ型Jetson上でCPU/GPU共有物理メモリを利用。SSD読出しと3本以上のCPU展開スレッドを重畳し、GPUはゼロコピーとメモリ結合アクセスを使う復元カーネルを使用。",
     "quality_effect": "量子化・枝刈りを使わずBF16パラメータをビット単位で可逆分解・圧縮・復元するため、アルゴリズム上のモデル挙動を保持する。",
-    "storage_targets": [
-      "共有DRAM",
-      "NVMe SSD"
-    ],
-    "bottlenecks": [
-      "NVMeエキスパートI/O",
-      "batch=1でのパイプライン不足",
-      "CPU/GPU共有メモリ制約",
-      "エキスパートキャッシュ容量"
-    ],
-    "evidence_locations": [
-      "§2.1-2.3",
-      "§3.1-3.4",
-      "§4",
-      "§5",
-      "Table 1-2",
-      "Figures 7-11"
-    ],
+    "storage_targets": ["共有DRAM", "NVMe SSD"],
+    "bottlenecks": ["NVMeエキスパート入出力", "バッチ1でのパイプライン不足", "CPU/GPU共有メモリ制約", "エキスパートキャッシュ容量"],
+    "evidence_locations": ["§2.1-2.3", "§3.1-3.4", "§4", "§5", "Table 1-2", "Figures 7-11"],
     "references": [],
+    "references_total": 0,
     "references_checked_at": "2026-09-15",
     "references_source": "primary-reference-section",
     "source": "https://arxiv.org/abs/2601.21198",
-    "sources": [
-      "https://arxiv.org/abs/2601.21198",
-      "https://arxiv.org/pdf/2601.21198",
-      "https://github.com/npnothard/ZipMoE-ICML26"
-    ],
+    "sources": ["https://arxiv.org/abs/2601.21198", "https://arxiv.org/pdf/2601.21198", "https://github.com/npnothard/ZipMoE-ICML26"],
     "code": "https://github.com/npnothard/ZipMoE-ICML26",
-    "implementation": "Hugging Face Transformers上のprototype。Python約2.6K行、C++/CUDA約8K行。LZ4/LZ4HC/ZSTD対応。",
+    "implementation": "Hugging Face Transformers上の試作実装。Python約2.6K行、C++/CUDA約8K行。LZ4/LZ4HC/ZSTD対応。",
     "implementation_status": "コード公開済み。",
     "evaluation_type": "実機測定",
     "last_checked": "2026-09-15",
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {
-    "claim_id": "claim-5538c6a8f37cf0655251fbdf",
-    "worker_id": "scheduled-chat-paper-20260915T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-5538c6a8f37cf0655251fbdf", "worker_id": "scheduled-chat-paper-20260915T1030JST", "worker_kind": "scheduled_chat"}
 }
