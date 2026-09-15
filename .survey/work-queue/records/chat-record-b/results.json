@@ -2,80 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-64f5834724b23a881c8f959c",
-  "job_id": "job-research-229f0f103fc45c25",
-  "data": {
-    "overview": "offload必須条件でdecoder-onlyのTPOTを62.65–97.97%、TTFTを53.25–87.90%削減し、encoder-decoderでもTPOT 4.99–81.24%、TTFT最大83.45%削減。batch推論ではdecoder-only throughput 1.79–42.49倍、encoder-decoder 1.31–5.82倍。E2Eはdecoder-only 3.03–42.49倍、encoder-decoder 1.11–5.64倍。cache管理の寄与分解ではcore systemが総throughput gainの約76%、heterogeneous cache+planningが残り約24%。OS page cacheをほぼ消した32GB background占有でもMoE-Infinity比TTFT 56.64%、TPOT 53.32%削減を維持する。",
-    "key_results": [
-      {
-        "metric": "decoder-only TPOT",
-        "value": "62.65–97.97%削減",
-        "baseline": "MoE-Infinity/DeepSpeed/Accelerate",
-        "condition": "offload必須memory budget",
-        "interpretation": "NVMe待ちを圧縮+CPU展開へ変換する効果が大きい。"
-      },
-      {
-        "metric": "decoder-only TTFT",
-        "value": "53.25–87.90%削減",
-        "baseline": "既存system",
-        "condition": "offload必須",
-        "interpretation": "初回expert取得も高速化。"
-      },
-      {
-        "metric": "decoder-only throughput",
-        "value": "1.79–42.49×",
-        "baseline": "既存system",
-        "condition": "batch 1/4/16",
-        "interpretation": "expert数が増えるほど展開並列性を活用しやすい。"
-      },
-      {
-        "metric": "decoder-only E2E",
-        "value": "3.03–42.49×",
-        "baseline": "既存system",
-        "condition": "複数output limit",
-        "interpretation": "対話全体でも改善が持続。"
-      },
-      {
-        "metric": "DeepSeekV2-Lite throughput",
-        "value": "1.60→5.30 tokens/s",
-        "baseline": "平均basic cache 4.43",
-        "condition": "10GB、batch=16",
-        "interpretation": "core engineが大半を稼ぎ、cache構成が追加改善。"
-      },
-      {
-        "metric": "Qwen1.5-MoE throughput",
-        "value": "1.99→7.79 tokens/s",
-        "baseline": "平均basic cache 6.39",
-        "condition": "10GB、batch=16",
-        "interpretation": "planningの追加利得は小さいがPareto改善。"
-      },
-      {
-        "metric": "page cacheなし近似条件",
-        "value": "TTFT 56.64%、TPOT 53.32%削減",
-        "baseline": "MoE-Infinity",
-        "condition": "background RAM 32GB",
-        "interpretation": "OS page cacheだけに依存しない。"
-      }
-    ],
-    "negative_results": [
-      {
-        "name": "encoder-decoderで利得縮小",
-        "description": "expert activationが強く偏りI/O量も少ないため、decoder-onlyよりZipMoEの優位が小さい。"
-      },
-      {
-        "name": "planning単体の利得は中程度",
-        "description": "総throughput gainの約76%はcore decompression/scheduling engine由来で、cache management全体は約24%。"
-      },
-      {
-        "name": "UMA外は未実測",
-        "description": "CPU/GPU分離memoryでは追加H2D tierが必要で、論文は将来拡張として議論するのみ。"
-      }
-    ],
-    "interpretation": "ZipMoEはSSDから完全expertを読む代わりに、情報量の少ない指数部を圧縮してI/O bytesを減らし、端末で余りがちなCPU coreへ展開計算を移す。これによりI/O-bound処理を並列computeへ変換する。cacheは単なるhit/missではなく、どのbit-fieldがresidentかを性能状態として扱う点が重要。",
-    "quality_impact": "BF16値を完全復元する無損失方式で、量子化によるperplexityや安全性変化を避ける。性能との主な交換条件はCPU core、DRAM/cache容量、圧縮率、SSD帯域。"
-  },
+  "attempt_id": "attempt-043db24bbe0099ae5a65a1e3",
+  "job_id": "job-research-3540240bb76e82ea",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-64f5834724b23a881c8f959c",
+    "claim_id": "claim-043db24bbe0099ae5a65a1e3",
     "worker_id": "scheduled-chat-paper-20260915T1430JST",
     "worker_kind": "scheduled_chat"
   }
