@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 00:07:57 JST**
+> 自動生成: **2026-09-16 00:46:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **2** | **5** | **2** | **3** | **0** | **0** | — |
+| Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **2** | **7** | **1** | **6** | **0** | **0** | **7** |
-| 合計 | **4** | **12** | **3** | **9** | **0** | **0** | **7** |
+| 合計 | **2** | **12** | **3** | **9** | **0** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -24,16 +24,7 @@
 
 ### Research
 
-- **09-15 18:38:20 JST** [research] `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation
-  - job: `.survey/work-queue/jobs/job-research-1fc8cd177d28f575.json`
-  - result: `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2767bee85a3612f009a3c651.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
-- **09-15 18:36:58 JST** [research] `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving
-  - job: `.survey/work-queue/jobs/job-research-b22f71500ae1903a.json`
-  - result: `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-005c2488539329fa13df896f.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
+- 検証済み完了なし。
 
 ### Audit
 
