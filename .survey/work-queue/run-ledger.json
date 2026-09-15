@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T18:04:54.183213+00:00",
+  "updated_at": "2026-09-15T18:08:18.141241+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T18:04:54.183213+00:00",
+      "last_recorded_at": "2026-09-15T18:08:18.141241+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34894084703:1",
-          "recorded_at": "2026-09-14T20:40:52.719490+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34894084703",
-            "run_attempt": "1",
-            "source_sha": "bb6539bc0f8c51f9ddf1218ba2c34dfe3bddc5de"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34894259169:1",
           "recorded_at": "2026-09-14T20:44:09.315565+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35005017381",
             "run_attempt": "1",
             "source_sha": "57e9367928a2b80a7be89921c3eeeddec30024b6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35005197674:1",
+          "recorded_at": "2026-09-15T18:08:18.141241+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35005197674",
+            "run_attempt": "1",
+            "source_sha": "136431e11fa9a1ef1111770779591f0f981daebe"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -20906,7 +20906,10 @@
         ".survey/work-queue/results/20260916T0131JST-discovery-specialist-new-workloads-8.json",
         ".survey/work-queue/results/20260916T0135JST-discovery-specialist-power-coserving-9.json",
         ".survey/work-queue/results/20260916T0138JST-discovery-specialist-heterogeneous-10.json",
-        ".survey/work-queue/results/20260916T0308JST-discovery-specialist-hw-scheduling-1.json"
+        ".survey/work-queue/results/20260916T0308JST-discovery-specialist-hw-scheduling-1.json",
+        ".survey/work-queue/results/20260916T0312JST-discovery-specialist-moe-io-2.json",
+        ".survey/work-queue/results/20260916T0317JST-discovery-specialist-cxl-context-3.json",
+        ".survey/work-queue/results/20260916T0322JST-discovery-specialist-power-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
