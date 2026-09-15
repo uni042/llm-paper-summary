@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/03-memory-offload-hierarchical/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+      "priority": 82,
+      "reason": "CXL.mem互換を維持したnear-data processingでweight/KVの量子化・lossless compressionをCXLデバイス側へ移し、実効帯域を増幅するアーキテクチャ。end-to-endでthroughput 43%向上、最大context 87%拡張、KV footprint 46.9%削減を報告し、CXL容量拡張と計算近接化の交点として階層メモリ系統に重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-cxl-ndp-7",
+    "axis": "CXL階層メモリ・transparent NDP・weight/KV圧縮",
+    "query_summary": "agent serving軸から隣接ハードウェアへ移り、CXL memory expansion上でnear-data processingによりweight/KV trafficを削減する研究を探索。arXiv:2509.03377はrepo内ID検索で既存表現を確認できなかった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/NDPからSSD/NVMeのGPU主導I/Oとは異なる、network-attached memoryやRDMA KV placementの新規研究へ展開する",
+    "empty_round_reason": null
+  }
+}
