@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-c9ee35bb77ccccc1",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2604.25080-cacheflow-3d-parallel-kv-cache-restoration.md",
+      "priority": 88,
+      "reason": "長文・マルチターン・エージェント系で支配的になり得るKV cache復元を、token/layer/GPUの3次元並列化とbatch-aware schedulerでcomputeとI/Oを同時最適化する。既存の単純な再計算対offloadの二択よりシステム寄りで、評価ではTTFTを既存手法比10–62%短縮しており、階層KV・I/O scheduling系統との比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling-llm-serving.md",
+      "priority": 87,
+      "reason": "分離型LLM servingのKV block retrieval、collective通信、prefill-to-decode転送が共有network上で競合する問題をstage-aware flow schedulingとして扱う。Reverse Multi-Level QueueによるDefer-and-Promoteでleast-laxity-firstを近似し、vLLM統合・32 GPU実機と大規模simulationでTTFT SLO達成率を1.2–2.4倍に改善しており、network-aware disaggregation系統の重要候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2603.06350-moeless-serverless-moe-serving.md",
+      "priority": 86,
+      "reason": "MoE expert parallelismの負荷偏りを、serverless expertの予測的scale/placementで吸収するMoE servingシステム。Megatron-LM上のprototypeを8 GPUで評価し、既存手法比で推論latency 43%、cost 84%削減を報告する。expert cache/offloadだけでなくelastic placementという別軸を追加できる。"
+    },
+    {
+      "canonical_id": "arXiv:2502.05370",
+      "title": "fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2502.05370",
+      "paper_path": "papers/inference/06-expert-offloading/2025-2502.05370-fmoe-fine-grained-expert-offloading.md",
+      "priority": 84,
+      "reason": "MoE offloadをexpert単位の粗い制御から細粒度化し、expert selection patternとprompt semantic hintをprefetch/cache/offloadへ利用する。6 GPU prototypeでlatency 47%削減、expert hit rate 36%改善を報告しており、expert prefetch・cache系統の比較基準として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
+      "source_url": "https://arxiv.org/abs/2607.08057",
+      "paper_path": "papers/survey/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+      "priority": 82,
+      "reason": "KV cache最適化をexecution/scheduling、placement/migration、representation/retentionの3軸で体系化する2026年のsystem-oriented survey。個別手法ではなく系統間のco-design関係を整理しており、既存repoのKV cache論文群の分類・欠落探索・比較表改善に直接利用できる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T10:00:00+09:00",
+    "round": "specialist-serving-restoration-1",
+    "axis": "KV復元・分離serving network scheduling・MoE elastic/offload・KV survey",
+    "query_summary": "直前のadaptive KV軸からずらし、KV cache restorationのcompute/I/O協調、分離servingのmulti-stage network flow、MoE expertのserverless elasticityとfine-grained offload、system-aware KV surveyを探索した。投入直前に最新mainとGitHub repository searchでcanonical arXiv IDの既登録を再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る",
+    "empty_round_reason": null
+  }
+}
