@@ -3,7 +3,7 @@ name: Library fallback bundle replay
 on:
   push:
     paths:
-      - '.survey/work-queue/library-replay-bundle.b64'
+      - '.survey/work-queue/library-replay-trigger.txt'
   workflow_dispatch:
 
 permissions:
@@ -24,60 +24,37 @@ jobs:
         run: |
           python - <<'PY'
           import base64, io, json, pathlib, tarfile
-          root = pathlib.Path('.')
-          q = root / '.survey/work-queue'
-          bundle = q / 'library-replay-bundle.b64'
-          raw = base64.b64decode(bundle.read_text(encoding='ascii'))
-          added = []
-          skipped = []
-          conflicts = []
+          q = pathlib.Path('.survey/work-queue')
+          parts = sorted(q.glob('library-replay-bundle.part-*'))
+          if not parts: raise SystemExit('bundle parts missing')
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          raw = base64.b64decode(encoded, validate=True)
+          added, skipped, conflicts = [], [], []
           with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
               for member in tf.getmembers():
-                  if not member.isfile() or '/' in member.name or not member.name.endswith('.json'):
-                      raise SystemExit(f'unsafe bundle member: {member.name!r}')
-                  data = tf.extractfile(member).read()
-                  obj = json.loads(data)
-                  if not isinstance(obj, dict):
-                      raise SystemExit(f'payload is not object: {member.name}')
+                  if not member.isfile() or '/' in member.name or not member.name.endswith('.json'): raise SystemExit(f'unsafe bundle member: {member.name!r}')
+                  data = tf.extractfile(member).read(); obj = json.loads(data)
+                  if not isinstance(obj, dict): raise SystemExit(f'payload is not object: {member.name}')
                   envelope_id = obj.get('id')
-                  if member.name != f'{envelope_id}.json':
-                      raise SystemExit(f'filename/id mismatch: {member.name}')
+                  if member.name != f'{envelope_id}.json': raise SystemExit(f'filename/id mismatch: {member.name}')
                   for key in ('id','kind','job_id','attempt_id'):
-                      if not isinstance(obj.get(key), str) or not obj[key]:
-                          raise SystemExit(f'missing identity {key}: {member.name}')
-                  writes = obj.get('writes')
-                  if not isinstance(writes, list) or len(writes) < 5:
-                      raise SystemExit(f'incomplete writes: {member.name}')
-                  found = []
-                  for dirname in ('fallback-inbox','fallback-archive','fallback-failed'):
-                      p = q / dirname / member.name
-                      if p.is_file(): found.append(p)
+                      if not isinstance(obj.get(key), str) or not obj[key]: raise SystemExit(f'missing identity {key}: {member.name}')
+                  if not isinstance(obj.get('writes'), list) or len(obj['writes']) < 5: raise SystemExit(f'incomplete writes: {member.name}')
+                  found = [q/d/member.name for d in ('fallback-inbox','fallback-archive','fallback-failed') if (q/d/member.name).is_file()]
                   if found:
-                      mismatch = []
+                      mismatch=[]
                       for p in found:
-                          try: same = json.loads(p.read_text(encoding='utf-8')) == obj
-                          except Exception: same = False
+                          try: same=json.loads(p.read_text(encoding='utf-8')) == obj
+                          except Exception: same=False
                           if not same: mismatch.append(str(p))
-                      if mismatch:
-                          conflicts.append({'id': envelope_id, 'paths': mismatch})
-                      else:
-                          skipped.append(envelope_id)
+                      if mismatch: conflicts.append({'id':envelope_id,'paths':mismatch})
+                      else: skipped.append(envelope_id)
                       continue
-                  dest = q / 'fallback-inbox' / member.name
-                  dest.parent.mkdir(parents=True, exist_ok=True)
-                  dest.write_bytes(data)
-                  added.append(envelope_id)
-          report = {
-              'schema_version': 1,
-              'added': added,
-              'already_present_same_payload': skipped,
-              'conflicts_not_overwritten': conflicts,
-          }
-          (q / 'library-replay-last-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          if conflicts:
-              print(json.dumps(report, ensure_ascii=False, indent=2))
-              raise SystemExit('payload conflicts detected; nothing conflicting was overwritten')
-          print(json.dumps(report, ensure_ascii=False, indent=2))
+                  dest=q/'fallback-inbox'/member.name; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_bytes(data); added.append(envelope_id)
+          report={'schema_version':1,'added':added,'already_present_same_payload':skipped,'conflicts_not_overwritten':conflicts}
+          (q/'library-replay-last-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          if conflicts: raise SystemExit('payload conflicts detected; conflicting payloads were not overwritten')
           PY
       - name: Commit replayed payloads
         run: |
