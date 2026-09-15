@@ -11,11 +11,11 @@
     "components": [
       {
         "name": "Full/SWA二重KVプール",
-        "description": "Full Attention層は全prefixを必要とするためO(N)のFull poolへ、SWA層は末尾windowだけでよいためO(W)のSWA poolへ分離する。schedulerは両方の空き容量を確認してadmissionし、tier間転送もSWA maskで有効slotだけを動かす。これにより従来の単一poolでSWA層まで全token分を確保する無駄を除き、約7倍のKV容量効率を得る。"
+        "description": "Full Attention層は全prefixを必要とするためO(N)のFull poolへ、SWA層は末尾windowだけでよいためO(W)のSWA poolへ分離する。schedulerは両方の空き容量を同時に確認してadmissionし、tier間転送でもSWA maskを適用して有効slotだけを動かす。上位のsequence管理は一つに保ちながら物理配置だけを分離するため、既存schedulerとの互換性を保ちつつSWA層で全token分を確保する無駄を除ける。論文ではこの設計により約7倍のKV容量効率を得ており、単なるkernel高速化ではなくGPU・CPU・L3の保存量と転送量をモデルの局所窓意味論へ一致させる基盤になっている。"
       },
       {
         "name": "SWA対応prefix treeと層単位先読み",
-        "description": "token列が一致するだけではhitにせず、末尾W tokenのSWA slotがまだ生存している範囲へmatch lengthを切り詰める。各nodeはFull segmentとSWA mappingの二重索引を持ち、窓外SWAだけ独立にevictできる。SWAの小さい転送量を利用し、layer計算中に次layerのH2D loadを進めてcache read待ちを隠す。"
+        "description": "token列が一致するだけではcache hitにせず、末尾W tokenに対応するSWA slotが物理poolでまだ生存している範囲へmatch lengthを切り詰める。各tree nodeはFull segmentとSWA mappingの二重索引を持つため、論理prefixを維持したまま窓外SWAだけを独立にevictでき、既に追い出されたKVを誤って再利用するpseudo-hitを防ぐ。さらにSWAでは各層で必要な転送量が小さいことを利用し、現在layerの計算中に次layerのhost-to-device loadを非同期に先読みする。正当性を守るwindow-safe matchingと転送待ち隠蔽を同じ索引・slot管理上で行う点が重要である。"
       },
       {
         "name": "GCache",
@@ -23,7 +23,7 @@
       },
       {
         "name": "KV親和ルータ",
-        "description": "Redisに共有状態を置くstateless LLM-Routerが、各prefill nodeに既に存在するprefix割合を加点し、normalized loadを減点してworkerを選ぶ。waiting queueでは未cache tokenが少ないrequestを先に流してTTFTを短縮するが、長時間待つrequestが飢餓しないようwait-time penaltyを加える。これによりcache localityとload balanceを同時に扱う。"
+        "description": "Redisに共有状態を置くstateless LLM-Routerが、各prefill nodeに既に存在するprefix割合を正のscoreとして加え、normalized loadを減点してworkerを選ぶ。単純なleast-loaded routingではcache済みKVを捨てて遠隔L3取得や再計算を増やし、逆にcache localityだけを最大化するとhot nodeへ要求が集中するため、両者を同一scoreで調停する。waiting queueでは未cache tokenが少ないrequestを先に流してTTFTを短縮しつつ、長時間待つrequestにはwait-time penaltyを加えて飢餓を防ぐ。本番評価ではL2 hit rate約25%とnode input throughput約30%の改善につながり、保存階層の最適化を実際の要求配置へ反映する制御面を構成する。"
       },
       {
         "name": "プリフィル・デコード最適化",
@@ -35,7 +35,7 @@
       },
       {
         "name": "階層cache整合性修復",
-        "description": "L1/L2/L3でFull hitとSWA slot生存状態がずれた場合、device側にあるSWAをhostへ非同期補充し、L3の高頻度prefixがLRUで早期evictされないよう上位tier access時にL3もtouchする。中短sequenceでは固定位置に比較的密なSWA KVを残し、shared system promptなどの再利用を優先する。容量削減だけでなくTTLと実効hit lengthを伸ばすための補助機構である。"
+        "description": "L1/L2/L3でFull hitとSWA slot生存状態がずれた場合、device側にだけ残る有効SWAをhostへ非同期補充し、階層間の再利用可能範囲を再び一致させる。またL1/L2で頻繁に参照されるprefixでもL3側のLRU時刻が更新されないと、下位tierだけがhot entryを早期evictして将来のmissを増やすため、上位tier access時にL3 metadataもtouchする。中短sequenceでは固定位置に比較的密なSWA KVを残し、shared system promptなどの再利用を優先する。容量削減だけでなく、非同期tier間移動で生じる状態ずれ、TTL、実効hit lengthまで継続的に修復する補助機構である。"
       }
     ],
     "system_design": "routing→SWA-safe prefix照合→L1/L2/GCacheからlayerwise KV取得→prefill→PD transfer→decodeというLLM経路と、download/decode→encoder→embedding cache→prefillというmultimodal経路を統合する。各段階でSWAのO(W)物理寿命を維持し、cache localityをroutingへ返すことで、model architecture・storage hierarchy・schedulerを閉ループで協調させる。"
