@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T05:39:15.910747+00:00",
+  "updated_at": "2026-09-15T05:40:24.901306+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T05:39:15.910747+00:00",
+      "last_recorded_at": "2026-09-15T05:40:24.901306+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 79,
+        "research_completed": 80,
         "audit_completed": 0,
         "discovery_completed": 16,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34871520462:1",
-          "recorded_at": "2026-09-14T16:55:02.584636+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34871520462",
-            "run_attempt": "1",
-            "source_sha": "b755925885269f270ea4bd5cf9d25423789095ab"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34872794789:1",
           "recorded_at": "2026-09-14T17:07:31.528629+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34933677348:1",
+          "recorded_at": "2026-09-15T05:40:24.901306+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34933677348",
+            "run_attempt": "1",
+            "source_sha": "dfa20e90c7c52a8a80a6280232949b27e633f5b1"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20367,6 +20367,14 @@
           "type": "research",
           "canonical_id": "arXiv:2507.08045",
           "title": "Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ad7e8d527bf159c7",
+          "type": "research",
+          "canonical_id": "arXiv:2608.05303",
+          "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
           "from": "ready",
           "to": "completed"
         }

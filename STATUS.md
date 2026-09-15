@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 14:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 14:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,11 +15,11 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **42** |
+| 未処理の論文候補（Research ready） | **41** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| GitHub反映済みResearch完了（job） | **354** |
-| 耐久checkpoint済み・GitHub未反映（job） | **18** |
+| GitHub反映済みResearch完了（job） | **355** |
+| 耐久checkpoint済み・GitHub未反映（job） | **17** |
 | 精読済みユニーク論文（推定） | **372** |
 | 保守状態（Maintenance） | **passed** |
 | 直近整合性チェック結果 | **passed** |
@@ -40,12 +40,12 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **42** |
-| 有効claim（lease） | **1** |
+| 未処理候補（Research ready） | **41** |
+| 有効claim（lease） | **0** |
 | 今すぐ着手可能（Claimable） | **43** |
-| 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **2026-09-15T14:30:00+09:00** |
-| :30 最新run由来の有効claim | **1** |
+| 有効leaseを持つworker run | **0** |
+| :30 最新worker run | **2026-09-14T05:30:00+09:00** |
+| :30 最新run由来の有効claim | **0** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **2026-09-15T14:00:00+09:00** |
 | :00 最新run由来の有効claim | **0** |
@@ -57,8 +57,8 @@
 | 直近24h Research完了（:00 補助worker） | **0** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T14:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **0 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古の有効claimの経過時間 | **—** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。claimに明示run_keyがあれば優先し、既存worker_id内のrun時刻はclaimed_atと整合する場合だけ使います。不整合な時刻や旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
