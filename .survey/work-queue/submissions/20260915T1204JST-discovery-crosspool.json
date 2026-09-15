@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0d079aa6f4091078",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "priority": 88,
+      "reason": "Cold MoE multi-model servingでFFN weight poolと共有KV-cache poolを分離し、長文・低並行度のGPUメモリ浪費を抑える。MoE、KV cache、disaggregation、servingの重点テーマに直接該当し、実測でP99 TBT最大10.4倍改善を報告するため全文精読価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T12:00:00+09:00",
+    "round": "specialist-cold-moe-pooling-1",
+    "axis": "cold MoE multi-model serving・weight/KV disaggregation",
+    "query_summary": "直近のLLM serving、MoE、KV cache、disaggregationを一次資料中心に探索し、既存queue/repositoryのcanonical IDを再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.16135",
+      "arXiv:2608.16477",
+      "arXiv:2606.02964"
+    ],
+    "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す",
+    "empty_round_reason": null
+  }
+}
