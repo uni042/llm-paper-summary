@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
+      "source_url": "https://arxiv.org/abs/2607.08057",
+      "paper_path": "papers/survey/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+      "priority": 76,
+      "reason": "KV infrastructureをexecution/scheduling、placement/migration、representation/retentionの3軸で体系化し、cross-behavior co-designまで整理するsystem-aware survey。リポジトリのKV/offload/serving系統を横断する比較基盤として有用で、個別手法ではなくSurvey系統へ明示的にrouteする価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-kv-survey-6",
+    "axis": "system-aware KV infrastructure survey・隣接研究マッピング",
+    "query_summary": "network/CXL探索の検索結果から、個別手法だけでなく最新KV system surveyを独立軸として確認。Photonic-CXLは既知重複のため除外し、未収録のsystem-aware KV surveyをSurvey系統候補として送信する。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2607.27187"],
+    "next_axis_hint": "surveyの引用・分類をseedに、未収録のplacement/migration系重要論文とnetwork-aware KV transportを探索する",
+    "empty_round_reason": null
+  }
+}
