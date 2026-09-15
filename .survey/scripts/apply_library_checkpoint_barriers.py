@@ -177,6 +177,9 @@ def apply(repo_root: Path) -> dict[str, int]:
         "requests_changed": changed,
         "barriers_merged": protected,
         "repair_barriers_demoted": repair_barriers_demoted,
+        # Historical callers used this name before the operation was clarified as
+        # demotion-to-provenance rather than deletion. Keep it as a compatibility alias.
+        "repair_barriers_cleared": repair_barriers_demoted,
         "processed_requests_skipped": skipped_processed,
     }
 
