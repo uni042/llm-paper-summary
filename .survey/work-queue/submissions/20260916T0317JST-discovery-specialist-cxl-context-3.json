@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
+      "source_url": "https://arxiv.org/abs/2606.19746",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2606.19746-sac-disaggregated-kv-cxl-sparse-attention.md",
+      "priority": 87,
+      "reason": "long-context sparse-attention LLM向けにCXLを使うdisaggregated KV cache systemを扱い、GPU HBM/host memoryを越える共有KV容量とsparse attentionのアクセス特性を結びつける。CXL階層メモリとKV placementの重点系統に直接対応し、既収録の汎用CXL hybrid cacheとは異なるsparse-attention専用設計として精読価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.12556",
+      "title": "ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories",
+      "source_url": "https://arxiv.org/abs/2606.12556",
+      "paper_path": "papers/inference/03-kv-cache-memory/2026-2606.12556-itme-disaggregated-cxl-hybrid-memory.md",
+      "priority": 86,
+      "reason": "agentic/long-context workloadのTB級context stateを対象に、JBOF/NVMe-oFのDPU offloadだけに依存せずdisaggregated CXL-hybrid memoryで共有context infrastructureを構成する研究。SSD/NVMeとCXLを同一階層で比較・協調させるため、階層メモリ/SSD活用サーベイへの関連が強い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-cxl-context-3",
+    "axis": "CXL・NVMe/JBOF共有KV/context tier",
+    "query_summary": "CXL/NVMe/JBOFを使う共有context tierを探索。DUAL-BLADE、SwiftCache、HyMCache、Photonic-CXLは既存discovery履歴で収録済みと確認して除外し、SACとITMEをGitHub canonical ID検索で未登録候補として残した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2604.26557", "arXiv:2606.16135", "arXiv:2607.18141", "arXiv:2607.27187"],
+    "next_axis_hint": "power-aware/energy-aware disaggregated serving、GPU power cap下のprefill/decode resource controlへ軸を移す",
+    "empty_round_reason": null
+  }
+}
