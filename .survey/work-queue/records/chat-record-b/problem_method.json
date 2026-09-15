@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-817bd95f2c782ad4248fa08d",
-  "job_id": "job-research-3df42686de08919b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-817bd95f2c782ad4248fa08d",
-    "worker_id": "scheduled-chat-paper-20260915T1830JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-817bd95f2c782ad4248fa08d","job_id":"job-research-3df42686de08919b",
+  "data":{
+    "problem":"Hybrid SWAは大半の層を局所窓だけに限定するため理論上は注意計算とKVキャッシュを約7分の1へ減らせるが、既存サービング基盤が全トークン分のKVを保持すると利点が消える。さらにSWAでは論理prefixが残っていても窓外KVが既に追い出され得るため、通常の『同じトークン列ならKV再利用可能』という前提が崩れる。階層キャッシュの非同期転送、複数ノードの状態差、MoE並列通信、長さの異なる要求の混在、マルチモーダル前処理も本番性能を制約する。",
+    "novelty":"Full Attention層とSWA層のKVを物理的に別プールへ分離し、論理上はFull側索引を正本としてSWA窓への写像を持つことで、SWA容量を厳密にO(W)へ抑える。これをL1/L2/L3へ拡張し、層単位先読みとSWA対応prefix treeで正当な再利用だけを許す。さらにメモリ・NVMe・遠隔ストレージを統合するGCache、KV親和性と負荷を同時に見るルータ、プリフィル/デコード/MoE/マルチモーダルの最適化を同一の本番パイプラインへ統合する。",
+    "method_overview":"MiMo-V2.5-Proは70層中10層がFull Attention、60層が窓幅128のSWAである。KV管理ではFull/SWA二重プールを設け、要求受理時に両容量を検査し、階層間転送はSWAマスクで有効な窓だけを動かす。prefix treeはトークン一致だけでなく末尾WトークンのSWA slot生存を確認し、再利用長をwindow-safe境界へ切り詰める。GCacheはconsistent hashing、メモリ/SSD昇降格、非同期I/O、RDMA/GDRを使うL3キャッシュで、ルータはprefix一致率と正規化負荷から配置を決める。プリフィルではEP縮小、長さバケット、NUMA調整を行い、デコードではSWA KV、CPU側事前確保、CUDA Graph調整、プリフィル時MTPを導入する。マルチモーダル側は符号器分離、要求横断バッチ、GPU画像前処理、並列動画復号、consistent hashingと共有メモリキャッシュを使う。",
+    "components":[
+      {"name":"Full/SWA二重KVプール","description":"Full Attentionは全系列O(N)、SWAは窓O(W)だけを保持する別プールへ分離する。上位層には単一系列として見せ、Full索引からSWA slotへの写像を維持するため、窓外SWAだけ独立に追い出しつつFull prefixは残せる。"},
+      {"name":"SWA対応prefix treeと層単位先読み","description":"prefix一致に加えて末尾WトークンのSWA KVが実在するか確認し、安全な一致長だけを再利用する。SWA転送量が小さいことを利用し、各層の計算とHost→Device先読みを重ねて転送待ちを隠す。"},
+      {"name":"GCache","description":"キーのconsistent hashingでI/O経路を分散し、サーバ側メモリとNVMeを自動昇降格、遠隔オブジェクトストレージも接続するL3キャッシュ。要求分割・非同期コールバック、NUMA/rail親和、RDMA/GDRで高帯域転送し、GPUノードへの同居で追加ストレージ機を避ける。"},
+      {"name":"KV親和ルータ","description":"各プリフィルノードのprefix一致率をRadix treeで追跡し、一致率を加点、負荷を減点したスコアで配置する。待ち行列では未キャッシュトークンが少ない要求を優先しつつ、待ち時間ペナルティで飢餓を抑える。"},
+      {"name":"プリフィル・デコード最適化","description":"SWA容量削減でEPを半減し、0–64K/64K–256K/256K–1Mの長さバケットでDP同期とchunked prefillの長短干渉を抑える。デコードではSWA KV、CPU事前確保、CUDA Graph調整で容量を増やし、プリフィル段階からMTP層KVを作って初期生成の受理率を高める。"},
+      {"name":"マルチモーダル最適化","description":"符号器をTP=1のデータ並列で動かし、要求横断バッチ、GPU画像前処理、ダウンロードと推論の重畳、動画フレーム並列復号を行う。同一キーを同じ符号器へ送るconsistent hashingとノード内共有メモリで埋め込みキャッシュを再利用する。"}
+    ],
+    "system_design":"要求はLLM-RouterでKV親和性と負荷に基づきプリフィルノードへ送られる。プリフィル側はSWA対応prefix treeで安全な再利用範囲を決め、L1 GPU、L2 host、GCache L3から必要なFull/SWA KVだけを先読みする。GCacheはメモリ/NVMe/遠隔層を透過的に扱う。プリフィル後はデコードへKVを渡し、SWA容量削減とMTPで生成効率を高める。画像・動画等は分離符号器で前処理・バッチ・キャッシュされ、埋め込み転送をプリフィル計算と重ねる。"
+  },
+  "reservation":{"claim_id":"claim-817bd95f2c782ad4248fa08d","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}
 }
