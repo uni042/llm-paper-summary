@@ -5,6 +5,7 @@ on:
     paths:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard.py'
       - '.survey/tests/test_status_dashboard.py'
       - '.github/workflows/status-dashboard.yml'
   push:
@@ -12,6 +13,7 @@ on:
     paths:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard.py'
       - '.survey/tests/test_status_dashboard.py'
       - '.github/workflows/status-dashboard.yml'
   workflow_dispatch:
@@ -34,7 +36,7 @@ jobs:
       - name: Direct-evidence dashboard regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_status_dashboard.py'
       - name: Render dashboard in check mode
-        run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
+        run: python .survey/scripts/render_status_dashboard.py --output /tmp/STATUS.md
 
   publish:
     if: >-
@@ -59,7 +61,7 @@ jobs:
           for attempt in 1 2 3 4; do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             git add STATUS.md
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
