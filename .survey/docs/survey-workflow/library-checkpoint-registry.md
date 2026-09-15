@@ -2,15 +2,17 @@
 
 この文書は、Research/Audit の全文精読が ChatGPT Library に耐久保存された後、GitHub 反映前に同じ論文を再精読しないための正本である。GitHub queue / paper の正本性は変更しない。Library registry は **「全文精読済みだが GitHub publication が未完了」** を表す耐久barrierである。
 
+publication後のLibrary dispositionは `.survey/docs/survey-workflow/library-publication-ack.md` と `.survey/work-queue/library-ack-manifest.json` を正本とする。本書だけから `processed/` / `superseded/` への移動を推測してはならない。
+
 ## 1. Library layout
 
-Research/Audit fallback は次の3領域を使う。
+Research/Audit fallback は次の領域を使う。
 
-- payload: `/LLM-survey-outbox/pending/<envelope-id>.json`
+- payload待機: `/LLM-survey-outbox/pending/<envelope-id>.json`
 - registry: `/LLM-survey-outbox/checkpoints/<job-id>.json`
-- publication完了後: `/LLM-survey-outbox/processed/<envelope-id>.json`
-
-不正・回復不能payloadだけ `/LLM-survey-outbox/failed/` へ隔離する。
+- このpayloadがpublicationへ反映済み: `/LLM-survey-outbox/processed/<envelope-id>.json`
+- 同jobの別attemptがpublicationを完了しこのpayloadが不要: `/LLM-survey-outbox/superseded/<envelope-id>.json`
+- 不正・回復不能: `/LLM-survey-outbox/failed/<envelope-id>.json`
 
 `pending/` のファイル数そのものを精読済み判定に使わない。再精読barrierの正本は `checkpoints/<job-id>.json` とGitHub claimに残る `checkpoint_ref` の和集合である。
 
@@ -35,11 +37,12 @@ Research/Audit fallback は次の3領域を使う。
 }
 ```
 
-`status` は次だけを使う。
+処理中markerの `status` は主に次を使う。
 
 - `checkpointed`: 完全な5-slot payloadがLibraryに耐久保存済み。GitHub intake未確認。
 - `transported`: 同じenvelopeがGitHub `fallback-inbox` または `fallback-archive` に耐久保存されたことを確認済み。publication未確認。
-- `reflected`: immutable submissionが成功し、canonical jobがterminal/completedとしてGitHubへ反映済み。
+- `reflected`: ACK manifestにより、このpayload自身または明示的provenance reboundのcanonical publication反映を確認済み。
+- `superseded`: ACK manifestにより、同jobの別attemptがcanonical publicationを完了し、このmarkerの元payloadが不要になったことを確認済み。
 
 markerはpayload保存より先に作らない。markerだけ存在しpayloadが無い場合は異常として扱い、新規精読を自動開始せず回復/隔離を優先する。
 
@@ -56,14 +59,14 @@ Research/Audit claimを要求する前に、workerは必ず `checkpoints/` を�
 }
 ```
 
-markerの `payload_ref` が `processed/` を指しているlegacy/不整合状態では、同じpayloadがLibraryに存在することを確認し、必要なら `pending/` へ戻してからclaim barrierへ使う。
+markerの `payload_ref` が `processed/` を指しているlegacy/不整合状態では、最新ACK manifestとpayload identityを確認し、ACKされていないなら必要に応じて `pending/` へ戻してから回復する。
 
 GitHub側では `.survey/scripts/apply_library_checkpoint_barriers.py` が、GitHub claimに既に残っている `checkpoint_ref` を未処理claim requestへ自動マージする。したがってbarrierは二重化される。
 
 1. Library marker: GitHub write障害中でも再精読を防ぐ。
 2. GitHub persisted `checkpoint_ref`: workerがLibrary markerを読み落としても再claimを防ぐ。
 
-どちらか一方でも精読済みを示す限り、新規全文精読を開始しない。
+どちらか一方でも精読済みを示す限り、新規全文精読を開始しない。`reflected` / `superseded` はcanonical jobがterminalであることをmanifestにより確認した後の状態なので、新規claim barrierへ投入する必要はない。
 
 ## 4. Checkpoint creation
 
@@ -79,7 +82,9 @@ GitHub writeが利用不能でも1〜3まで完了すれば全文精読成果は
 
 ## 5. Recovery transport
 
-GitHub read/writeが復旧したら、新規claimより先にregistryを走査する。
+GitHub read/writeが復旧したら、新規claim/discoveryより先に **`checkpoints/` と `pending/` の両方** を走査する。
+
+### 5.1 Marker付きpayload
 
 `checkpointed` markerごとに:
 
@@ -89,35 +94,47 @@ GitHub read/writeが復旧したら、新規claimより先にregistryを走査�
 4. GitHub側に同一envelopeがdurableに存在することを再取得して確認する。
 5. markerを `transported` に更新し、`github_intake_path` と `transported_at` を記録する。
 
-**この段階ではLibrary payloadを `processed/` へ移さない。** GitHub intakeはtransport receiptでありpublication完了ではない。
+### 5.2 Markerのないorphan pending payload
 
-## 6. Publication acknowledgement
+旧worker・移行途中・過去の障害では、完全なResearch/Audit envelopeが `pending/` に存在するのに `checkpoints/<job-id>.json` が無いことがある。**markerが無いことを理由にpending payloadを無視してはならない。**
 
-`transported` markerは、次を確認できた場合だけ `reflected` にする。
+新規claim/discoveryより先に `pending/*.json` を全件sweepし、markerで参照されていないpayloadについて次を行う。
 
-- canonical jobがterminalである。
-- completed Research/Auditなら対応するimmutable resultが `ok: true` である。
-- completed Researchならpaper artifactがcanonical job/resultと整合する。
+1. payloadを再読し、JSON object、`id`、`kind`、`job_id`、`attempt_id`、完全な5-slot writes等のtransport identityを検証する。
+2. GitHub canonical job/claim/fallback stateと照合する。ここでpaper内容を再生成・再精読しない。
+3. GitHub fallback-inbox/archive/failedにexact envelope idがあるか確認し、同一id・同一payloadならその状態を採用する。同一id・別内容ならLibrary原本を保持してconflict隔離する。
+4. GitHub側に未存在で、payloadが完全かつ安全にreplay可能ならexact payloadをfallback-inboxへimmutableに搬送する。
+5. Research/Audit jobが非terminalで、同payloadを精読済みbarrierとして保持すべきならmarkerを `checkpointed` または `transported` として再構築する。
+6. GitHub intake確認後もLibrary payloadを独自判断でterminal folderへ移さない。次節のACK manifest更新を待つ。
 
-確認後:
+1 runで件数が多くても、pending件数自体を停止理由にしない。handoff guardまで安全にsweepを継続し、残件は次runへ持ち越す。1件の異常で他の独立payloadの搬送を止めない。
 
-1. markerを `reflected` に更新し `reflected_at` を記録する。
-2. payloadがまだ `pending/` にあれば `processed/` へ移す。
-3. markerは監査用に `checkpoints/` に残してよい。terminal jobなのでclaim barrierには影響しない。
+**この段階ではLibrary payloadを `processed/` / `superseded/` へ移さない。** GitHub intakeはtransport receiptでありpublication/disposition完了ではない。
 
-従来 `processed/ = GitHub intake受領済み` としていた運用は廃止する。以後 `processed/` は **GitHub publication確認済みpayload** を意味する。
+## 6. Publication acknowledgement and disposition
+
+Libraryのterminal移動は最新mainの `.survey/work-queue/library-ack-manifest.json` だけを正本にする。
+
+- `acknowledgements[]`: payload identityをexact照合できた場合だけ `processed/` へ移し、対応markerを `reflected` にする。
+- `superseded[]`: payload identityをexact照合できた場合だけ `superseded/` へ移し、対応markerが同じ元attemptなら `superseded` にする。
+- `waiting[]`: `pending/` から移動しない。再精読せず既存recovery/repair経路を使う。
+- manifestに無いpayload: terminal folderへ移動しない。
+
+fallback archive、canonical job status、paperの存在などをworker側で個別に組み合わせてACKを推測してはならない。詳細な判定条件は `library-publication-ack.md` を参照する。
+
+従来 `processed/ = GitHub intake受領済み` としていた運用は廃止する。`processed/` は **このpayload自身または明示的provenance reboundがGitHub publicationへ反映済み**、`superseded/` は **別attemptが同jobを正常完了したため元payloadが不要** を意味する。
 
 ## 7. Reconciliation of historical state
 
-旧運用で `processed/` に移動済みでもcanonical jobがまだ `ready` の場合は、publication完了とみなさない。
+旧運用のLibrary状態は新規claimより先に段階的に整合させる。
 
-- 対応payloadを `processed/` から特定する。
-- job/claim/attemptを照合する。
-- markerを `checkpointed` または `transported` として再構築する。
-- 必要ならpayloadを `pending/` へ戻す。
-- fallback replayを再実行する。
+- `processed/` にあるのにmanifest ACKされないpayloadはpublication完了とみなさない。job/claim/attemptを照合し、必要ならpendingへ戻してreplayする。
+- `pending/` にある完全payloadはmarkerの有無にかかわらず5.2のorphan sweep対象とする。
+- `pending/` のpayloadがmanifest `acknowledgements[]` とexact一致すればprocessedへ、`superseded[]` とexact一致すればsupersededへ移す。
+- terminal jobでもmanifest `waiting[]` またはmanifest外なら独自判断で移動しない。
+- 同jobの複数attemptではcanonical current claimとGitHub `checkpoint_ref`、ACK manifestのprovenanceを優先して回復対象を決める。
 
-同jobの複数attemptがある場合、canonical current claimに一致するattemptを優先する。current claimがcheckpoint_refを保持する場合はそのpayloadを第一候補とする。terminal jobの古いpayloadは再精読せずacknowledgeだけ行う。
+historical payloadの整理は再精読ではない。既存の完全payloadを失わず、GitHub transport / deterministic repair / manifest dispositionだけで回復する。
 
 ## 8. Failure policy
 
@@ -125,7 +142,8 @@ GitHub read/writeが復旧したら、新規claimより先にregistryを走査�
 
 ただし次は安全側へ倒す。
 
-- markerはあるがpayloadが見つからない: 自動再精読しない。まずLibraryのpending/processedとGitHub fallback stateを探索する。
+- markerはあるがpayloadが見つからない: 自動再精読しない。まずLibraryのpending/processed/supersededとGitHub fallback stateを探索する。
 - payload identityがmarkerと不一致: 上書きせず隔離する。
 - GitHubに同じenvelope idで別内容: conflict。Library原本を保持する。
+- orphan pendingが不完全: terminal folderへ動かさず、可能な限りidentity/evidenceを保持して隔離・修復する。
 - LibraryにもGitHubにも完全payloadが無いことを確認できた場合だけ、checkpoint barrierを明示的に解除して再精読候補へ戻してよい。
