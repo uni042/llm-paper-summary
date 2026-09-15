@@ -12,6 +12,10 @@ This script is the repository-side safety net: before claim allocation it merges
 valid checkpoint_ref already persisted on a non-terminal ready job into each unprocessed
 claim request. Request-provided entries win, because they can point at a newer Library
 attempt than the historical claim file.
+
+A checkpoint stops being a barrier once its immutable replay has durably failed and the
+job has deliberately reopened with ``repair_required``. Keeping that stale barrier would
+prevent the repair claim that is supposed to fix the failed structured record.
 """
 from __future__ import annotations
 
@@ -21,6 +25,8 @@ import re
 import tempfile
 from pathlib import Path
 from typing import Any
+
+import claim_worker
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 LIBRARY_PENDING_PREFIX = "/LLM-survey-outbox/pending/"
@@ -102,13 +108,19 @@ def _request_entries(raw: Any) -> list[dict[str, str]]:
     return entries
 
 
+def _repairable_jobs(repo_root: Path) -> set[str]:
+    descriptors = claim_worker._immutable_descriptors(repo_root)
+    return claim_worker._repair_jobs_with_only_durable_failures(repo_root, descriptors)
+
+
 def apply(repo_root: Path) -> dict[str, int]:
     repo_root = Path(repo_root).resolve()
     queue = repo_root / ".survey/work-queue"
     requests_root = queue / "claim-requests"
     results_root = queue / "claim-results"
     barriers = _persisted_barriers(repo_root)
-    scanned = changed = protected = skipped_processed = 0
+    repairable_jobs = _repairable_jobs(repo_root)
+    scanned = changed = protected = skipped_processed = repair_barriers_cleared = 0
 
     for path in sorted(requests_root.glob("*.json")) if requests_root.is_dir() else []:
         scanned += 1
@@ -119,10 +131,12 @@ def apply(repo_root: Path) -> dict[str, int]:
         if not isinstance(request, dict):
             continue
 
-        entries = _request_entries(request.get("checkpointed_jobs"))
+        raw_entries = _request_entries(request.get("checkpointed_jobs"))
+        entries = [item for item in raw_entries if item["job_id"] not in repairable_jobs]
+        repair_barriers_cleared += len(raw_entries) - len(entries)
         seen = {item["job_id"] for item in entries}
         for job_id in sorted(barriers):
-            if job_id in seen:
+            if job_id in repairable_jobs or job_id in seen:
                 continue
             entries.append({"job_id": job_id, "checkpoint_ref": barriers[job_id]})
             seen.add(job_id)
@@ -141,9 +155,11 @@ def apply(repo_root: Path) -> dict[str, int]:
 
     return {
         "persisted_barriers": len(barriers),
+        "repairable_jobs": len(repairable_jobs),
         "requests_scanned": scanned,
         "requests_changed": changed,
         "barriers_merged": protected,
+        "repair_barriers_cleared": repair_barriers_cleared,
         "processed_requests_skipped": skipped_processed,
     }
 
