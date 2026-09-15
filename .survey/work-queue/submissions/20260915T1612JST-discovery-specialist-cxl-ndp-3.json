@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e03097d2e4181243",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/04-cpu-offload-heterogeneous-memory/2025-2509.03377-cxl-ndp-transparent-near-data-processing-llm-inference.md",
+      "priority": 84,
+      "reason": "CXL拡張メモリの帯域をLLM推論のボトルネックとして扱い、CXL.mem互換性を保ったnear-data processingでweights/KV cacheのprecision-scalable bit-plane量子化とlossless compressionを透過的に実行する。end-to-end servingでthroughput 43%向上、最大context length 87%拡大、KV footprint 46.9%削減を報告し、hardware synthesisも示すため、CPU/GPU/SSDとは別のCXL階層と計算移動の研究として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T16:00:00+09:00",
+    "round": "specialist-cxl-ndp-3",
+    "axis": "OS/storage/memory隣接・CXL near-data processing",
+    "query_summary": "前roundのnext-axis hintに従いGPU Direct Storage、NVMe、CXLを独立探索した。Tutti/DUAL-BLADEは既往探索で収録済みのため再投入せず、CXLメモリ側で圧縮・量子化を透過実行するCXL-NDPを未収録の強い候補として選別した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2604.26557"],
+    "next_axis_hint": "次はnetworking/HPC隣接のcollective communication・RDMA・GPU fabric最適化をLLM servingへ接続する研究を探索する",
+    "empty_round_reason": null
+  }
+}
