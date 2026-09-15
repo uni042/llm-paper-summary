@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a01992ffb24ee484",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-compression.md",
+      "priority": 82,
+      "reason": "入力promptごとに複数のKV圧縮方式・設定から、利用者指定の遅延・peak memory制約を満たしつつ正答確率を最大化する構成を軽量予測器で選択する適応型framework。KVQuant/H2O/RocketKV/FP16を横断して静的設定より制約付き成功率を平均約0.07、最大0.135改善し、圧縮方式そのものではなくruntime policyとして精度・遅延・memoryの三者を動的に扱う点が既存KV圧縮系統との差分になる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T09:00:00+09:00",
+    "round": "specialist-adaptive-kv-1",
+    "axis": "新着KV圧縮・制約適応runtime policy",
+    "query_summary": "直近arXivのLLM serving/KV cache/MoE inferenceを横断検索し、MetaKV、既収録のTutti・Robust KV、既知のSPICE等を軽量評価した。MetaKVはarXiv IDと題名で最新default branchを再検索し未収録を確認したため1件のみ投入する。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2607.16892", "arXiv:2608.21240"],
+    "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す",
+    "empty_round_reason": null
+  }
+}
