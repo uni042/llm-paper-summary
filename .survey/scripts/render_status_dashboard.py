@@ -54,6 +54,45 @@ def _axes(submissions: list[dict[str, Any]]) -> list[str]:
     return axes
 
 
+def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
+    stats = submission["payload"].get("discovery_stats")
+    if not isinstance(stats, dict):
+        return None
+    run_key = str(stats.get("run_key") or "").strip()
+    round_id = str(stats.get("round") or "").strip()
+    if not run_key or not round_id:
+        return None
+    return run_key, round_id
+
+
+def _durable_discovery_rounds(
+    submissions: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int, int]:
+    """Return unique immutable round records and anomaly counts.
+
+    A round is proven only by a durable discovery submission containing both
+    ``discovery_stats.run_key`` and ``discovery_stats.round``. Aggregate state,
+    filenames, and result count are deliberately not used to infer round count.
+    """
+    rounds: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    duplicate_identities = 0
+    missing_identities = 0
+
+    for submission in sorted(submissions, key=lambda row: str(row["path"])):
+        identity = _discovery_round_identity(submission)
+        if identity is None:
+            missing_identities += 1
+            continue
+        if identity in seen:
+            duplicate_identities += 1
+            continue
+        seen.add(identity)
+        rounds.append(submission)
+
+    return rounds, duplicate_identities, missing_identities
+
+
 def _render_active_row(repo_root: Path, row: dict[str, Any]) -> list[str]:
     job_payload = row["job"]["payload"]
     return [
@@ -77,6 +116,32 @@ def _render_discovery_evidence(repo_root: Path, row: dict[str, Any]) -> list[str
     ]
     if axes:
         lines.append(f"  - 探索軸: {' / '.join(axes)}")
+    return lines
+
+
+def _render_discovery_round(
+    repo_root: Path,
+    submission: dict[str, Any],
+    verified_row: dict[str, Any] | None,
+) -> list[str]:
+    stats = submission["payload"].get("discovery_stats")
+    assert isinstance(stats, dict)
+    round_id = str(stats.get("round") or "").strip()
+    axis = str(stats.get("axis") or "").strip()
+    candidates = _candidate_count([submission])
+    lines = [
+        f"- round `{round_id}` / 候補 **{candidates}件**",
+        f"  - submission: `{evidence._rel(repo_root, submission['path'])}`",
+    ]
+    if axis:
+        lines.append(f"  - 探索軸: {axis}")
+    if verified_row is None:
+        lines.append("  - 個別result照合: なし（immutable round記録は確認済み）")
+    else:
+        lines.append(
+            f"  - 個別result照合: あり / "
+            f"`{evidence._rel(repo_root, verified_row['result']['path'])}` (`ok=true`)"
+        )
     return lines
 
 
@@ -159,6 +224,9 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     discovery_verified_by_submission = {
         row["submission"]["path"]: row for row in verified_discovery
     }
+    latest_discovery_rounds, duplicate_round_submissions, missing_round_submissions = (
+        _durable_discovery_rounds(latest_discovery_submissions)
+    )
 
     latest_by_kind: dict[str, list[dict[str, Any]]] = {
         "research": [row for row in latest_paper_submissions if row["kind"] == "research"],
@@ -215,7 +283,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
         f"直近{evidence.RECENT_HOURS}時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。",
         "",
-        f"| 区分 | 直近{evidence.RECENT_HOURS}h成功 | 最新run submission | 最新run成功 | 最新run未完了/未検証 | 現在claim | 直近{evidence.RECENT_HEARTBEAT_MINUTES}分heartbeat | 最新run候補 |",
+        f"| 区分 | 直近{evidence.RECENT_HOURS}h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近{evidence.RECENT_HEARTBEAT_MINUTES}分heartbeat | 最新run候補 |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
 
@@ -243,6 +311,12 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         f"| 合計 | **{total_recent}** | **{total_submissions}** | **{total_success}** | "
         f"**{total_unverified}** | **{total_active}** | **{total_heartbeat}** | **{candidate_count}** |"
     )
+    if discovery_run_time is not None:
+        lines.append("")
+        lines.append(
+            f"- 最新Discovery runの耐久探索round: **{len(latest_discovery_rounds)}件** "
+            "（immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）"
+        )
 
     lines += [
         "",
@@ -309,23 +383,27 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
             f"- 最新観測run: **{discovery_run_time.astimezone(evidence.JST).strftime('%Y-%m-%d %H:%M JST')}**"
         )
         lines.append(
-            f"- immutable submission: **{len(latest_discovery_submissions)}件** / "
-            f"検証済み成功result: **{len(discovery_succeeded)}件** / "
-            f"未完了・未検証: **{len(latest_discovery_submissions) - len(discovery_succeeded)}件** / "
+            f"- 耐久探索round: **{len(latest_discovery_rounds)}件** / "
+            f"immutable submission: **{len(latest_discovery_submissions)}件** / "
+            f"個別result照合: **{len(discovery_succeeded)}件** / "
+            f"個別result未照合: **{len(latest_discovery_submissions) - len(discovery_succeeded)}件** / "
             f"候補: **{candidate_count}件**"
         )
-        axes = _axes(latest_discovery_submissions)
+        if duplicate_round_submissions or missing_round_submissions:
+            lines.append(
+                f"- round識別子重複submission: **{duplicate_round_submissions}件** / "
+                f"round識別子なしsubmission: **{missing_round_submissions}件**"
+            )
+        axes = _axes(latest_discovery_rounds)
         if axes:
             lines.append(f"- 探索軸: {' / '.join(axes)}")
-        for submission in latest_discovery_submissions[:10]:
+        for submission in latest_discovery_rounds[:10]:
             verified_row = discovery_verified_by_submission.get(submission["path"])
-            if verified_row is None:
-                lines.append(
-                    f"- **未完了または未検証** `{evidence._rel(repo_root, submission['path'])}` "
-                    f"(job `{submission['job_id'] or '—'}`)"
-                )
-            else:
-                lines.extend(_render_discovery_evidence(repo_root, verified_row))
+            lines.extend(_render_discovery_round(repo_root, submission, verified_row))
+        if missing_round_submissions:
+            lines.append(
+                "- `discovery_stats.run_key + round` が揃わないsubmissionはround数へ推定加算しません。"
+            )
 
     lines += ["", "### 現在処理中", ""]
     for kind in (*KINDS, "other"):
@@ -353,7 +431,8 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
         "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
         "- **Audit完了**: job/result/submissionの対応と成功状態を照合します。",
-        "- **Discovery成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。",
+        "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
+        "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
         "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
         "",
