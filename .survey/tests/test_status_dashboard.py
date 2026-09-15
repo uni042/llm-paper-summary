@@ -6,7 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-SCRIPT = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"
+SCRIPT = Path(__file__).parents[1] / "scripts" / "render_status_dashboard.py"
+EVIDENCE_SCRIPT = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"
 
 
 def _write_json(path: Path, payload):
@@ -20,10 +21,14 @@ def _write_text(path: Path, text="x"):
 
 
 def _load(repo: Path):
-    dst = repo / ".survey/scripts/build_status_dashboard.py"
-    dst.parent.mkdir(parents=True, exist_ok=True)
+    scripts = repo / ".survey/scripts"
+    scripts.mkdir(parents=True, exist_ok=True)
+    (scripts / "build_status_dashboard.py").write_text(
+        EVIDENCE_SCRIPT.read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    dst = scripts / "render_status_dashboard.py"
     dst.write_text(SCRIPT.read_text(encoding="utf-8"), encoding="utf-8")
-    spec = importlib.util.spec_from_file_location("build_status_dashboard_direct", dst)
+    spec = importlib.util.spec_from_file_location("render_status_dashboard_direct", dst)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     spec.loader.exec_module(module)
@@ -73,7 +78,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             text = _load(repo).build_dashboard(
                 repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
             )
-            self.assertIn("直近6時間 Research完了 | **1**", text)
+            self.assertIn("| Research | **1** |", text)
             self.assertIn("result:", text)
             self.assertIn("submission:", text)
             self.assertIn("paper:", text)
@@ -99,7 +104,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             text = _load(repo).build_dashboard(
                 repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
             )
-            self.assertIn("直近6時間 Research完了 | **0**", text)
+            self.assertIn("| Research | **0** | **1** | **0** | **1** |", text)
             self.assertIn("未完了または未検証", text)
 
     def test_latest_paper_worker_requires_result_submission_job_and_paper(self):
@@ -116,8 +121,8 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertIn("scheduled-chat-paper-20260915T1830JST", text)
             self.assertIn("検証済み成功: **1件**", text)
             self.assertIn("LLM-42", text)
-            self.assertIn("result `", text)
-            self.assertIn("/ paper `", text)
+            self.assertIn("result:", text)
+            self.assertIn("paper:", text)
 
     def test_latest_discovery_success_requires_result_and_completed_job(self):
         with tempfile.TemporaryDirectory() as td:
@@ -139,7 +144,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             })
             _write_json(repo / result, {
                 "ok": True, "job_id": "job-d", "job_type": "discovery",
-                "job_status": "completed",
+                "job_status": "completed", "processed_at": "2026-09-15T09:02:53+00:00",
                 "submission": "work-queue/submissions/20260915T1808JST-discovery.json",
             })
             text = _load(repo).build_dashboard(
@@ -149,6 +154,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertIn("検証済み成功result: **1件**", text)
             self.assertIn("候補: **1件**", text)
             self.assertIn("MoE expert cache", text)
+            self.assertIn("| Discovery | **1** | **1** | **1** | **0** |", text)
 
     def test_active_work_excludes_terminal_claim_and_shows_nonterminal_heartbeat(self):
         with tempfile.TemporaryDirectory() as td:
@@ -176,9 +182,10 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             text = _load(repo).build_dashboard(
                 repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
             )
-            current = text.split("## 3. 今何をやっているか", 1)[1]
+            current = text.split("### 現在処理中", 1)[1]
+            self.assertIn("#### Research", current)
             self.assertIn("未失効かつ非terminal jobのclaim: **1件**", current)
-            self.assertIn("直近15分にheartbeat記録あり: **1件**", current)
+            self.assertIn("直近15分heartbeat: **1件**", current)
             self.assertIn("Currently Reading", current)
             self.assertNotIn("Already Done", current)
             self.assertIn("生存そのものまでは証明しない", current)
@@ -203,12 +210,11 @@ class DirectEvidenceStatusTests(unittest.TestCase):
                 "processed_at": "2026-09-15T09:37:00+00:00",
             })
 
-            discovery_submission = ".survey/work-queue/submissions/20260915T1800JST-discovery.json"
             _write_json(repo / ".survey/work-queue/jobs/job-d.json", {
                 "job_id": "job-d", "type": "discovery", "status": "completed",
                 "completed_at": "2026-09-15T09:02:53+00:00",
             })
-            _write_json(repo / discovery_submission, {
+            _write_json(repo / ".survey/work-queue/submissions/20260915T1800JST-discovery.json", {
                 "job_id": "job-d",
                 "candidates": [{"canonical_id": "arXiv:2609.04895"}],
                 "discovery_stats": {
@@ -269,7 +275,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             _write_json(repo / ".survey/work-queue/next-jobs.json", {"completed": 5000})
             second = module.build_dashboard(repo, now=now)
 
-            marker = "直近6時間 Research完了 | **1**"
+            marker = "| Research | **1** |"
             self.assertIn(marker, first)
             self.assertIn(marker, second)
             self.assertNotIn("**5000**", second)
