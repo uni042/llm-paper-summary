@@ -1,5 +1,6 @@
 import argparse
 import importlib.util
+import unittest
 from pathlib import Path
 
 
@@ -38,76 +39,74 @@ def make_args(**overrides):
     return argparse.Namespace(**data)
 
 
-def test_stops_when_next_scheduled_invocation_is_within_guard():
-    result = mod.decide(make_args(seconds_to_next_scheduled_task=599))
-    assert result["decision"] == "STOP_RUN"
-    assert "next_scheduled_task_within_handoff_guard" in result["stop_reasons"]
+class ContinuationGateScheduleTests(unittest.TestCase):
+    def test_stops_when_next_scheduled_invocation_is_within_guard(self):
+        result = mod.decide(make_args(seconds_to_next_scheduled_task=599))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
+
+    def test_guard_boundary_is_stop(self):
+        result = mod.decide(make_args(seconds_to_next_scheduled_task=600))
+        self.assertEqual(result["decision"], "STOP_RUN")
+
+    def test_continues_when_next_scheduled_invocation_is_outside_guard(self):
+        result = mod.decide(make_args(seconds_to_next_scheduled_task=601))
+        self.assertEqual(result["decision"], "CONTINUE")
+
+    def test_unknown_next_task_time_keeps_existing_behavior(self):
+        result = mod.decide(make_args(seconds_to_next_scheduled_task=None))
+        self.assertEqual(result["decision"], "CONTINUE")
+
+    def test_discovery_one_round_requires_another_round_outside_guard(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=1,
+            next_axis_available=True,
+            seconds_to_next_scheduled_task=3500,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "DISCOVER_AGAIN")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["minimum_rounds_remaining"], 3)
+
+    def test_discovery_minimum_rounds_must_be_met_before_exhaustion_can_stop(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=1,
+            discovery_exhausted=True,
+            next_axis_available=False,
+            seconds_to_next_scheduled_task=3500,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "DISCOVER_AGAIN")
+        self.assertNotIn("discovery_exhausted_after_minimum_rounds", result["stop_reasons"])
+
+    def test_discovery_can_stop_after_minimum_rounds_and_explicit_exhaustion(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=4,
+            discovery_exhausted=True,
+            next_axis_available=False,
+            independent_work=False,
+            can_discover=False,
+            seconds_to_next_scheduled_task=2500,
+        ))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertTrue(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "FINALIZE")
+        self.assertIn("discovery_exhausted_after_minimum_rounds", result["stop_reasons"])
+
+    def test_handoff_guard_overrides_discovery_minimum_rounds(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=1,
+            next_axis_available=True,
+            seconds_to_next_scheduled_task=500,
+        ))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertTrue(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "FINALIZE")
 
 
-def test_guard_boundary_is_stop():
-    result = mod.decide(make_args(seconds_to_next_scheduled_task=600))
-    assert result["decision"] == "STOP_RUN"
-
-
-def test_continues_when_next_scheduled_invocation_is_outside_guard():
-    result = mod.decide(make_args(seconds_to_next_scheduled_task=601))
-    assert result["decision"] == "CONTINUE"
-
-
-def test_unknown_next_task_time_keeps_existing_behavior():
-    result = mod.decide(make_args(seconds_to_next_scheduled_task=None))
-    assert result["decision"] == "CONTINUE"
-
-
-def test_discovery_one_round_requires_another_round_outside_guard():
-    result = mod.decide(make_args(
-        worker_kind="discovery",
-        discovery_rounds_completed=1,
-        next_axis_available=True,
-        seconds_to_next_scheduled_task=3500,
-    ))
-    assert result["decision"] == "CONTINUE"
-    assert result["required_action"] == "DISCOVER_AGAIN"
-    assert result["finalization_allowed"] is False
-    assert result["minimum_rounds_remaining"] == 3
-
-
-def test_discovery_minimum_rounds_must_be_met_before_exhaustion_can_stop():
-    result = mod.decide(make_args(
-        worker_kind="discovery",
-        discovery_rounds_completed=1,
-        discovery_exhausted=True,
-        next_axis_available=False,
-        seconds_to_next_scheduled_task=3500,
-    ))
-    assert result["decision"] == "CONTINUE"
-    assert result["required_action"] == "DISCOVER_AGAIN"
-    assert "discovery_exhausted_after_minimum_rounds" not in result["stop_reasons"]
-
-
-def test_discovery_can_stop_after_minimum_rounds_and_explicit_exhaustion():
-    result = mod.decide(make_args(
-        worker_kind="discovery",
-        discovery_rounds_completed=4,
-        discovery_exhausted=True,
-        next_axis_available=False,
-        independent_work=False,
-        can_discover=False,
-        seconds_to_next_scheduled_task=2500,
-    ))
-    assert result["decision"] == "STOP_RUN"
-    assert result["finalization_allowed"] is True
-    assert result["required_action"] == "FINALIZE"
-    assert "discovery_exhausted_after_minimum_rounds" in result["stop_reasons"]
-
-
-def test_handoff_guard_overrides_discovery_minimum_rounds():
-    result = mod.decide(make_args(
-        worker_kind="discovery",
-        discovery_rounds_completed=1,
-        next_axis_available=True,
-        seconds_to_next_scheduled_task=500,
-    ))
-    assert result["decision"] == "STOP_RUN"
-    assert result["finalization_allowed"] is True
-    assert result["required_action"] == "FINALIZE"
+if __name__ == "__main__":
+    unittest.main()
