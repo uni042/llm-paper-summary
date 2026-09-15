@@ -1,9 +1,21 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 08:18:36 JST**
+> 自動生成: **2026-09-16 08:21:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
+
+## 重要指標
+
+すべて耐久保存された直接証拠から算出します。未claimは論文数ではなくResearch job数です。
+
+| 指標 | 現在値 |
+|---|---:|
+| 収録候補論文 | **32** |
+| 未claim Research job | **33** |
+| 直近24hの検証済みResearch収録 | **15** |
+| 最終検証済みResearch収録 | **09-16 07:37:12 JST（44分前）** |
+| 整合性異常 | **237** |
 
 ## 現在の収録候補
 
@@ -186,12 +198,66 @@
 
 > claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。
 
+## 耐久証拠の詳細集計
+
+### 未処理Research jobの状態内訳
+
+| status | 件数 |
+|---|---:|
+| ready | **33** |
+
+### 候補の重複・識別情報欠損
+
+非終端Research jobだけを対象にしています。source URLは `url/source_url/paper_url/primary_url/arxiv_url/pdf_url/source.url` のいずれかで確認します。
+
+| 指標 | 件数 |
+|---|---:|
+| 重複canonical_idグループ | **0** |
+| 重複分のResearch job | **0** |
+| canonical_id欠損 | **1** |
+| title欠損 | **0** |
+| source URL欠損 | **0** |
+
+### 収録済み論文実体
+
+`papers/inference/**` と `papers/training/**` のMarkdown実体を数え、READMEとcomparison系ファイルは除外します。
+
+| 指標 | 件数 |
+|---|---:|
+| inference/training配下の論文Markdown実体 | **548** |
+
+### immutable submissionの未照合
+
+検証済み成功としてjob/result/submission（Researchはpaper実体も）を照合できないimmutable submissionを数えます。処理待ちも含み得るため、整合性異常とは別指標です。
+
+| 指標 | 件数 |
+|---|---:|
+| 成功result未照合のimmutable submission | **232** |
+| └ Research | **128** |
+| └ Discovery | **104** |
+
+### 整合性異常
+
+同じ壊れた記録が複数条件に該当する場合は各検出項目へ1件ずつ計上します。したがって合計は一意job数ではなく検出項目数です。
+
+| 検出項目 | 件数 |
+|---|---:|
+| completed Research/Audit jobで検証済み完了なし | **226** |
+| 対応jobなしsubmission | **11** |
+| 対応jobなし成功result | **0** |
+| 対応submissionなし成功result | **0** |
+| 合計検出項目 | **237** |
+
 ### このSTATUSが採用する証拠
 
+- **重要指標**: 候補・未claim・24h収録・最終収録・整合性異常を、jobs/submissions/results/claims/paper実体から直接再計算します。
 - **収録候補**: `jobs/*.json` の非終端Research jobだけを対象にし、`canonical_id` の一意数を候補論文数として数えます。`canonical_id` 欠損jobは別件数で表示し、論文数へ推定加算しません。
 - **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。
 - **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。
 - **Audit完了**: job/result/submissionの対応と成功状態を照合します。
+- **論文実体数**: `papers/inference/**` と `papers/training/**` のMarkdown実体を数え、README/comparison系を除外します。
+- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちを含み得るため整合性異常とは分離します。
+- **整合性異常**: completed Research/Audit jobの未検証、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出します。
 - **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
 - **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
