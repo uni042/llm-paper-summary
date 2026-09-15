@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.29069",
+      "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+      "source_url": "https://arxiv.org/abs/2607.29069",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29069-aries-agentic-serving-infrastructure.md",
+      "priority": 85,
+      "reason": "反復LLM呼出し・永続context・sandbox tool executionを含むagentic workloadを対象に、task semanticsと実行構成を分離し、trajectoryとsystem telemetryを相関させるfull-stack実験基盤。production traceも用い、token-centric metricでは非推論ボトルネックを捉えにくいこと、context保持の収穫逓減、sandboxのburst/idle特性を示しており、agent-native serving設計の基礎資料として強い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-agent-aries-5",
+    "axis": "agentic serving・sandbox・trajectory-level telemetry",
+    "query_summary": "実運用framework surveyからagent workload固有のservingへ展開し、persistent context、sandbox tool execution、trajectory-level metricsを扱うAriesを評価。repo内arXiv ID検索では既存表現を確認できなかった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "agentic servingのprogram-level scheduler、tool-gap中KV residency、hardware-aware simulationへさらに展開する",
+    "empty_round_reason": null
+  }
+}
