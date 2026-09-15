@@ -65,7 +65,7 @@ jobs:
         run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
 
       - name: Build live repository inventory
-        run: python .survey/scripts/build_repository_inventory.py
+        run: python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repository-inventory.json --source-commit "${GITHUB_SHA}"
 
       - name: Run live repository consistency check
-        run: python .survey/scripts/check_repository.py
+        run: python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
