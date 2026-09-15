@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-acc918e244bc8cbe6bfce5af","job_id":"job-research-3df42686de08919b","data":{"canonical_id":"arXiv:2607.13095","arxiv_id":"2607.13095","doi":"10.48550/arXiv.2607.13095","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit","summary":"MiMo-V2.5系のHybrid SWA、疎なMoE、マルチモーダル符号器を本番推論で効率化する包括的システム報告。Full Attention用とSWA用のKVキャッシュを分離してSWA側を厳密なO(W)容量にし、層単位先読み、SWA対応prefix tree、メモリ・NVMe・遠隔ストレージを跨ぐGCache、KV親和ルーティングを組み合わせる。プリフィルの並列構成・長さ別バケット、デコードのメモリ削減とMTP、画像・動画前処理と符号器キャッシュまで一体で最適化し、SWA KV容量約7倍、L2ヒット率約25%・ノード入力スループット約30%改善、長要求TTFT P90約30.5%低下、プリフィル約40%改善、デコードKV容量約5倍、初期デコード最大2.3倍、符号器QPS 15から30を報告する。","list_summary":"Hybrid SWAの理論的KV削減を本番へ落とすため、Full/SWA二重KVプール、層単位先読み、分散GCache、KV親和ルーティング、プリフィル・デコード・マルチモーダル処理を一体最適化する。","authors":["MiMo Team, Xiaomi"],"authors_affiliations":"Xiaomi MiMo Team","published":"2026-07-14","publication":"arXiv:2607.13095v1","publication_type":"Preprint","publication_status":"プレプリント（arXiv v1、2026-07-14提出）","lineage":"LLMサービング、階層KVキャッシュ、Hybrid SWA、プリフィル・デコード分離、MoE、マルチモーダル推論","topics":["Hybrid SWA","KVキャッシュ","階層キャッシュ","RDMA","MoE","プリフィル・デコード分離","マルチモーダル推論","SGLang"],"importance":"Hybrid SWAの理論上の計算量・KV容量削減を、キャッシュ整合性、階層転送、ルーティング、並列化、マルチモーダル前処理まで含む本番スタックで成立させた点が重要。","hardware_evaluation":"本番GPUクラスタと8×400G NIC級ノード上のGCache/RDMA計測を含む。全実験のGPU型番は統一的には開示されない。","hardware_details":"1MB I/OでRDMA 170 GB/s・280µs、GDR約350 GB/s。","quality_effect":"近似ではなくSWAの正しいwindow-safe再利用とキャッシュ整合性を実装する。","storage_targets":["GPU HBM","CPUメモリ","NVMe SSD","遠隔オブジェクトストレージ"],"bottlenecks":["Hybrid SWAのKV容量","階層KV転送待ち","L2/L3キャッシュミス","長さ混在プリフィル","MoE並列通信","デコードKVメモリ","マルチモーダル前処理"],"evidence_locations":["§2","§3.1","§3.2","§4","§5","§6","§7","Table 1","Figures 1-8"],"references":[],"references_total":0,"references_checked_at":"2026-09-15","references_source":"primary-reference-section","source":"https://arxiv.org/abs/2607.13095","sources":["https://arxiv.org/abs/2607.13095","https://arxiv.org/pdf/2607.13095"],"code":null,"implementation":"SGLangを基盤に本番実装し一部変更を上流化中。GCacheとLLM-RouterはXiaomi内部実装。","implementation_status":"本番稼働済み。一部はSGLangへ上流化中。","evaluation_type":"本番実測・マイクロベンチマーク","last_checked":"2026-09-15","last_audited":null,"audit_version":0},"reservation":{"claim_id":"claim-acc918e244bc8cbe6bfce5af","worker_id":"scheduled-chat-paper-20260915T1830JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-71bf98c0dad3f53118b8d6b5",
+  "job_id": "job-research-3df42686de08919b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-71bf98c0dad3f53118b8d6b5",
+    "worker_id": "scheduled-chat-paper-20260915T1830JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
