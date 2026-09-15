@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-61879864be39f17f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.07609-blink-cpu-free-gpu-smartnic-serving.md",
+      "priority": 91,
+      "reason": "host CPUをsteady-state推論のcritical pathから外し、SmartNICのRDMA request handlingとGPU persistent kernelによるbatching/scheduling/KV管理へ移すend-to-end serving architecture。vLLM/SGLang/TensorRT-LLM比でP99 TTFT最大8.47倍改善、decode throughput最大2.1倍を報告し、GPU-centric serving stackとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2605.05467",
+      "title": "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
+      "source_url": "https://arxiv.org/abs/2605.05467",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism.md",
+      "priority": 85,
+      "reason": "tensor parallelismを静的deployment設定ではなくruntime control surfaceとして扱い、TP level、P/D GPU split、request schedulingを共同適応するserving system。TP-aware weight reuseとfast KV migrationで切替コストを抑え、SLO-compliant goodput最大5.3倍を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.22327",
+      "title": "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+      "source_url": "https://arxiv.org/abs/2606.22327",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+      "priority": 82,
+      "reason": "KV cacheの時間成長と空間占有を2次元geometryとして扱い、memory-constrained LLM servingのonline schedulingを理論境界とvLLM実装の両面から最適化する研究。時間中心heuristicとは異なるmemory-aware scheduler系統として補完価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-framework-reverse-7",
+    "axis": "framework実装起点・GPU/SmartNIC serving・adaptive TP・geometry-aware scheduler",
+    "query_summary": "vLLM/SGLang/TensorRT-LLM等の実装・比較文脈から論文を逆引きし、CPU-free SmartNIC/GPU serving、runtime adaptive tensor parallelism、KV memory geometry-aware schedulingを軽量評価した。3件ともcanonical IDが最新GitHub検索で未収録。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "agentic workflow schedulingやdiffusion LLM servingなど、新しいworkload形態に対するserving systemへ展開する",
+    "empty_round_reason": null
+  }
+}
