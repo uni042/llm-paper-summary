@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-15 20:02:34 JST**
+> 自動生成: **2026-09-15 20:02:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **1** | **1** | **0** | **0** | **0** | **1** |
-| 合計 | **12** | **6** | **3** | **3** | **1** | **0** | **1** |
+| Discovery | **4** | **1** | **1** | **0** | **0** | **0** | **1** |
+| 合計 | **11** | **6** | **3** | **3** | **1** | **0** | **1** |
 
 ## 詳細証拠
 
@@ -80,10 +80,6 @@
   - result: `.survey/work-queue/results/20260915T1508JST-discovery-specialist-scheduling-agent-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260915T1508JST-discovery-specialist-scheduling-agent-1.json`
   - 探索軸: エージェント型KV保持・未知生成長スケジューリング・推論/学習co-serving
-- **09-15 14:02:44 JST** job `job-d86e69d5d52d3a55` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260915T1407JST-discovery-specialist-moe-cache-router-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260915T1407JST-discovery-specialist-moe-cache-router-1.json`
-  - 探索軸: MoE expert cache・router adaptation・weight traffic
 
 ### 直近タスク
 
