@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Deprecated STATUS compatibility shim.
 
-STATUS.md is now generated exclusively by build_status_dashboard.py from direct,
+STATUS.md is generated exclusively by build_status_dashboard.py from direct,
 durable evidence. This module intentionally computes and appends nothing.
-Existing workflow invocations may remain temporarily without changing STATUS.md.
 """
 from __future__ import annotations
 
