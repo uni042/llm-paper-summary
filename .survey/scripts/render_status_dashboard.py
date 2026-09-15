@@ -89,9 +89,19 @@ def _source_url(payload: dict[str, Any]) -> str:
     return ""
 
 
+def _is_moved_stub(path: Path) -> bool:
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            prefix = handle.read(256).lstrip()
+    except (OSError, UnicodeError):
+        return False
+    first_line = prefix.splitlines()[0].strip().casefold() if prefix else ""
+    return first_line in {"#moved", "# moved"} or first_line.startswith("# moved ")
+
+
 def _paper_markdown_files(repo_root: Path) -> list[Path]:
     files: list[Path] = []
-    for area in ("inference", "training"):
+    for area in ("inference", "training", "survey"):
         root = repo_root / "papers" / area
         if not root.is_dir():
             continue
@@ -99,6 +109,8 @@ def _paper_markdown_files(repo_root: Path) -> list[Path]:
             name = path.name.casefold()
             stem = path.stem.casefold()
             if name == "readme.md" or stem == "comparison" or stem.startswith("comparison-"):
+                continue
+            if _is_moved_stub(path):
                 continue
             files.append(path)
     return sorted(files)
@@ -177,38 +189,62 @@ def _direct_evidence_metrics(
 
     verified_job_ids = {row["job_id"] for row in verified}
     completed_without_verified = 0
+    completed_research_missing_paper_paths: set[Path] = set()
     for job_id, job in jobs.items():
         if job["kind"] not in {"research", "audit"}:
             continue
-        status = str(job["payload"].get("status") or "").strip().lower()
-        if status == "completed" and job_id not in verified_job_ids:
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status != "completed":
+            continue
+        if job_id not in verified_job_ids:
             completed_without_verified += 1
+        if job["kind"] != "research":
+            continue
+        paper_value = payload.get("paper_path")
+        if not isinstance(paper_value, str) or not paper_value.strip():
+            continue
+        declared_paper = evidence._resolve_repo_path(repo_root, paper_value)
+        if declared_paper is None or not declared_paper.is_file():
+            completed_research_missing_paper_paths.add(job["path"])
 
-    orphan_submissions = sum(
-        not row["job_id"] or row["job_id"] not in jobs
+    orphan_submission_paths = {
+        row["path"]
         for row in submissions
-    )
+        if not row["job_id"] or row["job_id"] not in jobs
+    }
     success_results = [
         row
         for row in results
         if row["payload"].get("ok") is True
         and str(row["payload"].get("job_status") or "").strip().lower() == "completed"
     ]
-    orphan_success_results = sum(
-        not row["job_id"] or row["job_id"] not in jobs
+    orphan_success_result_paths = {
+        row["path"]
         for row in success_results
+        if not row["job_id"] or row["job_id"] not in jobs
+    }
+    success_result_without_submission_paths = {
+        row["path"]
+        for row in success_results
+        if evidence._submission_for_result(repo_root, row, submissions) is None
+    }
+    malformed_success_result_paths = (
+        orphan_success_result_paths | success_result_without_submission_paths
     )
-    success_results_without_submission = sum(
-        evidence._submission_for_result(repo_root, row, submissions) is None
-        for row in success_results
+    anomalous_record_paths = (
+        completed_research_missing_paper_paths
+        | orphan_submission_paths
+        | malformed_success_result_paths
     )
     consistency = {
         "completed_without_verified": completed_without_verified,
-        "orphan_submissions": orphan_submissions,
-        "orphan_success_results": orphan_success_results,
-        "success_results_without_submission": success_results_without_submission,
+        "completed_research_missing_paper": len(completed_research_missing_paper_paths),
+        "orphan_submissions": len(orphan_submission_paths),
+        "orphan_success_results": len(orphan_success_result_paths),
+        "success_results_without_submission": len(success_result_without_submission_paths),
     }
-    consistency_total = sum(consistency.values())
+    consistency_total = len(anomalous_record_paths)
 
     return {
         "candidate_papers": len(canonical_counts),
@@ -284,15 +320,15 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
         "",
         "### 収録済み論文実体",
         "",
-        "`papers/inference/**` と `papers/training/**` のMarkdown実体を数え、READMEとcomparison系ファイルは除外します。",
+        "`papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README、comparison系、Movedスタブを除外します。",
         "",
         "| 指標 | 件数 |",
         "|---|---:|",
-        f"| inference/training配下の論文Markdown実体 | **{metrics['paper_markdown_count']}** |",
+        f"| inference/training/survey配下の論文Markdown実体 | **{metrics['paper_markdown_count']}** |",
         "",
         "### immutable submissionの未照合",
         "",
-        "検証済み成功としてjob/result/submission（Researchはpaper実体も）を照合できないimmutable submissionを数えます。処理待ちも含み得るため、整合性異常とは別指標です。",
+        "検証済み成功としてjob/result/submission（Researchはpaper実体も）を照合できないimmutable submissionを数えます。処理待ちや失敗済みも含み得るため、整合性異常とは別指標です。",
         "",
         "| 指標 | 件数 |",
         "|---|---:|",
@@ -306,17 +342,25 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
     consistency = metrics["consistency"]
     lines += [
         "",
+        "### 厳格検証が未成立のcompleted job",
+        "",
+        "completedでも、現行STATUSの厳格条件（job/result/submission、Researchはpaper実体まで）をすべて照合できないものです。過去形式や移行済み履歴を含み得るため、整合性異常とは断定しません。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| completed Research/Audit jobで厳格検証未成立 | **{consistency['completed_without_verified']}** |",
+        "",
         "### 整合性異常",
         "",
-        "同じ壊れた記録が複数条件に該当する場合は各検出項目へ1件ずつ計上します。したがって合計は一意job数ではなく検出項目数です。",
+        "直接矛盾を確認できる耐久レコードだけを異常とします。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
         "",
         "| 検出項目 | 件数 |",
         "|---|---:|",
-        f"| completed Research/Audit jobで検証済み完了なし | **{consistency['completed_without_verified']}** |",
+        f"| completed Research jobで指定paper実体なし | **{consistency['completed_research_missing_paper']}** |",
         f"| 対応jobなしsubmission | **{consistency['orphan_submissions']}** |",
         f"| 対応jobなし成功result | **{consistency['orphan_success_results']}** |",
         f"| 対応submissionなし成功result | **{consistency['success_results_without_submission']}** |",
-        f"| 合計検出項目 | **{metrics['consistency_total']}** |",
+        f"| 異常レコード合計（重複排除） | **{metrics['consistency_total']}** |",
         "",
     ]
     return lines
@@ -742,9 +786,10 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
         "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
         "- **Audit完了**: job/result/submissionの対応と成功状態を照合します。",
-        "- **論文実体数**: `papers/inference/**` と `papers/training/**` のMarkdown実体を数え、README/comparison系を除外します。",
-        "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちを含み得るため整合性異常とは分離します。",
-        "- **整合性異常**: completed Research/Audit jobの未検証、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出します。",
+        "- **論文実体数**: `papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README/comparison系/Movedスタブを除外します。",
+        "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちや失敗済みを含み得るため整合性異常とは分離します。",
+        "- **completed未検証**: completedでも現行の厳格な照合条件が成立しないjobを別計上し、過去形式や移行履歴を含み得るため異常とは断定しません。",
+        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
