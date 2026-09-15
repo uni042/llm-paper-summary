@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9a46ee08846bcd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/05-moe-inference-systems/2026-2605.17889-cox-moe-coalesced-expert-cpu-gpu-amx.md",
+      "priority": 83,
+      "reason": "AMX対応CPUとGPUを協調させ、micro-batchによるexpert演算の低演算強度を避けるcoalesced expert executionと、頻出expertのGPU固定配置・選択的attention offloadを統合するMoE推論システム。FlexGen比最大7.1倍、MoE-Lightning比最大2.4倍のthroughputを報告し、CPUを単なるweight storeでなく演算資源として使う点が重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T20:00:00+09:00",
+    "round": "specialist-moe-amx-3",
+    "axis": "MoE・CPU AMX/GPU協調・expert coalescing",
+    "query_summary": "NDP軸とは別にCPU AMXを演算資源として使うMoE協調実行を探索。CoX-MoEはexpert coalescing、静的expert stratification、attention offloadを統合し、repo内arXiv ID検索で既存表現を確認できなかった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "MoEから離れ、実運用serving frameworkの採用・構成を大規模実証したsurvey/empirical systems研究を探索する",
+    "empty_round_reason": null
+  }
+}
