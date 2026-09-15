@@ -37,6 +37,19 @@ Discovery modeでは次をループする。
 
 固定round数、固定総candidate数、固定submission数は設けない。ただし同じScheduled Chatの次回`:00`予定枠まで600秒以下になった場合は引き継ぎガードを優先する。
 
+## 耐久実行記録の不変条件
+
+Discovery modeへ1回でも入った`:00` Scheduled Chat runは、**正常終了する前に、そのrunで固定した `run_key` を持つdiscovery submissionを少なくとも1件、正規の耐久経路へ保存しなければならない。** 探索を実行した事実だけ、候補0件という判断だけ、ローカルな一時状態だけを残して終了してはならない。
+
+- GitHub write可能時は `.survey/work-queue/submissions/<unique-id>.json` へ通常のworkflow-v10 discovery submissionを直接保存する。
+- 強い新規candidateが0件、全候補が重複、または最終dedupeで0件になった場合も `candidates: []` のsubmissionを保存し、`discovery_stats` に実際の `candidate_count`、`duplicate_filtered_count`、`duplicate_canonical_ids`、`next_axis_hint` と、具体的な非nullの `empty_round_reason` を残す。
+- GitHub write可能なのに、`kind: discovery` の生payloadを `.survey/work-queue/fallback-inbox/` へ直接置いてはならない。generic fallbackを使う経路では `fallback-routing.md` と `fallback_transport.py` の完全な `writes[]` envelope契約に従い、通常のDiscovery fallbackは `fallback-routing.md` が指定するLibrary経路を優先する。
+- run終了監査では、今回の `run_key` を持つ正規submissionまたは承認済みLibrary fallbackが実際に耐久保存されていることを再確認する。見つからなければ、候補0件でも空submissionを作成してから終了する。
+- GitHub directと承認済みLibrary fallbackの両方へ保存できない場合だけ、下記Run-level stop condition 3として異常終了してよい。正常終了扱いにはしない。
+- run開始直後から最後までoverflow research modeだけで、Discovery modeへ一度も入らなかった場合は空discovery submissionを作る必要はない。その場合はResearch/Auditの完全payloadの耐久保存をそのrunの成果証跡とする。
+
+これにより、各通常Discovery runは候補採用数にかかわらず `run_key` 単位で観測可能になり、`STATUS.md` / `discovery-state.json` が「探索したが0件」と「探索runの耐久記録が欠落した」を区別できる。
+
 ## Overflow research mode loop
 
 Overflow research modeでは新規discoveryを一時停止し、次を繰り返す。
