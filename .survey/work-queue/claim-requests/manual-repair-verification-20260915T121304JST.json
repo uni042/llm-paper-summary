@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "manual-repair-verification-20260915T121304JST",
+  "worker_id": "manual-repair-verifier-20260915T121304JST",
+  "worker_kind": "work",
+  "requested_at": "2026-09-15T03:13:04Z",
+  "max_jobs": 1,
+  "lease_seconds": 300,
+  "job_types": [
+    "research"
+  ],
+  "checkpointed_jobs": [
+    {
+      "job_id": "job-research-c6ac42b8bcec8aab",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8.json"
+    }
+  ]
+}
