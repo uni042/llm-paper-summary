@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f190af78c754c7c2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.16637",
+      "title": "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+      "source_url": "https://arxiv.org/abs/2605.16637",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16637-hexagent-agentic-workflow-heterogeneity-scheduling.md",
+      "priority": 84,
+      "reason": "agentic workflow全体の依存関係とend-to-end latencyを対象に、異種GPUのP/D分離クラスタでworkflow-aware schedulingを行うserving system。単発request schedulerからmulti-step agent workflowへ問題設定を拡張しており、agentic serving系統の重要な候補。"
+    },
+    {
+      "canonical_id": "arXiv:2607.04206",
+      "title": "Sangam: Efficiently Serving Diffusion LLMs with the AR Stack",
+      "source_url": "https://arxiv.org/abs/2607.04206",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving-ar-stack.md",
+      "priority": 80,
+      "reason": "diffusion LLMを既存autoregressive serving stack上で効率化し、deficit token-budget schedulerとprefill overflowを用いるhybrid servingを提案。新しい生成方式でもP/D interferenceとresource partitioningが支配的であることを実装評価しており、serving architectureの一般性を検証する候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T01:00:00+09:00",
+    "round": "specialist-new-workloads-8",
+    "axis": "agentic workflow・diffusion LLMという新workload形態のserving",
+    "query_summary": "framework実装起点からworkload側へ軸を変更し、agentic multi-step workflowのheterogeneity-aware schedulingとdiffusion LLMをAR stackで扱うserving systemを軽量評価した。最新job/identity検索でcanonical ID未収録を確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "heterogeneous GPU provisioning・power/energy-aware disaggregation、またはmulti-model/LoRA co-servingへ展開する",
+    "empty_round_reason": null
+  }
+}
