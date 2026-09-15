@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.06370",
+      "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+      "source_url": "https://arxiv.org/abs/2604.06370",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.06370-forkkv-multilora-copy-on-write-kv.md",
+      "priority": 87,
+      "reason": "multi-LoRA agent間でKVがadapter差分により分岐する問題をOSのfork/copy-on-writeになぞらえ、共有base KVと軽量agent固有KVへ物理分離する。DualRadixTreeとon-chip SRAMで再構成するResidualAttentionを備え、multi-LoRA serving throughput最大3倍。OS memory semanticsをKVへ移植する設計として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2608.05483",
+      "title": "PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving",
+      "source_url": "https://arxiv.org/abs/2608.05483",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2608.05483-plora-pooled-memory-multilora-serving.md",
+      "priority": 88,
+      "reason": "1000超adapterのmulti-LoRA servingをCXL/NVLink級pooled memoryとnear-data processingで扱い、GPU主導load/store interfaceとcost modelでLoRA/attention execution strategyを選択する。H100でS-LoRA比decode latency平均6.6倍低減を報告し、CXL pooled memoryのLLM serving応用として高価値。"
+    },
+    {
+      "canonical_id": "arXiv:2602.01053",
+      "title": "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+      "source_url": "https://arxiv.org/abs/2602.01053",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+      "priority": 83,
+      "reason": "multi-LoRA agentでbase model由来KVを共有しadapter依存成分だけ低rank保持する構成と、full dimensionへのmaterializeを避けるFlash-LoRA-Attentionを提案。agent間の長いtool trajectory共有でmemory/compute重複を減らすため、ForkKVと異なるlow-rank decomposition系の比較対象になる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-multilora-kv-12",
+    "axis": "multi-LoRA agent serving・copy-on-write KV・CXL pooled memory",
+    "query_summary": "co-servingからmulti-LoRA adapter/KV memoryへ展開し、OS CoW型ForkKV、NDP pooled-memory型PLoRA、low-rank shared-KV型LRAgentを独立候補として比較評価。3件ともcanonical IDを最新repo検索で未収録確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL pooled memoryのMoE expert placement、adapter paging、GPU-initiated pooled-memory accessへ横展開する",
+    "empty_round_reason": null
+  }
+}
