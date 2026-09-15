@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-15T16:07:57+00:00",
-  "last_run_key": "2026-09-16T01:00:00+09:00",
-  "last_round": "specialist-new-workloads-8",
+  "updated_at": "2026-09-15T18:03:04+00:00",
+  "last_run_key": "2026-09-16T03:00:00+09:00",
+  "last_round": "specialist-hw-scheduling-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -3508,6 +3508,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "heterogeneous GPU provisioning・power/energy-aware disaggregation、またはmulti-model/LoRA co-servingへ展開する",
       "source_submission": "work-queue/submissions/20260916T0131JST-discovery-specialist-new-workloads-8.json"
+    },
+    {
+      "run_key": "2026-09-16T03:00:00+09:00",
+      "round": "specialist-hw-scheduling-1",
+      "axis": "異種推論ハードウェア・multi-model offload・分離serving通信scheduler",
+      "query_summary": "直近の新着ハードウェア協調推論から、CPU-GPU offload/preemption、分離servingのstage-aware network schedulingへ展開し、GitHub正本検索でcanonical IDの既登録を事前確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "MoE/diffusion expert I/O scheduling、CXL/NVMe共有context tier、最近のpower-aware disaggregated servingへ軸を分離して探索する",
+      "source_submission": "work-queue/submissions/20260916T0308JST-discovery-specialist-hw-scheduling-1.json"
     }
   ],
   "axes": {
@@ -5500,6 +5515,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "heterogeneous GPU provisioning・power/energy-aware disaggregation、またはmulti-model/LoRA co-servingへ展開する"
+    },
+    "異種推論ハードウェア・multi-model offload・分離serving通信scheduler": {
+      "last_run_key": "2026-09-16T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "MoE/diffusion expert I/O scheduling、CXL/NVMe共有context tier、最近のpower-aware disaggregated servingへ軸を分離して探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
