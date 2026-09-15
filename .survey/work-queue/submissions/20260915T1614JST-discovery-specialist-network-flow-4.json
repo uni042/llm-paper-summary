@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e03097d2e4181243",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling-llm-serving.md",
+      "priority": 85,
+      "reason": "分離LLM servingでKV-block retrieval、collective communication、prefill-to-decode transferが同じnetwork bottleneckを競合する点を対象に、stage-awareなDefer-and-Promote/RMLQでLeast-Laxity-Firstを近似するnetwork flow scheduler。vLLM統合と8-server/32-GPU実機評価を行い、TTFT SLO attainmentを1.2-2.4倍改善すると報告しており、GPU compute schedulerではなくmulti-stage network contentionを直接制御する点が重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T16:00:00+09:00",
+    "round": "specialist-network-flow-4",
+    "axis": "networking/HPC隣接・分離servingのmulti-stage flow scheduling",
+    "query_summary": "collective communication、RDMA、GPU fabricをLLM servingへ接続する軸を探索し、既にqueueにあるcollective communication surveyは除外。KV retrieval・collective・P2D transferの共有link競合をstage-awareに制御するMFSを未収録候補として選別した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2608.15118"],
+    "next_axis_hint": "次はbackward-reference経路として主要2026 serving論文の参考文献から未収録の基礎systems論文を探索する",
+    "empty_round_reason": null
+  }
+}
