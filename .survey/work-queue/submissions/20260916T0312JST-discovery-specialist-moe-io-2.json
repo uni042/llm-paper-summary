@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-218b38f7ded363b9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.20179",
+      "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+      "source_url": "https://arxiv.org/abs/2605.20179",
+      "paper_path": "papers/inference/04-moe-offload-routing/2026-2605.20179-tide-io-aware-moe-diffusion-offload.md",
+      "priority": 88,
+      "reason": "MoE diffusion LLMのblock内でexpert activationが時間的に安定する性質を利用し、expert placement更新間隔をI/OとCPU計算の最適化問題として決めるlossless expert offload。単一GPU-CPU環境でLLaDA2.0-mini/flashのthroughputを最大1.4倍/1.5倍改善し、expert streamingとI/O schedulingの重点テーマに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/04-moe-offload-routing/2026-2605.17889-cox-moe-amx-cpu-gpu-coexecution.md",
+      "priority": 84,
+      "reason": "expert offloadのmicro-batchingが演算密度を下げる問題とPCIe転送制約を、AMX対応CPU-GPU協調とcoalesced expert executionで扱う。単なるexpert cacheではなくCPU側計算資源を積極利用する実行設計で、異種メモリ・MoE offload系統との差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2606.15453",
+      "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.15453",
+      "paper_path": "papers/inference/04-moe-offload-routing/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+      "priority": 83,
+      "reason": "cross-layer correlationと履歴を用いるruntime expert予測と再構成可能hardwareによるprefetch/pipelineを組み合わせ、routing結果を変えずにexpert移動を隠蔽する。報告値はexpert prediction約85%、GPU比平均2.5倍のspeedupで、expert prefetchとhardware co-designの比較対象として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T03:00:00+09:00",
+    "round": "specialist-moe-io-2",
+    "axis": "MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch",
+    "query_summary": "前roundからMoEのデータ移動へ軸を分離し、diffusion MoEのexpert refresh、AMX CPU-GPU co-execution、時空間expert prefetchを評価した。canonical IDをGitHub正本検索で再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/NVMe/JBOFを使う共有KV/context tierとGPU-direct storage、次にpower-aware disaggregated servingへ移る",
+    "empty_round_reason": null
+  }
+}
