@@ -12,6 +12,8 @@ on:
         description: 'Repository-relative immutable research/audit descriptor path'
         required: true
         type: string
+  schedule:
+    - cron: '7/10 * * * *'
 
 permissions:
   contents: write
@@ -137,7 +139,7 @@ jobs:
             git commit -m 'survey-submission: drain immutable research results'
             if git push origin HEAD:main; then
               if [ "$processing_failed" -ne 0 ]; then
-                echo 'Immutable submission failure result was persisted to main.' >&2
+                echo 'Immutable submission failure result was persisted; periodic drain will retry it only when explicitly classified retryable.' >&2
                 exit 1
               fi
               exit 0
