@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Render STATUS.md from direct, durable survey evidence.
+"""Build STATUS.md only from direct, durable survey evidence.
 
-The dashboard answers only three operational questions:
-1. Have paper-reading / survey tasks actually completed in the last few hours?
-2. What direct durable evidence proves the latest scheduled workers succeeded?
-3. What work is actively claimed right now?
+Accepted evidence:
+- .survey/work-queue/jobs/*.json
+- .survey/work-queue/results/**/*.json
+- .survey/work-queue/submissions/**/*.json
+- .survey/work-queue/claims/*.json
+- paper files explicitly referenced by those records
 
-Unlike the previous dashboard, recent completion counts are derived directly from
-terminal job files. Aggregate ledgers are not used as the source of truth for
-throughput, so attribution errors cannot turn real completed work into zero.
+Deliberately excluded:
+- run-ledger.json and other aggregate counters
+- next-jobs.json queue snapshots
+- discovery-state.json summaries
+- previous STATUS.md contents
+- inferred Scheduled Chat process liveness
 """
 from __future__ import annotations
 
@@ -22,6 +27,7 @@ from zoneinfo import ZoneInfo
 
 JST = ZoneInfo("Asia/Tokyo")
 RECENT_HOURS = 6
+RECENT_HEARTBEAT_MINUTES = 15
 TERMINAL_STATUSES = {
     "completed",
     "blocked",
@@ -31,19 +37,19 @@ TERMINAL_STATUSES = {
     "superseded",
     "cancelled",
 }
-WORKER_RE = re.compile(r"scheduled-chat-paper-(\d{8})T(\d{4})JST")
+RUN_STAMP_RE = re.compile(r"(?P<date>\d{8})T(?P<hm>\d{4})JST", re.IGNORECASE)
 
 
 def _load_json(path: Path) -> dict[str, Any]:
     try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
         return {}
-    return payload if isinstance(payload, dict) else {}
+    return value if isinstance(value, dict) else {}
 
 
 def _iter_json(directory: Path) -> Iterable[tuple[Path, dict[str, Any]]]:
-    if not directory.exists():
+    if not directory.is_dir():
         return []
     rows: list[tuple[Path, dict[str, Any]]] = []
     for path in sorted(directory.rglob("*.json")):
@@ -54,42 +60,81 @@ def _iter_json(directory: Path) -> Iterable[tuple[Path, dict[str, Any]]]:
 
 
 def _parse_dt(value: Any) -> datetime | None:
-    if not isinstance(value, str) or not value:
+    if not isinstance(value, str) or not value.strip():
         return None
     try:
-        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        value = value.replace("Z", "+00:00")
+        stamp = datetime.fromisoformat(value)
     except ValueError:
         return None
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
-    return dt.astimezone(timezone.utc)
+    if stamp.tzinfo is None:
+        stamp = stamp.replace(tzinfo=timezone.utc)
+    return stamp.astimezone(timezone.utc)
 
 
-def _fmt_time(dt: datetime | None) -> str:
-    if dt is None:
+def _fmt_time(value: datetime | None) -> str:
+    if value is None:
         return "—"
-    return dt.astimezone(JST).strftime("%m-%d %H:%M:%S JST")
+    return value.astimezone(JST).strftime("%m-%d %H:%M:%S JST")
 
 
-def _job_id(path: Path, job: dict[str, Any]) -> str:
-    return str(job.get("id") or job.get("job_id") or path.stem)
+def _fmt_age(now: datetime, value: datetime | None) -> str:
+    if value is None:
+        return "—"
+    seconds = max(0, int((now - value).total_seconds()))
+    if seconds < 60:
+        return f"{seconds}秒前"
+    minutes = seconds // 60
+    if minutes < 60:
+        return f"{minutes}分前"
+    hours, rem = divmod(minutes, 60)
+    return f"{hours}時間{rem}分前"
 
 
-def _job_kind(path: Path, job: dict[str, Any]) -> str:
-    explicit = str(job.get("type") or job.get("kind") or "").lower()
+def _rel(repo_root: Path, path: Path | None) -> str:
+    if path is None:
+        return "—"
+    try:
+        return str(path.relative_to(repo_root))
+    except ValueError:
+        return str(path)
+
+
+def _resolve_repo_path(repo_root: Path, value: Any) -> Path | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    raw = value.strip().replace("\\", "/").lstrip("/")
+    candidates = [raw]
+    if raw.startswith("work-queue/") or raw.startswith("survey-state/"):
+        candidates.insert(0, f".survey/{raw}")
+    for candidate in candidates:
+        path = repo_root / candidate
+        if path.is_file():
+            return path
+    return repo_root / candidates[0]
+
+
+def _job_id(path: Path, payload: dict[str, Any]) -> str:
+    return str(payload.get("job_id") or payload.get("id") or path.stem)
+
+
+def _kind(path: Path, payload: dict[str, Any]) -> str:
+    explicit = str(payload.get("job_type") or payload.get("type") or payload.get("kind") or "").lower()
     if explicit:
         return explicit
-    name = path.stem.lower()
-    if "research" in name:
+    parts = {part.lower() for part in path.parts}
+    if "research" in parts:
         return "research"
-    if "audit" in name:
+    if "audit" in parts:
         return "audit"
+    if "discovery" in path.name.lower():
+        return "discovery"
     return "unknown"
 
 
-def _job_label(job: dict[str, Any], job_id: str) -> str:
-    canonical = str(job.get("canonical_id") or "")
-    title = str(job.get("title") or "")
+def _label(payload: dict[str, Any], job_id: str) -> str:
+    canonical = str(payload.get("canonical_id") or "")
+    title = str(payload.get("title") or "")
     if canonical and title:
         return f"`{canonical}` — {title}"
     if title:
@@ -99,122 +144,314 @@ def _job_label(job: dict[str, Any], job_id: str) -> str:
     return f"`{job_id}`"
 
 
-def _worker_run_time(worker_id: Any) -> datetime | None:
-    if not isinstance(worker_id, str):
-        return None
-    match = WORKER_RE.fullmatch(worker_id)
-    if not match:
+def _run_time_from_worker(worker_id: Any) -> datetime | None:
+    text = str(worker_id or "")
+    match = RUN_STAMP_RE.search(text)
+    if match is None:
         return None
     try:
-        local = datetime.strptime("".join(match.groups()), "%Y%m%d%H%M").replace(tzinfo=JST)
+        local = datetime.strptime(
+            match.group("date") + match.group("hm"),
+            "%Y%m%d%H%M",
+        ).replace(tzinfo=JST)
     except ValueError:
         return None
     return local.astimezone(timezone.utc)
 
 
-def _path_exists(repo_root: Path, rel: Any) -> bool:
-    return isinstance(rel, str) and bool(rel) and (repo_root / rel).is_file()
-
-
-def _completed_proof(repo_root: Path, job: dict[str, Any]) -> str:
-    submission_ok = _path_exists(repo_root, job.get("artifact_submission"))
-    paper_ok = _path_exists(repo_root, job.get("paper_path"))
-    return (
-        "job=completed / "
-        f"submission={'存在' if submission_ok else '未確認'} / "
-        f"paper={'存在' if paper_ok else '未確認'}"
-    )
-
-
-def _collect_jobs(repo_root: Path) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
-    by_id: dict[str, dict[str, Any]] = {}
-    rows: list[dict[str, Any]] = []
+def _collect_jobs(repo_root: Path) -> dict[str, dict[str, Any]]:
+    jobs: dict[str, dict[str, Any]] = {}
     for path, payload in _iter_json(repo_root / ".survey/work-queue/jobs"):
         job_id = _job_id(path, payload)
-        row = {
+        jobs[job_id] = {
             "path": path,
-            "job_id": job_id,
-            "kind": _job_kind(path, payload),
             "payload": payload,
+            "kind": _kind(path, payload),
             "completed_at": _parse_dt(payload.get("completed_at")),
         }
-        by_id[job_id] = row
-        rows.append(row)
-    return by_id, rows
-
-
-def _recent_completed(job_rows: list[dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
-    cutoff = now - timedelta(hours=RECENT_HOURS)
-    rows = [
-        row
-        for row in job_rows
-        if str(row["payload"].get("status") or "").lower() == "completed"
-        and row["completed_at"] is not None
-        and cutoff <= row["completed_at"] <= now
-        and row["kind"] in {"research", "audit"}
-    ]
-    return sorted(rows, key=lambda row: row["completed_at"], reverse=True)
+    return jobs
 
 
 def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
-    root = repo_root / ".survey/work-queue/submissions"
-    for path, payload in _iter_json(root):
-        worker_id = payload.get("worker_id")
-        worker_time = _worker_run_time(worker_id)
-        stats = payload.get("discovery_stats") if isinstance(payload.get("discovery_stats"), dict) else None
-        run_time = _parse_dt(stats.get("run_key")) if stats else worker_time
-        rows.append({
-            "path": path,
-            "payload": payload,
-            "worker_id": worker_id,
-            "worker_time": worker_time,
-            "discovery_stats": stats,
-            "run_time": run_time,
-        })
+    for path, payload in _iter_json(repo_root / ".survey/work-queue/submissions"):
+        rows.append(
+            {
+                "path": path,
+                "payload": payload,
+                "job_id": str(payload.get("job_id") or ""),
+                "kind": _kind(path, payload),
+                "worker_id": str(payload.get("worker_id") or ""),
+                "worker_run_time": _run_time_from_worker(payload.get("worker_id")),
+                "discovery_run_time": _parse_dt(
+                    (payload.get("discovery_stats") or {}).get("run_key")
+                    if isinstance(payload.get("discovery_stats"), dict)
+                    else None
+                ),
+            }
+        )
     return rows
 
 
-def _latest_paper_worker(submissions: list[dict[str, Any]]) -> tuple[str | None, datetime | None, list[dict[str, Any]]]:
-    paper_rows = [row for row in submissions if row["worker_time"] is not None]
-    if not paper_rows:
+def _collect_results(repo_root: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for path, payload in _iter_json(repo_root / ".survey/work-queue/results"):
+        rows.append(
+            {
+                "path": path,
+                "payload": payload,
+                "job_id": str(payload.get("job_id") or ""),
+                "kind": _kind(path, payload),
+                "processed_at": _parse_dt(payload.get("processed_at")),
+            }
+        )
+    return rows
+
+
+def _submission_for_result(
+    repo_root: Path,
+    result: dict[str, Any],
+    submissions: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    payload = result["payload"]
+    explicit = _resolve_repo_path(repo_root, payload.get("submission"))
+    if explicit is not None and explicit.is_file():
+        for submission in submissions:
+            if submission["path"] == explicit:
+                return submission
+
+    attempt_id = str(payload.get("attempt_id") or "")
+    job_id = result["job_id"]
+    candidates = [
+        row
+        for row in submissions
+        if row["job_id"] == job_id
+        and (not attempt_id or str(row["payload"].get("attempt_id") or "") == attempt_id)
+    ]
+    return candidates[0] if len(candidates) == 1 else None
+
+
+def _paper_path(
+    repo_root: Path,
+    result_payload: dict[str, Any],
+    submission_payload: dict[str, Any],
+    job_payload: dict[str, Any],
+) -> Path | None:
+    artifact = result_payload.get("artifact")
+    values: list[Any] = []
+    if isinstance(artifact, dict):
+        values.append(artifact.get("paper"))
+    values.extend([submission_payload.get("paper_path"), job_payload.get("paper_path")])
+    for value in values:
+        path = _resolve_repo_path(repo_root, value)
+        if path is not None and path.is_file():
+            return path
+    return None
+
+
+def _verified_completions(
+    repo_root: Path,
+    jobs: dict[str, dict[str, Any]],
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    verified: list[dict[str, Any]] = []
+    seen_jobs: set[str] = set()
+    for result in results:
+        result_payload = result["payload"]
+        kind = result["kind"]
+        if kind not in {"research", "audit"}:
+            continue
+        if result_payload.get("ok") is not True:
+            continue
+        if str(result_payload.get("job_status") or "").lower() != "completed":
+            continue
+
+        job_id = result["job_id"]
+        if not job_id or job_id in seen_jobs:
+            continue
+        job = jobs.get(job_id)
+        if job is None:
+            continue
+        job_payload = job["payload"]
+        if str(job_payload.get("status") or "").lower() != "completed":
+            continue
+        if job["kind"] not in {kind, "unknown"}:
+            continue
+
+        submission = _submission_for_result(repo_root, result, submissions)
+        if submission is None or submission["job_id"] != job_id:
+            continue
+
+        paper = _paper_path(
+            repo_root,
+            result_payload,
+            submission["payload"],
+            job_payload,
+        )
+        if kind == "research" and paper is None:
+            continue
+
+        completed_at = result["processed_at"] or job["completed_at"]
+        if completed_at is None:
+            continue
+
+        verified.append(
+            {
+                "job_id": job_id,
+                "kind": kind,
+                "job": job,
+                "submission": submission,
+                "result": result,
+                "paper": paper,
+                "completed_at": completed_at,
+            }
+        )
+        seen_jobs.add(job_id)
+
+    return sorted(verified, key=lambda row: row["completed_at"], reverse=True)
+
+
+def _verified_by_submission(verified: list[dict[str, Any]]) -> dict[Path, dict[str, Any]]:
+    return {row["submission"]["path"]: row for row in verified}
+
+
+def _verified_discovery_rows(
+    repo_root: Path,
+    jobs: dict[str, dict[str, Any]],
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    discovery_submissions = {
+        row["path"]: row
+        for row in submissions
+        if row["kind"] == "discovery"
+        or isinstance(row["payload"].get("discovery_stats"), dict)
+    }
+
+    for result in results:
+        payload = result["payload"]
+        if result["kind"] != "discovery":
+            continue
+        if payload.get("ok") is not True:
+            continue
+        if str(payload.get("job_status") or "").lower() != "completed":
+            continue
+        job_id = result["job_id"]
+        job = jobs.get(job_id)
+        if job is None or str(job["payload"].get("status") or "").lower() != "completed":
+            continue
+
+        explicit = _resolve_repo_path(repo_root, payload.get("submission"))
+        submission = discovery_submissions.get(explicit) if explicit is not None else None
+        if submission is None:
+            candidates = [row for row in discovery_submissions.values() if row["job_id"] == job_id]
+            submission = candidates[0] if len(candidates) == 1 else None
+        if submission is None or submission["job_id"] != job_id:
+            continue
+
+        run_time = submission["discovery_run_time"]
+        if run_time is None:
+            continue
+        rows.append(
+            {
+                "job_id": job_id,
+                "job": job,
+                "submission": submission,
+                "result": result,
+                "run_time": run_time,
+                "completed_at": result["processed_at"] or job["completed_at"],
+            }
+        )
+    return sorted(rows, key=lambda row: row["run_time"], reverse=True)
+
+
+def _latest_paper_run(
+    submissions: list[dict[str, Any]],
+) -> tuple[datetime | None, str | None, list[dict[str, Any]]]:
+    rows = [
+        row
+        for row in submissions
+        if row["kind"] in {"research", "audit"}
+        and row["worker_run_time"] is not None
+        and row["worker_id"]
+    ]
+    if not rows:
         return None, None, []
-    latest_time = max(row["worker_time"] for row in paper_rows)
-    latest_rows = [row for row in paper_rows if row["worker_time"] == latest_time]
-    worker_id = str(latest_rows[0]["worker_id"])
-    return worker_id, latest_time, latest_rows
+    latest = max(row["worker_run_time"] for row in rows)
+    selected = [row for row in rows if row["worker_run_time"] == latest]
+    return latest, selected[0]["worker_id"], selected
 
 
-def _latest_discovery(submissions: list[dict[str, Any]]) -> tuple[datetime | None, list[dict[str, Any]]]:
-    rows = [row for row in submissions if row["discovery_stats"] is not None and row["run_time"] is not None]
+def _latest_discovery_run(
+    submissions: list[dict[str, Any]],
+) -> tuple[datetime | None, list[dict[str, Any]]]:
+    rows = [
+        row
+        for row in submissions
+        if row["discovery_run_time"] is not None
+        and (
+            row["kind"] == "discovery"
+            or isinstance(row["payload"].get("discovery_stats"), dict)
+        )
+    ]
     if not rows:
         return None, []
-    latest_time = max(row["run_time"] for row in rows)
-    return latest_time, [row for row in rows if row["run_time"] == latest_time]
+    latest = max(row["discovery_run_time"] for row in rows)
+    return latest, [row for row in rows if row["discovery_run_time"] == latest]
 
 
-def _active_claims(repo_root: Path, jobs_by_id: dict[str, dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
-    active: list[dict[str, Any]] = []
+def _active_claims(
+    repo_root: Path,
+    jobs: dict[str, dict[str, Any]],
+    now: datetime,
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
     for path, claim in _iter_json(repo_root / ".survey/work-queue/claims"):
-        expires = _parse_dt(claim.get("expires_at"))
-        if expires is None or expires <= now:
-            continue
         job_id = str(claim.get("job_id") or path.stem)
-        job_row = jobs_by_id.get(job_id)
-        if job_row is None:
+        job = jobs.get(job_id)
+        if job is None:
             continue
-        status = str(job_row["payload"].get("status") or "").lower()
+        status = str(job["payload"].get("status") or "").lower()
         if status in TERMINAL_STATUSES:
             continue
-        active.append({
-            "job_id": job_id,
-            "job": job_row["payload"],
-            "kind": str(claim.get("kind") or job_row["kind"]),
-            "worker_id": str(claim.get("worker_id") or "—"),
-            "claimed_at": _parse_dt(claim.get("claimed_at")),
-            "expires_at": expires,
-        })
-    return sorted(active, key=lambda row: row["claimed_at"] or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+        expires_at = _parse_dt(claim.get("expires_at"))
+        if expires_at is None or expires_at <= now:
+            continue
+        rows.append(
+            {
+                "job_id": job_id,
+                "job": job,
+                "claim_path": path,
+                "claim": claim,
+                "worker_id": str(claim.get("worker_id") or "—"),
+                "claimed_at": _parse_dt(claim.get("claimed_at")),
+                "heartbeat_at": _parse_dt(claim.get("heartbeat_at")),
+                "expires_at": expires_at,
+            }
+        )
+    return sorted(
+        rows,
+        key=lambda row: row["heartbeat_at"]
+        or row["claimed_at"]
+        or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+
+
+def _render_verified_evidence(repo_root: Path, row: dict[str, Any]) -> list[str]:
+    job = row["job"]
+    lines = [
+        f"- **{_fmt_time(row['completed_at'])}** [{row['kind']}] "
+        f"{_label(job['payload'], row['job_id'])}",
+        f"  - job: `{_rel(repo_root, job['path'])}`",
+        f"  - result: `{_rel(repo_root, row['result']['path'])}` (`ok=true`)",
+        f"  - submission: `{_rel(repo_root, row['submission']['path'])}`",
+    ]
+    if row["paper"] is not None:
+        lines.append(f"  - paper: `{_rel(repo_root, row['paper'])}`")
+    return lines
 
 
 def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
@@ -223,142 +460,184 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         now = now.replace(tzinfo=timezone.utc)
     now = now.astimezone(timezone.utc)
 
-    jobs_by_id, job_rows = _collect_jobs(repo_root)
+    jobs = _collect_jobs(repo_root)
     submissions = _collect_submissions(repo_root)
-    recent = _recent_completed(job_rows, now)
-    active = _active_claims(repo_root, jobs_by_id, now)
-    worker_id, worker_time, latest_worker_submissions = _latest_paper_worker(submissions)
-    discovery_time, latest_discovery_rows = _latest_discovery(submissions)
-    queue = _load_json(repo_root / ".survey/work-queue/next-jobs.json")
+    results = _collect_results(repo_root)
+    verified = _verified_completions(repo_root, jobs, submissions, results)
+    verified_by_submission = _verified_by_submission(verified)
+    verified_discovery = _verified_discovery_rows(repo_root, jobs, submissions, results)
+    active = _active_claims(repo_root, jobs, now)
 
+    cutoff = now - timedelta(hours=RECENT_HOURS)
+    recent = [row for row in verified if cutoff <= row["completed_at"] <= now]
     recent_research = [row for row in recent if row["kind"] == "research"]
     recent_audit = [row for row in recent if row["kind"] == "audit"]
+    last_completed = recent[0]["completed_at"] if recent else (verified[0]["completed_at"] if verified else None)
+
+    paper_run_time, paper_worker_id, latest_paper_submissions = _latest_paper_run(submissions)
+    discovery_run_time, latest_discovery_submissions = _latest_discovery_run(submissions)
+    discovery_verified_by_submission = {
+        row["submission"]["path"]: row for row in verified_discovery
+    }
+
+    heartbeat_cutoff = now - timedelta(minutes=RECENT_HEARTBEAT_MINUTES)
+    heartbeat_recent = [
+        row
+        for row in active
+        if row["heartbeat_at"] is not None and heartbeat_cutoff <= row["heartbeat_at"] <= now
+    ]
 
     lines: list[str] = [
         "# LLM論文サーベイ 稼働状況",
         "",
         f"> 自動生成: **{now.astimezone(JST).strftime('%Y-%m-%d %H:%M:%S JST')}**",
         "",
-        "このページは、集計済みカウンタではなく **terminal job / immutable submission / claim / 実在するpaperファイル** を直接確認して現状を算出します。",
-        "run-ledger等の二次集計値は、直近の成功件数を決める根拠には使いません。",
+        "このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。",
+        "`run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。",
         "",
-        "## 1. ここ数時間で論文読解・サーベイができているか",
+        "## 1. ここ数時間で論文読解・サーベイが成功しているか",
         "",
-        "| 指標 | 実績 |",
+        "| 指標 | 検証済み実績 |",
         "|---|---:|",
         f"| 直近{RECENT_HOURS}時間 Research完了 | **{len(recent_research)}** |",
         f"| 直近{RECENT_HOURS}時間 Audit完了 | **{len(recent_audit)}** |",
-        f"| 直近{RECENT_HOURS}時間 合計terminal成功 | **{len(recent)}** |",
+        f"| 直近{RECENT_HOURS}時間 検証済み完了合計 | **{len(recent)}** |",
+        f"| 最終検証済み完了 | **{_fmt_time(last_completed)}** |",
+        f"| 最終完了から | **{_fmt_age(now, last_completed)}** |",
+        "",
+        "成功として数えるのは、対応する **job=completed / result.ok=true / immutable submission** が一致し、"
+        "Researchではさらにpaper実体が存在するものだけです。",
         "",
     ]
 
     if recent:
-        lines += ["### 直近の完了証拠", ""]
+        lines += ["### 直近の検証済み完了", ""]
         for row in recent[:10]:
-            job = row["payload"]
-            lines.append(
-                f"- **{_fmt_time(row['completed_at'])}** [{row['kind']}] {_job_label(job, row['job_id'])} — "
-                f"{_completed_proof(repo_root, job)}"
-            )
+            lines.extend(_render_verified_evidence(repo_root, row))
     else:
-        lines.append(f"- 直近{RECENT_HOURS}時間に `completed_at` を持つResearch/Audit terminal jobはありません。")
+        lines.append(f"- 直近{RECENT_HOURS}時間に、上記条件を満たすResearch/Audit完了は確認できません。")
 
     lines += [
         "",
-        "## 2. 直近タスクが成功している証拠",
+        "## 2. 直近タスクが実際に処理成功している証拠",
         "",
-        "### 通常worker（:30）",
+        "### :30 論文worker",
         "",
     ]
-
-    if worker_id is None:
-        lines.append("- scheduled paper worker由来のimmutable submissionが見つかりません。")
+    if paper_run_time is None:
+        lines.append("- worker時刻を復元できるimmutable Research/Audit submissionは確認できません。")
     else:
-        completed_evidence: list[dict[str, Any]] = []
-        submitted_jobs: list[dict[str, Any]] = []
-        for row in latest_worker_submissions:
-            payload = row["payload"]
-            job_id = str(payload.get("job_id") or "")
-            job_row = jobs_by_id.get(job_id)
-            if job_row:
-                submitted_jobs.append(job_row)
-                job = job_row["payload"]
-                if str(job.get("status") or "").lower() == "completed":
-                    completed_evidence.append(job_row)
-        lines.append(f"- **{worker_time.astimezone(JST).strftime('%H:%M')} 通常worker**: `{worker_id}`")
-        if completed_evidence:
-            for row in completed_evidence[:5]:
-                job = row["payload"]
-                paper_exists = _path_exists(repo_root, job.get("paper_path"))
-                submission_exists = _path_exists(repo_root, job.get("artifact_submission"))
-                proof = "完了job + immutable submission + paper" if paper_exists and submission_exists else _completed_proof(repo_root, job)
+        succeeded = [
+            row for row in latest_paper_submissions if row["path"] in verified_by_submission
+        ]
+        lines.append(
+            f"- 最新観測run: **{paper_run_time.astimezone(JST).strftime('%Y-%m-%d %H:%M JST')}**"
+            f" / worker `{paper_worker_id}`"
+        )
+        lines.append(
+            f"- immutable submission: **{len(latest_paper_submissions)}件** / "
+            f"検証済み成功: **{len(succeeded)}件**"
+        )
+        for submission in latest_paper_submissions[:10]:
+            verified_row = verified_by_submission.get(submission["path"])
+            if verified_row is None:
                 lines.append(
-                    f"  - **成功** {_job_label(job, row['job_id'])} — {proof} / completed {_fmt_time(row['completed_at'])}"
+                    f"  - **未完了または未検証** `{_rel(repo_root, submission['path'])}` "
+                    f"(job `{submission['job_id'] or '—'}`)"
                 )
-        elif submitted_jobs:
-            lines.append("  - immutable submissionは存在しますが、対応jobのterminal完了はまだ確認できません。")
-        else:
-            lines.append("  - submissionは存在しますが、対応jobを直接照合できません。")
+            else:
+                lines.append(
+                    f"  - **成功** {_label(verified_row['job']['payload'], verified_row['job_id'])} "
+                    f"/ result `{_rel(repo_root, verified_row['result']['path'])}` "
+                    f"/ paper `{_rel(repo_root, verified_row['paper']) if verified_row['paper'] else '—'}`"
+                )
 
-    lines += ["", "### 探索worker（:00）", ""]
-    if discovery_time is None:
-        lines.append("- immutable discovery submissionが見つかりません。")
+    lines += ["", "### :00 探索worker", ""]
+    if discovery_run_time is None:
+        lines.append("- `discovery_stats.run_key` を持つimmutable discovery submissionは確認できません。")
     else:
+        succeeded = [
+            row
+            for row in latest_discovery_submissions
+            if row["path"] in discovery_verified_by_submission
+        ]
         candidate_count = 0
         axes: list[str] = []
-        files: list[str] = []
-        for row in latest_discovery_rows:
-            stats = row["discovery_stats"] or {}
-            candidate_count += int(stats.get("candidate_count") or 0)
-            axis = str(stats.get("axis") or "未分類")
-            if axis not in axes:
-                axes.append(axis)
-            files.append(str(row["path"].relative_to(repo_root)))
+        for submission in latest_discovery_submissions:
+            payload = submission["payload"]
+            stats = payload.get("discovery_stats")
+            candidates = payload.get("candidates")
+            if isinstance(candidates, list):
+                candidate_count += len(candidates)
+            elif isinstance(stats, dict):
+                candidate_count += int(stats.get("candidate_count") or 0)
+            if isinstance(stats, dict):
+                axis = str(stats.get("axis") or "")
+                if axis and axis not in axes:
+                    axes.append(axis)
         lines.append(
-            f"- **{discovery_time.astimezone(JST).strftime('%H:%M')} 探索worker**: **成功証拠あり** — immutable discovery submission {len(files)}件"
+            f"- 最新観測run: **{discovery_run_time.astimezone(JST).strftime('%Y-%m-%d %H:%M JST')}**"
         )
-        lines.append(f"  - 探索軸: {' / '.join(axes) or '—'}")
-        lines.append(f"  - 評価候補: **{candidate_count}**")
-        for path in files[:3]:
-            lines.append(f"  - evidence: `{path}`")
+        lines.append(
+            f"- immutable submission: **{len(latest_discovery_submissions)}件** / "
+            f"検証済み成功result: **{len(succeeded)}件** / 候補: **{candidate_count}件**"
+        )
+        if axes:
+            lines.append(f"- 探索軸: {' / '.join(axes)}")
+        for submission in latest_discovery_submissions[:10]:
+            verified_row = discovery_verified_by_submission.get(submission["path"])
+            if verified_row is None:
+                lines.append(
+                    f"  - **未完了または未検証** `{_rel(repo_root, submission['path'])}` "
+                    f"(job `{submission['job_id'] or '—'}`)"
+                )
+            else:
+                lines.append(
+                    f"  - **成功** job `{verified_row['job_id']}` "
+                    f"/ result `{_rel(repo_root, verified_row['result']['path'])}` "
+                    f"/ submission `{_rel(repo_root, submission['path'])}`"
+                )
 
     lines += [
         "",
         "## 3. 今何をやっているか",
         "",
+        f"- 未失効かつ非terminal jobのclaim: **{len(active)}件**",
+        f"- うち直近{RECENT_HEARTBEAT_MINUTES}分にheartbeat記録あり: **{len(heartbeat_recent)}件**",
+        "",
     ]
     if active:
-        lines.append(f"現在、非terminal jobに対する有効claimが **{len(active)}件** あります。")
-        lines.append("")
         for row in active[:10]:
+            job_payload = row["job"]["payload"]
             lines.append(
-                f"- [{row['kind']}] {_job_label(row['job'], row['job_id'])} — worker `{row['worker_id']}` / "
-                f"claim {_fmt_time(row['claimed_at'])} / lease expiry {_fmt_time(row['expires_at'])}"
+                f"- {_label(job_payload, row['job_id'])} [{row['job']['kind']}] "
+                f"/ worker `{row['worker_id']}`"
             )
+            lines.append(
+                f"  - claim: **{_fmt_time(row['claimed_at'])}** / "
+                f"heartbeat: **{_fmt_time(row['heartbeat_at'])}** / "
+                f"lease expiry: **{_fmt_time(row['expires_at'])}**"
+            )
+            lines.append(f"  - evidence: `{_rel(repo_root, row['claim_path'])}`")
     else:
-        lines.append("- **現在処理中と断定できる有効claimはありません。** 直近runが完了済みなら正常な待機状態です。")
-
-    next_jobs = [job for job in (queue.get("next_jobs") or []) if isinstance(job, dict)][:3]
-    lines += ["", "### 次に着手可能な候補", ""]
-    if next_jobs:
-        for job in next_jobs:
-            job_id = str(job.get("id") or job.get("job_id") or "—")
-            lines.append(f"- [{job.get('type', 'unknown')}] {_job_label(job, job_id)}")
-    else:
-        lines.append("- `next-jobs.json` に表示候補なし")
+        lines.append("- 現在処理中と判定できる有効claimはありません。")
 
     lines += [
         "",
-        "### 判定ルール",
+        "> claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。"
+        "Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。",
         "",
-        "- Research/Auditの『成功』は `jobs/*.json` の `status=completed` と `completed_at` を直接使用します。",
-        "- 通常workerの直近成功証拠は、同一jobについて terminal job・immutable submission・paperファイルを相互照合します。",
-        "- 『今やっている』は、lease未失効かつ対応jobが非terminalのclaimだけを表示します。完了jobに残った未失効claimは除外します。",
-        "- 探索workerはclaimを持たないため、最後に耐久保存されたimmutable discovery submissionを成功証拠として表示します。submission保存前のブラウズ中状態までは推測しません。",
+        "## このSTATUSが採用する証拠",
+        "",
+        "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
+        "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
+        "- **探索成功**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合します。",
+        "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
+        "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
         "",
         "---",
         "",
-        "自動生成物です。集計ロジックは `.survey/scripts/build_status_dashboard.py` にあります。",
+        "生成ロジック: `.survey/scripts/build_status_dashboard.py`",
         "",
     ]
     return "\n".join(lines)
@@ -369,11 +648,11 @@ def main() -> int:
     parser.add_argument("--repo-root", default=".")
     parser.add_argument("--output", default="STATUS.md")
     args = parser.parse_args()
-    root = Path(args.repo_root).resolve()
+    repo_root = Path(args.repo_root).resolve()
     output = Path(args.output)
     if not output.is_absolute():
-        output = root / output
-    output.write_text(build_dashboard(root), encoding="utf-8")
+        output = repo_root / output
+    output.write_text(build_dashboard(repo_root), encoding="utf-8")
     return 0
 
 
