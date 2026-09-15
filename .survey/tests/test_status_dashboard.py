@@ -17,9 +17,14 @@ def _load_module(repo_root: Path):
     return module
 
 
-def _write(path: Path, payload):
+def _write_json(path: Path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
+
+def _write_text(path: Path, text="x"):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
 
 
 def _install_script(repo: Path):
@@ -29,180 +34,133 @@ def _install_script(repo: Path):
 
 
 class StatusDashboardTests(unittest.TestCase):
-    def test_dashboard_aggregates_24h_and_current_state(self):
+    def test_recent_reading_uses_completed_jobs_not_aggregate_ledger(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)
             _install_script(repo)
-            _write(repo / ".survey/work-queue/next-jobs.json", {
-                "counts": {"research": {"completed": 144, "ready": 2, "blocked": 3, "deferred": 1}},
-                "next_jobs": [
-                    {"type": "research", "canonical_id": "arXiv:2609.1", "title": "Paper A", "priority": 90},
-                    {"type": "research", "canonical_id": "arXiv:2609.2", "title": "Paper B", "priority": 80},
-                ],
+            _write_json(repo / ".survey/work-queue/run-ledger.json", {
+                "entries": [{
+                    "run_key": "2026-09-15T18:30:00+09:00",
+                    "counts": {"research_completed": 0, "audit_completed": 0},
+                }]
             })
-            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
-                "cadence_runs": 24, "runs_since_maintenance": 14,
-                "maintenance_pending": False, "last_maintenance_status": "passed",
-                "last_consistency_status": "passed",
+            _write_json(repo / ".survey/work-queue/jobs/job-research-a.json", {
+                "id": "job-research-a",
+                "type": "research",
+                "canonical_id": "arXiv:2609.99999",
+                "title": "Direct Evidence Paper",
+                "status": "completed",
+                "completed_at": "2026-09-15T09:38:20+00:00",
+                "paper_path": "papers/inference/direct-evidence-paper.md",
+                "artifact_submission": ".survey/work-queue/submissions/research/attempt-a.json",
             })
-            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
-                {"run_key": "2026-09-11T14:30:00+09:00", "counts": {"research_completed": 2, "audit_completed": 1, "discovery_completed": 1, "blocked": 0, "new_jobs": 3, "new_papers": 2, "fallback_archived": 0}, "terminal_transitions": [], "new_jobs": [], "new_paper_ids": ["old1", "old2"]},
-                {"run_key": "2026-09-12T14:30:00+09:00", "counts": {"research_completed": 3, "audit_completed": 0, "discovery_completed": 1, "blocked": 1, "new_jobs": 2, "new_papers": 3, "fallback_archived": 1}, "terminal_transitions": [{"type": "research", "canonical_id": "arxiv:new", "title": "New Paper", "to": "completed"}], "new_jobs": [{"type": "research", "canonical_id": "arxiv:c1", "title": "Candidate 1", "status": "ready"}, {"type": "research", "canonical_id": "arxiv:c2", "title": "Candidate 2", "status": "ready"}], "new_paper_ids": ["n1", "n2", "n3"]},
-            ]})
-            _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
-                {"run_key": "2026-09-12T13:07:12+09:00", "round": "specialist-r1", "axis": "SSD階層", "candidate_count": 10, "duplicate_filtered_count": 4, "novel_candidate_count": 6, "accepted_count": 5},
-                {"run_key": "2026-09-12T14:06:41+09:00", "round": "specialist-r2", "axis": "MoE expert", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 4},
-            ]})
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 12, 6, 10, tzinfo=timezone.utc))
-            for expected in (
-                "# 運用ダッシュボード",
-                "未処理の論文候補（Research ready） | **2**",
-                "Research完了 | **3**",
-                "Repo収録 | **3**",
-                "探索評価候補 | **15**",
-                "重複除外 | **5**",
-                "Research候補採用 | **9**",
-                "33.3%",
-                "SSD階層",
-                "MoE expert",
-                "New Paper",
-                "Paper A",
-                "履歴不足",
-            ):
-                self.assertIn(expected, text)
+            _write_json(repo / ".survey/work-queue/submissions/research/attempt-a.json", {
+                "kind": "research",
+                "attempt_id": "attempt-a",
+                "job_id": "job-research-a",
+                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+            })
+            _write_text(repo / "papers/inference/direct-evidence-paper.md", "# Direct Evidence Paper")
+            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
 
-    def test_dashboard_prioritizes_operational_status_and_explains_terms(self):
+            module = _load_module(repo)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
+
+            self.assertIn("## 1. ここ数時間で論文読解・サーベイができているか", text)
+            self.assertIn("直近6時間 Research完了 | **1**", text)
+            self.assertIn("Direct Evidence Paper", text)
+            self.assertIn("job=completed / submission=存在 / paper=存在", text)
+            self.assertNotIn("直近6時間 Research完了 | **0**", text)
+
+    def test_terminal_job_never_counts_as_current_work_even_if_claim_unexpired(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)
             _install_script(repo)
-            _write(repo / ".survey/work-queue/next-jobs.json", {
-                "counts": {"research": {"completed": 210, "ready": 180, "blocked": 0, "deferred": 3}},
-                "next_jobs": [
-                    {"type": "research", "canonical_id": "arXiv:2609.1", "title": "Paper A", "priority": 90},
-                ],
+            _write_json(repo / ".survey/work-queue/jobs/job-research-done.json", {
+                "id": "job-research-done",
+                "type": "research",
+                "title": "Already Done",
+                "status": "completed",
+                "completed_at": "2026-09-15T09:37:00+00:00",
             })
-            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
-                "cadence_runs": 24,
-                "runs_since_maintenance": 12,
-                "maintenance_pending": False,
-                "last_maintenance_status": "passed",
-                "last_consistency_status": "passed",
+            _write_json(repo / ".survey/work-queue/claims/job-research-done.json", {
+                "job_id": "job-research-done",
+                "claim_id": "claim-done",
+                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+                "kind": "research",
+                "claimed_at": "2026-09-15T09:35:00+00:00",
+                "expires_at": "2026-09-15T11:05:00+00:00",
             })
-            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
-                {
-                    "run_key": "2026-09-13T12:30:00+09:00",
-                    "counts": {"research_completed": 2, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 2, "fallback_archived": 0},
-                    "terminal_transitions": [
-                        {"type": "research", "canonical_id": "arXiv:a", "title": "A", "to": "completed"},
-                    ],
+            _write_json(repo / ".survey/work-queue/jobs/job-research-live.json", {
+                "id": "job-research-live",
+                "type": "research",
+                "canonical_id": "arXiv:2609.12345",
+                "title": "Currently Reading",
+                "status": "ready",
+            })
+            _write_json(repo / ".survey/work-queue/claims/job-research-live.json", {
+                "job_id": "job-research-live",
+                "claim_id": "claim-live",
+                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+                "kind": "research",
+                "claimed_at": "2026-09-15T09:40:00+00:00",
+                "expires_at": "2026-09-15T11:10:00+00:00",
+            })
+            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
+
+            module = _load_module(repo)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
+
+            self.assertIn("## 3. 今何をやっているか", text)
+            self.assertIn("Currently Reading", text)
+            current_section = text.split("## 3. 今何をやっているか", 1)[1]
+            self.assertNotIn("Already Done", current_section)
+
+    def test_latest_task_proof_comes_from_immutable_submission_and_terminal_job(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            _install_script(repo)
+            _write_json(repo / ".survey/work-queue/jobs/job-research-proof.json", {
+                "id": "job-research-proof",
+                "type": "research",
+                "canonical_id": "arXiv:2601.17768",
+                "title": "LLM-42",
+                "status": "completed",
+                "completed_at": "2026-09-15T09:38:20+00:00",
+                "paper_path": "papers/inference/llm42.md",
+                "artifact_submission": ".survey/work-queue/submissions/research/attempt-proof.json",
+            })
+            _write_json(repo / ".survey/work-queue/submissions/research/attempt-proof.json", {
+                "kind": "research",
+                "attempt_id": "attempt-proof",
+                "job_id": "job-research-proof",
+                "worker_id": "scheduled-chat-paper-20260915T1830JST",
+            })
+            _write_text(repo / "papers/inference/llm42.md", "# LLM-42")
+            _write_json(repo / ".survey/work-queue/submissions/20260915T1808JST-discovery-specialist.json", {
+                "job_id": "job-discovery-proof",
+                "candidates": [{"canonical_id": "arXiv:2609.04895", "title": "Cache-Aware Router"}],
+                "discovery_stats": {
+                    "run_key": "2026-09-15T18:00:00+09:00",
+                    "round": "specialist-moe-cache-router-1",
+                    "axis": "2026年9月新着・MoE expert cache・cache-aware routing",
+                    "candidate_count": 1,
+                    "duplicate_filtered_count": 0,
                 },
-            ]})
-            _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
-                {"run_key": "2026-09-13T11:00:00+09:00", "round": "specialist-s1", "source_submission": "work-queue/submissions/discovery-specialist-s1.json", "axis": "SSD", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 2},
-            ]})
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
-
-            for expected in (
-                "## このページの見方",
-                "Research ready",
-                "まだ全文精読が終わっていない論文候補",
-                "Claim",
-                "workerが処理権を確保している状態",
-                "Audit",
-                "既存の論文ページや要約の品質点検",
-                "## 現在の状態",
-                "## 直近24時間の処理量",
-                "## 次に処理する候補",
-                "## 参考情報",
-                "### 直近の探索専用worker",
-                "### 探索専用workerの探索効率（直近24時間）",
-            ):
-                self.assertIn(expected, text)
-
-            self.assertLess(text.index("## 現在の状態"), text.index("## 直近24時間の処理量"))
-            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 次に処理する候補"))
-            self.assertNotIn("## 直近の通常worker", text)
-            self.assertLess(text.index("## 次に処理する候補"), text.index("## 参考情報"))
-            self.assertLess(text.index("## 参考情報"), text.index("### 探索専用workerの探索効率（直近24時間）"))
-
-    def test_dashboard_separates_specialist_discovery_and_groups_it_by_hourly_run(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = Path(tmp)
-            _install_script(repo)
-            _write(repo / ".survey/work-queue/next-jobs.json", {
-                "counts": {"research": {"completed": 206, "ready": 176, "blocked": 0, "deferred": 3}},
-                "next_jobs": [],
             })
-            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
-                "cadence_runs": 24, "runs_since_maintenance": 9,
-                "maintenance_pending": False, "last_maintenance_status": "passed",
-                "last_consistency_status": "passed",
-            })
-            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
-                {
-                    "run_key": "2026-09-13T10:30:00+09:00",
-                    "counts": {
-                        "research_completed": 2,
-                        "audit_completed": 0,
-                        "discovery_completed": 4,
-                        "blocked": 0,
-                        "new_jobs": 7,
-                        "new_papers": 2,
-                        "fallback_archived": 0,
-                    },
-                    "terminal_transitions": [
-                        {"type": "research", "canonical_id": "arXiv:a", "title": "A", "to": "completed"},
-                        {"type": "research", "canonical_id": "arXiv:b", "title": "B", "to": "completed"},
-                    ],
-                    "new_jobs": [],
-                    "new_paper_ids": ["arXiv:a", "arXiv:b"],
-                },
-            ]})
-            _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
-                {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s1", "source_submission": "work-queue/submissions/discovery-specialist-s1.json", "axis": "SSD", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
-                {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s2", "source_submission": "work-queue/submissions/discovery-specialist-s2.json", "axis": "MoE", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 3},
-                {"run_key": "2026-09-13T09:57:59+09:00", "round": "specialist-s2b", "source_submission": "work-queue/submissions/discovery-specialist-s2b.json", "axis": "Runtime", "candidate_count": 3, "duplicate_filtered_count": 1, "novel_candidate_count": 2, "accepted_count": 1},
-                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s3", "source_submission": "work-queue/submissions/discovery-specialist-s3.json", "axis": "Scheduling", "candidate_count": 6, "duplicate_filtered_count": 4, "novel_candidate_count": 2, "accepted_count": 2},
-                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s4", "source_submission": "work-queue/submissions/discovery-specialist-s4.json", "axis": "SpecDecode", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 3},
-                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s5", "source_submission": "work-queue/submissions/discovery-specialist-s5.json", "axis": "Hierarchical memory", "candidate_count": 7, "duplicate_filtered_count": 2, "novel_candidate_count": 5, "accepted_count": 4},
-                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s6", "source_submission": "work-queue/submissions/discovery-specialist-s6.json", "axis": "Network", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
-            ]})
+            _write_json(repo / ".survey/work-queue/next-jobs.json", {"next_jobs": []})
+
             module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 1, 50, tzinfo=timezone.utc))
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc))
 
-            self.assertIn("未処理の論文候補（Research ready） | **176**", text)
-            self.assertNotIn("176 / 50", text)
-            self.assertNotIn("## 直近の通常worker", text)
-            self.assertIn("Research完了 | **2**", text)
-
-            self.assertIn("### 直近の探索専用worker", text)
-            self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)
-            self.assertIn("探索round | **4**", text)
-            self.assertIn("評価候補 | **22**", text)
-            self.assertIn("重複除外 | **8**", text)
-            self.assertIn("Novel候補 | **14**", text)
-            self.assertIn("Research候補採用 | **11**", text)
-            self.assertIn("探索専用worker run（毎時枠） | **2**", text)
-            self.assertIn("探索専用worker round（stats観測） | **7**", text)
-            self.assertIn("### 直近5探索専用worker run", text)
-            self.assertIn("2026-09-13T10:00:00+09:00 — 4 round", text)
-            self.assertIn("2026-09-13T09:00:00+09:00 — 3 round", text)
-            self.assertNotIn("2026-09-13T09:57:59+09:00 — 1 round", text)
-
-    def test_dashboard_warns_when_candidate_stock_is_low(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = Path(tmp)
-            _install_script(repo)
-            _write(repo / ".survey/work-queue/next-jobs.json", {"counts": {"research": {"completed": 0, "ready": 1, "blocked": 0, "deferred": 0}}, "next_jobs": []})
-            _write(repo / ".survey/work-queue/maintenance-cycle.json", {"maintenance_pending": False})
-            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": []})
-            _write(repo / ".survey/work-queue/discovery-state.json", {"history": []})
-            module = _load_module(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 12, 6, 10, tzinfo=timezone.utc))
-            self.assertIn("CRITICAL", text)
-            self.assertIn("candidate在庫が15未満", text)
+            self.assertIn("## 2. 直近タスクが成功している証拠", text)
+            self.assertIn("18:30 通常worker", text)
+            self.assertIn("scheduled-chat-paper-20260915T1830JST", text)
+            self.assertIn("LLM-42", text)
+            self.assertIn("完了job + immutable submission + paper", text)
+            self.assertIn("18:00 探索worker", text)
+            self.assertIn("MoE expert cache", text)
+            self.assertIn("immutable discovery submission", text)
 
 
 if __name__ == "__main__":
