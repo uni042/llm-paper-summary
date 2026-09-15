@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d2c370dfa5a7fe8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.08800",
+      "title": "MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm",
+      "source_url": "https://arxiv.org/abs/2601.08800",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2601.08800-mixserve-fused-ar-a2a-hybrid-parallelism.md",
+      "priority": 86,
+      "reason": "MoE distributed servingのTP all-reduceとEP all-to-allをhardware/network条件に応じ自動選択し、intra-node ARとinter-node A2Aを融合・overlapするhybrid parallelismを提案。DeepSeek-R1/Qwen3でTTFT最大3.8倍、throughput最大50.3%改善し、communication-aware MoE servingとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2607.23099",
+      "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
+      "source_url": "https://arxiv.org/abs/2607.23099",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md",
+      "priority": 84,
+      "reason": "expert routingのtoken数だけでなく分布skewがfused-MoE kernel効率を左右することをモデル化し、GPU-resident runtimeがlive routing histogramからnear-optimal kernelを選択する。DeepSeek-V3/Kimi K2でfused-MoE latencyをgeomean 1.16/1.29倍改善し、routing-aware kernel dispatchの実装研究として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2605.17889-cox-moe-cpu-gpu-coexecution.md",
+      "priority": 85,
+      "reason": "micro-batchingでexpert GEMMのoperational intensityが落ちる問題を、expert execution coalescingとAMX CPU/GPU協調、頻出expertの静的GPU配置で解く。FlexGen比最大7.1倍、MoE-Lightning比2.4倍throughputを報告し、CPU計算を単なるoffload先でなくco-execution資源として使う点が特徴。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-16T06:00:00+09:00",
+    "round": "specialist-moe-comm-kernel-14",
+    "axis": "MoE all-to-all通信・routing-aware kernel・CPU/GPU co-execution",
+    "query_summary": "MoE systemから通信/kernelへ細分化し、AR-A2A融合hybrid parallelism、routing skew対応GPU kernel dispatch、AMX CPU/GPU expert co-executionを評価。既知のSpeculating Expertsは重複として除外した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2603.19289"],
+    "next_axis_hint": "新着2609のattention architecture/system co-design、linear/subquadratic attention servingへ軸を移す",
+    "empty_round_reason": null
+  }
+}
