@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T22:30:11.562808+00:00",
+  "updated_at": "2026-09-15T22:37:15.044687+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T22:30:11.562808+00:00",
+      "last_recorded_at": "2026-09-15T22:37:15.044687+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 90,
+        "research_completed": 91,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34902464996:1",
-          "recorded_at": "2026-09-14T22:07:24.693328+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34902464996",
-            "run_attempt": "1",
-            "source_sha": "06bcf7d30d18f25d7d46461ab21f1886ba3d6536"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34902524938:1",
           "recorded_at": "2026-09-14T22:11:04.814869+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35031261367",
             "run_attempt": "1",
             "source_sha": "9b2648604da97ffc6107eaae88e3eaa024c39093"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35031849051:1",
+          "recorded_at": "2026-09-15T22:37:15.044687+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35031849051",
+            "run_attempt": "1",
+            "source_sha": "544c001067c411e38ff8f0d216bce77c2c2522df"
           },
           "signals": [
             "research_completed"
@@ -20544,6 +20544,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.29069",
           "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ea263cc3cccbe57a",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09787",
+          "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints",
           "from": "ready",
           "to": "completed"
         }

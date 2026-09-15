@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 07:37:06 JST**
+> 自動生成: **2026-09-16 07:37:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **5** | **2** | **3** | **1** | **0** | — |
+| Research | **7** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **4** | **17** | **1** | **16** | **0** | **0** | **21** |
-| 合計 | **10** | **22** | **3** | **19** | **1** | **0** | **21** |
+| 合計 | **11** | **22** | **3** | **19** | **0** | **0** | **21** |
 
 - 最新Discovery runの耐久探索round: **17件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -24,6 +24,11 @@
 
 ### Research
 
+- **09-16 07:37:12 JST** [research] `arXiv:2609.09787` — Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints
+  - job: `.survey/work-queue/jobs/job-research-ea263cc3cccbe57a.json`
+  - result: `.survey/work-queue/results/research/attempt-bbb785cdc85c31e832c84d96.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bbb785cdc85c31e832c84d96.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md`
 - **09-16 07:30:07 JST** [research] `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework
   - job: `.survey/work-queue/jobs/job-research-c6ac42b8bcec8aab.json`
   - result: `.survey/work-queue/results/research/attempt-d53062f6ce8af0e476180ce0.json` (`ok=true`)
@@ -154,10 +159,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.09787` — Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints / worker `work-library-repair-20260916`
-  - claim: **09-16 07:36:05 JST** / heartbeat: **—** / lease expiry: **09-16 19:36:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ea263cc3cccbe57a.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
