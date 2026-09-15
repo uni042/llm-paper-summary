@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 09:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 09:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -51,7 +51,7 @@
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 09:30 JST** |
+| :30 通常worker 直近lease活動 | **09-15 09:32 JST** |
 | :00 補助worker 直近lease活動 | **09-15 07:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **0** |
 | 直近24h Research完了（:00 補助worker） | **0** |
@@ -97,7 +97,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
+- P94 `arXiv:2607.13095` — Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
