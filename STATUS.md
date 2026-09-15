@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 06:03:35 JST**
+> 自動生成: **2026-09-16 06:04:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,10 +13,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **9** | **0** | **9** | **0** | **0** | **14** |
-| 合計 | **4** | **14** | **2** | **12** | **0** | **0** | **14** |
+| Discovery | **4** | **11** | **0** | **11** | **0** | **0** | **17** |
+| 合計 | **4** | **16** | **2** | **14** | **0** | **0** | **17** |
 
-- 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -78,8 +78,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 06:00 JST**
-- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **9件** / 候補: **14件**
-- 探索軸: 新着KV圧縮・制約適応ポリシー / multi-round agent workload・P/D分離・適応resource allocation / agentic serving・session scheduling・agent memory KV reuse / OS/CUDA VMM型KV memory reclamation・KV restoration scheduling / MoE expert paging・KVとのVRAM競合・PCIe I/O律速 / system-aware KV infrastructure survey・隣接研究マッピング / P/D分離・network-aware KV transfer・mixed precision / speculative decoding・production serving負荷・性能モデル / continuous batching・iteration bubble・kernel-level runtime modeling
+- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **17件**
+- 探索軸: 新着KV圧縮・制約適応ポリシー / multi-round agent workload・P/D分離・適応resource allocation / agentic serving・session scheduling・agent memory KV reuse / OS/CUDA VMM型KV memory reclamation・KV restoration scheduling / MoE expert paging・KVとのVRAM競合・PCIe I/O律速 / system-aware KV infrastructure survey・隣接研究マッピング / P/D分離・network-aware KV transfer・mixed precision / speculative decoding・production serving負荷・性能モデル / continuous batching・iteration bubble・kernel-level runtime modeling / hardware-aware compression/kernel fusion・large-scale serving optimal control / LoRA・inference/fine-tuning co-serving・idle GPU利用
 - round `specialist-adaptive-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0607JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着KV圧縮・制約適応ポリシー
@@ -115,6 +115,10 @@
 - round `specialist-runtime-batching-9` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T0631JST-discovery-specialist-runtime-batching-9.json`
   - 探索軸: continuous batching・iteration bubble・kernel-level runtime modeling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-hardware-control-10` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T0634JST-discovery-specialist-hardware-control-10.json`
+  - 探索軸: hardware-aware compression/kernel fusion・large-scale serving optimal control
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
