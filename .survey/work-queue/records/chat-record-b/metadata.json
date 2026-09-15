@@ -4,10 +4,25 @@
   "slot": "metadata",
   "attempt_id": "attempt-043db24bbe0099ae5a65a1e3",
   "job_id": "job-research-3540240bb76e82ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-043db24bbe0099ae5a65a1e3",
-    "worker_id": "scheduled-chat-paper-20260915T1430JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2507.08045", "arxiv_id": "2507.08045", "doi": "10.48550/arXiv.2507.08045", "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "title": "Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing",
+    "summary": "Krulは、休眠したマルチターン対話を再開するときに履歴全体のKVキャッシュを再計算または全量ロードするコストを削減する推論システムである。既存の層間KV共有は後段の隣接層など固定した圧縮組合せを全対話へ適用するため、対話ごとに異なる注意パターンを無視して生成品質を落とし得る。Krulは将来入力に敏感な層を圧縮対象から事前除外し、残る入力非依存層について対話ごとの注意類似度から共有層ペアを動的選択する。注意類似度計算はprefillの大きな注意重みをCPUへ非同期退避して計算し、decodeでは最新トークン分だけGPUで逐次計算する。復元時は圧縮によって層ごとに不均衡になった再計算量とロード量をピラミッド状に配分し、複数CUDAストリームで重畳する。4×A100 80GB、128GB DRAM、PCIe Gen4環境でLLaMA-7B/30B、Qwen1.5-7B、Qwen2-72Bを評価し、平均精度損失1%未満を維持しながら既存方式比TTFTを1.28〜2.68倍高速化し、完全KV保存比で平均2.35倍のKV容量削減を報告する。",
+    "list_summary": "対話ごとの注意類似度から層間KV共有を動的選択し、prefill/decodingで注意類似度計算をCPU/GPUへ分担、圧縮後の再計算とロードを層間パイプラインで重畳してマルチターン状態復元を高速・省容量化する。",
+    "authors": ["Junyi Wen", "Junyuan Liang", "Zicong Hong", "Wuhui Chen", "Ting Cai", "Zibin Zheng"],
+    "authors_affiliations": "Sun Yat-sen University、Hong Kong University of Science and Technology、Peng Cheng Laboratory、Hubei University of Technology。",
+    "published": "2025-07-10", "publication": "arXiv:2507.08045v2", "publication_type": "プレプリント", "publication_status": "arXiv v2 (2025-08-26)。本文にはPVLDB書式のプレースホルダーが残っており、一次資料から確定した査読済み採録情報は確認できない。",
+    "lineage": "kv-cache-memory-management", "topics": ["マルチターン対話", "KVキャッシュ復元", "層間KV共有", "KV圧縮", "再計算・ロード重畳", "注意類似度"],
+    "importance": "高。KVを単純に保存・再計算する二択ではなく、対話依存の層間共有で保存量を減らし、その圧縮構造を復元スケジューリングへ接続するため、外部KV階層・再計算・圧縮を統合する研究として比較価値が高い。",
+    "hardware_evaluation": "4×NVIDIA A100 80GB、128GB DRAM、10TB SSD、PCIe Gen4。", "hardware_details": "PyTorch/Transformers上で複数CUDAストリームを用い、CPU-GPU間KVロードと再計算を重畳する。Qwen2-72Bのみ8-bitモデル量子化を使用。",
+    "quality_effect": "LongBenchで動的圧縮後の生成品質を評価し、全体として平均精度損失1%未満を報告する。固定圧縮より対話依存の共有層選択で品質低下を抑える。",
+    "storage_targets": ["GPU HBM", "CPU DRAM", "SSD"], "bottlenecks": ["休眠対話KVのCPU容量", "CPU-GPU KVロード", "履歴prefill再計算", "注意重み保存", "圧縮後の再計算・ロード不均衡"],
+    "evidence_locations": ["§1", "§2.2-2.3", "§4-6", "§7", "§8.1-8.6", "Figures 13-21", "Table 4"],
+    "references": [], "references_total": null, "references_checked_at": "2026-09-15", "references_source": "arXiv v2 reference sectionを確認。repository内被引用関係の構造化は後段citation pipelineへ委ねる。",
+    "source": "https://arxiv.org/abs/2507.08045", "sources": ["https://arxiv.org/abs/2507.08045", "https://arxiv.org/pdf/2507.08045"], "code": null,
+    "implementation": "Python/PyTorchとHugging Face Transformersを基盤に実装。複数CUDA stream、CPU非同期類似度計算、torch.cdist、CPU-GPU KV prefetch、torch.catによる復元KV統合を使用する。本文のartifact URLはプレースホルダーで、一次資料から有効な公開コードURLは確認できない。",
+    "implementation_status": "論文内で試作実装を説明するが、有効な公開コードURLは一次資料から確認できない。", "evaluation_type": "実機測定", "last_checked": "2026-09-15", "last_audited": null, "audit_version": 0
+  },
+  "reservation": {"claim_id": "claim-043db24bbe0099ae5a65a1e3", "worker_id": "scheduled-chat-paper-20260915T1430JST", "worker_kind": "scheduled_chat"}
 }
