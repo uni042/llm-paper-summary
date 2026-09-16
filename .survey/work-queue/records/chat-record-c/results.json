@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ba98832b682051fbcdfa1c88",
-  "job_id": "job-research-d56f46109a6995f4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ba98832b682051fbcdfa1c88",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ba98832b682051fbcdfa1c88","job_id":"job-research-d56f46109a6995f4","data":{"overview":"人間承認のような長い停止では、KVを多く保持すること自体が目的ではなく、能動要求へ容量を返しつつ復帰時の再計算を必要な範囲だけ避けることが重要になる。強制HBM保持は72停止文脈で能動goodputを41%下げる一方、追い出し後の復帰TTFTは約10倍になる。提案制御器は停止時にHBMからDRAMへ移し、ホスト混雑時だけ待ち分布に応じて期限付き破棄を選ぶことで、vLLMや秒単位停止向け方策より高い能動goodputを得る。","key_results":[{"metric":"HBM residencyの能動goodput費","value":"N=72の強制保持でgoodput 41%低下","baseline":"無改造vLLMは圧力下で停止KVの大半を追い出しgoodputをほぼ維持","condition":"4×H100 NVL、48能動クライアント飽和","interpretation":"停止要求が生成していなくてもKV占有は実際の能動サービング容量を消費し、長い待ちでは保持時間に比例して機会費用が積み上がる。"},{"metric":"復帰TTFT","value":"resident 66〜75ms、evicted 687〜705msで約10倍","baseline":"HBM保持対追い出し","condition":"停止文脈復帰","interpretation":"破棄は容量を完全に返す代わりに私有接尾辞の再プリフィルを必要とするため、保持費と復帰費を同一尺度で比較する必要がある。"},{"metric":"能動要求goodput改善","value":"vLLM系より23〜51%、MORIより22〜29%、Continuumより41〜52%改善","baseline":"unmodified vLLM / host-offload vLLM / MORI / Continuum","condition":"平均1800秒の人間尺度待ち、2λcritライブサービング","interpretation":"ホスト容量を単に埋めるのではなく、負荷と再計算費から保持価値を価格付けすることで、復帰用KVと能動容量の配分を改善する。"},{"metric":"混合待ちでの保持率とgoodput","value":"提案17.6% retained、1.07 req/s。MORI 21.9% retained、0.83 req/s","baseline":"MORI","condition":"短待ち+長待ち混合、2λcrit","interpretation":"保持率が高いほど良いわけではなく、長期停止KVを期限切れにして容量を返す方が能動処理能力を高められる。"}],"negative_results":"cpu_ttlはすべての待ち分布で有利ではない。短時間復帰が少ない条件では期限切れが余計な再計算を増やし、校正結果は無期限host-retainを選ぶ。実験環境ではcpu_ttlがhost-retainを上回る境界がP(W≤t*)=0.39付近であり、待ち分布が変化すれば枝選択も変わる。ホスト容量がλcrit以下で十分空いている領域では混雑価格が0になり、負荷依存期限の効果はほぼない。","interpretation":"分〜時間の停止では1秒程度の復帰遅延は待ち全体に比べ小さい一方、HBMを30分保持する機会費用は継続して増えるため、秒単位ツール待ち向けの保持優先方策から最適点が移る。CPU DRAMは中間層として有効だが有限なので、混雑時には『このスロットを保持することで将来他要求を捨てる費用』まで価格へ入れる必要がある。待ち時間を個別予測せず分布の体制だけ校正することで、予測器への依存を減らしている。","quality_impact":"KVを近似・圧縮せず、保持場所または再計算の有無だけを変えるため生成品質への直接影響はない。"},"reservation":{"claim_id":"claim-ba98832b682051fbcdfa1c88","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
