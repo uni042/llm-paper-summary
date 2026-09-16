@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6a96914bc2a73e1240e735e8",
+  "attempt_id": "attempt-44002611be590dff9f7593f6",
   "job_id": "job-research-c5a47af1c9e3acf3",
   "data": {
     "overview": "GHとAGHはいずれもAzure trace較正workloadで1秒未満に実行可能解を生成する。AGHは厳密MILPが完了するinstanceでは最適costへ数%以内に近づき、大規模instanceでは600秒制限に達するsolverに対して260倍超のplanning speedupを示す。最大1.5倍のout-of-sample parameter inflationでもAGHはcostを安定させSLO violationを制御する一方、solver由来の固定配置は急速に劣化する。rolling再最適化ではAGHのstatic plan自体にheadroomがあり、再最適化の主効果は平均cost削減よりpeak-window cost平滑化だった。",
@@ -45,7 +45,7 @@
     "interpretation": "配置計画では最適性そのものより、相互依存するSLO制約を構築中から守るfeasibility-first設計が、秒以下のplanningと需要変動へのheadroomを両立する鍵になる。"
   },
   "reservation": {
-    "claim_id": "claim-6a96914bc2a73e1240e735e8",
+    "claim_id": "claim-44002611be590dff9f7593f6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
