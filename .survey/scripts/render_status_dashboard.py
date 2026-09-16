@@ -161,6 +161,21 @@ def _terminally_rejected_submission_paths(
     return rejected
 
 
+def _successfully_recovered_submission_paths(
+    repo_root: Path,
+    verified_discovery: list[dict[str, Any]],
+) -> set[Path]:
+    """Return historical submissions resolved by a verified immutable replay."""
+    recovered: set[Path] = set()
+    for row in verified_discovery:
+        replay_payload = row["submission"]["payload"]
+        source_value = replay_payload.get("recovered_from_submission")
+        source_path = evidence._resolve_repo_path(repo_root, source_value)
+        if source_path is not None and source_path.is_file():
+            recovered.add(source_path)
+    return recovered
+
+
 def _direct_evidence_metrics(
     repo_root: Path,
     *,
@@ -258,11 +273,16 @@ def _direct_evidence_metrics(
         submissions,
         results,
     )
+    successfully_recovered_submission_paths = _successfully_recovered_submission_paths(
+        repo_root,
+        verified_discovery,
+    )
     orphan_submission_paths = {
         row["path"]
         for row in submissions
         if (not row["job_id"] or row["job_id"] not in jobs)
         and row["path"] not in terminally_rejected_submission_paths
+        and row["path"] not in successfully_recovered_submission_paths
         and not (
             row["kind"] == "discovery"
             and _discovery_round_identity(row) is not None
