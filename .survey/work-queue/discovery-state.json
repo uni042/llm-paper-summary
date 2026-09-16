@@ -1,36 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T21:08:05+00:00",
-  "last_run_key": "2026-09-17T06:00:00+09:00",
-  "last_round": "specialist-runtime-communication-2",
+  "updated_at": "2026-09-16T22:05:07+00:00",
+  "last_run_key": "2026-09-17T07:00:00+09:00",
+  "last_round": "specialist-scheduling-memory-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 32,
-  "last_empty_round_reason": "collectorの未評価10件を品質評価したが、LLM inference system scopeとsystem-level contributionの両方を満たす候補がなかった",
+  "consecutive_empty_rounds": 33,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T19:30:00+09:00",
-      "round": "normal-worker-critical-buffer-network-runtime-2",
-      "axis": "network-data-movement-pnm-cross-dc-memory-dynamics",
-      "query_summary": "Candidate inventory remained below the critical watermark after the heterogeneous-GPU round. Rotated to disaggregated data movement, GPU-PNM mixed-length placement, cross-datacenter prefill/KV transport, and memory-congestion dynamics. Exact arXiv-ID and repository-title searches found no existing entries for the four selected candidates.",
-      "candidate_count": 9,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 4,
-      "accepted_count": 4,
-      "duplicate_ratio": 0.5555555555555556,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2605.03375",
-        "arXiv:2607.16892",
-        "arXiv:2607.26475",
-        "arXiv:2607.26491"
-      ],
-      "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately.",
-      "source_submission": "work-queue/submissions/20260912T2018JST-discovery-job-4649dafe5fe3736a.json"
-    },
     {
       "run_key": "2026-09-12T20:00:00+09:00",
       "round": "specialist-critical-buffer-runtime-storage-moe-1",
@@ -6709,6 +6688,33 @@
       ],
       "next_axis_hint": "既収録重要論文のforward citationと2026年夏のKV restoration・disaggregated serving周辺へ移り、新着keyword検索だけを反復しない",
       "source_submission": "work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    {
+      "run_key": "2026-09-17T07:00:00+09:00",
+      "round": "specialist-scheduling-memory-1",
+      "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
+      "query_summary": "直近の2026-09新着runtime軸を反復せず、2025年のserving scheduler、CPU/GPU coupling、PIM disaggregation、memory-aware batchingへ検索窓を移動。canonical arXiv shardで既収録をcandidate評価前に除外し、provider検索窓が返した未収録6件を評価した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2502.12574",
+        "arXiv:2505.10259",
+        "arXiv:2502.05370",
+        "arXiv:2509.17863",
+        "arXiv:2504.11320",
+        "arXiv:2511.14510",
+        "arXiv:2504.07494",
+        "arXiv:2507.06608"
+      ],
+      "next_axis_hint": "採用候補のforward/backward citationと、CPU serving・network/topology-aware servingへ独立軸を移す。2025 scheduling keywordの同一検索窓は直ちに反復しない。",
+      "source_submission": "work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
     }
   ],
   "axes": {
@@ -10902,6 +10908,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "既収録重要論文のforward citationと2026年夏のKV restoration・disaggregated serving周辺へ移り、新着keyword検索だけを反復しない"
+    },
+    "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation": {
+      "last_run_key": "2026-09-17T07:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "採用候補のforward/backward citationと、CPU serving・network/topology-aware servingへ独立軸を移す。2025 scheduling keywordの同一検索窓は直ちに反復しない。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
