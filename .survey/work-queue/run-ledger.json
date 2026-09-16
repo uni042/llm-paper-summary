@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T07:10:43.061120+00:00",
+  "updated_at": "2026-09-16T07:12:12.991894+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T07:10:43.061120+00:00",
+      "last_recorded_at": "2026-09-16T07:12:12.991894+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 135,
+        "research_completed": 136,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35005017381:1",
-          "recorded_at": "2026-09-15T18:04:54.183213+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35005017381",
-            "run_attempt": "1",
-            "source_sha": "57e9367928a2b80a7be89921c3eeeddec30024b6"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35005197674:1",
           "recorded_at": "2026-09-15T18:08:18.141241+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35067194144",
             "run_attempt": "1",
             "source_sha": "b850ddd97da17ec05a222f81a7692156c0dfb1f5"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35067316877:1",
+          "recorded_at": "2026-09-16T07:12:12.991894+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35067316877",
+            "run_attempt": "1",
+            "source_sha": "b009bc16144b058d451369efb64bf2ae5aac2403"
           },
           "signals": [
             "research_completed"
@@ -21165,6 +21165,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.11356",
           "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a8b5b2b70328c222",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04748",
+          "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
           "from": "ready",
           "to": "completed"
         }
