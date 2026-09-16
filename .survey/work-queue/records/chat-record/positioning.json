@@ -2,49 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-935f2123fd1379422e5152c0",
-  "job_id": "job-research-f9d44874a1b28506",
+  "attempt_id": "attempt-ba99df60a0f0fdf529fc1f2a",
+  "job_id": "job-research-21d58015b4f64394",
   "data": {
-    "positioning": "THInferはGPU向け汎用サービング基盤ではなく、天河MT-3000という低DDR帯域・明示管理型オンチップ記憶・多数クラスタを持つ計算機へLLM推論を適合させるハードウェア協調設計に位置する。vLLMやTensorRT-LLMが高帯域GPU上のバッチ化・メモリ管理を磨くのに対し、THInferは演算子のデータ流からKV移送、プリフィル/デコード資源分割までを同じ帯域制約から設計する。",
-    "differences": "FlexGenのようなCPU/GPUオフロードは容量不足を異種メモリ間転送で解くが、THInferはモデルを同種のMT-3000クラスタ群へ分散し、DDR→GSM→AM/SMの局所再利用とクラスタ間帯域集約を中心にする。DistServeのようなプリフィル・デコード分離に近い発想を持つ一方、完全な非同期分離ではKVが蓄積する点を問題視し、有限バッファと逆圧を挟むP-B-Dへ変更する。またFlashAttentionをそのまま採用せず、MT-3000のGSMと放送機構に合わせたMT Attentionへ置き換える。",
+    "positioning": "LLM推論のエンドツーエンドbenchmarkとGPUマイクロアーキテクチャprofilingの間を埋める方法論研究。vLLM/FA3/cuBLASLtという実スタックを、役割・regime・shapeごとにNCU counterへ落として診断する。",
+    "differences": "一般的なSM utilizationやMFU一値の報告に対し、異なる分母を持つ時間利用率、空間coverage、occupancy、stall、GMMA断片、wave、L2を同一呼出しで併記する。特にHopper m64断片の有用行充填をdecode固有の構造上限として切り出す。",
     "relation_to_prior_work": [
       {
-        "work": "vLLM / TensorRT-LLM / DeepSpeed-Inference",
-        "difference": "GPUの高帯域統合メモリを前提にした汎用基盤に対し、120GB/s級DDRと分散オンチップ記憶を持つMT-3000向けに演算子・融合・通信・並列配置を共同設計する。"
+        "work": "vLLM / FlashAttention-3 performance studies",
+        "difference": "throughput/latencyだけでなくper-role NCU counterを追い、どのマイクロアーキテクチャ機構が時間を作るかへ分解する。"
       },
       {
-        "work": "FlexGen / heterogeneous offloading",
-        "difference": "CPU・GPU・ストレージ間へ重みやKVを退避して容量を補うのではなく、MT-3000クラスタ群の局所メモリと集約帯域を使い、通信と容量を制約式で配分する。"
+        "work": "MFU / SM utilization reporting",
+        "difference": "一つの利用率ではなくactive-SMとdevice-wide、64-warp上限とkernel capなど分母を明示して誤読を防ぐ。"
       },
       {
-        "work": "DistServe / prefill-decode disaggregation",
-        "difference": "プリフィルとデコードの異種律速を分離する点は共通するが、THInferは中間に容量上限付きKVバッファを置き、逆圧でプリフィルの先行量を制限してKV蓄積を防ぐ。"
+        "work": "roofline analysis",
+        "difference": "compute/memory SOL比とL2 fit、stall counterを実測し、B≤8 decodeが帯域側に留まることを役割別に確認する。"
       },
       {
-        "work": "FlashAttention",
-        "difference": "一般GPU向けI/O認識注意を直接移植せず、短系列ではオンチップ融合、長系列ではGSMへブロック保持するMT Attentionを設計し、MT-3000上で26～36%低い遅延を報告する。"
+        "work": "kernel tiling optimization",
+        "difference": "tile探索で直せるwave損失と、ISA固定m64でtileでは直せないfragment fillを分離する。"
       }
     ],
     "strengths": [
-      "演算子、グラフ、システムの三層を実装し、除去実験で各段の寄与を分離している。",
-      "演算ピーク合わせだけでなく総メモリ帯域合わせも行い、帯域増加で処理量がほぼ比例することを確認している。",
-      "7Bから70Bまで同一設計を評価し、GPU比較構成がメモリ不足になる70Bでも実行可能性を示す。",
-      "線形演算と注意演算の単体測定を併用し、エンドツーエンド改善を低水準機構へ結び付けている。"
+      "raw NCU counterまたは明示式へ各指標を固定し再現可能性を高める。",
+      "4つのdense/MoEモデルとcold/warm/decodeを同一H100で比較する。",
+      "独立counter群を三角測量して診断を裏付ける。",
+      "B=32追加実測でcompute crossover外挿を検証する。",
+      "負荷形状から具体的なserving/kernel/architectureレバーへ結び付ける。"
     ],
     "limitations": [
-      "MT-3000という特殊な計算機一種類だけの評価であり、他の多数コアCPU/DSP/NPUへ同じ効果が移るかは未検証である。",
-      "Llama2と合成固定長プロンプト中心で、QwenやDeepSeekへの適用可能性は主張されるが実測されていない。",
-      "比較構成は演算ピークまたは帯域を合わせているが、装置数、消費電力、費用、実装成熟度を同時に揃えた総合比較ではない。",
-      "TTFT、TPOT、P99遅延、実到着分布、長い生成、複数利用者などオンラインサービングの主要指標は評価されていない。",
-      "FP16で正規化をFP32集約する設計だが、生成品質・精度の定量評価は示されていない。",
-      "本文は約1万行のC++実装を記述するが、arXivページおよび本文から公開コードURLを確認できず、再現性は公開GPU基盤より限定される。"
+      "単一H100 NVL、TP=1、BF16に限定される。",
+      "FP8、tensor parallel、他H100 SKUではtile・通信・帯域比が変わる。",
+      "warm prefillは≥99% prefix hitの合成endpointで中間hit率を測っていない。",
+      "launch overhead 5µsは解析仮定でhost/driver依存。",
+      "L2 working-set式はscratch/tile stagingを省く一次近似で実DRAM bytesとの差が約10～20%ある。"
     ],
-    "implementation_status": "MT-3000向けTHInferを純C++とインラインアセンブリで約1万行実装し、hthreads、MPI、FP16演算子、非同期DMA、KV移送、P-B-D、混合並列を実機評価している。論文時点で公開リポジトリURLは確認できない。",
-    "research_positioning": "階層メモリ・帯域認識推論の系統では、SSD/CPUへのオフロードとは異なり、低帯域アクセラレータ群を多数束ねて局所再利用と総帯域を引き出す設計例として重要である。特に『演算ピークではなくメモリ帯域を合わせると処理量がほぼ比例する』という評価は、デコードの性能モデルと資源配置を考える比較材料になる。",
-    "repository_fit": "推論システムのその他系統に適合し、階層メモリ、通信最適化、プリフィル/デコード分離、ハードウェア協調カーネルを横断する。GPU中心のサービング研究に対し、主記憶帯域が極端に低い多数コア機で何を変える必要があるかを示す対照例になる。"
+    "implementation_status": "vLLM 0.16 + FA3 + cuBLASLtをNCU 2024.3で計測し、生.ncu-repからstall/tensor/FA split CSVを再生成する分析pipeline。raw NCU/Nsysと派生CSV公開を予定。",
+    "research_positioning": "新しい推論アルゴリズムではなく、GPU利用率の症状から原因と適切な最適化層を特定する診断契約。Hopper向け推論最適化の評価基盤として価値がある。",
+    "repository_fit": "その他推論システム系統の性能分析・評価方法論として適合し、vLLM、FA3、量子化、batching、PD分離等の性能主張を監査する際のハードウェア根拠を提供する。"
   },
   "reservation": {
-    "claim_id": "claim-935f2123fd1379422e5152c0",
+    "claim_id": "claim-ba99df60a0f0fdf529fc1f2a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
