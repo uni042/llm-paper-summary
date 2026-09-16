@@ -8,47 +8,29 @@
     "canonical_id": "arXiv:2604.14993",
     "arxiv_id": "2604.14993",
     "doi": "10.48550/arXiv.2604.14993",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
     "title": "Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving",
-    "summary": "大規模Transformerを地理的・物理的に分散したGPUへパイプライン配置すると、各要求は全層を順に覆うサーバ鎖を必要とし、GPUメモリはモデル重みと要求別KVキャッシュの双方に競合利用される。本研究はこれをchain-structured memory-bound jobのserver-chain compositionとして抽象化し、モデルblock配置、残余メモリのcache容量配分、到着要求のload balancingを分離・連携する。NP-hardな配置・容量問題に対して性能保証付きのスケーラブル手法を設計し、実LLM serving系を含む評価で平均応答時間を既存手法より63〜77%削減する。",
-    "list_summary": "分散pipeline LLMをblock配置・KV容量配分・online負荷分散からなるserver-chain compositionとして定式化し、応答時間を63〜77%削減する。",
-    "authors": [
-      "Tingyang Sun",
-      "Ting He",
-      "I-Hong Hou"
-    ],
+    "summary": "大規模トランスフォーマーを地理的・物理的に分散した画像処理装置へパイプライン配置すると、各要求は全層を順に覆うサーバ鎖を必要とし、装置メモリはモデル重みと要求別の鍵値キャッシュの双方に競合利用される。本研究はこれを大容量メモリを消費する鎖構造ジョブのサーバ鎖構成問題として抽象化し、モデルブロック配置、残余メモリのキャッシュ容量配分、到着要求の負荷分散を分離しながら連携させる。計算困難な配置・容量問題に対して性能保証付きのスケーラブルな手法を設計し、実際の大規模言語モデルサービング系を含む評価で平均応答時間を既存手法より六十三から七十七パーセント削減する。",
+    "list_summary": "分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。",
+    "authors": ["Tingyang Sun", "Ting He", "I-Hong Hou"],
     "published": "2026-04-16",
     "publication": "arXiv:2604.14993",
     "publication_type": "arXivプレプリント",
     "publication_status": "Preprint",
     "lineage": "other-inference-systems",
-    "topics": [
-      "pipeline parallel serving",
-      "GPU memory allocation",
-      "load balancing"
-    ],
-    "importance": "モデル配置後の残余GPUメモリがKV同時実行容量を決めるというLLM固有の競合を、queueingとserver compositionの基礎問題として明示する。",
-    "hardware_evaluation": "model-driven simulationとreal distributed LLM serving systemで評価。一次本文の評価節に基づく。",
-    "quality_effect": "モデル出力を近似せず、block placement、cache capacity、request dispatchだけを変更するため生成品質への近似誤差は導入しない。",
+    "topics": ["パイプライン並列サービング", "画像処理装置メモリ配分", "負荷分散"],
+    "importance": "モデル配置後の残余装置メモリが鍵値キャッシュの同時実行容量を決めるという大規模言語モデル固有の競合を、待ち行列とサーバ構成の基礎問題として明示する。",
+    "hardware_evaluation": "モデル駆動シミュレーションと実際の分散大規模言語モデルサービングシステムで評価する。一次本文の評価節に基づく。",
+    "quality_effect": "モデル出力を近似せず、ブロック配置、キャッシュ容量、要求振り分けだけを変更するため生成品質への近似誤差は導入しない。",
     "source": "https://arxiv.org/abs/2604.14993",
-    "sources": [
-      "https://arxiv.org/abs/2604.14993",
-      "https://arxiv.org/html/2604.14993"
-    ],
+    "sources": ["https://arxiv.org/abs/2604.14993", "https://arxiv.org/html/2604.14993"],
     "code": null,
-    "implementation": "中央orchestratorがoffline block placement/cache allocationとonline Join-the-Fastest-Free-Server load balancingを組み合わせる研究実装。",
+    "implementation": "中央オーケストレータが事前のブロック配置とキャッシュ容量配分、オンラインの空き最速サーバ選択による負荷分散を組み合わせる研究実装である。",
     "last_checked": "2026-09-16",
     "references": [],
     "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML reference section; normalized identifiers not exhaustively extracted",
+    "references_source": "arXiv HTML参考文献節を確認したが、正規化識別子の網羅抽出は行っていない。",
     "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-9ad5a1743ec35bec7e65792c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-9ad5a1743ec35bec7e65792c", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
