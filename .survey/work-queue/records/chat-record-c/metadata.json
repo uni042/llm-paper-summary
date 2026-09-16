@@ -4,10 +4,34 @@
   "slot": "metadata",
   "attempt_id": "attempt-e42e2fded756eadabecb1122",
   "job_id": "job-research-e4fbb25e81d25998",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e42e2fded756eadabecb1122",
-    "worker_id": "scheduled-chat-discovery-specialist-overflow",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2609.12978",
+    "arxiv_id": "2609.12978",
+    "doi": "10.48550/arXiv.2609.12978",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.OS", "cross_list": ["cs.AI"]},
+    "title": "SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading",
+    "summary": "混合専門家モデル（Mixture of Experts; MoE）の専門家重みをCPU側メモリへ退避すると、必要な専門家がGPUに無い場合の転送待ちが支配的になる。SeqMoEは、専門家活性化を生成ステップをまたぐ系列として予測し、その予測確率と各専門家が必要になる期限を同時に考慮してプリフェッチを選ぶ。さらに将来の再利用確率を用いたBelady型キャッシュ追い出しと、CUDA Graphで捕捉可能な実行時機構を組み合わせ、低いGPU常駐率でも全重み常駐時の性能へ近づける。",
+    "list_summary": "専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。",
+    "authors": ["Zihan Wang", "Yuqi Wang", "Lei Gong", "Cheng Tang", "Wenqi Lou", "Teng Wang", "Chao Wang", "Xuehai Zhou"],
+    "published": "2026-09-11",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "MoE expert offloading / predictive prefetch and cache management",
+    "topics": ["MoE", "専門家オフロード", "プリフェッチ", "キャッシュ", "CUDA Graph"],
+    "importance": "高。専門家予測だけでなく帯域制約下のプリフェッチ選択、キャッシュ、グラフ実行まで一体化しており、階層メモリ型MoE推論の実装設計に直接関係する。",
+    "hardware_evaluation": "実機GPU上でQwen3-30B-A3B、Qwen3.6-35B-A3B、GPT-OSS-120B、DeepSeek-V4-Flashを評価し、GPU常駐率25%と45%を中心に比較する。論文本文ではRTX 4090とPCIe 4.0条件も分析例として示す。",
+    "quality_effect": "モデル重みや活性値を近似圧縮する方式ではなく、専門家の配置・転送順・キャッシュ管理を変更するため、推論品質そのものを意図的に劣化させない。誤予測は性能上の専門家ミスとして現れる。",
+    "source": "https://arxiv.org/abs/2609.12978",
+    "sources": ["https://arxiv.org/abs/2609.12978", "https://arxiv.org/html/2609.12978"],
+    "code": null,
+    "implementation": "論文はグラフ互換オフロード実行系を実装して評価しているが、2026-09-16確認時点でarXivページから公式公開コードURLは確認できなかった。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-e42e2fded756eadabecb1122", "worker_id": "scheduled-chat-discovery-specialist-overflow", "worker_kind": "scheduled_chat"}
 }
