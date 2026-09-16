@@ -17,16 +17,21 @@
   "artifact_transport": "structured_record_v10",
   "blocker": "Workflow v10 requires reading the primary source in full before producing the five-slot research record. During this retry, the primary arXiv abstract page for arXiv:2607.03876 was successfully retrieved and confirms the paper identity and high-level four-component design, but the available primary representation still contains only seven rendered lines (title/authors/date/abstract) and exposes no manuscript sections, tables, quantitative results, limitations, references, or implementation details. The prior blocked state records the same full-text absence. Missing manuscript evidence is therefore not inferred from the abstract; this attempt is blocked pending retrievable primary full text.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-4ed2f00440d059f244180aac.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-16T06:12:33+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-16T10:57:29+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-16T06:12:33+00:00",
       "reason": "Primary-source full-text retrieval is unavailable for arXiv:2607.03876 in this execution. The arXiv primary abstract endpoint was retrieved and confirms identity, author, date, the four-component AdaptiveSD design, and evaluation intent, but the available primary arXiv representation contains only the abstract (7 rendered lines) and no manuscript sections, tables, quantitative results, limitations, references, or implementation details required for a repository-quality five-slot record. Per workflow v10, no missing full-text evidence is inferred from the abstract; retry when the primary manuscript HTML/PDF is retrievable."
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-16T10:57:29+00:00",
+      "reason": "Workflow v10 requires reading the primary source in full before producing the five-slot research record. During this retry, the primary arXiv abstract page for arXiv:2607.03876 was successfully retrieved and confirms the paper identity and high-level four-component design, but the available primary representation still contains only seven rendered lines (title/authors/date/abstract) and exposes no manuscript sections, tables, quantitative results, limitations, references, or implementation details. The prior blocked state records the same full-text absence. Missing manuscript evidence is therefore not inferred from the abstract; this attempt is blocked pending retrievable primary full text."
     }
   ],
-  "last_blocked_at": "2026-09-16T06:12:33+00:00",
-  "retry_queued_at": "2026-09-16T10:05:20+00:00",
-  "completed_at": "2026-09-16T10:57:29+00:00"
+  "last_blocked_at": "2026-09-16T10:57:29+00:00",
+  "completed_at": "2026-09-16T10:57:29+00:00",
+  "retry_not_before": "2026-09-16T12:03:19+00:00"
 }

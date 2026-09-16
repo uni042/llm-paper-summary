@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T10:13:11+00:00",
-  "last_run_key": "2026-09-16T19:00:00+09:00",
-  "last_round": "specialist-memory-contention-24",
+  "updated_at": "2026-09-16T11:02:03+00:00",
+  "last_run_key": "2026-09-16T20:00:00+09:00",
+  "last_round": "specialist-superchip-slo-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
+  "consecutive_empty_rounds": 4,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -6312,6 +6312,23 @@
       ],
       "next_axis_hint": "canonical ingestion待ちの間は既発見候補の重複監査を行い、inventory反映後にmodeを確定する",
       "source_submission": "work-queue/submissions/20260916T2014JST-discovery-specialist-memory-contention-24.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-superchip-slo-1",
+      "axis": "Superchip統合メモリ・SLO-aware KV rotation",
+      "query_summary": "CXL/SSDとは異なるCPU-GPU高帯域結合メモリを使うLLM servingを探索し、SuperInferを未収録候補として確認した。Photonic-CXL等の既知候補は反復しなかった。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.27187"
+      ],
+      "next_axis_hint": "HBM/L2内部のKV prefetchとattention kernelの帯域隠蔽へ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json"
     }
   ],
   "axes": {
@@ -10014,6 +10031,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "canonical ingestion待ちの間は既発見候補の重複監査を行い、inventory反映後にmodeを確定する"
+    },
+    "Superchip統合メモリ・SLO-aware KV rotation": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "HBM/L2内部のKV prefetchとattention kernelの帯域隠蔽へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
