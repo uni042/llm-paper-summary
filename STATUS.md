@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:09:26 JST**
+> 自動生成: **2026-09-16 18:09:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **27** |
+| 収録候補論文 | **26** |
 | 未claim Research job | **25** |
-| 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-16 18:03:34 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **63** |
+| 最終検証済みResearch収録 | **09-16 18:09:41 JST（4秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **27** |
+| canonical_id確認済みの一意な候補論文 | **26** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **27** |
+| 非終端Research job合計 | **26** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **43** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **44** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **44** | **18** | **4** | **14** | **2** | **0** | **10** |
+| 合計 | **45** | **18** | **4** | **14** | **1** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 18:09:41 JST** [research] `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving
+  - job: `.survey/work-queue/jobs/job-research-9d70d3111564c88d.json`
+  - result: `.survey/work-queue/results/research/attempt-e98c6f562dcc3c2cf28e5d6f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e98c6f562dcc3c2cf28e5d6f.json`
+  - paper: `papers/inference/07-speculative-decoding/2025-2511.21669-dsd-distributed-edge-cloud-speculative-decoding.md`
 - **09-16 18:03:34 JST** [research] `arXiv:2605.05219` — Sparse Prefix Caching for Hybrid and Recurrent LLM Serving
   - job: `.survey/work-queue/jobs/job-research-34cb083c55afaad3.json`
   - result: `.survey/work-queue/results/research/attempt-ad5dfb814d7090ff8006d8de.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-f18ac3404e8d423c89a438b0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f18ac3404e8d423c89a438b0.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md`
-- **09-16 16:10:38 JST** [research] `arXiv:2609.11356` — Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification
-  - job: `.survey/work-queue/jobs/job-research-23c1aef2e7b819be.json`
-  - result: `.survey/work-queue/results/research/attempt-ce08cf0566cb7dca27b52253.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ce08cf0566cb7dca27b52253.json`
-  - paper: `papers/inference/02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md`
 
 ### Audit
 
@@ -197,10 +197,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving / worker `scheduled-chat-paper-20260916T175945JST`
-  - claim: **09-16 18:08:25 JST** / heartbeat: **—** / lease expiry: **09-16 19:38:25 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9d70d3111564c88d.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
@@ -223,7 +220,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **27** |
+| ready | **26** |
 
 ### 候補の重複・識別情報欠損
 
@@ -243,7 +240,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **608** |
+| inference/training/survey配下の論文Markdown実体 | **609** |
 
 ### immutable submissionの未照合
 
