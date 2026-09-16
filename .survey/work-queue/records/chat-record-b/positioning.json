@@ -2,48 +2,42 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-73081685c32e0006998f3d67",
-  "job_id": "job-research-af7d4aee1c99dd28",
+  "attempt_id": "attempt-2b046e19162a735734acee9b",
+  "job_id": "job-research-0d64167980707ffd",
   "data": {
-    "positioning": "Hybrid batchingとcross-GPU PD disaggregationの中間に位置し、同一GPU上でphaseを論理分離しつつ物理memoryを共有するserving design。",
-    "differences": "Sarathi系chunked prefillはP/Dを同一iterationへ混載するためITL interferenceが残る。DistServe/Splitwise系はphaseを別GPU poolへ分離してKV transferとmemory imbalanceを負う。DRIFT/Semi-PDも同一deviceでP/Dを重ねるが、RAPID-Serveは低負荷時のresource over-allocation、SLOに応じたCU割当、lock/sync-free multiprocessing、共有KVを組み合わせ、TTFTとITL双方を対象にする。",
+    "positioning": "中央処理装置や一般補助記憶へ重みを退避する階層メモリ方式と、複数画像処理装置へモデルを分散する方式の間に、高帯域フラッシュという装置近接の大容量読み出し層を置く研究である。",
+    "differences": "従来の高帯域フラッシュ案はコンパイラが次層の大きな重み塊を静的に先読みし、専用の高速一時領域へ置く。FLINTは実行時に発生した細粒度要求から次の大きな読み出しを復元するため、混合専門家の経路やキャッシュ挙動へ追従できる。また、フラッシュ更新を予備面へ隔離し、汎用補助記憶向けの複雑な変換層を読み出し専用の小表へ置き換える点まで含め、媒体管理を推論重みの性質へ特化する。",
     "relation_to_prior_work": [
       {
-        "work": "Sarathi-Serve / chunked prefill",
-        "difference": "P/Dを同一batchでlockstepにせず別kernelで独立進行させる。"
+        "work": "補助記憶への重み退避",
+        "difference": "装置外の低帯域経路ではなく、装置近接で毎秒テラバイト級帯域を持つフラッシュを重み容量層にする。"
       },
       {
-        "work": "DistServe / Splitwise",
-        "difference": "別GPU poolを使わずKV transferとP/D memory imbalanceを回避する。"
+        "work": "高帯域メモリだけの複数装置分散",
+        "difference": "容量確保だけを目的とする装置追加を減らし、小バッチで支配的になる装置間通信と同期を回避する。"
       },
       {
-        "work": "DRIFT / Semi-PD",
-        "difference": "低負荷時のCU over-allocationとprofile-driven SLO allocation、lock-free process分離を追加する。"
-      },
-      {
-        "work": "NanoFlow",
-        "difference": "nano-batch overlapではなくP/D phase自体を独立processとして重ねる。"
+        "work": "従来の高帯域フラッシュ推論基盤",
+        "difference": "静的先読みと専用一時領域から、実要求駆動の動的結合とフラッシュ内部緩衝器利用へ変更する。"
       }
     ],
     "strengths": [
-      "8x MI300X実機でdense 70BとMoEを評価。",
-      "短文から20K級promptまで複数workloadを使用。",
-      "throughputだけでなくTTFT/ITL goodputとcompute/memory utilizationを評価。",
-      "vLLM v1上の具体的なKV manager・scheduler・HIP/CU masking実装を提示。"
+      "密モデルと五種類の混合専門家モデルを対象にする。",
+      "補助記憶、高帯域メモリのみ、従来高帯域フラッシュの三基準と比較する。",
+      "処理量だけでなく必要装置数、エネルギー、更新寿命、面積を評価する。",
+      "フラッシュ媒体管理まで推論重みの読み出し専用性へ合わせて共同設計する。"
     ],
     "limitations": [
-      "CU maskingはAMD Instinct固有機構で、他GPUでは同等のresource partition機構が必要。",
-      "memory subsystem interferenceは分離できず残存する。",
-      "resource allocationはoffline profiling依存でworkload/model変化時の再profileが必要。",
-      "単一node 8 GPU評価でありmulti-node network環境の一般化は未検証。",
-      "Mixtralのcross-GPU disaggregation baselineはvLLM制約により未評価。"
+      "高帯域フラッシュという新しい装置近接媒体の実装を前提とし、既存機への即時ソフトウェア導入はできない。",
+      "重み読み出しへ特化しており、書込み頻度の高い鍵値キャッシュや活性の容量問題を直接解決しない。",
+      "性能は想定するフラッシュ世代、読み出し単位、装置間接続帯域に依存する。"
     ],
-    "implementation_status": "vLLM v1ベースの研究実装。本文に公式公開repository URLは記載されていない。",
-    "research_positioning": "prefill/decode phase特性をGPU内空間分割と共有memoryへ写像する、resource-efficient servingの設計点。",
-    "repository_fit": "serving/scheduling系統で、Nexus/DRIFT/Semi-PD等のintra-GPU PD multiplexingとcross-GPU disaggregationを比較する際の重要な実機評価対象。"
+    "implementation_status": "高帯域フラッシュの媒体構成と基底ダイ制御回路を含む研究設計。本文で公式実装公開先は確認できない。",
+    "research_positioning": "巨大モデル推論の容量壁を、一般補助記憶より高速で高帯域メモリより高密度な近接フラッシュ階層によって解くメモリシステム研究。",
+    "repository_fit": "中央処理装置・補助記憶退避、階層メモリ、重みストリーミング系統に対し、将来の高帯域フラッシュを使った容量層という重要な比較点を追加する。"
   },
   "reservation": {
-    "claim_id": "claim-73081685c32e0006998f3d67",
+    "claim_id": "claim-2b046e19162a735734acee9b",
     "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }

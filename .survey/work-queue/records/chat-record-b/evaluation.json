@@ -2,47 +2,50 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-73081685c32e0006998f3d67",
-  "job_id": "job-research-af7d4aee1c99dd28",
+  "attempt_id": "attempt-2b046e19162a735734acee9b",
+  "job_id": "job-research-0d64167980707ffd",
   "data": {
-    "evaluation_summary": "8基のAMD Instinct MI300Xを搭載した単一node、ROCm 6.4、vLLM v0.10.2系で実機評価。Llama-3.1 70BとMixtral-8x7B、短文LMSYS・8K級arXiv・20K級Loogle workloadを用い、offered QPSを低負荷から飽和までsweepする。",
-    "scope": "同一nodeのresource-constrained LLM servingでhybrid batching、cross-GPU disaggregation、RAPID-Serveを比較。",
+    "evaluation_summary": "五つの混合専門家モデルと一つの密モデルを対象に、重みを補助記憶へ退避する単一装置、高帯域メモリだけで重み容量を満たす複数装置、従来の高帯域メモリ＋高帯域フラッシュ方式と比較する。長文脈と複数バッチサイズを含め、復号一トークン当たり時間、実効フラッシュ帯域、エネルギー、必要画像処理装置数、フラッシュ更新寿命、追加面積を評価する。",
+    "scope": "単一装置・小規模ノードで容量が律速になる巨大モデル推論と、高帯域フラッシュを重み容量層として使うメモリ基盤。",
     "hardware": [
-      "8x AMD Instinct MI300X"
+      "高帯域メモリ搭載画像処理装置",
+      "高帯域フラッシュ Gen-1/Gen-2想定構成"
     ],
     "software": [
-      "ROCm 6.4",
-      "vLLM v1 v0.10.2rc3",
-      "HIP Graphs"
+      "既存推論カーネルを変更しない透過的な重み読み出し経路"
     ],
     "models": [
-      "Llama-3.1 70B",
-      "Mixtral-8x7B"
+      "DeepSeek-V3",
+      "DeepSeek-V4-Pro",
+      "Qwen3-235B-A22B",
+      "Llama-4 Maverick",
+      "Kimi K2",
+      "Llama-3.1-405B"
     ],
     "datasets": [
-      "LMSYS trace",
-      "arXiv summarization workload",
-      "Loogle summarization"
+      "モデルごとの自己回帰復号負荷"
     ],
-    "workload": "LMSYS平均prompt約2K、arXiv約8K、Loogle約20K。各負荷でQPSをsweep。",
+    "workload": "百二十八キロトークン級文脈を含む復号と、バッチサイズ一・四・十六・六十四などの容量制約下推論。",
     "baselines": [
-      "chunked hybrid batching chunk=512/1024等",
-      "vLLM disaggregated serving 4P-4D"
+      "高帯域メモリ＋補助記憶",
+      "高帯域メモリだけの複数画像処理装置",
+      "従来の高帯域メモリ＋高帯域フラッシュ方式"
     ],
     "metrics": [
-      "throughput",
-      "goodput",
-      "p95 TTFT",
-      "p95 ITL",
-      "GPU compute utilization",
-      "memory utilization"
+      "復号処理量",
+      "一トークン時間",
+      "実効フラッシュ帯域",
+      "エネルギー",
+      "必要装置数",
+      "追加面積",
+      "更新寿命"
     ],
-    "methodology": "LMSYSとarXivはprompt長で層化して各1万件にtruncate。Llama-3.1 70Bではhybridと4P-4D disaggregationを比較し、MixtralはvLLMがMoE disaggregation非対応のためhybrid中心。goodputはITLとlength-dependent TTFTの両SLOを満たす最大request rateとして評価。",
-    "predictor_accuracy": "予測器ではなくoffline profileでdecode batch sizeごとの必要CUを決める。",
-    "control_knobs": "prefill chunk size、prefill/decode CU allocation、decode batch size、offered QPS、ITL SLO。"
+    "methodology": "容量だけで複数装置が必要になる最小適合構成について通信、同期、メモリ、計算時間を分解し、高帯域フラッシュ導入の動機を確認する。その後、動的読み出し結合、更新隔離、簡素化変換表を含む提案構成を三種類の基準方式と比較する。",
+    "predictor_accuracy": "予測器は用いず、実際の読み出し要求列をハードウェア側で観測して次の大粒度読み出しを決める。",
+    "control_knobs": "フラッシュ読み出し単位、先読み窓、面数、更新閾値、モデル、バッチサイズ、文脈長。"
   },
   "reservation": {
-    "claim_id": "claim-73081685c32e0006998f3d67",
+    "claim_id": "claim-2b046e19162a735734acee9b",
     "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }

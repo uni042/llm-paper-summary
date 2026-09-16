@@ -2,56 +2,64 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-73081685c32e0006998f3d67",
-  "job_id": "job-research-af7d4aee1c99dd28",
+  "attempt_id": "attempt-2b046e19162a735734acee9b",
+  "job_id": "job-research-0d64167980707ffd",
   "data": {
-    "canonical_id": "arXiv:2601.11822",
-    "arxiv_id": "2601.11822",
-    "doi": "10.48550/arXiv.2601.11822",
+    "canonical_id": "arXiv:2608.25062",
+    "arxiv_id": "2608.25062",
+    "doi": "10.48550/arXiv.2608.25062",
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.LG"
-      ]
+      "primary": "cs.AR",
+      "cross_list": []
     },
-    "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
-    "summary": "RAPID-Serveはprefillとdecodeを別GPU群へ分離せず、同一GPU上の別process・別kernelとして並行実行するLLM serving engineである。共有KV cacheによりinter-device KV transferをなくし、AMD InstinctのCU maskingとoffline profileに基づくAdaptive Resource ManagerでdecodeのITL SLOを満たす最小CUだけを割り当てる。vLLM v1を基盤に8基のMI300XでLlama-3.1 70BとMixtral-8x7Bを評価し、chunked hybrid batching比でunconstrained throughput最大4.1倍・平均1.7倍、SLO下goodput最大32倍・平均4.9倍を報告する。",
-    "list_summary": "同一GPU内でprefill/decodeを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機でgoodput平均4.9倍を報告。",
+    "title": "FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration",
+    "summary": "FLINTは高帯域フラッシュを高帯域メモリの隣に置き、巨大言語モデルの読み出し専用重みを数テラバイト級の近接容量層へ保持する基盤である。従来案の静的先読み、推論経路上のフラッシュ更新処理、汎用補助記憶向けの重いアドレス変換を問題視し、実際の細粒度読み出し列から動的に大きな読み出し単位を再構成する制御器、更新を前景読み出しから隔離する幽霊面方式、読み出し専用の簡素な変換表を組み合わせる。密モデルと混合専門家モデルで、従来の高帯域メモリ＋高帯域フラッシュ方式に対し復号処理量六・二倍、エネルギー効率六・八倍を報告する。",
+    "list_summary": "高帯域フラッシュを巨大モデル重みの近接容量層として使い、動的読み出し結合・更新隔離・読み出し専用変換表で従来方式比六・二倍の復号処理量を実現する。",
     "authors": [
-      "Amna Masood",
-      "Pratishtha Gaur",
-      "Nuwan Jayasena"
+      "Geraldo F. Oliveira",
+      "Arash Tavakkol",
+      "Xiangyu Zhu",
+      "Ahmet Caner Yüzügüler",
+      "Vamanan Arulchelvan",
+      "Lukas Cavigelli",
+      "Renzo Andri",
+      "Mohammad Sadrosadati",
+      "Jia Xinglei",
+      "Onur Mutlu",
+      "Zhou Ke",
+      "Shai Bergman",
+      "Ji Zhang"
     ],
-    "published": "2026-01-16",
-    "publication": "arXiv:2601.11822v1",
+    "published": "2026-08-25",
+    "publication": "arXiv:2608.25062v1",
     "publication_type": "arXivプレプリント",
     "publication_status": "Preprint",
-    "lineage": "prefill-decode-intra-gpu-disaggregation",
+    "lineage": "flash-capacity-tier-inference",
     "topics": [
-      "LLM serving",
-      "prefill/decode",
-      "intra-GPU disaggregation",
-      "CU masking",
-      "SLO-aware resource allocation"
+      "高帯域フラッシュ",
+      "重み容量層",
+      "動的読み出し結合",
+      "フラッシュ更新隔離",
+      "読み出し専用アドレス変換"
     ],
-    "importance": "cross-GPU PD分離のKV転送・メモリ不均衡とhybrid batchingのphase interferenceを、同一GPU上の独立並行実行で同時に回避する設計点を示す。",
-    "hardware_evaluation": "単一node・AMD Instinct MI300X 8基、ROCm 6.4。",
-    "quality_effect": "近似やmodel変更を行わずserving executionのみを変更するため生成品質は保持される。",
-    "source": "https://arxiv.org/abs/2601.11822",
+    "importance": "補助記憶から画像処理装置へ重みを逐次退避する方式より高帯域で、複数画像処理装置へ容量目的で分散する方式より通信を減らす、新しい近接フラッシュ容量層を具体化する。",
+    "hardware_evaluation": "高帯域メモリと高帯域フラッシュを装置近傍で接続する想定構成を評価し、フラッシュ面と基底ダイの面積費も算出する。",
+    "quality_effect": "モデル重み自体を変更せず格納・供給経路を変えるため、生成品質の近似損失は導入しない。",
+    "source": "https://arxiv.org/abs/2608.25062",
     "sources": [
-      "https://arxiv.org/abs/2601.11822",
-      "https://arxiv.org/html/2601.11822v1"
+      "https://arxiv.org/abs/2608.25062",
+      "https://arxiv.org/html/2608.25062"
     ],
     "code": null,
-    "implementation": "vLLM v1 v0.10.2rc3を基盤に、prefill/decode multiprocessing、共有weights/KV、PagedAttention KV manager、async scheduling、HIP Graphs、CU masking、Adaptive Resource Managerを実装。",
+    "implementation": "高帯域フラッシュ基底部に読み出し結合制御器、幽霊面更新制御、読み出し専用変換表を追加するハードウェア・メモリ基盤設計。",
     "last_checked": "2026-09-17",
     "references": [],
     "references_checked_at": "2026-09-17",
-    "references_source": "arXiv v1全文を確認。",
+    "references_source": "arXiv v1全文の本文を確認。",
     "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-73081685c32e0006998f3d67",
+    "claim_id": "claim-2b046e19162a735734acee9b",
     "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }
