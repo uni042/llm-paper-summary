@@ -1,11 +1,20 @@
 {
   "code_search_is_authority": false,
+  "fuzzy_title_requires": [
+    "no_stable_identifier",
+    "first_author",
+    "publication_year"
+  ],
+  "fuzzy_title_threshold": 0.94,
   "lookup_order": [
     "stable_identifier",
     "normalized_url",
-    "normalized_title"
+    "normalized_title",
+    "represented_paper_resolver"
   ],
-  "schema_version": 1,
+  "represented_paper_count": 1288,
+  "represented_resolver_file": "_represented_papers.json",
+  "schema_version": 2,
   "shards": {
     "arxiv-2104.txt": 1,
     "arxiv-2302.txt": 1,
@@ -94,6 +103,6 @@
     "url-www-usenix-org.txt": 13
   },
   "source": "queue_worker.existing_candidate_keys",
-  "source_commit": "40aa5d86ba3324e81e7629ac65eadcd2d9d64bc5",
+  "source_commit": "6454870cde792329d6f4c9b58897519a8851e951",
   "token_count": 2569
 }
