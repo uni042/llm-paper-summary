@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:09:49 JST**
+> 自動生成: **2026-09-16 18:09:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **26** |
-| 未claim Research job | **25** |
+| 未claim Research job | **24** |
 | 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-16 18:09:41 JST（8秒前）** |
+| 最終検証済みResearch収録 | **09-16 18:09:41 JST（16秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **44** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **44** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **45** | **18** | **4** | **14** | **1** | **0** | **10** |
+| 合計 | **45** | **18** | **4** | **14** | **2** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,7 +197,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2409.15104` — CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts / worker `scheduled-chat-paper-20260916T175945JST`
+  - claim: **09-16 18:09:56 JST** / heartbeat: **—** / lease expiry: **09-16 19:39:56 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6eb709dc3f5cf15a.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`

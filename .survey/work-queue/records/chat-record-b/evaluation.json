@@ -2,62 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e98c6f562dcc3c2cf28e5d6f",
-  "job_id": "job-research-9d70d3111564c88d",
+  "attempt_id": "attempt-b3bd426f06600d475ee9c2d0",
+  "job_id": "job-research-6eb709dc3f5cf15a",
   "data": {
-    "evaluation_summary": "GSM8K、CNN/DailyMail、HumanEvalの実acceptance traceでheterogeneous edge-cloudを評価する。edgeはQwen-7B/Llama2-7B等をA40/V100、cloudはLlama2/3-70B・Qwen-72BをA100/H100/A6000でモデル化する。大規模設定は20 target serverと600/1000 draft client、RTT 10/30ms。AWCはstatic gamma=4に対し12条件すべてで最高throughput、最大+9.7%、TPOTは6〜10%程度削減し最大-10.7%。",
-    "scope": "distributed draft-target speculative decoding。network RTTが50〜60ms付近を超えるとdistributed advantageが消えfusedが有利になる。",
+    "evaluation_summary": "4台のAWS p4de.24xlarge、合計32基のA100 80GiB、400Gbps網でvLLMベース実装を評価する。Azure LLM推論追跡の到着時刻と長さ分布を使い、上位5%の長入力を100K〜500Kへ置換する。Mistral-v0.3 7B、Phi-3 14B、Yi 34B、Llama-3.1 70Bを用い、先着順vLLM、予約型Llumnix、優先度型Past-Futureと比較する。",
+    "scope": "短入力が多数、100K〜500Kの長入力が少数混在するクラスタ推論。",
     "hardware": [
-      "NVIDIA A40",
-      "NVIDIA V100",
-      "NVIDIA A100",
-      "NVIDIA H100",
-      "NVIDIA A6000"
+      "AWS p4de.24xlarge ×4",
+      "NVIDIA A100 80GiB ×32",
+      "400Gbpsネットワーク"
     ],
     "software": [
-      "DSD-Sim",
-      "SimPy",
-      "VIDUR",
-      "AWC WC-DNN"
+      "vLLM拡張",
+      "FlashAttention-2 Triton版",
+      "Ray",
+      "PyTorch distributed",
+      "NCCL"
     ],
     "models": [
-      "Qwen-7B",
-      "Qwen-72B",
-      "Llama2-7B",
-      "Llama2-70B",
-      "Llama3-70B",
-      "Llama3.1-8B"
+      "Mistral-v0.3 7B",
+      "Phi-3 14B",
+      "Yi 34B",
+      "Llama-3.1 70B"
     ],
     "datasets": [
-      "GSM8K",
-      "CNN/DailyMail",
-      "HumanEval"
+      "Microsoft Azure LLM inference trace"
     ],
-    "workload": "400 GSM8K、400 CNN/DailyMail、100 HumanEval promptを含むtrace。Poisson arrivalもsupportし、実hardware acceptance sequenceをreplayする。",
+    "workload": "追跡データの到着時刻を維持し、入力長上位5%を100K〜500Kから抽出した長入力へ置換。出力長分布は元追跡を維持する。",
     "baselines": [
-      "Static window gamma=4",
-      "acceptance-threshold Dynamic window",
-      "Random routing",
-      "Round-Robin",
-      "FIFO batching",
-      "Length-Aware Batching",
-      "cloud-only/fused execution"
+      "FIFO vLLM",
+      "Reservation Llumnix",
+      "Priority Past-Future"
     ],
     "metrics": [
-      "throughput requests/s",
-      "TTFT",
-      "TPOT",
-      "end-to-end latency",
-      "target utilization",
-      "network queue delay",
-      "simulation prediction error"
+      "短入力99百分位待ち時間",
+      "短入力処理量",
+      "長入力平均完了時間",
+      "横取り回数",
+      "GPU遊休率"
     ],
-    "methodology": "GPU predictorを実hardwareで校正後、20 targetと600/1000 draft、RTT 10/30ms等をsimulationし各policyを3 run平均で比較する。",
-    "predictor_accuracy": "VIDUR-based predictorのmean absolute errorはprefill 7.4%、decode 5.2%。",
-    "control_knobs": "routing、batching、gamma、fused/distributed mode、RTT、draft/target pool size。"
+    "methodology": "各方式で同一追跡負荷を実行し、短入力の待ち時間・処理量と長入力の完了時間を比較する。長入力は必要に応じリング注意系列並列で複数モデル複製へ分割する。",
+    "predictor_accuracy": "予測器精度を主要評価指標とはせず、実装を実GPUクラスタ上で測定する。",
+    "control_knobs": "長短入力閾値、短入力復号専用複製数、系列並列方式、配置、横取り可否。"
   },
   "reservation": {
-    "claim_id": "claim-e98c6f562dcc3c2cf28e5d6f",
+    "claim_id": "claim-b3bd426f06600d475ee9c2d0",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }
