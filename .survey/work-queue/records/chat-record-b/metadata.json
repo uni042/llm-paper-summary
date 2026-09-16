@@ -5,54 +5,19 @@
   "attempt_id": "attempt-d5dd5cd824db8ecaa8dc6616",
   "job_id": "job-research-9d70d3111564c88d",
   "data": {
-    "canonical_id": "arXiv:2511.21669",
-    "arxiv_id": "2511.21669",
-    "doi": "10.48550/arXiv.2511.21669",
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.DC"
-      ]
-    },
+    "canonical_id": "arXiv:2511.21669", "arxiv_id": "2511.21669", "doi": "10.48550/arXiv.2511.21669", "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.DC"]},
     "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
-    "summary": "DSDはspeculative decodingをedgeのdraft modelとcloudのtarget modelへ分散し、network RTT、batching、routing、verification依存を含めて評価・制御するframeworkである。DSD-SimはVIDURのGPU latency predictorとSimPy request-level schedulerを組み合わせ、実hardwareから得たacceptance traceを使ってdistributed speculationを再現する。さらにAdaptive Window Controlはqueue depth、acceptance rate、RTT、TPOT、直前windowを入力する小型DNNでspeculation windowとfused/distributed modeを動的制御する。20 target/600〜1000 draft規模でstatic windowに対しthroughput最大9.7%向上、TPOT最大10.7%削減を報告する。",
-    "list_summary": "edge draft/cloud target型distributed speculative decodingをDSD-Simでモデル化し、学習型AWCでwindowを適応制御してthroughput最大9.7%向上。",
-    "authors": [
-      "Fengze Yu",
-      "Leshu Li",
-      "Brad McDanel",
-      "Sai Qian Zhang"
-    ],
-    "published": "2025-11-26",
-    "publication": "arXiv:2511.21669",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint / under review",
-    "lineage": "speculative-decoding",
-    "topics": [
-      "distributed speculative decoding",
-      "edge-cloud serving",
-      "adaptive window control",
-      "LLM simulation"
-    ],
-    "importance": "single-node前提のspeculative decodingをedge-cloudの通信・queueing・batchingを含むsystem問題へ拡張し、window制御をnetwork/system stateへ適応させる。",
-    "hardware_evaluation": "edge側A40/V100、cloud側A100/H100/A6000を含むheterogeneous構成。VIDUR predictorはA40/A100/H100実測で校正。",
-    "quality_effect": "標準speculative decodingのtarget verification/accept-reject semanticsを維持するため生成品質を変えない。",
-    "source": "https://arxiv.org/abs/2511.21669",
-    "sources": [
-      "https://arxiv.org/abs/2511.21669",
-      "https://arxiv.org/html/2511.21669v2"
-    ],
-    "code": null,
-    "implementation": "SimPy + VIDURを基盤とするDSD-Simと、5特徴量residual MLPのAdaptive Window Control研究実装。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML reference section; normalized identifiers not exhaustively extracted",
-    "references_total": 0
+    "summary": "DSDは投機的復号（speculative decoding）を端末側の下書きモデル（draft model）とクラウド側の目標モデル（target model）へ分散し、ネットワーク往復時間、バッチ処理、経路選択、検証依存を含めて評価・制御する枠組みである。DSD-SimはVIDURのGPU遅延予測器とSimPyの要求単位スケジューラを組み合わせ、実機から得た受理履歴を使って分散投機を再現する。さらに適応窓制御（Adaptive Window Control）は待ち行列深度、受理率、往復時間、トークン間時間、直前窓幅を入力する小型DNNで投機窓幅と統合・分散方式を動的制御する。20個の目標モデルと600〜1000個の下書きモデル規模で、固定窓幅に対し処理量を最大9.7%向上し、トークン間時間を最大10.7%削減した。",
+    "list_summary": "端末側下書きモデルとクラウド側目標モデルによる分散投機的復号（distributed speculative decoding）をDSD-Simでモデル化し、学習型の適応窓制御で投機窓幅を調整して処理量を最大9.7%向上する。",
+    "authors": ["Fengze Yu", "Leshu Li", "Brad McDanel", "Sai Qian Zhang"],
+    "published": "2025-11-26", "publication": "arXiv:2511.21669", "publication_type": "arXivプレプリント", "publication_status": "Preprint / under review", "lineage": "speculative-decoding",
+    "topics": ["分散投機的復号", "端末・クラウド推論", "適応窓制御", "LLMシミュレーション"],
+    "importance": "単一ノード前提の投機的復号を端末・クラウド間の通信、待ち行列、バッチ処理を含むシステム問題へ拡張し、投機窓幅をネットワークとシステム状態へ適応させる。",
+    "hardware_evaluation": "端末側A40/V100、クラウド側A100/H100/A6000を含む異種構成を評価し、VIDUR予測器はA40/A100/H100実測で校正する。",
+    "quality_effect": "標準的な投機的復号の目標モデル検証と受理・棄却規則を維持するため、生成品質を変化させない。",
+    "source": "https://arxiv.org/abs/2511.21669", "sources": ["https://arxiv.org/abs/2511.21669", "https://arxiv.org/html/2511.21669v2"], "code": null,
+    "implementation": "SimPyとVIDURを基盤とするDSD-Sim、および5特徴量の残差多層パーセプトロンによる適応窓制御の研究実装である。",
+    "last_checked": "2026-09-16", "references": [], "references_checked_at": "2026-09-16", "references_source": "arXiv HTMLの参考文献節を確認。正規化識別子は網羅抽出していない。", "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-d5dd5cd824db8ecaa8dc6616",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-d5dd5cd824db8ecaa8dc6616", "worker_id": "scheduled-chat-paper-20260916T175945JST", "worker_kind": "scheduled_chat"}
 }
