@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Filter already represented papers from Discovery search-result batches.
+"""Filter already represented or previously rejected papers from Discovery search.
 
 This module is the retrieval-stage counterpart to the final Discovery duplicate gate.
 It consumes the compact ``work-queue/discovery-identities`` snapshot generated from
-``queue_worker.existing_candidate_keys()`` and removes known papers before expensive
-candidate evaluation. The final duplicate gate remains authoritative and unchanged.
+``queue_worker.existing_candidate_keys()`` and the separately derived Discovery
+candidate-evaluation rejection ledger. Both are applied before expensive candidate
+evaluation. The final duplicate gate remains authoritative and unchanged.
 """
 from __future__ import annotations
 
@@ -19,11 +20,12 @@ from build_discovery_identity_snapshot import shard_name
 
 
 class SnapshotUnavailableError(RuntimeError):
-    """Raised when the authoritative Discovery precheck snapshot cannot be trusted."""
+    """Raised when an authoritative Discovery exclusion source cannot be trusted."""
 
 
 PageFetcher = Callable[[str | None], dict[str, Any]]
 DEFAULT_PREFETCH_UNSEEN = 10
+REJECTION_LEDGER_SOURCE = "immutable_discovery_submissions.rejected_candidates"
 
 
 def _load_manifest(snapshot_dir: Path) -> dict[str, Any]:
@@ -69,6 +71,34 @@ def _load_shard(
     return cache[name]
 
 
+def _load_rejection_tokens(snapshot_dir: Path, rejection_ledger_path: Path | None = None) -> set[str]:
+    path = Path(rejection_ledger_path) if rejection_ledger_path is not None else Path(snapshot_dir).parent / "discovery-rejections.json"
+    if not path.exists():
+        return set()
+    try:
+        ledger = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SnapshotUnavailableError(f"Discovery rejection ledger is unreadable: {path}") from exc
+    if not isinstance(ledger, dict):
+        raise SnapshotUnavailableError("Discovery rejection ledger must be an object")
+    if ledger.get("source") != REJECTION_LEDGER_SOURCE:
+        raise SnapshotUnavailableError("Discovery rejection ledger has an unexpected source")
+    records = ledger.get("records")
+    if not isinstance(records, dict):
+        raise SnapshotUnavailableError("Discovery rejection ledger is missing records")
+
+    tokens: set[str] = set()
+    for primary, record in records.items():
+        if isinstance(primary, str) and primary:
+            tokens.add(primary)
+        if not isinstance(record, dict):
+            continue
+        values = record.get("identity_tokens")
+        if isinstance(values, list):
+            tokens.update(value for value in values if isinstance(value, str) and value)
+    return tokens
+
+
 def existing_identity_token(
     record: dict[str, Any],
     *,
@@ -76,7 +106,7 @@ def existing_identity_token(
     manifest: dict[str, Any],
     cache: dict[str, set[str]],
 ) -> str | None:
-    """Return one matching authoritative identity token, or ``None`` when unseen."""
+    """Return one matching authoritative represented-paper token, or ``None``."""
     for token in sorted(paper_identity.identity_tokens(record)):
         name = shard_name(token)
         if token in _load_shard(snapshot_dir, manifest, name, cache):
@@ -88,16 +118,17 @@ def filter_search_batch(
     records: list[dict[str, Any]],
     *,
     snapshot_dir: Path,
+    rejection_ledger_path: Path | None = None,
     target_unseen: int = 0,
     provider_has_more: bool = False,
     unseen_before_batch: int = 0,
 ) -> dict[str, Any]:
     """Filter one provider result page before candidate evaluation.
 
-    ``continue_search`` is true only when the caller still needs more unseen results and
-    the current provider exposes another page/cursor. If the provider is exhausted while
-    the target is still unmet, the caller should switch to another independent search
-    axis rather than reintroducing filtered duplicates.
+    Papers already represented in the repository and papers durably rejected by prior
+    candidate evaluation are both excluded. ``continue_search`` is true only when the
+    caller still needs more unseen results and the current provider exposes another
+    page/cursor.
     """
     if target_unseen < 0 or unseen_before_batch < 0:
         raise ValueError("target_unseen and unseen_before_batch must be non-negative")
@@ -106,9 +137,11 @@ def filter_search_batch(
 
     snapshot_dir = Path(snapshot_dir)
     manifest = _load_manifest(snapshot_dir)
+    rejection_tokens = _load_rejection_tokens(snapshot_dir, rejection_ledger_path)
     cache: dict[str, set[str]] = {}
     unseen: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
+    rejection_filtered_tokens: list[str] = []
     unresolved_identity_count = 0
     intra_batch_duplicate_filtered_count = 0
     seen_batch_tokens: set[str] = set()
@@ -127,6 +160,11 @@ def filter_search_batch(
             duplicate_tokens.append(matched)
             continue
 
+        rejected_match = next(iter(sorted(tokens & rejection_tokens)), None)
+        if rejected_match:
+            rejection_filtered_tokens.append(rejected_match)
+            continue
+
         primary = paper_identity.primary_identity_key(record)
         if primary and primary in seen_batch_tokens:
             intra_batch_duplicate_filtered_count += 1
@@ -142,6 +180,8 @@ def filter_search_batch(
         "raw_search_result_count": len(records),
         "retrieval_duplicate_filtered_count": len(duplicate_tokens),
         "retrieval_duplicate_tokens": duplicate_tokens,
+        "rejection_ledger_filtered_count": len(rejection_filtered_tokens),
+        "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
         "unresolved_identity_count": unresolved_identity_count,
         "unseen_result_count": len(unseen),
@@ -156,20 +196,17 @@ def collect_until_unseen(
     fetch_page: PageFetcher,
     *,
     snapshot_dir: Path,
+    rejection_ledger_path: Path | None = None,
     target_unseen: int = DEFAULT_PREFETCH_UNSEEN,
     initial_cursor: str | None = None,
     max_pages: int = 100,
 ) -> dict[str, Any]:
-    """Fetch and filter provider pages until an unseen-result buffer is ready.
+    """Fetch/filter provider pages until an unseen-result buffer is ready.
 
-    ``fetch_page(cursor)`` must return an object with a ``records`` list and a
-    ``next_cursor`` value. The collector owns pagination: intermediate provider pages are
-    filtered and accumulated internally, and the caller receives only the final unseen
-    buffer once ``target_unseen`` has been reached or the provider is exhausted.
-
-    The default threshold is ten unseen papers. The last fetched page is kept whole, so
-    the returned buffer may be larger than the threshold when that page crosses it;
-    unseen records are never discarded merely to hit an exact batch size.
+    ``fetch_page(cursor)`` returns an object with a ``records`` list and a
+    ``next_cursor`` value. Intermediate pages are filtered and accumulated internally;
+    the caller receives only the final buffer once ``target_unseen`` has been reached or
+    the provider is exhausted. The default threshold is ten unseen papers.
     """
     if target_unseen <= 0:
         raise ValueError("target_unseen must be greater than zero")
@@ -178,14 +215,17 @@ def collect_until_unseen(
 
     snapshot_dir = Path(snapshot_dir)
     _load_manifest(snapshot_dir)
+    _load_rejection_tokens(snapshot_dir, rejection_ledger_path)
 
     cursor = initial_cursor
     seen_cursors: set[str] = set()
     seen_primary_identities: set[str] = set()
     results: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
+    rejection_filtered_tokens: list[str] = []
     raw_search_result_count = 0
     retrieval_duplicate_filtered_count = 0
+    rejection_ledger_filtered_count = 0
     intra_batch_duplicate_filtered_count = 0
     cross_page_duplicate_filtered_count = 0
     unresolved_identity_count = 0
@@ -209,11 +249,17 @@ def collect_until_unseen(
         if next_value is not None and not isinstance(next_value, str):
             raise TypeError("next_cursor must be a string or null")
 
-        filtered = filter_search_batch(records, snapshot_dir=snapshot_dir)
+        filtered = filter_search_batch(
+            records,
+            snapshot_dir=snapshot_dir,
+            rejection_ledger_path=rejection_ledger_path,
+        )
         pages_fetched += 1
         raw_search_result_count += filtered["raw_search_result_count"]
         retrieval_duplicate_filtered_count += filtered["retrieval_duplicate_filtered_count"]
         duplicate_tokens.extend(filtered["retrieval_duplicate_tokens"])
+        rejection_ledger_filtered_count += filtered["rejection_ledger_filtered_count"]
+        rejection_filtered_tokens.extend(filtered["rejection_ledger_filtered_tokens"])
         intra_batch_duplicate_filtered_count += filtered["intra_batch_duplicate_filtered_count"]
         unresolved_identity_count += filtered["unresolved_identity_count"]
 
@@ -249,6 +295,8 @@ def collect_until_unseen(
         "raw_search_result_count": raw_search_result_count,
         "retrieval_duplicate_filtered_count": retrieval_duplicate_filtered_count,
         "retrieval_duplicate_tokens": duplicate_tokens,
+        "rejection_ledger_filtered_count": rejection_ledger_filtered_count,
+        "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
         "cross_page_duplicate_filtered_count": cross_page_duplicate_filtered_count,
         "unresolved_identity_count": unresolved_identity_count,
@@ -259,6 +307,7 @@ def collect_until_unseen(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--snapshot-dir", type=Path, default=Path(".survey/work-queue/discovery-identities"))
+    parser.add_argument("--rejection-ledger", type=Path)
     parser.add_argument("--target-unseen", type=int, default=0)
     parser.add_argument("--unseen-before-batch", type=int, default=0)
     parser.add_argument("--provider-has-more", action="store_true")
@@ -270,6 +319,7 @@ def main() -> None:
     result = filter_search_batch(
         records,
         snapshot_dir=args.snapshot_dir,
+        rejection_ledger_path=args.rejection_ledger,
         target_unseen=args.target_unseen,
         provider_has_more=args.provider_has_more,
         unseen_before_batch=args.unseen_before_batch,
