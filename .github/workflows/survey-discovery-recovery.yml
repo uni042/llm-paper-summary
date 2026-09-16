@@ -41,36 +41,79 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          DERIVED_SNAPSHOT='.survey/work-queue/next-jobs.json'
+
           git config user.name 'survey-discovery-recovery[bot]'
           git config user.email 'survey-discovery-recovery[bot]@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+
+          python .survey/scripts/recover_discovery_submissions.py --root .survey
+          python .survey/scripts/refresh_queue_snapshot.py --repo-root .
+
+          git add \
+            .survey/work-queue/jobs \
+            .survey/work-queue/results \
+            .survey/work-queue/state.json \
+            .survey/work-queue/discovery-state.json \
+            "$DERIVED_SNAPSHOT"
+
+          if git diff --cached --quiet; then
+            echo 'No stale Discovery submissions require recovery.'
+            exit 0
+          fi
+
+          git commit -m 'survey-discovery-recovery: replay stale discovery payloads'
+
+          recover_derived_snapshot_conflict() {
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]:-}" != "$DERIVED_SNAPSHOT" ]; then
+              echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
+              printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
+              if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
+                git rebase --abort || true
+              fi
+              return 1
+            fi
+
+            echo "Resolving derived snapshot conflict in ${DERIVED_SNAPSHOT} from latest main."
+            git checkout --ours -- "$DERIVED_SNAPSHOT"
+            git add "$DERIVED_SNAPSHOT"
+            if git diff --cached --quiet; then
+              git rebase --skip
+            else
+              GIT_EDITOR=true git rebase --continue
+            fi
+          }
+
+          refresh_derived_snapshot() {
+            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
+            if git diff --quiet -- "$DERIVED_SNAPSHOT"; then
+              return 0
+            fi
+
+            git add "$DERIVED_SNAPSHOT"
+            if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
+              git commit -m 'survey-discovery-recovery: refresh derived queue snapshot after rebase'
+            else
+              git commit --amend --no-edit
+            fi
+          }
 
           for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git reset --hard origin/main
-
-            python .survey/scripts/recover_discovery_submissions.py --root .survey
-            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-
-            git add \
-              .survey/work-queue/jobs \
-              .survey/work-queue/results \
-              .survey/work-queue/state.json \
-              .survey/work-queue/discovery-state.json \
-              .survey/work-queue/next-jobs.json
-
-            if git diff --cached --quiet; then
-              echo 'No stale Discovery submissions require recovery.'
-              exit 0
+            if ! git rebase origin/main; then
+              recover_derived_snapshot_conflict || exit 1
             fi
+            refresh_derived_snapshot
 
-            git commit -m 'survey-discovery-recovery: replay stale discovery payloads'
             if git push origin HEAD:main; then
               exit 0
             fi
 
-            echo "Discovery recovery push race on attempt ${attempt}; recomputing from latest main."
+            echo "Discovery recovery push race on attempt ${attempt}; rebasing the prepared recovery commit."
             sleep $((attempt * 2))
           done
 
-          echo 'Failed to publish Discovery recovery after 5 retries.' >&2
+          echo 'Failed to publish Discovery recovery after 5 non-fast-forward recovery attempts.' >&2
           exit 1
