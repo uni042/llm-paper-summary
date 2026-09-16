@@ -1,55 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
-  "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {
-    "key_results": [
-      {
-        "metric": "homogeneous serving cost",
-        "result": "最大1.78×改善",
-        "comparison": "homogeneous H100 cluster上のbest existing/feasible baseline",
-        "condition": "TPOT SLOを満たす構成"
-      },
-      {
-        "metric": "heterogeneous serving cost",
-        "result": "最大1.89×改善",
-        "comparison": "best non-OpWeave baseline",
-        "condition": "H100 + L40SまたはA100 heterogeneous cluster"
-      },
-      {
-        "metric": "heterogeneous vs homogeneous OpWeave",
-        "result": "最大21.8% cost削減",
-        "comparison": "homogeneous OpWeave",
-        "condition": "heterogeneous cluster"
-      },
-      {
-        "metric": "pipeline stages",
-        "result": "Gemma-3-27Bで平均20.7 stages vs AFD 124 stages",
-        "comparison": "attention–FFN disaggregation",
-        "condition": "OpWeaveのgeneral partition plan"
-      },
-      {
-        "metric": "inter-node transfer per output token",
-        "result": "AFD比最大22.8×削減",
-        "comparison": "attention–FFN disaggregation",
-        "condition": "OpWeave plan"
-      },
-      {
-        "metric": "hardware active fraction",
-        "result": "model実行時間80%超",
-        "comparison": "AFDは約半分がidle",
-        "condition": "pipeline imbalance低減"
-      }
-    ],
-    "interpretation": "利得の中心は、attentionとGEMMを単純に二分すること自体ではなく、KV容量・operator profile・異種GPUのbandwidth/compute価格比・hybrid layer周期を踏まえてstage境界を選び直す点にある。AFDよりstage数と通信境界を大幅に減らすことで厳しいTPOT SLOを満たせる構成が増え、そのうえでattentionをbandwidth効率のよいGPU、GEMMをcompute効率のよいGPUへ割り当てることでcostを下げる。",
-    "theory_result": "homogeneous ODSの利得はKV pressureでcolocation batchがGEMM thresholdを下回る領域から現れ、memory-weight比で上界づけられる。heterogeneous ODSはcost-per-byteとcost-per-FLOPのGPUランキングが異なる場合に最大利得を持つ。",
-    "quality_or_correctness": "生成品質を近似する手法ではないため、報告された改善は同一モデル実行のsystem-level cost/latency改善として解釈すべきである。"
-  },
-  "reservation": {
-    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-2fcf28b8aab221ce876e00e2","job_id":"job-research-0dc2aa86e35f442f",
+ "data":{
+  "overview":"OpWeaveの主結果は、演算子境界を固定せずGPU配置と一緒に選ぶことで、通信境界と段間の待ちを減らし、厳しい出力トークン時間の目標を満たせる構成を増やしながらGPU費用を下げられることである。H100だけの構成でも最大1.78倍、H100と別世代GPUを組み合わせた構成では最大1.89倍の費用改善が得られ、異種GPUの利用価値が単なる安価GPU追加ではなく、注意機構と行列積をそれぞれ適した機器へ割り当てることに由来することを示す。",
+  "key_results":[
+   {"metric":"同種GPUでのサービング費用","value":"最大1.78倍改善","baseline":"H100上で実行可能な既存最良方式","interpretation":"同じ種類のGPUだけでもKVキャッシュと行列積のバッチ制約を分離し、演算子境界を適切に選ぶ価値がある。"},
+   {"metric":"異種GPUでのサービング費用","value":"最大1.89倍改善","baseline":"OpWeaveを使わない実行可能な最良方式","interpretation":"メモリ帯域向きと演算向きのGPUを役割分担させることで、異種GPUの価格性能差を利用できる。"},
+   {"metric":"異種構成の追加利得","value":"同種OpWeaveより最大21.8%費用削減","baseline":"H100中心の同種OpWeave","interpretation":"異種化そのものの追加効果を分離しても有意な費用削減が残る。"},
+   {"metric":"パイプライン段数","value":"Gemma-3-27Bで平均20.7段","baseline":"固定注意・フィードフォワード分離の平均124段","interpretation":"一般分割は固定二段方式を各層で細かく往復する必要を減らし、制御と通信の境界を大幅に減らす。"},
+   {"metric":"ノード間転送量","value":"出力一トークン当たり最大22.8倍削減","baseline":"固定注意・フィードフォワード分離","interpretation":"段境界を減らすことが通信量の直接削減につながり、厳しい遅延目標を満たしやすくする。"},
+   {"metric":"機器稼働率","value":"モデル実行時間が80%超","baseline":"固定二段分離は約半分の時間が待機","interpretation":"混合注意モデルで生じる段間不均衡を計画器が緩和し、パイプラインの空きを減らしている。"}
+  ],
+  "negative_results":["異種GPUは常に有利ではない。メモリ転送一単位当たり費用と演算一単位当たり費用の双方で同じGPUが優位なら、役割を分ける利得は小さい。","中核注意機構だけを分ける二段方式は、GPUメモリ制約と行列積側の重み読み出し時間によって段遅延を釣り合わせられない場合があり、理想費用へ到達できない。","混合注意モデルでは完全注意と効率的注意の層で遅延が異なるため、固定された二段分割は一部の層で待ち時間を生む。","理論上の上界は通信を計算で十分隠せることなどの仮定に依存し、実行系では通信や制御の実費が残る。"],
+  "quality_impact":"モデルの重み、量子化精度、生成確率、ルーティング結果を近似する手法ではなく、同じモデル計算を別のGPU配置とパイプラインで実行する。したがって手法自体は生成品質を低下させる近似ではなく、主な交換関係は費用、遅延、通信、機器利用率である。",
+  "theory_result":"同種GPU分離の利得はKVキャッシュ増大で同居実行のバッチ量が行列積の効率化閾値を下回る領域から現れ、モデル重みがGPUメモリに占める比率で上限が決まる。異種GPU分離はメモリ帯域効率と演算効率のGPU順位が異なる場合に最大利得を持つ。"
+ },
+ "reservation":{"claim_id":"claim-2fcf28b8aab221ce876e00e2","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
