@@ -2,64 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-14822aa228c007fac68c1df2",
-  "job_id": "job-research-53e75736382e3b98",
-  "data": {
-    "canonical_id": "arXiv:2509.00105",
-    "arxiv_id": "2509.00105",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "AdaptCache: KV Cache Native Storage Hierarchy for Low-Delay and High-Quality Language Model Serving",
-    "summary": "DRAMとSSDへKVキャッシュを階層保存しても、容量の大半を占めるSSD命中では読み込み遅延が大きく、単純な階層化だけでは先頭トークン時間を十分に下げられない。AdaptCacheはKV項目ごとに内容、再利用頻度、圧縮による品質低下、装置別転送時間を推定し、圧縮方式・圧縮率・DRAM/SSD配置・追い出しを共同で選ぶ。限られたDRAMへ再利用頻度が高く圧縮しやすい項目を強く圧縮して集約し、品質を落としやすい項目は低圧縮でSSDへ置く。Llama-3.1-8B-InstructとLongBench系負荷では固定圧縮方式より同品質で1.43〜2.4倍の遅延削減、同遅延で6〜55%の品質改善を報告する。",
-    "list_summary": "KV項目ごとの内容・再利用頻度・品質劣化とDRAM/SSD転送遅延を推定し、圧縮方式・率・配置を限界効用で共同最適化して高速階層への命中率を高める。",
-    "authors": [
-      "Shaoting Feng",
-      "Hanchen Li",
-      "Kuntai Du",
-      "Zhuohan Gu",
-      "Yuhan Liu",
-      "Jiayi Yao",
-      "Siddhant Ray",
-      "Samuel Shen",
-      "Yihua Cheng",
-      "Ganesh Ananthanarayanan",
-      "Junchen Jiang"
-    ],
-    "authors_affiliations": "University of Chicago、Microsoft。",
-    "published": "2025-08-29",
-    "publication": "arXiv / SOSP 2025 Big Memory Workshop",
-    "publication_type": "Workshop paper / Preprint",
-    "publication_status": "Workshop version",
-    "lineage": "KV cache offloading / hierarchical storage / lossy KV compression",
-    "topics": [
-      "KVキャッシュ",
-      "DRAM-SSD階層",
-      "損失圧縮",
-      "配置最適化",
-      "先頭トークン時間"
-    ],
-    "importance": "SSDを単なる容量拡張として使うのではなく、品質・圧縮・再利用頻度を含む項目単位の配置問題として扱う。",
-    "hardware_evaluation": "1×NVIDIA A100、CPU DRAM 100GB、SSD 400GB、SSD読込1GB/sの評価設定。",
-    "quality_effect": "損失KV圧縮を使うため品質との交換条件がある。タスク別F1、ROUGE-L、CodeBLEUで元プリフィル回答との類似度を測り、遅延と品質の加重効用を最適化する。",
-    "source": "https://arxiv.org/abs/2509.00105",
-    "sources": [
-      "https://arxiv.org/abs/2509.00105",
-      "https://arxiv.org/html/2509.00105"
-    ],
-    "code": null,
-    "implementation": "評価用プロトタイプ。オフライン推定器、限界効用に基づく方策最適化器、圧縮・配置実行器から構成。公開コードURLは一次資料で確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 16
-  },
+  "attempt_id": "attempt-fdf9090eccdb3c62ee6cd042",
+  "job_id": "job-research-32ece608ca43dae7",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-14822aa228c007fac68c1df2",
+    "claim_id": "claim-fdf9090eccdb3c62ee6cd042",
     "worker_id": "scheduled-chat-discovery-specialist-00",
     "worker_kind": "scheduled_chat"
   }
