@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-bf1a77a940ea17f7048afe0d",
-  "job_id": "job-research-b8521dbc1f501e0d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bf1a77a940ea17f7048afe0d",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bf1a77a940ea17f7048afe0d","job_id":"job-research-b8521dbc1f501e0d","data":{"overview":"GB200を完全に学習から外した世代横断予測では、単純な屋根線基準22.0%に対しカーネル平均誤差12.1%となり1.8倍改善する。対象GPUで一回のモデル非依存計測を追加すると、AIConfigurator相当27.7%に対し3.8%へ低下し7.3倍改善する。端から端の中央値誤差は世代横断で初回トークン15.4%、出力トークン間12.8%、処理量3.0%、対象計測で14.3%、6.2%、2.7%。vLLMスケジューラ再現の要求起動順序・時刻相関は0.985。","key_results":[{"metric":"世代横断カーネル平均誤差","value":"12.1%","baseline":"NeuSight/roofline系22.0%","condition":"A100、H200-NVL、L40Sで学習しGB200を完全未観測","interpretation":"カーネル族別効率モデルにより平均誤差を1.8倍改善。"},{"metric":"対象計測カーネル平均誤差","value":"3.8%","baseline":"AIConfigurator 27.7%","condition":"GB200で一回のモデル非依存カーネル掃引","interpretation":"生遅延ではなく屋根線からの効率残差を補間し、小カーネルも実測することで7.3倍改善。"},{"metric":"復号注意の世代横断誤差","value":"9.3%","baseline":"NeuSight 26.3%","condition":"GB200 decode attention","interpretation":"実配信で起動する融合カーネルを一致させることで2.8倍改善。"},{"metric":"対象計測の出力トークン間p50誤差","value":"6.2%","baseline":"実vLLM","condition":"六モデル族・複数TP/要求率","interpretation":"少量計測でも復号遅延を高精度に再現する。"},{"metric":"世代横断の処理量p50誤差","value":"3.0%","baseline":"実vLLM","condition":"軽負荷から飽和まで","interpretation":"軽負荷では1%未満、飽和でも約8%に収まり容量計画へ使いやすい。"},{"metric":"スケジューラ起動相関","value":"Spearman +0.985","baseline":"実vLLM v1 trace","condition":"要求起動順序と時刻","interpretation":"カーネル時間だけでなくバッチ形成の忠実度が高い。"}],"negative_results":["長文事前充填の注意機構は世代横断しにくく、19～23kトークン要求で初回トークン誤差の尾部が81%級まで広がる。","行列積は既存方式とほぼ同等で、世代横断改善の大半はメモリ律速カーネルと注意機構から得られる。","Vidurは評価条件で復号p50誤差436%となり、プロファイル時と実vLLMのグラフ実行モード差に敏感。","主評価はNVIDIAとvLLMに集中し、他アクセラレータや別サービング基盤への移植性は未実証。"],"quality_impact":"性能予測器でありモデル計算や生成結果を変更しない。","interpretation":"未観測GPUへ外挿するには絶対遅延を直接学習するより、GPU仕様で説明できる物理下限と実装効率を分離する方が頑健である。一方、端から端の初回トークン時間にはGPUカーネルだけでなくホスト費用と実際のバッチ構成が重要で、性能予測とサービングシミュレーションを統合する必要がある。"},"reservation":{"claim_id":"claim-bf1a77a940ea17f7048afe0d","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
