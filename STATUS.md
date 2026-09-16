@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:02:07 JST**
+> 自動生成: **2026-09-16 13:03:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **48** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-16 12:50:41 JST（11分前）** |
+| 最終検証済みResearch収録 | **09-16 12:50:41 JST（12分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **27** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **28** | **2** | **1** | **1** | **2** | **0** | **5** |
+| Discovery | **1** | **3** | **0** | **3** | **0** | **0** | **15** |
+| 合計 | **28** | **4** | **1** | **3** | **2** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -131,11 +131,19 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 13:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: 新着・KV cache・operator disaggregation
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **15件**
+- 探索軸: 新着・KV cache・operator disaggregation / SSD/NVMe KV offload・MoE expert cache/placement / CXL・remote memory・SmartNIC・object storage
 - round `specialist-serving-kv-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260916T1305JST-discovery-specialist-serving-kv-1.json`
   - 探索軸: 新着・KV cache・operator disaggregation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-storage-moe-2` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260916T1312JST-discovery-specialist-storage-moe-2.json`
+  - 探索軸: SSD/NVMe KV offload・MoE expert cache/placement
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cxl-remote-3` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260916T1318JST-discovery-specialist-cxl-remote-3.json`
+  - 探索軸: CXL・remote memory・SmartNIC・object storage
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -196,9 +204,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **259** |
+| 成功result未照合のimmutable submission | **261** |
 | └ Research | **148** |
-| └ Discovery | **111** |
+| └ Discovery | **113** |
 
 ### 厳格検証が未成立のcompleted job
 
