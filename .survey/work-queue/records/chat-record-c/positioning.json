@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-e4810cc94fabe510bad2fc16",
   "job_id": "job-research-6ae155bb5e134fe3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e4810cc94fabe510bad2fc16",
-    "worker_id": "manual-read-20260916-1109",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はNVIDIA H800、最大3ノード・24 GPU、MiniMax-M2.7とGLM-5.1-FP8に限られ、要求到着はShareGPT/LooGLE長分布を使ったPoisson過程であるため、大規模本番クラスタ、異種GPU、強いバーストや非定常負荷での外的妥当性は未検証である。GLM-5.1-FP8ではSGLang-PDDが24 GPUへ収まらず直接比較できず、一部比較方式は16 GPU互換配置を使うため、ノード当たり正規化でも構成差の解釈が必要である。配置最適化は代表的な入力・出力長と事前測定を使うため、分布が大きく変わる場合の再最適化頻度も明示的には評価されない。公式コード公開URLも確認できず、再現コストが高い。",
+    "differences": "DistServeなどのインスタンス単位P/D分離は相ごとに完全なモデル複製を置くのに対し、ExpertPlexは注意だけを相分離し、巨大MoEエキスパート群を共有する。MuxWise系P/D多重化はGPU資源を相間で共有して重み複製を避けるが、固定または粗いGPU区画ではMoEの層・GPUごとの疎負荷変動に追随しにくい。ExpertPlexはMoE共有を独立サーバ群へ集約し、その内部をタイル単位APKで時間・空間多重化する。さらに通信の起点を注意側へ移し、MoE側協調による相間干渉を避ける点まで一体化する。",
+    "implementation_status": "DeepGEMM、DeepEP v1、SGLangを改変した研究実装をH800実機で評価している。APK、M-to-N片側通信、IBGDA遠隔読み出し、SGLangの分離配置・配送器・重畳戦略を実装済み。ただし2026-09-16時点で論文・arXivページに公式ソースコード公開URLは見当たらない。論文はarXiv v2プレプリントで、査読会議・論文誌への採録は確認できない。",
+    "research_positioning": "MoE推論におけるプリフィル・デコード分離、エキスパート配置、GPU共有、細粒度カーネルスケジューリング、通信重畳を横断するシステム研究である。特に『モデル全体を相分離するか、同じGPUを相分割するか』という二択に対し、『小さい注意部だけ相分離し、巨大MoE部を共有する』第三の分離境界を示す。共有部の変動性をAPKと片側通信で吸収し、全スタック配置探索で運用点を選ぶため、MoE比率が高い次世代モデルほど意義が大きい。",
+    "relation_to_existing_repository": "リポジトリ内のMoEエキスパート配置・キャッシュ系統では、重みをCPU/SSDへ退避する方式やエキスパート複製・配置を最適化する方式と異なり、ExpertPlexはGPU常駐重みの総複製数そのものをP/D境界の再設計で減らす。サービング・スケジューリング系統ではDistServe型の相分離とMuxWise型の相多重化の中間に位置し、両者の長所を注意/MoE境界で組み直す。DeepEP/DeepGEMMの通信・計算最適化は下位機構として利用されるため代替ではなく補完関係にある。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-e4810cc94fabe510bad2fc16", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
 }
