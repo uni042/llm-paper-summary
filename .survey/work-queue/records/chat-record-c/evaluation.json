@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f16bcdd1d9d66c05e293785d",
-  "job_id": "job-research-e4fbb25e81d25998",
-  "data": {
-    "hardware": "実機GPUとCPU側メモリを用いる階層オフロード環境で評価する。本文の分析例ではRTX 4090とPCIe 4.0を示し、PCIe帯域で一層の計算中に運べる専門家数が限られることを確認する。",
-    "software": "評価対象モデルはQwen3-30B-A3B-FP8、Qwen3.6-35B-A3B-BF16、GPT-OSS-120B-MXFP4、DeepSeek-V4-Flash。比較対象にllama.cpp、MoE-Infinity、KTransformers、FreeToken、および全重みGPU常駐のFullLoad条件を含む。",
-    "methodology": "数学、コード、文章理解、複数ターン対話を含むGSM8K、MATH、CodeForces、OpenOrca、ShareGPT由来の負荷で専門家活性化を収集し、予測精度、専門家命中率、全重み常駐時に対する実効性能を測る。GPUへ置く専門家割合を25%と45%などに変え、予測、プリフェッチ、キャッシュ、グラフ実行の寄与を比較する。",
-    "scope": "主眼は単一ノード内のGPU―CPUメモリ間MoE専門家オフロードであり、分散クラスタの専門家間通信やNVMe直接退避を主評価対象にはしていない。複数の新しいMoEモデルと複数種のワークロードを含むためモデル横断性はあるが、性能はPCIe帯域、GPU常駐率、専門家活性化の予測可能性に依存する。"
-  },
+  "attempt_id": "attempt-79c4ee390d672cc004c43df8",
+  "job_id": "job-research-41c06f0529c148e7",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f16bcdd1d9d66c05e293785d",
-    "worker_id": "scheduled-chat-discovery-specialist-overflow",
+    "claim_id": "claim-79c4ee390d672cc004c43df8",
+    "worker_id": "manual-reader-smoketest-20260916T1037JST",
     "worker_kind": "scheduled_chat"
   }
 }

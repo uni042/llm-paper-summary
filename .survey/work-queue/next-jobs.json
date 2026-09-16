@@ -19,22 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 72,
-    "actively_claimed": 1,
-    "claimable": 71
+    "actively_claimed": 2,
+    "claimable": 70
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-41c06f0529c148e7",
-      "type": "research",
-      "lane": null,
-      "priority": 93,
-      "canonical_id": "arXiv:2609.15359",
-      "title": "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving",
-      "source_url": "https://arxiv.org/abs/2609.15359",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-6ae155bb5e134fe3",
       "type": "research",
@@ -120,6 +108,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-6ca0cd6980218f8e",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2609.15338",
+      "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.15338",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-b6f805c0cbcee3d4",
       "type": "discovery",
       "lane": "discovery",
@@ -132,5 +132,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T01:32:51+00:00"
+  "generated_at": "2026-09-16T01:38:36+00:00"
 }
