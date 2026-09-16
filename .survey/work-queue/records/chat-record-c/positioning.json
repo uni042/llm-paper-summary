@@ -1,20 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a5f49ff836ff943440eed67d","job_id":"job-research-1d922bbcf8bbfed4",
-  "data":{
-    "limitations":[
-      {"name":"初期入力の検証依存","description":"RoofLangは最初に与える計算グラフとハードウェアグラフが実対象を正しく表すと仮定する。探索中の変換は事前条件で制約できても、出発点が誤っていれば性能評価と意味保存の前提も崩れる。論文は公式実装からの自動グラフ生成と実行トレース照合を将来課題としている。"},
-      {"name":"性能モデルの忠実度","description":"理想的MoE負荷均衡、細粒度な計算通信の完全重畳、解析的集合通信を仮定し、KVキャッシュ追記、投機的デコード、Kimi K3のマルチモーダル部を省略する。したがって得られたパレート前線と改善率は設計探索用のシミュレーション値であり、実機サービングで同じ倍率を保証しない。"},
-      {"name":"シミュレーションのスケーラビリティ","description":"離散事象として演算、依存、テンソル寿命、資源競合を具体化するため最大構成では評価器自体が重い。論文ではKimi K3を128 GPUでシミュレーションすると数時間と数百GBのメモリを要し得るとし、差分再利用、並列化、近似評価が必要としている。"}
-    ],
-    "differences":[
-      {"name":"Frontier・Vidur等との差","description":"既存の推論シミュレータは与えられたサービング構成の性能再現を主目的とするのに対し、RoofLangは性能評価器に加えて意味保存された配置・分割・融合・通信変換を探索空間として持つ。AIが評価結果を受けてアーキテクチャ自体を変更するところまでを一つの系として扱う。"},
-      {"name":"KernelBench・InferenceBench等との差","description":"実コードを生成して実行・プロファイルするエージェント型最適化は具体的な実装性能を測れる一方、利用可能なカーネル、コンパイラ、フレームワーク機能に探索範囲が拘束される。RoofLangは解析属性とハードウェア仕様で候補を評価し、未実装の配置や通信構成も先に比較する。"},
-      {"name":"Unityとの差","description":"Unityと同様にグラフ変換と並列化を統一表現し意味保存を重視するが、RoofLangはLLM推論を対象に、KVキャッシュのメモリ階層、MoEルーティング、プリフィル・デコード分離、複数GPUトポロジーとAI反復探索を評価器まで含めて統合する。"}
-    ],
-    "implementation_status":"RoofLangのソースはGitHubで公開され、論文評価で4モデル、4ハードウェア構成、離散事象シミュレータ、自律設計エージェントを実際に使用している。一方、エージェントが発見した配置・変換を本番推論フレームワークへ自動コード生成し、実機で同じ改善を検証する後段は本論文の範囲外である。",
-    "research_positioning":"推論シミュレーションとAIによるシステム最適化の間を接続するアーキテクチャ探索基盤に位置する。既存リポジトリのKVキャッシュ階層化、MoE専門家配置、並列化、サービング分離などの個別手法を、同じ計算・ハードウェアグラフ上の候補変換として比較できる上位設計層である。最終的な実装最適化を置き換えるのではなく、実装前に有望な設計を絞り、その後カーネル・フレームワーク最適化へ渡す補完関係を想定する。",
-    "relation_to_existing_repository":"推論シミュレーション、サービングスケジューリング、KVキャッシュ、MoE配置、メモリ階層、AIカーネル最適化の複数系統を横断する。特にNVMe/DRAM/HBM間のKVライフサイクル、MoE専門家複製、文脈・専門家・パイプライン並列化を同じ変換空間で扱える。",
-    "audit_required":false
-  },
-  "reservation":{"claim_id":"claim-a5f49ff836ff943440eed67d","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-6c04c6d0834122d69d7ab9df",
+  "job_id": "job-research-5d74d5ee3bd9a66c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6c04c6d0834122d69d7ab9df",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

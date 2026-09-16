@@ -1,8 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a5f49ff836ff943440eed67d","job_id":"job-research-1d922bbcf8bbfed4",
-  "data":{
-    "scope":"評価は実機ベンチマークではなくRoofLang上の解析・離散事象シミュレーションである。4種類のモデルとH200/GH200/B300/GB300、主に8・64 GPU、64K・1M文脈へ一般化範囲を広げる一方、モデル化していないソフトウェア実装差、実カーネル効率、MoE負荷不均衡、投機的デコード等には結果を直接一般化できない。自律設計の改善率もB300をモデル化したシミュレーション上の値であり、実機エンドツーエンド改善率として解釈しない。",
-    "evaluation_setup":"代表モデルとしてDeepSeek V4 Flash、GLM-5.3、DeepSeek V4 Pro、Kimi K3を計算グラフ化し、NVIDIA H200、GH200、B300、GB300の仕様をハードウェアグラフ化する。主探索空間はプリフィルと1ステップデコード、文脈長64Kと1M、8 GPUと64 GPU、データ・文脈・パイプライン・専門家並列化、バッチサイズ2^nをOOMまで掃引する。64 GPU GB300等でスループットと利用者当たりトークン速度のパレート前線を比較する。自律設計評価ではDeepSeek V4 ProのRoofLang実装を持続的AIエージェントへ与え、B300構成で基準前線を改善する配置・変換を探索させる。",
-    "models":["DeepSeek V4 Flash","GLM-5.3","DeepSeek V4 Pro","Kimi K3"],"hardware":["NVIDIA H200","NVIDIA GH200","NVIDIA B300","NVIDIA GB300"],"workloads":["プリフィル","1ステップデコード","64K文脈","1M文脈","8 GPU","64 GPU","自律設計例では8〜256 B300 GPU相当"],"metrics":["GPU当たりトークンスループット","利用者当たりトークン速度（対話性）","パレート前線","ピークバッチサイズ","デコード1トークン当たりメモリ転送量","シミュレーション上の改善率"],"baselines":["各モデルのヒューリスティックな基準並列構成","自律設計ではRoofLang上のDeepSeek V4 Pro基準実装","エージェント探索の比較としてヒューリスティックなグリッド探索"],"simulation_assumptions":"計算と通信は細粒度に完全重畳すると仮定し、MoEのルーティング先トークンは専門家間で理想的に均衡すると仮定する。H200/GH200のFP4はFP8と同速度でエミュレーション可能と仮定する。集合通信はパケット単位ではなく遅延と実効帯域からなる解析モデルを使う。","evaluation_caveats":"実機サーバ上のエンドツーエンド測定ではない。KVキャッシュ追記、投機的デコード構造、Kimi K3のマルチモーダル部分を省略している。モデル化されたピーク演算性能・帯域と理想重畳を使うため、ソフトウェア実装品質、カーネル効率、制御オーバーヘッドは十分に反映されない。","evidence":["§3.1.1","Tables 3–6","Figures 3–4","Tables 7–8","§3.2.1–3.2.2"]},
-  "reservation":{"claim_id":"claim-a5f49ff836ff943440eed67d","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6c04c6d0834122d69d7ab9df",
+  "job_id": "job-research-5d74d5ee3bd9a66c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6c04c6d0834122d69d7ab9df",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
