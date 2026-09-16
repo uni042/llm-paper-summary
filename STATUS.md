@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:36:01 JST**
+> 自動生成: **2026-09-17 03:36:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -203,7 +203,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.13161` — PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 03:32:04 JST** / heartbeat: **—** / lease expiry: **09-17 05:02:04 JST**
+  - claim: **09-17 03:36:09 JST** / heartbeat: **—** / lease expiry: **09-17 05:06:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-9f909dd53a5f1acb.json`
 
 #### Audit

@@ -1,5 +1,66 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f7164aefbbb9a7ccd4752dd5","job_id":"job-research-9f909dd53a5f1acb",
-  "data":{"canonical_id":"arXiv:2609.13161","arxiv_id":"2609.13161","doi":"10.48550/arXiv.2609.13161","arxiv_categories":{"primary":"cs.AR","cross_list":["cs.DC"]},"title":"PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation","summary":"PDDは、広域イーサネット越しにプリフィルと主デコードを分離するとKVキャッシュ転送が初回トークン遅延を支配する問題に対し、プリフィル側データセンターへ中継デコード層を追加する三段構成を提案する。中継層は高速RDMAでKVを受けて即座に生成を始め、その間に遠隔主デコード層へKVをTCP転送する。遠隔側の転送完了後は、中継側が生成したトークンIDだけを送り、主デコード側が増分KVをローカル再計算して生成を引き継ぐ。デコード側RadixCacheと多段パイプライン制御を組み合わせ、低ヒット率要求だけの長い転送を隠蔽し、異種GPUをデータセンター間で柔軟に組み合わせる。","list_summary":"広域KV転送中だけ近傍の中継GPUでデコードを先行し、遠隔GPUへトークンIDで引き継ぐ三段PD分離により、データセンター間異種推論のTTFTと費用効率を改善する。","authors":["Yida Wang","Xiuhong Li","Jianping Ma","Gan Sun","Yunshen Xu","Buhe Han","Jingxu Ng","Yuhao Luo","Ke Hong","Guohao Dai","Boxun Li","Yu Wang"],"published":"2026-07-18","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"PD分離・異種サービング・データセンター間推論","topics":["PD分離","データセンター間推論","KVキャッシュ転送","異種アクセラレータ"],"importance":"データセンター内高速網を前提としてきたPD分離を広域網へ拡張し、転送と生成の重畳で尾部遅延を隠す。","hardware_evaluation":"H100/H200を含む異種GPU構成と20Gbps級データセンター間回線で実機評価。","quality_effect":"モデル出力品質を近似で変更する方式ではなく、同一生成を維持したサービング機構。","source":"https://arxiv.org/abs/2609.13161","sources":["https://arxiv.org/abs/2609.13161","https://arxiv.org/html/2609.13161"],"code":null,"implementation":"論文評価用実装あり。公開コードURLは一次資料から確認できず。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary-reference-section","references_total":31},
-  "reservation":{"claim_id":"claim-f7164aefbbb9a7ccd4752dd5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-942145c6596d2cfdf7866f97",
+  "job_id": "job-research-9f909dd53a5f1acb",
+  "data": {
+    "canonical_id": "arXiv:2609.13161",
+    "arxiv_id": "2609.13161",
+    "doi": "10.48550/arXiv.2609.13161",
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+    "summary": "PDDは、広域イーサネット越しにプリフィルと主デコードを分離するとKVキャッシュ転送が初回トークン遅延を支配する問題に対し、プリフィル側データセンターへ中継デコード層を追加する三段構成を提案する。中継層は高速RDMAでKVを受けて即座に生成を始め、その間に遠隔主デコード層へKVをTCP転送する。遠隔側の転送完了後は、中継側が生成したトークンIDだけを送り、主デコード側が増分KVをローカル再計算して生成を引き継ぐ。デコード側RadixCacheと多段パイプライン制御を組み合わせ、低ヒット率要求だけの長い転送を隠蔽し、異種GPUをデータセンター間で柔軟に組み合わせる。",
+    "list_summary": "広域KV転送中だけ近傍の中継GPUでデコードを先行し、遠隔GPUへトークンIDで引き継ぐ三段PD分離により、データセンター間異種推論のTTFTと費用効率を改善する。",
+    "authors": [
+      "Yida Wang",
+      "Xiuhong Li",
+      "Jianping Ma",
+      "Gan Sun",
+      "Yunshen Xu",
+      "Buhe Han",
+      "Jingxu Ng",
+      "Yuhao Luo",
+      "Ke Hong",
+      "Guohao Dai",
+      "Boxun Li",
+      "Yu Wang"
+    ],
+    "published": "2026-07-18",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "PD分離・異種サービング・データセンター間推論",
+    "topics": [
+      "PD分離",
+      "データセンター間推論",
+      "KVキャッシュ転送",
+      "異種アクセラレータ"
+    ],
+    "importance": "データセンター内高速網を前提としてきたPD分離を広域網へ拡張し、転送と生成の重畳で尾部遅延を隠す。",
+    "hardware_evaluation": "H100/H200を含む異種GPU構成と20Gbps級データセンター間回線で実機評価。",
+    "quality_effect": "モデル出力品質を近似で変更する方式ではなく、同一生成を維持したサービング機構。",
+    "source": "https://arxiv.org/abs/2609.13161",
+    "sources": [
+      "https://arxiv.org/abs/2609.13161",
+      "https://arxiv.org/html/2609.13161"
+    ],
+    "code": null,
+    "implementation": "論文評価用実装あり。公開コードURLは一次資料から確認できず。",
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "primary-reference-section",
+    "references_total": 31
+  },
+  "reservation": {
+    "claim_id": "claim-942145c6596d2cfdf7866f97",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
