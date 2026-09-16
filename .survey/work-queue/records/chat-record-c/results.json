@@ -1,15 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-41a7fdaa747fc1f8c0650e98","job_id":"job-research-408799bbc4fac119",
- "data":{
-  "overview":"AgentKVShiftは再計算率10%でもLoCoMoで完全再計算に近い品質を維持し、同じ予算で未再計算KVを放置する既存方式との差を大きく広げる。Qwen2.5-3BとAMemではF1 0.319で完全再計算0.339から相対5.9%低下に留まる一方、CacheBlendは0.178、ProphetKVは0.125まで落ちる。LiCoMemoryでは三モデルで完全再計算との差が1.5〜3.5%程度になる。再計算率を掃引すると既存法が完全再計算近傍へ達する45〜55%に対し、本方式は10%付近で約2 F1ポイント以内へ到達する。",
-  "key_results":[
-   {"metric":"LoCoMo F1","value":"Qwen2.5-3B + AMemで0.319、LiCoMemoryで0.384","baseline":"完全再計算0.339/0.390、CacheBlend 0.178/0.286、ProphetKV 0.125/0.329","condition":"再計算率10%","interpretation":"少数プローブから得た共通残差を未再計算トークンにも配ることで、90%を古いまま残す選択型方式より完全再計算へ大幅に近づく。"},
-   {"metric":"再計算量","value":"約10%で完全再計算から約2 F1ポイント以内、既存法は45〜55%付近で同等品質","baseline":"CacheBlend / ProphetKV","condition":"LoCoMo、Qwen2.5-3B、再計算率5〜95%掃引","interpretation":"同等品質に必要な再計算量を最大約5分の1へ下げ、速度向上を品質劣化で相殺しにくい。"},
-   {"metric":"プリフィル高速化","value":"4K・バッチ16で3Bは3.33倍、32Bは3.65倍。長文脈でも概ね2.4〜3.0倍","baseline":"完全KV再計算","condition":"再計算率10%、単一A100またはH200","interpretation":"補正は層ごとのメモリ単位ベクトル加算なので、同じ再計算率なら既存法とほぼ同じ速度曲線を保ちつつ品質を高くできる。"},
-   {"metric":"2-bit量子化併用F1","value":"KIVI 2-bit・再計算率10%で0.203、OTT 2-bitで0.202","baseline":"CacheBlend 0.076/0.080、ProphetKV 0.012/0.038","condition":"LoCoMo、Qwen2.5-3B、AMem","interpretation":"プローブ平均が文脈ずれだけでなく平均量子化誤差も吸収するため、低ビットKV保存と計算削減を重ねても既存再利用法より品質が残る。"}
-  ],
-  "negative_results":"単一要求・短文脈では補正処理の固定費が効き、Qwen2.5-3Bの2K・バッチ1・再計算率10%では0.94倍で完全再計算よりわずかに遅い。AMA-BenchのRecall以外、特に複数メモリ間の状態更新や因果推論では全KV再利用法が完全再計算との差をより大きく残す。量子化併用でも2-bitではAgentKVShift自体のF1が無量子化0.319から約0.20へ低下し、補正が量子化損失を完全には消さない。理論上の改善条件も、メモリ共通バイアスがプローブ推定誤差などを上回る場合に限られる。",
-  "interpretation":"構造化メモリでは要約やタグなど同じメモリ内トークンが現在文脈の影響を共有しやすく、再利用誤差にメモリ共通成分が生じる。この成分が大きいほど少数プローブの平均が全体のずれをよく表し、未再計算トークンまで一括補正できるため低い再計算率で利益が大きい。逆に短い入力や小さいバッチでは再計算自体が軽く、補正固定費の比率が上がる。複数メモリをまたぐ推論ではKV近似だけでなくエージェント側推論状態も効くため、局所メモリ補正だけでは完全再計算との差を閉じにくい。",
-  "quality_impact":"近似KVを使うため完全再計算と同一品質ではないが、10〜30%の再計算で多くの条件を完全再計算近傍へ戻し、同じ再計算率の既存法より品質劣化を大幅に抑える。"
- },"reservation":{"claim_id":"claim-41a7fdaa747fc1f8c0650e98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-743db39c9d8329de077d7390",
+  "job_id": "job-research-c0e589d0a60cc7cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-743db39c9d8329de077d7390",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

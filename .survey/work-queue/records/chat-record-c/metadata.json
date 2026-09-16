@@ -1,18 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-41a7fdaa747fc1f8c0650e98","job_id":"job-research-408799bbc4fac119",
- "data":{
-  "canonical_id":"arXiv:2607.21604","arxiv_id":"2607.21604","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},
-  "title":"AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems",
-  "summary":"長期対話エージェントは、過去の会話を要約・タグ・関係情報付きの構造化メモリとして保存し、質問ごとに必要なメモリ単位を取り出す。しかし同じメモリ文字列でも現在の質問や前後文脈が変わるとTransformer内部のKV状態は変わるため、保存済みKVをそのまま再利用すると品質が落ち、毎回全トークンを再計算するとプリフィル遅延が大きい。AgentKVShiftは、再利用KVと現在文脈で再計算したKVの差がメモリ単位で共通のオフセットを強く含むことを利用する。各メモリの10〜30%程度だけをプローブとして再計算し、その差の平均を残りの未再計算トークンにも加えて補正することで、少ない再計算量からメモリ全体を現在文脈へ近づける。",
-  "list_summary":"構造化エージェントメモリの一部トークンだけを再計算し、そこから推定したメモリ単位のKV残差を未再計算トークン全体へ加えて、低い再計算率で品質を回復する。",
-  "authors":["Nilesh Prasad Pandey","Jason Kong","Lanxiang Hu","Quanling Zhao","Yujie Zhao","Onat Gungor","Hao Zhang","Tajana Rosing"],"authors_affiliations":"University of California, San Diego",
-  "published":"2026-05-15","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint v1","lineage":"KV cache reuse / agentic memory / dynamic retrieval / prefill acceleration",
-  "topics":["KVキャッシュ再利用","エージェントメモリ","プリフィル高速化","部分再計算","KV量子化"],
-  "importance":"従来の動的検索向けKV再利用が構造化メモリで崩れる原因を残差構造から分析し、未再計算トークンも補正対象にすることで品質とプリフィル削減を両立する。",
-  "hardware_evaluation":"3B〜7BのLoCoMo評価は単一A100、Qwen3-32BのAMA-Benchとスループット評価は単一H200。文脈長2K〜16K、バッチ1〜16を測定。",
-  "quality_effect":"近似KV再利用なので完全再計算と同一ではないが、10%再計算のLoCoMoで完全再計算から相対F1低下を概ね1.5〜6%へ抑え、同予算の既存再利用法より大幅に高い品質を保つ。",
-  "source":"https://arxiv.org/abs/2607.21604","sources":["https://arxiv.org/abs/2607.21604","https://arxiv.org/html/2607.21604"],"code":null,
-  "implementation":"学習不要。第1層でプローブ候補を決め、各層でそのプローブだけ新しいKVを計算してメモリ単位の平均残差を推定し、未再計算KVへ重み付きベクトル加算する。既存のKV量子化とも併用できる。","last_checked":"2026-09-16",
-  "references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":31
- },"reservation":{"claim_id":"claim-41a7fdaa747fc1f8c0650e98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-743db39c9d8329de077d7390",
+  "job_id": "job-research-c0e589d0a60cc7cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-743db39c9d8329de077d7390",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -1,9 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-41a7fdaa747fc1f8c0650e98","job_id":"job-research-408799bbc4fac119",
- "data":{
-  "limitations":"補正モデルは各メモリ単位の残差が共有オフセットと比較的小さいトークン固有変動へ分かれるという仮定に依存する。論文はスペクトル分析と集中性診断でこの傾向を支持するが、すべてのメモリ形式・モデル・層で保証されるわけではない。キー残差と値残差には非対称性があり、単純な平均シフトで表せない高次構造は残る。主方式は各メモリ単位を独立に補正するため、複数取得チャンク間の関係やエージェントの内部推論状態を直接モデル化しない。単一GPU評価で、分散KV保存・転送やキャッシュ容量管理を含む実サービング全体の性能は未評価。",
-  "differences":"vLLMの接頭辞キャッシュやSGLangのRadixAttentionは同じ長い接頭辞が再出現する場合にKVを正確に再利用するが、質問ごとに取得メモリと順序が変わる動的検索では共有接頭辞が少ない。CacheBlendは保存KVと現在KVの差が大きいトークンだけを選択して再計算し、ProphetKVは質問依存の選択基準を使うが、選ばれなかったKVは古いまま残す。AgentKVShiftは選択したトークンを単なる置換対象ではなく残差推定用プローブとして使い、その情報を未選択KV全体へ伝える。KV量子化とは目的が異なり、量子化が保存・転送量を減らすのに対し、本方式はプリフィル再計算を減らすため併用できる。",
-  "implementation_status":"学習不要で既存モデルの重みを変更しない。必要なのはメモリ単位で以前の層別KVを保存し、取得時に第1層でプローブ位置を決め、各層でプローブKVの再計算と平均残差ベクトルの加算を行う処理である。論文はA100/H200上で実測し、同じ再計算率なら既存選択法とほぼ同じ速度曲線になることを示す。公式コードURLは一次資料本文では確認できなかった。",
-  "research_positioning":"KVキャッシュ再利用研究のうち、固定接頭辞ではなく動的に取得される文脈を再利用する系統に属する。特にエージェントメモリでは、同じメモリ内容が異なる質問や会話状態の下で何度も再取得されるため、保存KVの再利用価値が高い一方、文脈依存ずれも大きい。本方式はそのずれをトークン単位の再計算対象選択ではなくメモリ単位の低次残差として扱う点で、CacheBlend/ProphetKVから一段異なる。階層KVキャッシュやSSD退避と組み合わせる場合、保存先から読み戻したKVを再計算せず補正して使えるため、I/O削減とプリフィル計算削減を別軸で重ねられる可能性がある。"
- },"reservation":{"claim_id":"claim-41a7fdaa747fc1f8c0650e98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-743db39c9d8329de077d7390",
+  "job_id": "job-research-c0e589d0a60cc7cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-743db39c9d8329de077d7390",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
