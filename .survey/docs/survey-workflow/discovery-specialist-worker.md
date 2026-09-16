@@ -133,9 +133,11 @@ priorityは少なくとも以下を考慮する。
 
 ## transport
 
-通常探索モードでGitHub write可能時は既存workflow v10のdiscovery transportを使い、paper/state/READMEを直接編集しない。
+通常探索モードでGitHub write可能時はworkflow v10の **self-describing discovery round transport** を使い、paper/state/READMEを直接編集しない。
 
-各discovery submissionには、通常の `job_id` と `candidates` に加えて、トップレベルに `discovery_stats` を含める。
+探索主体workerが同一runで2 round目以降へ進むとき、Actionsが新しいDiscovery jobを作るのを待ってはならない。また、`job-discovery-specialist-...` のような **存在しないjob IDをworker側で合成してはならない**。各roundは独立したimmutable submissionとして保存し、トップレベルに `operation: "submit_discovery_round"`、`candidates`、`discovery_stats` を含める。**この形式では `job_id` を付けない。** Actionsはsubmission pathを一意キーとして内部のdeterministic Discovery ingest jobを作り、最終dedupe後にResearch jobをmaterializeする。
+
+通常workerが実在するready Discovery jobを1件処理する既存経路は互換のため残す。その経路では実在する `job_id` を使用してよい。しかし探索主体workerのmulti-round継続では、1 round目も含めて原則 `submit_discovery_round` を使い、pre-issued jobの有無をround継続条件にしない。
 
 1回の探索主体Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
 
@@ -145,15 +147,28 @@ priorityは少なくとも以下を考慮する。
 
 ```json
 {
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.xxxxx",
+      "title": "...",
+      "source_url": "https://arxiv.org/abs/2609.xxxxx",
+      "paper_path": "papers/inference/.../2609.xxxxx.md",
+      "priority": 90,
+      "reason": "..."
+    }
+  ],
   "discovery_stats": {
     "run_key": "2026-09-12T15:00:00+09:00",
     "round": "specialist-new-arrivals-1",
     "axis": "2609新着・分離サービング",
     "query_summary": "今回実際に使った探索軸と範囲の短い説明",
-    "candidate_count": 5,
-    "duplicate_filtered_count": 2,
-    "duplicate_canonical_ids": ["arxiv:..."],
-    "next_axis_hint": "次回に優先する異なる探索軸",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次に試す異なる探索軸",
     "empty_round_reason": null
   }
 }
@@ -162,6 +177,8 @@ priorityは少なくとも以下を考慮する。
 `candidate_count` は検索結果の生件数ではなく、テーマ適合性等を確認して実質的に候補として評価した件数を数える。`duplicate_filtered_count` はそのうちScheduled Chat側の重複確認で除外した件数とする。`candidates` には重複除外後にActionsへ投入する候補だけを入れる。`empty_round_reason` は有効候補が残らなかった場合だけ具体的に記録すればよい。
 
 Scheduled Chatは `accepted_count` を確定しない。最終投入直前以降にも通常workerやActionsによって同じ候補が既存化し得るため、実際の採用数はActionsが最終dedupe後の `research_jobs_added` から確定する。
+
+過去に既に保存されたself-describing roundがsynthetic/unknown `job_id` またはterminal Discovery jobを参照して失敗している場合、`recover_discovery_submissions.py` が同じdeterministic ingest経路へ収束させる。`discovery_stats` を持たないさらに古いpayloadは、元の実在terminal Discovery jobを確認できる場合だけ旧recovery経路で救済する。Research/Auditのunknown job IDはこの救済対象にしない。
 
 GitHub write不能時は `fallback-routing.md` に従う。通常探索モードではChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。overflow research modeでは通常論文workerと同じく、完成した5-slot research/audit payloadをLibraryへcheckpointして次jobへ進む。完成Markdownは直接保存しない。
 
