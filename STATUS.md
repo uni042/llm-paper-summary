@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:40:19 JST**
+> 自動生成: **2026-09-16 16:40:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **33** |
-| 未claim Research job | **32** |
-| 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-16 16:38:30 JST（1分前）** |
+| 収録候補論文 | **32** |
+| 未claim Research job | **31** |
+| 直近24hの検証済みResearch収録 | **57** |
+| 最終検証済みResearch収録 | **09-16 16:40:27 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **33** |
+| canonical_id確認済みの一意な候補論文 | **32** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **33** |
+| 非終端Research job合計 | **32** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **45** | **12** | **6** | **6** | **1** | **0** | — |
+| Research | **46** | **12** | **6** | **6** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **46** | **31** | **6** | **25** | **2** | **0** | **23** |
+| 合計 | **47** | **31** | **6** | **25** | **2** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 16:40:27 JST** [research] `arXiv:2609.12923` — Dissecting GPU Utilization for LLM Inference on Nvidia Hopper
+  - job: `.survey/work-queue/jobs/job-research-21d58015b4f64394.json`
+  - result: `.survey/work-queue/results/research/attempt-ba99df60a0f0fdf529fc1f2a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ba99df60a0f0fdf529fc1f2a.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md`
 - **09-16 16:38:30 JST** [research] `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers
   - job: `.survey/work-queue/jobs/job-research-f9d44874a1b28506.json`
   - result: `.survey/work-queue/results/research/attempt-935f2123fd1379422e5152c0.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-5cdea98b4034b7e3f2b05850.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5cdea98b4034b7e3f2b05850.json`
   - paper: `papers/inference/09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md`
-- **09-16 15:10:01 JST** [research] `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing
-  - job: `.survey/work-queue/jobs/job-research-795118fce8eb1845.json`
-  - result: `.survey/work-queue/results/research/attempt-8834d311401a99e374c1300d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8834d311401a99e374c1300d.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md`
 
 ### Audit
 
@@ -228,7 +228,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **33** |
+| ready | **32** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,7 +248,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **601** |
+| inference/training/survey配下の論文Markdown実体 | **602** |
 
 ### immutable submissionの未照合
 
@@ -256,8 +256,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **337** |
-| └ Research | **203** |
+| 成功result未照合のimmutable submission | **336** |
+| └ Research | **202** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
