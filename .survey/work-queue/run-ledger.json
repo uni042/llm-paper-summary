@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T11:03:23.388317+00:00",
+  "updated_at": "2026-09-16T11:05:41.174106+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T11:03:23.388317+00:00",
+      "last_recorded_at": "2026-09-16T11:05:41.174106+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 150,
         "audit_completed": 0,
-        "discovery_completed": 78,
+        "discovery_completed": 79,
         "blocked": 12,
-        "new_jobs": 104,
+        "new_jobs": 106,
         "new_papers": 154,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35051053732:1",
-          "recorded_at": "2026-09-16T03:14:55.334609+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35051053732",
-            "run_attempt": "1",
-            "source_sha": "b967726647bd8d6fa2845de9faf9e89449e0c95c"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35051279519:1",
           "recorded_at": "2026-09-16T03:18:32.140961+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35088111770",
             "run_attempt": "1",
             "source_sha": "a561d22cf014c7b93086cedd2a4810bb290eb623"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35088304453:1",
+          "recorded_at": "2026-09-16T11:05:41.174106+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35088304453",
+            "run_attempt": "1",
+            "source_sha": "2a3e206a78e2a69b8ca4be58dd15659c55d5d878"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -21520,6 +21520,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-7d09b183cc7a9a2c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22250,6 +22258,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-7d09b183cc7a9a2c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-c15602f379300b58",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.11530",
+          "title": "PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models"
         }
       ],
       "new_paper_ids": [
@@ -22590,7 +22612,8 @@
         ".survey/work-queue/results/20260916T2006JST-discovery-specialist-agent-moe-22.json",
         ".survey/work-queue/results/20260916T2010JST-discovery-specialist-agent-runtime-23.json",
         ".survey/work-queue/results/20260916T2014JST-discovery-specialist-memory-contention-24.json",
-        ".survey/work-queue/results/20260916T2008JST-discovery-specialist-superchip-slo-1.json"
+        ".survey/work-queue/results/20260916T2008JST-discovery-specialist-superchip-slo-1.json",
+        ".survey/work-queue/results/20260916T2034JST-discovery-specialist-tail-reasoning-8.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
