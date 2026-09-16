@@ -1,1 +1,52 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a040b871bad8d7791dcde413","job_id":"job-research-c5a47af1c9e3acf3","data":{"overview":"GHとAGHはいずれもAzure trace較正workloadで1秒未満に実行可能解を生成する。AGHは厳密MILPが完了するinstanceでは最適costへ数%以内に近づき、大規模instanceでは600秒制限に達するsolverに対して260倍超のplanning speedupを示す。最大1.5倍のout-of-sample parameter inflationでもAGHはcostを安定させSLO violationを制御する一方、solver由来の固定配置は急速に劣化する。rolling再最適化ではAGHのstatic plan自体にheadroomがあり、再最適化の主効果は平均cost削減よりpeak-window cost平滑化だった。","key_results":[{"metric":"planning runtime","value":"under 1 second","baseline":"exact MILP up to 600 s limit","condition":"Azure-trace-calibrated large instances","interpretation":"operational re-planningへ使える時間尺度でfeasible allocationを生成する。"},{"metric":"speedup","value":">260x","baseline":"exact optimization solver","condition":"large-scale instances","interpretation":"joint decision spaceを維持しながらsolver bottleneckを大幅に削減する。"},{"metric":"cost quality","value":"within a few percent of MILP optimum","baseline":"exact MILP optimum","condition":"instances where exact solver completes","interpretation":"高速化のために大きなcost penaltyを払わずnear-optimal planningを得る。"},{"metric":"robustness","value":"controlled SLO violations and stable cost up to 1.5x parameter inflation","baseline":"exact-solver placement and heuristic baselines","condition":"out-of-sample stress tests","interpretation":"headroom-aware allocationが需要・parameter誤差を吸収する。"}],"negative_results":["厳密MILPはproduction-scale instanceで600秒制限を超え、rolling re-optimizationに不向きである。","AGHのrolling re-optimizationはstatic planに十分なheadroomがある場合、平均costを大きく下げず主にpeak-window costを平滑化する。","評価はtrace-calibrated numerical modelであり、実クラスタでmodel load・resharding・KV invalidation等の全運用overheadを直接測定したものではない。"],"quality_impact":"precisionごとのerror multiplierとquery type別error SLOを制約へ入れ、安価なINT4/INT8配置が品質上不適切な場合は候補から除外する。","interpretation":"配置計画では最適性そのものより、相互依存するSLO制約を構築中から守るfeasibility-first設計が、秒以下のplanningと需要変動へのheadroomを両立する鍵になる。"},"reservation":{"claim_id":"claim-a040b871bad8d7791dcde413","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-72ef4b04d86eb2e2526adcd7",
+  "job_id": "job-research-c5a47af1c9e3acf3",
+  "data": {
+    "overview": "GHとAGHはいずれもAzure trace較正workloadで1秒未満に実行可能解を生成する。AGHは厳密MILPが完了するinstanceでは最適costへ数%以内に近づき、大規模instanceでは600秒制限に達するsolverに対して260倍超のplanning speedupを示す。最大1.5倍のout-of-sample parameter inflationでもAGHはcostを安定させSLO violationを制御する一方、solver由来の固定配置は急速に劣化する。rolling再最適化ではAGHのstatic plan自体にheadroomがあり、再最適化の主効果は平均cost削減よりpeak-window cost平滑化だった。",
+    "key_results": [
+      {
+        "metric": "planning runtime",
+        "value": "under 1 second",
+        "baseline": "exact MILP up to 600 s limit",
+        "condition": "Azure-trace-calibrated large instances",
+        "interpretation": "operational re-planningへ使える時間尺度でfeasible allocationを生成する。"
+      },
+      {
+        "metric": "speedup",
+        "value": ">260x",
+        "baseline": "exact optimization solver",
+        "condition": "large-scale instances",
+        "interpretation": "joint decision spaceを維持しながらsolver bottleneckを大幅に削減する。"
+      },
+      {
+        "metric": "cost quality",
+        "value": "within a few percent of MILP optimum",
+        "baseline": "exact MILP optimum",
+        "condition": "instances where exact solver completes",
+        "interpretation": "高速化のために大きなcost penaltyを払わずnear-optimal planningを得る。"
+      },
+      {
+        "metric": "robustness",
+        "value": "controlled SLO violations and stable cost up to 1.5x parameter inflation",
+        "baseline": "exact-solver placement and heuristic baselines",
+        "condition": "out-of-sample stress tests",
+        "interpretation": "headroom-aware allocationが需要・parameter誤差を吸収する。"
+      }
+    ],
+    "negative_results": [
+      "厳密MILPはproduction-scale instanceで600秒制限を超え、rolling re-optimizationに不向きである。",
+      "AGHのrolling re-optimizationはstatic planに十分なheadroomがある場合、平均costを大きく下げず主にpeak-window costを平滑化する。",
+      "評価はtrace-calibrated numerical modelであり、実クラスタでmodel load・resharding・KV invalidation等の全運用overheadを直接測定したものではない。"
+    ],
+    "quality_impact": "precisionごとのerror multiplierとquery type別error SLOを制約へ入れ、安価なINT4/INT8配置が品質上不適切な場合は候補から除外する。",
+    "interpretation": "配置計画では最適性そのものより、相互依存するSLO制約を構築中から守るfeasibility-first設計が、秒以下のplanningと需要変動へのheadroomを両立する鍵になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-72ef4b04d86eb2e2526adcd7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

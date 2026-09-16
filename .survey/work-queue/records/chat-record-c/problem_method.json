@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a040b871bad8d7791dcde413","job_id":"job-research-c5a47af1c9e3acf3","data":{"problem":"大規模LLMサービスでは、要求種別ごとの到着率・入力/出力長・遅延SLO・精度SLOが異なる一方、利用可能なGPUもH100、A100、RTX 4090、A6000など価格・メモリ・帯域・精度設定が異なる。さらに70B級モデルは単一GPUへ収まらず、テンソル並列とパイプライン並列の選択がメモリ、計算、通信遅延を変える。モデル選択、GPU provisioning、TP/PP、量子化精度、要求routingを別々に最適化すると、一段階で安価に見える選択が別のメモリ・遅延・精度・予算制約を破る。すべてをMILPで共同最適化すれば最適性を得られるが、query type、model、GPU tier、parallelism候補が増えると組合せが急増し、実験ではproduction-scale instanceで600秒制限を超えてrolling re-optimizationへ使えない。既存の高速heuristicは配置・provisioning・parallelism・routingを分離するため、相互制約下で実行不能解を作り得る。","novelty":"本研究は共同MILPの制約構造を保ったまま秒以下で配置を作るfeasibility-first heuristicを設計する。単一passのGreedy Heuristicに加え、Adaptive Greedy Heuristicはmulti-start construction、relocate local search、GPU consolidationで解を改善する。候補をコストだけで並べず、TP-aware feasibility selectionでモデルがメモリと遅延を満たす並列度を先に絞り、cost-per-effective-coverageで需要を有効に覆う単価を順位付けし、既存配置が不足する場合はTP upgradeでactive resourceを拡張する。これによりjoint decision spaceを維持しながら厳密solverの計算時間を避ける。","method_overview":"入力はquery typeごとの到着率、平均prompt/output token数、delay/error SLO、unserved上限、modelごとのweight/KV footprintと精度、GPU tierごとのmemory、TFLOPS、bandwidth、hourly price、precision scale、およびTP/PP候補である。まず二相delay modelでprefillのcompute delayをTPで割り、decodeではTPによるcompute削減とPP stage間通信を加算する。MILPはmodel-tier deployment、GPU数、joint TP/PP selector、traffic routing fraction、unserved fractionを決定し、memory、compute、latency、accuracy、storage、global budgetを満たしながら運用費とpenaltyを最小化する。高速経路ではGHが未充足需要を順に見て、各model-tier-parallelism候補を制約でfilterし、effective coverage当たりcostで最良候補を選んでroutingを割り当てる。AGHは異なる初期順序から複数解を構築し、relocate local searchでtraffic/deploymentをより安い実行可能候補へ移し、最後にGPU consolidationで余剰capacityを畳む。既存配置でcapacityが足りないがTP増加で制約を満たせる場合はTP upgradeを行い、新規GPU追加より安い拡張を試す。各操作で制約を再確認するため、後処理で実行不能解を修復するのではなく構築中からfeasibilityを維持する。rolling評価ではdeployment変更コストを考慮してepoch境界で配置を変え、固定配置内ではroutingを適応させる。","system_design":"需要・SLOモデル、model/GPU/precision catalog、TP/PP二相遅延モデル、MILP基準解、GH構築器、AGH multi-start/local-search/consolidation、rolling-horizon plannerからなる。","components":[{"name":"TP-aware feasibility selection","description":"候補model-tierを価格だけで選ばず、weight sharding後のper-GPU memory、KV residency、prefill/decode delay、TP通信とPP stage通信、accuracy SLOを現在のTP/PP候補ごとに評価する。大きなモデルが単一GPUに収まらない場合でもTPを増やせば実行可能になる一方、PP増加は通信とbubbleを増やすため、並列度を配置の外部入力ではなく候補選択の一部として扱う。制約を満たさない候補をgreedy ranking前に除くことで、安価だが実行不能な配置を避ける。"},{"name":"cost-per-effective-coverage ranking","description":"単純なGPU時間単価ではなく、候補構成がSLOを満たしながら実際に処理できる未充足需要量でコストを割ったeffective coverage指標を使う。量子化で安くてもerror SLOを破るtierや、memoryは足りてもdelay SLOを満たせないtierはcoverageへ寄与しない。これにより異種GPU・モデルサイズ・precisionの比較を同じ需要充足尺度へ落とし込み、greedy構築でもglobal budgetを消費する価値が高い候補を優先できる。"},{"name":"TP upgradeとGPU consolidation","description":"既に配置したmodel-tierがcapacity不足になったとき、直ちに別deploymentを追加せず、TP degreeを上げてper-stage computeとmemory pressureを減らすupgradeを検討する。構築後はGPU consolidationで余剰GPUや分散した小規模配置を統合し、SLOとcapacityを再検証しながらレンタル費を削減する。追加と削減の両方向をparallelism-awareに行うため、単発greedyが残しやすい過剰provisioningを抑える。"},{"name":"Adaptive Greedy Heuristic","description":"GHの一回の構築順序への依存を減らすため、複数の初期順序・seedから実行可能解を作るmulti-startを行い、その後relocate-based local searchでtrafficやdeploymentをより低コストな候補へ移す。各relocateはmemory、latency、accuracy、storage、budget、unserved capを再確認し、実行可能性を壊す移動を受け入れない。最後にconsolidationを行うことで、厳密MILPに近いコストを維持しつつ大規模instanceでも1秒未満のplanningを可能にする。"}]},"reservation":{"claim_id":"claim-a040b871bad8d7791dcde413","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-72ef4b04d86eb2e2526adcd7",
+  "job_id": "job-research-c5a47af1c9e3acf3",
+  "data": {
+    "problem": "大規模LLMサービスでは、要求種別ごとの到着率・入力/出力長・遅延SLO・精度SLOが異なる一方、利用可能なGPUもH100、A100、RTX 4090、A6000など価格・メモリ・帯域・精度設定が異なる。さらに70B級モデルは単一GPUへ収まらず、テンソル並列とパイプライン並列の選択がメモリ、計算、通信遅延を変える。モデル選択、GPU provisioning、TP/PP、量子化精度、要求routingを別々に最適化すると、一段階で安価に見える選択が別のメモリ・遅延・精度・予算制約を破る。すべてをMILPで共同最適化すれば最適性を得られるが、query type、model、GPU tier、parallelism候補が増えると組合せが急増し、実験ではproduction-scale instanceで600秒制限を超えてrolling re-optimizationへ使えない。既存の高速heuristicは配置・provisioning・parallelism・routingを分離するため、相互制約下で実行不能解を作り得る。",
+    "novelty": "本研究は共同MILPの制約構造を保ったまま秒以下で配置を作るfeasibility-first heuristicを設計する。単一passのGreedy Heuristicに加え、Adaptive Greedy Heuristicはmulti-start construction、relocate local search、GPU consolidationで解を改善する。候補をコストだけで並べず、TP-aware feasibility selectionでモデルがメモリと遅延を満たす並列度を先に絞り、cost-per-effective-coverageで需要を有効に覆う単価を順位付けし、既存配置が不足する場合はTP upgradeでactive resourceを拡張する。これによりjoint decision spaceを維持しながら厳密solverの計算時間を避ける。",
+    "method_overview": "入力はquery typeごとの到着率、平均prompt/output token数、delay/error SLO、unserved上限、modelごとのweight/KV footprintと精度、GPU tierごとのmemory、TFLOPS、bandwidth、hourly price、precision scale、およびTP/PP候補である。まず二相delay modelでprefillのcompute delayをTPで割り、decodeではTPによるcompute削減とPP stage間通信を加算する。MILPはmodel-tier deployment、GPU数、joint TP/PP selector、traffic routing fraction、unserved fractionを決定し、memory、compute、latency、accuracy、storage、global budgetを満たしながら運用費とpenaltyを最小化する。高速経路ではGHが未充足需要を順に見て、各model-tier-parallelism候補を制約でfilterし、effective coverage当たりcostで最良候補を選んでroutingを割り当てる。AGHは異なる初期順序から複数解を構築し、relocate local searchでtraffic/deploymentをより安い実行可能候補へ移し、最後にGPU consolidationで余剰capacityを畳む。既存配置でcapacityが足りないがTP増加で制約を満たせる場合はTP upgradeを行い、新規GPU追加より安い拡張を試す。各操作で制約を再確認するため、後処理で実行不能解を修復するのではなく構築中からfeasibilityを維持する。rolling評価ではdeployment変更コストを考慮してepoch境界で配置を変え、固定配置内ではroutingを適応させる。",
+    "system_design": "需要・SLOモデル、model/GPU/precision catalog、TP/PP二相遅延モデル、MILP基準解、GH構築器、AGH multi-start/local-search/consolidation、rolling-horizon plannerからなる。",
+    "components": [
+      {
+        "name": "TP-aware feasibility selection",
+        "description": "候補model-tierを価格だけで選ばず、weight sharding後のper-GPU memory、KV residency、prefill/decode delay、TP通信とPP stage通信、accuracy SLOを現在のTP/PP候補ごとに評価する。大きなモデルが単一GPUに収まらない場合でもTPを増やせば実行可能になる一方、PP増加は通信とbubbleを増やすため、並列度を配置の外部入力ではなく候補選択の一部として扱う。制約を満たさない候補をgreedy ranking前に除くことで、安価だが実行不能な配置を避ける。"
+      },
+      {
+        "name": "cost-per-effective-coverage ranking",
+        "description": "単純なGPU時間単価ではなく、候補構成がSLOを満たしながら実際に処理できる未充足需要量でコストを割ったeffective coverage指標を使う。量子化で安くてもerror SLOを破るtierや、memoryは足りてもdelay SLOを満たせないtierはcoverageへ寄与しない。これにより異種GPU・モデルサイズ・precisionの比較を同じ需要充足尺度へ落とし込み、greedy構築でもglobal budgetを消費する価値が高い候補を優先できる。"
+      },
+      {
+        "name": "TP upgradeとGPU consolidation",
+        "description": "既に配置したmodel-tierがcapacity不足になったとき、直ちに別deploymentを追加せず、TP degreeを上げてper-stage computeとmemory pressureを減らすupgradeを検討する。構築後はGPU consolidationで余剰GPUや分散した小規模配置を統合し、SLOとcapacityを再検証しながらレンタル費を削減する。追加と削減の両方向をparallelism-awareに行うため、単発greedyが残しやすい過剰provisioningを抑える。"
+      },
+      {
+        "name": "Adaptive Greedy Heuristic",
+        "description": "GHの一回の構築順序への依存を減らすため、複数の初期順序・seedから実行可能解を作るmulti-startを行い、その後relocate-based local searchでtrafficやdeploymentをより低コストな候補へ移す。各relocateはmemory、latency、accuracy、storage、budget、unserved capを再確認し、実行可能性を壊す移動を受け入れない。最後にconsolidationを行うことで、厳密MILPに近いコストを維持しつつ大規模instanceでも1秒未満のplanningを可能にする。"
+      }
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-72ef4b04d86eb2e2526adcd7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

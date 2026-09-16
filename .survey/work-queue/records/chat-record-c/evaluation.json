@@ -1,1 +1,54 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a040b871bad8d7791dcde413","job_id":"job-research-c5a47af1c9e3acf3","data":{"evaluation_summary":"Azure LLM Inference Trace 2025で需要分布を較正し、query type、model、GPU tier、TP/PP候補を増やした複数規模の配置問題でGH/AGHを厳密MILPと比較する。MILPが解ける規模ではoptimality gap、large-scaleではplanning timeとfeasibilityを測り、LP-relaxation rounding、decoupled VM-then-routing、homogeneous fleetも比較する。さらに需要・model parameterを最大1.5倍へ外挿するstress testとAzure diurnal traceによるrolling re-optimizationを評価する。","scope":"24時間planning horizonのheterogeneous GPU cloud capacity planning。query typeはsummarization、code generation、translation、math、image/video generation等を想定。","hardware":["H100 tiers","A100 tiers","RTX 4090 tiers","A6000 FP16/INT8/INT4 tiers"],"software":["MILP exact solver","Greedy Heuristic","Adaptive Greedy Heuristic","LP-relaxation baseline"],"models":["1B級から70B級foundation models"],"datasets":["Azure LLM Inference Trace (2025) calibrated workloads","synthetic demand volatility","Azure diurnal demand trace"],"workload":"異なるarrival rate、prompt/output length、delay/error SLOを持つ複数query typeを異種model-GPU構成へroutingする。","baselines":["exact MILP","LP-relaxation with greedy rounding (LPR)","decoupled VM-selection then routing (DVR)","homogeneous-fleet (HF)"],"metrics":["operational cost","solver/planner runtime","feasibility","SLO violations","optimality gap","unserved demand"],"methodology":"小中規模ではMILP optimumとcost gapを比較し、大規模では600秒solver limitに対するheuristic runtimeを比較する。out-of-sampleではparameter inflationを最大1.5xへ増やし、固定配置のrobustnessとSLO violationを測る。rolling variantでは代表的5分cadenceで再最適化効果を調べる。","predictor_accuracy":"遅延はprefill/decode二相モデルで、precision latency scaleとerror multiplierを別々に較正する。実機benchmarkではなくtrace-calibrated numerical studyである。","control_knobs":"model deployment、GPU tier/count、FP16/INT8/INT4、TP degree {1,2,4,8}等、PP depth {1,2,4}等、routing fraction、unserved fraction。"},"reservation":{"claim_id":"claim-a040b871bad8d7791dcde413","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-72ef4b04d86eb2e2526adcd7",
+  "job_id": "job-research-c5a47af1c9e3acf3",
+  "data": {
+    "evaluation_summary": "Azure LLM Inference Trace 2025で需要分布を較正し、query type、model、GPU tier、TP/PP候補を増やした複数規模の配置問題でGH/AGHを厳密MILPと比較する。MILPが解ける規模ではoptimality gap、large-scaleではplanning timeとfeasibilityを測り、LP-relaxation rounding、decoupled VM-then-routing、homogeneous fleetも比較する。さらに需要・model parameterを最大1.5倍へ外挿するstress testとAzure diurnal traceによるrolling re-optimizationを評価する。",
+    "scope": "24時間planning horizonのheterogeneous GPU cloud capacity planning。query typeはsummarization、code generation、translation、math、image/video generation等を想定。",
+    "hardware": [
+      "H100 tiers",
+      "A100 tiers",
+      "RTX 4090 tiers",
+      "A6000 FP16/INT8/INT4 tiers"
+    ],
+    "software": [
+      "MILP exact solver",
+      "Greedy Heuristic",
+      "Adaptive Greedy Heuristic",
+      "LP-relaxation baseline"
+    ],
+    "models": [
+      "1B級から70B級foundation models"
+    ],
+    "datasets": [
+      "Azure LLM Inference Trace (2025) calibrated workloads",
+      "synthetic demand volatility",
+      "Azure diurnal demand trace"
+    ],
+    "workload": "異なるarrival rate、prompt/output length、delay/error SLOを持つ複数query typeを異種model-GPU構成へroutingする。",
+    "baselines": [
+      "exact MILP",
+      "LP-relaxation with greedy rounding (LPR)",
+      "decoupled VM-selection then routing (DVR)",
+      "homogeneous-fleet (HF)"
+    ],
+    "metrics": [
+      "operational cost",
+      "solver/planner runtime",
+      "feasibility",
+      "SLO violations",
+      "optimality gap",
+      "unserved demand"
+    ],
+    "methodology": "小中規模ではMILP optimumとcost gapを比較し、大規模では600秒solver limitに対するheuristic runtimeを比較する。out-of-sampleではparameter inflationを最大1.5xへ増やし、固定配置のrobustnessとSLO violationを測る。rolling variantでは代表的5分cadenceで再最適化効果を調べる。",
+    "predictor_accuracy": "遅延はprefill/decode二相モデルで、precision latency scaleとerror multiplierを別々に較正する。実機benchmarkではなくtrace-calibrated numerical studyである。",
+    "control_knobs": "model deployment、GPU tier/count、FP16/INT8/INT4、TP degree {1,2,4,8}等、PP depth {1,2,4}等、routing fraction、unserved fraction。"
+  },
+  "reservation": {
+    "claim_id": "claim-72ef4b04d86eb2e2526adcd7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
