@@ -5,7 +5,9 @@ The Discovery worker cannot rely on GitHub code search for duplicate detection b
 that search index may omit already tracked papers. This script deliberately reuses
 queue_worker.existing_candidate_keys(), the same normalized identity-token set consumed
 by the final Discovery materialization gate, and publishes it as small deterministic
-files that Scheduled Chat can fetch exactly.
+files that Scheduled Chat can fetch exactly. It additionally publishes a paper-level
+alias resolver derived from the same represented/pending sources for conservative ID-less
+title matching before candidate evaluation.
 """
 from __future__ import annotations
 
@@ -15,33 +17,40 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+import paper_identity
 import queue_worker
+import represented_paper_index
 
+
+REPRESENTED_RESOLVER_FILE = "_represented_papers.json"
 
 README = """# Discovery identity precheck
 
-This directory is a derived lookup surface for Discovery workers. It is generated from
-`queue_worker.existing_candidate_keys()`, so it contains the same identity tokens as the final duplicate gate.
+This directory is a derived lookup surface for Discovery workers. Exact identity shards are generated from `queue_worker.existing_candidate_keys()` and contain the same identity tokens as the final duplicate gate. `_represented_papers.json` folds the same canonical sources into paper-level alias groups so arXiv/DOI/OpenReview/URL/title representations can be treated as one paper before candidate evaluation.
 
-Before accepting a candidate, check the appropriate shard using the candidate's strongest
-available identity in this order: canonical/arXiv ID, DOI, OpenReview ID, normalized URL,
-then normalized title. Refresh the latest default-branch HEAD and repeat this check
-immediately before writing an immutable Discovery submission.
+Workers must check the appropriate shard before accepting a candidate, using the candidate's
+strongest available identity in this order: canonical/arXiv ID, DOI, OpenReview ID,
+normalized URL, then normalized title. Then use the represented-paper resolver. Exact title
+hash matches are deterministic aliases. Fuzzy title matching is allowed only when a provider
+result has no stable identifier and first-author plus publication year also agree at a high
+confidence threshold. A fuzzy title alone must never discard a paper.
+
+Refresh the latest default-branch HEAD and repeat this check immediately before writing an
+immutable Discovery submission.
 
 Do not use GitHub code search as duplicate authority. Code search may be used only for
-navigation; a code-search miss does not mean a paper is new. A candidate whose normalized
-identity token is present in a shard is already represented or pending and must be filtered
-before submission.
+navigation; a code-search miss does not mean a paper is new.
 
 Shard naming:
 - `arxiv-YYMM.txt`: normalized arXiv identity tokens for one arXiv month prefix.
 - `doi.txt`, `openreview.txt`, `id-other.txt`: other stable identifier tokens.
 - `url-<host>.txt`: normalized URL tokens by host.
 - `title-<bucket>.txt`: normalized title tokens by first ASCII letter/digit bucket.
-- `_manifest.json`: source contract, source commit, token count, and per-shard counts.
+- `_represented_papers.json`: paper-level alias resolver plus conservative title metadata.
+- `_manifest.json`: source contract, source commit, token count, resolver metadata, and per-shard counts.
 
-Each `.txt` file contains one exact normalized identity token per line. Do not infer
-novelty from a missing GitHub search result; check the appropriate shard before accepting a candidate.
+Each `.txt` file contains one exact normalized identity token per line. Do not infer novelty
+from a missing GitHub search result; use the exact shards and represented-paper resolver.
 """
 
 
@@ -112,7 +121,10 @@ def build_snapshot(root: Path, output: Path | None = None, source_commit: str | 
     for token in tokens:
         shards.setdefault(shard_name(token), []).append(token)
 
-    desired_names = set(shards) | {"_manifest.json", "_README.md"}
+    represented_records = represented_paper_index.collect_represented_records(root, queue_worker.JOBS)
+    resolver = paper_identity.build_represented_resolver(represented_records)
+
+    desired_names = set(shards) | {"_manifest.json", "_README.md", REPRESENTED_RESOLVER_FILE}
     changed = False
     for path in output.iterdir():
         if path.is_file() and path.name not in desired_names:
@@ -123,13 +135,25 @@ def build_snapshot(root: Path, output: Path | None = None, source_commit: str | 
         text = "".join(f"{token}\n" for token in shard_tokens)
         changed = _write_text_if_changed(output / name, text) or changed
 
+    resolver_text = json.dumps(resolver, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    changed = _write_text_if_changed(output / REPRESENTED_RESOLVER_FILE, resolver_text) or changed
+
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "queue_worker.existing_candidate_keys",
         "source_commit": source_commit,
         "token_count": len(tokens),
         "shards": {name: len(values) for name, values in sorted(shards.items())},
-        "lookup_order": ["stable_identifier", "normalized_url", "normalized_title"],
+        "lookup_order": [
+            "stable_identifier",
+            "normalized_url",
+            "normalized_title",
+            "represented_paper_resolver",
+        ],
+        "represented_resolver_file": REPRESENTED_RESOLVER_FILE,
+        "represented_paper_count": len(resolver.get("papers") or {}),
+        "fuzzy_title_requires": ["no_stable_identifier", "first_author", "publication_year"],
+        "fuzzy_title_threshold": resolver.get("fuzzy_title_threshold"),
         "code_search_is_authority": False,
     }
     manifest_text = json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n"

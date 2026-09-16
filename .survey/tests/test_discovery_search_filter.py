@@ -159,6 +159,56 @@ class DiscoverySearchFilterTest(unittest.TestCase):
         self.assertFalse(result["provider_exhausted"])
         self.assertEqual(result["next_cursor"], "page-4")
 
+    def test_collector_collapses_same_new_paper_across_arxiv_and_doi_pages(self) -> None:
+        pages = {
+            None: {
+                "records": [
+                    {
+                        "arxiv_id": "2609.93001",
+                        "title": "Dual-Alias KV Cache Scheduling",
+                        "authors": ["Alice Smith"],
+                        "year": 2026,
+                    }
+                ],
+                "next_cursor": "page-2",
+            },
+            "page-2": {
+                "records": [
+                    {
+                        "doi": "10.5555/dual.alias.2026",
+                        "title": "Dual Alias KV Cache Scheduling",
+                        "authors": ["Alice Smith"],
+                        "year": 2026,
+                    },
+                    {
+                        "arxiv_id": "2609.93002",
+                        "title": "Actually Distinct Paper",
+                    },
+                ],
+                "next_cursor": None,
+            },
+        }
+        calls: list[str | None] = []
+
+        def fetch_page(cursor: str | None) -> dict[str, object]:
+            calls.append(cursor)
+            return pages[cursor]
+
+        result = discovery_search_filter.collect_until_unseen(
+            fetch_page,
+            snapshot_dir=self.snapshot,
+            target_unseen=3,
+        )
+
+        self.assertEqual(calls, [None, "page-2"])
+        self.assertEqual(
+            [row["title"] for row in result["results"]],
+            ["Dual-Alias KV Cache Scheduling", "Actually Distinct Paper"],
+        )
+        self.assertEqual(result["cross_page_duplicate_filtered_count"], 1)
+        self.assertEqual(result["cross_page_alias_duplicate_filtered_count"], 1)
+        self.assertTrue(result["provider_exhausted"])
+
     def test_collector_returns_partial_buffer_when_provider_is_exhausted(self) -> None:
         calls: list[str | None] = []
 

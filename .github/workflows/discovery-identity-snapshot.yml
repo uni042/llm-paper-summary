@@ -12,6 +12,8 @@ on:
       - 'papers/**/*.md'
       - '.survey/scripts/build_discovery_identity_snapshot.py'
       - '.survey/scripts/build_discovery_rejection_ledger.py'
+      - '.survey/scripts/paper_identity.py'
+      - '.survey/scripts/represented_paper_index.py'
   workflow_dispatch:
 
 permissions:
