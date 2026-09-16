@@ -8,14 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.05116",
   "paper_path": "papers/inference/06-moe-inference-expert-offloading/2026-2607.05116-communication-aware-placement-pruning-moe.md",
   "selection_reason": "co-activationに基づくexpert placement、communication-computation trade-off、communication-aware pruningを統合し、single/multi-nodeでDeepSeek EPLBやvLLM sequential placement比1.23x-1.86x throughputを報告。expert placementと通信局所性の系統を補完する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-16T00:37:15+00:00",
-  "repair_required": true,
-  "validation_error": "ValueError: metadata.list_summary failed quality checks: 日本語化できる英語専門語が裸で残っている: all-to-all",
-  "last_validation_failed_at": "2026-09-16T02:51:15+00:00"
+  "completed_at": "2026-09-16T02:52:49+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-4b181ffe9b1f03a47a7fd1ab.json"
 }

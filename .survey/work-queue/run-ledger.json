@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T02:46:11.643330+00:00",
+  "updated_at": "2026-09-16T02:52:53.075252+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T02:46:11.643330+00:00",
+      "last_recorded_at": "2026-09-16T02:52:53.075252+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 97,
+        "research_completed": 98,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34904164521:1",
-          "recorded_at": "2026-09-14T22:31:39.653714+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34904164521",
-            "run_attempt": "1",
-            "source_sha": "e6a23f600ecffebdadfd2eded4233014251e745f"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34904797404:1",
           "recorded_at": "2026-09-14T22:38:49.324438+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35049241035",
             "run_attempt": "1",
             "source_sha": "f6e2dace45da6891bdae8da6a7bb1b01611de8a9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35049660736:1",
+          "recorded_at": "2026-09-16T02:52:53.075252+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35049660736",
+            "run_attempt": "1",
+            "source_sha": "5966fbf3143c6aae12eac2bb4b9a6c88df4f1b76"
           },
           "signals": [
             "research_completed"
@@ -20600,6 +20600,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.05483",
           "title": "PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-997bb7245fdc3187",
+          "type": "research",
+          "canonical_id": "arXiv:2607.05116",
+          "title": "Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference",
           "from": "ready",
           "to": "completed"
         }
