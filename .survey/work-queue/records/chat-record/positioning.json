@@ -5,36 +5,38 @@
   "attempt_id": "attempt-5843d9fcd7280a00abf70921",
   "job_id": "job-research-6252d370adc380b9",
   "data": {
-    "positioning": "本研究は個々のrequest schedulingより上位のresource compositionを扱い、pipeline-parallel LLMでschedulerが選択可能なserver chain集合と各chainのKV concurrency capacityを事前設計する基礎最適化である。",
-    "differences": "vLLM等の単一instance内schedulerは既に配置されたmodel上でrequest順序を決めるのに対し、本研究は物理GPUへどのlayerを置き、残余memoryをどのchainのKVへ割り当てるかを先に決める。PETALS系のblock placement/request schedulingに近いが、implementation-specific heuristicではなくchain-structured memory-bound jobsとして抽象化し、NP-hard性とresponse-time boundsを与える。service-function chainingとも形は似るが、computeではなくmodel weightsとper-request KVが同じmemoryを競合する点を明示する。",
+    "positioning": "本研究は個々の要求順序を決めるスケジューリングより上位の資源構成を扱い、パイプライン並列の大規模言語モデルでスケジューラが選択可能なサーバ鎖集合と、各鎖が同時に保持できる鍵値キャッシュ容量を事前設計する基礎最適化である。要求到着後の振り分けだけでなく、振り分け先そのものをメモリ制約から作る点に位置付け上の特徴がある。",
+    "differences": "一般的な連続バッチ型の推論エンジンは既に配置されたモデル上で要求順序やバッチ構成を決めるのに対し、本研究は物理的な画像処理装置へどのレイヤー区間を置き、残余メモリをどのサーバ鎖の鍵値キャッシュへ割り当てるかを先に決める。分散したモデルブロックを用いる既存方式に近い側面はあるが、実装固有の経験則ではなく、大容量メモリを消費する鎖構造ジョブとして抽象化し、配置とキャッシュ配分の計算困難性、特殊条件での最適性、一般条件での応答時間上下界を与える。サービス機能連鎖とも形は似るが、計算資源の配置だけでなく、共有されるモデル重みと要求ごとに専有される鍵値キャッシュが同じ装置メモリを競合する点を中心に置く。このため経路を増やすためのモデル複製が同時実行容量を減らすという、大規模モデル推論特有の交換条件を直接扱える。",
     "relation_to_prior_work": [
       {
-        "work": "vLLM / ordinary LLM schedulers",
-        "difference": "既存model instance内のrequest順序ではなく、instanceを形成するserver chainsとKV capacity自体を最適化する。"
+        "work": "一般的な大規模言語モデル推論スケジューラ",
+        "difference": "既存モデル実体の内部で要求順序を決めるのではなく、実体を形成するサーバ鎖と鍵値キャッシュ容量そのものを最適化する。要求振り分け器から見ると、物理装置の複雑な共有メモリ制約は事前に論理サーバ集合へ変換済みとなる。"
       },
       {
-        "work": "PETALS-style block placement",
-        "difference": "block placementをcache allocationとload balancingへ結合し、queueing-theoretic performance boundsを与える。"
+        "work": "分散モデルブロック配置方式",
+        "difference": "モデルブロック配置だけで終わらず、配置後の残余メモリを要求同時実行容量へ変換し、負荷分散まで一つの待ち行列モデルへ結合する。経路数と各経路の容量を共同で設計するため、単純な均等分割や複製最大化とは目的が異なる。"
       },
       {
-        "work": "service function chaining",
-        "difference": "compute-cycle placementではなく、共有model weightsと専有per-request KVが競合するmemory-bound chainを扱う。"
+        "work": "サービス機能連鎖",
+        "difference": "主な制約を計算サイクルではなく装置メモリに置き、モデル重みという共有占有量と要求別鍵値キャッシュという専有占有量の競合を明示する。さらに要求開始後の巨大なキャッシュ移送を避けるため、非移動型の実行を前提に応答時間を解析する。"
       }
     ],
     "strengths": [
-      "LLM固有のweight/KV memory競合を抽象問題として切り出し、NP-hard性と性能boundを示す。",
-      "offline compositionとonline load balancingを分離してスケーラブルな運用構造にする。",
-      "simulationだけでなくreal distributed LLM servingで63〜77% mean response-time削減を確認する。"
+      "大規模言語モデル固有の重みと鍵値キャッシュのメモリ競合を抽象問題として切り出し、配置・容量配分の計算困難性と性能上下界を示す。",
+      "重いモデル配置とキャッシュ容量決定を低頻度の事前構成へ分離し、要求到着ごとの処理を軽量な空き最速サーバ選択へ落とすため、理論最適化をオンラインで毎回解く必要がない。",
+      "数値評価だけでなく実際の分散大規模言語モデルサービング系でも平均応答時間を既存方式より六十三から七十七パーセント削減し、理想化した待ち行列仮定から外れる需要でも改善を確認する。",
+      "単に高速な装置へ多く配置するのではなく、重み配置で失われる要求別キャッシュ容量まで考慮するため、異種装置環境で起こる経路冗長性と同時実行数の競合を説明できる。"
     ],
     "limitations": [
-      "static KV allocationを仮定し、requestごとの実sequence長差やdynamic growthを直接最適化しない。",
-      "一度開始したrequestはserver chain間を移動せずpreemptionもしない。",
-      "pipeline parallelism中心で、tensor parallelやexpert parallelとの共同配置は対象外である。",
-      "中央orchestrator前提であり大規模分散制御のoverheadは今後の課題である。"
+      "要求ごとの実系列長に応じて成長する動的な鍵値キャッシュではなく、最大系列長に基づく静的容量配分を仮定するため、短い要求が多い場合にはメモリ利用が保守的になり得る。",
+      "一度開始した要求はサーバ鎖間を移動せず中断もしないため、負荷が急変した後に実行中要求を別経路へ再配置する柔軟性は持たない。これは巨大な鍵値キャッシュ移送費を避ける代わりの制約である。",
+      "中心対象はパイプライン並列であり、テンソル並列や専門家並列を同時に用いる配置、複数の並列方式をまたぐ通信費の共同最適化は主要モデル外である。",
+      "中央オーケストレータを前提とするため、非常に大規模な地理分散環境での制御遅延、状態収集費、部分故障時の分散合意などは今後の検証課題である。",
+      "応答時間の理論解析には待ち行列モデル上の仮定があり、実運用の接頭辞キャッシュ再利用、系列長の強い相関、装置障害、通信混雑などをすべて同時には表現しない。"
     ],
-    "implementation_status": "性能保証付きblock placement/cache allocation algorithmとJoin-the-Fastest-Free-Serverをreal distributed LLM serving systemへ適用した研究実装。公式code URLは確認できなかった。",
-    "research_positioning": "LLM servingをqueue schedulerだけでなく、memory-awareな論理server composition問題として扱う理論・システム橋渡しの研究である。",
-    "repository_fit": "99-other-inference-systemsのdistributed serving/resource allocation研究として、pipeline placement、KV capacity planning、load balancingの比較基準になる。"
+    "implementation_status": "性能保証付きのブロック配置、残余メモリのキャッシュ容量配分、空いている論理サーバのうち最速の経路へ要求を送る負荷分散を実際の分散大規模言語モデルサービング系へ適用した研究実装である。論文の一次資料からは一般公開された公式コードの所在を確認できなかった。",
+    "research_positioning": "大規模言語モデルサービングを要求スケジューラだけの問題として見ず、物理装置のモデル配置と残余メモリから、処理率と同時実行容量を持つ論理サーバ群を構成する問題として扱う理論・システム橋渡しの研究である。特にメモリが重みと要求状態の双方に使われる環境では、配置を増やすほど要求容量が減る場合があることを明示し、配置層とスケジューリング層を分離しながら性能指標で接続する。将来、動的キャッシュ管理や複数並列方式と組み合わせる際にも、事前構成がオンラインスケジューラへどの程度の処理余裕を提供すべきかを考える基準になる。",
+    "repository_fit": "推論システムのその他系統に属する分散サービング・資源配分研究として、パイプライン配置、鍵値キャッシュ容量計画、異種サーバ負荷分散を横断して比較する基準になる。既存の要求単位スケジューリング論文に対し、そのスケジューラが選べる実行経路集合を事前にどう構成するかという上位層を補完する。"
   },
   "reservation": {
     "claim_id": "claim-5843d9fcd7280a00abf70921",
