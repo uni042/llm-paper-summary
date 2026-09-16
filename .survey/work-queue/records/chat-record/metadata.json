@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d590f8604009eff9499dc245",
-  "job_id": "job-research-f3f80e20575daf12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d590f8604009eff9499dc245",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d590f8604009eff9499dc245","job_id":"job-research-f3f80e20575daf12","data":{"canonical_id":"arXiv:2605.11537","arxiv_id":"2605.11537","doi":"10.48550/arXiv.2605.11537","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Fast MoE Inference via Predictive Prefetching and Expert Replication","summary":"MoE推論では人気専門家へ多数のトークンが集中すると、一つの物理専門家へ処理が直列化され、他のGPU資源が空いていても待ちが生じる。MoE-MPMCは次バッチの専門家選択を軽量なSRU予測器で先読みし、必要な専門家だけをGPUへ置くだけでなく、予測トークン数に応じて同じ専門家を複数物理複製する。各複製へトークンを分散して人気専門家の処理を並列化し、複製総数はGPU容量で上限を設ける。予測表作成を別スレッドで現在バッチの推論と重ね、専門家配置と負荷分散を先回りする。","list_summary":"次バッチの人気専門家をSRUで予測し、需要に比例して専門家をGPU上へ複製してトークン待ちを並列化するMoE推論方式。","authors":["Ankit Jyothish","Ali Jannesari","Aishwarya Sarkar","Joseph Zuber"],"authors_affiliations":"論文本文参照。","published":"2026-05-12","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE predictive expert placement / replication / SiDA-MoE","topics":["MoE","専門家複製","専門家予測","プリフェッチ","負荷分散"],"importance":"専門家を一個だけ置く予測配置から、需要数に応じた物理複製へ進め、人気専門家の内部キューをGPU並列性で解消する点が重要。","hardware_evaluation":"NVIDIA A100 80GB 1基、Intel Xeon Gold 6140、主メモリ256GBのHPCノードでSwitchTransformersを評価。","hardware_details":"SLURM環境、SwitchTransformers baseの8・64・128専門家を主評価。","quality_effect":"予測器と複製方式を導入し、論文要旨では基準モデル性能の約90〜95%を維持すると報告するため、完全な品質同等を保証する方式ではない。","source":"https://arxiv.org/abs/2605.11537","sources":["https://arxiv.org/abs/2605.11537","https://arxiv.org/pdf/2605.11537"],"code":null,"implementation":"SiDA-MoEを基礎に、SRU予測器、二スレッド処理、動的専門家複製を実装した研究試作。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-d590f8604009eff9499dc245","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
