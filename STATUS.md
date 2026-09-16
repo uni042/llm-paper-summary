@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:50:37 JST**
+> 自動生成: **2026-09-16 13:50:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-16 12:50:41 JST（59分前）** |
+| 最終検証済みResearch収録 | **09-16 12:50:41 JST（1時間0分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -159,9 +159,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models / worker `scheduled-chat-llm-survey-20260916T133043JST`
-  - claim: **09-16 13:48:49 JST** / heartbeat: **—** / lease expiry: **09-16 15:18:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3bb1145babb1a6fc.json`
+- `arXiv:2609.14237` — OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving / worker `scheduled-chat-llm-survey-20260916T133043JST`
+  - claim: **09-16 13:50:42 JST** / heartbeat: **—** / lease expiry: **09-16 15:20:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0dc2aa86e35f442f.json`
 - `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation / worker `scheduled-chat-llm-survey`
   - claim: **09-16 12:51:26 JST** / heartbeat: **—** / lease expiry: **09-16 14:21:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-d743b2b5468a28c8.json`

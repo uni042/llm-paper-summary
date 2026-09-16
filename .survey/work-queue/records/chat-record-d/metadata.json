@@ -1,1 +1,74 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a1044fed0c5b516706918d4a","job_id":"job-research-3bb1145babb1a6fc","data":{"canonical_id":"arXiv:2605.21427","arxiv_id":"2605.21427","doi":"10.48550/arXiv.2605.21427","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.DC"]},"title":"PALS: Power-Aware LLM Serving for Mixture-of-Experts Models","summary":"PALSはGPU電力上限を固定制約ではなく実行系の制御変数として扱い、バッチ量と共同最適化する電力認識型vLLM実行系である。事前計測から処理量と消費電力を予測し、500ミリ秒周期の帰還制御で目標処理量を満たしながらジュール当たりトークン数を最大化する。A100を最大3ノード用いた評価でエネルギー効率を最大26.3%改善し、電力制約下のサービス品質違反を4–7倍減らす。","list_summary":"GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。","authors":["Can Hankendi","Rana Shahout","Minlan Yu","Ayse K. Coskun"],"published":"2026-05-20","publication":"arXiv preprint arXiv:2605.21427v1","publication_type":"arXivプレプリント","publication_status":"2026年5月20日投稿のarXiv初版。主分類cs.AI、併記分類cs.DC。","lineage":"moe-offload-routing","topics":["大規模言語モデルサービング","専門家混合モデル","GPU電力上限","エネルギー効率"],"importance":"専門家混合モデルの通信律速と電力効率を実行時制御へ結びつける。","hardware_evaluation":"NVIDIA A100を1ノード4基、最大3ノードで実機評価。","quality_effect":"モデル計算を近似せず電力とバッチだけを変更する。","source":"https://arxiv.org/abs/2605.21427","sources":["https://arxiv.org/abs/2605.21427","https://arxiv.org/html/2605.21427v1","https://arxiv.org/pdf/2605.21427"],"code":null,"implementation":"vLLMを拡張しNVMLでGPU電力上限、スケジューラでバッチ量を変更する。公開コードURLは本文から確認できない。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"}],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節から正規化識別子を確認できた項目","references_total":4},"reservation":{"claim_id":"claim-a1044fed0c5b516706918d4a","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-83192276c9f89bc52b0efa12",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {
+    "canonical_id": "arXiv:2609.14237",
+    "arxiv_id": "2609.14237",
+    "doi": "10.48550/arXiv.2609.14237",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+    "summary": "OpWeaveは、大規模言語モデルのデコード処理を注意機構とフィードフォワード網の固定境界で二分する従来方式を一般化し、演算子の分割位置、GPU種類、並列方式、バッチ量、マイクロバッチ量、パイプライン配置を共同最適化する異種GPU向けサービング基盤である。理論面ではGPUの価格、メモリ帯域、演算性能からトークン当たり費用を表し、KVキャッシュ増大によって同居実行のバッチ量が行列積を十分効率化できる閾値を下回ると、同種GPUでの分離にも利得が生じることを示す。計画器は混合注意モデルの最小反復演算パターンを分割ブロックとして抽象化し、同じ構造の層で分割判断を再利用して探索量を削減する。実機評価ではH100同種構成で費用を最大1.78倍、H100とL40SまたはA100を組み合わせた異種構成で最大1.89倍改善する。",
+    "list_summary": "固定分離境界を外し、演算子境界と異種GPU配置を共同探索して費用を同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。",
+    "authors": [
+      "Zikun Li",
+      "Yixuan Mei",
+      "Shiqi Pan",
+      "Zixuan Chen",
+      "Xiaowen Zhang",
+      "Mengdi Wu",
+      "Shuhuai Lin",
+      "Yutong Yang",
+      "Zhihao Zhang",
+      "Xupeng Miao",
+      "Rashmi Vinayak",
+      "Zhihao Jia"
+    ],
+    "published": "2026-09-13",
+    "publication": "arXiv preprint arXiv:2609.14237v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2026年9月13日投稿のarXiv初版。主分類cs.DC、併記分類cs.AI。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "大規模言語モデルサービング",
+      "演算子分離",
+      "異種GPU",
+      "配置最適化"
+    ],
+    "importance": "固定二段分離を一般化し理論、配置計画、実行系を接続する。",
+    "hardware_evaluation": "H100同種GPU群とH100+L40S/A100異種GPU群で実機評価。",
+    "quality_effect": "同じモデル計算の配置を変える損失なしのシステム最適化。",
+    "source": "https://arxiv.org/abs/2609.14237",
+    "sources": [
+      "https://arxiv.org/abs/2609.14237",
+      "https://arxiv.org/html/2609.14237",
+      "https://arxiv.org/pdf/2609.14237"
+    ],
+    "code": null,
+    "implementation": "vLLMを基礎とする分散実行系を実装。公開コードURLは本文から確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      }
+    ],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML参考文献節から正規化識別子を確認できた項目",
+    "references_total": 4
+  },
+  "reservation": {
+    "claim_id": "claim-83192276c9f89bc52b0efa12",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
