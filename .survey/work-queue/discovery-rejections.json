@@ -1,10 +1,32 @@
 {
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
-  "updated_at": null,
-  "submission_count": 0,
-  "rejection_observation_count": 0,
-  "rejection_record_count": 0,
+  "updated_at": "2026-09-17T03:00:00+09:00",
+  "submission_count": 1,
+  "rejection_observation_count": 1,
+  "rejection_record_count": 1,
   "ignored_without_identity": 0,
-  "records": {}
+  "records": {
+    "id:arXiv:2609.14320": {
+      "primary_identity": "id:arXiv:2609.14320",
+      "identity_tokens": [
+        "id:arXiv:2609.14320",
+        "title:spectralshift effective context window extension of gated deltanet via spectral reparameterization",
+        "url:https://arxiv.org/abs/2609.14320"
+      ],
+      "canonical_id": "arXiv:2609.14320",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "SpectralShift: Effective Context Window Extension of Gated DeltaNet via Spectral Reparameterization",
+      "source_url": "https://arxiv.org/abs/2609.14320",
+      "rejection_reason": "long-context efficiencyには関連するが、中心はGated DeltaNetのcontinued pretraining向けspectral reparameterizationであり、今回のinference-system surveyではtraining/model-method寄りでsystem-level inference contributionが弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T03:00:00+09:00",
+      "last_rejected_at": "2026-09-17T03:00:00+09:00",
+      "axis": "2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness",
+      "run_key": "2026-09-17T03:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json"
+    }
+  }
 }
