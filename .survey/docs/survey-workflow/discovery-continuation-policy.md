@@ -20,7 +20,7 @@ handoff guard外では次を繰り返す。
 
 1. 最新identity / queue / discovery stateを読む。
 2. candidate inventoryとactionable Research/Auditを確認する。
-3. `candidate_inventory > 50` かつactionable Research/AuditありならOverflow research modeへ切り替える。
+3. `candidate_inventory > 50` かつactionable Research/Auditありならoverflow research modeへ切り替える。
 4. そうでなければ、前roundと異なる検索語・source・引用方向・隣接分野から探索軸を作る。
 5. 軽量quality判定と重複除外を行い、強いcandidateを件数制限なしで耐久保存する。
 6. 最新stateを取り直し、handoff guard外なら次の独立作業へ進む。
@@ -41,7 +41,7 @@ handoff guard外では次を繰り返す。
 
 現在の探索空間が枯れたという判断は、新しい探索空間を生成するトリガーであり、正常終了理由ではない。
 
-## Overflow research mode
+## overflow research mode
 
 `candidate_inventory > 50` かつactionable Research/Auditがある場合、探索主体workerは通常論文workerと同じResearch/Audit契約へ切り替える。
 
