@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5b2f0818dd442ca0014c8634","job_id":"job-research-3ad6262bd04cfbe6","data":{"positioning":"本研究は永続カーネルや巨大融合カーネルではなく、既存Transformer演算を静的・動的に分割してCUDA Graph再生と実行時コンパイルを協調させるランタイム最適化である。","differences":"TensorRT-LLMのような高度に最適化された推論基盤に対し、短系列・batch 1で残るgraph managementやdispatchの尾部費用を対象にする。TorchDynamo/TorchInductorが演算融合・コンパイルを中心にするのに対し、提案方式は静的サブグラフをCUDA Graphへ明示的に固定し、動的制御だけをJIT経路へ分離する。persistent kernel系がカーネル内部へ処理を集約するのとは異なり、既存カーネル群の捕捉・再生を主手段にする。","relation_to_prior_work":[{"work":"TensorRT-LLM","difference":"全面的な最適化ランタイムに対し、静的部分のCUDA Graph再生と動的JITを明示分割し、短系列batch 1の起動費を重点的に削る。"},{"work":"TorchDynamo / TorchInductor","difference":"operator fusion中心ではなく、反復可能なGPU演算列をgraph replayへ載せてhost dispatchをまとめる。"},{"work":"persistent / mega-kernel inference","difference":"単一巨大カーネルへ統合せず、FlashAttentionやpaged KV等の既存カーネルをCUDA Graphとして再利用するため実装の置換範囲が小さい。"}],"strengths":["H100実機でPyTorch EagerとTensorRT-LLMを同条件比較し、TTFTとP99を1000回測定する。","非同期graph regenerationとJIT dynamic pathを個別に外すアブレーションで寄与を確認する。","既存のFlashAttention、nvFuser、vLLM paged KV kernelを利用でき、専用C++ pluginを必須としない設計を狙う。"],"limitations":["LLaMA-2 7B、単一H100、FP16、batch 1のみであり、現代の大規模モデルや高batchサービングへの一般化は不明である。","500トークン生成のP99ではハイブリッド23.68msがTensorRT-LLM 16.65msを上回り、長生成の全点で優位ではない。","CUDA Graphの再利用効率はshape・制御の安定性に依存し、動的性が高いワークロードでは捕捉・再生成費が増える。","スループット、GPUメモリ消費、複数同時要求の公平性は主要評価指標ではない。"],"implementation_status":"PyTorch 2.3 / CUDA 12.4上で二プロセス協調、CUDA Graph、JIT、FlashAttention v2、nvFuser、paged KV kernelを統合した研究実装。公式コードURLは確認できなかった。","research_positioning":"カーネル起動費が支配的な対話型推論で、静的性に応じて実行機構を使い分けるハイブリッド・ランタイム設計の一例であり、persistent kernelや全面コンパイルと比較する補完的な系統である。","repository_fit":"kernel-runtime-compilation系統に属し、CUDA Graph、JIT、非同期captureを組み合わせた低遅延ランタイムとして収録価値がある。"},"reservation":{"claim_id":"claim-5b2f0818dd442ca0014c8634","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-4aa0bdcf550c974e39ccae92",
+  "job_id": "job-research-b98e4e299d06a6a5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4aa0bdcf550c974e39ccae92",
+    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
