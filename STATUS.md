@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:47:59 JST**
+> 自動生成: **2026-09-16 17:48:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **46** | **8** | **4** | **4** | **2** | **1** | — |
+| Research | **46** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **47** | **18** | **4** | **14** | **2** | **1** | **10** |
+| 合計 | **47** | **18** | **4** | **14** | **2** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,7 +197,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving / worker `scheduled-chat-paper-20260916T173214JST`
   - claim: **09-16 17:46:19 JST** / heartbeat: **—** / lease expiry: **09-16 19:16:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-9d70d3111564c88d.json`
