@@ -1,1 +1,68 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ae853adbe01956e7c70dbf4c","job_id":"job-research-c5668a715755a331","data":{"canonical_id":"arXiv:2608.13573","arxiv_id":"2608.13573","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing","summary":"LLMサービング研究は短期間・少数モデル・合成到着を使う評価が多く、実運用の長期変化やユーザーとモデルの相互作用を捉えにくい。本論文はCompanyXの2025年4月から2026年4月までの未標本化リクエスト単位記録61.2億件、9,174モデル、314,970ユーザーを解析し、需要・モデル構成・トークン形状が非定常であること、モデルごとの突発性とユーザー局所性、接頭辞キャッシュの再利用、負荷分散とKV状態複製の競合を明らかにする。さらに接頭辞キャッシュと複数インスタンスのルーティングを記録再生で評価し、複雑な追い出し方式がLRU/FIFOを常に上回らず、キャッシュ優先ルーティングが小さな負荷不均衡で再利用を高められることを示す。","list_summary":"61.2億件・9,174モデルの1年実運用記録を解析し、LLM需要の非定常性、短時間の接頭辞再利用、キャッシュ局所性と負荷分散の競合を定量化して公開評価記録を提供する。","authors":["William Nixon","Jon Durbin","Florian Standhartinger","Haryadi S. Gunawi","Juncheng Yang"],"authors_affiliations":"University of Chicago; Harvard University; Chutes","published":"2026-09-07","publication":"arXiv:2608.13573v2","publication_type":"Preprint","publication_status":"Preprint","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMサービング","実運用ワークロード","接頭辞キャッシュ","負荷分散","KVキャッシュ","ワークロード特性解析"],"importance":"サービング方式の評価前提を検証する基準資料。1年間の未標本化記録を公開し、短い評価窓や合成到着が見落とす時間変化、ユーザー局所性、モデル長尾、キャッシュ再利用を示す。","hardware_evaluation":"主対象は実運用記録の解析であり、特定GPU上の新規カーネル性能評価ではない。キャッシュと負荷分散の一部結果は記録再生シミュレーションで得る。","quality_effect":"モデル品質を変更する手法ではない。評価用ワークロードとルーティング・キャッシュ方針の妥当性を分析する。","source":"https://arxiv.org/abs/2608.13573","sources":["https://arxiv.org/abs/2608.13573","https://arxiv.org/html/2608.13573"],"code":"https://github.com/HarvardMadSys/chutes_workload","implementation":"1年分の公開トレースをHarvardMadSys/chutes_workloadで提供。キャッシュ再生にはlibCacheSimを使用し、負荷分散も記録再生シミュレータで比較する。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2501.12948","arxiv_id":"2501.12948"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},{"canonical_id":"arXiv:2502.00937","arxiv_id":"2502.00937"},{"canonical_id":"arXiv:2401.17644","arxiv_id":"2401.17644"}],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":43},"reservation":{"claim_id":"claim-ae853adbe01956e7c70dbf4c","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5cdea98b4034b7e3f2b05850",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {
+    "canonical_id": "arXiv:2609.04244",
+    "arxiv_id": "2609.04244",
+    "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
+    "summary": "自己回帰復号のMoE層では各専門家へ届くトークンが少なく、従来のトークン主導型グループ行列積はタイルの大半をパディングし、短いカーネルを多数起動して高帯域メモリを十分に使えない。MonoMoEは並列性の軸をトークンから専門家重みへ移し、復号ステップ全体のトークンをテンソルコアの細粒度N軸へ置く重み主導型分解を採用する。さらにルーティング、上位k選択、量子化、二段の専門家射影、活性化、縮約を一つの常駐巨大カーネルへ融合し、補助処理を重み読み出しと重ねる。H200上のvLLM評価では完全なMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮しながら下流課題精度を維持した。",
+    "source": "https://arxiv.org/abs/2609.04244",
+    "sources": [
+      "https://arxiv.org/abs/2609.04244",
+      "https://arxiv.org/html/2609.04244"
+    ],
+    "authors": [
+      "Yu Gong",
+      "Kailash Budhathoki",
+      "Taeho Kim",
+      "Haipeng Li",
+      "Ashish Khetan"
+    ],
+    "published": "2026-08-19",
+    "publication": "arXiv preprint; preliminary work under MLSys review",
+    "publication_type": "preprint",
+    "publication_status": "under review",
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "topics": [
+      "MoE inference",
+      "GPU kernel",
+      "persistent kernel",
+      "FP8",
+      "vLLM",
+      "FlashInfer"
+    ],
+    "implementation": "CUDAで実装しvLLMへ統合。公式実装と補助成果物はFlashInferリポジトリのcsrc/fused_moe/monomoeで公開されている。",
+    "code": "https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe",
+    "hardware_evaluation": "NVIDIA H200 GPUを使用。各GPUは132 SM、141GB HBM3e、ピーク帯域4.8TB/s。Qwen系は単一GPU、DeepSeek-V3.1とGLM-5.2はテンソル並列8で評価。",
+    "quality_effect": "演算順序とFP8実装差による数値差はあるが、FP32参照とのコサイン類似度は全条件で0.998以上。GSM8KとHumanEvalではベースラインとの差が統計誤差内またはMonoMoE有利で、測定可能な精度劣化は報告されていない。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2107.03374",
+        "arxiv_id": "2107.03374"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      }
+    ],
+    "references_checked_at": "2026-09-16T06:18:00Z",
+    "references_source": "arXiv HTML reference section",
+    "references_total": 18,
+    "last_checked": "2026-09-16"
+  },
+  "reservation": {
+    "claim_id": "claim-5cdea98b4034b7e3f2b05850",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

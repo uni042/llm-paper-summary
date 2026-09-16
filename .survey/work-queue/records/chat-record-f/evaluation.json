@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ae853adbe01956e7c70dbf4c","job_id":"job-research-c5668a715755a331","data":{"hardware":"実運用プラットフォームCompanyXのサービング記録を解析するが、GPU型など基盤ハードウェアの詳細は公開記録の主要評価軸ではない。負荷分散再生は実GPU測定ではなくインスタンス単位の時間再生である。","software":"接頭辞キャッシュの追い出し再生にlibCacheSimを使用。1年分の公開トレースはHarvardMadSys/chutes_workloadで提供される。","methodology":"2025-04-11〜2026-04-12の未標本化テキストAPI要求61.2億件を解析する。記録には時刻、API、モデル、匿名ユーザー、インスタンス、入出力トークン、完了遅延、先頭トークン時間、キャッシュ済みトークンを含む。キャッシュ情報は最後の2か月を使用する。生プロンプトがないため、同一ユーザーの直近10要求からAPI・モデル一致とトークン長包含条件でセッションを再構成する。単一キャッシュでは10容量点とLRU、FIFO、ARC、S3FIFO、GDSF、Sieve、サイズ考慮Beladyなどを比較する。負荷分散ではDeepSeek V3.2とMiniMax-M2.5を用い、インスタンス数5/10/15/20、各インスタンスのキャッシュ1.1K〜5Mトークンでラウンドロビン、最小負荷優先、ユーザー固定、キャッシュ優先を時間順に再生する。","scope":"実運用記録の長期特性は実測だが、キャッシュ追い出しとルーティング方針の比較は再構成セッションを使うシミュレーションである。CompanyXという単一プラットフォームに由来し、生プロンプトや明示的セッションIDは含まない。","datasets":["CompanyX 1-year production trace: 6,122,413,756 requests, 314,970 users, 9,174 models","DeepSeek V3.2","MiniMax-M2.5","DeepSeek R1"],"metrics":["要求・トークン量","入力・出力長","先頭トークン時間と完了遅延","到着間隔と変動係数","トークンキャッシュヒット率","セッション複製比","最大/平均トークン負荷比"]},"reservation":{"claim_id":"claim-ae853adbe01956e7c70dbf4c","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-5cdea98b4034b7e3f2b05850",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {
+    "hardware": "NVIDIA H200 GPU。1基あたり132 SM、141GB HBM3e、ピークメモリ帯域4.8TB/s。Qwen3.5-35B-A3BとQwen3.5-122B-A10Bは単一GPU、GLM-5.2とDeepSeek-V3.1はテンソル並列8で評価。",
+    "software": "MonoMoEをCUDAで実装しvLLMのCUDAグラフ復号経路へ統合。全MoE重みと活性化はE4M3 FP8、重みは128×128ブロックスケール、入力活性化はカーネル内で128要素粒度に量子化。比較対象はvLLMの実運用Triton grouped-GEMM fused_moeと、FP8へ適応したFlashMoE。",
+    "methodology": "4モデルはいずれも256個のルーティング専門家から各トークン8個を選択する。単体カーネル評価は復号トークン数1、2、4、8で、20回のウォームアップ後にCUDAグラフを200回再生して平均遅延を測定する。エンドツーエンド評価はvLLM内蔵の固定形状Sonnetテキスト負荷で、50プロンプト、入力1600トークン、生成200トークン、共有接頭辞200トークン、同時要求数1、2、4、8。接頭辞キャッシュを無効、分割プリフィルを有効にし、平均出力トークン時間を測る。数値精度は同一入力に対するFP32参照との比較、生成品質はGSM8KとHumanEvalで評価する。",
+    "scope": "対象領域は1GPUあたりの同時復号トークン数が8以下のメモリ帯域律速MoE復号である。プリフィルや大バッチでは従来のトークン主導型行列積が十分なタイル並列性を得るため優位性が縮む。分散通信は巨大カーネルへ融合せず、単一ノード小バッチではNVLink転送自体よりランク間同期が支配的で、融合実装も同等性能だったと報告する。したがって本結果は汎用MoE演算置換ではなく低トークン復号に特化した評価として解釈する必要がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-5cdea98b4034b7e3f2b05850",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
