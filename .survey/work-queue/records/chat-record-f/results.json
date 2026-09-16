@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-8ff0a365fd45baca9da31eb1",
-  "job_id": "job-research-4714939abf3ccf8f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8ff0a365fd45baca9da31eb1",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-8ff0a365fd45baca9da31eb1","job_id":"job-research-4714939abf3ccf8f","data":{"overview":"MMAはlarge H2D/D2Hで約1GBから245GB/sへ近づき、native single PCIe約53GB/sに対して最大4.62倍のbandwidthを得る。効果はrelay GPU数6付近でsaturateし、その後はcross-NUMA UPIがbottleneckになる。LMCache+vLLMでは16K–64K prefix hitでTTFTを1.14–2.38倍高速化し、Qwen-7B-Chat 64Kでは17.5GB KV transferが支配的なため2.38倍。vLLM Sleep ModeではQwen3-32Bのfall asleepを56.8%、wake upを59.7%短縮し、全modelで1.12–2.48倍speedup。一方8 GPU時の追加CPU overheadは最大822%に達する。","key_results":[{"metric":"peak host-GPU bandwidth","value":"245GB/s, 4.62×","baseline":"native ~53GB/s single PCIe","condition":"large transfer around 1GB+","interpretation":"複数PCIe pathとNVLink relayを同時利用して単一link上限を超える。"},{"metric":"path scaling","value":"saturates around 6 participating GPUs","baseline":"fewer paths","condition":"8-GPU dual-NUMA server","interpretation":"cross-NUMA UPI bandwidthが次のbottleneckになる。"},{"metric":"prefix-cache TTFT","value":"1.14–2.38× speedup","baseline":"native CUDA path","condition":"LMCache+vLLM, 16K–64K prefix","interpretation":"contextが長くKV transfer比率が増えるほど改善が大きい。"},{"metric":"Qwen-7B-Chat 64K TTFT","value":"2.38× speedup","baseline":"native","condition":"single-request KV cache about 17.5GB","interpretation":"transfer-dominated long-context workloadで最大効果を示す。"},{"metric":"Qwen3-32B Sleep Mode","value":"fall-asleep -56.8%, wake-up -59.7%","baseline":"native","condition":"vLLM Level-1 sleep","interpretation":"model weight H2D/D2H双方をmultipath化し2.32–2.48倍高速化する。"},{"metric":"direct-priority P2P bandwidth","value":"367.28GB/s vs 330.56GB/s without priority","baseline":"P2P alone 367.60GB/s","condition":"8 simultaneous H2D tasks","interpretation":"direct pathを優先すると不要なNVLink relay interferenceをほぼ除去できる。"}],"negative_results":["MMAがnativeを上回るのはtransfer size約10MB以上で、小transferは制御overheadのためfallbackが必要。","5MB chunk設定のbreak-evenはH2D 11.3MB、D2H 13MB。","8 GPUではdedicated transfer/sync threadsにより追加CPU overheadが最大822%へ増える。","path数を増やしても6 GPU付近でUPIがbottleneckとなりbandwidthがsaturateする。","効果はserver内PCIe load imbalanceとunused relay bandwidthの存在に依存する。"],"quality_impact":"data movementだけを変更するためモデル出力品質への影響はない。","interpretation":"offload/prefix-cache研究が単一PCIeを高速に使う、または転送をcomputeとoverlapする方向なのに対し、MMAはserver topologyに既に存在する複数PCIe+NVLinkを一つのlogical host-memory pathとして束ねる。最大帯域だけでなく、明示congestion telemetryなしにqueue backpressureをrouting signalへ転用する点が実装上の鍵である。"},"reservation":{"claim_id":"claim-8ff0a365fd45baca9da31eb1","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
