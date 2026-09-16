@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:06:10 JST**
+> 自動生成: **2026-09-16 15:06:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
+| 収録候補論文 | **46** |
 | 未claim Research job | **42** |
-| 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-16 15:06:06 JST（4秒前）** |
+| 直近24hの検証済みResearch収録 | **46** |
+| 最終検証済みResearch収録 | **09-16 15:06:45 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **34** | **12** | **6** | **6** | **6** | **1** | — |
+| Research | **35** | **12** | **6** | **6** | **5** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **35** | **31** | **6** | **25** | **6** | **1** | **23** |
+| 合計 | **36** | **31** | **6** | **25** | **5** | **1** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:06:45 JST** [research] `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-08ba7261bc105f34.json`
+  - result: `.survey/work-queue/results/research/attempt-2333dff6f7c985a64b4f4c2e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2333dff6f7c985a64b4f4c2e.json`
+  - paper: `papers/inference/02-memory-offload/2026-2609.13592-boost-concurrent-host-hbm.md`
 - **09-16 15:06:06 JST** [research] `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch
   - job: `.survey/work-queue/jobs/job-research-32ece608ca43dae7.json`
   - result: `.survey/work-queue/results/research/attempt-e3290dc33452ec879629239c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c1a96aa17242872639750d89.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c1a96aa17242872639750d89.json`
   - paper: `papers/inference/02-cpu-offload/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md`
-- **09-16 14:14:27 JST** [research] `arXiv:2512.16056` — MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services
-  - job: `.survey/work-queue/jobs/job-research-4714939abf3ccf8f.json`
-  - result: `.survey/work-queue/results/research/attempt-c54d1dbac92b03538ef2bcdf.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c54d1dbac92b03538ef2bcdf.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.16056-multipath-transfer-engine-gpu-host-memory-bandwidth.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 15:06:00 JST** / heartbeat: **—** / lease expiry: **09-16 16:36:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-08ba7261bc105f34.json`
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding / worker `scheduled-chat-hourly-survey-20260916T145717JST`
   - claim: **09-16 15:03:37 JST** / heartbeat: **—** / lease expiry: **09-16 16:33:37 JST**
   - evidence: `.survey/work-queue/claims/job-research-cffb14eec24a02c2.json`
@@ -241,7 +238,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -261,7 +258,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **589** |
+| inference/training/survey配下の論文Markdown実体 | **590** |
 
 ### immutable submissionの未照合
 
@@ -269,8 +266,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **314** |
-| └ Research | **181** |
+| 成功result未照合のimmutable submission | **315** |
+| └ Research | **182** |
 | └ Discovery | **133** |
 
 ### 厳格検証が未成立のcompleted job
