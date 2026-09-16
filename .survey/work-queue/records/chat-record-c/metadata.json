@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-a040b871bad8d7791dcde413",
-  "job_id": "job-research-c5a47af1c9e3acf3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a040b871bad8d7791dcde413",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a040b871bad8d7791dcde413","job_id":"job-research-c5a47af1c9e3acf3","data":{"canonical_id":"arXiv:2604.07472","arxiv_id":"2604.07472","doi":"10.48550/arXiv.2604.07472","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference","summary":"異種GPUクラウド上のLLM推論について、モデル選択、GPU台数、TP/PP並列度、精度、ワークロード経路を遅延・精度・メモリ・ストレージ・予算制約の下で共同決定する配置計画研究。厳密MILPに加え、制約認識型Greedy HeuristicとAdaptive Greedy Heuristicを提案し、TP-aware feasibility、effective coverage当たりコスト、TP upgradeで実行可能性を保つ。Azure LLM Inference Traceで較正した大規模問題では1秒未満で実行可能解を得て、AGHは厳密solver比260倍超高速かつ最適コストへ数%以内に近づく。","list_summary":"異種GPU・モデル・TP/PP・ルーティングを制約認識型貪欲法で共同配置し、Azure trace較正の大規模問題で1秒未満・厳密solver比260倍超高速に実行可能解を得る。","authors":["Jiaming Cheng","Duong Tung Nguyen"],"published":"2026-04-08","publication":"arXiv:2604.07472","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"serving-disaggregation","topics":["heterogeneous GPU serving","resource allocation","tensor parallelism","pipeline parallelism","SLO-constrained inference"],"importance":"実行時スケジューリングより上流のcapacity planningを、異種GPU・精度・並列度・ルーティングまで含む共同最適化として秒以下で解く。","hardware_evaluation":"H100、A100、RTX 4090、A6000等を含む異種GPU tierを数値モデル化しAzure LLM Inference Traceで需要を較正。","quality_effect":"FP16/INT8/INT4の精度低下をerror SLOへ組み込み、低精度配置によるコスト削減と品質制約を同時に扱う。","source":"https://arxiv.org/abs/2604.07472","sources":["https://arxiv.org/abs/2604.07472"],"code":null,"implementation":"MILP、Greedy Heuristic、Adaptive Greedy Heuristicの数値評価実装。公式コード公開先は本文から確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv全文の関連研究節を確認。","references_total":0},"reservation":{"claim_id":"claim-a040b871bad8d7791dcde413","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
