@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:03:34 JST**
+> 自動生成: **2026-09-16 14:03:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
-| 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **35** |
-| 最終検証済みResearch収録 | **09-16 13:52:05 JST（11分前）** |
+| 収録候補論文 | **50** |
+| 未claim Research job | **48** |
+| 直近24hの検証済みResearch収録 | **36** |
+| 最終検証済みResearch収録 | **09-16 14:03:41 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **1** | **0** | **1** | **3** | **1** | — |
+| Research | **22** | **1** | **1** | **0** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **22** | **6** | **0** | **6** | **3** | **1** | **24** |
+| 合計 | **23** | **6** | **1** | **5** | **3** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:03:41 JST** [research] `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
+  - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
+  - result: `.survey/work-queue/results/research/attempt-2155991e74d60ac74b2163d1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json`
+  - paper: `papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md`
 - **09-16 13:52:05 JST** [research] `arXiv:2609.14237` — OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving
   - job: `.survey/work-queue/jobs/job-research-0dc2aa86e35f442f.json`
   - result: `.survey/work-queue/results/research/attempt-83192276c9f89bc52b0efa12.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-e5b7d8bd8cb604c35cc21abd.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e5b7d8bd8cb604c35cc21abd.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md`
-- **09-16 12:13:23 JST** [research] `arXiv:2605.02960` — MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving
-  - job: `.survey/work-queue/jobs/job-research-bd280ca93f0a6940.json`
-  - result: `.survey/work-queue/results/research/attempt-7d15ace40bfac2c2b2f6ff8e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7d15ace40bfac2c2b2f6ff8e.json`
-  - paper: `papers/inference/06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md`
 
 ### Audit
 
@@ -115,8 +115,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json` (job `job-research-3bb1145babb1a6fc`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
+  - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
+  - result: `.survey/work-queue/results/research/attempt-2155991e74d60ac74b2163d1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json`
+  - paper: `papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md`
 
 #### Audit (:30)
 
@@ -183,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -203,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **576** |
+| inference/training/survey配下の論文Markdown実体 | **577** |
 
 ### immutable submissionの未照合
 
@@ -211,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **279** |
-| └ Research | **165** |
+| 成功result未照合のimmutable submission | **278** |
+| └ Research | **164** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
