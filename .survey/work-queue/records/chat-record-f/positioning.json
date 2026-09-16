@@ -1,21 +1,13 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e3290dc33452ec879629239c",
-  "job_id": "job-research-32ece608ca43dae7",
+  "schema_version": 1, "transport_version": 10, "slot": "positioning", "attempt_id": "attempt-e3290dc33452ec879629239c", "job_id": "job-research-32ece608ca43dae7",
   "data": {
-    "differences": "TRTLLM/FlashInfer/vLLMの通常autotuningはtoken-count等の静的shapeを主keyにし、random routingでbucketごとに代表kernelを固定する。DA-MoEは同じkernel poolを使いながら、router後のlive per-expert histogramを追加keyとしてinvocationごとにkernelを選ぶ。expert placement/cache/offload系が『どのexpertをどこに置き、どう運ぶか』を最適化するのに対し、本手法はexpertが選ばれた後のsparse GEMM tile/pipeline/memory-path選択を最適化する。router自体を変更してhardware-friendly routingへ寄せる手法とも異なり、model accuracyを変えない。",
-    "novelty_vs_prior": "routing skewのcharacterizationだけで終わらず、実効expert数→Dirichlet reverse model→offline kernel sweep→GPU-resident online exemplar matching→conditional CUDA Graphという閉ループを作る。特にsorted histogramによりexpert identityを捨て、skew shapeだけでkernel choiceを一般化する点と、CPU同期を避けてcritical pathへ載せる点がsystem novelty。",
-    "implementation_status": "FlashInfer v0.6.6上にDA-MoEを実装しvLLMへ統合してB200実機評価。TRTLLMのprecompiled fused-MoE kernel群を利用する。論文本文からDA-MoE固有コード公開URLは確認できない。",
-    "research_positioning": "MoE inferenceのkernel/runtime層に位置し、expert routing分布をhardware execution policyへ直接伝えるmodel-system/hardware co-design寄りの研究。GPUのdevice-side control flowとTensor Core tile choiceを結び、将来のspatial acceleratorではrouting-aware array partitioningへ拡張できると論じる。",
-    "relation_to_existing_repository": "expert cache/placement、MoE offload、communication schedulingと補完的。これら上位手法がexpert load skewを変えるとfused kernelの最適tileも変わるため、配置最適化後の残余skewをDA-MoE型dispatcherへ渡す統合余地がある。SSD/CPU offload系ではweight movementが主ボトルネックだが、resident expertのcompute側でpadding/reuse損失が残る場合の次段最適化になる。",
-    "limitations": "B200/CUDA 13.1、DeepSeek-V3/Kimi K2中心でGPU世代・他vendor・小規模MoEへの一般化は限定的。dispatch path約14µsはsmall MoEで相対的に大きい。DeepSeek-V3 TC512ではoracle gap約20%が残る。HIPにはdevice-side conditional SWITCH相当がなく移植性に制約。offline tuningは多数kernel×skew sampleのprofiling costを要し、TRTLLM kernel内部がprecompiled binaryでopaque。DA-MoE固有コード公開も本文から確認できない。",
+    "differences": "TRTLLM、FlashInfer、vLLMの通常の事前調整は総トークン数など静的な行列形状を主なキーにし、ランダムなルーティングで区間ごとの代表カーネルを固定する。DA-MoEは同じカーネル集合を使いながら、ルータ後の実エキスパート別ヒストグラムを追加キーとして実行ごとにカーネルを選ぶ。エキスパート配置・キャッシュ・オフロード系が『どのエキスパートをどこに置き、どう運ぶか』を最適化するのに対し、本手法はエキスパート選択後の疎行列積について、タイル、ソフトウェアパイプライン、メモリ経路を選ぶ。ルータ自体をハードウェア都合へ変える方式とも異なり、モデルのエキスパート選択を維持する。",
+    "novelty_vs_prior": "ルーティング偏りの分析だけで終わらず、実効エキスパート数による尺度化、Dirichlet逆モデルによる代表分布生成、事前カーネル全探索、GPU常駐の実行時代表照合、条件付きCUDAグラフという閉ループを構成する。特にヒストグラムを降順化してエキスパート番号を捨て、偏り形状だけでカーネル選択を一般化する点と、選択結果をCPUへ戻さずクリティカルパス上でGPU側分岐する点がシステム上の差分である。",
+    "implementation_status": "FlashInfer v0.6.6上にDA-MoEを実装し、vLLMへ統合してB200で実機評価している。TRTLLMの事前コンパイル済み融合MoEカーネル群を利用する。論文本文からDA-MoE固有コードの公式公開URLは確認できない。",
+    "research_positioning": "MoE推論のカーネル・ランタイム層に位置し、エキスパートルーティング分布をハードウェア実行方針へ直接伝えるモデル・システム・ハードウェア協調寄りの研究である。GPUのデバイス側制御フローとTensor Coreのタイル選択を結び、論文は将来の空間型アクセラレータではルーティングに応じた演算配列分割へ拡張できると論じる。",
+    "relation_to_existing_repository": "エキスパートキャッシュ・配置、MoEオフロード、通信スケジューリングと補完的である。これら上位方式がエキスパート負荷の偏りを変えると融合カーネルの最適タイルも変わるため、配置最適化後に残る偏りをDA-MoE型ディスパッチャへ渡す統合余地がある。SSDやCPUへのオフロードでは重み移動が主ボトルネックになりやすいが、GPU常駐エキスパートの計算側でゼロ埋めや重み再利用損失が残る条件では次段の最適化になり得る。",
+    "limitations": "B200、CUDA 13.1、DeepSeek-V3とKimi K2中心であり、他GPU世代、他社GPU、小規模MoEへの一般化は限定的である。切替経路約14マイクロ秒は小規模MoEでは相対的に大きい。DeepSeek-V3の総トークン数512ではOracleとの差が約20%残る。HIPには同等のデバイス側条件分岐がなく移植性に制約がある。事前調整は多数のカーネルと偏り標本の実測費用を要し、TRTLLMカーネル内部は事前コンパイル済みバイナリで一部不透明である。DA-MoE固有コード公開も本文から確認できない。",
     "audit_required": false
   },
-  "reservation": {
-    "claim_id": "claim-e3290dc33452ec879629239c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e3290dc33452ec879629239c", "worker_id": "scheduled-chat-discovery-specialist-00", "worker_kind": "scheduled_chat"}
 }
