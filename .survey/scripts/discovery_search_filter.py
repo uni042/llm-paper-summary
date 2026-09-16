@@ -3,9 +3,10 @@
 
 This module is the retrieval-stage counterpart to the final Discovery duplicate gate.
 It consumes the compact ``work-queue/discovery-identities`` snapshot generated from
-``queue_worker.existing_candidate_keys()`` and the separately derived Discovery
-candidate-evaluation rejection ledger. Both are applied before expensive candidate
-evaluation. The final duplicate gate remains authoritative and unchanged.
+``queue_worker.existing_candidate_keys()``, its paper-level alias resolver, and the
+separately derived Discovery candidate-evaluation rejection ledger. All are applied
+before expensive candidate evaluation. The final duplicate gate remains authoritative
+and unchanged.
 """
 from __future__ import annotations
 
@@ -71,6 +72,31 @@ def _load_shard(
     return cache[name]
 
 
+def _load_represented_resolver(snapshot_dir: Path, manifest: dict[str, Any]) -> dict[str, Any] | None:
+    """Load the optional paper-level alias resolver published by schema-v2 snapshots."""
+    name = manifest.get("represented_resolver_file")
+    if name is None:
+        return None
+    if not isinstance(name, str) or not name.strip() or Path(name).name != name:
+        raise SnapshotUnavailableError("Discovery identity manifest has an invalid represented resolver path")
+    path = Path(snapshot_dir) / name
+    if not path.is_file():
+        raise SnapshotUnavailableError(f"Manifest-listed represented-paper resolver is missing: {name}")
+    try:
+        resolver = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SnapshotUnavailableError(f"Represented-paper resolver is unreadable: {path}") from exc
+    if not isinstance(resolver, dict):
+        raise SnapshotUnavailableError("Represented-paper resolver must be an object")
+    if not isinstance(resolver.get("papers"), dict):
+        raise SnapshotUnavailableError("Represented-paper resolver is missing papers")
+    if not isinstance(resolver.get("alias_to_paper"), dict):
+        raise SnapshotUnavailableError("Represented-paper resolver is missing aliases")
+    if not isinstance(resolver.get("title_hash_to_paper"), dict):
+        raise SnapshotUnavailableError("Represented-paper resolver is missing title hashes")
+    return resolver
+
+
 def _load_rejection_tokens(snapshot_dir: Path, rejection_ledger_path: Path | None = None) -> set[str]:
     path = Path(rejection_ledger_path) if rejection_ledger_path is not None else Path(snapshot_dir).parent / "discovery-rejections.json"
     if not path.exists():
@@ -126,9 +152,10 @@ def filter_search_batch(
     """Filter one provider result page before candidate evaluation.
 
     Papers already represented in the repository and papers durably rejected by prior
-    candidate evaluation are both excluded. ``continue_search`` is true only when the
-    caller still needs more unseen results and the current provider exposes another
-    page/cursor.
+    candidate evaluation are both excluded. Exact token checks run first; the represented-
+    paper resolver then catches alias/title variants, including only high-confidence ID-less
+    fuzzy title matches. ``continue_search`` is true only when the caller still needs more
+    unseen results and the current provider exposes another page/cursor.
     """
     if target_unseen < 0 or unseen_before_batch < 0:
         raise ValueError("target_unseen and unseen_before_batch must be non-negative")
@@ -137,10 +164,13 @@ def filter_search_batch(
 
     snapshot_dir = Path(snapshot_dir)
     manifest = _load_manifest(snapshot_dir)
+    resolver = _load_represented_resolver(snapshot_dir, manifest)
     rejection_tokens = _load_rejection_tokens(snapshot_dir, rejection_ledger_path)
     cache: dict[str, set[str]] = {}
     unseen: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
+    represented_paper_keys: list[str] = []
+    represented_match_types: list[str] = []
     rejection_filtered_tokens: list[str] = []
     unresolved_identity_count = 0
     intra_batch_duplicate_filtered_count = 0
@@ -158,6 +188,12 @@ def filter_search_batch(
         )
         if matched:
             duplicate_tokens.append(matched)
+            continue
+
+        represented_match = paper_identity.match_represented_paper(record, resolver) if resolver else None
+        if represented_match:
+            represented_paper_keys.append(str(represented_match["paper_key"]))
+            represented_match_types.append(str(represented_match["match_type"]))
             continue
 
         rejected_match = next(iter(sorted(tokens & rejection_tokens)), None)
@@ -180,6 +216,9 @@ def filter_search_batch(
         "raw_search_result_count": len(records),
         "retrieval_duplicate_filtered_count": len(duplicate_tokens),
         "retrieval_duplicate_tokens": duplicate_tokens,
+        "represented_paper_match_filtered_count": len(represented_paper_keys),
+        "represented_paper_keys": represented_paper_keys,
+        "represented_paper_match_types": represented_match_types,
         "rejection_ledger_filtered_count": len(rejection_filtered_tokens),
         "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
@@ -214,7 +253,8 @@ def collect_until_unseen(
         raise ValueError("max_pages must be greater than zero")
 
     snapshot_dir = Path(snapshot_dir)
-    _load_manifest(snapshot_dir)
+    manifest = _load_manifest(snapshot_dir)
+    _load_represented_resolver(snapshot_dir, manifest)
     _load_rejection_tokens(snapshot_dir, rejection_ledger_path)
 
     cursor = initial_cursor
@@ -222,9 +262,12 @@ def collect_until_unseen(
     seen_primary_identities: set[str] = set()
     results: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
+    represented_paper_keys: list[str] = []
+    represented_match_types: list[str] = []
     rejection_filtered_tokens: list[str] = []
     raw_search_result_count = 0
     retrieval_duplicate_filtered_count = 0
+    represented_paper_match_filtered_count = 0
     rejection_ledger_filtered_count = 0
     intra_batch_duplicate_filtered_count = 0
     cross_page_duplicate_filtered_count = 0
@@ -258,6 +301,9 @@ def collect_until_unseen(
         raw_search_result_count += filtered["raw_search_result_count"]
         retrieval_duplicate_filtered_count += filtered["retrieval_duplicate_filtered_count"]
         duplicate_tokens.extend(filtered["retrieval_duplicate_tokens"])
+        represented_paper_match_filtered_count += filtered["represented_paper_match_filtered_count"]
+        represented_paper_keys.extend(filtered["represented_paper_keys"])
+        represented_match_types.extend(filtered["represented_paper_match_types"])
         rejection_ledger_filtered_count += filtered["rejection_ledger_filtered_count"]
         rejection_filtered_tokens.extend(filtered["rejection_ledger_filtered_tokens"])
         intra_batch_duplicate_filtered_count += filtered["intra_batch_duplicate_filtered_count"]
@@ -295,6 +341,9 @@ def collect_until_unseen(
         "raw_search_result_count": raw_search_result_count,
         "retrieval_duplicate_filtered_count": retrieval_duplicate_filtered_count,
         "retrieval_duplicate_tokens": duplicate_tokens,
+        "represented_paper_match_filtered_count": represented_paper_match_filtered_count,
+        "represented_paper_keys": represented_paper_keys,
+        "represented_paper_match_types": represented_match_types,
         "rejection_ledger_filtered_count": rejection_ledger_filtered_count,
         "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
