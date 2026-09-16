@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-41a0aa125f0a68e03a676699",
   "job_id": "job-research-3342ea471147b233",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-41a0aa125f0a68e03a676699",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2512.01357",
+    "arxiv_id": "2512.01357",
+    "doi": "10.48550/arXiv.2512.01357",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.AR"]},
+    "title": "Tangram: Accelerating Serverless LLM Loading through GPU Memory Reuse and Affinity",
+    "summary": "サーバレスLLMでは、モデルを切り替えるたびに重みをGPUへ再転送する読み込み時間が、初回トークン生成までの遅延を支配しやすい。Tangramは、推論終了後も未使用GPUメモリへ再利用価値の高いテンソルを残し、次回は不足分だけを転送する。さらにKVキャッシュを実需要に応じて動的確保し、断片化を抑える配置法と、必要なテンソルが多く残るGPUを選ぶ親和性考慮スケジューリングを組み合わせることで、コールドスタート時のデータ転送量を削減する。実装はSLLMとvLLMを基盤とする完全動作試作で、モデル読み込みを最大6.2倍高速化し、コールドスタート時の先頭トークン到達時間を23〜55%削減した。",
+    "list_summary": "未使用GPUメモリにモデルのテンソルを残し、KVキャッシュの動的確保とGPU親和性スケジューリングを組み合わせ、サーバレスLLMの再読み込み量とコールドスタート遅延を削減する。",
+    "authors": ["Wenbin Zhu", "Zhaoyan Shen", "Zili Shao", "Hongjun Dai", "Feng Chen"],
+    "authors_affiliations": "Shandong University; The Chinese University of Hong Kong; Indiana University Bloomington",
+    "published": "2025-12-01",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "serverless LLM cold-start / model loading / GPU memory reuse",
+    "topics": ["サーバレスLLM", "GPUメモリ再利用", "モデル読み込み", "KVキャッシュ", "スケジューリング"],
+    "importance": "モデル重みのGPU常駐をサーバレス環境の時間局所性と結び付け、KVキャッシュ領域と重み領域を統一管理することで、従来の読み込み高速化とは異なる転送量削減経路を示す。",
+    "hardware_evaluation": "実GPU上のサーバレスLLM試作で評価し、単一GPUの読み込み・推論に加えて複数GPU構成で末尾遅延も測定している。",
+    "quality_effect": "近似計算や量子化ではなく、モデルパラメータとKVキャッシュの配置・再利用を変更する方式であり、モデル出力品質を意図的に劣化させる手法ではない。",
+    "source": "https://arxiv.org/abs/2512.01357",
+    "sources": ["https://arxiv.org/abs/2512.01357", "https://arxiv.org/html/2512.01357v1"],
+    "code": "https://anonymous.4open.science/r/Tangram",
+    "implementation": "SLLMとvLLMを基盤に、CUDAによる統一メモリ管理とPagedAttentionを拡張したE-Attentionを含む完全動作試作を実装。論文は匿名公開コードへのリンクを提示する。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "primary-reference-section; normalized identifiers not exhaustively extracted in this record",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-41a0aa125f0a68e03a676699", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
