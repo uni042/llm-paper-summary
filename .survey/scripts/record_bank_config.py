@@ -28,10 +28,14 @@ REGISTRY = _load_registry()
 BANK_ROOTS = {str(k).lower(): str(v) for k, v in REGISTRY["banks"].items()}
 BANK_IDS = tuple(BANK_ROOTS)
 SLOT_NAMES = tuple(str(slot) for slot in REGISTRY["slots"])
+
 # Historical workflow-v10 bundles used ``chat-record-a`` for bank A before the
-# canonical root was renamed to ``chat-record``. Keep the old prefix readable
-# for durable Library fallback replay; new writes still use BANK_ROOTS only.
-LEGACY_BANK_PATH_PREFIXES = (".survey/work-queue/records/chat-record-a/",)
+# canonical root was renamed to ``chat-record``. This is read compatibility only:
+# all new claims/writes/descriptors must use BANK_ROOTS and canonical_slot_paths().
+LEGACY_BANK_ROOTS = {"a": ".survey/work-queue/records/chat-record-a"}
+LEGACY_BANK_PATH_PREFIXES = tuple(
+    root.rstrip("/") + "/" for root in LEGACY_BANK_ROOTS.values()
+)
 BANK_PATH_PREFIXES = tuple(root.rstrip("/") + "/" for root in BANK_ROOTS.values()) + LEGACY_BANK_PATH_PREFIXES
 
 
@@ -46,3 +50,19 @@ def slot_path(bank: str, slot: str) -> str:
     if slot not in SLOT_NAMES:
         raise ValueError(f"unknown record slot: {slot}")
     return f"{bank_root(bank)}/{slot}.json"
+
+
+def canonical_slot_paths(bank: str) -> dict[str, str]:
+    """Return exact paths a worker must use for every slot in a new write."""
+    bank = bank.lower()
+    bank_root(bank)
+    return {slot: slot_path(bank, slot) for slot in SLOT_NAMES}
+
+
+def accepted_slot_paths(bank: str, slot: str) -> tuple[str, ...]:
+    """Return canonical path plus narrowly-scoped historical read aliases."""
+    canonical = slot_path(bank, slot)
+    legacy_root = LEGACY_BANK_ROOTS.get(bank.lower())
+    if legacy_root is None:
+        return (canonical,)
+    return (canonical, f"{legacy_root}/{slot}.json")
