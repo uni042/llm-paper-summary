@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:54:40 JST**
+> 自動生成: **2026-09-16 19:03:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **21** |
-| 未claim Research job | **18** |
+| 未claim Research job | **19** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-16 18:51:24 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-16 18:51:24 JST（12分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **8** | **4** | **4** | **3** | **0** | — |
+| Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **40** | **18** | **4** | **14** | **3** | **0** | **10** |
+| Discovery | **1** | **2** | **0** | **2** | **0** | **0** | **3** |
+| 合計 | **40** | **10** | **4** | **6** | **2** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -149,64 +149,29 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-16 17:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **10件** / 候補: **10件**
-- 探索軸: 適応KV圧縮・制約駆動構成選択 / hybrid/recurrent LLM・疎state checkpoint prefix caching / PNM・GPU外KV・検索型疎注意 / AMX CPU-GPU協調MoE・coalesced expert execution / 分離サービング・負荷認識prefill deflection / 投機的デコード・負荷適応verification scheduling / cross-datacenter prefill・commodity Ethernet KV転送 / CXL共有メモリ・rack-scale KV transfer/cache / semantic-aware prefix cache eviction・online adaptation / SmartNIC・distributed prefix cache fetch/decompression offload
-- round `specialist-adaptive-kv-budget-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r1-metakv.json`
-  - 探索軸: 適応KV圧縮・制約駆動構成選択
+- 最新観測run: **2026-09-16 19:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **3件**
+- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache
+- round `specialist-moe-prefetch-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json`
+  - 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-recurrent-state-cache-10` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r10-sparse-prefix-recurrent.json`
-  - 探索軸: hybrid/recurrent LLM・疎state checkpoint prefix caching
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-pnm-kv-sparse-attention-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r2-karat.json`
-  - 探索軸: PNM・GPU外KV・検索型疎注意
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cpu-gpu-moe-coexecution-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r3-cox-moe.json`
-  - 探索軸: AMX CPU-GPU協調MoE・coalesced expert execution
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-prefill-deflection-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r4-prefill-deflection.json`
-  - 探索軸: 分離サービング・負荷認識prefill deflection
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-speculative-verification-scheduling-5` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r5-dspark.json`
-  - 探索軸: 投機的デコード・負荷適応verification scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cross-datacenter-prefill-6` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r6-prfaas.json`
-  - 探索軸: cross-datacenter prefill・commodity Ethernet KV転送
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cxl-shared-kv-7` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r7-tract.json`
-  - 探索軸: CXL共有メモリ・rack-scale KV transfer/cache
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-semantic-prefix-eviction-8` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r8-saecache.json`
-  - 探索軸: semantic-aware prefix cache eviction・online adaptation
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-smartnic-prefix-fetch-9` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r9-shadowserve.json`
-  - 探索軸: SmartNIC・distributed prefix cache fetch/decompression offload
+- round `specialist-agent-kv-2` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T1910JST-discovery-specialist-agent-kv-2.json`
+  - 探索軸: agentic serving・構造的KV再利用・共有圧縮cache
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics / worker `scheduled-chat-llm-survey`
   - claim: **09-16 18:54:24 JST** / heartbeat: **—** / lease expiry: **09-16 20:24:24 JST**
   - evidence: `.survey/work-queue/claims/job-research-648fe1e5b80283fd.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
-- `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
-  - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
 
 #### Audit
 
@@ -254,10 +219,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **377** |
+| 成功result未照合のimmutable submission | **379** |
 | └ Research | **233** |
 | └ Audit | **1** |
-| └ Discovery | **143** |
+| └ Discovery | **145** |
 
 ### 厳格検証が未成立のcompleted job
 
