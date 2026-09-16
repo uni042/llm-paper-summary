@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T062200Z-hourly-survey-1457-audit01",
+  "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-audit-618273aae59f5cd7",
+      "claim_id": "claim-70753b349c74f4441f955499",
+      "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-70753b349c74f4441f955499",
+      "claimed_at": "2026-09-16T06:18:40+00:00",
+      "expires_at": "2026-09-16T07:48:40+00:00",
+      "kind": "audit",
+      "depends_on_job_ids": [
+        "job-audit-618273aae59f5cd7"
+      ],
+      "job": {
+        "job_id": "job-audit-618273aae59f5cd7",
+        "type": "audit",
+        "priority": 74,
+        "canonical_id": "arXiv:2503.03777",
+        "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
+        "source_url": "https://arxiv.org/abs/2503.03777",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+        "reason": "著者公式コード公開先、実スマートフォン・組み込み端末での再現性、arXivコメントのEuroMLSys '25発表予定の最終採録状態、本文表と図注の70B全メモリ時スループット表記の整合を追加確認する。",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, arXiv primary/cross-list categories, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing.",
+        "expected_blob_sha": "45075021836d00c07aea8c4d91b09416898f0ffc",
+        "schema_version": 1,
+        "status": "ready",
+        "created_at": "2026-09-14T01:44:18+00:00"
+      },
+      "record_bank": "f"
+    }
+  ],
+  "processed_at": "2026-09-16T06:18:40+00:00",
+  "checkpoint_released": 0
+}
