@@ -111,15 +111,15 @@ jobs:
       - name: Process queue and compatibility submissions
         run: python .survey/scripts/queue_worker.py --root .survey
 
-      - name: Suppress duplicates created by discovery and refresh queue
+      - name: Suppress duplicates created by discovery and refresh queue snapshot
         run: |
           python .survey/scripts/dedupe_queue.py --root .survey
-          python .survey/scripts/queue_worker.py --root .survey
+          python .survey/scripts/refresh_queue_snapshot.py --repo-root .
 
-      - name: Apply blocked research retry policy and refresh queue
+      - name: Apply blocked research retry policy and refresh queue snapshot
         run: |
           python .survey/scripts/blocked_retry.py --root .survey
-          python .survey/scripts/queue_worker.py --root .survey
+          python .survey/scripts/refresh_queue_snapshot.py --repo-root .
 
       - name: Normalize Research paper paths
         run: python .survey/scripts/normalize_research_paper_paths.py --repo-root . --apply
