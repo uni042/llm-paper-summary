@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T16:35:46.066083+00:00",
+  "updated_at": "2026-09-16T16:37:36.070287+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T16:35:46.066083+00:00",
+      "last_recorded_at": "2026-09-16T16:37:36.070287+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 168,
+        "research_completed": 169,
         "audit_completed": 0,
         "discovery_completed": 83,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35062363814:1",
-          "recorded_at": "2026-09-16T06:09:07.311645+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35062363814",
-            "run_attempt": "1",
-            "source_sha": "50df236379fe7fe60aee6557a2ce75ac38e1fade"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35062477563:1",
           "recorded_at": "2026-09-16T06:10:05.168451+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35122868571",
             "run_attempt": "1",
             "source_sha": "608cd9fd97a47649d79c99a2226f5998d52a7e8b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35123021132:1",
+          "recorded_at": "2026-09-16T16:37:36.070287+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35123021132",
+            "run_attempt": "1",
+            "source_sha": "166daf3791211c14886c582fa2e4181dc3153a47"
           },
           "signals": [
             "research_completed"
@@ -21702,6 +21702,14 @@
           "type": "research",
           "canonical_id": "arXiv:2601.01310",
           "title": "Making MoE based LLM inference resilient with Tarragon",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7b525e11834c9519",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09613",
+          "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference",
           "from": "ready",
           "to": "completed"
         }

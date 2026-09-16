@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 01:37:21 JST**
+> 自動生成: **2026-09-17 01:37:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **20** |
-| 未claim Research job | **19** |
-| 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-17 01:35:42 JST（1分前）** |
+| 収録候補論文 | **19** |
+| 未claim Research job | **18** |
+| 直近24hの検証済みResearch収録 | **85** |
+| 最終検証済みResearch収録 | **09-17 01:37:33 JST（3秒前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **20** |
+| canonical_id確認済みの一意な候補論文 | **19** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **20** |
+| 非終端Research job合計 | **19** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **6** | **6** | **0** | **0** | **0** | **15** |
-| 合計 | **38** | **14** | **10** | **4** | **1** | **0** | **15** |
+| 合計 | **39** | **14** | **10** | **4** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 01:37:33 JST** [research] `arXiv:2604.09613` — Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-7b525e11834c9519.json`
+  - result: `.survey/work-queue/results/research/attempt-5067cd6b8db49986303c3586.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5067cd6b8db49986303c3586.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.09613-token-budget-aware-pool-routing.md`
 - **09-17 01:35:42 JST** [research] `arXiv:2601.01310` — Making MoE based LLM inference resilient with Tarragon
   - job: `.survey/work-queue/jobs/job-research-431f09f6206f16eb.json`
   - result: `.survey/work-queue/results/research/attempt-8a4bc1625b051d6e27e89e58.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-de9937ab22bfaef86ad0dc97.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-de9937ab22bfaef86ad0dc97.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.03876-adaptivesd-runtime-adaptive-cpu-constrained.md`
-- **09-16 21:42:00 JST** [research] `arXiv:2605.11537` — Fast MoE Inference via Predictive Prefetching and Expert Replication
-  - job: `.survey/work-queue/jobs/job-research-f3f80e20575daf12.json`
-  - result: `.survey/work-queue/results/research/attempt-5c1b7213ab570864b19957bc.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5c1b7213ab570864b19957bc.json`
-  - paper: `papers/inference/03-moe-expert-offload/2026-2605.11537-predictive-prefetching-expert-replication.md`
 
 ### Audit
 
@@ -240,7 +240,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **20** |
+| ready | **19** |
 
 ### 候補の重複・識別情報欠損
 
@@ -260,7 +260,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **632** |
+| inference/training/survey配下の論文Markdown実体 | **633** |
 
 ### immutable submissionの未照合
 
@@ -268,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **389** |
-| └ Research | **262** |
+| 成功result未照合のimmutable submission | **388** |
+| └ Research | **261** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
