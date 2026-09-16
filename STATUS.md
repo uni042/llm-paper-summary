@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:50:54 JST**
+> 自動生成: **2026-09-16 12:51:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **48** |
-| 未claim Research job | **48** |
+| 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-16 12:50:41 JST（13秒前）** |
+| 最終検証済みResearch収録 | **09-16 12:50:41 JST（46秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **27** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **28** | **7** | **1** | **6** | **1** | **0** | **6** |
+| 合計 | **28** | **7** | **1** | **6** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -162,7 +162,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 12:51:26 JST** / heartbeat: **—** / lease expiry: **09-16 14:21:26 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d743b2b5468a28c8.json`
 - `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
   - claim: **09-16 12:20:14 JST** / heartbeat: **—** / lease expiry: **09-16 13:50:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`

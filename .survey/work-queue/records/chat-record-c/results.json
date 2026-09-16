@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a296cabbe5bdb6189545e086","job_id":"job-research-16a80a40c011c783","data":{"overview":"一様EPLBが層ごとに大量複製を確保するのに対し、CRAFTは複製効果の高い層だけへ集中することで均衡度の大半を維持しながらKVキャッシュ容量を取り戻す。8ノードではEPLBよりDeepSeek-R1で平均1.15倍、Kimi-K2で平均1.12倍のgoodputを達成し、全体平均は約1.14倍、最大1.2倍となる。CRA8はEPLBよりDeepSeekで7.25倍、Kimiで7.5倍少ない複製数で済む。","key_results":[{"metric":"EPLB比goodput","value":"DeepSeek-R1平均1.15倍・最大1.20倍、Kimi-K2平均1.12倍・最大1.17倍","baseline":"EPLB最低一様複製","condition":"8ノード、複数ワークロード、CRA8","interpretation":"均衡度に寄与しない複製を減らしてKVキャッシュを広げる効果が、わずかな均衡度差より大きくなる。"},{"metric":"複製数削減","value":"EPLB比でDeepSeek-R1 7.25倍、Kimi-K2 7.5倍少ない","baseline":"EPLB","condition":"8ノードCRA8","interpretation":"各層一律ではなく高偏り層へ集中するため、同程度の負荷分散を少ない専門家重みメモリで実現する。"},{"metric":"TTFT改善","value":"BASE比平均29%、最大58%短縮","baseline":"配置のみBASE。EPLBは平均30%、最大59%","condition":"固定要求率・飽和前","interpretation":"少数複製でもEPLBとほぼ同じプリフィル負荷均衡を得ており、複製削減が計算均衡を大きく損ねていない。"},{"metric":"小クラスタでのKV容量保護","value":"Kimi 6ノードでEPLBはKV容量75%減、CRA8は6%減。CRA8はBASE比平均1.14倍goodput、EPLBはBASE比平均46%低下","baseline":"BASE/EPLB","condition":"Kimi-K2、6ノード","interpretation":"専門家重みがGPUを圧迫する条件ほど過剰複製の害が大きく、メモリ予算付き配分が同時実行性を守る。"}],"negative_results":"複製自体が不要なほど負荷が均衡した層・ワークロードでは追加複製の利益は小さく、Rを増やし過ぎるとCRAFTでもKV容量減少が均衡改善を上回ってgoodputが低下する。負荷分布が大きく変化すると静的計画は古くなるため再プロファイル・再均衡が必要。起動時の利益推定には約10秒かかるが、通常のフレームワーク初期化が分単位であること、周期再均衡ではCPU計算を推論と重ねられることから実行時オーバーヘッドはないと報告する。","interpretation":"MoEサービングでは専門家複製とKVキャッシュが同じHBM予算を競うため、負荷均衡だけを最大化すると逆にgoodputを落とし得る。高偏り層は最初の数個の複製価値が高い一方、低偏り層や複製後半は限界利益が急減する。CRAFTはこの非線形性を層別に測り、HBM一単位を最も有効な層へ使うことで、計算均衡と同時実行性の両方を改善する。","quality_impact":"完全な専門家重みを複製しルーティング負荷を分散するだけなので、数値近似や専門家削除による品質劣化はない。"},"reservation":{"claim_id":"claim-a296cabbe5bdb6189545e086","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-3b440c67ddde8f986203d174",
+  "job_id": "job-research-d743b2b5468a28c8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3b440c67ddde8f986203d174",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

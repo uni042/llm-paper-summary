@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a296cabbe5bdb6189545e086","job_id":"job-research-16a80a40c011c783","data":{"canonical_id":"arXiv:2603.28768","arxiv_id":"2603.28768","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving","summary":"混合専門家モデルを専門家並列で配置すると、ルータが一部の専門家へトークンを集中させるためGPU間の計算・通信負荷が偏る。既存EPLBは各MoE層へGPU数に比例する複製枠を一様に追加するが、層ごとの負荷偏りは大きく異なり、多数の複製がほとんど均衡改善に寄与しない。しかも複製重みがGPUメモリを消費してKVキャッシュ容量を減らし、同時実行性を落とす。CRAFTは各層で複製数を変えたときの負荷均衡改善を少数点で再生推定し、総複製メモリ予算の下で改善量が最大になる層別複製数を動的計画法で選ぶ。その後、GPUごとの専門家収容数を揃える割当と容量考慮配置で実際の複製を置く。","list_summary":"MoE各層の専門家負荷偏りから複製1個当たりの均衡改善を推定し、限られたGPUメモリを効果の高い層へ集中配分して、過剰複製によるKV容量減少を避ける。","authors":["Adrian Zhao","Zhenkun Cai","Zhenyu Song","Lingfan Yu","Haozheng Fan","Jun Wu","Yida Wang","Nandita Vijaykumar"],"authors_affiliations":"Amazon; University of Toronto","published":"2026-05-29","publication":"MLSys 2026","publication_type":"Conference paper","publication_status":"Proceedings of the 9th MLSys Conference; arXiv v2","lineage":"MoE inference / expert parallelism / expert replication / load balancing","topics":["MoE推論","専門家複製","負荷分散","GPUメモリ","SGLang"],"importance":"複製を増やすほど良いという前提を崩し、専門家重みとKVキャッシュが同じGPUメモリを競合することまで含めて層別複製量を決める。","hardware_evaluation":"AWS EC2 p4de.24xlarge、各ノード8×A100 80GB NVLink、ノード間EFA P2P。DeepSeek-R1-671BとKimi-K2-1000B、6/8/12ノード規模を評価。","quality_effect":"専門家の完全重みを複製してルーティング先を変えるだけでモデル近似は行わず、生成品質への直接影響はない。","source":"https://arxiv.org/abs/2603.28768","sources":["https://arxiv.org/abs/2603.28768","https://arxiv.org/html/2603.28768"],"code":null,"implementation":"SGLang v0.4.8へEPLB置換として統合。初期化時または周期再均衡時にCPU上で層別利益を推定し、既存の非同期専門家重み移動機構へ配置計画を渡す。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:2507.20534","arxiv_id":"2507.20534"},{"canonical_id":"arXiv:2502.06643","arxiv_id":"2502.06643"},{"canonical_id":"arXiv:2509.25041","arxiv_id":"2509.25041"}],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":45},"reservation":{"claim_id":"claim-a296cabbe5bdb6189545e086","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3b440c67ddde8f986203d174",
+  "job_id": "job-research-d743b2b5468a28c8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3b440c67ddde8f986203d174",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
