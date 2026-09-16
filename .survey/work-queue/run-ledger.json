@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:16:41.598415+00:00",
+  "updated_at": "2026-09-16T06:17:53.489904+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:16:41.598415+00:00",
+      "last_recorded_at": "2026-09-16T06:17:53.489904+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 130,
         "audit_completed": 0,
         "discovery_completed": 52,
-        "blocked": 6,
+        "blocked": 7,
         "new_jobs": 71,
         "new_papers": 127,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34961376804:1",
-          "recorded_at": "2026-09-15T11:10:22.293957+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34961376804",
-            "run_attempt": "1",
-            "source_sha": "fca2867017a26b17736c131c6e5d0e32ee7a0b2b"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34964810320:1",
           "recorded_at": "2026-09-15T11:46:27.457329+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35063049885:1",
+          "recorded_at": "2026-09-16T06:17:53.489904+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35063049885",
+            "run_attempt": "1",
+            "source_sha": "caac4e83effa33bd47e3b11f058b183b1e1a7d48"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -21103,6 +21103,14 @@
           "title": "IFMoE: An Inference Framework Design for Fine-grained MoE",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-d9c67ca63b6b0f25",
+          "type": "research",
+          "canonical_id": "arXiv:2607.09248",
+          "title": "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -21967,7 +21975,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 587,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
