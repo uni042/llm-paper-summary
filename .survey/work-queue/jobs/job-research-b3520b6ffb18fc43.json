@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b3520b6ffb18fc43",
+  "type": "research",
+  "parent_job_id": "job-390a2ff0c6f51a4c",
+  "priority": 80,
+  "canonical_id": "arXiv:2503.08467",
+  "title": "Accelerating MoE Model Inference with Expert Sharding",
+  "source_url": "https://arxiv.org/abs/2503.08467",
+  "paper_path": "papers/inference/05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md",
+  "selection_reason": "expert matrixをrow/column方向に分解してrouting skewによるGPU間load imbalanceを抑え、kernel fusionと組み合わせてDeepSpeed比最大6.4x TTFT改善を報告。offloadではないがexpert placement/sharding系統の重要な隣接研究。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T19:03:45+00:00"
+}

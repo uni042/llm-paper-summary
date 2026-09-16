@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 566,
+      "completed": 569,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     },
     "research": {
       "completed": 450,
-      "ready": 27,
+      "ready": 33,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 1,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 27,
+    "ready_research_audit": 33,
     "actively_claimed": 0,
-    "claimable": 27
+    "claimable": 33
   },
   "next_jobs": [
     {
@@ -38,6 +38,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-71c206bf0990ca87",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2609.14872",
+      "title": "AgentKV: Phase-Aware KV Eviction for Agentic LLMs",
+      "source_url": "https://arxiv.org/abs/2609.14872",
+      "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-411dee2b8db54e04",
       "type": "research",
       "lane": null,
@@ -46,6 +60,34 @@
       "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
       "source_url": "https://arxiv.org/abs/2406.11674",
       "paper_path": "papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-5bed14c683ee7a49",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2505.05950",
+      "title": "FloE: On-the-Fly MoE Inference",
+      "source_url": "https://arxiv.org/abs/2505.05950",
+      "paper_path": "papers/inference/05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-476e11d12d88d15c",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2603.01058",
+      "title": "TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading",
+      "source_url": "https://arxiv.org/abs/2603.01058",
+      "paper_path": "papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -94,48 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-21f0d525f3274129",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2609.14773",
-      "title": "Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations",
-      "source_url": "https://arxiv.org/abs/2609.14773",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-4954e0b135582135",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2504.14893",
-      "title": "Hardware-based Heterogeneous Memory Management for Large Language Model Inference",
-      "source_url": "https://arxiv.org/abs/2504.14893",
-      "paper_path": "papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-e79ef27915573b54",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2507.09201",
-      "title": "SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding",
-      "source_url": "https://arxiv.org/abs/2507.09201",
-      "paper_path": "papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T19:01:52+00:00"
+  "generated_at": "2026-09-16T19:03:48+00:00"
 }
