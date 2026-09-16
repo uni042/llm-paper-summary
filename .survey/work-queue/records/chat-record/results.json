@@ -5,47 +5,16 @@
   "attempt_id": "attempt-b21265e1c7564132469a29b8",
   "job_id": "job-research-ec48da5b1e9edcea",
   "data": {
-    "overview": "ルータはF1 0.911を38ms中央値で達成し、二段ガードのF1 0.948・14.6秒に近い検出力を大幅に低い遅延で得る。攻撃フラッドでは本番トークンを97.8%削減する。複製ハニーポットの良性応答一致率は92.9%、選択的な自然文囮は88.9%で、無条件囮の7.6%から大きく回復する。",
+    "overview": "HoneyRouteは、悪意要求の検出精度を大きく犠牲にせず、ガード用大型モデルを直列実行する方式より経路判定を大幅に軽量化し、攻撃時に本番GPUへ流れる生成負荷そのものを隔離できることを示した。凍結0.8B埋め込み器と領域別小型分類頭によるルータはF1 0.911、AUROC 0.975を38ms中央値で達成し、F1 0.948だが14.6秒中央値を要する二段ガードに対して、オンラインAPI入口で使える遅延水準へ検出を落とし込む。同時フラッディングでは本番モデルの生成トークンを708,077から15,351へ減らして97.8%削減し、単なる拒否判定ではなく推論資源の保護に直結することを実証した。さらに、複製ハニーポットは良性応答一致率92.9%、危険信号時だけ囮を入れる軽量方式は88.9%を保ち、無条件囮の7.6%より大幅に高い忠実度を得る。捕捉データを補正頭へ還流すると誤迂回率が0.30から0.033へ低下しF1も0.933へ改善するため、運用中に得た攻撃トレースを次の防御へ利用できる閉ループとしても機能する。",
     "key_results": [
-      {
-        "metric": "router detection",
-        "value": "P=.903 R=.918 F1=.911 AUROC=.975, 38ms p50",
-        "baseline": "two-tier cascade F1=.948, 14.6s p50",
-        "condition": "held-out seven-domain attacks",
-        "interpretation": "serving gatewayで実用的な低遅延検出を得る。"
-      },
-      {
-        "metric": "production token protection",
-        "value": "708,077→15,351 tokens, 97.8% cut",
-        "baseline": "production serving",
-        "condition": "concurrent flooding",
-        "interpretation": "悪意生成を本番GPUから隔離する。"
-      },
-      {
-        "metric": "honeypot fidelity",
-        "value": "trained .929; naive code .076; selective code .889",
-        "baseline": "production response agreement",
-        "condition": "300 benign holdout",
-        "interpretation": "選択的・自然な囮で露見しやすさを抑えられる。"
-      },
-      {
-        "metric": "feedback loop",
-        "value": "misroute FPR .30→.033; F1 .911→.933",
-        "baseline": "before correction head",
-        "condition": "legitimate security research correction",
-        "interpretation": "捕捉データを誤検出補正へ再利用できる。"
-      }
+      {"metric":"router detection","value":"P=.903 R=.918 F1=.911 AUROC=.975, 38ms p50","baseline":"two-tier cascade F1=.948, 14.6s p50","condition":"held-out seven-domain attacks","interpretation":"大型ガードを直列に呼ぶ方式に近い検出力を維持しながら、API入口で要求ごとに経路変更できる遅延まで判定コストを下げる。"},
+      {"metric":"production token protection","value":"708,077→15,351 tokens, 97.8% cut","baseline":"production serving","condition":"concurrent flooding","interpretation":"悪意生成を本番GPUから安価なハニーポットへ隔離し、攻撃者が生成長を増やしても本番推論資源の消費へ直結しにくくする。"},
+      {"metric":"honeypot fidelity","value":"trained .929; naive code .076; selective code .889","baseline":"production response agreement","condition":"300 benign holdout","interpretation":"GPU不要の軽量囮でも選択的挿入なら本番応答との差を抑えられ、高忠実度が必要な場合だけ複製モデルへ費用を払う運用が可能になる。"},
+      {"metric":"feedback loop","value":"misroute FPR .30→.033; F1 .911→.933","baseline":"before correction head","condition":"legitimate security research correction","interpretation":"捕捉トレースを補正学習へ戻すことで、良性セキュリティ研究などの誤迂回を継続的に減らせる。"}
     ],
-    "negative_results": [
-      "無条件囮挿入は忠実度を7.6%まで崩す。",
-      "選択囮も良性トレースで一定の発火があり閾値校正が必要。"
-    ],
-    "quality_impact": "本番へ通る良性要求のモデル品質は変えないが、誤迂回時はハニーポット応答品質に依存する。",
-    "interpretation": "攻撃を拒否するだけでなく安価な別経路へ移すことで、検出遅延と資源防御を同時に改善し、捕捉データを次の検出へ還流できる。"
+    "negative_results": ["無条件囮挿入は忠実度を7.6%まで崩す。","選択囮も良性トレースで一定の発火があり閾値校正が必要。"],
+    "quality_impact": "本番へ通る良性要求のモデル品質は変えないが、誤迂回時はハニーポット応答品質に依存する。高忠実度複製は品質を保つ代わりにGPU費が残り、GPU不要方式は囮設計と発火閾値が品質を左右する。",
+    "interpretation": "HoneyRouteの主要な意味は、セキュリティ判定を推論前段の軽量分類だけで終わらせず、判定結果をモデル選択へ接続して悪意トークンを本番GPUから物理的に分離した点にある。これにより検出精度・判定遅延・欺瞞忠実度・GPU資源保護を同じサービング経路制御として最適化でき、捕捉トレースを再学習へ戻すことで攻撃分布の変化にも追従する余地を持つ。"
   },
-  "reservation": {
-    "claim_id": "claim-b21265e1c7564132469a29b8",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-b21265e1c7564132469a29b8","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}
 }
