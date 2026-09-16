@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 11:55:34 JST**
+> 自動生成: **2026-09-16 11:55:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs / worker `scheduled-chat-llm-survey-20260916T023111Z`
-  - claim: **09-16 11:53:03 JST** / heartbeat: **—** / lease expiry: **09-16 13:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8f7fdb4eba0d8a63.json`
+- `arXiv:2606.22541` — ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill / worker `scheduled-chat-llm-survey-20260916T023111Z`
+  - claim: **09-16 11:55:42 JST** / heartbeat: **—** / lease expiry: **09-16 13:25:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-553691f8ff245e9b.json`
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **09-16 10:33:30 JST** / lease expiry: **09-16 12:03:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`

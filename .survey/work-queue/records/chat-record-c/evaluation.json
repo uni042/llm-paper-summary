@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c84dd14a67b788aace9f590e","job_id":"job-research-8f7fdb4eba0d8a63","data":{"scope":"単一AMD MI350X上のdense Qwen3-8B decodeを実機評価する。batch 1〜64でpersistent scheduling効果とchiplet-local L2 weight reuse効果を分離し、vLLMとchiplet-unaware Mirage MPKを比較する。","evaluation_setup":"MI350X 256 CU/8 XCD、各XCD 4MB L2、共有256MB Infinity Cache、288GB HBM3。Qwen3-8B bf16、36層、hidden 4096、FFN 12288。64 input token、1024 output token、decode-only TPOTをGPU内timestampで測定。Fleet M-tileとM-split、Mirage MPK、vLLM 0.17.2 ROCm eagerを比較。","models":["Qwen3-8B dense bf16"],"hardware":["AMD Instinct MI350X"],"workloads":["decode batch 1,2,4,8,16,32,64","64 prompt tokens + 1024 output tokens"],"metrics":["decode TPOT","speedup","L2 hit rate","HBM read/write traffic","effective arithmetic intensity"],"baselines":["vLLM 0.17.2 ROCm eager","Mirage MPK chiplet-unaware","Fleet M-split scheduling-only control"],"simulation_assumptions":"主要結果は実機counter/timing。L2 reuse理論式はR=min(worker,m_tiles)に対する(R-1)/Rで説明。","evaluation_caveats":"評価GPUはAMD MI350XのみでNVIDIA Blackwell実機は未評価。dense Qwen3-8B decode中心でprefillやMoEは主要end-to-end対象外。"},"reservation":{"claim_id":"claim-c84dd14a67b788aace9f590e","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6f1b6968a7268a733026a358",
+  "job_id": "job-research-553691f8ff245e9b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6f1b6968a7268a733026a358",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
+}
