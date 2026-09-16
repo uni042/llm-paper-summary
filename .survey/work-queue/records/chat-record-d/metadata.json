@@ -1,85 +1,24 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
-  "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {
-    "canonical_id": "arXiv:2609.14237",
-    "arxiv_id": "2609.14237",
-    "doi": "10.48550/arXiv.2609.14237",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
-    "title": "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
-    "summary": "OpWeaveは、デコードを注意機構とFFN/MoEの固定境界で二分する従来の演算子分離サービングを一般化し、演算子分割・GPU種別・並列方式・バッチ/マイクロバッチ・パイプライン配置を共同最適化する異種GPU向けLLMサービング基盤である。理論面ではGPU価格/帯域幅と価格/演算性能を用いたトークン当たり費用モデルを構築し、KVキャッシュ増大でcolocationのバッチがGEMMのcompute-bound閾値を下回ると同種GPU分離の利得が生じること、異種GPU分離は帯域効率と演算効率でGPU間にトレードオフがある場合に有効であることを示す。plannerはhybrid-attentionモデルの最小反復演算パターンをpartition blockとして抽象化し、規則性を再利用して探索空間を削減する。vLLMベースruntimeは任意の演算子stageを異種device groupへ配置し、各decode iterationの計算・通信列をworker当たり1 native callで投入する。評価ではH100同種clusterで最良baseline比最大1.78倍、H100+L40S/A100異種clusterで最大1.89倍のserving cost改善をSLO達成下で報告する。",
-    "list_summary": "固定attention–FFN/MoE分割を越えて演算子境界・異種GPU配置・並列度・batchingを共同探索し、vLLM runtimeで実行することで、SLOを満たしつつserving costを同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。",
-    "authors": [
-      "Zikun Li",
-      "Yixuan Mei",
-      "Shiqi Pan",
-      "Zixuan Chen",
-      "Xiaowen Zhang",
-      "Mengdi Wu",
-      "Shuhuai Lin",
-      "Yutong Yang",
-      "Zhihao Zhang",
-      "Xupeng Miao",
-      "Rashmi Vinayak",
-      "Zhihao Jia"
-    ],
-    "published": "2026-09-13",
-    "publication": "arXiv preprint arXiv:2609.14237v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "arXiv v1, submitted 2026-09-13; primary cs.DC, cross-list cs.AI",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "LLMサービング",
-      "演算子分離",
-      "異種GPU",
-      "デプロイメント最適化",
-      "パイプライン",
-      "vLLM",
-      "SLO",
-      "serving cost"
-    ],
-    "importance": "高。既存のattention–FFN/MoE固定分割を、理論的な費用境界・一般化されたpartition planner・実行runtimeまで一体化して一般演算子分割へ拡張している。",
-    "hardware_evaluation": "実機。homogeneous H100 cluster、およびH100とL40SまたはA100を組み合わせたheterogeneous clusterを評価。理論例ではH20も扱う。",
-    "quality_effect": "モデルの数値精度や生成アルゴリズムを変更する手法ではなく、同一モデルの配置・batching・pipelineを変えるsystems optimization。主要評価はTPOT SLOとserving cost。",
-    "bottlenecks": [
-      "attentionのmemory-bandwidth律速とtensor-core低利用率",
-      "FFN/MoEのGEMM効率に必要な大batch",
-      "KV-cache増大によるcolocated batch上限",
-      "固定AFD境界のstage imbalance",
-      "hybrid-attentionのlayerwise variation",
-      "stage間activation transferとhost orchestration overhead"
-    ],
-    "evidence_locations": [
-      "§1",
-      "§2",
-      "§3.1–3.4",
-      "§4",
-      "評価節",
-      "Appendix A–B",
-      "Figures 1–7"
-    ],
-    "source": "https://arxiv.org/abs/2609.14237",
-    "sources": [
-      "https://arxiv.org/abs/2609.14237",
-      "https://arxiv.org/html/2609.14237",
-      "https://arxiv.org/pdf/2609.14237"
-    ],
-    "code": null,
-    "implementation": "vLLMベースのdistributed runtime。柔軟なoperator stagesとpipeline schedulesを異種device group上で実行し、host orchestrationを抑えるため各workerがdecode iterationごとの計算・通信sequenceを1 native callでsubmitする。論文本文から公開code URLは確認できなかった。",
-    "last_checked": "2026-09-16"
-  },
-  "reservation": {
-    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2fcf28b8aab221ce876e00e2","job_id":"job-research-0dc2aa86e35f442f",
+ "data":{
+  "canonical_id":"arXiv:2609.14237","arxiv_id":"2609.14237","doi":"10.48550/arXiv.2609.14237","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},
+  "title":"OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+  "summary":"OpWeaveは、大規模言語モデルのデコード処理を注意機構とフィードフォワード網の固定境界で二分する従来方式を一般化し、演算子の分割位置、GPU種類、並列方式、バッチ量、マイクロバッチ量、パイプライン配置を共同最適化する異種GPU向けサービング基盤である。理論面ではGPUの価格、メモリ帯域、演算性能からトークン当たり費用を表し、KVキャッシュ増大によって同居実行のバッチ量が行列積を十分効率化できる閾値を下回ると、同種GPUでの分離にも利得が生じることを示す。また、メモリ転送効率に優れるGPUと演算効率に優れるGPUが異なる場合には異種GPU分離が有効になる。計画器は混合注意モデルの最小反復演算パターンを分割ブロックとして抽象化し、同じ構造の層で分割判断を再利用して探索量を削減する。vLLMを基礎とする実行系は任意の演算子段を異種GPU群へ配置する。実機評価ではH100同種構成で最良比較方式に対して費用を最大1.78倍、H100とL40SまたはA100を組み合わせた異種構成で最大1.89倍改善し、出力トークン時間のサービス水準目標を満たした。",
+  "list_summary":"固定された注意機構・フィードフォワード網の分離境界を外し、演算子境界と異種GPU配置を共同探索することで、サービス水準目標を保ちながら費用を同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。",
+  "authors":["Zikun Li","Yixuan Mei","Shiqi Pan","Zixuan Chen","Xiaowen Zhang","Mengdi Wu","Shuhuai Lin","Yutong Yang","Zhihao Zhang","Xupeng Miao","Rashmi Vinayak","Zhihao Jia"],
+  "published":"2026-09-13","publication":"arXiv preprint arXiv:2609.14237v1","publication_type":"arXivプレプリント","publication_status":"2026年9月13日投稿のarXiv初版。主分類はcs.DC、併記分類はcs.AI。",
+  "lineage":"llm-serving-scheduling-disaggregation","topics":["大規模言語モデルサービング","演算子分離","異種GPU","配置最適化","パイプライン","サービス水準目標"],
+  "importance":"高い。特定の二段分離を前提とせず、費用の理論境界、一般化された分割計画、実行系を一体化している。混合注意モデルや異種GPUの普及時に比較基準となる。",
+  "hardware_evaluation":"実機評価。H100のみの同種GPU群と、H100にL40SまたはA100を組み合わせた異種GPU群を使用する。理論例ではH20も扱う。",
+  "hardware_details":"評価は長文デコードを中心とし、GPU種別、並列方式、バッチ量、マイクロバッチ量を計画器の候補として扱う。",
+  "quality_effect":"モデル重みや生成確率を近似しない配置・実行最適化であり、生成品質を意図的に変えない。主な評価対象は費用、遅延、通信量、稼働率である。",
+  "bottlenecks":["注意機構のメモリ帯域律速","フィードフォワード網や専門家層で大きなバッチが必要なこと","KVキャッシュ増大による同居実行のバッチ上限","固定分離境界による段間不均衡","混合注意モデルの層ごとの差","段間通信とホスト制御負荷"],
+  "evidence_locations":["第1節","第2節","第3.1節から第3.4節","第4節","評価節","付録AとB","図1から図7"],
+  "source":"https://arxiv.org/abs/2609.14237","sources":["https://arxiv.org/abs/2609.14237","https://arxiv.org/html/2609.14237","https://arxiv.org/pdf/2609.14237"],"code":null,
+  "implementation":"vLLMを基礎とする分散実行系を実装している。柔軟な演算子段とパイプラインを異種GPU群で実行し、各デコード反復の計算と通信の列を各作業プロセスから一度のネイティブ呼び出しで投入してホスト制御負荷を抑える。論文本文から公開コードURLは確認できなかった。",
+  "last_checked":"2026-09-16",
+  "references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-Optimized Large Language Model Serving"},{"title":"MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"},{"title":"Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding"}],
+  "references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節"
+ },
+ "reservation":{"claim_id":"claim-2fcf28b8aab221ce876e00e2","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
