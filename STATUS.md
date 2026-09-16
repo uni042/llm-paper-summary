@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:03:07 JST**
+> 自動生成: **2026-09-16 17:03:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **31** |
+| 収録候補論文 | **30** |
 | 未claim Research job | **30** |
-| 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-16 16:44:23 JST（18分前）** |
+| 直近24hの検証済みResearch収録 | **59** |
+| 最終検証済みResearch収録 | **09-16 17:03:19 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **31** |
+| canonical_id確認済みの一意な候補論文 | **30** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **31** |
+| 非終端Research job合計 | **30** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **46** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **47** | **2** | **1** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **47** | **21** | **0** | **21** | **1** | **0** | **23** |
+| 合計 | **48** | **21** | **1** | **20** | **0** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 17:03:19 JST** [research] `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
+  - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
 - **09-16 16:44:23 JST** [research] `arXiv:2507.17120` — BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving
   - job: `.survey/work-queue/jobs/job-research-250a1e243181b0c3.json`
   - result: `.survey/work-queue/results/research/attempt-c334af59c2859bcbd599d50c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-4bfdec70e8914ae1ce28af5e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4bfdec70e8914ae1ce28af5e.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md`
-- **09-16 15:16:37 JST** [research] IFMoE: An Inference Framework Design for Fine-grained MoE
-  - job: `.survey/work-queue/jobs/job-research-3190de0b496967f3.json`
-  - result: `.survey/work-queue/results/research/attempt-3feeca873b26fab2446b5438.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3feeca873b26fab2446b5438.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md`
 
 ### Audit
 
@@ -115,8 +115,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
-- immutable submission: **2件** / 検証済み成功: **0件** / 未完了・未検証: **2件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json` (job `job-research-ec48da5b1e9edcea`)
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **成功** `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
+  - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b21265e1c7564132469a29b8.json` (job `job-research-ec48da5b1e9edcea`)
 
 #### Audit (:30)
@@ -175,10 +179,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving / worker `scheduled-chat-discovery-20260916T1600JST`
-  - claim: **09-16 17:01:16 JST** / heartbeat: **—** / lease expiry: **09-16 18:31:16 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ec48da5b1e9edcea.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -198,7 +200,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **31** |
+| ready | **30** |
 
 ### 候補の重複・識別情報欠損
 
@@ -218,7 +220,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **603** |
+| inference/training/survey配下の論文Markdown実体 | **604** |
 
 ### immutable submissionの未照合
 
@@ -226,8 +228,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **340** |
-| └ Research | **206** |
+| 成功result未照合のimmutable submission | **339** |
+| └ Research | **205** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
