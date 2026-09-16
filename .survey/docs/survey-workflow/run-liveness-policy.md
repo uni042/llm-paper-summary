@@ -7,7 +7,7 @@
 1. 結果待ちが必要な箇所では、短い任意間隔のpollや「少し待った」判断を使わず、**30秒待機 → 同じ結果対象を再取得 → 未確定なら再び30秒待機**を結果が出るまで繰り返す。
 2. normal final responseは `.survey/scripts/run_finalization_gate.py` が `MAY_FINALIZE` かつ `finalization_permit.issued=true` を返した場合だけ許可する。許可なしにfinal responseを出してはならない。
 
-ただし、既存契約上「結果を待たず別の独立作業へ進める」箇所では待機を新しい同期障壁にしない。例えばResearch/Auditのimmutable descriptorを耐久保存した後、前jobのsubmission-fast terminal反映を待つ必要がなければ、30秒sleepせず次の独立作業へ進む。**30秒ループは、次の判断または安全な状態遷移にその非同期結果が実際に必要な場合にだけ使う。**
+ただし、既存契約上「結果を待たず別の独立作業へ進める」箇所では待機を新しい同期障壁にしない。例えばResearch/Auditのimmutable descriptorを耐久保存した後、前jobのsubmission-fast terminal反映を待つ必要がなければ、30秒sleepせず次の独立作業へ進む。**30秒待機を新しい同期障壁にしない。30秒ループは、次の判断または安全な状態遷移にその非同期結果が実際に必要な場合にだけ使う。**
 
 ## 1. Finalization permit
 
@@ -30,7 +30,7 @@ pending中に別request_idを発行しない。queued / in_progress / 404 / not 
 
 ## 3. Research / Audit submission result待機
 
-5-slot + immutable descriptorをGitHubへ耐久保存済みなら、通常throughputでは前jobのsubmission terminal結果を待たず次の独立作業へ進む。これは `always-on-worker.md` のwork-conserving契約を維持するためであり、30秒待機を新規同期障壁にしない。
+5-slot + immutable descriptorをGitHubへ耐久保存済みなら、通常throughputでは前jobのsubmission terminal結果を待たず次の独立作業へ進む。これは `always-on-worker.md` のwork-conserving契約を維持するためであり、30秒待機を新しい同期障壁にしない。
 
 一方、recovery、result validation、terminal ownership確認などで **同じsubmission resultが次の判断に必須** になった場合は、その同じjob / attempt / descriptorを対象に **30秒待機 → 同じsubmission resultまたは対応Actionsを再取得** する。未確定なら再び30秒待機し、結果が出るまで繰り返す。pendingだからという理由で同一descriptorを重複submitしない。別attemptを勝手に作らない。
 
