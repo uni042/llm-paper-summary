@@ -4,7 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-dc12dab8bc108ae5e00ae199",
   "job_id": "job-research-6ca0cd6980218f8e",
-  "data": {},
+  "data": {
+    "hardware": "全実験を単一のNVIDIA RTX 5880 Ada Generation GPUで実施。基盤モデルはOPT-125M、OPT-350M、OPT-1.3B。論文はGPUメモリをトークン当たりKBとして報告する。",
+    "software": "基盤はOPT系列。DSAEの符号器・復号器は基盤モデルの自己注意層から初期化し、FFN重みは転送しない。最適化器はAdamW、重み減衰1e-2、勾配L2ノルム上限1。最初の5,000反復は線形学習率予定、その後はコサイン減衰。",
+    "methodology": "Wanjuan-1.0英語部分のみを使用。DSAEは約1.55億文で学習し、重複しない1,000文で検証。DSEIは約640万段落で学習し、重複しない1,000段落で検証する。DSAEでは固定文単位圧縮SVAE、DSEIではSVAEを組み込むSLLMとトークン単位OPTを比較する。品質はPPL、効率は平均入力スループットと平均GPUメモリで評価する。DSAEは最大入力64トークン、バッチ512、学習率1e-7。DSEIは最大入力文長64、バッチ4、学習率1e-6、生成損失係数0.01。",
+    "scope": "実GPU測定だが、評価は単一GPU、OPT 125M〜1.3B、Wanjuan英語部分に限定される。チャット、コード、推論ベンチマーク、長文コンテキスト、複数GPU、実サービス負荷は評価していない。報告スループットは平均入力スループットであり、エンドツーエンドの要求遅延や生成トークン毎秒と同一視できない。",
+    "baselines": ["SVAE: 文全体の隠れ状態を静的に融合して1潜在表現へ圧縮する比較対象", "SLLM: SVAEを組み込んだ固定文単位潜在推論モデル", "OPT-125M/350M/1.3B: 通常のトークン単位推論"],
+    "datasets": ["Wanjuan-1.0 English subset"],
+    "metrics": ["パープレキシティ(PPL)", "平均入力スループット(k tokens/s)", "平均GPUメモリ(KB/token)"]
+  },
   "reservation": {
     "claim_id": "claim-dc12dab8bc108ae5e00ae199",
     "worker_id": "scheduled-chat-discovery-specialist-00",
