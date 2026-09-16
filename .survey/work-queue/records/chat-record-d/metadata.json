@@ -2,34 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-6b2d22eca4e3d95603c36153",
-  "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {
-    "canonical_id": "arXiv:2609.14237",
-    "arxiv_id": "2609.14237",
-    "doi": "10.48550/arXiv.2609.14237",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI"]},
-    "title": "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
-    "summary": "OpWeaveは、デコードを注意機構とFFN/MoEの固定境界で二分する従来の演算子分離サービングを一般化し、演算子分割・GPU種別・並列方式・バッチ/マイクロバッチ・パイプライン配置を共同最適化する異種GPU向けLLMサービング基盤である。理論面ではGPU価格/帯域幅と価格/演算性能を用いたトークン当たり費用モデルを構築し、KVキャッシュ増大でcolocationのバッチがGEMMのcompute-bound閾値を下回ると同種GPU分離の利得が生じること、異種GPU分離は帯域効率と演算効率でGPU間にトレードオフがある場合に有効であることを示す。plannerはhybrid-attentionモデルの最小反復演算パターンをpartition blockとして抽象化し、規則性を再利用して探索空間を削減する。vLLMベースruntimeは任意の演算子stageを異種device groupへ配置し、各decode iterationの計算・通信列をworker当たり1 native callで投入する。評価ではH100同種clusterで最良baseline比最大1.78倍、H100+L40S/A100異種clusterで最大1.89倍のserving cost改善をSLO達成下で報告する。",
-    "list_summary": "固定attention–FFN/MoE分割を越えて演算子境界・異種GPU配置・並列度・batchingを共同探索し、vLLM runtimeで実行することで、SLOを満たしつつserving costを同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。",
-    "authors": ["Zikun Li","Yixuan Mei","Shiqi Pan","Zixuan Chen","Xiaowen Zhang","Mengdi Wu","Shuhuai Lin","Yutong Yang","Zhihao Zhang","Xupeng Miao","Rashmi Vinayak","Zhihao Jia"],
-    "published": "2026-09-13",
-    "publication": "arXiv preprint arXiv:2609.14237v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "arXiv v1, submitted 2026-09-13; primary cs.DC, cross-list cs.AI",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["LLMサービング","演算子分離","異種GPU","デプロイメント最適化","パイプライン","vLLM","SLO","serving cost"],
-    "importance": "高。既存のattention–FFN/MoE固定分割を、理論的な費用境界・一般化されたpartition planner・実行runtimeまで一体化して一般演算子分割へ拡張している。",
-    "hardware_evaluation": "実機。homogeneous H100 cluster、およびH100とL40SまたはA100を組み合わせたheterogeneous clusterを評価。理論例ではH20も扱う。",
-    "quality_effect": "モデルの数値精度や生成アルゴリズムを変更する手法ではなく、同一モデルの配置・batching・pipelineを変えるsystems optimization。主要評価はTPOT SLOとserving cost。",
-    "bottlenecks": ["attentionのmemory-bandwidth律速とtensor-core低利用率","FFN/MoEのGEMM効率に必要な大batch","KV-cache増大によるcolocated batch上限","固定AFD境界のstage imbalance","hybrid-attentionのlayerwise variation","stage間activation transferとhost orchestration overhead"],
-    "evidence_locations": ["§1","§2","§3.1–3.4","§4","評価節","Appendix A–B","Figures 1–7"],
-    "source": "https://arxiv.org/abs/2609.14237",
-    "sources": ["https://arxiv.org/abs/2609.14237","https://arxiv.org/html/2609.14237","https://arxiv.org/pdf/2609.14237"],
-    "code": null,
-    "implementation": "vLLMベースのdistributed runtime。柔軟なoperator stagesとpipeline schedulesを異種device group上で実行し、host orchestrationを抑えるため各workerがdecode iterationごとの計算・通信sequenceを1 native callでsubmitする。論文本文から公開code URLは確認できなかった。",
-    "last_checked": "2026-09-16"
-  },
-  "reservation": {"claim_id":"claim-6b2d22eca4e3d95603c36153","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-95c518792662f18476bdcb36",
+  "job_id": "job-research-3bb1145babb1a6fc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-95c518792662f18476bdcb36",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

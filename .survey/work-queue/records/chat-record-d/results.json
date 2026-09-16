@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6b2d22eca4e3d95603c36153",
-  "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {
-    "key_results": [
-      {"metric":"homogeneous serving cost","result":"最大1.78×改善","comparison":"homogeneous H100 cluster上のbest existing/feasible baseline","condition":"TPOT SLOを満たす構成"},
-      {"metric":"heterogeneous serving cost","result":"最大1.89×改善","comparison":"best non-OpWeave baseline","condition":"H100 + L40SまたはA100 heterogeneous cluster"},
-      {"metric":"heterogeneous vs homogeneous OpWeave","result":"最大21.8% cost削減","comparison":"homogeneous OpWeave","condition":"heterogeneous cluster"},
-      {"metric":"pipeline stages","result":"Gemma-3-27Bで平均20.7 stages vs AFD 124 stages","comparison":"attention–FFN disaggregation","condition":"OpWeaveのgeneral partition plan"},
-      {"metric":"inter-node transfer per output token","result":"AFD比最大22.8×削減","comparison":"attention–FFN disaggregation","condition":"OpWeave plan"},
-      {"metric":"hardware active fraction","result":"model実行時間80%超","comparison":"AFDは約半分がidle","condition":"pipeline imbalance低減"}
-    ],
-    "interpretation": "利得の中心は、attentionとGEMMを単純に二分すること自体ではなく、KV容量・operator profile・異種GPUのbandwidth/compute価格比・hybrid layer周期を踏まえてstage境界を選び直す点にある。AFDよりstage数と通信境界を大幅に減らすことで厳しいTPOT SLOを満たせる構成が増え、そのうえでattentionをbandwidth効率のよいGPU、GEMMをcompute効率のよいGPUへ割り当てることでcostを下げる。",
-    "theory_result": "homogeneous ODSの利得はKV pressureでcolocation batchがGEMM thresholdを下回る領域から現れ、memory-weight比で上界づけられる。heterogeneous ODSはcost-per-byteとcost-per-FLOPのGPUランキングが異なる場合に最大利得を持つ。",
-    "quality_or_correctness": "生成品質を近似する手法ではないため、報告された改善は同一モデル実行のsystem-level cost/latency改善として解釈すべきである。"
-  },
-  "reservation": {"claim_id":"claim-6b2d22eca4e3d95603c36153","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-95c518792662f18476bdcb36",
+  "job_id": "job-research-3bb1145babb1a6fc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-95c518792662f18476bdcb36",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
