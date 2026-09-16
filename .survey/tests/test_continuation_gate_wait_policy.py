@@ -33,7 +33,7 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
             scheduled_handoff_guard_seconds=600,
             worker_kind="normal",
             discovery_rounds_completed=0,
-            discovery_min_rounds=4,
+            discovery_min_rounds=None,
             discovery_exhausted=False,
             next_axis_available=False,
         )
@@ -41,7 +41,7 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["claim_wait_seconds"], 30)
         self.assertIn("wait_30_seconds", result["claim_wait_action"])
-        self.assertIn("repeat_until_result_or_terminal_hard_stop", result["claim_wait_action"])
+        self.assertIn("repeat_until_result_or_time_handoff", result["claim_wait_action"])
 
 
 if __name__ == "__main__":
