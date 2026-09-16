@@ -1,17 +1,22 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-3b440c67ddde8f986203d174",
+  "claim_id": "claim-062785fdd1a729fb213be682",
   "job_id": "job-research-d743b2b5468a28c8",
-  "worker_id": "scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-3b440c67ddde8f986203d174",
-  "request_id": "claim-20260916T035100Z-scheduled-chat-llm-survey",
-  "claimed_at": "2026-09-16T03:51:26+00:00",
-  "expires_at": "2026-09-16T05:21:26+00:00",
+  "attempt_id": "attempt-062785fdd1a729fb213be682",
+  "request_id": "claim-20260916T053500Z-discovery-specialist-1400-12",
+  "claimed_at": "2026-09-16T05:22:17+00:00",
+  "expires_at": "2026-09-16T06:52:17+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-d743b2b5468a28c8"
   ],
-  "record_bank": "c"
+  "previous_claim_id": "claim-3b440c67ddde8f986203d174",
+  "record_bank": "c",
+  "record_bank_recovery": "expired-same-job",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-3b440c67ddde8f986203d174"
+  ]
 }

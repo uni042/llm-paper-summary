@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3b440c67ddde8f986203d174","job_id":"job-research-d743b2b5468a28c8","data":{"hardware":"主エンドツーエンド忠実度は16×NVIDIA H800。動機付け・一部演算検証では8×A800-SXM、追加付録でH20等を使用。シミュレータ自体は一般CPU機上で1000GPU超の論理クラスタまで評価する。","software":"Frontier約70K行Python実装。vLLM/SGLang型スケジューラ、co-location/PDD/AFD、PP/TP/DP/EP、CUDA Graph、prefix cache、chunked prefill、投機的デコード/MTP、量子化、階層キャッシュ、状態付き推論要求をモデル化。比較対象はAIConfigurator、LLMServingSim2.0、Vidur、APEX等。","methodology":"演算忠実度ではGEMM、FlashAttention、MoE GroupedGEMM等を実測プロファイルと比較し、バッチ内系列長分布や専門家負荷を変える。メモリ忠実度では実エンジンの重み、作業領域、CUDA Graph、内部予約を含むKV予算と解析式を比較する。ランタイム最適化ではCUDA GraphパディングやQwen3 MoE MTPの受理率・バッチサイズを変え、速度傾向まで再現できるか検証する。エンドツーエンドではdense/MoE、co-locationとPDD/AFD、SharedGPT等の可変長トレースを16 H800上の実システムと比較し、スループット、TTFT/TPOT/E2E遅延誤差を測る。利用例としてSLA制約付きPareto探索、異種GPU分離配置、状態付きエージェントスケジューラ、RLロールアウト並列度再構成をシミュレーションする。","scope":"高忠実度には対象ハードウェア・カーネルの校正プロファイルが必要で、未測定GPUや新カーネルへ完全にゼロショットではない。実装対象外の新しいランタイム機能はアダプタ追加が必要。離散イベントモデルはGPUカーネル内部をサイクル単位で模擬せず、校正済み演算・通信時間をイベント費として使うため、ハードウェア微細構造研究よりサービング構成判断を対象とする。"},"reservation":{"claim_id":"claim-3b440c67ddde8f986203d174","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-062785fdd1a729fb213be682",
+  "job_id": "job-research-d743b2b5468a28c8",
+  "data": {
+    "hardware": "主エンドツーエンド忠実度は16×NVIDIA H800。動機付け・一部演算検証では8×A800-SXM、追加付録でH20等を使用。シミュレータ自体は一般CPU機上で1000GPU超の論理クラスタまで評価する。",
+    "software": "Frontier約70K行Python実装。vLLM/SGLang型スケジューラ、co-location/PDD/AFD、PP/TP/DP/EP、CUDA Graph、prefix cache、chunked prefill、投機的デコード/MTP、量子化、階層キャッシュ、状態付き推論要求をモデル化。比較対象はAIConfigurator、LLMServingSim2.0、Vidur、APEX等。",
+    "methodology": "演算忠実度ではGEMM、FlashAttention、MoE GroupedGEMM等を実測プロファイルと比較し、バッチ内系列長分布や専門家負荷を変える。メモリ忠実度では実エンジンの重み、作業領域、CUDA Graph、内部予約を含むKV予算と解析式を比較する。ランタイム最適化ではCUDA GraphパディングやQwen3 MoE MTPの受理率・バッチサイズを変え、速度傾向まで再現できるか検証する。エンドツーエンドではdense/MoE、co-locationとPDD/AFD、SharedGPT等の可変長トレースを16 H800上の実システムと比較し、スループット、TTFT/TPOT/E2E遅延誤差を測る。利用例としてSLA制約付きPareto探索、異種GPU分離配置、状態付きエージェントスケジューラ、RLロールアウト並列度再構成をシミュレーションする。",
+    "scope": "高忠実度には対象ハードウェア・カーネルの校正プロファイルが必要で、未測定GPUや新カーネルへ完全にゼロショットではない。実装対象外の新しいランタイム機能はアダプタ追加が必要。離散イベントモデルはGPUカーネル内部をサイクル単位で模擬せず、校正済み演算・通信時間をイベント費として使うため、ハードウェア微細構造研究よりサービング構成判断を対象とする。"
+  },
+  "reservation": {
+    "claim_id": "claim-062785fdd1a729fb213be682",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

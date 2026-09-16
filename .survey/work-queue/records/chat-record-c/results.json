@@ -1,1 +1,48 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3b440c67ddde8f986203d174","job_id":"job-research-d743b2b5468a28c8","data":{"overview":"Frontierは現代的ランタイム機能を含む16-H800実システムに対し、co-locationと分離構成の双方で平均スループット誤差4%未満を報告する。SharedGPTのエンドツーエンド遅延では既存最先端シミュレータの平均誤差44.9%をco-locationで6.4%へ、PDD/AFDで51.7%を2.6%へ下げる。重要なのは単一演算の誤差だけでなく、KV容量・入場制御・バッチ形成が連鎖する閉ループを再現し、SLAを満たす構成選択の誤りを減らす点である。","key_results":[{"metric":"平均スループット予測誤差","value":"4%未満","baseline":"実システム","condition":"16×H800、dense/MoE、co-locationおよび分離構成、現代的ランタイム最適化有効","interpretation":"役割別イベント構造と実測校正費用を組み合わせることで、単一構成だけでなく異なるサービング構造でも予測が追従する。"},{"metric":"SharedGPT E2E遅延誤差","value":"co-location 6.4%、分離2.6%","baseline":"既存シミュレータ44.9%、51.7%","condition":"16 H800","interpretation":"分離クラスタ間転送とスケジューラ閉ループを一級イベントとして扱う効果が、特にPDD/AFDで大きい。"},{"metric":"粗い演算予測の誤差例","value":"FlashAttention平均32.6%、MoE GroupedGEMM最大級21.0%程度の誤差を既存代理値で観測","baseline":"トークン総数等の粗い予測器","condition":"動的バッチ/ルーティング","interpretation":"同じ総トークン数でも要求長分布や専門家負荷でカーネル時間が変わるため、平均代理値はイベント時刻をずらす。"},{"metric":"解析KV容量の波及誤差","value":"KV予算をLlama-3.1-8Bで8.1%、Qwen3-30B MoEで27.2%過大評価し、デコードスループットを23.6%、32.4%過大評価","baseline":"total memory - weights型解析モデル","condition":"scheduler isolation replay","interpretation":"メモリ見積り誤差が入場数を変え、その後のバッチとスループットまで増幅するため、メモリ忠実度が構成判断に直結する。"}],"negative_results":"Frontierは高忠実度を得るため対象GPU・カーネルのプロファイルを必要とし、完全な解析モデルより準備費が大きい。新しいランタイム最適化はスケジューラ状態への影響を実装する専用アダプタが必要で、自動的に未知機能を再現するわけではない。またサイクル精度GPUシミュレータではなく、校正済み演算時間を使う離散イベント方式なので、カーネル内部の新マイクロアーキテクチャ設計評価には向かない。","interpretation":"LLMサービングは『演算が何msか』だけでなく、その時間がKV成長、メモリ空き、入場要求、次バッチ形状を変える閉ループである。Frontierは演算・通信・メモリを個別に高精度化した上で、実スケジューラと同じイベント順序へ戻すことで誤差増幅を抑える。特にPDD/AFDでは役割ごとの並行キューと転送因果関係が性能を決めるため、同質レプリカに転送定数を足す方式では再現できない。","quality_impact":"生成モデル自体を変更せず、サービング性能予測の忠実度を改善する。"},"reservation":{"claim_id":"claim-3b440c67ddde8f986203d174","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-062785fdd1a729fb213be682",
+  "job_id": "job-research-d743b2b5468a28c8",
+  "data": {
+    "overview": "Frontierは現代的ランタイム機能を含む16-H800実システムに対し、co-locationと分離構成の双方で平均スループット誤差4%未満を報告する。SharedGPTのエンドツーエンド遅延では既存最先端シミュレータの平均誤差44.9%をco-locationで6.4%へ、PDD/AFDで51.7%を2.6%へ下げる。重要なのは単一演算の誤差だけでなく、KV容量・入場制御・バッチ形成が連鎖する閉ループを再現し、SLAを満たす構成選択の誤りを減らす点である。",
+    "key_results": [
+      {
+        "metric": "平均スループット予測誤差",
+        "value": "4%未満",
+        "baseline": "実システム",
+        "condition": "16×H800、dense/MoE、co-locationおよび分離構成、現代的ランタイム最適化有効",
+        "interpretation": "役割別イベント構造と実測校正費用を組み合わせることで、単一構成だけでなく異なるサービング構造でも予測が追従する。"
+      },
+      {
+        "metric": "SharedGPT E2E遅延誤差",
+        "value": "co-location 6.4%、分離2.6%",
+        "baseline": "既存シミュレータ44.9%、51.7%",
+        "condition": "16 H800",
+        "interpretation": "分離クラスタ間転送とスケジューラ閉ループを一級イベントとして扱う効果が、特にPDD/AFDで大きい。"
+      },
+      {
+        "metric": "粗い演算予測の誤差例",
+        "value": "FlashAttention平均32.6%、MoE GroupedGEMM最大級21.0%程度の誤差を既存代理値で観測",
+        "baseline": "トークン総数等の粗い予測器",
+        "condition": "動的バッチ/ルーティング",
+        "interpretation": "同じ総トークン数でも要求長分布や専門家負荷でカーネル時間が変わるため、平均代理値はイベント時刻をずらす。"
+      },
+      {
+        "metric": "解析KV容量の波及誤差",
+        "value": "KV予算をLlama-3.1-8Bで8.1%、Qwen3-30B MoEで27.2%過大評価し、デコードスループットを23.6%、32.4%過大評価",
+        "baseline": "total memory - weights型解析モデル",
+        "condition": "scheduler isolation replay",
+        "interpretation": "メモリ見積り誤差が入場数を変え、その後のバッチとスループットまで増幅するため、メモリ忠実度が構成判断に直結する。"
+      }
+    ],
+    "negative_results": "Frontierは高忠実度を得るため対象GPU・カーネルのプロファイルを必要とし、完全な解析モデルより準備費が大きい。新しいランタイム最適化はスケジューラ状態への影響を実装する専用アダプタが必要で、自動的に未知機能を再現するわけではない。またサイクル精度GPUシミュレータではなく、校正済み演算時間を使う離散イベント方式なので、カーネル内部の新マイクロアーキテクチャ設計評価には向かない。",
+    "interpretation": "LLMサービングは『演算が何msか』だけでなく、その時間がKV成長、メモリ空き、入場要求、次バッチ形状を変える閉ループである。Frontierは演算・通信・メモリを個別に高精度化した上で、実スケジューラと同じイベント順序へ戻すことで誤差増幅を抑える。特にPDD/AFDでは役割ごとの並行キューと転送因果関係が性能を決めるため、同質レプリカに転送定数を足す方式では再現できない。",
+    "quality_impact": "生成モデル自体を変更せず、サービング性能予測の忠実度を改善する。"
+  },
+  "reservation": {
+    "claim_id": "claim-062785fdd1a729fb213be682",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
