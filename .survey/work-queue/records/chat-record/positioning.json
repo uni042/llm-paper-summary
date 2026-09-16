@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-0bbfabc249b563dabf75666d",
-  "job_id": "job-research-82da92628b1e61c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0bbfabc249b563dabf75666d",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0bbfabc249b563dabf75666d","job_id":"job-research-82da92628b1e61c3","data":{"limitations":"評価はvLLM/SGLang、3モデル、4×H200の単一machineが中心で、異なるGPU世代・network topology・大規模multi-nodeでの誤差は未提示。runtime predictorのモデル誤差はそのままvirtual duration誤差へ入る。framework統合には各50行未満とはいえActor patchが必要で完全透過ではない。4MB閾値のsplit-state memoryはcontrol planeが大きなGPU buffer内容へ依存する将来実装では適用できず、CPU側処理が増えるほどtime acceleration上限も下がる。","differences":"Vidur、LLMServingSim、APEX、Frontier、TokenSim等の離散事象シミュレータがscheduler、memory allocator、request routerを別実装としてモデル化するのに対し、Revatiは実vLLM/SGLang control planeを直接実行する。MayaのGPU仮想化に近いが、offline trace/replayではrequest arrival timingが変わるLLM servingへ適用できないため、distributed Actor間のconservative minimum-target virtual-time protocolを追加する。sleep-based emulationと同じ時間semanticsをvirtual jumpで高速化する点も異なる。","implementation_status":"C++ Timekeeper/client約800行、C++ device emulator約6000行、Python bindings、ZeroMQで実装され、vLLM/SGLang側は各50行未満のpatchで統合したと報告。論文中に公開code URLの明示は確認できない。","research_positioning":"LLM serving性能モデリングにおいて、シミュレータ精緻化ではなく実システムを仮想hardware・仮想時間上で走らせるemulation系統を提示する。特にprefill/decode disaggregation、hierarchical prefix cache、MoE/expert parallelismのようにcontrol logicが急速に複雑化する状況では、featureをsimulation側へ再実装しないこと自体が保守性とfidelityの優位点になる。一方でGPU runtime predictorとdevice/control-data境界の正しさは依然モデル化が必要であり、完全にmodel-freeな評価ではない。"},"reservation":{"claim_id":"claim-0bbfabc249b563dabf75666d","worker_id":"scheduled-chat-llm-survey-turn5-20260916T223150JST","worker_kind":"scheduled_chat"}}
