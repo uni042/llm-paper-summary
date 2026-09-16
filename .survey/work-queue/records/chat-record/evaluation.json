@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5b2f0818dd442ca0014c8634",
-  "job_id": "job-research-3ad6262bd04cfbe6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5b2f0818dd442ca0014c8634",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5b2f0818dd442ca0014c8634","job_id":"job-research-3ad6262bd04cfbe6","data":{"evaluation_summary":"NVIDIA H100単一GPU、LLaMA-2 7B、FP16、batch=1で、10〜500トークンのpromptと生成長を対象にPyTorch EagerおよびTensorRT-LLM 1.0と比較する。PyTorch 2.3、CUDA 12.4を用い、決定的seedとwarm-start cacheを設定し、CUDA EventsとNsight Systemsで1000回の推論を測定する。初回トークン時間とP99トークン当たりデコード遅延に加え、非同期グラフ再生成と実行時コンパイルのアブレーションを行う。","scope":"単一H100、LLaMA-2 7B、FP16、batch=1、10〜500トークンという対話型短〜中系列に限定された評価であり、高batch、複数GPU、他モデル、量子化、長文コンテキストへの一般化は未検証である。","hardware":["NVIDIA H100 GPU"],"software":["PyTorch 2.3","CUDA 12.4","TensorRT-LLM 1.0","FlashAttention v2","nvFuser","vLLM paged KV kernels","Nsight Systems"],"models":["LLaMA-2 7B"],"datasets":[],"workload":"prompt length 10〜500 tokens、generation length 10〜500、batch=1の対話型自己回帰推論。","baselines":["HuggingFace Transformers / PyTorch Eager","TensorRT-LLM 1.0"],"metrics":["Time-to-First-Token","P99 per-token decode latency","latency variance"],"methodology":"全方式をH100・FP16・batch 1で揃え、warm-start後に1000 inference iterationsをCUDA EventsとNsight Systemsで計測する。TTFT表では10〜500トークンの各点を比較し、P99表では生成長ごとの尾部遅延を比較する。さらに非同期graph regenerationを外した場合と、動的処理のJITを外してPythonへ戻した場合を個別に測り、二機構の寄与を分離する。","predictor_accuracy":"予測器は使用しない。性能は実測遅延で評価する。","control_knobs":"static/dynamic partition、CUDA Graph capture/reuse、asynchronous regeneration、JIT dynamic path。"},"reservation":{"claim_id":"claim-5b2f0818dd442ca0014c8634","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
