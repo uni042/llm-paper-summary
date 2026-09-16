@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-53558bbaa4914539ab1d1836",
-  "job_id": "job-research-34cb083c55afaad3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53558bbaa4914539ab1d1836",
-    "worker_id": "scheduled-chat-paper-20260916T173214JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-53558bbaa4914539ab1d1836","job_id":"job-research-34cb083c55afaad3","data":{"problem":"共有prefixを持つrequestではTransformer KVを再利用できるが、hybrid recurrent LLMのMamba/SSM/GatedDeltaNet層はprefix全体を固定長stateへ圧縮する。全block境界へstateを保存するとstate memoryが増え、保存しなければhit時に先頭からrecurrent scanをやり直す。したがってcheckpoint memoryとexact recomputationの交換条件を解く必要がある。","novelty":"prefix overlap depthの分布を用い、recurrent stateを保存する位置をcheckpoint placement問題として定式化する。候補N位置とbudget Mに対し期待recomputationを最小化する厳密O(NM)動的計画法を与え、固定間隔heuristicでは利用できないoverlap分布の偏りを活用する。","method_overview":"attention層のKVは通常どおり保持し、recurrent層だけ一部prefix位置へexact hidden-state checkpointを置く。hit時には要求prefix上で最も深いcheckpointを復元し、そこから共有prefix末尾までのsuffixだけを元と同じrecurrent updateで再計算する。各checkpoint位置の価値は将来requestのoverlap depth分布から、その位置を保存したときに省ける再計算量として求める。動的計画法はcheckpoint数またはmemory budget内でこの期待costを最小化する位置集合を選ぶ。これによりno-cache、dense/block cacheの中間点を探索し、出力を近似せずにmemoryを減らす。","system_design":"prefix-overlap統計器、attention KV cache、recurrent state checkpoint store、distribution-aware DP planner、deepest-checkpoint lookup、suffix exact recomputationからなる。","components":[{"name":"overlap-depth分布","description":"同一cache entryを共有するrequest群について、どのtoken深度までprefixが一致するかの経験分布を作る。固定間隔配置では無視される人気深度の偏りをcheckpoint価値へ変換し、長い共通文書に異なる質問を付けるworkloadなどの構造を利用する。"},{"name":"疎recurrent checkpoint","description":"全token/blockへstateを保存せず選択位置だけにexact recurrent stateを保持する。checkpointを減らすほどstate memoryは減るが、cache hit時に最深checkpointから一致prefix末尾まで再計算するtoken数が増えるため、memoryとcomputeの連続的な交換条件を作る。"},{"name":"O(NM)動的計画法","description":"N個の候補位置とM個のcheckpoint budgetについて、overlap-depth分布下の期待suffix recomputationを最小化する配置を厳密に求める。subproblemをprefix区間と使用checkpoint数で分解し、balanced、sqrt、log、blockなどの手作業heuristicよりworkload分布へ適応する。"},{"name":"deepest-checkpoint resume","description":"hit時は一致prefix上の最深保存stateを復元し、その後ろだけを通常recurrent kernelでexact再計算する。新しい近似kernelやrecurrent update変更を必要とせず、attention KV cacheやKV compressionと独立に組み合わせられる。"}]},"reservation":{"claim_id":"claim-53558bbaa4914539ab1d1836","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
