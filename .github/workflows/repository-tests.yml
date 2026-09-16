@@ -69,3 +69,7 @@ jobs:
 
       - name: Run live repository consistency check
         run: python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
+
+      - name: Show repository consistency findings
+        if: failure() && hashFiles('/tmp/repository-consistency.json') != ''
+        run: cat /tmp/repository-consistency.json
