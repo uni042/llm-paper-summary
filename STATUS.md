@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:46:43 JST**
+> 自動生成: **2026-09-16 15:46:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **38** |
+| 収録候補論文 | **37** |
 | 未claim Research job | **34** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-16 15:43:41 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **53** |
+| 最終検証済みResearch収録 | **09-16 15:46:51 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **38** |
+| canonical_id確認済みの一意な候補論文 | **37** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **38** |
+| 非終端Research job合計 | **37** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **41** | **12** | **6** | **6** | **4** | **0** | — |
+| Research | **42** | **12** | **6** | **6** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **42** | **31** | **6** | **25** | **5** | **0** | **23** |
+| 合計 | **43** | **31** | **6** | **25** | **4** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:46:51 JST** [research] `arXiv:2609.07306` — RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention
+  - job: `.survey/work-queue/jobs/job-research-e59ec36b619f9b0c.json`
+  - result: `.survey/work-queue/results/research/attempt-09c3c1f8ea3236b83582a70d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-09c3c1f8ea3236b83582a70d.json`
+  - paper: `papers/inference/10-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md`
 - **09-16 15:43:41 JST** [research] `arXiv:2609.07282` — Separating Stream Stability from Long-Term Recall in Language Models
   - job: `.survey/work-queue/jobs/job-research-5204297ffdb35cfd.json`
   - result: `.survey/work-queue/results/research/attempt-c310d0bbe115d78e277aebea.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-dc12dab8bc108ae5e00ae199.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-dc12dab8bc108ae5e00ae199.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md`
-- **09-16 14:41:59 JST** [research] `arXiv:2605.00831` — GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-3c85afd190edf390.json`
-  - result: `.survey/work-queue/results/research/attempt-51c101f8bce3906b4d237de4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-51c101f8bce3906b4d237de4.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.07306` — RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 15:45:29 JST** / heartbeat: **—** / lease expiry: **09-16 17:15:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e59ec36b619f9b0c.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -237,7 +234,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **38** |
+| ready | **37** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,7 +254,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **596** |
+| inference/training/survey配下の論文Markdown実体 | **597** |
 
 ### immutable submissionの未照合
 
@@ -265,8 +262,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **326** |
-| └ Research | **192** |
+| 成功result未照合のimmutable submission | **325** |
+| └ Research | **191** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
