@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-7b42c4b89ac929fa80c2c499",
+  "attempt_id": "attempt-c0e304b27be71a492caece36",
   "job_id": "job-research-73e15ccbef3e6d6d",
   "data": {
     "overview": "CENTはlatency-critical batch=1で4×A100 baselineよりend-to-end latencyを4.6倍短縮し、throughput-critical設定ではLlama2 7B/13B/70Bのgeomeanで2.3倍高いthroughputを得る。Llama2-70BではGQAでGPU側の演算密度が上がるためspeedupは1.2倍に縮むが、32K contextのdecode throughputでは最大3.3倍となる。平均energy efficiencyは2.3倍tokens/J、3年TCOモデルでは5.2倍tokens/$。ただしprefill単独ではGPUが2.5倍throughput、2.3倍energy efficientであり、CENTの優位はmemory-bound decodeがend-to-end時間を支配することに依存する。",
@@ -67,7 +67,7 @@
     "interpretation": "CENTの核心はGPUを安価なmemory extensionへ置き換えることではなく、CXLでcapacityを拡張しながらmemory bank内部bandwidthをcomputeへ直接使い、decodeの低operational-intensity領域だけでGPUのcompute-centric設計を逆転させることにある。prefillはGPUが優位なため、論文自身も将来的なprefill/decode disaggregationを自然な併用形として示唆する。"
   },
   "reservation": {
-    "claim_id": "claim-7b42c4b89ac929fa80c2c499",
+    "claim_id": "claim-c0e304b27be71a492caece36",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

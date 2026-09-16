@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7b42c4b89ac929fa80c2c499",
+  "attempt_id": "attempt-c0e304b27be71a492caece36",
   "job_id": "job-research-73e15ccbef3e6d6d",
   "data": {
     "positioning": "CENTはCPU/GPU間offloadで既存GPUを延命する方式ではなく、memory-bound decodeをCXL接続PIM fabricへ全面移行しGPU自体を不要にするmemory-centric推論architectureである。CXL-PNMのようにcontroller近傍だけで計算する方式よりbank内部bandwidthを利用し、AttAcc/NeuPIMのようなGPU-PIM hybridよりTCOを下げる代わりにcompute-bound prefill性能を捨てる設計判断を取る。",
@@ -44,7 +44,7 @@
     "repository_fit": "cpu-offload系統に近いが、実態はCXL-PIM memory-centric inferenceである。GPUとのdata movement最適化ではなくGPUを除去するため、offloadの対極として比較すると階層memory設計のtradeoffが明確になる。"
   },
   "reservation": {
-    "claim_id": "claim-7b42c4b89ac929fa80c2c499",
+    "claim_id": "claim-c0e304b27be71a492caece36",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }
