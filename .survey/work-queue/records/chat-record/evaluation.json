@@ -2,40 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9ad5a1743ec35bec7e65792c",
-  "job_id": "job-research-6252d370adc380b9",
+  "attempt_id": "attempt-bb7ad5df2e27b7d14f3debd4",
+  "job_id": "job-research-b6c7fea1929c168e",
   "data": {
-    "evaluation_summary": "提案するblock placement、cache allocation、Join-the-Fastest-Free-Serverの組合せを、model-driven simulationと実際のdistributed LLM serving systemで既存resource-allocation方式と比較する。理論上のsteady-state response-time boundがsimulationと整合するかを確認し、元の仮定から外れたreal demandでもmean response timeが改善するかを測る。主要結果として既存方式に対し平均応答時間を63〜77%削減する。",
-    "scope": "pipeline-parallel、memory-bound、中央orchestrator、各requestのstatic maximum-sequence KV allocation、開始後のnon-preemptive/non-migratory executionを主仮定とする。dynamic KV growth、tensor parallel中心の密結合cluster、分散orchestratorは主要モデル外である。",
+    "evaluation_summary": "Vidurの実機プロファイルで較正された推論シミュレータと厳密なメモリ式を組み合わせ、Llama-2 7B/70B、A100-80GB、A40-48GB、H100、テンソル並列度一・二・四・八、鍵値十六・八・四ビット、保持率一・二分の一・四分の一を比較する。著者自身は画像処理装置を保有せず、遅延・処理量はシミュレーション、容量は算術値として明確に区別する。",
+    "scope": "メモリ制約を受ける言語モデル推論サービスの配備費用判断。",
     "hardware": [
-      "distributed GPU servers in real LLM serving experiment"
+      "A100 80GB",
+      "A40 48GB",
+      "H100"
     ],
     "software": [
-      "pipeline-parallel LLM serving prototype",
-      "central orchestrator",
-      "server-chain composition algorithms"
+      "Vidur profiled simulator",
+      "Sarathi-style chunked scheduling",
+      "exact KV memory model"
     ],
     "models": [
-      "large transformer / LLM serving workloads"
+      "Llama-2-7B",
+      "Llama-2-70B",
+      "境界分析用の七モデル規模"
     ],
-    "datasets": [],
-    "workload": "dynamically arriving inference requests processed by pipeline server chains; model-driven and real-demand traces/experiments。",
+    "datasets": [
+      "W1: 2048入力+256出力、64要求、非飽和",
+      "W2: 3840入力+256出力、384要求、30要求/秒"
+    ],
+    "workload": "固定長合成負荷。基盤プロファイル制約により文脈長は4096までで、意図したLongBench/RULER長文負荷は実現できない。",
     "baselines": [
-      "state-of-the-art distributed LLM resource allocation algorithms",
-      "heuristic block placement/request scheduling approaches"
+      "単一装置・十六ビット鍵値",
+      "テンソル並列2/4/8",
+      "八ビット・四ビット鍵値",
+      "鍵値保持率0.5/0.25"
     ],
     "metrics": [
-      "mean response time",
-      "steady-state response-time bounds",
-      "queue stability",
-      "service capacity"
+      "P50/P99初回応答遅延",
+      "P50/P99トークン間遅延",
+      "トークン毎秒",
+      "装置当たり鍵値容量",
+      "実行可能性",
+      "百万トークン当たり費用"
     ],
-    "methodology": "まず抽象queueing modelでblock placement/cache allocationの性能boundを導出し、model-driven simulationで理論予測を検証する。続いてreal distributed LLM serving systemへ配置・capacity・dispatchを適用し、仮定から外れる実需要でもbaselineとのresponse-time差を測る。",
-    "predictor_accuracy": "予測器は使用しない。理論boundと実測response timeの整合性を評価する。",
-    "control_knobs": "target maximum load safety margin、block placement、chain cache capacities、fastest-free dispatch。"
+    "methodology": "同一モデル・負荷で全実行可能構成を走らせ、費用対遅延のパレート前線を作る。同じメモリ削減量の並列構成と圧縮構成を対にし費用差の符号変化を探索する。A40には複数装置集約通信プロファイルがないため並列度二以上を補間せず未評価とする。",
+    "predictor_accuracy": "Vidurは著者元の実機較正で端から端まで九パーセント未満の誤差を報告し、本研究が使う演算予測器はプロファイルへの平均絶対百分率誤差0.29〜0.78%を示す。ただし本研究自身の保留実機検証はない。",
+    "control_knobs": "テンソル並列度、鍵値ビット幅、鍵値保持率、モデル規模、画像処理装置種類、負荷。"
   },
   "reservation": {
-    "claim_id": "claim-9ad5a1743ec35bec7e65792c",
+    "claim_id": "claim-bb7ad5df2e27b7d14f3debd4",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

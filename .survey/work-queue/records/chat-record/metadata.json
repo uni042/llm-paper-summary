@@ -2,35 +2,59 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-9ad5a1743ec35bec7e65792c",
-  "job_id": "job-research-6252d370adc380b9",
+  "attempt_id": "attempt-bb7ad5df2e27b7d14f3debd4",
+  "job_id": "job-research-b6c7fea1929c168e",
   "data": {
-    "canonical_id": "arXiv:2604.14993",
-    "arxiv_id": "2604.14993",
-    "doi": "10.48550/arXiv.2604.14993",
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
-    "title": "Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving",
-    "summary": "大規模トランスフォーマーを地理的・物理的に分散した画像処理装置へパイプライン配置すると、各要求は全層を順に覆うサーバ鎖を必要とし、装置メモリはモデル重みと要求別の鍵値キャッシュの双方に競合利用される。本研究はこれを大容量メモリを消費する鎖構造ジョブのサーバ鎖構成問題として抽象化し、モデルブロック配置、残余メモリのキャッシュ容量配分、到着要求の負荷分散を分離しながら連携させる。計算困難な配置・容量問題に対して性能保証付きのスケーラブルな手法を設計し、実際の大規模言語モデルサービング系を含む評価で平均応答時間を既存手法より六十三から七十七パーセント削減する。",
-    "list_summary": "分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。",
-    "authors": ["Tingyang Sun", "Ting He", "I-Hong Hou"],
-    "published": "2026-04-16",
-    "publication": "arXiv:2604.14993",
+    "canonical_id": "arXiv:2608.23962",
+    "arxiv_id": "2608.23962",
+    "doi": "10.48550/arXiv.2608.23962",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+    "summary": "鍵値キャッシュ不足への二つの代表策であるテンソル並列による画像処理装置追加と、鍵値量子化・間引きによる単一装置内圧縮を、百万トークン当たり費用と遅延の同一軸で比較する。A100、A40、H100で較正した実測由来シミュレータを用い、Llama-2 7B/70B、並列度一〜八、鍵値十六・八・四ビット、保持率一〜四分の一を横断する。比較可能なメモリ削減量では圧縮が一・二〜二倍安く、費用の交差点は見つからない。真の境界は文脈長ではなく重みが単一装置へ収まるかで、八十ギガバイト級では約三十六B付近と推定する。",
+    "list_summary": "画像処理装置追加と鍵値圧縮を百万トークン当たり費用で直接比較し、重みが単一装置へ収まる範囲では圧縮が一・二〜二倍安いことを示す。",
+    "authors": [
+      "Srikanta Datta Tumkur",
+      "Mehar Simhadri",
+      "Anshu Bansal",
+      "Jay Iyer",
+      "Sai Pavan Kumar",
+      "Sai Kapil Kumar",
+      "Ramesh Nampelly",
+      "Raj Dandekar"
+    ],
+    "published": "2026-08-25",
+    "publication": "arXiv:2608.23962v1",
     "publication_type": "arXivプレプリント",
     "publication_status": "Preprint",
-    "lineage": "other-inference-systems",
-    "topics": ["パイプライン並列サービング", "画像処理装置メモリ配分", "負荷分散"],
-    "importance": "モデル配置後の残余装置メモリが鍵値キャッシュの同時実行容量を決めるという大規模言語モデル固有の競合を、待ち行列とサーバ構成の基礎問題として明示する。",
-    "hardware_evaluation": "モデル駆動シミュレーションと実際の分散大規模言語モデルサービングシステムで評価する。一次本文の評価節に基づく。",
-    "quality_effect": "モデル出力を近似せず、ブロック配置、キャッシュ容量、要求振り分けだけを変更するため生成品質への近似誤差は導入しない。",
-    "source": "https://arxiv.org/abs/2604.14993",
-    "sources": ["https://arxiv.org/abs/2604.14993", "https://arxiv.org/html/2604.14993"],
+    "lineage": "kv-cache-memory-management",
+    "topics": [
+      "鍵値キャッシュ圧縮",
+      "テンソル並列",
+      "推論費用",
+      "メモリ制約",
+      "配備判断"
+    ],
+    "importance": "異なる文献で別指標だった装置追加と鍵値圧縮を、固定モデル・品質下限・遅延目標の費用正規化前線へ載せる。",
+    "hardware_evaluation": "VidurのA100/A40/H100実機プロファイルで較正したシミュレータ。著者自身の画像処理装置実測はない。",
+    "quality_effect": "品質ベンチマークは実施せず、圧縮側の品質低下は未評価であることを明示的な主要制約としている。",
+    "source": "https://arxiv.org/abs/2608.23962",
+    "sources": [
+      "https://arxiv.org/abs/2608.23962"
+    ],
     "code": null,
-    "implementation": "中央オーケストレータが事前のブロック配置とキャッシュ容量配分、オンラインの空き最速サーバ選択による負荷分散を組み合わせる研究実装である。",
+    "implementation": "Vidurを基盤に鍵値ビット幅・保持率のメモリ計画を追加したプロファイル駆動シミュレーション。",
     "last_checked": "2026-09-16",
     "references": [],
     "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML参考文献節を確認したが、正規化識別子の網羅抽出は行っていない。",
+    "references_source": "arXiv全文を確認。",
     "references_total": 0
   },
-  "reservation": {"claim_id": "claim-9ad5a1743ec35bec7e65792c", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bb7ad5df2e27b7d14f3debd4",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

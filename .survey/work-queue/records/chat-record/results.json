@@ -2,43 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9ad5a1743ec35bec7e65792c",
-  "job_id": "job-research-6252d370adc380b9",
+  "attempt_id": "attempt-bb7ad5df2e27b7d14f3debd4",
+  "job_id": "job-research-b6c7fea1929c168e",
   "data": {
-    "overview": "server-chain compositionをblock placement、KV cache capacity、online load balancingへ分解した提案方式は、model-driven simulationとreal distributed LLM servingの双方で既存resource-allocation方式より応答時間を大きく短縮した。主要な実システム評価ではmean response timeを63〜77%削減し、元のqueueing modelが置く理想化仮定からreal demandが外れても改善が残った。理論面ではblock placementとcache allocationがNP-hardであることを示す一方、重要な特殊caseで最適解を与え、一般caseではsteady-state mean response timeのupper/lower boundsを導出する。実務上はモデルblockを増やしてchainを増やすだけではKV残余memoryが減るため、placementとrequest concurrencyを同時に決める必要があることを定量化する。",
+    "overview": "同じ鍵値メモリ削減量では圧縮がすべての比較でテンソル並列より安く、二分の一削減で約一・二倍、四分の一で約一・五倍、八分の一で約一・八九倍安い。全モデル・試験装置を含めると圧縮の費用優位は一・二〜二倍で、想定した費用交差点は現れない。テンソル並列は遅延を改善し、A100の重負荷では一台から八台でP99初回応答を234.9秒から52.4秒へ約四・五倍短縮するが、費用は百万トークン2.717ドルから4.888ドルへ上がる。圧縮は容量一ドル当たりを最大16.5倍へ増やすのに対し、八倍の装置費で得る並列の容量一ドル当たり改善は約1.21倍に留まる。",
     "key_results": [
       {
-        "metric": "mean response time reduction",
-        "value": "63-77% reduction",
-        "baseline": "state-of-the-art distributed LLM resource-allocation solutions",
-        "condition": "model-driven simulation and real LLM serving under demands deviating from modeling assumptions",
-        "interpretation": "モデル配置とKV同時実行容量を別々にheuristic設定するより、同じGPU memory budget内で共同設計した論理server chainsの方が待ち時間と処理時間を大幅に減らす。"
+        "metric": "同一メモリ削減量での費用",
+        "value": "圧縮が1.20x〜1.89x安価",
+        "baseline": "TP2/4/8",
+        "condition": "Llama-2-7B A100 W2",
+        "interpretation": "削減量が深いほど装置台数費が効き圧縮優位が広がる。"
       },
       {
-        "metric": "computational complexity",
-        "value": "block placement and cache allocation are NP-hard",
-        "baseline": "exact global optimization",
-        "condition": "general server-chain composition problem",
-        "interpretation": "単純な最適化をrequest arrivalごとに解くことは現実的でなく、offline compositionとonline dispatchの二時間尺度分離が必要になる。"
+        "metric": "全試験範囲の費用優位",
+        "value": "圧縮が1.20x〜2.00x安価",
+        "baseline": "対応するテンソル並列構成",
+        "condition": "二モデル・三装置・構成横断",
+        "interpretation": "費用交差点は観測されない。"
       },
       {
-        "metric": "analytical guarantee",
-        "value": "explicit upper/lower bounds on steady-state mean response time; optimality in important special cases",
-        "baseline": "heuristic-only allocation",
-        "condition": "Join-the-Fastest-Free-Server load balancing",
-        "interpretation": "経験的配置だけでなく、target loadなど設計parameterを理論boundから調整できる。"
+        "metric": "初回応答遅延",
+        "value": "234.9sから52.4s",
+        "baseline": "TP1",
+        "condition": "A100 W2、TP8",
+        "interpretation": "テンソル並列は費用を増やす代わりに遅延を約4.5倍改善する。"
+      },
+      {
+        "metric": "容量/費用",
+        "value": "圧縮16.5x対TP8 1.21x",
+        "baseline": "非圧縮単一装置",
+        "condition": "容量効率比較",
+        "interpretation": "費用効率目的なら重み適合範囲で圧縮が強い。"
       }
     ],
     "negative_results": [
-      "dynamic KV allocationやrequest途中のcache growthは主モデルではstatic maximum-sequence allocationへ単純化される。",
-      "request開始後のmigration/preemptionを許さず、KV移送が高価という現実的だが固定的な仮定を置く。",
-      "中央orchestratorを前提とし、分散制御は今後の課題である。"
+      "想定した費用等価交差点は七B、七十B、三装置の試験範囲で見つからなかった。",
+      "七Bは八十ギガバイト装置でモデル固有の文脈上限まで鍵値容量を使い切れず、長文による境界を十分に作れない。",
+      "七十Bは単一A100へ重み自体が収まらず、鍵値をどれだけ圧縮しても一台構成は実行不能である。",
+      "圧縮の復号遅延と品質低下は実測しておらず、圧縮側の遅延数値は最良条件の下限である。"
     ],
-    "quality_impact": "生成計算の内容は変更せず、どのGPU chainで処理するかと何件を同時収容するかを変えるため、モデル品質への近似誤差は導入しない。改善対象はqueue waitingとservice response timeである。",
-    "interpretation": "大規模モデルの分散servingでは、GPU memoryが重みとKVの双方に消費されるため、model placementを最大化することとrequest concurrencyを最大化することが同じresource上で競合する。本研究はこの競合をchain capacityへ明示的に変換し、offlineで論理server群をcomposeしてからonline load balancingへ渡す。63〜77%の応答時間削減は、schedulerだけでなくschedulerが選べるserver-chain集合そのものをmemory-awareに設計する価値を示す。"
+    "quality_impact": "本研究は品質ベンチマークを実行していないため、四ビット化や強い間引きの品質費用は未定量である。この欠落により費用前線をそのまま品質制約付き本番判断へ適用できない。",
+    "interpretation": "運用規則は二分される。重みが一台へ収まるなら鍵値圧縮が費用効率で優先され、厳しい遅延目標だけが装置追加を正当化する。重みが収まらない規模では鍵値圧縮は問題の支配資源へ触れないため、テンソル並列が必須になる。"
   },
   "reservation": {
-    "claim_id": "claim-9ad5a1743ec35bec7e65792c",
+    "claim_id": "claim-bb7ad5df2e27b7d14f3debd4",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
