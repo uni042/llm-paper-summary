@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-cd7cbdc8e55bcf2679e3c08f","job_id":"job-research-adc94daa00d75514","data":{"canonical_id":"arXiv:2604.10152","arxiv_id":"2604.10152","doi":"10.48550/arXiv.2604.10152","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.LG"]},"title":"SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding","summary":"CPUへエキスパートをオフロードするMoE推論では、バッチ拡大時にPCIe越しのエキスパート転送が支配的になり、重みをGPUへ載せ切れない利点が通信で相殺される。SpecMoEはターゲットMoE自身のGPU常駐非エキスパート層と少数のホットエキスパートからドラフトモデルを構成する自己補助型投機的デコードを導入し、追加モデルや再学習を不要にする。投機段階ではCPU転送なしで複数候補トークンを生成し、検証段階で候補群に必要なエキスパート転送をまとめることで重複転送を削減する。時間的ホットネスに応じたドラフトエキスパート置換と、非常駐エキスパートを類似常駐エキスパートへ写像するアフィニティ表を組み合わせる。H100単GPUのCPUオフロード環境でNLLB-MoEのスループットを最大4.30倍、CPU-GPU転送量を最大76.73%削減し、Mixtral-8x7B、Llama-4-Scout、SSDオフロードでも改善を確認する。","list_summary":"MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。","authors":["Jehyeon Bang","Eunyeong Cho","Ranggi Hwang","Jinha Chung","Minsoo Rhu"],"authors_affiliations":"Jehyeon Bang, Eunyeong Cho, Jinha Chung, Minsoo Rhu: KAIST; Ranggi Hwang: UNIST（研究の一部はKAIST在籍時）。","published":"2026-04-11","publication":"63rd ACM/IEEE Design Automation Conference (DAC), 2026","publication_type":"Conference paper / arXiv extended version","publication_status":"Accepted","lineage":"MoE expert offload / speculative decoding / CPU-GPU memory hierarchy","topics":["MoE","エキスパートオフロード","投機的デコード","PCIe帯域","SSDオフロード"],"importance":"エキスパートオフロードと投機的デコードを直接結び、転送を隠す・キャッシュするのではなく転送回数そのものを減らす。追加ドラフトモデル・再学習なしで帯域制約の強い環境ほど改善が大きい。","hardware_evaluation":"Intel Xeon Platinum 8558×2、DDR5 1TB、NVIDIA H100 96GB HBM3×1、PCIe 5.0 64GB/s片方向。","hardware_details":"CPUオフロードを主評価し、SSDオフロードも追加評価。","quality_effect":"NLLB-MoEでは貪欲検証でターゲットの貪欲出力と一致した候補のみ受理。Mixtral/Llama-4では温度1のサンプリング検証を使用。ターゲットモデルの再学習・構造変更なし。","source":"https://arxiv.org/abs/2604.10152","sources":["https://arxiv.org/abs/2604.10152","https://arxiv.org/pdf/2604.10152"],"code":null,"implementation":"オープンソースCPUオフロード推論系を基盤に、PyTorch 2.5.0/CUDA 12.6、Transformers 4.51.0、Accelerate 1.6.0で自己補助型投機デコードを独自実装。公開コードURLは一次資料で確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":59},"reservation":{"claim_id":"claim-cd7cbdc8e55bcf2679e3c08f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-e119121016e6ca3bccd934b0",
+  "job_id": "job-research-c15602f379300b58",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e119121016e6ca3bccd934b0",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
