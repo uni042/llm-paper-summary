@@ -71,15 +71,23 @@ def logical_lookup(identifier: str):
     return None
 
 
+def _path_exists(relpath: str | None) -> bool:
+    return bool(relpath) and (ROOT.parent / relpath).exists()
+
+
 def assert_no_conflicts(record: dict):
     cid = record["canonical_id"]
     path = record["path"]
     base = survey.read(STATE + "paper-identity-index.json", {}) or {}
     base_rec = base.get("papers", {}).get(cid)
-    if base_rec and base_rec.get("path") not in (None, path):
+    if base_rec and base_rec.get("path") not in (None, path) and _path_exists(base_rec.get("path")):
         raise ValueError(f"Canonical ID already points to another path: {cid}")
     for other in read_delta_files():
-        if other.get("canonical_id") == cid and other.get("path") != path:
+        if (
+            other.get("canonical_id") == cid
+            and other.get("path") != path
+            and _path_exists(other.get("path"))
+        ):
             raise ValueError(f"Delta canonical ID already points to another path: {cid}")
     for ident in record["identifiers"]:
         hit = logical_lookup(ident)
