@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:15:05 JST**
+> 自動生成: **2026-09-17 03:32:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **24** |
 | 未claim Research job | **23** |
 | 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 02:36:39 JST（38分前）** |
+| 最終検証済みResearch収録 | **09-17 02:36:39 JST（55分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **18** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **10** | **6** | **4** | **1** | **0** | **5** |
+| 合計 | **34** | **10** | **6** | **4** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -202,9 +202,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 02:39:01 JST** / heartbeat: **—** / lease expiry: **09-17 04:09:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7623de796f4f2b46.json`
+- `arXiv:2609.13161` — PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 03:32:04 JST** / heartbeat: **—** / lease expiry: **09-17 05:02:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9f909dd53a5f1acb.json`
 
 #### Audit
 
