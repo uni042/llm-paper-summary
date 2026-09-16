@@ -37,6 +37,7 @@ jobs:
             .survey/scripts/claim_worker.py \
             .survey/scripts/claim_worker_with_banks.py \
             .survey/scripts/repair_claim_bank_recovery.py \
+            .survey/scripts/enrich_claim_record_routes.py \
             .survey/scripts/apply_library_checkpoint_barriers.py \
             .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/select_record_bank.py \
@@ -63,6 +64,7 @@ jobs:
             python .survey/scripts/apply_library_checkpoint_barriers.py --repo-root .
             python .survey/scripts/claim_worker_with_banks.py --repo-root .
             python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
+            python .survey/scripts/enrich_claim_record_routes.py --repo-root .
             python .survey/scripts/refresh_queue_snapshot.py --repo-root .
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
