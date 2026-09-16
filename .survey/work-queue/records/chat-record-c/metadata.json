@@ -2,52 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-65de370d3bdc114f83e19319",
-  "job_id": "job-research-dea6b2b543d05a36",
-  "data": {
-    "canonical_id": "arXiv:2608.30076",
-    "arxiv_id": "2608.30076",
-    "doi": "10.48550/arXiv.2608.30076",
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",
-    "summary": "七百億規模の言語モデルを単一の四十八ギガバイト画像処理装置で長文推論するため、重み量子化、層削減、鍵値キャッシュ圧縮を個別技術ではなく、メモリ、生成速度、実装統合費の三予算で共同設計する研究である。四ビット重み量子化、層単位削減、階層的な鍵値キャッシュ間引きと八ビット鍵値量子化を組み合わせ、七百億モデルを約三十三ギガバイトへ縮小する。単一A40で一万トークン入力時に約五十七トークン毎秒を維持し、一般・推論課題の絶対精度低下を五ポイント以内に抑える。",
-    "list_summary": "重み量子化・層削減・鍵値キャッシュ圧縮の相互作用を三予算で評価し、七百億モデルを約三十三ギガバイトへ縮小して単一A40・一万トークン入力で約五十七トークン毎秒を実現する。",
-    "authors": [
-      "Hongyu Yu",
-      "Yifei Shen"
-    ],
-    "published": "2026-08-30",
-    "publication": "arXiv:2608.30076v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "kv-cache-compression-quantization",
-    "topics": [
-      "単一画像処理装置推論",
-      "重み量子化",
-      "構造化層削減",
-      "鍵値キャッシュ圧縮",
-      "圧縮技術の結合効果"
-    ],
-    "importance": "圧縮技術を独立比較せず、適用順序と正負の結合効果、実装互換性まで含めて単一装置の現実的予算へ落とし込む。",
-    "hardware_evaluation": "NVIDIA A40 48GBを主対象とし、DeepSeek-R1-Distill-Llama-70Bの一万トークン級推論を評価。",
-    "quality_effect": "一般常識・推論ベンチマークで非圧縮基準からの絶対精度低下を五ポイント以内とする制約を置く。",
-    "source": "https://arxiv.org/abs/2608.30076",
-    "sources": [
-      "https://arxiv.org/abs/2608.30076"
-    ],
-    "code": null,
-    "implementation": "四ビット重み量子化、ShortGPT型層削減、PyramidKV型階層間引き、八ビット鍵値量子化をTransformers系実行へ統合した研究実装。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv全文の関連研究・実験節を確認。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-2230014a66e2cf859c8eed0a",
+  "job_id": "job-research-b6c7fea1929c168e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-65de370d3bdc114f83e19319",
+    "claim_id": "claim-2230014a66e2cf859c8eed0a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

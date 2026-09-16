@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:51:07 JST**
+> 自動生成: **2026-09-16 18:51:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.30076` — Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:49:52 JST** / heartbeat: **—** / lease expiry: **09-16 20:19:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-dea6b2b543d05a36.json`
+- `arXiv:2608.23962` — More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 18:51:16 JST** / heartbeat: **—** / lease expiry: **09-16 20:21:16 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b6c7fea1929c168e.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`

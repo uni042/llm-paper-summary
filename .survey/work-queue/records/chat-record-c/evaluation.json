@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-65de370d3bdc114f83e19319",
-  "job_id": "job-research-dea6b2b543d05a36",
-  "data": {
-    "evaluation_summary": "単一NVIDIA A40 48GBを配備上限とし、DeepSeek-R1-Distill-Llama-70Bを中心に、量子化・枝刈り・鍵値キャッシュ圧縮を単独および組合せで評価する。メモリ予算は重み・活性・鍵値キャッシュ合計四十八ギガバイト未満、速度予算は一万トークン文脈で最低十トークン毎秒、品質予算は一般・推論課題で絶対低下五ポイント以内とする。",
-    "scope": "七百億モデルの単一画像処理装置・長文推論。八十億級モデルで個別手法の制御実験も行い、七百億級の最終構成へ選択根拠を与える。",
-    "hardware": [
-      "NVIDIA A40 48GB"
-    ],
-    "software": [
-      "Transformers実行系",
-      "NVMLメモリ計測",
-      "四ビット重み量子化",
-      "層削減",
-      "階層的鍵値キャッシュ圧縮"
-    ],
-    "models": [
-      "DeepSeek-R1-Distill-Llama-70B",
-      "LLaMA 3.1 8B",
-      "DeepSeek-R1-Distill-Llama-8B"
-    ],
-    "datasets": [
-      "WikiText2",
-      "C4",
-      "ARC-Challenge",
-      "ARC-Easy",
-      "Winogrande",
-      "AIME-24",
-      "GPQA-Diamond",
-      "PIQA"
-    ],
-    "workload": "一万トークン以上の入力を含む長文自己回帰生成。最大装置メモリと生成トークン毎秒を実測する。",
-    "baselines": [
-      "非圧縮半精度",
-      "AWQ/GPTQ等の単独量子化",
-      "Wanda非構造枝刈り",
-      "SliceGPT幅削減",
-      "ShortGPT層削減",
-      "単独鍵値キャッシュ圧縮"
-    ],
-    "metrics": [
-      "最大装置メモリ",
-      "モデル容量",
-      "生成トークン毎秒",
-      "困惑度",
-      "課題正解率",
-      "統合実装費"
-    ],
-    "methodology": "各手法を単独で測った後、適用順序を変える組合せ実験で正負の結合を分離する。最大メモリは一万トークン生成中に監視し、品質は困惑度で予備選別したうえで一般常識・推論課題の正解率を確認する。統合費は既存のまま導入可能、演算核調整が必要、コンパイラ再実装が必要、という段階で扱う。",
-    "predictor_accuracy": "解析予測ではなく実行時の最大メモリ、生成速度、課題精度を同じ構成で測る再現可能な評価手順を重視する。",
-    "control_knobs": "重みビット幅、量子化方式、削減層数・疎性率・幅率、鍵値保持率、鍵値ビット幅、適用順序。"
-  },
+  "attempt_id": "attempt-2230014a66e2cf859c8eed0a",
+  "job_id": "job-research-b6c7fea1929c168e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-65de370d3bdc114f83e19319",
+    "claim_id": "claim-2230014a66e2cf859c8eed0a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
