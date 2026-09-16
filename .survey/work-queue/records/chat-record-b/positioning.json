@@ -2,43 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-26b544e3db910003b98226f2",
-  "job_id": "job-research-34cb083c55afaad3",
+  "attempt_id": "attempt-6a381932af0ac947f498ab64",
+  "job_id": "job-research-9d70d3111564c88d",
   "data": {
-    "positioning": "Transformer中心のprefix KV cachingをhybrid recurrent LLMへ拡張する際、recurrent stateのsingle-state resumabilityを利用してstateだけを疎checkpoint化するcache placement研究。",
-    "differences": "RadixAttention/vLLMはattention KVをblock単位でreuseするが、本研究はrecurrent layerのstate checkpoint位置を最適化する。KV quantization/compressionが各entryの表現量を減らすのに対し、保存checkpoint数そのものを減らしexact recomputationと交換する。固定block checkpointと異なりoverlap-depth分布をO(NM) DPへ入力する。",
+    "positioning": "speculative decodingを単一nodeのtoken acceptance最適化からedge-cloud distributed servingへ拡張し、network・queueing・batching・window制御を一体で評価するsystem研究。",
+    "differences": "通常のMedusa/SpecInfer等がdraft/verification algorithmやsingle-node並列性を中心にするのに対し、DSDはdraft client群とcloud target poolの間のRTT、routing、batch formationを明示する。DistServe等の分離servingとは分離対象がprefill/decodeではなくdraft/target verificationであり、AWCはspeculation windowとfused/distributed modeをsystem telemetryから選ぶ。",
     "relation_to_prior_work": [
       {
-        "work": "RadixAttention / vLLM prefix caching",
-        "difference": "attention KVのdense reuseに加え、recurrent stateを疎checkpointとして扱う。"
+        "work": "single-node speculative decoding",
+        "difference": "draft-targetをnetwork越しに分離し、RTTとtarget queueをspeculation policyへ含める。"
       },
       {
-        "work": "block recurrent-state caching",
-        "difference": "固定間隔でなくworkload overlap分布へ配置を適応させる。"
+        "work": "VIDUR",
+        "difference": "single-node latency predictorをDSD-Simのhardware engineとして使い、distributed SDのevent semanticsを追加する。"
       },
       {
-        "work": "KV cache compression",
-        "difference": "近似圧縮せずcheckpoint数を減らしexact suffix recomputationを使うため併用可能。"
+        "work": "DistServe / disaggregated serving",
+        "difference": "prefill/decode分離ではなくdraft generationとtarget verificationのedge-cloud協調を扱う。"
       }
     ],
     "strengths": [
-      "recurrent stateとattention KVの構造差をcache設計へ利用する。",
-      "O(NM)厳密DPでcheckpoint配置を解く。",
-      "実データでfixed-budget baselineをPareto支配する。",
-      "出力をexactに保持する。"
+      "実hardware acceptance traceを使いdistributed SDのqueue/network相互作用を再現する。",
+      "A40/A100/H100実測でpredictorを校正し誤差を提示する。",
+      "20 target/最大1000 draft規模でrouting/batching/windowを系統評価する。",
+      "AWCが固定thresholdなしでRTT/load/acceptanceへ適応する。"
     ],
     "limitations": [
-      "長い共有prefixが十分必要。",
-      "hidden stateのexact extract/restoreが必要。",
-      "workload drift時は分布推定と再配置が必要。",
-      "remote cache tierやmulti-GPU schedulerとの共同最適化は対象外。"
+      "主要結論はsimulation中心で、完全な大規模edge-cloud実deploymentではない。",
+      "VIDURがNCCL等を省略するためlatencyを過小評価する。",
+      "AWCの最大throughput改善は9.7%と比較的控えめ。",
+      "50〜60ms超のRTTではdistributed execution自体の優位性が失われる。"
     ],
-    "implementation_status": "公開GitHub実験コードがありQwen3.5 GatedDeltaNet layer groupとQuALITY/System Prompts等の構成を提供する。",
-    "research_positioning": "hybrid recurrent model向けにlayer stateの再開可能性へ応じてcache granularityを変える基礎研究。",
-    "repository_fit": "04-kv-prefix-cache系統で、recurrent/SSM hybrid serving固有のmemory-recompute trade-offを扱う。"
+    "implementation_status": "DSD-SimはSimPyとVIDURを組み合わせる研究framework。AWCは5入力residual MLPで2000超scenarioの全探索labelから学習する。公式code URLは本文から確認できなかった。",
+    "research_positioning": "distributed speculative decodingの通信・scheduler・adaptive windowを定量化する初期比較基準。",
+    "repository_fit": "07-speculative-decoding系統で、edge-cloud/disaggregated speculationのsystem-level baselineとして有用。"
   },
   "reservation": {
-    "claim_id": "claim-26b544e3db910003b98226f2",
+    "claim_id": "claim-6a381932af0ac947f498ab64",
     "worker_id": "scheduled-chat-paper-20260916T173214JST",
     "worker_kind": "scheduled_chat"
   }
