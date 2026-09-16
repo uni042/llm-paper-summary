@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 20:04:35 JST**
+> 自動生成: **2026-09-16 20:04:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **37** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **11** | **0** | **11** | **0** | **0** | **15** |
-| 合計 | **37** | **19** | **4** | **15** | **1** | **0** | **15** |
+| Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
+| 合計 | **37** | **22** | **4** | **18** | **1** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -147,8 +147,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 20:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **15件**
-- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication / 異種many-core・分散メモリ階層・bandwidth-aware runtime / virtual memory・異種state pool・LPDDR allocation / GPU power cap・DVFS・serverless energy-aware scheduling / tail-aware・reasoning phase-aware scheduling / serverless model loading・weight residency・multi-GPU KV migration / collective communication圧縮・tensor/expert parallel通信 / CXL・shared KV memory再スイープ
+- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **14件** / 候補: **15件**
+- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication / 異種many-core・分散メモリ階層・bandwidth-aware runtime / virtual memory・異種state pool・LPDDR allocation / GPU power cap・DVFS・serverless energy-aware scheduling / tail-aware・reasoning phase-aware scheduling / serverless model loading・weight residency・multi-GPU KV migration / collective communication圧縮・tensor/expert parallel通信 / CXL・shared KV memory再スイープ / SSD/NVMe・GPU-direct KV storage再スイープ / MoE expert offload・cache・prefetch再スイープ / disaggregated serving・KV transfer・scheduler最終スイープ
 - round `specialist-superchip-slo-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
   - 探索軸: Superchip統合メモリ・SLO-aware KV rotation
@@ -245,10 +245,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **422** |
+| 成功result未照合のimmutable submission | **425** |
 | └ Research | **242** |
 | └ Audit | **2** |
-| └ Discovery | **178** |
+| └ Discovery | **181** |
 
 ### 厳格検証が未成立のcompleted job
 
