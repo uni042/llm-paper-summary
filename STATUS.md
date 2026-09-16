@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 08:31:22 JST**
+> 自動生成: **2026-09-17 08:41:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **57** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（1時間9分前）** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（1時間19分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **8** | **4** | **4** | **3** | **1** | — |
+| Research | **8** | **8** | **4** | **4** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **27** | **10** | **6** | **4** | **3** | **1** | **6** |
+| 合計 | **25** | **10** | **6** | **4** | **3** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -88,16 +88,6 @@
   - result: `.survey/work-queue/results/research/attempt-942145c6596d2cfdf7866f97.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-942145c6596d2cfdf7866f97.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md`
-- **09-17 02:36:39 JST** [research] `arXiv:2504.11765` — Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs
-  - job: `.survey/work-queue/jobs/job-research-d1705edaabc0afa6.json`
-  - result: `.survey/work-queue/results/research/attempt-cb6c93d65c5d59b36245f7ee.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cb6c93d65c5d59b36245f7ee.json`
-  - paper: `papers/inference/03-offload-hierarchical-memory/2025-2504.11765-shared-disk-kv-cache-rag.md`
-- **09-17 02:34:55 JST** [research] `arXiv:2505.10259` — SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices
-  - job: `.survey/work-queue/jobs/job-research-f992ed2fc8c47a46.json`
-  - result: `.survey/work-queue/results/research/attempt-bb5c53d2afbda5e72b28dcf5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bb5c53d2afbda5e72b28dcf5.json`
-  - paper: `papers/inference/03-offload-hierarchical-memory/2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md`
 
 ### Audit
 
