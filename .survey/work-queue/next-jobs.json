@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 536,
+      "completed": 542,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     },
     "research": {
       "completed": 425,
-      "ready": 28,
+      "ready": 32,
       "superseded": 44,
       "deferred": 3,
       "blocked": 3,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 28,
+    "ready_research_audit": 32,
     "actively_claimed": 1,
-    "claimable": 27
+    "claimable": 31
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b85568c75bac4939",
+      "job_id": "job-research-adc94daa00d75514",
       "type": "research",
       "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2605.05696",
-      "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
-      "source_url": "https://arxiv.org/abs/2605.05696",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md",
+      "priority": 84,
+      "canonical_id": "arXiv:2604.10152",
+      "title": "SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.10152",
+      "paper_path": "papers/inference/03-moe-expert-offload/2026-2604.10152-specmoe-self-assisted-speculative-decoding.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T11:03:24+00:00"
+  "generated_at": "2026-09-16T11:03:51+00:00"
 }

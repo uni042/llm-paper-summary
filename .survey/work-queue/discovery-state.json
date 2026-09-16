@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T11:02:03+00:00",
+  "updated_at": "2026-09-16T11:03:51+00:00",
   "last_run_key": "2026-09-16T20:00:00+09:00",
-  "last_round": "specialist-superchip-slo-1",
+  "last_round": "specialist-power-aware-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
+  "consecutive_empty_rounds": 1,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -6329,6 +6329,105 @@
       ],
       "next_axis_hint": "HBM/L2内部のKV prefetchとattention kernelの帯域隠蔽へ軸を移す",
       "source_submission": "work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-kv-prefetch-2",
+      "axis": "GPU L2・HBM間KV prefetch・帯域隠蔽",
+      "query_summary": "前roundの統合CPU/GPUメモリからGPU内部階層へ軸を変更し、KV prefetchとattention kernelのcompute-load overlapを探索した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.07966"
+      ],
+      "next_axis_hint": "KVの保持量をhead/layer semanticsで適応制御する圧縮・retrieval-aware方式へ移す",
+      "source_submission": "work-queue/submissions/20260916T2011JST-discovery-specialist-kv-prefetch-2.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-semantic-kv-3",
+      "axis": "Semantic Retrieval Head・layer-aware KV圧縮",
+      "query_summary": "GPU内部prefetchから容量削減へ軸を変え、head semanticsとlayer-wise errorを使うKV圧縮を探索した。MetaKVは既知候補として除外し、CompressKVを未収録候補として確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.07966"
+      ],
+      "next_axis_hint": "KVから離れ、MoEのexpert replication・speculative executionによる帯域削減へ移す",
+      "source_submission": "work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-moe-spec-replication-4",
+      "axis": "MoE self-assisted speculative decoding・expert replication",
+      "query_summary": "KV系からMoEへ軸を変更し、offloaded expertの帯域削減とhot expert競合の解消を狙う研究を探索した。DALIとCoX-MoEは過去探索で既知のため除外した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2602.03495",
+        "arXiv:2605.17889"
+      ],
+      "next_axis_hint": "非GPUアクセラレータ・many-core/HPC向けLLM runtimeとメモリ帯域最適化へ展開する",
+      "source_submission": "work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-manycore-runtime-5",
+      "axis": "異種many-core・分散メモリ階層・bandwidth-aware runtime",
+      "query_summary": "MoE/GPU中心の探索からHPC many-coreへ軸を拡張し、主記憶帯域制約と分散メモリ階層に適応するLLM inference runtimeを探索した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "OS/virtual-memory側のpage migration、unified memory、GPU memory oversubscriptionを使うLLM推論へ展開する",
+      "source_submission": "work-queue/submissions/20260916T2020JST-discovery-specialist-manycore-runtime-5.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-virtual-memory-6",
+      "axis": "virtual memory・異種state pool・LPDDR allocation",
+      "query_summary": "many-core runtimeからOS/memory-managerへ軸を移し、hybrid SSM/Transformer stateとrandom-access-constrained acceleratorのallocation設計を探索した。BOOSTは既に処理済みのため除外した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.13592"
+      ],
+      "next_axis_hint": "ネットワーク/SmartNIC/RDMA側のKV transfer・remote memory schedulingへ移す",
+      "source_submission": "work-queue/submissions/20260916T2025JST-discovery-specialist-virtual-memory-6.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-power-aware-7",
+      "axis": "GPU power cap・DVFS・serverless energy-aware scheduling",
+      "query_summary": "ネットワーク軸は直前runでNetKV等を既に探索していたため反復せず、電力・エネルギーをfirst-class resourceにするserving runtimeへ切り替えた。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "reasoning workloadのphase/tail-aware schedulingへ移す",
+      "source_submission": "work-queue/submissions/20260916T2030JST-discovery-specialist-power-aware-7.json"
     }
   ],
   "axes": {
@@ -10041,6 +10140,66 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "HBM/L2内部のKV prefetchとattention kernelの帯域隠蔽へ軸を移す"
+    },
+    "GPU L2・HBM間KV prefetch・帯域隠蔽": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "KVの保持量をhead/layer semanticsで適応制御する圧縮・retrieval-aware方式へ移す"
+    },
+    "Semantic Retrieval Head・layer-aware KV圧縮": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "KVから離れ、MoEのexpert replication・speculative executionによる帯域削減へ移す"
+    },
+    "MoE self-assisted speculative decoding・expert replication": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "非GPUアクセラレータ・many-core/HPC向けLLM runtimeとメモリ帯域最適化へ展開する"
+    },
+    "異種many-core・分散メモリ階層・bandwidth-aware runtime": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "OS/virtual-memory側のpage migration、unified memory、GPU memory oversubscriptionを使うLLM推論へ展開する"
+    },
+    "virtual memory・異種state pool・LPDDR allocation": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "ネットワーク/SmartNIC/RDMA側のKV transfer・remote memory schedulingへ移す"
+    },
+    "GPU power cap・DVFS・serverless energy-aware scheduling": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "reasoning workloadのphase/tail-aware schedulingへ移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
