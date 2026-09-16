@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:19:28.962157+00:00",
+  "updated_at": "2026-09-16T06:36:59.220166+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:19:28.962157+00:00",
+      "last_recorded_at": "2026-09-16T06:36:59.220166+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 130,
+        "research_completed": 131,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34992314976:1",
-          "recorded_at": "2026-09-15T16:04:10.485704+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34992314976",
-            "run_attempt": "1",
-            "source_sha": "34d0c10f3f014411a6233bdb727c3f675b5f4fab"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34992612551:1",
           "recorded_at": "2026-09-15T16:07:33.527550+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35064509412:1",
+          "recorded_at": "2026-09-16T06:36:59.220166+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35064509412",
+            "run_attempt": "1",
+            "source_sha": "5d3e690b4f48e04fc3736f67aae330d28a31cfb2"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21127,6 +21127,14 @@
           "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-6802b144c10e4060",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15230",
+          "title": "ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21991,7 +21999,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 587,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }

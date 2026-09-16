@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:36:38 JST**
+> 自動生成: **2026-09-16 15:36:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **40** |
+| 収録候補論文 | **39** |
 | 未claim Research job | **36** |
-| 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-16 15:16:37 JST（20分前）** |
+| 直近24hの検証済みResearch収録 | **51** |
+| 最終検証済みResearch収録 | **09-16 15:36:55 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **40** |
+| canonical_id確認済みの一意な候補論文 | **39** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **40** |
+| 非終端Research job合計 | **39** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **12** | **6** | **6** | **4** | **0** | — |
+| Research | **40** | **12** | **6** | **6** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **40** | **31** | **6** | **25** | **5** | **0** | **23** |
+| 合計 | **41** | **31** | **6** | **25** | **4** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:36:55 JST** [research] `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters
+  - job: `.survey/work-queue/jobs/job-research-6802b144c10e4060.json`
+  - result: `.survey/work-queue/results/research/attempt-4bfdec70e8914ae1ce28af5e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4bfdec70e8914ae1ce28af5e.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md`
 - **09-16 15:16:37 JST** [research] IFMoE: An Inference Framework Design for Fine-grained MoE
   - job: `.survey/work-queue/jobs/job-research-3190de0b496967f3.json`
   - result: `.survey/work-queue/results/research/attempt-3feeca873b26fab2446b5438.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-01a98f493128a23f4a32008c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01a98f493128a23f4a32008c.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md`
-- **09-16 14:35:37 JST** [research] `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-e8148d67a04de0eb.json`
-  - result: `.survey/work-queue/results/research/attempt-4b0bf8eef80fa393a4c31125.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4b0bf8eef80fa393a4c31125.json`
-  - paper: `papers/inference/08-edge-on-device-llm-systems/2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 15:35:07 JST** / heartbeat: **—** / lease expiry: **09-16 17:05:07 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -237,7 +234,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **40** |
+| ready | **39** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,7 +254,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **594** |
+| inference/training/survey配下の論文Markdown実体 | **595** |
 
 ### immutable submissionの未照合
 
