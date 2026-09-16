@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ebd3e581b3a7df85b7d8df3e",
-  "job_id": "job-research-250a1e243181b0c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ebd3e581b3a7df85b7d8df3e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ebd3e581b3a7df85b7d8df3e","job_id":"job-research-250a1e243181b0c3","data":{"overview":"BucketServeは混合系列長の高負荷で、バケット化によるパディング削減とメモリ安全な動的バッチ拡大が最も効く。Llama2-13Bのオフライン混合負荷ではUELLM比最大3.58倍、DistServe比1.31倍のトークン処理量を示し、プリフィルGPU利用率81.66%、デコード67.88%へ上げる。オンラインではSLO達成率80%の時、AlpacaでDistServeの1.37倍、混合負荷で1.93倍の要求毎秒を処理する。最大負荷付近でもサーバ処理率は理想線へ近く、混合負荷ではDistServe比1.4倍、UELLM比3.47倍となる。バケット管理費は総実行時間の1%未満で、バケット数1～8でも処理時間は平均約0.12秒でほぼ一定である。","key_results":[{"metric":"オフラインスループット","value":"UELLM比最大3.58×、DistServe比1.31×","baseline":"UELLM / DistServe","condition":"Llama2-13B、Alpaca+LongBench混合、高負荷","interpretation":"系列長を揃えたプリフィルバッチと動的バッチ数がパディング浪費を減らし、より多くの要求をGPUへ詰められる。"},{"metric":"GPU利用率","value":"BucketServe prefill 81.66%、decode 67.88%","baseline":"DistServe 68.45%/57.87%、UELLM 49.47%/60.86%","condition":"混合負荷","interpretation":"特にプリフィルで長さ均質化による計算・メモリ利用改善が大きい。"},{"metric":"80% SLO達成時の処理負荷","value":"AlpacaでDistServe比1.37×、Mixedで1.93×","baseline":"DistServe","condition":"オンライン要求毎秒掃引","interpretation":"長短混在時ほどバケット化が先頭要求阻害とパディングを抑え、同じSLOで高い到着率を受けられる。"},{"metric":"最大付近のサーバ処理率","value":"Alpaca 7.9 req/s、Mixed 7.3 req/s。MixedはDistServe比1.4×、UELLM比3.47×","baseline":"DistServe / UELLM","condition":"高クライアント要求率","interpretation":"高並行時にも処理率が入力率へ近く、待ち行列の飽和を遅らせる。"},{"metric":"バケット処理費","value":"総実行時間の1%未満、1～8 bucketsで平均約0.12秒","baseline":"総エンドツーエンド時間","condition":"要求毎秒2～32の内訳評価","interpretation":"実行時分割・統合の管理費は性能改善に比べ小さい。"}],"negative_results":["低負荷では分割の利益が小さいため単一バケットへ統合し、複雑なバケット管理を行わない。","要求毎秒32ではプリフィル待ちが増え、プリフィル時間比が上昇するため、スケジューラだけで無制限に負荷を吸収できるわけではない。","単一ノード4×A100評価であり、複数ノードの負荷分散と通信は将来課題。"],"quality_impact":"モデル計算や重みを変更しないため生成品質への近似劣化はない。性能とSLOの改善は要求編成・実行順・バッチ容量管理による。","interpretation":"改善幅がAlpaca単独より長短混合で大きいことから、主効果は単純なバッチ拡大ではなく系列長異質性の隔離にある。負荷が低いと統合、高いと分割するため、固定バケットの管理費と固定バッチの浪費の双方を避ける。一方、デコードが典型負荷で総時間の約90%を占めるため、プリフィル改善だけでは全体限界が残る。"},"reservation":{"claim_id":"claim-ebd3e581b3a7df85b7d8df3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
