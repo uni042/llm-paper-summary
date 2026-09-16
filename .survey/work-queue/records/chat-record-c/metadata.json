@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-f75804377f721126ddb01d08",
-  "job_id": "job-research-3d5f11737ec9b4a2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f75804377f721126ddb01d08",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f75804377f721126ddb01d08","job_id":"job-research-3d5f11737ec9b4a2","data":{"canonical_id":"arXiv:2609.09662","arxiv_id":"2609.09662","doi":"10.1145/3774906.3802783","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling","summary":"PELMは端末上LLMの電力・熱制約に対し、動的電圧周波数制御（DVFS）だけでなく自己投機的デコードと可変検証深度を同時に制御する深層強化学習型の電力ガバナである。GPU周波数、ドラフト終了層、投機長、検証深度を実行時状態に応じて共同調整し、同じ生成速度でも浅い層と低い周波数を組み合わせることで電力を削減する。Jetson AGX OrinとJetson Orin Nano、複数LLM・5データセットで評価し、既存の電力制御方式に対して最大23.1%の高速化と52.4%のエネルギー削減を報告する。","list_summary":"DVFS・自己投機的デコード・可変検証深度を深層強化学習で共同制御し、端末LLMで最大23.1%高速化・52.4%エネルギー削減を達成する。","authors":["Weisi Yang","Stephen Xia"],"published":"2026-09-09","publication":"SenSys '26, pp. 438-451","publication_type":"査読付き国際会議論文","publication_status":"Published","lineage":"other-inference-systems","topics":["オンデバイスLLM","DVFS","投機的デコード","可変深度推論","電力・熱制御"],"importance":"ハードウェア周波数だけでなくLLMの実行深度と投機挙動を同じ閉ループ制御へ統合し、電力・熱・速度の交換関係をクロスレイヤで最適化する。","hardware_evaluation":"NVIDIA Jetson AGX OrinおよびJetson Orin Nanoで実機評価。","quality_effect":"可変検証深度を導入しても5データセットで完全深度推論と比較可能なタスク性能を維持する設定を評価する。","source":"https://arxiv.org/abs/2609.09662","sources":["https://arxiv.org/abs/2609.09662","https://doi.org/10.1145/3774906.3802783"],"code":"https://github.com/imec-nu/PELM","implementation":"公開研究実装。LayerSkip型の自己投機的デコード、HQCache、DQN電力ガバナをJetson上で統合する。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv本文の関連研究・参考文献節を確認。","references_total":0},"reservation":{"claim_id":"claim-f75804377f721126ddb01d08","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
