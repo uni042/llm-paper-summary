@@ -31,11 +31,11 @@ pending件数は、そのrunで新しく精読できる論文数を減らす条�
 
 2026-09-14以前に保存済みの「5 slot + `chat-inbox.json`」形式は既存pending救済のため読込互換だけ残し、replay時に現行のattempt固有不変descriptorへ変換する。
 
-## 3. Library障害
+## 3. Library / durability障害
 
-Library保存失敗だけをSTOP_RUNにしない。GitHub direct writeが利用可能ならGitHubへ保存して研究を継続する。
+Library保存失敗だけをnormal STOP_RUNにしない。GitHub direct writeが利用可能ならGitHubへ保存して研究を継続する。
 
-GitHub writeもrun-wideで利用不能かつLibraryにも必要な完全payload / offline seedを保存できない場合だけ、未checkpoint成果を増やす前にSTOP_RUNする。
+GitHub writeもrun-wideで利用不能かつLibraryにも必要な完全payload / offline seedを保存できない場合は **異常blocker** として扱う。未checkpoint成果を増やさず、回復または証拠保存を行うが、これをnormal success finalizationへ変換しない。
 
 Library pending増加や単一payloadのreplay失敗はrun停止理由ではない。
 
@@ -53,7 +53,7 @@ Discovery seed、job request、framework / LLM update等の非record envelopeは
 
 ## 5. Dependency待ち
 
-GitHub write不能中にoffline seedをLibraryへ保存し、その候補を同じrunで先に精読してResearch fallbackも保存してよい。
+GitHub write不能中にoffline seedをLibraryへ保存し、そのcandidateを同じrunで先に精読してResearch fallbackも保存してよい。
 
 復旧時にResearch fallbackがseedより先にGitHub intakeへ入っても、対応canonical jobがまだ存在しない間は隔離せず `fallback-inbox` に残す。後続seedがdispatchされjobが実体化した後にeligibleになる。
 
@@ -67,7 +67,9 @@ workerは可能な範囲で次を統合して判断する。
 
 GitHub readyでも完全payloadがcheckpoint済みのjobは再精読しない。checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` でそれらを一時除外して新しいDiscovery jobを発行する。元jobのstatusは変更しない。
 
-GitHub write不能時にactionable readyとspillover candidateが尽きても、Libraryへoffline seedを保存可能なら新規Discoveryを続ける。
+GitHub write不能時にactionable readyとspillover candidateが尽きても、Libraryへoffline seedを保存可能なら新規Discoveryを続ける。現在の探索軸が空・全重複・枯渇なら、handoff guard外では別軸を生成する。
+
+Discovery seedのcandidate配列に固定件数上限は設けない。外部transportの実payload制約に当たる場合だけ複数immutable seedへ分割し、総candidateを切り捨てない。
 
 ## 7. Replay fairness
 
@@ -76,7 +78,7 @@ Library replayだけでScheduled Chat / Work runを恒常的に使い切らな�
 - Library replayはGitHub fallback-inboxへのintakeまでをworkerが行う。
 - GitHub側のrecord replay / generic dispatchはActionsへ任せる。
 - 複数pendingをintakeできても、replayだけをrun終了理由にせずactionable Research/Auditとcandidate水位を再評価する。
-- GitHub fallback dispatcherは1 Actions runにつき最大1 logical envelopeを処理する。
+- GitHub fallback dispatcherの内部batch制御はtransport実装上の処理単位であり、Scheduled Chat runのresearch/candidate上限ではない。
 
 ## 8. 回復完了の意味
 
@@ -86,12 +88,12 @@ Library replayだけでScheduled Chat / Work runを恒常的に使い切らな�
 
 Library `processed` やfallback archiveをpaper publication完了と混同しない。
 
-## 9. STOP_RUN
+## 9. Normal finalization
 
-停止条件は `continuation-policy.json` のみを使う。
+通常runの終了条件は `continuation-policy.json` と `run-liveness-policy.md` のtime-only semanticsを使う。
 
-Library pending数、GitHub fallback-inbox件数、未送信論文数、record bank exhaustion、単一payload障害、dependency待ち1件だけでは停止しない。
+Library pending数、GitHub fallback-inbox件数、未送信論文数、record bank exhaustion、単一payload障害、dependency待ち、GitHub read不能、durability failure、platform/tool異常、現在の探索軸の枯渇はnormal successのSTOP_RUN条件ではない。
 
-完成成果または必要なoffline seedをGitHubにもLibraryにも耐久保存できない、GitHub readが不能、プラットフォーム上限到達、fallback spilloverを含めても独立作業が残らない場合など、正本条件だけで停止する。
+normal finalizationを許可するのは、実開始基準のrun-local handoff guardが成立し、現在の成果とclaimが安全に耐久handoffされ、`run_finalization_gate.py` がpermitを発行した場合だけである。非時間failureは異常blockerとして回復または次runへのcanonical stateを残す。
 
 Claim request/result/current-claim filesはdurable queue stateである。maintenanceはready jobに対応するactive/expired claim、未処理request/result、非terminalまたは未知jobをassignmentに含む履歴を保護する。GC可能なのは、live参照がなく保持期間を満たしたterminal history等に限る。
