@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:14:55.334609+00:00",
+  "updated_at": "2026-09-16T03:18:32.140961+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:14:55.334609+00:00",
+      "last_recorded_at": "2026-09-16T03:18:32.140961+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 103,
+        "research_completed": 104,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 3,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34907404180:1",
-          "recorded_at": "2026-09-14T23:11:27.346722+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34907404180",
-            "run_attempt": "1",
-            "source_sha": "809f4c6dabe3ae8e3b708126a093a5db25079767"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34907581427:1",
           "recorded_at": "2026-09-14T23:14:08.997055+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35051279519:1",
+          "recorded_at": "2026-09-16T03:18:32.140961+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35051279519",
+            "run_attempt": "1",
+            "source_sha": "102f8e8a3dfcc268989ca33cc30516f6fc24216a"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -20665,6 +20665,14 @@
           "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-4055e74aec47c94e",
+          "type": "research",
+          "canonical_id": "arXiv:2607.23933",
+          "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21253,7 +21261,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
