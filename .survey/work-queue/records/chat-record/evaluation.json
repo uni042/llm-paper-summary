@@ -1,11 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5f751e3b4a448f7f2f7978ae","job_id":"job-research-71c206bf0990ca87",
- "data":{
-  "hardware":"タスク品質実験はH100 GPUで実行し、全実験は約100 GPU時間。サービススループットはH100 NVLとRTX A6000で実測する。RTX A6000ではQwen3-32Bが収まらないためQwen3-8Bのみを報告する。",
-  "software":"Qwen3-32BとQwen3-8B、SGLang 0.5.12、FlashInfer注意実装を使用する。公開AgentKV実装はオンラインKVページ詰め直しと割当器再利用を含む。比較対象はR-KV、Tri-attention、完全KVの上流SGLangで、方針差を分離する共通サービス経路比較も行う。",
-  "methodology":"BFCLのweb_search、multi_turn、memoryとtau2-benchのairline、retail、telecomを2モデルで評価し、各タスク領域につき3つのKV予算を測る。全エンドツーエンド評価はターン間でKV状態を継承し、128デコードトークンごとにオンライン圧縮する。代表問い合わせ方式だけを変えた直近問い合わせ対照、代表数、段階除去、段階ラベル雑音、別モデル系列への転送をアブレーションする。スループットは16k/1kと32k/1kの入力/生成長、memory_ratio=0.90、max_prefill_length=8192、CUDAグラフ取得で測定する。",
-  "scope":"品質とスループットはいずれも実GPU上の測定で、複数ターンのツール利用軌跡を対象とする。ただしKV予算Bは手動指定で、品質目標や遅延目標から自動選択しない。最も効果が大きいのは中間圧縮率で、極小予算では容量そのものが支配し、大予算では完全KVへ近づく。主な段階解析はチャットテンプレートに思考・ツール境界が見えるモデルを前提とする。",
-  "models":["Qwen3-32B","Qwen3-8B","Llama-3.3-Nemotron-Super-49B-v1.5 transfer ablation"],"datasets":["BFCL","tau2-bench"],"baselines":["Full KV SGLang","R-KV","Tri-attention","matched recent-query"],"metrics":["task accuracy/score","output-token throughput","future utility coverage","principal angle"]
- },
- "reservation":{"claim_id":"claim-5f751e3b4a448f7f2f7978ae","worker_id":"scheduled-chat-20260917t043138-0900","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6b1a0ee3dc2a2d685a2203c9",
+  "job_id": "job-research-411dee2b8db54e04",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6b1a0ee3dc2a2d685a2203c9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

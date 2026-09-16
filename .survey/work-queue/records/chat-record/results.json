@@ -1,18 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5f751e3b4a448f7f2f7978ae","job_id":"job-research-71c206bf0990ca87",
- "data":{
-  "overview":"2モデル、BFCLとtau2-benchの計6領域、各3KV予算を横断すると、AgentKVはR-KVより平均5.5点、Tri-attentionより5.3点高い。実装面でも完全KVの上流SGLangに対し、H100 NVLのQwen3-32Bで16k/1k入力・生成時1.64倍、32k/1k時1.80倍の最大出力トークンスループットを得る。代表問い合わせ数とサービス経路を揃えた直近問い合わせ対照でも12条件平均で4.2点改善し、品質差が単なるページ詰め直しではなく段階別代表選択に由来することを示す。",
-  "key_results":[
-   {"metric":"既存圧縮法に対する平均タスク得点差","value":"+5.5 points vs R-KV; +5.3 vs Tri-attention","baseline":"R-KV and Tri-attention","condition":"2 models, 6 task domains, 3 KV budgets each","interpretation":"エージェント段階をまたいだ代表問い合わせが、直近偏重の既存圧縮より将来必要なKVを残す。"},
-   {"metric":"直近問い合わせ対照に対する平均得点差","value":"+4.2 points","baseline":"same serving/scoring path with recent queries","condition":"12 matched settings averaged over three budgets per workload","interpretation":"計算予算、追い出し規則、サービス実装を揃えても段階別代表だけで改善し、中心仮説を直接支持する。"},
-   {"metric":"ツール段階の将来効用被覆率","value":"0.042 to 0.175 at B=512; 0.117 to 0.416 at B=1536","baseline":"recency representatives","condition":"offline utility coverage diagnostic","interpretation":"直近問い合わせは以前のツール応答を特に落としやすく、多段階代表がその偏りを大幅に回復する。"},
-   {"metric":"出力トークンスループット","value":"1.80x","baseline":"upstream full-KV SGLang 0.5.12","condition":"H100 NVL, Qwen3-32B, 32k prompt / 1k generation","interpretation":"KVページ解放でGPU容量制約を緩め、長い入力でより多くの並列要求を処理できる。"},
-   {"metric":"出力トークンスループット","value":"1.76x","baseline":"upstream full-KV SGLang 0.5.12","condition":"RTX A6000, Qwen3-8B, 32k prompt / 1k generation","interpretation":"メモリ容量の小さいGPUでも圧縮KVの物理解放が並列度改善へ直結する。"},
-   {"metric":"共通経路での方針間スループット","value":"1.18-1.22x vs Tri-attention; 1.61-2.08x vs R-KV","baseline":"same serving path compressed policies","condition":"H100 NVL, Qwen3-8B, 16k/1k, batch 16 budget sweeps","interpretation":"同じ詰め直し実装でもAgentKVが高スループットで、より有用な小さいキャッシュを選べている。"}
-  ],
-  "negative_results":"方式は全条件で完全KV品質を保つわけではない。例えばQwen3-32Bのtau2 retailでは小さいB=2048でAgentKV 8.8に対し完全KV 53.5と大きく落ち、極小予算では代表選択より容量不足が支配する。別系列NemotronでもB=2048ではAgentKV 28.0がR-KV 29.0を1点下回る。段階代表数も増やせばよいわけではなく、Qwen3-32Bの代表予算q=32でBFCL 39.0、retail 42.1だがq=64では36.5、33.3へ低下する。",
-  "interpretation":"AgentKVが効く条件は、現在段階から遠い情報が次の段階で再利用され、KV予算がそれを全て保持するほど大きくない場合である。multi_turnやretailの中間予算ではこの条件が強く、直近方式との差が大きい。逆にairlineのように最新ツール応答だけで環境状態が十分分かる場合や、大予算でほぼ完全KVを保持できる場合は方式間差が小さい。16k入力では長いKVを毎トークン読む帯域削減、32k入力ではページ解放による同時実行数増加がスループット向上の主因になる。",
-  "quality_impact":"KV追い出しを伴う近似方式で、完全KVと同等保証はない。ただし同じ圧縮予算ではR-KVとTri-attentionを平均5点超上回り、段階ラベルを30%ランダム破損しても主アブレーション条件ではR-KVより高い。品質と速度の最適点はワークロード依存で、KV予算の自動選択は今後の課題である。"
- },
- "reservation":{"claim_id":"claim-5f751e3b4a448f7f2f7978ae","worker_id":"scheduled-chat-20260917t043138-0900","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-6b1a0ee3dc2a2d685a2203c9",
+  "job_id": "job-research-411dee2b8db54e04",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6b1a0ee3dc2a2d685a2203c9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

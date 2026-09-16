@@ -1,17 +1,13 @@
 {
-  "schema_version": 1, "transport_version": 10, "slot": "metadata", "attempt_id": "attempt-5f751e3b4a448f7f2f7978ae", "job_id": "job-research-71c206bf0990ca87",
-  "data": {
-    "canonical_id":"arXiv:2609.14872","arxiv_id":"2609.14872","doi":"10.48550/arXiv.2609.14872","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},
-    "title":"AgentKV: Phase-Aware KV Eviction for Agentic LLMs",
-    "summary":"エージェント型LLMでは思考、行動生成、ツール応答、その他の文脈という意味的段階が繰り返され、直近の問い合わせだけを代表にするKV追い出しでは、次の段階で再び重要になる古いツール情報などを過小評価する。AgentKVは各段階ごとに小さな問い合わせバッファを持ち、その和集合から全KV候補の将来重要度を推定して固定予算内の上位だけを保持する。さらに保持KVを物理的に詰め直し、解放ページを割当器へ返してターン間で圧縮状態を継承するSGLang実装を構築した。2モデル・6タスク領域・各3予算で既存圧縮法より平均5点超改善し、完全KVのSGLangに対して出力トークンスループットを最大1.80倍にした。",
-    "list_summary":"思考・行動・ツール応答など段階別の問い合わせ履歴でKV重要度を評価し、エージェントの段階遷移で必要になる古い状態を残しつつ、物理ページ圧縮で最大1.80倍の出力スループットを得る。",
-    "authors":["Taowen Tony Liu","Jeffrey T. H. Wong","Can Xiao","Bowen Yang","Hao Mark Chen","Yiren Zhao"],"authors_affiliations":"Imperial College London; Columbia University","published":"2026-09-14","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"agentic serving / KV cache eviction / persistent multi-turn serving","topics":["KVキャッシュ追い出し","エージェント推論","長文脈","SGLang","メモリ帯域"],
-    "importance":"エージェント推論では問い合わせ分布が時間的に定常という既存KV追い出しの暗黙仮定が崩れることを、段階別問い合わせ部分空間と将来注意効用で示し、追い出し方針だけでなくターンをまたぐ物理KVページ管理まで実装した点が重要である。",
-    "hardware_evaluation":"タスク品質実験はH100 GPU、スループット実験はH100 NVLとRTX A6000。Qwen3-32BとQwen3-8Bを使い、16k/1kおよび32k/1kの入力/生成長でSGLang 0.5.12完全KV経路と比較する。",
-    "quality_effect":"近似追い出しであり完全KVと同品質ではない。中間KV予算では既存圧縮法より一貫して高品質だが、極小予算では容量不足が支配し、十分大きな予算では完全KVとの差と方式間差が縮む。",
-    "source":"https://arxiv.org/abs/2609.14872","sources":["https://arxiv.org/abs/2609.14872","https://arxiv.org/html/2609.14872","https://github.com/LiuTaowen-Tony/agentkv"],"code":"https://github.com/LiuTaowen-Tony/agentkv","implementation":"SGLang 0.5.12を基盤に、段階解析、KV追い出し、オンラインページ詰め直し、解放ページ再利用、ターン間KV状態継承を実装した公開コードがある。CUDAグラフ取得とチャンク化プリフィルに対応する。","last_checked":"2026-09-17",
-    "storage_targets":["GPU HBM KV cache"],"bottlenecks":["KV容量","デコード時メモリ帯域","長いエージェント軌跡","ページ断片化"],"hardware_details":"H100 NVLおよびRTX A6000で実測。memory_ratio=0.90、max_prefill_length=8192、CUDA graph captureを使用。","evidence_locations":["§3","§4","Appendix C","Appendix D","Appendix E","Appendix F","Appendix G"],
-    "references":[{"canonical_id":"arXiv:2604.04921","arxiv_id":"2604.04921","title":"TriAttention: efficient long reasoning with trigonometric KV compression"},{"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388","title":"Qwen3 technical report"},{"canonical_id":"arXiv:2406.12045","arxiv_id":"2406.12045","title":"tau-Bench: a benchmark for tool-agent-user interaction in real-world domains"},{"canonical_id":"arXiv:2603.12277","arxiv_id":"2603.12277","title":"Prompt injection as role confusion"}],"references_checked_at":"2026-09-17","references_source":"primary-reference-section","references_total":19
-  },
-  "reservation":{"claim_id":"claim-5f751e3b4a448f7f2f7978ae","worker_id":"scheduled-chat-20260917t043138-0900","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6b1a0ee3dc2a2d685a2203c9",
+  "job_id": "job-research-411dee2b8db54e04",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6b1a0ee3dc2a2d685a2203c9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
