@@ -13,6 +13,9 @@
   "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing.",
   "expected_blob_sha": "45075021836d00c07aea8c4d91b09416898f0ffc",
   "schema_version": 1,
-  "status": "ready",
-  "created_at": "2026-09-14T01:44:18+00:00"
+  "status": "blocked",
+  "created_at": "2026-09-14T01:44:18+00:00",
+  "completed_at": "2026-09-16T06:19:27+00:00",
+  "blocker": "This audit specifically requires fresh primary-source verification of the official code location, real-device reproducibility, final EuroMLSys '25 publication state, arXiv categories/version, and consistency of the 70B full-memory throughput values. The execution's primary web retrieval facility has returned its explicit exhaustion error, so those required external primary sources cannot be retrieved now. Existing repository text is insufficient to establish the requested fresh audit evidence. Per workflow v10, the audit is blocked rather than certifying unverifiable publication/code/hardware claims; retry when primary-source retrieval is available.",
+  "status_submission": ".survey/work-queue/submissions/audit/attempt-70753b349c74f4441f955499.json"
 }
