@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 04:04:01 JST**
+> 自動生成: **2026-09-17 04:05:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **33** |
 | 未claim Research job | **33** |
 | 直近24hの検証済みResearch収録 | **91** |
-| 最終検証済みResearch収録 | **09-17 03:41:56 JST（22分前）** |
+| 最終検証済みResearch収録 | **09-17 03:41:56 JST（23分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **16** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **4** | **4** | **0** | **0** | **0** | **17** |
-| 合計 | **36** | **12** | **8** | **4** | **0** | **0** | **17** |
+| Discovery | **20** | **6** | **4** | **2** | **0** | **0** | **27** |
+| 合計 | **36** | **14** | **8** | **6** | **0** | **0** | **27** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,8 +186,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 04:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **17件**
-- 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling / Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware / MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling / GPU runtime・network-aware serving・dynamic memory scheduling・resource co-location
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **2件** / 候補: **27件**
+- 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling / Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware / MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling / GPU runtime・network-aware serving・dynamic memory scheduling・resource co-location / serving engine・dynamic batching・distributed KV/attention・adapter/personalized serving / speculative decodingのmemory/runtime/distributed serving・communication co-design
 - round `specialist-agentic-serving-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-agentic-serving-4.json`
   - 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling
@@ -204,6 +204,14 @@
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-runtime-scheduling-3.json`
   - 探索軸: GPU runtime・network-aware serving・dynamic memory scheduling・resource co-location
   - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-runtime-scheduling-3.json` (`ok=true`)
+- round `specialist-serving-engine-6` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-serving-engine-6.json`
+  - 探索軸: serving engine・dynamic batching・distributed KV/attention・adapter/personalized serving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-speculative-systems-5` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json`
+  - 探索軸: speculative decodingのmemory/runtime/distributed serving・communication co-design
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -258,10 +266,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **395** |
+| 成功result未照合のimmutable submission | **397** |
 | └ Research | **268** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
