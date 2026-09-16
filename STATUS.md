@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:03:03 JST**
+> 自動生成: **2026-09-17 02:03:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **21** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **42** | **10** | **6** | **4** | **1** | **0** | **1** |
+| Discovery | **21** | **3** | **2** | **1** | **0** | **0** | **2** |
+| 合計 | **42** | **11** | **6** | **5** | **1** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,8 +186,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 02:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
-- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload / KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計
 - round `specialist-offload-specdecode-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
   - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
@@ -196,6 +196,10 @@
   - submission: `.survey/work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json`
   - 探索軸: CXL階層メモリ・SSD/NVMe・MoE expert offload
   - 個別result照合: あり / `.survey/work-queue/results/20260917T0208JST-discovery-specialist-cxl-ssd-2.json` (`ok=true`)
+- round `specialist-kv-hardware-3` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T0211JST-discovery-specialist-kv-hardware-3.json`
+  - 探索軸: KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -252,10 +256,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **389** |
+| 成功result未照合のimmutable submission | **390** |
 | └ Research | **262** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 
