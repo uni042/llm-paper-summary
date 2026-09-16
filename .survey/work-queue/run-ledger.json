@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:12:29.663277+00:00",
+  "updated_at": "2026-09-16T03:13:27.274329+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:12:29.663277+00:00",
+      "last_recorded_at": "2026-09-16T03:13:27.274329+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 102,
+        "research_completed": 103,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 2,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34906145339:1",
-          "recorded_at": "2026-09-14T22:51:52.793092+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34906145339",
-            "run_attempt": "1",
-            "source_sha": "d83249dfc4429c4247a6795ff522cc62a80f3565"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34907191201:1",
           "recorded_at": "2026-09-14T23:08:14.195490+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35050904376",
             "run_attempt": "1",
             "source_sha": "8ca3fb0409b01c9ed7027ca5394d296fd20971c9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35050961214:1",
+          "recorded_at": "2026-09-16T03:13:27.274329+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35050961214",
+            "run_attempt": "1",
+            "source_sha": "b0945c9f995a4810f890f07287093ad966b370d7"
           },
           "signals": [
             "research_completed"
@@ -20647,6 +20647,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.12686",
           "title": "Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-bd280ca93f0a6940",
+          "type": "research",
+          "canonical_id": "arXiv:2605.02960",
+          "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
           "from": "ready",
           "to": "completed"
         }
