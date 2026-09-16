@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b25ffeca812a1fcdee74f1e1",
-  "job_id": "job-research-ad3541d28015a662",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b25ffeca812a1fcdee74f1e1",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b25ffeca812a1fcdee74f1e1","job_id":"job-research-ad3541d28015a662","data":{"overview":"融合表現を2048次元から64次元へ縮小すると送信量は8192Bから256Bへ32分の1になる。タスク認識型EMMIはCLIPで98.08%、MobileCLIPで98.32%を達成し、非圧縮の97.92%と98.41%に対して差を0.16ポイント以内に保つ。0.1Mbpsの帯域制約では送信時間が655.4msから20.5msへ減り、圧縮追加費用は0.641msだけで、推定総遅延は約903msから269msへ短縮される。したがって低帯域では通信律速を計算律速へ移せるが、100Mbpsでは送信差が0.68ms程度まで縮まり、遅延面の利得は小さくなる。","key_results":[{"metric":"通信量","value":"8192B→256B、32倍圧縮","baseline":"非圧縮融合表現","condition":"2048次元から64次元","interpretation":"固定長潜在表現によりリンク負荷を大幅に削減する。"},{"metric":"タスク精度","value":"CLIP 98.08%、MobileCLIP 98.32%","baseline":"非圧縮97.92% / 98.41%","condition":"タスク認識型圧縮","interpretation":"32倍圧縮でも非圧縮との差を0.16ポイント以内に維持する。"},{"metric":"推定総遅延","value":"約903ms→269ms、3.4倍改善","baseline":"非圧縮","condition":"MobileCLIP、0.1Mbps","interpretation":"通信時間655.4msを20.5msへ減らし、帯域律速を解消する。"},{"metric":"端末圧縮費用","value":"0.641±0.005ms","baseline":"通信削減635ms程度","condition":"x86_64単一CPUスレッド","interpretation":"低帯域では圧縮計算費用が通信節約に比べて無視できる。"}],"negative_results":["ラベル不要TaskAgnosticAEはCLIP 94.09%、MobileCLIP 90.30%で、単純なBlockPCAの97.12%/97.85%を下回る。","一般的PCA、AE、VAEはMobileCLIPで大きく精度を落とし、圧縮目的と元表現構造への依存が強い。","帯域が100Mbpsまで上がると非圧縮と圧縮の送信差は約0.68msとなり、総遅延改善は限定的になる。"],"quality_impact":"タスク認識型では32倍圧縮後も非圧縮との差を0.16ポイント以内に保つが、ラベル不要型や汎用圧縮では精度低下があり、圧縮方式選択が必要である。","interpretation":"EMMIの価値は圧縮率だけでなく、モダリティ融合後の統一表現を通信境界にすることで、高容量サーバ推論器を維持しながら帯域律速条件だけを切り離して改善できる点にある。"},"reservation":{"claim_id":"claim-b25ffeca812a1fcdee74f1e1","worker_id":"scheduled-chat-paper-20260916T175945JST","worker_kind":"scheduled_chat"}}
