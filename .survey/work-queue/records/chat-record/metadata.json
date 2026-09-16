@@ -2,50 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-10ba900257289562be435001",
-  "job_id": "job-research-ec48da5b1e9edcea",
-  "data": {
-    "canonical_id": "arXiv:2609.08306",
-    "arxiv_id": "2609.08306",
-    "doi": "10.48550/arXiv.2609.08306",
-    "arxiv_categories": {
-      "primary": "cs.CR",
-      "cross_list": []
-    },
-    "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
-    "summary": "API入口で悪意要求を38ms中央値の小型ルータで検出し、本番モデルではなくGPU不要または同系列複製のハニーポットへ迂回する。捕捉対話を指紋化して次世代検出器へ戻し、同時攻撃時の本番トークン消費を97.8%削減する。",
-    "list_summary": "悪意要求を安価なハニーポットへ分流し、本番GPU保護と攻撃指紋収集を両立するサービング層ルータ。",
-    "authors": [
-      "Han Jin"
-    ],
-    "published": "2026-09-09",
-    "publication": "arXiv:2609.08306v2",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "adversarial serving",
-      "honeypot routing",
-      "resource protection"
-    ],
-    "importance": "性能最適化ルーティングとは異なり、攻撃負荷を本番推論資源から隔離する設計軸を示す。",
-    "hardware_evaluation": "8×NVIDIA H20 node",
-    "quality_effect": "良性要求は本番へ通し、迂回時の応答忠実度を別指標で評価する。",
-    "source": "https://arxiv.org/abs/2609.08306",
-    "sources": [
-      "https://arxiv.org/abs/2609.08306",
-      "https://arxiv.org/pdf/2609.08306"
-    ],
-    "code": null,
-    "implementation": "vLLM本番8B・複製9B、凍結0.8B埋め込みと領域別MLP、GPU不要コードハニーポットを統合。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv v2",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-e3573f73597d9a563a861b51",
+  "job_id": "job-research-44674a8f55b9f5e8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-10ba900257289562be435001",
+    "claim_id": "claim-e3573f73597d9a563a861b51",
     "worker_id": "scheduled-chat-discovery-20260916T1600JST",
     "worker_kind": "scheduled_chat"
   }
