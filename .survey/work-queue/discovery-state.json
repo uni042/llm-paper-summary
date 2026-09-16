@@ -1,30 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T18:02:50+00:00",
+  "updated_at": "2026-09-16T18:04:49+00:00",
   "last_run_key": "2026-09-17T03:00:00+09:00",
-  "last_round": "specialist-recent-inference-1",
+  "last_round": "specialist-cross-dc-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 19,
+  "consecutive_empty_rounds": 20,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T16:30:00+09:00",
-      "round": "paper-worker-new-arrivals-power-moe-kv-1-retry",
-      "axis": "新着分離サービング電力制御・MoE推論効率・KVメモリ回収",
-      "query_summary": "2026年9月の新着を中心に、分離サービングの電力制御、動的MoE推論、専門家枝刈り、KVキャッシュメモリ回収へ探索軸を広げ、arXiv一次情報を軽量評価した。投入直前にarXiv IDをrepo検索し、既収録・既存jobとの一致がない4候補だけを送る。前回ファイルはjob_id不一致でmaterializeされなかったため、内容を変えずactive discovery jobへ再投入する。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次回はSSD/NVMe expert I/O scheduling、分散ストリーミング入口、Ray/GCS制御面分割などExaServeから派生するシステム軸を優先する",
-      "source_submission": "work-queue/submissions/20260912T1630JST-discovery-d197921c62f4db41.json"
-    },
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "round": "paper-worker-exaserve-derived-storage-control-2",
@@ -6577,6 +6562,29 @@
       ],
       "next_axis_hint": "直近2609のGPU runtime/collective communication/heterogeneous memory、または既収録重要serving論文のforward-citationへ移し、今回のKV/context軸を機械的に反復しない",
       "source_submission": "work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json"
+    },
+    {
+      "run_key": "2026-09-17T03:00:00+09:00",
+      "round": "specialist-cross-dc-2",
+      "axis": "GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation",
+      "query_summary": "前roundのKV/context軸から移り、collective communication、GPU runtime、heterogeneous memory、networked/disaggregated servingの検索窓をずらして探索。既知候補の多くは最新identity snapshotで既収録/既投入だった。未評価かつsystem-level contributionが明確だったPDDを一次arXiv情報で評価し採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.17435",
+        "arXiv:2607.28150",
+        "arXiv:2606.16135",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "既収録重要serving論文のforward citation、DBMS/storage由来のcache/prefetch、またはMoE expert I/O schedulingへ移る",
+      "source_submission": "work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json"
     }
   ],
   "axes": {
@@ -10614,6 +10622,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "直近2609のGPU runtime/collective communication/heterogeneous memory、または既収録重要serving論文のforward-citationへ移し、今回のKV/context軸を機械的に反復しない"
+    },
+    "GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation": {
+      "last_run_key": "2026-09-17T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "既収録重要serving論文のforward citation、DBMS/storage由来のcache/prefetch、またはMoE expert I/O schedulingへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

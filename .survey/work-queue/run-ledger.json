@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T18:04:21.920293+00:00",
+  "updated_at": "2026-09-16T18:07:16.078434+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T18:04:21.920293+00:00",
+      "last_recorded_at": "2026-09-16T18:07:16.078434+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 173,
         "audit_completed": 0,
-        "discovery_completed": 84,
+        "discovery_completed": 85,
         "blocked": 12,
-        "new_jobs": 115,
-        "new_papers": 174,
+        "new_jobs": 117,
+        "new_papers": 176,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35063183977:1",
-          "recorded_at": "2026-09-16T06:19:28.962157+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35063183977",
-            "run_attempt": "1",
-            "source_sha": "869d3dcee32a7567eb593e8bd4196583cb241f9d"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35064509412:1",
           "recorded_at": "2026-09-16T06:36:59.220166+00:00",
@@ -19597,6 +19583,21 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35131990220:1",
+          "recorded_at": "2026-09-16T18:07:16.078434+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35131990220",
+            "run_attempt": "1",
+            "source_sha": "842d98825a0bae759615d16c8febbe96c4f9bad1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -21752,6 +21753,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-09d4a54e27614149",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22559,6 +22568,20 @@
           "type": "research",
           "canonical_id": "arXiv:2609.15504",
           "title": "How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus"
+        },
+        {
+          "job_id": "job-09d4a54e27614149",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-9f909dd53a5f1acb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13161",
+          "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation"
         }
       ],
       "new_paper_ids": [
@@ -22735,7 +22758,9 @@
         "arXiv:2512.09427",
         "arXiv:2601.01310",
         "arXiv:2604.09613",
-        "arXiv:2609.06663"
+        "arXiv:2609.06663",
+        "arXiv:2504.11765",
+        "arXiv:2505.10259"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -22941,7 +22966,8 @@
         ".survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json",
         ".survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json",
         ".survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json",
-        ".survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json"
+        ".survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json",
+        ".survey/work-queue/results/20260917T0307JST-discovery-specialist-cross-dc-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -23018,8 +23044,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 635,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 637,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
