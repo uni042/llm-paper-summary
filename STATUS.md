@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:21:12 JST**
+> 自動生成: **2026-09-16 18:21:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -199,7 +199,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression / worker `scheduled-chat-paper-20260916T175945JST`
-  - claim: **09-16 18:19:30 JST** / heartbeat: **—** / lease expiry: **09-16 19:49:30 JST**
+  - claim: **09-16 18:21:16 JST** / heartbeat: **—** / lease expiry: **09-16 19:51:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-ad3541d28015a662.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**

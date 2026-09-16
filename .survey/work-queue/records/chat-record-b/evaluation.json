@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dab7c5e0828bb52428a05b18",
+  "attempt_id": "attempt-544050cfbce92eeb152f591c",
   "job_id": "job-research-ad3541d28015a662",
   "data": {
     "evaluation_summary": "MS-COCO画像・文ペアの照合課題で、CLIP ViT-B/32とMobileCLIP2-S0の512次元特徴を融合し、全方式で64次元潜在表現へ圧縮する。非圧縮、PCA、BlockPCA、LDA、AE、VAEと、EMMIのラベル不要型・タスク認識型を比較する。精度とサーバ推論はQuadro RTX 6000、エッジ側融合・圧縮はx86_64単一CPUスレッドで測定する。",
@@ -46,7 +46,7 @@
     "control_knobs": "圧縮方式、教師ラベル利用有無、符号器、潜在次元64、リンク帯域。"
   },
   "reservation": {
-    "claim_id": "claim-dab7c5e0828bb52428a05b18",
+    "claim_id": "claim-544050cfbce92eeb152f591c",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dab7c5e0828bb52428a05b18",
+  "attempt_id": "attempt-544050cfbce92eeb152f591c",
   "job_id": "job-research-ad3541d28015a662",
   "data": {
     "overview": "融合表現を2048次元から64次元へ縮小すると送信量は8192Bから256Bへ32分の1になる。タスク認識型EMMIはCLIPで98.08%、MobileCLIPで98.32%を達成し、非圧縮の97.92%と98.41%に対して差を0.16ポイント以内に保つ。0.1Mbpsの帯域制約では送信時間が655.4msから20.5msへ減り、圧縮追加費用は0.641msだけで、推定総遅延は約903msから269msへ短縮される。したがって低帯域では通信律速を計算律速へ移せるが、100Mbpsでは送信差が0.68ms程度まで縮まり、遅延面の利得は小さくなる。",
@@ -45,7 +45,7 @@
     "interpretation": "EMMIの価値は圧縮率だけでなく、モダリティ融合後の統一表現を通信境界にすることで、高容量サーバ推論器を維持しながら帯域律速条件だけを切り離して改善できる点にある。"
   },
   "reservation": {
-    "claim_id": "claim-dab7c5e0828bb52428a05b18",
+    "claim_id": "claim-544050cfbce92eeb152f591c",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }
