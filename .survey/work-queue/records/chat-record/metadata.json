@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-a2565d089349c3be98ca6b0e",
-  "job_id": "job-research-38c18cd4bb2728b9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a2565d089349c3be98ca6b0e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a2565d089349c3be98ca6b0e","job_id":"job-research-38c18cd4bb2728b9","data":{"canonical_id":"arXiv:2609.13285","arxiv_id":"2609.13285","doi":"10.48550/arXiv.2609.13285","arxiv_categories":{"primary":"cs.AR","cross_list":["cs.LG"]},"title":"Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction","summary":"Grouped Value Attention（GVA）は、グループ化クエリ注意（GQA）が各トークンでキーと値の両方を保存するため長文脈デコードのKVキャッシュ容量と読出し帯域が増える問題に対し、グループ化した値だけを永続保存し、各クエリヘッド固有の内容キーを値から線形写像で再構成する。推論時には固定写像をクエリ側へ吸収できるため内容キーを実体化せず、位置情報だけを小さな共有RoPEチャネルとして別保存する。評価構成ではGQA比で永続キャッシュスカラーを約45〜47%削減し、350Mモデルを30Bトークン学習した16次元位置チャネル版で5課題平均44.35%とGQAの44.36%にほぼ一致した。","list_summary":"値だけをKVキャッシュへ保存し、内容キーを値から再構成してクエリ側へ吸収することで、GQAに近い精度を保ちながら永続キャッシュを約45〜47%削減する注意機構。","authors":["Vishesh Tripathi","Abhay Kumar","Ramsha Khan"],"published":"2026-09-08","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"KVキャッシュ圧縮・注意機構","topics":["KVキャッシュ","GQA","キー再構成","メモリ帯域"],"importance":"KVのK側を保存せず値から厳密な線形変換で内容キーを得ることで、容量と読出し帯域を同時に狙う。","hardware_evaluation":"本稿は学習精度と理論キャッシュ量を中心に評価し、エンドツーエンド推論性能は未報告。","quality_effect":"16次元位置チャネル版は5課題平均44.35%でGQA 44.36%との差0.01ポイント。","source":"https://arxiv.org/abs/2609.13285","sources":["https://arxiv.org/abs/2609.13285","https://arxiv.org/html/2609.13285v2"],"code":null,"implementation":"専用デコードカーネルを開発済みだが推論性能評価中で、公開ソースは今後予定。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary-reference-section","references_total":19},"reservation":{"claim_id":"claim-a2565d089349c3be98ca6b0e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
