@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5067cd6b8db49986303c3586",
-  "job_id": "job-research-7b525e11834c9519",
+  "attempt_id": "attempt-0eb4936a46a9da87b23225fa",
+  "job_id": "job-research-3165425bd10baa45",
   "data": {
-    "hardware": "主評価はLlama-3-70BをNVIDIA A100 GPUで配信するフリートを対象とし、ケーススタディではQwen3-235B-A22BをAMD MI300Xで10,000 req/s配信する構成を投影する。",
-    "software": "vLLMの連続バッチ処理を対象とする。評価では自己完結型の離散事象シミュレータを用い、反復時間を固定作業量とactive sequence数に依存する一次モデルで近似する。",
-    "methodology": "Azure LLM Inference DatasetとLMSYS-Chat-1M由来の要求長分布を使い、Llama-3-70B/A100フリートについて従来の同一長文設定と二重プール経路制御を比較する。1,000 req/sで必要GPUインスタンス数、成功率、先取り・拒否、TTFT/TPOTを評価し、P99 TTFT 2秒以下・P99 TPOT 80ms以下のサービス水準を確認する。カテゴリ別bytes-per-token推定の収束と誤経路率、short budget閾値の感度も測定する。さらに10,000 req/sのQwen3-235B-A22B/MI300Xを費用モデルで投影する。",
-    "scope": "実機フリート全体を用いた大規模オンライン実験ではなく、公開トレースと一次的な反復時間モデルを用いた離散事象評価が中心である。主な定量評価はLlama-3-70B/A100に限定され、MI300Xの大規模値はケーススタディ投影である。"
+    "hardware": "4×Cambricon MLU370-X4アクセラレータを備えるノード。対象メモリはLPDDR5クラスのランダムアクセス制約メモリ。",
+    "software": "Cambricon-vLLM互換プロトタイプ上でDeepSeek-R1-Distill-Qwen-7Bを配信し、ODMAの予測器、動的バケット管理、Allocator/Memory Poolを統合する。",
+    "methodology": "AlpacaとGoogle-NQを用いて生成長予測精度を既存S3予測器と比較し、実サービングでは静的な最悪長事前割当を基準として装置メモリ利用率、requests per second（RPS）、tokens per second（TPS）を測る。動的バケットとlarge-bucket safeguardにより、予測誤差・重い裾を吸収しつつ連続KV配置を維持する効果を評価する。",
+    "scope": "評価はDeepSeek-R1-Distill-Qwen-7BとCambricon MLU370-X4を中心とし、HBM GPUや他のLPDDR系アクセラレータへの一般化、極端な分布ドリフト時の再分割コスト、大容量バケットへの移行コピーが頻発する条件は十分には網羅されない。"
   },
   "reservation": {
-    "claim_id": "claim-5067cd6b8db49986303c3586",
+    "claim_id": "claim-0eb4936a46a9da87b23225fa",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
