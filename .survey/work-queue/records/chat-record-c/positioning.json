@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-743db39c9d8329de077d7390","job_id":"job-research-c0e589d0a60cc7cf","data":{"limitations":"BaseSharedは独立した既存LoRAを利用できるが、計算重複を大幅に消すBaseLRSharedにはdown-projection Aを共有するmulti-LoRAの学習が必要で、任意の既存アダプタ集合へ無変更で適用できない。基盤キャッシュは役割間で完全一致ではなく高類似という経験的仮定で共有するため、役割差が基盤活性へ強く伝播するモデルや長い反復では誤差が蓄積し得る。主評価は8B級二モデル、三役割、ランク8、単一A6000で、より多い役割数、大規模モデル、テンソル並列・分散KVストアは未評価。キーは高類似として主に完全共有し、LoRAをkey射影へ広く適用する構成では別の精度・効率トレードオフが生じる。","differences":"FullSharedは役割に関係なくKV全体を一つ使うため最速だがLoRA固有情報を失う。DroidSpeakは同じ基盤を持つ別モデル間で重要層だけKVを再計算するが、再計算層へ到達するための隠れ状態処理が残る。KVFlow/KVLink/KVCommは役割ごとの接頭辞差による位置ずれを補正して重複文脈を再利用するが、同一接頭辞のmulti-LoRA設定では全共有に近い。LRAgentは位置や敏感層ではなく、LoRAの代数的な低ランク分解そのものを共有単位に使い、基盤成分と役割成分を別々に保存する。","implementation_status":"公式リポジトリが公開され、主結果の学習・評価・遅延測定を再現するファイルと手順も提供されている。Flash-LoRA-AttentionはFlashAttentionのブロック計算へ共有基盤値と低ランク値の二経路を組み込み、全次元LRキャッシュを生成しない。BaseSharedとBaseLRSharedの両方式を実GPUで評価済み。","research_positioning":"複数エージェント間KV共有の中でも、同一基盤モデルへ役割別LoRAを載せる運用に特化した構造利用型の方式である。ForkKVのような会話分岐共有や、動的検索KVの近似再利用とは異なり、同じ履歴を異なるアダプタで読む際のモデル差を低ランク成分へ隔離する。階層メモリの観点では、巨大な共有基盤KVを一つの共通オブジェクトとしてGPU/CPU/SSD間で管理し、役割別には小さいLRキャッシュだけを別管理できるため、エージェント数が増えるほど保存階層の重複削減効果が大きくなる可能性がある。"},"reservation":{"claim_id":"claim-743db39c9d8329de077d7390","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ba98832b682051fbcdfa1c88",
+  "job_id": "job-research-d56f46109a6995f4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba98832b682051fbcdfa1c88",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

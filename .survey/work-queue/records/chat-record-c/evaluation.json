@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-743db39c9d8329de077d7390","job_id":"job-research-c0e589d0a60cc7cf","data":{"hardware":"効率評価は単一NVIDIA A6000 48GB。LLaMA-3.1-8B-InstructとMinistral-8B-Instructを使用し、外部取得量1K〜64Kから総系列長約1.9K〜66.4Kのトレースを構成する。","software":"AutoAct型の三役割構成でplan、action、reflectエージェントをLoRA微調整する。主設定はquery/value射影へランク8 LoRAを適用し、shared-A版では役割間でdown-projectionを共有する。比較対象は非共有KV、全KV共有、DroidSpeakの重要層33%再計算。","methodology":"HotpotQA 2.5KとScienceQA 2.0Kの分割およびAutoAct公開軌跡で役割別LoRAを学習し、難易度別に各20反復のマルチホップ推論を評価する。精度はHotpotQAとScienceQAの平均正解率を非共有基準と比較する。効率は方式ごとの精度差によるエージェント反復数の違いを除くため、全方式へ同一の合成系列長トレースを与える。システムスループットを総処理系列長/エンドツーエンド遅延、TTFTを各エージェント段階のプリフィル遅延合計として測る。Flash-LoRA-Attention有無、文脈重複率、LoRA適用射影、ランク、メモリ量もアブレーションする。","scope":"主実験は8B級二モデル、三役割、ランク8、単一GPUに限定される。BaseLRSharedの計算削減にはshared-A multi-LoRAの学習・採用が必要で、既存の役割別A/Bをそのまま使う標準multi-LoRAではBaseSharedまでが直接適用可能。効率トレースは方式間比較を制御するための合成トレースであり、実HotpotQA上の遅延は付録で別途扱う。"},"reservation":{"claim_id":"claim-743db39c9d8329de077d7390","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-ba98832b682051fbcdfa1c88",
+  "job_id": "job-research-d56f46109a6995f4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba98832b682051fbcdfa1c88",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-743db39c9d8329de077d7390","job_id":"job-research-c0e589d0a60cc7cf","data":{"overview":"基盤キャッシュと低ランク役割成分を分けることで、単純な全KV共有より役割固有精度を保ちつつ、特にBaseLRSharedは全共有に近い速度へ到達する。LLaMA-3.1-8BのHotpotQA平均では非共有38.88%に対しBaseShared 38.60%、BaseLRShared 37.92%で、FullShared 36.40%やDroidSpeak 36.77%より差が小さい。66.4Kトークンでは非共有がメモリ不足になる一方、BaseLRSharedはLLaMAで1790.6 token/s、TTFT 23.35秒を維持し、FullSharedの1826.5 token/s、23.28秒へ非常に近い。","key_results":[{"metric":"ベンチマーク平均精度低下","value":"BaseShared 最大約0.7ポイント、BaseLRShared 最大約1.5ポイント","baseline":"非共有KV。FullSharedは最大5.3ポイント、DroidSpeakは最大2.6ポイント低下","condition":"LLaMA-3.1-8B / Ministral-8B、HotpotQA・ScienceQA","interpretation":"基盤成分だけを共有しLoRA由来成分を残すことで、完全共有が消してしまう役割固有情報を保持できる。"},{"metric":"システムスループット","value":"BaseShared 最大1.42倍、BaseLRShared 最大2.46倍。Flash-LoRA-Attention単独寄与は最大1.24倍/1.35倍","baseline":"非共有KV","condition":"A6000、総系列長約2K〜66Kの制御トレース","interpretation":"BaseLRSharedは既処理履歴の再プリフィルを省き、低ランク全次元化も避けるため全KV共有の速度上限へ近づく。"},{"metric":"TTFT短縮","value":"BaseShared 最大1.63倍、BaseLRShared 最大4.44倍","baseline":"非共有KV。DroidSpeak最大1.56倍","condition":"マルチホップ各段階のプリフィル遅延合計","interpretation":"エージェント切替ごとの過去履歴再計算を消せるBaseLRSharedでは、軌跡が長いほどプリフィル重複削減が大きい。"},{"metric":"長文脈メモリ/実行可能性","value":"66.4KでBaseLRSharedはLLaMA 1790.6 token/s、Ministral 1757.0 token/s。非共有はいずれもOOM","baseline":"Non-Shared","condition":"単一A6000 48GB","interpretation":"大きな基盤KVを役割数分複製せず低ランク差分だけにするため、非共有では載らない長い軌跡まで保持できる。"}],"negative_results":"BaseSharedは主にメモリ削減方式で、役割切替時に未処理過去文脈のLRキャッシュを作るため隠れ状態計算が残る。そのため短い系列では非共有よりわずかに低いスループットになる条件があり、長文脈でもDroidSpeakと同程度の速度に留まる。BaseLRSharedはshared-A学習を前提とし、標準multi-LoRAの独立Aをそのまま共有できない。精度も非共有と完全一致せず、HotpotQAではLLaMAで約0.97ポイント、Ministralで約0.62ポイント平均低下する。","interpretation":"multi-LoRAでは役割差の大半が低ランクアダプタ側にあり、基盤値は同じ文脈なら非常に近い。この構造に合わせて共有境界を置けば、大容量基盤KVを一つにしながら小さい役割差を保持できる。shared-Aでは低ランク中間まで共通化できるため、役割交代のたびに履歴全体を前向き計算する必要がなくなる。Flash-LoRA-Attentionは低ランク保存の利点を、展開計算で失わないための実装上の要点である。","quality_impact":"完全共有より精度保持が良く、BaseSharedは非共有に非常に近い。BaseLRSharedはさらに計算を削る代わりにわずかな追加精度差があるが、既存共有方式より小さい。"},"reservation":{"claim_id":"claim-743db39c9d8329de077d7390","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-ba98832b682051fbcdfa1c88",
+  "job_id": "job-research-d56f46109a6995f4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba98832b682051fbcdfa1c88",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
