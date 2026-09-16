@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:41:29 JST**
+> 自動生成: **2026-09-17 03:02:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **19** |
 | 未claim Research job | **18** |
 | 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 02:36:39 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-17 02:36:39 JST（26分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **8** | **8** | **0** | **0** | **0** | **4** |
-| 合計 | **33** | **16** | **12** | **4** | **1** | **0** | **4** |
+| Discovery | **14** | **1** | **0** | **1** | **0** | **0** | **4** |
+| 合計 | **33** | **9** | **4** | **5** | **1** | **0** | **4** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -185,41 +185,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 02:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **4件**
-- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload / KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計 / disk-backed KV cache・RAG multi-instance・cloud offload配置 / SSD-backed prefix/KV cache・hierarchical memory / MoE expert offload・speculative prefetch・CPU-light KV / GPU memory virtualization・CXL shared KV・disaggregated transfer / multi-GPU KV migration・heterogeneous serving scheduling
-- round `specialist-offload-specdecode-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
-  - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0205JST-discovery-specialist-offload-specdecode-1.json` (`ok=true`)
-- round `specialist-cxl-ssd-2` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json`
-  - 探索軸: CXL階層メモリ・SSD/NVMe・MoE expert offload
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0208JST-discovery-specialist-cxl-ssd-2.json` (`ok=true`)
-- round `specialist-kv-hardware-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T0211JST-discovery-specialist-kv-hardware-3.json`
-  - 探索軸: KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0211JST-discovery-specialist-kv-hardware-3.json` (`ok=true`)
-- round `specialist-disk-kv-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260917T0214JST-discovery-specialist-disk-kv-4.json`
-  - 探索軸: disk-backed KV cache・RAG multi-instance・cloud offload配置
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0214JST-discovery-specialist-disk-kv-4.json` (`ok=true`)
-- round `specialist-storage-prefix-5` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260917T0217JST-discovery-specialist-storage-prefix-5.json`
-  - 探索軸: SSD-backed prefix/KV cache・hierarchical memory
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0217JST-discovery-specialist-storage-prefix-5.json` (`ok=true`)
-- round `specialist-moe-offload-6` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260917T0220JST-discovery-specialist-moe-offload-6.json`
-  - 探索軸: MoE expert offload・speculative prefetch・CPU-light KV
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0220JST-discovery-specialist-moe-offload-6.json` (`ok=true`)
-- round `specialist-cxl-transfer-7` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260917T0223JST-discovery-specialist-cxl-transfer-7.json`
-  - 探索軸: GPU memory virtualization・CXL shared KV・disaggregated transfer
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0223JST-discovery-specialist-cxl-transfer-7.json` (`ok=true`)
-- round `specialist-migration-scheduling-8` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json`
-  - 探索軸: multi-GPU KV migration・heterogeneous serving scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0226JST-discovery-specialist-migration-scheduling-8.json` (`ok=true`)
+- 最新観測run: **2026-09-17 03:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **4件**
+- 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
+- round `specialist-recent-inference-1` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
+  - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -276,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **393** |
+| 成功result未照合のimmutable submission | **394** |
 | └ Research | **266** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 
