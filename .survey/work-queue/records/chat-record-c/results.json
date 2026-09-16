@@ -1,36 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a5f49ff836ff943440eed67d",
-  "job_id": "job-research-1d922bbcf8bbfed4",
-  "data": {
-    "key_results": [
-      "64基のGB300、64K/1M文脈のシミュレーションで、DeepSeek V4 FlashのピークデコードスループットはGLM-5.3比9.6倍/16.7倍、Kimi K3比25.2倍/39.5倍となった。DeepSeek V4 ProはGLM-5.3比3.5倍/5.3倍、Kimi K3比9.3倍/12.4倍だった。",
-      "64K文脈でのデコード1トークン当たりメモリ転送量はDeepSeek V4 Flash 0.035GiB、DeepSeek V4 Pro 0.079GiB、GLM-5.3 0.419GiB、Kimi K3 1.237GiB。1M文脈では0.450、0.996、5.423、16.469GiBとなり、KVキャッシュの小ささが大バッチ化と重み転送の償却に効く。",
-      "DeepSeek V4 Proのデコード64K、256 B300、バッチ4096、EP=16、PP=16では、層数だけで均等化したパイプライン分割を埋め込み層・出力ヘッドの費用を考慮して再分割し、スループットと対話性を20.3%改善した。",
-      "DeepSeek V4 Proのプリフィル8K、8 B300、バッチ512では、ルーティング専門家をDP×CPのトークン断片に沿って分割し、Gather–Scatterの局所データ移動を削減することでスループットと対話性を6.23%改善した。",
-      "DeepSeek V4 Proのプリフィル1M、16 B300、バッチ1、CP=EP=16では、選択専門家を2ノードへ複製してルーティング通信をInfiniBandからノード内NVLinkへ移し、追加の重み読出しとHBM消費を許容する代わりに通信ボトルネックを減らし、両指標を50.1%改善した。"
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a5f49ff836ff943440eed67d","job_id":"job-research-1d922bbcf8bbfed4",
+  "data":{
+    "overview":"RoofLangの解析では、DeepSeek V4系列は総パラメータ数が小さいから速いのではなく、1要求当たりのKVキャッシュが小さいため大きなバッチをHBMへ収容でき、重み読出しを多数要求で償却できることがピークデコード性能差の主要因になった。64基GB300のシミュレーションでは他の代表モデルに対して3.5〜39.5倍のピークデコードスループット差が現れた。さらに持続的AI設計ループは、同じDeepSeek V4 Proでも負荷条件ごとに異なるボトルネックを選び、パイプライン段再分割、MoE専門家分割、ノード内専門家複製によってスループットと対話性を6.23〜50.1%同時改善した。実務上の意味は、推論設計を固定スタックのプロファイルだけで決めず、KV容量、並列化、通信トポロジーをアーキテクチャ探索段階で共同評価する価値があるという点にある。",
+    "key_results":[
+      {"metric":"ピークデコードスループット比","value":"3.5〜39.5倍","baseline":"GLM-5.3またはKimi K3","condition":"64 GB300、64K/1M文脈、DeepSeek V4 Flash/Proとの比較シミュレーション","interpretation":"総パラメータ数よりKVキャッシュ量とバッチ収容力がデコードのメモリ律速性能を強く左右する。"},
+      {"metric":"64K文脈の1トークン当たりメモリ転送量","value":"Flash 0.035GiB、Pro 0.079GiB、GLM-5.3 0.419GiB、Kimi K3 1.237GiB","baseline":"4モデル間比較","condition":"64 GB300、ピークデコード構成","interpretation":"小さいKVキャッシュは大バッチを許し、モデル重み転送をより多くの要求で償却できる。"},
+      {"metric":"パイプライン段再分割の改善","value":"20.3%","baseline":"層数中心の均等分割","condition":"DeepSeek V4 Pro decode 64K、256 B300、batch 4096、EP=16、PP=16","interpretation":"埋め込み層と出力ヘッドを含む実コストで段を分けるとクリティカル段を短縮できる。"},
+      {"metric":"DP×CP専門家分割の改善","value":"6.23%","baseline":"基準MoE配置","condition":"DeepSeek V4 Pro prefill 8K、8 B300、batch 512","interpretation":"十分なトークン数がある条件では追加重み読出しを償却しつつ局所Gather–Scatter転送を除去できる。"},
+      {"metric":"ノード内専門家複製の改善","value":"50.1%","baseline":"EP=16のノード間ルーティング","condition":"DeepSeek V4 Pro prefill 1M、16 B300、batch 1、CP=EP=16","interpretation":"通信律速条件では重み複製とHBM消費を受け入れてInfiniBand通信をNVLinkへ置換する利益が大きい。"}
     ],
-    "interpretation": "論文の中心的な性能知見は、総パラメータ数だけではデコード性能を説明できず、各要求が保持・読出しするKVキャッシュ量が最大バッチサイズと1トークン当たりメモリ転送を強く決めるという点にある。またAI探索で得た三つの改善は、固定の一手法ではなく、パイプラインのクリティカル段、ローカルなGather–Scatter、ノード間MoE通信という条件依存のボトルネックをシミュレーショントレースから特定し、異なる変換を選んだ結果である。",
-    "limitations": [
-      "結果は解析・離散事象シミュレーションであり実機エンドツーエンド速度ではない",
-      "理想的MoE負荷均衡と計算通信の完全重畳を仮定",
-      "KVキャッシュ追記、投機的デコード、Kimi K3マルチモーダル部を省略",
-      "初期グラフと意味保存規則の正しさは人手検証に依存",
-      "最大規模のシミュレーションは数時間・数百GBを要し探索反復を制限する"
-    ],
-    "implementation_status": "RoofLangコードは公開済み。論文のAI自律設計実験も公開実装を用いるが、発見構成の実機サービング実装・実測検証は本論文の評価範囲外。",
-    "evidence": [
-      "§3.1.2",
-      "Tables 7–8",
-      "§3.2.2",
-      "§5"
-    ]
+    "negative_results":"全ての変換が常に有効ではない。DP×CP専門家分割は追加の専門家重み読出しを生むため、各複製が少なくとも1024個のルーティング済みトークンを処理しEPが8以下の条件に限定された。ノード内専門家複製もHBM容量と重み読出しを増やすため、ノード間通信が支配的な場合だけ有利である。大きなスケールアップネットワーク領域も、長文脈デコードではKVキャッシュ通信が支配的になるためMoEルーティング高速化の寄与が小さくなる。したがって単一の変換を全負荷へ適用するのではなく、評価トレースから律速資源を判定する必要がある。",
+    "interpretation":"性能差とAI発見構成はいずれも、演算量だけでなくKV容量、メモリ帯域、通信範囲、段ごとのクリティカルパスを共同評価したことで得られている。RoofLangの価値は特定の6.23〜50.1%改善策そのものより、条件ごとに異なる設計変更を同じ意味保存・評価契約で探索できる点にある。",
+    "quality_impact":"RoofLangの探索操作は意味保存を前提とし、モデル品質を近似して速度と交換する方式ではないため、設計変更自体は原則として無損失である。ただし初期計算グラフが実モデルを正確に表していることは外部検証に依存し、評価モデルではKVキャッシュ追記、投機的デコード、Kimi K3のマルチモーダル部分を省略しているため、性能予測の忠実度には近似がある。",
+    "implementation_status":"RoofLangコードは公開済み。AI自律設計実験も公開実装を用いるが、発見構成の実機サービング実装・実測検証は本論文の評価範囲外。"
   },
-  "reservation": {
-    "claim_id": "claim-a5f49ff836ff943440eed67d",
-    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation":{"claim_id":"claim-a5f49ff836ff943440eed67d","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}
 }
