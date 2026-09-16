@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:22:45 JST**
+> 自動生成: **2026-09-16 14:23:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **44** |
 | 未claim Research job | **42** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:20:59 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-16 14:20:59 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **28** | **11** | **5** | **6** | **3** | **1** | — |
+| Research | **28** | **12** | **5** | **7** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **29** | **16** | **5** | **11** | **3** | **1** | **24** |
+| 合計 | **29** | **17** | **5** | **12** | **3** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,7 +115,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **11件** / 検証済み成功: **5件** / 未完了・未検証: **6件**
+- immutable submission: **12件** / 検証済み成功: **5件** / 未完了・未検証: **7件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json` (job `job-research-d743b2b5468a28c8`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0a8f3b62f80c03f536fe81a5.json` (job `job-research-4714939abf3ccf8f`)
 - **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
@@ -141,7 +142,6 @@
   - submission: `.survey/work-queue/submissions/research/attempt-ad4afba2a1cd0b175dc4bc13.json`
   - paper: `papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-bf1a77a940ea17f7048afe0d.json` (job `job-research-b8521dbc1f501e0d`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c0e304b27be71a492caece36.json` (job `job-research-73e15ccbef3e6d6d`)
 
 #### Audit (:30)
 
@@ -236,8 +236,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **288** |
-| └ Research | **174** |
+| 成功result未照合のimmutable submission | **289** |
+| └ Research | **175** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
