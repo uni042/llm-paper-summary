@@ -1,1 +1,42 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9bd72451731af90ab90c3e14","job_id":"job-research-6252d370adc380b9","data":{"evaluation_summary":"提案するblock placement、cache allocation、Join-the-Fastest-Free-Serverの組合せを、model-driven simulationと実際のdistributed LLM serving systemで既存resource-allocation方式と比較する。理論上のsteady-state response-time boundがsimulationと整合するかを確認し、元の仮定から外れたreal demandでもmean response timeが改善するかを測る。主要結果として既存方式に対し平均応答時間を63〜77%削減する。","scope":"pipeline-parallel、memory-bound、中央orchestrator、各requestのstatic maximum-sequence KV allocation、開始後のnon-preemptive/non-migratory executionを主仮定とする。dynamic KV growth、tensor parallel中心の密結合cluster、分散orchestratorは主要モデル外である。","hardware":["distributed GPU servers in real LLM serving experiment"],"software":["pipeline-parallel LLM serving prototype","central orchestrator","server-chain composition algorithms"],"models":["large transformer / LLM serving workloads"],"datasets":[],"workload":"dynamically arriving inference requests processed by pipeline server chains; model-driven and real-demand traces/experiments。","baselines":["state-of-the-art distributed LLM resource allocation algorithms","heuristic block placement/request scheduling approaches"],"metrics":["mean response time","steady-state response-time bounds","queue stability","service capacity"],"methodology":"まず抽象queueing modelでblock placement/cache allocationの性能boundを導出し、model-driven simulationで理論予測を検証する。続いてreal distributed LLM serving systemへ配置・capacity・dispatchを適用し、仮定から外れる実需要でもbaselineとのresponse-time差を測る。","predictor_accuracy":"予測器は使用しない。理論boundと実測response timeの整合性を評価する。","control_knobs":"target maximum load safety margin、block placement、chain cache capacities、fastest-free dispatch。"},"reservation":{"claim_id":"claim-9bd72451731af90ab90c3e14","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-201fb89bc61573cc411909b4",
+  "job_id": "job-research-6252d370adc380b9",
+  "data": {
+    "evaluation_summary": "提案するblock placement、cache allocation、Join-the-Fastest-Free-Serverの組合せを、model-driven simulationと実際のdistributed LLM serving systemで既存resource-allocation方式と比較する。理論上のsteady-state response-time boundがsimulationと整合するかを確認し、元の仮定から外れたreal demandでもmean response timeが改善するかを測る。主要結果として既存方式に対し平均応答時間を63〜77%削減する。",
+    "scope": "pipeline-parallel、memory-bound、中央orchestrator、各requestのstatic maximum-sequence KV allocation、開始後のnon-preemptive/non-migratory executionを主仮定とする。dynamic KV growth、tensor parallel中心の密結合cluster、分散orchestratorは主要モデル外である。",
+    "hardware": [
+      "distributed GPU servers in real LLM serving experiment"
+    ],
+    "software": [
+      "pipeline-parallel LLM serving prototype",
+      "central orchestrator",
+      "server-chain composition algorithms"
+    ],
+    "models": [
+      "large transformer / LLM serving workloads"
+    ],
+    "datasets": [],
+    "workload": "dynamically arriving inference requests processed by pipeline server chains; model-driven and real-demand traces/experiments。",
+    "baselines": [
+      "state-of-the-art distributed LLM resource allocation algorithms",
+      "heuristic block placement/request scheduling approaches"
+    ],
+    "metrics": [
+      "mean response time",
+      "steady-state response-time bounds",
+      "queue stability",
+      "service capacity"
+    ],
+    "methodology": "まず抽象queueing modelでblock placement/cache allocationの性能boundを導出し、model-driven simulationで理論予測を検証する。続いてreal distributed LLM serving systemへ配置・capacity・dispatchを適用し、仮定から外れる実需要でもbaselineとのresponse-time差を測る。",
+    "predictor_accuracy": "予測器は使用しない。理論boundと実測response timeの整合性を評価する。",
+    "control_knobs": "target maximum load safety margin、block placement、chain cache capacities、fastest-free dispatch。"
+  },
+  "reservation": {
+    "claim_id": "claim-201fb89bc61573cc411909b4",
+    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

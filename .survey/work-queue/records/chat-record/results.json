@@ -1,1 +1,45 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9bd72451731af90ab90c3e14","job_id":"job-research-6252d370adc380b9","data":{"overview":"server-chain compositionをblock placement、KV cache capacity、online load balancingへ分解した提案方式は、model-driven simulationとreal distributed LLM servingの双方で既存resource-allocation方式より応答時間を大きく短縮した。主要な実システム評価ではmean response timeを63〜77%削減し、元のqueueing modelが置く理想化仮定からreal demandが外れても改善が残った。理論面ではblock placementとcache allocationがNP-hardであることを示す一方、重要な特殊caseで最適解を与え、一般caseではsteady-state mean response timeのupper/lower boundsを導出する。実務上はモデルblockを増やしてchainを増やすだけではKV残余memoryが減るため、placementとrequest concurrencyを同時に決める必要があることを定量化する。","key_results":[{"metric":"mean response time reduction","value":"63-77% reduction","baseline":"state-of-the-art distributed LLM resource-allocation solutions","condition":"model-driven simulation and real LLM serving under demands deviating from modeling assumptions","interpretation":"モデル配置とKV同時実行容量を別々にheuristic設定するより、同じGPU memory budget内で共同設計した論理server chainsの方が待ち時間と処理時間を大幅に減らす。"},{"metric":"computational complexity","value":"block placement and cache allocation are NP-hard","baseline":"exact global optimization","condition":"general server-chain composition problem","interpretation":"単純な最適化をrequest arrivalごとに解くことは現実的でなく、offline compositionとonline dispatchの二時間尺度分離が必要になる。"},{"metric":"analytical guarantee","value":"explicit upper/lower bounds on steady-state mean response time; optimality in important special cases","baseline":"heuristic-only allocation","condition":"Join-the-Fastest-Free-Server load balancing","interpretation":"経験的配置だけでなく、target loadなど設計parameterを理論boundから調整できる。"}],"negative_results":["dynamic KV allocationやrequest途中のcache growthは主モデルではstatic maximum-sequence allocationへ単純化される。","request開始後のmigration/preemptionを許さず、KV移送が高価という現実的だが固定的な仮定を置く。","中央orchestratorを前提とし、分散制御は今後の課題である。"],"quality_impact":"生成計算の内容は変更せず、どのGPU chainで処理するかと何件を同時収容するかを変えるため、モデル品質への近似誤差は導入しない。改善対象はqueue waitingとservice response timeである。","interpretation":"大規模モデルの分散servingでは、GPU memoryが重みとKVの双方に消費されるため、model placementを最大化することとrequest concurrencyを最大化することが同じresource上で競合する。本研究はこの競合をchain capacityへ明示的に変換し、offlineで論理server群をcomposeしてからonline load balancingへ渡す。63〜77%の応答時間削減は、schedulerだけでなくschedulerが選べるserver-chain集合そのものをmemory-awareに設計する価値を示す。"},"reservation":{"claim_id":"claim-9bd72451731af90ab90c3e14","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-201fb89bc61573cc411909b4",
+  "job_id": "job-research-6252d370adc380b9",
+  "data": {
+    "overview": "server-chain compositionをblock placement、KV cache capacity、online load balancingへ分解した提案方式は、model-driven simulationとreal distributed LLM servingの双方で既存resource-allocation方式より応答時間を大きく短縮した。主要な実システム評価ではmean response timeを63〜77%削減し、元のqueueing modelが置く理想化仮定からreal demandが外れても改善が残った。理論面ではblock placementとcache allocationがNP-hardであることを示す一方、重要な特殊caseで最適解を与え、一般caseではsteady-state mean response timeのupper/lower boundsを導出する。実務上はモデルblockを増やしてchainを増やすだけではKV残余memoryが減るため、placementとrequest concurrencyを同時に決める必要があることを定量化する。",
+    "key_results": [
+      {
+        "metric": "mean response time reduction",
+        "value": "63-77% reduction",
+        "baseline": "state-of-the-art distributed LLM resource-allocation solutions",
+        "condition": "model-driven simulation and real LLM serving under demands deviating from modeling assumptions",
+        "interpretation": "モデル配置とKV同時実行容量を別々にheuristic設定するより、同じGPU memory budget内で共同設計した論理server chainsの方が待ち時間と処理時間を大幅に減らす。"
+      },
+      {
+        "metric": "computational complexity",
+        "value": "block placement and cache allocation are NP-hard",
+        "baseline": "exact global optimization",
+        "condition": "general server-chain composition problem",
+        "interpretation": "単純な最適化をrequest arrivalごとに解くことは現実的でなく、offline compositionとonline dispatchの二時間尺度分離が必要になる。"
+      },
+      {
+        "metric": "analytical guarantee",
+        "value": "explicit upper/lower bounds on steady-state mean response time; optimality in important special cases",
+        "baseline": "heuristic-only allocation",
+        "condition": "Join-the-Fastest-Free-Server load balancing",
+        "interpretation": "経験的配置だけでなく、target loadなど設計parameterを理論boundから調整できる。"
+      }
+    ],
+    "negative_results": [
+      "dynamic KV allocationやrequest途中のcache growthは主モデルではstatic maximum-sequence allocationへ単純化される。",
+      "request開始後のmigration/preemptionを許さず、KV移送が高価という現実的だが固定的な仮定を置く。",
+      "中央orchestratorを前提とし、分散制御は今後の課題である。"
+    ],
+    "quality_impact": "生成計算の内容は変更せず、どのGPU chainで処理するかと何件を同時収容するかを変えるため、モデル品質への近似誤差は導入しない。改善対象はqueue waitingとservice response timeである。",
+    "interpretation": "大規模モデルの分散servingでは、GPU memoryが重みとKVの双方に消費されるため、model placementを最大化することとrequest concurrencyを最大化することが同じresource上で競合する。本研究はこの競合をchain capacityへ明示的に変換し、offlineで論理server群をcomposeしてからonline load balancingへ渡す。63〜77%の応答時間削減は、schedulerだけでなくschedulerが選べるserver-chain集合そのものをmemory-awareに設計する価値を示す。"
+  },
+  "reservation": {
+    "claim_id": "claim-201fb89bc61573cc411909b4",
+    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:19:24 JST**
+> 自動生成: **2026-09-16 17:19:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **27** |
 | 未claim Research job | **26** |
 | 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-16 17:15:27 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-16 17:15:27 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -198,7 +198,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
-  - claim: **09-16 17:16:06 JST** / heartbeat: **—** / lease expiry: **09-16 18:46:06 JST**
+  - claim: **09-16 17:19:39 JST** / heartbeat: **—** / lease expiry: **09-16 18:49:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
 
 #### Audit
