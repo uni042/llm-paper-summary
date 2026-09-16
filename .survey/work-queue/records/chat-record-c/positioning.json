@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ba98832b682051fbcdfa1c88","job_id":"job-research-d56f46109a6995f4","data":{"limitations":"承認待ち時間は実人間トレースではなく平均30分へ揃えた合成分布で、承認結果もτ²-benchの模擬ユーザーに基づく。実運用で短待ち・長待ちの混合比や到着率が変化すると、校正で選んだhost-retain/cpu_ttlの優劣も変わるため定期再校正が必要になる。負荷入力λも実験では設定値を使用しており、本番ではオンライン推定が必要。MORIは公開実装がなく方策移植、Continuumは公開forkに論文の停止時間予測器がないため、完全な原システム同士の比較ではない。主モデルもLlama-3.1-70B一系統である。","differences":"MORIやContinuumは主に秒単位のツール呼び出し停止を扱い、停止時間予測、アイドル度、ワークフロー位置など要求単位信号を使ってKV保持・オフロードを判断する。本方式は分〜時間の人間承認では復帰遅延の相対重要度が下がることに着目し、要求単位の待ち予測ではなくHBM/DRAM容量が能動サービングから奪うGPU機会費用を中心にする。InferCeptなどの中断支援とも異なり、単なる復帰機構ではなく、有限ホスト容量下でいつDRAMコピー自体を捨てるかまで負荷から価格付けする。","implementation_status":"vLLM上でライブサービング可能な制御器として評価され、HBM residency計測用パッチ、CPUオフロード、cpu_ttl方策、再プリフィル経路を実装している。プラットフォーム係数は実測から校正し、別ハードウェアでも測定手順を再実行できる。論文本文から独立した公式コード公開は確認できなかった。","research_positioning":"階層メモリ・オフロード研究をエージェントの長時間休止へ直接拡張した仕事で、GPU→CPU→破棄/再計算を単なる容量階層ではなく時間と負荷を含む保持階層として扱う。特にSSD/NVMeを追加する場合も、各階層の毎秒保持機会費と復帰費を同じGPU秒へ換算すれば、DRAMと破棄の間へSSD層を追加する一般化が考えられる。長時間停止では帯域だけでなく『保持し続ける資源の機会費用』が支配的になる点が、通常の短時間KVオフロードと異なる。"},"reservation":{"claim_id":"claim-ba98832b682051fbcdfa1c88","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a296cabbe5bdb6189545e086",
+  "job_id": "job-research-16a80a40c011c783",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a296cabbe5bdb6189545e086",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

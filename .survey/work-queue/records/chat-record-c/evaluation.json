@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ba98832b682051fbcdfa1c88","job_id":"job-research-d56f46109a6995f4","data":{"hardware":"主ライブ測定はLlama-3.1-70B BF16、テンソル並列4、4×H100 NVL、ホストメモリ375〜380GB。HBM保持費・復帰費・再計算費の横断校正はH100 NVL、A100 SXM、L40Sでも実施する。","software":"vLLMを基盤に、停止KVの強制HBM residencyを測るvictim-exclusion計器、CPUオフロード、負荷依存cpu_ttl制御を実装する。比較は無改造vLLM、vLLM host offload、MORI方策のvLLM移植、Continuum公開fork。","methodology":"τ²-benchのretail/airline 2624軌跡から最初のWRITEツール直前で停止する2161承認ゲート文脈を抽出する。中央値8.4Kトークンのうち共有接頭辞約5.4Kは接頭辞キャッシュで再利用し、私有接尾辞約3Kを停止KVとして扱う。HBM residency特性では停止文脈25〜72個、背景3 req/sを掃引し、別の飽和実験では48能動クライアントで強制保持によるgoodput低下を測る。エンドツーエンドでは平均1800秒に揃えた対数正規、指数、短待ち指数+長待ち対数正規混合の三待ち分布を使い、ホスト容量が効く2λcritで同一トレースを各方式へ与える。制御器の枝選択には本番と分離した校正標本を使う。広い負荷0.5〜3λcritは測定係数による4000要求Poisson再生でも評価する。","scope":"承認結果自体はLLM模擬、待ち時間は合成分布で、実運用の人間承認トレースではない。主モデルはLlama-3.1-70B一系統。MORIはネイティブ実装ではなく方策移植、Continuum公開forkは論文の停止時間予測器を含まないため完全な原方式比較ではない。実運用では到着率推定と待ち分布変化に応じた定期再校正が必要。"},"reservation":{"claim_id":"claim-ba98832b682051fbcdfa1c88","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-a296cabbe5bdb6189545e086",
+  "job_id": "job-research-16a80a40c011c783",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a296cabbe5bdb6189545e086",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

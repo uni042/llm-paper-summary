@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ba98832b682051fbcdfa1c88","job_id":"job-research-d56f46109a6995f4","data":{"canonical_id":"arXiv:2608.30830","arxiv_id":"2608.30830","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.OS","cross_list":[]},"title":"Adaptive KV Retention for LLM Agents at Human-Approval Timescales","summary":"人間の承認待ちで数十分〜数時間停止するLLMエージェントでは、停止中のKVキャッシュをGPUに残せば復帰は速いが、生成していない要求がHBMを占有して他の能動要求の処理能力を奪う。逆に破棄すれば容量は戻るが、承認後に私有文脈を再プリフィルする必要がある。本論文はHBM保持、CPU DRAM退避、破棄後再計算を、能動サービング機会を何GPU秒失うかという共通費用へ換算する。GPU保持費、DRAM復帰費、再計算費を実機で校正し、ホストメモリが混雑した場合は到着率からDRAM保持価格と破棄期限を導く。個々の承認待ち時間を予測せず、校正用待ち標本から無期限DRAM保持か負荷依存期限付き保持かを選ぶ。","list_summary":"人間承認で長時間停止するエージェントのKVをHBM・CPU DRAM・破棄の三段階で管理し、各選択をGPU機会費用へ換算して負荷に応じた保持期限を決める。","authors":["Minseo Choi","Ananya Joshi"],"authors_affiliations":"Johns Hopkins University","published":"2026-08-31","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint v1","lineage":"agent serving / KV cache retention / hierarchical memory / suspended-request scheduling","topics":["KVキャッシュ保持","CPUオフロード","エージェントサービング","人間承認","機会費用"],"importance":"秒単位ツール待ちではなく分〜時間単位の人間承認を対象に、保持率最大化ではなく能動要求の処理能力と復帰費を同じGPU時間尺度で最適化する。","hardware_evaluation":"主実測はLlama-3.1-70B BF16、TP4、4×H100 NVL、vLLM、ホストメモリ375〜380GB。校正はH100 NVL、A100 SXM、L40Sでも横断確認。","quality_effect":"モデル出力やKV内容を近似しない保持・退避方策なので、保持状態が同じなら生成品質は不変。破棄時は共有接頭辞を再利用し私有接尾辞を再計算する。","source":"https://arxiv.org/abs/2608.30830","sources":["https://arxiv.org/abs/2608.30830","https://arxiv.org/html/2608.30830"],"code":null,"implementation":"vLLM上でHBM residency測定用victim-exclusionパッチ、ホスト退避、負荷依存cpu_ttl制御を実装してライブサービング評価。MORIは公開実装がないため方策をvLLMへ移植して比較。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2402.01869","arxiv_id":"2402.01869"},{"canonical_id":"arXiv:2511.02230","arxiv_id":"2511.02230"},{"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"},{"canonical_id":"arXiv:2507.07400","arxiv_id":"2507.07400"},{"canonical_id":"arXiv:2606.00866","arxiv_id":"2606.00866"}],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":20},"reservation":{"claim_id":"claim-ba98832b682051fbcdfa1c88","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a296cabbe5bdb6189545e086",
+  "job_id": "job-research-16a80a40c011c783",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a296cabbe5bdb6189545e086",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
