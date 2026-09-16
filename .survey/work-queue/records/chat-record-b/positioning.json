@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-53b88cd4cd7a0025f4e4c397",
-  "job_id": "job-research-df04bb2baebfa878",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53b88cd4cd7a0025f4e4c397",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T225915JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-53b88cd4cd7a0025f4e4c397","job_id":"job-research-df04bb2baebfa878","data":{"limitations":"理論モデルはprefill計算時間を簡略化し、未知長解析では入力・出力長の有界性など確率仮定を置く。実システム評価も主にシミュレーションであり、実GPUサーバへの統合によるスケジューラ実装費、複数装置通信、接頭辞キャッシュとの相互作用は未検証である。高負荷・長要求では安全な活性化予算が小さくなり、保守的制御の遅延費用が増える。","differences":"vLLMなどの連続バッチ処理が空き容量へ可能な限り要求を入れるのに対し、本研究は待ち行列から実行集合へ入る要求数を明示的な流量として制御する。出力長未知時の容量超過は後入れ先出しで比較的新しく開始した要求から戻し、失われる計算を抑える。経験的なキャッシュ保護閾値に対し、到着率・生成長・容量から安定不可能領域、十分安定領域、超過確率の減衰を数式で与える点が差別化される。","implementation_status":"離散時間シミュレータとMicrosoft Vidurを用いた連続時間評価による研究実装。実GPUサービングエンジンへの公開統合コードは今回確認できていない。","research_positioning":"LLMサービングの要求スケジューリングを、平均処理量最大化だけでなく未知生成長下のメモリ安定性という待ち行列制御問題として扱う理論系統である。出力長予測、動的KV管理、実装系スケジューラと組み合わせる際の安全な受付率を与える基準として利用価値がある。"},"reservation":{"claim_id":"claim-53b88cd4cd7a0025f4e4c397","worker_id":"scheduled-chat-llm-survey-turn5-20260916T225915JST","worker_kind":"scheduled_chat"}}
