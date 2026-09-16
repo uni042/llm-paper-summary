@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:13:27.274329+00:00",
+  "updated_at": "2026-09-16T03:14:55.334609+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:13:27.274329+00:00",
+      "last_recorded_at": "2026-09-16T03:14:55.334609+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 103,
         "audit_completed": 0,
         "discovery_completed": 27,
-        "blocked": 2,
+        "blocked": 3,
         "new_jobs": 40,
         "new_papers": 93,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34907191201:1",
-          "recorded_at": "2026-09-14T23:08:14.195490+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34907191201",
-            "run_attempt": "1",
-            "source_sha": "2c414406a7a70b179e47b9a6b76ef7cd937ca5f4"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34907404180:1",
           "recorded_at": "2026-09-14T23:11:27.346722+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35051053732:1",
+          "recorded_at": "2026-09-16T03:14:55.334609+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35051053732",
+            "run_attempt": "1",
+            "source_sha": "b967726647bd8d6fa2845de9faf9e89449e0c95c"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -20657,6 +20657,14 @@
           "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-cffb14eec24a02c2",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04244",
+          "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -21245,7 +21253,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
