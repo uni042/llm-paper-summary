@@ -1,14 +1,14 @@
 {
   "schema_version": 10,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "Hourly survey-worker runs are work-conserving and normally finish only because their run-local time window reaches the handoff guard. Paper counts, discovery-round counts, candidate counts, submission counts, empty or duplicate-only rounds, exploration-space exhaustion claims, backlog shape, and job-local completion never authorize normal run finalization. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
+  "principle": "Hourly survey-worker runs are work-conserving and normally finish only because their run-local time window reaches the handoff guard. Paper counts, discovery-round counts, candidate counts, submission counts, empty or duplicate-only rounds, exploration-space exhaustion claims, backlog shape, job-local completion, and exhaustion of one tool's per-run call budget never authorize normal run finalization. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
   "always_on_policy": {
     "canonical_doc": ".survey/docs/survey-workflow/always-on-worker.md",
     "paper_stock_zero_action": "DISCOVER_NOW",
     "empty_discovery_round_action": "CHANGE_AXIS_AND_DISCOVER_AGAIN",
     "after_research_or_checkpoint": "REFRESH_STATE_AND_CONTINUE",
     "overflow_research_rule": "For the :00 discovery-specialist worker, candidate_inventory > 50 with actionable research/audit means switch to overflow research mode; large inventory is a mode switch, not a run stop.",
-    "rule": "Zero actionable paper stock, an empty round, a duplicate-only round, or an exhausted current query family means choose or refresh another independent discovery axis and continue until the time handoff guard."
+    "rule": "Zero actionable paper stock, an empty round, a duplicate-only round, an exhausted current query family, or one exhausted search/tool budget means choose another independent discovery/tool/source route and continue until the time handoff guard."
   },
   "scheduled_handoff_policy": {
     "timezone": "Asia/Tokyo",
@@ -20,6 +20,13 @@
     "applies_to_worker_kinds": ["normal", "discovery"],
     "implementation": ".survey/scripts/continuation_gate.py",
     "rule": "Capture the actual Scheduled Chat invocation start once and define run_deadline = actual_start + run_window_seconds. Before starting a new independent Research/Audit/discovery unit, recompute seconds_to_run_deadline and pass it to continuation_gate.py. At or below handoff_guard_seconds, do not start another independent unit; durably preserve current work and perform safe time-driven finalization. At or below hard_finalize_seconds, perform only minimum durable finalization. The nominal schedule boundary is a compatibility fallback only when the actual-start deadline cannot be established."
+  },
+  "tool_budget_policy": {
+    "single_tool_budget_exhaustion_is_global_platform_limit": false,
+    "examples": ["web/search reports approximately 0 calls left", "one connector reaches a per-run call quota", "one source API refuses additional calls while other sources remain usable"],
+    "action_with_alternative_route": "SWITCH_TOOL_OR_SOURCE_AND_CONTINUE",
+    "action_without_alternative_route": "record all_required_tool_routes_unavailable as an abnormal blocker; do not convert it into normal successful finalization",
+    "platform_limit_definition": "Set platform_limit only when a genuinely global invocation/platform execution limit prevents all further useful work, not when one tool or source has exhausted its own budget."
   },
   "discovery_specialist_progression": {
     "worker_kind": "discovery",
@@ -39,7 +46,8 @@
   "abnormal_blockers_not_normal_finalization": [
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
-    "platform_time_context_or_execution_limit_reached"
+    "global_platform_execution_limit_reached",
+    "all_required_tool_routes_unavailable"
   ],
   "non_stop_conditions": [
     "paper_stock_zero",
@@ -53,6 +61,7 @@
     "one_or_many_discovery_rounds_returned_only_duplicates",
     "current_search_axis_or_query_family_appears_exhausted",
     "next_axis_hint_is_empty",
+    "single_tool_or_source_call_budget_exhausted_while_alternative_route_exists",
     "candidate_inventory_above_overflow_threshold",
     "one_or_many_jobs_completed",
     "one_job_blocked",
@@ -118,7 +127,7 @@
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a normal final response, apply scheduled_handoff_policy and continuation_gate.py. For hourly :00 discovery and :30 normal paper workers, only the time handoff guard authorizes normal STOP_RUN/finalization. Counts, quotas, exploration exhaustion, empty or duplicate-only discovery, no next-axis hint, successful submission, completed jobs, or backlog state never authorize normal finalization. If an axis is exhausted, broaden or change the axis and continue. Platform/read/durable-save failures are abnormal blockers and must not be converted into a normal-success finalization permit. Maintenance and the 08:30 update worker retain their dedicated rules.",
+    "rule": "Before emitting a normal final response, apply scheduled_handoff_policy and continuation_gate.py. For hourly :00 discovery and :30 normal paper workers, only the time handoff guard authorizes normal STOP_RUN/finalization. Counts, quotas, exploration exhaustion, empty or duplicate-only discovery, no next-axis hint, one exhausted tool/source call budget, successful submission, completed jobs, or backlog state never authorize normal finalization. If one tool/source reports no calls left, switch to another usable route. If an axis is exhausted, broaden or change the axis and continue. Global platform/read/durable-save failures are abnormal blockers and must not be converted into a normal-success finalization permit. Maintenance and the 08:30 update worker retain their dedicated rules.",
     "default_decision": "CONTINUE"
   }
 }
