@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-942145c6596d2cfdf7866f97",
-  "job_id": "job-research-9f909dd53a5f1acb",
-  "data": {
-    "hardware": "H100/H200を含むGPU構成。データセンター内は高速RDMA、データセンター間は20Gbps級TCPイーサネットを含む。",
-    "software": "DeepSeek-V4-proを用いたPDD実装。",
-    "methodology": "実世界エージェント型トレースと長文脈条件でエンドツーエンド評価し、64K入力・平均90%接頭辞ヒット率・512出力トークンでアクセラレータ特性を比較する。広域KV転送の微小評価では20Gbps専用線、80要求/秒、平均90%ヒット率で2〜99%の偏った分布と85〜95%の狭い分布を比較する。比較対象は従来のデータセンター間PD分離、同一データセンター内の同種PD分離、単純な増分KV転送である。指標はTTFT、出力速度、エンドツーエンド遅延、KV転送P50/P99、接続プール使用率、SLA適合有効スループット、便益費用比。",
-    "scope": "実機ネットワークと実世界要求トレースを含むシステム評価であり、単なるシミュレーションではない。一方で一部アクセラレータは匿名化された内部環境で、結果の一般化は高い接頭辞再利用率と短出力が多いエージェント型負荷を中心に解釈する必要がある。"
-  },
+  "attempt_id": "attempt-a2565d089349c3be98ca6b0e",
+  "job_id": "job-research-38c18cd4bb2728b9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-942145c6596d2cfdf7866f97",
+    "claim_id": "claim-a2565d089349c3be98ca6b0e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-942145c6596d2cfdf7866f97",
-  "job_id": "job-research-9f909dd53a5f1acb",
-  "data": {
-    "limitations": "効果は高い接頭辞再利用率と短めの出力が多いエージェント型トレースへ強く依存する。低ヒット率要求が支配的なら広域転送とRLD負荷が増え、同じ改善は期待できない。一部アクセラレータは匿名化された内部環境であり、全ハードウェアへの一般化には追加検証が必要である。公開コードも確認できず、再現性は論文記述に依存する。",
-    "differences": "DistServeやSplitwiseが高速なデータセンター内ネットワークでPD分離するのに対し、PDDは異種資源が地理的に分散した状況を扱う。Prefill-as-a-Serviceが長文要求の遠隔プリフィル配置と帯域制御を主眼にするのに対し、PDDは遠隔主デコードへのKV転送が遅い少数要求を中継デコードで隠す。転送路自体の高速化ではなく、有用な生成計算を転送待ちへ重畳する点が差分である。",
-    "implementation_status": "論文内で実装・実機評価されている。確認時点で一次資料から公開リポジトリURLは特定できなかった。",
-    "research_positioning": "プリフィル・デコード分離、KVキャッシュ転送、異種GPU配置、広域推論の交点に位置する。通信帯域を増やす代わりに転送と生成を重畳するため、通信最適化とスケジューリングを橋渡しする。37.5%は速度そのものではなくSLA適合有効スループットの便益費用比、46%は従来のデータセンター間PDに対するP90 TTFT削減であり、指標を分けて解釈する必要がある。"
-  },
+  "attempt_id": "attempt-a2565d089349c3be98ca6b0e",
+  "job_id": "job-research-38c18cd4bb2728b9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-942145c6596d2cfdf7866f97",
+    "claim_id": "claim-a2565d089349c3be98ca6b0e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
