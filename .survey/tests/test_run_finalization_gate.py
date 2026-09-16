@@ -67,7 +67,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertFalse(result["finalization_permit"]["issued"])
         self.assertIn("continuation_gate_did_not_allow_finalization", result["blocking_reasons"])
 
-    def test_clean_stop_run_issues_permit(self):
+    def test_clean_time_stop_run_issues_permit(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
@@ -76,7 +76,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertTrue(result["finalization_permit"]["issued"])
         self.assertEqual(result["wait_seconds"], 0)
 
-    def test_explicit_hard_stop_can_finalize_pending_wait_only_after_safe_handoff(self):
+    def test_non_time_hard_stop_remains_abnormal_even_after_safe_handoff(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
@@ -86,11 +86,12 @@ class RunFinalizationGateTests(unittest.TestCase):
             hard_stop=True,
             handoff_safe=True,
         ))
-        self.assertEqual(result["decision"], "MAY_FINALIZE")
-        self.assertTrue(result["finalization_permit"]["issued"])
-        self.assertEqual(result["next_action"], "FINALIZE_AFTER_SAFE_HANDOFF")
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("non_time_hard_stop_is_abnormal", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "REPORT_OR_RECOVER_ABNORMAL_BLOCKER_WITHOUT_NORMAL_FINALIZATION")
 
-    def test_hard_stop_without_safe_handoff_does_not_issue_permit(self):
+    def test_hard_stop_without_safe_handoff_is_abnormal_and_unsafe(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
@@ -101,6 +102,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("non_time_hard_stop_is_abnormal", result["blocking_reasons"])
         self.assertIn("hard_stop_handoff_not_safe", result["blocking_reasons"])
 
 

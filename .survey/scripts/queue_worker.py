@@ -32,15 +32,16 @@ ARCHIVE = QUEUE / "archive"
 DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
-MAX_DISCOVERY_CANDIDATES = 5
+# Compatibility/observability marker: discovery has no application-level candidate cap.
+MAX_DISCOVERY_CANDIDATES = None
 
 DISCOVERY_INSTRUCTIONS = (
     "Search primary sources for strong LLM inference-system papers not already "
     "represented in the repository. Prefer recent work, but include an older "
-    "important omission when clearly worthwhile. Return at most 5 candidates. "
-    "Do not fill the list with weak papers."
+    "important omission when clearly worthwhile. Return every strong candidate found "
+    "in the round; do not impose a fixed candidate-count cap and do not pad with weak papers."
 )
-DISCOVERY_COMPLETION = "Submit 0-5 strong candidates. Empty is valid."
+DISCOVERY_COMPLETION = "Submit all strong candidates found in the round. Empty is valid."
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
     "record covering problem, novelty, method, evaluation conditions, key quantitative "
@@ -228,8 +229,8 @@ def is_discovery_round_submission(sub: dict) -> bool:
     """Return whether *sub* is a self-describing immutable Discovery round.
 
     Workflow-v10 specialist rounds are safe to ingest without a pre-issued Discovery
-    job because they contain only bounded candidate metadata plus durable round identity.
-    Legacy specialist submissions used the same shape but attached a synthetic job_id;
+    job because they contain candidate metadata plus durable round identity. Legacy
+    specialist submissions used the same shape but attached a synthetic job_id;
     accepting both shapes lets old stranded rounds converge through the same path.
     """
     if not isinstance(sub, dict):
@@ -239,7 +240,7 @@ def is_discovery_round_submission(sub: dict) -> bool:
         return False
     candidates = sub.get("candidates")
     meta = sub.get("discovery_stats")
-    if not isinstance(candidates, list) or len(candidates) > MAX_DISCOVERY_CANDIDATES:
+    if not isinstance(candidates, list):
         return False
     if any(not isinstance(candidate, dict) for candidate in candidates):
         return False
@@ -493,8 +494,6 @@ def process_discovery(sub: dict, job: dict, st: dict):
     candidates = sub.get("candidates") or []
     if not isinstance(candidates, list):
         raise ValueError("candidates must be a list")
-    if len(candidates) > MAX_DISCOVERY_CANDIDATES:
-        raise ValueError("discovery submission may contain at most 5 candidates")
     seen = existing_candidate_keys()
     added = 0
     for c in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
