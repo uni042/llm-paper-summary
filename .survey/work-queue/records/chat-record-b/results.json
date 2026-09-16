@@ -2,50 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d5dd5cd824db8ecaa8dc6616",
-  "job_id": "job-research-9d70d3111564c88d",
-  "data": {
-    "overview": "AWCをJSQ + length-aware batchingと組み合わせると、static windowに対して全12 workload/configurationで最高throughputを示し、最大9.7%向上した。TPOTは全条件で概ね6〜10%低下し最大10.7%削減、TTFTも0.5〜4.1%改善範囲だった。GSM8Kのpolicy stackではthroughput 25.1→28.1 req/s、TPOT 45→37ms。distributed executionは低RTTでcloud-onlyより有利だが50〜60ms付近でnetwork overheadが勝りfusedと逆転する。",
-    "key_results": [
-      {
-        "metric": "throughput",
-        "value": "up to +9.7% vs static gamma=4",
-        "baseline": "Static Window",
-        "condition": "GSM8K, 20 targets/600 drafts, 10ms RTT",
-        "interpretation": "network/load/acceptanceを見たwindow適応が固定gammaよりtarget利用率を高める。"
-      },
-      {
-        "metric": "TPOT",
-        "value": "up to -10.7%",
-        "baseline": "Static Window",
-        "condition": "GSM8K config 1; 40.1ms to 36.2ms",
-        "interpretation": "過大/過小speculationを避けることでverificationと通信の無駄を減らす。"
-      },
-      {
-        "metric": "simulator accuracy",
-        "value": "7.4% prefill MAE, 5.2% decode MAE",
-        "baseline": "real GPU measurements",
-        "condition": "Qwen/Llama models on A40/A100/H100",
-        "interpretation": "distributed system探索に使うsingle-node latency predictorが実測へ概ね整合する。"
-      },
-      {
-        "metric": "network crossover",
-        "value": "distributed/fused crossover around 50-60ms RTT",
-        "baseline": "cloud-only fused execution",
-        "condition": "fixed system configuration while varying RTT",
-        "interpretation": "edge draftの並列性はWAN latencyが大きいとverification round-tripに相殺される。"
-      }
-    ],
-    "negative_results": [
-      "AWCのthroughput改善は最大9.7%であり、distributed SD自体の絶対speedupは大きくない。",
-      "VIDURはNCCL等を省略しlatencyを一貫して過小予測する傾向がある。",
-      "JSQは約1000 draftを超える高負荷で特定fast serverが飽和しRound-Robinへ追いつかれる。"
-    ],
-    "quality_impact": "target modelによる標準accept/reject verificationを維持するため生成品質は変えない。",
-    "interpretation": "distributed speculative decodingではgammaはalgorithm parameterではなくnetwork RTT、queue depth、target utilizationと結合したsystem control knobになる。AWCの利得は控えめだが、edge-cloud条件では固定windowが不安定になることとmode switchingの必要性を定量化した点が重要である。"
-  },
+  "attempt_id": "attempt-40fec156180475a1f071f609",
+  "job_id": "job-research-6eb709dc3f5cf15a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d5dd5cd824db8ecaa8dc6616",
+    "claim_id": "claim-40fec156180475a1f071f609",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }

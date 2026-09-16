@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:04:59 JST**
+> 自動生成: **2026-09-16 18:05:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving / worker `scheduled-chat-paper-20260916T175945JST`
-  - claim: **09-16 18:03:31 JST** / heartbeat: **—** / lease expiry: **09-16 19:33:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9d70d3111564c88d.json`
+- `arXiv:2409.15104` — CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts / worker `scheduled-chat-paper-20260916T175945JST`
+  - claim: **09-16 18:05:04 JST** / heartbeat: **—** / lease expiry: **09-16 19:35:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6eb709dc3f5cf15a.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
