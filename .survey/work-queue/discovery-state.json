@@ -1,31 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T16:01:02+00:00",
+  "updated_at": "2026-09-16T16:02:43+00:00",
   "last_run_key": "2026-09-17T00:00:00+09:00",
-  "last_round": "specialist-kv-storage-benchmark-5",
+  "last_round": "specialist-network-scheduling-6",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 9,
+  "consecutive_empty_rounds": 10,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-11T02:30:00+09:00",
-      "round": "vericache-validation-kv-2",
-      "axis": "損失KV検証・正確性保証",
-      "query_summary": "圧縮KVを最終近似ではなく候補生成へ使い、完全KVを下位階層から検証用に戻す研究を探索し、未収録のVeriCacheを採用した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arxiv:2605.17613"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "保持型混在精度KVとPagedAttention実装へ軸をずらす"
-    },
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "round": "mixed-format-retention-kv-3",
@@ -6523,6 +6507,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はmulti-stage network flow scheduling、KV transfer contention、CXL/PCIe fabric上のcache placementへ展開する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json"
+    },
+    {
+      "run_key": "2026-09-17T00:00:00+09:00",
+      "round": "specialist-network-scheduling-6",
+      "axis": "multi-stage network flow scheduling・prefill deflection・KV transfer contention",
+      "query_summary": "KV storage/reuse軸の次に、disaggregated servingでTTFTを支配するnetwork flow contentionとprefill/decode資源非対称へ移動した。arXiv一次ページを確認し、投入直前にdefault branch code searchで両arXiv IDが0件であることを確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はGPU fabric/NVLink/PCIe topology-aware placement、collective scheduling、remote KV admissionへ展開する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json"
     }
   ],
   "axes": {
@@ -10430,6 +10432,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はmulti-stage network flow scheduling、KV transfer contention、CXL/PCIe fabric上のcache placementへ展開する"
+    },
+    "multi-stage network flow scheduling・prefill deflection・KV transfer contention": {
+      "last_run_key": "2026-09-17T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はGPU fabric/NVLink/PCIe topology-aware placement、collective scheduling、remote KV admissionへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
