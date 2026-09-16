@@ -7,7 +7,7 @@ authors:
 - Yuwei An
 - Zhuoming Chen
 - Beidi Chen
-published: '2024'
+published: '2024-12-15'
 publication: Machine Learning for Systems Workshop at NeurIPS 2024
 publication_type: workshop paper
 publication_status: published workshop paper
@@ -39,67 +39,39 @@ audit_version: 0
 
 # IFMoE: An Inference Framework Design for Fine-grained MoE
 
-> 共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
-## 書誌情報
-- **著者**: Yuwei An, Zhuoming Chen, Beidi Chen
-- **公開**: Machine Learning for Systems Workshop at NeurIPS 2024
-- **種別**: workshop paper
-- **対象**: fine-grained MoE、エキスパート parallelism、tensor parallelism、speculative デコード、KV キャッシュ
-- **実装**: 論文はCutlass版GroupedGEMMを利用したIFMoE試作と実機評価を記載するが、公開コードURLは本文で確認できない。
 ## 概要
-細粒度MoE推論では、従来の専門家並列が注意層・正規化・共有専門家など非専門家パラメータを各GPUへ複製してKVキャッシュ容量を圧迫し、専門家数が多いほどGroupedGEMMもメモリ帯域律速になる。IFMoEは共有部分をテンソル並列、ルーティング専門家を専門家並列に分ける混成配置で重複を減らし、空いたメモリを大バッチと長文脈へ回す。さらに同じMoEモデルの活性専門家数を減らした近似モデルを草稿生成器として使い、10トークンごとに完全専門家設定で再符号化してKVキャッシュを修整する。Qwen2-57B-A14B-InstructをA6000×4、Deepseek-Lite-ChatをA6000×2で評価し、推論速度と処理量を30%以上改善する一方、近似方式のため一部課題で品質低下を残す。
+IFMoEは、細粒度Mixture-of-Experts（MoE）モデルの推論で生じるメモリ重複とexpert計算遅延を同時に狙う推論フレームワークである。従来のExpert Parallelism（EP）はexpert以外のパラメータを各GPUへ複製するため、細粒度MoEでexpert数が増えるほど、モデル本体よりもKV cacheや大きなbatchへ回したいVRAMを圧迫する。IFMoEはこの配置を分解し、attentionやshared expertなど共有部分へTensor Parallelism（TP）、routed expertへEPを適用することで、非expert部分の重複を減らす。
 
-IFMoEは推論時の通信が主として同一ノード内であることを利用し、共有パラメータにはテンソル並列、専門家固有パラメータには専門家並列を適用する混成配置を提案する。加えて、別の小型草稿モデルを用意せず、同じ細粒度MoEの活性専門家数だけを減らして高速な草稿生成器として使う。草稿トークンは棄却せず全て採用し、一定数生成した後に完全専門家設定でまとめて再符号化して共有KVキャッシュを修整するため、一般的な投機的復号とは速度と品質の交換方法が異なる。
+第二の狙いはGroupedGEMMの遅延である。細粒度MoEではtokenが複数expertへ分散されるため、expert fusion kernelが細かな行列積を多数処理し、実測ではexpert数増加に伴ってGPU計算資源利用率が下がる。IFMoEは同じモデルのactive expert数だけを減らした近似版をdraft modelとして用いる。draft側で10 tokenを生成した後、完全なexpert数へ戻してcontextを再符号化し、KV cacheを補正する。通常のspeculative decodingのようなreject/resampleではなく、近似draftをそのまま受け入れるため完全同値ではない。
 
-代表結果として、推論速度はQwen2-57B-A14B-Instruct A6000×4、Deepseek-Lite-Chat A6000×2、α=10/Ek=6/Dk=2で完全なfine-grained MoE inferenceに対して30%以上向上。混成並列化と少数専門家草稿を組み合わせた総合効果。
 ## 問題設定
-細粒度MoEは多数の小さな専門家を用いて専門化能力を高めるが、推論では二つの系統的な損失が生じる。第一に、学習向けの専門家並列をそのまま使うと注意層、正規化、共有専門家など専門家外パラメータが各GPUへ複製され、KVキャッシュや大バッチに使えるメモリが減る。第二に、各トークンが選ぶルーティング専門家の出力をGroupedGEMMで計算すると、一専門家の行列は小さい一方、バッチ増加に伴い活性専門家数がほぼ線形に増え、専門家重み読み出しがメモリ帯域を圧迫する。さらに動的ルーティングはTorch CompileやCUDA Graphの最適化を受けにくい。したがって細粒度MoEの構造を保ったまま、共有パラメータ重複を減らし、復号時に毎回すべての専門家を計算する費用も減らす必要がある。
-## 新規性
-IFMoEは推論時の通信が主として同一ノード内であることを利用し、共有パラメータにはテンソル並列、専門家固有パラメータには専門家並列を適用する混成配置を提案する。加えて、別の小型草稿モデルを用意せず、同じ細粒度MoEの活性専門家数だけを減らして高速な草稿生成器として使う。草稿トークンは棄却せず全て採用し、一定数生成した後に完全専門家設定でまとめて再符号化して共有KVキャッシュを修整するため、一般的な投機的復号とは速度と品質の交換方法が異なる。
+細粒度MoEでは、expertを細分化して専門化を進めるほど推論時の実装効率が下がりやすい。IFMoEが対象とする主なボトルネックは二つある。
+
+第一に、従来EPではrouted expertだけでなくattention、normalization、shared expert等の非expert部分もGPUごとに複製される。学習では通信回避との交換条件として合理的でも、推論ではこの重複VRAMがKV cacheやbatch sizeを制限し、長文脈・高throughputで不利になる。
+
+第二に、expert layerで使うGroupedGEMMは、active expert数が多く各expertへ入るtoken数が小さくなると、十分な演算密度を得にくい。論文は細粒度MoEのexpert融合処理が推論遅延へ大きく寄与すると観察し、単純なkernel最適化以外の方法でexpert計算量そのものを減らす。
+
 ## 手法
-### 手法のあらまし
-入力は細粒度MoEモデル、通常符号化時の専門家選択数Ek、草稿復号時の少ない専門家選択数Dk、修整間隔αである。まずモデル配置では、注意層・正規化・共有専門家など全ランク共通部分をテンソル並列で分割し、ルーティング専門家だけを専門家並列で分配する。従来の全対全通信の代わりに二回の全収集を使い、同一ノード内通信を前提に共有パラメータ複製を減らす。これにより空いたGPUメモリをKVキャッシュやより大きなバッチへ再配分する。各ランクは同じ入力トークンを共有部分へ通した後、自分が保持する専門家部分を計算し、通信で結果を集約して次層へ渡す。復号では、同じモデルをDk個の活性専門家だけでαステップ進め、生成トークンをバッファへ貯める。Dkが小さいためGroupedGEMMが読む専門家重みが減り、草稿生成が速くなる。α個生成したら、そのバッファ全体を通常のEk専門家設定で符号化し直してKVキャッシュ状態を完全設定に近づける。この再符号化では既に生成したトークン文字列自体は変更せず、後続生成が参照する鍵・値状態だけをより完全な専門家計算へ更新する。その後バッファを空にし、再び少数専門家で次のαトークンを生成する循環を終了条件まで繰り返す。論文の主設定はα=10、Ek=6、Dk=2である。通常の投機的復号のようなトークンごとの受理・棄却は行わず、草稿出力をそのまま最終系列へ採用するため、速度は得られるが生成分布は完全モデルと一致しない。著者は将来、完全設定のロジットを修整段階で利用し、必要な場合だけ巻き戻す方式へ拡張すれば高要求課題の品質差を縮められるとする。
+IFMoEの配置方式は、共有パラメータとrouted expertを別のparallelismで扱う。attention・normalization・shared expert等はTensor Parallelismで分割し、routed expertはExpert ParallelismでGPU間へ配置する。これにより、EPだけで全モデルを配置する場合より非expertパラメータの重複を削減する。削減されたVRAMはKV cacheやより大きなbatchへ再配分できる。
 
-### 共有部分TP・専門家部分EPの混成配置
-従来の専門家並列では各GPUが異なるトークンを処理する一方、注意層、正規化、共有専門家など専門家以外のパラメータを全GPUへ複製する。IFMoEは同じ入力トークンを各GPUへ持たせ、共有部分をテンソル並列で分割して重複を削減し、ルーティング専門家だけを専門家並列で保持する。細粒度MoEでは個々の専門家が小さく負荷分散もしやすいため、この分離が適するとする。通信は従来の全対全ではなく二回の全収集へ変えるが、推論では同一ノード内通信が中心なので追加費用は大きくないという設計判断である。付録のBF16計算では単一GPU当たりDeepseek-Liteで4.6GB、Qwen2-57B-A14Bで10GB、Deepseek-v2で23GBを節約でき、その容量をKVキャッシュや大バッチへ回せる。
+推論計算では、元モデルと同じ重みを使いつつ、各tokenでactiveにするexpert数だけを減らしたdraft設定を作る。draft設定で一定数のtokenを生成し、その後に完全expert設定で既生成contextを再符号化してKV cacheを更新する。論文の主要設定では10 tokenごとに完全設定へ戻る。draft tokenを検証して棄却する通常のspeculative decodingとは異なり、近似tokenを受理するため、速度向上と品質の交換が存在する。
 
-### 少数専門家による草稿復号とKV修整
-別の小型モデルを置かず、同じ細粒度MoEで選択する専門家数だけを通常より減らして草稿生成器を作る。主設定では通常の符号化が上位6専門家、草稿復号が上位2専門家を使い、10トークン連続で草稿を生成する。活性専門家が減るため、メモリ帯域律速のGroupedGEMMで読み出す専門家重みと動的処理量が減る。10トークン生成後はそのバッファを通常の6専門家設定でまとめて符号化し直し、草稿生成中に近似状態となったKVキャッシュを修整する。草稿モデルと完全モデルが同一重み・同一KVキャッシュを共有するため、別モデルのKV状態を維持する費用がない。一方、一般的な投機的復号と違って草稿トークンを確率的に検証・棄却せず全て採用するので、方式は近似的であり品質低下の可能性を明示的に受け入れる。
+## 評価
+評価モデルはQwen2-57B-A14B-InstructとDeepseek-Lite-Chat。Qwen2はNVIDIA A6000を4基、Deepseek-LiteはA6000を2基用いる。論文はbatch size、sequence length、active expert数等を変え、従来EP配置とIFMoEの混成配置、およびdraft expert削減を比較する。Qwen2では最大batch 256、Deepseek-Liteでは最大batch 200まで評価している。
 
-### 全体のデータ／制御の流れ
-IFMoEはメモリ配置と復号アルゴリズムを組み合わせた推論枠組みである。混成並列化で共有パラメータ複製を削減し、その余剰容量でバッチとKVキャッシュを増やす。同時に、復号の専門家選択数を一時的に減らしてGroupedGEMM負荷を下げ、周期的な完全専門家再符号化でKV状態を修整する。実装ではPyTorch/CUDA互換性の都合からCUTLASS版GroupedGEMMを採用し、cuBLAS版は将来課題としている。
-## 評価条件
-- **ハードウェア**: Qwen2-57B-A14B-InstructはNVIDIA A6000を4基、Deepseek-Lite-ChatはA6000を2基使用。付録のメモリ計算はBF16を前提とする。
-- **ソフトウェア**: 専門家計算にはCUTLASS版GroupedGEMMを採用。論文執筆時はPyTorchとCUDA 12.5の互換性問題によりcuBLAS版GroupedGEMMを利用できなかった。
-下流品質はXSum、GSM8K、TruthfulQA-Gen、IFEvalで完全モデルと比較する。性能評価はQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの復号で行い、α=10、通常符号化top-k=6、草稿復号top-k=2を固定する。最大バッチはQwen2が256、Deepseek-Liteが200。付録ではDeepseek-Lite、Qwen2-57B-A14B、Deepseek-v2について混成並列化による単一GPU当たりメモリ節約量を解析する。
-NeurIPS 2024 Machine Learning for Systems Workshopの比較的小規模な評価で、2種類の実機モデルによる速度・処理量と4課題の品質を報告する。草稿トークンを全受理する近似方式で完全な投機的復号ではなく、コード生成のような高精度要求ではロジット検証と巻き戻しが必要と著者自身が将来課題に挙げる。公開コードや広範なハードウェア比較は確認できない。
-## 主要結果
-IFMoEはQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの復号で推論速度を30%以上、処理量を30%以上改善したと報告する。混成並列化だけでも共有パラメータ複製を減らし、単一GPU当たりQwen2で10GB、Deepseek-v2で23GBを解放できる。一方、少数専門家草稿を全受理するため品質は完全同値ではなく、GSM8Kでは両モデルとも約4ポイント低下するなど、性能向上と生成品質の交換が残る。
+品質評価にはXSum、IFEval、GSM8Kを用いる。近似draftを受理するため完全な出力同値性は保証されないが、XSumとIFEvalでは大きな差が出にくい。一方GSM8KではDeepseek-Liteが67.7から63.8、Qwen2が75.4から71.1へ低下し、推論品質への影響が確認される。
 
-- 推論速度 / 30%以上向上 (比較対象: 完全なfine-grained MoE inference; 条件: Qwen2-57B-A14B-Instruct A6000×4、Deepseek-Lite-Chat A6000×2、α=10/Ek=6/Dk=2) — 混成並列化と少数専門家草稿を組み合わせた総合効果。
+## 結果
+論文は、混成TP+EP配置により非expert部分の重複を削減し、より大きなbatchとKV cacheを確保できることを示す。さらにdraft側でactive expert数を減らすことでexpert layerのGroupedGEMM負荷を抑え、完全expert設定による周期的な再符号化を組み合わせる。
 
-- 処理量 / 30%以上向上 (比較対象: 完全モデル; 条件: 最大バッチQwen2=256、Deepseek-Lite=200までの復号) — 共有パラメータ重複削減で大バッチ余地を増やし、草稿復号の専門家計算も削減する。
+主要な結論は、対象構成で推論latencyとthroughputを30%以上改善できるというもの。ただしこれは完全同値な最適化ではなく、特に推論・算術タスクでは品質低下が残る。したがってIFMoEの価値は、同一品質を絶対条件とするservingではなく、多少の近似を許容してメモリ容量とthroughputを引き上げたい環境で大きい。
 
-- 単一GPUメモリ節約 / Deepseek-Lite 4.6GB、Qwen2-57B-A14B 10GB、Deepseek-v2 23GB (比較対象: classic エキスパート parallelism; 条件: BF16、各モデル2/4/8 GPU) — 共有パラメータをテンソル並列化することでKVキャッシュや計算へ再利用可能な容量を解放する。
-
-- GSM8K品質 / Deepseek-Lite 67.7→63.8、Qwen2 75.4→71.1 (比較対象: 完全モデル; 条件: α=10/Ek=6/Dk=2) — 草稿トークン全受理は完全同値ではなく、数学推論では約4ポイントの品質低下が見える。
-
-- IFEval品質 / Deepseek-Lite 42.9→42.3、Qwen2 65.7→64.8 (比較対象: 完全モデル; 条件: 同一IFMoE設定) — 指示追従では差が小さく、課題によって近似の影響が異なる。
-
-### 負の結果・境界条件
-- IFMoEは損失なしではない。GSM8KはDeepseek-Liteで3.9ポイント、Qwen2で4.3ポイント低下し、TruthfulQA-Genも43.6→43.0、47.2→45.9へ下がる。著者はコード生成のような高要求課題では草稿を全受理せず、完全設定のロジットで検証して必要なら巻き戻す仕組みが必要と述べる。またcuBLAS GroupedGEMMはPyTorch/CUDA互換性問題で利用できず、CUTLASS版に限定される。
-
-### 結果の読み方
-性能改善は二種類の資源制約へ別々に効く。混成並列化は容量制約を緩め、少数専門家草稿は復号のメモリ帯域・GroupedGEMM時間を減らす。ただし草稿を確率的に検証しないため、一般的な投機的復号のような分布同値性はなく、品質低下が性能利得の代償になる。
-## 品質への影響
-XSumはDeepseek-Liteで12.6→12.7と僅かに上がり、Qwen2は13.7→13.5。IFEvalは0.6〜0.9ポイント差だが、GSM8Kは約4ポイント低下する。したがって『near-無損失』という著者表現は課題依存であり、厳密な損失なし方式ではない。
 ## 既存研究との差
-一般的な専門家並列は共有パラメータを全GPUへ複製するが、IFMoEは共有部分だけテンソル並列へ切り替えてKVキャッシュ容量を増やす。一般的な投機的復号は別の小型草稿モデルを使い完全モデルでトークンを受理・棄却するが、IFMoEは同じMoEの活性専門家数を減らして草稿化し、草稿を全受理して周期的に完全専門家設定でKVキャッシュだけを修整する。後続の細粒度MoEサービング研究と比べると、カーネル最適化よりモデル構造を利用した近似的システム制御に重点がある。
+従来のMoE serving最適化はexpert offload、expert placement、通信削減、kernel fusion、load balancingなどを中心に扱う。IFMoEは、細粒度MoEに特有の「非expert重複」と「active expert数増加によるGroupedGEMM効率低下」を同時に扱う点が異なる。
+
+また、通常のspeculative decodingが小型draft modelとtarget modelの出力一致を検証し、reject時にtarget側へ戻るのに対し、IFMoEは同一MoEモデル内でactive expert数を変えることで近似draftを作る。tokenを棄却せず周期的にKV cacheを修整するため実装上は軽いが、その代わり品質保証を失う。
+
 ## 限界
-評価モデルはQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの2種類、GPUはA6000に限定され、性能図は30%以上という集約的な報告が中心で詳細な絶対遅延値が乏しい。草稿トークンを全受理するため生成分布は完全モデルと一致せず、GSM8Kでは約4ポイント低下する。草稿間隔αと専門家数Ek/Dkは主に10/6/2の固定設定で、広範な感度分析はない。公開コードURLも確認できない。
-## 実装状態
-論文は混成EP+TP配置、CUTLASS GroupedGEMM、少数専門家草稿、KVキャッシュ修整を実装し、A6000実機で評価している。cuBLAS版GroupedGEMMは当時のPyTorchとCUDA 12.5互換性問題で未使用。公開リポジトリURLは本文で確認できない。
-## 研究上の位置づけ
-細粒度MoEの推論コストを、共有パラメータ複製による容量問題と多数活性専門家によるGroupedGEMM帯域問題に分け、前者を混成並列化、後者を同一モデルの少数専門家草稿で処理する初期のシステム研究である。S2-MoEなど後続の細粒度MoE推論系統を理解するうえで、専門家選択数を推論時に動的に減らす近似とKV状態修整を組み合わせた先行例として位置付けられる。
-## 一次資料
-- https://mlforsystems.org/assets/papers/neurips2024/paper41.pdf
+最大の制約は近似性である。draft tokenをtarget設定で逐次検証しないため、完全な生成同値性はなく、GSM8Kのような誤差が蓄積しやすい課題では品質低下が観測される。また、評価GPUはA6000に限られ、H100/H200等の新しいGPUや高速interconnectで同じボトルネック比率になるかは未確認である。
+
+さらに、効果は対象MoEの共有パラメータ比率、active expert数、expert粒度、batch size、sequence lengthに依存する。expert計算が十分に大きくGroupedGEMM効率が高いモデルや、非expert重複が支配的でない構成では利得が小さくなる可能性がある。

@@ -68,4 +68,12 @@ jobs:
         run: python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repository-inventory.json --source-commit "${GITHUB_SHA}"
 
       - name: Run live repository consistency check
-        run: python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
+        run: |
+          set +e
+          python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
+          rc=$?
+          if [ "$rc" -ne 0 ]; then
+            echo "Repository consistency findings:"
+            cat /tmp/repository-consistency.json
+          fi
+          exit "$rc"
