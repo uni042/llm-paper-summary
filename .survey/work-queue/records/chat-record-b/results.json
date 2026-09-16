@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a1a99a1e12c990178bfe94f8",
-  "job_id": "job-research-bd280ca93f0a6940",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a1a99a1e12c990178bfe94f8",
-    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a1a99a1e12c990178bfe94f8","job_id":"job-research-bd280ca93f0a6940","data":{"overview":"混合実ワークロードではMoE-Prefillが全ハードウェア・精度・並列度条件で最高スループットとなり、8 GPUでは最強比較対象比1.35〜1.37倍を達成する。接頭辞共有のない合成負荷でもAsyncEP単体が1.30〜1.59倍であり、利益がキャッシュ再利用だけではなくAllToAll除去から来ることを示す。CPUオフロードとKV不要モードにより235B FP8モデルを1〜2 H100でも実行可能にし、1〜8 GPUを通してMFUを29.8〜36.2%へ維持する。","key_results":[{"metric":"実ワークロードスループット","value":"1.35〜1.37倍","baseline":"各ハードウェア・精度セルの最強分散比較対象","condition":"Qwen3-235B-A22B、8 GPU、73.8K要求・約37.9Mトークン","interpretation":"A100 BF16 1.37倍、H100 BF16 1.36倍、H100 FP8 1.35倍、H200 FP8 1.37倍で、精度が変わっても同期通信除去の利益が安定する。"},{"metric":"接頭辞共有なし合成スループット","value":"短文1.30倍、中文1.30倍、長文1.52倍、超長文1.49倍","baseline":"各文脈長の最強比較対象","condition":"8×H100 FP8、10Mトークン、256〜128K文脈","interpretation":"接頭辞ルーティングを使わなくてもAsyncEPだけで改善し、長文ほどAllToAllとパイプライン不均衡の除去が効く。"},{"metric":"MFU","value":"29.8〜36.2%","baseline":"最良8 GPU比較対象でも最大20.09%の例","condition":"Qwen3-235B-A22B、1〜8 GPU","interpretation":"CPUオフロード時も大きなプリフィル計算窓が転送を隠すため、GPU数を減らしても計算効率を維持する。"},{"metric":"配置可能GPU範囲","value":"4 GPU以上から1〜8 GPUへ拡大","baseline":"235B FP8重みを常駐する従来方式","condition":"H100 80GB級、CPU専門家重みオフロード+KV不要モード","interpretation":"重みを数層分だけHBMへ置くことで容量制約を緩和し、4倍広いGPU数範囲で実行可能にする。"}],"negative_results":"低帯域相互接続では専門家転送時間が伸びて飽和閾値Tが大きくなり、十分なバッチを作れなければ通信が再び臨界経路へ出る。Tは起動時校正なので急激な負荷変化では一時的に同期待ちが現れ得る。接頭辞共有が無い負荷では接頭辞ルーティングの利益はなく、KV不要モードは逆に接頭辞再利用が多い負荷では使えない。対話型低遅延処理や密モデルは対象外。","interpretation":"プリフィル専用では大バッチが作る計算窓が長いため、転送量の大きい専門家重みでも次層までに運べる。活性値AllToAllは要求量に比例し毎層同期するのに対し、重み転送は層ごとに一定で計算へ隠せるため、文脈が長くなるほど相対的に有利になる。","quality_impact":"AsyncEP、オフロード、KV不要モードは同じモデル演算を保つため実行品質は原則不変。プリフィル専用へのタスク再定式化だけはタスク依存で、9タスク中7タスクが自己回帰方式との差±3.6ポイント以内、同一モデル比較ではデコード方式寄与が約1ポイントと報告される。"},"reservation":{"claim_id":"claim-a1a99a1e12c990178bfe94f8","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
