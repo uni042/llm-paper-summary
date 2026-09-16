@@ -1,33 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T15:05:17+00:00",
+  "updated_at": "2026-09-16T16:01:02+00:00",
   "last_run_key": "2026-09-17T00:00:00+09:00",
-  "last_round": "specialist-tool-gap-kv-4",
+  "last_round": "specialist-kv-storage-benchmark-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 8,
+  "consecutive_empty_rounds": 9,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-11T02:30:00+09:00",
-      "round": "photonic-cxl-kv-1",
-      "axis": "Photonic-CXL・大容量共有KVメモリ",
-      "query_summary": "CXL/共有KVメモリへ軸を変更したが、2607.27187は探索中に並行Actions側で既収録化されたため、最新HEAD再確認時点では3候補すべて重複として扱った。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2607.18141",
-        "arxiv:2605.03375",
-        "arxiv:2607.27187"
-      ],
-      "next_axis_hint": "重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"
-    },
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "round": "vericache-validation-kv-2",
@@ -6523,6 +6505,24 @@
       ],
       "next_axis_hint": "次はmulti-tenant fairness、preemption/recomputation回避、KV reservationとprefix reuseを統合するadmission controlへ展開する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260917T0001-tool-gap-kv-4.json"
+    },
+    {
+      "run_key": "2026-09-17T00:00:00+09:00",
+      "round": "specialist-kv-storage-benchmark-5",
+      "axis": "cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload",
+      "query_summary": "直前runでagent tool-gap/KV reservationまで探索済みのため、cross-context/checkpoint KV reuse、reasoning中のdynamic KV capacity、NVMe-direct storage pathへ軸を変更した。arXiv一次ページで内容を確認し、投入直前にdefault branchのGitHub code searchで各arXiv IDが0件であることを再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はmulti-stage network flow scheduling、KV transfer contention、CXL/PCIe fabric上のcache placementへ展開する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json"
     }
   ],
   "axes": {
@@ -10417,6 +10417,19 @@
       "duplicate_ratio": 0.3333333333333333,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はmulti-tenant fairness、preemption/recomputation回避、KV reservationとprefix reuseを統合するadmission controlへ展開する"
+    },
+    "cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload": {
+      "last_run_key": "2026-09-17T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はmulti-stage network flow scheduling、KV transfer contention、CXL/PCIe fabric上のcache placementへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
