@@ -2,49 +2,62 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2155991e74d60ac74b2163d1",
-  "job_id": "job-research-3bb1145babb1a6fc",
+  "attempt_id": "attempt-ad4afba2a1cd0b175dc4bc13",
+  "job_id": "job-research-1dd6544d5f77b687",
   "data": {
-    "evaluation_summary": "1ノード当たりNVIDIA A100を4基NVLink接続した実機を1から3ノード使用し、密モデル3種と専門家混合モデル5種を評価する。HellaSwagとGSM8Kから現実的な長さの要求を作り、ポアソン到着で変動するサービング負荷を模擬する。固定400W・最大バッチ、バッチだけを適応、電力上限だけを適応、両方を共同制御するPALS、全構成を事前全探索する理想比較を同じvLLM上で比較する。",
-    "scope": "主評価はA100実機上の単一ノードと3ノード構成であり、シミュレーションだけの結果ではない。定常負荷だけでなく60分の変動負荷と電力需要応答を含む。一方、評価GPUはA100中心なので、H100など別世代GPUの電力・周波数特性や別ネットワークへ数値を直接一般化するには追加検証が必要である。",
+    "evaluation_summary": "全実験をNVIDIA GH200 120GB HBM3上で行い、複数GPUはNVLink接続の最大4基を使用する。Llama-3.2 1B/3BとLlama-2 7B/13B/70Bを対象に、RTN、GPTQ、AWQ、OmniQuantの4-bit per-channelおよびgroup-128へSPEARを追加する。品質はWikiText-2/C4 perplexityと7タスクzero-shot accuracy、システム性能は単一GPU・TP=2/3/4 decode latencyとShareGPT 300要求のPoisson到着連続バッチで評価する。",
+    "scope": "品質回復と実際のサービング効率を同じ論文で評価し、kernel microbenchmarkだけでなくend-to-end decodeとSLO制約下のcontinuous batchingまで含む。一方GPUはHopper世代GH200に限定され、著者自身も他GPU世代・異種clusterへのkernel/P2P primitive移植を将来課題としている。MoEアーキテクチャへの拡張も将来課題である。",
     "hardware": [
-      "1ノード当たりNVIDIA A100を4基",
-      "ノード内NVLink接続",
-      "最大3ノード",
-      "3ノード試験ではクラスタ全体4800Wの電力予算"
+      "NVIDIA GH200 120GB HBM3",
+      "CUDA 12.6",
+      "NCCL 2.27.5",
+      "NVLink接続で最大4 GPU"
     ],
     "models": [
-      "GPT-2",
+      "Llama-3.2-1B",
+      "Llama-3.2-3B",
       "Llama-2-7B",
-      "Mistral-7B",
-      "OLMoE-1B-7B",
-      "Qwen1.5-MoE",
-      "DeepSeek-MoE",
-      "Phi-3.5-MoE",
-      "Mixtral-8x7B"
+      "Llama-2-13B",
+      "Llama-2-70B"
     ],
     "datasets": [
+      "WikiText-2",
+      "C4",
+      "PIQA",
+      "ARC-e/c",
       "HellaSwag",
-      "GSM8K"
+      "WinoGrande",
+      "BoolQ",
+      "LAMBADA",
+      "MMLU",
+      "ShareGPT"
     ],
-    "workload": "到着率と系列長を変えられる要求列を用い、ポアソン到着で突発性を持たせる。複数ノードのサービス品質試験と電力需要応答試験は60分実行する。",
+    "workload": "kernel評価は200 warmup後500 timed iterationのmedian。decodeはprompt 128 token、64 token生成、M=1。複数GPUはTP=2/3/4。scheduler評価はShareGPT 300要求をPoisson arrivalでreplayし、Llama-2-7B 16 req/sでEC密度15/38/60%と16ms/22ms SLOを比較する。",
     "baselines": [
-      "固定400Wかつ最大バッチの基準方式",
-      "電力を固定して予測器でバッチだけを選ぶ方式",
-      "バッチを固定して電力上限だけを動かす方式",
-      "全候補を事前全探索する理想方式"
+      "FP16 cuBLAS + FlashAttention",
+      "W4 MARLIN",
+      "naive W4+EC",
+      "LoftQ",
+      "LQER",
+      "QERA",
+      "EoRA",
+      "ASER",
+      "static chunked-prefill 512/256/128/64"
     ],
     "metrics": [
-      "トークン毎秒",
-      "サービス品質違反率",
-      "目標電力との追従誤差",
-      "ジュール当たりトークン数"
+      "WikiText-2/C4 perplexity",
+      "7-task zero-shot accuracy",
+      "補償memory MB",
+      "ms/token decode latency",
+      "FP16/W4に対するthroughput",
+      "P99 inter-token latency",
+      "average time-to-first-token"
     ],
-    "predictor_accuracy": "ランダムフォレストは保持した構成で処理量の平均絶対百分率誤差6.8%、電力4.5%。GPU電力合計からシステム電力を推定する線形モデルは決定係数約0.98、平均絶対誤差12–27W。",
-    "control_knobs": "実行中に変更するのはGPU電力上限とバッチ量。テンソル並列、専門家並列、データ並列はモデル再読み込みを伴うため配置時に選ぶ。"
+    "predictor_accuracy": "schedulerはECあり/なしのper-iteration GH200 kernel latency lookup tableを実測し、未計測Mは線形補間する。CPU上の数百lookupと加算でiteration latencyを推定する。",
+    "control_knobs": "補償対象モジュール密度・rank、decode/prefill実行経路、tensor-parallel fused communication、prefill chunk sizeを制御する。"
   },
   "reservation": {
-    "claim_id": "claim-2155991e74d60ac74b2163d1",
+    "claim_id": "claim-ad4afba2a1cd0b175dc4bc13",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }
