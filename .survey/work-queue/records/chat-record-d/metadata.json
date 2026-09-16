@@ -1,5 +1,94 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9d6a995e7313b629f9087fe7","job_id":"job-research-0dc2aa86e35f442f",
- "data":{"canonical_id":"arXiv:2609.14237","arxiv_id":"2609.14237","doi":"10.48550/arXiv.2609.14237","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving","summary":"OpWeaveは、大規模言語モデルのデコード処理を注意機構とフィードフォワード網の固定境界で二分する従来方式を一般化し、演算子の分割位置、GPU種類、並列方式、バッチ量、マイクロバッチ量、パイプライン配置を共同最適化する異種GPU向けサービング基盤である。理論面ではGPUの価格、メモリ帯域、演算性能からトークン当たり費用を表し、KVキャッシュ増大によって同居実行のバッチ量が行列積を十分効率化できる閾値を下回ると、同種GPUでの分離にも利得が生じることを示す。計画器は混合注意モデルの最小反復演算パターンを分割ブロックとして抽象化し、同じ構造の層で分割判断を再利用して探索量を削減する。実機評価ではH100同種構成で費用を最大1.78倍、H100とL40SまたはA100を組み合わせた異種構成で最大1.89倍改善する。","list_summary":"固定された注意機構・フィードフォワード網の分離境界を外し、演算子境界と異種GPU配置を共同探索することで、サービス水準目標を保ちながら費用を同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。","authors":["Zikun Li","Yixuan Mei","Shiqi Pan","Zixuan Chen","Xiaowen Zhang","Mengdi Wu","Shuhuai Lin","Yutong Yang","Zhihao Zhang","Xupeng Miao","Rashmi Vinayak","Zhihao Jia"],"published":"2026-09-13","publication":"arXiv preprint arXiv:2609.14237v1","publication_type":"arXivプレプリント","publication_status":"2026年9月13日投稿のarXiv初版。主分類cs.DC、併記分類cs.AI。","lineage":"llm-serving-scheduling-disaggregation","topics":["大規模言語モデルサービング","演算子分離","異種GPU","配置最適化","パイプライン"],"importance":"高い。固定二段分離を一般化し、理論、配置計画、実行系を接続する。","hardware_evaluation":"実機。H100同種GPU群とH100+L40S/A100異種GPU群。","hardware_details":"長文デコードを中心にGPU種別、並列方式、バッチ量を探索する。","quality_effect":"同じモデル計算の配置を変える損失なしのシステム最適化。","bottlenecks":["注意機構のメモリ帯域律速","KVキャッシュによるバッチ制約","固定境界の段間不均衡","混合注意モデルの層差","段間通信"],"evidence_locations":["第1節","第3節","第4節","評価節","付録AとB"],"source":"https://arxiv.org/abs/2609.14237","sources":["https://arxiv.org/abs/2609.14237","https://arxiv.org/html/2609.14237","https://arxiv.org/pdf/2609.14237"],"code":null,"implementation":"vLLMを基礎とする分散実行系を実装し、任意の演算子段を異種GPU群で動かす。公開コードURLは本文から確認できない。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-Optimized Large Language Model Serving"},{"title":"MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"},{"title":"Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding"}],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節","references_total":4},
- "reservation":{"claim_id":"claim-9d6a995e7313b629f9087fe7","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-00234cb49b687ee9fea2a1c3",
+  "job_id": "job-research-3bb1145babb1a6fc",
+  "data": {
+    "canonical_id": "arXiv:2605.21427",
+    "arxiv_id": "2605.21427",
+    "doi": "10.48550/arXiv.2605.21427",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+    "summary": "PALSは、GPUの電力上限を外部から与えられる固定制約ではなく、大規模言語モデルの実行系が動的に選ぶ制御変数として扱い、バッチ量と共同最適化する電力認識型vLLM実行系である。事前計測では電力上限、バッチ量、テンソル並列、専門家並列、データ並列を変え、処理量と消費電力の非線形な関係を学習する。実行時は軽量なランダムフォレスト予測器と500ミリ秒周期のPID帰還制御を組み合わせ、目標処理量を満たす候補の中からジュール当たりトークン数が最大の構成を選ぶ。A100を1ノード4基で最大3ノード使用し、密モデル3種と専門家混合モデル5種を評価した。単一ノードではエネルギー効率を26.3%改善して全探索最適値までの余地の95%を獲得し、3ノード・4800W制約下ではサービス品質違反を18.7–35.2%から3.2–5.3%へ減らして4–7倍改善した。さらに集約エネルギー効率を12.1%高め、電力需要応答では低電力目標時の処理量を最大22%改善した。",
+    "list_summary": "GPU電力上限とバッチ量を500ミリ秒周期で共同制御し、A100複数ノードの密モデル・専門家混合モデルでエネルギー効率を最大26.3%、サービス品質違反を4–7倍改善する。",
+    "authors": [
+      "Can Hankendi",
+      "Rana Shahout",
+      "Minlan Yu",
+      "Ayse K. Coskun"
+    ],
+    "authors_affiliations": "Boston University; Harvard University",
+    "published": "2026-05-20",
+    "publication": "arXiv preprint arXiv:2605.21427v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2026年5月20日投稿のarXiv初版。主分類cs.AI、併記分類cs.DC。",
+    "lineage": "moe-offload-routing",
+    "topics": [
+      "大規模言語モデルサービング",
+      "専門家混合モデル",
+      "GPU電力上限",
+      "エネルギー効率",
+      "実行時制御",
+      "サービス品質",
+      "電力需要応答"
+    ],
+    "importance": "高い。専門家混合モデルでは演算と通信の比率によって追加電力の効果が変わることを実測し、ソフトウェアのバッチ制御とハードウェアの電力制御を一つの帰還制御へ統合する。",
+    "hardware_evaluation": "実機評価。NVIDIA A100を1ノード4基、NVLinkで接続し、最大3ノードまで使用する。",
+    "hardware_details": "電力上限150、200、250、300、350、400W、バッチ量1、4、8、16、32、64。テンソル並列1、2、4、専門家並列1、4、8、データ並列1、2、3ノードを事前計測する。",
+    "quality_effect": "モデル再学習や推論API変更を必要とせず、同じモデルの電力上限とバッチ構成を変える。生成品質を近似する手法ではなく、処理量のサービス品質とジュール当たり処理量を最適化する。",
+    "bottlenecks": [
+      "専門家ルーティングの全対全通信",
+      "高電力域での効率向上の頭打ち",
+      "小バッチ時のGPU利用率不足",
+      "固定電力上限による過剰または不足供給",
+      "事前予測器の誤差と負荷分布の変化"
+    ],
+    "evidence_locations": [
+      "第2.1節から第2.4節",
+      "第3節から第3.3節",
+      "第4.1節から第4.4節",
+      "第5.1節から第5.3節",
+      "第6節",
+      "表1から表3",
+      "図1から図11"
+    ],
+    "source": "https://arxiv.org/abs/2605.21427",
+    "sources": [
+      "https://arxiv.org/abs/2605.21427",
+      "https://arxiv.org/html/2605.21427v1",
+      "https://arxiv.org/pdf/2605.21427"
+    ],
+    "code": null,
+    "implementation": "vLLMのスケジューラを拡張してバッチ量を実行中に変更できるようにし、NVMLでGPU電力上限を適用する。計測、制御、適用の閉ループを500ミリ秒周期で外部から動かし、モデル構造や推論APIは変更しない。論文本文から公開コードURLは確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"
+      },
+      {
+        "title": "Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training"
+      },
+      {
+        "title": "Helix: Serving Large Language Models over Heterogeneous GPUs and Network via Max-Flow"
+      }
+    ],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML参考文献節"
+  },
+  "reservation": {
+    "claim_id": "claim-00234cb49b687ee9fea2a1c3",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
