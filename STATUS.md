@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:27:39 JST**
+> 自動生成: **2026-09-16 17:28:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **48** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **5** |
-| 合計 | **49** | **13** | **4** | **9** | **1** | **0** | **5** |
+| Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
+| 合計 | **49** | **14** | **4** | **10** | **1** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -150,8 +150,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 17:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **5件**
-- 探索軸: 適応KV圧縮・制約駆動構成選択 / PNM・GPU外KV・検索型疎注意 / AMX CPU-GPU協調MoE・coalesced expert execution / 分離サービング・負荷認識prefill deflection / 投機的デコード・負荷適応verification scheduling
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **6件**
+- 探索軸: 適応KV圧縮・制約駆動構成選択 / PNM・GPU外KV・検索型疎注意 / AMX CPU-GPU協調MoE・coalesced expert execution / 分離サービング・負荷認識prefill deflection / 投機的デコード・負荷適応verification scheduling / cross-datacenter prefill・commodity Ethernet KV転送
 - round `specialist-adaptive-kv-budget-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r1-metakv.json`
   - 探索軸: 適応KV圧縮・制約駆動構成選択
@@ -171,6 +171,10 @@
 - round `specialist-speculative-verification-scheduling-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r5-dspark.json`
   - 探索軸: 投機的デコード・負荷適応verification scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cross-datacenter-prefill-6` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r6-prfaas.json`
+  - 探索軸: cross-datacenter prefill・commodity Ethernet KV転送
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -228,10 +232,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **347** |
+| 成功result未照合のimmutable submission | **348** |
 | └ Research | **208** |
 | └ Audit | **1** |
-| └ Discovery | **138** |
+| └ Discovery | **139** |
 
 ### 厳格検証が未成立のcompleted job
 
