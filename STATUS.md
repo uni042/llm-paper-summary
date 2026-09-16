@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:49:05 JST**
+> 自動生成: **2026-09-16 19:49:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -36,9 +36,9 @@
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **39** | **8** | **4** | **4** | **1** | **0** | — |
-| Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
+| Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **24** | **0** | **24** | **0** | **0** | **32** |
-| 合計 | **39** | **32** | **4** | **28** | **2** | **0** | **32** |
+| 合計 | **39** | **32** | **4** | **28** | **1** | **0** | **32** |
 
 - 最新Discovery runの耐久探索round: **24件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -201,10 +201,8 @@
 
 #### Audit
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.03775` — FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 19:47:39 JST** / heartbeat: **—** / lease expiry: **09-16 21:17:39 JST**
-  - evidence: `.survey/work-queue/claims/job-audit-bc50ab844f1e2ebf.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Discovery
 
