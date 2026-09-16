@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib
 import json
 import sys
 import tempfile
@@ -16,18 +17,8 @@ import queue_worker  # noqa: E402
 class DiscoveryPrecheckSnapshotTest(unittest.TestCase):
     def setUp(self) -> None:
         self.originals = {
-            name: getattr(queue_worker, name, None)
-            for name in (
-                "ROOT",
-                "QUEUE",
-                "JOBS",
-                "SUBMISSIONS",
-                "RESULTS",
-                "STATE",
-                "ARCHIVE",
-                "DISCOVERY_STATE",
-                "DISCOVERY_IDENTITY_DIR",
-            )
+            name: getattr(queue_worker, name)
+            for name in ("ROOT", "QUEUE", "JOBS", "SUBMISSIONS", "RESULTS", "STATE", "ARCHIVE", "DISCOVERY_STATE")
         }
         self.tmp = tempfile.TemporaryDirectory()
         self.repo_root = Path(self.tmp.name)
@@ -41,15 +32,11 @@ class DiscoveryPrecheckSnapshotTest(unittest.TestCase):
         queue_worker.STATE = self.queue / "state.json"
         queue_worker.ARCHIVE = self.queue / "archive"
         queue_worker.DISCOVERY_STATE = self.queue / "discovery-state.json"
-        queue_worker.DISCOVERY_IDENTITY_DIR = self.queue / "discovery-identities"
         queue_worker.JOBS.mkdir(parents=True)
 
     def tearDown(self) -> None:
         for name, value in self.originals.items():
-            if value is None and hasattr(queue_worker, name):
-                delattr(queue_worker, name)
-            else:
-                setattr(queue_worker, name, value)
+            setattr(queue_worker, name, value)
         self.tmp.cleanup()
 
     def _write_existing_identity(self) -> None:
@@ -103,27 +90,33 @@ summary: Existing paper used for discovery precheck regression coverage.
 
     def test_snapshot_exposes_same_existing_ids_as_final_duplicate_guard(self) -> None:
         self._write_existing_identity()
+        snapshot = importlib.import_module("build_discovery_identity_snapshot")
+        output = self.queue / "discovery-identities"
 
-        changed = queue_worker.write_discovery_identity_snapshot()
+        changed = snapshot.build_snapshot(self.root, output, source_commit="test-head")
 
         self.assertTrue(changed)
-        arxiv_2606 = (queue_worker.DISCOVERY_IDENTITY_DIR / "arxiv-2606.txt").read_text(encoding="utf-8")
-        arxiv_2609 = (queue_worker.DISCOVERY_IDENTITY_DIR / "arxiv-2609.txt").read_text(encoding="utf-8")
+        arxiv_2606 = (output / "arxiv-2606.txt").read_text(encoding="utf-8")
+        arxiv_2609 = (output / "arxiv-2609.txt").read_text(encoding="utf-8")
         self.assertIn("id:arXiv:2606.24506\n", arxiv_2606)
         self.assertIn("id:arXiv:2609.11294\n", arxiv_2609)
 
-        manifest = json.loads(
-            (queue_worker.DISCOVERY_IDENTITY_DIR / "_manifest.json").read_text(encoding="utf-8")
-        )
+        manifest = json.loads((output / "_manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["source"], "queue_worker.existing_candidate_keys")
+        self.assertEqual(manifest["source_commit"], "test-head")
         self.assertGreaterEqual(manifest["token_count"], 4)
 
-    def test_discovery_job_requires_snapshot_precheck_instead_of_code_search(self) -> None:
-        instructions = queue_worker.DISCOVERY_INSTRUCTIONS
+    def test_snapshot_publishes_worker_precheck_contract(self) -> None:
+        self._write_existing_identity()
+        snapshot = importlib.import_module("build_discovery_identity_snapshot")
+        output = self.queue / "discovery-identities"
 
-        self.assertIn(".survey/work-queue/discovery-identities/_manifest.json", instructions)
+        snapshot.build_snapshot(self.root, output, source_commit="test-head")
+        instructions = (output / "_README.md").read_text(encoding="utf-8")
+
         self.assertIn("same identity tokens as the final duplicate gate", instructions)
         self.assertIn("Do not use GitHub code search as duplicate authority", instructions)
+        self.assertIn("check the appropriate shard before accepting a candidate", instructions)
 
 
 if __name__ == "__main__":
