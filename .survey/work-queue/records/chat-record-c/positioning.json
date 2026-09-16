@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-4690bc7b8f70a0ac90350ba3",
   "job_id": "job-research-1d922bbcf8bbfed4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4690bc7b8f70a0ac90350ba3",
-    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "positioning": "RoofLangは、VidurやFrontierのように既存サービング構成を高精度に再現するシミュレータとも、KernelBenchやGPU Kernel Scientistのように実コードを生成・プロファイルする最適化エージェントとも異なる。前者に対しては、性能予測だけでなく意味保存されたアーキテクチャ変換を探索空間として組み込む点が差分である。後者に対しては、実装済みカーネルやフレームワークの品質を評価器から切り離し、未実装の配置・通信・メモリ構成を理論資源制約下で先に比較する点が差分である。Unityの検証付きグラフ変換に近い要素を持つが、LLM推論の配置・通信・メモリ階層とAI反復探索へ焦点を移している。",
+    "relation_to_repository": "既存リポジトリの推論シミュレーション、サービングスケジューリング、KVキャッシュ、MoE配置、メモリ階層、AIによるカーネル最適化の複数系統を横断する。特にNVMe/DRAM/HBM間のKVライフサイクル、MoE専門家複製、文脈・専門家・パイプライン並列化を同じ変換空間で扱えるため、個別最適化手法を統一的な設計探索へ持ち込む上位層として位置付けられる。",
+    "closest_prior_work": ["Frontier", "KernelSight-LM", "Vidur", "Unity", "InferenceBench", "FlashInfer-Bench", "GPU Kernel Scientist", "OptiFlow"],
+    "differentiators": ["実装非依存の設計評価", "意味保存変換による検証可能な探索空間", "計算・配置・通信・メモリ階層を一つのDSLで表現", "AIエージェントがシミュレーションフィードバックでアーキテクチャ自体を反復探索"],
+    "practical_implications": "実機実装に大きな工数を掛ける前に、どの並列化・配置・キャッシュ階層・専門家複製が理論的に有望かを絞り込む用途に向く。一方、最終採用には実機プロファイルと実装検証を後段で組み合わせる必要がある。",
+    "future_work": ["初期計算・ハードウェアグラフの自動生成と実行トレース照合", "実測で校正したモデル化精度向上", "MoE負荷不均衡や投機的デコード等の表現", "差分再利用・並列化・近似によるシミュレーション高速化", "探索後アーキテクチャを実コードへ落とし実機検証する閉ループ"],
+    "evidence": ["§4.1", "§4.2", "§5"]
+  },
+  "reservation": {"claim_id": "claim-4690bc7b8f70a0ac90350ba3", "worker_id": "scheduled-chat-llm-survey-20260916T023111Z", "worker_kind": "scheduled_chat"}
 }
