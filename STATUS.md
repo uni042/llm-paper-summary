@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:22:08 JST**
+> 自動生成: **2026-09-17 07:22:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -202,9 +202,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.20982` — A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving / worker `scheduled-chat-discovery-specialist-0700`
-  - claim: **09-17 07:20:20 JST** / heartbeat: **—** / lease expiry: **09-17 08:50:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0d9ff237f1d632e6.json`
+- `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist-0700`
+  - claim: **09-17 07:22:10 JST** / heartbeat: **—** / lease expiry: **09-17 08:52:10 JST**
+  - evidence: `.survey/work-queue/claims/job-research-120be1bd98c2839e.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
   - claim: **09-17 05:33:59 JST** / heartbeat: **09-17 06:31:30 JST** / lease expiry: **09-17 08:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
