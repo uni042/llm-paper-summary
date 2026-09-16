@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:24:55 JST**
+> 自動生成: **2026-09-16 18:31:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **25** |
-| 未claim Research job | **23** |
+| 未claim Research job | **22** |
 | 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-16 18:19:57 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 18:19:57 JST（11分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **41** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **41** | **8** | **4** | **4** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **42** | **18** | **4** | **14** | **2** | **0** | **10** |
+| 合計 | **42** | **18** | **4** | **14** | **3** | **1** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,9 +197,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 18:31:09 JST** / heartbeat: **—** / lease expiry: **09-16 20:01:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ad3541d28015a662.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
-  - claim: **09-16 18:23:00 JST** / heartbeat: **—** / lease expiry: **09-16 19:53:00 JST**
+  - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
