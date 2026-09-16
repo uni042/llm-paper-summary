@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-4575eafbcbcf1280954fabcf",
-  "job_id": "job-research-3190de0b496967f3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4575eafbcbcf1280954fabcf",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4575eafbcbcf1280954fabcf","job_id":"job-research-3190de0b496967f3","data":{"overview":"IFMoEはQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの復号で推論速度を30%以上、処理量を30%以上改善したと報告する。混成並列化だけでも共有パラメータ複製を減らし、単一GPU当たりQwen2で10GB、Deepseek-v2で23GBを解放できる。一方、少数専門家草稿を全受理するため品質は完全同値ではなく、GSM8Kでは両モデルとも約4ポイント低下するなど、性能向上と生成品質の交換が残る。","key_results":[{"metric":"推論速度","value":"30%以上向上","baseline":"完全なfine-grained MoE inference","condition":"Qwen2-57B-A14B-Instruct A6000×4、Deepseek-Lite-Chat A6000×2、α=10/Ek=6/Dk=2","interpretation":"混成並列化と少数専門家草稿を組み合わせた総合効果。"},{"metric":"処理量","value":"30%以上向上","baseline":"完全モデル","condition":"最大バッチQwen2=256、Deepseek-Lite=200までの復号","interpretation":"共有パラメータ重複削減で大バッチ余地を増やし、草稿復号の専門家計算も削減する。"},{"metric":"単一GPUメモリ節約","value":"Deepseek-Lite 4.6GB、Qwen2-57B-A14B 10GB、Deepseek-v2 23GB","baseline":"classic expert parallelism","condition":"BF16、各モデル2/4/8 GPU","interpretation":"共有パラメータをテンソル並列化することでKVキャッシュや計算へ再利用可能な容量を解放する。"},{"metric":"GSM8K品質","value":"Deepseek-Lite 67.7→63.8、Qwen2 75.4→71.1","baseline":"完全モデル","condition":"α=10/Ek=6/Dk=2","interpretation":"草稿トークン全受理は完全同値ではなく、数学推論では約4ポイントの品質低下が見える。"},{"metric":"IFEval品質","value":"Deepseek-Lite 42.9→42.3、Qwen2 65.7→64.8","baseline":"完全モデル","condition":"同一IFMoE設定","interpretation":"指示追従では差が小さく、課題によって近似の影響が異なる。"}],"negative_results":"IFMoEは損失なしではない。GSM8KはDeepseek-Liteで3.9ポイント、Qwen2で4.3ポイント低下し、TruthfulQA-Genも43.6→43.0、47.2→45.9へ下がる。著者はコード生成のような高要求課題では草稿を全受理せず、完全設定のロジットで検証して必要なら巻き戻す仕組みが必要と述べる。またcuBLAS GroupedGEMMはPyTorch/CUDA互換性問題で利用できず、CUTLASS版に限定される。","interpretation":"性能改善は二種類の資源制約へ別々に効く。混成並列化は容量制約を緩め、少数専門家草稿は復号のメモリ帯域・GroupedGEMM時間を減らす。ただし草稿を確率的に検証しないため、一般的な投機的復号のような分布同値性はなく、品質低下が性能利得の代償になる。","quality_impact":"XSumはDeepseek-Liteで12.6→12.7と僅かに上がり、Qwen2は13.7→13.5。IFEvalは0.6〜0.9ポイント差だが、GSM8Kは約4ポイント低下する。したがって『near-lossless』という著者表現は課題依存であり、厳密な損失なし方式ではない。"},"reservation":{"claim_id":"claim-4575eafbcbcf1280954fabcf","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}}
