@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **605本**。
+収録論文: **609本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,18 +25,18 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**605本**。
+推論論文：**609本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 47 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 48 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 1 |
 | [02-hardware-accelerators](02-hardware-accelerators/README.md) | 7 |
 | [02-memory-offload](02-memory-offload/README.md) | 1 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
-| [03-moe-expert-offload](03-moe-expert-offload/README.md) | 3 |
+| [03-moe-expert-offload](03-moe-expert-offload/README.md) | 4 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 9 |
 | [04-kv-prefix-cache](04-kv-prefix-cache/README.md) | 1 |
 | [04-moe-expert-offload-caching](04-moe-expert-offload-caching/README.md) | 2 |
@@ -64,8 +64,8 @@
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 16 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
 | [10-sparse-attention](10-sparse-attention/README.md) | 1 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 214 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 215 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 3 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 32 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 33 |
 <!-- survey:auto:end -->
