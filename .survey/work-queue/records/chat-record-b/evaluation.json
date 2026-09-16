@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3cb47aa83cc17c53a36cf3d5",
-  "job_id": "job-research-9d70d3111564c88d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3cb47aa83cc17c53a36cf3d5",
-    "worker_id": "scheduled-chat-paper-20260916T173214JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"evaluation_summary":"GSM8K、CNN/DailyMail、HumanEvalの実acceptance traceでheterogeneous edge-cloudを評価する。edgeはQwen-7B/Llama2-7B等をA40/V100、cloudはLlama2/3-70B・Qwen-72BをA100/H100/A6000でモデル化する。大規模設定は20 target serverと600/1000 draft client、RTT 10/30ms。AWCはstatic gamma=4に対し12条件すべてで最高throughput、最大+9.7%、TPOTは6〜10%程度削減し最大-10.7%。","scope":"distributed draft-target speculative decoding。network RTTが50〜60ms付近を超えるとdistributed advantageが消えfusedが有利になる。","hardware":["NVIDIA A40","NVIDIA V100","NVIDIA A100","NVIDIA H100","NVIDIA A6000"],"software":["DSD-Sim","SimPy","VIDUR","AWC WC-DNN"],"models":["Qwen-7B","Qwen-72B","Llama2-7B","Llama2-70B","Llama3-70B","Llama3.1-8B"],"datasets":["GSM8K","CNN/DailyMail","HumanEval"],"workload":"400 GSM8K、400 CNN/DailyMail、100 HumanEval promptを含むtrace。Poisson arrivalもsupportし、実hardware acceptance sequenceをreplayする。","baselines":["Static window gamma=4","acceptance-threshold Dynamic window","Random routing","Round-Robin","FIFO batching","Length-Aware Batching","cloud-only/fused execution"],"metrics":["throughput requests/s","TTFT","TPOT","end-to-end latency","target utilization","network queue delay","simulation prediction error"],"methodology":"GPU predictorを実hardwareで校正後、20 targetと600/1000 draft、RTT 10/30ms等をsimulationし各policyを3 run平均で比較する。","predictor_accuracy":"VIDUR-based predictorのmean absolute errorはprefill 7.4%、decode 5.2%。","control_knobs":"routing、batching、gamma、fused/distributed mode、RTT、draft/target pool size。"},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
