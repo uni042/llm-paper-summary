@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 01:00:56 JST**
+> 自動生成: **2026-09-17 01:01:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **21** |
 | 未claim Research job | **20** |
 | 直近24hの検証済みResearch収録 | **83** |
-| 最終検証済みResearch収録 | **09-17 00:35:10 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-17 00:35:10 JST（26分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **42** | **5** | **4** | **1** | **0** | **0** | **13** |
-| 合計 | **59** | **13** | **8** | **5** | **1** | **0** | **13** |
+| Discovery | **42** | **6** | **4** | **2** | **0** | **0** | **15** |
+| 合計 | **59** | **14** | **8** | **6** | **1** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,8 +186,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 00:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **1件** / 候補: **13件**
-- 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation / agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮 / tool-call gap KV residency・出力長不確実性KV reservation / cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **2件** / 候補: **15件**
+- 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation / agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮 / tool-call gap KV residency・出力長不確実性KV reservation / cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload / multi-stage network flow scheduling・prefill deflection・KV transfer contention
 - round `specialist-agent-kv-runtime-3` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
   - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation
@@ -207,6 +207,10 @@
 - round `specialist-kv-storage-benchmark-5` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json`
   - 探索軸: cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-network-scheduling-6` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json`
+  - 探索軸: multi-stage network flow scheduling・prefill deflection・KV transfer contention
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -264,10 +268,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **389** |
+| 成功result未照合のimmutable submission | **390** |
 | └ Research | **261** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
