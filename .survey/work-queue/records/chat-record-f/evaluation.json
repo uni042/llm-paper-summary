@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ae853adbe01956e7c70dbf4c",
-  "job_id": "job-research-c5668a715755a331",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ae853adbe01956e7c70dbf4c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ae853adbe01956e7c70dbf4c","job_id":"job-research-c5668a715755a331","data":{"hardware":"実運用プラットフォームCompanyXのサービング記録を解析するが、GPU型など基盤ハードウェアの詳細は公開記録の主要評価軸ではない。負荷分散再生は実GPU測定ではなくインスタンス単位の時間再生である。","software":"接頭辞キャッシュの追い出し再生にlibCacheSimを使用。1年分の公開トレースはHarvardMadSys/chutes_workloadで提供される。","methodology":"2025-04-11〜2026-04-12の未標本化テキストAPI要求61.2億件を解析する。記録には時刻、API、モデル、匿名ユーザー、インスタンス、入出力トークン、完了遅延、先頭トークン時間、キャッシュ済みトークンを含む。キャッシュ情報は最後の2か月を使用する。生プロンプトがないため、同一ユーザーの直近10要求からAPI・モデル一致とトークン長包含条件でセッションを再構成する。単一キャッシュでは10容量点とLRU、FIFO、ARC、S3FIFO、GDSF、Sieve、サイズ考慮Beladyなどを比較する。負荷分散ではDeepSeek V3.2とMiniMax-M2.5を用い、インスタンス数5/10/15/20、各インスタンスのキャッシュ1.1K〜5Mトークンでラウンドロビン、最小負荷優先、ユーザー固定、キャッシュ優先を時間順に再生する。","scope":"実運用記録の長期特性は実測だが、キャッシュ追い出しとルーティング方針の比較は再構成セッションを使うシミュレーションである。CompanyXという単一プラットフォームに由来し、生プロンプトや明示的セッションIDは含まない。","datasets":["CompanyX 1-year production trace: 6,122,413,756 requests, 314,970 users, 9,174 models","DeepSeek V3.2","MiniMax-M2.5","DeepSeek R1"],"metrics":["要求・トークン量","入力・出力長","先頭トークン時間と完了遅延","到着間隔と変動係数","トークンキャッシュヒット率","セッション複製比","最大/平均トークン負荷比"]},"reservation":{"claim_id":"claim-ae853adbe01956e7c70dbf4c","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
