@@ -2,55 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4b0bf8eef80fa393a4c31125",
-  "job_id": "job-research-e8148d67a04de0eb",
+  "attempt_id": "attempt-e9cd8fa2de6db6fb8b95c34a",
+  "job_id": "job-research-3c85afd190edf390",
   "data": {
-    "evaluation_summary": "高性能・中価格帯スマートフォン、ノートPC、Orange Pi 5 Proで、未学習の300合成モデルによる予測器学習と、LLaMA、Qwen、Gemma系の実用モデルによる未見モデル評価を行う。既定の最高周波数ガバナ、QoEを満たす最小周波数を選ぶ期限駆動方式、実測全設定から最良効率を選ぶOracleと比較する。QoEは主に5または10トークン/秒で、熱評価は37℃から連続推論し42℃到達までを測る。",
-    "scope": "主対象はNPUを使う端末内復号であり、プリフィルは最高周波数のままにする。スマートフォン、ノートPC、開発ボードで検証するが、各新規プラットフォームでは約300合成モデルの測定と再学習が必要である。動的疎性や投機的復号は処理量・電力が反復ごとに変わるため現方式では直接対応しない。",
+    "evaluation_summary": "8台のNVIDIA H200をNVLink Gen4で接続した単一ノードで、LLaMA-3-8B/70B、GPT-OSS-20B/120B、DeepSeek-R1-32BをFP16で評価する。入力4K～100万トークン、バッチ4～64、長入力短出力と短入力長出力を混ぜ、オンライン到着はポアソン分布で生成する。障害率5～15%でGPUのメモリバッファを消去し、復旧完了まで他workerを停止させる故障注入を行う。",
+    "scope": "主対象は単一ノード内テンソル並列と、GPUが再起動して既存並列構成へ復帰できるメモリ・カーネル等のソフト障害である。ノード全損や恒久GPU故障、動的なテンソル並列再編成は対象外。長入力プリフィル中心の評価が厚く、復号中心推論やプリフィル・復号分離構成は今後の課題。",
     "hardware": [
-      "高性能スマートフォン",
-      "中価格帯スマートフォン",
-      "ノートPC",
-      "Orange Pi 5 Pro",
-      "追加GPU評価: ARM Mali-G610"
+      "8×NVIDIA H200",
+      "NVLink Gen4",
+      "2×48-core Intel CPU",
+      "1024GB DDR5",
+      "PCIe Gen4, 32GB/s bidirectional"
     ],
     "models": [
-      "LLaMA2-1.3B/7B",
-      "LLaMA3/3.2系3B/1B",
-      "Qwen2-1.5B",
-      "Qwen2.5-1.5B",
-      "Gemma2-2B",
-      "Pangu-π",
-      "300 synthetic LLMs"
+      "LLaMA-3-8B",
+      "LLaMA-3-70B",
+      "GPT-OSS-20B",
+      "GPT-OSS-120B",
+      "DeepSeek-R1-32B"
     ],
     "datasets": [
-      "300 synthetic models generated from six architecture hyperparameters",
-      "text polishing workload",
-      "conversation/agent workload",
-      "back-to-back thermal stress workload"
+      "Medha synthetic serving traces",
+      "long-input/short-output requests",
+      "short-input/long-output requests"
     ],
-    "workload": "復号時のNPU・DDR周波数組合せを走査し、処理量、部品電力またはボード全体電力、トークン/ジュール、表面温度を測定する。スマートフォンとノートPCは専用電力計測器、ボードは外付け電力計を使用する。実アプリでは前景画面描画を含めて総エネルギーを比較する。",
+    "workload": "バッチ4～64、系列長4K～1M。主要比較ではチャンク2K、GhostServeは8:2データ対パリティ比。オンライン評価ではランダム時点に5～15%の故障率でGPU状態を消去する。",
     "baselines": [
-      "Default: NPU/DDR maximum frequency",
-      "Deadline: minimum configuration satisfying QoE",
-      "Oracle: measured best efficiency under QoE",
-      "Ener: energy-aware control without thermal management"
+      "SGLang Base: failure recovery by KV recomputation",
+      "SGLang SSD: asynchronous NVMe checkpoint modeled after PCCheck",
+      "SGLang CPU: asynchronous CPU-memory full replication modeled after DéjàVu"
     ],
     "metrics": [
-      "throughput prediction MAPE",
-      "power prediction MAPE",
-      "efficiency prediction error",
-      "Kendall's Tau efficiency-ranking correlation",
-      "tokens per joule",
-      "QoE compliance",
-      "time/tokens before thermal threshold",
-      "end-to-end total energy reduction"
+      "prefill latency",
+      "decode latency",
+      "checkpoint I/O overhead",
+      "recovery latency",
+      "P50/P99 response latency",
+      "Effective-Inference-Time-Ratio",
+      "Mean-Time-To-Recover",
+      "host memory overhead"
     ],
-    "predictor_accuracy": "未見実モデルで処理量・電力・効率を合わせた平均偏差は高性能スマートフォン6.5%、中価格帯スマートフォン12%、ノートPC9.7%、ボード5.4%。効率順位のKendallの順位相関は前三者で平均0.95、0.90、0.96、ボード0.65。個別の分離型処理量予測MAPEはノートPC4.2%、スマートフォン2.3%、ボード2.4%、電力予測MAPEは1.5%、2.2%、1.7%。",
-    "control_knobs": "NPU周波数、DDR/メモリ周波数、QoE復号速度下限、熱閾値、温度予測周期。温度予測は20秒履歴と21秒地平を使用する。"
+    "predictor_accuracy": "予測器を用いる研究ではない。故障なしと故障注入時の遅延・有効推論時間比・平均復旧時間を直接測定する。",
+    "control_knobs": "消失訂正符号方式、データ:パリティ比、チャンクサイズ、バッチサイズ、テンソル並列度、再計算する先頭チャンク数、故障率。"
   },
   "reservation": {
-    "claim_id": "claim-4b0bf8eef80fa393a4c31125",
+    "claim_id": "claim-e9cd8fa2de6db6fb8b95c34a",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
