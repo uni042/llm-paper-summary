@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a2565d089349c3be98ca6b0e",
-  "job_id": "job-research-38c18cd4bb2728b9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a2565d089349c3be98ca6b0e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a2565d089349c3be98ca6b0e","job_id":"job-research-38c18cd4bb2728b9","data":{"hardware":"350Mパラメータ規模のデコーダ専用Transformerを評価。具体的GPU構成による推論性能は本稿では未報告。","software":"FineWeb-Edu 30Bトークンで一から学習。学習時の勾配スパイク抑制にZClipを使用。専用デコードカーネルは開発済みだが性能測定中。","methodology":"GQA、MLA、単純なK=V共有方式、複数GVA変種を同じデータ順、トークン予算、最適化器、文脈長で比較する。各構成を異なる乱数種で3回学習し、HellaSwag、WinoGrande、OpenBookQA、ARC-Easy、ARC-Challengeのゼロショット精度を算術平均する。学習損失も追跡し、キャッシュ量はGQAの2TGd_hに対しGVAのTGd_h+Td_rとして理論スカラー数を比較する。","scope":"学習品質と永続キャッシュ表現の容量削減を実証する評価であり、実際の自己回帰サービングの遅延・スループット・ピークメモリは未評価である。著者は融合デコードカーネルを開発済みとしているが、GQAやMLAに対するエンドツーエンド速度比較は今後の課題として明示される。"},"reservation":{"claim_id":"claim-a2565d089349c3be98ca6b0e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
