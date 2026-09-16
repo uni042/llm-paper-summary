@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-4aa0bdcf550c974e39ccae92",
-  "job_id": "job-research-b98e4e299d06a6a5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4aa0bdcf550c974e39ccae92",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4aa0bdcf550c974e39ccae92","job_id":"job-research-b98e4e299d06a6a5","data":{"canonical_id":"arXiv:2509.24832","arxiv_id":"2509.24832","doi":"10.18653/v1/2025.findings-ijcnlp.25","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching","summary":"SemShareKVは、完全一致する接頭辞だけを共有する従来KVキャッシュから範囲を広げ、語彙的には異なるが意味的に近いプロンプト間で既計算KVを再利用する。トークン埋め込みを局所性鋭敏ハッシュで曖昧照合し、位置の違いは回転位置埋め込みを考慮して補正する。さらに層ごとの注意特性に応じて再計算・保持するトークン量を変え、5千トークン入力で完全再計算比最大6.25倍の初回トークン高速化とGPU KVメモリ42%削減を、ROUGE-Lをほぼ維持しながら達成する。","list_summary":"意味的に近い別プロンプトをトークンLSHで対応付け、位置補正と層別再計算により完全一致なしでもKVを選択再利用する。","authors":["Xinye Zhao","Spyridon Mastorakis"],"published":"2025-09-29","publication":"Findings of IJCNLP-AACL 2025, pp.432-445","publication_type":"国際会議Findings論文","publication_status":"Published","lineage":"other-inference-systems","topics":["意味的KV共有","局所性鋭敏ハッシュ","KVキャッシュ圧縮"],"importance":"prefix cachingの完全一致制約を意味類似へ緩和し、会話・複数文書要約のように内容は近いが表現が違う要求間でprefill計算を共有する設計空間を示す。","hardware_evaluation":"Mistral-7B、LLaMA-3.1-8B、MPT-7Bを用いた長文要約評価。取得した公開本文情報ではGPU型番を確認できなかった。","quality_effect":"近似的なKV再利用なので品質影響はあり得るが、評価した要約データではROUGE-Lは完全再計算と同等または一部で改善し、意味類似度低下に伴い緩やかに劣化する。","source":"https://aclanthology.org/2025.findings-ijcnlp.25/","sources":["https://aclanthology.org/2025.findings-ijcnlp.25/","https://arxiv.org/abs/2509.24832"],"code":null,"implementation":"トークン埋め込みLSH、RoPE位置補正、層依存の再計算・保持戦略を統合した研究実装。現実装はFlashAttention非対応と論文で述べられる。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"ACL Anthology paper reference section; normalized identifiers not exhaustively extracted","references_total":0},"reservation":{"claim_id":"claim-4aa0bdcf550c974e39ccae92","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
