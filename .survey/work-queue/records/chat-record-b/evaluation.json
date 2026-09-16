@@ -1,1 +1,49 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"evaluation_summary":"8基H100-SXM-80GB clusterでOPT-30B、Llama-3.3-70B-FP8、Qwen2.5-72B-FP8を評価。BurstGPT、Azure Code、Azure Conversationのproduction traceとShareGPT contentを用い、static P/D構成とdynamic scalingを分けて比較する。","scope":"PD-disaggregated servingのP/D比最適化、mixed-length scheduling、dynamic instance scaling。","hardware":["8x NVIDIA H100-SXM-80GB"],"software":["NVIDIA Dynamo","NIXL","Prometheus","NVML","etcd","NATS","ARIMA"],"models":["OPT-30B","Llama-3.3-70B-FP8","Qwen2.5-72B-FP8"],"datasets":["BurstGPT","Azure Code Trace","Azure Conversation Trace","ShareGPT"],"workload":"production trace replayによるmixed-length・bursty request。static testではAzure trace先頭1024件、dynamic testではBurstGPT timestampを再生。","baselines":["vLLM","DistServe","Dynamo","DYN-LOAD","DYN-SLA"],"metrics":["goodput","throughput","P90 TTFT","P90 TPOT","E2E latency","SLO attainment","GPU count/utilization","maximum concurrency"],"methodology":"P/D ratio計算の妥当性を固定ISL/OSLでP-instance数をsweepして確認後、同GPU budgetのstatic比較と、1P(TP1)+1D(TP2)から始めるdynamic trace replayを実施。","predictor_accuracy":"ARIMAはfuture concurrency誤差10 request以内かつISL/OSL誤差50 token以内をaccuracyと定義し87%以上。稀なburst failureは5%未満。","control_knobs":"P/D instance数、P/D TP、adjust interval、queue/KV overload threshold、short-request batch token budget、timeout。"},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-fc4b8ea523432819ced2a1bb",
+  "job_id": "job-research-af7d4aee1c99dd28",
+  "data": {
+    "evaluation_summary": "8基のAMD Instinct MI300Xを搭載した単一node、ROCm 6.4、vLLM v0.10.2系で実機評価。Llama-3.1 70BとMixtral-8x7B、短文LMSYS・8K級arXiv・20K級Loogle workloadを用い、offered QPSを低負荷から飽和までsweepする。",
+    "scope": "同一nodeのresource-constrained LLM servingでhybrid batching、cross-GPU disaggregation、RAPID-Serveを比較。",
+    "hardware": [
+      "8x AMD Instinct MI300X"
+    ],
+    "software": [
+      "ROCm 6.4",
+      "vLLM v1 v0.10.2rc3",
+      "HIP Graphs"
+    ],
+    "models": [
+      "Llama-3.1 70B",
+      "Mixtral-8x7B"
+    ],
+    "datasets": [
+      "LMSYS trace",
+      "arXiv summarization workload",
+      "Loogle summarization"
+    ],
+    "workload": "LMSYS平均prompt約2K、arXiv約8K、Loogle約20K。各負荷でQPSをsweep。",
+    "baselines": [
+      "chunked hybrid batching chunk=512/1024等",
+      "vLLM disaggregated serving 4P-4D"
+    ],
+    "metrics": [
+      "throughput",
+      "goodput",
+      "p95 TTFT",
+      "p95 ITL",
+      "GPU compute utilization",
+      "memory utilization"
+    ],
+    "methodology": "LMSYSとarXivはprompt長で層化して各1万件にtruncate。Llama-3.1 70Bではhybridと4P-4D disaggregationを比較し、MixtralはvLLMがMoE disaggregation非対応のためhybrid中心。goodputはITLとlength-dependent TTFTの両SLOを満たす最大request rateとして評価。",
+    "predictor_accuracy": "予測器ではなくoffline profileでdecode batch sizeごとの必要CUを決める。",
+    "control_knobs": "prefill chunk size、prefill/decode CU allocation、decode batch size、offered QPS、ITL SLO。"
+  },
+  "reservation": {
+    "claim_id": "claim-fc4b8ea523432819ced2a1bb",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
+    "worker_kind": "scheduled_chat"
+  }
+}

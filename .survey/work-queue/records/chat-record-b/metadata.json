@@ -1,1 +1,58 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"canonical_id":"arXiv:2511.20982","arxiv_id":"2511.20982","doi":"10.48550/arXiv.2511.20982","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving","summary":"DOPDはPD分離型LLM servingで、実負荷に応じた最適prefill/decode instance比を解析的に求め、ARIMAによる短期負荷予測とelastic scalingで比率を動的に再構成する。mixed-length requestにはlength-aware batchingとultra-short requestの局所PD aggregationを併用する。8基H100実機とAzure/BurstGPT production traceで、vLLM/DistServe等に対しgoodput最大1.5倍、P90 TTFT最大67.5%低下、P90 TPOT最大22.8%低下、dynamic workloadでSLO達成率99.4%を報告する。","list_summary":"負荷予測と解析的な最適P/D比でprefill/decode instanceを動的再構成し、8x H100実機でgoodput最大1.5倍・SLO達成99.4%を報告。","authors":["Junhan Liao","Minxian Xu","Wanyi Zheng","Yan Wang","Kejiang Ye","Rajkumar Buyya","Chengzhong Xu"],"published":"2025-11-26","publication":"IEEE Transactions on Services Computing 2026 / arXiv:2511.20982v3","publication_type":"Journal + arXiv","publication_status":"Published","lineage":"dynamic-pd-disaggregation","topics":["PD disaggregation","dynamic scaling","optimal P/D ratio","load prediction","length-aware scheduling"],"importance":"static PD分離のproducer-consumer imbalanceを、予測だけでなく最適P/D比の明示計算とproactive scalingで扱う。","hardware_evaluation":"8x NVIDIA H100-SXM-80GB local cluster。","quality_effect":"modelやattention近似を変更せずserving resource allocationを最適化する。","source":"https://arxiv.org/abs/2511.20982","sources":["https://arxiv.org/abs/2511.20982","https://arxiv.org/html/2511.20982v3"],"code":"https://github.com/liao4s/DOPD","implementation":"NVIDIA Dynamoを拡張し、Resource Monitor、Router、NIXL Connector、PD Manager、Request Schedulerを実装。etcd/NATS/Prometheus/NVMLを使用。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv v3全文を確認。","references_total":0},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-fc4b8ea523432819ced2a1bb",
+  "job_id": "job-research-af7d4aee1c99dd28",
+  "data": {
+    "canonical_id": "arXiv:2601.11822",
+    "arxiv_id": "2601.11822",
+    "doi": "10.48550/arXiv.2601.11822",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
+    "summary": "RAPID-Serveはprefillとdecodeを別GPU群へ分離せず、同一GPU上の別process・別kernelとして並行実行するLLM serving engineである。共有KV cacheによりinter-device KV transferをなくし、AMD InstinctのCU maskingとoffline profileに基づくAdaptive Resource ManagerでdecodeのITL SLOを満たす最小CUだけを割り当てる。vLLM v1を基盤に8基のMI300XでLlama-3.1 70BとMixtral-8x7Bを評価し、chunked hybrid batching比でunconstrained throughput最大4.1倍・平均1.7倍、SLO下goodput最大32倍・平均4.9倍を報告する。",
+    "list_summary": "同一GPU内でprefill/decodeを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機でgoodput平均4.9倍を報告。",
+    "authors": [
+      "Amna Masood",
+      "Pratishtha Gaur",
+      "Nuwan Jayasena"
+    ],
+    "published": "2026-01-16",
+    "publication": "arXiv:2601.11822v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "prefill-decode-intra-gpu-disaggregation",
+    "topics": [
+      "LLM serving",
+      "prefill/decode",
+      "intra-GPU disaggregation",
+      "CU masking",
+      "SLO-aware resource allocation"
+    ],
+    "importance": "cross-GPU PD分離のKV転送・メモリ不均衡とhybrid batchingのphase interferenceを、同一GPU上の独立並行実行で同時に回避する設計点を示す。",
+    "hardware_evaluation": "単一node・AMD Instinct MI300X 8基、ROCm 6.4。",
+    "quality_effect": "近似やmodel変更を行わずserving executionのみを変更するため生成品質は保持される。",
+    "source": "https://arxiv.org/abs/2601.11822",
+    "sources": [
+      "https://arxiv.org/abs/2601.11822",
+      "https://arxiv.org/html/2601.11822v1"
+    ],
+    "code": null,
+    "implementation": "vLLM v1 v0.10.2rc3を基盤に、prefill/decode multiprocessing、共有weights/KV、PagedAttention KV manager、async scheduling、HIP Graphs、CU masking、Adaptive Resource Managerを実装。",
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv v1全文を確認。",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-fc4b8ea523432819ced2a1bb",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
+    "worker_kind": "scheduled_chat"
+  }
+}
