@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bb5c53d2afbda5e72b28dcf5",
-  "job_id": "job-research-f992ed2fc8c47a46",
+  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
+  "job_id": "job-research-d1705edaabc0afa6",
   "data": {
-    "limitations": "最大の制約は投機的デコードの受理率である。ドラフト候補が複数バッチにわたり受理されない場合、ドラフト計算を重ねても対象モデルが複数トークンを進められず加速効果が小さい。評価はMixtral 8x7B/8x22BとMistral 7B、単一RTX 4090、主に高スループット型ワークロードへ集中しており、他モデル系統・オンライン低遅延要求・複数GPUへの一般化は未実証。ParaSpec Plannerは事前プロファイルを必要とし、OS変動、ハードウェア測定誤差、候補受理の確率性により最適設定からずれる可能性がある。CPUメモリを超えてディスクへ退避すると性能は元の29.3%まで落ち、低速階層の帯域そのものは解消しない。",
-    "differences": "FlexGenが層重みの転送を大バッチで償却し、Fiddler等がCPU/GPUへMoE計算を分担するのに対し、SpecOffloadはオフロードが生むGPUの計算待ちと低効率なメモリ容量を別の推論仕事、すなわち投機的デコードへ再利用する。通常の投機的デコードをオフロードへ直列追加するとドラフト側のI/Oと切替が増えるため、二重バッチ交替と層内のCPU注意計算・FFN転送・GPUドラフト計算の同時実行を一体化している。さらにGPU/CPU/ディスクのテンソル配置と投機パラメータを同じ資源制約下で決める点が、単なる投機デコード導入との差である。",
-    "implementation_status": "Hugging Face Transformers 4.47.1上の公開研究実装がGitHubで提供され、Mixtral 8x7B/8x22B、Mistral 7B、HumanEval等の実行例とベンチマークコードを含む。2026-09-17確認時点でarXivプレプリントかつICLR 2026 OpenReview投稿として確認。",
-    "research_positioning": "階層メモリ／オフロード系統の中でも、データ移動量の削減だけでなくI/O待ちによる異種資源の不均衡を別計算で埋める方式に位置する。SSD/NVMeまで含む階層ではディスク帯域がなお支配的になる結果も示しており、将来のストレージ先読み・圧縮・直接転送方式と組み合わせる余地が大きい。MoEでは対象モデルのFFN重み転送とドラフト計算を重ねるため、エキスパート配置・予測型先読みとの統合も自然な拡張候補となる。"
+    "limitations": "Shared版評価はLlama-3.2-1BとSQuAD、単一ホスト2GPUに限られ、複数ホストで中央KV管理器を共有した際のネットワーク帯域・整合性・障害耐性は未評価。KVはモデル固有でモデル更新時に再生成が必要となり、全SQuAD文書を保持するだけでもOPT 6.7Bで16GBと容量費用が増える。低負荷では待ち行列が短く先行生成機会が少ない。top-k文書の組合せをまとめてKV化すると精度は保ちやすいが、組合せ数が増えて再利用率と保存効率が低下し得る。",
+    "differences": "RAGCacheのGPU/CPU多段キャッシュに対してSSDを大容量の永続層として前面に出し、TurboRAGの事前計算KVに対して複数LLMインスタンス間の共有と待ち行列時間を使った動的先行生成を追加する。一般的なKVオフロードが単一要求のメモリ不足を解くのに対し、本方式はRAG文書という要求横断で再利用可能な接頭辞をSSD上の共有資産にする。",
+    "implementation_status": "FaissとNVMe SSDを使う研究プロトタイプを実機評価。論文本文には公開実装URLが記載されていないため、コード公開は確認できない。",
+    "research_positioning": "SSD/NVMe活用系統で、低速階層を容量拡張だけでなく計算結果の永続共有層として利用する例。特にRAGの文書局所性と待ち行列というワークロード特性を使い、KV生成時刻を前倒しして複数インスタンスへ再利用する。今後はKV圧縮、SSD上の選択的保持、GPUDirect Storage、分散共有キャッシュ、予測型プリフェッチと組み合わせる余地がある。"
   },
   "reservation": {
-    "claim_id": "claim-bb5c53d2afbda5e72b28dcf5",
+    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

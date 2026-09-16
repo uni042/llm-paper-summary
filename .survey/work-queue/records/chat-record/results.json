@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bb5c53d2afbda5e72b28dcf5",
-  "job_id": "job-research-f992ed2fc8c47a46",
+  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
+  "job_id": "job-research-d1705edaabc0afa6",
   "data": {
-    "overview": "SpecOffloadはRTX 4090 24GB上で対象モデルのI/O待ちへドラフト計算を埋め込み、最強比較対象FlexGenに対してMixtral 8x7Bで平均2.53倍、8x22Bで平均2.54倍のエンドツーエンドスループットを達成した。SummEvalで8x7Bを測ったGPU平均コア利用率は58.67%となり、FlexGen比4.49倍。アブレーションでは投機的デコードを単純に直列結合するだけでは全最適化より大幅に遅く、二重バッチ重畳と方策探索の双方が必要であることを示す。",
+    "overview": "単一インスタンスRAG-DCacheはOPT 1.3B/2.7B/6.7Bで平均QPSを17.53から20.07へ上げ、TTFTを概ね10〜20%短縮した。複数インスタンスではCPUにKV生成を任せGPU 2基を推論へ残す構成が最良で、top-k=1は23.96→27.98 QPS、75.75→47.92秒、top-k=2は14.34→17.96 QPS、208.22→146.17秒となった。GPU 1基をKV生成専用にすると推論GPUがボトルネックになり、top-k=2では基準より悪化する場合もあった。",
     "key_results": [
       {
-        "metric": "エンドツーエンドスループット",
-        "value": "Mixtral 8x7BでFlexGen比平均2.53倍、Mixtral 8x22Bで平均2.54倍",
-        "baseline": "FlexGen",
-        "condition": "Env #1/#2、主要データセット",
-        "interpretation": "対象モデルの重み常駐量を増やすより、遊休GPUへドラフトモデルを置きI/O待ちを投機計算へ変える方が高い効果を持つ。"
+        "metric": "単一インスタンス平均スループット",
+        "value": "17.53→20.07 QPS",
+        "baseline": "通常RAG",
+        "condition": "OPT 1.3B/2.7B/6.7B平均",
+        "interpretation": "NVMe読込み費用より文書プリフィル再計算の削減が大きい。"
       },
       {
-        "metric": "GPUコア利用率",
-        "value": "58.67%、FlexGen比4.49倍",
-        "baseline": "FlexGen",
-        "condition": "Mixtral 8x7B、Env #1、SummEval、デコード段階",
-        "interpretation": "ドラフトモデルが対象モデルの転送待ち時間に連続計算する設計が、従来オフロードの低利用率を直接改善する。"
+        "metric": "単一インスタンスTTFT",
+        "value": "概ね10〜20%削減",
+        "baseline": "通常RAG",
+        "condition": "SQuAD、複数モデル・バッチ",
+        "interpretation": "モデルとバッチが大きいほど削減するGPU計算量が増え効果が大きい。"
       },
       {
-        "metric": "比較対象別高速化",
-        "value": "Accelerate比4.69倍、DeepSpeed比4.71倍、FlexGen比2.54倍、Fiddler比4.04倍",
-        "baseline": "4種オフロード方式",
-        "condition": "論文が報告する主要評価の最大/代表高速化",
-        "interpretation": "単純な層退避、全重み退避、CPU-GPU MoE実行、FlexGenのいずれよりも高いスループットを示す。"
+        "metric": "Shared構成B top-k=1",
+        "value": "23.96→27.98 QPS、75.75→47.92秒",
+        "baseline": "共有KVなし2GPU推論",
+        "condition": "CPU KV生成、GPU×2推論、40 req/s",
+        "interpretation": "CPUの空き計算を待ち時間中のKV準備へ使い、GPU推論並列度を維持する構成が有効。"
       },
       {
-        "metric": "アブレーション",
-        "value": "SummEval 8x7B: 全最適化24.743 token/s、方策探索なし15.624、直列SD17.048、SDなし12.369。8x22B: 5.911、3.486、4.146、1.698 token/s",
-        "baseline": "各機構除去",
-        "condition": "SummEval",
-        "interpretation": "投機的デコード自体だけでなく、オフロード内への重畳とパラメータ方策探索が性能に寄与する。"
+        "metric": "Shared構成B top-k=2",
+        "value": "14.34→17.96 QPS、208.22→146.17秒",
+        "baseline": "共有KVなし2GPU推論",
+        "condition": "CPU KV生成、GPU×2推論",
+        "interpretation": "文書数増加で絶対負荷は上がるが共有KVにより性能低下を緩和する。"
       },
       {
-        "metric": "ディスク退避",
-        "value": "DRAM不足でディスクへ退避すると元の29.3%のスループット",
-        "baseline": "Env #2のディスクなし条件",
-        "condition": "Mixtral 8x22B、Env #1、ディスク3.5GB/s読出し",
-        "interpretation": "GPU-CPU重畳は有効でも、CPUメモリを超えて低速ストレージへ達するとI/O律速が再び支配的になる。"
+        "metric": "ストレージ費用",
+        "value": "SQuADで通常Faiss DB 0.5MBに対しKV付きはOPT 1.3B 5.9GB、2.7B 9.9GB、6.7B 16GB、Llama 1B 1GB",
+        "baseline": "通常ベクトルDB",
+        "condition": "全対象KV保持",
+        "interpretation": "計算削減と引き換えに数GB〜十数GBの永続容量を消費し、局所性に応じた保持選択が必要。"
       }
     ],
-    "negative_results": "ディスク退避時はスループットがディスクなしの29.3%まで低下する。また投機的デコードは候補受理率に依存し、複数バッチで候補がほぼ受理されない極端条件では加速効果が大きく失われる。ParaSpec PlannerもOS変動や実測誤差、受理率の不確実性により追加調整が必要になり得る。",
-    "interpretation": "本質はI/Oを消すことではなく、I/O律速で余っている別資源へ有用な仕事を移すことにある。GPUメモリを対象モデルの数層追加常駐へ使っても転送総量がほぼ変わらない領域では、その容量をドラフトモデルへ再配分し、同時にGPU待ち時間をドラフト計算で埋めることで資源間の不均衡を性能へ変換できる。",
-    "quality_impact": "対象モデルによる投機候補検証を使うため生成品質を犠牲にする方式ではない。ただし候補受理率が低いワークロードでは性能上の利得が縮む。"
+    "negative_results": "初期RAG-DCacheでtop-k>1の文書KVを独立生成すると文書間注意を欠き、通常RAGより精度が低下したため、Shared版ではtop-k文書集合をまとめてKV化する設計へ変更した。GPU 1基をKV生成専用にする構成Aはtop-k=2で残り1基の推論GPUが詰まり、キャッシュのオーバーヘッドが利得を相殺して基準と同等または悪化する試行がある。",
+    "interpretation": "SSD容量を使ってプリフィル計算を時間方向に移し、さらに複数インスタンス間で共有することで、同じRAG文書への反復計算を永続的なデータ再利用へ変換する。性能はSSD帯域だけでなく、KV生成へどの計算資源を割り当てるかと待ち行列の混雑度に強く依存する。",
+    "quality_impact": "top-k=1では精度同等。top-k>1は文書単位KVの単純連結では精度低下するため、文書集合を同時処理してKVを生成する必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-bb5c53d2afbda5e72b28dcf5",
+    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

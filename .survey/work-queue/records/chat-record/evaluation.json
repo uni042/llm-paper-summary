@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bb5c53d2afbda5e72b28dcf5",
-  "job_id": "job-research-f992ed2fc8c47a46",
+  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
+  "job_id": "job-research-d1705edaabc0afa6",
   "data": {
-    "hardware": "Env #1: RTX 4090 24GB、Intel i9-10980XE、DRAM 256GB、PCIe Gen3 x16。Env #2: RTX 4090 24GB、AMD EPYC 7542、DRAM 448GB、PCIe Gen4 x16。ディスク退避実験では読出し3.5GB/s、書込み1.7GB/s。",
-    "software": "Hugging Face Transformers 4.47.1上のSpecOffload実装。比較対象はAccelerate 1.5.2、DeepSpeed Zero-Inference 0.16.1、FlexGen、Fiddler。FlexGenはMixtralへ原方式を保つ形で移植。NVIDIA NsightでGPU利用率とメモリを計測。",
-    "methodology": "対象モデルはbfloat16のMixtral 8x7B（46.7Bパラメータ）とMixtral 8x22B（141Bパラメータ）、ドラフトはMistral 7B。HumanEval、C-Eval、SummEval、SAMSumを使用し、主要エンドツーエンド比較は2環境・複数データセットでプリフィルとデコードを含む生成スループットを測る。機構分析ではGPUコア利用率、GPUメモリ使用、計算・I/O・CPU処理時間の内訳を計測する。アブレーションでは方策探索なし、投機的デコードの直列結合、投機的デコードなしを比較する。さらにDRAM不足時にMixtral 8x22Bの一部をディスクへ退避する。",
-    "scope": "高スループットのオフライン型バッチ推論を主対象とし、Mixtral系MoE対象モデルとMistral 7Bドラフト、単一RTX 4090環境で評価する。オンライン低遅延サービング、他アーキテクチャ、複数GPU、異なるドラフト品質への一般化は直接評価していない。"
+    "hardware": "単一ホスト。AMD Ryzen 9 3900XT 12コア、NVIDIA RTX 2080 SUPER 8GB×2、RAM 64GB、Samsung 970 EVO NVMe SSD 500GB（読出し3.4GB/s、書込み2.4GB/s）。",
+    "software": "Faiss IndexFlatIP、all-MiniLM-L6-v2埋め込み。単一インスタンスはfacebook/opt-1.3b/2.7b/6.7b、複数インスタンスはLlama-3.2-1B。",
+    "methodology": "SQuAD v1.1を使用。単一インスタンスでは2,000要求、16GB CPUメモリキャッシュを設定し、通常RAGとRAG-DCacheのTTFT、プリフィル時間、KV読込み時間、QPSをモデル・バッチ別に比較する。複数インスタンスでは1,000要求を40 req/sで流し、top-k=1/2、メモリキャッシュ無効で共有ディスク効果を分離する。構成AはGPU 1基をKV生成、残り1基を推論、構成BはCPUをKV生成、GPU 2基を推論へ使う。データセットをランダム順で複数回処理しディスクKV蓄積によるヒット率変化も観測する。",
+    "scope": "単一ホスト2GPU/1CPUのRAGサービスとSQuAD中心の評価。Shared版はデコード長の変動を避けるためプリフィル段階に測定を限定し、複数ホスト間のネットワーク共有性能や大規模モデルでのShared版挙動は直接測っていない。"
   },
   "reservation": {
-    "claim_id": "claim-bb5c53d2afbda5e72b28dcf5",
+    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
