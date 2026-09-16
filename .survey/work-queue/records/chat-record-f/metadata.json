@@ -5,97 +5,19 @@
   "attempt_id": "attempt-2333dff6f7c985a64b4f4c2e",
   "job_id": "job-research-08ba7261bc105f34",
   "data": {
-    "canonical_id": "arXiv:2609.13592",
-    "arxiv_id": "2609.13592",
-    "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+    "canonical_id": "arXiv:2609.13592", "arxiv_id": "2609.13592", "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
     "summary": "大規模言語モデルの復号は高帯域メモリの容量だけでなく帯域にも制約される一方、CPU側のホストメモリ帯域は従来の階層型オフロードでは十分に利用されない。本研究は、GPUの各実行波で高帯域メモリとホストメモリへ同時かつ帯域比に比例して要求を振り分けることが重要だと示し、静的な重みには波を意識した剰余ページ配置、動的なKVキャッシュには実行時のデータ形状再配置を用いるBOOSTを提案する。vLLMへ約800行の変更で統合し、カーネルを書き換えずに容量増加と帯域加算を同時に得る。Grace Hopper実機では同一バッチ時の出力トークン時間を平均4.3%改善し、高スループット条件では平均31%の処理量向上を示した。",
-    "source": "https://arxiv.org/abs/2609.13592",
-    "sources": [
-      "https://arxiv.org/abs/2609.13592",
-      "https://arxiv.org/html/2609.13592"
-    ],
-    "authors": [
-      "Anish Saxena",
-      "Jae Hyung Ju",
-      "Hritvik Taneja",
-      "Po-An Tsai",
-      "Aamer Jaleel",
-      "Christos Kozyrakis",
-      "Moinuddin Qureshi"
-    ],
-    "published": "2026-09-11",
-    "publication": "arXiv preprint",
-    "publication_type": "preprint",
-    "publication_status": "preprint",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AR",
-        "cs.LG"
-      ]
-    },
-    "topics": [
-      "LLM inference",
-      "heterogeneous memory",
-      "HBM",
-      "host memory",
-      "vLLM",
-      "KV cache"
-    ],
-    "implementation": "論文ではvLLM 0.17.0へ約800行のPython/PyTorch変更として実装したと報告している。公開コードURLは一次資料および公開検索で確認できなかった。",
-    "code": null,
+    "list_summary": "HBMとホストメモリを階層的に入れ替えるのでなく同時アクセスし、GPU実行波ごとに帯域比で重み・KVキャッシュを分散して、Grace Hopper上のLLM推論スループットを高める。",
+    "source": "https://arxiv.org/abs/2609.13592", "sources": ["https://arxiv.org/abs/2609.13592", "https://arxiv.org/html/2609.13592"],
+    "authors": ["Anish Saxena", "Jae Hyung Ju", "Hritvik Taneja", "Po-An Tsai", "Aamer Jaleel", "Christos Kozyrakis", "Moinuddin Qureshi"],
+    "published": "2026-09-11", "publication": "arXiv preprint", "publication_type": "preprint", "publication_status": "preprint",
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AR", "cs.LG"]},
+    "topics": ["LLM inference", "heterogeneous memory", "HBM", "host memory", "vLLM", "KV cache"],
+    "implementation": "論文ではvLLM 0.17.0へ約800行のPython/PyTorch変更として実装したと報告している。公開コードURLは一次資料および公開検索で確認できなかった。", "code": null,
     "hardware_evaluation": "主評価は96GB HBMと480GB CPUメモリを備えるNVIDIA GH200 Grace Hopper実機。追加で2台のH100をNVLink接続して二次メモリ帯域比12%を模擬し、テンソル並列2でも評価している。",
     "quality_effect": "モデル計算や重み・KV値の数値表現を近似変更する方式ではなく、同じデータを異なる物理メモリ階層へ配置して通常のキャッシュライン読み出しで参照するため、論文の評価対象では生成品質を変えない性能最適化として扱われる。",
-    "references": [
-      {
-        "canonical_id": "arXiv:2408.11556",
-        "arxiv_id": "2408.11556"
-      },
-      {
-        "canonical_id": "arXiv:2407.21783",
-        "arxiv_id": "2407.21783"
-      },
-      {
-        "canonical_id": "arXiv:2501.12948",
-        "arxiv_id": "2501.12948"
-      },
-      {
-        "canonical_id": "arXiv:2401.14196",
-        "arxiv_id": "2401.14196"
-      },
-      {
-        "canonical_id": "arXiv:2412.19437",
-        "arxiv_id": "2412.19437"
-      },
-      {
-        "canonical_id": "arXiv:2501.19393",
-        "arxiv_id": "2501.19393"
-      },
-      {
-        "canonical_id": "arXiv:2501.01005",
-        "arxiv_id": "2501.01005"
-      },
-      {
-        "canonical_id": "arXiv:2411.09317",
-        "arxiv_id": "2411.09317"
-      },
-      {
-        "canonical_id": "arXiv:2501.08192",
-        "arxiv_id": "2501.08192"
-      },
-      {
-        "canonical_id": "arXiv:2505.10259",
-        "arxiv_id": "2505.10259"
-      }
-    ],
-    "references_checked_at": "2026-09-16T06:05:00Z",
-    "references_source": "arXiv HTML reference section",
-    "references_total": 57,
-    "last_checked": "2026-09-16"
+    "references": [{"canonical_id":"arXiv:2408.11556","arxiv_id":"2408.11556"},{"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"},{"canonical_id":"arXiv:2501.12948","arxiv_id":"2501.12948"},{"canonical_id":"arXiv:2401.14196","arxiv_id":"2401.14196"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:2501.19393","arxiv_id":"2501.19393"},{"canonical_id":"arXiv:2501.01005","arxiv_id":"2501.01005"},{"canonical_id":"arXiv:2411.09317","arxiv_id":"2411.09317"},{"canonical_id":"arXiv:2501.08192","arxiv_id":"2501.08192"},{"canonical_id":"arXiv:2505.10259","arxiv_id":"2505.10259"}],
+    "references_checked_at": "2026-09-16T06:05:00Z", "references_source": "arXiv HTML reference section", "references_total": 57, "last_checked": "2026-09-16"
   },
-  "reservation": {
-    "claim_id": "claim-2333dff6f7c985a64b4f4c2e",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-2333dff6f7c985a64b4f4c2e","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
 }
