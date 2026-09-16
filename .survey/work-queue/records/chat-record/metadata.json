@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-9333f33610f25827f87c2af1",
   "job_id": "job-research-99325bb434e8c117",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9333f33610f25827f87c2af1",
-    "worker_id": "scheduled-chat-20260917t043138-0900",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2609.16161",
+    "arxiv_id": "2609.16161",
+    "doi": "10.48550/arXiv.2609.16161",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "LLM Inference in a Flash!",
+    "summary": "フラッシュ内計算（Compute-in-Flash）で大規模言語モデル推論を成立させるため、浮動小数点演算への退避を避けるエンドツーエンド整数量子化と、書換え耐久性を消費するKVキャッシュ更新を静的辞書と疎な係数へ置き換える圧縮を組み合わせる。最近のKVだけを高密度な局所窓に残し、古いKVは辞書原子の索引と係数として保持することで、フラッシュの大容量・内部読出し帯域を利用しつつ動的書込みを抑える。Llama-3.1-8BとQwen-2.5-7BではLongBench平均をほぼ維持しながら動的KV転送量を約15分の1にし、解析モデルでは長文脈ほど遅延・エネルギー面の利得が大きくなることを示す。",
+    "list_summary": "フラッシュ内計算向けに整数のみのLLM推論と静的辞書型KV圧縮を共同設計し、品質をほぼ維持したまま動的KV転送を約15分の1へ削減する。",
+    "authors": ["Sebastian Zhao", "Minseo Kim", "Coleman Hooper", "Luca Manolache", "Michael W. Mahoney", "Yakun Sophia Shao", "Kurt Keutzer", "Amir Gholami"],
+    "authors_affiliations": "UC Berkeley; ICSI; LBNL",
+    "published": "2026-09-14",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "flash compute-in-memory / KV-cache compression / integer-only inference",
+    "topics": ["フラッシュ内計算", "KVキャッシュ圧縮", "整数量子化", "階層メモリ", "長文脈推論"],
+    "importance": "SSDやフラッシュを単なる低速な退避先ではなく、重みとKV辞書を常駐させて近傍計算を行う実行資源として扱う。特にKVの頻繁な書込みを疎な係数へ変換するため、フラッシュ耐久性と帯域の両方をアルゴリズム側から緩和する点が重要である。",
+    "hardware_evaluation": "実機CIM-SSD測定ではなく、公開ハードウェア値に基づく解析PythonモデルでPCIe接続NPU+DDR5とCIM-SSDを比較する。PCIe Gen4 x4を8 GB/s、制御器とCIM配列間を16 GB/sとして、Llama-3.1-8Bのバッチ1デコードを1K〜256K文脈で評価する。",
+    "quality_effect": "近似手法であり完全無損失ではない。LongBench平均はLlama-3.1-8Bで44.07から43.65、Qwen-2.5-7Bで44.44から44.23へ低下し、両モデルで基準の約99%を維持する。",
+    "source": "https://arxiv.org/abs/2609.16161",
+    "sources": ["https://arxiv.org/abs/2609.16161", "https://arxiv.org/html/2609.16161"],
+    "code": null,
+    "implementation": "論文は整数量子化、辞書学習・疎符号化、解析システムモデルを説明するが、arXiv論文ページ上で公式コードURLは確認できなかった。システム性能値は実CIM-SSD試作機ではなく解析モデルによる推定である。",
+    "last_checked": "2026-09-17",
+    "storage_targets": ["Flash CIM", "SSD controller SRAM", "DDR5 DRAM"],
+    "bottlenecks": ["メモリ帯域", "KVキャッシュ書込み耐久性", "浮動小数点演算退避", "長文脈KV転送"],
+    "hardware_details": "CIM-SSDは静的な重みと層別KV辞書をフラッシュ配列へ置き、制御器でINT8/INT32演算を行う。S1は圧縮係数を制御器SRAMに保持し、S2は長文脈対応のため係数をDRAMへ置く。",
+    "evidence_locations": ["§3.1", "§3.2", "§4", "§5", "§7", "Appendix A"],
+    "references": [
+      {"canonical_id": "arXiv:2512.03608", "arxiv_id": "2512.03608", "title": "KVNAND: efficient on-device large language model inference using dram-free in-flash computing"},
+      {"canonical_id": "arXiv:2508.10395", "arxiv_id": "2508.10395", "title": "XQuant: breaking the memory wall for llm inference with kv cache rematerialization"},
+      {"canonical_id": "arXiv:2406.08413", "arxiv_id": "2406.08413", "title": "Memory is all you need: an overview of compute-in-memory architectures for accelerating large language model inference"},
+      {"canonical_id": "arXiv:2309.08600", "arxiv_id": "2309.08600", "title": "Sparse autoencoders find highly interpretable features in language models"}
+    ],
+    "references_checked_at": "2026-09-17",
+    "references_source": "primary-reference-section",
+    "references_total": 57
+  },
+  "reservation": {"claim_id": "claim-9333f33610f25827f87c2af1", "worker_id": "scheduled-chat-20260917t043138-0900", "worker_kind": "scheduled_chat"}
 }
