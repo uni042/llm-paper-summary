@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:05:30 JST**
+> 自動生成: **2026-09-16 16:05:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **36** |
 | 未claim Research job | **33** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-16 15:51:37 JST（13分前）** |
+| 最終検証済みResearch収録 | **09-16 15:51:37 JST（14分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.12923` — Dissecting GPU Utilization for LLM Inference on Nvidia Hopper / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 16:01:46 JST** / heartbeat: **—** / lease expiry: **09-16 17:31:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-21d58015b4f64394.json`
+- `arXiv:2609.11356` — Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 16:05:43 JST** / heartbeat: **—** / lease expiry: **09-16 17:35:43 JST**
+  - evidence: `.survey/work-queue/claims/job-research-23c1aef2e7b819be.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`

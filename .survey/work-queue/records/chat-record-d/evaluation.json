@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-428f28e1f2d60e7c980a0805","job_id":"job-research-21d58015b4f64394","data":{"evaluation_summary":"単一H100 NVLで4モデルをBF16・TP=1で評価。cold prefill 52 cells/377 role rows、warm prefill 12/90、decode 40/292の計104 cells・759 rowsに加えB=32検証を行う。各点は3回以上warmup後、NCU 2024.3の生レポートから役割別に集約する。","scope":"単一H100 NVL、BF16、TP=1、vLLM 0.16、FA3、cuBLASLt。FP8、tensor parallel、他H100 SKU、実運用の中間prefix hit率には絶対値を一般化しない。","hardware":["NVIDIA H100 NVL 94GB HBM3","132 SM / 528 Tensor Cores","60MB L2","3.9TB/s HBM3","BF16 dense peak 835 TFLOP/s"],"software":["vLLM 0.16","FlashAttention-3","cuBLASLt Hopper GMMA","CUDA Graphs","NVIDIA Nsight Compute 2024.3"],"models":["Meta-Llama-3-8B","Qwen3-14B","Qwen3-32B","Qwen3-30B-A3B top-8/128 MoE"],"datasets":["synthetic prompt/prefix-cache states for controlled profiling"],"workload":"cold prefillはprefix caching off、warm prefillは同一prompt warmupで≥99.2～99.9% hit、decodeはB=1,2,4,8を主掃引しB=32検証を追加。Sは2K～16K。","baselines":["cold prefill","warm prefill","decode","B=1 vs B=32 validation"],"metrics":["SM time-utilization","SM coverage","achieved warps/SM","occupancy vs 64-warp architecture","occupancy vs kernel cap","stall budget","device-wide Compute SOL","GMMA fragment fill","wave efficiency","L2 fit ratio","analytical launch overhead","kernel-selection diversity"],"methodology":"NCU MemoryWorkloadAnalysis/LaunchStats/SpeedOfLight/WarpStateStats/Occupancyを収集し、.ncu-repからstall・tensor-pipe・FA3 main/combineを再抽出。利用指標は層間平均、token時間は役割和で計算し、異なる分母の指標を同一カーネル呼出しで三角測量する。","predictor_accuracy":"予測器ではない。B*の線形外挿はB=32実測armで検証し、Qwen3-14Bは約31で交差、Llama-3-8Bは接近。","control_knobs":"regime、context S、batch B、prefix cache hit endpoint、kernel role、model architecture。"},"reservation":{"claim_id":"claim-428f28e1f2d60e7c980a0805","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c0da3b140c64c54bccb58db4",
+  "job_id": "job-research-23c1aef2e7b819be",
+  "data": {
+    "evaluation_summary": "非公開行列積の再構築、平衡木縮約の性能、静的同値判定の健全性と分割精度、自動調整枝刈りを複数GPU世代・多数カーネルで評価する。実LLM形状は16種類の公開モデル設定から抽出し、行列積、縮約、正規化、生成融合カーネル、注意を含む。",
+    "scope": "主対象はGPUカーネルのビット再現性。サービング全体のスループットやモデル最終精度を直接最適化する研究ではない。注意の縮約順序は理論分析が中心で評価範囲が限定される。",
+    "hardware": [
+      "NVIDIA H100",
+      "NVIDIA GB200",
+      "NVIDIA GB300",
+      "AMD instruction-set analysis for GCN checker"
+    ],
+    "software": [
+      "Triton compiler/backend",
+      "NVIDIA cuBLAS/cuBLASLt 12.8.5 and 13.1.x",
+      "PyTorch Inductor generated kernels",
+      "PTX and AMD GCN static analysis"
+    ],
+    "models": [
+      "Qwen3.8-2.4T-A95B",
+      "DeepSeek-V4-Pro/Flash",
+      "GLM-5.2",
+      "Kimi-K2.6/K3",
+      "gpt-oss-120b/20b",
+      "Qwen3-30B-A3B",
+      "Qwen3.6-35B-A3B",
+      "Qwen3.8-27B and other open-weight shapes"
+    ],
+    "datasets": [
+      "realistic GEMM shapes extracted from 16 model configurations",
+      "random and exponent-spread numeric inputs",
+      "compiled reduction/normalization/fused-kernel suites"
+    ],
+    "workload": "半精度、脳浮動小数点、八ビット行列積の多数形状、27個の縮約カーネル、数万規模の自動調整候補、生成融合カーネルを対象にビット一致と実行時間を測る。",
+    "baselines": [
+      "cuBLAS/cuBLASLt",
+      "free-order Triton reduction",
+      "torch.compile generated kernels",
+      "dynamic execution-based equivalence grouping"
+    ],
+    "metrics": [
+      "bitwise match rate",
+      "kernel runtime ratio",
+      "static checker soundness",
+      "equivalence partition precision",
+      "autotuner candidates pruned",
+      "host descriptor overhead"
+    ],
+    "methodology": "同一入力の出力バイト列を直接比較し、通常乱数だけでなく指数範囲を広げた入力でも縮約再編成を検出する。静的判定器は実行比較結果と照合し、同値と判定した組に不一致がない健全性を優先する。",
+    "predictor_accuracy": "再構築した行列積族は対象三世代で100%ビット一致。大規模加速armでは154,904回のバイト比較で差0。",
+    "control_knobs": "縮約木、縮約軸分割、部分和型、行列命令種類、実行束数、データ配置、自動調整構成。"
+  },
+  "reservation": {
+    "claim_id": "claim-c0da3b140c64c54bccb58db4",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
