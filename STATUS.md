@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:03:45 JST**
+> 自動生成: **2026-09-16 19:04:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **2** | **0** | **2** | **0** | **0** | **3** |
-| 合計 | **40** | **10** | **4** | **6** | **2** | **0** | **3** |
+| Discovery | **1** | **4** | **0** | **4** | **0** | **0** | **6** |
+| 合計 | **40** | **12** | **4** | **8** | **2** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -150,8 +150,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 19:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **3件**
-- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **6件**
+- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve
 - round `specialist-moe-prefetch-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json`
   - 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行
@@ -159,6 +159,14 @@
 - round `specialist-agent-kv-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T1910JST-discovery-specialist-agent-kv-2.json`
   - 探索軸: agentic serving・構造的KV再利用・共有圧縮cache
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cpu-control-3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T1912JST-discovery-specialist-cpu-control-3.json`
+  - 探索軸: CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-elastic-kv-4` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1914JST-discovery-specialist-elastic-kv-4.json`
+  - 探索軸: CUDA VMM・KV memory reclamation・prefill reserve
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -219,10 +227,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **379** |
+| 成功result未照合のimmutable submission | **381** |
 | └ Research | **233** |
 | └ Audit | **1** |
-| └ Discovery | **145** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
