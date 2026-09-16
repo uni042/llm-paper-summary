@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:38:24 JST**
+> 自動生成: **2026-09-16 16:38:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **34** |
+| 収録候補論文 | **33** |
 | 未claim Research job | **33** |
-| 直近24hの検証済みResearch収録 | **55** |
-| 最終検証済みResearch収録 | **09-16 16:12:08 JST（26分前）** |
+| 直近24hの検証済みResearch収録 | **56** |
+| 最終検証済みResearch収録 | **09-16 16:38:30 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **34** |
+| canonical_id確認済みの一意な候補論文 | **33** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **34** |
+| 非終端Research job合計 | **33** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **44** | **12** | **6** | **6** | **1** | **0** | — |
+| Research | **45** | **12** | **6** | **6** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **45** | **31** | **6** | **25** | **2** | **0** | **23** |
+| 合計 | **46** | **31** | **6** | **25** | **1** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 16:38:30 JST** [research] `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers
+  - job: `.survey/work-queue/jobs/job-research-f9d44874a1b28506.json`
+  - result: `.survey/work-queue/results/research/attempt-935f2123fd1379422e5152c0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-935f2123fd1379422e5152c0.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md`
 - **09-16 16:12:08 JST** [research] `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving
   - job: `.survey/work-queue/jobs/job-research-a8b5b2b70328c222.json`
   - result: `.survey/work-queue/results/research/attempt-f18ac3404e8d423c89a438b0.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-8834d311401a99e374c1300d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8834d311401a99e374c1300d.json`
   - paper: `papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md`
-- **09-16 15:09:03 JST** [research] `arXiv:2608.13573` — A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing
-  - job: `.survey/work-queue/jobs/job-research-c5668a715755a331.json`
-  - result: `.survey/work-queue/results/research/attempt-ae853adbe01956e7c70dbf4c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ae853adbe01956e7c70dbf4c.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13573-year-llm-serving-workload-evolution.md`
 
 ### Audit
 
@@ -203,10 +203,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 16:37:30 JST** / heartbeat: **—** / lease expiry: **09-16 18:07:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -228,7 +226,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **34** |
+| ready | **33** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,7 +246,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **600** |
+| inference/training/survey配下の論文Markdown実体 | **601** |
 
 ### immutable submissionの未照合
 
@@ -256,8 +254,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **337** |
-| └ Research | **203** |
+| 成功result未照合のimmutable submission | **336** |
+| └ Research | **202** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
