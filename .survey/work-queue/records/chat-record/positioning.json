@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6be029563a5d355c747c77d0",
-  "job_id": "job-research-ec48da5b1e9edcea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6be029563a5d355c747c77d0",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6be029563a5d355c747c77d0","job_id":"job-research-ec48da5b1e9edcea","data":{"positioning":"HoneyRouteは通常の品質・費用ルータではなく、悪意要求を本番推論から隔離するセキュリティ指向のサービング経路制御である。","differences":"RouteLLM等が能力と費用でモデルを選ぶのに対し、HoneyRouteは危険度で本番か欺瞞面かを選び、捕捉対話を検出学習へ戻す。従来ハニーポットがプロトコル層またはモデル内部にあるのに対し、推論API層で要求ごとにモデルを切り替える。","relation_to_prior_work":[{"work":"RouteLLM / FrugalGPT","difference":"費用・品質ではなく攻撃隔離を経路選択目的にする。"},{"work":"LLM firewalls","difference":"遮断だけでなく安価な欺瞞応答を継続しフォレンジック信号を集める。"},{"work":"protocol honeypots","difference":"SSH等ではなくLLM推論APIでモデル選択を行う。"}],"strengths":["38msの低遅延検出と実フラッドでの97.8%本番トークン削減を両方測る。","GPU不要版と高忠実度複製版の費用・忠実度を比較する。","捕捉データによる誤検出補正とキャンペーン再識別まで評価する。"],"limitations":["単一SingGuardモデル系列と8×H20環境中心である。","攻撃分布が変わると領域別分類頭と閾値の再校正が必要。","軽量囮は発火条件次第で良性利用者に露見する可能性がある。","複製ハニーポットはGPU費をゼロにはできない。"],"implementation_status":"凍結埋め込み、領域別MLP、セッション追跡、vLLM本番/複製、コードハニーポットを統合した実験実装。","research_positioning":"LLMサービングの耐攻撃性と資源保護を、ルーティング・スケジューリング問題として扱う新しい比較軸を提供する。","repository_fit":"サービング・ルーティング系統に属し、性能最適化だけでなく悪意負荷下のGPU資源保護を扱う関連研究として有用。"},"reservation":{"claim_id":"claim-6be029563a5d355c747c77d0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
