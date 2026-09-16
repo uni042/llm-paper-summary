@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:37:19.326279+00:00",
+  "updated_at": "2026-09-16T03:40:39.193212+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:37:19.326279+00:00",
+      "last_recorded_at": "2026-09-16T03:40:39.193212+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 107,
+        "research_completed": 108,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 3,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34908427278:1",
-          "recorded_at": "2026-09-14T23:22:50.099994+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34908427278",
-            "run_attempt": "1",
-            "source_sha": "e1eaf04785e4f0a04b1ef5a4087ddc92c678c30e"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34908511269:1",
           "recorded_at": "2026-09-14T23:25:27.768986+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35052469268",
             "run_attempt": "1",
             "source_sha": "9eecab6be0dd2b3adef29e8d524bd9db22b4337f"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35052677905:1",
+          "recorded_at": "2026-09-16T03:40:39.193212+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35052677905",
+            "run_attempt": "1",
+            "source_sha": "8aba85996cdf74eaa095aca5a8980791919101c9"
           },
           "signals": [
             "research_completed"
@@ -20695,6 +20695,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.07816",
           "title": "Kalman Delta Networks: Uncertainty-aware Associative Memory",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-408799bbc4fac119",
+          "type": "research",
+          "canonical_id": "arXiv:2607.21604",
+          "title": "AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems",
           "from": "ready",
           "to": "completed"
         }

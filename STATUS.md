@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:40:32 JST**
+> 自動生成: **2026-09-16 12:40:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **30** |
-| 最終検証済みResearch収録 | **09-16 12:37:15 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **31** |
+| 最終検証済みResearch収録 | **09-16 12:40:35 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **23** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **24** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **24** | **7** | **1** | **6** | **2** | **0** | **6** |
+| 合計 | **25** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 12:40:35 JST** [research] `arXiv:2607.21604` — AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems
+  - job: `.survey/work-queue/jobs/job-research-408799bbc4fac119.json`
+  - result: `.survey/work-queue/results/research/attempt-41a7fdaa747fc1f8c0650e98.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-41a7fdaa747fc1f8c0650e98.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md`
 - **09-16 12:37:15 JST** [research] `arXiv:2609.07816` — Kalman Delta Networks: Uncertainty-aware Associative Memory
   - job: `.survey/work-queue/jobs/job-research-7411280ca93364ec.json`
   - result: `.survey/work-queue/results/research/attempt-7bba4de8acdf88007ff64c4d.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-6f1b6968a7268a733026a358.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6f1b6968a7268a733026a358.json`
   - paper: `papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md`
-- **09-16 11:52:49 JST** [research] `arXiv:2607.05116` — Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference
-  - job: `.survey/work-queue/jobs/job-research-997bb7245fdc3187.json`
-  - result: `.survey/work-queue/results/research/attempt-4b181ffe9b1f03a47a7fd1ab.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4b181ffe9b1f03a47a7fd1ab.json`
-  - paper: `papers/inference/06-moe-inference-expert-offloading/2026-2607.05116-communication-aware-placement-pruning-moe.md`
 
 ### Audit
 
@@ -162,10 +162,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.21604` — AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 12:37:51 JST** / heartbeat: **—** / lease expiry: **09-16 14:07:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-408799bbc4fac119.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
   - claim: **09-16 12:20:14 JST** / heartbeat: **—** / lease expiry: **09-16 13:50:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`
@@ -188,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **571** |
+| inference/training/survey配下の論文Markdown実体 | **572** |
 
 ### immutable submissionの未照合
 
@@ -216,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **259** |
-| └ Research | **149** |
+| 成功result未照合のimmutable submission | **258** |
+| └ Research | **148** |
 | └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job
