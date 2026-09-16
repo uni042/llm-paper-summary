@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:22:11 JST**
+> 自動生成: **2026-09-17 07:22:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **58** |
-| 未claim Research job | **56** |
-| 直近24hの検証済みResearch収録 | **91** |
-| 最終検証済みResearch収録 | **09-17 07:20:14 JST（1分前）** |
+| 収録候補論文 | **57** |
+| 未claim Research job | **55** |
+| 直近24hの検証済みResearch収録 | **92** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **58** |
+| canonical_id確認済みの一意な候補論文 | **57** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **58** |
+| 非終端Research job合計 | **57** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **14** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **25** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **38** | **10** | **6** | **4** | **2** | **0** | **6** |
+| 合計 | **39** | **10** | **6** | **4** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 07:22:13 JST** [research] `arXiv:2511.20982` — A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-0d9ff237f1d632e6.json`
+  - result: `.survey/work-queue/results/research/attempt-cd6a647437352aca5df92996.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cd6a647437352aca5df92996.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2511.20982-dopd-dynamic-pd-disaggregation.md`
 - **09-17 07:20:14 JST** [research] `arXiv:2608.25062` — FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration
   - job: `.survey/work-queue/jobs/job-research-0d64167980707ffd.json`
   - result: `.survey/work-queue/results/research/attempt-2b046e19162a735734acee9b.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-bb5c53d2afbda5e72b28dcf5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bb5c53d2afbda5e72b28dcf5.json`
   - paper: `papers/inference/03-offload-hierarchical-memory/2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md`
-- **09-17 01:40:46 JST** [research] `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics
-  - job: `.survey/work-queue/jobs/job-research-648fe1e5b80283fd.json`
-  - result: `.survey/work-queue/results/research/attempt-e515885033d647a55b19de09.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e515885033d647a55b19de09.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md`
 
 ### Audit
 
@@ -227,7 +227,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **58** |
+| ready | **57** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,7 +247,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **644** |
+| inference/training/survey配下の論文Markdown実体 | **645** |
 
 ### immutable submissionの未照合
 
@@ -255,8 +255,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **403** |
-| └ Research | **276** |
+| 成功result未照合のimmutable submission | **402** |
+| └ Research | **275** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
