@@ -2,9 +2,9 @@
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
   "updated_at": "2026-09-17T06:00:00+09:00",
-  "submission_count": 4,
-  "rejection_observation_count": 16,
-  "rejection_record_count": 16,
+  "submission_count": 5,
+  "rejection_observation_count": 26,
+  "rejection_record_count": 26,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2410.14740": {
@@ -175,6 +175,69 @@
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
     },
+    "id:arXiv:2609.15032": {
+      "primary_identity": "id:arXiv:2609.15032",
+      "identity_tokens": [
+        "id:arXiv:2609.15032",
+        "title:tele360 realtime feedforward human reconstruction from sparse unposed cameras",
+        "url:https://arxiv.org/abs/2609.15032"
+      ],
+      "canonical_id": "arXiv:2609.15032",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Tele360: Real-Time Feed-Forward Human Reconstruction from Sparse Unposed Cameras",
+      "source_url": "https://arxiv.org/abs/2609.15032",
+      "rejection_reason": "real-time human reconstruction/CV systemでありLLM inference対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.15054": {
+      "primary_identity": "id:arXiv:2609.15054",
+      "identity_tokens": [
+        "id:arXiv:2609.15054",
+        "title:busma a bus communication substrate for multiagent systems",
+        "url:https://arxiv.org/abs/2609.15054"
+      ],
+      "canonical_id": "arXiv:2609.15054",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "BusMA: A Bus Communication Substrate for Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2609.15054",
+      "rejection_reason": "agent間message routing/shared memoryのcoordination substrateであり、LLM model-serving基盤のcompute/memory/network最適化ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.15079": {
+      "primary_identity": "id:arXiv:2609.15079",
+      "identity_tokens": [
+        "id:arXiv:2609.15079",
+        "title:translating the translator decomposing the cost of englishforced interagent communication",
+        "url:https://arxiv.org/abs/2609.15079"
+      ],
+      "canonical_id": "arXiv:2609.15079",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Translating the Translator: Decomposing the Cost of English-Forced Inter-Agent Communication",
+      "source_url": "https://arxiv.org/abs/2609.15079",
+      "rejection_reason": "multi-agent pipelineの言語選択による品質・cost分析であり、serving runtime・distributed inference communicationのsystem contributionではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
     "id:arXiv:2609.15126": {
       "primary_identity": "id:arXiv:2609.15126",
       "identity_tokens": [
@@ -217,6 +280,48 @@
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
     },
+    "id:arXiv:2609.15361": {
+      "primary_identity": "id:arXiv:2609.15361",
+      "identity_tokens": [
+        "id:arXiv:2609.15361",
+        "title:robust and efficient communication for multiagent learning",
+        "url:https://arxiv.org/abs/2609.15361"
+      ],
+      "canonical_id": "arXiv:2609.15361",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Robust and Efficient Communication for Multi-Agent Learning",
+      "source_url": "https://arxiv.org/abs/2609.15361",
+      "rejection_reason": "multi-agent learningの通信圧縮・robustness研究で、LLM inference servingの通信最適化ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.16090": {
+      "primary_identity": "id:arXiv:2609.16090",
+      "identity_tokens": [
+        "id:arXiv:2609.16090",
+        "title:muunriverbench diagnosing relationdependent music retrieval with multimodal instructions",
+        "url:https://arxiv.org/abs/2609.16090"
+      ],
+      "canonical_id": "arXiv:2609.16090",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "MUUNRiver-Bench: Diagnosing Relation-Dependent Music Retrieval with Multimodal Instructions",
+      "source_url": "https://arxiv.org/abs/2609.16090",
+      "rejection_reason": "音楽retrieval benchmarkでありLLM inference system・serving・memory・runtimeの対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
     "id:arXiv:2609.16245": {
       "primary_identity": "id:arXiv:2609.16245",
       "identity_tokens": [
@@ -237,6 +342,48 @@
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+    },
+    "id:arXiv:2609.16356": {
+      "primary_identity": "id:arXiv:2609.16356",
+      "identity_tokens": [
+        "id:arXiv:2609.16356",
+        "title:exploring optimal parameters for ligandbased virtual screening in early drug discovery",
+        "url:https://arxiv.org/abs/2609.16356"
+      ],
+      "canonical_id": "arXiv:2609.16356",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Exploring Optimal Parameters for Ligand-Based Virtual Screening in Early Drug Discovery",
+      "source_url": "https://arxiv.org/abs/2609.16356",
+      "rejection_reason": "drug discoveryのvirtual screening研究でありLLM inference systemとは無関係。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.16429": {
+      "primary_identity": "id:arXiv:2609.16429",
+      "identity_tokens": [
+        "id:arXiv:2609.16429",
+        "title:scaled hippocampusinspired neural networks on neuromorphic memristive hardware",
+        "url:https://arxiv.org/abs/2609.16429"
+      ],
+      "canonical_id": "arXiv:2609.16429",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Scaled Hippocampus-inspired Neural Networks on Neuromorphic Memristive Hardware",
+      "source_url": "https://arxiv.org/abs/2609.16429",
+      "rejection_reason": "neuromorphic hippocampus networkのhardware mapping研究でありLLM inference対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
     },
     "id:arXiv:2609.16648": {
       "primary_identity": "id:arXiv:2609.16648",
@@ -342,6 +489,69 @@
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+    },
+    "id:arXiv:2609.17380": {
+      "primary_identity": "id:arXiv:2609.17380",
+      "identity_tokens": [
+        "id:arXiv:2609.17380",
+        "title:open1b a fully auditable training run",
+        "url:https://arxiv.org/abs/2609.17380"
+      ],
+      "canonical_id": "arXiv:2609.17380",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "OPEN-1B: A Fully Auditable Training Run",
+      "source_url": "https://arxiv.org/abs/2609.17380",
+      "rejection_reason": "再現可能なmodel training runが主題であり、inference system surveyの対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.17391": {
+      "primary_identity": "id:arXiv:2609.17391",
+      "identity_tokens": [
+        "id:arXiv:2609.17391",
+        "title:flashvector agent for hierarchical model serving stack optimization",
+        "url:https://arxiv.org/abs/2609.17391"
+      ],
+      "canonical_id": "arXiv:2609.17391",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "FlashVector: Agent for Hierarchical Model Serving Stack Optimization",
+      "source_url": "https://arxiv.org/abs/2609.17391",
+      "rejection_reason": "model serving stackの自動最適化としてsystem的価値はあるが、対象はUnity広告platformの一般model server/feature storeで、LLM固有のinference architecture・KV cache・MoE・offload・serving schedulingを扱わないため今回のLLM inference surveyでは見送る。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+    },
+    "id:arXiv:2609.17527": {
+      "primary_identity": "id:arXiv:2609.17527",
+      "identity_tokens": [
+        "id:arXiv:2609.17527",
+        "title:agentic societies need a social harness",
+        "url:https://arxiv.org/abs/2609.17527"
+      ],
+      "canonical_id": "arXiv:2609.17527",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Agentic Societies Need a Social Harness",
+      "source_url": "https://arxiv.org/abs/2609.17527",
+      "rejection_reason": "multi-agent communicationの安全性・coordination architectureが主題で、LLM serving runtimeの性能・resource management研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T06:00:00+09:00",
+      "last_rejected_at": "2026-09-17T06:00:00+09:00",
+      "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
     }
   }
 }
