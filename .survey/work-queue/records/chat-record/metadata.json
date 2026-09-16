@@ -4,10 +4,33 @@
   "slot": "metadata",
   "attempt_id": "attempt-f7164aefbbb9a7ccd4752dd5",
   "job_id": "job-research-9f909dd53a5f1acb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f7164aefbbb9a7ccd4752dd5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2609.13161",
+    "arxiv_id": "2609.13161",
+    "doi": "10.48550/arXiv.2609.13161",
+    "arxiv_categories": {"primary": "cs.AR", "cross_list": ["cs.DC"]},
+    "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+    "summary": "PDDは、広域イーサネット越しにプリフィルと主デコードを分離するとKVキャッシュ転送が初回トークン遅延を支配する問題に対し、プリフィル側データセンターへ中継デコード層を追加する三段構成を提案する。中継層は高速RDMAでKVを受けて即座に生成を始め、その間に遠隔主デコード層へKVをTCP転送する。遠隔側の転送完了後は、中継側が生成したトークンIDだけを送り、主デコード側が増分KVをローカル再計算して生成を引き継ぐ。デコード側RadixCacheと多段パイプライン制御を組み合わせ、低ヒット率要求だけの長い転送を隠蔽し、異種GPUをデータセンター間で柔軟に組み合わせる。",
+    "list_summary": "広域KV転送中だけ近傍の中継GPUでデコードを先行し、遠隔GPUへトークンIDで引き継ぐ三段PD分離により、データセンター間異種推論のTTFTと費用効率を改善する。",
+    "authors": ["Yida Wang", "Xiuhong Li", "Jianping Ma", "Gan Sun", "Yunshen Xu", "Buhe Han", "Jingxu Ng", "Yuhao Luo", "Ke Hong", "Guohao Dai", "Boxun Li", "Yu Wang"],
+    "authors_affiliations": "一次資料本文に記載された著者所属を参照。",
+    "published": "2026-07-18",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "Prefill-decode disaggregation / heterogeneous serving / cross-datacenter inference",
+    "topics": ["prefill-decode disaggregation", "cross-datacenter inference", "KV cache transfer", "heterogeneous accelerators", "agentic serving"],
+    "importance": "データセンター内の高速RDMAを前提としてきたPD分離を広域ネットワークへ拡張し、転送そのものを高速化するのではなく生成処理との重畳で長い尾部遅延を隠す点が重要。",
+    "hardware_evaluation": "H100/H200を含む異種GPU構成と20Gbps級のデータセンター間回線を用いた評価を含む。",
+    "source": "https://arxiv.org/abs/2609.13161",
+    "sources": ["https://arxiv.org/abs/2609.13161", "https://arxiv.org/html/2609.13161"],
+    "code": "",
+    "implementation": "論文評価用システム実装あり。公開コードURLは一次資料から確認できず。",
+    "last_checked": "2026-09-17",
+    "references": ["DistServe", "Splitwise", "Mooncake", "SGLang", "Prefill-as-a-Service"],
+    "references_checked_at": "2026-09-17",
+    "references_source": "primary-reference-section",
+    "references_total": 5
+  },
+  "reservation": {"claim_id": "claim-f7164aefbbb9a7ccd4752dd5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
