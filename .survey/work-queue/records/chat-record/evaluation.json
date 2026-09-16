@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2004493bc34fc87305b3e8a8",
+  "attempt_id": "attempt-8a4bc1625b051d6e27e89e58",
   "job_id": "job-research-431f09f6206f16eb",
   "data": {
     "methodology": "MegaScale-Infer型の注意・エキスパート分離MoE推論を比較対象とし、注意ワーカー故障とエキスパートワーカー故障を個別に注入して、故障発生から推論が再び前進するまでの停止時間を測る。通常時はスループットとトークン単位遅延を比較し、非同期KVチェックポイントがAW-EWデータ経路へ与える追加負担も測定する。注意側では要求単位KV復元を全履歴再計算と比較し、回復遅延、回復通信量、GPU再計算量を評価する。",
@@ -18,8 +18,8 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-2004493bc34fc87305b3e8a8",
-    "worker_id": "scheduled-chat-normal-20260917T003101JST",
+    "claim_id": "claim-8a4bc1625b051d6e27e89e58",
+    "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
 }

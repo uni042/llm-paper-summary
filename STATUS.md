@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 01:02:24 JST**
+> 自動生成: **2026-09-17 01:33:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **21** |
 | 未claim Research job | **20** |
 | 直近24hの検証済みResearch収録 | **83** |
-| 最終検証済みResearch収録 | **09-17 00:35:10 JST（27分前）** |
+| 最終検証済みResearch収録 | **09-17 00:35:10 JST（58分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **43** | **6** | **5** | **1** | **0** | **0** | **15** |
-| 合計 | **60** | **14** | **9** | **5** | **1** | **0** | **15** |
+| Discovery | **20** | **6** | **6** | **0** | **0** | **0** | **15** |
+| 合計 | **37** | **14** | **10** | **4** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -125,6 +125,10 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json`
   - 探索軸: cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload
+- **09-17 01:02:43 JST** job `job-2b5601609afca1cf` / 候補 **2件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260917T0058-network-scheduling-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json`
+  - 探索軸: multi-stage network flow scheduling・prefill deflection・KV transfer contention
 - **09-16 20:02:03 JST** job `job-09c20a16449cd61c` / 候補 **1件**
   - result: `.survey/work-queue/results/20260916T2008JST-discovery-specialist-superchip-slo-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json`
   - 探索軸: MoE self-assisted speculative decoding・expert replication
-- **09-16 20:03:47 JST** job `job-63c87bf6f06ca13e` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T2020JST-discovery-specialist-manycore-runtime-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2020JST-discovery-specialist-manycore-runtime-5.json`
-  - 探索軸: 異種many-core・分散メモリ階層・bandwidth-aware runtime
 
 ### 直近タスク
 
@@ -186,7 +186,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 00:00 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **1件** / 候補: **15件**
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **6件** / 個別result照合: **6件** / 個別result未照合: **0件** / 候補: **15件**
 - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation / agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮 / tool-call gap KV residency・出力長不確実性KV reservation / cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload / multi-stage network flow scheduling・prefill deflection・KV transfer contention
 - round `specialist-agent-kv-runtime-3` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
@@ -211,15 +211,15 @@
 - round `specialist-network-scheduling-6` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json`
   - 探索軸: multi-stage network flow scheduling・prefill deflection・KV transfer contention
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260917T0058-network-scheduling-6.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2601.01310` — Making MoE based LLM inference resilient with Tarragon / worker `scheduled-chat-normal-20260917T003101JST`
-  - claim: **09-17 00:35:19 JST** / heartbeat: **—** / lease expiry: **09-17 02:05:19 JST**
+- `arXiv:2601.01310` — Making MoE based LLM inference resilient with Tarragon / worker `scheduled-chat-normal-20260917T013240`
+  - claim: **09-17 01:33:47 JST** / heartbeat: **—** / lease expiry: **09-17 03:03:47 JST**
   - evidence: `.survey/work-queue/claims/job-research-431f09f6206f16eb.json`
 
 #### Audit
@@ -268,10 +268,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **389** |
+| 成功result未照合のimmutable submission | **388** |
 | └ Research | **261** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 
 ### 厳格検証が未成立のcompleted job
 

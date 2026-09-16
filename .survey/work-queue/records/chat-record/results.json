@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2004493bc34fc87305b3e8a8",
+  "attempt_id": "attempt-8a4bc1625b051d6e27e89e58",
   "job_id": "job-research-431f09f6206f16eb",
   "data": {
     "overview": "粗粒度回復では単一ワーカー故障から約64秒の推論停止が生じるのに対し、TARRAGONは注意ワーカー故障で約0.4秒、エキスパートワーカー故障で約0.3秒まで短縮し、160〜213倍の改善を報告する。正常時はMegaScale-Inferと比べてスループットとトークン単位遅延の差を2.8%以内に維持する。注意側の非同期増分KVチェックポイントはAW-EWデータ経路への追加負担3%未満で、要求単位復元により注意ワーカー回復遅延を最大1800倍、回復通信量を最大8倍削減し、全KV再構築に伴うGPU再計算をなくす。",
@@ -48,8 +48,8 @@
     "quality_impact": "推論アルゴリズムの近似ではなく故障回復方式の変更であり、正常時性能は比較対象との差2.8%以内。主な効果は故障時の停止時間と再計算・通信量の削減である。"
   },
   "reservation": {
-    "claim_id": "claim-2004493bc34fc87305b3e8a8",
-    "worker_id": "scheduled-chat-normal-20260917T003101JST",
+    "claim_id": "claim-8a4bc1625b051d6e27e89e58",
+    "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
 }
