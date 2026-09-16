@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-43fc54bc4bb664c376b8fe08",
-  "job_id": "job-research-6cff6eafb4a4e5b9",
-  "data": {
-    "overview": "提案法は200万トークンのBABILong単一事実recallで3モデルすべて50〜80%の精度を維持し、比較した訓練不要方式がゼロまたはほぼゼロへ低下する領域でも回答可能だった。元文書を固定窓で処理後に破棄し、保存状態を固定事実予算に制限するため、入力長の増加に対してGPUメモリはほぼ一定で、測定した保存事実メモリは全条件で1GB未満だった。再構成は同じ保存文を決定的に出す一方、最終QA精度は抽出、ルーティング、再構成、回答推論の積で決まり、アンカー対応不足が主要制約となる。",
-    "key_results": [
-      {
-        "metric": "200万トークン単一事実QA精度",
-        "value": "3モデルで50〜80%",
-        "baseline": "比較した訓練不要方式は0またはほぼ0",
-        "condition": "BABILong QA1、Phi-3.5-mini/Qwen3-4B/Llama-3.1-8B",
-        "interpretation": "事前学習文脈窓を大幅に越えても、元トークンを保持せず選択事実を再構成できる。"
-      },
-      {
-        "metric": "保存事実メモリ",
-        "value": "測定全条件で1GB未満",
-        "baseline": "KV/原文保持は文脈長に比例",
-        "condition": "固定事実予算の外部キー+残差保存",
-        "interpretation": "文書長ではなく保持事実数とベクトル幅で記憶量が決まる。"
-      },
-      {
-        "metric": "GPUメモリの文脈長依存",
-        "value": "入力長増加に対しほぼ一定",
-        "baseline": "通常KVキャッシュは線形成長",
-        "condition": "記憶化後に元文書とKVを破棄",
-        "interpretation": "長文書全体を同時にGPUへ常駐させないため、2M条件まで拡張できる。"
-      },
-      {
-        "metric": "再構成挙動",
-        "value": "選択された事実は貪欲復号で決定的に再生成",
-        "baseline": "検索断片や損失圧縮は内容が欠落しうる",
-        "condition": "活性キー類似度ゲート+保存残差",
-        "interpretation": "保存された文単位の内容を再現し、回答段階へ明示的な証拠文として渡せる。"
-      }
-    ],
-    "negative_results": "固定事実予算のため抽出されなかった情報は回収できず、複数事実合成は単一事実より難しい。段階分析では、必要事実が保存されていても質問とアンカーの対応が弱いとルーティングに失敗する。また保存層の連想容量や残差符号化が限界に達すると再構成できない。長文脈側のサンプル数も小さく、2M条件の統計的不確実性は大きい。",
-    "interpretation": "長文脈メモリを『すべてのトークンを後で注意できる状態』として保持する代わりに、『選択事実を必要時に元文へ戻せる外部パラメトリック表現』へ変換する。KV圧縮・階層化とは異なり、記憶表現そのものをトークン系列からモデル活性空間へ移す設計である。",
-    "quality_impact": "保持された事実の再構成忠実度は高いが、固定容量選択による情報非保持とルーティング失敗がQA品質を制約する。モデル重みは凍結されるため外部記憶を削除すれば元モデルへ完全に戻る。"
-  },
+  "attempt_id": "attempt-f8c92dbe0d7353097f52cee3",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-43fc54bc4bb664c376b8fe08",
+    "claim_id": "claim-f8c92dbe0d7353097f52cee3",
     "worker_id": "scheduled-chat-discovery-specialist-00",
     "worker_kind": "scheduled_chat"
   }
