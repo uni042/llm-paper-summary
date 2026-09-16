@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ebd3e581b3a7df85b7d8df3e",
-  "job_id": "job-research-250a1e243181b0c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ebd3e581b3a7df85b7d8df3e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ebd3e581b3a7df85b7d8df3e","job_id":"job-research-250a1e243181b0c3","data":{"evaluation_summary":"単一ノード4枚A100 40GBをNVLink接続し、vLLMを基盤にBucketServe、DistServe、UELLMを比較する。Llama2とOPT系列を用い、短系列のStanford Alpaca、長系列のLongBench、両者の混合負荷を評価する。オフラインではLlama2-13Bの最大バッチ数と系列長を変え、トークン毎秒とGPU利用率を測る。オンラインではクライアント要求毎秒を増やし、SLO達成率とサーバが実際に処理できた要求毎秒を測る。さらに要求毎秒2～32で実行時間内訳とバケット処理費を測定する。","scope":"実機4×A100 40GB・単一ノード評価で、複数ノードは将来課題。主な詳細結果はLlama2-13BとAlpaca/LongBench混合負荷であり、異なるGPU世代、商用到着分布、より大規模モデルへの一般化は未検証。SLO定義の詳細は比較実験設定に依存する。","hardware":["4×NVIDIA A100 40GB","NVLink","64 CPUコア","1TB SSD"],"software":["vLLM backend","BucketServe middleware","DistServe baseline","UELLM baseline"],"models":["LLaMA-2 series","Llama2-13B","OPT series"],"datasets":["Stanford Alpaca","LongBench","Alpaca + LongBench Mixed"],"workload":"Alpacaは平均入力83.7、中央値69トークン。LongBenchは長尾で平均55,749、中央値41,417トークンで、モデル上限へ切り詰める。オフラインは最大バッチ1～64、オンラインは要求毎秒を増加させる。","baselines":["UELLM","DistServe"],"metrics":["throughput tokens/s","prefill/decode GPU utilization","SLO attainment","server requests/s","execution breakdown","bucketing overhead"],"predictor_accuracy":"予測器は用いず、系列長分布とGPU残メモリから決定論的にバケット境界と安全バッチ数を調整する。","control_knobs":"バケット数・境界、分割閾値0.5、安全メモリ率90%、最大バッチ数、SJF/LJF/FCFS、クライアント要求毎秒、系列長分布。"},"reservation":{"claim_id":"claim-ebd3e581b3a7df85b7d8df3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
