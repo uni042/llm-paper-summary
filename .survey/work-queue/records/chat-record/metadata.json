@@ -2,56 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
-  "job_id": "job-research-9fcc40253e9df4ef",
-  "data": {
-    "canonical_id": "arXiv:2605.22416",
-    "arxiv_id": "2605.22416",
-    "doi": "10.48550/arXiv.2605.22416",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.DC",
-        "cs.PF"
-      ]
-    },
-    "title": "Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference",
-    "summary": "Mamba層とTransformer注意層を混在させるハイブリッドLLMでは、系列長に比例して増えるKVキャッシュと、層ごとに固定長の状態空間モデル（State Space Model; SSM）状態が同居する。既存の統一メモリプールはSSM状態をKVページ寸法へ合わせて水増しし、静的な二分割方式は要求分布が変わっても容量比を変えられない。AVMPは両者を物理的には別プールへ置きつつ統一仮想アドレスで扱い、片側の割当失敗時だけ余裕のある側から容量を移す。RTX 3060 12GB上の評価では、最良静的方式に対してメモリ不足事象を7.6%減らし、合成条件で要求処理性能を1.83〜13.3倍、ShareGPT再生で2.36倍にした。",
-    "list_summary": "KVキャッシュと固定長SSM状態を別物理プール・統一仮想アドレスで扱い、割当失敗時だけ容量を移してハイブリッドLLMのメモリ不足と処理性能を改善する。",
-    "authors": [
-      "An Xuan Nguyen"
-    ],
-    "authors_affiliations": "not specified in arXiv metadata inspected",
-    "published": "2026-05-21",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "hybrid Mamba-Transformer inference memory management",
-    "topics": [
-      "ハイブリッドLLM",
-      "KVキャッシュ",
-      "SSM状態",
-      "仮想メモリ",
-      "動的容量再配分"
-    ],
-    "importance": "性質の異なる二種類の推論状態を同一ページ寸法へ押し込まず、仮想アドレス抽象化で物理配置の非対称性を隠しながら実行時に容量比を変更する点が重要。",
-    "hardware_evaluation": "NVIDIA RTX 3060 12GB、CUDA 13.0の単一GPU環境で評価。",
-    "quality_effect": "近似計算ではなくメモリ割当方式の変更であり、モデル品質を変更する手法ではない。",
-    "source": "https://arxiv.org/abs/2605.22416",
-    "sources": [
-      "https://arxiv.org/abs/2605.22416"
-    ],
-    "code": null,
-    "implementation": "純Pythonの割当器試作。Tritonや実推論エンジンへのカーネル統合は今後の課題。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section; normalized identifiers not exhaustively extracted in this record",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-108502f64d0cd914bd44d7db",
+  "job_id": "job-research-9ef38f28c45d6f3a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "claim_id": "claim-108502f64d0cd914bd44d7db",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

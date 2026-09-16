@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
-  "job_id": "job-research-9fcc40253e9df4ef",
-  "data": {
-    "overview": "動的AVMPは最良の静的二プール方式に対して合成評価全体のメモリ不足事象を7.6%減らした。要求処理性能は合成条件で1.83〜13.30倍となり、より現実的なShareGPT再生では2.36倍だった。圧迫条件ではメモリ不足からの回復時間短縮が主因だが、短文中心条件ではメモリ不足差がほぼないにもかかわらず割当・解放呼出し自体が速く、大きな倍率が出た。この後者は実装上の観測であり、実推論エンジン統合後にも維持されるかは未確認である。",
-    "key_results": [
-      {
-        "metric": "合成評価のOOM回数",
-        "value": "510、最良静的方式552から7.6%削減",
-        "baseline": "fixed_dual_mr05",
-        "condition": "三種類の合成ワークロード横断",
-        "interpretation": "要求分布に応じてKV側とSSM側の容量を移せるため、固定比率では片側だけ不足する状況を減らす。"
-      },
-      {
-        "metric": "要求処理性能",
-        "value": "uniform_short 13.30倍、mixed_long 2.39倍、agentic_burst 1.83倍",
-        "baseline": "各条件の最良静的方式",
-        "condition": "合成ワークロード",
-        "interpretation": "圧迫条件ではOOM回復時間の短縮、短文条件では割当・解放呼出しの高速化という異なる要因で改善する。"
-      },
-      {
-        "metric": "ShareGPT再生の要求処理性能",
-        "value": "2.36倍、95%信頼区間1.33〜5.65",
-        "baseline": "最良静的二プール方式",
-        "condition": "ShareGPT由来プロンプト長の60セル再生",
-        "interpretation": "合成の最大13.3倍より現実的な中心推定として報告され、OOM差ゼロでも割当処理短縮が効く。"
-      },
-      {
-        "metric": "mixed_longのOOM回復時間割合",
-        "value": "26.3%から8.5%へ低下",
-        "baseline": "最良静的方式",
-        "condition": "容量圧迫の強い長文混合条件",
-        "interpretation": "動的容量移動が失敗後の再試行時間を直接減らすことを示す。"
-      }
-    ],
-    "negative_results": "再配分を開始する圧力閾値を変えた感度分析ではOOM回数、再配分回数、移動量が同一となり、事前に想定した閾値調整効果は確認されなかった。両プールが同時に飽和すると供与元がないため動的方式でも静的分割と同様に失敗する。",
-    "interpretation": "AVMPの本質的な利点は、KVとSSMの需要比が時間とともに変わる場合に固定容量比の不一致を修正できる点にある。ただし最大倍率の一部は純Python試作における仮想ハンドル経路の割当呼出し高速化に由来し、GPUカーネルを含む本番推論で同じ倍率が得られるとは限らない。",
-    "quality_impact": "モデル演算や重みを近似しないメモリ管理方式であり、生成品質を意図的に変更しない。評価対象は割当器の性能と容量効率である。"
-  },
+  "attempt_id": "attempt-108502f64d0cd914bd44d7db",
+  "job_id": "job-research-9ef38f28c45d6f3a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "claim_id": "claim-108502f64d0cd914bd44d7db",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

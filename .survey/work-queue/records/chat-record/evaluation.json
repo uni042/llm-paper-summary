@@ -2,29 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
-  "job_id": "job-research-9fcc40253e9df4ef",
-  "data": {
-    "hardware": "NVIDIA RTX 3060 12GB単一GPU、CUDA 13.0。",
-    "software": "純PythonのAVMP割当器試作。比較対象はvLLMの統一パディングを模した方式と、SGLangの静的二プール比率0.5および0.9を模した割当器。",
-    "methodology": "合成評価では複数の割当器、三種類の要求特性、二種類のモデル仕様、二種類のプール容量、複数乱数種を組み合わせて評価し、対応する条件同士をペアにしたブートストラップ95%信頼区間を算出する。追加でShareGPTの最初の利用者発話5000件からプロンプト長を抽出した再生評価を行う。メモリ不足回数だけでなく、完了要求毎秒、割当・解放時間、再配分時間を分解して改善要因を検証する。",
-    "workloads": [
-      "uniform_short",
-      "mixed_long",
-      "agentic_burst",
-      "ShareGPT trace replay"
-    ],
-    "metrics": [
-      "OOM回数",
-      "要求処理性能",
-      "割当・解放処理時間",
-      "再配分量",
-      "再配分時間"
-    ],
-    "scope": "単一GPU上の割当器レベル評価であり、実際のMamba-Transformer推論エンジンへ統合したエンドツーエンド測定ではない。ShareGPT再生も単語数をトークン長の代理とし、実時間到着過程を再現しない。したがって処理性能倍率はメモリ管理試作の結果として解釈し、実モデル推論へそのまま外挿しない。"
-  },
+  "attempt_id": "attempt-108502f64d0cd914bd44d7db",
+  "job_id": "job-research-9ef38f28c45d6f3a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "claim_id": "claim-108502f64d0cd914bd44d7db",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
