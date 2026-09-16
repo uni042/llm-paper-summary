@@ -1,23 +1,85 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
-  "data":{
-    "canonical_id":"arXiv:2605.21427","arxiv_id":"2605.21427","doi":"10.48550/arXiv.2605.21427","openreview_id":null,
-    "arxiv_categories":{"primary":"cs.AI","cross_list":["cs.DC"]},
-    "title":"PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
-    "summary":"PALSはGPU power capを外部の固定制約ではなくLLM serving runtimeの制御変数として扱い、batch sizeと共同最適化するpower-aware vLLM runtimeである。offline profilingでpower cap、batch、TP/EP/DPとthroughput・powerの非線形関係を学習し、random forest predictorと500ms周期のPID feedbackを組み合わせ、throughput targetを満たす候補の中からtokens/J最大の構成を選ぶ。4×A100/NVLink nodeを最大3 nodeまで用い、dense 3種とMoE 5種、HellaSwag/GSM8K由来のPoisson arrival workloadで評価した。PALSは単一nodeでenergy efficiencyを26.3%改善しoracle headroomの95%を獲得、3-node/4800W制約下でQoS violationを18.7–35.2%から3.2–5.3%へ下げて4–7倍改善しaggregate efficiencyを12.1%向上、demand-responseでは低power target時のthroughputを最大22%改善した。",
-    "list_summary":"GPU power capとbatch sizeを500ms周期で共同制御するvLLM runtimeで、A100 multi-nodeのdense/MoE servingにおいてenergy efficiency最大26.3%、QoS violation 4–7倍改善を達成する。",
-    "authors":["Can Hankendi","Rana Shahout","Minlan Yu","Ayse K. Coskun"],
-    "authors_affiliations":"Boston University; Harvard University",
-    "published":"2026-05-20","publication":"arXiv preprint arXiv:2605.21427v1","publication_type":"arXivプレプリント","publication_status":"arXiv v1, 2026-05-20",
-    "lineage":"moe-offload-routing","topics":["LLM serving","MoE","power cap","energy efficiency","vLLM","runtime control","QoS","demand response"],
-    "importance":"高。MoEのcompute/communication比に応じてpower scalingの効き方が変わることをruntime制御へ取り込み、software schedulingとhardware power controlを統合する。",
-    "hardware_evaluation":"NVIDIA A100、1 nodeあたり4 GPUをNVLink接続。multi-nodeは最大3 node。",
-    "hardware_details":"power cap 150/200/250/300/350/400W、batch 1/4/8/16/32/64、TP 1/2/4、EP 1/4/8、DP 1/2/3 nodes。",
-    "quality_effect":"model retrainingやAPI変更なし。同一モデルのruntime構成を変更し、品質ではなくthroughput QoSとtokens/Jを最適化。",
-    "bottlenecks":["MoE all-to-all communication","power増加のdiminishing returns","batch不足による低utilization","static capによるover/under-provisioning","offline predictor errorとworkload drift"],
-    "evidence_locations":["§2.1–2.4","§3–3.3","§4.1–4.4","§5.1–5.3","§6","Table 1–3","Figures 1–11"],
-    "source":"https://arxiv.org/abs/2605.21427","sources":["https://arxiv.org/abs/2605.21427","https://arxiv.org/html/2605.21427v1","https://arxiv.org/pdf/2605.21427"],
-    "code":null,"implementation":"vLLM schedulerを拡張してbatch sizeをruntime可変化し、NVMLでGPU power capを適用。telemetry/control/actuationの外部closed-loop controllerを500ms周期で動かす。公開code URLは本文から確認できない。","last_checked":"2026-09-16"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {
+    "canonical_id": "arXiv:2609.14237",
+    "arxiv_id": "2609.14237",
+    "doi": "10.48550/arXiv.2609.14237",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+    "summary": "OpWeaveは、デコードを注意機構とFFN/MoEの固定境界で二分する従来の演算子分離サービングを一般化し、演算子分割・GPU種別・並列方式・バッチ/マイクロバッチ・パイプライン配置を共同最適化する異種GPU向けLLMサービング基盤である。理論面ではGPU価格/帯域幅と価格/演算性能を用いたトークン当たり費用モデルを構築し、KVキャッシュ増大でcolocationのバッチがGEMMのcompute-bound閾値を下回ると同種GPU分離の利得が生じること、異種GPU分離は帯域効率と演算効率でGPU間にトレードオフがある場合に有効であることを示す。plannerはhybrid-attentionモデルの最小反復演算パターンをpartition blockとして抽象化し、規則性を再利用して探索空間を削減する。vLLMベースruntimeは任意の演算子stageを異種device groupへ配置し、各decode iterationの計算・通信列をworker当たり1 native callで投入する。評価ではH100同種clusterで最良baseline比最大1.78倍、H100+L40S/A100異種clusterで最大1.89倍のserving cost改善をSLO達成下で報告する。",
+    "list_summary": "固定attention–FFN/MoE分割を越えて演算子境界・異種GPU配置・並列度・batchingを共同探索し、vLLM runtimeで実行することで、SLOを満たしつつserving costを同種GPUで最大1.78倍、異種GPUで最大1.89倍改善する。",
+    "authors": [
+      "Zikun Li",
+      "Yixuan Mei",
+      "Shiqi Pan",
+      "Zixuan Chen",
+      "Xiaowen Zhang",
+      "Mengdi Wu",
+      "Shuhuai Lin",
+      "Yutong Yang",
+      "Zhihao Zhang",
+      "Xupeng Miao",
+      "Rashmi Vinayak",
+      "Zhihao Jia"
+    ],
+    "published": "2026-09-13",
+    "publication": "arXiv preprint arXiv:2609.14237v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "arXiv v1, submitted 2026-09-13; primary cs.DC, cross-list cs.AI",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "LLMサービング",
+      "演算子分離",
+      "異種GPU",
+      "デプロイメント最適化",
+      "パイプライン",
+      "vLLM",
+      "SLO",
+      "serving cost"
+    ],
+    "importance": "高。既存のattention–FFN/MoE固定分割を、理論的な費用境界・一般化されたpartition planner・実行runtimeまで一体化して一般演算子分割へ拡張している。",
+    "hardware_evaluation": "実機。homogeneous H100 cluster、およびH100とL40SまたはA100を組み合わせたheterogeneous clusterを評価。理論例ではH20も扱う。",
+    "quality_effect": "モデルの数値精度や生成アルゴリズムを変更する手法ではなく、同一モデルの配置・batching・pipelineを変えるsystems optimization。主要評価はTPOT SLOとserving cost。",
+    "bottlenecks": [
+      "attentionのmemory-bandwidth律速とtensor-core低利用率",
+      "FFN/MoEのGEMM効率に必要な大batch",
+      "KV-cache増大によるcolocated batch上限",
+      "固定AFD境界のstage imbalance",
+      "hybrid-attentionのlayerwise variation",
+      "stage間activation transferとhost orchestration overhead"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§2",
+      "§3.1–3.4",
+      "§4",
+      "評価節",
+      "Appendix A–B",
+      "Figures 1–7"
+    ],
+    "source": "https://arxiv.org/abs/2609.14237",
+    "sources": [
+      "https://arxiv.org/abs/2609.14237",
+      "https://arxiv.org/html/2609.14237",
+      "https://arxiv.org/pdf/2609.14237"
+    ],
+    "code": null,
+    "implementation": "vLLMベースのdistributed runtime。柔軟なoperator stagesとpipeline schedulesを異種device group上で実行し、host orchestrationを抑えるため各workerがdecode iterationごとの計算・通信sequenceを1 native callでsubmitする。論文本文から公開code URLは確認できなかった。",
+    "last_checked": "2026-09-16"
   },
-  "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

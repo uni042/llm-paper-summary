@@ -1,16 +1,49 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
- "data":{
-  "positioning":"PALSはMoE expert placement/offloadingそのものではなく、MoE servingで顕著なcompute/communication比を観測し、GPU power capとbatchingを共同制御するnode-level energy/QoS runtimeである。vLLM/Orca/Sarathi/DistServe/Helix等が固定power budget下でsoftware optimizationを行うのに対し、powerをschedulerのdecision dimensionへ加える。",
-  "relation_to_prior_work":[
-   {"work":"vLLM / Orca / Sarathi-Serve","difference":"batching・memory・schedulingを固定power下で最適化。PALSはpower capをruntime knobとして追加。"},
-   {"work":"Helix","difference":"heterogeneous GPU placement/routingに対し、PALSはnode内のsub-second power+batch制御。"},
-   {"work":"DynamoLLM / TAPAS / POLCA","difference":"cluster/datacenter-levelのminutes級provisioning・routing・power管理を補完し、500ms粒度でnode内部を追従。"},
-   {"work":"Zeus / BatchDVFS","difference":"trainingまたはsingle-GPU DNNのpower/batch最適化をmulti-GPU autoregressive LLM/MoEへ拡張し、parallelism由来communicationを明示的に扱う。"}
-  ],
-  "strengths":["既存vLLMへplug-and-playで統合","power/batch相互作用をdense/MoE双方で実測","predictionとPID feedbackを組み合わせworkload driftへ対応","QoS・energy・grid demand-responseを同一runtimeで扱う","oracle比較でruntime-feasible knobsのheadroomを定量化"],
-  "limitations":["offline predictorは固定configurationと代表promptで学習するため長prompt、adversarial input、output-length shiftで誤差が増え得る。","PIDはsteady-state mismatchを補正するが急激なload changeを予測できない。","TP/EP/DPはmodel reloadを要するstatic knobで、runtime PALSは主にcapとbatchを動かす。","node-level制御でありcluster-wide placement/routingは外部schedulerが必要。","評価hardwareはA100中心で、他世代GPUや異種clusterへの一般化は追加検証が必要。"],
-  "repository_fit":"inference/04-moe-offload-routingに関連するが、より正確にはpower-aware MoE serving / runtime control系。expert routing通信がpower efficiencyへ与える影響を定量化するため、MoE system設計の比較軸として有用。"
- },
- "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {
+    "positioning": "OpWeaveはprefill/decode分離より細粒度なdecode内部のoperator-level disaggregation系に属する。MegaScale-InferやStep-3などがattention–FFN/MoE境界を固定するのに対し、OpWeaveはoperator boundary自体をplannerの決定変数へ昇格し、hybrid-attentionのlayer周期もpartition blockとして扱う点が差分である。",
+    "relation_to_prior_work": [
+      {
+        "work": "DistServe / Splitwise",
+        "difference": "prefillとdecodeのphase-level disaggregationが中心。OpWeaveはdecode内部のoperator stageを対象にする。"
+      },
+      {
+        "work": "MegaScale-Infer / Step-3",
+        "difference": "attention–FFN/MoEの固定分離を一般化し、stage boundary・hardware・parallelism・batchingをjoint optimizeする。"
+      },
+      {
+        "work": "AFD analytical provisioning",
+        "difference": "特定二段構成のprovisioningに対し、OpWeaveはhomogeneous/heterogeneous ODSの一般cost boundと任意partition planner/runtimeを結ぶ。"
+      },
+      {
+        "work": "Helix / Coral",
+        "difference": "heterogeneous GPUの配置最適化という系譜を共有するが、OpWeaveは単一LLMのdecode operatorをstageへ分割して異種device groupへ配置する粒度に焦点を置く。"
+      }
+    ],
+    "strengths": [
+      "理論条件と実systemを同じcost objectiveで接続",
+      "固定operator boundaryを外した一般planner",
+      "hybrid-attentionの規則性を使うpartition-block abstraction",
+      "vLLMベースruntimeまで実装しhomogeneous/heterogeneous実機で評価",
+      "stage数・通信量・idle時間を減らす機構とcost改善が対応している"
+    ],
+    "limitations": [
+      "理論解析はsteady-state decode、memory-bound attention、compute-bound GEMM、十分なmicrobatchingとcommunication overlap等のregime assumptionsに依存する。",
+      "profiled latency/communication modelの精度と探索対象hardware configurationにplanner品質が依存する。",
+      "主眼はdecode operator disaggregationであり、prefill/decodeを含む全phaseの統合最適化そのものではない。",
+      "異種GPUの利得はhardwareのcost-per-byteとcost-per-FLOPに有意なtrade-offがある場合に限られ、常にhomogeneousより有利ではない。",
+      "公開code URLは一次資料本文から確認できず、再現性はruntime公開状況に依存する。"
+    ],
+    "research_significance": "operator-level disaggregationを『attentionとFFNを分ける設計』から『任意operator partitionをcost/SLO制約下で合成する設計空間』へ拡張しており、異種GPUクラスタやhybrid-attentionモデルが一般化するほど重要性が増す。",
+    "repository_fit": "inference/11-llm-serving-scheduling-disaggregationに強く適合。MoE expert offloadingそのものではないが、MoE operatorを含むstage placementとheterogeneous servingの接点として関連する。"
+  },
+  "reservation": {
+    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

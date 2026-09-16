@@ -1,17 +1,49 @@
 {
- "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
- "data":{
-  "problem":"既存LLM servingはbatching・scheduling・parallelismを調整してもGPU powerを固定のprovisioning constraintとして扱う。実際にはpowerとthroughput/efficiencyの関係は非線形で、MoEではexpert routing/all-to-allが支配するとpowerを上げても有用computeが増えず、静的capはenergy浪費またはQoS違反を生む。",
-  "novelty":"GPU power capをfirst-class runtime knobへ昇格し、runtime可変なbatch sizeと共同制御する。offline power-performance modelによるcandidate rankingとonline PID feedbackを組み合わせ、外部power budgetやthroughput targetの変化にsub-secondで追従する。",
-  "method_overview":"offlineでpower cap 100–400W域、batch 1–64、TP/EP/DPをsweepし、NVML/IPMI power、tokens/s、latencyを収集する。random forestでconfigurationからthroughputとpowerを予測し、held-outでthroughput MAPE 6.8%、power MAPE 4.5%を得る。runtimeは500msごとにtelemetryを取得し、throughput target以上と予測される候補集合からT/P最大の構成を選択し、該当候補がなければ最大throughput構成へfallbackする。実測誤差が5%超で持続する場合などにPID feedbackで補正し、NVML power capとvLLM batch sizeをactuateする。",
-  "components":[
-   {"name":"Telemetry layer","description":"NVMLとruntime instrumentationからGPU power、tokens/s、GPU utilization等を500ms周期で取得。"},
-   {"name":"Offline predictor","description":"random forestでcap、batch、parallelismからthroughput/powerを推定し、online探索を避ける。"},
-   {"name":"Model-guided controller","description":"throughput constraintを満たす候補中でtokens/J最大を選択し、候補なしならthroughput最大を選ぶ。"},
-   {"name":"PID feedback","description":"prediction errorやworkload variationを実測throughput errorで補正し、5%超の持続偏差や外部constraint変化時に再構成。"},
-   {"name":"Actuation layer","description":"NVMLでpower cap、vLLM schedulerでbatch/request schedulingをruntime変更し、model/APIは変更しない。"}
-  ],
-  "empirical_insights":["power capはmodel依存で概ね150–200W以降にdiminishing returns。communication-bound Qwen-MoE/OLMoEでは高powerでtokens/Jが低下し得る。","batch 1→64で全modelのefficiencyが1.7–2.1倍。","TP/EPの最適点はcompute/communication比依存で、MoEの高parallelismでは通信増加がpower利得を打ち消す。"]
- },
- "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {
+    "problem": "デコード内部ではattentionがmemory-bandwidth律速でbatchを増やしてもtensor core利用率が低い一方、FFN/MoEはGEMM中心で大batchほど効率が上がる。さらにsequence length増加でKV cacheがHBMを消費するとcolocated servingの最大batchが縮み、FFN/MoEまで非効率になる。既存operator-level disaggregationはattention–FFN/MoE等の境界を固定するため、hardware/workload制約によるstage imbalanceやhybrid-attentionのlayerごとの演算差を吸収できず、どの条件で費用が下がるかの一般理論も不足している。",
+    "novelty": "理論・planner・runtimeを統合し、固定module境界ではなく一般の連続operator partitionを探索する。特にpartition blockという最小反復・layer-aligned operator patternを探索単位にしてhybrid architectureの規則性を再利用し、operator partition、GPU type、parallelism、replica、resident batch、microbatch、pipeline orchestrationを共同最適化する。",
+    "method_overview": "理論モデルではGPU type jの価格c、memory bandwidth β、peak compute Fからα=c/β、γ=c/Fを定義し、homogeneous ODSのtoken当たり費用をα·m_kv(s)+2γ·P_act、heterogeneous ODSをattention側α_j·m_kv(s)+GEMM側2γ_k·P_actとして分離する。colocationではKV容量が許す最大batchとGEMMのweight-loading/compute-bound境界を組み込み、disaggregationの利得条件と上界を導く。plannerはmodel DAGをpartition blockへ圧縮し、block内のordered operatorsをcontiguous stagesへ切り、device-group typeをstructured round-robinで割り当てる。各stageのprofiled execution latencyとstage間communication latency、memory、TPOT制約を用いてserving cost最小planを探索する。runtimeはplanに従ってstaged engineを構成し、microbatch pipelineで計算と通信を重畳する。",
+    "components": [
+      {
+        "name": "Analytical cost model",
+        "description": "colocated、homogeneous ODS、heterogeneous ODSを同じcost-per-token尺度で比較し、KV-cache長、weight footprint、bandwidth、compute、GPU価格の関係からdisaggregationが効く条件と利得上界を与える。"
+      },
+      {
+        "name": "Core-Attention Disaggregation analysis",
+        "description": "core attentionを一群、projection/FFN/MoE GEMMを別群へ置くCADが理想費用を達成できるstage balance条件を分析し、memory制約とGEMM weight-loading floor、hybrid layer variationによる限界を示す。"
+      },
+      {
+        "name": "Partition block",
+        "description": "uniform transformerなら1 layer、hybrid modelならfull/sliding/recurrent等の周期全体を最小反復blockとして表現し、そのblockのpartition templateを全blockへ再利用する。"
+      },
+      {
+        "name": "Regularity-aware planner",
+        "description": "block内operatorのcontiguous stage境界、device-group configuration、parallelism、replica、batch/microbatchをjoint searchし、layer構造の反復性で組合せ爆発を抑える。"
+      },
+      {
+        "name": "vLLM-based staged runtime",
+        "description": "任意stage partitionを異種device group上でpipeline実行する。各workerは1 decode iterationのcompute/communication sequenceを単一native callでsubmitし、host overheadとtransfer overheadを削減する。"
+      }
+    ],
+    "theoretical_findings": [
+      "homogeneous disaggregationはKV増大でcolocated feasible batchがGEMM compute-bound thresholdを下回った後に有利になり、利得はsequence lengthとともに増えるがM/(M-M_weights)で上界づけられる。",
+      "heterogeneous ODSはGPU間でcost-per-byteとcost-per-FLOPの優劣が交差する場合に意味があり、attentionには最小α、GEMMには最小γのGPUを割り当てる。",
+      "CADの理想利得にはstage latency balanceとcommunication overlapが必要で、memory容量とweight-loading latencyがbalance可能性を制約する。"
+    ],
+    "evidence": [
+      "arXiv HTML §1 lines 18–50",
+      "§3.1–3.4 lines 64–122",
+      "§4 lines 123–134"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
