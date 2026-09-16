@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import re
+import unicodedata
 from difflib import SequenceMatcher
 from typing import Any
 from urllib.parse import unquote, urlparse, urlunparse
@@ -30,8 +31,23 @@ def norm_title(value: Any) -> str | None:
     return text or None
 
 
+def resolver_norm_title(value: Any) -> str | None:
+    """Normalize titles for paper-level alias matching without changing legacy tokens.
+
+    Punctuation becomes a token boundary rather than being deleted, so ``cache-aware``
+    and ``cache aware`` converge while the long-standing ``norm_title`` exact-token
+    contract remains unchanged for the final duplicate gate.
+    """
+    if not value:
+        return None
+    text = unicodedata.normalize("NFKC", str(value)).casefold()
+    text = re.sub(r"[_\W]+", " ", text, flags=re.UNICODE)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text or None
+
+
 def normalized_title_hash(value: Any) -> str | None:
-    title = norm_title(value)
+    title = resolver_norm_title(value)
     if not title:
         return None
     return hashlib.sha256(title.encode("utf-8")).hexdigest()
@@ -201,10 +217,9 @@ def _resolver_aliases(record: dict[str, Any]) -> set[str]:
 def build_represented_resolver(records: list[dict[str, Any]]) -> dict[str, Any]:
     """Build a paper-level alias graph over represented/pending paper records.
 
-    Exact normalized titles are aliases because the existing duplicate gate already treats
-    exact normalized-title equality as identity. Stable identifiers and normalized URLs are
-    retained as direct aliases so arXiv/DOI/OpenReview/project representations converge to
-    one represented-paper node before candidate evaluation.
+    Resolver-normalized exact titles are aliases in addition to stable identifiers and
+    normalized URLs, so arXiv/DOI/OpenReview/project representations converge to one
+    represented-paper node before candidate evaluation without changing legacy title tokens.
     """
     if not isinstance(records, list) or any(not isinstance(record, dict) for record in records):
         raise TypeError("records must be a list of objects")
@@ -253,7 +268,7 @@ def build_represented_resolver(records: list[dict[str, Any]]) -> dict[str, Any]:
             record = records[index]
             aliases.update(record_aliases[index])
             strong_ids.extend(sorted("id:" + ident for ident in record_identifiers(record)))
-            title = norm_title(record.get("title"))
+            title = resolver_norm_title(record.get("title"))
             if title:
                 titles.append(title)
             title_hash = normalized_title_hash(record.get("title"))
@@ -308,10 +323,10 @@ def match_represented_paper(
 ) -> dict[str, Any] | None:
     """Return a high-confidence represented-paper match for one provider record.
 
-    Stable aliases win first. Exact normalized-title hashes are deterministic aliases.
-    Fuzzy title matching is deliberately restricted to records without any stable ID and
-    requires both first-author and year equality, which prevents an unknown DOI/arXiv ID
-    from being discarded merely because its title resembles an existing paper.
+    Stable aliases win first. Exact resolver-normalized title hashes are deterministic
+    aliases. Fuzzy title matching is deliberately restricted to records without any stable
+    ID and requires both first-author and year equality, which prevents an unknown DOI/arXiv
+    ID from being discarded merely because its title resembles an existing paper.
     """
     if not isinstance(record, dict) or not isinstance(resolver, dict):
         raise TypeError("record and resolver must be objects")
@@ -333,7 +348,7 @@ def match_represented_paper(
 
     if record_identifiers(record):
         return None
-    candidate_title = norm_title(record.get("title"))
+    candidate_title = resolver_norm_title(record.get("title"))
     candidate_author = _first_author(record)
     candidate_year = _record_year(record)
     if not candidate_title or not candidate_author or not candidate_year:
