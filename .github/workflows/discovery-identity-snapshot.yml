@@ -17,8 +17,11 @@ on:
 permissions:
   contents: write
 
+# Keep only the newest pending snapshot build, but do not let unrelated survey
+# background workflows replace/cancel this ledger refresh. Every run checks out and
+# rebuilds from latest main, so the newest pending run subsumes earlier relevant pushes.
 concurrency:
-  group: survey-background-main
+  group: discovery-exclusion-snapshot-main
   cancel-in-progress: false
 
 jobs:
