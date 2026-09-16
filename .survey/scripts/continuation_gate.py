@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Deterministic stop/continue gate for Scheduled Chat survey workers.
 
-Normal Scheduled Chat completion is time-driven only.  Hourly workers receive a
+Normal Scheduled Chat completion is time-driven only. Hourly workers receive a
 one-hour run window measured from the actual invocation start; the nominal
 schedule boundary is retained only as a compatibility fallback for older callers.
 
 Discovery round counts, candidate counts, exhaustion claims, duplicate-only
-rounds, backlog shape, and job-local completion are observations, never normal
-run-stop conditions.  Canonical read/durability/platform failures are reported as
-abnormal blockers and do not grant normal finalization permission.
+rounds, backlog shape, job-local completion, and exhaustion of one tool's call
+budget are observations, never normal run-stop conditions. Canonical read or
+durability failures and truly global platform execution limits are abnormal
+blockers and do not grant normal finalization permission.
 """
 from __future__ import annotations
 
@@ -42,8 +43,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
 
+    # platform_limit is reserved for a genuinely global execution limit that
+    # prevents the invocation from doing further useful work. Exhaustion of one
+    # web/search/tool budget is modeled separately and must not be promoted to a
+    # global platform stop while another tool/source/work route is usable.
+    local_tool_budget_exhausted = bool(getattr(args, "tool_call_budget_exhausted", False))
+    alternative_tool_route_available = bool(getattr(args, "alternative_tool_route_available", True))
     if args.platform_limit:
-        blockers.append("platform_limit_reached")
+        blockers.append("global_platform_execution_limit_reached")
+    elif local_tool_budget_exhausted and not alternative_tool_route_available:
+        blockers.append("all_required_tool_routes_unavailable")
 
     seconds_to_next = getattr(args, "seconds_to_next_scheduled_task", None)
     seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
@@ -93,7 +102,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if args.global_dependency and not independent_work and not transient_claim_wait:
         blockers.append("all_remaining_work_blocked_after_fallback_consideration")
 
-    # The only normal STOP_RUN is the run-local handoff guard.  Non-time failures
+    # The only normal STOP_RUN is the run-local handoff guard. Non-time failures
     # remain abnormal blockers: callers should retry/recover or be externally
     # terminated, but must not turn them into a successful normal final response.
     if time_handoff_active:
@@ -105,6 +114,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         finalization_allowed = False
         if blockers:
             required_action = "RECOVER_BLOCKER_AND_CONTINUE"
+        elif local_tool_budget_exhausted and alternative_tool_route_available:
+            required_action = "SWITCH_TOOL_OR_SOURCE_AND_CONTINUE"
         elif worker_kind == "discovery":
             required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AXIS_AND_DISCOVER_AGAIN"
         else:
@@ -146,11 +157,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_rounds_completed": discovery_rounds_completed,
         "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
         "discovery_reset_progress_known": rounds_since_last_novel_raw is not None,
-        # Legacy observability fields are retained for callers, but quotas are disabled.
         "discovery_min_rounds": None,
         "minimum_rounds_remaining": 0,
         "discovery_exhausted": discovery_exhausted,
         "next_axis_available": next_axis_available,
+        "tool_call_budget_exhausted": local_tool_budget_exhausted,
+        "alternative_tool_route_available": alternative_tool_route_available,
         "write_failure_scope": write_scope,
         "write_action": write_action,
         "claim_result_pending": bool(args.claim_result_pending),
@@ -166,11 +178,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "scheduled_handoff_guard_seconds": handoff_guard,
         "scheduled_handoff_active": time_handoff_active,
         "rule": (
-            "Normal finalization is time-only: the actual-invocation-start run deadline handoff "
-            "guard (or legacy schedule fallback when no deadline is supplied) is the sole normal "
-            "STOP_RUN trigger. Discovery quotas, exhaustion, candidate counts, duplicate-only "
-            "rounds, completed jobs, and backlog shape cannot end a run. Read/durability/platform "
-            "failures are abnormal blockers and do not authorize normal finalization."
+            "Normal finalization is time-only. Exhaustion of one tool's call budget is local resource "
+            "exhaustion, not a global platform stop, while another tool/source/work route exists. "
+            "Discovery quotas, exhaustion, candidate counts, duplicate-only rounds, completed jobs, "
+            "and backlog shape cannot end a run. Read/durability/global-platform failures are abnormal "
+            "blockers and do not authorize normal finalization."
         ),
     }
 
@@ -184,7 +196,9 @@ def main() -> int:
     ap.add_argument("--seed-durable", type=yn, default=True)
     ap.add_argument("--unpublished-completed-result", type=yn, default=False)
     ap.add_argument("--offline-seed-required", type=yn, default=False)
-    ap.add_argument("--platform-limit", type=yn, default=False)
+    ap.add_argument("--platform-limit", type=yn, default=False, help="true only for a genuinely global invocation/platform execution limit")
+    ap.add_argument("--tool-call-budget-exhausted", type=yn, default=False, help="one tool/source reports its per-run call budget exhausted")
+    ap.add_argument("--alternative-tool-route-available", type=yn, default=True, help="another tool/source/work route can make useful progress")
     ap.add_argument("--global-dependency", type=yn, default=False)
     ap.add_argument("--independent-work", type=yn, default=True)
     ap.add_argument("--spillover-work", type=yn, default=False)
