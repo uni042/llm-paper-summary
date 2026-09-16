@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:43:29 JST**
+> 自動生成: **2026-09-16 18:43:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **23** |
 | 未claim Research job | **20** |
 | 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-16 18:38:33 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 18:38:33 JST（5分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -199,7 +199,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
 - `arXiv:2604.07472` — Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:41:09 JST** / heartbeat: **—** / lease expiry: **09-16 20:11:09 JST**
+  - claim: **09-16 18:43:32 JST** / heartbeat: **—** / lease expiry: **09-16 20:13:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-c5a47af1c9e3acf3.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
