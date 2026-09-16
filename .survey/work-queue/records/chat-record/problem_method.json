@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-bb2a8d8b4366fb467720e96e",
-  "job_id": "job-research-d1705edaabc0afa6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bb2a8d8b4366fb467720e96e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-bb2a8d8b4366fb467720e96e","job_id":"job-research-d1705edaabc0afa6","data":{"problem":"RAGは外部文書をプロンプトへ連結するため入力が長くなり、文書トークンのKVを毎要求で再計算するプリフィルが最初のトークンまでの時間とGPU負荷を増やす。RAGCacheのGPU/CPU多段キャッシュは高速だが容量が限られ、TurboRAGのディスク事前KVは複数推論インスタンス間の共有を主眼にしていない。実サービスでは同じ文書が繰り返し検索される局所性と、負荷増大時に要求が待ち行列へ滞留する時間がある。","novelty":"文書KVをNVMe SSD上のベクトルDBへ半永続的に保存し、CPU RAMをその上の高速キャッシュとして使う。さらに中央共有KV管理器を複数LLMインスタンスから参照させ、待ち時間が閾値を超えた要求はKV生成器が先に検索を行って必要文書のKVを空きGPUまたはCPUで生成する。待ち時間を前処理時間へ変換し、一度生成したKVを全インスタンスが再利用する。","method_overview":"オフラインまたは背景処理で文書チャンクをLLMへ通し、埋め込み、文書ID、本文、KVキャッシュを対応付けてベクトルDBとディスクへ保存する。要求到着時はクエリ埋め込みからtop-k文書を検索し、KV管理器がまずCPUメモリキャッシュ、次にSSDを調べてKVを返す。推論側は文書を再プリフィルせず、保存済みKVをpast key-valuesとして注入し、クエリ部分だけを処理してデコードへ進む。複数インスタンス版では中央待ち行列を監視し、長く待つ要求について検索とKV生成を先行する。未生成なら空き計算資源で作成して共有ディスクへ登録し、既存なら重複生成を避ける。初期の文書単位KVはtop-k>1で文書間注意を欠くため、Shared版では取得されたtop-k文書集合をまとめて注意計算し、その組合せのKVを保存する。","system_design":"KV Cache Generator、Shared KV Cache Manager、各インスタンスのPrompt Generator、FaissベクトルDB、NVMe SSD、CPU RAMキャッシュ、中央要求待ち行列から構成される。","components":[{"name":"ディスク常駐KVキャッシュ","description":"RAG文書のKVを事前計算してNVMeへ保存し、文書が再検索されたときGPUで同じプリフィルを繰り返さない。SSD容量によりGPU/CPUメモリより多くの文書KVを保持できる。"},{"name":"共有KV管理器","description":"複数LLMインスタンスが同じディスクKV名前空間を参照し、あるインスタンスや背景生成器が作ったKVを他のインスタンスも利用する。CPU RAMのLRU型キャッシュで頻出KVのSSD読出しも削減する。"},{"name":"待ち行列先行生成","description":"要求の待ち時間が閾値を超えると、実際の推論順番が来る前に検索とKV生成を開始する。空きGPUまたはCPUを利用し、待ち時間とプリフィル準備を重ねる。"},{"name":"top-k集合KV","description":"複数文書を別々に事前計算すると文書間注意が欠落して精度が落ちるため、取得されたtop-k文書集合をまとめてKV化し、文書IDの組合せをキーとして保存する。"}]},"reservation":{"claim_id":"claim-bb2a8d8b4366fb467720e96e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
