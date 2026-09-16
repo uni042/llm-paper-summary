@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a3eb0f2e36e547c4dfdc516f",
+  "attempt_id": "attempt-71a0555f6f7cfeff302dc0c7",
   "job_id": "job-research-0dc2aa86e35f442f",
   "data": {
     "positioning": "OpWeaveは、入力処理とデコードを分ける粗粒度な分離より一段細かく、デコード内部の演算子を別GPU群へ分ける研究系統に位置する。従来の代表方式が注意機構とフィードフォワード網または専門家層の境界を固定するのに対し、OpWeaveは境界そのものを配置計画の決定変数にし、混合注意モデルの層周期も分割ブロックとして扱う。",
@@ -44,7 +44,7 @@
     "repository_fit": "推論基盤のサービング・スケジューリング・分離実行系統に強く適合する。専門家混合モデルも対象に含むが、専門家の退避そのものより、演算子段の配置と異種GPU利用が中心である。"
   },
   "reservation": {
-    "claim_id": "claim-a3eb0f2e36e547c4dfdc516f",
+    "claim_id": "claim-71a0555f6f7cfeff302dc0c7",
     "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }
