@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ae853adbe01956e7c70dbf4c",
-  "job_id": "job-research-c5668a715755a331",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ae853adbe01956e7c70dbf4c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ae853adbe01956e7c70dbf4c","job_id":"job-research-c5668a715755a331","data":{"limitations":"CompanyXという単一のサーバレスLLM基盤の1年間であり、企業向け専用クラスタや別地域・別料金体系のサービスへそのまま一般化できない。生プロンプトと明示的セッション識別子がないため、キャッシュシミュレーションは同一ユーザー・モデルとトークン長包含条件から推定したセッションを使う。実測キャッシュ済みトークン情報は最後の2か月だけである。負荷分散比較は記録再生で、ネットワークやGPUカーネルの実時間を完全再現するものではない。匿名化されたユーザーが人間、アプリケーション、代理サービス、エージェントのどれかを識別できない。","differences":"BurstGPTなどの既存記録より観測期間とモデル数が広く、未標本化要求単位で匿名ユーザー・インスタンス・キャッシュ済みトークンを同時に保持する点が主な差である。新しいサービング機構を提案するのではなく、既存のキャッシュ・負荷分散・配置研究が置くワークロード仮定を長期実運用記録で検証する。単一の集計分布ではなくユーザー×モデルの時間構造を残すため、局所性を必要とする接頭辞キャッシュやルーティングの評価へ直接利用できる。","implementation_status":"1年間のトレースをHarvardMadSys/chutes_workloadで公開。接頭辞キャッシュ再生にはlibCacheSimを利用する。論文はarXiv v2プレプリントで、HTMLには会議原稿用の未確定DOI表記が残るため、査読採択済みとは扱わない。","research_positioning":"サービング・スケジューリング・分離実行系の基準ワークロード論文として重要である。今後のvLLM、SGLang、KVキャッシュ階層化、プリフィル/デコード分離、モデル配置、オフロード研究では、合成ポアソン到着や固定ShareGPT形状だけでなく、この記録を使って年次非定常性、突発性、ユーザー局所性への頑健性を検証できる。特にSSD/NVMeを使うKV階層では、99%の再訪が15分以内という時間尺度と、負荷分散による複製が、保持期限・移送・複製方針を決める入力になる。"},"reservation":{"claim_id":"claim-ae853adbe01956e7c70dbf4c","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
