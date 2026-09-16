@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 09:30:48 JST**
+> 自動生成: **2026-09-16 10:00:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **59** |
-| 未claim Research job | **59** |
+| 収録候補論文 | **70** |
+| 未claim Research job | **69** |
 | 直近24hの検証済みResearch収録 | **15** |
-| 最終検証済みResearch収録 | **09-16 07:37:12 JST（1時間53分前）** |
+| 最終検証済みResearch収録 | **09-16 07:37:12 JST（2時間23分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **59** |
+| canonical_id確認済みの一意な候補論文 | **70** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **60** |
+| 非終端Research job合計 | **71** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **5** | **2** | **3** | **1** | **0** | — |
+| Research | **7** | **5** | **2** | **3** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **2** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **9** | **11** | **2** | **9** | **1** | **0** | **6** |
+| 合計 | **9** | **11** | **2** | **9** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -159,7 +159,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.12978` — SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading / worker `scheduled-chat-discovery-specialist-overflow`
+  - claim: **09-16 10:00:42 JST** / heartbeat: **—** / lease expiry: **09-16 11:30:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e4fbb25e81d25998.json`
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **—** / lease expiry: **09-16 11:00:37 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
@@ -182,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **60** |
+| ready | **71** |
 
 ### 候補の重複・識別情報欠損
 

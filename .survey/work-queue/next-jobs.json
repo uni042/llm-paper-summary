@@ -19,22 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 73,
-    "actively_claimed": 1,
-    "claimable": 72
+    "actively_claimed": 2,
+    "claimable": 71
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-e4fbb25e81d25998",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2609.12978",
-      "title": "SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading",
-      "source_url": "https://arxiv.org/abs/2609.12978",
-      "paper_path": "papers/inference/06-moe-inference-expert-offloading/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-41c06f0529c148e7",
       "type": "research",
@@ -120,6 +108,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-553691f8ff245e9b",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2606.22541",
+      "title": "ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill",
+      "source_url": "https://arxiv.org/abs/2606.22541",
+      "paper_path": "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-b6f805c0cbcee3d4",
       "type": "discovery",
       "lane": "discovery",
@@ -132,5 +132,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T00:37:34+00:00"
+  "generated_at": "2026-09-16T01:00:42+00:00"
 }
