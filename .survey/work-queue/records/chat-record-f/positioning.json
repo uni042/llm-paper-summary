@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6bf933254bed4369e3f58978",
-  "job_id": "job-research-a8b5b2b70328c222",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6bf933254bed4369e3f58978",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6bf933254bed4369e3f58978","job_id":"job-research-a8b5b2b70328c222","data":{"positioning":"本研究は接頭辞キャッシュの速度・容量研究と、決定的推論・量子化品質研究の交点に位置する。PagedAttentionやRadixAttentionなどが再利用率、処理量、遅延を主に評価するのに対し、同じ要求がキャッシュ状態によって同じ出力を再現できるかをサービング品質として測る。","differences":"既存の単一ターンFP16研究がキャッシュ経路と再計算経路の数値非等価性を示したのに対し、本研究は実推論基盤、複数ターンエージェント、低ビット重み、サーバ状態を加え、発散の頻度と運用上の原因を測る。量子化研究が平均精度を主指標にするのに対し、平均精度が同じでも個別項目が入れ替わる不安定性を独立した品質軸として扱う。","relation_to_prior_work":[{"work":"PagedAttention / RadixAttention / Prompt Cache","difference":"cache reuseの性能利益に対し、warm/cold pathが同じrequestへ同じtoken列を返すかを測定し、cache stateを再現性条件として追加する。"},{"work":"The Illusion of Equivalence","difference":"FP16単一ターンの数値非等価性を、llama.cpp/vLLM、multi-turn agent、3～16bit weightsへ拡張し、state reset controlで経路内決定性を検証する。"},{"work":"deterministic inference / batch-invariant kernels","difference":"batch size 1とserial requestsでbatch compositionを固定し、それでも残るcache-state dependenceを別の非決定要因として分離する。"},{"work":"LLM quantization quality studies","difference":"aggregate accuracyではなく、同じcache perturbationが低ビット化で個別token decisionをどれだけflipしやすくなるかをtrajectory divergenceとして測る。"}],"strengths":["cache-offの800 episode完全一致を内部対照にし、一般的nondeterminismを定量的に上界化する。","server-level prompt cache flag、execution order、state resetを個別操作して因果機構を切り分ける。","weight precisionを順序付けてquantization amplificationを測り、4bit付近の飽和まで報告する。","llama.cppとvLLMという独立実装で方向性を再現する。","agent trajectoryとGSM8K correctnessを分け、repeatability lossとaverage degradationを混同しない。"],"limitations":["7～14B open-weight modelsと単一RTX 4090に限定され、frontier-scale hosted endpointsは未評価。","agent workloadは一種類でtask successが低く、agent最終成功率への方向性は結論できない。","multi-tenant trafficで他利用者がcache stateを書き換える条件は測定していない。","vLLM session間の発散率差の原因はGPU memory fraction、driver、launch scriptなどを完全分離できていない。","token divergenceは意味的に同等な言い換えも差として数えるため、再現性には適切だがsemantic quality指標ではない。"],"implementation_status":"実験harness、raw request logs、cache exposure telemetry、analysis pipelineを公開し、stored responsesから全数値を再生成可能とする。llama.cpp/vLLMの実serverを使う実測研究でsimulationではない。","research_positioning":"LLM servingのSLOをlatency/throughputだけでなくreproducibilityまで拡張する研究である。cacheを無効化する必要はなく、stateをrun境界でresetしconfigurationを固定・記録すれば性能利益を残しながらrepeatabilityを改善できるという運用示唆を与える。","repository_fit":"serving scheduling/disaggregation系統のreliability側として適合する。prefix/KV cacheを高速化する論文群に対し、そのstate managementが実験再現性・agent debugging・A/B evaluationへ与える副作用を補完する。"},"reservation":{"claim_id":"claim-6bf933254bed4369e3f58978","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
