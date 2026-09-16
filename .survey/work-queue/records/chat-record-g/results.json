@@ -1,1 +1,68 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-44d7d7981220efe93f540824","job_id":"job-research-deb10d3b4d925a01","data":{"overview":"主要な投機的復号方式は多くの条件で標準復号を上回るが、相対速度向上はバッチ増加とともに縮む。Llama3.1-8BのGSM8KではEAGLEがバッチ1の1.73倍からバッチ128の1.21倍へ低下し、70Bでも高バッチほど余剰検証計算が重くなる。時間分解ではターゲット検証が42–95%を占め、提案自体より棄却候補を含む大規模モデル検証が主律速である。木構造はバッチ1でわずかに有利でも、21候補木はバッチ64で全評価条件が1倍未満へ落ちる。長い推論ではEAGLE-3がQwen3-8B-Thinkingで1.64–1.80倍、n-gramも1.50–1.58倍を示す。実測受理長を事前に知る理想器はInstructCoderのn-gramで約2.75倍対固定最良約2.1倍となり、提案器を位置ごとに理想切替すると単一固定方式より最大2.2倍の追加余地、条件によって端から端最大4.9倍級の上限が見える。","key_results":[{"metric":"EAGLE速度向上のバッチ依存","value":"1.73倍 → 1.21倍","baseline":"投機なし標準復号","condition":"Llama3.1-8B、GSM8K、バッチ1→128","interpretation":"絶対処理量は増えても計算律速化で投機の相対利得が縮む。"},{"metric":"ターゲット検証時間比率","value":"42–95%","baseline":"投機的復号の総実行時間","condition":"主要方式・モデル・バッチ条件","interpretation":"棄却候補を含む大モデル検証が主律速で、提案高速化だけでは上限へ届かない。"},{"metric":"木構造21候補の高バッチ性能","value":"バッチ64で全評価条件が1倍未満","baseline":"投機なし標準復号","condition":"Qwen3-8B / Llama3-70B、複数データ集合","interpretation":"受理長増加より棄却枝の検証計算が高バッチで支配的になる。"},{"metric":"推論生成のEAGLE-3速度向上","value":"1.64–1.80倍","baseline":"投機なし標準復号","condition":"Qwen3-8B-Thinking、GPQA-Main / AIME22-24","interpretation":"長い推論でも高受理率を維持する方式は実効利得を保つ。"},{"metric":"推論生成のn-gram速度向上","value":"1.50–1.58倍","baseline":"投機なし標準復号","condition":"Qwen3-8B-Thinking、GPQA-Main / AIME22-24","interpretation":"長文中の局所反復が学習不要の履歴照合にも利益を与える。"},{"metric":"InstructCoderの理想候補長上限","value":"約2.75倍 対 固定最良約2.1倍","baseline":"投機なし標準復号","condition":"Llama3.1-8B、n-gram、バッチ1","interpretation":"棄却される候補の無駄な検証を避けるだけでも大きな余地がある。"},{"metric":"理想的な複数方式切替の追加余地","value":"固定単一方式より最大2.2倍の追加速度向上","baseline":"各条件の最良固定方式","condition":"生成位置ごとにn-gram/EAGLEと受理長を理想選択","interpretation":"方式と候補長を位置適応させる制御が有望である。"}],"negative_results":["バッチ増加で投機的復号の相対速度向上が系統的に低下する。","21候補の広い木構造はバッチ64で標準復号より遅くなる。","Qwen3-8Bへ0.6Bドラフトモデルを組み合わせると、ドラフトの単一前向き計算がターゲット比約37.5%と重く、受理率が高くても利得が小さい。","n-gramはコード編集以外では受理長の分散が大きく、要求間の予測可能性が低い。","GPU数値非決定性により理論上は同分布でも生成列・生成長が完全一致しない。"],"quality_impact":"標準的な投機的復号は確率分布を保つ損失なし高速化だが、実GPUの浮動小数点非決定性による列差があるため、本研究は品質変化ではなく処理量を比較する。","interpretation":"投機的復号の価値は受理率だけでなく、提案器の相対費用、ターゲット検証の計算密度、バッチによるメモリ律速から計算律速への移行、生成位置ごとの局所反復に左右される。特に高バッチでは棄却候補を検証する余剰計算が直接損失になるため、より多く候補を出すことより、受理される候補だけを選んで検証量を制御することが重要になる。"},"reservation":{"claim_id":"claim-44d7d7981220efe93f540824","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0a8f3b62f80c03f536fe81a5",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "overview": "MMAはlarge H2D/D2Hで約1GBから245GB/sへ近づき、native single PCIe約53GB/sに対して最大4.62倍のbandwidthを得る。効果はrelay GPU数6付近でsaturateし、その後はcross-NUMA UPIがbottleneckになる。LMCache+vLLMでは16K–64K prefix hitでTTFTを1.14–2.38倍高速化し、Qwen-7B-Chat 64Kでは17.5GB KV transferが支配的なため2.38倍。vLLM Sleep ModeではQwen3-32Bのfall asleepを56.8%、wake upを59.7%短縮し、全modelで1.12–2.48倍speedup。一方8 GPU時の追加CPU overheadは最大822%に達する。",
+    "key_results": [
+      {
+        "metric": "peak host-GPU bandwidth",
+        "value": "245GB/s, 4.62×",
+        "baseline": "native ~53GB/s single PCIe",
+        "condition": "large transfer around 1GB+",
+        "interpretation": "複数PCIe pathとNVLink relayを同時利用して単一link上限を超える。"
+      },
+      {
+        "metric": "path scaling",
+        "value": "saturates around 6 participating GPUs",
+        "baseline": "fewer paths",
+        "condition": "8-GPU dual-NUMA server",
+        "interpretation": "cross-NUMA UPI bandwidthが次のbottleneckになる。"
+      },
+      {
+        "metric": "prefix-cache TTFT",
+        "value": "1.14–2.38× speedup",
+        "baseline": "native CUDA path",
+        "condition": "LMCache+vLLM, 16K–64K prefix",
+        "interpretation": "contextが長くKV transfer比率が増えるほど改善が大きい。"
+      },
+      {
+        "metric": "Qwen-7B-Chat 64K TTFT",
+        "value": "2.38× speedup",
+        "baseline": "native",
+        "condition": "single-request KV cache about 17.5GB",
+        "interpretation": "transfer-dominated long-context workloadで最大効果を示す。"
+      },
+      {
+        "metric": "Qwen3-32B Sleep Mode",
+        "value": "fall-asleep -56.8%, wake-up -59.7%",
+        "baseline": "native",
+        "condition": "vLLM Level-1 sleep",
+        "interpretation": "model weight H2D/D2H双方をmultipath化し2.32–2.48倍高速化する。"
+      },
+      {
+        "metric": "direct-priority P2P bandwidth",
+        "value": "367.28GB/s vs 330.56GB/s without priority",
+        "baseline": "P2P alone 367.60GB/s",
+        "condition": "8 simultaneous H2D tasks",
+        "interpretation": "direct pathを優先すると不要なNVLink relay interferenceをほぼ除去できる。"
+      }
+    ],
+    "negative_results": [
+      "MMAがnativeを上回るのはtransfer size約10MB以上で、小transferは制御overheadのためfallbackが必要。",
+      "5MB chunk設定のbreak-evenはH2D 11.3MB、D2H 13MB。",
+      "8 GPUではdedicated transfer/sync threadsにより追加CPU overheadが最大822%へ増える。",
+      "path数を増やしても6 GPU付近でUPIがbottleneckとなりbandwidthがsaturateする。",
+      "効果はserver内PCIe load imbalanceとunused relay bandwidthの存在に依存する。"
+    ],
+    "quality_impact": "data movementだけを変更するためモデル出力品質への影響はない。",
+    "interpretation": "offload/prefix-cache研究が単一PCIeを高速に使う、または転送をcomputeとoverlapする方向なのに対し、MMAはserver topologyに既に存在する複数PCIe+NVLinkを一つのlogical host-memory pathとして束ねる。最大帯域だけでなく、明示congestion telemetryなしにqueue backpressureをrouting signalへ転用する点が実装上の鍵である。"
+  },
+  "reservation": {
+    "claim_id": "claim-0a8f3b62f80c03f536fe81a5",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

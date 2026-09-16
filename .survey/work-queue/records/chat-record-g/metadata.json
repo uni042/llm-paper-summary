@@ -1,5 +1,63 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-44d7d7981220efe93f540824","job_id":"job-research-deb10d3b4d925a01",
- "data":{"canonical_id":"arXiv:2601.11580","arxiv_id":"2601.11580","doi":"10.48550/arXiv.2601.11580","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Speculative Decoding: Performance or Illusion?","summary":"本研究は投機的復号を研究用試作ではなく実運用向けvLLM上で体系評価し、n-gram、EAGLE/EAGLE-3、独立ドラフトモデル、多トークン予測をモデル規模・バッチ量・通常生成・推論生成にまたがって比較する。大規模ターゲットモデルによる検証が実行時間の42–95%を占め、バッチ増加で投機の相対利得が縮むこと、受理長が位置・要求・データ集合ごとに大きく変動することを示す。さらに実測トレースから理論上限を構成し、受理される候補だけを検証する適応方式や複数提案器の切替に大きな改善余地があることを定量化する。","list_summary":"実運用向けvLLMで主要投機的復号を横断評価し、検証支配・バッチ依存・受理変動と理論上限との差を定量化。","authors":["Xiaoxuan Liu","Jiaxiang Yu","Jongseok Park","Ion Stoica","Alvin Cheung"],"published":"2025-12-31","publication":"arXiv preprint arXiv:2601.11580v2","publication_type":"arXivプレプリント","publication_status":"2025年12月31日初版、2026年3月18日v2。主分類cs.CL。","lineage":"speculative-decoding","topics":["投機的復号","大規模言語モデル推論","vLLM","受理率","検証コスト"],"importance":"投機的復号の実効性能を実運用向け推論基盤と現実的バッチ条件で比較し、アルゴリズム単体の受理率では説明できないシステム律速を明確化する。","hardware_evaluation":"NVIDIA H100 80GB。8Bは1 GPU、70B/106Bは4 GPUのテンソル並列。木構造検証の補足評価ではSGLangも使用。","quality_effect":"投機的復号自体は標準復号と同じ分布を保つ損失なし手法だが、実GPUでは数値非決定性により生成長が完全一致しないため、比較にはトークン処理量を用いる。","source":"https://arxiv.org/abs/2601.11580","sources":["https://arxiv.org/abs/2601.11580","https://arxiv.org/html/2601.11580","https://arxiv.org/pdf/2601.11580"],"code":"https://github.com/orgs/SpecDecode-Bench/repositories","implementation":"vLLM v0.10.1.1の標準最適化を有効にして主要投機的復号方式を評価し、性能分解用プロファイラと理論上限シミュレータを公開している。木構造検証はSGLang v0.5.9でも評価する。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2401.10774","arxiv_id":"2401.10774","title":"Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads"},{"canonical_id":"arXiv:2402.12374","arxiv_id":"2402.12374","title":"Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding"}],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節で正規化識別子を確認","references_total":2},
- "reservation":{"claim_id":"claim-44d7d7981220efe93f540824","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0a8f3b62f80c03f536fe81a5",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "canonical_id": "arXiv:2512.16056",
+    "arxiv_id": "2512.16056",
+    "doi": "10.48550/arXiv.2512.16056",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services",
+    "summary": "MMAはCPU host memoryとGPU間のDMAを単一PCIe linkへ固定せず、他GPUのPCIeとNVLink relayを同時利用するintra-server multipath転送層である。CUDA APIをLD_PRELOADで透過的にinterceptし、dummy taskで元のdependencyを維持しながらtransferをmicro-taskへ分割し、outstanding queue深度を暗黙のcongestion signalとして動的routingする。8×H20実機で最大245GB/s、native比4.62倍の帯域を得て、prefix-cache TTFTを1.14–2.38倍、vLLM sleep mode model switchingを1.12–2.48倍高速化する。",
+    "list_summary": "PCIe+NVLink relayを透過的にmultipath利用しhost–GPU帯域を最大245GB/s（4.62倍）、TTFT/model switchingを最大2.38/2.48倍高速化。",
+    "authors": [
+      "Lingfeng Tang",
+      "Daoping Zhang",
+      "Junjie Chen",
+      "Peihao Huang",
+      "Feng Jin",
+      "Chengguang Xu",
+      "Yuxin Chen",
+      "Feiqiang Sun",
+      "Guo Chen"
+    ],
+    "published": "2025-12-18",
+    "publication": "arXiv preprint arXiv:2512.16056v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2025年12月18日投稿のarXiv初版。主分類cs.DC。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "host-GPU transfer",
+      "PCIe",
+      "NVLink",
+      "multipath routing",
+      "KV cache transfer",
+      "model switching"
+    ],
+    "importance": "offload/prefix cache/model switchingの共通PCIe bottleneckに対し、既存server内の未使用linkを束ねて物理帯域を増やす基盤I/O層を提供する。",
+    "hardware_evaluation": "AMD EPYC 9654 + 8×NVIDIA H20、PCIe 5.0、NVLink/NVSwitch実機。",
+    "quality_effect": "data transfer経路のみを変更し、モデル計算・出力品質は変更しない。",
+    "source": "https://arxiv.org/abs/2512.16056",
+    "sources": [
+      "https://arxiv.org/html/2512.16056v1"
+    ],
+    "code": null,
+    "implementation": "CUDA 12.8上の3000行超C++ user-space shared library。LD_PRELOADでnative CUDA memory APIを透過置換するprototypeを実装。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-0a8f3b62f80c03f536fe81a5",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

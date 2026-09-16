@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-44d7d7981220efe93f540824","job_id":"job-research-deb10d3b4d925a01","data":{"positioning":"本研究は新しい投機的復号アルゴリズムを単独提案する系統ではなく、既存方式を実運用向け推論基盤で横断的に特性評価し、どの条件で実際に速くなるかを説明するシステム研究である。EAGLE、Medusa系、多トークン予測、独立ドラフトモデル、n-gramのアルゴリズム研究に対し、vLLMの連続バッチやCUDA Graphを含む実行環境で提案費用・検証費用・受理挙動を同じ尺度へ揃える。","differences":"従来の投機的復号論文が新しい提案器、木構造、候補長制御による個別速度向上を主に示すのに対し、本研究は方式横断の実測からターゲット検証が主律速であること、高バッチでは広い候補集合が逆効果になること、受理長が生成位置ごとに変わることを示す。さらに固定方式の実測値だけでなく、実受理トレースから候補長と方式選択の理論上限を構成し、現在方式が上限からどれだけ離れているかを定量化する。","relation_to_prior_work":[{"work":"EAGLE / EAGLE-3","difference":"補助予測層による高受理率を提案する研究に対し、本研究は実運用バッチ条件で提案費用とターゲット検証費用まで含めて利得を測り、位置ごとの安定した受理特性を比較する。"},{"work":"Medusa / Sequoiaなど木構造投機","difference":"複数枝を並列検証して受理長を伸ばす方式に対し、広い木が高バッチで棄却検証を増やし標準復号より遅くなり得る境界を実測する。"},{"work":"独立ドラフトモデル型投機","difference":"受理率だけでなくドラフトとターゲットの相対実行費用を比較し、小型ターゲットではドラフト費用比が高くなって利得を削ることを示す。"},{"work":"n-gram / prompt lookup","difference":"学習不要という低提案費用に加え、コード編集や長い推論で局所反復が生じる位置では長い受理バーストを得る一方、要求間分散が大きいことを位置別に解析する。"}],"strengths":["研究用試作ではなくvLLMの標準最適化を有効にした実運用条件で比較する。","8Bから106B、単一GPUから4 GPU、通常生成から長い推論生成まで広い条件を覆う。","端から端の速度だけでなく提案・検証・棄却処理・基盤処理とメモリを分解する。","位置・要求・データ集合別の受理分散を測り、平均受理率の弱点を明示する。","実測トレースから理論上限を作り、候補長制御と複数提案器切替の研究余地を定量化する。"],"limitations":["主評価ハードウェアはNVIDIA H100で、他GPU世代や異種アクセラレータでは計算・帯域比が変わる。","中心基盤はvLLMであり、木構造検証だけSGLangを使うため全方式を完全に同一基盤で比較したわけではない。","理想上限は将来の受理長や最良提案器を完全に知る予言器を仮定し、その予測器自身の実行費用を無視する。","数値非決定性による生成列差があるため、理論上の同分布性と実際のビット単位再現性は一致しない。","公開評価は選択したモデル・データ集合に依存し、閉鎖モデルや別ドメインでの方式順位は再検証が必要。"],"implementation_status":"vLLM v0.10.1.1上の主要投機的復号経路を実測し、時間・メモリ分解、位置別受理解析、理論上限シミュレータまで実装している。プロファイラとシミュレータのコードはSpecDecode-Bench組織で公開されており、概念分析だけではない。","research_positioning":"投機的復号研究を『より高い受理率の提案器を作る』だけから、『実運用基盤で棄却検証を含む計算予算をどこへ使うか』というシステム最適化へ広げる特性評価である。特に高バッチ・大規模モデルでは検証計算が支配するため、受理確率予測、候補長適応、複数提案器の位置適応切替を今後の主要軸として位置付ける。","repository_fit":"speculative-decoding系統の比較基準として適合する。個別方式の新規性より、EAGLE、n-gram、ドラフトモデル、多トークン予測を同一の実運用条件で比較し、方式選択や候補長制御の境界条件を整理するため、既存アルゴリズム論文を横断する評価基盤として価値が高い。"},"reservation":{"claim_id":"claim-44d7d7981220efe93f540824","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0a8f3b62f80c03f536fe81a5",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "positioning": "MMAはKV cache offload、model offload、prefill-decode disaggregationそのもののpolicyを変えるのではなく、それらが共有するhost-memory↔GPU transfer substrateをmultipath化する下位層である。従来のdouble bufferingやmultiple CUDA streamsが1本のPCIeを隠蔽・飽和させるのに対し、MMAは他GPUのPCIeとNVLink relayまで束ねて物理的な利用可能bandwidthを増やす。",
+    "differences": "inter-server multipath RDMAやFuseLinkはNIC/GPU間metadata・RDMA control channelを使えるが、intra-server host DMAには同等のfeedback/relay primitiveがない。MMAはdummy task、callback/spin synchronization、outstanding queue backpressureを使ってCUDA API semanticsを維持したままCPU側でpathを動的選択する。",
+    "relation_to_prior_work": [
+      {
+        "work": "CPU/GPU offload and prefix-cache systems",
+        "difference": "何をいつoffloadするかではなく、決まったH2D/D2H copyを複数物理pathへ分散するため上位policyと直交する。"
+      },
+      {
+        "work": "multiple CUDA streams / double buffering",
+        "difference": "単一PCIeの利用率向上やcompute overlapではなく、他GPUのPCIe+NVLink relayを使ってaggregate bandwidth自体を増やす。"
+      },
+      {
+        "work": "FuseLink / multipath RDMA",
+        "difference": "inter-server NIC trafficではなくhost-memory DMAを対象とし、RDMA congestion signalなしでlocal outstanding queueをpassive load signalにする。"
+      },
+      {
+        "work": "CXL-based memory systems",
+        "difference": "新しいmemory fabric/hardwareを要求せず、既存PCIe+NVLink GPU server topologyのidle pathをsoftwareだけで再利用する。"
+      }
+    ],
+    "strengths": [
+      "LD_PRELOADで既存LLM applicationのcode modificationなしに導入できる。",
+      "8×H20実機でmicrobenchmarkとLMCache/vLLM end-to-end双方を評価する。",
+      "dependency preservation、small-copy fallback、dynamic load balancingまで実装上の障害を扱う。",
+      "prefix KVとmodel switchingという異なる大容量transfer workloadで同じtransport layerの効果を示す。",
+      "direct priorityとdual pipelineでrelayが既存GPU-GPU trafficを壊すのを抑える。"
+    ],
+    "limitations": [
+      "CPU control planeがGPUごとにtransfer/sync threadを必要とし、8 GPUでCPU overheadが822%増える。",
+      "小transferではmultipath overheadが利益を上回るためnative fallbackが必要。",
+      "複数pathのheadroomがない均等高負荷時には改善余地が小さい。",
+      "dual-NUMAではUPIが新たなbottleneckとなり6 relay GPU付近でsaturateする。",
+      "現状はCUDA/NVIDIA topology向けprototypeで、hardware-native multipath primitiveはない。"
+    ],
+    "implementation_status": "CUDA 12.8上で3000行超のC++ shared libraryとして実装し、LD_PRELOADでCUDA memory APIをinterceptする。AMD EPYC + 8 H20実機で評価済み。",
+    "research_positioning": "LLM servingの階層memory研究に対し、tier間transferをschedule/overlapするだけでなく、tier間の物理link topologyそのものをaggregate resourceとして扱う視点を追加する。host DRAM、CXL memory、SSD等を活用する際にも、最終GPU ingressが単一PCIeで詰まる設計への警告となる。",
+    "repository_fit": "serving scheduling/disaggregation系統に適合する。特にprefix cache取得、prefill-decode分離、model switchingの共通data planeを高速化するため、個別cache policyより下位のtransport基盤として比較すべき論文である。"
+  },
+  "reservation": {
+    "claim_id": "claim-0a8f3b62f80c03f536fe81a5",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
