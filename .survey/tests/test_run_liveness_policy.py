@@ -27,12 +27,16 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertIn("同じ", body)
                 self.assertIn("繰り返", body)
 
-    def test_final_response_requires_deterministic_permit(self):
+    def test_final_response_follows_deterministic_permit_and_next_action(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
+        self.assertIn("continuation_gate.py", text)
         self.assertIn("run_finalization_gate.py", text)
         self.assertIn("MAY_FINALIZE", text)
-        self.assertIn("finalization_permit", text)
-        self.assertIn("許可なしにfinal responseを出してはならない", text)
+        self.assertIn("finalization_permit.issued=true", text)
+        self.assertIn("next_action", text)
+        self.assertIn("worker自身に「時間まで絶対に終わるな」という主観的な継続判断は要求しない", text)
+        self.assertIn("存在しないエラー", text)
+        self.assertIn("事前にそれを予測してstop理由へ変換しない", text)
 
     def test_policy_preserves_specialized_contracts_without_adding_blocking_waits(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")

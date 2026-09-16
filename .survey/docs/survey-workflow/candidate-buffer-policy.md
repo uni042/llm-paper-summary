@@ -2,11 +2,11 @@
 
 この文書は論文survey workerの **candidate供給・discovery水位制御** の正本とする。既存の `queue-v10.md` にある「actionable readyが尽きたらdiscovery」という受動的な記述より、本書の水位制御を優先する。research品質、transport、fallback、maintenance、08:30 routing等は従来の正本に従う。
 
-探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索主体worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、単一sourceの一時障害だけを理由にdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。ただし `candidate_inventory > 50` かつactionable researchがある場合、探索主体workerはoverflow research modeへ切り替え、discoveryよりbacklog消化を優先する。
+探索ラウンドの継続actionは `.survey/docs/survey-workflow/discovery-continuation-policy.md`、run終了可否は `continuation-policy.json` / `continuation_gate.py` / `run_finalization_gate.py` を正本とする。通常論文worker（毎時:30）と探索主体worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、単一sourceの一時障害、探索軸の一巡はworker独自の終了条件にせず、観測値としてgateへ渡す。ただし `candidate_inventory > 50` かつactionable researchがある場合、探索主体workerはoverflow research modeへ切り替え、discoveryよりbacklog消化を優先する。
 
 ## 目的
 
-research workerが候補枯渇で停止しないよう、discoveryをresearch開始の前処理ではなく独立した在庫補充工程として扱う。弱い論文で件数を埋めず、有望候補を先に広く集め、researchはその候補群から優先度順に全文精読する。同時に、候補供給が消化速度を大きく上回った場合は探索workerの計算資源を追加readerへ転用し、backlogを無制限に積み増さない。
+research workerが候補枯渇でアイドル化しにくいよう、discoveryをresearch開始の前処理ではなく独立した在庫補充工程として扱う。弱い論文で件数を埋めず、有望候補を先に広く集め、researchはその候補群から優先度順に全文精読する。同時に、候補供給が消化速度を大きく上回った場合は探索workerの計算資源を追加readerへ転用し、backlogを無制限に積み増さない。
 
 ## 水位
 
@@ -16,7 +16,7 @@ research workerが候補枯渇で停止しないよう、discoveryをresearch開
 - `critical_watermark = 15`
 - `overflow_research_threshold = 50`。切替条件は **`candidate_inventory > 50`**。
 
-25本以上の候補がある状態は、通常論文workerがresearchへ十分に注力できる在庫水準とみなす。25本未満になった時点でdiscovery補充をresearchと並行して加速し、15本未満では候補枯渇防止を優先してdiscovery比重をさらに上げる。0本になるまで待ってから探索を始めてはならない。
+25本以上の候補がある状態は、通常論文workerがresearchへ十分に注力できる在庫水準とみなす。25本未満になった時点でdiscovery補充をresearchと並行して加速し、15本未満では候補枯渇防止を優先してdiscovery比重をさらに上げる。0本になるまで待ってから探索を始めない。
 
 `candidate_inventory` にhard capは設けない。ただし50本を超え、かつ処理可能なresearch jobがある間は、毎時`:00`の探索主体workerもoverflow research modeへ入り、通常論文workerと同じhigh-backlog research-only動作で全文精読に加勢する。50以下へ戻るかactionable researchが尽きたら、`:00` workerは通常探索モードへ戻る。件数維持のために弱い候補を採用しない。
 
@@ -26,7 +26,7 @@ research workerが候補枯渇で停止しないよう、discoveryをresearch開
 
 Discovery段階では原則として全文精読しない。タイトル、abstract、書誌情報、一次資料の存在、既収録identityとの重複、テーマ適合性、新規性の見込みを軽量評価し、「全文を読む価値がある候補」をcandidate poolへ積む。
 
-Research段階で初めて一次資料全文を取得・精読し、repository-qualityの5-slot structured recordを作る。Discoveryで得たabstractや検索snippetだけからresearch内容を推測しない。
+Research段階で初めて一次資料全文を取得・精読し、repository-qualityの5-slot structured research recordを作る。Discoveryで得たabstractや検索snippetだけからresearch内容を推測しない。
 
 この分離により、1回のdiscoveryで1本だけ見つけて即researchする方式に固定せず、先に複数候補を蓄積できる。overflow research modeはこの段階分離を崩さず、探索主体workerの役割そのものをrun単位でResearchへ切り替える。
 
@@ -94,15 +94,17 @@ maintenance runと08:30 other-update runを除くpaper workerでは、run開始�
 - 15〜24: 通常論文workerはresearchを継続しながらdiscovery補充を積極化する。探索主体workerもdiscoveryを行う。
 - 0〜14: discovery補充を優先し、複数の探索経路を使って在庫回復を図る。見つかった高priority候補のresearchを通常論文workerが同一runで進めてもよい。
 
-high-backlog research-only mode中は、一次資料取得と耐久保存経路が利用可能でactionable researchが十分ある限り、researchを担当する各workerは1runにつき最低3件の異なるresearch jobを完全payloadとして送信または耐久checkpointすることを処理量の下限目標とする。3件は上限でも停止条件でもなく、3件後も処理可能なら継続する。platform limit、正本read不能、耐久保存不能、一次資料取得不能、claim不能等のhard conditionはこの目標より優先する。
+high-backlog research-only / overflow research modeに処理件数の最低ノルマ、固定batch数、完了件数による終了条件は設けない。1件、3件、それ以上の完了数はthroughput telemetryにすぎない。各durable checkpoint後に最新canonical stateとrun deadlineをgateへ渡し、scriptが返した次actionに従う。
 
-固定上限件数・固定batch数は設けない。候補が0件の探索ラウンドがあっても別軸へ切り替える。プラットフォーム上限、耐久保存不能、または合理的に有望探索軸を使い切った場合のみそのrunのdiscoveryを終了する。
+Discoveryにも固定round数、run全体の固定candidate上限、固定submission数、探索枯渇によるworker独自の終了条件は設けない。workflow-v10の現行queue contractでは **1 immutable discovery submissionは0〜5 candidates** に制限する。強いdedupe済みcandidateが5件を超える場合は捨てず、同じ `run_key` の複数immutable submissionへ5件以下ずつ分割してすべて耐久保存する。候補0件・全重複・既知軸の一巡・`next_axis_hint`なし・`discovery_exhausted`・5件到達・submission分割はいずれも探索戦略/throughput用telemetryであり、正常終了許可には使わない。終了可否はcontinuation/finalization scriptsへ委ねる。
 
 ## GitHub write不能時
 
-GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へ保存可能ならworkerを止めない。high-backlog research-only / overflow research modeでは新規candidate seedを作らず、priority上位researchの完成payloadをLibraryへcheckpointする。candidate在庫が50以下で探索主体workerが通常探索モードの場合、または通常論文worker側でdiscoveryが許可される場合はcandidate seedを保存する。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
+GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へ保存可能なら、そのtransport可用性をgateへ渡す。high-backlog research-only / overflow research modeでは新規candidate seedを作らず、priority上位researchの完成payloadをLibraryへcheckpointする。candidate在庫が50以下で探索主体workerが通常探索モードの場合、または通常論文worker側でdiscoveryが許可される場合はcandidate seedを保存する。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
 
 fallback envelopeにも探索時点の `discovery_stats` を保持し、GitHub復旧後のreplayでActionsが通常submissionと同じ統計処理を行えるようにする。overflow research modeの探索主体workerは通常論文workerと同じresearch fallback契約を使う。
+
+GitHub directと承認済みLibrary fallbackの両方で必要な成果を耐久保存できないことが実際に確認された場合、その具体的state/errorをcontinuation gateへ入力する。workerが保存不能を予測・仮定して停止理由を作らない。
 
 ## 08:30 reporting
 

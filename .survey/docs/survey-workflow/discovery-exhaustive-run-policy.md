@@ -1,128 +1,81 @@
 # Discovery exhaustive-run policy
 
-この文書は毎時`:00` JSTの **探索主体Scheduled Chat worker** が1回の実行枠をどう使うかを定める。役割分離は `discovery-specialist-worker.md`、candidate水位とoverflow切替は `candidate-buffer-policy.md`、一般的な継続条件は `discovery-continuation-policy.md` を正本とする。
+この文書は毎時`:00` JSTの探索主体Scheduled Chat workerが1回の実行枠をどう使うかを定める。役割分離は `discovery-specialist-worker.md`、candidate水位とoverflow切替は `candidate-buffer-policy.md`、run終了可否は `continuation-policy.json` / `continuation_gate.py` / `run_finalization_gate.py` を正本とする。
+
+## 終了判断はgateへ委譲する
+
+worker自身が「時間まで絶対に働き続ける」「探索空間を使い切ったから終わる」のどちらかを主観で選ぶ設計にはしない。workerは最新canonical stateと実測時間を取得し、gateへ渡して返されたactionに従う。
+
+停止を正当化するために、存在しないplatform/runtime/tool limit、canonical read failure、durable-save failure、探索枯渇を推測・生成しない。観測できた具体的state/errorだけを入力する。外部プラットフォームが強制終了する場合はworkerが事前にそれをstop理由として予測しない。
 
 ## 実開始基準のScheduled Chat引き継ぎガード
 
-探索主体workerは、**実際にそのScheduled Chat invocationが開始した時刻をrun開始時刻として1回だけ固定し、run開始時刻 + 3600秒をrun deadlineとする。** overflow research modeへ切り替わった場合も同じrun-local deadlineを使う。プラットフォーム都合で予定`:00`より数分早く、または遅く起動しても、そのずれで今回runの持ち時間を削らない。
+探索主体workerは実際のScheduled Chat invocation開始時刻を1回だけ固定し、`run_deadline = actual_start + 3600s` とする。overflow research modeへ切り替わっても同じdeadlineを使う。
 
-- 新しいdiscovery round、新しい探索軸、新しいsubmission作成単位、または新しいResearch/Audit claimを開始する直前に、予定`:00`までではなく **run deadlineまでの残り時間** を確認する。
-- run deadlineまで **600秒以下** なら新しい独立作業を開始しない。現在までの成果・観測値・次探索軸ヒントを耐久保存し、新しいclaimを発行せずrunを終了する。
-- run deadlineまで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など最低限の終了処理だけを行う。
-- 予定`:00`が近い、または既に通過していること自体は、run-local deadlineがまだ十分先なら停止理由にしない。
-- この600秒ガードは、固定上限を設けないという通常の継続原則、overflow research modeの処理継続、探索空間を回し続ける規則より優先する。
-- すでに進行中で未保存の作業を捨てるための規則ではない。まず安全な耐久保存地点まで進め、その後は次の独立作業を開始しない。
-- `continuation_gate.py` を使う場合、実開始時に確定したrun deadlineまでの秒数を `--seconds-to-run-deadline` に渡す。既定ガードは600秒である。`--seconds-to-next-scheduled-task` はrun deadlineを確定できない古いcaller向けのcompatibility fallbackに限る。
+新しいdiscovery round、探索軸、submission作成単位、Research/Audit claimを始める前、および各耐久checkpoint後にrun deadlineまでの残秒を再計算し `continuation_gate.py --seconds-to-run-deadline` へ渡す。予定`:00`までの残り時間はactual-start deadlineを確定できない旧caller向けcompatibility fallbackに限る。
 
-## 最重要原則
+600秒handoff guardや180秒finalization帯の扱いはscript出力を正本とし、worker側で独自に前倒し・延長しない。
 
-**5本は1 runの上限ではない。1探索軸・1 discovery submissionのcandidate送信上限である。**
+## Candidate件数とtransport chunk
 
-ただし探索主体workerは常にdiscoveryだけを行うわけではない。各round開始前に `candidate_inventory` とactionable Research/Auditを確認し、**`candidate_inventory > 50` かつactionable Research/Auditがある場合はoverflow research modeへ切り替える。** この場合、探索ループを一時停止し、通常論文workerと同じ全文精読・5-slot structured record・不変提出（immutable submission）契約でbacklogを処理する。
+run全体のcandidate件数に最低quotaやhard capは設けない。弱いcandidateで件数を埋めず、品質基準を満たす候補を保存する。
 
-candidate在庫が50以下へ戻るかactionable Research/AuditがなくなればDiscovery modeへ戻る。candidate在庫の多さはrun終了条件ではなくモード切替条件である。
+workflow-v10の現行queue contractでは1 immutable discovery submissionを **0〜5 candidates** に制限する。5件はtransport chunkの上限であり、1 round/runの探索上限ではない。強いdedupe済みcandidateが6件以上ある場合は、同じrun_keyの複数immutable submissionへ5件以下ずつ分割し、候補を捨てずに送る。5件到達やsubmission分割をrun終了理由にしない。
 
 ## Discovery mode loop
 
-Discovery modeでは次をループする。
+Discovery modeでは次を1単位として処理する。
 
-1. 最新HEAD、identity、queue、existing jobs、`discovery-state.json`、candidate在庫を確認する。
-2. 次の独立作業を始める前に引き継ぎガードを評価する。ガード内なら耐久保存と終了処理を行って終了する。
-3. `candidate_inventory > 50` かつactionable Research/AuditありならOverflow research modeへ移る。
-4. 直近roundと重複しない探索軸を1つ選ぶ。
-5. title、abstract、書誌情報、一次資料の存在、テーマ適合性だけを軽量評価する。Research modeではない間は全文精読・5-slot作成を行わない。
+1. 最新HEAD、identity、queue、existing jobs、`discovery-state.json`、candidate inventory、actionable Research/Auditを取得する。
+2. run deadline等の観測値をcontinuation gateへ渡し、返されたactionを確認する。
+3. `candidate_inventory > 50` かつactionable Research/Auditありならoverflow research modeへ切り替える。
+4. Discovery継続actionなら、直近roundと実質的に異なる探索軸を選ぶ。
+5. title、abstract、書誌情報、一次資料の存在、テーマ適合性を軽量評価する。通常Discovery中は全文精読や5-slot作成を行わない。
 6. canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで重複除外する。
-7. その軸から強いcandidateを最大5本だけ1 submissionとして送る。弱い候補で5本を埋めない。
-8. `discovery_stats` にrun_key、round、axis、query summary、candidate数、重複数、next-axis hintを残す。
-9. 最新stateを再取得し、overflow条件を満たせばResearch modeへ、満たさなければ引き継ぎガードを再評価して別探索軸へ進む。
+7. 強いcandidateを1 payload最大5件のimmutable discovery submissionへ必要数だけ分割して耐久保存する。0件の場合も観測可能性のため空submissionを保存する。
+8. `discovery_stats` にrun_key、round、axis、query summary、candidate数、重複数、empty reason、next-axis hintを残す。
+9. 最新canonical stateを再取得し、gateへ戻る。
 
-固定round数、固定総candidate数、固定submission数は設けない。ただしrun deadlineまで600秒以下になった場合は引き継ぎガードを優先する。
+round数・submission数・candidate数には終了ノルマを置かない。0件round、全重複round、同じrun内で多数roundを完了したこと、現在のnext-axis hintが空であることも、それ自体を正常終了許可には変換しない。
 
-## 耐久実行記録の不変条件
+## 耐久実行記録
 
-Discovery modeへ1回でも入った`:00` Scheduled Chat runは、**正常終了する前に、そのrunで固定した `run_key` を持つdiscovery submissionを少なくとも1件、正規の耐久経路へ保存しなければならない。** 探索を実行した事実だけ、候補0件という判断だけ、ローカルな一時状態だけを残して終了してはならない。
+Discovery modeへ1回でも入った`:00` runでは、そのrunで固定した `run_key` を持つdiscovery submissionを正規の耐久経路へ残す。
 
-- GitHub write可能時は `.survey/work-queue/submissions/<unique-id>.json` へ通常のworkflow-v10 discovery submissionを直接保存する。
-- 強い新規candidateが0件、全候補が重複、または最終dedupeで0件になった場合も `candidates: []` のsubmissionを保存し、`discovery_stats` に実際の `candidate_count`、`duplicate_filtered_count`、`duplicate_canonical_ids`、`next_axis_hint` と、具体的な非nullの `empty_round_reason` を残す。
-- GitHub write可能なのに、`kind: discovery` の生payloadを `.survey/work-queue/fallback-inbox/` へ直接置いてはならない。generic fallbackを使う経路では `fallback-routing.md` と `fallback_transport.py` の完全な `writes[]` envelope契約に従い、通常のDiscovery fallbackは `fallback-routing.md` が指定するLibrary経路を優先する。
-- run終了監査では、今回の `run_key` を持つ正規submissionまたは承認済みLibrary fallbackが実際に耐久保存されていることを再確認する。見つからなければ、候補0件でも空submissionを作成してから終了する。
-- GitHub directと承認済みLibrary fallbackの両方へ保存できない場合だけ、下記Run-level stop condition 3として異常終了してよい。正常終了扱いにはしない。
-- run開始直後から最後までoverflow research modeだけで、Discovery modeへ一度も入らなかった場合は空discovery submissionを作る必要はない。その場合はResearch/Auditの完全payloadの耐久保存をそのrunの成果証跡とする。
+GitHub write可能時はworkflow-v10 discovery submissionを使用する。強い新規candidateが0件、全候補が重複、最終dedupeで0件になった場合も `candidates: []` と実際の `candidate_count`、`duplicate_filtered_count`、`duplicate_canonical_ids`、`next_axis_hint`、具体的な `empty_round_reason` を保存する。候補が5件を超える場合は同一run_keyの複数submissionへ分割する。
 
-これにより、各通常Discovery runは候補採用数にかかわらず `run_key` 単位で観測可能になり、`STATUS.md` / `discovery-state.json` が「探索したが0件」と「探索runの耐久記録が欠落した」を区別できる。
+GitHub directが使えない場合は `fallback-routing.md` が認めるChatGPT Library経路を使用する。GitHub directと承認済みLibrary fallbackの両方で必要状態を保存できないことが実際に確認された場合、その事実をcontinuation gateへ渡す。
+
+run開始から最後までoverflow research modeだけでDiscovery modeへ入らなかった場合、空discovery submissionは不要で、Research/Auditの完全payloadの耐久保存を成果証跡とする。
 
 ## Overflow research mode loop
 
-Overflow research modeでは新規discoveryを一時停止し、次を繰り返す。
+Overflow research modeでは `always-on-worker.md` / `claim-serial-policy.md` / `run-liveness-policy.md` を適用する。
 
-1. 最新queue / claim state / checkpointed jobを確認する。
-2. 次のResearch/Auditをclaimする前に引き継ぎガードを評価する。ガード内なら新しいclaimを出さず終了処理へ進む。
-3. eligibleなResearch/Auditをpriority順に1件だけclaimする。
-4. 一次資料全文を取得・精読し、科学的判断を行う。
-5. claim resultで予約されたrecord bankへ5 slotを書く。別bankを独自選択しない。
-6. preflight後、attempt固有descriptorをGitHubへ保存するか、GitHub write不能なら完全payloadをChatGPT Libraryへcheckpointする。
-7. 完全payloadが耐久保存された時点でActions terminal反映を待たず、最新stateを取得する。
-8. 引き継ぎガード外で `candidate_inventory > 50` かつactionable Research/Auditが残るなら次jobへ進む。
-9. candidate在庫が50以下、またはactionable Research/AuditなしならDiscovery modeへ戻る。
+1. 最新queue / claim / checkpoint stateを取得しgateを評価する。
+2. actionable Research/Auditがありgateが継続actionを返した場合、eligible jobをpriority順に1件claimする。
+3. 一次資料全文を取得・精読し、repository-qualityの5-slot structured recordを作る。
+4. claim resultで予約されたrecord bankへ保存し、preflightを通す。
+5. attempt固有immutable descriptorまたはLibrary checkpointへ完全payloadを耐久保存する。
+6. 次の判断にterminal結果が不要なら待たず、最新stateとgateを再評価する。必要なら同一対象を30秒cadenceで再取得する。
+7. `candidate_inventory <= 50` またはactionable Research/AuditなしならDiscovery modeへ戻る。
 
-1 workerが同時に保持する未完了claimは1件だけ。1本処理完了、bank枯渇、Actions待ちはrun停止理由ではない。ただし引き継ぎガード成立時は新しいclaimを発行せず終了する。
-
-## GitHub Actions待ちのパイプライン
-
-Discovery submission後、新しいdiscovery jobがActionsでmaterializeされるまで短い待ちが発生し得る。この待ちをrun終了理由にしない。別探索軸の検索・軽量評価を先行してよいが、次submission直前には最新HEAD / identity / queueを再取得して再dedupeする。ただしrun deadlineまで600秒以下なら別探索軸を新しく開始せず、引き継ぎガードに従って終了する。
-
-一方、overflow条件を満たした場合は次のdiscovery job materializationを待たずResearch modeへ切り替える。ただし新しいResearch/Audit claimの直前にも引き継ぎガードを評価する。
+1 workerが同時に保持する未完了claimは1件だけ。完了件数に「最低3件」等のノルマも「3件で終了」等の終了条件も置かない。件数はthroughput指標として記録し、終了可否はgateが決める。
 
 ## 探索空間の回し方
 
-同じquery familyだけを反復せず、少なくとも次をローテーション候補にする。
+候補軸には新着・revision、forward citation、backward reference、DBMS/OS/storage/distributed systems/HPC/GPU runtime/networking/memory systems等の隣接分野、直近採用candidateからのquery expansion、offload/hierarchical memory/SSD/NVMe/MoE expert placement・cache・prefetch/KV cache/scheduling/disaggregation/inference framework等を含める。
 
-1. 新着・recent revision
-2. 収録済み重要論文のforward citation
-3. 重要論文のbackward reference
-4. DBMS / OS / storage / distributed systems / HPC / GPU runtime / networking / memory systems等の隣接分野
-5. 直近で採用率が高かったcandidateからのquery expansion
-6. offload / hierarchical memory / SSD/NVMe / MoE expert placement・cache・prefetch / KV cache / scheduling / disaggregation / inference framework等の重点テーマ
+高重複・低採用率の軸は機械的に直後反復せず、別軸へ移る。ここでいう「探索空間の枯渇」は検索戦略の診断値として記録できるが、正常終了許可には使わない。`discovery_exhausted`、round数、最後のnovel candidateからのround数はcontinuation gateではtelemetryでありstop権限を持たない。
 
-高重複・低採用率の軸は同一run内で機械的に反復しない。強いcandidateが見つかった軸は将来再利用してよいが、直後に同一検索式を繰り返さない。
+## 非同期結果
 
-## 「探索空間を使い切った」の判定
+claim result、submission result、Library ACK等が次の判断に必要なら `run-liveness-policy.md` に従い対象identityを固定して30秒待機・再取得を繰り返す。別の独立作業が可能なら待機を同期障壁にしない。queued / in_progress / 404 / result未生成をworker独自のstop理由へ変換しない。
 
-`reasonably exhausted` を安易な早期終了理由にしない。
+## Finalization flow
 
-Discovery modeで探索空間枯渇を理由にrunを終了してよいのは、最後に強いcandidateを得たround以降、現在利用可能で互いに独立な探索経路を一巡し、各経路で実質的に異なるaxis / query family / source方向を試し、それでも強い新規candidateが得られず、`discovery-state.json` のnext-axis hintにも有望な未試行方向が残っていない場合だけとする。
+final response候補地点では必ず最新stateを取得し、まず `continuation_gate.py`、次に `run_finalization_gate.py` を評価する。
 
-途中で強いcandidateを得た場合、枯渇判定用の一巡をリセットする。利用不能な探索経路は試行済みに数えず、理由を記録する。
+`CONTINUE` / `MUST_CONTINUE` の場合はscriptが返したactionを処理する。`STOP_RUN` はそれだけでnormal final responseの許可ではなく、active assignment・pending transport・safe handoffを含めたfinalization gateが `MAY_FINALIZE` かつ `finalization_permit.issued=true` を返した場合に正常終了する。
 
-candidate在庫が50を超えた場合は「探索空間を使い切った」と判定せず、overflow research modeへ切り替える。
-
-引き継ぎガードによる終了は探索空間枯渇とは別理由であり、有望な未試行軸が残っていてもよい。その場合はnext-axis hintへ残し、次runで再開する。
-
-## Run-level stop conditions
-
-runを終了してよいのは次だけである。
-
-1. 今回runの実開始時刻 + 3600秒で定義したrun deadlineまで600秒以下となり、引き継ぎガードが成立した。
-2. 最新の正本・identity・queueを十分読めず、安全な重複判定やclaimができない。
-3. GitHub directと承認済みLibrary fallbackの両方で必要な状態・成果を耐久保存できない。
-4. hard platform/runtime/tool limitに達し、追加の有用作業を実行できない。
-5. Discovery modeで上記の探索空間枯渇条件を満たし、overflow research modeへ移れるactionable Research/Auditもない。
-
-以下は単独ではstop条件ではない。
-
-- 予定`:00`までの残りが少ないが、実開始基準のrun deadlineには十分な時間が残っている
-- 1軸で0件
-- 全候補が重複
-- 低採用率
-- 1 source/APIの失敗
-- candidate inventoryが多い
-- 1 submissionで5本送信した
-- 1 discovery jobをcompletedにした
-- Actionsの次job materialization待ち
-- 1 Research/Auditを完了した
-
-## Run終了時の記録
-
-hard limit、探索空間枯渇、または引き継ぎガードで終了する場合、最後の`discovery_stats` / next-axis hintに、最後に成功した軸、成功後に試した独立経路、未試行の有望軸が残るかを可能な範囲で記録する。引き継ぎガード以外の理由で、未試行の有望軸が残る、またはoverflow research modeで処理可能なjobが残るのに「枯渇」として終了してはならない。
-
-探索主体workerのrunはDiscovery mode / Overflow research modeのどちらでも通常論文workerの24-run maintenance counterへ加算しない。
+終了報告にstop reasonを記す場合はscript出力と、その根拠になった具体的canonical state/errorを使う。workerが曖昧な停止理由を創作しない。

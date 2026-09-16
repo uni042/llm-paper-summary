@@ -1,7 +1,12 @@
 {
-  "schema_version": 10,
+  "schema_version": 11,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "A normal survey-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
+  "principle": "Workers do not need to decide for themselves whether they have worked long enough or whether a run should end. They report observable canonical state to the continuation/finalization scripts and follow the returned decision. Local job failure, empty paper stock, duplicate-only discovery, apparent search exhaustion, throughput counts, or transport backlog are not worker-invented run stop conditions. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
+  "decision_authority": {
+    "continuation_script": ".survey/scripts/continuation_gate.py",
+    "finalization_script": ".survey/scripts/run_finalization_gate.py",
+    "rule": "The worker's responsibility is accurate observation and execution of next_action, not subjective persistence or subjective stopping. Pass current canonical facts to the scripts and adopt their decision. Do not manufacture an error, platform limit, exhaustion claim, or other stop evidence to justify ending. CONTINUE/MUST_CONTINUE means execute the returned next action in the same invocation. A normal final response is allowed only when the finalization script returns MAY_FINALIZE with finalization_permit.issued=true."
+  },
   "always_on_policy": {
     "canonical_doc": ".survey/docs/survey-workflow/always-on-worker.md",
     "paper_stock_zero_action": "DISCOVER_NOW",
@@ -22,36 +27,39 @@
       "discovery"
     ],
     "implementation": ".survey/scripts/continuation_gate.py",
-    "rule": "For the hourly :00 discovery worker and hourly :30 normal paper worker, capture the actual Scheduled Chat invocation start once and define run_deadline = actual_start + run_window_seconds. Early or late platform startup relative to the nominal :00/:30 boundary does not reduce this run-local budget. Before claiming or starting any new independent Research/Audit/discovery/maintenance unit, compute seconds_to_run_deadline and pass it to continuation_gate.py as --seconds-to-run-deadline. If the run deadline is within handoff_guard_seconds, do not start another unit; durably preserve current completed work, avoid a new claim, record safe continuation information, and end the run. If the run deadline is within hard_finalize_seconds, perform only the minimum durable finalization needed to leave no orphaned claim or unpublished completed result. --seconds-to-next-scheduled-task is compatibility fallback only when the actual-start deadline cannot be established. This run-local handoff guard overrides throughput targets and normal work-conserving continuation."
+    "rule": "For the hourly :00 discovery worker and hourly :30 normal paper worker, capture the actual Scheduled Chat invocation start once and define run_deadline = actual_start + run_window_seconds. Before starting another independent unit, compute seconds_to_run_deadline and pass it to continuation_gate.py. The worker does not infer from the clock that it should stop; it follows the gate result. The nominal :00/:30 boundary is compatibility fallback only when the actual-start deadline cannot be established."
   },
   "discovery_specialist_progression": {
     "worker_kind": "discovery",
     "implementation": ".survey/scripts/continuation_gate.py",
-    "minimum_distinct_rounds_before_exhaustion_stop": 4,
-    "minimum_is_not_stop_quota": true,
+    "round_counts_are_diagnostic_only": true,
+    "exhaustion_is_diagnostic_only": true,
+    "candidate_counts_are_diagnostic_only": true,
     "finalization_requires_gate": true,
     "continue_action": "DISCOVER_AGAIN",
     "finalize_action": "FINALIZE",
-    "rule": "In normal Discovery mode, one durable discovery submission is an intermediate checkpoint, never implicit run completion. Unless a hard stop or the run-local handoff guard is active, the :00 discovery specialist must complete at least four materially distinct discovery rounds before discovery-space exhaustion may be used as a voluntary stop reason. Four rounds is only a progression floor: after it is met, continue while a promising next axis or other independent work remains. Before ending the run, apply continuation_gate.py semantics and end only when decision=STOP_RUN and finalization_allowed=true."
+    "rule": "Discovery rounds, rounds since the last novel candidate, duplicate-only rounds, candidate counts, and apparent discovery exhaustion are telemetry and search-steering inputs only. They do not authorize a normal run stop. The worker refreshes observable state, calls continuation_gate.py, and follows its required_action."
   },
   "stop_run_only_if": [
     "actual_start_run_deadline_within_handoff_guard",
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
-    "platform_time_context_or_execution_limit_reached",
-    "discovery_exhausted_after_minimum_rounds_and_no_independent_work_remains"
+    "observed_platform_or_tool_limit_accepted_by_continuation_gate",
+    "all_remaining_work_blocked_after_fallback_consideration_as_determined_by_continuation_gate"
   ],
   "non_stop_conditions": [
     "paper_stock_zero",
     "github_ready_empty",
     "spillover_candidates_empty",
-    "one_discovery_round_completed",
-    "fewer_than_four_discovery_rounds_without_hard_stop",
+    "one_or_many_discovery_rounds_completed",
+    "discovery_round_count_reached_any_value",
     "one_discovery_round_returned_zero_novel_candidates",
     "one_discovery_round_returned_only_duplicates",
+    "apparent_discovery_exhaustion",
+    "no_current_next_axis_hint",
     "one_search_axis_is_saturated",
     "candidate_inventory_above_overflow_threshold",
-    "one_job_completed",
+    "one_or_many_jobs_completed",
     "one_job_blocked",
     "one_payload_checkpointed",
     "record_bank_exhausted_or_dirty",
@@ -115,14 +123,14 @@
     }
   },
   "fallback_failure_protocol": {
-    "chatgpt_library_failed": "if GitHub direct write can still durably preserve required state, continue through GitHub; otherwise STOP_RUN before producing an uncheckpointed completed result or undispatchable offline seed",
-    "source_recovery_failed": "leave the Library source pending and continue other research or GitHub-direct work; never treat one replay failure as a global stop",
+    "chatgpt_library_failed": "if GitHub direct write can still durably preserve required state, continue through GitHub; otherwise let continuation_gate.py classify the resulting durable-save blocker before any finalization attempt",
+    "source_recovery_failed": "leave the Library source pending and continue other research or GitHub-direct work; one replay failure is not itself a global stop",
     "dependency_not_materialized": "leave the valid research/audit envelope in GitHub fallback-inbox until its deterministic canonical job is materialized; do not quarantine it merely for arriving before the offline seed",
     "duplicate_intake": "if the same envelope id and content already exists in GitHub fallback-inbox/archive, acknowledge the Library copy without re-dispatching it",
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, first apply scheduled_handoff_policy and continuation_gate.py. For hourly :00 discovery and :30 normal paper workers, the preferred time basis is the run-local deadline captured as actual invocation start + 3600 seconds, not the nominal schedule boundary. When that run deadline is within handoff_guard_seconds, STOP_RUN after durable finalization and do not claim or start another independent unit. The next nominal :00/:30 boundary is only a compatibility fallback when no actual-start deadline is available. Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. Refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, candidate inventory, and discovery-state. For the :00 discovery specialist in normal Discovery mode, fewer than four materially distinct completed rounds cannot establish exhaustion and the gate must return DISCOVER_AGAIN unless a hard stop applies. Four rounds is not a completion quota; after the floor is met, continue while next_axis_available or other independent work remains. For the :00 specialist, overflow conditions require research rather than voluntary termination. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis. STOP_RUN for no-work is allowed only after the discovery progression floor is met, multiple materially distinct search axes including citation/related-implementation and adjacent-topic expansion have been attempted, and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
+    "rule": "Before emitting a final response, refresh the canonical state required by the gate, pass those observations to continuation_gate.py, then pass its result plus assignment/pending-transport state to run_finalization_gate.py. Do not independently decide that enough work has been done, that discovery is exhausted, or that the run feels too long. CONTINUE or MUST_CONTINUE means execute the returned next action and reevaluate after the next durable checkpoint. STOP_RUN is only an input to finalization; a normal final response requires MAY_FINALIZE and finalization_permit.issued=true. For hourly :00 discovery and :30 normal paper workers the preferred time basis is actual invocation start + 3600 seconds, not the nominal schedule boundary. Maintenance and the 08:30 update worker retain their dedicated rules.",
     "default_decision": "CONTINUE"
   }
 }
