@@ -2,51 +2,48 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-52add1efa2617512647eab93",
-  "job_id": "job-research-b8521dbc1f501e0d",
+  "attempt_id": "attempt-4903385702e76b27799d8f09",
+  "job_id": "job-research-a8b5b2b70328c222",
   "data": {
-    "evaluation_summary": "GPUカーネルを複数世代で計測し、A100、H200-NVL、L40SからBlackwell GB200を完全未観測対象として世代横断予測する。対象計測段階ではGB200で一回のモデル非依存カーネル掃引を行う。実運用会話トレースをvLLMで最大500要求まで再生し、0.5Bから70Bまで六モデル族、複数テンソル並列度と要求率について、実測とシミュレーションの初回トークン時間、出力トークン間時間、処理量を比較する。",
-    "scope": "主対象はNVIDIA GPUとvLLM v1である。世代横断の代表対象はGB200で、古い低性能GPUとRTX 5090、GB10は主学習梯子から除外する。未観測世代の注意機構と長文事前充填は依然難しく、19～23kトークンの長文では尾部誤差が大きい。",
+    "evaluation_summary": "RTX 4090 24GB上でllama.cpp b10434とvLLM 0.11.0を使い、Qwen2.5-7B/14B、Llama-3.1-8B、F16/Q8_0/Q4_K_M/Q3_K_Mを評価する。主負荷はBerkeley Function Calling Leaderboardの80件複数ターン道具利用、補助負荷はGSM8K。温度0、seed 42、batch 1、直列要求でキャッシュ有無以外を固定し、各構成を二回反復する。",
+    "scope": "7～14B公開モデル、単一RTX 4090、英語の一つのエージェントベンチマークと数学ベンチマークに限定される。フロンティア規模、複数利用者の共有キャッシュ、他GPU、他言語では発散率が異なる可能性がある。",
     "hardware": [
-      "NVIDIA A100",
-      "NVIDIA H200-NVL",
-      "NVIDIA L40S",
-      "NVIDIA GB200 Blackwell",
-      "RTX 5090とGB10は補足分析"
+      "NVIDIA RTX 4090 24GB",
+      "Ubuntu 24.04",
+      "CUDA 12.6",
+      "driver 570.211.01 / controlled experiments 580.126.20"
     ],
     "models": [
-      "Qwen3系",
-      "Llama系",
-      "DeepSeek系",
-      "Gemma系",
-      "Phi系",
-      "0.5B～70Bの六モデル族"
+      "Qwen2.5-7B",
+      "Qwen2.5-14B",
+      "Llama-3.1-8B"
     ],
     "datasets": [
-      "production conversation trace",
-      "synthetic arrival traces"
+      "Berkeley Function Calling Leaderboard multi-turn base 80 episodes",
+      "GSM8K 200～500 items"
     ],
-    "workload": "構成ごと最大500要求。モデル規模、テンソル並列度、要求到着率を変え、軽負荷から飽和まで評価する。長文事前充填は約19～23kトークンの要求も含む。",
+    "workload": "greedy decoding、temperature 0、seed 42、batch size 1、serial requests。各cache armを二回。KV cacheは全構成16-bitで固定。",
     "baselines": [
-      "NeuSight",
-      "AIConfigurator",
-      "Vidur Random Forest",
-      "Vidur Linear Regression",
-      "単純roofline"
+      "prefix cache disabled recomputation path",
+      "prefix cache enabled path",
+      "llama.cpp server prompt cache default/disabled",
+      "fresh server vs persistent server"
     ],
     "metrics": [
-      "カーネル遅延MAPE",
-      "初回トークン時間の要求別絶対百分率誤差",
-      "出力トークン間時間の要求別絶対百分率誤差",
-      "出力処理量誤差",
-      "p50/p90/p99/max誤差",
-      "要求起動時刻・順序相関"
+      "episode trajectory divergence",
+      "first divergent request/token",
+      "within-arm repeat divergence",
+      "cross-arm divergence",
+      "task correctness flips",
+      "Wilson interval",
+      "moving-block bootstrap",
+      "McNemar test"
     ],
-    "predictor_accuracy": "GB200未観測の世代横断カーネル平均誤差12.1%、対象計測段階3.8%。端から端p50は世代横断で初回トークン15.4%、出力トークン間12.8%、処理量3.0%、対象計測で14.3%、6.2%、2.7%。",
-    "control_knobs": "予測段階、GPU仕様、モデル、テンソル並列度、要求率、連続バッチ、分割事前充填、接頭辞キャッシュ、ホスト校正。"
+    "predictor_accuracy": "予測器ではなく再現性測定。cache-offは10構成800 episodeで0 divergence、95%上限0.5%。",
+    "control_knobs": "prefix caching、server-level prompt cache、server lifetime、execution order、weight quantization format、cache-state reset。"
   },
   "reservation": {
-    "claim_id": "claim-52add1efa2617512647eab93",
+    "claim_id": "claim-4903385702e76b27799d8f09",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

@@ -2,74 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-52add1efa2617512647eab93",
-  "job_id": "job-research-b8521dbc1f501e0d",
+  "attempt_id": "attempt-4903385702e76b27799d8f09",
+  "job_id": "job-research-a8b5b2b70328c222",
   "data": {
-    "canonical_id": "arXiv:2606.28565",
-    "arxiv_id": "2606.28565",
-    "doi": "10.48550/arXiv.2606.28565",
+    "canonical_id": "arXiv:2609.04748",
+    "arxiv_id": "2609.04748",
+    "doi": "10.48550/arXiv.2609.04748",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.PF",
+      "primary": "cs.SE",
       "cross_list": []
     },
-    "title": "KernelSight-LM: A Kernel-Level LLM Inference Simulator",
-    "summary": "KernelSight-LMは、大規模言語モデルのサービング方策とGPUカーネル実行を離散事象シミュレーションで結び、初回トークン時間、出力トークン間時間、処理量を未計測GPU世代まで予測する推論シミュレータである。各カーネルをルーフライン下限と学習した効率係数で表し、通信とホスト側費用を加えてvLLM v1相当の連続バッチ、分割事前充填、接頭辞キャッシュを再現する。対象GPUを一度も測らない世代横断段階ではカーネル誤差12.1%、対象GPUでモデル非依存の小規模計測を一回行う段階では3.8%を達成する。",
-    "list_summary": "GPUカーネル予測と実運用サービングの離散事象モデルを統合し、未計測GPUでもカーネル誤差12.1%、対象計測ありで3.8%を達成。",
+    "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
+    "summary": "接頭辞キャッシュを透過的な高速化とみなした場合の再現性コストを、llama.cppとvLLM、16ビットから3ビットまでの重み形式、80件の複数ターン道具利用エージェントで制御測定する。キャッシュ無効時は10構成800エピソードの反復が完全一致した一方、キャッシュ経路と再計算経路の軌跡差はQwen2.5-7Bで16ビット36.2%、4ビット75.0%へ増幅した。キャッシュ状態を復元すると各経路は40/40で再現しつつ経路間では14/40が異なり、実用上の非再現性は要求に含まれないサーバ状態への依存であると示す。",
+    "list_summary": "接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。",
     "authors": [
-      "Xiteng Yao",
-      "Taeho Kim",
-      "Hengzhi Pei",
-      "Xinle Liu",
-      "Kyle Ulrich",
-      "Leonard Lausen",
-      "Ashish Khetan",
-      "Xiang Song",
-      "George Karypis",
-      "Martin Herbordt"
+      "Aditi Patodiya"
     ],
-    "published": "2026-06-26",
-    "publication": "arXiv preprint arXiv:2606.28565v2",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "2026年6月26日初版、2026年7月2日v2。主分類cs.PF。",
-    "lineage": "other-inference-systems",
+    "published": "2026-09-04",
+    "publication": "arXiv preprint arXiv:2609.04748v1; submitted to IEEE",
+    "publication_type": "arXivプレプリント・IEEE投稿中",
+    "publication_status": "2026年9月4日arXiv v1。論文本文ではIEEEへ投稿中と記載。",
+    "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "推論シミュレーション",
-      "GPUカーネル性能予測",
-      "世代横断予測",
-      "連続バッチ",
-      "容量計画"
+      "接頭辞キャッシュ",
+      "再現性",
+      "量子化",
+      "決定性",
+      "エージェント推論"
     ],
-    "importance": "対象GPUを所有する前の容量計画と、取得後の少量計測による高精度化を同じカーネル粒度モデルで扱い、サービング方策まで端から端で評価できる。",
-    "hardware_evaluation": "A100、H200-NVL、L40Sを世代横断学習に使い、Blackwell GB200を未観測対象として評価。RTX 5090とGB10も分析用に計測。",
-    "quality_effect": "モデル出力を変更しない性能シミュレーションであり、生成品質への近似は導入しない。",
-    "source": "https://arxiv.org/abs/2606.28565",
+    "importance": "性能最適化として通常は透明扱いされるキャッシュ状態が推論結果の再現性へ影響し、低ビット量子化と複数ターン連鎖で大幅に増幅することを実運用基盤で定量化する。",
+    "hardware_evaluation": "NVIDIA RTX 4090 24GB、Ubuntu 24.04、CUDA 12.6。llama.cpp b10434とvLLM 0.11.0を評価。",
+    "quality_effect": "平均精度低下ではなく個別項目の不安定性。GSM8K 1300 distinct itemsで正誤反転20件、13件はcache側有利・7件はrecompute側有利で有意な方向性なし。",
+    "source": "https://arxiv.org/abs/2609.04748",
     "sources": [
-      "https://arxiv.org/abs/2606.28565",
-      "https://arxiv.org/html/2606.28565",
-      "https://arxiv.org/pdf/2606.28565"
+      "https://arxiv.org/abs/2609.04748",
+      "https://arxiv.org/html/2609.04748",
+      "https://arxiv.org/pdf/2609.04748"
     ],
     "code": null,
-    "implementation": "Vidurの離散事象基盤を拡張し、vLLM v1スケジューラ、階層接頭辞キャッシュ、カーネル粒度予測、通信・ホスト費用校正を実装する。",
+    "implementation": "実験harness、request log、server-reported cache exposure、解析pipelineをartifactとして公開すると記載。",
     "last_checked": "2026-09-16",
     "references": [
       {
-        "canonical_id": "arXiv:2407.00079",
-        "arxiv_id": "2407.00079",
-        "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving"
-      },
-      {
-        "canonical_id": "arXiv:2503.08415",
-        "arxiv_id": "2503.08415",
-        "title": "TokenSim: Enabling Hardware and Software Exploration for Large Language Model Inference Systems"
+        "canonical_id": "arXiv:2604.15409",
+        "arxiv_id": "2604.15409",
+        "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference"
       }
     ],
     "references_checked_at": "2026-09-16",
     "references_source": "arXiv HTML参考文献節",
-    "references_total": 2
+    "references_total": 1
   },
   "reservation": {
-    "claim_id": "claim-52add1efa2617512647eab93",
+    "claim_id": "claim-4903385702e76b27799d8f09",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

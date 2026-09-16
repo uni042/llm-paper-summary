@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:21:03 JST**
+> 自動生成: **2026-09-16 14:21:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **44** |
-| 未claim Research job | **42** |
+| 未claim Research job | **41** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:20:59 JST（4秒前）** |
+| 最終検証済みResearch収録 | **09-16 14:20:59 JST（9秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **28** | **10** | **5** | **5** | **3** | **1** | — |
+| Research | **28** | **10** | **5** | **5** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **29** | **15** | **5** | **10** | **3** | **1** | **24** |
+| 合計 | **29** | **15** | **5** | **10** | **4** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -183,7 +183,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
+  - claim: **09-16 14:21:07 JST** / heartbeat: **—** / lease expiry: **09-16 15:51:07 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
 - `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs / worker `scheduled-chat-llm-survey-20260916T135756JST`
   - claim: **09-16 14:15:32 JST** / heartbeat: **09-16 14:19:40 JST** / lease expiry: **09-16 15:49:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-f3ec00db7d9723b7.json`

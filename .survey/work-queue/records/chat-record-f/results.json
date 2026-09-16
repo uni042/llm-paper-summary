@@ -2,65 +2,65 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-52add1efa2617512647eab93",
-  "job_id": "job-research-b8521dbc1f501e0d",
+  "attempt_id": "attempt-4903385702e76b27799d8f09",
+  "job_id": "job-research-a8b5b2b70328c222",
   "data": {
-    "overview": "GB200を完全に学習から外した世代横断予測では、単純な屋根線基準22.0%に対しカーネル平均誤差12.1%となり1.8倍改善する。対象GPUで一回のモデル非依存計測を追加すると、AIConfigurator相当27.7%に対し3.8%へ低下し7.3倍改善する。端から端の中央値誤差は世代横断で初回トークン15.4%、出力トークン間12.8%、処理量3.0%、対象計測で14.3%、6.2%、2.7%。vLLMスケジューラ再現の要求起動順序・時刻相関は0.985。",
+    "overview": "キャッシュ無効の反復は10構成800エピソードで0件の差となり、他の非決定要因を0.5%以下へ抑える。一方Qwen2.5-7B llama.cppの有効対無効軌跡差はF16 36.2%、Q8_0 61.3%、Q4_K_M 75.0%、Q3_K_M 77.5%へ増え、量子化傾向はp=1.3×10^-8。llama.cppの別サーバ水準プロンプトキャッシュを無効化すると有効側の反復差は38.8%から1.2%へ低下する。状態復元時は冷・暖経路が各40/40で自己一致しつつ14/40で互いに異なる。GSM8Kでは低ビットで出力差が41.5～48.0%に達するが平均正解率の方向性は変わらない。",
     "key_results": [
       {
-        "metric": "世代横断カーネル平均誤差",
-        "value": "12.1%",
-        "baseline": "NeuSight/roofline系22.0%",
-        "condition": "A100、H200-NVL、L40Sで学習しGB200を完全未観測",
-        "interpretation": "カーネル族別効率モデルにより平均誤差を1.8倍改善。"
+        "metric": "cache-off反復発散",
+        "value": "0/800 episodes、95%上限0.5%",
+        "baseline": "同一cache-off run repetition",
+        "condition": "10 configurations",
+        "interpretation": "sampling、batching、一般的engine noiseは観測差を説明しない。"
       },
       {
-        "metric": "対象計測カーネル平均誤差",
-        "value": "3.8%",
-        "baseline": "AIConfigurator 27.7%",
-        "condition": "GB200で一回のモデル非依存カーネル掃引",
-        "interpretation": "生遅延ではなく屋根線からの効率残差を補間し、小カーネルも実測することで7.3倍改善。"
+        "metric": "Qwen2.5-7B cross-arm divergence",
+        "value": "36.2% F16 → 61.3% Q8_0 → 75.0% Q4_K_M → 77.5% Q3_K_M",
+        "baseline": "cache-off vs cache-on",
+        "condition": "llama.cpp、80 episodes each",
+        "interpretation": "量子化は原因ではないがcache由来摂動を強く増幅する。"
       },
       {
-        "metric": "復号注意の世代横断誤差",
-        "value": "9.3%",
-        "baseline": "NeuSight 26.3%",
-        "condition": "GB200 decode attention",
-        "interpretation": "実配信で起動する融合カーネルを一致させることで2.8倍改善。"
+        "metric": "server prompt-cache effect",
+        "value": "38.8% → 1.2%",
+        "baseline": "default vs disabled",
+        "condition": "Qwen2.5-7B Q4_K_M cache-on repetition",
+        "interpretation": "一つのサーバ設定が反復再現性を37.5ポイント動かす。"
       },
       {
-        "metric": "対象計測の出力トークン間p50誤差",
-        "value": "6.2%",
-        "baseline": "実vLLM",
-        "condition": "六モデル族・複数TP/要求率",
-        "interpretation": "少量計測でも復号遅延を高精度に再現する。"
+        "metric": "cache-state reset control",
+        "value": "cold 40/40、warm 40/40 self-identical、cross-path 14/40 different",
+        "baseline": "restored cache state",
+        "condition": "Qwen2.5-7B Q4_K_M",
+        "interpretation": "各経路は状態を固定すれば決定的で、実用上の非再現性は隠れた状態依存。"
       },
       {
-        "metric": "世代横断の処理量p50誤差",
-        "value": "3.0%",
-        "baseline": "実vLLM",
-        "condition": "軽負荷から飽和まで",
-        "interpretation": "軽負荷では1%未満、飽和でも約8%に収まり容量計画へ使いやすい。"
+        "metric": "GSM8K Q4_K_M cross-path output divergence",
+        "value": "45.4%",
+        "baseline": "cold vs warm",
+        "condition": "Qwen2.5-7B、500 items",
+        "interpretation": "単一ターンでも低ビットでは文面差が大きい。"
       },
       {
-        "metric": "スケジューラ起動相関",
-        "value": "Spearman +0.985",
-        "baseline": "実vLLM v1 trace",
-        "condition": "要求起動順序と時刻",
-        "interpretation": "カーネル時間だけでなくバッチ形成の忠実度が高い。"
+        "metric": "GSM8K correctness flips",
+        "value": "20/1300 distinct items; cache wins 13, recompute wins 7, p=0.26",
+        "baseline": "cold vs warm correctness",
+        "condition": "five distinct configurations",
+        "interpretation": "不安定性はあるが平均精度の有意な方向性はない。"
       }
     ],
     "negative_results": [
-      "長文事前充填の注意機構は世代横断しにくく、19～23kトークン要求で初回トークン誤差の尾部が81%級まで広がる。",
-      "行列積は既存方式とほぼ同等で、世代横断改善の大半はメモリ律速カーネルと注意機構から得られる。",
-      "Vidurは評価条件で復号p50誤差436%となり、プロファイル時と実vLLMのグラフ実行モード差に敏感。",
-      "主評価はNVIDIAとvLLMに集中し、他アクセラレータや別サービング基盤への移植性は未実証。"
+      "量子化なしF16でも36.2%のagent trajectory差があり、量子化だけを原因にはできない。",
+      "Q4_K_MとQ3_K_Mの発散率は近く、4bit以下で増幅は飽和する。",
+      "agent benchmarkは正解率1.2～18.8%と床が低く、最終task successへの方向性は判断できない。",
+      "vLLMで同じ方向は再現するがsessionごとのrun-to-run divergenceは8.8%と27.5%で幅があり、差の要因は未分離。"
     ],
-    "quality_impact": "性能予測器でありモデル計算や生成結果を変更しない。",
-    "interpretation": "未観測GPUへ外挿するには絶対遅延を直接学習するより、GPU仕様で説明できる物理下限と実装効率を分離する方が頑健である。一方、端から端の初回トークン時間にはGPUカーネルだけでなくホスト費用と実際のバッチ構成が重要で、性能予測とサービングシミュレーションを統合する必要がある。"
+    "quality_impact": "平均精度低下ではなくrepeatabilityの喪失。個別項目の正誤は両方向へ反転し、集計精度では相殺される。",
+    "interpretation": "cache-enabled servingはランダムなのではなくrequestとcache stateの決定的関数である。しかしcache stateはrequestに含まれずresponseにも十分記録されず、通常run境界でresetされないため、利用者から見ると同一requestが再現しない。監査、デバッグ、A/B評価ではcache configurationとstate exposureを実験条件として扱う必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-52add1efa2617512647eab93",
+    "claim_id": "claim-4903385702e76b27799d8f09",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

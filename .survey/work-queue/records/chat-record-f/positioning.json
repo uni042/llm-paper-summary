@@ -2,49 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-52add1efa2617512647eab93",
-  "job_id": "job-research-b8521dbc1f501e0d",
+  "attempt_id": "attempt-4903385702e76b27799d8f09",
+  "job_id": "job-research-a8b5b2b70328c222",
   "data": {
-    "positioning": "KernelSight-LMは、対象GPU上でモデルごとの実測表を作るVidurやAIConfiguratorと、未観測GPUへ演算子時間を外挿するNeuSightの間を埋める。前者のサービング忠実度と後者のハードウェア可搬性をカーネル粒度で統合し、同じ離散事象シミュレータから調達前と導入後の両方を扱う。",
-    "differences": "NeuSightはGPU世代をまたぐが要求到着、連続バッチ、キー・バリューキャッシュ、事前充填・復号混在を扱わない。Vidurはこれらを扱うがモデルとGPUの組合せごとのプロファイルへ依存する。AIConfiguratorは対象GPUの演算子表を補間するが、未観測GPUへ外挿できず、小カーネルとホスト費用を粗く扱う。KernelSight-LMは実カーネルの物理下限と効率を分離して未観測GPUへ移し、vLLM互換の事象モデルへ組み込む。",
+    "positioning": "本研究は接頭辞キャッシュの速度・容量研究と、決定的推論・量子化品質研究の交点に位置する。PagedAttentionやRadixAttentionなどが再利用率、処理量、遅延を主に評価するのに対し、同じ要求がキャッシュ状態によって同じ出力を再現できるかをサービング品質として測る。",
+    "differences": "既存の単一ターンFP16研究がキャッシュ経路と再計算経路の数値非等価性を示したのに対し、本研究は実推論基盤、複数ターンエージェント、低ビット重み、サーバ状態を加え、発散の頻度と運用上の原因を測る。量子化研究が平均精度を主指標にするのに対し、平均精度が同じでも個別項目が入れ替わる不安定性を独立した品質軸として扱う。",
     "relation_to_prior_work": [
       {
-        "work": "NeuSight",
-        "difference": "同じ世代横断性能予測をカーネル族別の効率モデルへ細分化し、実FlashAttentionとメモリ律速カーネルを扱ったうえでサービング離散事象モデルへ接続する。"
+        "work": "PagedAttention / RadixAttention / Prompt Cache",
+        "difference": "cache reuseの性能利益に対し、warm/cold pathが同じrequestへ同じtoken列を返すかを測定し、cache stateを再現性条件として追加する。"
       },
       {
-        "work": "Vidur",
-        "difference": "Vidurの要求・バッチ離散事象構造を継承しつつ、対象モデルとGPUごとの大量プロファイルをカーネル予測器へ置き換え、未観測GPUも扱う。"
+        "work": "The Illusion of Equivalence",
+        "difference": "FP16単一ターンの数値非等価性を、llama.cpp/vLLM、multi-turn agent、3～16bit weightsへ拡張し、state reset controlで経路内決定性を検証する。"
       },
       {
-        "work": "AIConfigurator",
-        "difference": "対象GPUの生演算子遅延表を補間する代わりに、物理下限からの効率残差をカーネル粒度で補間し、小カーネル、通信、ホスト費用、事象スケジューリングまで含める。"
+        "work": "deterministic inference / batch-invariant kernels",
+        "difference": "batch size 1とserial requestsでbatch compositionを固定し、それでも残るcache-state dependenceを別の非決定要因として分離する。"
       },
       {
-        "work": "TokenSim / APEX / ASTRA-SIM",
-        "difference": "通信やトークン段階の設計探索に対し、実配信GPUカーネルの世代横断遅延予測とvLLM方策を直接結び、SLO指標を実測と比較する。"
+        "work": "LLM quantization quality studies",
+        "difference": "aggregate accuracyではなく、同じcache perturbationが低ビット化で個別token decisionをどれだけflipしやすくなるかをtrajectory divergenceとして測る。"
       }
     ],
     "strengths": [
-      "未所有GPUを仕様書だけで予測する段階と、入手後に少量計測で精度を上げる段階を同じモデルで扱う。",
-      "実際に配信基盤が起動する融合カーネルを対象にし、注意機構のカーネル同一性を保持する。",
-      "vLLM v1の連続バッチ、分割事前充填、接頭辞キャッシュ、中断を反復単位で再現する。",
-      "ホスト側費用とテンソル並列通信を明示し、初回トークン時間の系統誤差を抑える。",
-      "カーネル別律速内訳を出せるため、容量計画だけでなくハードウェア・ソフトウェア共同設計にも利用できる。"
+      "cache-offの800 episode完全一致を内部対照にし、一般的nondeterminismを定量的に上界化する。",
+      "server-level prompt cache flag、execution order、state resetを個別操作して因果機構を切り分ける。",
+      "weight precisionを順序付けてquantization amplificationを測り、4bit付近の飽和まで報告する。",
+      "llama.cppとvLLMという独立実装で方向性を再現する。",
+      "agent trajectoryとGSM8K correctnessを分け、repeatability lossとaverage degradationを混同しない。"
     ],
     "limitations": [
-      "未観測世代の長文注意機構は効率残差自体がGPU固有になりやすく、初回トークン時間の尾部誤差が大きい。",
-      "世代横断段階のホスト費用は対象GPUで校正できないため、近い既知構成から移す近似が残る。",
-      "主評価はNVIDIA GPUとvLLM v1で、AMDや専用推論アクセラレータ、別スケジューラへの一般化は未検証。",
-      "対象計測段階でも一回のマイクロベンチマークは必要で、完全無計測の高精度予測ではない。",
-      "要求分布や配信基盤の実装が大きく変わると、スケジューラ・ホスト費用モデルの再校正が必要になる。"
+      "7～14B open-weight modelsと単一RTX 4090に限定され、frontier-scale hosted endpointsは未評価。",
+      "agent workloadは一種類でtask successが低く、agent最終成功率への方向性は結論できない。",
+      "multi-tenant trafficで他利用者がcache stateを書き換える条件は測定していない。",
+      "vLLM session間の発散率差の原因はGPU memory fraction、driver、launch scriptなどを完全分離できていない。",
+      "token divergenceは意味的に同等な言い換えも差として数えるため、再現性には適切だがsemantic quality指標ではない。"
     ],
-    "implementation_status": "Vidurを拡張した離散事象シミュレータと、実配信カーネルのマイクロベンチマーク、カーネル族別効率予測、通信・ホスト費用合成を実装し、GB200実測トレースに対して検証済み。",
-    "research_positioning": "推論システム研究で頻繁に必要となる『まだ持っていないGPUでこのモデル・バッチ方策はどの程度動くか』という設計前評価を、単純屋根線ではなく実配信カーネルと要求スケジューリングまで含めて行う基盤である。SSD・CXL・分離サービングなど新しい階層構成を評価する際にも、GPU計算側の反復時間を細粒度に提供する部品として利用価値がある。",
-    "repository_fit": "other-inference-systems系統の性能モデル・シミュレータ基盤として適合する。個別のオフロードやスケジューラ手法ではなく、それらの設計案を未導入ハードウェア上で比較する評価基盤として横断的価値を持つ。"
+    "implementation_status": "実験harness、raw request logs、cache exposure telemetry、analysis pipelineを公開し、stored responsesから全数値を再生成可能とする。llama.cpp/vLLMの実serverを使う実測研究でsimulationではない。",
+    "research_positioning": "LLM servingのSLOをlatency/throughputだけでなくreproducibilityまで拡張する研究である。cacheを無効化する必要はなく、stateをrun境界でresetしconfigurationを固定・記録すれば性能利益を残しながらrepeatabilityを改善できるという運用示唆を与える。",
+    "repository_fit": "serving scheduling/disaggregation系統のreliability側として適合する。prefix/KV cacheを高速化する論文群に対し、そのstate managementが実験再現性・agent debugging・A/B evaluationへ与える副作用を補完する。"
   },
   "reservation": {
-    "claim_id": "claim-52add1efa2617512647eab93",
+    "claim_id": "claim-4903385702e76b27799d8f09",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }
