@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-40fec156180475a1f071f609",
-  "job_id": "job-research-6eb709dc3f5cf15a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-40fec156180475a1f071f609",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-40fec156180475a1f071f609","job_id":"job-research-6eb709dc3f5cf15a","data":{"overview":"PecSchedは短入力の99百分位待ち時間を先着順比58〜87%、予約方式比61〜92%削減し、短入力処理量を先着順比42〜318%、予約方式比193〜595%向上した。優先度方式と短入力性能は近い一方、優先度方式では長入力の92〜100%が飢餓するのに対し、PecSchedの長入力平均完了時間増加は先着順比4〜7%、予約方式比6〜13%に留まる。","key_results":[{"metric":"短入力99百分位待ち時間","value":"最大92%削減","baseline":"予約方式","condition":"4モデルのAzure追跡負荷","interpretation":"希少な長入力用資源を固定予約せず、短入力事前計算の選択的横取りで待ち時間を抑える。"},{"metric":"短入力処理量","value":"最大595%向上","baseline":"予約方式","condition":"Mistral 7B〜Llama 70B","interpretation":"予約GPUの遊休と長入力による先頭待ち阻害を避ける効果が大きい。"},{"metric":"長入力平均完了時間","value":"先着順比4〜7%増","baseline":"FIFO","condition":"短入力が横取りする混在負荷","interpretation":"短入力性能を大きく改善しながら長入力への影響を小幅に抑える。"},{"metric":"高速系列並列の寄与","value":"無効化で長入力完了時間39〜55%悪化","baseline":"PecSched/FSP","condition":"アブレーション","interpretation":"長入力事前計算短縮が横取り頻度と停止時間を減らす主要因である。"}],"negative_results":["横取りを無効化すると短入力99百分位待ち時間が75〜376%増え、処理量が21〜48%低下する。","短入力の事前計算・復号分離を無効化すると長入力完了時間が21〜29%悪化する。","長入力復号と短入力事前計算の同居を無効化すると長入力完了時間が23〜26%悪化する。"],"quality_impact":"推論の数学的意味を近似せず、要求の配置・横取り・並列方式を変更するため生成品質は維持される。","interpretation":"長短入力混在では単純な先着順、固定予約、短入力優先のいずれも片側を犠牲にする。PecSchedは段階別の資源特性を使って横取り範囲を限定し、長入力を高速化することで両者の干渉を制御する。"},"reservation":{"claim_id":"claim-40fec156180475a1f071f609","worker_id":"scheduled-chat-paper-20260916T175945JST","worker_kind":"scheduled_chat"}}
