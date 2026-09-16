@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6706504bb5bc81c853af84cc",
-  "job_id": "job-research-e59ec36b619f9b0c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6706504bb5bc81c853af84cc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6706504bb5bc81c853af84cc","job_id":"job-research-e59ec36b619f9b0c","data":{"overview":"RouteRelayは層間経路が安定している行では完全ルータを省き、ドリフトが増えた行だけ計算量を戻すことで、固定更新周期より高い経路忠実度を保った。ドリフト0.01では完全再経路行25.0%で100%再現、0.03では55.4%、0.06では78.2%まで計算を増やしながら99.99%以上を維持した。キーチャンク128～1024では100%再現率のまま完全ルーティングの38.4～51.6%のスコア対だけを評価した。ただし未融合CPU実装は全規模で密行列積より遅く、演算量削減がそのまま実時間短縮にならない。実用化にはgather・行圧縮・台帳更新をGPU融合カーネルへまとめる必要がある。","key_results":[{"metric":"route recall / reroute at drift 0.03","value":">99.99% / 55.4%","baseline":"fixed stride 4: 94.9% / 25.0%","condition":"192 key chunks","interpretation":"固定周期より多く必要行を更新する代わりに経路精度を維持する。"},{"metric":"route recall / reroute at drift 0.06","value":">99.99% / 78.2%","baseline":"fixed stride 4: 91.2% / 25.0%","condition":"high drift","interpretation":"層間変化が大きいとき自動的に完全ルーティング量を増やす。"},{"metric":"score pairs","value":"51.6% at 128 chunks → 38.4% at 512 → 38.5% at 1024","baseline":"full routing 100%","condition":"100% route recall","interpretation":"候補集合幅が固定なのでルーティング規模が大きいほど相対費用が下がる。"},{"metric":"sentinel ablation","value":"random only 92.32% recall/14.2% pairs; near-miss 100%/50.8%","baseline":"full route","condition":"256 key chunks","interpretation":"境界直下候補が孤立した順位入替検出に不可欠。"},{"metric":"CPU wall-clock","value":"0.27～0.61x speedup、実際は1.6～3.7倍遅い","baseline":"optimized full matrix routing","condition":"unfused CPU","interpretation":"不規則メモリアクセスと管理処理が演算削減を上回る負のシステム結果。"}],"negative_results":["ランダム監視だけではスコア対14.2%まで減るが経路再現率92.32%へ低下する。","近接監視を12から24、48へ増やしても100%再現率は変わらずスコア対だけ55.3%、64.2%へ増える。","CPU未融合実装は全評価規模で完全ルーティングより遅い。","実LLMの最終精度・エンドツーエンドGPUプリフィル高速化はまだ実証していない。"],"quality_impact":"注意値そのものを層間共有せず経路IDだけを再利用し、各層のQ/K/Vとsoftmaxを保持することで近似範囲を疎経路選択へ限定する。","interpretation":"動的疎注意では注意カーネルを軽くした後、経路構築が次の最適化対象になる。層間冗長性は有望だが、演算数削減より不規則な実装費用が支配し得るため、GPUカーネル融合まで含めて評価する必要がある。"},"reservation":{"claim_id":"claim-6706504bb5bc81c853af84cc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
