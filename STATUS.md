@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:15:36 JST**
+> 自動生成: **2026-09-16 14:15:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **43** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-16 14:14:27 JST（1分前）** |
+| 収録候補論文 | **45** |
+| 未claim Research job | **42** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-16 14:15:47 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **45** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **26** | **7** | **4** | **3** | **4** | **0** | — |
+| Research | **27** | **7** | **4** | **3** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **27** | **12** | **4** | **8** | **4** | **0** | **24** |
+| 合計 | **28** | **12** | **4** | **8** | **4** | **0** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:15:47 JST** [research] `arXiv:2604.25899` — Pythia: Toward Predictability-Driven Agent-Native LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-f79de4903a69120c.json`
+  - result: `.survey/work-queue/results/research/attempt-004a86fd81b4197041999e5e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-004a86fd81b4197041999e5e.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25899-pythia-predictability-driven-agent-native-serving.md`
 - **09-16 14:14:27 JST** [research] `arXiv:2502.07578` — PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference
   - job: `.survey/work-queue/jobs/job-research-73e15ccbef3e6d6d.json`
   - result: `.survey/work-queue/results/research/attempt-c1a96aa17242872639750d89.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-743db39c9d8329de077d7390.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-743db39c9d8329de077d7390.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md`
-- **09-16 12:40:35 JST** [research] `arXiv:2607.21604` — AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems
-  - job: `.survey/work-queue/jobs/job-research-408799bbc4fac119.json`
-  - result: `.survey/work-queue/results/research/attempt-41a7fdaa747fc1f8c0650e98.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-41a7fdaa747fc1f8c0650e98.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md`
 
 ### Audit
 
@@ -208,7 +208,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -228,7 +228,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **581** |
+| inference/training/survey配下の論文Markdown実体 | **582** |
 
 ### immutable submissionの未照合
 
@@ -236,8 +236,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **286** |
-| └ Research | **172** |
+| 成功result未照合のimmutable submission | **285** |
+| └ Research | **171** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job

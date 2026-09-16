@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:14:31.604406+00:00",
+  "updated_at": "2026-09-16T05:15:51.667992+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:14:31.604406+00:00",
+      "last_recorded_at": "2026-09-16T05:15:51.667992+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 117,
+        "research_completed": 118,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34931183100:1",
-          "recorded_at": "2026-09-15T05:07:48.602153+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34931183100",
-            "run_attempt": "1",
-            "source_sha": "156008e6d0514d78c0ef00e056259c00fd97adae"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34933276667:1",
           "recorded_at": "2026-09-15T05:34:30.619120+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35058691577",
             "run_attempt": "1",
             "source_sha": "80f20d861bcac878c4800cd3627e69f3a5ed8857"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35058784921:1",
+          "recorded_at": "2026-09-16T05:15:51.667992+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35058784921",
+            "run_attempt": "1",
+            "source_sha": "d8922fca6dbef160e9bc5c80e538eb16494db400"
           },
           "signals": [
             "research_completed"
@@ -20839,6 +20839,14 @@
           "type": "research",
           "canonical_id": "arXiv:2502.07578",
           "title": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f79de4903a69120c",
+          "type": "research",
+          "canonical_id": "arXiv:2604.25899",
+          "title": "Pythia: Toward Predictability-Driven Agent-Native LLM Serving",
           "from": "ready",
           "to": "completed"
         }
