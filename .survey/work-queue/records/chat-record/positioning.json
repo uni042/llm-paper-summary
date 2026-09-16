@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-83d1470b4ddd3cc39d4e3a56","job_id":"job-research-ec631b9aeb6c5c21","data":{"limitations":"主要な性能値はLPUを拡張したハードウェアシミュレータであり、Oaken専用回路を製造した実チップ測定ではない。RTL面積はTSMC 28nm合成値。アルゴリズムをGPUへ直接実装すると群分類の分岐により量子化・逆量子化が遅く、専用回路なしでは性能利得が小さくなる。固定外れ値閾値はモデル・層ごとに約100回の事前プロファイルが必要で、モデル更新時は再実行が必要。FP16に対して平均0.87%の品質低下を許容し、KVQuant/KIVIより精度はわずかに低い。","differences":"KIVI/KVQuantの高精度なオンライン外れ値選別は整列や混合精度が重く、QServe/Tender等のチャネル再配置は処理が軽い代わりに例外外れ値の精度損失が大きい。Oakenは外れ値境界をオフラインへ移し、オンラインでは3群の尺度だけ計算する中間点を選ぶ。さらに群シフトで大値をFP16へ逃がさず、密・疎融合符号化と専用MMUで索引費用・断片化を抑える。量子化アルゴリズム単体ではなくDMAデータ経路まで共同設計する点が中心的差異。","implementation_status":"ISCA 2025査読付き論文。OakenモジュールはSystemVerilog RTLとして実装・VCS検証・28nm合成され、LPUハードウェアシミュレータへ統合して評価。論文ページから一般公開コードURLは確認できない。","research_positioning":"KVキャッシュ表現とサービング用メモリ階層の境界を扱うハードウェア共同設計系統。GPU/CPU/SSDオフロードがKVを別階層へ移すのに対し、Oakenは移動前にKV自体を圧縮して必要帯域と容量を同時に下げるため直交的に併用できる。特にSSD/NVMe階層では圧縮KVにより書込み・読出し量と保存容量を減らせる一方、専用DMA回路がない一般GPUでの量子化費用をどう隠すかが追加課題となる。"},"reservation":{"claim_id":"claim-83d1470b4ddd3cc39d4e3a56","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-92eacae28ddf2d971f52c069",
+  "job_id": "job-research-7623de796f4f2b46",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-92eacae28ddf2d971f52c069",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

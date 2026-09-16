@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:38:45 JST**
+> 自動生成: **2026-09-17 02:39:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -226,9 +226,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.18599` — Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 02:36:48 JST** / heartbeat: **—** / lease expiry: **09-17 04:06:48 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ec631b9aeb6c5c21.json`
+- `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 02:39:01 JST** / heartbeat: **—** / lease expiry: **09-17 04:09:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7623de796f4f2b46.json`
 
 #### Audit
 
