@@ -81,7 +81,8 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             key: job.get(key)
             for key in (
                 "job_id", "type", "lane", "priority", "canonical_id", "title",
-                "source_url", "paper_path", "instructions", "completion",
+                "source_url", "paper_path", "workflow_version", "artifact_transport",
+                "instructions", "completion",
             )
         } for job in visible],
     }
