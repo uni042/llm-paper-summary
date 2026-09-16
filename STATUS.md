@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:15:35 JST**
+> 自動生成: **2026-09-16 18:15:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **26** |
 | 未claim Research job | **24** |
 | 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-16 18:09:41 JST（5分前）** |
+| 最終検証済みResearch収録 | **09-16 18:09:41 JST（6分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2409.15104` — CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts / worker `scheduled-chat-paper-20260916T175945JST`
-  - claim: **09-16 18:14:26 JST** / heartbeat: **—** / lease expiry: **09-16 19:44:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6eb709dc3f5cf15a.json`
+- `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression / worker `scheduled-chat-paper-20260916T175945JST`
+  - claim: **09-16 18:15:54 JST** / heartbeat: **—** / lease expiry: **09-16 19:45:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ad3541d28015a662.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
@@ -251,8 +251,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **367** |
-| └ Research | **223** |
+| 成功result未照合のimmutable submission | **368** |
+| └ Research | **224** |
 | └ Audit | **1** |
 | └ Discovery | **143** |
 

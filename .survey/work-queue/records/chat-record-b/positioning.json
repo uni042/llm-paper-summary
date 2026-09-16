@@ -2,47 +2,47 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8de324791197729e3bdc6b95",
-  "job_id": "job-research-6eb709dc3f5cf15a",
+  "attempt_id": "attempt-96ecd5a271dbb7552442f5cb",
+  "job_id": "job-research-ad3541d28015a662",
   "data": {
-    "positioning": "長文脈推論を単に系列並列で高速化するのではなく、短入力が多数を占める実クラスタで長入力との干渉をスケジューリング問題として扱う研究である。",
-    "differences": "vLLM型先着順は長入力の先頭待ち阻害を防げず、Llumnix型予約は希少な長入力向け資源を遊休させ、Past-Future型優先度は長入力を飢餓させる。PecSchedは短入力事前計算だけに横取り権を与え、短入力復号を分離し、長入力復号との同居と高速系列並列を組み合わせる点が異なる。",
+    "positioning": "エッジ・クラウド協調推論で計算位置を最適化する従来方式に対し、通信境界を通る表現そのものを融合済み固定長潜在表現へ変える研究である。",
+    "differences": "一般的な分割推論はモデル中間活性を送り、BottleNet++等は中間特徴を圧縮する。マルチモーダル協調方式ではモダリティ別特徴を個別に送ってサーバで融合することも多い。EMMIは通信前にモダリティ間相互作用まで融合し、その統一表現を圧縮するため、異種入力数や下流モデル内部の分割位置に通信形式が直接縛られにくい。",
     "relation_to_prior_work": [
       {
-        "work": "vLLM FIFO scheduling",
-        "difference": "到着順を守る代わりに長入力事前計算を短入力事前計算が横取りし、先頭待ち阻害を回避する。"
+        "work": "split computing",
+        "difference": "モデルの分割位置を選ぶ代わりに、端末で融合済み潜在表現を生成して一度だけサーバへ渡す。"
       },
       {
-        "work": "Llumnix reservation",
-        "difference": "長入力専用GPUを固定予約せず、実行段階に応じて資源を共有する。"
+        "work": "BottleNet++ / activation compression",
+        "difference": "単一モデル中間活性ではなく、複数モダリティの相互作用を含む統一表現を圧縮する。"
       },
       {
-        "work": "Past-Future priority scheduling",
-        "difference": "短入力を優先しつつ長入力を恒久的低優先度にせず、復号同居と高速事前計算で長入力進捗を保証する。"
+        "work": "TOFC",
+        "difference": "視覚などモダリティ別特徴を通信して後段融合するのではなく、通信前の交差モダリティ融合を圧縮対象にする。"
       },
       {
-        "work": "Ring Attention sequence parallelism",
-        "difference": "ノード間リング注意に加え、ノード内ではMegatron/Ulysses型系列並列を動的選択して長入力事前計算を短縮する。"
+        "work": "compact MLLM on-device",
+        "difference": "高容量サーバMLLMを小型化せず維持し、端末側は軽量な表現生成と圧縮に限定する。"
       }
     ],
     "strengths": [
-      "実際のAzure LLM推論追跡に基づく長短入力混在を評価する。",
-      "4台32基A100の実機クラスタで実装を測定する。",
-      "短入力の大幅な待ち時間・処理量改善と長入力の非飢餓を同時に示す。",
-      "各機構のアブレーションで横取り、分離、同居、高速系列並列の寄与を分離する。"
+      "通信量を32分の1にしながらタスク認識型では非圧縮精度との差を0.16ポイント以内に保つ。",
+      "低帯域0.1Mbpsでは圧縮費用0.641msに対して通信時間を約635ms削減する。",
+      "圧縮器とサーバ推論器を復元段で分離し、圧縮方式変更時のサーバ本体再学習を避ける設計である。",
+      "ラベル不要型とタスク認識型の両方を評価し、汎用性と精度の交換関係を示す。"
     ],
     "limitations": [
-      "長入力部分は元Azure追跡の上位5%を100K〜500Kへ合成置換しており、完全に自然な長文脈到着追跡ではない。",
-      "評価クラスタはA100中心で、異種GPUや広域ネットワーク条件の一般化は未検証である。",
-      "短入力復号専用資源数など運用パラメータはモデルごとに設定される。",
-      "最新版v2は初版CSPSから題名と主題が大幅変更されており、旧題名を前提とする索引は更新が必要である。"
+      "主要評価はMS-COCOの画像・文照合という二値分類で、論文が掲げる一般的な開放型マルチモーダル推論を直接評価していない。",
+      "エッジ側は実際のスマートフォンや組込み機器ではなくx86_64単一CPUスレッドを代理環境として測定する。",
+      "総遅延3.4倍は0.1Mbpsという強い帯域制約での推定値で、高帯域LTE・Wi-Fi・5Gでは遅延利得が小さい。",
+      "ラベル不要圧縮はBlockPCAより精度が低く、学習型圧縮が常に単純手法を上回るわけではない。"
     ],
-    "implementation_status": "vLLM、Ray、PyTorch distributed、NCCL、Triton版FlashAttention-2を基盤に実装され、論文はコードを公開したと記載する。",
-    "research_positioning": "長入力向け系列並列とクラスタスケジューリングを接続し、入力長の長尾分布を明示的に利用する推論基盤研究である。",
-    "repository_fit": "推論スケジューリング・分離実行・系列並列の交差領域に位置する。現在のjobは旧v1題名CSPSを保持しているため、最終レンダリングでは最新版PecSchedへの題名更新が必要である。"
+    "implementation_status": "研究実装であり、CLIP/MobileCLIP、圧縮自己符号器、凍結LLaVA-1.5-7B、射影MLPと分類頭を二段階学習する。本文から公式コード公開先は確認できない。",
+    "research_positioning": "通信律速のマルチモーダル推論に対し、表現設計とシステム分離を同時に扱う初期的なエッジ・サーバ協調方式である。",
+    "repository_fit": "11-llm-serving-scheduling-disaggregation系統の隣接領域として、遠隔推論で送信する中間情報を圧縮して通信時間を減らす設計比較に有用である。"
   },
   "reservation": {
-    "claim_id": "claim-8de324791197729e3bdc6b95",
+    "claim_id": "claim-96ecd5a271dbb7552442f5cb",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }
