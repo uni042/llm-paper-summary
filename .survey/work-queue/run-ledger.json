@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:06:16.856449+00:00",
+  "updated_at": "2026-09-16T05:08:57.801773+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:06:16.856449+00:00",
+      "last_recorded_at": "2026-09-16T05:08:57.801773+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 114,
+        "research_completed": 115,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34927059539:1",
-          "recorded_at": "2026-09-15T04:01:42.024315+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34927059539",
-            "run_attempt": "1",
-            "source_sha": "b93b39f0a5d45271b3eb027c7893fb303f9e141d"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34931141860:1",
           "recorded_at": "2026-09-15T05:05:33.813327+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35058132727",
             "run_attempt": "1",
             "source_sha": "f654fb07a391b18415bb226a00c1ad89b5059c76"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35058332185:1",
+          "recorded_at": "2026-09-16T05:08:57.801773+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35058332185",
+            "run_attempt": "1",
+            "source_sha": "2b458c3faa9c7ec8675999167acbb4e4f6f4aec0"
           },
           "signals": [
             "research_completed"
@@ -20815,6 +20815,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.11244",
           "title": "SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-deb10d3b4d925a01",
+          "type": "research",
+          "canonical_id": "arXiv:2601.11580",
+          "title": "Speculative Decoding: Performance or Illusion?",
           "from": "ready",
           "to": "completed"
         }
