@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:19:50 JST**
+> 自動生成: **2026-09-16 17:21:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **27** |
 | 未claim Research job | **26** |
 | 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-16 17:15:27 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 17:15:27 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **49** | **7** | **4** | **3** | **1** | **0** | — |
+| Research | **49** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **50** | **26** | **4** | **22** | **1** | **0** | **23** |
+| 合計 | **50** | **27** | **4** | **23** | **1** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,12 +115,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
-- immutable submission: **7件** / 検証済み成功: **4件** / 未完了・未検証: **3件**
+- immutable submission: **8件** / 検証済み成功: **4件** / 未完了・未検証: **4件**
 - **成功** `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
   - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
   - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-201fb89bc61573cc411909b4.json` (job `job-research-6252d370adc380b9`)
 - **成功** `arXiv:2509.24832` — SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching
   - job: `.survey/work-queue/jobs/job-research-b98e4e299d06a6a5.json`
   - result: `.survey/work-queue/results/research/attempt-4aa0bdcf550c974e39ccae92.json` (`ok=true`)
@@ -247,8 +248,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **341** |
-| └ Research | **207** |
+| 成功result未照合のimmutable submission | **342** |
+| └ Research | **208** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
