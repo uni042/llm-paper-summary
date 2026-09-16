@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:51:26 JST**
+> 自動生成: **2026-09-16 19:52:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **30** |
-| 未claim Research job | **29** |
+| 未claim Research job | **28** |
 | 直近24hの検証済みResearch収録 | **66** |
 | 最終検証済みResearch収録 | **09-16 18:51:24 JST（1時間0分前）** |
 | 整合性異常 | **1** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **38** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **24** | **0** | **24** | **0** | **0** | **32** |
-| 合計 | **39** | **32** | **4** | **28** | **1** | **0** | **32** |
+| 合計 | **38** | **32** | **4** | **28** | **2** | **0** | **32** |
 
 - 最新Discovery runの耐久探索round: **24件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -194,7 +194,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.24971` — PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 19:52:18 JST** / heartbeat: **—** / lease expiry: **09-16 21:22:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9ef38f28c45d6f3a.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
