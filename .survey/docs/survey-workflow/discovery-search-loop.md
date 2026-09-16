@@ -35,9 +35,19 @@ window keyは次を含む。
 - `citation_direction`
 - `query_family`
 
-候補windowが複数ある場合は、まず未走査windowを優先する。すべて走査済みならhistorical unseen rateが高いwindowを優先し、直前に重複率が高かった同一windowを機械的に再送しない。走査履歴は永久blacklistではないため、新しい期間・カテゴリ・引用方向・query familyへ変化したwindowは別keyとして扱う。
+候補windowが複数ある場合は、まず未走査windowを優先する。すべて走査済みならhistorical unseen rateとcandidate acceptance rateが高く、duplicate rateが低いwindowを優先する。累積duplicate rateが `0.80` 以上のwindowはcooldown扱いとして同一条件の再走査を後順位へ送り、検索上位が既知論文で埋まった窓を機械的に繰り返さない。走査履歴は永久blacklistではないため、新しい期間・カテゴリ・引用方向・query familyへ変化したwindowは別keyとして扱う。
 
-実際に走査した各windowは、immutable Discovery submissionの `discovery_stats.search_windows` に6次元keyと `raw_result_count` / `unseen_result_count` / `duplicate_filtered_count` / `rejection_filtered_count` を記録する。Actions側の `queue_worker.record_discovery_stats()` が単一writerとして `discovery-state.json` へ集約する。
+実際に走査した各windowは、immutable Discovery submissionの `discovery_stats.search_windows` に6次元keyと少なくとも次を記録する。
+
+- `raw_result_count`
+- `unseen_result_count`
+- `duplicate_filtered_count`
+- `rejection_filtered_count`
+- `candidate_evaluation_count`
+- `candidate_accepted_count`
+- `position`（providerが返すcursor / offset / page等の最後の走査位置。個別fieldで記録してもよい）
+
+Actions側の `queue_worker.record_discovery_stats()` が単一writerとして `discovery-state.json` へ集約し、windowごとの `unseen_rate`、`duplicate_rate`、`candidate_acceptance_rate`、`last_position`、`scan_count`、`last_run_key`、`last_round` を耐久化する。次回workerは `last_position` をprovider adapterの再開・window shift判断に利用できる。件数がない場合に率を推測してはならず、0件は0として扱う。
 
 ## workerへ返った後の処理
 
@@ -75,9 +85,10 @@ run内で最低限次を集計する。
 - intra/cross-page duplicates filtered
 - alias resolverで畳み込んだintra/cross-page duplicates
 - unseen/unrejected results returned by collector
-- candidate evaluation rejected count
-- provider pages/cursors traversed
+- candidate evaluation count / rejected count / accepted count
+- provider pages/cursors traversedと最後のposition
 - pagination unavailable時のshifted search windows数
+- windowごとのunseen / duplicate / candidate acceptance rate
 - independent axes traversed
 - candidates durably submitted
 - end candidate inventory
