@@ -5,34 +5,18 @@
   "attempt_id": "attempt-e3290dc33452ec879629239c",
   "job_id": "job-research-32ece608ca43dae7",
   "data": {
-    "problem": "MoE layerのfused expert GEMMは総token数だけでなく、routerが各expertへ何token割り当てたかで実際の行列形状が変わる。大きなMMA tileはweight reuseを高める一方、cold expertではzero paddingを増やし、小tileはpaddingを減らす代わりにweight reloadを増やす。TRTLLM等の通常autotuningはtoken-count bucketごとにrandom routingで単一kernelを選ぶため、同じbatchでもlayer/inputごとに2倍以上変動するrouting skewを無視する。したがって静的bucket kernelは一部invocationでoracleから大きく遅れる。",
-    "novelty": "routing skewを実効expert数 eff_exp=((Σt_i)^2)/(Σt_i^2) で1〜Nの物理的尺度へ圧縮し、target eff_expに合う対称Dirichlet濃度αをbinary searchして制御可能なsynthetic routing分布を作る。これをoffline kernel sweepへ使い、onlineではlive histogramそのものをGPU上でexemplar matchingしてkernelを切り替える。kernel選択をCPUへ戻さずconditional CUDA Graph内で完結させる点がsystem上の核心。",
-    "method_overview": "まず実routing traceからlayer/token-countごとのeff_expを測る。offline tuningでは各token-count bucketでddist:X（target eff_exp=N/X）を複数生成し、利用可能なTRTLLM fused-MoE kernelをbenchmarkして最速kernel IDを記録する。各分布はexpert token-count vectorを降順sortしL2 normalizeしたexemplarに変換し、expert identityとscaleを除去してGPUへ配置する。onlineではrouter実行後、per-expert histogramを構築・sortし、同bucketのexemplar群とcosine similarityで最近傍を選び、そのkernel IDをconditional CUDA Graphのdevice-side branchから起動する。",
+    "problem": "MoE層ではルータが各トークンを少数のエキスパートへ振り分けるため、融合エキスパート行列積が処理する行列形状は実行ごとに変わる。重要なのは総トークン数だけではなく、各エキスパートへ何トークン集まったかという偏りである。大きなMMAタイルは同じ重みを多数トークンへ再利用しやすい一方、トークンが少ないエキスパートではゼロ埋め計算を増やす。小さなタイルはゼロ埋めを抑えるが、重みの再読込や命令数が増える。既存のTRTLLM型事前調整は総トークン数の区間ごとにランダムなルーティングを使って単一カーネルを選ぶため、層や入力ごとに大きく変わる実際の偏りを見ない。その結果、同じバッチ規模でも選択済みカーネルが最適候補から大きく遅れる場合がある。",
+    "novelty": "DA-MoEは、ルーティング偏りを実効エキスパート数という1〜Nの尺度へ要約し、その値を再現する対称Dirichlet分布を逆算して、均等から強い集中まで制御可能な代表分布を作る。事前段階では総トークン数と偏りの組ごとに利用可能な融合MoEカーネルを実測して最速候補を記録する。実行時にはルータ直後のエキスパート別トークン数をGPU上で並べ替え・正規化し、代表分布とのコサイン類似度で最も近い形を選ぶ。さらに選択結果をCPUへ戻さず、条件付きCUDAグラフのGPU側分岐で対応カーネルを直接起動するため、動的選択の同期費用を小さく保つ。",
+    "method_overview": "処理は事前調整と実行時切替の二段階からなる。まず実ルーティングの各エキスパートのトークン数をt_iとし、(Σt_i)^2/Σ(t_i^2)で実効エキスパート数を計算する。全エキスパートが均等ならNに近く、少数へ集中するほど1へ近づくため、偏りをエキスパート番号に依存しない単一尺度で比較できる。次に目標実効エキスパート数を再現する対称Dirichlet分布の濃度αを広い範囲で二分探索し、総トークン数32、64、128、256、512などの各区間と複数の偏り強度を組み合わせた合成ルーティングを生成する。各組についてTRTLLMが持つ融合MoEカーネル候補を実GPUで走らせ、最小遅延のカーネル識別子を保存する。タイル寸法だけでなくソフトウェアパイプラインやメモリ経路まで含む実カーネル全体を測るのは、同じタイル寸法でも実効性能が10%以上異なるためである。\n\n代表分布はエキスパート別トークン数を降順に並べてL2正規化し、GPU常駐の代表ベクトルとして保持する。並べ替えることで『どの番号のエキスパートが熱いか』を捨て、『何個のエキスパートへどの程度集中しているか』という形だけを比較できる。実行時には通常のルータがトークンを割り当てた直後にヒストグラムをGPU上で作り、同様に降順化・正規化する。総トークン数に対応する事前調整区間の代表ベクトル群とコサイン類似度を計算し、最も近い代表に紐づくカーネルを選ぶ。これにより、ランダム分布を仮定した固定カーネルではなく、現在の実ルーティング形状に近い条件で事前測定されたカーネルを使用できる。\n\n最後に、カーネル識別子をホストCPUへコピーして通常の条件分岐を行うと同期遅延が利得を消すため、DA-MoEは条件付きCUDAグラフを利用する。ヒストグラム作成、並べ替え、代表照合、カーネル選択、融合MoE実行までをGPU側の実行経路に置き、選択結果から対応するグラフ分岐を直接起動する。論文ではCPU分岐の追加費用が約15マイクロ秒、条件付きグラフだけなら約8マイクロ秒、ヒストグラムなどを含むDA-MoE全体でも約14マイクロ秒としている。大規模MoEではこの費用よりカーネル適合による短縮が大きい。一方、小規模MoEやGPU当たりトークン数が少ない条件では選択費用が相対的に大きくなり、事前代表分布が不足する条件では最適カーネルとの差も残る。",
     "components": [
-      {
-        "name": "Effective ExpertsとDirichlet reverse modeling",
-        "description": "per-expert token countsからrouting concentrationを1〜Nのeff_expへ変換する。target値に一致する対称Dirichlet αを10^-6〜10^6でbinary searchし、uniformから強skewまで連続的にsweepできるddist:Xを生成する。実DeepSeek-V3 routingとのsorted-vector cosine similarityはgeomean 0.97でBeta 0.92、exponential 0.94を上回る。"
-      },
-      {
-        "name": "Distribution-aware offline autotuning",
-        "description": "token-count bucket {32,64,128,256,512}ごとにskew設定{1.1,1.3,1.5,1.7,2.0,2.5,4.0}を生成し、各分布をTRTLLM kernel候補へ通して最小latency kernelを保存する。同じTile Nでもsoftware pipelineやmemory pathでeffective throughputが10%以上散るため、tileだけでなくkernel configuration全体を選ぶ。"
-      },
-      {
-        "name": "GPU-resident exemplar matching",
-        "description": "router logitsからexpert histogramをGPU上で構築し、降順sort・L2 normalizeしてoffline exemplarとcosine similarity比較する。expert IDを捨てたshape比較により、hot expertの番号が異なっても同じskew profileを同じkernelへ対応付ける。"
-      },
-      {
-        "name": "Conditional CUDA Graph dispatch",
-        "description": "選択結果をhostへcopyせず、device-side conditional SWITCHでfused-MoE kernelを起動する。CPU branchは固定graph比約15µsの追加overhead、conditional graphは約8µs、histogram/sort/matching込みDA-MoE全体は約14µsで、large MoEではkernel選択利得より小さい。"
-      }
+      {"name": "実効エキスパート数とDirichlet逆モデル", "description": "エキスパート別トークン数から偏りを実効エキスパート数へ変換する。均等なら実エキスパート数N、1個へ集中すれば1に近づくため、モデルや層をまたいで直感的に偏りを比較できる。次に目標値へ合う対称Dirichlet分布の濃度αを10^-6〜10^6の範囲で二分探索し、均等から強い集中まで連続的な合成分布を作る。論文では実DeepSeek-V3ルーティングとの降順ベクトルのコサイン類似度が幾何平均0.97で、Beta分布0.92、指数分布0.94より高い。これによりランダム一様だけでは覆えない実ルーティング形状を、事前カーネル探索へ系統的に与えられる。"},
+      {"name": "分布適応型の事前カーネル探索", "description": "総トークン数32、64、128、256、512などの区間ごとに複数の偏り設定を生成し、各分布を利用可能なTRTLLM融合MoEカーネル候補へ入力して遅延を実測する。最速候補を代表分布と組にして保存するため、実行時は高価な全探索を繰り返さない。同じMMAタイル寸法でもソフトウェアパイプライン、メモリアクセス、重み再利用の違いで性能が10%以上散ることを観測しており、単純なタイル規則ではなく実カーネル構成全体を測る。偏りが強い場合は少数の熱いエキスパートに合う大きなタイル、均等に近い場合はゼロ埋めを抑える構成など、トークン分布に応じた選択が可能になる。"},
+      {"name": "GPU常駐の代表分布照合", "description": "ルータ出力からエキスパート別トークン数のヒストグラムをGPU上で構築し、値を降順に並べてL2正規化する。事前調整側の代表分布も同じ変換を行って保存するため、熱いエキスパートの番号が異なっても、分布の形が似ていれば同じカーネル候補へ対応付けられる。実行時は該当する総トークン数区間の代表群とのコサイン類似度を計算し、最近傍の代表に結び付いたカーネル識別子を得る。エキスパートIDと絶対規模を分離して偏り形状へ集中することで、少数の代表だけで多数の実ルーティングを近似し、照合表をGPUに置ける程度に小さく保つ。"},
+      {"name": "条件付きCUDAグラフによるGPU側切替", "description": "動的にカーネルを選んでも、選択結果をCPUへ戻して分岐するとGPU同期と起動遅延が発生する。DA-MoEは条件付きCUDAグラフのGPU側SWITCHを使い、代表照合で得た識別子から対応する融合MoEカーネルをデバイス上で直接起動する。論文ではCPU分岐だけで固定グラフより約15マイクロ秒増えるのに対し、条件付きグラフは約8マイクロ秒、ヒストグラム・並べ替え・照合を含む全切替費用は約14マイクロ秒である。この費用は大規模MoEではカーネル短縮より小さいが、小規模モデルでは相殺要因になる。またAMD HIP Graphには同等のGPU側条件分岐がないため、そのまま移植するとCPU往復が必要になる。"}
     ],
-    "system_design": "既存serving stackのrouterとfused-MoE expert computationの間へDA-MoE dispatcherを挿入する。offline phaseがbucket別exemplar→kernel表を生成し、online phaseは同じCUDA Graph内でrouting metadata生成、matching、conditional launchまで行うためserving APIやmodel/routerを変更しない。",
-    "why_it_works": "routing skewにより各expert GEMMのN方向実token幅が変わるため、padding量とweight reuseの最適点もinvocationごとに動く。live distributionを観測して既存kernel集合から近いoffline optimumを選べば、random-routingで固定したbucket kernelのmismatchを除ける。device-side branchにより動的選択のためのCPU同期を避け、利得をcritical path上に残す。",
-    "failure_modes": "dispatch path自体が約14µsかかるため小規模MoE（論文はQwen3を例示）では利得を相殺し得る。DeepSeek-V3 token count 512ではDA-MoEもoracleより約20%遅く、offline exemplar/kernel coverage不足が残る。AMD HIP Graphには同等のdevice-side conditional SWITCHがなくCPU copy-backが必要。評価はB200/NVIDIA、2モデル中心で他GPU・量子化・serving workloadへの一般化は未確認。"
+    "system_design": "既存サービング基盤のルータと融合MoEエキスパート計算の間へDA-MoEディスパッチャを挿入する。事前段階が総トークン数区間と偏りごとの代表分布→カーネル表を生成し、実行時は同じGPU実行経路でルーティング情報生成、代表照合、条件付き起動まで進む。モデル重み、ルータ、エキスパート配置、サービングAPIは変更しないため、既存のvLLM・FlashInfer系実行基盤へ局所的に統合できる。",
+    "why_it_works": "ルーティング偏りで各エキスパート行列積の実トークン幅が変わり、ゼロ埋め量と重み再利用の最適点も実行ごとに動く。現在の分布を観測して近い事前最適カーネルを選べば、ランダムルーティングを前提に固定したカーネルとの不一致を減らせる。GPU側分岐により、動的選択のためのCPU同期を避けて短縮分をクリティカルパスへ残す。",
+    "failure_modes": "切替経路自体が約14マイクロ秒かかるため、小規模MoEでは利得を相殺し得る。DeepSeek-V3の総トークン数512ではDA-MoEも最適候補より約20%遅く、代表分布やカーネル被覆の不足が残る。AMD HIP Graphには同等のGPU側条件分岐がなくCPUへの結果転送が必要になる。評価はB200と主に2モデルであり、他GPU、別量子化、実サービス要求分布への一般化は未確認である。"
   },
-  "reservation": {
-    "claim_id": "claim-e3290dc33452ec879629239c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e3290dc33452ec879629239c", "worker_id": "scheduled-chat-discovery-specialist-00", "worker_kind": "scheduled_chat"}
 }
