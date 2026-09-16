@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 04:01:56 JST**
+> 自動生成: **2026-09-17 04:02:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **27** |
 | 未claim Research job | **27** |
 | 直近24hの検証済みResearch収録 | **91** |
-| 最終検証済みResearch収録 | **09-17 03:41:56 JST（20分前）** |
+| 最終検証済みResearch収録 | **09-17 03:41:56 JST（21分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **16** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **33** | **9** | **5** | **4** | **0** | **0** | **5** |
+| Discovery | **17** | **2** | **1** | **1** | **0** | **0** | **10** |
+| 合計 | **33** | **10** | **5** | **5** | **0** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,12 +186,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 04:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **10件**
+- 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware / MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
 - round `specialist-flash-memory-hardware-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
   - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
   - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
+- round `specialist-moe-movement-2` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json`
+  - 探索軸: MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -246,10 +250,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **395** |
+| 成功result未照合のimmutable submission | **396** |
 | └ Research | **268** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 
