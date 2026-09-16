@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 23:42:19 JST**
+> 自動生成: **2026-09-16 23:42:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **23** |
+| 収録候補論文 | **22** |
 | 未claim Research job | **22** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-16 23:40:05 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-16 23:42:30 JST（4秒前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **23** |
+| canonical_id確認済みの一意な候補論文 | **22** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **23** |
+| 非終端Research job合計 | **22** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **23** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **22** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **23** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 23:42:30 JST** [research] `arXiv:2609.16206` — Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-46a0d6f61e82afe1.json`
+  - result: `.survey/work-queue/results/research/attempt-f1c215fbd6c38d228df7d663.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f1c215fbd6c38d228df7d663.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md`
 - **09-16 23:40:05 JST** [research] `arXiv:2603.22774` — Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference
   - job: `.survey/work-queue/jobs/job-research-f9f09d211cdcb836.json`
   - result: `.survey/work-queue/results/research/attempt-b8af6d9aaac30b5ad36b0128.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-dcdaf23f15c40b373c3afea9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-dcdaf23f15c40b373c3afea9.json`
   - paper: `papers/inference/01-offload-hierarchical-memory/2026-2605.22416-asymmetric-virtual-memory-paging-hybrid-inference.md`
-- **09-16 21:33:52 JST** [research] `arXiv:2506.12417` — HarMoEny: Efficient Multi-GPU Inference of MoE Models
-  - job: `.survey/work-queue/jobs/job-research-1a835bd497ae941f.json`
-  - result: `.survey/work-queue/results/research/attempt-9fdbbab13803c394452c3f1f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9fdbbab13803c394452c3f1f.json`
-  - paper: `papers/inference/03-moe-expert-offload/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.16206` — Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 23:40:56 JST** / heartbeat: **—** / lease expiry: **09-17 01:10:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-46a0d6f61e82afe1.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **23** |
+| ready | **22** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **629** |
+| inference/training/survey配下の論文Markdown実体 | **630** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **460** |
-| └ Research | **261** |
+| 成功result未照合のimmutable submission | **459** |
+| └ Research | **260** |
 | └ Audit | **2** |
 | └ Discovery | **197** |
 
