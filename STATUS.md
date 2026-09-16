@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 00:03:38 JST**
+> 自動生成: **2026-09-17 00:04:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **22** |
 | 未claim Research job | **22** |
 | 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-16 23:42:30 JST（21分前）** |
+| 最終検証済みResearch収録 | **09-16 23:42:30 JST（22分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **22** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **2** | **0** | **2** | **0** | **0** | **5** |
-| 合計 | **22** | **10** | **4** | **6** | **0** | **0** | **5** |
+| Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **8** |
+| 合計 | **22** | **11** | **4** | **7** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -147,8 +147,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 00:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **5件**
-- 探索軸: agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **8件**
+- 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation / agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
+- round `specialist-agent-kv-runtime-3` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
+  - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-agent-serving-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json`
   - 探索軸: agent sandbox scheduling・agentic workload serving characterization
@@ -211,10 +215,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **461** |
+| 成功result未照合のimmutable submission | **462** |
 | └ Research | **260** |
 | └ Audit | **2** |
-| └ Discovery | **199** |
+| └ Discovery | **200** |
 
 ### 厳格検証が未成立のcompleted job
 
