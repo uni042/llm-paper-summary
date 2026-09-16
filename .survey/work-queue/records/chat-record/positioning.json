@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-25cceaeacd63bfc0b41aa061",
   "job_id": "job-research-a04176279033896e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-25cceaeacd63bfc0b41aa061",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "性能改善は通信帯域が律速し、圧縮と通信を十分に重ねられる条件に依存する。小メッセージでは固定オーバーヘッドが相対的に大きく、all-reduceのように各段階で圧縮・復元を繰り返す集合演算では悪化する場合がある。詳細評価は主にNVIDIA GPUとNCCL系の通信経路であり、他のアクセラレータやネットワークへ同じ改善率を保証しない。最新版v2では題名と構成が旧版CCCLからUCCL-Zipへ更新されているため、旧版の個別数値は最新版の主張と区別して読む必要がある。",
+    "differences": "計算と通信をモデル側で融合するDeepEPやFLUX系の方式に対し、UCCL-Zipは利用側のモデル実装を変えず通信ライブラリ層で透過的に適用することを重視する。また量子化通信と異なり無損失で、品質劣化を許容して通信量を削るのではない。従来のGPU圧縮器を通信の前後へ単純追加する方式とも異なり、点対点では分割送信、集合通信ではNCCL常駐カーネルへの融合によって圧縮自身の待ちとメモリ往復を削減する。",
+    "implementation_status": "arXiv v2として公開された研究実装。NCCL互換通信経路とvLLM等を用いた実機評価が報告されている。arXivの関連コード欄から公式公開リポジトリは確認できなかったため、再利用可能な公開実装の有無は未確認とする。",
+    "research_positioning": "LLM推論基盤の観点では、プリフィル・デコード分離で発生するKVキャッシュ転送、モデル重み転送、テンソル並列・専門家並列の集合通信を、配置やスケジューリングではなく通信表現そのものから軽くする系統に位置付く。SSD/NVMeやCPUへの階層メモリ退避とは直接競合せず、ノード間・GPU間転送が残る構成へ直交的に組み合わせられる。特に通信量の大きい分離推論では、転送先や経路を変えずに通信時間を減らせるため、ネットワーク律速を緩和する下位層の最適化として有用である。"
+  },
+  "reservation": {"claim_id": "claim-25cceaeacd63bfc0b41aa061", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
