@@ -2,62 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-e515885033d647a55b19de09",
-  "job_id": "job-research-648fe1e5b80283fd",
-  "data": {
-    "canonical_id": "arXiv:2609.06663",
-    "arxiv_id": "2609.06663",
-    "doi": "10.48550/arXiv.2609.06663",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": [
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics",
-    "summary": "マルチモーダル大規模言語モデルでは、画像由来の多数のトークンによってKVキャッシュが膨張する。既存の多様性重視の追い出し方式はコサイン類似度へ強く依存するが、Transformer表現の異方性によって類似度が一様に高くなりやすく、正規化によりベクトルの大きさも失う。ECOKVは、キーを重心から測るユークリッド距離とコサイン類似度を組み合わせ、方向と大きさの両方から多様性を評価する。さらに注意ヘッドごとの冗長度を二つの幾何指標から推定して、多様性と重要度の混合比を適応的に変える。固定的に保護する直近トークン窓も32から4程度へ縮小し、限られたKV予算を動的選択へ振り向けることで、複数の既存追い出し方式へ追加可能な形で精度を改善する。",
-    "list_summary": "コサイン類似度だけでは見落とすKV表現の大きさをユークリッド距離で補い、注意ヘッドごとの冗長度に応じて多様性と重要度を混合し、狭いKV予算で保持トークンを改善する方式。",
-    "authors": [
-      "Chin Ting Hsu",
-      "Yu-Syuan Xu",
-      "Ling Zou",
-      "Hsien-Kai Kuo",
-      "Wen-Huang Cheng"
-    ],
-    "authors_affiliations": "National Taiwan University; MediaTek Inc.",
-    "published": "2026-09-06",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "KV cache eviction / multimodal KV cache compression / diversity-aware token selection",
-    "topics": [
-      "KVキャッシュ",
-      "マルチモーダルLLM",
-      "キャッシュ追い出し",
-      "多様性評価",
-      "注意ヘッド適応"
-    ],
-    "importance": "既存のSnapKV、PyramidKV、AdaKV、SparseMMへ追加できる多様性評価層として、コサイン類似度単独の幾何学的欠点を実証し、低KV予算で改善幅が大きくなることを示した。",
-    "hardware_evaluation": "NVIDIA GeForce RTX 4090 24GBで実機評価。LLaVA-NeXT-Mistral-7BとQwen2-VL-7B-Instructを使用。",
-    "hardware_details": "NVIDIA GeForce RTX 4090, 24GB",
-    "quality_effect": "近似的なKV追い出しであり厳密な無損失ではない。多くの条件でFullKVに近い、または一部で上回る課題精度を示す一方、SparseMMとの組合せでは一部指標でMixKVより僅かに低下する条件もある。",
-    "source": "https://arxiv.org/abs/2609.06663",
-    "sources": [
-      "https://arxiv.org/abs/2609.06663",
-      "https://arxiv.org/pdf/2609.06663"
-    ],
-    "code": null,
-    "implementation": "論文中で既存のSnapKV、PyramidKV、AdaKV、SparseMMへの統合実験を報告。arXivページ上では公式コードURLを確認できなかった。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 51
-  },
+  "attempt_id": "attempt-83b483046e34ec23467654d3",
+  "job_id": "job-research-aa4d7a102619f4b3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e515885033d647a55b19de09",
+    "claim_id": "claim-83b483046e34ec23467654d3",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 01:40:30 JST**
+> 自動生成: **2026-09-17 01:40:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -218,9 +218,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics / worker `scheduled-chat-normal-20260917T013240`
-  - claim: **09-17 01:39:10 JST** / heartbeat: **—** / lease expiry: **09-17 03:09:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-648fe1e5b80283fd.json`
+- `arXiv:2609.12378` — An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference / worker `scheduled-chat-normal-20260917T013240`
+  - claim: **09-17 01:40:40 JST** / heartbeat: **—** / lease expiry: **09-17 03:10:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-aa4d7a102619f4b3.json`
 
 #### Audit
 

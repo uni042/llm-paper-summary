@@ -2,34 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e515885033d647a55b19de09",
-  "job_id": "job-research-648fe1e5b80283fd",
-  "data": {
-    "hardware": "NVIDIA GeForce RTX 4090 24GB。実機上でLLaVA-NeXT-Mistral-7BとQwen2-VL-7B-Instructを評価し、効率測定も同GPUで実施した。",
-    "software": "LMMs-Evalを統一評価基盤として使用。比較対象はFullKV、MixKV、およびSnapKV、PyramidKV、AdaKV、SparseMM。ECOKVを各追い出し方式へ統合して比較した。",
-    "methodology": "標準マルチモーダル評価としてDocVQA、OCRBench、TextVQA、ChartQA、TextCapsを使用し、長文書条件としてMP-DocVQAも評価した。KV予算は主に256、128、64で比較する。固定設定は多様性混合係数0.8、冗長度混合係数0.6、観測窓4、半精度、バッチ1。観測窓1・4・32、混合係数、正規化方式についてアブレーションを実施した。効率評価では8192トークン入力から512トークン生成し、予算64でキャッシュ容量、ピークメモリ、総実行時間を3回平均した。実ベンチマーク側でもTextVQAから100件超を無作為抽出して効率を測った。",
-    "scope": "評価は7B級の二つのマルチモーダルモデルとRTX 4090単機を中心とした実機評価である。画像・文書中心の課題に強く、一般のテキスト専用LLM、より大きいモデル、複数GPUサービング、長時間連続デコードでのスループットや末尾遅延までは直接検証していない。方式は近似的なKV追い出しであり、品質保持は課題精度として評価される。",
-    "benchmarks": [
-      "DocVQA",
-      "OCRBench",
-      "TextVQA",
-      "ChartQA",
-      "TextCaps",
-      "MP-DocVQA"
-    ],
-    "models": [
-      "LLaVA-NeXT-Mistral-7B",
-      "Qwen2-VL-7B-Instruct"
-    ],
-    "budgets": [
-      256,
-      128,
-      64
-    ],
-    "reproducibility_notes": "論文は主要ハイパーパラメータとGPU時間を提示する。LMMs-Evalではサンプリングなしで決定論的に評価したと記載される。arXivページ上で公式コードURLは確認できなかったため、完全な再現性は実装公開状況に依存する。"
-  },
+  "attempt_id": "attempt-83b483046e34ec23467654d3",
+  "job_id": "job-research-aa4d7a102619f4b3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e515885033d647a55b19de09",
+    "claim_id": "claim-83b483046e34ec23467654d3",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
