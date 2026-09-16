@@ -1,30 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T18:04:49+00:00",
-  "last_run_key": "2026-09-17T03:00:00+09:00",
-  "last_round": "specialist-cross-dc-2",
+  "updated_at": "2026-09-16T19:01:52+00:00",
+  "last_run_key": "2026-09-17T04:00:00+09:00",
+  "last_round": "specialist-flash-memory-hardware-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 20,
+  "consecutive_empty_rounds": 21,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T16:30:00+09:00",
-      "round": "paper-worker-exaserve-derived-storage-control-2",
-      "axis": "ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling",
-      "query_summary": "ExaServeで確認した配備・制御面ボトルネックから探索軸を変え、SSD上のMoE expertキャッシュ、routing依存expert prefetch、CPU-GPU密結合メモリ上のSLO-aware KV schedulingを一次資料で軽量評価した。投入直前にarXiv IDを正本repoで検索し、既収録・既存jobに一致しない3件のみを送る。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次回はdistributed streaming ingress / control-plane sharding / multi-controller LLM servingを優先し、今回のstorage/offload軸を機械的に反復しない",
-      "source_submission": "work-queue/submissions/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json"
-    },
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "round": "paper-worker-multiround-heterogeneous-memory-1",
@@ -6585,6 +6570,43 @@
       ],
       "next_axis_hint": "既収録重要serving論文のforward citation、DBMS/storage由来のcache/prefetch、またはMoE expert I/O schedulingへ移る",
       "source_submission": "work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json"
+    },
+    {
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "round": "specialist-flash-memory-hardware-1",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "query_summary": "paginationを公開しないweb検索providerで、2026-09最新flash inference、2024-2026 SSD/NVMe offload、CXL/heterogeneous memory、PIM/near-storage acceleratorへ検索窓をずらした。各結果を最新discovery identity shardとrejection ledgerでcandidate評価前に照合し、既収録候補を除外後、10件の未評価bufferをまとめて評価した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2607.16892",
+        "arXiv:2605.03375",
+        "arXiv:2604.25080",
+        "arXiv:2606.31145",
+        "arXiv:2512.11920",
+        "arXiv:2502.09921",
+        "arXiv:2502.07578",
+        "arXiv:2509.03377",
+        "arXiv:2511.00321",
+        "arXiv:2511.20172",
+        "arXiv:2606.25353",
+        "arXiv:2604.07609",
+        "arXiv:2604.25699",
+        "arXiv:2508.13231",
+        "arXiv:2406.01566",
+        "arXiv:2312.11514",
+        "arXiv:2401.14351"
+      ],
+      "next_axis_hint": "最新2609のGPU runtime/communicationまたはMoE expert movementへ移り、flash/PIM hardware軸を機械的に反復しない",
+      "source_submission": "work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
     }
   ],
   "axes": {
@@ -10635,6 +10657,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "既収録重要serving論文のforward citation、DBMS/storage由来のcache/prefetch、またはMoE expert I/O schedulingへ移る"
+    },
+    "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware": {
+      "last_run_key": "2026-09-17T04:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "最新2609のGPU runtime/communicationまたはMoE expert movementへ移り、flash/PIM hardware軸を機械的に反復しない"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
