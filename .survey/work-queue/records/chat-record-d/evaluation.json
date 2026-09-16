@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-95c518792662f18476bdcb36",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95c518792662f18476bdcb36",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
+ "data":{
+  "evaluation_summary":"4×A100/NVLink nodeを1–3 node使用し、denseとMoEの計8モデル、HellaSwag/GSM8K由来のrequest、Poisson arrivalでsteady/dynamic workloadを評価。Baseline、Adaptive Batch、Adaptive Cap、PALS、offline exhaustive Oracleを同一vLLM上で比較する。",
+  "hardware":["4×NVIDIA A100 per node","NVLink intra-node","最大3 nodes","cluster-wide 4800W budget scenario"],
+  "models":["GPT-2","Llama-2-7B","Mistral-7B","OLMoE-1B-7B","Qwen1.5-MoE","DeepSeek-MoE","Phi-3.5-MoE","Mixtral-8x7B"],
+  "datasets":["HellaSwag","GSM8K"],
+  "workload":"configurable arrival rate/sequence length。Poisson arrivalでbursty servingを模擬。multi-node QoS試験とdemand-response試験は60分。",
+  "baselines":["Baseline: 400W + maximum batch","Adaptive Batch: fixed cap + predicted batch","Adaptive Cap: dynamic cap + fixed batch","Oracle: exhaustive offline configuration search"],
+  "metrics":["tokens/s","QoS violation rate","power tracking error","tokens/J"],
+  "predictor_accuracy":"random forest: throughput MAPE 6.8%、power MAPE 4.5%。system power estimationはaggregate GPU powerからR²≈0.98、MAE 12–27W。",
+  "control_knobs":"runtime: power cap, batch size。deployment-time/static: TP, EP, DP。"
+ },
+ "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
