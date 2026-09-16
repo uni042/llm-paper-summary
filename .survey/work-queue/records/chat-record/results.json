@@ -2,43 +2,46 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f288cbb6096c1336a95654f3",
-  "job_id": "job-research-6252d370adc380b9",
+  "attempt_id": "attempt-7213f0981529e215195a67b4",
+  "job_id": "job-research-df04bb2baebfa878",
   "data": {
-    "overview": "server-chain compositionをblock placement、KV cache capacity、online load balancingへ分解した提案方式は、model-driven simulationとreal distributed LLM servingの双方で既存resource-allocation方式より応答時間を大きく短縮した。主要な実システム評価ではmean response timeを63〜77%削減し、元のqueueing modelが置く理想化仮定からreal demandが外れても改善が残った。理論面ではblock placementとcache allocationがNP-hardであることを示す一方、重要な特殊caseで最適解を与え、一般caseではsteady-state mean response timeのupper/lower boundsを導出する。実務上はモデルblockを増やしてchainを増やすだけではKV残余memoryが減るため、placementとrequest concurrencyを同時に決める必要があることを定量化する。",
+    "overview": "流量制御方式は要求を無制限に実行集合へ入れず、鍵値キャッシュ容量に見合う速度で活性化することで待ち行列安定性を保証する。出力長既知では到着率を上回る型別活性化予算とメモリ余裕があれば安定となり、未知長では平均仕事量に容量余裕があると超過イベント期待数が容量に対して指数的に減衰する。合成・実要求評価では実用的比較方式より高い要求・トークン処理量、低い平均・95百分位遅延、安定したキャッシュ利用を示す。",
     "key_results": [
       {
-        "metric": "mean response time reduction",
-        "value": "63-77% reduction",
-        "baseline": "state-of-the-art distributed LLM resource-allocation solutions",
-        "condition": "model-driven simulation and real LLM serving under demands deviating from modeling assumptions",
-        "interpretation": "モデル配置とKV同時実行容量を別々にheuristic設定するより、同じGPU memory budget内で共同設計した論理server chainsの方が待ち時間と処理時間を大幅に減らす。"
+        "metric": "必要安定条件",
+        "value": "平均KV仕事量が容量を超える到着率では任意方策が不安定",
+        "baseline": "任意スケジューラ",
+        "condition": "既知長・未知長モデル",
+        "interpretation": "処理速度だけでなく生成中に時間積分されるメモリ仕事量が安定可能領域を決める。"
       },
       {
-        "metric": "computational complexity",
-        "value": "block placement and cache allocation are NP-hard",
-        "baseline": "exact global optimization",
-        "condition": "general server-chain composition problem",
-        "interpretation": "単純な最適化をrequest arrivalごとに解くことは現実的でなく、offline compositionとonline dispatchの二時間尺度分離が必要になる。"
+        "metric": "十分安定条件",
+        "value": "型別活性化予算が到着率を上回り、予算に対応する総KV仕事量が容量未満なら安定",
+        "baseline": "無制御受付",
+        "condition": "出力長既知",
+        "interpretation": "要求開始率を制御変数にすることで待ち行列長の有界性を理論保証できる。"
       },
       {
-        "metric": "analytical guarantee",
-        "value": "explicit upper/lower bounds on steady-state mean response time; optimality in important special cases",
-        "baseline": "heuristic-only allocation",
-        "condition": "Join-the-Fastest-Free-Server load balancing",
-        "interpretation": "経験的配置だけでなく、target loadなど設計parameterを理論boundから調整できる。"
+        "metric": "容量超過イベント",
+        "value": "十分な容量余裕の下で期待回数が容量に対して指数的に減衰",
+        "baseline": "貪欲な活性化",
+        "condition": "出力長未知・長さ有界・平均活性化率が到着率超過",
+        "interpretation": "未知生成長でも安全余裕を取れば追い出し頻度を急速に小さくできる。"
+      },
+      {
+        "metric": "実験性能",
+        "value": "比較方式より高いrequest/token throughput、低い平均・95百分位遅延",
+        "baseline": "α-protection、MC系、Amin等",
+        "condition": "合成データおよびLMSYS-Chat-1M/Vidur設定",
+        "interpretation": "安定性保証が単なる保守化ではなく、過剰受付と再実行を減らすことで処理性能にも寄与する。"
       }
     ],
-    "negative_results": [
-      "dynamic KV allocationやrequest途中のcache growthは主モデルではstatic maximum-sequence allocationへ単純化される。",
-      "request開始後のmigration/preemptionを許さず、KV移送が高価という現実的だが固定的な仮定を置く。",
-      "中央orchestratorを前提とし、分散制御は今後の課題である。"
-    ],
-    "quality_impact": "生成計算の内容は変更せず、どのGPU chainで処理するかと何件を同時収容するかを変えるため、モデル品質への近似誤差は導入しない。改善対象はqueue waitingとservice response timeである。",
-    "interpretation": "大規模モデルの分散servingでは、GPU memoryが重みとKVの双方に消費されるため、model placementを最大化することとrequest concurrencyを最大化することが同じresource上で競合する。本研究はこの競合をchain capacityへ明示的に変換し、offlineで論理server群をcomposeしてからonline load balancingへ渡す。63〜77%の応答時間削減は、schedulerだけでなくschedulerが選べるserver-chain集合そのものをmemory-awareに設計する価値を示す。"
+    "negative_results": "高負荷の実要求では長い入力・出力により安全な活性化予算が小さくなり、瞬間メモリ占有の変動も増えるため比較方式との差が縮む。離散時間モデルはprefill処理時間を簡略化し、多回対話の接頭辞再利用も扱わない。",
+    "interpretation": "鍵値キャッシュ不足を発生後の追い出しだけで処理するのではなく、要求を実行集合へ入れる流量そのものを制御することで、待ち行列理論上の安定領域と実装方策を直接結び付ける点が重要である。",
+    "quality_impact": "要求順序と活性化時刻だけを変更しモデル計算は変えないため、生成品質への直接影響はない。"
   },
   "reservation": {
-    "claim_id": "claim-f288cbb6096c1336a95654f3",
+    "claim_id": "claim-7213f0981529e215195a67b4",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
