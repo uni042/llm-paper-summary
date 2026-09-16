@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a296cabbe5bdb6189545e086",
-  "job_id": "job-research-16a80a40c011c783",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a296cabbe5bdb6189545e086",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a296cabbe5bdb6189545e086","job_id":"job-research-16a80a40c011c783","data":{"hardware":"AWS EC2 p4de.24xlarge。各ノード8×NVIDIA A100 80GBをNVLink接続し、ノード間はEFAによるGPU P2P。6、8、12ノードを使用。CUDA 12.8、NCCL 2.26.2。","software":"SGLang v0.4.8へCRAFTをEPLB置換として統合。データ並列、head-parallelテンソル並列attention、専門家並列を併用し、PyTorch/NCCL P2Pで動的all-to-all dispatch/combineを実装。混合chunked prefillの最大チャンク4096。","methodology":"BF16のDeepSeek-R1-671B（58 MoE層、256専門家）とKimi-K2-1000B（60 MoE層、384専門家）、いずれもtop-8ルーティングを使用する。FinePDFsのドイツ語・日本語/中国語PDF、LAMBADA、RedPajama arXivの4ワークロードを4096入力+256出力へ整形し、3000推論バッチから専門家負荷分布を収集する。プロファイルに使った系列は評価入力から除外する。比較は配置のみBASE、EPLB最低一様複製、CRAFT各Rで、主評価はCRA8。要求到着をPoisson過程にし、要求率を上げたときTTFTが待ち行列支配へ急増する膝点をgoodputと定義する。TTFT、ITL、複製数、KVキャッシュ減少、クラスタ規模、負荷分布変化、計画生成時間を測る。","scope":"数百B〜1T級の二MoEモデルとAWS A100クラスタに集中した評価で、単一GPUオフロード型MoEや小規模MoEには直接同じ効果を保証しない。負荷分布プロファイルに依存するため、運用分布が変わる場合は周期再均衡が必要。CRAFTは専門家をGPUへ常駐複製する方式で、CPU/SSDからの専門家キャッシュ・先読みとは別問題を扱う。"},"reservation":{"claim_id":"claim-a296cabbe5bdb6189545e086","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
