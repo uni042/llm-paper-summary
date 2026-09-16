@@ -124,6 +124,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         result = mod.decide(make_args(
             worker_kind="discovery",
             discovery_rounds_completed=1,
+            discovery_rounds_since_last_novel=1,
             discovery_exhausted=True,
             next_axis_available=False,
             seconds_to_run_deadline=3500,
@@ -135,7 +136,8 @@ class ContinuationGateScheduleTests(unittest.TestCase):
     def test_discovery_can_stop_after_minimum_rounds_and_explicit_exhaustion(self):
         result = mod.decide(make_args(
             worker_kind="discovery",
-            discovery_rounds_completed=4,
+            discovery_rounds_completed=10,
+            discovery_rounds_since_last_novel=4,
             discovery_exhausted=True,
             next_axis_available=False,
             independent_work=False,
@@ -162,6 +164,23 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertFalse(result["finalization_allowed"])
         self.assertEqual(result["required_action"], "DISCOVER_AGAIN")
         self.assertEqual(result["minimum_rounds_remaining"], 4)
+
+    def test_discovery_cannot_claim_exhaustion_without_reset_aware_progress_evidence(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=10,
+            discovery_rounds_since_last_novel=None,
+            discovery_exhausted=True,
+            next_axis_available=False,
+            independent_work=False,
+            can_discover=False,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "DISCOVER_AGAIN")
+        self.assertEqual(result["minimum_rounds_remaining"], 4)
+        self.assertFalse(result["discovery_reset_progress_known"])
 
 
 if __name__ == "__main__":
