@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
-  "job_id": "job-research-0d9ff237f1d632e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"canonical_id":"arXiv:2511.20982","arxiv_id":"2511.20982","doi":"10.48550/arXiv.2511.20982","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving","summary":"DOPDはPD分離型LLM servingで、実負荷に応じた最適prefill/decode instance比を解析的に求め、ARIMAによる短期負荷予測とelastic scalingで比率を動的に再構成する。mixed-length requestにはlength-aware batchingとultra-short requestの局所PD aggregationを併用する。8基H100実機とAzure/BurstGPT production traceで、vLLM/DistServe等に対しgoodput最大1.5倍、P90 TTFT最大67.5%低下、P90 TPOT最大22.8%低下、dynamic workloadでSLO達成率99.4%を報告する。","list_summary":"負荷予測と解析的な最適P/D比でprefill/decode instanceを動的再構成し、8x H100実機でgoodput最大1.5倍・SLO達成99.4%を報告。","authors":["Junhan Liao","Minxian Xu","Wanyi Zheng","Yan Wang","Kejiang Ye","Rajkumar Buyya","Chengzhong Xu"],"published":"2025-11-26","publication":"IEEE Transactions on Services Computing 2026 / arXiv:2511.20982v3","publication_type":"Journal + arXiv","publication_status":"Published","lineage":"dynamic-pd-disaggregation","topics":["PD disaggregation","dynamic scaling","optimal P/D ratio","load prediction","length-aware scheduling"],"importance":"static PD分離のproducer-consumer imbalanceを、予測だけでなく最適P/D比の明示計算とproactive scalingで扱う。","hardware_evaluation":"8x NVIDIA H100-SXM-80GB local cluster。","quality_effect":"modelやattention近似を変更せずserving resource allocationを最適化する。","source":"https://arxiv.org/abs/2511.20982","sources":["https://arxiv.org/abs/2511.20982","https://arxiv.org/html/2511.20982v3"],"code":"https://github.com/liao4s/DOPD","implementation":"NVIDIA Dynamoを拡張し、Resource Monitor、Router、NIXL Connector、PD Manager、Request Schedulerを実装。etcd/NATS/Prometheus/NVMLを使用。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv v3全文を確認。","references_total":0},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
