@@ -2,12 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-8dedafa8bb88234e4974139f",
-  "job_id": "job-research-08ba7261bc105f34",
-  "data": {},
+  "attempt_id": "attempt-b3e287bb2107aae7b9165257",
+  "job_id": "job-research-795118fce8eb1845",
+  "data": {
+    "problem": "自己回帰LLMは過去tokenのkey/valueをKVキャッシュへ保存して再計算を避けるが、系列長、層数、head数、batchに応じてVRAM消費が増え、長文脈や低資源推論の容量を圧迫する。token evictionは古いKVを捨てて固定予算へ収められるものの、H2OやScissorhandsはattention重みを計算・累積した後に重要tokenを判断するため、削除されるtokenにもattention計算を払う。key normだけでattentionを近似する事前削除は安いが、高attention token偏重になり、長文検索には合っても自由回答推論では中程度・多様なattention tokenを残す必要があり品質が落ちる。必要なのは、attention自体を計算せず、現在queryとの関連度を低コストで近似し、推論・選択式・検索・要約の異なるタスクへ一般化する動的な事前削除である。",
+    "novelty": "HashEvictはattention scoreの主要因であるquery-key dot productを直接計算する代わりに、SimHash型の局所性鋭敏型ハッシュでquery/keyのcosine類似度を短い2値Hamming距離へ写す。各attention headで固定ランダムGaussian射影を用い、キャッシュ中keyの短いhash codeをGPU上の軽量表へ保持する。現在queryのhashと各cached key hashのHamming距離を比較し、最も遠いkeyを低attention候補としてKVごと削除して新tokenへ置換する。削除indexをattention計算前に確定できるため、そのtokenへのdot productとvalue集約を以後実行しない。高attentionだけを残す固定指標ではなく現在queryごとに削除対象が変わるため、reasoningで必要な多様なtokenも残しやすい。",
+    "method_overview": "モデル開始時に各attention headへd次元key/queryをbビットへ写す固定Gaussianランダム射影行列を用意する。プロンプト符号化では最初のB tokenで固定KV予算を満たし、それぞれのkey hashをGPU上のhash tableへ登録する。Bを超える新tokenが来るたび、まず現在queryを同じ射影でbビットcodeへ変換し、キャッシュ中B個のkey codeすべてとのHamming距離を計算する。距離が最大、すなわちランダム超平面上で最もcosine非類似と推定されるkeyのindexを選び、そのindexのkey、value、hashを削除する。続いて現在tokenのkey/valueとkey hashを同じslotへ入れ、その圧縮済みKVだけに通常attentionを実行する。自己回帰decodeでも同じ処理をtokenごとに繰り返すため、キャッシュ容量は常にBで一定になる。最初の4 prompt tokenと直近10 tokenはattention sink・局所性を守るため常時保持し、それ以外をLSH候補とする。キャッシュ予算Bが固定なので1 stepのHamming scanも固定量で、追加hash tableも各headでB×b bitだけである。実装はGPU内で完結しCPU streamingを必要としない。",
+    "system_design": "固定容量KVと同じtoken indexにkey/value/hashを対応付ける単純な置換型管理で、モデル再学習やattention kernelの近似置換を必要としない。LSHはattentionそのものを近似計算するのではなく、削除対象を選ぶ制御面だけに使い、残ったtoken間のattentionは通常どおり計算する。",
+    "components": [
+      {
+        "name": "SimHash query-key射影",
+        "description": "各headのqueryとkeyを、d次元実数ベクトルからbビットの2値codeへ同じGaussianランダム射影と符号関数で写す。ランダム超平面LSHでは二つの単位ベクトルの角度が小さいほどhashのHamming距離も期待値で小さくなるため、完全なquery-key dot productを作らずcosine類似度を近似できる。bは元のhead次元より十分小さく、実験では4、8、16、32、64bitを比較して8bitでも品質が落ちず、hash次元を大きくする必要がない。"
+      },
+      {
+        "name": "事前Hamming eviction",
+        "description": "新tokenのquery hashと現在cache内の全key hashを比較し、負のHamming距離を各keyの簡易関連度scoreとして扱う。最もscoreが低い、つまりqueryから最も遠いkeyを削除indexに選び、対応するK/Vをattention計算前にcacheから除く。その後で通常attentionを残存cacheへ適用するため、削除tokenのattention dot productとvalue参照を払わない。H2Oのような累積attention統計を保持せず、現在queryに応じて毎step動的に候補が変わる。"
+      },
+      {
+        "name": "固定予算slot置換",
+        "description": "プロンプトの最初のB tokenでcacheを満たした後は、新tokenごとに一つの既存slotを削除して新しいkey/value/hashで置換する。decodeでも同じ規則を継続するので系列が長くなってもcache token数はBを超えず、KVメモリは固定上限になる。最初の4 tokenと直近10 tokenはattention sinkと局所文脈を守るため常時保持し、LSH削除候補から外す。固定予算のためHamming scan対象数も一定で、sequence length増大に対する追加管理計算を抑える。"
+      },
+      {
+        "name": "GPU常駐2値hash table",
+        "description": "cached keyごとのb-bit codeをKVと対応するGPU配列に保持し、CPUへ重要度を送らずGPU内でHamming距離を計算する。論文実装は2値を8bit値として保存しているため理論最小より8倍大きいが、それでもKV本体に比べ小さい。例としてLlama3 70B、80層、8 KV head、8192 token、batch 8、50% cacheで16/32bit hashの追加は数十MB規模に対しKVは数百GB規模と見積もる。真のbit packingでさらに削減可能である。"
+      },
+      {
+        "name": "attention非依存のtask-general retention",
+        "description": "key norm方式のように静的な『重要token』を決めるのではなく、現在queryとの幾何的な非類似性で毎step一つずつ削除する。これにより高attention tokenだけでなく、推論途中で別のqueryから必要になる中程度の関連tokenを残す余地が生まれる。GSM8K/MedQAの自由回答・選択式、Needle/Common Words検索、MultiNews/GovReport要約という性質の異なるタスクで同一ルールを使い、30～70%圧縮域でnorm-based事前削除を概ね上回り、attention累積型とも競合する品質を示す。"
+      }
+    ]
+  },
   "reservation": {
-    "claim_id": "claim-8dedafa8bb88234e4974139f",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "claim_id": "claim-b3e287bb2107aae7b9165257",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
 }
