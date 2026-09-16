@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-469e2611139b80bc054bdf5f",
-  "job_id": "job-research-6802b144c10e4060",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-469e2611139b80bc054bdf5f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-469e2611139b80bc054bdf5f","job_id":"job-research-6802b144c10e4060","data":{"evaluation_summary":"実トレースを用いたCFDシミュレーションR1/R2と、RTX 3090×4・RTX 4090×4の小規模実機V1/V2で評価する。会話、コード支援、要約の3負荷を用い、18～48℃の空調設定、エネルギー、TTFT/TPOT/E2EのSLO違反率、サーマルスロットリング曝露を比較する。","scope":"施設規模の結果はCFDとH100級熱源モデルを中心とし、実機検証は8基の民生GPUを備えた小規模筐体である。したがって33.1%の最大省エネルギーをそのまま大規模実施設の実測値とは解釈できない。","hardware":["CFD R1/R2: 2m×2m×2.4m室、各筐体8基のNVIDIA H100級GPU熱源、350W Xeon 8480","V1: RTX 3090×4 24GB","V2: RTX 4090×4 24GB","Intel Core i9-13900K、128GB RAM"],"models":["Llama-3.1-Instruct","Code-Llama-Instruct","Qwen2.5-Instruct","DeepSeek-R1-Distill-Qwen","Mistral-Instruct"],"datasets":["OASST1","PromptSet","WebGPT","Alibaba2020 production cluster trace"],"workload":"会話はPoisson到着、コード支援はスパイクを含むバースト到着、要約はPoisson到着。SLOはTTFT 0.8/1.5/2.0秒、TPOT 50/60/80ms、E2E 4/8/12秒。","baselines":["vLLM fixed ambient 18/28/38/48℃","DSO device-side DVFS","TAPAS thermal/power-aware scheduling","DLLM elastic GPU/DVFS control","GLLM pruning","Greedy threshold","Deterministic optimization","MPC","Robust MPC+filter"],"metrics":["平均ジョブ総エネルギー","GPU計算エネルギー","空調エネルギー","TTFT SLO違反率","TPOT SLO違反率","E2E SLO違反率","スロットリング曝露時間","熱・電力・遅延予測誤差"],"predictor_accuracy":"R2/V2でダイ温度RMSE 2.2℃未満、吸気温度RMSE 1.2℃未満、電力RMSE 4.1%未満、スロットリングまでの時間の誤差は大半のジョブで5.5%以内。遅延MAPE最大2.8%。","control_knobs":"ジョブ前の空調設定温度、実行中のGPU周波数、GPUごとのマイクロバッチサイズ、SLO安全余裕、熱安全閾値。"},"reservation":{"claim_id":"claim-469e2611139b80bc054bdf5f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
