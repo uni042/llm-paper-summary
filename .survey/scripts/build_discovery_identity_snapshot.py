@@ -28,7 +28,7 @@ README = """# Discovery identity precheck
 
 This directory is a derived lookup surface for Discovery workers. Exact identity shards are generated from `queue_worker.existing_candidate_keys()` and contain the same identity tokens as the final duplicate gate. `_represented_papers.json` folds the same canonical sources into paper-level alias groups so arXiv/DOI/OpenReview/URL/title representations can be treated as one paper before candidate evaluation.
 
-Before accepting a candidate, check the appropriate exact shard using the candidate's
+Workers must check the appropriate shard before accepting a candidate, using the candidate's
 strongest available identity in this order: canonical/arXiv ID, DOI, OpenReview ID,
 normalized URL, then normalized title. Then use the represented-paper resolver. Exact title
 hash matches are deterministic aliases. Fuzzy title matching is allowed only when a provider
