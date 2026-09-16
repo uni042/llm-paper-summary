@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a040b871bad8d7791dcde413",
-  "job_id": "job-research-c5a47af1c9e3acf3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a040b871bad8d7791dcde413",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a040b871bad8d7791dcde413","job_id":"job-research-c5a47af1c9e3acf3","data":{"positioning":"実行中request schedulingではなく、model/GPU/precision/parallelism/routingをまとめて決める上流capacity planningを秒以下へ高速化する研究である。","differences":"Mélange等は異種GPU cost allocation、DistServe等は固定deployment上のexecution、Helix等は最適化ベースplacementを扱う。本研究はTP/PP自体をdecision variableへ含め、memory・two-phase latency・accuracy・storage・budgetをheuristic構築中に直接守る。exact MILPを基準として残しつつ、AGHでproduction-scale planningを実用時間へ縮める点が中心である。","relation_to_prior_work":[{"work":"Mélange / heterogeneous GPU allocation","difference":"GPU typeだけでなくmodel selection、precision、TP/PP、routingを共同決定する。"},{"work":"DistServe / execution-layer serving","difference":"固定deploymentのrequest executionではなく、deployment epoch前のcapacity planningを最適化する。"},{"work":"Helix / exact heterogeneous placement","difference":"exact optimizationのjoint perspectiveを維持しつつconstraint-aware heuristicで秒以下へ高速化する。"},{"work":"DynamoLLM / decomposed heuristics","difference":"parallelismやroutingを別々に決めず、相互SLO制約を候補filterとrankingの中で維持する。"}],"strengths":["model・GPU・precision・TP/PP・routingを統一制約下で扱う。","AGHは大規模instanceで1秒未満かつsolver比260倍超高速。","solverが完了するinstanceではcostが最適値から数%以内。","1.5x stressでもheadroomによりSLO violationとcost劣化を抑える。"],"limitations":["主評価はAzure traceで較正した数値simulationで、実クラスタのkernel/queueing/network挙動を直接測定していない。","二相delay modelはTP/PP効果を抽象化しており、実際のbatching、KV cache contention、network topologyによる非線形性を完全には表現しない。","precision error multiplierは較正値であり、model/taskごとの量子化品質差を単純化する。","deploymentはepoch内固定を基本とし、model loadingやreshardingの実測migration costは詳細評価の中心ではない。"],"implementation_status":"数値最適化・heuristic評価研究。本文で公式コード公開先は確認できない。","research_positioning":"heterogeneous LLM servingのresource planningを、exact solverの品質とheuristicの運用速度の間で橋渡しするfeasibility-preserving allocation研究。","repository_fit":"11-llm-serving-scheduling-disaggregation系統で、実行時schedulerとは異なるcapacity planning・GPU provisioning・parallelism planningの比較軸を提供する。"},"reservation":{"claim_id":"claim-a040b871bad8d7791dcde413","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
