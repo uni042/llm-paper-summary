@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T09:20:00.673816+00:00",
+  "updated_at": "2026-09-16T09:33:25.779884+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T09:20:00.673816+00:00",
+      "last_recorded_at": "2026-09-16T09:33:25.779884+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 146,
+        "research_completed": 147,
         "audit_completed": 0,
         "discovery_completed": 53,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35031849051:1",
-          "recorded_at": "2026-09-15T22:37:15.044687+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35031849051",
-            "run_attempt": "1",
-            "source_sha": "544c001067c411e38ff8f0d216bce77c2c2522df"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35033886396:1",
           "recorded_at": "2026-09-15T23:18:35.856816+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35078722587",
             "run_attempt": "1",
             "source_sha": "c70af9b07199313561e915201aa23960a31b8c2b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35080049915:1",
+          "recorded_at": "2026-09-16T09:33:25.779884+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35080049915",
+            "run_attempt": "1",
+            "source_sha": "24756963c02889c240ea96abe25883e935c16a0c"
           },
           "signals": [
             "research_completed"
@@ -21261,6 +21261,14 @@
           "type": "research",
           "canonical_id": "arXiv:2409.15104",
           "title": "CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ad3541d28015a662",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11058",
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
           "from": "ready",
           "to": "completed"
         }
