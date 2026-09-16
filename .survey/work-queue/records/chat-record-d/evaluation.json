@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-6b2d22eca4e3d95603c36153",
   "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b2d22eca4e3d95603c36153",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "evaluation_summary": "OpWeaveは代表的なdense/MoE/hybrid-attentionモデルとlong-context workloadを用い、homogeneous H100 clusterとH100+L40S/A100 heterogeneous clusterで評価される。主要指標はTPOT SLOを満たすserving costで、固定attention–FFN disaggregationを含む既存のfeasible baseline群と比較する。本文の導入部が報告する集約結果ではhomogeneous H100で最大1.78倍、heterogeneousで最大1.89倍のcost改善を得る。",
+    "models": ["Gemma-3-27B","Qwen3-235B","GPT-OSS-120B","hybrid-attentionを含む代表モデル"],
+    "hardware": ["NVIDIA H100 homogeneous cluster","NVIDIA H100 + L40S heterogeneous cluster","NVIDIA H100 + A100 heterogeneous cluster","理論解析例: H20"],
+    "workloads": "long-context decode serving。sequence length、batching、TPOT SLOを変化させ、KV-cache pressureとoperator-stage balanceが効く条件を評価。",
+    "metrics": ["serving cost / cost per decoded token","TPOT SLO達成可否","pipeline stage数","inter-node transfer per output token","model-executing hardware utilization / idle fraction"],
+    "baselines": ["colocated serving","homogeneous operator-level disaggregation","attention–FFN disaggregation (AFD)","best feasible non-OpWeave baseline"],
+    "reported_conditions": ["homogeneous H100ではTPOT SLOを満たす構成間でcost比較","heterogeneousではH100とL40SまたはA100を組み合わせる","Gemma-3-27BではAFDとのpipeline-stage数と通信量も比較"],
+    "evaluation_scope_note": "論文は24ページ・14図。arXiv HTML本文を一次資料として§1–4および評価結果を確認した。"
+  },
+  "reservation": {"claim_id":"claim-6b2d22eca4e3d95603c36153","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
