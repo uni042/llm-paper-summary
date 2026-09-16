@@ -5,9 +5,9 @@ Successful exact results settle an immutable attempt. Failed exact results remai
 settled by default for backward compatibility, but failures explicitly classified as
 retryable are returned to the drain queue until the bounded recovery budget is
 exhausted. A narrowly-scoped compatibility retry also reopens historical bank-A
-path failures after the validator learned the exact legacy alias. Malformed
-descriptors are settled only by a failure tombstone bound to the exact descriptor
-bytes.
+path failures after the validator learned the exact legacy alias, but only while the
+same attempt still owns an active claim. Malformed descriptors are settled only by
+a failure tombstone bound to the exact descriptor bytes.
 """
 from __future__ import annotations
 
@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+import claim_state
 import immutable_submission
 from record_bank_config import LEGACY_BANK_ROOTS, SLOT_NAMES
 
@@ -50,16 +51,37 @@ def _matching_failure_is_retryable(result: Any, descriptor: dict[str, Any]) -> b
     return 0 <= failures < MAX_AUTO_RECOVERY_FAILURES
 
 
+def _descriptor_owns_current_claim(
+    descriptor: dict[str, Any],
+    current_claims: dict[str, dict[str, Any]],
+) -> bool:
+    job_id = descriptor.get("job_id")
+    attempt_id = descriptor.get("attempt_id")
+    if not isinstance(job_id, str) or not job_id:
+        return False
+    if not isinstance(attempt_id, str) or not attempt_id:
+        return False
+    claim = current_claims.get(job_id)
+    return bool(
+        isinstance(claim, dict)
+        and claim.get("active") is True
+        and claim.get("attempt_id") == attempt_id
+    )
+
+
 def _matching_failure_is_legacy_bank_a_path_compatibility(
     result: Any,
     descriptor: dict[str, Any],
+    current_claims: dict[str, dict[str, Any]],
 ) -> bool:
-    """Reopen only the historical bank-A path mismatch fixed by current code.
+    """Reopen only the historical bank-A path mismatch for its active attempt.
 
     These descriptors were already durably written with valid blob identities but
     used ``chat-record-a`` while bank A's canonical root is ``chat-record``. They
     were classified non-retryable before the validator had explicit read
-    compatibility. No other non-retryable transport/state failure is reopened.
+    compatibility. Once ownership moves to another attempt, the claim expires, or
+    the job becomes terminal, the historical descriptor remains settled. No other
+    non-retryable transport/state failure is reopened.
     """
     if not isinstance(result, dict):
         return False
@@ -68,6 +90,8 @@ def _matching_failure_is_legacy_bank_a_path_compatibility(
     if result.get("ok") is not False:
         return False
     if str(descriptor.get("record_bank") or "").lower() != "a":
+        return False
+    if not _descriptor_owns_current_claim(descriptor, current_claims):
         return False
 
     legacy_root = LEGACY_BANK_ROOTS.get("a")
@@ -92,6 +116,7 @@ def unsettled_paths(repo_root: Path) -> list[str]:
     out: list[str] = []
     submissions = root / ".survey/work-queue/submissions"
     results = root / ".survey/work-queue/results"
+    current_claims = claim_state.current_claims(root)
 
     for kind in sorted(immutable_submission.KINDS):
         folder = submissions / kind
@@ -104,7 +129,11 @@ def unsettled_paths(repo_root: Path) -> list[str]:
                 if immutable_submission.result_matches_identity(result, descriptor):
                     if (
                         _matching_failure_is_retryable(result, descriptor)
-                        or _matching_failure_is_legacy_bank_a_path_compatibility(result, descriptor)
+                        or _matching_failure_is_legacy_bank_a_path_compatibility(
+                            result,
+                            descriptor,
+                            current_claims,
+                        )
                     ):
                         out.append(relative)
                     # Exact success, unrelated non-retryable failure, and exhausted
