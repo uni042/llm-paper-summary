@@ -173,6 +173,18 @@ result:
 
 Discovery、discovery統計、checkpoint-aware job request、offline seed等の軽量control transportはbackground laneで処理できる。
 
+探索主体workerのmulti-round Discoveryは、pre-issued Discovery jobに依存しない **self-describing round submission** を正規経路とする。各roundは `.survey/work-queue/submissions/*.json` に独立したimmutable fileとして保存し、少なくとも次を含める。
+
+- `operation: "submit_discovery_round"`
+- `candidates`: 0〜5件
+- `discovery_stats.run_key`
+- `discovery_stats.round`
+- `discovery_stats.axis`
+
+この形式では `job_id` を付けない。workerが存在しない `job-discovery-specialist-*` 等を合成してはならない。`queue_worker.py` はsubmission pathからdeterministicな内部Discovery ingest jobを作り、candidateを最終dedupeし、採用候補だけをworkflow v10のResearch jobへmaterializeする。内部ingest jobはworker-facing Discovery laneとは分離されるため、同一runの次roundは新しいDiscovery jobのmaterializeを待たず送信できる。
+
+通常workerが実在するready Discovery jobを処理する従来形式は互換として維持する。さらに、過去にself-describing roundがsynthetic/unknown `job_id` またはterminal Discovery jobを参照して失敗済みの場合、`recover_discovery_submissions.py` は同じdeterministic ingest経路へ安全に収束させる。`discovery_stats` を持たないlegacy候補payloadは、元の実在terminal Discovery jobが確認できる場合に限り旧recovery経路で救済する。Research/Auditのunknown job IDはDiscovery救済へ流さず拒否する。
+
 `.survey/scripts/queue_worker.py` は新規Research/Audit jobを最初からworkflow v10の`structured_record_v10`契約で作る。後段でv9 jobをv10へ書き換える正規化処理は現行経路に存在しない。
 
 過去に作られたroot-levelの「完成Markdownを返す」Research/Audit submissionは履歴互換として読み込めるが、**新規workerがその形式を生成してはならない。**
