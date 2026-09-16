@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:46:44 JST**
+> 自動生成: **2026-09-16 14:46:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **40** |
 | 未claim Research job | **37** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-16 14:41:59 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 14:41:59 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
-- `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:44:58 JST** / heartbeat: **—** / lease expiry: **09-16 16:14:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-795118fce8eb1845.json`
+- `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
+  - claim: **09-16 14:46:58 JST** / heartbeat: **—** / lease expiry: **09-16 16:16:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
 - `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
   - claim: **09-16 14:23:47 JST** / heartbeat: **09-16 14:40:09 JST** / lease expiry: **09-16 16:10:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
