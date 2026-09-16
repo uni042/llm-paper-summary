@@ -5,41 +5,18 @@
   "attempt_id": "attempt-ad5dfb814d7090ff8006d8de",
   "job_id": "job-research-34cb083c55afaad3",
   "data": {
-    "positioning": "Transformer中心のprefix KV cachingをhybrid recurrent LLMへ拡張する際、recurrent stateのsingle-state resumabilityを利用してstateだけを疎checkpoint化するcache placement研究。",
-    "differences": "RadixAttention/vLLMはattention KVをblock単位でreuseするが、本研究はrecurrent layerのstate checkpoint位置を最適化する。KV quantization/compressionが各entryの表現量を減らすのに対し、保存checkpoint数そのものを減らしexact recomputationと交換する。固定block checkpointと異なりoverlap-depth分布をO(NM) DPへ入力する。",
+    "positioning": "Transformer中心の接頭辞KVキャッシュをハイブリッド再帰型LLMへ拡張する際、再帰状態が単一状態から再開できる性質を利用し、状態だけを疎な検査点として保存する配置研究である。",
+    "differences": "RadixAttentionやvLLMは注意機構のKVをブロック単位で再利用するが、本研究は再帰層の状態検査点をどこへ置くかを最適化する。KV量子化や圧縮が各要素の表現量を減らすのに対し、本方式は保存する検査点数そのものを減らし、保存しなかった区間の正確な再計算と交換する。固定ブロック検査点と異なり、接頭辞重複深度の分布をO(NM)動的計画法へ入力する。",
     "relation_to_prior_work": [
-      {
-        "work": "RadixAttention / vLLM prefix caching",
-        "difference": "attention KVのdense reuseに加え、recurrent stateを疎checkpointとして扱う。"
-      },
-      {
-        "work": "block recurrent-state caching",
-        "difference": "固定間隔でなくworkload overlap分布へ配置を適応させる。"
-      },
-      {
-        "work": "KV cache compression",
-        "difference": "近似圧縮せずcheckpoint数を減らしexact suffix recomputationを使うため併用可能。"
-      }
+      {"work": "RadixAttention / vLLM prefix caching", "difference": "注意機構KVの密な再利用に加え、再帰状態を疎な検査点として扱う。"},
+      {"work": "block recurrent-state caching", "difference": "固定間隔ではなく実負荷の重複深度分布へ配置を適応させる。"},
+      {"work": "KV cache compression", "difference": "近似圧縮を行わず検査点数を減らし、保存していない接尾区間を正確に再計算するため併用できる。"}
     ],
-    "strengths": [
-      "recurrent stateとattention KVの構造差をcache設計へ利用する。",
-      "O(NM)厳密DPでcheckpoint配置を解く。",
-      "実データでfixed-budget baselineをPareto支配する。",
-      "出力をexactに保持する。"
-    ],
-    "limitations": [
-      "長い共有prefixが十分必要。",
-      "hidden stateのexact extract/restoreが必要。",
-      "workload drift時は分布推定と再配置が必要。",
-      "remote cache tierやmulti-GPU schedulerとの共同最適化は対象外。"
-    ],
-    "implementation_status": "公開GitHub実験コードがありQwen3.5 GatedDeltaNet layer groupとQuALITY/System Prompts等の構成を提供する。",
-    "research_positioning": "hybrid recurrent model向けにlayer stateの再開可能性へ応じてcache granularityを変える基礎研究。",
-    "repository_fit": "04-kv-prefix-cache系統で、recurrent/SSM hybrid serving固有のmemory-recompute trade-offを扱う。"
+    "strengths": ["再帰状態と注意機構KVの構造差をキャッシュ設計へ利用する。", "O(NM)の厳密な動的計画法で検査点配置を解く。", "実データで固定予算の比較手法をパレート支配する。", "出力を正確に保持する。"],
+    "limitations": ["長い共有接頭辞が十分に存在する負荷が必要である。", "内部状態を正確に取り出して復元できる実装が必要である。", "負荷分布が変化した場合は分布推定と再配置が必要になる。", "遠隔キャッシュ階層や複数GPUスケジューラとの共同最適化は対象外である。"],
+    "implementation_status": "公開GitHub実験コードがあり、Qwen3.5のGatedDeltaNet層群とQuALITY、System Promptsなどを用いた評価構成を提供する。",
+    "research_positioning": "ハイブリッド再帰型モデルに対し、層状態の再開可能性へ応じてキャッシュ粒度を変える基礎的な推論基盤研究である。",
+    "repository_fit": "04-kv-prefix-cache系統に属し、再帰型・状態空間モデル混成サービング固有のメモリと再計算の交換関係を扱う。"
   },
-  "reservation": {
-    "claim_id": "claim-ad5dfb814d7090ff8006d8de",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-ad5dfb814d7090ff8006d8de", "worker_id": "scheduled-chat-paper-20260916T175945JST", "worker_kind": "scheduled_chat"}
 }
