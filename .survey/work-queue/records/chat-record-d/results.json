@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-487680ad83745b110d11f463",
-  "job_id": "job-research-5204297ffdb35cfd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-487680ad83745b110d11f463",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-487680ad83745b110d11f463","job_id":"job-research-5204297ffdb35cfd","data":{"overview":"128Kストリームでは単純窓の正規化パープレキシティが5.40倍まで悪化する一方、StreamingLLMは1.04倍、窓再計算は1.02倍で局所生成を安定化した。しかしStreamingLLMの4択遠隔保持は内容が窓外へ出る2Wで26%、8Wで25%とほぼ偶然水準になり、安定性が長期記憶を意味しないことを直接示す。再帰状態は8Wで46%、検索付きシンクは78%を保ち、意味的アクセスには後続内容を書き込む状態または検索経路が必要だった。実用性も別で、StreamingLLMの3択遅延判断は2Wで36%まで落ち、検索方式も保持率より判断精度が低い。したがって『128Kまで安定』という結果から128Kの記憶能力を主張せず、どの性質がどの距離まで成立するかを三曲線で報告する必要がある。","key_results":[{"metric":"128K正規化PPL","value":"Window 5.40、StreamingLLM 1.04、Recompute 1.02","baseline":"2K時の各方式PPL","condition":"128K stream","interpretation":"4個の注意シンクは固定メモリの連続生成安定性をほぼ再計算並みに回復する。"},{"metric":"相対1トークン遅延","value":"StreamingLLM 1.03、Recompute 7.80","baseline":"Window 1.00","condition":"stability track","interpretation":"注意シンクは毎回窓を再計算する大きな遅延なしで安定性を得る。"},{"metric":"4択保持率@8W","value":"StreamingLLM 25%、Recurrent 46%、Sink+retrieval 78%、Dense oracle 96%","baseline":"chance 25%","condition":"delayed binding","interpretation":"固定シンクは意味内容を保持せず、再帰更新や外部検索がアクセス距離を延ばす。"},{"metric":"ThreeH measured horizons","value":"StreamingLLM: H_stab >64W, H_access 1W, H_util 0.5W","baseline":"Window: 2W,1W,0.5W","condition":"PPL≤1.1x、retention/utility≥75%","interpretation":"ストリーム安定性だけが大幅に伸び、一般的意味アクセスとタスク利用距離は伸びない。"},{"metric":"retrieval depth ablation","value":"k=1 recall@2W 73% / utility 68%、k=4 89% / 85%","baseline":"4 sinks only 26% / 36%","condition":"2W lag","interpretation":"検索量を増やすとアクセスと実用性が伸びるが問い合わせ時コストも増える。"}],"negative_results":["注意シンクを1から8へ増やすとPPL安定性は改善・飽和するが2W保持率は25～26%で伸びない。","固定シンクは後続トークンで更新されないため、アンカーを増やしても一般的長期記憶にはならない。","検索は8W保持78%でもタスク効用は保持率より低く、取得成功だけでは正しい利用を保証しない。","到達距離はタスク、閾値、トークナイザ、資源会計に依存し普遍的な単一値ではない。"],"quality_impact":"StreamingLLMの価値である固定メモリ・安定生成を維持して評価しつつ、その性質を長期意味記憶へ過大解釈しない。","interpretation":"長時間LLMの設計では局所生成の安定化、古い内容を書き残す経路、取得した内容をタスクで使う能力を別モジュール・別目的として扱うべきである。注意シンクは第一の問題を解くが、第二・第三には再帰状態や外部検索など別の仕組みが必要になる。"},"reservation":{"claim_id":"claim-487680ad83745b110d11f463","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
