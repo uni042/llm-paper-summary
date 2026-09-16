@@ -1,3 +1,4 @@
+# Regression coverage for immutable replay of the malformed 21:00/22:00 Discovery shape.
 import importlib.util
 import json
 import sys
