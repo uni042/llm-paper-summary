@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-6b1a0ee3dc2a2d685a2203c9",
-  "job_id": "job-research-411dee2b8db54e04",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b1a0ee3dc2a2d685a2203c9",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-6b1a0ee3dc2a2d685a2203c9","job_id":"job-research-411dee2b8db54e04","data":{"problem":"GPUメモリに収まらないLLMでは層ごとの重みをCPU DRAMやSSDへ置き、使用直前にGPUへ転送する。OPT-66BをRTX 4080環境で測ると1回の全層通過に54秒かかり、SSD配置層では約1秒のうち約80%がSSDからCPU、約20%がCPUからGPUへの転送で、計算時間はほぼゼロだった。この条件では計算と転送の重畳だけでは効果が小さい。枝刈りでゼロを増やしても、非構造な疎パターンを密行列のまま保存すれば転送量は減らず、CSRのような索引形式も50%疎では索引費用が大きい。","novelty":"Endorは非構造枝刈り重みの非ゼロ値だけを連続配列へ格納し、各元位置を1ビットのビットマップで表す。索引を整数座標ではなく1ビットへ縮めることで、50%疎のFP16行列を元サイズの56%へ圧縮しつつ、GPU上で単純かつ高並列に密行列へ復元する。枝刈り方式や疎率に依存せず、量子化や活性値疎性、GPUダイレクトストレージとも直交的に組み合わせられる点が特徴である。","method_overview":"推論前にSparseGPTまたはWanda等で重みを非構造枝刈りし、各行を走査して非ゼロ値配列と0/1位置ビットマップを生成する。推論時、CPUまたはSSDに置いた圧縮重みをGPUへ転送し、GPUカーネルがビットマップの1位置へ非ゼロ値を順番に配置して元の密行列を復元してから通常の密行列演算を行う。圧縮は事前処理なので推論費用に入らず、実行時追加費用は主にGPU復元だけである。SSD配置では圧縮データをSSDからCPU、CPUからGPUへ運ぶ通常経路に加え、対応GPUではGPUダイレクトストレージによりSSDからGPUへ直接転送できる。","system_design":"事前枝刈り・圧縮器、非ゼロ値配列、1ビット位置ビットマップ、CPU/SSD上の圧縮重み格納、GPU転送、GPU並列復元、通常の密行列演算から構成される。","components":[{"name":"ビットマップ疎形式","description":"各要素の非ゼロ位置を1ビットで保持し、値は非ゼロ要素だけ保存する。FP16の50%疎では680MBの全結合重みが340MBの値と42MBのビットマップになり、元の56%まで縮む。"},{"name":"GPU並列復元","description":"転送後にビットマップを走査して非ゼロ値を元位置へ配置する。CPUで12コア並列復元すると復元費用が転送削減を上回ったが、GPU復元では追加遅延が小さく、CPU-GPU転送削減だけでも相殺できる。"},{"name":"GPUダイレクトストレージ併用","description":"SSD配置重みをCPU DRAM経由の二段転送ではなくPCIe経由でGPUへ直接読み込み、CPU-GPU転送段階を除去する。圧縮でSSD読み込み量も減るため両効果が加算される。"},{"name":"量子化との併用","description":"INT8でも非ゼロ値とビットマップの構造は同じだが、値自体が半分になるため固定42MBのビットマップ比率が増える。50%枝刈りINT8では340MBから約212MBとなり、圧縮率はFP16時より小さい。"}]},"reservation":{"claim_id":"claim-6b1a0ee3dc2a2d685a2203c9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
