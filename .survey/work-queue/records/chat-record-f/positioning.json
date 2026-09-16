@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5cdea98b4034b7e3f2b05850",
-  "job_id": "job-research-cffb14eec24a02c2",
-  "data": {
-    "limitations": "対象は1GPUあたり同時復号トークン数8以下の低トークン領域で、プリフィルや大バッチでは従来のグループ・バッチ行列積がタイルを十分に埋めるため利得が縮む。形状とGPUごとの事前コンパイルおよびオフライン調整が必要で、任意形状を完全に動的処理する方式ではない。主評価はH200とFP8ブロック量子化に集中する。テンソル並列8では通信と非MoE処理が局所利得を薄め、専門家並列通信のカーネル内融合も単一ノード小バッチでは性能同等だった。",
-    "differences": "vLLM grouped GEMM、DeepGEMM Mega MoE、FlashMoE、SonicMoEなどは程度の差はあっても専門家ローカルのトークン軸を主要な仕事分割に使う。MonoMoEは復号トークン全体をテンソルコアの細粒度N軸へ置き、専門家重みタイルから協調スレッド配列並列性を得る点が根本的に異なる。FlashMoEも常駐融合を行うがトークン主導型の活性化配置と固定SM容量制約を残すため、少トークン復号ではMonoMoEが2.20〜3.84倍高速だった。",
-    "implementation_status": "CUDA実装がvLLMへ統合され、公式コードと補助成果物はFlashInfer公開リポジトリ内のcsrc/fused_moe/monomoeで提供されている。H200でQwen3.5-35B、Qwen3.5-122B、GLM-5.2、DeepSeek-V3.1を実測し、形状別カーネル生成と事前スケジュール調整まで実装されている。",
-    "research_positioning": "MoE推論カーネル研究の中でも、学習・プリフィル・大バッチ向けのトークン主導型分解を自己回帰復号へそのまま持ち込むこと自体をボトルネックとして捉え直した研究である。特に、短命グリッドの帯域充填・排出損失と専門家ローカルMタイルのパディングを同時に解消し、補助演算を専門家重み読み出しの下へ隠すことで、メモリ帯域律速の少トークン領域に特化する。既存の量子化やルーティング方式を置換するのではなく、それらを一つの実行スケジュールへ融合するため、低遅延MoEサービングのカーネル層最適化として位置付けられる。"
-  },
+  "attempt_id": "attempt-a860ec4087da18d35fd96563",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5cdea98b4034b7e3f2b05850",
+    "claim_id": "claim-a860ec4087da18d35fd96563",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

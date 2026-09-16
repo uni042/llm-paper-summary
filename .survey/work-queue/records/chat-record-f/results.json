@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5cdea98b4034b7e3f2b05850",
-  "job_id": "job-research-cffb14eec24a02c2",
-  "data": {
-    "overview": "MonoMoEは少トークンほど大きな改善を示し、Qwen3.5-35Bでは完全なルーティング済みMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮した。トークン前処理除去だけで13.2〜26.7%のカーネル時間を削り、実効メモリ帯域を最大2.00倍へ高める。テンソル並列8では通信と非MoE処理が利得を薄めるが、多くの条件で短縮を維持した。",
-    "key_results": [
-      {
-        "metric": "完全MoE演算遅延",
-        "value": "最大1.54倍高速化",
-        "baseline": "vLLM Triton grouped-GEMM fused_moe",
-        "condition": "H200、Qwen3.5-35B-A3B、復号トークン数1〜8",
-        "interpretation": "ルーティング、量子化、二段射影、活性化、縮約を含む同一演算境界での総合効果。"
-      },
-      {
-        "metric": "FlashMoE-FP8比",
-        "value": "2.20〜3.84倍高速",
-        "baseline": "FlashMoE-FP8",
-        "condition": "4モデルの対応点",
-        "interpretation": "単一起動化だけでなく重み主導分解の効果を示す。"
-      },
-      {
-        "metric": "出力トークン時間",
-        "value": "Qwen3.5-35Bで9.9〜18.7%短縮",
-        "baseline": "vLLM Grouped GEMM",
-        "condition": "Sonnet負荷、同時要求1〜8",
-        "interpretation": "カーネル改善が実サービング復号遅延へ反映される。"
-      },
-      {
-        "metric": "実効メモリ帯域",
-        "value": "ピーク比10.62%から21.20%へ2.00倍",
-        "baseline": "vLLM Grouped GEMM",
-        "condition": "Qwen3.5-35B、B=1",
-        "interpretation": "常駐グリッドによる連続重み読み出しの効果。"
-      },
-      {
-        "metric": "数値一致度",
-        "value": "コサイン類似度0.998以上",
-        "baseline": "FP32参照",
-        "condition": "全モデル形状とB=1,2,4,8",
-        "interpretation": "高速化による大きな数値誤差を確認しない。"
-      }
-    ],
-    "negative_results": "利得はトークン数増加とともに縮小し、単体カーネルではB=1の1.19〜1.54倍からB=8の1.02〜1.17倍へ低下する。テンソル並列8では通信と非MoE部分が局所改善を希釈する。専門家並列通信を巨大カーネルへ融合した試作は単一ノード小バッチでは性能同等で、通信融合が常に有利ではなかった。",
-    "interpretation": "少トークン時は専門家ごとのMタイルが空き、トークン軸の並列性が不足するため重み側分割が効く。トークン数が増えると従来方式でもタイルが埋まり、前処理と起動境界を償却できるので差が縮む。",
-    "quality_impact": "GSM8KとHumanEvalでは全モデルでvLLM基準と同等またはMonoMoE有利で、MonoMoE平均が低い場合も差は合成標準誤差より小さい。論文は測定可能な精度劣化なしと結論している。"
-  },
+  "attempt_id": "attempt-a860ec4087da18d35fd96563",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5cdea98b4034b7e3f2b05850",
+    "claim_id": "claim-a860ec4087da18d35fd96563",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }
