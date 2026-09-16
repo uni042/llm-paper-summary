@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T08:29:19.133491+00:00",
+  "updated_at": "2026-09-16T09:03:38.438497+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T08:29:19.133491+00:00",
+      "last_recorded_at": "2026-09-16T09:03:38.438497+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 143,
+        "research_completed": 144,
         "audit_completed": 0,
         "discovery_completed": 53,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35030094754:1",
-          "recorded_at": "2026-09-15T22:16:22.681923+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35030094754",
-            "run_attempt": "1",
-            "source_sha": "a2c7b00a7bb5d22af94df84cde991b3e1a999081"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35030447338:1",
           "recorded_at": "2026-09-15T22:24:35.051403+00:00",
@@ -19597,6 +19583,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35077201557:1",
+          "recorded_at": "2026-09-16T09:03:38.438497+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35077201557",
+            "run_attempt": "1",
+            "source_sha": "ec36fcf5f0d6869bb439d0a10b41987cf3843f5a"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21240,6 +21240,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-34cb083c55afaad3",
+          "type": "research",
+          "canonical_id": "arXiv:2605.05219",
+          "title": "Sparse Prefix Caching for Hybrid and Recurrent LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22132,7 +22140,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 607,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
