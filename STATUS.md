@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 20:35:45 JST**
+> 自動生成: **2026-09-16 20:35:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -195,9 +195,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.22416` — Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 20:33:39 JST** / heartbeat: **—** / lease expiry: **09-16 22:03:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9fcc40253e9df4ef.json`
+- `arXiv:2604.17172` — CCCL: In-GPU Compression-Coupled Collective Communication / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 20:35:50 JST** / heartbeat: **—** / lease expiry: **09-16 22:05:50 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a04176279033896e.json`
 
 #### Audit
 
