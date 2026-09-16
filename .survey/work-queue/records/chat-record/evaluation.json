@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6b1a0ee3dc2a2d685a2203c9","job_id":"job-research-411dee2b8db54e04","data":{"hardware":"主系はRTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TB。OPT-66B FP16は132GB相当で、GPU 0〜4層、CPU 5〜12層、SSD 13〜63層へ配置する。GPUダイレクトストレージ対応経路も評価する。","software":"Hugging Face Accelerateの密重み退避推論を比較対象とし、SparseGPTまたはWandaで50%非構造枝刈りを行う。圧縮比較にはZSTD、量子化併用にはSmoothQuant INT8を使用する。","methodology":"単一バッチのテキスト生成で、まずOPT層の線形演算単体についてSSD-CPU、CPU-GPU転送、復元、計算の内訳を測定する。次にOPT-66B全64層の1回通過時間を同じ配置で比較し、圧縮によりCPUへ置ける層数が増える効果も別に測る。GPUダイレクトストレージ経路、INT8量子化併用、OPT-66BとLlama2-70BのWikiText perplexityを評価する。","scope":"主目的は単一バッチの遅延削減であり、高並列サービングのスループット最適化ではない。疎性は保存・転送量削減に使うが、GPU上の行列計算自体は密計算のままで、非構造疎性による演算削減は未利用である。"},"reservation":{"claim_id":"claim-6b1a0ee3dc2a2d685a2203c9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f0a38675572b34f698c0ab6e",
+  "job_id": "job-research-5bed14c683ee7a49",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f0a38675572b34f698c0ab6e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

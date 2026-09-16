@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 05:33:53 JST**
+> 自動生成: **2026-09-17 05:34:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **15** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **24** | **1** | **1** | **0** | **0** | **0** | **1** |
-| 合計 | **40** | **9** | **5** | **4** | **1** | **0** | **1** |
+| 合計 | **39** | **9** | **5** | **4** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 05:31:32 JST** / heartbeat: **—** / lease expiry: **09-17 07:01:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-411dee2b8db54e04.json`
+- `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 05:33:59 JST** / heartbeat: **—** / lease expiry: **09-17 07:03:59 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
 
 #### Audit
 
