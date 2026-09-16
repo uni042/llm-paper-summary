@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-cd7cbdc8e55bcf2679e3c08f",
-  "job_id": "job-research-adc94daa00d75514",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cd7cbdc8e55bcf2679e3c08f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-cd7cbdc8e55bcf2679e3c08f","job_id":"job-research-adc94daa00d75514","data":{"limitations":"評価は単一H100と特定CPU/PCIe構成を中心とし、複数GPUのエキスパート並列やネットワーク越しの分散オフロードは直接測定していない。ドラフト品質はエキスパート活性の時間的局所性と類似度代替に依存し、ホットネスが弱いモデルでは投機長γを短く調整する必要がある。低バッチではキャッシュ方式がわずかに有利であり、SpecMoEは常時最速ではない。ドラフトエキスパート数Nにも受理率と計算量のトレードオフがありモデルごとの調整が必要。公式コードURLは一次資料で確認できず、Transformers標準機能ではなく独自実装で評価している。","differences":"従来のMoE-Offloadはエキスパート転送を計算と重ねるか、頻出エキスパートをGPUへキャッシュするのが中心で、バッチ増加に伴う総転送量の増大を残す。SpecMoEは投機的デコードにより複数トークンの将来要求をまとめ、同じエキスパートへの転送を一回へ集約する。一般的な投機的デコードが別の小型ドラフトモデルを必要とするのに対し、ターゲットMoEの常駐非エキスパート層と少数エキスパートを共有するため追加学習・追加ドラフト重みを不要にする。LayerSkip等の自己投機方式とも、MoEのエキスパートホットネスと階層メモリ通信削減を直接利用する点が異なる。","implementation_status":"PyTorch/Hugging Face AccelerateベースのCPUオフロード推論系上に自己補助型投機デコードを独自実装し、H100実機で評価済み。SSDオフロード実験も含む。DAC 2026採録済みの拡張arXiv版。公開コードへの一次URLは論文・arXivページでは確認できない。","research_positioning":"MoE expert offload、階層メモリ、投機的デコードの交点に位置する。特にSSDオフロードで平均2.25倍という結果は、低帯域階層を単なる容量拡張として扱うのではなく、上位層へ運ぶ重み要求を投機的に束ねることでI/O量自体を減らす設計が有効であることを示す。既存のexpert cache/prefetch研究に対して、時間方向の複数トークンをまとめる新しい通信削減軸を提供する。"},"reservation":{"claim_id":"claim-cd7cbdc8e55bcf2679e3c08f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
