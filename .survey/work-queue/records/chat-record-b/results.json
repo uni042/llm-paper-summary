@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0d80141883a07a9122bb58df",
+  "attempt_id": "attempt-1e16ab38d292450d62b541e9",
   "job_id": "job-research-34cb083c55afaad3",
   "data": {
     "overview": "distribution-aware sparse checkpoint placementはQuALITYとSystem Promptsで測定layer-groupのmemory-recompute Pareto frontierを改善した。全fixed-budget baselineを支配し、最も強いblock cachingに一致または上回りつつ通常は大幅に少ないcheckpointを使う。最大利得はcheckpoint budgetが小さくoverlap-depth分布が非一様な領域で現れる。checkpointからsuffixを元のrecurrent updateで再計算するため出力はexactである。",
@@ -38,7 +38,7 @@
     "interpretation": "recurrent layerは単一stateから再開できるため、attention KVと同じdense cachingを強制する必要がない。state checkpoint数を減らして一部computeを再実行することでcache capacityを増やせる。"
   },
   "reservation": {
-    "claim_id": "claim-0d80141883a07a9122bb58df",
+    "claim_id": "claim-1e16ab38d292450d62b541e9",
     "worker_id": "scheduled-chat-paper-20260916T173214JST",
     "worker_kind": "scheduled_chat"
   }
