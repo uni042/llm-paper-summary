@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-839f4e486b01dc3f2c44b391",
-  "job_id": "job-research-23c1aef2e7b819be",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-839f4e486b01dc3f2c44b391",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-839f4e486b01dc3f2c44b391","job_id":"job-research-23c1aef2e7b819be","data":{"overview":"算術記述子から再構築した行列積は対象のHopper/Blackwell三世代で非公開ライブラリと100%ビット一致し、現実的なLLM形状の後処理融合でも生成系の性能は一般的なコンパイル経路と同等以上になる場合がある。平衡木縮約をコンパイラで強制した際の性能低下は配置最適化で大きく回復し、27カーネル中19個が自由順序版の10%以内、対象H100の一部では自由版を上回った。静的判定器は二社命令集合を扱い、自動調整候補を実行前に同値類へ分割できる。さらにブラックボックス解析の過程で、特定の縮約軸分割経路が末尾要素を落とす非公開ライブラリ不具合も発見した。","key_results":[{"metric":"非公開行列積とのビット一致","value":"100%","baseline":"cuBLAS family","condition":"GB300、GB200、H100、対象fp16/bf16/fp8条件","interpretation":"縮約順序を決める記述子だけで閉鎖ライブラリの算術を再現できる。"},{"metric":"固定縮約の性能回復","value":"27カーネル中19個が自由順序版の10%以内、H100の10件中5件は上回る","baseline":"free-order mode","condition":"balanced-tree compiler enforcement + layout optimization","interpretation":"ビット順序固定は必ずしも大きな並列性損失を意味しない。"},{"metric":"大規模加速のビット検証","value":"154,904 byte comparisonsで差0","baseline":"descriptor-equivalent reference","condition":"GB300 acceleration arm","interpretation":"同じ記述子内ならpersistent grid等のスケジュール最適化を追加しても同じビットを維持できる。"},{"metric":"非公開ライブラリ末尾欠落条件","value":"H100で各ライブラリ1,542,555実行を調べ、条件が全欠落を誤検出なしで予測","baseline":"full-K reference","condition":"split-K tail bug","interpretation":"算術復元は再現性だけでなく閉鎖実装の論理不具合検出にも使える。"},{"metric":"記述子起動のホスト費","value":"約100µs対ポインタ起動約20µs","baseline":"pointer launch","condition":"descriptor path","interpretation":"100µs未満の短い行列積ではホスト側記述子構築費が見える。"}],"negative_results":["順序固定を単純適用すると最大約20%級の性能懸念があり、配置最適化が必要。","27カーネルすべてが10%以内に入るわけではなく8件は差が残る。","注意カーネルの縮約順序は理論分析が中心で、行列積ほど深く実装・評価していない。","静的判定は健全性を優先するため、実際は同値な二カーネルを別類へ分ける偽陰性が残り得る。"],"quality_impact":"同じ重み・入力・乱数種でも実行構成で出力ビットが変わる経路を制御し、バッチ不変性、推論再現性、学習・推論エンジン整合性を改善する。","interpretation":"再現性を得るために高速カーネルや自動調整を全面禁止するのではなく、算術同値類を先に固定し、その内部でスケジュール・配置を自由に最適化する設計が有効である。"},"reservation":{"claim_id":"claim-839f4e486b01dc3f2c44b391","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
