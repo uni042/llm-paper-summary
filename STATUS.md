@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 21:41:48 JST**
+> 自動生成: **2026-09-16 21:42:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **30** |
+| 収録候補論文 | **29** |
 | 未claim Research job | **29** |
-| 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-16 21:38:01 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **75** |
+| 最終検証済みResearch収録 | **09-16 21:42:00 JST（4秒前）** |
 | 整合性異常 | **9** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **30** |
+| canonical_id確認済みの一意な候補論文 | **29** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **30** |
+| 非終端Research job合計 | **29** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **28** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **27** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **28** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 21:42:00 JST** [research] `arXiv:2605.11537` — Fast MoE Inference via Predictive Prefetching and Expert Replication
+  - job: `.survey/work-queue/jobs/job-research-f3f80e20575daf12.json`
+  - result: `.survey/work-queue/results/research/attempt-5c1b7213ab570864b19957bc.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5c1b7213ab570864b19957bc.json`
+  - paper: `papers/inference/03-moe-expert-offload/2026-2605.11537-predictive-prefetching-expert-replication.md`
 - **09-16 21:38:01 JST** [research] `arXiv:2604.24971` — PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference
   - job: `.survey/work-queue/jobs/job-research-9ef38f28c45d6f3a.json`
   - result: `.survey/work-queue/results/research/attempt-108502f64d0cd914bd44d7db.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-65de370d3bdc114f83e19319.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-65de370d3bdc114f83e19319.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2026-2608.30076-budget-aware-compression-single-gpu.md`
-- **09-16 18:49:43 JST** [research] `arXiv:2604.07472` — Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference
-  - job: `.survey/work-queue/jobs/job-research-c5a47af1c9e3acf3.json`
-  - result: `.survey/work-queue/results/research/attempt-44002611be590dff9f7593f6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-44002611be590dff9f7593f6.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-allocation.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.11537` — Fast MoE Inference via Predictive Prefetching and Expert Replication / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 21:40:38 JST** / heartbeat: **—** / lease expiry: **09-16 23:10:38 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f3f80e20575daf12.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **30** |
+| ready | **29** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **622** |
+| inference/training/survey配下の論文Markdown実体 | **623** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **437** |
-| └ Research | **245** |
+| 成功result未照合のimmutable submission | **436** |
+| └ Research | **244** |
 | └ Audit | **2** |
 | └ Discovery | **190** |
 

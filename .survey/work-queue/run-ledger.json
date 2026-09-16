@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T12:38:05.549119+00:00",
+  "updated_at": "2026-09-16T12:42:04.359646+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T12:38:05.549119+00:00",
+      "last_recorded_at": "2026-09-16T12:42:04.359646+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 158,
+        "research_completed": 159,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35057988092:1",
-          "recorded_at": "2026-09-16T05:03:45.574729+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35057988092",
-            "run_attempt": "1",
-            "source_sha": "8072800eee1991c62b4e231f85523ead09933313"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35058132727:1",
           "recorded_at": "2026-09-16T05:06:16.856449+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35096943286",
             "run_attempt": "1",
             "source_sha": "0266f1a871608578cf12b2d10e98e64ef8a67bfd"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35097326393:1",
+          "recorded_at": "2026-09-16T12:42:04.359646+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35097326393",
+            "run_attempt": "1",
+            "source_sha": "1e2876ba8c31a3c29e693e987726f4a5135ceff0"
           },
           "signals": [
             "research_completed"
@@ -21589,6 +21589,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.24971",
           "title": "PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f3f80e20575daf12",
+          "type": "research",
+          "canonical_id": "arXiv:2605.11537",
+          "title": "Fast MoE Inference via Predictive Prefetching and Expert Replication",
           "from": "ready",
           "to": "completed"
         }
