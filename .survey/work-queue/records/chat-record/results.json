@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-82e80ed19ce701a0be49bf58",
-  "job_id": "job-research-44674a8f55b9f5e8",
-  "data": {
-    "overview": "GraphFlowは、共有操作グラフから要求固有の手順を組み立てることで、固定・浅いワークフロー選択よりタスク性能を高めながら、同じ操作のKV状態を共有基底と経路差分へ分けることでサービング・メモリも削減した。五ベンチマークと複数基盤モデルを通した平均タスク性能は既存手法より約4.95ポイント高く、HumanEvalのQwen-2.5-7Bでは78.1%から86.2%、MATHでは72.1%から76.4%へ改善した。状態管理ではKVキャッシュのメモリ占有を全体として約4分の1にし、公開本文のHotpotQA例では約85GBから25GBへ低下する。さらに全データセットでP90推論遅延も低下したと報告され、メモリ節約のために単純再計算へ寄せるのではなく、共有状態を保持しつつ実行効率も改善する設計になっている。",
-    "key_results": [
-      {
-        "metric": "平均タスク性能",
-        "value": "既存手法比 約+4.95 percentage points",
-        "baseline": "MetaGPT / LLMCompiler / TaskWeaver / AFlow等",
-        "condition": "五ベンチマーク・複数基盤モデル",
-        "interpretation": "共有グラフから細粒度に操作を組み替えることで、メモリ最適化と独立にエージェントの手順品質も改善する。"
-      },
-      {
-        "metric": "HumanEval accuracy",
-        "value": "86.2%",
-        "baseline": "previous adaptive system 78.1%",
-        "condition": "Qwen-2.5-7B",
-        "interpretation": "コード生成でも固定テンプレート選択より要求に適した操作構成を作れることを示す。"
-      },
-      {
-        "metric": "KV cache memory footprint",
-        "value": "approximately 4x reduction; HotpotQA example 85GB→25GB",
-        "baseline": "standard stateful workflow management",
-        "condition": "shared-operation workflows",
-        "interpretation": "操作ごとの基底KV共有と疎な経路差分により、重複する完全KVをワークフローごとに保持する必要を減らす。"
-      },
-      {
-        "metric": "tail latency",
-        "value": "lower P90 inference latency across evaluated datasets",
-        "baseline": "workflow baselines",
-        "condition": "five benchmark datasets",
-        "interpretation": "希少経路をオンデマンド計算しても、全体では状態共有と簡潔な生成手順による節約が勝ち、メモリ削減だけでなく尾部遅延も悪化させない。"
-      }
-    ],
-    "negative_results": [
-      "全経路の差分KVを保持すると状態数が組合せ的に増えるため、経路枝刈りと実体化制御が必要である。",
-      "公開評価は五ベンチマーク中心で、非常に大規模な実運用wGraphや長時間エージェントでの容量・更新費は未確認である。"
-    ],
-    "quality_impact": "KV状態を量子化・破棄する近似圧縮ではなく、共有可能な基底と経路依存差分へ再表現するため、メモリ削減そのものによる品質低下を狙う方式ではない。むしろタスク適応ワークフロー生成により最終性能は平均約4.95ポイント改善する。",
-    "interpretation": "重要なのは、エージェントのワークフロー構造を計画用メタデータに留めず、推論状態を共有する物理的な単位へ昇格させた点である。同一操作を多く共有するワークロードほど基底KVの再利用余地が増え、差分だけで経路文脈を保持できる。経路枝刈りを組み合わせることで状態空間の爆発を抑え、タスク品質、メモリ容量、尾部遅延を同じグラフ設計から改善する。"
-  },
+  "attempt_id": "attempt-5b2f0818dd442ca0014c8634",
+  "job_id": "job-research-3ad6262bd04cfbe6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-82e80ed19ce701a0be49bf58",
+    "claim_id": "claim-5b2f0818dd442ca0014c8634",
     "worker_id": "scheduled-chat-discovery-20260916T1600JST",
     "worker_kind": "scheduled_chat"
   }

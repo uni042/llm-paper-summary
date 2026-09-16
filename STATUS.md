@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:09:06 JST**
+> 自動生成: **2026-09-16 17:09:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **29** |
-| 未claim Research job | **29** |
+| 未claim Research job | **28** |
 | 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-16 17:08:50 JST（16秒前）** |
+| 最終検証済みResearch収録 | **09-16 17:08:50 JST（43秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **48** | **4** | **2** | **2** | **0** | **0** | — |
+| Research | **48** | **4** | **2** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **49** | **23** | **2** | **21** | **0** | **0** | **23** |
+| 合計 | **49** | **23** | **2** | **21** | **1** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -185,8 +185,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.23467` — Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference / worker `scheduled-chat-discovery-20260916T1600JST`
+  - claim: **09-16 17:09:32 JST** / heartbeat: **—** / lease expiry: **09-16 18:39:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3ad6262bd04cfbe6.json`
 
 #### Audit
 
