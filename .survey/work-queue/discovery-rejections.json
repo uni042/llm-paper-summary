@@ -1,12 +1,117 @@
 {
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
-  "updated_at": "2026-09-17T03:00:00+09:00",
-  "submission_count": 1,
-  "rejection_observation_count": 1,
-  "rejection_record_count": 1,
+  "updated_at": "2026-09-17T04:00:00+09:00",
+  "submission_count": 2,
+  "rejection_observation_count": 6,
+  "rejection_record_count": 6,
   "ignored_without_identity": 0,
   "records": {
+    "id:arXiv:2410.14740": {
+      "primary_identity": "id:arXiv:2410.14740",
+      "identity_tokens": [
+        "id:arXiv:2410.14740",
+        "title:harnessing your dram and ssd for sustainable and accessible llm inference with mixedprecision and multilevel caching",
+        "url:https://arxiv.org/abs/2410.14740"
+      ],
+      "canonical_id": "arXiv:2410.14740",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Harnessing Your DRAM and SSD for Sustainable and Accessible LLM Inference with Mixed-Precision and Multi-level Caching",
+      "source_url": "https://arxiv.org/abs/2410.14740",
+      "rejection_reason": "HBM/DRAM/SSD三層cacheを扱いscope適合性はあるが、mixed-precision・sparsityを含むresource-constrained deployment全体が主眼で、今回採用したstorage-specific system contributionsより新規性・比較優先度が低い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2410.15008": {
+      "primary_identity": "id:arXiv:2410.15008",
+      "identity_tokens": [
+        "id:arXiv:2410.15008",
+        "title:ianus integrated accelerator based on npupim unified memory system",
+        "url:https://arxiv.org/abs/2410.15008"
+      ],
+      "canonical_id": "arXiv:2410.15008",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System",
+      "source_url": "https://arxiv.org/abs/2410.15008",
+      "rejection_reason": "NPU-PIM unified memoryとPIM access schedulingは関連するが、専用accelerator architectureが中心で、SSD/NVMeやserving runtimeへの接続が弱いため今回のcandidate poolでは見送る。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2411.17309": {
+      "primary_identity": "id:arXiv:2411.17309",
+      "identity_tokens": [
+        "id:arXiv:2411.17309",
+        "title:pimai a novel architecture for highefficiency llm inference",
+        "url:https://arxiv.org/abs/2411.17309"
+      ],
+      "canonical_id": "arXiv:2411.17309",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "PIM-AI: A Novel Architecture for High-Efficiency LLM Inference",
+      "source_url": "https://arxiv.org/abs/2411.17309",
+      "rejection_reason": "LLM inference向けPIMとして関連するが、今回のstorage/offload軸ではDDR5/LPDDR5 PIM architectureとsimulator評価が中心で、SSD/NVMe・階層memory managementへの直接性が採用候補より弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2509.12993": {
+      "primary_identity": "id:arXiv:2509.12993",
+      "identity_tokens": [
+        "id:arXiv:2509.12993",
+        "title:hpim heterogeneous processinginmemorybased accelerator for large language models inference",
+        "url:https://arxiv.org/abs/2509.12993"
+      ],
+      "canonical_id": "arXiv:2509.12993",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference",
+      "source_url": "https://arxiv.org/abs/2509.12993",
+      "rejection_reason": "SRAM-PIM/HBM-PIMの専用accelerator co-designで、主評価もcycle-accurate simulation。memory-centric inferenceには関連するが、現サーベイのsystem/offload重点では採用候補より優先度が低い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2510.02675": {
+      "primary_identity": "id:arXiv:2510.02675",
+      "identity_tokens": [
+        "id:arXiv:2510.02675",
+        "title:halo memorycentric heterogeneous accelerator with 25d integration for lowbatch llm inference",
+        "url:https://arxiv.org/abs/2510.02675"
+      ],
+      "canonical_id": "arXiv:2510.02675",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.02675",
+      "rejection_reason": "CiD/CiM heterogeneous acceleratorとして有用だが、専用accelerator設計が主であり、汎用serving/offload・storage hierarchyのサーベイ重点に対する直接性が今回採用群より低い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
     "id:arXiv:2609.14320": {
       "primary_identity": "id:arXiv:2609.14320",
       "identity_tokens": [
