@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5843d9fcd7280a00abf70921",
+  "attempt_id": "attempt-9ad5a1743ec35bec7e65792c",
   "job_id": "job-research-6252d370adc380b9",
   "data": {
     "evaluation_summary": "提案するblock placement、cache allocation、Join-the-Fastest-Free-Serverの組合せを、model-driven simulationと実際のdistributed LLM serving systemで既存resource-allocation方式と比較する。理論上のsteady-state response-time boundがsimulationと整合するかを確認し、元の仮定から外れたreal demandでもmean response timeが改善するかを測る。主要結果として既存方式に対し平均応答時間を63〜77%削減する。",
@@ -35,7 +35,7 @@
     "control_knobs": "target maximum load safety margin、block placement、chain cache capacities、fastest-free dispatch。"
   },
   "reservation": {
-    "claim_id": "claim-5843d9fcd7280a00abf70921",
+    "claim_id": "claim-9ad5a1743ec35bec7e65792c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
