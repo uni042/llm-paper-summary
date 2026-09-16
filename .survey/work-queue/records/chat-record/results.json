@@ -4,10 +4,17 @@
   "slot": "results",
   "attempt_id": "attempt-25cceaeacd63bfc0b41aa061",
   "job_id": "job-research-a04176279033896e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-25cceaeacd63bfc0b41aa061",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "最新版UCCL-Zipは、実アプリケーションで強化学習の重み同期を最大47.5%高速化し、vLLMのエンドツーエンド推論遅延を最大10%短縮したと報告する。旧版の詳細評価では、vLLMのプリフィル・デコード分離で最大約9%の改善、send/recvで大容量メッセージ時に20%以上、all-to-allで約18%の改善が確認される。一方all-reduceは各通信段で圧縮と復元を繰り返すためNCCLより遅くなる条件があり、通信圧縮は通信方式とメッセージ量に応じて利益が変わる。",
+    "key_results": [
+      {"metric": "強化学習の重み同期時間", "value": "最大47.5%高速化", "baseline": "非圧縮GPU通信", "condition": "最新版UCCL-Zipの実ワークロード評価", "interpretation": "大容量の重み転送では無損失圧縮でネットワークへ送るバイト数を減らす利益が大きく、分割送信による圧縮と通信の重なりも効く。"},
+      {"metric": "vLLMエンドツーエンド推論遅延", "value": "最大10%短縮", "baseline": "既存通信経路", "condition": "プリフィル・デコード分離を含むvLLM実ワークロード", "interpretation": "KVキャッシュなどの通信が全実行時間の一部を占めるため、通信単体の改善率よりエンドツーエンド改善は小さくなるが、アプリケーション変更なしで実効的な短縮を得る。"},
+      {"metric": "send/recvスループット", "value": "32 MB超で20%以上改善", "baseline": "NCCLおよびSM数を合わせたNCCL", "condition": "旧版L40S通信マイクロベンチマークの大容量メッセージ", "interpretation": "メッセージが大きいほど通信時間が圧縮オーバーヘッドを上回り、削減した転送量が直接スループット改善へ結び付く。"},
+      {"metric": "圧縮器スループット", "value": "DietGPU比でH200は20%以上、A100の一部小容量条件では最大150%改善", "baseline": "DietGPU", "condition": "旧版CCCL-core単体評価", "interpretation": "局所頻度推定と大域メモリアクセス削減によって圧縮率をわずかに犠牲にしながら圧縮処理を高速化し、通信と重ねられる帯域へ近づける。"}
+    ],
+    "negative_results": "旧版ではall-reduceがNCCLより遅い。リング型all-reduceではGPU数に応じて複数段の圧縮・復元が必要となり、計算と通信を完全に重ねられないと追加処理が通信量削減を上回る。また32 MB未満の小さなsend/recvでは圧縮オーバーヘッドの割合が高く、改善が小さいか不利になる。局所頻度表は大域頻度表より圧縮後サイズが最大7%程度大きくなる。",
+    "interpretation": "この方式の性能は、削減できる通信バイト数と圧縮・復元に使うGPU時間の差し引きで決まる。大容量の点対点転送では通信帯域が長く占有されるため、圧縮を並行実行する余地が大きい。反対に多段集合演算や小容量通信では圧縮回数や固定費が支配的になる。したがって無損失という品質上の安全性だけでなく、通信プリミティブごとに圧縮を適用する条件選択が実用性能を左右する。",
+    "quality_impact": "無損失圧縮なので、復元後のテンソル値は元データと一致する。量子化や非可逆圧縮のように精度、学習収束、生成安定性を性能と交換する方式ではない。"
+  },
+  "reservation": {"claim_id": "claim-25cceaeacd63bfc0b41aa061", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
