@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 21:33:41 JST**
+> 自動生成: **2026-09-16 21:33:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **33** |
+| 収録候補論文 | **32** |
 | 未claim Research job | **32** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-16 21:30:53 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **72** |
+| 最終検証済みResearch収録 | **09-16 21:33:52 JST（5秒前）** |
 | 整合性異常 | **9** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **33** |
+| canonical_id確認済みの一意な候補論文 | **32** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **33** |
+| 非終端Research job合計 | **32** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **26** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **25** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **26** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 21:33:52 JST** [research] `arXiv:2506.12417` — HarMoEny: Efficient Multi-GPU Inference of MoE Models
+  - job: `.survey/work-queue/jobs/job-research-1a835bd497ae941f.json`
+  - result: `.survey/work-queue/results/research/attempt-9fdbbab13803c394452c3f1f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-9fdbbab13803c394452c3f1f.json`
+  - paper: `papers/inference/03-moe-expert-offload/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md`
 - **09-16 21:30:53 JST** [research] `arXiv:2604.17172` — CCCL: In-GPU Compression-Coupled Collective Communication
   - job: `.survey/work-queue/jobs/job-research-a04176279033896e.json`
   - result: `.survey/work-queue/results/research/attempt-25cceaeacd63bfc0b41aa061.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-095563049565ccc0498d1b47.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-095563049565ccc0498d1b47.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11058-emmi-edge-multimodal-representation-compression.md`
-- **09-16 18:19:57 JST** [research] `arXiv:2409.15104` — CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts
-  - job: `.survey/work-queue/jobs/job-research-6eb709dc3f5cf15a.json`
-  - result: `.survey/work-queue/results/research/attempt-517d9d0491722109185669ac.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-517d9d0491722109185669ac.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2506.12417` — HarMoEny: Efficient Multi-GPU Inference of MoE Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 21:31:02 JST** / heartbeat: **—** / lease expiry: **09-16 23:01:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1a835bd497ae941f.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **33** |
+| ready | **32** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **619** |
+| inference/training/survey配下の論文Markdown実体 | **620** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **436** |
-| └ Research | **244** |
+| 成功result未照合のimmutable submission | **435** |
+| └ Research | **243** |
 | └ Audit | **2** |
 | └ Discovery | **190** |
 

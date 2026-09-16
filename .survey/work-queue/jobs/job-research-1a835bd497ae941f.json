@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2506.12417",
   "paper_path": "papers/inference/03-moe-expert-offload/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md",
   "selection_reason": "MoE load imbalanceへdynamic token redistributionとasynchronous expert prefetchを組み合わせ、GPU idleを最大84%削減。heavy imbalanceでthroughput 37〜70%向上、TTFT 34〜41%削減を報告し、expert placement/prefetch系統の重要先行研究。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -27,5 +27,7 @@
     }
   ],
   "last_blocked_at": "2026-09-16T10:51:13+00:00",
-  "retry_queued_at": "2026-09-16T12:05:11+00:00"
+  "retry_queued_at": "2026-09-16T12:05:11+00:00",
+  "completed_at": "2026-09-16T12:33:52+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-9fdbbab13803c394452c3f1f.json"
 }
