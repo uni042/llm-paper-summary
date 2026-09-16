@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-53b88cd4cd7a0025f4e4c397","job_id":"job-research-df04bb2baebfa878","data":{"overview":"流量制御方式は要求を無制限に実行集合へ入れず、鍵値キャッシュ容量に見合う速度で活性化することで待ち行列安定性を保証する。出力長既知では到着率を上回る型別活性化予算とメモリ余裕があれば安定となり、未知長では平均仕事量に容量余裕があると超過イベント期待数が容量に対して指数的に減衰する。合成・実要求評価では実用的比較方式より高い要求・トークン処理量、低い平均・95百分位遅延、安定したキャッシュ利用を示す。","key_results":[{"metric":"必要安定条件","value":"平均KV仕事量が容量を超える到着率では任意方策が不安定","baseline":"任意スケジューラ","condition":"既知長・未知長モデル","interpretation":"処理速度だけでなく生成中に時間積分されるメモリ仕事量が安定可能領域を決める。"},{"metric":"十分安定条件","value":"型別活性化予算が到着率を上回り、予算に対応する総KV仕事量が容量未満なら安定","baseline":"無制御受付","condition":"出力長既知","interpretation":"要求開始率を制御変数にすることで待ち行列長の有界性を理論保証できる。"},{"metric":"容量超過イベント","value":"十分な容量余裕の下で期待回数が容量に対して指数的に減衰","baseline":"貪欲な活性化","condition":"出力長未知・長さ有界・平均活性化率が到着率超過","interpretation":"未知生成長でも安全余裕を取れば追い出し頻度を急速に小さくできる。"},{"metric":"実験性能","value":"比較方式より高いrequest/token throughput、低い平均・95百分位遅延","baseline":"α-protection、MC系、Amin等","condition":"合成データおよびLMSYS-Chat-1M/Vidur設定","interpretation":"安定性保証が単なる保守化ではなく、過剰受付と再実行を減らすことで処理性能にも寄与する。"}],"negative_results":"高負荷の実要求では長い入力・出力により安全な活性化予算が小さくなり、瞬間メモリ占有の変動も増えるため比較方式との差が縮む。離散時間モデルはprefill処理時間を簡略化し、多回対話の接頭辞再利用も扱わない。","interpretation":"鍵値キャッシュ不足を発生後の追い出しだけで処理するのではなく、要求を実行集合へ入れる流量そのものを制御することで、待ち行列理論上の安定領域と実装方策を直接結び付ける点が重要である。","quality_impact":"要求順序と活性化時刻だけを変更しモデル計算は変えないため、生成品質への直接影響はない。"},"reservation":{"claim_id":"claim-53b88cd4cd7a0025f4e4c397","worker_id":"scheduled-chat-llm-survey-turn5-20260916T225915JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d97ee4e96b13d333e721d48c",
+  "job_id": "job-research-98e8633cce3c47f1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d97ee4e96b13d333e721d48c",
+    "worker_id": "scheduled-chat-normal-20260917T063000",
+    "worker_kind": "scheduled_chat"
+  }
+}
