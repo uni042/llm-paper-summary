@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:11:06 JST**
+> 自動生成: **2026-09-17 07:13:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
-| 未claim Research job | **52** |
-| 直近24hの検証済みResearch収録 | **92** |
-| 最終検証済みResearch収録 | **09-17 06:35:28 JST（35分前）** |
-| 整合性異常 | **6** |
+| 収録候補論文 | **60** |
+| 未claim Research job | **58** |
+| 直近24hの検証済みResearch収録 | **91** |
+| 最終検証済みResearch収録 | **09-17 06:35:28 JST（37分前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **60** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **60** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **2** | **0** | **2** | **0** | **0** | **6** |
-| 合計 | **34** | **10** | **4** | **6** | **2** | **0** | **6** |
+| Discovery | **25** | **2** | **2** | **0** | **0** | **0** | **6** |
+| 合計 | **36** | **10** | **6** | **4** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-17 07:11:15 JST** job `job-05d7dc3b9919ab5f` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json`
+  - 探索軸: recovery-of-invalid-discovery-submissions
+- **09-17 07:11:19 JST** job `job-d2f6e7770e461596` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json`
+  - 探索軸: recovery-of-invalid-discovery-submissions
 - **09-17 07:05:07 JST** job `job-e64ad8e5caaeb00f` / 候補 **4件**
   - result: `.survey/work-queue/results/20260917T0700JST-discovery-specialist-scheduling-memory-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
   - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
-- **09-17 04:03:45 JST** job `job-390a2ff0c6f51a4c` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-moe-movement-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json`
-  - 探索軸: MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
-- **09-17 04:05:58 JST** job `job-523476d86441187a` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-prefetch-io-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-prefetch-io-7.json`
-  - 探索軸: KV prefetch・cache admission・I/O scheduling・memory hierarchy
 
 ### 直近タスク
 
@@ -186,25 +186,25 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 07:10 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **6件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **6件**
 - 探索軸: recovery-of-invalid-discovery-submissions
 - round `legacy-invalid-recovery-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json`
   - 探索軸: recovery-of-invalid-discovery-submissions
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-1.json` (`ok=true`)
 - round `legacy-invalid-recovery-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json`
   - 探索軸: recovery-of-invalid-discovery-submissions
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-2.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2601.11822` — RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation / worker `scheduled-chat-discovery-specialist-0700`
-  - claim: **09-17 07:11:04 JST** / heartbeat: **—** / lease expiry: **09-17 08:41:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-af7d4aee1c99dd28.json`
+- `arXiv:2608.25062` — FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration / worker `scheduled-chat-discovery-specialist-0700`
+  - claim: **09-17 07:13:04 JST** / heartbeat: **—** / lease expiry: **09-17 08:43:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0d64167980707ffd.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
   - claim: **09-17 05:33:59 JST** / heartbeat: **09-17 06:31:30 JST** / lease expiry: **09-17 08:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
@@ -227,7 +227,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **60** |
 
 ### 候補の重複・識別情報欠損
 
@@ -255,10 +255,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **401** |
-| └ Research | **272** |
+| 成功result未照合のimmutable submission | **400** |
+| └ Research | **273** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **125** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -275,10 +275,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **6** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **6** |
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
