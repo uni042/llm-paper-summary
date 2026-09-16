@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Ingest and recover self-describing root-level Discovery round submissions.
+"""Ingest and recover stranded root-level Discovery submissions.
 
-A specialist Discovery round is an immutable candidate payload with durable round
-identity. It does not need a pre-issued worker-facing Discovery job: queue_worker creates
-a deterministic internal ingest job for that submission. This script also repairs older
-rounds that already received ``unknown job_id`` or ``job already terminal`` results.
+Two compatibility paths are intentionally distinct:
+
+* current self-describing specialist rounds carry durable round identity and may be
+  ingested without a pre-issued worker-facing Discovery job;
+* older payloads without discovery_stats are replayed only when their original job
+  still exists and is a terminal Discovery job.
+
 Research/Audit submissions are never rebound here.
 """
 from __future__ import annotations
@@ -35,8 +38,43 @@ def _read(path: Path, default: Any = None) -> Any:
         return default
 
 
+def _create_legacy_recovery_job(source_submission: str, old_job: dict) -> dict:
+    """Preserve the pre-v10.1 terminal-job replay contract for old payloads."""
+    for sequence in range(1, 1000):
+        job_id = queue_worker.stable_id("job", "discovery-recovery", source_submission, str(sequence))
+        path = queue_worker.JOBS / f"{job_id}.json"
+        if path.exists():
+            existing = _read(path, {}) or {}
+            if (
+                existing.get("type") == "discovery"
+                and existing.get("recovery_for_submission") == source_submission
+                and existing.get("status") == "ready"
+            ):
+                existing["_path"] = path
+                return existing
+            continue
+        queue_worker.add_job({
+            "job_id": job_id,
+            "type": "discovery",
+            "lane": "discovery-ingest",
+            "priority": int(old_job.get("priority") or 50),
+            "status": "ready",
+            "recovery_only": True,
+            "recovery_for_submission": source_submission,
+            "instructions": old_job.get("instructions") or (
+                "Recovery-only Discovery job. Apply the already durable candidate payload; "
+                "do not perform new research in this job."
+            ),
+            "completion": old_job.get("completion") or "Apply the durable Discovery candidate payload.",
+        })
+        created = _read(path, {}) or {}
+        created["_path"] = path
+        return created
+    raise RuntimeError("unable to allocate a unique Discovery recovery job")
+
+
 def _result_allows_recovery(existing_result: dict) -> bool:
-    """Allow new rounds plus the two known stale Discovery failure modes."""
+    """Allow new rounds plus the known stale Discovery failure modes."""
     if not existing_result:
         return True
     if existing_result.get("ok") is True:
@@ -45,26 +83,91 @@ def _result_allows_recovery(existing_result: dict) -> bool:
     return "job already terminal" in error or "unknown job_id" in error or "job_id required" in error
 
 
-def _eligible_template_job(sub: dict, existing_result: dict) -> tuple[bool, dict]:
+def _old_discovery_job(sub: dict) -> dict:
     submitted_job_id = sub.get("job_id")
-    explicit_round = sub.get("operation") == "submit_discovery_round"
     if not isinstance(submitted_job_id, str) or not submitted_job_id:
-        return explicit_round, {}
+        return {}
+    return _read(queue_worker.JOBS / f"{submitted_job_id}.json", {}) or {}
 
-    old_job_path = queue_worker.JOBS / f"{submitted_job_id}.json"
-    if not old_job_path.exists():
-        # Self-describing legacy specialist rounds used synthetic job ids. The immutable
-        # candidate payload, not the synthetic id, is the authority for safe replay.
-        return True, {}
 
-    old_job = _read(old_job_path, {}) or {}
-    if old_job.get("type") != "discovery":
-        return False, {}
-    if old_job.get("status") in queue_worker.TERMINAL:
-        return True, old_job
+def _recover_self_describing_round(
+    sub: dict,
+    source_submission: str,
+    existing_result: dict,
+    st: dict,
+) -> dict[str, Any] | None:
+    if not queue_worker.is_discovery_round_submission(sub):
+        return None
 
-    # A live real Discovery job still belongs to the normal queue worker. Do not race it.
-    return False, old_job
+    submitted_job_id = sub.get("job_id") if isinstance(sub.get("job_id"), str) else None
+    old_job = _old_discovery_job(sub)
+    if old_job:
+        if old_job.get("type") != "discovery":
+            return None
+        if old_job.get("status") not in queue_worker.TERMINAL:
+            # A live real Discovery job still belongs to the normal queue worker.
+            return None
+    elif submitted_job_id is None and sub.get("operation") != "submit_discovery_round":
+        return None
+
+    replay = dict(sub)
+    replay["_file"] = source_submission
+    target = queue_worker.process_discovery_round_submission(replay, st, template_job=old_job)
+    return {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "submission": source_submission,
+        "ok": True,
+        "operation": "submit_discovery_round",
+        "recovered": bool(existing_result),
+        "ingested": True,
+        "submitted_job_id": submitted_job_id,
+        "job_id": target["job_id"],
+        "job_type": "discovery",
+        "job_status": target.get("status"),
+        "artifact": None,
+        "research_jobs_added": int((target.get("result_summary") or {}).get("research_jobs_added", 0) or 0),
+    }
+
+
+def _recover_legacy_terminal_submission(
+    sub: dict,
+    source_submission: str,
+    existing_result: dict,
+    st: dict,
+) -> dict[str, Any] | None:
+    """Recover old candidate-only payloads only from a verifiable terminal Discovery job."""
+    candidates = sub.get("candidates")
+    if not isinstance(candidates, list):
+        return None
+    submitted_job_id = sub.get("job_id")
+    if not isinstance(submitted_job_id, str) or not submitted_job_id:
+        return None
+    old_job = _old_discovery_job(sub)
+    if old_job.get("type") != "discovery" or old_job.get("status") not in queue_worker.TERMINAL:
+        return None
+
+    target = _create_legacy_recovery_job(source_submission, old_job)
+    replay = dict(sub)
+    replay["submitted_job_id"] = submitted_job_id
+    replay["job_id"] = target["job_id"]
+    replay["_file"] = source_submission
+    queue_worker.process_discovery(replay, target, st)
+    queue_worker.update_job(target)
+
+    return {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "submission": source_submission,
+        "ok": True,
+        "recovered": bool(existing_result) or True,
+        "submitted_job_id": submitted_job_id,
+        "job_id": target["job_id"],
+        "job_type": "discovery",
+        "job_status": "completed",
+        "artifact": None,
+        "research_jobs_added": int((target.get("result_summary") or {}).get("research_jobs_added", 0) or 0),
+    }
 
 
 def recover(root: Path) -> dict[str, Any]:
@@ -81,38 +184,22 @@ def recover(root: Path) -> dict[str, Any]:
             continue
 
         sub = _read(submission_path, {}) or {}
-        if not queue_worker.is_discovery_round_submission(sub):
+        if not isinstance(sub, dict):
             continue
-        eligible, template_job = _eligible_template_job(sub, existing_result)
-        if not eligible:
-            continue
-
         source_submission = submission_path.relative_to(queue_worker.ROOT).as_posix()
-        replay = dict(sub)
-        replay["_file"] = source_submission
-        target = queue_worker.process_discovery_round_submission(replay, st, template_job=template_job)
 
-        submitted_job_id = sub.get("job_id") if isinstance(sub.get("job_id"), str) else None
-        result = {
-            "schema_version": 1,
-            "workflow_version": 10,
-            "submission": source_submission,
-            "ok": True,
-            "operation": "submit_discovery_round",
-            "recovered": bool(existing_result),
-            "ingested": True,
-            "submitted_job_id": submitted_job_id,
-            "job_id": target["job_id"],
-            "job_type": "discovery",
-            "job_status": target.get("status"),
-            "artifact": None,
-        }
+        result = _recover_self_describing_round(sub, source_submission, existing_result, st)
+        if result is None:
+            result = _recover_legacy_terminal_submission(sub, source_submission, existing_result, st)
+        if result is None:
+            continue
+
         queue_worker.write_json(result_path, result)
         recovered.append({
             "submission": source_submission,
-            "submitted_job_id": submitted_job_id,
-            "job_id": target["job_id"],
-            "research_jobs_added": int((target.get("result_summary") or {}).get("research_jobs_added", 0) or 0),
+            "submitted_job_id": result.get("submitted_job_id"),
+            "job_id": result["job_id"],
+            "research_jobs_added": result.get("research_jobs_added", 0),
         })
 
     # Preserve the normal worker-facing Discovery lane independently of ingest jobs.
