@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-094313d78a4e4a604c9ad5a9","job_id":"job-research-53e75736382e3b98","data":{"limitations":"予備的なワークショップ評価で、単一A100、100GB DRAM、400GB SSD、1GB/s SSD読込という一構成に限られる。到着時刻はポアソン分布で合成し、品質曲線は各データセット10項目のオフライン標本から推定する。再利用頻度を過去命中から予測するため急な人気変化へ弱く、貪欲な限界効用方策は大域最適を保証しない。損失圧縮なので品質を完全保持する方式ではなく、タスク別評価指標が実利用者の品質感覚を十分表すかも別途検証が必要である。","differences":"CachedAttentionや階層KV保存はDRAM/SSDへKVを置いて容量を広げるが、圧縮を項目ごとに変えないためSSD命中遅延が残る。KIVIやStreamingLLMはKV自体を小さくするが、同じ方式・率を全項目へ適用する固定方策では内容ごとの圧縮耐性や再利用価値を利用できない。AdaptCacheはこの二系統を統合し、圧縮方式、圧縮率、保存階層、追い出しを同じ効用関数で選ぶ。SSDを単なる最終退避先ではなく、品質を守るため低圧縮KVを置く階層として積極的に使う点も特徴である。","implementation_status":"推定器・方策最適化器・実行器を備えた研究プロトタイプで、LongBench系1,100文脈を用いた実機評価を実施。公開コードURLは一次資料で確認できない。","research_positioning":"SSD活用型KVキャッシュ研究の中で、階層配置と損失圧縮を共同最適化する初期的研究に位置する。SSD帯域を直接高速化するのではなく、DRAMへ置ける有効KV数を圧縮で増やし、SSDアクセス頻度そのものを下げる。今後、NVMe並列I/O、非同期プリフェッチ、GPU直結ストレージなど転送側の高速化と組み合わせれば、SSD命中時の遅延とSSD命中率の両方を別々に改善できる可能性がある。"},"reservation":{"claim_id":"claim-094313d78a4e4a604c9ad5a9","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-de826a78cbdf67bd7f4c52a2",
+  "job_id": "job-research-8548d3d173ce3871",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-de826a78cbdf67bd7f4c52a2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

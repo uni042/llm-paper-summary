@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-094313d78a4e4a604c9ad5a9","job_id":"job-research-53e75736382e3b98","data":{"hardware":"1×NVIDIA A100 GPU、CPU DRAM 100GB、SSD 400GB。SSD読込スループットは1GB/sに設定。","software":"Llama-3.1-8B-Instruct。KV圧縮比較としてKIVIとStreamingLLMを使用。","methodology":"LongBench由来6データセットから1,100文脈を使い、要約・質問応答・コードの3タスク種別を評価する。元データに到着時刻がないため、既存研究に従い複数要求率のポアソン到着を合成する。比較対象は無圧縮DRAM+SSDオフロード、固定圧縮率のKIVI+LRU、StreamingLLM+LRU、KV再利用せず再プリフィルする方式。品質はタスク別F1、ROUGE-L、CodeBLEU、遅延は主に先頭トークン時間で測り、品質を揃えた場合の遅延と遅延を揃えた場合の品質を比較する。","scope":"短いワークショップ論文の予備評価であり、単一A100、Llama-3.1-8B-Instruct、合成到着時刻、1GB/s SSDという限定条件。推定器の品質曲線は各データセット10項目の標本とGPT-4o生成質問から作るため、未知分布への一般化や推定コストは今後の検証余地がある。"},"reservation":{"claim_id":"claim-094313d78a4e4a604c9ad5a9","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-de826a78cbdf67bd7f4c52a2",
+  "job_id": "job-research-8548d3d173ce3871",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-de826a78cbdf67bd7f4c52a2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

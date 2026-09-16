@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-094313d78a4e4a604c9ad5a9","job_id":"job-research-53e75736382e3b98","data":{"overview":"AdaptCacheは固定圧縮・固定配置よりDRAMへ多くの有用KVを残すことでSSD読み込みを減らし、品質と遅延のパレート前線を改善する。論文の要約値では3タスクで同品質時に1.43〜2.4倍の遅延削減、同遅延時に6〜55%の品質改善を報告する。詳細評価では無圧縮/再プリフィル比でTTFTを56%削減し品質低下を15%以内に抑え、KIVI比では同品質でTTFTを69%削減する例が示される。","key_results":[{"metric":"同品質での遅延","value":"1.43〜2.4倍削減","baseline":"最強固定圧縮方式","condition":"要約・QA・コードの3タスク","interpretation":"項目ごとに圧縮方式・率・階層を変えることでSSD命中を減らし、固定方策より低遅延になる。"},{"metric":"同遅延での品質","value":"6〜55%改善","baseline":"最強固定圧縮方式","condition":"3タスクの品質-遅延比較","interpretation":"圧縮耐性の低い項目を無理に強圧縮せず、容量節約効果の大きい項目へ圧縮を集中する利益を示す。"},{"metric":"TTFT","value":"KIVI比69%削減","baseline":"KIVI固定圧縮+LRU","condition":"同等品質条件","interpretation":"固定2bit量子化よりDRAM命中率を高める配置・圧縮共同判断が読み込み遅延を減らす。"},{"metric":"DRAM命中率の例","value":"最大81%（他の品質/遅延重みでは56%、44%、11%）","baseline":"コードタスクのKIVI 2bit LRUは38%","condition":"品質と遅延の重みを変えた方策","interpretation":"高速階層へ何を残すかを再利用頻度と圧縮耐性で選ぶことがSSDアクセス削減へ直結する。"}],"negative_results":"最適化はNP困難な多選択ナップサック問題を貪欲近似しており大域最適を保証しない。品質曲線は少数標本のオフライン計測に依存し、実負荷の内容分布や再利用頻度が変化すると推定誤差が増え得る。損失圧縮なので品質低下を完全には避けられず、遅延を優先する重みでは品質との交換が生じる。評価は単一A100と固定SSD帯域の予備実験である。","interpretation":"SSD容量を増やしてもSSD命中が多ければTTFTは悪化するため、階層メモリでは容量だけでなく高速階層への命中率が重要になる。KVごとに圧縮耐性と再利用価値が違うことを利用すると、同じDRAM容量でも保存できる有効項目数を増やし、低速階層へのアクセスを減らせる。","quality_impact":"損失圧縮を明示的に使うため品質影響は方式の中心的な交換条件である。AdaptCacheは品質を固定して遅延を下げる、または遅延を固定して品質を上げる形で評価し、単一の圧縮率ではなく利用者が設定する品質-遅延重みに沿って方策を変える。"},"reservation":{"claim_id":"claim-094313d78a4e4a604c9ad5a9","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-de826a78cbdf67bd7f4c52a2",
+  "job_id": "job-research-8548d3d173ce3871",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-de826a78cbdf67bd7f4c52a2",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

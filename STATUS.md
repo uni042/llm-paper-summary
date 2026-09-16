@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:19:12 JST**
+> 自動生成: **2026-09-16 12:19:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **55** |
-| 未claim Research job | **55** |
+| 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **28** |
-| 最終検証済みResearch収録 | **09-16 12:18:29 JST（43秒前）** |
+| 最終検証済みResearch収録 | **09-16 12:18:29 JST（52秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **20** | **1** | **1** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **21** | **7** | **1** | **6** | **1** | **0** | **6** |
+| 合計 | **21** | **7** | **1** | **6** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -162,10 +162,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2509.00105` — AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:18:51 JST** / heartbeat: **—** / lease expiry: **09-16 13:48:51 JST**
+  - claim: **09-16 12:18:51 JST** / heartbeat: **09-16 12:19:20 JST** / lease expiry: **09-16 13:49:20 JST**
   - evidence: `.survey/work-queue/claims/job-research-53e75736382e3b98.json`
+- `arXiv:2606.03910` — NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference / worker `scheduled-chat-llm-survey-20260916T025906Z`
+  - claim: **09-16 12:19:20 JST** / heartbeat: **—** / lease expiry: **09-16 13:49:20 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8548d3d173ce3871.json`
 
 #### Audit
 
