@@ -4,10 +4,42 @@
   "slot": "metadata",
   "attempt_id": "attempt-e4810cc94fabe510bad2fc16",
   "job_id": "job-research-6ae155bb5e134fe3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e4810cc94fabe510bad2fc16",
-    "worker_id": "manual-read-20260916-1109",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2607.18002",
+    "arxiv_id": "2607.18002",
+    "doi": "10.48550/arXiv.2607.18002",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels",
+    "summary": "ExpertPlexは、巨大なMoE大規模言語モデルをプリフィルとデコードへ分離する際、従来のインスタンス単位分離では両相にモデル全体を複製するため、95%以上を占めるMoEエキスパート重みが重複し、配置粒度・KVキャッシュ容量・障害範囲が悪化する問題を解くサービングシステムである。注意計算だけを相ごとに専用GPUへ分離し、巨大なMoEエキスパート群は両相で共有する。共有MoE GPUでは適応型永続カーネル（Adaptive Persistent Kernel; APK）がタイル単位で空間・時間多重化し、デコードを長さ非依存の上限で優先する。さらに注意側から片側通信を開始して相間の通信干渉と待ち合わせを避け、タイル対応の性能モデルで配置・並列度・重なり方を共同探索する。H800でMiniMax-M2.7とGLM-5.1-FP8を評価し、90%のTTFT/TPOTサービス水準目標を満たす有効スループットで、インスタンス単位のプリフィル・デコード分離比最大2.01倍、Green Context系の相多重化比最大1.66倍、単純同居比最大4.12倍を報告する。",
+    "list_summary": "注意計算だけを相分離し巨大MoEエキスパートを共有、タイル単位の適応型永続カーネルと注意側起動の片側通信で相間干渉を抑え、H800上でインスタンス単位P/D分離比最大2.01倍の有効スループットを達成する。",
+    "authors": ["Bingyang Wu", "Chao Jin", "Zili Zhang", "Xinming Wei", "Yinmin Zhong", "Ruidong Zhu", "Chengxu Yang", "Xin Jin", "Yuliang Liu"],
+    "published": "2026-07-20",
+    "publication": "arXiv:2607.18002v2 [cs.DC], revised 2026-07-21",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "arXiv v1は2026-07-20、v2は2026-07-21。査読会議・論文誌への採録はarXivページおよび本文では確認できない。",
+    "lineage": "moe-inference-expert-placement-caching",
+    "topics": ["MoE推論", "プリフィル・デコード分離", "エキスパート共有", "適応型永続カーネル", "片側通信", "GPU資源多重化", "有効スループット"],
+    "importance": "高。MoE重みを相ごとに複製する従来のP/D分離と、GPUを固定分割する同居方式の中間ではなく、注意計算は相分離しエキスパート計算だけを共有する新しい資源境界を置く。",
+    "hardware_evaluation": "実機。単一ノードは8基のNVIDIA H800をNVLink接続し、複数ノードは最大3台・計24基のH800を使用する。各ノードは8本の200 Gbps InfiniBand NICで接続する。",
+    "hardware_details": "MiniMax-M2.7は単一ノード、GLM-5.1-FP8は複数ノードで評価する。両モデルは各MoE層に256個のルーティング対象エキスパートを持ち、各トークンで8個を活性化する。",
+    "quality_effect": "モデル重みの近似・枝刈り・量子化を新たに導入する方式ではなく、同じMoE計算を配置・実行順序・通信経路の変更で高速化するため、生成品質を意図的に変更しない。論文の評価対象も品質指標ではなく、TTFT/TPOTのSLO達成率と有効スループットである。",
+    "storage_targets": ["GPU HBM上のMoEエキスパート重み", "GPU HBM上のKVキャッシュ", "MoE通信バッファ"],
+    "bottlenecks": ["P/D分離時の巨大MoE重み複製", "固定GPU分割による資源バブルと先頭待ち", "相間ネットワーク干渉", "疎なエキスパート負荷の層・GPU間変動", "広い並列度による注意通信増加"],
+    "evidence_locations": ["§2", "§3", "§4", "§5", "§6", "§7.1–7.6", "Figures 7–16"],
+    "source": "https://arxiv.org/abs/2607.18002",
+    "sources": ["https://arxiv.org/abs/2607.18002", "https://arxiv.org/pdf/2607.18002"],
+    "code": null,
+    "implementation": "DeepGEMM、DeepEP v1、SGLangを改変した研究実装。APKは2個のgrouped GEMM、活性化、MoE前後処理、CTAクラスタスケジューラを長寿命カーネルへ融合し、SGLangへ注意・MoE分離配置、専用トークン配送器、通信重畳戦略を追加している。論文・arXivページ上で公式ソースコード公開URLは確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [
+      {"canonical_id": "arXiv:2504.14489", "arxiv_id": "2504.14489", "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing"},
+      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104", "title": "SGLang: Efficient Execution of Structured Language Model Programs"},
+      {"canonical_id": "arXiv:2401.09670", "arxiv_id": "2401.09670", "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"}
+    ],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv v2 PDFの参考文献節（全60件を確認し、関連性の高い正規化可能な参照を抜粋）",
+    "references_total": 60
+  },
+  "reservation": {"claim_id": "claim-e4810cc94fabe510bad2fc16", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
 }
