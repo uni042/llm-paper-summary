@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:12:37 JST**
+> 自動生成: **2026-09-16 15:12:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **42** |
-| 未claim Research job | **39** |
+| 未claim Research job | **38** |
 | 直近24hの検証済みResearch収録 | **49** |
 | 最終検証済みResearch収録 | **09-16 15:11:26 JST（1分前）** |
 | 整合性異常 | **0** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **12** | **6** | **6** | **4** | **1** | — |
+| Research | **38** | **12** | **6** | **6** | **5** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **39** | **31** | **6** | **25** | **4** | **1** | **23** |
+| 合計 | **39** | **31** | **6** | **25** | **5** | **1** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -203,7 +203,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
+- IFMoE: An Inference Framework Design for Fine-grained MoE / worker `scheduled-chat-hourly-survey-20260916T145717JST`
+  - claim: **09-16 15:12:39 JST** / heartbeat: **—** / lease expiry: **09-16 16:42:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3190de0b496967f3.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
