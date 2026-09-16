@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-7b525e11834c9519",
+  "type": "research",
+  "parent_job_id": "job-d3ce6dd6b63f861f",
+  "priority": 78,
+  "canonical_id": "arXiv:2604.09613",
+  "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference",
+  "source_url": "https://arxiv.org/abs/2604.09613",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.09613-token-budget-aware-pool-routing.md",
+  "selection_reason": "worst-case contextで全vLLM instanceを設定するconfiguration-traffic mismatchを、short/longの異なるpoolとonline token-budget推定で解消する軽量routing。Azure/LMSYS tracesでGPU instance 17〜39%削減を報告し、複雑なschedulerではなくfleet configurationとroutingの境界を扱う。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T10:09:35+00:00"
+}

@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T10:07:42+00:00",
+  "updated_at": "2026-09-16T10:09:39+00:00",
   "last_run_key": "2026-09-16T19:00:00+09:00",
-  "last_round": "specialist-agent-storage-15",
+  "last_round": "specialist-older-omissions-21",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 7,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -6149,6 +6149,117 @@
       ],
       "next_axis_hint": "新着とGPU runtimeを確認後、candidate inventory反映を再取得する",
       "source_submission": "work-queue/submissions/20260916T1945JST-discovery-specialist-agent-storage-15.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-forward-reset-16",
+      "axis": "最新novel候補群のforward citation・派生追跡",
+      "query_summary": "ITME、CrossPool、DualPath、MetaKVを起点に被引用・派生研究を探索した。検索結果は元論文・解説・既知基盤への参照が中心で、新規強候補は得られなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.12556",
+        "arXiv:2606.24506",
+        "arXiv:2602.21548",
+        "arXiv:2609.07966"
+      ],
+      "next_axis_hint": "最新novel候補群のbackward referenceを確認する",
+      "source_submission": "work-queue/submissions/20260916T1948JST-discovery-specialist-forward-reset-16.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-backward-megascale-17",
+      "axis": "CrossPool backward reference・MoE disaggregated expert parallelism基盤",
+      "query_summary": "CrossPoolの参考文献を辿り、PagedAttention/MuxServe等の既知基盤と比較してMegaScale-Inferがrepository未収録であることを確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "PagedAttention:SOSP23",
+        "DistServe:OSDI24",
+        "MuxServe:ICML24"
+      ],
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。Tarragon等MegaScale-Infer後続、最新MoE resilience、OS/storage、network、新着を再一巡する",
+      "source_submission": "work-queue/submissions/20260916T1951JST-discovery-specialist-backward-megascale-17.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-moe-resilience-18",
+      "axis": "MoE serving resilience・KV checkpoint・shadow experts",
+      "query_summary": "MegaScale-Inferの後続・比較研究を探索し、worker failureをattention/expert別に局所回復するTarragonをrepository未収録の強候補として確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2504.02263"
+      ],
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。新着9月、OS/storage、network、GPU runtime、agentic KV、forward/backwardを再一巡する",
+      "source_submission": "work-queue/submissions/20260916T1953JST-discovery-specialist-moe-resilience-18.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-lossless-weights-19",
+      "axis": "GPU runtime・lossless weight compression・fused decompression GEMM",
+      "query_summary": "GPU runtime/compiler、memory bandwidth、model storageを横断して探索し、lossless compressionをTensor Core実行と融合するZipServを未収録候補として確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.13327",
+        "arXiv:2607.08786"
+      ],
+      "next_axis_hint": "candidate在庫反映を再確認し、50超ならoverflow researchへ切替。未反映なら新着・重点軸を継続する",
+      "source_submission": "work-queue/submissions/20260916T1956JST-discovery-specialist-lossless-weights-19.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-serving-elasticity-20",
+      "axis": "MoE serverless elasticity・token-budget fleet routing",
+      "query_summary": "2026年3〜5月のserving system未収録候補を再走査し、MoE elastic scalingとfleet-level token-budget routingの2件を選定した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.07609",
+        "arXiv:2606.15555",
+        "arXiv:2602.02987"
+      ],
+      "next_axis_hint": "candidate inventoryがoverflow thresholdへ近づいている可能性があるためcanonical state反映を確認し、50超ならresearchへ切替する",
+      "source_submission": "work-queue/submissions/20260916T1959JST-discovery-specialist-serving-elasticity-20.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-older-omissions-21",
+      "axis": "2025重要未収録・CXL KV・multi-GPU MoE・edge expert streaming",
+      "query_summary": "2025年の重要システム論文をCXL memory、MoE load balance、edge expert loadingの3系統で再走査し、repository code searchで未収録の3件を選定した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.4,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2504.02263",
+        "arXiv:2407.00079"
+      ],
+      "next_axis_hint": "canonical candidate inventory反映を確認し、overflow threshold到達時はresearchへ切り替える",
+      "source_submission": "work-queue/submissions/20260916T2002JST-discovery-specialist-older-omissions-21.json"
     }
   ],
   "axes": {
@@ -9761,6 +9872,66 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "新着とGPU runtimeを確認後、candidate inventory反映を再取得する"
+    },
+    "最新novel候補群のforward citation・派生追跡": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "最新novel候補群のbackward referenceを確認する"
+    },
+    "CrossPool backward reference・MoE disaggregated expert parallelism基盤": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。Tarragon等MegaScale-Infer後続、最新MoE resilience、OS/storage、network、新着を再一巡する"
+    },
+    "MoE serving resilience・KV checkpoint・shadow experts": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。新着9月、OS/storage、network、GPU runtime、agentic KV、forward/backwardを再一巡する"
+    },
+    "GPU runtime・lossless weight compression・fused decompression GEMM": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "candidate在庫反映を再確認し、50超ならoverflow researchへ切替。未反映なら新着・重点軸を継続する"
+    },
+    "MoE serverless elasticity・token-budget fleet routing": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "next_axis_hint": "candidate inventoryがoverflow thresholdへ近づいている可能性があるためcanonical state反映を確認し、50超ならresearchへ切替する"
+    },
+    "2025重要未収録・CXL KV・multi-GPU MoE・edge expert streaming": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.4,
+      "next_axis_hint": "canonical candidate inventory反映を確認し、overflow threshold到達時はresearchへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

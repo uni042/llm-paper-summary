@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T10:08:50.591527+00:00",
+  "updated_at": "2026-09-16T10:10:59.942341+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T10:08:50.591527+00:00",
+      "last_recorded_at": "2026-09-16T10:10:59.942341+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 150,
         "audit_completed": 0,
-        "discovery_completed": 68,
+        "discovery_completed": 74,
         "blocked": 9,
-        "new_jobs": 90,
+        "new_jobs": 100,
         "new_papers": 154,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35049101472:1",
-          "recorded_at": "2026-09-16T02:44:01.703924+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35049101472",
-            "run_attempt": "1",
-            "source_sha": "ba2b188b1636ef3dd627589ff2ecb1f4d54698b4"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35049241035:1",
           "recorded_at": "2026-09-16T02:46:11.643330+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35083155368",
             "run_attempt": "1",
             "source_sha": "c6309de57095e893df60702d119e5f57457ef6fa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35083326858:1",
+          "recorded_at": "2026-09-16T10:10:59.942341+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35083326858",
+            "run_attempt": "1",
+            "source_sha": "1d675f9f2ce76ab39eee221e2d2c33df8977cf6b"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -21416,6 +21416,54 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-1841f9aee27aaf8d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b591b2d66fccf94b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c84655fcb83515d9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d3ce6dd6b63f861f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e051a1409a2f239c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e624f05db74fe563",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22048,6 +22096,76 @@
           "type": "research",
           "canonical_id": "arXiv:2603.22774",
           "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference"
+        },
+        {
+          "job_id": "job-1841f9aee27aaf8d",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-b591b2d66fccf94b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-c84655fcb83515d9",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-d3ce6dd6b63f861f",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e051a1409a2f239c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e624f05db74fe563",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-1a835bd497ae941f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.12417",
+          "title": "HarMoEny: Efficient Multi-GPU Inference of MoE Models"
+        },
+        {
+          "job_id": "job-research-431f09f6206f16eb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.01310",
+          "title": "Making MoE based LLM inference resilient with Tarragon"
+        },
+        {
+          "job_id": "job-research-7b525e11834c9519",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09613",
+          "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-8473b19fc0026661",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.20172",
+          "title": "Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management"
         }
       ],
       "new_paper_ids": [
@@ -22378,7 +22496,13 @@
         ".survey/work-queue/results/20260916T1936JST-discovery-specialist-cxl-tiering-12.json",
         ".survey/work-queue/results/20260916T1939JST-discovery-specialist-moe-memory-pool-13.json",
         ".survey/work-queue/results/20260916T1942JST-discovery-specialist-network-kv-14.json",
-        ".survey/work-queue/results/20260916T1945JST-discovery-specialist-agent-storage-15.json"
+        ".survey/work-queue/results/20260916T1945JST-discovery-specialist-agent-storage-15.json",
+        ".survey/work-queue/results/20260916T1948JST-discovery-specialist-forward-reset-16.json",
+        ".survey/work-queue/results/20260916T1951JST-discovery-specialist-backward-megascale-17.json",
+        ".survey/work-queue/results/20260916T1953JST-discovery-specialist-moe-resilience-18.json",
+        ".survey/work-queue/results/20260916T1956JST-discovery-specialist-lossless-weights-19.json",
+        ".survey/work-queue/results/20260916T1959JST-discovery-specialist-serving-elasticity-20.json",
+        ".survey/work-queue/results/20260916T2002JST-discovery-specialist-older-omissions-21.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
