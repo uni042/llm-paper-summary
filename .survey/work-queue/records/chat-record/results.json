@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9333f33610f25827f87c2af1",
-  "job_id": "job-research-99325bb434e8c117",
-  "data": {
-    "overview": "整数量子化と辞書型KV圧縮を同時適用してもLongBench平均はLlama-3.1-8Bで44.07から43.65、Qwen-2.5-7Bで44.44から44.23に留まり、基準品質の約99%を維持した。その一方、各デコード段階で動的に読み書きするKV量は約15分の1になる。解析システムモデルでは、短文脈では重みをCIMフラッシュへ常駐させる効果、長文脈ではKV転送削減の効果が支配的となり、実用寄りのS2構成で1K文脈は3.07倍の遅延改善と2.69倍のエネルギー改善、256K文脈は4.40倍と6.75倍へ拡大する。",
-    "key_results": [
-      {"metric": "動的KV圧縮率", "value": "15x", "baseline": "FP16 full KV cache = 1x", "condition": "Llama-3.1-8B、階層疎性K_low=3/K_high=16", "interpretation": "静的辞書を容量計算から除いた動的メモリ転送量で約15分の1となり、フラッシュへ頻繁に書く状態量を大幅に減らす。"},
-      {"metric": "LongBench平均", "value": "43.65 vs 44.07", "baseline": "Llama-3.1-8B FP16 full KV", "condition": "整数量子化と辞書型KV圧縮の併用", "interpretation": "平均低下は0.42点で、圧縮・整数化を同時適用しても基準の約99%を維持する。"},
-      {"metric": "LongBench平均", "value": "44.23 vs 44.44", "baseline": "Qwen-2.5-7B FP16 full KV", "condition": "整数量子化と辞書型KV圧縮の併用", "interpretation": "モデルを変えても平均低下は0.21点に留まるが、個別タスクでは改善と悪化が混在するため完全無損失ではない。"},
-      {"metric": "トークン間時間", "value": "59.9 ms, 3.07x improvement", "baseline": "B1 NPU+DDR5 183.7 ms", "condition": "S2、Llama-3.1-8B、batch 1、1K context", "interpretation": "短文脈でもCIM常駐重みと整数実行によりDRAM重み転送を避ける効果が大きい。"},
-      {"metric": "トークン間時間", "value": "143.5 ms, 4.40x improvement", "baseline": "B1 NPU+DDR5 631.5 ms", "condition": "S2、Llama-3.1-8B、batch 1、256K context", "interpretation": "文脈が長くなると通常方式のKV読出し量が増えるため、圧縮履歴を使う提案方式の相対利得が拡大する。"},
-      {"metric": "デコード当たりエネルギー", "value": "52.5 J, 6.75x improvement", "baseline": "B1 NPU+DDR5 354.5 J", "condition": "S2、Llama-3.1-8B、batch 1、256K context", "interpretation": "長文脈ではDRAMと外部転送のKVエネルギーが支配的になり、フラッシュ内部計算と圧縮による転送削減が特に効く。"}
-    ],
-    "negative_results": "辞書圧縮を通常NPU+DRAM上で行うB2は1K文脈で190.4 msとなり、非圧縮B1の183.7 msより遅い。辞書をDRAMから繰り返し読む固定費と圧縮計算が短文脈ではKV削減益を上回るためで、辞書方式だけをGPU/NPUへ移しても常に高速化するわけではない。またQwen-2.5-7BのLongBenchではlccが66.68から59.48へ低下する一方、multifieldqa-enや2wikimqaは上昇しており、平均値が近くてもタスク別の近似誤差は無視できない。",
-    "interpretation": "利得が文脈長とともに増える理由は、通常方式ではKVキャッシュが線形に増え、毎トークンでDRAMから読むデータ量とエネルギーが増えるのに対し、提案方式は長期履歴を疎符号へ変え、巨大な辞書をフラッシュ内部で再利用するためである。短文脈では重み常駐の効果が主で、KV圧縮単体は固定費に負ける場合がある。S1は係数をSRAMへ置くためエネルギーに優れるが長文脈で容量制約を受け、S2はDRAMへ係数を逃がす追加通信と引き換えに256Kまで扱い、結果として長文脈ではS1より低遅延になる。",
-    "quality_impact": "近似圧縮と低精度化を含むため無損失ではない。平均では2モデルともFP16基準の約99%を維持し、15倍の動的KV圧縮に対する品質低下は小さいが、タスク単位では数点規模の低下が存在する。システム高速化値は解析推定であり、実CIM-SSD上で同じ品質・性能を同時に実測した結果ではない。"
-  },
-  "reservation": {"claim_id": "claim-9333f33610f25827f87c2af1", "worker_id": "scheduled-chat-20260917t043138-0900", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5f751e3b4a448f7f2f7978ae",
+  "job_id": "job-research-71c206bf0990ca87",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5f751e3b4a448f7f2f7978ae",
+    "worker_id": "scheduled-chat-20260917t043138-0900",
+    "worker_kind": "scheduled_chat"
+  }
 }
