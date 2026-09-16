@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:06:08 JST**
+> 自動生成: **2026-09-16 14:06:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **36** |
-| 最終検証済みResearch収録 | **09-16 14:03:41 JST（2分前）** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **46** |
+| 直近24hの検証済みResearch収録 | **37** |
+| 最終検証済みResearch収録 | **09-16 14:06:12 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **2** | **1** | **1** | **4** | **1** | — |
+| Research | **23** | **2** | **2** | **0** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **23** | **7** | **1** | **6** | **4** | **1** | **24** |
+| 合計 | **24** | **7** | **2** | **5** | **4** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:06:12 JST** [research] `arXiv:2606.11244` — SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-1dd6544d5f77b687.json`
+  - result: `.survey/work-queue/results/research/attempt-ad4afba2a1cd0b175dc4bc13.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ad4afba2a1cd0b175dc4bc13.json`
+  - paper: `papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md`
 - **09-16 14:03:41 JST** [research] `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
   - result: `.survey/work-queue/results/research/attempt-2155991e74d60ac74b2163d1.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-14822aa228c007fac68c1df2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-14822aa228c007fac68c1df2.json`
   - paper: `papers/inference/05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md`
-- **09-16 12:18:29 JST** [research] `arXiv:2607.23933` — SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving
-  - job: `.survey/work-queue/jobs/job-research-4055e74aec47c94e.json`
-  - result: `.survey/work-queue/results/research/attempt-e5b7d8bd8cb604c35cc21abd.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e5b7d8bd8cb604c35cc21abd.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md`
 
 ### Audit
 
@@ -115,13 +115,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
   - result: `.survey/work-queue/results/research/attempt-2155991e74d60ac74b2163d1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json`
   - paper: `papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-ad4afba2a1cd0b175dc4bc13.json` (job `job-research-1dd6544d5f77b687`)
+- **成功** `arXiv:2606.11244` — SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-1dd6544d5f77b687.json`
+  - result: `.survey/work-queue/results/research/attempt-ad4afba2a1cd0b175dc4bc13.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ad4afba2a1cd0b175dc4bc13.json`
+  - paper: `papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md`
 
 #### Audit (:30)
 
@@ -191,7 +195,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -211,7 +215,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **577** |
+| inference/training/survey配下の論文Markdown実体 | **578** |
 
 ### immutable submissionの未照合
 
@@ -219,8 +223,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **280** |
-| └ Research | **166** |
+| 成功result未照合のimmutable submission | **279** |
+| └ Research | **165** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job

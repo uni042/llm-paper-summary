@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:03:45.574729+00:00",
+  "updated_at": "2026-09-16T05:06:16.856449+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:03:45.574729+00:00",
+      "last_recorded_at": "2026-09-16T05:06:16.856449+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 113,
+        "research_completed": 114,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34926814810:1",
-          "recorded_at": "2026-09-15T03:58:08.271584+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34926814810",
-            "run_attempt": "1",
-            "source_sha": "c79f56d1eaf1c8e68a717b9e90c99064f87dbbe8"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34927059539:1",
           "recorded_at": "2026-09-15T04:01:42.024315+00:00",
@@ -19596,6 +19581,20 @@
             "run_id": "35057988092",
             "run_attempt": "1",
             "source_sha": "8072800eee1991c62b4e231f85523ead09933313"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35058132727:1",
+          "recorded_at": "2026-09-16T05:06:16.856449+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35058132727",
+            "run_attempt": "1",
+            "source_sha": "f654fb07a391b18415bb226a00c1ad89b5059c76"
           },
           "signals": [
             "research_completed"
@@ -20808,6 +20807,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.21427",
           "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-1dd6544d5f77b687",
+          "type": "research",
+          "canonical_id": "arXiv:2606.11244",
+          "title": "SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving",
           "from": "ready",
           "to": "completed"
         }
