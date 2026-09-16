@@ -1,0 +1,87 @@
+name: Discovery identity snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/jobs/*.json'
+      - '.survey/survey-state/paper-identity-index.json'
+      - '.survey/survey-state/identity-deltas/**/*.json'
+      - 'papers/**/*.md'
+      - '.survey/scripts/build_discovery_identity_snapshot.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-background-main
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Build authoritative Discovery identity shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python .survey/scripts/build_discovery_identity_snapshot.py \
+            --root .survey \
+            --source-commit "$(git rev-parse HEAD)"
+
+      - name: Commit snapshot if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-identity-snapshot[bot]'
+          git config user.email 'survey-identity-snapshot[bot]@users.noreply.github.com'
+          git add .survey/work-queue/discovery-identities
+
+          if git diff --cached --quiet; then
+            echo 'Discovery identity snapshot is already current.'
+            exit 0
+          fi
+
+          git commit -m 'survey: refresh discovery identity snapshot'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "Rebase failed on attempt ${attempt}." >&2
+              continue
+            fi
+
+            # Rebuild after rebasing so the snapshot reflects any identity changes that
+            # landed while this workflow was running. The source commit deliberately
+            # points at the authoritative main tip beneath this derived snapshot commit.
+            python .survey/scripts/build_discovery_identity_snapshot.py \
+              --root .survey \
+              --source-commit "$(git rev-parse origin/main)"
+            git add .survey/work-queue/discovery-identities
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo 'Failed to publish Discovery identity snapshot after retries.' >&2
+          exit 1
