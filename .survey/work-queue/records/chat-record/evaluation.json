@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-9fdbbab13803c394452c3f1f",
-  "job_id": "job-research-1a835bd497ae941f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9fdbbab13803c394452c3f1f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
+ "data":{"hardware":"マルチGPU実機を使用し、負荷偏り分析では8基のNVIDIA V100を搭載したDGX環境を用いる。専門家を複数GPUへ分割した専門家並列構成で、GPUごとの処理時間と待ち時間を測定する。","software":"HarMoEnyはPyTorch上に実装され、比較対象としてExFlow、FastMoE、FasterMoE、DeepSpeed-Tutelを用いる。公開実装は著者のGitHubリポジトリで提供される。","methodology":"Switch Transformer系の128専門家モデルやQwen系MoEを用い、BookCorpusなどの実データと人工的に専門家人気を偏らせた合成条件を評価する。スループット、先頭トークンまでの時間、GPU待ち時間を比較し、偏りの強さやバッチ間で人気が変動する条件を含める。負荷分散スケジューラの寄与を切り分けるアブレーションも行い、静的配置・複製・事前プロファイル方式が急速な変動へ追随できるかを比較する。","scope":"実機の専門家並列推論を対象とする。論文の主張は、専門家人気が強く偏り、その偏りが入力やバッチごとに変化する条件で特に重要である。負荷が元から均等な場合は再配置余地が小さく、専門家先読みのCPU・GPU間転送を十分に隠せないハードウェアでは利益が縮小し得る。"},
+ "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
