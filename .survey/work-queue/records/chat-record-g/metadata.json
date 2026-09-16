@@ -2,66 +2,87 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-226be98ea8113e9efe7a3af3",
-  "job_id": "job-research-cffb14eec24a02c2",
+  "attempt_id": "attempt-8834d311401a99e374c1300d",
+  "job_id": "job-research-795118fce8eb1845",
   "data": {
-    "canonical_id": "arXiv:2609.04244",
-    "arxiv_id": "2609.04244",
-    "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
-    "summary": "自己回帰復号のMoE層では各専門家へ届くトークンが少なく、従来のトークン主導型グループ行列積はタイルの大半をパディングし、短いカーネルを多数起動して高帯域メモリを十分に使えない。MonoMoEは並列性の軸をトークンから専門家重みへ移し、復号ステップ全体のトークンをテンソルコアの細粒度N軸へ置く重み主導型分解を採用する。さらにルーティング、上位k選択、量子化、二段の専門家射影、活性化、縮約を一つの常駐巨大カーネルへ融合し、補助処理を重み読み出しと重ねる。H200上のvLLM評価では完全なMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮しながら下流課題精度を維持した。",
-    "source": "https://arxiv.org/abs/2609.04244",
-    "sources": [
-      "https://arxiv.org/abs/2609.04244",
-      "https://arxiv.org/html/2609.04244"
-    ],
-    "authors": [
-      "Yu Gong",
-      "Kailash Budhathoki",
-      "Taeho Kim",
-      "Haipeng Li",
-      "Ashish Khetan"
-    ],
-    "published": "2026-08-19",
-    "publication": "arXiv preprint; preliminary work under MLSys review",
-    "publication_type": "preprint",
-    "publication_status": "under review",
+    "canonical_id": "arXiv:2412.16187",
+    "arxiv_id": "2412.16187",
+    "doi": "10.48550/arXiv.2412.16187",
+    "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": []
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.CL",
+        "cs.DS",
+        "cs.PF"
+      ]
     },
-    "topics": [
-      "MoE inference",
-      "GPU kernel",
-      "persistent kernel",
-      "FP8",
-      "vLLM",
-      "FlashInfer"
+    "title": "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
+    "summary": "KVキャッシュのトークン削除を注意計算後の累積スコアではなく、注意計算前の局所性鋭敏型ハッシュ（LSH）で決める方式。各attention headでkeyと現在queryをランダム射影して短い2値ハッシュへ変換し、Hamming距離が最も大きい、すなわちcosine類似度が低く低attentionと予想される過去トークンのKVを新トークンで置換する。固定キャッシュ予算で30～70%圧縮しても推論、選択式QA、長文検索、要約で高い品質を維持し、MultiNewsではH2O/Scissorhandsよりプリフィルが約1.5倍高速、FastGenより約17倍高速と報告する。",
+    "list_summary": "query/keyの短いLSHハッシュ間Hamming距離で低attention候補を事前推定し、attentionを計算する前にKVを動的置換する。",
+    "authors": [
+      "Minghui Liu",
+      "Tahseen Rabbani",
+      "Tony O'Halloran",
+      "Ananth Sankaralingam",
+      "Mary-Anne Hartley",
+      "Furong Huang",
+      "Cornelia Fermüller",
+      "Yiannis Aloimonos"
     ],
-    "implementation": "CUDAで実装しvLLMへ統合。公式実装と補助成果物はFlashInferリポジトリのcsrc/fused_moe/monomoeで公開されている。",
-    "code": "https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe",
-    "hardware_evaluation": "NVIDIA H200 GPUを使用。各GPUは132 SM、141GB HBM3e、ピーク帯域4.8TB/s。Qwen系は単一GPU、DeepSeek-V3.1とGLM-5.2はテンソル並列8で評価。",
-    "quality_effect": "演算順序とFP8実装差による数値差はあるが、FP32参照とのコサイン類似度は全条件で0.998以上。GSM8KとHumanEvalではベースラインとの差が統計誤差内またはMonoMoE有利で、測定可能な精度劣化は報告されていない。",
+    "published": "2024-12-13",
+    "publication": "arXiv:2412.16187v3",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "v1 2024-12-13、現行v3 2025-06-04。",
+    "lineage": "other-inference-systems",
+    "topics": [
+      "KVキャッシュ圧縮",
+      "token eviction",
+      "locality-sensitive hashing",
+      "pre-attention eviction",
+      "long-context inference"
+    ],
+    "importance": "H2OやScissorhandsのようなattention累積型削除は重要度を得るためにattentionを一度計算する。HashEvictはquery-key幾何を短い2値ハッシュで近似し、削除対象をattention前に決めるため、メモリ削減だけでなく不要tokenへのattention計算自体も避けられる。",
+    "hardware_evaluation": "NVIDIA L4 24GB（Google Cloud G2）を主評価、16K要約はNVIDIA H100 80GB。",
+    "quality_effect": "近似削除のためキャッシュ予算が極端に小さいと品質低下する。10～90%予算で評価し、30～70%圧縮域では複数タスクで高品質を維持。",
+    "source": "https://arxiv.org/abs/2412.16187",
+    "sources": [
+      "https://arxiv.org/abs/2412.16187",
+      "https://arxiv.org/html/2412.16187",
+      "https://arxiv.org/pdf/2412.16187"
+    ],
+    "code": null,
+    "implementation": "論文はAnswerDotAI/cold-compressのforkとして公開予定と記載。評価実装は2値値を1bitではなく8bitで保持しており、真のbit packingで追加メモリをさらに8分の1にできる。",
+    "last_checked": "2026-09-16",
     "references": [
       {
-        "canonical_id": "arXiv:2107.03374",
-        "arxiv_id": "2107.03374"
+        "canonical_id": "arXiv:2310.01801",
+        "arxiv_id": "2310.01801",
+        "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs"
       },
       {
-        "canonical_id": "arXiv:2110.14168",
-        "arxiv_id": "2110.14168"
+        "canonical_id": "arXiv:2406.11430",
+        "arxiv_id": "2406.11430",
+        "title": "A Simple and Effective Norm-Based Strategy for KV Cache Compression"
       },
       {
-        "canonical_id": "arXiv:2412.19437",
-        "arxiv_id": "2412.19437"
+        "canonical_id": "arXiv:2406.12335",
+        "arxiv_id": "2406.12335",
+        "title": "Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters"
+      },
+      {
+        "canonical_id": "arXiv:2402.06082",
+        "arxiv_id": "2402.06082",
+        "title": "SubGen: Token Generation in Sublinear Time and Memory"
       }
     ],
-    "references_checked_at": "2026-09-16T06:18:00Z",
-    "references_source": "arXiv HTML reference section",
-    "references_total": 18,
-    "last_checked": "2026-09-16"
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv v3 HTML参考文献節",
+    "references_total": 4
   },
   "reservation": {
-    "claim_id": "claim-226be98ea8113e9efe7a3af3",
+    "claim_id": "claim-8834d311401a99e374c1300d",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

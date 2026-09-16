@@ -2,53 +2,66 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-226be98ea8113e9efe7a3af3",
-  "job_id": "job-research-cffb14eec24a02c2",
+  "attempt_id": "attempt-8834d311401a99e374c1300d",
+  "job_id": "job-research-795118fce8eb1845",
   "data": {
-    "overview": "MonoMoEは少トークンほど大きな改善を示し、Qwen3.5-35Bでは完全なルーティング済みMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮した。トークン前処理除去だけで13.2〜26.7%のカーネル時間を削り、実効メモリ帯域を最大2.00倍へ高める。テンソル並列8では通信と非MoE処理が利得を薄めるが、多くの条件で短縮を維持した。",
+    "overview": "HashEvictは30～70%のKV圧縮域でreasoning、multiple-choice、long-context retrieval、summarizationの品質を高く維持し、attention-free norm evictionを広範に上回る。GSM8Kでは50% budgetでもBERTScore F1 0.880、MedQAでは0.855で、H2O/Scissorhandsと同等または上回る条件がある。MultiNewsでは30～90% budgetでprefill約20.3～21.2k tokens/s、decode約22.8 tokens/sを示し、H2O/Scissorhandsのprefill約13～14kより約1.5倍速い。50% budgetのattention lossは0.0336でnorm-based 0.0340とScissorhands 0.0448を下回る。",
     "key_results": [
       {
-        "metric": "完全MoE演算遅延",
-        "value": "最大1.54倍高速化",
-        "baseline": "vLLM Triton grouped-GEMM fused_moe",
-        "condition": "H200、Qwen3.5-35B-A3B、復号トークン数1〜8",
-        "interpretation": "ルーティング、量子化、二段射影、活性化、縮約を含む同一演算境界での総合効果。"
+        "metric": "KV compression with quality retention",
+        "value": "30–70% compression with strong task performance",
+        "baseline": "full cache and eviction baselines",
+        "condition": "reasoning, MCQ, retrieval, summarization",
+        "interpretation": "attention計算前のLSH関連度だけでも広いtaskで有用tokenを残せる。"
       },
       {
-        "metric": "FlashMoE-FP8比",
-        "value": "2.20〜3.84倍高速",
-        "baseline": "FlashMoE-FP8",
-        "condition": "4モデルの対応点",
-        "interpretation": "単一起動化だけでなく重み主導分解の効果を示す。"
+        "metric": "GSM8K BERTScore F1",
+        "value": "0.880 at 50% cache budget",
+        "baseline": "norm 0.875, H2O 0.881, Scissorhands 0.879",
+        "condition": "Llama3-8B-Instruct",
+        "interpretation": "attention累積なしでattention-based方式に近い品質。"
       },
       {
-        "metric": "出力トークン時間",
-        "value": "Qwen3.5-35Bで9.9〜18.7%短縮",
-        "baseline": "vLLM Grouped GEMM",
-        "condition": "Sonnet負荷、同時要求1〜8",
-        "interpretation": "カーネル改善が実サービング復号遅延へ反映される。"
+        "metric": "MedQA BERTScore F1",
+        "value": "0.855 at 50% cache budget",
+        "baseline": "norm 0.853, H2O 0.839, Scissorhands 0.839",
+        "condition": "100-question sample",
+        "interpretation": "reasoning QAではattention-based heavy-hitterより高い条件がある。"
       },
       {
-        "metric": "実効メモリ帯域",
-        "value": "ピーク比10.62%から21.20%へ2.00倍",
-        "baseline": "vLLM Grouped GEMM",
-        "condition": "Qwen3.5-35B、B=1",
-        "interpretation": "常駐グリッドによる連続重み読み出しの効果。"
+        "metric": "MultiNews prefill throughput",
+        "value": "~20.3–21.2k tokens/s at 30–90% budgets",
+        "baseline": "H2O/Scissorhands ~13.0–14.1k tokens/s",
+        "condition": "Llama3.1-8B-Instruct, H100",
+        "interpretation": "attention score蓄積を避けることで約1.5倍prefill。"
       },
       {
-        "metric": "数値一致度",
-        "value": "コサイン類似度0.998以上",
-        "baseline": "FP32参照",
-        "condition": "全モデル形状とB=1,2,4,8",
-        "interpretation": "高速化による大きな数値誤差を確認しない。"
+        "metric": "FastGen prefill comparison",
+        "value": "~17× faster",
+        "baseline": "FastGen ~1.14–1.17k tokens/s",
+        "condition": "MultiNews throughput table",
+        "interpretation": "profiling/attention recoveryを含むhybrid方式より軽い。"
+      },
+      {
+        "metric": "attention loss ratio",
+        "value": "0.0336",
+        "baseline": "norm 0.0340, Scissorhands 0.0448, H2O 0.0139",
+        "condition": "GSM8K, 50% cache",
+        "interpretation": "LSHはnorm-basedより僅かに低くScissorhandsより低いattention massを捨てるが、H2Oには及ばない。"
       }
     ],
-    "negative_results": "利得はトークン数増加とともに縮小し、単体カーネルではB=1の1.19〜1.54倍からB=8の1.02〜1.17倍へ低下する。テンソル並列8では通信と非MoE部分が局所改善を希釈する。専門家並列通信を巨大カーネルへ融合した試作は単一ノード小バッチでは性能同等で、通信融合が常に有利ではなかった。",
-    "interpretation": "少トークン時は専門家ごとのMタイルが空き、トークン軸の並列性が不足するため重み側分割が効く。トークン数が増えると従来方式でもタイルが埋まり、前処理と起動境界を償却できるので差が縮む。",
-    "quality_impact": "GSM8KとHumanEvalでは全モデルでvLLM基準と同等またはMonoMoE有利で、MonoMoE平均が低い場合も差は合成標準誤差より小さい。論文は測定可能な精度劣化なしと結論している。"
+    "negative_results": [
+      "cache budget 10%ではGSM8K等で品質低下が明確になり、極端な圧縮ではattention-based H2O/Scissorhandsが上回る条件がある。",
+      "Needle-in-a-Haystackでは50%以下で全方式のneedle recallが急落し、LSHでも情報消失を避けられない。",
+      "GovReportでは30～70%でnorm-basedと同程度またはやや上だが、H2O/Scissorhandsより低い条件がある。",
+      "実装は2値hashを8bit値で保持しており、理論的なbit-packed memory最適化をまだ実装していない。",
+      "Hamming scanはcache budgetが固定ならstep当たり定数だが、固定B自体が大きい場合は全cached key hashとの比較を行う。"
+    ],
+    "quality_impact": "近似evictionなのでfull cacheと完全同値ではない。中程度budgetでは複数taskで品質を維持または一部改善するが、10%など強い圧縮では低下する。",
+    "interpretation": "attention重要度を得るためにattentionを計算するという循環を、query-key幾何の安い2値近似で断ち切る。key normのような静的指標よりquery条件付きで、H2Oのようなattention履歴より計算が軽い中間設計点である。"
   },
   "reservation": {
-    "claim_id": "claim-226be98ea8113e9efe7a3af3",
+    "claim_id": "claim-8834d311401a99e374c1300d",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

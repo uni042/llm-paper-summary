@@ -2,16 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-226be98ea8113e9efe7a3af3",
-  "job_id": "job-research-cffb14eec24a02c2",
+  "attempt_id": "attempt-8834d311401a99e374c1300d",
+  "job_id": "job-research-795118fce8eb1845",
   "data": {
-    "hardware": "NVIDIA H200 GPU。1基あたり132 SM、141GB HBM3e、ピークメモリ帯域4.8TB/s。Qwen3.5-35B-A3BとQwen3.5-122B-A10Bは単一GPU、GLM-5.2とDeepSeek-V3.1はテンソル並列8で評価。",
-    "software": "MonoMoEをCUDAで実装しvLLMのCUDAグラフ復号経路へ統合。全MoE重みと活性化はE4M3 FP8、重みは128×128ブロックスケール、入力活性化はカーネル内で128要素粒度に量子化。比較対象はvLLMの実運用Triton grouped-GEMM fused_moeと、FP8へ適応したFlashMoE。",
-    "methodology": "4モデルはいずれも256個のルーティング専門家から各トークン8個を選択する。単体カーネル評価は復号トークン数1、2、4、8で、20回のウォームアップ後にCUDAグラフを200回再生して平均遅延を測定する。エンドツーエンド評価はvLLM内蔵の固定形状Sonnetテキスト負荷で、50プロンプト、入力1600トークン、生成200トークン、共有接頭辞200トークン、同時要求数1、2、4、8。接頭辞キャッシュを無効、分割プリフィルを有効にし、平均出力トークン時間を測る。数値精度は同一入力に対するFP32参照との比較、生成品質はGSM8KとHumanEvalで評価する。",
-    "scope": "対象領域は1GPUあたりの同時復号トークン数が8以下のメモリ帯域律速MoE復号である。プリフィルや大バッチでは従来のトークン主導型行列積が十分なタイル並列性を得るため優位性が縮む。分散通信は巨大カーネルへ融合せず、単一ノード小バッチではNVLink転送自体よりランク間同期が支配的で、融合実装も同等性能だったと報告する。したがって本結果は汎用MoE演算置換ではなく低トークン復号に特化した評価として解釈する必要がある。"
+    "evaluation_summary": "主にLlama3-8B-InstructをNVIDIA L4 24GBで評価し、16K長文要約のみLlama3.1-8B-InstructをH100 80GBで実行する。KV予算をfull cacheの10、30、50、70、90%へ変え、norm-based事前削除、H2O、Scissorhands、FastGenと比較する。自由回答、選択式、4K長文検索、16K要約を含め、品質、プリフィル/復号tokens/s、メモリ、attention loss、hash次元を測る。",
+    "scope": "モデル再学習なしのtoken eviction。GQA group size 4。最初の4 tokenと直近10 tokenは常時保持。Hash dimensionは主設定と4～64bit ablation。",
+    "hardware": [
+      "Google Cloud G2 with NVIDIA L4 24GB",
+      "NVIDIA H100 80GB for 16K summarization"
+    ],
+    "models": [
+      "Llama3-8B-Instruct",
+      "Llama3.1-8B-Instruct"
+    ],
+    "datasets": [
+      "GSM8K",
+      "MedQA 100-question sample",
+      "GSM8K multiple choice",
+      "MedQA multiple choice",
+      "Needle-in-a-Haystack",
+      "Common Words / RULER",
+      "MultiNews",
+      "GovReport"
+    ],
+    "workload": "KV cache budget 10/30/50/70/90%。long-context retrievalは4K、summarizationは16K。MultiNewsでprefill/decode throughputを計測。",
+    "baselines": [
+      "norm-based pre-attention eviction (Devoto et al.)",
+      "H2O attention accumulation",
+      "Scissorhands attention accumulation",
+      "FastGen profiling/hybrid retention",
+      "Full KV cache"
+    ],
+    "metrics": [
+      "BERTScore precision/recall/F1",
+      "ROUGE-1/2/L/Lsum",
+      "GPT-4 Judge",
+      "multiple-choice accuracy",
+      "string match score",
+      "prefill tokens/s",
+      "decode tokens/s",
+      "KV+hash memory",
+      "attention loss ratio"
+    ],
+    "predictor_accuracy": "予測器学習はない。LSHのhash dimension ablationでは4～64bitで大きな品質差がなく、8bitが最良だが高bitとの差は小さい。",
+    "control_knobs": "cache budget、hash dimension、常時保持prefix/recent token数、FastGen attention recovery fraction。"
   },
   "reservation": {
-    "claim_id": "claim-226be98ea8113e9efe7a3af3",
+    "claim_id": "claim-8834d311401a99e374c1300d",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

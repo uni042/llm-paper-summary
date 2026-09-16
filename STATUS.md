@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:08:16 JST**
+> 自動生成: **2026-09-16 15:08:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,12 +204,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **1件**
+- `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing / worker `scheduled-chat-hourly-survey-20260916T145717JST`
+  - claim: **09-16 15:08:28 JST** / heartbeat: **—** / lease expiry: **09-16 16:38:28 JST**
+  - evidence: `.survey/work-queue/claims/job-research-795118fce8eb1845.json`
 - `arXiv:2608.13573` — A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing / worker `scheduled-chat-discovery-specialist-00`
   - claim: **09-16 15:06:53 JST** / heartbeat: **—** / lease expiry: **09-16 16:36:53 JST**
   - evidence: `.survey/work-queue/claims/job-research-c5668a715755a331.json`
-- `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding / worker `scheduled-chat-hourly-survey-20260916T145717JST`
-  - claim: **09-16 15:06:53 JST** / heartbeat: **—** / lease expiry: **09-16 16:36:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cffb14eec24a02c2.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
