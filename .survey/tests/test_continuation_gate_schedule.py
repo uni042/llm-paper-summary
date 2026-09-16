@@ -32,6 +32,7 @@ def make_args(**overrides):
         scheduled_handoff_guard_seconds=600,
         worker_kind="normal",
         discovery_rounds_completed=0,
+        discovery_rounds_since_last_novel=None,
         discovery_min_rounds=4,
         discovery_exhausted=False,
         next_axis_available=False,
@@ -145,6 +146,22 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertTrue(result["finalization_allowed"])
         self.assertEqual(result["required_action"], "FINALIZE")
         self.assertIn("discovery_exhausted_after_minimum_rounds", result["stop_reasons"])
+
+    def test_novel_candidate_resets_exhaustion_progression_floor(self):
+        result = mod.decide(make_args(
+            worker_kind="discovery",
+            discovery_rounds_completed=10,
+            discovery_rounds_since_last_novel=0,
+            discovery_exhausted=True,
+            next_axis_available=False,
+            independent_work=False,
+            can_discover=False,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "DISCOVER_AGAIN")
+        self.assertEqual(result["minimum_rounds_remaining"], 4)
 
 
 if __name__ == "__main__":

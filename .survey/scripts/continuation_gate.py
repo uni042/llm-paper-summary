@@ -33,10 +33,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
+    rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
+    discovery_rounds_since_last_novel = (
+        discovery_rounds_completed
+        if rounds_since_last_novel_raw is None
+        else max(int(rounds_since_last_novel_raw or 0), 0)
+    )
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
-    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_completed, 0)
+    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_since_last_novel, 0)
 
     if args.platform_limit:
         reasons.append("platform_limit_reached")
@@ -97,14 +103,15 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if args.global_dependency and not independent_work and not transient_claim_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
-    # Discovery-specialist runs have an explicit progression floor. This is not
-    # a quota or an automatic stop at N rounds: it only prevents the model from
-    # treating one durable submission as completion. Hard stop reasons above
-    # always win (handoff guard, platform limit, unreadable canonical state,
-    # or inability to durably preserve required work).
+    # Discovery-specialist runs have an explicit progression floor. A novel
+    # candidate resets the exhaustion sweep, so callers that track novelty pass
+    # the number of materially distinct rounds since the latest novel candidate.
+    # Older callers may omit it and retain the previous total-round semantics.
+    # Hard stop reasons above always win (handoff guard, platform limit,
+    # unreadable canonical state, or inability to durably preserve required work).
     hard_stop = bool(reasons)
     if worker_kind == "discovery" and not hard_stop:
-        if discovery_rounds_completed < discovery_min_rounds:
+        if discovery_rounds_since_last_novel < discovery_min_rounds:
             decision = "CONTINUE"
             required_action = "DISCOVER_AGAIN"
             finalization_allowed = False
@@ -155,6 +162,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "stop_reasons": reasons,
         "worker_kind": worker_kind,
         "discovery_rounds_completed": discovery_rounds_completed,
+        "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
         "discovery_exhausted": discovery_exhausted,
@@ -181,8 +189,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "or discovery submission is never by itself a whole-run stop condition. Hourly "
             "Scheduled Chat workers prefer an actual-invocation-start + 3600 second run deadline "
             "over the nominal schedule boundary. Discovery specialist runs must satisfy their "
-            "minimum progression floor before exhaustion can be a voluntary stop reason; hard "
-            "handoff/platform/durability/read failures override that floor."
+            "minimum progression floor after the latest novel candidate before exhaustion can be "
+            "a voluntary stop reason; hard handoff/platform/durability/read failures override "
+            "that floor."
         ),
     }
 
@@ -209,6 +218,7 @@ def main() -> int:
     ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
     ap.add_argument("--worker-kind", choices=("normal", "discovery"), default="normal")
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
+    ap.add_argument("--discovery-rounds-since-last-novel", type=int, default=None)
     ap.add_argument("--discovery-min-rounds", type=int, default=4)
     ap.add_argument("--discovery-exhausted", type=yn, default=False)
     ap.add_argument("--next-axis-available", type=yn, default=False)
