@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:05:55 JST**
+> 自動生成: **2026-09-17 02:29:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **18** |
-| 未claim Research job | **17** |
+| 収録候補論文 | **21** |
+| 未claim Research job | **20** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-17 01:40:46 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-17 01:40:46 JST（48分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **18** |
+| canonical_id確認済みの一意な候補論文 | **21** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **18** |
+| 非終端Research job合計 | **21** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **18** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **8** | **2** | **6** | **0** | **0** | **4** |
-| 合計 | **35** | **16** | **6** | **10** | **1** | **0** | **4** |
+| Discovery | **14** | **8** | **8** | **0** | **0** | **0** | **4** |
+| 合計 | **32** | **16** | **12** | **4** | **1** | **0** | **4** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -113,6 +113,30 @@
   - result: `.survey/work-queue/results/20260917T0208JST-discovery-specialist-cxl-ssd-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json`
   - 探索軸: CXL階層メモリ・SSD/NVMe・MoE expert offload
+- **09-17 02:06:14 JST** job `job-ed0d31e7d8bded0f` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260917T0211JST-discovery-specialist-kv-hardware-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0211JST-discovery-specialist-kv-hardware-3.json`
+  - 探索軸: KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計
+- **09-17 02:06:17 JST** job `job-c49eea2ac0396e5e` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260917T0214JST-discovery-specialist-disk-kv-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0214JST-discovery-specialist-disk-kv-4.json`
+  - 探索軸: disk-backed KV cache・RAG multi-instance・cloud offload配置
+- **09-17 02:06:20 JST** job `job-3942fe6aa712b241` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260917T0217JST-discovery-specialist-storage-prefix-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0217JST-discovery-specialist-storage-prefix-5.json`
+  - 探索軸: SSD-backed prefix/KV cache・hierarchical memory
+- **09-17 02:06:23 JST** job `job-9e318b1ccd364d1e` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260917T0220JST-discovery-specialist-moe-offload-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0220JST-discovery-specialist-moe-offload-6.json`
+  - 探索軸: MoE expert offload・speculative prefetch・CPU-light KV
+- **09-17 02:06:26 JST** job `job-39c1d42207f4c28b` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260917T0223JST-discovery-specialist-cxl-transfer-7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0223JST-discovery-specialist-cxl-transfer-7.json`
+  - 探索軸: GPU memory virtualization・CXL shared KV・disaggregated transfer
+- **09-17 02:06:29 JST** job `job-c34ec10fdc3fd3c2` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260917T0226JST-discovery-specialist-migration-scheduling-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json`
+  - 探索軸: multi-GPU KV migration・heterogeneous serving scheduling
 - **09-17 00:05:09 JST** job `job-9be61b9d72dcd1ea` / 候補 **3件**
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
@@ -121,30 +145,6 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json`
   - 探索軸: agent sandbox scheduling・agentic workload serving characterization
-- **09-17 00:02:55 JST** job `job-408e2173bb069e7f` / 候補 **3件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json`
-  - 探索軸: MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
-- **09-17 00:05:17 JST** job `job-f6dc35c94d083aa1` / 候補 **2件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-tool-gap-kv-4.json`
-  - 探索軸: tool-call gap KV residency・出力長不確実性KV reservation
-- **09-17 01:01:02 JST** job `job-52df6bafb3df3531` / 候補 **3件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json`
-  - 探索軸: cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload
-- **09-17 01:02:43 JST** job `job-2b5601609afca1cf` / 候補 **2件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260917T0058-network-scheduling-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json`
-  - 探索軸: multi-stage network flow scheduling・prefill deflection・KV transfer contention
-- **09-16 20:06:01 JST** job `job-0c421ac9966fc6bb` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260916T2038JST-discovery-specialist-model-loading-9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json`
-  - 探索軸: serverless model loading・weight residency・multi-GPU KV migration
-- **09-16 20:06:03 JST** job `job-df9bf305b98cd6dc` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T2042JST-discovery-specialist-collective-10.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2042JST-discovery-specialist-collective-10.json`
-  - 探索軸: collective communication圧縮・tensor/expert parallel通信
 
 ### 直近タスク
 
@@ -186,7 +186,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 02:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **6件** / 候補: **4件**
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **4件**
 - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload / KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計 / disk-backed KV cache・RAG multi-instance・cloud offload配置 / SSD-backed prefix/KV cache・hierarchical memory / MoE expert offload・speculative prefetch・CPU-light KV / GPU memory virtualization・CXL shared KV・disaggregated transfer / multi-GPU KV migration・heterogeneous serving scheduling
 - round `specialist-offload-specdecode-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
@@ -199,36 +199,36 @@
 - round `specialist-kv-hardware-3` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0211JST-discovery-specialist-kv-hardware-3.json`
   - 探索軸: KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0211JST-discovery-specialist-kv-hardware-3.json` (`ok=true`)
 - round `specialist-disk-kv-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260917T0214JST-discovery-specialist-disk-kv-4.json`
   - 探索軸: disk-backed KV cache・RAG multi-instance・cloud offload配置
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0214JST-discovery-specialist-disk-kv-4.json` (`ok=true`)
 - round `specialist-storage-prefix-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0217JST-discovery-specialist-storage-prefix-5.json`
   - 探索軸: SSD-backed prefix/KV cache・hierarchical memory
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0217JST-discovery-specialist-storage-prefix-5.json` (`ok=true`)
 - round `specialist-moe-offload-6` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0220JST-discovery-specialist-moe-offload-6.json`
   - 探索軸: MoE expert offload・speculative prefetch・CPU-light KV
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0220JST-discovery-specialist-moe-offload-6.json` (`ok=true`)
 - round `specialist-cxl-transfer-7` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0223JST-discovery-specialist-cxl-transfer-7.json`
   - 探索軸: GPU memory virtualization・CXL shared KV・disaggregated transfer
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0223JST-discovery-specialist-cxl-transfer-7.json` (`ok=true`)
 - round `specialist-migration-scheduling-8` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json`
   - 探索軸: multi-GPU KV migration・heterogeneous serving scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0226JST-discovery-specialist-migration-scheduling-8.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.12378` — An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference / worker `scheduled-chat-normal-20260917T013240`
-  - claim: **09-17 01:40:40 JST** / heartbeat: **—** / lease expiry: **09-17 03:10:40 JST**
-  - evidence: `.survey/work-queue/claims/job-research-aa4d7a102619f4b3.json`
+- `arXiv:2505.10259` — SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 02:29:04 JST** / heartbeat: **—** / lease expiry: **09-17 03:59:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f992ed2fc8c47a46.json`
 
 #### Audit
 
@@ -248,7 +248,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **18** |
+| ready | **21** |
 
 ### 候補の重複・識別情報欠損
 
@@ -276,10 +276,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **395** |
+| 成功result未照合のimmutable submission | **389** |
 | └ Research | **262** |
 | └ Audit | **2** |
-| └ Discovery | **131** |
+| └ Discovery | **125** |
 
 ### 厳格検証が未成立のcompleted job
 

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-83b483046e34ec23467654d3","job_id":"job-research-aa4d7a102619f4b3","data":{"overview":"OdinはLlama-3-8Bの実重みと128トークン入力で32層すべてを単一H100 80GB上のCKKS暗号文として評価し、サーバ側エンドツーエンド時間366.4秒、ピーク58.9GiBを報告する。同じモデル・入力・CKKSパラメータ・GPUのTHOR型基準は1651.9秒で、Odinは4.51倍高速である。基準の単一層プロファイルでは線形計算が59.24秒中44.80秒を占め、平文暗号文射影の重み符号化だけで28.02秒を要するため、Odinの符号化再利用は主要ボトルネックを直接削減する。","key_results":[{"metric":"サーバ側エンドツーエンドFHE時間","value":"366.4秒","baseline":"THOR型 1651.9秒","condition":"Llama-3-8B、128トークン、全32層、単一H100 80GB、同一CKKS条件","interpretation":"暗号文配置と実行鎖をモデル全体で共同設計することで4.51倍高速化し、8B級Llamaの非対話FHE実行を単一GPUへ収めた。"},{"metric":"ピークGPUメモリ","value":"58.9 GiB","baseline":"H100 80GB容量内","condition":"同上","interpretation":"暗号文・評価鍵・一時配置を含む実装が単一80GB GPU内に収まり、複数GPU分散を必須にしない。"},{"metric":"THOR型単一層の線形計算比率","value":"44.80秒 / 59.24秒（75.6%）","baseline":"THOR型Llama-3単一層","condition":"Layer 16、128トークン、中央値3回","interpretation":"最適化対象が非線形だけでなく線形データ配置と平文準備にあることを定量的に示す。"},{"metric":"平文暗号文線形演算の重み符号化時間","value":"28.02秒 / 36.76秒","baseline":"THOR型PC-MM","condition":"Q/K/V/O/FFN射影の単一層合計","interpretation":"Llama規模ではオンライン重み符号化が支配的で、構造化重み対角の再利用が大きな高速化余地になる。"},{"metric":"SiLU多項式総次数","value":"2048→998","baseline":"12-bit一律許容誤差","condition":"32層、同じ入力区間でSiLU許容誤差を緩和する試験","interpretation":"モデル品質に応じた演算別誤差配分により近似回路を浅くでき、後続FFNの暗号パラメータも軽減できる。"}],"negative_results":"366.4秒は通常の平文LLM推論と比べ依然として非常に高遅延で、128トークン入力のサーバ側評価だけでも数分を要する。ピーク58.9GiBも大きく、長い系列やより大規模モデルでは単一80GB GPU容量が制約になり得る。FHEは近似演算であり入力範囲外れや多項式誤差の管理が必要で、脅威モデルも悪意あるサーバやサイドチャネルを含まない。","interpretation":"性能差の中心は暗号演算カーネル単体ではなく、暗号文配置の寿命と重み符号化の再利用である。Llamaの広いFFNでは同じ平文重み準備を繰り返す費用が急増するため、層間の安定形式と演算内一時形式を分けることで、モデル規模拡大時に顕在化するシステム費用を削減できる。","quality_impact":"CKKSと多項式近似は近似的だが、演算別誤差注入と最終多項式評価をモデル品質へ結び付ける。暗号化そのものはモデル重みや生成規則を変更せず、品質劣化は数値近似誤差から生じる。"},"reservation":{"claim_id":"claim-83b483046e34ec23467654d3","worker_id":"scheduled-chat-normal-20260917T013240","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-949006ab20f962621eb53c05",
+  "job_id": "job-research-f992ed2fc8c47a46",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-949006ab20f962621eb53c05",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
