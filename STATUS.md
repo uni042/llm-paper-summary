@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:03:22 JST**
+> 自動生成: **2026-09-16 14:03:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **51** |
-| 未claim Research job | **48** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **35** |
 | 最終検証済みResearch収録 | **09-16 13:52:05 JST（11分前）** |
 | 整合性異常 | **0** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **1** | **1** | **0** | **4** | **2** | — |
+| Research | **21** | **1** | **0** | **1** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **22** | **6** | **1** | **5** | **4** | **2** | **24** |
+| 合計 | **22** | **6** | **0** | **6** | **3** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -114,17 +114,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-16 10:37 JST** / worker `manual-reader-smoketest-20260916T1037JST`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2609.15359` — MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving
-  - job: `.survey/work-queue/jobs/job-research-41c06f0529c148e7.json`
-  - result: `.survey/work-queue/results/research/attempt-79c4ee390d672cc004c43df8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md`
+- 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json` (job `job-research-3bb1145babb1a6fc`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-16 10:37 JST** / worker `manual-reader-smoketest-20260916T1037JST`
+- 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -158,13 +154,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **2件**
-- `arXiv:2606.11244` — SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:00:08 JST** / heartbeat: **09-16 14:01:36 JST** / lease expiry: **09-16 15:31:36 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1dd6544d5f77b687.json`
-- `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:01:36 JST** / heartbeat: **—** / lease expiry: **09-16 15:31:36 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3bb1145babb1a6fc.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2502.07578` — PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference / worker `scheduled-chat-llm-survey-20260916T135756JST`
+  - claim: **09-16 14:03:34 JST** / heartbeat: **—** / lease expiry: **09-16 15:33:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-73e15ccbef3e6d6d.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
@@ -218,8 +211,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **278** |
-| └ Research | **164** |
+| 成功result未照合のimmutable submission | **279** |
+| └ Research | **165** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job

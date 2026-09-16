@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-9c48ba51e4ed81ed5058eceb","job_id":"job-research-1dd6544d5f77b687","data":{"problem":"4ビット量子化はモデルメモリと帯域を削減する一方、FP16との品質差が残る。既存のポスト量子化誤差補償は固定低ランク残差を全トークンへ同一適用するため、入力ごとに大きく異なる量子化誤差へ適応できない。さらに入力依存補償を素朴にサービングへ追加すると、decodeの複数kernel起動、テンソル並列の非線形gate前同期、補償密度に応じた反復遅延変動が発生し、低ビット推論の効率を失う。","novelty":"SPEARはトークンごとに補償量を変える低ランクError Compensatorと、CKA損傷度・損傷entropy・配置コストによる選択配置を組み合わせる。さらにdecode/prefill別kernel経路、テンソル並列通信、SLO制約付きchunk schedulerまで共同設計し、品質回復を低ビットサービングの遅延制約内へ収める点が論文固有の新規性である。","method_overview":"FP16と量子化モデルを用いて各モジュールのCKA低下を測り、損傷分布entropyに応じて補償対象範囲を決め、損傷度と配置コストから対象モジュールを選ぶ。選択箇所へ低ランクA、rank空間の入力依存gate、BからなるECを挿入し自己生成校正データで二段階学習する。実行時はdecodeでECをW4 GEMM epilogueへ融合し、prefillではCUDA Graph上でECとGEMMを並行化する。テンソル並列ではP2P dual-writeでEC部分活性のreductionをepilogueへ統合し、最後にEC配置別latency tableからSLOを満たす最大prefill chunkを選ぶ。","system_design":"補償アルゴリズム、選択配置、位相別実行、GPU間通信融合、SLO認識スケジューラを一体化する。","components":[{"name":"入力適応Error Compensator","description":"入力を低ランクAへ射影し、rank座標へ軽量MLPの1+tanh gateを掛けてBで戻す。gateがトークンごとに変化するため実効補償行列も入力依存となり、静的補償より限られたrankを誤差の大きい入力へ集中できる。追加gateはrank空間だけで動作する。"},{"name":"CKA誘導entropy-aware選択","description":"各モジュール単独量子化時の最終隠れ状態とFP16のlinear CKA低下を損傷度とする。損傷分布entropyで補償対象の広さを変え、損傷度と配置遅延コストを合わせたscoreにより、品質寄与が高く実行コストの低いモジュールへ補償予算を集中する。"},{"name":"位相適応kernel融合","description":"decodeではメモリ律速W4 GEMMのepilogueへECを融合してkernel launch gapを除去する。prefillではGEMMが演算律速になるため完全融合せず、CUDA Graph上の別streamでECをW4 GEMMと重ねて実行し、位相ごとの律速差に合わせる。"},{"name":"epilogue統合peer reduction","description":"テンソル並列ではgate入力が全rankのA x総和を必要とする。MARLIN epilogueからW4出力とEC部分活性をpeer staging bufferへP2P dual-writeし、独立NCCL同期を避ける。post-EC fused kernel内でreduction、gate、B射影、残差、次層RMSNormをまとめる。"},{"name":"SLO制約付きEC-aware scheduler","description":"ECあり・なし各層の実測kernel latency tableから現在のEC選択集合の反復時間を推定し、decode tokenとprefill chunkを合わせた推定時間がSLO以下となる最大chunkを二分探索する。補償密度が変わっても固定chunkによるSLO違反や過剰分割を避ける。"}]},"reservation":{"claim_id":"claim-9c48ba51e4ed81ed5058eceb","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-60bfc6ece434281a6a7931aa",
+  "job_id": "job-research-73e15ccbef3e6d6d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-60bfc6ece434281a6a7931aa",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

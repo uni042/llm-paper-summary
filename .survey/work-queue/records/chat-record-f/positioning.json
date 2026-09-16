@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9c48ba51e4ed81ed5058eceb","job_id":"job-research-1dd6544d5f77b687","data":{"positioning":"SPEARはGPTQ/AWQ/OmniQuantのように量子化器そのものを改善する研究ではなく、量子化後に残った誤差を入力適応型の低ランク補償で回復し、その補償を低ビットserving stackへ効率的に統合する研究である。LQER/QERA/ASER等の静的低ランク誤差再構成に対してtoken-adaptive gateと選択配置を導入し、MARLIN、vLLM、Sarathi-Serve等の実行系に対しては動的補償が壊すkernel/TP/scheduling仮定を再設計する。","differences":"最も近い静的誤差補償は入力に関係なく同じ低ランク残差を適用するが、SPEARはrank空間のgateでtokenごとに補償演算子を変える。また量子化品質の論文に留まらず、decode/prefillで別fusion pathを選び、非線形gateに必要なTP reductionをMARLIN epilogueのP2P dual-writeへ組み込み、EC配置依存の遅延をSLO-aware schedulerへ反映する。","relation_to_prior_work":[{"work":"GPTQ / AWQ / OmniQuant / QuaRot / SpinQuant","difference":"量子化時のweight distributionやroundingを改善して固定量子化モデルを作るのに対し、SPEARは完成した量子化モデルへ実行時入力適応補償を追加する。"},{"work":"LQER / QERA / ASER / EoRA / LoftQ","difference":"静的低ランク残差を全入力へ同一適用する方式に対し、SPEARはtoken gateとCKA選択配置で補償容量を入力・モジュール双方へ適応配分する。"},{"work":"MARLIN / ATOM","difference":"低ビットGEMM自体を高速化するkernelに対し、SPEARは動的ECをMARLIN epilogueへ融合し、追加補償を含むend-to-end decode pathを最適化する。"},{"work":"vLLM / Sarathi-Serve / DistServe","difference":"execution structureが静的なモデルを前提とするscheduler/serving stackに対し、SPEARはEC密度による層別遅延変動をlatency tableへ取り込みSLO制約下でchunkを動的選択する。"}],"strengths":["入力依存誤差という観測からtoken-adaptive補償を導出している。","CKA損傷度とentropyで補償場所・rankをmemory budget内へ集中する。","アルゴリズム追加で生じるkernel launch、TP同期、scheduler不安定性を明示し、それぞれ専用system optimizationで解く。","GH200実機で1–70B、単一GPUからTP=4、continuous batchingまで評価する。","複数の量子化backendへplug-and-playで追加できる。"],"limitations":["評価はGH200/Hopper世代中心で、他GPU世代へfused kernelとP2P primitiveを移植した性能は未検証。","異種GPU cluster向けschedulerは未評価。","Mixture-of-Experts architectureへの適用は将来課題。","EC校正にはFP16モデルからのself-sampled sequenceと追加学習が必要で、完全なtraining-free補償ではない。","追加memoryは1%未満でも、naive実装ではdecodeが約5倍遅くなるため専用kernel実装への依存が強い。"],"implementation_status":"GH200上でMARLIN W4 kernel、CUDA Graph、NVLink P2P dual-write、TP fused post-EC tail、SLO-aware chunk schedulerまで実装して実測しており、概念設計ではない。ただし確認したarXiv本文には公開code repository URLがない。","research_positioning":"量子化アルゴリズムとserving systemの境界に位置し、精度回復モジュールが実行構造を変える場合にkernel・通信・schedulerを同時に再設計すべきことを示す代表例である。低ビット化の精度と速度を別々に最適化するのではなく、post-quantization recoveryをserving SLOまで含むco-design問題として定式化している。","repository_fit":"quantization-kernels系統に適合する。特にW4 kernelへ補償計算を融合し、TP communicationとcontinuous batchingまで含めて低ビットservingを最適化するため、量子化方式だけを扱う論文より推論システム寄りの位置付けである。"},"reservation":{"claim_id":"claim-9c48ba51e4ed81ed5058eceb","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-60bfc6ece434281a6a7931aa",
+  "job_id": "job-research-73e15ccbef3e6d6d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-60bfc6ece434281a6a7931aa",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
