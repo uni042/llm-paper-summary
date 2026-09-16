@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:02:40 JST**
+> 自動生成: **2026-09-17 02:03:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **17** |
-| 未claim Research job | **16** |
+| 収録候補論文 | **18** |
+| 未claim Research job | **17** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-17 01:40:46 JST（21分前）** |
+| 最終検証済みResearch収録 | **09-17 01:40:46 JST（22分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **17** |
+| canonical_id確認済みの一意な候補論文 | **18** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **17** |
+| 非終端Research job合計 | **18** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **19** | **1** | **0** | **1** | **0** | **0** | **1** |
-| 合計 | **40** | **9** | **4** | **5** | **1** | **0** | **1** |
+| Discovery | **21** | **2** | **2** | **0** | **0** | **0** | **1** |
+| 合計 | **42** | **10** | **6** | **4** | **1** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-17 02:02:52 JST** job `job-63d7ce232b8ee5eb` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260917T0205JST-discovery-specialist-offload-specdecode-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
+  - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
+- **09-17 02:02:55 JST** job `job-ed698b7c56976a1a` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260917T0208JST-discovery-specialist-cxl-ssd-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json`
+  - 探索軸: CXL階層メモリ・SSD/NVMe・MoE expert offload
 - **09-17 00:05:09 JST** job `job-9be61b9d72dcd1ea` / 候補 **3件**
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260916T2014JST-discovery-specialist-semantic-kv-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json`
   - 探索軸: Semantic Retrieval Head・layer-aware KV圧縮
-- **09-16 20:03:45 JST** job `job-d2c7bcb66a4554c4` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json`
-  - 探索軸: MoE self-assisted speculative decoding・expert replication
-- **09-16 20:03:47 JST** job `job-63c87bf6f06ca13e` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T2020JST-discovery-specialist-manycore-runtime-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2020JST-discovery-specialist-manycore-runtime-5.json`
-  - 探索軸: 異種many-core・分散メモリ階層・bandwidth-aware runtime
 
 ### 直近タスク
 
@@ -186,12 +186,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 02:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **1件**
-- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
+- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload
 - round `specialist-offload-specdecode-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
   - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0205JST-discovery-specialist-offload-specdecode-1.json` (`ok=true`)
+- round `specialist-cxl-ssd-2` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json`
+  - 探索軸: CXL階層メモリ・SSD/NVMe・MoE expert offload
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0208JST-discovery-specialist-cxl-ssd-2.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -220,7 +224,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **17** |
+| ready | **18** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,10 +252,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **390** |
+| 成功result未照合のimmutable submission | **389** |
 | └ Research | **262** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 
 ### 厳格検証が未成立のcompleted job
 
