@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 21:37:57 JST**
+> 自動生成: **2026-09-16 21:38:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **31** |
+| 収録候補論文 | **30** |
 | 未claim Research job | **30** |
-| 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-16 21:35:31 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **74** |
+| 最終検証済みResearch収録 | **09-16 21:38:01 JST（4秒前）** |
 | 整合性異常 | **9** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **31** |
+| canonical_id確認済みの一意な候補論文 | **30** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **31** |
+| 非終端Research job合計 | **30** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **26** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **27** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **26** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **27** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 21:38:01 JST** [research] `arXiv:2604.24971` — PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-9ef38f28c45d6f3a.json`
+  - result: `.survey/work-queue/results/research/attempt-108502f64d0cd914bd44d7db.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-108502f64d0cd914bd44d7db.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2604.24971-polykv-shared-asymmetrically-compressed-kv-cache.md`
 - **09-16 21:35:31 JST** [research] `arXiv:2605.22416` — Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference
   - job: `.survey/work-queue/jobs/job-research-9fcc40253e9df4ef.json`
   - result: `.survey/work-queue/results/research/attempt-dcdaf23f15c40b373c3afea9.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-44002611be590dff9f7593f6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-44002611be590dff9f7593f6.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-allocation.md`
-- **09-16 18:38:33 JST** [research] `arXiv:2609.09662` — PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling
-  - job: `.survey/work-queue/jobs/job-research-3d5f11737ec9b4a2.json`
-  - result: `.survey/work-queue/results/research/attempt-b66d308c0d1e4eb8ba288ecc.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b66d308c0d1e4eb8ba288ecc.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.24971` — PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 21:35:41 JST** / heartbeat: **—** / lease expiry: **09-16 23:05:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9ef38f28c45d6f3a.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **31** |
+| ready | **30** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **621** |
+| inference/training/survey配下の論文Markdown実体 | **622** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **436** |
-| └ Research | **244** |
+| 成功result未照合のimmutable submission | **435** |
+| └ Research | **243** |
 | └ Audit | **2** |
 | └ Discovery | **190** |
 

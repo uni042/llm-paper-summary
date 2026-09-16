@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T12:35:35.941736+00:00",
+  "updated_at": "2026-09-16T12:38:05.549119+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T12:35:35.941736+00:00",
+      "last_recorded_at": "2026-09-16T12:38:05.549119+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 157,
+        "research_completed": 158,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35057256937:1",
-          "recorded_at": "2026-09-16T04:52:09.212446+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35057256937",
-            "run_attempt": "1",
-            "source_sha": "5acce147e268950ac194c7b459254a6a8f3b7a5c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35057988092:1",
           "recorded_at": "2026-09-16T05:03:45.574729+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35096690628",
             "run_attempt": "1",
             "source_sha": "3be3331d0afe63223d326d387b0947e0b9b849f0"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35096943286:1",
+          "recorded_at": "2026-09-16T12:38:05.549119+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35096943286",
+            "run_attempt": "1",
+            "source_sha": "0266f1a871608578cf12b2d10e98e64ef8a67bfd"
           },
           "signals": [
             "research_completed"
@@ -21581,6 +21581,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.22416",
           "title": "Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-9ef38f28c45d6f3a",
+          "type": "research",
+          "canonical_id": "arXiv:2604.24971",
+          "title": "PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference",
           "from": "ready",
           "to": "completed"
         }
