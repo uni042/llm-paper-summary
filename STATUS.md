@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:03:45 JST**
+> 自動生成: **2026-09-16 13:04:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **27** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **4** | **0** | **4** | **0** | **0** | **20** |
-| 合計 | **28** | **5** | **1** | **4** | **2** | **0** | **20** |
+| Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
+| 合計 | **28** | **6** | **1** | **5** | **2** | **0** | **24** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -131,8 +131,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 13:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **20件**
-- 探索軸: 新着・KV cache・operator disaggregation / SSD/NVMe KV offload・MoE expert cache/placement / CXL・remote memory・SmartNIC・object storage / GPU runtime・speculative serving・quantization・sparse attention
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **24件**
+- 探索軸: 新着・KV cache・operator disaggregation / SSD/NVMe KV offload・MoE expert cache/placement / CXL・remote memory・SmartNIC・object storage / GPU runtime・speculative serving・quantization・sparse attention / agentic・multi-turn servingとKV residency
 - round `specialist-serving-kv-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260916T1305JST-discovery-specialist-serving-kv-1.json`
   - 探索軸: 新着・KV cache・operator disaggregation
@@ -148,6 +148,10 @@
 - round `specialist-runtime-4` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260916T1324JST-discovery-specialist-runtime-4.json`
   - 探索軸: GPU runtime・speculative serving・quantization・sparse attention
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-multiturn-5` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260916T1330JST-discovery-specialist-agent-multiturn-5.json`
+  - 探索軸: agentic・multi-turn servingとKV residency
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -208,9 +212,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **262** |
+| 成功result未照合のimmutable submission | **263** |
 | └ Research | **148** |
-| └ Discovery | **114** |
+| └ Discovery | **115** |
 
 ### 厳格検証が未成立のcompleted job
 
