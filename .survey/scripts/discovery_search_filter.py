@@ -12,7 +12,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import paper_identity
 from build_discovery_identity_snapshot import shard_name
@@ -20,6 +20,9 @@ from build_discovery_identity_snapshot import shard_name
 
 class SnapshotUnavailableError(RuntimeError):
     """Raised when the authoritative Discovery precheck snapshot cannot be trusted."""
+
+
+PageFetcher = Callable[[str | None], dict[str, Any]]
 
 
 def _load_manifest(snapshot_dir: Path) -> dict[str, Any]:
@@ -145,6 +148,110 @@ def filter_search_batch(
         "provider_has_more": bool(provider_has_more),
         "continue_search": bool(needs_more and provider_has_more),
         "switch_axis": bool(needs_more and not provider_has_more),
+    }
+
+
+def collect_until_unseen(
+    fetch_page: PageFetcher,
+    *,
+    snapshot_dir: Path,
+    target_unseen: int = 20,
+    initial_cursor: str | None = None,
+    max_pages: int = 100,
+) -> dict[str, Any]:
+    """Fetch and filter provider pages until an unseen-result buffer is ready.
+
+    ``fetch_page(cursor)`` must return an object with a ``records`` list and a
+    ``next_cursor`` value. The collector owns pagination: intermediate provider pages are
+    filtered and accumulated internally, and the caller receives only the final unseen
+    buffer once ``target_unseen`` has been reached or the provider is exhausted.
+
+    The last fetched page is kept whole. Therefore the returned buffer may be larger than
+    ``target_unseen`` when that page crosses the threshold; unseen records are never
+    discarded merely to hit an exact batch size.
+    """
+    if target_unseen <= 0:
+        raise ValueError("target_unseen must be greater than zero")
+    if max_pages <= 0:
+        raise ValueError("max_pages must be greater than zero")
+
+    snapshot_dir = Path(snapshot_dir)
+    _load_manifest(snapshot_dir)
+
+    cursor = initial_cursor
+    seen_cursors: set[str] = set()
+    seen_primary_identities: set[str] = set()
+    results: list[dict[str, Any]] = []
+    duplicate_tokens: list[str] = []
+    raw_search_result_count = 0
+    retrieval_duplicate_filtered_count = 0
+    intra_batch_duplicate_filtered_count = 0
+    cross_page_duplicate_filtered_count = 0
+    unresolved_identity_count = 0
+    pages_fetched = 0
+    next_cursor: str | None = cursor
+    provider_exhausted = False
+    max_pages_reached = False
+
+    while len(results) < target_unseen:
+        if pages_fetched >= max_pages:
+            max_pages_reached = True
+            break
+
+        page = fetch_page(cursor)
+        if not isinstance(page, dict):
+            raise TypeError("fetch_page must return an object")
+        records = page.get("records")
+        if not isinstance(records, list) or any(not isinstance(record, dict) for record in records):
+            raise TypeError("fetch_page result must contain a records list of objects")
+        next_value = page.get("next_cursor")
+        if next_value is not None and not isinstance(next_value, str):
+            raise TypeError("next_cursor must be a string or null")
+
+        filtered = filter_search_batch(records, snapshot_dir=snapshot_dir)
+        pages_fetched += 1
+        raw_search_result_count += filtered["raw_search_result_count"]
+        retrieval_duplicate_filtered_count += filtered["retrieval_duplicate_filtered_count"]
+        duplicate_tokens.extend(filtered["retrieval_duplicate_tokens"])
+        intra_batch_duplicate_filtered_count += filtered["intra_batch_duplicate_filtered_count"]
+        unresolved_identity_count += filtered["unresolved_identity_count"]
+
+        for record in filtered["results"]:
+            primary = paper_identity.primary_identity_key(record)
+            if primary and primary in seen_primary_identities:
+                cross_page_duplicate_filtered_count += 1
+                continue
+            if primary:
+                seen_primary_identities.add(primary)
+            results.append(record)
+
+        next_cursor = next_value
+        if len(results) >= target_unseen:
+            provider_exhausted = next_cursor is None
+            break
+        if next_cursor is None:
+            provider_exhausted = True
+            break
+        if next_cursor == cursor or next_cursor in seen_cursors:
+            raise ValueError(f"provider returned a repeated next_cursor: {next_cursor}")
+        seen_cursors.add(next_cursor)
+        cursor = next_cursor
+
+    return {
+        "results": results,
+        "target_unseen": target_unseen,
+        "target_reached": len(results) >= target_unseen,
+        "provider_exhausted": provider_exhausted,
+        "max_pages_reached": max_pages_reached,
+        "next_cursor": next_cursor,
+        "pages_fetched": pages_fetched,
+        "raw_search_result_count": raw_search_result_count,
+        "retrieval_duplicate_filtered_count": retrieval_duplicate_filtered_count,
+        "retrieval_duplicate_tokens": duplicate_tokens,
+        "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
+        "cross_page_duplicate_filtered_count": cross_page_duplicate_filtered_count,
+        "unresolved_identity_count": unresolved_identity_count,
+        "unseen_result_count": len(results),
     }
 
 
