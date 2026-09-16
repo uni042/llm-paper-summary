@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:03:35 JST**
+> 自動生成: **2026-09-16 12:03:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **63** |
+| 収録候補論文 | **61** |
 | 未claim Research job | **62** |
-| 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-16 11:52:49 JST（10分前）** |
+| 直近24hの検証済みResearch収録 | **24** |
+| 最終検証済みResearch収録 | **09-16 12:03:44 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **63** |
+| canonical_id確認済みの一意な候補論文 | **61** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **64** |
+| 非終端Research job合計 | **62** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **1** | **1** | **0** | **2** | **1** | — |
+| Research | **16** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **15** | **7** | **1** | **6** | **2** | **1** | **6** |
+| 合計 | **17** | **7** | **1** | **6** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,16 @@
 
 ### Research
 
+- **09-16 12:03:44 JST** [research] `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs
+  - job: `.survey/work-queue/jobs/job-research-8f7fdb4eba0d8a63.json`
+  - result: `.survey/work-queue/results/research/attempt-34765e98bb9cf6776aa5d26d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-34765e98bb9cf6776aa5d26d.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.15379-fleet-multi-die-gpu-megakernel.md`
+- **09-16 12:03:44 JST** [research] `arXiv:2606.22541` — ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill
+  - job: `.survey/work-queue/jobs/job-research-553691f8ff245e9b.json`
+  - result: `.survey/work-queue/results/research/attempt-6f1b6968a7268a733026a358.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-6f1b6968a7268a733026a358.json`
+  - paper: `papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md`
 - **09-16 11:52:49 JST** [research] `arXiv:2607.05116` — Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference
   - job: `.survey/work-queue/jobs/job-research-997bb7245fdc3187.json`
   - result: `.survey/work-queue/results/research/attempt-4b181ffe9b1f03a47a7fd1ab.json` (`ok=true`)
@@ -88,16 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-bbb785cdc85c31e832c84d96.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bbb785cdc85c31e832c84d96.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md`
-- **09-16 07:30:07 JST** [research] `arXiv:2607.29069` — Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework
-  - job: `.survey/work-queue/jobs/job-research-c6ac42b8bcec8aab.json`
-  - result: `.survey/work-queue/results/research/attempt-d53062f6ce8af0e476180ce0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d53062f6ce8af0e476180ce0.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md`
-- **09-16 07:16:18 JST** [research] `arXiv:2602.21477` — Pancake: Hierarchical Memory System for Multi-Agent LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-382442b3f5faa67f.json`
-  - result: `.survey/work-queue/results/research/attempt-021f1dea5f61fa1de4a2409e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-021f1dea5f61fa1de4a2409e.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md`
 
 ### Audit
 
@@ -162,13 +162,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2606.22541` — ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill / worker `scheduled-chat-llm-survey-20260916T023111Z`
-  - claim: **09-16 11:55:42 JST** / heartbeat: **09-16 12:03:16 JST** / lease expiry: **09-16 13:33:16 JST**
-  - evidence: `.survey/work-queue/claims/job-research-553691f8ff245e9b.json`
-- `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:03:16 JST** / heartbeat: **—** / lease expiry: **09-16 13:33:16 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8f7fdb4eba0d8a63.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -188,7 +183,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **64** |
+| ready | **62** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +203,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **562** |
+| inference/training/survey配下の論文Markdown実体 | **564** |
 
 ### immutable submissionの未照合
 
@@ -216,8 +211,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **247** |
-| └ Research | **137** |
+| 成功result未照合のimmutable submission | **246** |
+| └ Research | **136** |
 | └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job
