@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8606a507bc64fd5413759264",
+  "attempt_id": "attempt-4b181ffe9b1f03a47a7fd1ab",
   "job_id": "job-research-997bb7245fdc3187",
   "data": {
     "scope": "実機の単一・複数nodeで評価する。通信特性の異なるRTX 3090、A100、H100を使い、Qwen3-30B-A3BとDeepSeek-V2-Liteの大expert-count MoEを対象にする。配置のlossless効果とpruningを加えたlossy効果を分けて評価し、精度はHumanEval、MMLU、GSM8K、PPLで測る。",
@@ -43,7 +43,7 @@
     "evaluation_caveats": "モデルは2種、clusterは最大16 H100。pruningを含む1.23〜1.86倍の結果は設定したaccuracy-performance knobに依存する。offline groupingは約8000 tokenのrouting統計を使う。"
   },
   "reservation": {
-    "claim_id": "claim-8606a507bc64fd5413759264",
+    "claim_id": "claim-4b181ffe9b1f03a47a7fd1ab",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }
