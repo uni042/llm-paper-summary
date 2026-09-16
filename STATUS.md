@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 00:32:56 JST**
+> 自動生成: **2026-09-17 00:33:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **22** |
-| 未claim Research job | **22** |
+| 未claim Research job | **21** |
 | 直近24hの検証済みResearch収録 | **82** |
 | 最終検証済みResearch収録 | **09-16 23:42:30 JST（50分前）** |
 | 整合性異常 | **16** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **8** | **4** | **4** | **0** | **0** | — |
+| Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **42** | **4** | **4** | **0** | **0** | **0** | **10** |
-| 合計 | **62** | **12** | **8** | **4** | **0** | **0** | **10** |
+| 合計 | **61** | **12** | **8** | **4** | **1** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -209,8 +209,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2511.20172` — Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management / worker `scheduled-chat-normal-20260917T003101JST`
+  - claim: **09-17 00:33:21 JST** / heartbeat: **—** / lease expiry: **09-17 02:03:21 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8473b19fc0026661.json`
 
 #### Audit
 

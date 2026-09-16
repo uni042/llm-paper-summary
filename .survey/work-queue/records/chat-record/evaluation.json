@@ -2,29 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f1c215fbd6c38d228df7d663",
-  "job_id": "job-research-46a0d6f61e82afe1",
+  "attempt_id": "attempt-d8eea39fb533e59149a161cc",
+  "job_id": "job-research-8473b19fc0026661",
   "data": {
-    "hardware": "単一ノードのNVIDIA A40を最大8基使用。各GPUにvLLM 0.12エンジンを一つ置き、Qwen2.5-3BをBF16、テンソル並列1で実行。各エンジンのKV予算は6万トークン。主構成は2プリフィル+4デコードで、幅と総GPU数の掃引では3〜8GPUを使用。",
-    "software": "vLLM 0.12、NixlConnector、FastAPIルータ代理。KVキャッシュをプリフィル側からデコード側へNIXLで転送し、ルータが50ミリ秒ごとにキャッシュ占有量を取得する。",
-    "methodology": "会話、長文書、長出力推論、異質な混合バーストの4負荷族を用意し、各負荷についてラウンドロビンが崩れ始める実測飽和点を探索して方策を比較する。比較対象はラウンドロビン、最小負荷、予測長しきい値ヒューリスティック。主結果は混合バースト3トレースの平均。SLOは校正測定から設定し、厳しい条件で先頭トークン時間175ミリ秒、トークン間時間39.7ミリ秒、緩い条件は3倍。測定前にトークン数一致、GPU間の貪欲生成一致、全NIXL転送対のウォームアップを確認し、試行間で接頭辞キャッシュを消去する。デコード幅3・4・6、総GPU数3〜8、出力長予測誤差0〜150%、特徴除去、校正済み対シミュレータ定数を追加評価する。",
-    "scope": "性能値はシミュレーションではなく実機測定。対象は単一種類のGPU、単一ノードNIXL、3Bモデルであり、クロスノードRDMAや異種GPU、大規模モデルは未検証。KV予算6万トークンではキャッシュ圧力が飽和しなかったため、その特徴の有効性は評価できていない。重み自体は手設定で、実機校正したのは時間換算定数である。",
+    "hardware": "エンドツーエンド評価は2サーバ、各8基のNVIDIA H20 96GB、合計16 vLLMインスタンス。CXL側はXConn XC50256 CXL 2.0スイッチと共有メモリ装置を使用。メモリプール容量はBelugaとRDMA比較で2TBにそろえる。マイクロベンチマークではCPU、Intel DSA、GPUからCXLメモリへの各種アクセスも測定。",
+    "software": "vLLM V1 v0.8.5、MoonCake v3.2、LMCache v0.3.1、NVIDIA Dynamo v0.4.1を比較。vLLMの接頭辞キャッシュを有効化し、GPU HBMにもKVを保持する。",
+    "methodology": "既定モデルは非量子化Qwen-32B。主負荷は入力15Kトークン超のLV-Evalで、入力長を2K、4K、8Kへ制限した派生負荷も使用。初回のキャッシュ格納と、共有プールへKVが事前格納済みの二回目キャッシュヒットを分けて測る。指標は先頭トークン時間、出力1トークン時間、毎秒要求数。要求到着率0.3〜9.0 QPS、プリフィル／デコード比、KVブロックサイズ、メモリインターリーブ有無を感度分析する。KV転送の内訳ではQwen3-32B、Llama-3.1-8B、Qwen3-32B-FP8の密KVと、Qwen3-32B・Llama-3-8Bの疎KVを測る。RPCは64バイト要求・応答の往復をRDMA-RC、RDMA-UDと比較する。",
+    "scope": "商用CXL 2.0スイッチを使う実機評価であり、CXL 3.0のハードウェア一貫性は対象外。CXL 2.0の非一貫領域をソフトウェアで管理する。エンドツーエンドはH20中心で、他GPUやクロスラック構成への一般化は未検証。CXL-RPCはRDMAと同等の信頼性保証を提供せず、上位層の保証へ依存する。",
     "benchmarks": [
-      "Chat",
-      "Document",
-      "Reasoning",
-      "Mixed bursty"
+      "LV-Eval",
+      "LV-Eval-2K",
+      "LV-Eval-4K",
+      "LV-Eval-8K"
+    ],
+    "models": [
+      "Qwen-32B",
+      "Qwen3-32B",
+      "Llama-3.1-8B",
+      "Qwen3-32B-FP8",
+      "Llama-3-8B"
     ],
     "baselines": [
-      "round-robin",
-      "least-loaded",
-      "predicted-length threshold heuristic"
-    ],
-    "correctness_gates": "要求ごとの正確なトークン数契約、デコードGPU間の貪欲生成出力のビット単位一致、全プリフィル×デコード対のNIXLウォームアップを測定前に実施。"
+      "MoonCake v3.2",
+      "Dynamo v0.4.1",
+      "vLLM"
+    ]
   },
   "reservation": {
-    "claim_id": "claim-f1c215fbd6c38d228df7d663",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-d8eea39fb533e59149a161cc",
+    "worker_id": "scheduled-chat-normal-20260917T003101JST",
     "worker_kind": "scheduled_chat"
   }
 }
