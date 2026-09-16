@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:34:39 JST**
+> 自動生成: **2026-09-16 14:35:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **43** |
 | 未claim Research job | **40** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:24:20 JST（10分前）** |
+| 最終検証済みResearch収録 | **09-16 14:24:20 JST（11分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **12** | **6** | **6** | **4** | **1** | — |
+| Research | **29** | **12** | **6** | **6** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **12** | **0** | **12** | **0** | **0** | **12** |
-| 合計 | **30** | **24** | **6** | **18** | **4** | **1** | **12** |
+| Discovery | **1** | **13** | **0** | **13** | **0** | **0** | **13** |
+| 合計 | **30** | **25** | **6** | **19** | **4** | **0** | **13** |
 
-- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -156,8 +156,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 14:00 JST**
-- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **12件** / 候補: **12件**
-- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression
+- 耐久探索round: **13件** / immutable submission: **13件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **13件** / 候補: **13件**
+- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression / adaptive KV compression・latency/memory budget
 - round `specialist-moe-cache-router-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1432JST-discovery-specialist-moe-cache-router-1.json`
   - 探索軸: MoE expert cache・cache-aware routing
@@ -203,7 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:34:09 JST** / heartbeat: **—** / lease expiry: **09-16 16:04:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-e8148d67a04de0eb.json`
@@ -263,9 +263,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **303** |
-| └ Research | **177** |
-| └ Discovery | **126** |
+| 成功result未照合のimmutable submission | **305** |
+| └ Research | **178** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
