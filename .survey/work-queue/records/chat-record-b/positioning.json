@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3cb47aa83cc17c53a36cf3d5",
-  "job_id": "job-research-9d70d3111564c88d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3cb47aa83cc17c53a36cf3d5",
-    "worker_id": "scheduled-chat-paper-20260916T173214JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"positioning":"speculative decodingを単一nodeのtoken acceptance最適化からedge-cloud distributed servingへ拡張し、network・queueing・batching・window制御を一体で評価するsystem研究。","differences":"通常のMedusa/SpecInfer等がdraft/verification algorithmやsingle-node並列性を中心にするのに対し、DSDはdraft client群とcloud target poolの間のRTT、routing、batch formationを明示する。DistServe等の分離servingとは分離対象がprefill/decodeではなくdraft/target verificationであり、AWCはspeculation windowとfused/distributed modeをsystem telemetryから選ぶ。","relation_to_prior_work":[{"work":"single-node speculative decoding","difference":"draft-targetをnetwork越しに分離し、RTTとtarget queueをspeculation policyへ含める。"},{"work":"VIDUR","difference":"single-node latency predictorをDSD-Simのhardware engineとして使い、distributed SDのevent semanticsを追加する。"},{"work":"DistServe / disaggregated serving","difference":"prefill/decode分離ではなくdraft generationとtarget verificationのedge-cloud協調を扱う。"}],"strengths":["実hardware acceptance traceを使いdistributed SDのqueue/network相互作用を再現する。","A40/A100/H100実測でpredictorを校正し誤差を提示する。","20 target/最大1000 draft規模でrouting/batching/windowを系統評価する。","AWCが固定thresholdなしでRTT/load/acceptanceへ適応する。"],"limitations":["主要結論はsimulation中心で、完全な大規模edge-cloud実deploymentではない。","VIDURがNCCL等を省略するためlatencyを過小評価する。","AWCの最大throughput改善は9.7%と比較的控えめ。","50〜60ms超のRTTではdistributed execution自体の優位性が失われる。"],"implementation_status":"DSD-SimはSimPyとVIDURを組み合わせる研究framework。AWCは5入力residual MLPで2000超scenarioの全探索labelから学習する。公式code URLは本文から確認できなかった。","research_positioning":"distributed speculative decodingの通信・scheduler・adaptive windowを定量化する初期比較基準。","repository_fit":"07-speculative-decoding系統で、edge-cloud/disaggregated speculationのsystem-level baselineとして有用。"},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
