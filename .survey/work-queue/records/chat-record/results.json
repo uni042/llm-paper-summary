@@ -1,1 +1,67 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-839f4e486b01dc3f2c44b391","job_id":"job-research-23c1aef2e7b819be","data":{"overview":"算術記述子から再構築した行列積は対象のHopper/Blackwell三世代で非公開ライブラリと100%ビット一致し、現実的なLLM形状の後処理融合でも生成系の性能は一般的なコンパイル経路と同等以上になる場合がある。平衡木縮約をコンパイラで強制した際の性能低下は配置最適化で大きく回復し、27カーネル中19個が自由順序版の10%以内、対象H100の一部では自由版を上回った。静的判定器は二社命令集合を扱い、自動調整候補を実行前に同値類へ分割できる。さらにブラックボックス解析の過程で、特定の縮約軸分割経路が末尾要素を落とす非公開ライブラリ不具合も発見した。","key_results":[{"metric":"非公開行列積とのビット一致","value":"100%","baseline":"cuBLAS family","condition":"GB300、GB200、H100、対象fp16/bf16/fp8条件","interpretation":"縮約順序を決める記述子だけで閉鎖ライブラリの算術を再現できる。"},{"metric":"固定縮約の性能回復","value":"27カーネル中19個が自由順序版の10%以内、H100の10件中5件は上回る","baseline":"free-order mode","condition":"balanced-tree compiler enforcement + layout optimization","interpretation":"ビット順序固定は必ずしも大きな並列性損失を意味しない。"},{"metric":"大規模加速のビット検証","value":"154,904 byte comparisonsで差0","baseline":"descriptor-equivalent reference","condition":"GB300 acceleration arm","interpretation":"同じ記述子内ならpersistent grid等のスケジュール最適化を追加しても同じビットを維持できる。"},{"metric":"非公開ライブラリ末尾欠落条件","value":"H100で各ライブラリ1,542,555実行を調べ、条件が全欠落を誤検出なしで予測","baseline":"full-K reference","condition":"split-K tail bug","interpretation":"算術復元は再現性だけでなく閉鎖実装の論理不具合検出にも使える。"},{"metric":"記述子起動のホスト費","value":"約100µs対ポインタ起動約20µs","baseline":"pointer launch","condition":"descriptor path","interpretation":"100µs未満の短い行列積ではホスト側記述子構築費が見える。"}],"negative_results":["順序固定を単純適用すると最大約20%級の性能懸念があり、配置最適化が必要。","27カーネルすべてが10%以内に入るわけではなく8件は差が残る。","注意カーネルの縮約順序は理論分析が中心で、行列積ほど深く実装・評価していない。","静的判定は健全性を優先するため、実際は同値な二カーネルを別類へ分ける偽陰性が残り得る。"],"quality_impact":"同じ重み・入力・乱数種でも実行構成で出力ビットが変わる経路を制御し、バッチ不変性、推論再現性、学習・推論エンジン整合性を改善する。","interpretation":"再現性を得るために高速カーネルや自動調整を全面禁止するのではなく、算術同値類を先に固定し、その内部でスケジュール・配置を自由に最適化する設計が有効である。"},"reservation":{"claim_id":"claim-839f4e486b01dc3f2c44b391","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-df39dd95007affd7dabf6f90",
+  "job_id": "job-research-21d58015b4f64394",
+  "data": {
+    "overview": "H100上のLLM推論は『GPU利用率が低い』という一種類の問題ではない。cold prefillのdense GEMMはSM busy平均92%だがdecodeは平均9.4%、warm small-payloadもdecode型へ落ちる。一方decodeでも80～132/132 SMには仕事が届き、resident warpは8.8～9.5でkernel固有上限の75～95%を使っているため、単純にSM coverageやwarp数を増やすだけではない。stallは70～84%がlong_scoreboard、device-wide compute SOL約7.9%に対しDRAM SOL約64%で帯域依存が明確で、さらにGMMA m64断片の実行行充填はB=1～8で1.56～12.5%しかない。この固定命令粒度はretileでは直せず、speculative/tree/multi-token decodingなどでM=kBを増やす必要がある。",
+    "key_results": [
+      {
+        "metric": "dense GEMM SM busy",
+        "value": "cold mean 92% vs decode mean 9.4%",
+        "baseline": "same H100 stack across regimes",
+        "condition": "4 models",
+        "interpretation": "warm/decodeの小M形状がcold prefillと別の利用特性を作る。"
+      },
+      {
+        "metric": "decode long_scoreboard stalls",
+        "value": "70～84%",
+        "baseline": "cold 19～36%",
+        "condition": "dense BF16 GEMMs",
+        "interpretation": "decodeは主に長遅延メモリ依存でissueできない。"
+      },
+      {
+        "metric": "device-wide compute vs DRAM SOL",
+        "value": "~7.9% vs ~64%",
+        "baseline": "dense decode mean",
+        "condition": "same kernel calls",
+        "interpretation": "GPUが単にidleなのではなくメモリ側が相対的に高稼働。"
+      },
+      {
+        "metric": "GMMA M-fragment fill",
+        "value": "B=1/2/4/8: 1.56/3.12/6.25/12.5%; decode mean 5.86%",
+        "baseline": "cold prefill 100%",
+        "condition": "BF16 m64 GMMA",
+        "interpretation": "有用token rowが命令断片のごく一部で、8～64倍のattribution gapが生じる。"
+      },
+      {
+        "metric": "occupancy denominator gap",
+        "value": "8.8～9.5 warps/SM = 12～15% of 64, but 75～95% of kernel cap",
+        "baseline": "architectural vs resource-cap denominator",
+        "condition": "dense GEMM/FA3",
+        "interpretation": "低occupancyに見えてもkernel資源上限には近く、一方的register削減では解けない。"
+      },
+      {
+        "metric": "decode QKV wave waste",
+        "value": "Llama 27%、Qwen3-32B/A3B 39%、Qwen3-14B 0%",
+        "baseline": "132-SM perfect wave",
+        "condition": "selected cuBLASLt tiles",
+        "interpretation": "CTA grid形状による空間損失はモデル次元依存。"
+      }
+    ],
+    "negative_results": [
+      "dense decodeではB≤8の範囲でcompute-bound crossoverへ到達しない。",
+      "cuBLASLtの59候補tileを列挙してもLlama decode-QKVで132倍数gridを作れるものがない。",
+      "persistent decode kernelはlaunch/wave損失を減らせてもGMMA m64 fragment fillは改善しない。",
+      "warm prefillは≥99%の合成cache hit endpointであり、中間hit率の実運用は未測定。"
+    ],
+    "quality_impact": "モデル出力品質ではなく性能解釈の品質を改善する。誤った分母の利用率から誤った最適化を選ぶことを防ぐ。",
+    "interpretation": "decode最適化は一つの『GPU utilization』を上げる作業ではなく、帯域待ち、命令断片充填、wave、launch、resource capを別々に扱う必要がある。FFNが通常token時間58～66%を占めるため、改善率も役割時間比で評価すべきである。"
+  },
+  "reservation": {
+    "claim_id": "claim-df39dd95007affd7dabf6f90",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,59 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-839f4e486b01dc3f2c44b391","job_id":"job-research-23c1aef2e7b819be","data":{"canonical_id":"arXiv:2609.11356","arxiv_id":"2609.11356","doi":"10.48550/arXiv.2609.11356","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification","summary":"浮動小数点加算の非結合性により、数学的に同じGPUカーネルでも縮約順序、部分和精度、融合積和、丸め位置が違えばビット列が変わる問題を、記述・復元・強制・静的検証まで一貫して扱う。行列積の縮約順序を決める要素だけを記録する記述子を定義し、非公開の行列積ライブラリをブラックボックス計測して同一ビットの生成系を再構築する。三世代の対象GPUで行列積を100%ビット一致させ、コンパイラには平衡木縮約を強制する後段処理とデータ配置最適化を追加し、27カーネル中19個を自由順序版の10%以内へ戻す。さらに二社のGPU命令列に対する健全な静的同値判定器を作り、自動調整候補を同一ビット同値類の中だけで探索できるようにする。","list_summary":"GPU縮約順序を記述子化し、非公開行列積のビット挙動復元、コンパイラでの平衡木強制、命令列の静的同値判定を接続して再現性と自動調整を両立する。","authors":["Ziteng Yang","Nicholas J. Riasanovsky","Warren Deng","Vivek Sarkar"],"published":"2026-09-10","publication":"arXiv preprint arXiv:2609.11356v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"hardware-accelerators","topics":["GPUカーネル","数値再現性","テンソルコア","コンパイラ","静的検証"],"importance":"LLM推論・学習でバッチや自動調整候補が変わっても同じビットを要求する場合に、性能を大きく捨てずに縮約順序を固定・検証する低レベル基盤を提供する。","hardware_evaluation":"NVIDIA H100、GB200、GB300を中心に評価し、静的判定器はNVIDIA PTXとAMD GCNを対象。","quality_effect":"数値ビット再現性を直接保証対象とし、行列積再構築は対象条件で100%ビット一致。","source":"https://arxiv.org/abs/2609.11356","sources":["https://arxiv.org/abs/2609.11356","https://arxiv.org/html/2609.11356","https://arxiv.org/pdf/2609.11356"],"code":null,"implementation":"Triton後段コンパイラ変更、行列積生成系、静的命令同値判定器、自動調整統合を実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節","references_total":77},"reservation":{"claim_id":"claim-839f4e486b01dc3f2c44b391","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-df39dd95007affd7dabf6f90",
+  "job_id": "job-research-21d58015b4f64394",
+  "data": {
+    "canonical_id": "arXiv:2609.12923",
+    "arxiv_id": "2609.12923",
+    "doi": "10.48550/arXiv.2609.12923",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.PF",
+      "cross_list": []
+    },
+    "title": "Dissecting GPU Utilization for LLM Inference on Nvidia Hopper",
+    "summary": "LLM推論で単一のSM利用率だけを見ると、GPUが忙しく見えても有用な行列演算がどれだけ進んだか分からない問題を、H100 NVL上のvLLM・FlashAttention-3・cuBLASLtをNsight Computeで分解する。4モデル、冷プリフィル・99%以上キャッシュ命中の暖プリフィル・デコード、6種以上の層内カーネル役割を759行の計測へ展開し、SM時間利用率、SM到達範囲、二種類の占有率、stall内訳、装置全体Compute SOL、GMMA断片充填率、wave効率、L2作業集合など8視点で診断する。デコードの密GEMMはSM busy平均9.4%、memory stall 70～84%で帯域律速だが、さらにHopper BF16 GMMAのm64固定断片に対してB=1～8では有効行充填が1.56～12.5%しかなく、カーネル内でも8～64倍の有用演算差が生じる。単なる再タイルでは直らず、複数トークン生成や要求横断の行集約でMを増やす必要がある。",
+    "list_summary": "H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域stallに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。",
+    "authors": [
+      "Mohammad Siavashi",
+      "Gerald Q. Maguire Jr.",
+      "Dejan Kostić",
+      "Marco Chiesa"
+    ],
+    "published": "2026-09-11",
+    "publication": "arXiv preprint arXiv:2609.12923v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "other-inference-systems",
+    "topics": [
+      "GPUプロファイリング",
+      "Hopper",
+      "LLM推論",
+      "Nsight Compute",
+      "GPU利用率"
+    ],
+    "importance": "単一GPU利用率を、時間・空間・占有・stall・命令断片・メモリ階層という異なる分母へ分解し、最適化レバーを機構へ直接対応付ける。",
+    "hardware_evaluation": "NVIDIA H100 NVL 94GB HBM3、132 SM、60MB L2、BF16、TP=1。",
+    "quality_effect": "モデル品質ではなく性能診断。デコード、暖プリフィル、冷プリフィルで同じ利用率指標の意味が大きく変わることを示す。",
+    "source": "https://arxiv.org/abs/2609.12923",
+    "sources": [
+      "https://arxiv.org/abs/2609.12923",
+      "https://arxiv.org/html/2609.12923",
+      "https://arxiv.org/pdf/2609.12923"
+    ],
+    "code": null,
+    "implementation": "vLLM 0.16、FlashAttention-3、cuBLASLt、CUDA Graphs、Nsight Compute 2024.3。raw NCU/Nsys reportsと派生CSVの公開を予定。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML参考文献節",
+    "references_total": 32
+  },
+  "reservation": {
+    "claim_id": "claim-df39dd95007affd7dabf6f90",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
