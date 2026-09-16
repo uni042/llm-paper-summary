@@ -2,68 +2,73 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d87ac0583b3b3fb6f0fcba35",
-  "job_id": "job-research-d09e1c8e52097070",
+  "attempt_id": "attempt-2155991e74d60ac74b2163d1",
+  "job_id": "job-research-3bb1145babb1a6fc",
   "data": {
-    "overview": "ServerlessLoRAは基盤重みの重複排除でGPU容量を確保し、その余力を事前読み込みと適応バッチへ使うことで、既存サーバレスLLM方式よりコールドスタートと費用を同時に下げる。16 GPU・8関数ではServerlessLLM比でTTFTを最大4.7倍、InstaInfer比で最大7.1倍短縮する。論文抽象ではTTFT最大86%、金銭費用最大89%削減と要約される。適応バッチによりTPOTは約12%増えるものの設定SLO内に収め、要求処理率と費用効率を大幅に改善する。",
+    "overview": "PALSの主結果は、バッチ量だけの適応が効率改善の大部分を担う一方、GPU電力上限を同時に動かすことで単独制御では到達できない効率と処理量の組合せを選べることである。単一ノードでは固定400W・最大バッチに対してエネルギー効率を26.3%改善し、事前全探索で得られる理想値までの余地の95%を回収する。3ノード・4800Wの電力制約下ではサービス品質違反を18.7–35.2%から3.2–5.3%へ減らし、4–7倍の改善と12.1%の集約効率向上を同時に得る。実務上は、電力を一律に削るのではなく、通信律速か演算律速かに応じてバッチ量も合わせて変えることで、処理量目標を守りながら電力需要応答へ追従できる点が重要である。",
     "key_results": [
       {
-        "metric": "TTFT",
-        "value": "ServerlessLLM比最大4.7倍短縮、InstaInfer比最大7.1倍短縮",
-        "baseline": "ServerlessLLM / InstaInfer",
-        "condition": "16×L40S、8 LoRA関数、Llama2-7B/13B、Azure Functions由来到着",
-        "interpretation": "共有基盤によりモデル複製を避け、ライブラリ・アダプタ・カーネルまで事前読み込みすることでコールド経路を短くする。"
+        "metric": "単一ノードのエネルギー効率",
+        "value": "26.3%改善",
+        "baseline": "400W・バッチ64固定",
+        "condition": "専門家混合5モデルと密3モデルの平均",
+        "interpretation": "二変数だけで全探索最適値までの余地の95%を回収する。"
       },
       {
-        "metric": "費用効率",
-        "value": "InstaInfer比最大12.7倍、ServerlessLLM比最大19.3倍",
-        "baseline": "InstaInfer / ServerlessLLM",
-        "condition": "複数到着パターンと7B/13B",
-        "interpretation": "独立関数を残したまま基盤GPUメモリを重複排除し、必要GPU資源と待機時間の両方を減らす。"
+        "metric": "バッチだけを適応した効率",
+        "value": "1.14倍",
+        "baseline": "固定方式",
+        "condition": "単一ノード",
+        "interpretation": "主因はバッチだが電力制御が追加利得を与える。"
       },
       {
-        "metric": "トークンスループット",
-        "value": "547 token/s、ServerlessLLM/InstaInferの331 token/sに対し約1.65倍",
-        "baseline": "ServerlessLLM / InstaInfer",
-        "condition": "2 GPU上4×Llama2-7B関数",
-        "interpretation": "適応バッチで平均バッチを73まで拡大し、共有後のGPU余力を計算効率へ変換する。"
+        "metric": "サービス品質違反率",
+        "value": "3.2–5.3%",
+        "baseline": "18.7–35.2%",
+        "condition": "3ノード・4800W・60分",
+        "interpretation": "違反を4–7倍減らす。"
       },
       {
-        "metric": "要求スループット",
-        "value": "最大3.02倍",
-        "baseline": "InstaInfer",
-        "condition": "2 GPU上4関数",
-        "interpretation": "関数別SLOに合わせて待てる範囲でバッチを形成し、小バッチの反復回数を減らす。"
+        "metric": "複数ノード集約効率",
+        "value": "12.1%改善",
+        "baseline": "固定方式",
+        "condition": "3ノード・4800W",
+        "interpretation": "品質維持と省電力を同時改善する。"
       },
       {
-        "metric": "機構切り分け",
-        "value": "完全版 TTFT 576ms / E2E 2977ms / 費用 $7.53。基盤共有なしでは2608ms / 4959ms / $12.55",
-        "baseline": "完全版 vs 基盤共有無効",
-        "condition": "通常到着、8関数、4時間",
-        "interpretation": "最大の寄与は基盤重み共有で、事前読み込み・退避・バッチだけでは同等効果を得られない。"
+        "metric": "需要応答時の処理量",
+        "value": "最大22%改善",
+        "baseline": "電力のみ動的・バッチ64固定",
+        "condition": "3ノードDeepSeek-MoE・低電力目標",
+        "interpretation": "低電力時にはバッチ縮小が効く。"
       },
       {
-        "metric": "SLO違反",
-        "value": "ServerlessLoRAは最悪10%、ServerlessLLM最大45%、InstaInfer最大58%",
-        "baseline": "ServerlessLLM / InstaInfer",
-        "condition": "論文設定のTTFT SLO",
-        "interpretation": "大きいバッチを使っても期限逆算で実行するため、スループット改善をSLO逸脱へ単純転嫁しない。"
+        "metric": "バッチ量効果",
+        "value": "1.7–2.1倍",
+        "baseline": "バッチ1",
+        "condition": "バッチ64まで増加",
+        "interpretation": "固定負担を分散する。"
       },
       {
-        "metric": "制御オーバーヘッド",
-        "value": "事前読み込み/バッチ判定各約1ms、最重条件でも総スケジューリング6ms未満",
-        "baseline": "総推論遅延",
-        "condition": "制御器測定",
-        "interpretation": "配置とバッチのオンライン判断は主要遅延に比べ小さい。"
+        "metric": "複数ノード化の効率低下",
+        "value": "Qwen系30%低下、Mixtral 15%低下",
+        "baseline": "1ノード",
+        "condition": "3ノードへ専門家並列拡張",
+        "interpretation": "通信律速ではノード追加が効率を悪化させる。"
       }
     ],
-    "negative_results": "適応バッチは平均バッチを大きくするためTPOTが比較対象より約12%高くなる条件がある。独立CUDA文脈を維持するため、基盤共有後も関数ごとの文脈により約473MBの追加GPUメモリを使う。基盤共有を外した切り分けではTTFTが576msから2608msへ悪化し、事前読み込み・バッチングだけでは根本的な重複問題を解けない。費用計算はAWS実機上の測定をAlibaba Cloudの公開単価へ写像しており、実AWS請求そのものではない。",
-    "interpretation": "多LoRAサーバレスではコールドスタートだけを速くしても、基盤モデルを関数ごとに複製してGPU容量を消費する限り高密度化できない。逆に単一プロセスへ統合すれば効率は上がるが関数隔離を失う。ServerlessLoRAは『共有できる読み取り専用データ』と『隔離すべき実行状態』を分離し、回復したGPU容量へ到着予測で有用な成果物を先読みしてからSLO内でバッチを拡大するため、メモリ・起動・計算の三要因が同じ方向へ改善する。",
-    "quality_impact": "モデル重みや注意計算を近似しないため生成品質の劣化を狙う方式ではない。主な交換条件はTPOTと待機時間であり、適応バッチの追加遅延をSLO内に抑える設計である。"
+    "negative_results": [
+      "通信律速モデルでは高電力で効率が低下し得る。",
+      "専門家並列のノード間通信で効率が低下する。",
+      "実行時にはテンソル並列を変更できない。",
+      "極端な入力分布変化では予測誤差が増え得る。"
+    ],
+    "quality_impact": "同じモデル計算の電力上限とバッチ構成を変える損失なしのシステム最適化。",
+    "interpretation": "小バッチでは固定負担を十分に分散できないためバッチ拡大が大きな効率改善を生む。演算律速モデルでは追加電力が演算速度へ反映されやすいが、通信律速の専門家混合モデルでは電力を増やしても全対全通信時間が十分短くならず高電力域で効率が悪化する。複数ノード化で通信比率が上がるほどこの傾向は強くなるため、PALSは現在の負荷と電力予算に応じて電力上限とバッチを一緒に動かす。"
   },
   "reservation": {
-    "claim_id": "claim-d87ac0583b3b3fb6f0fcba35",
-    "worker_id": "work-library-repair-20260916",
-    "worker_kind": "work"
+    "claim_id": "claim-2155991e74d60ac74b2163d1",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
   }
 }
