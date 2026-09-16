@@ -23,6 +23,7 @@ def norm_title(value: Any) -> str | None:
         return None
     text = re.sub(r"\s+", " ", str(value)).strip().casefold()
     text = re.sub(r"[^\w\s]", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
     return text or None
 
 
