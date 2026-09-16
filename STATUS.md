@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:18:47 JST**
+> 自動生成: **2026-09-16 12:18:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **28** |
-| 最終検証済みResearch収録 | **09-16 12:18:29 JST（18秒前）** |
+| 最終検証済みResearch収録 | **09-16 12:18:29 JST（22秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -163,8 +163,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2509.00105` — AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving / worker `scheduled-chat-llm-survey-20260916T025906Z`
-  - claim: **09-16 12:15:41 JST** / heartbeat: **—** / lease expiry: **09-16 13:45:41 JST**
+- `arXiv:2509.00105` — AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving / worker `scheduled-chat-discovery-specialist-00`
+  - claim: **09-16 12:18:51 JST** / heartbeat: **—** / lease expiry: **09-16 13:48:51 JST**
   - evidence: `.survey/work-queue/claims/job-research-53e75736382e3b98.json`
 
 #### Audit

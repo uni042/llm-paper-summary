@@ -2,40 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e5b7d8bd8cb604c35cc21abd",
-  "job_id": "job-research-4055e74aec47c94e",
+  "attempt_id": "attempt-14822aa228c007fac68c1df2",
+  "job_id": "job-research-53e75736382e3b98",
   "data": {
-    "scope": "高並行・複数利用者・複数ターンのLLMエージェント負荷で、隔離環境を常時予約する方式、必要時だけ起動する方式、SpecBoxを比較し、端末間末尾遅延、最大メモリ、投機事前起動、結果キャッシュ、成果物転送の寄与を評価する。",
-    "evaluation_setup": "試作エージェント実行系上でLLM生成と外部隔離環境でのツール実行を組み合わせた履歴を再生する。必要時起動の比較方式は要求確定後に環境を起動し、常時予約比較方式は環境を保持し続ける。SpecBoxは逐次意図事前起動、依存グラフ先読み、意味結果キャッシュ、共有メモリ転送を有効化し、高並行度で末尾遅延と資源量を測る。",
-    "models": [
-      "ツール利用型LLMエージェント負荷"
-    ],
-    "hardware": [
-      "LLM推論サービスと隔離実行環境ホスト"
-    ],
-    "workloads": [
-      "高並行・複数ターンのエージェント履歴",
-      "連続ツール呼出しと隔離環境切替",
-      "反復ツール要求",
-      "大容量成果物受渡し"
-    ],
-    "metrics": [
-      "99パーセンタイル端末間遅延",
-      "最大メモリ消費",
-      "隔離環境初回起動の隠蔽量",
-      "結果再利用による重複呼出し削減",
-      "成果物転送時間"
-    ],
-    "baselines": [
-      "必要時隔離環境起動",
-      "常時予約隔離環境",
-      "各個別最適化を外したSpecBox比較"
-    ],
-    "simulation_assumptions": "試作実行に基づくシステム評価。実サービスのツール分布、隔離環境イメージ、ホスト配置によって初回起動時間と投機命中率は変化する。",
-    "evaluation_caveats": "主要公開結果はエージェント履歴に依存し、すべてのモデル文脈プロトコル対応ツールや異なる仮想化実行系を網羅しない。意味結果キャッシュは副作用を持つツールへ無条件適用できず、共有メモリ転送は配置制約を受ける。"
+    "hardware": "1×NVIDIA A100 GPU、CPU DRAM 100GB、SSD 400GB。SSD読込スループットは1GB/sに設定。",
+    "software": "Llama-3.1-8B-Instruct。KV圧縮比較としてKIVIとStreamingLLMを使用。",
+    "methodology": "LongBench由来6データセットから1,100文脈を使い、要約・質問応答・コードの3タスク種別を評価する。元データに到着時刻がないため、既存研究に従い複数要求率のポアソン到着を合成する。比較対象は無圧縮DRAM+SSDオフロード、固定圧縮率のKIVI+LRU、StreamingLLM+LRU、KV再利用せず再プリフィルする方式。品質はタスク別F1、ROUGE-L、CodeBLEU、遅延は主に先頭トークン時間で測り、品質を揃えた場合の遅延と遅延を揃えた場合の品質を比較する。",
+    "scope": "短いワークショップ論文の予備評価であり、単一A100、Llama-3.1-8B-Instruct、合成到着時刻、1GB/s SSDという限定条件。推定器の品質曲線は各データセット10項目の標本とGPT-4o生成質問から作るため、未知分布への一般化や推定コストは今後の検証余地がある。"
   },
   "reservation": {
-    "claim_id": "claim-e5b7d8bd8cb604c35cc21abd",
+    "claim_id": "claim-14822aa228c007fac68c1df2",
     "worker_id": "scheduled-chat-discovery-specialist-00",
     "worker_kind": "scheduled_chat"
   }
