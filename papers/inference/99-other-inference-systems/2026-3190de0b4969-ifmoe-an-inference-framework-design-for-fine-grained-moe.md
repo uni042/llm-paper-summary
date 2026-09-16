@@ -7,7 +7,7 @@ authors:
 - Yuwei An
 - Zhuoming Chen
 - Beidi Chen
-published: '2024'
+published: '2024-12-15'
 publication: Machine Learning for Systems Workshop at NeurIPS 2024
 publication_type: workshop paper
 publication_status: published workshop paper
