@@ -2,45 +2,65 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
-  "job_id": "job-research-77f3e91a5c224daf",
+  "attempt_id": "attempt-a8eafa0f9c1d81675822b92f",
+  "job_id": "job-research-3bb1145babb1a6fc",
   "data": {
-    "canonical_id": "arXiv:2512.20210",
-    "arxiv_id": "2512.20210",
-    "doi": "10.48550/arXiv.2512.20210",
+    "canonical_id": "arXiv:2605.21427",
+    "arxiv_id": "2605.21427",
+    "doi": "10.48550/arXiv.2605.21427",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
-    "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
-    "summary": "本研究は、複数の低ランク適応（Low-Rank Adaptation; LoRA）アダプタを一つの基盤モデルで共有するサーバーレス推論で、要求到着後にアダプタをCPU側メモリからGPUへ読む反応型管理がコールドスタートを生み、異なるランクのアダプタを頻繁に入れ替えるとGPUメモリに外部断片化が蓄積する問題を扱う。Llama2-7Bではrank 64のアダプタ転送だけで約28〜45msを要し、著者のプロファイルでは高並列時にアダプタ読み込みがエンドツーエンド遅延の最大35%を占める。P-LoRAは、過去のアダプタ別アクセス回数から次区間の需要を予測する2層LSTM、予測確率に基づいてアイドル区間や現在バッチ実行中に次のホットアダプタを先読みするプリフェッチ機構、2MB固定ページで異種サイズのアダプタ重みを非連続配置するページ式メモリ管理を統合する。追い出しは最近性・頻度・将来予測を合わせたスコアで決め、先読みは二重バッファで実推論と干渉しにくくする。vLLMを約3,200行のPythonと800行のCUDAで拡張し、Azure Functions由来の到着パターン、ShareGPT由来の入出力長、Llama2-7B/13B・Mistral-7B、rank 8〜64の合成LoRAを用いて評価した。1000アダプタ条件でS-LoRAの95 req/sに対して145 req/s（1.52倍）、500 req/s時の平均TTFTを520msから340msへ35%短縮し、混合rankでもGPUメモリ利用率87%を維持した。一方、予測精度は規則的な平日日中では88〜92%だが週末夜間では70〜78%へ下がり、不規則・敵対的なアクセスでは先読み利益が縮む。評価は主に合成LoRAと単一GPUで、生成品質、予測誤りによる帯域競合、複数GPU間アダプタ配置、費用削減の実運用効果は十分検証していない。",
-    "list_summary": "LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。",
-    "authors": ["Yinan Ni", "Xiao Yang", "Yuqi Tang", "Zhimin Qiu", "Chen Wang", "Tingzhou Yuan"],
-    "authors_affiliations": "University of Illinois at Urbana–Champaign、Santa Clara University、New York University、University of Southern California、University of Missouri–Kansas City、Boston University。",
-    "published": "2025-12-23",
-    "publication": "arXiv:2512.20210v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2025-12-23）。2026-09-14時点で査読済み採録先は一次資料から確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["LoRAサービング", "サーバーレス推論", "予測型プリフェッチ", "アダプタメモリ管理", "GPUメモリ断片化", "ページング", "コールドスタート", "複数アダプタ"],
-    "importance": "中〜高。複数LoRAサービングの計算カーネル最適化だけでなく、アダプタ需要を将来予測して転送時刻を前倒しし、KVキャッシュとは別種の静的重み断片化をページングで扱う。予測・転送・GPUメモリ割当を一つのサーバーレス実行経路に結合した点に価値がある。",
-    "hardware_evaluation": "8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763を備えるサーバー。特記がない主要結果は単一GPUで測定。",
-    "hardware_details": "基盤サーバーは8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763。Llama2-7B/13BとMistral-7Bを使用し、Q/V投影へrank 8/16/32/64の合成LoRAアダプタを適用する。rank 8は約13MB、rank 64は100MB超で、rank 64のCPU→GPU転送は約28〜45msと報告する。",
-    "quality_effect": "P-LoRAはLoRA重み自体を量子化・近似せず、予測、先読み、物理メモリ配置を変えるため、意図的な生成品質低下は導入しない。ただし評価アダプタは合成で、出力一致やタスク精度を比較していないため、実装のscatter-gather経路を含む数値同等性や実アダプタ品質は独立には検証されていない。",
-    "storage_targets": ["GPUメモリ上のLoRAアダプタページ", "CPUホストメモリ上のLoRAプール", "固定基盤モデルのGPU重み", "ページ表を置くピン留めCPUメモリ"],
-    "bottlenecks": ["要求後の反応型LoRA読み込みによるコールドスタート", "PCIe経由のアダプタ転送", "異種rankアダプタの外部断片化", "頻繁なアダプタ追い出しと再読込", "高並列時のアダプタ管理遅延"],
-    "evidence_locations": ["§I Introduction", "§II-B–C Serverless Challenges / Workload Predictability", "§III-A–C Traffic Prediction / Proactive Prefetching / Page-Based Memory Management", "§IV Implementation", "§V-A–G Evaluation", "Figures 3–7", "Table I", "§VII Discussion"],
-    "source": "https://arxiv.org/abs/2512.20210",
-    "sources": ["https://arxiv.org/abs/2512.20210", "https://arxiv.org/pdf/2512.20210"],
-    "code": null,
-    "implementation": "vLLMを約3,200行のPythonと800行のCUDAで拡張した研究実装。LSTM予測器をCPUで非同期実行し、100msごとに共有メモリ経由で予測をスケジューラへ渡す。vLLMのブロック管理をアダプタ用固定ページへ拡張し、非連続ページを読むscatter-gather CUDAカーネルを追加する。2026-09-14時点で論文・検索から著者公式の公開コードリポジトリは確認できない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {"canonical_id": "arXiv:2106.09685", "title": "LoRA: Low-Rank Adaptation of Large Language Models"},
-      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
-      {"canonical_id": "arXiv:2310.18547", "title": "Punica: Multi-Tenant LoRA Serving"}
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+    "summary": "PALSはGPU電力上限を固定制約ではなく実行系の制御変数として扱い、バッチ量と共同最適化する電力認識型vLLM実行系である。事前計測から処理量と消費電力を予測し、500ミリ秒周期の帰還制御で目標処理量を満たしながらジュール当たりトークン数を最大化する。A100を最大3ノード用いた評価でエネルギー効率を最大26.3%改善し、電力制約下のサービス品質違反を4–7倍減らす。",
+    "list_summary": "GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。",
+    "authors": [
+      "Can Hankendi",
+      "Rana Shahout",
+      "Minlan Yu",
+      "Ayse K. Coskun"
     ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2512.20210v1一次資料の参考文献節。構造化リストには正規化識別子を確認できた文献のみ収録。",
-    "references_total": 15
+    "published": "2026-05-20",
+    "publication": "arXiv preprint arXiv:2605.21427v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2026年5月20日投稿のarXiv初版。主分類cs.AI、併記分類cs.DC。",
+    "lineage": "moe-offload-routing",
+    "topics": [
+      "大規模言語モデルサービング",
+      "専門家混合モデル",
+      "GPU電力上限",
+      "エネルギー効率"
+    ],
+    "importance": "専門家混合モデルの通信律速と電力効率を実行時制御へ結びつける。",
+    "hardware_evaluation": "NVIDIA A100を1ノード4基、最大3ノードで実機評価。",
+    "quality_effect": "モデル計算を近似せず電力とバッチだけを変更する。",
+    "source": "https://arxiv.org/abs/2605.21427",
+    "sources": [
+      "https://arxiv.org/abs/2605.21427",
+      "https://arxiv.org/html/2605.21427v1",
+      "https://arxiv.org/pdf/2605.21427"
+    ],
+    "code": null,
+    "implementation": "vLLMを拡張しNVMLでGPU電力上限、スケジューラでバッチ量を変更する。公開コードURLは本文から確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      }
+    ],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML参考文献節から正規化識別子を確認できた項目",
+    "references_total": 4
   },
-  "reservation": {"claim_id": "claim-3956cc3669cdbe211fc51d98", "worker_id": "work-library-repair-20260916", "worker_kind": "work"}
+  "reservation": {
+    "claim_id": "claim-a8eafa0f9c1d81675822b92f",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

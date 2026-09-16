@@ -2,96 +2,73 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3956cc3669cdbe211fc51d98",
-  "job_id": "job-research-77f3e91a5c224daf",
+  "attempt_id": "attempt-a8eafa0f9c1d81675822b92f",
+  "job_id": "job-research-3bb1145babb1a6fc",
   "data": {
-    "overview": "P-LoRAは、予測でアダプタ転送を要求到着前へ移し、固定ページで異種rankの断片化を抑えることで、反応型LoRAサービングのコールドスタートとメモリ管理遅延を同時に削減した。Llama2-7Bの中央値コールドスタートはS-LoRAの68msから22msへ68%短縮し、1000アダプタ時のスループットはS-LoRAの95 req/sから145 req/sへ1.52倍になった。500 req/sでは平均TTFTがS-LoRA 520msから340msへ35%短縮し、TPOTも68.5msから52.3msへ低下する。メモリ面では平均断片化率12%で、従来ブロック35%、S-LoRA 25%より低く、混合rankの利用率はS-LoRA 68%に対して87%を維持した。",
+    "overview": "PALSの主結果は、バッチ量だけの適応が効率改善の大部分を担う一方、GPU電力上限を同時に動かすことで単独制御では到達できない効率と処理量の組合せを選べることである。単一ノードでは固定400W・最大バッチに対してエネルギー効率を26.3%改善し、事前全探索で得られる理想値までの余地の95%を回収する。3ノード・4800Wの電力制約下ではサービス品質違反を18.7–35.2%から3.2–5.3%へ減らし、4–7倍の改善と12.1%の集約効率向上を同時に得る。実務上は、電力を一律に削るのではなく、通信律速か演算律速かに応じてバッチ量も合わせて変えることで、処理量目標を守りながら電力需要応答へ追従できる点が重要である。",
     "key_results": [
       {
-        "metric": "Llama2-7Bの中央値コールドスタート",
-        "value": "68 ms → 22 ms（68%削減）",
-        "baseline": "S-LoRA",
-        "condition": "要求前プリフェッチを有効化",
-        "interpretation": "予測が当たった要求ではCPU→GPUアダプタ転送をTTFTのクリティカルパスから外せる。"
+        "metric": "単一ノードのエネルギー効率",
+        "value": "26.3%改善",
+        "baseline": "400W・バッチ64固定",
+        "condition": "専門家混合5モデルと密3モデルの平均",
+        "interpretation": "二変数だけで全探索最適値までの余地の95%を回収する。"
       },
       {
-        "metric": "予測精度",
-        "value": "全時間帯平均86%、30秒窓で最大89%",
-        "baseline": "LSTM予測器",
-        "condition": "Azure Functions由来アクセス系列",
-        "interpretation": "平日日中88〜92%に対し週末夜間70〜78%で、先読み利益がワークロード規則性に依存する。"
+        "metric": "バッチだけを適応した効率",
+        "value": "1.14倍",
+        "baseline": "固定方式",
+        "condition": "単一ノード",
+        "interpretation": "主因はバッチだが電力制御が追加利得を与える。"
       },
       {
-        "metric": "1000アダプタ時スループット",
-        "value": "145 req/s vs 95 req/s（1.52倍）",
-        "baseline": "S-LoRA",
-        "condition": "同時アダプタ数を最大1000まで増加",
-        "interpretation": "反応型読み込みと断片化管理の費用がアダプタ数とともに増える条件で差が広がる。"
+        "metric": "サービス品質違反率",
+        "value": "3.2–5.3%",
+        "baseline": "18.7–35.2%",
+        "condition": "3ノード・4800W・60分",
+        "interpretation": "違反を4–7倍減らす。"
       },
       {
-        "metric": "アダプタ読み込み遅延",
-        "value": "45 ms → 8 ms",
-        "baseline": "vLLM",
-        "condition": "遅延内訳",
-        "interpretation": "多くの転送を要求到着前へ隠すため、要求経路上に残る読み込み時間が約82%減る。"
+        "metric": "複数ノード集約効率",
+        "value": "12.1%改善",
+        "baseline": "固定方式",
+        "condition": "3ノード・4800W",
+        "interpretation": "品質維持と省電力を同時改善する。"
       },
       {
-        "metric": "メモリ管理遅延",
-        "value": "15 ms → 6 ms",
-        "baseline": "vLLM",
-        "condition": "遅延内訳",
-        "interpretation": "固定ページ化により可変長領域の探索・圧縮・追い出しに伴う待ちを削減する。"
+        "metric": "需要応答時の処理量",
+        "value": "最大22%改善",
+        "baseline": "電力のみ動的・バッチ64固定",
+        "condition": "3ノードDeepSeek-MoE・低電力目標",
+        "interpretation": "低電力時にはバッチ縮小が効く。"
       },
       {
-        "metric": "平均メモリ断片化率",
-        "value": "P-LoRA 12%、従来ブロック35%、S-LoRA 25%",
-        "baseline": "従来ブロック / S-LoRA",
-        "condition": "24時間の高churnアダプタ入替え",
-        "interpretation": "物理連続領域を要求しない固定ページが外部断片化を抑える。"
+        "metric": "バッチ量効果",
+        "value": "1.7–2.1倍",
+        "baseline": "バッチ1",
+        "condition": "バッチ64まで増加",
+        "interpretation": "固定負担を分散する。"
       },
       {
-        "metric": "混合rankのGPUメモリ利用率",
-        "value": "87% vs 68%",
-        "baseline": "S-LoRA",
-        "condition": "rank 8/16/32/64混在",
-        "interpretation": "異種サイズでも小さな空きページを再利用できるため、総空き容量を実際の常駐アダプタへ変換しやすい。"
-      },
-      {
-        "metric": "500 req/sの平均TTFT",
-        "value": "340 ms vs S-LoRA 520 ms / vLLM 820 ms",
-        "baseline": "S-LoRA / vLLM",
-        "condition": "最大要求率",
-        "interpretation": "高負荷で転送・管理待ちが増えるほど、先読みと断片化抑制の両方がTTFTへ効く。"
-      },
-      {
-        "metric": "500 req/sのTPOT",
-        "value": "52.3 ms vs 68.5 ms",
-        "baseline": "S-LoRA",
-        "condition": "最大要求率",
-        "interpretation": "アダプタ管理によるGPU実行の中断や待ちを減らし、逐次生成段階にも改善が残る。"
-      },
-      {
-        "metric": "構成除去の平均遅延改善",
-        "value": "予測のみ14%減、プリフェッチ追加でさらに21%、ページ管理追加でさらに15%、全体50%減",
-        "baseline": "vLLMベース基準",
-        "condition": "Figure 7 ablation",
-        "interpretation": "予測だけでは転送を消せず、実際の先読みとページ式割当が独立に追加利益を与える。"
-      },
-      {
-        "metric": "追加管理オーバーヘッド",
-        "value": "合計3.5 ms / 58 MB",
-        "baseline": "追加機構なし",
-        "condition": "LSTM 2.3ms/18MB、ページ表0.4ms/32MB、プリフェッチ0.8ms/8MB",
-        "interpretation": "主要な数十〜数百ms規模の待ち削減に対して制御費用は小さい。"
+        "metric": "複数ノード化の効率低下",
+        "value": "Qwen系30%低下、Mixtral 15%低下",
+        "baseline": "1ノード",
+        "condition": "3ノードへ専門家並列拡張",
+        "interpretation": "通信律速ではノード追加が効率を悪化させる。"
       }
     ],
-    "negative_results": "予測精度は時間帯に依存し、週末夜間では70〜78%まで低下するため、68%のコールドスタート削減を常に期待できない。30秒窓が89%で最良で、短すぎる窓は履歴不足、長すぎる窓は古いパターン混入で精度が落ちる。ページングはアドレス変換とscatter-gatherを追加し、論文自身も小さなオーバーヘッドと適応ページサイズの未検討を認める。評価は合成LoRA・主に単一GPUであり、誤予測がPCIe帯域を浪費して活動中推論と競合する最悪条件、複数GPU間の配置、実サーバーレス課金に対する費用効果は示されない。",
-    "interpretation": "P-LoRAの主要な利得はLoRA行列積そのものを高速化することではなく、『次に必要になる重みを要求の前に動かす』ことで転送待ちをクリティカルパスから外し、『可変長重みを固定ページへ分解する』ことで同じGPU容量をより高い常駐率へ変換することにある。予測が時間方向の待ちを、ページングが空間方向の無駄を減らし、常駐アダプタが増えるほど再読込も減るため相乗効果が出る。",
-    "quality_impact": "モデル重みの値やLoRA演算を近似せず、転送時刻と物理配置だけを変えるため、理論上は同じアダプタなら生成結果を変えない設計である。ただし論文は合成LoRAを用いた性能評価で、実タスク精度、数値一致、scatter-gatherカーネルによる誤差を独立検証していない。"
+    "negative_results": [
+      "通信律速モデルでは高電力で効率が低下し得る。",
+      "専門家並列のノード間通信で効率が低下する。",
+      "実行時にはテンソル並列を変更できない。",
+      "極端な入力分布変化では予測誤差が増え得る。"
+    ],
+    "quality_impact": "同じモデル計算の電力上限とバッチ構成を変える損失なしのシステム最適化。",
+    "interpretation": "小バッチでは固定負担を十分に分散できないためバッチ拡大が大きな効率改善を生む。演算律速モデルでは追加電力が演算速度へ反映されやすいが、通信律速の専門家混合モデルでは電力を増やしても全対全通信時間が十分短くならず高電力域で効率が悪化する。複数ノード化で通信比率が上がるほどこの傾向は強くなるため、PALSは現在の負荷と電力予算に応じて電力上限とバッチを一緒に動かす。"
   },
   "reservation": {
-    "claim_id": "claim-3956cc3669cdbe211fc51d98",
-    "worker_id": "work-library-repair-20260916",
-    "worker_kind": "work"
+    "claim_id": "claim-a8eafa0f9c1d81675822b92f",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
   }
 }
