@@ -71,5 +71,8 @@ jobs:
         run: python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
 
       - name: Show repository consistency findings
-        if: failure() && hashFiles('/tmp/repository-consistency.json') != ''
-        run: cat /tmp/repository-consistency.json
+        if: failure()
+        run: |
+          if [ -f /tmp/repository-consistency.json ]; then
+            cat /tmp/repository-consistency.json
+          fi
