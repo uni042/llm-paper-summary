@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-469e2611139b80bc054bdf5f",
-  "job_id": "job-research-6802b144c10e4060",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-469e2611139b80bc054bdf5f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-469e2611139b80bc054bdf5f","job_id":"job-research-6802b144c10e4060","data":{"overview":"ETCInferは計算側と冷却側を共同制御することで、R2では総ジョブエネルギーを最大33.1%削減する。単純な高温vLLMは冷却電力を下げても実行時間増加で計算電力が増え、最大節約は18.2%に留まる。ETCInferは高温条件でもSLO違反率を0.7%未満へ抑え、最悪のV2・48℃・要約負荷で17.1%だったスロットリング曝露を1.2%へ削減する。","key_results":[{"metric":"総ジョブエネルギー削減","value":"最大33.1%","baseline":"vLLM-18","condition":"R2","interpretation":"GPU計算電力を少なくとも12.5%下げ、空調電力を49.9%削減する共同制御が最大効果を生む。"},{"metric":"SLO違反率","value":"最高温度条件でも0.7%未満","baseline":"vLLM-48は最悪R2で7.9%超","condition":"R1/R2/V1/V2","interpretation":"単純な室温上昇では遅延違反が急増するが、周波数とバッチの適応制御で低温vLLMに近い品質を維持する。"},{"metric":"スロットリング曝露","value":"17.1% → 1.2%、92.9%削減","baseline":"vLLM-48","condition":"V2、要約負荷","interpretation":"温度上限に達してから保護動作へ任せるのでなく、スロットリングまでの時間を予測して先回り制御する効果を示す。"},{"metric":"モデルベース制御比較","value":"平均31.8%省エネ、SLO違反0.48%、スロットリング削減89.7%","baseline":"Robust MPC+filter: 27.6%、0.74%、78.9%","condition":"R2/V2、3トレース平均","interpretation":"観測履歴から隠れた熱状態へ適応する学習モデルが、固定モデルのずれに強い。"},{"metric":"推論モデル横断","value":"Qwen2.5 30.4%、DeepSeek-R1-Distill 28.7%、Mistral 26.9%省エネ","baseline":"各モデルの基準運転","condition":"Chat Dialog","interpretation":"特定のLlama系モデルだけに依存せず、熱応答とトークン遅延を再較正すれば効果が残る。"}],"negative_results":["高温設定だけのvLLMは長い要約負荷で計算時間が伸び、総エネルギーが増える場合がある。","固定38℃は省エネ1.1～1.3%に対してSLO違反を59.8%、スロットリングを40.5～63.7%増やす。","最大温度を選ぶ方式はR2/V2で2.6%/2.3%しか省エネできず、SLO違反と熱曝露を悪化させる。","厳しい安全設定は違反を26.5%減らす代わりに4.9%多くエネルギーを使う。"],"quality_impact":"省エネだけを最大化せず、TTFT・TPOT・E2Eの三つのSLOと温度制約を同時に評価する。性能と熱安全性を維持した範囲で冷却電力を削減する設計。","interpretation":"設備温度を推論スケジューラの外部条件ではなく制御変数として扱うと、GPU側のDVFS・バッチ制御との相互作用を利用できる。特に高温化で冷却費を削るだけではスロットリングによる計算増加が相殺するため、熱状態の予測とSLO余裕に応じた動的制御が重要になる。"},"reservation":{"claim_id":"claim-469e2611139b80bc054bdf5f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
