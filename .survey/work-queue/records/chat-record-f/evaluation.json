@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-60bfc6ece434281a6a7931aa","job_id":"job-research-73e15ccbef3e6d6d","data":{"evaluation_summary":"CENTのinstruction traceをfunctional simulatorで検証し、Ramulator2を32 GDDR6-PIM channel/CXL deviceへ拡張してperformanceをcycle/timing modelで評価する。CXL通信は既報latencyとPCIe 6.0 bandwidthによるanalytical model、powerはMicron DRAM Power CalculatorとRTL synthesis等から構築する。GPU baselineはIntel Xeon Gold 6430L host + 4×NVIDIA A100 80GBでvLLMを実測し、Llama2 7B/13B/70B、主に512 prefill + 3584 decode、最大32K contextを比較する。","scope":"CENT本体は製造実機ではなく詳細simulation/RTL synthesisとpower/cost modelによる評価である。一方GPU baselineはA100実機であり、artifactとしてtrace generator、simulator、power model、automation scriptが公開され再現可能。結果はdecode優位性が中心で、compute-bound prefillではGPUが優位。","hardware":["CENT: 最大32 CXL device、各device 32 GDDR6-PIM channel","CXL 3.0 over PCIe 6.0 modeled fabric","Intel Xeon Gold 6430L host","GPU baseline: 4×NVIDIA A100 80GB","CXL controller custom logic RTL synthesis at TSMC 28nm and projected 7nm"],"models":["Llama2-7B","Llama2-13B","Llama2-70B","OPT-66B for CXL-PNM comparison"],"datasets":["synthetic/end-to-end LLM inference traces"],"workload":"主比較は512 prefill token + 3584 decode token。GPUは最大batch 128、CENT PPはモデルに応じbatch 32/40/80。latency criticalはbatch 1のTP mapping。Llama2-70Bではcontextを最大32Kまで評価する。","baselines":["4×A100 80GB + vLLM","Samsung CXL-PNM style baseline","AttAcc GPU-PIM","NeuPIM GPU-PIM"],"metrics":["end-to-end latency","tokens/s throughput","average power","tokens/J","tokens/$ over 3-year TCO","prefill/decode breakdown"],"predictor_accuracy":"performanceはfunctional trace + modified Ramulator2 + analytical CXL model。powerはDRAM calculator、controller/component estimates、RTL synthesisを組み合わせるため、CENT実シリコン測定ではない。","control_knobs":"PP、TP、hybrid TP-PP mapping、device数、context length、batch size。"},"reservation":{"claim_id":"claim-60bfc6ece434281a6a7931aa","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-8ff0a365fd45baca9da31eb1",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8ff0a365fd45baca9da31eb1",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

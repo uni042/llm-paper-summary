@@ -2,61 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ad4afba2a1cd0b175dc4bc13",
-  "job_id": "job-research-1dd6544d5f77b687",
-  "data": {
-    "canonical_id": "arXiv:2606.11244",
-    "arxiv_id": "2606.11244",
-    "doi": "10.48550/arXiv.2606.11244",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
-    "title": "SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving",
-    "summary": "SPEARは4ビット量子化後に残る入力依存の誤差へ、トークンごとのゲート付き低ランク誤差補償器を選択的に挿入し、その追加計算をカーネル融合・GPU間通信融合・SLO制約付きスケジューリングまで共同設計して実用的な低ビット推論へ載せるシステムである。per-channel設定でW4からFP16へのperplexity差の56–75%を回復し、追加モデルメモリ1%未満で、複数GPUではW4 MARLINに近い遅延を維持する。",
-    "list_summary": "トークン適応型量子化誤差補償とカーネル・通信・SLOスケジューリングを共同設計し、W4–FP16のperplexity差を56–75%回復。",
-    "authors": [
-      "Hongyuan Liu",
-      "Yawei Li",
-      "Zhiqiang Que",
-      "Qinli Yang",
-      "Junming Shao",
-      "Guosheng Hu"
-    ],
-    "published": "2026-06-04",
-    "publication": "arXiv preprint arXiv:2606.11244v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "2026年6月4日投稿のarXiv初版。主分類cs.AR、併記分類cs.AI。",
-    "lineage": "quantization-kernels",
-    "topics": [
-      "低ビットLLMサービング",
-      "ポスト量子化誤差補償",
-      "カーネル融合",
-      "テンソル並列",
-      "SLOスケジューリング"
-    ],
-    "importance": "量子化精度回復アルゴリズムを実行カーネル、通信、連続バッチスケジューラまで一体化し、精度回復をサービング性能へ落とし込む。",
-    "hardware_evaluation": "NVIDIA GH200 120GB HBM3を最大4基、NVLink接続で評価。CUDA 12.6、NCCL 2.27.5。",
-    "quality_effect": "4ビット量子化バックボーンを固定し、選択したモジュールへ軽量な入力適応型補償器を追加してFP16品質との差を縮小する。",
-    "source": "https://arxiv.org/abs/2606.11244",
-    "sources": [
-      "https://arxiv.org/abs/2606.11244",
-      "https://arxiv.org/html/2606.11244v1",
-      "https://arxiv.org/pdf/2606.11244"
-    ],
-    "code": null,
-    "implementation": "MARLIN系W4実行へEC融合、NVLink P2P dual-write、CUDA Graph、SLO制約付きchunk schedulerを統合した実機システム評価。本文で公開コードURLは確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML本文・参考文献節",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-44d7d7981220efe93f540824",
+  "job_id": "job-research-deb10d3b4d925a01",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ad4afba2a1cd0b175dc4bc13",
+    "claim_id": "claim-44d7d7981220efe93f540824",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

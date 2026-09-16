@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:05:47 JST**
+> 自動生成: **2026-09-16 14:05:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -160,12 +160,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
-- `arXiv:2606.11244` — SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:04:05 JST** / heartbeat: **—** / lease expiry: **09-16 15:34:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1dd6544d5f77b687.json`
-- `arXiv:2502.07578` — PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:03:34 JST** / heartbeat: **—** / lease expiry: **09-16 15:33:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-73e15ccbef3e6d6d.json`
+- `arXiv:2512.16056` — MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services / worker `scheduled-chat-llm-survey-20260916T135756JST`
+  - claim: **09-16 14:05:51 JST** / heartbeat: **—** / lease expiry: **09-16 15:35:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-4714939abf3ccf8f.json`
+- `arXiv:2601.11580` — Speculative Decoding: Performance or Illusion? / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
+  - claim: **09-16 14:05:51 JST** / heartbeat: **—** / lease expiry: **09-16 15:35:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-deb10d3b4d925a01.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
