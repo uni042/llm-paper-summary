@@ -23,6 +23,7 @@ import paper_identity  # noqa: E402
 import survey  # noqa: E402
 import claim_state  # noqa: E402
 import discovery_search_history  # noqa: E402
+import represented_paper_index  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -333,6 +334,12 @@ def existing_candidate_keys():
     return keys
 
 
+def existing_represented_resolver() -> dict[str, Any]:
+    """Build the same represented-paper view used by retrieval-stage prefiltering."""
+    records = represented_paper_index.collect_represented_records(ROOT, JOBS)
+    return paper_identity.build_represented_resolver(records)
+
+
 def make_research_job(c: dict, parent: str):
     key = candidate_key(c)
     if not key:
@@ -526,6 +533,8 @@ def process_discovery(sub: dict, job: dict, st: dict):
     if len(candidates) > MAX_DISCOVERY_CANDIDATES:
         raise ValueError("discovery submission may contain at most 5 candidates")
     seen = existing_candidate_keys()
+    represented_resolver = existing_represented_resolver()
+    accepted_records: list[dict[str, Any]] = []
     added = 0
     final_duplicate_filtered_count = 0
     for candidate in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
@@ -533,7 +542,14 @@ def process_discovery(sub: dict, job: dict, st: dict):
         tokens = paper_identity.identity_tokens(candidate)
         if not key:
             continue
-        if tokens & seen:
+        represented_match = paper_identity.match_represented_paper(candidate, represented_resolver)
+        local_match = None
+        if accepted_records:
+            local_match = paper_identity.match_represented_paper(
+                candidate,
+                paper_identity.build_represented_resolver(accepted_records),
+            )
+        if tokens & seen or represented_match or local_match:
             final_duplicate_filtered_count += 1
             continue
         if int(candidate.get("priority") or 0) < 40:
@@ -541,6 +557,7 @@ def process_discovery(sub: dict, job: dict, st: dict):
         if make_research_job(candidate, job["job_id"]):
             added += 1
             seen.update(tokens)
+            accepted_records.append(dict(candidate))
         else:
             final_duplicate_filtered_count += 1
     job["status"] = "completed"
