@@ -61,7 +61,7 @@ class StatusTerminalRejectionTests(unittest.TestCase):
             )
 
             self.assertIn("| 整合性異常 | **0** |", text)
-            self.assertIn("| 対応jobなしsubmission（有効Discovery round・終端却下除外） | **0** |", text)
+            self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **0** |", text)
 
     def test_retryable_orphan_submission_remains_current_anomaly(self):
         with tempfile.TemporaryDirectory() as td:
@@ -74,7 +74,7 @@ class StatusTerminalRejectionTests(unittest.TestCase):
             )
 
             self.assertIn("| 整合性異常 | **1** |", text)
-            self.assertIn("| 対応jobなしsubmission（有効Discovery round・終端却下除外） | **1** |", text)
+            self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **1** |", text)
 
 
 if __name__ == "__main__":
