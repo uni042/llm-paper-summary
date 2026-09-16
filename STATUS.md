@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:23:01 JST**
+> 自動生成: **2026-09-16 17:27:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **27** |
 | 未claim Research job | **26** |
 | 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-16 17:15:27 JST（7分前）** |
+| 最終検証済みResearch収録 | **09-16 17:15:27 JST（11分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **49** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **48** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **50** | **27** | **4** | **23** | **1** | **0** | **23** |
+| Discovery | **1** | **3** | **0** | **3** | **0** | **0** | **3** |
+| 合計 | **49** | **11** | **4** | **7** | **1** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -149,48 +149,20 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-16 14:00 JST**
-- 耐久探索round: **19件** / immutable submission: **19件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **19件** / 候補: **23件**
-- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression / adaptive KV compression・latency/memory budget / multi-tenant prefix cache・isolation/security / production serving workload・caching/load-balancing trace / backward reference・distributed prompt reuse scheduling / backward reference・augmented/agentic serving interruption / backward reference・heterogeneous CPU/GPU offload / MoE expert offload・prefetch/cache lineage
-- round `specialist-moe-cache-router-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1432JST-discovery-specialist-moe-cache-router-1.json`
-  - 探索軸: MoE expert cache・cache-aware routing
+- 最新観測run: **2026-09-16 17:00 JST**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **3件**
+- 探索軸: 適応KV圧縮・制約駆動構成選択 / PNM・GPU外KV・検索型疎注意 / AMX CPU-GPU協調MoE・coalesced expert execution
+- round `specialist-adaptive-kv-budget-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r1-metakv.json`
+  - 探索軸: 適応KV圧縮・制約駆動構成選択
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-prefill-deadline-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1433JST-discovery-specialist-prefill-deadline-2.json`
-  - 探索軸: SLO-aware prefill chunking・decode interference
+- round `specialist-pnm-kv-sparse-attention-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r2-karat.json`
+  - 探索軸: PNM・GPU外KV・検索型疎注意
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cxl-k8s-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1434JST-discovery-specialist-cxl-k8s-3.json`
-  - 探索軸: Composable CXL・Kubernetes共有KVメモリ
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-disagg-power-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1435JST-discovery-specialist-disagg-power-4.json`
-  - 探索軸: disaggregated serving・phase-aware power control
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-gpu-utilization-5` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1436JST-discovery-specialist-gpu-utilization-5.json`
-  - 探索軸: Hopper GPU utilization・推論profiling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cache-determinism-6` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1437JST-discovery-specialist-cache-determinism-6.json`
-  - 探索軸: prefix cache・量子化・serving決定性
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-page-aware-kv-7` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1438JST-discovery-specialist-page-aware-kv-7.json`
-  - 探索軸: page-aware decode scheduling・KV workqueue
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-nand-compute-8` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1439JST-discovery-specialist-nand-compute-8.json`
-  - 探索軸: 3D NAND・near-storage compute LLM inference
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-wireless-moe-9` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1440JST-discovery-specialist-wireless-moe-9.json`
-  - 探索軸: distributed edge MoE・wireless expert aggregation
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-dynamic-moe-10` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T1441JST-discovery-specialist-dynamic-moe-10.json`
-  - 探索軸: dynamic sparse MoE・inference-time expert budget
+- round `specialist-cpu-gpu-moe-coexecution-3` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260916T1700-r3-cox-moe.json`
+  - 探索軸: AMX CPU-GPU協調MoE・coalesced expert execution
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -248,10 +220,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **342** |
+| 成功result未照合のimmutable submission | **345** |
 | └ Research | **208** |
 | └ Audit | **1** |
-| └ Discovery | **133** |
+| └ Discovery | **136** |
 
 ### 厳格検証が未成立のcompleted job
 
