@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-83b483046e34ec23467654d3",
-  "job_id": "job-research-aa4d7a102619f4b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-83b483046e34ec23467654d3",
-    "worker_id": "scheduled-chat-normal-20260917T013240",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-83b483046e34ec23467654d3","job_id":"job-research-aa4d7a102619f4b3","data":{"canonical_id":"arXiv:2609.12378","arxiv_id":"2609.12378","doi":"10.48550/arXiv.2609.12378","openreview_id":null,"arxiv_categories":{"primary":"cs.CR","cross_list":[]},"title":"An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference","summary":"Odinは、利用者の入力と中間状態を復号せずにLlama-3-8Bを実行する完全準同型暗号（FHE）推論系である。CKKS暗号文の配置とTransformer実行を共同設計し、層間では特徴量主配置を固定しつつ線形射影と注意計算だけ一時配置へ変換する。広いFFN射影で平文重みの符号化を再利用し、QK^T→Softmax→PV間の再配置を避ける。非線形演算では入力範囲制御とモデル品質に基づく誤差配分からminimax多項式次数を下げる。Llama-3-8Bの32層、128トークン入力を単一H100 80GBで366.4秒、ピーク58.9GiBで実行し、同条件THORの1651.9秒に対して4.51倍高速化した。","list_summary":"CKKS暗号文配置とLlama実行を共同設計し、重み符号化再利用・注意間再配置削減・非線形近似調整でLlama-3-8BのFHE推論を単一H100上で実現するOdin。","authors":["Yuhang Fan","Yusi Chen","Kanyu Ye","Zhuoran Ji"],"published":"2026-09-11","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"privacy-preserving LLM inference / CKKS FHE / ciphertext packing","topics":["完全準同型暗号","Llama推論","暗号文配置","GPU推論","プライバシー保護"],"implementation":"Odinのモデル変換、GPU暗号文実行、実験設定をオープンソース公開。","hardware_evaluation":"Llama-3-8B、128トークン入力、単一NVIDIA H100 80GBで全32層をエンドツーエンド評価。","quality_effect":"CKKS近似と多項式近似を使うため数値誤差はあるが、モデル品質を用いた誤差配分と最終多項式評価で品質劣化を制御する。","source":"https://arxiv.org/abs/2609.12378","sources":["https://arxiv.org/abs/2609.12378","https://arxiv.org/pdf/2609.12378"],"code":"https://github.com/Azathoth13/easyfhe-llama3-8b","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary-reference-section","references_total":49},"reservation":{"claim_id":"claim-83b483046e34ec23467654d3","worker_id":"scheduled-chat-normal-20260917T013240","worker_kind":"scheduled_chat"}}
