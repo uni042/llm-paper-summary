@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c28dc16847c1e67a30dd312f",
-  "job_id": "job-research-3342ea471147b233",
-  "data": {
-    "limitations": "性能向上はサーバレス要求の時間局所性に依存し、同じモデルまたは共有可能テンソルが再利用されない要求列ではGPU常駐の利益が小さい。KVキャッシュ需要が大きいと重み保持へ使える空き領域も減る。高要求密度では待ち行列が先頭トークン到達時間を支配し、親和性考慮配置による差が縮む。テンソル単位の追い出し費用は再参照確率や読み込み帯域、利用者指定の遅延感度に依存するため、ワークロード変化で推定価値がずれる可能性もある。",
-    "differences": "SLLMがCPU側モデルキャッシュと並列転送で重み読み込み帯域を高めるのに対し、TangramはGPU側へ以前のモデル重みを残して転送するデータ量自体を減らす。CRIU系は実行環境初期化、Medusa系は事前計測など別のコールドスタート段階を短縮するため補完関係にある。一般的な単一モデル向けKVメモリ管理と異なり、TangramはKVキャッシュが使わない領域を活動していない複数モデルのテンソル保持へ回し、さらに複数GPUの配置判断まで重み残存状態と結び付ける。",
-    "implementation_status": "論文はSLLMとvLLMを基盤にした完全動作試作を報告し、CUDAによる統一GPUメモリ管理、ElasticKV、PagedAttentionを拡張したE-Attention、制御側のGPU親和性考慮スケジューラを実装している。arXiv本文は匿名コード公開先を示している。",
-    "research_positioning": "階層メモリやSSDへの重み退避が『GPUに収まらないデータをどこへ置き、いつ戻すか』を扱うのに対し、Tangramはサーバレスでモデルが終了した後にもGPU上の余剰領域を次回の重みキャッシュとして利用する。同じ重み移動削減でも、低速階層からの先読みよりGPU内残存と配置親和性を主眼とする点が異なる。モデル切替頻度が高い複数モデル提供環境では、KV領域と重み領域を固定分割せず統一管理する設計として、サーバレスLLMのコールドスタート系統に位置付けられる。"
-  },
+  "attempt_id": "attempt-8c8fd5e2638698c7a248c09e",
+  "job_id": "job-research-9fcc40253e9df4ef",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c28dc16847c1e67a30dd312f",
+    "claim_id": "claim-8c8fd5e2638698c7a248c09e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

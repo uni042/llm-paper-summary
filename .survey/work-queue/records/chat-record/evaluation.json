@@ -2,31 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c28dc16847c1e67a30dd312f",
-  "job_id": "job-research-3342ea471147b233",
-  "data": {
-    "hardware": "実GPUを用いたサーバレスLLM環境で単一GPUおよび複数GPU構成を評価する。複数GPU評価ではGPU台数と要求到着密度を変え、先頭トークン到達時間の99パーセンタイルを測る。",
-    "software": "SLLMをサーバレス基盤として用い、vLLMのPagedAttentionを拡張したE-AttentionとElasticKV、CUDAによるGPUメモリ管理を実装した試作を評価する。比較対象にはSLLMへCRIUによる初期化短縮とオフライン事前計測を組み込んだ構成を含む。",
-    "methodology": "モデル切替を含むサーバレス要求列を用い、モデル読み込み時間、コールドスタート時の先頭トークン到達時間、デコード性能、断片化解消時の統合費用、KVキャッシュ動的割当で増える再利用可能領域、複数GPU時の末尾遅延を測定する。モデル要求の時間局所性とKV使用量の変動を実トレース・代表的データセットで確認した上で、各構成要素の効果を分離している。",
-    "workloads": [
-      "実サーバレストレースに基づく複数モデル要求列",
-      "ShareGPT",
-      "GSM8K",
-      "Alpaca",
-      "HumanEval"
-    ],
-    "metrics": [
-      "モデル読み込み時間",
-      "先頭トークン到達時間",
-      "P99先頭トークン到達時間",
-      "デコードスループット",
-      "メモリ統合費用",
-      "再利用可能GPUメモリ量"
-    ],
-    "scope": "実機試作によるシステム評価であり、シミュレーションだけの結果ではない。一方、効果はモデル要求の時間局所性、バッチサイズ、KVキャッシュ実使用量、GPU台数と要求密度に依存するため、常に最大高速化が得られるわけではない。特に高負荷で待ち行列時間が支配的になると、重み再利用やGPU親和性による差は相対的に小さくなる。"
-  },
+  "attempt_id": "attempt-8c8fd5e2638698c7a248c09e",
+  "job_id": "job-research-9fcc40253e9df4ef",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c28dc16847c1e67a30dd312f",
+    "claim_id": "claim-8c8fd5e2638698c7a248c09e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
