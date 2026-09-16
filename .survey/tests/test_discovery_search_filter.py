@@ -104,6 +104,89 @@ class DiscoverySearchFilterTest(unittest.TestCase):
                 provider_has_more=True,
             )
 
+    def test_collector_fetches_multiple_pages_before_returning_unseen_buffer(self) -> None:
+        pages = {
+            None: {
+                "records": [
+                    {"arxiv_id": "2606.24506", "title": "CrossPool"},
+                    {"arxiv_id": "2609.90001", "title": "New A"},
+                ],
+                "next_cursor": "page-2",
+            },
+            "page-2": {
+                "records": [
+                    {"arxiv_id": "2601.10729", "title": "ORBITFLOW"},
+                    {"arxiv_id": "2609.90001", "title": "New A duplicate"},
+                    {"arxiv_id": "2609.90002", "title": "New B"},
+                ],
+                "next_cursor": "page-3",
+            },
+            "page-3": {
+                "records": [
+                    {"arxiv_id": "2609.90003", "title": "New C"},
+                    {"arxiv_id": "2609.90004", "title": "New D"},
+                ],
+                "next_cursor": "page-4",
+            },
+            "page-4": {
+                "records": [{"arxiv_id": "2609.90005", "title": "Should not be fetched"}],
+                "next_cursor": None,
+            },
+        }
+        calls: list[str | None] = []
+
+        def fetch_page(cursor: str | None) -> dict[str, object]:
+            calls.append(cursor)
+            return pages[cursor]
+
+        result = discovery_search_filter.collect_until_unseen(
+            fetch_page,
+            snapshot_dir=self.snapshot,
+            target_unseen=3,
+        )
+
+        self.assertEqual(calls, [None, "page-2", "page-3"])
+        self.assertEqual(
+            [row["arxiv_id"] for row in result["results"]],
+            ["2609.90001", "2609.90002", "2609.90003", "2609.90004"],
+        )
+        self.assertEqual(result["pages_fetched"], 3)
+        self.assertEqual(result["raw_search_result_count"], 7)
+        self.assertEqual(result["retrieval_duplicate_filtered_count"], 2)
+        self.assertEqual(result["cross_page_duplicate_filtered_count"], 1)
+        self.assertEqual(result["unseen_result_count"], 4)
+        self.assertTrue(result["target_reached"])
+        self.assertFalse(result["provider_exhausted"])
+        self.assertEqual(result["next_cursor"], "page-4")
+
+    def test_collector_returns_partial_buffer_when_provider_is_exhausted(self) -> None:
+        calls: list[str | None] = []
+
+        def fetch_page(cursor: str | None) -> dict[str, object]:
+            calls.append(cursor)
+            if cursor is None:
+                return {
+                    "records": [{"arxiv_id": "2609.91001", "title": "Only New"}],
+                    "next_cursor": "last",
+                }
+            return {
+                "records": [{"arxiv_id": "2606.24467", "title": "CompressKV"}],
+                "next_cursor": None,
+            }
+
+        result = discovery_search_filter.collect_until_unseen(
+            fetch_page,
+            snapshot_dir=self.snapshot,
+            target_unseen=5,
+        )
+
+        self.assertEqual(calls, [None, "last"])
+        self.assertEqual([row["title"] for row in result["results"]], ["Only New"])
+        self.assertEqual(result["unseen_result_count"], 1)
+        self.assertFalse(result["target_reached"])
+        self.assertTrue(result["provider_exhausted"])
+        self.assertIsNone(result["next_cursor"])
+
 
 if __name__ == "__main__":
     unittest.main()
