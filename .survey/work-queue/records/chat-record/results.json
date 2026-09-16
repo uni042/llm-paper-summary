@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-5b2f0818dd442ca0014c8634",
-  "job_id": "job-research-3ad6262bd04cfbe6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5b2f0818dd442ca0014c8634",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5b2f0818dd442ca0014c8634","job_id":"job-research-3ad6262bd04cfbe6","data":{"overview":"H100・LLaMA-2 7B・FP16・batch 1の短〜中系列条件で、ハイブリッド方式は全ての測定prompt長で低い初回トークン時間を示した。10トークンでは13.36ms、100トークンでは11.09ms、500トークンでも17.79msで、TensorRT-LLMの16ms、28ms、88msを下回る。論文はTensorRT-LLM比で初回トークン時間を最大66.0%削減したと要約する。P99トークン当たり遅延は1000試行平均でTensorRT-LLMより20.2%、PyTorch Eagerより43.5%低減した。非同期グラフ再生成を無効にすると初回トークン時間が17.5%増え、動的処理の実行時コンパイルを外すとトークン当たり遅延が28%増えるため、静的グラフ再生だけではなく、捕捉の非同期化と動的経路の低オーバーヘッド化の双方が効いている。","key_results":[{"metric":"TTFT at 500-token prompt","value":"17.79 ms","baseline":"TensorRT-LLM 88 ms; HuggingFace 48.96 ms","condition":"H100, LLaMA-2 7B, FP16, batch=1","interpretation":"長めの評価promptでも個別dispatchとruntime graph managementの費用を抑え、対話型初動遅延を大幅に短縮する。"},{"metric":"maximum TTFT reduction","value":"up to 66.0%","baseline":"TensorRT-LLM","condition":"prompt lengths 10-500","interpretation":"静的演算をグラフ再生へまとめる効果が、起動オーバーヘッドの比率が高い単一要求で顕著に現れる。"},{"metric":"P99 per-token latency","value":"average -20.2% vs TensorRT-LLM; -43.5% vs PyTorch Eager","baseline":"TensorRT-LLM / PyTorch Eager","condition":"1000 trials, generation lengths 10-500","interpretation":"平均値だけでなく尾部のdispatch変動も抑え、応答のジッタ低減に寄与する。"},{"metric":"ablation","value":"no async graph regeneration: TTFT +17.5%; no JIT dynamic path: per-token latency +28%","baseline":"full hybrid runtime","condition":"component ablation","interpretation":"CUDA GraphとJITを単に併置するだけでなく、非同期捕捉と動的経路の分離が相補的に必要である。"}],"negative_results":["P99表では生成長が長くなるとハイブリッド方式のトークン当たり遅延も増え、500トークンでは23.68msとなりTensorRT-LLMの16.65msを上回る個別点がある。論文の平均P99改善は全長平均での結果であり、長生成の全点で優位ではない。","評価は単一H100・batch 1・LLaMA-2 7Bに限定され、高スループットbatchや複数GPUでの効果は示されていない。"],"quality_impact":"重み、注意値、KV内容を近似せず実行スケジュールとdispatch方式を変えるため、モデル出力品質を犠牲にする最適化ではない。主な交換条件はグラフ管理複雑性、shape適合性、長生成時の動的経路費である。","interpretation":"この結果は、低遅延推論では全演算を一つのコンパイル方式へ寄せるより、静的性の高い部分だけをCUDA Graphへ固定し、変動部分をJITへ残す方が有効な領域があることを示す。特にbatch 1の対話型処理ではGPU計算以外の起動・同期費が相対的に大きいため、非同期captureで準備費をクリティカルパスから外すことがTTFTとジッタを改善する。ただし長い生成ではP99の個別点が逆転するため、適用範囲は短〜中系列の遅延重視ワークロードとして解釈すべきである。"},"reservation":{"claim_id":"claim-5b2f0818dd442ca0014c8634","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
