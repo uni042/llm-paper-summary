@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 10:02:55 JST**
+> 自動生成: **2026-09-16 10:03:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -161,7 +161,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.12978` — SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading / worker `scheduled-chat-discovery-specialist-overflow`
-  - claim: **09-16 10:00:42 JST** / heartbeat: **—** / lease expiry: **09-16 11:30:42 JST**
+  - claim: **09-16 10:02:59 JST** / heartbeat: **—** / lease expiry: **09-16 11:32:59 JST**
   - evidence: `.survey/work-queue/claims/job-research-e4fbb25e81d25998.json`
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **—** / lease expiry: **09-16 11:00:37 JST**

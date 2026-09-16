@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e42e2fded756eadabecb1122","job_id":"job-research-e4fbb25e81d25998","data":{"limitations":"性能は専門家活性化に学習可能な時系列依存性があることを前提とするため、ルーティング分布が急変する負荷では予測精度が落ち、要求時ロードが増える可能性がある。CPU側からGPUへの帯域が極端に狭い場合は、長い先読み窓があっても期限までに運べる専門家数そのものが少ない。評価は主にGPU―CPUメモリ階層であり、NVMeや分散ノードを含むさらに深い階層へそのまま一般化できるかは未検証である。また予測器の学習・更新と追加実行コストが必要で、FullLoad比性能も100%には達していない。","differences":"MoE-Infinityなどの履歴照合型方式が浅い層の活性化や過去の局所パターンから短距離の専門家需要を推定するのに対し、SeqMoEは全層活性化を生成ステップ単位の系列として扱い、複数ステップ先まで予測する。ProMoE系の個別候補優先度付けとも異なり、予測信頼度と使用期限を帯域制約下で共同最適化する。FreeTokenがグラフ実行へ適応したLRU中心の管理を行うのに対し、SeqMoEはプリフェッチと将来予測キャッシュを維持したままCUDA Graphへ載せる点が差分である。","implementation_status":"論文中では実機評価可能なSeqMoEランタイムとMamba2系予測器が実装され、複数MoEモデルで評価されている。2026-09-16時点のarXiv論文ページでは公式コード公開URLを確認できず、再現用リポジトリの公開状況は未確認である。","research_positioning":"専門家オフロード研究の中でも、予測器単体ではなく、予測結果を帯域スケジューリング、キャッシュ追い出し、GPU実行時機構まで一貫して利用するシステム論文として位置付けられる。特にCPU DRAMや将来のSSD/NVMeを含む階層メモリ研究では、先読み距離を増やすだけでは帯域競合を解けず、期限付き選択と将来需要に基づくキャッシュを組み合わせる必要があることを示す。より遅いSSD階層へ拡張する場合は、転送時間のばらつきや多段階プリフェッチを同じ期限付き最適化へ組み込む発展が考えられる。"},"reservation":{"claim_id":"claim-e42e2fded756eadabecb1122","worker_id":"scheduled-chat-discovery-specialist-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f16bcdd1d9d66c05e293785d",
+  "job_id": "job-research-e4fbb25e81d25998",
+  "data": {
+    "limitations": "性能は専門家活性化に学習可能な時系列依存性があることを前提とするため、ルーティング分布が急変する負荷では予測精度が落ち、要求時ロードが増える可能性がある。CPU側からGPUへの帯域が極端に狭い場合は、長い先読み窓があっても期限までに運べる専門家数そのものが少ない。評価は主にGPU―CPUメモリ階層であり、NVMeや分散ノードを含むさらに深い階層へそのまま一般化できるかは未検証である。また予測器の学習・更新と追加実行コストが必要で、FullLoad比性能も100%には達していない。",
+    "differences": "MoE-Infinityなどの履歴照合型方式が浅い層の活性化や過去の局所パターンから短距離の専門家需要を推定するのに対し、SeqMoEは全層活性化を生成ステップ単位の系列として扱い、複数ステップ先まで予測する。ProMoE系の個別候補優先度付けとも異なり、予測信頼度と使用期限を帯域制約下で共同最適化する。FreeTokenがグラフ実行へ適応したLRU中心の管理を行うのに対し、SeqMoEはプリフェッチと将来予測キャッシュを維持したままCUDA Graphへ載せる点が差分である。",
+    "implementation_status": "論文中では実機評価可能なSeqMoEランタイムとMamba2系予測器が実装され、複数MoEモデルで評価されている。2026-09-16時点のarXiv論文ページでは公式コード公開URLを確認できず、再現用リポジトリの公開状況は未確認である。",
+    "research_positioning": "専門家オフロード研究の中でも、予測器単体ではなく、予測結果を帯域スケジューリング、キャッシュ追い出し、GPU実行時機構まで一貫して利用するシステム論文として位置付けられる。特にCPU DRAMや将来のSSD/NVMeを含む階層メモリ研究では、先読み距離を増やすだけでは帯域競合を解けず、期限付き選択と将来需要に基づくキャッシュを組み合わせる必要があることを示す。より遅いSSD階層へ拡張する場合は、転送時間のばらつきや多段階プリフェッチを同じ期限付き最適化へ組み込む発展が考えられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-f16bcdd1d9d66c05e293785d",
+    "worker_id": "scheduled-chat-discovery-specialist-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}
