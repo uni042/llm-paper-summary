@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 10:46:20 JST**
+> 自動生成: **2026-09-16 10:46:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **69** |
+| 収録候補論文 | **68** |
 | 未claim Research job | **68** |
-| 直近24hの検証済みResearch収録 | **16** |
-| 最終検証済みResearch収録 | **09-16 10:04:04 JST（42分前）** |
+| 直近24hの検証済みResearch収録 | **17** |
+| 最終検証済みResearch収録 | **09-16 10:46:31 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **69** |
+| canonical_id確認済みの一意な候補論文 | **68** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **70** |
+| 非終端Research job合計 | **69** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **1** | **0** | **1** | **2** | **1** | — |
+| Research | **9** | **1** | **1** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **2** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **10** | **7** | **0** | **7** | **2** | **1** | **6** |
+| 合計 | **11** | **7** | **1** | **6** | **1** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 10:46:31 JST** [research] `arXiv:2609.15359` — MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving
+  - job: `.survey/work-queue/jobs/job-research-41c06f0529c148e7.json`
+  - result: `.survey/work-queue/results/research/attempt-79c4ee390d672cc004c43df8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md`
 - **09-16 10:04:04 JST** [research] `arXiv:2609.12978` — SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading
   - job: `.survey/work-queue/jobs/job-research-e4fbb25e81d25998.json`
   - result: `.survey/work-queue/results/research/attempt-f16bcdd1d9d66c05e293785d.json` (`ok=true`)
@@ -109,8 +114,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 10:37 JST** / worker `manual-reader-smoketest-20260916T1037JST`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json` (job `job-research-41c06f0529c148e7`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2609.15359` — MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving
+  - job: `.survey/work-queue/jobs/job-research-41c06f0529c148e7.json`
+  - result: `.survey/work-queue/results/research/attempt-79c4ee390d672cc004c43df8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md`
 
 #### Audit (:30)
 
@@ -152,10 +161,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.15359` — MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving / worker `manual-reader-smoketest-20260916T1037JST`
-  - claim: **09-16 10:38:35 JST** / heartbeat: **—** / lease expiry: **09-16 12:08:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-41c06f0529c148e7.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **09-16 10:33:30 JST** / lease expiry: **09-16 12:03:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
@@ -178,7 +184,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **70** |
+| ready | **69** |
 
 ### 候補の重複・識別情報欠損
 
@@ -198,7 +204,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **556** |
+| inference/training/survey配下の論文Markdown実体 | **557** |
 
 ### immutable submissionの未照合
 
@@ -206,8 +212,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **240** |
-| └ Research | **130** |
+| 成功result未照合のimmutable submission | **239** |
+| └ Research | **129** |
 | └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job

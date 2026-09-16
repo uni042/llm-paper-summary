@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T01:04:07.543661+00:00",
+  "updated_at": "2026-09-16T01:46:35.236480+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T01:04:07.543661+00:00",
+      "last_recorded_at": "2026-09-16T01:46:35.236480+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 92,
+        "research_completed": 93,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34902858197:1",
-          "recorded_at": "2026-09-14T22:16:36.031542+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34902858197",
-            "run_attempt": "1",
-            "source_sha": "07e3fc5af5dc1ee38da5574be6b9abcf2fb9bf21"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34903078177:1",
           "recorded_at": "2026-09-14T22:19:05.054368+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35042577197",
             "run_attempt": "1",
             "source_sha": "9e2be2f2252b78c529e6cf92bb3420c6e31c8171"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35045389059:1",
+          "recorded_at": "2026-09-16T01:46:35.236480+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35045389059",
+            "run_attempt": "1",
+            "source_sha": "e53cdbfa43484d64bb91ae3bf542a2e1ec019d7f"
           },
           "signals": [
             "research_completed"
@@ -20560,6 +20560,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.12978",
           "title": "SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-41c06f0529c148e7",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15359",
+          "title": "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving",
           "from": "ready",
           "to": "completed"
         }

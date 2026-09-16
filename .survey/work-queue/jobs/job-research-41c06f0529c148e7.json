@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.15359",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md",
   "selection_reason": "2026-09-14新着。分離型LLMサービングで出力長不確実性によるdecode側メモリ負荷不均衡を、端末支援の出力長予測・不確実性校正・階層global/local schedulingで扱う。実ワークロード2種・LLM2種で平均E2E latency 42.6%、tail latency最大84.8%削減を報告し、repo重点のdisaggregation/scheduling/KV-memory制御に直結する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-16T00:36:56+00:00"
+  "created_at": "2026-09-16T00:36:56+00:00",
+  "completed_at": "2026-09-16T01:46:31+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json"
 }
