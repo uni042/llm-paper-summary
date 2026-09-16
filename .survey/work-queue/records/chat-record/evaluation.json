@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-bb2a8d8b4366fb467720e96e",
-  "job_id": "job-research-d1705edaabc0afa6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bb2a8d8b4366fb467720e96e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bb2a8d8b4366fb467720e96e","job_id":"job-research-d1705edaabc0afa6","data":{"hardware":"単一ホスト。AMD Ryzen 9 3900XT 12コア、NVIDIA RTX 2080 SUPER 8GB×2、RAM 64GB、Samsung 970 EVO NVMe SSD 500GB（読出し3.4GB/s、書込み2.4GB/s）。","software":"Faiss IndexFlatIP、all-MiniLM-L6-v2埋め込み。単一インスタンスはfacebook/opt-1.3b/2.7b/6.7b、複数インスタンスはLlama-3.2-1B。","methodology":"SQuAD v1.1を使用。単一インスタンスでは2,000要求、16GB CPUメモリキャッシュを設定し、通常RAGとRAG-DCacheのTTFT、プリフィル時間、KV読込み時間、QPSをモデル・バッチ別に比較する。複数インスタンスでは1,000要求を40 req/sで流し、top-k=1/2、メモリキャッシュ無効で共有ディスク効果を分離する。構成AはGPU 1基をKV生成、残り1基を推論、構成BはCPUをKV生成、GPU 2基を推論へ使う。データセットをランダム順で複数回処理しディスクKV蓄積によるヒット率変化も観測する。","scope":"単一ホスト2GPU/1CPUのRAGサービスとSQuAD中心の評価。Shared版はデコード長の変動を避けるためプリフィル段階に測定を限定し、複数ホスト間のネットワーク共有性能や大規模モデルでのShared版挙動は直接測っていない。"},"reservation":{"claim_id":"claim-bb2a8d8b4366fb467720e96e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
