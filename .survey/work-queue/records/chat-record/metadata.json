@@ -1,1 +1,58 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ebd3e581b3a7df85b7d8df3e","job_id":"job-research-250a1e243181b0c3","data":{"canonical_id":"arXiv:2507.17120","arxiv_id":"2507.17120","doi":"10.48550/arXiv.2507.17120","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving","summary":"BucketServeは、プリフィルとデコードを分離したLLMサービングで、長さの異なる要求を同じバッチへ詰めることによるパディング浪費、固定バッチによるメモリ不足、動的負荷でのSLO違反を同時に扱う。プリフィル要求を系列長の区間へ分け、負荷が高いと区間を二分、低いと統合し、GPU残メモリとKVキャッシュ式から安全な最大バッチ数を再計算する。オンライン要求は最古要求を持つバケットを優先し、オフライン要求は短い仕事優先または長い仕事優先を使い分ける。4枚A100上のLlama2-13BではUELLM比最大3.58倍、DistServe比1.31倍のスループットを示し、SLO達成率80%で混合負荷をDistServeの1.93倍処理する。","list_summary":"系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。","authors":["Wanyi Zheng","Minxian Xu","Shengye Song","Kejiang Ye"],"published":"2025-07-23","publication":"arXiv:2507.17120v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"llm-serving-scheduling-disaggregation","topics":["動的バッチ化","系列長バケット","プリフィル・デコード分離","SLOスケジューリング","KVキャッシュ容量管理"],"importance":"バッチサイズだけでなくバケット境界自体を実行時負荷に合わせて変え、系列長分布とGPUメモリ制約を同じスケジューラへ入れる比較対象になる。","hardware_evaluation":"単一ノード4×NVIDIA A100 40GB、NVLink、64 CPUコア、1TB SSD。vLLMを基盤にプリフィル・デコード分離構成を実装。","quality_effect":"モデルや生成アルゴリズムは変更せず、要求のグループ化と実行順を変えるサービング最適化である。生成品質への近似誤差は導入しない。","source":"https://arxiv.org/abs/2507.17120","sources":["https://arxiv.org/abs/2507.17120","https://arxiv.org/pdf/2507.17120"],"code":null,"implementation":"vLLM上に要求バケット管理器、動的バッチ制御器、プリフィル・デコードスケジューラ、全体監視器を追加。KVはNVLinkで移送し、デコード側は継続バッチ化を使用する。公開コードURLは本文で確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv v1参考文献節を確認。正規化参照IDは今回未登録。","references_total":33},"reservation":{"claim_id":"claim-ebd3e581b3a7df85b7d8df3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c334af59c2859bcbd599d50c",
+  "job_id": "job-research-250a1e243181b0c3",
+  "data": {
+    "canonical_id": "arXiv:2507.17120",
+    "arxiv_id": "2507.17120",
+    "doi": "10.48550/arXiv.2507.17120",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving",
+    "summary": "BucketServeは、プリフィルとデコードを分離したLLMサービングで、長さの異なる要求を同じバッチへ詰めることによるパディング浪費、固定バッチによるメモリ不足、動的負荷でのSLO違反を同時に扱う。プリフィル要求を系列長の区間へ分け、負荷が高いと区間を二分、低いと統合し、GPU残メモリとKVキャッシュ式から安全な最大バッチ数を再計算する。オンライン要求は最古要求を持つバケットを優先し、オフライン要求は短い仕事優先または長い仕事優先を使い分ける。4枚A100上のLlama2-13BではUELLM比最大3.58倍、DistServe比1.31倍のスループットを示し、SLO達成率80%で混合負荷をDistServeの1.93倍処理する。",
+    "list_summary": "系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。",
+    "authors": [
+      "Wanyi Zheng",
+      "Minxian Xu",
+      "Shengye Song",
+      "Kejiang Ye"
+    ],
+    "published": "2025-07-23",
+    "publication": "arXiv:2507.17120v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "動的バッチ化",
+      "系列長バケット",
+      "プリフィル・デコード分離",
+      "SLOスケジューリング",
+      "KVキャッシュ容量管理"
+    ],
+    "importance": "バッチサイズだけでなくバケット境界自体を実行時負荷に合わせて変え、系列長分布とGPUメモリ制約を同じスケジューラへ入れる比較対象になる。",
+    "hardware_evaluation": "単一ノード4×NVIDIA A100 40GB、NVLink、64 CPUコア、1TB SSD。vLLMを基盤にプリフィル・デコード分離構成を実装。",
+    "quality_effect": "モデルや生成アルゴリズムは変更せず、要求のグループ化と実行順を変えるサービング最適化である。生成品質への近似誤差は導入しない。",
+    "source": "https://arxiv.org/abs/2507.17120",
+    "sources": [
+      "https://arxiv.org/abs/2507.17120",
+      "https://arxiv.org/pdf/2507.17120"
+    ],
+    "code": null,
+    "implementation": "vLLM上に要求バケット管理器、動的バッチ制御器、プリフィル・デコードスケジューラ、全体監視器を追加。KVはNVLinkで移送し、デコード側は継続バッチ化を使用する。公開コードURLは本文で確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv v1参考文献節を確認。正規化参照IDは今回未登録。",
+    "references_total": 33
+  },
+  "reservation": {
+    "claim_id": "claim-c334af59c2859bcbd599d50c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

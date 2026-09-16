@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:42:56 JST**
+> 自動生成: **2026-09-16 16:43:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -205,7 +205,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2507.17120` — BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 16:40:18 JST** / heartbeat: **—** / lease expiry: **09-16 18:10:18 JST**
+  - claim: **09-16 16:43:02 JST** / heartbeat: **—** / lease expiry: **09-16 18:13:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-250a1e243181b0c3.json`
 
 #### Audit
