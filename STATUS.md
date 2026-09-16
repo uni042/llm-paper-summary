@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:29:50 JST**
+> 自動生成: **2026-09-16 14:29:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **29** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **11** | **0** | **11** | **0** | **0** | **11** |
-| 合計 | **30** | **23** | **6** | **17** | **4** | **1** | **11** |
+| Discovery | **1** | **12** | **0** | **12** | **0** | **0** | **12** |
+| 合計 | **30** | **24** | **6** | **18** | **4** | **1** | **12** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -156,8 +156,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 14:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **11件**
-- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **12件** / 候補: **12件**
+- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression
 - round `specialist-moe-cache-router-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1432JST-discovery-specialist-moe-cache-router-1.json`
   - 探索軸: MoE expert cache・cache-aware routing
@@ -263,9 +263,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **300** |
+| 成功result未照合のimmutable submission | **301** |
 | └ Research | **175** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 
