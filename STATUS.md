@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 22:55:29 JST**
+> 自動生成: **2026-09-16 22:56:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **28** |
 | 未claim Research job | **27** |
 | 直近24hの検証済みResearch収録 | **76** |
-| 最終検証済みResearch収録 | **09-16 22:36:59 JST（18分前）** |
+| 最終検証済みResearch収録 | **09-16 22:36:59 JST（19分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -196,7 +196,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2601.00397` — Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving / worker `scheduled-chat-llm-survey-turn5-20260916T223150JST`
-  - claim: **09-16 22:54:17 JST** / heartbeat: **—** / lease expiry: **09-17 00:24:17 JST**
+  - claim: **09-16 22:56:41 JST** / heartbeat: **—** / lease expiry: **09-17 00:26:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-82da92628b1e61c3.json`
 
 #### Audit

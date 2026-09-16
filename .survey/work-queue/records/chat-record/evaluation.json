@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-be4a32a63a5823916a9d4224",
+  "attempt_id": "attempt-192955c3ea3e82bbfd4200fb",
   "job_id": "job-research-82da92628b1e61c3",
   "data": {
     "hardware": "実GPU基準は4×NVIDIA H200をfully connected NVLinkで接続したmachine、AMD EPYC 9334 128-core CPU、756GB memory。",
@@ -11,7 +11,7 @@
     "scope": "3モデル、2 serving engine、単一4-H200 machineが中心で、GPU世代や大規模multi-node fabricを横断した実測検証は示されない。精度はruntime predictor品質に依存し、compute bufferをCPUが読むframework動作はsplit-state invariantに反してfatalになる。frameworkごとに約50行のActor patchが残り完全透過ではない。"
   },
   "reservation": {
-    "claim_id": "claim-be4a32a63a5823916a9d4224",
+    "claim_id": "claim-192955c3ea3e82bbfd4200fb",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
     "worker_kind": "scheduled_chat"
   }
