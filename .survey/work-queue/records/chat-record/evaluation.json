@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9e8a79ab8bb3589cc8d49e01","job_id":"job-research-20260913T103720Z-686535fc","data":{"evaluation_summary":"QuALITYの長文書に対する複数質問と、実サービス由来のSystem Promptsを中心に、request間のprefix overlap depth分布を作り、その分布に合わせたDP配置を固定間隔block、均等配置、平方根間隔、対数/diadic配置などのheuristicと比較する。評価軸はcheckpoint budgetに対するrecurrent recomputation量とcache footprintのPareto frontierであり、distribution-aware DPは測定layer-group上で全fixed-budget baselineを支配し、最強heuristicのblock cachingに一致または上回りながら通常はより少ないcheckpointを使う。特にcheckpoint budgetが小さくoverlap分布が非一様な条件で利得が大きい。","scope":"多数のrequestが同一cache entry内で長いが完全には同一でないprefixを共有し、recurrent/SSM layerのhidden stateをexactにextract/restoreできる条件を対象とする。共有prefixが短い、ほぼ存在しない、またはstate復元不能なrecurrent kernelでは効果が限定される。","hardware":["測定対象hybrid recurrent layer-groupを実行するGPU環境"],"software":["公開Sparse Prefix Caching実験コード","Qwen3.5 GatedDeltaNet layer-group評価系"],"models":["Qwen3.5系hybrid recurrent layer group"],"datasets":["QuALITY","System Prompts","NarrativeQA（公開コードの追加実験構成）"],"workload":"同じ長文書へ異なる質問を行う要求群、および共通system promptに異なるuser queryを組み合わせた要求群。requestごとにprefix overlap depthが異なる。","baselines":["no recurrent-state cache / full recompute","block caching","balanced checkpoints","sqrt-spaced checkpoints","log/diadic checkpoints"],"metrics":["checkpoint count / state-memory budget","recurrent recomputation cost","cache-hit overlap coverage","memory-recompute Pareto frontier"],"methodology":"実データからprefix overlap depthの経験分布を得て、その分布を入力したO(NM) DP配置と標準heuristicを同一checkpoint budgetで比較する。recurrent computationの測定値を用いて各配置の期待再計算costを算出し、checkpoint数を横軸とするPareto frontierを比較する。出力一致はcheckpointからsuffixをexact recomputeする設計により保証される。","predictor_accuracy":"予測器は使わない。経験的overlap-depth分布そのものをplacement objectiveへ使い、workload driftに対しては分布更新が必要になる。","control_knobs":"checkpoint budget M、候補位置数N、overlap-depth分布、checkpoint block alignment、分布履歴の重み付け。"},"reservation":{"claim_id":"claim-9e8a79ab8bb3589cc8d49e01","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-b18b3650d175a867b90755e2",
+  "job_id": "job-research-46a0d6f61e82afe1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b18b3650d175a867b90755e2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

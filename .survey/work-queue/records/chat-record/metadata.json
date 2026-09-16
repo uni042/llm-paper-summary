@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9e8a79ab8bb3589cc8d49e01","job_id":"job-research-20260913T103720Z-686535fc","data":{"canonical_id":"arXiv:2605.05219","arxiv_id":"2605.05219","doi":"10.48550/arXiv.2605.05219","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Sparse Prefix Caching for Hybrid and Recurrent LLM Serving","summary":"Mamba・線形注意・状態空間モデルなどの再帰層では、TransformerのKVのようなtokenごとの履歴ではなく単一のhidden stateから計算を再開できる一方、そのstate checkpoint自体は高コストである。本研究は、共有接頭辞の全位置へ再帰状態を密に保存せず、接頭辞重複深度の分布に合わせて一部位置だけへ正確なstateを保存する疎接頭辞キャッシュ（Sparse Prefix Caching）を提案する。cache hit時は最深checkpointから残りsuffixだけを正確に再計算し、checkpoint数と再計算量のPareto frontierを改善する。配置問題を厳密なO(NM)動的計画法として解き、QuALITYとSystem Promptsで固定予算heuristicを支配し、強いblock cachingに同等以上の性能をより少ないcheckpointで達成する。","list_summary":"再帰/ハイブリッドLLMの共有prefixにhidden-state checkpointを疎配置し、O(NM)動的計画法でcheckpoint memoryとexact recomputationを最適化する。","authors":["Mikhail Shirokikh","Sergey Nikolenko"],"published":"2026-04-17","publication":"arXiv:2605.05219","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"kv-cache","topics":["prefix caching","hybrid recurrent LLM serving","state space models","checkpoint placement"],"importance":"dense KV reuseを前提とした従来prefix cachingと異なり、recurrent stateが単一点から再開可能という非対称性をserving cache設計へ利用する。","hardware_evaluation":"QuALITYとSystem Promptsの実データを用い、測定したrecurrent layer-groupのcache/recompute Pareto frontierを評価する。","quality_effect":"保存checkpointからsuffixを同じrecurrent updateで正確に再計算するため出力はexactに保持され、新しい近似kernelを必要としない。","source":"https://arxiv.org/abs/2605.05219","sources":["https://arxiv.org/abs/2605.05219","https://arxiv.org/html/2605.05219"],"code":"https://github.com/arabel1a/sparse-prefix-caching","implementation":"公開実験コードはQwen3.5のGatedDeltaNetを含むhybrid recurrent layer groupを対象に、疎checkpoint配置と再計算を評価する。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML reference section; normalized identifiers not exhaustively extracted","references_total":0},"reservation":{"claim_id":"claim-9e8a79ab8bb3589cc8d49e01","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-b18b3650d175a867b90755e2",
+  "job_id": "job-research-46a0d6f61e82afe1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b18b3650d175a867b90755e2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

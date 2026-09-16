@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:34:52 JST**
+> 自動生成: **2026-09-16 19:34:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **8** | **4** | **4** | **2** | **1** | — |
+| Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **24** | **0** | **24** | **0** | **0** | **32** |
-| 合計 | **39** | **32** | **4** | **28** | **2** | **1** | **32** |
+| 合計 | **39** | **32** | **4** | **28** | **2** | **0** | **32** |
 
 - 最新Discovery runの耐久探索round: **24件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -194,10 +194,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:54:24 JST** / heartbeat: **09-16 19:29:43 JST** / lease expiry: **09-16 20:59:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-648fe1e5b80283fd.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.16206` — Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 19:34:57 JST** / heartbeat: **—** / lease expiry: **09-16 21:04:57 JST**
+  - evidence: `.survey/work-queue/claims/job-research-46a0d6f61e82afe1.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`

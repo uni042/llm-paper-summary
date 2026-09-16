@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9e8a79ab8bb3589cc8d49e01","job_id":"job-research-20260913T103720Z-686535fc","data":{"positioning":"本研究はTransformer中心のprefix KV cachingを、Mamba/SSM/linear-attention等を含むhybrid recurrent LLMへ拡張する際のstate representation差を利用し、recurrent stateだけを疎checkpoint化するcache placement研究である。","differences":"RadixAttentionやvLLM automatic prefix cachingはattention KVをprefix block単位で再利用するのに対し、本研究はrecurrent layerが単一hidden stateから再開できることを利用して、全位置のstateを保持しない。KV圧縮・量子化が各cached tokenのfootprintを減らすのに対し、Sparse Prefix Cachingは保存するrecurrent checkpointの位置数そのものを減らし、cache hit時のexact suffix recomputationと交換する。固定block checkpoint方式と違い、実workloadのoverlap-depth分布をO(NM) DPへ入力して配置を最適化する。","relation_to_prior_work":[{"work":"RadixAttention / vLLM prefix caching","difference":"dense token-wise attention KV reuseではなく、recurrent layerのsingle-state resumabilityを利用した疎checkpointを追加する。"},{"work":"block recurrent-state caching","difference":"固定block境界へ一律checkpointする代わりに、prefix overlap-depth分布に応じてcheckpoint位置を選び、低budgetでの無駄なstate保存を減らす。"},{"work":"KV cache compression / quantization","difference":"各KV entryの表現を近似圧縮せず、recurrent checkpointの配置数を減らしてexact recomputationを許容するため、hybrid modelでは両者を併用できる。"}],"strengths":["recurrent stateとattention KVの構造差を直接cache設計へ落とし込む。","checkpoint placementをO(NM)の厳密DPとして定式化し、heuristic比較だけで終わらない。","QuALITYとSystem Promptsでfixed-budget baselineをPareto支配し、block cachingに少ないcheckpointで同等以上となる。","exact state restoreとsuffix recomputationだけを使うためモデル出力を変えない。"],"limitations":["長く共有されるprefixが十分に存在するworkloadでないとcheckpoint reuseの価値が小さい。","hidden stateをexactにextract/restoreできるrecurrent/SSM implementationが必要である。","overlap-depth分布に適応するため、workload driftが大きい環境では分布推定と再配置の運用が必要になる。","end-to-end multi-GPU serving全体のscheduler、remote cache tier、checkpoint転送costまでを共同最適化する研究ではない。"],"implementation_status":"公開GitHub実験コードがあり、Qwen3.5のGatedDeltaNet layer group、QuALITY/System Prompts/NarrativeQA系workloadで複数checkpoint strategyを再現できる。","research_positioning":"hybrid recurrent modelの普及に伴い、Transformer用KV cache policyをそのまま流用せず、layer stateの再開可能性に応じてcache granularityを変える方向の基礎研究である。","repository_fit":"KV-cache / prefix-caching系統で、recurrent/SSM hybrid servingに固有のmemory-recompute trade-offを比較する主要論文として位置付けられる。"},"reservation":{"claim_id":"claim-9e8a79ab8bb3589cc8d49e01","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-b18b3650d175a867b90755e2",
+  "job_id": "job-research-46a0d6f61e82afe1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b18b3650d175a867b90755e2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
