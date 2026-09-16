@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:35:41.256643+00:00",
+  "updated_at": "2026-09-16T05:40:19.557368+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:35:41.256643+00:00",
+      "last_recorded_at": "2026-09-16T05:40:19.557368+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 121,
+        "research_completed": 122,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34935257932:1",
-          "recorded_at": "2026-09-15T06:06:55.852206+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "34935257932",
-            "run_attempt": "1",
-            "source_sha": "d725fce905d033706db15f8088730e8c543747a5"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34940046600:1",
           "recorded_at": "2026-09-15T07:06:44.111064+00:00",
@@ -19595,6 +19580,20 @@
             "run_id": "35060121379",
             "run_attempt": "1",
             "source_sha": "de134032aa15f65a2a7c2d03eeaba617065a21f2"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35060413481:1",
+          "recorded_at": "2026-09-16T05:40:19.557368+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35060413481",
+            "run_attempt": "1",
+            "source_sha": "55d39acf281469cd5adc0566a2bd229e27573fed"
           },
           "signals": [
             "research_completed"
@@ -20871,6 +20870,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.23001",
           "title": "EnerInfer: Energy-Aware On-Device LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4588133b1e6a7663",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11209",
+          "title": "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
           "from": "ready",
           "to": "completed"
         }

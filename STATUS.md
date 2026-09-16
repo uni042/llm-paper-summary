@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:40:10 JST**
+> 自動生成: **2026-09-16 14:40:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **42** |
-| 未claim Research job | **39** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:35:37 JST（4分前）** |
+| 収録候補論文 | **41** |
+| 未claim Research job | **38** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-16 14:40:15 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **42** |
+| canonical_id確認済みの一意な候補論文 | **41** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **43** |
+| 非終端Research job合計 | **42** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **30** | **12** | **6** | **6** | **4** | **1** | — |
+| Research | **31** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **18** | **0** | **18** | **0** | **0** | **18** |
-| 合計 | **31** | **30** | **6** | **24** | **4** | **1** | **18** |
+| 合計 | **32** | **30** | **6** | **24** | **4** | **1** | **18** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:40:15 JST** [research] `arXiv:2609.11209` — REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving
+  - job: `.survey/work-queue/jobs/job-research-4588133b1e6a7663.json`
+  - result: `.survey/work-queue/results/research/attempt-01a98f493128a23f4a32008c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-01a98f493128a23f4a32008c.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md`
 - **09-16 14:35:37 JST** [research] `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference
   - job: `.survey/work-queue/jobs/job-research-e8148d67a04de0eb.json`
   - result: `.survey/work-queue/results/research/attempt-4b0bf8eef80fa393a4c31125.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-2155991e74d60ac74b2163d1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2155991e74d60ac74b2163d1.json`
   - paper: `papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md`
-- **09-16 13:52:05 JST** [research] `arXiv:2609.14237` — OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-0dc2aa86e35f442f.json`
-  - result: `.survey/work-queue/results/research/attempt-83192276c9f89bc52b0efa12.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-83192276c9f89bc52b0efa12.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md`
 
 ### Audit
 
@@ -235,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **43** |
+| ready | **42** |
 
 ### 候補の重複・識別情報欠損
 
@@ -255,7 +255,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **585** |
+| inference/training/survey配下の論文Markdown実体 | **586** |
 
 ### immutable submissionの未照合
 
@@ -263,8 +263,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **311** |
-| └ Research | **179** |
+| 成功result未照合のimmutable submission | **310** |
+| └ Research | **178** |
 | └ Discovery | **132** |
 
 ### 厳格検証が未成立のcompleted job
