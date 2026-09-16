@@ -2,42 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d46cbf4852c682889455ee0b",
-  "job_id": "job-research-6252d370adc380b9",
+  "attempt_id": "attempt-b2e9f34d23136fee84c1cbfc",
+  "job_id": "job-research-df04bb2baebfa878",
   "data": {
-    "positioning": "本研究は個々のrequest schedulingより上位のresource compositionを扱い、pipeline-parallel LLMでschedulerが選択可能なserver chain集合と各chainのKV concurrency capacityを事前設計する基礎最適化である。",
-    "differences": "vLLM等の単一instance内schedulerは既に配置されたmodel上でrequest順序を決めるのに対し、本研究は物理GPUへどのlayerを置き、残余memoryをどのchainのKVへ割り当てるかを先に決める。PETALS系のblock placement/request schedulingに近いが、implementation-specific heuristicではなくchain-structured memory-bound jobsとして抽象化し、NP-hard性とresponse-time boundsを与える。service-function chainingとも形は似るが、computeではなくmodel weightsとper-request KVが同じmemoryを競合する点を明示する。",
-    "relation_to_prior_work": [
-      {
-        "work": "vLLM / ordinary LLM schedulers",
-        "difference": "既存model instance内のrequest順序ではなく、instanceを形成するserver chainsとKV capacity自体を最適化する。"
-      },
-      {
-        "work": "PETALS-style block placement",
-        "difference": "block placementをcache allocationとload balancingへ結合し、queueing-theoretic performance boundsを与える。"
-      },
-      {
-        "work": "service function chaining",
-        "difference": "compute-cycle placementではなく、共有model weightsと専有per-request KVが競合するmemory-bound chainを扱う。"
-      }
-    ],
-    "strengths": [
-      "LLM固有のweight/KV memory競合を抽象問題として切り出し、NP-hard性と性能boundを示す。",
-      "offline compositionとonline load balancingを分離してスケーラブルな運用構造にする。",
-      "simulationだけでなくreal distributed LLM servingで63〜77% mean response-time削減を確認する。"
-    ],
-    "limitations": [
-      "static KV allocationを仮定し、requestごとの実sequence長差やdynamic growthを直接最適化しない。",
-      "一度開始したrequestはserver chain間を移動せずpreemptionもしない。",
-      "pipeline parallelism中心で、tensor parallelやexpert parallelとの共同配置は対象外である。",
-      "中央orchestrator前提であり大規模分散制御のoverheadは今後の課題である。"
-    ],
-    "implementation_status": "性能保証付きblock placement/cache allocation algorithmとJoin-the-Fastest-Free-Serverをreal distributed LLM serving systemへ適用した研究実装。公式code URLは確認できなかった。",
-    "research_positioning": "LLM servingをqueue schedulerだけでなく、memory-awareな論理server composition問題として扱う理論・システム橋渡しの研究である。",
-    "repository_fit": "99-other-inference-systemsのdistributed serving/resource allocation研究として、pipeline placement、KV capacity planning、load balancingの比較基準になる。"
+    "limitations": "理論モデルはprefill計算時間を簡略化し、未知長解析では入力・出力長の有界性など確率仮定を置く。実システム評価も主にシミュレーションであり、実GPUサーバへの統合によるスケジューラ実装費、複数装置通信、接頭辞キャッシュとの相互作用は未検証である。高負荷・長要求では安全な活性化予算が小さくなり、保守的制御の遅延費用が増える。",
+    "differences": "vLLMなどの連続バッチ処理が空き容量へ可能な限り要求を入れるのに対し、本研究は待ち行列から実行集合へ入る要求数を明示的な流量として制御する。出力長未知時の容量超過は後入れ先出しで比較的新しく開始した要求から戻し、失われる計算を抑える。経験的なキャッシュ保護閾値に対し、到着率・生成長・容量から安定不可能領域、十分安定領域、超過確率の減衰を数式で与える点が差別化される。",
+    "implementation_status": "離散時間シミュレータとMicrosoft Vidurを用いた連続時間評価による研究実装。実GPUサービングエンジンへの公開統合コードは今回確認できていない。",
+    "research_positioning": "LLMサービングの要求スケジューリングを、平均処理量最大化だけでなく未知生成長下のメモリ安定性という待ち行列制御問題として扱う理論系統である。出力長予測、動的KV管理、実装系スケジューラと組み合わせる際の安全な受付率を与える基準として利用価値がある。"
   },
   "reservation": {
-    "claim_id": "claim-d46cbf4852c682889455ee0b",
+    "claim_id": "claim-b2e9f34d23136fee84c1cbfc",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
