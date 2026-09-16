@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6f1b6968a7268a733026a358",
-  "job_id": "job-research-553691f8ff245e9b",
-  "data": {
-    "overview": "ASAPは低負荷でも同期方式よりTTFTを下げ、高負荷になるほど大域同期を外した効果が拡大する。5秒SLOを守れる最大負荷は20 RPSで、ChunkedPrefillの10.5 RPSに対して90%高い。同期標準方式は6.8 RPSに留まる。短い要求では同期方式のTTFTの大半が同期待ちとキュー待ちで占められ、ASAPはこの非計算時間を最大80%削減するため、単なるカーネル高速化ではなく不均衡による遊休時間の回収が主要因と分かる。",
-    "key_results": [
-      {"metric": "5秒SLO準拠スループット", "value": "20 RPS", "baseline": "ChunkedPrefill 10.5 RPS、標準同期方式6.8 RPS", "condition": "DeepSeek-V3.2、32 Ascend 910 NPU、実運用由来要求長分布", "interpretation": "ChunkedPrefill比90%、標準同期方式比194%の改善で、入力長ばらつきを小さくするだけでなく同期障壁自体を除く効果を示す。"},
-      {"metric": "平均TTFT", "value": "RPS=1で350ms、RPS=4でChunkedPrefill比41.8%削減、RPS=8で同68.3%削減", "baseline": "RPS=1では標準同期533ms、ChunkedPrefill388ms", "condition": "5秒SLO評価と同じ32 NPU構成", "interpretation": "負荷が増えてDP群のばらつきと待ち行列が増えるほど、独立進行の利点が大きくなる。"},
-      {"metric": "非計算遅延", "value": "512トークン未満で最大80%削減", "baseline": "標準同期方式では同期待ち55%、要求キュー待ち30%がTTFTを占有", "condition": "RPS=4の遅延分解", "interpretation": "短い要求ほど計算が軽いのに大域障壁で遅くなる逆説を、非同期化が直接解消している。"},
-      {"metric": "非同期送出通信遅延", "value": "同期P2P比、1kトークンで4倍高速、8kトークンで5.8倍高速", "baseline": "同期P2P通信", "condition": "DeepSeek-V3.2の隠れ状態をCloudMatrix384内で送信", "interpretation": "受信側とのハンドシェイク待ちを除き、多数宛先へ並列転送できることが通信経路自体の待ちも削減する。"},
-      {"metric": "機構別SLO準拠スループット", "value": "二重バッチ交互実行+14.3%、通信計算重畳+12.4%、スーパーカーネル+6%", "baseline": "各機構を無効化したASAP", "condition": "同一評価環境での除去実験", "interpretation": "同期除去だけでなく、非同期化が生む注意装置の空隙、通信負荷、動的層投入のCPU待ちをそれぞれ埋める機構が最終スループットに寄与する。"}
-    ],
-    "negative_results": "二重バッチ交互実行は低負荷では追加待ちを生み、平均TTFTを約6.5%悪化させる。また16kトークン超では注意計算がMoE計算より十分長くなるため交互実行を無効化する。通信計算重畳も注意装置ではL2/HBM帯域競合により注意カーネルが伸びたため、実装ではMoE装置側へ限定する。デコードでは1要求1トークンのためMoEを飽和させる約2千トークンを集める待ちがSLOを悪化させ得る。",
-    "interpretation": "改善幅が高負荷ほど大きいのは、ASAPが演算量そのものを減らすのではなく、要求の不均衡が同期方式で生む待ちを除くためである。低負荷では待ちが元々少なく、二重バッチ形成の待ちが見える。一方、高負荷ではDP群ごとの進行差が頻発するため、速い群を止めない効果がスループットへ直接変換される。",
-    "quality_impact": "近似、量子化、枝刈り、トークン削減を用いず、同じモデル計算の実行配置・順序・通信を変える方式である。論文は品質劣化との交換条件を報告しておらず、性能改善は意味上は無損失のシステム最適化として扱われる。"
-  },
-  "reservation": {"claim_id": "claim-6f1b6968a7268a733026a358", "worker_id": "scheduled-chat-llm-survey-20260916T023111Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-7a2855dc02fa7a76f9c476f5",
+  "job_id": "job-research-6ca0cd6980218f8e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7a2855dc02fa7a76f9c476f5",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

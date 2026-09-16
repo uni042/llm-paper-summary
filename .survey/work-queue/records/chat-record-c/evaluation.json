@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-6f1b6968a7268a733026a358",
-  "job_id": "job-research-553691f8ff245e9b",
-  "data": {
-    "hardware": "Huawei CloudMatrix384スーパー・ノード上のAscend 910 NPU。各NPUは64GB HBMを持ち、スーパー・ノード内は装置間双方向400GB/sのUnified Busで接続される。主評価は32 NPUを用い、同期方式DP=8/TP=4/EP=32とASAPの注意-MoE分離DP=4/TP=4/EP=16を同一装置数で比較する。",
-    "software": "DeepSeek-V3.2をPyTorch 2.1とCANN 8.3ベースの実運用級推論基盤で実装。非同期通信はAscendC、MoE計算は層非依存GMMスーパーカーネルを用いる。",
-    "methodology": "Huawei Cloudの実運用トレースから要求長を標本化し、到着間隔はポアソン分布として要求毎秒（RPS）を変化させる。32kトークン超の要求は別の系列並列インスタンスへ送る運用を想定し主評価から除外する。先頭トークン時間（Time-to-First-Token; TTFT）のSLOを5秒に設定し、各試行を5分実行する。比較対象は、総トークン数が近いバッチをDP群へ割り当てる社内標準同期方式と、長い入力を8k単位に分割してばらつきを抑えるChunkedPrefill。平均TTFTと5秒SLOを維持できる最大RPSを測るほか、遅延分解、通信単体、各機構の除去実験も行う。",
-    "scope": "実機・実モデル・実運用由来の要求長分布を使う点は強いが、主要評価はHuawei CloudMatrix384とAscend 910、DeepSeek-V3.2、プリフィル段階に限定される。RDMAでも同期障壁除去の利益が通信遅延を上回ると議論するものの、GPUクラスタや通常Ethernet環境で同じ改善率を直接測定してはいない。また32k超の要求とデコードは主評価外である。"
-  },
-  "reservation": {"claim_id": "claim-6f1b6968a7268a733026a358", "worker_id": "scheduled-chat-llm-survey-20260916T023111Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-7a2855dc02fa7a76f9c476f5",
+  "job_id": "job-research-6ca0cd6980218f8e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7a2855dc02fa7a76f9c476f5",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
