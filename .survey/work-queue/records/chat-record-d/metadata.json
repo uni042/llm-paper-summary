@@ -2,34 +2,75 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1f5b634be6acbecd230032d1",
+  "attempt_id": "attempt-34765e98bb9cf6776aa5d26d",
   "job_id": "job-research-8f7fdb4eba0d8a63",
   "data": {
     "canonical_id": "arXiv:2604.15379",
     "arxiv_id": "2604.15379",
     "doi": "10.48550/arXiv.2604.15379",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
     "title": "Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs",
     "summary": "Fleetは、複数チップレットを一つのGPUとして扱う現在のCUDA/HIP型実行モデルでは、チップレットごとに分離されたL2キャッシュの局所性を指定できず、LLMデコードで同じ重みをHBMから重複読出しする問題を解く。ウェーブフロント、CU、チップレット、デバイスの4階層タスクを定義し、特に一つのXCD内の多数CUを協調させるチップレットタスクを追加する。GPU全体を占有する永続カーネル内で各XCDにスケジューラを1つ置き、残りCUをワーカーとして局所L2を共有するタスクを配る。Qwen3-8BをAMD MI350Xで評価し、バッチ1〜8ではvLLMよりデコード遅延を1.3〜1.5倍改善し、バッチ32/64では協調重みタイリングによりL2ヒット率を約51/61%へ上げ、HBM読出しを最大37%削減してチップレット非認識Mirageメガカーネル比1.27〜1.30倍高速化した。",
     "list_summary": "Fleetは複数ダイGPUにチップレット単位の作業階層を追加し、永続カーネル内で同一L2を共有するCUを協調スケジュールしてLLMデコードの重み再利用と同期局所性を高める。",
-    "authors": ["Sangeeta Chowdhary","Ryan Swann","Sean Siddens","Muhammad Osama","Stephen Neuendorffer","Alexandru Dutu","Karthik Sangaiah","Sandeepa Bhuyan","Samuel Bayliss","Ganesh Dasika"],
+    "authors": [
+      "Sangeeta Chowdhary",
+      "Ryan Swann",
+      "Sean Siddens",
+      "Muhammad Osama",
+      "Stephen Neuendorffer",
+      "Alexandru Dutu",
+      "Karthik Sangaiah",
+      "Sandeepa Bhuyan",
+      "Samuel Bayliss",
+      "Ganesh Dasika"
+    ],
     "authors_affiliations": "AMD Research。",
     "published": "2026-04-15",
     "publication": "arXiv:2604.15379v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-04-15提出）。",
     "lineage": "other-inference-systems",
-    "topics": ["複数ダイGPU","チップレット","永続カーネル","L2キャッシュ","LLMデコード","階層スケジューリング"],
+    "topics": [
+      "複数ダイGPU",
+      "チップレット",
+      "永続カーネル",
+      "L2キャッシュ",
+      "LLMデコード",
+      "階層スケジューリング"
+    ],
     "importance": "高。GPUパッケージ内部をNUMA的階層として明示し、ソフトウェアのタスク範囲を物理L2範囲へ対応させる。",
     "hardware_evaluation": "AMD Instinct MI350X 1基、Qwen3-8B bf16。256 CU、8 XCD、XCD当たり4MB L2、256MB共有Infinity Cache、288GB HBM3。",
     "hardware_details": "各XCD 32 CUのうち1 CUをスケジューラに使用し31 CUをワーカー化。スケジューラ占有は全CUの3.1%。",
     "quality_effect": "実行順序・タイリング・キャッシュ配置を変えるシステム最適化でモデル品質を近似しない。",
-    "storage_targets": ["XCD局所L2キャッシュ","共有Infinity Cache","HBM3"],
-    "bottlenecks": ["HBM重み読出しトラフィック","L2キャッシュ局所性","カーネル起動オーバーヘッド","XCD間同期","スケジューラCU占有"],
-    "evidence_locations": ["§1–5","§6","Tables 1–5","Figures 4–7","§8"],
+    "storage_targets": [
+      "XCD局所L2キャッシュ",
+      "共有Infinity Cache",
+      "HBM3"
+    ],
+    "bottlenecks": [
+      "HBM重み読出しトラフィック",
+      "L2キャッシュ局所性",
+      "カーネル起動オーバーヘッド",
+      "XCD間同期",
+      "スケジューラCU占有"
+    ],
+    "evidence_locations": [
+      "§1–5",
+      "§6",
+      "Tables 1–5",
+      "Figures 4–7",
+      "§8"
+    ],
     "source": "https://arxiv.org/abs/2604.15379",
-    "sources": ["https://arxiv.org/abs/2604.15379","https://arxiv.org/html/2604.15379","https://arxiv.org/pdf/2604.15379"],
+    "sources": [
+      "https://arxiv.org/abs/2604.15379",
+      "https://arxiv.org/html/2604.15379",
+      "https://arxiv.org/pdf/2604.15379"
+    ],
     "code": "",
     "implementation": "Mirage Persistent Kernelを拡張したHIP/CUDA永続カーネルのランタイムとタスクグラフ／コード生成を実装。公開コードURLは一次資料本文から確認できない。",
     "last_checked": "2026-09-16",
@@ -38,5 +79,9 @@
     "references_source": "一次資料関連研究節",
     "references_total": 0
   },
-  "reservation": {"claim_id":"claim-1f5b634be6acbecd230032d1","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-34765e98bb9cf6776aa5d26d",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

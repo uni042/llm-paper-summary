@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:03:14 JST**
+> 自動生成: **2026-09-16 12:03:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **1** | **1** | **0** | **3** | **0** | — |
+| Research | **14** | **1** | **1** | **0** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **15** | **7** | **1** | **6** | **3** | **0** | **6** |
+| 合計 | **15** | **7** | **1** | **6** | **3** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -162,13 +162,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 11:59:00 JST** / heartbeat: **—** / lease expiry: **09-16 13:29:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8f7fdb4eba0d8a63.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
 - `arXiv:2606.22541` — ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill / worker `scheduled-chat-llm-survey-20260916T023111Z`
-  - claim: **09-16 11:55:42 JST** / heartbeat: **—** / lease expiry: **09-16 13:25:42 JST**
+  - claim: **09-16 11:55:42 JST** / heartbeat: **09-16 12:03:16 JST** / lease expiry: **09-16 13:33:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-553691f8ff245e9b.json`
+- `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs / worker `scheduled-chat-discovery-specialist-00`
+  - claim: **09-16 12:03:16 JST** / heartbeat: **—** / lease expiry: **09-16 13:33:16 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8f7fdb4eba0d8a63.json`
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **09-16 10:33:30 JST** / lease expiry: **09-16 12:03:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
