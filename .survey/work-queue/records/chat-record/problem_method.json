@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-c0ed88a5217a6cd19ae6360f",
+  "attempt_id": "attempt-f288cbb6096c1336a95654f3",
   "job_id": "job-research-6252d370adc380b9",
   "data": {
     "problem": "大規模トランスフォーマーを複数GPUサーバへパイプライン並列で配置すると、一つの推論要求は全レイヤーブロックを順に覆うサーバ鎖で処理される。従来の分散配置問題と違い、GPUメモリはモデル重みを常駐させるためにも、各要求の過去トークンKVを保持するためにも必要であり、ブロックを多く複製すれば経路選択肢は増える一方でKV用残余メモリが減って同時実行数が下がる。既存LLMサービング実装はこの配置を経験則で扱うことが多く、負荷分散理論だけでは、どの論理サーバ鎖を何本作れるか自体が未決定である。",
@@ -29,8 +29,8 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-c0ed88a5217a6cd19ae6360f",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T225915JST",
+    "claim_id": "claim-f288cbb6096c1336a95654f3",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
