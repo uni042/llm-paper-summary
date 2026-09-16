@@ -2,49 +2,18 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e9cd8fa2de6db6fb8b95c34a",
-  "job_id": "job-research-3c85afd190edf390",
+  "attempt_id": "attempt-01a98f493128a23f4a32008c",
+  "job_id": "job-research-4588133b1e6a7663",
   "data": {
-    "positioning": "GhostServeはPagedAttentionやSGLangなどの通常時KV管理ではなく、障害時にも長文脈KV状態を失わないためのサービング信頼性層に位置する。ストレージで成熟した消失訂正符号を、GPU上で流動的に生成されるKVチャンクへ適用し、CPUメモリを冗長状態の保管先として使う。",
-    "differences": "再計算方式は平常時負担が小さい代わりに障害時の長文脈復旧が高価で、DéjàVu型完全複製は復旧を速める代わりにKVと同量のホストメモリ・転送を必要とする。GhostServeはN:K符号でK≪Nのパリティだけを保持し、復旧時には生存KV断片と組み合わせる。PCCheck等の学習チェックポイントと異なり、動的に増えるKVをチャンクごとに処理し、テンソル並列GPU間の集約・符号化担当を巡回させる。",
-    "relation_to_prior_work": [
-      {
-        "work": "SGLang/vLLM recomputation",
-        "difference": "障害時に全KVを再計算する代わりにパリティから大部分を復元し、短い先頭だけ再計算する。"
-      },
-      {
-        "work": "DéjàVu KV replication",
-        "difference": "KV全体のCPU複製ではなくK個のパリティ断片だけを保存し、ホストメモリとPCIe転送を削減する。"
-      },
-      {
-        "work": "PCCheck / training checkpointing",
-        "difference": "静的な重み・最適化状態ではなく、要求ごとに増えるKVキャッシュをチャンク境界で保護する。"
-      },
-      {
-        "work": "Mooncake / hierarchical KV storage",
-        "difference": "CPU/SSDを容量拡張・再利用の階層として使うのではなく、障害復旧用の符号化冗長性をホストメモリへ配置する。"
-      }
-    ],
-    "strengths": [
-      "FP16をビット単位で損失なく符号化する専用CUDA実装により品質変化を避ける。",
-      "XOR、RDP、Reed-Solomonを備え、許容障害数と冗長量を選択できる。",
-      "100万トークンまで評価し、長文脈ほど完全複製との差が拡大することを示す。",
-      "通常バッチだけでなく連続バッチ向けCUDAストリームプールも実装し、故障注入したオンライン遅延を測る。",
-      "再計算と復元を排他的に選ばず重ねることで通信待ちを隠す。"
-    ],
-    "limitations": [
-      "単一ノード内NVLinkを前提とし、ノード間帯域・遠隔永続ストレージを含む障害耐性は未実装。",
-      "GPUを動的に除外・交換するテンソル並列トポロジ再構成を持たず、再起動可能なGPU障害が主対象。",
-      "テンソル並列度2では符号化の追加費用に対するI/O削減が不足し、CPU複製より優位にならない。",
-      "長入力プリフィル中心の評価で、予測不能な長い復号を伴う推論やプリフィル・復号分離構成の最適符号化は未解決。",
-      "ホストDRAM自体やノード全体の故障にはパリティも失われるため、より広い故障領域には別階層の冗長化が必要。"
-    ],
-    "implementation_status": "SGLang 0.5.1向けプラグインとして実装され、約4千行Pythonと1.5千行C++/CUDA。公開アーティファクトはGitHubのproject-ghostserve/26mlsys-AE-GhostServe。",
-    "research_positioning": "LLMサービングのKVキャッシュを性能資源だけでなく復旧すべき実行状態として扱い、完全複製と全再計算の中間点を符号化冗長性で作る研究である。長文脈・高テンソル並列ほど価値が高く、将来的にはノード間KV階層や遠隔ストレージと組み合わせる余地がある。",
-    "repository_fit": "serving scheduling/disaggregation系統のfault tolerance・KV state protectionとして適合する。Mooncake等の階層KV配置やDéjàVu型復旧と比較することで、CPU/SSDを容量階層ではなく冗長性保管へ使う設計点を補完する。"
+    "limitations": "4公開QA、top-10固定検索、3モデル、4×H100に限定。企業RAG、頻繁なコーパス更新、会話、多モーダル、100B級モデルは未評価。履歴重要度は経験的事前分布なので質問分布変化で陳腐化する。オンライン指標は履歴注意の構築・更新費を除外する。グローバル配分はデータセット依存。",
+    "differences": "RAGCache、CacheBlend、Cache-Craft、IC-Cache等は繰り返し文書のKVや中間状態を再利用してプリフィル計算を減らす。REVAはモデル内部状態を保存せず、過去注意から文書重要度を作って短い普通のテキストへ変換する。RECOMPやLLMLingua系は現在質問へ毎回適応できる代わりに要求時スコアリングが必要で、REVAは質問特異性の一部を履歴償却と交換する。",
+    "implementation_status": "著者公式 `UIUC-MLSys/REVA` を公開。ICDM 2026採録済み著者原稿。",
+    "research_positioning": "RAGの文脈/KVコスト削減とLLMサービングの交点。キャッシュの階層配置ではなく、どのテキストを残すかという選択情報を再利用可能なサービング資産へ変える。",
+    "relation_to_existing_repository": "KVキャッシュ再利用・RAGサービング研究とは繰り返し文脈の再計算削減を共有するが、保存対象が語重要度なので階層KVキャッシュと直交し併用可能。REVAで入力を短くした後、残存接頭辞KVを既存キャッシュで再利用すれば計算量とキャッシュ占有の双方を削減できる。",
+    "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-e9cd8fa2de6db6fb8b95c34a",
+    "claim_id": "claim-01a98f493128a23f4a32008c",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }

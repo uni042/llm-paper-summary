@@ -2,51 +2,76 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e9cd8fa2de6db6fb8b95c34a",
-  "job_id": "job-research-3c85afd190edf390",
+  "attempt_id": "attempt-01a98f493128a23f4a32008c",
+  "job_id": "job-research-4588133b1e6a7663",
   "data": {
-    "evaluation_summary": "8台のNVIDIA H200をNVLink Gen4で接続した単一ノードで、LLaMA-3-8B/70B、GPT-OSS-20B/120B、DeepSeek-R1-32BをFP16で評価する。入力4K～100万トークン、バッチ4～64、長入力短出力と短入力長出力を混ぜ、オンライン到着はポアソン分布で生成する。障害率5～15%でGPUのメモリバッファを消去し、復旧完了まで他workerを停止させる故障注入を行う。",
-    "scope": "主対象は単一ノード内テンソル並列と、GPUが再起動して既存並列構成へ復帰できるメモリ・カーネル等のソフト障害である。ノード全損や恒久GPU故障、動的なテンソル並列再編成は対象外。長入力プリフィル中心の評価が厚く、復号中心推論やプリフィル・復号分離構成は今後の課題。",
     "hardware": [
-      "8×NVIDIA H200",
-      "NVLink Gen4",
-      "2×48-core Intel CPU",
-      "1024GB DDR5",
-      "PCIe Gen4, 32GB/s bidirectional"
+      "4×NVIDIA H100"
     ],
-    "models": [
-      "LLaMA-3-8B",
-      "LLaMA-3-70B",
-      "GPT-OSS-20B",
-      "GPT-OSS-120B",
-      "DeepSeek-R1-32B"
+    "software": [
+      "e5-base-v2",
+      "FAISS",
+      "著者公開REVA実装"
+    ],
+    "model": [
+      "Llama-3.1-8B-Instruct",
+      "Qwen3.5-9B",
+      "Gemma-4-E4B-it"
     ],
     "datasets": [
-      "Medha synthetic serving traces",
-      "long-input/short-output requests",
-      "short-input/long-output requests"
+      "Natural Questions",
+      "TriviaQA",
+      "HotpotQA",
+      "2WikiMultihopQA"
     ],
-    "workload": "バッチ4～64、系列長4K～1M。主要比較ではチャンク2K、GhostServeは8:2データ対パリティ比。オンライン評価ではランダム時点に5～15%の故障率でGPU状態を消去する。",
     "baselines": [
-      "SGLang Base: failure recovery by KV recomputation",
-      "SGLang SSD: asynchronous NVMe checkpoint modeled after PCCheck",
-      "SGLang CPU: asynchronous CPU-memory full replication modeled after DéjàVu"
+      "文書別/全体先頭切り詰め",
+      "Selective Context",
+      "LLMLingua-2",
+      "RECOMP-e",
+      "LongLLMLingua",
+      "EXIT",
+      "FaviComp"
+    ],
+    "correctness": "テスト要求自身の質問・回答をその要求向けスコア表へ入れない厳密再利用条件で、F1、完全一致率、ROUGE-Lを測る。",
+    "settings": [
+      {
+        "name": "固定検索",
+        "description": "e5-base-v2とFAISSでtop-10結果を事前固定し全方式へ同じ文書を渡す。"
+      },
+      {
+        "name": "部分被覆",
+        "description": "訓練分割だけで表を作り、未被覆文書は先頭切り詰め。保持予算512トークン。"
+      },
+      {
+        "name": "完全被覆診断",
+        "description": "top-10全文書に履歴がある質問のみを3モデル×4データセット×10予算、120セルで評価。"
+      },
+      {
+        "name": "グローバル配分",
+        "description": "各文書上位10%語で効用を計算し、各文書上限25%、検索上位5文書に保護枠を付与。"
+      }
+    ],
+    "methodology": "回答品質と要求時の圧縮/再構成壁時計時間を測る。オンライン処理時間は検索、スコア表構築、生成、非同期更新を除く。語単位化、原文順、採点源、配分方式を切り分ける。",
+    "scope": "公開QAのtop-10 RAGと3モデル、4×H100が中心。企業長文、会話、多モーダル、巨大モデル、分布ドリフトは未直接検証。",
+    "workloads": [
+      "訓練履歴固定表",
+      "部分被覆",
+      "完全被覆",
+      "複数圧縮予算"
     ],
     "metrics": [
-      "prefill latency",
-      "decode latency",
-      "checkpoint I/O overhead",
-      "recovery latency",
-      "P50/P99 response latency",
-      "Effective-Inference-Time-Ratio",
-      "Mean-Time-To-Recover",
-      "host memory overhead"
+      "F1",
+      "完全一致率",
+      "ROUGE-L",
+      "オンラインオーバーヘッド",
+      "出力文脈長",
+      "生成時間"
     ],
-    "predictor_accuracy": "予測器を用いる研究ではない。故障なしと故障注入時の遅延・有効推論時間比・平均復旧時間を直接測定する。",
-    "control_knobs": "消失訂正符号方式、データ:パリティ比、チャンクサイズ、バッチサイズ、テンソル並列度、再計算する先頭チャンク数、故障率。"
+    "reproducibility": "主要パラメータと著者公式コードが公開されている。"
   },
   "reservation": {
-    "claim_id": "claim-e9cd8fa2de6db6fb8b95c34a",
+    "claim_id": "claim-01a98f493128a23f4a32008c",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
