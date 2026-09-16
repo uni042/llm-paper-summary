@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-428f28e1f2d60e7c980a0805",
-  "job_id": "job-research-21d58015b4f64394",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-428f28e1f2d60e7c980a0805",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-428f28e1f2d60e7c980a0805","job_id":"job-research-21d58015b4f64394","data":{"overview":"H100上のLLM推論は『GPU利用率が低い』という一種類の問題ではない。cold prefillのdense GEMMはSM busy平均92%だがdecodeは平均9.4%、warm small-payloadもdecode型へ落ちる。一方decodeでも80～132/132 SMには仕事が届き、resident warpは8.8～9.5でkernel固有上限の75～95%を使っているため、単純にSM coverageやwarp数を増やすだけではない。stallは70～84%がlong_scoreboard、device-wide compute SOL約7.9%に対しDRAM SOL約64%で帯域依存が明確で、さらにGMMA m64断片の実行行充填はB=1～8で1.56～12.5%しかない。この固定命令粒度はretileでは直せず、speculative/tree/multi-token decodingなどでM=kBを増やす必要がある。","key_results":[{"metric":"dense GEMM SM busy","value":"cold mean 92% vs decode mean 9.4%","baseline":"same H100 stack across regimes","condition":"4 models","interpretation":"warm/decodeの小M形状がcold prefillと別の利用特性を作る。"},{"metric":"decode long_scoreboard stalls","value":"70～84%","baseline":"cold 19～36%","condition":"dense BF16 GEMMs","interpretation":"decodeは主に長遅延メモリ依存でissueできない。"},{"metric":"device-wide compute vs DRAM SOL","value":"~7.9% vs ~64%","baseline":"dense decode mean","condition":"same kernel calls","interpretation":"GPUが単にidleなのではなくメモリ側が相対的に高稼働。"},{"metric":"GMMA M-fragment fill","value":"B=1/2/4/8: 1.56/3.12/6.25/12.5%; decode mean 5.86%","baseline":"cold prefill 100%","condition":"BF16 m64 GMMA","interpretation":"有用token rowが命令断片のごく一部で、8～64倍のattribution gapが生じる。"},{"metric":"occupancy denominator gap","value":"8.8～9.5 warps/SM = 12～15% of 64, but 75～95% of kernel cap","baseline":"architectural vs resource-cap denominator","condition":"dense GEMM/FA3","interpretation":"低occupancyに見えてもkernel資源上限には近く、一方的register削減では解けない。"},{"metric":"decode QKV wave waste","value":"Llama 27%、Qwen3-32B/A3B 39%、Qwen3-14B 0%","baseline":"132-SM perfect wave","condition":"selected cuBLASLt tiles","interpretation":"CTA grid形状による空間損失はモデル次元依存。"}],"negative_results":["dense decodeではB≤8の範囲でcompute-bound crossoverへ到達しない。","cuBLASLtの59候補tileを列挙してもLlama decode-QKVで132倍数gridを作れるものがない。","persistent decode kernelはlaunch/wave損失を減らせてもGMMA m64 fragment fillは改善しない。","warm prefillは≥99%の合成cache hit endpointであり、中間hit率の実運用は未測定。"],"quality_impact":"モデル出力品質ではなく性能解釈の品質を改善する。誤った分母の利用率から誤った最適化を選ぶことを防ぐ。","interpretation":"decode最適化は一つの『GPU utilization』を上げる作業ではなく、帯域待ち、命令断片充填、wave、launch、resource capを別々に扱う必要がある。FFNが通常token時間58～66%を占めるため、改善率も役割時間比で評価すべきである。"},"reservation":{"claim_id":"claim-428f28e1f2d60e7c980a0805","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
