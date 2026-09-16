@@ -36,6 +36,8 @@ def continuation_args(**overrides):
         unpublished_completed_result=False,
         offline_seed_required=False,
         platform_limit=False,
+        tool_call_budget_exhausted=False,
+        alternative_tool_route_available=True,
         global_dependency=False,
         independent_work=False,
         spillover_work=False,
@@ -105,6 +107,30 @@ class DiscoveryTimeOnlyLivenessTests(unittest.TestCase):
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertFalse(result["finalization_allowed"])
         self.assertNotIn("discovery_exhausted_after_minimum_rounds", result["stop_reasons"])
+
+    def test_single_tool_budget_exhaustion_switches_route_instead_of_stopping(self) -> None:
+        result = continuation_gate.decide(
+            continuation_args(
+                tool_call_budget_exhausted=True,
+                alternative_tool_route_available=True,
+                can_discover=True,
+            )
+        )
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "SWITCH_TOOL_OR_SOURCE_AND_CONTINUE")
+        self.assertNotIn("global_platform_execution_limit_reached", result["abnormal_blockers"])
+
+    def test_single_tool_budget_without_alternative_is_abnormal_not_normal_finalization(self) -> None:
+        result = continuation_gate.decide(
+            continuation_args(
+                tool_call_budget_exhausted=True,
+                alternative_tool_route_available=False,
+            )
+        )
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertIn("all_required_tool_routes_unavailable", result["abnormal_blockers"])
 
     def test_non_time_hard_stop_cannot_receive_normal_finalization_permit(self) -> None:
         result = run_finalization_gate.decide(finalization_args(hard_stop=True, handoff_safe=True))
