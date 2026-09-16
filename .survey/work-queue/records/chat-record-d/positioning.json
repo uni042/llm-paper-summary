@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-09c3c1f8ea3236b83582a70d",
-  "job_id": "job-research-e59ec36b619f9b0c",
-  "data": {
-    "positioning": "MInferenceやDHSAのような動的疎注意が毎層オンラインで疎経路を決める際のルータ費用を、層間冗長性で償却する研究。KV削減や注意出力再利用ではなく離散経路メタデータだけを対象にする。",
-    "differences": "固定疎パターンは経路構築費用が小さいが入力適応性を失う。固定層間隔の経路再利用は行ごとの変化を無視する。RouteRelayは現在層の候補スコアを使って行単位に更新時点を決め、注意数値演算は全層で現在値を維持する。",
-    "relation_to_prior_work": [
-      {
-        "work": "MInference / DHSA",
-        "difference": "動的疎経路そのものを置換せず、同じルータの完全スコア行列を毎層作る頻度だけを減らす。"
-      },
-      {
-        "work": "Cross-Layer Attention / KV sharing",
-        "difference": "KV状態を共有せず整数チャンクIDのみ再利用するため、各層の注意値計算を保つ。"
-      },
-      {
-        "work": "H2O / SnapKV / PyramidKV / DuoAttention",
-        "difference": "保持するKV量やトークン選択ではなく、疎注意の経路探索メタデータの計算を削減する。"
-      },
-      {
-        "work": "fixed layer-group reuse",
-        "difference": "層全体を同じ周期で更新せず、不安定なクエリ行だけイベント駆動で完全更新する。"
-      }
-    ],
-    "strengths": [
-      "再利用範囲を経路IDへ限定し数値演算変更を小さくする。",
-      "近接監視とランダム監視の役割を理論・アブレーションで分離する。",
-      "ドリフトに応じて再ルーティング量を自動調整する。",
-      "演算削減だけでなくCPU実時間の負の結果も報告する。",
-      "既存ルータの前後へ挿入できる設計。"
-    ],
-    "limitations": [
-      "主評価は合成ルーティング表現で、実モデルの層間経路分布を直接測ったものではない。",
-      "GPU融合カーネルは設計のみで、実際のGPU高速化を示していない。",
-      "未融合CPUではむしろ1.6～3.7倍遅く、現状実装を性能改善として利用できない。",
-      "経路再現率が高くても残る少数の経路差が最終モデル品質へ与える影響は未評価。",
-      "監視候補幅、強制アンカー、ドリフト特性はモデル・ルータごとに調整が必要。"
-    ],
-    "implementation_status": "アルゴリズムとCPU評価実装、GPU向け行選択カーネル設計を提示。実用GPU統合は今後の主要課題。",
-    "research_positioning": "疎注意でトークン積を減らした後に残る制御・メタデータ費用を最適化するランタイム隣接研究で、計算量と実時間の差を明確に示す。",
-    "repository_fit": "疎注意系統に適合し、長文プリフィルでの動的ルータの層間冗長性とGPU実装課題を補完する。"
-  },
+  "attempt_id": "attempt-428f28e1f2d60e7c980a0805",
+  "job_id": "job-research-21d58015b4f64394",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-09c3c1f8ea3236b83582a70d",
+    "claim_id": "claim-428f28e1f2d60e7c980a0805",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
