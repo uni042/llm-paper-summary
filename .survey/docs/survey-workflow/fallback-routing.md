@@ -121,11 +121,13 @@ Research/Audit record bundle以外のfallbackはserialized background dispatcher
 
 ## 8. Offline discovery
 
-GitHub queueを直接更新できなくてもLibraryが書けるなら探索を止めない。候補0〜5件を `.survey/work-queue/transport/offline-job-seed.json` として書くenvelopeをLibraryへ保存する。
+GitHub queueを直接更新できなくてもLibraryが書けるなら探索を止めない。offline discovery seedのcandidate配列には **固定件数上限を設けない**。そのroundで得られた強いcandidateを、重複除外後すべて `.survey/work-queue/transport/offline-job-seed.json` 相当の完全envelopeとしてLibraryへ保存する。
+
+候補が多く外部Library/APIの実payloadサイズ制約に当たる場合は複数のimmutable seed envelopeへ分割してよいが、総candidateを切り捨てない。この分割はtransport上の実制約への対応であり、candidate数上限ではない。
 
 candidate keyは `canonical_id`、なければ `source_url`、なければ `title` をtrimして小文字化し、`sha256(candidate_key)`先頭16桁から `job-research-<16hex>` とする。
 
-seed保存後はjob実体化を同期的に待たず同じrunで候補を全文精読し、完成Research fallbackもLibraryへ保存してよい。復旧時にcanonical jobがまだ存在しないResearch envelopeはdependency待ちとしてinboxに残す。
+seed保存後はjob実体化を同期的に待たず同じrunでcandidateを全文精読し、完成Research fallbackもLibraryへ保存してよい。復旧時にcanonical jobがまだ存在しないResearch envelopeはdependency待ちとしてinboxに残す。
 
 ## 9. Backlog indexと実行可能job
 
@@ -169,15 +171,18 @@ Claimed-worker envelopeはjob、claim、worker、attempt identityを持つ。rep
 
 claim詳細は `claim-serial-policy.md`、Library checkpoint詳細は `library-checkpoint-registry.md` を正本とする。
 
-## 12. 停止条件
+## 12. Run finalizationと異常blocker
 
-停止条件は `continuation-policy.json` が唯一の正本。
+run終了判定は `continuation-policy.json` と `run-liveness-policy.md` が正本である。通常runをnormal successとして終了できるのは、実開始時刻 + 3600秒のrun-local handoff guardが成立し、成果とclaimが安全に耐久handoffされ、finalization permitが発行された場合だけである。
 
-少なくとも次の場合だけrun停止を検討する。
+次はnormal finalization条件ではない。
 
-- GitHub read不能でrepo / identity / queueを安全に確認できない。
-- 完成成果または継続に必要なoffline seedをGitHubにもLibraryにも耐久保存できない。
-- プラットフォーム上限に達した。
-- GitHub ready、fallback spillover、新規offline discoveryを考慮しても独立して安全に進められる作業が残らない。
+- GitHub read不能
+- GitHub directとLibrary fallback双方のdurability failure
+- platform/tool異常
+- GitHub readyが空
+- fallback spilloverが空
+- offline Discoveryの現在軸が枯れた
+- Library pending数、GitHub fallback-inbox件数、未送信論文数、bank枯渇、単一payload障害
 
-Library pending数、GitHub fallback-inbox件数、未送信論文数、bank枯渇、単一payload障害はSTOP_RUN条件ではない。
+GitHub read不能・durability failure・platform/tool異常は **異常blocker** として回復または証拠保存を行い、normal successへ変換しない。paper stockや探索軸が空ならhandoff guard外では別Discovery軸を生成して継続する。
