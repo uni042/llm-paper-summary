@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4690bc7b8f70a0ac90350ba3",
+  "attempt_id": "attempt-a5f49ff836ff943440eed67d",
   "job_id": "job-research-1d922bbcf8bbfed4",
   "data": {
     "key_results": [
@@ -13,9 +13,24 @@
       "DeepSeek V4 Proのプリフィル1M、16 B300、バッチ1、CP=EP=16では、選択専門家を2ノードへ複製してルーティング通信をInfiniBandからノード内NVLinkへ移し、追加の重み読出しとHBM消費を許容する代わりに通信ボトルネックを減らし、両指標を50.1%改善した。"
     ],
     "interpretation": "論文の中心的な性能知見は、総パラメータ数だけではデコード性能を説明できず、各要求が保持・読出しするKVキャッシュ量が最大バッチサイズと1トークン当たりメモリ転送を強く決めるという点にある。またAI探索で得た三つの改善は、固定の一手法ではなく、パイプラインのクリティカル段、ローカルなGather–Scatter、ノード間MoE通信という条件依存のボトルネックをシミュレーショントレースから特定し、異なる変換を選んだ結果である。",
-    "limitations": ["結果は解析・離散事象シミュレーションであり実機エンドツーエンド速度ではない", "理想的MoE負荷均衡と計算通信の完全重畳を仮定", "KVキャッシュ追記、投機的デコード、Kimi K3マルチモーダル部を省略", "初期グラフと意味保存規則の正しさは人手検証に依存", "最大規模のシミュレーションは数時間・数百GBを要し探索反復を制限する"],
+    "limitations": [
+      "結果は解析・離散事象シミュレーションであり実機エンドツーエンド速度ではない",
+      "理想的MoE負荷均衡と計算通信の完全重畳を仮定",
+      "KVキャッシュ追記、投機的デコード、Kimi K3マルチモーダル部を省略",
+      "初期グラフと意味保存規則の正しさは人手検証に依存",
+      "最大規模のシミュレーションは数時間・数百GBを要し探索反復を制限する"
+    ],
     "implementation_status": "RoofLangコードは公開済み。論文のAI自律設計実験も公開実装を用いるが、発見構成の実機サービング実装・実測検証は本論文の評価範囲外。",
-    "evidence": ["§3.1.2", "Tables 7–8", "§3.2.2", "§5"]
+    "evidence": [
+      "§3.1.2",
+      "Tables 7–8",
+      "§3.2.2",
+      "§5"
+    ]
   },
-  "reservation": {"claim_id": "claim-4690bc7b8f70a0ac90350ba3", "worker_id": "scheduled-chat-llm-survey-20260916T023111Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a5f49ff836ff943440eed67d",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

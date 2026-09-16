@@ -2,51 +2,110 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4690bc7b8f70a0ac90350ba3",
+  "attempt_id": "attempt-a5f49ff836ff943440eed67d",
   "job_id": "job-research-1d922bbcf8bbfed4",
   "data": {
     "canonical_id": "arXiv:2609.12551",
     "arxiv_id": "2609.12551",
     "doi": "10.48550/arXiv.2609.12551",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
     "title": "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems",
     "summary": "RoofLangは、既存実装をプロファイルして局所最適化する方式では探索できないLLM推論システムのアーキテクチャ自体を、AIが探索できるようにするドメイン固有言語である。LLMの計算を計算グラフ、対象機をハードウェアグラフとして表し、意味を保つグラフ変換と配置操作だけを探索空間として許可する。候補構成は実装済みカーネルの速度ではなく、演算量、メモリ転送量、ネットワーク、依存関係、競合、テンソル寿命、容量を扱うルーフライン型離散事象シミュレータで評価する。4モデルとH200/GH200/B300/GB300を用いた解析では、DeepSeek V4系列の小さなKVキャッシュが大バッチ化とメモリ転送削減を可能にし、他モデルよりピークデコードスループットが3.5〜39.5倍高くなり得ることを示した。さらにDeepSeek V4 Proを対象に持続的な最適化エージェントを動かし、パイプライン段分割、MoE専門家の分割、ノード内専門家複製を発見し、B300上のシミュレーションでスループットと対話性を6.23〜50.1%同時改善した。ただし初期グラフと変換規則は人手検証に依存し、理想的MoE負荷均衡や完全な計算通信重畳を仮定するため、結果は実機測定ではなく設計探索用の解析値である。",
     "list_summary": "RoofLangはLLM推論を計算・ハードウェアグラフと意味保存変換で表し、実装非依存のシミュレーションを評価器としてAIに配置・並列化・通信構成を探索させる設計基盤である。",
-    "authors": ["Ziyue Yang", "Yuting Jiang", "Lei Qu", "Peng Cheng"],
+    "authors": [
+      "Ziyue Yang",
+      "Yuting Jiang",
+      "Lei Qu",
+      "Peng Cheng"
+    ],
     "authors_affiliations": "Shanghai Xingyunzhili Artificial Intelligence Institute、Microsoft Research。",
     "published": "2026-09-11",
     "publication": "arXiv:2609.12551v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-09-11提出）。一次資料から査読済み採録は確認できない。",
     "lineage": "other-inference-systems",
-    "topics": ["LLM推論システム設計", "ドメイン固有言語", "AI自動設計", "離散事象シミュレーション", "ルーフラインモデル", "並列化", "MoE", "KVキャッシュ"],
+    "topics": [
+      "LLM推論システム設計",
+      "ドメイン固有言語",
+      "AI自動設計",
+      "離散事象シミュレーション",
+      "ルーフラインモデル",
+      "並列化",
+      "MoE",
+      "KVキャッシュ"
+    ],
     "importance": "高。実装済みスタックのプロファイルに探索空間を拘束せず、意味保存変換と実装非依存評価器を組み合わせてAIが推論アーキテクチャそのものを探索する経路を示す。",
     "hardware_evaluation": "NVIDIA H200、GH200、B300、GB300をモデル化し、8 GPUと64 GPUを中心に評価。自律設計例ではB300 8〜256 GPU相当の構成を扱う。すべてRoofLangの解析・離散事象シミュレーションによる評価で、実機エンドツーエンド測定ではない。",
     "hardware_details": "モデル化値はH200 144GB/4.8TB/s、GH200 144GB/4.9TB/s、B300 288GB/7.75TB/s、GB300 288GB/8.0TB/sのHBM、NVLinkとInfiniBandの帯域・遅延を含む。",
     "quality_effect": "意味保存変換に探索を限定するためモデル出力品質を意図的に変える方式ではない。ただし初期計算グラフの正しさは外部入力に依存し、論文の評価ではKVキャッシュ追記、投機的デコード構造、Kimi K3のマルチモーダル部分を省略している。",
-    "storage_targets": ["GPU HBM上のモデル重みとKVキャッシュ", "DRAMやNVMeを含むハードウェアグラフ上のメモリ階層"],
-    "bottlenecks": ["演算量", "HBMメモリ帯域", "KVキャッシュ容量と転送", "MoEトークンルーティング通信", "ノード間InfiniBand", "パイプライン段の負荷不均衡", "シミュレーション自体のメモリ・時間スケーラビリティ"],
-    "evidence_locations": ["§1", "§2.2–2.6", "§3.1", "Tables 3–8", "§3.2", "§4", "§5"],
+    "storage_targets": [
+      "GPU HBM上のモデル重みとKVキャッシュ",
+      "DRAMやNVMeを含むハードウェアグラフ上のメモリ階層"
+    ],
+    "bottlenecks": [
+      "演算量",
+      "HBMメモリ帯域",
+      "KVキャッシュ容量と転送",
+      "MoEトークンルーティング通信",
+      "ノード間InfiniBand",
+      "パイプライン段の負荷不均衡",
+      "シミュレーション自体のメモリ・時間スケーラビリティ"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§2.2–2.6",
+      "§3.1",
+      "Tables 3–8",
+      "§3.2",
+      "§4",
+      "§5"
+    ],
     "source": "https://arxiv.org/abs/2609.12551",
-    "sources": ["https://arxiv.org/abs/2609.12551", "https://arxiv.org/html/2609.12551", "https://arxiv.org/pdf/2609.12551", "https://github.com/yzygitzh/rooflang"],
+    "sources": [
+      "https://arxiv.org/abs/2609.12551",
+      "https://arxiv.org/html/2609.12551",
+      "https://arxiv.org/pdf/2609.12551",
+      "https://github.com/yzygitzh/rooflang"
+    ],
     "code": "https://github.com/yzygitzh/rooflang",
     "implementation": "著者はRoofLang実装をGitHubで公開している。論文では計算・ハードウェアグラフ、意味保存変換、配置プリミティブ、ルーフライン型離散事象シミュレータと、エージェントが反復探索する構成を実装して評価する。",
     "last_checked": "2026-09-16",
     "references": [
-      {"canonical_id": "arXiv:2605.21312", "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation"},
-      {"canonical_id": "arXiv:2606.28565", "title": "KernelSight-LM: A Kernel-Level LLM Inference Simulator"},
-      {"canonical_id": "arXiv:2601.00227", "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-Driven LLM Systems"},
-      {"canonical_id": "arXiv:2607.20468", "title": "InferenceBench: A Benchmark for Open-Ended LLM Inference Optimization by AI Agents"},
-      {"canonical_id": "arXiv:2506.20807", "title": "GPU Kernel Scientist: An LLM-driven Framework for Iterative Kernel Optimization"},
-      {"canonical_id": "arXiv:2402.16363", "title": "LLM Inference Unveiled: Survey and Roofline Model Insights"}
+      {
+        "canonical_id": "arXiv:2605.21312",
+        "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation"
+      },
+      {
+        "canonical_id": "arXiv:2606.28565",
+        "title": "KernelSight-LM: A Kernel-Level LLM Inference Simulator"
+      },
+      {
+        "canonical_id": "arXiv:2601.00227",
+        "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-Driven LLM Systems"
+      },
+      {
+        "canonical_id": "arXiv:2607.20468",
+        "title": "InferenceBench: A Benchmark for Open-Ended LLM Inference Optimization by AI Agents"
+      },
+      {
+        "canonical_id": "arXiv:2506.20807",
+        "title": "GPU Kernel Scientist: An LLM-driven Framework for Iterative Kernel Optimization"
+      },
+      {
+        "canonical_id": "arXiv:2402.16363",
+        "title": "LLM Inference Unveiled: Survey and Roofline Model Insights"
+      }
     ],
     "references_checked_at": "2026-09-16",
     "references_source": "RoofLang一次資料の参考文献節",
     "references_total": 6
   },
   "reservation": {
-    "claim_id": "claim-4690bc7b8f70a0ac90350ba3",
+    "claim_id": "claim-a5f49ff836ff943440eed67d",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }
