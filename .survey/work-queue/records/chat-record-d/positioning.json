@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1b26f235088f8966bdbc7d6f",
+  "attempt_id": "attempt-a44b0ffe0704ee8ed2dc775d",
   "job_id": "job-research-3bb1145babb1a6fc",
   "data": {
     "positioning": "PALSは専門家の配置や退避を直接最適化する方式ではなく、専門家混合モデルで顕著になる演算時間と通信時間の比率を観測し、GPU電力上限とバッチ量を共同制御するノード単位の省電力・サービス品質実行系である。vLLM、Orca、Sarathi-Serve、DistServe、Helixなどが主に固定電力予算の下でソフトウェア配置やスケジューリングを最適化するのに対し、PALSは電力をスケジューラの決定軸へ加える。",
@@ -44,7 +44,7 @@
     "repository_fit": "専門家混合モデルの推論系統に関連する。専門家退避そのものではないが、専門家ルーティング通信が電力効率と並列度の最適点を変えることを定量化しており、MoEサービング設計を比較する重要な軸を追加する。"
   },
   "reservation": {
-    "claim_id": "claim-1b26f235088f8966bdbc7d6f",
+    "claim_id": "claim-a44b0ffe0704ee8ed2dc775d",
     "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }

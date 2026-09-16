@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1b26f235088f8966bdbc7d6f",
+  "attempt_id": "attempt-a44b0ffe0704ee8ed2dc775d",
   "job_id": "job-research-3bb1145babb1a6fc",
   "data": {
     "evaluation_summary": "1ノード当たりNVIDIA A100を4基NVLink接続した実機を1から3ノード使用し、密モデル3種と専門家混合モデル5種を評価する。HellaSwagとGSM8Kから現実的な長さの要求を作り、ポアソン到着で変動するサービング負荷を模擬する。固定400W・最大バッチ、バッチだけを適応、電力上限だけを適応、両方を共同制御するPALS、全構成を事前全探索する理想比較を同じvLLM上で比較する。",
@@ -44,7 +44,7 @@
     "control_knobs": "実行中に変更するのはGPU電力上限とバッチ量。テンソル並列、専門家並列、データ並列はモデル再読み込みを伴うため配置時に選ぶ。"
   },
   "reservation": {
-    "claim_id": "claim-1b26f235088f8966bdbc7d6f",
+    "claim_id": "claim-a44b0ffe0704ee8ed2dc775d",
     "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }
