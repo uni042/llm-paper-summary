@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-b21265e1c7564132469a29b8",
+  "attempt_id": "attempt-10ba900257289562be435001",
   "job_id": "job-research-ec48da5b1e9edcea",
   "data": {
     "problem": "LLMの公開APIでは、脱獄、抽出、長文フラッディングなどの悪意要求が本番モデルと同じ推論資源を消費する。従来のガードモデルは遮断判定のために高価な二段目モデルを呼び、ハニーポットはSSH等のプロトコル層か単一モデル内部に置かれていた。そのためAPIゲートウェイで悪意要求を安価に識別し、本番GPUから隔離しつつ攻撃者の行動を継続観測するサービング層の仕組みが欠ける。単純な囮応答は攻撃者に露見しやすく、精巧な複製モデルは追加GPU費を要するため、検出遅延、囮の忠実度、追跡可能性、資源防御を同時に扱う必要がある。",
@@ -29,7 +29,7 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-b21265e1c7564132469a29b8",
+    "claim_id": "claim-10ba900257289562be435001",
     "worker_id": "scheduled-chat-discovery-20260916T1600JST",
     "worker_kind": "scheduled_chat"
   }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:01:09 JST**
+> 自動生成: **2026-09-16 17:01:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -176,7 +176,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving / worker `scheduled-chat-discovery-20260916T1600JST`
-  - claim: **09-16 16:59:36 JST** / heartbeat: **—** / lease expiry: **09-16 18:29:36 JST**
+  - claim: **09-16 17:01:16 JST** / heartbeat: **—** / lease expiry: **09-16 18:31:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-ec48da5b1e9edcea.json`
 
 #### Audit
