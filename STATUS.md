@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 08:59:34 JST**
+> 自動生成: **2026-09-16 09:00:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **5** | **2** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **4** | **5** | **0** | **5** | **0** | **0** | **5** |
-| 合計 | **11** | **10** | **2** | **8** | **0** | **0** | **5** |
+| Discovery | **4** | **6** | **0** | **6** | **0** | **0** | **6** |
+| 合計 | **11** | **11** | **2** | **9** | **0** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -136,8 +136,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 09:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **5件**
-- 探索軸: 分離サービング・多段ネットワークflow scheduling / Superchip統合CPU-GPUメモリ・KV rotation / KV cache restoration・compute/I/O多次元並列 / processing-near-memory・retrieval sparse attention・KV外置き / CXL memory expansion・PIM・GPU-free inference
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **6件**
+- 探索軸: 分離サービング・多段ネットワークflow scheduling / Superchip統合CPU-GPUメモリ・KV rotation / KV cache restoration・compute/I/O多次元並列 / processing-near-memory・retrieval sparse attention・KV外置き / CXL memory expansion・PIM・GPU-free inference / 意味検索head・KV retention/compression
 - round `specialist-network-flow-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0902JST-discovery-specialist-network-flow-1.json`
   - 探索軸: 分離サービング・多段ネットワークflow scheduling
@@ -157,6 +157,10 @@
 - round `specialist-cxl-pim-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T0918JST-discovery-specialist-cxl-pim-5.json`
   - 探索軸: CXL memory expansion・PIM・GPU-free inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-semantic-kv-6` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T0922JST-discovery-specialist-semantic-kv-6.json`
+  - 探索軸: 意味検索head・KV retention/compression
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -212,9 +216,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **237** |
+| 成功result未照合のimmutable submission | **238** |
 | └ Research | **128** |
-| └ Discovery | **109** |
+| └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job
 
