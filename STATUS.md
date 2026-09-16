@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 00:00:56 JST**
+> 自動生成: **2026-09-17 00:03:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **22** |
 | 未claim Research job | **22** |
 | 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-16 23:42:30 JST（18分前）** |
+| 最終検証済みResearch収録 | **09-16 23:42:30 JST（20分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **23** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **23** | **22** | **4** | **18** | **0** | **0** | **15** |
+| Discovery | **0** | **1** | **0** | **1** | **0** | **0** | **3** |
+| 合計 | **23** | **9** | **4** | **5** | **0** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -146,48 +146,12 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-16 20:00 JST**
-- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **14件** / 候補: **15件**
-- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication / 異種many-core・分散メモリ階層・bandwidth-aware runtime / virtual memory・異種state pool・LPDDR allocation / GPU power cap・DVFS・serverless energy-aware scheduling / tail-aware・reasoning phase-aware scheduling / serverless model loading・weight residency・multi-GPU KV migration / collective communication圧縮・tensor/expert parallel通信 / CXL・shared KV memory再スイープ / SSD/NVMe・GPU-direct KV storage再スイープ / MoE expert offload・cache・prefetch再スイープ / disaggregated serving・KV transfer・scheduler最終スイープ
-- round `specialist-superchip-slo-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
-  - 探索軸: Superchip統合メモリ・SLO-aware KV rotation
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-kv-prefetch-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T2011JST-discovery-specialist-kv-prefetch-2.json`
-  - 探索軸: GPU L2・HBM間KV prefetch・帯域隠蔽
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-semantic-kv-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json`
-  - 探索軸: Semantic Retrieval Head・layer-aware KV圧縮
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-moe-spec-replication-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json`
-  - 探索軸: MoE self-assisted speculative decoding・expert replication
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-manycore-runtime-5` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T2020JST-discovery-specialist-manycore-runtime-5.json`
-  - 探索軸: 異種many-core・分散メモリ階層・bandwidth-aware runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-virtual-memory-6` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T2025JST-discovery-specialist-virtual-memory-6.json`
-  - 探索軸: virtual memory・異種state pool・LPDDR allocation
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-power-aware-7` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T2030JST-discovery-specialist-power-aware-7.json`
-  - 探索軸: GPU power cap・DVFS・serverless energy-aware scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-tail-reasoning-8` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T2034JST-discovery-specialist-tail-reasoning-8.json`
-  - 探索軸: tail-aware・reasoning phase-aware scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-model-loading-9` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json`
-  - 探索軸: serverless model loading・weight residency・multi-GPU KV migration
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-collective-10` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260916T2042JST-discovery-specialist-collective-10.json`
-  - 探索軸: collective communication圧縮・tensor/expert parallel通信
+- 最新観測run: **2026-09-17 00:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 探索軸: MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
+- round `specialist-kv-moe-memory-pooling-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json`
+  - 探索軸: MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -243,10 +207,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **459** |
+| 成功result未照合のimmutable submission | **460** |
 | └ Research | **260** |
 | └ Audit | **2** |
-| └ Discovery | **197** |
+| └ Discovery | **198** |
 
 ### 厳格検証が未成立のcompleted job
 
