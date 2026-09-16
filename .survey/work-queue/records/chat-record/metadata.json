@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-83d1470b4ddd3cc39d4e3a56",
-  "job_id": "job-research-ec631b9aeb6c5c21",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-83d1470b4ddd3cc39d4e3a56",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-83d1470b4ddd3cc39d4e3a56","job_id":"job-research-ec631b9aeb6c5c21","data":{"canonical_id":"arXiv:2503.18599","arxiv_id":"2503.18599","doi":"10.1145/3695053.3731019","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":["cs.LG"]},"title":"Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization","summary":"大規模バッチのLLM生成では要求ごとのKVキャッシュを共有できず、注意計算がメモリ帯域律速となる一方、KV容量もバッチと文脈長に比例して増える。OakenはKV分布がモデル・層ごとには固有だが入力データには比較的安定する性質を使い、外れ値境界だけを約100回のオフライン推論で決め、オンラインでは各トークンを3群へ分類して単純統計から量子化尺度を求める。大値群の範囲をシフトして4ビット化し、密な4ビット本体の空き位置へ疎な外れ値情報を融合する。さらに量子化・逆量子化器と密・疎二表のメモリ管理器をLPUのDMAへ組み込み、転送と注意計算へ量子化処理を重ねる。ISCA 2025評価ではbatch 256でvLLM比平均1.79倍、QServe比1.58倍のスループットを示し、FP16比平均精度低下0.87%、モジュール面積増8.21%だった。","list_summary":"KV外れ値の境界だけをオフライン学習し、オンライン3群量子化と専用DMA量子化・メモリ管理器を共同設計して、大規模バッチのKV帯域・容量を同時に削減する。","authors":["Minsu Kim","Seongmin Hong","RyeoWook Ko","Soongyu Choi","Hunjong Lee","Junsoo Kim","Joo-Young Kim","Jongse Park"],"authors_affiliations":"KAIST; HyperAccel","published":"2025-03-24","publication":"Proceedings of the 52nd Annual International Symposium on Computer Architecture (ISCA '25), June 21–25, 2025, Tokyo, Japan","publication_type":"査読付き国際会議論文","publication_status":"Published","lineage":"kv-cache-memory","topics":["KVキャッシュ量子化","LLMサービング","メモリ帯域","ハードウェア共同設計","大規模バッチ"],"importance":"KV量子化の圧縮率だけでなく、オンライン外れ値検出費用と疎データ配置まで専用ハードウェアと共同設計し、低ビット化を実スループットへ変換する点が重要。","hardware_evaluation":"OakenをLPUシミュレータへ統合しLPDDR/HBM構成を評価。RTLをSystemVerilogで実装・VCS検証し、TSMC 28nm・1GHzでDesign Compiler合成。GPU比較はA100 80GB、巨大モデルは2基。","quality_effect":"FP16比平均精度低下0.87%。KVQuantより0.54%、KIVIより0.32%低い一方、QServeより1.38%高い精度。","source":"https://arxiv.org/abs/2503.18599","sources":["https://arxiv.org/abs/2503.18599","https://arxiv.org/html/2503.18599","https://doi.org/10.1145/3695053.3731019"],"code":null,"implementation":"Oaken量子化器・逆量子化器とMMUをLPU DMAへ統合したRTLをSystemVerilogで実装し、ハードウェアシミュレータでエンドツーエンド評価。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv HTML参考文献節を確認。","references_total":91},"reservation":{"claim_id":"claim-83d1470b4ddd3cc39d4e3a56","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
