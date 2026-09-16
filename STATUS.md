@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:34:06 JST**
+> 自動生成: **2026-09-16 14:34:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -205,7 +205,7 @@
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
 - `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:32:19 JST** / heartbeat: **—** / lease expiry: **09-16 16:02:19 JST**
+  - claim: **09-16 14:34:09 JST** / heartbeat: **—** / lease expiry: **09-16 16:04:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-e8148d67a04de0eb.json`
 - `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
   - claim: **09-16 14:23:47 JST** / heartbeat: **—** / lease expiry: **09-16 15:53:47 JST**

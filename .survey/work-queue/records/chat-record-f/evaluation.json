@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e074992146791b09e9e5cc49",
+  "attempt_id": "attempt-4b0bf8eef80fa393a4c31125",
   "job_id": "job-research-e8148d67a04de0eb",
   "data": {
     "evaluation_summary": "高性能・中価格帯スマートフォン、ノートPC、Orange Pi 5 Proで、未学習の300合成モデルによる予測器学習と、LLaMA、Qwen、Gemma系の実用モデルによる未見モデル評価を行う。既定の最高周波数ガバナ、QoEを満たす最小周波数を選ぶ期限駆動方式、実測全設定から最良効率を選ぶOracleと比較する。QoEは主に5または10トークン/秒で、熱評価は37℃から連続推論し42℃到達までを測る。",
@@ -50,7 +50,7 @@
     "control_knobs": "NPU周波数、DDR/メモリ周波数、QoE復号速度下限、熱閾値、温度予測周期。温度予測は20秒履歴と21秒地平を使用する。"
   },
   "reservation": {
-    "claim_id": "claim-e074992146791b09e9e5cc49",
+    "claim_id": "claim-4b0bf8eef80fa393a4c31125",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
