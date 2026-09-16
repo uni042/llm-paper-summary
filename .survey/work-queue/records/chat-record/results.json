@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4aa0bdcf550c974e39ccae92","job_id":"job-research-b98e4e299d06a6a5","data":{"overview":"SemShareKVは長文要約で、意味的に近い参照promptのKVを選択再利用することでprefill計算とGPU容量を同時に減らした。5千トークン入力では完全再計算比で初回トークン時間を最大6.25倍高速化し、SnapKV比でも最大2.23倍と報告される。GPU KVメモリは42%削減した。品質はROUGE-Lで完全再計算と同等または一部で上回り、Mistral-7BのMultiNewsでは22.10から23.15、SAMSumでは18.79から21.22となった。意味類似度を文削除・置換で下げると性能は段階的に低下するが、文の50%を変更した条件でも一定の頑健性を示す。一方、短い700トークン未満ではLSH照合やKV並べ替えの固定費が相対的に大きく、長文ほど明確な利得が得られる。","key_results":[{"metric":"TTFT speedup","value":"up to 6.25x vs Full KV; up to 2.23x vs SnapKV","baseline":"Full KV / SnapKV","condition":"5k-token long-input summarization","interpretation":"完全一致prefixがなくても意味対応トークンのKVを再利用することで、長文prefillの再計算を大きく減らす。"},{"metric":"GPU KV memory","value":"42% reduction","baseline":"full KV storage","condition":"5k-token input","interpretation":"層依存の保持量削減を意味的共有と組み合わせ、同一GPUで長い文脈またはより多い同時要求を扱う余地を増やす。"},{"metric":"MultiNews ROUGE-L","value":"23.15","baseline":"Full recompute 22.10","condition":"Mistral-7B","interpretation":"近似KV再利用が必ずしも要約品質を落とさず、冗長tokenの選択除去により一部条件では指標が改善する。"},{"metric":"semantic matching ablation","value":"SAMSum: SemShareKV 21.22 vs zero 14.63 vs random 5.38","baseline":"zero/random replacement of matched KV","condition":"Mistral-7B summarization","interpretation":"単にKVを削減した効果ではなく、LSHで選んだ意味的対応状態を再利用すること自体が品質維持に重要である。"}],"negative_results":["700トークン未満の短いpromptでは曖昧token matchingとKV再配置の固定費により高速化が限定的である。","意味類似度が約0.8を下回ると品質劣化が目立ちやすく、閾値は経験的に設定される。","評価は主に要約で、FlashAttentionは現実装の将来課題として残る。"],"quality_impact":"近似的に別promptのKVを使うため厳密なlossless再利用ではないが、評価した要約データではROUGE-Lは完全再計算と同等または改善する条件が多い。類似度が下がるほど誤対応の危険が増えるため、類似度閾値と再計算量が品質・速度の主要な交換条件になる。","interpretation":"prefix cachingが文字列の同一性を局所性として使うのに対し、SemShareKVは埋め込み意味類似を計算再利用の局所性へ変換する。これにより言い換えや文順変更を含む要求間でもprefillを共有できるが、意味対応は近似なので品質保証は閾値と再計算に依存する。長文で固定照合費を償却でき、参照要求が豊富な会話・要約ワークロードほど有利な設計である。"},"reservation":{"claim_id":"claim-4aa0bdcf550c974e39ccae92","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-9bd72451731af90ab90c3e14",
+  "job_id": "job-research-6252d370adc380b9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9bd72451731af90ab90c3e14",
+    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

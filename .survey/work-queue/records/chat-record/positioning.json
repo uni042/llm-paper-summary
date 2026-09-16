@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4aa0bdcf550c974e39ccae92","job_id":"job-research-b98e4e299d06a6a5","data":{"positioning":"SemShareKVは同一要求内のKV圧縮や完全一致prefix共有ではなく、別要求間の意味類似をtoken-level KV再利用へ変換する近似キャッシュ共有方式である。","differences":"prefix cachingは先頭token列の完全一致を要求するが、SemShareKVはLSHで意味的に近いtokenを対応付け、位置差をRoPE補正して再利用する。SnapKVやH2Oが一要求内で重要KVを選択・削減するのに対し、参照promptから対象promptへ計算済み状態を移植する点が異なる。回答そのものをsemantic cacheする方式とも異なり、LLM内部のKV状態を再利用するため対象promptに応じた生成を続ける。","relation_to_prior_work":[{"work":"prefix caching","difference":"完全一致token prefixではなく意味的に近いtoken対応を共有条件にする。"},{"work":"SnapKV / H2O","difference":"単一prompt内のKV選別だけでなく、別promptの既計算KVを選択的に再利用する。"},{"work":"semantic response caching","difference":"完成回答を再利用せず内部KVだけを共有するため、新しい要求に対する生成処理は維持する。"}],"strengths":["5k-token入力で最大6.25倍TTFT高速化と42% GPU KVメモリ削減を同時に報告する。","Mistral、LLaMA、MPT系列で評価し、ROUGE-Lを完全再計算と同等以上に保つ条件を示す。","文削除・置換とzero/random KVアブレーションにより意味対応の頑健性と必要性を検証する。"],"limitations":["主評価が要約タスクに偏り、コード、推論、ツール利用会話などでの近似KV再利用品質は未確認である。","短いpromptではLSH検索とKV再配置の固定費が利得を相殺する。","類似度閾値や層別保持率に調整が必要で、prompt分布変化に対する適応的設定は今後の課題である。","現実装はFlashAttention対応を今後の課題としており、高性能serving stackへの統合費が残る。"],"implementation_status":"token embedding LSH、RoPE補正、層別再計算・保持を統合した研究実装。Findings of IJCNLP-AACL 2025で出版。公式コードURLは確認できなかった。","research_positioning":"KV再利用の局所性を字面のprefixから意味空間へ拡張する系統であり、会話・複数文書処理で繰り返される意味内容をprefill共有へ利用する基準手法になる。","repository_fit":"KV cache reuse/compressionの隣接研究として99-other-inference-systemsに置き、prefix cache、position-independent KV、semantic KV sharingとの比較に有用。"},"reservation":{"claim_id":"claim-4aa0bdcf550c974e39ccae92","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-9bd72451731af90ab90c3e14",
+  "job_id": "job-research-6252d370adc380b9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9bd72451731af90ab90c3e14",
+    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
