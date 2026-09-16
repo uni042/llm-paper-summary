@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-cd7cbdc8e55bcf2679e3c08f",
-  "job_id": "job-research-adc94daa00d75514",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cd7cbdc8e55bcf2679e3c08f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-cd7cbdc8e55bcf2679e3c08f","job_id":"job-research-adc94daa00d75514","data":{"methodology":"主評価はNLLB-MoEの英仏翻訳をWMT-14で実施し、バッチサイズ1,4,16,64,128,256を変えて端から端の遅延、生成スループット、CPU-GPUエキスパート転送量を測定する。比較はオンデマンド取得、通信計算重畳、頻出エキスパートキャッシュ。重畳方式は次層エキスパート移行を計算で完全に隠せるオラクル設定として有利に評価し、キャッシュ方式は各ブロックの上位10%頻出エキスパートをGPUに保持する。SpecMoEはNLLBで各ブロック4ドラフトエキスパート、γ=10、貪欲投機検証を使用する。アブレーションでランダム・大域ホット・時間的ホット選択、アフィニティ代替、ドラフトエキスパート数Nを比較する。さらにMixtral-8x7BとLlama-4-ScoutをCNN/DailyMailのテキスト補完、温度1、γ=5で評価し、SSDオフロードも評価する。","hardware":"Intel Xeon Platinum 8558 CPU×2、DDR5 CPUメモリ1TB、NVIDIA H100 GPU 96GB HBM3×1。CPU-GPU間はPCIe 5.0、片方向64GB/s。","software":"PyTorch 2.5.0、CUDA 12.6、Hugging Face Transformers 4.51.0、Accelerate 1.6.0。Transformers標準投機デコードはバッチ処理と動的ドラフト重みに対応しないため、自己補助型投機デコードを独自実装。","scope":"NLLB-MoEは128 experts、6/24 MoE layers、top-2、54GB、hotness skewness 0.84。Mixtral-8x7Bは8 experts、32/32 MoE layers、top-2、94GB、skewness 0.32。Llama-4-Scoutは16 experts、48/48 MoE layers、top-1、218GB、skewness 0.59。","baselines":["MoE-OnDemand","MoE-Overlap（通信完全重畳のオラクル設定）","MoE-Caching（上位10%頻出エキスパートをGPU保持）"],"failure_types":["大バッチでPCIe通信が計算を上回り重畳不能","キャッシュ容量不足によるミス増加","ドラフト品質低下による候補棄却と不要エキスパート移行","ドラフトエキスパート数増加による投機計算コスト増"]},"reservation":{"claim_id":"claim-cd7cbdc8e55bcf2679e3c08f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
