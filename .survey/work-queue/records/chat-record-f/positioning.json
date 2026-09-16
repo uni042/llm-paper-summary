@@ -2,34 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2d848caaa085c3e2771f5f21",
-  "job_id": "job-research-e8148d67a04de0eb",
-  "data": {
-    "positioning": "EnerInferは端末内LLM高速化そのものではなく、十分な生成速度を満たした後の余剰性能を省電力と熱快適性へ変換する実行時システムに位置する。PowerInfer2やllm.npuなどNPU活用研究が処理量向上を主眼とするのに対し、NPU・統合メモリの周波数を共同制御し、トークン/ジュールと表面温度を第一級の目的にする。",
-    "differences": "従来のモバイルDVFSやエネルギー対応LLMガバナは固定負荷の事前プロファイル、利用率カウンタ、単純なU字型効率曲線などに依存しやすい。EnerInferは六つのモデル構造特徴から未見LLMの処理量と電力を予測し、絶対予測値より効率順位を利用することでモデル間の非単調性へ対応する。さらに出力長を事前予測せず、短期温度履歴とNPU電力から限定地平の熱制御を行い、エネルギー最適化と熱制約を同じ実行時に統合する。",
-    "relation_to_prior_work": [
-      {"work": "PowerInfer2 / llm.npu / mobile NPU inference", "difference": "NPUを使った端末内推論の高速化に対し、最大速度を必要としない時間帯のNPU・DDR周波数余裕を省電力へ変換する。"},
-      {"work": "generic mobile DVFS governors / CRAVE", "difference": "CPU/GPU中心の利用率や一般負荷特性ではなく、LLM構造から復号処理量と電力をモデル化し、NPUと統合メモリを共同制御する。"},
-      {"work": "profile-based energy-aware on-device LLM governors", "difference": "固定モデル・固定負荷の全設定事前測定ではなく、合成モデルで学習した構造予測器を未見モデルへ適用し、実行時順位フィードバックで誤差を補正する。"},
-      {"work": "cloud LLM energy-aware serving", "difference": "バッチサイズやGPU多重化ではなく、単一利用者端末のNPU・DDR周波数と表面温度を制御対象とし、熱快適性をQoEへ含める。"}
-    ],
-    "strengths": [
-      "スマートフォン、ノートPC、開発ボードという異なる端末形態で同じ設計を評価する。",
-      "未見実モデルで処理量・電力だけでなく効率順位の精度を測り、Oracleとの効率差まで確認する。",
-      "予測誤差を実測速度フィードバックで補うため、純粋なオフライン予測器よりQoE違反に強い。",
-      "エネルギー効率だけでなく42℃到達までの時間と生成トークン数を測り、熱制御の実用効果を示す。",
-      "前景アプリとのメモリ周波数要求競合を投票型ガバナで扱い、実アプリ全体の総エネルギーまで評価する。"
-    ],
-    "limitations": [
-      "新規プラットフォームごとに約300合成モデルの測定と予測器再学習が必要である。",
-      "主設計はNPU復号を対象とし、GPU等への一般化は追加学習を伴う実証に留まる。",
-      "動的疎性や投機的復号のように反復ごとの計算量が変わる方式を現状は直接扱えない。",
-      "温度予測は室温付近で収集した短期履歴を使うため、極端な環境温度や端末筐体差への頑健性は追加検証が必要である。",
-      "復号の省電力効果は大きいが、表示・CPU・GPUや出力表示時間を含む実アプリ全体では削減率が4.2～11%まで希釈される。"
-    ],
-    "implementation_status": "研究用シミュレーションではなく、社内LLMサービング基盤とRKLLMへ統合した実機実装である。トークン生成コールバックから周波数を変更し、Linux PM QoSに似たメモリ周波数投票機構とNPU直接制御を用いる。公開コードURLは論文本文から確認できない。",
-    "research_positioning": "端末内推論の設計目標を処理量最大化から、必要処理量を制約としたエネルギー・熱最適化へ移す研究である。特に、モデル構造に基づく未見モデル予測と順位フィードバックを組み合わせることで、モデルごとに効率曲線が異なる現実のモバイルSoCへ適応する点が中核となる。",
-    "repository_fit": "edge/on-device LLM systems系統に適合する。NPU活用・メモリ最適化・端末内高速化を扱う既存論文に対し、周波数制御、電力予測、熱管理という運用時資源制御の軸を補完する。"
-  },
-  "reservation": {"claim_id": "claim-2d848caaa085c3e2771f5f21", "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-de4da6f22324bacb081d2979",
+  "job_id": "job-research-3c85afd190edf390",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-de4da6f22324bacb081d2979",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

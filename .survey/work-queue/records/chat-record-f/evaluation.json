@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2d848caaa085c3e2771f5f21",
-  "job_id": "job-research-e8148d67a04de0eb",
-  "data": {
-    "evaluation_summary": "高性能・中価格帯スマートフォン、ノートPC、Orange Pi 5 Proで、未学習の300合成モデルによる予測器学習と、LLaMA、Qwen、Gemma系の実用モデルによる未見モデル評価を行う。既定の最高周波数ガバナ、QoEを満たす最小周波数を選ぶ期限駆動方式、実測全設定から最良効率を選ぶOracleと比較する。QoEは主に5または10トークン/秒で、熱評価は37℃から連続推論し42℃到達までを測る。",
-    "scope": "主対象はNPUを使う端末内復号であり、プリフィルは最高周波数のままにする。スマートフォン、ノートPC、開発ボードで検証するが、各新規プラットフォームでは約300合成モデルの測定と再学習が必要である。動的疎性や投機的復号は処理量・電力が反復ごとに変わるため現方式では直接対応しない。",
-    "hardware": ["高性能スマートフォン", "中価格帯スマートフォン", "ノートPC", "Orange Pi 5 Pro", "追加GPU評価: ARM Mali-G610"],
-    "models": ["LLaMA2-1.3B/7B", "LLaMA3/3.2系3B/1B", "Qwen2-1.5B", "Qwen2.5-1.5B", "Gemma2-2B", "Pangu-π", "300 synthetic LLMs"],
-    "datasets": ["300 synthetic models generated from six architecture hyperparameters", "text polishing workload", "conversation/agent workload", "back-to-back thermal stress workload"],
-    "workload": "復号時のNPU・DDR周波数組合せを走査し、処理量、部品電力またはボード全体電力、トークン/ジュール、表面温度を測定する。スマートフォンとノートPCは専用電力計測器、ボードは外付け電力計を使用する。実アプリでは前景画面描画を含めて総エネルギーを比較する。",
-    "baselines": ["Default: NPU/DDR maximum frequency", "Deadline: minimum configuration satisfying QoE", "Oracle: measured best efficiency under QoE", "Ener: energy-aware control without thermal management"],
-    "metrics": ["throughput prediction MAPE", "power prediction MAPE", "efficiency prediction error", "Kendall's Tau efficiency-ranking correlation", "tokens per joule", "QoE compliance", "time/tokens before thermal threshold", "end-to-end total energy reduction"],
-    "predictor_accuracy": "未見実モデルで処理量・電力・効率を合わせた平均偏差は高性能スマートフォン6.5%、中価格帯スマートフォン12%、ノートPC9.7%、ボード5.4%。効率順位のKendallの順位相関は前三者で平均0.95、0.90、0.96、ボード0.65。個別の分離型処理量予測MAPEはノートPC4.2%、スマートフォン2.3%、ボード2.4%、電力予測MAPEは1.5%、2.2%、1.7%。",
-    "control_knobs": "NPU周波数、DDR/メモリ周波数、QoE復号速度下限、熱閾値、温度予測周期。温度予測は20秒履歴と21秒地平を使用する。"
-  },
-  "reservation": {"claim_id": "claim-2d848caaa085c3e2771f5f21", "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-de4da6f22324bacb081d2979",
+  "job_id": "job-research-3c85afd190edf390",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-de4da6f22324bacb081d2979",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

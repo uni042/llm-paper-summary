@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:29:35 JST**
+> 自動生成: **2026-09-16 14:29:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
-- `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:26:22 JST** / heartbeat: **—** / lease expiry: **09-16 15:56:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e8148d67a04de0eb.json`
+- `arXiv:2605.00831` — GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving / worker `scheduled-chat-hourly-survey-20260916T142343JST`
+  - claim: **09-16 14:29:39 JST** / heartbeat: **—** / lease expiry: **09-16 15:59:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c85afd190edf390.json`
 - `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
   - claim: **09-16 14:23:47 JST** / heartbeat: **—** / lease expiry: **09-16 15:53:47 JST**
   - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
