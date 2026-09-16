@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5c1b7213ab570864b19957bc",
-  "job_id": "job-research-f3f80e20575daf12",
-  "data": {
-    "overview": "提案方式は専門家予測と需要比例複製によって、基準SwitchTransformersより大幅に高いGPU利用率を示す。本文表では専門家数8で96%、64で89%、128で82%となり、同条件のSiDA-MoEの89%、79%、63%を上回る。要旨では大規模MoEでGPU利用率をほぼ100%へ近づけ、推論速度を最大3倍にすると報告する。一方、モデル性能は基準の約90〜95%を維持する水準であり、速度改善と品質が完全に無関係ではない。",
-    "key_results": [
-      {
-        "metric": "GPU利用率",
-        "value": "switch-base-128で82%",
-        "baseline": "SiDA-MoE 63%、基準微調整モデル1.3%",
-        "condition": "A100、SwitchTransformers base、128専門家",
-        "interpretation": "必要専門家を予測して置くだけでなく人気専門家を複製することで、空いているGPU資源を同一専門家の並列処理へ使える。"
-      },
-      {
-        "metric": "GPU利用率",
-        "value": "switch-base-64で89%",
-        "baseline": "SiDA-MoE 79%、基準3.4%",
-        "condition": "A100、64専門家",
-        "interpretation": "専門家数が増えて疎性が高くなっても、予測配置と複製によって利用率低下を緩和する。"
-      },
-      {
-        "metric": "推論速度",
-        "value": "最大3倍",
-        "baseline": "基準MoE推論",
-        "condition": "要旨で報告する大規模Switch-base評価",
-        "interpretation": "人気専門家へのトークン待ちを複数物理複製へ分散し、直列化を並列処理へ変えることが主因とされる。"
-      },
-      {
-        "metric": "SRU予測器の学習時間",
-        "value": "最大約30%削減",
-        "baseline": "LSTM系予測器",
-        "condition": "専門家予測器の比較",
-        "interpretation": "次バッチ予測の補助処理を軽くし、プリフェッチ制御自体の費用を抑える。"
-      }
-    ],
-    "negative_results": "専門家数が128へ増えるとMoE-MPMCでもGPU利用率は82%まで低下し、完全利用には達しない詳細結果がある。評価では容量上限を発動していないため、GPUメモリが厳しく複製数を強く制限する条件で同じ速度向上が得られるかは未検証である。また要旨は基準モデル性能の約90〜95%維持とし、品質を完全に保存する結果ではない。",
-    "interpretation": "予測型配置だけでは人気専門家を一個しか置かないため、その専門家内部の待ちが残る。MoE-MPMCは使わない専門家のメモリを人気専門家の追加コピーへ変換し、同じ関数を複数トークンへ並列適用する。専門家需要の偏りが強く、かつGPUに複製余地があるほど改善しやすい。",
-    "quality_impact": "要旨では基準アーキテクチャ性能の約90〜95%を維持すると報告する。専門家複製自体は同じ重みを使うが、予測・配置経路を含むシステム全体では基準との品質差が残るため、無損失最適化とは扱わない。"
-  },
+  "attempt_id": "attempt-70fa0f4c73f3250b6efbb2f6",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5c1b7213ab570864b19957bc",
+    "claim_id": "claim-70fa0f4c73f3250b6efbb2f6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

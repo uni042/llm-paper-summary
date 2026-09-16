@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5c1b7213ab570864b19957bc",
-  "job_id": "job-research-f3f80e20575daf12",
-  "data": {
-    "hardware": "HPCノード上のNVIDIA A100 80GB 1基、Intel Xeon Gold 6140 2.30GHz、主メモリ256GBを使用する。",
-    "software": "SLURMで学習・評価を実行し、SwitchTransformers baseの専門家数8、64、128を中心に、基準SwitchTransformers、SiDA-MoE、提案MoE-MPMCを比較する。",
-    "methodology": "SST2 GLUEではtop-1、MRPC GLUEではtop-3構成を用いる。各方式で学習エポック数20000、学習率0.001、バッチサイズ64を揃え、精度、推論遅延、GPU利用率、スループット、微調整時間を測る。予測器はSRUへ置換し、専門家数増加に伴う疎性と負荷偏りの影響を比較する。評価では容量上限は疎性が十分高かったため実際には設定していない。",
-    "scope": "単一A100ノードでのSwitchTransformers系評価が中心で、複数GPU間のall-to-all通信やPCIe/NVLink越しの複製転送を直接評価したものではない。要旨はSwitch-base-256にも言及するが、本文の詳細表は8・64・128専門家が中心である。品質も基準の約90〜95%維持というトレードオフを伴うため、速度だけで完全同等方式とみなさない。"
-  },
+  "attempt_id": "attempt-70fa0f4c73f3250b6efbb2f6",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5c1b7213ab570864b19957bc",
+    "claim_id": "claim-70fa0f4c73f3250b6efbb2f6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
