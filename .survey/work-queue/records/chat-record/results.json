@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2b3fe7ceef25f417e76f16a0",
+  "attempt_id": "attempt-c0ed88a5217a6cd19ae6360f",
   "job_id": "job-research-6252d370adc380b9",
   "data": {
     "overview": "server-chain compositionをblock placement、KV cache capacity、online load balancingへ分解した提案方式は、model-driven simulationとreal distributed LLM servingの双方で既存resource-allocation方式より応答時間を大きく短縮した。主要な実システム評価ではmean response timeを63〜77%削減し、元のqueueing modelが置く理想化仮定からreal demandが外れても改善が残った。理論面ではblock placementとcache allocationがNP-hardであることを示す一方、重要な特殊caseで最適解を与え、一般caseではsteady-state mean response timeのupper/lower boundsを導出する。実務上はモデルblockを増やしてchainを増やすだけではKV残余memoryが減るため、placementとrequest concurrencyを同時に決める必要があることを定量化する。",
@@ -38,7 +38,7 @@
     "interpretation": "大規模モデルの分散servingでは、GPU memoryが重みとKVの双方に消費されるため、model placementを最大化することとrequest concurrencyを最大化することが同じresource上で競合する。本研究はこの競合をchain capacityへ明示的に変換し、offlineで論理server群をcomposeしてからonline load balancingへ渡す。63〜77%の応答時間削減は、schedulerだけでなくschedulerが選べるserver-chain集合そのものをmemory-awareに設計する価値を示す。"
   },
   "reservation": {
-    "claim_id": "claim-2b3fe7ceef25f417e76f16a0",
+    "claim_id": "claim-c0ed88a5217a6cd19ae6360f",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T225915JST",
     "worker_kind": "scheduled_chat"
   }

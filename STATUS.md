@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 23:10:16 JST**
+> 自動生成: **2026-09-16 23:10:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -195,9 +195,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-llm-survey-turn5-20260916T225915JST`
-  - claim: **09-16 23:08:41 JST** / heartbeat: **—** / lease expiry: **09-17 00:38:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
+- `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-llm-survey-turn5-20260916T225915JST`
+  - claim: **09-16 23:10:31 JST** / heartbeat: **—** / lease expiry: **09-17 00:40:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
 
 #### Audit
 
