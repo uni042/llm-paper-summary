@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-79c4ee390d672cc004c43df8",
-  "job_id": "job-research-41c06f0529c148e7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-79c4ee390d672cc004c43df8",
-    "worker_id": "manual-reader-smoketest-20260916T1037JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-79c4ee390d672cc004c43df8","job_id":"job-research-41c06f0529c148e7","data":{"differences":["DistServeやSplitwise系がプリフィルとデコードを分離して相互干渉を減らすのに対し、MAPSは分離後の複数デコーダ間で、未知の将来KV需要を予測して配送する段階を主対象にする。","vLLMやSGLangの基盤機能を置き換えるのではなく、その上に要求単位の予測・予約・配送を追加する。したがってPagedAttentionや連続バッチ処理は下位機構として利用する。","Llumnixのように偏り発生後の移動で再平衡する反応型方式に対し、MAPSは生成開始前の校正済み出力長上限で偏りを予防し、大きなKV状態の事後移動を避ける。","PO-IT、S3、学習順位付けなどの長さ認識型手法が主に単一インスタンス内の順序付けへ使われるのに対し、MAPSは予測を複数デコーダ間のメモリ実行可能性判定と配送へ拡張する。"],"limitations":["主実験は6基A6000、1プリフィラ・2デコーダに限られ、数十～数百GPU級で状態収集・予約整合性・配送判断が同じ費用で動くかは実測されていない。","CoT推論では中間生成が動的で最終長の予測が難しく、論文自身も長さ予測を未解決課題としている。スケジューリング部は再利用できても予測器の置換が必要になる。","予測器はAlpacaで適応し、会話系とBurstGPTで評価している。コード生成やエージェント型ツール利用のような分布外では精度低下と再学習が必要になり、移動窓校正だけで十分とは検証されていない。","共形予測の被覆保証は交換可能性を仮定する。移動窓で分布変化へ追随する実装はあるが、急激な非定常変化に対する厳密なオンライン保証は別途必要である。"],"implementation_status":"論文はvLLM 0.13.0上にMAPSを実装し、MooncakeでプリフィルからデコーダへKVを転送、Redis 7.1.0で状態を共有し、Jetson Orin NX上のSP-7B/SP-160Mとクラウド側校正・大域配送・局所順序付けを実機評価している。付録では大域配送の擬似コードと予約解放の実装規則も示す。一方、2026-09-16時点でarXiv本文・ページから公式コード公開URLは確認できず、再現には論文記述からの実装が必要である。","research_positioning":"リポジトリの「LLMサービング／スケジューリング／分離」系統では、Orca・vLLM・SGLangの単一実行基盤、Splitwise/DistServeのプリフィル・デコード分離、FastServe等のプリエンプティブ順序付けの先に位置する。MAPSが追加する軸は、生成開始前に端末側で将来出力長を観測可能にし、その不確実性を片側校正してKV容量予約へ落とし込む予測型資源制御である。特にSSD/CXL等の階層メモリ研究へ接続する場合も、「将来の要求サイズを上限付きで早期推定し、容量制約と待ち時間を同時に使う」という考え方は、転送先・キャッシュ予約・入場制御へ転用できる。"},"reservation":{"claim_id":"claim-79c4ee390d672cc004c43df8","worker_id":"manual-reader-smoketest-20260916T1037JST","worker_kind":"scheduled_chat"}}
