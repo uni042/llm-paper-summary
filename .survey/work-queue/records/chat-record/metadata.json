@@ -9,53 +9,30 @@
     "arxiv_id": "2604.09613",
     "doi": "10.48550/arXiv.2604.09613",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
+    "arxiv_categories": {"primary":"cs.DC","cross_list":["cs.AI"]},
     "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference",
     "summary": "実運用のLLM推論フリートで短い要求が大半なのに全インスタンスを最悪時の長いコンテキスト向けに設定する不整合を、短文用・長文用の二つのvLLMプールとオンライン自己校正型トークン予算推定で解消する。AzureとLMSYS由来トレースのLlama-3-70B/A100評価でGPUインスタンスを約17〜39%削減し、設計フリートでは先取り・拒否をゼロにしたと報告する。",
     "list_summary": "短文・長文でvLLMプールを分離し、自己校正した総トークン予算で振り分けてGPU台数を約17〜39%削減するフリート経路制御。",
-    "authors": [
-      "Huamin Chen",
-      "Xunzhuo Liu",
-      "Junchen Jiang",
-      "Bowei He",
-      "Xue Liu"
-    ],
+    "authors": ["Huamin Chen","Xunzhuo Liu","Junchen Jiang","Bowei He","Xue Liu"],
     "authors_affiliations": null,
     "published": "2026-03-13",
     "publication": "arXiv",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "LLM serving fleet routing / KV-cache-aware provisioning",
-    "topics": [
-      "LLMサービング",
-      "フリート経路制御",
-      "KVキャッシュ",
-      "vLLM",
-      "コスト最適化"
-    ],
+    "topics": ["LLMサービング","フリート経路制御","KVキャッシュ","vLLM","コスト最適化"],
     "importance": "単一GPU内のスケジューリングではなく、要求長分布とインスタンス設定の不整合をフリート境界で解消し、既存のPagedAttentionや連続バッチ処理と併用できる点が重要。",
     "implementation": "要求ごとに定数時間で総トークン予算を推定し、短文用または長文用vLLMプールへ振り分ける軽量ルータ。評価用の自己完結型離散事象シミュレータも使用。",
     "hardware_evaluation": "主評価はLlama-3-70BをNVIDIA A100で配信するフリートをモデル化し、Qwen3-235B-A22B/AMD MI300Xの大規模ケースを投影。",
     "quality_effect": "モデル自体や生成アルゴリズムを変更せず、要求を容量の異なる同一モデル系プールへ振り分けるため生成品質の改善を目的としない。",
     "source": "https://arxiv.org/abs/2604.09613",
-    "sources": [
-      "https://arxiv.org/abs/2604.09613"
-    ],
+    "sources": ["https://arxiv.org/abs/2604.09613"],
     "code": null,
     "last_checked": "2026-09-16",
     "references": [],
     "references_checked_at": "2026-09-16",
     "references_source": "primary manuscript",
-    "references_total": null
+    "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-5067cd6b8db49986303c3586",
-    "worker_id": "scheduled-chat-normal-20260917T013240",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-5067cd6b8db49986303c3586","worker_id":"scheduled-chat-normal-20260917T013240","worker_kind":"scheduled_chat"}
 }
