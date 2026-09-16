@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T05:47:41+00:00",
-  "last_run_key": "2026-09-16T14:00:00+09:00",
-  "last_round": "specialist-moe-offload-lineage-19",
+  "updated_at": "2026-09-16T08:27:18+00:00",
+  "last_run_key": "2026-09-16T17:00:00+09:00",
+  "last_round": "specialist-adaptive-kv-budget-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
+  "consecutive_empty_rounds": 5,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -5719,6 +5719,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "最終dedupe後candidate inventoryを再取得し、50超かつactionable workありならoverflow researchへ切り替える",
       "source_submission": "work-queue/submissions/20260916T1454JST-discovery-specialist-moe-offload-lineage-19.json"
+    },
+    {
+      "run_key": "2026-09-16T17:00:00+09:00",
+      "round": "specialist-adaptive-kv-budget-1",
+      "axis": "適応KV圧縮・制約駆動構成選択",
+      "query_summary": "2026年9月のKVキャッシュ圧縮・推論メモリ制約研究を一次arXiv中心に探索し、既存GitHub正本でcanonical IDを再照合した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "GPU外KV配置とprocessing-near-memoryによる長文decodeへ軸を移す",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r1-metakv.json"
     }
   ],
   "axes": {
@@ -9081,6 +9096,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "最終dedupe後candidate inventoryを再取得し、50超かつactionable workありならoverflow researchへ切り替える"
+    },
+    "適応KV圧縮・制約駆動構成選択": {
+      "last_run_key": "2026-09-16T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "GPU外KV配置とprocessing-near-memoryによる長文decodeへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T08:15:29.762828+00:00",
+  "updated_at": "2026-09-16T08:29:19.133491+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T08:15:29.762828+00:00",
+      "last_recorded_at": "2026-09-16T08:29:19.133491+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 143,
         "audit_completed": 0,
-        "discovery_completed": 52,
+        "discovery_completed": 53,
         "blocked": 9,
-        "new_jobs": 71,
-        "new_papers": 127,
+        "new_jobs": 72,
+        "new_papers": 147,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35029698303:1",
-          "recorded_at": "2026-09-15T22:12:00.795863+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35029698303",
-            "run_attempt": "1",
-            "source_sha": "5cded47ec7e3e3076f85e3f0fbf2292cd83f6653"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35030094754:1",
           "recorded_at": "2026-09-15T22:16:22.681923+00:00",
@@ -19596,6 +19582,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35073816895:1",
+          "recorded_at": "2026-09-16T08:29:19.133491+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35073816895",
+            "run_attempt": "1",
+            "source_sha": "4b67fe14b8e236777776f6bde931d0622e5210b8"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -21231,6 +21232,14 @@
           "title": "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-d3dba969d6976998",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21730,6 +21739,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.30076",
           "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects"
+        },
+        {
+          "job_id": "job-d3dba969d6976998",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -21859,7 +21875,27 @@
         "arXiv:2606.23001",
         "arXiv:2606.28565",
         "arXiv:2609.11209",
-        "arXiv:2609.14237"
+        "arXiv:2609.14237",
+        "arXiv:2412.16187",
+        "arXiv:2507.17120",
+        "arXiv:2509.24832",
+        "arXiv:2603.07770",
+        "arXiv:2604.23467",
+        "arXiv:2605.22566",
+        "arXiv:2605.25655",
+        "arXiv:2607.23099",
+        "arXiv:2608.13573",
+        "arXiv:2609.04244",
+        "arXiv:2609.04748",
+        "arXiv:2609.07282",
+        "arXiv:2609.07306",
+        "arXiv:2609.08306",
+        "arXiv:2609.11356",
+        "arXiv:2609.12923",
+        "arXiv:2609.13592",
+        "arXiv:2609.15230",
+        "arXiv:2609.15338",
+        "mlforsystems-neurips2024-paper41"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -22017,7 +22053,8 @@
         ".survey/work-queue/results/20260916T1449JST-discovery-specialist-backref-preble-16.json",
         ".survey/work-queue/results/20260916T1450JST-discovery-specialist-backref-infercept-17.json",
         ".survey/work-queue/results/20260916T1451JST-discovery-specialist-backref-heterogeneous-18.json",
-        ".survey/work-queue/results/20260916T1454JST-discovery-specialist-moe-offload-lineage-19.json"
+        ".survey/work-queue/results/20260916T1454JST-discovery-specialist-moe-offload-lineage-19.json",
+        ".survey/work-queue/results/discovery-specialist-20260916T1700-r1-metakv.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -22094,8 +22131,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 587,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 607,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

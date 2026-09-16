@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **561本**。
+収録論文: **581本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,14 +25,15 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**561本**。
+推論論文：**581本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 45 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 1 |
-| [02-hardware-accelerators](02-hardware-accelerators/README.md) | 6 |
+| [02-hardware-accelerators](02-hardware-accelerators/README.md) | 7 |
+| [02-memory-offload](02-memory-offload/README.md) | 1 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 9 |
@@ -48,7 +49,7 @@
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
-| [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 2 |
+| [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
 | [06-speculative-decoding](06-speculative-decoding/README.md) | 5 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
@@ -56,10 +57,11 @@
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 18 |
 | [08-quantization-kernels](08-quantization-kernels/README.md) | 1 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 14 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 16 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 200 |
+| [10-sparse-attention](10-sparse-attention/README.md) | 1 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 205 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 2 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 20 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 29 |
 <!-- survey:auto:end -->
