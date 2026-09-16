@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-3ab15fd671c597846c0e786b",
-  "job_id": "job-research-d9c67ca63b6b0f25",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3ab15fd671c597846c0e786b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3ab15fd671c597846c0e786b","job_id":"job-research-d9c67ca63b6b0f25","data":{"canonical_id":"arXiv:2607.09248","arxiv_id":"2607.09248","doi":"10.48550/arXiv.2607.09248","openreview_id":null,"arxiv_categories":{"primary":"cs.DS","cross_list":[]},"title":"General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing","summary":"応答長が事前に分からず、デコードの進行に伴ってKVキャッシュが増えるLLM推論では、単一の優先規則ではメモリ利用率と短い仕事を先に終える順序を同時に保証できない。本論文はジョブを大プロンプト、小プロンプトかつプロンプト優勢、小プロンプトかつ応答優勢の三領域へ分解し、前二者には長さ上限を倍増させる矩形スケジューラ、後者には応答長上限を幾何的に増やすスライス型スケジューラを用いる。応答長未知のため小ジョブはまずプロンプト優勢側で実行し、生成トークン数がプロンプト長へ達した時点で応答優勢と確定して同一段階内で転送する。これらを段階的に時分割するメタスケジューラにより、任意のプロンプト長・応答長に対して最適な応答長既知スケジュールとの差を定数倍に抑えることを理論的に示す。","list_summary":"応答長未知で成長するKVキャッシュを、メモリ成長形状ごとの三領域へ実行時ルーティングし、領域別スケジューラを時分割して任意長でも定数競合保証を与える。","authors":["Yiding Feng","Siyu Liu","Zonghan Yang","Yuhao Zhang"],"authors_affiliations":"一次資料で著者所属の確定情報を本runでは抽出していないため推測しない。","published":"2026-07-10","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling","topics":["KVキャッシュ","非予知スケジューリング","メモリ制約","ルーティング","競合解析"],"importance":"任意のプロンプト長・応答長を許す一般設定で、応答長を知らないKVキャッシュスケジューリングに初の定数競合保証を与え、領域分解と実行時ルーティングを設計原理として示す。","hardware_evaluation":"理論解析論文であり、GPU実機ベンチマークは主評価ではない。","hardware_details":null,"quality_effect":"モデル出力品質を変える方式ではなく、要求の実行順序・中断・再開を扱うスケジューリング理論。","source":"https://arxiv.org/abs/2607.09248","sources":["https://arxiv.org/abs/2607.09248","https://arxiv.org/html/2607.09248"],"code":null,"implementation":"多項式時間の理論アルゴリズムを提示。一次資料上で公式実装や実機システム評価は確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-3ab15fd671c597846c0e786b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
