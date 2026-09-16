@@ -1,1 +1,83 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-85ed2d65cef8ad4a5467fda5","job_id":"job-research-6cff6eafb4a4e5b9","data":{"canonical_id":"arXiv:2609.12686","arxiv_id":"2609.12686","doi":"10.48550/arXiv.2609.12686","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.CL"]},"title":"Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size","summary":"本手法は、長文書を固定サイズ窓で読み、将来の質問を知らない状態で事実文を抽出し、凍結LLMのFFN層における活性をアドレスとして、各事実を再生成する残差ベクトルを外部保存する。元文書トークンとKVキャッシュは記憶化後に破棄でき、質問時には密・語彙検索で関連アンカーを選び、対応する再現プロンプトの活性と保存キーのコサイン類似度が閾値を超えたときだけ残差を層出力へ注入して事実文を決定的に再構成する。記憶量は文書長ではなく固定事実予算に従うため、200万トークンまでGPUメモリをほぼ一定に保ち、3モデルの単一事実QAで50〜80%を達成した一方、比較した訓練不要方式はゼロまたはほぼゼロまで低下した。","list_summary":"長文書を事実単位の外部残差ベクトルへ変換し、質問時にFFN活性で選択注入して元トークン/KVなしに事実を再構成することで、文書長にほぼ依存しないGPU記憶量で長文脈recallを実現する。","authors":["MyungHoon Ryu","XinYu Piao","Jong-Kook Kim"],"authors_affiliations":"一次資料記載の著者所属。","published":"2026-09-11","publication":"arXiv:2609.12686v1","publication_type":"プレプリント","publication_status":"arXiv v1（2026-09-11提出）。","lineage":"kv-cache-optimization-compression","topics":["長文脈recall","残差ベクトル","FFN活性メモリ","KVキャッシュ削減","外部記憶","訓練不要"],"importance":"高。トークン/KVを階層保存する代わりに、選択事実をモデル内部活性に対応する外部ベクトルへ変換する表現レベルの長文脈記憶である。","hardware_evaluation":"Phi-3.5-mini、Qwen3-4B、Llama-3.1-8Bの凍結モデルをGPUで評価。文書長0K〜2Mトークン、BABILong/RULER等を使用。","hardware_details":"GPU機種は本文評価設定に従う。提案法の保存事実メモリは測定した全条件で1GB未満。","quality_effect":"圧縮は選択された事実文の再構成を目的とし、モデル重みは変更しない。ただし事実抽出・ルーティング・再構成・最終推論の各段階で失敗しうる。","storage_targets":["外部残差ベクトル記憶","FFN活性キー","ルーティング索引","元文書KVキャッシュの削除"],"bottlenecks":["長文脈KV線形成長","事実抽出精度","アンカー対応","残差再構成容量","質問ルーティング"],"evidence_locations":["§1","§3.1–3.3","§4","Figures 1–4","Table 1"],"source":"https://arxiv.org/abs/2609.12686","sources":["https://arxiv.org/abs/2609.12686","https://arxiv.org/html/2609.12686","https://arxiv.org/pdf/2609.12686"],"code":"","implementation":"凍結モデルにFFN活性取得・残差最適化・応答時フックを追加する訓練不要方式。公開コードURLはarXiv一次ページでは確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"一次資料関連研究節","references_total":0},"reservation":{"claim_id":"claim-85ed2d65cef8ad4a5467fda5","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-02982a80422dfb2b9bcaffc8",
+  "job_id": "job-research-6cff6eafb4a4e5b9",
+  "data": {
+    "canonical_id": "arXiv:2609.12686",
+    "arxiv_id": "2609.12686",
+    "doi": "10.48550/arXiv.2609.12686",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.CL"
+      ]
+    },
+    "title": "Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size",
+    "summary": "本手法は、長文書を固定サイズ窓で読み、将来の質問を知らない状態で事実文を抽出し、凍結LLMのFFN層における活性をアドレスとして、各事実を再生成する残差ベクトルを外部保存する。元文書トークンとKVキャッシュは記憶化後に破棄でき、質問時には密・語彙検索で関連アンカーを選び、対応する再現プロンプトの活性と保存キーのコサイン類似度が閾値を超えたときだけ残差を層出力へ注入して事実文を決定的に再構成する。記憶量は文書長ではなく固定事実予算に従うため、200万トークンまでGPUメモリをほぼ一定に保ち、3モデルの単一事実QAで50〜80%を達成した一方、比較した訓練不要方式はゼロまたはほぼゼロまで低下した。",
+    "list_summary": "長文書を事実単位の外部残差ベクトルへ変換し、質問時にFFN活性で選択注入して元トークン/KVなしに事実を再構成することで、文書長にほぼ依存しないGPU記憶量で長文脈recallを実現する。",
+    "authors": [
+      "MyungHoon Ryu",
+      "XinYu Piao",
+      "Jong-Kook Kim"
+    ],
+    "authors_affiliations": "一次資料記載の著者所属。",
+    "published": "2026-09-11",
+    "publication": "arXiv:2609.12686v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-09-11提出）。",
+    "lineage": "kv-cache-optimization-compression",
+    "topics": [
+      "長文脈recall",
+      "残差ベクトル",
+      "FFN活性メモリ",
+      "KVキャッシュ削減",
+      "外部記憶",
+      "訓練不要"
+    ],
+    "importance": "高。トークン/KVを階層保存する代わりに、選択事実をモデル内部活性に対応する外部ベクトルへ変換する表現レベルの長文脈記憶である。",
+    "hardware_evaluation": "Phi-3.5-mini、Qwen3-4B、Llama-3.1-8Bの凍結モデルをGPUで評価。文書長0K〜2Mトークン、BABILong/RULER等を使用。",
+    "hardware_details": "GPU機種は本文評価設定に従う。提案法の保存事実メモリは測定した全条件で1GB未満。",
+    "quality_effect": "圧縮は選択された事実文の再構成を目的とし、モデル重みは変更しない。ただし事実抽出・ルーティング・再構成・最終推論の各段階で失敗しうる。",
+    "storage_targets": [
+      "外部残差ベクトル記憶",
+      "FFN活性キー",
+      "ルーティング索引",
+      "元文書KVキャッシュの削除"
+    ],
+    "bottlenecks": [
+      "長文脈KV線形成長",
+      "事実抽出精度",
+      "アンカー対応",
+      "残差再構成容量",
+      "質問ルーティング"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§3.1–3.3",
+      "§4",
+      "Figures 1–4",
+      "Table 1"
+    ],
+    "source": "https://arxiv.org/abs/2609.12686",
+    "sources": [
+      "https://arxiv.org/abs/2609.12686",
+      "https://arxiv.org/html/2609.12686",
+      "https://arxiv.org/pdf/2609.12686"
+    ],
+    "code": "",
+    "implementation": "凍結モデルにFFN活性取得・残差最適化・応答時フックを追加する訓練不要方式。公開コードURLはarXiv一次ページでは確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "一次資料関連研究節",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-02982a80422dfb2b9bcaffc8",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

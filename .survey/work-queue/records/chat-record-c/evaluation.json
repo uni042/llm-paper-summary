@@ -1,1 +1,47 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-85ed2d65cef8ad4a5467fda5","job_id":"job-research-6cff6eafb4a4e5b9","data":{"scope":"3種類の凍結命令調整モデルで、事前学習文脈窓内から最大200万トークンまでの長文脈事実recallを評価する。単一事実、二事実合成、RULER系質問、再構成容量、事実位置、GPUメモリを測定し、訓練不要の長文脈方式と比較する。","evaluation_setup":"Phi-3.5-mini、Qwen3-4B、Llama-3.1-8Bを凍結し、BABILong QA1は0K〜2M、QA2は0K〜1Mで評価する。長い条件では各モデル数例のサンプルを使い、RULER条件も16K〜2Mの一部長さで測定する。提案法は固定事実予算、選択保存層、θ=0.6、β=50のゲートを用いる。","models":["Phi-3.5-mini","Qwen3-4B","Llama-3.1-8B"],"hardware":["GPU上での凍結LLM推論と残差符号化"],"workloads":["BABILong QA1 単一事実recall 0K〜2M","BABILong QA2 二事実合成 0K〜1M","RULER長文脈QA","百科事典型・物語型事実recall","事実位置/抽出/ルーティング/再構成段階分析"],"metrics":["QA精度","事実再構成成功率","ルーティング成功率","GPUメモリ使用量","外部保存事実メモリ","文脈長に対する性能"],"baselines":["通常のfull-context/closed-book条件","ストリーミング・KV選択系訓練不要方式","プロンプト圧縮","Chunk RAG等の検索方式"],"simulation_assumptions":"主要評価は実モデル実行。200万トークン条件は文書を固定窓で逐次記憶化するため、一度に200万トークンをモデル文脈へ投入しない。","evaluation_caveats":"長文脈側では計算費用のためサンプル数が小さく、2MのQA1はモデルごと数例である。固定事実予算なので全文書のすべての情報を保持する方式ではなく、複数事実推論は1Mまでの評価である。"},"reservation":{"claim_id":"claim-85ed2d65cef8ad4a5467fda5","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-02982a80422dfb2b9bcaffc8",
+  "job_id": "job-research-6cff6eafb4a4e5b9",
+  "data": {
+    "scope": "3種類の凍結命令調整モデルで、事前学習文脈窓内から最大200万トークンまでの長文脈事実recallを評価する。単一事実、二事実合成、RULER系質問、再構成容量、事実位置、GPUメモリを測定し、訓練不要の長文脈方式と比較する。",
+    "evaluation_setup": "Phi-3.5-mini、Qwen3-4B、Llama-3.1-8Bを凍結し、BABILong QA1は0K〜2M、QA2は0K〜1Mで評価する。長い条件では各モデル数例のサンプルを使い、RULER条件も16K〜2Mの一部長さで測定する。提案法は固定事実予算、選択保存層、θ=0.6、β=50のゲートを用いる。",
+    "models": [
+      "Phi-3.5-mini",
+      "Qwen3-4B",
+      "Llama-3.1-8B"
+    ],
+    "hardware": [
+      "GPU上での凍結LLM推論と残差符号化"
+    ],
+    "workloads": [
+      "BABILong QA1 単一事実recall 0K〜2M",
+      "BABILong QA2 二事実合成 0K〜1M",
+      "RULER長文脈QA",
+      "百科事典型・物語型事実recall",
+      "事実位置/抽出/ルーティング/再構成段階分析"
+    ],
+    "metrics": [
+      "QA精度",
+      "事実再構成成功率",
+      "ルーティング成功率",
+      "GPUメモリ使用量",
+      "外部保存事実メモリ",
+      "文脈長に対する性能"
+    ],
+    "baselines": [
+      "通常のfull-context/closed-book条件",
+      "ストリーミング・KV選択系訓練不要方式",
+      "プロンプト圧縮",
+      "Chunk RAG等の検索方式"
+    ],
+    "simulation_assumptions": "主要評価は実モデル実行。200万トークン条件は文書を固定窓で逐次記憶化するため、一度に200万トークンをモデル文脈へ投入しない。",
+    "evaluation_caveats": "長文脈側では計算費用のためサンプル数が小さく、2MのQA1はモデルごと数例である。固定事実予算なので全文書のすべての情報を保持する方式ではなく、複数事実推論は1Mまでの評価である。"
+  },
+  "reservation": {
+    "claim_id": "claim-02982a80422dfb2b9bcaffc8",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
