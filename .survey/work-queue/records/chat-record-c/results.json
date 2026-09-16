@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3d64f755a8e767409d3e9d13",
-  "job_id": "job-research-8548d3d173ce3871",
-  "data": {
-    "overview": "NetKVはネットワーク距離と混雑を考慮してKV転送を近いtierへ寄せ、転送時間を直接削減する。RAG 100%負荷ではCLA*のcross-pod比68%を31.1%へ下げ、same-podを32%から68.9%へ増やし、平均転送時間を835msから620msへ25.7%削減する。負荷・文脈長・oversubscriptionが増えネットワーク項が大きくなるほどTTFT利益が拡大し、TBT増加は全条件0.5ms未満に留まる。",
-    "key_results": [
-      {
-        "metric": "平均TTFT",
-        "value": "RR比最大21.2%、調整済みCLA*比最大17.6%削減",
-        "baseline": "round-robin / cache+load-aware",
-        "condition": "64 GPU fat-tree、Mooncake trace",
-        "interpretation": "デコードGPUの計算負荷とcache命中だけでは見えないKV転送経路を選択へ入れることで、TTFTのネットワーク部分を削減する。"
-      },
-      {
-        "metric": "SLO達成率",
-        "value": "最大+20.1ポイント",
-        "baseline": "RR",
-        "condition": "RAG、16K context sweep",
-        "interpretation": "KV転送がSLO境界を支配する領域では数百msの転送削減がdeadline missを大きく回復する。"
-      },
-      {
-        "metric": "TBT overhead",
-        "value": "全評価条件で+0.5ms未満",
-        "baseline": "CLA*等",
-        "condition": "load/context/topology sweeps",
-        "interpretation": "ネットワークを優先してdecode先を変えてもdecode batch効率への副作用は小さい。"
-      },
-      {
-        "metric": "tier shifting",
-        "value": "cross-pod 68.0%→31.1%、same-pod 32.0%→68.9%、転送835→620ms",
-        "baseline": "CLA*",
-        "condition": "RAG 100% load",
-        "interpretation": "性能改善の主要機構は遠いtierを避ける配置変更であり、静的topology情報だけでも利益の大半を得られる。"
-      }
-    ],
-    "negative_results": "64K contextなどcluster capacity自体を超える領域では全schedulerがSLOを失いNetKVの差はほぼ消える。1:1 oversubscription・背景trafficなしではtier帯域差が小さいためCLA*比利益も小さい。INT8等でKVを半減すればnetwork項の重みが下がり利益も縮む。実評価はsimulationのみで、serial transfer→queue→decodeモデルはproductionのtransfer-compute overlapを無視するため絶対TTFT差を過大評価し得る。",
-    "interpretation": "KVサイズはcontext長へ線形増加する一方、decode queue差は同様には増えないため、長文脈ほどnetwork pathの選択が支配的になる。ただし容量超過で全候補が過負荷になるとnetwork最適化だけでは救えない。静的tier signalが大半の効果を持つため、細粒度telemetryなしでも導入価値がある。",
-    "quality_impact": "配置先だけを変更しモデル計算・KV精度を変えないため生成品質への影響はない。"
-  },
+  "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
+  "job_id": "job-research-7411280ca93364ec",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3d64f755a8e767409d3e9d13",
+    "claim_id": "claim-7bba4de8acdf88007ff64c4d",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

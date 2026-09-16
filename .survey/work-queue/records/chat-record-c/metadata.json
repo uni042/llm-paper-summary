@@ -2,54 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3d64f755a8e767409d3e9d13",
-  "job_id": "job-research-8548d3d173ce3871",
-  "data": {
-    "canonical_id": "arXiv:2606.03910",
-    "arxiv_id": "2606.03910",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.PF",
-      "cross_list": []
-    },
-    "title": "NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference",
-    "summary": "プリフィル/デコード分離ではプリフィル後のKVキャッシュをデコードGPUへネットワーク転送する必要があり、長文脈では転送時間がTTFTを支配する。NetKVは既存の負荷・接頭辞キャッシュ局所性に加え、プリフィル/デコード間の物理トポロジ階層、帯域、遅延、混雑、同時KV転送数をネットワーク費用オラクルから受け取り、転送+待ち行列+最初のデコード時間が最小のデコード先をO(|D|)で選ぶ。64 GPU fat-treeシミュレータとMooncakeトレースでは平均TTFTをRR比最大21.2%、調整済みcache+load比最大17.6%削減し、SLO達成率を最大20.1ポイント改善する。",
-    "list_summary": "分離推論のデコード先選択へネットワーク階層・帯域・混雑を加え、KV転送・キュー・初回デコード時間の合計が最小のGPUを要求ごとに選ぶ。",
-    "authors": [
-      "Mubarak Adetunji Ojewale"
-    ],
-    "authors_affiliations": "一次資料の著者欄を確認。",
-    "published": "2026-06-02",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint v1",
-    "lineage": "prefill-decode disaggregation / KV transfer scheduling / network-aware serving",
-    "topics": [
-      "KV転送",
-      "分離推論",
-      "ネットワーク認識スケジューリング",
-      "TTFT",
-      "接頭辞キャッシュ"
-    ],
-    "importance": "KV転送経路を固定配置の副作用ではなく要求ごとのスケジューリング変数として扱い、既存ルータへ薄いネットワーク情報接口だけを追加する。",
-    "hardware_evaluation": "物理GPU実機ではなく、64-H100、TP=4、4階層fat-treeの離散イベント・フロー単位シミュレータ。Mooncakeトレースで駆動。",
-    "quality_effect": "モデル演算やKV内容を変更しない配置方策なので生成品質は不変。",
-    "source": "https://arxiv.org/abs/2606.03910",
-    "sources": [
-      "https://arxiv.org/abs/2606.03910",
-      "https://arxiv.org/html/2606.03910"
-    ],
-    "code": null,
-    "implementation": "llm-dのEndpoint PickerやDynamo KV-aware routerへ追加スコアラーとして統合可能な設計。NIXL/NCCL/RDMA、vLLM/SGLang、ネットワークハードウェアの変更不要。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 28
-  },
+  "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
+  "job_id": "job-research-7411280ca93364ec",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3d64f755a8e767409d3e9d13",
+    "claim_id": "claim-7bba4de8acdf88007ff64c4d",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
