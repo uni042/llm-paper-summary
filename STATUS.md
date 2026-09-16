@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:19:45 JST**
+> 自動生成: **2026-09-16 18:20:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **26** |
-| 未claim Research job | **24** |
-| 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-16 18:09:41 JST（10分前）** |
+| 収録候補論文 | **25** |
+| 未claim Research job | **23** |
+| 直近24hの検証済みResearch収録 | **64** |
+| 最終検証済みResearch収録 | **09-16 18:19:57 JST（3秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **26** |
+| canonical_id確認済みの一意な候補論文 | **25** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **26** |
+| 非終端Research job合計 | **25** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 18:19:57 JST** [research] `arXiv:2409.15104` — CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts
+  - job: `.survey/work-queue/jobs/job-research-6eb709dc3f5cf15a.json`
+  - result: `.survey/work-queue/results/research/attempt-517d9d0491722109185669ac.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-517d9d0491722109185669ac.json`
+  - paper: `papers/inference/99-other-inference-systems/2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md`
 - **09-16 18:09:41 JST** [research] `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving
   - job: `.survey/work-queue/jobs/job-research-9d70d3111564c88d.json`
   - result: `.survey/work-queue/results/research/attempt-e98c6f562dcc3c2cf28e5d6f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-935f2123fd1379422e5152c0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-935f2123fd1379422e5152c0.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md`
-- **09-16 16:12:08 JST** [research] `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-a8b5b2b70328c222.json`
-  - result: `.survey/work-queue/results/research/attempt-f18ac3404e8d423c89a438b0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f18ac3404e8d423c89a438b0.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md`
 
 ### Audit
 
@@ -223,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **26** |
+| ready | **25** |
 
 ### 候補の重複・識別情報欠損
 
@@ -243,7 +243,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **609** |
+| inference/training/survey配下の論文Markdown実体 | **610** |
 
 ### immutable submissionの未照合
 
@@ -251,8 +251,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **370** |
-| └ Research | **226** |
+| 成功result未照合のimmutable submission | **369** |
+| └ Research | **225** |
 | └ Audit | **1** |
 | └ Discovery | **143** |
 
