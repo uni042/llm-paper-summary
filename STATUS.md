@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:15:59 JST**
+> 自動生成: **2026-09-16 15:16:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **42** |
 | 未claim Research job | **38** |
-| 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-16 15:11:26 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **50** |
+| 最終検証済みResearch収録 | **09-16 15:16:37 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -24,8 +24,8 @@
 | 指標 | 件数 |
 |---|---:|
 | canonical_id確認済みの一意な候補論文 | **42** |
-| canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **43** |
+| canonical_idなしの候補Research job | **0** |
+| 非終端Research job合計 | **42** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **12** | **6** | **6** | **5** | **0** | — |
+| Research | **39** | **12** | **6** | **6** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **39** | **31** | **6** | **25** | **5** | **0** | **23** |
+| 合計 | **40** | **31** | **6** | **25** | **4** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:16:37 JST** [research] IFMoE: An Inference Framework Design for Fine-grained MoE
+  - job: `.survey/work-queue/jobs/job-research-3190de0b496967f3.json`
+  - result: `.survey/work-queue/results/research/attempt-3feeca873b26fab2446b5438.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3feeca873b26fab2446b5438.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md`
 - **09-16 15:11:26 JST** [research] `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding
   - job: `.survey/work-queue/jobs/job-research-cffb14eec24a02c2.json`
   - result: `.survey/work-queue/results/research/attempt-5cdea98b4034b7e3f2b05850.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-4b0bf8eef80fa393a4c31125.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4b0bf8eef80fa393a4c31125.json`
   - paper: `papers/inference/08-edge-on-device-llm-systems/2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md`
-- **09-16 14:24:20 JST** [research] `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation
-  - job: `.survey/work-queue/jobs/job-research-d743b2b5468a28c8.json`
-  - result: `.survey/work-queue/results/research/attempt-062785fdd1a729fb213be682.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json`
-  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **0件**
-- IFMoE: An Inference Framework Design for Fine-grained MoE / worker `scheduled-chat-hourly-survey-20260916T145717JST`
-  - claim: **09-16 15:15:22 JST** / heartbeat: **—** / lease expiry: **09-16 16:45:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3190de0b496967f3.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -238,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **43** |
+| ready | **42** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,7 +245,7 @@
 |---|---:|
 | 重複canonical_idグループ | **0** |
 | 重複分のResearch job | **0** |
-| canonical_id欠損 | **1** |
+| canonical_id欠損 | **0** |
 | title欠損 | **0** |
 | source URL欠損 | **0** |
 
@@ -258,7 +255,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **593** |
+| inference/training/survey配下の論文Markdown実体 | **594** |
 
 ### immutable submissionの未照合
 
