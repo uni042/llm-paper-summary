@@ -2,78 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bbb785cdc85c31e832c84d96",
-  "job_id": "job-research-ea263cc3cccbe57a",
-  "data": {
-    "overview": "提案MCは100%のservice rate、未処理penalty 0、total cost 8.92kドル、electricity cost 29.48ドル/10^9 tokensを達成する。論文が報告する総運用費削減は29.0%。30分先読みのMyopicはservice rate 95.43%、Staticは97.66%で、完全先読みと配置変更の価値が出る。特に読込時間を無視するZeroLeadTimeは物理制約再生時67.40%、TTFT無視は56.89%、TPOT無視は78.04%まで落ち、LLM固有制約を抜いた最適化が実行不能になることを示す。",
-    "key_results": [
-      {
-        "metric": "service rate",
-        "value": "100.00%",
-        "baseline": "B1 95.43%、B2 97.66%",
-        "condition": "3拠点・時変電力/価格・3モデル",
-        "interpretation": "将来を見越したモデル事前配置と配送の共同最適化で全需要を処理する。"
-      },
-      {
-        "metric": "total operating cost",
-        "value": "8.92 k$、29.0%削減を報告",
-        "baseline": "NoPriceSignal 12.56 k$など",
-        "condition": "完全MC",
-        "interpretation": "サービス率を落とさず地域価格差も利用する。"
-      },
-      {
-        "metric": "ZeroLeadTime service rate",
-        "value": "67.40%",
-        "baseline": "MC 100%",
-        "condition": "読込時間を無視して最適化後、実制約で再生",
-        "interpretation": "モデルが即時起動すると仮定すると大量の実行不能routingを生む。"
-      },
-      {
-        "metric": "NoTTFT service rate",
-        "value": "56.89%",
-        "baseline": "MC 100%",
-        "condition": "TTFT容量制約を省略",
-        "interpretation": "GPU台数や最大throughputだけではprefill待ち時間を満たせない。"
-      },
-      {
-        "metric": "NoTPOT service rate",
-        "value": "78.04%",
-        "baseline": "MC 100%",
-        "condition": "TPOT容量制約を省略",
-        "interpretation": "decode SLOも配送可能容量の独立した上限になる。"
-      },
-      {
-        "metric": "先行配置時刻",
-        "value": "需要ピーク約23:00に対し約21:30から再配置",
-        "baseline": "事後的routing",
-        "condition": "DeepSeek-V3、readiness 60分",
-        "interpretation": "電力不足・価格上昇が予想される拠点から需要到来前に容量を移す必要がある。"
-      }
-    ],
-    "negative_results": [
-      {
-        "name": "Myopicでは完全サービス不可",
-        "description": "30分先読みだけのB1は95.43%に留まり、DeepSeek-V3のように60分級のreadinessを持つモデルでは短い予見期間だけでは十分なcapacity preparationができない。"
-      },
-      {
-        "name": "Static placementの非効率",
-        "description": "固定配置B2は97.66%のservice rateでtotal cost 21.05kドルとなり、地域ごとの電力不足・価格変動へモデル配置自体を追従させる必要がある。"
-      },
-      {
-        "name": "安価な電力だけでは評価できない",
-        "description": "ZeroLeadTimeやNoTTFTはelectricity cost/10^9 tokensだけを見ると低く見えるが、実際には処理できない需要が多い。低単価は低サービス量の結果でもあり、未処理penaltyとservice rateを併せて評価する必要がある。"
-      },
-      {
-        "name": "実運用展開ではない",
-        "description": "複数拠点での実機routing試験ではなく、公開trace・価格・hardware measurementsを用いた最適化case studyであるため、solver overheadや実際のdeployment failureなどは未検証。"
-      }
-    ],
-    "interpretation": "地理分散LLM servingでは、routingとmodel placementの時間スケールが異なる。request routingは瞬時に変えられても、宛先で巨大モデルをservice-readyにするには数分から1時間必要なため、placementは需要・電力の予測を使う先行制御になる。MCはこの遅い状態遷移を明示し、TTFT/TPOTで速いserving制約へ接続する。したがって電力対応routingは単なるload balancerではなく、モデル配置・GPU memory・SLO・電力系統を跨ぐcross-layer scheduling問題として扱うべきだと示す。",
-    "quality_impact": "生成品質そのものは変更しない。品質に近い運用保証としてSLOを扱い、TTFT/TPOTを満たせない需要を処理可能容量として数えない点が重要である。ただし平均TTFTモデルと較正係数に依存するため、tail latencyや複雑なbatching挙動を直接シミュレートした保証ではない。"
-  },
+  "attempt_id": "attempt-8de93ac80886e1c4053eda10",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-bbb785cdc85c31e832c84d96",
-    "worker_id": "work-library-repair-20260916",
-    "worker_kind": "work"
+    "claim_id": "claim-8de93ac80886e1c4053eda10",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }

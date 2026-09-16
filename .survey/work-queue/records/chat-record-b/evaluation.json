@@ -2,56 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bbb785cdc85c31e832c84d96",
-  "job_id": "job-research-ea263cc3cccbe57a",
-  "data": {
-    "hardware": [
-      "3 data centers, each with 24,576 NVIDIA H100 GPUs"
-    ],
-    "software": [
-      "Mixed-integer linear programming model commitment formulation",
-      "public parameter configuration repository"
-    ],
-    "model": [
-      "Qwen2.5-32B",
-      "Llama-3.3-70B",
-      "DeepSeek-V3",
-      "Qwen2.5-72B for TPOT calibration"
-    ],
-    "datasets": "要求到着はAzure OpenAI系の実運用トレースを含むBurstGPTに基づく。電力価格はISO New England、CAISO、ERCOTの米国3地域の実価格系列を利用。",
-    "baselines": [
-      "B1-Myopic: 30分先読み",
-      "B2-Static: 配置固定",
-      "B3-ZeroLeadTime: 読込時間無視",
-      "B4-NoPriceSignal: 地域価格差無視",
-      "B5-NoTTFT: TTFT制約なし",
-      "B6-NoTPOT: TPOT制約なし"
-    ],
-    "correctness": "楽観的なablation B3/B5/B6は最適化結果をそのまま採点せず、完全な物理制約下で再生して実際に処理可能か検証する。これにより読込時間やSLOを無視した解が見かけ上安価でも実サービスでは未処理需要を生むことを測る。",
-    "settings": [
-      {
-        "name": "時間解像度",
-        "description": "15分刻みでモデル配置と地域間要求配送を決定し、読込完了が区間途中の場合は残り時間の処理能力を分数として扱う。"
-      },
-      {
-        "name": "モデル読込時間",
-        "description": "Qwen2.5-32B 240秒、Llama-3.3-70B 600秒、DeepSeek-V3 3,600秒。公開運用報告やServerlessLLM、page-cache研究などから較正する。"
-      },
-      {
-        "name": "SLO",
-        "description": "3モデルとも平均TTFT上限2秒、TPOT上限50ms。モデル別最大output-token throughputと50ms下の安全利用率を公開測定・実験から設定する。"
-      },
-      {
-        "name": "データセンター規模",
-        "description": "米国北東・西部・南部を想定した3拠点、各H100 24,576基、PUE 1.09。拠点別の実nodal priceと時変power limitを与える。"
-      }
-    ],
-    "methodology": "完全MCと2つの運用baseline、4つのablationを同一需要・電力条件で比較し、service rate、unserved-token penalty、total cost、10^9 tokens当たりelectricity costを測定する。さらにDeepSeek-V3の時系列配置を可視化し、需要ピーク前にどの程度先行してレプリカ移動を開始するかを確認する。",
-    "scope": "3ページのletterで、評価はシミュレーション・最適化中心。実際の複数データセンターへmodel replicaを展開してroutingする本番実験ではなく、主要性能値と読込時間は公開データ・実験値から較正している。需要予測誤差、障害、モデル切替頻度の不確実性などは明示的な確率モデルとして扱わない。"
-  },
+  "attempt_id": "attempt-8de93ac80886e1c4053eda10",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-bbb785cdc85c31e832c84d96",
-    "worker_id": "work-library-repair-20260916",
-    "worker_kind": "work"
+    "claim_id": "claim-8de93ac80886e1c4053eda10",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }
