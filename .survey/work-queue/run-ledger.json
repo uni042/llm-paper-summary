@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T19:08:20.190607+00:00",
+  "updated_at": "2026-09-16T19:34:59.636834+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T19:08:20.190607+00:00",
+      "last_recorded_at": "2026-09-16T19:34:59.636834+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 175,
+        "research_completed": 176,
         "audit_completed": 0,
         "discovery_completed": 85,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35065649676:1",
-          "recorded_at": "2026-09-16T06:51:39.793730+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35065649676",
-            "run_attempt": "1",
-            "source_sha": "ca1984ddb0e91798e27b52076fe310fb4529e1da"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35067194144:1",
           "recorded_at": "2026-09-16T07:10:43.061120+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35141399566:1",
+          "recorded_at": "2026-09-16T19:34:59.636834+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35141399566",
+            "run_attempt": "1",
+            "source_sha": "eef583e17b4ee4f241190a5fc729365980c54340"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21777,6 +21777,14 @@
           "title": "Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-99325bb434e8c117",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16161",
+          "title": "LLM Inference in a Flash!",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23063,7 +23071,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 639,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
