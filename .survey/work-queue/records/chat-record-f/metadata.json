@@ -2,61 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4903385702e76b27799d8f09",
-  "job_id": "job-research-a8b5b2b70328c222",
-  "data": {
-    "canonical_id": "arXiv:2609.04748",
-    "arxiv_id": "2609.04748",
-    "doi": "10.48550/arXiv.2609.04748",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.SE",
-      "cross_list": []
-    },
-    "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
-    "summary": "接頭辞キャッシュを透過的な高速化とみなした場合の再現性コストを、llama.cppとvLLM、16ビットから3ビットまでの重み形式、80件の複数ターン道具利用エージェントで制御測定する。キャッシュ無効時は10構成800エピソードの反復が完全一致した一方、キャッシュ経路と再計算経路の軌跡差はQwen2.5-7Bで16ビット36.2%、4ビット75.0%へ増幅した。キャッシュ状態を復元すると各経路は40/40で再現しつつ経路間では14/40が異なり、実用上の非再現性は要求に含まれないサーバ状態への依存であると示す。",
-    "list_summary": "接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。",
-    "authors": [
-      "Aditi Patodiya"
-    ],
-    "published": "2026-09-04",
-    "publication": "arXiv preprint arXiv:2609.04748v1; submitted to IEEE",
-    "publication_type": "arXivプレプリント・IEEE投稿中",
-    "publication_status": "2026年9月4日arXiv v1。論文本文ではIEEEへ投稿中と記載。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "接頭辞キャッシュ",
-      "再現性",
-      "量子化",
-      "決定性",
-      "エージェント推論"
-    ],
-    "importance": "性能最適化として通常は透明扱いされるキャッシュ状態が推論結果の再現性へ影響し、低ビット量子化と複数ターン連鎖で大幅に増幅することを実運用基盤で定量化する。",
-    "hardware_evaluation": "NVIDIA RTX 4090 24GB、Ubuntu 24.04、CUDA 12.6。llama.cpp b10434とvLLM 0.11.0を評価。",
-    "quality_effect": "平均精度低下ではなく個別項目の不安定性。GSM8K 1300 distinct itemsで正誤反転20件、13件はcache側有利・7件はrecompute側有利で有意な方向性なし。",
-    "source": "https://arxiv.org/abs/2609.04748",
-    "sources": [
-      "https://arxiv.org/abs/2609.04748",
-      "https://arxiv.org/html/2609.04748",
-      "https://arxiv.org/pdf/2609.04748"
-    ],
-    "code": null,
-    "implementation": "実験harness、request log、server-reported cache exposure、解析pipelineをartifactとして公開すると記載。",
-    "last_checked": "2026-09-16",
-    "references": [
-      {
-        "canonical_id": "arXiv:2604.15409",
-        "arxiv_id": "2604.15409",
-        "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference"
-      }
-    ],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML参考文献節",
-    "references_total": 1
-  },
+  "attempt_id": "attempt-2d848caaa085c3e2771f5f21",
+  "job_id": "job-research-e8148d67a04de0eb",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4903385702e76b27799d8f09",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "claim_id": "claim-2d848caaa085c3e2771f5f21",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
 }
