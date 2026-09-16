@@ -1,5 +1,58 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
- "data":{"canonical_id":"arXiv:2506.12417","arxiv_id":"2506.12417","doi":"10.48550/arXiv.2506.12417","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"HarMoEny: Efficient Multi-GPU Inference of MoE Models","summary":"混合専門家モデル（Mixture of Experts; MoE）の専門家並列では、入力ごとに人気専門家が変わるためGPU間のトークン負荷が偏り、軽いGPUが同期障壁で待たされる。HarMoEnyは各バッチの小さなルーティング情報をGPU間で共有し、過負荷GPUへ向かうトークンの一部を空いているGPUへ動的に再配置する。再配置先に必要な専門家が無い場合は、システムメモリから専門家重みを非同期に先読みし、転送を他の専門家計算と重ねる。静的な専門家複製や事前プロファイルに頼らず、バッチごとの人気変動へ追随してGPU待ち時間を減らす。","list_summary":"MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。","authors":["Zachary Doucet","Rishi Sharma","Martijn de Vos","Rafael Pires","Anne-Marie Kermarrec","Oana Balmau"],"authors_affiliations":"EPFLを中心とする著者による研究。","published":"2025-06-14","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint; v2 revised 2025-06-17","lineage":"MoE expert parallelism / dynamic load balancing / expert prefetching","topics":["MoE","専門家並列","負荷分散","トークン再配置","専門家先読み","マルチGPU推論"],"importance":"専門家人気が入力ごとに変動する状況をオンラインで扱い、固定配置や長時間の事前プロファイルでは追随できない負荷偏りを直接緩和する。","hardware_evaluation":"8基のNVIDIA V100を含むマルチGPU実機で、Switch Transformer系とQwen系MoE、実データと合成偏りを評価する。","hardware_details":"論文の負荷偏り分析では8基のV100を搭載したDGX環境を使用し、128専門家のSwitch Transformerなどを評価する。","quality_effect":"ルータが選んだ専門家そのものは変えず、その専門家計算をどのGPUで実行するかを再配置するため、モデルの数値的意味を近似で変更する方式ではない。","source":"https://arxiv.org/abs/2506.12417","sources":["https://arxiv.org/abs/2506.12417","https://arxiv.org/pdf/2506.12417"],"code":"https://github.com/sacs-epfl/HarMoEny","implementation":"PyTorch上に実装され、著者が公開ソースコードを提供している。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},
- "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
+  "job_id": "job-research-9fcc40253e9df4ef",
+  "data": {
+    "canonical_id": "arXiv:2605.22416",
+    "arxiv_id": "2605.22416",
+    "doi": "10.48550/arXiv.2605.22416",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC",
+        "cs.PF"
+      ]
+    },
+    "title": "Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference",
+    "summary": "Mamba層とTransformer注意層を混在させるハイブリッドLLMでは、系列長に比例して増えるKVキャッシュと、層ごとに固定長の状態空間モデル（State Space Model; SSM）状態が同居する。既存の統一メモリプールはSSM状態をKVページ寸法へ合わせて水増しし、静的な二分割方式は要求分布が変わっても容量比を変えられない。AVMPは両者を物理的には別プールへ置きつつ統一仮想アドレスで扱い、片側の割当失敗時だけ余裕のある側から容量を移す。RTX 3060 12GB上の評価では、最良静的方式に対してメモリ不足事象を7.6%減らし、合成条件で要求処理性能を1.83〜13.3倍、ShareGPT再生で2.36倍にした。",
+    "list_summary": "KVキャッシュと固定長SSM状態を別物理プール・統一仮想アドレスで扱い、割当失敗時だけ容量を移してハイブリッドLLMのメモリ不足と処理性能を改善する。",
+    "authors": [
+      "An Xuan Nguyen"
+    ],
+    "authors_affiliations": "not specified in arXiv metadata inspected",
+    "published": "2026-05-21",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "hybrid Mamba-Transformer inference memory management",
+    "topics": [
+      "ハイブリッドLLM",
+      "KVキャッシュ",
+      "SSM状態",
+      "仮想メモリ",
+      "動的容量再配分"
+    ],
+    "importance": "性質の異なる二種類の推論状態を同一ページ寸法へ押し込まず、仮想アドレス抽象化で物理配置の非対称性を隠しながら実行時に容量比を変更する点が重要。",
+    "hardware_evaluation": "NVIDIA RTX 3060 12GB、CUDA 13.0の単一GPU環境で評価。",
+    "quality_effect": "近似計算ではなくメモリ割当方式の変更であり、モデル品質を変更する手法ではない。",
+    "source": "https://arxiv.org/abs/2605.22416",
+    "sources": [
+      "https://arxiv.org/abs/2605.22416"
+    ],
+    "code": null,
+    "implementation": "純Pythonの割当器試作。Tritonや実推論エンジンへのカーネル統合は今後の課題。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "primary-reference-section; normalized identifiers not exhaustively extracted in this record",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

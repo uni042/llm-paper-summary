@@ -1,5 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
- "data":{"limitations":"専門家重みをシステムメモリからGPUへ動的に読み込むため、CPU側メモリ容量とCPU・GPU間帯域を使う。先読みが外れる、または転送を専門家計算で隠せない条件では待ち時間が増える。各バッチで数kBのメタデータ交換と再配置計算も追加される。評価は特定のSwitch Transformer系・Qwen系モデルとNVIDIAマルチGPU環境が中心であり、非常に小さいバッチ、異なる専門家サイズ、より遅いホスト接続では利益が変わり得る。","differences":"FasterMoEの人気専門家複製やExFlowのプロファイルに基づく専門家配置は、過去の人気分布を使って専門家の置き場所を調整する。HarMoEnyは各バッチの実際のルータ結果を見てトークンの実行場所を変えるため、人気が急変しても長い再プロファイルを必要としない。MoE-InfinityやMoE-Lightningのようなメモリ制約下の専門家オフロード系と比べると、主目的はモデルを収容することではなく、複数GPUに収容済みのMoEで動的な計算負荷偏りを均すことである。ただし専門家先読みには同じCPU・GPU階層転送を利用するため、技術的には強く接続する。","implementation_status":"PyTorch上の実装があり、著者が `sacs-epfl/HarMoEny` として公開している。論文はarXiv v2で、実データ・合成データを使ったマルチGPU実機評価を含む。","research_positioning":"MoE推論の専門家配置・キャッシュ・先読み系統において、静的配置を前提とせず、トークン負荷と専門家重みを同時に動かすオンライン負荷分散方式として位置付く。SSD/NVMeまで含む階層メモリ方式へ応用する場合、専門家先読みの転送遅延が大きくなるため、HarMoEnyの再配置判断へ転送コストやキャッシュ常駐確率を組み込む余地がある。逆に高速なCPUメモリやCXLを使える環境では、専門家を動かせる自由度が増え、動的負荷分散との相乗効果が期待できる。"},
- "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
+  "job_id": "job-research-9fcc40253e9df4ef",
+  "data": {
+    "limitations": "現在の試作は両プールが取り得る最大容量を事前確保するため、4GiBの論理プール予算に対して約9GiBを予約し、静的方式より大きなVRAM占有を持つ。純Python割当器でありTritonやCUDAカーネルを含む実推論エンジンへ未統合で、評価もRTX 3060単一GPUに限られる。ShareGPT再生は単語数によるトークン長代理と決定論的到着を使うため、実サービスの到着時刻、多利用者競合、SLO制御を再現しない。",
+    "differences": "vLLM型の統一ハイブリッドキャッシュは異種状態を同じページ粒度へ合わせるためSSM側にパディング浪費が生じる。SGLang型の静的二プールは物理分離できるが容量比を起動時に固定する。AVMPは物理分離を維持しながら仮想アドレスを統一し、実際の割当失敗時だけ容量境界を動かすことで、両方式の欠点を同時に避けようとする。",
+    "implementation_status": "公開研究試作は純Pythonで実装され、仮想ハンドル、二種類の物理プール、割当失敗駆動の再配分状態機械を検証する。実データ移動は事前確保した backing tensor の論理境界変更で模擬しており、cuMemMapによる物理ページ再マップ、Triton統合、実推論エンジン統合は将来作業。",
+    "research_positioning": "従来のKVキャッシュ管理がTransformerの一種類の可変長状態を主対象としてきたのに対し、AVMPはMamba-Transformer混成モデルで固定長SSM状態と可変長KV状態が共存することを出発点とする。SSDやCPUへのオフロードではなくGPU内部の容量分割問題を扱うが、異種メモリ需要へ動的に容量を融通するという点で階層メモリ管理と共通する。今後ハイブリッドモデルが普及した場合、推論エンジンのキャッシュ管理を単一ページ型から異種状態対応へ拡張する設計候補になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

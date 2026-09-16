@@ -1,5 +1,48 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
- "data":{"overview":"専門家人気が強く偏る条件で、HarMoEnyは次善の比較対象に対してスループットを37〜70%高め、先頭トークンまでの時間を34〜41%短縮する。スケジューラのアブレーションではGPUの待ち時間を最大約84.7%削減する。論文の分析では負荷が均衡した場合、all-to-all通信そのものは全実行時間の約2%にすぎず、主要な遅延源は通信帯域より過負荷GPUを待つ同期であることを示す。したがって改善の中心は通信アルゴリズム変更ではなく、各同期区間の計算量を均すことにある。","key_results":[{"metric":"推論スループット","value":"37〜70%向上","baseline":"4種のMoE比較対象のうち次善方式","condition":"専門家人気が強く偏る実データ・合成ワークロード","interpretation":"過負荷GPUのトークンを空きGPUへ移すことで最遅GPUの処理時間を縮め、同期障壁で全体が待つ時間を減らす。"},{"metric":"先頭トークンまでの時間","value":"34〜41%短縮（最大41.1%）","baseline":"次善のMoE比較方式","condition":"動的な専門家人気偏りを含むマルチGPU推論","interpretation":"事前プロファイルの更新を待たず各バッチで負荷を再計算するため、入力領域が変わっても遅延を安定させやすい。"},{"metric":"GPU待ち時間","value":"最大84.7%削減","baseline":"比較対象の負荷分散方策","condition":"スケジューラのアブレーション評価","interpretation":"専門家並列で観測される大部分のアイドル時間が負荷偏り由来であり、トークン再配置がその待ちを直接除去することを示す。"},{"metric":"均衡時のall-to-all比率","value":"全実行時間の約2%","baseline":"負荷均衡状態の時間内訳","condition":"MoE推論のボトルネック分析","interpretation":"通信同期自体よりGPU間の計算量不均衡が主要問題であり、通信最適化だけでは十分でないという設計根拠になる。"}],"negative_results":"静的配置やプロファイル方式はバッチ間の人気変化に追随できず、論文の例では連続する二バッチだけでスループットが最大37.6%低下する。ExFlowの再プロファイルと整数計画はSwitch Transformerで約8.5分、Qwen条件で最大45分を要し、数百ミリ秒単位のバッチ変化より遅い。HarMoEny自身も、負荷が均等で再配置余地がない場合や専門家重み転送を計算で隠せない場合には追加メタデータ交換・先読みの利益が小さくなる。","interpretation":"MoEのルータは学習時に均衡化されても、実際の入力では専門家人気が局所的かつ時間的に偏る。固定専門家配置ではこの偏りがGPU処理量の偏りへ直結し、all-to-all障壁が最も遅いGPUを全体の速度にする。HarMoEnyはトークンを計算余力へ追従させ、必要な重み移動を並行化するので、偏りが強いほど削減できる待ち時間が増える。","quality_impact":"選択される専門家と専門家計算自体は維持し、実行GPUだけを変更する。量子化や専門家枝刈りによる近似を導入しないため、性能改善とモデル品質を交換する方式ではない。"},
- "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-dcdaf23f15c40b373c3afea9",
+  "job_id": "job-research-9fcc40253e9df4ef",
+  "data": {
+    "overview": "動的AVMPは最良の静的二プール方式に対して合成評価全体のメモリ不足事象を7.6%減らした。要求処理性能は合成条件で1.83〜13.30倍となり、より現実的なShareGPT再生では2.36倍だった。圧迫条件ではメモリ不足からの回復時間短縮が主因だが、短文中心条件ではメモリ不足差がほぼないにもかかわらず割当・解放呼出し自体が速く、大きな倍率が出た。この後者は実装上の観測であり、実推論エンジン統合後にも維持されるかは未確認である。",
+    "key_results": [
+      {
+        "metric": "合成評価のOOM回数",
+        "value": "510、最良静的方式552から7.6%削減",
+        "baseline": "fixed_dual_mr05",
+        "condition": "三種類の合成ワークロード横断",
+        "interpretation": "要求分布に応じてKV側とSSM側の容量を移せるため、固定比率では片側だけ不足する状況を減らす。"
+      },
+      {
+        "metric": "要求処理性能",
+        "value": "uniform_short 13.30倍、mixed_long 2.39倍、agentic_burst 1.83倍",
+        "baseline": "各条件の最良静的方式",
+        "condition": "合成ワークロード",
+        "interpretation": "圧迫条件ではOOM回復時間の短縮、短文条件では割当・解放呼出しの高速化という異なる要因で改善する。"
+      },
+      {
+        "metric": "ShareGPT再生の要求処理性能",
+        "value": "2.36倍、95%信頼区間1.33〜5.65",
+        "baseline": "最良静的二プール方式",
+        "condition": "ShareGPT由来プロンプト長の60セル再生",
+        "interpretation": "合成の最大13.3倍より現実的な中心推定として報告され、OOM差ゼロでも割当処理短縮が効く。"
+      },
+      {
+        "metric": "mixed_longのOOM回復時間割合",
+        "value": "26.3%から8.5%へ低下",
+        "baseline": "最良静的方式",
+        "condition": "容量圧迫の強い長文混合条件",
+        "interpretation": "動的容量移動が失敗後の再試行時間を直接減らすことを示す。"
+      }
+    ],
+    "negative_results": "再配分を開始する圧力閾値を変えた感度分析ではOOM回数、再配分回数、移動量が同一となり、事前に想定した閾値調整効果は確認されなかった。両プールが同時に飽和すると供与元がないため動的方式でも静的分割と同様に失敗する。",
+    "interpretation": "AVMPの本質的な利点は、KVとSSMの需要比が時間とともに変わる場合に固定容量比の不一致を修正できる点にある。ただし最大倍率の一部は純Python試作における仮想ハンドル経路の割当呼出し高速化に由来し、GPUカーネルを含む本番推論で同じ倍率が得られるとは限らない。",
+    "quality_impact": "モデル演算や重みを近似しないメモリ管理方式であり、生成品質を意図的に変更しない。評価対象は割当器の性能と容量効率である。"
+  },
+  "reservation": {
+    "claim_id": "claim-dcdaf23f15c40b373c3afea9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
