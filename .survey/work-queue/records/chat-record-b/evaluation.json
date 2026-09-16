@@ -2,29 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-12cc7eb08e210892b1873db0",
-  "job_id": "job-research-f9d44874a1b28506",
-  "data": {
-    "evaluation_summary": "天河新世代のMT-3000実機でLlama2 7B、13B、30B、70Bを評価し、V100S-PCIE-32GBとA800 80GB PCIe上のDeepSpeed-Inference、および一部でHugging Face Accelerateと比較する。合成プロンプトを512または1024トークンへ揃え、各要求で128トークンを生成し、主指標を生成スループットとする。演算ピークを合わせる比較では8台MT-3000対2枚V100S、10台MT-3000対1枚A800とし、別に総メモリ帯域を合わせる18台・16台MT-3000も測る。12クラスタ構成の除去実験、単一クラスタ線形演算、注意演算の個別測定も行い、どの層の最適化が効くかを分解する。",
-    "scope": "評価対象はMT-3000という特殊な異種多数コアDSPとLlama2系列に限定される。GPU比較は演算ピーク合わせと帯域合わせの二方式だが、装置台数、消費電力、費用、ソフトウェア成熟度は同一条件ではない。入力は512/1024の合成固定長で生成長128の高スループット負荷が中心で、実サービスの到着分布、長い出力、品質、末尾遅延は評価していない。",
-    "hardware": [
-      "MT-3000: FP16 32.4 TFLOPS、主記憶帯域120GB/s、分散AM/SM/GSM/DDR階層",
-      "Tesla V100S-PCIE-32GB: FP16 130 TFLOPS、帯域1134GB/s",
-      "NVIDIA A800 80GB PCIe: FP16 312 TFLOPS、帯域1935GB/s",
-      "演算ピーク合わせ: 8×MT-3000対2×V100S、10×MT-3000対1×A800",
-      "帯域合わせ: 18×MT-3000対2×V100S、16×MT-3000対1×A800"
-    ],
-    "models": ["Llama2-7B", "Llama2-13B", "Llama2-30B", "Llama2-70B"],
-    "datasets": ["512または1024トークンへパディングした合成プロンプト"],
-    "workload": "各プロンプトから128トークンを生成する高スループット推論。エンドツーエンド比較に加え、12クラスタ・入力512の除去実験、系列長1k～8kの線形演算、バッチ4・head_dim 128・系列長512～4096の注意演算を測定する。",
-    "baselines": ["DeepSpeed-Inference tensor parallelism on V100S/A800", "Hugging Face Accelerate pipeline parallelism on V100S", "未最適化THInfer", "FlashAttention on MT-3000"],
-    "metrics": ["生成スループット token/s", "線形演算遅延 ms", "線形演算GFLOPSと理論ピーク利用率", "注意演算遅延 ms", "各最適化追加時のスループット変化"],
-    "predictor_accuracy": "予測器は使わない。並列構成はメモリ容量、全還元通信量、プリフィル/デコード時間の資源モデルと実測・模擬値から探索する。",
-    "control_knobs": "MT-3000台数、テンソル/パイプライン/データ並列度、マイクロバッチ、プリフィル群・バッファ群・デコード群の配分、入力長、モデル規模、FP16/FP32、MT Attention有無。"
-  },
+  "attempt_id": "attempt-53558bbaa4914539ab1d1836",
+  "job_id": "job-research-34cb083c55afaad3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-12cc7eb08e210892b1873db0",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-53558bbaa4914539ab1d1836",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,64 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-12cc7eb08e210892b1873db0",
-  "job_id": "job-research-f9d44874a1b28506",
-  "data": {
-    "canonical_id": "arXiv:2605.25655",
-    "arxiv_id": "2605.25655",
-    "doi": "10.48550/arXiv.2605.25655",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
-    "summary": "天河新世代スーパーコンピュータのMT-3000のように主記憶帯域が低く、オンチップ記憶が分散した異種多数コアでは、統合高帯域メモリを前提とするGPU向け推論基盤をそのまま移植できない。THInferは、手書き命令による半精度演算子、演算密度に応じた計算グラフ融合、MT Attention、統一カーネル、選択的バッチ化、プリフィル・バッファ・復号の三段パイプライン、資源制約から選ぶ混合並列を共同設計する。Llama 7Bでは2×V100S上DeepSpeed比62～73%、A800比67～84%高い処理量を報告し、GPU比較系が同条件で実行不能な70Bも安定実行する。",
-    "list_summary": "低帯域・分散オンチップ記憶のMT-3000向けに演算子、融合注意、三段パイプライン、混合並列を共同設計し、大規模LLM推論を実現。",
-    "authors": [
-      "Yao Lu",
-      "Zhongzhi Luan",
-      "Gen Li",
-      "Jiaxing Qi",
-      "Shiqing Ma",
-      "Bin Han",
-      "Shizhe Shang",
-      "Hailong Yang",
-      "Depei Qian"
-    ],
-    "published": "2026-05-25",
-    "publication": "arXiv:2605.25655v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "2026-05-25提出のv1。",
-    "lineage": "other-inference-systems",
-    "topics": [
-      "異種多数コア推論",
-      "メモリ帯域最適化",
-      "天河MT-3000",
-      "計算グラフ融合",
-      "プリフィル・復号分離",
-      "混合並列"
-    ],
-    "importance": "GPU外の分散記憶型アクセラレータでは、演算能力よりDDR帯域とオンチップ配置が律速になる。THInferは階層メモリの局所性、KV移送、通信階層、演算子実装を一体化した比較対象になる。",
-    "hardware_evaluation": "天河新世代MT-3000。1プロセッサは16汎用CPUと4加速クラスタ、各クラスタ24制御コア・384加速コア、約20GB主記憶、6MB共有GSM、各DSPに64KB SMと768KB AM。主記憶実効帯域は約120GB/s。比較はNVIDIA V100SおよびA800。",
-    "quality_effect": "モデル圧縮を主手段とせず半精度保存・演算を用いる。SoftmaxやRMSNorm等の重要な正規化・集約は単精度中間値で計算し数値アンダーフローを抑える。",
-    "source": "https://arxiv.org/abs/2605.25655",
-    "sources": [
-      "https://arxiv.org/abs/2605.25655",
-      "https://arxiv.org/html/2605.25655v1",
-      "https://arxiv.org/pdf/2605.25655"
-    ],
-    "code": null,
-    "implementation": "MT-3000専用のTHInferを実装。hthreadsでクラスタ内、MPIでクラスタ間通信を行い、半精度VLIW-SIMD演算子、非同期DMA、KV非同期移送を統合する。公開コードURLは本文から確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv v1本文の参考文献節を確認したが、今回の構造化レコードでは直接関係を正規化して保存する対象を設定せず空配列とした。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-53558bbaa4914539ab1d1836",
+  "job_id": "job-research-34cb083c55afaad3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-12cc7eb08e210892b1873db0",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-53558bbaa4914539ab1d1836",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
     "worker_kind": "scheduled_chat"
   }
 }
