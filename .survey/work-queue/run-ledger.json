@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T11:09:02.648261+00:00",
+  "updated_at": "2026-09-16T11:14:13.293231+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T11:09:02.648261+00:00",
+      "last_recorded_at": "2026-09-16T11:14:13.293231+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 151,
+        "research_completed": 152,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35051365165:1",
-          "recorded_at": "2026-09-16T03:19:50.358801+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35051365165",
-            "run_attempt": "1",
-            "source_sha": "ebe9a0cc7e0d50f3e48b7003a360b161bc0205eb"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35052258110:1",
           "recorded_at": "2026-09-16T03:33:51.824497+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35088740693",
             "run_attempt": "1",
             "source_sha": "63e60d7eee609751d88e4c354d0634481f5ace2a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35089201667:1",
+          "recorded_at": "2026-09-16T11:14:13.293231+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35089201667",
+            "run_attempt": "1",
+            "source_sha": "633d93f9afebde950572311428447d49ae568f1d"
           },
           "signals": [
             "research_completed"
@@ -21534,6 +21534,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.09248",
           "title": "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-adc94daa00d75514",
+          "type": "research",
+          "canonical_id": "arXiv:2604.10152",
+          "title": "SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding",
           "from": "ready",
           "to": "completed"
         }
