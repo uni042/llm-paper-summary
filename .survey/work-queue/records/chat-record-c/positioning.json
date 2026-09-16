@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
-  "job_id": "job-research-7411280ca93364ec",
-  "data": {
-    "limitations": "評価規模は最大1.3Bパラメータ・1000億学習トークンで、数十B〜数百B級の実運用LLMでの品質・安定性は未検証。対角KDNは密な事後共分散を平均場近似で捨てるため、キー各チャネル間の相関を表現できず、その近似誤差を情報スケールで経験的に補正している。等方版はさらにヘッド内の全方向を同じ不確実性で扱う。スループット評価は単一H200上のミキサ層であり、モデル全体のエンドツーエンド生成速度、メモリ帯域、分散学習通信を含まない。ハイブリッド層比率や情報スケールの最適化も限定的で、指標ごとに最良設定が異なる。",
-    "differences": "DeltaNet、Gated DeltaNet、KDAは予測記憶と新しい値の残差を書き込む点ではKDNと共通するが、書き込みゲートを現在トークンから直接予測し、過去観測から得た確信度を明示状態として伝播しない。GDN-2は消去と書き込みを分離し、Preconditioned DeltaNetは逆グラム行列に基づく曲率情報でオンライン最小二乗へ近づけるが、KDNは非定常な潜在写像と観測雑音を仮定して予測共分散を時間発展させる。Kalman Linear Attentionもベイズ的な不確実性を並列走査するが、時間不変のOU力学と特徴・状態展開方向の因子化を使うのに対し、KDNはDeltaNet/KDA型のキー条件付き残差更新へカルマン利得を直接組み込む。",
-    "implementation_status": "著者コードが公開されている。対角版はチャンクごとの2×2変換要約、チャンク接頭辞走査、並列再生による利得計算の後、非対称差分更新をcompact-WY型カーネルで処理する。等方版はヘッド当たり一つの不確実性で既存KDAに近いスカラー利得形を保つ。論文ではH200上で実際のミキサ層スループットを測定しており、概念のみの方式ではない。",
-    "research_positioning": "長文脈推論のメモリ削減にはKVキャッシュの圧縮・追い出し・階層退避とは別に、履歴全体を固定サイズの再帰状態へ畳み込む系統がある。KDNは後者で、保存容量を文脈長から切り離した後に生じる『限られた状態へ何をどれだけ上書きするか』という情報管理問題を、不確実性推定として扱う。したがってKVキャッシュ最適化の代替というより、KVキャッシュ自体を固定メモリへ置き換える線形注意機構の品質改善として位置付く。システム観点では対角版がキー次元に比例する追加状態、等方版がヘッド当たり定数の追加状態を必要とするため、品質向上と状態量・計算量の選択肢を提供する。"
-  },
-  "reservation": {"claim_id":"claim-7bba4de8acdf88007ff64c4d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-41a7fdaa747fc1f8c0650e98",
+  "job_id": "job-research-408799bbc4fac119",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-41a7fdaa747fc1f8c0650e98",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

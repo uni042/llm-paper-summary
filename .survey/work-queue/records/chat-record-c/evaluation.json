@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
-  "job_id": "job-research-7411280ca93364ec",
-  "data": {
-    "hardware": "750Mモデルと1.3Bモデルを比較し、ミキサ層の実行性能はH200 GPU 1基、バッチ4、モデル幅2048、BF16で測定する。対角KDNの不確実性計算はFP32/TF32x3を用いる。",
-    "software": "著者実装のKDNミキサを、DeltaNet、Gated DeltaNet、KDA、Mamba-3 SISO/MIMO、GDN-2と同一骨格・同一学習条件で比較する。ハイブリッド1.3Bでは9個の再帰層と9個の2K窓スライディング注意層を交互に配置する。",
-    "methodology": "FineWeb-Eduから750Mモデルを500億トークン、1.3Bモデルを1000億トークンでゼロから事前学習する。比較内ではデータ、周辺骨格、最適化設定、評価手順を固定し、非埋め込みパラメータ数を0.03%以内で一致させる。学習系列長は4K、全体バッチは50万トークン。言語モデル性能をWikiTextとLAMBADAのパープレキシティ、LAMBADA・PIQA・HellaSwag・WinoGrande・ARC-Easy・ARC-Challengeのゼロショット精度で測る。長文脈検索はRULERの単一・複数キーneedle-in-a-haystackと、2K入力に制限したSWDE、SQuAD、FDA、TriviaQA、Natural Questions、DROPで評価する。情報スケール、観測雑音・プロセス雑音をアブレーションし、ミキサ層のスループットは30回の中央値で系列長を掃引する。",
-    "scope": "主要な品質比較は750M/50Bと1.3B/100Bという制御された事前学習実験であり、より大規模な実運用モデルへのスケーリングは未検証。実行性能グラフはエンドツーエンド生成ではなく単一ミキサ層の測定で、系列長4Kを超える点は学習範囲外のスケーリング確認である。ハイブリッド層比率もGDN-2の設定を流用しており、KDNに最適化された構成探索は行っていない。"
-  },
-  "reservation": {"claim_id":"claim-7bba4de8acdf88007ff64c4d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-41a7fdaa747fc1f8c0650e98",
+  "job_id": "job-research-408799bbc4fac119",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-41a7fdaa747fc1f8c0650e98",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
