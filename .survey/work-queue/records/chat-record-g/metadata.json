@@ -1,17 +1,68 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-58c83f5989fc6dfe9cefc106","job_id":"job-research-cffb14eec24a02c2",
-  "data":{
-    "canonical_id":"arXiv:2609.04244","arxiv_id":"2609.04244","title":"MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
-    "summary":"自己回帰復号のMoE層では各専門家へ届くトークンが少なく、従来のトークン主導型グループ行列積はタイルの大半をパディングし、短いカーネルを多数起動して高帯域メモリを十分に使えない。MonoMoEは並列性の軸をトークンから専門家重みへ移し、復号ステップ全体のトークンをテンソルコアの細粒度N軸へ置く重み主導型分解を採用する。さらにルーティング、上位k選択、量子化、二段の専門家射影、活性化、縮約を一つの常駐巨大カーネルへ融合し、補助処理を重み読み出しと重ねる。H200上のvLLM評価では完全なMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮しながら下流課題精度を維持した。",
-    "source":"https://arxiv.org/abs/2609.04244","sources":["https://arxiv.org/abs/2609.04244","https://arxiv.org/html/2609.04244"],
-    "authors":["Yu Gong","Kailash Budhathoki","Taeho Kim","Haipeng Li","Ashish Khetan"],"published":"2026-08-19","publication":"arXiv preprint; preliminary work under MLSys review","publication_type":"preprint","publication_status":"under review",
-    "arxiv_categories":{"primary":"cs.AR","cross_list":[]},"topics":["MoE inference","GPU kernel","persistent kernel","FP8","vLLM","FlashInfer"],
-    "implementation":"CUDAで実装しvLLMへ統合。公式実装と補助成果物はFlashInferリポジトリのcsrc/fused_moe/monomoeで公開されている。",
-    "code":"https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe",
-    "hardware_evaluation":"NVIDIA H200 GPUを使用。各GPUは132 SM、141GB HBM3e、ピーク帯域4.8TB/s。Qwen系は単一GPU、DeepSeek-V3.1とGLM-5.2はテンソル並列8で評価。",
-    "quality_effect":"演算順序とFP8実装差による数値差はあるが、FP32参照とのコサイン類似度は全条件で0.998以上。GSM8KとHumanEvalではベースラインとの差が統計誤差内またはMonoMoE有利で、測定可能な精度劣化は報告されていない。",
-    "references":[{"canonical_id":"arXiv:2107.03374","arxiv_id":"2107.03374"},{"canonical_id":"arXiv:2110.14168","arxiv_id":"2110.14168"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"}],
-    "references_checked_at":"2026-09-16T06:18:00Z","references_source":"arXiv HTML reference section","references_total":18,"last_checked":"2026-09-16"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-226be98ea8113e9efe7a3af3",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {
+    "canonical_id": "arXiv:2609.04244",
+    "arxiv_id": "2609.04244",
+    "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
+    "summary": "自己回帰復号のMoE層では各専門家へ届くトークンが少なく、従来のトークン主導型グループ行列積はタイルの大半をパディングし、短いカーネルを多数起動して高帯域メモリを十分に使えない。MonoMoEは並列性の軸をトークンから専門家重みへ移し、復号ステップ全体のトークンをテンソルコアの細粒度N軸へ置く重み主導型分解を採用する。さらにルーティング、上位k選択、量子化、二段の専門家射影、活性化、縮約を一つの常駐巨大カーネルへ融合し、補助処理を重み読み出しと重ねる。H200上のvLLM評価では完全なMoE演算を最大1.54倍高速化し、出力トークン時間を最大18.7%短縮しながら下流課題精度を維持した。",
+    "source": "https://arxiv.org/abs/2609.04244",
+    "sources": [
+      "https://arxiv.org/abs/2609.04244",
+      "https://arxiv.org/html/2609.04244"
+    ],
+    "authors": [
+      "Yu Gong",
+      "Kailash Budhathoki",
+      "Taeho Kim",
+      "Haipeng Li",
+      "Ashish Khetan"
+    ],
+    "published": "2026-08-19",
+    "publication": "arXiv preprint; preliminary work under MLSys review",
+    "publication_type": "preprint",
+    "publication_status": "under review",
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "topics": [
+      "MoE inference",
+      "GPU kernel",
+      "persistent kernel",
+      "FP8",
+      "vLLM",
+      "FlashInfer"
+    ],
+    "implementation": "CUDAで実装しvLLMへ統合。公式実装と補助成果物はFlashInferリポジトリのcsrc/fused_moe/monomoeで公開されている。",
+    "code": "https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe",
+    "hardware_evaluation": "NVIDIA H200 GPUを使用。各GPUは132 SM、141GB HBM3e、ピーク帯域4.8TB/s。Qwen系は単一GPU、DeepSeek-V3.1とGLM-5.2はテンソル並列8で評価。",
+    "quality_effect": "演算順序とFP8実装差による数値差はあるが、FP32参照とのコサイン類似度は全条件で0.998以上。GSM8KとHumanEvalではベースラインとの差が統計誤差内またはMonoMoE有利で、測定可能な精度劣化は報告されていない。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2107.03374",
+        "arxiv_id": "2107.03374"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      }
+    ],
+    "references_checked_at": "2026-09-16T06:18:00Z",
+    "references_source": "arXiv HTML reference section",
+    "references_total": 18,
+    "last_checked": "2026-09-16"
   },
-  "reservation":{"claim_id":"claim-58c83f5989fc6dfe9cefc106","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-226be98ea8113e9efe7a3af3",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

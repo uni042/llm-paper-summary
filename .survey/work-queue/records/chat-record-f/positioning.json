@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2333dff6f7c985a64b4f4c2e",
-  "job_id": "job-research-08ba7261bc105f34",
-  "data": {
-    "limitations": "第一に、GPUからホスト階層へキャッシュコヒーレントなロード・ストアができることが前提で、帯域比が小さいPCIe/CXL系では利得が限定的である。第二に、GH200ではホスト読み出しがGPUのL2へキャッシュされないため、密モデルの大バッチで重みタイル再利用が増えると性能が悪化し得る。第三に、小バッチMoEでは同時に動く協調スレッド配列が少なく、ホスト側の長い遅延を隠せない。第四に、主評価は単一GH200の復号であり、将来の高帯域比システムに対する最大約3倍の予測は解析モデルであって実機結果ではない。第五に、公開コードURLは確認できず、論文記載の約800行実装を第三者が直ちに再現できる状態かは不明である。",
-    "differences": "FlexGen、MoE-Lightning、PRESERVE、TightLLMなどのオフロード系はホストを下位容量として使い、使用前にHBMへ移送するためHBM書き込み帯域を消費する。BOOSTは移送せず、GPUの需要読み出しをHBMとホストへ直接分割する点が異なる。従来の帯域比例ページ配置BAPP-RやLinux重み付き交互配置は全体平均の比例性を狙うが、2MBページ下で実行波ごとの比率を保証しない。BOOSTはカーネルの協調スレッド配列アクセス形状を利用して実行波単位の同時性を作る。KVキャッシュ削減を行うInfiniGenやCPUで注意計算を行うNEOとは競合せず、転送される需要トラフィック自体を二階層で高速化するため直交的に組み合わせられる。",
-    "implementation_status": "論文著者はvLLM 0.17.0へ約800行のPython/PyTorch変更としてPAMとDSRを実装し、GH200実機およびH100二台のNVLink構成で動作評価している。FlashAttention-3と閉源cuBLASを含む既存カーネルを変更せず動作する。一次資料には公開リポジトリURLが示されておらず、今回の確認でも公式実装URLは特定できなかったため、実装済みだが公開状況は未確認と記録する。",
-    "research_positioning": "階層メモリ型LLM推論の系譜では、容量不足を補うための先読み・専門家キャッシュ・KVオフロードとは異なり、二次メモリを『退避先』ではなく『追加帯域源』へ変える研究である。特に重要なのは、平均的な帯域比例配置では不十分で、GPUの実行波という短時間の並列実行単位で同時性と比例性を満たす必要があるという観測である。これにより、容量拡張だけでは説明できない約4%の帯域利得を実機で分離している。将来NVLinkや高帯域CPU-GPU接続の比率が上がるほど価値が増す一方、通常PCIe接続GPUでは直接適用の効果が小さいため、現時点ではGrace Hopper系や高帯域分離メモリ系を主対象とする位置付けが妥当である。"
-  },
+  "attempt_id": "attempt-ae853adbe01956e7c70dbf4c",
+  "job_id": "job-research-c5668a715755a331",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2333dff6f7c985a64b4f4c2e",
+    "claim_id": "claim-ae853adbe01956e7c70dbf4c",
     "worker_id": "scheduled-chat-discovery-specialist-00",
     "worker_kind": "scheduled_chat"
   }

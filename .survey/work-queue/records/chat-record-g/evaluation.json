@@ -1,10 +1,18 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-58c83f5989fc6dfe9cefc106","job_id":"job-research-cffb14eec24a02c2",
-  "data":{
-    "hardware":"NVIDIA H200 GPU。1基あたり132 SM、141GB HBM3e、ピークメモリ帯域4.8TB/s。Qwen3.5-35B-A3BとQwen3.5-122B-A10Bは単一GPU、GLM-5.2とDeepSeek-V3.1はテンソル並列8で評価。",
-    "software":"MonoMoEをCUDAで実装しvLLMのCUDAグラフ復号経路へ統合。全MoE重みと活性化はE4M3 FP8、重みは128×128ブロックスケール、入力活性化はカーネル内で128要素粒度に量子化。比較対象はvLLMの実運用Triton grouped-GEMM fused_moeと、FP8へ適応したFlashMoE。",
-    "methodology":"4モデルはいずれも256個のルーティング専門家から各トークン8個を選択する。単体カーネル評価は復号トークン数1、2、4、8で、20回のウォームアップ後にCUDAグラフを200回再生して平均遅延を測定する。エンドツーエンド評価はvLLM内蔵の固定形状Sonnetテキスト負荷で、50プロンプト、入力1600トークン、生成200トークン、共有接頭辞200トークン、同時要求数1、2、4、8。接頭辞キャッシュを無効、分割プリフィルを有効にし、平均出力トークン時間を測る。数値精度は同一入力に対するFP32参照との比較、生成品質はGSM8KとHumanEvalで評価する。",
-    "scope":"対象領域は1GPUあたりの同時復号トークン数が8以下のメモリ帯域律速MoE復号である。プリフィルや大バッチでは従来のトークン主導型行列積が十分なタイル並列性を得るため優位性が縮む。分散通信は巨大カーネルへ融合せず、単一ノード小バッチではNVLink転送自体よりランク間同期が支配的で、融合実装も同等性能だったと報告する。したがって本結果は汎用MoE演算置換ではなく低トークン復号に特化した評価として解釈する必要がある。"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-226be98ea8113e9efe7a3af3",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {
+    "hardware": "NVIDIA H200 GPU。1基あたり132 SM、141GB HBM3e、ピークメモリ帯域4.8TB/s。Qwen3.5-35B-A3BとQwen3.5-122B-A10Bは単一GPU、GLM-5.2とDeepSeek-V3.1はテンソル並列8で評価。",
+    "software": "MonoMoEをCUDAで実装しvLLMのCUDAグラフ復号経路へ統合。全MoE重みと活性化はE4M3 FP8、重みは128×128ブロックスケール、入力活性化はカーネル内で128要素粒度に量子化。比較対象はvLLMの実運用Triton grouped-GEMM fused_moeと、FP8へ適応したFlashMoE。",
+    "methodology": "4モデルはいずれも256個のルーティング専門家から各トークン8個を選択する。単体カーネル評価は復号トークン数1、2、4、8で、20回のウォームアップ後にCUDAグラフを200回再生して平均遅延を測定する。エンドツーエンド評価はvLLM内蔵の固定形状Sonnetテキスト負荷で、50プロンプト、入力1600トークン、生成200トークン、共有接頭辞200トークン、同時要求数1、2、4、8。接頭辞キャッシュを無効、分割プリフィルを有効にし、平均出力トークン時間を測る。数値精度は同一入力に対するFP32参照との比較、生成品質はGSM8KとHumanEvalで評価する。",
+    "scope": "対象領域は1GPUあたりの同時復号トークン数が8以下のメモリ帯域律速MoE復号である。プリフィルや大バッチでは従来のトークン主導型行列積が十分なタイル並列性を得るため優位性が縮む。分散通信は巨大カーネルへ融合せず、単一ノード小バッチではNVLink転送自体よりランク間同期が支配的で、融合実装も同等性能だったと報告する。したがって本結果は汎用MoE演算置換ではなく低トークン復号に特化した評価として解釈する必要がある。"
   },
-  "reservation":{"claim_id":"claim-58c83f5989fc6dfe9cefc106","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-226be98ea8113e9efe7a3af3",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
