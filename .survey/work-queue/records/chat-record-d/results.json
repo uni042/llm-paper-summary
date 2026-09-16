@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-95c518792662f18476bdcb36",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95c518792662f18476bdcb36",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
+ "data":{
+  "key_results":[
+   {"metric":"single-node energy efficiency","result":"1.263× / +26.3%","comparison":"400W, BS=64 baseline","note":"5 MoE + 3 dense平均。Oracle headroomの95%を獲得。"},
+   {"metric":"batch-only efficiency","result":"1.14×","comparison":"baseline","note":"改善の大半はbatchingだがpower capが追加利得を与える。"},
+   {"metric":"QoS violation","result":"3.2–5.3%","comparison":"baseline 18.7–35.2%","note":"3-node/4800Wで4–7×改善。"},
+   {"metric":"multi-node aggregate efficiency","result":"+12.1%","comparison":"baseline","note":"QoS constrained power budget下。"},
+   {"metric":"demand-response throughput","result":"最大+22%","comparison":"dynamic cap + static BS=64","note":"3-node DeepSeek-MoE、低power target。"},
+   {"metric":"batch-size efficiency effect","result":"batch 1→64で1.7–2.1×","comparison":"各modelのBS=1","note":"fixed overheadとcommunication setupをamortize。"},
+   {"metric":"multi-node efficiency degradation","result":"3 nodesでQwen-MoE -30%、Mixtral -15%","comparison":"1 node","note":"Qwenはinter-node all-to-allがInfiniBandを飽和。"}
+  ],
+  "pareto_results":"joint cap×batch×TP frontierはsingle-knob frontierを包含し、SW-only比peak efficiencyはMixtral 1.18×、Qwen-MoE 1.13×、OLMoE 1.14×。MixtralではTP追加でHW+SW frontier tip比+15%。",
+  "interpretation":"power cap単独よりbatchの影響が大きいが、communication-bound MoEでは高powerが有効computeより通信overheadを増やすため、batchとpowerを独立最適化するとPareto frontierを取り逃す。PALSはprediction+feedbackでこの相互作用をruntimeに取り込む。"
+ },
+ "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
