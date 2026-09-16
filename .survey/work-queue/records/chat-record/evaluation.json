@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-25cceaeacd63bfc0b41aa061",
-  "job_id": "job-research-a04176279033896e",
-  "data": {
-    "hardware": "実機GPUで評価している。旧版の主環境はAWS EC2 g6eのNVIDIA L40Sで、A100を搭載するp4dとH200を搭載するp5enでも圧縮器の帯域を確認している。L40Sでは通信ライブラリを4チャネル・4 SMに固定し、既定設定のNCCLと同じ4 SMへ合わせたNCCLも比較対象にしている。",
-    "software": "NCCL 2.23.4を基準とし、vLLMのプリフィル・デコード分離構成へ通信ライブラリを統合してアプリケーション評価を行う。最新版はUCCL-Zipとして点対点通信とNCCL集合通信の双方を対象にしている。",
-    "methodology": "通信単体ではsend/recv、all-to-all、all-reduceなどの代表的な通信操作をメッセージサイズ別に比較し、圧縮器単体では圧縮スループットと圧縮後サイズを測る。アプリケーション側ではvLLMの分離推論でKVキャッシュ転送を含むエンドツーエンド性能を測り、最新版では強化学習の重み同期も評価対象に加えている。圧縮の数値品質については無損失であることを前提とし、近似誤差を許容した速度改善とは分離して評価する。",
-    "scope": "実機測定を中心とする。旧版で詳細が確認できる評価はL40S/A100/H200とNVIDIA通信スタックに限定されるため、他社GPUや異なるネットワーク構成へ性能値をそのまま一般化できない。また小メッセージやall-reduceでは圧縮計算の相対負担が増えるため、通信量が大きく帯域律速となる条件ほど有利である。"
-  },
-  "reservation": {"claim_id": "claim-25cceaeacd63bfc0b41aa061", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-9fdbbab13803c394452c3f1f",
+  "job_id": "job-research-1a835bd497ae941f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9fdbbab13803c394452c3f1f",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
