@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:39:56 JST**
+> 自動生成: **2026-09-16 14:40:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **30** | **12** | **6** | **6** | **4** | **0** | — |
+| Research | **30** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **18** | **0** | **18** | **0** | **0** | **18** |
-| 合計 | **31** | **30** | **6** | **24** | **4** | **0** | **18** |
+| 合計 | **31** | **30** | **6** | **24** | **4** | **1** | **18** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -203,12 +203,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.11209` — REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:38:03 JST** / heartbeat: **—** / lease expiry: **09-16 16:08:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4588133b1e6a7663.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
+- `arXiv:2605.00831` — GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving / worker `scheduled-chat-hourly-survey-20260916T142343JST`
+  - claim: **09-16 14:40:09 JST** / heartbeat: **—** / lease expiry: **09-16 16:10:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c85afd190edf390.json`
 - `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:23:47 JST** / heartbeat: **—** / lease expiry: **09-16 15:53:47 JST**
+  - claim: **09-16 14:23:47 JST** / heartbeat: **09-16 14:40:09 JST** / lease expiry: **09-16 16:10:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
 - `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs / worker `scheduled-chat-llm-survey-20260916T135756JST`
   - claim: **09-16 14:15:32 JST** / heartbeat: **09-16 14:19:40 JST** / lease expiry: **09-16 15:49:40 JST**

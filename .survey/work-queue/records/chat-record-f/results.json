@@ -2,60 +2,65 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-01a98f493128a23f4a32008c",
-  "job_id": "job-research-4588133b1e6a7663",
+  "attempt_id": "attempt-51c101f8bce3906b4d237de4",
+  "job_id": "job-research-3c85afd190edf390",
   "data": {
-    "overview": "部分被覆条件でREVA-localは文書別先頭切り詰めに対し平均F1を34.11→37.83、完全一致率を24.10→26.98へ改善し、オンライン処理は17.0→27.5msに留まる。RECOMP-eは120ms、LLMLingua-2は256〜343ms、LongLLMLinguaは598.9ms。完全被覆診断ではREVA-globalが平均F1 43.72、EM 32.75でRECOMP-eの43.66/32.69をわずかに上回り、処理時間48.7ms対155ms。REVA-localは43.34/32.73、31.5ms。",
+    "overview": "GhostServeはCPUへのKV完全複製よりプリフィル時チェックポイントを平均2.7倍高速化し、SSD方式より復号チェックポイントを47倍高速化する。I/O負担はCPU複製比13分の1、SSD比132分の1で、復号遅延への追加は10%未満。LLaMA-3-70B・64K入力では復旧が5秒未満で、SSD方式の約2分を大きく下回る。オンライン故障時には再計算のみと比べP50/P99応答遅延を1.2倍/1.1倍高速化し、有効推論時間比を90%以上に維持する。100万トークンでは追加負担6%未満、DéjàVuの2.6分に対して9秒のチェックポイント追加時間となる。",
     "key_results": [
       {
-        "metric": "部分被覆F1/EM",
-        "value": "37.83 / 26.98",
-        "baseline": "Trunc-local 34.11 / 24.10",
-        "condition": "B=512、12設定平均",
-        "interpretation": "未被覆文書を単純切り詰めへ戻しても被覆済み文書の履歴重要度が品質を押し上げる。"
+        "metric": "checkpoint latency",
+        "value": "average 2.7× speedup vs CPU replication",
+        "baseline": "SGLang CPU / DéjàVu-style replication",
+        "condition": "batched inference across evaluated models",
+        "interpretation": "保存する冗長量をKパリティへ削減した効果。"
       },
       {
-        "metric": "オンライン処理",
-        "value": "REVA-local 27.5ms",
-        "baseline": "RECOMP-e 120ms、LLMLingua-2 256–343ms、LongLLM 598.9ms",
-        "condition": "B=512",
-        "interpretation": "採点を履歴側へ移した効果。"
+        "metric": "I/O overhead",
+        "value": "13× lower vs CPU, 132× lower vs SSD",
+        "baseline": "CPU and NVMe checkpointing",
+        "condition": "batched inference",
+        "interpretation": "ホストへKV全体を転送しないためPCIe/SSD転送が支配しにくい。"
       },
       {
-        "metric": "完全被覆平均F1",
-        "value": "global 43.72 / local 43.34",
-        "baseline": "RECOMP-e 43.66、Trunc-local 38.75",
-        "condition": "120セル",
-        "interpretation": "履歴が揃うと要求時圧縮器と同等以上の平均品質。"
+        "metric": "64K recovery latency",
+        "value": "<5 s vs nearly 2 min SSD",
+        "baseline": "SGLang SSD",
+        "condition": "LLaMA-3-70B, 64K input",
+        "interpretation": "パリティ復元と部分再計算で長文脈復旧を短縮する。"
       },
       {
-        "metric": "少なくとも1文書の履歴被覆",
-        "value": "85.2–91.6%",
-        "baseline": "訓練履歴",
-        "condition": "top-10",
-        "interpretation": "文書再利用を資産化する余地が大きい。"
+        "metric": "online response latency under failures",
+        "value": "1.2× P50, 1.1× P99 speedup",
+        "baseline": "naive recomputation",
+        "condition": "LLaMA-70B with injected failures",
+        "interpretation": "チェックポイント費用を含めても障害時の利用者遅延を改善する。"
       },
       {
-        "metric": "語単位化の寄与",
-        "value": "除去でF1 53.52→52.23、EM 46.13→44.47",
-        "baseline": "完全REVA",
-        "condition": "Qwen3.5-9B、B=512",
-        "interpretation": "サブワード断片化が証拠品質を落とす。"
+        "metric": "hybrid recovery ablation",
+        "value": "up to 42.9% recovery-time improvement",
+        "baseline": "reconstruction without optimized partial recomputation",
+        "condition": "sensitivity study",
+        "interpretation": "再計算とCPU→GPU転送・復元の重なりが有効。"
       },
       {
-        "metric": "EXIT/FaviComp比較",
-        "value": "REVA 26–41ms、EXIT 3858ms、FaviComp 12838ms",
-        "baseline": "要求時抽出/書換え",
-        "condition": "B=512",
-        "interpretation": "補助推論を要求経路から外すことで数桁の遅延差。"
+        "metric": "1M-token checkpoint overhead",
+        "value": "9 s vs 2.6 min DéjàVu; <6% over baseline serving",
+        "baseline": "DéjàVu and no-checkpoint baseline",
+        "condition": "LLaMA-3-70B, batch 1, chunk 2K, output 4K",
+        "interpretation": "百万トークン級でもチェックポイント負担を抑える。"
       }
     ],
-    "negative_results": "NQではREVA-globalがRECOMP-eよりF1で0.62低く、TriviaQAでは0.96低い。単純なnaive-globalはREVA-localより低品質かつ約106msへ増大する。オンライン時間は表構築・更新費を含まない。",
-    "interpretation": "中心的な利得は圧縮器を複雑化することではなく、重要度推定の時間軸を現在要求から過去履歴へ移し、繰り返し文書アクセスで前払い費を償却する点にある。",
-    "quality_impact": "証拠削除のため品質は履歴分布・被覆率・予算に依存する。単純切り詰めより改善するが、最良の要求時圧縮器に全条件で勝つわけではない。"
+    "negative_results": [
+      "テンソル並列度2では符号化追加費用に対してI/O削減が小さく、CPUチェックポイントに対する利点が消える。",
+      "CPU完全複製は70B/120Bへ拡大するとI/O負担により再計算のみの方式より遅くなる場合がある。",
+      "GhostServeはNCCL構成やテンソル分割を動的再編成しないため、恒久GPU故障をそのまま別GPUへ置換する完全スタック耐障害性はない。",
+      "ノード全損に耐えるには遠隔ストレージやノード間パリティ配置が必要で、現評価はNVLink内の単一ノードに限定される。"
+    ],
+    "quality_impact": "FP16をビット列として損失なく符号化・復元するため、近似圧縮による推論品質劣化を導入しない。主効果は障害時の中断時間と通常時のチェックポイント負担の削減である。",
+    "interpretation": "長文脈サービングではKV全体を二重化するより、障害許容に必要な最小パリティだけをCPUへ置く方がメモリと転送の両面で有利になる。特にテンソル並列度が高く文脈が長いほど、符号化計算の追加費用より削減されるI/Oが大きくなる。"
   },
   "reservation": {
-    "claim_id": "claim-01a98f493128a23f4a32008c",
+    "claim_id": "claim-51c101f8bce3906b4d237de4",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
