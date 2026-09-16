@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T08:30:01+00:00",
-  "last_run_key": "2026-09-16T17:00:00+09:00",
-  "last_round": "specialist-smartnic-prefix-fetch-9",
+  "updated_at": "2026-09-16T10:03:53+00:00",
+  "last_run_key": "2026-09-16T19:00:00+09:00",
+  "last_round": "specialist-moe-prefetch-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 8,
+  "consecutive_empty_rounds": 9,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -5874,6 +5874,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "hybrid/recurrent modelでdense KVとは異なるstate checkpoint placementを探索する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r9-shadowserve.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-moe-prefetch-1",
+      "axis": "MoE expert speculative prefetch・CPU/GPU異種実行",
+      "query_summary": "2026年8-9月のMoE推論、expert offload、prefetch、CPU/GPU協調を探索。既知候補とrepository identityを照合し、SPICEを新規強候補として選定した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.17063",
+        "arXiv:2604.18788"
+      ],
+      "next_axis_hint": "agentic servingで構造的再利用を使うKV cache管理へ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json"
     }
   ],
   "axes": {
@@ -9336,6 +9354,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "hybrid/recurrent modelでdense KVとは異なるstate checkpoint placementを探索する"
+    },
+    "MoE expert speculative prefetch・CPU/GPU異種実行": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "agentic servingで構造的再利用を使うKV cache管理へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
