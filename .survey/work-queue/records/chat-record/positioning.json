@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-70fa0f4c73f3250b6efbb2f6","job_id":"job-research-2d9b8557211e7f73","data":{"limitations":"実GGUF評価は一組のQwen3.5対象・ドラフトモデルと古い2コアCPUに限られ、11規則の閾値が7B超や異なるメモリ構成で有効か不明。主要結果は各条件3反復で信頼区間がなく、正確なCPU・RAM・GGMLビルドのログ不足もある。単一要求のみで多利用者競合を扱わず、深度4超も正式なアブレーションをしていない。","differences":"SpecDec++などが受理率や拒否確率を中心にドラフト長を変えるのに対し、AdaptiveSDはCPU、帯域、ITL分散、文脈長、エントロピー、KV圧力を安全規則へ統合する。性能方策は安全規則より低優先で、危険時は速度を犠牲に投機を停止する。KVQuant等のKV圧縮単体とも異なり、INT8影バッファをドラフト位置のコミット・ロールバック制御へ組み込む。","implementation_status":"公開Python実装がGitHubにあり、llama-cpp-python GGUFを既定バックエンドとする。現状は独立runtimeで、llama.cppやTransformersへ差し込む一般プラグイン化は将来作業。","research_positioning":"投機的デコードをスループット最適化問題だけでなく、低帯域CPU上の資源制御問題として扱う系統に位置付く。ローカルLLMやCPUオフロード環境では、GPU向け方式よりメモリ帯域競合の影響が強いため、受理率だけでなく資源信号を含む閉ループ制御は実用的な設計候補となる。一方、現代CPUで速度面の優位性が成立するかは追加検証が必要である。"},"reservation":{"claim_id":"claim-70fa0f4c73f3250b6efbb2f6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5acbf4e6072a6d05039df06d",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {
+    "limitations": "実GGUF評価は一組のQwen3.5対象・ドラフトモデルと古い2コアCPUに限られ、11規則の閾値が7B超や異なるメモリ構成で有効か不明。主要結果は各条件3反復で信頼区間がなく、正確なCPU・RAM・GGMLビルドのログ不足もある。単一要求のみで多利用者競合を扱わず、深度4超も正式なアブレーションをしていない。",
+    "differences": "SpecDec++などが受理率や拒否確率を中心にドラフト長を変えるのに対し、AdaptiveSDはCPU、帯域、ITL分散、文脈長、エントロピー、KV圧力を安全規則へ統合する。性能方策は安全規則より低優先で、危険時は速度を犠牲に投機を停止する。KVQuant等のKV圧縮単体とも異なり、INT8影バッファをドラフト位置のコミット・ロールバック制御へ組み込む。",
+    "implementation_status": "公開Python実装がGitHubにあり、llama-cpp-python GGUFを既定バックエンドとする。現状は独立runtimeで、llama.cppやTransformersへ差し込む一般プラグイン化は将来作業。",
+    "research_positioning": "投機的デコードをスループット最適化問題だけでなく、低帯域CPU上の資源制御問題として扱う系統に位置付く。ローカルLLMやCPUオフロード環境では、GPU向け方式よりメモリ帯域競合の影響が強いため、受理率だけでなく資源信号を含む閉ループ制御は実用的な設計候補となる。一方、現代CPUで速度面の優位性が成立するかは追加検証が必要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-5acbf4e6072a6d05039df06d",
+    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

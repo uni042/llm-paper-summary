@@ -1,1 +1,41 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-70fa0f4c73f3250b6efbb2f6","job_id":"job-research-2d9b8557211e7f73","data":{"overview":"AdaptiveSDは評価全体で投機効率68〜82%を維持し、棄却されるドラフト計算を約32%以下へ抑えた。安全規則はCPU・帯域・遅延分散の危険時に深度を下げ、報告した全実行で安全違反ゼロを記録する。一方、実GGUFを低帯域のi5-7300Uで動かした条件では投機速度向上が1未満となる場合があり、論文自身も単純な固定方策より常に高速とは主張しない。主価値は異種・未調整CPUで資源飽和を避けながら継続生成することにある。","key_results":[{"metric":"投機効率","value":"68〜82%","baseline":"固定深度を含む比較方策","condition":"シミュレーションとGGUFの複数作業","interpretation":"受理率と資源信号に応じて深度を縮めることで、棄却ドラフト計算を約32%以下へ抑える。"},{"metric":"安全違反","value":"全報告runで0件","baseline":"事前定義したCPU・帯域・尾部遅延安全余裕","condition":"Table 4の全実行","interpretation":"危険規則を方策提案より優先し、最悪時は投機無効化へ退避する設計目的を支持する。"},{"metric":"監視・制御オーバーヘッド","value":"約0.098 ms/step","baseline":"モデルforwardを含まない制御パイプライン","condition":"Intel Xeon 2.80GHz単コア容器、5000合成step","interpretation":"報告ITL約125msのシミュレーション、約700msのGGUFに対し約0.08%・0.01%で、制御計算自体は小さい。"}],"negative_results":"実GGUFの低性能デュアルコアCPUでは対象・ドラフト両モデルが同じメモリ帯域を使うため、速度倍率が1未満となる条件がある。主要結果は一条件3反復で統計的厳密性が弱く、現代CPUでの再評価、バンディット収束時間、境界付近の無効化・回復振動、多利用者競合は未検証である。","interpretation":"CPU投機デコードではドラフトを増やすほど良いとは限らず、二モデルの重み読み出しが帯域を飽和させると逆効果になる。AdaptiveSDは速度最大化ではなく、危険信号が出たときに深度を下げて通常生成へ連続的に退避する制御器として評価すべきである。","quality_impact":"投機検証は対象モデルの受理規則を維持し、棄却時は対象モデルの訂正トークンをコミットするため、通常の投機的デコードと同様に対象モデルの出力分布を保存する設計である。"},"reservation":{"claim_id":"claim-70fa0f4c73f3250b6efbb2f6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5acbf4e6072a6d05039df06d",
+  "job_id": "job-research-2d9b8557211e7f73",
+  "data": {
+    "overview": "AdaptiveSDは評価全体で投機効率68〜82%を維持し、棄却されるドラフト計算を約32%以下へ抑えた。安全規則はCPU・帯域・遅延分散の危険時に深度を下げ、報告した全実行で安全違反ゼロを記録する。一方、実GGUFを低帯域のi5-7300Uで動かした条件では投機速度向上が1未満となる場合があり、論文自身も単純な固定方策より常に高速とは主張しない。主価値は異種・未調整CPUで資源飽和を避けながら継続生成することにある。",
+    "key_results": [
+      {
+        "metric": "投機効率",
+        "value": "68〜82%",
+        "baseline": "固定深度を含む比較方策",
+        "condition": "シミュレーションとGGUFの複数作業",
+        "interpretation": "受理率と資源信号に応じて深度を縮めることで、棄却ドラフト計算を約32%以下へ抑える。"
+      },
+      {
+        "metric": "安全違反",
+        "value": "全報告runで0件",
+        "baseline": "事前定義したCPU・帯域・尾部遅延安全余裕",
+        "condition": "Table 4の全実行",
+        "interpretation": "危険規則を方策提案より優先し、最悪時は投機無効化へ退避する設計目的を支持する。"
+      },
+      {
+        "metric": "監視・制御オーバーヘッド",
+        "value": "約0.098 ms/step",
+        "baseline": "モデルforwardを含まない制御パイプライン",
+        "condition": "Intel Xeon 2.80GHz単コア容器、5000合成step",
+        "interpretation": "報告ITL約125msのシミュレーション、約700msのGGUFに対し約0.08%・0.01%で、制御計算自体は小さい。"
+      }
+    ],
+    "negative_results": "実GGUFの低性能デュアルコアCPUでは対象・ドラフト両モデルが同じメモリ帯域を使うため、速度倍率が1未満となる条件がある。主要結果は一条件3反復で統計的厳密性が弱く、現代CPUでの再評価、バンディット収束時間、境界付近の無効化・回復振動、多利用者競合は未検証である。",
+    "interpretation": "CPU投機デコードではドラフトを増やすほど良いとは限らず、二モデルの重み読み出しが帯域を飽和させると逆効果になる。AdaptiveSDは速度最大化ではなく、危険信号が出たときに深度を下げて通常生成へ連続的に退避する制御器として評価すべきである。",
+    "quality_impact": "投機検証は対象モデルの受理規則を維持し、棄却時は対象モデルの訂正トークンをコミットするため、通常の投機的デコードと同様に対象モデルの出力分布を保存する設計である。"
+  },
+  "reservation": {
+    "claim_id": "claim-5acbf4e6072a6d05039df06d",
+    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
