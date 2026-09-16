@@ -2,52 +2,59 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-44002611be590dff9f7593f6",
-  "job_id": "job-research-c5a47af1c9e3acf3",
+  "attempt_id": "attempt-65de370d3bdc114f83e19319",
+  "job_id": "job-research-dea6b2b543d05a36",
   "data": {
-    "evaluation_summary": "Azure LLM Inference Trace 2025で需要分布を較正し、query type、model、GPU tier、TP/PP候補を増やした複数規模の配置問題でGH/AGHを厳密MILPと比較する。MILPが解ける規模ではoptimality gap、large-scaleではplanning timeとfeasibilityを測り、LP-relaxation rounding、decoupled VM-then-routing、homogeneous fleetも比較する。さらに需要・model parameterを最大1.5倍へ外挿するstress testとAzure diurnal traceによるrolling re-optimizationを評価する。",
-    "scope": "24時間planning horizonのheterogeneous GPU cloud capacity planning。query typeはsummarization、code generation、translation、math、image/video generation等を想定。",
+    "evaluation_summary": "単一NVIDIA A40 48GBを配備上限とし、DeepSeek-R1-Distill-Llama-70Bを中心に、量子化・枝刈り・鍵値キャッシュ圧縮を単独および組合せで評価する。メモリ予算は重み・活性・鍵値キャッシュ合計四十八ギガバイト未満、速度予算は一万トークン文脈で最低十トークン毎秒、品質予算は一般・推論課題で絶対低下五ポイント以内とする。",
+    "scope": "七百億モデルの単一画像処理装置・長文推論。八十億級モデルで個別手法の制御実験も行い、七百億級の最終構成へ選択根拠を与える。",
     "hardware": [
-      "H100 tiers",
-      "A100 tiers",
-      "RTX 4090 tiers",
-      "A6000 FP16/INT8/INT4 tiers"
+      "NVIDIA A40 48GB"
     ],
     "software": [
-      "MILP exact solver",
-      "Greedy Heuristic",
-      "Adaptive Greedy Heuristic",
-      "LP-relaxation baseline"
+      "Transformers実行系",
+      "NVMLメモリ計測",
+      "四ビット重み量子化",
+      "層削減",
+      "階層的鍵値キャッシュ圧縮"
     ],
     "models": [
-      "1B級から70B級foundation models"
+      "DeepSeek-R1-Distill-Llama-70B",
+      "LLaMA 3.1 8B",
+      "DeepSeek-R1-Distill-Llama-8B"
     ],
     "datasets": [
-      "Azure LLM Inference Trace (2025) calibrated workloads",
-      "synthetic demand volatility",
-      "Azure diurnal demand trace"
+      "WikiText2",
+      "C4",
+      "ARC-Challenge",
+      "ARC-Easy",
+      "Winogrande",
+      "AIME-24",
+      "GPQA-Diamond",
+      "PIQA"
     ],
-    "workload": "異なるarrival rate、prompt/output length、delay/error SLOを持つ複数query typeを異種model-GPU構成へroutingする。",
+    "workload": "一万トークン以上の入力を含む長文自己回帰生成。最大装置メモリと生成トークン毎秒を実測する。",
     "baselines": [
-      "exact MILP",
-      "LP-relaxation with greedy rounding (LPR)",
-      "decoupled VM-selection then routing (DVR)",
-      "homogeneous-fleet (HF)"
+      "非圧縮半精度",
+      "AWQ/GPTQ等の単独量子化",
+      "Wanda非構造枝刈り",
+      "SliceGPT幅削減",
+      "ShortGPT層削減",
+      "単独鍵値キャッシュ圧縮"
     ],
     "metrics": [
-      "operational cost",
-      "solver/planner runtime",
-      "feasibility",
-      "SLO violations",
-      "optimality gap",
-      "unserved demand"
+      "最大装置メモリ",
+      "モデル容量",
+      "生成トークン毎秒",
+      "困惑度",
+      "課題正解率",
+      "統合実装費"
     ],
-    "methodology": "小中規模ではMILP optimumとcost gapを比較し、大規模では600秒solver limitに対するheuristic runtimeを比較する。out-of-sampleではparameter inflationを最大1.5xへ増やし、固定配置のrobustnessとSLO violationを測る。rolling variantでは代表的5分cadenceで再最適化効果を調べる。",
-    "predictor_accuracy": "遅延はprefill/decode二相モデルで、precision latency scaleとerror multiplierを別々に較正する。実機benchmarkではなくtrace-calibrated numerical studyである。",
-    "control_knobs": "model deployment、GPU tier/count、FP16/INT8/INT4、TP degree {1,2,4,8}等、PP depth {1,2,4}等、routing fraction、unserved fraction。"
+    "methodology": "各手法を単独で測った後、適用順序を変える組合せ実験で正負の結合を分離する。最大メモリは一万トークン生成中に監視し、品質は困惑度で予備選別したうえで一般常識・推論課題の正解率を確認する。統合費は既存のまま導入可能、演算核調整が必要、コンパイラ再実装が必要、という段階で扱う。",
+    "predictor_accuracy": "解析予測ではなく実行時の最大メモリ、生成速度、課題精度を同じ構成で測る再現可能な評価手順を重視する。",
+    "control_knobs": "重みビット幅、量子化方式、削減層数・疎性率・幅率、鍵値保持率、鍵値ビット幅、適用順序。"
   },
   "reservation": {
-    "claim_id": "claim-44002611be590dff9f7593f6",
+    "claim_id": "claim-65de370d3bdc114f83e19319",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

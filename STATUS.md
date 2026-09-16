@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:49:50 JST**
+> 自動生成: **2026-09-16 18:49:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **22** |
-| 未claim Research job | **20** |
+| 未claim Research job | **19** |
 | 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-16 18:49:43 JST（7秒前）** |
+| 最終検証済みResearch収録 | **09-16 18:49:43 JST（10秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **39** | **8** | **4** | **4** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **40** | **18** | **4** | **14** | **2** | **0** | **10** |
+| 合計 | **40** | **18** | **4** | **14** | **3** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,7 +197,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.30076` — Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 18:49:52 JST** / heartbeat: **—** / lease expiry: **09-16 20:19:52 JST**
+  - evidence: `.survey/work-queue/claims/job-research-dea6b2b543d05a36.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
