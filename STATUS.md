@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:08:09 JST**
+> 自動生成: **2026-09-16 14:08:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **37** |
-| 最終検証済みResearch収録 | **09-16 14:06:12 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-16 14:06:12 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **23** | **2** | **2** | **0** | **4** | **1** | — |
+| Research | **23** | **2** | **2** | **0** | **4** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **24** | **7** | **2** | **5** | **4** | **1** | **24** |
+| 合計 | **24** | **7** | **2** | **5** | **4** | **2** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -163,12 +163,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
-- `arXiv:2512.16056` — MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:05:51 JST** / heartbeat: **—** / lease expiry: **09-16 15:35:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4714939abf3ccf8f.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **2件**
+- `arXiv:2502.07578` — PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference / worker `scheduled-chat-llm-survey-20260916T135756JST`
+  - claim: **09-16 14:08:13 JST** / heartbeat: **—** / lease expiry: **09-16 15:38:13 JST**
+  - evidence: `.survey/work-queue/claims/job-research-73e15ccbef3e6d6d.json`
 - `arXiv:2601.11580` — Speculative Decoding: Performance or Illusion? / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:05:51 JST** / heartbeat: **—** / lease expiry: **09-16 15:35:51 JST**
+  - claim: **09-16 14:05:51 JST** / heartbeat: **09-16 14:08:13 JST** / lease expiry: **09-16 15:38:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-deb10d3b4d925a01.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**

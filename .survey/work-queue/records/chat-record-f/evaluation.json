@@ -1,1 +1,49 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8ff0a365fd45baca9da31eb1","job_id":"job-research-4714939abf3ccf8f","data":{"evaluation_summary":"AMD EPYC 9654 serverと8×NVIDIA H20をPCIe 5.0、NVLink/NVSwitchで接続した実機testbedでnative cudaMemcpyAsyncと比較する。microbenchmarkは1KB–8GB H2D/D2H、path数、background contention、chunk/queue設定を評価し、end-to-endはLMCache+vLLM prefill-decode disaggregationのprefix cache hit TTFTとvLLM Sleep Mode model switchingを測る。","scope":"市販GPU server上のuser-space prototypeを実測しておりsimulationではない。効果はlarge transferかつ複数PCIe pathにidle headroomがある構成で大きく、小transferや全path同時飽和では制御overhead/共有bottleneckに制限される。","hardware":["AMD EPYC 9654","8×NVIDIA H20 96GB HBM3","PCIe 5.0 x16 per GPU","NVLink 4.0 / NVSwitch, measured one-way up to 478GB/s","CUDA 12.8"],"models":["Qwen2.5-7B-Instruct","Qwen3-4B","Qwen-7B-Chat","Qwen3-0.6B","Qwen3-32B"],"datasets":["LongBench v2","Chatbot Arena traffic characterization"],"workload":"microbenchmark 1KB–8GB transfer。prefix cacheは16K/32K/64K contextのmulti-turn QAでhit turn平均TTFT。Sleep Modeは0.6B–32B modelのfall-asleep/wake-up wall-clock latency。","baselines":["native CUDA single-path H2D/D2H","static 1:1 multipath split","static 1:2 multipath split","MMA without direct priority"],"metrics":["effective GB/s","completion time under contention","GPU P2P bandwidth","CPU overhead","TTFT","sleep/wake latency"],"predictor_accuracy":"明示congestion predictorは使わずoutstanding queue occupancy/blockingをpassive congestion signalとして利用する。","control_knobs":"chunk size、outstanding queue length、fallback threshold、participating relay GPU/path数、direct-path priority。"},"reservation":{"claim_id":"claim-8ff0a365fd45baca9da31eb1","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2628dcc6705903e09c02a911",
+  "job_id": "job-research-73e15ccbef3e6d6d",
+  "data": {
+    "evaluation_summary": "CENTのinstruction traceをfunctional simulatorで検証し、Ramulator2を32 GDDR6-PIM channel/CXL deviceへ拡張してperformanceをcycle/timing modelで評価する。CXL通信は既報latencyとPCIe 6.0 bandwidthによるanalytical model、powerはMicron DRAM Power CalculatorとRTL synthesis等から構築する。GPU baselineはIntel Xeon Gold 6430L host + 4×NVIDIA A100 80GBでvLLMを実測し、Llama2 7B/13B/70B、主に512 prefill + 3584 decode、最大32K contextを比較する。",
+    "scope": "CENT本体は製造実機ではなく詳細simulation/RTL synthesisとpower/cost modelによる評価である。一方GPU baselineはA100実機であり、artifactとしてtrace generator、simulator、power model、automation scriptが公開され再現可能。結果はdecode優位性が中心で、compute-bound prefillではGPUが優位。",
+    "hardware": [
+      "CENT: 最大32 CXL device、各device 32 GDDR6-PIM channel",
+      "CXL 3.0 over PCIe 6.0 modeled fabric",
+      "Intel Xeon Gold 6430L host",
+      "GPU baseline: 4×NVIDIA A100 80GB",
+      "CXL controller custom logic RTL synthesis at TSMC 28nm and projected 7nm"
+    ],
+    "models": [
+      "Llama2-7B",
+      "Llama2-13B",
+      "Llama2-70B",
+      "OPT-66B for CXL-PNM comparison"
+    ],
+    "datasets": [
+      "synthetic/end-to-end LLM inference traces"
+    ],
+    "workload": "主比較は512 prefill token + 3584 decode token。GPUは最大batch 128、CENT PPはモデルに応じbatch 32/40/80。latency criticalはbatch 1のTP mapping。Llama2-70Bではcontextを最大32Kまで評価する。",
+    "baselines": [
+      "4×A100 80GB + vLLM",
+      "Samsung CXL-PNM style baseline",
+      "AttAcc GPU-PIM",
+      "NeuPIM GPU-PIM"
+    ],
+    "metrics": [
+      "end-to-end latency",
+      "tokens/s throughput",
+      "average power",
+      "tokens/J",
+      "tokens/$ over 3-year TCO",
+      "prefill/decode breakdown"
+    ],
+    "predictor_accuracy": "performanceはfunctional trace + modified Ramulator2 + analytical CXL model。powerはDRAM calculator、controller/component estimates、RTL synthesisを組み合わせるため、CENT実シリコン測定ではない。",
+    "control_knobs": "PP、TP、hybrid TP-PP mapping、device数、context length、batch size。"
+  },
+  "reservation": {
+    "claim_id": "claim-2628dcc6705903e09c02a911",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
