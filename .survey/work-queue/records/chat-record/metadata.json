@@ -1,1 +1,65 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bb2a8d8b4366fb467720e96e","job_id":"job-research-d1705edaabc0afa6","data":{"canonical_id":"arXiv:2504.11765","arxiv_id":"2504.11765","doi":"10.48550/arXiv.2504.11765","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs","summary":"RAGでは検索文書をプロンプトへ追加するためプリフィル計算が増え、最初のトークンまでの時間が長くなる。RAG-DCacheは文書のKVキャッシュを事前計算してNVMe SSD上のベクトルDBへ永続化し、再検索時には文書本文を再計算せずKVを読み込む。Shared RAG-DCacheはこれを複数LLMインスタンスで共有し、混雑時の待ち行列にある要求について空きGPUまたはCPUが検索とKV生成を先行実行する。2基のRTX 2080 SUPERとRyzen 9 3900XT、Samsung 970 EVO NVMeで、CPUをKV生成へ割り当て両GPUを推論へ残す構成が最良となり、top-k=1/2でスループット16.8%/25.2%向上、平均遅延36.8%/29.8%削減を示した。","list_summary":"RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。","authors":["Hyungwoo Lee","Kihyun Kim","Jinwoo Kim","Jungmin So","Myung-Hoon Cha","Hong-Yeon Kim","James J. Kim","Youngjae Kim"],"authors_affiliations":"Sogang University; ETRI; Soteria Inc.","published":"2025-04-16","publication":"arXiv:2504.11765v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"offload-hierarchical-memory","topics":["RAG","KVキャッシュ","NVMe SSD","複数インスタンス推論","プリフィル最適化"],"importance":"SSDを単なる退避先でなく、RAG文書の再利用可能なKV共有層として複数推論インスタンスへ組み込む実機システムであり、SSD活用系統に直接関係する。","hardware_evaluation":"AMD Ryzen 9 3900XT、RTX 2080 SUPER 8GB×2、RAM 64GB、Samsung 970 EVO NVMe SSD 500GB（読出し3.4GB/s、書込み2.4GB/s）。","quality_effect":"top-k=1では通常RAGと同等の精度。文書ごとに独立KVを作る初期RAG-DCacheはtop-k>1で文書間注意を計算しないため精度低下があり、Shared版ではtop-k文書集合をまとめてKV生成する方式へ変更して対処する。","source":"https://arxiv.org/abs/2504.11765","sources":["https://arxiv.org/abs/2504.11765","https://arxiv.org/html/2504.11765"],"code":null,"implementation":"FaissベクトルDB、CPUメモリキャッシュ、NVMe上KV格納、複数推論インスタンス用共有KV管理器と先行KV生成器を実装。公開コードURLは論文本文で確認できない。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv HTML参考文献節を確認。","references_total":24},"reservation":{"claim_id":"claim-bb2a8d8b4366fb467720e96e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-bb5c53d2afbda5e72b28dcf5",
+  "job_id": "job-research-f992ed2fc8c47a46",
+  "data": {
+    "canonical_id": "arXiv:2505.10259",
+    "arxiv_id": "2505.10259",
+    "doi": "10.48550/arXiv.2505.10259",
+    "openreview_id": "rVrWNb2XLi",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices",
+    "summary": "GPUメモリに収まらない大規模言語モデルをCPUへオフロードすると、PCIe転送がGPU計算より桁違いに遅く、GPUコアとGPUメモリの双方が十分に性能へ寄与しない。SpecOffloadは、この待ち時間と低効率なGPUメモリ領域を投機的デコード用の小型ドラフトモデルへ振り向ける。対象モデルの検証と別バッチのドラフト生成を交互に重ね、CPU注意計算・FFN重み転送・GPUドラフト計算を並行実行する。さらに適応型テンソル配置とParaSpec PlannerでGPU/CPU/ディスク配置、対象・ドラフトのバッチサイズ、候補トークン数をハードウェアと入力に合わせて決める。RTX 4090上のMixtral 8x7B/8x22B評価では最強比較対象FlexGenに対し平均2.53〜2.54倍のエンドツーエンドスループットを達成し、GPUコア利用率はFlexGen比4.49倍となった。",
+    "list_summary": "オフロード中に遊休するGPU計算時間と低効率なGPUメモリへ投機的デコードのドラフトモデルを配置し、CPU計算・重み転送・ドラフト生成を重ねてFlexGen比最大2.54倍のスループットを実現する。",
+    "authors": [
+      "Xiangwen Zhuge",
+      "Shen Xu",
+      "Zeyu Wang",
+      "Fan Dang",
+      "Xuan Ding",
+      "Danyang Li",
+      "Yahui Han",
+      "Tianxiang Hao",
+      "Zheng Yang"
+    ],
+    "authors_affiliations": "Tsinghua University; Beijing Jiaotong University; Beijing University of Posts and Telecommunications",
+    "published": "2025-05-15",
+    "publication": "arXiv:2505.10259v3; ICLR 2026 OpenReview submission rVrWNb2XLi",
+    "publication_type": "arXivプレプリント／会議査読投稿",
+    "publication_status": "Under Review",
+    "lineage": "offload-hierarchical-memory",
+    "topics": [
+      "LLM推論オフロード",
+      "投機的デコード",
+      "CPU-GPU異種実行",
+      "階層メモリ",
+      "MoE推論"
+    ],
+    "importance": "I/O律速オフロードで余るGPU資源を、対象モデル重みの常駐量増加ではなくドラフトモデルへ使うという資源再配分を示し、オフロードと投機的デコードを一体設計した点が重要。",
+    "hardware_evaluation": "RTX 4090 24GBを2環境で使用。Env #1はi9-10980XE、DRAM 256GB、PCIe Gen3 x16、Env #2はEPYC 7542、DRAM 448GB、PCIe Gen4 x16。",
+    "quality_effect": "投機的デコードは対象モデルで候補を検証するため、受理規則が正しく実装される限り対象モデルの生成分布を保つ。性能はドラフト候補の受理率に強く依存する。",
+    "source": "https://arxiv.org/abs/2505.10259",
+    "sources": [
+      "https://arxiv.org/abs/2505.10259",
+      "https://arxiv.org/html/2505.10259",
+      "https://openreview.net/forum?id=rVrWNb2XLi"
+    ],
+    "code": "https://github.com/MobiSense/SpecOffload-public",
+    "implementation": "Hugging Face Transformers 4.47.1上に実装され、multiprocessingと共有メモリでパイプラインを構成。公開GitHub実装あり。",
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML参考文献節を確認。",
+    "references_total": 41
+  },
+  "reservation": {
+    "claim_id": "claim-bb5c53d2afbda5e72b28dcf5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

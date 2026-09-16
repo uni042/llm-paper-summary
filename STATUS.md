@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:33:45 JST**
+> 自動生成: **2026-09-17 02:33:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **21** |
 | 未claim Research job | **20** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-17 01:40:46 JST（52分前）** |
+| 最終検証済みResearch収録 | **09-17 01:40:46 JST（53分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -226,9 +226,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.11765` — Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 02:32:02 JST** / heartbeat: **—** / lease expiry: **09-17 04:02:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d1705edaabc0afa6.json`
+- `arXiv:2505.10259` — SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 02:33:56 JST** / heartbeat: **—** / lease expiry: **09-17 04:03:56 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f992ed2fc8c47a46.json`
 
 #### Audit
 
