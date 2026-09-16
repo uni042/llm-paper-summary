@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T10:11:32+00:00",
+  "updated_at": "2026-09-16T10:13:11+00:00",
   "last_run_key": "2026-09-16T19:00:00+09:00",
-  "last_round": "specialist-agent-runtime-23",
+  "last_round": "specialist-memory-contention-24",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -6295,6 +6295,23 @@
       ],
       "next_axis_hint": "canonical stateを再取得しoverflow thresholdを評価する",
       "source_submission": "work-queue/submissions/20260916T2010JST-discovery-specialist-agent-runtime-23.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-memory-contention-24",
+      "axis": "heterogeneous HBM sharing・KV growth induced congestion",
+      "query_summary": "直前探索で得たmulti-turn heterogeneous KV sharingとmemory-constrained serving instabilityをrepository identityで確認し、未収録2件を追加した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.09613"
+      ],
+      "next_axis_hint": "canonical ingestion待ちの間は既発見候補の重複監査を行い、inventory反映後にmodeを確定する",
+      "source_submission": "work-queue/submissions/20260916T2014JST-discovery-specialist-memory-contention-24.json"
     }
   ],
   "axes": {
@@ -9987,6 +10004,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.25,
       "next_axis_hint": "canonical stateを再取得しoverflow thresholdを評価する"
+    },
+    "heterogeneous HBM sharing・KV growth induced congestion": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "canonical ingestion待ちの間は既発見候補の重複監査を行い、inventory反映後にmodeを確定する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
