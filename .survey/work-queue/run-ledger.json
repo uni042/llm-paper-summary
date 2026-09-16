@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:08:57.801773+00:00",
+  "updated_at": "2026-09-16T05:14:31.604406+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:08:57.801773+00:00",
+      "last_recorded_at": "2026-09-16T05:14:31.604406+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 115,
+        "research_completed": 117,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34931141860:1",
-          "recorded_at": "2026-09-15T05:05:33.813327+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34931141860",
-            "run_attempt": "1",
-            "source_sha": "1da237e6cc5244c1fd7cd9b490c72dc353e161f5"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34931183100:1",
           "recorded_at": "2026-09-15T05:07:48.602153+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35058332185",
             "run_attempt": "1",
             "source_sha": "2b458c3faa9c7ec8675999167acbb4e4f6f4aec0"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35058691577:1",
+          "recorded_at": "2026-09-16T05:14:31.604406+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35058691577",
+            "run_attempt": "1",
+            "source_sha": "80f20d861bcac878c4800cd3627e69f3a5ed8857"
           },
           "signals": [
             "research_completed"
@@ -20823,6 +20823,22 @@
           "type": "research",
           "canonical_id": "arXiv:2601.11580",
           "title": "Speculative Decoding: Performance or Illusion?",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4714939abf3ccf8f",
+          "type": "research",
+          "canonical_id": "arXiv:2512.16056",
+          "title": "MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-73e15ccbef3e6d6d",
+          "type": "research",
+          "canonical_id": "arXiv:2502.07578",
+          "title": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference",
           "from": "ready",
           "to": "completed"
         }
