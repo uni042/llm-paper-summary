@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T14:01:03.598931+00:00",
+  "updated_at": "2026-09-16T14:34:02.640942+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T14:01:03.598931+00:00",
+      "last_recorded_at": "2026-09-16T14:34:02.640942+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 161,
+        "research_completed": 162,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35059147706:1",
-          "recorded_at": "2026-09-16T05:21:03.561013+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35059147706",
-            "run_attempt": "1",
-            "source_sha": "9d9abecd4165d6eddc294597fd319426c0fb4662"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35059327940:1",
           "recorded_at": "2026-09-16T05:24:24.883379+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35105639741",
             "run_attempt": "1",
             "source_sha": "dd8a8d1db4d09045632e4d93a72880940bdfd519"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35109372110:1",
+          "recorded_at": "2026-09-16T14:34:02.640942+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35109372110",
+            "run_attempt": "1",
+            "source_sha": "b9e38694e238c72e5c722570cce1976bc47d9a7e"
           },
           "signals": [
             "research_completed"
@@ -21614,6 +21614,14 @@
           "type": "research",
           "canonical_id": "arXiv:2601.00397",
           "title": "Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-df04bb2baebfa878",
+          "type": "research",
+          "canonical_id": "arXiv:2604.11001",
+          "title": "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees",
           "from": "ready",
           "to": "completed"
         }
