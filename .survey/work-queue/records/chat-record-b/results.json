@@ -5,41 +5,15 @@
   "attempt_id": "attempt-ad5dfb814d7090ff8006d8de",
   "job_id": "job-research-34cb083c55afaad3",
   "data": {
-    "overview": "distribution-aware sparse checkpoint placementはQuALITYとSystem Promptsで測定layer-groupのmemory-recompute Pareto frontierを改善した。全fixed-budget baselineを支配し、最も強いblock cachingに一致または上回りつつ通常は大幅に少ないcheckpointを使う。最大利得はcheckpoint budgetが小さくoverlap-depth分布が非一様な領域で現れる。checkpointからsuffixを元のrecurrent updateで再計算するため出力はexactである。",
+    "overview": "重複深度分布へ適応する疎な検査点配置は、QuALITYとSystem Promptsで測定した層群のメモリ対再計算量のパレート前線を改善した。固定予算の全比較手法を支配し、最も強いブロックキャッシュと同等以上の性能を示しながら、通常は大幅に少ない検査点を使用する。最大の利得は検査点予算が小さく、重複深度分布が非一様な領域で現れる。検査点から接尾区間を元の再帰更新式で再計算するため、生成出力は正確に保たれる。",
     "key_results": [
-      {
-        "metric": "checkpoint placement",
-        "value": "exact O(NM) dynamic program",
-        "baseline": "fixed-spacing heuristic",
-        "condition": "N candidate positions, M checkpoints, overlap-depth distribution",
-        "interpretation": "budget内で期待recomputationを最小化する配置を厳密に求める。"
-      },
-      {
-        "metric": "Pareto frontier",
-        "value": "dominates every fixed-budget baseline on measured layer-group frontier",
-        "baseline": "balanced/sqrt/log等",
-        "condition": "QuALITY and System Prompts",
-        "interpretation": "同じcheckpoint数で再計算を減らすか、同じ再計算でstate memoryを減らせる。"
-      },
-      {
-        "metric": "strongest heuristic comparison",
-        "value": "matches or outperforms block caching while typically using substantially fewer checkpoints",
-        "baseline": "block caching",
-        "condition": "real prefix-sharing workloads; strongest at low budgets",
-        "interpretation": "overlap深度の偏りへ適応する価値が低memory領域で大きい。"
-      }
+      {"metric": "検査点配置", "value": "O(NM)の厳密な動的計画法", "baseline": "固定間隔の経験則配置", "condition": "候補位置N、検査点M、重複深度分布", "interpretation": "予算内で期待再計算量を最小化する配置を厳密に求める。"},
+      {"metric": "パレート前線", "value": "測定した層群の前線で固定予算の全比較手法を支配", "baseline": "均衡・平方根・対数間隔など", "condition": "QuALITYとSystem Prompts", "interpretation": "同じ検査点数で再計算を減らすか、同じ再計算量で状態メモリを減らせる。"},
+      {"metric": "最強の経験則との比較", "value": "ブロックキャッシュと同等以上で、通常は大幅に少ない検査点を使用", "baseline": "ブロックキャッシュ", "condition": "実際の接頭辞共有負荷。特に低予算で有利", "interpretation": "重複深度の偏りへ配置を適応させる価値が低メモリ領域で大きい。"}
     ],
-    "negative_results": [
-      "prefix共有が短い/少ないworkloadでは利得が小さい。",
-      "hidden stateをexact extract/restoreできないrecurrent implementationには直接適用できない。",
-      "workload drift時はoverlap分布と配置の更新が必要になる。"
-    ],
-    "quality_impact": "exact checkpoint restoreと通常recurrent suffix recomputationのみを使い、生成出力を近似しない。",
-    "interpretation": "recurrent layerは単一stateから再開できるため、attention KVと同じdense cachingを強制する必要がない。state checkpoint数を減らして一部computeを再実行することでcache capacityを増やせる。"
+    "negative_results": ["接頭辞共有が短い、または少ない負荷では利得が小さい。", "内部状態を正確に取り出して復元できない再帰実装には直接適用できない。", "負荷分布が変化した場合は重複分布の再推定と配置更新が必要になる。"],
+    "quality_impact": "正確な検査点状態の復元と通常の再帰接尾区間再計算だけを用いるため、生成出力へ近似誤差を導入しない。",
+    "interpretation": "再帰層は単一の内部状態から再開できるため、注意機構KVと同じ密な保存方式を強制する必要がない。状態検査点数を減らし、一部の計算を必要時に再実行することでキャッシュ容量を増やせる。"
   },
-  "reservation": {
-    "claim_id": "claim-ad5dfb814d7090ff8006d8de",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-ad5dfb814d7090ff8006d8de", "worker_id": "scheduled-chat-paper-20260916T175945JST", "worker_kind": "scheduled_chat"}
 }
