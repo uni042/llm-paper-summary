@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-15T23:18:35.856816+00:00",
+  "updated_at": "2026-09-16T01:04:07.543661+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-15T23:18:35.856816+00:00",
+      "last_recorded_at": "2026-09-16T01:04:07.543661+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 91,
+        "research_completed": 92,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34902774078:1",
-          "recorded_at": "2026-09-14T22:13:41.847570+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34902774078",
-            "run_attempt": "1",
-            "source_sha": "3cc5574620efe6d30c27e2b8b4b05c9d95718925"
-          },
-          "signals": [
-            "fallback_archived"
-          ]
-        },
         {
           "event_id": "34902858197:1",
           "recorded_at": "2026-09-14T22:16:36.031542+00:00",
@@ -19599,6 +19585,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35042577197:1",
+          "recorded_at": "2026-09-16T01:04:07.543661+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35042577197",
+            "run_attempt": "1",
+            "source_sha": "9e2be2f2252b78c529e6cf92bb3420c6e31c8171"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -20554,6 +20554,14 @@
           "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e4fbb25e81d25998",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12978",
+          "title": "SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21142,7 +21150,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
