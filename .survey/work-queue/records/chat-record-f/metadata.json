@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1daab69065bdda91829f3106",
-  "job_id": "job-research-f79de4903a69120c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1daab69065bdda91829f3106",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1daab69065bdda91829f3106","job_id":"job-research-f79de4903a69120c","data":{"canonical_id":"arXiv:2604.25899","arxiv_id":"2604.25899","doi":"10.48550/arXiv.2604.25899","openreview_id":null,"arxiv_categories":{"primary":"cs.MA","cross_list":[]},"title":"Pythia: Exploiting Workflow Predictability for Efficient Agent-Native LLM Serving","summary":"Pythiaは、複数エージェント型アプリケーションの要求を互いに独立した不透明な要求として扱わず、ワークフローの構造、各役割の出力長、将来のプロンプト構成を推定してサービング層へ渡す基盤である。その予測情報を、階層接頭辞キャッシュの先回り準備、出力長と残り経路を考慮した要求配置・優先度制御、将来の分岐や段階変化を見越したモデル複製数調整へ利用する。SGLang上の実装で平均ジョブ完了時間を最大2.9倍短縮し、処理量を最大1.96倍改善する。","list_summary":"エージェントのワークフロー構造を予測し、接頭辞キャッシュ、要求配置、優先度、モデル複製数を先回り制御して平均完了時間を最大2.9倍短縮。","authors":["Shan Yu","Junyi Shu","Yuanjiang Ni","Kun Qian","Xue Li","Yang Wang","Jinyuan Zhang","Ziyi Xu","Shuo Yang","Lingjun Zhu","Ennan Zhai","Qingda Lu","Jiarong Xing","Youyou Lu","Xin Jin","Xuanzhe Liu","Harry Xu"],"published":"2026-04-28","publication":"arXiv preprint arXiv:2604.25899v1","publication_type":"arXivプレプリント","publication_status":"2026年4月28日投稿のarXiv初版。主分類cs.MA。","lineage":"llm-serving-scheduling-disaggregation","topics":["エージェント向けLLMサービング","ワークフロー予測","接頭辞キャッシュ","要求スケジューリング","自動スケーリング"],"importance":"アプリケーション側に既に存在する制御フローの予測可能性をサービング層へ復元し、反応型の資源管理を先回り型へ変える。","hardware_evaluation":"2×AMD EPYC 7J13、1.7TB DRAM、8×NVIDIA A100 80GB、NVLink。","quality_effect":"モデル推論内容を変更せず、要求の配置・順序・キャッシュ・複製数を制御するシステム最適化。","source":"https://arxiv.org/abs/2604.25899","sources":["https://arxiv.org/html/2604.25899v1"],"code":null,"implementation":"SGLangを基盤に、ルータ、階層キャッシュ、反復スケジューラ、自動スケーラを置換・拡張した実装。大規模クラスタで社内試験・試験導入中。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML","references_total":0},"reservation":{"claim_id":"claim-1daab69065bdda91829f3106","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
