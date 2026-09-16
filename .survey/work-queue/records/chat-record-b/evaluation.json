@@ -2,45 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5d2bee9ae7908778830d1829",
-  "job_id": "job-research-e3f30981ea631700",
-  "data": {
-    "scope": "疎注意、線形／再帰注意、スライディング窓注意という3種類の劣二次注意LLMについて、GPU単独、プリフィル/デコード分離、注意/FFN異種分離、SQDを比較する。実機代理系で電力効率とスループットを測定し、将来Rubin+LPX系を解析する。",
-    "evaluation_setup": "実機側は8×B200を用いる推論エンジンに最適化通信を実装し、デコード装置の帯域/演算比、容量、推定電力をSRAM専用ASIC条件へ調整する。GLM 5.2、Nemotron 3 Ultra、Gemma 4 31Bを複数文脈長で評価する。解析側はB200測定で検証したモデルをRubin GPU+LPX級ASICへ適用し、固定電力予算下のユーザーTPS、システムスループット、構成比を比較する。",
-    "models": [
-      "GLM 5.2（疎注意）",
-      "Nemotron 3 Ultra（密注意+Mamba-2）",
-      "Gemma 4 31B（密注意+スライディング窓注意）"
-    ],
-    "hardware": [
-      "8×NVIDIA B200 異種系代理実験",
-      "NVIDIA Rubin + LPX級SRAM専用ASIC 解析モデル"
-    ],
-    "workloads": [
-      "32K〜1M級の長文脈デコード",
-      "低〜中TPOT目標の対話型サービング",
-      "GLM疎注意のagentic traceによる選択KV局所性評価"
-    ],
-    "metrics": [
-      "tokens/J",
-      "ユーザーTPS",
-      "システムスループット",
-      "TPOT",
-      "消費電力",
-      "選択KVキャッシュヒット率",
-      "通信隠蔽可能性"
-    ],
-    "baselines": [
-      "最強GPU単独構成",
-      "プリフィル/デコード分離",
-      "注意-FFN異種分離",
-      "各モデルのGPU実行"
-    ],
-    "simulation_assumptions": "Rubin+LPX結果は解析モデル。B200実行値でモデルを検証し、固定電力予算と公称/想定ハードウェア特性から構成を探索する。B200代理系のSRAM ASIC電力は推定を含む。",
-    "evaluation_caveats": "実機でRubin+LPXそのものを測定した結果ではない。ASIC特性は代理調整と解析仮定に依存する。モデルは3系統で代表性を持たせているが、すべての劣二次注意構造やMoE配置を網羅しない。"
-  },
+  "attempt_id": "attempt-a1a99a1e12c990178bfe94f8",
+  "job_id": "job-research-bd280ca93f0a6940",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5d2bee9ae7908778830d1829",
+    "claim_id": "claim-a1a99a1e12c990178bfe94f8",
     "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
     "worker_kind": "scheduled_chat"
   }
