@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T11:05:41.174106+00:00",
+  "updated_at": "2026-09-16T11:09:02.648261+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T11:05:41.174106+00:00",
+      "last_recorded_at": "2026-09-16T11:09:02.648261+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 150,
+        "research_completed": 151,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35051279519:1",
-          "recorded_at": "2026-09-16T03:18:32.140961+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35051279519",
-            "run_attempt": "1",
-            "source_sha": "102f8e8a3dfcc268989ca33cc30516f6fc24216a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35051365165:1",
           "recorded_at": "2026-09-16T03:19:50.358801+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35088740693:1",
+          "recorded_at": "2026-09-16T11:09:02.648261+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35088740693",
+            "run_attempt": "1",
+            "source_sha": "63e60d7eee609751d88e4c354d0634481f5ace2a"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21528,6 +21528,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-d9c67ca63b6b0f25",
+          "type": "research",
+          "canonical_id": "arXiv:2607.09248",
+          "title": "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22691,7 +22699,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 614,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
