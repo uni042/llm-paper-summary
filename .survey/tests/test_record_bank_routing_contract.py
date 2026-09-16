@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 import enrich_claim_record_routes  # noqa: E402
 import immutable_submission  # noqa: E402
+import list_unsettled_immutable_submissions  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 
@@ -29,6 +30,29 @@ def slot_payload(slot: str, attempt_id: str, job_id: str):
     }
 
 
+def legacy_bank_a_descriptor(root: Path, attempt_id: str, job_id: str):
+    legacy_root = ".survey/work-queue/records/chat-record-a"
+    refs = []
+    for slot in SLOT_NAMES:
+        path = root / legacy_root / f"{slot}.json"
+        write_json(path, slot_payload(slot, attempt_id, job_id))
+        refs.append({
+            "slot": slot,
+            "path": path.relative_to(root).as_posix(),
+            "blob_sha": immutable_submission.git_blob_sha(path.read_bytes()),
+        })
+    return {
+        "schema_version": 1,
+        "transport_version": 10,
+        "kind": "research",
+        "attempt_id": attempt_id,
+        "job_id": job_id,
+        "record_bank": "a",
+        "paper_path": "papers/inference/test/legacy-a.md",
+        "record_slots": refs,
+    }
+
+
 class RecordBankRoutingContractTests(unittest.TestCase):
     def test_bank_a_legacy_slot_paths_remain_read_compatible(self):
         """Already-durable workflow-v10 descriptors using old bank-A paths must recover."""
@@ -36,27 +60,8 @@ class RecordBankRoutingContractTests(unittest.TestCase):
             root = Path(td)
             attempt_id = "attempt-legacy-a"
             job_id = "job-legacy-a"
+            descriptor = legacy_bank_a_descriptor(root, attempt_id, job_id)
             legacy_root = ".survey/work-queue/records/chat-record-a"
-            refs = []
-            for slot in SLOT_NAMES:
-                path = root / legacy_root / f"{slot}.json"
-                write_json(path, slot_payload(slot, attempt_id, job_id))
-                refs.append({
-                    "slot": slot,
-                    "path": path.relative_to(root).as_posix(),
-                    "blob_sha": immutable_submission.git_blob_sha(path.read_bytes()),
-                })
-
-            descriptor = {
-                "schema_version": 1,
-                "transport_version": 10,
-                "kind": "research",
-                "attempt_id": attempt_id,
-                "job_id": job_id,
-                "record_bank": "a",
-                "paper_path": "papers/inference/test/legacy-a.md",
-                "record_slots": refs,
-            }
 
             validated = immutable_submission.validate_descriptor(root, descriptor)
             self.assertEqual(validated["record_bank"], "a")
@@ -131,6 +136,34 @@ class RecordBankRoutingContractTests(unittest.TestCase):
             self.assertEqual(claim["record_bank_root"], BANK_ROOTS["a"])
             self.assertEqual(claim["record_slot_paths"], expected_paths)
             self.assertNotEqual(assignment["record_bank_root"], ".survey/work-queue/records/chat-record-a")
+
+    def test_legacy_path_failure_is_reopened_once_compatibility_exists(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            attempt_id = "attempt-legacy-retry"
+            job_id = "job-legacy-retry"
+            descriptor = legacy_bank_a_descriptor(root, attempt_id, job_id)
+            descriptor_path = root / ".survey/work-queue/submissions/research" / f"{attempt_id}.json"
+            result_path = root / ".survey/work-queue/results/research" / f"{attempt_id}.json"
+            write_json(descriptor_path, descriptor)
+            write_json(result_path, {
+                "schema_version": 1,
+                "attempt_id": attempt_id,
+                "job_id": job_id,
+                "ok": False,
+                "retryable": False,
+                "error": "ValueError: slot metadata must use fixed path .survey/work-queue/records/chat-record/metadata.json",
+            })
+
+            self.assertEqual(
+                list_unsettled_immutable_submissions.unsettled_paths(root),
+                [descriptor_path.relative_to(root).as_posix()],
+            )
+
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            result["error"] = "ValueError: unrelated validation failure"
+            write_json(result_path, result)
+            self.assertEqual(list_unsettled_immutable_submissions.unsettled_paths(root), [])
 
 
 if __name__ == "__main__":
