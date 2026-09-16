@@ -2,35 +2,61 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-99747231195f2250976184c3",
-  "job_id": "job-research-f3ec00db7d9723b7",
+  "attempt_id": "attempt-48b58f917cf297c0debd1f02",
+  "job_id": "job-research-21d58015b4f64394",
   "data": {
-    "hardware": "192コア・4 NUMAノードのARMサーバー。各ノードは48個のHUAWEI Kunpeng-920 ARMv8.2コアと6本のDDR4メモリチャネルを持つ。",
-    "software": "Ubuntu 22.04。ArcLightとllama.cppを比較し、演算はNEONベクトル命令を使用する。Qwen3-4BをQ4_0形式へ量子化する。",
-    "methodology": "主評価は入力15トークン、生成256トークンでデコードスループットを測る。まず単一NUMAノードへ6〜48スレッドを束縛して両基盤の同一ノード内スケーリングを比較し、次に2ノード・4ノードへスレッドを均等配置して、llama.cppのNUMA分散とArcLightのNUMA対応テンソル並列を比較する。別の帯域測定では4 NUMAの全コア・メモリ組合せを測り、ローカルアクセスが約101〜103 GB/s、遠隔アクセスが約22〜26 GB/sであることを確認する。付録では入力長300のデコードとプリフィルも測り、テンソル並列が主にメモリ律速のデコードに効くことを検証する。",
-    "scope": "多数コアARM CPU上の単一モデル推論が主対象。分散サーバー、GPU、x86 CPUは実験対象外。比較対象も主にllama.cppであり、CPU推論基盤全般に対する網羅比較ではない。",
-    "workloads": [
-      "Qwen3-4B Q4_0・15トークン入力/256トークン生成",
-      "Qwen3-4B Q4_0・300トークン入力の付録評価",
-      "NUMAローカル/遠隔メモリ帯域マイクロベンチマーク"
+    "evaluation_summary": "単一H100 NVLで4モデルをBF16・TP=1で評価。cold prefill 52 cells/377 role rows、warm prefill 12/90、decode 40/292の計104 cells・759 rowsに加えB=32検証を行う。各点は3回以上warmup後、NCU 2024.3の生レポートから役割別に集約する。",
+    "scope": "単一H100 NVL、BF16、TP=1、vLLM 0.16、FA3、cuBLASLt。FP8、tensor parallel、他H100 SKU、実運用の中間prefix hit率には絶対値を一般化しない。",
+    "hardware": [
+      "NVIDIA H100 NVL 94GB HBM3",
+      "132 SM / 528 Tensor Cores",
+      "60MB L2",
+      "3.9TB/s HBM3",
+      "BF16 dense peak 835 TFLOP/s"
     ],
+    "software": [
+      "vLLM 0.16",
+      "FlashAttention-3",
+      "cuBLASLt Hopper GMMA",
+      "CUDA Graphs",
+      "NVIDIA Nsight Compute 2024.3"
+    ],
+    "models": [
+      "Meta-Llama-3-8B",
+      "Qwen3-14B",
+      "Qwen3-32B",
+      "Qwen3-30B-A3B top-8/128 MoE"
+    ],
+    "datasets": [
+      "synthetic prompt/prefix-cache states for controlled profiling"
+    ],
+    "workload": "cold prefillはprefix caching off、warm prefillは同一prompt warmupで≥99.2～99.9% hit、decodeはB=1,2,4,8を主掃引しB=32検証を追加。Sは2K～16K。",
     "baselines": [
-      "llama.cpp単一NUMA",
-      "llama.cpp --numa distribute・複数NUMA",
-      "ArcLight・テンソル並列なし",
-      "ArcLight・NUMA対応テンソル並列"
+      "cold prefill",
+      "warm prefill",
+      "decode",
+      "B=1 vs B=32 validation"
     ],
     "metrics": [
-      "デコードtoken/s",
-      "プリフィルtoken/s",
-      "NUMAメモリアクセスGB/s",
-      "スレッド数・NUMAノード数に対するスケーリング"
+      "SM time-utilization",
+      "SM coverage",
+      "achieved warps/SM",
+      "occupancy vs 64-warp architecture",
+      "occupancy vs kernel cap",
+      "stall budget",
+      "device-wide Compute SOL",
+      "GMMA fragment fill",
+      "wave efficiency",
+      "L2 fit ratio",
+      "analytical launch overhead",
+      "kernel-selection diversity"
     ],
-    "reproducibility": "CPU型番、NUMA構成、メモリチャネル数、OS、モデル、量子化形式、入力・生成長、llama.cpp起動コマンドを記載し、ArcLight実装も公開する。性能グラフの具体値は図中心だが、実行環境は比較的詳細に提示される。",
-    "evaluation_notes": "単一NUMAでは両基盤ともスレッド増加に応じて伸び、ArcLightの優位は小さい。複数NUMAで差が広がり、提案手法の利得がNUMA遠隔帯域の回避に由来することを支持する。付録ではプリフィル優位がデコードほど大きくなく、プリフィルが演算律速であるという説明と整合する。"
+    "methodology": "NCU MemoryWorkloadAnalysis/LaunchStats/SpeedOfLight/WarpStateStats/Occupancyを収集し、.ncu-repからstall・tensor-pipe・FA3 main/combineを再抽出。利用指標は層間平均、token時間は役割和で計算し、異なる分母の指標を同一カーネル呼出しで三角測量する。",
+    "predictor_accuracy": "予測器ではない。B*の線形外挿はB=32実測armで検証し、Qwen3-14Bは約31で交差、Llama-3-8Bは接近。",
+    "control_knobs": "regime、context S、batch B、prefix cache hit endpoint、kernel role、model architecture。"
   },
   "reservation": {
-    "claim_id": "claim-99747231195f2250976184c3",
+    "claim_id": "claim-48b58f917cf297c0debd1f02",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
