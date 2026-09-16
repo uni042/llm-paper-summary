@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
-  "job_id": "job-research-d1705edaabc0afa6",
-  "data": {
-    "limitations": "Shared版評価はLlama-3.2-1BとSQuAD、単一ホスト2GPUに限られ、複数ホストで中央KV管理器を共有した際のネットワーク帯域・整合性・障害耐性は未評価。KVはモデル固有でモデル更新時に再生成が必要となり、全SQuAD文書を保持するだけでもOPT 6.7Bで16GBと容量費用が増える。低負荷では待ち行列が短く先行生成機会が少ない。top-k文書の組合せをまとめてKV化すると精度は保ちやすいが、組合せ数が増えて再利用率と保存効率が低下し得る。",
-    "differences": "RAGCacheのGPU/CPU多段キャッシュに対してSSDを大容量の永続層として前面に出し、TurboRAGの事前計算KVに対して複数LLMインスタンス間の共有と待ち行列時間を使った動的先行生成を追加する。一般的なKVオフロードが単一要求のメモリ不足を解くのに対し、本方式はRAG文書という要求横断で再利用可能な接頭辞をSSD上の共有資産にする。",
-    "implementation_status": "FaissとNVMe SSDを使う研究プロトタイプを実機評価。論文本文には公開実装URLが記載されていないため、コード公開は確認できない。",
-    "research_positioning": "SSD/NVMe活用系統で、低速階層を容量拡張だけでなく計算結果の永続共有層として利用する例。特にRAGの文書局所性と待ち行列というワークロード特性を使い、KV生成時刻を前倒しして複数インスタンスへ再利用する。今後はKV圧縮、SSD上の選択的保持、GPUDirect Storage、分散共有キャッシュ、予測型プリフェッチと組み合わせる余地がある。"
-  },
+  "attempt_id": "attempt-83d1470b4ddd3cc39d4e3a56",
+  "job_id": "job-research-ec631b9aeb6c5c21",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
+    "claim_id": "claim-83d1470b4ddd3cc39d4e3a56",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

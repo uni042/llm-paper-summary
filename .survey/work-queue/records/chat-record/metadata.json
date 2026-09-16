@@ -2,61 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
-  "job_id": "job-research-d1705edaabc0afa6",
-  "data": {
-    "canonical_id": "arXiv:2504.11765",
-    "arxiv_id": "2504.11765",
-    "doi": "10.48550/arXiv.2504.11765",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AI",
-      "cross_list": []
-    },
-    "title": "Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs",
-    "summary": "RAGでは検索文書をプロンプトへ追加するためプリフィル計算が増え、最初のトークンまでの時間が長くなる。RAG-DCacheは文書のKVキャッシュを事前計算してNVMe SSD上のベクトルDBへ永続化し、再検索時には文書本文を再計算せずKVを読み込む。Shared RAG-DCacheはこれを複数LLMインスタンスで共有し、混雑時の待ち行列にある要求について空きGPUまたはCPUが検索とKV生成を先行実行する。2基のRTX 2080 SUPERとRyzen 9 3900XT、Samsung 970 EVO NVMeで、CPUをKV生成へ割り当て両GPUを推論へ残す構成が最良となり、top-k=1/2でスループット16.8%/25.2%向上、平均遅延36.8%/29.8%削減を示した。",
-    "list_summary": "RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。",
-    "authors": [
-      "Hyungwoo Lee",
-      "Kihyun Kim",
-      "Jinwoo Kim",
-      "Jungmin So",
-      "Myung-Hoon Cha",
-      "Hong-Yeon Kim",
-      "James J. Kim",
-      "Youngjae Kim"
-    ],
-    "authors_affiliations": "Sogang University; ETRI; Soteria Inc.",
-    "published": "2025-04-16",
-    "publication": "arXiv:2504.11765v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "offload-hierarchical-memory",
-    "topics": [
-      "RAG",
-      "KVキャッシュ",
-      "NVMe SSD",
-      "複数インスタンス推論",
-      "プリフィル最適化"
-    ],
-    "importance": "SSDを単なる退避先でなく、RAG文書の再利用可能なKV共有層として複数推論インスタンスへ組み込む実機システムであり、SSD活用系統に直接関係する。",
-    "hardware_evaluation": "AMD Ryzen 9 3900XT、RTX 2080 SUPER 8GB×2、RAM 64GB、Samsung 970 EVO NVMe SSD 500GB（読出し3.4GB/s、書込み2.4GB/s）。",
-    "quality_effect": "top-k=1では通常RAGと同等の精度。文書ごとに独立KVを作る初期RAG-DCacheはtop-k>1で文書間注意を計算しないため精度低下があり、Shared版ではtop-k文書集合をまとめてKV生成する方式へ変更して対処する。",
-    "source": "https://arxiv.org/abs/2504.11765",
-    "sources": [
-      "https://arxiv.org/abs/2504.11765",
-      "https://arxiv.org/html/2504.11765"
-    ],
-    "code": null,
-    "implementation": "FaissベクトルDB、CPUメモリキャッシュ、NVMe上KV格納、複数推論インスタンス用共有KV管理器と先行KV生成器を実装。公開コードURLは論文本文で確認できない。",
-    "last_checked": "2026-09-17",
-    "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv HTML参考文献節を確認。",
-    "references_total": 24
-  },
+  "attempt_id": "attempt-83d1470b4ddd3cc39d4e3a56",
+  "job_id": "job-research-ec631b9aeb6c5c21",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
+    "claim_id": "claim-83d1470b4ddd3cc39d4e3a56",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

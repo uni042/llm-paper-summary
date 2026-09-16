@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-cb6c93d65c5d59b36245f7ee",
-  "job_id": "job-research-d1705edaabc0afa6",
-  "data": {
-    "overview": "単一インスタンスRAG-DCacheはOPT 1.3B/2.7B/6.7Bで平均QPSを17.53から20.07へ上げ、TTFTを概ね10〜20%短縮した。複数インスタンスではCPUにKV生成を任せGPU 2基を推論へ残す構成が最良で、top-k=1は23.96→27.98 QPS、75.75→47.92秒、top-k=2は14.34→17.96 QPS、208.22→146.17秒となった。GPU 1基をKV生成専用にすると推論GPUがボトルネックになり、top-k=2では基準より悪化する場合もあった。",
-    "key_results": [
-      {
-        "metric": "単一インスタンス平均スループット",
-        "value": "17.53→20.07 QPS",
-        "baseline": "通常RAG",
-        "condition": "OPT 1.3B/2.7B/6.7B平均",
-        "interpretation": "NVMe読込み費用より文書プリフィル再計算の削減が大きい。"
-      },
-      {
-        "metric": "単一インスタンスTTFT",
-        "value": "概ね10〜20%削減",
-        "baseline": "通常RAG",
-        "condition": "SQuAD、複数モデル・バッチ",
-        "interpretation": "モデルとバッチが大きいほど削減するGPU計算量が増え効果が大きい。"
-      },
-      {
-        "metric": "Shared構成B top-k=1",
-        "value": "23.96→27.98 QPS、75.75→47.92秒",
-        "baseline": "共有KVなし2GPU推論",
-        "condition": "CPU KV生成、GPU×2推論、40 req/s",
-        "interpretation": "CPUの空き計算を待ち時間中のKV準備へ使い、GPU推論並列度を維持する構成が有効。"
-      },
-      {
-        "metric": "Shared構成B top-k=2",
-        "value": "14.34→17.96 QPS、208.22→146.17秒",
-        "baseline": "共有KVなし2GPU推論",
-        "condition": "CPU KV生成、GPU×2推論",
-        "interpretation": "文書数増加で絶対負荷は上がるが共有KVにより性能低下を緩和する。"
-      },
-      {
-        "metric": "ストレージ費用",
-        "value": "SQuADで通常Faiss DB 0.5MBに対しKV付きはOPT 1.3B 5.9GB、2.7B 9.9GB、6.7B 16GB、Llama 1B 1GB",
-        "baseline": "通常ベクトルDB",
-        "condition": "全対象KV保持",
-        "interpretation": "計算削減と引き換えに数GB〜十数GBの永続容量を消費し、局所性に応じた保持選択が必要。"
-      }
-    ],
-    "negative_results": "初期RAG-DCacheでtop-k>1の文書KVを独立生成すると文書間注意を欠き、通常RAGより精度が低下したため、Shared版ではtop-k文書集合をまとめてKV化する設計へ変更した。GPU 1基をKV生成専用にする構成Aはtop-k=2で残り1基の推論GPUが詰まり、キャッシュのオーバーヘッドが利得を相殺して基準と同等または悪化する試行がある。",
-    "interpretation": "SSD容量を使ってプリフィル計算を時間方向に移し、さらに複数インスタンス間で共有することで、同じRAG文書への反復計算を永続的なデータ再利用へ変換する。性能はSSD帯域だけでなく、KV生成へどの計算資源を割り当てるかと待ち行列の混雑度に強く依存する。",
-    "quality_impact": "top-k=1では精度同等。top-k>1は文書単位KVの単純連結では精度低下するため、文書集合を同時処理してKVを生成する必要がある。"
-  },
+  "attempt_id": "attempt-83d1470b4ddd3cc39d4e3a56",
+  "job_id": "job-research-ec631b9aeb6c5c21",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cb6c93d65c5d59b36245f7ee",
+    "claim_id": "claim-83d1470b4ddd3cc39d4e3a56",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
