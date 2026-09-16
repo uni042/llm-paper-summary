@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-d590f8604009eff9499dc245",
-  "job_id": "job-research-f3f80e20575daf12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d590f8604009eff9499dc245",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d590f8604009eff9499dc245","job_id":"job-research-f3f80e20575daf12","data":{"limitations":"詳細評価は単一A100とSwitchTransformers系が中心で、複数GPUへ専門家複製を転送する通信費、PCIe/NVLink競合、実サービスの連続バッチ変動を十分に評価していない。容量上限制御は提案されるが実験では疎性が高く発動しておらず、メモリ制約が強い環境で複製余地が小さい場合の性能は不明である。専門家予測が外れれば必要重みの配置遅延が重要経路へ戻る。品質も基準の約90〜95%で完全同等ではない。","differences":"SiDA-MoEは次バッチの活性専門家を予測して必要な専門家だけをGPUへ置くが、一専門家一実体なので人気専門家へトークンが集中すると待ちが残る。MoE-MPMCは予測需要数を複製数へ変換し、同じ専門家を複数実体へ増やすことでこの内部キューを並列化する。HarMoEnyがトークンを別GPUへ再配置し必要専門家を先読みするのに対し、本方式は人気専門家そのものを需要比例で深く複製する。HOBBITなどのオフロード系が主にメモリ収容と転送隠蔽を狙うのに対し、ここでは空きGPU容量を計算並列度へ変換する。","implementation_status":"SiDA-MoE型の二スレッド構造へSRU予測器と物理専門家複製を追加した研究実装。A100実機でSwitchTransformersを評価しているが、確認した論文本文から公式コード公開URLは特定できなかった。","research_positioning":"MoE専門家キャッシュ・プリフェッチ系統のうち、何を先読みするかだけでなく、同じ専門家を何個置くかを制御する方式として位置付く。SSD/NVMeオフロードと組み合わせる場合、複製一個ごとの転送費が大きくなるため、予測需要、GPU空き容量、ストレージ帯域を同時に考える必要がある。逆に高速な階層メモリから専門家を複製できれば、人気専門家の待ちを減らす追加自由度として利用できる。"},"reservation":{"claim_id":"claim-d590f8604009eff9499dc245","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
