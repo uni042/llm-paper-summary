@@ -19,6 +19,7 @@ from typing import Any
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+import paper_identity  # noqa: E402
 import survey  # noqa: E402
 import claim_state  # noqa: E402
 
@@ -286,55 +287,48 @@ def discovery_ingest_job(source_submission: str, submitted_job_id: str | None = 
 
 
 def candidate_key(c: dict) -> str:
-    return str(c.get("canonical_id") or c.get("source_url") or c.get("title") or "").strip().lower()
+    return paper_identity.primary_identity_key(c) or ""
 
 
 def existing_candidate_keys():
-    keys = set()
-    for j in iter_jobs():
-        for k in ("canonical_id", "source_url", "title"):
-            v = j.get(k)
-            if v:
-                keys.add(str(v).strip().lower())
+    keys: set[str] = set()
+    for job in iter_jobs():
+        keys.update(paper_identity.identity_tokens(job))
 
-    identity = read_json(ROOT / "survey-state" / "paper-identity-index.json", {})
+    identity = read_json(ROOT / "survey-state" / "paper-identity-index.json", {}) or {}
     if isinstance(identity, dict):
         records = identity.get("papers") or {}
         if isinstance(records, dict):
-            records = list(records.values())
-        if isinstance(records, list):
+            for canonical, rec in records.items():
+                data = dict(rec) if isinstance(rec, dict) else {}
+                data["canonical_id"] = canonical
+                keys.update(paper_identity.identity_tokens(data))
+        elif isinstance(records, list):
             for rec in records:
-                if not isinstance(rec, dict):
-                    continue
-                for k in ("canonical_id", "arxiv_id", "doi", "openreview_id", "source_url", "title"):
-                    v = rec.get(k)
-                    if v:
-                        keys.add(str(v).strip().lower())
+                if isinstance(rec, dict):
+                    keys.update(paper_identity.identity_tokens(rec))
+        aliases = identity.get("identifier_to_canonical") or {}
+        if isinstance(aliases, dict):
+            for ident, canonical in aliases.items():
+                for value in (ident, canonical):
+                    normalized = paper_identity.safe_norm_id(value)
+                    if normalized:
+                        keys.add("id:" + normalized)
+
     delta_root = ROOT / "survey-state" / "identity-deltas"
     if delta_root.exists():
-        for p in delta_root.rglob("*.json"):
-            rec = read_json(p, {})
-            for v in [rec.get("canonical_id"), *(rec.get("identifiers") or [])]:
-                if v:
-                    keys.add(str(v).strip().lower())
+        for path in delta_root.rglob("*.json"):
+            rec = read_json(path, {}) or {}
+            if isinstance(rec, dict):
+                keys.update(paper_identity.identity_tokens(rec))
 
     survey.ROOT = ROOT
     for record in survey.papers():
-        try:
-            meta = record["meta"]
-        except Exception:
-            continue
-        for k in ("canonical_id", "arxiv_id", "doi", "openreview_id", "source", "title"):
-            v = meta.get(k)
-            if not v:
-                continue
-            keys.add(str(v).strip().lower())
-            if k == "arxiv_id":
-                keys.add(("arxiv:" + str(v)).strip().lower())
-            elif k == "doi":
-                keys.add(("doi:" + str(v)).strip().lower())
-            elif k == "openreview_id":
-                keys.add(("openreview:" + str(v)).strip().lower())
+        data = dict(record.get("meta") or {})
+        data["canonical_id"] = record.get("canonical_id")
+        data["identifiers"] = record.get("identifiers") or []
+        data["title"] = record.get("title")
+        keys.update(paper_identity.identity_tokens(data))
     return keys
 
 
@@ -392,13 +386,18 @@ def make_audit_job(sub: dict, research_job: dict):
     return add_job(job)
 
 
-def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
+def record_discovery_stats(
+    sub: dict,
+    accepted_count: int,
+    final_duplicate_filtered_count: int = 0,
+) -> bool:
     """Persist per-axis discovery yield once for a processed submission.
 
     The immutable submission carries what the Chat worker observed before transport;
-    Actions supplies the authoritative accepted_count after the final duplicate gate.
-    Survey-helper runs are serialized by workflow concurrency, so this single writer
-    prevents normal and specialist workers from racing on discovery-state.json.
+    Actions supplies the authoritative accepted_count and final duplicate count after
+    canonical identity normalization. Survey-helper runs are serialized by workflow
+    concurrency, so this single writer prevents normal and specialist workers from
+    racing on discovery-state.json.
     """
     meta = sub.get("discovery_stats")
     if not isinstance(meta, dict):
@@ -424,8 +423,17 @@ def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
     duplicate_count = int(meta.get("duplicate_filtered_count", max(candidate_count - len(submitted), 0)) or 0)
     duplicate_count = min(max(duplicate_count, 0), candidate_count)
     novel_count = max(candidate_count - duplicate_count, 0)
-    accepted_count = min(max(int(accepted_count or 0), 0), novel_count)
+    final_duplicate_filtered_count = min(
+        max(int(final_duplicate_filtered_count or 0), 0),
+        novel_count,
+    )
+    post_final_dedupe_count = max(novel_count - final_duplicate_filtered_count, 0)
+    accepted_count = min(max(int(accepted_count or 0), 0), post_final_dedupe_count)
     duplicate_ratio = (duplicate_count / candidate_count) if candidate_count else 0.0
+    final_duplicate_ratio = (
+        final_duplicate_filtered_count / novel_count
+        if novel_count else 0.0
+    )
 
     row = {
         "run_key": meta.get("run_key"),
@@ -435,8 +443,11 @@ def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
         "candidate_count": candidate_count,
         "duplicate_filtered_count": duplicate_count,
         "novel_candidate_count": novel_count,
+        "final_duplicate_filtered_count": final_duplicate_filtered_count,
+        "post_final_dedupe_count": post_final_dedupe_count,
         "accepted_count": accepted_count,
         "duplicate_ratio": duplicate_ratio,
+        "final_duplicate_ratio": final_duplicate_ratio,
         "accepted_canonical_ids": list(meta.get("accepted_canonical_ids") or []),
         "duplicate_canonical_ids": list(meta.get("duplicate_canonical_ids") or []),
         "next_axis_hint": meta.get("next_axis_hint"),
@@ -457,12 +468,19 @@ def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
         ("candidate_count", candidate_count),
         ("duplicate_filtered_count", duplicate_count),
         ("novel_candidate_count", novel_count),
+        ("final_duplicate_filtered_count", final_duplicate_filtered_count),
+        ("post_final_dedupe_count", post_final_dedupe_count),
         ("accepted_count", accepted_count),
     ):
         summary[field] = int(summary.get(field, 0) or 0) + value
     total_candidates = int(summary.get("candidate_count", 0) or 0)
     total_duplicates = int(summary.get("duplicate_filtered_count", 0) or 0)
+    total_novel = int(summary.get("novel_candidate_count", 0) or 0)
+    total_final_duplicates = int(summary.get("final_duplicate_filtered_count", 0) or 0)
     summary["duplicate_ratio"] = (total_duplicates / total_candidates) if total_candidates else 0.0
+    summary["final_duplicate_ratio"] = (
+        total_final_duplicates / total_novel if total_novel else 0.0
+    )
     summary["next_axis_hint"] = meta.get("next_axis_hint")
     axes[axis] = summary
     state["axes"] = axes
@@ -483,7 +501,7 @@ def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
     state.setdefault("next_action_when_round_empty", "change_axis_and_discover_again")
     state.setdefault(
         "notes",
-        "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run.",
+        "Scheduled Chat discovery state. Record per-round candidate counts, worker-side duplicate filtering, final canonical duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run.",
     )
     write_json(DISCOVERY_STATE, state)
     return True
@@ -497,21 +515,36 @@ def process_discovery(sub: dict, job: dict, st: dict):
         raise ValueError("discovery submission may contain at most 5 candidates")
     seen = existing_candidate_keys()
     added = 0
-    for c in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
-        key = candidate_key(c)
-        if not key or key in seen:
+    final_duplicate_filtered_count = 0
+    for candidate in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
+        key = candidate_key(candidate)
+        tokens = paper_identity.identity_tokens(candidate)
+        if not key:
             continue
-        if int(c.get("priority") or 0) < 40:
+        if tokens & seen:
+            final_duplicate_filtered_count += 1
             continue
-        if make_research_job(c, job["job_id"]):
+        if int(candidate.get("priority") or 0) < 40:
+            continue
+        if make_research_job(candidate, job["job_id"]):
             added += 1
-            seen.add(key)
+            seen.update(tokens)
+        else:
+            final_duplicate_filtered_count += 1
     job["status"] = "completed"
     job["completed_at"] = now()
-    job["result_summary"] = {"submitted_candidates": len(candidates), "research_jobs_added": added}
+    job["result_summary"] = {
+        "submitted_candidates": len(candidates),
+        "final_duplicate_filtered_count": final_duplicate_filtered_count,
+        "research_jobs_added": added,
+    }
     st["stats"]["discovered"] += len(candidates)
     st["stats"]["selected"] += added
-    record_discovery_stats(sub, accepted_count=added)
+    record_discovery_stats(
+        sub,
+        accepted_count=added,
+        final_duplicate_filtered_count=final_duplicate_filtered_count,
+    )
 
 
 def process_discovery_round_submission(sub: dict, st: dict, template_job: dict | None = None) -> dict:
@@ -673,7 +706,20 @@ def process_submissions(st: dict):
                 accepted_count = sub.get("accepted_count")
                 if isinstance(accepted_count, bool) or not isinstance(accepted_count, int) or accepted_count < 0:
                     raise ValueError("record_discovery_stats requires non-negative integer accepted_count")
-                changed = record_discovery_stats(sub, accepted_count=accepted_count)
+                final_duplicate_filtered_count = sub.get("final_duplicate_filtered_count", 0)
+                if (
+                    isinstance(final_duplicate_filtered_count, bool)
+                    or not isinstance(final_duplicate_filtered_count, int)
+                    or final_duplicate_filtered_count < 0
+                ):
+                    raise ValueError(
+                        "record_discovery_stats requires non-negative integer final_duplicate_filtered_count"
+                    )
+                changed = record_discovery_stats(
+                    sub,
+                    accepted_count=accepted_count,
+                    final_duplicate_filtered_count=final_duplicate_filtered_count,
+                )
                 result.update({
                     "ok": True,
                     "operation": "record_discovery_stats",
