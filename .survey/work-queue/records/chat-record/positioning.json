@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e3573f73597d9a563a861b51",
-  "job_id": "job-research-44674a8f55b9f5e8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3573f73597d9a563a861b51",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e3573f73597d9a563a861b51","job_id":"job-research-44674a8f55b9f5e8","data":{"positioning":"GraphFlowはエージェント・ワークフロー生成とKVキャッシュ管理を別々の問題として扱わず、共有操作グラフを両者の共通基盤にするサービング方式である。","differences":"AFlowなどの自動ワークフロー生成は主に実行手順の探索・品質最適化を狙うのに対し、GraphFlowは操作ノードの共有構造をKV状態の共有にも利用する。PagedAttentionなど一般的なKV管理はトークン・ページ単位の配置効率を扱うが、GraphFlowはエージェント操作と実行経路という意味構造から共有可能状態を定義する。","relation_to_prior_work":[{"work":"AFlow","difference":"ワークフロー構造の自動生成に加えて、その共有操作構造をKV状態管理へ直接利用する。"},{"work":"MetaGPT / TaskWeaver / LLMCompiler","difference":"固定または粗粒度な手順テンプレート選択ではなく、統一操作グラフから要求固有の部分グラフを構成する。"},{"work":"PagedAttention","difference":"一般的なKVページ割当ではなく、同一操作の基底KVと経路差分を共有してエージェント・ワークフロー間の意味的重複を削減する。"}],"strengths":["タスク性能を平均約4.95ポイント改善しながらKVメモリを約4倍削減するため、品質と容量の双方を同じ設計で改善する。","Qwen、Llama、Gemma系列と五種類の推論・コード・質問応答ベンチマークで評価している。","共有基底と差分状態、経路枝刈りを組み合わせ、操作共有と経路依存文脈を両立する。"],"limitations":["大規模な実サービスでwGraph自体を継続更新する費用や整合性は公開評価から不明である。","操作単位のKVが経路間で十分似るという性質が弱いワークロードでは差分状態が大きくなり削減率が下がる可能性がある。","希少経路をオンデマンド計算するため、経路分布が急変すると再計算負荷が増える可能性がある。","取得できた一次公開本文では具体的GPU型番やクラスタ規模を確認できなかった。"],"implementation_status":"wGraph、グラフニューラルネットワーク型生成器、差分KV状態管理、経路枝刈りを統合した研究実装。ICML 2026採択。公式コードURLは確認できなかった。","research_positioning":"エージェント・サービングでは、手順の意味構造がKVキャッシュ共有の新しい局所性信号になり得ることを示す。従来のトークン列・ページ・セッション中心のKV管理に対し、操作グラフ中心の状態管理という系統を形成する。","repository_fit":"エージェント推論基盤とKVキャッシュ管理の交差領域として、99-other-inference-systemsに置く価値が高い。特に長期エージェント、共有ツール操作、階層KV管理の研究と比較する際の基準になる。"},"reservation":{"claim_id":"claim-e3573f73597d9a563a861b51","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
