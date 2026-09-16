@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:49:23 JST**
+> 自動生成: **2026-09-16 17:49:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **28** |
 | 未claim Research job | **26** |
 | 直近24hの検証済みResearch収録 | **61** |
-| 最終検証済みResearch収録 | **09-16 17:15:27 JST（33分前）** |
+| 最終検証済みResearch収録 | **09-16 17:15:27 JST（34分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.05219` — Sparse Prefix Caching for Hybrid and Recurrent LLM Serving / worker `scheduled-chat-paper-20260916T173214JST`
-  - claim: **09-16 17:48:13 JST** / heartbeat: **—** / lease expiry: **09-16 19:18:13 JST**
-  - evidence: `.survey/work-queue/claims/job-research-34cb083c55afaad3.json`
+- `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving / worker `scheduled-chat-paper-20260916T173214JST`
+  - claim: **09-16 17:49:41 JST** / heartbeat: **—** / lease expiry: **09-16 19:19:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9d70d3111564c88d.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`
@@ -251,8 +251,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **358** |
-| └ Research | **214** |
+| 成功result未照合のimmutable submission | **359** |
+| └ Research | **215** |
 | └ Audit | **1** |
 | └ Discovery | **143** |
 
