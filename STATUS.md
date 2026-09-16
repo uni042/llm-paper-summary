@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:14:01 JST**
+> 自動生成: **2026-09-16 19:29:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **31** |
 | 未claim Research job | **29** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-16 18:51:24 JST（22分前）** |
+| 最終検証済みResearch収録 | **09-16 18:51:24 JST（38分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **39** | **8** | **4** | **4** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **24** | **0** | **24** | **0** | **0** | **32** |
-| 合計 | **40** | **32** | **4** | **28** | **2** | **0** | **32** |
+| Discovery | **0** | **24** | **0** | **24** | **0** | **0** | **32** |
+| 合計 | **39** | **32** | **4** | **28** | **2** | **1** | **32** |
 
 - 最新Discovery runの耐久探索round: **24件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,10 +105,7 @@
 
 ### Discovery
 
-- **09-16 13:20:13 JST** job `job-b6f805c0cbcee3d4` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T0902JST-discovery-specialist-network-flow-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T0902JST-discovery-specialist-network-flow-1.json`
-  - 探索軸: 分離サービング・多段ネットワークflow scheduling
+- 検証済み成功なし。
 
 ### 直近タスク
 
@@ -197,9 +194,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:54:24 JST** / heartbeat: **—** / lease expiry: **09-16 20:24:24 JST**
+  - claim: **09-16 18:54:24 JST** / heartbeat: **09-16 19:29:43 JST** / lease expiry: **09-16 20:59:43 JST**
   - evidence: `.survey/work-queue/claims/job-research-648fe1e5b80283fd.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
