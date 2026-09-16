@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 11:45:35 JST**
+> 自動生成: **2026-09-16 11:46:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **65** |
+| 収録候補論文 | **64** |
 | 未claim Research job | **64** |
-| 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-16 11:43:59 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **21** |
+| 最終検証済みResearch収録 | **09-16 11:46:08 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **65** |
+| canonical_id確認済みの一意な候補論文 | **64** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **66** |
+| 非終端Research job合計 | **65** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **13** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **2** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **14** | **7** | **1** | **6** | **2** | **0** | **6** |
+| 合計 | **15** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 11:46:08 JST** [research] `arXiv:2608.05483` — PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving
+  - job: `.survey/work-queue/jobs/job-research-5d74d5ee3bd9a66c.json`
+  - result: `.survey/work-queue/results/research/attempt-ceb97b3338b00cf782876183.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ceb97b3338b00cf782876183.json`
+  - paper: `papers/inference/06-moe-inference-expert-placement-caching/2026-2608.05483-plora-pooled-memory-multilora-serving.md`
 - **09-16 11:43:59 JST** [research] `arXiv:2609.12551` — RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems
   - job: `.survey/work-queue/jobs/job-research-1d922bbcf8bbfed4.json`
   - result: `.survey/work-queue/results/research/attempt-4aed5866e69eb810e709c3e6.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-2920381fc7a4e8f0d505a36f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2920381fc7a4e8f0d505a36f.json`
   - paper: `papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md`
-- **09-16 07:11:56 JST** [research] `arXiv:2512.20210` — Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs
-  - job: `.survey/work-queue/jobs/job-research-77f3e91a5c224daf.json`
-  - result: `.survey/work-queue/results/research/attempt-3956cc3669cdbe211fc51d98.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3956cc3669cdbe211fc51d98.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md`
 
 ### Audit
 
@@ -166,10 +166,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.05483` — PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving / worker `scheduled-chat-llm-survey-20260916T023111Z`
-  - claim: **09-16 11:44:09 JST** / heartbeat: **—** / lease expiry: **09-16 13:14:09 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5d74d5ee3bd9a66c.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **09-16 10:33:30 JST** / lease expiry: **09-16 12:03:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
@@ -192,7 +189,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **66** |
+| ready | **65** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,7 +209,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **560** |
+| inference/training/survey配下の論文Markdown実体 | **561** |
 
 ### immutable submissionの未照合
 
