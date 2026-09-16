@@ -23,6 +23,7 @@ class SnapshotUnavailableError(RuntimeError):
 
 
 PageFetcher = Callable[[str | None], dict[str, Any]]
+DEFAULT_PREFETCH_UNSEEN = 10
 
 
 def _load_manifest(snapshot_dir: Path) -> dict[str, Any]:
@@ -155,7 +156,7 @@ def collect_until_unseen(
     fetch_page: PageFetcher,
     *,
     snapshot_dir: Path,
-    target_unseen: int = 20,
+    target_unseen: int = DEFAULT_PREFETCH_UNSEEN,
     initial_cursor: str | None = None,
     max_pages: int = 100,
 ) -> dict[str, Any]:
@@ -166,9 +167,9 @@ def collect_until_unseen(
     filtered and accumulated internally, and the caller receives only the final unseen
     buffer once ``target_unseen`` has been reached or the provider is exhausted.
 
-    The last fetched page is kept whole. Therefore the returned buffer may be larger than
-    ``target_unseen`` when that page crosses the threshold; unseen records are never
-    discarded merely to hit an exact batch size.
+    The default threshold is ten unseen papers. The last fetched page is kept whole, so
+    the returned buffer may be larger than the threshold when that page crosses it;
+    unseen records are never discarded merely to hit an exact batch size.
     """
     if target_unseen <= 0:
         raise ValueError("target_unseen must be greater than zero")
