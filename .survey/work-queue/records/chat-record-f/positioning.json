@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-3feeca873b26fab2446b5438",
-  "job_id": "job-research-3190de0b496967f3",
-  "data": {
-    "limitations": "評価モデルはQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの2種類、GPUはA6000に限定され、性能図は30%以上という集約的な報告が中心で詳細な絶対遅延値が乏しい。草稿トークンを全受理するため生成分布は完全モデルと一致せず、GSM8Kでは約4ポイント低下する。草稿間隔αと専門家数Ek/Dkは主に10/6/2の固定設定で、広範な感度分析はない。公開コードURLも確認できない。",
-    "differences": "一般的な専門家並列は共有パラメータを全GPUへ複製するが、IFMoEは共有部分だけテンソル並列へ切り替えてKVキャッシュ容量を増やす。一般的な投機的復号は別の小型草稿モデルを使い完全モデルでトークンを受理・棄却するが、IFMoEは同じMoEの活性専門家数を減らして草稿化し、草稿を全受理して周期的に完全専門家設定でKVキャッシュだけを修整する。後続の細粒度MoEサービング研究と比べると、カーネル最適化よりモデル構造を利用した近似的システム制御に重点がある。",
-    "implementation_status": "論文は混成EP+TP配置、CUTLASS GroupedGEMM、少数専門家草稿、KVキャッシュ修整を実装し、A6000実機で評価している。cuBLAS版GroupedGEMMは当時のPyTorchとCUDA 12.5互換性問題で未使用。公開リポジトリURLは本文で確認できない。",
-    "research_positioning": "細粒度MoEの推論コストを、共有パラメータ複製による容量問題と多数活性専門家によるGroupedGEMM帯域問題に分け、前者を混成並列化、後者を同一モデルの少数専門家草稿で処理する初期のシステム研究である。S2-MoEなど後続の細粒度MoE推論系統を理解するうえで、専門家選択数を推論時に動的に減らす近似とKV状態修整を組み合わせた先行例として位置付けられる。"
-  },
+  "attempt_id": "attempt-134caf367c4b27012902a44f",
+  "job_id": "job-research-d9c67ca63b6b0f25",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3feeca873b26fab2446b5438",
+    "claim_id": "claim-134caf367c4b27012902a44f",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

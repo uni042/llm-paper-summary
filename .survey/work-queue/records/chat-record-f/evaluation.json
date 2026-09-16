@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3feeca873b26fab2446b5438",
-  "job_id": "job-research-3190de0b496967f3",
-  "data": {
-    "hardware": "Qwen2-57B-A14B-InstructはNVIDIA A6000を4基、Deepseek-Lite-ChatはA6000を2基使用。付録のメモリ計算はBF16を前提とする。",
-    "software": "専門家計算にはCUTLASS版GroupedGEMMを採用。論文執筆時はPyTorchとCUDA 12.5の互換性問題によりcuBLAS版GroupedGEMMを利用できなかった。",
-    "methodology": "下流品質はXSum、GSM8K、TruthfulQA-Gen、IFEvalで完全モデルと比較する。性能評価はQwen2-57B-A14B-InstructとDeepseek-Lite-Chatの復号で行い、α=10、通常符号化top-k=6、草稿復号top-k=2を固定する。最大バッチはQwen2が256、Deepseek-Liteが200。付録ではDeepseek-Lite、Qwen2-57B-A14B、Deepseek-v2について混成並列化による単一GPU当たりメモリ節約量を解析する。",
-    "scope": "NeurIPS 2024 Machine Learning for Systems Workshopの比較的小規模な評価で、2種類の実機モデルによる速度・処理量と4課題の品質を報告する。草稿トークンを全受理する近似方式で完全な投機的復号ではなく、コード生成のような高精度要求ではロジット検証と巻き戻しが必要と著者自身が将来課題に挙げる。公開コードや広範なハードウェア比較は確認できない。"
-  },
+  "attempt_id": "attempt-134caf367c4b27012902a44f",
+  "job_id": "job-research-d9c67ca63b6b0f25",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3feeca873b26fab2446b5438",
+    "claim_id": "claim-134caf367c4b27012902a44f",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }

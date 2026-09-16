@@ -2,54 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3feeca873b26fab2446b5438",
-  "job_id": "job-research-3190de0b496967f3",
-  "data": {
-    "canonical_id": "mlforsystems-neurips2024-paper41",
-    "title": "IFMoE: An Inference Framework Design for Fine-grained MoE",
-    "summary": "細粒度MoE推論では、従来の専門家並列が注意層・正規化・共有専門家など非専門家パラメータを各GPUへ複製してKVキャッシュ容量を圧迫し、専門家数が多いほどGroupedGEMMもメモリ帯域律速になる。IFMoEは共有部分をテンソル並列、ルーティング専門家を専門家並列に分ける混成配置で重複を減らし、空いたメモリを大バッチと長文脈へ回す。さらに同じMoEモデルの活性専門家数を減らした近似モデルを草稿生成器として使い、10トークンごとに完全専門家設定で再符号化してKVキャッシュを修整する。Qwen2-57B-A14B-InstructをA6000×4、Deepseek-Lite-ChatをA6000×2で評価し、推論速度と処理量を30%以上改善する一方、近似方式のため一部課題で品質低下を残す。",
-    "list_summary": "共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。",
-    "source": "https://mlforsystems.org/assets/papers/neurips2024/paper41.pdf",
-    "sources": [
-      "https://mlforsystems.org/assets/papers/neurips2024/paper41.pdf"
-    ],
-    "authors": [
-      "Yuwei An",
-      "Zhuoming Chen",
-      "Beidi Chen"
-    ],
-    "published": "2024",
-    "publication": "Machine Learning for Systems Workshop at NeurIPS 2024",
-    "publication_type": "workshop paper",
-    "publication_status": "published workshop paper",
-    "topics": [
-      "fine-grained MoE",
-      "expert parallelism",
-      "tensor parallelism",
-      "speculative decoding",
-      "KV cache"
-    ],
-    "implementation": "論文はCutlass版GroupedGEMMを利用したIFMoE試作と実機評価を記載するが、公開コードURLは本文で確認できない。",
-    "code": null,
-    "hardware_evaluation": "Qwen2-57B-A14B-InstructはNVIDIA A6000を4基、Deepseek-Lite-ChatはA6000を2基使用。最大バッチはそれぞれ256と200。",
-    "quality_effect": "草稿トークンをすべて受理する近似方式で完全同値ではない。XSumとIFEvalはほぼ同等だが、GSM8KはDeepseek-Liteで67.7→63.8、Qwen2で75.4→71.1へ低下する。",
-    "references": [
-      {
-        "canonical_id": "arXiv:2110.14168",
-        "arxiv_id": "2110.14168"
-      },
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "arxiv_id": "2302.01318"
-      }
-    ],
-    "references_checked_at": "2026-09-16T06:20:00Z",
-    "references_source": "primary PDF references section",
-    "references_total": 19,
-    "last_checked": "2026-09-16"
-  },
+  "attempt_id": "attempt-134caf367c4b27012902a44f",
+  "job_id": "job-research-d9c67ca63b6b0f25",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3feeca873b26fab2446b5438",
+    "claim_id": "claim-134caf367c4b27012902a44f",
     "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }
