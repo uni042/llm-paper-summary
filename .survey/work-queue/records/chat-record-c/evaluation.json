@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e4810cc94fabe510bad2fc16",
-  "job_id": "job-research-6ae155bb5e134fe3",
-  "data": {
-    "hardware": "単一ノード実験はNVLink接続のNVIDIA H800 8基。複数ノード実験は最大3台、計24基のH800で、各ノードは8本の200 Gbps InfiniBand NICを持つ。",
-    "software": "DeepGEMM、DeepEP v1、SGLangを基盤にした研究実装。MoE GPUごとのAPK、注意側起動のM-to-N通信、IBGDAの細粒度遠隔読み出し、SGLangの分離配置・専用配送器・通信重畳戦略を実装する。",
-    "methodology": "MiniMax-M2.7を単一ノード、GLM-5.1-FP8を複数ノードで評価する。両モデルは各MoE層で256個のルーティング対象エキスパートから8個を各トークンで活性化する。ShareGPTとLooGLEから入力・出力長分布を取り、到着をPoisson過程で生成する。比較方式はすべてSGLang基盤にそろえ、90%以上の要求がTTFTとTPOTの双方のSLOを満たせる最大到着率を有効スループットとする。システム全体に加え、APKのGPU共有効率、タイル化費用、片側通信、性能モデル誤差、配置探索、タイル割り込み間隔を個別評価する。",
-    "scope": "実機評価だが、GPUはH800に限定され、最大3ノードである。モデルはMiniMax-M2.7とGLM-5.1-FP8、要求分布はShareGPT/LooGLE由来、到着時刻は合成Poissonであり、異種GPUや大規模本番クラスタへの一般化は直接検証していない。GLM-5.1-FP8はインスタンス単位P/D分離が24 GPUに収まらず同比較値がなく、一部比較方式は互換性のため16 GPU構成を使うが、数値はノード当たり要求数へ正規化される。",
-    "workloads": ["MiniMax-M2.7 + ShareGPT", "MiniMax-M2.7 + LooGLE", "GLM-5.1-FP8 + ShareGPT", "GLM-5.1-FP8 + LooGLE"],
-    "baselines": ["SGLang-Colocated", "SGLang-ChunkedPrefill", "SGLang-PDD", "SGLang-PDMux"],
-    "metrics": ["90%共同SLOでの有効スループット（req/s/node）", "TTFT SLO達成率", "TPOT SLO達成率", "APK下のプリフィル・デコード遅延", "通信遅延", "性能モデル誤差", "タイル割り込み間隔"],
-    "reproducibility": "GPU・ネットワーク構成、モデル、負荷生成、SLO閾値、比較方式、主要構成を本文に記載する。一方、2026-09-16時点で論文・arXivページから公式ソースコード公開URLを確認できず、APK・IBGDA・SGLang改変を含む完全再現には追加実装が必要である。"
-  },
-  "reservation": {"claim_id": "claim-e4810cc94fabe510bad2fc16", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-bb3ec0465085989a9a744808",
+  "job_id": "job-research-f61c46feeea304bb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bb3ec0465085989a9a744808",
+    "worker_id": "manual-read-20260916-1109",
+    "worker_kind": "scheduled_chat"
+  }
 }
