@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T22:18:49.283963+00:00",
+  "updated_at": "2026-09-16T22:20:18.123659+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T22:18:49.283963+00:00",
+      "last_recorded_at": "2026-09-16T22:20:18.123659+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 179,
+        "research_completed": 180,
         "audit_completed": 0,
         "discovery_completed": 89,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35072182249:1",
-          "recorded_at": "2026-09-16T08:08:53.427245+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35072182249",
-            "run_attempt": "1",
-            "source_sha": "123ba205fb3b5b04ba06d2343be46b4538214d34"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35072485354:1",
           "recorded_at": "2026-09-16T08:12:16.755092+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35157025258",
             "run_attempt": "1",
             "source_sha": "e3c861c1c237fca617b5ef417509a21f21c499ed"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35157143897:1",
+          "recorded_at": "2026-09-16T22:20:18.123659+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35157143897",
+            "run_attempt": "1",
+            "source_sha": "ce96fef4e65550f6c254c8988d398a344fd4a37a"
           },
           "signals": [
             "research_completed"
@@ -21840,6 +21840,14 @@
           "type": "research",
           "canonical_id": "arXiv:2601.11822",
           "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0d64167980707ffd",
+          "type": "research",
+          "canonical_id": "arXiv:2608.25062",
+          "title": "FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration",
           "from": "ready",
           "to": "completed"
         }
