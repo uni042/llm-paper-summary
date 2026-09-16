@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e119121016e6ca3bccd934b0","job_id":"job-research-c15602f379300b58","data":{"overview":"高負荷traceでPASCALはFCFS比tail TTFTをAlpacaEval2.0最大61%（43.22秒）、Arena-Hard最大72%（64.21秒）削減し、RR比でも最大33%/29%削減する。answering SLO violationは全arrival rateでbaseline以下または同等で、総throughput差は3%以内。phase-boundary migrationを無効化するとtransition後のP99 blockingが27.39秒まで増えるがPASCALではほぼゼロ。常時migrationするNonAdaptive版は高負荷SLO violation 7.45%に対しadaptive版0.69%、median end-to-end latencyを20.1%、tailを9.7%改善する。KV transfer P99は0.14/0.25秒でTTFT全体に対し小さい。reasoning-heavy混合でもFCFS比短reasoning tail TTFT最大70%削減。","key_results":[{"metric":"tail TTFT vs FCFS","value":"AlpacaEval2.0 最大61%、Arena-Hard 最大72%削減","baseline":"FCFS","condition":"high arrival rate","interpretation":"global reasoning-first priorityがHoL blockingを抑え、短reasoning要求を特に早くfirst answerへ到達させる。"},{"metric":"tail TTFT vs RR","value":"最大33% / 29%削減","baseline":"phase-unaware RR","condition":"AlpacaEval2.0 / Arena-Hard","interpretation":"単純公平性ではなくphaseを明示したglobal priorityが有効。"},{"metric":"serving throughput","value":"baselineとの差3%以内","baseline":"FCFS/RR","condition":"全arrival rates","interpretation":"user experience改善を総処理量の大幅低下なしで達成。"},{"metric":"phase-transition blocking","value":"NoMigration P99最大27.39秒、PASCALほぼ0","baseline":"PASCAL(NoMigration)","condition":"high load","interpretation":"reasoning終了時のKV migrationがanswering開始待ちを除去する。"},{"metric":"adaptive migration SLO violation","value":"0.69% vs NonAdaptive 7.45%","baseline":"PASCAL(NonAdaptive)","condition":"high arrival rate","interpretation":"移行先memory availabilityを見て残留判断することが不要なstallを防ぐ。"},{"metric":"KV migration overhead","value":"P99 0.14秒 / 0.25秒","baseline":"AlpacaEval2.0 / Arena-Hard","condition":"high arrival rate","interpretation":"数秒〜数百秒のreasoning TTFTに比べ移行費用は小さく、load balancing利得が上回る。"}],"negative_results":"一部要求ではPASCALがTTFTを悪化させ、AlpacaEval2.0のworst caseはFCFS比+13.30秒（6.12%）、RR比+8.25秒（9.23%）。reasoning-heavy workloadではansweringが短くphase間干渉が小さいためRRとの差が縮まり、長reasoningでFCFS比TTFTが最大6.8%増える場合がある。RR比のworst degradationは7.7%未満。heterogeneous CPU/GPU協調やprefill専用GPUなどはfuture workで、現行評価はGPU-centric。","interpretation":"reasoning modelではdecode tokenを一様に公平化するより、first visible answer以前のtokenへ優先資源を与え、visible streaming開始後は必要速度だけ保証する方がユーザー指標に合う。phase boundaryはKVを移す自然な再配置点であり、転送コストより回答開始stall削減が大きい。","quality_impact":"モデル出力やreasoning lengthを変更せず、execution orderとplacementのみ変更するため推論品質への直接変更はない。"},"reservation":{"claim_id":"claim-e119121016e6ca3bccd934b0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-41a0aa125f0a68e03a676699",
+  "job_id": "job-research-3342ea471147b233",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-41a0aa125f0a68e03a676699",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

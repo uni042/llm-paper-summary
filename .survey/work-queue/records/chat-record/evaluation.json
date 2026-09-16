@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e119121016e6ca3bccd934b0","job_id":"job-research-c15602f379300b58","data":{"methodology":"8台のserver instanceを100Gbps fabricで接続し、各instanceにH100 96GBを持つcluster simulatorで評価する。単一instanceはvLLM profilingを用い、Xeon Platinum 8558+H100実機に対してend-to-end latency MAPE 1.62%、mean TTFT 12.6%、TPOT 6.49%で検証。モデルはDeepSeek-R1-Distill-Qwen-32B。AlpacaEval2.0とArena-Hard promptをo4-miniへ問い合わせてreasoning/answering token count traceを構築し、Poisson arrivalのlow/medium/high負荷を比較する。FCFSとphase非依存RRがbaseline。RR/PASCAL quantum=500 tokens、PASCALはreasoning 5000 tokens超でlow-priorityへ降格。TTFTはrequest submissionからfirst answering tokenまで、answering QoE<0.95をSLO violationとする。","hardware":"8×NVIDIA H100 96GB instances over 100Gbps fabric。実機validationはIntel Xeon Platinum 8558、256GB DDR5、H100 96GB、PCIe 5.0。","software":"vLLM 0.6.1 profile-based simulator; real validation uses PyTorch 2.4.0 and CUDA 12.1.","scope":"DeepSeek-R1-Distill-Qwen-32B; AlpacaEval2.0/Arena-Hard chat traces。追加でMATH-500、GPQA、LiveCodeBenchを混ぜたreasoning-heavy workloadを評価。","baselines":["FCFS (vLLM default)","phase-unaware Round Robin","PASCAL(NoMigration)","PASCAL(NonAdaptive)"],"failure_types":["reasoning中のblocking/preemptionによるTTFT増加","answering preemptionによるuser-visible starvation","phase境界での移行先memory contention","極端な長reasoningによるKV占有"]},"reservation":{"claim_id":"claim-e119121016e6ca3bccd934b0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-41a0aa125f0a68e03a676699",
+  "job_id": "job-research-3342ea471147b233",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-41a0aa125f0a68e03a676699",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

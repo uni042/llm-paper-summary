@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e119121016e6ca3bccd934b0","job_id":"job-research-c15602f379300b58","data":{"limitations":"主要評価はprofile-based simulatorであり、8台H100クラスタ全体を実機運用した結果ではない。実機validationでもmean TTFT MAPEは12.6%とend-to-endより誤差が大きい。フェーズ境界はDeepSeek系の特殊終了トークンのように明示検出できることを前提とし、境界が不明瞭なモデルでは追加機構が必要。reasoning-heavyでansweringが短いtraceではphase分離の追加利得が小さく、RRと近い。heterogeneous CPU/GPU協調やprefill/decode特化GPUでのresource coherenceは未解決のfuture work。","differences":"vLLM FCFSやAndes等のQoE-aware schedulerはdecodeを一つのフェーズとして扱うのに対し、PASCALはreasoningとansweringをユーザー可視性で分ける。DistServe/Splitwise等はprefillとdecodeの計算特性を分離するが、PASCALはdecode内部のsemantic phaseを分離し、既存disaggregationへ重ねられる。Dynasor/ThinkPruneのようにreasoning tokenを予測・削減・早期停止するのではなく、モデル実行を変えずplacementとpriorityだけを制御する。","implementation_status":"vLLM profilingを基にした8-instance cluster simulatorを実装し、H100実機で精度検証。PASCAL policyはphase-aware queues、instance monitor、KV migration、token pacingから成る。公開コードURLは一次資料で確認できない。","research_positioning":"reasoning LLM servingにおいて、従来のprefill/decode分離より細かいreasoning/answering phaseをschedulerの第一級情報にする研究。長い内部reasoningがTTFTへ入る新しいSLO構造を明示し、KV cache migrationをphase boundaryのload balancingへ使うため、disaggregated servingやpriority scheduling系統と直接接続する。"},"reservation":{"claim_id":"claim-e119121016e6ca3bccd934b0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-41a0aa125f0a68e03a676699",
+  "job_id": "job-research-3342ea471147b233",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-41a0aa125f0a68e03a676699",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

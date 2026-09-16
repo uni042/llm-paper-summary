@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T112030Z-scheduled-chat-llm-survey-run5-research12",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3342ea471147b233",
+      "claim_id": "claim-41a0aa125f0a68e03a676699",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-41a0aa125f0a68e03a676699",
+      "claimed_at": "2026-09-16T11:20:38+00:00",
+      "expires_at": "2026-09-16T12:50:38+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3342ea471147b233"
+      ],
+      "job": {
+        "job_id": "job-research-3342ea471147b233",
+        "type": "research",
+        "parent_job_id": "job-0c421ac9966fc6bb",
+        "priority": 82,
+        "canonical_id": "arXiv:2512.01357",
+        "title": "Tangram: Accelerating Serverless LLM Loading through GPU Memory Reuse and Affinity",
+        "source_url": "https://arxiv.org/abs/2512.01357",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.01357-tangram-serverless-llm-loading-gpu-memory-reuse.md",
+        "selection_reason": "serverless LLM cold startで未使用GPU memoryにmodel parameterを保持し、tensor-level sharing、on-demand KV allocation、GPU-affinity schedulingを組み合わせる。model loading最大6.2倍高速化、cold-start TTFT 23–55%削減を報告し、KV以外のweight residency管理として重要。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T11:06:01+00:00"
+      },
+      "record_bank": "a"
+    }
+  ],
+  "processed_at": "2026-09-16T11:20:38+00:00",
+  "checkpoint_released": 0
+}
