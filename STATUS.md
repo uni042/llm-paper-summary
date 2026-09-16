@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:09:43 JST**
+> 自動生成: **2026-09-16 15:10:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **45** |
+| 収録候補論文 | **44** |
 | 未claim Research job | **41** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-16 15:09:03 JST（40秒前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-16 15:10:01 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **45** |
+| canonical_id確認済みの一意な候補論文 | **44** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **45** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **12** | **6** | **6** | **5** | **1** | — |
+| Research | **37** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **37** | **31** | **6** | **25** | **5** | **1** | **23** |
+| 合計 | **38** | **31** | **6** | **25** | **4** | **1** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:10:01 JST** [research] `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing
+  - job: `.survey/work-queue/jobs/job-research-795118fce8eb1845.json`
+  - result: `.survey/work-queue/results/research/attempt-8834d311401a99e374c1300d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8834d311401a99e374c1300d.json`
+  - paper: `papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md`
 - **09-16 15:09:03 JST** [research] `arXiv:2608.13573` — A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing
   - job: `.survey/work-queue/jobs/job-research-c5668a715755a331.json`
   - result: `.survey/work-queue/results/research/attempt-ae853adbe01956e7c70dbf4c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-52add1efa2617512647eab93.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-52add1efa2617512647eab93.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md`
-- **09-16 14:15:47 JST** [research] `arXiv:2604.25899` — Pythia: Toward Predictability-Driven Agent-Native LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-f79de4903a69120c.json`
-  - result: `.survey/work-queue/results/research/attempt-004a86fd81b4197041999e5e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-004a86fd81b4197041999e5e.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25899-pythia-predictability-driven-agent-native-serving.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
-- `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing / worker `scheduled-chat-hourly-survey-20260916T145717JST`
-  - claim: **09-16 15:08:28 JST** / heartbeat: **—** / lease expiry: **09-16 16:38:28 JST**
-  - evidence: `.survey/work-queue/claims/job-research-795118fce8eb1845.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -238,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **45** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,7 +255,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **591** |
+| inference/training/survey配下の論文Markdown実体 | **592** |
 
 ### immutable submissionの未照合
 
@@ -266,8 +263,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **317** |
-| └ Research | **184** |
+| 成功result未照合のimmutable submission | **316** |
+| └ Research | **183** |
 | └ Discovery | **133** |
 
 ### 厳格検証が未成立のcompleted job

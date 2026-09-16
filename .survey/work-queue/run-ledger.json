@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:09:07.311645+00:00",
+  "updated_at": "2026-09-16T06:10:05.168451+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:09:07.311645+00:00",
+      "last_recorded_at": "2026-09-16T06:10:05.168451+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 127,
+        "research_completed": 128,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34953585251:1",
-          "recorded_at": "2026-09-15T09:38:22.098715+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34953585251",
-            "run_attempt": "1",
-            "source_sha": "10297a9026687c341825c05d5af907b60b4f5dab"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34955671237:1",
           "recorded_at": "2026-09-15T10:03:34.448529+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35062363814",
             "run_attempt": "1",
             "source_sha": "50df236379fe7fe60aee6557a2ce75ac38e1fade"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35062477563:1",
+          "recorded_at": "2026-09-16T06:10:05.168451+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35062477563",
+            "run_attempt": "1",
+            "source_sha": "4945b69ababcc8f515069aace67ce4af178327d7"
           },
           "signals": [
             "research_completed"
@@ -21069,6 +21069,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.13573",
           "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-795118fce8eb1845",
+          "type": "research",
+          "canonical_id": "arXiv:2412.16187",
+          "title": "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
           "from": "ready",
           "to": "completed"
         }
