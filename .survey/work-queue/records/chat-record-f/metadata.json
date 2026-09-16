@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c54d1dbac92b03538ef2bcdf","job_id":"job-research-4714939abf3ccf8f","data":{"canonical_id":"arXiv:2512.16056","arxiv_id":"2512.16056","doi":"10.48550/arXiv.2512.16056","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services","summary":"MMAは、ホストメモリとGPUの間で大容量データを移動するときに、一つのGPUへ直結した一本のPCI Express経路だけへ依存する従来方式を改め、サーバ内に存在する複数GPUのホスト接続とGPU間高速リンクを同時利用する多経路転送層である。対象GPU以外のGPUを中継点として使い、ホストから中継GPUへ運んだ断片をNVLinkまたはNVSwitch経由で対象GPUへ渡すことで、複数の独立したホスト接続帯域を束ねる。既存アプリケーションのCUDAコピー呼出しを共有ライブラリで透過的に捕捉し、元ストリームの依存関係は代理処理で保持する一方、実データは数MBの断片へ分けてCPU側転送機構が動的に経路へ割り当てる。混雑経路では未完了要求キューが自然に進まなくなる性質を受動的な混雑信号として使うため、専用の帯域計測やハードウェア改造を必要としない。8基のH20を備えた実機で大容量転送帯域を最大245GB/s、標準経路比4.62倍まで引き上げ、長文接頭辞キャッシュ取得の初回トークン時間を1.14～2.38倍、vLLM休眠機能のモデル切替を1.12～2.48倍高速化する。したがって本研究は、KVキャッシュ退避やモデル退避の方針自体を変更するのではなく、それらが共有するホスト・GPU間データ経路の物理帯域を既存サーバ内資源だけで増やす基盤層を提供する。","list_summary":"複数GPUのホスト接続とGPU間リンクを透過的に束ね、ホスト・GPU間帯域を最大245GB/s、標準比4.62倍へ高め、初回トークン時間とモデル切替を最大2.38倍、2.48倍高速化。","authors":["Lingfeng Tang","Daoping Zhang","Junjie Chen","Peihao Huang","Feng Jin","Chengguang Xu","Yuxin Chen","Feiqiang Sun","Guo Chen"],"published":"2025-12-18","publication":"arXiv preprint arXiv:2512.16056v1","publication_type":"arXivプレプリント","publication_status":"2025年12月18日投稿のarXiv初版。主分類cs.DC。","lineage":"llm-serving-scheduling-disaggregation","topics":["host-GPU transfer","PCIe","NVLink","multipath routing","KV cache transfer","model switching"],"importance":"offload/prefix cache/model switchingの共通PCIe bottleneckに対し、既存server内の未使用linkを束ねて物理帯域を増やす基盤I/O層を提供する。","hardware_evaluation":"AMD EPYC 9654 + 8×NVIDIA H20、PCIe 5.0、NVLink/NVSwitch実機。","quality_effect":"data transfer経路のみを変更し、モデル計算・出力品質は変更しない。","source":"https://arxiv.org/abs/2512.16056","sources":["https://arxiv.org/html/2512.16056v1"],"code":null,"implementation":"CUDA 12.8上の3000行超C++ user-space shared library。LD_PRELOADでnative CUDA memory APIを透過置換するprototypeを実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML","references_total":0},"reservation":{"claim_id":"claim-c54d1dbac92b03538ef2bcdf","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-bf1a77a940ea17f7048afe0d",
+  "job_id": "job-research-b8521dbc1f501e0d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bf1a77a940ea17f7048afe0d",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c54d1dbac92b03538ef2bcdf",
-  "job_id": "job-research-4714939abf3ccf8f",
-  "data": {
-    "evaluation_summary": "AMD EPYC 9654 serverと8×NVIDIA H20をPCIe 5.0、NVLink/NVSwitchで接続した実機testbedでnative cudaMemcpyAsyncと比較する。microbenchmarkは1KB–8GB H2D/D2H、path数、background contention、chunk/queue設定を評価し、end-to-endはLMCache+vLLM prefill-decode disaggregationのprefix cache hit TTFTとvLLM Sleep Mode model switchingを測る。",
-    "scope": "市販GPU server上のuser-space prototypeを実測しておりsimulationではない。効果はlarge transferかつ複数PCIe pathにidle headroomがある構成で大きく、小transferや全path同時飽和では制御overhead/共有bottleneckに制限される。",
-    "hardware": [
-      "AMD EPYC 9654",
-      "8×NVIDIA H20 96GB HBM3",
-      "PCIe 5.0 x16 per GPU",
-      "NVLink 4.0 / NVSwitch, measured one-way up to 478GB/s",
-      "CUDA 12.8"
-    ],
-    "models": [
-      "Qwen2.5-7B-Instruct",
-      "Qwen3-4B",
-      "Qwen-7B-Chat",
-      "Qwen3-0.6B",
-      "Qwen3-32B"
-    ],
-    "datasets": [
-      "LongBench v2",
-      "Chatbot Arena traffic characterization"
-    ],
-    "workload": "microbenchmark 1KB–8GB transfer。prefix cacheは16K/32K/64K contextのmulti-turn QAでhit turn平均TTFT。Sleep Modeは0.6B–32B modelのfall-asleep/wake-up wall-clock latency。",
-    "baselines": [
-      "native CUDA single-path H2D/D2H",
-      "static 1:1 multipath split",
-      "static 1:2 multipath split",
-      "MMA without direct priority"
-    ],
-    "metrics": [
-      "effective GB/s",
-      "completion time under contention",
-      "GPU P2P bandwidth",
-      "CPU overhead",
-      "TTFT",
-      "sleep/wake latency"
-    ],
-    "predictor_accuracy": "明示congestion predictorは使わずoutstanding queue occupancy/blockingをpassive congestion signalとして利用する。",
-    "control_knobs": "chunk size、outstanding queue length、fallback threshold、participating relay GPU/path数、direct-path priority。"
-  },
+  "attempt_id": "attempt-bf1a77a940ea17f7048afe0d",
+  "job_id": "job-research-b8521dbc1f501e0d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c54d1dbac92b03538ef2bcdf",
+    "claim_id": "claim-bf1a77a940ea17f7048afe0d",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

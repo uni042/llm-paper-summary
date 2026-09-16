@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:13:59 JST**
+> 自動生成: **2026-09-16 14:14:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **6** | **3** | **3** | **4** | **1** | — |
+| Research | **24** | **7** | **3** | **4** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **25** | **11** | **3** | **8** | **4** | **1** | **24** |
+| 合計 | **25** | **12** | **3** | **9** | **4** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,7 +115,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
+- immutable submission: **7件** / 検証済み成功: **3件** / 未完了・未検証: **4件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0a8f3b62f80c03f536fe81a5.json` (job `job-research-4714939abf3ccf8f`)
 - **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
@@ -134,6 +134,7 @@
   - submission: `.survey/work-queue/submissions/research/attempt-ad4afba2a1cd0b175dc4bc13.json`
   - paper: `papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c0e304b27be71a492caece36.json` (job `job-research-73e15ccbef3e6d6d`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c54d1dbac92b03538ef2bcdf.json` (job `job-research-4714939abf3ccf8f`)
 
 #### Audit (:30)
 
@@ -172,12 +173,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
-- `arXiv:2512.16056` — MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:13:03 JST** / heartbeat: **—** / lease expiry: **09-16 15:43:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4714939abf3ccf8f.json`
-- `arXiv:2502.07578` — PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:13:03 JST** / heartbeat: **—** / lease expiry: **09-16 15:43:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-73e15ccbef3e6d6d.json`
+- `arXiv:2606.28565` — KernelSight-LM: A Kernel-Level LLM Inference Simulator / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
+  - claim: **09-16 14:14:17 JST** / heartbeat: **—** / lease expiry: **09-16 15:44:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b8521dbc1f501e0d.json`
+- `arXiv:2604.25899` — Pythia: Toward Predictability-Driven Agent-Native LLM Serving / worker `scheduled-chat-llm-survey-20260916T135756JST`
+  - claim: **09-16 14:14:17 JST** / heartbeat: **—** / lease expiry: **09-16 15:44:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f79de4903a69120c.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
@@ -231,8 +232,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **286** |
-| └ Research | **172** |
+| 成功result未照合のimmutable submission | **287** |
+| └ Research | **173** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job

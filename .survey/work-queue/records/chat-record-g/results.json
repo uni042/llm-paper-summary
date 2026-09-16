@@ -2,72 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c1a96aa17242872639750d89",
-  "job_id": "job-research-73e15ccbef3e6d6d",
+  "attempt_id": "attempt-004a86fd81b4197041999e5e",
+  "job_id": "job-research-f79de4903a69120c",
   "data": {
-    "overview": "CENTはlatency-critical batch=1で4×A100 baselineよりend-to-end latencyを4.6倍短縮し、throughput-critical設定ではLlama2 7B/13B/70Bのgeomeanで2.3倍高いthroughputを得る。Llama2-70BではGQAでGPU側の演算密度が上がるためspeedupは1.2倍に縮むが、32K contextのdecode throughputでは最大3.3倍となる。平均energy efficiencyは2.3倍tokens/J、3年TCOモデルでは5.2倍tokens/$。ただしprefill単独ではGPUが2.5倍throughput、2.3倍energy efficientであり、CENTの優位はmemory-bound decodeがend-to-end時間を支配することに依存する。",
+    "overview": "複数の同時ワークフローを用いた終端間評価で、Pythiaはすべての対象負荷において平均ジョブ完了時間を改善し、最大同時実行付近では基準方式に対して1.38–2.9倍の短縮を示す。低負荷では次の役割の接頭辞を先回り準備する効果が中心で、高負荷ではワークフロー経路を考慮した全体優先度と出力長を考慮した配置が、メモリ競合による要求中断と先頭待ちを抑える。論文全体では最大1.96倍の処理量改善を報告する。実運用解析では40%以上の要求が接頭辞キャッシュ命中ゼロまたは極少で、特定モデルの要求数が一分で最大50.3%急増することも確認しており、これらが先回り制御の対象となる。",
     "key_results": [
       {
-        "metric": "latency-critical end-to-end latency",
-        "value": "4.6× reduction",
-        "baseline": "4×A100 GPU",
-        "condition": "batch=1, CENT tensor-parallel mapping",
-        "interpretation": "PIM内部bandwidthがdecodeのweight streamingを高速化する。"
+        "metric": "平均ジョブ完了時間",
+        "value": "最大2.9倍短縮、ピーク同時実行域で1.38–2.9倍",
+        "baseline": "vLLM、SGLang、複数のエージェント対応方式",
+        "condition": "コーディング支援・深層調査ワークフロー",
+        "interpretation": "低負荷では接頭辞先回り、高負荷では経路を考慮した配置・優先度制御の寄与が大きい。"
       },
       {
-        "metric": "throughput-critical end-to-end throughput",
-        "value": "2.3× geomean",
-        "baseline": "GPU maximum batch",
-        "condition": "Llama2 7B/13B/70B, CENT pipeline parallel",
-        "interpretation": "memory capacityとpipeline stageを利用してGPUより高いdecode throughputを得る。"
+        "metric": "処理量",
+        "value": "最大1.96倍",
+        "baseline": "既存サービング方式",
+        "condition": "代表的複数エージェント負荷",
+        "interpretation": "下流遊休を避け、メモリ競合と再計算を減らすことでGPU群の有効利用率を上げる。"
       },
       {
-        "metric": "tokens per dollar",
-        "value": "5.2×",
-        "baseline": "GPU 3-year TCO model",
-        "condition": "owned/rental cost assumptions",
-        "interpretation": "CENT hardware TCOが約2.5倍安くthroughputも高いことの複合効果。"
+        "metric": "実運用接頭辞命中状況",
+        "value": "40%以上が命中ゼロまたは極少",
+        "baseline": "既存階層接頭辞キャッシュ",
+        "condition": "社内エージェント配信追跡",
+        "interpretation": "役割ごとに異なる指示と長いツール待ちのため、エージェントなら自然に接頭辞が共有されるという想定が成立しない。"
       },
       {
-        "metric": "long-context decode throughput",
-        "value": "up to 3.3×",
-        "baseline": "4×A100",
-        "condition": "Llama2-70B, context 32K",
-        "interpretation": "KV cache増加でGPU batch上限が下がるほどPIM bandwidth/capacityの優位が拡大する。"
-      },
-      {
-        "metric": "similar-throughput query latency",
-        "value": "3.4–7.6× lower",
-        "baseline": "GPU",
-        "condition": "Llama2-70B, varying TP/PP mappings",
-        "interpretation": "CXL device parallelismでthroughputを保ちながらlatencyを下げられる。"
-      },
-      {
-        "metric": "energy efficiency",
-        "value": "2.3× tokens/J average",
-        "baseline": "GPU",
-        "condition": "maximum supported batch",
-        "interpretation": "decodeではCENTが2.5倍efficientだがprefillではGPUが2.3倍efficient。"
-      },
-      {
-        "metric": "CXL-PNM comparison",
-        "value": "4.5× throughput",
-        "baseline": "CXL-PNM",
-        "condition": "OPT-66B",
-        "interpretation": "near-bank PIMによる内部bandwidthとcompute throughputがPNM-only構成を上回る。"
+        "metric": "短時間負荷急増",
+        "value": "一分で最大50.3%増",
+        "baseline": "通常時のモデル要求数",
+        "condition": "自動実行やワークフロー分岐",
+        "interpretation": "反応型の複製数調整では、モデル読み込み中に負荷波が下流へ移動するため先読みが必要になる。"
       }
     ],
     "negative_results": [
-      "compute-bound prefillではGPUがCENTより2.5倍throughput、2.3倍energy efficient。",
-      "Llama2-70BではGQAによりGPUのoperational intensityが改善し、throughput speedupは1.2倍に縮む。",
-      "TP度を上げるとPIM latencyは減る一方CXL broadcast/gather latencyが増える。",
-      "CENT performance/powerはsimulatorとmodel中心で、完成したCXL-PIM実シリコンのend-to-end測定ではない。"
+      "現在の方式は少数の対象エージェントアプリケーションを想定しており、多数の異質なワークフローでは平均効率を優先する単純な優先度が個別公平性を損なう可能性がある。",
+      "新規導入直後やワークフロー更新直後は履歴が不足するため、十分な信頼区間が得られるまで反応型処理へ戻す必要がある。",
+      "自由度の高い無制約エージェントや敵対的入力で遷移が予測不能になると、先回り最適化の利点は失われる。",
+      "評価では実運用の最先端商用モデルをそのまま8基A100へ載せず、3B–14BのQwen/Llama系へ写像している。"
     ],
-    "quality_impact": "BF16演算を維持するhardware/system mappingであり、主結果は品質を犠牲にした近似ではなくmemory-centric executionによる。",
-    "interpretation": "CENTの核心はGPUを安価なmemory extensionへ置き換えることではなく、CXLでcapacityを拡張しながらmemory bank内部bandwidthをcomputeへ直接使い、decodeの低operational-intensity領域だけでGPUのcompute-centric設計を逆転させることにある。prefillはGPUが優位なため、論文自身も将来的なprefill/decode disaggregationを自然な併用形として示唆する。"
+    "quality_impact": "要求の意味内容やモデル計算を近似せず、実行順、キャッシュ、配置、複製数だけを変更するため、生成品質を直接変える方式ではない。",
+    "interpretation": "Pythiaの重要点は、エージェント処理を単なる高頻度LLM要求として高速化するのではなく、アプリケーションのプログラム構造をサービング資源管理の予測信号へ変換することである。これにより、最近使用順キャッシュ、先着順処理、過去負荷ベースの複製数調整という従来の反応型機構を、それぞれ将来再利用、残り経路、将来分岐に基づく先回り型へ置き換えている。"
   },
   "reservation": {
-    "claim_id": "claim-c1a96aa17242872639750d89",
+    "claim_id": "claim-004a86fd81b4197041999e5e",
     "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }

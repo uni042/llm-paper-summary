@@ -2,49 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c1a96aa17242872639750d89",
-  "job_id": "job-research-73e15ccbef3e6d6d",
+  "attempt_id": "attempt-004a86fd81b4197041999e5e",
+  "job_id": "job-research-f79de4903a69120c",
   "data": {
-    "positioning": "CENTはCPU/GPU間offloadで既存GPUを延命する方式ではなく、memory-bound decodeをCXL接続PIM fabricへ全面移行しGPU自体を不要にするmemory-centric推論architectureである。CXL-PNMのようにcontroller近傍だけで計算する方式よりbank内部bandwidthを利用し、AttAcc/NeuPIMのようなGPU-PIM hybridよりTCOを下げる代わりにcompute-bound prefill性能を捨てる設計判断を取る。",
-    "differences": "一般的CXL memory expansionはcapacity tierとしてCPU/GPUからdataを読むが、CENTはCXL device自体へnear-bank computeとPNMを持たせ、CXL fabricをmodel-parallel communication networkとして使う。従来PIMはdevice間collectiveとcapacity scalingが弱いが、CENTはbroadcast/multicast/gather primitiveとPP/TP/hybrid mappingを設計してLLM全体を複数deviceへ展開する。",
+    "positioning": "Pythiaは一般的な大規模言語モデル配信基盤の反応型最適化と、エージェント向け要求スケジューラの間に位置する。従来基盤は要求内容や将来到着を知らない前提で最近使用順キャッシュ、先着順処理、現在の待ち行列に基づく複製数調整を行う。一方Pythiaは、複数エージェントアプリケーションがプログラムとして持つ役割遷移と役割別の安定した出力特性を、入口の軽量識別子と履歴解析から再構成し、キャッシュ、要求配置、実行順、複製数へ共通利用する。",
+    "differences": "既存のエージェント向け方式が個々の要求や単一モデル内の優先度、接頭辞共有を改善するのに対し、Pythiaはワークフロー全体の将来経路を正規表現として持ち、終端までの距離、下流モデルの遊休危険、将来の大量分岐まで含めてクラスタ全体を調整する。また開発者に詳細な依存グラフや資源ヒントを要求せず、三つの識別子から履歴を自動合成するため、アプリケーションと基盤の責務分離を維持する。",
     "relation_to_prior_work": [
       {
-        "work": "GPU/CPU offload systems",
-        "difference": "weightを低速tierからGPUへ移送するのではなく、weightのあるPIM bank近傍で演算しGPU transfer自体を除去する。"
+        "work": "vLLM / SGLang",
+        "difference": "要求を独立した不透明な単位として扱う汎用配信に対し、ワークフロー構造と役割別統計を将来予測として利用する。"
       },
       {
-        "work": "CXL-PNM",
-        "difference": "CXL controller側computeだけでなくGDDR6 bank内部PIMを併用し、より高いinternal bandwidthとcompute throughputを得る。"
+        "work": "Autellix",
+        "difference": "エージェント要求の統合スケジューリングよりさらに先へ進み、将来経路から接頭辞先回りとモデル複製数調整まで連動させる。"
       },
       {
-        "work": "AttAcc / NeuPIM",
-        "difference": "GPUとPIMを併用してprefillをGPUへ残す方式に対し、CENTはGPU-free構成でTCOを優先する。"
+        "work": "Continuum",
+        "difference": "単一ノードのReAct型エージェント最適化に対し、複数モデル・複数GPUのクラスタ全体で役割間依存を利用する。"
       },
       {
-        "work": "conventional PIM accelerators",
-        "difference": "単一PIM deviceのcapacity/density制約に対し、CXL 3.0 fabricとcollective primitiveで多数deviceへmodel parallelismを展開する。"
+        "work": "ThunderAgent",
+        "difference": "プログラム認識型要求順序制御に加え、出力長信頼区間による配置、階層キャッシュ先回り、段階予測型複製数調整を同じ予測情報から行う。"
       }
     ],
     "strengths": [
-      "LLM decodeの低operational intensityをGPU実測で定量化して設計動機へ結び付ける。",
-      "CXL fabric、PIM/PNM hierarchy、ISA、PP/TP mappingまでend-to-endで設計する。",
-      "long contextほどGPU batch上限が下がりPIM優位が増すことを32Kまで評価する。",
-      "TCO・power・energyまで含めmemory-centric architectureの経済性を評価する。",
-      "simulatorとartifactを公開し主要結果の再現手順を提供する。"
+      "実運用追跡から接頭辞命中不足、メモリ競合、負荷波という具体的な三問題を抽出している。",
+      "開発者が渡す情報を三識別子に限定し、複雑な経路は履歴から自動合成する。",
+      "予測をキャッシュ、配置、実行順、複製数の複数層へ一貫して利用する。",
+      "出力長の不確実性を単純平均ではなく信頼上限と確率上界で扱い、メモリ不足安全性を明示する。",
+      "SGLang上へ実装し、コーディングと深層調査という異なる終端間エージェント処理で評価する。"
     ],
     "limitations": [
-      "CENT本体はsimulation/RTL synthesis/power model評価であり、32-device CXL-PIM実機の測定ではない。",
-      "GPU baselineとの比較はA100世代中心で、H100/H200等の新世代GPUとの直接比較ではない。",
-      "compute-bound prefillではGPUが明確に高速・高効率で、GPU-free設計の弱点になる。",
-      "custom GDDR6-PIM、CXL controller、broadcast extensionの製造・標準化・実装コストを伴う。",
-      "TCOはPIM module価格や量産volumeなど複数の仮定に依存する。"
+      "履歴がない初期導入とワークフロー更新直後は予測を利用できず、反応型の影運転期間が必要。",
+      "無制約・敵対的なエージェント遷移では主要経路が集中せず、正規表現による予測の価値が下がる。",
+      "多数の異質なワークフローを同時提供する場合、平均完了時間を重視する優先度が個別公平性やSLOを損なう可能性がある。",
+      "評価機では商用最先端モデルを3B–14B公開モデルへ写像しており、超大規模モデルでの同一効果は直接測定していない。",
+      "先回り接頭辞生成やモデル増設は予測誤り時に無駄となるため、ホスト段階配置や低確率経路除外など保守的な仕組みに依存する。"
     ],
-    "implementation_status": "open-source CENT simulator、trace generator、power model、automation scriptを公開し、CXL controller custom logicはRTL synthesisまで行う。ASPLOS artifact appendixで再現手順を提供するが、提案CXL-PIM hardware全体はsimulationベース。",
-    "research_positioning": "階層memory/offload研究に対して、SSD/CPU/CXL memoryを単なるweight置場とする発想から一歩進み、memory tierそのものへcomputeを持たせてdecodeを完結させる極端な設計点を示す。特にCXLをcapacity expansionとcollective networkの双方に使う点は、将来のmemory-centric LLM servingの基準になる。",
-    "repository_fit": "cpu-offload系統に近いが、実態はCXL-PIM memory-centric inferenceである。GPUとのdata movement最適化ではなくGPUを除去するため、offloadの対極として比較すると階層memory設計のtradeoffが明確になる。"
+    "implementation_status": "SGLang上で入口ルータ、非同期ワークフロー解析器、階層接頭辞キャッシュ管理、反復要求スケジューラ、定期自動複製数調整器を実装。論文時点では社内のより大規模クラスタで広範な試験と試験導入を進めている。",
+    "research_positioning": "エージェント基盤とLLM配信基盤の境界に意味情報を戻す研究である。従来はAPI抽象化によって失われていたアプリケーションの制御フローを、資源管理に必要な予測可能性として再導入する。今後エージェント要求が大部分を占める環境では、単一要求の初回応答・生成間隔だけでなく、ワークフロー全体の完了時間と将来の資源需要を最適化単位にすべきことを示す。",
+    "repository_fit": "serving scheduling/disaggregation系統に強く適合する。特にキャッシュ、ルーティング、反復スケジューリング、自動スケーリングをワークフロー予測で結ぶため、エージェント観測研究と実際のサービング制御を接続する論文として位置付けられる。"
   },
   "reservation": {
-    "claim_id": "claim-c1a96aa17242872639750d89",
+    "claim_id": "claim-004a86fd81b4197041999e5e",
     "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }

@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c54d1dbac92b03538ef2bcdf",
-  "job_id": "job-research-4714939abf3ccf8f",
-  "data": {
-    "positioning": "MMAはKV cache offload、model offload、prefill-decode disaggregationそのもののpolicyを変えるのではなく、それらが共有するhost-memory↔GPU transfer substrateをmultipath化する下位層である。従来のdouble bufferingやmultiple CUDA streamsが1本のPCIeを隠蔽・飽和させるのに対し、MMAは他GPUのPCIeとNVLink relayまで束ねて物理的な利用可能bandwidthを増やす。",
-    "differences": "inter-server multipath RDMAやFuseLinkはNIC/GPU間metadata・RDMA control channelを使えるが、intra-server host DMAには同等のfeedback/relay primitiveがない。MMAはdummy task、callback/spin synchronization、outstanding queue backpressureを使ってCUDA API semanticsを維持したままCPU側でpathを動的選択する。",
-    "relation_to_prior_work": [
-      {
-        "work": "CPU/GPU offload and prefix-cache systems",
-        "difference": "何をいつoffloadするかではなく、決まったH2D/D2H copyを複数物理pathへ分散するため上位policyと直交する。"
-      },
-      {
-        "work": "multiple CUDA streams / double buffering",
-        "difference": "単一PCIeの利用率向上やcompute overlapではなく、他GPUのPCIe+NVLink relayを使ってaggregate bandwidth自体を増やす。"
-      },
-      {
-        "work": "FuseLink / multipath RDMA",
-        "difference": "inter-server NIC trafficではなくhost-memory DMAを対象とし、RDMA congestion signalなしでlocal outstanding queueをpassive load signalにする。"
-      },
-      {
-        "work": "CXL-based memory systems",
-        "difference": "新しいmemory fabric/hardwareを要求せず、既存PCIe+NVLink GPU server topologyのidle pathをsoftwareだけで再利用する。"
-      }
-    ],
-    "strengths": [
-      "LD_PRELOADで既存LLM applicationのcode modificationなしに導入できる。",
-      "8×H20実機でmicrobenchmarkとLMCache/vLLM end-to-end双方を評価する。",
-      "dependency preservation、small-copy fallback、dynamic load balancingまで実装上の障害を扱う。",
-      "prefix KVとmodel switchingという異なる大容量transfer workloadで同じtransport layerの効果を示す。",
-      "direct priorityとdual pipelineでrelayが既存GPU-GPU trafficを壊すのを抑える。"
-    ],
-    "limitations": [
-      "CPU control planeがGPUごとにtransfer/sync threadを必要とし、8 GPUでCPU overheadが822%増える。",
-      "小transferではmultipath overheadが利益を上回るためnative fallbackが必要。",
-      "複数pathのheadroomがない均等高負荷時には改善余地が小さい。",
-      "dual-NUMAではUPIが新たなbottleneckとなり6 relay GPU付近でsaturateする。",
-      "現状はCUDA/NVIDIA topology向けprototypeで、hardware-native multipath primitiveはない。"
-    ],
-    "implementation_status": "CUDA 12.8上で3000行超のC++ shared libraryとして実装し、LD_PRELOADでCUDA memory APIをinterceptする。AMD EPYC + 8 H20実機で評価済み。",
-    "research_positioning": "LLM servingの階層memory研究に対し、tier間transferをschedule/overlapするだけでなく、tier間の物理link topologyそのものをaggregate resourceとして扱う視点を追加する。host DRAM、CXL memory、SSD等を活用する際にも、最終GPU ingressが単一PCIeで詰まる設計への警告となる。",
-    "repository_fit": "serving scheduling/disaggregation系統に適合する。特にprefix cache取得、prefill-decode分離、model switchingの共通data planeを高速化するため、個別cache policyより下位のtransport基盤として比較すべき論文である。"
-  },
+  "attempt_id": "attempt-bf1a77a940ea17f7048afe0d",
+  "job_id": "job-research-b8521dbc1f501e0d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c54d1dbac92b03538ef2bcdf",
+    "claim_id": "claim-bf1a77a940ea17f7048afe0d",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }
