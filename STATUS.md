@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:06:31 JST**
+> 自動生成: **2026-09-16 19:06:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **15** | **0** | **15** | **0** | **0** | **16** |
-| 合計 | **40** | **23** | **4** | **19** | **2** | **0** | **16** |
+| Discovery | **1** | **17** | **0** | **17** | **0** | **0** | **17** |
+| 合計 | **40** | **25** | **4** | **21** | **2** | **0** | **17** |
 
-- 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **17件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -150,8 +150,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 19:00 JST**
-- 耐久探索round: **15件** / immutable submission: **15件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **15件** / 候補: **16件**
-- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve / CXL composable memory・Kubernetes DRA・cross-node KV reuse / multi-agent collective KV sharing・All-Gather redundancy elimination / GPU runtime/compiler・persistent dynamic megakernel / disaggregated serving・network/KV-aware routing・hardware calibration / 新着KV compression・prompt-adaptive configuration selection / 重要新規系統のforward citation追跡 / 重要論文のbackward reference・基盤システム / OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion / MoE multi-model serving・weight/KV disaggregation・GPU memory pooling / network-aware decode routing・mixed-precision KV transfer / agentic serving・external KV storage I/O・dual-path RDMA loading
+- 耐久探索round: **17件** / immutable submission: **17件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **17件** / 候補: **17件**
+- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve / CXL composable memory・Kubernetes DRA・cross-node KV reuse / multi-agent collective KV sharing・All-Gather redundancy elimination / GPU runtime/compiler・persistent dynamic megakernel / disaggregated serving・network/KV-aware routing・hardware calibration / 新着KV compression・prompt-adaptive configuration selection / 重要新規系統のforward citation追跡 / 重要論文のbackward reference・基盤システム / OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion / MoE multi-model serving・weight/KV disaggregation・GPU memory pooling / network-aware decode routing・mixed-precision KV transfer / agentic serving・external KV storage I/O・dual-path RDMA loading / 最新novel候補群のforward citation・派生追跡 / CrossPool backward reference・MoE disaggregated expert parallelism基盤
 - round `specialist-moe-prefetch-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json`
   - 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行
@@ -251,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **392** |
+| 成功result未照合のimmutable submission | **394** |
 | └ Research | **233** |
 | └ Audit | **1** |
-| └ Discovery | **158** |
+| └ Discovery | **160** |
 
 ### 厳格検証が未成立のcompleted job
 
