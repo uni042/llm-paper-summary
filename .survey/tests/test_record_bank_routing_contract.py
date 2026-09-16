@@ -2,12 +2,13 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-import claim_worker_with_banks  # noqa: E402
+import enrich_claim_record_routes  # noqa: E402
 import immutable_submission  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
@@ -95,13 +96,16 @@ class RecordBankRoutingContractTests(unittest.TestCase):
     def test_claim_result_exposes_exact_canonical_bank_root_and_slot_paths(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
-            claim = {
-                "request_id": "req-a",
+            claim_path = root / ".survey/work-queue/claims/job-a.json"
+            result_path = root / ".survey/work-queue/claim-results/req-a.json"
+            write_json(claim_path, {
+                "schema_version": 1,
                 "job_id": "job-a",
                 "claim_id": "claim-a",
+                "request_id": "req-a",
                 "record_bank": "a",
-            }
-            result_path = root / ".survey/work-queue/claim-results/req-a.json"
+                "expires_at": "2026-09-17T00:00:00+00:00",
+            })
             write_json(result_path, {
                 "schema_version": 1,
                 "request_id": "req-a",
@@ -112,14 +116,20 @@ class RecordBankRoutingContractTests(unittest.TestCase):
                 }],
             })
 
-            claim_worker_with_banks._persist_assignment_bank(root, claim, "a")
+            stats = enrich_claim_record_routes.enrich_routes(
+                root,
+                at=datetime(2026, 9, 16, 14, 0, tzinfo=timezone.utc),
+            )
+            claim = json.loads(claim_path.read_text(encoding="utf-8"))
             assignment = json.loads(result_path.read_text(encoding="utf-8"))["assignments"][0]
 
+            expected_paths = {slot: f"{BANK_ROOTS['a']}/{slot}.json" for slot in SLOT_NAMES}
+            self.assertEqual(stats["claims_changed"], 1)
+            self.assertEqual(stats["claim_results_changed"], 1)
             self.assertEqual(assignment["record_bank_root"], BANK_ROOTS["a"])
-            self.assertEqual(
-                assignment["record_slot_paths"],
-                {slot: f"{BANK_ROOTS['a']}/{slot}.json" for slot in SLOT_NAMES},
-            )
+            self.assertEqual(assignment["record_slot_paths"], expected_paths)
+            self.assertEqual(claim["record_bank_root"], BANK_ROOTS["a"])
+            self.assertEqual(claim["record_slot_paths"], expected_paths)
             self.assertNotEqual(assignment["record_bank_root"], ".survey/work-queue/records/chat-record-a")
 
 
