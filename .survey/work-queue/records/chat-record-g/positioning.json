@@ -2,49 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0a8f3b62f80c03f536fe81a5",
-  "job_id": "job-research-4714939abf3ccf8f",
+  "attempt_id": "attempt-7b42c4b89ac929fa80c2c499",
+  "job_id": "job-research-73e15ccbef3e6d6d",
   "data": {
-    "positioning": "MMAはKV cache offload、model offload、prefill-decode disaggregationそのもののpolicyを変えるのではなく、それらが共有するhost-memory↔GPU transfer substrateをmultipath化する下位層である。従来のdouble bufferingやmultiple CUDA streamsが1本のPCIeを隠蔽・飽和させるのに対し、MMAは他GPUのPCIeとNVLink relayまで束ねて物理的な利用可能bandwidthを増やす。",
-    "differences": "inter-server multipath RDMAやFuseLinkはNIC/GPU間metadata・RDMA control channelを使えるが、intra-server host DMAには同等のfeedback/relay primitiveがない。MMAはdummy task、callback/spin synchronization、outstanding queue backpressureを使ってCUDA API semanticsを維持したままCPU側でpathを動的選択する。",
+    "positioning": "CENTはCPU/GPU間offloadで既存GPUを延命する方式ではなく、memory-bound decodeをCXL接続PIM fabricへ全面移行しGPU自体を不要にするmemory-centric推論architectureである。CXL-PNMのようにcontroller近傍だけで計算する方式よりbank内部bandwidthを利用し、AttAcc/NeuPIMのようなGPU-PIM hybridよりTCOを下げる代わりにcompute-bound prefill性能を捨てる設計判断を取る。",
+    "differences": "一般的CXL memory expansionはcapacity tierとしてCPU/GPUからdataを読むが、CENTはCXL device自体へnear-bank computeとPNMを持たせ、CXL fabricをmodel-parallel communication networkとして使う。従来PIMはdevice間collectiveとcapacity scalingが弱いが、CENTはbroadcast/multicast/gather primitiveとPP/TP/hybrid mappingを設計してLLM全体を複数deviceへ展開する。",
     "relation_to_prior_work": [
       {
-        "work": "CPU/GPU offload and prefix-cache systems",
-        "difference": "何をいつoffloadするかではなく、決まったH2D/D2H copyを複数物理pathへ分散するため上位policyと直交する。"
+        "work": "GPU/CPU offload systems",
+        "difference": "weightを低速tierからGPUへ移送するのではなく、weightのあるPIM bank近傍で演算しGPU transfer自体を除去する。"
       },
       {
-        "work": "multiple CUDA streams / double buffering",
-        "difference": "単一PCIeの利用率向上やcompute overlapではなく、他GPUのPCIe+NVLink relayを使ってaggregate bandwidth自体を増やす。"
+        "work": "CXL-PNM",
+        "difference": "CXL controller側computeだけでなくGDDR6 bank内部PIMを併用し、より高いinternal bandwidthとcompute throughputを得る。"
       },
       {
-        "work": "FuseLink / multipath RDMA",
-        "difference": "inter-server NIC trafficではなくhost-memory DMAを対象とし、RDMA congestion signalなしでlocal outstanding queueをpassive load signalにする。"
+        "work": "AttAcc / NeuPIM",
+        "difference": "GPUとPIMを併用してprefillをGPUへ残す方式に対し、CENTはGPU-free構成でTCOを優先する。"
       },
       {
-        "work": "CXL-based memory systems",
-        "difference": "新しいmemory fabric/hardwareを要求せず、既存PCIe+NVLink GPU server topologyのidle pathをsoftwareだけで再利用する。"
+        "work": "conventional PIM accelerators",
+        "difference": "単一PIM deviceのcapacity/density制約に対し、CXL 3.0 fabricとcollective primitiveで多数deviceへmodel parallelismを展開する。"
       }
     ],
     "strengths": [
-      "LD_PRELOADで既存LLM applicationのcode modificationなしに導入できる。",
-      "8×H20実機でmicrobenchmarkとLMCache/vLLM end-to-end双方を評価する。",
-      "dependency preservation、small-copy fallback、dynamic load balancingまで実装上の障害を扱う。",
-      "prefix KVとmodel switchingという異なる大容量transfer workloadで同じtransport layerの効果を示す。",
-      "direct priorityとdual pipelineでrelayが既存GPU-GPU trafficを壊すのを抑える。"
+      "LLM decodeの低operational intensityをGPU実測で定量化して設計動機へ結び付ける。",
+      "CXL fabric、PIM/PNM hierarchy、ISA、PP/TP mappingまでend-to-endで設計する。",
+      "long contextほどGPU batch上限が下がりPIM優位が増すことを32Kまで評価する。",
+      "TCO・power・energyまで含めmemory-centric architectureの経済性を評価する。",
+      "simulatorとartifactを公開し主要結果の再現手順を提供する。"
     ],
     "limitations": [
-      "CPU control planeがGPUごとにtransfer/sync threadを必要とし、8 GPUでCPU overheadが822%増える。",
-      "小transferではmultipath overheadが利益を上回るためnative fallbackが必要。",
-      "複数pathのheadroomがない均等高負荷時には改善余地が小さい。",
-      "dual-NUMAではUPIが新たなbottleneckとなり6 relay GPU付近でsaturateする。",
-      "現状はCUDA/NVIDIA topology向けprototypeで、hardware-native multipath primitiveはない。"
+      "CENT本体はsimulation/RTL synthesis/power model評価であり、32-device CXL-PIM実機の測定ではない。",
+      "GPU baselineとの比較はA100世代中心で、H100/H200等の新世代GPUとの直接比較ではない。",
+      "compute-bound prefillではGPUが明確に高速・高効率で、GPU-free設計の弱点になる。",
+      "custom GDDR6-PIM、CXL controller、broadcast extensionの製造・標準化・実装コストを伴う。",
+      "TCOはPIM module価格や量産volumeなど複数の仮定に依存する。"
     ],
-    "implementation_status": "CUDA 12.8上で3000行超のC++ shared libraryとして実装し、LD_PRELOADでCUDA memory APIをinterceptする。AMD EPYC + 8 H20実機で評価済み。",
-    "research_positioning": "LLM servingの階層memory研究に対し、tier間transferをschedule/overlapするだけでなく、tier間の物理link topologyそのものをaggregate resourceとして扱う視点を追加する。host DRAM、CXL memory、SSD等を活用する際にも、最終GPU ingressが単一PCIeで詰まる設計への警告となる。",
-    "repository_fit": "serving scheduling/disaggregation系統に適合する。特にprefix cache取得、prefill-decode分離、model switchingの共通data planeを高速化するため、個別cache policyより下位のtransport基盤として比較すべき論文である。"
+    "implementation_status": "open-source CENT simulator、trace generator、power model、automation scriptを公開し、CXL controller custom logicはRTL synthesisまで行う。ASPLOS artifact appendixで再現手順を提供するが、提案CXL-PIM hardware全体はsimulationベース。",
+    "research_positioning": "階層memory/offload研究に対して、SSD/CPU/CXL memoryを単なるweight置場とする発想から一歩進み、memory tierそのものへcomputeを持たせてdecodeを完結させる極端な設計点を示す。特にCXLをcapacity expansionとcollective networkの双方に使う点は、将来のmemory-centric LLM servingの基準になる。",
+    "repository_fit": "cpu-offload系統に近いが、実態はCXL-PIM memory-centric inferenceである。GPUとのdata movement最適化ではなくGPUを除去するため、offloadの対極として比較すると階層memory設計のtradeoffが明確になる。"
   },
   "reservation": {
-    "claim_id": "claim-0a8f3b62f80c03f536fe81a5",
+    "claim_id": "claim-7b42c4b89ac929fa80c2c499",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }
