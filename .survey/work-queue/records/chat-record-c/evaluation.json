@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-79c4ee390d672cc004c43df8","job_id":"job-research-41c06f0529c148e7","data":{"hardware":"6基のNVIDIA A6000 GPU。端末側予測器はNVIDIA Jetson Orin NXで測定。","software":"vLLM 0.13.0、SGLang 0.5.5、Mooncake KV転送、Redis 7.1.0。Llumnix比較はRayベースの分離構成。","model":["LLaMA3.1-8B","Qwen2.5-3B"],"datasets":["ShareGPT由来の合成到着ワークロード","BurstGPTの実運用Azure OpenAIトレース再生","予測器学習・評価はAlpaca 20Kプロンプト"],"baselines":["vLLM 0.13.0","SGLang 0.5.5","Llumnix","出力長予測比較としてPO-ITとS3"],"correctness":"生成品質の近似比較ではなく、出力長予測誤差、過小予測率、KVメモリ実行可能性、待ち行列、エンドツーエンド遅延、TTFT、TPOT、最大ITLを評価する。生成モデル自体の出力分布は変更しない。","settings":[{"name":"分離構成","description":"1プリフィラ・2デコーダ。LLaMA3.1-8BではGPUメモリ利用率上限を0.8/0.8/0.5、Qwen2.5-3Bでは0.6/0.6/0.2相当に設定し、デコーダ容量差を作る。"},{"name":"校正","description":"目標誤被覆率α=0.1、直近500要求の移動窓。予測取得待ちの上限βと短ジョブ優先の最大待ち時間はいずれも1秒。"},{"name":"到着負荷","description":"ShareGPT系ではポアソン到着率を変化させ、BurstGPTでは実トレースの時間軸を縮尺して負荷を変える。端末予測遅延は入力長64～4096トークンで8回平均を測定する。"}],"methodology":"主要な実システム評価では、同じ分離型構成でMAPSとvLLM、SGLang、Llumnixを比較し、平均およびP99のエンドツーエンド遅延を中心にTTFT、TPOT、最大ITLを測る。予測器はAlpacaの独立1万件で平均絶対誤差と±50/±100トークン精度を比較し、片側校正は過小予測確率と最大過小誤差で確認する。さらに予測器置換、校正除去、大域配送方針変更、局所順序付け変更のアブレーションを行い、各構成要素が遅延へ与える寄与を分離する。付録ではBurstGPT分布から1万要求を生成した4デコーダの待ち行列シミュレーションで、ラウンドロビンでもKV圧力が偏る動機を検証する。","scope":"実機の主評価は6基A6000、1プリフィラ・2デコーダに限られ、より大規模なクラスタへの一般化は未検証である。ShareGPT系とBurstGPTを使うため会話・バースト負荷は含むが、コード生成やエージェント型ツール利用など大きく異なる分布は未評価。CoT推論のように途中で長さが動的に増えるワークロードでは出力長予測自体が未解決である。"},"reservation":{"claim_id":"claim-79c4ee390d672cc004c43df8","worker_id":"manual-reader-smoketest-20260916T1037JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-e4810cc94fabe510bad2fc16",
+  "job_id": "job-research-6ae155bb5e134fe3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e4810cc94fabe510bad2fc16",
+    "worker_id": "manual-read-20260916-1109",
+    "worker_kind": "scheduled_chat"
+  }
+}
