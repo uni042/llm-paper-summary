@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-83b483046e34ec23467654d3",
-  "job_id": "job-research-aa4d7a102619f4b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-83b483046e34ec23467654d3",
-    "worker_id": "scheduled-chat-normal-20260917T013240",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-83b483046e34ec23467654d3","job_id":"job-research-aa4d7a102619f4b3","data":{"limitations":"サーバ側FHE評価366.4秒は平文推論より桁違いに遅く、対象もLlama-3-8B・128トークン・単一H100に限られる。系列長増加では暗号文数、注意行列、メモリが増え、より大規模モデルへの拡張性は未確立である。クライアント側トークン化・埋め込み・暗号化は時間に含まず、モデル重みは平文でサーバに公開される。honest-but-curious前提なので悪意ある計算改ざん、サイドチャネル、DoS、アクセスパターン漏洩は保護しない。CKKS近似と校正区間に依存するため、分布外入力での数値安定性も追加検証が必要である。","differences":"MPC/HEハイブリッドのIron、PUMA、BOLT、BumbleBeeは複数主体やクライアントとのオンライン通信を必要とするのに対し、Odinは入力送信後のサーバ計算をFHEだけで完結する。NEXUSなど演算単位のFHE方式に対しては、演算間配置変換まで含む全32層の実行鎖を対象にする。THOR型の対角配置をそのままLlamaへ拡張した場合に重み符号化が支配的になることを示し、Odinは特徴量主の層間配置、重み対角再利用、QK^T→Softmax→PVの直接接続でこのLlama固有の規模問題を解く。","implementation_status":"モデル変換、GPU CKKS実行、実験設定を含むエンドツーエンド実装が公開されており、Llama-3-8Bの全32層を単一H100で実行済み。公式コードは https://github.com/Azathoth13/easyfhe-llama3-8b 。","research_positioning":"プライバシー保護LLM推論の中で、暗号プロトコルそのものより暗号文データ配置とモデル実行系の共同設計を中心に据えるシステム研究である。通常のLLMサービングでテンソル配置やカーネル融合が性能を左右するのと同様、FHEでは配置変換が回転・鍵切替・符号化という暗号演算へ増幅されるため、層境界まで含む設計が必要になることを示す。単一GPUで8Bモデルを完走した点は実装上の到達点だが、実用対話遅延にはまだ遠く、今後は長文脈、複数GPU、暗号文・鍵メモリ削減、より低次数の非線形近似との統合が主要課題になる。"},"reservation":{"claim_id":"claim-83b483046e34ec23467654d3","worker_id":"scheduled-chat-normal-20260917T013240","worker_kind":"scheduled_chat"}}
