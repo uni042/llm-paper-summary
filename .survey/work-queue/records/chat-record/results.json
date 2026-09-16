@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0bbfabc249b563dabf75666d",
-  "job_id": "job-research-82da92628b1e61c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0bbfabc249b563dabf75666d",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0bbfabc249b563dabf75666d","job_id":"job-research-82da92628b1e61c3","data":{"overview":"RevatiはvLLMとSGLang、Llama-8B/Qwen3-30B-A3B/Llama-70Bで実GPUのTTFT/TPOT分布を追従し、medianおよびtailを含む予測誤差を5%未満に保つ。実GPU実行に対する評価高速化は概ねvLLM 5〜17倍、SGLang 6〜12倍で、GPU計算時間が長い大モデルほど利益が大きい。固定batch durationでは40msで27倍、0.5〜8 QPSでも10倍超を維持する。","key_results":[{"metric":"TTFT/TPOT予測誤差","value":"5%未満","baseline":"実H200 GPU上のvLLM/SGLang","condition":"3 model configuration、ShareGPT、Poisson arrival","interpretation":"実control planeを直接走らせることでscheduler差を含むlatency distributionを高忠実度に再現する。"},{"metric":"評価wall-clock speedup","value":"vLLM約5〜17×、SGLang約6〜12×","baseline":"実GPU execution","condition":"Llama-8B、Qwen3-30B-A3B、Llama-70B","interpretation":"wall-clockの90〜95%を占めるGPU待ちをvirtual timeでskipするため大モデルほど高速化する。"},{"metric":"固定batch duration感度","value":"5msで4×、10msで9×、20msで17×、40msで27×","baseline":"sleep-based emulation","condition":"runtime predictor誤差を除いた固定duration","interpretation":"GPU相当待ち時間が長いほどtime jumpで省ける割合が増える。"},{"metric":"arrival rate感度","value":"0.5〜8 QPSでTTFT誤差5%未満、speedup 12〜17×程度","baseline":"sleep-based baseline、20ms fixed batch","condition":"request rate sweep","interpretation":"高QPSではbatch formation/bookkeepingが増えてspeedupは少し低下するがCPU overheadは通常200µs未満で10倍超を維持する。"}],"negative_results":"完全なblack-box emulationではなくvLLM/SGLang各50行未満のpatchが必要である。compute bufferをCPUが参照する新しいcontrol-pathはsplit-state modelで扱えずfatal exceptionになる。高速化が進むとtokenization/detokenization等CPU側処理が新たなbottleneckになる可能性がある。","interpretation":"Revatiの主要価値は新しいschedulerを近似再実装することではなく、実装そのものを評価系へ持ち込むことでframework evolutionによるsemantic driftを減らす点にある。精度上限はruntime predictorとtime coordinationの双方で決まり、time protocol自体は失敗時にreal-timeへ退化する安全設計を持つ。","quality_impact":"生成品質を改善・劣化させる方式ではない。性能評価ではEOS依存を避けるため所定token数を生成する一般的な設定を前提とし、GPU tensor値を必要としないcontrol flowを対象にする。"},"reservation":{"claim_id":"claim-0bbfabc249b563dabf75666d","worker_id":"scheduled-chat-llm-survey-turn5-20260916T223150JST","worker_kind":"scheduled_chat"}}
