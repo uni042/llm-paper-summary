@@ -8,14 +8,13 @@
   "source_url": "https://arxiv.org/abs/2602.11530",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11530-pascal-phase-aware-reasoning-llm-scheduling.md",
   "selection_reason": "reasoning phaseとanswering phaseを区別し、reasoning優先・controlled preemption・token pacing・phase-boundary migrationを組み合わせるscheduler。DeepSeek-R1-Distill-Qwen-32Bでtail TTFT最大72%削減を報告し、reasoning model特有の長い内部生成をserving側で扱う代表候補。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-16T11:04:18+00:00",
-  "repair_required": true,
-  "validation_error": "ValueError: metadata.list_summary failed quality checks: 日本語比率 69.4% < 70.0%",
-  "last_validation_failed_at": "2026-09-16T11:18:55+00:00"
+  "completed_at": "2026-09-16T11:20:04+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-e119121016e6ca3bccd934b0.json"
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 20:19:54 JST**
+> 自動生成: **2026-09-16 20:20:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **33** |
+| 収録候補論文 | **32** |
 | 未claim Research job | **32** |
-| 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-16 20:14:08 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **69** |
+| 最終検証済みResearch収録 | **09-16 20:20:04 JST（4秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **33** |
+| canonical_id確認済みの一意な候補論文 | **32** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **33** |
+| 非終端Research job合計 | **32** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **34** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **35** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **34** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **35** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 20:20:04 JST** [research] `arXiv:2602.11530` — PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models
+  - job: `.survey/work-queue/jobs/job-research-c15602f379300b58.json`
+  - result: `.survey/work-queue/results/research/attempt-e119121016e6ca3bccd934b0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e119121016e6ca3bccd934b0.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11530-pascal-phase-aware-reasoning-llm-scheduling.md`
 - **09-16 20:14:08 JST** [research] `arXiv:2604.10152` — SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-adc94daa00d75514.json`
   - result: `.survey/work-queue/results/research/attempt-cd7cbdc8e55bcf2679e3c08f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-ad5dfb814d7090ff8006d8de.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ad5dfb814d7090ff8006d8de.json`
   - paper: `papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md`
-- **09-16 17:15:27 JST** [research] `arXiv:2509.24832` — SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching
-  - job: `.survey/work-queue/jobs/job-research-b98e4e299d06a6a5.json`
-  - result: `.survey/work-queue/results/research/attempt-4aa0bdcf550c974e39ccae92.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4aa0bdcf550c974e39ccae92.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.11530` — PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 20:14:53 JST** / heartbeat: **—** / lease expiry: **09-16 21:44:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c15602f379300b58.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **33** |
+| ready | **32** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **616** |
+| inference/training/survey配下の論文Markdown実体 | **617** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **425** |
-| └ Research | **242** |
+| 成功result未照合のimmutable submission | **424** |
+| └ Research | **241** |
 | └ Audit | **2** |
 | └ Discovery | **181** |
 
