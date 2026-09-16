@@ -2,47 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-095563049565ccc0498d1b47",
-  "job_id": "job-research-ad3541d28015a662",
-  "data": {
-    "positioning": "エッジ・クラウド協調推論で計算位置を最適化する従来方式に対し、通信境界を通る表現そのものを融合済み固定長潜在表現へ変える研究である。",
-    "differences": "一般的な分割推論はモデル中間活性を送り、BottleNet++等は中間特徴を圧縮する。マルチモーダル協調方式ではモダリティ別特徴を個別に送ってサーバで融合することも多い。EMMIは通信前にモダリティ間相互作用まで融合し、その統一表現を圧縮するため、異種入力数や下流モデル内部の分割位置に通信形式が直接縛られにくい。",
-    "relation_to_prior_work": [
-      {
-        "work": "split computing",
-        "difference": "モデルの分割位置を選ぶ代わりに、端末で融合済み潜在表現を生成して一度だけサーバへ渡す。"
-      },
-      {
-        "work": "BottleNet++ / activation compression",
-        "difference": "単一モデル中間活性ではなく、複数モダリティの相互作用を含む統一表現を圧縮する。"
-      },
-      {
-        "work": "TOFC",
-        "difference": "視覚などモダリティ別特徴を通信して後段融合するのではなく、通信前の交差モダリティ融合を圧縮対象にする。"
-      },
-      {
-        "work": "compact MLLM on-device",
-        "difference": "高容量サーバMLLMを小型化せず維持し、端末側は軽量な表現生成と圧縮に限定する。"
-      }
-    ],
-    "strengths": [
-      "通信量を32分の1にしながらタスク認識型では非圧縮精度との差を0.16ポイント以内に保つ。",
-      "低帯域0.1Mbpsでは圧縮費用0.641msに対して通信時間を約635ms削減する。",
-      "圧縮器とサーバ推論器を復元段で分離し、圧縮方式変更時のサーバ本体再学習を避ける設計である。",
-      "ラベル不要型とタスク認識型の両方を評価し、汎用性と精度の交換関係を示す。"
-    ],
-    "limitations": [
-      "主要評価はMS-COCOの画像・文照合という二値分類で、論文が掲げる一般的な開放型マルチモーダル推論を直接評価していない。",
-      "エッジ側は実際のスマートフォンや組込み機器ではなくx86_64単一CPUスレッドを代理環境として測定する。",
-      "総遅延3.4倍は0.1Mbpsという強い帯域制約での推定値で、高帯域LTE・Wi-Fi・5Gでは遅延利得が小さい。",
-      "ラベル不要圧縮はBlockPCAより精度が低く、学習型圧縮が常に単純手法を上回るわけではない。"
-    ],
-    "implementation_status": "研究実装であり、CLIP/MobileCLIP、圧縮自己符号器、凍結LLaVA-1.5-7B、射影MLPと分類頭を二段階学習する。本文から公式コード公開先は確認できない。",
-    "research_positioning": "通信律速のマルチモーダル推論に対し、表現設計とシステム分離を同時に扱う初期的なエッジ・サーバ協調方式である。",
-    "repository_fit": "11-llm-serving-scheduling-disaggregation系統の隣接領域として、遠隔推論で送信する中間情報を圧縮して通信時間を減らす設計比較に有用である。"
-  },
+  "attempt_id": "attempt-f75804377f721126ddb01d08",
+  "job_id": "job-research-3d5f11737ec9b4a2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-095563049565ccc0498d1b47",
+    "claim_id": "claim-f75804377f721126ddb01d08",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

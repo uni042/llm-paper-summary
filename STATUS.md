@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:33:30 JST**
+> 自動生成: **2026-09-16 18:33:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **24** |
-| 未claim Research job | **22** |
+| 未claim Research job | **21** |
 | 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-16 18:33:21 JST（9秒前）** |
+| 最終検証済みResearch収録 | **09-16 18:33:21 JST（16秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **42** | **8** | **4** | **4** | **2** | **1** | — |
+| Research | **42** | **8** | **4** | **4** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **43** | **18** | **4** | **14** | **2** | **1** | **10** |
+| 合計 | **43** | **18** | **4** | **14** | **3** | **1** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,7 +197,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.09662` — PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 18:33:36 JST** / heartbeat: **—** / lease expiry: **09-16 20:03:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3d5f11737ec9b4a2.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`

@@ -2,51 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-095563049565ccc0498d1b47",
-  "job_id": "job-research-ad3541d28015a662",
-  "data": {
-    "evaluation_summary": "MS-COCO画像・文ペアの照合課題で、CLIP ViT-B/32とMobileCLIP2-S0の512次元特徴を融合し、全方式で64次元潜在表現へ圧縮する。非圧縮、PCA、BlockPCA、LDA、AE、VAEと、EMMIのラベル不要型・タスク認識型を比較する。精度とサーバ推論はQuadro RTX 6000、エッジ側融合・圧縮はx86_64単一CPUスレッドで測定する。",
-    "scope": "画像とテキストの二モダリティを用いた画像・文照合。エッジ・サーバ間の帯域を0.1〜100Mbpsとして通信遅延を算出する。",
-    "hardware": [
-      "NVIDIA Quadro RTX 6000 24GB",
-      "x86_64 CPU単一スレッド"
-    ],
-    "software": [
-      "CLIP ViT-B/32",
-      "MobileCLIP2-S0",
-      "LLaVA-1.5-7B",
-      "二層MLP射影器"
-    ],
-    "models": [
-      "CLIP ViT-B/32 87M image encoder",
-      "MobileCLIP2-S0 11.4M",
-      "LLaVA-1.5-7B 6.6B backbone"
-    ],
-    "datasets": [
-      "MS-COCO image-caption pairs"
-    ],
-    "workload": "72K学習、5K検証、5K試験の画像・文照合。融合2048次元表現を64次元へ圧縮し、8個のソフトプロンプトとしてLLaVAへ接続する。",
-    "baselines": [
-      "非圧縮転送",
-      "PCA",
-      "BlockPCA",
-      "LDA",
-      "AE",
-      "VAE"
-    ],
-    "metrics": [
-      "分類精度",
-      "圧縮率",
-      "通信バイト数",
-      "端末側処理時間",
-      "推定総推論遅延"
-    ],
-    "methodology": "圧縮器を先に学習して固定し、生成した潜在表現でサーバ射影・分類頭を学習する。符号器とLLaVA本体は固定する。端末処理時間は30回のウォームアップ後200回測定する。",
-    "predictor_accuracy": "通信時間は送信サイズと帯域から算出し、端末側処理とサーバ推論は測定値を使う。",
-    "control_knobs": "圧縮方式、教師ラベル利用有無、符号器、潜在次元64、リンク帯域。"
-  },
+  "attempt_id": "attempt-f75804377f721126ddb01d08",
+  "job_id": "job-research-3d5f11737ec9b4a2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-095563049565ccc0498d1b47",
+    "claim_id": "claim-f75804377f721126ddb01d08",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
