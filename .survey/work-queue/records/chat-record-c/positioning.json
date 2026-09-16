@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-c84dd14a67b788aace9f590e",
-  "job_id": "job-research-8f7fdb4eba0d8a63",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c84dd14a67b788aace9f590e",
-    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c84dd14a67b788aace9f590e","job_id":"job-research-8f7fdb4eba0d8a63","data":{"limitations":[{"name":"MI350X中心の実証","description":"task abstractionはchiplet数・worker数・L2容量をparameter化しMI300XやBlackwellへ概念的に適用できるが、end-to-end評価はMI350Xのみで、NVIDIA Blackwell backendと実機効果は未検証である。"},{"name":"decode dense model中心","description":"評価はdense Qwen3-8Bのdecodeが中心で、prefill、MoE、複雑なserving schedulerとの統合効果は追加検証が必要。tensor parallelでlocal shardが小さくなるとL2 reuse利益も変化する。"},{"name":"scheduler資源消費","description":"各XCDで1 CUをschedulerに予約するためMI350では3.1%のCUをcontrolへ使う。taskが極端に短い場合はscheduler overheadが無視できなくなる。"}],"differences":[{"name":"vLLM/SGLangとの差","description":"operatorごとにHIP/CUDA kernelをlaunchする通常serving frameworkに対し、Fleetは全decodeをpersistent megakernel内task graphとして実行し、launch gapとkernel境界でのcache reuse喪失を避ける。"},{"name":"Mirage MPKとの差","description":"Mirage MPKもpersistent task graphを使うがchiplet境界を認識せずCU-taskをflatに配る。FleetはChiplet-taskを追加し、weight partitionとworkerをXCD-local L2 scopeへ固定する。Mirageが何を融合するかを扱うのに対しFleetはどこへscheduleするかを扱い補完的。"},{"name":"standalone chiplet-aware GEMMとの差","description":"HipKittens等は単一GEMM内でXCD localityを最適化する。FleetはGEMM、attention、normalization、activationを一つのpersistent runtimeへ統合し、operator間dependencyとhierarchical synchronizationまでchiplet-awareにする。"}],"implementation_status":"Mirage Persistent Kernel runtimeを拡張し、XCD scheduler、Chiplet-task descriptor、hierarchical event、M-major cooperative GEMMを実装してMI350Xで実測。compiler-driven Chiplet-task superoptimizationは将来課題。","research_positioning":"LLM inference megakernelとGPU cache hierarchy co-designの研究。CPU/GPU/SSD間offloadではなく、単一GPU package内部のprivate L2を新しいlocality階層として明示する。","relation_to_existing_repository":"megakernel、kernel fusion、cache-aware scheduling、memory hierarchy、inference runtime系統を接続する。特に将来のmulti-die GPUでHBM trafficを減らすsoftware abstractionとして重要。","audit_required":false},"reservation":{"claim_id":"claim-c84dd14a67b788aace9f590e","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
