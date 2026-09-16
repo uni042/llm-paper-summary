@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T18:38:37.191179+00:00",
+  "updated_at": "2026-09-16T18:41:59.245627+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T18:38:37.191179+00:00",
+      "last_recorded_at": "2026-09-16T18:41:59.245627+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 174,
+        "research_completed": 175,
         "audit_completed": 0,
         "discovery_completed": 85,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35065020987:1",
-          "recorded_at": "2026-09-16T06:43:44.426068+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35065020987",
-            "run_attempt": "1",
-            "source_sha": "987a3093c94304ffd90f162a043fa5f459ff2872"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35065278913:1",
           "recorded_at": "2026-09-16T06:46:55.560564+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35135526307",
             "run_attempt": "1",
             "source_sha": "bcac78356f226ba15fffe2f831c28c23302b0c88"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35135998381:1",
+          "recorded_at": "2026-09-16T18:41:59.245627+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35135998381",
+            "run_attempt": "1",
+            "source_sha": "1246ddfa6ad2685155295ed1e6757d421b45b786"
           },
           "signals": [
             "research_completed"
@@ -21767,6 +21767,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.13161",
           "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-38c18cd4bb2728b9",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13285",
+          "title": "Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction",
           "from": "ready",
           "to": "completed"
         }
