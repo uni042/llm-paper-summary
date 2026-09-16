@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T12:42:04.359646+00:00",
+  "updated_at": "2026-09-16T13:04:45.630176+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T12:42:04.359646+00:00",
+      "last_recorded_at": "2026-09-16T13:04:45.630176+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18694,24 +18694,10 @@
         "discovery_completed": 79,
         "blocked": 12,
         "new_jobs": 106,
-        "new_papers": 158,
+        "new_papers": 163,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35058132727:1",
-          "recorded_at": "2026-09-16T05:06:16.856449+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35058132727",
-            "run_attempt": "1",
-            "source_sha": "f654fb07a391b18415bb226a00c1ad89b5059c76"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35058332185:1",
           "recorded_at": "2026-09-16T05:08:57.801773+00:00",
@@ -19596,6 +19582,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35099462436:1",
+          "recorded_at": "2026-09-16T13:04:45.630176+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35099462436",
+            "run_attempt": "1",
+            "source_sha": "c14bf38716bf55f5418dfcad1debdf3a268dfeb4"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -22503,7 +22504,12 @@
         "arXiv:2512.01357",
         "arXiv:2602.11530",
         "arXiv:2604.10152",
-        "arXiv:2607.09248"
+        "arXiv:2607.09248",
+        "arXiv:2506.12417",
+        "arXiv:2604.17172",
+        "arXiv:2604.24971",
+        "arXiv:2605.11537",
+        "arXiv:2605.22416"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -22697,7 +22703,8 @@
         ".survey/work-queue/results/discovery-specialist-20260916T2100-r06.json",
         ".survey/work-queue/results/discovery-specialist-20260916T2100-r07.json",
         ".survey/work-queue/results/discovery-specialist-20260916T2100-r08.json",
-        ".survey/work-queue/results/discovery-specialist-20260916T2100-r09.json"
+        ".survey/work-queue/results/discovery-specialist-20260916T2100-r09.json",
+        ".survey/work-queue/results/discovery-specialist-20260916T2200-r01.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -22774,8 +22781,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 618,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 623,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

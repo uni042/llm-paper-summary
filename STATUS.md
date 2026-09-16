@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 22:04:20 JST**
+> 自動生成: **2026-09-16 22:04:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **28** |
 | 直近24hの検証済みResearch収録 | **75** |
 | 最終検証済みResearch収録 | **09-16 21:42:00 JST（22分前）** |
-| 整合性異常 | **13** |
+| 整合性異常 | **14** |
 
 ## 現在の収録候補
 
@@ -245,10 +245,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **441** |
+| 成功result未照合のimmutable submission | **442** |
 | └ Research | **245** |
 | └ Audit | **2** |
-| └ Discovery | **194** |
+| └ Discovery | **195** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -265,10 +265,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **13** |
+| 対応jobなしsubmission（有効Discovery round除外） | **14** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **13** |
+| 異常レコード合計（重複排除） | **14** |
 
 ### このSTATUSが採用する証拠
 
