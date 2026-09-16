@@ -19,24 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 42,
-    "actively_claimed": 0,
-    "claimable": 42
+    "actively_claimed": 1,
+    "claimable": 41
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-99325bb434e8c117",
-      "type": "research",
-      "lane": null,
-      "priority": 92,
-      "canonical_id": "arXiv:2609.16161",
-      "title": "LLM Inference in a Flash!",
-      "source_url": "https://arxiv.org/abs/2609.16161",
-      "paper_path": "papers/inference/04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-71c206bf0990ca87",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-21f0d525f3274129",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2609.14773",
+      "title": "Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations",
+      "source_url": "https://arxiv.org/abs/2609.14773",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T19:06:07+00:00"
+  "generated_at": "2026-09-16T19:32:14+00:00"
 }

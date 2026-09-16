@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d6929dca26947ce1b79ba676",
-  "job_id": "job-research-38c18cd4bb2728b9",
-  "data": {
-    "limitations": "本稿は350M規模・30B学習トークンでの品質評価であり、大規模LLMへ同じ精度差が維持されるか未確認である。最重要のシステム主張である自己回帰デコードの速度・実メモリ帯域・ピークメモリは専用カーネル評価中で未報告。分離RoPEの位置幅と内容幅の影響も完全には分離されていない。",
-    "differences": "GQAはグループごとにキーと値を両方共有・保存するが、GVAは値だけをグループ化して保存し、各クエリヘッド固有の内容キーを線形写像で復元する。MLAはキーと値を共同の低次元潜在へ圧縮するのに対し、GVAは値そのものを永続内容状態として残すため値経路が直接的である。MQAのようにキー多様性まで単一共有へ落とさず、H個の再構成キーを維持する。",
-    "implementation_status": "専用の融合デコードカーネルを開発済みでエンドツーエンド性能を評価中。著者はオープンソース公開予定としているが、確認時点では公開URL未提示。初期のK=V方式Lumma-0.6B-BaseはHugging Faceで公開されたが、最終GVAサービング実装とは異なる。",
-    "research_positioning": "KVキャッシュ容量削減を量子化・枝刈り・オフロードではなく注意機構の表現そのものから行う系統に属する。GQAとMLAの間で、値のグループ共有による容量効率とヘッド別キー多様性を両立し、さらに推論時の線形写像吸収で内容キー読出しを消す。実測サービング速度が今後示されれば、KV容量とメモリ帯域を同時に減らすアーキテクチャとして重要になる。"
-  },
+  "attempt_id": "attempt-9333f33610f25827f87c2af1",
+  "job_id": "job-research-99325bb434e8c117",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d6929dca26947ce1b79ba676",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-9333f33610f25827f87c2af1",
+    "worker_id": "scheduled-chat-20260917t043138-0900",
     "worker_kind": "scheduled_chat"
   }
 }
