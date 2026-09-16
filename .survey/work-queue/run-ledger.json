@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:11:30.147964+00:00",
+  "updated_at": "2026-09-16T06:12:37.085768+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:11:30.147964+00:00",
+      "last_recorded_at": "2026-09-16T06:12:37.085768+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 129,
         "audit_completed": 0,
         "discovery_completed": 52,
-        "blocked": 5,
+        "blocked": 6,
         "new_jobs": 71,
         "new_papers": 127,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34959443166:1",
-          "recorded_at": "2026-09-15T10:50:10.675093+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34959443166",
-            "run_attempt": "1",
-            "source_sha": "fc69efe3cdcd162a4760f3e6eec7d69c06abefe6"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34961268322:1",
           "recorded_at": "2026-09-15T11:07:22.434101+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35062674662:1",
+          "recorded_at": "2026-09-16T06:12:37.085768+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35062674662",
+            "run_attempt": "1",
+            "source_sha": "f2a7c04dda894b1b88e864f2af6d7f1eebc4d6b8"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -21087,6 +21087,14 @@
           "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2d9b8557211e7f73",
+          "type": "research",
+          "canonical_id": "arXiv:2607.03876",
+          "title": "AdaptiveSD A Stability-Aware, Runtime-Adaptive Speculative Decoding Framework with Multi-Policy Orchestration for CPU-Constrained LLM Inference",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -21951,7 +21959,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 587,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
