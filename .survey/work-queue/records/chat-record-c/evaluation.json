@@ -2,51 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ceb97b3338b00cf782876183",
-  "job_id": "job-research-5d74d5ee3bd9a66c",
-  "data": {
-    "scope": "S-LoRAは実H100上の測定値だが、PLoRAのCXL共有メモリ/NDP装置はSamsung CXL-PNMに基づく性能・面積モデルを用いるため、PLoRA全体は実機完成システムの測定ではない。主評価はH100 1基と4台の512GB装置、最大1000 LoRAで行い、モデル規模の拡張は7Bから1.2Tまで解析モデルで評価する。",
-    "evaluation_setup": "GPUはH100 80GB、HBM 3350GB/s、FP16 989TFLOPS。共有メモリ装置4台は各512GB、DRAM 1.1TB/s、NDP 2TFLOPSで合計2TB・8TFLOPS。基準リンクはCXL 3.1相当128GB/s・200ns。Llama2-7B/13B、Llama3-8B、Qwen3-30B等を用い、LMSYS Chatbot Arena由来の偏り負荷と、1000アダプタのuniform/skewed、短文脈100〜1024、長文脈2048〜4096を評価する。",
-    "models": [
-      "Llama2-7B",
-      "Llama2-13B",
-      "Llama3-8B",
-      "Qwen3-30B"
-    ],
-    "hardware": [
-      "NVIDIA H100 80GB",
-      "4×512GB PLoRA/CXL-PNM modeled devices"
-    ],
-    "workloads": [
-      "LMSYS skewed 25 adapters",
-      "Uniform 1000 adapters",
-      "Uniform-long 1000 adapters",
-      "Skewed 1000 adapters",
-      "Skewed-long 1000 adapters"
-    ],
-    "metrics": [
-      "デコードTPOT",
-      "プリフィルTTFT",
-      "デコードスループット",
-      "GPUメモリ使用量",
-      "リンク帯域感度",
-      "NDP演算・DRAM帯域感度",
-      "面積・電力オーバーヘッド"
-    ],
-    "baselines": [
-      "S-LoRA real H100",
-      "CPU-LoRA-Offload",
-      "Grace-Hopper",
-      "PLoRA-NoCXL",
-      "Pure CXL",
-      "NDP-only variants",
-      "distributed-attention/strategy-selection ablations"
-    ],
-    "simulation_assumptions": "NDPは既存Samsung CXL-PNMの1.1TB/s・512GBを参照し、各装置2TFLOPS FP16としてモデル化する。リンク性能は帯域と遅延でパラメータ化し、CXL級からNVLink級まで感度を掃引する。",
-    "evaluation_caveats": "完成したPLoRA ASIC/CXL装置を実H100へ接続したエンドツーエンド実測ではない。S-LoRA実機値との比較には実機対モデルの差が含まれる。1.2T規模はテンソル並列時にアダプタ通信も分割される前提の解析拡張である。"
-  },
+  "attempt_id": "attempt-0c7681b00fbe475af7e019e9",
+  "job_id": "job-research-997bb7245fdc3187",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ceb97b3338b00cf782876183",
+    "claim_id": "claim-0c7681b00fbe475af7e019e9",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }

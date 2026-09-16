@@ -2,88 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ceb97b3338b00cf782876183",
-  "job_id": "job-research-5d74d5ee3bd9a66c",
-  "data": {
-    "canonical_id": "arXiv:2608.05483",
-    "arxiv_id": "2608.05483",
-    "doi": "10.48550/arXiv.2608.05483",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": []
-    },
-    "title": "PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving",
-    "summary": "PLoRAは、1000個超のLoRAアダプタとKVキャッシュをGPUやCPU DRAMへ詰め込まず、CXL等のメモリ意味論を持つ共有メモリへ置き、データの近くに小規模な近接データ処理（Near-Data Processing; NDP）演算器を配置するMulti-LoRAサービング方式である。GPUはホストCPUを介さずload/storeで共有メモリとNDPへ要求を出し、巨大なアダプタ行列やKVキャッシュそのものではなく縮約後の小さな結果だけをリンク越しに受け取る。各アダプタのバッチ数に応じて4種類のLoRA実行戦略と2種類のattention戦略を費用モデルで選び、GPUメモリ不足時にはcold adapter、KVキャッシュ、hot/serving adapterの保持優先度を含めて再配置する。H100 1基と4台の512GB共有メモリ装置をモデル化した評価では、1000アダプタ条件でS-LoRA実機比のデコードTPOTを平均6.6倍低減し、短文脈では32GB/sで性能が飽和した。メモリ集約だが計算量の小さいLoRA/KV処理をNDPへ移すことで、リンク帯域を追加演算へ交換し、CXL級からNVLink級まで同じ設計を容量拡張中心に利用できる。",
-    "list_summary": "PLoRAはLoRAアダプタとKVキャッシュをCXL級共有メモリへ置き、NDPで縮約して小さな結果だけをGPUへ返し、バッチ別戦略選択で1000超アダプタを低遅延に処理する。",
-    "authors": [
-      "Zhongkai Yu",
-      "Ohm Rishabh Venkatachalam",
-      "Zheng Wang",
-      "Yikai Li",
-      "Yichen Lin",
-      "Zihao Yu",
-      "Yuke Wang",
-      "Liu Liu",
-      "Xulong Tang",
-      "Shuyi Pei",
-      "Yangwook Kang",
-      "Yufei Ding"
-    ],
-    "authors_affiliations": "UC San Diego、New York University、UC Santa Cruz、Rice University、Rensselaer Polytechnic Institute、University of Pittsburgh、Samsung Semiconductor。",
-    "published": "2026-08-06",
-    "publication": "arXiv:2608.05483v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-08-06提出）。一次資料から査読済み採録は確認できない。",
-    "lineage": "moe-inference-expert-placement-caching",
-    "topics": [
-      "Multi-LoRAサービング",
-      "CXL",
-      "共有メモリ",
-      "近接データ処理",
-      "KVキャッシュ",
-      "GPUメモリ管理",
-      "LoRAアダプタ配置"
-    ],
-    "importance": "高。GPU計算資源を追加購入して容量を増やすのではなく、共有メモリ容量と小規模NDPを組み合わせ、リンク帯域を縮約演算で節約する設計をMulti-LoRAへ具体化する。",
-    "hardware_evaluation": "NVIDIA H100 80GB 1基、PLoRAメモリ装置4台を中心に評価。各装置512GB、LPDDR5X 1.1TB/s、NDP 2TFLOPS FP16、合計8TFLOPS。CXL 3.1相当128GB/s・200nsを基準としリンク帯域感度も評価。S-LoRAは実H100測定、PLoRA装置は既存CXL-PNM相当パラメータに基づくモデル評価。",
-    "hardware_details": "GPU HBM 3350GB/s、H100 FP16 989TFLOPS。4装置合計2TB共有メモリ。NDP追加面積は3.4%未満と報告。",
-    "quality_effect": "LoRAとattentionの数学的計算をGPU/NDP間で分割する方式で、近似によるモデル品質低下を狙うものではない。実行戦略は同じ演算結果を保つため原則無損失。",
-    "storage_targets": [
-      "CXL/NVLink級共有メモリ上のLoRAアダプタ",
-      "共有メモリ上のKVキャッシュ",
-      "GPU HBMへ選択的にキャッシュするhot/serving adapterとKV断片"
-    ],
-    "bottlenecks": [
-      "PCIe/ホスト介在のアダプタ転送",
-      "GPU HBM容量",
-      "共有メモリリンク帯域",
-      "アダプタごとに変動するバッチ数",
-      "LoRAとKVキャッシュのGPUメモリ競合"
-    ],
-    "evidence_locations": [
-      "§I–III",
-      "§IV–VI",
-      "Tables I–IV",
-      "§VII",
-      "§VIII"
-    ],
-    "source": "https://arxiv.org/abs/2608.05483",
-    "sources": [
-      "https://arxiv.org/abs/2608.05483",
-      "https://arxiv.org/html/2608.05483",
-      "https://arxiv.org/pdf/2608.05483"
-    ],
-    "code": "",
-    "implementation": "CXL 3.1 Type-3メモリ装置へNDPコアとread-compute要求インターフェースを追加する設計を提示し、Samsung CXL-PNM装置に基づく現実的な帯域・容量・演算性能で評価する。論文中に公開コードURLは確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "一次資料の関連研究節を確認",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-0c7681b00fbe475af7e019e9",
+  "job_id": "job-research-997bb7245fdc3187",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ceb97b3338b00cf782876183",
+    "claim_id": "claim-0c7681b00fbe475af7e019e9",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }

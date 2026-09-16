@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ceb97b3338b00cf782876183",
-  "job_id": "job-research-5d74d5ee3bd9a66c",
-  "data": {
-    "overview": "PLoRAは評価した全モデル・全負荷で最小のデコードTPOTを示し、実H100上のS-LoRAと比較可能な2モデルでは平均6.6倍、最大13.1倍低いTPOTとなった。CPU DRAMからの従来オフロード比では3.7〜177倍低く、ホスト介在を除くCXL load/store、NDP縮約、分散attention、アダプタ別戦略選択の効果が積み重なる。短文脈ではリンク帯域32GB/s付近で性能が飽和し、CXL 3.1想定128GB/sの4分の1でもリンクが主要律速でなくなるため、高速リンクの余剰帯域を速度より共有容量へ使えるという設計結論を得る。",
-    "key_results": [
-      {
-        "metric": "S-LoRA比デコードTPOT",
-        "value": "平均6.6倍低減、最大13.1倍",
-        "baseline": "実H100上S-LoRA",
-        "condition": "実行可能な2モデル、各評価負荷",
-        "interpretation": "共有メモリNDPとGPU協調でCPU DRAM stagingを避ける効果が大きい。"
-      },
-      {
-        "metric": "CPU-LoRA-Offload比TPOT",
-        "value": "3.7〜177倍低減",
-        "baseline": "CPU DRAM/PCIeオフロード",
-        "condition": "H100、複数モデル・負荷",
-        "interpretation": "ホスト介在コピーと巨大データ転送を縮約結果転送へ置換する効果を示す。"
-      },
-      {
-        "metric": "分散attention効果",
-        "value": "平均3.8倍",
-        "baseline": "NS構成（NDP+戦略選択、attentionはGPUのみ）",
-        "condition": "各負荷のアブレーション",
-        "interpretation": "KVキャッシュ全体をリンク越しにGPUへ運ばず、共有メモリ側でattention部分計算することが主要寄与。"
-      },
-      {
-        "metric": "戦略選択効果",
-        "value": "ND(E3)比平均30%、ND(E4)比平均10%改善",
-        "baseline": "固定E3/E4戦略",
-        "condition": "アダプタごとにバッチ数が異なる負荷",
-        "interpretation": "小・大バッチが混在するため単一GPU/NDP分担では全アダプタを最適化できない。"
-      },
-      {
-        "metric": "短文脈の帯域飽和点",
-        "value": "約32GB/s",
-        "baseline": "CXL 3.1想定128GB/s",
-        "condition": "短文脈デコード",
-        "interpretation": "NDP縮約後はリンク帯域を4倍増やしても速度向上が小さく、容量側への投資余地が大きい。"
-      },
-      {
-        "metric": "追加装置面積",
-        "value": "3.4%未満",
-        "baseline": "参照CXL-PNM装置",
-        "condition": "NDPコア追加",
-        "interpretation": "数TFLOPS級の小規模演算追加で大きな帯域節約を得る設計。"
-      }
-    ],
-    "negative_results": "固定E4はUniform負荷では完全PLoRAより約10%良い場合があるが、1000アダプタの平均ランクで必要なGPUメモリが約91GBとなりH100 80GBには収まらず、実現不能な理想値である。Grace-Hopperの450GB/sリンクは短文脈では競合するが、長文脈Llama2-13B Uniform-longではPLoRAより13.6倍遅くなり、帯域だけではKV転送量を解決できない。PLoRAのプリフィルも長文脈・大バッチではTTFTが大きく、13B、long、batch 1024では約119秒となるため、その領域は対象サービング範囲外とされる。",
-    "interpretation": "PLoRAの本質はCXLそのものではなく、メモリ意味論付きリンクの先で高縮約演算を行うことである。LoRA/KVは容量を大量消費するが演算は軽いため、NDPへ少量の演算器を追加して大きなデータ移動を小さな結果へ変換すると、リンク帯域より共有メモリ容量が支配資源へ変わる。",
-    "quality_impact": "LoRA行列積とattentionをGPU/NDP間で等価に分割するため、モデル出力を近似して高速化する方式ではなく原則無損失である。評価上の差は性能・容量の配置戦略によるもので、精度低下との交換ではない。"
-  },
+  "attempt_id": "attempt-0c7681b00fbe475af7e019e9",
+  "job_id": "job-research-997bb7245fdc3187",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ceb97b3338b00cf782876183",
+    "claim_id": "claim-0c7681b00fbe475af7e019e9",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }
