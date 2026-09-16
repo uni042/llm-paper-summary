@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 10:45:59 JST**
+> 自動生成: **2026-09-16 10:46:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **69** |
 | 未claim Research job | **68** |
 | 直近24hの検証済みResearch収録 | **16** |
-| 最終検証済みResearch収録 | **09-16 10:04:04 JST（41分前）** |
+| 最終検証済みResearch収録 | **09-16 10:04:04 JST（42分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **5** | **2** | **3** | **2** | **1** | — |
+| Research | **8** | **1** | **0** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **2** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **10** | **11** | **2** | **9** | **2** | **1** | **6** |
+| 合計 | **10** | **7** | **0** | **7** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -108,25 +108,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-15 18:30 JST** / worker `scheduled-chat-paper-20260915T1830JST`
-- immutable submission: **5件** / 検証済み成功: **2件** / 未完了・未検証: **3件**
-- **成功** `arXiv:2504.07494` — Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving
-  - job: `.survey/work-queue/jobs/job-research-b22f71500ae1903a.json`
-  - result: `.survey/work-queue/results/research/attempt-005c2488539329fa13df896f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-005c2488539329fa13df896f.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md`
-- **成功** `arXiv:2601.17768` — LLM-42: Enabling Determinism in LLM Inference with Verified Speculation
-  - job: `.survey/work-queue/jobs/job-research-1fc8cd177d28f575.json`
-  - result: `.survey/work-queue/results/research/attempt-2767bee85a3612f009a3c651.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2767bee85a3612f009a3c651.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-817bd95f2c782ad4248fa08d.json` (job `job-research-3df42686de08919b`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a88806a6b69afa14faffe306.json` (job `job-research-229f0f103fc45c25`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-acc918e244bc8cbe6bfce5af.json` (job `job-research-3df42686de08919b`)
+- 最新観測run: **2026-09-16 10:37 JST** / worker `manual-reader-smoketest-20260916T1037JST`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json` (job `job-research-41c06f0529c148e7`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-15 18:30 JST** / worker `scheduled-chat-paper-20260915T1830JST`
+- 最新観測run: **2026-09-16 10:37 JST** / worker `manual-reader-smoketest-20260916T1037JST`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -218,8 +206,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **239** |
-| └ Research | **129** |
+| 成功result未照合のimmutable submission | **240** |
+| └ Research | **130** |
 | └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job
