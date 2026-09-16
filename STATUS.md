@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:02:50 JST**
+> 自動生成: **2026-09-17 03:03:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **19** |
 | 未claim Research job | **18** |
 | 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 02:36:39 JST（26分前）** |
+| 最終検証済みResearch収録 | **09-17 02:36:39 JST（27分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **1** | **0** | **1** | **0** | **0** | **4** |
-| 合計 | **33** | **9** | **4** | **5** | **1** | **0** | **4** |
+| Discovery | **14** | **2** | **0** | **2** | **0** | **0** | **5** |
+| 合計 | **33** | **10** | **4** | **6** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,11 +186,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 03:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **4件**
-- 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **5件**
+- 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness / GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
 - round `specialist-recent-inference-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
   - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cross-dc-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json`
+  - 探索軸: GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -248,10 +252,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **394** |
+| 成功result未照合のimmutable submission | **395** |
 | └ Research | **266** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
