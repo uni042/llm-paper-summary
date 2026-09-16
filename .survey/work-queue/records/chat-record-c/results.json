@@ -2,20 +2,61 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8aab57af0b77e68432c90db5",
-  "job_id": "job-research-648fe1e5b80283fd",
+  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "job_id": "job-research-411dee2b8db54e04",
   "data": {
-    "overview": "ECOKVの利得はKV予算が厳しいほど大きい。Qwen2-VL-7B-InstructでSnapKVへ統合した場合、予算64のDocVQAはMixKVの67.9から81.8へ、OCRBenchは66.0から74.8へ、TextVQAは72.5から78.8へ改善した。AdaKVとの組合せでも予算64のDocVQAは67.8から82.7へ伸びる。観測窓を32から4へ縮めるだけでも改善するが、同じ窓幅にそろえた比較でもECOKVはMixKVを上回る条件が多く、相補的な幾何指標自体の寄与が確認できる。効率面では追加のユークリッド距離計算による負担は小さく、合成8192トークン入力ではSnapKV+ECOKVが16.408秒でSnapKVの16.536秒と同等だった。",
+    "overview": "Endorは50%非構造枝刈りFP16重みを元サイズの56%へ縮め、GPU復元費用を小さく保つことで転送支配の退避推論を高速化する。同一配置のOPT-66Bでは54秒から35.8秒へ短縮し、圧縮によりCPU常駐層を8層から14層へ増やすと密重みAccelerate比1.70倍となる。GPUダイレクトストレージではOPT-66Bの1回通過が24.2秒となり約2.23倍、論文全体ではOPT-66B最大約2.25倍、Llama2-70B最大2.37倍を報告する。",
     "key_results": [
-      {"metric": "DocVQA精度", "value": "81.8%", "baseline": "SnapKV + MixKV 67.9%", "condition": "Qwen2-VL-7B-Instruct、KV予算64", "interpretation": "コサイン類似度中心の多様性評価へユークリッド幾何を加えることで、厳しいキャッシュ制約下でも文書中の有用情報を大幅に保持でき、13.9ポイント改善した。"},
-      {"metric": "DocVQA精度", "value": "82.7%", "baseline": "AdaKV + MixKV 67.8%", "condition": "Qwen2-VL-7B-Instruct、KV予算64", "interpretation": "注意ヘッドごとの予算配分を持つAdaKVへ追加しても14.9ポイント改善しており、ECOKVの選択得点が既存の予算配分機構と独立に効くことを示す。"},
-      {"metric": "MP-DocVQA得点", "value": "51.3", "baseline": "SnapKV + MixKV 42.8", "condition": "Qwen2-VL-7B-Instruct、KV予算64", "interpretation": "複数ページ文書の長い視覚文脈でも8.5点上回り、短い単一画像課題だけでなく長文脈の情報保持にも利得がある。"},
-      {"metric": "観測窓縮小時のOCRBench精度", "value": "74.8%", "baseline": "窓32で68.1%", "condition": "Qwen2-VL-7B-Instruct、窓4対32", "interpretation": "直近トークンを固定保護し過ぎると限られたKV枠を消費するため、窓を小さくして動的選択へ回す方が6.7ポイント高い。"},
-      {"metric": "合成長文脈の総実行時間", "value": "16.408秒", "baseline": "SnapKV 16.536秒、SnapKV + MixKV 16.483秒", "condition": "8192入力トークン、512生成トークン、KV予算64、RTX 4090、3回平均", "interpretation": "ユークリッド距離計算を追加しても総時間は悪化せず、小さい観測窓による計算削減が追加負担を相殺している。キャッシュ容量は0.003GBでFullKVの0.438GBより大幅に小さい。"}
+      {
+        "metric": "FP16重みサイズ",
+        "value": "680MBから382MB、元の56%",
+        "baseline": "密FP16重み",
+        "condition": "9216×36864、50%非構造枝刈り",
+        "interpretation": "340MBの非ゼロ値に42MBの1ビット位置情報を足すだけなので、CSRより索引費用が小さい。"
+      },
+      {
+        "metric": "OPT-66B同一配置の全層通過",
+        "value": "54秒から35.8秒、1.51倍",
+        "baseline": "Hugging Face Accelerate密重み退避",
+        "condition": "GPU 0-4層、CPU 5-12層、SSD 13-63層",
+        "interpretation": "SSD層は1.64倍、CPU層は1.30倍で、転送削減がGPU復元費用を上回る。"
+      },
+      {
+        "metric": "OPT-66B配置容量込み",
+        "value": "1.70倍",
+        "baseline": "密重み退避",
+        "condition": "圧縮でCPU常駐層を8層から14層へ増加",
+        "interpretation": "圧縮は転送量だけでなく、低遅延なCPUメモリへ置ける層数も増やす。"
+      },
+      {
+        "metric": "GPUダイレクトストレージ",
+        "value": "OPT-66B 24.2秒、約2.23倍。論文要約では最大2.25倍、Llama2-70B 2.37倍",
+        "baseline": "CPU経由の密重み退避",
+        "condition": "SSDからGPUへ直接転送",
+        "interpretation": "SSD-CPUとCPU-GPUの二段転送から後段を除去し、圧縮された小さいデータを直接運ぶ。"
+      },
+      {
+        "metric": "品質",
+        "value": "OPT-66B perplexity 9.33密、9.34非構造SparseGPT、10.07 2:4疎",
+        "baseline": "密OPT-66B",
+        "condition": "WikiText検証集合",
+        "interpretation": "Endorは枝刈り後の値を変えないため、非構造枝刈りの品質をそのまま保持できる。"
+      },
+      {
+        "metric": "INT8併用",
+        "value": "線形演算で1.48倍",
+        "baseline": "SmoothQuant INT8退避",
+        "condition": "Wanda 50%枝刈りとEndor併用",
+        "interpretation": "値が8ビットになると固定ビットマップ費用の割合が増え、FP16より転送削減率は小さい。"
+      }
     ],
-    "negative_results": "全条件で一様にMixKVを上回るわけではない。LLaVA-NeXT-Mistral-7BでSparseMMへ統合した場合、OCRBenchは予算128でMixKV 50.4に対しECOKV 50.3、予算64で49.5に対し48.3となり僅かに悪化する。ChartQAでも同組合せの予算128は51.5に対し51.2で低い。Qwen2-VLでもSparseMM+ECOKVのOCRBench予算256はMixKV 82.0に対し81.9、ChartQA予算128は81.8に対し81.6で僅差の低下がある。また実TextVQAではECOKVの総時間がSnapKVより必ず短いわけではなく、短い出力ではデコード削減の効果が小さい。",
-    "interpretation": "改善幅が低予算で大きくなるのは、保持できるKVが少ないほど誤った類似度判定や固定観測窓の浪費が致命的になるためである。ユークリッド距離はコサイン類似度が捨てる大きさ情報を補い、重要度との順位相関も低から中程度なので、別の有用なトークン集合を拾える。一方、SparseMMのように既に視覚ヘッドへ特化した予算配分を持つ方式では、追加の多様性重みが常に有利とは限らず、改善幅が小さいか一部で逆転する。",
-    "quality_impact": "近似的なキャッシュ削減であり数学的な無損失保証はない。課題精度を基準にすると、予算256ではFullKVに匹敵または一部で上回り、予算64でも多くの比較対象より高い。ただし方式・課題の組合せによって小幅な品質低下が残るため、適用先ごとの検証が必要である。"
+    "negative_results": "CPUで12コア並列復元すると復元費用が転送削減効果を上回り、CPU-GPU転送量も減らない。ZSTDは約58%まで圧縮できるがCPU復元が遅くEndorに劣る。GPU上の演算は密行列のままなので、非構造疎性による演算量削減は得られない。",
+    "interpretation": "SSD退避推論では計算最適化より先に重み移動量を減らすことが支配的であり、非構造枝刈りを保存形式まで一貫して扱えば、品質を保ちやすい疎性を実際のI/O削減へ変換できる。",
+    "quality_impact": "形式自体は無損失で、品質は枝刈り方式に依存する。OPT-66BではSparseGPT 50%非構造枝刈りで密モデルとほぼ同じperplexityを維持した。"
   },
-  "reservation": {"claim_id": "claim-8aab57af0b77e68432c90db5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9730536bfd6295c896a732be",
+    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "worker_kind": "scheduled_chat"
+  }
 }

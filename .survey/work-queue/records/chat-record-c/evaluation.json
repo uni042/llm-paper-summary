@@ -2,17 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8aab57af0b77e68432c90db5",
-  "job_id": "job-research-648fe1e5b80283fd",
+  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "job_id": "job-research-411dee2b8db54e04",
   "data": {
-    "hardware": "NVIDIA GeForce RTX 4090 24GB。実機上でLLaVA-NeXT-Mistral-7BとQwen2-VL-7B-Instructを評価し、効率測定も同GPUで実施した。",
-    "software": "LMMs-Evalを統一評価基盤として使用。比較対象はFullKV、MixKV、およびSnapKV、PyramidKV、AdaKV、SparseMM。ECOKVを各追い出し方式へ統合して比較した。",
-    "methodology": "標準マルチモーダル評価としてDocVQA、OCRBench、TextVQA、ChartQA、TextCapsを使用し、長文書条件としてMP-DocVQAも評価した。KV予算は主に256、128、64で比較する。固定設定は多様性混合係数0.8、冗長度混合係数0.6、観測窓4、半精度、バッチ1。観測窓1・4・32、混合係数、正規化方式についてアブレーションを実施した。効率評価では8192トークン入力から512トークン生成し、予算64でキャッシュ容量、ピークメモリ、総実行時間を3回平均した。実ベンチマーク側でもTextVQAから100件超を無作為抽出して効率を測った。",
-    "scope": "評価は7B級の二つのマルチモーダルモデルとRTX 4090単機を中心とした実機評価である。画像・文書中心の課題に強く、一般のテキスト専用LLM、より大きいモデル、複数GPUサービング、長時間連続デコードでのスループットや末尾遅延までは直接検証していない。方式は近似的なKV追い出しであり、品質保持は課題精度として評価される。",
-    "benchmarks": ["DocVQA", "OCRBench", "TextVQA", "ChartQA", "TextCaps", "MP-DocVQA"],
-    "models": ["LLaVA-NeXT-Mistral-7B", "Qwen2-VL-7B-Instruct"],
-    "budgets": [256, 128, 64],
-    "reproducibility_notes": "論文は主要ハイパーパラメータとGPU時間を提示する。LMMs-Evalではサンプリングなしで決定論的に評価したと記載される。arXivページ上で公式コードURLは確認できなかったため、完全な再現性は実装公開状況に依存する。"
+    "hardware": "主系はRTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TB。OPT-66B FP16は132GB相当で、GPU 0〜4層、CPU 5〜12層、SSD 13〜63層へ配置する。GPUダイレクトストレージ対応経路も評価する。",
+    "software": "Hugging Face Accelerateの密重み退避推論を比較対象とし、SparseGPTまたはWandaで50%非構造枝刈りを行う。圧縮比較にはZSTD、量子化併用にはSmoothQuant INT8を使用する。",
+    "methodology": "単一バッチのテキスト生成で、まずOPT層の線形演算単体についてSSD-CPU、CPU-GPU転送、復元、計算の内訳を測定する。次にOPT-66B全64層の1回通過時間を同じ配置で比較し、圧縮によりCPUへ置ける層数が増える効果も別に測る。GPUダイレクトストレージ経路、INT8量子化併用、OPT-66BとLlama2-70BのWikiText perplexityを評価する。",
+    "scope": "主目的は単一バッチの遅延削減であり、高並列サービングのスループット最適化ではない。疎性は保存・転送量削減に使うが、GPU上の行列計算自体は密計算のままで、非構造疎性による演算削減は未利用である。"
   },
-  "reservation": {"claim_id": "claim-8aab57af0b77e68432c90db5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9730536bfd6295c896a732be",
+    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "worker_kind": "scheduled_chat"
+  }
 }

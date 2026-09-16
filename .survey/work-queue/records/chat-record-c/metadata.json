@@ -2,38 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-8aab57af0b77e68432c90db5",
-  "job_id": "job-research-648fe1e5b80283fd",
+  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "job_id": "job-research-411dee2b8db54e04",
   "data": {
-    "canonical_id": "arXiv:2609.06663",
-    "arxiv_id": "2609.06663",
-    "doi": "10.48550/arXiv.2609.06663",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": ["cs.AI", "cs.CV"]},
-    "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics",
-    "summary": "マルチモーダル大規模言語モデルでは、画像由来の多数のトークンによってKVキャッシュが膨張する。既存の多様性重視の追い出し方式はコサイン類似度へ強く依存するが、Transformer表現の異方性によって類似度が一様に高くなりやすく、正規化によりベクトルの大きさも失う。ECOKVは、キーを重心から測るユークリッド距離とコサイン類似度を組み合わせ、方向と大きさの両方から多様性を評価する。さらに注意ヘッドごとの冗長度を二つの幾何指標から推定して、多様性と重要度の混合比を適応的に変える。固定的に保護する直近トークン窓も32から4程度へ縮小し、限られたKV予算を動的選択へ振り向けることで、複数の既存追い出し方式へ追加可能な形で精度を改善する。",
-    "list_summary": "コサイン類似度だけでは見落とすKV表現の大きさをユークリッド距離で補い、注意ヘッドごとの冗長度に応じて多様性と重要度を混合し、狭いKV予算で保持トークンを改善する方式。",
-    "authors": ["Chin Ting Hsu", "Yu-Syuan Xu", "Ling Zou", "Hsien-Kai Kuo", "Wen-Huang Cheng"],
-    "authors_affiliations": "National Taiwan University; MediaTek Inc.",
-    "published": "2026-09-06",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
+    "canonical_id": "arXiv:2406.11674",
+    "arxiv_id": "2406.11674",
+    "doi": "10.48550/arXiv.2406.11674",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
+    "summary": "GPUメモリに収まらない大規模言語モデルでは、重みをCPUメモリやSSDへ退避し、各層の計算前にGPUへ転送する方式が使われる。Endorは、この方式では計算より重み転送が支配的になることをOPT-66Bで実測し、非構造枝刈り後の重みを非ゼロ値配列と1ビット位置ビットマップに分離して保存する。50%枝刈りしたFP16重みでは全体を元の56%へ縮小し、GPU上で並列復元することで転送削減を復元費用より大きくする。OPT-66Bでは通常のHugging Face Accelerateによる退避推論に対して配置容量増加込みで1.70倍、Llama2-70Bで1.78倍に高速化し、GPUダイレクトストレージを併用するとそれぞれ約2.25倍、2.37倍まで改善する。量子化とも併用可能だが、ビットマップ費用が相対的に増えるため圧縮率と高速化幅は小さくなる。",
+    "list_summary": "非構造枝刈り重みを非ゼロ値と位置ビットマップへ分離し、CPU/SSDからGPUへの転送量を減らして、退避LLM推論を最大約2.37倍高速化する。",
+    "authors": [
+      "Donghyeon Joo",
+      "Ramyad Hadidi",
+      "Soheil Feizi",
+      "Bahar Asgari"
+    ],
+    "published": "2024-06-17",
+    "publication": "arXiv:2406.11674v1",
+    "publication_type": "arXivプレプリント",
     "publication_status": "Preprint",
-    "lineage": "KV cache eviction / multimodal KV cache compression / diversity-aware token selection",
-    "topics": ["KVキャッシュ", "マルチモーダルLLM", "キャッシュ追い出し", "多様性評価", "注意ヘッド適応"],
-    "importance": "既存のSnapKV、PyramidKV、AdaKV、SparseMMへ追加できる多様性評価層として、コサイン類似度単独の幾何学的欠点を実証し、低KV予算で改善幅が大きくなることを示した。",
-    "hardware_evaluation": "NVIDIA GeForce RTX 4090 24GBで実機評価。LLaVA-NeXT-Mistral-7BとQwen2-VL-7B-Instructを使用。",
-    "hardware_details": "NVIDIA GeForce RTX 4090, 24GB",
-    "quality_effect": "近似的なKV追い出しであり厳密な無損失ではない。多くの条件でFullKVに近い、または一部で上回る課題精度を示す一方、SparseMMとの組合せでは一部指標でMixKVより僅かに低下する条件もある。",
-    "source": "https://arxiv.org/abs/2609.06663",
-    "sources": ["https://arxiv.org/abs/2609.06663", "https://arxiv.org/pdf/2609.06663"],
+    "lineage": "cpu-ssd-offload",
+    "topics": [
+      "LLM退避推論",
+      "SSD",
+      "非構造枝刈り",
+      "疎形式",
+      "GPUダイレクトストレージ"
+    ],
+    "importance": "SSD/CPU退避推論で転送がほぼ全実行時間を占める条件を実測し、非構造枝刈りを実際の転送量削減へ結び付ける軽量な疎形式を提示する。",
+    "hardware_evaluation": "RTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TBを用い、OPT-66BとLlama2-70Bを単一バッチ生成で評価。",
+    "quality_effect": "Endor自体は枝刈り後の非ゼロ値と位置を完全保持するため追加の品質劣化を導入しない。品質差は採用した枝刈り方式に由来する。",
+    "source": "https://arxiv.org/abs/2406.11674",
+    "sources": [
+      "https://arxiv.org/abs/2406.11674",
+      "https://arxiv.org/html/2406.11674v1"
+    ],
     "code": null,
-    "implementation": "論文中で既存のSnapKV、PyramidKV、AdaKV、SparseMMへの統合実験を報告。arXivページ上では公式コードURLを確認できなかった。",
-    "last_checked": "2026-09-16",
+    "implementation": "OPT-66BとLlama2-70Bを対象にした研究実装。論文時点ではオープンソース化予定と記載され、公開コードURLは本文で確認できない。",
+    "last_checked": "2026-09-17",
     "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 51
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML参考文献節を確認。",
+    "references_total": 0
   },
-  "reservation": {"claim_id": "claim-8aab57af0b77e68432c90db5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9730536bfd6295c896a732be",
+    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "worker_kind": "scheduled_chat"
+  }
 }
