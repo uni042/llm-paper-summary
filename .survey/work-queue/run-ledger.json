@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:42:02.787192+00:00",
+  "updated_at": "2026-09-16T05:49:55.848921+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:42:02.787192+00:00",
+      "last_recorded_at": "2026-09-16T05:49:55.848921+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,28 +18691,13 @@
       "counts": {
         "research_completed": 123,
         "audit_completed": 0,
-        "discovery_completed": 33,
+        "discovery_completed": 52,
         "blocked": 5,
-        "new_jobs": 47,
-        "new_papers": 115,
+        "new_jobs": 71,
+        "new_papers": 127,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34940214030:1",
-          "recorded_at": "2026-09-15T07:11:59.503263+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34940214030",
-            "run_attempt": "1",
-            "source_sha": "2107d43562bd44055889b2b5ceda8c2856c28fe0"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34940389754:1",
           "recorded_at": "2026-09-15T07:15:18.300263+00:00",
@@ -19597,6 +19582,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35060661775:1",
+          "recorded_at": "2026-09-16T05:49:55.848921+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35060661775",
+            "run_attempt": "1",
+            "source_sha": "662c86347688ac487a4a816d3b4abb9d64469bb6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -20888,6 +20888,158 @@
           "title": "GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-1a62544b297b2837",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-1c843d78588118a2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-29504d94fb8f8bec",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-38368be77fc9a4c7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3dfd4dd9f1d3b4fa",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-51f061d487971352",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-555250df59fbb3b2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-60983f28b61930bd",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-68e15c2a64f53455",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6fc670cb87591028",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-8d60bd6cf9220eb5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-a7865c62c9b22149",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-aba7500ff687b8e7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bbb8440cc7587970",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-cc4648435b41a116",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d05df41dd87e8434",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ef958dffdc524bb5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f04c6e82b96eab5d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f508a1c420dcc098",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21219,6 +21371,174 @@
           "type": "research",
           "canonical_id": "arXiv:2502.07578",
           "title": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference"
+        },
+        {
+          "job_id": "job-1a62544b297b2837",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-1c843d78588118a2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-29504d94fb8f8bec",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-38368be77fc9a4c7",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-3dfd4dd9f1d3b4fa",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-51f061d487971352",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-555250df59fbb3b2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-60983f28b61930bd",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-68e15c2a64f53455",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6fc670cb87591028",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-8d60bd6cf9220eb5",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-a7865c62c9b22149",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-aba7500ff687b8e7",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-bbb8440cc7587970",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-cc4648435b41a116",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-d05df41dd87e8434",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ef958dffdc524bb5",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f04c6e82b96eab5d",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f508a1c420dcc098",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-21d58015b4f64394",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12923",
+          "title": "Dissecting GPU Utilization for LLM Inference on Nvidia Hopper"
+        },
+        {
+          "job_id": "job-research-3d5f11737ec9b4a2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09662",
+          "title": "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling"
+        },
+        {
+          "job_id": "job-research-a750a3d2f8620be9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.09225",
+          "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference"
+        },
+        {
+          "job_id": "job-research-c5668a715755a331",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.13573",
+          "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing"
+        },
+        {
+          "job_id": "job-research-dea6b2b543d05a36",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.30076",
+          "title": "Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects"
         }
       ],
       "new_paper_ids": [
@@ -21336,7 +21656,19 @@
         "arXiv:2609.12686",
         "arXiv:2609.12978",
         "arXiv:2609.13134",
-        "arXiv:2609.15359"
+        "arXiv:2609.15359",
+        "arXiv:2502.07578",
+        "arXiv:2512.16056",
+        "arXiv:2601.11580",
+        "arXiv:2604.25899",
+        "arXiv:2605.00831",
+        "arXiv:2605.21312",
+        "arXiv:2605.21427",
+        "arXiv:2606.11244",
+        "arXiv:2606.23001",
+        "arXiv:2606.28565",
+        "arXiv:2609.11209",
+        "arXiv:2609.14237"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -21475,7 +21807,26 @@
         ".survey/work-queue/results/20260916T0910JST-discovery-specialist-kv-restoration-3.json",
         ".survey/work-queue/results/20260916T0914JST-discovery-specialist-pnm-attention-4.json",
         ".survey/work-queue/results/20260916T0918JST-discovery-specialist-cxl-pim-5.json",
-        ".survey/work-queue/results/20260916T0922JST-discovery-specialist-semantic-kv-6.json"
+        ".survey/work-queue/results/20260916T0922JST-discovery-specialist-semantic-kv-6.json",
+        ".survey/work-queue/results/20260916T1432JST-discovery-specialist-moe-cache-router-1.json",
+        ".survey/work-queue/results/20260916T1433JST-discovery-specialist-prefill-deadline-2.json",
+        ".survey/work-queue/results/20260916T1434JST-discovery-specialist-cxl-k8s-3.json",
+        ".survey/work-queue/results/20260916T1435JST-discovery-specialist-disagg-power-4.json",
+        ".survey/work-queue/results/20260916T1436JST-discovery-specialist-gpu-utilization-5.json",
+        ".survey/work-queue/results/20260916T1437JST-discovery-specialist-cache-determinism-6.json",
+        ".survey/work-queue/results/20260916T1438JST-discovery-specialist-page-aware-kv-7.json",
+        ".survey/work-queue/results/20260916T1439JST-discovery-specialist-nand-compute-8.json",
+        ".survey/work-queue/results/20260916T1440JST-discovery-specialist-wireless-moe-9.json",
+        ".survey/work-queue/results/20260916T1441JST-discovery-specialist-dynamic-moe-10.json",
+        ".survey/work-queue/results/20260916T1442JST-discovery-specialist-edge-dvfs-11.json",
+        ".survey/work-queue/results/20260916T1443JST-discovery-specialist-joint-compression-12.json",
+        ".survey/work-queue/results/20260916T1445JST-discovery-specialist-adaptive-kv-budget-13.json",
+        ".survey/work-queue/results/20260916T1446JST-discovery-specialist-kv-isolation-14.json",
+        ".survey/work-queue/results/20260916T1448JST-discovery-specialist-serving-workload-15.json",
+        ".survey/work-queue/results/20260916T1449JST-discovery-specialist-backref-preble-16.json",
+        ".survey/work-queue/results/20260916T1450JST-discovery-specialist-backref-infercept-17.json",
+        ".survey/work-queue/results/20260916T1451JST-discovery-specialist-backref-heterogeneous-18.json",
+        ".survey/work-queue/results/20260916T1454JST-discovery-specialist-moe-offload-lineage-19.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -21552,8 +21903,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 575,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 587,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

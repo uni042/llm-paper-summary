@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T04:24:12+00:00"
+      "checked_at": "2026-09-16T05:49:14+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T04:24:05+00:00"
+      "checked_at": "2026-09-16T05:49:08+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4657,7 +4657,103 @@
       "normalized_references": 23,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-16T04:24:16+00:00"
+    },
+    "papers/inference/02-cpu-offload/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md": {
+      "status": "complete",
+      "source_fingerprint": "8536f44404a681002ab87edf494cb4da88a635486abdd4cec0ade41e43b472c8",
+      "references_total": 118,
+      "normalized_references": 29,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:07+00:00"
+    },
+    "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "4425be8446e4484eb2da92c41e36d8d0c65ef3c9901791137be1b1b84d23b710",
+      "references_total": 39,
+      "normalized_references": 27,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:08+00:00"
+    },
+    "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md": {
+      "status": "complete",
+      "source_fingerprint": "7db829f42c0d355a1045a3eb2cfebebc857fbeab9190cc863a302fb7f6616f5a",
+      "references_total": 43,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:09+00:00"
+    },
+    "papers/inference/08-edge-on-device-llm-systems/2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "80d7f86b533293c95c4da58050cd4d08c6f23fecb089cd068b9a57435c6b5746",
+      "references_total": 73,
+      "normalized_references": 4,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:10+00:00"
+    },
+    "papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "73473503f8903545ad4f3b1a2f04e965272c0b575f5bff47b7dc55f95aa90a62",
+      "references_total": 45,
+      "normalized_references": 13,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:10+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.16056-multipath-transfer-engine-gpu-host-memory-bandwidth.md": {
+      "status": "complete",
+      "source_fingerprint": "3d7c6d5cc54a0af90499af6af415a6ba838a9ffc0588781c8b58270ff1f2b43c",
+      "references_total": 43,
+      "normalized_references": 19,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:12+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25899-pythia-predictability-driven-agent-native-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "d94c679ae1b6f633176753d5d2f7ef79df4ce75f51e06e768471a13bfeb1078c",
+      "references_total": 46,
+      "normalized_references": 24,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:12+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "41d7a462b95fdffc2e66e665214200a992ff09fd272b617159039e32bf5633dc",
+      "references_total": 68,
+      "normalized_references": 11,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:13+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "eceaaf3be7fc88f57d68d3dea1ac5715e9ea25a7c1ad04a5a80f9f367676bd98",
+      "references_total": 37,
+      "normalized_references": 10,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:14+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md": {
+      "status": "complete",
+      "source_fingerprint": "7ce046834f3daa87218da57e41532ecb68fde338e2577717703e8686830af6a9",
+      "references_total": 58,
+      "normalized_references": 41,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:15+00:00"
+    },
+    "papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md": {
+      "status": "complete",
+      "source_fingerprint": "015b1eaecdcd0318c022f7442a5734831c805ca92e899e6e0315717c2a3c7dc1",
+      "references_total": 52,
+      "normalized_references": 24,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:15+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md": {
+      "status": "complete",
+      "source_fingerprint": "9de95ecfffe5dc3a2e5a9592c27ff8a82c2c6fe91e672d5e8f44d5bb51b5260e",
+      "references_total": 54,
+      "normalized_references": 39,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T05:49:15+00:00"
     }
   },
-  "updated_at": "2026-09-16T04:24:43+00:00"
+  "updated_at": "2026-09-16T05:49:40+00:00"
 }

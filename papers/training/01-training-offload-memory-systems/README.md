@@ -45,7 +45,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   SSDオフロード時にCPU側で過剰確保する転送バッファや検査用一時領域を必要量へ縮め、余分なRAM消費とNVMeのコピーを減らしてLLM微調整を支える方式。
 
 - **2025-09 · [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)**  
-  実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：0  
+  実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：1  
   最適化状態をGPU、CPU DRAM、ローカルNVMe、共有ストレージへ分散し、複数の読み書き経路を同時利用して、LLM事前学習の容量制約とI/O待ちを緩和する方式。
 
 ### 3年前（2023-10〜2024-09）
@@ -69,6 +69,6 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 5年前（2021-10〜2022-09）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：34  
   学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
 <!-- survey:auto:end -->

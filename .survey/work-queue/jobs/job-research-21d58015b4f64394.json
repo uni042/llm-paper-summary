@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-21d58015b4f64394",
+  "type": "research",
+  "parent_job_id": "job-555250df59fbb3b2",
+  "priority": 78,
+  "canonical_id": "arXiv:2609.12923",
+  "title": "Dissecting GPU Utilization for LLM Inference on Nvidia Hopper",
+  "source_url": "https://arxiv.org/abs/2609.12923",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md",
+  "selection_reason": "単一SM utilization指標では隠れるLLM推論ボトルネックをNsight Compute由来の複数viewで分解する新着。推論基盤評価・profiling方法論の監査価値がある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T05:46:52+00:00"
+}
