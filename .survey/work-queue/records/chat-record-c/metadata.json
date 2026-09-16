@@ -2,61 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-7d15ace40bfac2c2b2f6ff8e",
-  "job_id": "job-research-bd280ca93f0a6940",
-  "data": {
-    "canonical_id": "arXiv:2605.02960",
-    "arxiv_id": "2605.02960",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
-    "summary": "分類・推薦・検証のように1回のプリフィルだけで答えを得る処理では、大きなバッチによる長い計算区間を利用できる。MoE-Prefillはこの性質を使い、従来の専門家並列が各層で活性値を全対全転送する代わりに、次層の専門家重みを装置間で非同期収集し、現在層の計算へ隠す。さらにCPU DRAMから先の層の重み断片を先読みし、接頭辞共有を考慮したルーティングと実FLOPs負荷追跡によって、通信を隠せるだけの計算量を各GPUへ保証する。Qwen3-235B-A22Bで最強分散方式比1.35〜1.37倍の実ワークロードスループットと、1〜8 GPUで29.8〜36.2%のMFUを報告する。",
-    "list_summary": "プリフィル専用MoEで活性値AllToAllを次層専門家重みの非同期AllGatherへ置換し、CPUオフロードと接頭辞・実FLOPs対応スケジューリングで通信を計算へ隠す。",
-    "authors": [
-      "Zhaoyuan Su",
-      "Olatunji Ruwase",
-      "Karthik Ganesan",
-      "Aurick Qiao",
-      "Samyam Rajbhandari",
-      "Juncheng Yang",
-      "Yue Cheng",
-      "Yuxiong He"
-    ],
-    "authors_affiliations": "University of Virginia、Snowflake AI Research、Harvard University。",
-    "published": "2026-05-15",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint v2",
-    "lineage": "MoE serving / expert offloading / prefill-only serving",
-    "topics": [
-      "MoE推論",
-      "専門家重みストリーミング",
-      "プリフィル専用推論",
-      "CPUオフロード",
-      "接頭辞キャッシュ"
-    ],
-    "importance": "専門家配置と活性値ルーティングの結合を外し、決定的な層順序と長いプリフィル計算窓を使って重み転送を臨界経路から除く。",
-    "hardware_evaluation": "8×A100 BF16、8×H100 BF16/FP8、8×H200 FP8。Qwen3-235B-A22Bを1/2/4/8 GPU並列度で評価。",
-    "quality_effect": "実行方式は同じモデル演算を保つ。25K標本で実行忠実度を確認し、プリフィル専用へのタスク再定式化は9タスク中7タスクで自己回帰方式との差が±3.6ポイント以内。",
-    "source": "https://arxiv.org/abs/2605.02960",
-    "sources": [
-      "https://arxiv.org/abs/2605.02960",
-      "https://arxiv.org/html/2605.02960"
-    ],
-    "code": null,
-    "implementation": "vLLM v0.11.0上に実装。専用CUDAストリームのD2D AllGather、CPU pinned memoryからのH2D先読み、接頭辞対応DPルータ、イベントチャネルを追加。公開コードURLは一次資料で確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 75
-  },
+  "attempt_id": "attempt-5a2dadf10671ad95400d0ff8",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7d15ace40bfac2c2b2f6ff8e",
+    "claim_id": "claim-5a2dadf10671ad95400d0ff8",
     "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
     "worker_kind": "scheduled_chat"
   }

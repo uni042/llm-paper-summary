@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "request-scheduled-chat-survey-20260916T031400Z",
+  "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-cffb14eec24a02c2",
+      "claim_id": "claim-5a2dadf10671ad95400d0ff8",
+      "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5a2dadf10671ad95400d0ff8",
+      "claimed_at": "2026-09-16T03:14:02+00:00",
+      "expires_at": "2026-09-16T04:44:02+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-cffb14eec24a02c2"
+      ],
+      "job": {
+        "job_id": "job-research-cffb14eec24a02c2",
+        "type": "research",
+        "parent_job_id": "job-e1ca6943b8acd0f6",
+        "priority": 84,
+        "canonical_id": "arXiv:2609.04244",
+        "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
+        "source_url": "https://arxiv.org/abs/2609.04244",
+        "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md",
+        "selection_reason": "量子化MoEの自己回帰デコードで、少数トークン/専門家ゆえにgrouped GEMMのパディング・前処理・短命kernel起動が帯域利用を悪化させる問題に対し、重み主導の永続mega-kernelへrouting、top-k、量子化、2段の専門家射影、活性化、reductionを融合する。vLLM統合のH200評価でMoE演算を最大1.54倍、FlashMoE-FP8適応比2.20〜3.84倍高速化し、出力トークン時間を最大18.7%削減すると報告している。FlashInfer実装公開もあり、MoE推論kernelの重点テーマに直接該当する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T00:02:49+00:00"
+      },
+      "record_bank": "c"
+    }
+  ],
+  "processed_at": "2026-09-16T03:14:02+00:00",
+  "checkpoint_released": 0
+}

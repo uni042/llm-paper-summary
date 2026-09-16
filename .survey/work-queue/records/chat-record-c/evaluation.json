@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7d15ace40bfac2c2b2f6ff8e",
-  "job_id": "job-research-bd280ca93f0a6940",
-  "data": {
-    "hardware": "8×A100 80GB BF16、8×H100 80GB BF16/FP8、8×H200 141GB FP8。並列度1/2/4/8を掃引する。",
-    "software": "vLLM v0.11.0を基盤にMoE-Prefillを実装。Qwen3-235B-A22B（128専門家、top-8、約22B活性化パラメータ）を使用。",
-    "methodology": "MoralStories、MMLU、BoolQ、IMDB、QuALITY、ArXiv Classificationの6データセットから73.8K要求・約37.9M入力トークンを混合し、50〜128Kトークン、接頭辞共有の高低を含む実ワークロードを構成する。出力長は1に固定する。比較対象はvLLMが支援するDP+EP、DP+TP、TP+EP、TP+TP、PP+PPと、PrefillOnlyのスケジューラを強い分散バックエンドへ組み合わせた構成。ハードウェア・精度・並列度ごとに最強比較対象を採用し、エンドツーエンド入力トークン毎秒、MFU、ピークHBM、最大実行可能バッチ/文脈、タスク精度を測る。さらに接頭辞共有なしの合成負荷を256〜128K文脈で10Mトークンずつ実行し、バックエンド単体の一般化を確認する。",
-    "scope": "実機4ハードウェア/精度条件と複数公開データセットを使うが、対象はプリフィル専用・スループット指向のMoE処理である。対話型の低遅延デコードや密モデルは設計対象外。CPUオフロード性能はPCIe帯域、装置間収集はNVLink性能に依存する。"
-  },
+  "attempt_id": "attempt-5a2dadf10671ad95400d0ff8",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7d15ace40bfac2c2b2f6ff8e",
+    "claim_id": "claim-5a2dadf10671ad95400d0ff8",
     "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
     "worker_kind": "scheduled_chat"
   }
