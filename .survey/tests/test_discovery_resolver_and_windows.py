@@ -156,6 +156,55 @@ class RepresentedPaperResolverTest(unittest.TestCase):
             self.assertEqual(len(result["results"]), 1)
             self.assertEqual(result["results"][0]["authors"], ["Carol Brown"])
 
+    def test_final_discovery_gate_uses_same_represented_paper_resolver(self) -> None:
+        resolver = paper_identity.build_represented_resolver([
+            {
+                "canonical_id": "arXiv:2602.22222",
+                "title": "Cache-Aware Expert Prefetch for Efficient MoE Serving",
+                "authors": ["Alice Smith"],
+                "year": 2026,
+            }
+        ])
+        originals = {
+            "existing_candidate_keys": queue_worker.existing_candidate_keys,
+            "existing_represented_resolver": getattr(queue_worker, "existing_represented_resolver", None),
+            "make_research_job": queue_worker.make_research_job,
+            "record_discovery_stats": queue_worker.record_discovery_stats,
+        }
+        materialized: list[dict[str, object]] = []
+        try:
+            queue_worker.existing_candidate_keys = lambda: set()
+            self.assertIsNotNone(
+                originals["existing_represented_resolver"],
+                "final Discovery gate has no represented-paper resolver",
+            )
+            queue_worker.existing_represented_resolver = lambda: resolver
+            queue_worker.make_research_job = lambda candidate, parent: materialized.append(candidate) or True
+            queue_worker.record_discovery_stats = lambda *args, **kwargs: True
+            job = {"job_id": "job-discovery-test", "status": "processing"}
+            state = {"stats": {"discovered": 0, "selected": 0}}
+            sub = {
+                "candidates": [
+                    {
+                        "doi": "10.9999/new-alias",
+                        "title": "Cache Aware Expert Prefetch for Efficient MoE Serving",
+                        "priority": 90,
+                    }
+                ]
+            }
+
+            queue_worker.process_discovery(sub, job, state)
+
+            self.assertEqual(materialized, [])
+            self.assertEqual(job["result_summary"]["final_duplicate_filtered_count"], 1)
+            self.assertEqual(job["result_summary"]["research_jobs_added"], 0)
+        finally:
+            queue_worker.existing_candidate_keys = originals["existing_candidate_keys"]
+            if originals["existing_represented_resolver"] is not None:
+                queue_worker.existing_represented_resolver = originals["existing_represented_resolver"]
+            queue_worker.make_research_job = originals["make_research_job"]
+            queue_worker.record_discovery_stats = originals["record_discovery_stats"]
+
 
 class DiscoverySearchWindowHistoryTest(unittest.TestCase):
     def _history_module(self):
@@ -164,7 +213,16 @@ class DiscoverySearchWindowHistoryTest(unittest.TestCase):
         return importlib.import_module("discovery_search_history")
 
     @staticmethod
-    def _window(topic: str, *, raw: int = 0, unseen: int = 0) -> dict[str, object]:
+    def _window(
+        topic: str,
+        *,
+        raw: int = 0,
+        unseen: int = 0,
+        duplicates: int = 0,
+        evaluated: int = 0,
+        accepted: int = 0,
+        position: object | None = None,
+    ) -> dict[str, object]:
         return {
             "topic": topic,
             "source": "arxiv",
@@ -174,26 +232,56 @@ class DiscoverySearchWindowHistoryTest(unittest.TestCase):
             "query_family": "moe-serving",
             "raw_result_count": raw,
             "unseen_result_count": unseen,
+            "duplicate_filtered_count": duplicates,
+            "candidate_evaluation_count": evaluated,
+            "candidate_accepted_count": accepted,
+            "position": position,
         }
 
-    def test_history_persists_six_dimensional_windows_and_ranks_unscanned_then_high_unseen_rate(self) -> None:
+    def test_history_persists_full_window_metrics_and_ranks_unscanned_then_productive(self) -> None:
         history = self._history_module()
         state: dict[str, object] = {}
         history.record_search_windows(
             state,
             [
-                self._window("low-yield", raw=10, unseen=1),
-                self._window("high-yield", raw=10, unseen=7),
+                self._window(
+                    "low-yield",
+                    raw=10,
+                    unseen=1,
+                    duplicates=9,
+                    evaluated=1,
+                    accepted=0,
+                    position={"cursor": "low-2", "offset": 20},
+                ),
+                self._window(
+                    "high-yield",
+                    raw=10,
+                    unseen=7,
+                    duplicates=2,
+                    evaluated=6,
+                    accepted=4,
+                    position={"cursor": "high-4", "offset": 40},
+                ),
             ],
             run_key="2026-09-17T06:00:00+09:00",
             round_name="round-1",
         )
 
         self.assertEqual(len(state["search_windows"]), 2)
-        for row in state["search_windows"].values():
+        rows = state["search_windows"]
+        for row in rows.values():
             for field in history.WINDOW_DIMENSIONS:
                 self.assertIn(field, row)
             self.assertEqual(row["scan_count"], 1)
+            self.assertIn("duplicate_rate", row)
+            self.assertIn("candidate_acceptance_rate", row)
+            self.assertIn("last_position", row)
+
+        high = next(row for row in rows.values() if row["topic"] == "high-yield")
+        self.assertAlmostEqual(high["unseen_rate"], 0.7)
+        self.assertAlmostEqual(high["duplicate_rate"], 0.2)
+        self.assertAlmostEqual(high["candidate_acceptance_rate"], 4 / 6)
+        self.assertEqual(high["last_position"], {"cursor": "high-4", "offset": 40})
 
         ranked = history.rank_search_windows(
             [
@@ -208,7 +296,9 @@ class DiscoverySearchWindowHistoryTest(unittest.TestCase):
             ["never-scanned", "high-yield", "low-yield"],
         )
         self.assertFalse(ranked[0]["history"]["scanned"])
-        self.assertAlmostEqual(ranked[1]["history"]["unseen_rate"], 0.7)
+        self.assertFalse(ranked[1]["history"]["cooldown"])
+        self.assertTrue(ranked[2]["history"]["cooldown"])
+        self.assertAlmostEqual(ranked[1]["history"]["candidate_acceptance_rate"], 4 / 6)
 
     def test_queue_worker_persists_submission_search_windows_in_discovery_state(self) -> None:
         self._history_module()
@@ -225,7 +315,17 @@ class DiscoverySearchWindowHistoryTest(unittest.TestCase):
                         "axis": "moe-serving",
                         "candidate_count": 0,
                         "duplicate_filtered_count": 0,
-                        "search_windows": [self._window("expert-prefetch", raw=12, unseen=5)],
+                        "search_windows": [
+                            self._window(
+                                "expert-prefetch",
+                                raw=12,
+                                unseen=5,
+                                duplicates=6,
+                                evaluated=4,
+                                accepted=2,
+                                position={"cursor": "page-3", "offset": 30},
+                            )
+                        ],
                     },
                 }
 
@@ -236,7 +336,13 @@ class DiscoverySearchWindowHistoryTest(unittest.TestCase):
                 self.assertEqual(row["topic"], "expert-prefetch")
                 self.assertEqual(row["raw_result_count"], 12)
                 self.assertEqual(row["unseen_result_count"], 5)
+                self.assertEqual(row["duplicate_filtered_count"], 6)
+                self.assertEqual(row["candidate_evaluation_count"], 4)
+                self.assertEqual(row["candidate_accepted_count"], 2)
                 self.assertAlmostEqual(row["unseen_rate"], 5 / 12)
+                self.assertAlmostEqual(row["duplicate_rate"], 0.5)
+                self.assertAlmostEqual(row["candidate_acceptance_rate"], 0.5)
+                self.assertEqual(row["last_position"], {"cursor": "page-3", "offset": 30})
         finally:
             queue_worker.DISCOVERY_STATE = original_state
 
