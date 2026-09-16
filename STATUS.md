@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:08:41 JST**
+> 自動生成: **2026-09-16 17:08:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **30** |
+| 収録候補論文 | **29** |
 | 未claim Research job | **29** |
-| 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-16 17:03:19 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **60** |
+| 最終検証済みResearch収録 | **09-16 17:08:50 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **30** |
+| canonical_id確認済みの一意な候補論文 | **29** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **30** |
+| 非終端Research job合計 | **29** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **47** | **4** | **1** | **3** | **1** | **0** | — |
+| Research | **48** | **4** | **2** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **48** | **23** | **1** | **22** | **1** | **0** | **23** |
+| 合計 | **49** | **23** | **2** | **21** | **0** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 17:08:50 JST** [research] `arXiv:2605.22566` — GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving
+  - job: `.survey/work-queue/jobs/job-research-44674a8f55b9f5e8.json`
+  - result: `.survey/work-queue/results/research/attempt-82e80ed19ce701a0be49bf58.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-82e80ed19ce701a0be49bf58.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2605.22566-graphflow-agent-workflow-serving.md`
 - **09-16 17:03:19 JST** [research] `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
   - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
   - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c310d0bbe115d78e277aebea.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c310d0bbe115d78e277aebea.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.07282-stream-stability-long-term-recall-threeh.md`
-- **09-16 15:36:55 JST** [research] `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters
-  - job: `.survey/work-queue/jobs/job-research-6802b144c10e4060.json`
-  - result: `.survey/work-queue/results/research/attempt-4bfdec70e8914ae1ce28af5e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4bfdec70e8914ae1ce28af5e.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md`
 
 ### Audit
 
@@ -115,13 +115,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
-- immutable submission: **4件** / 検証済み成功: **1件** / 未完了・未検証: **3件**
+- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
 - **成功** `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
   - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
   - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-82e80ed19ce701a0be49bf58.json` (job `job-research-44674a8f55b9f5e8`)
+- **成功** `arXiv:2605.22566` — GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving
+  - job: `.survey/work-queue/jobs/job-research-44674a8f55b9f5e8.json`
+  - result: `.survey/work-queue/results/research/attempt-82e80ed19ce701a0be49bf58.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-82e80ed19ce701a0be49bf58.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2605.22566-graphflow-agent-workflow-serving.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b21265e1c7564132469a29b8.json` (job `job-research-ec48da5b1e9edcea`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e3573f73597d9a563a861b51.json` (job `job-research-44674a8f55b9f5e8`)
 
@@ -181,10 +185,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.22566` — GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving / worker `scheduled-chat-discovery-20260916T1600JST`
-  - claim: **09-16 17:07:26 JST** / heartbeat: **—** / lease expiry: **09-16 18:37:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-44674a8f55b9f5e8.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -204,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **30** |
+| ready | **29** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +226,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **604** |
+| inference/training/survey配下の論文Markdown実体 | **605** |
 
 ### immutable submissionの未照合
 
@@ -232,8 +234,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **341** |
-| └ Research | **207** |
+| 成功result未照合のimmutable submission | **340** |
+| └ Research | **206** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T08:03:21.405722+00:00",
+  "updated_at": "2026-09-16T08:08:53.427245+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T08:03:21.405722+00:00",
+      "last_recorded_at": "2026-09-16T08:08:53.427245+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 140,
+        "research_completed": 141,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35023520819:1",
-          "recorded_at": "2026-09-15T21:11:18.036023+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35023520819",
-            "run_attempt": "1",
-            "source_sha": "c15eca0a18551de041dc5ee5257d6d25fefd7399"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35029137061:1",
           "recorded_at": "2026-09-15T22:05:31.712006+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35071676970",
             "run_attempt": "1",
             "source_sha": "d397e0d9c79c453d01c034cbb4d291fe172c50c2"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35072182249:1",
+          "recorded_at": "2026-09-16T08:08:53.427245+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35072182249",
+            "run_attempt": "1",
+            "source_sha": "123ba205fb3b5b04ba06d2343be46b4538214d34"
           },
           "signals": [
             "research_completed"
@@ -21205,6 +21205,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.08306",
           "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-44674a8f55b9f5e8",
+          "type": "research",
+          "canonical_id": "arXiv:2605.22566",
+          "title": "GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving",
           "from": "ready",
           "to": "completed"
         }
