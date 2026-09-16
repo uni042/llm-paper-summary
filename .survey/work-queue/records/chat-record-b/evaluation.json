@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4d1714b487473a1189509b96",
+  "attempt_id": "attempt-73081685c32e0006998f3d67",
   "job_id": "job-research-af7d4aee1c99dd28",
   "data": {
     "evaluation_summary": "8基のAMD Instinct MI300Xを搭載した単一node、ROCm 6.4、vLLM v0.10.2系で実機評価。Llama-3.1 70BとMixtral-8x7B、短文LMSYS・8K級arXiv・20K級Loogle workloadを用い、offered QPSを低負荷から飽和までsweepする。",
@@ -42,7 +42,7 @@
     "control_knobs": "prefill chunk size、prefill/decode CU allocation、decode batch size、offered QPS、ITL SLO。"
   },
   "reservation": {
-    "claim_id": "claim-4d1714b487473a1189509b96",
+    "claim_id": "claim-73081685c32e0006998f3d67",
     "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }
