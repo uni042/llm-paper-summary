@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-44d7d7981220efe93f540824",
-  "job_id": "job-research-deb10d3b4d925a01",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-44d7d7981220efe93f540824",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-44d7d7981220efe93f540824","job_id":"job-research-deb10d3b4d925a01","data":{"evaluation_summary":"vLLM v0.10.1.1の既定最適化を有効にし、H100 80GB上で8Bは単一GPU、70B/106Bは4 GPUテンソル並列として評価する。Llama3.1-8B、Llama3-70B、Qwen3-8B/Thinking、GLM-4.5-Airを用い、n-gram、EAGLE/EAGLE-3、独立ドラフトモデル、多トークン予測をCNN/DailyMail、ShareGPT、InstructCoder、GSM8K、AIME22-24、GPQA-Mainで比較する。500要求の生成トークン処理量、実行段階別時間、静的・KVメモリ、位置別受理長を測り、木構造検証はSGLang v0.5.9でも補足評価する。","scope":"実運用向け推論基盤の端から端までの特性評価で、バッチ1だけでなく高バッチ、通常生成だけでなく長い推論生成、8Bから106Bまでを含む。主ハードウェアはH100であり、他GPU世代・他推論基盤へ絶対値を一般化するには追加評価が必要。木構造比較はvLLM側の経路が十分最適化されていないためSGLangを使っており、基盤差が混在する。","hardware":["NVIDIA H100 80GB","8Bモデルは1 GPU","70B/106Bモデルは4 GPU・テンソル並列4"],"software":["vLLM v0.10.1.1","SGLang v0.5.9（木構造検証の補足評価）","CUDA Graph、連続バッチ、チャンク事前充填、KVキャッシュ管理を有効化"],"models":["Llama3.1-8B-Instruct","Llama3-70B-Instruct","Qwen3-8B","Qwen3-8B-Thinking","GLM-4.5-Air-106B"],"datasets":["CNN/DailyMail","ShareGPT","InstructCoder","GSM8K","AIME22-24","GPQA-Main"],"workload":"通常生成は最大8192トークン、AIME/GPQAは32768トークン。温度0、top_p=1、top_k=-1。構成ごとに500要求を使い、バッチ量を1から大規模条件まで変化させる。受理解析では各方式が最大20候補を提示し、最大200要求の位置別受理可能長を記録する。","baselines":["投機なし標準復号","n-gram投機","EAGLE / EAGLE-3","独立ドラフトモデル投機","多トークン予測投機","固定候補長と理想候補長","単一方式と理想的な複数方式切替"],"metrics":["生成トークン毎秒","標準復号比速度向上率","提案・検証・棄却処理・その他の時間比率","静的GPUメモリ","トークン当たりKVキャッシュ","受理率・受理長","要求・位置・データ集合別の受理分散"],"methodology":"数値非決定性による生成長差を避けるため処理量を主指標にする。実行時間とメモリを段階別に分解し、実測受理トレースから棄却検証を除いた理想上限と複数提案器の理想切替上限をシミュレーションする。"},"reservation":{"claim_id":"claim-44d7d7981220efe93f540824","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
