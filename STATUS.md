@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:15:28 JST**
+> 自動生成: **2026-09-17 07:15:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -202,9 +202,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.25062` — FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration / worker `scheduled-chat-discovery-specialist-0700`
-  - claim: **09-17 07:13:04 JST** / heartbeat: **—** / lease expiry: **09-17 08:43:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0d64167980707ffd.json`
+- `arXiv:2601.11822` — RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation / worker `scheduled-chat-discovery-specialist-0700`
+  - claim: **09-17 07:15:32 JST** / heartbeat: **—** / lease expiry: **09-17 08:45:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-af7d4aee1c99dd28.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
   - claim: **09-17 05:33:59 JST** / heartbeat: **09-17 06:31:30 JST** / lease expiry: **09-17 08:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
