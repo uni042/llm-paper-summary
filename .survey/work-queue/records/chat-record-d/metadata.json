@@ -1,78 +1,21 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-915ebeff2156b2e8003c2c34",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {
-    "canonical_id": "arXiv:2605.21427",
-    "arxiv_id": "2605.21427",
-    "doi": "10.48550/arXiv.2605.21427",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AI",
-      "cross_list": [
-        "cs.DC"
-      ]
-    },
-    "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
-    "summary": "PALSはGPU power capを外部の固定制約ではなくLLM serving runtimeの制御変数として扱い、batch sizeと共同最適化するpower-aware vLLM runtimeである。offline profilingでpower cap、batch、TP/EP/DPとthroughput・powerの非線形関係を学習し、random forest predictorと500ms周期のPID feedbackを組み合わせ、throughput targetを満たす候補の中からtokens/J最大の構成を選ぶ。4×A100/NVLink nodeを最大3 nodeまで用い、dense 3種とMoE 5種、HellaSwag/GSM8K由来のPoisson arrival workloadで評価した。PALSは単一nodeでenergy efficiencyを26.3%改善しoracle headroomの95%を獲得、3-node/4800W制約下でQoS violationを18.7–35.2%から3.2–5.3%へ下げて4–7倍改善しaggregate efficiencyを12.1%向上、demand-responseでは低power target時のthroughputを最大22%改善した。",
-    "list_summary": "GPU power capとbatch sizeを500ms周期で共同制御するvLLM runtimeで、A100 multi-nodeのdense/MoE servingにおいてenergy efficiency最大26.3%、QoS violation 4–7倍改善を達成する。",
-    "authors": [
-      "Can Hankendi",
-      "Rana Shahout",
-      "Minlan Yu",
-      "Ayse K. Coskun"
-    ],
-    "authors_affiliations": "Boston University; Harvard University",
-    "published": "2026-05-20",
-    "publication": "arXiv preprint arXiv:2605.21427v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "arXiv v1, 2026-05-20",
-    "lineage": "moe-offload-routing",
-    "topics": [
-      "LLM serving",
-      "MoE",
-      "power cap",
-      "energy efficiency",
-      "vLLM",
-      "runtime control",
-      "QoS",
-      "demand response"
-    ],
-    "importance": "高。MoEのcompute/communication比に応じてpower scalingの効き方が変わることをruntime制御へ取り込み、software schedulingとhardware power controlを統合する。",
-    "hardware_evaluation": "NVIDIA A100、1 nodeあたり4 GPUをNVLink接続。multi-nodeは最大3 node。",
-    "hardware_details": "power cap 150/200/250/300/350/400W、batch 1/4/8/16/32/64、TP 1/2/4、EP 1/4/8、DP 1/2/3 nodes。",
-    "quality_effect": "model retrainingやAPI変更なし。同一モデルのruntime構成を変更し、品質ではなくthroughput QoSとtokens/Jを最適化。",
-    "bottlenecks": [
-      "MoE all-to-all communication",
-      "power増加のdiminishing returns",
-      "batch不足による低utilization",
-      "static capによるover/under-provisioning",
-      "offline predictor errorとworkload drift"
-    ],
-    "evidence_locations": [
-      "§2.1–2.4",
-      "§3–3.3",
-      "§4.1–4.4",
-      "§5.1–5.3",
-      "§6",
-      "Table 1–3",
-      "Figures 1–11"
-    ],
-    "source": "https://arxiv.org/abs/2605.21427",
-    "sources": [
-      "https://arxiv.org/abs/2605.21427",
-      "https://arxiv.org/html/2605.21427v1",
-      "https://arxiv.org/pdf/2605.21427"
-    ],
-    "code": null,
-    "implementation": "vLLM schedulerを拡張してbatch sizeをruntime可変化し、NVMLでGPU power capを適用。telemetry/control/actuationの外部closed-loop controllerを500ms周期で動かす。公開code URLは本文から確認できない。",
-    "last_checked": "2026-09-16"
-  },
-  "reservation": {
-    "claim_id": "claim-915ebeff2156b2e8003c2c34",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-915ebeff2156b2e8003c2c34","job_id":"job-research-3bb1145babb1a6fc",
+ "data":{
+  "canonical_id":"arXiv:2605.21427","arxiv_id":"2605.21427","doi":"10.48550/arXiv.2605.21427","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.DC"]},
+  "title":"PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+  "summary":"PALSは、GPUの電力上限を外部から与えられる固定制約ではなく、大規模言語モデルの実行系が動的に選ぶ制御変数として扱い、バッチ量と共同最適化する電力認識型vLLM実行系である。事前計測では電力上限、バッチ量、テンソル並列、専門家並列、データ並列を変え、処理量と消費電力の非線形な関係を学習する。実行時は軽量なランダムフォレスト予測器と500ミリ秒周期のPID帰還制御を組み合わせ、目標処理量を満たす候補の中からジュール当たりトークン数が最大の構成を選ぶ。A100を1ノード4基で最大3ノード使用し、密モデル3種と専門家混合モデル5種を評価した。単一ノードではエネルギー効率を26.3%改善して全探索最適値までの余地の95%を獲得し、3ノード・4800W制約下ではサービス品質違反を18.7–35.2%から3.2–5.3%へ減らして4–7倍改善した。さらに集約エネルギー効率を12.1%高め、電力需要応答では低電力目標時の処理量を最大22%改善した。",
+  "list_summary":"GPU電力上限とバッチ量を500ミリ秒周期で共同制御し、A100複数ノードの密モデル・専門家混合モデルでエネルギー効率を最大26.3%、サービス品質違反を4–7倍改善する。",
+  "authors":["Can Hankendi","Rana Shahout","Minlan Yu","Ayse K. Coskun"],"authors_affiliations":"Boston University; Harvard University","published":"2026-05-20","publication":"arXiv preprint arXiv:2605.21427v1","publication_type":"arXivプレプリント","publication_status":"2026年5月20日投稿のarXiv初版。主分類cs.AI、併記分類cs.DC。",
+  "lineage":"moe-offload-routing","topics":["大規模言語モデルサービング","専門家混合モデル","GPU電力上限","エネルギー効率","実行時制御","サービス品質","電力需要応答"],
+  "importance":"高い。専門家混合モデルでは演算と通信の比率によって追加電力の効果が変わることを実測し、ソフトウェアのバッチ制御とハードウェアの電力制御を一つの帰還制御へ統合する。",
+  "hardware_evaluation":"実機評価。NVIDIA A100を1ノード4基、NVLinkで接続し、最大3ノードまで使用する。",
+  "hardware_details":"電力上限150、200、250、300、350、400W、バッチ量1、4、8、16、32、64。テンソル並列1、2、4、専門家並列1、4、8、データ並列1、2、3ノードを事前計測する。",
+  "quality_effect":"モデル再学習や推論API変更を必要とせず、同じモデルの電力上限とバッチ構成を変える。生成品質を近似する手法ではなく、処理量のサービス品質とジュール当たり処理量を最適化する。",
+  "bottlenecks":["専門家ルーティングの全対全通信","高電力域での効率向上の頭打ち","小バッチ時のGPU利用率不足","固定電力上限による過剰または不足供給","事前予測器の誤差と負荷分布の変化"],
+  "evidence_locations":["第2.1節から第2.4節","第3節から第3.3節","第4.1節から第4.4節","第5.1節から第5.3節","第6節","表1から表3","図1から図11"],
+  "source":"https://arxiv.org/abs/2605.21427","sources":["https://arxiv.org/abs/2605.21427","https://arxiv.org/html/2605.21427v1","https://arxiv.org/pdf/2605.21427"],"code":null,
+  "implementation":"vLLMのスケジューラを拡張してバッチ量を実行中に変更できるようにし、NVMLでGPU電力上限を適用する。計測、制御、適用の閉ループを500ミリ秒周期で外部から動かし、モデル構造や推論APIは変更しない。論文本文から公開コードURLは確認できない。","last_checked":"2026-09-16",
+  "references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"},{"title":"Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training"},{"title":"Helix: Serving Large Language Models over Heterogeneous GPUs and Network via Max-Flow"}],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節"
+ },
+ "reservation":{"claim_id":"claim-915ebeff2156b2e8003c2c34","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
