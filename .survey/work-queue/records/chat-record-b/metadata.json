@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-3cb47aa83cc17c53a36cf3d5",
-  "job_id": "job-research-9d70d3111564c88d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3cb47aa83cc17c53a36cf3d5",
-    "worker_id": "scheduled-chat-paper-20260916T173214JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"canonical_id":"arXiv:2511.21669","arxiv_id":"2511.21669","doi":"10.48550/arXiv.2511.21669","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},"title":"DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving","summary":"DSDはspeculative decodingをedgeのdraft modelとcloudのtarget modelへ分散し、network RTT、batching、routing、verification依存を含めて評価・制御するframeworkである。DSD-SimはVIDURのGPU latency predictorとSimPy request-level schedulerを組み合わせ、実hardwareから得たacceptance traceを使ってdistributed speculationを再現する。さらにAdaptive Window Controlはqueue depth、acceptance rate、RTT、TPOT、直前windowを入力する小型DNNでspeculation windowとfused/distributed modeを動的制御する。20 target/600〜1000 draft規模でstatic windowに対しthroughput最大9.7%向上、TPOT最大10.7%削減を報告する。","list_summary":"edge draft/cloud target型distributed speculative decodingをDSD-Simでモデル化し、学習型AWCでwindowを適応制御してthroughput最大9.7%向上。","authors":["Fengze Yu","Leshu Li","Brad McDanel","Sai Qian Zhang"],"published":"2025-11-26","publication":"arXiv:2511.21669","publication_type":"arXivプレプリント","publication_status":"Preprint / under review","lineage":"speculative-decoding","topics":["distributed speculative decoding","edge-cloud serving","adaptive window control","LLM simulation"],"importance":"single-node前提のspeculative decodingをedge-cloudの通信・queueing・batchingを含むsystem問題へ拡張し、window制御をnetwork/system stateへ適応させる。","hardware_evaluation":"edge側A40/V100、cloud側A100/H100/A6000を含むheterogeneous構成。VIDUR predictorはA40/A100/H100実測で校正。","quality_effect":"標準speculative decodingのtarget verification/accept-reject semanticsを維持するため生成品質を変えない。","source":"https://arxiv.org/abs/2511.21669","sources":["https://arxiv.org/abs/2511.21669","https://arxiv.org/html/2511.21669v2"],"code":null,"implementation":"SimPy + VIDURを基盤とするDSD-Simと、5特徴量residual MLPのAdaptive Window Control研究実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML reference section; normalized identifiers not exhaustively extracted","references_total":0},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
