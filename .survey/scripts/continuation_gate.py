@@ -139,10 +139,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             write_action = "run_fixed_health_probe_once_before_classifying"
 
     claim_wait_action = "none"
+    claim_wait_seconds = 0
     if transient_claim_wait:
+        claim_wait_seconds = 30
         claim_wait_action = (
-            "keep_same_request_id; do_not_issue_another_claim; refresh_latest_head_and_"
-            "matching_claim_result; if_available_check_survey_claim_fast_until_terminal"
+            "keep_same_request_id; do_not_issue_another_claim; wait_30_seconds; "
+            "refresh_latest_head_and_matching_claim_result; if_available_check_survey_claim_fast; "
+            "if_result_still_pending_wait_30_seconds_again; repeat_until_result_or_terminal_hard_stop"
         )
 
     return {
@@ -160,6 +163,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "write_action": write_action,
         "claim_result_pending": bool(args.claim_result_pending),
         "claim_wait_action": claim_wait_action,
+        "claim_wait_seconds": claim_wait_seconds,
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
