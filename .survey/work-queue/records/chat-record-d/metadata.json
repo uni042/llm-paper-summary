@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6706504bb5bc81c853af84cc","job_id":"job-research-e59ec36b619f9b0c","data":{"canonical_id":"arXiv:2609.07306","arxiv_id":"2609.07306","doi":"10.48550/arXiv.2609.07306","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention","summary":"動的疎注意では実際の注意計算を少数チャンクへ絞っても、各Transformer層でクエリチャンクと全キーチャンクの経路スコア行列を再構築する費用が残る。RouteRelayは注意値やKVを共有せず、前層の上位kチャンクIDだけを再利用する。アンカー層で完全経路と境界直下・ランダム候補を台帳へ保存し、中間層では選択済み＋監視候補だけを再採点する。最弱選択チャンクを監視候補が脅かした行だけ完全ルーティングをやり直す。合成層間ドリフト評価では経路再現率99.99%以上を保ちながら完全再経路行を25.0～78.2%へ抑え、128～1024キーチャンクでは完全経路の38.4～51.6%のスコア対だけを評価した。ただし未融合CPU実装は密行列積より1.6～3.7倍遅く、演算削減を実時間高速化へ変えるにはGPU融合カーネルが必要。","list_summary":"動的疎注意の前層経路IDを監視候補付きで再利用し、変化した行だけ再ルーティングして経路スコア計算を約38～52%へ削減するが、現CPU実装は未融合処理で逆に低速。","authors":["Bin Li","Sisi Liu","Chenyang Hu","Chaoyang Zhang","Wei Li","Hui Song"],"published":"2026-09-07","publication":"arXiv preprint arXiv:2609.07306v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"sparse-attention","topics":["動的疎注意","ルーティング","長文プリフィル","層間再利用","GPUカーネル"],"importance":"疎注意本体ではなく各層で繰り返す経路選択メタデータの計算を層間冗長性で削減し、注意のQ/K/V数値計算は各層固有のまま維持する。","hardware_evaluation":"主評価は合成64次元ルーティング表現とCPU時間測定。GPU向け行選択カーネル設計は提示するが実測高速化は未実証。","quality_effect":"経路再現率を主品質指標とし、適応再経路で低～高ドリフトでも99.99%以上を維持。","source":"https://arxiv.org/abs/2609.07306","sources":["https://arxiv.org/abs/2609.07306","https://arxiv.org/html/2609.07306","https://arxiv.org/pdf/2609.07306"],"code":null,"implementation":"行単位台帳、候補再採点、prefix-sumによる不安定行圧縮、選択行だけの完全ルーティングというGPU実装設計を提示。評価実装は未融合CPU。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節","references_total":26},"reservation":{"claim_id":"claim-6706504bb5bc81c853af84cc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c310d0bbe115d78e277aebea",
+  "job_id": "job-research-5204297ffdb35cfd",
+  "data": {
+    "canonical_id": "arXiv:2609.07282",
+    "arxiv_id": "2609.07282",
+    "doi": "10.48550/arXiv.2609.07282",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Separating Stream Stability from Long-Term Recall in Language Models",
+    "summary": "長時間ストリーミング生成で『動き続けること』と『古い情報を覚えて使えること』が混同される問題を整理し、安定性・アクセス・実用性の三つの到達距離を分離するThreeH評価契約を提案する。注意シンクを残すStreamingLLMは2Kトークンの固定KV容量でも128Kまで正規化パープレキシティ1.04倍を保つが、通常内容がキャッシュから追い出されると4択記憶は2Wで約26%の偶然水準へ落ちる。対して再帰状態や検索は追加状態を使って意味的到達距離を延ばす。ThreeHは同一の状態・計算予算で連続生成安定性、反実仮想を使う因果的保持、遅延タスク効用を別々の曲線として測り、『無限コンテキスト』という単一長さの主張を分解する。",
+    "list_summary": "長時間生成の安定性・過去情報への因果アクセス・タスク効用をThreeHの3到達距離へ分離し、注意シンクの安定生成を長期記憶と誤認しない評価契約を示す。",
+    "authors": [
+      "Peipei Cao",
+      "Xin Zhang",
+      "Jie Tang",
+      "Xiao Li",
+      "Siying Li",
+      "Qing Pei"
+    ],
+    "published": "2026-09-07",
+    "publication": "arXiv preprint arXiv:2609.07282v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "other-inference-systems",
+    "topics": [
+      "ストリーミングLLM",
+      "長期記憶",
+      "KVキャッシュ",
+      "注意シンク",
+      "評価方法"
+    ],
+    "importance": "固定メモリで無期限に安定生成できるというシステム上の性質と、追い出された内容を後から利用できる意味記憶を明確に分離し、異種メモリ方式を同じ資源予算で比較できる。",
+    "hardware_evaluation": "128Kトークンのストリーム、W=2048の有効KVキャッシュ。論文は概念システム比較を中心とし、ハードウェア型番は主要評価条件として報告していない。",
+    "quality_effect": "StreamingLLMは局所言語モデル品質を維持するが、遠隔内容の保持・遅延判断はキャッシュ外で偶然水準へ低下する。",
+    "source": "https://arxiv.org/abs/2609.07282",
+    "sources": [
+      "https://arxiv.org/abs/2609.07282",
+      "https://arxiv.org/html/2609.07282",
+      "https://arxiv.org/pdf/2609.07282"
+    ],
+    "code": null,
+    "implementation": "新規サービング実装より評価契約ThreeHと概念的比較が中心。StreamingLLM、再帰状態、検索付きシンク等を同一予算で評価する。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML参考文献節",
+    "references_total": 33
+  },
+  "reservation": {
+    "claim_id": "claim-c310d0bbe115d78e277aebea",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

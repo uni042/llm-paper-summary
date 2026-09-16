@@ -1,1 +1,46 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6706504bb5bc81c853af84cc","job_id":"job-research-e59ec36b619f9b0c","data":{"evaluation_summary":"64次元のチャンクルーティング表現を使う再現可能な合成評価で、層間ドリフト、監視候補構成、キーチャンク数128～1024を変える。既定はtop-12、近接監視12、ランダム監視12、FP32。経路再現率、完全再経路行率、全ルーティング比のスコア対、CPU中央値時間を測る。","scope":"経路メタデータの演算削減を検証する評価で、実LLMのエンドツーエンド品質・プリフィル速度をGPU上で実測したものではない。CPU試作の実時間は負の結果。","hardware":["CPU unfused routing prototype; GPU kernel is design only"],"models":[],"datasets":["synthetic cross-layer routing representations"],"workload":"cross-layer stability: 32 layers, 384 query rows, 192 key chunks, drift 0.01～0.10, 10 seeds。sentinel ablation: 256×256 chunks/rows, 24 layers, drift 0.003, 5 seeds。scale: 192 query rows, 16 layers, 128～1024 key chunks, drift 0.002, 3 seeds。","baselines":["route every layer","fixed stride 4","random-only sentinels","near-miss-only sentinels","full dense routing matrix multiplication"],"metrics":["top-k route recall","rerouted-row fraction","evaluated score-pair fraction","median CPU routing time","relative speedup"],"predictor_accuracy":"予測器ではなく経路再現率を測定。低～高ドリフトでRouteRelayは99.99～100%を維持。","control_knobs":"near-miss sentinel m、random sentinel r、guard margin gamma、forced anchor interval、route width k、key chunk count。"},"reservation":{"claim_id":"claim-6706504bb5bc81c853af84cc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c310d0bbe115d78e277aebea",
+  "job_id": "job-research-5204297ffdb35cfd",
+  "data": {
+    "evaluation_summary": "W=2048トークンの有効キャッシュで5方式を比較し、128Kストリームの安定性、0.25W～8W遅延の4択ランダム結合保持、同距離の3択遅延判断を各ラグ500例で評価する。安定性閾値は正規化パープレキシティ1.1倍以下、保持・実用性閾値は75%以上。",
+    "scope": "注意シンク、窓再計算、固定サイズ再帰状態、外部検索を概念的に比較する評価研究。特定の大規模商用サービング実装や多利用者トラフィックの性能比較ではない。",
+    "hardware": [],
+    "models": [
+      "pretrained causal decoder"
+    ],
+    "datasets": [
+      "128K natural-text stream",
+      "four-way random delayed bindings",
+      "three-action delayed decision task"
+    ],
+    "workload": "有効KV窓W=2048。StreamingLLMは先頭4シンクとW-4最近状態を保持。保持・判断の証拠距離を0.25W～8Wへ掃引し、固定シンク位置へ標的を置かない。",
+    "baselines": [
+      "Window",
+      "StreamingLLM",
+      "Window recomputation",
+      "Recurrent fixed-size memory",
+      "Sink + retrieval",
+      "Dense oracle"
+    ],
+    "metrics": [
+      "PPL@128K normalized to 2K",
+      "relative per-token latency",
+      "persistent state size",
+      "four-way recall accuracy",
+      "delayed decision accuracy",
+      "H_stab",
+      "H_access",
+      "H_util"
+    ],
+    "predictor_accuracy": "予測器評価ではない。ThreeHの到達距離を閾値付き曲線から測定する。",
+    "control_knobs": "sink token count、cache window W/2W、retrieval depth k=1/4、target lag、recurrent/external state。"
+  },
+  "reservation": {
+    "claim_id": "claim-c310d0bbe115d78e277aebea",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
