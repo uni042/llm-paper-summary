@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:04:06 JST**
+> 自動生成: **2026-09-16 19:04:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **21** |
 | 未claim Research job | **19** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-16 18:51:24 JST（12分前）** |
+| 最終検証済みResearch収録 | **09-16 18:51:24 JST（13分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **4** | **0** | **4** | **0** | **0** | **6** |
-| 合計 | **40** | **12** | **4** | **8** | **2** | **0** | **6** |
+| Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **8** |
+| 合計 | **40** | **14** | **4** | **10** | **2** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -150,8 +150,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 19:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **6件**
-- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **8件**
+- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve / CXL composable memory・Kubernetes DRA・cross-node KV reuse / multi-agent collective KV sharing・All-Gather redundancy elimination
 - round `specialist-moe-prefetch-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json`
   - 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行
@@ -167,6 +167,14 @@
 - round `specialist-elastic-kv-4` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1914JST-discovery-specialist-elastic-kv-4.json`
   - 探索軸: CUDA VMM・KV memory reclamation・prefill reserve
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cxl-k8s-5` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1917JST-discovery-specialist-cxl-k8s-5.json`
+  - 探索軸: CXL composable memory・Kubernetes DRA・cross-node KV reuse
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-collective-agent-kv-6` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1919JST-discovery-specialist-collective-agent-kv-6.json`
+  - 探索軸: multi-agent collective KV sharing・All-Gather redundancy elimination
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -227,10 +235,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **381** |
+| 成功result未照合のimmutable submission | **383** |
 | └ Research | **233** |
 | └ Audit | **1** |
-| └ Discovery | **147** |
+| └ Discovery | **149** |
 
 ### 厳格検証が未成立のcompleted job
 
