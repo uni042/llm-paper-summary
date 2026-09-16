@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:09:31 JST**
+> 自動生成: **2026-09-16 19:11:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **27** |
 | 未claim Research job | **25** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-16 18:51:24 JST（18分前）** |
+| 最終検証済みResearch収録 | **09-16 18:51:24 JST（19分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **22** | **0** | **22** | **0** | **0** | **27** |
-| 合計 | **40** | **30** | **4** | **26** | **2** | **0** | **27** |
+| Discovery | **1** | **23** | **0** | **23** | **0** | **0** | **30** |
+| 合計 | **40** | **31** | **4** | **27** | **2** | **0** | **30** |
 
-- 最新Discovery runの耐久探索round: **22件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **23件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -150,8 +150,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 19:00 JST**
-- 耐久探索round: **22件** / immutable submission: **22件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **22件** / 候補: **27件**
-- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve / CXL composable memory・Kubernetes DRA・cross-node KV reuse / multi-agent collective KV sharing・All-Gather redundancy elimination / GPU runtime/compiler・persistent dynamic megakernel / disaggregated serving・network/KV-aware routing・hardware calibration / 新着KV compression・prompt-adaptive configuration selection / 重要新規系統のforward citation追跡 / 重要論文のbackward reference・基盤システム / OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion / MoE multi-model serving・weight/KV disaggregation・GPU memory pooling / network-aware decode routing・mixed-precision KV transfer / agentic serving・external KV storage I/O・dual-path RDMA loading / 最新novel候補群のforward citation・派生追跡 / CrossPool backward reference・MoE disaggregated expert parallelism基盤 / MoE serving resilience・KV checkpoint・shadow experts / GPU runtime・lossless weight compression・fused decompression GEMM / MoE serverless elasticity・token-budget fleet routing / 2025重要未収録・CXL KV・multi-GPU MoE・edge expert streaming / MoE dual-phase prefetch・cross-model KV reuse・agent serving simulation
+- 耐久探索round: **23件** / immutable submission: **23件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **23件** / 候補: **30件**
+- 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行 / agentic serving・構造的KV再利用・共有圧縮cache / CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload / CUDA VMM・KV memory reclamation・prefill reserve / CXL composable memory・Kubernetes DRA・cross-node KV reuse / multi-agent collective KV sharing・All-Gather redundancy elimination / GPU runtime/compiler・persistent dynamic megakernel / disaggregated serving・network/KV-aware routing・hardware calibration / 新着KV compression・prompt-adaptive configuration selection / 重要新規系統のforward citation追跡 / 重要論文のbackward reference・基盤システム / OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion / MoE multi-model serving・weight/KV disaggregation・GPU memory pooling / network-aware decode routing・mixed-precision KV transfer / agentic serving・external KV storage I/O・dual-path RDMA loading / 最新novel候補群のforward citation・派生追跡 / CrossPool backward reference・MoE disaggregated expert parallelism基盤 / MoE serving resilience・KV checkpoint・shadow experts / GPU runtime・lossless weight compression・fused decompression GEMM / MoE serverless elasticity・token-budget fleet routing / 2025重要未収録・CXL KV・multi-GPU MoE・edge expert streaming / MoE dual-phase prefetch・cross-model KV reuse・agent serving simulation / agentic tokenization・MoE expert residency paging・agent-aware runtime tier
 - round `specialist-moe-prefetch-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json`
   - 探索軸: MoE expert speculative prefetch・CPU/GPU異種実行
@@ -251,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **399** |
+| 成功result未照合のimmutable submission | **400** |
 | └ Research | **233** |
 | └ Audit | **1** |
-| └ Discovery | **165** |
+| └ Discovery | **166** |
 
 ### 厳格検証が未成立のcompleted job
 
