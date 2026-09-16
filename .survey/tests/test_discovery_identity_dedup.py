@@ -46,7 +46,7 @@ class DiscoveryIdentityDedupTest(unittest.TestCase):
 canonical_id: arXiv:2605.12345
 arxiv_id: 2605.12345
 doi: 10.1234/example
-title: Fast KV Cache: A Practical System
+title: "Fast KV Cache: A Practical System"
 summary: Existing paper used for identity-dedup regression coverage.
 ---
 # Fast KV Cache: A Practical System
