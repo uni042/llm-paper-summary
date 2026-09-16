@@ -26,6 +26,15 @@ class MainWriterWorkflowSafetyTests(unittest.TestCase):
 
         self.assertEqual([], offenders)
 
+    def test_discovery_recovery_rebases_prepared_commit_after_push_race(self):
+        text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
+
+        # A push race must preserve the already computed recovery commit instead of
+        # discarding it and recomputing from origin/main on every retry.
+        self.assertIn("git rebase origin/main", text)
+        self.assertIn("git rebase --abort || true", text)
+        self.assertNotIn("Resetting to latest main and retrying.", text)
+
 
 if __name__ == "__main__":
     unittest.main()
