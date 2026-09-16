@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-9fdbbab13803c394452c3f1f",
-  "job_id": "job-research-1a835bd497ae941f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9fdbbab13803c394452c3f1f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
+ "data":{"canonical_id":"arXiv:2506.12417","arxiv_id":"2506.12417","doi":"10.48550/arXiv.2506.12417","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"HarMoEny: Efficient Multi-GPU Inference of MoE Models","summary":"混合専門家モデル（Mixture of Experts; MoE）の専門家並列では、入力ごとに人気専門家が変わるためGPU間のトークン負荷が偏り、軽いGPUが同期障壁で待たされる。HarMoEnyは各バッチの小さなルーティング情報をGPU間で共有し、過負荷GPUへ向かうトークンの一部を空いているGPUへ動的に再配置する。再配置先に必要な専門家が無い場合は、システムメモリから専門家重みを非同期に先読みし、転送を他の専門家計算と重ねる。静的な専門家複製や事前プロファイルに頼らず、バッチごとの人気変動へ追随してGPU待ち時間を減らす。","list_summary":"MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。","authors":["Zachary Doucet","Rishi Sharma","Martijn de Vos","Rafael Pires","Anne-Marie Kermarrec","Oana Balmau"],"authors_affiliations":"EPFLを中心とする著者による研究。","published":"2025-06-14","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint; v2 revised 2025-06-17","lineage":"MoE expert parallelism / dynamic load balancing / expert prefetching","topics":["MoE","専門家並列","負荷分散","トークン再配置","専門家先読み","マルチGPU推論"],"importance":"専門家人気が入力ごとに変動する状況をオンラインで扱い、固定配置や長時間の事前プロファイルでは追随できない負荷偏りを直接緩和する。","hardware_evaluation":"8基のNVIDIA V100を含むマルチGPU実機で、Switch Transformer系とQwen系MoE、実データと合成偏りを評価する。","hardware_details":"論文の負荷偏り分析では8基のV100を搭載したDGX環境を使用し、128専門家のSwitch Transformerなどを評価する。","quality_effect":"ルータが選んだ専門家そのものは変えず、その専門家計算をどのGPUで実行するかを再配置するため、モデルの数値的意味を近似で変更する方式ではない。","source":"https://arxiv.org/abs/2506.12417","sources":["https://arxiv.org/abs/2506.12417","https://arxiv.org/pdf/2506.12417"],"code":"https://github.com/sacs-epfl/HarMoEny","implementation":"PyTorch上に実装され、著者が公開ソースコードを提供している。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},
+ "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
