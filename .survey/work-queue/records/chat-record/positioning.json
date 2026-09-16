@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-ba99df60a0f0fdf529fc1f2a",
-  "job_id": "job-research-21d58015b4f64394",
-  "data": {
-    "positioning": "LLM推論のエンドツーエンドbenchmarkとGPUマイクロアーキテクチャprofilingの間を埋める方法論研究。vLLM/FA3/cuBLASLtという実スタックを、役割・regime・shapeごとにNCU counterへ落として診断する。",
-    "differences": "一般的なSM utilizationやMFU一値の報告に対し、異なる分母を持つ時間利用率、空間coverage、occupancy、stall、GMMA断片、wave、L2を同一呼出しで併記する。特にHopper m64断片の有用行充填をdecode固有の構造上限として切り出す。",
-    "relation_to_prior_work": [
-      {
-        "work": "vLLM / FlashAttention-3 performance studies",
-        "difference": "throughput/latencyだけでなくper-role NCU counterを追い、どのマイクロアーキテクチャ機構が時間を作るかへ分解する。"
-      },
-      {
-        "work": "MFU / SM utilization reporting",
-        "difference": "一つの利用率ではなくactive-SMとdevice-wide、64-warp上限とkernel capなど分母を明示して誤読を防ぐ。"
-      },
-      {
-        "work": "roofline analysis",
-        "difference": "compute/memory SOL比とL2 fit、stall counterを実測し、B≤8 decodeが帯域側に留まることを役割別に確認する。"
-      },
-      {
-        "work": "kernel tiling optimization",
-        "difference": "tile探索で直せるwave損失と、ISA固定m64でtileでは直せないfragment fillを分離する。"
-      }
-    ],
-    "strengths": [
-      "raw NCU counterまたは明示式へ各指標を固定し再現可能性を高める。",
-      "4つのdense/MoEモデルとcold/warm/decodeを同一H100で比較する。",
-      "独立counter群を三角測量して診断を裏付ける。",
-      "B=32追加実測でcompute crossover外挿を検証する。",
-      "負荷形状から具体的なserving/kernel/architectureレバーへ結び付ける。"
-    ],
-    "limitations": [
-      "単一H100 NVL、TP=1、BF16に限定される。",
-      "FP8、tensor parallel、他H100 SKUではtile・通信・帯域比が変わる。",
-      "warm prefillは≥99% prefix hitの合成endpointで中間hit率を測っていない。",
-      "launch overhead 5µsは解析仮定でhost/driver依存。",
-      "L2 working-set式はscratch/tile stagingを省く一次近似で実DRAM bytesとの差が約10～20%ある。"
-    ],
-    "implementation_status": "vLLM 0.16 + FA3 + cuBLASLtをNCU 2024.3で計測し、生.ncu-repからstall/tensor/FA split CSVを再生成する分析pipeline。raw NCU/Nsysと派生CSV公開を予定。",
-    "research_positioning": "新しい推論アルゴリズムではなく、GPU利用率の症状から原因と適切な最適化層を特定する診断契約。Hopper向け推論最適化の評価基盤として価値がある。",
-    "repository_fit": "その他推論システム系統の性能分析・評価方法論として適合し、vLLM、FA3、量子化、batching、PD分離等の性能主張を監査する際のハードウェア根拠を提供する。"
-  },
+  "attempt_id": "attempt-ebd3e581b3a7df85b7d8df3e",
+  "job_id": "job-research-250a1e243181b0c3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ba99df60a0f0fdf529fc1f2a",
+    "claim_id": "claim-ebd3e581b3a7df85b7d8df3e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
