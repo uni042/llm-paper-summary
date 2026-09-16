@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 06:34:04 JST**
+> 自動生成: **2026-09-17 06:34:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -207,12 +207,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.16491` — PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving / worker `scheduled-chat-normal-20260917T063000`
+  - claim: **09-17 06:34:16 JST** / heartbeat: **—** / lease expiry: **09-17 08:04:16 JST**
+  - evidence: `.survey/work-queue/claims/job-research-98e8633cce3c47f1.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
   - claim: **09-17 05:33:59 JST** / heartbeat: **09-17 06:31:30 JST** / lease expiry: **09-17 08:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
-- `arXiv:2609.16491` — PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving / worker `scheduled-chat-normal-20260917T063000`
-  - claim: **09-17 06:31:30 JST** / heartbeat: **—** / lease expiry: **09-17 08:01:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-98e8633cce3c47f1.json`
 
 #### Audit
 

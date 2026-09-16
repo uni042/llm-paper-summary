@@ -2,38 +2,77 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-d97ee4e96b13d333e721d48c",
+  "attempt_id": "attempt-9c7bc1c5f144c062d60905d3",
   "job_id": "job-research-98e8633cce3c47f1",
   "data": {
     "canonical_id": "arXiv:2609.16491",
     "arxiv_id": "2609.16491",
     "doi": "10.48550/arXiv.2609.16491",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
     "title": "PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving",
     "summary": "PipeSwiftは、対話型LLM向けの先頭トークン遅延や逐次生成遅延ではなく、エージェントの一連の仕事が終わるまでのジョブ完了時間（Job Completion Time; JCT）を主目的に据えた推論基盤である。エージェントでは各ターンがツール実行を挟んで次ターンへ依存するため、プリフィルを即時実行してデコードのバッチを最大化する従来方針が必ずしも全体完了を速めない。論文はプリフィルとデコードの効率に内部最適点があることを示し、ノード間の各MoE層で通信する広域エキスパート並列より、隣接段だけで活性値を渡すパイプライン並列がプリフィル効率で有利になると再評価する。PipeSwiftはプリフィルを適切な間隔で波として集約し、キャッシュ済み長と新規長から計算量を見積もってマイクロバッチを均衡化する。デコード中はKV長に応じて要求を再分割し、多トークン予測（Multi-Token Prediction; MTP）をパイプライン最終段へ統合する。64基のH800上でGLM-4.7-360BとQwen3.5-397Bを用い、SWE-BenchとBrowseCompの実エージェント軌跡を決定論的に再生した結果、広域EPより全体JCTを1.21〜1.45倍、既存vLLM PP2より1.60〜2.33倍改善した。",
     "list_summary": "エージェント推論のJCTをプリフィルとデコードの均衡問題として捉え直し、JCT指向スケジューリングとMTP統合パイプライン並列で64基H800上の360B級MoE処理を高速化する。",
-    "authors": ["Shiju Wang", "Fei Ren", "Fangcheng Fu", "Zhanhong Tan", "Kairui Li", "Jingwei Cai", "Kaisheng Ma"],
+    "authors": [
+      "Shiju Wang",
+      "Fei Ren",
+      "Fangcheng Fu",
+      "Zhanhong Tan",
+      "Kairui Li",
+      "Jingwei Cai",
+      "Kaisheng Ma"
+    ],
     "authors_affiliations": "Tsinghua University; Shanghai Jiao Tong University; Polar Bear Technologies",
     "published": "2026-09-15",
     "publication": "arXiv:2609.16491v1",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "agentic LLM serving / pipeline parallelism / serving scheduling / speculative decoding",
-    "topics": ["エージェント推論", "ジョブ完了時間", "パイプライン並列", "プリフィル・デコード協調", "多トークン予測", "MoEサービング"],
+    "topics": [
+      "エージェント推論",
+      "ジョブ完了時間",
+      "パイプライン並列",
+      "プリフィル・デコード協調",
+      "多トークン予測",
+      "MoEサービング"
+    ],
     "importance": "対話型SLOを前提とした既存推論基盤の目的関数をエージェント処理の完了時間へ置き換えると、従来不利と見なされがちだったパイプライン並列が有力になることを、スケジューリング探索と64基GPU実測の双方で示す。",
     "hardware_evaluation": "8基のNVIDIA H800-80GBを搭載するサーバ群を用い、主要比較は合計64 GPU。PD分離の2P2D比較のみ128 GPU。",
     "hardware_details": "各ノード8×NVIDIA H800-80GB、ノード内NVLink 4.0、ノード間8×400 Gbps RoCE v2。PyTorch 2.11、CUDA 12.9。",
     "quality_effect": "同一の記録済みエージェント軌跡、出力トークン数、MTP受理長、ツール遅延を決定論的に再生する性能評価であり、生成品質を変えて高速化する方式ではない。元軌跡はtemperature 0.8、top-p 0.95で収集される。",
     "source": "https://arxiv.org/abs/2609.16491",
-    "sources": ["https://arxiv.org/abs/2609.16491", "https://arxiv.org/html/2609.16491", "https://arxiv.org/pdf/2609.16491"],
+    "sources": [
+      "https://arxiv.org/abs/2609.16491",
+      "https://arxiv.org/html/2609.16491",
+      "https://arxiv.org/pdf/2609.16491"
+    ],
     "code": null,
     "implementation": "論文はPipeSwiftをopen-source runtimeと記述し、SGLang 0.5.10.post1、vLLM 0.26.0と比較する。一次資料本文内ではPipeSwift自身の公式コードURLを確認できなかった。",
     "last_checked": "2026-09-17",
-    "references": [{"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"},{"canonical_id":"arXiv:2602.13692","arxiv_id":"2602.13692"},{"canonical_id":"arXiv:2602.21548","arxiv_id":"2602.21548"}],
+    "references": [
+      {
+        "canonical_id": "arXiv:2502.13965",
+        "arxiv_id": "2502.13965"
+      },
+      {
+        "canonical_id": "arXiv:2602.13692",
+        "arxiv_id": "2602.13692"
+      },
+      {
+        "canonical_id": "arXiv:2602.21548",
+        "arxiv_id": "2602.21548"
+      }
+    ],
     "references_checked_at": "2026-09-17",
     "references_source": "primary-reference-section",
     "references_total": 34
   },
-  "reservation": {"claim_id": "claim-d97ee4e96b13d333e721d48c", "worker_id": "scheduled-chat-normal-20260917T063000", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9c7bc1c5f144c062d60905d3",
+    "worker_id": "scheduled-chat-normal-20260917T063000",
+    "worker_kind": "scheduled_chat"
+  }
 }
