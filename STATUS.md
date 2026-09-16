@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 22:34:08 JST**
+> 自動生成: **2026-09-16 22:34:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -196,7 +196,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.03876` — AdaptiveSD A Stability-Aware, Runtime-Adaptive Speculative Decoding Framework with Multi-Policy Orchestration for CPU-Constrained LLM Inference / worker `scheduled-chat-llm-survey-turn5-20260916T223150JST`
-  - claim: **09-16 22:32:51 JST** / heartbeat: **—** / lease expiry: **09-17 00:02:51 JST**
+  - claim: **09-16 22:34:54 JST** / heartbeat: **—** / lease expiry: **09-17 00:04:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-2d9b8557211e7f73.json`
 
 #### Audit

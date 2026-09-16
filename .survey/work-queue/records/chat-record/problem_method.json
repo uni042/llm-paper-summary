@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-5acbf4e6072a6d05039df06d",
+  "attempt_id": "attempt-de9937ab22bfaef86ad0dc97",
   "job_id": "job-research-2d9b8557211e7f73",
   "data": {
     "problem": "固定ドラフト長の投機的デコードは、受理率が高いコードでは有効でも、推論・創作文脈では棄却が増えて無駄計算を生む。CPU環境では対象モデルとドラフトモデルが同じ低いメモリ帯域を奪い合うため、深すぎる投機は速度低下だけでなくCPU飽和、帯域飽和、尾部遅延増大、最悪の場合の資源枯渇を起こす。既存の適応方式は受理率やエントロピーなど少数信号へ依存し、CPU使用率、帯域、KV圧力、遅延分散を同時に閉ループ制御しない。",
@@ -25,7 +25,7 @@
     "system_design": "監視、決定、投機実行、KV協調を一段階ごとに閉ループ接続し、安全規則を学習方策より上位に置く。"
   },
   "reservation": {
-    "claim_id": "claim-5acbf4e6072a6d05039df06d",
+    "claim_id": "claim-de9937ab22bfaef86ad0dc97",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
     "worker_kind": "scheduled_chat"
   }

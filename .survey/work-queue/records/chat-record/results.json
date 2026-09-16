@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5acbf4e6072a6d05039df06d",
+  "attempt_id": "attempt-de9937ab22bfaef86ad0dc97",
   "job_id": "job-research-2d9b8557211e7f73",
   "data": {
     "overview": "AdaptiveSDは評価全体で投機効率68〜82%を維持し、棄却されるドラフト計算を約32%以下へ抑えた。安全規則はCPU・帯域・遅延分散の危険時に深度を下げ、報告した全実行で安全違反ゼロを記録する。一方、実GGUFを低帯域のi5-7300Uで動かした条件では投機速度向上が1未満となる場合があり、論文自身も単純な固定方策より常に高速とは主張しない。主価値は異種・未調整CPUで資源飽和を避けながら継続生成することにある。",
@@ -34,7 +34,7 @@
     "quality_impact": "投機検証は対象モデルの受理規則を維持し、棄却時は対象モデルの訂正トークンをコミットするため、通常の投機的デコードと同様に対象モデルの出力分布を保存する設計である。"
   },
   "reservation": {
-    "claim_id": "claim-5acbf4e6072a6d05039df06d",
+    "claim_id": "claim-de9937ab22bfaef86ad0dc97",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
     "worker_kind": "scheduled_chat"
   }
