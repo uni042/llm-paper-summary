@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-5b2f0818dd442ca0014c8634",
-  "job_id": "job-research-3ad6262bd04cfbe6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5b2f0818dd442ca0014c8634",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5b2f0818dd442ca0014c8634","job_id":"job-research-3ad6262bd04cfbe6","data":{"canonical_id":"arXiv:2604.23467","arxiv_id":"2604.23467","doi":"10.48550/arXiv.2604.23467","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI","cs.AR"]},"title":"Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference","summary":"対話型の短系列LLM推論では、演算そのものだけでなく反復するGPUカーネル起動とホスト制御が初回トークン・尾部遅延を押し上げる。本論文はTransformer実行を静的部分と動的部分へ分け、静的演算をCUDA Graphで捕捉・再生し、可変長処理やサンプリングを実行時コンパイルへ残す二経路ランタイムを提案する。NVIDIA H100上のLLaMA-2 7B、FP16、バッチ1、10〜500トークンでTensorRT-LLM等と比較し、初回トークン時間を最大66%削減し、P99デコード遅延も平均20.2%低減した。","list_summary":"静的Transformer演算をCUDA Graph再生、動的制御を実行時コンパイルへ分け、短系列・バッチ1推論の起動オーバーヘッドと尾部遅延を削減する。","authors":["Divakar Kumar Yadav","Tian Zhao"],"published":"2026-04-25","publication":"arXiv:2604.23467v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"kernel-runtime-compilation","topics":["CUDA Graph","実行時コンパイル","低遅延推論"],"importance":"静的グラフ化と動的制御の二者択一を避け、Transformer内部を性質別に分割してグラフ再生と実行時コンパイルを併用するランタイム設計を示す。","hardware_evaluation":"NVIDIA H100 GPU、FP16、batch=1。","quality_effect":"モデル計算や重みを近似せず実行方式のみを変更するため、品質劣化を目的としない。決定的seedとwarm-start条件で遅延を測定する。","source":"https://arxiv.org/abs/2604.23467","sources":["https://arxiv.org/abs/2604.23467","https://arxiv.org/pdf/2604.23467"],"code":null,"implementation":"PyTorch 2.3、CUDA 12.4、FlashAttention v2、nvFuser LayerNorm、vLLM由来paged KV kernelを静的グラフへ組み込み、動的サンプリングを実行時コンパイル側へ分離する研究実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv v1 reference section; normalized identifiers not exhaustively extracted","references_total":0},"reservation":{"claim_id":"claim-5b2f0818dd442ca0014c8634","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
