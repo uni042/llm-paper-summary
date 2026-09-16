@@ -4,10 +4,33 @@
   "slot": "metadata",
   "attempt_id": "attempt-6b1a0ee3dc2a2d685a2203c9",
   "job_id": "job-research-411dee2b8db54e04",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b1a0ee3dc2a2d685a2203c9",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2406.11674",
+    "arxiv_id": "2406.11674",
+    "doi": "10.48550/arXiv.2406.11674",
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
+    "summary": "GPUメモリに収まらない大規模言語モデルでは、重みをCPUメモリやSSDへ退避し、各層の計算前にGPUへ転送する方式が使われる。Endorは、この方式では計算より重み転送が支配的になることをOPT-66Bで実測し、非構造枝刈り後の重みを非ゼロ値配列と1ビット位置ビットマップに分離して保存する。50%枝刈りしたFP16重みでは全体を元の56%へ縮小し、GPU上で並列復元することで転送削減を復元費用より大きくする。OPT-66Bでは通常のHugging Face Accelerateによる退避推論に対して配置容量増加込みで1.70倍、Llama2-70Bで1.78倍に高速化し、GPUダイレクトストレージを併用するとそれぞれ約2.25倍、2.37倍まで改善する。量子化とも併用可能だが、ビットマップ費用が相対的に増えるため圧縮率と高速化幅は小さくなる。",
+    "list_summary": "非構造枝刈り重みを非ゼロ値と位置ビットマップへ分離し、CPU/SSDからGPUへの転送量を減らして、退避LLM推論を最大約2.37倍高速化する。",
+    "authors": ["Donghyeon Joo", "Ramyad Hadidi", "Soheil Feizi", "Bahar Asgari"],
+    "published": "2024-06-17",
+    "publication": "arXiv:2406.11674v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "cpu-ssd-offload",
+    "topics": ["LLM退避推論", "SSD", "非構造枝刈り", "疎形式", "GPUダイレクトストレージ"],
+    "importance": "SSD/CPU退避推論で転送がほぼ全実行時間を占める条件を実測し、非構造枝刈りを実際の転送量削減へ結び付ける軽量な疎形式を提示する。",
+    "hardware_evaluation": "RTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TBを用い、OPT-66BとLlama2-70Bを単一バッチ生成で評価。",
+    "quality_effect": "Endor自体は枝刈り後の非ゼロ値と位置を完全保持するため追加の品質劣化を導入しない。品質差は採用した枝刈り方式に由来する。",
+    "source": "https://arxiv.org/abs/2406.11674",
+    "sources": ["https://arxiv.org/abs/2406.11674", "https://arxiv.org/html/2406.11674v1"],
+    "code": null,
+    "implementation": "OPT-66BとLlama2-70Bを対象にした研究実装。論文時点ではオープンソース化予定と記載され、公開コードURLは本文で確認できない。",
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML参考文献節を確認。",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-6b1a0ee3dc2a2d685a2203c9", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
