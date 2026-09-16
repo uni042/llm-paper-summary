@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 20:02:11 JST**
+> 自動生成: **2026-09-16 20:02:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **28** |
 | 未claim Research job | **27** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-16 18:51:24 JST（1時間10分前）** |
+| 最終検証済みResearch収録 | **09-16 18:51:24 JST（1時間11分前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **38** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **3** |
-| 合計 | **38** | **11** | **4** | **7** | **1** | **0** | **3** |
+| Discovery | **0** | **4** | **0** | **4** | **0** | **0** | **5** |
+| 合計 | **38** | **12** | **4** | **8** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -147,8 +147,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 20:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **3件**
-- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **5件**
+- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication
 - round `specialist-superchip-slo-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
   - 探索軸: Superchip統合メモリ・SLO-aware KV rotation
@@ -160,6 +160,10 @@
 - round `specialist-semantic-kv-3` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json`
   - 探索軸: Semantic Retrieval Head・layer-aware KV圧縮
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-spec-replication-4` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json`
+  - 探索軸: MoE self-assisted speculative decoding・expert replication
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -217,10 +221,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **414** |
+| 成功result未照合のimmutable submission | **415** |
 | └ Research | **242** |
 | └ Audit | **2** |
-| └ Discovery | **170** |
+| └ Discovery | **171** |
 
 ### 厳格検証が未成立のcompleted job
 
