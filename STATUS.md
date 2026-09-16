@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:11:53 JST**
+> 自動生成: **2026-09-16 13:11:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **24** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **26** | **6** | **1** | **5** | **2** | **0** | **24** |
+| 合計 | **25** | **6** | **1** | **5** | **2** | **0** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -159,12 +159,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference / worker `scheduled-chat-discovery-specialist-00`
+  - claim: **09-16 13:11:58 JST** / heartbeat: **—** / lease expiry: **09-16 14:41:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-08ba7261bc105f34.json`
 - `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation / worker `scheduled-chat-llm-survey`
   - claim: **09-16 12:51:26 JST** / heartbeat: **—** / lease expiry: **09-16 14:21:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-d743b2b5468a28c8.json`
-- `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:20:14 JST** / heartbeat: **—** / lease expiry: **09-16 13:50:14 JST**
-  - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`
 
 #### Audit
 

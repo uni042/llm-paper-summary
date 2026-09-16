@@ -1,18 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-fdf9090eccdb3c62ee6cd042","job_id":"job-research-32ece608ca43dae7",
- "data":{
-  "problem":"MoE layerのfused expert GEMMは総token数だけでなく、routerが各expertへ何token割り当てたかで実際の行列形状が変わる。大きなMMA tileはweight reuseを高める一方、cold expertではzero paddingを増やし、小tileはpaddingを減らす代わりにweight reloadを増やす。TRTLLM等の通常autotuningはtoken-count bucketごとにrandom routingで単一kernelを選ぶため、同じbatchでもlayer/inputごとに2倍以上変動するrouting skewを無視する。したがって静的bucket kernelは一部invocationでoracleから大きく遅れる。",
-  "novelty":"routing skewを実効expert数 eff_exp=((Σt_i)^2)/(Σt_i^2) で1〜Nの物理的尺度へ圧縮し、target eff_expに合う対称Dirichlet濃度αをbinary searchして制御可能なsynthetic routing分布を作る。これをoffline kernel sweepへ使い、onlineではlive histogramそのものをGPU上でexemplar matchingしてkernelを切り替える。kernel選択をCPUへ戻さずconditional CUDA Graph内で完結させる点がsystem上の核心。",
-  "method_overview":"まず実routing traceからlayer/token-countごとのeff_expを測る。offline tuningでは各token-count bucketでddist:X（target eff_exp=N/X）を複数生成し、利用可能なTRTLLM fused-MoE kernelをbenchmarkして最速kernel IDを記録する。各分布はexpert token-count vectorを降順sortしL2 normalizeしたexemplarに変換し、expert identityとscaleを除去してGPUへ配置する。onlineではrouter実行後、per-expert histogramを構築・sortし、同bucketのexemplar群とcosine similarityで最近傍を選び、そのkernel IDをconditional CUDA Graphのdevice-side branchから起動する。",
-  "components":[
-   {"name":"Effective ExpertsとDirichlet reverse modeling","description":"per-expert token countsからrouting concentrationを1〜Nのeff_expへ変換する。target値に一致する対称Dirichlet αを10^-6〜10^6でbinary searchし、uniformから強skewまで連続的にsweepできるddist:Xを生成する。実DeepSeek-V3 routingとのsorted-vector cosine similarityはgeomean 0.97でBeta 0.92、exponential 0.94を上回る。"},
-   {"name":"Distribution-aware offline autotuning","description":"token-count bucket {32,64,128,256,512}ごとにskew設定{1.1,1.3,1.5,1.7,2.0,2.5,4.0}を生成し、各分布をTRTLLM kernel候補へ通して最小latency kernelを保存する。同じTile Nでもsoftware pipelineやmemory pathでeffective throughputが10%以上散るため、tileだけでなくkernel configuration全体を選ぶ。"},
-   {"name":"GPU-resident exemplar matching","description":"router logitsからexpert histogramをGPU上で構築し、降順sort・L2 normalizeしてoffline exemplarとcosine similarity比較する。expert IDを捨てたshape比較により、hot expertの番号が異なっても同じskew profileを同じkernelへ対応付ける。"},
-   {"name":"Conditional CUDA Graph dispatch","description":"選択結果をhostへcopyせず、device-side conditional SWITCHでfused-MoE kernelを起動する。CPU branchは固定graph比約15µsの追加overhead、conditional graphは約8µs、histogram/sort/matching込みDA-MoE全体は約14µsで、large MoEではkernel選択利得より小さい。"}
-  ],
-  "system_design":"既存serving stackのrouterとfused-MoE expert computationの間へDA-MoE dispatcherを挿入する。offline phaseがbucket別exemplar→kernel表を生成し、online phaseは同じCUDA Graph内でrouting metadata生成、matching、conditional launchまで行うためserving APIやmodel/routerを変更しない。",
-  "why_it_works":"routing skewにより各expert GEMMのN方向実token幅が変わるため、padding量とweight reuseの最適点もinvocationごとに動く。live distributionを観測して既存kernel集合から近いoffline optimumを選べば、random-routingで固定したbucket kernelのmismatchを除ける。device-side branchにより動的選択のためのCPU同期を避け、利得をcritical path上に残す。",
-  "failure_modes":"dispatch path自体が約14µsかかるため小規模MoE（論文はQwen3を例示）では利得を相殺し得る。DeepSeek-V3 token count 512ではDA-MoEもoracleより約20%遅く、offline exemplar/kernel coverage不足が残る。AMD HIP Graphには同等のdevice-side conditional SWITCHがなくCPU copy-backが必要。評価はB200/NVIDIA、2モデル中心で他GPU・量子化・serving workloadへの一般化は未確認。"
- },
- "reservation":{"claim_id":"claim-fdf9090eccdb3c62ee6cd042","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-8dedafa8bb88234e4974139f",
+  "job_id": "job-research-08ba7261bc105f34",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8dedafa8bb88234e4974139f",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

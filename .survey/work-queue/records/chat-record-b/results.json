@@ -1,19 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-fdf9090eccdb3c62ee6cd042","job_id":"job-research-32ece608ca43dae7",
- "data":{
-  "overview":"DA-MoEはstatic token-count bucketだけでkernelを決めるNoDAを、routing distributionを追加信号にすることで一貫して改善する。HumanEval-Xでfused-MoE latencyのgeomean speedupはDeepSeek-V3 1.16x、Kimi K2 1.29x、peakは1.40x/1.56x。router selection、routing metadata、DA-MoE dispatchまで含むend-to-end MoE-layerでも1.15x/1.26x、peak 1.37x/1.51xを維持する。Dirichlet synthetic distributionはreal routingとのgeomean cosine similarity 0.97で、Beta 0.92、exponential 0.94より高い。",
-  "key_results":[
-   {"metric":"fused-MoE latency speedup","value":"DeepSeek-V3 geomean 1.16x、peak 1.40x","baseline":"NoDA","condition":"B200、EP=4、HumanEval-X、token count 32–512","interpretation":"static bucket kernelのrouting mismatchをlive distribution matchingで削減。"},
-   {"metric":"fused-MoE latency speedup","value":"Kimi K2 geomean 1.29x、peak 1.56x（TC=128）","baseline":"NoDA","condition":"B200、EP=6、HumanEval-X","interpretation":"384 expertでskew影響が強く、dynamic dispatch余地が大きい。"},
-   {"metric":"end-to-end MoE-layer speedup","value":"DeepSeek-V3 1.15x、Kimi K2 1.26x geomean；peak 1.37x/1.51x","baseline":"NoDA","condition":"router・metadata・約14µs DA-MoE dispatch込み","interpretation":"dynamic selection overheadを含めてもkernel利得の大半が残る。"},
-   {"metric":"Oracle gap","value":"DeepSeek-V3 TC32–256で1.1%以内、Kimi K2全TCで4%以内","baseline":"per-invocation Oracle","condition":"exemplar matching","interpretation":"多くの条件でnear-optimal kernelを選択できる。"},
-   {"metric":"dispatch overhead","value":"CPU branch 15.0µs、conditional CUDA Graph branch 8.2µs、DA-MoE全selection path約14µs","baseline":"fixed graph 4.1µs","condition":"data-dependent dispatch microbenchmark","interpretation":"device-side control flowがCPU同期より低cost。"},
-   {"metric":"distribution model similarity","value":"Dirichlet 0.97、exponential 0.94、Beta 0.92 geomean cosine similarity","baseline":"real DeepSeek-V3 MMLU routing","condition":"同じtarget eff_expへfit","interpretation":"1パラメータDirichlet sweepでoffline tuning用shapeを十分近似。"},
-   {"metric":"強skew時speedup","value":"imbalance factor 100でDeepSeek-V3 geomean 1.66x、TC128で2.05x","baseline":"NoDA","condition":"EP=4 synthetic imbalance","interpretation":"routing skewが強いほどstatic kernel mismatchが拡大しDA-MoEの価値が増える。"}
-  ],
-  "negative_results":"DeepSeek-V3のtoken count 512ではDA-MoE 120.6%対oracleで、NoDA 121.5%とほぼ差がなく、exemplar/kernel coverage不足が残る。device-side selectionは無料ではなく約14µsなのでsmall MoEでは利得が消え得る。HIP GraphsにはCUDA conditional SWITCH相当がなくAMDへの直接移植ではCPU同期問題が再発する。",
-  "interpretation":"MoE kernel性能はbatch sizeだけの関数ではなくrouting histogramの形にも依存する。expert placementやload balancingがrouting skewを変えると最適kernelも変わるため、上位のrouting/placementと下位kernel dispatchを分離して静的に最適化するより、runtime signalで接続する方が有効である。",
-  "quality_impact":"routerのexpert選択やmodel計算意味論を変更せずkernel実装だけを切り替えるため、報告speedupに精度低下は伴わない。"
- },
- "reservation":{"claim_id":"claim-fdf9090eccdb3c62ee6cd042","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-8dedafa8bb88234e4974139f",
+  "job_id": "job-research-08ba7261bc105f34",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8dedafa8bb88234e4974139f",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

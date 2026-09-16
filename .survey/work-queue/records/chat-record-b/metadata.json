@@ -1,25 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-fdf9090eccdb3c62ee6cd042","job_id":"job-research-32ece608ca43dae7",
- "data":{
-  "canonical_id":"arXiv:2607.23099","arxiv_id":"2607.23099","doi":"10.48550/arXiv.2607.23099","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},
-  "title":"Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
-  "summary":"MoE推論では各expertへ到達するtoken数の分布がlayer・batchごとに変わり、同じ総token数でも最適なfused-MoE GEMM kernelが変化する。本論文はrouting skewを実効expert数（Effective Experts）で表し、対称Dirichlet分布の濃度パラメータを逆推定して実traceに近い制御可能なrouting分布を生成する。さらにDA-MoEを提案し、offlineでtoken-count bucket×skewごとにTRTLLM kernelを全探索してexemplar–kernel表を作り、onlineではGPU上でlive expert histogramをsorted/L2-normalized exemplarへcosine matchingし、conditional CUDA GraphでCPU同期なしにkernelを選択する。B200/CUDA 13.1、FlashInfer 0.6.6＋vLLM、DeepSeek-V3とKimi K2のHumanEval-X traceで、fused-MoE latencyを幾何平均1.16倍/1.29倍、end-to-end MoE layerを1.15倍/1.26倍高速化する。",
-  "list_summary":"MoEのexpert routing skewを実効expert数＋Dirichlet分布でモデル化し、GPU上のlive histogramからconditional CUDA Graphで最適fused-MoE kernelを動的選択して、B200上でfused-MoE latencyをDeepSeek-V3 1.16倍、Kimi K2 1.29倍高速化する。",
-  "authors":["En-Ming Huang","An-Cheng Chang","Bai-Cheng Jeng","Shih-Hao Hung","H. T. Kung"],
-  "authors_affiliations":"National Taiwan University; NVIDIA Corporation; Harvard University","published":"2026-07-25","publication":"arXiv:2607.23099v3","publication_type":"arXivプレプリント","publication_status":"arXiv。v1は2026-07-25、取得本文はv1表記、検索メタデータではv3が2026-07-28時点で存在。査読採択は本文から確認できない。",
-  "lineage":"moe-inference-expert-placement-caching","topics":["MoE推論","fused MoE kernel","routing skew","kernel dispatch","Tensor Core","conditional CUDA Graph","FlashInfer","vLLM","TRTLLM","B200"],
-  "importance":"高。expert配置・offloadではなく、routing後に生じるper-expert GEMM形状のskewをkernel選択へ直接反映する。MoE servingのrouting-aware実行最適化として既存expert cache/placement系と補完的。",
-  "hardware_evaluation":"実機評価。NVIDIA B200 GPUをNVLink接続しCUDA 13.1を使用。DeepSeek-V3は4 GPU/EP=4、Kimi K2は6 GPU/EP=6。",
-  "hardware_details":"Blackwell B200 NVFP4 Tensor Core。TRTLLM fused-MoE kernel群をoffline profilingし、FlashInfer v0.6.6へDA-MoEを実装、vLLMへ統合。token count 32–512を主評価。",
-  "quality_effect":"モデル重み・router出力・expert選択自体は変更せず既存kernel variantから実行kernelを選ぶため、推論品質との交換ではない。",
-  "storage_targets":["GPU-resident exemplar table","routing histogram","fused-MoE kernel variants"],
-  "bottlenecks":["routing skewに不適合な静的kernel選択","MMA tile padding","小tileでのweight reload増加","CPU-GPU同期を伴う動的dispatch","expert-parallelismによるper-GPU token減少"],
-  "evidence_locations":["§III Modeling and Benchmarking","§IV DA-MoE","§V Evaluation","§VI Architectural Implications","§VII Related Work","§VIII Conclusion","References"],
-  "source":"https://arxiv.org/abs/2607.23099","sources":["https://arxiv.org/abs/2607.23099","https://www.researchgate.net/publication/410887192_Decoding_the_Skew_Distribution-Aware_MoE_Inference_with_Adaptive_Kernel_Dispatch"],
-  "code":null,"implementation":"DA-MoE prototypeをFlashInfer v0.6.6上へ実装しvLLMへ統合。本文はFlashInfer自体をopen-source kernel frameworkと記すが、DA-MoE固有コード公開URLは確認できない。",
-  "last_checked":"2026-09-16",
-  "references":[{"canonical_id":"arXiv:2401.04088","title":"Mixtral of Experts"},{"canonical_id":"arXiv:2501.01005","title":"FlashInfer"},{"canonical_id":"arXiv:2505.09388","title":"Qwen3 Technical Report"},{"canonical_id":"arXiv:2512.14080","title":"SonicMoE"},{"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs"}],
-  "references_checked_at":"2026-09-16","references_source":"ResearchGate公開full-textのReferences節（arXiv:2607.23099本文）","references_total":28
- },
- "reservation":{"claim_id":"claim-fdf9090eccdb3c62ee6cd042","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-8dedafa8bb88234e4974139f",
+  "job_id": "job-research-08ba7261bc105f34",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8dedafa8bb88234e4974139f",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

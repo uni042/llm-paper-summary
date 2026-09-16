@@ -1,13 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-fdf9090eccdb3c62ee6cd042","job_id":"job-research-32ece608ca43dae7",
- "data":{
-  "differences":"TRTLLM/FlashInfer/vLLMの通常autotuningはtoken-count等の静的shapeを主keyにし、random routingでbucketごとに代表kernelを固定する。DA-MoEは同じkernel poolを使いながら、router後のlive per-expert histogramを追加keyとしてinvocationごとにkernelを選ぶ。expert placement/cache/offload系が『どのexpertをどこに置き、どう運ぶか』を最適化するのに対し、本手法はexpertが選ばれた後のsparse GEMM tile/pipeline/memory-path選択を最適化する。router自体を変更してhardware-friendly routingへ寄せる手法とも異なり、model accuracyを変えない。",
-  "novelty_vs_prior":"routing skewのcharacterizationだけで終わらず、実効expert数→Dirichlet reverse model→offline kernel sweep→GPU-resident online exemplar matching→conditional CUDA Graphという閉ループを作る。特にsorted histogramによりexpert identityを捨て、skew shapeだけでkernel choiceを一般化する点と、CPU同期を避けてcritical pathへ載せる点がsystem novelty。",
-  "implementation_status":"FlashInfer v0.6.6上にDA-MoEを実装しvLLMへ統合してB200実機評価。TRTLLMのprecompiled fused-MoE kernel群を利用する。論文本文からDA-MoE固有コード公開URLは確認できない。",
-  "research_positioning":"MoE inferenceのkernel/runtime層に位置し、expert routing分布をhardware execution policyへ直接伝えるmodel-system/hardware co-design寄りの研究。GPUのdevice-side control flowとTensor Core tile choiceを結び、将来のspatial acceleratorではrouting-aware array partitioningへ拡張できると論じる。",
-  "relation_to_existing_repository":"expert cache/placement、MoE offload、communication schedulingと補完的。これら上位手法がexpert load skewを変えるとfused kernelの最適tileも変わるため、配置最適化後の残余skewをDA-MoE型dispatcherへ渡す統合余地がある。SSD/CPU offload系ではweight movementが主ボトルネックだが、resident expertのcompute側でpadding/reuse損失が残る場合の次段最適化になる。",
-  "limitations":"B200/CUDA 13.1、DeepSeek-V3/Kimi K2中心でGPU世代・他vendor・小規模MoEへの一般化は限定的。dispatch path約14µsはsmall MoEで相対的に大きい。DeepSeek-V3 TC512ではoracle gap約20%が残る。HIPにはdevice-side conditional SWITCH相当がなく移植性に制約。offline tuningは多数kernel×skew sampleのprofiling costを要し、TRTLLM kernel内部がprecompiled binaryでopaque。DA-MoE固有コード公開も本文から確認できない。",
-  "audit_required":false
- },
- "reservation":{"claim_id":"claim-fdf9090eccdb3c62ee6cd042","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-8dedafa8bb88234e4974139f",
+  "job_id": "job-research-08ba7261bc105f34",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8dedafa8bb88234e4974139f",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
