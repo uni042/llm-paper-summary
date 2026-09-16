@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:19:39 JST**
+> 自動生成: **2026-09-16 12:19:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **55** |
+| 収録候補論文 | **54** |
 | 未claim Research job | **54** |
-| 直近24hの検証済みResearch収録 | **28** |
-| 最終検証済みResearch収録 | **09-16 12:18:29 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **29** |
+| 最終検証済みResearch収録 | **09-16 12:19:46 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **55** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **56** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **1** | **0** | **2** | **1** | — |
+| Research | **21** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **21** | **7** | **1** | **6** | **2** | **1** | **6** |
+| 合計 | **22** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 12:19:46 JST** [research] `arXiv:2509.00105` — AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-53e75736382e3b98.json`
+  - result: `.survey/work-queue/results/research/attempt-14822aa228c007fac68c1df2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-14822aa228c007fac68c1df2.json`
+  - paper: `papers/inference/05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md`
 - **09-16 12:18:29 JST** [research] `arXiv:2607.23933` — SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving
   - job: `.survey/work-queue/jobs/job-research-4055e74aec47c94e.json`
   - result: `.survey/work-queue/results/research/attempt-e5b7d8bd8cb604c35cc21abd.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-4aed5866e69eb810e709c3e6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4aed5866e69eb810e709c3e6.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md`
-- **09-16 11:23:14 JST** [research] `arXiv:2608.19677` — CacheRoute: Planned Prefix-Affinity Routing for Large-Scale LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-f61c46feeea304bb.json`
-  - result: `.survey/work-queue/results/research/attempt-bb3ec0465085989a9a744808.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bb3ec0465085989a9a744808.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.19677-cacheroute-prefix-affinity-routing.md`
 
 ### Audit
 
@@ -162,10 +162,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2509.00105` — AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:18:51 JST** / heartbeat: **09-16 12:19:20 JST** / lease expiry: **09-16 13:49:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-53e75736382e3b98.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.03910` — NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference / worker `scheduled-chat-llm-survey-20260916T025906Z`
   - claim: **09-16 12:19:20 JST** / heartbeat: **—** / lease expiry: **09-16 13:49:20 JST**
   - evidence: `.survey/work-queue/claims/job-research-8548d3d173ce3871.json`
@@ -188,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **56** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **568** |
+| inference/training/survey配下の論文Markdown実体 | **569** |
 
 ### immutable submissionの未照合
 
@@ -216,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **256** |
-| └ Research | **146** |
+| 成功result未照合のimmutable submission | **255** |
+| └ Research | **145** |
 | └ Discovery | **110** |
 
 ### 厳格検証が未成立のcompleted job
