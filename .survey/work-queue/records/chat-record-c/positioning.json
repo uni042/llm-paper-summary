@@ -1,1 +1,49 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f75804377f721126ddb01d08","job_id":"job-research-3d5f11737ec9b4a2","data":{"positioning":"PELMは投機的デコードの速度最適化と、DVFSによるシステム電力・熱管理を一つの閉ループ制御へ統合するクロスレイヤ型オンデバイス推論研究である。","differences":"従来のDVFSガバナはLLMを固定ワークロードとして周波数だけを調整し、LayerSkipや自己投機的デコードは固定ハードウェア上で主に遅延を減らす。PELMは両者を結合し、さらに検証モデルの深度まで動的に変えることで、速度、電力、熱、出力忠実度を同時最適化する。別ドラフトモデルを置かないため、メモリ制約の強い端末で二モデル型投機より適用しやすい。","relation_to_prior_work":[{"work":"DVFS-based LLM power governors","difference":"周波数だけでなくドラフト深度・投機長・検証深度を同じガバナが共同制御する。"},{"work":"LayerSkip / self-speculative decoding","difference":"速度向上だけでなく電力・熱制約とQoEを目的に含め、DVFSと協調させる。"},{"work":"EAGLE / separate-draft speculative decoding","difference":"端末で追加ドラフトモデルのVRAMを要求せず、対象モデル自身の浅い層をドラフトとして再利用する。"},{"work":"EnerInfer-style energy-aware inference","difference":"モデルを固定した周波数設定最適化に留まらず、トークン生成時の計算深度そのものを動的に変える。"}],"strengths":["周波数・投機・深度を共同最適化するため、周波数単独DVFSより広い省エネ探索空間を持つ。","Jetson AGX OrinとOrin Nano、複数モデル・5データセットで実機評価している。","最大23.1%高速化と52.4%エネルギー削減を同時に報告する。","公開コードがあり、クロスレイヤ制御を再現・比較しやすい。"],"limitations":["可変検証深度は完全深度モデルと厳密に同一の出力分布を保証しないため、losslessな投機的デコードとは品質保証が異なる。","品質の層深度依存性は課題ごとに異なり、GSM8Kのような推論課題では中間層性能の変動が大きい。","実機評価はJetson系に集中しており、スマートフォンNPUや異なるメモリ階層での効果は未検証である。","深層強化学習ガバナの学習・報酬重み調整が必要で、未知モデルや大きく異なるハードウェアへの即時移植性は単純DVFSより低い可能性がある。"],"implementation_status":"SenSys '26の公開実装がGitHubで提供され、PELM本体、実験・評価スクリプト、Docker環境を含む。","research_positioning":"オンデバイスLLMの電力管理を、ハードウェア電力制御と推論アルゴリズムを跨ぐ共同最適化問題へ拡張した研究。","repository_fit":"99-other-inference-systems系統で、エネルギー・熱制約下の推論、投機的デコード、ハードウェア制御の交差点を比較する際に有用である。"},"reservation":{"claim_id":"claim-f75804377f721126ddb01d08","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-b66d308c0d1e4eb8ba288ecc",
+  "job_id": "job-research-3d5f11737ec9b4a2",
+  "data": {
+    "positioning": "PELMは投機的デコードの速度最適化と、DVFSによるシステム電力・熱管理を一つの閉ループ制御へ統合するクロスレイヤ型オンデバイス推論研究である。",
+    "differences": "従来のDVFSガバナはLLMを固定ワークロードとして周波数だけを調整し、LayerSkipや自己投機的デコードは固定ハードウェア上で主に遅延を減らす。PELMは両者を結合し、さらに検証モデルの深度まで動的に変えることで、速度、電力、熱、出力忠実度を同時最適化する。別ドラフトモデルを置かないため、メモリ制約の強い端末で二モデル型投機より適用しやすい。",
+    "relation_to_prior_work": [
+      {
+        "work": "DVFS-based LLM power governors",
+        "difference": "周波数だけでなくドラフト深度・投機長・検証深度を同じガバナが共同制御する。"
+      },
+      {
+        "work": "LayerSkip / self-speculative decoding",
+        "difference": "速度向上だけでなく電力・熱制約とQoEを目的に含め、DVFSと協調させる。"
+      },
+      {
+        "work": "EAGLE / separate-draft speculative decoding",
+        "difference": "端末で追加ドラフトモデルのVRAMを要求せず、対象モデル自身の浅い層をドラフトとして再利用する。"
+      },
+      {
+        "work": "EnerInfer-style energy-aware inference",
+        "difference": "モデルを固定した周波数設定最適化に留まらず、トークン生成時の計算深度そのものを動的に変える。"
+      }
+    ],
+    "strengths": [
+      "周波数・投機・深度を共同最適化するため、周波数単独DVFSより広い省エネ探索空間を持つ。",
+      "Jetson AGX OrinとOrin Nano、複数モデル・5データセットで実機評価している。",
+      "最大23.1%高速化と52.4%エネルギー削減を同時に報告する。",
+      "公開コードがあり、クロスレイヤ制御を再現・比較しやすい。"
+    ],
+    "limitations": [
+      "可変検証深度は完全深度モデルと厳密に同一の出力分布を保証しないため、losslessな投機的デコードとは品質保証が異なる。",
+      "品質の層深度依存性は課題ごとに異なり、GSM8Kのような推論課題では中間層性能の変動が大きい。",
+      "実機評価はJetson系に集中しており、スマートフォンNPUや異なるメモリ階層での効果は未検証である。",
+      "深層強化学習ガバナの学習・報酬重み調整が必要で、未知モデルや大きく異なるハードウェアへの即時移植性は単純DVFSより低い可能性がある。"
+    ],
+    "implementation_status": "SenSys '26の公開実装がGitHubで提供され、PELM本体、実験・評価スクリプト、Docker環境を含む。",
+    "research_positioning": "オンデバイスLLMの電力管理を、ハードウェア電力制御と推論アルゴリズムを跨ぐ共同最適化問題へ拡張した研究。",
+    "repository_fit": "99-other-inference-systems系統で、エネルギー・熱制約下の推論、投機的デコード、ハードウェア制御の交差点を比較する際に有用である。"
+  },
+  "reservation": {
+    "claim_id": "claim-b66d308c0d1e4eb8ba288ecc",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
