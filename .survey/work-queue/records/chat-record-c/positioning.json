@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a296cabbe5bdb6189545e086",
-  "job_id": "job-research-16a80a40c011c783",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a296cabbe5bdb6189545e086",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a296cabbe5bdb6189545e086","job_id":"job-research-16a80a40c011c783","data":{"limitations":"専門家負荷分布のプロファイルが将来要求を代表することを前提にし、急な分布変化には周期再均衡が必要。複製利益は均衡度を代理指標として推定し、ネットワーク位相や専門家ごとの実カーネル時間を直接最適化目的へ入れていない。評価はA100クラスタ、DeepSeek-R1/Kimi-K2、top-8ルーティングに集中しており、異なる専門家粒度・GPU世代・低速相互接続では最適Rが変わり得る。複製は専門家をGPUへ常駐させるため、モデル自体がGPU群に収まらない単一機・メモリ制約環境を解く方式ではない。","differences":"EPLBは専門家配置に加え各MoE層へ一様な複製枠を置くため簡単だが、低偏り層でもGPU数に比例した複製を消費する。MoETunerなど配置中心方式は追加メモリなしで人気専門家と冷たい専門家を組み合わせるが、極端に一つの専門家へ集中した層は配置だけでは均せない。GRACE-MoE等も複製・ルーティングを扱うが、CRAFTの焦点は層ごとの複製限界利益とKVキャッシュとのHBM競合を明示し、総メモリ予算をナップサックとして配ることにある。SwapMoEやKTransformersなどCPU/GPUオフロード系は専門家を階層メモリから必要時に運ぶのに対し、CRAFTは全専門家がGPUクラスタに常駐する大規模専門家並列での複製冗長性を削る。","implementation_status":"SGLang v0.4.8へ直接統合して大規模実機評価済み。計画器は既存EPLBの負荷収集と周期再均衡インターフェースを利用でき、モデル再学習・ルータ変更・推論カーネル変更を必要としない。論文にはartifact appendixがあり、再現用環境・実験手順を記載する。","research_positioning":"MoE推論の専門家配置・複製系統で、キャッシュ/先読み型オフロードとは補完的。重要なのは専門家複製重みとKVキャッシュがHBMを共有するため、負荷分散最適化がメモリ階層全体の同時実行性を悪化させ得る点を定量化したこと。SSDやCPUへ専門家を退避する系統と組み合わせるなら、CRAFTの層別限界利益を『GPUに複製を常駐させる価値』として使い、利益の低い複製は下位階層へ置く設計へ拡張できる。"},"reservation":{"claim_id":"claim-a296cabbe5bdb6189545e086","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
