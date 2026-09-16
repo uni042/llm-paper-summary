@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2603.22774",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
   "selection_reason": "multi-GPU LLM servingでGPU飽和ではなくCPU不足がkernel launch、NCCL通信、tokenizationを遅延させる制御側ボトルネックを系統評価する。CPU増強だけでTTFTを大幅改善できることを示し、GPU中心の最適化では見落とすserving資源配分問題として価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-16T10:06:58+00:00"
+  "created_at": "2026-09-16T10:06:58+00:00",
+  "completed_at": "2026-09-16T14:40:05+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-b8af6d9aaac30b5ad36b0128.json"
 }

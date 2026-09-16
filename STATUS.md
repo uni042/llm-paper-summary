@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 23:38:58 JST**
+> 自動生成: **2026-09-16 23:40:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **25** |
-| 未claim Research job | **24** |
-| 直近24hの検証済みResearch収録 | **79** |
-| 最終検証済みResearch収録 | **09-16 23:38:16 JST（42秒前）** |
+| 収録候補論文 | **23** |
+| 未claim Research job | **23** |
+| 直近24hの検証済みResearch収録 | **81** |
+| 最終検証済みResearch収録 | **09-16 23:40:05 JST（5秒前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **25** |
+| canonical_id確認済みの一意な候補論文 | **23** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **25** |
+| 非終端Research job合計 | **23** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **22** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **20** | **22** | **4** | **18** | **1** | **0** | **15** |
+| 合計 | **22** | **22** | **4** | **18** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,16 @@
 
 ### Research
 
+- **09-16 23:40:05 JST** [research] `arXiv:2603.22774` — Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-f9f09d211cdcb836.json`
+  - result: `.survey/work-queue/results/research/attempt-b8af6d9aaac30b5ad36b0128.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b8af6d9aaac30b5ad36b0128.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md`
+- **09-16 23:40:05 JST** [research] `arXiv:2608.23962` — More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-b6c7fea1929c168e.json`
+  - result: `.survey/work-queue/results/research/attempt-bb7ad5df2e27b7d14f3debd4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bb7ad5df2e27b7d14f3debd4.json`
+  - paper: `papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md`
 - **09-16 23:38:16 JST** [research] `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving
   - job: `.survey/work-queue/jobs/job-research-6252d370adc380b9.json`
   - result: `.survey/work-queue/results/research/attempt-9ad5a1743ec35bec7e65792c.json` (`ok=true`)
@@ -88,16 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-9fdbbab13803c394452c3f1f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9fdbbab13803c394452c3f1f.json`
   - paper: `papers/inference/03-moe-expert-offload/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md`
-- **09-16 21:30:53 JST** [research] `arXiv:2604.17172` — CCCL: In-GPU Compression-Coupled Collective Communication
-  - job: `.survey/work-queue/jobs/job-research-a04176279033896e.json`
-  - result: `.survey/work-queue/results/research/attempt-25cceaeacd63bfc0b41aa061.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-25cceaeacd63bfc0b41aa061.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md`
-- **09-16 20:33:30 JST** [research] `arXiv:2512.01357` — Tangram: Accelerating Serverless LLM Loading through GPU Memory Reuse and Affinity
-  - job: `.survey/work-queue/jobs/job-research-3342ea471147b233.json`
-  - result: `.survey/work-queue/results/research/attempt-c28dc16847c1e67a30dd312f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c28dc16847c1e67a30dd312f.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.01357-tangram-serverless-llm-loading-gpu-memory-reuse.md`
 
 ### Audit
 
@@ -194,10 +194,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.23962` — More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 23:38:50 JST** / heartbeat: **—** / lease expiry: **09-17 01:08:50 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b6c7fea1929c168e.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +215,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **25** |
+| ready | **23** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +235,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **627** |
+| inference/training/survey配下の論文Markdown実体 | **629** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +243,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **460** |
-| └ Research | **261** |
+| 成功result未照合のimmutable submission | **459** |
+| └ Research | **260** |
 | └ Audit | **2** |
 | └ Discovery | **197** |
 

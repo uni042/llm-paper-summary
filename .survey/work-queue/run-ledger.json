@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T14:38:21.244102+00:00",
+  "updated_at": "2026-09-16T14:40:09.892421+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T14:38:21.244102+00:00",
+      "last_recorded_at": "2026-09-16T14:40:09.892421+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 163,
+        "research_completed": 165,
         "audit_completed": 0,
         "discovery_completed": 79,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35060121379:1",
-          "recorded_at": "2026-09-16T05:35:41.256643+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35060121379",
-            "run_attempt": "1",
-            "source_sha": "de134032aa15f65a2a7c2d03eeaba617065a21f2"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35060413481:1",
           "recorded_at": "2026-09-16T05:40:19.557368+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35109856186",
             "run_attempt": "1",
             "source_sha": "d93c0f5a40d91b9797cf118eb9c47bbe379938d6"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35107100325:2",
+          "recorded_at": "2026-09-16T14:40:09.892421+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35107100325",
+            "run_attempt": "2",
+            "source_sha": "b74bd25945057776d5e839cf6b538e1116480aac"
           },
           "signals": [
             "research_completed"
@@ -21630,6 +21630,22 @@
           "type": "research",
           "canonical_id": "arXiv:2604.14993",
           "title": "Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b6c7fea1929c168e",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23962",
+          "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f9f09d211cdcb836",
+          "type": "research",
+          "canonical_id": "arXiv:2603.22774",
+          "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
           "from": "ready",
           "to": "completed"
         }
