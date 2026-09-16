@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c0e304b27be71a492caece36",
+  "attempt_id": "attempt-c1a96aa17242872639750d89",
   "job_id": "job-research-73e15ccbef3e6d6d",
   "data": {
     "evaluation_summary": "CENTのinstruction traceをfunctional simulatorで検証し、Ramulator2を32 GDDR6-PIM channel/CXL deviceへ拡張してperformanceをcycle/timing modelで評価する。CXL通信は既報latencyとPCIe 6.0 bandwidthによるanalytical model、powerはMicron DRAM Power CalculatorとRTL synthesis等から構築する。GPU baselineはIntel Xeon Gold 6430L host + 4×NVIDIA A100 80GBでvLLMを実測し、Llama2 7B/13B/70B、主に512 prefill + 3584 decode、最大32K contextを比較する。",
@@ -42,8 +42,8 @@
     "control_knobs": "PP、TP、hybrid TP-PP mapping、device数、context length、batch size。"
   },
   "reservation": {
-    "claim_id": "claim-c0e304b27be71a492caece36",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "claim_id": "claim-c1a96aa17242872639750d89",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }
 }

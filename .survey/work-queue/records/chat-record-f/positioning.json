@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1daab69065bdda91829f3106","job_id":"job-research-f79de4903a69120c","data":{"positioning":"Pythiaは一般的な大規模言語モデル配信基盤の反応型最適化と、エージェント向け要求スケジューラの間に位置する。従来基盤は要求内容や将来到着を知らない前提で最近使用順キャッシュ、先着順処理、現在の待ち行列に基づく複製数調整を行う。一方Pythiaは、複数エージェントアプリケーションがプログラムとして持つ役割遷移と役割別の安定した出力特性を、入口の軽量識別子と履歴解析から再構成し、キャッシュ、要求配置、実行順、複製数へ共通利用する。","differences":"既存のエージェント向け方式が個々の要求や単一モデル内の優先度、接頭辞共有を改善するのに対し、Pythiaはワークフロー全体の将来経路を正規表現として持ち、終端までの距離、下流モデルの遊休危険、将来の大量分岐まで含めてクラスタ全体を調整する。また開発者に詳細な依存グラフや資源ヒントを要求せず、三つの識別子から履歴を自動合成するため、アプリケーションと基盤の責務分離を維持する。","relation_to_prior_work":[{"work":"vLLM / SGLang","difference":"要求を独立した不透明な単位として扱う汎用配信に対し、ワークフロー構造と役割別統計を将来予測として利用する。"},{"work":"Autellix","difference":"エージェント要求の統合スケジューリングよりさらに先へ進み、将来経路から接頭辞先回りとモデル複製数調整まで連動させる。"},{"work":"Continuum","difference":"単一ノードのReAct型エージェント最適化に対し、複数モデル・複数GPUのクラスタ全体で役割間依存を利用する。"},{"work":"ThunderAgent","difference":"プログラム認識型要求順序制御に加え、出力長信頼区間による配置、階層キャッシュ先回り、段階予測型複製数調整を同じ予測情報から行う。"}],"strengths":["実運用追跡から接頭辞命中不足、メモリ競合、負荷波という具体的な三問題を抽出している。","開発者が渡す情報を三識別子に限定し、複雑な経路は履歴から自動合成する。","予測をキャッシュ、配置、実行順、複製数の複数層へ一貫して利用する。","出力長の不確実性を単純平均ではなく信頼上限と確率上界で扱い、メモリ不足安全性を明示する。","SGLang上へ実装し、コーディングと深層調査という異なる終端間エージェント処理で評価する。"],"limitations":["履歴がない初期導入とワークフロー更新直後は予測を利用できず、反応型の影運転期間が必要。","無制約・敵対的なエージェント遷移では主要経路が集中せず、正規表現による予測の価値が下がる。","多数の異質なワークフローを同時提供する場合、平均完了時間を重視する優先度が個別公平性やSLOを損なう可能性がある。","評価機では商用最先端モデルを3B–14B公開モデルへ写像しており、超大規模モデルでの同一効果は直接測定していない。","先回り接頭辞生成やモデル増設は予測誤り時に無駄となるため、ホスト段階配置や低確率経路除外など保守的な仕組みに依存する。"],"implementation_status":"SGLang上で入口ルータ、非同期ワークフロー解析器、階層接頭辞キャッシュ管理、反復要求スケジューラ、定期自動複製数調整器を実装。論文時点では社内のより大規模クラスタで広範な試験と試験導入を進めている。","research_positioning":"エージェント基盤とLLM配信基盤の境界に意味情報を戻す研究である。従来はAPI抽象化によって失われていたアプリケーションの制御フローを、資源管理に必要な予測可能性として再導入する。今後エージェント要求が大部分を占める環境では、単一要求の初回応答・生成間隔だけでなく、ワークフロー全体の完了時間と将来の資源需要を最適化単位にすべきことを示す。","repository_fit":"serving scheduling/disaggregation系統に強く適合する。特にキャッシュ、ルーティング、反復スケジューリング、自動スケーリングをワークフロー予測で結ぶため、エージェント観測研究と実際のサービング制御を接続する論文として位置付けられる。"},"reservation":{"claim_id":"claim-1daab69065bdda91829f3106","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-c54d1dbac92b03538ef2bcdf",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "positioning": "MMAはKV cache offload、model offload、prefill-decode disaggregationそのもののpolicyを変えるのではなく、それらが共有するhost-memory↔GPU transfer substrateをmultipath化する下位層である。従来のdouble bufferingやmultiple CUDA streamsが1本のPCIeを隠蔽・飽和させるのに対し、MMAは他GPUのPCIeとNVLink relayまで束ねて物理的な利用可能bandwidthを増やす。",
+    "differences": "inter-server multipath RDMAやFuseLinkはNIC/GPU間metadata・RDMA control channelを使えるが、intra-server host DMAには同等のfeedback/relay primitiveがない。MMAはdummy task、callback/spin synchronization、outstanding queue backpressureを使ってCUDA API semanticsを維持したままCPU側でpathを動的選択する。",
+    "relation_to_prior_work": [
+      {
+        "work": "CPU/GPU offload and prefix-cache systems",
+        "difference": "何をいつoffloadするかではなく、決まったH2D/D2H copyを複数物理pathへ分散するため上位policyと直交する。"
+      },
+      {
+        "work": "multiple CUDA streams / double buffering",
+        "difference": "単一PCIeの利用率向上やcompute overlapではなく、他GPUのPCIe+NVLink relayを使ってaggregate bandwidth自体を増やす。"
+      },
+      {
+        "work": "FuseLink / multipath RDMA",
+        "difference": "inter-server NIC trafficではなくhost-memory DMAを対象とし、RDMA congestion signalなしでlocal outstanding queueをpassive load signalにする。"
+      },
+      {
+        "work": "CXL-based memory systems",
+        "difference": "新しいmemory fabric/hardwareを要求せず、既存PCIe+NVLink GPU server topologyのidle pathをsoftwareだけで再利用する。"
+      }
+    ],
+    "strengths": [
+      "LD_PRELOADで既存LLM applicationのcode modificationなしに導入できる。",
+      "8×H20実機でmicrobenchmarkとLMCache/vLLM end-to-end双方を評価する。",
+      "dependency preservation、small-copy fallback、dynamic load balancingまで実装上の障害を扱う。",
+      "prefix KVとmodel switchingという異なる大容量transfer workloadで同じtransport layerの効果を示す。",
+      "direct priorityとdual pipelineでrelayが既存GPU-GPU trafficを壊すのを抑える。"
+    ],
+    "limitations": [
+      "CPU control planeがGPUごとにtransfer/sync threadを必要とし、8 GPUでCPU overheadが822%増える。",
+      "小transferではmultipath overheadが利益を上回るためnative fallbackが必要。",
+      "複数pathのheadroomがない均等高負荷時には改善余地が小さい。",
+      "dual-NUMAではUPIが新たなbottleneckとなり6 relay GPU付近でsaturateする。",
+      "現状はCUDA/NVIDIA topology向けprototypeで、hardware-native multipath primitiveはない。"
+    ],
+    "implementation_status": "CUDA 12.8上で3000行超のC++ shared libraryとして実装し、LD_PRELOADでCUDA memory APIをinterceptする。AMD EPYC + 8 H20実機で評価済み。",
+    "research_positioning": "LLM servingの階層memory研究に対し、tier間transferをschedule/overlapするだけでなく、tier間の物理link topologyそのものをaggregate resourceとして扱う視点を追加する。host DRAM、CXL memory、SSD等を活用する際にも、最終GPU ingressが単一PCIeで詰まる設計への警告となる。",
+    "repository_fit": "serving scheduling/disaggregation系統に適合する。特にprefix cache取得、prefill-decode分離、model switchingの共通data planeを高速化するため、個別cache policyより下位のtransport基盤として比較すべき論文である。"
+  },
+  "reservation": {
+    "claim_id": "claim-c54d1dbac92b03538ef2bcdf",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

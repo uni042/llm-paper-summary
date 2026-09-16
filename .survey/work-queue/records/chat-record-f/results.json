@@ -1,1 +1,68 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1daab69065bdda91829f3106","job_id":"job-research-f79de4903a69120c","data":{"overview":"複数の同時ワークフローを用いた終端間評価で、Pythiaはすべての対象負荷において平均ジョブ完了時間を改善し、最大同時実行付近では基準方式に対して1.38–2.9倍の短縮を示す。低負荷では次の役割の接頭辞を先回り準備する効果が中心で、高負荷ではワークフロー経路を考慮した全体優先度と出力長を考慮した配置が、メモリ競合による要求中断と先頭待ちを抑える。論文全体では最大1.96倍の処理量改善を報告する。実運用解析では40%以上の要求が接頭辞キャッシュ命中ゼロまたは極少で、特定モデルの要求数が一分で最大50.3%急増することも確認しており、これらが先回り制御の対象となる。","key_results":[{"metric":"平均ジョブ完了時間","value":"最大2.9倍短縮、ピーク同時実行域で1.38–2.9倍","baseline":"vLLM、SGLang、複数のエージェント対応方式","condition":"コーディング支援・深層調査ワークフロー","interpretation":"低負荷では接頭辞先回り、高負荷では経路を考慮した配置・優先度制御の寄与が大きい。"},{"metric":"処理量","value":"最大1.96倍","baseline":"既存サービング方式","condition":"代表的複数エージェント負荷","interpretation":"下流遊休を避け、メモリ競合と再計算を減らすことでGPU群の有効利用率を上げる。"},{"metric":"実運用接頭辞命中状況","value":"40%以上が命中ゼロまたは極少","baseline":"既存階層接頭辞キャッシュ","condition":"社内エージェント配信追跡","interpretation":"役割ごとに異なる指示と長いツール待ちのため、エージェントなら自然に接頭辞が共有されるという想定が成立しない。"},{"metric":"短時間負荷急増","value":"一分で最大50.3%増","baseline":"通常時のモデル要求数","condition":"自動実行やワークフロー分岐","interpretation":"反応型の複製数調整では、モデル読み込み中に負荷波が下流へ移動するため先読みが必要になる。"}],"negative_results":["現在の方式は少数の対象エージェントアプリケーションを想定しており、多数の異質なワークフローでは平均効率を優先する単純な優先度が個別公平性を損なう可能性がある。","新規導入直後やワークフロー更新直後は履歴が不足するため、十分な信頼区間が得られるまで反応型処理へ戻す必要がある。","自由度の高い無制約エージェントや敵対的入力で遷移が予測不能になると、先回り最適化の利点は失われる。","評価では実運用の最先端商用モデルをそのまま8基A100へ載せず、3B–14BのQwen/Llama系へ写像している。"],"quality_impact":"要求の意味内容やモデル計算を近似せず、実行順、キャッシュ、配置、複製数だけを変更するため、生成品質を直接変える方式ではない。","interpretation":"Pythiaの重要点は、エージェント処理を単なる高頻度LLM要求として高速化するのではなく、アプリケーションのプログラム構造をサービング資源管理の予測信号へ変換することである。これにより、最近使用順キャッシュ、先着順処理、過去負荷ベースの複製数調整という従来の反応型機構を、それぞれ将来再利用、残り経路、将来分岐に基づく先回り型へ置き換えている。"},"reservation":{"claim_id":"claim-1daab69065bdda91829f3106","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c54d1dbac92b03538ef2bcdf",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "overview": "MMAはlarge H2D/D2Hで約1GBから245GB/sへ近づき、native single PCIe約53GB/sに対して最大4.62倍のbandwidthを得る。効果はrelay GPU数6付近でsaturateし、その後はcross-NUMA UPIがbottleneckになる。LMCache+vLLMでは16K–64K prefix hitでTTFTを1.14–2.38倍高速化し、Qwen-7B-Chat 64Kでは17.5GB KV transferが支配的なため2.38倍。vLLM Sleep ModeではQwen3-32Bのfall asleepを56.8%、wake upを59.7%短縮し、全modelで1.12–2.48倍speedup。一方8 GPU時の追加CPU overheadは最大822%に達する。",
+    "key_results": [
+      {
+        "metric": "peak host-GPU bandwidth",
+        "value": "245GB/s, 4.62×",
+        "baseline": "native ~53GB/s single PCIe",
+        "condition": "large transfer around 1GB+",
+        "interpretation": "複数PCIe pathとNVLink relayを同時利用して単一link上限を超える。"
+      },
+      {
+        "metric": "path scaling",
+        "value": "saturates around 6 participating GPUs",
+        "baseline": "fewer paths",
+        "condition": "8-GPU dual-NUMA server",
+        "interpretation": "cross-NUMA UPI bandwidthが次のbottleneckになる。"
+      },
+      {
+        "metric": "prefix-cache TTFT",
+        "value": "1.14–2.38× speedup",
+        "baseline": "native CUDA path",
+        "condition": "LMCache+vLLM, 16K–64K prefix",
+        "interpretation": "contextが長くKV transfer比率が増えるほど改善が大きい。"
+      },
+      {
+        "metric": "Qwen-7B-Chat 64K TTFT",
+        "value": "2.38× speedup",
+        "baseline": "native",
+        "condition": "single-request KV cache about 17.5GB",
+        "interpretation": "transfer-dominated long-context workloadで最大効果を示す。"
+      },
+      {
+        "metric": "Qwen3-32B Sleep Mode",
+        "value": "fall-asleep -56.8%, wake-up -59.7%",
+        "baseline": "native",
+        "condition": "vLLM Level-1 sleep",
+        "interpretation": "model weight H2D/D2H双方をmultipath化し2.32–2.48倍高速化する。"
+      },
+      {
+        "metric": "direct-priority P2P bandwidth",
+        "value": "367.28GB/s vs 330.56GB/s without priority",
+        "baseline": "P2P alone 367.60GB/s",
+        "condition": "8 simultaneous H2D tasks",
+        "interpretation": "direct pathを優先すると不要なNVLink relay interferenceをほぼ除去できる。"
+      }
+    ],
+    "negative_results": [
+      "MMAがnativeを上回るのはtransfer size約10MB以上で、小transferは制御overheadのためfallbackが必要。",
+      "5MB chunk設定のbreak-evenはH2D 11.3MB、D2H 13MB。",
+      "8 GPUではdedicated transfer/sync threadsにより追加CPU overheadが最大822%へ増える。",
+      "path数を増やしても6 GPU付近でUPIがbottleneckとなりbandwidthがsaturateする。",
+      "効果はserver内PCIe load imbalanceとunused relay bandwidthの存在に依存する。"
+    ],
+    "quality_impact": "data movementだけを変更するためモデル出力品質への影響はない。",
+    "interpretation": "offload/prefix-cache研究が単一PCIeを高速に使う、または転送をcomputeとoverlapする方向なのに対し、MMAはserver topologyに既に存在する複数PCIe+NVLinkを一つのlogical host-memory pathとして束ねる。最大帯域だけでなく、明示congestion telemetryなしにqueue backpressureをrouting signalへ転用する点が実装上の鍵である。"
+  },
+  "reservation": {
+    "claim_id": "claim-c54d1dbac92b03538ef2bcdf",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

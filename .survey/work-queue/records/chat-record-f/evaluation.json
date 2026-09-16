@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1daab69065bdda91829f3106","job_id":"job-research-f79de4903a69120c","data":{"evaluation_summary":"評価機はAMD EPYC 7J13を2基、主記憶1.7TB、NVLink接続のNVIDIA A100 80GBを8基備える。社内の複数エージェント型コーディング支援と深層調査エージェントをAutoGenへ移植し、SWE-bench ProとDeep Research Benchを実行する。実運用では各役割に複数社の最先端モデルを使うが、評価機ではQwen/Llama系3B–14Bへ対応付け、テンソル並列度1–4で再現する。vLLM、SGLang、Autellix相当実装、Continuum、ThunderAgentを比較し、全方式で共有ストレージ側の接頭辞キャッシュ条件を揃える。","scope":"単一要求の初回応答時間だけでなく、複数ワークフロー同時実行時の平均・95百分位ジョブ完了時間と出力トークン処理量を評価する。実運用ログ由来の役割構成と要求列を使う一方、最先端商用モデルそのものは評価機へ載せず小型公開モデルへ写像している。現在の設計は少数の対象エージェントアプリケーションが中心で、多数の異質ワークフローを同時提供する際の公平性や個別SLOは追加課題である。","hardware":["AMD EPYC 7J13 2基","主記憶1.7TB","NVIDIA A100 80GB 8基","NVLink"],"models":["Qwen系3B–14B","Llama系3B–14B","実運用ログではAnthropic/OpenAI/Google系モデルを役割に利用"],"datasets":["SWE-bench Pro","Deep Research Bench","社内コーディング支援の実運用追跡","深層調査エージェントの実行追跡"],"workload":"複数のエージェント型ワークフローを異なる同時実行数で流し、役割ごとの長さ分布、接頭辞再利用、分岐、再試行、モデル間の負荷波を含む終端間処理を測る。","baselines":["vLLM 0.17.1 + Production Stack router","SGLang 0.5.9","Autellix方策のvLLM上再実装","Continuum","ThunderAgentの複数モデル対応版"],"metrics":["平均ジョブ完了時間","95百分位ジョブ完了時間","出力トークン毎秒","初回トークン時間","階層別接頭辞キャッシュ命中率","要求中断・再計算"],"predictor_accuracy":"役割ごとの出力長を履歴から高信頼区間として推定し、制御フローは確率有限オートマトンから低確率遷移を除いた正規表現へ合成する。予測不能な新規版では反応型処理へ戻して影響を限定する。","control_knobs":"接頭辞の保持・破棄・ホスト段階配置、要求の配置先、全体優先度、反復時の待ち時間補正、中断対象、先読み段数、モデル複製数。"},"reservation":{"claim_id":"claim-1daab69065bdda91829f3106","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c54d1dbac92b03538ef2bcdf",
+  "job_id": "job-research-4714939abf3ccf8f",
+  "data": {
+    "evaluation_summary": "AMD EPYC 9654 serverと8×NVIDIA H20をPCIe 5.0、NVLink/NVSwitchで接続した実機testbedでnative cudaMemcpyAsyncと比較する。microbenchmarkは1KB–8GB H2D/D2H、path数、background contention、chunk/queue設定を評価し、end-to-endはLMCache+vLLM prefill-decode disaggregationのprefix cache hit TTFTとvLLM Sleep Mode model switchingを測る。",
+    "scope": "市販GPU server上のuser-space prototypeを実測しておりsimulationではない。効果はlarge transferかつ複数PCIe pathにidle headroomがある構成で大きく、小transferや全path同時飽和では制御overhead/共有bottleneckに制限される。",
+    "hardware": [
+      "AMD EPYC 9654",
+      "8×NVIDIA H20 96GB HBM3",
+      "PCIe 5.0 x16 per GPU",
+      "NVLink 4.0 / NVSwitch, measured one-way up to 478GB/s",
+      "CUDA 12.8"
+    ],
+    "models": [
+      "Qwen2.5-7B-Instruct",
+      "Qwen3-4B",
+      "Qwen-7B-Chat",
+      "Qwen3-0.6B",
+      "Qwen3-32B"
+    ],
+    "datasets": [
+      "LongBench v2",
+      "Chatbot Arena traffic characterization"
+    ],
+    "workload": "microbenchmark 1KB–8GB transfer。prefix cacheは16K/32K/64K contextのmulti-turn QAでhit turn平均TTFT。Sleep Modeは0.6B–32B modelのfall-asleep/wake-up wall-clock latency。",
+    "baselines": [
+      "native CUDA single-path H2D/D2H",
+      "static 1:1 multipath split",
+      "static 1:2 multipath split",
+      "MMA without direct priority"
+    ],
+    "metrics": [
+      "effective GB/s",
+      "completion time under contention",
+      "GPU P2P bandwidth",
+      "CPU overhead",
+      "TTFT",
+      "sleep/wake latency"
+    ],
+    "predictor_accuracy": "明示congestion predictorは使わずoutstanding queue occupancy/blockingをpassive congestion signalとして利用する。",
+    "control_knobs": "chunk size、outstanding queue length、fallback threshold、participating relay GPU/path数、direct-path priority。"
+  },
+  "reservation": {
+    "claim_id": "claim-c54d1dbac92b03538ef2bcdf",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

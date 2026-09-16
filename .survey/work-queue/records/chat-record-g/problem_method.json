@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-c0e304b27be71a492caece36",
+  "attempt_id": "attempt-c1a96aa17242872639750d89",
   "job_id": "job-research-73e15ccbef3e6d6d",
   "data": {
     "problem": "大規模言語モデルの生成段階では、一度に一つのトークンを生成するため行列ベクトル積が中心となり、演算量に対してモデル重みを読み出す量が大きい。さらに各要求が固有のキー・バリューキャッシュを持つため、文脈が長くなるほどメモリ容量が先に尽き、大きなバッチで演算密度を高める方法にも限界がある。その結果、高価なGPUが備える膨大な演算器を十分に使えず、Llama2-70Bの測定例では利用できる演算能力の約21%しか使えていない。メモリ内演算はDRAM内部の非常に高い帯域を使える一方、各バンクの近くへ汎用的な演算器を置くとDRAM製造工程で面積を消費し、メモリ密度が下がる。また一個のメモリ内演算装置だけでは巨大モデルを収容できず、装置間通信や集合通信も必要になる。CENTは、この容量不足、内部帯域活用、装置間拡張性という三つの問題を同時に解くことを狙う。",
@@ -33,8 +33,8 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-c0e304b27be71a492caece36",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "claim_id": "claim-c1a96aa17242872639750d89",
+    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }
 }
