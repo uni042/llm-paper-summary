@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0474271cc6e2d75634092b89",
+  "attempt_id": "attempt-f18ac3404e8d423c89a438b0",
   "job_id": "job-research-a8b5b2b70328c222",
   "data": {
     "evaluation_summary": "RTX 4090 24GB上でllama.cpp b10434とvLLM 0.11.0を使い、Qwen2.5-7B/14B、Llama-3.1-8B、F16/Q8_0/Q4_K_M/Q3_K_Mを評価する。主負荷はBerkeley Function Calling Leaderboardの80件複数ターン道具利用、補助負荷はGSM8K。温度0、seed 42、batch 1、直列要求でキャッシュ有無以外を固定し、各構成を二回反復する。",
@@ -43,8 +43,8 @@
     "control_knobs": "prefix caching、server-level prompt cache、server lifetime、execution order、weight quantization format、cache-state reset。"
   },
   "reservation": {
-    "claim_id": "claim-0474271cc6e2d75634092b89",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "claim_id": "claim-f18ac3404e8d423c89a438b0",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

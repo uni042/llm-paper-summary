@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-0474271cc6e2d75634092b89",
+  "attempt_id": "attempt-f18ac3404e8d423c89a438b0",
   "job_id": "job-research-a8b5b2b70328c222",
   "data": {
     "problem": "接頭辞キャッシュは同じ先頭文脈のキー・バリューを要求間で再利用し、初回トークン時間と計算費用を削減するため主要な推論基盤で既定有効になっている。通常は再計算を省くだけの透明な最適化と考えられるが、キャッシュ経路と再計算経路では浮動小数点の加算順序が変わり、低位ビットの差がトークン決定境界を越える可能性がある。単一ターンなら小さな文面差でも、エージェントでは変更されたトークンが道具呼出し、次の観測、後続プロンプトを変え、軌跡全体へ増幅する。さらに実運用では低ビット重みが多用されるが、量子化がこのキャッシュ由来差をどの程度増幅するか、サーバ内に残るキャッシュ状態が反復実行の再現性へどう影響するかは体系測定されていなかった。",
@@ -33,8 +33,8 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-0474271cc6e2d75634092b89",
-    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "claim_id": "claim-f18ac3404e8d423c89a438b0",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
