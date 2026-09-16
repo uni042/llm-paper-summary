@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-2230014a66e2cf859c8eed0a","job_id":"job-research-b6c7fea1929c168e","data":{"overview":"同じ鍵値メモリ削減量では圧縮がすべての比較でテンソル並列より安く、二分の一削減で約一・二倍、四分の一で約一・五倍、八分の一で約一・八九倍安い。全モデル・試験装置を含めると圧縮の費用優位は一・二〜二倍で、想定した費用交差点は現れない。テンソル並列は遅延を改善し、A100の重負荷では一台から八台でP99初回応答を234.9秒から52.4秒へ約四・五倍短縮するが、費用は百万トークン2.717ドルから4.888ドルへ上がる。圧縮は容量一ドル当たりを最大16.5倍へ増やすのに対し、八倍の装置費で得る並列の容量一ドル当たり改善は約1.21倍に留まる。","key_results":[{"metric":"同一メモリ削減量での費用","value":"圧縮が1.20x〜1.89x安価","baseline":"TP2/4/8","condition":"Llama-2-7B A100 W2","interpretation":"削減量が深いほど装置台数費が効き圧縮優位が広がる。"},{"metric":"全試験範囲の費用優位","value":"圧縮が1.20x〜2.00x安価","baseline":"対応するテンソル並列構成","condition":"二モデル・三装置・構成横断","interpretation":"費用交差点は観測されない。"},{"metric":"初回応答遅延","value":"234.9sから52.4s","baseline":"TP1","condition":"A100 W2、TP8","interpretation":"テンソル並列は費用を増やす代わりに遅延を約4.5倍改善する。"},{"metric":"容量/費用","value":"圧縮16.5x対TP8 1.21x","baseline":"非圧縮単一装置","condition":"容量効率比較","interpretation":"費用効率目的なら重み適合範囲で圧縮が強い。"}],"negative_results":["想定した費用等価交差点は七B、七十B、三装置の試験範囲で見つからなかった。","七Bは八十ギガバイト装置でモデル固有の文脈上限まで鍵値容量を使い切れず、長文による境界を十分に作れない。","七十Bは単一A100へ重み自体が収まらず、鍵値をどれだけ圧縮しても一台構成は実行不能である。","圧縮の復号遅延と品質低下は実測しておらず、圧縮側の遅延数値は最良条件の下限である。"],"quality_impact":"本研究は品質ベンチマークを実行していないため、四ビット化や強い間引きの品質費用は未定量である。この欠落により費用前線をそのまま品質制約付き本番判断へ適用できない。","interpretation":"運用規則は二分される。重みが一台へ収まるなら鍵値圧縮が費用効率で優先され、厳しい遅延目標だけが装置追加を正当化する。重みが収まらない規模では鍵値圧縮は問題の支配資源へ触れないため、テンソル並列が必須になる。"},"reservation":{"claim_id":"claim-2230014a66e2cf859c8eed0a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-8aab57af0b77e68432c90db5",
+  "job_id": "job-research-648fe1e5b80283fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8aab57af0b77e68432c90db5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

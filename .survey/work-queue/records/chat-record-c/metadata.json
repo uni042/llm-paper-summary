@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2230014a66e2cf859c8eed0a","job_id":"job-research-b6c7fea1929c168e","data":{"canonical_id":"arXiv:2608.23962","arxiv_id":"2608.23962","doi":"10.48550/arXiv.2608.23962","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving","summary":"鍵値キャッシュ不足への二つの代表策であるテンソル並列による画像処理装置追加と、鍵値量子化・間引きによる単一装置内圧縮を、百万トークン当たり費用と遅延の同一軸で比較する。A100、A40、H100で較正した実測由来シミュレータを用い、Llama-2 7B/70B、並列度一〜八、鍵値十六・八・四ビット、保持率一〜四分の一を横断する。比較可能なメモリ削減量では圧縮が一・二〜二倍安く、費用の交差点は見つからない。真の境界は文脈長ではなく重みが単一装置へ収まるかで、八十ギガバイト級では約三十六B付近と推定する。","list_summary":"画像処理装置追加と鍵値圧縮を百万トークン当たり費用で直接比較し、重みが単一装置へ収まる範囲では圧縮が一・二〜二倍安いことを示す。","authors":["Srikanta Datta Tumkur","Mehar Simhadri","Anshu Bansal","Jay Iyer","Sai Pavan Kumar","Sai Kapil Kumar","Ramesh Nampelly","Raj Dandekar"],"published":"2026-08-25","publication":"arXiv:2608.23962v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"kv-cache-memory-management","topics":["鍵値キャッシュ圧縮","テンソル並列","推論費用","メモリ制約","配備判断"],"importance":"異なる文献で別指標だった装置追加と鍵値圧縮を、固定モデル・品質下限・遅延目標の費用正規化前線へ載せる。","hardware_evaluation":"VidurのA100/A40/H100実機プロファイルで較正したシミュレータ。著者自身の画像処理装置実測はない。","quality_effect":"品質ベンチマークは実施せず、圧縮側の品質低下は未評価であることを明示的な主要制約としている。","source":"https://arxiv.org/abs/2608.23962","sources":["https://arxiv.org/abs/2608.23962"],"code":null,"implementation":"Vidurを基盤に鍵値ビット幅・保持率のメモリ計画を追加したプロファイル駆動シミュレーション。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv全文を確認。","references_total":0},"reservation":{"claim_id":"claim-2230014a66e2cf859c8eed0a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-8aab57af0b77e68432c90db5",
+  "job_id": "job-research-648fe1e5b80283fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8aab57af0b77e68432c90db5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
