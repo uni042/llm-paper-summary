@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-9fdbbab13803c394452c3f1f",
-  "job_id": "job-research-1a835bd497ae941f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9fdbbab13803c394452c3f1f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9fdbbab13803c394452c3f1f","job_id":"job-research-1a835bd497ae941f",
+ "data":{"overview":"専門家人気が強く偏る条件で、HarMoEnyは次善の比較対象に対してスループットを37〜70%高め、先頭トークンまでの時間を34〜41%短縮する。スケジューラのアブレーションではGPUの待ち時間を最大約84.7%削減する。論文の分析では負荷が均衡した場合、all-to-all通信そのものは全実行時間の約2%にすぎず、主要な遅延源は通信帯域より過負荷GPUを待つ同期であることを示す。したがって改善の中心は通信アルゴリズム変更ではなく、各同期区間の計算量を均すことにある。","key_results":[{"metric":"推論スループット","value":"37〜70%向上","baseline":"4種のMoE比較対象のうち次善方式","condition":"専門家人気が強く偏る実データ・合成ワークロード","interpretation":"過負荷GPUのトークンを空きGPUへ移すことで最遅GPUの処理時間を縮め、同期障壁で全体が待つ時間を減らす。"},{"metric":"先頭トークンまでの時間","value":"34〜41%短縮（最大41.1%）","baseline":"次善のMoE比較方式","condition":"動的な専門家人気偏りを含むマルチGPU推論","interpretation":"事前プロファイルの更新を待たず各バッチで負荷を再計算するため、入力領域が変わっても遅延を安定させやすい。"},{"metric":"GPU待ち時間","value":"最大84.7%削減","baseline":"比較対象の負荷分散方策","condition":"スケジューラのアブレーション評価","interpretation":"専門家並列で観測される大部分のアイドル時間が負荷偏り由来であり、トークン再配置がその待ちを直接除去することを示す。"},{"metric":"均衡時のall-to-all比率","value":"全実行時間の約2%","baseline":"負荷均衡状態の時間内訳","condition":"MoE推論のボトルネック分析","interpretation":"通信同期自体よりGPU間の計算量不均衡が主要問題であり、通信最適化だけでは十分でないという設計根拠になる。"}],"negative_results":"静的配置やプロファイル方式はバッチ間の人気変化に追随できず、論文の例では連続する二バッチだけでスループットが最大37.6%低下する。ExFlowの再プロファイルと整数計画はSwitch Transformerで約8.5分、Qwen条件で最大45分を要し、数百ミリ秒単位のバッチ変化より遅い。HarMoEny自身も、負荷が均等で再配置余地がない場合や専門家重み転送を計算で隠せない場合には追加メタデータ交換・先読みの利益が小さくなる。","interpretation":"MoEのルータは学習時に均衡化されても、実際の入力では専門家人気が局所的かつ時間的に偏る。固定専門家配置ではこの偏りがGPU処理量の偏りへ直結し、all-to-all障壁が最も遅いGPUを全体の速度にする。HarMoEnyはトークンを計算余力へ追従させ、必要な重み移動を並行化するので、偏りが強いほど削減できる待ち時間が増える。","quality_impact":"選択される専門家と専門家計算自体は維持し、実行GPUだけを変更する。量子化や専門家枝刈りによる近似を導入しないため、性能改善とモデル品質を交換する方式ではない。"},
+ "reservation":{"claim_id":"claim-9fdbbab13803c394452c3f1f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
