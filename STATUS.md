@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:34:20 JST**
+> 自動生成: **2026-09-16 16:34:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 16:31:13 JST** / heartbeat: **—** / lease expiry: **09-16 18:01:13 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
+- `arXiv:2609.12923` — Dissecting GPU Utilization for LLM Inference on Nvidia Hopper / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 16:34:39 JST** / heartbeat: **—** / lease expiry: **09-16 18:04:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-21d58015b4f64394.json`
 
 #### Audit
 
@@ -256,8 +256,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **333** |
-| └ Research | **199** |
+| 成功result未照合のimmutable submission | **334** |
+| └ Research | **200** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
