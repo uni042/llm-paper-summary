@@ -4,7 +4,60 @@
   "slot": "results",
   "attempt_id": "attempt-12cc7eb08e210892b1873db0",
   "job_id": "job-research-f9d44874a1b28506",
-  "data": {},
+  "data": {
+    "overview": "THInferは演算ピーク合わせの7Bで2×V100S上DeepSpeedより62～73%、A800より67～84%高い処理量を示す。13Bでは条件によりGPUと同等または上回り、30BではV100S比較で大幅に高い。70Bは比較GPU構成がメモリ不足で実行不能なのに対し、混合並列で64/41 token/sを維持する。帯域合わせでMT-3000台数を増やすと7B～30Bで約2.25倍、70Bで約2倍へ伸び、デコードのDDR/KV帯域が主要制約であることを裏付ける。除去実験では低水準演算子、グラフ融合、バッチ化・並列化、三段パイプラインの全段が寄与する。",
+    "key_results": [
+      {
+        "metric": "7Bエンドツーエンド生成スループット",
+        "value": "MT-3000ピーク合わせ781/456 token/s（入力512/1024）対2×V100S DeepSpeed 481/263、MT-3000 975/570対A800 584/310",
+        "baseline": "DeepSpeed-Inference on V100S/A800",
+        "condition": "Llama2-7B、生成128トークン",
+        "interpretation": "プリフィルのGEMMを手書き演算子と融合で効率化し、低い単体帯域を多数クラスタの並列性で補う。"
+      },
+      {
+        "metric": "大規模モデルの実行可能性",
+        "value": "Llama2-70BでTHInfer 64/41 token/s、V100S/A800比較構成はOOM",
+        "baseline": "DeepSpeed/Accelerate GPU比較構成",
+        "condition": "入力512/1024、ピーク合わせMT-3000構成",
+        "interpretation": "重みとKVをTP/PP/DPで複数クラスタへ分散し、1クラスタ容量制約を回避する。"
+      },
+      {
+        "metric": "帯域増加時のスケーリング",
+        "value": "ピーク合わせから帯域合わせへ7B・13B・30Bは約2.25倍、70Bは約2倍",
+        "baseline": "同一THInferの少数MT-3000構成",
+        "condition": "18台MT-3000対V100S帯域、16台対A800帯域",
+        "interpretation": "集約DDR帯域の増加がKV読書き中心のデコード律速を直接緩和し、帯域認識設計の主張を支持する。"
+      },
+      {
+        "metric": "除去実験30B",
+        "value": "0.07→2.47→3.02→14→27→34 token/s",
+        "baseline": "未最適化A0",
+        "condition": "12クラスタ、入力512、生成128。順にFP16演算子、グラフ最適化、PPバッチ、TP+PP、P-B-Dを追加",
+        "interpretation": "低水準演算子だけでなく、バッチ・並列化と三段パイプラインまで段階的に寄与する。"
+      },
+      {
+        "metric": "単一クラスタFP16線形演算",
+        "value": "5686.34 GFLOPS、理論ピーク70.20%、FP32 2556.05 GFLOPS比122%向上",
+        "baseline": "同じMT-3000のFP32実装",
+        "condition": "入力次元4096、出力次元4096、系列長8k",
+        "interpretation": "半精度命令と転送量削減で演算器利用率を高めるが、残余律速はDDR帯域である。"
+      },
+      {
+        "metric": "MT Attention遅延",
+        "value": "未最適化比2.5～3.5倍高速、FlashAttention比多くの条件で26～36%低遅延",
+        "baseline": "未最適化注意、FlashAttention",
+        "condition": "バッチ4、head_dim 128、系列長最大4096",
+        "interpretation": "MT-3000の放送機構とGSM/SM容量に合わせた段階融合がDMAと中間I/Oを減らす。"
+      }
+    ],
+    "negative_results": [
+      "13Bと30Bの一部ピーク合わせ条件ではA800に明確な優位を持たず、13B入力512は301対345 token/s、30B入力512は105対116 token/sでA800が上回る。",
+      "テンソル並列の効果はモデル規模で変わり、モデルが大きいほど全還元通信がスケーリングの制約になる。",
+      "評価は合成固定長入力とMT-3000に限定され、実トラフィックの末尾遅延や費用・電力を含むGPUとの総合効率比較ではない。"
+    ],
+    "quality_impact": "FP16保存・演算を用いるが、SoftmaxやRMSNormなど重要な正規化・集約はFP32中間精度で実行する。生成品質や精度指標そのものは評価しておらず、性能向上と品質維持の実測検証は限定的である。",
+    "interpretation": "この結果は、低帯域な多数コア機ではGPUの演算ピークを模倣するより、オンチップ再利用とクラスタ数による帯域集約を設計中心に置く方が有効であることを示す。特に大規模モデルでは容量分散とKV転送制御が実行可能性そのものを左右す一方、TPを増やし過ぎると全還元が新たな律速になる。"
+  },
   "reservation": {
     "claim_id": "claim-12cc7eb08e210892b1873db0",
     "worker_id": "scheduled-chat-llm-survey",
