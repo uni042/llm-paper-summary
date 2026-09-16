@@ -2,39 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-34765e98bb9cf6776aa5d26d",
-  "job_id": "job-research-8f7fdb4eba0d8a63",
-  "data": {
-    "scope": "単一AMD MI350X上の高密度Qwen3-8Bデコードを実機評価する。バッチ1〜64で永続スケジューリング効果とチップレット局所L2重み再利用効果を分離し、vLLMとチップレット非認識Mirage MPKを比較する。",
-    "evaluation_setup": "MI350X 256 CU/8 XCD、各XCD 4MB L2、共有256MB Infinity Cache、288GB HBM3。Qwen3-8B bf16、36層、隠れ次元4096、FFN 12288。入力64トークン、出力1024トークンのデコード専用TPOTをGPU内タイムスタンプで測定する。Fleet M-tileとM-split、Mirage MPK、vLLM 0.17.2 ROCm即時実行を比較する。",
-    "models": [
-      "Qwen3-8B dense bf16"
-    ],
-    "hardware": [
-      "AMD Instinct MI350X"
-    ],
-    "workloads": [
-      "デコード、バッチ1,2,4,8,16,32,64",
-      "入力64トークン + 出力1024トークン"
-    ],
-    "metrics": [
-      "デコードTPOT",
-      "高速化倍率",
-      "L2ヒット率",
-      "HBM読出し／書込みトラフィック",
-      "実効演算強度"
-    ],
-    "baselines": [
-      "vLLM 0.17.2 ROCm即時実行",
-      "Mirage MPK チップレット非認識",
-      "Fleet M-split スケジューリングのみの対照"
-    ],
-    "simulation_assumptions": "主要結果は実機カウンタ／時刻計測。L2再利用の理論式は共有ワーカー数Rに対する(R-1)/Rで説明する。",
-    "evaluation_caveats": "評価GPUはAMD MI350XのみでNVIDIA Blackwell実機は未評価。高密度Qwen3-8Bのデコード中心で、プリフィルやMoEは主要なエンドツーエンド評価対象外である。"
-  },
+  "attempt_id": "attempt-6b2d22eca4e3d95603c36153",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-34765e98bb9cf6776aa5d26d",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "claim_id": "claim-6b2d22eca4e3d95603c36153",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }
 }

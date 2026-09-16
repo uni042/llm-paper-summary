@@ -2,45 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-34765e98bb9cf6776aa5d26d",
-  "job_id": "job-research-8f7fdb4eba0d8a63",
-  "data": {
-    "limitations": [
-      {
-        "name": "MI350X中心の実証",
-        "description": "タスク抽象はチップレット数・ワーカー数・L2容量をパラメータ化しMI300XやBlackwellへ概念的に適用できるが、エンドツーエンド評価はMI350Xのみで、NVIDIA Blackwell向け実装と実機効果は未検証である。"
-      },
-      {
-        "name": "デコード高密度モデル中心",
-        "description": "評価は高密度Qwen3-8Bのデコードが中心で、プリフィル、MoE、複雑なサービングスケジューラとの統合効果は追加検証が必要である。テンソル並列で局所重み分割が小さくなるとL2再利用利益も変化する。"
-      },
-      {
-        "name": "スケジューラ資源消費",
-        "description": "各XCDで1 CUをスケジューラに予約するためMI350では3.1%のCUを制御へ使う。タスクが極端に短い場合はスケジューラのオーバーヘッドが無視できなくなる。"
-      }
-    ],
-    "differences": [
-      {
-        "name": "vLLM/SGLangとの差",
-        "description": "演算子ごとにHIP/CUDAカーネルを起動する通常サービング基盤に対し、Fleetは全デコードを永続メガカーネル内のタスクグラフとして実行し、起動間隔とカーネル境界でのキャッシュ再利用喪失を避ける。"
-      },
-      {
-        "name": "Mirage MPKとの差",
-        "description": "Mirage MPKも永続タスクグラフを使うがチップレット境界を認識せずCUタスクを平坦に配る。Fleetはチップレットタスクを追加し、重み分割とワーカーをXCD局所L2範囲へ固定する。Mirageが何を融合するかを扱うのに対し、Fleetはどこへスケジュールするかを扱い補完的である。"
-      },
-      {
-        "name": "単独チップレット認識GEMMとの差",
-        "description": "HipKittens等は単一GEMM内でXCD局所性を最適化する。FleetはGEMM、アテンション、正規化、活性化を一つの永続実行系へ統合し、演算子間依存と階層同期までチップレット認識型にする。"
-      }
-    ],
-    "implementation_status": "Mirage Persistent Kernelのランタイムを拡張し、XCDスケジューラ、チップレットタスク記述子、階層イベント、M優先協調GEMMを実装してMI350Xで実測した。コンパイラ主導のチップレットタスク超最適化は将来課題である。",
-    "research_positioning": "LLM推論メガカーネルとGPUキャッシュ階層の協調設計に位置する。CPU/GPU/SSD間オフロードではなく、単一GPUパッケージ内部の独立L2を新しい局所性階層として明示する研究である。",
-    "relation_to_existing_repository": "メガカーネル、カーネル融合、キャッシュ認識スケジューリング、メモリ階層、推論ランタイム系統を接続する。特に将来の複数ダイGPUでHBMトラフィックを減らすソフトウェア抽象として重要である。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-6b2d22eca4e3d95603c36153",
+  "job_id": "job-research-0dc2aa86e35f442f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-34765e98bb9cf6776aa5d26d",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "claim_id": "claim-6b2d22eca4e3d95603c36153",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }
 }
