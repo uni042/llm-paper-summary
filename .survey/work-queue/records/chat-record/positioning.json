@@ -1,13 +1,3 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-8c8fd5e2638698c7a248c09e",
-  "job_id": "job-research-9fcc40253e9df4ef",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8c8fd5e2638698c7a248c09e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8c8fd5e2638698c7a248c09e","job_id":"job-research-9fcc40253e9df4ef","data":{"limitations":"現在の試作は両プールが取り得る最大容量を事前確保するため、4GiBの論理プール予算に対して約9GiBを予約し、静的方式より大きなVRAM占有を持つ。純Python割当器でありTritonやCUDAカーネルを含む実推論エンジンへ未統合で、評価もRTX 3060単一GPUに限られる。ShareGPT再生は単語数によるトークン長代理と決定論的到着を使うため、実サービスの到着時刻、多利用者競合、SLO制御を再現しない。","differences":"vLLM型の統一ハイブリッドキャッシュは異種状態を同じページ粒度へ合わせるためSSM側にパディング浪費が生じる。SGLang型の静的二プールは物理分離できるが容量比を起動時に固定する。AVMPは物理分離を維持しながら仮想アドレスを統一し、実際の割当失敗時だけ容量境界を動かすことで、両方式の欠点を同時に避けようとする。","implementation_status":"公開研究試作は純Pythonで実装され、仮想ハンドル、二種類の物理プール、割当失敗駆動の再配分状態機械を検証する。実データ移動は事前確保した backing tensor の論理境界変更で模擬しており、cuMemMapによる物理ページ再マップ、Triton統合、実推論エンジン統合は将来作業。","research_positioning":"従来のKVキャッシュ管理がTransformerの一種類の可変長状態を主対象としてきたのに対し、AVMPはMamba-Transformer混成モデルで固定長SSM状態と可変長KV状態が共存することを出発点とする。SSDやCPUへのオフロードではなくGPU内部の容量分割問題を扱うが、異種メモリ需要へ動的に容量を融通するという点で階層メモリ管理と共通する。今後ハイブリッドモデルが普及した場合、推論エンジンのキャッシュ管理を単一ページ型から異種状態対応へ拡張する設計候補になる。"},"reservation":{"claim_id":"claim-8c8fd5e2638698c7a248c09e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
