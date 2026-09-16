@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T13:04:21+00:00"
+      "checked_at": "2026-09-16T15:00:11+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T13:04:18+00:00"
+      "checked_at": "2026-09-16T15:00:06+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4910,7 +4910,7 @@
       "status": "blocked",
       "source_fingerprint": "5ba407efb64717ea8552fca1bc4545c7ef0ccad5320f50022802d28682b511b7",
       "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-16T13:04:21+00:00"
+      "checked_at": "2026-09-16T15:00:12+00:00"
     },
     "papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": {
       "status": "complete",
@@ -5039,7 +5039,61 @@
       "normalized_references": 22,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-16T13:04:20+00:00"
+    },
+    "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md": {
+      "status": "complete",
+      "source_fingerprint": "5013044364d25b30054eaad07a7ad65aba18ab70324e1d4469e484ed035258de",
+      "references_total": 25,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:06+00:00"
+    },
+    "papers/inference/06-speculative-decoding/2026-2607.03876-adaptivesd-runtime-adaptive-cpu-constrained.md": {
+      "status": "blocked",
+      "source_fingerprint": "854c3738395df1ff08e8bd60fc12ceea018b4a7e2df147bde17c11302bec11f8",
+      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
+      "checked_at": "2026-09-16T15:00:08+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "77c5eddeb6300b2ee511019c7da1d009828238532b56fee98e617097da5b5ef9",
+      "references_total": 95,
+      "normalized_references": 44,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:10+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md": {
+      "status": "complete",
+      "source_fingerprint": "494d44534ec123fe3208bf36210f750357ecd4dffd3119eba664295540488a9b",
+      "references_total": 33,
+      "normalized_references": 13,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:10+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "9973ac5fdab051628b38fddc96db30950ab26b3a1cf81587b1b98c7832ea5e8e",
+      "references_total": 22,
+      "normalized_references": 22,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:11+00:00"
+    },
+    "papers/inference/12-benchmarking-modeling-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md": {
+      "status": "complete",
+      "source_fingerprint": "ef6945e6c5b4f17cc55ea601a423d0ff75ce40c1f7fecf49ca34f827643d2f4d",
+      "references_total": 32,
+      "normalized_references": 8,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:11+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "0903dba3309904b4ce09c3651847e02e15f57d81c8d7dda24f2bc077f9793261",
+      "references_total": 36,
+      "normalized_references": 2,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-16T15:00:12+00:00"
     }
   },
-  "updated_at": "2026-09-16T13:04:36+00:00"
+  "updated_at": "2026-09-16T15:00:39+00:00"
 }

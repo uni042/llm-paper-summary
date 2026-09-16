@@ -1,10 +1,14 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（2本）
+## 自動生成の論文一覧（3本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+
+- **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  実LLMサーバ制御コードをそのまま走らせ、GPU計算だけ仮想時間へ置換して5%未満の誤差と約5〜17倍の評価高速化を狙うGPU不要エミュレータ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
   実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：2  

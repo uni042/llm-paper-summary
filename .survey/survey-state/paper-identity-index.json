@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 623,
+  "active_count": 630,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -979,6 +979,14 @@
       ],
       "source_hash": "8f907f2f79f1e6e430378436d8780284c8bfd8e89e5aedc209cceeb0a5a50145"
     },
+    "arXiv:2608.23962": {
+      "path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.23962",
+        "arXiv:2608.23962"
+      ],
+      "source_hash": "cf5f1706766febcb69967786d3d7a0750b59ccfe049848b7c2af7347c3a795ed"
+    },
     "arXiv:2507.03153": {
       "path": "papers/inference/05-kv-cache-offloading/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
       "identifiers": [
@@ -1426,6 +1434,14 @@
         "arXiv:2605.26444"
       ],
       "source_hash": "1551ee5dd7856ce79d376a9baf8b75a7f8809a1b2146595141b0942084076f9e"
+    },
+    "arXiv:2607.03876": {
+      "path": "papers/inference/06-speculative-decoding/2026-2607.03876-adaptivesd-runtime-adaptive-cpu-constrained.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.03876",
+        "arXiv:2607.03876"
+      ],
+      "source_hash": "bb409fb909ced34cc2cf429e7b0d446585b137449a56a6451a660173eef0ff22"
     },
     "arXiv:2607.05147": {
       "path": "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
@@ -3483,6 +3499,14 @@
       ],
       "source_hash": "0abaec2e0c56401926a0a737719d2310006f6bf330fb6868f6873580f14fd8b3"
     },
+    "arXiv:2603.22774": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.22774",
+        "arXiv:2603.22774"
+      ],
+      "source_hash": "0fe2e6eaf75ba6085943894701a017d901fa2669813d549319e766c986759088"
+    },
     "arXiv:2603.26498": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
       "identifiers": [
@@ -3536,6 +3560,14 @@
         "arXiv:2604.08075"
       ],
       "source_hash": "982829548d53bb396bfb7f059f009b74836339653b725794af2c0258adde0a53"
+    },
+    "arXiv:2604.11001": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2604.11001",
+        "arXiv:2604.11001"
+      ],
+      "source_hash": "fd11b87439e1ec2cc96e0838a7ab1e73b91033804d4c36d2a286f343652d02dc"
     },
     "arXiv:2604.15039": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md",
@@ -4287,6 +4319,22 @@
       ],
       "source_hash": "d0a82c3b8573c0b6a1621954f20f1a3dd887e41f1120e8807f1433c9a89ad273"
     },
+    "arXiv:2609.16206": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.16206",
+        "arXiv:2609.16206"
+      ],
+      "source_hash": "56bb28e46af6779c18699af8f58d6b9c82d32dca50b47093f8d0c1c02b03a3d6"
+    },
+    "arXiv:2601.00397": {
+      "path": "papers/inference/12-benchmarking-modeling-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2601.00397",
+        "arXiv:2601.00397"
+      ],
+      "source_hash": "35519edba0312726ee25d3aa5bcd44caf7c689edec0d44c357c75f3b2ab035b8"
+    },
     "arXiv:2605.00616": {
       "path": "papers/inference/12-benchmarking-modeling-emulation/2026-2605.00616-llm-emu-native-runtime-emulation.md",
       "identifiers": [
@@ -4401,6 +4449,14 @@
         "arXiv:2604.09562"
       ],
       "source_hash": "fdfb62a974d9c5dc647839352a34fe8bc7989980d89d9582e979856ede9a5500"
+    },
+    "arXiv:2604.14993": {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2604.14993",
+        "arXiv:2604.14993"
+      ],
+      "source_hash": "652babe531bdc0603f3fa8b3e4f72ddacb37ce0ed1fb4e560da0c8bb4eabd34d"
     },
     "arXiv:2604.15379": {
       "path": "papers/inference/99-other-inference-systems/2026-2604.15379-fleet-multi-die-gpu-megakernel.md",
@@ -4933,6 +4989,8 @@
     "arXiv:2607.15498": "arXiv:2607.15498",
     "DOI:10.1145/3770855.3817715": "arXiv:2607.17715",
     "arXiv:2607.17715": "arXiv:2607.17715",
+    "DOI:10.48550/arxiv.2608.23962": "arXiv:2608.23962",
+    "arXiv:2608.23962": "arXiv:2608.23962",
     "arXiv:2507.03153": "arXiv:2507.03153",
     "arXiv:2509.00105": "arXiv:2509.00105",
     "DOI:10.48550/arxiv.2511.00321": "arXiv:2511.00321",
@@ -5021,6 +5079,8 @@
     "arXiv:2604.20503": "arXiv:2604.20503",
     "DOI:10.48550/arxiv.2605.26444": "arXiv:2605.26444",
     "arXiv:2605.26444": "arXiv:2605.26444",
+    "DOI:10.48550/arxiv.2607.03876": "arXiv:2607.03876",
+    "arXiv:2607.03876": "arXiv:2607.03876",
     "DOI:10.48550/arxiv.2607.05147": "arXiv:2607.05147",
     "arXiv:2607.05147": "arXiv:2607.05147",
     "arXiv:2608.15018": "arXiv:2608.15018",
@@ -5457,6 +5517,8 @@
     "arXiv:2603.21257": "arXiv:2603.21257",
     "DOI:10.48550/arxiv.2603.22206": "arXiv:2603.22206",
     "arXiv:2603.22206": "arXiv:2603.22206",
+    "DOI:10.48550/arxiv.2603.22774": "arXiv:2603.22774",
+    "arXiv:2603.22774": "arXiv:2603.22774",
     "DOI:10.48550/arxiv.2603.26498": "arXiv:2603.26498",
     "arXiv:2603.26498": "arXiv:2603.26498",
     "DOI:10.48550/arxiv.2603.29002": "arXiv:2603.29002",
@@ -5469,6 +5531,8 @@
     "arXiv:2604.07609": "arXiv:2604.07609",
     "DOI:10.48550/arxiv.2604.08075": "arXiv:2604.08075",
     "arXiv:2604.08075": "arXiv:2604.08075",
+    "DOI:10.48550/arxiv.2604.11001": "arXiv:2604.11001",
+    "arXiv:2604.11001": "arXiv:2604.11001",
     "arXiv:2604.15039": "arXiv:2604.15039",
     "DOI:10.48550/arxiv.2604.17172": "arXiv:2604.17172",
     "arXiv:2604.17172": "arXiv:2604.17172",
@@ -5631,6 +5695,10 @@
     "arXiv:2609.15230": "arXiv:2609.15230",
     "DOI:10.48550/arxiv.2609.15359": "arXiv:2609.15359",
     "arXiv:2609.15359": "arXiv:2609.15359",
+    "DOI:10.48550/arxiv.2609.16206": "arXiv:2609.16206",
+    "arXiv:2609.16206": "arXiv:2609.16206",
+    "DOI:10.48550/arxiv.2601.00397": "arXiv:2601.00397",
+    "arXiv:2601.00397": "arXiv:2601.00397",
     "DOI:10.48550/arxiv.2605.00616": "arXiv:2605.00616",
     "arXiv:2605.00616": "arXiv:2605.00616",
     "arXiv:2605.21312": "arXiv:2605.21312",
@@ -5656,6 +5724,8 @@
     "arXiv:2603.17435": "arXiv:2603.17435",
     "DOI:10.48550/arxiv.2604.09562": "arXiv:2604.09562",
     "arXiv:2604.09562": "arXiv:2604.09562",
+    "DOI:10.48550/arxiv.2604.14993": "arXiv:2604.14993",
+    "arXiv:2604.14993": "arXiv:2604.14993",
     "DOI:10.48550/arxiv.2604.15379": "arXiv:2604.15379",
     "arXiv:2604.15379": "arXiv:2604.15379",
     "arXiv:2605.19893": "arXiv:2605.19893",

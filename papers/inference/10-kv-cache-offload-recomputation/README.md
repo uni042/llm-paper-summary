@@ -29,7 +29,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：52  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-10 · [TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications](2025-2510.18586-tokencake-agent-kv-cache-serving.md)**  
@@ -41,7 +41,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
 
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
 
 - **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
