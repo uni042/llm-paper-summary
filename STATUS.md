@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:48:46 JST**
+> 自動生成: **2026-09-16 18:49:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **23** |
+| 収録候補論文 | **22** |
 | 未claim Research job | **20** |
-| 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-16 18:38:33 JST（10分前）** |
+| 直近24hの検証済みResearch収録 | **65** |
+| 最終検証済みResearch収録 | **09-16 18:49:43 JST（4秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **23** |
+| canonical_id確認済みの一意な候補論文 | **22** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **23** |
+| 非終端Research job合計 | **22** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **8** | **4** | **4** | **3** | **0** | — |
+| Research | **39** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **39** | **18** | **4** | **14** | **3** | **0** | **10** |
+| 合計 | **40** | **18** | **4** | **14** | **2** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 18:49:43 JST** [research] `arXiv:2604.07472` — Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference
+  - job: `.survey/work-queue/jobs/job-research-c5a47af1c9e3acf3.json`
+  - result: `.survey/work-queue/results/research/attempt-44002611be590dff9f7593f6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-44002611be590dff9f7593f6.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-allocation.md`
 - **09-16 18:38:33 JST** [research] `arXiv:2609.09662` — PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling
   - job: `.survey/work-queue/jobs/job-research-3d5f11737ec9b4a2.json`
   - result: `.survey/work-queue/results/research/attempt-b66d308c0d1e4eb8ba288ecc.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
-- **09-16 16:44:23 JST** [research] `arXiv:2507.17120` — BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving
-  - job: `.survey/work-queue/jobs/job-research-250a1e243181b0c3.json`
-  - result: `.survey/work-queue/results/research/attempt-c334af59c2859bcbd599d50c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c334af59c2859bcbd599d50c.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md`
 
 ### Audit
 
@@ -197,10 +197,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.07472` — Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:48:26 JST** / heartbeat: **—** / lease expiry: **09-16 20:18:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c5a47af1c9e3acf3.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
@@ -226,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **23** |
+| ready | **22** |
 
 ### 候補の重複・識別情報欠損
 
@@ -246,7 +243,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **612** |
+| inference/training/survey配下の論文Markdown実体 | **613** |
 
 ### immutable submissionの未照合
 

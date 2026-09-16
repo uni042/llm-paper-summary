@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T09:38:37.227265+00:00",
+  "updated_at": "2026-09-16T09:49:47.321711+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T09:38:37.227265+00:00",
+      "last_recorded_at": "2026-09-16T09:49:47.321711+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 148,
+        "research_completed": 149,
         "audit_completed": 0,
         "discovery_completed": 53,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35042577197:1",
-          "recorded_at": "2026-09-16T01:04:07.543661+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35042577197",
-            "run_attempt": "1",
-            "source_sha": "9e2be2f2252b78c529e6cf92bb3420c6e31c8171"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35045389059:1",
           "recorded_at": "2026-09-16T01:46:35.236480+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35080514293",
             "run_attempt": "1",
             "source_sha": "92c09dec3d266e0b3ca9fb6ca2363a578a2297a9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35081586143:1",
+          "recorded_at": "2026-09-16T09:49:47.321711+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35081586143",
+            "run_attempt": "1",
+            "source_sha": "fa628795f8da13c256e93c7cab2eb8b0549f6dd3"
           },
           "signals": [
             "research_completed"
@@ -21277,6 +21277,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.09662",
           "title": "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c5a47af1c9e3acf3",
+          "type": "research",
+          "canonical_id": "arXiv:2604.07472",
+          "title": "Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference",
           "from": "ready",
           "to": "completed"
         }
