@@ -2,16 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0eb4936a46a9da87b23225fa",
-  "job_id": "job-research-3165425bd10baa45",
+  "attempt_id": "attempt-e515885033d647a55b19de09",
+  "job_id": "job-research-648fe1e5b80283fd",
   "data": {
-    "hardware": "4×Cambricon MLU370-X4アクセラレータを備えるノード。対象メモリはLPDDR5クラスのランダムアクセス制約メモリ。",
-    "software": "Cambricon-vLLM互換プロトタイプ上でDeepSeek-R1-Distill-Qwen-7Bを配信し、ODMAの予測器、動的バケット管理、Allocator/Memory Poolを統合する。",
-    "methodology": "AlpacaとGoogle-NQを用いて生成長予測精度を既存S3予測器と比較し、実サービングでは静的な最悪長事前割当を基準として装置メモリ利用率、requests per second（RPS）、tokens per second（TPS）を測る。動的バケットとlarge-bucket safeguardにより、予測誤差・重い裾を吸収しつつ連続KV配置を維持する効果を評価する。",
-    "scope": "評価はDeepSeek-R1-Distill-Qwen-7BとCambricon MLU370-X4を中心とし、HBM GPUや他のLPDDR系アクセラレータへの一般化、極端な分布ドリフト時の再分割コスト、大容量バケットへの移行コピーが頻発する条件は十分には網羅されない。"
+    "hardware": "NVIDIA GeForce RTX 4090 24GB。実機上でLLaVA-NeXT-Mistral-7BとQwen2-VL-7B-Instructを評価し、効率測定も同GPUで実施した。",
+    "software": "LMMs-Evalを統一評価基盤として使用。比較対象はFullKV、MixKV、およびSnapKV、PyramidKV、AdaKV、SparseMM。ECOKVを各追い出し方式へ統合して比較した。",
+    "methodology": "標準マルチモーダル評価としてDocVQA、OCRBench、TextVQA、ChartQA、TextCapsを使用し、長文書条件としてMP-DocVQAも評価した。KV予算は主に256、128、64で比較する。固定設定は多様性混合係数0.8、冗長度混合係数0.6、観測窓4、半精度、バッチ1。観測窓1・4・32、混合係数、正規化方式についてアブレーションを実施した。効率評価では8192トークン入力から512トークン生成し、予算64でキャッシュ容量、ピークメモリ、総実行時間を3回平均した。実ベンチマーク側でもTextVQAから100件超を無作為抽出して効率を測った。",
+    "scope": "評価は7B級の二つのマルチモーダルモデルとRTX 4090単機を中心とした実機評価である。画像・文書中心の課題に強く、一般のテキスト専用LLM、より大きいモデル、複数GPUサービング、長時間連続デコードでのスループットや末尾遅延までは直接検証していない。方式は近似的なKV追い出しであり、品質保持は課題精度として評価される。",
+    "benchmarks": [
+      "DocVQA",
+      "OCRBench",
+      "TextVQA",
+      "ChartQA",
+      "TextCaps",
+      "MP-DocVQA"
+    ],
+    "models": [
+      "LLaVA-NeXT-Mistral-7B",
+      "Qwen2-VL-7B-Instruct"
+    ],
+    "budgets": [
+      256,
+      128,
+      64
+    ],
+    "reproducibility_notes": "論文は主要ハイパーパラメータとGPU時間を提示する。LMMs-Evalではサンプリングなしで決定論的に評価したと記載される。arXivページ上で公式コードURLは確認できなかったため、完全な再現性は実装公開状況に依存する。"
   },
   "reservation": {
-    "claim_id": "claim-0eb4936a46a9da87b23225fa",
+    "claim_id": "claim-e515885033d647a55b19de09",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }

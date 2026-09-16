@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0eb4936a46a9da87b23225fa",
-  "job_id": "job-research-3165425bd10baa45",
+  "attempt_id": "attempt-e515885033d647a55b19de09",
+  "job_id": "job-research-648fe1e5b80283fd",
   "data": {
-    "overview": "ODMAは生成長予測と動的連続バケットを組み合わせ、Cambricon MLU370-X4で静的事前割当よりメモリ利用率とスループットを改善した。Alpacaではメモリ利用率を55.05%から72.45%へ上げ、RPSを29%、TPSを27%向上する。Google-NQでもメモリ利用率を42.54%から61.79%へ改善し、予測精度は従来方式の82.68%から93.36%へ上がる。",
+    "overview": "ECOKVの利得はKV予算が厳しいほど大きい。Qwen2-VL-7B-InstructでSnapKVへ統合した場合、予算64のDocVQAはMixKVの67.9から81.8へ、OCRBenchは66.0から74.8へ、TextVQAは72.5から78.8へ改善した。AdaKVとの組合せでも予算64のDocVQAは67.8から82.7へ伸びる。観測窓を32から4へ縮めるだけでも改善するが、同じ窓幅にそろえた比較でもECOKVはMixKVを上回る条件が多く、相補的な幾何指標自体の寄与が確認できる。効率面では追加のユークリッド距離計算による負担は小さく、合成8192トークン入力ではSnapKV+ECOKVが16.408秒でSnapKVの16.536秒と同等だった。",
     "key_results": [
       {
-        "metric": "生成長予測精度",
-        "value": "Alpaca 98.60%→99.55%、Google-NQ 82.68%→93.36%",
-        "baseline": "S3 predictor",
-        "condition": "Alpaca / Google-NQ",
-        "interpretation": "重い裾を持つGoogle-NQで特に大きく改善し、より小さい通常バケットを安全に使う基盤になる。"
+        "metric": "DocVQA精度",
+        "value": "81.8%",
+        "baseline": "SnapKV + MixKV 67.9%",
+        "condition": "Qwen2-VL-7B-Instruct、KV予算64",
+        "interpretation": "コサイン類似度中心の多様性評価へユークリッド幾何を加えることで、厳しいキャッシュ制約下でも文書中の有用情報を大幅に保持でき、13.9ポイント改善した。"
       },
       {
-        "metric": "装置メモリ利用率",
-        "value": "Alpaca 55.05%→72.45%",
-        "baseline": "Cambricon-vLLM静的事前割当",
-        "condition": "DeepSeek-R1-Distill-Qwen-7B、MLU370-X4",
-        "interpretation": "最大生成長分を全要求へ予約せず予測長に近い連続領域を割り当てることで未使用KV予約を減らす。"
+        "metric": "DocVQA精度",
+        "value": "82.7%",
+        "baseline": "AdaKV + MixKV 67.8%",
+        "condition": "Qwen2-VL-7B-Instruct、KV予算64",
+        "interpretation": "注意ヘッドごとの予算配分を持つAdaKVへ追加しても14.9ポイント改善しており、ECOKVの選択得点が既存の予算配分機構と独立に効くことを示す。"
       },
       {
-        "metric": "装置メモリ利用率",
-        "value": "Google-NQ 42.54%→61.79%",
-        "baseline": "静的事前割当",
-        "condition": "Google-NQ、MLU370-X4",
-        "interpretation": "長さ分布が異なるワークロードでも動的バケット再分割が容量利用を改善する。"
+        "metric": "MP-DocVQA得点",
+        "value": "51.3",
+        "baseline": "SnapKV + MixKV 42.8",
+        "condition": "Qwen2-VL-7B-Instruct、KV予算64",
+        "interpretation": "複数ページ文書の長い視覚文脈でも8.5点上回り、短い単一画像課題だけでなく長文脈の情報保持にも利得がある。"
       },
       {
-        "metric": "RPS",
-        "value": "+29%",
-        "baseline": "静的事前割当",
-        "condition": "Alpaca、DeepSeek-R1-Distill-Qwen-7B、MLU370-X4",
-        "interpretation": "空いたメモリでより多くの要求を同時収容できる効果が要求処理率へ反映される。"
+        "metric": "観測窓縮小時のOCRBench精度",
+        "value": "74.8%",
+        "baseline": "窓32で68.1%",
+        "condition": "Qwen2-VL-7B-Instruct、窓4対32",
+        "interpretation": "直近トークンを固定保護し過ぎると限られたKV枠を消費するため、窓を小さくして動的選択へ回す方が6.7ポイント高い。"
       },
       {
-        "metric": "TPS",
-        "value": "+27%",
-        "baseline": "静的事前割当",
-        "condition": "同上",
-        "interpretation": "連続アクセスを維持したまま同時実行数を増やし、トークン処理率も向上する。"
+        "metric": "合成長文脈の総実行時間",
+        "value": "16.408秒",
+        "baseline": "SnapKV 16.536秒、SnapKV + MixKV 16.483秒",
+        "condition": "8192入力トークン、512生成トークン、KV予算64、RTX 4090、3回平均",
+        "interpretation": "ユークリッド距離計算を追加しても総時間は悪化せず、小さい観測窓による計算削減が追加負担を相殺している。キャッシュ容量は0.003GBでFullKVの0.438GBより大幅に小さい。"
       }
     ],
-    "negative_results": "細粒度ページングを避ける代わりに、予測外れで通常バケットを超える要求は大きな連続領域へのKVコピーを必要とする。予測誤差やheavy-tailが極端でlarge bucket移行が頻発する場合、そのコピー費用と保険領域の予約が利得を削る可能性がある。",
-    "interpretation": "HBMで成功したページング方式を普遍解とせず、メモリ媒体のランダムアクセス特性に合わせて割当粒度と配置を変えることが主要な示唆である。予測器単独ではなく、分布適応バケットと例外時安全策を組み合わせることで予測誤差を実運用可能な形へ閉じ込めている。",
-    "quality_impact": "生成アルゴリズムやモデル重みを変更せずKVキャッシュ配置を管理するため、生成品質への直接影響は想定しない。"
+    "negative_results": "全条件で一様にMixKVを上回るわけではない。LLaVA-NeXT-Mistral-7BでSparseMMへ統合した場合、OCRBenchは予算128でMixKV 50.4に対しECOKV 50.3、予算64で49.5に対し48.3となり僅かに悪化する。ChartQAでも同組合せの予算128は51.5に対し51.2で低い。Qwen2-VLでもSparseMM+ECOKVのOCRBench予算256はMixKV 82.0に対し81.9、ChartQA予算128は81.8に対し81.6で僅差の低下がある。また実TextVQAではECOKVの総時間がSnapKVより必ず短いわけではなく、短い出力ではデコード削減の効果が小さい。",
+    "interpretation": "改善幅が低予算で大きくなるのは、保持できるKVが少ないほど誤った類似度判定や固定観測窓の浪費が致命的になるためである。ユークリッド距離はコサイン類似度が捨てる大きさ情報を補い、重要度との順位相関も低から中程度なので、別の有用なトークン集合を拾える。一方、SparseMMのように既に視覚ヘッドへ特化した予算配分を持つ方式では、追加の多様性重みが常に有利とは限らず、改善幅が小さいか一部で逆転する。",
+    "quality_impact": "近似的なキャッシュ削減であり数学的な無損失保証はない。課題精度を基準にすると、予算256ではFullKVに匹敵または一部で上回り、予算64でも多くの比較対象より高い。ただし方式・課題の組合せによって小幅な品質低下が残るため、適用先ごとの検証が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-0eb4936a46a9da87b23225fa",
+    "claim_id": "claim-e515885033d647a55b19de09",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
