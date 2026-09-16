@@ -2,23 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8a4bc1625b051d6e27e89e58",
-  "job_id": "job-research-431f09f6206f16eb",
+  "attempt_id": "attempt-5067cd6b8db49986303c3586",
+  "job_id": "job-research-7b525e11834c9519",
   "data": {
-    "methodology": "MegaScale-Infer型の注意・エキスパート分離MoE推論を比較対象とし、注意ワーカー故障とエキスパートワーカー故障を個別に注入して、故障発生から推論が再び前進するまでの停止時間を測る。通常時はスループットとトークン単位遅延を比較し、非同期KVチェックポイントがAW-EWデータ経路へ与える追加負担も測定する。注意側では要求単位KV復元を全履歴再計算と比較し、回復遅延、回復通信量、GPU再計算量を評価する。",
-    "hardware": "一次資料の取得済み範囲では具体的GPU型番・台数の評価表まで確認できなかったため記載しない。論文は大規模MoEサービングとMegaScale-Infer型構成を対象にする。",
-    "software": "TARRAGON研究実装。再構成可能AW-EW転送、エキスパート経路表、影エキスパート、非同期増分KVチェックポイント、要求単位復元を実装。",
-    "scope": "MoE推論の故障回復に限定し、学習は対象外。注意計算とエキスパート計算が分離された構成を前提とする。エキスパート側の即時回復には影重みを置ける余剰GPUメモリが必要で、注意側はチェックポイント先と転送帯域を必要とする。",
-    "baselines": [
-      "MegaScale-Infer-like coarse-grained recovery"
-    ],
-    "failure_types": [
-      "attention worker failure",
-      "expert worker failure"
-    ]
+    "hardware": "主評価はLlama-3-70BをNVIDIA A100 GPUで配信するフリートを対象とし、ケーススタディではQwen3-235B-A22BをAMD MI300Xで10,000 req/s配信する構成を投影する。",
+    "software": "vLLMの連続バッチ処理を対象とする。評価では自己完結型の離散事象シミュレータを用い、反復時間を固定作業量とactive sequence数に依存する一次モデルで近似する。",
+    "methodology": "Azure LLM Inference DatasetとLMSYS-Chat-1M由来の要求長分布を使い、Llama-3-70B/A100フリートについて従来の同一長文設定と二重プール経路制御を比較する。1,000 req/sで必要GPUインスタンス数、成功率、先取り・拒否、TTFT/TPOTを評価し、P99 TTFT 2秒以下・P99 TPOT 80ms以下のサービス水準を確認する。カテゴリ別bytes-per-token推定の収束と誤経路率、short budget閾値の感度も測定する。さらに10,000 req/sのQwen3-235B-A22B/MI300Xを費用モデルで投影する。",
+    "scope": "実機フリート全体を用いた大規模オンライン実験ではなく、公開トレースと一次的な反復時間モデルを用いた離散事象評価が中心である。主な定量評価はLlama-3-70B/A100に限定され、MI300Xの大規模値はケーススタディ投影である。"
   },
   "reservation": {
-    "claim_id": "claim-8a4bc1625b051d6e27e89e58",
+    "claim_id": "claim-5067cd6b8db49986303c3586",
     "worker_id": "scheduled-chat-normal-20260917T013240",
     "worker_kind": "scheduled_chat"
   }
