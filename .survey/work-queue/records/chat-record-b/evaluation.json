@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-fcacb6725660bc54758b38b8","job_id":"job-research-af7d4aee1c99dd28","data":{"evaluation_summary":"8基のAMD Instinct MI300Xを搭載した単一node、ROCm 6.4、vLLM v0.10.2系で実機評価。Llama-3.1 70BとMixtral-8x7B、短文LMSYS・8K級arXiv・20K級Loogle workloadを用い、offered QPSを低負荷から飽和までsweepする。","scope":"同一nodeのresource-constrained LLM servingでhybrid batching、cross-GPU disaggregation、RAPID-Serveを比較。","hardware":["8x AMD Instinct MI300X"],"software":["ROCm 6.4","vLLM v1 v0.10.2rc3","HIP Graphs"],"models":["Llama-3.1 70B","Mixtral-8x7B"],"datasets":["LMSYS trace","arXiv summarization workload","Loogle summarization"],"workload":"LMSYS平均prompt約2K、arXiv約8K、Loogle約20K。各負荷でQPSをsweep。","baselines":["chunked hybrid batching chunk=512/1024等","vLLM disaggregated serving 4P-4D"],"metrics":["throughput","goodput","p95 TTFT","p95 ITL","GPU compute utilization","memory utilization"],"methodology":"LMSYSとarXivはprompt長で層化して各1万件にtruncate。Llama-3.1 70Bではhybridと4P-4D disaggregationを比較し、MixtralはvLLMがMoE disaggregation非対応のためhybrid中心。goodputはITLとlength-dependent TTFTの両SLOを満たす最大request rateとして評価。","predictor_accuracy":"予測器ではなくoffline profileでdecode batch sizeごとの必要CUを決める。","control_knobs":"prefill chunk size、prefill/decode CU allocation、decode batch size、offered QPS、ITL SLO。"},"reservation":{"claim_id":"claim-fcacb6725660bc54758b38b8","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
+  "job_id": "job-research-0d9ff237f1d632e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
+    "worker_kind": "scheduled_chat"
+  }
+}

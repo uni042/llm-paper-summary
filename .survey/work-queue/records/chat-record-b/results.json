@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-fcacb6725660bc54758b38b8","job_id":"job-research-af7d4aee1c99dd28","data":{"overview":"RAPID-Serveはchunked hybrid batching比でunconstrained throughput最大4.1倍・平均1.7倍、disaggregated serving比で最大2.9倍・平均1.5倍。baseline goodputが非零の条件ではchunked比最大32倍・平均4.9倍、disaggregation比最大13.7倍・平均4.7倍のgoodput改善を報告する。Llama-3.1 70Bのp95 TTFTはchunked比最大220倍・平均53倍、disaggregation比最大486倍・平均55倍低い。GPU compute utilizationはhybrid比最大77%、disaggregation比最大111%改善し、共有KVによりmemory utilizationも最大37%改善する。","key_results":[{"metric":"unconstrained throughput","value":"最大4.1x、平均1.7x","baseline":"chunked hybrid batching","condition":"Llama-3.1 70B/Mixtral-8x7B、複数workload/QPS"},{"metric":"SLO goodput","value":"最大32x、平均4.9x","baseline":"chunked hybrid batching","condition":"baseline goodputが非零のケース"},{"metric":"SLO goodput","value":"最大13.7x、平均4.7x","baseline":"4P-4D disaggregated serving","condition":"baseline goodputが非零のケース"},{"metric":"p95 TTFT","value":"最大220x、平均53x低下","baseline":"chunked hybrid batching","condition":"Llama-3.1 70B"},{"metric":"GPU compute utilization","value":"最大77%改善","baseline":"hybrid batching","condition":"hardware counterによるactive CU近似"},{"metric":"memory utilization","value":"最大37%改善","baseline":"disaggregated serving","condition":"共有KVでP/D memory imbalanceを回避"}],"negative_results":["memory subsystemはCU maskingのように分割できず、decode kernelでは平均2-5%程度、GEMMではより大きいinterferenceが残る。","disaggregated baselineではMixtral-8x7Bを評価できていない。vLLM側のMoE disaggregation非対応が理由。","Adaptive Resource Managerはoffline profileに依存し、HIP Graph起動後はqueue/CU maskを変更できない。"],"quality_impact":"近似計算やmodel parameter変更はなく、品質劣化ではなくserving latency/throughputを対象とする。","interpretation":"prefill/decodeを別GPUへ完全分離するか同一batchへ結合するかの二択ではなく、同一GPU上で独立kernelとして並行させ、phase特性に応じてcomputeだけを動的分割する中間設計が高いgoodputを得られることを示す。"},"reservation":{"claim_id":"claim-fcacb6725660bc54758b38b8","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
+  "job_id": "job-research-0d9ff237f1d632e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
+    "worker_kind": "scheduled_chat"
+  }
+}

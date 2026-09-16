@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-fcacb6725660bc54758b38b8","job_id":"job-research-af7d4aee1c99dd28","data":{"positioning":"Hybrid batchingとcross-GPU PD disaggregationの中間に位置し、同一GPU上でphaseを論理分離しつつ物理memoryを共有するserving design。","differences":"Sarathi系chunked prefillはP/Dを同一iterationへ混載するためITL interferenceが残る。DistServe/Splitwise系はphaseを別GPU poolへ分離してKV transferとmemory imbalanceを負う。DRIFT/Semi-PDも同一deviceでP/Dを重ねるが、RAPID-Serveは低負荷時のresource over-allocation、SLOに応じたCU割当、lock/sync-free multiprocessing、共有KVを組み合わせ、TTFTとITL双方を対象にする。","relation_to_prior_work":[{"work":"Sarathi-Serve / chunked prefill","difference":"P/Dを同一batchでlockstepにせず別kernelで独立進行させる。"},{"work":"DistServe / Splitwise","difference":"別GPU poolを使わずKV transferとP/D memory imbalanceを回避する。"},{"work":"DRIFT / Semi-PD","difference":"低負荷時のCU over-allocationとprofile-driven SLO allocation、lock-free process分離を追加する。"},{"work":"NanoFlow","difference":"nano-batch overlapではなくP/D phase自体を独立processとして重ねる。"}],"strengths":["8x MI300X実機でdense 70BとMoEを評価。","短文から20K級promptまで複数workloadを使用。","throughputだけでなくTTFT/ITL goodputとcompute/memory utilizationを評価。","vLLM v1上の具体的なKV manager・scheduler・HIP/CU masking実装を提示。"],"limitations":["CU maskingはAMD Instinct固有機構で、他GPUでは同等のresource partition機構が必要。","memory subsystem interferenceは分離できず残存する。","resource allocationはoffline profiling依存でworkload/model変化時の再profileが必要。","単一node 8 GPU評価でありmulti-node network環境の一般化は未検証。","Mixtralのcross-GPU disaggregation baselineはvLLM制約により未評価。"],"implementation_status":"vLLM v1ベースの研究実装。本文に公式公開repository URLは記載されていない。","research_positioning":"prefill/decode phase特性をGPU内空間分割と共有memoryへ写像する、resource-efficient servingの設計点。","repository_fit":"serving/scheduling系統で、Nexus/DRIFT/Semi-PD等のintra-GPU PD multiplexingとcross-GPU disaggregationを比較する際の重要な実機評価対象。"},"reservation":{"claim_id":"claim-fcacb6725660bc54758b38b8","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
+  "job_id": "job-research-0d9ff237f1d632e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
+    "worker_kind": "scheduled_chat"
+  }
+}
