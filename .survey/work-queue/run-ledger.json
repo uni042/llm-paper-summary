@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T05:24:24.883379+00:00",
+  "updated_at": "2026-09-16T05:35:41.256643+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T05:24:24.883379+00:00",
+      "last_recorded_at": "2026-09-16T05:35:41.256643+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 120,
+        "research_completed": 121,
         "audit_completed": 0,
         "discovery_completed": 33,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34933677348:1",
-          "recorded_at": "2026-09-15T05:40:24.901306+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34933677348",
-            "run_attempt": "1",
-            "source_sha": "dfa20e90c7c52a8a80a6280232949b27e633f5b1"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34935257932:1",
           "recorded_at": "2026-09-15T06:06:55.852206+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35059327940",
             "run_attempt": "1",
             "source_sha": "17bbf2d23b6019f203eefc1850a3d3367033b116"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35060121379:1",
+          "recorded_at": "2026-09-16T05:35:41.256643+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35060121379",
+            "run_attempt": "1",
+            "source_sha": "de134032aa15f65a2a7c2d03eeaba617065a21f2"
           },
           "signals": [
             "research_completed"
@@ -20863,6 +20863,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.21312",
           "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-e8148d67a04de0eb",
+          "type": "research",
+          "canonical_id": "arXiv:2606.23001",
+          "title": "EnerInfer: Energy-Aware On-Device LLM Inference",
           "from": "ready",
           "to": "completed"
         }

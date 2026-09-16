@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:35:27 JST**
+> 自動生成: **2026-09-16 14:35:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **43** |
+| 収録候補論文 | **42** |
 | 未claim Research job | **40** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:24:20 JST（11分前）** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-16 14:35:37 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **43** |
+| canonical_id確認済みの一意な候補論文 | **42** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **44** |
+| 非終端Research job合計 | **43** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **12** | **6** | **6** | **4** | **0** | — |
+| Research | **30** | **12** | **6** | **6** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **13** | **0** | **13** | **0** | **0** | **13** |
-| 合計 | **30** | **25** | **6** | **19** | **4** | **0** | **13** |
+| 合計 | **31** | **25** | **6** | **19** | **3** | **0** | **13** |
 
 - 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:35:37 JST** [research] `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-e8148d67a04de0eb.json`
+  - result: `.survey/work-queue/results/research/attempt-4b0bf8eef80fa393a4c31125.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4b0bf8eef80fa393a4c31125.json`
+  - paper: `papers/inference/08-edge-on-device-llm-systems/2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md`
 - **09-16 14:24:20 JST** [research] `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation
   - job: `.survey/work-queue/jobs/job-research-d743b2b5468a28c8.json`
   - result: `.survey/work-queue/results/research/attempt-062785fdd1a729fb213be682.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-83192276c9f89bc52b0efa12.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-83192276c9f89bc52b0efa12.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md`
-- **09-16 12:50:41 JST** [research] `arXiv:2603.28768` — CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving
-  - job: `.survey/work-queue/jobs/job-research-16a80a40c011c783.json`
-  - result: `.survey/work-queue/results/research/attempt-a296cabbe5bdb6189545e086.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a296cabbe5bdb6189545e086.json`
-  - paper: `papers/inference/06-moe-inference-expert-offloading/2026-2603.28768-craft-cost-aware-expert-replication.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.23001` — EnerInfer: Energy-Aware On-Device LLM Inference / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:34:09 JST** / heartbeat: **—** / lease expiry: **09-16 16:04:09 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e8148d67a04de0eb.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
   - claim: **09-16 14:23:47 JST** / heartbeat: **—** / lease expiry: **09-16 15:53:47 JST**
   - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
@@ -235,7 +232,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **44** |
+| ready | **43** |
 
 ### 候補の重複・識別情報欠損
 
@@ -255,7 +252,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **584** |
+| inference/training/survey配下の論文Markdown実体 | **585** |
 
 ### immutable submissionの未照合
 
@@ -263,8 +260,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **305** |
-| └ Research | **178** |
+| 成功result未照合のimmutable submission | **304** |
+| └ Research | **177** |
 | └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
