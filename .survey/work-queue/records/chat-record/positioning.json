@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5f751e3b4a448f7f2f7978ae",
-  "job_id": "job-research-71c206bf0990ca87",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5f751e3b4a448f7f2f7978ae",
-    "worker_id": "scheduled-chat-20260917t043138-0900",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5f751e3b4a448f7f2f7978ae","job_id":"job-research-71c206bf0990ca87",
+ "data":{
+  "limitations":"KV予算は品質・遅延目標から自動決定せず手動指定であり、実運用では対象ワークロードの検証集合で調整が必要になる。効果は中間圧縮率で最大になり、極小予算では必要情報を残す容量自体が不足し、大予算では完全KVへ近づいて方針差が小さくなる。段階判定はチャットテンプレートに思考・ツール呼出し・応答境界が現れることを利用するため、境界を外部から観測できないモデルでは粗い分割へ変更する必要がある。公開評価はQwen3中心で、Nemotronへの転送は示すものの全モデル系列・全エージェント形式への一般化は未確認である。圧縮は近似であり、完全KV品質を保証しない。",
+  "differences":"H2O、StreamingLLM、SnapKV、R-KVなどは注意履歴や直近観測窓から将来重要KVを推定するのに対し、AgentKVはエージェント軌跡の意味段階によって将来問い合わせ分布が非定常になることを明示的にモデル化する。Tri-attentionのような長推論向け圧縮とも異なり、思考だけでなくツール応答や利用者文脈を往復する複数ターンを主対象とする。また追い出し方針だけをオフライン評価せず、保持KVを物理的に詰め直してGPUページを解放し、ツール呼出し後の次ターンへ圧縮状態を持続する実サービス経路を実装している。",
+  "implementation_status":"arXiv v1プレプリントで公式コードをGitHub公開。SGLang 0.5.12とFlashInferを基盤に、段階解析、代表問い合わせリング、オンラインKV追い出し、物理ページ詰め直し、割当器へのページ返却、複数ターン状態継承を実装している。H100 NVLとRTX A6000で実測スループットを報告し、品質評価はH100上で約100 GPU時間を使用した。",
+  "research_positioning":"KVキャッシュ研究では、単純な容量削減より『将来どのKVが必要か』を推定する代表問い合わせの選び方に焦点を当て、エージェント特有の非定常性を導入した研究と位置付けられる。長文脈サービングではメモリ帯域と容量の双方を改善し、特に32k級入力でページ解放が並列度へ直結する。研究サーベイ上は一般KV追い出し系統とエージェント推論基盤の接点にあり、今後は段階境界を明示しないモデルでの自動状態推定、品質目標からのKV予算制御、他のKV量子化・階層メモリ方式との併用が重要な比較軸になる。"
+ },
+ "reservation":{"claim_id":"claim-5f751e3b4a448f7f2f7978ae","worker_id":"scheduled-chat-20260917t043138-0900","worker_kind":"scheduled_chat"}
 }
