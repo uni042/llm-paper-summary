@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:41:26 JST**
+> 自動生成: **2026-09-16 19:41:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -195,9 +195,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.20172` — Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 19:38:23 JST** / heartbeat: **—** / lease expiry: **09-16 21:08:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8473b19fc0026661.json`
+- `arXiv:2603.22774` — Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 19:41:30 JST** / heartbeat: **—** / lease expiry: **09-16 21:11:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f9f09d211cdcb836.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
