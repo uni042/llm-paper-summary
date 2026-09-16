@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-53558bbaa4914539ab1d1836",
-  "job_id": "job-research-34cb083c55afaad3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53558bbaa4914539ab1d1836",
-    "worker_id": "scheduled-chat-paper-20260916T173214JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-53558bbaa4914539ab1d1836","job_id":"job-research-34cb083c55afaad3","data":{"evaluation_summary":"QuALITYとSystem Promptsのprefix-sharing workloadで、distribution-aware DPをblock、balanced、sqrt、log/diadic等のcheckpoint heuristicと比較する。checkpoint budgetに対するrecurrent recomputationのPareto frontierを測り、DPは測定layer-group上で全fixed-budget baselineを支配し、最強heuristicのblock cachingに一致または上回りながら通常は大幅に少ないcheckpointを使う。低budgetかつoverlap分布が非一様な条件で利得が最大となる。","scope":"多数のrequestが長いが完全には同一でないprefixを共有し、recurrent/SSM hidden stateをexact extract/restoreできる条件。","hardware":["hybrid recurrent layer-groupを実行するGPU環境"],"software":["Sparse Prefix Caching公開実験コード","Qwen3.5 GatedDeltaNet layer-group評価系"],"models":["Qwen3.5系hybrid recurrent layer group"],"datasets":["QuALITY","System Prompts","NarrativeQA（公開コード追加構成）"],"workload":"同じ長文書への異なる質問、および共通system promptと異なるuser queryを持つ要求群。","baselines":["no recurrent-state cache","block caching","balanced checkpoints","sqrt-spaced checkpoints","log/diadic checkpoints"],"metrics":["checkpoint budget","recurrent recomputation cost","memory-recompute Pareto frontier"],"methodology":"実データからprefix overlap depthの経験分布を構築し、同一checkpoint budgetでDP配置とheuristicを比較する。測定recurrent compute costから期待再計算量を算出し、checkpoint数とのPareto frontierを評価する。","predictor_accuracy":"予測器は使わず経験overlap分布を直接placement objectiveへ使う。","control_knobs":"checkpoint budget M、候補位置N、overlap-depth分布、block alignment、履歴分布の重み。"},"reservation":{"claim_id":"claim-53558bbaa4914539ab1d1836","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
