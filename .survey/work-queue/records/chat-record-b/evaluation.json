@@ -5,43 +5,18 @@
   "attempt_id": "attempt-ad5dfb814d7090ff8006d8de",
   "job_id": "job-research-34cb083c55afaad3",
   "data": {
-    "evaluation_summary": "QuALITYとSystem Promptsのprefix-sharing workloadで、distribution-aware DPをblock、balanced、sqrt、log/diadic等のcheckpoint heuristicと比較する。checkpoint budgetに対するrecurrent recomputationのPareto frontierを測り、DPは測定layer-group上で全fixed-budget baselineを支配し、最強heuristicのblock cachingに一致または上回りながら通常は大幅に少ないcheckpointを使う。低budgetかつoverlap分布が非一様な条件で利得が最大となる。",
-    "scope": "多数のrequestが長いが完全には同一でないprefixを共有し、recurrent/SSM hidden stateをexact extract/restoreできる条件。",
-    "hardware": [
-      "hybrid recurrent layer-groupを実行するGPU環境"
-    ],
-    "software": [
-      "Sparse Prefix Caching公開実験コード",
-      "Qwen3.5 GatedDeltaNet layer-group評価系"
-    ],
-    "models": [
-      "Qwen3.5系hybrid recurrent layer group"
-    ],
-    "datasets": [
-      "QuALITY",
-      "System Prompts",
-      "NarrativeQA（公開コード追加構成）"
-    ],
-    "workload": "同じ長文書への異なる質問、および共通system promptと異なるuser queryを持つ要求群。",
-    "baselines": [
-      "no recurrent-state cache",
-      "block caching",
-      "balanced checkpoints",
-      "sqrt-spaced checkpoints",
-      "log/diadic checkpoints"
-    ],
-    "metrics": [
-      "checkpoint budget",
-      "recurrent recomputation cost",
-      "memory-recompute Pareto frontier"
-    ],
-    "methodology": "実データからprefix overlap depthの経験分布を構築し、同一checkpoint budgetでDP配置とheuristicを比較する。測定recurrent compute costから期待再計算量を算出し、checkpoint数とのPareto frontierを評価する。",
-    "predictor_accuracy": "予測器は使わず経験overlap分布を直接placement objectiveへ使う。",
-    "control_knobs": "checkpoint budget M、候補位置N、overlap-depth分布、block alignment、履歴分布の重み。"
+    "evaluation_summary": "QuALITYとSystem Promptsの接頭辞共有負荷で、分布適応型の動的計画配置を、ブロック配置、均衡配置、平方根間隔、対数・二進間隔などの検査点配置則と比較する。検査点予算に対する再帰計算量のパレート前線を測定し、動的計画法は測定した層群で固定予算の全比較手法を支配した。最も強い比較手法であるブロックキャッシュと同等以上の性能を示しながら、通常は大幅に少ない検査点で済む。検査点予算が小さく、重複深度分布が非一様な条件で利得が最大になる。",
+    "scope": "多数の要求が長いが完全には同一でない接頭辞を共有し、再帰型・状態空間モデルの内部状態を正確に取り出して復元できる条件を対象とする。",
+    "hardware": ["ハイブリッド再帰層群を実行するGPU環境"],
+    "software": ["Sparse Prefix Caching公開実験コード", "Qwen3.5 GatedDeltaNet層群の評価系"],
+    "models": ["Qwen3.5系ハイブリッド再帰層群"],
+    "datasets": ["QuALITY", "System Prompts", "NarrativeQA（公開コードの追加構成）"],
+    "workload": "同じ長文書への異なる質問、および共通システム指示と異なる利用者問い合わせを持つ要求群を用いる。",
+    "baselines": ["再帰状態キャッシュなし", "ブロックキャッシュ", "均衡検査点配置", "平方根間隔検査点", "対数・二進間隔検査点"],
+    "metrics": ["検査点予算", "再帰再計算量", "メモリ対再計算量のパレート前線"],
+    "methodology": "実データから接頭辞重複深度の経験分布を構築し、同一の検査点予算で動的計画配置と経験則配置を比較する。測定した再帰計算費用から期待再計算量を算出し、検査点数とのパレート前線を評価する。",
+    "predictor_accuracy": "予測器は使用せず、観測した重複深度の経験分布を配置目的関数へ直接用いる。",
+    "control_knobs": "検査点予算M、候補位置N、重複深度分布、ブロック境界への整列、履歴分布の重みを制御する。"
   },
-  "reservation": {
-    "claim_id": "claim-ad5dfb814d7090ff8006d8de",
-    "worker_id": "scheduled-chat-paper-20260916T175945JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-ad5dfb814d7090ff8006d8de", "worker_id": "scheduled-chat-paper-20260916T175945JST", "worker_kind": "scheduled_chat"}
 }
