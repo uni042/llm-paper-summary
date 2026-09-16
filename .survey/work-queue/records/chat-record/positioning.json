@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-f7164aefbbb9a7ccd4752dd5",
   "job_id": "job-research-9f909dd53a5f1acb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f7164aefbbb9a7ccd4752dd5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "positioning": "DistServeやSplitwiseが高速なデータセンター内ネットワークでプリフィルとデコードを分離するのに対し、PDDは異種計算資源が地理的に分散している状況を正面から扱う。MooncakeなどKV中心の分離系と同じくKV移動が中心課題だが、PDDの差はストレージ階層や転送路の高速化より、転送待ち時間そのものへ一時的なデコード計算を差し込む点にある。",
+    "comparison": "Prefill-as-a-Serviceは長文入力だけを遠隔プリフィルへ選択的に逃がし、文脈長・帯域・キャッシュを考慮した配置で混雑を防ぐ。一方PDDは高く偏った接頭辞ヒット率を前提に、遠隔主デコードへの転送が遅い少数要求を中継デコードで隠す。前者は要求配置、後者は転送遅延隠蔽が主機構であり、論文自身も両者を補完的と位置付ける。",
+    "repository_relation": "リポジトリ内ではプリフィル・デコード分離、KVキャッシュ転送、異種GPU配置、広域推論の交点に位置する。特に、通信帯域を増やすのではなく転送と有用な生成計算を重畳するため、通信最適化系とスケジューリング系を橋渡しする論文として扱える。",
+    "novelty": "三段目として一時的な中継デコードを導入し、遠隔KV転送中に先行生成した状態をトークンIDだけで主デコードへ引き継ぐことで、広域KV転送の尾部を計算で隠す点。さらにMD側キャッシュ整合性を保つためP-RLD単独経路を排除する多段制御まで含めている。",
+    "implementation_status": "論文内で実装・実機評価されているが、確認時点で一次資料から公開リポジトリURLは特定できなかった。",
+    "audit_notes": "評価値は論文の実世界エージェント型ワークロードと内部ハードウェア環境に基づく。37.5%は純粋な速度向上ではなくSLA適合有効スループットの便益費用比であり、46%は従来のデータセンター間PDに対するP90 TTFT削減として区別する。"
+  },
+  "reservation": {"claim_id": "claim-f7164aefbbb9a7ccd4752dd5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
