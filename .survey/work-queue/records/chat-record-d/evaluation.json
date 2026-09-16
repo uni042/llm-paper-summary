@@ -1,14 +1,50 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2fcf28b8aab221ce876e00e2","job_id":"job-research-0dc2aa86e35f442f",
- "data":{
-  "evaluation_summary":"代表的な密モデル、専門家混合モデル、混合注意モデルと長文デコード負荷を用い、H100だけの同種GPU群と、H100にL40SまたはA100を組み合わせた異種GPU群で実機評価する。主要指標は出力トークン時間のサービス水準目標を満たすためのサービング費用で、同居実行、同種GPU分離、固定された注意機構・フィードフォワード網分離などの実行可能な比較方式と比べる。",
-  "scope":"主結果は実GPUクラスタ上のデコードサービング評価であり、単なるシミュレーションではない。理論節ではQwen3-235BやGPT-OSS-120Bを使った費用曲線も示す。実機結果は評価したGPU世代、長文負荷、サービス水準目標の範囲に基づくため、別GPU価格や短文中心負荷へ数値をそのまま一般化するべきではない。",
-  "models":["Gemma-3-27B","Qwen3-235B","GPT-OSS-120B","混合注意構造を含む代表モデル"],
-  "hardware":["H100のみの同種GPU群","H100とL40Sの異種GPU群","H100とA100の異種GPU群","理論解析例ではH20も使用"],
-  "workloads":"長い文脈を持つデコードサービング。文脈長、バッチ構成、出力トークン時間の目標を変え、KVキャッシュ圧力と段間均衡が費用へ与える影響を評価する。",
-  "metrics":["トークン当たりサービング費用","出力トークン時間のサービス水準目標達成可否","パイプライン段数","出力一トークン当たりノード間転送量","モデル実行中の機器稼働率と待機時間"],
-  "baselines":["同居実行","同種GPUでの演算子分離","固定された注意機構・フィードフォワード網分離","OpWeaveを使わない中で最良の実行可能比較方式"],
-  "reported_conditions":["H100同種構成では同じ遅延目標を満たす構成同士で費用を比較する。","異種構成ではH100とL40SまたはA100を組み合わせる。","Gemma-3-27Bでは固定二段分離との段数、通信量、稼働率の差も測る。"]
- },
- "reservation":{"claim_id":"claim-2fcf28b8aab221ce876e00e2","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-915ebeff2156b2e8003c2c34",
+  "job_id": "job-research-3bb1145babb1a6fc",
+  "data": {
+    "evaluation_summary": "4×A100/NVLink nodeを1–3 node使用し、denseとMoEの計8モデル、HellaSwag/GSM8K由来のrequest、Poisson arrivalでsteady/dynamic workloadを評価。Baseline、Adaptive Batch、Adaptive Cap、PALS、offline exhaustive Oracleを同一vLLM上で比較する。",
+    "hardware": [
+      "4×NVIDIA A100 per node",
+      "NVLink intra-node",
+      "最大3 nodes",
+      "cluster-wide 4800W budget scenario"
+    ],
+    "models": [
+      "GPT-2",
+      "Llama-2-7B",
+      "Mistral-7B",
+      "OLMoE-1B-7B",
+      "Qwen1.5-MoE",
+      "DeepSeek-MoE",
+      "Phi-3.5-MoE",
+      "Mixtral-8x7B"
+    ],
+    "datasets": [
+      "HellaSwag",
+      "GSM8K"
+    ],
+    "workload": "configurable arrival rate/sequence length。Poisson arrivalでbursty servingを模擬。multi-node QoS試験とdemand-response試験は60分。",
+    "baselines": [
+      "Baseline: 400W + maximum batch",
+      "Adaptive Batch: fixed cap + predicted batch",
+      "Adaptive Cap: dynamic cap + fixed batch",
+      "Oracle: exhaustive offline configuration search"
+    ],
+    "metrics": [
+      "tokens/s",
+      "QoS violation rate",
+      "power tracking error",
+      "tokens/J"
+    ],
+    "predictor_accuracy": "random forest: throughput MAPE 6.8%、power MAPE 4.5%。system power estimationはaggregate GPU powerからR²≈0.98、MAE 12–27W。",
+    "control_knobs": "runtime: power cap, batch size。deployment-time/static: TP, EP, DP。"
+  },
+  "reservation": {
+    "claim_id": "claim-915ebeff2156b2e8003c2c34",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

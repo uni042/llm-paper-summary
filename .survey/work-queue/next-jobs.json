@@ -25,6 +25,18 @@
   },
   "next_jobs": [
     {
+      "job_id": "job-research-0dc2aa86e35f442f",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2609.14237",
+      "title": "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.14237",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-78cb8002e7b50e8e",
       "type": "research",
       "lane": null,
@@ -97,18 +109,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-3bb1145babb1a6fc",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2605.21427",
-      "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
-      "source_url": "https://arxiv.org/abs/2605.21427",
-      "paper_path": "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-6802b144c10e4060",
       "type": "research",
       "lane": null,
@@ -133,5 +133,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T04:37:21+00:00"
+  "generated_at": "2026-09-16T04:39:40+00:00"
 }

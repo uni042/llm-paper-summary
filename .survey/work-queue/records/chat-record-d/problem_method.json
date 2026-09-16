@@ -1,18 +1,44 @@
 {
- "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-2fcf28b8aab221ce876e00e2","job_id":"job-research-0dc2aa86e35f442f",
- "data":{
-  "problem":"デコード内部では注意機構が主にメモリ帯域で律速され、バッチを増やしても演算器の利用率が上がりにくい。一方、フィードフォワード網や専門家層は行列積が中心で、大きなバッチほど効率が上がる。さらに文脈長が伸びるとKVキャッシュがGPUメモリを消費し、同居実行では全演算子の最大バッチが縮む。既存の演算子分離方式は注意機構とフィードフォワード網などの境界を固定するため、機器や負荷に応じた段間均衡を作れず、混合注意モデルの層ごとの差にも弱い。",
-  "novelty":"理論解析、配置計画、実行系を統合し、固定されたモジュール境界ではなく一般の連続演算子分割を探索する。最小反復演算パターンを分割ブロックとして扱い、同じ高水準構造を持つ層で判断を再利用することで、混合注意モデルでも探索量を抑えながら演算子境界、GPU種類、並列方式、複製数、バッチ量、マイクロバッチ量を共同決定する。",
-  "method_overview":"理論モデルはGPUの単位時間価格、メモリ帯域、演算性能からメモリ転送一単位当たり費用と演算一単位当たり費用を定義する。同種GPU分離ではKVキャッシュ転送費と有効パラメータの演算費を足し、異種GPU分離では注意機構側と行列積側に別GPUの係数を用いる。同居実行にはモデル重みとKVキャッシュが共有するメモリ容量から最大バッチを組み込み、分離が有利になる条件を導く。配置計画器はモデルの演算グラフを反復ブロックへ縮約し、ブロック内の連続演算子を段へ切り分け、各段の実測遅延、段間通信、メモリ容量、出力トークン時間制約を使って費用最小の構成を探す。実行系は得られた段をマイクロバッチのパイプラインとして動かし、計算と通信を重ねる。",
-  "system_design":"処理は三層から成る。第一に解析層が同居実行、同種GPU分離、異種GPU分離の費用条件と上界を与え、探索すべき領域を説明する。第二に計画層が分割ブロックを単位として演算子境界、GPU群、並列方式、バッチ構成を探索し、メモリと遅延の制約を満たす配置を合成する。第三にvLLMを基礎とする実行層が合成された任意の段構成を実際の異種GPU群で動かし、マイクロバッチ化と通信重畳、低負荷な一括呼び出しで段間の空きを減らす。",
-  "components":[
-   {"name":"費用解析モデル","description":"同居実行、同種GPUでの演算子分離、異種GPUでの演算子分離を同じトークン当たり費用で比較する。KVキャッシュ量、モデル重み、メモリ帯域、演算性能、GPU価格を明示的に含め、どの文脈長と機器特性で分離の利得が現れるか、利得がどこで頭打ちになるかを数式で示す。"},
-   {"name":"中核注意機構分離の解析","description":"中核の注意計算を一方のGPU群、射影・フィードフォワード網・専門家層を別群へ置く構成を解析する。理想費用を得るには両段の遅延が釣り合い、通信を計算で隠せる必要があることを示し、GPUメモリ容量と重み読み出し時間が均衡可能性を制約することを明らかにする。"},
-   {"name":"分割ブロック","description":"一様な変換器では一層、混合注意モデルでは完全注意・窓付き注意・再帰型演算などが一巡する周期を最小反復ブロックとして表現する。ブロック内で得た分割ひな型を同じ構造の全ブロックへ再利用し、全層を独立に切る場合の組合せ爆発を避ける。"},
-   {"name":"規則性利用型計画器","description":"ブロック内の連続した演算子境界に加え、GPU種類、テンソル並列や専門家並列、複製数、常駐バッチ量、マイクロバッチ量を共同探索する。各候補は実測した演算遅延と通信遅延、メモリ容量、出力トークン時間のサービス水準目標で評価され、実行可能な中から費用を最小化する。"},
-   {"name":"段階実行系","description":"vLLMを基礎として、計画器が選んだ任意の演算子段を複数GPU群へ配置する。マイクロバッチを段間で流して計算と通信を重ね、各デコード反復の計算・通信列を一度のネイティブ呼び出しで投入することで、細かな段分割で増えやすいホスト制御と通信の負担を抑える。"}
-  ],
-  "theoretical_findings":["同種GPU分離はKVキャッシュ増大によって同居実行のバッチ量が行列積を十分効率化できる閾値を下回った後に有利になり、利得は文脈長とともに増えるがモデル重みが占めるメモリ比で上限が決まる。","異種GPU分離は、メモリ転送一単位当たり費用に優れるGPUと演算一単位当たり費用に優れるGPUが異なる場合に意味があり、注意機構と行列積をそれぞれ適したGPUへ置く。","中核注意機構分離の理想利得には段間遅延の均衡と通信の隠蔽が必要で、混合注意モデルでは層ごとの演算差が固定二段分割に気泡を生む。"]
- },
- "reservation":{"claim_id":"claim-2fcf28b8aab221ce876e00e2","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-915ebeff2156b2e8003c2c34",
+  "job_id": "job-research-3bb1145babb1a6fc",
+  "data": {
+    "problem": "既存LLM servingはbatching・scheduling・parallelismを調整してもGPU powerを固定のprovisioning constraintとして扱う。実際にはpowerとthroughput/efficiencyの関係は非線形で、MoEではexpert routing/all-to-allが支配するとpowerを上げても有用computeが増えず、静的capはenergy浪費またはQoS違反を生む。",
+    "novelty": "GPU power capをfirst-class runtime knobへ昇格し、runtime可変なbatch sizeと共同制御する。offline power-performance modelによるcandidate rankingとonline PID feedbackを組み合わせ、外部power budgetやthroughput targetの変化にsub-secondで追従する。",
+    "method_overview": "offlineでpower cap 100–400W域、batch 1–64、TP/EP/DPをsweepし、NVML/IPMI power、tokens/s、latencyを収集する。random forestでconfigurationからthroughputとpowerを予測し、held-outでthroughput MAPE 6.8%、power MAPE 4.5%を得る。runtimeは500msごとにtelemetryを取得し、throughput target以上と予測される候補集合からT/P最大の構成を選択し、該当候補がなければ最大throughput構成へfallbackする。実測誤差が5%超で持続する場合などにPID feedbackで補正し、NVML power capとvLLM batch sizeをactuateする。",
+    "components": [
+      {
+        "name": "Telemetry layer",
+        "description": "NVMLとruntime instrumentationからGPU power、tokens/s、GPU utilization等を500ms周期で取得。"
+      },
+      {
+        "name": "Offline predictor",
+        "description": "random forestでcap、batch、parallelismからthroughput/powerを推定し、online探索を避ける。"
+      },
+      {
+        "name": "Model-guided controller",
+        "description": "throughput constraintを満たす候補中でtokens/J最大を選択し、候補なしならthroughput最大を選ぶ。"
+      },
+      {
+        "name": "PID feedback",
+        "description": "prediction errorやworkload variationを実測throughput errorで補正し、5%超の持続偏差や外部constraint変化時に再構成。"
+      },
+      {
+        "name": "Actuation layer",
+        "description": "NVMLでpower cap、vLLM schedulerでbatch/request schedulingをruntime変更し、model/APIは変更しない。"
+      }
+    ],
+    "empirical_insights": [
+      "power capはmodel依存で概ね150–200W以降にdiminishing returns。communication-bound Qwen-MoE/OLMoEでは高powerでtokens/Jが低下し得る。",
+      "batch 1→64で全modelのefficiencyが1.7–2.1倍。",
+      "TP/EPの最適点はcompute/communication比依存で、MoEの高parallelismでは通信増加がpower利得を打ち消す。"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-915ebeff2156b2e8003c2c34",
+    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
