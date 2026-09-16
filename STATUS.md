@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 19:52:27 JST**
+> 自動生成: **2026-09-16 19:53:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **30** |
+| 収録候補論文 | **29** |
 | 未claim Research job | **28** |
 | 直近24hの検証済みResearch収録 | **66** |
 | 最終検証済みResearch収録 | **09-16 18:51:24 JST（1時間1分前）** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **30** |
+| canonical_id確認済みの一意な候補論文 | **29** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **30** |
+| 非終端Research job合計 | **29** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **38** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **24** | **0** | **24** | **0** | **0** | **32** |
-| 合計 | **38** | **32** | **4** | **28** | **2** | **0** | **32** |
+| 合計 | **38** | **32** | **4** | **28** | **1** | **0** | **32** |
 
 - 最新Discovery runの耐久探索round: **24件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -194,10 +194,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.24971` — PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 19:52:18 JST** / heartbeat: **—** / lease expiry: **09-16 21:22:18 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9ef38f28c45d6f3a.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`
@@ -220,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **30** |
+| ready | **29** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **408** |
-| └ Research | **239** |
+| 成功result未照合のimmutable submission | **409** |
+| └ Research | **240** |
 | └ Audit | **2** |
 | └ Discovery | **167** |
 
