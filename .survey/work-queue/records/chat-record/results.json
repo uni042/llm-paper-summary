@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-7ec1d1e19aea8ef2d1f6362f",
   "job_id": "job-research-5bed14c683ee7a49",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7ec1d1e19aea8ef2d1f6362f",
-    "worker_id": "scheduled-chat-normal-20260917T061300JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "FloEは、専門家内部の文脈疎性と射影ごとの量子化耐性を組み合わせることで、Mixtral-8x7Bの専門家転送ペイロードを9.3分の1へ圧縮し、従来は全重み常駐が難しい11GB VRAM級GPUでも推論可能にする。重要なのは容量削減だけでなく、二段予測による先読みで縮小後のPCIe転送を現在層計算へ重ね、低バッチの壁時計遅延を改善した点である。ただし圧縮は近似であり、品質を完全保持する方式ではない。",
+    "key_results": [
+      {"metric": "専門家パラメータ圧縮率", "value": "9.3x", "baseline": "Mixtral-8x7Bの非圧縮専門家パラメータ", "condition": "FloEの射影別ハイブリッド圧縮", "interpretation": "転送対象の専門家重みを約9分の1へ縮め、PCIe帯域律速を直接緩和する。"},
+      {"metric": "最小GPUメモリ", "value": "11GB VRAMでMixtral-8x7Bを実行", "baseline": "FP16全体で約94GB", "condition": "CPU専門家オフロードとFloE圧縮を併用", "interpretation": "消費者向けGPU単体でも大規模MoEを配置できることを示し、メモリ使用量は最大8.5x削減と報告される。"},
+      {"metric": "推論高速化", "value": "DeepSpeed-MII比48.7x、論文本文の主要オフロード比較ではRTX 3090上で2.6xの高速化も報告", "baseline": "DeepSpeed-MIIおよび既存の専門家オフロード経路", "condition": "単一GeForce RTX 3090、Mixtral-8x7B、低メモリ推論", "interpretation": "単純なCPU退避で生じる待ち時間を、圧縮と先読みの双方で削減した結果。比較対象ごとに倍率の意味が異なるため一つの倍率として混同しない。"},
+      {"metric": "品質低下", "value": "平均4.4%〜7.6%低下", "baseline": "非圧縮の元モデル", "condition": "FloEの疎化・INT2量子化を適用した下流課題平均", "interpretation": "高速化は無損失ではなく、許容する品質低下と疎性率・転送量の交換条件を伴う。"},
+      {"metric": "down入力疎化感度", "value": "50%疎化でWikiText-2 perplexity増加約0.5%", "baseline": "疎化なし", "condition": "Mixtral-8x7Bの専門家内部活性を大きさ閾値で疎化", "interpretation": "専門家内部にかなりの冗長性があり、行列ごとに圧縮戦略を分ける設計根拠を支持する。"}
+    ],
+    "negative_results": "gate射影側の活性は疎化感度が高く、同じ疎性率を三射影へ一律適用すると品質が悪化する。upを含む全行列の超低ビット量子化も品質劣化が大きいため採用されない。またFloE自体も平均4.4〜7.6%の下流性能低下を残し、予測誤りや入力分布変化によって必要重みの追加転送が発生し得る。",
+    "interpretation": "高速化幅が大きいのは、元の専門家オフロードがGPU計算ではなくPCIe転送に支配される条件だからである。専門家ペイロードを9.3分の1へ縮めるだけでも待ち時間は減るが、ルータ確定後に読み始める限り直列待ちは残る。FloEは次層専門家と内部チャネルを先に予測して転送開始を前倒しするため、圧縮率と重畳時間の二つが相乗する。逆にPCIeが十分速い、高バッチで転送を自然に隠せる、または品質低下を許容できない条件では相対利得は小さくなる。",
+    "quality_impact": "近似方式。元モデルと完全に同じ出力分布を保証せず、文脈疎化とINT2量子化により平均4.4〜7.6%の性能低下を報告する。品質制約が厳しい用途では疎性率や量子化設定を緩める必要があり、その分PCIe転送量と遅延が増える。"
+  },
+  "reservation": {"claim_id": "claim-7ec1d1e19aea8ef2d1f6362f", "worker_id": "scheduled-chat-normal-20260917T061300JST", "worker_kind": "scheduled_chat"}
 }
