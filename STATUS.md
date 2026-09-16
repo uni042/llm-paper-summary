@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 22:51:36 JST**
+> 自動生成: **2026-09-16 22:51:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **8** | **4** | **4** | **1** | **1** | — |
+| Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **14** | **0** | **14** | **0** | **0** | **15** |
-| 合計 | **21** | **22** | **4** | **18** | **1** | **1** | **15** |
+| 合計 | **21** | **22** | **4** | **18** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -194,9 +194,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2601.00397` — Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving / worker `scheduled-chat-llm-survey-turn5-20260916T223150JST`
-  - claim: **09-16 22:49:08 JST** / heartbeat: **09-16 22:49:08 JST** / lease expiry: **09-17 00:19:08 JST**
+  - claim: **09-16 22:51:44 JST** / heartbeat: **—** / lease expiry: **09-17 00:21:44 JST**
   - evidence: `.survey/work-queue/claims/job-research-82da92628b1e61c3.json`
 
 #### Audit

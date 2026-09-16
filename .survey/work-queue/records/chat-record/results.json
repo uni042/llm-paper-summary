@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4f19f77b276285b606c89410",
+  "attempt_id": "attempt-042df6f12925382ea12e27ce",
   "job_id": "job-research-82da92628b1e61c3",
   "data": {
     "overview": "RevatiはvLLMとSGLang、Llama-8B/Qwen3-30B-A3B/Llama-70Bで実GPUのTTFT/TPOT分布を追従し、medianおよびtailを含む予測誤差を5%未満に保つ。実GPU実行に対する評価高速化は概ねvLLM 5〜17倍、SGLang 6〜12倍で、GPU計算時間が長い大モデルほど利益が大きい。固定batch durationでは40msで27倍、0.5〜8 QPSでも10倍超を維持する。",
@@ -41,7 +41,7 @@
     "quality_impact": "生成品質を改善・劣化させる方式ではない。性能評価ではEOS依存を避けるため所定token数を生成する一般的な設定を前提とし、GPU tensor値を必要としないcontrol flowを対象にする。"
   },
   "reservation": {
-    "claim_id": "claim-4f19f77b276285b606c89410",
+    "claim_id": "claim-042df6f12925382ea12e27ce",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
     "worker_kind": "scheduled_chat"
   }
