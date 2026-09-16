@@ -1,69 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e3290dc33452ec879629239c",
-  "job_id": "job-research-32ece608ca43dae7",
+  "schema_version": 1, "transport_version": 10, "slot": "results", "attempt_id": "attempt-e3290dc33452ec879629239c", "job_id": "job-research-32ece608ca43dae7",
   "data": {
-    "overview": "DA-MoEはstatic token-count bucketだけでkernelを決めるNoDAを、routing distributionを追加信号にすることで一貫して改善する。HumanEval-Xでfused-MoE latencyのgeomean speedupはDeepSeek-V3 1.16x、Kimi K2 1.29x、peakは1.40x/1.56x。router selection、routing metadata、DA-MoE dispatchまで含むend-to-end MoE-layerでも1.15x/1.26x、peak 1.37x/1.51xを維持する。Dirichlet synthetic distributionはreal routingとのgeomean cosine similarity 0.97で、Beta 0.92、exponential 0.94より高い。",
+    "overview": "DA-MoEは総トークン数区間だけでカーネルを固定するNoDAに対し、実ルーティング分布を追加信号として用いることで一貫して遅延を短縮する。HumanEval-Xでは融合MoE遅延の幾何平均高速化がDeepSeek-V3で1.16倍、Kimi K2で1.29倍、最大はそれぞれ1.40倍と1.56倍である。ルータ選択、ルーティング情報生成、DA-MoE切替まで含むMoE層全体でも幾何平均1.15倍と1.26倍を維持する。合成Dirichlet分布は実ルーティングとのコサイン類似度が幾何平均0.97で、Beta分布0.92、指数分布0.94より高い。",
     "key_results": [
-      {
-        "metric": "fused-MoE latency speedup",
-        "value": "DeepSeek-V3 geomean 1.16x、peak 1.40x",
-        "baseline": "NoDA",
-        "condition": "B200、EP=4、HumanEval-X、token count 32–512",
-        "interpretation": "static bucket kernelのrouting mismatchをlive distribution matchingで削減。"
-      },
-      {
-        "metric": "fused-MoE latency speedup",
-        "value": "Kimi K2 geomean 1.29x、peak 1.56x（TC=128）",
-        "baseline": "NoDA",
-        "condition": "B200、EP=6、HumanEval-X",
-        "interpretation": "384 expertでskew影響が強く、dynamic dispatch余地が大きい。"
-      },
-      {
-        "metric": "end-to-end MoE-layer speedup",
-        "value": "DeepSeek-V3 1.15x、Kimi K2 1.26x geomean；peak 1.37x/1.51x",
-        "baseline": "NoDA",
-        "condition": "router・metadata・約14µs DA-MoE dispatch込み",
-        "interpretation": "dynamic selection overheadを含めてもkernel利得の大半が残る。"
-      },
-      {
-        "metric": "Oracle gap",
-        "value": "DeepSeek-V3 TC32–256で1.1%以内、Kimi K2全TCで4%以内",
-        "baseline": "per-invocation Oracle",
-        "condition": "exemplar matching",
-        "interpretation": "多くの条件でnear-optimal kernelを選択できる。"
-      },
-      {
-        "metric": "dispatch overhead",
-        "value": "CPU branch 15.0µs、conditional CUDA Graph branch 8.2µs、DA-MoE全selection path約14µs",
-        "baseline": "fixed graph 4.1µs",
-        "condition": "data-dependent dispatch microbenchmark",
-        "interpretation": "device-side control flowがCPU同期より低cost。"
-      },
-      {
-        "metric": "distribution model similarity",
-        "value": "Dirichlet 0.97、exponential 0.94、Beta 0.92 geomean cosine similarity",
-        "baseline": "real DeepSeek-V3 MMLU routing",
-        "condition": "同じtarget eff_expへfit",
-        "interpretation": "1パラメータDirichlet sweepでoffline tuning用shapeを十分近似。"
-      },
-      {
-        "metric": "強skew時speedup",
-        "value": "imbalance factor 100でDeepSeek-V3 geomean 1.66x、TC128で2.05x",
-        "baseline": "NoDA",
-        "condition": "EP=4 synthetic imbalance",
-        "interpretation": "routing skewが強いほどstatic kernel mismatchが拡大しDA-MoEの価値が増える。"
-      }
+      {"metric": "融合MoE遅延の高速化", "value": "DeepSeek-V3 幾何平均1.16倍、最大1.40倍", "baseline": "NoDA", "condition": "B200、エキスパート並列度4、HumanEval-X、総トークン数32〜512", "interpretation": "静的カーネルと実ルーティングの不一致を、現在分布の照合で減らす。"},
+      {"metric": "融合MoE遅延の高速化", "value": "Kimi K2 幾何平均1.29倍、最大1.56倍", "baseline": "NoDA", "condition": "B200、エキスパート並列度6、HumanEval-X", "interpretation": "384エキスパート構成では偏りによる行列形状差が大きく、動的切替の余地が大きい。"},
+      {"metric": "MoE層全体の高速化", "value": "DeepSeek-V3 1.15倍、Kimi K2 1.26倍の幾何平均", "baseline": "NoDA", "condition": "ルータ、情報生成、約14マイクロ秒のDA-MoE切替を含む", "interpretation": "動的選択の追加費用を含めても融合カーネルの短縮効果の大半が残る。"},
+      {"metric": "Oracleとの差", "value": "DeepSeek-V3の32〜256で1.1%以内、Kimi K2の全評価総トークン数で4%以内", "baseline": "各実行で最速候補を選ぶOracle", "condition": "代表分布の最近傍照合", "interpretation": "多くの条件で実行ごとの最適カーネルに近い候補を選べる。"},
+      {"metric": "切替オーバーヘッド", "value": "CPU分岐15.0マイクロ秒、条件付きCUDAグラフ分岐8.2マイクロ秒、DA-MoE全選択経路約14マイクロ秒", "baseline": "固定グラフ4.1マイクロ秒", "condition": "データ依存切替の微小評価", "interpretation": "GPU側制御によりCPU同期を使う分岐より追加費用を抑える。"},
+      {"metric": "分布モデル類似度", "value": "Dirichlet 0.97、指数分布0.94、Beta分布0.92の幾何平均コサイン類似度", "baseline": "DeepSeek-V3の実MMLUルーティング", "condition": "同じ目標実効エキスパート数へ適合", "interpretation": "単一パラメータのDirichlet掃引で事前調整用の偏り形状を比較的よく近似する。"},
+      {"metric": "強い偏りでの高速化", "value": "不均衡係数100でDeepSeek-V3幾何平均1.66倍、総トークン数128で2.05倍", "baseline": "NoDA", "condition": "エキスパート並列度4の合成不均衡", "interpretation": "偏りが強いほど静的カーネルとの不一致が拡大し、DA-MoEの価値が増える。"}
     ],
-    "negative_results": "DeepSeek-V3のtoken count 512ではDA-MoE 120.6%対oracleで、NoDA 121.5%とほぼ差がなく、exemplar/kernel coverage不足が残る。device-side selectionは無料ではなく約14µsなのでsmall MoEでは利得が消え得る。HIP GraphsにはCUDA conditional SWITCH相当がなくAMDへの直接移植ではCPU同期問題が再発する。",
-    "interpretation": "MoE kernel性能はbatch sizeだけの関数ではなくrouting histogramの形にも依存する。expert placementやload balancingがrouting skewを変えると最適kernelも変わるため、上位のrouting/placementと下位kernel dispatchを分離して静的に最適化するより、runtime signalで接続する方が有効である。",
-    "quality_impact": "routerのexpert選択やmodel計算意味論を変更せずkernel実装だけを切り替えるため、報告speedupに精度低下は伴わない。"
+    "negative_results": "DeepSeek-V3の総トークン数512ではDA-MoEの遅延がOracle比120.6%で、NoDAの121.5%とほぼ差がなく、代表分布またはカーネル候補の被覆不足が残る。GPU側選択も無料ではなく約14マイクロ秒を要するため、小規模MoEでは利得を相殺し得る。HIP GraphにはCUDAの条件付きSWITCH相当がなく、AMDへ直接移植するとCPU同期問題が再発する。",
+    "interpretation": "MoEカーネル性能はバッチ規模だけでなく、ルーティングヒストグラムの形にも依存する。エキスパート配置や負荷分散が偏りを変えると最適カーネルも変わるため、上位のルーティング・配置と下位のカーネル切替を完全に分離して静的最適化するより、実行時信号で接続する方が有効である。",
+    "quality_impact": "ルータのエキスパート選択やモデル計算の意味を変更せず、同じ演算を実装するカーネルだけを切り替えるため、報告された高速化に精度低下は伴わない。"
   },
-  "reservation": {
-    "claim_id": "claim-e3290dc33452ec879629239c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e3290dc33452ec879629239c", "worker_id": "scheduled-chat-discovery-specialist-00", "worker_kind": "scheduled_chat"}
 }
