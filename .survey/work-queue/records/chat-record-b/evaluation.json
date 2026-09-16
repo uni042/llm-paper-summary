@@ -1,1 +1,53 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b25ffeca812a1fcdee74f1e1","job_id":"job-research-ad3541d28015a662","data":{"evaluation_summary":"MS-COCO画像・文ペアの照合課題で、CLIP ViT-B/32とMobileCLIP2-S0の512次元特徴を融合し、全方式で64次元潜在表現へ圧縮する。非圧縮、PCA、BlockPCA、LDA、AE、VAEと、EMMIのラベル不要型・タスク認識型を比較する。精度とサーバ推論はQuadro RTX 6000、エッジ側融合・圧縮はx86_64単一CPUスレッドで測定する。","scope":"画像とテキストの二モダリティを用いた画像・文照合。エッジ・サーバ間の帯域を0.1〜100Mbpsとして通信遅延を算出する。","hardware":["NVIDIA Quadro RTX 6000 24GB","x86_64 CPU単一スレッド"],"software":["CLIP ViT-B/32","MobileCLIP2-S0","LLaVA-1.5-7B","二層MLP射影器"],"models":["CLIP ViT-B/32 87M image encoder","MobileCLIP2-S0 11.4M","LLaVA-1.5-7B 6.6B backbone"],"datasets":["MS-COCO image-caption pairs"],"workload":"72K学習、5K検証、5K試験の画像・文照合。融合2048次元表現を64次元へ圧縮し、8個のソフトプロンプトとしてLLaVAへ接続する。","baselines":["非圧縮転送","PCA","BlockPCA","LDA","AE","VAE"],"metrics":["分類精度","圧縮率","通信バイト数","端末側処理時間","推定総推論遅延"],"methodology":"圧縮器を先に学習して固定し、生成した潜在表現でサーバ射影・分類頭を学習する。符号器とLLaVA本体は固定する。端末処理時間は30回のウォームアップ後200回測定する。","predictor_accuracy":"通信時間は送信サイズと帯域から算出し、端末側処理とサーバ推論は測定値を使う。","control_knobs":"圧縮方式、教師ラベル利用有無、符号器、潜在次元64、リンク帯域。"},"reservation":{"claim_id":"claim-b25ffeca812a1fcdee74f1e1","worker_id":"scheduled-chat-paper-20260916T175945JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-8de324791197729e3bdc6b95",
+  "job_id": "job-research-6eb709dc3f5cf15a",
+  "data": {
+    "evaluation_summary": "4台のAWS p4de.24xlarge、合計32基のA100 80GiB、400Gbps網でvLLMベース実装を評価する。Azure LLM推論追跡の到着時刻と長さ分布を使い、上位5%の長入力を100K〜500Kへ置換する。Mistral-v0.3 7B、Phi-3 14B、Yi 34B、Llama-3.1 70Bを用い、先着順vLLM、予約型Llumnix、優先度型Past-Futureと比較する。",
+    "scope": "短入力が多数、100K〜500Kの長入力が少数混在するクラスタ推論。",
+    "hardware": [
+      "AWS p4de.24xlarge ×4",
+      "NVIDIA A100 80GiB ×32",
+      "400Gbpsネットワーク"
+    ],
+    "software": [
+      "vLLM拡張",
+      "FlashAttention-2 Triton版",
+      "Ray",
+      "PyTorch distributed",
+      "NCCL"
+    ],
+    "models": [
+      "Mistral-v0.3 7B",
+      "Phi-3 14B",
+      "Yi 34B",
+      "Llama-3.1 70B"
+    ],
+    "datasets": [
+      "Microsoft Azure LLM inference trace"
+    ],
+    "workload": "追跡データの到着時刻を維持し、入力長上位5%を100K〜500Kから抽出した長入力へ置換。出力長分布は元追跡を維持する。",
+    "baselines": [
+      "FIFO vLLM",
+      "Reservation Llumnix",
+      "Priority Past-Future"
+    ],
+    "metrics": [
+      "短入力99百分位待ち時間",
+      "短入力処理量",
+      "長入力平均完了時間",
+      "横取り回数",
+      "GPU遊休率"
+    ],
+    "methodology": "各方式で同一追跡負荷を実行し、短入力の待ち時間・処理量と長入力の完了時間を比較する。長入力は必要に応じリング注意系列並列で複数モデル複製へ分割する。",
+    "predictor_accuracy": "予測器精度を主要評価指標とはせず、実装を実GPUクラスタ上で測定する。",
+    "control_knobs": "長短入力閾値、短入力復号専用複製数、系列並列方式、配置、横取り可否。"
+  },
+  "reservation": {
+    "claim_id": "claim-8de324791197729e3bdc6b95",
+    "worker_id": "scheduled-chat-paper-20260916T175945JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

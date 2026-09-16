@@ -1,1 +1,54 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b25ffeca812a1fcdee74f1e1","job_id":"job-research-ad3541d28015a662","data":{"canonical_id":"arXiv:2609.11058","arxiv_id":"2609.11058","doi":"10.48550/arXiv.2609.11058","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},"title":"EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression","summary":"EMMIはエッジ端末からサーバへ生センサーデータやモデル中間活性を送る代わりに、各モダリティを端末側で符号化し、モダリティ間相互作用を融合した後で学習圧縮し、固定長の潜在表現だけを送信する協調型マルチモーダルLLM推論方式である。サーバ側では表現を復元してLLM埋め込み空間へ射影し、高容量LLaVAで推論する。MS-COCO画像・文対で2048次元の融合表現を64次元へ圧縮し、通信量を8192Bから256Bへ32分の1に削減する。タスク認識型圧縮は非圧縮比0.16ポイント以内の精度を維持し、0.1Mbps条件では推定総遅延を約903msから269msへ3.4倍短縮する。","list_summary":"端末側でモダリティ別特徴を先に融合してから64次元へ学習圧縮し、固定長潜在表現だけをサーバへ送ることで通信量を32分の1、帯域制約下の推定総遅延を最大3.4倍改善する。","authors":["Motahare Mounesan","Irfan Khan"],"published":"2026-09-10","publication":"arXiv:2609.11058v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"serving-disaggregation","topics":["エッジ・サーバ協調推論","マルチモーダルLLM","表現圧縮","通信削減"],"importance":"計算配置だけでなくエッジ・サーバ境界を通過する表現そのものを融合済み固定長潜在表現へ変更し、帯域律速を直接削減する。","hardware_evaluation":"精度・サーバ遅延はNVIDIA Quadro RTX 6000 24GB、エッジ側処理はx86_64単一CPUスレッドで測定。","quality_effect":"タスク認識型圧縮はCLIPで98.08%、MobileCLIPで98.32%を達成し、非圧縮との差を0.16ポイント以内に維持する。","source":"https://arxiv.org/abs/2609.11058","sources":["https://arxiv.org/abs/2609.11058","https://arxiv.org/html/2609.11058"],"code":null,"implementation":"研究用実装。CLIP ViT-B/32またはMobileCLIP2-S0、学習圧縮器、凍結LLaVA-1.5-7B、二層射影MLPと二値分類頭を用いる。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節を確認。","references_total":0},"reservation":{"claim_id":"claim-b25ffeca812a1fcdee74f1e1","worker_id":"scheduled-chat-paper-20260916T175945JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-8de324791197729e3bdc6b95",
+  "job_id": "job-research-6eb709dc3f5cf15a",
+  "data": {
+    "canonical_id": "arXiv:2409.15104",
+    "arxiv_id": "2409.15104",
+    "doi": "10.48550/arXiv.2409.15104",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference",
+    "summary": "最新版v2では初版CSPSから題名と主題が大幅に更新され、短入力が多数・長入力が少数という実運用の長尾分布を対象に、長入力による先頭待ち阻害と長入力の飢餓を同時に抑えるクラスタスケジューラPecSchedを提案する。短入力の事前計算だけが長入力事前計算を横取りし、短入力の復号は専用資源へ分離する一方、長入力復号と短入力事前計算は計算・メモリ特性の違いを利用して同居させる。さらにノード間リング注意とノード内Megatron/Ulysses型系列並列を組み合わせ、長入力事前計算を短縮する。Azure追跡データを基にした評価で短入力の99百分位待ち時間を最大92%削減し、処理量を最大595%改善する。",
+    "list_summary": "長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。",
+    "authors": [
+      "Zeyu Zhang",
+      "Haiying Shen"
+    ],
+    "published": "2025-06-08",
+    "publication": "arXiv:2409.15104v2",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "serving-scheduling",
+    "topics": [
+      "クラスタスケジューリング",
+      "長文脈推論",
+      "横取り",
+      "系列並列"
+    ],
+    "importance": "短入力と100K〜500K級長入力が混在するクラスタで、長入力の先頭待ち阻害と優先度方式による飢餓を同時に扱う。",
+    "hardware_evaluation": "AWS p4de.24xlargeを4台、各8基のNVIDIA A100 80GiB、400Gbpsネットワークで評価。",
+    "quality_effect": "モデル近似を導入せずスケジューリングと並列実行を変更するため生成品質を直接変更しない。",
+    "source": "https://arxiv.org/abs/2409.15104",
+    "sources": [
+      "https://arxiv.org/abs/2409.15104",
+      "https://arxiv.org/html/2409.15104"
+    ],
+    "code": null,
+    "implementation": "vLLMを拡張し、DistributedAttention、Ray worker、PyTorch distributed/NCCL、FlashAttention-2を用いて実装。論文はコード公開済みと記載する。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML本文と参考文献節を確認。",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-8de324791197729e3bdc6b95",
+    "worker_id": "scheduled-chat-paper-20260916T175945JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
