@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T00:37:33+00:00",
-  "last_run_key": "2026-09-16T08:00:00+09:00",
-  "last_round": "specialist-gpu-runtime-11",
+  "updated_at": "2026-09-16T04:04:31+00:00",
+  "last_run_key": "2026-09-16T13:00:00+09:00",
+  "last_round": "specialist-agent-multiturn-5",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -5263,6 +5263,83 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "run deadline handoff後の次回はforward citationと最近改訂論文、特に2026年9月のserving/runtime新着を優先する",
       "source_submission": "work-queue/submissions/20260916T0850JST-discovery-specialist-gpu-runtime-11.json"
+    },
+    {
+      "run_key": "2026-09-16T13:00:00+09:00",
+      "round": "specialist-serving-kv-1",
+      "axis": "新着・KV cache・operator disaggregation",
+      "query_summary": "2026年9月の新着LLM servingとKV cache scheduling/placementを探索し、GitHub default-branch code searchでcanonical ID/titleを再照合。未検出の強い5候補を投入。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SSD/NVMe direct offloadとMoE expert placement/cacheの隣接系統を探索する",
+      "source_submission": "work-queue/submissions/20260916T1305JST-discovery-specialist-serving-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-16T13:00:00+09:00",
+      "round": "specialist-storage-moe-2",
+      "axis": "SSD/NVMe KV offload・MoE expert cache/placement",
+      "query_summary": "SSD/NVMe direct KV offloadとMoE expert cache/placementを独立軸として探索。GitHub code searchでcanonical ID/titleをwrite前に再照合し、未検出5件を投入。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "forward/backward citationとCXL・remote memory・networking系の階層メモリを探索する",
+      "source_submission": "work-queue/submissions/20260916T1312JST-discovery-specialist-storage-moe-2.json"
+    },
+    {
+      "run_key": "2026-09-16T13:00:00+09:00",
+      "round": "specialist-cxl-remote-3",
+      "axis": "CXL・remote memory・SmartNIC・object storage",
+      "query_summary": "前roundのNVMe/MoEから独立し、CXL共有メモリ、remote tier、SmartNIC、object storageを探索。write前GitHub照合で未検出5件を投入。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "推論runtime/kernel・speculative decoding・quantization executionの新着を探索する",
+      "source_submission": "work-queue/submissions/20260916T1318JST-discovery-specialist-cxl-remote-3.json"
+    },
+    {
+      "run_key": "2026-09-16T13:00:00+09:00",
+      "round": "specialist-runtime-4",
+      "axis": "GPU runtime・speculative serving・quantization・sparse attention",
+      "query_summary": "memory/storage系から独立し、runtime/kernel、speculative serving、low-bit execution、sparse attentionの新着を探索。write前GitHub照合で未検出5件を投入。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "重要既収録論文のforward citationとOS/DBMS/HPC隣接分野へ移る",
+      "source_submission": "work-queue/submissions/20260916T1324JST-discovery-specialist-runtime-4.json"
+    },
+    {
+      "run_key": "2026-09-16T13:00:00+09:00",
+      "round": "specialist-agent-multiturn-5",
+      "axis": "agentic・multi-turn servingとKV residency",
+      "query_summary": "agentic/multi-turn workloadへ軸を移し、cache hit理論、simulator、workflow serving、non-uniform KV systemを探索。既収録SpecBoxは重複として除外し、未検出4件を投入。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.23933"
+      ],
+      "next_axis_hint": "Actions materialization後にinventoryを再評価し、50超ならoverflow researchへ切替。未超ならforward citation/HPC隣接探索を続ける。",
+      "source_submission": "work-queue/submissions/20260916T1330JST-discovery-specialist-agent-multiturn-5.json"
     }
   ],
   "axes": {
@@ -8325,6 +8402,56 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "run deadline handoff後の次回はforward citationと最近改訂論文、特に2026年9月のserving/runtime新着を優先する"
+    },
+    "新着・KV cache・operator disaggregation": {
+      "last_run_key": "2026-09-16T13:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SSD/NVMe direct offloadとMoE expert placement/cacheの隣接系統を探索する"
+    },
+    "SSD/NVMe KV offload・MoE expert cache/placement": {
+      "last_run_key": "2026-09-16T13:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "forward/backward citationとCXL・remote memory・networking系の階層メモリを探索する"
+    },
+    "CXL・remote memory・SmartNIC・object storage": {
+      "last_run_key": "2026-09-16T13:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "推論runtime/kernel・speculative decoding・quantization executionの新着を探索する"
+    },
+    "GPU runtime・speculative serving・quantization・sparse attention": {
+      "last_run_key": "2026-09-16T13:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "重要既収録論文のforward citationとOS/DBMS/HPC隣接分野へ移る"
+    },
+    "agentic・multi-turn servingとKV residency": {
+      "last_run_key": "2026-09-16T13:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.2,
+      "next_axis_hint": "Actions materialization後にinventoryを再評価し、50超ならoverflow researchへ切替。未超ならforward citation/HPC隣接探索を続ける。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
