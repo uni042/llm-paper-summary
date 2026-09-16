@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-90d91f6dcd5420dfbc107c3b",
-  "job_id": "job-research-0d64167980707ffd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-90d91f6dcd5420dfbc107c3b",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-90d91f6dcd5420dfbc107c3b","job_id":"job-research-0d64167980707ffd","data":{"evaluation_summary":"五つの混合専門家モデルと一つの密モデルを対象に、重みを補助記憶へ退避する単一装置、高帯域メモリだけで重み容量を満たす複数装置、従来の高帯域メモリ＋高帯域フラッシュ方式と比較する。長文脈と複数バッチサイズを含め、復号一トークン当たり時間、実効フラッシュ帯域、エネルギー、必要画像処理装置数、フラッシュ更新寿命、追加面積を評価する。","scope":"単一装置・小規模ノードで容量が律速になる巨大モデル推論と、高帯域フラッシュを重み容量層として使うメモリ基盤。","hardware":["高帯域メモリ搭載画像処理装置","高帯域フラッシュ Gen-1/Gen-2想定構成"],"software":["既存推論カーネルを変更しない透過的な重み読み出し経路"],"models":["DeepSeek-V3","DeepSeek-V4-Pro","Qwen3-235B-A22B","Llama-4 Maverick","Kimi K2","Llama-3.1-405B"],"datasets":["モデルごとの自己回帰復号負荷"],"workload":"百二十八キロトークン級文脈を含む復号と、バッチサイズ一・四・十六・六十四などの容量制約下推論。","baselines":["高帯域メモリ＋補助記憶","高帯域メモリだけの複数画像処理装置","従来の高帯域メモリ＋高帯域フラッシュ方式"],"metrics":["復号処理量","一トークン時間","実効フラッシュ帯域","エネルギー","必要装置数","追加面積","更新寿命"],"methodology":"容量だけで複数装置が必要になる最小適合構成について通信、同期、メモリ、計算時間を分解し、高帯域フラッシュ導入の動機を確認する。その後、動的読み出し結合、更新隔離、簡素化変換表を含む提案構成を三種類の基準方式と比較する。","predictor_accuracy":"予測器は用いず、実際の読み出し要求列をハードウェア側で観測して次の大粒度読み出しを決める。","control_knobs":"フラッシュ読み出し単位、先読み窓、面数、更新閾値、モデル、バッチサイズ、文脈長。"},"reservation":{"claim_id":"claim-90d91f6dcd5420dfbc107c3b","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
