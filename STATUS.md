@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:06:01 JST**
+> 自動生成: **2026-09-16 15:06:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
-| 未claim Research job | **43** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-16 15:03:40 JST（2分前）** |
+| 収録候補論文 | **47** |
+| 未claim Research job | **42** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-16 15:06:06 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **49** |
+| 非終端Research job合計 | **48** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **33** | **12** | **6** | **6** | **6** | **1** | — |
+| Research | **34** | **12** | **6** | **6** | **6** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **34** | **31** | **6** | **25** | **6** | **1** | **23** |
+| 合計 | **35** | **31** | **6** | **25** | **6** | **1** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:06:06 JST** [research] `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch
+  - job: `.survey/work-queue/jobs/job-research-32ece608ca43dae7.json`
+  - result: `.survey/work-queue/results/research/attempt-e3290dc33452ec879629239c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e3290dc33452ec879629239c.json`
+  - paper: `papers/inference/06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md`
 - **09-16 15:03:40 JST** [research] `arXiv:2609.15338` — Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models
   - job: `.survey/work-queue/jobs/job-research-6ca0cd6980218f8e.json`
   - result: `.survey/work-queue/results/research/attempt-dc12dab8bc108ae5e00ae199.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c54d1dbac92b03538ef2bcdf.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c54d1dbac92b03538ef2bcdf.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.16056-multipath-transfer-engine-gpu-host-memory-bandwidth.md`
-- **09-16 14:08:55 JST** [research] `arXiv:2601.11580` — Speculative Decoding: Performance or Illusion?
-  - job: `.survey/work-queue/jobs/job-research-deb10d3b4d925a01.json`
-  - result: `.survey/work-queue/results/research/attempt-44d7d7981220efe93f540824.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-44d7d7981220efe93f540824.json`
-  - paper: `papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md`
 
 ### Audit
 
@@ -241,7 +241,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **49** |
+| ready | **48** |
 
 ### 候補の重複・識別情報欠損
 
@@ -261,7 +261,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **588** |
+| inference/training/survey配下の論文Markdown実体 | **589** |
 
 ### immutable submissionの未照合
 
@@ -269,8 +269,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **315** |
-| └ Research | **182** |
+| 成功result未照合のimmutable submission | **314** |
+| └ Research | **181** |
 | └ Discovery | **133** |
 
 ### 厳格検証が未成立のcompleted job

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:03:44.002925+00:00",
+  "updated_at": "2026-09-16T06:06:10.028533+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:03:44.002925+00:00",
+      "last_recorded_at": "2026-09-16T06:06:10.028533+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 124,
+        "research_completed": 125,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34947814135:1",
-          "recorded_at": "2026-09-15T08:36:09.633628+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34947814135",
-            "run_attempt": "1",
-            "source_sha": "a6cc598fae34b1d6498f24808b3e7487ac9b0e0f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34950297819:1",
           "recorded_at": "2026-09-15T09:06:44.959714+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35062018314",
             "run_attempt": "1",
             "source_sha": "82b51c5947569432c2da3cbc053ef9af9d005acf"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35062197728:1",
+          "recorded_at": "2026-09-16T06:06:10.028533+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35062197728",
+            "run_attempt": "1",
+            "source_sha": "38c382bdaee516dfe01382433d7ba13b7f9e2441"
           },
           "signals": [
             "research_completed"
@@ -21046,6 +21046,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.15338",
           "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-32ece608ca43dae7",
+          "type": "research",
+          "canonical_id": "arXiv:2607.23099",
+          "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
           "from": "ready",
           "to": "completed"
         }
