@@ -2,13 +2,42 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4b8bce4b45d182be8c34ac58",
-  "job_id": "job-research-08ba7261bc105f34",
+  "attempt_id": "attempt-e3290dc33452ec879629239c",
+  "job_id": "job-research-32ece608ca43dae7",
   "data": {
-    "hardware": "主評価はNVIDIA GH200 Grace Hopper 1基で、96GB HBM、480GB CPUメモリ、実測高帯域メモリ帯域3330GiB/s、CPU-GPU間帯域350GiB/s、帯域比約10%。帯域比の感度評価では80GB H100を2基NVLink接続し、一方を計算、他方を二次メモリとして用いて約12%の比率を模擬した。",
-    "software": "vLLM 0.17.0へ約800行のPython/PyTorch変更を追加。高帯域メモリとCPUメモリの配置にはLinuxのmmap・mbind、GPU可視化にはcudaHostRegisterを利用する。FlashAttention-3や閉源のcuBLASを含む既存カーネルを変更せず評価している。",
-    "methodology": "主対象はQwen3-Next-80BのMoEモデルとLlama-3.3-70Bの密モデルで、主にFP8を使用する。入力/出力長は密モデルで256/2K、512/4K、1K/8K、MoEで64/512、128/1K、256/2K。プリフィルと復号を分離する構成を前提とし、低遅延評価では最大実行可能バッチを固定して出力トークン時間を測り、高スループット評価では利用可能容量までバッチを自動拡大して毎秒トークン数を測る。比較対象は高帯域メモリのみ、vLLMの非同期先読み、ランダム帯域比例配置、Linux重み付き交互配置、比例連続配置、CUDA統合メモリ。さらに長文脈、バッチサイズ、末尾遅延、帯域比、テンソル並列2で感度を調べる。",
-    "scope": "実機での主張は主としてGH200単一GPUの復号処理に基づく。二次階層へコヒーレントなロード・ストアが可能な高帯域接続を前提とし、PCIeやCXLのように帯域比が約2%の構成では利得は小さいと論文自身が述べる。将来の帯域比最大40%の予測は解析モデルによる投影であり実機測定ではない。大バッチ密モデルや小バッチMoEでは利得が消える、または負になる境界も評価している。"
+    "hardware": "NVIDIA B200 GPUをNVLink接続。DeepSeek-V3は4 GPUでexpert parallelism EP=4、Kimi K2は6 GPUでEP=6。",
+    "software": "CUDA 13.1、FlashInfer v0.6.6上にDA-MoEを実装しvLLMへ統合。kernel候補はTRTLLM fused-MoE kernel群。",
+    "methodology": "MMLUはrouting distribution解析のみに使用し、HumanEval-Xを独立したreal serving workloadとして評価する。decodeはtemperature 0.3、64 token生成。各構成8回実行しmedianを報告。offline tuningはtoken-count 32/64/128/256/512、Dirichlet skew 1.1/1.3/1.5/1.7/2.0/2.5/4.0、各skew 10 sample。NoDAはtoken-count bucketごとにrandom input 1個で単一kernelを選ぶ通常autotuning相当、Oracleは各invocationで最速kernelを選ぶ。fused-MoE kernel latencyとrouter/metadata/dispatchを含むend-to-end MoE-layer latencyを分離測定する。",
+    "scope": "Blackwell B200上のlarge MoE低latency serving。DeepSeek-V3 256 experts top-8とKimi K2 384 experts top-8が主対象。token count 32–512を中心にrouting skew、EP degree、dispatch overheadを評価。",
+    "workloads": [
+      "DeepSeek-V3 + HumanEval-X",
+      "Kimi K2 + HumanEval-X",
+      "DeepSeek-V3 + MMLU routing trace",
+      "synthetic Dirichlet routing sweep",
+      "conditional CUDA Graph microbenchmark"
+    ],
+    "baselines": [
+      "NoDA: token-count bucketごとの静的kernel",
+      "per-invocation Oracle",
+      "Beta/exponential synthetic routing families",
+      "CPU-side branch",
+      "fixed CUDA Graph"
+    ],
+    "metrics": [
+      "fused-MoE latency",
+      "end-to-end MoE-layer latency",
+      "oracle-normalized latency",
+      "effective/physical throughput",
+      "routing-vector cosine similarity",
+      "dispatch overhead",
+      "routing skew/EP別speedup"
+    ],
+    "reproducibility": "GPU世代、CUDA、FlashInfer、vLLM統合、モデルexpert数/top-k/EP、workload、decode設定、tuning bucket/skew/sample数を本文に記載。DA-MoE固有の公開repository URLは確認できず、TRTLLM kernel内部はprecompiled binaryで一部opaqueと本文が述べる。",
+    "evaluation_notes": "DeepSeek-V3では32–256 tokenでDA-MoEがoracleの1.1%以内、Kimi K2では全token countで4%以内。一方DeepSeek-V3 512では約20% gapが残る。skewを人工的に強めるとspeedupが増え、imbalance factor 100でgeomean 1.66xとなり、routing mismatchが利得源であることを支持する。"
   },
-  "reservation": {"claim_id":"claim-4b8bce4b45d182be8c34ac58","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-e3290dc33452ec879629239c",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

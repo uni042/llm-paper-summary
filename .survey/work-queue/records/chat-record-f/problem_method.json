@@ -2,17 +2,37 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-4b8bce4b45d182be8c34ac58",
-  "job_id": "job-research-08ba7261bc105f34",
+  "attempt_id": "attempt-e3290dc33452ec879629239c",
+  "job_id": "job-research-32ece608ca43dae7",
   "data": {
-    "problem": "大規模言語モデルの復号では、各トークン生成のたびにモデル重みとKVキャッシュを大量に読み直すため、演算能力よりメモリ帯域が律速になりやすい。GPUには高帯域メモリに加えてCPU側ホストメモリへ到達するコヒーレントな経路があり、GH200では後者も高帯域メモリのおよそ10%の読み出し帯域を持つ。しかし従来の推論基盤はホスト側を容量拡張用の下位階層として扱い、使用直前に高帯域メモリへ先読みする。先読みはホストから読んだ各バイトを高帯域メモリへ書くため、その書き込みが需要読み出し帯域を奪う。既存の帯域比例ページ配置も、現代GPUの2MBページでは一つの実行波が触るページ数が少なく、波ごとのホスト比率が大きく揺れる。遅いホスト側へ比例値以上の要求が集中した波では高帯域メモリ側が遊び、平均比率が正しくても性能が落ちる。したがって容量拡張だけでなく、短い時間尺度の各実行波で両階層を同時利用する仕組みが必要になる。",
-    "novelty": "BOOSTの新規性は、二つのメモリ階層を上位・下位として移送するのではなく、GPUから直接読む対等な帯域源として扱い、各実行波で同時かつ帯域比に比例するアクセスを作る点にある。さらに、この条件をカーネル変更なしで満たすため、静的重みでは協調スレッド配列のアクセス形状を使った決定論的な剰余ページ配置、動的KVキャッシュでは仮想アドレスとブロック種別を実行時に選ぶデータ形状再配置を組み合わせる。従来のランダム比例配置が全期間平均の比例性だけを保証したのに対し、BOOSTは実行波というGPU実行単位の同時性まで管理対象にする。",
-    "method_overview": "入力は、vLLMが読み込むモデル重み、実行時に増減するKVキャッシュ、各カーネルが協調スレッド配列ごとにどの連続領域を読むかというアクセス形状、そしてホスト対高帯域メモリの実測帯域比である。まずページ割当管理器が静的重みテンソルごとに配置周期をリセットし、帯域比が1対KならK個の高帯域メモリ領域の後に1個のホスト領域を置く。協調スレッド配列の読み出し範囲が2MBページ境界と一致しない場合は、その範囲とページサイズの最小公倍数を一つの大ページ群として扱い、一つの協調スレッド配列が遅速両階層へまたがらないようにする。これにより、ホストへ向かう協調スレッド配列と高帯域メモリへ向かう協調スレッド配列を同じ実行波に混在させ、両経路を並行に飽和させる。動的KVキャッシュでは、割当時の静的縞配置だけではブロックの解放・再利用で対応が乱れるため、仮想アドレス範囲を高帯域メモリ領域とホスト領域へ線形分割し、データ形状再配置器がKVヘッドを外側次元へ並べ替える。実行時には一部のKVヘッドだけがホスト側にあるブロックと全ヘッドが高帯域メモリ側にあるブロックの二種類を用意し、空きリストの比率を見ながら要求へ割り当てる。出力は、カーネルから見れば従来と同じ仮想テンソルであり、カーネル内部のポインタ計算や演算を変えずに、物理的な需要読み出しだけが二階層へ分散される。実行中のデータ移送を行わないため、高帯域メモリ書き込み帯域を消費せず、追加容量と追加読み出し帯域を同時に利用できる。",
+    "problem": "MoE layerのfused expert GEMMは総token数だけでなく、routerが各expertへ何token割り当てたかで実際の行列形状が変わる。大きなMMA tileはweight reuseを高める一方、cold expertではzero paddingを増やし、小tileはpaddingを減らす代わりにweight reloadを増やす。TRTLLM等の通常autotuningはtoken-count bucketごとにrandom routingで単一kernelを選ぶため、同じbatchでもlayer/inputごとに2倍以上変動するrouting skewを無視する。したがって静的bucket kernelは一部invocationでoracleから大きく遅れる。",
+    "novelty": "routing skewを実効expert数 eff_exp=((Σt_i)^2)/(Σt_i^2) で1〜Nの物理的尺度へ圧縮し、target eff_expに合う対称Dirichlet濃度αをbinary searchして制御可能なsynthetic routing分布を作る。これをoffline kernel sweepへ使い、onlineではlive histogramそのものをGPU上でexemplar matchingしてkernelを切り替える。kernel選択をCPUへ戻さずconditional CUDA Graph内で完結させる点がsystem上の核心。",
+    "method_overview": "まず実routing traceからlayer/token-countごとのeff_expを測る。offline tuningでは各token-count bucketでddist:X（target eff_exp=N/X）を複数生成し、利用可能なTRTLLM fused-MoE kernelをbenchmarkして最速kernel IDを記録する。各分布はexpert token-count vectorを降順sortしL2 normalizeしたexemplarに変換し、expert identityとscaleを除去してGPUへ配置する。onlineではrouter実行後、per-expert histogramを構築・sortし、同bucketのexemplar群とcosine similarityで最近傍を選び、そのkernel IDをconditional CUDA Graphのdevice-side branchから起動する。",
     "components": [
-      {"name":"ページ割当管理器（Page Allocation Manager; PAM）","description":"静的なモデル重みに対して、カーネル単位・テンソル単位で帯域比を満たす剰余ページ配置を行う。GH200ではOSからGPUメモリをNUMAノードとして扱えるため、2MB領域ごとにmmapとmbindで物理ノードを選び、cudaHostRegisterでGPUから参照可能にする。協調スレッド配列の重み範囲がページ境界とずれる場合は、その範囲と2MBの最小公倍数を大ページ群としてまとめ、一つの協調スレッド配列の需要読み出しが両階層に分割されないようにする。帯域比の逆数が整数でない場合は切り上げてホスト比率を目標以下に保ち、遅い階層の過剰割当による失速を避ける。"},
-      {"name":"データ形状再配置器（Data Shape Remapper; DSR）","description":"動的に割当・解放されるKVキャッシュについて、静的ページ配置だけでは失われる実行波ごとの帯域比を維持する。KVテンソルをヘッドが連続になる配置へ並べ替え、単一ヘッドだけをホスト側へ置くブロックと全ヘッドを高帯域メモリ側へ置くブロックを作る。要求到着時には二種類の空きブロック比率を監視し、ホスト側KVヘッド片が目標帯域比付近になるよう貪欲に割り当てる。要求長の違いやブロック解放で片方の空きリストが不足した場合も、ホスト比率を目標以下へ落とすか特定要求だけへ混合を局所化し、遅い階層の過剰利用を避ける。"}
+      {
+        "name": "Effective ExpertsとDirichlet reverse modeling",
+        "description": "per-expert token countsからrouting concentrationを1〜Nのeff_expへ変換する。target値に一致する対称Dirichlet αを10^-6〜10^6でbinary searchし、uniformから強skewまで連続的にsweepできるddist:Xを生成する。実DeepSeek-V3 routingとのsorted-vector cosine similarityはgeomean 0.97でBeta 0.92、exponential 0.94を上回る。"
+      },
+      {
+        "name": "Distribution-aware offline autotuning",
+        "description": "token-count bucket {32,64,128,256,512}ごとにskew設定{1.1,1.3,1.5,1.7,2.0,2.5,4.0}を生成し、各分布をTRTLLM kernel候補へ通して最小latency kernelを保存する。同じTile Nでもsoftware pipelineやmemory pathでeffective throughputが10%以上散るため、tileだけでなくkernel configuration全体を選ぶ。"
+      },
+      {
+        "name": "GPU-resident exemplar matching",
+        "description": "router logitsからexpert histogramをGPU上で構築し、降順sort・L2 normalizeしてoffline exemplarとcosine similarity比較する。expert IDを捨てたshape比較により、hot expertの番号が異なっても同じskew profileを同じkernelへ対応付ける。"
+      },
+      {
+        "name": "Conditional CUDA Graph dispatch",
+        "description": "選択結果をhostへcopyせず、device-side conditional SWITCHでfused-MoE kernelを起動する。CPU branchは固定graph比約15µsの追加overhead、conditional graphは約8µs、histogram/sort/matching込みDA-MoE全体は約14µsで、large MoEではkernel選択利得より小さい。"
+      }
     ],
-    "system_design": "BOOSTはvLLMのモデル読込器とKVブロック管理器に実装され、GPUカーネルへ新しいコードを追加しない。静的重みは起動時に物理配置を固定し、動的KVは既存の仮想メモリ間接参照を利用してブロック種別を選ぶ。GPUは各データを64バイト単位の通常のコヒーレント需要読み出しとして参照するため、先読み用の高帯域メモリ書き込みや実行時ページ移送が不要になる。設計上の成立条件は、GPUがホスト階層へロード・ストアできること、カーネルが仮想テンソルを介してデータへ到達すること、そして協調スレッド配列ごとのアクセス流が十分規則的であること。"
+    "system_design": "既存serving stackのrouterとfused-MoE expert computationの間へDA-MoE dispatcherを挿入する。offline phaseがbucket別exemplar→kernel表を生成し、online phaseは同じCUDA Graph内でrouting metadata生成、matching、conditional launchまで行うためserving APIやmodel/routerを変更しない。",
+    "why_it_works": "routing skewにより各expert GEMMのN方向実token幅が変わるため、padding量とweight reuseの最適点もinvocationごとに動く。live distributionを観測して既存kernel集合から近いoffline optimumを選べば、random-routingで固定したbucket kernelのmismatchを除ける。device-side branchにより動的選択のためのCPU同期を避け、利得をcritical path上に残す。",
+    "failure_modes": "dispatch path自体が約14µsかかるため小規模MoE（論文はQwen3を例示）では利得を相殺し得る。DeepSeek-V3 token count 512ではDA-MoEもoracleより約20%遅く、offline exemplar/kernel coverage不足が残る。AMD HIP Graphには同等のdevice-side conditional SWITCHがなくCPU copy-backが必要。評価はB200/NVIDIA、2モデル中心で他GPU・量子化・serving workloadへの一般化は未確認。"
   },
-  "reservation": {"claim_id":"claim-4b8bce4b45d182be8c34ac58","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-e3290dc33452ec879629239c",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

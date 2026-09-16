@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:03:28 JST**
+> 自動生成: **2026-09-16 15:03:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,12 +204,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.15338` — Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 15:00:07 JST** / heartbeat: **—** / lease expiry: **09-16 16:30:07 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6ca0cd6980218f8e.json`
-- `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference / worker `scheduled-chat-hourly-survey-20260916T145717JST`
-  - claim: **09-16 14:59:04 JST** / heartbeat: **—** / lease expiry: **09-16 16:29:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-08ba7261bc105f34.json`
+- `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
+  - claim: **09-16 15:03:37 JST** / heartbeat: **—** / lease expiry: **09-16 16:33:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`
+- `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding / worker `scheduled-chat-hourly-survey-20260916T145717JST`
+  - claim: **09-16 15:03:37 JST** / heartbeat: **—** / lease expiry: **09-16 16:33:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-cffb14eec24a02c2.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`

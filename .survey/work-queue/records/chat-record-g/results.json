@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dc12dab8bc108ae5e00ae199",
-  "job_id": "job-research-6ca0cd6980218f8e",
-  "data": {
-    "overview": "DSEIは固定文単位の潜在推論SLLMに対して全評価規模でPPLを改善し、特に125M・1層DSAEでは21.84から11.17へ約48%低下した。トークン単位OPTとの比較では、125M構成の入力スループットが13.93kから35.98k tokens/sへ約2.58倍、GPUメモリが131.45から13.05 KB/tokenへ約90%減少する。一方、SLLMに対してはスループット差が小さく、メモリはむしろ増えるため、DSEIの主な上積みは固定潜在圧縮に対する品質改善である。1.3BでもPPLはOPT 16.02、SLLM 19.30に対しDSEI 9.86だが、評価データが同一コーパス内検証である点に注意が必要である。",
-    "key_results": [
-      {"metric": "PPL", "value": "11.17", "baseline": "SLLM-125M-H1: 21.84", "condition": "DSEI-125M-H1、Wanjuan-1.0検証", "interpretation": "固定文単位潜在推論に対して約48%低下し、文長適応区間化と意味重み付けが圧縮品質を改善した。"},
-      {"metric": "平均入力スループット", "value": "35.98 k tokens/s", "baseline": "OPT-125M: 13.93 k tokens/s", "condition": "単一RTX 5880 Ada、125M基盤", "interpretation": "トークン単位OPT比で約2.58倍。潜在系列へ短縮する効果が、追加符号化・復号処理を含めても入力処理効率に現れる。"},
-      {"metric": "平均GPUメモリ", "value": "13.05 KB/token", "baseline": "OPT-125M: 131.45 KB/token", "condition": "単一RTX 5880 Ada、125M基盤", "interpretation": "トークン単位OPT比で約90%低下。短い区間系列でモデル本体を動かすことがメモリ負荷削減に寄与する。"},
-      {"metric": "PPL", "value": "9.86", "baseline": "SLLM-1.3B-H1: 19.30; OPT-1.3B: 16.02", "condition": "DSEI-1.3B-H1、Wanjuan-1.0検証", "interpretation": "最大評価規模でも固定潜在推論とトークン推論の双方より低いPPLを報告し、小規模だけの効果ではない。"},
-      {"metric": "DSAEアブレーションPPL", "value": "分割なし1.40 vs 既定1.06", "baseline": "既定DSAE", "condition": "隠れ次元768、1層DSAE", "interpretation": "文分割を外すと約32%悪化し、長文を固定1表現へ押し込まない設計が主要因であることを示す。"}
-    ],
-    "negative_results": "SLLMとの効率比較ではDSEIの利点は一様ではない。125M-H1の入力スループットは35.90から35.98 k tokens/sと0.22%程度しか増えず、GPUメモリは10.97から13.05 KB/tokenへ約18%増える。350MでもSLLMの99.20に対しDSEIは98.30 k tokens/sでわずかに低い。したがって動的意味抽出は固定潜在推論より品質を大きく改善する一方、既に系列を圧縮したSLLMに対して純粋な速度・メモリ優位を追加する方式ではない。",
-    "interpretation": "トークン単位OPTに対する大きな効率差は、モデル本体が処理する系列をトークン数から少数区間へ縮めたことによる。SLLMも同様に文単位へ系列を短縮するため、DSEIとの差は小さくなる。そこでDSEIの文長適応分割と重要度重み付けは、効率をさらに上げるよりも固定1ベクトル圧縮で失われる情報を回復する方向に働く。分割なしのアブレーション悪化がこの解釈を支持する。モデルが大きくなるとSLLMに対する入力スループット上積みは消えるが、PPL改善は残る。",
-    "quality_impact": "圧縮表現から自然言語を再構成する近似方式であり、意味の完全保存は保証されない。評価ではPPLが改善しているものの、事実性、推論正答率、コード生成、長文検索などの下流品質は測定していないため、90%メモリ削減を一般用途で無品質損失と解釈してはならない。"
-  },
+  "attempt_id": "attempt-58c83f5989fc6dfe9cefc106",
+  "job_id": "job-research-cffb14eec24a02c2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-dc12dab8bc108ae5e00ae199",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "claim_id": "claim-58c83f5989fc6dfe9cefc106",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
     "worker_kind": "scheduled_chat"
   }
 }
