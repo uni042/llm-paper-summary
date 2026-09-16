@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-949006ab20f962621eb53c05",
   "job_id": "job-research-f992ed2fc8c47a46",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-949006ab20f962621eb53c05",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2505.10259",
+    "arxiv_id": "2505.10259",
+    "doi": "10.48550/arXiv.2505.10259",
+    "openreview_id": "rVrWNb2XLi",
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices",
+    "summary": "GPUメモリに収まらない大規模言語モデルをCPUへオフロードすると、PCIe転送がGPU計算より桁違いに遅く、GPUコアとGPUメモリの双方が十分に性能へ寄与しない。SpecOffloadは、この待ち時間と低効率なGPUメモリ領域を投機的デコード用の小型ドラフトモデルへ振り向ける。対象モデルの検証と別バッチのドラフト生成を交互に重ね、CPU注意計算・FFN重み転送・GPUドラフト計算を並行実行する。さらに適応型テンソル配置とParaSpec PlannerでGPU/CPU/ディスク配置、対象・ドラフトのバッチサイズ、候補トークン数をハードウェアと入力に合わせて決める。RTX 4090上のMixtral 8x7B/8x22B評価では最強比較対象FlexGenに対し平均2.53〜2.54倍のエンドツーエンドスループットを達成し、GPUコア利用率はFlexGen比4.49倍となった。",
+    "list_summary": "オフロード中に遊休するGPU計算時間と低効率なGPUメモリへ投機的デコードのドラフトモデルを配置し、CPU計算・重み転送・ドラフト生成を重ねてFlexGen比最大2.54倍のスループットを実現する。",
+    "authors": ["Xiangwen Zhuge","Shen Xu","Zeyu Wang","Fan Dang","Xuan Ding","Danyang Li","Yahui Han","Tianxiang Hao","Zheng Yang"],
+    "authors_affiliations": "Tsinghua University; Beijing Jiaotong University; Beijing University of Posts and Telecommunications",
+    "published": "2025-05-15",
+    "publication": "arXiv:2505.10259v3; ICLR 2026 OpenReview submission rVrWNb2XLi",
+    "publication_type": "arXivプレプリント／会議査読投稿",
+    "publication_status": "Under Review",
+    "lineage": "offload-hierarchical-memory",
+    "topics": ["LLM推論オフロード","投機的デコード","CPU-GPU異種実行","階層メモリ","MoE推論"],
+    "importance": "I/O律速オフロードで余るGPU資源を、対象モデル重みの常駐量増加ではなくドラフトモデルへ使うという資源再配分を示し、オフロードと投機的デコードを一体設計した点が重要。",
+    "hardware_evaluation": "RTX 4090 24GBを2環境で使用。Env #1はi9-10980XE、DRAM 256GB、PCIe Gen3 x16、Env #2はEPYC 7542、DRAM 448GB、PCIe Gen4 x16。",
+    "quality_effect": "投機的デコードは対象モデルで候補を検証するため、受理規則が正しく実装される限り対象モデルの生成分布を保つ。性能はドラフト候補の受理率に強く依存する。",
+    "source": "https://arxiv.org/abs/2505.10259",
+    "sources": ["https://arxiv.org/abs/2505.10259","https://arxiv.org/html/2505.10259","https://openreview.net/forum?id=rVrWNb2XLi"],
+    "code": "https://github.com/MobiSense/SpecOffload-public",
+    "implementation": "Hugging Face Transformers 4.47.1上に実装され、multiprocessingと共有メモリでパイプラインを構成。公開GitHub実装あり。",
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML参考文献節を確認。",
+    "references_total": 41
+  },
+  "reservation": {"claim_id":"claim-949006ab20f962621eb53c05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
