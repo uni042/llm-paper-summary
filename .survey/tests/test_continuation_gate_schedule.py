@@ -111,6 +111,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         result = mod.decide(make_args(
             worker_kind="discovery",
             discovery_rounds_completed=1,
+            discovery_rounds_since_last_novel=1,
             next_axis_available=True,
             seconds_to_next_scheduled_task=90,
             seconds_to_run_deadline=3500,
