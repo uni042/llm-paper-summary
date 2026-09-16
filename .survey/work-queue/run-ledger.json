@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:08:01.953347+00:00",
+  "updated_at": "2026-09-16T03:12:29.663277+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:08:01.953347+00:00",
+      "last_recorded_at": "2026-09-16T03:12:29.663277+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 101,
+        "research_completed": 102,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 2,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34905424126:1",
-          "recorded_at": "2026-09-14T22:48:05.671967+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "34905424126",
-            "run_attempt": "1",
-            "source_sha": "e645da4de289e24d947989a56153ed96e7e1de05"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34906145339:1",
           "recorded_at": "2026-09-14T22:51:52.793092+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35050619089",
             "run_attempt": "1",
             "source_sha": "76486bd0cec2aa2b6f696adecb72e87305ad3d6d"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35050904376:1",
+          "recorded_at": "2026-09-16T03:12:29.663277+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35050904376",
+            "run_attempt": "1",
+            "source_sha": "8ca3fb0409b01c9ed7027ca5394d296fd20971c9"
           },
           "signals": [
             "research_completed"
@@ -20639,6 +20639,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.13134",
           "title": "Rethinking Heterogeneous System Disaggregation for Subquadratic Attention",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-6cff6eafb4a4e5b9",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12686",
+          "title": "Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size",
           "from": "ready",
           "to": "completed"
         }

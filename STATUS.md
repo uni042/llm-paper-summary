@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:12:11 JST**
+> 自動生成: **2026-09-16 12:12:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **59** |
+| 収録候補論文 | **58** |
 | 未claim Research job | **58** |
-| 直近24hの検証済みResearch収録 | **25** |
-| 最終検証済みResearch収録 | **09-16 12:07:59 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **26** |
+| 最終検証済みResearch収録 | **09-16 12:12:27 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **59** |
+| canonical_id確認済みの一意な候補論文 | **58** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **60** |
+| 非終端Research job合計 | **59** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **18** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **18** | **7** | **1** | **6** | **2** | **0** | **6** |
+| 合計 | **19** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 12:12:27 JST** [research] `arXiv:2609.12686` — Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size
+  - job: `.survey/work-queue/jobs/job-research-6cff6eafb4a4e5b9.json`
+  - result: `.survey/work-queue/results/research/attempt-43fc54bc4bb664c376b8fe08.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-43fc54bc4bb664c376b8fe08.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md`
 - **09-16 12:07:59 JST** [research] `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention
   - job: `.survey/work-queue/jobs/job-research-e3f30981ea631700.json`
   - result: `.survey/work-queue/results/research/attempt-5d2bee9ae7908778830d1829.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-79c4ee390d672cc004c43df8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-79c4ee390d672cc004c43df8.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md`
-- **09-16 10:04:04 JST** [research] `arXiv:2609.12978` — SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading
-  - job: `.survey/work-queue/jobs/job-research-e4fbb25e81d25998.json`
-  - result: `.survey/work-queue/results/research/attempt-f16bcdd1d9d66c05e293785d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f16bcdd1d9d66c05e293785d.json`
-  - paper: `papers/inference/06-moe-inference-expert-offloading/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md`
 
 ### Audit
 
@@ -162,13 +162,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.02960` — MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving / worker `scheduled-chat-llm-survey-20260916T025906Z`
   - claim: **09-16 12:12:02 JST** / heartbeat: **—** / lease expiry: **09-16 13:42:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-bd280ca93f0a6940.json`
-- `arXiv:2609.12686` — Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:11:26 JST** / heartbeat: **—** / lease expiry: **09-16 13:41:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6cff6eafb4a4e5b9.json`
 
 #### Audit
 
@@ -188,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **60** |
+| ready | **59** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **565** |
+| inference/training/survey配下の論文Markdown実体 | **566** |
 
 ### immutable submissionの未照合
 
