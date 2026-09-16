@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:18:35 JST**
+> 自動生成: **2026-09-17 07:18:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **60** |
+| 収録候補論文 | **59** |
 | 未claim Research job | **58** |
-| 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 06:35:28 JST（43分前）** |
+| 直近24hの検証済みResearch収録 | **90** |
+| 最終検証済みResearch収録 | **09-17 07:18:46 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **60** |
+| canonical_id確認済みの一意な候補論文 | **59** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **60** |
+| 非終端Research job合計 | **59** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **12** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **25** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **36** | **10** | **6** | **4** | **2** | **0** | **6** |
+| 合計 | **37** | **10** | **6** | **4** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 07:18:46 JST** [research] `arXiv:2601.11822` — RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation
+  - job: `.survey/work-queue/jobs/job-research-af7d4aee1c99dd28.json`
+  - result: `.survey/work-queue/results/research/attempt-73081685c32e0006998f3d67.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-73081685c32e0006998f3d67.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md`
 - **09-17 06:35:28 JST** [research] `arXiv:2609.16491` — PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving
   - job: `.survey/work-queue/jobs/job-research-98e8633cce3c47f1.json`
   - result: `.survey/work-queue/results/research/attempt-9c7bc1c5f144c062d60905d3.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-0eb4936a46a9da87b23225fa.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0eb4936a46a9da87b23225fa.json`
   - paper: `papers/inference/01-offload-hierarchical-memory/2025-2512.09427-odma-on-demand-memory-allocation-lpddr.md`
-- **09-17 01:37:33 JST** [research] `arXiv:2604.09613` — Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-7b525e11834c9519.json`
-  - result: `.survey/work-queue/results/research/attempt-5067cd6b8db49986303c3586.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5067cd6b8db49986303c3586.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.09613-token-budget-aware-pool-routing.md`
 
 ### Audit
 
@@ -201,10 +201,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2601.11822` — RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation / worker `scheduled-chat-discovery-specialist-0700`
-  - claim: **09-17 07:17:06 JST** / heartbeat: **—** / lease expiry: **09-17 08:47:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-af7d4aee1c99dd28.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey`
   - claim: **09-17 05:33:59 JST** / heartbeat: **09-17 06:31:30 JST** / lease expiry: **09-17 08:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
@@ -227,7 +224,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **60** |
+| ready | **59** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,7 +244,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **642** |
+| inference/training/survey配下の論文Markdown実体 | **643** |
 
 ### immutable submissionの未照合
 
@@ -255,8 +252,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **403** |
-| └ Research | **276** |
+| 成功result未照合のimmutable submission | **402** |
+| └ Research | **275** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
