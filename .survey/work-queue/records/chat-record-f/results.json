@@ -1,19 +1,62 @@
 {
-  "schema_version": 1, "transport_version": 10, "slot": "results", "attempt_id": "attempt-e3290dc33452ec879629239c", "job_id": "job-research-32ece608ca43dae7",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-2333dff6f7c985a64b4f4c2e",
+  "job_id": "job-research-08ba7261bc105f34",
   "data": {
-    "overview": "DA-MoEは総トークン数区間だけでカーネルを固定するNoDAに対し、実ルーティング分布を追加信号として用いることで一貫して遅延を短縮する。HumanEval-Xでは融合MoE遅延の幾何平均高速化がDeepSeek-V3で1.16倍、Kimi K2で1.29倍、最大はそれぞれ1.40倍と1.56倍である。ルータ選択、ルーティング情報生成、DA-MoE切替まで含むMoE層全体でも幾何平均1.15倍と1.26倍を維持する。合成Dirichlet分布は実ルーティングとのコサイン類似度が幾何平均0.97で、Beta分布0.92、指数分布0.94より高い。",
+    "overview": "同一バッチで容量差を排除した低遅延条件でも、BOOSTはホスト帯域を需要読み出しとして加算することで出力トークン時間を平均4.3%改善した。一方、先読みは高帯域メモリへの書き込み競合により平均6%悪化した。容量も使える高スループット条件では平均31%、最大40%の処理量向上となり、容量を同一にそろえた分解実験では約4%が同時帯域利用そのものの寄与と確認された。したがって主な処理量利得は容量増加だが、容量だけでは得られない追加の帯域利得も実測されている。",
     "key_results": [
-      {"metric": "融合MoE遅延の高速化", "value": "DeepSeek-V3 幾何平均1.16倍、最大1.40倍", "baseline": "NoDA", "condition": "B200、エキスパート並列度4、HumanEval-X、総トークン数32〜512", "interpretation": "静的カーネルと実ルーティングの不一致を、現在分布の照合で減らす。"},
-      {"metric": "融合MoE遅延の高速化", "value": "Kimi K2 幾何平均1.29倍、最大1.56倍", "baseline": "NoDA", "condition": "B200、エキスパート並列度6、HumanEval-X", "interpretation": "384エキスパート構成では偏りによる行列形状差が大きく、動的切替の余地が大きい。"},
-      {"metric": "MoE層全体の高速化", "value": "DeepSeek-V3 1.15倍、Kimi K2 1.26倍の幾何平均", "baseline": "NoDA", "condition": "ルータ、情報生成、約14マイクロ秒のDA-MoE切替を含む", "interpretation": "動的選択の追加費用を含めても融合カーネルの短縮効果の大半が残る。"},
-      {"metric": "Oracleとの差", "value": "DeepSeek-V3の32〜256で1.1%以内、Kimi K2の全評価総トークン数で4%以内", "baseline": "各実行で最速候補を選ぶOracle", "condition": "代表分布の最近傍照合", "interpretation": "多くの条件で実行ごとの最適カーネルに近い候補を選べる。"},
-      {"metric": "切替オーバーヘッド", "value": "CPU分岐15.0マイクロ秒、条件付きCUDAグラフ分岐8.2マイクロ秒、DA-MoE全選択経路約14マイクロ秒", "baseline": "固定グラフ4.1マイクロ秒", "condition": "データ依存切替の微小評価", "interpretation": "GPU側制御によりCPU同期を使う分岐より追加費用を抑える。"},
-      {"metric": "分布モデル類似度", "value": "Dirichlet 0.97、指数分布0.94、Beta分布0.92の幾何平均コサイン類似度", "baseline": "DeepSeek-V3の実MMLUルーティング", "condition": "同じ目標実効エキスパート数へ適合", "interpretation": "単一パラメータのDirichlet掃引で事前調整用の偏り形状を比較的よく近似する。"},
-      {"metric": "強い偏りでの高速化", "value": "不均衡係数100でDeepSeek-V3幾何平均1.66倍、総トークン数128で2.05倍", "baseline": "NoDA", "condition": "エキスパート並列度4の合成不均衡", "interpretation": "偏りが強いほど静的カーネルとの不一致が拡大し、DA-MoEの価値が増える。"}
+      {
+        "metric": "出力トークン時間",
+        "value": "平均4.3%改善",
+        "baseline": "HBMのみ",
+        "condition": "GH200、Qwen3-Next-80BとLlama-3.3-70B、同一バッチの低遅延復号",
+        "interpretation": "容量差を固定しても改善するため、ホスト帯域の同時需要読み出しによる純粋な帯域効果を示す。"
+      },
+      {
+        "metric": "最大処理量",
+        "value": "平均31%向上、最大40%",
+        "baseline": "HBMのみ",
+        "condition": "GH200、高スループットで利用可能容量までバッチを拡大",
+        "interpretation": "ホスト容量で同時要求数を増やす効果が主成分で、同時帯域利用が追加利得を与える。"
+      },
+      {
+        "metric": "先読みとの差",
+        "value": "処理量で平均15%上回る",
+        "baseline": "vLLM非同期先読み",
+        "condition": "主評価の高スループット条件",
+        "interpretation": "先読みはホストからHBMへの移送書き込みが需要読み出し帯域を消費するため、移送しないBOOSTが有利になる。"
+      },
+      {
+        "metric": "容量を一致させた帯域寄与",
+        "value": "処理量と出力トークン時間を約4%改善",
+        "baseline": "同じ総容量をHBMだけで与えた容量一致条件",
+        "condition": "Llama-3.3-70B、1K/8K文脈",
+        "interpretation": "31%という総合利得のうち、容量拡張とは独立した同時帯域利用の寄与を分離している。"
+      },
+      {
+        "metric": "P99トークン間遅延",
+        "value": "ランダム比例配置より幾何平均7.8%低下",
+        "baseline": "BAPP-R",
+        "condition": "Llama-3.3-70B、LongWriter、処理可能な要求率範囲",
+        "interpretation": "平均性能だけでなく末尾遅延でも、実行波ごとの比率分散を抑える効果が現れる。"
+      },
+      {
+        "metric": "テンソル並列2の出力トークン時間",
+        "value": "平均6.5%改善",
+        "baseline": "HBMのみ",
+        "condition": "H100二次メモリ模擬、Qwen2.5-72BとLlama-3.3-70B、BF16、TP=2",
+        "interpretation": "単一GPUのGH200だけでなく、複数GPUにまたがる大規模モデルでも帯域加算の効果を確認している。"
+      }
     ],
-    "negative_results": "DeepSeek-V3の総トークン数512ではDA-MoEの遅延がOracle比120.6%で、NoDAの121.5%とほぼ差がなく、代表分布またはカーネル候補の被覆不足が残る。GPU側選択も無料ではなく約14マイクロ秒を要するため、小規模MoEでは利得を相殺し得る。HIP GraphにはCUDAの条件付きSWITCH相当がなく、AMDへ直接移植するとCPU同期問題が再発する。",
-    "interpretation": "MoEカーネル性能はバッチ規模だけでなく、ルーティングヒストグラムの形にも依存する。エキスパート配置や負荷分散が偏りを変えると最適カーネルも変わるため、上位のルーティング・配置と下位のカーネル切替を完全に分離して静的最適化するより、実行時信号で接続する方が有効である。",
-    "quality_impact": "ルータのエキスパート選択やモデル計算の意味を変更せず、同じ演算を実装するカーネルだけを切り替えるため、報告された高速化に精度低下は伴わない。"
+    "negative_results": "境界条件は明確である。Qwen3-Nextはバッチ16で約2%遅くなり、少数の専門家しか活性化せず協調スレッド配列数が足りないとホスト遅延を隠せない。密モデルLlama-3.3はバッチ256で約0.5%遅くなり、同じ重みタイルを複数の協調スレッド配列が再利用する領域ではGH200のホスト読み出しがL2キャッシュされないことが不利になる。PCIeやCXL相当の帯域比約2%では期待利得が小さい。CUDA統合メモリは作業集合がHBMを超えるとページ移送がスラッシングし、処理量0.19倍まで低下した。",
+    "interpretation": "性能は二次階層の帯域比、同時に走る協調スレッド配列数、重みタイル再利用の有無で決まる。ホスト比率を帯域比例値より上げると遅い階層が律速し、逆に下げると追加帯域を使い切れないため、各実行波で比率を安定させることが重要である。MoEはバッチ増加で活性専門家と協調スレッド配列が増えるため利得が伸びるが、密モデルは大バッチでL2再利用が強まり、ホスト読み出しの非キャッシュ性が支配的になる。",
+    "quality_impact": "BOOSTは量子化精度や近似注意を変更せず、同一の重みとKV値を異なる物理メモリから読む配置最適化である。論文は品質指標の変化を報告しておらず、設計上も生成結果を変える近似を導入しない。性能評価は主として遅延・処理量・帯域利用率に集中している。"
   },
-  "reservation": {"claim_id": "claim-e3290dc33452ec879629239c", "worker_id": "scheduled-chat-discovery-specialist-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2333dff6f7c985a64b4f4c2e",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

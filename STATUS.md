@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:05:54 JST**
+> 自動生成: **2026-09-16 15:06:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **6件** / 直近15分heartbeat: **1件**
-- `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 15:03:37 JST** / heartbeat: **—** / lease expiry: **09-16 16:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`
+- `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference / worker `scheduled-chat-discovery-specialist-00`
+  - claim: **09-16 15:06:00 JST** / heartbeat: **—** / lease expiry: **09-16 16:36:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-08ba7261bc105f34.json`
 - `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding / worker `scheduled-chat-hourly-survey-20260916T145717JST`
   - claim: **09-16 15:03:37 JST** / heartbeat: **—** / lease expiry: **09-16 16:33:37 JST**
   - evidence: `.survey/work-queue/claims/job-research-cffb14eec24a02c2.json`

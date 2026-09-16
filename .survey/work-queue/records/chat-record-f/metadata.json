@@ -2,39 +2,100 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-e3290dc33452ec879629239c",
-  "job_id": "job-research-32ece608ca43dae7",
+  "attempt_id": "attempt-2333dff6f7c985a64b4f4c2e",
+  "job_id": "job-research-08ba7261bc105f34",
   "data": {
-    "canonical_id": "arXiv:2607.23099", "arxiv_id": "2607.23099", "doi": "10.48550/arXiv.2607.23099", "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
-    "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
-    "summary": "混合専門家モデル（Mixture of Experts; MoE）の推論では、ルータが各エキスパートへ割り当てるトークン数の偏りによって、同じ総トークン数でも融合MoE行列積に適したカーネルが変わる。本論文は偏りを実効エキスパート数で表し、実ルーティングに近い制御可能な分布を生成して、トークン数と偏りの組ごとに最速カーネルを事前探索するDA-MoEを提案する。実行時にはGPU上のエキスパート別ヒストグラムを事前分布と照合し、条件付きCUDAグラフでCPU同期なしにカーネルを切り替える。B200上のDeepSeek-V3とKimi K2で、融合MoE部分とMoE層全体の遅延を改善した。",
-    "list_summary": "MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。",
-    "authors": ["En-Ming Huang", "An-Cheng Chang", "Bai-Cheng Jeng", "Shih-Hao Hung", "H. T. Kung"],
-    "authors_affiliations": "National Taiwan University; NVIDIA Corporation; Harvard University",
-    "published": "2026-07-25", "publication": "arXiv:2607.23099v3", "publication_type": "arXivプレプリント", "publication_status": "Preprint",
-    "lineage": "moe-inference-expert-placement-caching",
-    "topics": ["MoE推論", "融合MoEカーネル", "ルーティング偏り", "カーネル切替", "Tensor Core", "条件付きCUDAグラフ", "FlashInfer", "vLLM", "TRTLLM", "B200"],
-    "importance": "高。エキスパート配置やオフロードではなく、ルーティング後に生じるエキスパート別行列形状の偏りをカーネル選択へ直接反映する。MoEサービングのルーティング適応型実行最適化として、エキスパートキャッシュや配置系と補完的である。",
-    "hardware_evaluation": "実機評価。NVIDIA B200 GPUをNVLink接続しCUDA 13.1を使用。DeepSeek-V3は4 GPUでエキスパート並列度4、Kimi K2は6 GPUでエキスパート並列度6。",
-    "hardware_details": "Blackwell B200のNVFP4 Tensor Coreを使用。TRTLLMの融合MoEカーネル群を事前測定し、FlashInfer v0.6.6へDA-MoEを実装してvLLMへ統合。主な総トークン数は32〜512。",
-    "quality_effect": "モデル重み、ルータ出力、エキスパート選択を変更せず、同じ計算を行う既存カーネル候補から実行カーネルだけを選ぶため、論文の範囲では推論品質との交換条件を導入しない。",
-    "storage_targets": ["GPU常駐の代表分布表", "ルーティングヒストグラム", "融合MoEカーネル候補"],
-    "bottlenecks": ["ルーティング偏りに不適合な静的カーネル選択", "MMAタイルのゼロ埋め", "小タイルでの重み再読込増加", "CPU-GPU同期を伴う動的切替", "エキスパート並列化によるGPU当たりトークン減少"],
-    "evidence_locations": ["§III Modeling and Benchmarking", "§IV DA-MoE", "§V Evaluation", "§VI Architectural Implications", "§VII Related Work", "§VIII Conclusion", "References"],
-    "source": "https://arxiv.org/abs/2607.23099", "sources": ["https://arxiv.org/abs/2607.23099", "https://www.researchgate.net/publication/410887192_Decoding_the_Skew_Distribution-Aware_MoE_Inference_with_Adaptive_Kernel_Dispatch"],
-    "code": null,
-    "implementation": "DA-MoE試作をFlashInfer v0.6.6へ実装してvLLMへ統合したと本文は記すが、DA-MoE固有の公式コードURLは確認できない。",
-    "last_checked": "2026-09-16",
-    "references": [
-      {"canonical_id": "arXiv:2401.04088", "arxiv_id": "2401.04088", "title": "Mixtral of Experts"},
-      {"canonical_id": "arXiv:2501.01005", "arxiv_id": "2501.01005", "title": "FlashInfer"},
-      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388", "title": "Qwen3 Technical Report"},
-      {"canonical_id": "arXiv:2512.14080", "arxiv_id": "2512.14080", "title": "SonicMoE"},
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
-      {"canonical_id": "arXiv:2411.11217", "arxiv_id": "2411.11217", "title": "MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs"}
+    "canonical_id": "arXiv:2609.13592",
+    "arxiv_id": "2609.13592",
+    "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+    "summary": "大規模言語モデルの復号は高帯域メモリの容量だけでなく帯域にも制約される一方、CPU側のホストメモリ帯域は従来の階層型オフロードでは十分に利用されない。本研究は、GPUの各実行波で高帯域メモリとホストメモリへ同時かつ帯域比に比例して要求を振り分けることが重要だと示し、静的な重みには波を意識した剰余ページ配置、動的なKVキャッシュには実行時のデータ形状再配置を用いるBOOSTを提案する。vLLMへ約800行の変更で統合し、カーネルを書き換えずに容量増加と帯域加算を同時に得る。Grace Hopper実機では同一バッチ時の出力トークン時間を平均4.3%改善し、高スループット条件では平均31%の処理量向上を示した。",
+    "source": "https://arxiv.org/abs/2609.13592",
+    "sources": [
+      "https://arxiv.org/abs/2609.13592",
+      "https://arxiv.org/html/2609.13592"
     ],
-    "references_checked_at": "2026-09-16", "references_source": "一次論文のReferences節", "references_total": 28
+    "authors": [
+      "Anish Saxena",
+      "Jae Hyung Ju",
+      "Hritvik Taneja",
+      "Po-An Tsai",
+      "Aamer Jaleel",
+      "Christos Kozyrakis",
+      "Moinuddin Qureshi"
+    ],
+    "published": "2026-09-11",
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AR",
+        "cs.LG"
+      ]
+    },
+    "topics": [
+      "LLM inference",
+      "heterogeneous memory",
+      "HBM",
+      "host memory",
+      "vLLM",
+      "KV cache"
+    ],
+    "implementation": "論文ではvLLM 0.17.0へ約800行のPython/PyTorch変更として実装したと報告している。公開コードURLは一次資料および公開検索で確認できなかった。",
+    "code": null,
+    "hardware_evaluation": "主評価は96GB HBMと480GB CPUメモリを備えるNVIDIA GH200 Grace Hopper実機。追加で2台のH100をNVLink接続して二次メモリ帯域比12%を模擬し、テンソル並列2でも評価している。",
+    "quality_effect": "モデル計算や重み・KV値の数値表現を近似変更する方式ではなく、同じデータを異なる物理メモリ階層へ配置して通常のキャッシュライン読み出しで参照するため、論文の評価対象では生成品質を変えない性能最適化として扱われる。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2408.11556",
+        "arxiv_id": "2408.11556"
+      },
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783"
+      },
+      {
+        "canonical_id": "arXiv:2501.12948",
+        "arxiv_id": "2501.12948"
+      },
+      {
+        "canonical_id": "arXiv:2401.14196",
+        "arxiv_id": "2401.14196"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2501.19393",
+        "arxiv_id": "2501.19393"
+      },
+      {
+        "canonical_id": "arXiv:2501.01005",
+        "arxiv_id": "2501.01005"
+      },
+      {
+        "canonical_id": "arXiv:2411.09317",
+        "arxiv_id": "2411.09317"
+      },
+      {
+        "canonical_id": "arXiv:2501.08192",
+        "arxiv_id": "2501.08192"
+      },
+      {
+        "canonical_id": "arXiv:2505.10259",
+        "arxiv_id": "2505.10259"
+      }
+    ],
+    "references_checked_at": "2026-09-16T06:05:00Z",
+    "references_source": "arXiv HTML reference section",
+    "references_total": 57,
+    "last_checked": "2026-09-16"
   },
-  "reservation": {"claim_id": "claim-e3290dc33452ec879629239c", "worker_id": "scheduled-chat-discovery-specialist-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2333dff6f7c985a64b4f4c2e",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
