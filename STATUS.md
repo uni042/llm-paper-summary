@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:51:56 JST**
+> 自動生成: **2026-09-16 13:52:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-16 12:50:41 JST（1時間1分前）** |
+| 直近24hの検証済みResearch収録 | **35** |
+| 最終検証済みResearch収録 | **09-16 13:52:05 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **21** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **21** | **6** | **1** | **5** | **2** | **0** | **24** |
+| 合計 | **22** | **6** | **1** | **5** | **1** | **0** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 13:52:05 JST** [research] `arXiv:2609.14237` — OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-0dc2aa86e35f442f.json`
+  - result: `.survey/work-queue/results/research/attempt-83192276c9f89bc52b0efa12.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-83192276c9f89bc52b0efa12.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md`
 - **09-16 12:50:41 JST** [research] `arXiv:2603.28768` — CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving
   - job: `.survey/work-queue/jobs/job-research-16a80a40c011c783.json`
   - result: `.survey/work-queue/results/research/attempt-a296cabbe5bdb6189545e086.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-7d15ace40bfac2c2b2f6ff8e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-7d15ace40bfac2c2b2f6ff8e.json`
   - paper: `papers/inference/06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md`
-- **09-16 12:12:27 JST** [research] `arXiv:2609.12686` — Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size
-  - job: `.survey/work-queue/jobs/job-research-6cff6eafb4a4e5b9.json`
-  - result: `.survey/work-queue/results/research/attempt-43fc54bc4bb664c376b8fe08.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-43fc54bc4bb664c376b8fe08.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md`
 
 ### Audit
 
@@ -158,10 +158,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.14237` — OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving / worker `scheduled-chat-llm-survey-20260916T133043JST`
-  - claim: **09-16 13:50:42 JST** / heartbeat: **—** / lease expiry: **09-16 15:20:42 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0dc2aa86e35f442f.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation / worker `scheduled-chat-llm-survey`
   - claim: **09-16 12:51:26 JST** / heartbeat: **—** / lease expiry: **09-16 14:21:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-d743b2b5468a28c8.json`
@@ -184,7 +181,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -204,7 +201,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **575** |
+| inference/training/survey配下の論文Markdown実体 | **576** |
 
 ### immutable submissionの未照合
 
@@ -212,8 +209,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **275** |
-| └ Research | **161** |
+| 成功result未照合のimmutable submission | **274** |
+| └ Research | **160** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
