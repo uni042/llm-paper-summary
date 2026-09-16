@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:42:34 JST**
+> 自動生成: **2026-09-17 04:01:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **22** |
-| 未claim Research job | **22** |
+| 収録候補論文 | **27** |
+| 未claim Research job | **27** |
 | 直近24hの検証済みResearch収録 | **91** |
-| 最終検証済みResearch収録 | **09-17 03:41:56 JST（38秒前）** |
+| 最終検証済みResearch収録 | **09-17 03:41:56 JST（20分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **22** |
+| canonical_id確認済みの一意な候補論文 | **27** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **22** |
+| 非終端Research job合計 | **27** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **16** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **32** | **10** | **6** | **4** | **0** | **0** | **5** |
+| Discovery | **17** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **33** | **9** | **5** | **4** | **0** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 04:01:52 JST** job `job-e30ba5725a8a8a2d` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
+  - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
 - **09-17 03:02:50 JST** job `job-94ba33215899ac74` / 候補 **4件**
   - result: `.survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T0223JST-discovery-specialist-cxl-transfer-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0223JST-discovery-specialist-cxl-transfer-7.json`
   - 探索軸: GPU memory virtualization・CXL shared KV・disaggregated transfer
-- **09-17 02:06:29 JST** job `job-c34ec10fdc3fd3c2` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260917T0226JST-discovery-specialist-migration-scheduling-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json`
-  - 探索軸: multi-GPU KV migration・heterogeneous serving scheduling
 
 ### 直近タスク
 
@@ -185,17 +185,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 03:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness / GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
-- round `specialist-recent-inference-1` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
-  - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json` (`ok=true`)
-- round `specialist-cross-dc-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json`
-  - 探索軸: GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0307JST-discovery-specialist-cross-dc-2.json` (`ok=true`)
+- 最新観測run: **2026-09-17 04:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
+- 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
+- round `specialist-flash-memory-hardware-1` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
+  - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -222,7 +218,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **22** |
+| ready | **27** |
 
 ### 候補の重複・識別情報欠損
 
