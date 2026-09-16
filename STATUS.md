@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 07:10:41 JST**
+> 自動生成: **2026-09-17 07:11:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **92** |
 | 最終検証済みResearch収録 | **09-17 06:35:28 JST（35分前）** |
-| 整合性異常 | **16** |
+| 整合性異常 | **6** |
 
 ## 現在の収録候補
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **8** | **4** | **4** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **1** | **1** | **0** | **0** | **0** | **4** |
-| 合計 | **34** | **9** | **5** | **4** | **2** | **0** | **4** |
+| Discovery | **23** | **2** | **0** | **2** | **0** | **0** | **6** |
+| 合計 | **34** | **10** | **4** | **6** | **2** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -185,13 +185,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 07:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **4件**
-- 探索軸: 2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation
-- round `specialist-scheduling-memory-1` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json`
-  - 探索軸: 2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0700JST-discovery-specialist-scheduling-memory-1.json` (`ok=true`)
+- 最新観測run: **2026-09-17 07:10 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **6件**
+- 探索軸: recovery-of-invalid-discovery-submissions
+- round `legacy-invalid-recovery-1` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json`
+  - 探索軸: recovery-of-invalid-discovery-submissions
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `legacy-invalid-recovery-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json`
+  - 探索軸: recovery-of-invalid-discovery-submissions
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -251,10 +255,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **399** |
+| 成功result未照合のimmutable submission | **401** |
 | └ Research | **272** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -266,15 +270,15 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 ### 整合性異常
 
-直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。
+直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。 旧形式のDiscovery submissionが `invalid submit_discovery_round payload` で失敗した履歴は、そのsubmission内の全candidateが現在のjobまたはpaper identity indexで確認できる場合に限り、履歴として保持したまま現在の異常から除外します。
 
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **16** |
+| 対応jobなしsubmission（有効Discovery round除外） | **6** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **16** |
+| 異常レコード合計（重複排除） | **6** |
 
 ### このSTATUSが採用する証拠
 
