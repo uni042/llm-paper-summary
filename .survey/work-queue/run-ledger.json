@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T07:40:30.913298+00:00",
+  "updated_at": "2026-09-16T07:44:27.311218+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T07:40:30.913298+00:00",
+      "last_recorded_at": "2026-09-16T07:44:27.311218+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 138,
+        "research_completed": 139,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 9,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35023144044:1",
-          "recorded_at": "2026-09-15T21:04:41.167583+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35023144044",
-            "run_attempt": "1",
-            "source_sha": "6431ebfb1c45eedf3e61d2236170e0f3d8488679"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35023468635:1",
           "recorded_at": "2026-09-15T21:07:58.158903+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35069702899",
             "run_attempt": "1",
             "source_sha": "31055595251f67d7ce5ae435a87450a20c1892ca"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35070030163:1",
+          "recorded_at": "2026-09-16T07:44:27.311218+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35070030163",
+            "run_attempt": "1",
+            "source_sha": "0f1d51739d99c1d835a1a96b0204d83954975e0a"
           },
           "signals": [
             "research_completed"
@@ -21189,6 +21189,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.12923",
           "title": "Dissecting GPU Utilization for LLM Inference on Nvidia Hopper",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-250a1e243181b0c3",
+          "type": "research",
+          "canonical_id": "arXiv:2507.17120",
+          "title": "BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving",
           "from": "ready",
           "to": "completed"
         }
