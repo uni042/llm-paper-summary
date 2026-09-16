@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-fcacb6725660bc54758b38b8",
-  "job_id": "job-research-af7d4aee1c99dd28",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-fcacb6725660bc54758b38b8",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-fcacb6725660bc54758b38b8","job_id":"job-research-af7d4aee1c99dd28","data":{"problem":"Hybrid batchingはprefillとdecodeを同一batchでlockstep実行するため長いprefillがdecode ITLを悪化させる。一方cross-GPU PD disaggregationはphase interferenceを避けるが、KV cache転送、prefill側メモリの遊休、別GPU poolの固定割当を伴い、小規模・resource-constrained構成では損失が大きい。","novelty":"prefillとdecodeを同一GPU上で別process・別kernelとして独立進行させるintra-GPU PD disaggregationを採用し、共有KV cacheで転送を消す。さらにAMD CU maskingとprofile-driven Adaptive Resource Managementでdecode SLOに必要なcomputeだけを隔離し、低負荷時はCUをoverallocateしてhardware schedulerに任せる。","method_overview":"decode processがPagedAttention KV managerを単独所有してprompt用blockを先に確保し、そのblock IDをprefillへ通知する。prefillが同じGPU memory上のKVをpopulateした後は通知だけでdecodeを開始し、KV data自体は移動しない。weights/KVはIPC handleで共有する。prefill/decodeはmultiprocessingでCPU-side serializationを避け、async schedulingでGPU idle gapを削減する。Adaptive Resource Managerはoffline profileからdecode batch sizeごとのITL SLO達成に必要なCU数を求め、runtime workloadに応じてCU maskを切り替える。","system_design":"vLLM v1を基盤とする2-process serving engine、共有model/KV、decode-owned KV manager、asynchronous request flow、async scheduler、HIP Graphs、CU masking、Adaptive Resource Managerから構成される。","components":[{"name":"同一GPU PD並行実行","description":"prefillとdecodeを別batch・別kernelで重ね、hybrid batchingのlockstep interferenceを外す。"},{"name":"共有KV cache","description":"decode側がblockを割当てprefillへIDだけ渡し、同一device memoryを共有してcross-device KV transferを不要にする。"},{"name":"CU masking","description":"AMD Instinctのcommand queue単位CU maskでprefill/decodeへcompute unitを空間分割する。"},{"name":"Adaptive Resource Manager","description":"低負荷ではP100-D100相当のover-allocation、高負荷ではdecode SLOを満たす最小CUを専有させ残りをprefillへ与える。"}]},"reservation":{"claim_id":"claim-fcacb6725660bc54758b38b8","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
