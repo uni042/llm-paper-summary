@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-9333f33610f25827f87c2af1",
   "job_id": "job-research-99325bb434e8c117",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9333f33610f25827f87c2af1",
-    "worker_id": "scheduled-chat-20260917t043138-0900",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "システム性能は実CIM-SSD試作機ではなく解析モデルで評価する。比較対象B1/B2は推論NPUとDDR5 DRAM、提案S1/S2はINT8/INT32 SSD制御器、SRAM、CIMフラッシュ配列を想定する。ホスト接続はPCIe Gen4 x4で8 GB/s、制御器とCIM配列間は16 GB/s。S1は圧縮係数を制御器SRAMへ置き、S2はDRAMへ置く。演算・メモリアクセスのエネルギー値や帯域は既報ハードウェア値から設定している。",
+    "software": "アルゴリズム品質評価はLlama-3.1-8BとQwen-2.5-7Bを使用する。量子化校正と辞書学習用活性値はPile検証集合から取得し、LongBenchで長文脈タスク品質、WikiText-2でLlama-3.1-8Bのパープレキシティを測る。辞書は各層・キー/値ごとに32768原子、局所窓128トークン、圧縮単位32トークン、階層疎性はK_high=16、K_low=3を基本設定とする。",
+    "methodology": "まず整数量子化の各要素を累積アブレーションし、単純W8A8、活性値平滑化、グループ量子化、整数非線形演算が品質へ与える影響を分離する。次に辞書型KV圧縮について疎符号化と問い合わせ依存階層化を比較し、LongBenchの各タスクと動的KV圧縮率を測る。両者を組み合わせたエンドツーエンド品質を2モデルで確認した後、Llama-3.1-8B、バッチ1のデコードについて1K、64K、256K文脈のトークン間時間と1デコード段階当たりエネルギーを解析モデルで比較する。",
+    "scope": "品質値は実モデル推論による評価だが、CIM-SSDの遅延・エネルギー値は公開仕様を組み合わせた解析推定であり、実機測定ではない。システムモデルは自己回帰デコードに限定し、計算律速のプリフィルは対象外である。主なシステム比較はLlama-3.1-8B、バッチ1で、並列バッチ処理や実際のSSD制御器実装上の競合・熱・寿命分布までは検証していない。",
+    "models": ["Llama-3.1-8B", "Qwen-2.5-7B"],
+    "datasets": ["Pile validation", "WikiText-2", "LongBench"],
+    "baselines": ["FP16 full KV cache", "B1 NPU + DDR5 without compression", "B2 NPU + DDR5 with dictionary compression", "S1 CIM-SSD coefficients on controller", "S2 CIM-SSD coefficients on DRAM"],
+    "metrics": ["LongBench average", "perplexity", "dynamic KV compression ratio", "time-between-tokens", "energy per decode step"]
+  },
+  "reservation": {"claim_id": "claim-9333f33610f25827f87c2af1", "worker_id": "scheduled-chat-20260917t043138-0900", "worker_kind": "scheduled_chat"}
 }
