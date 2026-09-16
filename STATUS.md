@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:15:05 JST**
+> 自動生成: **2026-09-16 12:15:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **1** | **1** | **0** | **1** | **1** | — |
+| Research | **19** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **20** | **7** | **1** | **6** | **1** | **1** | **6** |
+| 合計 | **20** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -162,9 +162,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.23933` — SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:12:52 JST** / heartbeat: **09-16 12:14:02 JST** / lease expiry: **09-16 13:44:02 JST**
+  - claim: **09-16 12:15:19 JST** / heartbeat: **—** / lease expiry: **09-16 13:45:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-4055e74aec47c94e.json`
 
 #### Audit

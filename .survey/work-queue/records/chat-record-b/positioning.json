@@ -1,1 +1,54 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f8c92dbe0d7353097f52cee3","job_id":"job-research-4055e74aec47c94e","data":{"limitations":[{"name":"投機精度依存","description":"意図推定やdependency graphが外れると不要sandboxを先行起動し、一時的なCPU/メモリ浪費が発生する。予測信頼度と資源圧力に応じた回収制御が必要である。"},{"name":"workload非定常性","description":"新規toolや遷移パターンが頻繁に変わるagentでは履歴依存prefetchの予測力が落ちる。multi-tenant環境でユーザーごとのtool系列が異なる場合もgraphの一般化が難しい。"},{"name":"結果cacheの意味安全性","description":"semantic similarityだけで副作用を持つtool invocationを再利用すると不正確になるため、純粋関数的toolや明示的なcacheability条件へ限定する必要がある。"},{"name":"共有メモリ配置制約","description":"zero-copy artifact planeは共有メモリを安全に共有できるホスト/実行環境で最大効果を持つ。ノードを跨ぐsandboxや強い隔離境界では別transportが必要になる。"}],"differences":[{"name":"常時予約sandboxとの差","description":"persistent方式は最低遅延だが全候補環境のメモリを常時消費する。SpecBoxはLLM生成から近未来需要を予測し必要候補だけを短時間先行確保するため、低tail latencyを保ちながらpeak memoryを減らす。"},{"name":"on-demand sandboxとの差","description":"lazy方式はtool-call確定後にcold-startを開始するため起動時間がそのままユーザー待ち時間になる。SpecBoxは確定前のtoken streamからprewarmし、推論時間と起動を重畳する。"},{"name":"GPU推論schedulerとの差","description":"continuous batchingやKV schedulingはGPU上のmodel executionを最適化するのに対し、SpecBoxはagentが呼ぶ外部隔離実行環境の生命周期とtool間artifactを対象とする。両者は直交し併用できる。"},{"name":"AgentCgroup等の資源隔離との差","description":"資源制御/隔離方式が実行中sandboxの公平性や上限を扱うのに対し、SpecBoxはsandboxが必要になる時刻を予測して作成・回収する時間方向のschedulingを中心にする。"}],"implementation_status":"ストリーミング意図推定、sandbox pool、dependency-graph prefetch、semantic result cache、out-of-band shared-memory transportを統合したruntime prototypeを実装し、高並行agent traceで評価している。","research_positioning":"LLM agent serving、serverless/container cold-start、投機prefetch、runtime resource managementの交点に位置する。LLM推論時間を外部sandbox準備の隠蔽窓へ転換する点が特徴である。","relation_to_existing_repository":"LLM serving/scheduling/disaggregation系統に属するが、GPU/KVではなくtool sandbox memoryとcold-startを主要資源として扱う。agent runtimeの資源管理研究とGPU推論基盤を接続する補完的な論文である。","audit_required":false},"reservation":{"claim_id":"claim-f8c92dbe0d7353097f52cee3","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-75280cfa986cb226a14d3a7a",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "limitations": [
+      {
+        "name": "投機精度依存",
+        "description": "意図推定やdependency graphが外れると不要sandboxを先行起動し、一時的なCPU/メモリ浪費が発生する。予測信頼度と資源圧力に応じた回収制御が必要である。"
+      },
+      {
+        "name": "workload非定常性",
+        "description": "新規toolや遷移パターンが頻繁に変わるagentでは履歴依存prefetchの予測力が落ちる。multi-tenant環境でユーザーごとのtool系列が異なる場合もgraphの一般化が難しい。"
+      },
+      {
+        "name": "結果cacheの意味安全性",
+        "description": "semantic similarityだけで副作用を持つtool invocationを再利用すると不正確になるため、純粋関数的toolや明示的なcacheability条件へ限定する必要がある。"
+      },
+      {
+        "name": "共有メモリ配置制約",
+        "description": "zero-copy artifact planeは共有メモリを安全に共有できるホスト/実行環境で最大効果を持つ。ノードを跨ぐsandboxや強い隔離境界では別transportが必要になる。"
+      }
+    ],
+    "differences": [
+      {
+        "name": "常時予約sandboxとの差",
+        "description": "persistent方式は最低遅延だが全候補環境のメモリを常時消費する。SpecBoxはLLM生成から近未来需要を予測し必要候補だけを短時間先行確保するため、低tail latencyを保ちながらpeak memoryを減らす。"
+      },
+      {
+        "name": "on-demand sandboxとの差",
+        "description": "lazy方式はtool-call確定後にcold-startを開始するため起動時間がそのままユーザー待ち時間になる。SpecBoxは確定前のtoken streamからprewarmし、推論時間と起動を重畳する。"
+      },
+      {
+        "name": "GPU推論schedulerとの差",
+        "description": "continuous batchingやKV schedulingはGPU上のmodel executionを最適化するのに対し、SpecBoxはagentが呼ぶ外部隔離実行環境の生命周期とtool間artifactを対象とする。両者は直交し併用できる。"
+      },
+      {
+        "name": "AgentCgroup等の資源隔離との差",
+        "description": "資源制御/隔離方式が実行中sandboxの公平性や上限を扱うのに対し、SpecBoxはsandboxが必要になる時刻を予測して作成・回収する時間方向のschedulingを中心にする。"
+      }
+    ],
+    "implementation_status": "ストリーミング意図推定、sandbox pool、dependency-graph prefetch、semantic result cache、out-of-band shared-memory transportを統合したruntime prototypeを実装し、高並行agent traceで評価している。",
+    "research_positioning": "LLM agent serving、serverless/container cold-start、投機prefetch、runtime resource managementの交点に位置する。LLM推論時間を外部sandbox準備の隠蔽窓へ転換する点が特徴である。",
+    "relation_to_existing_repository": "LLM serving/scheduling/disaggregation系統に属するが、GPU/KVではなくtool sandbox memoryとcold-startを主要資源として扱う。agent runtimeの資源管理研究とGPU推論基盤を接続する補完的な論文である。",
+    "audit_required": false
+  },
+  "reservation": {
+    "claim_id": "claim-75280cfa986cb226a14d3a7a",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

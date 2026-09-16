@@ -1,1 +1,41 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f8c92dbe0d7353097f52cee3","job_id":"job-research-4055e74aec47c94e","data":{"overview":"高並行multi-turn agent traceで、SpecBoxは必要時起動baselineに対するP99 E2E latencyを最大2.9倍改善した。同時に、すべてのsandboxを常時予約する方式と比べpeak memory consumptionを45.9%削減した。これはLLM token生成と現在tool実行の時間をprewarm/prefetchへ転用し、実際に必要となる可能性が高いsandboxだけを先行確保することで、cold-start隠蔽とメモリ節約を同時に得た結果である。semantic result cacheとzero-copy artifact planeは、起動以外の反復実行・転送遅延を追加で削減する。","key_results":[{"metric":"P99 end-to-end latency","value":"最大2.9倍改善","baseline":"on-demand sandbox baseline","condition":"高並行multi-turn agent traces","interpretation":"tool-call確定前のprewarmと将来sandbox prefetchによりcold-startをLLM/現在tool計算へ重畳できる。"},{"metric":"peak memory consumption","value":"45.9%削減","baseline":"permanently reserved sandbox deployment","condition":"投機的preallocation+回収","interpretation":"全sandboxを常時保持せず、予測された近未来需要だけを先行準備することで常駐メモリを減らす。"},{"metric":"artifact transfer overhead","value":"共有メモリzero-copyでserialization/copy経路を回避","baseline":"通常network/RPC artifact transfer","condition":"大容量tool artifact","interpretation":"sandbox起動を隠した後に残るデータ受渡しの臨界経路を短縮する。"}],"negative_results":"投機予測が外れると先行起動したsandboxが無駄なメモリ/CPUを一時消費するため、常にゼロコストではない。予測開始がtool-call直前まで遅れる場合はcold-startを十分隠せない。dependency graphとsemantic cacheの効果はworkload反復性に依存し、非定常なagent workflowや副作用toolでは利益が小さくなる。","interpretation":"agent servingの末尾遅延はGPU token生成だけでなく、外部実行環境の作成とtool間データ移動にも支配される。LLM生成が将来toolの情報を徐々に露出する性質を利用すれば、sandbox schedulingをCPU/IO prefetchと同様の投機実行問題として扱える。","quality_impact":"tool実行の意味やLLM出力を近似しないため、正しい投機では品質影響はない。誤投機は不要sandboxを作るだけで、正式tool-callと一致しなければその環境を使わず回収する。semantic cacheのみ副作用toolに対する安全な適用条件が必要である。"},"reservation":{"claim_id":"claim-f8c92dbe0d7353097f52cee3","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-75280cfa986cb226a14d3a7a",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "overview": "高並行multi-turn agent traceで、SpecBoxは必要時起動baselineに対するP99 E2E latencyを最大2.9倍改善した。同時に、すべてのsandboxを常時予約する方式と比べpeak memory consumptionを45.9%削減した。これはLLM token生成と現在tool実行の時間をprewarm/prefetchへ転用し、実際に必要となる可能性が高いsandboxだけを先行確保することで、cold-start隠蔽とメモリ節約を同時に得た結果である。semantic result cacheとzero-copy artifact planeは、起動以外の反復実行・転送遅延を追加で削減する。",
+    "key_results": [
+      {
+        "metric": "P99 end-to-end latency",
+        "value": "最大2.9倍改善",
+        "baseline": "on-demand sandbox baseline",
+        "condition": "高並行multi-turn agent traces",
+        "interpretation": "tool-call確定前のprewarmと将来sandbox prefetchによりcold-startをLLM/現在tool計算へ重畳できる。"
+      },
+      {
+        "metric": "peak memory consumption",
+        "value": "45.9%削減",
+        "baseline": "permanently reserved sandbox deployment",
+        "condition": "投機的preallocation+回収",
+        "interpretation": "全sandboxを常時保持せず、予測された近未来需要だけを先行準備することで常駐メモリを減らす。"
+      },
+      {
+        "metric": "artifact transfer overhead",
+        "value": "共有メモリzero-copyでserialization/copy経路を回避",
+        "baseline": "通常network/RPC artifact transfer",
+        "condition": "大容量tool artifact",
+        "interpretation": "sandbox起動を隠した後に残るデータ受渡しの臨界経路を短縮する。"
+      }
+    ],
+    "negative_results": "投機予測が外れると先行起動したsandboxが無駄なメモリ/CPUを一時消費するため、常にゼロコストではない。予測開始がtool-call直前まで遅れる場合はcold-startを十分隠せない。dependency graphとsemantic cacheの効果はworkload反復性に依存し、非定常なagent workflowや副作用toolでは利益が小さくなる。",
+    "interpretation": "agent servingの末尾遅延はGPU token生成だけでなく、外部実行環境の作成とtool間データ移動にも支配される。LLM生成が将来toolの情報を徐々に露出する性質を利用すれば、sandbox schedulingをCPU/IO prefetchと同様の投機実行問題として扱える。",
+    "quality_impact": "tool実行の意味やLLM出力を近似しないため、正しい投機では品質影響はない。誤投機は不要sandboxを作るだけで、正式tool-callと一致しなければその環境を使わず回収する。semantic cacheのみ副作用toolに対する安全な適用条件が必要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-75280cfa986cb226a14d3a7a",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

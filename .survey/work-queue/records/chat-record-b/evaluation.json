@@ -1,1 +1,42 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f8c92dbe0d7353097f52cee3","job_id":"job-research-4055e74aec47c94e","data":{"scope":"高並行multi-tenant・multi-turn LLM agent workloadで、sandboxを常時予約する方式、必要時起動する方式、SpecBoxを比較し、E2E/P99 latency、peak memory、投機prewarm、cache、artifact transportの寄与を評価する。","evaluation_setup":"prototype agent runtime上でLLM生成と外部sandbox tool executionを組み合わせたtraceを再生する。on-demand sandbox baselineは要求確定後に起動し、persistent baselineはsandboxを常時予約する。SpecBoxはstreaming intent prewarm、dependency-graph prefetch、semantic result cache、shared-memory transportを有効化し、高並行度でtail latencyと資源量を測る。","models":["tool-using LLM agent workloads"],"hardware":["LLM inference service + isolated sandbox execution hosts"],"workloads":["高並行multi-turn agent traces","連続tool invocationとsandbox switch","反復tool request","大容量artifact受渡し"],"metrics":["P99 end-to-end latency","peak memory consumption","sandbox cold-start overlap","cache hit/redundant invocation reduction","artifact transfer overhead"],"baselines":["lazy/on-demand sandbox instantiation","permanently reserved persistent sandboxes","個別最適化を除いたSpecBox ablation"],"simulation_assumptions":"prototype実行に基づくシステム評価。実サービスのtool分布やsandbox image、ホスト配置によってcold-startと投機命中率は変化する。","evaluation_caveats":"主要公開結果はagent traceに依存し、全MCP toolや異なるVM/container runtimeを網羅しない。semantic cacheは副作用を持つtoolへ無条件適用できず、shared-memory転送は配置制約を受ける。"},"reservation":{"claim_id":"claim-f8c92dbe0d7353097f52cee3","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-75280cfa986cb226a14d3a7a",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "scope": "高並行multi-tenant・multi-turn LLM agent workloadで、sandboxを常時予約する方式、必要時起動する方式、SpecBoxを比較し、E2E/P99 latency、peak memory、投機prewarm、cache、artifact transportの寄与を評価する。",
+    "evaluation_setup": "prototype agent runtime上でLLM生成と外部sandbox tool executionを組み合わせたtraceを再生する。on-demand sandbox baselineは要求確定後に起動し、persistent baselineはsandboxを常時予約する。SpecBoxはstreaming intent prewarm、dependency-graph prefetch、semantic result cache、shared-memory transportを有効化し、高並行度でtail latencyと資源量を測る。",
+    "models": [
+      "tool-using LLM agent workloads"
+    ],
+    "hardware": [
+      "LLM inference service + isolated sandbox execution hosts"
+    ],
+    "workloads": [
+      "高並行multi-turn agent traces",
+      "連続tool invocationとsandbox switch",
+      "反復tool request",
+      "大容量artifact受渡し"
+    ],
+    "metrics": [
+      "P99 end-to-end latency",
+      "peak memory consumption",
+      "sandbox cold-start overlap",
+      "cache hit/redundant invocation reduction",
+      "artifact transfer overhead"
+    ],
+    "baselines": [
+      "lazy/on-demand sandbox instantiation",
+      "permanently reserved persistent sandboxes",
+      "個別最適化を除いたSpecBox ablation"
+    ],
+    "simulation_assumptions": "prototype実行に基づくシステム評価。実サービスのtool分布やsandbox image、ホスト配置によってcold-startと投機命中率は変化する。",
+    "evaluation_caveats": "主要公開結果はagent traceに依存し、全MCP toolや異なるVM/container runtimeを網羅しない。semantic cacheは副作用を持つtoolへ無条件適用できず、shared-memory転送は配置制約を受ける。"
+  },
+  "reservation": {
+    "claim_id": "claim-75280cfa986cb226a14d3a7a",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

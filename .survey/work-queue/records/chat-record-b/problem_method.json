@@ -1,1 +1,38 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-f8c92dbe0d7353097f52cee3","job_id":"job-research-4055e74aec47c94e","data":{"problem":"LLMエージェントはMCPやツールAPIを介してコード実行、ブラウザ、データ処理等を隔離sandboxで行う。各ユーザー/ツール用sandboxを常時起動しておけば呼出しは速いが、高並行multi-turn環境では大量のアイドルsandboxがメモリを占有する。逆に必要時だけ起動するlazy方式は資源効率が高いものの、コンテナ/VM等のcold-startがツール呼出しの臨界経路へ入り、P99対話遅延を悪化させる。従来のLLMサービング最適化はGPU推論のbatchingやKV配置を中心に扱い、生成中に将来の外部実行環境を予測して準備する余地を十分利用していない。","novelty":"SpecBoxはLLMがツール名を確定して呼び出す前、生成途中のトークン列から将来ツール意図を予測し、その推論時間をsandbox cold-startの隠蔽窓として使う。単一ステップのprewarmだけでなく、agent workflowのsandbox依存グラフと現在文脈から次のsandbox遷移確率を予測してさらに先をprefetchする。投機起動の誤りによる浪費を抑えつつ、結果キャッシュと共有メモリ転送まで一つのruntimeに統合する点が特徴である。","method_overview":"実行時、SpecBoxはLLMのストリーミング出力を監視し、軽量なキーワード一致と逐次更新される意味埋め込みの双方からツール意図候補を得る。信頼度が閾値を超えると、正式なtool-call JSON等が完成する前に対応sandboxの確保・初期化を非同期に開始する。これにより残りのLLM生成時間とsandbox bootを重ね、実際にツール呼出しへ到達した時点では環境をreadyに近づける。multi-step agentでは過去のツール遷移と現在の実行文脈からsandbox dependency graph上の次ノード確率を計算し、現在sandboxの実行中に将来必要となりそうなsandboxを確率的にprefetchする。予測が外れたsandboxは保持期限や資源圧力に従って解放し、常時予約のメモリ量へ戻らないよう制御する。同じ意味のツール要求が繰り返される場合はsemantic result cacheで過去結果を再利用し、sandbox起動と実行自体を省略する。さらに大きなartifactをsandbox間またはagent runtimeへ渡す場合、通常のネットワークRPCでシリアライズ/コピーする経路とは別にout-of-band shared-memory transport planeを設け、共有領域の参照を渡すzero-copy転送でデータ移動時間を削減する。したがってcold-start隠蔽、将来sandbox先読み、重複実行削減、artifact転送削減の4経路でE2E末尾遅延を短縮する。","components":[{"name":"生成途中の意図駆動sandbox prewarm","description":"LLMが最終tool-callを出す前のストリーミングtokenを観測し、明示的なtool名に近いkeyword signalと意味埋め込みによるsemantic signalを組み合わせて利用意図を推定する。候補信頼度が十分高くなった時点でsandboxの割当、image/runtime初期化、依存資源準備を非同期に開始するため、正式呼出しまで残るtoken生成時間がcold-startの隠蔽窓になる。予測が正しければtool executionの臨界経路から起動時間の大部分を除ける。"},{"name":"依存グラフ上の確率的prefetch","description":"一つ先のツールだけでなく、agent traceから構築したsandbox dependency graphを使って現在状態から次に遷移するsandbox候補へ確率を割り当てる。現在のtool実行やLLM生成と並行して高確率候補を先行起動し、multi-step workflowでprewarming windowを複数段へ拡張する。全候補を常時予約するのではなく確率と資源予算でprefetch対象を絞り、外れた投機sandboxは期限切れ/圧力時に回収することでメモリ浪費を制御する。"},{"name":"semantic result cache","description":"ツール名や引数が文字列として完全一致しなくても意味的に同等な過去sandbox invocationを検索し、安全に再利用できる結果をcache hitとして返す。反復的なagent loopやmulti-turn問い合わせで同じ外部処理が再発した場合、sandboxの起動・実行・結果転送をまとめて省略できる。投機起動とは直交する最適化であり、cold-startが隠し切れない要求数自体を減らす。"},{"name":"共有メモリzero-copy artifact plane","description":"sandboxが生成した大きなファイルや中間artifactを通常RPCのpayloadとしてシリアライズしネットワークスタックで複数回コピーすると、tool実行が速くても転送が末尾遅延を支配する。SpecBoxは制御メッセージとは別のout-of-band共有メモリ領域へartifactを置き、次sandbox/runtimeへ参照を渡す専用transport planeを使う。これによりserialization、kernel/network copy、再構築を避け、sandbox切替時のデータ受渡しをzero-copy化する。"}],"system_design":"LLM serving pathの横にSpecBox controllerを置き、token streamからprewarmを発火し、dependency graphで将来sandboxをprefetchする。sandbox pool managerが投機資源の作成/回収を管理し、result cacheとshared-memory planeがtool実行後の再利用とartifact転送を短縮する。","why_it_works":"agent pipelineにはLLMがtool-callを文章/JSONとして生成している時間や現在toolを実行している時間が存在する。この時間に次sandboxのcold-startを先行させればユーザー可視の臨界経路から起動時間を外せる。確率的選択により常時予約ほどのメモリは不要になる。","failure_modes":"ツール意図の予測が遅い/誤るとcold-startを隠せず、誤投機sandboxが一時的に資源を消費する。workflow遷移が非定常ならdependency graphの予測精度が下がる。意味cacheは副作用を持つtoolでは慎重な再利用判定が必要で、共有メモリplaneは同一ホスト/共有可能領域など配置制約を受ける。"},"reservation":{"claim_id":"claim-f8c92dbe0d7353097f52cee3","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-75280cfa986cb226a14d3a7a",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "problem": "LLMエージェントはMCPやツールAPIを介してコード実行、ブラウザ、データ処理等を隔離sandboxで行う。各ユーザー/ツール用sandboxを常時起動しておけば呼出しは速いが、高並行multi-turn環境では大量のアイドルsandboxがメモリを占有する。逆に必要時だけ起動するlazy方式は資源効率が高いものの、コンテナ/VM等のcold-startがツール呼出しの臨界経路へ入り、P99対話遅延を悪化させる。従来のLLMサービング最適化はGPU推論のbatchingやKV配置を中心に扱い、生成中に将来の外部実行環境を予測して準備する余地を十分利用していない。",
+    "novelty": "SpecBoxはLLMがツール名を確定して呼び出す前、生成途中のトークン列から将来ツール意図を予測し、その推論時間をsandbox cold-startの隠蔽窓として使う。単一ステップのprewarmだけでなく、agent workflowのsandbox依存グラフと現在文脈から次のsandbox遷移確率を予測してさらに先をprefetchする。投機起動の誤りによる浪費を抑えつつ、結果キャッシュと共有メモリ転送まで一つのruntimeに統合する点が特徴である。",
+    "method_overview": "実行時、SpecBoxはLLMのストリーミング出力を監視し、軽量なキーワード一致と逐次更新される意味埋め込みの双方からツール意図候補を得る。信頼度が閾値を超えると、正式なtool-call JSON等が完成する前に対応sandboxの確保・初期化を非同期に開始する。これにより残りのLLM生成時間とsandbox bootを重ね、実際にツール呼出しへ到達した時点では環境をreadyに近づける。multi-step agentでは過去のツール遷移と現在の実行文脈からsandbox dependency graph上の次ノード確率を計算し、現在sandboxの実行中に将来必要となりそうなsandboxを確率的にprefetchする。予測が外れたsandboxは保持期限や資源圧力に従って解放し、常時予約のメモリ量へ戻らないよう制御する。同じ意味のツール要求が繰り返される場合はsemantic result cacheで過去結果を再利用し、sandbox起動と実行自体を省略する。さらに大きなartifactをsandbox間またはagent runtimeへ渡す場合、通常のネットワークRPCでシリアライズ/コピーする経路とは別にout-of-band shared-memory transport planeを設け、共有領域の参照を渡すzero-copy転送でデータ移動時間を削減する。したがってcold-start隠蔽、将来sandbox先読み、重複実行削減、artifact転送削減の4経路でE2E末尾遅延を短縮する。",
+    "components": [
+      {
+        "name": "生成途中の意図駆動sandbox prewarm",
+        "description": "LLMが最終tool-callを出す前のストリーミングtokenを観測し、明示的なtool名に近いkeyword signalと意味埋め込みによるsemantic signalを組み合わせて利用意図を推定する。候補信頼度が十分高くなった時点でsandboxの割当、image/runtime初期化、依存資源準備を非同期に開始するため、正式呼出しまで残るtoken生成時間がcold-startの隠蔽窓になる。予測が正しければtool executionの臨界経路から起動時間の大部分を除ける。"
+      },
+      {
+        "name": "依存グラフ上の確率的prefetch",
+        "description": "一つ先のツールだけでなく、agent traceから構築したsandbox dependency graphを使って現在状態から次に遷移するsandbox候補へ確率を割り当てる。現在のtool実行やLLM生成と並行して高確率候補を先行起動し、multi-step workflowでprewarming windowを複数段へ拡張する。全候補を常時予約するのではなく確率と資源予算でprefetch対象を絞り、外れた投機sandboxは期限切れ/圧力時に回収することでメモリ浪費を制御する。"
+      },
+      {
+        "name": "semantic result cache",
+        "description": "ツール名や引数が文字列として完全一致しなくても意味的に同等な過去sandbox invocationを検索し、安全に再利用できる結果をcache hitとして返す。反復的なagent loopやmulti-turn問い合わせで同じ外部処理が再発した場合、sandboxの起動・実行・結果転送をまとめて省略できる。投機起動とは直交する最適化であり、cold-startが隠し切れない要求数自体を減らす。"
+      },
+      {
+        "name": "共有メモリzero-copy artifact plane",
+        "description": "sandboxが生成した大きなファイルや中間artifactを通常RPCのpayloadとしてシリアライズしネットワークスタックで複数回コピーすると、tool実行が速くても転送が末尾遅延を支配する。SpecBoxは制御メッセージとは別のout-of-band共有メモリ領域へartifactを置き、次sandbox/runtimeへ参照を渡す専用transport planeを使う。これによりserialization、kernel/network copy、再構築を避け、sandbox切替時のデータ受渡しをzero-copy化する。"
+      }
+    ],
+    "system_design": "LLM serving pathの横にSpecBox controllerを置き、token streamからprewarmを発火し、dependency graphで将来sandboxをprefetchする。sandbox pool managerが投機資源の作成/回収を管理し、result cacheとshared-memory planeがtool実行後の再利用とartifact転送を短縮する。",
+    "why_it_works": "agent pipelineにはLLMがtool-callを文章/JSONとして生成している時間や現在toolを実行している時間が存在する。この時間に次sandboxのcold-startを先行させればユーザー可視の臨界経路から起動時間を外せる。確率的選択により常時予約ほどのメモリは不要になる。",
+    "failure_modes": "ツール意図の予測が遅い/誤るとcold-startを隠せず、誤投機sandboxが一時的に資源を消費する。workflow遷移が非定常ならdependency graphの予測精度が下がる。意味cacheは副作用を持つtoolでは慎重な再利用判定が必要で、共有メモリplaneは同一ホスト/共有可能領域など配置制約を受ける。"
+  },
+  "reservation": {
+    "claim_id": "claim-75280cfa986cb226a14d3a7a",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

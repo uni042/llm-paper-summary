@@ -1,1 +1,84 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f8c92dbe0d7353097f52cee3","job_id":"job-research-4055e74aec47c94e","data":{"canonical_id":"arXiv:2607.23933","arxiv_id":"2607.23933","doi":"10.48550/arXiv.2607.23933","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving","summary":"SpecBoxは、LLMエージェントがMCP等で外部ツール用隔離サンドボックスを使う際、常時予約ではメモリを浪費し、オンデマンド起動ではコールドスタートが末尾遅延を悪化させる問題に対し、LLMのトークン生成途中からツール意図を推測してサンドボックス起動を先行させるランタイムである。キーワード一致とストリーミング意味埋め込みによる意図駆動prewarm、依存グラフ上の文脈依存確率prefetch、意味結果キャッシュ、共有メモリzero-copy転送を統合する。高並行multi-turn agent traceでオンデマンド比P99エンドツーエンド遅延を最大2.9倍短縮し、常時予約方式比でpeak memoryを45.9%削減した。","list_summary":"SpecBoxはLLM生成中に将来のツール利用を推測して隔離sandboxを投機起動し、依存グラフprefetch・結果cache・共有メモリ転送を組み合わせてagent servingのcold-start遅延と常時予約メモリを両立改善する。","authors":["Yihui Zhang","Tianyu Wo","Jinghao Wang","Xiaoyang Sun","Menghao Zhang","Cangzhou Yuan","Li Li","Chunming Hu","Albert Y. Zomaya","Renyu Yang"],"authors_affiliations":"一次資料記載の著者所属。","published":"2026-07-27","publication":"arXiv:2607.23933v1","publication_type":"プレプリント","publication_status":"arXiv v1（2026-07-27提出）。","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMエージェント","sandbox scheduling","投機的prewarming","MCP","結果キャッシュ","zero-copy転送"],"importance":"高。GPU推論外のagent runtime資源を投機スケジューリング対象にし、推論時間をsandbox起動隠蔽窓として利用する。","hardware_evaluation":"高並行multi-turn agent traceを用いたprototype評価。隔離sandboxの起動、メモリ、P99 E2E latencyを測定。","hardware_details":"論文prototypeのagent serving cluster上で評価。詳細構成は一次資料評価節に従う。","quality_effect":"ツール実行結果自体を近似せず、sandbox起動時刻、結果再利用、artifact転送を最適化する。投機失敗は余分な資源消費として現れる。","storage_targets":["sandbox memory","semantic result cache","shared-memory artifact plane"],"bottlenecks":["sandbox cold-start","persistent reservation memory","tool intent prediction","sandbox switch latency","artifact serialization/network transfer"],"evidence_locations":["arXiv abstract","method/evaluation sections","latency and memory figures"],"source":"https://arxiv.org/abs/2607.23933","sources":["https://arxiv.org/abs/2607.23933","https://arxiv.org/pdf/2607.23933"],"code":"","implementation":"投機的sandbox preallocation、dependency-graph prefetch、semantic result cache、out-of-band shared-memory transportを持つruntime prototype。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"一次資料関連研究節","references_total":0},"reservation":{"claim_id":"claim-f8c92dbe0d7353097f52cee3","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-75280cfa986cb226a14d3a7a",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "canonical_id": "arXiv:2607.23933",
+    "arxiv_id": "2607.23933",
+    "doi": "10.48550/arXiv.2607.23933",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
+    "summary": "SpecBoxは、LLMエージェントがMCP等で外部ツール用隔離サンドボックスを使う際、常時予約ではメモリを浪費し、オンデマンド起動ではコールドスタートが末尾遅延を悪化させる問題に対し、LLMのトークン生成途中からツール意図を推測してサンドボックス起動を先行させるランタイムである。キーワード一致とストリーミング意味埋め込みによる意図駆動prewarm、依存グラフ上の文脈依存確率prefetch、意味結果キャッシュ、共有メモリzero-copy転送を統合する。高並行multi-turn agent traceでオンデマンド比P99エンドツーエンド遅延を最大2.9倍短縮し、常時予約方式比でpeak memoryを45.9%削減した。",
+    "list_summary": "SpecBoxはLLM生成中に将来のツール利用を推測して隔離sandboxを投機起動し、依存グラフprefetch・結果cache・共有メモリ転送を組み合わせてagent servingのcold-start遅延と常時予約メモリを両立改善する。",
+    "authors": [
+      "Yihui Zhang",
+      "Tianyu Wo",
+      "Jinghao Wang",
+      "Xiaoyang Sun",
+      "Menghao Zhang",
+      "Cangzhou Yuan",
+      "Li Li",
+      "Chunming Hu",
+      "Albert Y. Zomaya",
+      "Renyu Yang"
+    ],
+    "authors_affiliations": "一次資料記載の著者所属。",
+    "published": "2026-07-27",
+    "publication": "arXiv:2607.23933v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-07-27提出）。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "LLMエージェント",
+      "sandbox scheduling",
+      "投機的prewarming",
+      "MCP",
+      "結果キャッシュ",
+      "zero-copy転送"
+    ],
+    "importance": "高。GPU推論外のagent runtime資源を投機スケジューリング対象にし、推論時間をsandbox起動隠蔽窓として利用する。",
+    "hardware_evaluation": "高並行multi-turn agent traceを用いたprototype評価。隔離sandboxの起動、メモリ、P99 E2E latencyを測定。",
+    "hardware_details": "論文prototypeのagent serving cluster上で評価。詳細構成は一次資料評価節に従う。",
+    "quality_effect": "ツール実行結果自体を近似せず、sandbox起動時刻、結果再利用、artifact転送を最適化する。投機失敗は余分な資源消費として現れる。",
+    "storage_targets": [
+      "sandbox memory",
+      "semantic result cache",
+      "shared-memory artifact plane"
+    ],
+    "bottlenecks": [
+      "sandbox cold-start",
+      "persistent reservation memory",
+      "tool intent prediction",
+      "sandbox switch latency",
+      "artifact serialization/network transfer"
+    ],
+    "evidence_locations": [
+      "arXiv abstract",
+      "method/evaluation sections",
+      "latency and memory figures"
+    ],
+    "source": "https://arxiv.org/abs/2607.23933",
+    "sources": [
+      "https://arxiv.org/abs/2607.23933",
+      "https://arxiv.org/pdf/2607.23933"
+    ],
+    "code": "",
+    "implementation": "投機的sandbox preallocation、dependency-graph prefetch、semantic result cache、out-of-band shared-memory transportを持つruntime prototype。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "一次資料関連研究節",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-75280cfa986cb226a14d3a7a",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
