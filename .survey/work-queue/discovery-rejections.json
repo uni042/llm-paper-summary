@@ -2,9 +2,9 @@
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
   "updated_at": "2026-09-17T04:00:00+09:00",
-  "submission_count": 2,
-  "rejection_observation_count": 6,
-  "rejection_record_count": 6,
+  "submission_count": 3,
+  "rejection_observation_count": 7,
+  "rejection_record_count": 7,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2410.14740": {
@@ -48,6 +48,27 @@
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2410.20488": {
+      "primary_identity": "id:arXiv:2410.20488",
+      "identity_tokens": [
+        "id:arXiv:2410.20488",
+        "title:firp faster llm inference via future intermediate representation prediction",
+        "url:https://arxiv.org/abs/2410.20488"
+      ],
+      "canonical_id": "arXiv:2410.20488",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "FIRP: Faster LLM inference via future intermediate representation prediction",
+      "source_url": "https://arxiv.org/abs/2410.20488",
+      "rejection_reason": "speculative decoding高速化として関連するが、future hidden-state predictionというmodel-method寄りの寄与が中心で、今回のserving/runtime system軸では優先度が低い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T04:00:00+09:00",
+      "last_rejected_at": "2026-09-17T04:00:00+09:00",
+      "axis": "speculative decodingのmemory/runtime/distributed serving・communication co-design",
+      "run_key": "2026-09-17T04:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json"
     },
     "id:arXiv:2411.17309": {
       "primary_identity": "id:arXiv:2411.17309",
