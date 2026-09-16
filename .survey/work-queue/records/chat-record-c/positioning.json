@@ -6,42 +6,42 @@
   "job_id": "job-research-a8b5b2b70328c222",
   "data": {
     "positioning": "本研究は接頭辞キャッシュの速度・容量研究と、決定的推論・量子化品質研究の交点に位置する。PagedAttentionやRadixAttentionなどが再利用率、処理量、遅延を主に評価するのに対し、同じ要求がキャッシュ状態によって同じ出力を再現できるかをサービング品質として測る。",
-    "differences": "既存の単一ターンFP16研究がキャッシュ経路と再計算経路の数値非等価性を示したのに対し、本研究は実推論基盤、複数ターンエージェント、低ビット重み、サーバ状態を加え、発散の頻度と運用上の原因を測る。量子化研究が平均精度を主指標にするのに対し、平均精度が同じでも個別項目が入れ替わる不安定性を独立した品質軸として扱う。",
+    "differences": "既存の単一ターン16ビット浮動小数点研究がキャッシュ経路と再計算経路の数値非等価性を示したのに対し、本研究は実推論基盤、複数ターンエージェント、低ビット重み、サーバ状態を加え、発散の頻度と運用上の原因を測る。量子化研究が平均精度を主指標にするのに対し、平均精度が同じでも個別項目が入れ替わる不安定性を独立した品質軸として扱う。",
     "relation_to_prior_work": [
       {
         "work": "PagedAttention / RadixAttention / Prompt Cache",
-        "difference": "cache reuseの性能利益に対し、warm/cold pathが同じrequestへ同じtoken列を返すかを測定し、cache stateを再現性条件として追加する。"
+        "difference": "キャッシュ再利用の性能利益に対し、暖状態と冷状態の経路が同じ要求へ同じトークン列を返すかを測定し、キャッシュ状態を再現性条件として追加する。"
       },
       {
         "work": "The Illusion of Equivalence",
-        "difference": "FP16単一ターンの数値非等価性を、llama.cpp/vLLM、multi-turn agent、3～16bit weightsへ拡張し、state reset controlで経路内決定性を検証する。"
+        "difference": "16ビット浮動小数点・単一ターンの数値非等価性を、llama.cppとvLLM、複数ターンエージェント、3～16ビット重みへ拡張し、状態復元の対照実験で経路内決定性を検証する。"
       },
       {
         "work": "deterministic inference / batch-invariant kernels",
-        "difference": "batch size 1とserial requestsでbatch compositionを固定し、それでも残るcache-state dependenceを別の非決定要因として分離する。"
+        "difference": "バッチサイズ1と直列要求でバッチ構成を固定し、それでも残るキャッシュ状態依存を別の非決定要因として分離する。"
       },
       {
         "work": "LLM quantization quality studies",
-        "difference": "aggregate accuracyではなく、同じcache perturbationが低ビット化で個別token decisionをどれだけflipしやすくなるかをtrajectory divergenceとして測る。"
+        "difference": "集計精度ではなく、同じキャッシュ摂動が低ビット化で個別トークン決定をどれだけ反転させやすくなるかを軌跡発散として測る。"
       }
     ],
     "strengths": [
-      "cache-offの800 episode完全一致を内部対照にし、一般的nondeterminismを定量的に上界化する。",
-      "server-level prompt cache flag、execution order、state resetを個別操作して因果機構を切り分ける。",
-      "weight precisionを順序付けてquantization amplificationを測り、4bit付近の飽和まで報告する。",
+      "キャッシュ無効時の800エピソード完全一致を内部対照にし、一般的な非決定性を定量的に上界化する。",
+      "サーバ水準プロンプトキャッシュ設定、実行順、状態復元を個別操作して因果機構を切り分ける。",
+      "重み精度を順序付けて量子化による増幅を測り、4ビット付近の飽和まで報告する。",
       "llama.cppとvLLMという独立実装で方向性を再現する。",
-      "agent trajectoryとGSM8K correctnessを分け、repeatability lossとaverage degradationを混同しない。"
+      "エージェント軌跡とGSM8K正解性を分け、反復再現性の喪失と平均品質低下を混同しない。"
     ],
     "limitations": [
-      "7～14B open-weight modelsと単一RTX 4090に限定され、frontier-scale hosted endpointsは未評価。",
-      "agent workloadは一種類でtask successが低く、agent最終成功率への方向性は結論できない。",
-      "multi-tenant trafficで他利用者がcache stateを書き換える条件は測定していない。",
-      "vLLM session間の発散率差の原因はGPU memory fraction、driver、launch scriptなどを完全分離できていない。",
-      "token divergenceは意味的に同等な言い換えも差として数えるため、再現性には適切だがsemantic quality指標ではない。"
+      "7～14Bの公開重みモデルと単一RTX 4090に限定され、大規模な商用提供モデルは未評価である。",
+      "エージェント負荷は一種類で課題成功率が低く、エージェント最終成功率への方向性は結論できない。",
+      "複数利用者の同時トラフィックで他利用者がキャッシュ状態を書き換える条件は測定していない。",
+      "vLLMのセッション間に見られる発散率差について、GPUメモリ割当率、ドライバ、起動スクリプトなどの寄与を完全には分離できていない。",
+      "トークン発散は意味的に同等な言い換えも差として数えるため、再現性の指標には適切だが意味品質そのものの指標ではない。"
     ],
-    "implementation_status": "実験harness、raw request logs、cache exposure telemetry、analysis pipelineを公開し、stored responsesから全数値を再生成可能とする。llama.cpp/vLLMの実serverを使う実測研究でsimulationではない。",
-    "research_positioning": "LLM servingのSLOをlatency/throughputだけでなくreproducibilityまで拡張する研究である。cacheを無効化する必要はなく、stateをrun境界でresetしconfigurationを固定・記録すれば性能利益を残しながらrepeatabilityを改善できるという運用示唆を与える。",
-    "repository_fit": "serving scheduling/disaggregation系統のreliability側として適合する。prefix/KV cacheを高速化する論文群に対し、そのstate managementが実験再現性・agent debugging・A/B evaluationへ与える副作用を補完する。"
+    "implementation_status": "実験ハーネス、要求ログ、キャッシュ露出量の計測情報、解析処理系を公開し、保存済み応答から全数値を再生成可能とする。llama.cppとvLLMの実サーバを使う実測研究であり、シミュレーションではない。",
+    "research_positioning": "LLMサービングのサービス水準目標を遅延・処理量だけでなく再現性まで拡張する研究である。キャッシュを無効化する必要はなく、状態を実行境界で復元し設定を固定・記録すれば、性能利益を残しながら反復再現性を改善できるという運用上の示唆を与える。",
+    "repository_fit": "サービングのスケジューリング・分離実行系統の信頼性側として適合する。接頭辞・KVキャッシュを高速化する論文群に対し、その状態管理が実験再現性、エージェントのデバッグ、A/B評価へ与える副作用を補完する。"
   },
   "reservation": {
     "claim_id": "claim-0474271cc6e2d75634092b89",
