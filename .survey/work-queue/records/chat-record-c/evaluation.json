@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-bb3ec0465085989a9a744808",
   "job_id": "job-research-f61c46feeea304bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bb3ec0465085989a9a744808",
-    "worker_id": "manual-read-20260916-1109",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価は60基のNVIDIA H100で、Llama-3.3-70B fp8を30個のTP2宛先として実行する。機構評価は30基のH100でLlama-3.1-8B-Instruct bf16を30単一GPU宛先として実行する。",
+    "software": "クライアント側ルーティングハーネスから各方針で直接宛先を選択し、同一のサービングスタック、要求列、ウォームアップ除外、負荷ラダー、健全性判定を使用する。ルータはモデル実行、KV容量、エンジンの追い出し方針を変更しない。",
+    "methodology": "主負荷は匿名化した運用テレメトリからキー別要求率・再訪間隔・人気度を再構成した半合成ピーク時分布で、128,824個の不透明キー、Gini係数0.756、上位4%が約47%の要求を占める。入力は平均約1.2Kトークンで、キー固有の安定文脈は約180トークン。2つ目の独立半合成分布で分布移動を検証し、Poisson、CV一致Gamma、移動ブロック再標本化でバースト感度を見る。Flat-LB、Sticky、CHWBL、DualMap風、Preble風と比較し、p99遅延が閾値以下かつ失敗率5%以下を満たす最大提供QPSをSLO容量とする。主top-K128は5組seed、top-K256確認は8組、補助評価は原則3組の対応seedを使う。",
+    "scope": "大規模実機評価と明示的な負結果を含むが、主モデルは70B fp8、機構評価は8B、負・同率領域は別32B構成で、ハードウェアはH100に限定される。半合成負荷は運用統計を保つ一方、正確なキー別時刻や要求本文は保持しない。Preble、DualMap、CHWBLは共通ハーネス上の再実装であり、原著システム全体の再現値ではない。温存枠はプレフィックス長が概ね均一と仮定し、長さが不均一な文脈向けのバイト単位採用は未実装。",
+    "workloads": ["Llama-3.3-70B fp8 + 主半合成分布", "Llama-3.3-70B fp8 + 第2半合成分布", "Llama-3.1-8B-Instruct bf16 + 半合成/合成ホエール", "32B + 半合成集約A/B", "Gamma・移動ブロック再標本化バースト"],
+    "baselines": ["Flat-LB", "Sticky consistent hashing", "CHWBL", "DualMap-style", "Preble-style"],
+    "metrics": ["p99 SLO容量（QPS）", "p99遅延", "失敗率", "提供済みトークン重み付きKVヒット率", "宛先負荷偏り", "計画作成時間", "再計画時のヒット率低下"],
+    "reproducibility": "ハードウェア、モデル、宛先構成、負荷統計、比較方針、SLO判定、seed数、右打ち切り条件を詳述する。匿名化運用統計は要求本文を含まず、Preble等は再実装である。2026-09-16時点で公式ソースコードURLは確認できないため、完全な追試にはハーネス再実装が必要になる。"
+  },
+  "reservation": {"claim_id": "claim-bb3ec0465085989a9a744808", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
 }
