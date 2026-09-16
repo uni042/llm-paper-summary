@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 23:03:50 JST**
+> 自動生成: **2026-09-16 23:03:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -195,9 +195,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.09613` — Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference / worker `scheduled-chat-llm-survey-turn5-20260916T225915JST`
-  - claim: **09-16 23:01:16 JST** / heartbeat: **—** / lease expiry: **09-17 00:31:16 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7b525e11834c9519.json`
+- `arXiv:2512.09427` — ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators / worker `scheduled-chat-llm-survey-turn5-20260916T225915JST`
+  - claim: **09-16 23:03:57 JST** / heartbeat: **—** / lease expiry: **09-17 00:33:57 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3165425bd10baa45.json`
 
 #### Audit
 
