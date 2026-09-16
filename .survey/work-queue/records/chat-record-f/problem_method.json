@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-de4da6f22324bacb081d2979",
-  "job_id": "job-research-3c85afd190edf390",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-de4da6f22324bacb081d2979",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-de4da6f22324bacb081d2979","job_id":"job-research-3c85afd190edf390","data":{"problem":"分散LLMサービングでは長文脈ほどKVキャッシュが巨大化し、GPUやソフトウェア障害で一部を失うと長いプリフィルを最初から再計算する必要がある。405Bモデルの100万トークン文脈では8×H100でも再計算に約20分かかる例があり、長時間エージェント処理では障害損失が大きい。CPUへKV全体を複製する方式はホストメモリを数百GB消費し、PCIe転送でプリフィルを大きく遅らせる。SSD退避はさらに遅い。テンソル並列では各GPUがKVの一部だけを持つため、冗長化計算のために他GPU断片を恒常的にHBMへ保持する方式も容量と通信の負担が大きい。","novelty":"GhostServeはKV本体の完全コピーではなく、N個のデータ断片に対するK個のパリティ断片だけをホストDRAMへ保存する。FP16をIEEE-754の固定幅整数ビット列として再解釈し、XOR、RDP、Reed-Solomonを損失なく適用する専用CUDAカーネルを実装する。パリティ生成をKVチャンク単位にし、そのチャンクだけを指定GPUへ集約して符号化後すぐCPUへ非同期退避するため、恒常的なHBM冗長領域を不要にする。さらに符号化担当GPUをチャンクごとに巡回させ、障害復旧では短い先頭部分の再計算と残り部分のパリティ復元・PCIe転送を並行させる。","method_overview":"プリフィルまたは復号で各GPUがmトークン分のKVチャンクを生成すると、その時点の担当GPUへテンソル並列全GPUのチャンク断片をtorch.distributed.gatherで集約する。担当GPUはFP16からuint16への詰め替え、有限体またはXORパリティ演算、必要な展開を一つのCUDAパスへ融合してK個のパリティを生成し、PCIe経由でホストDRAMへ非同期転送する。次チャンクでは担当を次GPUへ回す。障害時は系列長、チャンク数、通信・復元費用から再計算する先頭rチャンクを決め、それ以降は生存GPUのデータ断片とCPU上のパリティを障害GPUへ集め、複数CUDAストリームで復元する。短い系列なら通信費を避け全再計算を選ぶ。","system_design":"ストレージ分野の消失訂正符号をKVキャッシュの一時状態保護へ移し、冗長性の量を障害許容数Kで調整可能にする。計算場所はGPU、耐久先はホストDRAMと分離し、チャンク境界でだけ同期することで高帯域NVLinkを利用しながらHBM容量を温存する。","components":[{"name":"損失なしKV符号化カーネル","description":"FP16値を数値変換せず16ビットのビットパターンとして扱い、XOR、RDP、Reed-Solomonを適用する。変換・符号化・復元を融合し、CUDA Graphと複数ストリームも使ってPyTorch実装の中間転送と起動費を削減する。"},{"name":"チャンク単位シャドーチェックポイント","description":"各KVチャンク完成時だけ全GPU断片を一台へ集約し、K個のパリティを生成してホストへ逃がす。8:2構成では完全複製比でホストメモリ負担を75%削減する。"},{"name":"巡回負荷分散","description":"符号化担当をGPU 0,1,…とチャンクごとに回し、特定GPUのストラグラ化や熱偏りを避ける。チャンク間の待機は高速NVLinkと専用カーネルにより5%未満と報告する。"},{"name":"再計算併用復旧","description":"障害直後に先頭部分をGPUで再計算しつつ、残りのパリティと生存断片を転送して復元する。通信待ちでGPUを遊ばせず、純粋な符号復元より最大42.9%復旧時間を改善する。"}]},"reservation":{"claim_id":"claim-de4da6f22324bacb081d2979","worker_id":"scheduled-chat-hourly-survey-20260916T142343JST","worker_kind":"scheduled_chat"}}
