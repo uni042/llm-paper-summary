@@ -2,52 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-b3bd426f06600d475ee9c2d0",
-  "job_id": "job-research-6eb709dc3f5cf15a",
-  "data": {
-    "canonical_id": "arXiv:2409.15104",
-    "arxiv_id": "2409.15104",
-    "doi": "10.48550/arXiv.2409.15104",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference",
-    "summary": "最新版v2では初版CSPSから題名と主題が大幅に更新され、短入力が多数・長入力が少数という実運用の長尾分布を対象に、長入力による先頭待ち阻害と長入力の飢餓を同時に抑えるクラスタスケジューラPecSchedを提案する。短入力の事前計算だけが長入力事前計算を横取りし、短入力の復号は専用資源へ分離する一方、長入力復号と短入力事前計算は計算・メモリ特性の違いを利用して同居させる。さらにノード間リング注意とノード内Megatron/Ulysses型系列並列を組み合わせ、長入力事前計算を短縮する。Azure追跡データを基にした評価で短入力の99百分位待ち時間を最大92%削減し、処理量を最大595%改善する。",
-    "list_summary": "長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。",
-    "authors": [
-      "Zeyu Zhang",
-      "Haiying Shen"
-    ],
-    "published": "2025-06-08",
-    "publication": "arXiv:2409.15104v2",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "serving-scheduling",
-    "topics": [
-      "クラスタスケジューリング",
-      "長文脈推論",
-      "横取り",
-      "系列並列"
-    ],
-    "importance": "短入力と100K〜500K級長入力が混在するクラスタで、長入力の先頭待ち阻害と優先度方式による飢餓を同時に扱う。",
-    "hardware_evaluation": "AWS p4de.24xlargeを4台、各8基のNVIDIA A100 80GiB、400Gbpsネットワークで評価。",
-    "quality_effect": "モデル近似を導入せずスケジューリングと並列実行を変更するため生成品質を直接変更しない。",
-    "source": "https://arxiv.org/abs/2409.15104",
-    "sources": [
-      "https://arxiv.org/abs/2409.15104",
-      "https://arxiv.org/html/2409.15104"
-    ],
-    "code": null,
-    "implementation": "vLLMを拡張し、DistributedAttention、Ray worker、PyTorch distributed/NCCL、FlashAttention-2を用いて実装。論文はコード公開済みと記載する。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML本文と参考文献節を確認。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-b25ffeca812a1fcdee74f1e1",
+  "job_id": "job-research-ad3541d28015a662",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b3bd426f06600d475ee9c2d0",
+    "claim_id": "claim-b25ffeca812a1fcdee74f1e1",
     "worker_id": "scheduled-chat-paper-20260916T175945JST",
     "worker_kind": "scheduled_chat"
   }
