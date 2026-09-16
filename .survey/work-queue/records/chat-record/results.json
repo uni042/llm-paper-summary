@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-83d1470b4ddd3cc39d4e3a56",
-  "job_id": "job-research-ec631b9aeb6c5c21",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-83d1470b4ddd3cc39d4e3a56",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-83d1470b4ddd3cc39d4e3a56","job_id":"job-research-ec631b9aeb6c5c21","data":{"overview":"batch 256ではOaken-LPDDRがvLLM比平均1.79倍、QServe比1.58倍のスループットを達成した。KV圧縮により注意計算時間はLPU比平均55.0%短縮し、batch 64で量子化・逆量子化は全体遅延の1.29%・3.23%に留まる。精度はFP16比平均0.87%低下し、KVQuant/KIVIよりやや低いがQServeより1.38%高い。専用モジュールの面積増は8.21%。","key_results":[{"metric":"batch 256スループット","value":"vLLM比平均1.79倍、QServe比1.58倍","baseline":"A100上vLLM/QServe","condition":"6モデル、入力1K・出力1K","interpretation":"KV低ビット化で帯域と容量を同時に緩和し、大規模バッチでも飽和を遅らせる。"},{"metric":"注意計算時間","value":"LPU比平均55.0%短縮","baseline":"量子化なしLPU","condition":"バッチ増加評価","interpretation":"外部メモリから読むKV量の削減が帯域律速の注意演算を直接短縮する。"},{"metric":"量子化処理費","value":"batch 64で量子化1.29%、逆量子化3.23%","baseline":"全体推論遅延","condition":"Llama2-7B Oaken-LPDDR","interpretation":"専用DMA処理と要求間重畳により量子化費用が圧縮利得を相殺しない。"},{"metric":"精度","value":"FP16比平均-0.87%、KVQuant比-0.54%、KIVI比-0.32%、QServe比+1.38%","baseline":"FP16およびKV量子化方式","condition":"8モデル・4データセット","interpretation":"最高精度の外れ値方式より少し品質を譲る代わりにオンライン処理を大幅に軽くする。"},{"metric":"ハードウェア面積","value":"Oakenモジュール追加8.21%","baseline":"LPU基盤面積","condition":"TSMC 28nm、1GHz合成","interpretation":"専用量子化器とMMUの面積費用は報告されたスループット利得に対して限定的。"}],"negative_results":"OakenアルゴリズムをGPU上でそのまま実行すると3群分類に伴うCUDA warp divergenceで量子化・逆量子化が長くなり、専用ハードウェアなしでは同じ利得を得にくい。HBM版は小モデル・小バッチでは高速だが、大モデルや大バッチでは容量不足で飽和する。精度はKVQuant/KIVIより平均0.54%/0.32%低い。","interpretation":"KV量子化はビット数だけ下げても、外れ値探索や疎配置の処理費が残れば実効帯域は上がらない。Oakenは入力依存でない処理をオフラインへ移し、残るオンライン処理をDMA専用回路へ落とすことで、表現圧縮とメモリシステムを一つの設計問題として扱う。","quality_impact":"FP16比平均0.87%の精度低下。3群比率は圧縮率と精度のパレート点として4/90/6%を採用し、群数を増やすと精度は改善するが索引ビットとアラインメント費用が増える。"},"reservation":{"claim_id":"claim-83d1470b4ddd3cc39d4e3a56","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
