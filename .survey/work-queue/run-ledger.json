@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T10:49:27.481763+00:00",
+  "updated_at": "2026-09-16T10:51:17.465010+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T10:49:27.481763+00:00",
+      "last_recorded_at": "2026-09-16T10:51:17.465010+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 150,
         "audit_completed": 0,
         "discovery_completed": 77,
-        "blocked": 10,
+        "blocked": 11,
         "new_jobs": 103,
         "new_papers": 154,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35050483128:1",
-          "recorded_at": "2026-09-16T03:05:50.777258+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35050483128",
-            "run_attempt": "1",
-            "source_sha": "e2cbb890b4574dcf0b73fd7ac2474e84833b28a5"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35050619089:1",
           "recorded_at": "2026-09-16T03:08:01.953347+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35086985629",
             "run_attempt": "1",
             "source_sha": "a8ba0fcc334e00cf3d4cd448abae52c7d586f850"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35087162435:1",
+          "recorded_at": "2026-09-16T10:51:17.465010+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35087162435",
+            "run_attempt": "1",
+            "source_sha": "bb8174b19bc117ab2b01830785aa764013855366"
           },
           "signals": [
             "job_blocked"
@@ -21494,6 +21494,14 @@
           "type": "audit",
           "canonical_id": "arXiv:2504.03775",
           "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-1a835bd497ae941f",
+          "type": "research",
+          "canonical_id": "arXiv:2506.12417",
+          "title": "HarMoEny: Efficient Multi-GPU Inference of MoE Models",
           "from": "ready",
           "to": "blocked"
         }
