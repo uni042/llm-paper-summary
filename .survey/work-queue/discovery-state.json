@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T10:03:53+00:00",
+  "updated_at": "2026-09-16T10:07:42+00:00",
   "last_run_key": "2026-09-16T19:00:00+09:00",
-  "last_round": "specialist-moe-prefetch-1",
+  "last_round": "specialist-agent-storage-15",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 9,
+  "consecutive_empty_rounds": 7,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -5892,6 +5892,263 @@
       ],
       "next_axis_hint": "agentic servingで構造的再利用を使うKV cache管理へ軸を移す",
       "source_submission": "work-queue/submissions/20260916T1908JST-discovery-specialist-moe-prefetch-1.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-agent-kv-2",
+      "axis": "agentic serving・構造的KV再利用・共有圧縮cache",
+      "query_summary": "multi-agent/agentic servingでのprefix/KV再利用、session semantics、shared KV poolを探索し、repository検索で未収録の2件を選定した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.13573"
+      ],
+      "next_axis_hint": "CPU control-plane bottleneckとSmartNIC/GPUへのserving stack offloadへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1910JST-discovery-specialist-agent-kv-2.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-cpu-control-3",
+      "axis": "CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload",
+      "query_summary": "multi-GPU inferenceのCPU律速、kernel launch/communication/tokenization、CPU-free serving、SmartNIC/DPU offloadを隣接システム軸として探索した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375"
+      ],
+      "next_axis_hint": "CUDA virtual memoryとprefill reserveを使うKV memory reclamationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1912JST-discovery-specialist-cpu-control-3.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-elastic-kv-4",
+      "axis": "CUDA VMM・KV memory reclamation・prefill reserve",
+      "query_summary": "KV cache容量を圧縮やoffloadではなくGPU virtual-memory再割当で増やす研究を探索し、prefill activation reserveの動的reclamationを実装・反証評価したElastic KV Cacheを選定した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.16892",
+        "arXiv:2604.25080"
+      ],
+      "next_axis_hint": "最新state反映後にcandidate inventoryを再評価し、50超ならoverflow research、50以下ならforward/backward citation軸へ継続する",
+      "source_submission": "work-queue/submissions/20260916T1914JST-discovery-specialist-elastic-kv-4.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-cxl-k8s-5",
+      "axis": "CXL composable memory・Kubernetes DRA・cross-node KV reuse",
+      "query_summary": "CXL共有KVの既知TraCT/HyMCacheを起点に、より新しいcross-node shared-memory tierとcluster orchestrationを探索。既収録候補を除外し、9月公開のKubernetes-native CXL研究を選定した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.18194",
+        "arXiv:2607.18141"
+      ],
+      "next_axis_hint": "multi-agent collective communication由来のKV重複除去へ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1917JST-discovery-specialist-cxl-k8s-5.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-collective-agent-kv-6",
+      "axis": "multi-agent collective KV sharing・All-Gather redundancy elimination",
+      "query_summary": "agent-aware cacheから通信構造側へ展開し、同期multi-agent roundのAll-Gatherが生むKV重複をcollective reuseで除去する研究を探索した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2510.18586"
+      ],
+      "next_axis_hint": "GPU runtime/compilerのpersistent megakernelとdynamic schedulingへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1919JST-discovery-specialist-collective-agent-kv-6.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-gpu-megakernel-7",
+      "axis": "GPU runtime/compiler・persistent dynamic megakernel",
+      "query_summary": "CPU control-plane削減からGPU runtime/compilerへ展開し、kernel launch overhead、persistent kernel、dynamic shape/data dependencyを扱う新しいmegakernel abstractionを探索した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.07609"
+      ],
+      "next_axis_hint": "network/DPU側のKV transferとRDMA congestion-aware schedulingへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T1921JST-discovery-specialist-gpu-megakernel-7.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-network-routing-8",
+      "axis": "disaggregated serving・network/KV-aware routing・hardware calibration",
+      "query_summary": "RDMA/KV transfer congestion、decode instance selection、multi-stage flow scheduling、prefill deflectionを探索し、既知候補群から本日公開のcalibrated request routing研究を新規強候補として選定した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.02043",
+        "arXiv:2607.28150",
+        "arXiv:2605.13734",
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "新着軸をさらに走査し、9月公開のmemory/network/serving論文に未収録が残るか確認する",
+      "source_submission": "work-queue/submissions/20260916T1924JST-discovery-specialist-network-routing-8.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-adaptive-kv-9",
+      "axis": "新着KV compression・prompt-adaptive configuration selection",
+      "query_summary": "9月新着のLLM serving/KV cacheを再走査し、固定圧縮方式間をprompt制約ごとに選択するMetaKVをrepository code searchで未収録と確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2606.24467",
+        "arXiv:2603.20397"
+      ],
+      "next_axis_hint": "新規発見で枯渇判定をリセットし、forward citation・backward reference・隣接OS/storage・重点MoE・networkの独立経路を再一巡する",
+      "source_submission": "work-queue/submissions/20260916T1927JST-discovery-specialist-adaptive-kv-9.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-forward-citations-10",
+      "axis": "重要新規系統のforward citation追跡",
+      "query_summary": "Tutti、Blink、TraCT、SPICEを起点に被引用・派生研究を探索したが、取得できた一次/準一次候補は既知論文・実装更新・解説が中心で、新規強候補は得られなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2604.07609",
+        "arXiv:2512.18194",
+        "arXiv:2608.21240"
+      ],
+      "next_axis_hint": "重要論文のbackward referenceから未収録の基盤研究を確認する",
+      "source_submission": "work-queue/submissions/20260916T1930JST-discovery-specialist-forward-citations-10.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-backward-refs-11",
+      "axis": "重要論文のbackward reference・基盤システム",
+      "query_summary": "Tutti/CXL/PD-disaggregation系の基盤参照としてGeminiFS、Mooncake、LMCache、既知prefix-cache系を確認したが、今回のrepository対象で新規に優先投入すべき未収録強候補は得られなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2407.00079",
+        "GeminiFS:FAST25",
+        "LMCache",
+        "Preble"
+      ],
+      "next_axis_hint": "OS/storage/HPCの隣接分野からGPU-driven I/O・memory tieringを探索する",
+      "source_submission": "work-queue/submissions/20260916T1933JST-discovery-specialist-backward-refs-11.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-cxl-tiering-12",
+      "axis": "OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion",
+      "query_summary": "GPU-driven storage、CXL memory tiering、HPC memory oversubscriptionを探索し、既知Photonic-CXL等を除外した上でITMEを未収録強候補として確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.27187",
+        "arXiv:2607.18141"
+      ],
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。重点MoE、network scheduling、新着、forward/backward、隣接GPU runtimeを再一巡する",
+      "source_submission": "work-queue/submissions/20260916T1936JST-discovery-specialist-cxl-tiering-12.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-moe-memory-pool-13",
+      "axis": "MoE multi-model serving・weight/KV disaggregation・GPU memory pooling",
+      "query_summary": "重点MoE軸をexpert prefetch以外へ広げ、cold model、weight pool、KV pool、persistent kernelを組み合わせるmulti-LLM serving研究を探索した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.21240",
+        "arXiv:2601.17063"
+      ],
+      "next_axis_hint": "network schedulingと新着9月を再確認後、残り時間に応じてhandoff guardを評価する",
+      "source_submission": "work-queue/submissions/20260916T1939JST-discovery-specialist-moe-memory-pool-13.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-network-kv-14",
+      "axis": "network-aware decode routing・mixed-precision KV transfer",
+      "query_summary": "disaggregated servingのnetwork congestion、decode selection、KV transfer compressionを再探索し、NetKVとSpectrumKVをrepository未収録の強候補として確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.02043",
+        "arXiv:2607.28150",
+        "arXiv:2605.13734",
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。新着、forward/backward、OS/storage、GPU runtime、MoE、agentic servingを再一巡する",
+      "source_submission": "work-queue/submissions/20260916T1942JST-discovery-specialist-network-kv-14.json"
+    },
+    {
+      "run_key": "2026-09-16T19:00:00+09:00",
+      "round": "specialist-agent-storage-15",
+      "axis": "agentic serving・external KV storage I/O・dual-path RDMA loading",
+      "query_summary": "agentic servingのstorage bandwidth bottleneckとprefill/decode NIC非対称性を探索し、DualPathをrepository未収録の強候補として確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2407.00079"
+      ],
+      "next_axis_hint": "新着とGPU runtimeを確認後、candidate inventory反映を再取得する",
+      "source_submission": "work-queue/submissions/20260916T1945JST-discovery-specialist-agent-storage-15.json"
     }
   ],
   "axes": {
@@ -9364,6 +9621,146 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "agentic servingで構造的再利用を使うKV cache管理へ軸を移す"
+    },
+    "agentic serving・構造的KV再利用・共有圧縮cache": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "CPU control-plane bottleneckとSmartNIC/GPUへのserving stack offloadへ軸を移す"
+    },
+    "CPU control-plane bottleneck・SmartNIC/GPU serving-stack offload": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "CUDA virtual memoryとprefill reserveを使うKV memory reclamationへ軸を移す"
+    },
+    "CUDA VMM・KV memory reclamation・prefill reserve": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "最新state反映後にcandidate inventoryを再評価し、50超ならoverflow research、50以下ならforward/backward citation軸へ継続する"
+    },
+    "CXL composable memory・Kubernetes DRA・cross-node KV reuse": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "multi-agent collective communication由来のKV重複除去へ軸を移す"
+    },
+    "multi-agent collective KV sharing・All-Gather redundancy elimination": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "GPU runtime/compilerのpersistent megakernelとdynamic schedulingへ軸を移す"
+    },
+    "GPU runtime/compiler・persistent dynamic megakernel": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "network/DPU側のKV transferとRDMA congestion-aware schedulingへ軸を移す"
+    },
+    "disaggregated serving・network/KV-aware routing・hardware calibration": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "新着軸をさらに走査し、9月公開のmemory/network/serving論文に未収録が残るか確認する"
+    },
+    "新着KV compression・prompt-adaptive configuration selection": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "新規発見で枯渇判定をリセットし、forward citation・backward reference・隣接OS/storage・重点MoE・networkの独立経路を再一巡する"
+    },
+    "重要新規系統のforward citation追跡": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "重要論文のbackward referenceから未収録の基盤研究を確認する"
+    },
+    "重要論文のbackward reference・基盤システム": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "OS/storage/HPCの隣接分野からGPU-driven I/O・memory tieringを探索する"
+    },
+    "OS/storage/HPC隣接・CXL hybrid memory tiering・remote memory expansion": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。重点MoE、network scheduling、新着、forward/backward、隣接GPU runtimeを再一巡する"
+    },
+    "MoE multi-model serving・weight/KV disaggregation・GPU memory pooling": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "network schedulingと新着9月を再確認後、残り時間に応じてhandoff guardを評価する"
+    },
+    "network-aware decode routing・mixed-precision KV transfer": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "新規発見で枯渇判定を再リセット。新着、forward/backward、OS/storage、GPU runtime、MoE、agentic servingを再一巡する"
+    },
+    "agentic serving・external KV storage I/O・dual-path RDMA loading": {
+      "last_run_key": "2026-09-16T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "新着とGPU runtimeを確認後、candidate inventory反映を再取得する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

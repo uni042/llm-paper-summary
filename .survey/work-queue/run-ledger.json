@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T10:06:24.729189+00:00",
+  "updated_at": "2026-09-16T10:08:50.591527+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T10:06:24.729189+00:00",
+      "last_recorded_at": "2026-09-16T10:08:50.591527+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 150,
         "audit_completed": 0,
-        "discovery_completed": 54,
+        "discovery_completed": 68,
         "blocked": 9,
-        "new_jobs": 73,
+        "new_jobs": 90,
         "new_papers": 154,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35047762867:1",
-          "recorded_at": "2026-09-16T02:23:18.351695+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35047762867",
-            "run_attempt": "1",
-            "source_sha": "dfa21ec03332b7aa16710f2a86273314b082a5e6"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35049101472:1",
           "recorded_at": "2026-09-16T02:44:01.703924+00:00",
@@ -19597,6 +19583,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35083155368:1",
+          "recorded_at": "2026-09-16T10:08:50.591527+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35083155368",
+            "run_attempt": "1",
+            "source_sha": "c6309de57095e893df60702d119e5f57457ef6fa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21304,6 +21304,118 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-090f622b1bfb08bd",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-135eddf497194397",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-25da1efd7b582311",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3dfa9b7a0c5724bf",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3e54d85223a960e2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-42af704f917db8c0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-4ee0d2add906cc88",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-88f500b060b02dd9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b6e8eb393cae08a9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-db39151b4570baea",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e0a7d608b9eea51c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e0db38a758cf2426",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e44665d2624814b1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f36490583b015688",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21817,6 +21929,125 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-090f622b1bfb08bd",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-135eddf497194397",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-25da1efd7b582311",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-3dfa9b7a0c5724bf",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-3e54d85223a960e2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-42af704f917db8c0",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-4ee0d2add906cc88",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-88f500b060b02dd9",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-b6e8eb393cae08a9",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-db39151b4570baea",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e0a7d608b9eea51c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e0db38a758cf2426",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e44665d2624814b1",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f36490583b015688",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-46a0d6f61e82afe1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16206",
+          "title": "Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-research-9ef38f28c45d6f3a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.24971",
+          "title": "PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference"
+        },
+        {
+          "job_id": "job-research-f9f09d211cdcb836",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.22774",
+          "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -22133,7 +22364,21 @@
         ".survey/work-queue/results/20260916T1451JST-discovery-specialist-backref-heterogeneous-18.json",
         ".survey/work-queue/results/20260916T1454JST-discovery-specialist-moe-offload-lineage-19.json",
         ".survey/work-queue/results/discovery-specialist-20260916T1700-r1-metakv.json",
-        ".survey/work-queue/results/20260916T1908JST-discovery-specialist-moe-prefetch-1.json"
+        ".survey/work-queue/results/20260916T1908JST-discovery-specialist-moe-prefetch-1.json",
+        ".survey/work-queue/results/20260916T1910JST-discovery-specialist-agent-kv-2.json",
+        ".survey/work-queue/results/20260916T1912JST-discovery-specialist-cpu-control-3.json",
+        ".survey/work-queue/results/20260916T1914JST-discovery-specialist-elastic-kv-4.json",
+        ".survey/work-queue/results/20260916T1917JST-discovery-specialist-cxl-k8s-5.json",
+        ".survey/work-queue/results/20260916T1919JST-discovery-specialist-collective-agent-kv-6.json",
+        ".survey/work-queue/results/20260916T1921JST-discovery-specialist-gpu-megakernel-7.json",
+        ".survey/work-queue/results/20260916T1924JST-discovery-specialist-network-routing-8.json",
+        ".survey/work-queue/results/20260916T1927JST-discovery-specialist-adaptive-kv-9.json",
+        ".survey/work-queue/results/20260916T1930JST-discovery-specialist-forward-citations-10.json",
+        ".survey/work-queue/results/20260916T1933JST-discovery-specialist-backward-refs-11.json",
+        ".survey/work-queue/results/20260916T1936JST-discovery-specialist-cxl-tiering-12.json",
+        ".survey/work-queue/results/20260916T1939JST-discovery-specialist-moe-memory-pool-13.json",
+        ".survey/work-queue/results/20260916T1942JST-discovery-specialist-network-kv-14.json",
+        ".survey/work-queue/results/20260916T1945JST-discovery-specialist-agent-storage-15.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -22211,7 +22456,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 614,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
