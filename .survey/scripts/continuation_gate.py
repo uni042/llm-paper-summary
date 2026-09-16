@@ -34,10 +34,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
     rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
+    discovery_reset_progress_known = rounds_since_last_novel_raw is not None
     discovery_rounds_since_last_novel = (
-        discovery_rounds_completed
-        if rounds_since_last_novel_raw is None
-        else max(int(rounds_since_last_novel_raw or 0), 0)
+        max(int(rounds_since_last_novel_raw or 0), 0)
+        if discovery_reset_progress_known
+        else 0
     )
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
@@ -104,14 +105,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     # Discovery-specialist runs have an explicit progression floor. A novel
-    # candidate resets the exhaustion sweep, so callers that track novelty pass
-    # the number of materially distinct rounds since the latest novel candidate.
-    # Older callers may omit it and retain the previous total-round semantics.
-    # Hard stop reasons above always win (handoff guard, platform limit,
+    # candidate resets the exhaustion sweep, so voluntary exhaustion requires
+    # explicit reset-aware progress evidence. If the caller does not supply that
+    # evidence, continuing is safer than accepting an unverifiable exhaustion
+    # claim. Hard stop reasons above still win (handoff guard, platform limit,
     # unreadable canonical state, or inability to durably preserve required work).
     hard_stop = bool(reasons)
     if worker_kind == "discovery" and not hard_stop:
-        if discovery_rounds_since_last_novel < discovery_min_rounds:
+        if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
             decision = "CONTINUE"
             required_action = "DISCOVER_AGAIN"
             finalization_allowed = False
@@ -163,6 +164,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "worker_kind": worker_kind,
         "discovery_rounds_completed": discovery_rounds_completed,
         "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
+        "discovery_reset_progress_known": discovery_reset_progress_known,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
         "discovery_exhausted": discovery_exhausted,
@@ -188,10 +190,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
             "or discovery submission is never by itself a whole-run stop condition. Hourly "
             "Scheduled Chat workers prefer an actual-invocation-start + 3600 second run deadline "
-            "over the nominal schedule boundary. Discovery specialist runs must satisfy their "
-            "minimum progression floor after the latest novel candidate before exhaustion can be "
-            "a voluntary stop reason; hard handoff/platform/durability/read failures override "
-            "that floor."
+            "over the nominal schedule boundary. Discovery specialist runs may use exhaustion as "
+            "a voluntary stop reason only when reset-aware progress since the latest novel candidate "
+            "is explicitly supplied and satisfies the minimum progression floor; hard handoff/"
+            "platform/durability/read failures override that floor."
         ),
     }
 
