@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-de826a78cbdf67bd7f4c52a2","job_id":"job-research-8548d3d173ce3871","data":{"hardware":"64 H100相当GPUをモデル化した4階層fat-tree。TP=4。Tier 0同一node、Tier 1同一rack、Tier 2同一pod、Tier 3 cross-podの帯域/遅延差を設定。","software":"離散イベント・フロー単位シミュレータ。Llama-3-70BのKVサイズと公開DistServe/vLLM/MLPerf値から推論時間モデルを構成。","methodology":"Mooncake production traceでchatbot、RAG、long-contextの3 workloadを駆動する。各KV転送をECMPで経路選択するフローとして扱い、共有linkではmax-min fair bandwidthを再計算する。背景traffic、fat-tree oversubscription、request load、context length、oracle更新周期、prefix sharing、cluster sizeを個別に掃引する。比較はround-robin、cache-aware、load-aware、調整済みcache+load-aware CLA*、静的tierのみNetKV、full NetKV。CLA*重みは測定区間と分離したtrace sliceでgrid searchする。TTFT分布、TBT、SLO達成率、goodput、tier利用率、転送時間を5 seedで測る。","scope":"全数値はシミュレーションであり物理GPU/RDMA cluster実測ではない。ネットワークモデルは単一flowとfair sharingを解析値へ0.1%以内で検証し、推論時間は公開値へ25%以内でcross-validationするが、NIC driver queue、completion queue、kernel bypass等はモデル外。"},"reservation":{"claim_id":"claim-de826a78cbdf67bd7f4c52a2","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-648b888f283ca0a7f951062d",
+  "job_id": "job-research-8548d3d173ce3871",
+  "data": {
+    "hardware": "64 H100相当GPUをモデル化した4階層fat-tree。TP=4。Tier 0同一node、Tier 1同一rack、Tier 2同一pod、Tier 3 cross-podの帯域/遅延差を設定。",
+    "software": "離散イベント・フロー単位シミュレータ。Llama-3-70BのKVサイズと公開DistServe/vLLM/MLPerf値から推論時間モデルを構成。",
+    "methodology": "Mooncake production traceでchatbot、RAG、long-contextの3 workloadを駆動する。各KV転送をECMPで経路選択するフローとして扱い、共有linkではmax-min fair bandwidthを再計算する。背景traffic、fat-tree oversubscription、request load、context length、oracle更新周期、prefix sharing、cluster sizeを個別に掃引する。比較はround-robin、cache-aware、load-aware、調整済みcache+load-aware CLA*、静的tierのみNetKV、full NetKV。CLA*重みは測定区間と分離したtrace sliceでgrid searchする。TTFT分布、TBT、SLO達成率、goodput、tier利用率、転送時間を5 seedで測る。",
+    "scope": "全数値はシミュレーションであり物理GPU/RDMA cluster実測ではない。ネットワークモデルは単一flowとfair sharingを解析値へ0.1%以内で検証し、推論時間は公開値へ25%以内でcross-validationするが、NIC driver queue、completion queue、kernel bypass等はモデル外。"
+  },
+  "reservation": {
+    "claim_id": "claim-648b888f283ca0a7f951062d",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}
