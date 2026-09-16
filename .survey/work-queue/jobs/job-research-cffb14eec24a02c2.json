@@ -17,5 +17,16 @@
   "created_at": "2026-09-16T00:02:49+00:00",
   "completed_at": "2026-09-16T03:14:51+00:00",
   "blocker": "Primary-source full-text retrieval is unavailable for arXiv:2609.04244v1 in this execution. The current arXiv abstract/search result confirms identity, authors, cs.AR primary category, 14-page length, abstract-level performance claims, and FlashInfer implementation availability, but direct primary arXiv HTML fetch at https://arxiv.org/html/2609.04244 returned a cache-miss error and no primary full manuscript was retrievable. Third-party alphaXiv text was not substituted for the required primary source. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when primary full text is retrievable.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-5a2dadf10671ad95400d0ff8.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-5a2dadf10671ad95400d0ff8.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-16T03:14:51+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-16T03:14:51+00:00",
+      "reason": "Primary-source full-text retrieval is unavailable for arXiv:2609.04244v1 in this execution. The current arXiv abstract/search result confirms identity, authors, cs.AR primary category, 14-page length, abstract-level performance claims, and FlashInfer implementation availability, but direct primary arXiv HTML fetch at https://arxiv.org/html/2609.04244 returned a cache-miss error and no primary full manuscript was retrievable. Third-party alphaXiv text was not substituted for the required primary source. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when primary full text is retrievable."
+    }
+  ],
+  "last_blocked_at": "2026-09-16T03:14:51+00:00",
+  "retry_not_before": "2026-09-16T05:22:52+00:00"
 }

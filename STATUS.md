@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 13:13:23 JST**
+> 自動生成: **2026-09-16 13:25:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
+| 収録候補論文 | **52** |
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-16 12:50:41 JST（22分前）** |
+| 最終検証済みResearch収録 | **09-16 12:50:41 JST（34分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **22** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **25** | **6** | **1** | **5** | **2** | **0** | **24** |
+| 合計 | **23** | **6** | **1** | **5** | **1** | **0** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,10 +105,10 @@
 
 ### Discovery
 
-- **09-16 07:20:40 JST** job `job-6ff919b9f51ccf92` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T0703JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
-  - 探索軸: 新着・適応型KV圧縮・制約付き推論
+- **09-16 13:20:13 JST** job `job-b6f805c0cbcee3d4` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T0902JST-discovery-specialist-network-flow-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T0902JST-discovery-specialist-network-flow-1.json`
+  - 探索軸: 分離サービング・多段ネットワークflow scheduling
 
 ### 直近タスク
 
@@ -158,10 +158,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13592` — BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 13:11:58 JST** / heartbeat: **—** / lease expiry: **09-16 14:41:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-08ba7261bc105f34.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation / worker `scheduled-chat-llm-survey`
   - claim: **09-16 12:51:26 JST** / heartbeat: **—** / lease expiry: **09-16 14:21:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-d743b2b5468a28c8.json`
@@ -184,7 +181,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,9 +209,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **266** |
+| 成功result未照合のimmutable submission | **265** |
 | └ Research | **151** |
-| └ Discovery | **115** |
+| └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
 

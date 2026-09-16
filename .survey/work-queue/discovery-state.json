@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T04:04:31+00:00",
-  "last_run_key": "2026-09-16T13:00:00+09:00",
-  "last_round": "specialist-agent-multiturn-5",
+  "updated_at": "2026-09-16T04:20:32+00:00",
+  "last_run_key": "2026-09-16T09:00:00+09:00",
+  "last_round": "specialist-semantic-kv-6",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -5340,6 +5340,100 @@
       ],
       "next_axis_hint": "Actions materialization後にinventoryを再評価し、50超ならoverflow researchへ切替。未超ならforward citation/HPC隣接探索を続ける。",
       "source_submission": "work-queue/submissions/20260916T1330JST-discovery-specialist-agent-multiturn-5.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-network-flow-1",
+      "axis": "分離サービング・多段ネットワークflow scheduling",
+      "query_summary": "prefill/decode分離でKV retrieval、collective、P2D transferが競合するnetwork scheduling研究を探索し、canonical IDとrepository検索で既存登録を確認した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Superchip CPU-GPU統合メモリ上のKV rotationとSLO schedulingへ軸を移す",
+      "source_submission": "work-queue/submissions/20260916T0902JST-discovery-specialist-network-flow-1.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-superchip-kv-2",
+      "axis": "Superchip統合CPU-GPUメモリ・KV rotation",
+      "query_summary": "GH200等のCPU-GPU高帯域結合を利用するKV offload、rotation、SLO schedulingへ探索軸を変更しrepository検索でcanonical ID未登録を確認した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "KV restorationをtoken/layer/GPUの多次元並列として扱う系統へ移る",
+      "source_submission": "work-queue/submissions/20260916T0906JST-discovery-specialist-superchip-kv-2.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-kv-restoration-3",
+      "axis": "KV cache restoration・compute/I/O多次元並列",
+      "query_summary": "KV cache復元のrecomputeと外部memory I/Oをtoken/layer/GPU軸で重ねるserving systemを探索し、canonical IDのrepository未登録を確認した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "retrieval-based sparse attention向けprocessing-near-memoryへ隣接展開する",
+      "source_submission": "work-queue/submissions/20260916T0910JST-discovery-specialist-kv-restoration-3.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-pnm-attention-4",
+      "axis": "processing-near-memory・retrieval sparse attention・KV外置き",
+      "query_summary": "GPU外大容量memoryでKVとretrieval indexを処理するPNM/PIM隣接系統を探索し、repository canonical ID検索で未登録を確認した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "CXL/near-memoryとMoE expert placementを横断する異種memory scheduling、または新着2609系へ戻る",
+      "source_submission": "work-queue/submissions/20260916T0914JST-discovery-specialist-pnm-attention-4.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-cxl-pim-5",
+      "axis": "CXL memory expansion・PIM・GPU-free inference",
+      "query_summary": "PNM軸からCXL接続PIMへ隣接展開し、GPU-free LLM inference systemの重要な過去候補をrepository canonical IDで未登録確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.27187"
+      ],
+      "next_axis_hint": "新着2609のmemory-system/revision、またはMoE expert placementとCXL memoryの交差領域へ移る",
+      "source_submission": "work-queue/submissions/20260916T0918JST-discovery-specialist-cxl-pim-5.json"
+    },
+    {
+      "run_key": "2026-09-16T09:00:00+09:00",
+      "round": "specialist-semantic-kv-6",
+      "axis": "意味検索head・KV retention/compression",
+      "query_summary": "memory-system軸からKV表現・保持へ切り替え、GQA head機能を利用するsemantic retrieval guided compressionを探索した。MetaKVは直近探索済みのため反復せず、CompressKVのcanonical ID未登録を確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.07966"
+      ],
+      "next_axis_hint": "新着2609 serving systems、特にheterogeneous disaggregationの引用・関連実装へ移る",
+      "source_submission": "work-queue/submissions/20260916T0922JST-discovery-specialist-semantic-kv-6.json"
     }
   ],
   "axes": {
@@ -8452,6 +8546,66 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.2,
       "next_axis_hint": "Actions materialization後にinventoryを再評価し、50超ならoverflow researchへ切替。未超ならforward citation/HPC隣接探索を続ける。"
+    },
+    "分離サービング・多段ネットワークflow scheduling": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "Superchip CPU-GPU統合メモリ上のKV rotationとSLO schedulingへ軸を移す"
+    },
+    "Superchip統合CPU-GPUメモリ・KV rotation": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "KV restorationをtoken/layer/GPUの多次元並列として扱う系統へ移る"
+    },
+    "KV cache restoration・compute/I/O多次元並列": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "retrieval-based sparse attention向けprocessing-near-memoryへ隣接展開する"
+    },
+    "processing-near-memory・retrieval sparse attention・KV外置き": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "CXL/near-memoryとMoE expert placementを横断する異種memory scheduling、または新着2609系へ戻る"
+    },
+    "CXL memory expansion・PIM・GPU-free inference": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "新着2609のmemory-system/revision、またはMoE expert placementとCXL memoryの交差領域へ移る"
+    },
+    "意味検索head・KV retention/compression": {
+      "last_run_key": "2026-09-16T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "新着2609 serving systems、特にheterogeneous disaggregationの引用・関連実装へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

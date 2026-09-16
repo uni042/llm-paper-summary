@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 476,
+      "completed": 482,
       "ready": 1
     },
     "audit": {
@@ -10,17 +10,17 @@
     },
     "research": {
       "completed": 386,
-      "ready": 54,
+      "ready": 53,
       "superseded": 44,
+      "blocked": 4,
       "deferred": 3,
-      "blocked": 2,
       "blocked_permanent": 1,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 56,
-    "actively_claimed": 2,
+    "ready_research_audit": 55,
+    "actively_claimed": 1,
     "claimable": 54
   },
   "next_jobs": [
@@ -73,18 +73,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-32ece608ca43dae7",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2607.23099",
-      "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
-      "source_url": "https://arxiv.org/abs/2607.23099",
-      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-b85568c75bac4939",
       "type": "research",
       "lane": null,
@@ -121,7 +109,19 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-b6f805c0cbcee3d4",
+      "job_id": "job-research-3bb1145babb1a6fc",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arXiv:2605.21427",
+      "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2605.21427",
+      "paper_path": "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -133,5 +133,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T04:13:20+00:00"
+  "generated_at": "2026-09-16T04:25:00+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:50:45.328066+00:00",
+  "updated_at": "2026-09-16T04:24:59.776981+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:50:45.328066+00:00",
+      "last_recorded_at": "2026-09-16T04:24:59.776981+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,28 +18691,13 @@
       "counts": {
         "research_completed": 111,
         "audit_completed": 0,
-        "discovery_completed": 27,
-        "blocked": 3,
-        "new_jobs": 40,
-        "new_papers": 93,
+        "discovery_completed": 33,
+        "blocked": 5,
+        "new_jobs": 47,
+        "new_papers": 115,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34911523839:1",
-          "recorded_at": "2026-09-15T00:07:01.804107+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34911523839",
-            "run_attempt": "1",
-            "source_sha": "176b08a8a116d4a7067812ebf2dfdca5d697217f"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34915547286:1",
           "recorded_at": "2026-09-15T01:04:18.295412+00:00",
@@ -19598,6 +19583,22 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35054740203:2",
+          "recorded_at": "2026-09-16T04:24:59.776981+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35054740203",
+            "run_attempt": "2",
+            "source_sha": "d94c7661f833288fa3bcf9d63931a3f671675a1c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "job_blocked",
+            "paper_materialized"
           ]
         }
       ],
@@ -20729,6 +20730,70 @@
           "title": "CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-10363c7b01f22b96",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6c5b2e5272abb2ad",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-8f1a375fbe853359",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9af0f4c6234705fa",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b6f805c0cbcee3d4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-fb12438db01a080d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-08ba7261bc105f34",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13592",
+          "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-32ece608ca43dae7",
+          "type": "research",
+          "canonical_id": "arXiv:2607.23099",
+          "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -21011,6 +21076,55 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-10363c7b01f22b96",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6c5b2e5272abb2ad",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-8f1a375fbe853359",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-9af0f4c6234705fa",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ec0fd38638abd5c5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-fb12438db01a080d",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-73e15ccbef3e6d6d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.07578",
+          "title": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference"
         }
       ],
       "new_paper_ids": [
@@ -21106,7 +21220,29 @@
         "arXiv:2512.20210",
         "arXiv:2602.21477",
         "arXiv:2603.07169",
-        "arXiv:2608.06188"
+        "arXiv:2608.06188",
+        "arXiv:2509.00105",
+        "arXiv:2602.01053",
+        "arXiv:2603.28768",
+        "arXiv:2604.15379",
+        "arXiv:2605.02960",
+        "arXiv:2606.03910",
+        "arXiv:2606.22541",
+        "arXiv:2607.05116",
+        "arXiv:2607.18002",
+        "arXiv:2607.21604",
+        "arXiv:2607.23933",
+        "arXiv:2607.29069",
+        "arXiv:2608.05483",
+        "arXiv:2608.19677",
+        "arXiv:2608.30830",
+        "arXiv:2609.07816",
+        "arXiv:2609.09787",
+        "arXiv:2609.12551",
+        "arXiv:2609.12686",
+        "arXiv:2609.12978",
+        "arXiv:2609.13134",
+        "arXiv:2609.15359"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -21239,7 +21375,13 @@
         ".survey/work-queue/results/20260916T0836JST-discovery-specialist-kv-transfer-8.json",
         ".survey/work-queue/results/20260916T0841JST-discovery-specialist-smartnic-storage-9.json",
         ".survey/work-queue/results/20260916T0845JST-discovery-specialist-cxl-kv-10.json",
-        ".survey/work-queue/results/20260916T0850JST-discovery-specialist-gpu-runtime-11.json"
+        ".survey/work-queue/results/20260916T0850JST-discovery-specialist-gpu-runtime-11.json",
+        ".survey/work-queue/results/20260916T0902JST-discovery-specialist-network-flow-1.json",
+        ".survey/work-queue/results/20260916T0906JST-discovery-specialist-superchip-kv-2.json",
+        ".survey/work-queue/results/20260916T0910JST-discovery-specialist-kv-restoration-3.json",
+        ".survey/work-queue/results/20260916T0914JST-discovery-specialist-pnm-attention-4.json",
+        ".survey/work-queue/results/20260916T0918JST-discovery-specialist-cxl-pim-5.json",
+        ".survey/work-queue/results/20260916T0922JST-discovery-specialist-semantic-kv-6.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -21316,8 +21458,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 553,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 575,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
