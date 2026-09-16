@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-2628dcc6705903e09c02a911",
-  "job_id": "job-research-73e15ccbef3e6d6d",
-  "data": {
-    "canonical_id": "arXiv:2502.07578",
-    "arxiv_id": "2502.07578",
-    "doi": "10.1145/3676641.3716267",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": []
-    },
-    "title": "PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference",
-    "summary": "CENTはCXL 3.0で多数のGDDR6-PIMデバイスを接続し、near-bank MACとPNMアクセラレータ/RISC-Vを階層化してTransformer全体をGPUなしで実行するLLM推論システムである。CXL上にsend/receive、broadcast、multicast、gatherを構築してPP/TP/hybrid mappingを実現し、同程度の平均電力のA100 GPU基準に対してgeomean 2.3倍throughput、2.3倍tokens/J、5.2倍tokens/$を報告する。",
-    "list_summary": "CXL接続GDDR6-PIM/PNMでGPUなしLLM推論を構成し、A100基準比2.3倍throughput・2.3倍energy efficiency・5.2倍tokens/$。",
-    "authors": [
-      "Yufeng Gu",
-      "Alireza Khadem",
-      "Sumanth Umesh",
-      "Ning Liang",
-      "Xavier Servot",
-      "Onur Mutlu",
-      "Ravi Iyer",
-      "Reetuparna Das"
-    ],
-    "published": "2025-02-11",
-    "publication": "ASPLOS 2025 / arXiv:2502.07578v1",
-    "publication_type": "査読付き国際会議論文",
-    "publication_status": "ASPLOS ’25採録。arXiv初版は2025年2月11日。",
-    "lineage": "cpu-offload",
-    "topics": [
-      "CXL",
-      "processing-in-memory",
-      "processing-near-memory",
-      "GPU-free LLM inference",
-      "memory bandwidth"
-    ],
-    "importance": "CXL memory expansionを単なるoffload先ではなくPIM compute fabricとして用い、memory-bound decodeをGPUから切り離す設計を具体化する。",
-    "hardware_evaluation": "CENTはRamulator2拡張とRTL synthesis/power modelによる詳細simulation。GPU baselineは4×NVIDIA A100 80GB実測。",
-    "quality_effect": "BF16 Transformer計算を対象とするシステム高速化で、量子化や近似による品質劣化を主手段としない。",
-    "source": "https://arxiv.org/abs/2502.07578",
-    "sources": [
-      "https://arxiv.org/html/2502.07578v1",
-      "https://doi.org/10.1145/3676641.3716267"
-    ],
-    "code": "https://github.com/Yufeng98/CENT",
-    "implementation": "C++/Pythonのopen-source CENT simulator、trace generator、power model、automation scriptsを公開。CXL controller custom logicはRTL synthesisで評価。",
-    "last_checked": "2026-09-16",
-    "references": [],
-    "references_checked_at": "2026-09-16",
-    "references_source": "arXiv HTML",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-1daab69065bdda91829f3106",
+  "job_id": "job-research-f79de4903a69120c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2628dcc6705903e09c02a911",
+    "claim_id": "claim-1daab69065bdda91829f3106",
     "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }

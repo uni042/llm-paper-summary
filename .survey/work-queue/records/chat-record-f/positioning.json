@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2628dcc6705903e09c02a911",
-  "job_id": "job-research-73e15ccbef3e6d6d",
-  "data": {
-    "positioning": "CENTはCPU/GPU間offloadで既存GPUを延命する方式ではなく、memory-bound decodeをCXL接続PIM fabricへ全面移行しGPU自体を不要にするmemory-centric推論architectureである。CXL-PNMのようにcontroller近傍だけで計算する方式よりbank内部bandwidthを利用し、AttAcc/NeuPIMのようなGPU-PIM hybridよりTCOを下げる代わりにcompute-bound prefill性能を捨てる設計判断を取る。",
-    "differences": "一般的CXL memory expansionはcapacity tierとしてCPU/GPUからdataを読むが、CENTはCXL device自体へnear-bank computeとPNMを持たせ、CXL fabricをmodel-parallel communication networkとして使う。従来PIMはdevice間collectiveとcapacity scalingが弱いが、CENTはbroadcast/multicast/gather primitiveとPP/TP/hybrid mappingを設計してLLM全体を複数deviceへ展開する。",
-    "relation_to_prior_work": [
-      {
-        "work": "GPU/CPU offload systems",
-        "difference": "weightを低速tierからGPUへ移送するのではなく、weightのあるPIM bank近傍で演算しGPU transfer自体を除去する。"
-      },
-      {
-        "work": "CXL-PNM",
-        "difference": "CXL controller側computeだけでなくGDDR6 bank内部PIMを併用し、より高いinternal bandwidthとcompute throughputを得る。"
-      },
-      {
-        "work": "AttAcc / NeuPIM",
-        "difference": "GPUとPIMを併用してprefillをGPUへ残す方式に対し、CENTはGPU-free構成でTCOを優先する。"
-      },
-      {
-        "work": "conventional PIM accelerators",
-        "difference": "単一PIM deviceのcapacity/density制約に対し、CXL 3.0 fabricとcollective primitiveで多数deviceへmodel parallelismを展開する。"
-      }
-    ],
-    "strengths": [
-      "LLM decodeの低operational intensityをGPU実測で定量化して設計動機へ結び付ける。",
-      "CXL fabric、PIM/PNM hierarchy、ISA、PP/TP mappingまでend-to-endで設計する。",
-      "long contextほどGPU batch上限が下がりPIM優位が増すことを32Kまで評価する。",
-      "TCO・power・energyまで含めmemory-centric architectureの経済性を評価する。",
-      "simulatorとartifactを公開し主要結果の再現手順を提供する。"
-    ],
-    "limitations": [
-      "CENT本体はsimulation/RTL synthesis/power model評価であり、32-device CXL-PIM実機の測定ではない。",
-      "GPU baselineとの比較はA100世代中心で、H100/H200等の新世代GPUとの直接比較ではない。",
-      "compute-bound prefillではGPUが明確に高速・高効率で、GPU-free設計の弱点になる。",
-      "custom GDDR6-PIM、CXL controller、broadcast extensionの製造・標準化・実装コストを伴う。",
-      "TCOはPIM module価格や量産volumeなど複数の仮定に依存する。"
-    ],
-    "implementation_status": "open-source CENT simulator、trace generator、power model、automation scriptを公開し、CXL controller custom logicはRTL synthesisまで行う。ASPLOS artifact appendixで再現手順を提供するが、提案CXL-PIM hardware全体はsimulationベース。",
-    "research_positioning": "階層memory/offload研究に対して、SSD/CPU/CXL memoryを単なるweight置場とする発想から一歩進み、memory tierそのものへcomputeを持たせてdecodeを完結させる極端な設計点を示す。特にCXLをcapacity expansionとcollective networkの双方に使う点は、将来のmemory-centric LLM servingの基準になる。",
-    "repository_fit": "cpu-offload系統に近いが、実態はCXL-PIM memory-centric inferenceである。GPUとのdata movement最適化ではなくGPUを除去するため、offloadの対極として比較すると階層memory設計のtradeoffが明確になる。"
-  },
+  "attempt_id": "attempt-1daab69065bdda91829f3106",
+  "job_id": "job-research-f79de4903a69120c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2628dcc6705903e09c02a911",
+    "claim_id": "claim-1daab69065bdda91829f3106",
     "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
     "worker_kind": "scheduled_chat"
   }
