@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T15:00:54.949067+00:00",
+  "updated_at": "2026-09-16T15:06:43.168579+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T15:00:54.949067+00:00",
+      "last_recorded_at": "2026-09-16T15:06:43.168579+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,28 +18691,13 @@
       "counts": {
         "research_completed": 166,
         "audit_completed": 0,
-        "discovery_completed": 79,
+        "discovery_completed": 82,
         "blocked": 12,
-        "new_jobs": 106,
+        "new_jobs": 109,
         "new_papers": 170,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35060661775:1",
-          "recorded_at": "2026-09-16T05:49:55.848921+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35060661775",
-            "run_attempt": "1",
-            "source_sha": "662c86347688ac487a4a816d3b4abb9d64469bb6"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35062018314:1",
           "recorded_at": "2026-09-16T06:03:44.002925+00:00",
@@ -19598,6 +19583,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35112885636:1",
+          "recorded_at": "2026-09-16T15:06:43.168579+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35112885636",
+            "run_attempt": "1",
+            "source_sha": "a107eaed1e5632a218c962d62b6bde4eaeae77df"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21657,6 +21656,30 @@
           "title": "Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-191a00887b4bbee2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9be61b9d72dcd1ea",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f6dc35c94d083aa1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22401,6 +22424,27 @@
           "type": "research",
           "canonical_id": "arXiv:2602.11530",
           "title": "PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models"
+        },
+        {
+          "job_id": "job-191a00887b4bbee2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-9be61b9d72dcd1ea",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f6dc35c94d083aa1",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -22774,7 +22818,10 @@
         ".survey/work-queue/results/discovery-specialist-20260916T2200-r04.json",
         ".survey/work-queue/results/discovery-specialist-20260916T2200-r05.json",
         ".survey/work-queue/results/discovery-specialist-20260916T2200-r06.json",
-        ".survey/work-queue/results/discovery-specialist-20260916T2200-r07.json"
+        ".survey/work-queue/results/discovery-specialist-20260916T2200-r07.json",
+        ".survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json",
+        ".survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json",
+        ".survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -22852,7 +22899,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 630,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
