@@ -8,6 +8,10 @@ Two compatibility paths are intentionally distinct:
 * older payloads without discovery_stats are replayed only when their original job
   still exists and is a terminal Discovery job.
 
+A narrowly identified v10 producer bug emitted ``run_key`` at the payload root and
+an integer ``discovery_stats.round``. Those failed immutable records are preserved
+verbatim and recovered through a new normalized replay submission/result pair.
+
 Research/Audit submissions are never rebound here.
 """
 from __future__ import annotations
@@ -90,6 +94,51 @@ def _old_discovery_job(sub: dict) -> dict:
     return _read(queue_worker.JOBS / f"{submitted_job_id}.json", {}) or {}
 
 
+def _normalize_historical_invalid_round(
+    sub: dict,
+    source_submission: str,
+    existing_result: dict,
+) -> dict[str, Any] | None:
+    """Normalize only the one proven historical v10 Discovery shape.
+
+    The source submission/result are immutable evidence and are never changed.
+    This helper merely constructs the payload for a separate replay record.
+    """
+    if existing_result.get("ok") is not False:
+        return None
+    if str(existing_result.get("error") or "").strip() != "ValueError: invalid submit_discovery_round payload":
+        return None
+    if sub.get("operation") != "submit_discovery_round":
+        return None
+
+    run_key = sub.get("run_key")
+    stats = sub.get("discovery_stats")
+    candidates = sub.get("candidates")
+    if not isinstance(run_key, str) or not run_key.strip():
+        return None
+    if not isinstance(stats, dict) or str(stats.get("run_key") or "").strip():
+        return None
+    round_value = stats.get("round")
+    if isinstance(round_value, bool) or not isinstance(round_value, int) or round_value < 1:
+        return None
+    axis = stats.get("axis")
+    if not isinstance(axis, str) or not axis.strip():
+        return None
+    if not isinstance(candidates, list) or len(candidates) > 5:
+        return None
+
+    replay = dict(sub)
+    replay.pop("run_key", None)
+    replay_stats = dict(stats)
+    replay_stats["run_key"] = run_key.strip()
+    replay_stats["round"] = str(round_value)
+    replay["discovery_stats"] = replay_stats
+    replay["recovered_from_submission"] = source_submission
+    if not queue_worker.is_discovery_round_submission(replay):
+        return None
+    return replay
+
+
 def _recover_self_describing_round(
     sub: dict,
     source_submission: str,
@@ -128,6 +177,61 @@ def _recover_self_describing_round(
         "artifact": None,
         "research_jobs_added": int((target.get("result_summary") or {}).get("research_jobs_added", 0) or 0),
     }
+
+
+def _recover_historical_invalid_round(
+    sub: dict,
+    source_submission: str,
+    existing_result: dict,
+    st: dict,
+) -> dict[str, Any] | None:
+    """Replay a proven malformed historical round without rewriting its evidence."""
+    normalized = _normalize_historical_invalid_round(sub, source_submission, existing_result)
+    if normalized is None:
+        return None
+
+    source_name = Path(source_submission).stem
+    for sequence in range(1, 1000):
+        replay_name = f"{source_name}.recovered-v{sequence}.json"
+        replay_path = queue_worker.SUBMISSIONS / replay_name
+        result_path = queue_worker.RESULTS / replay_name
+        replay_source = replay_path.relative_to(queue_worker.ROOT).as_posix()
+        replay_payload = dict(normalized)
+        replay_payload["recovery_sequence"] = sequence
+
+        existing_replay = _read(replay_path, {}) or {}
+        existing_replay_result = _read(result_path, {}) or {}
+        if existing_replay:
+            if (
+                existing_replay == replay_payload
+                and existing_replay_result.get("ok") is True
+                and existing_replay_result.get("submission") == replay_source
+                and existing_replay_result.get("recovered_from_submission") == source_submission
+            ):
+                return {"already_recovered": True}
+            if existing_replay_result or existing_replay != replay_payload:
+                continue
+        else:
+            if existing_replay_result:
+                continue
+            queue_worker.write_json(replay_path, replay_payload)
+
+        result = _recover_self_describing_round(replay_payload, replay_source, {}, st)
+        if result is None:
+            raise RuntimeError(f"normalized historical Discovery replay rejected: {replay_source}")
+        if result_path.exists():
+            # Never overwrite an immutable replay result. Allocate another sequence instead.
+            continue
+        result["recovered"] = True
+        result["recovered_from_submission"] = source_submission
+        queue_worker.write_json(result_path, result)
+        return {
+            "submission": replay_source,
+            "submitted_job_id": result.get("submitted_job_id"),
+            "job_id": result["job_id"],
+            "research_jobs_added": result.get("research_jobs_added", 0),
+        }
+    raise RuntimeError(f"unable to allocate immutable Discovery replay for {source_submission}")
 
 
 def _recover_legacy_terminal_submission(
@@ -180,13 +284,24 @@ def recover(root: Path) -> dict[str, Any]:
     for submission_path in sorted(queue_worker.SUBMISSIONS.glob("*.json")):
         result_path = queue_worker.RESULTS / submission_path.name
         existing_result = _read(result_path, {}) or {}
-        if not _result_allows_recovery(existing_result):
-            continue
-
         sub = _read(submission_path, {}) or {}
         if not isinstance(sub, dict):
             continue
         source_submission = submission_path.relative_to(queue_worker.ROOT).as_posix()
+
+        historical = _recover_historical_invalid_round(
+            sub,
+            source_submission,
+            existing_result,
+            st,
+        )
+        if historical is not None:
+            if not historical.get("already_recovered"):
+                recovered.append(historical)
+            continue
+
+        if not _result_allows_recovery(existing_result):
+            continue
 
         result = _recover_self_describing_round(sub, source_submission, existing_result, st)
         if result is None:
@@ -194,6 +309,9 @@ def recover(root: Path) -> dict[str, Any]:
         if result is None:
             continue
 
+        # Existing legacy/current recovery contracts predate immutable failed-result
+        # preservation. Keep them unchanged here; the historical v10 payload path
+        # above is the only path that writes a new replay/result pair.
         queue_worker.write_json(result_path, result)
         recovered.append({
             "submission": source_submission,
