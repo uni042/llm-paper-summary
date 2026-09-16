@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-ce08cf0566cb7dca27b52253",
-  "job_id": "job-research-23c1aef2e7b819be",
-  "data": {
-    "positioning": "推論カーネル高速化、テンソルコンパイラ、自動調整、数値決定論の交点に位置する。新しいLLMサービング方式ではないが、同一要求の出力再現性を保ったまま低レベルGPU最適化を探索するための基盤となる。",
-    "differences": "従来の決定論モードは安全な既知カーネルへ固定して探索自由度を落とすことが多い。本研究は縮約順序を意味記述子として速度スケジュールから分離し、同一算術類の内部ではタイル、持続実行、パイプライン等を最適化できる。動的実行比較だけでなくコンパイル済み命令列の静的判定を自動調整前へ置く点も異なる。",
-    "relation_to_prior_work": [
-      {
-        "work": "PyTorch deterministic mode",
-        "difference": "候補を一律禁止するのでなく、ビット同値類を静的に分けて同じ類の中で性能探索を続ける。"
-      },
-      {
-        "work": "vendor GEMM libraries",
-        "difference": "非公開のアルゴリズム選択をブラックボックス観測から算術記述子へ復元し、別生成系で同一ビットを再現する。"
-      },
-      {
-        "work": "Triton autotuning",
-        "difference": "タイル等の速度候補を実測する前に命令列同値判定を入れ、要求した算術類以外を枝刈りする。"
-      },
-      {
-        "work": "verified/translation-validation compilers",
-        "difference": "汎用意味保存全体ではなく、GPU浮動小数点縮約のビット同値へ対象を絞り、実用的なカーネル自動調整へ接続する。"
-      }
-    ],
-    "strengths": [
-      "縮約依存木という共通モデルで記述、復元、強制、検証を接続する。",
-      "三世代GPUで非公開行列積との100%ビット一致を示す。",
-      "固定順序の性能損失をコンパイラ配置最適化で大きく回収する。",
-      "二社命令集合に対する健全な静的判定器を実装する。",
-      "実LLM由来の多数行列形状を評価へ含める。"
-    ],
-    "limitations": [
-      "注意カーネルは理論分析中心で実装評価が限定的。",
-      "静的判定器は健全性優先のため同値候補を取りこぼす可能性がある。",
-      "記述子構築の約100µsホスト費は短いカーネルで無視できない。",
-      "非公開ライブラリの復元は対象世代・版ごとの事前計測を必要とする。",
-      "モデル全体の再現性には乱数、通信、他演算子、ドライバ等も関与し本手法だけで全スタックを保証しない。"
-    ],
-    "implementation_status": "Triton後段の平衡木属性・配置変換、記述子駆動行列積族、PTX/AMD命令列の静的同値判定、自動調整枝刈りを実装して評価。",
-    "research_positioning": "カーネル性能とビット再現性を二者択一にせず、算術意味を固定した同値類の中でスケジュール最適化するというコンパイラ設計。",
-    "repository_fit": "ハードウェアアクセラレータ系統に適合し、LLM推論カーネルの自動調整、決定論、複数バックエンド整合性を評価する際の低レベル基盤を補完する。"
-  },
+  "attempt_id": "attempt-fd3f0fc3b5b4bb36085660d1",
+  "job_id": "job-research-dea6b2b543d05a36",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ce08cf0566cb7dca27b52253",
+    "claim_id": "claim-fd3f0fc3b5b4bb36085660d1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ce08cf0566cb7dca27b52253",
-  "job_id": "job-research-23c1aef2e7b819be",
-  "data": {
-    "evaluation_summary": "非公開行列積の再構築、平衡木縮約の性能、静的同値判定の健全性と分割精度、自動調整枝刈りを複数GPU世代・多数カーネルで評価する。実LLM形状は16種類の公開モデル設定から抽出し、行列積、縮約、正規化、生成融合カーネル、注意を含む。",
-    "scope": "主対象はGPUカーネルのビット再現性。サービング全体のスループットやモデル最終精度を直接最適化する研究ではない。注意の縮約順序は理論分析が中心で評価範囲が限定される。",
-    "hardware": [
-      "NVIDIA H100",
-      "NVIDIA GB200",
-      "NVIDIA GB300",
-      "AMD instruction-set analysis for GCN checker"
-    ],
-    "software": [
-      "Triton compiler/backend",
-      "NVIDIA cuBLAS/cuBLASLt 12.8.5 and 13.1.x",
-      "PyTorch Inductor generated kernels",
-      "PTX and AMD GCN static analysis"
-    ],
-    "models": [
-      "Qwen3.8-2.4T-A95B",
-      "DeepSeek-V4-Pro/Flash",
-      "GLM-5.2",
-      "Kimi-K2.6/K3",
-      "gpt-oss-120b/20b",
-      "Qwen3-30B-A3B",
-      "Qwen3.6-35B-A3B",
-      "Qwen3.8-27B and other open-weight shapes"
-    ],
-    "datasets": [
-      "realistic GEMM shapes extracted from 16 model configurations",
-      "random and exponent-spread numeric inputs",
-      "compiled reduction/normalization/fused-kernel suites"
-    ],
-    "workload": "半精度、脳浮動小数点、八ビット行列積の多数形状、27個の縮約カーネル、数万規模の自動調整候補、生成融合カーネルを対象にビット一致と実行時間を測る。",
-    "baselines": [
-      "cuBLAS/cuBLASLt",
-      "free-order Triton reduction",
-      "torch.compile generated kernels",
-      "dynamic execution-based equivalence grouping"
-    ],
-    "metrics": [
-      "bitwise match rate",
-      "kernel runtime ratio",
-      "static checker soundness",
-      "equivalence partition precision",
-      "autotuner candidates pruned",
-      "host descriptor overhead"
-    ],
-    "methodology": "同一入力の出力バイト列を直接比較し、通常乱数だけでなく指数範囲を広げた入力でも縮約再編成を検出する。静的判定器は実行比較結果と照合し、同値と判定した組に不一致がない健全性を優先する。",
-    "predictor_accuracy": "再構築した行列積族は対象三世代で100%ビット一致。大規模加速armでは154,904回のバイト比較で差0。",
-    "control_knobs": "縮約木、縮約軸分割、部分和型、行列命令種類、実行束数、データ配置、自動調整構成。"
-  },
+  "attempt_id": "attempt-fd3f0fc3b5b4bb36085660d1",
+  "job_id": "job-research-dea6b2b543d05a36",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ce08cf0566cb7dca27b52253",
+    "claim_id": "claim-fd3f0fc3b5b4bb36085660d1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
