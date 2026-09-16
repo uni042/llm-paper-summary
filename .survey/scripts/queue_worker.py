@@ -34,6 +34,13 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
 
+DISCOVERY_INSTRUCTIONS = (
+    "Search primary sources for strong LLM inference-system papers not already "
+    "represented in the repository. Prefer recent work, but include an older "
+    "important omission when clearly worthwhile. Return at most 5 candidates. "
+    "Do not fill the list with weak papers."
+)
+DISCOVERY_COMPLETION = "Submit 0-5 strong candidates. Empty is valid."
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
     "record covering problem, novelty, method, evaluation conditions, key quantitative "
@@ -202,8 +209,8 @@ def active_jobs(job_type=None, lane=None):
 
 
 def ensure_discovery_job():
-    """Keep exactly one active discovery job independently of other ready work."""
-    if active_jobs(job_type="discovery"):
+    """Keep exactly one worker-facing discovery job independently of ingest jobs."""
+    if active_jobs(job_type="discovery", lane="discovery"):
         return False
     issued = now()
     jid = stable_id("job", "discovery", issued)
@@ -212,14 +219,70 @@ def ensure_discovery_job():
         "type": "discovery",
         "lane": "discovery",
         "priority": 50,
-        "instructions": (
-            "Search primary sources for strong LLM inference-system papers not already "
-            "represented in the repository. Prefer recent work, but include an older "
-            "important omission when clearly worthwhile. Return at most 5 candidates. "
-            "Do not fill the list with weak papers."
-        ),
-        "completion": "Submit 0-5 strong candidates. Empty is valid.",
+        "instructions": DISCOVERY_INSTRUCTIONS,
+        "completion": DISCOVERY_COMPLETION,
     })
+
+
+def is_discovery_round_submission(sub: dict) -> bool:
+    """Return whether *sub* is a self-describing immutable Discovery round.
+
+    Workflow-v10 specialist rounds are safe to ingest without a pre-issued Discovery
+    job because they contain only bounded candidate metadata plus durable round identity.
+    Legacy specialist submissions used the same shape but attached a synthetic job_id;
+    accepting both shapes lets old stranded rounds converge through the same path.
+    """
+    if not isinstance(sub, dict):
+        return False
+    operation = sub.get("operation")
+    if operation not in {None, "submit_discovery_round"}:
+        return False
+    candidates = sub.get("candidates")
+    meta = sub.get("discovery_stats")
+    if not isinstance(candidates, list) or len(candidates) > MAX_DISCOVERY_CANDIDATES:
+        return False
+    if any(not isinstance(candidate, dict) for candidate in candidates):
+        return False
+    if not isinstance(meta, dict):
+        return False
+    for field in ("run_key", "round", "axis"):
+        value = meta.get(field)
+        if not isinstance(value, str) or not value.strip():
+            return False
+    return True
+
+
+def discovery_ingest_job(source_submission: str, submitted_job_id: str | None = None, template_job: dict | None = None) -> dict:
+    """Return a deterministic internal Discovery job for one immutable round."""
+    source_submission = Path(source_submission).as_posix()
+    jid = stable_id("job", "discovery-ingest", source_submission)
+    path = JOBS / f"{jid}.json"
+    if path.exists():
+        existing = read_json(path, {}) or {}
+        if existing.get("type") != "discovery" or existing.get("ingest_for_submission") != source_submission:
+            raise RuntimeError("discovery ingest job id collision")
+        existing["_path"] = path
+        return existing
+
+    template_job = template_job if isinstance(template_job, dict) else {}
+    add_job({
+        "job_id": jid,
+        "type": "discovery",
+        "lane": "discovery-ingest",
+        "priority": int(template_job.get("priority") or 50),
+        "status": "processing",
+        "ingest_only": True,
+        "ingest_for_submission": source_submission,
+        "submitted_job_id": submitted_job_id,
+        "instructions": template_job.get("instructions") or (
+            "Internal Discovery ingest job. Apply the already durable candidate payload; "
+            "do not perform new research or discovery in this job."
+        ),
+        "completion": template_job.get("completion") or "Apply the durable Discovery round payload.",
+    })
+    created = read_json(path, {}) or {}
+    created["_path"] = path
+    return created
 
 
 def candidate_key(c: dict) -> str:
@@ -451,6 +514,25 @@ def process_discovery(sub: dict, job: dict, st: dict):
     record_discovery_stats(sub, accepted_count=added)
 
 
+def process_discovery_round_submission(sub: dict, st: dict, template_job: dict | None = None) -> dict:
+    """Ingest one self-describing Discovery round without a pre-issued job dependency."""
+    if not is_discovery_round_submission(sub):
+        raise ValueError("invalid submit_discovery_round payload")
+    source_submission = str(sub.get("_file") or "").strip()
+    if not source_submission:
+        raise ValueError("discovery round requires durable source submission path")
+    submitted_job_id = sub.get("job_id") if isinstance(sub.get("job_id"), str) else None
+    job = discovery_ingest_job(source_submission, submitted_job_id=submitted_job_id, template_job=template_job)
+    if job.get("status") == "completed":
+        return job
+    if job.get("status") in TERMINAL:
+        raise ValueError(f"discovery ingest job already terminal: {job.get('status')}")
+    process_discovery(sub, job, st)
+    update_job(job)
+    job["_path"] = JOBS / f"{job['job_id']}.json"
+    return job
+
+
 def submission_content(sub: dict) -> str | None:
     """Load a historical root-level Markdown submission payload."""
     content = sub.get("content")
@@ -599,11 +681,40 @@ def process_submissions(st: dict):
                 })
                 write_json(rp, result)
                 continue
+
             jid = sub.get("job_id")
+            jp = JOBS / f"{jid}.json" if isinstance(jid, str) and jid else None
+            explicit_round = sub.get("operation") == "submit_discovery_round"
+            self_describing_round = is_discovery_round_submission(sub)
+            template_job = None
+            should_ingest_round = explicit_round
+            if self_describing_round and not should_ingest_round:
+                if jp is None or not jp.exists():
+                    should_ingest_round = True
+                else:
+                    candidate_job = read_json(jp, {}) or {}
+                    if candidate_job.get("type") == "discovery" and candidate_job.get("status") in TERMINAL:
+                        should_ingest_round = True
+                        template_job = candidate_job
+            if explicit_round and not self_describing_round:
+                raise ValueError("invalid submit_discovery_round payload")
+            if should_ingest_round:
+                job = process_discovery_round_submission(sub, st, template_job=template_job)
+                result.update({
+                    "ok": True,
+                    "operation": "submit_discovery_round",
+                    "submitted_job_id": jid,
+                    "job_id": job["job_id"],
+                    "job_type": "discovery",
+                    "artifact": None,
+                    "job_status": job.get("status"),
+                })
+                write_json(rp, result)
+                continue
+
             if not jid:
                 raise ValueError("job_id required")
-            jp = JOBS / f"{jid}.json"
-            if not jp.exists():
+            if jp is None or not jp.exists():
                 raise ValueError("unknown job_id")
             job = read_json(jp, {})
             job["_path"] = jp
