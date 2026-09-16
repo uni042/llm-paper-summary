@@ -348,8 +348,21 @@ def _verified_discovery_rows(
         if submission is None:
             candidates = [row for row in discovery_submissions.values() if row["job_id"] == job_id]
             submission = candidates[0] if len(candidates) == 1 else None
-        if submission is None or submission["job_id"] != job_id:
+        if submission is None:
             continue
+
+        submission_job_id = submission["job_id"]
+        if submission_job_id:
+            if submission_job_id != job_id:
+                continue
+        else:
+            submission_payload = submission["payload"]
+            if (
+                explicit is None
+                or submission_payload.get("operation") != "submit_discovery_round"
+                or not isinstance(submission_payload.get("discovery_stats"), dict)
+            ):
+                continue
 
         run_time = submission["discovery_run_time"]
         if run_time is None:
