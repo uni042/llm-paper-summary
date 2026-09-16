@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 20:03:40 JST**
+> 自動生成: **2026-09-16 20:04:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **28** |
-| 未claim Research job | **27** |
+| 収録候補論文 | **32** |
+| 未claim Research job | **31** |
 | 直近24hの検証済みResearch収録 | **66** |
 | 最終検証済みResearch収録 | **09-16 18:51:24 JST（1時間12分前）** |
 | 整合性異常 | **1** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **28** |
+| canonical_id確認済みの一意な候補論文 | **32** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **28** |
+| 非終端Research job合計 | **32** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **37** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **7** | **0** | **7** | **0** | **0** | **10** |
-| 合計 | **38** | **15** | **4** | **11** | **1** | **0** | **10** |
+| Discovery | **0** | **9** | **0** | **9** | **0** | **0** | **14** |
+| 合計 | **37** | **17** | **4** | **13** | **1** | **0** | **14** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -147,8 +147,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 20:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **10件**
-- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication / 異種many-core・分散メモリ階層・bandwidth-aware runtime / virtual memory・異種state pool・LPDDR allocation / GPU power cap・DVFS・serverless energy-aware scheduling
+- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **9件** / 候補: **14件**
+- 探索軸: Superchip統合メモリ・SLO-aware KV rotation / GPU L2・HBM間KV prefetch・帯域隠蔽 / Semantic Retrieval Head・layer-aware KV圧縮 / MoE self-assisted speculative decoding・expert replication / 異種many-core・分散メモリ階層・bandwidth-aware runtime / virtual memory・異種state pool・LPDDR allocation / GPU power cap・DVFS・serverless energy-aware scheduling / tail-aware・reasoning phase-aware scheduling / serverless model loading・weight residency・multi-GPU KV migration
 - round `specialist-superchip-slo-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
   - 探索軸: Superchip統合メモリ・SLO-aware KV rotation
@@ -176,6 +176,14 @@
 - round `specialist-power-aware-7` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260916T2030JST-discovery-specialist-power-aware-7.json`
   - 探索軸: GPU power cap・DVFS・serverless energy-aware scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-tail-reasoning-8` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T2034JST-discovery-specialist-tail-reasoning-8.json`
+  - 探索軸: tail-aware・reasoning phase-aware scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-model-loading-9` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json`
+  - 探索軸: serverless model loading・weight residency・multi-GPU KV migration
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -205,7 +213,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **28** |
+| ready | **32** |
 
 ### 候補の重複・識別情報欠損
 
@@ -233,10 +241,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **418** |
+| 成功result未照合のimmutable submission | **420** |
 | └ Research | **242** |
 | └ Audit | **2** |
-| └ Discovery | **174** |
+| └ Discovery | **176** |
 
 ### 厳格検証が未成立のcompleted job
 
