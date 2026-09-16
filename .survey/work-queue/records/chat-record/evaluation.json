@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0bbfabc249b563dabf75666d",
-  "job_id": "job-research-82da92628b1e61c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0bbfabc249b563dabf75666d",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0bbfabc249b563dabf75666d","job_id":"job-research-82da92628b1e61c3","data":{"hardware":"実GPU基準は4×NVIDIA H200をfully connected NVLinkで接続したmachine、AMD EPYC 9334 128-core CPU、756GB memory。","software":"vLLMとSGLangを対象にRevatiを統合。Timekeeper/Device EmulatorはC++、Python bindings、ZeroMQ。既定runtime predictorはVidur由来operator modelをMoE等へ拡張。","methodology":"Llama-3.1-8B(TP=1)、Llama-3.1-70B(TP=4)、Qwen3-30B-A3B(EP=2)をvLLM/SGLangで評価し、chunked prefill size 512とmixed batchingを共通設定とする。ShareGPT workloadをPoisson arrivalで投入し、実GPU実行とRevatiのTTFT/TPOT分布およびwall-clock評価時間を比較する。さらにruntime predictor誤差を切り離すためbatch durationを5/10/20/40msに固定したsleep-based baselineとの比較、arrival rate 0.5〜8 QPSでの感度評価を行う。","scope":"3モデル、2 serving engine、単一4-H200 machineが中心で、GPU世代や大規模multi-node fabricを横断した実測検証は示されない。精度はruntime predictor品質に依存し、compute bufferをCPUが読むframework動作はsplit-state invariantに反してfatalになる。frameworkごとに約50行のActor patchが残り完全透過ではない。"},"reservation":{"claim_id":"claim-0bbfabc249b563dabf75666d","worker_id":"scheduled-chat-llm-survey-turn5-20260916T223150JST","worker_kind":"scheduled_chat"}}
