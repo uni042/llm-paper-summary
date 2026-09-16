@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-deb10d3b4d925a01",
+  "type": "research",
+  "parent_job_id": "job-11d3886970b43490",
+  "priority": 81,
+  "canonical_id": "arXiv:2601.11580",
+  "title": "Speculative Decoding: Performance or Illusion?",
+  "source_url": "https://arxiv.org/abs/2601.11580",
+  "paper_path": "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+  "selection_reason": "production-grade vLLM上でn-gram、EAGLE/EAGLE-3、draft model、MTPをモデル規模・batch・workload横断で系統評価し、target verification支配や理論上限との大きなgapを示す。新規アルゴリズムではなくても、serving条件でのSD実効性を検証する重要なsystem characterization。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T00:04:35+00:00"
+}

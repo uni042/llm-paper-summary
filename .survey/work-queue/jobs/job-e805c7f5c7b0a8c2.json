@@ -1,0 +1,19 @@
+{
+  "job_id": "job-e805c7f5c7b0a8c2",
+  "type": "discovery",
+  "lane": "discovery",
+  "priority": 50,
+  "status": "completed",
+  "recovery_only": true,
+  "recovery_for_submission": "work-queue/submissions/20260916T0748JST-discovery-specialist-seqcomm-16.json",
+  "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+  "completion": "Submit 0-5 strong candidates. Empty is valid.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-16T00:05:14+00:00",
+  "completed_at": "2026-09-16T00:05:15+00:00",
+  "result_summary": {
+    "submitted_candidates": 1,
+    "research_jobs_added": 1
+  }
+}

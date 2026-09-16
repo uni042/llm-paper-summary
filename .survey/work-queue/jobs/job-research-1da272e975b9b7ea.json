@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1da272e975b9b7ea",
+  "type": "research",
+  "parent_job_id": "job-2f75178c6669b310",
+  "priority": 70,
+  "canonical_id": "arXiv:2608.29745",
+  "title": "JITterFlip: Uncovering Fault Attack Surfaces in JIT-Compiled LLM Serving",
+  "source_url": "https://arxiv.org/abs/2608.29745",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.29745-jitterflip-jit-compiled-llm-serving-fault-surfaces.md",
+  "selection_reason": "即時コンパイル（JIT）を使うLLMサービングのCPU側制御面に対するビット反転攻撃を系統的に分析し、model weightではなくcompiled artifact選択・実行制御を攻撃面として示す。4つのテキスト/マルチモーダルLLMで出力破壊と最大181.9倍の遅延増幅、Rowhammerのend-to-end実証を報告しており、JIT runtimeの信頼性・セキュリティ設計上の未収録systems候補として有用。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T00:02:54+00:00"
+}
