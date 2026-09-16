@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-8ff0a365fd45baca9da31eb1",
-  "job_id": "job-research-4714939abf3ccf8f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8ff0a365fd45baca9da31eb1",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8ff0a365fd45baca9da31eb1","job_id":"job-research-4714939abf3ccf8f","data":{"canonical_id":"arXiv:2512.16056","arxiv_id":"2512.16056","doi":"10.48550/arXiv.2512.16056","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services","summary":"MMAはCPU host memoryとGPU間のDMAを単一PCIe linkへ固定せず、他GPUのPCIeとNVLink relayを同時利用するintra-server multipath転送層である。CUDA APIをLD_PRELOADで透過的にinterceptし、dummy taskで元のdependencyを維持しながらtransferをmicro-taskへ分割し、outstanding queue深度を暗黙のcongestion signalとして動的routingする。8×H20実機で最大245GB/s、native比4.62倍の帯域を得て、prefix-cache TTFTを1.14–2.38倍、vLLM sleep mode model switchingを1.12–2.48倍高速化する。","list_summary":"PCIe+NVLink relayを透過的にmultipath利用しhost–GPU帯域を最大245GB/s（4.62倍）、TTFT/model switchingを最大2.38/2.48倍高速化。","authors":["Lingfeng Tang","Daoping Zhang","Junjie Chen","Peihao Huang","Feng Jin","Chengguang Xu","Yuxin Chen","Feiqiang Sun","Guo Chen"],"published":"2025-12-18","publication":"arXiv preprint arXiv:2512.16056v1","publication_type":"arXivプレプリント","publication_status":"2025年12月18日投稿のarXiv初版。主分類cs.DC。","lineage":"llm-serving-scheduling-disaggregation","topics":["host-GPU transfer","PCIe","NVLink","multipath routing","KV cache transfer","model switching"],"importance":"offload/prefix cache/model switchingの共通PCIe bottleneckに対し、既存server内の未使用linkを束ねて物理帯域を増やす基盤I/O層を提供する。","hardware_evaluation":"AMD EPYC 9654 + 8×NVIDIA H20、PCIe 5.0、NVLink/NVSwitch実機。","quality_effect":"data transfer経路のみを変更し、モデル計算・出力品質は変更しない。","source":"https://arxiv.org/abs/2512.16056","sources":["https://arxiv.org/html/2512.16056v1"],"code":null,"implementation":"CUDA 12.8上の3000行超C++ user-space shared library。LD_PRELOADでnative CUDA memory APIを透過置換するprototypeを実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML","references_total":0},"reservation":{"claim_id":"claim-8ff0a365fd45baca9da31eb1","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
