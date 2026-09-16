@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3ab15fd671c597846c0e786b",
-  "job_id": "job-research-d9c67ca63b6b0f25",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3ab15fd671c597846c0e786b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3ab15fd671c597846c0e786b","job_id":"job-research-d9c67ca63b6b0f25","data":{"methodology":"実機ベンチマークではなく競合解析で評価する。単一複製、ハードKVメモリ上限M、時刻0に到着するジョブ集合を基本モデルとし、各ジョブのプロンプト長s_iは既知、応答長o_iは完了まで未知とする。各離散ラウンドで選んだバッチの各ジョブが1トークン進み、停止した試行のKV進捗は失われる。評価指標は全ジョブ完了時刻の総和を、全応答長を知る最適予知スケジュールで割った競合比。補助的に最大完了時刻とオンライン到着時の完了時刻総和も解析する。","hardware":"抽象的な単一LLMサービング複製とKVメモリ容量Mをモデル化しており、特定GPU型番や実機構成は評価条件ではない。","software":"理論アルゴリズム Rect、Response、BlackBoxMeta、Routeを解析。多項式時間で実行可能とされるが、公式コードやサービング基盤への実装評価は一次資料で確認できない。","scope":"任意のプロンプト長・応答長を持つ実行可能なバッチKVスケジューリングを対象とする。基本結果は全ジョブが時刻0に到着するオフライン到着・応答長非予知設定。拡張として最大完了時刻とオンライン到着の完了時刻総和を扱う。","baselines":["応答長を全て知る最適予知スケジュール","単一の大域面積優先規則","既存の同一プロンプト長向け非予知KVスケジューリング"],"failure_types":["単一優先規則によるメモリ未利用","大プロンプトによる小面積ジョブの待ち","応答長未知による将来メモリ需要の不確実性","停止・再開によるKV進捗損失"]},"reservation":{"claim_id":"claim-3ab15fd671c597846c0e786b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
