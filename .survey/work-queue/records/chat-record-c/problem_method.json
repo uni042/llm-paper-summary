@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-6f777f4f05d94ad725a15c92",
+  "attempt_id": "attempt-3d64f755a8e767409d3e9d13",
   "job_id": "job-research-8548d3d173ce3871",
   "data": {
     "problem": "プリフィルとデコードを別GPUプールへ分離すると相互干渉を避けられる一方、プリフィルで生成したKVキャッシュをデコード開始前にネットワーク越しに運ぶ必要がある。128K文脈のLlama-3-70BではKV全体が約40GB、テンソル並列4ならGPU対ごとに約10GBとなり、25Gbpsの遠隔直接メモリアクセスでは約3.2秒かかり得る。既存ルータはデコードGPUの計算負荷と接頭辞キャッシュ命中を評価するが、同一ラック・同一ポッド・ポッド間の帯域差や動的混雑を要求単位の選択へ入れないため、暖かいキャッシュを持つ遠隔GPUが近い未命中GPUより遅い場合がある。",
@@ -25,7 +25,7 @@
     "system_design": "既存のプリフィル/デコード分離構成を維持し、プリフィル完了イベントでNetKVの候補評価を呼ぶ。候補GPUのメモリ、キャッシュ、負荷状態とオラクルのネットワーク状態を読み、候補数に線形の計算で最低費用候補を選び、そのまま既存KV転送へ依頼する。完了イベントで自己混雑状態を更新し、次要求の判断へ反映する。"
   },
   "reservation": {
-    "claim_id": "claim-6f777f4f05d94ad725a15c92",
+    "claim_id": "claim-3d64f755a8e767409d3e9d13",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
