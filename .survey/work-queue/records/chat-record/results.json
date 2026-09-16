@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5028f739712e608875d6db98",
+  "attempt_id": "attempt-54d1aa80df89ff7087b1fa44",
   "job_id": "job-research-21d58015b4f64394",
   "data": {
     "overview": "H100上のLLM推論は『GPU利用率が低い』という一種類の問題ではない。cold prefillのdense GEMMはSM busy平均92%だがdecodeは平均9.4%、warm small-payloadもdecode型へ落ちる。一方decodeでも80～132/132 SMには仕事が届き、resident warpは8.8～9.5でkernel固有上限の75～95%を使っているため、単純にSM coverageやwarp数を増やすだけではない。stallは70～84%がlong_scoreboard、device-wide compute SOL約7.9%に対しDRAM SOL約64%で帯域依存が明確で、さらにGMMA m64断片の実行行充填はB=1～8で1.56～12.5%しかない。この固定命令粒度はretileでは直せず、speculative/tree/multi-token decodingなどでM=kBを増やす必要がある。",
@@ -60,7 +60,7 @@
     "interpretation": "decode最適化は一つの『GPU utilization』を上げる作業ではなく、帯域待ち、命令断片充填、wave、launch、resource capを別々に扱う必要がある。FFNが通常token時間58～66%を占めるため、改善率も役割時間比で評価すべきである。"
   },
   "reservation": {
-    "claim_id": "claim-5028f739712e608875d6db98",
+    "claim_id": "claim-54d1aa80df89ff7087b1fa44",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
