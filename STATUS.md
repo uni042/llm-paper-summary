@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:28:39 JST**
+> 自動生成: **2026-09-16 14:29:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **29** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **5** |
-| 合計 | **30** | **17** | **6** | **11** | **4** | **1** | **5** |
+| Discovery | **1** | **8** | **0** | **8** | **0** | **0** | **8** |
+| 合計 | **30** | **20** | **6** | **14** | **4** | **1** | **8** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -156,8 +156,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 14:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **5件**
-- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **8件** / 候補: **8件**
+- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference
 - round `specialist-moe-cache-router-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1432JST-discovery-specialist-moe-cache-router-1.json`
   - 探索軸: MoE expert cache・cache-aware routing
@@ -177,6 +177,18 @@
 - round `specialist-gpu-utilization-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1436JST-discovery-specialist-gpu-utilization-5.json`
   - 探索軸: Hopper GPU utilization・推論profiling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cache-determinism-6` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1437JST-discovery-specialist-cache-determinism-6.json`
+  - 探索軸: prefix cache・量子化・serving決定性
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-page-aware-kv-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1438JST-discovery-specialist-page-aware-kv-7.json`
+  - 探索軸: page-aware decode scheduling・KV workqueue
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-nand-compute-8` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260916T1439JST-discovery-specialist-nand-compute-8.json`
+  - 探索軸: 3D NAND・near-storage compute LLM inference
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -243,9 +255,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **293** |
+| 成功result未照合のimmutable submission | **296** |
 | └ Research | **174** |
-| └ Discovery | **119** |
+| └ Discovery | **122** |
 
 ### 厳格検証が未成立のcompleted job
 
