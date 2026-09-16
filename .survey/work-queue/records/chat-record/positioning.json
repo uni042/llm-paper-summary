@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c1d8026e28752fd64706fb1b",
+  "attempt_id": "attempt-a0f13032d9d1db39f95daed4",
   "job_id": "job-research-82da92628b1e61c3",
   "data": {
     "limitations": "評価はvLLM/SGLang、3モデル、4×H200の単一machineが中心で、異なるGPU世代・network topology・大規模multi-nodeでの誤差は未提示。runtime predictorのモデル誤差はそのままvirtual duration誤差へ入る。framework統合には各50行未満とはいえActor patchが必要で完全透過ではない。4MB閾値のsplit-state memoryはcontrol planeが大きなGPU buffer内容へ依存する将来実装では適用できず、CPU側処理が増えるほどtime acceleration上限も下がる。",
@@ -11,7 +11,7 @@
     "research_positioning": "LLM serving性能モデリングにおいて、シミュレータ精緻化ではなく実システムを仮想hardware・仮想時間上で走らせるemulation系統を提示する。特にprefill/decode disaggregation、hierarchical prefix cache、MoE/expert parallelismのようにcontrol logicが急速に複雑化する状況では、featureをsimulation側へ再実装しないこと自体が保守性とfidelityの優位点になる。一方でGPU runtime predictorとdevice/control-data境界の正しさは依然モデル化が必要であり、完全にmodel-freeな評価ではない。"
   },
   "reservation": {
-    "claim_id": "claim-c1d8026e28752fd64706fb1b",
+    "claim_id": "claim-a0f13032d9d1db39f95daed4",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
     "worker_kind": "scheduled_chat"
   }
