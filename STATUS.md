@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:03:39 JST**
+> 自動生成: **2026-09-17 03:04:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **19** |
-| 未claim Research job | **18** |
+| 収録候補論文 | **23** |
+| 未claim Research job | **22** |
 | 直近24hの検証済みResearch収録 | **89** |
 | 最終検証済みResearch収録 | **09-17 02:36:39 JST（27分前）** |
 | 整合性異常 | **16** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **19** |
+| canonical_id確認済みの一意な候補論文 | **23** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **19** |
+| 非終端Research job合計 | **23** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **19** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **2** | **0** | **2** | **0** | **0** | **5** |
-| 合計 | **33** | **10** | **4** | **6** | **1** | **0** | **5** |
+| Discovery | **15** | **2** | **1** | **1** | **0** | **0** | **5** |
+| 合計 | **34** | **10** | **5** | **5** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 03:02:50 JST** job `job-94ba33215899ac74` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
+  - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
 - **09-17 02:02:52 JST** job `job-63d7ce232b8ee5eb` / 候補 **1件**
   - result: `.survey/work-queue/results/20260917T0205JST-discovery-specialist-offload-specdecode-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
   - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation
-- **09-17 00:05:13 JST** job `job-191a00887b4bbee2` / 候補 **2件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json`
-  - 探索軸: agent sandbox scheduling・agentic workload serving characterization
 
 ### 直近タスク
 
@@ -186,12 +186,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 03:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **5件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **5件**
 - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness / GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
 - round `specialist-recent-inference-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
   - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json` (`ok=true`)
 - round `specialist-cross-dc-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json`
   - 探索軸: GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
@@ -224,7 +224,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **19** |
+| ready | **23** |
 
 ### 候補の重複・識別情報欠損
 
@@ -252,10 +252,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **395** |
+| 成功result未照合のimmutable submission | **394** |
 | └ Research | **266** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-21f0d525f3274129",
+  "type": "research",
+  "parent_job_id": "job-94ba33215899ac74",
+  "priority": 86,
+  "canonical_id": "arXiv:2609.14773",
+  "title": "Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations",
+  "source_url": "https://arxiv.org/abs/2609.14773",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md",
+  "selection_reason": "長期対話を全context注入せず、ローカルdeterministic Purifierでaddressable metadata directoryを維持し、必要turnだけlazy materializationするsession-router方式。LoCoEvalでsingle-hopのquery context tokenを75.1%、multi-hopを72.0%削減し品質維持を報告し、BEAM 1Mでもtruncation比F1 +55.2%。agentic/stateful servingのcontext materializationとして独立したsystem軸を持つ。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T18:02:50+00:00"
+}

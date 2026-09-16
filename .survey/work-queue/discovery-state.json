@@ -1,36 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T17:06:29+00:00",
-  "last_run_key": "2026-09-17T02:00:00+09:00",
-  "last_round": "specialist-migration-scheduling-8",
+  "updated_at": "2026-09-16T18:02:50+00:00",
+  "last_run_key": "2026-09-17T03:00:00+09:00",
+  "last_round": "specialist-recent-inference-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 18,
-  "last_empty_round_reason": "強いsystem候補は取得時identity照合ですべて既収録だった。",
+  "consecutive_empty_rounds": 19,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T14:22:56+09:00",
-      "round": "specialist-2609-serving-routing-1",
-      "axis": "2609新着・分離サービング・動的ルーティング",
-      "query_summary": "探索専用workerの手動試運転として2609系新着を中心にKV量子化、agentic serving scheduling、動的routingを探索し、投入直前にidentity deltaまで再確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 3,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.25,
-      "accepted_canonical_ids": [
-        "arxiv:2609.11582",
-        "arxiv:2609.10964",
-        "arxiv:2609.08189"
-      ],
-      "duplicate_canonical_ids": [
-        "arxiv:2609.11133"
-      ],
-      "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す",
-      "source_submission": "work-queue/submissions/20260912T1422JST-discovery-stats-backfill.json"
-    },
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "round": "paper-worker-new-arrivals-power-moe-kv-1-retry",
@@ -6572,6 +6551,32 @@
       ],
       "next_axis_hint": "kernel-level memory bandwidth・prefetchと2024重要omissionを最終確認する",
       "source_submission": "work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json"
+    },
+    {
+      "run_key": "2026-09-17T03:00:00+09:00",
+      "round": "specialist-recent-inference-1",
+      "axis": "2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness",
+      "query_summary": "paginationを直接公開しないweb検索providerで、2609新着LLM inference/serving、KV cache、MoE/offload、9月13-16日新着という検索窓をずらして探索。最新discovery identity snapshotのarXiv-2609 shardと照合し、既収録/既投入をcandidate評価前に除外した。未評価bufferとして5件を一次arXiv情報で評価し、4件採用、1件をscope理由でrejected_candidatesへ記録した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.03515",
+        "arXiv:2609.10266",
+        "arXiv:2609.11294",
+        "arXiv:2609.16206",
+        "arXiv:2607.28150",
+        "arXiv:2606.16135",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "直近2609のGPU runtime/collective communication/heterogeneous memory、または既収録重要serving論文のforward-citationへ移し、今回のKV/context軸を機械的に反復しない",
+      "source_submission": "work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json"
     }
   ],
   "axes": {
@@ -10596,6 +10601,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "kernel-level memory bandwidth・prefetchと2024重要omissionを最終確認する"
+    },
+    "2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness": {
+      "last_run_key": "2026-09-17T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "直近2609のGPU runtime/collective communication/heterogeneous memory、または既収録重要serving論文のforward-citationへ移し、今回のKV/context軸を機械的に反復しない"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

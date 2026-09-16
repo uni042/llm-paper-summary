@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T17:36:41.166947+00:00",
+  "updated_at": "2026-09-16T18:04:21.920293+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T17:36:41.166947+00:00",
+      "last_recorded_at": "2026-09-16T18:04:21.920293+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 173,
         "audit_completed": 0,
-        "discovery_completed": 83,
+        "discovery_completed": 84,
         "blocked": 12,
-        "new_jobs": 110,
+        "new_jobs": 115,
         "new_papers": 174,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35063114640:1",
-          "recorded_at": "2026-09-16T06:18:33.578891+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35063114640",
-            "run_attempt": "1",
-            "source_sha": "b36c16f89c0797983217b5e5dda8ac11de27468d"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35063183977:1",
           "recorded_at": "2026-09-16T06:19:28.962157+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35131894509:1",
+          "recorded_at": "2026-09-16T18:04:21.920293+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35131894509",
+            "run_attempt": "1",
+            "source_sha": "0617644a0bde7a5b2eb886dff52f0880b9aa006f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21744,6 +21744,14 @@
           "title": "Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-94ba33215899ac74",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22516,6 +22524,41 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-94ba33215899ac74",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-21f0d525f3274129",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14773",
+          "title": "Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations"
+        },
+        {
+          "job_id": "job-research-38c18cd4bb2728b9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13285",
+          "title": "Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction"
+        },
+        {
+          "job_id": "job-research-659c7469c0065c08",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14850",
+          "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference"
+        },
+        {
+          "job_id": "job-research-9c0ef4e091be369c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15504",
+          "title": "How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus"
         }
       ],
       "new_paper_ids": [
@@ -22897,7 +22940,8 @@
         ".survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json",
         ".survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json",
         ".survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json",
-        ".survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json"
+        ".survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json",
+        ".survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -22975,7 +23019,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 635,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
