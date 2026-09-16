@@ -2,34 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d8eea39fb533e59149a161cc",
-  "job_id": "job-research-8473b19fc0026661",
+  "attempt_id": "attempt-2004493bc34fc87305b3e8a8",
+  "job_id": "job-research-431f09f6206f16eb",
   "data": {
-    "hardware": "エンドツーエンド評価は2サーバ、各8基のNVIDIA H20 96GB、合計16 vLLMインスタンス。CXL側はXConn XC50256 CXL 2.0スイッチと共有メモリ装置を使用。メモリプール容量はBelugaとRDMA比較で2TBにそろえる。マイクロベンチマークではCPU、Intel DSA、GPUからCXLメモリへの各種アクセスも測定。",
-    "software": "vLLM V1 v0.8.5、MoonCake v3.2、LMCache v0.3.1、NVIDIA Dynamo v0.4.1を比較。vLLMの接頭辞キャッシュを有効化し、GPU HBMにもKVを保持する。",
-    "methodology": "既定モデルは非量子化Qwen-32B。主負荷は入力15Kトークン超のLV-Evalで、入力長を2K、4K、8Kへ制限した派生負荷も使用。初回のキャッシュ格納と、共有プールへKVが事前格納済みの二回目キャッシュヒットを分けて測る。指標は先頭トークン時間、出力1トークン時間、毎秒要求数。要求到着率0.3〜9.0 QPS、プリフィル／デコード比、KVブロックサイズ、メモリインターリーブ有無を感度分析する。KV転送の内訳ではQwen3-32B、Llama-3.1-8B、Qwen3-32B-FP8の密KVと、Qwen3-32B・Llama-3-8Bの疎KVを測る。RPCは64バイト要求・応答の往復をRDMA-RC、RDMA-UDと比較する。",
-    "scope": "商用CXL 2.0スイッチを使う実機評価であり、CXL 3.0のハードウェア一貫性は対象外。CXL 2.0の非一貫領域をソフトウェアで管理する。エンドツーエンドはH20中心で、他GPUやクロスラック構成への一般化は未検証。CXL-RPCはRDMAと同等の信頼性保証を提供せず、上位層の保証へ依存する。",
-    "benchmarks": [
-      "LV-Eval",
-      "LV-Eval-2K",
-      "LV-Eval-4K",
-      "LV-Eval-8K"
-    ],
-    "models": [
-      "Qwen-32B",
-      "Qwen3-32B",
-      "Llama-3.1-8B",
-      "Qwen3-32B-FP8",
-      "Llama-3-8B"
-    ],
+    "methodology": "MegaScale-Infer型の注意・エキスパート分離MoE推論を比較対象とし、注意ワーカー故障とエキスパートワーカー故障を個別に注入して、故障発生から推論が再び前進するまでの停止時間を測る。通常時はスループットとトークン単位遅延を比較し、非同期KVチェックポイントがAW-EWデータ経路へ与える追加負担も測定する。注意側では要求単位KV復元を全履歴再計算と比較し、回復遅延、回復通信量、GPU再計算量を評価する。",
+    "hardware": "一次資料の取得済み範囲では具体的GPU型番・台数の評価表まで確認できなかったため記載しない。論文は大規模MoEサービングとMegaScale-Infer型構成を対象にする。",
+    "software": "TARRAGON研究実装。再構成可能AW-EW転送、エキスパート経路表、影エキスパート、非同期増分KVチェックポイント、要求単位復元を実装。",
+    "scope": "MoE推論の故障回復に限定し、学習は対象外。注意計算とエキスパート計算が分離された構成を前提とする。エキスパート側の即時回復には影重みを置ける余剰GPUメモリが必要で、注意側はチェックポイント先と転送帯域を必要とする。",
     "baselines": [
-      "MoonCake v3.2",
-      "Dynamo v0.4.1",
-      "vLLM"
+      "MegaScale-Infer-like coarse-grained recovery"
+    ],
+    "failure_types": [
+      "attention worker failure",
+      "expert worker failure"
     ]
   },
   "reservation": {
-    "claim_id": "claim-d8eea39fb533e59149a161cc",
+    "claim_id": "claim-2004493bc34fc87305b3e8a8",
     "worker_id": "scheduled-chat-normal-20260917T003101JST",
     "worker_kind": "scheduled_chat"
   }
