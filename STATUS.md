@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 04:37:58 JST**
+> 自動生成: **2026-09-17 05:02:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **40** |
-| 未claim Research job | **40** |
+| 収録候補論文 | **41** |
+| 未claim Research job | **41** |
 | 直近24hの検証済みResearch収録 | **93** |
-| 最終検証済みResearch収録 | **09-17 04:37:50 JST（8秒前）** |
+| 最終検証済みResearch収録 | **09-17 04:37:50 JST（25分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **40** |
+| canonical_id確認済みの一意な候補論文 | **41** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **40** |
+| 非終端Research job合計 | **41** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **8** | **4** | **4** | **0** | **0** | — |
+| Research | **16** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **7** | **7** | **0** | **0** | **0** | **29** |
-| 合計 | **40** | **15** | **11** | **4** | **0** | **0** | **29** |
+| Discovery | **24** | **1** | **1** | **0** | **0** | **0** | **1** |
+| 合計 | **40** | **9** | **5** | **4** | **0** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 05:02:46 JST** job `job-81d9561e39a761a9` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json`
+  - 探索軸: MoE expert-sharded KV cache・expert residency・distributed cache routing
 - **09-17 04:03:42 JST** job `job-93fb2f0552bd58b2` / 候補 **2件**
   - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-agentic-serving-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-agentic-serving-4.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T0307JST-discovery-specialist-cross-dc-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json`
   - 探索軸: GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
-- **09-17 02:02:52 JST** job `job-63d7ce232b8ee5eb` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260917T0205JST-discovery-specialist-offload-specdecode-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
-  - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
 
 ### 直近タスク
 
@@ -185,37 +185,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 04:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **0件** / 候補: **29件**
-- 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling / Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware / MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling / KV prefetch・cache admission・I/O scheduling・memory hierarchy / GPU runtime・network-aware serving・dynamic memory scheduling・resource co-location / serving engine・dynamic batching・distributed KV/attention・adapter/personalized serving / speculative decodingのmemory/runtime/distributed serving・communication co-design
-- round `specialist-agentic-serving-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-agentic-serving-4.json`
-  - 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-agentic-serving-4.json` (`ok=true`)
-- round `specialist-flash-memory-hardware-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
-  - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
-- round `specialist-moe-movement-2` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json`
-  - 探索軸: MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-moe-movement-2.json` (`ok=true`)
-- round `specialist-prefetch-io-7` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-prefetch-io-7.json`
-  - 探索軸: KV prefetch・cache admission・I/O scheduling・memory hierarchy
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-prefetch-io-7.json` (`ok=true`)
-- round `specialist-runtime-scheduling-3` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-runtime-scheduling-3.json`
-  - 探索軸: GPU runtime・network-aware serving・dynamic memory scheduling・resource co-location
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-runtime-scheduling-3.json` (`ok=true`)
-- round `specialist-serving-engine-6` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-serving-engine-6.json`
-  - 探索軸: serving engine・dynamic batching・distributed KV/attention・adapter/personalized serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-serving-engine-6.json` (`ok=true`)
-- round `specialist-speculative-systems-5` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json`
-  - 探索軸: speculative decodingのmemory/runtime/distributed serving・communication co-design
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0400JST-discovery-specialist-speculative-systems-5.json` (`ok=true`)
+- 最新観測run: **2026-09-17 05:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **1件**
+- 探索軸: MoE expert-sharded KV cache・expert residency・distributed cache routing
+- round `specialist-moe-kv-sharding-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json`
+  - 探索軸: MoE expert-sharded KV cache・expert residency・distributed cache routing
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -242,7 +218,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **40** |
+| ready | **41** |
 
 ### 候補の重複・識別情報欠損
 
