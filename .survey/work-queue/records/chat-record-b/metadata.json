@@ -1,1 +1,84 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-75280cfa986cb226a14d3a7a","job_id":"job-research-4055e74aec47c94e","data":{"canonical_id":"arXiv:2607.23933","arxiv_id":"2607.23933","doi":"10.48550/arXiv.2607.23933","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving","summary":"SpecBoxは、LLMエージェントが外部ツール用の隔離実行環境を使う際、常時予約ではメモリを浪費し、必要時起動では初回起動が末尾遅延を悪化させる問題に対し、LLMのトークン生成途中からツール意図を推測して環境起動を先行させる実行系である。キーワード一致と逐次意味埋め込みによる意図駆動事前起動、依存グラフ上の文脈依存確率先読み、意味結果キャッシュ、共有メモリ無コピー転送を統合する。高並行・複数ターンのエージェント履歴で必要時起動比の99パーセンタイル端末間遅延を最大2.9倍短縮し、常時予約方式比で最大メモリを45.9%削減した。","list_summary":"SpecBoxはLLM生成中に将来のツール利用を推測して隔離実行環境を投機起動し、依存グラフ先読み・結果キャッシュ・共有メモリ転送を組み合わせてエージェントサービングの初回起動遅延と常時予約メモリを両立改善する。","authors":["Yihui Zhang","Tianyu Wo","Jinghao Wang","Xiaoyang Sun","Menghao Zhang","Cangzhou Yuan","Li Li","Chunming Hu","Albert Y. Zomaya","Renyu Yang"],"authors_affiliations":"一次資料記載の著者所属。","published":"2026-07-27","publication":"arXiv:2607.23933v1","publication_type":"プレプリント","publication_status":"arXiv v1（2026-07-27提出）。","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMエージェント","隔離環境スケジューリング","投機的事前起動","モデル文脈プロトコル","結果キャッシュ","無コピー転送"],"importance":"高。GPU推論外のエージェント実行資源を投機スケジューリング対象にし、推論時間を隔離環境の起動隠蔽窓として利用する。","hardware_evaluation":"高並行・複数ターンのエージェント履歴を用いた試作実行系評価。隔離環境の起動、メモリ、99パーセンタイル端末間遅延を測定。","hardware_details":"論文試作のエージェントサービングクラスタ上で評価。詳細構成は一次資料評価節に従う。","quality_effect":"ツール実行結果自体を近似せず、隔離環境の起動時刻、結果再利用、成果物転送を最適化する。投機失敗は余分な資源消費として現れる。","storage_targets":["隔離環境メモリ","意味結果キャッシュ","共有メモリ成果物転送面"],"bottlenecks":["隔離環境の初回起動","常時予約メモリ","ツール意図予測","環境切替遅延","成果物の直列化・ネットワーク転送"],"evidence_locations":["arXiv要旨","手法・評価節","遅延・メモリ評価図"],"source":"https://arxiv.org/abs/2607.23933","sources":["https://arxiv.org/abs/2607.23933","https://arxiv.org/pdf/2607.23933"],"code":"","implementation":"投機的隔離環境事前割当、依存グラフ先読み、意味結果キャッシュ、帯域外共有メモリ転送を持つ実行系試作。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"一次資料関連研究節","references_total":0},"reservation":{"claim_id":"claim-75280cfa986cb226a14d3a7a","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-e5b7d8bd8cb604c35cc21abd",
+  "job_id": "job-research-4055e74aec47c94e",
+  "data": {
+    "canonical_id": "arXiv:2607.23933",
+    "arxiv_id": "2607.23933",
+    "doi": "10.48550/arXiv.2607.23933",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
+    "summary": "SpecBoxは、LLMエージェントが外部ツール用の隔離実行環境を使う際、常時予約ではメモリを浪費し、必要時起動では初回起動が末尾遅延を悪化させる問題に対し、LLMのトークン生成途中からツール意図を推測して環境起動を先行させる実行系である。キーワード一致と逐次意味埋め込みによる意図駆動事前起動、依存グラフ上の文脈依存確率先読み、意味結果キャッシュ、共有メモリ無コピー転送を統合する。高並行・複数ターンのエージェント履歴で必要時起動比の99パーセンタイル端末間遅延を最大2.9倍短縮し、常時予約方式比で最大メモリを45.9%削減した。",
+    "list_summary": "SpecBoxはLLM生成中に将来のツール利用を推測して隔離実行環境を投機起動し、依存グラフ先読み・結果キャッシュ・共有メモリ転送を組み合わせてエージェントサービングの初回起動遅延と常時予約メモリを両立改善する。",
+    "authors": [
+      "Yihui Zhang",
+      "Tianyu Wo",
+      "Jinghao Wang",
+      "Xiaoyang Sun",
+      "Menghao Zhang",
+      "Cangzhou Yuan",
+      "Li Li",
+      "Chunming Hu",
+      "Albert Y. Zomaya",
+      "Renyu Yang"
+    ],
+    "authors_affiliations": "一次資料記載の著者所属。",
+    "published": "2026-07-27",
+    "publication": "arXiv:2607.23933v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-07-27提出）。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "LLMエージェント",
+      "隔離環境スケジューリング",
+      "投機的事前起動",
+      "モデル文脈プロトコル",
+      "結果キャッシュ",
+      "無コピー転送"
+    ],
+    "importance": "高。GPU推論外のエージェント実行資源を投機スケジューリング対象にし、推論時間を隔離環境の起動隠蔽窓として利用する。",
+    "hardware_evaluation": "高並行・複数ターンのエージェント履歴を用いた試作実行系評価。隔離環境の起動、メモリ、99パーセンタイル端末間遅延を測定。",
+    "hardware_details": "論文試作のエージェントサービングクラスタ上で評価。詳細構成は一次資料評価節に従う。",
+    "quality_effect": "ツール実行結果自体を近似せず、隔離環境の起動時刻、結果再利用、成果物転送を最適化する。投機失敗は余分な資源消費として現れる。",
+    "storage_targets": [
+      "隔離環境メモリ",
+      "意味結果キャッシュ",
+      "共有メモリ成果物転送面"
+    ],
+    "bottlenecks": [
+      "隔離環境の初回起動",
+      "常時予約メモリ",
+      "ツール意図予測",
+      "環境切替遅延",
+      "成果物の直列化・ネットワーク転送"
+    ],
+    "evidence_locations": [
+      "arXiv要旨",
+      "手法・評価節",
+      "遅延・メモリ評価図"
+    ],
+    "source": "https://arxiv.org/abs/2607.23933",
+    "sources": [
+      "https://arxiv.org/abs/2607.23933",
+      "https://arxiv.org/pdf/2607.23933"
+    ],
+    "code": "",
+    "implementation": "投機的隔離環境事前割当、依存グラフ先読み、意味結果キャッシュ、帯域外共有メモリ転送を持つ実行系試作。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "一次資料関連研究節",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-e5b7d8bd8cb604c35cc21abd",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
