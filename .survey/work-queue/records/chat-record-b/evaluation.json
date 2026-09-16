@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-53b88cd4cd7a0025f4e4c397",
-  "job_id": "job-research-df04bb2baebfa878",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53b88cd4cd7a0025f4e4c397",
-    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T225915JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-53b88cd4cd7a0025f4e4c397","job_id":"job-research-df04bb2baebfa878","data":{"hardware":"主評価は数値シミュレーション。実要求条件ではMicrosoft Vidurで処理時間を算出し、合成条件の容量はLlama2-70BをA100 2基へ配置する規模に合わせる。","software":"離散時間の待ち行列モデルと、Vidur処理時間を用いる連続時間シミュレーションで流量制御方策を比較する。","methodology":"出力長既知と未知の二設定を分ける。既知設定では要求型ごとの到着率・入力長・出力長に応じた活性化予算を使い、未知設定では先入れ先出しで待ち要求を活性化し、容量超過時に後入れ先出しで実行中要求を待ち行列へ戻す。理論上の必要安定条件、十分安定条件、容量余裕に対する超過回数の指数減衰を解析した後、合成ワークロードとLMSYS-Chat-1M由来の実要求で要求処理量、トークン処理量、平均遅延、95百分位遅延、鍵値キャッシュ利用の変動を比較する。","scope":"離散時間理論ではprefill計算時間を単純化し、要求の入力・出力長は独立同分布または有限型を仮定する。未知長保証では長さ有界性を置く。多回対話の接頭辞再利用、出力長予測器との統合、複数GPU間の通信・配置は主要対象外である。"},"reservation":{"claim_id":"claim-53b88cd4cd7a0025f4e4c397","worker_id":"scheduled-chat-llm-survey-turn5-20260916T225915JST","worker_kind":"scheduled_chat"}}
