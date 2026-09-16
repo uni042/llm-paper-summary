@@ -1,13 +1,16 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-95c518792662f18476bdcb36",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95c518792662f18476bdcb36",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
+ "data":{
+  "positioning":"PALSはMoE expert placement/offloadingそのものではなく、MoE servingで顕著なcompute/communication比を観測し、GPU power capとbatchingを共同制御するnode-level energy/QoS runtimeである。vLLM/Orca/Sarathi/DistServe/Helix等が固定power budget下でsoftware optimizationを行うのに対し、powerをschedulerのdecision dimensionへ加える。",
+  "relation_to_prior_work":[
+   {"work":"vLLM / Orca / Sarathi-Serve","difference":"batching・memory・schedulingを固定power下で最適化。PALSはpower capをruntime knobとして追加。"},
+   {"work":"Helix","difference":"heterogeneous GPU placement/routingに対し、PALSはnode内のsub-second power+batch制御。"},
+   {"work":"DynamoLLM / TAPAS / POLCA","difference":"cluster/datacenter-levelのminutes級provisioning・routing・power管理を補完し、500ms粒度でnode内部を追従。"},
+   {"work":"Zeus / BatchDVFS","difference":"trainingまたはsingle-GPU DNNのpower/batch最適化をmulti-GPU autoregressive LLM/MoEへ拡張し、parallelism由来communicationを明示的に扱う。"}
+  ],
+  "strengths":["既存vLLMへplug-and-playで統合","power/batch相互作用をdense/MoE双方で実測","predictionとPID feedbackを組み合わせworkload driftへ対応","QoS・energy・grid demand-responseを同一runtimeで扱う","oracle比較でruntime-feasible knobsのheadroomを定量化"],
+  "limitations":["offline predictorは固定configurationと代表promptで学習するため長prompt、adversarial input、output-length shiftで誤差が増え得る。","PIDはsteady-state mismatchを補正するが急激なload changeを予測できない。","TP/EP/DPはmodel reloadを要するstatic knobで、runtime PALSは主にcapとbatchを動かす。","node-level制御でありcluster-wide placement/routingは外部schedulerが必要。","評価hardwareはA100中心で、他世代GPUや異種clusterへの一般化は追加検証が必要。"],
+  "repository_fit":"inference/04-moe-offload-routingに関連するが、より正確にはpower-aware MoE serving / runtime control系。expert routing通信がpower efficiencyへ与える影響を定量化するため、MoE system設計の比較軸として有用。"
+ },
+ "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
