@@ -1,1 +1,68 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0bbfabc249b563dabf75666d","job_id":"job-research-82da92628b1e61c3","data":{"canonical_id":"arXiv:2601.00397","arxiv_id":"2601.00397","doi":"10.48550/arXiv.2601.00397","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving","summary":"Revatiは実際のvLLM/SGLang制御コードをGPUなしで直接実行し、CUDA/NCCL処理を仮想化して予測GPU時間だけ仮想時計を進める時間加速エミュレータである。分散Actorの最小target時刻へ進むTimekeeperで因果律を保ち、CUDA仮想化、分割メモリ、NCCL barrier、実行時間予測器を組み合わせる。3モデル・2サービング系でTTFT/TPOT誤差5%未満を維持し、実GPU比おおむね5〜17倍の評価高速化を報告する。","list_summary":"実LLMサーバ制御コードをそのまま走らせ、GPU計算だけ仮想時間へ置換して5%未満の誤差と約5〜17倍の評価高速化を狙うGPU不要エミュレータ。","authors":["Amey Agrawal","Mayank Yadav","Sukrit Kumar","Anirudha Agrawal","Garv Ghai","Souradeep Bera","Elton Pinto","Sirish Gambhira","Mohammad Adain","Kasra Sohrab","Chus Antonanzas","Alexey Tumanov"],"authors_affiliations":"Georgia Institute of Technology","published":"2026-01-01","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint v1","lineage":"LLM serving performance modeling / time-warp emulation","topics":["LLMサービング","性能モデリング","GPUエミュレーション","仮想時間","vLLM","SGLang"],"importance":"離散事象シミュレータの制御ロジック再実装を避け、実フレームワークの急速な進化をそのまま評価対象へ反映できる点が重要。","implementation":"Timekeeper約800行C++、device emulator約6000行C++、vLLM/SGLang各50行未満のpatch、ZeroMQを使用。","hardware_evaluation":"4×NVIDIA H200 NVLink、AMD EPYC 9334 128-core、756GB memoryで実GPU基準を取得。","quality_effect":"性能予測系でありモデル出力品質の変更を目的としない。固定出力トークン数の性能評価を前提とする。","source":"https://arxiv.org/abs/2601.00397","sources":["https://arxiv.org/abs/2601.00397","https://arxiv.org/pdf/2601.00397"],"code":null,"last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":32},"reservation":{"claim_id":"claim-0bbfabc249b563dabf75666d","worker_id":"scheduled-chat-llm-survey-turn5-20260916T223150JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c1d8026e28752fd64706fb1b",
+  "job_id": "job-research-82da92628b1e61c3",
+  "data": {
+    "canonical_id": "arXiv:2601.00397",
+    "arxiv_id": "2601.00397",
+    "doi": "10.48550/arXiv.2601.00397",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving",
+    "summary": "Revatiは実際のvLLM/SGLang制御コードをGPUなしで直接実行し、CUDA/NCCL処理を仮想化して予測GPU時間だけ仮想時計を進める時間加速エミュレータである。分散Actorの最小target時刻へ進むTimekeeperで因果律を保ち、CUDA仮想化、分割メモリ、NCCL barrier、実行時間予測器を組み合わせる。3モデル・2サービング系でTTFT/TPOT誤差5%未満を維持し、実GPU比おおむね5〜17倍の評価高速化を報告する。",
+    "list_summary": "実LLMサーバ制御コードをそのまま走らせ、GPU計算だけ仮想時間へ置換して5%未満の誤差と約5〜17倍の評価高速化を狙うGPU不要エミュレータ。",
+    "authors": [
+      "Amey Agrawal",
+      "Mayank Yadav",
+      "Sukrit Kumar",
+      "Anirudha Agrawal",
+      "Garv Ghai",
+      "Souradeep Bera",
+      "Elton Pinto",
+      "Sirish Gambhira",
+      "Mohammad Adain",
+      "Kasra Sohrab",
+      "Chus Antonanzas",
+      "Alexey Tumanov"
+    ],
+    "authors_affiliations": "Georgia Institute of Technology",
+    "published": "2026-01-01",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint v1",
+    "lineage": "LLM serving performance modeling / time-warp emulation",
+    "topics": [
+      "LLMサービング",
+      "性能モデリング",
+      "GPUエミュレーション",
+      "仮想時間",
+      "vLLM",
+      "SGLang"
+    ],
+    "importance": "離散事象シミュレータの制御ロジック再実装を避け、実フレームワークの急速な進化をそのまま評価対象へ反映できる点が重要。",
+    "implementation": "Timekeeper約800行C++、device emulator約6000行C++、vLLM/SGLang各50行未満のpatch、ZeroMQを使用。",
+    "hardware_evaluation": "4×NVIDIA H200 NVLink、AMD EPYC 9334 128-core、756GB memoryで実GPU基準を取得。",
+    "quality_effect": "性能予測系でありモデル出力品質の変更を目的としない。固定出力トークン数の性能評価を前提とする。",
+    "source": "https://arxiv.org/abs/2601.00397",
+    "sources": [
+      "https://arxiv.org/abs/2601.00397",
+      "https://arxiv.org/pdf/2601.00397"
+    ],
+    "code": null,
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "primary-reference-section",
+    "references_total": 32
+  },
+  "reservation": {
+    "claim_id": "claim-c1d8026e28752fd64706fb1b",
+    "worker_id": "scheduled-chat-llm-survey-turn5-20260916T223150JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
