@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T17:05:54.265903+00:00",
+  "updated_at": "2026-09-16T17:35:00.098812+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T17:05:54.265903+00:00",
+      "last_recorded_at": "2026-09-16T17:35:00.098812+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 171,
+        "research_completed": 172,
         "audit_completed": 0,
         "discovery_completed": 83,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35062978925:1",
-          "recorded_at": "2026-09-16T06:16:41.598415+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35062978925",
-            "run_attempt": "1",
-            "source_sha": "f9f185c2da2535fcafd447dd46ce0dfad2e48db5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35063049885:1",
           "recorded_at": "2026-09-16T06:17:53.489904+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35129057072:1",
+          "recorded_at": "2026-09-16T17:35:00.098812+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35129057072",
+            "run_attempt": "1",
+            "source_sha": "b207cb4d19addf201205613501860246dc83f9cc"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21728,6 +21728,14 @@
           "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-f992ed2fc8c47a46",
+          "type": "research",
+          "canonical_id": "arXiv:2505.10259",
+          "title": "SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22959,7 +22967,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 635,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
