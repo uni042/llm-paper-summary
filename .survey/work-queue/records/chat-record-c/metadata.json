@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-3b440c67ddde8f986203d174",
-  "job_id": "job-research-d743b2b5468a28c8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3b440c67ddde8f986203d174",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3b440c67ddde8f986203d174","job_id":"job-research-d743b2b5468a28c8","data":{"canonical_id":"arXiv:2605.21312","arxiv_id":"2605.21312","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Frontier: Towards Comprehensive and Accurate LLM Inference Simulation","summary":"現代のLLMサービングは、プリフィル/デコード分離、注意機構/FFN分離、複雑な並列化、CUDA Graph、投機的デコード、階層キャッシュ、推論・エージェント・強化学習ロールアウトなどを組み合わせる。従来シミュレータは一台の同質レプリカが全処理を担う抽象化と平均的な演算時間・KV容量モデルに依存し、分離クラスタ間転送やスケジューラ状態変化を正しく表せない。Frontierは役割別クラスタワーカーを持つ離散イベントシミュレータで、制御面がco-location、PDD、AFDをイベント依存関係へコンパイルし、実行面が実際のスケジューラ・バッチ処理・ランタイム最適化を状態遷移として再現する。忠実度面は実測校正した演算、通信、転送、KVメモリ予測器を提供する。","list_summary":"分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。","authors":["Yicheng Feng","Xin Tan","Yangtao Deng","Yimin Jiang","Yibo Zhu","Hong Xu"],"authors_affiliations":"The Chinese University of Hong Kong; Anuttacon; StepFun","published":"2026-06-13","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint v2","lineage":"LLM inference simulation / disaggregated serving / performance modeling","topics":["推論シミュレーション","分離サービング","離散イベント","性能予測","KVメモリ"],"importance":"構成探索の速度だけでなく、SLA境界や最適構成の選択を誤らない決定用途の忠実度を目標に、現代的な分離実行とランタイム最適化を同一基盤で扱う。","hardware_evaluation":"主忠実度評価は16×H800 GPU。追加でA800、H20等の演算校正を行い、CPU上のシミュレーションは1000GPU超規模まで拡張性を評価。","quality_effect":"モデル生成品質を変更する方式ではなく、実システム性能を予測するシミュレータ。品質指標ではなくTTFT/TPOT/スループット/メモリ等の予測誤差を評価する。","source":"https://arxiv.org/abs/2605.21312","sources":["https://arxiv.org/abs/2605.21312","https://arxiv.org/html/2605.21312"],"code":"https://github.com/NetX-lab/Frontier","implementation":"約7万行のPython実装。制御面、実行面、忠実度面を分離し、vLLM/SGLang型のスケジューラ方策やハードウェアプロファイルを差し替え可能。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":45},"reservation":{"claim_id":"claim-3b440c67ddde8f986203d174","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
