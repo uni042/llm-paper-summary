@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:19:10 JST**
+> 自動生成: **2026-09-16 14:19:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **8** | **4** | **4** | **4** | **0** | — |
+| Research | **27** | **9** | **4** | **5** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **28** | **13** | **4** | **9** | **4** | **0** | **24** |
+| 合計 | **28** | **14** | **4** | **10** | **4** | **0** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,7 +115,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **8件** / 検証済み成功: **4件** / 未完了・未検証: **4件**
+- immutable submission: **9件** / 検証済み成功: **4件** / 未完了・未検証: **5件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0a8f3b62f80c03f536fe81a5.json` (job `job-research-4714939abf3ccf8f`)
 - **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
@@ -127,6 +127,7 @@
   - result: `.survey/work-queue/results/research/attempt-44d7d7981220efe93f540824.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-44d7d7981220efe93f540824.json`
   - paper: `papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-6bf933254bed4369e3f58978.json` (job `job-research-a8b5b2b70328c222`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-7b42c4b89ac929fa80c2c499.json` (job `job-research-73e15ccbef3e6d6d`)
 - **成功** `arXiv:2606.11244` — SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving
   - job: `.survey/work-queue/jobs/job-research-1dd6544d5f77b687.json`
@@ -237,8 +238,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **286** |
-| └ Research | **172** |
+| 成功result未照合のimmutable submission | **287** |
+| └ Research | **173** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
