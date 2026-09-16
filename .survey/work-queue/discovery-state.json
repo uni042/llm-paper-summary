@@ -1,114 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T17:02:55+00:00",
+  "updated_at": "2026-09-16T17:06:29+00:00",
   "last_run_key": "2026-09-17T02:00:00+09:00",
-  "last_round": "specialist-cxl-ssd-2",
+  "last_round": "specialist-migration-scheduling-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 12,
-  "last_empty_round_reason": "検索で得た強いsystem候補は最新identity snapshotで既収録だった。",
+  "consecutive_empty_rounds": 18,
+  "last_empty_round_reason": "強いsystem候補は取得時identity照合ですべて既収録だった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "expert-w4-hybrid-memory-1",
-      "axis": "専門家W4階層実行・CPU/GPUハイブリッドKV",
-      "query_summary": "専門家量子化オフロードとCPU/GPU協調KV処理へ軸を変更し、ExactMoEとHybridGenを送信した。正本側の重複抑止後、ExactMoEのみ新規researchとして残った。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [
-        "arxiv:2608.15383"
-      ],
-      "duplicate_canonical_ids": [
-        "arxiv:2604.18529"
-      ],
-      "next_axis_hint": "専門家キャッシュ政策そのものをOS階層管理と比較する研究、または長期エージェントメモリのSSD物理配置へ展開する"
-    },
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "agent-memory-adjacent-2",
-      "axis": "エージェント長期メモリ・KV隣接・MoEオンライン配置",
-      "query_summary": "長期メモリのNVMe物理配置、CPU側KV検索、MoEオンライン再配置の隣接3候補を探索した。正本側の重複抑止後、Akashicのみ新規researchとして残った。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.6666666667,
-      "accepted_canonical_ids": [
-        "arxiv:2607.05708"
-      ],
-      "duplicate_canonical_ids": [
-        "arxiv:2602.07721",
-        "arxiv:2607.17880"
-      ],
-      "next_axis_hint": "専用キャッシュとOSページキャッシュの比較、動的KVメモリ回収、異種GPU間KV共有へ順に展開する"
-    },
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "kernel-managed-expert-cache-3",
-      "axis": "OSページキャッシュによるMoE専門家階層管理",
-      "query_summary": "専用ユーザ空間専門家キャッシュの代わりにLinuxページキャッシュを利用する研究を探索したが、正本側で既収録重複として抑止された。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2608.12103"
-      ],
-      "next_axis_hint": "GPU内の動的KV領域回収へ軸を変更する"
-    },
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "elastic-kv-vmm-4",
-      "axis": "CUDA仮想メモリによるKV予約領域回収",
-      "query_summary": "プリフィル活性用予約GPUメモリをデコード中だけKVへ貸し出す研究を探索したが、正本側で既収録重複として抑止された。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2608.23658"
-      ],
-      "next_axis_hint": "異種モデル間の余剰HBM・NVLink共有へ軸を変更する"
-    },
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "heterogeneous-kv-sharing-5",
-      "axis": "異種GPUモデル間KV共有・NVLink階層",
-      "query_summary": "低KV需要モデルの余剰HBMを高需要モデルへ貸し出すSwiftCacheを探索したが、過去の探索で既に収録対象となっており正本側で重複抑止された。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2606.16135"
-      ],
-      "next_axis_hint": "最新2609系と隣接ストレージ/スケジューリングまで確認し、強候補がなければ多軸枯渇として終了判定する"
-    },
-    {
-      "run_key": "2026-09-11T11:30:00+09:00",
-      "round": "multi-axis-exhaustion-6",
-      "axis": "最新2609・隣接ストレージ・スケジューリング再確認",
-      "query_summary": "専門家キャッシュ、KV回収、GPU間共有、エージェント長期メモリまで複数軸を変更した後、2609新着と隣接領域を再確認した。強い未収録候補を追加で確定できなかったため空ラウンドとして記録した。",
-      "candidate_count": 0,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次runは新着差分を優先し、今回飽和した専門家キャッシュ/KV共有候補を機械的に反復しない"
-    },
     {
       "run_key": "2026-09-12T14:22:56+09:00",
       "round": "specialist-2609-serving-routing-1",
@@ -6543,6 +6444,134 @@
       ],
       "next_axis_hint": "2024〜2025の重要なCPU-GPU協調・offload omissionと、収録済みoffload論文のforward citationへ移る",
       "source_submission": "work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-kv-hardware-3",
+      "axis": "KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計",
+      "query_summary": "2024〜2025のCPU-GPU協調/offload omissionとKV memory systemを探索。Fiddler等は取得時identityで既収録。Oakenは最新snapshotに存在せず、system-level実装と定量評価が十分なため採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2402.07033",
+        "arXiv:2604.18529"
+      ],
+      "next_axis_hint": "収録済み重要offload/KV論文のforward citationと、2025年のnetwork/disaggregated serving omissionへ移る",
+      "source_submission": "work-queue/submissions/20260917T0211JST-discovery-specialist-kv-hardware-3.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-disk-kv-4",
+      "axis": "disk-backed KV cache・RAG multi-instance・cloud offload配置",
+      "query_summary": "2025年のnetwork/disaggregated/KV offload検索窓を走査。既収録結果を取得時に除外し、disk共有KVとVM/offload共同最適化の未収録2件を採用。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2508.13231",
+        "arXiv:2504.06319"
+      ],
+      "next_axis_hint": "disk/NVMe KVのforward citation、2024〜2025のstorage-aware prefix cache、MoE SSD I/O scheduling omissionを確認する",
+      "source_submission": "work-queue/submissions/20260917T0214JST-discovery-specialist-disk-kv-4.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-storage-prefix-5",
+      "axis": "SSD-backed prefix/KV cache・hierarchical memory",
+      "query_summary": "disk/NVMe KVの関連・隣接検索窓を走査。Tutti、Mooncake等の強候補は最新identity snapshotで既収録のため取得時除外した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2407.00079"
+      ],
+      "next_axis_hint": "MoE SSD expert I/OとCPU-light KV offloadの引用近傍へ移る",
+      "source_submission": "work-queue/submissions/20260917T0217JST-discovery-specialist-storage-prefix-5.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-moe-offload-6",
+      "axis": "MoE expert offload・speculative prefetch・CPU-light KV",
+      "query_summary": "MoE expert offloadとCPU-light KVの2025年検索窓を走査。CLO、SP-MoE、SSD energy studyはいずれも最新identity snapshotで既収録。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2511.14510",
+        "arXiv:2510.10302",
+        "arXiv:2508.06978"
+      ],
+      "next_axis_hint": "GPU memory virtualization・CXL KV・disaggregated transferの2025 omissionへ移る",
+      "source_submission": "work-queue/submissions/20260917T0220JST-discovery-specialist-moe-offload-6.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-cxl-transfer-7",
+      "axis": "GPU memory virtualization・CXL shared KV・disaggregated transfer",
+      "query_summary": "2025年CXL/RDMA/virtual memory検索窓を走査。TraCT、CXL-SpecKV、eLLMはいずれも最新identity snapshotで既収録。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.18194",
+        "arXiv:2512.11920",
+        "arXiv:2506.15155"
+      ],
+      "next_axis_hint": "2024〜2025 scheduling/preemptionとmulti-GPU KV migration omissionへ移る",
+      "source_submission": "work-queue/submissions/20260917T0223JST-discovery-specialist-cxl-transfer-7.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-migration-scheduling-8",
+      "axis": "multi-GPU KV migration・heterogeneous serving scheduling",
+      "query_summary": "2024〜2025のrequest migration、preemption、heterogeneous GPU schedulingを探索。MELL、FineServe等の強候補は最新identity snapshotで既収録。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2501.06709",
+        "arXiv:2509.06261"
+      ],
+      "next_axis_hint": "kernel-level memory bandwidth・prefetchと2024重要omissionを最終確認する",
+      "source_submission": "work-queue/submissions/20260917T0226JST-discovery-specialist-migration-scheduling-8.json"
     }
   ],
   "axes": {
@@ -10489,6 +10518,84 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "2024〜2025の重要なCPU-GPU協調・offload omissionと、収録済みoffload論文のforward citationへ移る"
+    },
+    "KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "収録済み重要offload/KV論文のforward citationと、2025年のnetwork/disaggregated serving omissionへ移る"
+    },
+    "disk-backed KV cache・RAG multi-instance・cloud offload配置": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "disk/NVMe KVのforward citation、2024〜2025のstorage-aware prefix cache、MoE SSD I/O scheduling omissionを確認する"
+    },
+    "SSD-backed prefix/KV cache・hierarchical memory": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "MoE SSD expert I/OとCPU-light KV offloadの引用近傍へ移る"
+    },
+    "MoE expert offload・speculative prefetch・CPU-light KV": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "GPU memory virtualization・CXL KV・disaggregated transferの2025 omissionへ移る"
+    },
+    "GPU memory virtualization・CXL shared KV・disaggregated transfer": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2024〜2025 scheduling/preemptionとmulti-GPU KV migration omissionへ移る"
+    },
+    "multi-GPU KV migration・heterogeneous serving scheduling": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "kernel-level memory bandwidth・prefetchと2024重要omissionを最終確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
