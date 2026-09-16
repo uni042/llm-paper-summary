@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-f7164aefbbb9a7ccd4752dd5",
   "job_id": "job-research-9f909dd53a5f1acb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f7164aefbbb9a7ccd4752dd5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "setup": "評価は実世界のエージェント型トレースと長文脈条件を中心に、データセンター内高速RDMAとデータセンター間TCPイーサネットを組み合わせて行う。動機付けでは64K入力、平均90%接頭辞ヒット率、512出力トークンを用い、複数アクセラレータのプリフィル・デコード性能を8台H100構成に対する相対値で比較する。広域KV転送の微小評価では20Gbps専用線、80要求/秒、平均90%ヒット率で、実トレースに近い2〜99%の偏った分布と85〜95%の狭い分布を比較する。",
+    "models_hardware": "本文はDeepSeek-V4-proを用いた実世界エージェント型ワークロード評価を報告し、費用効率比較では計算性能を重視するH100とメモリ帯域を重視するH200の異種配置を扱う。動機付け表では複数ベンダーのアクセラレータも匿名化して比較され、デコード性能がH100基準の210%に達する一方プリフィルは81%という非対称性を示す例がある。",
+    "baselines": ["従来のデータセンター間PD分離", "同一データセンター内の同種GPUによるPD分離", "単純なイーサネット経由増分KV引継ぎ"],
+    "metrics": ["初回トークン時間（TTFT）", "出力トークン速度", "エンドツーエンド遅延", "KV転送P50/P99", "接続プール使用率", "SLA適合有効スループット", "便益費用比（BCR）"],
+    "workload_characteristics": "約600万要求を含む3時間の実トレースでは71%以上が500トークン未満の短い出力で、接頭辞ヒット率は平均が高い一方2〜99%へ大きく偏る。PDDはこの偏りを設計前提としており、均一な合成分布だけでなく実分布で広域転送の尾部挙動を測っている。",
+    "evidence": "一次資料の背景、設計、評価各節および表1・表2・主要評価図を確認した。"
+  },
+  "reservation": {"claim_id": "claim-f7164aefbbb9a7ccd4752dd5", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
