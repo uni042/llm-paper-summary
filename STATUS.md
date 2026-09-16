@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 00:06:44 JST**
+> 自動生成: **2026-09-17 00:30:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **22** |
 | 未claim Research job | **22** |
 | 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-16 23:42:30 JST（24分前）** |
+| 最終検証済みResearch収録 | **09-16 23:42:30 JST（48分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **8** | **4** | **4** | **0** | **0** | — |
+| Research | **20** | **8** | **4** | **4** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **4** | **0** | **4** | **0** | **0** | **10** |
-| 合計 | **22** | **12** | **4** | **8** | **0** | **0** | **10** |
+| Discovery | **42** | **4** | **4** | **0** | **0** | **0** | **10** |
+| 合計 | **62** | **12** | **8** | **4** | **0** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,7 +105,46 @@
 
 ### Discovery
 
-- 検証済み成功なし。
+- **09-17 00:05:09 JST** job `job-9be61b9d72dcd1ea` / 候補 **3件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
+  - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation
+- **09-17 00:05:13 JST** job `job-191a00887b4bbee2` / 候補 **2件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json`
+  - 探索軸: agent sandbox scheduling・agentic workload serving characterization
+- **09-17 00:02:55 JST** job `job-408e2173bb069e7f` / 候補 **3件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json`
+  - 探索軸: MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
+- **09-17 00:05:17 JST** job `job-f6dc35c94d083aa1` / 候補 **2件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-tool-gap-kv-4.json`
+  - 探索軸: tool-call gap KV residency・出力長不確実性KV reservation
+- **09-16 20:02:03 JST** job `job-09c20a16449cd61c` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T2008JST-discovery-specialist-superchip-slo-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json`
+  - 探索軸: Superchip統合メモリ・SLO-aware KV rotation
+- **09-16 20:03:41 JST** job `job-daf1ad78a35f95e0` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T2011JST-discovery-specialist-kv-prefetch-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2011JST-discovery-specialist-kv-prefetch-2.json`
+  - 探索軸: GPU L2・HBM間KV prefetch・帯域隠蔽
+- **09-16 20:03:43 JST** job `job-bc66fc4e5a66b6de` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T2014JST-discovery-specialist-semantic-kv-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json`
+  - 探索軸: Semantic Retrieval Head・layer-aware KV圧縮
+- **09-16 20:03:45 JST** job `job-d2c7bcb66a4554c4` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json`
+  - 探索軸: MoE self-assisted speculative decoding・expert replication
+- **09-16 20:03:47 JST** job `job-63c87bf6f06ca13e` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T2020JST-discovery-specialist-manycore-runtime-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2020JST-discovery-specialist-manycore-runtime-5.json`
+  - 探索軸: 異種many-core・分散メモリ階層・bandwidth-aware runtime
+- **09-16 20:03:49 JST** job `job-9c7935025fcde39d` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260916T2025JST-discovery-specialist-virtual-memory-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2025JST-discovery-specialist-virtual-memory-6.json`
+  - 探索軸: virtual memory・異種state pool・LPDDR allocation
 
 ### 直近タスク
 
@@ -147,24 +186,24 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 00:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **10件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **10件**
 - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation / agent sandbox scheduling・agentic workload serving characterization / MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮 / tool-call gap KV residency・出力長不確実性KV reservation
 - round `specialist-agent-kv-runtime-3` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json`
   - 探索軸: agent-aware KV cache・agent serving runtime・hardware-aware simulation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-kv-runtime-3.json` (`ok=true`)
 - round `specialist-agent-serving-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json`
   - 探索軸: agent sandbox scheduling・agentic workload serving characterization
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260917T0001-agent-serving-2.json` (`ok=true`)
 - round `specialist-kv-moe-memory-pooling-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json`
   - 探索軸: MoE weight/KV分離・動的KV階層配置・意味検索型KV圧縮
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260917T0001-crosspool-orbit-compresskv.json` (`ok=true`)
 - round `specialist-tool-gap-kv-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0001-tool-gap-kv-4.json`
   - 探索軸: tool-call gap KV residency・出力長不確実性KV reservation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260917T0001-tool-gap-kv-4.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -219,10 +258,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **463** |
+| 成功result未照合のimmutable submission | **387** |
 | └ Research | **260** |
 | └ Audit | **2** |
-| └ Discovery | **201** |
+| └ Discovery | **125** |
 
 ### 厳格検証が未成立のcompleted job
 
