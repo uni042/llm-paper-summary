@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:37:20 JST**
+> 自動生成: **2026-09-16 14:37:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **42** |
 | 未claim Research job | **39** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-16 14:35:37 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-16 14:35:37 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **30** | **12** | **6** | **6** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **16** | **0** | **16** | **0** | **0** | **16** |
-| 合計 | **31** | **28** | **6** | **22** | **4** | **0** | **16** |
+| Discovery | **1** | **18** | **0** | **18** | **0** | **0** | **18** |
+| 合計 | **31** | **30** | **6** | **24** | **4** | **0** | **18** |
 
-- 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -156,8 +156,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-16 14:00 JST**
-- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **16件** / 候補: **16件**
-- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression / adaptive KV compression・latency/memory budget / multi-tenant prefix cache・isolation/security / production serving workload・caching/load-balancing trace / backward reference・distributed prompt reuse scheduling
+- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **18件** / 候補: **18件**
+- 探索軸: MoE expert cache・cache-aware routing / SLO-aware prefill chunking・decode interference / Composable CXL・Kubernetes共有KVメモリ / disaggregated serving・phase-aware power control / Hopper GPU utilization・推論profiling / prefix cache・量子化・serving決定性 / page-aware decode scheduling・KV workqueue / 3D NAND・near-storage compute LLM inference / distributed edge MoE・wireless expert aggregation / dynamic sparse MoE・inference-time expert budget / on-device speculative decoding・DVFS / single-GPU memory budget・weight/KV joint compression / adaptive KV compression・latency/memory budget / multi-tenant prefix cache・isolation/security / production serving workload・caching/load-balancing trace / backward reference・distributed prompt reuse scheduling / backward reference・augmented/agentic serving interruption / backward reference・heterogeneous CPU/GPU offload
 - round `specialist-moe-cache-router-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260916T1432JST-discovery-specialist-moe-cache-router-1.json`
   - 探索軸: MoE expert cache・cache-aware routing
@@ -263,9 +263,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **307** |
-| └ Research | **177** |
-| └ Discovery | **130** |
+| 成功result未照合のimmutable submission | **310** |
+| └ Research | **178** |
+| └ Discovery | **132** |
 
 ### 厳格検証が未成立のcompleted job
 
