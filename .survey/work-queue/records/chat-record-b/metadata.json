@@ -1,1 +1,54 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"canonical_id":"arXiv:2511.21669","arxiv_id":"2511.21669","doi":"10.48550/arXiv.2511.21669","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},"title":"DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving","summary":"DSDはspeculative decodingをedgeのdraft modelとcloudのtarget modelへ分散し、network RTT、batching、routing、verification依存を含めて評価・制御するframeworkである。DSD-SimはVIDURのGPU latency predictorとSimPy request-level schedulerを組み合わせ、実hardwareから得たacceptance traceを使ってdistributed speculationを再現する。さらにAdaptive Window Controlはqueue depth、acceptance rate、RTT、TPOT、直前windowを入力する小型DNNでspeculation windowとfused/distributed modeを動的制御する。20 target/600〜1000 draft規模でstatic windowに対しthroughput最大9.7%向上、TPOT最大10.7%削減を報告する。","list_summary":"edge draft/cloud target型distributed speculative decodingをDSD-Simでモデル化し、学習型AWCでwindowを適応制御してthroughput最大9.7%向上。","authors":["Fengze Yu","Leshu Li","Brad McDanel","Sai Qian Zhang"],"published":"2025-11-26","publication":"arXiv:2511.21669","publication_type":"arXivプレプリント","publication_status":"Preprint / under review","lineage":"speculative-decoding","topics":["distributed speculative decoding","edge-cloud serving","adaptive window control","LLM simulation"],"importance":"single-node前提のspeculative decodingをedge-cloudの通信・queueing・batchingを含むsystem問題へ拡張し、window制御をnetwork/system stateへ適応させる。","hardware_evaluation":"edge側A40/V100、cloud側A100/H100/A6000を含むheterogeneous構成。VIDUR predictorはA40/A100/H100実測で校正。","quality_effect":"標準speculative decodingのtarget verification/accept-reject semanticsを維持するため生成品質を変えない。","source":"https://arxiv.org/abs/2511.21669","sources":["https://arxiv.org/abs/2511.21669","https://arxiv.org/html/2511.21669v2"],"code":null,"implementation":"SimPy + VIDURを基盤とするDSD-Simと、5特徴量residual MLPのAdaptive Window Control研究実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML reference section; normalized identifiers not exhaustively extracted","references_total":0},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6b41c8695deb35bbe2cdc8b2",
+  "job_id": "job-research-34cb083c55afaad3",
+  "data": {
+    "canonical_id": "arXiv:2605.05219",
+    "arxiv_id": "2605.05219",
+    "doi": "10.48550/arXiv.2605.05219",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "Sparse Prefix Caching for Hybrid and Recurrent LLM Serving",
+    "summary": "再帰/SSM層は単一hidden stateから再開できる一方、そのstate checkpointは高コストである。本研究は共有接頭辞の全位置へ状態を密保存せず、接頭辞重複深度の分布に合わせて一部位置だけへ正確なstateを保存する疎接頭辞キャッシュを提案する。cache hit時は最深checkpointから残りsuffixだけを正確に再計算する。配置問題を厳密なO(NM)動的計画法として解き、QuALITYとSystem Promptsで固定予算baselineを支配し、block cachingに同等以上の性能を通常より少ないcheckpointで達成する。",
+    "list_summary": "再帰/ハイブリッドLLMの共有prefixへhidden-state checkpointを疎配置し、O(NM)動的計画法でmemoryとexact recomputationを最適化する。",
+    "authors": [
+      "Mikhail Shirokikh",
+      "Sergey Nikolenko"
+    ],
+    "published": "2026-04-17",
+    "publication": "arXiv:2605.05219",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "kv-cache",
+    "topics": [
+      "prefix caching",
+      "hybrid recurrent LLM serving",
+      "state space models",
+      "checkpoint placement"
+    ],
+    "importance": "recurrent stateが単一点から再開可能という性質をprefix cache設計へ利用する。",
+    "hardware_evaluation": "QuALITYとSystem Promptsの実データを用い、測定recurrent layer-groupのcache/recompute Pareto frontierを評価。",
+    "quality_effect": "checkpointからsuffixを同じrecurrent updateでexact再計算するため出力を変えない。",
+    "source": "https://arxiv.org/abs/2605.05219",
+    "sources": [
+      "https://arxiv.org/abs/2605.05219",
+      "https://arxiv.org/html/2605.05219"
+    ],
+    "code": "https://github.com/arabel1a/sparse-prefix-caching",
+    "implementation": "公開実験コードはQwen3.5 GatedDeltaNet layer groupを含むhybrid recurrent評価を提供する。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "arXiv HTML reference section; normalized identifiers not exhaustively extracted",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-6b41c8695deb35bbe2cdc8b2",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

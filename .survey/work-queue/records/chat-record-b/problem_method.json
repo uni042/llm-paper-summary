@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"problem":"従来speculative decodingはdraftとtargetを同一deviceまたは小規模環境へ置く前提が強く、edge-cloudへ分離すると各speculation/verification roundにnetwork RTTが入り、target queue、batch formation、acceptance rate、window sizeが相互作用する。windowが大きすぎればdraft時間とreject wasteが増え、小さすぎればcloud verification回数と通信回数が増えるため、固定windowではnetwork congestionやload変動へ追従できない。","novelty":"DSDはdistributed speculative decodingをrequest-level discrete-event simulationとして初めて体系化し、VIDURの実測校正GPU predictor、network delay、routing、batching、実hardware acceptance traceを統合する。さらにAWCはqueue depth、acceptance、RTT、TPOT、前windowの5特徴量からwindowを予測し、条件が悪い場合はfused modeへ切り替える。","method_overview":"edge側draft modelがgamma個のtokenを生成しcloud targetへ送り、targetが並列verificationしてaccept/rejectする標準SD semanticsをnetwork越しに実行する。DSD-SimはYAML topologyからdraft/target poolとlinkを生成し、SimPy processとしてqueue、routing、batching、network send/receive、speculation、verificationを進める。GPU execution timeはVIDUR predictorをA40/Qwen-7B等のprofileで拡張して問い合わせる。AWC trainingではwindow 2〜12とfused modeを2000超scenarioで全探索しSLO objective最良値をlabel化、5次元入力のresidual MLPをL1 loss/AdamWで100 epoch学習する。runtimeではpredictionをclampしEMA alpha=0.4で平滑化、mode switchにhysteresisを設ける。","system_design":"edge draft pool、cloud target pool、network links、DSD scheduler、VIDUR-based hardware predictor、performance analyzer、AWC residual MLP controllerからなる。","components":[{"name":"DSD-Sim distributed execution model","description":"routing、batching、draft speculation、network transfer、target verificationをrequest-level eventとして再現し、TTFT/TPOT/throughput/utilization/network queue delayを記録する。acceptance sequenceは実hardware traceから取得し、単純な独立確率モデルで置き換えない。"},{"name":"heterogeneous hardware/network calibration","description":"VIDURをQwen-7B/Llama2-7Bなどedge modelとA40 profileへ拡張し、A40/A100/H100上の実測と比較する。prefill latencyの平均絶対誤差7.4%、decode 5.2%を確認し、network RTTは10msと30msを代表条件として使う。"},{"name":"Adaptive Window Control","description":"target queue depth utilization、recent acceptance rate、per-link RTT、recent TPOT、previous gammaを5次元featureとしてresidual MLPへ入力し、次のspeculation windowを連続値で予測する。window 2〜12とfused modeの全探索からsupervised labelを作るため、手動thresholdだけに依存しない。"},{"name":"stable mode/window execution","description":"予測gammaを1〜12へclampしEMA alpha=0.4で平滑化する。distributedからfusedへの切替はgammaが1近傍に通常2 step連続した場合だけ許可するhysteresisを入れ、network/loadの短期変動によるmode oscillationを抑える。"}]},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-6b41c8695deb35bbe2cdc8b2",
+  "job_id": "job-research-34cb083c55afaad3",
+  "data": {
+    "problem": "共有prefixを持つrequestではTransformer KVを再利用できるが、hybrid recurrent LLMのMamba/SSM/GatedDeltaNet層はprefix全体を固定長stateへ圧縮する。全block境界へstateを保存するとstate memoryが増え、保存しなければhit時に先頭からrecurrent scanをやり直す。したがってcheckpoint memoryとexact recomputationの交換条件を解く必要がある。",
+    "novelty": "prefix overlap depthの分布を用い、recurrent stateを保存する位置をcheckpoint placement問題として定式化する。候補N位置とbudget Mに対し期待recomputationを最小化する厳密O(NM)動的計画法を与え、固定間隔heuristicでは利用できないoverlap分布の偏りを活用する。",
+    "method_overview": "attention層のKVは通常どおり保持し、recurrent層だけ一部prefix位置へexact hidden-state checkpointを置く。hit時には要求prefix上で最も深いcheckpointを復元し、そこから共有prefix末尾までのsuffixだけを元と同じrecurrent updateで再計算する。各checkpoint位置の価値は将来requestのoverlap depth分布から、その位置を保存したときに省ける再計算量として求める。動的計画法はcheckpoint数またはmemory budget内でこの期待costを最小化する位置集合を選ぶ。これによりno-cache、dense/block cacheの中間点を探索し、出力を近似せずにmemoryを減らす。",
+    "system_design": "prefix-overlap統計器、attention KV cache、recurrent state checkpoint store、distribution-aware DP planner、deepest-checkpoint lookup、suffix exact recomputationからなる。",
+    "components": [
+      {
+        "name": "overlap-depth分布",
+        "description": "同一cache entryを共有するrequest群について、どのtoken深度までprefixが一致するかの経験分布を作る。固定間隔配置では無視される人気深度の偏りをcheckpoint価値へ変換し、長い共通文書に異なる質問を付けるworkloadなどの構造を利用する。"
+      },
+      {
+        "name": "疎recurrent checkpoint",
+        "description": "全token/blockへstateを保存せず選択位置だけにexact recurrent stateを保持する。checkpointを減らすほどstate memoryは減るが、cache hit時に最深checkpointから一致prefix末尾まで再計算するtoken数が増えるため、memoryとcomputeの連続的な交換条件を作る。"
+      },
+      {
+        "name": "O(NM)動的計画法",
+        "description": "N個の候補位置とM個のcheckpoint budgetについて、overlap-depth分布下の期待suffix recomputationを最小化する配置を厳密に求める。subproblemをprefix区間と使用checkpoint数で分解し、balanced、sqrt、log、blockなどの手作業heuristicよりworkload分布へ適応する。"
+      },
+      {
+        "name": "deepest-checkpoint resume",
+        "description": "hit時は一致prefix上の最深保存stateを復元し、その後ろだけを通常recurrent kernelでexact再計算する。新しい近似kernelやrecurrent update変更を必要とせず、attention KV cacheやKV compressionと独立に組み合わせられる。"
+      }
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-6b41c8695deb35bbe2cdc8b2",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

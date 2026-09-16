@@ -1,1 +1,47 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3cb47aa83cc17c53a36cf3d5","job_id":"job-research-9d70d3111564c88d","data":{"evaluation_summary":"GSM8K、CNN/DailyMail、HumanEvalの実acceptance traceでheterogeneous edge-cloudを評価する。edgeはQwen-7B/Llama2-7B等をA40/V100、cloudはLlama2/3-70B・Qwen-72BをA100/H100/A6000でモデル化する。大規模設定は20 target serverと600/1000 draft client、RTT 10/30ms。AWCはstatic gamma=4に対し12条件すべてで最高throughput、最大+9.7%、TPOTは6〜10%程度削減し最大-10.7%。","scope":"distributed draft-target speculative decoding。network RTTが50〜60ms付近を超えるとdistributed advantageが消えfusedが有利になる。","hardware":["NVIDIA A40","NVIDIA V100","NVIDIA A100","NVIDIA H100","NVIDIA A6000"],"software":["DSD-Sim","SimPy","VIDUR","AWC WC-DNN"],"models":["Qwen-7B","Qwen-72B","Llama2-7B","Llama2-70B","Llama3-70B","Llama3.1-8B"],"datasets":["GSM8K","CNN/DailyMail","HumanEval"],"workload":"400 GSM8K、400 CNN/DailyMail、100 HumanEval promptを含むtrace。Poisson arrivalもsupportし、実hardware acceptance sequenceをreplayする。","baselines":["Static window gamma=4","acceptance-threshold Dynamic window","Random routing","Round-Robin","FIFO batching","Length-Aware Batching","cloud-only/fused execution"],"metrics":["throughput requests/s","TTFT","TPOT","end-to-end latency","target utilization","network queue delay","simulation prediction error"],"methodology":"GPU predictorを実hardwareで校正後、20 targetと600/1000 draft、RTT 10/30ms等をsimulationし各policyを3 run平均で比較する。","predictor_accuracy":"VIDUR-based predictorのmean absolute errorはprefill 7.4%、decode 5.2%。","control_knobs":"routing、batching、gamma、fused/distributed mode、RTT、draft/target pool size。"},"reservation":{"claim_id":"claim-3cb47aa83cc17c53a36cf3d5","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6b41c8695deb35bbe2cdc8b2",
+  "job_id": "job-research-34cb083c55afaad3",
+  "data": {
+    "evaluation_summary": "QuALITYとSystem Promptsのprefix-sharing workloadで、distribution-aware DPをblock、balanced、sqrt、log/diadic等のcheckpoint heuristicと比較する。checkpoint budgetに対するrecurrent recomputationのPareto frontierを測り、DPは測定layer-group上で全fixed-budget baselineを支配し、最強heuristicのblock cachingに一致または上回りながら通常は大幅に少ないcheckpointを使う。低budgetかつoverlap分布が非一様な条件で利得が最大となる。",
+    "scope": "多数のrequestが長いが完全には同一でないprefixを共有し、recurrent/SSM hidden stateをexact extract/restoreできる条件。",
+    "hardware": [
+      "hybrid recurrent layer-groupを実行するGPU環境"
+    ],
+    "software": [
+      "Sparse Prefix Caching公開実験コード",
+      "Qwen3.5 GatedDeltaNet layer-group評価系"
+    ],
+    "models": [
+      "Qwen3.5系hybrid recurrent layer group"
+    ],
+    "datasets": [
+      "QuALITY",
+      "System Prompts",
+      "NarrativeQA（公開コード追加構成）"
+    ],
+    "workload": "同じ長文書への異なる質問、および共通system promptと異なるuser queryを持つ要求群。",
+    "baselines": [
+      "no recurrent-state cache",
+      "block caching",
+      "balanced checkpoints",
+      "sqrt-spaced checkpoints",
+      "log/diadic checkpoints"
+    ],
+    "metrics": [
+      "checkpoint budget",
+      "recurrent recomputation cost",
+      "memory-recompute Pareto frontier"
+    ],
+    "methodology": "実データからprefix overlap depthの経験分布を構築し、同一checkpoint budgetでDP配置とheuristicを比較する。測定recurrent compute costから期待再計算量を算出し、checkpoint数とのPareto frontierを評価する。",
+    "predictor_accuracy": "予測器は使わず経験overlap分布を直接placement objectiveへ使う。",
+    "control_knobs": "checkpoint budget M、候補位置N、overlap-depth分布、block alignment、履歴分布の重み。"
+  },
+  "reservation": {
+    "claim_id": "claim-6b41c8695deb35bbe2cdc8b2",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
