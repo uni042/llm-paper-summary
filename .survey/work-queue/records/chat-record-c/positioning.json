@@ -1,1 +1,46 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0c7681b00fbe475af7e019e9","job_id":"job-research-997bb7245fdc3187","data":{"limitations":[{"name":"offline routing統計依存","description":"共活性graphとload statisticsは校正routing traceから作る。論文では同一workload内とHumanEval/LMSYS/Arxiv間で安定性を確認するが、routing分布が大きく変わる新domainやmodel更新では再収集・再配置が必要になり得る。"},{"name":"pruningはlossy","description":"通信-aware pruningはrouting destinationを削除するためモデル出力を厳密には保存しない。threshold p=0.3では複数benchmarkで数ppのaccuracy低下とPPL悪化があり、品質要件が厳しい運用ではplacement部分だけを使う必要がある。"},{"name":"評価規模","description":"大expert-count MoE 2モデル、単一node 8 GPUと2node 16 H100までの評価であり、数十〜数百nodeの大規模clusterでgrouping・profiling・通信objectiveがどう拡張するかは追加検証が必要である。"}],"differences":[{"name":"DeepSeek EPLBとの差","description":"EPLBはexpert popularityを使ってGPU計算負荷を均衡化することが中心で、同時活性expertを離れたGPUへ分散して通信を増やす可能性がある。CAPは共活性から訪問GPU/node数を減らす配置を起点にし、負荷均衡とのtrade-offを明示的に探索する。"},{"name":"sequential placementとの差","description":"vLLM/SGLangの既定に近いexpert ID順配置はrouting相関もloadも見ない。CAPは実routing traceからmodel固有の共活性構造を抽出し、同一GPUでtoken copyを共有できるexpertをまとめる。"},{"name":"従来dynamic pruningとの差","description":"従来は小さいrouting scoreを削ってexpert計算量を減らす。CAPは同程度のscore損失なら、削除によって遠隔GPU/nodeへの訪問を丸ごと消せるrouting destinationを優先し、計算と通信を同時に減らす。"}],"implementation_status":"routing trace収集、GPU vectorized grouping、expert swap adjustment、hardware profiling、communication-aware pruningを実装し、RTX 3090/A100/H100と2-node H100で実機評価している。公開コードURLは一次資料本文から確認できない。","research_positioning":"MoE expert placement/load balancing系統を通信局所性まで拡張し、lossless placementとlossy pruningを一つのhardware-aware pipelineへ統合する研究である。expert offloadingのように重みを階層間移動するのではなく、resident expertsの物理配置とtoken routing destination数を最適化する。","relation_to_existing_repository":"DeepSeek EPLB等のexpert load balancing、expert placement/caching、all-to-all通信最適化、dynamic expert pruningと直接比較できる。特にnode内/外の通信費を区別するため、複数node MoE servingの配置研究を補完する。","audit_required":false},"reservation":{"claim_id":"claim-0c7681b00fbe475af7e019e9","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-8606a507bc64fd5413759264",
+  "job_id": "job-research-997bb7245fdc3187",
+  "data": {
+    "limitations": [
+      {
+        "name": "offline routing統計依存",
+        "description": "共活性graphとload statisticsは校正routing traceから作る。論文では同一workload内とHumanEval/LMSYS/Arxiv間で安定性を確認するが、routing分布が大きく変わる新domainやmodel更新では再収集・再配置が必要になり得る。"
+      },
+      {
+        "name": "pruningはlossy",
+        "description": "通信-aware pruningはrouting destinationを削除するためモデル出力を厳密には保存しない。threshold p=0.3では複数benchmarkで数ppのaccuracy低下とPPL悪化があり、品質要件が厳しい運用ではplacement部分だけを使う必要がある。"
+      },
+      {
+        "name": "評価規模",
+        "description": "大expert-count MoE 2モデル、単一node 8 GPUと2node 16 H100までの評価であり、数十〜数百nodeの大規模clusterでgrouping・profiling・通信objectiveがどう拡張するかは追加検証が必要である。"
+      }
+    ],
+    "differences": [
+      {
+        "name": "DeepSeek EPLBとの差",
+        "description": "EPLBはexpert popularityを使ってGPU計算負荷を均衡化することが中心で、同時活性expertを離れたGPUへ分散して通信を増やす可能性がある。CAPは共活性から訪問GPU/node数を減らす配置を起点にし、負荷均衡とのtrade-offを明示的に探索する。"
+      },
+      {
+        "name": "sequential placementとの差",
+        "description": "vLLM/SGLangの既定に近いexpert ID順配置はrouting相関もloadも見ない。CAPは実routing traceからmodel固有の共活性構造を抽出し、同一GPUでtoken copyを共有できるexpertをまとめる。"
+      },
+      {
+        "name": "従来dynamic pruningとの差",
+        "description": "従来は小さいrouting scoreを削ってexpert計算量を減らす。CAPは同程度のscore損失なら、削除によって遠隔GPU/nodeへの訪問を丸ごと消せるrouting destinationを優先し、計算と通信を同時に減らす。"
+      }
+    ],
+    "implementation_status": "routing trace収集、GPU vectorized grouping、expert swap adjustment、hardware profiling、communication-aware pruningを実装し、RTX 3090/A100/H100と2-node H100で実機評価している。公開コードURLは一次資料本文から確認できない。",
+    "research_positioning": "MoE expert placement/load balancing系統を通信局所性まで拡張し、lossless placementとlossy pruningを一つのhardware-aware pipelineへ統合する研究である。expert offloadingのように重みを階層間移動するのではなく、resident expertsの物理配置とtoken routing destination数を最適化する。",
+    "relation_to_existing_repository": "DeepSeek EPLB等のexpert load balancing、expert placement/caching、all-to-all通信最適化、dynamic expert pruningと直接比較できる。特にnode内/外の通信費を区別するため、複数node MoE servingの配置研究を補完する。",
+    "audit_required": false
+  },
+  "reservation": {
+    "claim_id": "claim-8606a507bc64fd5413759264",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

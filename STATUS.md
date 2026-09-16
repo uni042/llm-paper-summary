@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 11:49:33 JST**
+> 自動生成: **2026-09-16 11:49:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -168,7 +168,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.05116` — Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference / worker `scheduled-chat-llm-survey-20260916T023111Z`
-  - claim: **09-16 11:46:23 JST** / heartbeat: **—** / lease expiry: **09-16 13:16:23 JST**
+  - claim: **09-16 11:49:40 JST** / heartbeat: **—** / lease expiry: **09-16 13:19:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-997bb7245fdc3187.json`
 - `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey`
   - claim: **09-16 09:30:37 JST** / heartbeat: **09-16 10:33:30 JST** / lease expiry: **09-16 12:03:30 JST**
