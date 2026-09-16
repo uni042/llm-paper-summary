@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-90d91f6dcd5420dfbc107c3b",
-  "job_id": "job-research-0d64167980707ffd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-90d91f6dcd5420dfbc107c3b",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-90d91f6dcd5420dfbc107c3b","job_id":"job-research-0d64167980707ffd","data":{"overview":"提案構成は補助記憶へ重みを退避する画像処理装置、高帯域メモリだけで容量を満たす複数画像処理装置、従来の高帯域メモリ＋高帯域フラッシュ方式に対して、復号処理量をそれぞれ千二百五倍、二・二倍、六・二倍へ改善した。エネルギー消費もそれぞれ四百八分の一、一・一分の一、六・八分の一へ低減する。五十ミリ秒の一出力トークン時間目標を、高帯域メモリだけの方式より三・一倍少ない画像処理装置数で満たす。","key_results":[{"metric":"復号処理量","value":"1205倍","baseline":"高帯域メモリ＋補助記憶","condition":"容量超過重みを補助記憶へ置く単一装置構成","interpretation":"装置外補助記憶の帯域不足に対し、近接高帯域フラッシュが重み供給を桁違いに高速化する。"},{"metric":"復号処理量","value":"2.2倍","baseline":"高帯域メモリだけの複数装置","condition":"重み容量を満たす最小装置数へ分散","interpretation":"容量目的の装置分散で生じる通信・同期・負荷偏りを避けることで、小バッチ巨大モデルで一台当たり資源を有効利用できる。"},{"metric":"復号処理量","value":"6.2倍","baseline":"従来の高帯域メモリ＋高帯域フラッシュ方式","condition":"静的先読みと専用一時領域を使う方式","interpretation":"実際の要求列から読み出しを動的結合することで、静的先読みが外れる場合にもフラッシュ帯域を高く維持できる。"},{"metric":"必要画像処理装置数","value":"3.1倍少ない","baseline":"高帯域メモリだけの方式","condition":"一出力トークン50ミリ秒目標","interpretation":"計算能力ではなく重み容量だけを理由に増設していた装置を削減できることを示す。"},{"metric":"追加面積","value":"フラッシュダイ3.1%、基底ダイ3.9平方ミリメートル","baseline":"高帯域フラッシュ基盤","condition":"基底ダイ7ナノメートル換算","interpretation":"更新隔離用の予備面と制御回路を加えても容量・制御面積の増加は比較的小さい。"}],"negative_results":["高帯域フラッシュは読み出し専用重み層として設計され、頻繁に更新される鍵値キャッシュや活性を直接置く用途には適さない。","提案は新しい高帯域フラッシュ技術と装置近接実装を前提とするため、既存の一般的な画像処理装置へソフトウェアだけで導入できる方式ではない。","フラッシュ媒体固有の読み出し妨害と保持劣化があり、予備面と更新制御を追加して推論経路から隔離する必要がある。"],"quality_impact":"モデル重みの数値表現や演算を変更せず、重みの格納場所と供給方法だけを変える。そのため性能向上は生成品質の近似と交換したものではない。","interpretation":"巨大モデルの小バッチ推論では、計算能力ではなく重み容量が装置数を決める場合がある。この領域では低遅延の高帯域メモリをすべて重みに使うより、読み出し専用重みを高密度フラッシュへ移し、動的状態へ高帯域メモリを残す階層化が有効である。"},"reservation":{"claim_id":"claim-90d91f6dcd5420dfbc107c3b","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
