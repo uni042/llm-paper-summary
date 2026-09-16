@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:51:12 JST**
+> 自動生成: **2026-09-16 15:51:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **37** |
+| 収録候補論文 | **36** |
 | 未claim Research job | **34** |
-| 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-16 15:46:51 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **54** |
+| 最終検証済みResearch収録 | **09-16 15:51:37 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **37** |
+| canonical_id確認済みの一意な候補論文 | **36** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **37** |
+| 非終端Research job合計 | **36** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **42** | **12** | **6** | **6** | **3** | **0** | — |
+| Research | **43** | **12** | **6** | **6** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **1** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **43** | **31** | **6** | **25** | **4** | **0** | **23** |
+| 合計 | **44** | **31** | **6** | **25** | **3** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:51:37 JST** [research] `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs
+  - job: `.survey/work-queue/jobs/job-research-f3ec00db7d9723b7.json`
+  - result: `.survey/work-queue/results/research/attempt-99747231195f2250976184c3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-99747231195f2250976184c3.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2603.07770-arclight-a-lightweight-llm-inference-architecture-for-many-core-cpus.md`
 - **09-16 15:46:51 JST** [research] `arXiv:2609.07306` — RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention
   - job: `.survey/work-queue/jobs/job-research-e59ec36b619f9b0c.json`
   - result: `.survey/work-queue/results/research/attempt-09c3c1f8ea3236b83582a70d.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-e3290dc33452ec879629239c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e3290dc33452ec879629239c.json`
   - paper: `papers/inference/06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md`
-- **09-16 15:03:40 JST** [research] `arXiv:2609.15338` — Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-6ca0cd6980218f8e.json`
-  - result: `.survey/work-queue/results/research/attempt-dc12dab8bc108ae5e00ae199.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-dc12dab8bc108ae5e00ae199.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 15:50:42 JST** / heartbeat: **—** / lease expiry: **09-16 17:20:42 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f3ec00db7d9723b7.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -234,7 +231,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **37** |
+| ready | **36** |
 
 ### 候補の重複・識別情報欠損
 
@@ -254,7 +251,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **597** |
+| inference/training/survey配下の論文Markdown実体 | **598** |
 
 ### immutable submissionの未照合
 
