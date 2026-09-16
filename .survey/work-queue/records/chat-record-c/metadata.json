@@ -2,59 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-062785fdd1a729fb213be682",
-  "job_id": "job-research-d743b2b5468a28c8",
+  "attempt_id": "attempt-0474271cc6e2d75634092b89",
+  "job_id": "job-research-a8b5b2b70328c222",
   "data": {
-    "canonical_id": "arXiv:2605.21312",
-    "arxiv_id": "2605.21312",
-    "doi": null,
+    "canonical_id": "arXiv:2609.04748",
+    "arxiv_id": "2609.04748",
+    "doi": "10.48550/arXiv.2609.04748",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
+      "primary": "cs.SE",
       "cross_list": []
     },
-    "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation",
-    "summary": "現代のLLMサービングは、プリフィル/デコード分離、注意機構/FFN分離、複雑な並列化、CUDA Graph、投機的デコード、階層キャッシュ、推論・エージェント・強化学習ロールアウトなどを組み合わせる。従来シミュレータは一台の同質レプリカが全処理を担う抽象化と平均的な演算時間・KV容量モデルに依存し、分離クラスタ間転送やスケジューラ状態変化を正しく表せない。Frontierは役割別クラスタワーカーを持つ離散イベントシミュレータで、制御面がco-location、PDD、AFDをイベント依存関係へコンパイルし、実行面が実際のスケジューラ・バッチ処理・ランタイム最適化を状態遷移として再現する。忠実度面は実測校正した演算、通信、転送、KVメモリ予測器を提供する。",
-    "list_summary": "分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。",
+    "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
+    "summary": "接頭辞キャッシュを透過的な高速化とみなした場合の再現性コストを、llama.cppとvLLM、16ビットから3ビットまでの重み形式、80件の複数ターン道具利用エージェントで制御測定する。キャッシュ無効時は10構成800エピソードの反復が完全一致した一方、キャッシュ経路と再計算経路の軌跡差はQwen2.5-7Bで16ビット36.2%、4ビット75.0%へ増幅した。キャッシュ状態を復元すると各経路は40/40で再現しつつ経路間では14/40が異なり、実用上の非再現性は要求に含まれないサーバ状態への依存であると示す。",
+    "list_summary": "接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。",
     "authors": [
-      "Yicheng Feng",
-      "Xin Tan",
-      "Yangtao Deng",
-      "Yimin Jiang",
-      "Yibo Zhu",
-      "Hong Xu"
+      "Aditi Patodiya"
     ],
-    "authors_affiliations": "The Chinese University of Hong Kong; Anuttacon; StepFun",
-    "published": "2026-06-13",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint v2",
-    "lineage": "LLM inference simulation / disaggregated serving / performance modeling",
+    "published": "2026-09-04",
+    "publication": "arXiv preprint arXiv:2609.04748v1; submitted to IEEE",
+    "publication_type": "arXivプレプリント・IEEE投稿中",
+    "publication_status": "2026年9月4日arXiv v1。論文本文ではIEEEへ投稿中と記載。",
+    "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "推論シミュレーション",
-      "分離サービング",
-      "離散イベント",
-      "性能予測",
-      "KVメモリ"
+      "接頭辞キャッシュ",
+      "再現性",
+      "量子化",
+      "決定性",
+      "エージェント推論"
     ],
-    "importance": "構成探索の速度だけでなく、SLA境界や最適構成の選択を誤らない決定用途の忠実度を目標に、現代的な分離実行とランタイム最適化を同一基盤で扱う。",
-    "hardware_evaluation": "主忠実度評価は16×H800 GPU。追加でA800、H20等の演算校正を行い、CPU上のシミュレーションは1000GPU超規模まで拡張性を評価。",
-    "quality_effect": "モデル生成品質を変更する方式ではなく、実システム性能を予測するシミュレータ。品質指標ではなくTTFT/TPOT/スループット/メモリ等の予測誤差を評価する。",
-    "source": "https://arxiv.org/abs/2605.21312",
+    "importance": "性能最適化として通常は透明扱いされるキャッシュ状態が推論結果の再現性へ影響し、低ビット量子化と複数ターン連鎖で大幅に増幅することを実運用基盤で定量化する。",
+    "hardware_evaluation": "NVIDIA RTX 4090 24GB、Ubuntu 24.04、CUDA 12.6。llama.cpp b10434とvLLM 0.11.0を評価。",
+    "quality_effect": "平均精度低下ではなく個別項目の不安定性。GSM8K 1300 distinct itemsで正誤反転20件、13件はcache側有利・7件はrecompute側有利で有意な方向性なし。",
+    "source": "https://arxiv.org/abs/2609.04748",
     "sources": [
-      "https://arxiv.org/abs/2605.21312",
-      "https://arxiv.org/html/2605.21312"
+      "https://arxiv.org/abs/2609.04748",
+      "https://arxiv.org/html/2609.04748",
+      "https://arxiv.org/pdf/2609.04748"
     ],
-    "code": "https://github.com/NetX-lab/Frontier",
-    "implementation": "約7万行のPython実装。制御面、実行面、忠実度面を分離し、vLLM/SGLang型のスケジューラ方策やハードウェアプロファイルを差し替え可能。",
+    "code": null,
+    "implementation": "実験harness、request log、server-reported cache exposure、解析pipelineをartifactとして公開すると記載。",
     "last_checked": "2026-09-16",
-    "references": [],
+    "references": [
+      {
+        "canonical_id": "arXiv:2604.15409",
+        "arxiv_id": "2604.15409",
+        "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference"
+      }
+    ],
     "references_checked_at": "2026-09-16",
-    "references_source": "primary-reference-section",
-    "references_total": 45
+    "references_source": "arXiv HTML参考文献節",
+    "references_total": 1
   },
   "reservation": {
-    "claim_id": "claim-062785fdd1a729fb213be682",
+    "claim_id": "claim-0474271cc6e2d75634092b89",
     "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
     "worker_kind": "scheduled_chat"
   }

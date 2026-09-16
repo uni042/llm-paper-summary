@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-062785fdd1a729fb213be682","job_id":"job-research-d743b2b5468a28c8","data":{"positioning":"FrontierはVidur、APEX、LLMServingSim2.0の離散事象サービングシミュレーションと、AIConfiguratorの構成探索を、現代の分離サービングへ拡張する基盤に位置する。単一の同質レプリカを複製する抽象化ではなく、プリフィル、デコード、注意、FFNを別役割クラスタとして表し、KVや活性転送を因果イベントへする点が中核である。","differences":"VidurやAPEXはco-location中心でPDD/AFDを表現できず、AIConfiguratorは分離構成を部分的に扱ってもランタイム最適化を平均的な解析式へ縮約する。FrontierはCUDA Graphのパディング、投機的復号の受理・確定、接頭辞キャッシュ命中、chunked prefill、MoEルーティングをスケジューラ状態を変えるイベントとして扱い、実測した演算・通信・KV容量と閉ループで結ぶ。これにより単一演算の平均誤差だけでなくSLAを満たす最適構成の順位まで守ることを目標にする。","relation_to_prior_work":[{"work":"Vidur","difference":"同じ離散事象型の要求・バッチ追跡を、PDD/AFDの役割別クラスタ、MoE/EP、CUDA Graph、投機的復号、状態付き推論要求へ拡張し、演算子予測も総トークン数より細粒度にする。"},{"work":"APEX","difference":"構成探索をSLA付きPareto探索へ使う目的は共通するが、Frontierは分離クラスタ間の転送因果と実効KV容量をイベントループへ含め、実機で選択結果がSLA外へずれる問題を抑える。"},{"work":"AIConfigurator","difference":"高速な構成予測に対し、FrontierはCUDA GraphやMTPを単一速度係数にせず毎反復のバッチ・受理状態へ反映し、低受理率で速度向上の符号を逆に予測する解析近似の失敗を避ける。"},{"work":"LLMServingSim2.0","difference":"PDDや階層キャッシュの一部対応に対し、FrontierはAFD、注意/FFN別並列ドメイン、状態付きreasoning/agent/RL requestまで同じ制御面へ統合する。"}],"strengths":["co-location、PDD、AFDを同じ役割別クラスタ抽象化で表現できる。","CUDA Graph、投機的復号、接頭辞キャッシュなどをスケジューラ状態遷移として再現する。","演算、通信、KVメモリの実測校正を閉ループ入場制御へ戻し、誤差増幅を抑える。","16 H800実機でdense/MoEと複数構成を検証し、分離構成でも低い端から端誤差を示す。","一般CPU上で1000GPU超の論理クラスタへ拡張し、数十万候補のSLA付き構成探索へ利用できる。"],"limitations":["高忠実度には対象GPUと主要カーネルのプロファイル採取が必要で、未所有GPUへの完全ゼロショット予測ではない。","未知の新ランタイム機能は専用ランタイムアダプタとしてスケジューラ状態変化を実装する必要がある。","GPUカーネル内部をサイクル単位で模擬しないため、新しいマイクロアーキテクチャそのものの評価用途には向かない。","実機検証は主にH800/A800/H20とvLLM系挙動に集中し、他ベンダーGPUや閉鎖サービング基盤への一般化は追加校正が必要。","大規模構成探索の精度は入力プロファイルの網羅性に依存し、未プロファイルの極端な長文・ルーティング分布では誤差が増える可能性がある。"],"implementation_status":"約7万行のPythonとして公開され、役割別離散事象エンジン、演算・通信・メモリ忠実度面、vLLM/SGLang型スケジューラ、PDD/AFD、MoE、主要ランタイム最適化を実装する。公開リポジトリはNetX-lab/Frontier。","research_positioning":"新しいサービング手法そのものではなく、分離サービング、異種GPU配置、エージェントスケジューラ、強化学習ロールアウト再構成を実機投入前に比較する判断基盤である。平均性能の近似ではなく、閉ループのイベント順序と実効メモリ容量を守ることでSLA境界の構成順位を信頼できるようにすることが研究上の主眼である。","repository_fit":"benchmarking-modeling-emulation系統の中核シミュレータとして適合する。特にPDD/AFD、MoE、状態付き要求を含むため、個別のオフロード・スケジューリング・分離サービング案を評価する共通基盤として利用価値が高い。"},"reservation":{"claim_id":"claim-062785fdd1a729fb213be682","worker_id":"scheduled-chat-discovery-specialist-20260916T1400JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0474271cc6e2d75634092b89",
+  "job_id": "job-research-a8b5b2b70328c222",
+  "data": {
+    "positioning": "本研究は接頭辞キャッシュの速度・容量研究と、決定的推論・量子化品質研究の交点に位置する。PagedAttentionやRadixAttentionなどが再利用率、処理量、遅延を主に評価するのに対し、同じ要求がキャッシュ状態によって同じ出力を再現できるかをサービング品質として測る。",
+    "differences": "既存の単一ターンFP16研究がキャッシュ経路と再計算経路の数値非等価性を示したのに対し、本研究は実推論基盤、複数ターンエージェント、低ビット重み、サーバ状態を加え、発散の頻度と運用上の原因を測る。量子化研究が平均精度を主指標にするのに対し、平均精度が同じでも個別項目が入れ替わる不安定性を独立した品質軸として扱う。",
+    "relation_to_prior_work": [
+      {
+        "work": "PagedAttention / RadixAttention / Prompt Cache",
+        "difference": "cache reuseの性能利益に対し、warm/cold pathが同じrequestへ同じtoken列を返すかを測定し、cache stateを再現性条件として追加する。"
+      },
+      {
+        "work": "The Illusion of Equivalence",
+        "difference": "FP16単一ターンの数値非等価性を、llama.cpp/vLLM、multi-turn agent、3～16bit weightsへ拡張し、state reset controlで経路内決定性を検証する。"
+      },
+      {
+        "work": "deterministic inference / batch-invariant kernels",
+        "difference": "batch size 1とserial requestsでbatch compositionを固定し、それでも残るcache-state dependenceを別の非決定要因として分離する。"
+      },
+      {
+        "work": "LLM quantization quality studies",
+        "difference": "aggregate accuracyではなく、同じcache perturbationが低ビット化で個別token decisionをどれだけflipしやすくなるかをtrajectory divergenceとして測る。"
+      }
+    ],
+    "strengths": [
+      "cache-offの800 episode完全一致を内部対照にし、一般的nondeterminismを定量的に上界化する。",
+      "server-level prompt cache flag、execution order、state resetを個別操作して因果機構を切り分ける。",
+      "weight precisionを順序付けてquantization amplificationを測り、4bit付近の飽和まで報告する。",
+      "llama.cppとvLLMという独立実装で方向性を再現する。",
+      "agent trajectoryとGSM8K correctnessを分け、repeatability lossとaverage degradationを混同しない。"
+    ],
+    "limitations": [
+      "7～14B open-weight modelsと単一RTX 4090に限定され、frontier-scale hosted endpointsは未評価。",
+      "agent workloadは一種類でtask successが低く、agent最終成功率への方向性は結論できない。",
+      "multi-tenant trafficで他利用者がcache stateを書き換える条件は測定していない。",
+      "vLLM session間の発散率差の原因はGPU memory fraction、driver、launch scriptなどを完全分離できていない。",
+      "token divergenceは意味的に同等な言い換えも差として数えるため、再現性には適切だがsemantic quality指標ではない。"
+    ],
+    "implementation_status": "実験harness、raw request logs、cache exposure telemetry、analysis pipelineを公開し、stored responsesから全数値を再生成可能とする。llama.cpp/vLLMの実serverを使う実測研究でsimulationではない。",
+    "research_positioning": "LLM servingのSLOをlatency/throughputだけでなくreproducibilityまで拡張する研究である。cacheを無効化する必要はなく、stateをrun境界でresetしconfigurationを固定・記録すれば性能利益を残しながらrepeatabilityを改善できるという運用示唆を与える。",
+    "repository_fit": "serving scheduling/disaggregation系統のreliability側として適合する。prefix/KV cacheを高速化する論文群に対し、そのstate managementが実験再現性・agent debugging・A/B evaluationへ与える副作用を補完する。"
+  },
+  "reservation": {
+    "claim_id": "claim-0474271cc6e2d75634092b89",
+    "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
