@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T00:05:17+00:00",
-  "last_run_key": "2026-09-16T07:00:00+09:00",
-  "last_round": "specialist-speculative-17",
+  "updated_at": "2026-09-16T00:37:33+00:00",
+  "last_run_key": "2026-09-16T08:00:00+09:00",
+  "last_round": "specialist-gpu-runtime-11",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -5086,6 +5086,183 @@
       ],
       "next_axis_hint": "次runではforward citation/recent revisionを再開し、今回未試行のdatabase/storage scheduling隣接軸を優先する",
       "source_submission": "work-queue/submissions/20260916T0751JST-discovery-specialist-speculative-17.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-new-arrivals-1",
+      "axis": "2609最新新着・分離サービングと熱制約スケジューリング",
+      "query_summary": "2026-09-14公開のLLM inference/serving新着を探索し、システム寄与が明確なMAPSとETCInferを軽量評価。交通予測MoE等の非推論システム論文は候補化しなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "直近新着からKV/latent-memory圧縮へ軸を変え、2609.15338等の実行効率寄与を確認する",
+      "source_submission": "work-queue/submissions/20260916T0808JST-discovery-specialist-new-arrivals-1.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-kv-adaptive-2",
+      "axis": "動的KV容量・cross-context/checkpoint KV再利用",
+      "query_summary": "固定圧縮率のKV compressionから離れ、runtimeで容量を伸縮するGrowPageと、prefix外・checkpoint間再利用を比較するKVShareArenaを評価した。直近runで既知のMetaKVは反復投入しなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.07966"
+      ],
+      "next_axis_hint": "KV以外へ移り、latent-space inference・token/segment圧縮によるmemory/compute削減を探索する",
+      "source_submission": "work-queue/submissions/20260916T0813JST-discovery-specialist-kv-adaptive-2.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-latent-memory-3",
+      "axis": "latent-space inference・constant-memory long-context recall",
+      "query_summary": "KV page管理から表現レベルへ探索軸を変更し、segment latent inferenceとresidual-vector reconstructionによるmemory/compute削減を評価した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "constant-memory recurrent/linear-attention系へ展開し、uncertainty-aware associative memoryやstreaming horizon評価を確認する",
+      "source_submission": "work-queue/submissions/20260916T0818JST-discovery-specialist-latent-memory-3.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-recurrent-memory-4",
+      "axis": "constant-memory linear attention・streaming memory評価",
+      "query_summary": "latent reconstructionからbounded recurrent stateへ軸を変更し、Kalman型associative memoryとstream stability/recallを分離するThreeHを評価した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "storage/DBMS隣接へ移り、flash/CXL/NVMeでLLM state・expert・KVを扱う新しいI/O scheduling研究を探索する",
+      "source_submission": "work-queue/submissions/20260916T0821JST-discovery-specialist-recurrent-memory-4.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-moe-offload-5",
+      "axis": "MoE predictive prefetch・future-aware cache・graph-compatible offload",
+      "query_summary": "storage/階層memory隣接からMoE expert I/O schedulingへ展開。FlashMoE、ExactMoE、Speculating Experts等の既知候補を除外し、新着SeqMoEを評価した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.17063",
+        "arXiv:2608.15383",
+        "arXiv:2603.19289"
+      ],
+      "next_axis_hint": "SeqMoEの隣接としてexpert replication/load balancing、またはGPU runtime graph captureとoffload orchestrationの系統を探索する",
+      "source_submission": "work-queue/submissions/20260916T0825JST-discovery-specialist-moe-offload-5.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-moe-placement-6",
+      "axis": "MoE communication-aware placement・memory-budgeted replication",
+      "query_summary": "SeqMoEの予測offloadからdistributed MoEの配置・replicationへ軸を変更し、CAPとCRAFTを評価。既知のpredictive replication論文は重複候補として除外した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.11537"
+      ],
+      "next_axis_hint": "MoEから離れ、prefill/decode分離サービングのnetwork/KV transfer・prefix routingを探索する",
+      "source_submission": "work-queue/submissions/20260916T0829JST-discovery-specialist-moe-placement-6.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-pd-routing-7",
+      "axis": "prefix-affinity routing・load-aware prefill deflection",
+      "query_summary": "MoE系からprefill/decode分離へ軸を移し、KV localityを利用するroutingとdecode余剰computeへprefillを逃がす動的schedulerを評価した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.13734"
+      ],
+      "next_axis_hint": "PD間KV transferそのもののcodec/precision allocationへ進み、lossless GPU codecとmixed-precision transferを比較探索する",
+      "source_submission": "work-queue/submissions/20260916T0833JST-discovery-specialist-pd-routing-7.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-kv-transfer-8",
+      "axis": "PD間KV mixed-precision transfer・GPU lossless codec",
+      "query_summary": "routingからnetwork payload最適化へ軸を変更し、token単位precision allocationとGPU無損失codecを比較評価した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "隣接networking/HPCへ進み、RDMA/GPU-direct/collective通信をLLM KV・MoEに適用する研究を探索する",
+      "source_submission": "work-queue/submissions/20260916T0836JST-discovery-specialist-kv-transfer-8.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-smartnic-storage-9",
+      "axis": "SmartNIC/RDMA CPU-free serving・object-storage KV retrieval",
+      "query_summary": "network/HPC隣接としてSmartNICへのserving control移譲と、object storageからlayerwise KVをstreamingする設計を探索した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375"
+      ],
+      "next_axis_hint": "CXL shared-memory KVとsparse-attention向けfine-grained remote accessへ展開する",
+      "source_submission": "work-queue/submissions/20260916T0841JST-discovery-specialist-smartnic-storage-9.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-cxl-kv-10",
+      "axis": "CXL shared-memory KV・sparse-attention fine-grained remote access",
+      "query_summary": "SmartNIC/object storageからCXL memory fabricへ軸を変更し、rack-scale shared KVとsparse attention向けtop-k remote KV accessを評価した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "GPU runtime/kernel側へ移り、attention/MoEのcompute-communication overlapとpersistent kernel schedulingを探索する",
+      "source_submission": "work-queue/submissions/20260916T0845JST-discovery-specialist-cxl-kv-10.json"
+    },
+    {
+      "run_key": "2026-09-16T08:00:00+09:00",
+      "round": "specialist-gpu-runtime-11",
+      "axis": "multi-die GPU persistent runtime・MoE tile-level compute/communication overlap",
+      "query_summary": "CXL memory fabricからGPU runtime/kernel層へ軸を変更し、chiplet-local task schedulingとMoE tile-level overlapを評価した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "run deadline handoff後の次回はforward citationと最近改訂論文、特に2026年9月のserving/runtime新着を優先する",
+      "source_submission": "work-queue/submissions/20260916T0850JST-discovery-specialist-gpu-runtime-11.json"
     }
   ],
   "axes": {
@@ -8038,6 +8215,116 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "次runではforward citation/recent revisionを再開し、今回未試行のdatabase/storage scheduling隣接軸を優先する"
+    },
+    "2609最新新着・分離サービングと熱制約スケジューリング": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "直近新着からKV/latent-memory圧縮へ軸を変え、2609.15338等の実行効率寄与を確認する"
+    },
+    "動的KV容量・cross-context/checkpoint KV再利用": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "KV以外へ移り、latent-space inference・token/segment圧縮によるmemory/compute削減を探索する"
+    },
+    "latent-space inference・constant-memory long-context recall": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "constant-memory recurrent/linear-attention系へ展開し、uncertainty-aware associative memoryやstreaming horizon評価を確認する"
+    },
+    "constant-memory linear attention・streaming memory評価": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "storage/DBMS隣接へ移り、flash/CXL/NVMeでLLM state・expert・KVを扱う新しいI/O scheduling研究を探索する"
+    },
+    "MoE predictive prefetch・future-aware cache・graph-compatible offload": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "SeqMoEの隣接としてexpert replication/load balancing、またはGPU runtime graph captureとoffload orchestrationの系統を探索する"
+    },
+    "MoE communication-aware placement・memory-budgeted replication": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "MoEから離れ、prefill/decode分離サービングのnetwork/KV transfer・prefix routingを探索する"
+    },
+    "prefix-affinity routing・load-aware prefill deflection": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "PD間KV transferそのもののcodec/precision allocationへ進み、lossless GPU codecとmixed-precision transferを比較探索する"
+    },
+    "PD間KV mixed-precision transfer・GPU lossless codec": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "隣接networking/HPCへ進み、RDMA/GPU-direct/collective通信をLLM KV・MoEに適用する研究を探索する"
+    },
+    "SmartNIC/RDMA CPU-free serving・object-storage KV retrieval": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "CXL shared-memory KVとsparse-attention向けfine-grained remote accessへ展開する"
+    },
+    "CXL shared-memory KV・sparse-attention fine-grained remote access": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "GPU runtime/kernel側へ移り、attention/MoEのcompute-communication overlapとpersistent kernel schedulingを探索する"
+    },
+    "multi-die GPU persistent runtime・MoE tile-level compute/communication overlap": {
+      "last_run_key": "2026-09-16T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "run deadline handoff後の次回はforward citationと最近改訂論文、特に2026年9月のserving/runtime新着を優先する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
