@@ -1,2 +1,51 @@
 {
-"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-de4da6f22324bacb081d2979","job_id":"job-research-3c85afd190edf390","data":{"positioning":"GhostServeはPagedAttentionやSGLangなどの通常時KV管理ではなく、障害時にも長文脈KV状態を失わないためのサービング信頼性層に位置する。ストレージで成熟した消失訂正符号を、GPU上で流動的に生成されるKVチャンクへ適用し、CPUメモリを冗長状態の保管先として使う。","differences":"再計算方式は平常時負担が小さい代わりに障害時の長文脈復旧が高価で、DéjàVu型完全複製は復旧を速める代わりにKVと同量のホストメモリ・転送を必要とする。GhostServeはN:K符号でK≪Nのパリティだけを保持し、復旧時には生存KV断片と組み合わせる。PCCheck等の学習チェックポイントと異なり、動的に増えるKVをチャンクごとに処理し、テンソル並列GPU間の集約・符号化担当を巡回させる。","relation_to_prior_work":[{"work":"SGLang/vLLM recomputation","difference":"障害時に全KVを再計算する代わりにパリティから大部分を復元し、短い先頭だけ再計算する。"},{"work":"DéjàVu KV replication","difference":"KV全体のCPU複製ではなくK個のパリティ断片だけを保存し、ホストメモリとPCIe転送を削減する。"},{"work":"PCCheck / training checkpointing","difference":"静的な重み・最適化状態ではなく、要求ごとに増えるKVキャッシュをチャンク境界で保護する。"},{"work":"Mooncake / hierarchical KV storage","difference":"CPU/SSDを容量拡張・再利用の階層として使うのではなく、障害復旧用の符号化冗長性をホストメモリへ配置する。"}],"strengths":["FP16をビット単位で損失なく符号化する専用CUDA実装により品質変化を避ける。","XOR、RDP、Reed-Solomonを備え、許容障害数と冗長量を選択できる。","100万トークンまで評価し、長文脈ほど完全複製との差が拡大することを示す。","通常バッチだけでなく連続バッチ向けCUDAストリームプールも実装し、故障注入したオンライン遅延を測る。","再計算と復元を排他的に選ばず重ねることで通信待ちを隠す。"],"limitations":["単一ノード内NVLinkを前提とし、ノード間帯域・遠隔永続ストレージを含む障害耐性は未実装。","GPUを動的に除外・交換するテンソル並列トポロジ再構成を持たず、再起動可能なGPU障害が主対象。","テンソル並列度2では符号化の追加費用に対するI/O削減が不足し、CPU複製より優位にならない。","長入力プリフィル中心の評価で、予測不能な長い復号を伴う推論やプリフィル・復号分離構成の最適符号化は未解決。","ホストDRAM自体やノード全体の故障にはパリティも失われるため、より広い故障領域には別階層の冗長化が必要。"],"implementation_status":"SGLang 0.5.1向けプラグインとして実装され、約4千行Pythonと1.5千行C++/CUDA。公開アーティファクトはGitHubのproject-ghostserve/26mlsys-AE-GhostServe。","research_positioning":"LLMサービングのKVキャッシュを性能資源だけでなく復旧すべき実行状態として扱い、完全複製と全再計算の中間点を符号化冗長性で作る研究である。長文脈・高テンソル並列ほど価値が高く、将来的にはノード間KV階層や遠隔ストレージと組み合わせる余地がある。","repository_fit":"serving scheduling/disaggregation系統のfault tolerance・KV state protectionとして適合する。Mooncake等の階層KV配置やDéjàVu型復旧と比較することで、CPU/SSDを容量階層ではなく冗長性保管へ使う設計点を補完する。"},"reservation":{"claim_id":"claim-de4da6f22324bacb081d2979","worker_id":"scheduled-chat-hourly-survey-20260916T142343JST","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e074992146791b09e9e5cc49",
+  "job_id": "job-research-e8148d67a04de0eb",
+  "data": {
+    "positioning": "EnerInferは端末内LLM高速化そのものではなく、十分な生成速度を満たした後の余剰性能を省電力と熱快適性へ変換する実行時システムに位置する。PowerInfer2やllm.npuなどNPU活用研究が処理量向上を主眼とするのに対し、NPU・統合メモリの周波数を共同制御し、トークン/ジュールと表面温度を第一級の目的にする。",
+    "differences": "従来のモバイルDVFSやエネルギー対応LLMガバナは固定負荷の事前プロファイル、利用率カウンタ、単純なU字型効率曲線などに依存しやすい。EnerInferは六つのモデル構造特徴から未見LLMの処理量と電力を予測し、絶対予測値より効率順位を利用することでモデル間の非単調性へ対応する。さらに出力長を事前予測せず、短期温度履歴とNPU電力から限定地平の熱制御を行い、エネルギー最適化と熱制約を同じ実行時に統合する。",
+    "relation_to_prior_work": [
+      {
+        "work": "PowerInfer2 / llm.npu / mobile NPU inference",
+        "difference": "NPUを使った端末内推論の高速化に対し、最大速度を必要としない時間帯のNPU・DDR周波数余裕を省電力へ変換する。"
+      },
+      {
+        "work": "generic mobile DVFS governors / CRAVE",
+        "difference": "CPU/GPU中心の利用率や一般負荷特性ではなく、LLM構造から復号処理量と電力をモデル化し、NPUと統合メモリを共同制御する。"
+      },
+      {
+        "work": "profile-based energy-aware on-device LLM governors",
+        "difference": "固定モデル・固定負荷の全設定事前測定ではなく、合成モデルで学習した構造予測器を未見モデルへ適用し、実行時順位フィードバックで誤差を補正する。"
+      },
+      {
+        "work": "cloud LLM energy-aware serving",
+        "difference": "バッチサイズやGPU多重化ではなく、単一利用者端末のNPU・DDR周波数と表面温度を制御対象とし、熱快適性をQoEへ含める。"
+      }
+    ],
+    "strengths": [
+      "スマートフォン、ノートPC、開発ボードという異なる端末形態で同じ設計を評価する。",
+      "未見実モデルで処理量・電力だけでなく効率順位の精度を測り、Oracleとの効率差まで確認する。",
+      "予測誤差を実測速度フィードバックで補うため、純粋なオフライン予測器よりQoE違反に強い。",
+      "エネルギー効率だけでなく42℃到達までの時間と生成トークン数を測り、熱制御の実用効果を示す。",
+      "前景アプリとのメモリ周波数要求競合を投票型ガバナで扱い、実アプリ全体の総エネルギーまで評価する。"
+    ],
+    "limitations": [
+      "新規プラットフォームごとに約300合成モデルの測定と予測器再学習が必要である。",
+      "主設計はNPU復号を対象とし、GPU等への一般化は追加学習を伴う実証に留まる。",
+      "動的疎性や投機的復号のように反復ごとの計算量が変わる方式を現状は直接扱えない。",
+      "温度予測は室温付近で収集した短期履歴を使うため、極端な環境温度や端末筐体差への頑健性は追加検証が必要である。",
+      "復号の省電力効果は大きいが、表示・CPU・GPUや出力表示時間を含む実アプリ全体では削減率が4.2～11%まで希釈される。"
+    ],
+    "implementation_status": "研究用シミュレーションではなく、社内LLMサービング基盤とRKLLMへ統合した実機実装である。トークン生成コールバックから周波数を変更し、Linux PM QoSに似たメモリ周波数投票機構とNPU直接制御を用いる。公開コードURLは論文本文から確認できない。",
+    "research_positioning": "端末内推論の設計目標を処理量最大化から、必要処理量を制約としたエネルギー・熱最適化へ移す研究である。特に、モデル構造に基づく未見モデル予測と順位フィードバックを組み合わせることで、モデルごとに効率曲線が異なる現実のモバイルSoCへ適応する点が中核となる。",
+    "repository_fit": "edge/on-device LLM systems系統に適合する。NPU活用・メモリ最適化・端末内高速化を扱う既存論文に対し、周波数制御、電力予測、熱管理という運用時資源制御の軸を補完する。"
+  },
+  "reservation": {
+    "claim_id": "claim-e074992146791b09e9e5cc49",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

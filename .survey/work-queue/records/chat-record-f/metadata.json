@@ -1,3 +1,60 @@
 {
-"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-de4da6f22324bacb081d2979","job_id":"job-research-3c85afd190edf390","data":{
-"canonical_id":"arXiv:2605.00831","arxiv_id":"2605.00831","doi":"10.48550/arXiv.2605.00831","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving","summary":"長文脈LLMサービングでGPU障害時に失われるKVキャッシュを完全複製せず、テンソル並列GPU群のKV断片から消失訂正符号のパリティだけを生成してホストメモリへ退避する耐障害方式。FP16のビット列を整数として損失なく符号化するCUDAカーネル、チャンク単位のパリティ生成、GPU間の担当回転、再計算と復元を重ねるハイブリッド回復を組み合わせる。8台H200上のSGLang評価ではCPU複製よりチェックポイント処理を平均2.7倍高速化し、64K LLaMA-3-70Bの復旧を5秒未満に抑え、100万トークンのプリフィルでも追加時間を2.6分から9秒へ削減する。","list_summary":"KVキャッシュ全体ではなく消失訂正符号パリティをホストメモリへ退避し、長文脈LLMの障害復旧を低メモリ・低遅延化する。","authors":["Anonymous Authors"],"published":"2026-03-26","publication":"arXiv:2605.00831v1; preliminary work under review by MLSys","publication_type":"arXivプレプリント・MLSys査読中","publication_status":"2026年3月26日 arXiv v1。本文ではMLSys Conference査読中の予備研究と記載。","lineage":"llm-serving-scheduling-disaggregation","topics":["耐障害LLMサービング","KVキャッシュ","消失訂正符号","チェックポイント","長文脈"],"importance":"100万トークン級エージェント推論では障害時のKV全再計算が数十分規模になり得る。GhostServeは完全複製より小さい冗長性でKV状態を保護し、サービングの信頼性を処理量・遅延最適化と両立させる。","hardware_evaluation":"8×NVIDIA H200, NVLink Gen4, dual 48-core Intel CPUs, 1024GB DDR5, PCIe Gen4 32GB/s bidirectional.","quality_effect":"KVをビット列として損失なく復元するためモデル出力品質を近似で変える方式ではない。障害時の応答遅延と有効推論時間比を改善する。","source":"https://arxiv.org/abs/2605.00831","sources":["https://arxiv.org/abs/2605.00831","https://arxiv.org/html/2605.00831","https://arxiv.org/pdf/2605.00831"],"code":"https://github.com/project-ghostserve/26mlsys-AE-GhostServe","implementation":"SGLang 0.5.1プラグインとして約4千行Pythonと1.5千行C++/CUDAで実装。FlashInfer 0.3.1、PyTorch 2.8、CUDA 12.6、NCCL 2.21.5を使用。","last_checked":"2026-09-16"},"reservation":{"claim_id":"claim-de4da6f22324bacb081d2979","worker_id":"scheduled-chat-hourly-survey-20260916T142343JST","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-e074992146791b09e9e5cc49",
+  "job_id": "job-research-e8148d67a04de0eb",
+  "data": {
+    "canonical_id": "arXiv:2606.23001",
+    "arxiv_id": "2606.23001",
+    "doi": "10.48550/arXiv.2606.23001",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.SE",
+      "cross_list": []
+    },
+    "title": "EnerInfer: Energy-Aware On-Device LLM Inference",
+    "summary": "端末内LLM推論で常に最高周波数を使う従来方針を見直し、NPUとDDRの動的電圧・周波数制御を、モデル構造に基づく処理量・電力予測、効率順位を使うオンライン制御、短期温度予測と熱制御で統合する。未見モデルでも周波数ごとの効率順位を推定し、要求された生成速度を満たす候補から高効率設定を選ぶ。実機評価では高性能スマートフォンで50～65%、中価格帯スマートフォンで26～27%、ノートPCで10～15%、開発ボードで9～24%の復号エネルギー効率改善を示し、実アプリ全体でも4.2～11%の総エネルギー削減を得る。",
+    "list_summary": "NPU・DDR周波数をモデル構造予測と熱制御で動的調整し、生成速度のQoEを守りながら端末内LLMの復号エネルギー効率を最大65%改善。",
+    "authors": [
+      "Bohua Zou",
+      "Nian Liu",
+      "Binqi Sun",
+      "Matteo Mascherin",
+      "Debayan Roy",
+      "Yutao Liu",
+      "Yu Peng",
+      "Ning Jia",
+      "Haibo Chen"
+    ],
+    "published": "2026-06-24",
+    "publication": "arXiv:2606.23001v2; manuscript lists ACM SIGOPS Annual Technical Conference, November 15–18, Hong Kong, China",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2026年6月24日 arXiv v2。本文ヘッダにACM SIGOPS Annual Technical Conferenceの会議情報を記載。",
+    "lineage": "edge-on-device-llm-systems",
+    "topics": [
+      "端末内LLM推論",
+      "エネルギー効率",
+      "動的電圧・周波数制御",
+      "NPU",
+      "熱管理"
+    ],
+    "importance": "端末内LLMで最大速度が必ずしも利用者体験を改善しない点を利用し、モデルごとに異なるNPU・メモリ周波数の効率順位と熱制約を実行時制御へ組み込む。固定プロファイルに依存する従来のモバイル省電力手法より未見モデルへの適応性を高める。",
+    "hardware_evaluation": "高性能スマートフォン、中価格帯スマートフォン、ノートPC、Orange Pi 5 Pro開発ボード。主評価はNPUとDDR、追加評価ではOrange Pi 5 ProのARM Mali-G610 GPUも使用。",
+    "quality_effect": "モデル精度を変える手法ではなく、復号速度のQoE下限と端末表面温度上限を制約としてエネルギー効率を改善する。評価したQoE条件では速度違反なし。",
+    "source": "https://arxiv.org/abs/2606.23001",
+    "sources": [
+      "https://arxiv.org/abs/2606.23001",
+      "https://arxiv.org/html/2606.23001",
+      "https://arxiv.org/pdf/2606.23001"
+    ],
+    "code": null,
+    "implementation": "スマートフォン・ノートPCでは社内LLMサービング基盤、Orange Pi 5 ProではRKLLMへ統合。トークン生成コールバックで周波数を制御し、メモリ周波数はLinux PM QoSに類似した投票型ガバナで調停する。",
+    "last_checked": "2026-09-16"
+  },
+  "reservation": {
+    "claim_id": "claim-e074992146791b09e9e5cc49",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

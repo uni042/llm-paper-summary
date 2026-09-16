@@ -1,2 +1,67 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-de4da6f22324bacb081d2979","job_id":"job-research-3c85afd190edf390","data":{"overview":"GhostServeはCPUへのKV完全複製よりプリフィル時チェックポイントを平均2.7倍高速化し、SSD方式より復号チェックポイントを47倍高速化する。I/O負担はCPU複製比13分の1、SSD比132分の1で、復号遅延への追加は10%未満。LLaMA-3-70B・64K入力では復旧が5秒未満で、SSD方式の約2分を大きく下回る。オンライン故障時には再計算のみと比べP50/P99応答遅延を1.2倍/1.1倍高速化し、有効推論時間比を90%以上に維持する。100万トークンでは追加負担6%未満、DéjàVuの2.6分に対して9秒のチェックポイント追加時間となる。","key_results":[{"metric":"checkpoint latency","value":"average 2.7× speedup vs CPU replication","baseline":"SGLang CPU / DéjàVu-style replication","condition":"batched inference across evaluated models","interpretation":"保存する冗長量をKパリティへ削減した効果。"},{"metric":"I/O overhead","value":"13× lower vs CPU, 132× lower vs SSD","baseline":"CPU and NVMe checkpointing","condition":"batched inference","interpretation":"ホストへKV全体を転送しないためPCIe/SSD転送が支配しにくい。"},{"metric":"64K recovery latency","value":"<5 s vs nearly 2 min SSD","baseline":"SGLang SSD","condition":"LLaMA-3-70B, 64K input","interpretation":"パリティ復元と部分再計算で長文脈復旧を短縮する。"},{"metric":"online response latency under failures","value":"1.2× P50, 1.1× P99 speedup","baseline":"naive recomputation","condition":"LLaMA-70B with injected failures","interpretation":"チェックポイント費用を含めても障害時の利用者遅延を改善する。"},{"metric":"hybrid recovery ablation","value":"up to 42.9% recovery-time improvement","baseline":"reconstruction without optimized partial recomputation","condition":"sensitivity study","interpretation":"再計算とCPU→GPU転送・復元の重なりが有効。"},{"metric":"1M-token checkpoint overhead","value":"9 s vs 2.6 min DéjàVu; <6% over baseline serving","baseline":"DéjàVu and no-checkpoint baseline","condition":"LLaMA-3-70B, batch 1, chunk 2K, output 4K","interpretation":"百万トークン級でもチェックポイント負担を抑える。"}],"negative_results":["テンソル並列度2では符号化追加費用に対してI/O削減が小さく、CPUチェックポイントに対する利点が消える。","CPU完全複製は70B/120Bへ拡大するとI/O負担により再計算のみの方式より遅くなる場合がある。","GhostServeはNCCL構成やテンソル分割を動的再編成しないため、恒久GPU故障をそのまま別GPUへ置換する完全スタック耐障害性はない。","ノード全損に耐えるには遠隔ストレージやノード間パリティ配置が必要で、現評価はNVLink内の単一ノードに限定される。"],"quality_impact":"FP16をビット列として損失なく符号化・復元するため、近似圧縮による推論品質劣化を導入しない。主効果は障害時の中断時間と通常時のチェックポイント負担の削減である。","interpretation":"長文脈サービングではKV全体を二重化するより、障害許容に必要な最小パリティだけをCPUへ置く方がメモリと転送の両面で有利になる。特にテンソル並列度が高く文脈が長いほど、符号化計算の追加費用より削減されるI/Oが大きくなる。"},"reservation":{"claim_id":"claim-de4da6f22324bacb081d2979","worker_id":"scheduled-chat-hourly-survey-20260916T142343JST","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-e074992146791b09e9e5cc49",
+  "job_id": "job-research-e8148d67a04de0eb",
+  "data": {
+    "overview": "最高周波数は最大速度を得るがエネルギー効率が低く、Qwen2-1.5Bの例では最適周波数で効率が70%向上し、処理量を20%落とすだけでも40%改善する余地がある。EnerInferはこの余地を未見モデル予測とオンライン補正で利用し、QoE=5トークン/秒では高性能スマートフォン50～65%、中価格帯26～27%、ノートPC10～15%、ボード9～24%の効率改善を達成する。熱制御では連続Qwen2.5-1.5B-Q4推論で、単純な効率最適設定より42℃到達までの生成トークンを27.9%、持続時間を32.1%増やす。実アプリ全体の総エネルギーも4.2～11%削減する。",
+    "key_results": [
+      {
+        "metric": "高性能スマートフォンの復号エネルギー効率",
+        "value": "+50～65% vs Default at QoE 5 tokens/s",
+        "baseline": "NPU/DDR maximum frequency",
+        "condition": "LLaMA2-1.3B Q4, Qwen2-1.5B Q4",
+        "interpretation": "最大速度を要求しない場合の周波数余裕が大きい。"
+      },
+      {
+        "metric": "中価格帯スマートフォンの復号エネルギー効率",
+        "value": "+26～27%",
+        "baseline": "Default",
+        "condition": "QoE 5 tokens/s",
+        "interpretation": "端末性能帯が変わっても効率改善を維持する。"
+      },
+      {
+        "metric": "ノートPC/開発ボードの復号エネルギー効率",
+        "value": "+10～15% / +9～24%",
+        "baseline": "Default",
+        "condition": "QoE 5 tokens/s",
+        "interpretation": "スマートフォン以外にも一般化するが改善幅はプラットフォーム依存。"
+      },
+      {
+        "metric": "熱制約下の持続性",
+        "value": "+27.9% tokens, +32.1% duration before 42℃",
+        "baseline": "energy-aware control without thermal management",
+        "condition": "Qwen2.5-1.5B-Q4, back-to-back inference from 37℃",
+        "interpretation": "効率だけでなく温度将来予測を入れることで熱閾値到達を遅らせる。"
+      },
+      {
+        "metric": "温度予測",
+        "value": "MAE 0.16℃, R² 0.988",
+        "baseline": "ground-truth shell temperature",
+        "condition": "1–21 s horizon, about 30k segments",
+        "interpretation": "軽量線形回帰でも短期熱制御に十分な精度を得る。"
+      },
+      {
+        "metric": "実アプリ総エネルギー",
+        "value": "4.2～11% reduction",
+        "baseline": "Default",
+        "condition": "text polishing and conversation with active foreground display",
+        "interpretation": "復号以外のCPU・GPU・表示電力を含めても端末全体で削減が残る。"
+      }
+    ],
+    "negative_results": [
+      "QoEを満たす最小周波数を選ぶDeadline方式は必ずしも効率的ではなく、ノートPCやボードではDefaultよりエネルギー効率が悪化する条件がある。",
+      "ボードでは効率順位のKendall相関が0.65と低いが、設定間の効率差自体が小さいためOracleとの差は小さい。",
+      "動的疎性や投機的復号は反復ごとの有効計算量が変化するため、現行の静的構造特徴だけでは処理量・電力を直接予測できない。",
+      "新しいプラットフォームへ移植するには約300合成モデルを各周波数設定で測る再学習工程が必要で、完全なゼロショット移植ではない。"
+    ],
+    "quality_impact": "評価範囲では指定した復号速度QoEを違反せず、熱制御時も快適温度を長く維持する。改善はモデル出力精度を犠牲にする量子化変更ではなく、同じモデルのハードウェア周波数制御で得る。",
+    "interpretation": "端末内LLMでは『最速設定=最良設定』ではなく、利用者が消費できる生成速度を下限として余剰性能をエネルギーと熱余裕へ交換できる。重要なのは最低周波数を選ぶことではなく、モデル・端末ごとに非単調な効率順位を予測し、実測フィードバックと熱履歴で補正することである。"
+  },
+  "reservation": {
+    "claim_id": "claim-e074992146791b09e9e5cc49",
+    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
