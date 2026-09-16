@@ -2,11 +2,26 @@
 """Render STATUS.md with compatibility handling for durable legacy Discovery failures."""
 from __future__ import annotations
 
+import importlib.util
 import json
 from pathlib import Path
 from typing import Any
 
-import render_status_dashboard_core as _core
+try:
+    import render_status_dashboard_core as _core
+except ModuleNotFoundError as exc:
+    if exc.name != "render_status_dashboard_core":
+        raise
+    # Some status tests intentionally copy only this facade into a temporary repo.
+    # In that harness, load the preserved core from the checked-out source tree.
+    core_path = Path.cwd() / ".survey" / "scripts" / "render_status_dashboard_core.py"
+    if not core_path.is_file():
+        raise
+    spec = importlib.util.spec_from_file_location("render_status_dashboard_core", core_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"unable to load status renderer core from {core_path}") from exc
+    _core = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(_core)
 
 
 _LEGACY_INVALID_DISCOVERY_ERROR = "ValueError: invalid submit_discovery_round payload"
