@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ae853adbe01956e7c70dbf4c",
-  "job_id": "job-research-c5668a715755a331",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ae853adbe01956e7c70dbf4c",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ae853adbe01956e7c70dbf4c","job_id":"job-research-c5668a715755a331","data":{"canonical_id":"arXiv:2608.13573","arxiv_id":"2608.13573","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing","summary":"LLMサービング研究は短期間・少数モデル・合成到着を使う評価が多く、実運用の長期変化やユーザーとモデルの相互作用を捉えにくい。本論文はCompanyXの2025年4月から2026年4月までの未標本化リクエスト単位記録61.2億件、9,174モデル、314,970ユーザーを解析し、需要・モデル構成・トークン形状が非定常であること、モデルごとの突発性とユーザー局所性、接頭辞キャッシュの再利用、負荷分散とKV状態複製の競合を明らかにする。さらに接頭辞キャッシュと複数インスタンスのルーティングを記録再生で評価し、複雑な追い出し方式がLRU/FIFOを常に上回らず、キャッシュ優先ルーティングが小さな負荷不均衡で再利用を高められることを示す。","list_summary":"61.2億件・9,174モデルの1年実運用記録を解析し、LLM需要の非定常性、短時間の接頭辞再利用、キャッシュ局所性と負荷分散の競合を定量化して公開評価記録を提供する。","authors":["William Nixon","Jon Durbin","Florian Standhartinger","Haryadi S. Gunawi","Juncheng Yang"],"authors_affiliations":"University of Chicago; Harvard University; Chutes","published":"2026-09-07","publication":"arXiv:2608.13573v2","publication_type":"Preprint","publication_status":"Preprint","lineage":"llm-serving-scheduling-disaggregation","topics":["LLMサービング","実運用ワークロード","接頭辞キャッシュ","負荷分散","KVキャッシュ","ワークロード特性解析"],"importance":"サービング方式の評価前提を検証する基準資料。1年間の未標本化記録を公開し、短い評価窓や合成到着が見落とす時間変化、ユーザー局所性、モデル長尾、キャッシュ再利用を示す。","hardware_evaluation":"主対象は実運用記録の解析であり、特定GPU上の新規カーネル性能評価ではない。キャッシュと負荷分散の一部結果は記録再生シミュレーションで得る。","quality_effect":"モデル品質を変更する手法ではない。評価用ワークロードとルーティング・キャッシュ方針の妥当性を分析する。","source":"https://arxiv.org/abs/2608.13573","sources":["https://arxiv.org/abs/2608.13573","https://arxiv.org/html/2608.13573"],"code":"https://github.com/HarvardMadSys/chutes_workload","implementation":"1年分の公開トレースをHarvardMadSys/chutes_workloadで提供。キャッシュ再生にはlibCacheSimを使用し、負荷分散も記録再生シミュレータで比較する。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2501.12948","arxiv_id":"2501.12948"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},{"canonical_id":"arXiv:2502.00937","arxiv_id":"2502.00937"},{"canonical_id":"arXiv:2401.17644","arxiv_id":"2401.17644"}],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":43},"reservation":{"claim_id":"claim-ae853adbe01956e7c70dbf4c","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
