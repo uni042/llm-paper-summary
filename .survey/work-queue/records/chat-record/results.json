@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-949006ab20f962621eb53c05","job_id":"job-research-f992ed2fc8c47a46","data":{"overview":"SpecOffloadはRTX 4090 24GB上で対象モデルのI/O待ちへドラフト計算を埋め込み、最強比較対象FlexGenに対してMixtral 8x7Bで平均2.53倍、8x22Bで平均2.54倍のエンドツーエンドスループットを達成した。SummEvalで8x7Bを測ったGPU平均コア利用率は58.67%となり、FlexGen比4.49倍。アブレーションでは投機的デコードを単純に直列結合するだけでは全最適化より大幅に遅く、二重バッチ重畳と方策探索の双方が必要であることを示す。","key_results":[{"metric":"エンドツーエンドスループット","value":"Mixtral 8x7BでFlexGen比平均2.53倍、Mixtral 8x22Bで平均2.54倍","baseline":"FlexGen","condition":"Env #1/#2、主要データセット","interpretation":"対象モデルの重み常駐量を増やすより、遊休GPUへドラフトモデルを置きI/O待ちを投機計算へ変える方が高い効果を持つ。"},{"metric":"GPUコア利用率","value":"58.67%、FlexGen比4.49倍","baseline":"FlexGen","condition":"Mixtral 8x7B、Env #1、SummEval、デコード段階","interpretation":"ドラフトモデルが対象モデルの転送待ち時間に連続計算する設計が、従来オフロードの低利用率を直接改善する。"},{"metric":"比較対象別高速化","value":"Accelerate比4.69倍、DeepSpeed比4.71倍、FlexGen比2.54倍、Fiddler比4.04倍","baseline":"4種オフロード方式","condition":"論文が報告する主要評価の最大/代表高速化","interpretation":"単純な層退避、全重み退避、CPU-GPU MoE実行、FlexGenのいずれよりも高いスループットを示す。"},{"metric":"アブレーション","value":"SummEval 8x7B: 全最適化24.743 token/s、方策探索なし15.624、直列SD17.048、SDなし12.369。8x22B: 5.911、3.486、4.146、1.698 token/s","baseline":"各機構除去","condition":"SummEval","interpretation":"投機的デコード自体だけでなく、オフロード内への重畳とパラメータ方策探索が性能に寄与する。"},{"metric":"ディスク退避","value":"DRAM不足でディスクへ退避すると元の29.3%のスループット","baseline":"Env #2のディスクなし条件","condition":"Mixtral 8x22B、Env #1、ディスク3.5GB/s読出し","interpretation":"GPU-CPU重畳は有効でも、CPUメモリを超えて低速ストレージへ達するとI/O律速が再び支配的になる。"}],"negative_results":"ディスク退避時はスループットがディスクなしの29.3%まで低下する。また投機的デコードは候補受理率に依存し、複数バッチで候補がほぼ受理されない極端条件では加速効果が大きく失われる。ParaSpec PlannerもOS変動や実測誤差、受理率の不確実性により追加調整が必要になり得る。","interpretation":"本質はI/Oを消すことではなく、I/O律速で余っている別資源へ有用な仕事を移すことにある。GPUメモリを対象モデルの数層追加常駐へ使っても転送総量がほぼ変わらない領域では、その容量をドラフトモデルへ再配分し、同時にGPU待ち時間をドラフト計算で埋めることで資源間の不均衡を性能へ変換できる。","quality_impact":"対象モデルによる投機候補検証を使うため生成品質を犠牲にする方式ではない。ただし候補受理率が低いワークロードでは性能上の利得が縮む。"},"reservation":{"claim_id":"claim-949006ab20f962621eb53c05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-bb2a8d8b4366fb467720e96e",
+  "job_id": "job-research-d1705edaabc0afa6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bb2a8d8b4366fb467720e96e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

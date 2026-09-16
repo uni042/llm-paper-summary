@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-949006ab20f962621eb53c05","job_id":"job-research-f992ed2fc8c47a46","data":{"hardware":"Env #1: RTX 4090 24GB、Intel i9-10980XE、DRAM 256GB、PCIe Gen3 x16。Env #2: RTX 4090 24GB、AMD EPYC 7542、DRAM 448GB、PCIe Gen4 x16。ディスク退避実験では読出し3.5GB/s、書込み1.7GB/s。","software":"Hugging Face Transformers 4.47.1上のSpecOffload実装。比較対象はAccelerate 1.5.2、DeepSpeed Zero-Inference 0.16.1、FlexGen、Fiddler。FlexGenはMixtralへ原方式を保つ形で移植。NVIDIA NsightでGPU利用率とメモリを計測。","methodology":"対象モデルはbfloat16のMixtral 8x7B（46.7Bパラメータ）とMixtral 8x22B（141Bパラメータ）、ドラフトはMistral 7B。HumanEval、C-Eval、SummEval、SAMSumを使用し、主要エンドツーエンド比較は2環境・複数データセットでプリフィルとデコードを含む生成スループットを測る。機構分析ではGPUコア利用率、GPUメモリ使用、計算・I/O・CPU処理時間の内訳を計測する。アブレーションでは方策探索なし、投機的デコードの直列結合、投機的デコードなしを比較する。さらにDRAM不足時にMixtral 8x22Bの一部をディスクへ退避する。","scope":"高スループットのオフライン型バッチ推論を主対象とし、Mixtral系MoE対象モデルとMistral 7Bドラフト、単一RTX 4090環境で評価する。オンライン低遅延サービング、他アーキテクチャ、複数GPU、異なるドラフト品質への一般化は直接評価していない。"},"reservation":{"claim_id":"claim-949006ab20f962621eb53c05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-bb2a8d8b4366fb467720e96e",
+  "job_id": "job-research-d1705edaabc0afa6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bb2a8d8b4366fb467720e96e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
