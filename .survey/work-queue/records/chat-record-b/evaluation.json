@@ -2,21 +2,63 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ad5dfb814d7090ff8006d8de",
-  "job_id": "job-research-34cb083c55afaad3",
+  "attempt_id": "attempt-d5dd5cd824db8ecaa8dc6616",
+  "job_id": "job-research-9d70d3111564c88d",
   "data": {
-    "evaluation_summary": "QuALITYとSystem Promptsの接頭辞共有負荷で、分布適応型の動的計画配置を、ブロック配置、均衡配置、平方根間隔、対数・二進間隔などの検査点配置則と比較する。検査点予算に対する再帰計算量のパレート前線を測定し、動的計画法は測定した層群で固定予算の全比較手法を支配した。最も強い比較手法であるブロックキャッシュと同等以上の性能を示しながら、通常は大幅に少ない検査点で済む。検査点予算が小さく、重複深度分布が非一様な条件で利得が最大になる。",
-    "scope": "多数の要求が長いが完全には同一でない接頭辞を共有し、再帰型・状態空間モデルの内部状態を正確に取り出して復元できる条件を対象とする。",
-    "hardware": ["ハイブリッド再帰層群を実行するGPU環境"],
-    "software": ["Sparse Prefix Caching公開実験コード", "Qwen3.5 GatedDeltaNet層群の評価系"],
-    "models": ["Qwen3.5系ハイブリッド再帰層群"],
-    "datasets": ["QuALITY", "System Prompts", "NarrativeQA（公開コードの追加構成）"],
-    "workload": "同じ長文書への異なる質問、および共通システム指示と異なる利用者問い合わせを持つ要求群を用いる。",
-    "baselines": ["再帰状態キャッシュなし", "ブロックキャッシュ", "均衡検査点配置", "平方根間隔検査点", "対数・二進間隔検査点"],
-    "metrics": ["検査点予算", "再帰再計算量", "メモリ対再計算量のパレート前線"],
-    "methodology": "実データから接頭辞重複深度の経験分布を構築し、同一の検査点予算で動的計画配置と経験則配置を比較する。測定した再帰計算費用から期待再計算量を算出し、検査点数とのパレート前線を評価する。",
-    "predictor_accuracy": "予測器は使用せず、観測した重複深度の経験分布を配置目的関数へ直接用いる。",
-    "control_knobs": "検査点予算M、候補位置N、重複深度分布、ブロック境界への整列、履歴分布の重みを制御する。"
+    "evaluation_summary": "GSM8K、CNN/DailyMail、HumanEvalの実acceptance traceでheterogeneous edge-cloudを評価する。edgeはQwen-7B/Llama2-7B等をA40/V100、cloudはLlama2/3-70B・Qwen-72BをA100/H100/A6000でモデル化する。大規模設定は20 target serverと600/1000 draft client、RTT 10/30ms。AWCはstatic gamma=4に対し12条件すべてで最高throughput、最大+9.7%、TPOTは6〜10%程度削減し最大-10.7%。",
+    "scope": "distributed draft-target speculative decoding。network RTTが50〜60ms付近を超えるとdistributed advantageが消えfusedが有利になる。",
+    "hardware": [
+      "NVIDIA A40",
+      "NVIDIA V100",
+      "NVIDIA A100",
+      "NVIDIA H100",
+      "NVIDIA A6000"
+    ],
+    "software": [
+      "DSD-Sim",
+      "SimPy",
+      "VIDUR",
+      "AWC WC-DNN"
+    ],
+    "models": [
+      "Qwen-7B",
+      "Qwen-72B",
+      "Llama2-7B",
+      "Llama2-70B",
+      "Llama3-70B",
+      "Llama3.1-8B"
+    ],
+    "datasets": [
+      "GSM8K",
+      "CNN/DailyMail",
+      "HumanEval"
+    ],
+    "workload": "400 GSM8K、400 CNN/DailyMail、100 HumanEval promptを含むtrace。Poisson arrivalもsupportし、実hardware acceptance sequenceをreplayする。",
+    "baselines": [
+      "Static window gamma=4",
+      "acceptance-threshold Dynamic window",
+      "Random routing",
+      "Round-Robin",
+      "FIFO batching",
+      "Length-Aware Batching",
+      "cloud-only/fused execution"
+    ],
+    "metrics": [
+      "throughput requests/s",
+      "TTFT",
+      "TPOT",
+      "end-to-end latency",
+      "target utilization",
+      "network queue delay",
+      "simulation prediction error"
+    ],
+    "methodology": "GPU predictorを実hardwareで校正後、20 targetと600/1000 draft、RTT 10/30ms等をsimulationし各policyを3 run平均で比較する。",
+    "predictor_accuracy": "VIDUR-based predictorのmean absolute errorはprefill 7.4%、decode 5.2%。",
+    "control_knobs": "routing、batching、gamma、fused/distributed mode、RTT、draft/target pool size。"
   },
-  "reservation": {"claim_id": "claim-ad5dfb814d7090ff8006d8de", "worker_id": "scheduled-chat-paper-20260916T175945JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d5dd5cd824db8ecaa8dc6616",
+    "worker_id": "scheduled-chat-paper-20260916T175945JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
