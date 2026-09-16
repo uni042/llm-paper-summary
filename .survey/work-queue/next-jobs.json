@@ -19,24 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 23,
-    "actively_claimed": 0,
-    "claimable": 23
+    "actively_claimed": 1,
+    "claimable": 22
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-46a0d6f61e82afe1",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2609.16206",
-      "title": "Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving",
-      "source_url": "https://arxiv.org/abs/2609.16206",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-8473b19fc0026661",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-7c979683209fb954",
+      "type": "research",
+      "lane": null,
+      "priority": 83,
+      "canonical_id": "arXiv:2604.00499",
+      "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+      "source_url": "https://arxiv.org/abs/2604.00499",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-tie-uncertainty-aware-output-length-scheduling.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T14:40:06+00:00"
+  "generated_at": "2026-09-16T14:40:57+00:00"
 }
