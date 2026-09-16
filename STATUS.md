@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:24:01 JST**
+> 自動生成: **2026-09-16 14:24:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **44** |
-| 未claim Research job | **42** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-16 14:20:59 JST（3分前）** |
+| 収録候補論文 | **43** |
+| 未claim Research job | **41** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-16 14:24:20 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **44** |
+| canonical_id確認済みの一意な候補論文 | **43** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **44** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **28** | **12** | **5** | **7** | **3** | **1** | — |
+| Research | **29** | **12** | **6** | **6** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **29** | **17** | **5** | **12** | **3** | **1** | **24** |
+| 合計 | **30** | **17** | **6** | **11** | **3** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 14:24:20 JST** [research] `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation
+  - job: `.survey/work-queue/jobs/job-research-d743b2b5468a28c8.json`
+  - result: `.survey/work-queue/results/research/attempt-062785fdd1a729fb213be682.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json`
+  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md`
 - **09-16 14:20:59 JST** [research] `arXiv:2606.28565` — KernelSight-LM: A Kernel-Level LLM Inference Simulator
   - job: `.survey/work-queue/jobs/job-research-b8521dbc1f501e0d.json`
   - result: `.survey/work-queue/results/research/attempt-52add1efa2617512647eab93.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a296cabbe5bdb6189545e086.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a296cabbe5bdb6189545e086.json`
   - paper: `papers/inference/06-moe-inference-expert-offloading/2026-2603.28768-craft-cost-aware-expert-replication.md`
-- **09-16 12:47:27 JST** [research] `arXiv:2608.30830` — Adaptive KV Retention for LLM Agents at Human-Approval Timescales
-  - job: `.survey/work-queue/jobs/job-research-d56f46109a6995f4.json`
-  - result: `.survey/work-queue/results/research/attempt-ba98832b682051fbcdfa1c88.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ba98832b682051fbcdfa1c88.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.30830-adaptive-kv-retention-for-llm-agents-at-human-approval-timescales.md`
 
 ### Audit
 
@@ -115,8 +115,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 14:00 JST** / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-- immutable submission: **12件** / 検証済み成功: **5件** / 未完了・未検証: **7件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json` (job `job-research-d743b2b5468a28c8`)
+- immutable submission: **12件** / 検証済み成功: **6件** / 未完了・未検証: **6件**
+- **成功** `arXiv:2605.21312` — Frontier: Towards Comprehensive and Accurate LLM Inference Simulation
+  - job: `.survey/work-queue/jobs/job-research-d743b2b5468a28c8.json`
+  - result: `.survey/work-queue/results/research/attempt-062785fdd1a729fb213be682.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json`
+  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0a8f3b62f80c03f536fe81a5.json` (job `job-research-4714939abf3ccf8f`)
 - **成功** `arXiv:2605.21427` — PALS: Power-Aware LLM Serving for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3bb1145babb1a6fc.json`
@@ -208,7 +212,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **44** |
 
 ### 候補の重複・識別情報欠損
 
@@ -228,7 +232,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **583** |
+| inference/training/survey配下の論文Markdown実体 | **584** |
 
 ### immutable submissionの未照合
 
@@ -236,8 +240,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **289** |
-| └ Research | **175** |
+| 成功result未照合のimmutable submission | **288** |
+| └ Research | **174** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
