@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:38:26 JST**
+> 自動生成: **2026-09-16 18:38:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **24** |
-| 未claim Research job | **21** |
-| 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-16 18:33:21 JST（5分前）** |
+| 収録候補論文 | **23** |
+| 未claim Research job | **20** |
+| 直近24hの検証済みResearch収録 | **64** |
+| 最終検証済みResearch収録 | **09-16 18:38:33 JST（4秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **24** |
+| canonical_id確認済みの一意な候補論文 | **23** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **24** |
+| 非終端Research job合計 | **23** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **40** | **8** | **4** | **4** | **3** | **1** | — |
+| Research | **41** | **8** | **4** | **4** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **41** | **18** | **4** | **14** | **3** | **1** | **10** |
+| 合計 | **42** | **18** | **4** | **14** | **3** | **1** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 18:38:33 JST** [research] `arXiv:2609.09662` — PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling
+  - job: `.survey/work-queue/jobs/job-research-3d5f11737ec9b4a2.json`
+  - result: `.survey/work-queue/results/research/attempt-b66d308c0d1e4eb8ba288ecc.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b66d308c0d1e4eb8ba288ecc.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md`
 - **09-16 18:33:21 JST** [research] `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression
   - job: `.survey/work-queue/jobs/job-research-ad3541d28015a662.json`
   - result: `.survey/work-queue/results/research/attempt-095563049565ccc0498d1b47.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c334af59c2859bcbd599d50c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c334af59c2859bcbd599d50c.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md`
-- **09-16 16:40:27 JST** [research] `arXiv:2609.12923` — Dissecting GPU Utilization for LLM Inference on Nvidia Hopper
-  - job: `.survey/work-queue/jobs/job-research-21d58015b4f64394.json`
-  - result: `.survey/work-queue/results/research/attempt-ba99df60a0f0fdf529fc1f2a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ba99df60a0f0fdf529fc1f2a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md`
 
 ### Audit
 
@@ -226,7 +226,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **24** |
+| ready | **23** |
 
 ### 候補の重複・識別情報欠損
 
@@ -246,7 +246,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **611** |
+| inference/training/survey配下の論文Markdown実体 | **612** |
 
 ### immutable submissionの未照合
 
@@ -254,8 +254,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **373** |
-| └ Research | **229** |
+| 成功result未照合のimmutable submission | **372** |
+| └ Research | **228** |
 | └ Audit | **1** |
 | └ Discovery | **143** |
 
