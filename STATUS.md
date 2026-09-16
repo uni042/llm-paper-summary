@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:19:32 JST**
+> 自動生成: **2026-09-16 14:19:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **9** | **4** | **5** | **4** | **0** | — |
+| Research | **27** | **9** | **4** | **5** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **5** | **0** | **5** | **0** | **0** | **24** |
-| 合計 | **28** | **14** | **4** | **10** | **4** | **0** | **24** |
+| 合計 | **28** | **14** | **4** | **10** | **4** | **1** | **24** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,12 +178,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.04748` — Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
-  - claim: **09-16 14:17:00 JST** / heartbeat: **—** / lease expiry: **09-16 15:47:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a8b5b2b70328c222.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
+- `arXiv:2606.28565` — KernelSight-LM: A Kernel-Level LLM Inference Simulator / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
+  - claim: **09-16 14:19:40 JST** / heartbeat: **—** / lease expiry: **09-16 15:49:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b8521dbc1f501e0d.json`
 - `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:15:32 JST** / heartbeat: **—** / lease expiry: **09-16 15:45:32 JST**
+  - claim: **09-16 14:15:32 JST** / heartbeat: **09-16 14:19:40 JST** / lease expiry: **09-16 15:49:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-f3ec00db7d9723b7.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**
