@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-4aa0bdcf550c974e39ccae92",
-  "job_id": "job-research-b98e4e299d06a6a5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4aa0bdcf550c974e39ccae92",
-    "worker_id": "scheduled-chat-discovery-20260916T1600JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4aa0bdcf550c974e39ccae92","job_id":"job-research-b98e4e299d06a6a5","data":{"evaluation_summary":"Mistral-7B、LLaMA-3.1-8B、MPT-7Bを用い、MultiNewsやSAMSum等の要約データで長文prefillを評価する。完全再計算、SnapKV、H2O等と比較し、初回トークン時間、GPU KVメモリ、ROUGE-Lを測る。5千トークン入力での速度・容量に加え、文の削除・置換で参照と対象の意味類似度を段階的に下げる頑健性試験、意味対応KVをゼロ化またはランダム置換するアブレーションを行う。","scope":"評価は主に要約タスクと約7B〜8B級モデルの長文入力に集中する。短いpromptではLSH照合・KV再配置の固定費により高速化が小さく、FlashAttention非対応、経験的な類似度閾値など実装上の制約が残る。","hardware":[],"software":["token-embedding LSH matcher","RoPE-aware KV remapping","layer-adaptive recomputation and retention"],"models":["Mistral-7B","LLaMA-3.1-8B","MPT-7B"],"datasets":["MultiNews","SAMSum","other summarization datasets"],"workload":"意味的に近い参照・対象promptを用いた長文要約。最大5k-token入力を含む。","baselines":["Full KV recomputation","SnapKV","H2O"],"metrics":["TTFT speedup","GPU KV memory usage","ROUGE-L","robustness to sentence deletion/replacement"],"methodology":"完全再計算と既存KV圧縮に対して速度・メモリ・品質を比較し、参照promptとの類似度を文削除・置換で下げて曖昧共有の破綻点を調べる。さらに対応KVをゼロまたはランダム値へ置換し、単なるtoken削減ではなくLSHで選んだ意味対応が品質へ寄与するかを検証する。","predictor_accuracy":"独立したmatching accuracyではなく、類似度変化時のROUGE-Lとアブレーションで意味対応の有効性を検証する。経験的なLSH similarity thresholdは約0.8。","control_knobs":"LSH similarity threshold、layer-wise recomputation amount、layer-wise KV retention schedule。"},"reservation":{"claim_id":"claim-4aa0bdcf550c974e39ccae92","worker_id":"scheduled-chat-discovery-20260916T1600JST","worker_kind":"scheduled_chat"}}
