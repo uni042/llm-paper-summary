@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-839f4e486b01dc3f2c44b391",
-  "job_id": "job-research-23c1aef2e7b819be",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-839f4e486b01dc3f2c44b391",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-839f4e486b01dc3f2c44b391","job_id":"job-research-23c1aef2e7b819be","data":{"canonical_id":"arXiv:2609.11356","arxiv_id":"2609.11356","doi":"10.48550/arXiv.2609.11356","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification","summary":"浮動小数点加算の非結合性により、数学的に同じGPUカーネルでも縮約順序、部分和精度、融合積和、丸め位置が違えばビット列が変わる問題を、記述・復元・強制・静的検証まで一貫して扱う。行列積の縮約順序を決める要素だけを記録する記述子を定義し、非公開の行列積ライブラリをブラックボックス計測して同一ビットの生成系を再構築する。三世代の対象GPUで行列積を100%ビット一致させ、コンパイラには平衡木縮約を強制する後段処理とデータ配置最適化を追加し、27カーネル中19個を自由順序版の10%以内へ戻す。さらに二社のGPU命令列に対する健全な静的同値判定器を作り、自動調整候補を同一ビット同値類の中だけで探索できるようにする。","list_summary":"GPU縮約順序を記述子化し、非公開行列積のビット挙動復元、コンパイラでの平衡木強制、命令列の静的同値判定を接続して再現性と自動調整を両立する。","authors":["Ziteng Yang","Nicholas J. Riasanovsky","Warren Deng","Vivek Sarkar"],"published":"2026-09-10","publication":"arXiv preprint arXiv:2609.11356v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"hardware-accelerators","topics":["GPUカーネル","数値再現性","テンソルコア","コンパイラ","静的検証"],"importance":"LLM推論・学習でバッチや自動調整候補が変わっても同じビットを要求する場合に、性能を大きく捨てずに縮約順序を固定・検証する低レベル基盤を提供する。","hardware_evaluation":"NVIDIA H100、GB200、GB300を中心に評価し、静的判定器はNVIDIA PTXとAMD GCNを対象。","quality_effect":"数値ビット再現性を直接保証対象とし、行列積再構築は対象条件で100%ビット一致。","source":"https://arxiv.org/abs/2609.11356","sources":["https://arxiv.org/abs/2609.11356","https://arxiv.org/html/2609.11356","https://arxiv.org/pdf/2609.11356"],"code":null,"implementation":"Triton後段コンパイラ変更、行列積生成系、静的命令同値判定器、自動調整統合を実装。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"arXiv HTML参考文献節","references_total":77},"reservation":{"claim_id":"claim-839f4e486b01dc3f2c44b391","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
