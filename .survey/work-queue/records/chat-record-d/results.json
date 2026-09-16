@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c0da3b140c64c54bccb58db4",
+  "attempt_id": "attempt-ce08cf0566cb7dca27b52253",
   "job_id": "job-research-23c1aef2e7b819be",
   "data": {
     "overview": "算術記述子から再構築した行列積は対象のHopper/Blackwell三世代で非公開ライブラリと100%ビット一致し、現実的なLLM形状の後処理融合でも生成系の性能は一般的なコンパイル経路と同等以上になる場合がある。平衡木縮約をコンパイラで強制した際の性能低下は配置最適化で大きく回復し、27カーネル中19個が自由順序版の10%以内、対象H100の一部では自由版を上回った。静的判定器は二社命令集合を扱い、自動調整候補を実行前に同値類へ分割できる。さらにブラックボックス解析の過程で、特定の縮約軸分割経路が末尾要素を落とす非公開ライブラリ不具合も発見した。",
@@ -53,7 +53,7 @@
     "interpretation": "再現性を得るために高速カーネルや自動調整を全面禁止するのではなく、算術同値類を先に固定し、その内部でスケジュール・配置を自由に最適化する設計が有効である。"
   },
   "reservation": {
-    "claim_id": "claim-c0da3b140c64c54bccb58db4",
+    "claim_id": "claim-ce08cf0566cb7dca27b52253",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

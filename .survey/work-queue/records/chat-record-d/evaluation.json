@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c0da3b140c64c54bccb58db4",
+  "attempt_id": "attempt-ce08cf0566cb7dca27b52253",
   "job_id": "job-research-23c1aef2e7b819be",
   "data": {
     "evaluation_summary": "非公開行列積の再構築、平衡木縮約の性能、静的同値判定の健全性と分割精度、自動調整枝刈りを複数GPU世代・多数カーネルで評価する。実LLM形状は16種類の公開モデル設定から抽出し、行列積、縮約、正規化、生成融合カーネル、注意を含む。",
@@ -54,7 +54,7 @@
     "control_knobs": "縮約木、縮約軸分割、部分和型、行列命令種類、実行束数、データ配置、自動調整構成。"
   },
   "reservation": {
-    "claim_id": "claim-c0da3b140c64c54bccb58db4",
+    "claim_id": "claim-ce08cf0566cb7dca27b52253",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

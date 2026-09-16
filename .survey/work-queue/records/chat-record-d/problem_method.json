@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-c0da3b140c64c54bccb58db4",
+  "attempt_id": "attempt-ce08cf0566cb7dca27b52253",
   "job_id": "job-research-23c1aef2e7b819be",
   "data": {
     "problem": "同じ数学式を計算するGPUカーネルでも、浮動小数点加算は結合則を満たさないため、並列縮約木、部分和を閉じる位置、部分和の型、融合積和の有無が違うと最終ビットが変わる。高速な行列積ライブラリは入力形状やバッチに応じて非公開のアルゴリズムを選び、自動調整器もタイルや実行束数を変えるため、同じ要求が別バッチに入るだけで算術順序が変わり得る。決定論モードで探索範囲を狭めれば性能を最大二割程度失う一方、数百候補のうちどれが同じビット同値類かを事前に判定する手段がない。推論と学習、特に別エンジンを使う強化学習では微小な差が対数確率や後続生成へ伝播するため、再現性を速度調整と両立する必要がある。",
@@ -29,7 +29,7 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-c0da3b140c64c54bccb58db4",
+    "claim_id": "claim-ce08cf0566cb7dca27b52253",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
