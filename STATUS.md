@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:40:09 JST**
+> 自動生成: **2026-09-16 17:40:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **48** | **8** | **4** | **4** | **2** | **2** | — |
+| Research | **48** | **8** | **4** | **4** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **10** | **0** | **10** | **0** | **0** | **10** |
-| 合計 | **49** | **18** | **4** | **14** | **2** | **2** | **10** |
+| 合計 | **49** | **18** | **4** | **14** | **2** | **1** | **10** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -197,10 +197,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **2件**
-- `arXiv:2605.05219` — Sparse Prefix Caching for Hybrid and Recurrent LLM Serving / worker `scheduled-chat-paper-20260916T173214JST`
-  - claim: **09-16 17:33:08 JST** / heartbeat: **09-16 17:38:06 JST** / lease expiry: **09-16 19:08:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-34cb083c55afaad3.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2511.21669` — DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving / worker `scheduled-chat-paper-20260916T173214JST`
+  - claim: **09-16 17:40:17 JST** / heartbeat: **—** / lease expiry: **09-16 19:10:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9d70d3111564c88d.json`
 - `arXiv:2604.14993` — Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving / worker `scheduled-chat-discovery-20260916T1600JST`
   - claim: **09-16 17:21:58 JST** / heartbeat: **09-16 17:33:08 JST** / lease expiry: **09-16 19:03:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6252d370adc380b9.json`

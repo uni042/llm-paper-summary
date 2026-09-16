@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-53558bbaa4914539ab1d1836","job_id":"job-research-34cb083c55afaad3","data":{"overview":"distribution-aware sparse checkpoint placementはQuALITYとSystem Promptsで測定layer-groupのmemory-recompute Pareto frontierを改善した。全fixed-budget baselineを支配し、最も強いblock cachingに一致または上回りつつ通常は大幅に少ないcheckpointを使う。最大利得はcheckpoint budgetが小さくoverlap-depth分布が非一様な領域で現れる。checkpointからsuffixを元のrecurrent updateで再計算するため出力はexactである。","key_results":[{"metric":"checkpoint placement","value":"exact O(NM) dynamic program","baseline":"fixed-spacing heuristic","condition":"N candidate positions, M checkpoints, overlap-depth distribution","interpretation":"budget内で期待recomputationを最小化する配置を厳密に求める。"},{"metric":"Pareto frontier","value":"dominates every fixed-budget baseline on measured layer-group frontier","baseline":"balanced/sqrt/log等","condition":"QuALITY and System Prompts","interpretation":"同じcheckpoint数で再計算を減らすか、同じ再計算でstate memoryを減らせる。"},{"metric":"strongest heuristic comparison","value":"matches or outperforms block caching while typically using substantially fewer checkpoints","baseline":"block caching","condition":"real prefix-sharing workloads; strongest at low budgets","interpretation":"overlap深度の偏りへ適応する価値が低memory領域で大きい。"}],"negative_results":["prefix共有が短い/少ないworkloadでは利得が小さい。","hidden stateをexact extract/restoreできないrecurrent implementationには直接適用できない。","workload drift時はoverlap分布と配置の更新が必要になる。"],"quality_impact":"exact checkpoint restoreと通常recurrent suffix recomputationのみを使い、生成出力を近似しない。","interpretation":"recurrent layerは単一stateから再開できるため、attention KVと同じdense cachingを強制する必要がない。state checkpoint数を減らして一部computeを再実行することでcache capacityを増やせる。"},"reservation":{"claim_id":"claim-53558bbaa4914539ab1d1836","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-3cb47aa83cc17c53a36cf3d5",
+  "job_id": "job-research-9d70d3111564c88d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3cb47aa83cc17c53a36cf3d5",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

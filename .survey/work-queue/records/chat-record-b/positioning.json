@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-53558bbaa4914539ab1d1836","job_id":"job-research-34cb083c55afaad3","data":{"positioning":"Transformer中心のprefix KV cachingをhybrid recurrent LLMへ拡張する際、recurrent stateのsingle-state resumabilityを利用してstateだけを疎checkpoint化するcache placement研究。","differences":"RadixAttention/vLLMはattention KVをblock単位でreuseするが、本研究はrecurrent layerのstate checkpoint位置を最適化する。KV quantization/compressionが各entryの表現量を減らすのに対し、保存checkpoint数そのものを減らしexact recomputationと交換する。固定block checkpointと異なりoverlap-depth分布をO(NM) DPへ入力する。","relation_to_prior_work":[{"work":"RadixAttention / vLLM prefix caching","difference":"attention KVのdense reuseに加え、recurrent stateを疎checkpointとして扱う。"},{"work":"block recurrent-state caching","difference":"固定間隔でなくworkload overlap分布へ配置を適応させる。"},{"work":"KV cache compression","difference":"近似圧縮せずcheckpoint数を減らしexact suffix recomputationを使うため併用可能。"}],"strengths":["recurrent stateとattention KVの構造差をcache設計へ利用する。","O(NM)厳密DPでcheckpoint配置を解く。","実データでfixed-budget baselineをPareto支配する。","出力をexactに保持する。"],"limitations":["長い共有prefixが十分必要。","hidden stateのexact extract/restoreが必要。","workload drift時は分布推定と再配置が必要。","remote cache tierやmulti-GPU schedulerとの共同最適化は対象外。"],"implementation_status":"公開GitHub実験コードがありQwen3.5 GatedDeltaNet layer groupとQuALITY/System Prompts等の構成を提供する。","research_positioning":"hybrid recurrent model向けにlayer stateの再開可能性へ応じてcache granularityを変える基礎研究。","repository_fit":"04-kv-prefix-cache系統で、recurrent/SSM hybrid serving固有のmemory-recompute trade-offを扱う。"},"reservation":{"claim_id":"claim-53558bbaa4914539ab1d1836","worker_id":"scheduled-chat-paper-20260916T173214JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-3cb47aa83cc17c53a36cf3d5",
+  "job_id": "job-research-9d70d3111564c88d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3cb47aa83cc17c53a36cf3d5",
+    "worker_id": "scheduled-chat-paper-20260916T173214JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
