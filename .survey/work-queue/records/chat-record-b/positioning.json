@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-1cef2aee08fb2b05fdb633a2",
-  "job_id": "job-research-e3f30981ea631700",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1cef2aee08fb2b05fdb633a2",
-    "worker_id": "scheduled-chat-discovery-specialist-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1cef2aee08fb2b05fdb633a2","job_id":"job-research-e3f30981ea631700","data":{"limitations":[{"name":"将来ハードウェアの代理評価","description":"主要なRubin+LPX結果は解析モデルであり、LPX実機でのエンドツーエンド測定ではない。B200代理系でモデルを検証しているが、実製品の電力管理、リンク、ランタイム挙動による差が残る。"},{"name":"モデル構造依存","description":"利益は劣二次注意層が多数あり、固定作業集合をASIC SRAMへ収められることに依存する。二次注意層が多いモデルや静的状態が巨大な構成ではASIC側の割合が減り、通信境界が増える。"},{"name":"疎注意局所性依存","description":"GLM型では選択KVをGPUからASICへ渡す必要がある。IndexShareは共有インデクサ層と連続デコードでの選択位置局所性を利用するため、選択集合が急変する負荷ではヒット率と通信隠蔽が悪化しうる。"},{"name":"サービング全体の未網羅要因","description":"電力効率と低遅延デコードを中心に評価しており、障害耐性、複数テナント配置、動的要求混在、ASIC調達コストなど実運用全体の最適化は別途必要である。"}],"differences":[{"name":"プリフィル/デコード分離との差","description":"従来方式はデコード全体を一つのプールへ置き、増大KVと固定状態を同じ装置へ持たせる。SQDはデコード内部を状態の増大則で分け、増大KVだけGPUへ残すためSRAM専用装置を利用できる。"},{"name":"注意-FFN分離との差","description":"注意-FFN分離は注意を一括してGPUへ残すため、固定状態で帯域律速の劣二次注意もGPU電力を消費する。SQDは劣二次注意をFFNとともにASICへ移し、二次注意がある境界だけで活性値を転送する。"},{"name":"KVオフロードとの差","description":"KVをCPU/SSD等へ退避する容量階層化ではなく、KVが増える段階をDRAM GPUへ固定し、固定作業集合をSRAM ASICへ移す計算配置の分離である。疎注意のIndexShareは選択KV通信をキャッシュするが、全KVの容量オフロードを目的としない。"},{"name":"モデル側劣二次注意研究との差","description":"疎注意やMamba、スライディング窓そのものを提案するのではなく、それらが作る固定状態というシステム特性を利用して異種ハードウェアを割り当てる。モデル設計とサービング基盤の間を接続する研究である。"}],"implementation_status":"実推論エンジンにSQD配置と最適化通信カーネルを実装し、8×B200代理異種系で測定している。Rubin+LPX部分は検証済み解析モデルによる将来構成評価。","research_positioning":"LLMサービング分離、異種アクセラレータ、KV状態配置、劣二次注意の交点に位置する。特にDRAM容量階層とSRAM帯域階層を、注意状態の文脈長スケーリングに合わせて分業させる点が特徴である。","relation_to_existing_repository":"プリフィル/デコード分離、注意/FFN分離、KVキャッシュ最適化、メモリ階層、低遅延サービングの系統と直接比較できる。SSD/CPUオフロード研究に対しては、遅い大容量層を追加するのではなくGPU DRAMとASIC SRAMの役割分担をモデル構造から決める別軸を提供する。","audit_required":false},"reservation":{"claim_id":"claim-1cef2aee08fb2b05fdb633a2","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
