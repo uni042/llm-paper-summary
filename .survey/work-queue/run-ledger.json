@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T06:10:05.168451+00:00",
+  "updated_at": "2026-09-16T06:11:30.147964+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T06:10:05.168451+00:00",
+      "last_recorded_at": "2026-09-16T06:11:30.147964+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 128,
+        "research_completed": 129,
         "audit_completed": 0,
         "discovery_completed": 52,
         "blocked": 5,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34955671237:1",
-          "recorded_at": "2026-09-15T10:03:34.448529+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34955671237",
-            "run_attempt": "1",
-            "source_sha": "14de439e4fc0aa1b496552c148b1cce4e9eea44c"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34959443166:1",
           "recorded_at": "2026-09-15T10:50:10.675093+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35062477563",
             "run_attempt": "1",
             "source_sha": "4945b69ababcc8f515069aace67ce4af178327d7"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35062592350:1",
+          "recorded_at": "2026-09-16T06:11:30.147964+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35062592350",
+            "run_attempt": "1",
+            "source_sha": "495311b925a6f0608b391077f08cb6a0c586300d"
           },
           "signals": [
             "research_completed"
@@ -21077,6 +21077,14 @@
           "type": "research",
           "canonical_id": "arXiv:2412.16187",
           "title": "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-cffb14eec24a02c2",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04244",
+          "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
           "from": "ready",
           "to": "completed"
         }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:11:09 JST**
+> 自動生成: **2026-09-16 15:11:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **44** |
+| 収録候補論文 | **43** |
 | 未claim Research job | **40** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-16 15:10:01 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-16 15:11:26 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **44** |
+| canonical_id確認済みの一意な候補論文 | **43** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **44** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **12** | **6** | **6** | **5** | **1** | — |
+| Research | **38** | **12** | **6** | **6** | **4** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **38** | **31** | **6** | **25** | **5** | **1** | **23** |
+| 合計 | **39** | **31** | **6** | **25** | **4** | **1** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 15:11:26 JST** [research] `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding
+  - job: `.survey/work-queue/jobs/job-research-cffb14eec24a02c2.json`
+  - result: `.survey/work-queue/results/research/attempt-5cdea98b4034b7e3f2b05850.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5cdea98b4034b7e3f2b05850.json`
+  - paper: `papers/inference/09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md`
 - **09-16 15:10:01 JST** [research] `arXiv:2412.16187` — HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing
   - job: `.survey/work-queue/jobs/job-research-795118fce8eb1845.json`
   - result: `.survey/work-queue/results/research/attempt-8834d311401a99e374c1300d.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-062785fdd1a729fb213be682.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-062785fdd1a729fb213be682.json`
   - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md`
-- **09-16 14:20:59 JST** [research] `arXiv:2606.28565` — KernelSight-LM: A Kernel-Level LLM Inference Simulator
-  - job: `.survey/work-queue/jobs/job-research-b8521dbc1f501e0d.json`
-  - result: `.survey/work-queue/results/research/attempt-52add1efa2617512647eab93.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-52add1efa2617512647eab93.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md`
 
 ### Audit
 
@@ -203,10 +203,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.04244` — MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding / worker `scheduled-chat-hourly-survey-20260916T145717JST`
-  - claim: **09-16 15:10:08 JST** / heartbeat: **—** / lease expiry: **09-16 16:40:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cffb14eec24a02c2.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **1件**
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -238,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **44** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,7 +255,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **592** |
+| inference/training/survey配下の論文Markdown実体 | **593** |
 
 ### immutable submissionの未照合
 
