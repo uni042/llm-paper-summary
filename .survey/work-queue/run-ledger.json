@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T16:02:22.694688+00:00",
+  "updated_at": "2026-09-16T16:35:46.066083+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T16:02:22.694688+00:00",
+      "last_recorded_at": "2026-09-16T16:35:46.066083+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 167,
+        "research_completed": 168,
         "audit_completed": 0,
         "discovery_completed": 83,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35062255943:1",
-          "recorded_at": "2026-09-16T06:06:47.567272+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35062255943",
-            "run_attempt": "1",
-            "source_sha": "d578764fcf4f345d74a87b52c724d146a833b858"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35062363814:1",
           "recorded_at": "2026-09-16T06:09:07.311645+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35122868571:1",
+          "recorded_at": "2026-09-16T16:35:46.066083+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35122868571",
+            "run_attempt": "1",
+            "source_sha": "608cd9fd97a47649d79c99a2226f5998d52a7e8b"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21696,6 +21696,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-431f09f6206f16eb",
+          "type": "research",
+          "canonical_id": "arXiv:2601.01310",
+          "title": "Making MoE based LLM inference resilient with Tarragon",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22923,7 +22931,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 631,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
