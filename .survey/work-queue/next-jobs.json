@@ -95,14 +95,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-431f09f6206f16eb",
+      "job_id": "job-research-f9f09d211cdcb836",
       "type": "research",
       "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2601.01310",
-      "title": "Making MoE based LLM inference resilient with Tarragon",
-      "source_url": "https://arxiv.org/abs/2601.01310",
-      "paper_path": "papers/inference/03-moe-expert-offload/2026-2601.01310-tarragon-resilient-moe-inference.md",
+      "priority": 85,
+      "canonical_id": "arXiv:2603.22774",
+      "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.22774",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T10:41:31+00:00"
+  "generated_at": "2026-09-16T10:44:41+00:00"
 }
