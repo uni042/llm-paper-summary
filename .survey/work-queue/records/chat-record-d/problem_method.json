@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-95c518792662f18476bdcb36",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95c518792662f18476bdcb36",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-95c518792662f18476bdcb36","job_id":"job-research-3bb1145babb1a6fc",
+ "data":{
+  "problem":"既存LLM servingはbatching・scheduling・parallelismを調整してもGPU powerを固定のprovisioning constraintとして扱う。実際にはpowerとthroughput/efficiencyの関係は非線形で、MoEではexpert routing/all-to-allが支配するとpowerを上げても有用computeが増えず、静的capはenergy浪費またはQoS違反を生む。",
+  "novelty":"GPU power capをfirst-class runtime knobへ昇格し、runtime可変なbatch sizeと共同制御する。offline power-performance modelによるcandidate rankingとonline PID feedbackを組み合わせ、外部power budgetやthroughput targetの変化にsub-secondで追従する。",
+  "method_overview":"offlineでpower cap 100–400W域、batch 1–64、TP/EP/DPをsweepし、NVML/IPMI power、tokens/s、latencyを収集する。random forestでconfigurationからthroughputとpowerを予測し、held-outでthroughput MAPE 6.8%、power MAPE 4.5%を得る。runtimeは500msごとにtelemetryを取得し、throughput target以上と予測される候補集合からT/P最大の構成を選択し、該当候補がなければ最大throughput構成へfallbackする。実測誤差が5%超で持続する場合などにPID feedbackで補正し、NVML power capとvLLM batch sizeをactuateする。",
+  "components":[
+   {"name":"Telemetry layer","description":"NVMLとruntime instrumentationからGPU power、tokens/s、GPU utilization等を500ms周期で取得。"},
+   {"name":"Offline predictor","description":"random forestでcap、batch、parallelismからthroughput/powerを推定し、online探索を避ける。"},
+   {"name":"Model-guided controller","description":"throughput constraintを満たす候補中でtokens/J最大を選択し、候補なしならthroughput最大を選ぶ。"},
+   {"name":"PID feedback","description":"prediction errorやworkload variationを実測throughput errorで補正し、5%超の持続偏差や外部constraint変化時に再構成。"},
+   {"name":"Actuation layer","description":"NVMLでpower cap、vLLM schedulerでbatch/request schedulingをruntime変更し、model/APIは変更しない。"}
+  ],
+  "empirical_insights":["power capはmodel依存で概ね150–200W以降にdiminishing returns。communication-bound Qwen-MoE/OLMoEでは高powerでtokens/Jが低下し得る。","batch 1→64で全modelのefficiencyが1.7–2.1倍。","TP/EPの最適点はcompute/communication比依存で、MoEの高parallelismでは通信増加がpower利得を打ち消す。"]
+ },
+ "reservation":{"claim_id":"claim-95c518792662f18476bdcb36","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
