@@ -2,51 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-51c101f8bce3906b4d237de4",
-  "job_id": "job-research-3c85afd190edf390",
-  "data": {
-    "evaluation_summary": "8台のNVIDIA H200をNVLink Gen4で接続した単一ノードで、LLaMA-3-8B/70B、GPT-OSS-20B/120B、DeepSeek-R1-32BをFP16で評価する。入力4K～100万トークン、バッチ4～64、長入力短出力と短入力長出力を混ぜ、オンライン到着はポアソン分布で生成する。障害率5～15%でGPUのメモリバッファを消去し、復旧完了まで他workerを停止させる故障注入を行う。",
-    "scope": "主対象は単一ノード内テンソル並列と、GPUが再起動して既存並列構成へ復帰できるメモリ・カーネル等のソフト障害である。ノード全損や恒久GPU故障、動的なテンソル並列再編成は対象外。長入力プリフィル中心の評価が厚く、復号中心推論やプリフィル・復号分離構成は今後の課題。",
-    "hardware": [
-      "8×NVIDIA H200",
-      "NVLink Gen4",
-      "2×48-core Intel CPU",
-      "1024GB DDR5",
-      "PCIe Gen4, 32GB/s bidirectional"
-    ],
-    "models": [
-      "LLaMA-3-8B",
-      "LLaMA-3-70B",
-      "GPT-OSS-20B",
-      "GPT-OSS-120B",
-      "DeepSeek-R1-32B"
-    ],
-    "datasets": [
-      "Medha synthetic serving traces",
-      "long-input/short-output requests",
-      "short-input/long-output requests"
-    ],
-    "workload": "バッチ4～64、系列長4K～1M。主要比較ではチャンク2K、GhostServeは8:2データ対パリティ比。オンライン評価ではランダム時点に5～15%の故障率でGPU状態を消去する。",
-    "baselines": [
-      "SGLang Base: failure recovery by KV recomputation",
-      "SGLang SSD: asynchronous NVMe checkpoint modeled after PCCheck",
-      "SGLang CPU: asynchronous CPU-memory full replication modeled after DéjàVu"
-    ],
-    "metrics": [
-      "prefill latency",
-      "decode latency",
-      "checkpoint I/O overhead",
-      "recovery latency",
-      "P50/P99 response latency",
-      "Effective-Inference-Time-Ratio",
-      "Mean-Time-To-Recover",
-      "host memory overhead"
-    ],
-    "predictor_accuracy": "予測器を用いる研究ではない。故障なしと故障注入時の遅延・有効推論時間比・平均復旧時間を直接測定する。",
-    "control_knobs": "消失訂正符号方式、データ:パリティ比、チャンクサイズ、バッチサイズ、テンソル並列度、再計算する先頭チャンク数、故障率。"
-  },
+  "attempt_id": "attempt-451392f76c1e77752b754f78",
+  "job_id": "job-research-795118fce8eb1845",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-51c101f8bce3906b4d237de4",
+    "claim_id": "claim-451392f76c1e77752b754f78",
     "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
     "worker_kind": "scheduled_chat"
   }
