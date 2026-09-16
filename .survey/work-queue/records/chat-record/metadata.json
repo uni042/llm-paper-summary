@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e119121016e6ca3bccd934b0",
-  "job_id": "job-research-c15602f379300b58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e119121016e6ca3bccd934b0",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e119121016e6ca3bccd934b0","job_id":"job-research-c15602f379300b58","data":{"canonical_id":"arXiv:2602.11530","arxiv_id":"2602.11530","doi":"10.48550/arXiv.2602.11530","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models","summary":"推論型LLMではデコードがユーザー非表示の推論フェーズと表示される回答フェーズに分かれ、従来のTTFT=プリフィル、TPOT=デコードという対応が崩れる。PASCALは推論フェーズをTTFT短縮のため高優先度で実行し、回答フェーズはトークンペーサー付きの制御プリエンプションで表示速度のSLOを守る二階層スケジューラである。クラスタ側は新規推論要求を回答SLOを満たしKV量が最小のインスタンスへ置き、推論終了トークンを検出すると回答負荷の軽いインスタンスへのKV移行を再検討する。インスタンス内では推論・回答を高低優先度キューへ分離し、両方をRRで処理する。8×H100のシミュレーションでDeepSeek-R1-Distill-Qwen-32Bを評価し、FCFS比でtail TTFTをAlpacaEval2.0最大61%、Arena-Hard最大72%削減し、総スループット差を3%以内に保つ。","list_summary":"推論型LLMの非表示reasoningと表示answeringを別SLOとして扱い、優先度キュー・トークンペーシング・フェーズ境界KV移行でtail TTFTを最大72%削減する。","authors":["Eunyeong Cho","Jehyeon Bang","Ranggi Hwang","Minsoo Rhu"],"authors_affiliations":"Eunyeong Cho, Jehyeon Bang, Minsoo Rhu: KAIST; Ranggi Hwang: UNIST（研究の一部はKAIST在籍時）。","published":"2026-02-12","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"reasoning LLM serving / phase-aware scheduling / KV-cache migration","topics":["推論LLM","スケジューリング","TTFT","KVキャッシュ移行","QoE"],"importance":"reasoning tokenを通常decodeと同じ優先度で扱わず、ユーザー可視性に基づいてreasoning/answeringを明示分離する。フェーズ境界をクラスタ再配置点として使う点も重要。","hardware_evaluation":"8 server instances connected by 100 Gbps fabric, each NVIDIA H100 96GB; real-system validation uses Intel Xeon Platinum 8558 + H100 over PCIe 5.0.","hardware_details":"cluster simulator validated against real vLLM profiling; end-to-end MAPE 1.62%, mean TTFT 12.6%, TPOT 6.49%.","quality_effect":"モデルや推論内容を変更せずスケジューリングのみ変更。回答フェーズQoE<0.95をSLO violationとして評価。","source":"https://arxiv.org/abs/2602.11530","sources":["https://arxiv.org/abs/2602.11530","https://arxiv.org/pdf/2602.11530"],"code":null,"implementation":"vLLM 0.6.1 profileを用いた8インスタンスのクラスタシミュレータを実装し、PyTorch 2.4.0/CUDA 12.1の実機で検証。公開コードURLは一次資料で確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-e119121016e6ca3bccd934b0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
