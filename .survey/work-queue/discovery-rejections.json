@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
-  "updated_at": "2026-09-17T06:00:00+09:00",
-  "submission_count": 5,
-  "rejection_observation_count": 26,
-  "rejection_record_count": 26,
+  "updated_at": "2026-09-17T07:00:00+09:00",
+  "submission_count": 6,
+  "rejection_observation_count": 28,
+  "rejection_record_count": 28,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2410.14740": {
@@ -90,6 +90,48 @@
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+    },
+    "id:arXiv:2503.05248": {
+      "primary_identity": "id:arXiv:2503.05248",
+      "identity_tokens": [
+        "id:arXiv:2503.05248",
+        "title:optimizing llm inference throughput via memoryaware and slaconstrained dynamic batching",
+        "url:https://arxiv.org/abs/2503.05248"
+      ],
+      "canonical_id": "arXiv:2503.05248",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching",
+      "source_url": "https://arxiv.org/abs/2503.05248",
+      "rejection_reason": "LLM serving scope is relevant, but the contribution is a comparatively narrow dynamic-batching policy with numerical experiments and limited system-level novelty versus the stronger scheduling systems selected in this round.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T07:00:00+09:00",
+      "last_rejected_at": "2026-09-17T07:00:00+09:00",
+      "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
+      "run_key": "2026-09-17T07:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
+    },
+    "id:arXiv:2503.08311": {
+      "primary_identity": "id:arXiv:2503.08311",
+      "identity_tokens": [
+        "id:arXiv:2503.08311",
+        "title:mind the memory gap unveiling gpu bottlenecks in largebatch llm inference",
+        "url:https://arxiv.org/abs/2503.08311"
+      ],
+      "canonical_id": "arXiv:2503.08311",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Mind the Memory Gap: Unveiling GPU Bottlenecks in Large-Batch LLM Inference",
+      "source_url": "https://arxiv.org/abs/2503.08311",
+      "rejection_reason": "Useful GPU bottleneck characterization, but its main contribution is analysis plus a batching configuration advisor rather than a sufficiently distinct inference-system mechanism for the current candidate pool.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T07:00:00+09:00",
+      "last_rejected_at": "2026-09-17T07:00:00+09:00",
+      "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
+      "run_key": "2026-09-17T07:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
     },
     "id:arXiv:2509.12993": {
       "primary_identity": "id:arXiv:2509.12993",
