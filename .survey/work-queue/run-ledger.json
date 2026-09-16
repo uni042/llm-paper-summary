@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:40:39.193212+00:00",
+  "updated_at": "2026-09-16T03:44:06.007887+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:40:39.193212+00:00",
+      "last_recorded_at": "2026-09-16T03:44:06.007887+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 108,
+        "research_completed": 109,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 3,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34908511269:1",
-          "recorded_at": "2026-09-14T23:25:27.768986+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34908511269",
-            "run_attempt": "1",
-            "source_sha": "8bca13884c697b6704d4e5bdfed6c2fa55462395"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34908771915:1",
           "recorded_at": "2026-09-14T23:28:40.024174+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35052677905",
             "run_attempt": "1",
             "source_sha": "8aba85996cdf74eaa095aca5a8980791919101c9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35052898560:1",
+          "recorded_at": "2026-09-16T03:44:06.007887+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35052898560",
+            "run_attempt": "1",
+            "source_sha": "0971cb6c9f9e22c0eef524b199a0701e4c21ed6c"
           },
           "signals": [
             "research_completed"
@@ -20703,6 +20703,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.21604",
           "title": "AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c0e589d0a60cc7cf",
+          "type": "research",
+          "canonical_id": "arXiv:2602.01053",
+          "title": "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
           "from": "ready",
           "to": "completed"
         }
