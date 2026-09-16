@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 02:03:59 JST**
+> 自動生成: **2026-09-17 02:04:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **15** | **5** | **2** | **3** | **0** | **0** | **4** |
-| 合計 | **36** | **13** | **6** | **7** | **1** | **0** | **4** |
+| Discovery | **14** | **6** | **2** | **4** | **0** | **0** | **4** |
+| 合計 | **35** | **14** | **6** | **8** | **1** | **0** | **4** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -137,14 +137,14 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260917T0058-network-scheduling-6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json`
   - 探索軸: multi-stage network flow scheduling・prefill deflection・KV transfer contention
-- **09-16 20:04:18 JST** job `job-7d09b183cc7a9a2c` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260916T2034JST-discovery-specialist-tail-reasoning-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T2034JST-discovery-specialist-tail-reasoning-8.json`
-  - 探索軸: tail-aware・reasoning phase-aware scheduling
 - **09-16 20:06:01 JST** job `job-0c421ac9966fc6bb` / 候補 **2件**
   - result: `.survey/work-queue/results/20260916T2038JST-discovery-specialist-model-loading-9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json`
   - 探索軸: serverless model loading・weight residency・multi-GPU KV migration
+- **09-16 20:06:03 JST** job `job-df9bf305b98cd6dc` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260916T2042JST-discovery-specialist-collective-10.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260916T2042JST-discovery-specialist-collective-10.json`
+  - 探索軸: collective communication圧縮・tensor/expert parallel通信
 
 ### 直近タスク
 
@@ -186,8 +186,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 02:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **3件** / 候補: **4件**
-- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload / KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計 / disk-backed KV cache・RAG multi-instance・cloud offload配置 / SSD-backed prefix/KV cache・hierarchical memory
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **4件** / 候補: **4件**
+- 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ / CXL階層メモリ・SSD/NVMe・MoE expert offload / KVキャッシュ量子化・メモリ帯域・ハードウェア共同設計 / disk-backed KV cache・RAG multi-instance・cloud offload配置 / SSD-backed prefix/KV cache・hierarchical memory / MoE expert offload・speculative prefetch・CPU-light KV
 - round `specialist-offload-specdecode-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json`
   - 探索軸: CPU-GPUオフロード・投機的デコード・階層メモリ
@@ -207,6 +207,10 @@
 - round `specialist-storage-prefix-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0217JST-discovery-specialist-storage-prefix-5.json`
   - 探索軸: SSD-backed prefix/KV cache・hierarchical memory
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-offload-6` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260917T0220JST-discovery-specialist-moe-offload-6.json`
+  - 探索軸: MoE expert offload・speculative prefetch・CPU-light KV
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -264,10 +268,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **392** |
+| 成功result未照合のimmutable submission | **393** |
 | └ Research | **262** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
