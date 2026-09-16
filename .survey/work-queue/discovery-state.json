@@ -1,30 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T20:02:47+00:00",
-  "last_run_key": "2026-09-17T05:00:00+09:00",
-  "last_round": "specialist-moe-kv-sharding-1",
+  "updated_at": "2026-09-16T21:04:53+00:00",
+  "last_run_key": "2026-09-17T06:00:00+09:00",
+  "last_round": "specialist-recent-serving-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 28,
+  "consecutive_empty_rounds": 29,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T18:00:00+09:00",
-      "round": "specialist-scheduling-engine-4",
-      "axis": "production推論エンジン・tail/SLO scheduling・hardware-software co-design",
-      "query_summary": "CXL/storage軸から切り替え、production inference engine、予測不要tail-aware scheduler、memory-constrained online scheduling、flow-control stability、新着IMC-NoC hardware-software co-designを軽量評価した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "HPC/collective通信・MoE all-to-all・GPU間通信とservingの接点、または最新framework更新から研究論文へ逆引きする",
-      "source_submission": "work-queue/submissions/20260912T1800JST-discovery-scheduling-engine-4.json"
-    },
     {
       "run_key": "2026-09-12T19:00+09:00",
       "round": "specialist-20260912T1900-01",
@@ -6690,6 +6675,27 @@
       ],
       "next_axis_hint": "DBMS/OSのbuffer management・storage prefetch・GPU I/O schedulingからLLM inferenceへ転用された隣接系統を探索し、MoE KV-sharding queryを反復しない",
       "source_submission": "work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json"
+    },
+    {
+      "run_key": "2026-09-17T06:00:00+09:00",
+      "round": "specialist-recent-serving-1",
+      "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
+      "query_summary": "paginationを公開しないweb検索providerで2026-09-14〜15の新着を中心に、serving、KV cache、MoE inference、pipeline parallelism、speculative decodingへ検索窓をずらした。最新discovery identity shardとrejection ledgerでcandidate評価前に既収録・既投入・過去評価落ちを除外し、未評価10件のbufferをまとめて評価した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.15359",
+        "arXiv:2609.15230"
+      ],
+      "next_axis_hint": "2026-09新着のdistributed inference communication・GPU runtime・expert movementと、既収録重要論文のforward citationへ移る",
+      "source_submission": "work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
     }
   ],
   "axes": {
@@ -10844,6 +10850,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "DBMS/OSのbuffer management・storage prefetch・GPU I/O schedulingからLLM inferenceへ転用された隣接系統を探索し、MoE KV-sharding queryを反復しない"
+    },
+    "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding": {
+      "last_run_key": "2026-09-17T06:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2026-09新着のdistributed inference communication・GPU runtime・expert movementと、既収録重要論文のforward citationへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

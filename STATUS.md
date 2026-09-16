@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 06:07:28 JST**
+> 自動生成: **2026-09-17 06:07:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **41** |
-| 未claim Research job | **40** |
+| 収録候補論文 | **42** |
+| 未claim Research job | **41** |
 | 直近24hの検証済みResearch収録 | **93** |
 | 最終検証済みResearch収録 | **09-17 04:37:50 JST（1時間29分前）** |
 | 整合性異常 | **16** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **41** |
+| canonical_id確認済みの一意な候補論文 | **42** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **41** |
+| 非終端Research job合計 | **42** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **4** | **0** | **4** | **0** | **0** | **11** |
-| 合計 | **31** | **12** | **4** | **8** | **1** | **0** | **11** |
+| Discovery | **21** | **4** | **1** | **3** | **0** | **0** | **11** |
+| 合計 | **32** | **12** | **5** | **7** | **1** | **0** | **11** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 06:04:53 JST** job `job-5cd9a5af133e1001` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260917T0600JST-discovery-specialist-recent-serving-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json`
+  - 探索軸: 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding
 - **09-17 05:02:46 JST** job `job-81d9561e39a761a9` / 候補 **1件**
   - result: `.survey/work-queue/results/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json`
   - 探索軸: 2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness
-- **09-17 03:04:49 JST** job `job-09d4a54e27614149` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260917T0307JST-discovery-specialist-cross-dc-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json`
-  - 探索軸: GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation
 
 ### 直近タスク
 
@@ -186,7 +186,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 06:00 JST**
-- 耐久探索round: **3件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **11件**
+- 耐久探索round: **3件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **11件**
 - round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
 - 探索軸: 既収録重要serving論文のforward citation・2025-2026 PD disaggregation・multi-LLM servingの未収録探索 / 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding / 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
 - round `specialist-forward-serving-3` / 候補 **5件**
@@ -196,7 +196,7 @@
 - round `specialist-recent-serving-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json`
   - 探索軸: 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T0600JST-discovery-specialist-recent-serving-1.json` (`ok=true`)
 - round `specialist-runtime-communication-2` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json`
   - 探索軸: 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
@@ -229,7 +229,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **41** |
+| ready | **42** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,10 +257,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **400** |
+| 成功result未照合のimmutable submission | **399** |
 | └ Research | **269** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 

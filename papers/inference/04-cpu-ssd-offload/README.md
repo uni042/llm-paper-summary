@@ -10,11 +10,7 @@
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
-該当なし。
-
-### 2年前（2024-10〜2025-09）
-
-- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
-  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：6  
-  CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
+- **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フラッシュ内計算向けに整数のみのLLM推論と静的辞書型KV圧縮を共同設計し、品質をほぼ維持したまま動的KV転送を約15分の1へ削減する。
 <!-- survey:auto:end -->
