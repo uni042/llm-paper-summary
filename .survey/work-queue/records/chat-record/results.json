@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-cd7cbdc8e55bcf2679e3c08f",
-  "job_id": "job-research-adc94daa00d75514",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cd7cbdc8e55bcf2679e3c08f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-cd7cbdc8e55bcf2679e3c08f","job_id":"job-research-adc94daa00d75514","data":{"overview":"NLLB-MoEではバッチが大きいほどSpecMoEの利点が拡大し、バッチ256でMoE-OnDemandの23%の端から端遅延、最大123.0 tokens/s、最大4.30倍のスループットを達成する。CPU-GPU転送量はMoE-OnDemand/MoE-Overlap比で最大76.73%、MoE-Caching比で71.89%削減する。バッチ1→256で転送量は従来45.28倍、Caching 50.97倍に増えるのに対しSpecMoEは10.96倍。時間的ホット選択はγ=10で1ステップ7.265トークンを生成し、ドラフトN=4が122.974 tokens/sでN=2,8,16より高い。ホットネスの弱いMixtral-8x7BとLlama-4-Scoutでも最大2.17倍、1.42倍のスループット改善を得る。SSDオフロードでは平均2.25倍で、重畳1.05倍、キャッシュ1.29倍を上回る。","key_results":[{"metric":"NLLB-MoE throughput speedup","value":"最大4.30×、最大123.0 tokens/s","baseline":"MoE-OnDemand","condition":"H100単GPU、CPU offload、batch 1-256","interpretation":"大バッチほど重複エキスパート転送を検証段階でまとめられ、帯域ボトルネックを直接軽減する。"},{"metric":"CPU→GPU data transfer reduction","value":"最大76.73% vs OnDemand/Overlap、71.89% vs Caching","baseline":"三CPU-offload baseline","condition":"NLLB-MoE end-to-end inference","interpretation":"通信を隠すのではなく転送回数そのものを減らすことが主な高速化要因。"},{"metric":"batch 256 latency","value":"MoE-OnDemandの23%","baseline":"MoE-OnDemand","condition":"NLLB-MoE batch=256","interpretation":"バッチ増加で通信支配が強まるほどSpecMoEの集約効果が大きい。"},{"metric":"HotTemporal draft quality","value":"7.265 tokens/step","baseline":"Random 6.812、HotGlobal 7.220","condition":"NLLB-MoE batch=256, γ=10","interpretation":"時間的ホットネス追跡が固定ホット集合より候補受理を改善し、HotGlobalより約6%の端から端高速化を追加する。"},{"metric":"low-hotness model throughput","value":"Mixtral-8x7B 2.17×、Llama-4-Scout 1.42×","baseline":"MoE-OnDemand","condition":"CNN/DailyMail, temperature=1, γ=5, batch>4で一貫して優位","interpretation":"強いホットネスに依存せず、アフィニティ代替と短い投機長で一般化する。"},{"metric":"SSD offload throughput","value":"平均2.25×","baseline":"MoE-OnDemand","condition":"expert parameters on SSD","interpretation":"I/O帯域がさらに狭い階層では重複転送除去の価値が増し、Overlap 1.05×、Caching 1.29×を大きく上回る。"}],"negative_results":"バッチ1ではMoE-CachingがSpecMoEよりわずかに低遅延で、少数トークンが使う2/128エキスパートを10%キャッシュが保持しやすいためである。論文は低バッチでは投機機能を無効化できるとする。またドラフトエキスパート数Nを増やすほど候補生成数は増えるが、投機側の計算遅延も増えるため単調に速くならない。NLLB batch256ではN=2,4,8,16の生成数が6.929,7.265,7.620,7.819に増える一方、throughputは116.401,122.974,121.309,117.157 tokens/sでN=4が最良。ホットネスの弱いモデルではγ=10は投機無駄が増えるためγ=5へ短縮している。","interpretation":"CPU/SSDオフロードMoEの本質的な問題はエキスパートをどれだけ上手く隠すかだけでなく、自己回帰ステップごとに同じ重みを何度も狭い階層間リンクへ流すことにある。ターゲット自身の常駐部分をドラフト化すると追加メモリなしで複数将来トークンを先取りでき、検証時の転送集約というシステム最適化へ接続できる。","quality_impact":"ターゲットモデルの学習や構造を変更しない。NLLBの貪欲設定ではターゲットの貪欲結果と完全一致する候補のみ受理する。低ホットネスモデルでは標準的なサンプリング型検証を用いる。"},"reservation":{"claim_id":"claim-cd7cbdc8e55bcf2679e3c08f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
