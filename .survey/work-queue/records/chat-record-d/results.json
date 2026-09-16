@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2bd430e05f4d331145708db0",
+  "attempt_id": "attempt-09c3c1f8ea3236b83582a70d",
   "job_id": "job-research-e59ec36b619f9b0c",
   "data": {
     "overview": "RouteRelayは層間経路が安定している行では完全ルータを省き、ドリフトが増えた行だけ計算量を戻すことで、固定更新周期より高い経路忠実度を保った。ドリフト0.01では完全再経路行25.0%で100%再現、0.03では55.4%、0.06では78.2%まで計算を増やしながら99.99%以上を維持した。キーチャンク128～1024では100%再現率のまま完全ルーティングの38.4～51.6%のスコア対だけを評価した。ただし未融合CPU実装は全規模で密行列積より遅く、演算量削減がそのまま実時間短縮にならない。実用化にはgather・行圧縮・台帳更新をGPU融合カーネルへまとめる必要がある。",
@@ -53,7 +53,7 @@
     "interpretation": "動的疎注意では注意カーネルを軽くした後、経路構築が次の最適化対象になる。層間冗長性は有望だが、演算数削減より不規則な実装費用が支配し得るため、GPUカーネル融合まで含めて評価する必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-2bd430e05f4d331145708db0",
+    "claim_id": "claim-09c3c1f8ea3236b83582a70d",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2bd430e05f4d331145708db0",
+  "attempt_id": "attempt-09c3c1f8ea3236b83582a70d",
   "job_id": "job-research-e59ec36b619f9b0c",
   "data": {
     "evaluation_summary": "64次元のチャンクルーティング表現を使う再現可能な合成評価で、層間ドリフト、監視候補構成、キーチャンク数128～1024を変える。既定はtop-12、近接監視12、ランダム監視12、FP32。経路再現率、完全再経路行率、全ルーティング比のスコア対、CPU中央値時間を測る。",
@@ -33,7 +33,7 @@
     "control_knobs": "near-miss sentinel m、random sentinel r、guard margin gamma、forced anchor interval、route width k、key chunk count。"
   },
   "reservation": {
-    "claim_id": "claim-2bd430e05f4d331145708db0",
+    "claim_id": "claim-09c3c1f8ea3236b83582a70d",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
