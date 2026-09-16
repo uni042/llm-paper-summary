@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-487680ad83745b110d11f463",
-  "job_id": "job-research-5204297ffdb35cfd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-487680ad83745b110d11f463",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-487680ad83745b110d11f463","job_id":"job-research-5204297ffdb35cfd","data":{"evaluation_summary":"W=2048トークンの有効キャッシュで5方式を比較し、128Kストリームの安定性、0.25W～8W遅延の4択ランダム結合保持、同距離の3択遅延判断を各ラグ500例で評価する。安定性閾値は正規化パープレキシティ1.1倍以下、保持・実用性閾値は75%以上。","scope":"注意シンク、窓再計算、固定サイズ再帰状態、外部検索を概念的に比較する評価研究。特定の大規模商用サービング実装や多利用者トラフィックの性能比較ではない。","hardware":[],"models":["pretrained causal decoder"],"datasets":["128K natural-text stream","four-way random delayed bindings","three-action delayed decision task"],"workload":"有効KV窓W=2048。StreamingLLMは先頭4シンクとW-4最近状態を保持。保持・判断の証拠距離を0.25W～8Wへ掃引し、固定シンク位置へ標的を置かない。","baselines":["Window","StreamingLLM","Window recomputation","Recurrent fixed-size memory","Sink + retrieval","Dense oracle"],"metrics":["PPL@128K normalized to 2K","relative per-token latency","persistent state size","four-way recall accuracy","delayed decision accuracy","H_stab","H_access","H_util"],"predictor_accuracy":"予測器評価ではない。ThreeHの到達距離を閾値付き曲線から測定する。","control_knobs":"sink token count、cache window W/2W、retrieval depth k=1/4、target lag、recurrent/external state。"},"reservation":{"claim_id":"claim-487680ad83745b110d11f463","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
