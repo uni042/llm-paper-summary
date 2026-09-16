@@ -1,33 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T11:04:18+00:00",
+  "updated_at": "2026-09-16T11:06:12+00:00",
   "last_run_key": "2026-09-16T20:00:00+09:00",
-  "last_round": "specialist-tail-reasoning-8",
+  "last_round": "specialist-exhaust-serving-14",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "重点テーマと隣接systemsの主要独立経路を一巡し、4連続の再スイープで新規強候補が出なかったため。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-10T21:30:00+09:00",
-      "round": "edge-moe-npu-adjacent-1",
-      "axis": "オンデバイスMoE・NPU実行系",
-      "query_summary": "最近のMoE推論、エッジNPU、KV管理の隣接軸を広めに探索し、既収録識別子と既存jobを詳細評価前に確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [
-        "arxiv:2604.18788"
-      ],
-      "duplicate_canonical_ids": [
-        "arxiv:2607.16892"
-      ],
-      "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
-    },
     {
       "run_key": "2026-09-10T21:30:00+09:00",
       "round": "ssd-hierarchical-kv-2",
@@ -6443,6 +6425,114 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "multi-model/model-loading/weight cacheを扱うserving systemsへ移す",
       "source_submission": "work-queue/submissions/20260916T2034JST-discovery-specialist-tail-reasoning-8.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-model-loading-9",
+      "axis": "serverless model loading・weight residency・multi-GPU KV migration",
+      "query_summary": "request schedulingからmodel lifecycle/memory residencyへ軸を移し、serverless cold startのweight cacheとmulti-GPU KV migrationを探索した。SwiftCache/Tuttiは既知候補のため反復しなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2605.03375"
+      ],
+      "next_axis_hint": "tensor parallel/collective communication・network topologyを使うinference parallelismへ移す",
+      "source_submission": "work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-collective-10",
+      "axis": "collective communication圧縮・tensor/expert parallel通信",
+      "query_summary": "model residencyから通信基盤へ軸を移し、application変更なしでcollective communicationを圧縮するin-GPU libraryを探索した。training専用HetCCL/NTPは対象外とした。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "探索空間の主要独立軸を一巡したため、直近新着の追加スイープで未発見があるか確認する",
+      "source_submission": "work-queue/submissions/20260916T2042JST-discovery-specialist-collective-10.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-exhaust-cxl-11",
+      "axis": "CXL・shared KV memory再スイープ",
+      "query_summary": "CXL KV memoryを再スイープしたが、Photonic-CXL、TraCT、BOOST等は既知・既処理で、新規に強い未収録候補は確認できなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.27187",
+        "arXiv:2512.18194",
+        "arXiv:2609.13592"
+      ],
+      "next_axis_hint": "SSD/NVMe KVとGPU-direct storageを再スイープする",
+      "source_submission": "work-queue/submissions/20260916T2046JST-discovery-specialist-exhaust-cxl-11.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-exhaust-ssd-12",
+      "axis": "SSD/NVMe・GPU-direct KV storage再スイープ",
+      "query_summary": "SSD-backed KV、GPU Direct Storage、GPU-centric object I/Oを再確認したが、Tutti等の主要候補は既知で追加の強候補は得られなかった。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2604.26557"
+      ],
+      "next_axis_hint": "MoE expert offload/cache/prefetchを再スイープする",
+      "source_submission": "work-queue/submissions/20260916T2048JST-discovery-specialist-exhaust-ssd-12.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-exhaust-moe-13",
+      "axis": "MoE expert offload・cache・prefetch再スイープ",
+      "query_summary": "CPU/GPU expert offload、NPU execution、cacheless edge、predictive prefetchを再確認したが、DALI、NPUMoE、OD-MoE等は既知で追加の強候補は得られなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2602.03495",
+        "arXiv:2604.18788",
+        "arXiv:2512.03927"
+      ],
+      "next_axis_hint": "serving scheduling/disaggregationの新着を最終再スイープする",
+      "source_submission": "work-queue/submissions/20260916T2050JST-discovery-specialist-exhaust-moe-13.json"
+    },
+    {
+      "run_key": "2026-09-16T20:00:00+09:00",
+      "round": "specialist-exhaust-serving-14",
+      "axis": "disaggregated serving・KV transfer・scheduler最終スイープ",
+      "query_summary": "disaggregated prefill/decode、network-aware KV routing、selective transfer、prefix-aware schedulingを最終再スイープした。SmartGen、NetKV、TraCT等は直近探索済みで、新規の強候補は確認できなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2606.03910",
+        "arXiv:2512.18194"
+      ],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260916T2052JST-discovery-specialist-exhaust-serving-14.json"
     }
   ],
   "axes": {
@@ -10225,6 +10315,66 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "multi-model/model-loading/weight cacheを扱うserving systemsへ移す"
+    },
+    "serverless model loading・weight residency・multi-GPU KV migration": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "tensor parallel/collective communication・network topologyを使うinference parallelismへ移す"
+    },
+    "collective communication圧縮・tensor/expert parallel通信": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "探索空間の主要独立軸を一巡したため、直近新着の追加スイープで未発見があるか確認する"
+    },
+    "CXL・shared KV memory再スイープ": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "SSD/NVMe KVとGPU-direct storageを再スイープする"
+    },
+    "SSD/NVMe・GPU-direct KV storage再スイープ": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "MoE expert offload/cache/prefetchを再スイープする"
+    },
+    "MoE expert offload・cache・prefetch再スイープ": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "serving scheduling/disaggregationの新着を最終再スイープする"
+    },
+    "disaggregated serving・KV transfer・scheduler最終スイープ": {
+      "last_run_key": "2026-09-16T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
