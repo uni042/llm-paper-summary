@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:05:50.777258+00:00",
+  "updated_at": "2026-09-16T03:08:01.953347+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:05:50.777258+00:00",
+      "last_recorded_at": "2026-09-16T03:08:01.953347+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 100,
+        "research_completed": 101,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 2,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34905238438:1",
-          "recorded_at": "2026-09-14T22:44:55.015484+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34905238438",
-            "run_attempt": "1",
-            "source_sha": "58fae9ef437a39496fde2ebc1e47b9c3021c0ed6"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34905424126:1",
           "recorded_at": "2026-09-14T22:48:05.671967+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35050619089:1",
+          "recorded_at": "2026-09-16T03:08:01.953347+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35050619089",
+            "run_attempt": "1",
+            "source_sha": "76486bd0cec2aa2b6f696adecb72e87305ad3d6d"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -20633,6 +20633,14 @@
           "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-e3f30981ea631700",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13134",
+          "title": "Rethinking Heterogeneous System Disaggregation for Subquadratic Attention",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -21221,7 +21229,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
