@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bb3ec0465085989a9a744808",
-  "job_id": "job-research-f61c46feeea304bb",
-  "data": {
-    "limitations": "温存集合の採用は安定プレフィックスが概ね同サイズという等スロット仮定を置き、長さが大きく異なる長文向けのバイト単位価値関数やナップサック最適化は未実装である。採用済みと未採用トラフィックは同じネイティブキャッシュを共有するため、未採用側が温存対象を追い出す可能性も残る。半合成集約は人気度や一部再訪相関を保つが正確なキー別時刻を保持せず、2種類の分布だけで全市場を代表できない。比較するPreble、DualMap、CHWBLは共通ハーネス再実装で原著実装ではなく、補助3-seed評価は信頼区間が広い。再計画では94.5%のキー配置が変わり得て再温存損失が大きいが、churn-awareな再計画器は未実装である。",
-    "differences": "Prebleは過去のプレフィックス再利用と現在負荷から要求ごとに反応し、DualMapは静的・動的候補を組み合わせるのに対し、CacheRouteはキー別要求率の全体分布から制御区間ごとの安定表を事前計画する。StickyやCHWBLの固定親和性と違い、高頻度キーの採用、過負荷キーの必要宛先数、全体LPT配置を明示的に組み合わせる。MooncakeやMemServeのようにKV状態をサーバ間移送・共有するのではなく、入口ルーティングで同じ状態を持つ宛先へ再訪させるため相補的である。",
-    "implementation_status": "クライアント側ルーティングハーネスによる実機研究実装で、70B/8Bを最大60 H100で評価済み。計画器は128,824キー・30宛先で345 ms、オンライン経路は表参照と小さな候補集合の負荷比較である。2026-09-16時点で論文・arXivページ上の公式ソースコードURLは確認できない。論文はarXiv v1プレプリントで、査読採録は確認できない。",
-    "research_positioning": "LLMサービングの状態付き入口ルーティングとプレフィックスKVキャッシュ局所性を結ぶ研究である。単一エンジン内のPagedAttention/SGLangがKV再利用を効率化するのに対し、CacheRouteは『どのエンジンへ要求を戻すか』を扱う。現在状態へ反応するオンラインルータと、KVをネットワーク越しに移送・プールする分散キャッシュの間に、率分布から安定配置を周期計画する選択肢を置き、さらに負領域を実測して有効化をゲートする運用手法まで含める。",
-    "relation_to_existing_repository": "サービング・スケジューリング系統ではPreble、DualMap、DistServe等と直接関係し、特に状態付き要求ルーティングの局所性対負荷分散問題を全体計画へ変換する。KVキャッシュ系統のMooncake/MemServe/TokenLake等が状態の格納・移送・共有を最適化するのに対し、CacheRouteは状態を動かさず要求を既存状態へ戻すため、階層キャッシュや遠隔KV取得と併用できる。SSD/CPU階層を持つ系では、遠隔取得費用と再プリフィル費用をシャドー再生へ加える拡張が考えられるが、本論文自体はGPU HBM内のネイティブキャッシュを対象とする。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-bb3ec0465085989a9a744808", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-4690bc7b8f70a0ac90350ba3",
+  "job_id": "job-research-1d922bbcf8bbfed4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4690bc7b8f70a0ac90350ba3",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

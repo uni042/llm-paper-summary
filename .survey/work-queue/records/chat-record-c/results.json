@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bb3ec0465085989a9a744808",
-  "job_id": "job-research-f61c46feeea304bb",
-  "data": {
-    "overview": "主70B fp8・60 H100評価でCacheRouteは3.5秒p99 SLO容量176±11 QPSを達成し、最強比較方式Prebleの76±11 QPSに対して2.3倍、Flat-LBの42±20 QPSに対して4.2倍となる。100 QPS共通点のp99は1.8秒で、5比較方式の3.8～8.5秒を下回る。提供済みKVヒット率はFlat-LBの64.1±1.3%から93.2±0.5%へ上がるが、StickyやDualMapも高ヒットでありながら尾部遅延が悪いことから、利得は親和性単独ではなく均衡配置との組合せによる。第2分布や32B負荷では同率・負の結果も観測され、適用可能性は負荷依存である。",
-    "key_results": [
-      {"metric": "70B主評価の3.5秒p99 SLO容量", "value": "176±11 QPS", "baseline": "Preble-style 76±11 QPS / Flat-LB 42±20 QPS", "condition": "Llama-3.3-70B fp8、30 TP2宛先、60 H100、top-K128、5組対応seed", "interpretation": "最強比較方式比2.3倍、キャッシュ無視負荷分散比4.2倍で、安定親和性と期待負荷配置を同時に計画する効果が最も明確な条件である。"},
-      {"metric": "70B主評価の提供済みKVヒット率", "value": "93.2±0.5%", "baseline": "Flat-LB 64.1±1.3% / Preble 72.0±0.7% / DualMap 88.7±1.9%", "condition": "主半合成分布、top-K128", "interpretation": "Flat-LB比29.1ポイントの再利用増加。ただしDualMapは近いヒット率でもp99が5.3秒なので、ヒット率だけでは容量改善を説明できない。"},
-      {"metric": "100 QPSでのp99遅延", "value": "1.8秒", "baseline": "Flat-LB 5.7秒、Sticky 8.5秒、CHWBL 3.8秒、DualMap 5.3秒、Preble 3.8秒", "condition": "70B fp8主分布、3.5秒SLO", "interpretation": "高局所性だけの方式と負荷均衡寄り方式の双方より尾部を抑え、親和性と待ち行列均衡の両立を示す。"},
-      {"metric": "広い活性集合top-K256の確認", "value": "80 QPS", "baseline": "DualMap 60 QPS", "condition": "70B fp8主分布、3.5秒p99 SLO、8組seed", "interpretation": "主headlineより倍率は1.33倍へ縮み、効果量が活性集合と温存容量の関係に依存することを示す。"},
-      {"metric": "第2分布top-K256のSLO容量", "value": "160 QPS", "baseline": "最良比較方式100 QPS", "condition": "70B fp8、独立半合成分布、3組seed、3.5秒p99 SLO", "interpretation": "top-K128では複数方式が100 QPSで同率だが、活性集合が温存割当を超えると1.6倍の差が現れる。"},
-      {"metric": "合成ホエールの構成除去", "value": "容量240→500 QPS測定上限、負荷偏り3.46倍→1.24倍", "baseline": "親和性のみ → 親和性+複製+LPT", "condition": "8B、top-K128、3組seed", "interpretation": "親和性だけではKVヒット56%→88%でも容量は240 QPSのまま。LPTで偏りを抑えて初めて容量が測定上限へ達する。"},
-      {"metric": "32B集約Aの負領域", "value": "Flat-LB比0.50～0.67倍", "baseline": "Flat-LB", "condition": "半合成集約A、KVヒット1.1%→11.8%", "interpretation": "回収できるKV計算が小さいと、ヒット率上昇より残留負荷偏りが勝ち、親和性が容量を悪化させる。"},
-      {"metric": "再計画の温存費用", "value": "新表導入直後にKVヒット13.6ポイント低下", "baseline": "既存温存状態", "condition": "6制御区間の率ベクトルをlognormal random walkで変動", "interpretation": "新鮮な表への切替自体がキャッシュ再温存費用を持つため、古い表の劣化がこの費用を上回るまで配置を保つ必要がある。"}
-    ],
-    "negative_results": "32B集約Aでは親和性でKVヒットが1.1%から11.8%へ増えてもSLO容量はFlat-LBの0.50～0.67倍まで低下し、集約Bでは0.8%から8.5%へ増えても5秒SLO容量は同率だった。第2分布top-K128ではCacheRoute、CHWBL、DualMapが100 QPSで同率。8Bの複数条件は500 QPS測定上限へ達して右打ち切りである。解析的キャッシュ常駐モデルは実測ヒット率を中央値14.3ポイント、p90で44.7ポイント外し、運用判断には使えなかった。",
-    "interpretation": "CacheRouteの本質は『キャッシュヒットを最大化するルータ』ではなく、回収可能なプリフィル計算と、そのために残る負荷偏りを一定制御区間の全体計画として交換することにある。高再利用領域では固定表が局所性を守り、LPT配置がホットスポットを抑えるため大きなSLO容量向上になるが、再利用価値が小さい領域では通常負荷分散より悪化する。したがってシャドー再生で実測境界を取る手順が方式の一部になる。",
-    "quality_impact": "モデル実行内容や数値表現を変えず、要求の宛先だけを変えるため生成品質の近似は導入しない。影響対象はプリフィル再計算量、待ち行列、KV常駐状態、尾部遅延、失敗率である。"
-  },
-  "reservation": {"claim_id": "claim-bb3ec0465085989a9a744808", "worker_id": "manual-read-20260916-1109", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-4690bc7b8f70a0ac90350ba3",
+  "job_id": "job-research-1d922bbcf8bbfed4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4690bc7b8f70a0ac90350ba3",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
