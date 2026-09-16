@@ -187,6 +187,33 @@ class DiscoverySearchFilterTest(unittest.TestCase):
         self.assertTrue(result["provider_exhausted"])
         self.assertIsNone(result["next_cursor"])
 
+    def test_collector_defaults_to_ten_unseen_results(self) -> None:
+        calls: list[str | None] = []
+
+        def fetch_page(cursor: str | None) -> dict[str, object]:
+            calls.append(cursor)
+            page_number = 1 if cursor is None else int(cursor)
+            start = (page_number - 1) * 5 + 1
+            records = [
+                {"arxiv_id": f"2609.{92000 + i:05d}", "title": f"New {i}"}
+                for i in range(start, start + 5)
+            ]
+            return {
+                "records": records,
+                "next_cursor": str(page_number + 1),
+            }
+
+        result = discovery_search_filter.collect_until_unseen(
+            fetch_page,
+            snapshot_dir=self.snapshot,
+        )
+
+        self.assertEqual(calls, [None, "2"])
+        self.assertEqual(result["target_unseen"], 10)
+        self.assertEqual(result["unseen_result_count"], 10)
+        self.assertTrue(result["target_reached"])
+        self.assertEqual(result["next_cursor"], "3")
+
 
 if __name__ == "__main__":
     unittest.main()
