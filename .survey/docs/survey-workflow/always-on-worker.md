@@ -13,7 +13,7 @@
 - run deadlineまで **600秒以下** なら、新しい独立作業を開始せず、現在までの成果を耐久保存し、新しいclaimを発行せず、安全な継続情報だけを残してrunを終了する。
 - run deadlineまで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など、孤立状態を残さないための最低限の終了処理だけを行う。
 - 予定`:30`が近い、または既に通過していること自体は、run-local deadlineがまだ十分先なら停止理由にしない。これにより早起動・遅延起動のどちらでも概ね1時間の処理枠を使える。
-- 600秒の引き継ぎガードは、high-backlog時の最低3件目標、通常のwork-conserving継続、`CONTINUE`既定値より優先する。ガード内に入ったことを理由に新しい3件目・次job・次探索軸を開始してはならない。
+- 600秒の引き継ぎガードは、通常のwork-conserving継続と`CONTINUE`既定値より優先する。ガード内に入ったら新しい次job・次探索軸を開始してはならない。
 - すでに処理中で未保存のjobを乱暴に中断して成果を失うことはしない。まず現在の論理成果をGitHubまたはChatGPT Libraryへ耐久保存できる安全地点まで進め、その後は次の独立作業を開始しない。
 - `continuation_gate.py` を使う場合は、実開始時に確定したrun deadlineまでの秒数を `--seconds-to-run-deadline` へ渡す。既定の `--scheduled-handoff-guard-seconds` は600秒とする。`--seconds-to-next-scheduled-task` はrun deadlineを確定できない古いcaller向けのcompatibility fallbackに限る。
 
@@ -76,9 +76,9 @@ GitHub Actionsはclaim、immutable submission、backgroundの3レーンに分離
 8. discovery各ラウンド、blocked化、checkpoint後にもqueue/backlog/discovery stateを再取得する。
 9. 次の独立作業を始める前に§0の引き継ぎガードを評価する。ガード外で次の独立作業があれば1へ戻る。ガード内なら耐久保存と終了処理を行って終了する。
 
-high-backlog research-only modeでは、一次資料取得と耐久保存経路が利用可能でactionable researchが十分ある限り、**1通常runにつき最低3件の異なるresearch jobを完全payloadとして送信または耐久checkpointすることを下限目標**とする。3件はrun終了条件でも上限でもない。§0の引き継ぎガードが成立した場合は、3件未満でもガードを優先して終了する。
+Research/Auditの処理件数には、最低件数・目標件数・固定batch数・run当たり上限を設けない。high-backlog research-only modeを含め、一次資料取得と耐久保存経路が利用可能でactionable Research/Auditが残っており、§0の引き継ぎガード外である限り、完了件数に関係なく次jobへ進み、**そのrunで安全に処理できるだけ処理する**。何件完了したかは観測値であり、継続・終了判定には使わない。
 
-「readyが空」「候補0」「1本完了」「3本完了」「1探索ラウンド完了」「discoveryで5本送信」「固定bankが埋まった」「fallback backlogがある」「Actions terminal反映待ち」「`next_jobs`表示枠を処理し切った」は終了理由ではない。
+「readyが空」「候補0」「任意件数のResearch/Audit完了」「1探索ラウンド完了」「discoveryで5本送信」「固定bankが埋まった」「fallback backlogがある」「Actions terminal反映待ち」「`next_jobs`表示枠を処理し切った」は終了理由ではない。
 
 ## 6. 通常runを終了してよい条件
 
