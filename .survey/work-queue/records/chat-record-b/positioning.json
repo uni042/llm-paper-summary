@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-d97ee4e96b13d333e721d48c",
   "job_id": "job-research-98e8633cce3c47f1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d97ee4e96b13d333e721d48c",
-    "worker_id": "scheduled-chat-normal-20260917T063000",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はH800クラスタと360B〜397B級MoE、SWE-Bench/BrowseCompの記録済み閉ループ軌跡へ限定される。密モデルや小型モデル、他GPU世代、実運用の非決定論的到着、PP3以上は未実測である。最適なプリフィル・デコード協調間隔はワークロード依存だが、現実装は固定Iを用い、オンライン適応は将来課題である。PD分離比較は現行MoonCake系実装が毎ターン全KVを転送するため高負荷セルで失敗しており、増分KV転送や高性能な閉源PD基盤との公平な将来比較が必要と著者自身が述べる。PPも短文脈・単一ノードで常に有利ではない。",
+    "differences": "vLLMやSGLangの一般的な対話サービングはTTFT/TPOTや有効スループットを重視するのに対し、PipeSwiftはエージェントのoverall/turn JCTを目的関数に置く。Sarathi-Serveなどの分割プリフィルは厳しい逐次生成SLOを守るため干渉を制御するが、PipeSwiftはSLO違反を許してでもプリフィルを波として遅延・集約できる。DistServe/SplitwiseなどのPD分離はプリフィルとデコードを別資源へ空間分離するのに対し、PipeSwiftは同居型PPで時間方向の協調を行う。AutellixやThunderAgentは推論エンジンの上位でエージェント呼び出しやワークフローを優先制御する一方、PipeSwiftはエンジン内部の並列化、マイクロバッチ、MTPを変更する。既存PP実装との差は、可変プリフィル分割、動的デコード再分割、MTP統合、SPMD分散スケジューラを一体化した点にある。",
+    "implementation_status": "64基H800で動作する研究用ランタイムを実装し、SGLang/vLLMと共通カーネルを用いた実機比較を報告する。論文はopen-source runtimeと明記するが、2026-09-17に確認したarXiv一次資料本文ではPipeSwift自身の公式コードURLを特定できなかった。",
+    "research_positioning": "エージェント向けLLM推論研究の中で、上位のワークフロー配置ではなくサービングエンジン内部の目的関数をJCTへ変更したとき、スケジューリングと並列方式の選択がどう変わるかを系統的に示す研究である。特に、広域エキスパート並列がデコードに強いという従来の評価軸から、短いプリフィルを効率良く処理するPPの通信特性へ注目を移した点が重要である。PPを単独で提案するのではなく、PPのプリフィル特性に合わせて協調間隔を変え、弱点のデコードをMTPで補うため、並列化とスケジューリングの共同設計として位置付く。将来、増分KV転送を備えたPD分離やオンライン適応型協調が成熟した際に、この優位性がどこまで残るかが主要な比較点になる。"
+  },
+  "reservation": {"claim_id": "claim-d97ee4e96b13d333e721d48c", "worker_id": "scheduled-chat-normal-20260917T063000", "worker_kind": "scheduled_chat"}
 }
