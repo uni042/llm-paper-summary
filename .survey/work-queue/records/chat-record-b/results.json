@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9c7bc1c5f144c062d60905d3",
-  "job_id": "job-research-98e8633cce3c47f1",
-  "data": {
-    "overview": "主要64 GPU比較ではPipeSwiftが完走した全セルで最小overall JCTとなり、SGLang広域EPに対して1.21〜1.45倍、同じPP2配置のvLLMに対して1.60〜2.33倍、128 GPUを使う2P2Dの完走セルに対して1.14〜1.54倍高速だった。GLM-4.7/BrowseCompの512タスク・80K条件ではPipeSwiftのwall timeは2243.9秒で、SGLang EP16+prefill-delayの3031.4秒、2P2Dの3004.7秒、vLLM PP2の3621.7秒を下回る。P99ターンJCTも10.12秒で、最良比較対象20.86秒の半分未満である。アブレーションではvLLM PP2 40.35分からJCT指向スケジューリングだけで30.73分、MTP追加で17.64分へ低下し、並列方式自体を同じ協調方針で比べてもPP2がEP16より1.24倍速い。",
-    "key_results": [
-      {
-        "metric": "overall JCT高速化",
-        "value": "1.21〜1.45倍",
-        "baseline": "SGLang EP16 wide-EP",
-        "condition": "GLM-4.7-360B/Qwen3.5-397B、SWE-Bench/BrowseComp、64 H800",
-        "interpretation": "JCT目的では低デコード遅延だけでなくプリフィル効率が重要で、PPの通信形態と協調スケジューリングが広域EPを上回る。"
-      },
-      {
-        "metric": "overall JCT高速化",
-        "value": "1.60〜2.33倍",
-        "baseline": "vLLM PP2",
-        "condition": "同じ二段PP配置、64 H800",
-        "interpretation": "PP配置だけでは不十分で、プリフィル波の形成・均衡化とパイプライン統合MTPが実効性能に必要である。"
-      },
-      {
-        "metric": "P99ターンJCT",
-        "value": "10.12秒",
-        "baseline": "SGLang 2P2D 20.86秒、SGLang EP16+prefill-delay 23.80秒",
-        "condition": "GLM-4.7 BrowseComp、512 tasks、80K MaxLen",
-        "interpretation": "全体完了時間だけでなく、個々のエージェントターンの末尾遅延も半分以下へ抑えた。"
-      },
-      {
-        "metric": "PPランタイム・アブレーション",
-        "value": "40.35→30.73→17.64分",
-        "baseline": "vLLM PP2→PipeSwift without MTP→PipeSwift",
-        "condition": "GLM-4.7 SWE-Bench、512 tasks、80K",
-        "interpretation": "JCT指向スケジューリング単独で1.31倍、その後MTP統合でさらに約1.74倍改善し、両機構が独立に寄与する。"
-      },
-      {
-        "metric": "同一協調方針での並列方式差",
-        "value": "1.24倍",
-        "baseline": "最適IのSGLang EP16",
-        "condition": "GLM-4.7 SWE-BenchのPP2対EP16",
-        "interpretation": "広域EP側にもPD協調を導入してもPPが速く、改善がスケジューラだけでなく並列方式のプリフィル通信特性に由来することを支持する。"
-      }
-    ],
-    "negative_results": "PPが常に最適とは主張していない。GLM-4.7は短い文脈では単一ノードEP8がパイプライン空きを避けて競争力を持つ。2P2Dは高同時実行・長文脈で全KVを毎ターン再転送する現行実装のため転送待ちが増え、複数条件でタイムアウト終了したので、その領域では完走比較が存在しない。また最適な協調間隔Iはワークロード依存で、固定I=32は各セルの最適値ではない。",
-    "interpretation": "エージェント要求は95%以上の接頭辞キャッシュ命中を持ち、新規プリフィルが短い。その短い処理を到着ごとに即時実行するとGPUを十分使えず、同時に多数のデコードを停止させる。まとめて実行するとプリフィル時間と停止回数が減る一方、まとめ過ぎると新規要求が待つため内部最適点が生じる。PPは広域EPよりプリフィル時のノード間通信が少ないためこの均衡点を有利にし、MTPで弱かったデコード側も補う。",
-    "quality_impact": "性能比較は同じ記録済み軌跡と出力トークン数を再生しており、近似による生成品質低下を対価にした高速化ではない。ただし実際の自由生成品質やエージェント成功率を方式間で再評価する実験ではなく、サービング機構の時間性能を隔離した評価である。"
-  },
+  "attempt_id": "attempt-fcacb6725660bc54758b38b8",
+  "job_id": "job-research-af7d4aee1c99dd28",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-9c7bc1c5f144c062d60905d3",
-    "worker_id": "scheduled-chat-normal-20260917T063000",
+    "claim_id": "claim-fcacb6725660bc54758b38b8",
+    "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }
 }
