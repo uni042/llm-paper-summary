@@ -154,8 +154,8 @@ def filter_search_batch(
     Papers already represented in the repository and papers durably rejected by prior
     candidate evaluation are both excluded. Exact token checks run first; the represented-
     paper resolver then catches alias/title variants, including only high-confidence ID-less
-    fuzzy title matches. ``continue_search`` is true only when the caller still needs more
-    unseen results and the current provider exposes another page/cursor.
+    fuzzy title matches. The same alias rules also collapse duplicate provider records within
+    one batch before they enter the candidate buffer.
     """
     if target_unseen < 0 or unseen_before_batch < 0:
         raise ValueError("target_unseen and unseen_before_batch must be non-negative")
@@ -174,7 +174,9 @@ def filter_search_batch(
     rejection_filtered_tokens: list[str] = []
     unresolved_identity_count = 0
     intra_batch_duplicate_filtered_count = 0
+    intra_batch_alias_duplicate_filtered_count = 0
     seen_batch_tokens: set[str] = set()
+    seen_batch_records: list[dict[str, Any]] = []
 
     for record in records:
         tokens = paper_identity.identity_tokens(record)
@@ -205,8 +207,15 @@ def filter_search_batch(
         if primary and primary in seen_batch_tokens:
             intra_batch_duplicate_filtered_count += 1
             continue
+        if seen_batch_records:
+            batch_resolver = paper_identity.build_represented_resolver(seen_batch_records)
+            if paper_identity.match_represented_paper(record, batch_resolver):
+                intra_batch_duplicate_filtered_count += 1
+                intra_batch_alias_duplicate_filtered_count += 1
+                continue
         if primary:
             seen_batch_tokens.add(primary)
+        seen_batch_records.append(record)
         unseen.append(record)
 
     unseen_accumulated_count = unseen_before_batch + len(unseen)
@@ -222,6 +231,7 @@ def filter_search_batch(
         "rejection_ledger_filtered_count": len(rejection_filtered_tokens),
         "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
+        "intra_batch_alias_duplicate_filtered_count": intra_batch_alias_duplicate_filtered_count,
         "unresolved_identity_count": unresolved_identity_count,
         "unseen_result_count": len(unseen),
         "unseen_accumulated_count": unseen_accumulated_count,
@@ -260,6 +270,7 @@ def collect_until_unseen(
     cursor = initial_cursor
     seen_cursors: set[str] = set()
     seen_primary_identities: set[str] = set()
+    seen_result_records: list[dict[str, Any]] = []
     results: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
     represented_paper_keys: list[str] = []
@@ -270,7 +281,9 @@ def collect_until_unseen(
     represented_paper_match_filtered_count = 0
     rejection_ledger_filtered_count = 0
     intra_batch_duplicate_filtered_count = 0
+    intra_batch_alias_duplicate_filtered_count = 0
     cross_page_duplicate_filtered_count = 0
+    cross_page_alias_duplicate_filtered_count = 0
     unresolved_identity_count = 0
     pages_fetched = 0
     next_cursor: str | None = cursor
@@ -307,6 +320,7 @@ def collect_until_unseen(
         rejection_ledger_filtered_count += filtered["rejection_ledger_filtered_count"]
         rejection_filtered_tokens.extend(filtered["rejection_ledger_filtered_tokens"])
         intra_batch_duplicate_filtered_count += filtered["intra_batch_duplicate_filtered_count"]
+        intra_batch_alias_duplicate_filtered_count += filtered["intra_batch_alias_duplicate_filtered_count"]
         unresolved_identity_count += filtered["unresolved_identity_count"]
 
         for record in filtered["results"]:
@@ -314,8 +328,15 @@ def collect_until_unseen(
             if primary and primary in seen_primary_identities:
                 cross_page_duplicate_filtered_count += 1
                 continue
+            if seen_result_records:
+                run_resolver = paper_identity.build_represented_resolver(seen_result_records)
+                if paper_identity.match_represented_paper(record, run_resolver):
+                    cross_page_duplicate_filtered_count += 1
+                    cross_page_alias_duplicate_filtered_count += 1
+                    continue
             if primary:
                 seen_primary_identities.add(primary)
+            seen_result_records.append(record)
             results.append(record)
 
         next_cursor = next_value
@@ -347,7 +368,9 @@ def collect_until_unseen(
         "rejection_ledger_filtered_count": rejection_ledger_filtered_count,
         "rejection_ledger_filtered_tokens": rejection_filtered_tokens,
         "intra_batch_duplicate_filtered_count": intra_batch_duplicate_filtered_count,
+        "intra_batch_alias_duplicate_filtered_count": intra_batch_alias_duplicate_filtered_count,
         "cross_page_duplicate_filtered_count": cross_page_duplicate_filtered_count,
+        "cross_page_alias_duplicate_filtered_count": cross_page_alias_duplicate_filtered_count,
         "unresolved_identity_count": unresolved_identity_count,
         "unseen_result_count": len(results),
     }
