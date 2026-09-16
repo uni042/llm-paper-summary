@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-70fa0f4c73f3250b6efbb2f6",
-  "job_id": "job-research-2d9b8557211e7f73",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-70fa0f4c73f3250b6efbb2f6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-70fa0f4c73f3250b6efbb2f6","job_id":"job-research-2d9b8557211e7f73","data":{"hardware":"実GGUF評価はHP EliteBook 850 G4、Intel Core i5-7300U 2.60GHz 2コア4スレッド、24GB DDR4-2133デュアルチャネル。","software":"Python 3.12、llama-cpp-python/GGML。既定はQwen3.5-2B UD-Q4_K_XL対象モデル、Qwen3.5-0.8B Q4_0ドラフト、n_ctx=4096。","methodology":"高忠実度統計シミュレーションと実GGUFの二バックエンドで、コード・推論・創作の三作業を各条件3回評価する。TPS、投機効率、無駄ドラフト計算率、ITL平均・P95/P99、ITL変動係数、KVヒット率、圧縮率、方策後悔を測る。GGUFの方式間速度比較では各方式15回とWelch t検定も追加する。監視制御単体は5000段階のマイクロベンチマークで測る。","scope":"主GGUF結果は2017年世代の単一デュアルコアCPUと一組の対象・ドラフトモデルに限定される。主要多作業結果は3反復で信頼区間を持たず、CPUモデル等の一部ログ不足により論文内の正確な速度値を完全再現できない。単一同時要求のみで、多利用者競合は未評価。"},"reservation":{"claim_id":"claim-70fa0f4c73f3250b6efbb2f6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
