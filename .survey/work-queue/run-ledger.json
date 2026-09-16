@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:03:48.616375+00:00",
+  "updated_at": "2026-09-16T03:05:50.777258+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:03:48.616375+00:00",
+      "last_recorded_at": "2026-09-16T03:05:50.777258+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 100,
         "audit_completed": 0,
         "discovery_completed": 27,
-        "blocked": 1,
+        "blocked": 2,
         "new_jobs": 40,
         "new_papers": 93,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34905120191:1",
-          "recorded_at": "2026-09-14T22:41:36.019229+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34905120191",
-            "run_attempt": "1",
-            "source_sha": "b1a7e65ad5dc793fdd37cf3429accccaac00d27d"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34905238438:1",
           "recorded_at": "2026-09-14T22:44:55.015484+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35050483128:1",
+          "recorded_at": "2026-09-16T03:05:50.777258+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35050483128",
+            "run_attempt": "1",
+            "source_sha": "e2cbb890b4574dcf0b73fd7ac2474e84833b28a5"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -20625,6 +20625,14 @@
           "title": "Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-6ca0cd6980218f8e",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15338",
+          "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -21213,7 +21221,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 553,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
