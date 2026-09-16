@@ -1,51 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T16:02:43+00:00",
-  "last_run_key": "2026-09-17T00:00:00+09:00",
-  "last_round": "specialist-network-scheduling-6",
+  "updated_at": "2026-09-16T17:02:55+00:00",
+  "last_run_key": "2026-09-17T02:00:00+09:00",
+  "last_round": "specialist-cxl-ssd-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 10,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 12,
+  "last_empty_round_reason": "検索で得た強いsystem候補は最新identity snapshotで既収録だった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-11T02:30:00+09:00",
-      "round": "mixed-format-retention-kv-3",
-      "axis": "保持型混在精度KV・PagedAttention",
-      "query_summary": "ライブKVページを削除せず精度階層だけを変え、混在形式を直接注意計算へ使う研究を探索し、未収録のMinima-KVを採用した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arxiv:2608.23834"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"
-    },
-    {
-      "run_key": "2026-09-11T02:30:00+09:00",
-      "round": "model-transfer-kv-4",
-      "axis": "分離サービングKV転送・モデル間KV再利用",
-      "query_summary": "サービス状態に応じたKV圧縮、選択的KV転送、モデル間KV写像、移動環境でのKV移行を探索して4候補を送信した。queue正規化後は2608.03893のみ新規researchとして残り、他3候補は正本側で重複抑止された。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [
-        "arxiv:2608.03893"
-      ],
-      "duplicate_canonical_ids": [
-        "arxiv:2605.13734",
-        "arxiv:2607.28150",
-        "arxiv:2608.16477"
-      ],
-      "next_axis_hint": "モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"
-    },
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "round": "expert-w4-hybrid-memory-1",
@@ -6525,6 +6489,60 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はGPU fabric/NVLink/PCIe topology-aware placement、collective scheduling、remote KV admissionへ展開する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-offload-specdecode-1",
+      "axis": "CPU-GPUオフロード・投機的デコード・階層メモリ",
+      "query_summary": "2026年9月新着のKV/MoE/serving、2026年8〜5月のKV・オフロード・スケジューリングを複数検索窓で走査し、取得直後にDiscovery identity snapshotで既収録を除外した。MetaKV、KVShareArena、CacheScout、MFS、CrossPool、SwiftCache、ATSInfer、MoE Serving、Flying Serving、ZipServ等は既収録。未収録でシステム評価と公開実装が強いSpecOffloadを採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.07966",
+        "arXiv:2609.10266",
+        "arXiv:2608.14624",
+        "arXiv:2603.17456",
+        "arXiv:2606.24506",
+        "arXiv:2606.16135",
+        "arXiv:2607.10183",
+        "arXiv:2607.17880",
+        "arXiv:2602.22593",
+        "arXiv:2603.17435",
+        "arXiv:2607.16892",
+        "arXiv:2606.24467"
+      ],
+      "next_axis_hint": "未収録率が低い直近月の一般KV軸を反復せず、2025年の重要なオフロード/SSD/NVMe系 omission と収録済み重要論文のforward citationを優先する",
+      "source_submission": "work-queue/submissions/20260917T0205JST-discovery-specialist-offload-specdecode-1.json"
+    },
+    {
+      "run_key": "2026-09-17T02:00:00+09:00",
+      "round": "specialist-cxl-ssd-2",
+      "axis": "CXL階層メモリ・SSD/NVMe・MoE expert offload",
+      "query_summary": "CXL KV-cache、SSD/NVMe expert offload、階層メモリを2025年中心に検索窓をずらして探索した。fMoE、SSD Offloading energy study、CXL-PNM、Beluga等の強い結果は取得時identity照合ですべて既収録だったためcandidate評価へ再投入しなかった。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2502.05370",
+        "arXiv:2508.06978",
+        "arXiv:2511.00321",
+        "arXiv:2511.20172"
+      ],
+      "next_axis_hint": "2024〜2025の重要なCPU-GPU協調・offload omissionと、収録済みoffload論文のforward citationへ移る",
+      "source_submission": "work-queue/submissions/20260917T0208JST-discovery-specialist-cxl-ssd-2.json"
     }
   ],
   "axes": {
@@ -10445,6 +10463,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はGPU fabric/NVLink/PCIe topology-aware placement、collective scheduling、remote KV admissionへ展開する"
+    },
+    "CPU-GPUオフロード・投機的デコード・階層メモリ": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "未収録率が低い直近月の一般KV軸を反復せず、2025年の重要なオフロード/SSD/NVMe系 omission と収録済み重要論文のforward citationを優先する"
+    },
+    "CXL階層メモリ・SSD/NVMe・MoE expert offload": {
+      "last_run_key": "2026-09-17T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2024〜2025の重要なCPU-GPU協調・offload omissionと、収録済みoffload論文のforward citationへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
