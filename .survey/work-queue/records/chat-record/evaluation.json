@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-83b483046e34ec23467654d3",
-  "job_id": "job-research-aa4d7a102619f4b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-83b483046e34ec23467654d3",
-    "worker_id": "scheduled-chat-normal-20260917T013240",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-83b483046e34ec23467654d3","job_id":"job-research-aa4d7a102619f4b3","data":{"hardware":"単一NVIDIA H100 80GB GPU。Llama-3-8Bの実重み、128トークン入力で全32 Transformer層を逐次評価する。","software":"EasyFHE系GPU CKKS実装上のOdin。比較対象は同じモデル、入力、CKKSパラメータ、ハードウェアへ拡張したTHOR型配置。","methodology":"まずTHOR型Llama-3基準の単一層を演算別にプロファイルし、線形計算44.80秒が59.24秒の75.6%を占め、平文暗号文演算では重み符号化が主要費用であることを確認する。その後Odinの配置・符号化再利用・注意データ流を適用し、32層のサーバ側FHE実行時間とピークGPUメモリを測定する。非線形近似はWikiText-2とC4等で入力範囲を校正し、誤差注入によるモデル品質感度から演算別許容誤差を探索し、最終多項式で品質を再評価する。","scope":"脅威モデルはhonest-but-curiousサーバで、入力とプロンプト依存中間状態を保護する。モデル構造・重み、系列長、暗号パラメータ、実行時間は公開情報とし、悪意あるサーバ、サイドチャネル、DoS、アクセスパターン漏洩、モデル重み秘匿は対象外。報告時間はサーバ側FHE評価で、クライアントのトークン化・埋め込み・暗号化は除外する。"},"reservation":{"claim_id":"claim-83b483046e34ec23467654d3","worker_id":"scheduled-chat-normal-20260917T013240","worker_kind":"scheduled_chat"}}
