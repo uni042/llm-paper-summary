@@ -74,6 +74,48 @@ class DiscoveryStatsTest(unittest.TestCase):
             if original_state is not None:
                 queue_worker.DISCOVERY_STATE = original_state
 
+    def test_final_duplicate_filtering_is_recorded_separately(self) -> None:
+        original_state = getattr(queue_worker, "DISCOVERY_STATE", None)
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                queue_worker.DISCOVERY_STATE = Path(td) / "discovery-state.json"
+                sub = {
+                    "_file": "work-queue/submissions/final-dedupe.json",
+                    "candidates": [
+                        {"canonical_id": "arXiv:2609.00001"},
+                        {"canonical_id": "arXiv:2609.00002"},
+                        {"canonical_id": "arXiv:2609.00003"},
+                    ],
+                    "discovery_stats": {
+                        "run_key": "2026-09-16T20:00:00+09:00",
+                        "round": "final-dedupe-visibility",
+                        "axis": "identity-dedup-regression",
+                        "candidate_count": 5,
+                        "duplicate_filtered_count": 2,
+                    },
+                }
+
+                self.assertTrue(
+                    queue_worker.record_discovery_stats(
+                        sub,
+                        accepted_count=1,
+                        final_duplicate_filtered_count=2,
+                    )
+                )
+                state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
+                row = state["history"][-1]
+                self.assertEqual(row["duplicate_filtered_count"], 2)
+                self.assertEqual(row["novel_candidate_count"], 3)
+                self.assertEqual(row["final_duplicate_filtered_count"], 2)
+                self.assertEqual(row["post_final_dedupe_count"], 1)
+                self.assertEqual(row["accepted_count"], 1)
+                self.assertAlmostEqual(row["final_duplicate_ratio"], 2 / 3)
+                axis = state["axes"]["identity-dedup-regression"]
+                self.assertEqual(axis["final_duplicate_filtered_count"], 2)
+        finally:
+            if original_state is not None:
+                queue_worker.DISCOVERY_STATE = original_state
+
     def test_stats_repair_submission_does_not_require_live_discovery_job(self) -> None:
         originals = {
             name: getattr(queue_worker, name)

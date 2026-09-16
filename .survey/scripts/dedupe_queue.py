@@ -9,15 +9,14 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import unquote, urlparse
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+import paper_identity  # noqa: E402
 import survey  # noqa: E402
 
 
@@ -40,50 +39,15 @@ def write_json(path: Path, obj: Any) -> bool:
 
 
 def norm_title(value: Any) -> str | None:
-    if not value:
-        return None
-    text = re.sub(r"\s+", " ", str(value)).strip().casefold()
-    text = re.sub(r"[^\w\s]", "", text)
-    return text or None
+    return paper_identity.norm_title(value)
 
 
 def safe_norm_id(value: Any) -> str | None:
-    if not value:
-        return None
-    text = str(value).strip()
-    try:
-        return survey.norm_id(text)
-    except Exception:
-        return text
+    return paper_identity.safe_norm_id(value)
 
 
 def ids_from_url(value: Any) -> set[str]:
-    if not value:
-        return set()
-    raw = str(value).strip()
-    out: set[str] = set()
-    try:
-        parsed = urlparse(raw)
-    except Exception:
-        return out
-    host = parsed.netloc.casefold()
-    path = unquote(parsed.path)
-    if host.endswith("arxiv.org"):
-        m = re.search(r"/(?:abs|html|pdf)/([^/?#]+)", path, re.I)
-        if m:
-            ident = m.group(1).removesuffix(".pdf")
-            try:
-                out.add(survey.norm_id("arXiv:" + ident))
-            except Exception:
-                pass
-    if host in {"doi.org", "www.doi.org"}:
-        body = path.lstrip("/")
-        if body:
-            try:
-                out.add(survey.norm_id("DOI:" + body))
-            except Exception:
-                pass
-    return out
+    return paper_identity.ids_from_url(value)
 
 
 def add_record(
@@ -157,12 +121,7 @@ def build_identity(root: Path):
 
 
 def duplicate_hit(job: dict, by_id, by_title):
-    ids: set[str] = set()
-    cid = safe_norm_id(job.get("canonical_id"))
-    if cid:
-        ids.add(cid)
-    ids.update(ids_from_url(job.get("source_url")))
-    for ident in ids:
+    for ident in paper_identity.record_identifiers(job):
         if ident in by_id:
             return by_id[ident], "identifier", ident
     title = norm_title(job.get("title"))
