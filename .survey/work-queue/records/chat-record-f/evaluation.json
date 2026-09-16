@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-4b8bce4b45d182be8c34ac58",
   "job_id": "job-research-08ba7261bc105f34",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b8bce4b45d182be8c34ac58",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価はNVIDIA GH200 Grace Hopper 1基で、96GB HBM、480GB CPUメモリ、実測高帯域メモリ帯域3330GiB/s、CPU-GPU間帯域350GiB/s、帯域比約10%。帯域比の感度評価では80GB H100を2基NVLink接続し、一方を計算、他方を二次メモリとして用いて約12%の比率を模擬した。",
+    "software": "vLLM 0.17.0へ約800行のPython/PyTorch変更を追加。高帯域メモリとCPUメモリの配置にはLinuxのmmap・mbind、GPU可視化にはcudaHostRegisterを利用する。FlashAttention-3や閉源のcuBLASを含む既存カーネルを変更せず評価している。",
+    "methodology": "主対象はQwen3-Next-80BのMoEモデルとLlama-3.3-70Bの密モデルで、主にFP8を使用する。入力/出力長は密モデルで256/2K、512/4K、1K/8K、MoEで64/512、128/1K、256/2K。プリフィルと復号を分離する構成を前提とし、低遅延評価では最大実行可能バッチを固定して出力トークン時間を測り、高スループット評価では利用可能容量までバッチを自動拡大して毎秒トークン数を測る。比較対象は高帯域メモリのみ、vLLMの非同期先読み、ランダム帯域比例配置、Linux重み付き交互配置、比例連続配置、CUDA統合メモリ。さらに長文脈、バッチサイズ、末尾遅延、帯域比、テンソル並列2で感度を調べる。",
+    "scope": "実機での主張は主としてGH200単一GPUの復号処理に基づく。二次階層へコヒーレントなロード・ストアが可能な高帯域接続を前提とし、PCIeやCXLのように帯域比が約2%の構成では利得は小さいと論文自身が述べる。将来の帯域比最大40%の予測は解析モデルによる投影であり実機測定ではない。大バッチ密モデルや小バッチMoEでは利得が消える、または負になる境界も評価している。"
+  },
+  "reservation": {"claim_id":"claim-4b8bce4b45d182be8c34ac58","worker_id":"scheduled-chat-hourly-survey-20260916T145717JST","worker_kind":"scheduled_chat"}
 }
