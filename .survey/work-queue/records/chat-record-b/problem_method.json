@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
-  "job_id": "job-research-0d9ff237f1d632e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"problem":"PD-disaggregationではP-instanceがproducer、D-instanceがconsumerとなるため、workloadに対してP/D比がずれると片側GPUがidleまたはqueueが飽和する。request lengthの分散とburstにより最適比は時間変化し、平均長だけで固定するとmixed-length trafficで局所的なresource mismatchが生じる。","novelty":"GPU memory/bandwidth、model size、TP、TTFT/TPOT profile、予測concurrency/ISL/OSLから最適P/D比を計算し、ARIMAの短期予測でP/D instance数をproactiveにscaleする。さらにlength-aware prefill batchingとultra-short requestのD-instance内prefillで短期mismatchとKV transfer overheadを抑える。","method_overview":"Resource Monitorがqueue depth、KV occupancy、TTFT/TPOT、ISL/OSL等をPrometheusへ収集。事前profileでP/D instanceのTTFT/TPOT面を作り、ARIMAが次epochの平均ISL/OSL/request countを予測する。D-instance concurrency capから必要D数を求め、producer-consumer balance式から最適P/D比とP数を算出してPD Managerがzero-downtimeでresizeする。overload時はscheduled intervalを待たずqueue/KV thresholdで緊急scaleする。Request Schedulerはlong requestを即時prefill、short requestをlength budget内でbatchし、ultra-shortはD側でprefillしてKV transferを省く。","system_design":"Dynamo拡張のResource Monitor、prefix-aware Router、NIXL Connector、PD Manager、length-aware Request Schedulerの5要素。","components":[{"name":"Optimal P/D Ratio Model","description":"P/D production-consumption能力とD concurrencyを基にGPU数を最小化しつつSLO/goodputを満たす比率を計算。"},{"name":"ARIMA Proactive Scaling","description":"ISL/OSL/request countを一歩先予測しprofile interpolationと組み合わせて数百秒単位で事前resize。"},{"name":"Length-aware Scheduler","description":"short requestをtoken budgetとtimeoutでbatchし、long requestは即時処理、ultra-shortはD側aggregationへ送る。"},{"name":"KV-aware Routing/Connector","description":"prefix hitとloadを使ってDへrouteし、NIXLでP→D KV transferを行う。"}]},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
