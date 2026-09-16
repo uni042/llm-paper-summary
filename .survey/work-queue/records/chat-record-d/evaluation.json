@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a44b0ffe0704ee8ed2dc775d",
-  "job_id": "job-research-3bb1145babb1a6fc",
-  "data": {
-    "evaluation_summary": "1ノード当たりNVIDIA A100を4基NVLink接続した実機を1から3ノード使用し、密モデル3種と専門家混合モデル5種を評価する。HellaSwagとGSM8Kから現実的な長さの要求を作り、ポアソン到着で変動するサービング負荷を模擬する。固定400W・最大バッチ、バッチだけを適応、電力上限だけを適応、両方を共同制御するPALS、全構成を事前全探索する理想比較を同じvLLM上で比較する。",
-    "scope": "主評価はA100実機上の単一ノードと3ノード構成であり、シミュレーションだけの結果ではない。定常負荷だけでなく60分の変動負荷と電力需要応答を含む。一方、評価GPUはA100中心なので、H100など別世代GPUの電力・周波数特性や別ネットワークへ数値を直接一般化するには追加検証が必要である。",
-    "hardware": [
-      "1ノード当たりNVIDIA A100を4基",
-      "ノード内NVLink接続",
-      "最大3ノード",
-      "3ノード試験ではクラスタ全体4800Wの電力予算"
-    ],
-    "models": [
-      "GPT-2",
-      "Llama-2-7B",
-      "Mistral-7B",
-      "OLMoE-1B-7B",
-      "Qwen1.5-MoE",
-      "DeepSeek-MoE",
-      "Phi-3.5-MoE",
-      "Mixtral-8x7B"
-    ],
-    "datasets": [
-      "HellaSwag",
-      "GSM8K"
-    ],
-    "workload": "到着率と系列長を変えられる要求列を用い、ポアソン到着で突発性を持たせる。複数ノードのサービス品質試験と電力需要応答試験は60分実行する。",
-    "baselines": [
-      "固定400Wかつ最大バッチの基準方式",
-      "電力を固定して予測器でバッチだけを選ぶ方式",
-      "バッチを固定して電力上限だけを動かす方式",
-      "全候補を事前全探索する理想方式"
-    ],
-    "metrics": [
-      "トークン毎秒",
-      "サービス品質違反率",
-      "目標電力との追従誤差",
-      "ジュール当たりトークン数"
-    ],
-    "predictor_accuracy": "ランダムフォレストは保持した構成で処理量の平均絶対百分率誤差6.8%、電力4.5%。GPU電力合計からシステム電力を推定する線形モデルは決定係数約0.98、平均絶対誤差12–27W。",
-    "control_knobs": "実行中に変更するのはGPU電力上限とバッチ量。テンソル並列、専門家並列、データ並列はモデル再読み込みを伴うため配置時に選ぶ。"
-  },
+  "attempt_id": "attempt-8f3e73d0135825cd3d4406e2",
+  "job_id": "job-research-6802b144c10e4060",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a44b0ffe0704ee8ed2dc775d",
+    "claim_id": "claim-8f3e73d0135825cd3d4406e2",
     "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
     "worker_kind": "scheduled_chat"
   }
