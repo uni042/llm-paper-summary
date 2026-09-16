@@ -1,1 +1,41 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a2565d089349c3be98ca6b0e","job_id":"job-research-38c18cd4bb2728b9","data":{"overview":"提案する分離RoPE版GVAは、GQAがキーと値の2ストリームを保存するのに対し、グループ化値と小さな共有位置キーだけを残すため、評価構成で永続キャッシュスカラーを約45〜47%削減する。16次元位置チャネル版の5課題平均精度は44.35%でGQAの44.36%との差は0.01ポイントに留まり、MLAの43.88%も上回った。ただし論文が実証したのは表現容量と学習品質までで、メモリ読出し削減が実際のデコード速度向上へ結び付くかは専用カーネル評価待ちである。","key_results":[{"metric":"永続キャッシュスカラー数","value":"GQA比約45〜47%削減","baseline":"同じGとd_hを持つGQA","condition":"分離RoPE位置チャネルを持つGVA構成","interpretation":"内容キーの永続ストリームを除き、値G本と共有位置キー1本だけを保存するため。"},{"metric":"5課題平均ゼロショット精度","value":"44.35%","baseline":"GQA 44.36%、MLA 43.88%","condition":"350Mモデル、FineWeb-Edu 30Bトークン、位置幅16、3乱数種平均","interpretation":"GQAとの差0.01ポイントで、著者は乱数種変動内と位置付け、品質勝利ではなく小キャッシュで近い品質を主張する。"},{"metric":"最良GVA平均精度","value":"44.41%","baseline":"GQA 44.36%","condition":"尺度整合初期化＋クエリRMSNorm、分離RoPEなし","interpretation":"キー再構成自体はGQA級品質を維持可能だが、この変種は推論時写像吸収を可能にする提案サービング構成とは異なる。"}],"negative_results":"単純にK=Vとして同じベクトルへスコア計算と値取得の両役割を負わせる方式はキャッシュを半減できるが、学習損失がGQAへ回復しなかった。また標準初期化のGVAは再構成キーの尺度が小さく初期学習で悪化した。分離RoPE版も平均精度でGQAを上回っておらず、推論速度は未報告である。","interpretation":"容量削減と品質維持の両立には、単なるキー削除ではなくヘッド別線形写像によるキー多様性の復元と、位置情報を小さな別チャネルへ逃がすことが必要だった。初期尺度を合わせることも学習安定性に重要である。","quality_impact":"提案16次元位置版はGQAとの差0.01ポイントでほぼ同等だが、完全な無損失変換ではなく別アーキテクチャとして再学習するため、課題別精度には小さな増減がある。"},"reservation":{"claim_id":"claim-a2565d089349c3be98ca6b0e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d6929dca26947ce1b79ba676",
+  "job_id": "job-research-38c18cd4bb2728b9",
+  "data": {
+    "overview": "提案する分離RoPE版GVAは、GQAがキーと値の2ストリームを保存するのに対し、グループ化値と小さな共有位置キーだけを残すため、評価構成で永続キャッシュスカラーを約45〜47%削減する。16次元位置チャネル版の5課題平均精度は44.35%でGQAの44.36%との差は0.01ポイントに留まり、MLAの43.88%も上回った。ただし論文が実証したのは表現容量と学習品質までで、メモリ読出し削減が実際のデコード速度向上へ結び付くかは専用カーネル評価待ちである。",
+    "key_results": [
+      {
+        "metric": "永続キャッシュスカラー数",
+        "value": "GQA比約45〜47%削減",
+        "baseline": "同じGとd_hを持つGQA",
+        "condition": "分離RoPE位置チャネルを持つGVA構成",
+        "interpretation": "内容キーの永続ストリームを除き、値G本と共有位置キー1本だけを保存するため。"
+      },
+      {
+        "metric": "5課題平均ゼロショット精度",
+        "value": "44.35%",
+        "baseline": "GQA 44.36%、MLA 43.88%",
+        "condition": "350Mモデル、FineWeb-Edu 30Bトークン、位置幅16、3乱数種平均",
+        "interpretation": "GQAとの差0.01ポイントで、著者は乱数種変動内と位置付け、品質勝利ではなく小キャッシュで近い品質を主張する。"
+      },
+      {
+        "metric": "最良GVA平均精度",
+        "value": "44.41%",
+        "baseline": "GQA 44.36%",
+        "condition": "尺度整合初期化＋クエリRMSNorm、分離RoPEなし",
+        "interpretation": "キー再構成自体はGQA級品質を維持可能だが、この変種は推論時写像吸収を可能にする提案サービング構成とは異なる。"
+      }
+    ],
+    "negative_results": "単純にK=Vとして同じベクトルへスコア計算と値取得の両役割を負わせる方式はキャッシュを半減できるが、学習損失がGQAへ回復しなかった。また標準初期化のGVAは再構成キーの尺度が小さく初期学習で悪化した。分離RoPE版も平均精度でGQAを上回っておらず、推論速度は未報告である。",
+    "interpretation": "容量削減と品質維持の両立には、単なるキー削除ではなくヘッド別線形写像によるキー多様性の復元と、位置情報を小さな別チャネルへ逃がすことが必要だった。初期尺度を合わせることも学習安定性に重要である。",
+    "quality_impact": "提案16次元位置版はGQAとの差0.01ポイントでほぼ同等だが、完全な無損失変換ではなく別アーキテクチャとして再学習するため、課題別精度には小さな増減がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-d6929dca26947ce1b79ba676",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
