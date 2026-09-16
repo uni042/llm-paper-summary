@@ -127,6 +127,40 @@ def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | N
     return run_key, round_id
 
 
+def _terminally_rejected_submission_paths(
+    repo_root: Path,
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+) -> set[Path]:
+    """Return submissions whose exact attempt has a durable terminal rejection.
+
+    These immutable submissions remain useful failure history. They are not a
+    current queue-consistency anomaly once the processor has durably rejected
+    the exact attempt as non-retryable content validation.
+    """
+    rejected: set[Path] = set()
+    for result in results:
+        payload = result["payload"]
+        if payload.get("ok") is not False:
+            continue
+        if payload.get("retryable") is not False:
+            continue
+        if str(payload.get("failure_class") or "").strip() != "content_validation":
+            continue
+
+        submission = evidence._submission_for_result(repo_root, result, submissions)
+        if submission is None:
+            continue
+        result_attempt = str(payload.get("attempt_id") or "").strip()
+        submission_attempt = str(submission["payload"].get("attempt_id") or "").strip()
+        if not result_attempt or result_attempt != submission_attempt:
+            continue
+        if result["job_id"] != submission["job_id"]:
+            continue
+        rejected.add(submission["path"])
+    return rejected
+
+
 def _direct_evidence_metrics(
     repo_root: Path,
     *,
@@ -219,10 +253,16 @@ def _direct_evidence_metrics(
         if declared_paper is None or not declared_paper.is_file():
             completed_research_missing_paper_paths.add(job["path"])
 
+    terminally_rejected_submission_paths = _terminally_rejected_submission_paths(
+        repo_root,
+        submissions,
+        results,
+    )
     orphan_submission_paths = {
         row["path"]
         for row in submissions
         if (not row["job_id"] or row["job_id"] not in jobs)
+        and row["path"] not in terminally_rejected_submission_paths
         and not (
             row["kind"] == "discovery"
             and _discovery_round_identity(row) is not None
@@ -367,7 +407,7 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
         "",
         "### 整合性異常",
         "",
-        "直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
+        "直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
         "",
         "| 検出項目 | 件数 |",
         "|---|---:|",
@@ -793,7 +833,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **論文実体数**: `papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README/comparison系/Movedスタブを除外します。",
         "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちや失敗済みを含み得るため整合性異常とは分離します。",
         "- **completed未検証**: completedでも現行の厳格な照合条件が成立しないjobを別計上し、過去形式や移行履歴を含み得るため異常とは断定しません。",
-        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submissionは対応job欠損だけでは異常にしません。",
+        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
