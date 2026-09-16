@@ -22,6 +22,7 @@ sys.path.insert(0, str(HERE))
 import paper_identity  # noqa: E402
 import survey  # noqa: E402
 import claim_state  # noqa: E402
+import discovery_search_history  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -485,7 +486,18 @@ def record_discovery_stats(
     axes[axis] = summary
     state["axes"] = axes
 
-    state["schema_version"] = max(int(state.get("schema_version", 2) or 2), 2)
+    search_windows = meta.get("search_windows")
+    if search_windows is not None:
+        if not isinstance(search_windows, list) or any(not isinstance(window, dict) for window in search_windows):
+            raise ValueError("discovery_stats.search_windows must be a list of objects")
+        discovery_search_history.record_search_windows(
+            state,
+            search_windows,
+            run_key=meta.get("run_key"),
+            round_name=meta.get("round"),
+        )
+
+    state["schema_version"] = max(int(state.get("schema_version", 2) or 2), 3)
     state["updated_at"] = now()
     state["last_run_key"] = meta.get("run_key")
     state["last_round"] = meta.get("round")
