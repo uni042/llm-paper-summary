@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-743db39c9d8329de077d7390",
-  "job_id": "job-research-c0e589d0a60cc7cf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-743db39c9d8329de077d7390",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-743db39c9d8329de077d7390","job_id":"job-research-c0e589d0a60cc7cf","data":{"canonical_id":"arXiv:2602.01053","arxiv_id":"2602.01053","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents","summary":"複数のLLMエージェントを同じ基盤モデルと役割別LoRAで実装すると、モデル重みの大半は共有できても、同じ長いツール実行履歴を各エージェントが再度プリフィルし、それぞれ完全なKVキャッシュを保持する。LRAgentは値キャッシュを、共有基盤重みから生じる高類似な基盤キャッシュと、役割別LoRAが生む小さな低ランク成分へ分ける。標準multi-LoRA向けBaseSharedは基盤キャッシュだけを共有して役割別成分を低ランクのまま保存し、shared-A構成向けBaseLRSharedは低ランク中間状態まで共有して既処理文脈の再プリフィルを省く。さらにFlash-LoRA-Attentionは低ランク成分を全次元へ展開せず注意計算の後にアップ投影する。","list_summary":"multi-LoRAエージェントのKVを共有基盤成分と低ランク役割成分へ分解し、後者を全次元化せず注意計算することで、長い共有履歴のKVメモリと再プリフィルを削減する。","authors":["Hyesung Jeon","Hyeongju Ha","Jae-Joon Kim"],"authors_affiliations":"Seoul National University, Department of Electrical and Computer Engineering","published":"2026-05-31","publication":"arXiv / ICML","publication_type":"Conference paper / Preprint","publication_status":"arXiv v2; ICML","lineage":"multi-LoRA serving / multi-agent KV cache sharing / low-rank cache representation","topics":["KVキャッシュ共有","multi-LoRA","マルチエージェント","低ランクキャッシュ","FlashAttention"],"importance":"同一基盤モデルを共有する役割別LoRAエージェントで、KV差分の主因をアダプタ成分へ分離し、キャッシュ共有をモデル構造に合わせて設計する。","hardware_evaluation":"LLaMA-3.1-8B-InstructとMinistral-8B-Instructを単一NVIDIA A6000 48GBで効率評価。総系列長約2K〜66Kの制御トレースを使用。","quality_effect":"完全KV共有は役割固有LoRA成分を失って精度低下するが、BaseSharedは非共有から平均最大0.7ポイント、BaseLRSharedは最大1.5ポイント程度の低下に抑える。","source":"https://arxiv.org/abs/2602.01053","sources":["https://arxiv.org/abs/2602.01053","https://arxiv.org/html/2602.01053"],"code":"https://github.com/jeonhye/lragent","implementation":"著者コード公開。標準multi-LoRA用BaseShared、down-projectionを共有するshared-A用BaseLRShared、FlashAttention上のFlash-LoRA-Attentionカーネルを実装する。","last_checked":"2026-09-16","references":[{"canonical_id":"arXiv:2411.02820","arxiv_id":"2411.02820"},{"canonical_id":"arXiv:2507.07400","arxiv_id":"2507.07400"},{"canonical_id":"arXiv:2106.09685","arxiv_id":"2106.09685"},{"canonical_id":"arXiv:2205.14135","arxiv_id":"2205.14135"}],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":37},"reservation":{"claim_id":"claim-743db39c9d8329de077d7390","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
