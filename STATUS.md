@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:47:12 JST**
+> 自動生成: **2026-09-16 12:47:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
+| 収録候補論文 | **49** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **32** |
-| 最終検証済みResearch収録 | **09-16 12:44:02 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **33** |
+| 最終検証済みResearch収録 | **09-16 12:47:27 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **1** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **26** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **26** | **7** | **1** | **6** | **2** | **0** | **6** |
+| 合計 | **27** | **7** | **1** | **6** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-16 12:47:27 JST** [research] `arXiv:2608.30830` — Adaptive KV Retention for LLM Agents at Human-Approval Timescales
+  - job: `.survey/work-queue/jobs/job-research-d56f46109a6995f4.json`
+  - result: `.survey/work-queue/results/research/attempt-ba98832b682051fbcdfa1c88.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ba98832b682051fbcdfa1c88.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.30830-adaptive-kv-retention-for-llm-agents-at-human-approval-timescales.md`
 - **09-16 12:44:02 JST** [research] `arXiv:2602.01053` — LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents
   - job: `.survey/work-queue/jobs/job-research-c0e589d0a60cc7cf.json`
   - result: `.survey/work-queue/results/research/attempt-743db39c9d8329de077d7390.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-5d2bee9ae7908778830d1829.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5d2bee9ae7908778830d1829.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md`
-- **09-16 12:03:44 JST** [research] `arXiv:2604.15379` — Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs
-  - job: `.survey/work-queue/jobs/job-research-8f7fdb4eba0d8a63.json`
-  - result: `.survey/work-queue/results/research/attempt-34765e98bb9cf6776aa5d26d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-34765e98bb9cf6776aa5d26d.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2604.15379-fleet-multi-die-gpu-megakernel.md`
 
 ### Audit
 
@@ -162,10 +162,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.30830` — Adaptive KV Retention for LLM Agents at Human-Approval Timescales / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 12:44:44 JST** / heartbeat: **—** / lease expiry: **09-16 14:14:44 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d56f46109a6995f4.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
   - claim: **09-16 12:20:14 JST** / heartbeat: **—** / lease expiry: **09-16 13:50:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-32ece608ca43dae7.json`
@@ -188,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **573** |
+| inference/training/survey配下の論文Markdown実体 | **574** |
 
 ### immutable submissionの未照合
 

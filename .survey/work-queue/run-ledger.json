@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T03:44:06.007887+00:00",
+  "updated_at": "2026-09-16T03:47:31.098715+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T03:44:06.007887+00:00",
+      "last_recorded_at": "2026-09-16T03:47:31.098715+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 109,
+        "research_completed": 110,
         "audit_completed": 0,
         "discovery_completed": 27,
         "blocked": 3,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "34908771915:1",
-          "recorded_at": "2026-09-14T23:28:40.024174+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34908771915",
-            "run_attempt": "1",
-            "source_sha": "5b69a4b29c84a61e0f29beb45cc3e58ae266d975"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34908866300:1",
           "recorded_at": "2026-09-14T23:31:55.805217+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35052898560",
             "run_attempt": "1",
             "source_sha": "0971cb6c9f9e22c0eef524b199a0701e4c21ed6c"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35053118359:1",
+          "recorded_at": "2026-09-16T03:47:31.098715+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35053118359",
+            "run_attempt": "1",
+            "source_sha": "cac1695c1c6845ed81a980685da385486d6bdd12"
           },
           "signals": [
             "research_completed"
@@ -20711,6 +20711,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.01053",
           "title": "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d56f46109a6995f4",
+          "type": "research",
+          "canonical_id": "arXiv:2608.30830",
+          "title": "Adaptive KV Retention for LLM Agents at Human-Approval Timescales",
           "from": "ready",
           "to": "completed"
         }
