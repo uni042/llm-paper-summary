@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6c04c6d0834122d69d7ab9df",
-  "job_id": "job-research-5d74d5ee3bd9a66c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c04c6d0834122d69d7ab9df",
-    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6c04c6d0834122d69d7ab9df","job_id":"job-research-5d74d5ee3bd9a66c","data":{"limitations":[{"name":"実機PLoRA装置未評価","description":"S-LoRA比較値は実H100から得る一方、PLoRAのCXL共有メモリとNDPは既存CXL-PNM装置を参照したモデルである。完成した4台のPLoRA装置をH100へ接続したエンドツーエンド測定ではないため、プロトコル、キュー、実装ソフトウェアの追加費用が残る。"},{"name":"専用ハードウェア前提","description":"共有メモリへload/storeで到達でき、同じインターフェースから装置側NDPを起動できることが前提である。通常PCIeホストオフロードだけの既存サーバへソフトウェア変更のみで適用できない。"},{"name":"費用モデル依存","description":"アダプタ別戦略と退避先はリンク、GPU、NDP、DRAMの性能モデルで選ぶため、モデル誤差や急激な要求分布変化があると最適でない戦略を選ぶ可能性がある。"}],"differences":[{"name":"S-LoRA・Punicaとの差","description":"S-LoRAやPunicaは一つの基盤モデル上で多数アダプタをまとめて実行するが、GPUに入らないアダプタ容量はCPU DRAMへ置きPCIe経由でstagingする。PLoRAは容量をホストの背後ではなくGPUが直接load/storeできる共有メモリへ移し、さらにNDPで縮約して結果だけを返す。"},{"name":"通常CXLメモリ拡張との差","description":"単にCXLを大容量遠隔DRAMとして使うとリンク帯域が律速になる。PLoRAはメモリ側へGEMV/GEMM/softmax用NDPを置き、LoRAとKV attentionの高縮約演算をデータ近傍で実行することで、帯域要求を演算へ交換する。"},{"name":"一般的NDPとの差","description":"既存CXL-PNM等は汎用の近接データ演算基盤を提供する。PLoRAの差分はMulti-LoRAのアダプタ別バッチ変動とGPUメモリ競合を考え、どの演算をどちら側で実行し何をGPUへキャッシュするかをオンラインで決めるサービング層にある。"}],"implementation_status":"CXL 3.1準拠のread-computeコマンド構成、NDP演算器、GPU側戦略選択・メモリ管理を具体設計し、既存Samsung CXL-PNMの仕様を参照して面積・性能をモデル化している。論文本文から公開コードは確認できず、専用PLoRA装置の実機試作による全系測定も示されない。","research_positioning":"Multi-LoRAサービングとCXL/共有メモリ・NDPを接続するハードウェア協調型推論システムである。既存のCPUオフロードを高速化するのではなく、アダプタとKV容量の置き場所をホストDRAMからメモリプールへ移し、リンク帯域を近接演算で節約する。リポジトリ内ではオフロード・階層メモリ、LoRA/専門家キャッシュ、GPUメモリ管理の境界に位置し、SSD/NVMeより高速だがGPU HBMより大容量・低コストな新しい共有メモリ階層を扱う。","relation_to_existing_repository":"MoE専門家やLoRAアダプタの配置・キャッシュ系統と、CPU/DRAM/NVMeへのオフロード系統に関連する。特に『大容量だが遠いメモリから何をGPUへ持ってくるか』だけでなく、『遠い側でどこまで計算して転送量を減らすか』を共同最適化する点が差別化になる。","audit_required":false},"reservation":{"claim_id":"claim-6c04c6d0834122d69d7ab9df","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
