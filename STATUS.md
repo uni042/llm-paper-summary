@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:06:27 JST**
+> 自動生成: **2026-09-16 12:06:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -163,8 +163,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-discovery-specialist-00`
-  - claim: **09-16 12:04:13 JST** / heartbeat: **—** / lease expiry: **09-16 13:34:13 JST**
+- `arXiv:2609.13134` — Rethinking Heterogeneous System Disaggregation for Subquadratic Attention / worker `scheduled-chat-llm-survey-20260916T025906Z`
+  - claim: **09-16 12:06:30 JST** / heartbeat: **—** / lease expiry: **09-16 13:36:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-e3f30981ea631700.json`
 
 #### Audit

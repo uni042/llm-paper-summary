@@ -1,1 +1,88 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1cef2aee08fb2b05fdb633a2","job_id":"job-research-e3f30981ea631700","data":{"canonical_id":"arXiv:2609.13134","arxiv_id":"2609.13134","doi":"10.48550/arXiv.2609.13134","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"Rethinking Heterogeneous System Disaggregation for Subquadratic Attention","summary":"SQDは、二次注意と劣二次注意でデコードを分離し、文脈長とともに増えるKV状態を持つ処理をDRAM GPU側、固定サイズ状態と低い演算強度を持つ劣二次注意とFFNをSRAM専用アクセラレータ側へ配置する異種分離方式である。疎注意では全KVを走査するtop-k選択をGPUに残し、選択後の固定k注意をASICへ移す。線形／再帰注意やスライディング窓注意では密注意層だけGPUへ残し、劣二次層とFFNをASICへ移す。8基B200を調整した異種系代理実験で、最強GPU単独構成比のtokens/JをGLM 5.2で53%、Nemotron 3 Ultraで31%、Gemma 4 31Bで56%改善した。Rubin+LPX解析では固定電力予算下で達成可能なユーザーTPSを1.2〜1.5倍、GLM 5.2では注意-FFN分離比のシステムスループットを最大3.6倍にする。","list_summary":"SQDは劣二次注意LLMを状態の文脈依存性で分割し、増大KV処理をDRAM GPU、固定状態の劣二次注意+FFNをSRAM専用ASICへ置いて低遅延推論の電力効率を高める。","authors":["Arya Tschand","Yaosheng Fu","Vikram Sharma Mailthody","Nicolai Oswald","Po-An Tsai","Ritchie Zhao","Oreste Villa","Vijay Janapa Reddi","Karu Sankaralingam"],"authors_affiliations":"論文本文の著者所属を一次資料で確認。","published":"2026-09-11","publication":"arXiv:2609.13134v1","publication_type":"プレプリント","publication_status":"arXiv v1（2026-09-11提出）。","lineage":"llm-serving-scheduling-disaggregation","topics":["劣二次注意","異種分離サービング","SRAM専用アクセラレータ","KVキャッシュ","低遅延推論","電力効率"],"importance":"高。モデルの注意構造そのものを異種ハードウェア配置の境界に使い、容量と帯域の異なるDRAM/SRAM階層をサービング設計へ直接反映する。","hardware_evaluation":"8×NVIDIA B200を基礎にデコード側の帯域/演算比、容量、電力をSRAM専用ASIC想定へ調整した実機代理系。加えてRubin+LPXを解析モデルで評価。","hardware_details":"B200代理系では実際の推論エンジンと最適化通信カーネルを用いる。解析系では固定電力予算でRubin GPUとLPX級SRAM専用ASICの構成を比較する。","quality_effect":"モデルの演算や重みを近似せず配置と通信を変更するため、モデル品質自体を変更しない。","storage_targets":["GPU HBM/DRAM上の増大KV状態","ASICオンチップSRAM上の固定状態・重み","GPU-ASIC間活性値／選択KV転送"],"bottlenecks":["低バッチデコードのメモリ帯域","長文脈KV容量","GPUの未使用演算資源による電力浪費","GPU-ASIC間通信遅延","疎注意の選択KV転送"],"evidence_locations":["§1","§3","§4","§5","§6","Figures 2–6","Table 1"],"source":"https://arxiv.org/abs/2609.13134","sources":["https://arxiv.org/abs/2609.13134","https://arxiv.org/html/2609.13134","https://arxiv.org/pdf/2609.13134"],"code":"","implementation":"実推論エンジンに異種分離と最適化通信カーネルを実装し、B200代理系で実測。Rubin+LPXは実測で検証した解析モデルにより予測する。公開コードURLはarXiv一次ページでは確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"一次資料の関連研究節","references_total":0},"reservation":{"claim_id":"claim-1cef2aee08fb2b05fdb633a2","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5d2bee9ae7908778830d1829",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {
+    "canonical_id": "arXiv:2609.13134",
+    "arxiv_id": "2609.13134",
+    "doi": "10.48550/arXiv.2609.13134",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "title": "Rethinking Heterogeneous System Disaggregation for Subquadratic Attention",
+    "summary": "SQDは、二次注意と劣二次注意でデコードを分離し、文脈長とともに増えるKV状態を持つ処理をDRAM GPU側、固定サイズ状態と低い演算強度を持つ劣二次注意とFFNをSRAM専用アクセラレータ側へ配置する異種分離方式である。疎注意では全KVを走査するtop-k選択をGPUに残し、選択後の固定k注意をASICへ移す。線形／再帰注意やスライディング窓注意では密注意層だけGPUへ残し、劣二次層とFFNをASICへ移す。8基B200を調整した異種系代理実験で、最強GPU単独構成比のtokens/JをGLM 5.2で53%、Nemotron 3 Ultraで31%、Gemma 4 31Bで56%改善した。Rubin+LPX解析では固定電力予算下で達成可能なユーザーTPSを1.2〜1.5倍、GLM 5.2では注意-FFN分離比のシステムスループットを最大3.6倍にする。",
+    "list_summary": "SQDは劣二次注意LLMを状態の文脈依存性で分割し、増大KV処理をDRAM GPU、固定状態の劣二次注意+FFNをSRAM専用ASICへ置いて低遅延推論の電力効率を高める。",
+    "authors": [
+      "Arya Tschand",
+      "Yaosheng Fu",
+      "Vikram Sharma Mailthody",
+      "Nicolai Oswald",
+      "Po-An Tsai",
+      "Ritchie Zhao",
+      "Oreste Villa",
+      "Vijay Janapa Reddi",
+      "Karu Sankaralingam"
+    ],
+    "authors_affiliations": "論文本文の著者所属を一次資料で確認。",
+    "published": "2026-09-11",
+    "publication": "arXiv:2609.13134v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-09-11提出）。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "劣二次注意",
+      "異種分離サービング",
+      "SRAM専用アクセラレータ",
+      "KVキャッシュ",
+      "低遅延推論",
+      "電力効率"
+    ],
+    "importance": "高。モデルの注意構造そのものを異種ハードウェア配置の境界に使い、容量と帯域の異なるDRAM/SRAM階層をサービング設計へ直接反映する。",
+    "hardware_evaluation": "8×NVIDIA B200を基礎にデコード側の帯域/演算比、容量、電力をSRAM専用ASIC想定へ調整した実機代理系。加えてRubin+LPXを解析モデルで評価。",
+    "hardware_details": "B200代理系では実際の推論エンジンと最適化通信カーネルを用いる。解析系では固定電力予算でRubin GPUとLPX級SRAM専用ASICの構成を比較する。",
+    "quality_effect": "モデルの演算や重みを近似せず配置と通信を変更するため、モデル品質自体を変更しない。",
+    "storage_targets": [
+      "GPU HBM/DRAM上の増大KV状態",
+      "ASICオンチップSRAM上の固定状態・重み",
+      "GPU-ASIC間活性値／選択KV転送"
+    ],
+    "bottlenecks": [
+      "低バッチデコードのメモリ帯域",
+      "長文脈KV容量",
+      "GPUの未使用演算資源による電力浪費",
+      "GPU-ASIC間通信遅延",
+      "疎注意の選択KV転送"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§3",
+      "§4",
+      "§5",
+      "§6",
+      "Figures 2–6",
+      "Table 1"
+    ],
+    "source": "https://arxiv.org/abs/2609.13134",
+    "sources": [
+      "https://arxiv.org/abs/2609.13134",
+      "https://arxiv.org/html/2609.13134",
+      "https://arxiv.org/pdf/2609.13134"
+    ],
+    "code": "",
+    "implementation": "実推論エンジンに異種分離と最適化通信カーネルを実装し、B200代理系で実測。Rubin+LPXは実測で検証した解析モデルにより予測する。公開コードURLはarXiv一次ページでは確認できない。",
+    "last_checked": "2026-09-16",
+    "references": [],
+    "references_checked_at": "2026-09-16",
+    "references_source": "一次資料の関連研究節",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-5d2bee9ae7908778830d1829",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

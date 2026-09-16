@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1cef2aee08fb2b05fdb633a2","job_id":"job-research-e3f30981ea631700","data":{"overview":"調整B200異種代理系では、SQDは最強GPU単独構成に対して平均tokens/JをGLM 5.2で53%、Nemotron 3 Ultraで31%、Gemma 4 31Bで56%改善する。文脈が長いほど二次KVをGPUへ残し固定状態だけをASICへ移す利点が拡大し、32Kで12〜51%、1Mで53〜71%の電力効率改善となる。SQDは標準系の57%の電力で63〜97%のデコードスループットを維持する。Rubin+LPX解析では固定電力予算下の達成可能ユーザーTPSが最良ベースラインより1.2〜1.5倍、GLM 5.2では注意-FFN分離比システムスループットが2.9〜3.6倍となる。","key_results":[{"metric":"tokens/J改善","value":"GLM 5.2 +53%、Nemotron 3 Ultra +31%、Gemma 4 31B +56%","baseline":"各モデルの最強GPU単独構成","condition":"調整8×B200異種系代理実験","interpretation":"固定作業集合をSRAM ASICへ移すことで低演算強度デコードの電力効率を改善する。"},{"metric":"長文脈でのtokens/J改善","value":"32Kで+12〜51%、1Mで+53〜71%","baseline":"最強GPU単独構成","condition":"評価3モデル","interpretation":"文脈が伸びてもASIC側状態は固定で、増大KVをGPUに局所化する設計の利益が拡大する。"},{"metric":"電力/スループット","value":"標準系電力の57%でデコードスループット63〜97%を維持","baseline":"stock GPU system","condition":"B200代理異種系","interpretation":"未使用演算器へ電力を費やすGPUデコードより、帯域重視装置へ移す方がtokens/Jを高める。"},{"metric":"Rubin+LPX達成可能ユーザーTPS","value":"1.2〜1.5倍","baseline":"GPU単独または注意-FFN分離の最良構成","condition":"固定電力予算解析","interpretation":"同じ電力枠でより低いTPOT目標を達成できる。"},{"metric":"GLM 5.2システムスループット","value":"注意-FFN分離比2.9〜3.6倍","baseline":"Rubin+LPX注意-FFN分離","condition":"解析モデル、低〜中遅延域","interpretation":"疎注意の固定top-k注意までASICへ移し、IndexShareで選択KV通信を隠す効果が大きい。"}],"negative_results":"SRAM容量を増やす利益はモデルの静的作業集合が収まるまでで、その後は追加容量の効果が小さい。またGPU-ASIC接続では高いピーク帯域より低い最低遅延が重要で、細粒度活性値転送の固定遅延が性能を制約する。従ってASIC容量やリンク帯域を単純に増やすだけでは最適にならない。","interpretation":"劣二次注意の普及により、注意という演算子全体を一種類のハードウェアへ置く前提が崩れている。状態の増大則を分離境界にすると、DRAMの容量とSRAMの帯域効率を同時に使え、異種サービングの設計空間をモデル構造に合わせられる。","quality_impact":"同一モデルの演算を異なる装置へ配置し通信するシステム手法であり、重み削減や近似注意を追加しないため品質劣化を導入しない。"},"reservation":{"claim_id":"claim-1cef2aee08fb2b05fdb633a2","worker_id":"scheduled-chat-discovery-specialist-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5d2bee9ae7908778830d1829",
+  "job_id": "job-research-e3f30981ea631700",
+  "data": {
+    "overview": "調整B200異種代理系では、SQDは最強GPU単独構成に対して平均tokens/JをGLM 5.2で53%、Nemotron 3 Ultraで31%、Gemma 4 31Bで56%改善する。文脈が長いほど二次KVをGPUへ残し固定状態だけをASICへ移す利点が拡大し、32Kで12〜51%、1Mで53〜71%の電力効率改善となる。SQDは標準系の57%の電力で63〜97%のデコードスループットを維持する。Rubin+LPX解析では固定電力予算下の達成可能ユーザーTPSが最良ベースラインより1.2〜1.5倍、GLM 5.2では注意-FFN分離比システムスループットが2.9〜3.6倍となる。",
+    "key_results": [
+      {
+        "metric": "tokens/J改善",
+        "value": "GLM 5.2 +53%、Nemotron 3 Ultra +31%、Gemma 4 31B +56%",
+        "baseline": "各モデルの最強GPU単独構成",
+        "condition": "調整8×B200異種系代理実験",
+        "interpretation": "固定作業集合をSRAM ASICへ移すことで低演算強度デコードの電力効率を改善する。"
+      },
+      {
+        "metric": "長文脈でのtokens/J改善",
+        "value": "32Kで+12〜51%、1Mで+53〜71%",
+        "baseline": "最強GPU単独構成",
+        "condition": "評価3モデル",
+        "interpretation": "文脈が伸びてもASIC側状態は固定で、増大KVをGPUに局所化する設計の利益が拡大する。"
+      },
+      {
+        "metric": "電力/スループット",
+        "value": "標準系電力の57%でデコードスループット63〜97%を維持",
+        "baseline": "stock GPU system",
+        "condition": "B200代理異種系",
+        "interpretation": "未使用演算器へ電力を費やすGPUデコードより、帯域重視装置へ移す方がtokens/Jを高める。"
+      },
+      {
+        "metric": "Rubin+LPX達成可能ユーザーTPS",
+        "value": "1.2〜1.5倍",
+        "baseline": "GPU単独または注意-FFN分離の最良構成",
+        "condition": "固定電力予算解析",
+        "interpretation": "同じ電力枠でより低いTPOT目標を達成できる。"
+      },
+      {
+        "metric": "GLM 5.2システムスループット",
+        "value": "注意-FFN分離比2.9〜3.6倍",
+        "baseline": "Rubin+LPX注意-FFN分離",
+        "condition": "解析モデル、低〜中遅延域",
+        "interpretation": "疎注意の固定top-k注意までASICへ移し、IndexShareで選択KV通信を隠す効果が大きい。"
+      }
+    ],
+    "negative_results": "SRAM容量を増やす利益はモデルの静的作業集合が収まるまでで、その後は追加容量の効果が小さい。またGPU-ASIC接続では高いピーク帯域より低い最低遅延が重要で、細粒度活性値転送の固定遅延が性能を制約する。従ってASIC容量やリンク帯域を単純に増やすだけでは最適にならない。",
+    "interpretation": "劣二次注意の普及により、注意という演算子全体を一種類のハードウェアへ置く前提が崩れている。状態の増大則を分離境界にすると、DRAMの容量とSRAMの帯域効率を同時に使え、異種サービングの設計空間をモデル構造に合わせられる。",
+    "quality_impact": "同一モデルの演算を異なる装置へ配置し通信するシステム手法であり、重み削減や近似注意を追加しないため品質劣化を導入しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-5d2bee9ae7908778830d1829",
+    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "worker_kind": "scheduled_chat"
+  }
+}
