@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-9c48ba51e4ed81ed5058eceb",
-  "job_id": "job-research-1dd6544d5f77b687",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9c48ba51e4ed81ed5058eceb",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9c48ba51e4ed81ed5058eceb","job_id":"job-research-1dd6544d5f77b687","data":{"evaluation_summary":"全実験をNVIDIA GH200 120GB HBM3上で行い、複数GPUはNVLink接続の最大4基を使用する。Llama-3.2 1B/3BとLlama-2 7B/13B/70Bを対象に、RTN、GPTQ、AWQ、OmniQuantの4-bit per-channelおよびgroup-128へSPEARを追加する。品質はWikiText-2/C4 perplexityと7タスクzero-shot accuracy、システム性能は単一GPU・TP=2/3/4 decode latencyとShareGPT 300要求のPoisson到着連続バッチで評価する。","scope":"品質回復と実際のサービング効率を同じ論文で評価し、kernel microbenchmarkだけでなくend-to-end decodeとSLO制約下のcontinuous batchingまで含む。一方GPUはHopper世代GH200に限定され、著者自身も他GPU世代・異種clusterへのkernel/P2P primitive移植を将来課題としている。MoEアーキテクチャへの拡張も将来課題である。","hardware":["NVIDIA GH200 120GB HBM3","CUDA 12.6","NCCL 2.27.5","NVLink接続で最大4 GPU"],"models":["Llama-3.2-1B","Llama-3.2-3B","Llama-2-7B","Llama-2-13B","Llama-2-70B"],"datasets":["WikiText-2","C4","PIQA","ARC-e/c","HellaSwag","WinoGrande","BoolQ","LAMBADA","MMLU","ShareGPT"],"workload":"kernel評価は200 warmup後500 timed iterationのmedian。decodeはprompt 128 token、64 token生成、M=1。複数GPUはTP=2/3/4。scheduler評価はShareGPT 300要求をPoisson arrivalでreplayし、Llama-2-7B 16 req/sでEC密度15/38/60%と16ms/22ms SLOを比較する。","baselines":["FP16 cuBLAS + FlashAttention","W4 MARLIN","naive W4+EC","LoftQ","LQER","QERA","EoRA","ASER","static chunked-prefill 512/256/128/64"],"metrics":["WikiText-2/C4 perplexity","7-task zero-shot accuracy","補償memory MB","ms/token decode latency","FP16/W4に対するthroughput","P99 inter-token latency","average time-to-first-token"],"predictor_accuracy":"schedulerはECあり/なしのper-iteration GH200 kernel latency lookup tableを実測し、未計測Mは線形補間する。CPU上の数百lookupと加算でiteration latencyを推定する。","control_knobs":"補償対象モジュール密度・rank、decode/prefill実行経路、tensor-parallel fused communication、prefill chunk sizeを制御する。"},"reservation":{"claim_id":"claim-9c48ba51e4ed81ed5058eceb","worker_id":"scheduled-chat-llm-survey-20260916T135756JST","worker_kind":"scheduled_chat"}}
