@@ -1,0 +1,44 @@
+name: One-shot recovered STATUS patch
+
+on:
+  push:
+    branches:
+      - fix/status-recovery-patch-trigger-never
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/preserve-discovery-recovery-evidence-20260917
+      - name: Patch renderer exactly once
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/scripts/render_status_dashboard.py')
+          text = path.read_text(encoding='utf-8')
+
+          anchor = '''    return rejected\n\n\ndef _direct_evidence_metrics(\n'''
+          helper = '''    return rejected\n\n\ndef _successfully_recovered_submission_paths(\n    repo_root: Path,\n    verified_discovery: list[dict[str, Any]],\n) -> set[Path]:\n    """Return historical submissions resolved by a verified immutable replay."""\n    recovered: set[Path] = set()\n    for row in verified_discovery:\n        replay_payload = row["submission"]["payload"]\n        source_value = replay_payload.get("recovered_from_submission")\n        source_path = evidence._resolve_repo_path(repo_root, source_value)\n        if source_path is not None and source_path.is_file():\n            recovered.add(source_path)\n    return recovered\n\n\ndef _direct_evidence_metrics(\n'''
+          assert text.count(anchor) == 1, text.count(anchor)
+          text = text.replace(anchor, helper, 1)
+
+          old = '''    terminally_rejected_submission_paths = _terminally_rejected_submission_paths(\n        repo_root,\n        submissions,\n        results,\n    )\n    orphan_submission_paths = {\n        row["path"]\n        for row in submissions\n        if (not row["job_id"] or row["job_id"] not in jobs)\n        and row["path"] not in terminally_rejected_submission_paths\n        and not (\n'''
+          new = '''    terminally_rejected_submission_paths = _terminally_rejected_submission_paths(\n        repo_root,\n        submissions,\n        results,\n    )\n    successfully_recovered_submission_paths = _successfully_recovered_submission_paths(\n        repo_root,\n        verified_discovery,\n    )\n    orphan_submission_paths = {\n        row["path"]\n        for row in submissions\n        if (not row["job_id"] or row["job_id"] not in jobs)\n        and row["path"] not in terminally_rejected_submission_paths\n        and row["path"] not in successfully_recovered_submission_paths\n        and not (\n'''
+          assert text.count(old) == 1, text.count(old)
+          text = text.replace(old, new, 1)
+          path.write_text(text, encoding='utf-8')
+          PY
+      - name: Remove one-shot workflow and commit patch
+        run: |
+          git config user.name "status-maintenance[bot]"
+          git config user.email "status-maintenance[bot]@users.noreply.github.com"
+          git rm .github/workflows/one-shot-patch-recovered-status.yml
+          git add .survey/scripts/render_status_dashboard.py
+          git commit -m "fix: clear STATUS orphan after verified discovery replay"
+          git push origin HEAD:fix/preserve-discovery-recovery-evidence-20260917
