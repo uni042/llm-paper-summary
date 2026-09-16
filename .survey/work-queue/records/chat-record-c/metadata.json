@@ -4,10 +4,42 @@
   "slot": "metadata",
   "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
   "job_id": "job-research-7411280ca93364ec",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7bba4de8acdf88007ff64c4d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2609.07816",
+    "arxiv_id": "2609.07816",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "Kalman Delta Networks: Uncertainty-aware Associative Memory",
+    "summary": "線形注意機構は過去を固定サイズの再帰メモリへ圧縮するため、デコード時のKVキャッシュを文脈長に比例して保持せずに済む一方、各トークンで既存の関連付けをどれだけ上書きするかを将来の問い合わせを知らないまま決める必要がある。Kalman Delta Networks（KDN）は、この再帰メモリを非定常なキー・値写像の推定問題として捉え、メモリ本体に加えて推定不確実性を状態として伝播する。カルマン利得により、証拠の少ない関連付けは新情報で強く更新し、繰り返し確認された関連付けは保護する。密な共分散をそのまま持つ方式はGPU向け並列走査に不向きなため、対角近似と等方近似を導入し、固定メモリのまま走査並列性を維持する。",
+    "list_summary": "固定サイズの線形注意メモリに推定不確実性を持たせ、蓄積証拠に応じて上書き強度をカルマン利得から決めることで、長文脈検索と生成精度を改善する。",
+    "authors": ["Ngoc Bui", "Tinglin Huang", "Rex Ying"],
+    "authors_affiliations": "Yale University, Department of Computer Science",
+    "published": "2026-09-07",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint v1",
+    "lineage": "linear attention / delta-rule associative memory / state-space models / Bayesian filtering",
+    "topics": ["線形注意機構", "固定メモリ推論", "カルマンフィルタ", "関連記憶", "長文脈検索"],
+    "importance": "KVキャッシュを増やさない固定メモリ型推論で、書き込み強度を現在トークンだけから予測する従来方式に対し、過去から蓄積した確信度を明示状態として使う。",
+    "hardware_evaluation": "モデル学習は750M/50Bトークンと1.3B/100Bトークンの制御比較。実行性能はH200 1基で750M相当のミキサ層をBF16、バッチ4で30回測定した中央値。",
+    "quality_effect": "近似的な固定メモリ方式だが、比較した線形時間再帰モデルに対してWikiText/LAMBADAパープレキシティと平均ゼロショット精度を改善する。完全注意機構との同等性は保証しない。",
+    "source": "https://arxiv.org/abs/2609.07816",
+    "sources": ["https://arxiv.org/abs/2609.07816", "https://arxiv.org/html/2609.07816"],
+    "code": "https://github.com/ngocbh/kalman-delta-networks",
+    "implementation": "著者実装を公開。対角KDNはチャンク単位のカルマン利得走査とcompact-WY型メモリ走査を分離し、等方KDNはヘッド当たり1個の不確実性状態でKDAに近い計算形を保つ。",
+    "last_checked": "2026-09-16",
+    "references": [
+      {"canonical_id":"arXiv:2312.00752","arxiv_id":"2312.00752"},
+      {"canonical_id":"arXiv:2605.22791","arxiv_id":"2605.22791"},
+      {"canonical_id":"arXiv:2510.26692","arxiv_id":"2510.26692"},
+      {"canonical_id":"arXiv:2602.10743","arxiv_id":"2602.10743"},
+      {"canonical_id":"arXiv:2604.21100","arxiv_id":"2604.21100"},
+      {"canonical_id":"arXiv:2102.11174","arxiv_id":"2102.11174"}
+    ],
+    "references_checked_at": "2026-09-16",
+    "references_source": "primary-reference-section",
+    "references_total": 36
+  },
+  "reservation": {"claim_id":"claim-7bba4de8acdf88007ff64c4d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
