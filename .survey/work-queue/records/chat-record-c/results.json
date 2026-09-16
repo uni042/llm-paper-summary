@@ -2,50 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b66d308c0d1e4eb8ba288ecc",
-  "job_id": "job-research-3d5f11737ec9b4a2",
-  "data": {
-    "overview": "二つのJetsonプラットフォーム、複数LLM、5データセットでPELMは既存の電力ガバナに対し最大23.1%の生成高速化と52.4%のエネルギー削減を達成し、タスク性能は比較可能な水準を維持した。パイロット測定でも周波数と層深度の共同調整余地が大きく、32層を1.3GHzで動かす構成と同程度の速度を24層・0.7GHzで得ながら41.7%少ないエネルギーを使う例、20層・0.6GHzで32層・1.3GHzと同じ約10 token/sを出し50.9%少ないエネルギーを使う例を示す。",
-    "key_results": [
-      {
-        "metric": "生成速度",
-        "value": "最大23.1%高速化",
-        "baseline": "state-of-the-art power governing methods",
-        "condition": "評価したハードウェア・モデル・データセット中の最大改善",
-        "interpretation": "周波数だけでなく投機と深度を調整することで熱・電力制約下でも速度余地を確保する。"
-      },
-      {
-        "metric": "エネルギー消費",
-        "value": "最大52.4%削減",
-        "baseline": "state-of-the-art power governing methods",
-        "condition": "評価した構成中の最大削減",
-        "interpretation": "クロスレイヤ制御が周波数単独DVFSより大きな省エネ探索空間を提供する。"
-      },
-      {
-        "metric": "同等QoEでのエネルギー",
-        "value": "41.7%削減",
-        "baseline": "32層・1.3GHz",
-        "condition": "24層・0.7GHzで同程度の生成速度",
-        "interpretation": "層深度を下げれば周波数を下げても速度を保てる多対一構成が存在する。"
-      },
-      {
-        "metric": "約10 token/sでのエネルギー",
-        "value": "50.9%削減",
-        "baseline": "32層・1.3GHz",
-        "condition": "20層・0.6GHz",
-        "interpretation": "固定QoE下でも深度と周波数の共同選択に大きな省エネ差がある。"
-      }
-    ],
-    "negative_results": [
-      "中間層の品質は課題依存で、GSM8Kのように推論一貫性へ敏感な課題では層ごとの性能変動が大きい。",
-      "可変検証深度は完全深度モデルの出力分布を厳密には保存しないため、通常のlossless speculative decodingと異なり品質・忠実度の目的を明示的に管理する必要がある。",
-      "改善値はJetson系組込みGPUでの評価であり、スマートフォンSoCやNPUへ同じ定量値がそのまま移ることは示されていない。"
-    ],
-    "quality_impact": "完全深度を常に使わずとも多くのトークン・課題で比較可能なタスク性能を保てるが、品質感度の高い課題では深度選択が重要である。PELMは検証深度を忠実度の代理として報酬へ含める。",
-    "interpretation": "主結果は、オンデバイスLLMの電力管理をハードウェアDVFSだけの問題とせず、推論アルゴリズムの実行量を同時制御することで、同じ速度要求に対してより低電力な動作点を選べることを示す。"
-  },
+  "attempt_id": "attempt-a040b871bad8d7791dcde413",
+  "job_id": "job-research-c5a47af1c9e3acf3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b66d308c0d1e4eb8ba288ecc",
+    "claim_id": "claim-a040b871bad8d7791dcde413",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

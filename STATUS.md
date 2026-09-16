@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 18:38:02 JST**
+> 自動生成: **2026-09-16 18:38:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -198,9 +198,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.09662` — PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 18:36:45 JST** / heartbeat: **—** / lease expiry: **09-16 20:06:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3d5f11737ec9b4a2.json`
+- `arXiv:2604.07472` — Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 18:38:14 JST** / heartbeat: **—** / lease expiry: **09-16 20:08:14 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c5a47af1c9e3acf3.json`
 - `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees / worker `scheduled-chat-paper-20260916T175945JST`
   - claim: **09-16 18:23:00 JST** / heartbeat: **09-16 18:31:09 JST** / lease expiry: **09-16 20:01:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-df04bb2baebfa878.json`

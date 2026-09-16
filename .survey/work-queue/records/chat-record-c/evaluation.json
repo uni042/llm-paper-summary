@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b66d308c0d1e4eb8ba288ecc",
-  "job_id": "job-research-3d5f11737ec9b4a2",
-  "data": {
-    "evaluation_summary": "PELMをNVIDIA Jetson AGX OrinとJetson Orin Nanoの2種類の組込みGPUプラットフォームで評価し、LLaMA系の異なるモデルサイズと5種類のタスクデータセットを用いて、既存DVFS/電力ガバナおよび固定的な推論構成と比較する。評価は生成速度、エネルギー、温度・熱制約下の持続性能、タスク性能を測り、QoE要求や熱条件を変えた頑健性も確認する。",
-    "scope": "端末単体での自己回帰LLM推論。通常温度条件だけでなく熱制約・計算負荷・異なる目標生成速度を含む。",
-    "hardware": [
-      "NVIDIA Jetson AGX Orin",
-      "NVIDIA Jetson Orin Nano"
-    ],
-    "software": [
-      "PELM DQN governor",
-      "LayerSkip-style self-speculative decoding",
-      "HQCache",
-      "DVFS controls"
-    ],
-    "models": [
-      "LLaMA-3.1-8B",
-      "LLaMA-3.2-1B"
-    ],
-    "datasets": [
-      "HumanEval",
-      "GSM8K",
-      "5 diverse task datasets in total"
-    ],
-    "workload": "オンデバイス自己回帰生成。各制御区間で周波数、ドラフト深度、投機長、検証深度を変更し、持続的な生成と熱状態変化を含めて評価する。",
-    "baselines": [
-      "既存のstate-of-the-art power governors",
-      "frequency-only DVFS",
-      "full-depth inference configurations"
-    ],
-    "metrics": [
-      "token generation speed",
-      "energy consumption",
-      "task performance",
-      "temperature / thermal throttling",
-      "power consumption"
-    ],
-    "methodology": "二つのJetson実機で複数モデル・5データセットを走らせ、通常条件と熱制約条件、異なるQoE目標でPELMの共同制御を比較する。パイロットではLLaMA-3.1-8Bで周波数と実行層数の二次元探索を行い、同等速度を出す構成間のエネルギー差を確認する。",
-    "predictor_accuracy": "DQNは解析モデルで性能を予測するのではなく、実行時状態と報酬から制御方策を学習する。評価は最終的な速度・エネルギー・品質・熱挙動で行う。",
-    "control_knobs": "GPU/processor frequency、draft exit depth、speculation length、verification depth、QoE reward weights。"
-  },
+  "attempt_id": "attempt-a040b871bad8d7791dcde413",
+  "job_id": "job-research-c5a47af1c9e3acf3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b66d308c0d1e4eb8ba288ecc",
+    "claim_id": "claim-a040b871bad8d7791dcde413",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
