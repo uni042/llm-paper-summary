@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 16:12:17 JST**
+> 自動生成: **2026-09-16 16:31:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **34** |
 | 未claim Research job | **33** |
 | 直近24hの検証済みResearch収録 | **55** |
-| 最終検証済みResearch収録 | **09-16 16:12:08 JST（9秒前）** |
+| 最終検証済みResearch収録 | **09-16 16:12:08 JST（19分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -204,8 +204,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
-  - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
+- `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 16:31:13 JST** / heartbeat: **—** / lease expiry: **09-16 18:01:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
 
 #### Audit
