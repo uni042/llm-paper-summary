@@ -12,6 +12,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import discovery_search_filter  # noqa: E402
 import paper_identity  # noqa: E402
 import queue_worker  # noqa: E402
 
@@ -104,6 +105,56 @@ class RepresentedPaperResolverTest(unittest.TestCase):
             resolver,
         )
         self.assertIsNone(identified, "fuzzy title matching must be restricted to ID-less results")
+
+    def test_retrieval_filter_uses_resolver_before_candidate_evaluation(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            snapshot = Path(td) / "discovery-identities"
+            snapshot.mkdir()
+            resolver = paper_identity.build_represented_resolver([
+                {
+                    "canonical_id": "arXiv:2602.22222",
+                    "title": "Cache-Aware Expert Prefetch for Efficient MoE Serving",
+                    "authors": ["Alice Smith"],
+                    "year": 2026,
+                }
+            ])
+            (snapshot / "_represented_papers.json").write_text(
+                json.dumps(resolver, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            (snapshot / "_manifest.json").write_text(
+                json.dumps(
+                    {
+                        "schema_version": 2,
+                        "source": "queue_worker.existing_candidate_keys",
+                        "code_search_is_authority": False,
+                        "shards": {},
+                        "represented_resolver_file": "_represented_papers.json",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = discovery_search_filter.filter_search_batch(
+                [
+                    {
+                        "title": "Cache-Aware Expert Prefetching for Efficient MoE Serving",
+                        "authors": ["Smith, Alice"],
+                        "year": 2026,
+                    },
+                    {
+                        "title": "Cache-Aware Expert Prefetching for Efficient MoE Serving",
+                        "authors": ["Carol Brown"],
+                        "year": 2026,
+                    },
+                ],
+                snapshot_dir=snapshot,
+            )
+
+            self.assertEqual(result["represented_paper_match_filtered_count"], 1)
+            self.assertEqual(result["represented_paper_match_types"], ["title_fuzzy_author_year"])
+            self.assertEqual(len(result["results"]), 1)
+            self.assertEqual(result["results"][0]["authors"], ["Carol Brown"])
 
 
 class DiscoverySearchWindowHistoryTest(unittest.TestCase):
