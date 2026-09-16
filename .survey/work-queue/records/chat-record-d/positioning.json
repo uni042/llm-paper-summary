@@ -2,25 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-1f5b634be6acbecd230032d1",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
   "data": {
     "limitations": [
-      {"name":"商用トレースの観測制約","description":"商用トレースは匿名化され、LLM側とサンドボックス側のイベントが完全には同期していない。そのため、どのモデル呼び出しがどのツール呼び出しや資源急増を直接引き起こしたかという細粒度な因果関係は、公開ハーネスを用いた制御実験で補う必要がある。本番性は高い一方、完全な層間因果をそのまま観測できるデータセットではない。"},
-      {"name":"制御実験の規模","description":"公開ベンチマークは各20課題を5回反復し、主な提供基盤はH100 1基とQwen3.6である。複数GPU、複数ノード、非常に多数の同時テナントへ拡張したときのAries自身の計測負荷、イベント保存量、テレメトリ統合費は主評価ではない。したがって、計測基盤自体の大規模分散時の伸縮性は追加検証が必要である。"},
-      {"name":"サンドボックス費用は一部モデル評価","description":"サンドボックス停止政策の比較は、実測したツール呼び出しトレースをAWS Lambda MicroVMの料金とスナップショット費へ再生して行う。各政策を実際のクラウド基盤で長時間運用した全面的な実測ではないため、実サービスでは保存先、ネットワーク、イメージサイズ、課金体系の違いによって費用差が変わり得る。"},
-      {"name":"将来制御政策は未実装","description":"適応的なコンテキスト保持、サンドボックスの垂直伸縮、状態の外部化、攻撃面を限定した実行環境は、測定結果から導く設計方向である。Aries論文の主目的はそれらの必要性を定量化することであり、最終的な制御器を実装してエンドツーエンド性能や費用の改善値を競う研究ではない。"}
+      {
+        "name": "MI350X中心の実証",
+        "description": "task abstractionはchiplet数・worker数・L2容量をparameter化しMI300XやBlackwellへ概念的に適用できるが、end-to-end評価はMI350Xのみで、NVIDIA Blackwell backendと実機効果は未検証である。"
+      },
+      {
+        "name": "decode dense model中心",
+        "description": "評価はdense Qwen3-8Bのdecodeが中心で、prefill、MoE、複雑なserving schedulerとの統合効果は追加検証が必要。tensor parallelでlocal shardが小さくなるとL2 reuse利益も変化する。"
+      },
+      {
+        "name": "scheduler資源消費",
+        "description": "各XCDで1 CUをschedulerに予約するためMI350では3.1%のCUをcontrolへ使う。taskが極端に短い場合はscheduler overheadが無視できなくなる。"
+      }
     ],
     "differences": [
-      {"name":"vLLMやSGLangなどのLLM提供基盤との差","description":"vLLMやSGLangは主にモデル要求を単位としてGPU計算、KVキャッシュ、プリフィル、デコード、バッチ処理を最適化する。Ariesはそれらの下位提供基盤を置き換えるのではなく、LLM呼び出しの前後にあるハーネス処理、ツール待ち、長寿命状態まで含めて一つのエージェント軌跡として観測する。したがって競合する推論エンジンではなく、GPU最適化が利用者課題の完了へどれだけ寄与したかを上位から評価する計測層である。"},
-      {"name":"ContinuumやSideQuestなどの長期状態管理との差","description":"ContinuumやSideQuestは複数ターンのKV状態をいつ保持・破棄・配置するかという具体的な管理政策を扱う。Ariesは特定のKV政策を提案せず、文脈長、成功率、KV占有、同時実行数、内部待ち行列を同じ軌跡へ結び付け、どの状態が将来の進捗へ価値を持つかを測るための観測基盤を提供する。したがってこれらの政策へ入力信号と評価方法を与える補完関係にある。"},
-      {"name":"AgentCgroupなどのホスト資源制御との差","description":"ホスト側資源管理研究は、エージェントやツールごとのCPU・メモリ制御を具体的に実装する。一方Ariesは、本番サンドボックスが大半の時間アイドルでありながらツール呼び出し時だけ急激に資源を使うことを軌跡単位で測定し、どの時点で資源を増減すべきかという需要形状を提供する。資源制御機構そのものではなく、制御政策を設計・検証するためのワークロード観測面に位置する。"},
-      {"name":"一般的なエージェントベンチマークとの差","description":"一般的なエージェントベンチマークは最終成功率や課題完了可否を中心に評価することが多い。Ariesは成功結果だけでなく、その成功へ至る途中のLLM待ち、ハーネス処理、ツール実行、コンテキスト占有、サンドボックス資源を因果関係付きで記録する。タスク品質と低水準システム挙動を同じ軌跡へ結び付けるため、単なる品質ベンチマークよりシステム設計向けの情報量が多い。"}
+      {
+        "name": "vLLM/SGLangとの差",
+        "description": "operatorごとにHIP/CUDA kernelをlaunchする通常serving frameworkに対し、Fleetは全decodeをpersistent megakernel内task graphとして実行し、launch gapとkernel境界でのcache reuse喪失を避ける。"
+      },
+      {
+        "name": "Mirage MPKとの差",
+        "description": "Mirage MPKもpersistent task graphを使うがchiplet境界を認識せずCU-taskをflatに配る。FleetはChiplet-taskを追加し、weight partitionとworkerをXCD-local L2 scopeへ固定する。Mirageが何を融合するかを扱うのに対しFleetはどこへscheduleするかを扱い補完的。"
+      },
+      {
+        "name": "standalone chiplet-aware GEMMとの差",
+        "description": "HipKittens等は単一GEMM内でXCD localityを最適化する。FleetはGEMM、attention、normalization、activationを一つのpersistent runtimeへ統合し、operator間dependencyとhierarchical synchronizationまでchiplet-awareにする。"
+      }
     ],
-    "implementation_status": "Ariesのコード、ツールチェーン、匿名化した本番トレースは https://github.com/hyscale-lab/aries で公開すると論文本文が明記する。OpenHands、Hermes Agent、OpenClawと複数のサンドボックス基盤を共通接続部で結ぶフルスタック実験基盤として実装済みである。",
-    "research_positioning": "LLMサービング・スケジューリング系統の上位に位置する、エージェント型サービングの特性評価・計測基盤である。KVキャッシュの保持・退避、複数ターンスケジューリング、サンドボックスやOS資源制御、エージェントベンチマークを、エージェント軌跡という共通単位で接続する。個別最適化の優劣を直接競うのではなく、どの資源がどのタスク進捗を支配しているかを測る役割を担う。",
-    "relation_to_existing_repository": "既存リポジトリでは、ContinuumのKV有効期限、SideQuestのモデル駆動KV管理、KVFlowやMemServeの文脈配置に対して、どの軌跡状態をいつ残す価値があるかを測る上位観測面として関係する。AgentCgroupのツール単位CPU・メモリ制御やエージェント指向スケジューリング研究には、本番のアイドル・瞬間需要分布とタスク進捗を結ぶ入力・検証基盤として利用できる。通常のvLLMやSGLang最適化とは競合せず、下位のGPU改善が最終的なタスク有効スループットへ届いたかを評価する層である。",
+    "implementation_status": "Mirage Persistent Kernel runtimeを拡張し、XCD scheduler、Chiplet-task descriptor、hierarchical event、M-major cooperative GEMMを実装してMI350Xで実測。compiler-driven Chiplet-task superoptimizationは将来課題。",
+    "research_positioning": "LLM inference megakernelとGPU cache hierarchy co-designの研究。CPU/GPU/SSD間offloadではなく、単一GPU package内部のprivate L2を新しいlocality階層として明示する。",
+    "relation_to_existing_repository": "megakernel、kernel fusion、cache-aware scheduling、memory hierarchy、inference runtime系統を接続する。特に将来のmulti-die GPUでHBM trafficを減らすsoftware abstractionとして重要。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-d53062f6ce8af0e476180ce0","worker_id":"work-library-repair-20260916","worker_kind":"work"}
+  "reservation": {
+    "claim_id": "claim-1f5b634be6acbecd230032d1",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

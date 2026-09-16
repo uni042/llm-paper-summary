@@ -2,25 +2,47 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-1f5b634be6acbecd230032d1",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
   "data": {
-    "overview": "Ariesの測定では、エージェント型サービングのクリティカルパスはGPU推論だけで決まらない。ツール実行はエンドツーエンド遅延の13〜48%、ハーネス処理はさらに最大9%を占める。長寿命コンテキストも容量を圧迫し、Qwen3.6で25GBのKV予算を固定すると最大常駐要求数が176超から40へ約4.4倍低下する。DeepResearch BenchではOpenClawの成功率が160K文脈で95%へ達する一方、Terminal-Bench 2やSWE-Bench Proでは文脈を最大まで増やしても改善が頭打ちまたは悪化する。32同時セッションの条件ではトークンプール利用率が97%へ達する一方、同時実行中央値は22、内部待ち行列遅延の95パーセンタイルは7.9秒となる。サンドボックスはCPUが80%以上、メモリが50%以上の時間でアイドルだが、ツール呼び出し時には利用率が急増する。ツール呼び出しごとに停止するとインスタンス費自体は65%下がるものの、現行のスナップショット保存・復元費まで含めると総費用は常駐方式の4.9倍になる。したがって、軌跡状態と実行資源を分離し、必要な瞬間だけ資源を増やす設計に改善余地がある。",
+    "overview": "Fleetは小batchではpersistent kernelとXCD-local schedulingによりvLLMのoperator launch overheadを除き、batch 1〜8でdecode latencyを1.3〜1.5倍改善する。batchが増えると同一XCD内の複数workerがweight tileを共有でき、M-major cooperative tilingのL2 localityが追加利益を生む。batch 64ではMirage比L2 hit率39.0%→61.4%、HBM read 37%削減、1.30倍speedupとなる。",
     "key_results": [
-      {"metric":"ツール実行の遅延比率","value":"13〜48%","baseline":"軌跡全体のエンドツーエンド遅延","condition":"公開3ベンチマークと複数ハーネス","interpretation":"GPU上のトークン生成だけを高速化しても、最大で半分近いクリティカルパスが残り得る。"},
-      {"metric":"ハーネス処理の遅延比率","value":"最大9%","baseline":"軌跡全体のエンドツーエンド遅延","condition":"公開ハーネスの制御計測","interpretation":"ツール以外のホスト側オーケストレーションもLLM呼び出し間を延ばし、状態保持時間を長くする。"},
-      {"metric":"常駐可能要求数","value":"176超から40へ約4.4倍低下","baseline":"通常要求とエージェント長期文脈","condition":"Qwen3.6、固定25GB KV予算","interpretation":"長寿命の軌跡状態が同時実行容量を大幅に削る。"},
-      {"metric":"DeepResearchタスク成功率","value":"160K文脈で95%","baseline":"より小さい文脈上限","condition":"OpenClawの文脈上限掃引","interpretation":"文脈あふれを解消するまでは保持量が効くが、その先は追加履歴の効用が頭打ちになる。"},
-      {"metric":"KV・トークンプール圧力","value":"利用率ピーク97%、同時実行中央値22","baseline":"32同時セッションの待ち行列","condition":"256K最大文脈の制御実験","interpretation":"待機要求が存在しても長寿命状態が容量を占有し、まとめて処理できる要求数を制限する。"},
-      {"metric":"内部待ち行列遅延の95パーセンタイル","value":"7.9秒","baseline":"制御実験","condition":"高いKV圧力、32同時セッション","interpretation":"状態保持による容量圧迫はトークンスループットだけでなく裾の長い待ち時間として表面化する。"},
-      {"metric":"サンドボックスのアイドル時間","value":"CPUは80%以上、メモリは50%以上の時間でアイドル","baseline":"軌跡全体の実行時間","condition":"OpenClaw、Hermes Agentと本番傾向","interpretation":"最大需要に合わせた固定割当は大きな遊休容量を生む。"},
-      {"metric":"ツールごと停止時のインスタンス費","value":"65%低下","baseline":"サンドボックス常駐方式","condition":"AWS Lambda MicroVM料金モデルによる再生","interpretation":"短い待機時間にすればアイドル中の実行課金自体は減らせる。"},
-      {"metric":"スナップショット費込み総費用","value":"常駐方式の4.9倍","baseline":"サンドボックス常駐方式","condition":"ツール呼び出しごとに停止・復元","interpretation":"現行の保存・復元オーバーヘッドが細粒度なゼロスケール化を逆に高価にする。"},
-      {"metric":"理想的状態管理での総費用削減余地","value":"常駐方式比で最大3倍の削減余地","baseline":"サンドボックス常駐方式","condition":"状態保存・復元オーバーヘッドを理想化","interpretation":"状態と実行資源を分離した弾力的配置には大きな改善余地がある。"}
+      {
+        "metric": "vLLM比decode latency",
+        "value": "1.3〜1.5倍改善",
+        "baseline": "vLLM ROCm eager",
+        "condition": "batch 1〜8、Qwen3-8B MI350X",
+        "interpretation": "weight reuseが少ない小batchでもpersistent dispatchとchiplet schedulingが効く。"
+      },
+      {
+        "metric": "batch 32 L2 hit / speedup",
+        "value": "51.0%、1.27倍",
+        "baseline": "Mirage 38.9%、15.62ms vs Fleet 12.35ms",
+        "condition": "M-tile cooperative traversal",
+        "interpretation": "2 workerでweight columnを共有しHBM readを18%削減。"
+      },
+      {
+        "metric": "batch 64 L2 hit / speedup",
+        "value": "61.4%、1.30倍",
+        "baseline": "Mirage 39.0%、24.10ms vs Fleet 18.61ms",
+        "condition": "M-tile cooperative traversal",
+        "interpretation": "4 worker共有でHBM readを6203GB→3925GB、37%削減。"
+      },
+      {
+        "metric": "effective arithmetic intensity",
+        "value": "batch 32で32→65 FLOP/byte",
+        "baseline": "nominal AI=32",
+        "condition": "L2 hit 51%",
+        "interpretation": "HBM traffic削減によりroofline上でcompute-bound側へ移動。"
+      }
     ],
-    "negative_results": "文脈を最大まで保持しても全ワークロードで成功率が上がるわけではない。Terminal-Bench 2とSWE-Bench Proでは文脈あふれを解消した後に改善が頭打ちまたは悪化する。また、スナップショットを用いた状態付きゼロスケール化は待機時間を短くするほどインスタンス費を下げる一方、保存・復元費が支配的になり、ツール呼び出しごとの停止では常駐方式より総費用が高くなる。さらにトークンスループットと、単位時間に実際に解けた課題数を表すタスク有効スループットは一致しない場合があるため、従来指標だけで最適化すると方向を誤る可能性がある。",
-    "interpretation": "エージェント負荷では資源需要が軌跡の段階に応じてGPU推論、ホスト側ハーネス、ツール用サンドボックスへ移動し、長期コンテキストはその間も残り続ける。したがって最適化対象をトークン生成へ限定せず、課題がどれだけ進んだかという価値と状態保持費を軌跡単位で測り、将来効用の低いコンテキストを圧縮・階層化し、ツールの瞬間需要に合わせてCPUとメモリを増減させる設計が合理的である。",
-    "quality_impact": "Ariesはモデル出力を近似して高速化する方式ではない。文脈管理については、保持量を減らすとタスク成功率が変化し得ることを直接示しているため、将来の圧縮や退避政策はタスクごとの品質境界を測りながら適用する必要がある。"
+    "negative_results": "M-splitはworker間weight共有を行わず、batch 64ではMirage比1.03倍に留まりHBM readも1.20倍へ増える。したがってpersistent schedulingだけでは大batchの性能を説明できず、cooperative L2 reuseが必要である。batch 1では理論的weight sharingはなく、Fleetのhit率向上は主にfusion由来である。",
+    "interpretation": "multi-die GPUではdevice内でもmemory localityが非一様であり、flat grid schedulingではprivate L2を共有できるworker関係を表現できない。task scopeをXCD scopeへ一致させることで、HBM bandwidthを追加せずeffective bandwidthを増やせる。",
+    "quality_impact": "数学的operatorを同じ精度で実行し、task decompositionとmemory access orderだけを変更するためモデル品質への損失はない。"
   },
-  "reservation": {"claim_id":"claim-d53062f6ce8af0e476180ce0","worker_id":"work-library-repair-20260916","worker_kind":"work"}
+  "reservation": {
+    "claim_id": "claim-1f5b634be6acbecd230032d1",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

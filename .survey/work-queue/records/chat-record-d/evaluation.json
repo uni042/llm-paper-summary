@@ -2,17 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d53062f6ce8af0e476180ce0",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-1f5b634be6acbecd230032d1",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
   "data": {
-    "hardware": "制御実験は96コアCPUノードとNVIDIA H100 94GB HBM 1基を使用する。本番特性評価では商用基盤の10個のLLM提供インスタンスと100超のエージェント用サンドボックスを対象にする。",
-    "software": "Aries、OpenHands、Hermes Agent、OpenClaw、SGLang、Qwen3.6-35B-A3B-FP8を使用する。サンドボックス弾力性の費用解析ではAWS Lambda MicroVMの料金モデルを使い、別のツール利用再現ではクラウド上のDeepSeek V4 Flash APIも用いる。",
-    "methodology": "商用基盤の8時間トレースから、10個のLLM提供インスタンスにおける要求数とコンテキスト長、100超のサンドボックスにおけるCPU・メモリ利用率を1分粒度で収集する。より詳細な層間分析はSWE-Bench Pro、Terminal-Bench 2、DeepResearch Benchから各20課題を選び、各課題を5回反復して行う。OpenClaw、Hermes Agent、OpenHandsを比較し、軌跡全体をLLM推論、ハーネス処理、ツール実行へ分解する。文脈予算実験では上限を段階的に変え、成功率、文脈あふれ、圧縮発生、KVまたはトークンプール占有、同時実行数、内部待ち行列を測る。32同時セッション、256K最大文脈の条件では1秒粒度で提供基盤の資源状態も記録する。サンドボックスについてはOpenClawとHermes Agentを1秒粒度で計測し、取得したツール呼び出しトレースを常駐時間とスナップショット保存・復元費を含む料金モデルへ再生して、常駐方式と停止方式の費用差を分析する。",
-    "scope": "実運用トレースと公開ベンチマークを組み合わせた特性評価および計測基盤の評価である。Aries自体は新しいLLMスケジューラ、KV圧縮手法、サンドボックス自動伸縮器を実装して性能改善を直接競うものではなく、それらを設計・比較するための観測基盤を提供する。商用トレースは匿名化され、制御実験も主に単一H100環境であるため、大規模分散環境への一般化には限界がある。",
-    "workloads": ["SWE-Bench Pro 20課題","Terminal-Bench 2 20課題","DeepResearch Bench 20課題","各課題5反復","本番8時間トレース","100超の本番エージェント用サンドボックス"],
-    "baselines": ["TTFT・TPOT・トークンスループット中心の従来LLM指標","要求単位の従来容量評価","サンドボックス常駐方式","複数の待機時間を持つスナップショット型停止・復元方式"],
-    "metrics": ["エンドツーエンド遅延内訳","ツールとハーネスの遅延比率","文脈あふれと圧縮回数","タスク成功率","KVまたはトークンプール利用率","常駐・同時実行要求数","内部待ち行列遅延","CPU・メモリ利用率分布","サンドボックス実行費","スナップショット保存・復元費","タスク有効スループット"],
-    "reproducibility": "論文はAriesのコード、ツールチェーン、匿名化した本番トレースをGitHubで公開すると明記する。公開ハーネス、公開ベンチマーク、モデル、GPU、反復数、計測粒度も記載する。一方、商用トレースはプライバシーのため正規化・匿名化され、詳細な基盤構成と完全同期された全層イベントは非公開である。"
+    "scope": "単一AMD MI350X上のdense Qwen3-8B decodeを実機評価する。batch 1〜64でpersistent scheduling効果とchiplet-local L2 weight reuse効果を分離し、vLLMとchiplet-unaware Mirage MPKを比較する。",
+    "evaluation_setup": "MI350X 256 CU/8 XCD、各XCD 4MB L2、共有256MB Infinity Cache、288GB HBM3。Qwen3-8B bf16、36層、hidden 4096、FFN 12288。64 input token、1024 output token、decode-only TPOTをGPU内timestampで測定。Fleet M-tileとM-split、Mirage MPK、vLLM 0.17.2 ROCm eagerを比較。",
+    "models": [
+      "Qwen3-8B dense bf16"
+    ],
+    "hardware": [
+      "AMD Instinct MI350X"
+    ],
+    "workloads": [
+      "decode batch 1,2,4,8,16,32,64",
+      "64 prompt tokens + 1024 output tokens"
+    ],
+    "metrics": [
+      "decode TPOT",
+      "speedup",
+      "L2 hit rate",
+      "HBM read/write traffic",
+      "effective arithmetic intensity"
+    ],
+    "baselines": [
+      "vLLM 0.17.2 ROCm eager",
+      "Mirage MPK chiplet-unaware",
+      "Fleet M-split scheduling-only control"
+    ],
+    "simulation_assumptions": "主要結果は実機counter/timing。L2 reuse理論式はR=min(worker,m_tiles)に対する(R-1)/Rで説明。",
+    "evaluation_caveats": "評価GPUはAMD MI350XのみでNVIDIA Blackwell実機は未評価。dense Qwen3-8B decode中心でprefillやMoEは主要end-to-end対象外。"
   },
-  "reservation": {"claim_id":"claim-d53062f6ce8af0e476180ce0","worker_id":"work-library-repair-20260916","worker_kind":"work"}
+  "reservation": {
+    "claim_id": "claim-1f5b634be6acbecd230032d1",
+    "worker_id": "scheduled-chat-discovery-specialist-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
