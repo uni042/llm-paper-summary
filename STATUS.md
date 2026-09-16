@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 01:40:40 JST**
+> 自動生成: **2026-09-17 01:40:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **18** |
-| 未claim Research job | **17** |
-| 直近24hの検証済みResearch収録 | **86** |
-| 最終検証済みResearch収録 | **09-17 01:38:52 JST（1分前）** |
+| 収録候補論文 | **17** |
+| 未claim Research job | **16** |
+| 直近24hの検証済みResearch収録 | **87** |
+| 最終検証済みResearch収録 | **09-17 01:40:46 JST（4秒前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **18** |
+| canonical_id確認済みの一意な候補論文 | **17** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **18** |
+| 非終端Research job合計 | **17** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **21** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **6** | **6** | **0** | **0** | **0** | **15** |
-| 合計 | **40** | **14** | **10** | **4** | **1** | **0** | **15** |
+| 合計 | **41** | **14** | **10** | **4** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 01:40:46 JST** [research] `arXiv:2609.06663` — ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics
+  - job: `.survey/work-queue/jobs/job-research-648fe1e5b80283fd.json`
+  - result: `.survey/work-queue/results/research/attempt-e515885033d647a55b19de09.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e515885033d647a55b19de09.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md`
 - **09-17 01:38:52 JST** [research] `arXiv:2512.09427` — ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators
   - job: `.survey/work-queue/jobs/job-research-3165425bd10baa45.json`
   - result: `.survey/work-queue/results/research/attempt-0eb4936a46a9da87b23225fa.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-b2e9f34d23136fee84c1cbfc.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b2e9f34d23136fee84c1cbfc.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md`
-- **09-16 23:00:59 JST** [research] `arXiv:2601.00397` — Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-82da92628b1e61c3.json`
-  - result: `.survey/work-queue/results/research/attempt-192955c3ea3e82bbfd4200fb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-192955c3ea3e82bbfd4200fb.json`
-  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md`
 
 ### Audit
 
@@ -240,7 +240,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **18** |
+| ready | **17** |
 
 ### 候補の重複・識別情報欠損
 
@@ -260,7 +260,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **634** |
+| inference/training/survey配下の論文Markdown実体 | **635** |
 
 ### immutable submissionの未照合
 
@@ -268,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **389** |
-| └ Research | **262** |
+| 成功result未照合のimmutable submission | **388** |
+| └ Research | **261** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
