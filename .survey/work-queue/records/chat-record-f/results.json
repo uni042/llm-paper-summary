@@ -4,10 +4,24 @@
   "slot": "results",
   "attempt_id": "attempt-2d848caaa085c3e2771f5f21",
   "job_id": "job-research-e8148d67a04de0eb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2d848caaa085c3e2771f5f21",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "最高周波数は最大速度を得るがエネルギー効率が低く、Qwen2-1.5Bの例では最適周波数で効率が70%向上し、処理量を20%落とすだけでも40%改善する余地がある。EnerInferはこの余地を未見モデル予測とオンライン補正で利用し、QoE=5トークン/秒では高性能スマートフォン50～65%、中価格帯26～27%、ノートPC10～15%、ボード9～24%の効率改善を達成する。熱制御では連続Qwen2.5-1.5B-Q4推論で、単純な効率最適設定より42℃到達までの生成トークンを27.9%、持続時間を32.1%増やす。実アプリ全体の総エネルギーも4.2～11%削減する。",
+    "key_results": [
+      {"metric": "高性能スマートフォンの復号エネルギー効率", "value": "+50～65% vs Default at QoE 5 tokens/s", "baseline": "NPU/DDR maximum frequency", "condition": "LLaMA2-1.3B Q4, Qwen2-1.5B Q4", "interpretation": "最大速度を要求しない場合の周波数余裕が大きい。"},
+      {"metric": "中価格帯スマートフォンの復号エネルギー効率", "value": "+26～27%", "baseline": "Default", "condition": "QoE 5 tokens/s", "interpretation": "端末性能帯が変わっても効率改善を維持する。"},
+      {"metric": "ノートPC/開発ボードの復号エネルギー効率", "value": "+10～15% / +9～24%", "baseline": "Default", "condition": "QoE 5 tokens/s", "interpretation": "スマートフォン以外にも一般化するが改善幅はプラットフォーム依存。"},
+      {"metric": "熱制約下の持続性", "value": "+27.9% tokens, +32.1% duration before 42℃", "baseline": "energy-aware control without thermal management", "condition": "Qwen2.5-1.5B-Q4, back-to-back inference from 37℃", "interpretation": "効率だけでなく温度将来予測を入れることで熱閾値到達を遅らせる。"},
+      {"metric": "温度予測", "value": "MAE 0.16℃, R² 0.988", "baseline": "ground-truth shell temperature", "condition": "1–21 s horizon, about 30k segments", "interpretation": "軽量線形回帰でも短期熱制御に十分な精度を得る。"},
+      {"metric": "実アプリ総エネルギー", "value": "4.2～11% reduction", "baseline": "Default", "condition": "text polishing and conversation with active foreground display", "interpretation": "復号以外のCPU・GPU・表示電力を含めても端末全体で削減が残る。"}
+    ],
+    "negative_results": [
+      "QoEを満たす最小周波数を選ぶDeadline方式は必ずしも効率的ではなく、ノートPCやボードではDefaultよりエネルギー効率が悪化する条件がある。",
+      "ボードでは効率順位のKendall相関が0.65と低いが、設定間の効率差自体が小さいためOracleとの差は小さい。",
+      "動的疎性や投機的復号は反復ごとの有効計算量が変化するため、現行の静的構造特徴だけでは処理量・電力を直接予測できない。",
+      "新しいプラットフォームへ移植するには約300合成モデルを各周波数設定で測る再学習工程が必要で、完全なゼロショット移植ではない。"
+    ],
+    "quality_impact": "評価範囲では指定した復号速度QoEを違反せず、熱制御時も快適温度を長く維持する。改善はモデル出力精度を犠牲にする量子化変更ではなく、同じモデルのハードウェア周波数制御で得る。",
+    "interpretation": "端末内LLMでは『最速設定=最良設定』ではなく、利用者が消費できる生成速度を下限として余剰性能をエネルギーと熱余裕へ交換できる。重要なのは最低周波数を選ぶことではなく、モデル・端末ごとに非単調な効率順位を予測し、実測フィードバックと熱履歴で補正することである。"
+  },
+  "reservation": {"claim_id": "claim-2d848caaa085c3e2771f5f21", "worker_id": "scheduled-chat-hourly-survey-20260916T142343JST", "worker_kind": "scheduled_chat"}
 }
