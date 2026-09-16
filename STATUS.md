@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 14:15:14 JST**
+> 自動生成: **2026-09-16 14:15:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **43** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-16 14:14:27 JST（47秒前）** |
+| 最終検証済みResearch収録 | **09-16 14:14:27 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -177,12 +177,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
+- `arXiv:2603.07770` — ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs / worker `scheduled-chat-llm-survey-20260916T135756JST`
+  - claim: **09-16 14:15:32 JST** / heartbeat: **—** / lease expiry: **09-16 15:45:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f3ec00db7d9723b7.json`
 - `arXiv:2606.28565` — KernelSight-LM: A Kernel-Level LLM Inference Simulator / worker `scheduled-chat-discovery-specialist-20260916T1400JST`
   - claim: **09-16 14:14:17 JST** / heartbeat: **—** / lease expiry: **09-16 15:44:17 JST**
   - evidence: `.survey/work-queue/claims/job-research-b8521dbc1f501e0d.json`
-- `arXiv:2604.25899` — Pythia: Toward Predictability-Driven Agent-Native LLM Serving / worker `scheduled-chat-llm-survey-20260916T135756JST`
-  - claim: **09-16 14:14:17 JST** / heartbeat: **—** / lease expiry: **09-16 15:44:17 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f79de4903a69120c.json`
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey-20260916T133043JST`
   - claim: **09-16 13:54:44 JST** / heartbeat: **09-16 14:00:08 JST** / lease expiry: **09-16 15:30:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
@@ -236,8 +236,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **285** |
-| └ Research | **171** |
+| 成功result未照合のimmutable submission | **286** |
+| └ Research | **172** |
 | └ Discovery | **114** |
 
 ### 厳格検証が未成立のcompleted job
