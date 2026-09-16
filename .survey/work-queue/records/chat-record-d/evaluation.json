@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-428f28e1f2d60e7c980a0805",
-  "job_id": "job-research-21d58015b4f64394",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-428f28e1f2d60e7c980a0805",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-428f28e1f2d60e7c980a0805","job_id":"job-research-21d58015b4f64394","data":{"evaluation_summary":"単一H100 NVLで4モデルをBF16・TP=1で評価。cold prefill 52 cells/377 role rows、warm prefill 12/90、decode 40/292の計104 cells・759 rowsに加えB=32検証を行う。各点は3回以上warmup後、NCU 2024.3の生レポートから役割別に集約する。","scope":"単一H100 NVL、BF16、TP=1、vLLM 0.16、FA3、cuBLASLt。FP8、tensor parallel、他H100 SKU、実運用の中間prefix hit率には絶対値を一般化しない。","hardware":["NVIDIA H100 NVL 94GB HBM3","132 SM / 528 Tensor Cores","60MB L2","3.9TB/s HBM3","BF16 dense peak 835 TFLOP/s"],"software":["vLLM 0.16","FlashAttention-3","cuBLASLt Hopper GMMA","CUDA Graphs","NVIDIA Nsight Compute 2024.3"],"models":["Meta-Llama-3-8B","Qwen3-14B","Qwen3-32B","Qwen3-30B-A3B top-8/128 MoE"],"datasets":["synthetic prompt/prefix-cache states for controlled profiling"],"workload":"cold prefillはprefix caching off、warm prefillは同一prompt warmupで≥99.2～99.9% hit、decodeはB=1,2,4,8を主掃引しB=32検証を追加。Sは2K～16K。","baselines":["cold prefill","warm prefill","decode","B=1 vs B=32 validation"],"metrics":["SM time-utilization","SM coverage","achieved warps/SM","occupancy vs 64-warp architecture","occupancy vs kernel cap","stall budget","device-wide Compute SOL","GMMA fragment fill","wave efficiency","L2 fit ratio","analytical launch overhead","kernel-selection diversity"],"methodology":"NCU MemoryWorkloadAnalysis/LaunchStats/SpeedOfLight/WarpStateStats/Occupancyを収集し、.ncu-repからstall・tensor-pipe・FA3 main/combineを再抽出。利用指標は層間平均、token時間は役割和で計算し、異なる分母の指標を同一カーネル呼出しで三角測量する。","predictor_accuracy":"予測器ではない。B*の線形外挿はB=32実測armで検証し、Qwen3-14Bは約31で交差、Llama-3-8Bは接近。","control_knobs":"regime、context S、batch B、prefix cache hit endpoint、kernel role、model architecture。"},"reservation":{"claim_id":"claim-428f28e1f2d60e7c980a0805","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
