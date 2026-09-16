@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:38:55 JST**
+> 自動生成: **2026-09-16 15:39:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.07282` — Separating Stream Stability from Long-Term Recall in Language Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 15:37:05 JST** / heartbeat: **—** / lease expiry: **09-16 17:07:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5204297ffdb35cfd.json`
+- `arXiv:2609.07306` — RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 15:39:15 JST** / heartbeat: **—** / lease expiry: **09-16 17:09:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e59ec36b619f9b0c.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-f9d44874a1b28506.json`
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **322** |
-| └ Research | **188** |
+| 成功result未照合のimmutable submission | **323** |
+| └ Research | **189** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 

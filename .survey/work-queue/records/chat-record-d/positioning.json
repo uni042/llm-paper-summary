@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-487680ad83745b110d11f463","job_id":"job-research-5204297ffdb35cfd","data":{"positioning":"StreamingLLM等の固定KVストリーミング、Transformer-XLや再帰記憶、InfLLM等の検索・外部メモリ、LongBench/RULER等の長文評価を一つの評価座標へ接続する研究。新しいキャッシュ方式そのものより、各方式が何を延長したかを誤認しない測定契約が中心。","differences":"従来の長文評価は最大入力長、パープレキシティ、needle検索、タスク得点のいずれかを単独で報告しがちである。ThreeHは同じ永続状態・計算予算で安定性、因果アクセス、タスク効用を別々の距離曲線として要求し、外部検索ストレージも資源へ含める。","relation_to_prior_work":[{"work":"StreamingLLM","difference":"注意シンクの固定メモリ安定生成という本来の成果を再確認しつつ、シンクが追い出された後続内容の意味記憶ではないことを因果保持で分離する。"},{"work":"LongBench / RULER / needle tests","difference":"有限長の長文利用だけでなく、ストリーム安定性と共通状態予算を追加し、保持成功を反実仮想値変更で検証する。"},{"work":"Transformer-XL / recurrent memory","difference":"圧縮・再帰状態がアクセス距離を伸ばしても干渉で実用距離が短くなり得るため、保持と利用を別指標にする。"},{"work":"retrieval-augmented memory / InfLLM","difference":"外部ストア容量と検索遅延を隠れた無料メモリにせず、装置内状態とは別に明示して比較する。"}],"strengths":["安定性と長期記憶が論理的に独立であることを構成的命題で示す。","同じW=2048条件で注意シンクの安定性利益と保持限界を数値で再現する。","反実仮想保持により流暢な推測を記憶成功から除外する。","装置内・外部状態と検索遅延まで共通資源予算へ含める。","失敗を追い出し、圧縮、検索、利用へ分解できる。"],"limitations":["到達距離は採用する閾値とタスク分布に依存し、モデル固有の普遍的定数ではない。","任意のニューラル内部状態について完全な因果アクセス距離を直接観測できず、実験は介入条件下の境界を与える。","反実仮想ストリームの編集が不自然になると保持測定自体へ分布ずれが入る。","プライバシー、事実性、較正、悪意あるメモリ内容への頑健性はThreeHの三軸に含まれない。","概念的5方式比較のため、実運用の大規模サービングでの費用を網羅する性能ベンチマークではない。"],"implementation_status":"ThreeH評価契約と比較実験を提示する評価・分析研究。新規の本番推論エンジンを提供する論文ではない。","research_positioning":"『コンテキスト長』を単一の数字から、安定性・アクセス・実用性という異なるシステム能力へ分解する。bounded-memory推論、再帰圧縮、外部メモリを比較する際の評価設計として有用。","repository_fit":"その他推論システム系統の評価方法論として適合し、KVキャッシュ削減や階層メモリ論文が長期能力を主張するときに、何を保持・利用できるかを検証する共通契約を提供する。"},"reservation":{"claim_id":"claim-487680ad83745b110d11f463","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-6706504bb5bc81c853af84cc",
+  "job_id": "job-research-e59ec36b619f9b0c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6706504bb5bc81c853af84cc",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
