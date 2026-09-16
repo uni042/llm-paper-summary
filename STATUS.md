@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:24:08 JST**
+> 自動生成: **2026-09-16 12:29:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **54** |
 | 未claim Research job | **53** |
 | 直近24hの検証済みResearch収録 | **29** |
-| 最終検証済みResearch収録 | **09-16 12:19:46 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 12:19:46 JST（10分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -163,8 +163,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.03910` — NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference / worker `scheduled-chat-llm-survey-20260916T025906Z`
-  - claim: **09-16 12:22:27 JST** / heartbeat: **—** / lease expiry: **09-16 13:52:27 JST**
+- `arXiv:2606.03910` — NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-16 12:29:50 JST** / heartbeat: **—** / lease expiry: **09-16 13:59:50 JST**
   - evidence: `.survey/work-queue/claims/job-research-8548d3d173ce3871.json`
 - `arXiv:2607.23099` — Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch / worker `scheduled-chat-discovery-specialist-00`
   - claim: **09-16 12:20:14 JST** / heartbeat: **—** / lease expiry: **09-16 13:50:14 JST**

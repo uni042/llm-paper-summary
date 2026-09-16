@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-648b888f283ca0a7f951062d",
+  "attempt_id": "attempt-6f777f4f05d94ad725a15c92",
   "job_id": "job-research-8548d3d173ce3871",
   "data": {
     "limitations": "評価はflow-level simulatorのみで実GPU/RDMA clusterのend-to-end測定がない。decode iteration時間も公開値からfitしており、NIC queueingやkernel-bypass overheadを含まない。transfer、queue、first decodeを直列加算するため、Mooncake等が行う転送と計算の重畳が強い環境ではnetwork項の可視時間を過大評価する。tier別混雑集約はECMPの個別link collisionを見えなくし、greedy per-request選択は複数同時要求をjoint optimizeしない。TP=4中心でTP=8の候補pool縮小は未検証。",
@@ -11,8 +11,8 @@
     "research_positioning": "prefill/decode分離とKV cache routingの間にnetwork topologyを第三のスケジューリング信号として加える研究。CPU DRAM/SSDを経由するmulti-hop KV routingへも自然に拡張でき、各hopのtier costを加算できるため、階層KV保存研究と直接接続する。SSD-backed KVではstorage read latencyだけでなく、SSD/CPU nodeからdecode GPUまでのnetwork pathも共同最適化する余地を示す。"
   },
   "reservation": {
-    "claim_id": "claim-648b888f283ca0a7f951062d",
-    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "claim_id": "claim-6f777f4f05d94ad725a15c92",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

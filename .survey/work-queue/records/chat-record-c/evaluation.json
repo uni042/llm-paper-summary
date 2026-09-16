@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-648b888f283ca0a7f951062d",
+  "attempt_id": "attempt-6f777f4f05d94ad725a15c92",
   "job_id": "job-research-8548d3d173ce3871",
   "data": {
     "hardware": "64 H100相当GPUをモデル化した4階層fat-tree。TP=4。Tier 0同一node、Tier 1同一rack、Tier 2同一pod、Tier 3 cross-podの帯域/遅延差を設定。",
@@ -11,8 +11,8 @@
     "scope": "全数値はシミュレーションであり物理GPU/RDMA cluster実測ではない。ネットワークモデルは単一flowとfair sharingを解析値へ0.1%以内で検証し、推論時間は公開値へ25%以内でcross-validationするが、NIC driver queue、completion queue、kernel bypass等はモデル外。"
   },
   "reservation": {
-    "claim_id": "claim-648b888f283ca0a7f951062d",
-    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "claim_id": "claim-6f777f4f05d94ad725a15c92",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

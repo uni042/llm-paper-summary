@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-648b888f283ca0a7f951062d",
+  "attempt_id": "attempt-6f777f4f05d94ad725a15c92",
   "job_id": "job-research-8548d3d173ce3871",
   "data": {
     "overview": "NetKVはネットワーク距離と混雑を考慮してKV転送を近いtierへ寄せ、転送時間を直接削減する。RAG 100%負荷ではCLA*のcross-pod比68%を31.1%へ下げ、same-podを32%から68.9%へ増やし、平均転送時間を835msから620msへ25.7%削減する。負荷・文脈長・oversubscriptionが増えネットワーク項が大きくなるほどTTFT利益が拡大し、TBT増加は全条件0.5ms未満に留まる。",
@@ -41,8 +41,8 @@
     "quality_impact": "配置先だけを変更しモデル計算・KV精度を変えないため生成品質への影響はない。"
   },
   "reservation": {
-    "claim_id": "claim-648b888f283ca0a7f951062d",
-    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+    "claim_id": "claim-6f777f4f05d94ad725a15c92",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
