@@ -1,51 +1,15 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-16T22:05:07+00:00",
-  "last_run_key": "2026-09-17T07:00:00+09:00",
-  "last_round": "specialist-scheduling-memory-1",
+  "updated_at": "2026-09-16T22:11:19+00:00",
+  "last_run_key": "2026-09-17T07:10:00+09:00",
+  "last_round": "legacy-invalid-recovery-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 33,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T20:00:00+09:00",
-      "round": "specialist-critical-buffer-runtime-storage-moe-1",
-      "axis": "GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御",
-      "query_summary": "candidate在庫がcritical watermark未満のため、直近の高重複CXL候補の単純反復を避け、GPU runtime/networking、agentic KV storage I/O、CXL sparse-attention KV、MoE expert cache/router、prefix-aware servingを横断して一次資料のtitle/abstract/書誌情報を軽量評価した。投入直前に最新mainのqueueとcanonical arXiv IDを再確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 5,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.16666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.18141"
-      ],
-      "next_axis_hint": "今回採用したBlink/DualPath/Cache-Aware Routerを起点に、GPU persistent scheduling・SmartNIC/RDMA control plane、storage NIC load balancing、MoE cache-aware routingの被引用/参考文献へ展開し、同じCXL既知候補の反復は避ける",
-      "source_submission": "work-queue/submissions/20260912T2058JST-discovery-specialist-1.json"
-    },
-    {
-      "run_key": "2026-09-12T21:30:00+09:00",
-      "round": "normal-worker-critical-inventory-axis-rotation",
-      "axis": "heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute",
-      "query_summary": "候補在庫がcritical水位だったため、直前のKV中心探索から、異種モデル間KV共有、cold MoEの重み/KV分離、NAND中心計算アーキテクチャへ探索軸を回転した。前回未実体化のシステム指向KVサーベイも最新正本で再確認した。実質7候補を照合し、既知3件を除外、未登録4件を提出した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 4,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.42857142857142855,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.18431",
-        "arXiv:2604.25080",
-        "arXiv:2606.25353"
-      ],
-      "next_axis_hint": "次回はKV中心語をいったん弱め、MoE expert placement/prefetch、GPU仮想メモリ、OS/DBMSの階層ストレージスケジューリング、CXL/NVMe協調へ回転する。",
-      "source_submission": "work-queue/submissions/20260912T2130JST-discovery-815a11adca713d7e.json"
-    },
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "round": "normal-worker-critical-inventory-expert-prefetch-rotation",
@@ -6715,6 +6679,42 @@
       ],
       "next_axis_hint": "採用候補のforward/backward citationと、CPU serving・network/topology-aware servingへ独立軸を移す。2025 scheduling keywordの同一検索窓は直ちに反復しない。",
       "source_submission": "work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
+    },
+    {
+      "run_key": "2026-09-17T07:10:00+09:00",
+      "round": "legacy-invalid-recovery-1",
+      "axis": "recovery-of-invalid-discovery-submissions",
+      "query_summary": "Recovery-only round reconstructed from durable 2026-09-16 21:00/22:00 JST Discovery submissions rejected by the old validator. No new search or re-reading was performed; original candidate metadata is preserved and canonical final deduplication remains authoritative.",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "legacy-invalid-recovery-2",
+      "source_submission": "work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json"
+    },
+    {
+      "run_key": "2026-09-17T07:10:00+09:00",
+      "round": "legacy-invalid-recovery-2",
+      "axis": "recovery-of-invalid-discovery-submissions",
+      "query_summary": "Recovery-only round reconstructed from a durable 2026-09-16 22:00 JST Discovery submission rejected by the old validator. No new search or re-reading was performed; original candidate metadata is preserved and canonical final deduplication remains authoritative.",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "resume-normal-discovery",
+      "source_submission": "work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json"
     }
   ],
   "axes": {
@@ -10921,6 +10921,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "採用候補のforward/backward citationと、CPU serving・network/topology-aware servingへ独立軸を移す。2025 scheduling keywordの同一検索窓は直ちに反復しない。"
+    },
+    "recovery-of-invalid-discovery-submissions": {
+      "last_run_key": "2026-09-17T07:10:00+09:00",
+      "rounds": 2,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 6,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 6,
+      "accepted_count": 6,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "resume-normal-discovery"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
