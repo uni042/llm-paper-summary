@@ -16,6 +16,11 @@ on:
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
+  # Commits pushed by another workflow with GITHUB_TOKEN do not emit a new push
+  # workflow event. Periodic refresh closes that observability gap for helper/recovery
+  # commits while the renderer still derives every value from durable evidence.
+  schedule:
+    - cron: '7/10 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -41,6 +46,7 @@ jobs:
   publish:
     if: >-
       (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch'
     needs: validate
     runs-on: ubuntu-latest
