@@ -1,13 +1,9 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-41a7fdaa747fc1f8c0650e98",
-  "job_id": "job-research-408799bbc4fac119",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-41a7fdaa747fc1f8c0650e98",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-41a7fdaa747fc1f8c0650e98","job_id":"job-research-408799bbc4fac119",
+ "data":{
+  "hardware":"LoCoMoのQwen2.5-3B、Qwen3-4B、Mistral-7Bは単一NVIDIA A100で評価する。AMA-BenchのQwen3-32Bとスループット測定はメモリ・計算量のため単一H200を使用する。スループットは2K、4K、8K、16Kトークン/要求とバッチ1、4、8、16を掃引する。",
+  "software":"エージェントメモリはノート型AMemと階層グラフ型LiCoMemoryを使用し、KV再利用比較対象は高ずれトークンを選ぶCacheBlendと質問依存選択のProphetKV。完全KV再計算を品質上限として比較する。量子化併用ではFP8、KIVI 2/4-bit、OTT 2/4-bitを試す。",
+  "methodology":"長期対話メモリのLoCoMoでは10個の長い複数セッション会話から多段・時間・推論質問を評価し、F1、ROUGE-1、BLEU-1を測る。3B〜7Bの三モデルとAMem/LiCoMemoryの組合せで主に再計算率10%を比較する。AMA-Bench-RecallではQwen3-32BとAMemを使い、Embodied AI、Game、OpenWorld QA、Software、Text2SQL、Webの6領域でF1とGPT-4o判定の二値正解率を測り、主に再計算率30%を使う。さらにLoCoMo Qwen2.5-3Bで再計算率5〜95%を掃引し、品質が完全再計算へ近づく速度を比較する。プリフィル性能はモデル規模、文脈長、バッチを変え、完全再計算に対する高速化倍率を測定する。KV量子化併用では再計算率10%と30%でF1を比較する。",
+  "scope":"方式は取得済みメモリ単位のKV再利用に特化し、通常の安定した共通接頭辞キャッシュとは問題設定が異なる。主品質評価はLoCoMoとAMA-Benchで、AMA-Benchの状態更新・因果推論・状態抽象化など複数メモリ間の高度な推論では完全再計算との差がRecallより大きい。スループットは単一GPU環境であり、分散サービング、KV転送、複数要求間スケジューリングの効果は含まない。"
+ },"reservation":{"claim_id":"claim-41a7fdaa747fc1f8c0650e98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
