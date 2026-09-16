@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 03:38:11 JST**
+> 自動生成: **2026-09-17 03:38:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **24** |
-| 未claim Research job | **23** |
-| 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 02:36:39 JST（1時間1分前）** |
+| 収録候補論文 | **23** |
+| 未claim Research job | **22** |
+| 直近24hの検証済みResearch収録 | **90** |
+| 最終検証済みResearch収録 | **09-17 03:38:32 JST（5秒前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **24** |
+| canonical_id確認済みの一意な候補論文 | **23** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **24** |
+| 非終端Research job合計 | **23** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **8** | **4** | **4** | **1** | **0** | — |
+| Research | **16** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **31** | **10** | **6** | **4** | **1** | **0** | **5** |
+| 合計 | **32** | **10** | **6** | **4** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 03:38:32 JST** [research] `arXiv:2609.13161` — PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation
+  - job: `.survey/work-queue/jobs/job-research-9f909dd53a5f1acb.json`
+  - result: `.survey/work-queue/results/research/attempt-942145c6596d2cfdf7866f97.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-942145c6596d2cfdf7866f97.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md`
 - **09-17 02:36:39 JST** [research] `arXiv:2504.11765` — Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs
   - job: `.survey/work-queue/jobs/job-research-d1705edaabc0afa6.json`
   - result: `.survey/work-queue/results/research/attempt-cb6c93d65c5d59b36245f7ee.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-b8af6d9aaac30b5ad36b0128.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b8af6d9aaac30b5ad36b0128.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md`
-- **09-16 23:40:05 JST** [research] `arXiv:2608.23962` — More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-b6c7fea1929c168e.json`
-  - result: `.survey/work-queue/results/research/attempt-bb7ad5df2e27b7d14f3debd4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bb7ad5df2e27b7d14f3debd4.json`
-  - paper: `papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md`
 
 ### Audit
 
@@ -224,7 +224,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **24** |
+| ready | **23** |
 
 ### 候補の重複・識別情報欠損
 
@@ -244,7 +244,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **637** |
+| inference/training/survey配下の論文Markdown実体 | **638** |
 
 ### immutable submissionの未照合
 
@@ -252,8 +252,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **395** |
-| └ Research | **268** |
+| 成功result未照合のimmutable submission | **394** |
+| └ Research | **267** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T18:07:16.078434+00:00",
+  "updated_at": "2026-09-16T18:38:37.191179+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T18:07:16.078434+00:00",
+      "last_recorded_at": "2026-09-16T18:38:37.191179+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 173,
+        "research_completed": 174,
         "audit_completed": 0,
         "discovery_completed": 85,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35064509412:1",
-          "recorded_at": "2026-09-16T06:36:59.220166+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35064509412",
-            "run_attempt": "1",
-            "source_sha": "5d3e690b4f48e04fc3736f67aae330d28a31cfb2"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35065020987:1",
           "recorded_at": "2026-09-16T06:43:44.426068+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35135526307:1",
+          "recorded_at": "2026-09-16T18:38:37.191179+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35135526307",
+            "run_attempt": "1",
+            "source_sha": "bcac78356f226ba15fffe2f831c28c23302b0c88"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21761,6 +21761,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-9f909dd53a5f1acb",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13161",
+          "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23045,7 +23053,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 637,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }

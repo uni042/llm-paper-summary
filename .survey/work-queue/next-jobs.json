@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "completed": 448,
-      "ready": 24,
+      "completed": 449,
+      "ready": 23,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 1,
@@ -18,25 +18,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 24,
+    "ready_research_audit": 23,
     "actively_claimed": 1,
-    "claimable": 23
+    "claimable": 22
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-9f909dd53a5f1acb",
-      "type": "research",
-      "lane": null,
-      "priority": 90,
-      "canonical_id": "arXiv:2609.13161",
-      "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
-      "source_url": "https://arxiv.org/abs/2609.13161",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-78cb8002e7b50e8e",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-ec631b9aeb6c5c21",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arXiv:2503.18599",
+      "title": "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2503.18599",
+      "paper_path": "papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T18:37:52+00:00"
+  "generated_at": "2026-09-16T18:38:32+00:00"
 }
