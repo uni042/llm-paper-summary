@@ -26,11 +26,7 @@ REPRESENTED_RESOLVER_FILE = "_represented_papers.json"
 
 README = """# Discovery identity precheck
 
-This directory is a derived lookup surface for Discovery workers. Exact identity shards are
-generated from `queue_worker.existing_candidate_keys()`, so they contain the same identity
-tokens as the final duplicate gate. `_represented_papers.json` folds the same canonical
-sources into paper-level alias groups so arXiv/DOI/OpenReview/URL/title representations can
-be treated as one paper before candidate evaluation.
+This directory is a derived lookup surface for Discovery workers. Exact identity shards are generated from `queue_worker.existing_candidate_keys()` and contain the same identity tokens as the final duplicate gate. `_represented_papers.json` folds the same canonical sources into paper-level alias groups so arXiv/DOI/OpenReview/URL/title representations can be treated as one paper before candidate evaluation.
 
 Before accepting a candidate, check the appropriate exact shard using the candidate's
 strongest available identity in this order: canonical/arXiv ID, DOI, OpenReview ID,
