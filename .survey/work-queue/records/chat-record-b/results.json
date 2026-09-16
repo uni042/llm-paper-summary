@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
-  "job_id": "job-research-0d9ff237f1d632e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"overview":"DOPDはLlama-3.3-70B-FP8のstatic Azure workloadでvLLM比goodput最大1.5倍、P90 TPOTを0.097sから0.079sへ短縮し、SLO違反5%未満で最大concurrencyを72から112へ増加。OPT-30BのDistServe比ではP90 TTFTを7.10sから2.31sへ削減しgoodputを最大27%改善、最大concurrencyを88から104へ増やす。BurstGPT dynamic workloadではSLO attainment 99.4%でDYN-SLA 87.3%、DYN-LOAD 80.8%を上回る。","key_results":[{"metric":"goodput","value":"最大1.5x","baseline":"vLLM","condition":"Llama-3.3-70B-FP8、Azure trace、同等4 GPU budget"},{"metric":"P90 TTFT","value":"7.10s→2.31s","baseline":"DistServe","condition":"OPT-30B、1P TP1 / 1D TP4"},{"metric":"goodput","value":"最大27%改善","baseline":"DistServe","condition":"OPT-30B static PD"},{"metric":"SLO attainment","value":"99.4%","baseline":"DYN-SLA 87.3%、DYN-LOAD 80.8%","condition":"BurstGPT dynamic trace"},{"metric":"P90 TPOT","value":"0.097s→0.079s","baseline":"vLLM","condition":"Llama-3.3-70B-FP8 static trace"},{"metric":"ARIMA overhead","value":"平均0.8s未満","baseline":"数百秒のreconfiguration interval","condition":"runtime prediction"}],"negative_results":["ultra-long promptの突発到来は平均長ベース予測を外し、一時的にsystem performanceを悪化させる。","現在はworkloadに応じたTP degree自体の動的選択を行わない。","H100+70Bの事前profileはTTFT約90分、TPOT約150分を要する。","scale-upは70B P-instanceで最大約30s、D-instanceはCUDA Graph loadingで約1.5倍長い。"],"quality_impact":"model品質は変更せず、SLOとresource efficiencyをserving layerで改善する。","interpretation":"PD disaggregationではKV transfer最適化だけでなく、producer-consumer capacityをload distributionに合わせて継続的に再平衡することがgoodputとGPU効率に重要である。"},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
