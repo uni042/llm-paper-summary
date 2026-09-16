@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-108502f64d0cd914bd44d7db","job_id":"job-research-9ef38f28c45d6f3a","data":{"hardware":"SmolLM2-1.7B-InstructはCPU規模の概念実証として評価し、主なLlama-3-8B-Instruct評価はKaggleのNVIDIA T4 GPU 2基で実施する。","software":"HuggingFace TransformersのDynamicCacheを利用する。Llama-3-8Bは32層、GQA 8 KVヘッド、4ビットNF4重み、bfloat16 KVキャッシュで実行し、全精度のエージェント別DynamicCacheを比較対象とする。","methodology":"モデルはSmolLM2-1.7B-InstructとLlama-3-8B-Instructの二規模、共有文脈は約600トークンから7,194トークンまでを用いる。並行エージェント数を3、5、10、15へ増やし、圧縮率、KVメモリ、文脈後半30%のパープレキシティ、生成結果のBERTScore F1を測る。文脈には単一話題のApollo 11・ARPANET文書とWikiText-2を使い、エージェント数と文脈長を独立に変えて、共有による容量効果と量子化品質を切り分ける。","scope":"共有接頭辞を持つ複数エージェントの実験であり、異なる文書を読むエージェント間では同じ共有率を得られない。主評価はT4 2基と二モデルに限られ、実サービスの到着過程、キャッシュ追い出し、複数利用者のスケジューリング、エンドツーエンドのスループット改善は中心評価ではない。"},"reservation":{"claim_id":"claim-108502f64d0cd914bd44d7db","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d590f8604009eff9499dc245",
+  "job_id": "job-research-f3f80e20575daf12",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d590f8604009eff9499dc245",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

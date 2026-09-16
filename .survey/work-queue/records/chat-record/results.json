@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-108502f64d0cd914bd44d7db","job_id":"job-research-9ef38f28c45d6f3a","data":{"overview":"キー8ビット・値3ビットの非対称圧縮は全条件で2.91倍の圧縮率を保つ。Llama-3-8Bで7,194トークンの共有文脈を15エージェントが読む条件では、エージェント別全精度KVの合計19.798 GBに対し共有圧縮プールは0.454 GBで、97.7%削減となる。この条件でもパープレキシティ増加は0.57%、平均BERTScore F1は0.928である。エージェント数を増やしても同じ共有文脈に対するパープレキシティ差は変化せず、品質誤差は読者数ではなく圧縮された共有KVに由来する。","key_results":[{"metric":"KV圧縮率","value":"2.91倍","baseline":"16ビットK/Vキャッシュ","condition":"二モデル・全文脈長・全エージェント数","interpretation":"K8/V3という固定ビット配分から決まる圧縮率で、モデルや読者数に依存せず安定する。"},{"metric":"KVメモリ削減","value":"19.798 GBから0.454 GB、97.7%削減","baseline":"15エージェントが各自7,194トークンの全精度KVを保持","condition":"Llama-3-8B、15エージェント、長文共有文脈","interpretation":"共有プール本体がエージェント数に比例しないため、読者数が増えるほど全精度個別キャッシュとの差が拡大する。"},{"metric":"パープレキシティ差","value":"+0.57%","baseline":"全精度KV","condition":"Llama-3-8B、7,194トークン、10および15エージェント","interpretation":"強いV圧縮を使っても長文条件では品質差が小さく、エージェント数を増やしても差が増えない。"},{"metric":"意味類似度","value":"平均BERTScore F1 0.928","baseline":"全精度KVからの生成","condition":"Llama-3-8B、15エージェント、7,194トークン","interpretation":"語句の違いを許容した意味レベルでも生成内容が概ね維持される。"}],"negative_results":"圧縮は非可逆であり、Llama-3-8Bの1,837トークン条件ではパープレキシティが1.59%悪化する。10エージェント条件では個別BERTScore F1が0.9008となる例もあり、全生成が一律に閾値0.92を超えるわけではない。長い一貫文脈でパープレキシティが改善する現象を著者は量子化雑音の正則化仮説で説明するが、制御実験による因果検証は将来課題としている。","interpretation":"容量削減は二つの独立効果の積で生じる。まず一つの共有プールにすることで共通文書KVのN重複を除き、さらにその一つを2.91倍圧縮する。したがってエージェント数が増えるほど共有効果が大きくなる一方、量子化による品質差は同じ圧縮KVを読む限りエージェント数に依存しない。","quality_impact":"非可逆量子化なので品質変化を伴う。短めのLlama-3-8B文脈では+1.59%、長文では+0.57%のパープレキシティ差を報告し、SmolLM2の1,851トークン一貫文脈では-0.26%となる。ただし改善値は正則化仮説であり一般的な品質向上を保証しない。"},"reservation":{"claim_id":"claim-108502f64d0cd914bd44d7db","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d590f8604009eff9499dc245",
+  "job_id": "job-research-f3f80e20575daf12",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d590f8604009eff9499dc245",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
