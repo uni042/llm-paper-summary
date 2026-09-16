@@ -1,49 +1,14 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2fcf28b8aab221ce876e00e2",
-  "job_id": "job-research-0dc2aa86e35f442f",
-  "data": {
-    "positioning": "OpWeaveはprefill/decode分離より細粒度なdecode内部のoperator-level disaggregation系に属する。MegaScale-InferやStep-3などがattention–FFN/MoE境界を固定するのに対し、OpWeaveはoperator boundary自体をplannerの決定変数へ昇格し、hybrid-attentionのlayer周期もpartition blockとして扱う点が差分である。",
-    "relation_to_prior_work": [
-      {
-        "work": "DistServe / Splitwise",
-        "difference": "prefillとdecodeのphase-level disaggregationが中心。OpWeaveはdecode内部のoperator stageを対象にする。"
-      },
-      {
-        "work": "MegaScale-Infer / Step-3",
-        "difference": "attention–FFN/MoEの固定分離を一般化し、stage boundary・hardware・parallelism・batchingをjoint optimizeする。"
-      },
-      {
-        "work": "AFD analytical provisioning",
-        "difference": "特定二段構成のprovisioningに対し、OpWeaveはhomogeneous/heterogeneous ODSの一般cost boundと任意partition planner/runtimeを結ぶ。"
-      },
-      {
-        "work": "Helix / Coral",
-        "difference": "heterogeneous GPUの配置最適化という系譜を共有するが、OpWeaveは単一LLMのdecode operatorをstageへ分割して異種device groupへ配置する粒度に焦点を置く。"
-      }
-    ],
-    "strengths": [
-      "理論条件と実systemを同じcost objectiveで接続",
-      "固定operator boundaryを外した一般planner",
-      "hybrid-attentionの規則性を使うpartition-block abstraction",
-      "vLLMベースruntimeまで実装しhomogeneous/heterogeneous実機で評価",
-      "stage数・通信量・idle時間を減らす機構とcost改善が対応している"
-    ],
-    "limitations": [
-      "理論解析はsteady-state decode、memory-bound attention、compute-bound GEMM、十分なmicrobatchingとcommunication overlap等のregime assumptionsに依存する。",
-      "profiled latency/communication modelの精度と探索対象hardware configurationにplanner品質が依存する。",
-      "主眼はdecode operator disaggregationであり、prefill/decodeを含む全phaseの統合最適化そのものではない。",
-      "異種GPUの利得はhardwareのcost-per-byteとcost-per-FLOPに有意なtrade-offがある場合に限られ、常にhomogeneousより有利ではない。",
-      "公開code URLは一次資料本文から確認できず、再現性はruntime公開状況に依存する。"
-    ],
-    "research_significance": "operator-level disaggregationを『attentionとFFNを分ける設計』から『任意operator partitionをcost/SLO制約下で合成する設計空間』へ拡張しており、異種GPUクラスタやhybrid-attentionモデルが一般化するほど重要性が増す。",
-    "repository_fit": "inference/11-llm-serving-scheduling-disaggregationに強く適合。MoE expert offloadingそのものではないが、MoE operatorを含むstage placementとheterogeneous servingの接点として関連する。"
-  },
-  "reservation": {
-    "claim_id": "claim-2fcf28b8aab221ce876e00e2",
-    "worker_id": "scheduled-chat-llm-survey-20260916T133043JST",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2fcf28b8aab221ce876e00e2","job_id":"job-research-0dc2aa86e35f442f",
+ "data":{
+  "positioning":"OpWeaveは、入力処理とデコードを分ける粗粒度な分離より一段細かく、デコード内部の演算子を別GPU群へ分ける研究系統に位置する。従来の代表方式が注意機構とフィードフォワード網または専門家層の境界を固定するのに対し、OpWeaveは境界そのものを配置計画の決定変数にし、混合注意モデルの層周期も分割ブロックとして扱う。",
+  "differences":"最大の差は、既存の分離方式を一つの固定構成として評価するのではなく、演算子境界、GPU種類、並列方式、バッチ構成を一つの探索問題へ統合した点にある。また、同種GPU分離と異種GPU分離の利得条件を費用モデルで説明し、その理論上の条件を実際の計画器とvLLM実行系へ接続している。",
+  "relation_to_prior_work":[{"work":"DistServe / Splitwise","difference":"入力処理とデコードの段階分離が中心であり、OpWeaveはデコード内部の演算子段を対象にする。"},{"work":"MegaScale-Infer / Step-3","difference":"注意機構とフィードフォワード網または専門家層の固定分離を一般化し、境界自体を探索する。"},{"work":"AFD analytical provisioning","difference":"特定の二段構成の資源割当解析に対し、OpWeaveは一般の演算子分割の費用境界、計画器、実行系を結ぶ。"},{"work":"Helix / Coral","difference":"異種GPUの配置最適化という考えを共有するが、OpWeaveは単一モデルのデコード演算子を細粒度に分割する。"}],
+  "strengths":["理論条件と実機システムを同じ費用目的で接続する。","固定境界を外した一般の演算子分割を扱う。","混合注意モデルの規則性を使って探索量を抑える。","vLLMを基礎とする実行系まで実装し、同種・異種GPUで検証する。","段数、通信量、待機時間の削減と費用改善の因果関係が明確である。"],
+  "limitations":["理論解析は定常デコード、注意機構のメモリ帯域律速、行列積の演算律速、十分なマイクロバッチと通信重畳などの仮定に依存する。","計画品質は事前計測した演算遅延と通信遅延の精度、探索対象として与えたGPU構成に依存する。","主眼はデコード内部の演算子分離であり、入力処理を含む全推論段階の統合最適化ではない。","異種GPUの利得はGPU間に帯域効率と演算効率の交換関係がある場合に限られ、常に同種構成より優れるわけではない。","論文本文から公開コードURLを確認できず、第三者による完全再現性は公開状況に依存する。"],
+  "implementation_status":"vLLMを基礎とする分散実行系を実装し、H100、L40S、A100を用いた実機評価まで行っているため、概念提案だけではない。一方、確認したarXiv本文には公開コードのURLが示されていないため、現時点では公開実装の有無を確定しない。",
+  "research_positioning":"演算子分離サービングを固定された注意・フィードフォワード二段構成から、任意の演算子分割を費用とサービス水準目標の制約下で合成する設計空間へ拡張した研究である。異種GPUと混合注意モデルが一般化するほど、配置計画の基準研究として重要になる。",
+  "repository_fit":"推論基盤のサービング・スケジューリング・分離実行系統に強く適合する。専門家混合モデルも対象に含むが、専門家の退避そのものより、演算子段の配置と異種GPU利用が中心である。"
+ },
+ "reservation":{"claim_id":"claim-2fcf28b8aab221ce876e00e2","worker_id":"scheduled-chat-llm-survey-20260916T133043JST","worker_kind":"scheduled_chat"}
 }
