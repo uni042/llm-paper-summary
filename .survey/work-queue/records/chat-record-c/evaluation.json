@@ -2,48 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4b181ffe9b1f03a47a7fd1ab",
-  "job_id": "job-research-997bb7245fdc3187",
-  "data": {
-    "scope": "実機の単一・複数nodeで評価する。通信特性の異なるRTX 3090、A100、H100を使い、Qwen3-30B-A3BとDeepSeek-V2-Liteの大expert-count MoEを対象にする。配置のlossless効果とpruningを加えたlossy効果を分けて評価し、精度はHumanEval、MMLU、GSM8K、PPLで測る。",
-    "evaluation_setup": "Node Aは8×RTX 3090でNVLink/GPU-Direct P2Pなし、Node Bは8×A100でPCIe P2P、Node Cは8×H100 NVLink。Cluster Aは2×8 H100を8×400Gbps InfiniBand、Cluster Bは同GPUを200Gbpsで接続。LMSYS-ChatとArxiv Abstractsを性能負荷にし、TTFT 6秒、TBT 500msをSLOとして90%以上要求が満たす最大入力率をthroughputとする。",
-    "models": [
-      "Qwen3-30B-A3B 128 experts",
-      "DeepSeek-V2-Lite 64 experts"
-    ],
-    "hardware": [
-      "8×RTX 3090",
-      "8×A100",
-      "8×H100 NVLink",
-      "16×H100 2-node 8×400Gbps InfiniBand",
-      "16×H100 2-node 200Gbps"
-    ],
-    "workloads": [
-      "LMSYS-Chat",
-      "Arxiv Abstracts",
-      "HumanEval",
-      "MMLU",
-      "GSM8K"
-    ],
-    "metrics": [
-      "SLO準拠throughput",
-      "latency",
-      "平均訪問GPU/node数",
-      "load imbalance",
-      "perplexity",
-      "benchmark accuracy",
-      "offline optimization overhead"
-    ],
-    "baselines": [
-      "vLLM/SGLang sequential placement",
-      "DeepSeek EPLB",
-      "naive dynamic expert pruning"
-    ],
-    "simulation_assumptions": "主要性能値は実機。placement生成はrouting trace統計に基づき、pruning thresholdはQwen3 p=0.3、DeepSeek p=0.1等を代表点として用いる。",
-    "evaluation_caveats": "モデルは2種、clusterは最大16 H100。pruningを含む1.23〜1.86倍の結果は設定したaccuracy-performance knobに依存する。offline groupingは約8000 tokenのrouting統計を使う。"
-  },
+  "attempt_id": "attempt-c84dd14a67b788aace9f590e",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4b181ffe9b1f03a47a7fd1ab",
+    "claim_id": "claim-c84dd14a67b788aace9f590e",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }

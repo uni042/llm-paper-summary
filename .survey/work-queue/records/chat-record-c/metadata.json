@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4b181ffe9b1f03a47a7fd1ab","job_id":"job-research-997bb7245fdc3187","data":{"canonical_id":"arXiv:2607.05116","arxiv_id":"2607.05116","doi":"10.48550/arXiv.2607.05116","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference","summary":"CAPは、MoE推論の専門家配置を計算負荷均衡だけで決めると、同時に選ばれる専門家が別GPU・別ノードへ散らばり全対全通信が増える問題を扱う。まずルーティング履歴から専門家対の共活性確率を作り、同時に選ばれやすい専門家を同一GPU、さらに同一ノードへ集めて通信先数を減らす。次に通信最小配置から高頻度・低頻度専門家を交換して、通信量とGPU負荷不均衡の異なる配置列を生成し、対象機の通信・計算比に応じて実測プロファイルで選ぶ。さらに損失を許容する場合は、低いルーティングスコアだけでなく通信先削減効果も考慮して専門家を動的枝刈りする。RTX 3090/A100/H100の8GPU単一ノードとH100 16GPUの2ノード環境でQwen3-30B-A3BとDeepSeek-V2-Liteを評価し、vLLM型逐次配置やDeepSeek EPLBに対して1.23〜1.86倍のスループットを達成した。通信制約が強い機械では通信最小寄り、高速NVLink機では負荷均衡寄りが最適となり、配置の最適点がハードウェアで変わることを示す。","list_summary":"CAPはMoEの共活性から専門家を近接配置し、通信量と負荷均衡の配置スペクトルを機械別に選び、通信先を意識した動的枝刈りまで統合して全対全通信を削減する。","authors":["Xiao Shi","Yingying Sun","Jiangsu Du","Zhiguang Chen","Yutong Lu"],"authors_affiliations":"Sun Yat-sen University, Guangzhou, China。","published":"2026-07-06","publication":"arXiv:2607.05116v1","publication_type":"プレプリント","publication_status":"arXiv v1（2026-07-06提出）。一次資料から査読済み採録は確認できない。","lineage":"moe-inference-expert-offloading","topics":["MoE推論","専門家配置","全対全通信","共活性","負荷均衡","専門家枝刈り","ハードウェア適応"],"importance":"高。専門家配置と枝刈りを計算量だけでなく実際の通信先GPU・ノード数まで含めて最適化し、通信能力の異なる機械ごとに配置を選ぶ。","hardware_evaluation":"8×RTX 3090（CPU経由通信）、8×A100（PCIe GPU-Direct P2P）、8×H100 NVLink、2ノード×8 H100 NVLink + 8×400Gbps InfiniBand、同じく200Gbpsノード間接続を使用した実機評価。","hardware_details":"単一ノード3種で通信制約・均衡・通信豊富を比較。2ノード構成ではノード間通信費重みを変えて効果を検証。","quality_effect":"配置と通信・計算調整はルーティング先を変えないため無損失。通信を考慮した枝刈りは低ルーティングスコア専門家を削る損失型で、速度と精度の交換を利用者が閾値で制御する。","storage_targets":["GPU HBM上のMoE専門家重み"],"bottlenecks":["全対全通信量","ノード間通信","専門家負荷不均衡","高頻度専門家の集中","枝刈りによる精度低下"],"evidence_locations":["§I–III","§IV–VII","§VIII","Figures 11–15","Tables I–IV"],"source":"https://arxiv.org/abs/2607.05116","sources":["https://arxiv.org/abs/2607.05116","https://arxiv.org/html/2607.05116","https://arxiv.org/pdf/2607.05116"],"code":"","implementation":"vLLM/SGLang型MoE配置と比較できる配置生成・調整・枝刈り処理を実装。公開コードURLは論文本文から確認できない。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"一次資料の関連研究節を確認","references_total":0},"reservation":{"claim_id":"claim-4b181ffe9b1f03a47a7fd1ab","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c84dd14a67b788aace9f590e",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c84dd14a67b788aace9f590e",
+    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
+    "worker_kind": "scheduled_chat"
+  }
+}

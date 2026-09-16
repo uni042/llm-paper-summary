@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4b181ffe9b1f03a47a7fd1ab",
-  "job_id": "job-research-997bb7245fdc3187",
-  "data": {
-    "overview": "CAPは通信能力の異なる全テストベッドで最適な配置・枝刈り構成を選び、vLLM型逐次配置とDeepSeek EPLBに対して1.23〜1.86倍のSLO準拠throughputを達成した。最大改善は通信制約の強いRTX 3090環境で、負荷均衡だけを追うEPLBが通信量を増やしてDefaultと同等以下になる条件でも、共活性配置が訪問GPU数を減らす。A100では通信と負荷の中間配置、H100 NVLinkでは負荷均衡寄りが最速となり、同じモデルでもhardwareによって最適点が移る。",
-    "key_results": [
-      {
-        "metric": "SLO準拠throughput改善",
-        "value": "1.23〜1.86倍",
-        "baseline": "DeepSeek EPLB / vLLM sequential placement",
-        "condition": "single-node/multi-node、Qwen3/DeepSeek-V2-Lite",
-        "interpretation": "通信量を明示的に含めることで特に低帯域機で大きく改善する。"
-      },
-      {
-        "metric": "balanced A100でplacement adjustment単独効果",
-        "value": "20.4% / 23.4% / 16%改善",
-        "baseline": "通信最小初期配置 / EPLB / Default",
-        "condition": "Node B、Qwen3 placement spectrum",
-        "interpretation": "通信最小でも負荷最小でもない中間点が最速になる。"
-      },
-      {
-        "metric": "同じ33% latency低減に必要なpruning threshold",
-        "value": "CAP p=0.2、naive p=0.3",
-        "baseline": "naive routing-score pruning",
-        "condition": "Node A",
-        "interpretation": "通信先を消すexpertを優先することで少ない枝刈りで同じ速度を得て精度を残せる。"
-      },
-      {
-        "metric": "低帯域clusterのtopology-aware pruning",
-        "value": "13.35% latency低減",
-        "baseline": "inter-node cost c=1",
-        "condition": "Cluster B 200Gbps、c=5",
-        "interpretation": "node間通信が遅い場合はcross-node destinationを減らす価値が高い。"
-      },
-      {
-        "metric": "grouping安定性",
-        "value": "communication variation <2.9%、load imbalance variation <5.8%",
-        "baseline": "8000-request内16 windows",
-        "condition": "LMSYS Chat",
-        "interpretation": "頻繁なexpert regroupingなしでも共活性構造を再利用できる。"
-      },
-      {
-        "metric": "offline最適化時間",
-        "value": "6分以下",
-        "baseline": "8×A100、Qwen3、8000-token trace",
-        "condition": "36.72s trace収集 + 約80s初期配置 + 9.1s調整 + 約240s profile",
-        "interpretation": "model/machineごとに償却可能な前処理費。"
-      }
-    ],
-    "negative_results": "通信削減は常にlatency改善へ直結しない。Cluster Aの8×400Gbps InfiniBandではnode/tokenを2.85%減らしてもlatencyは0.92%悪化し、高速リンクでは通信削減より計算負荷均衡が重要になる。pruningは明確にlossyで、Qwen3例ではp=0.3でPPL 17.36→19.12、GSM8K -3.49pp、HumanEval -3.04pp、MMLU -2.80ppとなる。通信最小配置もhot expertsを集めて負荷不均衡を悪化させるため単独では最適でない。",
-    "interpretation": "MoE all-to-allの費用は選択expert数ではなくtokenが訪問するdistinct device/node数で決まる。大expert-countモデルではplacementに十分な自由度があり、共活性を利用して訪問先を減らせるが、同時にhotnessを偏らせるためhardwareの通信/計算比に合わせてtrade-offを選ぶ必要がある。",
-    "quality_impact": "placementとtrade-off adjustmentはexpert routing自体を変えず無損失。communication-aware pruningのみ損失型で、thresholdを上げるほど精度低下が増える。CAPは同じspeedupをより小さいthresholdで達成し、naive pruningより品質を保つことを狙う。"
-  },
+  "attempt_id": "attempt-c84dd14a67b788aace9f590e",
+  "job_id": "job-research-8f7fdb4eba0d8a63",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4b181ffe9b1f03a47a7fd1ab",
+    "claim_id": "claim-c84dd14a67b788aace9f590e",
     "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
     "worker_kind": "scheduled_chat"
   }
