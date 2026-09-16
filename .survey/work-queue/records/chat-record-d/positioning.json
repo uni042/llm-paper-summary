@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-469e2611139b80bc054bdf5f",
-  "job_id": "job-research-6802b144c10e4060",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-469e2611139b80bc054bdf5f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-469e2611139b80bc054bdf5f","job_id":"job-research-6802b144c10e4060","data":{"positioning":"ETCInferはLLMサービングのSLO対応スケジューリング、GPU省電力制御、データセンター熱・冷却制御の交点に位置する。Orca、DistServe、vLLMなどが要求処理・KVキャッシュ・分離実行を中心に扱うのに対し、GPUの物理温度と施設側空調を推論制御ループへ持ち込む。","differences":"TAPASのような熱対応スケジューラは温度を見て配置や資源を選ぶが、施設の空調設定温度をGPU周波数・マイクロバッチと共同最適化しない。DSOやDLLMはGPU側のDVFSや割当を制御するが冷却電力を目的関数へ直接含めない。ETCInferは両者を結合し、観測不能な熱状態を物理推定と学習型信念状態で補う。","relation_to_prior_work":[{"work":"vLLM / Orca / DistServe / Sarathi-Serve","difference":"サービング効率やプリフィル・デコードのスケジューリングを基礎として利用する一方、熱状態と空調電力を新たな制御対象へ加える。"},{"work":"TAPAS","difference":"GPU温度を考慮した配置だけでなく、空調設定温度、GPU周波数、マイクロバッチを同一の閉ループで操作する。"},{"work":"DSO / DLLM","difference":"GPU電力削減だけでなく、温度上昇が空調電力と実行時間へ与える影響を結合して総ジョブエネルギーを最小化する。"},{"work":"MPC / Robust MPC","difference":"固定された状態推定モデルだけでなく、観測履歴を使う信念符号化器とオンライン更新する世界モデルを用い、熱・遅延モデルのずれへ適応する。"}],"strengths":["計算電力と空調電力を同じジョブ単位目的関数へ統合する。","物理モデルを学習型制御へ組み込み、観測不能な熱状態と安全性を扱う。","CFDシミュレーションだけでなくRTX 3090/4090実機でも傾向を検証する。","固定温度、DVFS、熱対応配置、MPCなど複数系統の比較対象とアブレーションを用意する。","Qwen、DeepSeek、Mistralでも効果傾向を確認する。"],"limitations":["大規模施設の主要結果はCFDシミュレーションで、実施設のH100クラスタを用いたエンドツーエンド実測ではない。","実機は民生GPU8基規模であり、数千～数万GPUの空調遅延、ラック間熱結合、ネットワーク制約は直接検証していない。","空調設定をジョブ前に変更できる運用を仮定しており、実施設の制御周期や設備API制約によって適用可能性が変わる。","物理モデルはテレメトリ較正を必要とし、異なる筐体・冷却方式・GPU世代では再較正コストが生じる。","安全性は予測器精度とセンサー品質に依存し、未観測の故障や急激な外乱への保証は形式検証されていない。"],"implementation_status":"vLLM、Kubernetes、KServe、NVIDIA DCGM/NVML、PyTorchを組み合わせた実装を作成し、匿名コードリポジトリを公開している。CFDはオンライン要求経路ではなく較正・評価に用いる。","research_positioning":"推論基盤をGPUサーバ内部だけで閉じず、設備側エネルギーまで含むクロスレイヤ制御へ拡張する研究。AIデータセンターの電力制約が強まるほど、スループットだけでなく総設備エネルギーと熱余裕を共同最適化する方向の基盤例になる。","repository_fit":"サービング・スケジューリング・分離実行系統に適合し、既存のSLO・GPU資源スケジューリング研究へ施設冷却という新しい制御層を追加する隣接システム研究として位置付けられる。"},"reservation":{"claim_id":"claim-469e2611139b80bc054bdf5f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
