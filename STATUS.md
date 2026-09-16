@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 15:35:02 JST**
+> 自動生成: **2026-09-16 15:35:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -205,7 +205,7 @@
 
 - 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.15230` — ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 15:32:09 JST** / heartbeat: **—** / lease expiry: **09-16 17:02:09 JST**
+  - claim: **09-16 15:35:07 JST** / heartbeat: **—** / lease expiry: **09-16 17:05:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-6802b144c10e4060.json`
 - `arXiv:2605.25655` — Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers / worker `scheduled-chat-hourly-survey-20260916T142343JST`
   - claim: **09-16 14:46:58 JST** / heartbeat: **09-16 14:59:04 JST** / lease expiry: **09-16 16:29:04 JST**
