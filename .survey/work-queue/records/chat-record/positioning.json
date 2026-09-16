@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-949006ab20f962621eb53c05",
-  "job_id": "job-research-f992ed2fc8c47a46",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-949006ab20f962621eb53c05",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-949006ab20f962621eb53c05","job_id":"job-research-f992ed2fc8c47a46","data":{"limitations":"最大の制約は投機的デコードの受理率である。ドラフト候補が複数バッチにわたり受理されない場合、ドラフト計算を重ねても対象モデルが複数トークンを進められず加速効果が小さい。評価はMixtral 8x7B/8x22BとMistral 7B、単一RTX 4090、主に高スループット型ワークロードへ集中しており、他モデル系統・オンライン低遅延要求・複数GPUへの一般化は未実証。ParaSpec Plannerは事前プロファイルを必要とし、OS変動、ハードウェア測定誤差、候補受理の確率性により最適設定からずれる可能性がある。CPUメモリを超えてディスクへ退避すると性能は元の29.3%まで落ち、低速階層の帯域そのものは解消しない。","differences":"FlexGenが層重みの転送を大バッチで償却し、Fiddler等がCPU/GPUへMoE計算を分担するのに対し、SpecOffloadはオフロードが生むGPUの計算待ちと低効率なメモリ容量を別の推論仕事、すなわち投機的デコードへ再利用する。通常の投機的デコードをオフロードへ直列追加するとドラフト側のI/Oと切替が増えるため、二重バッチ交替と層内のCPU注意計算・FFN転送・GPUドラフト計算の同時実行を一体化している。さらにGPU/CPU/ディスクのテンソル配置と投機パラメータを同じ資源制約下で決める点が、単なる投機デコード導入との差である。","implementation_status":"Hugging Face Transformers 4.47.1上の公開研究実装がGitHubで提供され、Mixtral 8x7B/8x22B、Mistral 7B、HumanEval等の実行例とベンチマークコードを含む。2026-09-17確認時点でarXivプレプリントかつICLR 2026 OpenReview投稿として確認。","research_positioning":"階層メモリ／オフロード系統の中でも、データ移動量の削減だけでなくI/O待ちによる異種資源の不均衡を別計算で埋める方式に位置する。SSD/NVMeまで含む階層ではディスク帯域がなお支配的になる結果も示しており、将来のストレージ先読み・圧縮・直接転送方式と組み合わせる余地が大きい。MoEでは対象モデルのFFN重み転送とドラフト計算を重ねるため、エキスパート配置・予測型先読みとの統合も自然な拡張候補となる。"},"reservation":{"claim_id":"claim-949006ab20f962621eb53c05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
