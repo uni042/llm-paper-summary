@@ -2,11 +2,42 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-18d866f258b95d6f4efa6310",
-  "job_id": "job-research-3165425bd10baa45",
-  "data": {},
+  "attempt_id": "attempt-2b3fe7ceef25f417e76f16a0",
+  "job_id": "job-research-6252d370adc380b9",
+  "data": {
+    "positioning": "本研究は個々のrequest schedulingより上位のresource compositionを扱い、pipeline-parallel LLMでschedulerが選択可能なserver chain集合と各chainのKV concurrency capacityを事前設計する基礎最適化である。",
+    "differences": "vLLM等の単一instance内schedulerは既に配置されたmodel上でrequest順序を決めるのに対し、本研究は物理GPUへどのlayerを置き、残余memoryをどのchainのKVへ割り当てるかを先に決める。PETALS系のblock placement/request schedulingに近いが、implementation-specific heuristicではなくchain-structured memory-bound jobsとして抽象化し、NP-hard性とresponse-time boundsを与える。service-function chainingとも形は似るが、computeではなくmodel weightsとper-request KVが同じmemoryを競合する点を明示する。",
+    "relation_to_prior_work": [
+      {
+        "work": "vLLM / ordinary LLM schedulers",
+        "difference": "既存model instance内のrequest順序ではなく、instanceを形成するserver chainsとKV capacity自体を最適化する。"
+      },
+      {
+        "work": "PETALS-style block placement",
+        "difference": "block placementをcache allocationとload balancingへ結合し、queueing-theoretic performance boundsを与える。"
+      },
+      {
+        "work": "service function chaining",
+        "difference": "compute-cycle placementではなく、共有model weightsと専有per-request KVが競合するmemory-bound chainを扱う。"
+      }
+    ],
+    "strengths": [
+      "LLM固有のweight/KV memory競合を抽象問題として切り出し、NP-hard性と性能boundを示す。",
+      "offline compositionとonline load balancingを分離してスケーラブルな運用構造にする。",
+      "simulationだけでなくreal distributed LLM servingで63〜77% mean response-time削減を確認する。"
+    ],
+    "limitations": [
+      "static KV allocationを仮定し、requestごとの実sequence長差やdynamic growthを直接最適化しない。",
+      "一度開始したrequestはserver chain間を移動せずpreemptionもしない。",
+      "pipeline parallelism中心で、tensor parallelやexpert parallelとの共同配置は対象外である。",
+      "中央orchestrator前提であり大規模分散制御のoverheadは今後の課題である。"
+    ],
+    "implementation_status": "性能保証付きblock placement/cache allocation algorithmとJoin-the-Fastest-Free-Serverをreal distributed LLM serving systemへ適用した研究実装。公式code URLは確認できなかった。",
+    "research_positioning": "LLM servingをqueue schedulerだけでなく、memory-awareな論理server composition問題として扱う理論・システム橋渡しの研究である。",
+    "repository_fit": "99-other-inference-systemsのdistributed serving/resource allocation研究として、pipeline placement、KV capacity planning、load balancingの比較基準になる。"
+  },
   "reservation": {
-    "claim_id": "claim-18d866f258b95d6f4efa6310",
+    "claim_id": "claim-2b3fe7ceef25f417e76f16a0",
     "worker_id": "scheduled-chat-llm-survey-turn5-20260916T225915JST",
     "worker_kind": "scheduled_chat"
   }
