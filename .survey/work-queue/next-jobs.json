@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 62,
-    "actively_claimed": 1,
-    "claimable": 61
+    "actively_claimed": 2,
+    "claimable": 60
   },
   "next_jobs": [
     {
@@ -57,18 +57,6 @@
       "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
       "source_url": "https://arxiv.org/abs/2606.06256",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-bd280ca93f0a6940",
-      "type": "research",
-      "lane": null,
-      "priority": 85,
-      "canonical_id": "arXiv:2605.02960",
-      "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
-      "source_url": "https://arxiv.org/abs/2605.02960",
-      "paper_path": "papers/inference/06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -121,6 +109,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-32ece608ca43dae7",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2607.23099",
+      "title": "Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch",
+      "source_url": "https://arxiv.org/abs/2607.23099",
+      "paper_path": "papers/inference/06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-b6f805c0cbcee3d4",
       "type": "discovery",
       "lane": "discovery",
@@ -133,5 +133,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-16T03:11:27+00:00"
+  "generated_at": "2026-09-16T03:12:02+00:00"
 }
