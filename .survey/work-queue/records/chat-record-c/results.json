@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-c84dd14a67b788aace9f590e",
-  "job_id": "job-research-8f7fdb4eba0d8a63",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c84dd14a67b788aace9f590e",
-    "worker_id": "scheduled-chat-llm-survey-20260916T023111Z",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c84dd14a67b788aace9f590e","job_id":"job-research-8f7fdb4eba0d8a63","data":{"overview":"Fleetは小batchではpersistent kernelとXCD-local schedulingによりvLLMのoperator launch overheadを除き、batch 1〜8でdecode latencyを1.3〜1.5倍改善する。batchが増えると同一XCD内の複数workerがweight tileを共有でき、M-major cooperative tilingのL2 localityが追加利益を生む。batch 64ではMirage比L2 hit率39.0%→61.4%、HBM read 37%削減、1.30倍speedupとなる。","key_results":[{"metric":"vLLM比decode latency","value":"1.3〜1.5倍改善","baseline":"vLLM ROCm eager","condition":"batch 1〜8、Qwen3-8B MI350X","interpretation":"weight reuseが少ない小batchでもpersistent dispatchとchiplet schedulingが効く。"},{"metric":"batch 32 L2 hit / speedup","value":"51.0%、1.27倍","baseline":"Mirage 38.9%、15.62ms vs Fleet 12.35ms","condition":"M-tile cooperative traversal","interpretation":"2 workerでweight columnを共有しHBM readを18%削減。"},{"metric":"batch 64 L2 hit / speedup","value":"61.4%、1.30倍","baseline":"Mirage 39.0%、24.10ms vs Fleet 18.61ms","condition":"M-tile cooperative traversal","interpretation":"4 worker共有でHBM readを6203GB→3925GB、37%削減。"},{"metric":"effective arithmetic intensity","value":"batch 32で32→65 FLOP/byte","baseline":"nominal AI=32","condition":"L2 hit 51%","interpretation":"HBM traffic削減によりroofline上でcompute-bound側へ移動。"}],"negative_results":"M-splitはworker間weight共有を行わず、batch 64ではMirage比1.03倍に留まりHBM readも1.20倍へ増える。したがってpersistent schedulingだけでは大batchの性能を説明できず、cooperative L2 reuseが必要である。batch 1では理論的weight sharingはなく、Fleetのhit率向上は主にfusion由来である。","interpretation":"multi-die GPUではdevice内でもmemory localityが非一様であり、flat grid schedulingではprivate L2を共有できるworker関係を表現できない。task scopeをXCD scopeへ一致させることで、HBM bandwidthを追加せずeffective bandwidthを増やせる。","quality_impact":"数学的operatorを同じ精度で実行し、task decompositionとmemory access orderだけを変更するためモデル品質への損失はない。"},"reservation":{"claim_id":"claim-c84dd14a67b788aace9f590e","worker_id":"scheduled-chat-llm-survey-20260916T023111Z","worker_kind":"scheduled_chat"}}
