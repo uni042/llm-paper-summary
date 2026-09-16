@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 06:05:21 JST**
+> 自動生成: **2026-09-17 06:07:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **41** |
 | 未claim Research job | **40** |
 | 直近24hの検証済みResearch収録 | **93** |
-| 最終検証済みResearch収録 | **09-17 04:37:50 JST（1時間27分前）** |
+| 最終検証済みResearch収録 | **09-17 04:37:50 JST（1時間29分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **2** | **0** | **2** | **0** | **0** | **1** |
-| 合計 | **31** | **10** | **4** | **6** | **1** | **0** | **1** |
+| Discovery | **20** | **4** | **0** | **4** | **0** | **0** | **11** |
+| 合計 | **31** | **12** | **4** | **8** | **1** | **0** | **11** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -186,8 +186,13 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 06:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **1件**
-- 探索軸: 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding / 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
+- 耐久探索round: **3件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **11件**
+- round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
+- 探索軸: 既収録重要serving論文のforward citation・2025-2026 PD disaggregation・multi-LLM servingの未収録探索 / 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding / 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
+- round `specialist-forward-serving-3` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-forward-serving-3a.json`
+  - 探索軸: 既収録重要serving論文のforward citation・2025-2026 PD disaggregation・multi-LLM servingの未収録探索
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-recent-serving-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json`
   - 探索軸: 2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding
@@ -252,10 +257,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **398** |
+| 成功result未照合のimmutable submission | **400** |
 | └ Research | **269** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
