@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d97ee4e96b13d333e721d48c",
   "job_id": "job-research-98e8633cce3c47f1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d97ee4e96b13d333e721d48c",
-    "worker_id": "scheduled-chat-normal-20260917T063000",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "各ノード8基のNVIDIA H800-80GB。主要な同居型比較は64 GPU固定で、2P2Dのみプリフィル64 GPUとデコード64 GPUの合計128 GPUを使用する。ノード内はNVLink 4.0、ノード間は8×400 Gbps RoCE v2。",
+    "software": "PyTorch 2.11、CUDA 12.9。比較対象はSGLang 0.5.10.post1のEP16、vLLM 0.26.0のPP2、SGLang系2P2D。MoEカーネルはDeepGEMM/DeepEP、注意機構はFlashAttention-3を共通化する。",
+    "methodology": "GLM-4.7-360BとQwen3.5-397BをFP8ブロック量子化で配置し、ソフトウェア工学エージェントのSWE-Benchとウェブ探索エージェントのBrowseCompを評価する。各軌跡のターン要求、MTP受理長、ツール遅延を事前記録し、各方式へ同じ論理的な要求・トークン・外部待ちを決定論的に再生する。主要指標は全軌跡完了までのoverall JCTで、ケーススタディでは平均/P50/P90/P99のターンJCTも測る。通常の総同時実行数はBrowseComp 80、SWE-Bench 128。MTP対応系は3ドラフトトークン、1回の検証で4トークンを同時検証する。メモリ利用率は0.8、PipeSwiftとPD協調比較ではI=32を全モデル・全ワークロードで固定し、セルごとの調整は行わない。",
+    "scope": "評価は大規模MoE二種、H800クラスタ、SWE-Bench/BrowseCompの記録済み軌跡に集中する。オンライン到着分布そのものを自由に変える本番運用、密モデル、他世代GPU、PP3以上の実測は含まれない。2P2D比較は128 GPUを与える一方、複数の高負荷セルがKV転送タイムアウトで完走しないため、完走セルに限る比較がある。",
+    "benchmarks": ["SWE-Bench", "BrowseComp"],
+    "models": ["GLM-4.7-360B", "Qwen3.5-397B", "Qwen3-VL-235B"],
+    "budgets": ["64 GPU colocated", "128 GPU for 2P2D baseline"],
+    "reproducibility_notes": "モデル、GPU、ネットワーク、フレームワーク版、同時実行数、量子化、MTP幅、メモリ率、固定I=32、決定論的再生方法を明示する。論文はPipeSwiftを公開実装と記述するが、一次資料本文で公式リポジトリURLを確認できなかった。"
+  },
+  "reservation": {"claim_id": "claim-d97ee4e96b13d333e721d48c", "worker_id": "scheduled-chat-normal-20260917T063000", "worker_kind": "scheduled_chat"}
 }
