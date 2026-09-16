@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 21:40:34 JST**
+> 自動生成: **2026-09-16 21:40:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -196,7 +196,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.11537` — Fast MoE Inference via Predictive Prefetching and Expert Replication / worker `scheduled-chat-llm-survey`
-  - claim: **09-16 21:38:10 JST** / heartbeat: **—** / lease expiry: **09-16 23:08:10 JST**
+  - claim: **09-16 21:40:38 JST** / heartbeat: **—** / lease expiry: **09-16 23:10:38 JST**
   - evidence: `.survey/work-queue/claims/job-research-f3f80e20575daf12.json`
 
 #### Audit
