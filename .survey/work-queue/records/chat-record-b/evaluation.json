@@ -2,50 +2,58 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2b046e19162a735734acee9b",
-  "job_id": "job-research-0d64167980707ffd",
+  "attempt_id": "attempt-cd6a647437352aca5df92996",
+  "job_id": "job-research-0d9ff237f1d632e6",
   "data": {
-    "evaluation_summary": "五つの混合専門家モデルと一つの密モデルを対象に、重みを補助記憶へ退避する単一装置、高帯域メモリだけで重み容量を満たす複数装置、従来の高帯域メモリ＋高帯域フラッシュ方式と比較する。長文脈と複数バッチサイズを含め、復号一トークン当たり時間、実効フラッシュ帯域、エネルギー、必要画像処理装置数、フラッシュ更新寿命、追加面積を評価する。",
-    "scope": "単一装置・小規模ノードで容量が律速になる巨大モデル推論と、高帯域フラッシュを重み容量層として使うメモリ基盤。",
+    "evaluation_summary": "8基H100-SXM-80GB clusterでOPT-30B、Llama-3.3-70B-FP8、Qwen2.5-72B-FP8を評価。BurstGPT、Azure Code、Azure Conversationのproduction traceとShareGPT contentを用い、static P/D構成とdynamic scalingを分けて比較する。",
+    "scope": "PD-disaggregated servingのP/D比最適化、mixed-length scheduling、dynamic instance scaling。",
     "hardware": [
-      "高帯域メモリ搭載画像処理装置",
-      "高帯域フラッシュ Gen-1/Gen-2想定構成"
+      "8x NVIDIA H100-SXM-80GB"
     ],
     "software": [
-      "既存推論カーネルを変更しない透過的な重み読み出し経路"
+      "NVIDIA Dynamo",
+      "NIXL",
+      "Prometheus",
+      "NVML",
+      "etcd",
+      "NATS",
+      "ARIMA"
     ],
     "models": [
-      "DeepSeek-V3",
-      "DeepSeek-V4-Pro",
-      "Qwen3-235B-A22B",
-      "Llama-4 Maverick",
-      "Kimi K2",
-      "Llama-3.1-405B"
+      "OPT-30B",
+      "Llama-3.3-70B-FP8",
+      "Qwen2.5-72B-FP8"
     ],
     "datasets": [
-      "モデルごとの自己回帰復号負荷"
+      "BurstGPT",
+      "Azure Code Trace",
+      "Azure Conversation Trace",
+      "ShareGPT"
     ],
-    "workload": "百二十八キロトークン級文脈を含む復号と、バッチサイズ一・四・十六・六十四などの容量制約下推論。",
+    "workload": "production trace replayによるmixed-length・bursty request。static testではAzure trace先頭1024件、dynamic testではBurstGPT timestampを再生。",
     "baselines": [
-      "高帯域メモリ＋補助記憶",
-      "高帯域メモリだけの複数画像処理装置",
-      "従来の高帯域メモリ＋高帯域フラッシュ方式"
+      "vLLM",
+      "DistServe",
+      "Dynamo",
+      "DYN-LOAD",
+      "DYN-SLA"
     ],
     "metrics": [
-      "復号処理量",
-      "一トークン時間",
-      "実効フラッシュ帯域",
-      "エネルギー",
-      "必要装置数",
-      "追加面積",
-      "更新寿命"
+      "goodput",
+      "throughput",
+      "P90 TTFT",
+      "P90 TPOT",
+      "E2E latency",
+      "SLO attainment",
+      "GPU count/utilization",
+      "maximum concurrency"
     ],
-    "methodology": "容量だけで複数装置が必要になる最小適合構成について通信、同期、メモリ、計算時間を分解し、高帯域フラッシュ導入の動機を確認する。その後、動的読み出し結合、更新隔離、簡素化変換表を含む提案構成を三種類の基準方式と比較する。",
-    "predictor_accuracy": "予測器は用いず、実際の読み出し要求列をハードウェア側で観測して次の大粒度読み出しを決める。",
-    "control_knobs": "フラッシュ読み出し単位、先読み窓、面数、更新閾値、モデル、バッチサイズ、文脈長。"
+    "methodology": "P/D ratio計算の妥当性を固定ISL/OSLでP-instance数をsweepして確認後、同GPU budgetのstatic比較と、1P(TP1)+1D(TP2)から始めるdynamic trace replayを実施。",
+    "predictor_accuracy": "ARIMAはfuture concurrency誤差10 request以内かつISL/OSL誤差50 token以内をaccuracyと定義し87%以上。稀なburst failureは5%未満。",
+    "control_knobs": "P/D instance数、P/D TP、adjust interval、queue/KV overload threshold、short-request batch token budget、timeout。"
   },
   "reservation": {
-    "claim_id": "claim-2b046e19162a735734acee9b",
+    "claim_id": "claim-cd6a647437352aca5df92996",
     "worker_id": "scheduled-chat-discovery-specialist-0700",
     "worker_kind": "scheduled_chat"
   }
