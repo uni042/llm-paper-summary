@@ -4,10 +4,17 @@
   "slot": "results",
   "attempt_id": "attempt-7bba4de8acdf88007ff64c4d",
   "job_id": "job-research-7411280ca93364ec",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7bba4de8acdf88007ff64c4d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "KDNは固定サイズ再帰メモリに不確実性を追加しても、比較した線形時間ミキサより品質を落とさず、むしろ言語モデル性能と検索性能を一貫して改善する。750Mでは対角KDNがLAMBADAパープレキシティ14.15、六タスク平均54.97%でKDAの15.06、53.87%を上回る。1.3Bでも対角KDNはWikiText 15.04、LAMBADA 9.75、平均60.45%でKDAの15.40、10.09、60.28%より良い。特にRULERでは対角KDNが長い単一キー・複数キー条件で強く、チャネル別不確実性による既存関連付け保護という設計意図と整合する。",
+    "key_results": [
+      {"metric":"750M再帰モデルのLAMBADAパープレキシティと平均ゼロショット精度","value":"対角KDN 14.15 / 54.97%、等方KDN 14.68 / 54.41%","baseline":"KDA 15.06 / 53.87%、Mamba-3 MIMO 15.67 / 54.39%","condition":"750M、FineWeb-Edu 500億トークン、再帰層のみ","interpretation":"不確実性追跡を加えた両KDNが強い比較対象より低いパープレキシティを示し、対角版は平均精度でも最良となる。"},
+      {"metric":"1.3B再帰モデルのWikiText/LAMBADAパープレキシティと平均精度","value":"対角KDN 15.04 / 9.75 / 60.45%","baseline":"KDA 15.40 / 10.09 / 60.28%、Mamba-3 MIMO 15.63 / 10.49 / 59.85%","condition":"1.3B、FineWeb-Edu 1000億トークン、再帰層のみ","interpretation":"規模を上げても改善が維持され、固定メモリ方式で共分散由来の書き込み利得を使う効果が750Mだけの現象ではない。"},
+      {"metric":"RULER長文脈検索","value":"750M対角KDNはS-NIAH-1の8Kで100.0%、S-NIAH-3の4Kで32.2%。1.3B対角KDNはS-NIAH-3の4Kで48.6%、MK-NIAH-1の4Kで33.8%","baseline":"750M KDAは同条件82.6%、13.6%。1.3B KDAは43.2%、26.6%","condition":"各セル500例、単一・複数キーneedle-in-a-haystack","interpretation":"干渉が増える長い検索条件で差が拡大する例があり、蓄積証拠のある関連付けを過剰上書きから守る機構と整合する。"},
+      {"metric":"実世界検索6タスク平均","value":"1.3B再帰対角KDN 34.86%、等方KDN 33.40%","baseline":"KDA 33.76%、Mamba-3 MIMO 32.23%、GDN-2 32.09%","condition":"入力2K、SWDE/SQuAD/FDA/TriviaQA/NQ/DROP","interpretation":"合成検索だけでなく実データ由来の検索でも対角版が再帰モデル中の最高平均を示す。"}
+    ],
+    "negative_results": "すべての指標でKDNが一様に勝つわけではない。ハイブリッド1.3Bでは等方KDN+SWAの実世界検索平均45.94%が最高で、対角版45.55%は2位になる。情報スケールも単調に全指標を改善せず、4dkはLAMBADAパープレキシティ13.91で最良だが、WikiTextと平均精度はdk設定の18.64と54.97%が良い。観測雑音やプロセス雑音を固定するアブレーションも指標ごとに改善と悪化が混在する。対角版はチャネル別不確実性走査の追加計算があり、ミキサ層スループットは等方版より重い。",
+    "interpretation": "固定メモリでは新しい観測を強く書くほど新情報への適応は速いが、既存関連付けを壊しやすい。KDNはこのトレードオフを、過去の証拠量を反映した不確実性で調整する。対角版がRULERの干渉の強い条件で優位になることは、キー方向ごとの確信度を分けて保持する利点を示唆する。一方、情報スケールや雑音設定の最適値が指標依存であることから、カルマン的定式化だけで自動的に最適な保護強度が決まるわけではなく、近似共分散の校正が重要である。",
+    "quality_impact": "生成品質を犠牲にした近似高速化ではなく、固定メモリという近似構造の中で比較対象よりパープレキシティと下流精度を改善している。ただし完全自己注意機構と同一出力を保証する無損失方式ではない。"
+  },
+  "reservation": {"claim_id":"claim-7bba4de8acdf88007ff64c4d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
