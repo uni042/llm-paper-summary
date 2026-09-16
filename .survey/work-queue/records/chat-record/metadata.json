@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-108502f64d0cd914bd44d7db",
-  "job_id": "job-research-9ef38f28c45d6f3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-108502f64d0cd914bd44d7db",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-108502f64d0cd914bd44d7db","job_id":"job-research-9ef38f28c45d6f3a","data":{"canonical_id":"arXiv:2604.24971","arxiv_id":"2604.24971","doi":"10.48550/arXiv.2604.24971","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference","summary":"複数のLLMエージェントが同じ文書を読む場合、通常は各エージェントが同じ接頭辞のKVキャッシュを別々に保持し、エージェント数に比例してメモリが増える。PolyKVは共有文書を一度だけプリフィルして単一の圧縮KVプールへ保存し、各エージェントのHuggingFace DynamicCacheへ必要な層のKVを注入する。キーは注意スコアへの感度を考慮して8ビット、値は回転後3ビットで非対称に圧縮する。共有と圧縮を同時に行うことで、エージェント数に対して共有プール容量を一定に保ちつつ、品質劣化を小さく抑える。","list_summary":"共通文書のKVキャッシュを一度だけ非対称量子化して共有プール化し、複数エージェントへ注入して重複メモリを削減する。","authors":["Ishan Patel","Ishan Joshi"],"authors_affiliations":"論文本文参照。","published":"2026-04-27","publication":"arXiv / Zenodo","publication_type":"Preprint","publication_status":"Preprint","lineage":"KV cache compression / multi-agent KV sharing","topics":["KVキャッシュ","マルチエージェント","共有キャッシュ","非対称量子化","TurboQuant"],"importance":"KV圧縮とエージェント間共有を別々に扱う従来系統を結合し、共通文書を読む並行エージェントで容量をエージェント数に依存しない共有状態へ変える。","hardware_evaluation":"SmolLM2-1.7BはCPU規模の概念実証、Llama-3-8BはKaggleのT4 GPU 2基で評価。","hardware_details":"Llama-3-8B-Instructは32層、GQA 8 KVヘッド、4ビットNF4重み、bfloat16 KVキャッシュを使用。","quality_effect":"非可逆量子化を使うため品質変化はあるが、Llama-3-8Bの長文条件でパープレキシティ増加は0.57%、平均BERTScore F1は最大15エージェント条件で0.928。","source":"https://arxiv.org/abs/2604.24971","sources":["https://arxiv.org/abs/2604.24971","https://arxiv.org/pdf/2604.24971","https://doi.org/10.5281/zenodo.19686729"],"code":null,"implementation":"HuggingFace DynamicCacheを利用したSharedKVPoolとPooledAgentの研究試作。公式コードURLは本文で確認できなかった。","last_checked":"2026-09-16","references":[],"references_checked_at":"2026-09-16","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-108502f64d0cd914bd44d7db","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
