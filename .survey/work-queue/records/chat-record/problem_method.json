@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-477aba44f5bcf65da01a76da",
+  "attempt_id": "attempt-99747231195f2250976184c3",
   "job_id": "job-research-f3ec00db7d9723b7",
   "data": {
     "problem": "多数コアCPUではコア数とメモリチャネルを増やすために複数NUMAノードへ分割する構成が一般的だが、メモリ位置によってアクセス帯域が大きく変わる。ArcLightの4 NUMA実機では各ノードの48コアが自ノードDDR4へ約101〜103 GB/sでアクセスできる一方、他ノードでは約22〜26 GB/sに落ち、遠隔アクセスは約4分の1になる。llama.cppのNUMA分散はスレッドを各ノードへ配置してもテンソル自体を明示的に対応付けないため、連続GEMMでは重みを担当するスレッドと活性の物理配置がずれ、次段では大部分の活性を遠隔ノードから読む状態が繰り返される。単一NUMA向けの一枚岩スレッドプールや全スレッド同期も、複数独立部分グラフを並列実行するには硬直的である。既存基盤へNUMA対応を後付けするとメモリ確保、スレッド、グラフ、演算子まで広い改修が必要になるため、CPU推論の構造自体を局所性中心に簡素化する必要がある。",
@@ -31,8 +31,8 @@
     "failure_modes": "評価はARMv8.2のKunpeng-920だけで、x86や異なるNUMAトポロジーで同じ効果が出るかは未検証。Scatter/Gather実装は著者自身が初期段階とし、追加のメモリ・並列効率改善余地がある。プリフィルは演算律速になりやすく、NUMA帯域壁を解くテンソル並列の利得はデコードより小さい。単一NUMA内ではArcLightとllama.cppの差も小さく、主な優位性は複数ノードへ跨る条件で現れる。"
   },
   "reservation": {
-    "claim_id": "claim-477aba44f5bcf65da01a76da",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "claim_id": "claim-99747231195f2250976184c3",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-477aba44f5bcf65da01a76da",
+  "attempt_id": "attempt-99747231195f2250976184c3",
   "job_id": "job-research-f3ec00db7d9723b7",
   "data": {
     "overview": "ArcLightの評価は、多数コアCPUで性能を制限する主因が単純なコア不足ではなくNUMA越しメモリアクセスであることを示す。4 NUMA実機ではローカルDDRアクセスが約101〜103 GB/sなのに対し遠隔ノードは約22〜26 GB/sで、約4倍の帯域差がある。単一NUMAノードではArcLightとllama.cppの差は比較的小さいが、2・4 NUMAへ広げるとArcLightのノード別メモリ配置とテンソル並列が効き、論文全体ではllama.cpp比で推論スループット最大46%向上を報告する。部分グラフ間を毎演算で大域同期せず非同期に進める変更だけでも約5 token/sを追加で改善する。300トークン入力の付録評価ではデコード優位は維持する一方、演算律速のプリフィルでは差が縮み、手法が主にメモリ帯域壁を解くことと整合する。",
@@ -48,8 +48,8 @@
     "quality_impact": "同じQwen3-4B Q4_0重みを同じ推論意味論で実行するシステム最適化であり、報告された速度改善は精度との交換ではない。量子化自体の品質影響はArcLight固有ではなく比較両側に共通する。"
   },
   "reservation": {
-    "claim_id": "claim-477aba44f5bcf65da01a76da",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "claim_id": "claim-99747231195f2250976184c3",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

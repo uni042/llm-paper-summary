@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-477aba44f5bcf65da01a76da",
+  "attempt_id": "attempt-99747231195f2250976184c3",
   "job_id": "job-research-f3ec00db7d9723b7",
   "data": {
     "differences": "llama.cppにもNUMA分散オプションはあるが、主にスレッドを各ノードへ配置するだけで、各演算の重み・活性を対応するローカルメモリへ明示的に束縛しない。ArcLightはメモリ管理、スレッド群、計算グラフ、重み分割を一体設計し、NUMAノードをCPU内のテンソル並列単位として扱う。vLLMやSGLangなどGPU基盤がページ化KVやGPUカーネル・スケジューリングを中心に最適化するのに対し、ArcLightはCPUのNUMA帯域とスレッド同期が中心課題である。モデル圧縮のように転送量そのものを減らす手法とも異なり、既存Q4_0重みのまま複数メモリチャネルの帯域を局所的に使い切ることを狙う。",
@@ -14,8 +14,8 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-477aba44f5bcf65da01a76da",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "claim_id": "claim-99747231195f2250976184c3",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

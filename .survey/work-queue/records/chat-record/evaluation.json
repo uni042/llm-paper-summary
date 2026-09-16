@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-477aba44f5bcf65da01a76da",
+  "attempt_id": "attempt-99747231195f2250976184c3",
   "job_id": "job-research-f3ec00db7d9723b7",
   "data": {
     "hardware": "192コア・4 NUMAノードのARMサーバー。各ノードは48個のHUAWEI Kunpeng-920 ARMv8.2コアと6本のDDR4メモリチャネルを持つ。",
@@ -30,8 +30,8 @@
     "evaluation_notes": "単一NUMAでは両基盤ともスレッド増加に応じて伸び、ArcLightの優位は小さい。複数NUMAで差が広がり、提案手法の利得がNUMA遠隔帯域の回避に由来することを支持する。付録ではプリフィル優位がデコードほど大きくなく、プリフィルが演算律速であるという説明と整合する。"
   },
   "reservation": {
-    "claim_id": "claim-477aba44f5bcf65da01a76da",
-    "worker_id": "scheduled-chat-llm-survey-20260916T135756JST",
+    "claim_id": "claim-99747231195f2250976184c3",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
