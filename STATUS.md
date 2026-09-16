@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 17:07:36 JST**
+> 自動生成: **2026-09-16 17:08:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **30** |
 | 未claim Research job | **29** |
 | 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-16 17:03:19 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-16 17:03:19 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **47** | **3** | **1** | **2** | **1** | **0** | — |
+| Research | **47** | **4** | **1** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **19** | **0** | **19** | **0** | **0** | **23** |
-| 合計 | **48** | **22** | **1** | **21** | **1** | **0** | **23** |
+| 合計 | **48** | **23** | **1** | **22** | **1** | **0** | **23** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,12 +115,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- immutable submission: **4件** / 検証済み成功: **1件** / 未完了・未検証: **3件**
 - **成功** `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
   - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
   - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-82e80ed19ce701a0be49bf58.json` (job `job-research-44674a8f55b9f5e8`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b21265e1c7564132469a29b8.json` (job `job-research-ec48da5b1e9edcea`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e3573f73597d9a563a861b51.json` (job `job-research-44674a8f55b9f5e8`)
 
@@ -231,8 +232,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **340** |
-| └ Research | **206** |
+| 成功result未照合のimmutable submission | **341** |
+| └ Research | **207** |
 | └ Audit | **1** |
 | └ Discovery | **133** |
 
