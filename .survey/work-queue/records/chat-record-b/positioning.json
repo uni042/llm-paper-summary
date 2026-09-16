@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-96f9fcecf06978cb8dfdac47",
-  "job_id": "job-research-0d9ff237f1d632e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-96f9fcecf06978cb8dfdac47",
-    "worker_id": "scheduled-chat-discovery-specialist-0700",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-96f9fcecf06978cb8dfdac47","job_id":"job-research-0d9ff237f1d632e6","data":{"positioning":"PD-disaggregationをstatic topologyではなく予測駆動のelastic resource management問題として扱い、P/D比計算とrequest-level length-aware schedulingを統合する。","differences":"DistServe/SplitWise/Mooncakeは主にphase分離とKV移送を最適化するがP/D instance数は静的。PD-Serve、Arrow、Dynamoはdynamic scalingを持つが、DOPDはscale後の最適P/D比をmodel/profileから明示計算する点を差別化する。ultra-short requestだけをD側でprefillする局所aggregationもmixed-length対策として併用する。","relation_to_prior_work":[{"work":"DistServe","difference":"static P/D構成に対しload予測とoptimal ratioでinstance数を動的調整。"},{"work":"Dynamo","difference":"elasticityに加え、profileとproducer-consumer modelからscale後のP/D比を計算。"},{"work":"Arrow / PD-Serve","difference":"metric-driven scaling/groupingに対しanalytical optimal ratioとARIMA proactive scalingを組み合わせる。"},{"work":"vLLM aggregation","difference":"phase interferenceを避けつつ、ultra-short requestのみ選択的にaggregationへ戻す。"}],"strengths":["8x H100実機と複数70B級modelを評価。","Azure/BurstGPT production traceでnonstationary workloadを再現。","static ratioの妥当性検証とdynamic scaling比較を分離して評価。","DOPD codeを公開。"],"limitations":["ultra-long contextのrare burstは予測困難。","TP degreeのruntime動的選択は未対応。","model/GPUごとの長時間pre-deployment profilingが必要。","ARIMAは急激なburstで外れるためthreshold-based emergency scalingを併用している。"],"implementation_status":"Dynamo拡張として実装され、公式codeは https://github.com/liao4s/DOPD で公開。","research_positioning":"dynamic PD resource allocationとmixed-length schedulingを統合したproduction-oriented serving framework。","repository_fit":"serving/scheduling系統でDistServe、Dynamo、Arrow、PD-Serve等のstatic/dynamic PD分離を比較する主要論文。"},"reservation":{"claim_id":"claim-96f9fcecf06978cb8dfdac47","worker_id":"scheduled-chat-discovery-specialist-0700","worker_kind":"scheduled_chat"}}
