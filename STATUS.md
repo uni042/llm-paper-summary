@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-16 12:01:46 JST**
+> 自動生成: **2026-09-16 12:02:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **63** |
 | 未claim Research job | **61** |
 | 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-16 11:52:49 JST（8分前）** |
+| 最終検証済みResearch収録 | **09-16 11:52:49 JST（9分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **1** | **1** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **6** | **0** | **6** | **0** | **0** | **6** |
-| 合計 | **16** | **7** | **1** | **6** | **3** | **0** | **6** |
+| Discovery | **1** | **6** | **0** | **6** | **0** | **0** | **6** |
+| 合計 | **15** | **7** | **1** | **6** | **3** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -109,10 +109,6 @@
   - result: `.survey/work-queue/results/20260916T0703JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260916T0703JST-discovery-specialist-adaptive-kv-1.json`
   - 探索軸: 新着・適応型KV圧縮・制約付き推論
-- **09-16 06:01:47 JST** job `job-6d2c370dfa5a7fe8` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260916T0607JST-discovery-specialist-adaptive-kv-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260916T0607JST-discovery-specialist-adaptive-kv-1.json`
-  - 探索軸: 新着KV圧縮・制約適応ポリシー
 
 ### 直近タスク
 
