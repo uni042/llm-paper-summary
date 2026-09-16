@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-eef28a8801be5b0d2f23cba9",
+  "attempt_id": "attempt-0d915f8ab7aaabc2cfd2647e",
   "job_id": "job-research-21d58015b4f64394",
   "data": {
     "problem": "推論基盤の性能調査では単一の演算器利用率が代表値として使われるが、この値は経過サイクル中の処理量の一側面であり、常駐実行束数、全演算器への空間展開、有用な行列積、メモリ待ちを同時には表さない。同じカーネルでもアーキテクチャ上限に対しては低い占有率に見えながら、レジスタと共有メモリが許すカーネル固有上限に対しては七五～九五％を使っていることがある。特にデコードは一要求一トークンなので行列積の行数がバッチ程度まで縮み、固定命令断片や実行ブロック波の粒度損失が大きい。単一指標では、メモリ待ちを直すべきか、実行形状を変えるべきか、バッチを増やすべきかを判断できない。",
@@ -29,7 +29,7 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-eef28a8801be5b0d2f23cba9",
+    "claim_id": "claim-0d915f8ab7aaabc2cfd2647e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
