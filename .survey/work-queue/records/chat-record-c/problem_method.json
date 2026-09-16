@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-de826a78cbdf67bd7f4c52a2",
-  "job_id": "job-research-8548d3d173ce3871",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-de826a78cbdf67bd7f4c52a2",
-    "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-de826a78cbdf67bd7f4c52a2","job_id":"job-research-8548d3d173ce3871","data":{"problem":"プリフィルとデコードを別GPUプールへ分離すると相互干渉を避けられる一方、プリフィルで生成したKVキャッシュをデコード開始前にネットワーク越しに運ぶ必要がある。128K文脈のLlama-3-70BではKV全体が約40GB、TP=4ならGPU対ごとに約10GBとなり、25Gbps RDMAでは約3.2秒かかり得る。既存ルータはデコードGPUの計算負荷と接頭辞キャッシュ命中を評価するが、同一ラック・同一pod・cross-podの帯域差や動的混雑を要求単位の選択へ入れないため、暖かいキャッシュを持つ遠隔GPUが近いcold GPUより遅い場合がある。","novelty":"NetKVはアプリ層スケジューラへ生のネットワークトポロジを渡すのではなく、運用者がインスタンス対の局所性tier、tier帯域・遅延、集約混雑率だけを提供する薄いnetwork cost oracleを定義する。スケジューラは既存のprefix命中長とキュー状態へこの情報を組み合わせ、KV転送時間+待ち行列時間+最初のデコード反復時間を直接最小化する。さらに自分が開始したKV転送数を別に追跡して自己混雑を二重計上せず、古い混雑情報でもtier順位が反転しない十分条件を示す。","method_overview":"要求rのプリフィルがpで終わると、まず各デコード候補dについてブロック単位の最長共通prefixから既存KV命中長を求め、転送が必要な実効KVサイズを計算する。次にオラクルからp-d間のtier、静的帯域、基本遅延、現在の外部混雑率を読み、同じpから同tierへ現在飛ばしているKV転送数を加味して実効帯域を推定する。実効KVサイズ/帯域+基本遅延を転送時間とし、候補の現在バッチ・待ち要求数から連続バッチングのキュー待ちと最初のデコードstep時間を推定する。必要KVと予約領域を保持できないGPUを除外し、三項合計が最小のdを選ぶ。選択後はそのtierのin-flightカウンタを増やし、vLLM KVConnector等の既存転送完了イベントで減らす。オラクルは標準switch telemetryからtier別混雑を定期更新し、静的tier mapはKubernetes topology label等から作れる。計算量は候補数に線形で、64 GPU/TP=4評価では候補は最大12程度なので既存cache-aware scoringへ容易に追加できる。","components":[{"name":"ネットワーク費用オラクル","description":"クラスタ運用者がスケジューラへ、インスタンス対を0〜3の局所性tierへ写す静的map、各tierの公称帯域と基本遅延、動的なtier別混雑率を渡す。スケジューラは物理スイッチ構成やECMP経路を直接理解する必要がなく、運用者も要求の意味を知る必要がない。静的情報はKubernetes topology labelとハードウェア仕様から作れ、動的値はINT、sFlow、SNMP等の標準テレメトリを集約できる。NIXL、NCCL、RDMA等の転送層やGPUハードウェアを変更せず、既存スコアラーへネットワーク費用を見せる情報境界として機能する。"},{"name":"KV転送・キャッシュ・負荷の三項費用","description":"各候補について、prefix block hashの最長一致から既存KV率を求め、要求文脈長に比例する元KVサイズから命中部分を引いて実効転送量を算出する。tier帯域は外部混雑率と自分自身の同時転送数で割り引き、実効転送量/実効帯域+基本遅延を転送費用にする。これへデコードGPUのキュー長・空きbatch slotから推定する待ち時間と、要求追加後の最初のdecode iteration時間を加える。したがって「遠いが90% cache hit」「近いがcold」「近いが重負荷」といった候補を同じTTFT単位で比較でき、cache命中だけ・loadだけの局所最適を避ける。"},{"name":"自己混雑追跡とstale耐性","description":"オラクルが観測する外部混雑と、スケジューラ自身が直前に開始したKV転送を分離する。要求を候補へ割り当てるたびにsource×tierのin-flight counterを増やし、既存KV転送完了通知で減らすことで、短時間に同じ近距離tierへ要求を集中させて帯域を自己飽和することを防ぐ。混雑テレメトリは1秒以上の周期で古くなり得るため、静的帯域差と混雑誤差からtier順位が維持される十分条件も導出する。4:1帯域差・中程度混雑の例では誤差42ポイントまで順位が保たれ、評価でも静的tier情報が利益の大半を占めるため、毎秒以下の精密テレメトリを必須にしない。"}],"system_design":"既存のprefill/decode分離構成を維持し、prefill完了イベントでNetKV scorerを呼ぶ。候補GPUのmemory/cache/load stateとoracleのnetwork stateを読み、O(|D|)で最低費用候補を選び、そのまま既存KV transportへ転送を依頼する。完了イベントで自己混雑状態だけ更新する。"},"reservation":{"claim_id":"claim-de826a78cbdf67bd7f4c52a2","worker_id":"scheduled-chat-llm-survey-20260916T025906Z","worker_kind":"scheduled_chat"}}
