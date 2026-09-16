@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-16T21:07:28.971618+00:00",
+  "updated_at": "2026-09-16T21:09:18.030552+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-16T21:07:28.971618+00:00",
+      "last_recorded_at": "2026-09-16T21:09:18.030552+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 177,
         "audit_completed": 0,
-        "discovery_completed": 86,
+        "discovery_completed": 89,
         "blocked": 12,
-        "new_jobs": 119,
+        "new_jobs": 131,
         "new_papers": 180,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35069548682:1",
-          "recorded_at": "2026-09-16T07:38:33.049723+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35069548682",
-            "run_attempt": "1",
-            "source_sha": "6e486783992e27166936bd40808ea877d9fcc36f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35069702899:1",
           "recorded_at": "2026-09-16T07:40:30.913298+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35150535578:1",
+          "recorded_at": "2026-09-16T21:09:18.030552+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35150535578",
+            "run_attempt": "1",
+            "source_sha": "01127beb6474f281c7a28294c06a07577b68050e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21802,6 +21802,30 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-5abe9b84bcfd8389",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c862ad2804181f57",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e175f086e1eec097",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22637,6 +22661,90 @@
           "type": "research",
           "canonical_id": "arXiv:2609.16491",
           "title": "PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving"
+        },
+        {
+          "job_id": "job-5abe9b84bcfd8389",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-c862ad2804181f57",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e175f086e1eec097",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0923832e7cd03d20",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2504.19867",
+          "title": "semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage"
+        },
+        {
+          "job_id": "job-research-0d9ff237f1d632e6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.20982",
+          "title": "A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving"
+        },
+        {
+          "job_id": "job-research-120be1bd98c2839e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.06608",
+          "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving"
+        },
+        {
+          "job_id": "job-research-1abdfafeb85e4df9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2504.08784",
+          "title": "SLOs-Serve: Optimized Serving of Multi-SLO LLMs"
+        },
+        {
+          "job_id": "job-research-7e739eca355b8687",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.04021",
+          "title": "Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving"
+        },
+        {
+          "job_id": "job-research-8423392e3664b697",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2501.12162",
+          "title": "AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding"
+        },
+        {
+          "job_id": "job-research-af7d4aee1c99dd28",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.11822",
+          "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation"
+        },
+        {
+          "job_id": "job-research-ebde0cc040167968",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.23036",
+          "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure"
+        },
+        {
+          "job_id": "job-research-f371944d5d8c6995",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.04791",
+          "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing"
         }
       ],
       "new_paper_ids": [
@@ -23027,7 +23135,10 @@
         ".survey/work-queue/results/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json",
         ".survey/work-queue/results/20260917T0300JST-discovery-specialist-recent-inference-1.json",
         ".survey/work-queue/results/20260917T0307JST-discovery-specialist-cross-dc-2.json",
-        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3a.json",
+        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3b.json",
+        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -23105,7 +23216,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 641,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

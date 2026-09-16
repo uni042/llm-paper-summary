@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-0d9ff237f1d632e6",
+  "type": "research",
+  "parent_job_id": "job-5abe9b84bcfd8389",
+  "priority": 89,
+  "canonical_id": "arXiv:2511.20982",
+  "title": "A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving",
+  "source_url": "https://arxiv.org/abs/2511.20982",
+  "paper_path": "papers/inference/06-serving-scheduling/2025-2511.20982-dopd-dynamic-pd-disaggregation.md",
+  "selection_reason": "DOPDはprefill/decode instance比を実負荷から動的再構成し、vLLM/DistServe比でgoodput最大1.5x、P90 TTFT最大67.5%削減、99%以上のSLO達成を報告。PD disaggregationの動的resource allocation系統として未収録価値が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T21:07:57+00:00"
+}
