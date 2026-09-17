@@ -1,1 +1,83 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5802dd804b5c71e42ecc4823","job_id":"job-research-ee19ffd9b6b00e19","data":{"canonical_id":"arXiv:2609.17008","arxiv_id":"2609.17008","doi":"10.48550/arXiv.2609.17008","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference","summary":"重みオフロードを伴うLLM推論では、後段層を実行しない早期退出は計算だけでなくCPUからGPUへの重み転送も省けるが、中間層の語彙予測が弱いこと、全語彙LMヘッドの退出判定が重いこと、退出した層より後ろのKVキャッシュが欠落することが障害になる。FlexEEはLayerSkip型の層別教師あり学習済みモデルを基盤に、自己投機層でTop-K局所語彙を一度作り、後続の退出層ではその小語彙だけで確信度を判定する。さらに退出時の隠れ状態を次トークンへ持ち越して欠落KVの意味情報を補い、退出後の層重みをロードしない。FlexGen上の評価ではLlama2-7Bで重み50%オフロード時3.16倍、Llama3-8Bで2.83倍のスループット高速化を示す。","list_summary":"Top-K自己投機による軽量な早期退出と隠れ状態の持越しでKV整合性を保ち、重みオフロード時に後段層の計算と転送をまとめて省く。","authors":["Qihu Xie","Ziwei Li","Yi Kang"],"authors_affiliations":"University of Science and Technology of China; Institute of Artificial Intelligence, Hefei Comprehensive National Science Center","published":"2026-09-15","publication":"arXiv:2609.17008v1","publication_type":"arXivプレプリント","publication_status":"Preprint","lineage":"early-exit-offloading-self-speculative-decoding","topics":["早期退出","重みオフロード","投機的デコード","KVキャッシュ","省メモリ推論"],"importance":"早期退出を重みオフロード環境へ合わせ、退出後層の重み転送まで避けつつKV欠落を動的隠れ状態で処理するため、CPU/GPU階層メモリ推論と直接結び付く。","hardware_evaluation":"速度評価はNVIDIA RTX PRO 6000 96GB GPUとIntel Xeon Platinum 8470Q 3.8GHz CPU。重みオフロード率0/25/50/75%を模擬し、FlexGenとHuggingFace Transformersを基盤に評価する。","quality_effect":"完全深度より平均実行層を18〜29%程度削減しつつ、多くの下流課題で精度差を小さく保つ。開放生成ではAlpacaEval-LCの対Dense勝率が約49〜50%、MT-BenchもLlama2-7Bで4.92対4.88、Llama3-8Bで6.41対6.39と近いが、パープレキシティや一部課題では低下が残る。","source":"https://arxiv.org/abs/2609.17008","sources":["https://arxiv.org/abs/2609.17008","https://arxiv.org/html/2609.17008"],"code":null,"implementation":"FlexGenとHuggingFace Transformers上に、自己投機層、早期退出層、動的隠れ状態管理を統合した独自バックエンドを実装。今回確認した一次資料本文では公式公開コードURLを特定できなかった。","last_checked":"2026-09-17","references":[{"canonical_id":"arXiv:2312.04916","arxiv_id":"2312.04916"},{"canonical_id":"arXiv:1905.10044","arxiv_id":"1905.10044"},{"canonical_id":"arXiv:1803.05457","arxiv_id":"1803.05457"},{"canonical_id":"arXiv:1910.10073","arxiv_id":"1910.10073"},{"canonical_id":"arXiv:2403.02181","arxiv_id":"2403.02181"},{"canonical_id":"arXiv:2210.17323","arxiv_id":"2210.17323"}],"references_checked_at":"2026-09-17","references_source":"arXiv HTML全文のReferences節を確認し、明示されたarXiv識別子を正規化した。","references_total":55},"reservation":{"claim_id":"claim-5802dd804b5c71e42ecc4823","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ddc2745db0f900abfd7bf01e",
+  "job_id": "job-research-ee19ffd9b6b00e19",
+  "data": {
+    "canonical_id": "arXiv:2609.17008",
+    "arxiv_id": "2609.17008",
+    "doi": "10.48550/arXiv.2609.17008",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "title": "FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference",
+    "summary": "重みオフロードを伴うLLM推論では、後段層を実行しない早期退出は計算だけでなくCPUからGPUへの重み転送も省けるが、中間層の語彙予測が弱いこと、全語彙LMヘッドの退出判定が重いこと、退出した層より後ろのKVキャッシュが欠落することが障害になる。FlexEEはLayerSkip型の層別教師あり学習済みモデルを基盤に、自己投機層でTop-K局所語彙を一度作り、後続の退出層ではその小語彙だけで確信度を判定する。さらに退出時の隠れ状態を次トークンへ持ち越して欠落KVの意味情報を補い、退出後の層重みをロードしない。FlexGen上の評価ではLlama2-7Bで重み50%オフロード時3.16倍、Llama3-8Bで2.83倍のスループット高速化を示す。",
+    "list_summary": "Top-K自己投機による軽量な早期退出と隠れ状態の持越しでKV整合性を保ち、重みオフロード時に後段層の計算と転送をまとめて省く。",
+    "authors": [
+      "Qihu Xie",
+      "Ziwei Li",
+      "Yi Kang"
+    ],
+    "authors_affiliations": "University of Science and Technology of China; Institute of Artificial Intelligence, Hefei Comprehensive National Science Center",
+    "published": "2026-09-15",
+    "publication": "arXiv:2609.17008v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "Preprint",
+    "lineage": "early-exit-offloading-self-speculative-decoding",
+    "topics": [
+      "早期退出",
+      "重みオフロード",
+      "投機的デコード",
+      "KVキャッシュ",
+      "省メモリ推論"
+    ],
+    "importance": "早期退出を重みオフロード環境へ合わせ、退出後層の重み転送まで避けつつKV欠落を動的隠れ状態で処理するため、CPU/GPU階層メモリ推論と直接結び付く。",
+    "hardware_evaluation": "速度評価はNVIDIA RTX PRO 6000 96GB GPUとIntel Xeon Platinum 8470Q 3.8GHz CPU。重みオフロード率0/25/50/75%を模擬し、FlexGenとHuggingFace Transformersを基盤に評価する。",
+    "quality_effect": "完全深度より平均実行層を18〜29%程度削減しつつ、多くの下流課題で精度差を小さく保つ。開放生成ではAlpacaEval-LCの対Dense勝率が約49〜50%、MT-BenchもLlama2-7Bで4.92対4.88、Llama3-8Bで6.41対6.39と近いが、パープレキシティや一部課題では低下が残る。",
+    "source": "https://arxiv.org/abs/2609.17008",
+    "sources": [
+      "https://arxiv.org/abs/2609.17008",
+      "https://arxiv.org/html/2609.17008"
+    ],
+    "code": null,
+    "implementation": "FlexGenとHuggingFace Transformers上に、自己投機層、早期退出層、動的隠れ状態管理を統合した独自バックエンドを実装。今回確認した一次資料本文では公式公開コードURLを特定できなかった。",
+    "last_checked": "2026-09-17",
+    "references": [
+      {
+        "canonical_id": "arXiv:2312.04916",
+        "arxiv_id": "2312.04916"
+      },
+      {
+        "canonical_id": "arXiv:1905.10044",
+        "arxiv_id": "1905.10044"
+      },
+      {
+        "canonical_id": "arXiv:1803.05457",
+        "arxiv_id": "1803.05457"
+      },
+      {
+        "canonical_id": "arXiv:1910.10073",
+        "arxiv_id": "1910.10073"
+      },
+      {
+        "canonical_id": "arXiv:2403.02181",
+        "arxiv_id": "2403.02181"
+      },
+      {
+        "canonical_id": "arXiv:2210.17323",
+        "arxiv_id": "2210.17323"
+      }
+    ],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML全文のReferences節を確認し、明示されたarXiv識別子を正規化した。",
+    "references_total": 55
+  },
+  "reservation": {
+    "claim_id": "claim-ddc2745db0f900abfd7bf01e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

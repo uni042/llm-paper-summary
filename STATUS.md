@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 15:43:09 JST**
+> 自動生成: **2026-09-17 15:43:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **63** |
 | 未claim Research job | **61** |
 | 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-17 15:40:17 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-17 15:40:17 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17008` — FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 15:40:42 JST** / heartbeat: **—** / lease expiry: **09-17 17:10:42 JST**
+  - claim: **09-17 15:43:27 JST** / heartbeat: **—** / lease expiry: **09-17 17:13:27 JST**
   - evidence: `.survey/work-queue/claims/job-research-ee19ffd9b6b00e19.json`
 - `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 14:19:28 JST** / heartbeat: **09-17 15:32:33 JST** / lease expiry: **09-17 17:02:33 JST**
