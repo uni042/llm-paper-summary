@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:21:58 JST**
+> 自動生成: **2026-09-17 13:22:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **51** |
-| 未claim Research job | **50** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **76** |
-| 最終検証済みResearch収録 | **09-17 13:21:50 JST（8秒前）** |
+| 最終検証済みResearch収録 | **09-17 13:21:50 JST（16秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **7** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **7** | **3** | **2** | **1** | **1** | **0** | **6** |
+| 合計 | **7** | **3** | **2** | **1** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -124,7 +124,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.12208` — Vortex: Bridging Extreme Compression and Efficient LLM Inference / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 13:22:05 JST** / heartbeat: **—** / lease expiry: **09-17 14:52:05 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a06bdf20c1667dad.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
