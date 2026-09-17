@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-8a81151586fdc3a2613ff366",
-  "job_id": "job-research-b6925d33135e854c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8a81151586fdc3a2613ff366",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-8a81151586fdc3a2613ff366","job_id":"job-research-b6925d33135e854c","data":{"overview":"dKV-CacheはDLMでK/Vを全ステップ再計算する必要があるという前提を崩し、Decode版では精度をほぼ維持しながら約2倍前後、長いプリフィルを固定する派生では最大10倍超の高速化を示す。Greedy版は再計算集合を固定窓へ縮めて理論計算量をO(L^2)にするが、品質との交換条件が強い。1ステップ遅延は高キャッシュ率での精度崩壊を防ぐ主要因で、バッチ1では非連続メモリアクセス費用が高速化を相殺する場合もある。","key_results":[{"metric":"LLaDA MMLU","value":"51.11→51.00、28.27→66.52 tokens/s (2.35×)","baseline":"LLaDA-8B-Instruct全ステップ","condition":"dKV-Cache-Decode、更新間隔8、ゼロショット","interpretation":"ほぼ同精度のまま復号済み位置のK/V再計算を削減する。"},{"metric":"LLaDA GSM8K","value":"77.56→78.85、14.31→27.50 tokens/s (1.92×)","baseline":"全ステップ低信頼度再マスク","condition":"Decode版、L=256、更新間隔8","interpretation":"キャッシュ近似が品質を落とさず、むしろわずかに改善する条件がある。"},{"metric":"Dream GPQA長プリフィル","value":"7.4→75.40 tokens/s (10.19×)、精度36.83→35.27","baseline":"Dream-7B全ステップ","condition":"dKV-Cache-Prefill、L=128、T=128、5-shot","interpretation":"毎ステップ繰り返していた長い入力文脈の再符号化を固定キャッシュする効果が大きい。"},{"metric":"Dream GSM8K少ステップ","value":"基準46.63・4.01×に対し63.31・6.6×","baseline":"T=256全ステップからT=64へ減らす基準","condition":"L=256、dKV-Cache-PD系比較","interpretation":"単にノイズ除去ステップを減らすより、K/V再利用の方が速度と品質のパレート前線を改善する。"},{"metric":"長文生成品質","value":"GSM8K 80.97→83.13、HumanEval 39.63→46.34","baseline":"キャッシュなし","condition":"L=512を含むDecode版解析","interpretation":"長い生成では古い安定表現の再利用が文脈集約の冗長性を抑える可能性を示すが、一般的品質改善としては未確立。"}],"negative_results":"Greedy版は事前に決めたランダム復号順へ依存する設定で低信頼度再マスクより精度が明確に落ち、HumanEvalなどではFew-Steps基準を下回る場合がある。1ステップ遅延を外すとキャッシュ率上昇に伴い精度が急落し、ほぼ0まで崩壊する。Dreamでは単純な右シフトキャッシュがMMLU 64.60、GSM8K 32.68まで悪化する。concat_reorderにも収集・散布費用が残り、バッチ1では非連続メモリアクセスが律速してキャッシュなしより遅くなる場合がある。","interpretation":"DLMのK/Vは『常に変化するから再利用不能』ではなく、復号イベントの直後だけ大きく変わり、その後は安定する。したがってキャッシュ可否を位置ではなくトークン状態と時間差で決めることが本質である。入力が長いほど固定できるK/Vが多く、ノイズ除去ステップが多いほど同じ値を再利用する回数も増えるため高速化が大きくなる。一方、Greedy版のように再計算を削り過ぎると古い双方向文脈が品質へ影響する。","quality_impact":"Decode版は周期更新と1ステップ遅延により多くの評価でほぼ無損失だが厳密な出力同値ではない。Prefill版も入力K/Vを固定する近似である。Greedy版は明示的に速度優先の近似で、局所窓と短い更新間隔で品質低下を抑える。従って本手法は損失なしのシステムキャッシュではなく、表現安定性に基づく近似再利用として扱う必要がある。"},"reservation":{"claim_id":"claim-8a81151586fdc3a2613ff366","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
