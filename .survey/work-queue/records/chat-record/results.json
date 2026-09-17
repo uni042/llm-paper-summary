@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-43acd19c7764b093bfb4428a",
-  "job_id": "job-research-5862dce444505150",
-  "data": {
-    "overview": "ProTrainはGPU容量を使い切る構成を自動選択し、単なる容量拡大だけでなく通信と計算の重畳を改善する。4×RTX 3090では平均2090 tokens/sを達成し、比較基盤より1.77〜2.71倍高い。4×A100ではDeepSpeed、Colossal-AI、FSDPに対してそれぞれ1.85、1.43、2.22倍のスループットを示す。最大モデル容量も単一A100で75B、4×A100で87Bまで拡大する。175B GPTの16×A100多ノード評価でも2218.70 tokens/sでDeepSpeedの2.58倍、Colossal-AIの2.09倍となる。費用モデルの予測誤差は主実験で4%以内であり、計測と探索の負担も小さい。",
-    "key_results": [
-      {
-        "metric": "平均訓練スループット改善",
-        "value": "1.77〜2.71倍",
-        "baseline": "DeepSpeed、Colossal-AI、FSDP",
-        "condition": "4×RTX 3090、複数モデル・最適バッチ",
-        "interpretation": "低容量・低PCIe帯域環境でも、常駐量と再計算・退避を共同調整することで既存基盤を一貫して上回る。"
-      },
-      {
-        "metric": "A100スループット改善",
-        "value": "1.85倍 / 1.43倍 / 2.22倍",
-        "baseline": "DeepSpeed / Colossal-AI / FSDP",
-        "condition": "4×A100、複数モデル・最適バッチ",
-        "interpretation": "大容量GPUとNVLink環境では退避を減らし、GPU常駐とバッファを増やす別構成を自動選択して性能を維持する。"
-      },
-      {
-        "metric": "最大訓練可能モデル",
-        "value": "単一A100 75B、4×A100 87B",
-        "baseline": "単一A100でDeepSpeed 34B、Colossal-AI 53B、FSDP 10B",
-        "condition": "GPT-2系容量評価",
-        "interpretation": "CPUメモリとGPUメモリを協調利用することで、追加GPUなしでも訓練可能モデル規模を大幅に広げる。"
-      },
-      {
-        "metric": "多ノードスループット",
-        "value": "2218.70 tokens/s",
-        "baseline": "DeepSpeed比2.58倍、Colossal-AI比2.09倍、FSDPはOOM",
-        "condition": "175B GPT、batch 256、4ノード16×A100、100Gb InfiniBand",
-        "interpretation": "単一ノード向けのメモリ管理が多ノードZeRO環境でも有効であることを示す。"
-      },
-      {
-        "metric": "費用モデル精度",
-        "value": "実行時間・ピークメモリ誤差4%以内",
-        "baseline": "実測値",
-        "condition": "10B GPT-2の多様なメモリ構成",
-        "interpretation": "候補構成を実学習せずに探索しても、最速構成を選べる精度の予測が可能である。"
-      }
-    ],
-    "negative_results": "最適化効果はハードウェア依存である。RTX 3090ではPCIe 3.0が既にパラメータ先読みで飽和しやすく、交互ブロック管理を外して全ブロックをチェックポイント化しても平均低下は1.04倍に留まる。帯域が狭い条件では活性値退避を増やす利点が小さい。またProTrainは並列化方式自体を探索しないため、並列構成が不適切ならその上でのメモリ最適化に限定される。",
-    "interpretation": "性能差は固定の退避方式が常に優れることから生じるのではなく、モデル・バッチ・GPU容量・CPU-GPU帯域に応じて最適な常駐、退避、再計算の比率が変わることから生じる。RTX 3090では通信制約のためチェックポイントを増やし、A100では高帯域と大容量を利用して活性値を保持し三つ程度の先読みバッファを使うなど、探索結果がハードウェア特性に沿って変化する。",
-    "quality_impact": "学習アルゴリズムを変更しないシステム最適化なので、精度近似による品質低下を導入しない。主なリスクは誤った費用予測による性能低下やOOMだが、ピークメモリ推定を保守的に行い、追加評価では最大10%の過大推定に抑えて安全側へ寄せる。"
-  },
+  "attempt_id": "attempt-4cd9f6f884a1493be0066c89",
+  "job_id": "job-research-6e21b3d4c9b2bcc1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-43acd19c7764b093bfb4428a",
+    "claim_id": "claim-4cd9f6f884a1493be0066c89",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
