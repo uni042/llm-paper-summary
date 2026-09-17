@@ -1,13 +1,3 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-11e1f9a8272a62c09027cd4c",
-  "job_id": "job-research-2ce5027f5de1889a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-11e1f9a8272a62c09027cd4c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-11e1f9a8272a62c09027cd4c","job_id":"job-research-2ce5027f5de1889a","data":{"limitations":"評価モデルはQwen2.5-Instruct 1.5B/7Bまでで、数十B以上への変換費用と速度は未検証である。ブロックサイズは訓練時に固定され、推論時に本ブロックサイズを変えると精度が大きく落ちるため、完全に自由な粒度変更ではない。信頼度並列復号は閾値依存の品質・速度交換を持つ。サブブロックキャッシュは小バッチではほぼ利得がなく、利用率の高い計算律速条件で効果が強い。主速度評価はGSM8KとA100/H100で、実サービングの到着分布、長文、多利用者SLO、メモリ容量上限を含む評価はない。","differences":"BD3-LMなど従来のブロック拡散は自己回帰と拡散の中間構造を示したが、小規模モデル中心だった。DreamやLLaDAの全注意拡散は全系列双方向性のため通常KVキャッシュと相性が悪く、変換・学習費も大きい。Fast-dLLM v2は自己回帰モデルに近いブロック因果構造を維持して約10億トークン規模の追加学習へ圧縮する。前身Fast-dLLM v1は既存拡散モデルを訓練なしでDualCacheと並列復号により高速化する方式だったのに対し、v2はモデル自体をブロック拡散へ追加学習し、過去ブロックの正確なKVキャッシュとブロック内DualCacheを階層化する。dKV-CacheやdLLM-Cacheが全注意拡散で近似・遅延キャッシュを工夫するのに対し、v2はモデル構造側をキャッシュ可能にする。","implementation_status":"公式NVlabs/Fast-dLLMリポジトリでv2の訓練・推論・評価コードがApache-2.0で公開されている。v2にはLMFlow系ソース、訓練スクリプト、DeepSpeed設定、生成関数、評価・チャット用コードが含まれ、7B/1.5BモデルもHugging Faceで公開されている。公式リポジトリは2025-10-08にv2公開、2026-01-26にFast-dLLM v1/v2のICLR 2026採択を告知している。vLLM対応は公式README上で未完了項目として残っている。","research_positioning":"拡散LLM推論の系統では、キャッシュを後付けで近似するだけでなく、自己回帰事前学習済みモデルを『ブロック間は因果、ブロック内は拡散』へ変換してキャッシュ可能性そのものを構造化した研究に位置付く。訓練側の少量変換と推論側の階層キャッシュを一体設計したことで、全注意拡散の高い学習費と自己回帰の低い単一要求並列性の中間点を実用規模で示した。今後は大規模モデル、連続バッチ、長文KV容量、vLLM等のサービング基盤への統合、要求ごとの動的ブロック・サブブロック制御を検証することで、単一モデル速度から実サービス有効スループットへ評価を広げる余地がある。"},"reservation":{"claim_id":"claim-11e1f9a8272a62c09027cd4c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
