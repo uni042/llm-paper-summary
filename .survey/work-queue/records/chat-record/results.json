@@ -5,63 +5,18 @@
   "attempt_id": "attempt-366e50017f388aac9c576b49",
   "job_id": "job-research-6b9319ad56fb236d",
   "data": {
-    "overview": "PiKV v3から確認できる主な定量結果は実測benchmarkではなく、分散sharding・sparse routing・compression・bounded schedulingがどのようにmemory/trafficを減らすかを示す解析式である。expert routingでE expertsのうちkだけを使う場合、attention計算量とKV fetch量はdense方式に対して理論上E/kへ縮小し、compression ratio ρではread/decode時間が理想化されたmodel上1/ρに比例して減る。per-GPU KV memoryは2d/ρ(L/(GS)+KS)となり、shard sizeの最適値S*=sqrt(L/(KG))を導く。FPGA代表構成ではpage table約176KB、metadata約48KBと算定する。一方、本文には具体的GPU型番、dataset、baseline実装、latency/throughput/task qualityの実測値がなく、abstractの性能改善主張を数値で検証できない。このため本論文の実用性能は公開code側で別途検証が必要であり、repository上では解析上の設計効果とempirical evidence不足を明確に分けて扱うべきである。",
+    "overview": "PiKV第3版から確認できる主要な定量結果は実測ベンチマークではなく、分散断片化、疎な専門家選択、圧縮、容量制約付き保持がメモリ量と転送量をどう減らすかを示す解析式である。専門家総数Eのうちk個だけを使う場合、注意計算量はBLhEからBLhkへ、KV取得量は2BLhEから2BLhkへ減るため、理論上はE/kの削減余地を持つ。圧縮率ρを導入した一段当たり時間はTstep=(dkB/ρ)(2/β+η/γ)と表され、理想化した条件では圧縮率に応じて読み出し量が減る。一GPU当たりの総KVメモリはMtotal=2d/ρ(L/(GS)+KS)と整理され、これを最小化する断片サイズとしてS*=sqrt(L/(KG))を導く。FPGA代表構成ではページ表約176KB、付随情報約48KBを見積もる。ただし、これらは実測高速化倍率ではない。本文に具体的GPU型番、データ集合、比較実装、遅延、スループット、生成品質の実測値がないため、抄録の性能改善主張を数値で検証することはできない。",
     "key_results": [
-      {
-        "metric": "sparse routing計算量",
-        "value": "dense BLhE → sparse BLhk、理論speed-up E/k",
-        "baseline": "全E expertをdense参照",
-        "condition": "k≪E",
-        "interpretation": "MoEのexpert sparsityをKV accessへ反映した場合の上限的削減式。実測speed-upではない。"
-      },
-      {
-        "metric": "KV fetch traffic",
-        "value": "2BLhE → 2BLhk、理論relief E/k",
-        "baseline": "dense KV fetch",
-        "condition": "k routed experts",
-        "interpretation": "routingとexpert-sharded storageを結合した通信量解析。"
-      },
-      {
-        "metric": "compression latency",
-        "value": "Tstep=(dkB/ρ)(2/β+η/γ)",
-        "baseline": "compression ratio ρ=1",
-        "condition": "解析model",
-        "interpretation": "ρ増加に比例してread/decodeが減るが両者が均衡すると利得が飽和すると論文は説明する。"
-      },
-      {
-        "metric": "per-GPU memory",
-        "value": "Mtotal=2d/ρ(L/(GS)+KS)",
-        "baseline": "非sharded・非compressed storage",
-        "condition": "G GPUs、K retained pages、shard S",
-        "interpretation": "sharding、compression、bounded schedulingのmemory効果を統一式で表す。"
-      },
-      {
-        "metric": "最適shard size",
-        "value": "S*=sqrt(L/(KG))",
-        "baseline": "任意S",
-        "condition": "固定ρ,L,K,G",
-        "interpretation": "sharding granularityとreuse coverageのmemory trade-offを最小化する解析解。"
-      },
-      {
-        "metric": "FPGA代表resource",
-        "value": "page-table BRAM約176KB、metadata約48KB",
-        "baseline": "なし",
-        "condition": "E=64,S=256,k=4,K=16,d=128",
-        "interpretation": "U55Cの単一SLRにmetadata engineを収める設計上のresource見積り。実測利用率ではない。"
-      }
+      {"metric": "疎な専門家選択の計算量", "value": "BLhEからBLhkへ減少し、理論削減比はE/k", "baseline": "全E専門家を参照する密な方式", "condition": "選択専門家数kが総専門家数Eより十分小さい場合", "interpretation": "混合専門家モデルの計算疎性をKVアクセスへ反映したときの解析上の削減幅であり、実測高速化倍率ではない。"},
+      {"metric": "KV取得転送量", "value": "2BLhEから2BLhkへ減少し、理論削減比はE/k", "baseline": "全専門家のKVを取得する方式", "condition": "各問い合わせでk専門家だけを選ぶ場合", "interpretation": "専門家選択と専門家単位の分散配置を結合した場合の通信量解析である。実ネットワーク上の測定値ではない。"},
+      {"metric": "圧縮時の解析遅延", "value": "Tstep=(dkB/ρ)(2/β+η/γ)", "baseline": "圧縮率ρ=1", "condition": "論文の理想化した帯域・計算モデル", "interpretation": "圧縮率を上げると読み出し量と復号対象が減るが、メモリ時間と計算時間が均衡する領域では追加利得が飽和すると説明する。"},
+      {"metric": "一GPU当たりKVメモリ", "value": "Mtotal=2d/ρ(L/(GS)+KS)", "baseline": "断片化も圧縮も行わない保存方式", "condition": "GPU数G、保持ページ数K、断片サイズS", "interpretation": "分散断片化、圧縮、容量制約付き保持の効果を同じ式で表し、各調整変数の関係を比較できるようにする。"},
+      {"metric": "メモリ量を最小化する断片サイズ", "value": "S*=sqrt(L/(KG))", "baseline": "任意の断片サイズS", "condition": "ρ、L、K、Gを固定", "interpretation": "細粒度化による配置自由度と保持範囲の費用の均衡点を解析的に与える。"},
+      {"metric": "FPGA代表資源量", "value": "ページ表用BRAM約176KB、付随情報約48KB", "baseline": "対応する実測比較対象なし", "condition": "E=64、S=256、k=4、K=16、d=128", "interpretation": "U55C級FPGAの単一領域へ付随情報処理器を収める可能性を示す設計見積もりであり、実測利用率ではない。"}
     ],
-    "negative_results": [
-      "v3本文には独立した実験節がなく、latency/throughput/memoryの実測baseline比較がない。",
-      "task accuracy、perplexity、generation fidelityのempirical評価がなく、lossy compression/evictionの品質影響を定量化できない。",
-      "FPGA節はresource・latency式を提示するが実機FPGA benchmarkを報告しない。",
-      "複数routing/compression/scheduling方式を列挙するが、どの組合せが実workloadで最良かを比較していない。"
-    ],
-    "quality_impact": "compressionやevictionはlossyになり得る。論文は再構成誤差の解析式を示すが、生成品質への実測影響は示さないため、品質保持を断定できない。",
-    "interpretation": "PiKVの価値は、MoEの計算sparsityをKV placement/accessにも伝播させるsystem decompositionと、routing・compression・retentionを一つのmemory modelで整理した点にある。一方、実測性能の根拠は論文本文だけでは不足しており、設計提案としての位置付けが強い。"
+    "negative_results": ["第3版本文には独立した実験節がなく、遅延、スループット、メモリ量の実測比較がない。", "タスク正解率、困惑度、生成忠実度の実測がなく、損失を伴う圧縮やページ追い出しの品質影響を定量化できない。", "FPGA節は資源量と遅延の解析式を提示するが、実機FPGA上の測定を報告しない。", "複数の専門家選択、圧縮、保持方式を列挙するが、同一ワークロードで最良の組合せを比較していない。"],
+    "quality_impact": "圧縮やページ追い出しは損失を伴う可能性がある。論文は再構成誤差の解析を示すものの、生成品質への実測影響を示さないため、品質を保った高速化とは断定できない。",
+    "interpretation": "PiKVの主な価値は、混合専門家モデルの計算疎性をKVの配置と読み出しにも伝播させる構成分解と、専門家選択、圧縮、保持を一つのメモリ解析で整理した点にある。一方、実用上の性能根拠は本文だけでは不足しており、現時点では設計提案と解析結果として評価するのが妥当である。"
   },
-  "reservation": {
-    "claim_id": "claim-366e50017f388aac9c576b49",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
