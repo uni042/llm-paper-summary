@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 10:02:38 JST**
+> 自動生成: **2026-09-17 10:30:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **57** |
 | 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（2時間40分前）** |
+| 直近24hの検証済みResearch収録 | **89** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（3時間8分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **6** | **8** | **4** | **4** | **2** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **20** | **10** | **6** | **4** | **2** | **0** | **6** |
+| Discovery | **8** | **2** | **2** | **0** | **0** | **0** | **6** |
+| 合計 | **14** | **10** | **6** | **4** | **2** | **2** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -117,14 +117,6 @@
   - result: `.survey/work-queue/results/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json`
   - 探索軸: MoE expert-sharded KV cache・expert residency・distributed cache routing
-- **09-17 04:03:42 JST** job `job-93fb2f0552bd58b2` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-agentic-serving-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-agentic-serving-4.json`
-  - 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling
-- **09-17 04:03:45 JST** job `job-390a2ff0c6f51a4c` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-moe-movement-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json`
-  - 探索軸: MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
 
 ### 直近タスク
 
@@ -181,12 +173,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **2件**
 - `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 10:02:24 JST** / heartbeat: **—** / lease expiry: **09-17 11:32:24 JST**
+  - claim: **09-17 10:02:24 JST** / heartbeat: **09-17 10:30:21 JST** / lease expiry: **09-17 12:00:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-120be1bd98c2839e.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey-project`
-  - claim: **09-17 09:31:36 JST** / heartbeat: **—** / lease expiry: **09-17 11:01:36 JST**
+  - claim: **09-17 09:31:36 JST** / heartbeat: **09-17 10:30:21 JST** / lease expiry: **09-17 12:00:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
 
 #### Audit
