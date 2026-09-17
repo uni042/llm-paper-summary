@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-af95b58e929cbe887fc76bfd",
-  "job_id": "job-research-491d6cc11a36da8c",
-  "data": {
-    "evaluation_summary": "16基のNVIDIA A100 GPUを用い、密モデルと混合専門家モデルを含む4モデル、対話、深掘り調査、エージェント型コード生成、長文脈数学推論を組み合わせてオンライン評価する。実運用トレースを資源規模に合わせて要求到着へ用い、一評価あたり1万件超を少なくとも1時間処理する。主要結果は5回の独立実行で平均し、トークン単位と要求単位のサービス有効処理量、最初のトークンまでの時間、トークン間隔、エンドツーエンド遅延、総スループットを比較する。",
-    "scope": "Llama-3.1-8B、Qwen2.5-14B、Qwen3-30B-MoE-A3B、Llama-3.1-70Bを16基のA100上で評価する。要求到着にはMicrosoftの実運用LLM提供トレースを基本にし、除去実験ではポアソン到着も用いる。サービス品質目標はDeepSeek APIを1000回測定した95百分位遅延から設定する。",
-    "hardware": ["NVIDIA A100 GPU 16基からなるクラスタ"],
-    "software": ["vLLMを実行基盤として約2800行を追加", "出力長予測器とパターングラフ照合器はgRPC接続の別非同期過程"],
-    "models": ["Llama-3.1-8B", "Qwen2.5-14B", "Qwen3-30B-MoE-A3B", "Llama-3.1-70B"],
-    "datasets": ["Alpaca", "LMSys-Chat", "Search Arenaを用いた深掘り調査", "エージェント型コード生成", "長文脈数学推論"],
-    "workload": "対話型、期限型、複合型を基本1対1対1で混合する。対話型は約2秒の最初のトークン時間と約100ミリ秒のトークン間隔、期限型は20秒の全体期限、複合型は20秒×段階数を期限とする。各オンライン評価は1万件を超える要求を少なくとも1時間処理する。",
-    "baselines": ["Autellix", "Learn to Rank", "vLLM", "Sarathi-Serve", "未来の出力長と依存関係を完全に知るオラクル版JITServe"],
-    "metrics": ["トークン単位サービス有効処理量", "要求単位サービス有効処理量", "TTFT", "TBT", "エンドツーエンド遅延", "総スループット", "同等有効処理量を得るための資源量"],
-    "predictor_accuracy": "出力長は高分位点の上限として予測し、約50生成トークンごとに更新する。単回予測は約7ミリ秒で、比較した微調整BERT予測器より約7倍高速。完全情報オラクルとの最終有効処理量差は3〜9%に収まる。",
-    "control_knobs": "出力長予測分位点、再予測間隔、GMAX候補閾値、バッチサイズ、先取り判定、待機上限、複数複製候補数、公平性重みを調整できる。"
-  },
-  "reservation": {"claim_id": "claim-af95b58e929cbe887fc76bfd", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-6200b349cea80f32d6b4e766",
+  "job_id": "job-research-ce95464a254235a3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6200b349cea80f32d6b4e766",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
