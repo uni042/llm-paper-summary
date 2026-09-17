@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-5ba7495e892c3a3a6d421a8e",
-  "job_id": "job-research-7e739eca355b8687",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5ba7495e892c3a3a6d421a8e",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5ba7495e892c3a3a6d421a8e","job_id":"job-research-7e739eca355b8687","data":{"overview":"Prismは、モデルごとの固定GPUメモリ境界を外し、重みと鍵値キャッシュを需要に応じてモデル横断で伸縮させることで、休眠モデルの容量を活動モデルへ即座に回せるようにする。実運用追跡と最大32枚のH100を用いた評価では、同じGPU数で初回トークンSLO達成率を最大3.3倍、出力トークンSLO達成率を最大2倍に高めた。同じSLO達成水準を目標にすると費用を2倍超削減、または同じ資源で最大3.5倍の要求を処理できる。多数の低頻度モデルを常時利用可能に保つ事業者にとって、専用GPUを各モデルへ固定する必要を減らせることが実用上の意味である。","key_results":[{"metric":"初回トークンSLO達成率","value":"最大3.3倍","baseline":"最先端GPU共有方式","condition":"同一GPU数、実運用追跡","interpretation":"モデル横断メモリ再配分により活動モデルの待ち行列と入替待ちを減らす。"},{"metric":"出力トークンSLO達成率","value":"最大2倍","baseline":"最先端方式","condition":"同一GPU数","interpretation":"鍵値キャッシュ容量を需要へ追従させ、生成中の容量不足を抑える。"},{"metric":"費用削減","value":"2倍超","baseline":"同一SLO達成水準の既存方式","condition":"多モデル提供","interpretation":"休眠モデルへ固定されていたGPU容量を共有し、必要GPU数を減らす。"},{"metric":"処理可能要求数","value":"最大3.5倍","baseline":"最先端方式","condition":"同等のSLO達成を維持","interpretation":"同じクラスタ資源をより多くの要求へ使える。"}],"negative_results":"純粋な時間共有は複数モデルへの要求が交互に来るとモデル重みの退避・再読込を繰り返して激しい入替を起こす。純粋な空間共有は休眠モデルの予約領域を活動モデルへ渡せず、突発負荷時に鍵値キャッシュ容量が不足する。したがってどちらか一方を固定採用するだけでは実運用の急変へ追従できない。","interpretation":"Prismの改善は計算を速くすることより、物理GPUメモリの所有境界をモデル単位からクラスタ共有資源へ下げることに由来する。仮想アドレスを固定したまま物理ページだけを動かせるため、既存実行器を壊さず共有方式を頻繁に変えられる。","quality_impact":"モデル重みや生成演算を近似しないため、生成品質低下ではなくSLO達成率と費用が主要な交換条件である。"},"reservation":{"claim_id":"claim-5ba7495e892c3a3a6d421a8e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
