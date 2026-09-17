@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T15:36:49.220866+00:00",
+  "updated_at": "2026-09-17T15:40:35.682055+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T15:36:49.220866+00:00",
+      "last_recorded_at": "2026-09-17T15:40:35.682055+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 217,
+        "research_completed": 218,
         "audit_completed": 0,
         "discovery_completed": 97,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35129232823:1",
-          "recorded_at": "2026-09-16T17:36:41.166947+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35129232823",
-            "run_attempt": "1",
-            "source_sha": "b62476338e98782ee733a8b771080c310be8d180"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35131894509:1",
           "recorded_at": "2026-09-16T18:04:21.920293+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35241351147",
             "run_attempt": "1",
             "source_sha": "bc4b6339a16a26a6efb5a5ff1d50357f0e05cefa"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35241747339:1",
+          "recorded_at": "2026-09-17T15:40:35.682055+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35241747339",
+            "run_attempt": "1",
+            "source_sha": "555b26be5f52422fe0a290503668e3a229f12826"
           },
           "signals": [
             "research_completed"
@@ -22228,6 +22228,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.14626",
           "title": "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-36aaaee3c1110557",
+          "type": "research",
+          "canonical_id": "arXiv:2504.09345",
+          "title": "MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints",
           "from": "ready",
           "to": "completed"
         }
