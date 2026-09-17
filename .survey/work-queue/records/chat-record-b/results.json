@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-2d17d81f9fcb9ead4849e591",
-  "job_id": "job-research-a1f4ccc94cf94fe5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2d17d81f9fcb9ead4849e591",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-2d17d81f9fcb9ead4849e591","job_id":"job-research-a1f4ccc94cf94fe5","data":{"overview":"TokenWeaveは、融合カーネルだけでもRMSNormの冗長計算と中間HBMアクセスを削り、その上で2群の通信計算重畳を加えることで、低遅延配信で一般的な1K〜数Kトークンの範囲から性能を改善する。8×H100の密モデルでは1K以上で単反復遅延を1.16〜1.28倍改善し、実トレースでは最大1.19倍のスループットを得る。融合カーネル単体は64〜32Kトークンで1.34〜1.39倍高速で、条件によっては通信を完全に除いた理論参照よりも速い。これは通信を隠すだけでなくRMSNormそのものを軽量化しているためである。","key_results":[{"metric":"単反復遅延の高速化倍率","value":"最大1.28倍","baseline":"NVSHARP/Multimemを使う重畳なしvLLM","condition":"8×H100、Llama-3.3-70B等のプリフィル専用処理。密モデルでは1Kトークン以上で1.16〜1.28倍。","interpretation":"小さいトークン数でも分割損失を抑え、通信とRMSNormを計算へ重ねられることを示す。4K以上の一部条件では通信除去の理論参照も上回る。"},{"metric":"実ワークロードのスループット","value":"ShareGPTで最大約1.19倍、arXivで最大約1.15倍","baseline":"重畳なしvLLM","condition":"8×H100、チャンク化プリフィルを使うエンドツーエンド配信。密モデル中心。","interpretation":"単一カーネルの改善だけでなく、可変長要求を含む実際の配信負荷でも通信削減が全体スループットへ反映される。"},{"metric":"融合AllReduce–RMSNormカーネルの高速化倍率","value":"1.34〜1.39倍","baseline":"AllReduceとRMSNormを別々に実行した合計","condition":"8×H100、隠れ次元8192、bf16、64〜32Kトークン。","interpretation":"ReduceScatter後の局所正規化とHBM往復削減により、融合処理はほぼAllReduce単体の時間に近づき、重畳しなくても利益を生む。"},{"metric":"TileLinkに対する小処理での差","value":"1KトークンでTokenWeaveは約1.20倍高速、TileLinkは正味の悪化","baseline":"各方式の重畳なし比較対象","condition":"8×H100、Llama-3.3-70B単一層、バッチ数1。","interpretation":"細粒度融合が小処理で受ける分割・占有率損失に対し、2分割と少数SM通信の設計が低遅延領域で有利である。"},{"metric":"B200での融合カーネル高速化倍率","value":"1.24〜1.38倍","baseline":"Multimem AllReduceとRMSNormの個別実行時間の和","condition":"8×B200、隠れ次元8192、bf16、32〜64Kトークン。","interpretation":"H100だけでなくBlackwell世代でも融合によるHBM往復削減が有効であり、方式のハードウェア世代間の再現性を補強する。"}],"negative_results":"完全な分割・重畳は常に有利ではない。Mixtral-8x22Bでは1Kと2Kトークンで完全方式に正味のオーバーヘッドが生じる。MoEではトークンが複数エキスパートへ分散し、小さい全結合ネットワーク計算がメモリ帯域律速になりやすいため、2分割でも追加損失を吸収できない。この条件では分割を無効化し融合カーネルだけを使うと改善する。4 GPUでは8 GPUより通信量自体が小さいため相対利得も小さい。B200の小デコードでも分割損失が重畳利益を打ち消すので融合のみを評価し、改善は1.01〜1.05倍に留まる。","interpretation":"利得は主に二つの効果へ分けられる。第一に、RMSNormをReduceScatter後へ移し、融合カーネルで中間HBMアクセスとGPU間の重複計算を消すため、通信を重ねなくても4〜9%程度存在した正規化費用を削れる。第二に、通信・正規化の占有SMを2〜8へ抑え、計算を2群だけに分けることで、残った計算資源へ集合通信を重ねられる。通信比率が高い8 GPUや十分なトークン数では第二の効果が大きい一方、通信比率が小さい4 GPU、小さなデコード、MoEの小計算では分割損失が相対的に増える。そのため選択的有効化が性能の安定性に重要である。","quality_impact":"TokenWeaveはモデル重み、活性値精度、注意計算の近似を変更しない。RMSNormの位置変更はReduceScatter後に各GPUが持つ確定済みトークン断片へ同じ正規化を適用してからAllGatherする等価変換であり、分割時も前半を先行させるチャンク化注意で因果依存を保つ。したがって性能改善は近似による品質低下との交換ではなく、実行順序、通信経路、メモリアクセス、資源割当の最適化によるものとして評価されている。"},"reservation":{"claim_id":"claim-2d17d81f9fcb9ead4849e591","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
