@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 21:02:48 JST**
+> 自動生成: **2026-09-17 21:03:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **20** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **4** | **3** | **1** | **0** | **0** | **13** |
-| 合計 | **26** | **7** | **6** | **1** | **0** | **0** | **13** |
+| Discovery | **6** | **5** | **3** | **2** | **0** | **0** | **16** |
+| 合計 | **26** | **8** | **6** | **2** | **0** | **0** | **16** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -161,8 +161,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 21:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **1件** / 候補: **13件**
-- 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache / KV cache reservation・GPU L2 prefetch・multi-GPU migration / network-aware KV transfer・decode routing・disaggregated serving evaluation / SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **16件**
+- 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache / KV cache reservation・GPU L2 prefetch・multi-GPU migration / MoE expert cache ownership・online placement・resource allocation / network-aware KV transfer・decode routing・disaggregated serving evaluation / SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
 - round `cxl-memory-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json`
   - 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache
@@ -171,6 +171,10 @@
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json`
   - 探索軸: KV cache reservation・GPU L2 prefetch・multi-GPU migration
   - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-kv-scheduling-2.json` (`ok=true`)
+- round `moe-placement-5` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-moe-placement-5.json`
+  - 探索軸: MoE expert cache ownership・online placement・resource allocation
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `network-disagg-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-network-disagg-4.json`
   - 探索軸: network-aware KV transfer・decode routing・disaggregated serving evaluation
@@ -233,10 +237,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **449** |
+| 成功result未照合のimmutable submission | **450** |
 | └ Research | **319** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **127** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
