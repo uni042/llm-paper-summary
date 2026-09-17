@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T04:41:46+00:00",
-  "last_run_key": "2026-09-17T13:30:14+09:00",
-  "last_round": "sep15-inference-systems-1",
+  "updated_at": "2026-09-17T06:01:06+00:00",
+  "last_run_key": "2026-09-17T14:00:00+09:00",
+  "last_round": "unrepresented-memory-systems-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T21:30:00+09:00",
-      "round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
-      "axis": "cxl-near-data-kv-page-management-os-demand-paging",
-      "query_summary": "専門家先読みラウンドの採用が1件に留まり在庫がcritical水位のままだったため、CXL近傍データ処理、GPU注意効率を考慮したKVページ管理、OS需要ページングの隣接応用へ探索軸を変更した。一次資料の定量結果を軽量評価し、最新正本で識別子を再照合した4件を提出した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。",
-      "source_submission": "work-queue/submissions/20260912T2150JST-discovery-080d4b5d49ec5db4.json"
-    },
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "round": "normal-worker-critical-inventory-cxl-peer-gpu-final-replenish",
@@ -6726,6 +6711,33 @@
       ],
       "next_axis_hint": "sep15-adjacent-memory-and-private-inference",
       "source_submission": "work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json"
+    },
+    {
+      "run_key": "2026-09-17T14:00:00+09:00",
+      "round": "unrepresented-memory-systems-1",
+      "axis": "fresh-and-adjacent-memory-offload-kv-systems",
+      "query_summary": "Fresh September 2026 and adjacent inference-system search across offloading-aware early exit, CPU/GPU KV-cache placement, context-intensive KV offload, and compression-aware memory controllers, filtered against canonical monthly identity snapshots before submission.",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.16892",
+        "arXiv:2604.25080",
+        "arXiv:2601.10729",
+        "arXiv:2604.26074",
+        "arXiv:2605.02189",
+        "arXiv:2605.08151",
+        "arXiv:2312.11514",
+        "arXiv:2608.03036"
+      ],
+      "next_axis_hint": "adjacent-hpc-storage-runtime-and-kv-transfer",
+      "source_submission": "work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json"
     }
   ],
   "axes": {
@@ -10958,6 +10970,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "sep15-adjacent-memory-and-private-inference"
+    },
+    "fresh-and-adjacent-memory-offload-kv-systems": {
+      "last_run_key": "2026-09-17T14:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "adjacent-hpc-storage-runtime-and-kv-transfer"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
