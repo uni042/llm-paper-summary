@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:37:25 JST**
+> 自動生成: **2026-09-18 06:37:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **59** |
+| 収録候補論文 | **58** |
 | 未claim Research job | **58** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 06:07:01 JST（30分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-18 06:37:33 JST（4秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **59** |
+| canonical_id確認済みの一意な候補論文 | **58** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **59** |
+| 非終端Research job合計 | **58** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **10** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **26** | **9** | **8** | **1** | **1** | **0** | **18** |
+| 合計 | **27** | **9** | **9** | **0** | **0** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 06:37:33 JST** [research] `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
+  - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
+  - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e11f604e90f13e08b8a7042f.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md`
 - **09-18 06:07:01 JST** [research] `arXiv:2602.10729` — BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization
   - job: `.survey/work-queue/jobs/job-research-1fd656c9a10556db.json`
   - result: `.survey/work-queue/results/research/attempt-7ad6ad40100c07874c12360f.json` (`ok=true`)
@@ -146,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e11f604e90f13e08b8a7042f.json` (job `job-research-39525f58ef98f435`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
+  - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
+  - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e11f604e90f13e08b8a7042f.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md`
 
 #### Audit (:30)
 
@@ -197,10 +206,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 06:35:47 JST** / heartbeat: **—** / lease expiry: **09-18 08:05:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-39525f58ef98f435.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -220,7 +227,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **59** |
+| ready | **58** |
 
 ### 候補の重複・識別情報欠損
 
@@ -240,7 +247,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **690** |
+| inference/training/survey配下の論文Markdown実体 | **691** |
 
 ### immutable submissionの未照合
 
@@ -248,8 +255,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **464** |
-| └ Research | **335** |
+| 成功result未照合のimmutable submission | **463** |
+| └ Research | **334** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
