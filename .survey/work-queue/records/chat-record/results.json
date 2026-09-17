@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-71c0ed6c5534ff3803426ef1",
-  "job_id": "job-research-cbc6b0e2ec411766",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71c0ed6c5534ff3803426ef1",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-71c0ed6c5534ff3803426ef1","job_id":"job-research-cbc6b0e2ec411766","data":{"overview":"Optimusは固定ブロック拡散が低負荷では有利でも高負荷で早期飽和する問題を、負荷に合わせたチャンク幅変更で回避する。8B級主評価では自己回帰比平均2.1倍・最大6.1倍、固定BD32比平均1.3倍・最大4.3倍のスループットを達成する。SLO制約付きオンライン配信容量は自己回帰比平均2.1倍・最大3.5倍、BD32比平均1.4倍・最大2.0倍、SGLang DLLM比最大50.7倍である。4B〜100Bとテンソル並列でもBD32を上回る。","key_results":[{"metric":"自己回帰比スループット","value":"平均2.1倍、最大6.1倍","baseline":"LMDeploy-AR","condition":"A100、主にSDAR-8B/LLaDA2.0-16B、複数バッチ・負荷条件","interpretation":"低〜中負荷では大チャンクで要求内並列性を使い、自己回帰が残すGPU空きを埋める。"},{"metric":"固定ブロック拡散比スループット","value":"平均1.3倍、最大4.3倍","baseline":"LMDeploy-BD32","condition":"同一モデル・GPU条件","interpretation":"高負荷では小チャンクへ縮め、幅32の低いトークン利用率による冗長計算を抑える。"},{"metric":"SLO下の配信容量","value":"AR比平均2.1倍・最大3.5倍、BD32比平均1.4倍・最大2.0倍","baseline":"LMDeploy-AR / LMDeploy-BD32","condition":"ShareGPT/LMSYS P90 TPOT 50ms、LongBench 100ms","interpretation":"単発スループットだけでなく、待ち行列を含むオンライン要求率を高めても遅延目標を維持できる。"},{"metric":"SGLang DLLM比配信容量","value":"平均11.8倍、最大50.7倍","baseline":"SGLang-BD32","condition":"同じオンライン配信評価","interpretation":"固定ブロック粒度の配信実装に対し、チャンク化・動的幅・LMDeploy統合の組合せが大きな容量差を生む。"},{"metric":"モデル規模・テンソル並列での改善","value":"BD32比1.14〜2.50倍","baseline":"LMDeploy-BD32","condition":"SDAR-4B/8B/30B-A3B、LLaDA2.0-16B/100B、TP1〜4、GSM8K","interpretation":"弾性粒度はテンソル並列と直交し、100B級まで利益が残る。"},{"metric":"チャンク化アブレーション","value":"BD32 2.60 req/s→固定Chunk-8 5.54 req/s、弾性5.06 req/s","baseline":"BD32","condition":"SDAR-8B、ShareGPT、P90 TPOT 50ms","interpretation":"細粒度化だけで2.13倍の容量改善があり、弾性方式は最良固定幅から9.5%以内で広い負荷域へ追従する。"}],"negative_results":"大ブロックは高負荷でGPUを早期飽和させ、幅32では計算32トークンに対して平均確定3.8程度と冗長性が高い。単純な小チャンク化は元ブロックの復号順序を崩し、チャンク境界で停止して反復数を増やすため、ステップ再編成なしでは効率が落ちる。弾性方式もShareGPTのアブレーションでは最良固定Chunk-8の5.54 req/sに対し5.06 req/sで9.5%低い。品質も完全不変ではなく、SDAR系MBPPなど個別条件で約1.17点の低下が観測される。","interpretation":"最適復号粒度はGPU利用率だけでは決まらない。幅を大きくすると並列仕事が増えてGPUを埋める一方、確定しない位置まで計算するためトークン利用率が下がる。Optimusはこの二つの積み重ねを飽和境界で制御するため、低負荷では幅32、高負荷では平均20.8・最小6まで縮める。これにより固定方式が得意な狭い負荷域を横断して安定した性能を得る。","quality_impact":"重み再学習なしで実行粒度とKV再利用を変えるため、モデルそのものの量子化や近似重みは導入しない。ただし拡散復号の実行順序を再編成するので出力は厳密同一ではない。GSM8K、HumanEval、MBPP、IFEvalでは平均差が小さく、多くはBD32以上だが、個別最悪で約1点程度の低下がある。"},"reservation":{"claim_id":"claim-71c0ed6c5534ff3803426ef1","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
