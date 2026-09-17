@@ -162,6 +162,37 @@ def _fully_recovered_invalid_discovery_submission_paths(
     return resolved
 
 
+def _current_orphan_submission_paths(
+    repo_root: Path,
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+    jobs: dict[str, dict[str, Any]],
+) -> set[Path]:
+    """Return the exact durable submissions counted by STATUS as orphan anomalies."""
+    terminally_rejected = _core._terminally_rejected_submission_paths(
+        repo_root,
+        submissions,
+        results,
+    )
+    resolved_legacy = _fully_recovered_invalid_discovery_submission_paths(
+        repo_root,
+        submissions,
+        results,
+        jobs,
+    )
+    return {
+        row["path"]
+        for row in submissions
+        if (not row["job_id"] or row["job_id"] not in jobs)
+        and row["path"] not in terminally_rejected
+        and not (
+            row["kind"] == "discovery"
+            and _core._discovery_round_identity(row) is not None
+        )
+        and row["path"] not in resolved_legacy
+    }
+
+
 def _direct_evidence_metrics(
     repo_root: Path,
     *,
@@ -189,19 +220,21 @@ def _direct_evidence_metrics(
         results,
         jobs,
     )
-    if not resolved:
-        return metrics
-
-    consistency = dict(metrics["consistency"])
-    resolved_count = min(len(resolved), int(consistency.get("orphan_submissions", 0) or 0))
-    consistency["orphan_submissions"] = max(
-        0,
-        int(consistency.get("orphan_submissions", 0) or 0) - resolved_count,
-    )
-    metrics["consistency"] = consistency
-    metrics["consistency_total"] = max(
-        0,
-        int(metrics.get("consistency_total", 0) or 0) - resolved_count,
+    if resolved:
+        consistency = dict(metrics["consistency"])
+        resolved_count = min(len(resolved), int(consistency.get("orphan_submissions", 0) or 0))
+        consistency["orphan_submissions"] = max(
+            0,
+            int(consistency.get("orphan_submissions", 0) or 0) - resolved_count,
+        )
+        metrics["consistency"] = consistency
+        metrics["consistency_total"] = max(
+            0,
+            int(metrics.get("consistency_total", 0) or 0) - resolved_count,
+        )
+    metrics["orphan_submission_paths"] = sorted(
+        str(path.relative_to(repo_root))
+        for path in _current_orphan_submission_paths(repo_root, submissions, results, jobs)
     )
     return metrics
 
@@ -218,6 +251,17 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
             lines[index] = line + compatibility_note
         elif line.startswith("- **整合性異常**:"):
             lines[index] = line + compatibility_note
+
+    orphan_paths = metrics.get("orphan_submission_paths") or []
+    if orphan_paths:
+        lines.extend([
+            "### 対応jobなしsubmissionの診断対象",
+            "",
+            "上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。",
+            "",
+        ])
+        lines.extend(f"- `{path}`" for path in orphan_paths)
+        lines.append("")
     return lines
 
 
