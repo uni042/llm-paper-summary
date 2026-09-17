@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8a81151586fdc3a2613ff366","job_id":"job-research-b6925d33135e854c","data":{"canonical_id":"arXiv:2505.15781","arxiv_id":"2505.15781","doi":"10.48550/arXiv.2505.15781","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"dKV-Cache: The Cache for Diffusion Language Models","summary":"dKV-Cacheは、双方向注意のため通常のKVキャッシュを使えない拡散言語モデル（Diffusion Language Model; DLM）で、復号済みトークンのK/V表現が復号直後から安定するという観測を利用する。復号した瞬間ではなく1ステップ遅らせてK/Vを固定し、未確定位置だけを再計算するDecode版と、現在・直前復号位置と小さな局所窓だけを再計算して二乗計算量へ下げるGreedy版を提案する。LLaDA-8BとDream-7Bで学習なしに2〜10倍級の高速化を示し、Decode版は多くの条件でほぼ無損失である。","list_summary":"DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。","authors":["Xinyin Ma","Runpeng Yu","Gongfan Fang","Xinchao Wang"],"authors_affiliations":"National University of Singapore","published":"2025-05-21","publication":"arXiv / NeurIPS 2025","publication_type":"会議採択論文","publication_status":"NeurIPS 2025採択; arXiv v1","lineage":"diffusion language model inference / KV cache / training-free acceleration","topics":["拡散言語モデル","KVキャッシュ","推論高速化","双方向注意","学習不要高速化"],"importance":"通常はKVキャッシュ非互換と考えられる双方向DLMに、トークン表現の時間安定性を利用した条件付き再利用を導入し、後続のDLMキャッシュ研究の基礎となる。","implementation":"公開コードでLLaDAとDreamへ適用。非連続位置のK/Vを効率化するconcat_reorderを実装し、位置埋め込みも対応して並べ替える。","hardware_evaluation":"速度はLLaDAをNVIDIA A6000、DreamをNVIDIA H20で測定。付録のバッチサイズ評価は単一H20。","quality_effect":"Decode版は1ステップ遅延と定期更新により多くの条件でほぼ無損失。Greedy版は計算量をO(L^2)へ下げる代わりに古いK/V近似が増え、精度低下が生じ得る。","source":"https://arxiv.org/abs/2505.15781","sources":["https://arxiv.org/abs/2505.15781","https://arxiv.org/pdf/2505.15781"],"code":"https://github.com/horseee/dKV-Cache","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"primary manuscript reference section","references_total":57},"reservation":{"claim_id":"claim-8a81151586fdc3a2613ff366","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-4e8102b097cd70d5cff78c32",
+  "job_id": "job-research-39525f58ef98f435",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4e8102b097cd70d5cff78c32",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

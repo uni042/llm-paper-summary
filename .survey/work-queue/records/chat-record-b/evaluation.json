@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8a81151586fdc3a2613ff366","job_id":"job-research-b6925d33135e854c","data":{"hardware":"LLaDAの速度測定はNVIDIA A6000、DreamはNVIDIA H20。付録のバッチサイズ感度は単一H20、プリフィル100トークン固定で測定する。","software":"LLaDA-8B-InstructとDream-Base/Instruction-7Bへ学習なしで適用。公開実装は任意位置K/Vのconcat_reorderと位置埋め込み並べ替えを含む。LLaDAでは低信頼度またはランダム再マスク、Dreamでは元評価設定を踏襲する。","methodology":"一般理解MMLU・GPQA、数学GSM8K・Math500、コードHumanEval・MBPPを評価する。LLaDAは主にゼロショット、Dreamは元設定に従う少数例文脈学習。比較対象は元の全ステップ推論と、ステップ数を50%または62.5%へ減らした高速化。精度またはPass@1とtokens/sを併記し、Decode版の更新間隔、Greedy版の更新間隔・局所窓、生成長、ノイズ除去ステップ数、入力長、バッチサイズを変える。","scope":"7B〜8B級の2種類のマスク型DLMで、一般理解・数学・コードと長いプリフィルを含めて検証する。アルゴリズム単体のキャッシュ設計が中心で、専用メモリ管理、並列配信、複数GPU、ハードウェア認識カーネル最適化は主対象外である。"},"reservation":{"claim_id":"claim-8a81151586fdc3a2613ff366","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-4e8102b097cd70d5cff78c32",
+  "job_id": "job-research-39525f58ef98f435",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4e8102b097cd70d5cff78c32",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
