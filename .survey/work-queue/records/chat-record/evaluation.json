@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a65fafc0985029a9a69cb193","job_id":"job-research-146f944f1c748398","data":{"hardware":"TPSとFLOPsの主要測定は単一NVIDIA RTX 4090 GPUで実施。","software":"LLaDA 8BおよびDream 7BのBase/Instruct版を対象に、公式推論構成へdLLM-Cacheを組み込む。公式PyTorch実装が公開されている。","methodology":"LLaDA 8BとDream 7Bを複数の数学・科学・一般知識・コード・長文ベンチマークで標準推論と比較する。主要指標はTokens Per Second、平均FLOPs/token、各ベンチマークのタスクスコア。全モデルで適応更新率rho=0.25を用い、プロンプト更新間隔Kpと応答全更新間隔Krはモデル・評価設定に応じて指定する。追加分析ではキャッシュ間隔、更新率、長いプロンプト、異なる応答長、メモリ増加と速度・品質の関係を調べる。","scope":"代表的なマスク拡散LLMであるLLaDA 8BとDream 7BのBase/Instruct、および単一RTX 4090上の推論が中心。学習不要キャッシュの計算削減と品質保持を直接検証する一方、大規模バッチのオンラインサービング、複数GPU/複数ノード、異種アクセラレータ、長期運用時のスケジューリングやメモリ競合は主要評価範囲外。"},"reservation":{"claim_id":"claim-a65fafc0985029a9a69cb193","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-dbef48f08bbefbb3ea1b0135",
+  "job_id": "job-research-146f944f1c748398",
+  "data": {
+    "hardware": "TPSとFLOPsの主要測定は単一NVIDIA RTX 4090 GPUで実施。",
+    "software": "LLaDA 8BおよびDream 7BのBase/Instruct版を対象に、公式推論構成へdLLM-Cacheを組み込む。公式PyTorch実装が公開されている。",
+    "methodology": "LLaDA 8BとDream 7Bを複数の数学・科学・一般知識・コード・長文ベンチマークで標準推論と比較する。主要指標はTokens Per Second、平均FLOPs/token、各ベンチマークのタスクスコア。全モデルで適応更新率rho=0.25を用い、プロンプト更新間隔Kpと応答全更新間隔Krはモデル・評価設定に応じて指定する。追加分析ではキャッシュ間隔、更新率、長いプロンプト、異なる応答長、メモリ増加と速度・品質の関係を調べる。",
+    "scope": "代表的なマスク拡散LLMであるLLaDA 8BとDream 7BのBase/Instruct、および単一RTX 4090上の推論が中心。学習不要キャッシュの計算削減と品質保持を直接検証する一方、大規模バッチのオンラインサービング、複数GPU/複数ノード、異種アクセラレータ、長期運用時のスケジューリングやメモリ競合は主要評価範囲外。"
+  },
+  "reservation": {
+    "claim_id": "claim-dbef48f08bbefbb3ea1b0135",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
