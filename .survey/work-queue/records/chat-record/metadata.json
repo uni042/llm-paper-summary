@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5ba7495e892c3a3a6d421a8e","job_id":"job-research-7e739eca355b8687","data":{"canonical_id":"arXiv:2505.04021","arxiv_id":"2505.04021","doi":"10.48550/arXiv.2505.04021","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving","summary":"Prismは、多数の大規模言語モデルを同じGPU群で提供する際、空間共有だけでは休眠モデルの予約メモリが無駄になり、時間共有だけでは突発的な交互要求でモデル入替が頻発する問題を扱う。モデルごとの仮想アドレス空間と物理GPUページを分離し、重みと鍵値キャッシュをモデル横断で2MB単位に再配分するメモリ風船化を導入する。さらに全体配置と各GPU内の余裕時間優先制御を組み合わせ、実運用追跡で同一GPU数なら初回トークンSLO達成率を最大3.3倍、同一SLOなら費用を2倍超削減した。","list_summary":"GPU物理メモリをモデル横断で動的再配分し、空間共有と時間共有を負荷に応じて切り替える多モデル提供基盤。","authors":["Shan Yu","Jiarong Xing","Yifan Qiao","Mingyuan Ma","Yangmin Li","Yang Wang","Shuo Yang","Zhiqiang Xie","Shiyi Cao","Ke Bao","Ion Stoica","Harry Xu","Ying Sheng"],"published":"2025-05-06","publication":"arXiv:2505.04021","publication_type":"arXiv preprint","publication_status":"arXiv初稿2025-05-06。","topics":["多モデル提供","GPUメモリ共有","鍵値キャッシュ","仮想メモリ","モデル配置","SLO"],"hardware_evaluation":"最大32枚のNVIDIA H100 GPUからなるクラスタで、58種類の異なる大規模言語モデルと実運用追跡を用いて評価する。","quality_effect":"モデル計算を近似変更せず資源管理を変更するため、主要な交換条件は生成品質ではなく初回トークン遅延、出力トークン時間、費用、処理要求数である。","source":"https://arxiv.org/abs/2505.04021","sources":["https://arxiv.org/abs/2505.04021","https://arxiv.org/html/2505.04021","https://github.com/ovg-project/kvcached"],"code":"https://github.com/ovg-project/kvcached","implementation":"SGLang上にPrismを実装し、GPUメモリ風船化機構kvcachedを公開。kvcachedは1万GPU超のクラスタを含む産業利用があると論文で報告される。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv本文を確認。個別識別子は推測で補わない。","references_total":0},"reservation":{"claim_id":"claim-5ba7495e892c3a3a6d421a8e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0680c5744f77092486ad1d1d",
+  "job_id": "job-research-a06bdf20c1667dad",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0680c5744f77092486ad1d1d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
