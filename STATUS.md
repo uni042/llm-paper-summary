@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 10:42:13 JST**
+> 自動生成: **2026-09-17 11:28:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **57** |
-| 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（3時間20分前）** |
+| 未claim Research job | **56** |
+| 直近24hの検証済みResearch収録 | **86** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（4時間6分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **8** | **4** | **4** | **2** | **2** | — |
+| Research | **4** | **8** | **4** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **8** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **12** | **10** | **6** | **4** | **2** | **2** | **6** |
+| Discovery | **7** | **2** | **2** | **0** | **0** | **0** | **6** |
+| 合計 | **11** | **10** | **6** | **4** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -103,10 +103,6 @@
   - result: `.survey/work-queue/results/20260917T0600JST-discovery-specialist-runtime-communication-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json`
   - 探索軸: 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
-- **09-17 05:02:46 JST** job `job-81d9561e39a761a9` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0500JST-discovery-specialist-moe-kv-sharding-1.json`
-  - 探索軸: MoE expert-sharded KV cache・expert residency・distributed cache routing
 
 ### 直近タスク
 
@@ -163,13 +159,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **2件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 10:02:24 JST** / heartbeat: **09-17 10:30:21 JST** / lease expiry: **09-17 12:00:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-120be1bd98c2839e.json`
-- `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey-project`
-  - claim: **09-17 09:31:36 JST** / heartbeat: **09-17 10:30:21 JST** / lease expiry: **09-17 12:00:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
 
 #### Audit
 
