@@ -4,7 +4,19 @@
   "slot": "problem_method",
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
-  "data": {},
+  "data": {
+    "problem": "Mem0、Zep、MemGPT/Letta等の永続メモリ系は、ユーザー履歴から関連factをtop-k検索してprompt textとして毎要求へ挿入する。この方式は全履歴を入れるより短いが、同じfactが何度も検索されてもそのたびにGPUでprefillされるため、取得メモリ量とともにtime-to-first-tokenが増える。prefix cachingは同一prefixの固定位置を前提とするため、要求ごとに異なるfact集合が異なる位置へ並ぶ検索メモリには直接適用しにくい。さらにCPU vector storeから検索文をGPUへ転送する経路もend-to-end latencyを増やす。",
+    "novelty": "InferScaleは検索メモリをtoken layerではなくattention layerで注入する。各factを一度だけLLMで符号化し、RoPE適用前のkeyとvalueを検索埋め込みと同じfact_idで保存する。要求時はGPU ANN検索でfact_idを得て、Chunked RoPEでその要求内の仮想位置にkeyを回転し直し、vLLMのpaged KV cacheへ直接scatter-copyする。これにより動的に組み替わるfactでも位置固定prefixなしでKVを再利用できる。独立fact符号化が失う会話文脈はContext-Window Encodingで補い、前方会話turnを付けて一度符号化しつつtarget fact部分のKVだけを保存する。",
+    "method_overview": "オフラインではMem0の抽出pipelineで会話turnからfactを作り、各factについてOpenAI text-embedding-3-smallによる検索埋め込みと、回答LLMから取得したpre-RoPE KVを生成する。後者は最大w個の先行会話turnをprefixとして一緒に符号化するが保存するのはfact部分のみである。オンラインではqueryを埋め込み、Jasper GPU ANN indexからtop-k fact_idを検索し、対応KVを集める。取得factを連続仮想位置へ並べ、最関連factをquery隣接側に置き、保存済みunrotated keyへ要求時RoPEを適用する。vLLM KV connectorは該当prompt tokensをexternal availableとしてschedulerへ通知し、割り当てられたpaged blockへGPU-to-GPUでKVを注入するため、モデルはquery tokensだけをprefillする。",
+    "components": [
+      {"name": "再利用可能KV注入", "description": "静的memory factのKVを事前計算し、検索時にprompt textを再prefillせずpaged KV cacheへ直接注入する。固定位置に同じcontextを置いた場合、因果decoderではquery位置のhidden stateと出力分布がprompt injectionと等価になることを示す。"},
+      {"name": "Chunked RoPE", "description": "keyをRoPE適用前に保存し、要求時に各factへ割り当てた仮想位置で回転する。これにより保存時とは異なる位置へfactを移動でき、動的retrieval集合を一つのmemory segmentとして構成できる。"},
+      {"name": "Context-Window Encoding", "description": "独立factだけを符号化すると代名詞や周辺会話の意味を失うため、fact抽出元より前のw会話turnをprefixとして一緒にforwardし、target factのKV sliceだけを保存する。prefix自体はオンラインで取得・prefillしない。"},
+      {"name": "GPUネイティブ検索とvLLM統合", "description": "Jasper GPU ANN indexとKV storeを同一GPUに置き、共有fact_idで検索表現と注入表現を対応付ける。vLLM KVConnectorBase_V1 pluginがscheduler側で既存KV token数を申告し、worker側でslot mappingへscatter-copyするためstock vLLMを改変しない。"},
+      {"name": "CPU KVオフロード", "description": "1会話あたりGB級のfact KVがGPU容量を圧迫する場合、pinned host DRAMへ置き、検索されたfactだけPCIeでstreamする選択肢を評価する。engine TTFT増加は数msだがend-to-endではk依存の数十ms転送費が生じる。"}
+    ],
+    "system_design": "検索埋め込み用GPU ANN indexとLLM conditioning用pre-RoPE KV storeをfact_idで結合し、retrieval→位置再配置→paged-cache injectionをGPU上で完結させるdata-system co-designである。prefill計算をqueryだけへ縮小する一方、保存KV容量と独立chunk符号化の精度損失を、CPU階層メモリとcontext-windowという別軸で緩和する。"
+  },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
     "worker_id": "scheduled-chat-llm-survey",
