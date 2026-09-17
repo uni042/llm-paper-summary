@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:48:39 JST**
+> 自動生成: **2026-09-18 06:49:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **56** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-18 06:47:17 JST（1分前）** |
-| 整合性異常 | **2** |
+| 最終検証済みResearch収録 | **09-18 06:47:17 JST（2分前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -270,8 +270,7 @@
 | 成功result未照合のimmutable submission | **464** |
 | └ Research | **335** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
-| └ Other/Unknown | **2** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -288,17 +287,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **2** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **2** |
-
-### 対応jobなしsubmissionの診断対象
-
-上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
-
-- `.survey/work-queue/submissions/discovery/2026-09-17T20-00-00+09-00-specialist-disagg-cxl-2.json`
-- `.survey/work-queue/submissions/discovery/2026-09-17T20-00-00+09-00-specialist-systems-memory-1.json`
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
