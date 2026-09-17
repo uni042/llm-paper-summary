@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0f8f604e4dd41baf02109b3f","job_id":"job-research-fd53481863b8e4e0","data":{"limitations":"評価は単一RTX A6000とXeon CPUの組合せが中心で、複数GPU・複数ノードや高並行配信でのスケジューリング競合は扱わない。動的模擬はウォームアップで得た処理時間を利用するため、他プロセス負荷や周波数変動などで実測特性が変わる環境では予測誤差が増え得る。隣接層のルーティング相関が弱いモデル・入力ではプリフェッチ利益が小さく、誤予測転送が帯域を消費する。スコア認識キャッシュも反復間相関が低い場合は利点が縮む。Marlin 4-bit量子化の品質影響は詳細評価されていない。","differences":"FiddlerやkTransformersはキャッシュミス時にCPU計算を利用するが、HybriMoEは現在層のトークン負荷と三資源の時間軸を模擬してCPU計算・GPU計算・転送を動的に選ぶ。PowerInferはニューロン活性化の強い偏りを利用した配置であり、MoEの比較的均等で不安定なエキスパート活性化にはそのまま適用しにくい。AdapMoEやProMoEなどの先読み・キャッシュ系は主に転送削減へ焦点を置くのに対し、HybriMoEはCPUを実計算資源として同時利用し、スケジューリング・先読み・キャッシュを一体化する。","implementation_status":"公式コードはPKU-SEC-Lab/HybriMoEで公開。kTransformersとllama.cppカーネルを基盤とした実システムで、RTX A6000とXeon CPU上で評価されている。論文は2025-04-08 arXiv公開、DAC 2025採択。","research_positioning":"階層メモリ／MoEオフロード系統の中で、GPUに載らない重みを『転送するか待つか』ではなく『CPUでそのまま計算するか、GPUへ移して計算するか』という実行配置問題として扱う研究である。特にエキスパート負荷の実時間変動をCPU・GPU・PCIeの共同スケジュールへ反映するため、静的オフロードから異種計算資源の動的協調へ進む位置付けを持つ。SSD-LLaMA等のストレージ階層研究とは直接SSDを最適化しない点が異なるが、上位のCPU/GPU常駐・計算判断と組み合わせ得る。"},"reservation":{"claim_id":"claim-0f8f604e4dd41baf02109b3f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-8a81151586fdc3a2613ff366",
+  "job_id": "job-research-b6925d33135e854c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8a81151586fdc3a2613ff366",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

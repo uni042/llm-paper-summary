@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0f8f604e4dd41baf02109b3f","job_id":"job-research-fd53481863b8e4e0","data":{"canonical_id":"arXiv:2504.05897","arxiv_id":"2504.05897","doi":"10.48550/arXiv.2504.05897","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},"title":"HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference","summary":"HybriMoEは、混合専門家モデル（Mixture of Experts; MoE）の不安定なエキスパート活性化に対し、固定配置ではなく各層の実負荷からCPU・GPU・PCIeの実行をシミュレーションして動的に割り当てる。さらに隣接層のルーティング類似性を使う影響度駆動プリフェッチと、ルーティングスコアの移動平均で再利用可能性を見積もるキャッシュを統合する。kTransformers上の実装でMixtral、Qwen2、DeepSeekを評価し、kTransformers比でプリフィル平均1.33倍、デコード平均1.70倍の高速化を報告する。","list_summary":"MoEの実負荷に応じCPU・GPU・PCIeを動的配分し、影響度駆動プリフェッチとスコア認識キャッシュを統合してkTransformers比プリフィル1.33倍、デコード1.70倍を達成する。","authors":["Shuzhang Zhong","Yanfan Sun","Ling Liang","Runsheng Wang","Ru Huang","Meng Li"],"authors_affiliations":"著者所属は一次資料本文に記載。","published":"2025-04-08","publication":"DAC 2025 / arXiv","publication_type":"会議採択論文","publication_status":"Accepted by DAC 2025; arXiv v1","lineage":"MoE inference / CPU-GPU hybrid execution / expert offloading / expert cache and prefetch","topics":["MoE推論","CPU-GPU協調","エキスパートオフロード","動的スケジューリング","プリフェッチ","キャッシュ管理"],"importance":"FiddlerやkTransformersのCPU補助型MoE推論を、固定配置から実行時負荷に応じた動的割当へ進め、プリフィルとデコードの双方でCPU・GPU・PCIeを共同利用する。","implementation":"kTransformersとllama.cppカーネルを基盤に、C++側のタスク割当、細粒度CUDAストリーム、Marlin 4-bit量子化を統合した実装。公式コード公開あり。","hardware_evaluation":"NVIDIA RTX A6000とIntel Xeon Gold 5220R（10コアに制限）。GPUエキスパートキャッシュ比25%、50%、75%などで評価。","quality_effect":"主眼は同一MoEモデルの実行配置・キャッシュ・先読み最適化であり、モデルのルーティングや重み自体は変更しない。Marlin 4-bit量子化を実装に使用するが、論文の主評価は推論性能であり量子化による品質差の詳細評価は示されない。","source":"https://arxiv.org/abs/2504.05897","sources":["https://arxiv.org/abs/2504.05897","https://arxiv.org/html/2504.05897"],"code":"https://github.com/PKU-SEC-Lab/HybriMoE","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"primary manuscript reference section","references_total":0},"reservation":{"claim_id":"claim-0f8f604e4dd41baf02109b3f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-8a81151586fdc3a2613ff366",
+  "job_id": "job-research-b6925d33135e854c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8a81151586fdc3a2613ff366",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
