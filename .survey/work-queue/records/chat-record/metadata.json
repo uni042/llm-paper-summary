@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-e11f604e90f13e08b8a7042f",
-  "job_id": "job-research-39525f58ef98f435",
-  "data": {
-    "canonical_id": "arXiv:2605.06113",
-    "arxiv_id": "2605.06113",
-    "title": "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale",
-    "list_summary": "同期障壁を持つデータ並列デコードで、各ワーカーの安全余裕をFスコアで評価して新規要求を割り当て、KV負荷の偏りと障壁待ちを抑えるオンラインルータBalanceRouteを提案する。",
-    "summary": "大規模LLMサービングでは、テンソル並列やエキスパート並列で分割したモデルを複数のデータ並列ワーカーへ複製する。デコード各段階の集合通信には同期障壁があるため、最も重いワーカーが全体の段階時間を決め、軽いワーカーは待機する。BalanceRouteは、プリフィル完了要求をどのデコードワーカーへ固定配置するかをミリ秒単位で決めるオンラインルータである。予測不要のBR-0は、現在最大負荷までの安全余裕を超えると不均衡の罰則が急増することを表す区分線形Fスコアを使い、空き容量が多い局面の単純割当と、空きが少ない局面の小規模部分集合探索を組み合わせる。BR-Hは短い将来範囲で要求が終了するかを予測し、将来の安全余裕を割引付きでFスコアへ加える。vllm-ascend上の集中型プロキシとして実装し、144 NPUクラスタで実運用トレースとAzure-2024トレースを評価した。",
-    "authors": [
-      "Tianci Bu",
-      "Yuan Lyu",
-      "Zixi Chen",
-      "Chendong Song",
-      "Hong Liang",
-      "Tsepten Gurung",
-      "Yuwei Fan",
-      "Yinyu Ye",
-      "Zijie Zhou"
-    ],
-    "authors_affiliations": "HKUST Department of Industrial Engineering and Decision Analytics; Huawei 2012 Laboratories Theory Laboratory; Peking University School of Mathematical Sciences",
-    "published": "2026-05-07",
-    "publication": "arXiv preprint",
-    "publication_type": "preprint",
-    "publication_status": "Preprint",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "source": "https://arxiv.org/abs/2605.06113",
-    "sources": [
-      "https://arxiv.org/abs/2605.06113",
-      "https://arxiv.org/pdf/2605.06113"
-    ],
-    "topics": [
-      "LLMサービング",
-      "データ並列",
-      "負荷分散",
-      "オンラインルーティング",
-      "KVキャッシュ",
-      "プリフィル・デコード分離"
-    ],
-    "implementation": "vllm-ascendの既存エンジンを変更せず、Python/uvloopの状態保持プロキシを前段に置く。OpenAI互換APIのペイロード変更、SSEの逐次解析、MooncakeConnectorによる層間KV転送、Prometheusによるプリフィル側KV使用量監視を組み合わせる。論文本文からBalanceRoute本体の公式公開コードURLは確認できなかった。",
-    "code": null,
-    "hardware_evaluation": "主評価は144基のAscend 910C NPUでDeepSeek-V3 671B W8A8を実行。標準構成は4プリフィルノードと1デコードノードで、デコード側は32 NPU、DP=8、TP=4。実装オーバーヘッド評価ではQwen3-30B-A3Bも使用する。",
-    "quality_effect": "モデル出力品質を変える近似手法ではなく、同一モデルの要求配置だけを変えるため、生成品質そのものを犠牲にする設計ではない。主な評価対象はデコード負荷不均衡、TPOT P95、スループットである。",
-    "references": [],
-    "references_checked_at": "2026-09-18",
-    "references_source": "primary-reference-section",
-    "references_total": 0,
-    "last_checked": "2026-09-18"
-  },
+  "attempt_id": "attempt-11e1f9a8272a62c09027cd4c",
+  "job_id": "job-research-2ce5027f5de1889a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e11f604e90f13e08b8a7042f",
+    "claim_id": "claim-11e1f9a8272a62c09027cd4c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
