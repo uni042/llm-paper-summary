@@ -81,14 +81,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-0b1a3df137cd07ea",
+      "job_id": "job-research-5862dce444505150",
       "type": "research",
       "lane": null,
       "priority": 84,
-      "canonical_id": "arXiv:2604.08426",
-      "title": "KV Cache Offloading for Context-Intensive Tasks",
-      "source_url": "https://arxiv.org/abs/2604.08426",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md",
+      "canonical_id": "arXiv:2406.08334",
+      "title": "ProTrain: Efficient LLM Training via Memory-Aware Techniques",
+      "source_url": "https://arxiv.org/abs/2406.08334",
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T11:34:05+00:00"
+  "generated_at": "2026-09-17T11:37:06+00:00"
 }
