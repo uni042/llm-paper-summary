@@ -2,33 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-75c5f2ac1208d6c73a28184c",
-  "job_id": "job-research-5bed14c683ee7a49",
-  "data": {
-    "canonical_id": "arXiv:2505.05950",
-    "arxiv_id": "2505.05950",
-    "doi": "10.48550/arXiv.2505.05950",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
-    "title": "FloE: On-the-Fly MoE Inference on Memory-constrained GPU",
-    "summary": "FloEは、混合専門家モデル（Mixture-of-Experts; MoE）を小容量GPUで対話的に動かす際、専門家重みをCPUメモリからPCIe経由で都度転送する時間が計算時間を上回る問題を扱う。専門家内部にも文脈依存の冗長性があることを利用し、gate/down行列は予測した活性チャネルだけを転送し、比較的量子化耐性の高いup行列はINT2へ圧縮する。さらに層間の隠れ状態類似性から次層の専門家と内部疎性を早期予測し、圧縮重みの先読みを計算と重ねる。Mixtral-8x7Bでは専門家当たり9.3倍圧縮、最小11GBのVRAMで実行可能とし、単一RTX 3090で既存オフロード実装に対して大幅な推論高速化を報告する一方、近似圧縮により平均4.4〜7.6%の品質低下を伴う。",
-    "authors": ["Yuxin Zhou", "Zheng Li", "Jun Zhang", "Jue Wang", "Yiping Wang", "Zhongle Xie", "Ke Chen", "Lidan Shou"],
-    "published": "2025-05-09",
-    "publication": "ICML 2025; arXiv:2505.05950v2 (2025-05-12)",
-    "publication_type": "conference paper / arXiv preprint",
-    "publication_status": "ICML 2025採録。arXiv v1は2025-05-09、v2は2025-05-12。",
-    "topics": ["MoE推論", "専門家オフロード", "文脈疎性", "INT2量子化", "先読み", "CPU-GPU階層メモリ"],
-    "hardware_evaluation": "実機評価。主なシステム結果は単一NVIDIA GeForce RTX 3090を含むメモリ制約GPUで測定し、Mixtral-8x7BのFP16全体約94GBに対して11GB VRAMまでの配置を評価する。PCIe 4.0 x16級のCPU DRAM↔GPU転送が主要対象で、論文中では約32GB/sの転送帯域と専門家1個のFP16転送約15ms、RTX 3090上の専門家計算約5msという不均衡を示す。",
-    "quality_effect": "FloEは完全無損失ではない。gate/downの文脈疎化とupのINT2量子化によりMixtral-8x7Bで平均4.4〜7.6%の下流性能低下を許容して転送量を削減する。予備評価ではdown入力の50%疎化でWikiText-2 perplexity増加は約0.5%に留まる一方、gate側は疎化感度が高く、行列ごとに圧縮方式を分ける根拠になっている。",
-    "source": "https://arxiv.org/abs/2505.05950",
-    "sources": ["https://arxiv.org/abs/2505.05950", "https://arxiv.org/html/2505.05950", "https://github.com/zju-stu-lizheng/FloE"],
-    "code": "https://github.com/zju-stu-lizheng/FloE",
-    "implementation": "著者実装が公開されている。Python 3.10.16、Transformers 4.47.0、PyTorch 2.5.1、HQQ 0.2.3を前提とし、計算・データロードのパイプライン、効率的オフロード形式への変換、Mixtral実装、Triton疎カーネル、CUDA転送戦略、感度試験、実行スクリプトを含む。READMEでは利用可能GPUメモリ12GB超を要求する。",
-    "last_checked": "2026-09-17",
-    "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv HTMLの本文および参考文献節を確認。今回の構造化レコードでは関連研究の個別識別子を推測せず空配列とした。",
-    "references_total": 0
-  },
-  "reservation": {"claim_id": "claim-75c5f2ac1208d6c73a28184c", "worker_id": "scheduled-chat-llm-survey-project", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-987e47d076f99ed6f71340e5",
+  "job_id": "job-research-4954e0b135582135",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-987e47d076f99ed6f71340e5",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

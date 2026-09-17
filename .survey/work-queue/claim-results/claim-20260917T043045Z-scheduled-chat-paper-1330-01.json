@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T043045Z-scheduled-chat-paper-1330-01",
+  "worker_id": "scheduled-chat-paper-20260917T1330JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-4954e0b135582135",
+      "claim_id": "claim-987e47d076f99ed6f71340e5",
+      "worker_id": "scheduled-chat-paper-20260917T1330JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-987e47d076f99ed6f71340e5",
+      "claimed_at": "2026-09-17T04:31:32+00:00",
+      "expires_at": "2026-09-17T06:01:32+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-4954e0b135582135"
+      ],
+      "job": {
+        "job_id": "job-research-4954e0b135582135",
+        "type": "research",
+        "parent_job_id": "job-e30ba5725a8a8a2d",
+        "priority": 86,
+        "canonical_id": "arXiv:2504.14893",
+        "title": "Hardware-based Heterogeneous Memory Management for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2504.14893",
+        "paper_path": "papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md",
+        "selection_reason": "capacity-centric memoryとbandwidth-centric memoryを非対称に組み合わせ、各memory device側のcomputeを含むH2M2を提案。LLM inferenceの容量・帯域競合をhardware-managed heterogeneous memoryとして扱うため、階層メモリ配置・offload研究の比較軸として価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:01:52+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T04:31:32+00:00",
+  "checkpoint_released": 0
+}
