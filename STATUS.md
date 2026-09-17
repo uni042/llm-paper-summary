@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:20:14 JST**
+> 自動生成: **2026-09-17 17:20:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
-| 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 17:17:05 JST（3分前）** |
+| 収録候補論文 | **53** |
+| 未claim Research job | **50** |
+| 直近24hの検証済みResearch収録 | **59** |
+| 最終検証済みResearch収録 | **09-17 17:20:24 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **6** | **3** | **3** | **3** | **0** | — |
+| Research | **21** | **6** | **4** | **2** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **25** | **10** | **7** | **3** | **3** | **0** | **15** |
+| 合計 | **26** | **10** | **8** | **2** | **3** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 17:20:24 JST** [research] `arXiv:2401.02669` — Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache
+  - job: `.survey/work-queue/jobs/job-research-3dcfddcaf0f956d5.json`
+  - result: `.survey/work-queue/results/research/attempt-f73b2644bb575cea292a8186.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f73b2644bb575cea292a8186.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md`
 - **09-17 17:17:05 JST** [research] `arXiv:2504.20068` — JITServe: SLO-aware LLM Serving with Imprecise Request Information
   - job: `.survey/work-queue/jobs/job-research-491d6cc11a36da8c.json`
   - result: `.survey/work-queue/results/research/attempt-af95b58e929cbe887fc76bfd.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-482caf37761abfd8d593db1f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-482caf37761abfd8d593db1f.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md`
-- **09-17 14:13:08 JST** [research] `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management
-  - job: `.survey/work-queue/jobs/job-research-cf3f98aec47a974c.json`
-  - result: `.survey/work-queue/results/research/attempt-a48b2fb6f7f42031d9d9ac32.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a48b2fb6f7f42031d9d9ac32.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17475-justfit-200k-token-llm-serving-on-a-24-gib-laptop-with-just-in-time-state-management.md`
 
 ### Audit
 
@@ -131,7 +131,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 17:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
+- immutable submission: **6件** / 検証済み成功: **4件** / 未完了・未検証: **2件**
 - **未完了または未検証** `.survey/work-queue/submissions/20260917T0820Z-limbo-blocked.json` (job `job-research-ce95464a254235a3`)
 - **成功** `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage
   - job: `.survey/work-queue/jobs/job-research-0923832e7cd03d20.json`
@@ -149,7 +149,11 @@
   - result: `.survey/work-queue/results/research/attempt-af95b58e929cbe887fc76bfd.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-af95b58e929cbe887fc76bfd.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-f73b2644bb575cea292a8186.json` (job `job-research-3dcfddcaf0f956d5`)
+- **成功** `arXiv:2401.02669` — Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache
+  - job: `.survey/work-queue/jobs/job-research-3dcfddcaf0f956d5.json`
+  - result: `.survey/work-queue/results/research/attempt-f73b2644bb575cea292a8186.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f73b2644bb575cea292a8186.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md`
 
 #### Audit (:30)
 
@@ -212,7 +216,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +236,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **665** |
+| inference/training/survey配下の論文Markdown実体 | **666** |
 
 ### immutable submissionの未照合
 
@@ -240,8 +244,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **436** |
-| └ Research | **309** |
+| 成功result未照合のimmutable submission | **435** |
+| └ Research | **308** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
