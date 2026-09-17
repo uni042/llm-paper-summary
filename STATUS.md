@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:49:42 JST**
+> 自動生成: **2026-09-18 07:00:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **56** |
-| 未claim Research job | **55** |
+| 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-18 06:47:17 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-18 06:47:17 JST（12分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **10** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **27** | **11** | **11** | **0** | **1** | **0** | **18** |
+| 合計 | **27** | **11** | **11** | **0** | **2** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -216,7 +216,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.14575` — HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 06:59:54 JST** / heartbeat: **—** / lease expiry: **09-18 08:29:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-60a904da0b8faa84.json`
 - `arXiv:2506.06295` — dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching / worker `scheduled-chat-llm-survey`
   - claim: **09-18 06:47:45 JST** / heartbeat: **—** / lease expiry: **09-18 08:17:45 JST**
   - evidence: `.survey/work-queue/claims/job-research-146f944f1c748398.json`
