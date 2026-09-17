@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 599,
+      "completed": 601,
       "ready": 1
     },
     "audit": {
@@ -19,8 +19,8 @@
   },
   "claiming": {
     "ready_research_audit": 45,
-    "actively_claimed": 0,
-    "claimable": 45
+    "actively_claimed": 1,
+    "claimable": 44
   },
   "next_jobs": [
     {
@@ -122,14 +122,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d9f05d11667dcf83",
+      "job_id": "job-research-a1874def735a479b",
       "type": "research",
       "lane": null,
       "priority": 83,
-      "canonical_id": "arXiv:2411.17741",
-      "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
-      "source_url": "https://arxiv.org/abs/2411.17741",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+      "canonical_id": "arXiv:2508.12851",
+      "title": "Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement",
+      "source_url": "https://arxiv.org/abs/2508.12851",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T15:47:33+00:00"
+  "generated_at": "2026-09-17T16:00:51+00:00"
 }

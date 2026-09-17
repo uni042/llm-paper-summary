@@ -1,52 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T15:05:06+00:00",
-  "last_run_key": "2026-09-18T00:00:00+09:00",
-  "last_round": "distributed-moe-placement-2",
+  "updated_at": "2026-09-17T16:00:51+00:00",
+  "last_run_key": "2026-09-18T01:00:00+09:00",
+  "last_round": "cpu-hierarchy-runtime-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 6,
+  "consecutive_empty_rounds": 8,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:00:00+09:00",
-      "round": "specialist-gpu-runtime-4",
-      "axis": "GPU runtime境界・host-device転送律速",
-      "query_summary": "Blackwell confidential computing、CUDA host-device transfer、KV restore、異種GPU runtimeを探索し、既収録HeteroServe/SuperInfer/MFS等を除外して未投入の1候補を採用した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2603.12707",
-        "arXiv:2601.20309",
-        "arXiv:2603.17456"
-      ],
-      "next_axis_hint": "直近2609のMoE expert placement/prefetch、KV management、serving schedulingを新着中心に再走査し、その後引用・関連実装経由で漏れを確認する",
-      "source_submission": "work-queue/submissions/20260913T0012JST-discovery-gpu-runtime-4.json"
-    },
-    {
-      "run_key": "2026-09-13T00:00:00+09:00",
-      "round": "specialist-multi-agent-scheduling-5",
-      "axis": "multi-agent workflow scheduling・異種LLM配置",
-      "query_summary": "agentic servingをtool speculationだけでなくworkflow-level schedulingとheterogeneous model routingの軸から再探索し、最新HEADで未投入を確認した2候補を採用した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.15127",
-        "arXiv:2502.13965"
-      ],
-      "next_axis_hint": "新着・関連実装経由でMoE coordinated schedulingとKV multi-turn管理を再走査し、重複優勢なら空roundを記録して別軸へ移る",
-      "source_submission": "work-queue/submissions/20260913T0013JST-discovery-multi-agent-scheduling-5.json"
-    },
     {
       "run_key": "2026-09-13T00:00:00+09:00",
       "round": "specialist-moe-saturated-6",
@@ -6815,6 +6778,45 @@
       ],
       "next_axis_hint": "OS/DBMSのキャッシュ置換・prefetch・tieringからLLM KV/expert memoryへ接続するforward/backward citationを走査する",
       "source_submission": "work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json"
+    },
+    {
+      "run_key": "2026-09-18T01:00:00+09:00",
+      "round": "fresh-scheduling-kv-1",
+      "axis": "2609新着のmemory-aware scheduling・KV cache適応圧縮",
+      "query_summary": "直前のMoE/階層メモリ探索と重ならない2609新着を中心に、分離サービングのメモリ認識スケジューリングとKV圧縮policyを探索。canonical arXiv IDと最新default branchを投入直前に再照合した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.04895",
+        "arXiv:2609.13592"
+      ],
+      "next_axis_hint": "GB-scale LLC/CPU階層メモリ、異種many-core runtime、最新disaggregated servingの引用・関連系を独立に走査する",
+      "source_submission": "work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-18T01:00:00+09:00",
+      "round": "cpu-hierarchy-runtime-2",
+      "axis": "GB-scale LLC・CPU階層メモリ・異種many-core runtime",
+      "query_summary": "第1round後にOS/CPU/HPC隣接へ移動し、GB級last-level cache residencyと分散メモリmany-core推論runtimeを軽量評価。投入直前にcanonical IDでdefault branchを再照合した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "ネットワーク認識型KV移送・remote memory・disaggregated servingの2608-2609新着とforward citationを走査する",
+      "source_submission": "work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json"
     }
   ],
   "axes": {
@@ -11281,6 +11283,32 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "OS/DBMSのキャッシュ置換・prefetch・tieringからLLM KV/expert memoryへ接続するforward/backward citationを走査する"
+    },
+    "2609新着のmemory-aware scheduling・KV cache適応圧縮": {
+      "last_run_key": "2026-09-18T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "GB-scale LLC/CPU階層メモリ、異種many-core runtime、最新disaggregated servingの引用・関連系を独立に走査する"
+    },
+    "GB-scale LLC・CPU階層メモリ・異種many-core runtime": {
+      "last_run_key": "2026-09-18T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "ネットワーク認識型KV移送・remote memory・disaggregated servingの2608-2609新着とforward citationを走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
