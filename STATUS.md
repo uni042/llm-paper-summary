@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:12:05 JST**
+> 自動生成: **2026-09-17 17:12:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -173,7 +173,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-  - claim: **09-17 17:10:47 JST** / heartbeat: **—** / lease expiry: **09-17 18:40:47 JST**
+  - claim: **09-17 17:12:08 JST** / heartbeat: **—** / lease expiry: **09-17 18:42:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-0923832e7cd03d20.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
