@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 20:35:58 JST**
+> 自動生成: **2026-09-17 20:36:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -128,7 +128,7 @@
 
 - 最新観測run: **2026-09-17 20:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-7d9e9117902e3933bb8ea91d.json` (job `job-research-0b1a3df137cd07ea`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a17fc9940597717688ea373e.json` (job `job-research-5862dce444505150`)
 
 #### Audit (:30)
 
@@ -155,9 +155,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.08334` — ProTrain: Efficient LLM Training via Memory-Aware Techniques / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 20:33:59 JST** / heartbeat: **—** / lease expiry: **09-17 22:03:59 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5862dce444505150.json`
+- `arXiv:2604.08426` — KV Cache Offloading for Context-Intensive Tasks / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 20:36:22 JST** / heartbeat: **—** / lease expiry: **09-17 22:06:22 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0b1a3df137cd07ea.json`
 
 #### Audit
 
@@ -205,8 +205,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **447** |
-| └ Research | **318** |
+| 成功result未照合のimmutable submission | **448** |
+| └ Research | **319** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
