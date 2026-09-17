@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 05:31:10 JST**
+> 自動生成: **2026-09-18 05:31:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **3** | **2** | **1** | **2** | **0** | — |
+| Research | **8** | **3** | **2** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **11** | **10** | **1** | **2** | **0** | **18** |
+| 合計 | **27** | **11** | **10** | **1** | **2** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -88,11 +88,6 @@
   - result: `.survey/work-queue/results/research/attempt-bd486dddc37223eae30319f6-repair.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bd486dddc37223eae30319f6-repair.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md`
-- **09-17 23:31:24 JST** [research] `arXiv:2503.18869` — Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design
-  - job: `.survey/work-queue/jobs/job-research-f3b9350c8e883e12.json`
-  - result: `.survey/work-queue/results/research/attempt-6adea251db936612ba17864d-repair.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6adea251db936612ba17864d-repair.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md`
 
 ### Audit
 
