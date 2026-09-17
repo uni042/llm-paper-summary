@@ -1,1 +1,23 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0680c5744f77092486ad1d1d","job_id":"job-research-a06bdf20c1667dad","data":{"limitations":["端末間性能は周期精密シミュレータと28nm RTL合成に基づき、市販GPUや実チップ上の測定ではない。","ベクトル量子化済みAQLMチェックポイントを前提とし、量子化学習・変換自体の費用をオンライン推論性能には含めない。","入力疎性は完全無損失ではなく、評価では元の2ビット量子化モデル精度の95%以上を保つ30%程度を主設定とする。","専用参照器、動的量子化器、疎性処理器を持つため、汎用GPUへソフトウェアだけで同じ利得を移植できるわけではない。"],"differences":"AQLMなどが超低ビット表現そのものを最適化するのに対し、Vortexはその索引表現を効率よく実行するハードウェア側を設計する。FIGLUTなどの参照表型加速器に対しては、大バッチ用の参照先行と小バッチ用の乗算先行を切り替え、さらに鍵値キャッシュの動的量子化と符号帳単位の入力疎性まで同じ実行基盤へ統合する点が差分である。","implementation_status":"32×32シストリック配列を基礎に追加回路をRTL実装し、28nm・500MHzで合成。端末間は周期精密シミュレータ、SRAMはCACTI、DRAMはDRAMSim3で評価。著者公式コード公開はarXivページ上で確認できなかった。","research_positioning":"低ビットLLM推論、ベクトル量子化、入力依存疎性、専用加速器の協調設計系。圧縮率だけ高く実行時に復号費用で失速する問題を扱うため、量子化算法と実際のメモリ階層・演算器利用率を接続する隣接系統として重要である。"},"reservation":{"claim_id":"claim-0680c5744f77092486ad1d1d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5159541999467dbc35b75137",
+  "job_id": "job-research-7e739eca355b8687",
+  "data": {
+    "limitations": [
+      "利点は多数モデルの人気が長い裾を持ち休眠時間が長い環境で大きく、単一モデルが常時高負荷の環境では回収可能な余剰メモリが少ない。",
+      "モデル重みをCPU主記憶へ退避した後の再読込自体はPCIe費用を持つため、極端に高速なモデル切替を無償にはできず、配置・局所調停で入替頻度を抑える必要がある。",
+      "評価は主にH100クラスタとSGLangを用いるため、異なるGPU仮想メモリ機構や提供実行器では統合費用が変わり得る。",
+      "全体配置とSLO余裕推定は現在需要に基づくため、急変時には一時的な予測外の競合や待ち行列が残り得る。"
+    ],
+    "differences": "MuxServe系の空間共有がモデルを同居させたまま固定容量を分け、QLMやAegaeon系の時間共有がモデル単位で退避・再読込するのに対し、Prismは重みと鍵値キャッシュの物理ページを共通資源として伸縮させ、同一GPU上で両方式を同時・動的に混ぜる。単一モデル内部のPagedAttentionより一段下のGPU実行時層でモデル横断調整する点が差分である。",
+    "implementation_status": "SGLang上にPrismを実装。中核のkvcachedは公開済みで、論文では1万GPU超のクラスタを含む産業利用が報告される。",
+    "research_positioning": "多モデルLLM提供、GPU仮想メモリ、鍵値キャッシュ資源管理の系統。計算スケジューリングよりメモリ所有権を動的化し、モデル配置・重み入替・鍵値キャッシュ容量を一つの弾力的メモリ制御へ統合する研究として位置付けられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-5159541999467dbc35b75137",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

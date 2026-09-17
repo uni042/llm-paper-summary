@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:20:19 JST**
+> 自動生成: **2026-09-17 13:20:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -120,9 +120,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.12208` — Vortex: Bridging Extreme Compression and Efficient LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 13:16:43 JST** / heartbeat: **—** / lease expiry: **09-17 14:46:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a06bdf20c1667dad.json`
+- `arXiv:2505.04021` — Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 13:20:25 JST** / heartbeat: **—** / lease expiry: **09-17 14:50:25 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7e739eca355b8687.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
