@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:10:11 JST**
+> 自動生成: **2026-09-17 17:10:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **57** |
+| 収録候補論文 | **56** |
 | 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-17 16:41:43 JST（28分前）** |
+| 直近24hの検証済みResearch収録 | **58** |
+| 最終検証済みResearch収録 | **09-17 17:10:30 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **57** |
+| canonical_id確認済みの一意な候補論文 | **56** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **57** |
+| 非終端Research job合計 | **56** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **4** | **2** | **2** | **2** | **0** | — |
+| Research | **18** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **22** | **8** | **6** | **2** | **2** | **0** | **15** |
+| 合計 | **23** | **5** | **5** | **0** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 17:10:30 JST** [research] `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts
+  - job: `.survey/work-queue/jobs/job-research-6b9319ad56fb236d.json`
+  - result: `.survey/work-queue/results/research/attempt-366e50017f388aac9c576b49.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-366e50017f388aac9c576b49.json`
+  - paper: `papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md`
 - **09-17 16:41:43 JST** [research] `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
   - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
   - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-f7834266028442ea9afab397.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f7834266028442ea9afab397.json`
   - paper: `papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md`
-- **09-17 13:26:58 JST** [research] `arXiv:2605.28302` — How Far Can Disaggregation Go? A Design-Space Exploration of Attention-FFN Disaggregation for Efficient MoE LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-d2b8ca705732c790.json`
-  - result: `.survey/work-queue/results/research/attempt-acc1b683ee406ecf9ec83842.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-acc1b683ee406ecf9ec83842.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2605.28302-how-far-can-disaggregation-go-a-design-space-exploration-of-attention-ffn-disaggregation-for-efficient-moe-llm-serving.md`
 
 ### Audit
 
@@ -130,24 +130,17 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-17 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
-- **成功** `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts
-  - job: `.survey/work-queue/jobs/job-research-7f3f089c5dc01c0c.json`
-  - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-78cb43ce4509a618c85127b5.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-afb867c7067bd524852f7243.json` (job `job-research-f3b9350c8e883e12`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b8e3a9c0664d271ad698f2d3.json` (job `job-research-5a5215eb805afa43`)
-- **成功** `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
-  - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d138fd01aeed0094d3129bad.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md`
+- 最新観測run: **2026-09-17 17:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts
+  - job: `.survey/work-queue/jobs/job-research-6b9319ad56fb236d.json`
+  - result: `.survey/work-queue/results/research/attempt-366e50017f388aac9c576b49.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-366e50017f388aac9c576b49.json`
+  - paper: `papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-17 16:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-17 17:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -177,10 +170,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-  - claim: **09-17 17:07:22 JST** / heartbeat: **—** / lease expiry: **09-17 18:37:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6b9319ad56fb236d.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
@@ -203,7 +193,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **57** |
+| ready | **56** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +213,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **662** |
+| inference/training/survey配下の論文Markdown実体 | **663** |
 
 ### immutable submissionの未照合
 

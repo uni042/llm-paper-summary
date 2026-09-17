@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 57,
-      "completed": 473,
+      "ready": 56,
+      "completed": 474,
       "superseded": 44,
       "deferred": 3,
       "blocked": 3,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 57,
+    "ready_research_audit": 56,
     "actively_claimed": 1,
-    "claimable": 56
+    "claimable": 55
   },
   "next_jobs": [
     {
@@ -61,20 +61,6 @@
       "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
       "source_url": "https://arxiv.org/abs/2606.06256",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-6b9319ad56fb236d",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2508.06526",
-      "title": "PiKV: KV Cache Management System for Mixture of Experts",
-      "source_url": "https://arxiv.org/abs/2508.06526",
-      "paper_path": "papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-1abdfafeb85e4df9",
+      "type": "research",
+      "lane": null,
+      "priority": 85,
+      "canonical_id": "arXiv:2504.08784",
+      "title": "SLOs-Serve: Optimized Serving of Multi-SLO LLMs",
+      "source_url": "https://arxiv.org/abs/2504.08784",
+      "paper_path": "papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T08:04:52+00:00"
+  "generated_at": "2026-09-17T08:10:30+00:00"
 }
