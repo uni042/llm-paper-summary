@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-7ad6ad40100c07874c12360f",
-  "job_id": "job-research-1fd656c9a10556db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7ad6ad40100c07874c12360f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-7ad6ad40100c07874c12360f","job_id":"job-research-1fd656c9a10556db",
+ "data":{"hardware":"4種類の8 GPUサーバを使用する。NVIDIA H100-80Gは時間単価2.64〜3.07ドル、RTX PRO 6000-96Gは1.84〜2.09ドル、RTX 5090-32Gは0.89ドル、RTX 4090-24Gは0.59ドル。H100サーバ内は300 GB/sのNVLink、5090/4090サーバ内は60 GB/sのPCIeで接続される。主要比較は同一30ドル/時予算で行う。","software":"Llama3.1-8BとLlama3.1-70Bを異種モデルとして用い、RouteLLM由来のルータとvLLMを利用する。最適化はGPyTorchのMaternカーネル、BoTorchのSingleTaskGP/ModelListGPと制約付きqNEHVIを用いて実装する。比較対象は単一70Bの同種GPU配置、単一70Bの異種GPU配置、RouteLLM＋均等資源配分、BOuteの同種GPU版。","methodology":"GSM8KとMTBenchから実運用を模したテストトレースを構成し、総負荷100 req/sで評価する。GSM8Kでは複数の集約精度要求、MTBenchでは複数の集約得点要求を設定し、各方式は価格予算内で最良の配置へ調整する。指標は平均およびP95〜P100遅延、全体スループット、同一品質・遅延目標を満たす時間当たり費用。別途、GPU種類3〜6、総GPU数24〜48へ規模を増やした最適化収束時間、構造情報を除いた場合、オフライン性能データベースを除いた場合を比較する。付録ではLlama3-70Bの並列構成についてシミュレータ推定と実測スループットを比較し、絶対誤差2〜7%程度を確認する。","scope":"実機異種GPUクラスタと実モデルを用いたシステム評価だが、モデルはLlama3.1-8B/70Bの2種類、品質トレースはGSM8K/MTBenchに限定される。最適配置は事前プロファイル、GPU時間単価、利用可能台数、トレース分布に依存するため、別モデルや急激な価格・負荷変動への即時一般化は追加プロファイルを要する。"},"reservation":{"claim_id":"claim-7ad6ad40100c07874c12360f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
