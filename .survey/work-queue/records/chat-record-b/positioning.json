@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7c0239753483c2ddf4304e18",
-  "job_id": "job-research-e79ef27915573b54",
-  "data": {
-    "limitations": "性能値の中心はcycle-accurate SSD/PIM simulationであり、完全なSLIM SSD実機プロトタイプではない。die-level PEはNAND dieへのロジック統合を前提とし、市販SSDへソフトウェアだけで追加できる方式ではない。SLCは疎アクセスに有利だがTLCより記憶密度・コスト面で不利で、channel-level設計は帯域不足からDRAM-GPUを下回る場合がある。疎性予測は近似で、60%以上ではzero-shot品質低下が明確になる。評価は8-bit量子化、小バッチgeneration中心で、長文脈KV増大や高バッチdatacenter servingは主対象ではない。",
-    "differences": "LLM in a Flash等のSSD-GPU方式はSSDを大容量重み置場として使い必要重みをPCIeでGPUへ送るのに対し、SLIMはNAND近傍PEでFFN/MoEを処理してPCIe重量転送を避ける。NeuPIMs等のPIM-xPUは高帯域PIMとGPU/NPUを組み合わせ大バッチを想定するが、SLIMは安価なSSD+DDR4-PIMで小バッチedgeを狙う。ReLU zero-skippingはモデル変換/再学習を伴うのに対し、SLIMはSiLU元重みを保持して低ランク予測器だけ短時間学習し、実行時しきい値で疎性を変えられる。SVD圧縮は重み自体を近似するが、SLIMは活性が小さいニューロンの読出しを選択的に省く。",
-    "implementation_status": "論文はVerilogでNSP PEを記述し合成評価、MQSim/TransPIMを改変した詳細シミュレータとRTX4090基準測定を組み合わせる。FTL専用コマンド、重み配置、DRAM bit-serial PIM、channel/die-level PEまで設計されているが、市販ハードウェア上の公開end-to-end実装や公式コードURLはarXivページから確認できない。",
-    "research_positioning": "SSD/NVMe活用系統の中でも、容量階層化やprefetchでSSD→GPU転送を隠す研究より一段ストレージ側へ計算を押し込むcomputational storage型である。特にMoE/FFNの巨大重みをNANDに置き、予測疎性を物理read suppressionへ変換するため、expert cache/prefetch研究と補完関係にある。将来のSSD活用では『何をいつ読むか』だけでなく『読まずに保存場所で計算できる部分は何か』という設計軸を示す。"
-  },
+  "attempt_id": "attempt-31cfc3803071967ca5c668cf",
+  "job_id": "job-research-010509dfee08b6d5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7c0239753483c2ddf4304e18",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
+    "claim_id": "claim-31cfc3803071967ca5c668cf",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
