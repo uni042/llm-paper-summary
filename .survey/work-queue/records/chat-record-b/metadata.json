@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-2d17d81f9fcb9ead4849e591",
-  "job_id": "job-research-a1f4ccc94cf94fe5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2d17d81f9fcb9ead4849e591",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2d17d81f9fcb9ead4849e591","job_id":"job-research-a1f4ccc94cf94fe5","data":{"canonical_id":"arXiv:2505.11329","arxiv_id":"2505.11329","doi":"10.48550/arXiv.2505.11329","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG"]},"title":"TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference","summary":"TokenWeaveは、テンソル並列LLM推論でAllReduce通信を計算へ重ねる従来法が小さな低遅延バッチでは分割オーバーヘッドに負ける問題を、RMSNorm再配置・AllReduce–RMSNorm融合とGPU waveを意識した2分割で解く。NVSHARP/Multimemを使う融合カーネルは通信と正規化を2〜8 SMで実行し、1024トークン級から重畳を有効化する。8×H100上で最大1.28倍の遅延改善、ShareGPT等で最大1.19倍のスループット向上を報告し、MLSys 2026採択・公式コード公開済みである。","list_summary":"AllReduce–RMSNorm融合とwave-aware 2分割で小バッチのテンソル並列通信を計算へ重ね、最大1.28倍の遅延改善を得る。","authors":["Raja Gond","Nipun Kwatra","Ramachandran Ramjee"],"authors_affiliations":"Microsoft Research","published":"2025-05-16","publication":"MLSys 2026 / arXiv","publication_type":"国際会議採択論文・プレプリント","publication_status":"Accepted at MLSys 2026; arXiv v5 (2026-05-01)","lineage":"tensor-parallel inference / compute-communication overlap / fused collectives / serving kernels","topics":["テンソル並列","通信計算重畳","AllReduce","RMSNorm","NVSHARP"],"importance":"学習向け大バッチで有効だった通信計算重畳を、低遅延配信で一般的な1Kトークン級まで成立させ、通信だけでなく正規化の冗長メモリアクセスも同時に削る。","implementation":"vLLM V1へ統合。Multimem/NVSHARPを使うCUDA fused AllReduce–RMSNorm、CUDA streamによる2-way overlap、offline-profiled smart splitを実装する。","hardware_evaluation":"主評価は4×/8×NVIDIA H100 DGX、bf16。付録でDGX B200も評価。Llama-3.3-70B、Qwen2.5-72B、Mixtral-8x22B、Qwen3-235B-A22B等を使用。","quality_effect":"演算順序の等価変換と通信・正規化融合、バッチ分割を用い、モデル近似は導入しない。attention依存はchunked attentionとprefix/suffix順序で維持する。","source":"https://arxiv.org/abs/2505.11329","sources":["https://arxiv.org/abs/2505.11329","https://arxiv.org/html/2505.11329v5"],"code":"https://github.com/microsoft/tokenweave","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary manuscript reference section","references_total":null},"reservation":{"claim_id":"claim-2d17d81f9fcb9ead4849e591","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
