@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-75bcb3d65b7781a8fb8d4054",
-  "job_id": "job-research-bf0b422fe6562f5b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-75bcb3d65b7781a8fb8d4054",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-75bcb3d65b7781a8fb8d4054","job_id":"job-research-bf0b422fe6562f5b","data":{"problem":"投機的デコーディングでは軽量ドラフトモデルが複数候補を提案し、対象モデルがまとめて検証することで対象モデル呼出回数を減らす。しかしEAGLE3のように受理率を高めた特徴ベースドラフタも複数stepの自己回帰ロールアウトを残しており、ドラフト前向きだけで総推論時間の20〜40%を占める場合がある。小型Qwen3-1.7Bを通常ドラフタにするとQwen3-14B/32Bでドラフトが75%/60%以上を占める例もあり、受理長を伸ばすだけでは高速化が頭打ちになる。一方、既存の拡散型LLMをそのままドラフタにすると双方向full-sequence目的とprefix条件付き投機生成が不一致で、モデル自体も大きく低遅延化できない。単純に各未来位置を独立並列予測すると組合せ木が指数的に増え、位置間の意味的連続性も失われる。","novelty":"DARTは拡散モデルそのものを使わず、mask位置を並列予測する発想だけをEAGLE3型の対象モデル結合ドラフタへ移植する。対象LLMの低・中・高層hidden stateを連結・射影し、単一カスタムdecoder層へprefixとd-1個のmaskを入力してd位置のlogitを1回で生成するため、ドラフト長に依存する自己回帰forwardを除去する。さらに早い位置の誤りほど受理長へ強く効く性質を、位置ごとにgamma^(t-1)で減衰する対象モデル分布とのKL学習へ組み込む。独立位置logitの組合せ爆発には3-gram連続性を確率スコアへ混ぜたbeam/tree pruningを用い、N-gramを単独ドラフタではなく低遅延な整合性制約として再利用する。","method_overview":"対象モデルのprefill/verification後に複数中間層hidden stateを取り出してFCで圧縮し、shiftしたtoken embeddingと結合する。prefix末尾の出力を第1未来token、後続mask位置の出力を第2以降の未来tokenとして解釈するshifted logits predictionを使う。ドラフタはstrict causal maskを維持し、d個の未来分布を単一forwardで出す。学習時は一つの系列内の複数prefixを共有し、それぞれにmask blockを付け、別block間注意を禁止する疎maskをFlex Attentionで処理する。教師は対象モデルのtoken分布で、未来ほどKL重みをgamma=0.6で減衰させる。推論では各位置top-25候補をlogit scoreと3-gram scoreで評価し、beam width 20、最大tree size 59に刈り込み、最終treeを対象モデルのTree Attentionでlossless検証する。","components":[{"name":"対象特徴再利用の単一層並列ドラフタ","description":"対象LLMの1層目、中間付近、末尾近くのhidden stateを入力に使い、FC・1 decoder layer・LM headだけを学習する。d-1 maskを追加した1回のforwardでd未来位置を予測するため、EAGLE3の複数自己回帰stepとドラフトKV管理を不要にする。"},{"name":"shifted logitsとprefix-shared masked training","description":"mask位置自身ではなく次tokenを予測するshift方式で第1位置精度を高める。学習では複数prefixに対応するmask blockを同一forwardへ詰め、各blockは自分のprefixだけを参照しblock内はcausal、block間は非接続とする。Flex Attentionでこの疎構造を実装する。"},{"name":"位置減衰KL教師","description":"対象モデル分布qとドラフト分布pのKLを未来位置tごとにgamma^(t-1)で重み付けする。投機検証では早い位置の誤りが後続受理を全て打ち切るため、遠い位置より初期位置へ学習容量を寄せる。gamma=0.6がHumanEval ablationで最大tauを示す。"},{"name":"N-gram連続性付き木刈り込み","description":"各未来位置のtop-k logitを組み合わせる際、3-gram trieの条件付き確率をlogit scoreへ加え、深さごとbeam pruningする。1.3B node、disk 43.5GB、実行時CPU RAM約100GBのtrieをC++で保持し、warmup後約6us/queryで検索する。木処理もC++/OpenMPで並列化する。"}],"system_design":"GPU側では対象モデル検証と軽量DART forwardを行い、CPU側では大容量3-gram trieと低遅延tree pruningを担当する。ドラフトforwardを約1.5ms、tree pruningを約2msに抑え、対象モデル検証の間隔を平均受理長3〜4token程度へ延ばすことでwall-clock速度を改善する。"},"reservation":{"claim_id":"claim-75bcb3d65b7781a8fb8d4054","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
