@@ -1,18 +1,62 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-509eaca02fd513b664c5028b","job_id":"job-research-120be1bd98c2839e",
- "data":{
-  "overview":"Nexusは段階間干渉を予測して演算器をバッチ単位で分割することで、一体型vLLMより最大2.2倍の処理量、最大20倍小さい初回トークン遅延、最大2.5倍小さいトークン間遅延を達成する。SGLangに対しても処理量を最大2倍へ高め、初回トークン遅延を最大2倍、トークン間遅延を最大1.7倍改善する。入力処理と逐次生成を別GPUへ置くvLLMと比べても、半分のGPU資源で同等以上の性能を示す構成が報告される。",
-  "key_results":[
-   {"metric":"vLLM比処理量","value":"最大2.2倍","baseline":"一体型vLLM","condition":"複数モデル・複数の動的要求負荷","interpretation":"入力処理と逐次生成の干渉を避けつつ、同一GPUの演算器を負荷に応じて融通することで利用率を維持する。"},
-   {"metric":"vLLM比初回トークン遅延","value":"最大20倍低減","baseline":"一体型vLLM","condition":"遅延制約を持つオンライン推論負荷","interpretation":"入力処理を逐次生成との混合バッチ干渉から分離し、短い入力を優先する順序制御と事前予測型資源配分を組み合わせる効果が大きい。"},
-   {"metric":"vLLM比トークン間遅延","value":"最大2.5倍低減","baseline":"一体型vLLM","condition":"入力処理と逐次生成が同時到着する負荷","interpretation":"逐次生成カーネルへの計算資源・共有メモリ帯域干渉を、演算器分割と競合予測によって抑制する。"},
-   {"metric":"SGLang比処理量","value":"最大2倍","baseline":"SGLang","condition":"論文の端から端までの複数負荷","interpretation":"既存の高性能な一体型配信基盤に対しても、同一GPU内で段階を分ける設計の性能余地が残ることを示す。"},
-   {"metric":"混合バッチ干渉","value":"混合約251ミリ秒、逐次生成のみ約15ミリ秒。逐次生成カーネル最大10倍遅延、トークン間遅延8倍超悪化","baseline":"段階を分離したバッチ","condition":"Qwen2.5-3B、NVIDIA L20、Long Data Collections、毎秒2.5要求","interpretation":"入力処理を小分けして逐次生成と混ぜるだけでは、細粒度のカーネル干渉が重大な遅延要因になることを定量化する。"},
-   {"metric":"GPU資源効率","value":"別GPU分離型vLLMと同等以上を半分のGPU資源で達成する構成","baseline":"入力処理・逐次生成を別GPUへ分けるvLLM","condition":"複数GPU比較","interpretation":"GPU間の鍵値キャッシュ転送と逐次生成専用GPUの低利用を避け、単一GPU内で段階分離する利点を示す。"}
-  ],
-  "negative_results":"演算器集合を論理的に分けてもL2キャッシュとDRAMのメモリ帯域は物理的に共有されるため、固定比率の単純な分割だけでは干渉を除去できない。また、事前計測だけから単純な逆比例則を使う方式や、遅延悪化を観測した後に配分を変える方式では負荷変化への追従が遅れ、配分が振動する場合がある。このためNexusでは共有帯域を含む費用モデルと緩衝付き切替が必要になる。",
-  "interpretation":"入力処理と逐次生成を別GPUへ物理分離しなくても干渉低減は可能だが、演算器数だけを分ければ十分ではない。演算飽和と共有メモリ帯域を同時に予測し、段階別の要求順序制御と安定した配分切替まで一つの実行時制御ループへ統合することが性能改善の中心である。",
-  "quality_impact":"モデル重みや生成アルゴリズムへ近似を導入する方式ではないため、報告された改善は推論配信の処理量、遅延、GPU資源効率に関するものであり、生成品質を犠牲にした高速化ではない。"
- },
- "reservation":{"claim_id":"claim-509eaca02fd513b664c5028b","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-79eabe22a1933fc80a491fc0",
+  "job_id": "job-research-120be1bd98c2839e",
+  "data": {
+    "overview": "Nexusは段階間干渉を予測して演算器をバッチ単位で分割することで、一体型vLLMより最大2.2倍の処理量、最大20倍小さい初回トークン遅延、最大2.5倍小さいトークン間遅延を達成する。SGLangに対しても処理量を最大2倍へ高め、初回トークン遅延を最大2倍、トークン間遅延を最大1.7倍改善する。入力処理と逐次生成を別GPUへ置くvLLMと比べても、半分のGPU資源で同等以上の性能を示す構成が報告される。",
+    "key_results": [
+      {
+        "metric": "vLLM比処理量",
+        "value": "最大2.2倍",
+        "baseline": "一体型vLLM",
+        "condition": "複数モデル・複数の動的要求負荷",
+        "interpretation": "入力処理と逐次生成の干渉を避けつつ、同一GPUの演算器を負荷に応じて融通することで利用率を維持する。"
+      },
+      {
+        "metric": "vLLM比初回トークン遅延",
+        "value": "最大20倍低減",
+        "baseline": "一体型vLLM",
+        "condition": "遅延制約を持つオンライン推論負荷",
+        "interpretation": "入力処理を逐次生成との混合バッチ干渉から分離し、短い入力を優先する順序制御と事前予測型資源配分を組み合わせる効果が大きい。"
+      },
+      {
+        "metric": "vLLM比トークン間遅延",
+        "value": "最大2.5倍低減",
+        "baseline": "一体型vLLM",
+        "condition": "入力処理と逐次生成が同時到着する負荷",
+        "interpretation": "逐次生成カーネルへの計算資源・共有メモリ帯域干渉を、演算器分割と競合予測によって抑制する。"
+      },
+      {
+        "metric": "SGLang比処理量",
+        "value": "最大2倍",
+        "baseline": "SGLang",
+        "condition": "論文の端から端までの複数負荷",
+        "interpretation": "既存の高性能な一体型配信基盤に対しても、同一GPU内で段階を分ける設計の性能余地が残ることを示す。"
+      },
+      {
+        "metric": "混合バッチ干渉",
+        "value": "混合約251ミリ秒、逐次生成のみ約15ミリ秒。逐次生成カーネル最大10倍遅延、トークン間遅延8倍超悪化",
+        "baseline": "段階を分離したバッチ",
+        "condition": "Qwen2.5-3B、NVIDIA L20、Long Data Collections、毎秒2.5要求",
+        "interpretation": "入力処理を小分けして逐次生成と混ぜるだけでは、細粒度のカーネル干渉が重大な遅延要因になることを定量化する。"
+      },
+      {
+        "metric": "GPU資源効率",
+        "value": "別GPU分離型vLLMと同等以上を半分のGPU資源で達成する構成",
+        "baseline": "入力処理・逐次生成を別GPUへ分けるvLLM",
+        "condition": "複数GPU比較",
+        "interpretation": "GPU間の鍵値キャッシュ転送と逐次生成専用GPUの低利用を避け、単一GPU内で段階分離する利点を示す。"
+      }
+    ],
+    "negative_results": "演算器集合を論理的に分けてもL2キャッシュとDRAMのメモリ帯域は物理的に共有されるため、固定比率の単純な分割だけでは干渉を除去できない。また、事前計測だけから単純な逆比例則を使う方式や、遅延悪化を観測した後に配分を変える方式では負荷変化への追従が遅れ、配分が振動する場合がある。このためNexusでは共有帯域を含む費用モデルと緩衝付き切替が必要になる。",
+    "interpretation": "入力処理と逐次生成を別GPUへ物理分離しなくても干渉低減は可能だが、演算器数だけを分ければ十分ではない。演算飽和と共有メモリ帯域を同時に予測し、段階別の要求順序制御と安定した配分切替まで一つの実行時制御ループへ統合することが性能改善の中心である。",
+    "quality_impact": "モデル重みや生成アルゴリズムへ近似を導入する方式ではないため、報告された改善は推論配信の処理量、遅延、GPU資源効率に関するものであり、生成品質を犠牲にした高速化ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-79eabe22a1933fc80a491fc0",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
