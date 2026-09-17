@@ -1,1 +1,30 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-542ed69d76769ea2b6e90057","job_id":"job-research-f3b9350c8e883e12","data":{"setup":"評価は三つに分かれる。第一に無損失圧縮率を測る。KVキャッシュはLLaMA 3.1 8Bの32層を対象にWikiTextテスト集合とBookSumを用い、4KBブロックでLZ4とZSTDを比較する。重みはLLaMA 3.1 8B/70B、Mixtral 8x7B、LLaMA-MoE-3.5BについてBF16、FP8、INT4を調べる。第二に動的量子化時のDRAM効率をDRAMSim3で評価する。1メモリモジュールを4チャネル、各チャネル10個のx4 DDR5-4800デバイスとし、LLaMA 3.1 8B/70B、Mixtral 8x7B、LLaMA-MoE-3.5BをMoDE型へ適応する。C4でルータをLoRA調整し、FP8はAutoFP8、INT4はGPTQをUltraChatで較正する。WikiText-2推論時の精度分布に従ってBF16系ではFP12/8/6/4、FP8系ではFP8/6/4、INT4系ではINT4/2を切り替える。第三にSystemVerilog RTLを7nm PDKで2GHz、32レーンとして合成し、16,384、32,768、65,536ビットのブロックでLZ4/ZSTDの面積・電力・スループットを測る。","hardware":"DRAM側はDRAMSim3でDDR5-4800相当の構成を模擬し、圧縮器側はSystemVerilog RTLを7nm PDK、2GHz、32並列レーンとして合成評価する。商用GPUへ統合した実機測定ではない。","software":"圧縮にはLZ4とZSTDを用い、動的量子化ではAutoFP8とGPTQ、ルータ調整ではLoRAを利用する。メモリアクセスはDRAMSim3で評価する。","methodology":"無損失圧縮率、動的精度に応じた部分ビットプレーン読出し、DRAMアクセスエネルギーと平均モデル読出し遅延、圧縮器RTLの面積・電力・スループットを別々に測定し、無損失圧縮の容量効果と近似量子化の帯域効果を混同しないよう比較する。","scope":"実証範囲は、LLaMA 3.1 8Bを中心とするKVキャッシュ圧縮、複数LLMの重み圧縮、DRAMSim3によるDDR5メモリアクセス、7nm RTL合成である。したがって容量削減とモデル読出し削減の傾向は示せるが、GPU実機のエンドツーエンド生成遅延、HBM統合時の配線・制御オーバーヘッド、広範なモデル系列や長文分布への一般化までは評価していない。","baselines":["KV圧縮ではトークン横断クラスタリングと指数差分を使わず、通常配置へZSTD/LZ4を適用する比較対象","DRAM評価ではビットプレーン部分読出しを使わない従来のバイト単位メモリ配置","品質例では完全KVキャッシュ、64トークンのスライディング窓、Questの上位5ページBF16方式","重み圧縮では元のBF16に加えAutoFP8およびGPTQによる損失あり量子化との組合せ"],"metrics":["無損失圧縮比とメモリ削減率","DRAMアクセスエネルギー","平均モデル読出し遅延","動的KV量子化時のパープレキシティ","RTL面積・電力・レーン当たりおよび総スループット"],"conditions":"無損失圧縮比は元サイズを圧縮後サイズで割った値として定義する。KVでは4KBブロックを用いる。DRAM結果は実機エンドツーエンド推論ではなくDRAMSim3によるメモリアクセスシミュレーションであり、RTL結果も7nm合成・シミュレーション評価である。したがって最大30.0%の遅延削減はモデル全体のトークン生成遅延ではなく、論文が測る平均モデル読出し遅延として解釈する必要がある。","evidence":"一次資料の第IV節全体を確認した。KV圧縮は図7、重み圧縮は表III・図8、動的精度の分布は図9、DRAMエネルギーは図10、モデル読出し遅延は図11、RTL資源は表IVに対応する。本文第VI節の結論まで確認し、参考文献節49件も確認した。"},"reservation":{"claim_id":"claim-542ed69d76769ea2b6e90057","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6adea251db936612ba17864d",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {
+    "setup": "評価は三つに分かれる。第一に無損失圧縮率を測る。KVキャッシュはLLaMA 3.1 8Bの32層を対象にWikiTextテスト集合とBookSumを用い、4KBブロックでLZ4とZSTDを比較する。重みはLLaMA 3.1 8B/70B、Mixtral 8x7B、LLaMA-MoE-3.5BについてBF16、FP8、INT4を調べる。第二に動的量子化時のDRAM効率をDRAMSim3で評価する。1メモリモジュールを4チャネル、各チャネル10個のx4 DDR5-4800デバイスとし、LLaMA 3.1 8B/70B、Mixtral 8x7B、LLaMA-MoE-3.5BをMoDE型へ適応する。C4でルータをLoRA調整し、FP8はAutoFP8、INT4はGPTQをUltraChatで較正する。WikiText-2推論時の精度分布に従ってBF16系ではFP12/8/6/4、FP8系ではFP8/6/4、INT4系ではINT4/2を切り替える。第三にSystemVerilog RTLを7nm PDKで2GHz、32レーンとして合成し、16,384、32,768、65,536ビットのブロックでLZ4/ZSTDの面積・電力・スループットを測る。",
+    "baselines": [
+      "KV圧縮ではトークン横断クラスタリングと指数差分を使わず、通常配置へZSTD/LZ4を適用する比較対象",
+      "DRAM評価ではビットプレーン部分読出しを使わない従来のバイト単位メモリ配置",
+      "品質例では完全KVキャッシュ、64トークンのスライディング窓、Questの上位5ページBF16方式",
+      "重み圧縮では元のBF16に加えAutoFP8およびGPTQによる損失あり量子化との組合せ"
+    ],
+    "metrics": [
+      "無損失圧縮比とメモリ削減率",
+      "DRAMアクセスエネルギー",
+      "平均モデル読出し遅延",
+      "動的KV量子化時のパープレキシティ",
+      "RTL面積・電力・レーン当たりおよび総スループット"
+    ],
+    "conditions": "無損失圧縮比は元サイズを圧縮後サイズで割った値として定義する。KVでは4KBブロックを用いる。DRAM結果は実機エンドツーエンド推論ではなくDRAMSim3によるメモリアクセスシミュレーションであり、RTL結果も7nm合成・シミュレーション評価である。したがって最大30.0%の遅延削減はモデル全体のトークン生成遅延ではなく、論文が測る平均モデル読出し遅延として解釈する必要がある。",
+    "evidence": "一次資料の第IV節全体を確認した。KV圧縮は図7、重み圧縮は表III・図8、動的精度の分布は図9、DRAMエネルギーは図10、モデル読出し遅延は図11、RTL資源は表IVに対応する。本文第VI節の結論まで確認し、参考文献節49件も確認した。"
+  },
+  "reservation": {
+    "claim_id": "claim-6adea251db936612ba17864d",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
