@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 05:35:59 JST**
+> 自動生成: **2026-09-18 05:58:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **62** |
 | 未claim Research job | **60** |
 | 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-18 05:35:17 JST（42秒前）** |
+| 最終検証済みResearch収録 | **09-18 05:35:17 JST（23分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **8** | **1** | **1** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **9** | **9** | **0** | **2** | **0** | **18** |
+| 合計 | **27** | **9** | **9** | **0** | **2** | **1** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -88,11 +88,6 @@
   - result: `.survey/work-queue/results/research/attempt-721b895c107ac359ea8048a4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-721b895c107ac359ea8048a4.json`
   - paper: `papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md`
-- **09-17 23:39:36 JST** [research] `arXiv:2409.00918` — LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs
-  - job: `.survey/work-queue/jobs/job-research-5a5215eb805afa43.json`
-  - result: `.survey/work-queue/results/research/attempt-ad568a9def7133e0a5107c75-repair.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ad568a9def7133e0a5107c75-repair.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md`
 
 ### Audit
 
@@ -201,13 +196,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 04:59:06 JST** / heartbeat: **09-18 05:58:24 JST** / lease expiry: **09-18 07:28:24 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a725b9cf79d670cf.json`
 - `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale / worker `scheduled-chat-llm-survey`
   - claim: **09-18 05:35:39 JST** / heartbeat: **—** / lease expiry: **09-18 07:05:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-39525f58ef98f435.json`
-- `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 04:59:06 JST** / heartbeat: **—** / lease expiry: **09-18 06:29:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a725b9cf79d670cf.json`
 
 #### Audit
 
