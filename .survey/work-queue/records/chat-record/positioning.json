@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-dd0768548da66bf9efb0496c","job_id":"job-research-36aaaee3c1110557",
- "data":{
-  "limitations":"対象は総スループットを重視するオフライン大規模バッチで、対話サービスの先頭トークン遅延やトークン間遅延の保証を目的としない。実験は単一CPUソケット・単一A40 GPUであり、複数GPUやネットワーク分散は扱わない。T4/L4相当のGPU容量制約はA40メモリを人工的に予約して再現している。CPU側にモデル全重みと70〜210GBのKVキャッシュを置けることを前提とし、CPUメモリ自体が極端に小さい端末には直接適用できない。大容量KVではCPU注意とPCIe重み転送がCPUメモリ帯域を競合し、性能モデルが完全には捉えない偏差も残る。",
-  "differences":"MoE-LightningはCPUへ注意計算を逃がしてKV転送を削減するが、性能モデルが主に算術強度とCPU-GPU帯域を扱うため、CPUメモリ容量と要求長が並列性へ与える影響を十分に利用しない。FlexGenや一般のCPU/SSDオフロードは状態配置と転送スケジュールを中心に扱うのに対し、MoE-LensはMoEの重みストリーミング環境でCPUメモリ容量をGPU飽和可能性へ直接結び付ける。オンラインのプリフィル・デコード分離や連続バッチングとも異なり、低遅延ではなく有限の巨大バッチ全体の完了時間を最小化し、同じGPU上で二段階を重ねる。",
-  "implementation_status":"論文は実機CPU/GPU上でエンドツーエンドシステムを実装・評価している。重みは固定済みCPUメモリ、GPUには約2層分の重みバッファ、CPUデコード注意はAVX512手書きSIMD、転送器はC++ PyTorch拡張として実装される。比較対象のMoE-LightningとvLLMは公開実装を使用する。MoE-Lens自身についてはarXivページと本文中に公式コード公開URLを確認できないため、再現には論文記載の実装詳細を基に再構築が必要である。",
-  "research_positioning":"CPU/GPU階層メモリを使うLLMオフロード研究とMoE専用推論システムの中間に位置する。MoE-Infinity、Fiddler、Klotskiなどがエキスパート配置・先読み・バッチ化で転送を減らすのに対し、本研究はその機械で何トークンまで並列化できるかをCPUメモリ容量と要求形状から先に定量化し、実行器をその上限へ合わせる。SSDまで含む多階層オフロードとは異なりCPU DRAMとPCIeが中心だが、メモリ容量・帯域・計算能力・要求長を同じ性能モデルへ入れる考え方は、階層メモリ系統の資源配分やSSD活用方式の上限分析にも応用可能である。"
- },
- "reservation":{"claim_id":"claim-dd0768548da66bf9efb0496c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-3c3cd2b059b73c1be8574ac5",
+  "job_id": "job-research-24c58326f22e095e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3c3cd2b059b73c1be8574ac5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

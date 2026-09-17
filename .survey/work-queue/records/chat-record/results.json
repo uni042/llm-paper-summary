@@ -1,17 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-dd0768548da66bf9efb0496c","job_id":"job-research-36aaaee3c1110557",
- "data":{
-  "overview":"MoE-LensはMixtral-8x7B、Mixtral-8x22B、DBRXと複数要求分布で、従来の資源制約MoEシステムMoE-Lightningより生成スループットを平均4.6倍改善し、長いプリフィルを持つRAGでは最大25.5倍に達する。改善はCPUメモリをKVキャッシュへ積極利用して同時トークン数を増やすことと、プリフィル・デコードを重ねてGPU計算とPCIe転送の空きを埋めることが中心である。性能モデルは平均94%の精度で実測スループットを予測し、210GB KV・短中生成ではGPU計算上限の約90%まで到達する。",
-  "key_results":[
-   {"metric":"生成スループット高速化","value":"平均4.6×、図11条件で最大12.4×","baseline":"MoE-Lightningの最良設定","condition":"3 MoEモデル、MTBench、KVキャッシュ70GB/210GB、生成上限32〜256","interpretation":"CPUメモリ容量をスケジューリング制約へ含めて並列トークン数を増やし、プリフィルとデコードを重ねることで、従来方式のCPUメモリ未使用とGPU待ちを減らした。"},
-   {"metric":"RAGスループット高速化","value":"平均19.4×、最大25.5×","baseline":"MoE-Lightning","condition":"RAG、平均プロンプト926、生成128、Mixtral-8x7B/8x22B/DBRX","interpretation":"長いプリフィルは一要求から多数トークンを並列処理できてPMEが高く、デコードとの重畳でGPU計算と重み転送を特に効率よく埋められるため改善幅が大きい。"},
-   {"metric":"AIME2024スループット高速化","value":"平均4.7×、最大9.9×","baseline":"MoE-Lightning","condition":"AIME2024、平均プロンプト128、生成512、3 MoEモデル","interpretation":"生成が長いとKVキャッシュ占有が増えてPMEが下がるためRAGより改善幅は小さいが、資源認識スケジューリングにより従来方式を一貫して上回る。"},
-   {"metric":"性能モデル予測精度","value":"平均94%","baseline":"実測スループット","condition":"図11・12のモデル、要求分布、KV容量条件","interpretation":"有限バッチ、ページ化KV、CPU資源、プリフィル・デコード重畳まで含めることで、理論上限だけでなく実システム設計に使える予測精度を得ている。"},
-   {"metric":"CPU注意カーネル処理量","value":"自動ベクトル化比4.7×（単一スレッド）、3.1×（全スレッド）","baseline":"AVX512自動ベクトル化実装","condition":"Xeon Platinum 8380上のデコード注意","interpretation":"手書きSIMD、ループ展開、先読みでCPU計算を十分速くし、CPU注意がGPU重み転送と並行するパイプラインの新しい計算律速になることを防ぐ。"}
-  ],
-  "negative_results":"KVキャッシュを210GBへ増やしても生成長32のように70GBですでに十分な条件では追加効果がほぼない。逆に生成長256ではKV容量不足による要求退避とプリフィル停止が増え、GPU利用率が大きく低下する。Mixtral-8x7B・210GB KVではCPU注意が巨大KVを走査する帯域とCPU-GPU重み転送がCPUメモリ制御器で競合し、重み転送時間が約5秒から6秒へ増えて性能モデル予測を下回る。CPU注意カーネルも20スレッドを超えるとメモリ制御器競合で伸びが飽和する。",
-  "interpretation":"改善幅はプロンプト対生成の比率とCPU側KV容量で大きく変わる。プリフィルが長いほど一要求から多くの並列トークンを得られ、単位KV容量あたりのGPU利用効率が高い。生成が長いほど一要求がKVを長時間占有し、同時要求数が減ってGPUが待つ。KV容量を増やすとこの制約は緩むが、十分大きくなるとGPU計算上限へ達し、それ以上の容量増加は効かない。また大容量KVではCPU注意とPCIe転送が同じCPUメモリ帯域を奪い合うため、別の律速へ移る。",
-  "quality_impact":"MoE-Lensはモデルの重み値、ルーティング、注意アルゴリズムの意味を近似せず、実行配置と順序を変更するシステム最適化である。要求退避時にはKVを捨てて必要なプリフィルを再計算するため計算量は増えるが、生成内容を近似で置換しない。したがって論文が報告する高速化は品質劣化との交換ではなく、同じモデル推論の資源利用改善による。"
- },
- "reservation":{"claim_id":"claim-dd0768548da66bf9efb0496c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-3c3cd2b059b73c1be8574ac5",
+  "job_id": "job-research-24c58326f22e095e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3c3cd2b059b73c1be8574ac5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
