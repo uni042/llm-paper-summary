@@ -7,15 +7,18 @@ whether the worker is permitted to emit its final response at all.
 
 A normal run receives a permit only after continuation_gate has returned
 STOP_RUN with finalization_allowed=true and no active assignment or asynchronous
-result remains.  Explicit hard stops may finalize only after the caller has
-confirmed a safe durable handoff.  Pending asynchronous results expose a fixed
-30-second recheck interval so callers do not replace deterministic waiting with
-ad-hoc early termination.
+result remains. Explicit hard stops may finalize only after the caller has
+confirmed a safe durable handoff. Pending asynchronous results expose a fixed
+10-second real-time polling interval and must be rechecked until terminal so
+callers cannot replace deterministic waiting with ad-hoc early termination.
 """
 from __future__ import annotations
 
 import argparse
 import json
+
+
+ASYNC_WAIT_POLL_SECONDS = 10
 
 
 def yn(value: str) -> bool:
@@ -66,8 +69,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     else:
         decision = "MUST_CONTINUE"
         if wait_targets and not hard_stop:
-            next_action = "WAIT_30_SECONDS_AND_RECHECK"
-            wait_seconds = 30
+            next_action = "WAIT_10_SECONDS_AND_RECHECK"
+            wait_seconds = ASYNC_WAIT_POLL_SECONDS
         elif active_assignment:
             next_action = "CONTINUE_ASSIGNED_WORK"
             wait_seconds = 0
@@ -96,8 +99,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "handoff_safe": handoff_safe,
         "rule": (
             "Final response is forbidden without an issued permit. Pending claim/submission/ACK "
-            "results require a 30-second wait followed by re-reading the same target, repeated "
-            "until the result appears or an explicit hard stop is safely handed off."
+            "results require 10-second real-time polling of the same target, repeated until the "
+            "required result reaches terminal state or an explicit hard stop is safely handed off."
         ),
     }
 
