@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 21:03:19 JST**
+> 自動生成: **2026-09-17 21:05:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **42** |
-| 未claim Research job | **42** |
+| 収録候補論文 | **45** |
+| 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-17 20:41:39 JST（21分前）** |
+| 最終検証済みResearch収録 | **09-17 20:41:39 JST（23分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **42** |
+| canonical_id確認済みの一意な候補論文 | **45** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **42** |
+| 非終端Research job合計 | **45** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **20** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **5** | **3** | **2** | **0** | **0** | **16** |
-| 合計 | **26** | **8** | **6** | **2** | **0** | **0** | **16** |
+| Discovery | **3** | **5** | **3** | **2** | **0** | **0** | **16** |
+| 合計 | **23** | **8** | **6** | **2** | **0** | **0** | **16** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -117,18 +117,6 @@
   - result: `.survey/work-queue/results/20260917T2100JST-discovery-storage-moe-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json`
   - 探索軸: SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
-- **09-17 15:03:27 JST** job `job-5c8ea8ca705a9ecb` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T1512JST-discovery-speculative-decoding-gaps-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T1512JST-discovery-speculative-decoding-gaps-2.json`
-  - 探索軸: speculative-decoding-system-coverage-gaps
-- **09-17 15:03:34 JST** job `job-eec5ff8f364687d4` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T1521JST-discovery-training-memory-systems-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json`
-  - 探索軸: training-offload-checkpoint-storage-gaps
-- **09-17 15:04:08 JST** job `job-5041f5c489f0e9c8` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260917T1528JST-discovery-disaggregation-evaluation-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json`
-  - 探索軸: distributed-serving-network-and-disaggregation-gaps
 
 ### 直近タスク
 
@@ -209,7 +197,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **42** |
+| ready | **45** |
 
 ### 候補の重複・識別情報欠損
 

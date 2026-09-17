@@ -14,7 +14,7 @@
 
 ### 2年前（2024-10〜2025-09）
 
-- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
-  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：7  
-  CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
+- **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：0  
+  混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
 <!-- survey:auto:end -->

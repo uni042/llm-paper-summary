@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T08:05:10+00:00"
+      "checked_at": "2026-09-17T12:04:16+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T08:05:06+00:00"
+      "checked_at": "2026-09-17T12:04:08+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4910,7 +4910,7 @@
       "status": "blocked",
       "source_fingerprint": "7e00fef820a3e8c0749349d3154faf7b3a1c706dacdef0f03724dafacc15cf0e",
       "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-17T08:05:13+00:00"
+      "checked_at": "2026-09-17T12:04:20+00:00"
     },
     "papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": {
       "status": "complete",
@@ -5052,7 +5052,7 @@
       "status": "blocked",
       "source_fingerprint": "854c3738395df1ff08e8bd60fc12ceea018b4a7e2df147bde17c11302bec11f8",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T08:05:07+00:00"
+      "checked_at": "2026-09-17T12:04:13+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md": {
       "status": "complete",
@@ -5122,7 +5122,7 @@
       "status": "blocked",
       "source_fingerprint": "a75f7a788c6b5af06d4ecadf753867f064932837ba54800039ec1b237c738684",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: unable to download arXiv source archive: https://export.arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 406: Not Acceptable | https://arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 404: Not Found)",
-      "checked_at": "2026-09-17T08:05:09+00:00"
+      "checked_at": "2026-09-17T12:04:15+00:00"
     },
     "papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md": {
       "status": "complete",
@@ -5347,7 +5347,127 @@
       "normalized_references": 33,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-17T08:05:13+00:00"
+    },
+    "papers/inference/04-cpu-ssd-offload/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "266948adf9612f97657c08645ccac8086836139f51bf2f128cdd402dcffe54db",
+      "references_total": 81,
+      "normalized_references": 19,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:06+00:00"
+    },
+    "papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "b312fa96dfec0479709b943728d6381ab388caca3fd5c4367355526c6e154212",
+      "references_total": 72,
+      "normalized_references": 11,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:07+00:00"
+    },
+    "papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md": {
+      "status": "complete",
+      "source_fingerprint": "0136706dcc623961ab5fa5b2f427ca53b2642de7c3ca0ff2e716009061c67f32",
+      "references_total": 38,
+      "normalized_references": 23,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:09+00:00"
+    },
+    "papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md": {
+      "status": "complete",
+      "source_fingerprint": "5b6a0bdbdcc5732122d88ee9d77c2097b711a71c259d61e9a850ead77b47a516",
+      "references_total": 24,
+      "normalized_references": 16,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:10+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2501.12162-adaserve-multi-slo-speculative-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "2c1455bf0599f8805be6383275f81f5a36bbd0575d5f6c59f1c8b0ec42f09702",
+      "references_total": 58,
+      "normalized_references": 33,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:10+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "0b40fd3457d13415da515f9c48d39057aa2f073a57ce072a5f5a346d14a4827c",
+      "references_total": 41,
+      "normalized_references": 29,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:11+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md": {
+      "status": "complete",
+      "source_fingerprint": "cce49435f4efe30e0bc9854a590655fea00ad9f5e9ebfd74f240006932dfac4a",
+      "references_total": 51,
+      "normalized_references": 28,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:11+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md": {
+      "status": "complete",
+      "source_fingerprint": "9b506032ef876806388ca8471c9d5af4e12b990672ba4e3d55ca6a8305028ae3",
+      "references_total": 60,
+      "normalized_references": 32,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:14+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md": {
+      "status": "complete",
+      "source_fingerprint": "f4a134643c2d2cb823cb0e4ea1a2ab1d991f7281be27b55203e862de9c5692af",
+      "references_total": 46,
+      "normalized_references": 17,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:17+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md": {
+      "status": "complete",
+      "source_fingerprint": "bdd8f6cd4f61dcfd04dc07dc313f6f73665a6ce04c85cb4bbd3db43b500fda3c",
+      "references_total": 41,
+      "normalized_references": 10,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:18+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md": {
+      "status": "complete",
+      "source_fingerprint": "769cdf1e72f168987aa5608e02f85ee1baa36f7a78b5e7de5f2339a82794dc0a",
+      "references_total": 83,
+      "normalized_references": 38,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:18+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md": {
+      "status": "complete",
+      "source_fingerprint": "42e73362e4d0705f491bef591dc6dd043ddab7547392a12c17c9148f295be59d",
+      "references_total": 86,
+      "normalized_references": 34,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:19+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "cf4aa53f66cd8a737a35553efc35a5763d92a27874226fea3858385bbab220a7",
+      "references_total": 42,
+      "normalized_references": 16,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:19+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md": {
+      "status": "complete",
+      "source_fingerprint": "ea02e59d79b00049aa7c3158056fe8badb63bf9ed016c9382a5fc1075f52a46a",
+      "references_total": 113,
+      "normalized_references": 64,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:19+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md": {
+      "status": "complete",
+      "source_fingerprint": "cb81faf1584f9d2d5e9e2df7ab0bbc0ca43cb8adaeb26c85f4066ec23f152d6a",
+      "references_total": 25,
+      "normalized_references": 13,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T12:04:20+00:00"
     }
   },
-  "updated_at": "2026-09-17T08:05:40+00:00"
+  "updated_at": "2026-09-17T12:04:47+00:00"
 }

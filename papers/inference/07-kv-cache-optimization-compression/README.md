@@ -156,20 +156,20 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-10〜2025-09）
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
-  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：26  
   KVキャッシュの仮想アドレスを連続に保ったままCUDA仮想メモリで物理ページだけを需要時割当し、PagedAttention固有のブロック表と専用注意カーネルを不要にする方式。長文脈サービングで最大1.23倍のスループット改善を報告する。
 
 - **2025-01 · [PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving](2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   Preserveは、テンソル並列のGPU間集約通信中に次の重みとKVをHBMからL2へ先読みし、通信待ちとメモリ読出しを重ねて分散推論の遅延を減らす。
 
+- **2024-10 · [MagicPIG: LSH Sampling for Efficient LLM Generation](2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md)**  
+  実装：[✓](https://github.com/Infini-AI-Lab/MagicPIG) ・ リポジトリ内被引用：6  
+  LSHの衝突確率を注意分布の提案分布として使い、CPUへ置いたKVから少数だけをサンプリングして疎注意を計算する方式。全注意の2〜5%程度の計算で精度を保ち、最大5倍のデコードスループットを示す。
+
 - **2025-03 · [Jenga: Effective Memory Management for Serving LLM with Heterogeneity](2025-2503.18292-jenga-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   異なる大きさ・依存関係のKV/視覚/Mamba状態を、LCM大ページと層別キャッシュAPIで統合管理し、vLLM比でスループット最大4.92倍、GPUメモリ利用を最大79.6%改善する。
-
-- **2024-10 · [MagicPIG: LSH Sampling for Efficient LLM Generation](2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md)**  
-  実装：[✓](https://github.com/Infini-AI-Lab/MagicPIG) ・ リポジトリ内被引用：5  
-  LSHの衝突確率を注意分布の提案分布として使い、CPUへ置いたKVから少数だけをサンプリングして疎注意を計算する方式。全注意の2〜5%程度の計算で精度を保ち、最大5倍のデコードスループットを示す。
 
 - **2025-05 · [TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization](2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md)**  
   実装：[✓](https://github.com/ydyhello/TailorKV) ・ リポジトリ内被引用：2  
@@ -180,7 +180,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   非同期KV先読みは、現在の注意ブロック計算中に次のKVをHBMからL2へ運び、Hopper GPUのメモリ待ちを隠して、注意カーネルとE2Eデコードを速める。
 
 - **2025-07 · [HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs](2025-2507.19823-hcattention-heterogeneous-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   キー量子化・値のCPU退避・層別の動的KV削除を統合し、GPU KV予算25%でLlama-3-8BのLongBench平均43.2を全注意と同値に保ち、12.5%でも42.5（0.7ポイント差）に抑える異種GPU/CPU注意方式。
 
 ### 3年前（2023-10〜2024-09）

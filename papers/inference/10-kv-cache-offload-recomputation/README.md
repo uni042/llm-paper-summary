@@ -29,7 +29,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：55  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-10 · [TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications](2025-2510.18586-tokencake-agent-kv-cache-serving.md)**  
@@ -52,6 +52,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   KVDriveはHBM・DRAM・NVMeの三層でKVを管理し、再利用度に応じた選択・転送・注意計算を小バッチで重ね、SSDから必要ブロックだけを読み長文I/Oを減らす方式。
 
+- **2025-12 · [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
+
 - **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
   実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：2  
   疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
@@ -63,10 +67,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices](2026-2603.04428-persistent-q4-agent-kv-cache.md)**  
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：2  
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
-
-- **2025-12 · [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
 
 - **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -257,11 +257,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：27  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：26  
   NEOは一部要求のKVとデコード注意をCPUへ移し、GPU要求と同時に進めてCPU/GPUの完了時刻を反復ごとに揃え、VRAM不足と待ち時間を抑える方式。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
@@ -269,7 +269,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
 - **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
@@ -327,11 +327,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：38  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   FastDecodeはKVと注意計算を複数CPUノードへ置き、GPUは重み計算を大バッチで進め、巨大KVのGPU転送とHBM容量制約を減らす異種パイプライン。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
