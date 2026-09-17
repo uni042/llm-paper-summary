@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-79eabe22a1933fc80a491fc0",
-  "job_id": "job-research-120be1bd98c2839e",
+  "attempt_id": "attempt-b48fe8a4a8bca9a588bbc403",
+  "job_id": "job-research-411dee2b8db54e04",
   "data": {
-    "hardware": "動機実験は単一のNVIDIA L20 GPUとQwen2.5-3Bを使い、NVIDIAのマルチプロセスサービスで演算器の分割を制御する。論文全体では単一GPU構成と複数GPU構成の双方を用い、実運用規模のデコーダ専用大規模言語モデルと複数の要求分布を評価する。特殊な専用アクセラレータを前提とせず、市販のNVIDIA GPU上で同一GPU内の入力処理・逐次生成分離を検証する。",
-    "software": "NexusはvLLMを拡張した推論配信実装である。比較対象には一体型vLLM、SGLang、入力処理と逐次生成を別GPUへ分けるvLLM、および既存の同一GPU内分離方式を含む。実装側には競合考慮型費用モデル、演算器配分最適化、緩衝付き切替、段階別スケジューラを統合し、既存の大規模言語モデル実行基盤を保ちながら資源制御部分を変更する。",
-    "methodology": "要求到着率を変えながら端から端までの推論配信を実行し、処理可能要求量、初回トークン遅延、トークン間遅延を比較する。異なる入力長・出力長分布を持つ複数負荷と複数モデルを用いて、動的な要求変化への追従を確認する。動機実験ではLong Data Collections負荷、Qwen2.5-3B、L20、毎秒2.5要求のポアソン到着を用い、入力処理だけ、逐次生成だけ、両者混合の各バッチについて反復時間とカーネル干渉を測定する。さらに資源配分、共有メモリ競合、スケジューラ、最適化器の寄与を分析する。",
-    "scope": "対象は遅延制約を持つオンライン大規模言語モデル配信であり、入力処理と逐次生成の干渉を抑えながらGPU利用率を保つことを目的とする。モデル学習、重み圧縮、鍵値キャッシュ容量拡張そのものではなく、同一GPU内での実行時資源分割と要求順序制御を評価対象とする。"
+    "hardware": "主系はRTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TB。OPT-66B FP16は132GB相当で、GPU 0〜4層、CPU 5〜12層、SSD 13〜63層へ配置する。GPUダイレクトストレージ対応経路も評価する。",
+    "software": "Hugging Face Accelerateの密重み退避推論を比較対象とし、SparseGPTまたはWandaで50%非構造枝刈りを行う。圧縮比較にはZSTD、量子化併用にはSmoothQuant INT8を使用する。",
+    "methodology": "単一バッチのテキスト生成で、まずOPT層の線形演算単体についてSSD-CPU、CPU-GPU転送、復元、計算の内訳を測定する。次にOPT-66B全64層の1回通過時間を同じ配置で比較し、圧縮によりCPUへ置ける層数が増える効果も別に測る。GPUダイレクトストレージ経路、INT8量子化併用、OPT-66BとLlama2-70BのWikiText perplexityを評価する。",
+    "scope": "主目的は単一バッチの遅延削減であり、高並列サービングのスループット最適化ではない。疎性は保存・転送量削減に使うが、GPU上の行列計算自体は密計算のままで、非構造疎性による演算削減は未利用である。"
   },
   "reservation": {
-    "claim_id": "claim-79eabe22a1933fc80a491fc0",
+    "claim_id": "claim-b48fe8a4a8bca9a588bbc403",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

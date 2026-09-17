@@ -2,58 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-79eabe22a1933fc80a491fc0",
-  "job_id": "job-research-120be1bd98c2839e",
+  "attempt_id": "attempt-b48fe8a4a8bca9a588bbc403",
+  "job_id": "job-research-411dee2b8db54e04",
   "data": {
-    "canonical_id": "arXiv:2507.06608",
-    "arxiv_id": "2507.06608",
-    "doi": "10.48550/arXiv.2507.06608",
+    "canonical_id": "arXiv:2406.11674",
+    "arxiv_id": "2406.11674",
+    "doi": "10.48550/arXiv.2406.11674",
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.LG"
-      ]
+      "primary": "cs.CL",
+      "cross_list": []
     },
-    "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
-    "summary": "Nexusは、prefillとdecodeを同一GPU上で並行実行しつつ、計算飽和・メモリ帯域競合・実行時メモリ使用量を明示的にモデル化してSMを動的分割するLLM servingシステムである。既存のchunked-prefill型monolithic servingは混合batch内のphase interferenceを起こし、engine-level PD disaggregationは追加GPUとKV転送を要する。Nexusは軽量なcontention-aware cost model、dual-objectiveなSM allocation、hysteresis付き非同期切替、prefill用Shortest-Prompt-Firstとdecode用FCFSを組み合わせ、vLLM拡張としてcommodity GPU上に実装する。多様なモデル・workloadでvLLM比最大2.2倍throughput、20倍低いTTFT、2.5倍低いTBT、SGLang比最大2倍throughputを報告する。",
-    "list_summary": "同一GPU内でprefill/decodeをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍throughput・20倍TTFT改善を達成する。",
+    "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
+    "summary": "GPUメモリに収まらない大規模言語モデルでは、重みをCPUメモリやSSDへ退避し、各層の計算前にGPUへ転送する方式が使われる。Endorは、この方式では計算より重み転送が支配的になることをOPT-66Bで実測し、非構造枝刈り後の重みを非ゼロ値配列と1ビット位置ビットマップに分離して保存する。50%枝刈りしたFP16重みでは全体を元の56%へ縮小し、GPU上で並列復元することで転送削減を復元費用より大きくする。OPT-66Bでは通常のHugging Face Accelerateによる退避推論に対して配置容量増加込みで1.70倍、Llama2-70Bで1.78倍に高速化し、GPUダイレクトストレージを併用するとそれぞれ約2.25倍、2.37倍まで改善する。量子化とも併用可能だが、ビットマップ費用が相対的に増えるため圧縮率と高速化幅は小さくなる。",
+    "list_summary": "非構造枝刈り重みを非ゼロ値と位置ビットマップへ分離し、CPU/SSDからGPUへの転送量を減らして、退避LLM推論を最大約2.37倍高速化する。",
     "authors": [
-      "Xiaoxiang Shi",
-      "Colin Cai",
-      "Junjia Du",
-      "Zhihao Jia"
+      "Donghyeon Joo",
+      "Ramyad Hadidi",
+      "Soheil Feizi",
+      "Bahar Asgari"
     ],
-    "published": "2025-07-09",
-    "publication": "arXiv:2507.06608v5",
+    "published": "2024-06-17",
+    "publication": "arXiv:2406.11674v1",
     "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint; v5 revised 2025-08-07",
-    "lineage": "serving-scheduling",
+    "publication_status": "Preprint",
+    "lineage": "cpu-ssd-offload",
     "topics": [
-      "LLM serving",
-      "prefill-decode disaggregation",
-      "intra-GPU disaggregation",
-      "SM partitioning",
-      "memory bandwidth contention",
-      "scheduling"
+      "LLM退避推論",
+      "SSD",
+      "非構造枝刈り",
+      "疎形式",
+      "GPUダイレクトストレージ"
     ],
-    "importance": "engine-level分離とmonolithic batchingの中間に位置するintra-GPU PD設計で、reactive SLO制御ではなくresource contentionの予測モデルからbatch単位でproactiveに資源配分する点が重要。",
-    "hardware_evaluation": "単一GPUおよびmulti-GPU構成でproduction-scale LLMと複数workloadを評価。動機実験ではQwen2.5-3BをNVIDIA L20上で実行し、MPSでSM partitioningを制御。",
-    "quality_effect": "モデル重みや生成アルゴリズム自体を近似変更する手法ではなくserving資源配分・schedulerの変更であるため、モデル品質を直接変えることを目的としない。",
-    "source": "https://arxiv.org/abs/2507.06608",
+    "importance": "SSD/CPU退避推論で転送がほぼ全実行時間を占める条件を実測し、非構造枝刈りを実際の転送量削減へ結び付ける軽量な疎形式を提示する。",
+    "hardware_evaluation": "RTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TBを用い、OPT-66BとLlama2-70Bを単一バッチ生成で評価。",
+    "quality_effect": "Endor自体は枝刈り後の非ゼロ値と位置を完全保持するため追加の品質劣化を導入しない。品質差は採用した枝刈り方式に由来する。",
+    "source": "https://arxiv.org/abs/2406.11674",
     "sources": [
-      "https://arxiv.org/abs/2507.06608",
-      "https://arxiv.org/html/2507.06608v5"
+      "https://arxiv.org/abs/2406.11674",
+      "https://arxiv.org/html/2406.11674v1"
     ],
     "code": null,
-    "implementation": "vLLMを拡張し、fine-grained SM partitioningとconcurrent prefill-decode executionを実装。decoder-only LLMとcommodity NVIDIA GPUを対象とする。論文本文で公開repository URLは確認できない。",
+    "implementation": "OPT-66BとLlama2-70Bを対象にした研究実装。論文時点ではオープンソース化予定と記載され、公開コードURLは本文で確認できない。",
     "last_checked": "2026-09-17",
     "references": [],
     "references_checked_at": "2026-09-17",
-    "references_source": "arXiv v5 HTML全文と関連研究節を確認。",
+    "references_source": "arXiv HTML参考文献節を確認。",
     "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-79eabe22a1933fc80a491fc0",
+    "claim_id": "claim-b48fe8a4a8bca9a588bbc403",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
