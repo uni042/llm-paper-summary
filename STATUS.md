@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:12:15 JST**
+> 自動生成: **2026-09-17 13:12:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
-| 未claim Research job | **52** |
-| 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-17 12:12:48 JST（59分前）** |
+| 収録候補論文 | **53** |
+| 未claim Research job | **51** |
+| 直近24hの検証済みResearch収録 | **74** |
+| 最終検証済みResearch収録 | **09-17 13:12:35 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **1** | **0** | **1** | **2** | **1** | — |
+| Research | **7** | **1** | **0** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **6** | **3** | **2** | **1** | **2** | **1** | **6** |
+| 合計 | **7** | **3** | **2** | **1** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 13:12:35 JST** [research] `arXiv:2511.04791` — DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing
+  - job: `.survey/work-queue/jobs/job-research-f371944d5d8c6995.json`
+  - result: `.survey/work-queue/results/research/attempt-f3d428f698e82fad885bba54.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f3d428f698e82fad885bba54.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md`
 - **09-17 12:12:48 JST** [research] `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference
   - job: `.survey/work-queue/jobs/job-research-5bed14c683ee7a49.json`
   - result: `.survey/work-queue/results/research/attempt-a4e4d8c3f36aed305d4ea174.json` (`ok=true`)
@@ -145,7 +150,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -165,7 +170,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **648** |
+| inference/training/survey配下の論文Markdown実体 | **649** |
 
 ### immutable submissionの未照合
 
@@ -173,8 +178,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **416** |
-| └ Research | **289** |
+| 成功result未照合のimmutable submission | **415** |
+| └ Research | **288** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 

@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 54,
-      "completed": 459,
+      "ready": 53,
+      "completed": 460,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 1,
@@ -18,25 +18,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 54,
+    "ready_research_audit": 53,
     "actively_claimed": 2,
-    "claimable": 52
+    "claimable": 51
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-f371944d5d8c6995",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2511.04791",
-      "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
-      "source_url": "https://arxiv.org/abs/2511.04791",
-      "paper_path": "papers/inference/06-serving-scheduling/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7e739eca355b8687",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4954e0b135582135",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2504.14893",
+      "title": "Hardware-based Heterogeneous Memory Management for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2504.14893",
+      "paper_path": "papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T04:12:06+00:00"
+  "generated_at": "2026-09-17T04:12:35+00:00"
 }
