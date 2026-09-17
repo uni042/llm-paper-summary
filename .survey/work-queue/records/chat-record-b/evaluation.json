@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-2ce9e645100a37fddf183a77",
   "job_id": "job-research-146a535327d5e7ec",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2ce9e645100a37fddf183a77",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主な効率実験はNVIDIA H200 GPUを使用し、bfloat16精度で測定する。Qwen2.5-72B-InstructとLlama-3.3-70B-Instructは4基のH200へパイプライン並列で配置する。移植費の補足評価ではA100およびH100も使用する。",
+    "software": "比較する全効率方式でFlashAttention v2を使用する。対象モデルはQwen2.5系列とLlama3系列、ドラフトモデルは同系列の小型モデルである。Dustinの混合予算探索にはOptunaを用いる。",
+    "methodology": "精度はLongBenchの単一文書質問応答、複数文書質問応答、要約、少数例学習、合成検索、コード課題で評価し、KV予算512・256・128などの制約下でFullKV、StreamingLLM、SnapKV、Quest等と比較する。効率はPG-19から作る長文継続生成で、8K〜32K文脈、バッチ8・16を中心にデコード段階スループット、受理トークン数、自己注意遅延を測る。Vanilla、ClassicSD、MagicDecとは同じ対象・ドラフトモデル対と投機深度を使い、検証方式の差を分離する。さらに履歴のみ、ドラフトのみ、混合の除去実験と、重要度推定費、モデル規模、バッチ規模、文脈長に対する感度を調べる。",
+    "scope": "実機GPU上の長文・多バッチ推論評価であり、シミュレーションだけの結果ではない。主張の強い高速化は帯域制約が強い32K文脈・大バッチで得られる。Llama3とQwen2.5の複数規模へ一般化を確認する一方、完全KV履歴を保持するためGPUメモリ容量の上限は緩和せず、固定混合予算の最適性も課題依存である。"
+  },
+  "reservation": {"claim_id":"claim-2ce9e645100a37fddf183a77","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
