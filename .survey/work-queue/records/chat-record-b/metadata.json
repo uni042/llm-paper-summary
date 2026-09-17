@@ -2,57 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a6d9e761f99fd071c0489cca",
-  "job_id": "job-research-010509dfee08b6d5",
-  "data": {
-    "canonical_id": "arXiv:2607.27090",
-    "arxiv_id": "2607.27090",
-    "doi": "10.48550/arXiv.2607.27090",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.LG"
-      ]
-    },
-    "title": "InferScale: GPU-Native KV Injection for Personalized LLM Serving",
-    "summary": "InferScaleは、ユーザーごとに繰り返し検索される永続メモリを毎リクエストで再プリフィルする代わりに、各事実のKV表現を事前計算して再利用するGPUネイティブなLLMメモリ配信システムである。検索埋め込みとRoPE適用前KVを同一識別子でGPU上に保持し、Chunked RoPEでリクエスト時の位置へ再配置してvLLMのページ化KVキャッシュへ直接注入する。LoCoMoではk=50でMem0比TTFTを72〜79%削減し、100同時ユーザーで3.7〜4.5倍のスループットを報告する。一方、独立した事実符号化による事実間注意の欠落で精度差が生じ、1会話あたり1.8〜4.8GBのKV保存量も必要になるため、Context-Window EncodingとCPUオフロードで精度・容量のトレードオフを調整する。",
-    "list_summary": "検索メモリのRoPE適用前KVをGPU上で再利用・位置再配置してvLLMへ直接注入し、k=50でTTFTを72〜79%削減する。",
-    "authors": [
-      "Peter Li",
-      "Prashant Pandey"
-    ],
-    "authors_affiliations": "Northeastern University, Boston, Massachusetts, USA",
-    "published": "2026-07-29",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2026-07-29)",
-    "lineage": "KV-cache reuse / personalized memory serving / retrieval-augmented serving / GPU-native retrieval",
-    "topics": [
-      "KVキャッシュ再利用",
-      "GPUネイティブ検索",
-      "パーソナライズLLM",
-      "RoPE",
-      "vLLM"
-    ],
-    "importance": "動的に組み替わる検索メモリでも固定接頭辞を仮定せずKVを再利用し、検索型メモリの反復プリフィルを注意機構層の注入へ置換する実装可能な配信プリミティブを示す。",
-    "implementation": "vLLM v0.19.1のKVConnectorBase_V1を使う外部KVコネクタとして実装し、Jasper GPU近似最近傍索引とRoPE適用前KV格納領域を統合する。モデル再学習やvLLM内部改変は不要。",
-    "hardware_evaluation": "単一NVIDIA RTX PRO 6000 Blackwell Server Edition 96GB GDDR7、PCIe 5.0 x16。Llama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.3、Qwen2.5-7B-Instructを主評価し、Qwen3-14Bでも追加評価。",
-    "quality_effect": "KV注入と位置再配置自体は理論上等価だが、各事実を独立に符号化すると事実間の相互注意を失う。Context-Window Encodingで精度を回復するが、k=50ではモデルによりMem0との差が残り、特に複数事実をまたぐ推論で差が大きい。",
-    "source": "https://arxiv.org/abs/2607.27090",
-    "sources": [
-      "https://arxiv.org/abs/2607.27090",
-      "https://arxiv.org/html/2607.27090v1"
-    ],
-    "code": "https://github.com/saltsystemslab/InferScale",
-    "last_checked": "2026-09-17",
-    "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "primary manuscript reference section; normalized identifiers not exhaustively transcribed in this record",
-    "references_total": 44
-  },
+  "attempt_id": "attempt-3e9db00a4e41a210938816b6",
+  "job_id": "job-research-8423392e3664b697",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a6d9e761f99fd071c0489cca",
+    "claim_id": "claim-3e9db00a4e41a210938816b6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

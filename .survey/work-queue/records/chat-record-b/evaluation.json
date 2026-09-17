@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a6d9e761f99fd071c0489cca",
-  "job_id": "job-research-010509dfee08b6d5",
-  "data": {
-    "hardware": "全実験は単一NVIDIA RTX PRO 6000 Blackwell Server Edition、96GB GDDR7、ピーク帯域1597GB/sで実施する。GPUはPCI Express 5.0 x16接続で、CPUオフロード評価ではpinned host DRAMから検索されたKVをGPUへstreamする。",
-    "software": "vLLM v0.19.1、bf16 KV cache、16-token pageを使用し、prefix cachingを全benchmarkで有効化する。主モデルはLlama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.3、Qwen2.5-7B-Instructで、Qwen3-14Bも追加評価する。InferScaleはKV connector plugin、検索はJasper GPU ANN、比較するMem0 defaultはQdrant CPU vector storeとprompt injectionを用いる。",
-    "methodology": "LoCoMoのanswerable questions 1,540件で、retrieval budget k=5/10/20/50とContext-Window Encodingのwindow w=0/5/20/50を変え、vLLM engine TTFT、end-to-end query-to-first-token、judged accuracyを測る。InferScaleとMem0は同じMem0抽出・top-k fact retrieval pipelineを使う。Jasper対Qdrantのbackend ablationでGPU-native retrieval寄与を分離し、GPU-resident対CPU-offloaded KVで容量とPCIe遅延を比較する。throughputではN=10/25/50/75/100 usersが同一conversation memoryを共有し、各userが2 query、各requestがgreedyで50 output tokensを生成する。測定前にprefix cacheをresetする。",
-    "scope": "実機単一GPU上のpersonalized-memory servingを対象とし、LoCoMoでlatency、accuracy、throughput、offline encoding cost、memory footprintを評価する。production multi-GPU clusterや多数の独立conversationを同時に入れ替える運用は直接評価していない。throughput試験では複数usersが同一conversation memory corpusを共有するため、各userが別々のGB級KV storeを持つ実運用の容量圧力はthroughput曲線に直接反映されない。"
-  },
+  "attempt_id": "attempt-3e9db00a4e41a210938816b6",
+  "job_id": "job-research-8423392e3664b697",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a6d9e761f99fd071c0489cca",
+    "claim_id": "claim-3e9db00a4e41a210938816b6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
