@@ -9,91 +9,38 @@
     "arxiv_id": "2508.06526",
     "doi": "10.48550/arXiv.2508.06526",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI",
-        "cs.AR"
-      ]
-    },
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.AR"]},
     "title": "PiKV: KV Cache Management System for Mixture of Experts",
-    "summary": "PiKVはMoE推論で計算はexpert選択により疎になる一方、KV cacheが密かつ全GPUで同期される問題に対し、expert-sharded KV storage、cache-aware routing、圧縮、query-aware schedulingを一つの非同期pipelineへ統合する分散KV管理frameworkである。論文v3は方式・計算量・メモリ式とFPGA mappingを詳細化しているが、独立した実験節や実測end-to-end結果表はなく、定量性能主張を実験で裏付ける評価は本文から確認できない。",
-    "list_summary": "MoEのKVをexpert単位に分散しrouting・圧縮・query-aware evictionを統合するが、v3本文には独立した実測評価節がない。",
-    "authors": [
-      "Dong Liu",
-      "Yanxuan Yu",
-      "Ben Lengerich",
-      "Ying Nian Wu"
-    ],
+    "summary": "PiKVは、混合専門家モデル（Mixture of Experts）の推論では専門家選択によって計算量が疎になる一方、注意機構のKVキャッシュが過去トークン全体について密に残り、複数GPU間で容量と通信量を消費する問題を対象とする。提案系はKVを専門家単位で分散配置し、現在の問い合わせに応じた専門家選択、KV圧縮、保持ページ選択を一つの非同期処理系へ統合する。第3版本文は方式、計算量、メモリ量の解析式とFPGA/CXLへの写像を詳述するが、独立した実験節やエンドツーエンドの実測比較表は掲載していない。そのため本記録では、解析式から確認できる設計上の削減効果と、実測で未検証の性能主張を明確に分離して扱う。",
+    "list_summary": "混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。",
+    "authors": ["Dong Liu", "Yanxuan Yu", "Ben Lengerich", "Ying Nian Wu"],
     "authors_affiliations": "University of California, Los Angeles; Yale University; Columbia University; University of Wisconsin-Madison",
     "published": "2025-08-02",
     "publication": "arXiv preprint arXiv:2508.06526v3",
     "publication_type": "arXivプレプリント",
-    "publication_status": "2025年8月2日v1、2026年5月19日v3。主分類cs.DC、cross-list cs.AI・cs.AR。",
+    "publication_status": "2025年8月2日に初版、2026年5月19日に第3版。主分類はcs.DC、併記分類はcs.AIとcs.AR。",
     "lineage": "moe",
-    "topics": [
-      "MoE推論",
-      "KVキャッシュ",
-      "分散キャッシュ",
-      "expert routing",
-      "KV圧縮",
-      "query-aware scheduling",
-      "FPGA/CXL"
-    ],
-    "importance": "MoEのexpert sparsityをKVアクセスにも伝播させ、分散配置・routing・圧縮・retentionを同じsystem pipelineで扱う設計を提示する。",
-    "hardware_evaluation": "実測hardware評価は本文v3に記載されない。FPGA mappingではAMD Alveo U55CまたはIntel AgilexとCXL Type-3を想定し、代表構成のon-chip resource量を解析する。",
-    "hardware_details": "代表FPGA tileはE=64、S=256、k=4、K=16、d=128でBRAM page table約176KB、metadata約48KBと算定。",
-    "quality_effect": "圧縮・pruning・page retentionを選択可能なため方式によってattention fidelityが変わり得る。本文は再構成誤差式を示すがtask精度の実測比較は示さない。",
-    "bottlenecks": [
-      "dense KV replication",
-      "multi-GPU KV communication",
-      "long-context KV memory growth",
-      "cache miss and reuse distance",
-      "bounded-memory eviction"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§3.1 Expert-Sharded Storage",
-      "§3.2 Routing",
-      "§3.3 Compression",
-      "§3.4 Scheduling",
-      "§3.5 Hardware-Aware FPGA Mapping",
-      "§4 Conclusion"
-    ],
+    "topics": ["混合専門家モデル推論", "KVキャッシュ", "分散キャッシュ", "専門家ルーティング", "KV圧縮", "問い合わせ依存保持", "FPGA/CXL"],
+    "importance": "混合専門家モデルの計算疎性をKVアクセスにも反映し、分散配置、専門家選択、圧縮、保持判断を同一の処理系で扱う設計を提示する。",
+    "hardware_evaluation": "実測ハードウェア評価は第3版本文に記載されない。FPGAへの写像ではAMD Alveo U55CまたはIntel AgilexとCXL Type-3を想定し、代表構成についてオンチップ資源量を解析的に見積もる。",
+    "hardware_details": "代表的なFPGA構成では、専門家数64、断片サイズ256、選択専門家数4、保持ページ数16、特徴次元128を置き、ページ表用BRAMを約176KB、付随情報を約48KBと算定する。これは実機測定値ではなく、提案した付随情報処理器が単一領域へ収まる可能性を示す資源見積もりである。",
+    "quality_effect": "KV圧縮、枝刈り、ページ保持方式は近似を含み得るため、注意計算の忠実度や生成品質へ影響する可能性がある。本文は圧縮再構成誤差の解析式を示すものの、タスク正解率、困惑度、生成品質を用いた実測比較を示していない。したがって品質を維持したまま高速化できるとは本文だけから断定しない。",
+    "bottlenecks": ["密なKV複製", "複数GPU間KV通信", "長文脈で増大するKV容量", "キャッシュ不在と再利用距離", "容量制約下のページ追い出し"],
+    "evidence_locations": ["§1 Introduction", "§3.1 Expert-Sharded Storage", "§3.2 Routing", "§3.3 Compression", "§3.4 Scheduling", "§3.5 Hardware-Aware FPGA Mapping", "§4 Conclusion"],
     "source": "https://arxiv.org/abs/2508.06526",
-    "sources": [
-      "https://arxiv.org/abs/2508.06526",
-      "https://arxiv.org/pdf/2508.06526",
-      "https://github.com/NoakLiu/PiKV"
-    ],
+    "sources": ["https://arxiv.org/abs/2508.06526", "https://arxiv.org/pdf/2508.06526", "https://github.com/NoakLiu/PiKV"],
     "code": "https://github.com/NoakLiu/PiKV",
-    "implementation": "公開GitHub libraryあり。論文はGPU-centric pipelineに加えFPGA/CXL mappingを設計として記述するが、v3本文では実機benchmark結果を提示しない。",
+    "implementation": "公開GitHub実装がある。論文はGPU中心の処理系に加えてFPGA/CXLへの写像を設計として記述するが、第3版本文では実機ベンチマーク結果を提示しない。",
     "last_checked": "2026-09-17",
     "references": [
-      {
-        "canonical_id": "arXiv:2406.02069",
-        "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling"
-      },
-      {
-        "canonical_id": "arXiv:2310.01889",
-        "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context"
-      },
-      {
-        "canonical_id": "arXiv:2406.10774",
-        "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference"
-      },
-      {
-        "canonical_id": "arXiv:2405.04434",
-        "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
-      }
+      {"canonical_id": "arXiv:2406.02069", "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling"},
+      {"canonical_id": "arXiv:2310.01889", "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context"},
+      {"canonical_id": "arXiv:2406.10774", "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference"},
+      {"canonical_id": "arXiv:2405.04434", "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"}
     ],
     "references_checked_at": "2026-09-17",
     "references_source": "arXiv v3 PDF references",
     "references_total": 4
   },
-  "reservation": {
-    "claim_id": "claim-366e50017f388aac9c576b49",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
