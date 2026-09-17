@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 03:33:04 JST**
+> 自動生成: **2026-09-18 04:05:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間45分前）** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **50** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（3時間18分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **24** | **3** | **2** | **1** | **1** | **0** | **1** |
+| Discovery | **14** | **1** | **1** | **0** | **0** | **0** | **1** |
+| 合計 | **20** | **2** | **1** | **1** | **1** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -85,6 +85,10 @@
 
 ### Discovery
 
+- **09-18 04:05:29 JST** job `job-09415fe947517f0c` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-kv-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json`
+  - 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
 - **09-18 02:59:29 JST** job `job-4c07976a89c00fbe` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
@@ -121,10 +125,6 @@
   - result: `.survey/work-queue/results/20260918T0116JST-discovery-specialist-near-memory-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json`
   - 探索軸: HBM-PIM・near-memory KV管理・memory-side dequantization
-- **09-18 00:05:06 JST** job `job-f557e7cd72d205b3` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
-  - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving
 
 ### 直近タスク
 
@@ -142,17 +142,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 03:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
-- 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache / direct I/O・GPU-initiated storage・SSD-backed LLM inference
-- round `specialist-cpu-gpu-moe-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
-  - 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json` (`ok=true`)
-- round `specialist-gpu-storage-2` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json`
-  - 探索軸: direct I/O・GPU-initiated storage・SSD-backed LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json` (`ok=true`)
+- 最新観測run: **2026-09-18 04:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **1件**
+- 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
+- round `specialist-dllm-kv-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json`
+  - 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-kv-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -181,7 +177,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
