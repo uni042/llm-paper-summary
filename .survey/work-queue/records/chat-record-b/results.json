@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-2ce9e645100a37fddf183a77",
   "job_id": "job-research-146a535327d5e7ec",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2ce9e645100a37fddf183a77",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "Dustinの利得は文脈長とバッチが大きく、全KV読込の帯域費が支配的になるほど拡大する。Qwen2.5-72Bでは512トークンの検証KV予算で自己注意が32K・バッチ16において27.85倍高速化し、デコード段階のエンドツーエンドスループットも23.26トークン毎秒のVanillaから235.81トークン毎秒へ上がり、9.17倍となる。精度面ではLongBenchの厳しいKV予算でもFullKVに近い値を維持し、単純な履歴保持やページ単位選択より低下が小さい。",
+    "key_results": [
+      {"metric":"自己注意高速化倍率","value":"27.85倍","baseline":"全KVを使う投機検証自己注意","condition":"Qwen2.5-72B、32K文脈、バッチ16、検証KV予算512","interpretation":"長文・大バッチで支配的になるKV読込量を疎検証で削るため、帯域制約が強いほど倍率が伸びる。"},
+      {"metric":"デコード段階高速化倍率","value":"9.17倍、235.81トークン毎秒","baseline":"Vanilla 23.26トークン毎秒","condition":"Qwen2.5-72B、32K文脈、バッチ16","interpretation":"自己注意だけでなくドラフト生成やその他処理を含むデコード全体でも大幅な利得が残る。ClassicSDは1.89倍、MagicDecは1.96倍であり、対象側検証の疎化が追加効果を持つ。"},
+      {"metric":"LongBench平均精度","value":"55.23対55.81","baseline":"Vanilla / Lossless SD 55.81","condition":"Qwen2.5-72B、KV予算512、LongBenchカテゴリ平均","interpretation":"512トークンだけを検証に使っても平均低下は小さく、StreamingLLM 35.25、SnapKV 51.90、Quest 47.69よりFullKVへ近い。"},
+      {"metric":"固定混合方式の平均精度差","value":"-0.59%","baseline":"FullKV","condition":"16個のLongBench課題に対するDustin-H","interpretation":"履歴のみの-1.91%、ドラフトのみの-0.71%より平均的に安定するが、理想的に課題ごとに方式を選ぶOracleの-0.27%には届かず、固定混合予算に改善余地がある。"},
+      {"metric":"オンライン重要度推定費","value":"全KV自己注意遅延の0.46%〜0.75%","baseline":"全KV自己注意","condition":"Qwen2.5-72Bの複数文脈長・バッチ条件","interpretation":"意味検索ヘッドだけを再計算するため、動的KV選択のスコア計算が新たな主要ボトルネックにならない。"}
+    ],
+    "negative_results": "高速化は小規模モデル・短文脈では小さくなる。Qwen2.5-7Bの32K・バッチ16では2.33倍で、72Bの9.17倍ほど大きくない。固定混合予算mは課題ごとに最適ではなく、NarrativeQAやSAMSum等ではFullKVから数ポイントの低下が残る。またDustinは完全KV履歴を保持するためVRAM使用量そのものを恒久削減せず、GPUメモリ容量で決まる最大文脈長を拡張しない。",
+    "interpretation": "Dustinが特に大規模モデル、大バッチ、長文脈で効くのは、これらの条件ほど対象モデル検証の演算よりKV転送が支配的になるからである。検証集合を512程度へ固定すると文脈長が伸びても読み込むKV量の増加を抑えられ、相対利得が大きくなる。一方、小さいモデルではドラフト生成やその他の固定費が相対的に重く、対象側KV読込を減らしても全体倍率は限定される。履歴と先読みの混合は、課題やモデル対によって一方の注意信号が外れる現象を相互補完するため、単一信号より精度が安定する。",
+    "quality_impact": "近似的な疎検証なので厳密な無損失方式ではない。512トークン予算では多くの条件でFullKVに近いが、128トークンへ絞ると低下が増える。16課題平均では固定混合方式がFullKV比-0.59%であり、課題別には約-2%程度以上の低下もある。したがって高速化と品質の交換条件を持つ方式として扱う必要がある。"
+  },
+  "reservation": {"claim_id":"claim-2ce9e645100a37fddf183a77","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
