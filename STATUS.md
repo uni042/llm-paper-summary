@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 11:29:19 JST**
+> 自動生成: **2026-09-17 11:30:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **4** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **11** | **10** | **6** | **4** | **2** | **0** | **6** |
+| 合計 | **11** | **3** | **2** | **1** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -108,36 +108,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
-- immutable submission: **8件** / 検証済み成功: **4件** / 未完了・未検証: **4件**
-- **成功** `arXiv:2609.08306` — HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-ec48da5b1e9edcea.json`
-  - result: `.survey/work-queue/results/research/attempt-10ba900257289562be435001.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-10ba900257289562be435001.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-201fb89bc61573cc411909b4.json` (job `job-research-6252d370adc380b9`)
-- **成功** `arXiv:2509.24832` — SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching
-  - job: `.survey/work-queue/jobs/job-research-b98e4e299d06a6a5.json`
-  - result: `.survey/work-queue/results/research/attempt-4aa0bdcf550c974e39ccae92.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4aa0bdcf550c974e39ccae92.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md`
-- **成功** `arXiv:2604.23467` — Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference
-  - job: `.survey/work-queue/jobs/job-research-3ad6262bd04cfbe6.json`
-  - result: `.survey/work-queue/results/research/attempt-5b2f0818dd442ca0014c8634.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5b2f0818dd442ca0014c8634.json`
-  - paper: `papers/inference/09-kernel-runtime-compilation/2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md`
-- **成功** `arXiv:2605.22566` — GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving
-  - job: `.survey/work-queue/jobs/job-research-44674a8f55b9f5e8.json`
-  - result: `.survey/work-queue/results/research/attempt-82e80ed19ce701a0be49bf58.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-82e80ed19ce701a0be49bf58.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2605.22566-graphflow-agent-workflow-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-9bd72451731af90ab90c3e14.json` (job `job-research-6252d370adc380b9`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b21265e1c7564132469a29b8.json` (job `job-research-ec48da5b1e9edcea`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e3573f73597d9a563a861b51.json` (job `job-research-44674a8f55b9f5e8`)
+- 最新観測run: **2026-09-17 11:30 JST** / worker `scheduled-chat-survey-20260917T1130JST`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-95d658fe70f828e70de1fe76.json` (job `job-research-411dee2b8db54e04`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-16 16:00 JST** / worker `scheduled-chat-discovery-20260916T1600JST`
+- 最新観測run: **2026-09-17 11:30 JST** / worker `scheduled-chat-survey-20260917T1130JST`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -213,8 +190,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **408** |
-| └ Research | **281** |
+| 成功result未照合のimmutable submission | **409** |
+| └ Research | **282** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
