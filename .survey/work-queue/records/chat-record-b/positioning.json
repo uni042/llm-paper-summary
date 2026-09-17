@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3e9db00a4e41a210938816b6",
-  "job_id": "job-research-8423392e3664b697",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e9db00a4e41a210938816b6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3e9db00a4e41a210938816b6","job_id":"job-research-8423392e3664b697","data":{"limitations":"SLO最適化は主に出力トークン間遅延TPOTを対象とし、TTFT、総完了時間、コストなど複数種類の制約を同時に扱う一般化は示していない。候補採用確率をドラフトモデルのlogitで近似するため、ドラフトと対象モデルの分布が離れると資源配分の精度が落ちる。遅れが一反復の最大進捗d+1を超えるリクエストは即座にSLOへ戻せず、1件上限n_maxによっても救済量が制限される。評価はA100単一ノード、Llama/Qwen系列の2対象モデルに限られ、異種GPU、複数ノード、プリフィル・デコード分離との統合は未評価である。","differences":"vLLMやSarathi-Serveは連続バッチ、ページ化KV、チャンクプリフィル等でGPU利用率を高めるが、同一反復内のリクエストを異なるデコード速度で進める仕組みは持たない。Priority schedulingは厳しい要求を先行させられるものの、小バッチ化や他要求の待ちを招く。SpecInfer、Medusa、EAGLE等の投機的デコードは主に単一要求または一様な速度向上を狙い、固定木や各要求の最大加速を使う。Sequoiaはハードウェアに応じた木構造最適化を行うが、AdaServeはさらに各リクエストのSLO進捗を制約として一つの検証予算をバッチ内で配分し、投機的デコードをスケジューリング機構へ拡張する。","implementation_status":"AdaServeはFlexFlow Serve上の研究実装として構築され、FlashInferのバッチプリフィルカーネルを投機と検証へ適用し、CUDA Graphでドラフトモデルの反復起動を削減する。論文はarXiv v2 (2025-05-17) のプレプリント。arXivページおよび本文から公式公開コードURLは確認できなかったため、metadata.codeはnullとしている。4×A100 80GB実機でLlama3.1-70BとQwen2.5-32Bを評価している。","research_positioning":"LLM配信スケジューリングと投機的デコードの接点に位置する。従来スケジューラがリクエスト順序、バッチ、プリフィルチャンク、GPU配置を操作するのに対し、AdaServeは『一回の対象モデル検証に何個の候補トークンを各リクエストへ割り当てるか』を新しい資源配分単位にする。これにより同一バッチを維持したままリクエストごとの実効デコード速度を変えられる。今後は複数SLO制約、分離配信、異種GPUでの検証予算、ドラフトモデル選択、予測誤差を考慮した確率的SLO保証へ拡張できる。"},"reservation":{"claim_id":"claim-3e9db00a4e41a210938816b6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
