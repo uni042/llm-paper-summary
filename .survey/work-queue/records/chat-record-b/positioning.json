@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-31cfc3803071967ca5c668cf",
+  "attempt_id": "attempt-a6d9e761f99fd071c0489cca",
   "job_id": "job-research-010509dfee08b6d5",
   "data": {
     "limitations": "最大の制約はper-conversation KV容量で、Llama-3.1-8Bでは約4.8GBを要するため多数ユーザーのmemoryをGPUへ同時常駐させにくい。CPU offloadは容量を緩和するが、取得量kに比例するPCIe転送がend-to-end latencyへ数十ms追加される。Context-Window Encodingでもretrieved facts同士の完全なcross-fact attentionは一般には復元せず、multi-hopやQwen3-14Bでprompt injectionとのaccuracy gapが残る。windowを増やすとoffline preprocessing時間も大幅に増える。評価は単一96GB GPUとLoCoMo中心で、multi-GPU serving、多数の独立conversationの入替え、長期運用時のKV更新・削除負荷は未検証である。",
@@ -11,7 +11,7 @@
     "research_positioning": "KV cache memory、prefix caching、RAG cache、retrieval attention、agent/personalized memory servingの交点に位置する。特に永続ユーザーメモリをtoken textではなく再利用可能なmodel-internal KV objectとして扱い、semantic retrievalとattention conditioningの境界を再設計した点が重要である。CPU/GPU階層メモリ研究との接点も強く、KV storeをhost DRAMへ退避した際の容量対latency trade-offを定量化している。今後はKV圧縮・量子化、NVMeを含む多階層配置、hotness-aware placement、ユーザー間deduplication、cross-fact interactionを補う部分再計算、multi-GPU KV placementへ拡張できる。"
   },
   "reservation": {
-    "claim_id": "claim-31cfc3803071967ca5c668cf",
+    "claim_id": "claim-a6d9e761f99fd071c0489cca",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

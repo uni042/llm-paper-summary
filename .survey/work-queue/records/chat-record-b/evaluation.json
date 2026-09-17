@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-31cfc3803071967ca5c668cf",
+  "attempt_id": "attempt-a6d9e761f99fd071c0489cca",
   "job_id": "job-research-010509dfee08b6d5",
   "data": {
     "hardware": "全実験は単一NVIDIA RTX PRO 6000 Blackwell Server Edition、96GB GDDR7、ピーク帯域1597GB/sで実施する。GPUはPCI Express 5.0 x16接続で、CPUオフロード評価ではpinned host DRAMから検索されたKVをGPUへstreamする。",
@@ -11,7 +11,7 @@
     "scope": "実機単一GPU上のpersonalized-memory servingを対象とし、LoCoMoでlatency、accuracy、throughput、offline encoding cost、memory footprintを評価する。production multi-GPU clusterや多数の独立conversationを同時に入れ替える運用は直接評価していない。throughput試験では複数usersが同一conversation memory corpusを共有するため、各userが別々のGB級KV storeを持つ実運用の容量圧力はthroughput曲線に直接反映されない。"
   },
   "reservation": {
-    "claim_id": "claim-31cfc3803071967ca5c668cf",
+    "claim_id": "claim-a6d9e761f99fd071c0489cca",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
