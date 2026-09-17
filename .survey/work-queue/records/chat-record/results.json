@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c9e86b0774fbe3177b6fb0f5",
-  "job_id": "job-research-a725b9cf79d670cf",
-  "data": {
-    "overview": "GroupKVの利得は短文の純計算高速化ではなく、長文でGPU容量とCPU→GPU KV転送が支配的になった領域で現れる。A100では全注意Fast-dLLMが8Kまでは高速だが16K以降でメモリ不足となる一方、GroupKVは128Kまで動作し、退避系比較手法より一貫して高い端から端までの速度を示す。RTX 4090ではFast-dLLMが2Kを超えるとメモリ不足になるのに対し96Kまで処理できる。品質は20%のKV回収予算でもLongBench、RULER、NIAHで概ね維持され、疎化の程度を増やせば速度と引き換えに小幅な品質低下が生じる。",
-    "key_results": [
-      {
-        "metric": "A100端から端までの生成スループット",
-        "value": "4K〜128Kで10.64, 5.91, 2.84, 1.79, 0.99, 0.39 tok/s",
-        "baseline": "FlexGen型KV退避＋疎注意は4.32〜0.12 tok/s、InfiniGen型は8.21〜0.31 tok/s",
-        "condition": "A100-80G、バッチ1、4K〜128K、同じ疎化率",
-        "interpretation": "FlexGen型退避に対して約2.0〜3.7倍、InfiniGen型に対して約1.25〜1.35倍で、粗い選択と転送重畳が長文退避時の律速を緩和する。"
-      },
-      {
-        "metric": "最大処理可能文脈長",
-        "value": "RTX 4090-24Gで96Kまで動作し、論文全体では最大48.00倍の拡張を報告",
-        "baseline": "Fast-dLLMはRTX 4090で2Kを超えるとメモリ不足",
-        "condition": "RTX 4090-24G、LLaDA系長文拡散推論",
-        "interpretation": "完全KVをGPUへ常駐させずCPUを容量層として使うことで、消費者向け24 GiB GPUでも長文を処理できる。"
-      },
-      {
-        "metric": "LongBench平均",
-        "value": "LLaDAで32.73、UltraLLaDAで37.43",
-        "baseline": "全注意はLLaDA 33.10、UltraLLaDA 36.61。InfiniGen型は30.57、34.92",
-        "condition": "既定20% KV回収予算、グループサイズ8、内部選別率50%",
-        "interpretation": "大幅なKV削減でも全注意に近い品質を保ち、再実装したトークン単位予測選択より2.16〜2.51点高い。"
-      },
-      {
-        "metric": "NIAH検索精度",
-        "value": "4K〜128K平均98.17%、128Kでも95%",
-        "baseline": "同GPU予算では全注意や一部比較法が長文でメモリ不足",
-        "condition": "単一needle検索、4K〜128K",
-        "interpretation": "20%程度のグループ疎化でも重要な遠距離情報を破滅的に捨てていないことを確認する補助的な品質証拠である。"
-      },
-      {
-        "metric": "予測先読みの部品効果",
-        "value": "32Kで1.08→1.79 tok/s、64Kで0.60→0.99 tok/s",
-        "baseline": "グループ疎化のみ",
-        "condition": "A100-80G、ストリーミング事前充填共通、復号スループット",
-        "interpretation": "疎KV量をほぼ同じに保ったまま転送スケジュールを変えることで、PCIe転送待ちを計算と重ねる効果を分離して示している。"
-      }
-    ],
-    "negative_results": "短文ではGroupKVが常に最速ではない。A100の4K/8Kでは全KVがVRAMへ収まり、Fast-dLLMが23.55/11.83 tok/sでGroupKVの10.64/5.91 tok/sを上回るため、論文は短文をFast-dLLMへ振り分ける方針を採る。内部選別率を50%から25%へ下げると32K/64K速度は6.4%/8.9%向上するがLongBenchは0.54点低下し、75%へ増やしても品質は0.29点しか上がらない一方で速度は20〜29%低下する。したがって疎化は損失なしではなく、過度な計算予算にも逓減がある。",
-    "interpretation": "主な速度向上は二段階で生じる。まずCPU退避だけでは転送待ちで復号が遅くなるが、グループ疎化が毎層の転送量を減らして速度を回復する。次に層間予測先読みが残った疎KV転送を現在層計算へ重ね、追加VRAMを32Kで15.87→16.00 GiB、64Kで16.28→16.53 GiB程度に抑えながら速度をさらに上げる。文脈が長いほど全GPU常駐方式が容量限界に達し、GroupKVの階層メモリ化の価値が大きくなる。一方、短文では転送・選択機構そのものが余分な費用になるため、入力長とVRAMに応じた迂回が必要である。",
-    "quality_impact": "近似的な疎注意であり、完全な数値同値性は保証しない。既定設定ではLongBenchでLLaDAが全注意より0.37点低い一方、UltraLLaDAでは0.82点高く、RULERでも16K/32Kで全注意UltraLLaDAと同等以上の平均を示す。NIAHは128Kで95%を維持する。品質は回収率と内部選別率に依存し、より強い疎化では速度向上と引き換えに精度が低下する。"
-  },
+  "attempt_id": "attempt-7ad6ad40100c07874c12360f",
+  "job_id": "job-research-1fd656c9a10556db",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c9e86b0774fbe3177b6fb0f5",
+    "claim_id": "claim-7ad6ad40100c07874c12360f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

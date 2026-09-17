@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c9e86b0774fbe3177b6fb0f5",
-  "job_id": "job-research-a725b9cf79d670cf",
-  "data": {
-    "hardware": "実機2構成で評価する。サーバ構成はIntel Xeon Silver 4214を2基、DDR4 1.5 TB、NVIDIA A100-80G PCIeを使用する。ワークステーション構成はNVIDIA RTX 4090-24Gを使用する。両環境はUbuntu 22.04、CUDA 12.2、GCC 9.5で、CPU退避はPCIe帯域を活かすため固定ページのホストメモリを使う。",
-    "software": "対象モデルはLLaDAと長文向けUltraLLaDA。比較対象は全注意のUltraLLaDAおよびFast-dLLM、FlexGen型のKV退避＋疎注意とKVパイプライン＋疎注意、同じ拡散モデル条件へ再実装したInfiniGen型トークン単位予測選択である。GroupKVの既定値はグループサイズ8、グループ回収率20%、内部選別率50%。",
-    "methodology": "LongBenchの7下位課題、4K〜32KのRULER、4K〜128KのNIAHで品質を測る。A100では4K〜128K、RTX 4090では1K〜96Kの文脈長で端から端までの生成スループットを測定する。主要なスループット・メモリ結果は特記がない限りバッチ1で、別途バッチ拡張性を評価する。部品分解ではストリーミング事前充填を全方式に揃え、復号後半だけのスループットとピークVRAMを測り、KV退避、グループ疎化、予測先読みの寄与を分離する。さらにグループサイズ4/8、回収率10/20/30/40%、内部選別率25/50/75%を格子探索して品質と速度の感度を確認する。",
-    "scope": "評価はA100-80GとRTX 4090-24GというPCIe接続GPU上の実測で、主にLLaDA系2モデルの長文拡散推論を対象とする。自己回帰モデル、NVLink主体の多GPU、CXL/NVMe階層、他の拡散モデル系列への一般化は直接評価していない。短文では全KVをGPUへ置くFast-dLLMの方が速いため、GroupKVの主対象はGPU容量またはPCIe転送が制約になる長文・退避支配領域である。"
-  },
+  "attempt_id": "attempt-7ad6ad40100c07874c12360f",
+  "job_id": "job-research-1fd656c9a10556db",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c9e86b0774fbe3177b6fb0f5",
+    "claim_id": "claim-7ad6ad40100c07874c12360f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
