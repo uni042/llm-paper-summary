@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-f73b2644bb575cea292a8186",
-  "job_id": "job-research-3dcfddcaf0f956d5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f73b2644bb575cea292a8186",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST-b",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f73b2644bb575cea292a8186","job_id":"job-research-3dcfddcaf0f956d5",
+  "data":{
+    "overview":"Infinite-LLMは32基A100で最大200万トークンの文脈を処理し、短文脈を複数小インスタンスで処理するvLLM-multiに対してエンドツーエンドスループットを約1.35〜1.73倍、全GPUを一つの大インスタンスへまとめるvLLM-singleに対して長文脈トレースで1.4〜3.4倍改善する。単一長さの最大バッチ比較では、vLLM-multiより2〜19倍長い文脈を支援しながら短文脈スループットを同程度に保つ。vLLM-singleと同程度の最大文脈長を維持しつつ、短文脈では1.4〜5.3倍高いスループットを得る。DistAttention単体は4GPU・4K〜256Kでヘッド方向テンソル並列より1〜25%高速、RingAttentionより7.7〜19.8倍高速である。KV移動を1デコード段階16トークン相当に抑えると計算と重ね合わせて測定上のスループット低下を消せるが、32トークン移動では8.6%低下する。",
+    "key_results":[
+      {"metric":"エンドツーエンドスループット対vLLM-multi","value":"1.35〜1.73倍","baseline":"同じ複数小インスタンス構成のvLLM-multi","condition":"短文脈トレース0〜2","interpretation":"文脈長分散やインスタンス数が増え資源偏在が大きいほど、クラスタ全体のKV共有による利得が増える。"},
+      {"metric":"エンドツーエンドスループット対vLLM-single","value":"1.4〜3.4倍","baseline":"全32GPUを一つの大インスタンスへまとめたvLLM-single","condition":"長文脈トレース3〜8、最大200万トークン","interpretation":"注意側だけを伸縮させ、非注意層を過剰分割しないため、長文脈対応と短い要求の計算効率を両立する。"},
+      {"metric":"最大対応文脈長","value":"vLLM-multi比2〜19倍、最大200万トークン","baseline":"vLLM-multi","condition":"32基A100、LLaMA2 7B/13B/70B","interpretation":"単一インスタンス容量ではなくクラスタ全体のGPUメモリをKV保存へ使える効果を示す。"},
+      {"metric":"短文脈スループット対vLLM-single","value":"1.4〜5.3倍","baseline":"vLLM-single","condition":"同程度の最大文脈長を支援する構成","interpretation":"非注意層を全GPUへ静的分割する通信・細分化費用を避ける。"},
+      {"metric":"DistAttention単体性能","value":"テンソル並列注意より1〜25%高速、RingAttentionより7.7〜19.8倍高速","baseline":"ヘッド方向テンソル並列、RingAttention","condition":"LLaMA2-13B注意次元、4GPU、4K〜256K文脈","interpretation":"KV本体ではなく数KB級問い合わせと小集約値を通信する利点を示す。"},
+      {"metric":"KV移動費用","value":"32トークン/段階で8.6%低下、16トークン/段階では測定上低下なし","baseline":"KV移動なし","condition":"移動自体はバッチ数を変えない微小評価","interpretation":"移動量を制限すればモデル計算と通信を重ね合わせられる。"}
+    ],
+    "negative_results":["32トークン相当のKVを各デコード段階で移すとインスタンススループットが8.6%低下する。","中央gManagerは周期的状態を使うため配置表が古くなり得て、移動先容量不足時は予約が失敗し次周期まで待つ。","評価モデルはLLaMA2系列に集中しており、他アーキテクチャや異種GPUクラスタでの一般性は追加検証が必要である。","ノード間ネットワークは125MB/sと低速な設定であり、別ネットワーク構成では最適なKV移動粒度が変わり得る。"],
+    "quality_impact":"DistAttentionは元の注意と数学的に等価であり、疎化やKV追い出しを使わないためモデル精度を犠牲にしない設計である。性能改善は配置、並列度、通信量の変更から得る。",
+    "interpretation":"長文脈推論ではモデル全体を長文脈の最悪条件へ合わせて静的分割する必要はなく、文脈長とともに増える注意KVだけを独立して伸縮させればよいことを実測で示す。特に短い要求と非常に長い要求が混在するほど、計算能力とメモリ容量を別々に均衡させるクラスタ規模の共有が効く。"
+  },
+  "reservation":{"claim_id":"claim-f73b2644bb575cea292a8186","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}
 }
