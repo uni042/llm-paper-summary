@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4fd8bb83ad560a14ed7ab9fd",
-  "job_id": "job-research-6be1741cdc42b913",
-  "data": {},
+  "attempt_id": "attempt-bec0c74881d95eeb32a049cb",
+  "job_id": "job-research-1abdfafeb85e4df9",
+  "data": {
+    "hardware": "エンドツーエンド評価はGoogle a2-highgpu-4g VMの40GB NVIDIA A100×4（GPU間NVLink）。OPT-13Bは2-way、OPT-30Bは4-way tensor parallelism。OPT-7Bは最大4レプリカ。スケーリング評価には追加でGoogle a3-highgpu-8gの80GB H100×8を使用し、OPT-13B複数レプリカも評価する。",
+    "software": "SLOs-ServeはvLLMバックエンド、PagedAttention、Rayを使用。標準シナリオはOPT-7B/13B/30B、投機モデルOPT-125M。ToolLLMはToolLlama-7B、ReasoningはDeepSeek-R1-Qwen-1.5B。比較対象はvLLM commit c38eba30、vLLM speculative、Sarathi-Serve、DistServe commit 0a2d0c99。",
+    "methodology": "ChatBot、Coder、Summarizer、Mixed、ToolLLM、Reasoningの6シナリオ、ShareGPT/HumanEval/Arxiv Summary/ToolBench/s1K等5データセットとAzure LLM推論トレースを使用する。tight SLOは最大TTFT slowdown 3×・最大TPOT 50ms、loose SLOは5×・100ms。サービング容量をSLO違反10%未満で維持できる最大GPU当たり要求レートと定義し、複数GPUでは総要求率をGPU数で正規化する。DistServeはprefill:decode比1:1、2:1、1:2の最良値を報告する。性能モデル精度、各最適化のablation、スケジューリング時間も別途測る。",
+    "scope": "異なる入出力長・到着パターン・段階SLOを持つ6アプリケーションをカバーし、A100/H100、複数OPTサイズ、tool-useとreasoningまで含む。一方、主なシステム比較は特定SLO設定と既知decode長を仮定し、モデル品質や未知出力長予測誤差、広範なGPU世代・ネットワーク構成、実運用の料金/公平性までは中心評価ではない。"
+  },
   "reservation": {
-    "claim_id": "claim-4fd8bb83ad560a14ed7ab9fd",
+    "claim_id": "claim-bec0c74881d95eeb32a049cb",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
     "worker_kind": "scheduled_chat"
   }
