@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6ab628d8fc52b643ee76552e",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ab628d8fc52b643ee76552e",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"overview":"Sparse-dLLMはLLaDA/Dreamで既存cache法より高いthroughputを、vanillaに近いmemoryと概ね同等accuracyで達成する。LLaDAでは平均約3.4倍、Dreamでは約3.6倍のthroughput向上が表に示され、4K long-contextではvanilla比最大10倍を報告する。","key_results":[{"metric":"LLaDA-8B-Instruct GSM8K throughput","value":"26.45 TPS, 5.8×","baseline":"vanilla 4.57 TPS","condition":"GSM8K 4-shot","interpretation":"cache sparsificationが反復attentionを大幅削減。"},{"metric":"Dream-v0-7B-Instruct GPQA throughput","value":"32.63 TPS, 5.2×","baseline":"vanilla 6.29 TPS","condition":"GPQA 5-shot","interpretation":"Dreamでも同様の高速化。"},{"metric":"平均throughput speedup","value":"LLaDA系 約3.4×、Dream系 約3.6×","baseline":"vanilla dLLM","condition":"7 benchmarks average","interpretation":"dLLM-Cache/dKV-Cache/Fast-dLLMより高い。"},{"metric":"長文脈throughput","value":"4K sequenceで最大10×","baseline":"vanilla dLLM","condition":"context-length sweep on 4090","interpretation":"長文脈ほどsparse cacheの効果が増大。"},{"metric":"LongBench accuracy","value":"LLaDA-8B-Instruct 34.46","baseline":"base 34.55","condition":"LongBench","interpretation":"長文脈性能をほぼ維持。"}],"negative_results":"DreamのHumanEvalでは一般的evictionがvariable typeやnumeric literal等の構文上重要なtokenを落とし、性能低下が観測される。retention ratioを増やすとaccuracyは改善するがmemoryは線形増加し、0.5以降は収益逓減。delayを長くするとthroughputが低下する。","interpretation":"dLLMではKV state全体を保持する必要はなく、stepを跨いでsaliencyが安定する少数tokenを残せば、cache memoryを膨らませずattention計算を削減できる。ただしtask-dependentな重要tokenを粗いattention scoreだけで安全に識別できない場合がある。","quality_impact":"LLaDAでは平均accuracyがvanilla 59.24に対し59.86、LLaDA-1.5は60.90対60.99と同等。Dreamも平均は概ね同等だがHumanEvalで低下し、完全losslessではない。"},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
