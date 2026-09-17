@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:09:20 JST**
+> 自動生成: **2026-09-17 18:09:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
-| 未claim Research job | **51** |
+| 収録候補論文 | **52** |
+| 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 17:20:24 JST（48分前）** |
+| 最終検証済みResearch収録 | **09-17 18:09:36 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **3** | **0** | **3** | **2** | **0** | — |
+| Research | **21** | **3** | **1** | **2** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **25** | **7** | **4** | **3** | **2** | **0** | **15** |
+| 合計 | **26** | **7** | **5** | **2** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 18:09:36 JST** [research] `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs
+  - job: `.survey/work-queue/jobs/job-research-1abdfafeb85e4df9.json`
+  - result: `.survey/work-queue/results/research/attempt-61cea03f965b827a2ed92932.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md`
 - **09-17 17:20:24 JST** [research] `arXiv:2401.02669` — Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache
   - job: `.survey/work-queue/jobs/job-research-3dcfddcaf0f956d5.json`
   - result: `.survey/work-queue/results/research/attempt-f73b2644bb575cea292a8186.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-2ce9e645100a37fddf183a77.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2ce9e645100a37fddf183a77.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md`
-- **09-17 14:18:42 JST** [research] `arXiv:2609.17193` — End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services
-  - job: `.survey/work-queue/jobs/job-research-fe0106a025692e30.json`
-  - result: `.survey/work-queue/results/research/attempt-482caf37761abfd8d593db1f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-482caf37761abfd8d593db1f.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md`
 
 ### Audit
 
@@ -131,9 +131,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-- immutable submission: **3件** / 検証済み成功: **0件** / 未完了・未検証: **3件**
+- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4fd8bb83ad560a14ed7ab9fd.json` (job `job-research-6be1741cdc42b913`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json` (job `job-research-1abdfafeb85e4df9`)
+- **成功** `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs
+  - job: `.survey/work-queue/jobs/job-research-1abdfafeb85e4df9.json`
+  - result: `.survey/work-queue/results/research/attempt-61cea03f965b827a2ed92932.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-bec0c74881d95eeb32a049cb.json` (job `job-research-1abdfafeb85e4df9`)
 
 #### Audit (:30)
@@ -169,9 +173,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-  - claim: **09-17 18:07:44 JST** / heartbeat: **—** / lease expiry: **09-17 19:37:44 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1abdfafeb85e4df9.json`
+- `arXiv:2503.01890` — AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
+  - claim: **09-17 18:09:25 JST** / heartbeat: **—** / lease expiry: **09-17 19:39:25 JST**
+  - evidence: `.survey/work-queue/claims/job-research-133abb5ee0382900.json`
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
@@ -194,7 +198,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -214,7 +218,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **666** |
+| inference/training/survey配下の論文Markdown実体 | **667** |
 
 ### immutable submissionの未照合
 
@@ -222,8 +226,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **440** |
-| └ Research | **313** |
+| 成功result未照合のimmutable submission | **439** |
+| └ Research | **312** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
