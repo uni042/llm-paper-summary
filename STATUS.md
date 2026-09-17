@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 00:04:42 JST**
+> 自動生成: **2026-09-18 00:33:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **46** |
+| 収録候補論文 | **48** |
+| 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-17 23:39:36 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-17 23:39:36 JST（54分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **48** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **48** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **2** | **2** | **0** | **0** | — |
+| Research | **11** | **4** | **2** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **13** | **2** | **1** | **1** | **0** | **0** | **5** |
-| 合計 | **27** | **6** | **3** | **3** | **0** | **0** | **5** |
+| Discovery | **14** | **2** | **2** | **0** | **0** | **0** | **5** |
+| 合計 | **25** | **6** | **4** | **2** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-18 00:05:06 JST** job `job-f557e7cd72d205b3` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
+  - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving
 - **09-18 00:01:24 JST** job `job-8b4601a03212a20d` / 候補 **3件**
   - result: `.survey/work-queue/results/20260918T0000JST-discovery-moe-offload-hardware-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T2100JST-discovery-cxl-memory-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json`
   - 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache
-- **09-17 21:01:39 JST** job `job-fb0b8840c1833d49` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260917T2100JST-discovery-kv-scheduling-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json`
-  - 探索軸: KV cache reservation・GPU L2 prefetch・multi-GPU migration
 
 ### 直近タスク
 
@@ -174,12 +174,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 00:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **5件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **5件**
 - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving / MoE expert offloading・hardware-limit modeling・3D memory speculative serving
 - round `distributed-moe-placement-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
   - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
 - round `moe-offload-hardware-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
   - 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
@@ -189,8 +189,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.14626` — ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 00:33:36 JST** / heartbeat: **—** / lease expiry: **09-18 02:03:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a1761c9ca73f9afb.json`
 
 #### Audit
 
@@ -210,7 +212,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **48** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,10 +240,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **454** |
+| 成功result未照合のimmutable submission | **453** |
 | └ Research | **324** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
