@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e27a1765145ab45647cea4cb",
-  "job_id": "job-research-476e11d12d88d15c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e27a1765145ab45647cea4cb",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e27a1765145ab45647cea4cb","job_id":"job-research-476e11d12d88d15c","data":{"canonical_id":"arXiv:2603.01058","arxiv_id":"2603.01058","doi":"10.48550/arXiv.2603.01058","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":["cs.AI","cs.DC"]},"title":"TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading","summary":"TriMoEは、混合専門家モデルの単一GPUオフロードで、非高頻度専門家を一括して近傍データ処理へ送る二分法が中頻度専門家に適さない問題を扱う。高頻度はGPU、中頻度は行列拡張命令を備えたCPU、低頻度はDIMM近傍データ処理へ割り当て、全体完了時間を見ながら配置を補正する。さらに専門家負荷を予測し、データ配置変換とDIMM間再均衡を計算と重ねる。復号を2.12〜2.83倍、端末間処理量を2.09〜2.78倍改善した。","list_summary":"高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。","authors":["Yudong Pan","Yintao He","Tianhua Han","Lian Liu","Shixin Zhao","Zhirong Chen","Mengdi Wang","Cangyuan Li","Yinhe Han","Ying Wang"],"published":"2026-03-01","publication":"DAC 2026; arXiv:2603.01058v1","publication_type":"conference paper / arXiv preprint","publication_status":"DAC 2026採録。arXiv v1は2026-03-01。","topics":["MoE推論","専門家オフロード","階層メモリ","CPU行列演算","近傍データ処理","専門家配置"],"hardware_evaluation":"実機・試作評価。NVIDIA H100 PCIe 80GB、Intel Xeon Platinum 8470、8チャネル主記憶、16個のDIMM近傍データ処理器を組み合わせ、PCIe 5.0のホストからGPUへの片方向帯域64GB/sを用いる。","quality_effect":"モデル近似ではなく専門家の実行場所とデータ配置を変える方式であり、主要な交換条件は生成品質ではなく処理量、復号時間、資源利用率、再配置費用である。","source":"https://arxiv.org/abs/2603.01058","sources":["https://arxiv.org/abs/2603.01058","https://arxiv.org/html/2603.01058"],"code":null,"implementation":"GPU側はvLLM 0.8.1、CPU側はKTransformersの行列拡張命令対応カーネルを利用した異種試作系を構築。近傍データ処理器とDIMM間リンク、再配置器を含む構成を評価する。著者公式コードURLはarXivページ上で確認できなかった。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv本文を確認し、個別識別子は推測で補わない。","references_total":0},"reservation":{"claim_id":"claim-e27a1765145ab45647cea4cb","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
