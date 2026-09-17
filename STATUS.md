@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 10:01:41 JST**
+> 自動生成: **2026-09-17 10:01:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **8** | **4** | **4** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **15** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **21** | **10** | **6** | **4** | **2** | **1** | **6** |
+| Discovery | **14** | **2** | **2** | **0** | **0** | **0** | **6** |
+| 合計 | **20** | **10** | **6** | **4** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -121,10 +121,10 @@
   - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-agentic-serving-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-agentic-serving-4.json`
   - 探索軸: agentic/multi-turn serving・phase-aware KV management・workflow scheduling
-- **09-17 04:01:52 JST** job `job-e30ba5725a8a8a2d` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json`
-  - 探索軸: Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware
+- **09-17 04:03:45 JST** job `job-390a2ff0c6f51a4c` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T0400JST-discovery-specialist-moe-movement-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json`
+  - 探索軸: MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling
 
 ### 直近タスク
 
