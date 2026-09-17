@@ -9,91 +9,38 @@
     "arxiv_id": "2504.19867",
     "doi": "10.48550/arXiv.2504.19867",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
     "title": "semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage",
     "summary": "semi-PDはprefill/decode分離の利点をGPU間ではなく同一GPU内のSM分割で実現し、重みとKV cacheは統合HBMで共有するLLM serving systemである。計算資源controller、unified memory manager、低overhead worker switching、SLO-aware dynamic partitioningを組み合わせ、完全分離方式のweight複製・KV転送・storage imbalance・粗粒度resource adjustmentを避ける。A100/H200/A800上のLlama/DeepSeek評価で、DeepSeek系列の平均E2E latencyを1.27–2.58倍削減し、Llama系列ではSLO内requestを1.55–1.72倍多く処理する。",
-    "list_summary": "prefill/decode計算をSM単位で分離しつつHBMを共有し、完全PDのKV転送・storage imbalanceを除いてE2E latencyを最大2.58倍改善する。",
-    "authors": [
-      "Ke Hong",
-      "Lufang Chen",
-      "Zhong Wang",
-      "Xiuhong Li",
-      "Qiuli Mao",
-      "Jianping Ma",
-      "Chao Xiong",
-      "Guanyu Wu",
-      "Buhe Han",
-      "Guohao Dai",
-      "Yu Wang"
-    ],
+    "list_summary": "入力処理と逐次生成の計算をSM単位で分離しつつ高帯域メモリを共有し、完全分離方式のKV転送と保存容量の偏りを除いてエンドツーエンド遅延を最大2.58倍改善する。",
+    "authors": ["Ke Hong", "Lufang Chen", "Zhong Wang", "Xiuhong Li", "Qiuli Mao", "Jianping Ma", "Chao Xiong", "Guanyu Wu", "Buhe Han", "Guohao Dai", "Yu Wang"],
     "authors_affiliations": "Tsinghua University; Infinigence-AI; Shanghai Jiao Tong University",
     "published": "2025-04-28",
     "publication": "arXiv preprint arXiv:2504.19867v1",
     "publication_type": "arXivプレプリント",
     "publication_status": "2025年4月28日投稿のarXiv v1。主分類cs.CL。",
     "lineage": "serving-scheduling",
-    "topics": [
-      "prefill-decode disaggregation",
-      "unified KV storage",
-      "SM partitioning",
-      "SLO-aware scheduling",
-      "KV cache",
-      "LLM serving"
-    ],
+    "topics": ["prefill-decode disaggregation", "unified KV storage", "SM partitioning", "SLO-aware scheduling", "KV cache", "LLM serving"],
     "importance": "計算分離とstorage分離を切り離し、PD servingのlatency isolationだけを残しながらHBM共有でmemory効率を回復する中間設計を実機評価する。",
     "hardware_evaluation": "A100 80GB×8、A100 40GB×32、H200 141GB×8、A800 80GB×8。NVLink、cross-node 200Gbps。",
     "hardware_details": "CUDA 12.1、NCCL 2.18、PyTorch 2.3.0。Llama3 8B/70B/405B、DeepSeek-V2-Lite 16B、DeepSeek-V3 671B。",
     "quality_effect": "モデル計算や生成精度を近似せず、serving resource partitionとmemory managementのみを変更する。",
-    "bottlenecks": [
-      "prefill/decode latency interference",
-      "disaggregated KV transfer",
-      "prefill/decode storage imbalance",
-      "duplicated model weights",
-      "coarse GPU-level resource adjustment"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§3 Analysis and Motivation",
-      "§4 System Design",
-      "§6 Implementation",
-      "§7 Evaluation"
-    ],
+    "bottlenecks": ["prefill/decode latency interference", "disaggregated KV transfer", "prefill/decode storage imbalance", "duplicated model weights", "coarse GPU-level resource adjustment"],
+    "evidence_locations": ["§1 Introduction", "§3 Analysis and Motivation", "§4 System Design", "§6 Implementation", "§7 Evaluation"],
     "source": "https://arxiv.org/abs/2504.19867",
-    "sources": [
-      "https://arxiv.org/abs/2504.19867",
-      "https://arxiv.org/pdf/2504.19867"
-    ],
+    "sources": ["https://arxiv.org/abs/2504.19867", "https://arxiv.org/pdf/2504.19867"],
     "code": null,
     "implementation": "DistServe系実装とSGLang系実装を構築し、cluster-scaleではNVIDIA Dynamoへsemi-PD instanceを統合する。本文から公開code URLは確認できない。",
     "last_checked": "2026-09-17",
     "references": [
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
-      },
-      {
-        "canonical_id": "arXiv:2405.04434",
-        "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
-      },
-      {
-        "canonical_id": "arXiv:2401.09670",
-        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
-      },
-      {
-        "canonical_id": "arXiv:2403.02310",
-        "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
-      }
+      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
+      {"canonical_id": "arXiv:2405.04434", "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"},
+      {"canonical_id": "arXiv:2401.09670", "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"},
+      {"canonical_id": "arXiv:2403.02310", "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"}
     ],
     "references_checked_at": "2026-09-17",
     "references_source": "arXiv v1 PDF references",
     "references_total": 4
   },
-  "reservation": {
-    "claim_id": "claim-180764ce53bd95c132164263",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-180764ce53bd95c132164263", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
