@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:13:48 JST**
+> 自動生成: **2026-09-17 18:14:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -180,7 +180,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-  - claim: **09-17 18:11:04 JST** / heartbeat: **—** / lease expiry: **09-17 19:41:04 JST**
+  - claim: **09-17 18:14:24 JST** / heartbeat: **—** / lease expiry: **09-17 19:44:24 JST**
   - evidence: `.survey/work-queue/claims/job-research-e79ef27915573b54.json`
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
