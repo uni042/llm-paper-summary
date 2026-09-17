@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-17T07:00:00+09:00",
-  "submission_count": 6,
+  "updated_at": "2026-09-17T23:00:00+09:00",
+  "submission_count": 7,
   "research_terminal_rejection_count": 2,
-  "rejection_observation_count": 30,
-  "rejection_record_count": 30,
+  "rejection_observation_count": 31,
+  "rejection_record_count": 31,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2410.14740": {
@@ -472,6 +472,28 @@
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.16372": {
+      "primary_identity": "id:arXiv:2609.16372",
+      "identity_tokens": [
+        "id:arXiv:2609.16372",
+        "title:register tokens for boundedstate reasoning in diffusion language models",
+        "url:https://arxiv.org/abs/2609.16372"
+      ],
+      "canonical_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Register Tokens for Bounded-State Reasoning in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.16372",
+      "rejection_reason": "固定サイズ状態によるdLLM推論は興味深いが、主眼がモデル表現・後学習によるreasoning qualityであり、現正本のinference systems / serving / memory-runtime対象としては直接性が不足するため不採用。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-17T23:00:00+09:00",
+      "last_rejected_at": "2026-09-17T23:00:00+09:00",
+      "axis": "September 2026 KV representation・bounded-state inference",
+      "run_key": "2026-09-17T23:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260917T2300JST-discovery-kv-architecture-2.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16429": {
