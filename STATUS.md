@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 19:33:47 JST**
+> 自動生成: **2026-09-17 19:59:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **45** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-17 19:33:27 JST（20秒前）** |
-| 整合性異常 | **0** |
+| 最終検証済みResearch収録 | **09-17 19:33:27 JST（26分前）** |
+| 整合性異常 | **1** |
 
 ## 現在の収録候補
 
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **1** | **1** | **0** | **0** | **0** | — |
+| Research | **19** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **26** | **5** | **5** | **0** | **0** | **0** | **15** |
+| Discovery | **4** | **1** | **0** | **1** | **0** | **0** | **3** |
+| 合計 | **23** | **2** | **1** | **1** | **0** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -121,10 +121,6 @@
   - result: `.survey/work-queue/results/20260917T1528JST-discovery-disaggregation-evaluation-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json`
   - 探索軸: distributed-serving-network-and-disaggregation-gaps
-- **09-17 13:41:46 JST** job `job-2910aab086edc06c` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
-  - 探索軸: fresh-arxiv-sep15-inference-systems
 
 ### 直近タスク
 
@@ -146,25 +142,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 14:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **15件**
-- 探索軸: fresh-and-adjacent-memory-offload-kv-systems / speculative-decoding-system-coverage-gaps / training-offload-checkpoint-storage-gaps / distributed-serving-network-and-disaggregation-gaps
-- round `unrepresented-memory-systems-1` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json`
-  - 探索軸: fresh-and-adjacent-memory-offload-kv-systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T1459JST-discovery-unrepresented-memory-systems-1.json` (`ok=true`)
-- round `speculative-decoding-gaps-2` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T1512JST-discovery-speculative-decoding-gaps-2.json`
-  - 探索軸: speculative-decoding-system-coverage-gaps
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T1512JST-discovery-speculative-decoding-gaps-2.json` (`ok=true`)
-- round `training-memory-systems-3` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json`
-  - 探索軸: training-offload-checkpoint-storage-gaps
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T1521JST-discovery-training-memory-systems-3.json` (`ok=true`)
-- round `disaggregation-evaluation-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json`
-  - 探索軸: distributed-serving-network-and-disaggregation-gaps
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T1528JST-discovery-disaggregation-evaluation-4.json` (`ok=true`)
+- 最新観測run: **2026-09-17 20:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 探索軸: LLM inference memory・KV cache・MoE expert offload/prefetch
+- round `specialist-systems-memory-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-17T20-00-00+09-00-specialist-systems-memory-1.json`
+  - 探索軸: LLM inference memory・KV cache・MoE expert offload/prefetch
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -219,10 +203,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **444** |
+| 成功result未照合のimmutable submission | **445** |
 | └ Research | **317** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
+| └ Other/Unknown | **1** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -239,10 +224,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **0** |
+| 対応jobなしsubmission（有効Discovery round除外） | **1** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **0** |
+| 異常レコード合計（重複排除） | **1** |
 
 ### このSTATUSが採用する証拠
 
