@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3ade85df2d9f4d0195503a71",
+  "attempt_id": "attempt-bbdb321c8d62a8e8e08539c1",
   "job_id": "job-research-a725b9cf79d670cf",
   "data": {
     "hardware": "実機2構成で評価する。サーバ構成はIntel Xeon Silver 4214を2基、DDR4 1.5 TB、NVIDIA A100-80G PCIeを使用する。ワークステーション構成はNVIDIA RTX 4090-24Gを使用する。両環境はUbuntu 22.04、CUDA 12.2、GCC 9.5で、CPU退避はPCIe帯域を活かすため固定ページのホストメモリを使う。",
@@ -10,5 +10,9 @@
     "methodology": "LongBenchの7下位課題、4K〜32KのRULER、4K〜128KのNIAHで品質を測る。A100では4K〜128K、RTX 4090では1K〜96Kの文脈長で端から端までの生成スループットを測定する。主要なスループット・メモリ結果は特記がない限りバッチ1で、別途バッチ拡張性を評価する。部品分解ではストリーミング事前充填を全方式に揃え、復号後半だけのスループットとピークVRAMを測り、KV退避、グループ疎化、予測先読みの寄与を分離する。さらにグループサイズ4/8、回収率10/20/30/40%、内部選別率25/50/75%を格子探索して品質と速度の感度を確認する。",
     "scope": "評価はA100-80GとRTX 4090-24GというPCIe接続GPU上の実測で、主にLLaDA系2モデルの長文拡散推論を対象とする。自己回帰モデル、NVLink主体の多GPU、CXL/NVMe階層、他の拡散モデル系列への一般化は直接評価していない。短文では全KVをGPUへ置くFast-dLLMの方が速いため、GroupKVの主対象はGPU容量またはPCIe転送が制約になる長文・退避支配領域である。"
   },
-  "reservation": {"claim_id": "claim-3ade85df2d9f4d0195503a71", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bbdb321c8d62a8e8e08539c1",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

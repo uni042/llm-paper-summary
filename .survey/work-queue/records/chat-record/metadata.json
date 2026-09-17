@@ -2,22 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3ade85df2d9f4d0195503a71",
+  "attempt_id": "attempt-bbdb321c8d62a8e8e08539c1",
   "job_id": "job-research-a725b9cf79d670cf",
   "data": {
     "canonical_id": "arXiv:2609.17573",
     "arxiv_id": "2609.17573",
     "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
     "summary": "長文拡散型大規模言語モデルでは、反復的な全系列再計算と局所的なトークン更新によってKVキャッシュの寿命と内容が動的に変化し、CPUへの退避を使うとホスト・GPU間転送が主要な律速になる。GroupKVは、同一生成ブロック内のトークンが類似した連続文脈領域へ注意を向ける性質と、隣接層で重要領域が安定する性質を利用し、連続グループ単位の粗い選択、選択領域内の細粒度選別、次層への予測先読み、古くなったKVの補正、ストリーミング事前充填を統合する。これにより全トークンKVを毎層走査・転送せず、長文・メモリ制約下で転送量とGPU使用量を抑えながら推論を継続できる。",
-    "authors": ["Jinhao Wang", "Zhexin Hu", "Kangjie Zhou", "Xin Zhou", "Fangfang Liu"],
+    "authors": [
+      "Jinhao Wang",
+      "Zhexin Hu",
+      "Kangjie Zhou",
+      "Xin Zhou",
+      "Fangfang Liu"
+    ],
     "published": "2026-07-30",
     "publication": "arXiv:2609.17573v1",
     "publication_type": "preprint",
     "publication_status": "arXiv preprint",
-    "arxiv_categories": {"primary": "cs.OS", "cross_list": ["cs.DC", "cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.OS",
+      "cross_list": [
+        "cs.DC",
+        "cs.LG"
+      ]
+    },
     "source": "https://arxiv.org/abs/2609.17573",
-    "sources": ["https://arxiv.org/abs/2609.17573", "https://arxiv.org/pdf/2609.17573"],
-    "topics": ["KVキャッシュ", "長文推論", "拡散型大規模言語モデル", "CPU退避", "予測先読み", "階層メモリ"],
+    "sources": [
+      "https://arxiv.org/abs/2609.17573",
+      "https://arxiv.org/pdf/2609.17573"
+    ],
+    "topics": [
+      "KVキャッシュ",
+      "長文推論",
+      "拡散型大規模言語モデル",
+      "CPU退避",
+      "予測先読み",
+      "階層メモリ"
+    ],
     "implementation": "論文中の評価は著者実装のGroupKVランタイムで行われている。公開コードの公式URLは本文およびarXivメタデータから確認できなかった。",
     "code": null,
     "hardware_evaluation": "NVIDIA A100-80G PCIeとRTX 4090-24Gの実機で評価し、CPU退避には固定ページのホストメモリを使用している。",
@@ -29,7 +51,7 @@
     "last_checked": "2026-09-17"
   },
   "reservation": {
-    "claim_id": "claim-3ade85df2d9f4d0195503a71",
+    "claim_id": "claim-bbdb321c8d62a8e8e08539c1",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
