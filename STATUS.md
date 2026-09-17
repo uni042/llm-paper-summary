@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:40:07 JST**
+> 自動生成: **2026-09-17 18:40:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **3** | **1** | **2** | **2** | **0** | — |
+| Research | **22** | **2** | **1** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **27** | **7** | **5** | **2** | **2** | **0** | **15** |
+| 合計 | **27** | **6** | **5** | **1** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,8 +131,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-3e9db00a4e41a210938816b6.json` (job `job-research-8423392e3664b697`)
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
 - **成功** `arXiv:2607.27090` — InferScale: GPU-Native KV Injection for Personalized LLM Serving
   - job: `.survey/work-queue/jobs/job-research-010509dfee08b6d5.json`
   - result: `.survey/work-queue/results/research/attempt-a6d9e761f99fd071c0489cca.json` (`ok=true`)
@@ -173,9 +172,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 18:37:36 JST** / heartbeat: **—** / lease expiry: **09-17 20:07:36 JST**
-  - evidence: `.survey/work-queue/claims/job-research-581beb5301e2ddf8.json`
+- `arXiv:2501.12162` — AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 18:40:21 JST** / heartbeat: **—** / lease expiry: **09-17 20:10:21 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8423392e3664b697.json`
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
