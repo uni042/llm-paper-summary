@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
-  "job_id": "job-research-146f944f1c748398",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a65fafc0985029a9a69cb193",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a65fafc0985029a9a69cb193","job_id":"job-research-146f944f1c748398","data":{"overview":"dLLM-CacheはLLaDA 8BとDream 7Bで標準推論の反復再計算を大幅に削減し、長い静的プロンプトで特に効果が大きい。LLaDAのLongBench-HotpotQAでは最大9.1倍のFLOPs削減を報告する。LLaDAの代表例ではGSM8K BaseでTPS 7.32から23.19へ3.17倍、FLOPs 16.12Tから3.21Tへ5.02倍削減し、スコアは69.06から70.66。GPQA InstructではTPS 5.33から28.01へ5.26倍、FLOPs 22.07Tから2.73Tへ8.08倍削減し、スコア29.01を維持した。速度向上はプロンプトの長間隔再利用と、応答の25%だけを優先更新する適応部分更新の双方から得られる。","key_results":[{"metric":"LongBench-HotpotQA FLOPs削減","value":"最大9.1倍","baseline":"標準dLLM推論","condition":"長い静的プロンプトを含むLongBench-HotpotQA","interpretation":"プロンプト長が大きいほど長間隔Prompt Cacheの再利用対象が増え、計算削減が拡大する。"},{"metric":"LLaDA Base GSM8K TPS","value":"23.19 tokens/s、3.17倍","baseline":"7.32 tokens/s","condition":"単一RTX 4090、rho=0.25","interpretation":"タスクスコアを69.06から70.66へ維持・微増しながら実測スループットを改善する。"},{"metric":"LLaDA Base GSM8K FLOPs","value":"3.21T、5.02倍削減","baseline":"16.12T","condition":"単一RTX 4090","interpretation":"実測TPS向上より計算量削減が大きく、キャッシュ管理やメモリアクセス等の非FLOPs費用が残ることを示す。"},{"metric":"LLaDA Instruct GPQA TPS","value":"28.01 tokens/s、5.26倍","baseline":"5.33 tokens/s","condition":"単一RTX 4090","interpretation":"高難度QAでも大きな速度向上を得る。"},{"metric":"LLaDA Instruct GPQA FLOPs","value":"2.73T、8.08倍削減","baseline":"22.07T","condition":"スコア29.01を維持","interpretation":"近似キャッシュでもこの設定では測定タスク品質を落とさず計算を大幅削減した。"}],"negative_results":"FLOPs削減倍率は実測TPS倍率より大きく、削減した演算量がそのまま端から端までの速度向上にはならない。方式はKp、Kr、rhoに依存し、応答を長く再利用しすぎる、または更新率を下げすぎると近似誤差と品質低下の危険が増えるため、定期的な全更新を必要とする。主要実験は単一RTX 4090であり、オンライン多要求サービングのメモリ帯域・キャッシュ容量競合は直接評価していない。","interpretation":"拡散LLMの反復推論では、全トークンを毎段階同じ精度で更新する必要はない。静的プロンプトは粗い時間粒度、応答は細かい時間粒度、さらに応答内では変化の大きいトークンだけを選ぶ階層的な更新粒度が有効である。","quality_impact":"LLaDA/Dreamの複数ベンチマークで標準推論とタスクスコアを比較し、最大計算削減時にも競争力のある品質を維持すると報告する。GSM8K Baseは69.06から70.66、GPQA Instructは29.01から29.01で、少なくともこれらの代表点では品質悪化は観測されない。ただしキャッシュは近似であり、全入力分布に対する出力同一性を保証する方式ではない。"},"reservation":{"claim_id":"claim-a65fafc0985029a9a69cb193","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
