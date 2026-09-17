@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e27a1765145ab45647cea4cb",
-  "job_id": "job-research-476e11d12d88d15c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e27a1765145ab45647cea4cb",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e27a1765145ab45647cea4cb","job_id":"job-research-476e11d12d88d15c","data":{"overview":"TriMoEは、中頻度専門家をCPUの行列演算能力へ割り当てる第三経路を加え、GPUのPCIe待ちと近傍処理器の演算飽和を同時に避ける。さらに全体完了時間を見た割当補正と予測再配置を組み合わせ、複数MoEモデルで復号2.12〜2.83倍、端末間処理量2.09〜2.78倍の改善を報告する。","key_results":[{"metric":"復号高速化","value":"2.12〜2.83倍","baseline":"最先端の単一GPUオフロード方式","condition":"複数の代表的MoEモデルを用いた異種試作系","interpretation":"中頻度専門家をCPUへ逃がす三者分担と律速補正が、GPU転送待ちと近傍処理器飽和を緩和する。"},{"metric":"端末間処理量","value":"2.09〜2.78倍","baseline":"最先端オフロード方式","condition":"高処理量MoE推論","interpretation":"復号段階の改善が全体処理量へほぼ維持される。"},{"metric":"専門家分布","value":"低頻度群は70%超の専門家で8%のトークン、中頻度群は20〜40%の専門家で最大70%のトークン","baseline":"非高頻度専門家を単一群とする仮定","condition":"複数モデル・データ・バッチ条件の活性化調査","interpretation":"GPU対近傍処理の二分法では中頻度群を扱えない根拠になる。"},{"metric":"GPU利用率","value":"中頻度専門家をGPUへ置く条件で8.6%未満","baseline":"高密度なGPU専門家実行","condition":"転送を隠せない中頻度負荷","interpretation":"PCIe待ちが短い演算時間を上回りGPUが停止する。"},{"metric":"予測再配置","value":"移動判断精度78%、メタデータ38KB、端末間1.16倍改善","baseline":"静的配置","condition":"指数移動平均による専門家負荷予測とバックグラウンド移動","interpretation":"時変活性化へ配置を追従させる効果を示す。"}],"negative_results":"中頻度専門家をGPUへ置くと転送を演算で隠せず、近傍処理器へ置くと演算時間が約7倍へ伸びる。CPUも低頻度専門家を大量に担当すると主記憶帯域律速になるため、単にCPU経路を追加するだけでは不十分である。静的な局所配置も専門家人気の変化とDIMM間偏りで崩れるため、再配置と再均衡が必要になる。","interpretation":"三つの装置を性能順に使うのではなく、専門家の演算密度と重み移動特性に対応させる点が重要である。GPUは高密度、CPUは中密度、近傍処理器は低密度かつ帯域支配の仕事へ割り当てることで、それぞれの弱点を他装置へ押し付けず全体の最遅経路を短くする。","quality_impact":"モデルの専門家計算自体を近似削減する方式ではなく実行場所を変えるため、主要主張に生成品質低下との交換条件はない。"},"reservation":{"claim_id":"claim-e27a1765145ab45647cea4cb","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
