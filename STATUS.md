@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 16:35:02 JST**
+> 自動生成: **2026-09-17 16:35:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **3** | **2** | **1** | **3** | **2** | — |
+| Research | **15** | **3** | **2** | **1** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **20** | **7** | **6** | **1** | **3** | **2** | **15** |
+| 合計 | **20** | **7** | **6** | **1** | **3** | **1** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -176,13 +176,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **2件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 16:35:11 JST** / heartbeat: **—** / lease expiry: **09-17 18:05:11 JST**
+  - evidence: `.survey/work-queue/claims/job-research-bf0b422fe6562f5b.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
-- `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 15:45:07 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7f3f089c5dc01c0c.json`
 - `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 14:19:28 JST** / heartbeat: **09-17 15:32:33 JST** / lease expiry: **09-17 17:02:33 JST**
   - evidence: `.survey/work-queue/claims/job-research-f37149dfc085d0ea.json`
