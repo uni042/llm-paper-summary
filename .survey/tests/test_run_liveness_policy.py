@@ -27,6 +27,16 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertIn("同じ", body)
                 self.assertIn("繰り返", body)
 
+    def test_claim_wait_requires_actual_elapsed_runtime_delay(self):
+        text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
+        start = text.index("## 2. Claim result待機")
+        end = text.find("\n## ", start + 1)
+        body = text[start:end]
+        self.assertIn("実時間", body)
+        self.assertIn("runtime wait", body)
+        self.assertIn("即時再取得", body)
+        self.assertIn("代替してはならない", body)
+
     def test_final_response_requires_deterministic_permit(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
         self.assertIn("run_finalization_gate.py", text)
