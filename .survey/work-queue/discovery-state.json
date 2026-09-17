@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T12:01:39+00:00",
+  "updated_at": "2026-09-17T12:02:08+00:00",
   "last_run_key": "2026-09-17T21:00:00+09:00",
-  "last_round": "kv-scheduling-2",
+  "last_round": "cxl-memory-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 7,
+  "consecutive_empty_rounds": 8,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-agentic-kv-cache-03",
-      "axis": "エージェント型サービング・KV再利用・ツール呼び出し待機",
-      "query_summary": "multi-agent/agentic servingでの固定context再利用、ツール呼び出し待機中のKV保持・退避、enterprise-scale KV共有層をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第2roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "既収録重要論文のforward/backward citation、またはDBMS/OS/storage隣接のcache replacement・remote memory schedulingへ移る",
-      "source_submission": "work-queue/submissions/20260912T2308JST-discovery-specialist-03.json"
-    },
     {
       "run_key": "2026-09-12T23:00:00+09:00",
       "round": "specialist-tiered-remote-memory-04",
@@ -6767,6 +6752,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "重要な既収録KV/offload論文のforward citationとCXL/remote-memory系を横断する",
       "source_submission": "work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json"
+    },
+    {
+      "run_key": "2026-09-17T21:00:00+09:00",
+      "round": "cxl-memory-3",
+      "axis": "CXL pooled memory・photonic fabric・near-data processing for KV cache",
+      "query_summary": "CXL/remote-memoryを独立軸として探索。直前runで既に候補化されたHyMCacheは再投入せず、別系統のphotonic-CXL applianceとtransparent CXL near-data processingをcanonical ID照合後に選定した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.18141"
+      ],
+      "next_axis_hint": "network/RDMA KV transferと分離型servingの最近のforward-citation系を探索する",
+      "source_submission": "work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json"
     }
   ],
   "axes": {
@@ -11077,6 +11082,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "重要な既収録KV/offload論文のforward citationとCXL/remote-memory系を横断する"
+    },
+    "CXL pooled memory・photonic fabric・near-data processing for KV cache": {
+      "last_run_key": "2026-09-17T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "network/RDMA KV transferと分離型servingの最近のforward-citation系を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
