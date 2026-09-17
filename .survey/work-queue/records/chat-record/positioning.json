@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6ad5a4713a80a7d9b5c877fc",
-  "job_id": "job-research-05978e704eaf8286",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ad5a4713a80a7d9b5c877fc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6ad5a4713a80a7d9b5c877fc","job_id":"job-research-05978e704eaf8286","data":{"limitations":"対象はCPUメモリに余裕がありGPU VRAMが不足する単一筐体MoEである。VRAMが十分ならKVをGPUに置く方が単純で速く、CPU帯域とPCIe帯域が極端に不均衡なら最適分担は片側へ寄って動的分割の価値が小さい。主評価は単一利用者で、多利用者競合は実現可能性の予備評価に留まる。CPU注意はAVX-512実装に依存し、別CPU命令系では再最適化が必要になり得る。既存vLLM/SGLangは静的KV・専門家予算を前提とするため、形式だけ差し替える小規模拡張ではWriteScopeの動的共同配分を再現できない。","differences":"従来のKV階層化は主に『どこへ保存するか』『何量を保存するか』を扱い、取り出したKVはGPUで注意計算する。WriteScopeはCPUメモリ内でもGPU転送用のピン留め連続領域とCPU計算用の非ピン留め領域を物理的に分け、どちらのエンジンが消費するかまで形式へ埋め込む。SolidAttentionのGPU中心転送、FastDecodeのCPU中心計算という両極に対し、系列を連続比率で分割して同時実行する。HGCAもCPU/GPUで注意を分けるが、GPU側比率がVRAM容量で固定されるのに対し、WriteScopeはピンポン上書きによりGPU側常駐量と分担率を切り離し、実測費から動的に変更する。","implementation_status":"研究実装はPython約2.2K行、C++ CPU注意約1.2K行、DeepSeek-V4疎カーネル約2.1K行と、共有MoE基盤約5K行から成る。A100/V100実機で三MoEとDeepSeek-V4事例を評価している。今回確認した一次資料本文では公式公開コードURLを特定できなかったためcodeはnullとする。","research_positioning":"階層メモリ・KVオフロード研究に対し、保存階層の選択より一段下の『物理状態と消費エンジン』を設計対象へ引き上げた研究である。特にMoEでは専門家オフロードがCPUとPCIeを既に消費するため、密モデルで成立した全結合部との重畳が崩れるという相互作用を明示する。SSDやNVMeまで含む階層方式と組み合わせる場合、低速層からCPUへ到着したKVをInplaceKVCacheの二種類のCPU領域へ直接着地させれば、後段の再配置を避けられる可能性がある。またKV量子化は1トークン当たりバイト数を変えるだけで四領域構造を変えず、ブロック単位疎注意とも直交するため、圧縮・SSD階層・CPU/GPU実行分担を統合する基盤候補になる。"},"reservation":{"claim_id":"claim-6ad5a4713a80a7d9b5c877fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
