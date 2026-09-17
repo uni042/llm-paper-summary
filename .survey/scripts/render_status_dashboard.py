@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+from datetime import timedelta
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +26,8 @@ except ModuleNotFoundError as exc:
 
 
 _LEGACY_INVALID_DISCOVERY_ERROR = "ValueError: invalid submit_discovery_round payload"
+_GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
+_ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
 _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
 
@@ -32,6 +35,51 @@ _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
 def __getattr__(name: str) -> Any:
     """Delegate unchanged renderer helpers to the preserved core module."""
     return getattr(_core, name)
+
+
+def _scheduled_half_hour_from_claimed_at(value: Any):
+    """Map a durable claim timestamp to the :30 Scheduled Chat invocation window."""
+    claimed_at = _core.evidence._parse_dt(value)
+    if claimed_at is None:
+        return None
+    local = claimed_at.astimezone(_core.evidence.JST)
+    if local.minute < 30:
+        local = (local - timedelta(hours=1)).replace(minute=30, second=0, microsecond=0)
+    else:
+        local = local.replace(minute=30, second=0, microsecond=0)
+    return local.astimezone(claimed_at.tzinfo)
+
+
+def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
+    """Recover run time for generic Scheduled Chat worker IDs from durable claims.
+
+    New Scheduled Chats intentionally use stable worker IDs, so the historical
+    timestamp-in-worker-id parser cannot identify their invocation.  The claim
+    is immutable durable evidence for the same attempt and carries claimed_at;
+    use it only when the submission's claim_id matches exactly.
+    """
+    rows = _ORIGINAL_COLLECT_SUBMISSIONS(repo_root)
+    claims_by_id: dict[str, dict[str, Any]] = {}
+    for _, claim in _core.evidence._iter_json(repo_root / ".survey/work-queue/claims"):
+        claim_id = str(claim.get("claim_id") or "").strip()
+        if claim_id:
+            claims_by_id[claim_id] = claim
+
+    for row in rows:
+        if row.get("worker_run_time") is not None:
+            continue
+        if str(row.get("worker_id") or "") not in _GENERIC_SURVEY_WORKERS:
+            continue
+        claim_id = str(row["payload"].get("claim_id") or "").strip()
+        claim = claims_by_id.get(claim_id)
+        if claim is None:
+            continue
+        if str(claim.get("worker_id") or "") != row["worker_id"]:
+            continue
+        if str(claim.get("attempt_id") or "") != str(row["payload"].get("attempt_id") or ""):
+            continue
+        row["worker_run_time"] = _scheduled_half_hour_from_claimed_at(claim.get("claimed_at"))
+    return rows
 
 
 def _known_candidate_canonical_ids(
@@ -173,8 +221,9 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
     return lines
 
 
-# The preserved core owns the rendering flow; replace only the compatibility-sensitive
+# The preserved core owns the rendering flow; replace only compatibility-sensitive
 # hooks so all unrelated STATUS behavior remains byte-for-byte equivalent in code.
+_core.evidence._collect_submissions = _collect_submissions
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
 
