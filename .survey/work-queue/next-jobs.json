@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 56,
-    "actively_claimed": 0,
-    "claimable": 56
+    "actively_claimed": 2,
+    "claimable": 54
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-146f944f1c748398",
-      "type": "research",
-      "lane": null,
-      "priority": 85,
-      "canonical_id": "arXiv:2506.06295",
-      "title": "dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching",
-      "source_url": "https://arxiv.org/abs/2506.06295",
-      "paper_path": "papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-60a904da0b8faa84",
       "type": "research",
       "lane": null,
@@ -103,20 +89,6 @@
       "title": "HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving",
       "source_url": "https://arxiv.org/abs/2608.14575",
       "paper_path": "papers/inference/06-serving-scheduling/2026-2608.14575-hw-router-hardware-aware-multi-llm-serving.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-2829f7afbf13ae9b",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2508.02558",
-      "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
-      "source_url": "https://arxiv.org/abs/2508.02558",
-      "paper_path": "papers/inference/06-kv-cache-memory/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -137,6 +109,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-12153d10b82fca3c",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2506.04203",
+      "title": "Cascadia: An Efficient Cascade Serving System for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.04203",
+      "paper_path": "papers/inference/06-serving-scheduling/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-b85568c75bac4939",
+      "type": "research",
+      "lane": null,
+      "priority": 83,
+      "canonical_id": "arXiv:2605.05696",
+      "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.05696",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T21:47:17+00:00"
+  "generated_at": "2026-09-17T22:03:49+00:00"
 }
