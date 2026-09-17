@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **654本**。
+収録論文: **657本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,14 +25,14 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**654本**。
+推論論文：**657本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 48 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 49 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 1 |
-| [02-hardware-accelerators](02-hardware-accelerators/README.md) | 7 |
+| [02-hardware-accelerators](02-hardware-accelerators/README.md) | 8 |
 | [02-memory-offload](02-memory-offload/README.md) | 1 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
@@ -45,7 +45,7 @@
 | [04-moe-expert-offload-caching](04-moe-expert-offload-caching/README.md) | 2 |
 | [04-moe-offload-expert-cache](04-moe-offload-expert-cache/README.md) | 1 |
 | [04-moe-offload-routing](04-moe-offload-routing/README.md) | 1 |
-| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 20 |
+| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 21 |
 | [05-kv-cache-compression-quantization](05-kv-cache-compression-quantization/README.md) | 1 |
 | [05-kv-cache-memory-management](05-kv-cache-memory-management/README.md) | 7 |
 | [05-kv-cache-offloading](05-kv-cache-offloading/README.md) | 7 |
