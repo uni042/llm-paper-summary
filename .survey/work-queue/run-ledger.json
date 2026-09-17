@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T19:33:30.561637+00:00",
+  "updated_at": "2026-09-17T19:37:23.900932+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T19:33:30.561637+00:00",
+      "last_recorded_at": "2026-09-17T19:37:23.900932+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 220,
+        "research_completed": 221,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 15,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35150307276:1",
-          "recorded_at": "2026-09-16T21:07:28.971618+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35150307276",
-            "run_attempt": "1",
-            "source_sha": "c02e6057f5a901133786ba6ff3ed1202e5f8489f"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35150535578:1",
           "recorded_at": "2026-09-16T21:09:18.030552+00:00",
@@ -19591,6 +19576,20 @@
             "run_id": "35265549762",
             "run_attempt": "1",
             "source_sha": "deef76a19d34f90bb6227785cf7549ef706430a5"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35265943365:1",
+          "recorded_at": "2026-09-17T19:37:23.900932+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35265943365",
+            "run_attempt": "1",
+            "source_sha": "b3a6b877735879d3c671ddbca03dfd7b4fd61ca1"
           },
           "signals": [
             "research_completed"
@@ -22307,6 +22306,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.18110",
           "title": "SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-97b8208885471bff",
+          "type": "research",
+          "canonical_id": "arXiv:2609.18063",
+          "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
           "from": "ready",
           "to": "completed"
         }
