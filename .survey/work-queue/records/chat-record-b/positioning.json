@@ -5,17 +5,10 @@
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
   "data": {
-    "related_work": [
-      {"lineage": "Production memory systems", "comparison": "Mem0、Zep、MemGPT/Lettaは関連contextを検索してprompt textとして注入するため、取得contextを毎要求でprefillする。InferScaleは検索pipelineを維持しつつconditioning interfaceをKV injectionへ変更する。"},
-      {"lineage": "Prefix/block KV reuse", "comparison": "vLLM prefix caching、Block-Attention、CacheBlend、LazyAttention、LMCache等はKV再利用を扱うが、固定prompt layoutや選択的re-encoding/recomputation等を前提にする。InferScaleはpre-RoPE keyを要求時位置へ再回転して動的なretrieved fact集合を扱う。"},
-      {"lineage": "Sparse/retrieval attention", "comparison": "RetroInferやRetrievalAttentionは一つの長contextに対するdecode attention costを削減する。InferScaleの主対象は共有静的contextを要求ごとに再prefillするコストであり、prefill側の再利用を狙う。"},
-      {"lineage": "GPU-native vector retrieval", "comparison": "Jasper等のGPU ANNは検索自体を高速化する。InferScaleはGPU retrievalをKV storeとfact_idで結合し、検索後のconditioningまでGPU内で完結させる。"}
-    ],
-    "distinction": "中心的な差は、semantic retrievalの結果をtoken列として再計算するのではなく、位置非依存に保存したモデル内部KV状態へ変換して再利用する点である。検索結果が要求ごとに異なるため従来prefix cacheでは共有しにくいcontextをChunked RoPEで再配置可能にした。",
-    "strengths": "stock vLLMのplugin interfaceで実装され、モデルfine-tuning不要である。理論的なKV injection等価性、RoPE位置再配置、実機latency/throughput、accuracy、memory footprint、CPU offloadまで一貫して評価しており、実システムとしてのtrade-offが明確である。",
-    "limitations": "最大の制約はper-conversation KV容量で、Llama-3.1-8Bでは約4.8GBを要するため多数ユーザーをGPU常駐させにくい。CPU offloadは容量を緩和するがend-to-end latencyにk依存のPCIe費用を加える。またContext-Window Encodingでもretrieved facts同士の完全なcross-fact attentionは一般には復元せず、multi-hopやQwen3-14Bでprompt injectionとのaccuracy gapが残る。評価は単一高容量GPUとLoCoMo中心で、multi-GPU servingや大規模memory churnは未検証である。",
-    "repository_relation": "既存のKV cache memory、prefix caching、RAG cache、retrieval attention系に対し、永続ユーザーメモリを『再利用可能なKVオブジェクト』として扱う系統を補完する。特にCPU/GPU階層メモリ研究との接点として、KV storeをhost DRAMへoffloadした際の容量対latency trade-offを定量化している。",
-    "future_directions": "KV storeの圧縮・量子化、ユーザー間/会話間deduplication、NVMeを含む多階層KV store、hotness-aware placement、cross-fact interactionを低コストに補う部分再計算、multi-GPUでのretrieval/KV placementが自然な拡張候補である。"
+    "limitations": "最大の制約はper-conversation KV容量で、Llama-3.1-8Bでは約4.8GBを要するため多数ユーザーのmemoryをGPUへ同時常駐させにくい。CPU offloadは容量を緩和するが、取得量kに比例するPCIe転送がend-to-end latencyへ数十ms追加される。Context-Window Encodingでもretrieved facts同士の完全なcross-fact attentionは一般には復元せず、multi-hopやQwen3-14Bでprompt injectionとのaccuracy gapが残る。windowを増やすとoffline preprocessing時間も大幅に増える。評価は単一96GB GPUとLoCoMo中心で、multi-GPU serving、多数の独立conversationの入替え、長期運用時のKV更新・削除負荷は未検証である。",
+    "differences": "Mem0、Zep、MemGPT/Lettaは関連contextを検索してprompt textとして注入するため、同じfactでも毎要求prefillする。vLLM prefix cachingやBlock-Attention、CacheBlend、LazyAttention、LMCache等のKV再利用は固定prompt layout、選択的re-encoding、cache recomputation等を前提にする場合がある。InferScaleはpre-RoPE keyを保存して要求時位置へ再回転するため、検索結果ごとに構成と位置が変わるmemory factを直接再利用できる。RetroInferやRetrievalAttention等が一つの長contextに対するdecode attention costを減らすのに対し、本研究は共有静的contextを毎回prefillする費用を除去する。JasperのGPU ANNだけでなくKV conditioningまで同じGPU内に統合する点も単なる検索高速化と異なる。",
+    "implementation_status": "公式実装はGitHubのsaltsystemslab/InferScaleで公開されている。論文はarXiv v1 (2026-07-29) のプレプリント。vLLM v0.19.1のKVConnectorBase_V1外部pluginとして実装され、stock vLLM内部の変更やmodel fine-tuningを必要としない。Jasper GPU ANN index、GPU-resident pre-RoPE KV store、Chunked RoPE、CPU offload経路を実機RTX PRO 6000 Blackwellで評価している。",
+    "research_positioning": "KV cache memory、prefix caching、RAG cache、retrieval attention、agent/personalized memory servingの交点に位置する。特に永続ユーザーメモリをtoken textではなく再利用可能なmodel-internal KV objectとして扱い、semantic retrievalとattention conditioningの境界を再設計した点が重要である。CPU/GPU階層メモリ研究との接点も強く、KV storeをhost DRAMへ退避した際の容量対latency trade-offを定量化している。今後はKV圧縮・量子化、NVMeを含む多階層配置、hotness-aware placement、ユーザー間deduplication、cross-fact interactionを補う部分再計算、multi-GPU KV placementへ拡張できる。"
   },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
