@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-71c0ed6c5534ff3803426ef1",
-  "job_id": "job-research-cbc6b0e2ec411766",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71c0ed6c5534ff3803426ef1",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-71c0ed6c5534ff3803426ef1","job_id":"job-research-cbc6b0e2ec411766","data":{"limitations":"対象GPUはA100に限られ、飽和点はハードウェア依存なので別GPUでは再プロファイルが必要である。オンライン確定トークン数の推定は入力依存で誤差を持つ。弾性制御は最良固定幅を常に上回るわけではなく、ShareGPTアブレーションでは最良Chunk-8より9.5%低い。対象はブロック拡散LLMで、自己回帰・投機復号へそのまま適用できない。精度は概ね安定するが実行順序変更により厳密な出力同一性は保証されない。","differences":"vLLM、Orca、SGLang、DistServe等は主に要求間のバッチング、KV管理、プリフィル/デコード分離を最適化するが、低負荷時に一要求内部の並列性を増やさない。Optimusは拡散LLMの要求内並列性を復号幅として制御する。Sarathi-Serveのチャンク化プリフィルは入力処理の分割であり、Optimusは依存関係を持つ拡散デコードブロックをKV再利用と再編成でチャンク化する。TurboSpecやAdaServeは自己回帰モデルの投機幅を動的制御するが、Optimusは拡散モデル固有のGPU利用率と冗長トークン計算の交換を扱う。","implementation_status":"約8K行の実システムをLMDeploy上へ実装し、LLaDA2.0とSDAR系列をサポートする。Tritonページ注意カーネル、ブロック内KVキャッシュ、ストリーミングチャンク復号、ウォームアップ計測、弾性スケジューラを実装してA100実機で評価している。公式コードURLは論文に明記されている。","research_positioning":"拡散LLM配信を固定ブロック幅のアルゴリズム実装から、負荷に応じて粒度を変える系・アルゴリズム共同制御へ進めた研究である。従来の連続バッチングが要求間並列性を、拡散復号が要求内並列性を提供するのに対し、Optimusは後者をGPU飽和へ合わせて調節し、両者を同じスケジューラで協調させる。リポジトリでは配信スケジューリング、拡散LLM、KVキャッシュ、動的投機制御系統との比較軸になる。"},"reservation":{"claim_id":"claim-71c0ed6c5534ff3803426ef1","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
