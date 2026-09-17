@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:41:51 JST**
+> 自動生成: **2026-09-17 13:42:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **52** |
-| 未claim Research job | **50** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-17 13:39:54 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-17 13:39:54 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **1** | **2** | **2** | **0** | — |
+| Research | **10** | **3** | **1** | **2** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **4** | **2** | **2** | **2** | **0** | **5** |
+| 合計 | **11** | **4** | **2** | **2** | **3** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -144,7 +144,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 13:42:21 JST** / heartbeat: **—** / lease expiry: **09-17 15:12:21 JST**
+  - evidence: `.survey/work-queue/claims/job-research-cf3f98aec47a974c.json`
 - `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:39:43 JST** / heartbeat: **—** / lease expiry: **09-17 15:09:43 JST**
   - evidence: `.survey/work-queue/claims/job-research-0923832e7cd03d20.json`
