@@ -2,7 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-95d658fe70f828e70de1fe76",
+  "job_id": "job-research-411dee2b8db54e04",
+  "data": {
+    "limitations": "評価は主に単一バッチ生成であり、多数要求を同時処理するサービングのスループットや尾部遅延は対象外である。GPUでは復元後に密行列演算を行うため、疎性を演算量削減へ使えていない。SSD帯域が依然として上限となり、著者らも複数SSDへの分散を将来課題として挙げる。量子化で値幅を縮めるほど1ビット位置ビットマップの相対費用が増え、圧縮率は低下する。論文時点では対応モデルがOPT-66BとLlama2-70B中心で、コードは公開予定とされるが本文に公開URLはない。",
+    "differences": "FlexGen等が配置・バッチ・KV圧縮を組み合わせてスループットを高めるのに対し、Endorは単一要求の退避遅延を支配する重みI/Oそのものを削減する。活性値疎性方式はReLUで非ゼロになる行・列を予測して転送を選別するため対象モデルや層が限定されるが、Endorは枝刈り済み任意重みの非構造疎性を保存形式で表現する。CSRや一般圧縮と異なり、位置情報を1ビットへ固定しGPUで低費用に復元する点が中核である。",
+    "implementation_status": "RTX 4080、NVMe SSD、Hugging Face Accelerate、GPUダイレクトストレージを用いた実機研究実装。OPT-66BとLlama2-70Bをサポートし、SparseGPT/Wanda以外で事前枝刈りした重みも形式上扱える。論文ではオープンソース化予定と記載。",
+    "research_positioning": "CPU/SSD階層を使うLLM退避推論で、枝刈りアルゴリズムとI/Oシステムの間を埋めるデータ形式研究に位置する。特にNVMe帯域が支配的な個人GPU環境では、量子化、GPUダイレクトストレージ、複数SSD、先読みと組み合わせる基礎要素として重要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-95d658fe70f828e70de1fe76",
+    "worker_id": "scheduled-chat-survey-20260917T1130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
