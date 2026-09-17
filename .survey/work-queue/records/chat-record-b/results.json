@@ -4,7 +4,21 @@
   "slot": "results",
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
-  "data": {},
+  "data": {
+    "key_results": [
+      "Llama-3.1-8Bではretrieval budgetをk=5から50へ増やしてもInferScaleのengine TTFTは16.6msから17.3ms程度の約4%増に留まり、Mem0は33.2msから68.3msへ約106%増加する。k=50では3モデルでTTFTを72〜79%削減し、3.6〜4.8倍高速化する。",
+      "LoCoMo accuracyではLlama-3.1-8B、w=50、k=50でInferScale 60.26%、Mem0 63.25%。独立符号化w=0では53.77%まで低下するためcontext windowが重要である。Mistral/Qwenでも大きなwindowで改善するがMem0との差は残る。",
+      "100同時users、top-50 retrievalではInferScaleがLlama/Mistral/Qwenで100/104/135 QPS、Mem0が27/23/32 QPSとなり3.7〜4.5倍。",
+      "Qwen3-14B、k=50、w=50ではGPU KVのTTFT 28.06ms、query-to-first-token 88.02ms、accuracy 69.42%に対し、Mem0は140.52ms、257.76ms、79.09%。速度差は大きい一方でaccuracy gapも約9.7 points残る。",
+      "per-conversation fact KVはLlama-3.1-8Bで約4.80GB、Mistral-7Bで2.26GB、Qwen2.5-7Bで1.78GB。Jasper graphは13.5MB程度で、容量支配項はKV storeである。",
+      "KVをpinned host DRAMへoffloadするとk=50,w=5でengine TTFTはLlama 17.52→20.45ms、Mistral 17.02→18.93ms、Qwen 17.82→19.29msと約1.5〜3ms増だが、query-to-first-tokenは約33〜38ms増える。"
+    ],
+    "quantitative_summary": "主な利得はrepeated memory prefillの除去であり、k増加に対するTTFTをほぼ平坦化する。最大k=50で3.6〜4.8倍のTTFT改善、100-user batchで3.7〜4.5倍のthroughputを得る。精度はcontext windowで大幅に回復するもののprompt injectionを完全には一致せず、特にmulti-hopで残差が大きい。",
+    "accuracy_tradeoff": "Chunked RoPEによる位置再配置そのものではなく、factを別々に符号化してcross-fact attentionを失うことが主な近似誤差である。w>=20ではk増加時のaccuracy崩壊を抑えるが、Llama k=50で60.3%対63.3%、Qwen3-14Bでは69.4%対79.1%とbaseline差が残る。",
+    "resource_tradeoff": "GPU-native設計はCPU検索・text転送を避ける一方、各conversationに1.8〜4.8GBのKVを要求する。CPU offloadでGDDR容量制約は緩和できるが、取得量kに比例するPCIe転送がend-to-end latencyへ数十ms追加される。",
+    "offline_cost": "Context-Window Encodingは一度だけの前処理費用だがwとともに増え、Llama-3.1-8Bでは1 conversationあたりw=0の38.91秒からw=50の206.45秒へ約5倍になる。serving latencyと保存token数はwで増えない。",
+    "empirical_equivalence": "同一prompt tokensでKV注入と再prefillを比較した18ケースではtoken-identical 9、semantic-equivalent 8、different 1で、factual accuracyは全ケース100%。bf16 reduction orderによる非決定性を除けば理論的等価性と整合する。"
+  },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
     "worker_id": "scheduled-chat-llm-survey",
