@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d78e5b407d31a7db6d9fe6e7","job_id":"job-research-99d754a688aca9c8","data":{"overview":"Fast-dLLMはdLLMのper-step計算と必要step数を別々に削ることで、単独cacheや単独parallelより大きなend-to-end gainを得る。LLaDA GSM8K gen length 256ではvanilla 6.7 TPSからcache 21.2、parallel 16.5、両者54.4 TPS（8.1倍）へ向上し、長prefill・gen length 1024ではDualCache+parallelがvanilla 0.7 TPSから19.3 TPSへ達して最大27.6倍となる。accuracy低下は小さく、training-freeでAR modelとのthroughput gapを大幅に縮める点が実用上の主成果である。","key_results":[{"metric":"LLaDA GSM8K throughput","value":"54.4 TPS, 8.1×","baseline":"vanilla 6.7 TPS","condition":"5-shot, max generation length 256, cache+parallel","interpretation":"cacheとparallelismの相補効果。"},{"metric":"長生成end-to-end speedup","value":"19.3 TPS, 27.6×","baseline":"vanilla 0.7 TPS","condition":"GSM8K 8-shot, gen length 1024, DualCache+parallel","interpretation":"長いprefill/generationでcache reuseとstep削減が増幅する。"},{"metric":"Parallel-only acceleration","value":"最大13.3×","baseline":"vanilla LLaDA","condition":"long-generation configuration","interpretation":"confidence-aware unmaskでstep数を大幅削減。"},{"metric":"KV-cache-only speedup","value":"概ね2〜3.6×","baseline":"vanilla backbone","condition":"複数task/length","interpretation":"block内のQKV再計算を削る効果。"},{"metric":"GSM8K quality","value":"gen256: 78.5%","baseline":"vanilla 79.3%","condition":"LLaDA cache+parallel","interpretation":"8.1×高速化に対して0.8 point低下。"}],"negative_results":"KV cacheはbidirectional full attentionに対するapproximationでありblock内KVを完全には更新しない。parallel decodeもconfidence thresholdに依存し、thresholdを下げすぎるとdependent tokenを同時確定してqualityを落とす。speedupはgeneration lengthやprompt長に強く依存し、短い出力では最大値ほど大きくない。","interpretation":"dLLMの遅さは『各stepが重い』ことと『step数が多い』ことの積である。Fast-dLLMはapproximate KV reuseで前者、confidence-aware multi-token unmaskで後者を同時に削るため、単独最適化を超えるmultiplicative speedupを得る。","quality_impact":"GSM8K/HumanEval等でaccuracyは概ねvanilla近傍。high-confidence tokenだけを並列化することで固定top-Kよりdependency violationを抑えるが、approximationとthresholdにより完全losslessではない。"},"reservation":{"claim_id":"claim-d78e5b407d31a7db6d9fe6e7","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-27d6d4809a00be74dfe82297",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "overview": "HW-Routerの主結果は、複数LLM routingでquality predictorを高度化するだけでは解消できなかったruntime congestionを、real-time hardware stateをcostへ入れることで直接回避できる点にある。2台H100・5モデルのsustained-overload評価では、CARROT/IRTに対しend-to-end latencyを3.4〜3.9倍低減し、SLO attainmentを46〜48 percentage points改善、GPU load skewを6〜8倍低減、waiting-queue fractionを3.1〜3.4倍縮小した。同等quality 0.62では約40秒から16秒へ短縮し、arrival rate 15〜21 requests/sでもrunning比率83〜84%を維持する。実務上は、より小さいmodelへtrafficを集中させる静的routerより、現在idleな大model/GPUへ一部requestを逃がす方がsystem全体のlatencyとSLOを同時に改善できることを示している。",
+    "key_results": [
+      {
+        "metric": "同等品質での遅延",
+        "value": "quality 0.62で約16 s",
+        "baseline": "CARROT/IRT-Router 約40 s",
+        "condition": "quality-latency Pareto sweep",
+        "interpretation": "runtime状態を使うことで約60%の遅延削減。"
+      },
+      {
+        "metric": "SLO達成率",
+        "value": "quality 0.60で約97%; 0.63で90%; 0.65で76%",
+        "baseline": "0.60: CARROT 51%, IRT 65%; 0.63: 48%, 60%; 0.65: 両baseline 50%未満",
+        "condition": "TTFT+TPOT SLO",
+        "interpretation": "queueingを含むactual serving costの予測がSLO violation回避に直結する。"
+      },
+      {
+        "metric": "待機キュー比率",
+        "value": "16〜17% waiting、83〜84% running",
+        "baseline": "CARROT 53〜55% waiting、IRT 34〜39% waiting",
+        "condition": "arrival rate 15,18,21 requests/s",
+        "interpretation": "traffic集中を抑え、queueの大半を待機ではなく実行状態へ移す。"
+      },
+      {
+        "metric": "GPU load skew",
+        "value": "1.691〜2.089",
+        "baseline": "CARROT 12.903〜12.924、IRT 12.640〜12.930",
+        "condition": "arrival rate 15,18,21",
+        "interpretation": "総負荷偏りを約84〜87%削減し両GPUを利用する。"
+      },
+      {
+        "metric": "追加ルーティングオーバーヘッド",
+        "value": "CARROT比 約200 μs",
+        "baseline": "CARROT",
+        "condition": "平均decision latency",
+        "interpretation": "hardware-aware decisionのcritical-path追加費用は小さいと報告。"
+      }
+    ],
+    "negative_results": "cost predictor forward passを約10msと記す一方、CARROT比の追加routing latencyを約200μsと報告し、両measurement scopeの関係は明確でない。評価GPUは2台ともH100で、heterogeneous GPUを動機に挙げるもののV100/A100/H100混在を直接評価していない。",
+    "interpretation": "model sizeやprice/tokenはisolated efficiencyのproxyに過ぎず、online servingではqueueとKV pressureがeffective efficiencyの順位を逆転させる。HW-Routerはこの順位をqueryごとに再推定し、load balancingをrouting decisionの副作用ではなくfeedback制御として実現する。",
+    "quality_impact": "同等quality operating pointでlatency/SLOを比較し、output quality lossなしと報告。qualityはQwen-3-Next-80B judge中心で、人手・複数judgeによるrobustness評価は限定的。"
+  },
+  "reservation": {
+    "claim_id": "claim-27d6d4809a00be74dfe82297",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
