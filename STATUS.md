@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 16:44:05 JST**
+> 自動生成: **2026-09-17 16:44:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **59** |
+| 収録候補論文 | **58** |
 | 未claim Research job | **56** |
-| 直近24hの検証済みResearch収録 | **60** |
+| 直近24hの検証済みResearch収録 | **59** |
 | 最終検証済みResearch収録 | **09-17 16:41:43 JST（2分前）** |
 | 整合性異常 | **0** |
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **59** |
+| canonical_id確認済みの一意な候補論文 | **58** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **59** |
+| 非終端Research job合計 | **58** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **3** | **2** | **1** | **3** | **1** | — |
+| Research | **17** | **4** | **2** | **2** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **22** | **7** | **6** | **1** | **3** | **1** | **15** |
+| 合計 | **22** | **8** | **6** | **2** | **2** | **1** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,13 +131,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
+- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
 - **成功** `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts
   - job: `.survey/work-queue/jobs/job-research-7f3f089c5dc01c0c.json`
   - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-78cb43ce4509a618c85127b5.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-afb867c7067bd524852f7243.json` (job `job-research-f3b9350c8e883e12`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b8e3a9c0664d271ad698f2d3.json` (job `job-research-5a5215eb805afa43`)
 - **成功** `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
   - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
   - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
@@ -176,10 +177,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2409.00918` — LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 16:43:45 JST** / heartbeat: **—** / lease expiry: **09-17 18:13:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5a5215eb805afa43.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
@@ -205,7 +203,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **59** |
+| ready | **58** |
 
 ### 候補の重複・識別情報欠損
 
@@ -233,8 +231,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **431** |
-| └ Research | **304** |
+| 成功result未照合のimmutable submission | **432** |
+| └ Research | **305** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
