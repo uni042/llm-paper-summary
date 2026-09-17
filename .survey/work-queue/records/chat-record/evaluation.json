@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ad568a9def7133e0a5107c75","job_id":"job-research-5a5215eb805afa43","data":{"setup":"OPT 1.3B〜66Bと同型の175B、276B、505B、1T合成モデルを用い、系列長1024で評価する。主要実機は8 workerで、各workerはA100 40GB、dual Xeon Silver 4214、256GB DDR4、100Gbpsネットワーク。DisDPは各workerにU50 SmartNIC、SmartSwitch、dual Xeon Gold 5320と12 SSDのPSを追加する。","hardware":"8台A100 40GB実機、100Gbpsネットワーク、Xilinx Alveo U50 FPGA SmartNIC、SmartSwitch、12 SSD PSを使用する。SmartNIC資源はLUT 15.5%、FF 12.9%、BRAM 26.3%、URAM 20.0%。256 DP拡張と32GPU費用比較にはASTRA-simも使用する。","software":"ZeRO-InfinityはDeepSpeed 0.9.3とNCCL 2.20.5、bf16、活性値チェックポイントを使用する。比較対象はZeRO-Infinity、ZeRO-Offload、ZeRO-3、ATP。DisDPもbf16と活性値チェックポイントを有効化する。","methodology":"最大収容モデル、token/s、モデルFLOPS利用率、集合通信アルゴリズム帯域、各機構アブレーション、256 DPシミュレーション、100Gbps対NVLink、32GPU費用効率、OPT-66B微調整収束を測る。比較ごとにbaselineが収容できる最大モデルを選び、175B主要評価ではmicro-batchを変化させる。","scope":"主要性能は8台単GPUworkerの100Gbps実機で測定する一方、256 DPの大規模拡張と32GPU費用比較はASTRA-simを含む。1Tモデルは実モデル学習品質ではなくOPT同型ランダムパラメータの容量・性能評価である。SmartNICはU50 FPGA試作であり、他NICや400Gbps実機への一般化には注意が必要である。","baselines":["ZeRO-Infinity","ZeRO-Offload","ZeRO-3","ATP","ZeRO-Infinity+SHARP","仮想MPS/SM preemption baseline","DisDPのGPU通信・colocated PS・層中心optimizerアブレーション"],"metrics":["最大trainable model size","token/s","MFU","collective algorithm bandwidth","throughput-per-dollar","training loss convergence"],"conditions":"主要175B実験は8 A100、100Gbps、系列長1024。DisDPとZeRO-Infinityは双方26GB/s集約SSD I/O相当を確保する。高速ネットワーク比較ではDisDP 100Gbpsに対し8 A100を600GB/s NVLink接続したZeRO-Offloadを用いる。","evidence":"一次資料の背景、設計、全評価節、関連研究、結論、176件の参考文献まで確認した。実機結果とASTRA-simによるシミュレーション結果を区別して記録した。"},"reservation":{"claim_id":"claim-ad568a9def7133e0a5107c75","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-721b895c107ac359ea8048a4",
+  "job_id": "job-research-a1761c9ca73f9afb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-721b895c107ac359ea8048a4",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
