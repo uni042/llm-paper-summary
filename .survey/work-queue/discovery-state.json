@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T12:01:15+00:00",
+  "updated_at": "2026-09-17T12:01:39+00:00",
   "last_run_key": "2026-09-17T21:00:00+09:00",
-  "last_round": "storage-moe-1",
+  "last_round": "kv-scheduling-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 6,
+  "consecutive_empty_rounds": 7,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-moe-locality-offload-02",
-      "axis": "MoE expert locality・cache/prefetch・CPU/GPU offload",
-      "query_summary": "MoE servingの専門家局所性routing、expert parallelism分離、専門家分割cache/prefetch、投機的デコードによるoffload遅延隠蔽をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。Actions処理後の最新HEADとnext discovery jobを再取得し、各arXiv IDをrepoで再検索して投入直前の重複確認を行った。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "GPU runtime/networkingのKV転送・remote memory、または収録済み重要論文のforward/backward citationへ切り替える",
-      "source_submission": "work-queue/submissions/20260912T2304JST-discovery-specialist-02.json"
-    },
     {
       "run_key": "2026-09-12T23:00:00+09:00",
       "round": "specialist-agentic-kv-cache-03",
@@ -6764,6 +6749,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "KV cache reservation uncertainty・GPU L2 prefetch・multi-GPU migrationと隣接memory schedulingを探索する",
       "source_submission": "work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json"
+    },
+    {
+      "run_key": "2026-09-17T21:00:00+09:00",
+      "round": "kv-scheduling-2",
+      "axis": "KV cache reservation・GPU L2 prefetch・multi-GPU migration",
+      "query_summary": "第1roundと独立して、KV cacheの予約不確実性、GPU memory hierarchy先読み、multi-GPU migrationによるmemory balancingを探索し、canonical arXiv IDでdefault branchを事前照合した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "重要な既収録KV/offload論文のforward citationとCXL/remote-memory系を横断する",
+      "source_submission": "work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json"
     }
   ],
   "axes": {
@@ -11061,6 +11064,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "KV cache reservation uncertainty・GPU L2 prefetch・multi-GPU migrationと隣接memory schedulingを探索する"
+    },
+    "KV cache reservation・GPU L2 prefetch・multi-GPU migration": {
+      "last_run_key": "2026-09-17T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "重要な既収録KV/offload論文のforward citationとCXL/remote-memory系を横断する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
