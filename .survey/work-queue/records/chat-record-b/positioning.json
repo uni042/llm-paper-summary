@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-8a81151586fdc3a2613ff366",
-  "job_id": "job-research-b6925d33135e854c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8a81151586fdc3a2613ff366",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8a81151586fdc3a2613ff366","job_id":"job-research-b6925d33135e854c","data":{"limitations":"論文自身が述べる主制約はアルゴリズム設計を単独で扱い、メモリ管理、並列化、ハードウェア認識実行などのシステム共同設計を十分行っていない点である。任意位置キャッシュの収集・散布は非連続メモリアクセスを生み、バッチ1ではメモリ律速で基準より遅くなる場合がある。Greedy版は速度と品質の交換条件があり、Dreamでは位置シフトの扱いにもモデル固有調整が必要である。評価モデルはLLaDAとDreamの7B〜8B級に限られ、他のDLM構造への一般性は今後の検証が必要である。","differences":"自己回帰KVキャッシュは因果マスクにより過去K/Vが厳密に不変であることを利用するが、dKV-Cacheは双方向DLMで近似的に安定した復号済み表現を状態条件付きで再利用する。Block Diffusionは半自己回帰構造を学習時から導入してKVキャッシュを可能にするのに対し、本手法は既存の完全双方向DLMへ学習なしで適用する。画像拡散の層キャッシュ系が層特徴の時間類似性を利用するのに対し、dKV-Cacheは言語トークンごとの復号イベントとK/V安定化を利用する。後続のFast-dLLMやdLLM-Cache等に先行する基礎的DLM KV再利用方式である。","implementation_status":"公式コードはhorseee/dKV-Cacheで公開。LLaDAとDreamへ実装され、A6000/H20で実測評価される。arXiv v1は2025-05-21公開で、後にNeurIPS 2025採択として扱われている。付録ではconcat_reorder擬似コード、Dream固有位置シフト、評価設定、バッチサイズ感度まで提示する。","research_positioning":"KVキャッシュ研究の対象を自己回帰LLMから拡散言語モデルへ拡張した初期の重要研究である。キャッシュ対象を『過去位置』ではなく『表現が安定した復号済み状態』として定義し直したことで、双方向注意でも時間方向の再利用可能性を示した。後続のDLM推論高速化はブロック単位近似、適応更新、並列復号などへ発展しており、本論文はそのキャッシュ設計系統の基準点として位置付けられる。"},"reservation":{"claim_id":"claim-8a81151586fdc3a2613ff366","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
