@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 21:01:14 JST**
+> 自動生成: **2026-09-17 21:01:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **20** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **2** | **0** | **2** | **0** | **0** | **8** |
-| 合計 | **23** | **5** | **3** | **2** | **0** | **0** | **8** |
+| Discovery | **4** | **2** | **1** | **1** | **0** | **0** | **8** |
+| 合計 | **24** | **5** | **4** | **1** | **0** | **0** | **8** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 21:01:15 JST** job `job-8796df7b537f4169` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T2100JST-discovery-storage-moe-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json`
+  - 探索軸: SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
 - **09-17 15:03:27 JST** job `job-5c8ea8ca705a9ecb` / 候補 **5件**
   - result: `.survey/work-queue/results/20260917T1512JST-discovery-speculative-decoding-gaps-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T1512JST-discovery-speculative-decoding-gaps-2.json`
@@ -149,7 +153,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 21:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **8件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **8件**
 - 探索軸: KV cache reservation・GPU L2 prefetch・multi-GPU migration / SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
 - round `kv-scheduling-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json`
@@ -158,7 +162,7 @@
 - round `storage-moe-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json`
   - 探索軸: SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-storage-moe-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -213,10 +217,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **450** |
+| 成功result未照合のimmutable submission | **449** |
 | └ Research | **319** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
