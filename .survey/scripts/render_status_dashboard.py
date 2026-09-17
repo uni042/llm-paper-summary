@@ -13,8 +13,6 @@ try:
 except ModuleNotFoundError as exc:
     if exc.name != "render_status_dashboard_core":
         raise
-    # Some status tests intentionally copy only this facade into a temporary repo.
-    # In that harness, load the preserved core from the checked-out source tree.
     core_path = Path.cwd() / ".survey" / "scripts" / "render_status_dashboard_core.py"
     if not core_path.is_file():
         raise
@@ -33,12 +31,10 @@ _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
 
 
 def __getattr__(name: str) -> Any:
-    """Delegate unchanged renderer helpers to the preserved core module."""
     return getattr(_core, name)
 
 
 def _scheduled_half_hour_from_claimed_at(value: Any):
-    """Map a durable claim timestamp to the :30 Scheduled Chat invocation window."""
     claimed_at = _core.evidence._parse_dt(value)
     if claimed_at is None:
         return None
@@ -51,13 +47,7 @@ def _scheduled_half_hour_from_claimed_at(value: Any):
 
 
 def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
-    """Recover run time for generic Scheduled Chat worker IDs from durable claims.
-
-    New Scheduled Chats intentionally use stable worker IDs, so the historical
-    timestamp-in-worker-id parser cannot identify their invocation.  The claim
-    is immutable durable evidence for the same attempt and carries claimed_at;
-    use it only when the submission's claim_id matches exactly.
-    """
+    """Normalize durable submission kind and recover generic Scheduled Chat run time."""
     rows = _ORIGINAL_COLLECT_SUBMISSIONS(repo_root)
     claims_by_id: dict[str, dict[str, Any]] = {}
     for _, claim in _core.evidence._iter_json(repo_root / ".survey/work-queue/claims"):
@@ -66,6 +56,15 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
             claims_by_id[claim_id] = claim
 
     for row in rows:
+        # build_status_dashboard._kind historically recognized Discovery only when
+        # "discovery" appeared in the filename. Current workflow-v10 stores rounds
+        # under submissions/discovery/ with arbitrary round names, so the directory
+        # is the durable kind signal when no explicit kind exists.
+        if row.get("kind") == "unknown" and "discovery" in {
+            part.lower() for part in row["path"].parts
+        }:
+            row["kind"] = "discovery"
+
         if row.get("worker_run_time") is not None:
             continue
         if str(row.get("worker_id") or "") not in _GENERIC_SURVEY_WORKERS:
@@ -82,17 +81,12 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _known_candidate_canonical_ids(
-    repo_root: Path,
-    jobs: dict[str, dict[str, Any]],
-) -> set[str]:
-    """Return candidate identities durably represented by jobs or the paper index."""
+def _known_candidate_canonical_ids(repo_root: Path, jobs: dict[str, dict[str, Any]]) -> set[str]:
     known: set[str] = set()
     for job in jobs.values():
         canonical_id = str(job["payload"].get("canonical_id") or "").strip()
         if canonical_id:
             known.add(canonical_id.casefold())
-
     index_path = repo_root / ".survey" / "survey-state" / "paper-identity-index.json"
     try:
         index = json.loads(index_path.read_text(encoding="utf-8"))
@@ -113,23 +107,14 @@ def _fully_recovered_invalid_discovery_submission_paths(
     results: list[dict[str, Any]],
     jobs: dict[str, dict[str, Any]],
 ) -> set[Path]:
-    """Identify old invalid Discovery submissions whose candidates all survived.
-
-    The immutable failure remains in the repository. It stops being a *current*
-    consistency anomaly only after every candidate in that failed submission is
-    durably represented by a job or the canonical paper identity index. Missing
-    or ambiguous candidate identity keeps the submission anomalous.
-    """
     known = _known_candidate_canonical_ids(repo_root, jobs)
     resolved: set[Path] = set()
-
     for result in results:
         result_payload = result["payload"]
         if result_payload.get("ok") is not False:
             continue
         if str(result_payload.get("error") or "").strip() != _LEGACY_INVALID_DISCOVERY_ERROR:
             continue
-
         submission = _core.evidence._submission_for_result(repo_root, result, submissions)
         if submission is None or submission["kind"] != "discovery":
             continue
@@ -137,14 +122,12 @@ def _fully_recovered_invalid_discovery_submission_paths(
             continue
         if _core._discovery_round_identity(submission) is not None:
             continue
-
         payload = submission["payload"]
         if payload.get("operation") != "submit_discovery_round":
             continue
         candidates = payload.get("candidates")
         if not isinstance(candidates, list) or not candidates:
             continue
-
         canonical_ids: list[str] = []
         for candidate in candidates:
             if not isinstance(candidate, dict):
@@ -155,10 +138,8 @@ def _fully_recovered_invalid_discovery_submission_paths(
                 canonical_ids = []
                 break
             canonical_ids.append(canonical_id.casefold())
-
         if canonical_ids and all(canonical_id in known for canonical_id in canonical_ids):
             resolved.add(submission["path"])
-
     return resolved
 
 
@@ -168,27 +149,14 @@ def _current_orphan_submission_paths(
     results: list[dict[str, Any]],
     jobs: dict[str, dict[str, Any]],
 ) -> set[Path]:
-    """Return the exact durable submissions counted by STATUS as orphan anomalies."""
-    terminally_rejected = _core._terminally_rejected_submission_paths(
-        repo_root,
-        submissions,
-        results,
-    )
-    resolved_legacy = _fully_recovered_invalid_discovery_submission_paths(
-        repo_root,
-        submissions,
-        results,
-        jobs,
-    )
+    terminally_rejected = _core._terminally_rejected_submission_paths(repo_root, submissions, results)
+    resolved_legacy = _fully_recovered_invalid_discovery_submission_paths(repo_root, submissions, results, jobs)
     return {
         row["path"]
         for row in submissions
         if (not row["job_id"] or row["job_id"] not in jobs)
         and row["path"] not in terminally_rejected
-        and not (
-            row["kind"] == "discovery"
-            and _core._discovery_round_identity(row) is not None
-        )
+        and not (row["kind"] == "discovery" and _core._discovery_round_identity(row) is not None)
         and row["path"] not in resolved_legacy
     }
 
@@ -214,24 +182,13 @@ def _direct_evidence_metrics(
         active=active,
         now=now,
     )
-    resolved = _fully_recovered_invalid_discovery_submission_paths(
-        repo_root,
-        submissions,
-        results,
-        jobs,
-    )
+    resolved = _fully_recovered_invalid_discovery_submission_paths(repo_root, submissions, results, jobs)
     if resolved:
         consistency = dict(metrics["consistency"])
         resolved_count = min(len(resolved), int(consistency.get("orphan_submissions", 0) or 0))
-        consistency["orphan_submissions"] = max(
-            0,
-            int(consistency.get("orphan_submissions", 0) or 0) - resolved_count,
-        )
+        consistency["orphan_submissions"] = max(0, int(consistency.get("orphan_submissions", 0) or 0) - resolved_count)
         metrics["consistency"] = consistency
-        metrics["consistency_total"] = max(
-            0,
-            int(metrics.get("consistency_total", 0) or 0) - resolved_count,
-        )
+        metrics["consistency_total"] = max(0, int(metrics.get("consistency_total", 0) or 0) - resolved_count)
     metrics["orphan_submission_paths"] = sorted(
         str(path.relative_to(repo_root))
         for path in _current_orphan_submission_paths(repo_root, submissions, results, jobs)
@@ -251,7 +208,6 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
             lines[index] = line + compatibility_note
         elif line.startswith("- **整合性異常**:"):
             lines[index] = line + compatibility_note
-
     orphan_paths = metrics.get("orphan_submission_paths") or []
     if orphan_paths:
         lines.extend([
@@ -265,8 +221,6 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
     return lines
 
 
-# The preserved core owns the rendering flow; replace only compatibility-sensitive
-# hooks so all unrelated STATUS behavior remains byte-for-byte equivalent in code.
 _core.evidence._collect_submissions = _collect_submissions
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
