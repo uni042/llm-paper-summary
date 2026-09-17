@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 615,
+      "completed": 616,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 64,
+      "ready": 68,
       "completed": 494,
       "superseded": 44,
       "deferred": 3,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 64,
+    "ready_research_audit": 68,
     "actively_claimed": 1,
-    "claimable": 63
+    "claimable": 67
   },
   "next_jobs": [
     {
@@ -122,14 +122,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-1fd656c9a10556db",
+      "job_id": "job-research-39525f58ef98f435",
       "type": "research",
       "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2602.10729",
-      "title": "BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization",
-      "source_url": "https://arxiv.org/abs/2602.10729",
-      "paper_path": "papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
+      "priority": 88,
+      "canonical_id": "arXiv:2605.06113",
+      "title": "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale",
+      "source_url": "https://arxiv.org/abs/2605.06113",
+      "paper_path": "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T19:10:16+00:00"
+  "generated_at": "2026-09-17T19:10:46+00:00"
 }

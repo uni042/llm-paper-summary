@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T19:10:15+00:00",
+  "updated_at": "2026-09-17T19:10:46+00:00",
   "last_run_key": "2026-09-18T04:00:00+09:00",
-  "last_round": "specialist-routing-recovery-7",
+  "last_round": "specialist-routing-lineage-8",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,23 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:26:11+09:00",
-      "round": "specialist-fault-tolerant-serving-runtime-3",
-      "axis": "推論runtime・serving耐障害性",
-      "query_summary": "GPU runtime・通信の隣接systemsへ探索軸を移し、長時間agent/servingのstate保護と障害復旧を扱う候補を一次arXiv概要で軽量評価した。Blink等の既収録候補は決定論的job IDで除外し、最新mainにjobが存在しない2件だけを送信する。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.07609"
-      ],
-      "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る",
-      "source_submission": "work-queue/submissions/20260913T0134JST-discovery-29dd7c44eff93660.json"
-    },
     {
       "run_key": "2026-09-13T01:26:11+09:00",
       "round": "specialist-moe-placement-coexecution-4",
@@ -6910,6 +6893,27 @@
       ],
       "next_axis_hint": "次はBOute/RouterWiseの関連研究からmulti-model quality-cost routingを追跡し、さらに新着2609.18xxx周辺の未収録systems論文を確認する",
       "source_submission": "work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json"
+    },
+    {
+      "run_key": "2026-09-18T04:00:00+09:00",
+      "round": "specialist-routing-lineage-8",
+      "axis": "multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing",
+      "query_summary": "BOute/RouterWise関連からmulti-model routing、load balancing、cascade serving、hardware-aware routingを深掘り。RouteBalanceとuniversal load balancingは既収録。Block、BalanceRoute、Cascadia、HW-Routerは検索一次メタデータと最新月別identity shardを照合し、未収録かつsystem-level評価を持つ候補として採用した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.17949",
+        "arXiv:2601.17855"
+      ],
+      "next_axis_hint": "次はrouting系統から離れ、kernel/runtime compilation、memory allocator、communication collective、multimodal servingの独立軸を走査する",
+      "source_submission": "work-queue/submissions/20260918T0400JST-discovery-specialist-routing-lineage-8.json"
     }
   ],
   "axes": {
@@ -11584,6 +11588,19 @@
       "duplicate_ratio": 0.6666666666666666,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次はBOute/RouterWiseの関連研究からmulti-model quality-cost routingを追跡し、さらに新着2609.18xxx周辺の未収録systems論文を確認する"
+    },
+    "multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing": {
+      "last_run_key": "2026-09-18T04:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はrouting系統から離れ、kernel/runtime compilation、memory allocator、communication collective、multimodal servingの独立軸を走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
