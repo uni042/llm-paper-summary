@@ -1,10 +1,15 @@
 {
   "schema_version": 1,
   "source": "immutable_discovery_submissions.rejected_candidates",
+  "sources": [
+    "immutable_discovery_submissions.rejected_candidates",
+    "terminal_research_rejections"
+  ],
   "updated_at": "2026-09-17T07:00:00+09:00",
   "submission_count": 6,
-  "rejection_observation_count": 28,
-  "rejection_record_count": 28,
+  "research_terminal_rejection_count": 2,
+  "rejection_observation_count": 30,
+  "rejection_record_count": 30,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2410.14740": {
@@ -26,7 +31,8 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2410.15008": {
       "primary_identity": "id:arXiv:2410.15008",
@@ -47,7 +53,8 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2410.20488": {
       "primary_identity": "id:arXiv:2410.20488",
@@ -68,7 +75,8 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "speculative decodingのmemory/runtime/distributed serving・communication co-design",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2411.17309": {
       "primary_identity": "id:arXiv:2411.17309",
@@ -89,7 +97,8 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2503.05248": {
       "primary_identity": "id:arXiv:2503.05248",
@@ -110,7 +119,8 @@
       "last_rejected_at": "2026-09-17T07:00:00+09:00",
       "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
       "run_key": "2026-09-17T07:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2503.08311": {
       "primary_identity": "id:arXiv:2503.08311",
@@ -131,7 +141,8 @@
       "last_rejected_at": "2026-09-17T07:00:00+09:00",
       "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
       "run_key": "2026-09-17T07:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2509.12993": {
       "primary_identity": "id:arXiv:2509.12993",
@@ -152,7 +163,8 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2510.02675": {
       "primary_identity": "id:arXiv:2510.02675",
@@ -173,7 +185,52 @@
       "last_rejected_at": "2026-09-17T04:00:00+09:00",
       "axis": "Compute-in-Flash・SSD weight offload・near-storage processing・heterogeneous memory hardware",
       "run_key": "2026-09-17T04:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2604.21231": {
+      "primary_identity": "id:arXiv:2604.21231",
+      "identity_tokens": [
+        "id:arXiv:2604.21231",
+        "title:sparkv overheadaware kv cache loading for efficient ondevice llm inference",
+        "url:https://arxiv.org/abs/2604.21231"
+      ],
+      "canonical_id": "arXiv:2604.21231",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.21231",
+      "rejection_reason": "arXiv v2 (2026-05-04) was withdrawn by the authors because an incorrect assumption in the Section 4 model definition affects the conclusions. The v1 primary PDF remains accessible and was inspected, but its reported 1.3–5.1x TTFT and 1.5–3.3x energy improvements should not be promoted into the repository as valid findings after the authors explicitly withdrew the paper for a conclusion-affecting model error.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-13T10:19:03+00:00",
+      "last_rejected_at": "2026-09-13T10:19:03+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-1e4fa52e86e4bdb94b38a79b.json",
+      "origin": "research_terminal_rejection"
+    },
+    "id:arXiv:2609.10861": {
+      "primary_identity": "id:arXiv:2609.10861",
+      "identity_tokens": [
+        "id:arXiv:2609.10861",
+        "title:reach controllermanaged longspan ecc for hbm ai inference",
+        "url:https://arxiv.org/abs/2609.10861"
+      ],
+      "canonical_id": "arXiv:2609.10861",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference",
+      "source_url": "https://arxiv.org/abs/2609.10861",
+      "rejection_reason": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The arXiv abstract/search result is accessible and confirms the current identity and abstract-level metrics, but direct current-version arXiv HTML fetch returned a cache-miss error and no full 53-page manuscript was retrievable. Retrieval retried at https://arxiv.org/abs/2609.10861 and https://arxiv.org/html/2609.10861. The older related arXiv:2512.18152 reports materially different results and is not substituted. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when the current primary full text is retrievable.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-14T18:38:12+00:00",
+      "last_rejected_at": "2026-09-14T18:38:12+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-cca7e7bbfc9f8b8d085149eb.json",
+      "origin": "research_blocked_permanent"
     },
     "id:arXiv:2609.14320": {
       "primary_identity": "id:arXiv:2609.14320",
@@ -194,7 +251,8 @@
       "last_rejected_at": "2026-09-17T03:00:00+09:00",
       "axis": "2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness",
       "run_key": "2026-09-17T03:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.14883": {
       "primary_identity": "id:arXiv:2609.14883",
@@ -215,7 +273,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15032": {
       "primary_identity": "id:arXiv:2609.15032",
@@ -236,7 +295,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15054": {
       "primary_identity": "id:arXiv:2609.15054",
@@ -257,7 +317,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15079": {
       "primary_identity": "id:arXiv:2609.15079",
@@ -278,7 +339,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15126": {
       "primary_identity": "id:arXiv:2609.15126",
@@ -299,7 +361,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15172": {
       "primary_identity": "id:arXiv:2609.15172",
@@ -320,7 +383,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.15361": {
       "primary_identity": "id:arXiv:2609.15361",
@@ -341,7 +405,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16090": {
       "primary_identity": "id:arXiv:2609.16090",
@@ -362,7 +427,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16245": {
       "primary_identity": "id:arXiv:2609.16245",
@@ -383,7 +449,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16356": {
       "primary_identity": "id:arXiv:2609.16356",
@@ -404,7 +471,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16429": {
       "primary_identity": "id:arXiv:2609.16429",
@@ -425,7 +493,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16648": {
       "primary_identity": "id:arXiv:2609.16648",
@@ -446,7 +515,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.16874": {
       "primary_identity": "id:arXiv:2609.16874",
@@ -467,7 +537,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17019": {
       "primary_identity": "id:arXiv:2609.17019",
@@ -488,7 +559,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17210": {
       "primary_identity": "id:arXiv:2609.17210",
@@ -509,7 +581,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17241": {
       "primary_identity": "id:arXiv:2609.17241",
@@ -530,7 +603,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のLLM serving・parallelism・KV cache・MoE inference・speculative decoding",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-recent-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17380": {
       "primary_identity": "id:arXiv:2609.17380",
@@ -551,7 +625,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17391": {
       "primary_identity": "id:arXiv:2609.17391",
@@ -572,7 +647,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.17527": {
       "primary_identity": "id:arXiv:2609.17527",
@@ -593,7 +669,8 @@
       "last_rejected_at": "2026-09-17T06:00:00+09:00",
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
-      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+      "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
     }
   }
 }
