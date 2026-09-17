@@ -2,61 +2,62 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-61cea03f965b827a2ed92932",
-  "job_id": "job-research-1abdfafeb85e4df9",
+  "attempt_id": "attempt-942af3295b1538b54adcfd38",
+  "job_id": "job-research-133abb5ee0382900",
   "data": {
-    "canonical_id": "arXiv:2504.08784",
-    "arxiv_id": "2504.08784",
-    "doi": "10.48550/arXiv.2504.08784",
+    "canonical_id": "arXiv:2503.01890",
+    "arxiv_id": "2503.01890",
+    "doi": "10.48550/arXiv.2503.01890",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.LG"
-      ]
+      "primary": "cs.LG",
+      "cross_list": []
     },
-    "title": "SLOs-Serve: Optimized Serving of Multi-SLO LLMs",
-    "summary": "SLOs-Serveは、アプリケーションや処理段階ごとに異なるサービスレベル目標（SLO）を持つLLM要求を対象に、達成可能な要求集合の選択とトークン割当を動的計画法で同時最適化するサービングシステムである。チャンク化プリフィル、動的バッチサイズ、SLO適応型投機的デコード、ソフト入場制御、複数レプリカ間ルーティングを統合し、6シナリオで従来系よりGPU当たりサービング容量を平均2.2倍改善した。",
-    "list_summary": "段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。",
+    "title": "AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs",
+    "summary": "AutoHeteは、GPUメモリ不足をCPUメモリへの退避で補う異種混在LLM学習で、活性値再計算、パラメータ退避、オプティマイザ状態退避を別々の固定方針として扱うと、通信量やCPU更新処理が増えてGPUが待たされる問題を扱う。torch.fxでTransformerブロック単位の計算時間・メモリ量・CPU/GPU間転送時間を測り、3種類のメモリ節約策をどのブロックへ適用するかを整数線形計画で自動決定する。さらに、逆伝播後の勾配退避とCPUオプティマイザ更新を先頭側ブロック優先で並べ替え、次反復に必要なパラメータの先読みと順伝播を前反復の末尾へ重ねる。A100 40GBを用いた2B〜22B級GPT型モデルでは、単一GPU・4GPUの双方で既存異種混在学習方式を上回り、StrongHold比で単一GPU平均1.32倍、4GPU平均1.44倍のスループットを示した。",
+    "list_summary": "活性値再計算・パラメータ退避・オプティマイザ退避を整数線形計画で共同選択し、反復をまたぐ優先度付き処理重畳でCPU/GPU待ちを減らす異種混在LLM学習方式。",
     "authors": [
-      "Siyuan Chen",
-      "Zhipeng Jia",
-      "Samira Khan",
-      "Arvind Krishnamurthy",
-      "Phillip B. Gibbons"
+      "Zihao Zeng",
+      "Chubo Liu",
+      "Xin He",
+      "Juan Hu",
+      "Yong Jiang",
+      "Fei Huang",
+      "Kenli Li",
+      "Wei Yang Bryan Lim"
     ],
-    "authors_affiliations": "Carnegie Mellon University; Google",
-    "published": "2025-04-05",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2025-04-05)",
-    "lineage": "LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing",
+    "authors_affiliations": "Nanyang Technological University; Hunan University; Agency for Science, Technology and Research; National University of Singapore; Alibaba Group",
+    "published": "2025-02-27",
+    "publication": "arXiv preprint arXiv:2503.01890v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "heterogeneous LLM training / CPU-GPU offloading / activation checkpointing / automatic strategy search",
     "topics": [
-      "LLMサービング",
-      "SLO対応スケジューリング",
-      "動的計画法",
-      "投機的デコード",
-      "入場制御",
-      "複数レプリカ"
+      "LLM学習",
+      "異種混在メモリ",
+      "CPUオフロード",
+      "活性値チェックポイント",
+      "整数線形計画",
+      "優先度スケジューリング"
     ],
-    "importance": "単一段階のTTFTまたはTPOTを貪欲に最適化する既存スケジューラに対し、要求全体の複数段階SLOを同時に満たせる要求集合とバッチ計画を明示的に最適化する点が重要である。",
-    "implementation": "vLLMをバックエンドに用い、PagedAttentionでメモリ管理、Rayでスケジューラと実行器をオーケストレーションする実装。スケジューリング・フロントエンド約10K行Python、資源計画器約1.5K行C++。",
-    "hardware_evaluation": "主にGoogle a2-highgpu-4gの40GB A100×4、スケーラビリティ評価にa3-highgpu-8gの80GB H100×8。OPT-13B/30Bでは2/4-way tensor parallelism。",
-    "quality_effect": "モデル品質自体は変更せず、SLO達成率とGPU当たり要求容量を最適化する。投機的デコードでは受理率を考慮して投機長をSLO別に調整する。",
-    "source": "https://arxiv.org/abs/2504.08784",
+    "importance": "既存の異種混在学習が個別に扱っていた活性値、パラメータ、オプティマイザ状態の配置を一つの費用モデルで共同最適化し、さらに単一反復内だけでなく反復間の重畳まで扱う点に意義がある。",
+    "hardware_evaluation": "National Supercomputing Centre Singaporeの1ノードを使用。NVIDIA A100 40GB GPU×4、AMD EPYC 7713 64コアCPU、DDR4 440GB。GPU間はNVLink、CPU-GPU間はPCIe 4.0。単一GPUと4GPUの両方を評価した。",
+    "quality_effect": "モデル構造や学習目的関数を変更せず、データ依存関係を維持したままメモリ配置・再計算・転送・更新順序を変更するシステム最適化である。論文は学習収束を変えない設計として説明しているが、主評価は性能・メモリ効率である。",
+    "source": "https://arxiv.org/abs/2503.01890",
     "sources": [
-      "https://arxiv.org/abs/2504.08784",
-      "https://arxiv.org/html/2504.08784"
+      "https://arxiv.org/abs/2503.01890",
+      "https://arxiv.org/pdf/2503.01890"
     ],
     "code": null,
+    "implementation": "PyTorch上のプロトタイプとして実装。torch.fxで計算グラフを取得し、torch.autograd.Functionのカスタム処理、CUDAストリーム、torch.cuda.Event、GPUメモリ事前割当てを用いて計画された再計算・転送・CPU更新を実行する。論文本文では公開コードURLを示していない。",
     "last_checked": "2026-09-17",
     "references": [],
     "references_checked_at": "2026-09-17",
-    "references_source": "primary manuscript reference section",
-    "references_total": 0
+    "references_source": "primary-reference-section",
+    "references_total": 42
   },
   "reservation": {
-    "claim_id": "claim-61cea03f965b827a2ed92932",
+    "claim_id": "claim-942af3295b1538b54adcfd38",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
     "worker_kind": "scheduled_chat"
   }
