@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:16:07 JST**
+> 自動生成: **2026-09-17 14:16:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-17 14:13:08 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-17 14:13:08 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -147,7 +147,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17193` — End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 14:13:43 JST** / heartbeat: **—** / lease expiry: **09-17 15:43:43 JST**
+  - claim: **09-17 14:16:41 JST** / heartbeat: **—** / lease expiry: **09-17 15:46:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-fe0106a025692e30.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**

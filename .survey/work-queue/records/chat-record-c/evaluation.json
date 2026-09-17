@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-feb068aa483c1deb5a1bdb9a",
+  "attempt_id": "attempt-482caf37761abfd8d593db1f",
   "job_id": "job-research-fe0106a025692e30",
   "data": {
     "hardware": "simulation parameterはRTX 3080/3090/4090相当の10/20/24 GB GPU。各serverにLlama-3.2-1Bを配置し、prefill rate 2,500/4,000/8,000 token/s、decode throughputは対応GPU上のvLLM offline profilingからKV占有量の関数として設定。",
@@ -11,7 +11,7 @@
     "scope": "実GPUでthroughput profileは取るがend-to-end結果はsimulationであり、実network/serving cluster deploymentではない。output lengthを既知または推定済み入力と仮定し、downlink response latencyは無視。各slotで全userが1 request生成する規則的arrival modelで、実traffic burstやoutput-length prediction errorへの頑健性は直接評価しない。"
   },
   "reservation": {
-    "claim_id": "claim-feb068aa483c1deb5a1bdb9a",
+    "claim_id": "claim-482caf37761abfd8d593db1f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

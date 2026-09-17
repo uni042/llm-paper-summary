@@ -1,1 +1,64 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-feb068aa483c1deb5a1bdb9a","job_id":"job-research-fe0106a025692e30","data":{"canonical_id":"arXiv:2609.17193","arxiv_id":"2609.17193","title":"End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services","summary":"分散したエッジ計算機へ大規模言語モデル要求を割り当てる際、通信、事前充填、反復生成、キー・バリューキャッシュの変化を時間枠をまたいで追跡し、長期平均遅延を抑えながら計算機間の負荷偏りも制御するLYREOを提案する。キー・バリュー占有量と滞在時間の積を負荷指標とし、リアプノフ仮想待ち行列で長期制約を扱い、長短期記憶網による将来収益予測で要求完了まで遅れて現れる結果を過去の割当判断へ再配分する。","list_summary":"キー・バリューの量と滞在時間、リアプノフ長期制約、遅延報酬再配分を組み合わせ、分散エッジ推論の遅延と負荷分散を同時最適化する割当方式。","source":"https://arxiv.org/abs/2609.17193","sources":["https://arxiv.org/abs/2609.17193","https://arxiv.org/pdf/2609.17193"],"authors":["Zhen Li","Jun Cai","Haoran Gao","An Li","Tan Li"],"published":"2026-09-15","publication":"arXiv:2609.17193","publication_type":"preprint","publication_status":"preprint","arxiv_categories":{"primary":"cs.AI","cross_list":[]},"topics":["エッジLLM","要求割当","負荷分散","キー・バリューキャッシュ","強化学習"],"implementation":"評価はPyTorch 1.8による模擬実験で、Llama-3.2-1BをRTX 3080、3090、4090上のvLLMで事前計測した処理速度を利用する。公開コード置き場は論文ページで確認できない。","code":null,"last_checked":"2026-09-17","hardware_evaluation":"RTX 3080、3090、4090相当の計算機を想定し、Llama-3.2-1Bの事前充填速度を毎秒2,500、4,000、8,000トークン、メモリを10、20、24 GBとして事前計測値に基づき模擬する。","quality_effect":"学習収束時の平均端末間遅延は約2.4秒で、リアプノフPPO約3.9秒、通常PPO約5.2秒。利用者20〜60人では次点方式比で平均約33%遅延を低減する。標準条件で99百分位遅延3.74秒、高キー・バリュー率6.42%。","references":[{"canonical_id":"arXiv:2206.02658","arxiv_id":"2206.02658"},{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"}],"references_checked_at":"2026-09-17","references_source":"arXiv PDF v1 reference section","references_total":34},"reservation":{"claim_id":"claim-feb068aa483c1deb5a1bdb9a","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-482caf37761abfd8d593db1f",
+  "job_id": "job-research-fe0106a025692e30",
+  "data": {
+    "canonical_id": "arXiv:2609.17193",
+    "arxiv_id": "2609.17193",
+    "title": "End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services",
+    "summary": "分散したエッジ計算機へ大規模言語モデル要求を割り当てる際、通信、事前充填、反復生成、キー・バリューキャッシュの変化を時間枠をまたいで追跡し、長期平均遅延を抑えながら計算機間の負荷偏りも制御するLYREOを提案する。キー・バリュー占有量と滞在時間の積を負荷指標とし、リアプノフ仮想待ち行列で長期制約を扱い、長短期記憶網による将来収益予測で要求完了まで遅れて現れる結果を過去の割当判断へ再配分する。",
+    "list_summary": "キー・バリューの量と滞在時間、リアプノフ長期制約、遅延報酬再配分を組み合わせ、分散エッジ推論の遅延と負荷分散を同時最適化する割当方式。",
+    "source": "https://arxiv.org/abs/2609.17193",
+    "sources": [
+      "https://arxiv.org/abs/2609.17193",
+      "https://arxiv.org/pdf/2609.17193"
+    ],
+    "authors": [
+      "Zhen Li",
+      "Jun Cai",
+      "Haoran Gao",
+      "An Li",
+      "Tan Li"
+    ],
+    "published": "2026-09-15",
+    "publication": "arXiv:2609.17193",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "topics": [
+      "エッジLLM",
+      "要求割当",
+      "負荷分散",
+      "キー・バリューキャッシュ",
+      "強化学習"
+    ],
+    "implementation": "評価はPyTorch 1.8による模擬実験で、Llama-3.2-1BをRTX 3080、3090、4090上のvLLMで事前計測した処理速度を利用する。公開コード置き場は論文ページで確認できない。",
+    "code": null,
+    "last_checked": "2026-09-17",
+    "hardware_evaluation": "RTX 3080、3090、4090相当の計算機を想定し、Llama-3.2-1Bの事前充填速度を毎秒2,500、4,000、8,000トークン、メモリを10、20、24 GBとして事前計測値に基づき模擬する。",
+    "quality_effect": "学習収束時の平均端末間遅延は約2.4秒で、リアプノフPPO約3.9秒、通常PPO約5.2秒。利用者20〜60人では次点方式比で平均約33%遅延を低減する。標準条件で99百分位遅延3.74秒、高キー・バリュー率6.42%。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2206.02658",
+        "arxiv_id": "2206.02658"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      }
+    ],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv PDF v1 reference section",
+    "references_total": 34
+  },
+  "reservation": {
+    "claim_id": "claim-482caf37761abfd8d593db1f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

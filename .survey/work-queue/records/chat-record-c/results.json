@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-feb068aa483c1deb5a1bdb9a",
+  "attempt_id": "attempt-482caf37761abfd8d593db1f",
   "job_id": "job-research-fe0106a025692e30",
   "data": {
     "overview": "LYREOはLyapunovによる長期constraint処理とreward redistributionの両方が効き、Ly-PPO/PPOより低い平均latencyと小さいload-balance queueへ収束する。load balanceを外すと平均latencyは下がる一方、P99とhigh-KV率が大幅悪化し、単なるrequest countを負荷指標にすると全指標が悪化する。",
@@ -52,7 +52,7 @@
     "quality_impact": "平均latencyだけを追うとserver集中でtail latencyとmemory riskが悪化するため、LYREOは平均値を少し犠牲にしてP99とKV headroomを改善するtradeoffを明示している。"
   },
   "reservation": {
-    "claim_id": "claim-feb068aa483c1deb5a1bdb9a",
+    "claim_id": "claim-482caf37761abfd8d593db1f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
