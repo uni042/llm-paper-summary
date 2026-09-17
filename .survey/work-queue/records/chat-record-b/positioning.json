@@ -4,7 +4,19 @@
   "slot": "positioning",
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
-  "data": {},
+  "data": {
+    "related_work": [
+      {"lineage": "Production memory systems", "comparison": "Mem0、Zep、MemGPT/Lettaは関連contextを検索してprompt textとして注入するため、取得contextを毎要求でprefillする。InferScaleは検索pipelineを維持しつつconditioning interfaceをKV injectionへ変更する。"},
+      {"lineage": "Prefix/block KV reuse", "comparison": "vLLM prefix caching、Block-Attention、CacheBlend、LazyAttention、LMCache等はKV再利用を扱うが、固定prompt layoutや選択的re-encoding/recomputation等を前提にする。InferScaleはpre-RoPE keyを要求時位置へ再回転して動的なretrieved fact集合を扱う。"},
+      {"lineage": "Sparse/retrieval attention", "comparison": "RetroInferやRetrievalAttentionは一つの長contextに対するdecode attention costを削減する。InferScaleの主対象は共有静的contextを要求ごとに再prefillするコストであり、prefill側の再利用を狙う。"},
+      {"lineage": "GPU-native vector retrieval", "comparison": "Jasper等のGPU ANNは検索自体を高速化する。InferScaleはGPU retrievalをKV storeとfact_idで結合し、検索後のconditioningまでGPU内で完結させる。"}
+    ],
+    "distinction": "中心的な差は、semantic retrievalの結果をtoken列として再計算するのではなく、位置非依存に保存したモデル内部KV状態へ変換して再利用する点である。検索結果が要求ごとに異なるため従来prefix cacheでは共有しにくいcontextをChunked RoPEで再配置可能にした。",
+    "strengths": "stock vLLMのplugin interfaceで実装され、モデルfine-tuning不要である。理論的なKV injection等価性、RoPE位置再配置、実機latency/throughput、accuracy、memory footprint、CPU offloadまで一貫して評価しており、実システムとしてのtrade-offが明確である。",
+    "limitations": "最大の制約はper-conversation KV容量で、Llama-3.1-8Bでは約4.8GBを要するため多数ユーザーをGPU常駐させにくい。CPU offloadは容量を緩和するがend-to-end latencyにk依存のPCIe費用を加える。またContext-Window Encodingでもretrieved facts同士の完全なcross-fact attentionは一般には復元せず、multi-hopやQwen3-14Bでprompt injectionとのaccuracy gapが残る。評価は単一高容量GPUとLoCoMo中心で、multi-GPU servingや大規模memory churnは未検証である。",
+    "repository_relation": "既存のKV cache memory、prefix caching、RAG cache、retrieval attention系に対し、永続ユーザーメモリを『再利用可能なKVオブジェクト』として扱う系統を補完する。特にCPU/GPU階層メモリ研究との接点として、KV storeをhost DRAMへoffloadした際の容量対latency trade-offを定量化している。",
+    "future_directions": "KV storeの圧縮・量子化、ユーザー間/会話間deduplication、NVMeを含む多階層KV store、hotness-aware placement、cross-fact interactionを低コストに補う部分再計算、multi-GPUでのretrieval/KV placementが自然な拡張候補である。"
+  },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
     "worker_id": "scheduled-chat-llm-survey",
