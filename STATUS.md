@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 20:33:49 JST**
+> 自動生成: **2026-09-17 20:34:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -155,9 +155,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.08426` — KV Cache Offloading for Context-Intensive Tasks / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 20:31:08 JST** / heartbeat: **—** / lease expiry: **09-17 22:01:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0b1a3df137cd07ea.json`
+- `arXiv:2406.08334` — ProTrain: Efficient LLM Training via Memory-Aware Techniques / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 20:33:59 JST** / heartbeat: **—** / lease expiry: **09-17 22:03:59 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5862dce444505150.json`
 
 #### Audit
 
