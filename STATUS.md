@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 09:05:06 JST**
+> 自動生成: **2026-09-17 09:05:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **57** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（1時間42分前）** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（1時間43分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -192,9 +192,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 09:04:05 JST** / heartbeat: **—** / lease expiry: **09-17 10:34:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-411dee2b8db54e04.json`
+- `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 09:05:17 JST** / heartbeat: **—** / lease expiry: **09-17 10:35:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
 - `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist-0700`
   - claim: **09-17 07:22:10 JST** / heartbeat: **09-17 08:28:37 JST** / lease expiry: **09-17 09:58:37 JST**
   - evidence: `.survey/work-queue/claims/job-research-120be1bd98c2839e.json`

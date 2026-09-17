@@ -2,16 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-61811259b32b4274e91088a8",
-  "job_id": "job-research-411dee2b8db54e04",
+  "attempt_id": "attempt-f50e208383daab47e4b14e74",
+  "job_id": "job-research-5bed14c683ee7a49",
   "data": {
-    "hardware": "主系はRTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TB。OPT-66B FP16は132GB相当で、GPU 0〜4層、CPU 5〜12層、SSD 13〜63層へ配置する。GPUダイレクトストレージ対応経路も評価する。",
-    "software": "Hugging Face Accelerateの密重み退避推論を比較対象とし、SparseGPTまたはWandaで50%非構造枝刈りを行う。圧縮比較にはZSTD、量子化併用にはSmoothQuant INT8を使用する。",
-    "methodology": "単一バッチのテキスト生成で、まずOPT層の線形演算単体についてSSD-CPU、CPU-GPU転送、復元、計算の内訳を測定する。次にOPT-66B全64層の1回通過時間を同じ配置で比較し、圧縮によりCPUへ置ける層数が増える効果も別に測る。GPUダイレクトストレージ経路、INT8量子化併用、OPT-66BとLlama2-70BのWikiText perplexityを評価する。",
-    "scope": "主目的は単一バッチの遅延削減であり、高並列サービングのスループット最適化ではない。疎性は保存・転送量削減に使うが、GPU上の行列計算自体は密計算のままで、非構造疎性による演算削減は未利用である。"
+    "hardware": "メモリ制約の消費者向けGPUを対象とした実機評価で、主要な端末間比較にNVIDIA GeForce RTX 3090を用いる。Mixtral-8x7BのFP16全体は約94GBで、FloEは11GB VRAM条件まで評価する。CPU DRAMからGPU VRAMへのPCIe 4.0 x16級転送を主要ボトルネックとし、論文の動機測定では専門家1個のFP16転送が約15ms、RTX 3090上の専門家計算が約5ms。",
+    "software": "Mixtral-8x7Bを中心に、専門家オフロード実装とDeepSpeed-MII等を比較する。方式評価ではgate/up/down各射影の疎化・量子化感度、層間専門家予測、専門家内疎性予測、非同期先読み、疎計算カーネルを個別および統合で検証する。",
+    "datasets": [
+      "C4（活性分布と閾値推定）",
+      "WikiText-2（perplexityによる圧縮感度）",
+      "複数の下流言語課題（品質平均の比較）"
+    ],
+    "methodology": "まず専門家内部の活性分布を層・射影別に測定し、目標疎性率に対するperplexity感度を比較する。次にup射影の低ビット量子化耐性と、現在層隠れ状態から次層を予測できる類似性を検証する。統合システムでは専門家当たり圧縮率、必要VRAM、端末間推論時間、既存オフロード方式に対する高速化、下流課題の品質低下を測る。単なる圧縮率ではなく、転送が計算に隠れるかを壁時計時間で評価する。",
+    "settings": [
+      {
+        "name": "Mixtral-8x7B低メモリ配置",
+        "description": "FP16全体約94GBのMixtral-8x7Bを対象に、専門家内部圧縮とCPUオフロードを組み合わせ、最小11GB VRAMでの実行可能性と端末間速度を測定する。"
+      },
+      {
+        "name": "射影別感度",
+        "description": "C4から得た活性分布で疎化閾値を設定し、WikiText-2 perplexityを用いてgate、up、down相当の疎化感度を比較する。down入力は50%疎化でperplexity増加約0.5%と比較的頑健で、gate側は高感度。"
+      },
+      {
+        "name": "統合オンザフライ推論",
+        "description": "圧縮、二段予測、先読み、疎カーネルを有効化し、RTX 3090上でDeepSpeed-MIIを含む既存方式と壁時計推論性能を比較する。"
+      }
+    ],
+    "scope": "実GPU上の単一端末・低バッチ・遅延重視の専門家オフロードが中心で、データセンターの大規模多GPU高スループット運用を直接最適化する研究ではない。主張はMixtral-8x7Bで最も強く、他MoEでの疎性観測も示すが、予測精度や最適疎性率はモデル・入力分布・PCIe帯域に依存する。"
   },
   "reservation": {
-    "claim_id": "claim-61811259b32b4274e91088a8",
+    "claim_id": "claim-f50e208383daab47e4b14e74",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
