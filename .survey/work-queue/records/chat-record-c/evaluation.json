@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f6a5e2ca71f1c7ef9975e44d","job_id":"job-research-cf3f98aec47a974c","data":{"hardware":"Apple M4 Pro MacBook、24 GiB unified memory。対象モデルはQwen3.8-27Bの固定MXFP4 checkpoint。","software":"MLX/ mlx-vlmを基盤としたJustFit runtime。Metal kernelをhead dimension 256・page 256 tokenへspecializeし、stock SDPAを利用。capacity guardはmacOS phys_footprintを約0.25秒間隔で測定し21,000 MiB以上で終了。","methodology":"容量試験は反復text、greedy decoding、EOS抑制で所定token数を完全実行し、server実token数を検証する。単一限界試験は1 lane、229,376-position pool、196,608 input、16,384 outputをfresh processで3回。別途2要求・4要求、8K/32K/64K入力+64出力probe、固定32K+6Kを各成功構成3 fresh process、prefix reuse、mixed arrival/cancellation、AIME 2026を評価する。prefill throughputはuncached prompt token/総prefill時間、decodeはfirst token後のoutput/decode interval。","scope":"単一の24 GiB M4 Pro MacBookとQwen3.8-27B MXFP4が中心で、GPUサーバや他モデルへの一般化は未検証。開発構成は複数revisionにまたがり、個別変更の完全な一因子ablationではない。容量stress testは反復text・EOS抑制を使うため実アプリworkloadそのものではないが、全tokenを実際に計算する。"},"reservation":{"claim_id":"claim-f6a5e2ca71f1c7ef9975e44d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f33bcf6582c61bebc4e77283",
+  "job_id": "job-research-fe0106a025692e30",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f33bcf6582c61bebc4e77283",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

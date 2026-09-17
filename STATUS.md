@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:05:53 JST**
+> 自動生成: **2026-09-17 14:05:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **78** |
-| 最終検証済みResearch収録 | **09-17 13:39:54 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-17 13:39:54 JST（26分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **4** | **1** | **3** | **3** | **0** | — |
+| Research | **10** | **4** | **1** | **3** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **5** | **2** | **3** | **3** | **0** | **5** |
+| 合計 | **11** | **5** | **2** | **3** | **3** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -145,13 +145,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
-  - claim: **09-17 13:43:36 JST** / heartbeat: **—** / lease expiry: **09-17 15:13:36 JST**
+  - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
-- `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 13:42:21 JST** / heartbeat: **—** / lease expiry: **09-17 15:12:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cf3f98aec47a974c.json`
+- `arXiv:2609.17193` — End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 14:05:58 JST** / heartbeat: **—** / lease expiry: **09-17 15:35:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-fe0106a025692e30.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`

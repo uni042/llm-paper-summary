@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f6a5e2ca71f1c7ef9975e44d","job_id":"job-research-cf3f98aec47a974c","data":{"canonical_id":"arXiv:2609.17475","arxiv_id":"2609.17475","title":"JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management","summary":"24 GiBのApple Siliconラップトップで27B級LLMの長文脈推論を成立させるため、圧縮KVの実行時復元、モデル部品の所有権ベース常駐切替、要求間の状態保持・再利用を統合したMLX推論ランタイムJustFitを提案する。Qwen3.8-27B MXFP4で単一要求196,608入力+16,384出力を3回完走し、mlx-vlm基準の30,720位置から212,992位置へ6.93倍拡張した。","list_summary":"圧縮KV実行・部品常駐切替・状態保持遷移を統合し、24 GiB MacBookでQwen3.8-27Bの約213K位置の単一要求を完走するMLX推論ランタイム。","source":"https://arxiv.org/abs/2609.17475","sources":["https://arxiv.org/abs/2609.17475","https://arxiv.org/html/2609.17475v1"],"authors":["Yuhua Chen"],"published":"2026-09-15","publication":"arXiv:2609.17475","publication_type":"preprint","publication_status":"preprint","arxiv_categories":{"primary":"cs.AI","cross_list":["cs.PF"]},"topics":["ローカルLLM推論","KVキャッシュ圧縮","階層メモリ","状態管理","MLX"],"implementation":"MLXベースの実装。論文は複数の開発revisionと再現用manifest/source snapshotを保持すると述べるが、arXivページ上で独立した公開コードURLは確認できない。","code":null,"last_checked":"2026-09-17","hardware_evaluation":"Apple M4 Pro MacBook、24 GiB統合メモリ、Qwen3.8-27B MXFP4。21,000 MiBのプロセスfootprint guard下で容量・速度・再利用を測定。","quality_effect":"単一要求192K入力+16K出力を3/3完走し212,992位置、2要求では229,376位置を保持。AIME 2026はTQ4で29/30正解。短出力32K入力では19.11 token/s、固定32K+6Kでは最終構成11.54 token/s・中央値16,374 MiB。"},"reservation":{"claim_id":"claim-f6a5e2ca71f1c7ef9975e44d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f33bcf6582c61bebc4e77283",
+  "job_id": "job-research-fe0106a025692e30",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f33bcf6582c61bebc4e77283",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
