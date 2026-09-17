@@ -2,41 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c2d1264e84b9954d425e9dd6",
-  "job_id": "job-research-a06bdf20c1667dad",
-  "data": {
-    "hardware": "32×32 FP16シストリック配列、128KBの符号帳参照器、4組の32幅FP16加算木、16個の量子化照合器、総336KBオンチップバッファ、4チャネル64GB/s DDR4をモデル化。各追加器をRTL実装し28nm、500MHzで合成する。",
-    "software": "周期精密端末間シミュレータで投影層と注意計算を再現し、面積・電力は論理合成、SRAMはCACTI、DRAMはDRAMSim3から取得する。",
-    "datasets": [
-      "Llama2-7B",
-      "Llama2-13B",
-      "Mistral-7B",
-      "ARC Easy",
-      "ARC Challenge",
-      "COPA",
-      "OpenBookQA",
-      "PIQA",
-      "Winogrande"
-    ],
-    "methodology": "AQLMの2ビット重みを用い、符号帳単位疎性の精度を六つの下流課題で測る。ハードウェアは入力長512と複数復号長の端末間推論を再現し、通常シストリック配列、ANT、FIGNA、FIGLUTと速度・エネルギーを比較する。重み量子化、鍵値量子化、入力疎性を順に追加する除去実験と、バッチ数に応じた二実行流の切替も測る。",
-    "settings": [
-      {
-        "name": "量子化と疎性精度",
-        "description": "重みは二符号帳、ベクトル長8、各索引8ビットの2ビット構成。Llama2-7Bでは30%、Llama2-13Bでは25%疎性で元AQLM精度の95%以上を保つ点を確認する。"
-      },
-      {
-        "name": "端末間ハードウェア評価",
-        "description": "入力長512、複数復号長、三モデルで周期精密シミュレーションし、速度、エネルギー、面積効率を既存加速器と比較する。"
-      },
-      {
-        "name": "実行流切替",
-        "description": "入力行数16未満では乗算先行、16以上または非対応演算では参照先行を使い、バッチ増加に伴う利用率の逆転を確認する。"
-      }
-    ],
-    "scope": "実GPUソフトウェア実装ではなく、既存シストリック配列型加速器への小規模ハードウェア拡張を想定したRTL合成と周期精密シミュレーション。資源制約のある端末や専用推論加速器への適用を主眼とする。"
-  },
+  "attempt_id": "attempt-acc1b683ee406ecf9ec83842",
+  "job_id": "job-research-d2b8ca705732c790",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c2d1264e84b9954d425e9dd6",
+    "claim_id": "claim-acc1b683ee406ecf9ec83842",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
