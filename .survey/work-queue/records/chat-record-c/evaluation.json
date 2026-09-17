@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-482caf37761abfd8d593db1f",
-  "job_id": "job-research-fe0106a025692e30",
-  "data": {
-    "hardware": "simulation parameterはRTX 3080/3090/4090相当の10/20/24 GB GPU。各serverにLlama-3.2-1Bを配置し、prefill rate 2,500/4,000/8,000 token/s、decode throughputは対応GPU上のvLLM offline profilingからKV占有量の関数として設定。",
-    "software": "PyTorch 1.8。PPO actor/criticは各4層fully connected network、reward redistributionのreturn predictorは2層LSTM hidden dimension 64。learning rate 3e-4、PPO epoch 10、discount 0.98、5 random seeds。",
-    "methodology": "LMSYS-Chat-1Mからrequest長を抽出し平均input 70、output 215 token。800 slot、1 slot=1s、各userは毎slot 1 request、200×200m領域で位置変動。KV 16 KB/token、server bandwidth 6–14 MHz、load-balance tolerance 0.01。比較はLy-PPO、通常PPO、static batching、Least-Loaded、Random。学習時は完全trajectoryを事前利用せず、800 slot後の未完了requestは完了まで実行して最終rewardへ反映。",
-    "scope": "実GPUでthroughput profileは取るがend-to-end結果はsimulationであり、実network/serving cluster deploymentではない。output lengthを既知または推定済み入力と仮定し、downlink response latencyは無視。各slotで全userが1 request生成する規則的arrival modelで、実traffic burstやoutput-length prediction errorへの頑健性は直接評価しない。"
-  },
+  "attempt_id": "attempt-4d6748469e8b81aa4c861ca8",
+  "job_id": "job-research-f37149dfc085d0ea",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-482caf37761abfd8d593db1f",
+    "claim_id": "claim-4d6748469e8b81aa4c861ca8",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

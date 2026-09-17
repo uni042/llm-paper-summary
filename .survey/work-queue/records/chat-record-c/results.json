@@ -2,57 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-482caf37761abfd8d593db1f",
-  "job_id": "job-research-fe0106a025692e30",
-  "data": {
-    "overview": "LYREOはLyapunovによる長期constraint処理とreward redistributionの両方が効き、Ly-PPO/PPOより低い平均latencyと小さいload-balance queueへ収束する。load balanceを外すと平均latencyは下がる一方、P99とhigh-KV率が大幅悪化し、単なるrequest countを負荷指標にすると全指標が悪化する。",
-    "key_results": [
-      {
-        "metric": "学習収束時平均E2E latency",
-        "value": "約2.4 s",
-        "baseline": "Ly-PPO 約3.9 s、PPO 約5.2 s",
-        "condition": "5 seeds、simulation",
-        "interpretation": "Ly-PPOとの差はreward redistributionの寄与を示す。"
-      },
-      {
-        "metric": "収束時平均load-balancing queue length",
-        "value": "約0.02",
-        "baseline": "Ly-PPO 約0.09、PPO 約0.22",
-        "condition": "post-hoc comparison",
-        "interpretation": "Lyapunov guidanceとredistributed rewardの組合せでimbalance蓄積への反応が改善。"
-      },
-      {
-        "metric": "user数20–60でのlatency",
-        "value": "約2.3→3.3 s",
-        "baseline": "Ly-PPO 約2.9→5.6 s",
-        "condition": "edge server S=8",
-        "interpretation": "tested range平均でLy-PPO比約33%低減し、load deviationを約0.009未満に維持。"
-      },
-      {
-        "metric": "load-balancing ablation",
-        "value": "LYREO: avg 2.63 s、P99 3.74 s、deviation 0.008、high-KV 6.42%",
-        "baseline": "LYREO-Count: 2.79 s/4.56 s/0.011/8.04%",
-        "condition": "count-based workloadへ置換",
-        "interpretation": "memory-time metricはrequest countよりresource pressureをよく表す。"
-      },
-      {
-        "metric": "load-balance constraint除去",
-        "value": "avg latency 2.02 s",
-        "baseline": "LYREO 2.63 s",
-        "condition": "LYREO-NoLB",
-        "interpretation": "平均は23.2%改善するがdeviationは125%増、P99 6.73 sで79.9%増、high-KV 14.35%で123.5%増。"
-      }
-    ],
-    "negative_results": [
-      "load-balance制約を外すと平均latencyは2.02sまで下がり、LYREOの平均latency最小化だけなら制約がcostになる。",
-      "request countだけのbalancingは平均・P99・deviation・high-KVの全てでmemory-time指標より悪い。",
-      "結果はsimulationであり、実edge clusterでscheduler overheadやwireless measurement errorを含むend-to-end検証ではない。"
-    ],
-    "interpretation": "主要な価値は、stateful LLM servingの負荷を瞬間queue長ではなくKVの量×時間で表し、完了まで遅れるlatency feedbackをdecision時系列へ再配分した点。高負荷ほどreward delayが長くなるため、user増加時にLy-PPOとの差が広がる。",
-    "quality_impact": "平均latencyだけを追うとserver集中でtail latencyとmemory riskが悪化するため、LYREOは平均値を少し犠牲にしてP99とKV headroomを改善するtradeoffを明示している。"
-  },
+  "attempt_id": "attempt-4d6748469e8b81aa4c861ca8",
+  "job_id": "job-research-f37149dfc085d0ea",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-482caf37761abfd8d593db1f",
+    "claim_id": "claim-4d6748469e8b81aa4c861ca8",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
