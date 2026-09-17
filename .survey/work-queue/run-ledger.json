@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T04:27:00.769415+00:00",
+  "updated_at": "2026-09-17T04:36:50.445280+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T04:27:00.769415+00:00",
+      "last_recorded_at": "2026-09-17T04:36:50.445280+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 189,
+        "research_completed": 190,
         "audit_completed": 0,
         "discovery_completed": 89,
         "blocked": 12,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35082878146:1",
-          "recorded_at": "2026-09-16T10:06:24.729189+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35082878146",
-            "run_attempt": "1",
-            "source_sha": "e7a6c919744efde7ff862bff214ae7d919d4b9ed"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35083155368:1",
           "recorded_at": "2026-09-16T10:08:50.591527+00:00",
@@ -19595,6 +19580,20 @@
             "run_id": "35181945721",
             "run_attempt": "1",
             "source_sha": "8c53e072b3a977185703f7acdee7b83fb531ca01"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35182543927:1",
+          "recorded_at": "2026-09-17T04:36:50.445280+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35182543927",
+            "run_attempt": "1",
+            "source_sha": "a3230c81e12e2ab24657748f6a4c2d6f67f44bf2"
           },
           "signals": [
             "research_completed"
@@ -21919,6 +21918,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.28302",
           "title": "How Far Can Disaggregation Go? A Design-Space Exploration of Attention-FFN Disaggregation for Efficient MoE LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4954e0b135582135",
+          "type": "research",
+          "canonical_id": "arXiv:2504.14893",
+          "title": "Hardware-based Heterogeneous Memory Management for Large Language Model Inference",
           "from": "ready",
           "to": "completed"
         }
