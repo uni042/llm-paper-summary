@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:41:21 JST**
+> 自動生成: **2026-09-18 06:42:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **58** |
 | 未claim Research job | **57** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-18 06:37:33 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-18 06:37:33 JST（4分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **9** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **26** | **10** | **9** | **1** | **1** | **0** | **18** |
+| 合計 | **26** | **9** | **9** | **0** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -146,8 +146,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-11e1f9a8272a62c09027cd4c.json` (job `job-research-2ce5027f5de1889a`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
   - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
   - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
@@ -204,7 +203,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2509.26328` — Fast-dLLM v2: Efficient Block-Diffusion LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 06:38:45 JST** / heartbeat: **—** / lease expiry: **09-18 08:08:45 JST**
+  - claim: **09-18 06:42:16 JST** / heartbeat: **—** / lease expiry: **09-18 08:12:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-2ce5027f5de1889a.json`
 
 #### Audit
