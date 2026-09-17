@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T19:09:35.184277+00:00",
+  "updated_at": "2026-09-17T19:33:30.561637+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T19:09:35.184277+00:00",
+      "last_recorded_at": "2026-09-17T19:33:30.561637+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 219,
+        "research_completed": 220,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35141661033:1",
-          "recorded_at": "2026-09-16T19:37:53.582155+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35141661033",
-            "run_attempt": "1",
-            "source_sha": "71c9b0d1168222482f02e3b27b84d02715b1afa9"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35150307276:1",
           "recorded_at": "2026-09-16T21:07:28.971618+00:00",
@@ -19594,6 +19580,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35265549762:1",
+          "recorded_at": "2026-09-17T19:33:30.561637+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35265549762",
+            "run_attempt": "1",
+            "source_sha": "deef76a19d34f90bb6227785cf7549ef706430a5"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22301,6 +22301,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-1e6c346844ef359a",
+          "type": "research",
+          "canonical_id": "arXiv:2609.18110",
+          "title": "SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23944,7 +23952,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 683,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
