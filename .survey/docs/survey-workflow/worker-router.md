@@ -18,6 +18,8 @@ Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は現行経路で�
 
 ## 0. 時刻routingとmaintenance gate
 
+通常論文workerは、queue/job/claimを変更する前に、そのrunの**実際の現在時刻をライブ時刻源で1回取得**し、その値を `actual_invocation_start` として固定する。会話履歴、前run、session context、プロンプト中の古い時刻を開始時刻として再利用してはならない。取得したJST時刻が08:30 runに該当する場合は、Research/Auditをclaimせず、直ちにその他更新workerへrouteする。ライブ時刻を確認できない場合は時刻依存routeを推測せず、claim/write前に停止して時刻取得を再試行する。
+
 通常論文workerでは時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を確認する。探索主体workerの`:00` runはDiscovery mode / Overflow research modeのどちらでも通常workerの24-run maintenance counterへ加算しない。
 
 通常workerのrouting:
@@ -178,27 +180,6 @@ A〜Hすべてが使用中でもLibraryへ完全payloadを保存できれば研�
 
 1. `framework-updates/**`
 2. `llm-releases/**`
+3. 必要な `.survey/update-worker/**` の一時成果物
 
-論文queueには触れない。既存の `.survey/update-worker/update-payload.json` と `update-inbox.json` を使う。
-
-さらに `suggestion-box.md` に従って `/LLM-survey-suggestion-box/pending/` を確認する。pendingがある場合だけ実質重複をまとめてユーザーへ報告し、報告後に `reported/` へ移す。提案を08:30 worker自身の判断で自動実装しない。
-
-08:30通知には直近24時間について次を必ず含める。
-
-1. 発見した論文数
-2. 正本リポジトリへ追加した論文数
-3. research対象として残る未処理candidate数
-
-可能な限りrun ledger、discovery state、queue、fallback状態から集計し、取得不能な値を推測で確定値にしない。
-
-## 11. 作業中の改善知見
-
-maintenanceを除くworkerは、実作業中に具体的な摩擦・失敗・重複作業・無駄・復旧コスト・品質低下リスクを観測し、具体的で実行可能な改善案を得た場合だけ `suggestion-box.md` に従ってLibraryへ保存する。件数ノルマは設けず、重大障害は目安箱へ先送りしない。
-
-## 12. GitHub Actionsのレーン
-
-- `survey-claim-main`: claim割当、record bank予約、軽量queue snapshot。
-- `survey-submission-main`: Research/Auditの不変descriptor処理。
-- `survey-background-main`: fallback replay、Discovery/control submission、dedupe、blocked retry、citation、index、maintenance等。
-
-claim / submission fast laneはbackground laneの完了を同期障壁にしない。
+Research / Audit / Discoveryは同じrunでは行わない。
