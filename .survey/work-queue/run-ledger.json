@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T13:01:58.041985+00:00",
+  "updated_at": "2026-09-17T13:04:18.448117+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T13:01:58.041985+00:00",
+      "last_recorded_at": "2026-09-17T13:04:18.448117+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 213,
         "audit_completed": 0,
-        "discovery_completed": 93,
+        "discovery_completed": 95,
         "blocked": 15,
-        "new_jobs": 136,
+        "new_jobs": 139,
         "new_papers": 216,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35119110030:1",
-          "recorded_at": "2026-09-16T16:02:22.694688+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35119110030",
-            "run_attempt": "1",
-            "source_sha": "3e347762007294f6482b751212033df2f7e5e3ff"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35122868571:1",
           "recorded_at": "2026-09-16T16:35:46.066083+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35224417483",
             "run_attempt": "1",
             "source_sha": "00ccd8407e89eb6d4c8463ca33310ecbd9e774e1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35224522408:1",
+          "recorded_at": "2026-09-17T13:04:18.448117+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35224522408",
+            "run_attempt": "1",
+            "source_sha": "c65ef6917863bff934d4a01f92fce4210be812a0"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -22166,6 +22166,22 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-c6570df8edbda7b0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d3061f092aa97b3c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23120,6 +23136,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-c6570df8edbda7b0",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-d3061f092aa97b3c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-56fbeb640bc1560d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.28018",
+          "title": "Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill"
         }
       ],
       "new_paper_ids": [
@@ -23553,7 +23590,9 @@
         ".survey/work-queue/results/20260917T1528JST-discovery-disaggregation-evaluation-4.json",
         ".survey/work-queue/results/20260917T2100JST-discovery-moe-placement-5.json",
         ".survey/work-queue/results/20260917T2100JST-discovery-network-disagg-4.json",
-        ".survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json"
+        ".survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json",
+        ".survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json",
+        ".survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",

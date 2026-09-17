@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 22:03:12 JST**
+> 自動生成: **2026-09-17 22:04:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **45** |
-| 未claim Research job | **44** |
+| 収録候補論文 | **46** |
+| 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間21分前）** |
+| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間22分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **45** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **5** | **1** | **4** | **0** | **0** | **25** |
-| 合計 | **23** | **7** | **1** | **6** | **1** | **0** | **25** |
+| Discovery | **8** | **5** | **3** | **2** | **0** | **0** | **25** |
+| 合計 | **25** | **7** | **3** | **4** | **1** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-17 22:02:33 JST** job `job-c6570df8edbda7b0` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
+  - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling
+- **09-17 22:02:42 JST** job `job-d3061f092aa97b3c` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-edge-agentic-3.json`
+  - 探索軸: agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving
 - **09-17 22:00:54 JST** job `job-c0936418c1cadb8e` / 候補 **5件**
   - result: `.survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
@@ -148,16 +156,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 22:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **25件**
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **25件**
 - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling / agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving / MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer / September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory / GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
 - round `disagg-routing-2` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
   - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json` (`ok=true`)
 - round `edge-agentic-3` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-edge-agentic-3.json`
   - 探索軸: agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json` (`ok=true`)
 - round `offload-serving-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
   - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
@@ -198,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,10 +234,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **454** |
+| 成功result未照合のimmutable submission | **452** |
 | └ Research | **321** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **127** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
