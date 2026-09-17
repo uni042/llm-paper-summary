@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:19:36 JST**
+> 自動生成: **2026-09-17 14:29:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **50** |
 | 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **75** |
-| 最終検証済みResearch収録 | **09-17 14:18:42 JST（54秒前）** |
+| 直近24hの検証済みResearch収録 | **73** |
+| 最終検証済みResearch収録 | **09-17 14:18:42 JST（10分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -146,15 +146,15 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 14:29:24 JST** / lease expiry: **09-17 15:59:24 JST**
+  - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
 - `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 14:19:28 JST** / heartbeat: **—** / lease expiry: **09-17 15:49:28 JST**
   - evidence: `.survey/work-queue/claims/job-research-f37149dfc085d0ea.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
-- `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
 
 #### Audit
 
