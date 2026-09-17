@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3c3cd2b059b73c1be8574ac5",
-  "job_id": "job-research-24c58326f22e095e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3c3cd2b059b73c1be8574ac5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3c3cd2b059b73c1be8574ac5","job_id":"job-research-24c58326f22e095e",
+ "data":{
+  "hardware":"単一ノードは8×NVIDIA H100 SXM5 80GB、NVLink Gen4 900GB/s、Dual Xeon Platinum 8462Y+、2TB DDR5-4800、ConnectX-7 InfiniBand 400Gbps。複数ノードは2ノード各8×NVIDIA H200 SXM5 142GB、NVLink Gen4 900GB/s、Dual Xeon Platinum 8562Y、2TB DDR5-5600、ConnectX-7 InfiniBand 800Gbps。単一ノードと複数ノードでGPU型が異なるため、両者の絶対性能を直接比較する評価ではない。",
+  "software":"Megatron-LMの全対全通信・エキスパート配置部を改変し、任意配置を実装する。ILPはGurobi 12.0.0、許容誤差0.025。PyTorch 2.5.1、CUDA 12.4、RHEL 9。尾部・平均遅延はPyTorch Profilerで測定する。",
+  "methodology":"モデルはMixtral-8x7B、データセットはWikiText-103、MiniPile、LAMBADA、enwik8。エキスパート並列度は4に固定し、8GPU単一ノードは4EP-2TP、16GPU・2ノードは4EP-4TP。比較対象はMegatron-LMの連続番号エキスパート配置。エンドツーエンドは100ウォームアップ後100推論ステップをデータセット横断で平均する。尾部・平均遅延はWikiText-103で100ウォームアップ後10ステップを測り、各層・反復で最遅GPUを尾部値とする。",
+  "scope":"実機上の分散MoE推論評価であり、シミュレーションではない。ただし対象モデルはMixtral-8x7B一種類、エキスパート数8、エキスパート並列度4に限定される。単一ノードH100と複数ノードH200でハードウェアが異なり、複数ノードではテンソル並列度も2から4へ増える。配置統計は対象タスクの小さな代表部分から取得するため、ルーティング分布が時間的・入力分布的に大きく変化するオンライン環境への適応性は直接評価していない。"
+ },
+ "reservation":{"claim_id":"claim-3c3cd2b059b73c1be8574ac5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
