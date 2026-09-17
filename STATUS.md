@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 02:02:46 JST**
+> 自動生成: **2026-09-18 02:30:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（1時間15分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（1時間42分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -193,7 +193,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2411.17741` — Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 00:48:06 JST** / heartbeat: **—** / lease expiry: **09-18 02:18:06 JST**
+  - claim: **09-18 02:30:12 JST** / heartbeat: **—** / lease expiry: **09-18 04:00:12 JST**
   - evidence: `.survey/work-queue/claims/job-research-d9f05d11667dcf83.json`
 
 #### Audit
