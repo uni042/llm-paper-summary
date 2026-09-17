@@ -19,24 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 67,
-    "actively_claimed": 0,
-    "claimable": 67
+    "actively_claimed": 1,
+    "claimable": 66
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-97b8208885471bff",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2609.18063",
-      "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
-      "source_url": "https://arxiv.org/abs/2609.18063",
-      "paper_path": "papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-660ceb86238a1a21",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-1fd656c9a10556db",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2602.10729",
+      "title": "BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization",
+      "source_url": "https://arxiv.org/abs/2602.10729",
+      "paper_path": "papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T19:33:26+00:00"
+  "generated_at": "2026-09-17T19:36:04+00:00"
 }

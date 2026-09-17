@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 04:35:46 JST**
+> 自動生成: **2026-09-18 04:36:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **21** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **9** | **9** | **0** | **1** | **0** | **18** |
+| 合計 | **28** | **9** | **8** | **1** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -135,17 +135,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 03:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2609.18110` — SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC
-  - job: `.survey/work-queue/jobs/job-research-1e6c346844ef359a.json`
-  - result: `.survey/work-queue/results/research/attempt-42b6429a1b73e190dbc9976c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-42b6429a1b73e190dbc9976c.json`
-  - paper: `papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md`
+- 最新観測run: **2026-09-18 04:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-2a61ba1261894f97dcd2cf26.json` (job `job-research-97b8208885471bff`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 03:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 04:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -242,8 +238,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **456** |
-| └ Research | **327** |
+| 成功result未照合のimmutable submission | **457** |
+| └ Research | **328** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
