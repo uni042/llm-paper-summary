@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 09:31:45 JST**
+> 自動生成: **2026-09-17 10:01:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **57** |
-| 未claim Research job | **54** |
+| 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（2時間9分前）** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（2時間39分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **8** | **4** | **4** | **3** | **1** | — |
+| Research | **6** | **8** | **4** | **4** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **15** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **23** | **10** | **6** | **4** | **3** | **1** | **6** |
+| 合計 | **21** | **10** | **6** | **4** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,16 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-9333f33610f25827f87c2af1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9333f33610f25827f87c2af1.json`
   - paper: `papers/inference/04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md`
-- **09-17 03:41:56 JST** [research] `arXiv:2609.13285` — Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction
-  - job: `.survey/work-queue/jobs/job-research-38c18cd4bb2728b9.json`
-  - result: `.survey/work-queue/results/research/attempt-d6929dca26947ce1b79ba676.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d6929dca26947ce1b79ba676.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2609.13285-grouped-value-attention-efficient-kv-caching.md`
-- **09-17 03:38:32 JST** [research] `arXiv:2609.13161` — PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation
-  - job: `.survey/work-queue/jobs/job-research-9f909dd53a5f1acb.json`
-  - result: `.survey/work-queue/results/research/attempt-942145c6596d2cfdf7866f97.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-942145c6596d2cfdf7866f97.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md`
 
 ### Audit
 
@@ -191,16 +181,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 09:05:57 JST** / heartbeat: **09-17 09:31:36 JST** / lease expiry: **09-17 11:01:36 JST**
+  - claim: **09-17 09:05:57 JST** / heartbeat: **09-17 10:01:40 JST** / lease expiry: **09-17 11:31:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-411dee2b8db54e04.json`
 - `arXiv:2505.05950` — FloE: On-the-Fly MoE Inference / worker `scheduled-chat-llm-survey-project`
   - claim: **09-17 09:31:36 JST** / heartbeat: **—** / lease expiry: **09-17 11:01:36 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bed14c683ee7a49.json`
-- `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist-0700`
-  - claim: **09-17 07:22:10 JST** / heartbeat: **09-17 08:28:37 JST** / lease expiry: **09-17 09:58:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-120be1bd98c2839e.json`
 
 #### Audit
 
