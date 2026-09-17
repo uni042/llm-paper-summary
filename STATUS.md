@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 22:02:35 JST**
+> 自動生成: **2026-09-17 22:03:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **45** |
 | 未claim Research job | **44** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間20分前）** |
+| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間21分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **4** | **1** | **3** | **0** | **0** | **20** |
-| 合計 | **23** | **6** | **1** | **5** | **1** | **0** | **20** |
+| Discovery | **6** | **5** | **1** | **4** | **0** | **0** | **25** |
+| 合計 | **23** | **7** | **1** | **6** | **1** | **0** | **25** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -148,8 +148,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 22:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **20件**
-- 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling / agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving / MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer / GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **25件**
+- 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling / agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving / MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer / September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory / GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
 - round `disagg-routing-2` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
   - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling
@@ -162,6 +162,10 @@
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
   - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
   - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json` (`ok=true`)
+- round `september-memory-5` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-september-memory-5.json`
+  - 探索軸: September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `storage-runtime-4` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-storage-runtime-4.json`
   - 探索軸: GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
@@ -222,10 +226,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **453** |
+| 成功result未照合のimmutable submission | **454** |
 | └ Research | **321** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **129** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
