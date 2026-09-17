@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 00:01:29 JST**
+> 自動生成: **2026-09-18 00:02:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-17 23:39:36 JST（21分前）** |
+| 最終検証済みResearch収録 | **09-17 23:39:36 JST（22分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **2** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **13** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **27** | **5** | **3** | **2** | **0** | **0** | **3** |
+| Discovery | **13** | **2** | **1** | **1** | **0** | **0** | **5** |
+| 合計 | **27** | **6** | **3** | **3** | **0** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 00:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
-- 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving / MoE expert offloading・hardware-limit modeling・3D memory speculative serving
+- round `distributed-moe-placement-2` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
+  - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `moe-offload-hardware-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
   - 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
@@ -234,10 +238,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **453** |
+| 成功result未照合のimmutable submission | **454** |
 | └ Research | **324** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
