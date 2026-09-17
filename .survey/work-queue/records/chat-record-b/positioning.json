@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ef5e846f84592864e5a802f9",
-  "job_id": "job-research-581beb5301e2ddf8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ef5e846f84592864e5a802f9",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ef5e846f84592864e5a802f9","job_id":"job-research-581beb5301e2ddf8","data":{"limitations":"CHIME-PIMは提案アーキテクチャをシミュレータ、DRAM timing、28nm論理合成、既存PIM電力モデルで評価しており、製造したDIMM-PIM実機の検証ではない。標準DDRインターフェースを維持する設計だがbank/rank演算器、softmax、再配置回路、PIM controller等のハードウェア変更を必要とする。優位性は長文脈かつKV容量がバッチを制約する条件で大きく、短文脈では縮小する。GPU全結合性能をB200等へ大幅強化するとボトルネックが注意側へ移り、HBM-PIMが有利になる領域もある。モデル品質・故障耐性・実OSメモリ競合・CXL経由増設の実性能は評価していない。","differences":"FastDecodeやNEOはKVを大容量host memoryへ置きCPUで注意を計算するため容量は得るが帯域が低い。CachedAttentionやFlexGenはhostにKVを置いてGPUへ戻すためPCIe帯域が律速になる。AttAcc、NeuPIMs、PAPI等のHBM-PIM AFDは非常に高い注意帯域を持つがHBM容量が小さく、長文脈でバッチ数を増やせずGPU全結合側が遊ぶ。CENT等のGDDR-PIMは容量・帯域を拡張できるがAFD用途では過剰帯域とコスト効率の問題がある。CHIMEはDIMMの増設可能な容量とbank PIMの帯域を組み合わせ、さらにDRMでどちらをどこまで増やすべきかを分析する点が異なる。InstAttentionのようなSSD内計算はさらに大容量だが、注意帯域が低い系統としてDRM上では別の設計点になる。","implementation_status":"arXiv v2は2026-08-07公開。CHIME-PIMはbank PU、rank PU、shared/result buffer、softmax/add/re-layout unitsを備える提案ハードウェアで、TSMC 28nmでbank PU等を合成して面積を推定する。CHIME-sysの予測スケジューラとシミュレーションモデルは記述されているが、arXiv本文から公式コード公開URLは確認できない。主要エンドツーエンド値は8×A100とDDR4 DIMM-PIMをモデル化したシミュレーションである。","research_positioning":"KVキャッシュ階層メモリ、PIM/PNM、注意・全結合分離推論、長文脈配信の交点に位置する。重要なのは『KVをどこへ置くか』だけでなく、GPU全結合側が必要とするバッチを満たす容量と、そのバッチの注意を追従処理する帯域を一対で設計するという視点である。SSD/NVMe、CXL memory、host DRAM、HBM-PIMなど異なる階層をDRMの容量・帯域曲線へ載せれば、どの階層がどのGPU・文脈長で有効かを比較する枠組みに拡張できる。MoEでもexpert全結合側の性能曲線を置き換えることで同様の分離設計分析が可能と論文は指摘する。"},"reservation":{"claim_id":"claim-ef5e846f84592864e5a802f9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
