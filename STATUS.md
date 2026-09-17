@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 05:34:47 JST**
+> 自動生成: **2026-09-18 05:35:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **4** | **3** | **1** | **2** | **0** | — |
+| Research | **9** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **12** | **11** | **1** | **2** | **0** | **18** |
+| 合計 | **28** | **9** | **8** | **1** | **2** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -145,28 +145,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 04:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-06615d8161517af04db2bc76.json` (job `job-research-660ceb86238a1a21`)
-- **成功** `arXiv:2504.05897` — HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-fd53481863b8e4e0.json`
-  - result: `.survey/work-queue/results/research/attempt-0f8f604e4dd41baf02109b3f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0f8f604e4dd41baf02109b3f.json`
-  - paper: `papers/inference/01-offload-hierarchical-memory/2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md`
-- **成功** `arXiv:2605.24832` — Optimus: Elastic Decoding for Efficient Diffusion LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-cbc6b0e2ec411766.json`
-  - result: `.survey/work-queue/results/research/attempt-bfff6cdf557d0a31b3e1498c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bfff6cdf557d0a31b3e1498c.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md`
-- **成功** `arXiv:2609.18063` — The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction
-  - job: `.survey/work-queue/jobs/job-research-97b8208885471bff.json`
-  - result: `.survey/work-queue/results/research/attempt-d1f7aa5ebc3945e6ec100e5b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d1f7aa5ebc3945e6ec100e5b.json`
-  - paper: `papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md`
+- 最新観測run: **2026-09-18 05:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-8a81151586fdc3a2613ff366.json` (job `job-research-b6925d33135e854c`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 04:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 05:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -266,8 +251,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **459** |
-| └ Research | **330** |
+| 成功result未照合のimmutable submission | **460** |
+| └ Research | **331** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
