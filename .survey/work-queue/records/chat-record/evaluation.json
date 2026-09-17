@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d8b169e0a547a65f26f0952f",
+  "attempt_id": "attempt-d86ce3c4548e1fc7cbd4c04b",
   "job_id": "job-research-21f0d525f3274129",
   "data": {
     "hardware": "Purifierの増分処理はIntel i5-9400F 6コア 2.90GHz、23.4GB RAMで測定。LLM生成・判定はGLM-5、独立判定にはQwen3.7plus、Selector解析にはKimi K2.5も用いるが、API背後のGPU構成は論文では特定されない。",
@@ -10,5 +10,9 @@
     "methodology": "LoCoEvalは71個の実リポジトリ由来128会話、12,780ターンで、単一ホップ64会話と複数ホップ64会話を評価する。情報抽出と話題認識を対象にし、関数完成はpytest環境が必要なため除外する。BEAM 1Mは35会話700問のうち話題多様性を制御して14会話263問を選び、700K〜1.8Mトークンの長会話で切り詰めと比較する。さらに60個のSWE-benchトレースを12セッションへ連結し、7,831問で10種類のゼロLLMルーティング法をRecall@10とMRRで比較する。主評価のF1はLLM判定だが、別モデル判定、等価性検定、構成要素除去、距離別解析、失敗事例を併用する。",
     "scope": "実CPU上で索引処理遅延を測り、LLM側は商用APIを使ったシステム評価であるため、完全な実機GPUサービング性能比較ではない。対象の中心はコーディング会話で、エンティティ抽出と制御ルーティング評価もSWE-bench由来に偏る。BEAM 1MではM10を使わない簡略Purifierを用い、35会話中14会話のみを評価する。生産導入報告は13インスタンス・350回超のツールラウンドだが対照群を持たない。"
   },
-  "reservation": {"claim_id": "claim-d8b169e0a547a65f26f0952f", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d86ce3c4548e1fc7cbd4c04b",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

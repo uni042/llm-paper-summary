@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:35:40 JST**
+> 自動生成: **2026-09-17 13:35:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -130,12 +130,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.14773` — Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 13:35:51 JST** / heartbeat: **—** / lease expiry: **09-17 15:05:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-21f0d525f3274129.json`
 - `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:34:23 JST** / heartbeat: **—** / lease expiry: **09-17 15:04:23 JST**
   - evidence: `.survey/work-queue/claims/job-research-4954e0b135582135.json`
-- `arXiv:2609.14773` — Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 13:27:05 JST** / heartbeat: **—** / lease expiry: **09-17 14:57:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-21f0d525f3274129.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
