@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T18:02:51.424186+00:00",
+  "updated_at": "2026-09-17T19:09:35.184277+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T18:02:51.424186+00:00",
+      "last_recorded_at": "2026-09-17T19:09:35.184277+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 219,
         "audit_completed": 0,
-        "discovery_completed": 101,
+        "discovery_completed": 104,
         "blocked": 15,
-        "new_jobs": 147,
+        "new_jobs": 159,
         "new_papers": 222,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35141399566:1",
-          "recorded_at": "2026-09-16T19:34:59.636834+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35141399566",
-            "run_attempt": "1",
-            "source_sha": "eef583e17b4ee4f241190a5fc729365980c54340"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35141661033:1",
           "recorded_at": "2026-09-16T19:37:53.582155+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35256108869",
             "run_attempt": "1",
             "source_sha": "4b2287e6058fd1951ebd3f1ca50068b766847d34"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35262996680:1",
+          "recorded_at": "2026-09-17T19:09:35.184277+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35262996680",
+            "run_attempt": "1",
+            "source_sha": "560769ca05e364d1d3d7065a84c7b07459f70c9a"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -22277,6 +22277,30 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-28c58a04ea5f0b58",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-81083356e015ff3c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-eb22aac21645da23",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23308,6 +23332,90 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-28c58a04ea5f0b58",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-81083356e015ff3c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-eb22aac21645da23",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-11c68d7adc12c492",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.26120",
+          "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM"
+        },
+        {
+          "job_id": "job-research-146f944f1c748398",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.06295",
+          "title": "dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"
+        },
+        {
+          "job_id": "job-research-2829f7afbf13ae9b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.02558",
+          "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction"
+        },
+        {
+          "job_id": "job-research-2ce5027f5de1889a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.26328",
+          "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM"
+        },
+        {
+          "job_id": "job-research-3001166a9d479500",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.16339",
+          "title": "LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models"
+        },
+        {
+          "job_id": "job-research-99d754a688aca9c8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.22618",
+          "title": "Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding"
+        },
+        {
+          "job_id": "job-research-b6925d33135e854c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.15781",
+          "title": "dKV-Cache: The Cache for Diffusion Language Models"
+        },
+        {
+          "job_id": "job-research-cbc6b0e2ec411766",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.24832",
+          "title": "Optimus: Elastic Decoding for Efficient Diffusion LLM Serving"
+        },
+        {
+          "job_id": "job-research-ef418ddc1bde46e9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.23094",
+          "title": "d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching"
         }
       ],
       "new_paper_ids": [
@@ -23755,7 +23863,10 @@
         ".survey/work-queue/results/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json",
         ".survey/work-queue/results/20260918T0202JST-discovery-specialist-hbf-memory-2.json",
         ".survey/work-queue/results/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json",
-        ".survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json"
+        ".survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json",
+        ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json",
+        ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json",
+        ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",

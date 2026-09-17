@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b6925d33135e854c",
+  "type": "research",
+  "parent_job_id": "job-81083356e015ff3c",
+  "priority": 88,
+  "canonical_id": "arXiv:2505.15781",
+  "title": "dKV-Cache: The Cache for Diffusion Language Models",
+  "source_url": "https://arxiv.org/abs/2505.15781",
+  "paper_path": "papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+  "selection_reason": "diffusion language modelのbidirectional attention向けにdelayed and conditioned KV cachingを導入し、decode/greedy variantsで2〜10倍のinference speedupを報告。NeurIPS 2025採択で、後続dLLM cache研究の基礎となる重要な未収録論文。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T19:08:12+00:00"
+}

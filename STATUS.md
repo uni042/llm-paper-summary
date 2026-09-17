@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 04:09:14 JST**
+> 自動生成: **2026-09-18 04:09:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
-| 未claim Research job | **50** |
+| 収録候補論文 | **60** |
+| 未claim Research job | **59** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（3時間21分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（3時間22分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **60** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **60** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **6** | **1** | **5** | **0** | **0** | **11** |
-| 合計 | **20** | **7** | **1** | **6** | **1** | **0** | **11** |
+| Discovery | **17** | **7** | **4** | **3** | **0** | **0** | **14** |
+| 合計 | **23** | **8** | **4** | **4** | **1** | **0** | **14** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -85,10 +85,22 @@
 
 ### Discovery
 
+- **09-18 04:08:05 JST** job `job-eb22aac21645da23` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
+  - 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction
+- **09-18 04:08:12 JST** job `job-81083356e015ff3c` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json`
+  - 探索軸: dLLM delayed KV cache・dual adaptive cache・conference lineage
 - **09-18 04:05:29 JST** job `job-09415fe947517f0c` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json`
   - 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
+- **09-18 04:08:18 JST** job `job-28c58a04ea5f0b58` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-serving-2.json`
+  - 探索軸: diffusion LLM serving・elastic decoding・KV reuse・parallel decoding
 - **09-18 02:59:29 JST** job `job-4c07976a89c00fbe` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
@@ -113,18 +125,6 @@
   - result: `.survey/work-queue/results/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
   - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮
-- **09-18 01:00:51 JST** job `job-8b987704cc22f477` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json`
-  - 探索軸: GB-scale LLC・CPU階層メモリ・異種many-core runtime
-- **09-18 01:02:46 JST** job `job-69258e62289459cd` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json`
-  - 探索軸: 異種メモリアクセラレータ・KV transfer・disaggregated serving
-- **09-18 01:06:11 JST** job `job-303e9d043b4472ca` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T0116JST-discovery-specialist-near-memory-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json`
-  - 探索軸: HBM-PIM・near-memory KV管理・memory-side dequantization
 
 ### 直近タスク
 
@@ -143,16 +143,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 04:00 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **5件** / 候補: **11件**
-- 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction / dLLM delayed KV cache・dual adaptive cache・conference lineage / 2026年9月新着・diffusion LLM・long-context KV offload/prefetch / diffusion LLM serving・elastic decoding・KV reuse・parallel decoding / 2026年9月新着・multi-tenant serving・latency isolation・fair scheduling / fault tolerance・failure recovery・confidential serving・resource isolation
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **3件** / 候補: **14件**
+- 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction / dLLM delayed KV cache・dual adaptive cache・conference lineage / 2026年9月新着・diffusion LLM・long-context KV offload/prefetch / diffusion LLM serving・elastic decoding・KV reuse・parallel decoding / 2026年9月新着・multi-tenant serving・latency isolation・fair scheduling / fault tolerance・failure recovery・confidential serving・resource isolation / heterogeneous multi-model routing・resource allocation・MoE failure recovery
 - round `specialist-dllm-cache-lineage-3` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
   - 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json` (`ok=true`)
 - round `specialist-dllm-cache-lineage-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json`
   - 探索軸: dLLM delayed KV cache・dual adaptive cache・conference lineage
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json` (`ok=true`)
 - round `specialist-dllm-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json`
   - 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
@@ -160,7 +160,7 @@
 - round `specialist-dllm-serving-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-serving-2.json`
   - 探索軸: diffusion LLM serving・elastic decoding・KV reuse・parallel decoding
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json` (`ok=true`)
 - round `specialist-multitenant-fairness-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-multitenant-fairness-5.json`
   - 探索軸: 2026年9月新着・multi-tenant serving・latency isolation・fair scheduling
@@ -168,6 +168,10 @@
 - round `specialist-resilience-security-6` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-resilience-security-6.json`
   - 探索軸: fault tolerance・failure recovery・confidential serving・resource isolation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-routing-recovery-7` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json`
+  - 探索軸: heterogeneous multi-model routing・resource allocation・MoE failure recovery
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -197,7 +201,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **60** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,10 +229,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **461** |
+| 成功result未照合のimmutable submission | **459** |
 | └ Research | **327** |
 | └ Audit | **2** |
-| └ Discovery | **130** |
+| └ Discovery | **128** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
