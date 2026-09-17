@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-2a61ba1261894f97dcd2cf26",
-  "job_id": "job-research-97b8208885471bff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2a61ba1261894f97dcd2cf26",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-2a61ba1261894f97dcd2cf26","job_id":"job-research-97b8208885471bff","data":{"overview":"Edge0は35B級MoEの重みをSSDへ残しながら、事前ルータによって読出し開始を一トークン前へ移し、ピーク活動メモリ2.9GiBで20.4トークン/秒を達成する。16GB MacBook M2上の同一セッションA/Bでは、要求後ストリーミングに対してK=2/4/8でデコードを80〜84%改善し、主スレッドが専門家ロードを待つ時間を大幅に削減する。一方、予測をルーティングへ置換するため品質は完全一致せず、回復LoRA適用後もfp16基底との差が35B平均3.9点、8B平均2.8点残る。","key_results":[{"metric":"35B公開層デコード速度","value":"20.4トークン/秒","baseline":"全重み常駐mlx-lm 3.9トークン/秒","condition":"Mac mini M4 Pro 24GB、K=4、19.5GB 4ビット基底、ピーク活動メモリ2.9GiB","interpretation":"全重み常駐がOSとKVキャッシュを圧迫する条件では、SSDストリーミングで活動集合だけを保持する方がメモリと速度の双方で有利になる。"},{"metric":"事前ルータによるデコード改善","value":"K=2で+80%、K=4で+82%、K=8で+84%","baseline":"要求後SSDストリーミング","condition":"MacBook M2 16GB、18.4GiB公開ディレクトリ、同一セッション交替A/B","interpretation":"予測で読出し量を大幅に減らすのではなく、ほぼ同じバイトを一トークン早く読み、直列SSD待ちをクリティカルパス外へ移す効果である。"},{"metric":"主スレッドの専門家ロード待ち","value":"K=4で244.0→101.9 ms/step","baseline":"要求後ストリーミング","condition":"同じ16GB MacBook M2 A/B。K=2は154.9→46.5、K=8は575.0→211.6 ms/step","interpretation":"SSD帯域、CPU、GPUの飽和ではなく、層ごとに直列化されたロード遅延が主要な除去対象であることを示す。"},{"metric":"35B品質平均","value":"79.2対fp16 83.2、平均差約3.9点","baseline":"Qwen3.6-35B-A3B fp16","condition":"OpenCompass、AIME/HumanEval/GPQA-Diamond/MMLU-Pro/IFBench","interpretation":"4ビット化とルーティング置換の損失をLoRAが大半回復するが、無損失ではない。"},{"metric":"8B品質平均","value":"69.9対fp16 72.7、平均差2.8点","baseline":"Ling 3.0 tiny fp16","condition":"同じ5ベンチマーク","interpretation":"小型層でも回復は機能するが、AIMEでは10点差が残り、長鎖推論への影響が大きい。"},{"metric":"増分スタックの効果","value":"別A/Bで+34%、別構成K=8で6.8→12.5トークン/秒","baseline":"毎ステップの完全スタック再構築","condition":"付録の別キャンペーン。同一セッションの事前ルータ表とは直接比較不可","interpretation":"事前ルータがSSD待ちを減らしてもテンソル組立費は残るため、変化スロットだけの更新が独立した高速化要因となる。"}],"negative_results":"同一トークン内で次層を予測する方式は著者実装で層ごと30〜100msの同期・評価費が生じ、測った全変種が単純LRUより遅かった。事前ルータはK=4で要求後方式より16%多い58.9MiB/stepを読み、先読みはI/O量を消さない。K=8ではステージ側の回収不能メモリが1.43GiB増え、ページキャッシュを1.15GiB奪う。長鎖推論の品質差も残り、35B AIMEは6.1点、8B AIMEは10.0点低い。","interpretation":"Edge0の中心的な利得は『予測精度で不要I/Oを削る』ことではなく、『予測を実ルーティングへ固定して必要I/Oを早期化する』ことにある。隣接トークンの専門家集合一致は約4分の1しかなく、先読みした重みの再利用は限定的である。それでもSSD待ちを現在ステップの計算へ重ねれば直列待ちを減らせる。代償は追加常駐メモリとルーティング近似であり、後者を学習済みLoRAが部分的に補う。","quality_impact":"完全無損失ではない。4ビット量子化に加えて元ルータを学習済み事前ルータへ置換するため計算経路が変わる。回復LoRAを統合せず並列適用して品質を戻すが、fp16基底との差は残る。MMLU-Proでは8B学生が基底を4.3点上回る一方、AIMEでは大きく低下するため、平均値だけで品質同等と断定すべきではない。"},"reservation":{"claim_id":"claim-2a61ba1261894f97dcd2cf26","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
