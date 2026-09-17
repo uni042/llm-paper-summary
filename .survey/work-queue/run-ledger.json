@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T20:35:19.978002+00:00",
+  "updated_at": "2026-09-17T21:03:49.243177+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T20:35:19.978002+00:00",
+      "last_recorded_at": "2026-09-17T21:03:49.243177+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 224,
+        "research_completed": 225,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 16,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35157143897:1",
-          "recorded_at": "2026-09-16T22:20:18.123659+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35157143897",
-            "run_attempt": "1",
-            "source_sha": "ce96fef4e65550f6c254c8988d398a344fd4a37a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35157307611:1",
           "recorded_at": "2026-09-16T22:22:16.476189+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35271676217",
             "run_attempt": "1",
             "source_sha": "95deba657e60d9b315f0d652ad5df03a7e66de5d"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35274484048:1",
+          "recorded_at": "2026-09-17T21:03:49.243177+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35274484048",
+            "run_attempt": "1",
+            "source_sha": "81e5f87955c67efd7cc73318bd9b67403b34cae7"
           },
           "signals": [
             "research_completed"
@@ -22346,6 +22346,14 @@
           "type": "research",
           "canonical_id": "arXiv:2505.15781",
           "title": "dKV-Cache: The Cache for Diffusion Language Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a725b9cf79d670cf",
+          "type": "research",
+          "canonical_id": "arXiv:2609.17573",
+          "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
           "from": "ready",
           "to": "completed"
         }
