@@ -1,29 +1,111 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3c3cd2b059b73c1be8574ac5","job_id":"job-research-24c58326f22e095e",
- "data":{
-  "canonical_id":"arXiv:2502.06643","arxiv_id":"2502.06643","doi":"10.48550/arXiv.2502.06643","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},
-  "title":"MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing",
-  "summary":"MoETunerは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家並列で、各GPUへ同数のエキスパートを置くだけではトークン処理量とGPU間通信量が偏り、最遅GPUが全体を待たせる問題を扱う。少量の代表データから層をまたぐエキスパート遷移頻度と各エキスパートの処理トークン数を採取し、二段階の整数線形計画（Integer Linear Programming; ILP）で、まず処理負荷が均等なエキスパート群を作り、次に群をGPUへ配置して最悪通信負荷を減らす。GPUごとの総エキスパート数を等しく保ちながら、計算負荷と通信偏りを同時に均す。",
-  "list_summary":"層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。",
-  "authors":["Seokjin Go","Divya Mahajan"],"authors_affiliations":"Georgia Institute of Technology","published":"2025-02-10","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint; arXiv v1",
-  "lineage":"MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散","topics":["MoE推論","エキスパート配置","整数線形計画","全対全通信","負荷分散","層間ルーティング依存"],
-  "importance":"通信量の総和だけでなくGPU対ごとの通信偏りとエキスパート処理負荷の偏りを同時に最適化し、メモリ容量の均等制約も維持するため、分散MoEの尾部遅延を配置段階から抑える点が重要である。",
-  "hardware_evaluation":"実機評価。単一ノードは8×NVIDIA H100 SXM5 80GB、NVLink Gen4 900GB/s、Dual Xeon Platinum 8462Y+、2TB DDR5-4800、ConnectX-7 400Gbps。複数ノードは2ノード計16×NVIDIA H200 SXM5 142GB、各ノードNVLink Gen4 900GB/s、Dual Xeon Platinum 8562Y、2TB DDR5-5600、ConnectX-7 800Gbps。",
-  "quality_effect":"学習済みMixtral-8x7Bのルータやエキスパート重み、top-2選択を変更せず、既に選ばれたトークンの送信先となるエキスパートの物理配置だけを変える。したがってモデル出力品質を近似で変える方式ではない。代表データのルーティング統計が本番データを代表できない場合は性能上の配置最適性が落ち得るが、生成意味自体を変更しない。",
-  "source":"https://arxiv.org/abs/2502.06643","sources":["https://arxiv.org/abs/2502.06643","https://arxiv.org/pdf/2502.06643"],"code":null,
-  "implementation":"Megatron-LMの全対全通信とエキスパート配置モジュールを改変し、GPUごとのカスタム配置と層ごとに異なるエキスパート数を許可する。ILPはGurobi 12.0.0、許容誤差0.025。PyTorch 2.5.1、CUDA 12.4、RHEL 9。公式MoETunerコードURLはarXivページと本文で確認できない。","last_checked":"2026-09-18",
-  "references":[
-   {"canonical_id":"arXiv:2404.05019","arxiv_id":"2404.05019","title":"Shortcut-connected expert parallelism"},
-   {"canonical_id":"arXiv:2407.06204","arxiv_id":"2407.06204","title":"A survey on mixture of experts"},
-   {"canonical_id":"arXiv:2103.13262","arxiv_id":"2103.13262","title":"FastMoE"},
-   {"canonical_id":"arXiv:2303.06182","arxiv_id":"2303.06182","title":"Towards MoE Deployment"},
-   {"canonical_id":"arXiv:2304.08442","arxiv_id":"2304.08442","title":"The MiniPile Challenge"},
-   {"canonical_id":"arXiv:2006.16668","arxiv_id":"2006.16668","title":"GShard"},
-   {"canonical_id":"arXiv:1701.06538","arxiv_id":"1701.06538","title":"Outrageously Large Neural Networks"},
-   {"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053","title":"Megatron-LM"},
-   {"canonical_id":"arXiv:2302.13971","arxiv_id":"2302.13971","title":"LLaMA"},
-   {"canonical_id":"arXiv:2304.11277","arxiv_id":"2304.11277","title":"PyTorch FSDP"}
-  ],"references_checked_at":"2026-09-18","references_source":"primary manuscript reference section","references_total":46
- },
- "reservation":{"claim_id":"claim-3c3cd2b059b73c1be8574ac5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-649cbf7dd4b2c0b7dbad2691",
+  "job_id": "job-research-24c58326f22e095e",
+  "data": {
+    "canonical_id": "arXiv:2502.06643",
+    "arxiv_id": "2502.06643",
+    "doi": "10.48550/arXiv.2502.06643",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing",
+    "summary": "MoETunerは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家並列で、各GPUへ同数のエキスパートを置くだけではトークン処理量とGPU間通信量が偏り、最遅GPUが全体を待たせる問題を扱う。少量の代表データから層をまたぐエキスパート遷移頻度と各エキスパートの処理トークン数を採取し、二段階の整数線形計画（Integer Linear Programming; ILP）で、まず処理負荷が均等なエキスパート群を作り、次に群をGPUへ配置して最悪通信負荷を減らす。GPUごとの総エキスパート数を等しく保ちながら、計算負荷と通信偏りを同時に均す。",
+    "list_summary": "層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。",
+    "authors": [
+      "Seokjin Go",
+      "Divya Mahajan"
+    ],
+    "authors_affiliations": "Georgia Institute of Technology",
+    "published": "2025-02-10",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint; arXiv v1",
+    "lineage": "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散",
+    "topics": [
+      "MoE推論",
+      "エキスパート配置",
+      "整数線形計画",
+      "全対全通信",
+      "負荷分散",
+      "層間ルーティング依存"
+    ],
+    "importance": "通信量の総和だけでなくGPU対ごとの通信偏りとエキスパート処理負荷の偏りを同時に最適化し、メモリ容量の均等制約も維持するため、分散MoEの尾部遅延を配置段階から抑える点が重要である。",
+    "hardware_evaluation": "実機評価。単一ノードは8×NVIDIA H100 SXM5 80GB、NVLink Gen4 900GB/s、Dual Xeon Platinum 8462Y+、2TB DDR5-4800、ConnectX-7 400Gbps。複数ノードは2ノード計16×NVIDIA H200 SXM5 142GB、各ノードNVLink Gen4 900GB/s、Dual Xeon Platinum 8562Y、2TB DDR5-5600、ConnectX-7 800Gbps。",
+    "quality_effect": "学習済みMixtral-8x7Bのルータやエキスパート重み、top-2選択を変更せず、既に選ばれたトークンの送信先となるエキスパートの物理配置だけを変える。したがってモデル出力品質を近似で変える方式ではない。代表データのルーティング統計が本番データを代表できない場合は性能上の配置最適性が落ち得るが、生成意味自体を変更しない。",
+    "source": "https://arxiv.org/abs/2502.06643",
+    "sources": [
+      "https://arxiv.org/abs/2502.06643",
+      "https://arxiv.org/pdf/2502.06643"
+    ],
+    "code": null,
+    "implementation": "Megatron-LMの全対全通信とエキスパート配置モジュールを改変し、GPUごとのカスタム配置と層ごとに異なるエキスパート数を許可する。ILPはGurobi 12.0.0、許容誤差0.025。PyTorch 2.5.1、CUDA 12.4、RHEL 9。公式MoETunerコードURLはarXivページと本文で確認できない。",
+    "last_checked": "2026-09-18",
+    "references": [
+      {
+        "canonical_id": "arXiv:2404.05019",
+        "arxiv_id": "2404.05019",
+        "title": "Shortcut-connected expert parallelism"
+      },
+      {
+        "canonical_id": "arXiv:2407.06204",
+        "arxiv_id": "2407.06204",
+        "title": "A survey on mixture of experts"
+      },
+      {
+        "canonical_id": "arXiv:2103.13262",
+        "arxiv_id": "2103.13262",
+        "title": "FastMoE"
+      },
+      {
+        "canonical_id": "arXiv:2303.06182",
+        "arxiv_id": "2303.06182",
+        "title": "Towards MoE Deployment"
+      },
+      {
+        "canonical_id": "arXiv:2304.08442",
+        "arxiv_id": "2304.08442",
+        "title": "The MiniPile Challenge"
+      },
+      {
+        "canonical_id": "arXiv:2006.16668",
+        "arxiv_id": "2006.16668",
+        "title": "GShard"
+      },
+      {
+        "canonical_id": "arXiv:1701.06538",
+        "arxiv_id": "1701.06538",
+        "title": "Outrageously Large Neural Networks"
+      },
+      {
+        "canonical_id": "arXiv:1909.08053",
+        "arxiv_id": "1909.08053",
+        "title": "Megatron-LM"
+      },
+      {
+        "canonical_id": "arXiv:2302.13971",
+        "arxiv_id": "2302.13971",
+        "title": "LLaMA"
+      },
+      {
+        "canonical_id": "arXiv:2304.11277",
+        "arxiv_id": "2304.11277",
+        "title": "PyTorch FSDP"
+      }
+    ],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript reference section",
+    "references_total": 46
+  },
+  "reservation": {
+    "claim_id": "claim-649cbf7dd4b2c0b7dbad2691",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
