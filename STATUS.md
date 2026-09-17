@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:40:02 JST**
+> 自動生成: **2026-09-17 13:41:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **45** |
+| 収録候補論文 | **52** |
+| 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-17 13:39:54 JST（8秒前）** |
+| 最終検証済みResearch収録 | **09-17 13:39:54 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **3** | **1** | **2** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **10** | **5** | **3** | **2** | **2** | **0** | **6** |
+| Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **11** | **4** | **2** | **2** | **2** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,7 +105,10 @@
 
 ### Discovery
 
-- 検証済み成功なし。
+- **09-17 13:41:46 JST** job `job-2910aab086edc06c` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
+  - 探索軸: fresh-arxiv-sep15-inference-systems
 
 ### 直近タスク
 
@@ -129,17 +132,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 07:10 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **6件**
-- 探索軸: recovery-of-invalid-discovery-submissions
-- round `legacy-invalid-recovery-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json`
-  - 探索軸: recovery-of-invalid-discovery-submissions
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-1.json` (`ok=true`)
-- round `legacy-invalid-recovery-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json`
-  - 探索軸: recovery-of-invalid-discovery-submissions
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T0710JST-discovery-recovery-legacy-invalid-2.json` (`ok=true`)
+- 最新観測run: **2026-09-17 13:30 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
+- 探索軸: fresh-arxiv-sep15-inference-systems
+- round `sep15-inference-systems-1` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
+  - 探索軸: fresh-arxiv-sep15-inference-systems
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -171,7 +170,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
