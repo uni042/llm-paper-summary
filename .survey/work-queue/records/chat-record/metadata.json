@@ -1,3 +1,63 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-11e1f9a8272a62c09027cd4c","job_id":"job-research-2ce5027f5de1889a","data":{"canonical_id":"arXiv:2509.26328","arxiv_id":"2509.26328","title":"Fast-dLLM v2: Efficient Block-Diffusion LLM","list_summary":"自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。","summary":"Fast-dLLM v2は、自己回帰型Qwen2.5-Instructをブロック拡散言語モデルへ変換し、ブロック間は左から右へ、各ブロック内は双方向拡散で複数トークンを並列生成する。訓練では系列を固定ブロック境界へ整列し、相補的な2種類のマスクで全トークンを教師対象にしつつ、予測位置を1トークンずらして元の次トークン予測表現を保つ。推論では確定済みブロックのKVを通常キャッシュし、現在ブロック内部ではFast-dLLM由来のDualCacheと信頼度並列復号を使う階層キャッシュを構成する。7Bモデルは約13.1億トークンの追加学習で、自己回帰基準と同等以上の精度を保ちながら最大約2.5倍の高速化を示す。","authors":["Chengyue Wu","Hao Zhang","Shuchen Xue","Shizhe Diao","Yonggan Fu","Zhijian Liu","Pavlo Molchanov","Ping Luo","Song Han","Enze Xie"],"authors_affiliations":"The University of Hong Kong; NVIDIA; MIT","published":"2025-09-30","publication":"International Conference on Learning Representations (ICLR 2026)","publication_type":"conference","publication_status":"Accepted at ICLR 2026","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"source":"https://arxiv.org/abs/2509.26328","sources":["https://arxiv.org/abs/2509.26328","https://arxiv.org/pdf/2509.26328","https://research.nvidia.com/labs/eai/publication/fast-dllm-v2/"],"topics":["拡散言語モデル","ブロック拡散","KVキャッシュ","並列デコード","自己回帰モデル変換","推論高速化"],"implementation":"公式NVlabs/Fast-dLLMリポジトリのv2ディレクトリで訓練・推論・評価コードが公開されている。LMFlow系訓練基盤、DeepSpeed ZeRO-3、flex-attentionを使用し、2025-10-08にv2コード公開、2026-01-26にICLR 2026採択が公式リポジトリで告知された。","code":"https://github.com/NVlabs/Fast-dLLM/tree/main/v2","hardware_evaluation":"訓練は64基のNVIDIA A100。1.5Bを約8時間、7Bを約12時間追加学習。推論性能はA100とH100で評価する。","quality_effect":"キャッシュ自体は観測可能な精度低下を生じない。一方、信頼度並列復号は閾値を下げるほど速度が上がる代わりに精度がわずかに低下し得る。論文はGSM8Kで閾値0.9を速度・精度の妥協点として選ぶ。","references":[],"references_checked_at":"2026-09-18","references_source":"primary-reference-section","references_total":0,"last_checked":"2026-09-18"},"reservation":{"claim_id":"claim-11e1f9a8272a62c09027cd4c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3e15395a7f97e5270e96de72",
+  "job_id": "job-research-2ce5027f5de1889a",
+  "data": {
+    "canonical_id": "arXiv:2509.26328",
+    "arxiv_id": "2509.26328",
+    "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+    "list_summary": "自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。",
+    "summary": "Fast-dLLM v2は、自己回帰型Qwen2.5-Instructをブロック拡散言語モデルへ変換し、ブロック間は左から右へ、各ブロック内は双方向拡散で複数トークンを並列生成する。訓練では系列を固定ブロック境界へ整列し、相補的な2種類のマスクで全トークンを教師対象にしつつ、予測位置を1トークンずらして元の次トークン予測表現を保つ。推論では確定済みブロックのKVを通常キャッシュし、現在ブロック内部ではFast-dLLM由来のDualCacheと信頼度並列復号を使う階層キャッシュを構成する。7Bモデルは約13.1億トークンの追加学習で、自己回帰基準と同等以上の精度を保ちながら最大約2.5倍の高速化を示す。",
+    "authors": [
+      "Chengyue Wu",
+      "Hao Zhang",
+      "Shuchen Xue",
+      "Shizhe Diao",
+      "Yonggan Fu",
+      "Zhijian Liu",
+      "Pavlo Molchanov",
+      "Ping Luo",
+      "Song Han",
+      "Enze Xie"
+    ],
+    "authors_affiliations": "The University of Hong Kong; NVIDIA; MIT",
+    "published": "2025-09-30",
+    "publication": "International Conference on Learning Representations (ICLR 2026)",
+    "publication_type": "conference",
+    "publication_status": "Accepted at ICLR 2026",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "source": "https://arxiv.org/abs/2509.26328",
+    "sources": [
+      "https://arxiv.org/abs/2509.26328",
+      "https://arxiv.org/pdf/2509.26328",
+      "https://research.nvidia.com/labs/eai/publication/fast-dllm-v2/"
+    ],
+    "topics": [
+      "拡散言語モデル",
+      "ブロック拡散",
+      "KVキャッシュ",
+      "並列デコード",
+      "自己回帰モデル変換",
+      "推論高速化"
+    ],
+    "implementation": "公式NVlabs/Fast-dLLMリポジトリのv2ディレクトリで訓練・推論・評価コードが公開されている。LMFlow系訓練基盤、DeepSpeed ZeRO-3、flex-attentionを使用し、2025-10-08にv2コード公開、2026-01-26にICLR 2026採択が公式リポジトリで告知された。",
+    "code": "https://github.com/NVlabs/Fast-dLLM/tree/main/v2",
+    "hardware_evaluation": "訓練は64基のNVIDIA A100。1.5Bを約8時間、7Bを約12時間追加学習。推論性能はA100とH100で評価する。",
+    "quality_effect": "キャッシュ自体は観測可能な精度低下を生じない。一方、信頼度並列復号は閾値を下げるほど速度が上がる代わりに精度がわずかに低下し得る。論文はGSM8Kで閾値0.9を速度・精度の妥協点として選ぶ。",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary-reference-section",
+    "references_total": 0,
+    "last_checked": "2026-09-18"
+  },
+  "reservation": {
+    "claim_id": "claim-3e15395a7f97e5270e96de72",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
