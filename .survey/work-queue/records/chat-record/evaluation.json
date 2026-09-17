@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7d9e9117902e3933bb8ea91d",
-  "job_id": "job-research-0b1a3df137cd07ea",
-  "data": {
-    "hardware": "精度・機構分解は単一NVIDIA A100 80GB、512GiB RAM、16 vCPU程度で再現可能。実行性能は単一NVIDIA H200とPCIe Gen5 x16を用いる。",
-    "software": "主要比較はShadowKV公式実装を基礎にし、InfiniGenにはグループ化問い合わせ注意機構への対応を追加する。YAKVの実行性能版はMini-SGLang上に実装し、CUDA製HIGGS量子化・スコア・KV読み出しカーネルとTriton製上位Kカーネルを用いる。",
-    "methodology": "Qwen3-4B-Instruct-2507、Qwen3-30B-A3B-Instruct-2507、Llama-3.1-8B-Instruct、Llama-3.2-3B-Instructを中心に、Text2JSON、MultiNeedle Retrieval 128K、LongProc HTML-to-TSV 8K、Loongを評価する。ShadowKV、InfiniGen、ArkVale、LRQK、YAKVを比較し、1復号段階あたりのPCIe転送量を揃える。分解実験ではSVDランク、量子化形式、グループ幅、ランドマーク、外れ値・局所予算、個別鍵選択を変える。性能評価では65K合成入力とText2JSON+MultiNeedle実データを連続バッチで処理し、最適バッチ、初回トークン時間、出力トークン時間、トークン毎秒を測定する。",
-    "datasets": ["Text2JSON (500 samples)", "NeedleBench v2 MultiNeedle Retrieval 128K", "LongProc HTML to TSV 8K", "Loong"],
-    "models": ["Qwen3-4B-Instruct-2507", "Qwen3-30B-A3B-Instruct-2507", "Llama-3.1-8B-Instruct", "Llama-3.2-3B-Instruct", "Qwen3-32B", "Qwen3-30B-A3B-Thinking-2507"],
-    "baselines": ["Full attention", "ShadowKV", "InfiniGen", "ArkVale", "LRQK"],
-    "scope": "実GPU上の精度評価と単一GPU実行性能評価であり、分散複数GPUや実運用クラスタでのネットワーク競合は対象外である。主分析は完全注意で学習されたLlama 3とQwen3系に限定され、MLAやGated DeltaNetなど異なる注意構造への一般化は未検証である。Text2JSONは実用途を模した合成データで、Loongのみ評価者LLMを用いる。"
-  },
-  "reservation": {"claim_id": "claim-7d9e9117902e3933bb8ea91d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a17fc9940597717688ea373e",
+  "job_id": "job-research-5862dce444505150",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a17fc9940597717688ea373e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

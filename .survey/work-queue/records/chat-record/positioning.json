@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7d9e9117902e3933bb8ea91d",
-  "job_id": "job-research-0b1a3df137cd07ea",
-  "data": {
-    "limitations": "YAKVは最高性能を狙った完成サービング系ではなく、失敗要因を示すための簡素な基準方式である。KV先読み、適応予算、より高度な量子化を主方式へ含めず、チャンク化プリフィルとページ化された全KV配置も未実装である。主分析は完全注意で学習されたLlama 3とQwen3に限定され、MLAやGated DeltaNet等の異なる注意構造は対象外である。性能評価は単一H200とPCIe Gen5 x16であり、NUMA、複数GPU、ネットワーク共有、CPUメモリ帯域競合を含む本番クラスタへの一般化には追加評価が必要である。",
-    "differences": "InfiniGenは低ランク表現から個別KVを選び、ShadowKVはSVD圧縮と連続8トークン程度の平均ランドマーク、ArkValeはグループの直方体近似、LRQKは専用低ランク分解を用いる。これに対しYAKVはグループ代表値と低ランク射影を捨て、データ不要の低ビットHIGGS表現を各トークンに残す。したがって主な差は退避先やPCIe転送機構ではなく、GPU上に保持する選択用代理表現の粒度と表現方法にある。また本論文は新方式だけでなく、文脈集約型評価を通じて既存方式の精度評価方法そのものを問題提起している。",
-    "implementation_status": "著者公式コードとText2JSONデータが公開されている。YAKVの性能版はMini-SGLang上の研究実装で、CUDAとTritonの専用カーネル、CPU KVのGPUアドレス空間への写像を備える。一方、一般的な推論基盤へそのまま導入できる製品実装ではなく、チャンク化プリフィルやページ化KVなど通常サービング機能は今後の統合対象である。",
-    "research_positioning": "階層メモリ型LLM推論の観点では、GPUからCPUへKVを移す帯域・容量最適化と、どのKVを戻すかという検索品質を結び付ける研究に位置する。従来は転送量やメモリ削減を保ったままRULER等で精度を確認することが多かったが、本研究はワークロードの情報回収密度が選択器の必要精度を変えることを示す。SSD/NVMeまで階層を拡張する場合も、下位層の帯域がさらに狭くなるため、単なるキャッシュ容量拡大だけでなく、低コストで高再現率なKV選択表現が重要になるという示唆を与える。"
-  },
-  "reservation": {"claim_id": "claim-7d9e9117902e3933bb8ea91d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a17fc9940597717688ea373e",
+  "job_id": "job-research-5862dce444505150",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a17fc9940597717688ea373e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
