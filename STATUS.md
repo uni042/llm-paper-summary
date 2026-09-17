@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 01:02:43 JST**
+> 自動生成: **2026-09-18 01:04:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **45** |
 | 未claim Research job | **44** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（15分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（17分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **3** | **2** | **1** | **0** | **0** | **5** |
-| 合計 | **26** | **6** | **5** | **1** | **1** | **0** | **5** |
+| Discovery | **17** | **4** | **3** | **1** | **0** | **0** | **8** |
+| 合計 | **27** | **7** | **6** | **1** | **1** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -113,6 +113,10 @@
   - result: `.survey/work-queue/results/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json`
   - 探索軸: GB-scale LLC・CPU階層メモリ・異種many-core runtime
+- **09-18 01:02:46 JST** job `job-69258e62289459cd` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json`
+  - 探索軸: 異種メモリアクセラレータ・KV transfer・disaggregated serving
 - **09-18 00:05:06 JST** job `job-f557e7cd72d205b3` / 候補 **2件**
   - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
   - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
-- **09-17 22:04:55 JST** job `job-4e0a46753fdbce72` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T2200JST-discovery-september-memory-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-september-memory-5.json`
-  - 探索軸: September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory
 
 ### 直近タスク
 
@@ -177,8 +177,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 01:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime / 異種メモリアクセラレータ・KV transfer・disaggregated serving
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **1件** / 候補: **8件**
+- 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime / 異種メモリアクセラレータ・KV transfer・disaggregated serving / HBM-PIM・near-memory KV管理・memory-side dequantization
 - round `fresh-scheduling-kv-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
   - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮
@@ -190,6 +190,10 @@
 - round `heterogeneous-disagg-3` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json`
   - 探索軸: 異種メモリアクセラレータ・KV transfer・disaggregated serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json` (`ok=true`)
+- round `near-memory-4` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json`
+  - 探索軸: HBM-PIM・near-memory KV管理・memory-side dequantization
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
