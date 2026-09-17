@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bec0c74881d95eeb32a049cb",
+  "attempt_id": "attempt-61cea03f965b827a2ed92932",
   "job_id": "job-research-1abdfafeb85e4df9",
   "data": {
     "overview": "6アプリケーションのエンドツーエンド評価で、SLOs-ServeはGPU当たりサービング容量をvLLM比1.76倍、Sarathi-Serve比1.94倍、DistServe比2.6倍とし、最良のvLLM/Sarathi系に対する幾何平均改善は約2.2倍と報告する。安定負荷では動的バッチとSLO適応型投機的デコード、バースト負荷では達成不能要求の遅延、複数レプリカではSLO駆動ルーティングが寄与する。資源計画器の呼出しオーバーヘッドは常に10ms未満、多くは2ms未満で、性能モデルR²は0.82〜0.93。",
@@ -69,7 +69,7 @@
     "quality_impact": "生成品質を変更する手法ではない。投機的デコードは通常の受理検証を用いるため意味品質を保ちつつ、投機長をSLO別に変える。主なトレードオフは、達成不能要求をbest-effortへ遅延することで標準サービスのSLOを保護する点にある。"
   },
   "reservation": {
-    "claim_id": "claim-bec0c74881d95eeb32a049cb",
+    "claim_id": "claim-61cea03f965b827a2ed92932",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
     "worker_kind": "scheduled_chat"
   }

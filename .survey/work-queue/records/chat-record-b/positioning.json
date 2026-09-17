@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bec0c74881d95eeb32a049cb",
+  "attempt_id": "attempt-61cea03f965b827a2ed92932",
   "job_id": "job-research-1abdfafeb85e4df9",
   "data": {
     "limitations": "性能モデルは対象GPU上のプロファイル回帰に依存し、A100からH100などハードウェアが変われば特性化が必要である。動的計画法の状態空間は新規要求数、SLO層数、メモリ単位に依存し、論文では典型的な新規要求0〜10件で低オーバーヘッドとするが、極端な同時到着やSLO種類増加時のスケールは制約になり得る。評価はdecode長の事前知識を全方式へ与えており、実際の長さ予測誤差を含む頑健性は未検証である。達成不能要求をbest-effortへ回すため、標準サービスSLO最大化と個々の遅延・公平性にはトレードオフがある。複数レプリカの逐次ルーティングは単純な一方式で、異種GPU・広域ネットワーク・大規模クラスタでの最適ルーティングは今後の課題である。",
@@ -11,7 +11,7 @@
     "research_positioning": "LLMサービング研究のうち、TTFT/TPOTの単一指標最適化から、reasoning・tool-useを含むアプリケーション/段階別SLOの共同最適化へ進む系統に位置する。特に『要求を受けた後どう高速化するか』だけでなく、『どの要求集合なら将来までSLOを守れるか』をオンラインで解き、入場制御、バッチ形成、投機デコード、複数レプリカ配置を同じSLO達成可能性で接続した点が、スケジューリング系統上の主要な差分である。"
   },
   "reservation": {
-    "claim_id": "claim-bec0c74881d95eeb32a049cb",
+    "claim_id": "claim-61cea03f965b827a2ed92932",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
     "worker_kind": "scheduled_chat"
   }

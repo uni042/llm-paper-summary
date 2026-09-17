@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bec0c74881d95eeb32a049cb",
+  "attempt_id": "attempt-61cea03f965b827a2ed92932",
   "job_id": "job-research-1abdfafeb85e4df9",
   "data": {
     "hardware": "エンドツーエンド評価はGoogle a2-highgpu-4g VMの40GB NVIDIA A100×4（GPU間NVLink）。OPT-13Bは2-way、OPT-30Bは4-way tensor parallelism。OPT-7Bは最大4レプリカ。スケーリング評価には追加でGoogle a3-highgpu-8gの80GB H100×8を使用し、OPT-13B複数レプリカも評価する。",
@@ -11,7 +11,7 @@
     "scope": "異なる入出力長・到着パターン・段階SLOを持つ6アプリケーションをカバーし、A100/H100、複数OPTサイズ、tool-useとreasoningまで含む。一方、主なシステム比較は特定SLO設定と既知decode長を仮定し、モデル品質や未知出力長予測誤差、広範なGPU世代・ネットワーク構成、実運用の料金/公平性までは中心評価ではない。"
   },
   "reservation": {
-    "claim_id": "claim-bec0c74881d95eeb32a049cb",
+    "claim_id": "claim-61cea03f965b827a2ed92932",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
     "worker_kind": "scheduled_chat"
   }
