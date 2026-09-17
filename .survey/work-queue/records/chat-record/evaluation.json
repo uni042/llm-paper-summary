@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "attempt_id": "attempt-180764ce53bd95c132164263",
   "job_id": "job-research-0923832e7cd03d20",
   "data": {
     "evaluation_summary": "instance-scaleとcluster-scaleの実機評価を行う。Llama系列はDistServe/vLLM系実装と比較し、DeepSeek系列はSGLang、clusterはNVIDIA Dynamoをbaselineとする。ShareGPT、LongBench、MATH-500とsynthetic heterogeneous workloadをPoisson arrivalで投入し、P90/P99 TTFT・TPOT、SLO attainment、平均E2E latency、dynamic adjustmentを測定する。",
@@ -46,7 +46,7 @@
     "control_knobs": "prefill/decode SM比率、chunked-prefill token数、decode batch size、cluster routing先。Llama評価のtight/loose SLOは単request latencyのおよそ7.5倍/10倍を基準に設定。"
   },
   "reservation": {
-    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "claim_id": "claim-180764ce53bd95c132164263",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
     "worker_kind": "scheduled_chat"
   }

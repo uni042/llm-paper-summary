@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "attempt_id": "attempt-180764ce53bd95c132164263",
   "job_id": "job-research-0923832e7cd03d20",
   "data": {
     "positioning": "semi-PDはvLLM/Sarathi-Serveのようなunified P/D schedulingと、DistServe/Splitwise/MooncakeのようなGPU-level P/D disaggregationの間で、計算とstorageを別軸として再設計する。計算はphaseごとに独立させるがweights/KVは同一GPU HBMで共有するため、unified方式のlatency interferenceと完全PD方式のstorage imbalance/KV transferを同時に避ける。NanoFlowのoperation-level intra-device schedulingより粗いSM-level phase partitionで、SLOに基づくresource adjustmentを主目的とする。",
@@ -43,7 +43,7 @@
     "repository_fit": "serving-scheduling/disaggregation系統の主要比較対象。KV cache移動、memory pooling、SLO-aware scheduling、resource elasticityを一つのsystem designで結び付ける。"
   },
   "reservation": {
-    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "claim_id": "claim-180764ce53bd95c132164263",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
     "worker_kind": "scheduled_chat"
   }
