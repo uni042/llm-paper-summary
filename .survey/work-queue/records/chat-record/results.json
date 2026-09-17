@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3fd0abe9beaed22201ef8ff4","job_id":"job-research-0923832e7cd03d20","data":{"overview":"semi-PDは高request rateでprefill/decodeのどちらか一方だけがlatency explosionする従来unified/disaggregated方式に対し、両phaseのP90/P99 latencyを同時に安定させる。DeepSeek系列では平均request E2E latencyをstate-of-the-art比1.27–2.58倍削減し、Llama系列では設定したTTFT/TPOT SLOを満たしながら1.55–1.72倍多いrequestを処理する。背景には、完全PDで最大89.33%発生するprefill側memory浪費とphase間KV transferを共有HBMで除き、SM単位partitionを実行中に変更できるため、decode側OOMやworkload比率変化でGPU roleを再配置する必要がないことがある。絶対的に全条件で最小latencyというより、request rateが上がり従来方式が干渉またはstorage不足で急激に悪化する領域でgoodputを維持する点が主要な実用効果である。","key_results":[{"metric":"DeepSeek系列 average E2E latency","value":"1.27–2.58倍削減","baseline":"SGLang等state-of-the-art serving","condition":"DeepSeek-V2-Lite/DeepSeek-V3、高request rate","interpretation":"phase interferenceを避けつつKV transferなしの共有storageを使うことでrequest-level latencyを改善。"},{"metric":"Llama系列 SLO-constrained served requests","value":"1.55–1.72倍","baseline":"vLLM/DistServe等","condition":"TTFT/TPOT SLO内、90%以上attainment基準","interpretation":"単純throughputではなくlatency constraintを守れるgoodputが増える。"},{"metric":"prefill側memory waste","value":"最大89.33%","baseline":"disaggregated storage","condition":"Llama3 8B/70B, ShareGPT/LongBench解析","interpretation":"P/D別HBM poolではprefill側KV容量が余りdecode側OOMを救えない。"},{"metric":"storage shortage時TPOT","value":"約3倍","baseline":"ideal storage","condition":"A100 40GB、decode KV capacity exhaustion","interpretation":"storage imbalanceがlatency explosionへ直結することを動機実験で確認。"},{"metric":"P99安定request rate","value":"Llama3-8Bで11 req/s超、Llama3-70Bで8 req/s","baseline":"他方式はTTFTまたはTPOTが急増","condition":"ShareGPT","interpretation":"tail latencyでも両phaseを同時に安定化する。"}],"negative_results":["低request rateでは従来方式のlatency interferenceやstorage shortageが顕在化せず、semi-PDの優位は高負荷時ほど大きい。","同一GPU内SM分割のため、prefillとdecodeに完全に異なるGPU種類を割り当てるSplitwise型heterogeneous specializationとはtrade-offが異なる。","cluster-scaleではrouterと既存P/D instanceを併用するため、全clusterをsemi-PDだけへ置換する設計ではない。"],"quality_impact":"model weight、precision、attention計算をserving方式間で同等に保つsystem最適化であり、生成品質を意図的に近似しない。","interpretation":"semi-PDの結果はprefill/decode disaggregationの価値を『別GPU』ではなく『計算資源の独立性』へ分解できることを示す。storageを共有したままSMだけ分けることでlatency isolationとmemory poolingを同時に得られ、workload変動時のresource adjustmentもKV移動なしで細粒度化できる。"},"reservation":{"claim_id":"claim-3fd0abe9beaed22201ef8ff4","worker_id":"scheduled-chat-paper-20260917T1330JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-f24b75f30eeb759f4fc55e3f",
+  "job_id": "job-research-6be1741cdc42b913",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f24b75f30eeb759f4fc55e3f",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

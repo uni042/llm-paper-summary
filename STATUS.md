@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:43:32 JST**
+> 自動生成: **2026-09-17 13:43:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -146,12 +146,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
+  - claim: **09-17 13:43:36 JST** / heartbeat: **—** / lease expiry: **09-17 15:13:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
 - `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 13:42:21 JST** / heartbeat: **—** / lease expiry: **09-17 15:12:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-cf3f98aec47a974c.json`
-- `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage / worker `scheduled-chat-paper-20260917T1330JST`
-  - claim: **09-17 13:39:43 JST** / heartbeat: **—** / lease expiry: **09-17 15:09:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0923832e7cd03d20.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
