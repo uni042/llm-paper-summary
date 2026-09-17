@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Build the durable Discovery candidate-evaluation rejection ledger.
+"""Build the durable Discovery rejection ledger.
 
-The immutable Discovery submission remains the source of truth. Scheduled Chat records
-papers that reached candidate evaluation but were not selected in ``rejected_candidates``.
-This builder folds those immutable observations into a compact identity-indexed ledger
-that retrieval-stage filtering can consult before showing search results to a worker.
+Immutable Discovery submissions remain the source of candidate-evaluation rejections.
+Terminal Research decisions are also folded into the same identity-indexed ledger so a
+paper that has already been durably rejected, or became permanently blocked after the
+retry policy, is not rediscovered and sent through Research again. Transient ``blocked``
+and ``deferred`` Research jobs are deliberately excluded because they remain retryable.
 """
 from __future__ import annotations
 
@@ -16,7 +17,13 @@ from typing import Any
 import paper_identity
 
 
+# Keep this compatibility marker stable because discovery_search_filter.py validates it.
 SOURCE = "immutable_discovery_submissions.rejected_candidates"
+SOURCES = [
+    SOURCE,
+    "terminal_research_rejections",
+]
+TERMINAL_RESEARCH_REJECTION_STATUSES = {"rejected", "blocked_permanent"}
 
 
 def _read_json(path: Path) -> Any:
@@ -45,6 +52,31 @@ def _timestamp(payload: dict[str, Any]) -> str:
     return ""
 
 
+def _job_rejection_timestamp(job: dict[str, Any]) -> str:
+    for field in ("blocked_permanent_at", "completed_at", "last_blocked_at"):
+        value = job.get(field)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return ""
+
+
+def _job_rejection_reason(job: dict[str, Any]) -> str:
+    blocker = job.get("blocker")
+    if isinstance(blocker, str) and blocker.strip():
+        return blocker.strip()
+    history = job.get("block_history")
+    if isinstance(history, list):
+        for event in reversed(history):
+            if not isinstance(event, dict):
+                continue
+            reason = event.get("reason")
+            if isinstance(reason, str) and reason.strip():
+                return reason.strip()
+    if job.get("status") == "blocked_permanent":
+        return "primary evidence remained unavailable after the configured retry policy"
+    return "research evaluation rejected"
+
+
 def _merge_timestamp(current: str | None, incoming: str, *, earliest: bool) -> str | None:
     values = [value for value in (current, incoming) if isinstance(value, str) and value]
     if not values:
@@ -52,14 +84,75 @@ def _merge_timestamp(current: str | None, incoming: str, *, earliest: bool) -> s
     return min(values) if earliest else max(values)
 
 
+def _record_rejection(
+    records: dict[str, dict[str, Any]],
+    candidate: dict[str, Any],
+    *,
+    reason: str,
+    rejected_at: str,
+    axis: str | None,
+    run_key: str | None,
+    source_submission: str,
+    origin: str,
+) -> bool:
+    """Merge one durable rejection observation. Return False when identity is absent."""
+    tokens = sorted(paper_identity.identity_tokens(candidate))
+    primary = paper_identity.primary_identity_key(candidate)
+    if not primary:
+        return False
+
+    existing = records.get(primary)
+    if existing is None:
+        records[primary] = {
+            "primary_identity": primary,
+            "identity_tokens": tokens,
+            "canonical_id": candidate.get("canonical_id"),
+            "arxiv_id": candidate.get("arxiv_id"),
+            "doi": candidate.get("doi"),
+            "openreview_id": candidate.get("openreview_id"),
+            "title": candidate.get("title"),
+            "source_url": candidate.get("source_url"),
+            "rejection_reason": reason,
+            "rejection_count": 1,
+            "first_rejected_at": rejected_at or None,
+            "last_rejected_at": rejected_at or None,
+            "axis": axis,
+            "run_key": run_key,
+            "source_submission": source_submission,
+            "origin": origin,
+        }
+        return True
+
+    existing["rejection_count"] = int(existing.get("rejection_count", 0) or 0) + 1
+    existing["identity_tokens"] = sorted(set(existing.get("identity_tokens") or []) | set(tokens))
+    existing["first_rejected_at"] = _merge_timestamp(
+        existing.get("first_rejected_at"), rejected_at, earliest=True
+    )
+    previous_last = existing.get("last_rejected_at")
+    incoming_is_latest = not previous_last or not rejected_at or rejected_at >= previous_last
+    existing["last_rejected_at"] = _merge_timestamp(previous_last, rejected_at, earliest=False)
+    if incoming_is_latest:
+        for field in ("canonical_id", "arxiv_id", "doi", "openreview_id", "title", "source_url"):
+            if candidate.get(field) is not None:
+                existing[field] = candidate.get(field)
+        existing["rejection_reason"] = reason
+        existing["axis"] = axis
+        existing["run_key"] = run_key
+        existing["source_submission"] = source_submission
+        existing["origin"] = origin
+    return True
+
+
 def build_ledger(root: Path, output: Path | None = None) -> dict[str, Any]:
     root = Path(root)
     queue = root / "work-queue"
     submissions = queue / "submissions"
+    jobs = queue / "jobs"
     output = Path(output) if output is not None else queue / "discovery-rejections.json"
 
     records: dict[str, dict[str, Any]] = {}
     submission_count = 0
+    research_terminal_rejection_count = 0
     rejection_observation_count = 0
     ignored_without_identity = 0
 
@@ -81,54 +174,57 @@ def build_ledger(root: Path, output: Path | None = None) -> dict[str, Any]:
             for candidate in rejected:
                 if not isinstance(candidate, dict):
                     continue
-                tokens = sorted(paper_identity.identity_tokens(candidate))
-                primary = paper_identity.primary_identity_key(candidate)
-                if not primary:
-                    ignored_without_identity += 1
-                    continue
-                rejection_observation_count += 1
                 reason = str(
                     candidate.get("rejection_reason")
                     or candidate.get("reason")
                     or "candidate evaluation rejected"
                 ).strip()
-                existing = records.get(primary)
-                if existing is None:
-                    records[primary] = {
-                        "primary_identity": primary,
-                        "identity_tokens": tokens,
-                        "canonical_id": candidate.get("canonical_id"),
-                        "arxiv_id": candidate.get("arxiv_id"),
-                        "doi": candidate.get("doi"),
-                        "openreview_id": candidate.get("openreview_id"),
-                        "title": candidate.get("title"),
-                        "source_url": candidate.get("source_url"),
-                        "rejection_reason": reason,
-                        "rejection_count": 1,
-                        "first_rejected_at": rejected_at or None,
-                        "last_rejected_at": rejected_at or None,
-                        "axis": axis,
-                        "run_key": run_key,
-                        "source_submission": source_submission,
-                    }
-                    continue
-
-                existing["rejection_count"] = int(existing.get("rejection_count", 0) or 0) + 1
-                existing["identity_tokens"] = sorted(set(existing.get("identity_tokens") or []) | set(tokens))
-                existing["first_rejected_at"] = _merge_timestamp(
-                    existing.get("first_rejected_at"), rejected_at, earliest=True
+                recorded = _record_rejection(
+                    records,
+                    candidate,
+                    reason=reason,
+                    rejected_at=rejected_at,
+                    axis=axis,
+                    run_key=run_key,
+                    source_submission=source_submission,
+                    origin="discovery_candidate_rejection",
                 )
-                previous_last = existing.get("last_rejected_at")
-                incoming_is_latest = not previous_last or not rejected_at or rejected_at >= previous_last
-                existing["last_rejected_at"] = _merge_timestamp(previous_last, rejected_at, earliest=False)
-                if incoming_is_latest:
-                    for field in ("canonical_id", "arxiv_id", "doi", "openreview_id", "title", "source_url"):
-                        if candidate.get(field) is not None:
-                            existing[field] = candidate.get(field)
-                    existing["rejection_reason"] = reason
-                    existing["axis"] = axis
-                    existing["run_key"] = run_key
-                    existing["source_submission"] = source_submission
+                if not recorded:
+                    ignored_without_identity += 1
+                    continue
+                rejection_observation_count += 1
+
+    if jobs.exists():
+        for path in sorted(jobs.glob("*.json")):
+            job = _read_json(path)
+            if not isinstance(job, dict) or job.get("type") != "research":
+                continue
+            status = job.get("status")
+            if status not in TERMINAL_RESEARCH_REJECTION_STATUSES:
+                continue
+            source_submission = job.get("status_submission")
+            if not isinstance(source_submission, str) or not source_submission.strip():
+                source_submission = _source_label(root, path)
+            origin = (
+                "research_terminal_rejection"
+                if status == "rejected"
+                else "research_blocked_permanent"
+            )
+            recorded = _record_rejection(
+                records,
+                job,
+                reason=_job_rejection_reason(job),
+                rejected_at=_job_rejection_timestamp(job),
+                axis=None,
+                run_key=None,
+                source_submission=source_submission.strip(),
+                origin=origin,
+            )
+            if not recorded:
+                ignored_without_identity += 1
+                continue
+            research_terminal_rejection_count += 1
+            rejection_observation_count += 1
 
     latest_rejected_at = max(
         (str(record.get("last_rejected_at")) for record in records.values() if record.get("last_rejected_at")),
@@ -137,8 +233,10 @@ def build_ledger(root: Path, output: Path | None = None) -> dict[str, Any]:
     ledger = {
         "schema_version": 1,
         "source": SOURCE,
+        "sources": SOURCES,
         "updated_at": latest_rejected_at,
         "submission_count": submission_count,
+        "research_terminal_rejection_count": research_terminal_rejection_count,
         "rejection_observation_count": rejection_observation_count,
         "rejection_record_count": len(records),
         "ignored_without_identity": ignored_without_identity,
@@ -149,6 +247,7 @@ def build_ledger(root: Path, output: Path | None = None) -> dict[str, Any]:
     return {
         "output": output.as_posix(),
         "submission_count": submission_count,
+        "research_terminal_rejection_count": research_terminal_rejection_count,
         "rejection_observation_count": rejection_observation_count,
         "rejection_record_count": len(records),
         "ignored_without_identity": ignored_without_identity,
