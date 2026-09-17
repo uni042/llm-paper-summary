@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:41:47 JST**
+> 自動生成: **2026-09-17 18:42:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
+| 収録候補論文 | **47** |
 | 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-17 18:41:37 JST（10秒前）** |
+| 直近24hの検証済みResearch収録 | **60** |
+| 最終検証済みResearch収録 | **09-17 18:42:36 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **23** | **2** | **2** | **0** | **2** | **0** | — |
+| Research | **24** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **28** | **6** | **6** | **0** | **2** | **0** | **15** |
+| 合計 | **29** | **7** | **7** | **0** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 18:42:36 JST** [research] `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM
+  - job: `.survey/work-queue/jobs/job-research-581beb5301e2ddf8.json`
+  - result: `.survey/work-queue/results/research/attempt-797276fcf739302b269d6e80.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-797276fcf739302b269d6e80.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md`
 - **09-17 18:41:37 JST** [research] `arXiv:2501.12162` — AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-8423392e3664b697.json`
   - result: `.survey/work-queue/results/research/attempt-af88b7967bb739f0955daaa6.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-366e50017f388aac9c576b49.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-366e50017f388aac9c576b49.json`
   - paper: `papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md`
-- **09-17 16:41:43 JST** [research] `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
-  - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d138fd01aeed0094d3129bad.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md`
 
 ### Audit
 
@@ -131,7 +131,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
+- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM
+  - job: `.survey/work-queue/jobs/job-research-581beb5301e2ddf8.json`
+  - result: `.survey/work-queue/results/research/attempt-797276fcf739302b269d6e80.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-797276fcf739302b269d6e80.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md`
 - **成功** `arXiv:2607.27090` — InferScale: GPU-Native KV Injection for Personalized LLM Serving
   - job: `.survey/work-queue/jobs/job-research-010509dfee08b6d5.json`
   - result: `.survey/work-queue/results/research/attempt-a6d9e761f99fd071c0489cca.json` (`ok=true`)
@@ -175,10 +180,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 18:41:28 JST** / heartbeat: **—** / lease expiry: **09-17 20:11:28 JST**
-  - evidence: `.survey/work-queue/claims/job-research-581beb5301e2ddf8.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
@@ -201,7 +203,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +223,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **671** |
+| inference/training/survey配下の論文Markdown実体 | **672** |
 
 ### immutable submissionの未照合
 
