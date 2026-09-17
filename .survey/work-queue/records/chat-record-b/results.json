@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-3e9db00a4e41a210938816b6",
-  "job_id": "job-research-8423392e3664b697",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e9db00a4e41a210938816b6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3e9db00a4e41a210938816b6","job_id":"job-research-8423392e3664b697","data":{"overview":"AdaServeは、固定バッチ速度や固定投機長ではなく、各リクエストの現在のSLO遅れを毎反復計算して検証トークン予算を振り分けることで、厳しい要求が増えてもSLO達成率を維持しながらGPUの残余計算をスループットへ使う。評価では最良比較対象に対してSLO違反率を最大4.3倍削減し、有効スループットを最大1.9倍改善する。SLOが厳しくなる条件でも最大1.38倍の有効スループットを維持し、CPU上の候補選択費用は全時間の0.31〜0.41%に留まる。","key_results":[{"metric":"SLO違反率削減","value":"最大4.3×低減","baseline":"各条件の最良比較対象","condition":"multi-SLOワークロード、Llama3.1-70B/Qwen2.5-32B、アプリ分布変化","interpretation":"厳しい要求へ必要な期待受理トークンを先に割り当てるため、連続バッチや固定投機よりSLO遅れを直接補正できる。"},{"metric":"有効スループット","value":"最大1.9×改善","baseline":"最良比較対象","condition":"評価したmulti-SLO到着率範囲","interpretation":"SLOを満たすリクエストだけを数える有効スループットで改善し、単純な総処理量増加ではなくSLO制約下の処理能力向上を示す。"},{"metric":"厳格SLO比率変化時の有効スループット","value":"最大64%向上","baseline":"最良比較対象","condition":"厳格SLOリクエスト比率を変更","interpretation":"連続バッチ方式が小バッチ化と混雑で悪化する条件でも、投機資源をリクエスト別に変えることで高負荷へ適応する。"},{"metric":"厳しいSLO倍率での違反率","value":"最大4.61× / 3.05×低減","baseline":"最良比較対象","condition":"4.0 RPS、urgent比率0.6、Llama/Qwenの2設定","interpretation":"通常デコードでは達成困難なSLO倍率でも、一反復で複数トークンを進める投機的デコードが速度自由度を与える。"},{"metric":"厳しいSLO倍率での有効スループット","value":"最大1.38×","baseline":"最良比較対象","condition":"SLO scale sweep","interpretation":"厳しい要求を優先しても残余検証予算を全体受理数へ回すため、SLO達成とスループットの両方を維持する。"},{"metric":"CPU選択オーバーヘッド","value":"0.41% / 0.31%","baseline":"全配信時間","condition":"Llama3.1-70B / Qwen2.5-32B","interpretation":"候補木を先にGPUで生成して選択を分離したため、SLO別トークン選択自体はボトルネックにならない。"}],"negative_results":"固定投機方式と同様、投機の利得はドラフトモデルの採用精度に依存する。AdaServeでは高負荷時に平均受理トークン数が低下し、動的にdとwを縮めて無駄な候補生成を抑える必要がある。候補経路確率はドラフトモデルlogitによる近似であり、対象LLMの真の採用確率とずれるとSLO用予算配分が非最適になる。木深さdで一反復に進める上限を超えるほど遅れたリクエストは、その反復だけではSLOへ完全復帰できない。評価はA100と同系列ドラフトモデル中心である。","interpretation":"AdaServeの利得は投機的デコードそのものだけでなく、投機木のサイズを『全員を最大加速する値』から『各SLOを満たす最低限+残余の全体最適化』へ変えた点にある。厳しいリクエストが少ない時は緩い要求へ余力を回し、厳しい要求が増えればその要求へ多くの候補を割り当てる。活動数が増えるとd/wを下げるため、ドラフト計算が検証予算を上回って捨てられる状況も抑える。","quality_impact":"対象LLMが投機候補を通常の投機的デコード手順で検証するため、採用された出力の生成分布は元の対象モデルと同じであり、品質を近似して速度を得る方式ではない。近似するのは各候補が採用される確率と、それに基づくSLO資源配分である。近似誤差は性能・SLO達成効率へ影響するが、誤ったドラフトトークンをそのまま出力することはない。"},"reservation":{"claim_id":"claim-3e9db00a4e41a210938816b6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
