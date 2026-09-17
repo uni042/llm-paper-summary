@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:47:01 JST**
+> 自動生成: **2026-09-18 06:47:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **57** |
+| 収録候補論文 | **56** |
 | 未claim Research job | **56** |
-| 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-18 06:44:06 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **51** |
+| 最終検証済みResearch収録 | **09-18 06:47:17 JST（3秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **57** |
+| canonical_id確認済みの一意な候補論文 | **56** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **57** |
+| 非終端Research job合計 | **56** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **11** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **27** | **10** | **10** | **0** | **1** | **0** | **18** |
+| 合計 | **28** | **11** | **11** | **0** | **0** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 06:47:17 JST** [research] `arXiv:2602.21140` — ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments
+  - job: `.survey/work-queue/jobs/job-research-c61a311635c958d5.json`
+  - result: `.survey/work-queue/results/research/attempt-9728a65bf10d91c2f0a02ad3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-9728a65bf10d91c2f0a02ad3.json`
+  - paper: `papers/inference/05-moe/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md`
 - **09-18 06:44:06 JST** [research] `arXiv:2509.26328` — Fast-dLLM v2: Efficient Block-Diffusion LLM
   - job: `.survey/work-queue/jobs/job-research-2ce5027f5de1889a.json`
   - result: `.survey/work-queue/results/research/attempt-3e15395a7f97e5270e96de72.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-42b6429a1b73e190dbc9976c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-42b6429a1b73e190dbc9976c.json`
   - paper: `papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md`
-- **09-18 00:47:32 JST** [research] `arXiv:2502.06643` — MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing
-  - job: `.survey/work-queue/jobs/job-research-24c58326f22e095e.json`
-  - result: `.survey/work-queue/results/research/attempt-788e1aebfc9c132ec95bfc8a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-788e1aebfc9c132ec95bfc8a.json`
-  - paper: `papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md`
 
 ### Audit
 
@@ -151,12 +151,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
+- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2509.26328` — Fast-dLLM v2: Efficient Block-Diffusion LLM
   - job: `.survey/work-queue/jobs/job-research-2ce5027f5de1889a.json`
   - result: `.survey/work-queue/results/research/attempt-3e15395a7f97e5270e96de72.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e15395a7f97e5270e96de72.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md`
+- **成功** `arXiv:2602.21140` — ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments
+  - job: `.survey/work-queue/jobs/job-research-c61a311635c958d5.json`
+  - result: `.survey/work-queue/results/research/attempt-9728a65bf10d91c2f0a02ad3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-9728a65bf10d91c2f0a02ad3.json`
+  - paper: `papers/inference/05-moe/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md`
 - **成功** `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
   - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
   - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
@@ -211,10 +216,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.21140` — ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 06:45:00 JST** / heartbeat: **—** / lease expiry: **09-18 08:15:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c61a311635c958d5.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -234,7 +237,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **57** |
+| ready | **56** |
 
 ### 候補の重複・識別情報欠損
 
@@ -254,7 +257,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **692** |
+| inference/training/survey配下の論文Markdown実体 | **693** |
 
 ### immutable submissionの未照合
 

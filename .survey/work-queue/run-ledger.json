@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T21:44:11.000538+00:00",
+  "updated_at": "2026-09-17T21:47:20.344483+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T21:44:11.000538+00:00",
+      "last_recorded_at": "2026-09-17T21:47:20.344483+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 228,
+        "research_completed": 229,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 17,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35181001396:1",
-          "recorded_at": "2026-09-17T04:12:39.648532+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35181001396",
-            "run_attempt": "1",
-            "source_sha": "506f505b455fc94557358d20232b8805257d87e5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35181110983:1",
           "recorded_at": "2026-09-17T04:14:23.353713+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35278237226",
             "run_attempt": "1",
             "source_sha": "b50f8644d3004b83d2cca1d9dfc611a5bdb33bbd"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35278580357:1",
+          "recorded_at": "2026-09-17T21:47:20.344483+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35278580357",
+            "run_attempt": "1",
+            "source_sha": "cf1ac6746314e168e09d22ce9648e0b4add85f3d"
           },
           "signals": [
             "research_completed"
@@ -22386,6 +22386,14 @@
           "type": "research",
           "canonical_id": "arXiv:2509.26328",
           "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c61a311635c958d5",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21140",
+          "title": "ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments",
           "from": "ready",
           "to": "completed"
         }
