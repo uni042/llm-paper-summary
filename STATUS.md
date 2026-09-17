@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 09:03:59 JST**
+> 自動生成: **2026-09-17 09:04:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -193,7 +193,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 09:02:54 JST** / heartbeat: **—** / lease expiry: **09-17 10:32:54 JST**
+  - claim: **09-17 09:04:05 JST** / heartbeat: **—** / lease expiry: **09-17 10:34:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-411dee2b8db54e04.json`
 - `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving / worker `scheduled-chat-discovery-specialist-0700`
   - claim: **09-17 07:22:10 JST** / heartbeat: **09-17 08:28:37 JST** / lease expiry: **09-17 09:58:37 JST**
