@@ -1,34 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T14:02:48+00:00",
+  "updated_at": "2026-09-17T14:03:14+00:00",
   "last_run_key": "2026-09-17T23:00:00+09:00",
-  "last_round": "fresh-kv-agent-runtime-1",
+  "last_round": "kv-architecture-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
+  "consecutive_empty_rounds": 4,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:00:00+09:00",
-      "round": "specialist-storage-hierarchy-1",
-      "axis": "Flash・SSD階層メモリと予測先読み",
-      "query_summary": "Flash/SSD-backed LLM inference、GPU-DRAM-SSD階層、メモリウォール隣接の新規候補を軽量評価し、最新identity・既存job・fallback台帳で投入直前に重複確認した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.6,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.00857",
-        "arXiv:2606.19746",
-        "arXiv:2604.25699"
-      ],
-      "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す",
-      "source_submission": "work-queue/submissions/20260913T0005JST-discovery-storage-hierarchy-1.json"
-    },
     {
       "run_key": "2026-09-13T00:00:00+09:00",
       "round": "specialist-serving-scheduling-2",
@@ -6809,6 +6790,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "2609新着のdistributed serving/networkingと、重要KV/MoE論文のforward citationを別軸で走査する",
       "source_submission": "work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json"
+    },
+    {
+      "run_key": "2026-09-17T23:00:00+09:00",
+      "round": "kv-architecture-2",
+      "axis": "September 2026 KV representation・bounded-state inference",
+      "query_summary": "新着2609系からKV representationとbounded-state推論を独立軸で確認。Grouped Value AttentionはKV cache容量/read trafficへ直接効くため採用し、Register Tokensはモデル表現・reasoning quality中心でsystems対象への直接性不足として不採用記録した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "forward citationとOS/DBMS/networking隣接からcache tiering・prefetch・distributed state transferを探索する",
+      "source_submission": "work-queue/submissions/20260917T2300JST-discovery-kv-architecture-2.json"
     }
   ],
   "axes": {
@@ -11236,6 +11235,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "2609新着のdistributed serving/networkingと、重要KV/MoE論文のforward citationを別軸で走査する"
+    },
+    "September 2026 KV representation・bounded-state inference": {
+      "last_run_key": "2026-09-17T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "forward citationとOS/DBMS/networking隣接からcache tiering・prefetch・distributed state transferを探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
