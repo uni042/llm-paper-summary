@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-dd0768548da66bf9efb0496c",
-  "job_id": "job-research-36aaaee3c1110557",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-dd0768548da66bf9efb0496c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-dd0768548da66bf9efb0496c","job_id":"job-research-36aaaee3c1110557",
+ "data":{
+  "hardware":"実機はデュアルソケットIntel Xeon Platinum 8380で、各ソケット8チャネルDDR4-3200、総メモリ750GB、各ソケットにNVIDIA A40を2基搭載する。実験はnumactlで1ソケット・1GPUへ固定し、測定CPUメモリ帯域は約150GB/s。A40は48GBだがランダムテンソルで24〜32GBを占有させ、Mixtral-8x7Bでは実効16GB、Mixtral-8x22BとDBRXでは24GBに制限する。KVキャッシュは70GBまたは210GBでCPUメモリ容量制約を再現する。",
+  "software":"MoE-LensはPyTorchを基盤にし、C++ PyTorch拡張の専用重み転送器とAVX512手書きCPU注意カーネルを用いる。比較対象は公開実装のMoE-LightningとvLLMで、vLLMはCPUオフロード機能を使用する。MoE-Lightningは通常CPUメモリ設定と、モデル＋KV容量の1.25倍を与える大容量設定の双方を評価する。",
+  "methodology":"モデルはBF16のMixtral-8x7B（47B、94GB）、Mixtral-8x22B（141B、282GB）、DBRX（132B、264GB）。MTBenchは平均プロンプト98、最大450で生成上限32/64/128/256、RAGは平均プロンプト926・最大1843で生成128、AIME2024は平均プロンプト128・最大410で生成512。MTBenchの70GB KV条件では生成32で25k要求、その他20k要求、他条件は性能モデルに基づく十分大きい要求数を使う。生成スループット、全体スループット、GPU利用率、モデル予測精度、CPU注意処理量を測る。",
+  "scope":"主対象は低遅延オンライン配信ではなく、モデル評価、データ処理、合成データ生成など総ジョブ完了時間を重視する大規模オフラインバッチ推論である。GPUメモリよりモデルが大きい単一CPUソケット・単一GPU環境を想定し、CPUにはモデル重みと70〜210GB級KVを保持できる容量がある。実機で評価する一方、T4/L4相当のGPU容量はA40上のメモリ予約で模擬しており、複数GPU・分散ネットワークや厳しい対話遅延目標は評価範囲外である。"
+ },
+ "reservation":{"claim_id":"claim-dd0768548da66bf9efb0496c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
