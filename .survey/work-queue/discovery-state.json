@@ -1,45 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T13:02:42+00:00",
+  "updated_at": "2026-09-17T13:05:04+00:00",
   "last_run_key": "2026-09-17T22:00:00+09:00",
-  "last_round": "edge-agentic-3",
+  "last_round": "storage-runtime-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-speculative-multimodal-serving-09",
-      "axis": "speculative decoding serving・composite multimodal serving",
-      "query_summary": "SGLang上のremote-drafter speculative serving、any-to-any multimodal stage disaggregation、composite-model dataflow runtime、multimodal KV compression servingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第8roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "framework/runtime kernel、重要論文のforward/backward citation、またはedge/distributed inferenceへ切り替える",
-      "source_submission": "work-queue/submissions/20260912T2320JST-discovery-specialist-09.json"
-    },
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-runtime-sparse-attention-10",
-      "axis": "attention runtime・sparse attention階層memory・elastic decode",
-      "query_summary": "agentic long-context向けattention分離scale、dynamic sparse attentionのHBM-DRAM階層化、汎用attention engine、異種edge speculative servingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第9roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える",
-      "source_submission": "work-queue/submissions/20260912T2322JST-discovery-specialist-10.json"
-    },
     {
       "run_key": "2026-09-12T23:00:00+09:00",
       "round": "specialist-moe-runtime-ssd-11",
@@ -6796,6 +6766,46 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "OS/storage/HPC隣接分野からGPU memory paging・direct storage I/O・expert cache schedulingを探索する",
       "source_submission": "work-queue/submissions/20260917T2200JST-discovery-edge-agentic-3.json"
+    },
+    {
+      "run_key": "2026-09-17T22:00:00+09:00",
+      "round": "september-memory-5",
+      "axis": "September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory",
+      "query_summary": "2026年9月新着を中心にhost+HBM concurrent access、CPU/GPU KV physical partition、Compute-in-Flash、mobile multitasking memoryを検索し、MoE cache隣接研究も補完した。canonical arXiv IDでdefault branchを事前照合した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.04895"
+      ],
+      "next_axis_hint": "引用追跡と2025 storage/HPC先行研究から未収録の基盤技術を探索する",
+      "source_submission": "work-queue/submissions/20260917T2200JST-discovery-september-memory-5.json"
+    },
+    {
+      "run_key": "2026-09-17T22:00:00+09:00",
+      "round": "storage-runtime-4",
+      "axis": "GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache",
+      "query_summary": "OS/storage/HPC隣接軸からdirect remote-memory access、3D NAND-centric inference、peer GPU caching、vLLM NVMe KV connector、agentic storage pathを探索し、canonical arXiv IDでdefault branchを事前照合した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375"
+      ],
+      "next_axis_hint": "recent September 2026 inference-system papersと引用追跡から未収録候補を探索する",
+      "source_submission": "work-queue/submissions/20260917T2200JST-discovery-storage-runtime-4.json"
     }
   ],
   "axes": {
@@ -11184,6 +11194,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.8,
       "next_axis_hint": "OS/storage/HPC隣接分野からGPU memory paging・direct storage I/O・expert cache schedulingを探索する"
+    },
+    "September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory": {
+      "last_run_key": "2026-09-17T22:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "引用追跡と2025 storage/HPC先行研究から未収録の基盤技術を探索する"
+    },
+    "GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache": {
+      "last_run_key": "2026-09-17T22:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "recent September 2026 inference-system papersと引用追跡から未収録候補を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

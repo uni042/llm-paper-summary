@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T13:04:18.448117+00:00",
+  "updated_at": "2026-09-17T13:06:39.455124+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T13:04:18.448117+00:00",
+      "last_recorded_at": "2026-09-17T13:06:39.455124+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 213,
         "audit_completed": 0,
-        "discovery_completed": 95,
+        "discovery_completed": 97,
         "blocked": 15,
-        "new_jobs": 139,
+        "new_jobs": 141,
         "new_papers": 216,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35122868571:1",
-          "recorded_at": "2026-09-16T16:35:46.066083+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35122868571",
-            "run_attempt": "1",
-            "source_sha": "608cd9fd97a47649d79c99a2226f5998d52a7e8b"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35123021132:1",
           "recorded_at": "2026-09-16T16:37:36.070287+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35224522408",
             "run_attempt": "1",
             "source_sha": "c65ef6917863bff934d4a01f92fce4210be812a0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35224651398:1",
+          "recorded_at": "2026-09-17T13:06:39.455124+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35224651398",
+            "run_attempt": "1",
+            "source_sha": "24c93da72f384d206b2717e507c90e36d3057a97"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -22182,6 +22182,22 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-4e0a46753fdbce72",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6e2391c5d975340d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23157,6 +23173,20 @@
           "type": "research",
           "canonical_id": "arXiv:2603.28018",
           "title": "Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill"
+        },
+        {
+          "job_id": "job-4e0a46753fdbce72",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6e2391c5d975340d",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -23592,7 +23622,9 @@
         ".survey/work-queue/results/20260917T2100JST-discovery-network-disagg-4.json",
         ".survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json",
         ".survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json",
-        ".survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json"
+        ".survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json",
+        ".survey/work-queue/results/20260917T2200JST-discovery-september-memory-5.json",
+        ".survey/work-queue/results/20260917T2200JST-discovery-storage-runtime-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
