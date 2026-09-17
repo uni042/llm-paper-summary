@@ -1,1 +1,29 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-71c0ed6c5534ff3803426ef1","job_id":"job-research-cbc6b0e2ec411766","data":{"hardware":"NVIDIA A100-SXM4 80GB GPUをNVLink接続。主モデルは単一GPU、30B/100B級ではテンソル並列2〜4を使用する。","software":"LMDeployを基盤に約8K行を追加し、Tritonページ注意カーネルを実装。比較対象にLMDeployの自己回帰・固定BD32とSGLangのDLLM実装を用いる。","models":["SDAR-8B","LLaDA2.0-16B","Qwen3-8B AR","Ling2.0-16B AR","SDAR-4B","SDAR-30B-A3B","LLaDA2.0-100B"],"workloads":"ShareGPT、LMSYS-Chat-1M、LongBenchのオンライン配信、GSM8K、HumanEval、MBPP、IFEvalの品質・スケーラビリティ評価。オンライン到着はPoisson過程。","baselines":"LMDeploy-AR、LMDeploy-BD32、SGLang-BD32、固定チャンク4/8/16/24/32。品質では元BD32と対応する自己回帰基底も比較する。","methodology":"主モデルはFP16、標準ブロック幅32、確信度しきい値0.9。対話系ShareGPT/LMSYSはP90 TPOT 50ms、LongBenchは100msをSLOとし、要求率を上げてSLOを満たす最大容量を測る。事前GPU計測でチャンク幅×バッチ数の遅延表を作り、オンラインで確定トークン数を更新する。アブレーションではBD32、固定チャンク、完全弾性を分離する。","scope":"評価はNVIDIA A100とLMDeploy/Tritonに基づき、H100/B200や他社GPUは直接測らない。対象はブロック拡散LLMで、自己回帰モデルの投機復号へ直接適用する方式ではない。品質は4ベンチマークで安定するが全タスクで厳密同一ではない。スケジューラの性能は事前計測表とオンライン確定率推定の精度に依存する。"},"reservation":{"claim_id":"claim-71c0ed6c5534ff3803426ef1","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-bfff6cdf557d0a31b3e1498c",
+  "job_id": "job-research-cbc6b0e2ec411766",
+  "data": {
+    "hardware": "NVIDIA A100-SXM4 80GB GPUをNVLink接続。主モデルは単一GPU、30B/100B級ではテンソル並列2〜4を使用する。",
+    "software": "LMDeployを基盤に約8K行を追加し、Tritonページ注意カーネルを実装。比較対象にLMDeployの自己回帰・固定BD32とSGLangのDLLM実装を用いる。",
+    "models": [
+      "SDAR-8B",
+      "LLaDA2.0-16B",
+      "Qwen3-8B AR",
+      "Ling2.0-16B AR",
+      "SDAR-4B",
+      "SDAR-30B-A3B",
+      "LLaDA2.0-100B"
+    ],
+    "workloads": "ShareGPT、LMSYS-Chat-1M、LongBenchのオンライン配信、GSM8K、HumanEval、MBPP、IFEvalの品質・スケーラビリティ評価。オンライン到着はPoisson過程。",
+    "baselines": "LMDeploy-AR、LMDeploy-BD32、SGLang-BD32、固定チャンク4/8/16/24/32。品質では元BD32と対応する自己回帰基底も比較する。",
+    "methodology": "主モデルはFP16、標準ブロック幅32、確信度しきい値0.9。対話系ShareGPT/LMSYSはP90 TPOT 50ms、LongBenchは100msをSLOとし、要求率を上げてSLOを満たす最大容量を測る。事前GPU計測でチャンク幅×バッチ数の遅延表を作り、オンラインで確定トークン数を更新する。アブレーションではBD32、固定チャンク、完全弾性を分離する。",
+    "scope": "評価はNVIDIA A100とLMDeploy/Tritonに基づき、H100/B200や他社GPUは直接測らない。対象はブロック拡散LLMで、自己回帰モデルの投機復号へ直接適用する方式ではない。品質は4ベンチマークで安定するが全タスクで厳密同一ではない。スケジューラの性能は事前計測表とオンライン確定率推定の精度に依存する。"
+  },
+  "reservation": {
+    "claim_id": "claim-bfff6cdf557d0a31b3e1498c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
