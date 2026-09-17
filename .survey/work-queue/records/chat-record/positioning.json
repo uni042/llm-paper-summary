@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-721b895c107ac359ea8048a4",
-  "job_id": "job-research-a1761c9ca73f9afb",
-  "data": {
-    "limitations": "主要評価は製造済みチップではなく7nm合成値とサイクル精密シミュレーションであり、実際のハイブリッドボンディング製造ばらつき、熱、実システムのソフトウェア待ち時間までは実測していない。対象は主に約30B級MoE、系列長1k、バッチ1〜16で、長文脈ではKVキャッシュがHB容量を圧迫してエキスパートキャッシュの効果が下がる。性能はモデル固有のエキスパート局所性にも依存する。GPT-OSS-20Bのように専門家重みが既にMXFP4の場合、ビット幅弾性を専門家へ適用できず、専門家抑制だけを使う。",
-    "differences": "従来のPIM/NMP系はメモリ近傍で重み計算を行って帯域を増やすが、高バッチ時の低算術強度と計算能力不足を直接解決しない。EAGLE系や小型言語モデル型の投機方式は独立ドラフト重みとKVキャッシュを必要とし、容量の小さいHB上ではエキスパートキャッシュを圧迫する。量子化自己投機方式は対象モデルとの整合が高いが、別の4ビット重みコピーを持つと容量を二重消費する。ELMoE-3Dは対象重みの上位ビットをキャッシュ兼ドラフトとして共用し、頻出エキスパート集合もHB容量へ合わせて制限するため、キャッシュ・量子化・自己投機を別々の機構ではなく一つの配置問題として統合する点が異なる。",
-    "implementation_status": "論文では論理ダイをASAP7 7nm FinFETで合成し、面積と処理能力を算出している。性能評価はDuplex由来のサイクル精密シミュレータ、イベント駆動の投機実行・キャッシュモデル、Ramulatorを統合したシミュレーションである。HB DRAMとLPDDRの帯域・エネルギーは既存仕様や文献からモデル化される。arXiv本文と付随ページでは公式ソースコード公開先を確認できず、製造済みELMoE-3Dチップの実測報告でもない。",
-    "research_positioning": "MoE推論のエキスパートキャッシュ研究、投機的デコード研究、3D積層・近傍メモリアクセラレータ研究の交点に位置する。特にMoE-LightningやSliceMoEのようなメモリ制約下の専門家キャッシュ、MoESDや量子化自己投機のようなMoE向け投機実行、HB-xPU系の3Dメモリ設計を一体化する方向である。研究上の要点は、HBの高速だが小容量という制約を欠点として扱うだけでなく、そこへ置ける部分モデルを対象モデルと共有された高整合ドラフトへ変換し、負荷に応じてキャッシュと投機の役割を切り替えることにある。このためオフロード／階層メモリ系統とMoEキャッシュ系統の双方に関連する。"
-  },
-  "reservation": {"claim_id": "claim-721b895c107ac359ea8048a4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-dd0768548da66bf9efb0496c",
+  "job_id": "job-research-36aaaee3c1110557",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dd0768548da66bf9efb0496c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
