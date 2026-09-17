@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1456e4262a00dc57a406377f",
+  "attempt_id": "attempt-a4e4d8c3f36aed305d4ea174",
   "job_id": "job-research-5bed14c683ee7a49",
   "data": {
     "hardware": "メモリ制約の消費者向けGPUを対象とした実機評価で、主要な端末間比較にNVIDIA GeForce RTX 3090を用いる。Mixtral-8x7BのFP16全体は約94GBで、FloEは11GB VRAM条件まで評価する。CPU DRAMからGPU VRAMへのPCIe 4.0 x16級転送を主要ボトルネックとし、論文の動機測定では専門家1個のFP16転送が約15ms、RTX 3090上の専門家計算が約5ms。",
@@ -30,7 +30,7 @@
     "scope": "実GPU上の単一端末・低バッチ・遅延重視の専門家オフロードが中心で、データセンターの大規模多GPU高スループット運用を直接最適化する研究ではない。主張はMixtral-8x7Bで最も強く、他MoEでの疎性観測も示すが、予測精度や最適疎性率はモデル・入力分布・PCIe帯域に依存する。"
   },
   "reservation": {
-    "claim_id": "claim-1456e4262a00dc57a406377f",
+    "claim_id": "claim-a4e4d8c3f36aed305d4ea174",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

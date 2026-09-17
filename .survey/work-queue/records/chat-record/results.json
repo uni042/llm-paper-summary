@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1456e4262a00dc57a406377f",
+  "attempt_id": "attempt-a4e4d8c3f36aed305d4ea174",
   "job_id": "job-research-5bed14c683ee7a49",
   "data": {
     "overview": "FloEは、専門家内部の文脈疎性と射影ごとの量子化耐性を組み合わせることで、Mixtral-8x7Bの専門家転送ペイロードを9.3分の1へ圧縮し、従来は全重み常駐が難しい11GB VRAM級GPUでも推論可能にする。重要なのは容量削減だけでなく、二段予測による先読みで縮小後のPCIe転送を現在層計算へ重ね、低バッチの壁時計遅延を改善した点である。ただし圧縮は近似であり、品質を完全保持する方式ではない。",
@@ -48,7 +48,7 @@
     "quality_impact": "近似方式。元モデルと完全に同じ出力分布を保証せず、文脈疎化とINT2量子化により平均4.4〜7.6%の性能低下を報告する。品質制約が厳しい用途では疎性率や量子化設定を緩める必要があり、その分PCIe転送量と遅延が増える。"
   },
   "reservation": {
-    "claim_id": "claim-1456e4262a00dc57a406377f",
+    "claim_id": "claim-a4e4d8c3f36aed305d4ea174",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
