@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:42:52 JST**
+> 自動生成: **2026-09-17 13:43:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-17 13:39:54 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-17 13:39:54 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **1** | **2** | **3** | **0** | — |
+| Research | **10** | **4** | **1** | **3** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **4** | **2** | **2** | **3** | **0** | **5** |
+| 合計 | **11** | **5** | **2** | **3** | **3** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,8 +115,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 13:30 JST** / worker `scheduled-chat-paper-20260917T1330JST`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- immutable submission: **4件** / 検証済み成功: **1件** / 未完了・未検証: **3件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0dacd70c0debc8b74170e20e.json` (job `job-research-6b9319ad56fb236d`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-3fd0abe9beaed22201ef8ff4.json` (job `job-research-0923832e7cd03d20`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-987e47d076f99ed6f71340e5.json` (job `job-research-4954e0b135582135`)
 - **成功** `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference
   - job: `.survey/work-queue/jobs/job-research-4954e0b135582135.json`
@@ -201,8 +202,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **421** |
-| └ Research | **294** |
+| 成功result未照合のimmutable submission | **422** |
+| └ Research | **295** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
