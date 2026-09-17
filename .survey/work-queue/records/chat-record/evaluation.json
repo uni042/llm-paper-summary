@@ -1,3 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9728a65bf10d91c2f0a02ad3","job_id":"job-research-c61a311635c958d5","data":{"hardware":"DeepSeek V3をHuawei CloudMatrix384上の80基のAscend 64GB NPUへ配置して単一カード故障を注入する。","software":"Huawei xDeepServe/FlowServe、XCCL、HCCL/GLOO、Ray、Kubernetes NPU Device Plugin。NPU driver 25.2.1、CANN 8.2.1、Torch NPU 2.1.0。グラフ実行はDynamo/Ascend IRのキャッシュコンパイルを利用する。","methodology":"単一NPUを故障させ、キャッシュ済み再初期化を基準に、MA分離構成の注意故障、MoE故障＋冗長専門家、MoE故障＋欠損専門家、MoE故障＋役割切替、およびMA同居構成の冗長ケースの停止時間を比較する。基準83.1秒はDocker/Ray起動済みとしてFlowServeを再初期化する時間で、エンジン、実行器、分散群、XCCL、重み読込、グラフキャッシュ読込・コンパイルを含む。品質はDeepSeek V3で専門家を1/64から1/2まで意図的に欠損させ、各課題で最頻繁専門家を落とす厳しいtask-based方式と、一定間隔で落とすevery-nth方式をLanguage Model Evaluation HarnessのARC、WinoGrande、HellaSwag、PIQA、RACE、TruthfulQA、GSM8K、MMLUで比較する。","scope":"ReviveMoEは孤立した単一NPU故障を対象とし、故障NPUが戻らない条件でも継続する。ネットワーク分断、複数ノード同時故障、大規模停電は対象外。主評価はDeepSeek V3とHuawei Ascend/XCCL環境であり、GPU/NCCLや他サービング基盤で同じ復旧時間を直接実証していない。故障検知も明瞭なハードウェア故障が中心で、遅いデバイスや電力異常など性能劣化型障害は現設計の制約として残る。"},"reservation":{"claim_id":"claim-9728a65bf10d91c2f0a02ad3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
+  "job_id": "job-research-146f944f1c748398",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a65fafc0985029a9a69cb193",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

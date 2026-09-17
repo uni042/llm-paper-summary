@@ -1,3 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9728a65bf10d91c2f0a02ad3","job_id":"job-research-c61a311635c958d5","data":{"overview":"80 NPUのDeepSeek V3で、キャッシュ済みインスタンス再初期化83.1秒に対し、MA分離構成の注意故障は10.2秒、MoE冗長は10.7秒、MoE欠損継続は10.8秒まで短縮する。MoE役割切替は40.6秒の重み読込が支配して52.7秒だが、それでも基準より36.6%短い。MA同居冗長は12.8秒。完全グラフ再コンパイル12.9分を事前グラフキャッシュで分離構成約6秒、同居構成約8秒へ縮めることが主要因である。専門家欠損は1/32までHarness平均への影響が小さい。","key_results":[{"metric":"MA分離・注意故障の復旧時間","value":"10.2秒、基準83.1秒から87.8%短縮","baseline":"キャッシュ済みFlowServe再初期化83.1秒","condition":"DeepSeek V3、80 Ascend NPU、単一注意NPU故障","interpretation":"エンジン・実行器・重みを維持し、要求移行、通信再構築、キャッシュコンパイルだけに絞ると停止時間の大半を除ける。"},{"metric":"MoE故障の復旧時間","value":"冗長10.7秒、欠損10.8秒、役割切替52.7秒","baseline":"再初期化83.1秒","condition":"MA分離構成の単一MoE NPU故障","interpretation":"冗長または少数専門家欠損なら重み読込を避けられる。役割切替は完全性を戻せるが40.6秒のMoE重み読込が支配する。"},{"metric":"MA同居構成の復旧時間","value":"12.8秒","baseline":"再初期化83.1秒","condition":"MA同居、冗長専門家、単一NPU故障","interpretation":"注意・MoEを同居させても局所復旧は有効だが、共同グラフのキャッシュコンパイルが分離構成より約2秒長い。"},{"metric":"グラフ再構築時間","value":"完全コンパイル12.9分に対しキャッシュコンパイル約6秒（分離）/8秒（同居）","baseline":"故障後構成をゼロから完全コンパイル","condition":"DeepSeek V3、NPU数が1減った故障構成","interpretation":"故障構成用グラフを平常時に事前コンパイルしておくことが高速復旧の必須条件である。"},{"metric":"専門家欠損時の平均品質","value":"基準0.683、task-basedで1/32欠損0.681、every-nthで1/32欠損0.679","baseline":"専門家欠損なし0.683","condition":"DeepSeek V3、10 Harness指標の算術平均","interpretation":"EP32以上の単一MoE NPU相当なら、短時間の不完全専門家集合でサービス継続する選択肢が実用的になり得る。"}],"negative_results":"役割切替は重み完全性を保つ一方で52.7秒かかり、冗長・欠損方式の約10〜11秒より大幅に遅い。専門家欠損は1/32程度では小さいが、欠損率が増えると品質が悪化し、task-based平均は1/4で0.625、1/2で0.542まで低下する。GSM8Kは特に敏感でtask-basedの1/8欠損で0.540、1/4で0.318となる。したがって欠損継続は任意のEPで安全ではなく、論文もEP<32や最後の専門家複製を失う場合に役割切替が必要とする。","interpretation":"再起動型復旧の多くは故障と無関係な状態まで作り直すため遅い。ReviveMoEは静的重みや健全CPUプロセスを残し、失われたKVだけ再計算し、ブロック表だけ巻き戻し、通信とグラフだけ故障後構成へ差し替えることで停止時間を削る。MoEの冗長性を性能目的の複製から耐障害資源として再利用し、完全性と停止時間を状況ごとに選べる点も実運用上重要である。","quality_impact":"通常の冗長専門家方式と役割切替方式は完全なモデル重みを維持するため品質を変えない。欠損専門家方式だけは近似復旧で、ゲートから失われた専門家を除外して次善専門家へ送るため品質影響があり得る。実験では1/32欠損まで平均影響が小さいが、欠損率増加とともに課題依存の劣化が明確になる。"},"reservation":{"claim_id":"claim-9728a65bf10d91c2f0a02ad3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
+  "job_id": "job-research-146f944f1c748398",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a65fafc0985029a9a69cb193",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

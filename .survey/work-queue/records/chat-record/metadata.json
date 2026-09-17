@@ -1,3 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9728a65bf10d91c2f0a02ad3","job_id":"job-research-c61a311635c958d5","data":{"canonical_id":"arXiv:2602.21140","arxiv_id":"2602.21140","title":"ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments","list_summary":"単一NPU障害時にサービング全体を再起動せず、要求状態・KVブロック表・MoE重み・通信領域・実行グラフを局所修復して大規模MoE推論を高速復旧する。","summary":"ReviveMoEはHuawei CloudのxDeepServe/FlowServe上で、MoEと注意を同居させる構成と分離する構成の双方を対象に、単一NPU障害からインスタンス再起動なしで復旧する。故障検知後に全実行器を一時停止し、故障注意ランクの要求はCPU上に残るプロンプトと生成済みトークンを健全ランクへ移してプリフィルだけ再計算する。KVブロック表は各生成段階の操作ログを巻き戻す。MoE重みは冗長専門家、注意ランクからMoEへの役割切替、または欠損専門家のゲート無効化から選ぶ。故障ランクを除いて通信領域を再構築し、故障構成用に事前生成したグラフキャッシュで再コンパイルする。DeepSeek V3を80 Ascend NPUで評価し、再初期化83.1秒を最短10.2秒へ短縮した。","authors":["Haley Li","Xinglu Wang","Cong Feng","Chunxu Zuo","Yanan Wang","Hei Lo","Yufei Cui","Bingji Wang","Duo Cui","Shuming Jing","Yizhou Shan","Ying Xiong","Jiannan Wang","Yong Zhang","Zhenan Fan"],"authors_affiliations":"Huawei Technologies Canada; Huawei Technologies China; Simon Fraser University","published":"2026-02-24","publication":"arXiv preprint","publication_type":"preprint","publication_status":"Preprint","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"source":"https://arxiv.org/abs/2602.21140","sources":["https://arxiv.org/abs/2602.21140","https://arxiv.org/pdf/2602.21140"],"topics":["MoE推論","障害復旧","耐障害性","通信再構築","KVキャッシュ","グラフコンパイル"],"implementation":"Huawei Cloud MaaSへ統合されたxDeepServe/FlowServe上の実装で、Huawei NPU Device Plugin、Ray、XCCL、HCCL/GLOO、Ascendグラフキャッシュを利用する。論文本文から独立したReviveMoE公開コードURLは確認できなかった。","code":null,"hardware_evaluation":"DeepSeek V3をCloudMatrix384のうち80基のHuawei Ascend 64GB NPUで評価。NPU driver 25.2.1、CANN 8.2.1、Torch NPU 2.1.0。","quality_effect":"冗長専門家と役割切替は重み完全性を保つ。欠損専門家方式ではEP32以上の単一NPU相当で専門家1/32を失ってもHarness平均0.683から0.681程度と影響が小さいが、欠損率が大きいと品質が悪化する。","references":[],"references_checked_at":"2026-09-18","references_source":"primary-reference-section","references_total":0,"last_checked":"2026-09-18"},"reservation":{"claim_id":"claim-9728a65bf10d91c2f0a02ad3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
+  "job_id": "job-research-146f944f1c748398",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a65fafc0985029a9a69cb193",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
