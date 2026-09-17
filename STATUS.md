@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 15:03:05 JST**
+> 自動生成: **2026-09-17 15:03:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
-| 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **70** |
-| 最終検証済みResearch収録 | **09-17 14:18:42 JST（44分前）** |
+| 収録候補論文 | **64** |
+| 未claim Research job | **61** |
+| 直近24hの検証済みResearch収録 | **69** |
+| 最終検証済みResearch収録 | **09-17 14:18:42 JST（45分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **64** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **64** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **4** | **1** | **3** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **3** | **1** | **2** | **0** | **0** | **14** |
-| 合計 | **14** | **7** | **2** | **5** | **3** | **0** | **14** |
+| Discovery | **4** | **4** | **3** | **1** | **0** | **0** | **15** |
+| 合計 | **16** | **8** | **4** | **4** | **3** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -109,6 +109,14 @@
   - result: `.survey/work-queue/results/20260917T1459JST-discovery-unrepresented-memory-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json`
   - 探索軸: fresh-and-adjacent-memory-offload-kv-systems
+- **09-17 15:03:27 JST** job `job-5c8ea8ca705a9ecb` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T1512JST-discovery-speculative-decoding-gaps-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T1512JST-discovery-speculative-decoding-gaps-2.json`
+  - 探索軸: speculative-decoding-system-coverage-gaps
+- **09-17 15:03:34 JST** job `job-eec5ff8f364687d4` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260917T1521JST-discovery-training-memory-systems-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json`
+  - 探索軸: training-offload-checkpoint-storage-gaps
 - **09-17 13:41:46 JST** job `job-2910aab086edc06c` / 候補 **5件**
   - result: `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
@@ -138,8 +146,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 14:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **14件**
-- 探索軸: fresh-and-adjacent-memory-offload-kv-systems / speculative-decoding-system-coverage-gaps / training-offload-checkpoint-storage-gaps
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **1件** / 候補: **15件**
+- 探索軸: fresh-and-adjacent-memory-offload-kv-systems / speculative-decoding-system-coverage-gaps / training-offload-checkpoint-storage-gaps / distributed-serving-network-and-disaggregation-gaps
 - round `unrepresented-memory-systems-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json`
   - 探索軸: fresh-and-adjacent-memory-offload-kv-systems
@@ -147,10 +155,14 @@
 - round `speculative-decoding-gaps-2` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T1512JST-discovery-speculative-decoding-gaps-2.json`
   - 探索軸: speculative-decoding-system-coverage-gaps
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T1512JST-discovery-speculative-decoding-gaps-2.json` (`ok=true`)
 - round `training-memory-systems-3` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json`
   - 探索軸: training-offload-checkpoint-storage-gaps
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T1521JST-discovery-training-memory-systems-3.json` (`ok=true`)
+- round `disaggregation-evaluation-4` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json`
+  - 探索軸: distributed-serving-network-and-disaggregation-gaps
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -186,7 +198,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **64** |
 
 ### 候補の重複・識別情報欠損
 
@@ -214,10 +226,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **428** |
+| 成功result未照合のimmutable submission | **427** |
 | └ Research | **299** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **126** |
 
 ### 厳格検証が未成立のcompleted job
 
