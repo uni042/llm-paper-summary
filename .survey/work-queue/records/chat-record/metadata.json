@@ -2,81 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-81cca2a745d2540e0c24bc47",
-  "job_id": "job-research-05978e704eaf8286",
-  "data": {
-    "canonical_id": "arXiv:2609.14507",
-    "arxiv_id": "2609.14507",
-    "doi": "10.48550/arXiv.2609.14507",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "Physically Partitioned KVCache Format for CPU–GPU Load Balancing in MoE Inference",
-    "summary": "単一GPUで長文の混合専門家モデル（Mixture of Experts; MoE）を動かすと、重みとKVキャッシュがVRAMを超え、KVをCPUメモリへ退避する必要がある。従来はCPU上のKVをGPUへ転送して注意計算するか、CPU上で直接注意計算するかの一方へ寄せるが、MoEでは専門家計算もCPUとPCIeを使うため重畳実行が競合し、最適な分担率も文脈長やバッチで変化する。InplaceKVCacheは、KVを書いた時点でピン留め状態と配置を四領域へ固定し、後から再配置せずにCPU計算用とGPU転送用を併存させる。WriteScopeはルーフラインモデルで系列方向のCPU/GPU分担率を追跡し、A100/V100上で長文MoE推論を1.4〜2.5倍高速化し、32GB級VRAMで合計100万トークン規模まで実行する。",
-    "list_summary": "KVを書込時にCPU計算用・GPU転送用の物理領域へ固定配置し、ルーフラインで系列を動的分担することで、単一GPUの長文MoE推論を高速化する。",
-    "authors": [
-      "Enda Yu",
-      "Dezun Dong",
-      "Xiangke Liao"
-    ],
-    "authors_affiliations": "National University of Defense Technology, China",
-    "published": "2026-09-13",
-    "publication": "arXiv:2609.14507v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "hierarchical-memory-kv-offload-cpu-gpu-attention",
-    "topics": [
-      "KVキャッシュオフロード",
-      "CPU-GPU協調",
-      "MoE推論",
-      "長文推論",
-      "物理メモリ配置"
-    ],
-    "importance": "KV退避を保存先だけでなく、CPU計算とGPU転送に適した物理状態までデータ形式へ組み込み、実行時の負荷分散を再配置なしのスケジューリング問題へ変換する。",
-    "hardware_evaluation": "主評価はNVIDIA A100 PCIeをVRAM 32GBに制限し、Intel Xeon Gold 5318Y 24コアと502GBホストメモリを使用。移植性評価は同一CPU上のV100-32GB。",
-    "quality_effect": "WriteScope本体はモデル固有の疎化を除き完全な全注意を計算し、CPU/GPU部分出力をLSEで厳密結合するため配置による品質低下はない。比較する一部疎ベースラインはKVの80%を保持する。",
-    "source": "https://arxiv.org/abs/2609.14507",
-    "sources": [
-      "https://arxiv.org/abs/2609.14507",
-      "https://arxiv.org/html/2609.14507"
-    ],
-    "code": null,
-    "implementation": "約2.2K行のPythonによるInplaceKVCacheとルーフラインスケジューラ、約1.2K行のC++ AVX-512 CPU注意バックエンド、DeepSeek-V4向け約2.1K行の疎カーネルを実装。vLLM/SGLangへの単純拡張では静的メモリ予算と層単位オフロードが構造的制約になる。",
-    "last_checked": "2026-09-17",
-    "references": [
-      {
-        "canonical_id": "arXiv:2405.04434",
-        "arxiv_id": "2405.04434"
-      },
-      {
-        "canonical_id": "arXiv:2606.19348",
-        "arxiv_id": "2606.19348"
-      },
-      {
-        "canonical_id": "arXiv:2507.03153",
-        "arxiv_id": "2507.03153"
-      },
-      {
-        "canonical_id": "arXiv:2403.11421",
-        "arxiv_id": "2403.11421"
-      },
-      {
-        "canonical_id": "arXiv:2401.04088",
-        "arxiv_id": "2401.04088"
-      },
-      {
-        "canonical_id": "arXiv:2512.13525",
-        "arxiv_id": "2512.13525"
-      }
-    ],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv HTML全文のReferences節を確認し、明示されたarXiv識別子を正規化した。",
-    "references_total": 51
-  },
+  "attempt_id": "attempt-5802dd804b5c71e42ecc4823",
+  "job_id": "job-research-ee19ffd9b6b00e19",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-81cca2a745d2540e0c24bc47",
+    "claim_id": "claim-5802dd804b5c71e42ecc4823",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
