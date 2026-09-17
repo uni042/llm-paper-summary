@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2d17d81f9fcb9ead4849e591",
-  "job_id": "job-research-a1f4ccc94cf94fe5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2d17d81f9fcb9ead4849e591",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2d17d81f9fcb9ead4849e591","job_id":"job-research-a1f4ccc94cf94fe5","data":{"hardware":"主実験はNVSHARP対応の8×NVIDIA H100 DGXで行い、ホストは128 CPUコア、800 GBメモリを備える。同一機で4 GPUだけを使うテンソル並列度4の実験も行う。付録では8×NVIDIA B200 DGX（各GPU 192 GB HBM、106 CPUコア、約2.4 TBシステムメモリ）でも再評価する。H100ではGPUクロックをTDP基準へ固定して測定変動を抑え、B200では共有機の権限制約によりクロック固定を行っていない。","software":"H100評価はvLLM 0.8.5のV1エンジン、PyTorch 2.6.0、CUDA 12.4、Triton 3.2.0、FlashAttention-3を使用する。集合通信はPyTorchの対称メモリ機能と独自CUDA拡張を利用する。B200評価ではvLLM 0.14.1、PyTorch 2.10.0、CUDA 13.0、FlashInfer 0.5.3を使用する。B200では対称メモリがtorch.compileと両立しないため、デコード評価ではtorch.compileを無効化してCUDA Graphを使い、プリフィル評価ではさらにCUDA Graphも無効化した即時実行で比較する。","models":["Llama-3.3-70B","Qwen2.5-72B","Mixtral-8x22B","Qwen3-235B-A22B（付録）"],"workloads":"ShareGPTとarXivの実トレースに加え、入力長・出力長を固定した合成ワークロードを用いる。エンドツーエンド評価ではチャンク化プリフィルを使い、H100の密モデルでは2K、Mixtralでは4Kを主要設定とし、Llamaでは1K〜8Kへチャンク長を振る実験も行う。単反復遅延ではプリフィル専用の系列長を変え、バッチ数を変える追加実験も行う。","baselines":"比較対象は、重畳なしのvLLM既定AllReduce、NVSHARP/Multimemを使う最適化AllReduce、通信を除去した理論参照、TileLink、NanoFlowである。通信除去版は正しい出力を生成しないため性能上限の参照に限定する。TileLinkはvLLM未統合なので単一層で比較し、NanoFlowも独自配信基盤のため、H100へ移植した同一基盤内の有効・無効差を使った相対比較とする。","methodology":"マイクロベンチマークは事前ウォームアップ後にL2キャッシュをフラッシュし、CUDAイベントで時間を測る。エンドツーエンドではウォームアップ後に高分解能タイマで測り、接頭辞キャッシュを無効化し、CPU側のデトークン化時間を除外する。融合カーネル単体、単一層、単反復遅延、実トレースのスループットを分けて報告し、通信除去版の数値を実システム性能と混同しない。","scope":"主要結論はNVLink4/NVSwitchとNVSHARP/Multimemを備えるHopperおよびBlackwell世代の単一DGX内テンソル並列推論に基づく実機測定である。H100では4 GPUと8 GPU、B200では8 GPUを検証するが、複数ノード、NVSHARPを持たないGPU、他社GPUで同等の効果が得られるかは直接評価していない。MoEでは小さな系列長で完全分割が不利になる条件も確認しており、全モデル・全バッチに一律適用できる方式としては評価されていない。"},"reservation":{"claim_id":"claim-2d17d81f9fcb9ead4849e591","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
