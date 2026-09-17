@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T08:10:34.431587+00:00",
+  "updated_at": "2026-09-17T08:13:49.884089+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T08:10:34.431587+00:00",
+      "last_recorded_at": "2026-09-17T08:13:49.884089+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 199,
+        "research_completed": 200,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35093664363:1",
-          "recorded_at": "2026-09-16T12:05:16.289799+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35093664363",
-            "run_attempt": "1",
-            "source_sha": "436fddc6374cfa4c00cfdf5b869b48b0b0d4990b"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35096237150:1",
           "recorded_at": "2026-09-16T12:30:57.402904+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35198255905",
             "run_attempt": "1",
             "source_sha": "99dcf072b01bfddf6186d4d8f06cb2b5e5e0ea2d"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35198493464:1",
+          "recorded_at": "2026-09-17T08:13:49.884089+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35198493464",
+            "run_attempt": "1",
+            "source_sha": "68aa096c63c35c3a1978efd882ea5950735cdf28"
           },
           "signals": [
             "research_completed"
@@ -22030,6 +22030,14 @@
           "type": "research",
           "canonical_id": "arXiv:2508.06526",
           "title": "PiKV: KV Cache Management System for Mixture of Experts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0923832e7cd03d20",
+          "type": "research",
+          "canonical_id": "arXiv:2504.19867",
+          "title": "semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage",
           "from": "ready",
           "to": "completed"
         }

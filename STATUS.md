@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:13:30 JST**
+> 自動生成: **2026-09-17 17:13:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **56** |
-| 未claim Research job | **54** |
-| 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-17 17:10:30 JST（3分前）** |
+| 収録候補論文 | **55** |
+| 未claim Research job | **53** |
+| 直近24hの検証済みResearch収録 | **58** |
+| 最終検証済みResearch収録 | **09-17 17:13:45 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **56** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **56** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **3** | **1** | **2** | **2** | **0** | — |
+| Research | **19** | **3** | **2** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **23** | **7** | **5** | **2** | **2** | **0** | **15** |
+| 合計 | **24** | **7** | **6** | **1** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 17:13:45 JST** [research] `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage
+  - job: `.survey/work-queue/jobs/job-research-0923832e7cd03d20.json`
+  - result: `.survey/work-queue/results/research/attempt-180764ce53bd95c132164263.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-180764ce53bd95c132164263.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md`
 - **09-17 17:10:30 JST** [research] `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts
   - job: `.survey/work-queue/jobs/job-research-6b9319ad56fb236d.json`
   - result: `.survey/work-queue/results/research/attempt-366e50017f388aac9c576b49.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-8718dff912353a48271bfa65.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8718dff912353a48271bfa65.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md`
-- **09-17 13:36:46 JST** [research] `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference
-  - job: `.survey/work-queue/jobs/job-research-4954e0b135582135.json`
-  - result: `.survey/work-queue/results/research/attempt-f7834266028442ea9afab397.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f7834266028442ea9afab397.json`
-  - paper: `papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md`
 
 ### Audit
 
@@ -131,8 +131,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 17:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-180764ce53bd95c132164263.json` (job `job-research-0923832e7cd03d20`)
+- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
+- **成功** `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage
+  - job: `.survey/work-queue/jobs/job-research-0923832e7cd03d20.json`
+  - result: `.survey/work-queue/results/research/attempt-180764ce53bd95c132164263.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-180764ce53bd95c132164263.json`
+  - paper: `papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-2e420bd391f65348ec4b92b8.json` (job `job-research-0923832e7cd03d20`)
 - **成功** `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts
   - job: `.survey/work-queue/jobs/job-research-6b9319ad56fb236d.json`
@@ -198,7 +202,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **56** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -218,7 +222,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **663** |
+| inference/training/survey配下の論文Markdown実体 | **664** |
 
 ### immutable submissionの未照合
 
@@ -226,8 +230,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **435** |
-| └ Research | **308** |
+| 成功result未照合のimmutable submission | **434** |
+| └ Research | **307** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
