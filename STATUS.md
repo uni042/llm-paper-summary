@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:08:21 JST**
+> 自動生成: **2026-09-17 18:08:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **53** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 17:20:24 JST（47分前）** |
+| 最終検証済みResearch収録 | **09-17 17:20:24 JST（48分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **2** | **0** | **2** | **2** | **0** | — |
+| Research | **20** | **3** | **0** | **3** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **26** | **6** | **4** | **2** | **2** | **0** | **15** |
+| 合計 | **25** | **7** | **4** | **3** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,8 +131,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-- immutable submission: **2件** / 検証済み成功: **0件** / 未完了・未検証: **2件**
+- immutable submission: **3件** / 検証済み成功: **0件** / 未完了・未検証: **3件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4fd8bb83ad560a14ed7ab9fd.json` (job `job-research-6be1741cdc42b913`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json` (job `job-research-1abdfafeb85e4df9`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-bec0c74881d95eeb32a049cb.json` (job `job-research-1abdfafeb85e4df9`)
 
 #### Audit (:30)
@@ -221,8 +222,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **439** |
-| └ Research | **312** |
+| 成功result未照合のimmutable submission | **440** |
+| └ Research | **313** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
