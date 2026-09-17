@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T21:03:49.243177+00:00",
+  "updated_at": "2026-09-17T21:07:06.560292+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T21:03:49.243177+00:00",
+      "last_recorded_at": "2026-09-17T21:07:06.560292+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 225,
+        "research_completed": 226,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 16,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35157307611:1",
-          "recorded_at": "2026-09-16T22:22:16.476189+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35157307611",
-            "run_attempt": "1",
-            "source_sha": "604b68018c6651bb389f95c19372627700f85ece"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35164355350:1",
           "recorded_at": "2026-09-16T23:58:08.525993+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35274484048",
             "run_attempt": "1",
             "source_sha": "81e5f87955c67efd7cc73318bd9b67403b34cae7"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35274814271:1",
+          "recorded_at": "2026-09-17T21:07:06.560292+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35274814271",
+            "run_attempt": "1",
+            "source_sha": "80eb3c0daa0bcef461e3fdf1a43fc047f8e609ad"
           },
           "signals": [
             "research_completed"
@@ -22354,6 +22354,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.17573",
           "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-1fd656c9a10556db",
+          "type": "research",
+          "canonical_id": "arXiv:2602.10729",
+          "title": "BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization",
           "from": "ready",
           "to": "completed"
         }

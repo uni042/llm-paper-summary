@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:06:53 JST**
+> 自動生成: **2026-09-18 06:07:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **61** |
+| 収録候補論文 | **60** |
 | 未claim Research job | **59** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 06:03:44 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-18 06:07:01 JST（5秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **61** |
+| canonical_id確認済みの一意な候補論文 | **60** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **61** |
+| 非終端Research job合計 | **60** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **1** | **0** | **2** | **0** | — |
+| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **26** | **9** | **9** | **0** | **2** | **0** | **18** |
+| 合計 | **27** | **9** | **9** | **0** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 06:07:01 JST** [research] `arXiv:2602.10729` — BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization
+  - job: `.survey/work-queue/jobs/job-research-1fd656c9a10556db.json`
+  - result: `.survey/work-queue/results/research/attempt-7ad6ad40100c07874c12360f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-7ad6ad40100c07874c12360f.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md`
 - **09-18 06:03:44 JST** [research] `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference
   - job: `.survey/work-queue/jobs/job-research-a725b9cf79d670cf.json`
   - result: `.survey/work-queue/results/research/attempt-c9e86b0774fbe3177b6fb0f5.json` (`ok=true`)
@@ -201,10 +206,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.10729` — BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 06:04:26 JST** / heartbeat: **—** / lease expiry: **09-18 07:34:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1fd656c9a10556db.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale / worker `scheduled-chat-llm-survey`
   - claim: **09-18 05:35:39 JST** / heartbeat: **—** / lease expiry: **09-18 07:05:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-39525f58ef98f435.json`
@@ -227,7 +229,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **61** |
+| ready | **60** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,7 +249,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **689** |
+| inference/training/survey配下の論文Markdown実体 | **690** |
 
 ### immutable submissionの未照合
 
@@ -255,8 +257,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **462** |
-| └ Research | **333** |
+| 成功result未照合のimmutable submission | **461** |
+| └ Research | **332** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
