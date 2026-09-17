@@ -4,10 +4,27 @@
   "slot": "metadata",
   "attempt_id": "attempt-af95b58e929cbe887fc76bfd",
   "job_id": "job-research-491d6cc11a36da8c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-af95b58e929cbe887fc76bfd",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2504.20068", "arxiv_id": "2504.20068", "doi": "10.48550/arXiv.2504.20068", "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG", "eess.SY"]},
+    "title": "JITServe: SLO-aware LLM Serving with Imprecise Request Information",
+    "summary": "JITServeは、対話型、期限付き、複数段階型という異なるサービス品質目標を同じ大規模言語モデル提供基盤で扱う要求スケジューラである。出力長や後続依存関係が到着時には不明確であることを前提に、出力長の上側分位点と履歴実行グラフから保守的な見積もりを作り、生成が進むにつれて更新する。各要求が期限を守るために最低限必要な生成帯域を計算し、単位帯域当たりの有効処理量が高い要求を優先しつつ、入力長が近い要求を同じバッチへまとめるGMAX方式を提案する。16基のA100を用いた実測では、既存方式に対してサービス有効処理量を1.4倍から6.3倍へ改善し、同等の有効処理量を28.5%から83.2%少ない資源で達成できると報告する。",
+    "list_summary": "不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。",
+    "authors": ["Wei Zhang", "Zhiyu Wu", "Yi Mu", "Rui Ning", "Banruo Liu", "Nikhil Sarda", "Myungjin Lee", "Fan Lai"],
+    "authors_affiliations": "University of Illinois Urbana-Champaign; Google; Cisco Research",
+    "published": "2025-04-24", "publication": "arXiv preprint arXiv:2504.20068v3", "publication_type": "arXivプレプリント", "publication_status": "2025年4月24日に初版、2025年12月22日に第3版。主分類cs.DC、併記分類cs.LGとeess.SY。", "lineage": "serving-scheduling",
+    "topics": ["サービス品質目標対応スケジューリング", "サービス有効処理量", "出力長予測", "複合要求", "オンラインスケジューリング", "要求先取り"],
+    "importance": "平均遅延や総スループットではなく、個々の要求がサービス品質目標を満たしたときだけ価値を数える有効処理量を直接最大化し、要求情報が不確かな実運用条件へ適応する。",
+    "hardware_evaluation": "16基のNVIDIA A100 GPUからなるクラスタで、Llama-3.1-8B、Qwen2.5-14B、Qwen3-30B-MoE-A3B、Llama-3.1-70Bを評価する。",
+    "hardware_details": "各評価は1万件を超える要求を少なくとも1時間オンライン投入し、主要結果は5回の独立実行で平均する。要求到着にはMicrosoftの実運用LLM提供トレースを資源規模に合わせて用いる。",
+    "quality_effect": "モデルの重みや注意計算を近似する方式ではなく、要求の実行順序、バッチ構成、先取りを変更する。生成内容そのものを近似しないが、期限超過要求を待機上限後に棄却する運用方策を含む。",
+    "bottlenecks": ["異種サービス品質目標の混在", "出力長の不確実性", "複数段階要求の依存関係不確実性", "先頭要求による待ち行列阻害", "異なる入力長を混ぜたバッチ効率低下"],
+    "evidence_locations": ["§2 Motivation", "§3 JITServe Overview", "§4.1 Request Analyzer", "§4.2 GMAX Algorithm", "§5 Implementation", "§6 Evaluation", "Appendix D"],
+    "source": "https://arxiv.org/abs/2504.20068", "sources": ["https://arxiv.org/abs/2504.20068", "https://arxiv.org/html/2504.20068", "https://arxiv.org/pdf/2504.20068"], "code": null,
+    "implementation": "vLLM上に約2800行を追加して実装し、既存API互換を維持する。出力長予測器と実行グラフ照合器はgRPC経由の別非同期過程へ分離する。本文から公式公開コードURLは確認できない。",
+    "last_checked": "2026-09-17",
+    "references": [{"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"}, {"canonical_id": "arXiv:2403.02310", "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"}],
+    "references_checked_at": "2026-09-17", "references_source": "arXiv v3 HTML references", "references_total": 2
+  },
+  "reservation": {"claim_id": "claim-af95b58e929cbe887fc76bfd", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
