@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4e087a17d0061cd535186ffe",
-  "job_id": "job-research-60a904da0b8faa84",
+  "attempt_id": "attempt-b1cfa5a843dac02733d41490",
+  "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
-    "overview": "主結果は、品質予測だけを高度化しても解消できなかった実行時混雑を、現在のハードウェア状態を費用へ入れることで直接回避できた点にある。H100を2台、モデルを5種類使った持続過負荷評価では、CARROTおよびIRT-Routerに対して端から端までの遅延を3.4〜3.9倍低減し、サービス水準目標達成率を46〜48ポイント改善した。さらにGPU総負荷の偏りを6〜8倍、待機要求の割合を3.1〜3.4倍改善した。同等品質0.62では約40秒から16秒へ短縮し、毎秒15〜21要求でも全待ち行列の83〜84%を実行中状態に保つ。小さいモデルへ固定的に要求を集中させるより、現在空いているモデル・GPUへ要求を逃がす方が、システム全体の遅延と期限遵守を同時に改善できることを示す。",
+    "overview": "Sparse-dLLMはLLaDA/Dreamで既存cache法より高いthroughputを、vanillaに近いmemoryと概ね同等accuracyで達成する。LLaDAでは平均約3.4倍、Dreamでは約3.6倍のthroughput向上が表に示され、4K long-contextではvanilla比最大10倍を報告する。",
     "key_results": [
       {
-        "metric": "同等品質での遅延",
-        "value": "品質0.62で約16秒",
-        "baseline": "CARROTとIRT-Routerは約40秒",
-        "condition": "品質と遅延のパレート曲線",
-        "interpretation": "現在状態を使うことで約60%の遅延削減。"
+        "metric": "LLaDA-8B-Instruct GSM8K throughput",
+        "value": "26.45 TPS, 5.8×",
+        "baseline": "vanilla 4.57 TPS",
+        "condition": "GSM8K 4-shot",
+        "interpretation": "cache sparsificationが反復attentionを大幅削減。"
       },
       {
-        "metric": "サービス水準目標達成率",
-        "value": "品質0.60で約97%、0.63で90%、0.65で76%",
-        "baseline": "品質0.60ではCARROT 51%、IRT 65%。0.63では48%、60%。0.65では両者50%未満",
-        "condition": "初回トークン待ち時間とトークン間遅延から定義した期限",
-        "interpretation": "待ち時間を含む実サービング時間の予測が期限違反回避へ直結する。"
+        "metric": "Dream-v0-7B-Instruct GPQA throughput",
+        "value": "32.63 TPS, 5.2×",
+        "baseline": "vanilla 6.29 TPS",
+        "condition": "GPQA 5-shot",
+        "interpretation": "Dreamでも同様の高速化。"
       },
       {
-        "metric": "待機要求比率",
-        "value": "待機16〜17%、実行中83〜84%",
-        "baseline": "CARROTは待機53〜55%、IRTは34〜39%",
-        "condition": "到着率15、18、21要求毎秒",
-        "interpretation": "一つのGPUへの集中を抑え、待機より実行へ資源を回す。"
+        "metric": "平均throughput speedup",
+        "value": "LLaDA系 約3.4×、Dream系 約3.6×",
+        "baseline": "vanilla dLLM",
+        "condition": "7 benchmarks average",
+        "interpretation": "dLLM-Cache/dKV-Cache/Fast-dLLMより高い。"
       },
       {
-        "metric": "GPU総負荷偏り",
-        "value": "1.691〜2.089",
-        "baseline": "CARROT 12.903〜12.924、IRT 12.640〜12.930",
-        "condition": "到着率15、18、21要求毎秒",
-        "interpretation": "総負荷偏りを約84〜87%削減して両GPUを活用する。"
+        "metric": "長文脈throughput",
+        "value": "4K sequenceで最大10×",
+        "baseline": "vanilla dLLM",
+        "condition": "context-length sweep on 4090",
+        "interpretation": "長文脈ほどsparse cacheの効果が増大。"
       },
       {
-        "metric": "追加ルーティング時間",
-        "value": "CARROT比で約200マイクロ秒",
-        "baseline": "CARROT",
-        "condition": "平均意思決定時間",
-        "interpretation": "ハードウェア認識を加える重要経路の費用は小さいと報告する。"
+        "metric": "LongBench accuracy",
+        "value": "LLaDA-8B-Instruct 34.46",
+        "baseline": "base 34.55",
+        "condition": "LongBench",
+        "interpretation": "長文脈性能をほぼ維持。"
       }
     ],
-    "negative_results": "費用予測器の順伝播を約10ミリ秒と記す一方、CARROT比の追加ルーティング時間を約200マイクロ秒と報告しており、両者の測定範囲の違いは十分説明されていない。評価GPUは2台ともH100で、異種GPUを動機に挙げるもののV100、A100、H100を混在させた直接評価はない。",
-    "interpretation": "モデル規模や単価は単独実行時の効率を示す代理値に過ぎず、オンライン推論では待ち行列とKVキャッシュ圧力が実効効率の順位を逆転させる。HW-Routerはこの順位を問い合わせごとに再推定し、負荷分散を偶然の副作用ではなく閉ループ制御として実現する。",
-    "quality_impact": "同等品質の動作点で遅延と期限達成率を比較し、出力品質を落とさず改善したと報告する。品質判定はQwen-3-Next-80Bを用いた単一の大規模言語モデル判定が中心で、人手や複数判定器による頑健性検証は限定的である。"
+    "negative_results": "DreamのHumanEvalでは一般的evictionがvariable typeやnumeric literal等の構文上重要なtokenを落とし、性能低下が観測される。retention ratioを増やすとaccuracyは改善するがmemoryは線形増加し、0.5以降は収益逓減。delayを長くするとthroughputが低下する。",
+    "interpretation": "dLLMではKV state全体を保持する必要はなく、stepを跨いでsaliencyが安定する少数tokenを残せば、cache memoryを膨らませずattention計算を削減できる。ただしtask-dependentな重要tokenを粗いattention scoreだけで安全に識別できない場合がある。",
+    "quality_impact": "LLaDAでは平均accuracyがvanilla 59.24に対し59.86、LLaDA-1.5は60.90対60.99と同等。Dreamも平均は概ね同等だがHumanEvalで低下し、完全losslessではない。"
   },
   "reservation": {
-    "claim_id": "claim-4e087a17d0061cd535186ffe",
+    "claim_id": "claim-b1cfa5a843dac02733d41490",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
