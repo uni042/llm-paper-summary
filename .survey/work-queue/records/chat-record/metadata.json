@@ -4,10 +4,46 @@
   "slot": "metadata",
   "attempt_id": "attempt-721b895c107ac359ea8048a4",
   "job_id": "job-research-a1761c9ca73f9afb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-721b895c107ac359ea8048a4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2604.14626",
+    "arxiv_id": "2604.14626",
+    "doi": "10.48550/arXiv.2604.14626",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.AR", "cs.DC"]},
+    "title": "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+    "summary": "ELMoE-3Dは、オンプレミスの混合専門家モデル（Mixture-of-Experts; MoE）推論で、バッチ化により多数のエキスパート重みが同時に必要となり外部メモリ帯域が律速する問題を扱う。高帯域だが容量の小さいハイブリッドボンディング（Hybrid Bonding; HB）メモリへ、頻出エキスパートの上位4ビットだけを置き、これを通常デコード時のキャッシュと自己投機的デコード用ドラフトモデルの両方として再利用する。エキスパート選択範囲とビット幅を同時に縮めるElastic-SD、追加記憶なしで4ビット表現を8ビット表現へ入れ子化するLSB補償、HBと外部LPDDRの特性に合わせたテンソル並列・データ並列の切替を組み合わせ、バッチサイズ1〜16の広い範囲でメモリ転送と検証コストを抑える。",
+    "list_summary": "HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。",
+    "authors": ["Yuseon Choi", "Jingu Lee", "Jungjun Oh", "Sunjoo Whang", "Byeongcheol Kim", "Minsung Kim", "Hoi-Jun Yoo", "Sangjin Kim"],
+    "authors_affiliations": "KAIST; Samsung Electronics; GIST",
+    "published": "2026-04-16",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint; arXiv v2 (2026-04-23)",
+    "lineage": "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード",
+    "topics": ["MoE推論", "投機的デコード", "エキスパートキャッシュ", "3D積層メモリ", "ハイブリッドボンディング", "低ビット量子化"],
+    "importance": "容量制約のある高速3Dメモリを単なる重みキャッシュとして使うのではなく、キャッシュ内容そのものを高整合な自己ドラフトモデルへ転用し、低バッチ時のキャッシュ効果と高バッチ時の投機実行効果を同じ資源配置で連続的に得る点が重要である。",
+    "hardware_evaluation": "実機チップ測定ではなく、ASAP7 7nm FinFETで合成した論理ダイと、Ramulatorを統合したDuplex由来のサイクル精密シミュレータで評価する。4GB構成は16 PE・W8A8 262 TOPS・HB帯域819.2 GB/s、8GB構成は32 PE・524 TOPS・1638.4 GB/s。外部メモリは64GB LPDDR5-6400、8チャネル、102.4 GB/s。",
+    "quality_effect": "対象モデルはG32 INT8対称量子化を基準とし、ドラフト時だけHB上の上位4ビットと制限された頻出エキスパート集合を使う近似方式である。最終出力は元の対象モデルによる投機検証を通るため投機的デコード自体は受理判定で対象分布を保つが、論文はドラフト品質を受理率・受理長で評価しており、4ビット未満では単純丸めや切り捨てが急激に悪化することも示す。",
+    "source": "https://arxiv.org/abs/2604.14626",
+    "sources": ["https://arxiv.org/abs/2604.14626", "https://arxiv.org/pdf/2604.14626"],
+    "code": null,
+    "implementation": "論文記載の評価実装はASAP7 7nm合成モデル、Duplex由来のサイクル精密シミュレータ、イベント駆動の投機的デコード／キャッシュモデル、RamulatorによるDRAMタイミングモデルで構成される。公式コード公開URLはarXivページおよび本文で確認できない。",
+    "last_checked": "2026-09-18",
+    "references": [
+      {"canonical_id": "arXiv:1202.3974", "arxiv_id": "1202.3974", "title": "A versatile and accurate approximation for LRU cache performance"},
+      {"canonical_id": "arXiv:2503.13565", "arxiv_id": "2503.13565", "title": "ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts"},
+      {"canonical_id": "arXiv:2510.10302", "arxiv_id": "2510.10302", "title": "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference"},
+      {"canonical_id": "arXiv:2512.12990", "arxiv_id": "2512.12990", "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference"},
+      {"canonical_id": "arXiv:2506.20675", "arxiv_id": "2506.20675", "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts"},
+      {"canonical_id": "arXiv:2107.03374", "arxiv_id": "2107.03374", "title": "Evaluating Large Language Models Trained on Code"},
+      {"canonical_id": "arXiv:2412.15115", "arxiv_id": "2412.15115", "title": "Qwen2.5 Technical Report"},
+      {"doi": "10.1145/3669940.3707267", "title": "MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs"},
+      {"doi": "10.1109/DAC63849.2025.11132870", "title": "Near-Memory LLM Inference Processor based on 3D DRAM-to-Logic Hybrid Bonding"},
+      {"doi": "10.18653/v1/2024.acl-long.681", "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding"}
+    ],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript reference section",
+    "references_total": 72
+  },
+  "reservation": {"claim_id": "claim-721b895c107ac359ea8048a4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
