@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:22:06 JST**
+> 自動生成: **2026-09-17 13:22:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **76** |
-| 最終検証済みResearch収録 | **09-17 13:21:50 JST（16秒前）** |
+| 最終検証済みResearch収録 | **09-17 13:21:50 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **6** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **7** | **3** | **2** | **1** | **2** | **0** | **6** |
+| 合計 | **6** | **3** | **2** | **1** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-79eabe22a1933fc80a491fc0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-79eabe22a1933fc80a491fc0.json`
   - paper: `papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md`
-- **09-17 07:22:13 JST** [research] `arXiv:2511.20982` — A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving
-  - job: `.survey/work-queue/jobs/job-research-0d9ff237f1d632e6.json`
-  - result: `.survey/work-queue/results/research/attempt-cd6a647437352aca5df92996.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cd6a647437352aca5df92996.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2511.20982-dopd-dynamic-pd-disaggregation.md`
 
 ### Audit
 
