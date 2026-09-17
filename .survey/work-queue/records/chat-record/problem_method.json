@@ -5,41 +5,33 @@
   "attempt_id": "attempt-366e50017f388aac9c576b49",
   "job_id": "job-research-6b9319ad56fb236d",
   "data": {
-    "problem": "MoEは各tokenで少数expertだけを起動して計算を疎化するが、通常の推論runtimeではKV cacheは依然として過去token全体を密に保持・参照し、複数GPU/複数nodeで同期・複製される。論文は7B級MoE、128K context、16 expertsでfull KVが24GB超になり得る例を示す。FlashAttentionなどはattention kernelのIOを減らしても、分散nodeから大量KVを読み出す容量・通信問題そのものは解消しない。H2O等の選択方式も静的heuristicや単一device上のtoken重要度を中心にし、どのexpertへrouteされたqueryがどのshardをremote accessするかというsystem costを直接最適化しない。PiKVはこの計算sparsityとKV access sparsityの不一致を対象とする。",
-    "novelty": "PiKVはexpert-sharded KV storageを基盤に、cache missを考慮するexpert routing、複数方式を差し替え可能なKV compression、attention/recency/frequency等を使うpage retention schedulingを同一pipelineへ統合する。KV cacheを受動的な履歴保存ではなくquery-driven retrieval systemとして扱い、optional FPGA/CXL tierへmetadata-heavy処理を移せる構成まで定式化する点が特徴である。",
-    "method_overview": "各decode stepでPiKV Routingがqueryからtop-k expert集合を決め、encoderが新しいK/Vを生成する。選択expertごとにtoken indexとexpert IDからshardを決定し、compression moduleがK/Vを低次元表現へ変換してexpert別circular bufferへmetadata付きで挿入する。次にschedulerが現在queryに対するattention intensity、recency、frequency、age等からpage utilityを計算し、bounded memory内で保持するK pagesを更新する。attentionは選択されたexpertと保持pageだけを読み出す。storageはGPU間にshardされるためfull KV複製を避け、routingはcache miss penaltyを加えてremote lookupを減らし、compressionは1/ρに幅を縮め、schedulerは不要pageを落とす。これらを非同期pipelineとして毎token繰り返し、各moduleのmetadataを次段へ渡す。FPGA構成ではGPUがencoding/attentionを担当し、CXL接続FPGAがdirectory lookup、routing score、compression codec、page scoring、DMAを処理し、KV本体はdisaggregated DDRへ置く。",
-    "system_design": "GPU-centric版はexpertごとのdistributed circular KV shard、routing policy、compression codec、page schedulerを持つ。FPGA版はCXL Type-3 memory pool、PiKV-CTRL、directory、ScoreFuse、Codec、DMAを追加し、GPUをmetadata critical pathから外す。",
+    "problem": "混合専門家モデルでは、各トークンが少数の専門家だけを起動するため計算量は疎になる。しかし一般的な推論処理系では、注意機構のKVキャッシュは依然として過去トークン全体を密に保持し、複数GPUや複数ノードへ複製または同期される。論文は、70億規模の混合専門家モデル、12万8千トークンの文脈、16専門家という例で、完全なKV状態が24GBを超え得ると説明する。注意カーネルの入出力を減らす既存手法だけでは、遠隔ノードから大量のKVを読み出す容量と通信の問題は残る。また重要トークンだけを残す既存方式は、どの専門家へ送られた問い合わせがどの物理断片を参照するかという分散配置上の費用を直接最適化しない。PiKVは、計算の疎性とKVアクセスの疎性が一致していないことを中心課題として扱う。",
+    "novelty": "PiKVの固有点は、専門家単位に分割したKV保存領域を基盤とし、キャッシュ不在を考慮する専門家選択、複数方式を交換可能なKV圧縮、注意強度・新しさ・参照頻度などを用いるページ保持判断を、一つの処理経路へ結合することにある。KVを単なる履歴保存領域ではなく、現在の問い合わせに応じて必要部分だけを取り出す分散検索対象として扱う。さらに任意構成としてFPGAとCXL接続メモリを用い、付随情報の検索、得点計算、圧縮、転送をGPUから分離する写像も示す。個別の圧縮方式や追い出し方式を新発明するというより、それらを混合専門家モデルの配置情報と結び付けて共同最適化する上位設計が主な新規性である。",
+    "method_overview": "各デコード段階では、まず現在の問い合わせから少数の専門家を選ぶ。新しく生成された鍵と値は、トークン番号と専門家番号から決まる分散断片へ送られる。保存前には選択した圧縮器で特徴幅や保持情報を削減し、専門家別の循環領域へ付随情報とともに挿入する。次に保持スケジューラが、現在の問い合わせに対する注意強度、直近参照時刻、参照頻度、経過時間などから各ページの有用度を算出し、容量上限内で残すページを更新する。注意計算は、選択された専門家に属し、かつ保持対象となったページだけを読み出す。これにより全GPUへ完全なKVを複製する必要を減らす。専門家選択にはキャッシュ不在への罰則を戻し、遠隔読み出しが多い選択を避ける。圧縮は一ページ当たりの転送量を減らし、保持判断は再利用価値の低いページを捨てる。各段階は付随情報を次段へ渡しながら非同期に重ね合わせられる。FPGA構成では、GPUがモデル本体の符号化と注意計算を担当し、CXL接続のFPGAがディレクトリ検索、選択得点、圧縮・復元、ページ得点、直接メモリアクセスを担当する。KV本体は分離されたDDR側へ置き、GPUへ戻すのは選択済みかつ必要に応じて圧縮されたKVと索引だけとする。",
+    "system_design": "GPU中心構成は、専門家ごとの分散循環KV断片、専門家選択方策、圧縮器、ページ保持スケジューラから成る。任意のFPGA構成では、CXL Type-3メモリ領域、制御器、ディレクトリ、得点融合器、圧縮器、直接メモリアクセス器を追加し、細かな付随情報処理をGPUの主要実行経路から外す。",
     "components": [
       {
-        "name": "Expert-sharded KV storage",
-        "description": "従来の全GPU full KV replicationではなく、token tとexpert eからshardを決め、各shardを一つのGPUへ割り当てる。各shardは容量Sのcircular bufferでO(1) insertを行い、圧縮後幅d'=d/ρを保存する。論文の式ではper-GPU token storageをO(L/G+L/E)へ下げ、保持page数Kも含む総メモリを2d/ρ(L/(GS)+KS)として表す。expert routingと物理KV配置を同じkeyで結び付けることで、MoEの計算sparsityをcache placementにも反映する。"
+        "name": "専門家単位のKV分散配置",
+        "description": "従来のように各GPUへ完全なKV状態を複製する代わりに、トークン番号と専門家番号の組から保存先断片を決め、各断片を一つのGPUへ割り当てる。断片内部は固定容量の循環領域として管理し、挿入位置を定数時間で決められるようにする。保存する特徴幅は圧縮率に応じて縮小できる。論文は、この分散化と保持ページ数を合わせた一GPU当たりのメモリ量を数式化し、全履歴を各GPUへ複製する方式より容量を抑えられることを解析的に示す。重要なのは、専門家選択に使う識別子とKVの物理配置を同じ軸で結び付ける点である。これにより混合専門家モデルが本来持つ計算の疎性を、KV保存位置と読み出し先の疎性にも伝播させる。代償として、専門家選択が偏ると特定断片へ負荷が集中し、遠隔読み出しや容量不均衡が増えるため、後段の選択方策と保持判断が必要になる。"
       },
       {
-        "name": "PiKV Routing",
-        "description": "queryごとにE expertsからk≪Eを選ぶrouting層で、round-robin、TopK、load-balanced TopK、cache-aware PiKVRouter、entropy penalty、RL adaptive、hierarchical routingを共通interfaceで扱う。cache-aware variantはexpert miss countに対するpenaltyをscoreへ加え、計算上のexpert適合度だけでなくKV localityも考慮する。理論上、dense accessのBLhEに対しsparse accessはBLhkとなり、KV fetch量も2BLhEから2BLhkへ減るためE/kの削減余地を持つ。"
+        "name": "キャッシュ局所性を考慮する専門家選択",
+        "description": "問い合わせごとに多数の専門家から少数だけを選ぶ層を共通化し、単純巡回、上位得点選択、負荷分散付き選択、キャッシュ局所性を考慮するPiKV方式、エントロピー罰則、強化学習型、階層型などを差し替えられる。PiKV方式では、モデル側の専門家適合得点だけでなく、その専門家を選んだ場合に必要となるKVが現在の保存位置で見つからない回数を罰則として加える。したがって、意味的には適した専門家でも遠隔KV読み出しが過大なら選択順位を下げられる。論文の計算量解析では、全専門家を参照する場合に対して選択専門家数だけに処理を限定できるため、注意計算とKV取得量の双方に専門家総数対選択数の削減余地が生じる。ただし局所性を優先し過ぎるとモデル本来の専門家選択を歪める可能性があり、品質と通信量の均衡が設計上の注意点となる。"
       },
       {
-        "name": "PiKV Compression",
-        "description": "KV幅dをd'<dへ変換し、LoRA低rank、LoRA++、PyramidKV、ChunkKV、truncated SVD、FastV、distillation、structured pruningを差し替え可能にする。各方式について再構成誤差と計算量を整理し、圧縮率ρを上げるとread/decode時間が1/ρに比例して減る解析式を示す。ただしdecode computeとmemory readが同程度になると利得が飽和するため、圧縮率だけを無制限に上げる設計ではない。"
+        "name": "交換可能なKV圧縮",
+        "description": "KVの特徴幅を小さくして保存量と転送量を減らす圧縮層を独立した構成要素として置く。低順位近似、改良低順位近似、階層型KV削減、塊単位KV削減、切断特異値分解、高速視覚系圧縮、蒸留、構造化枝刈りなど複数方式を同じ入口から利用できる設計であり、特定の一方式へ固定しない。論文は方式ごとに再構成誤差と計算量を整理し、圧縮率を高めるほど理想化した読み出し時間と復号時間が減る関係式を示す。一方で、メモリ読み出し時間と計算時間が同程度になる領域では追加圧縮の効果が飽和するため、圧縮率を無制限に高めればよいわけではない。さらに損失を伴う圧縮では注意値や生成品質が変化し得るが、第3版本文にはタスク品質の実測比較がない。したがって実運用では、容量削減量だけでなく復元費用と品質低下を同時に検証する必要がある。"
       },
       {
-        "name": "PiKV Scheduling",
-        "description": "bounded memory下でKV pageごとのutilityをattention、recency、frequency、age等から計算し、H2O、sliding window、QUEST、LRU/LRU+、adaptive multi-feature、Duoなどのretention policyを統一的に扱う。adaptive variantは目標hit-rateと実測hit-rateの差からeviction thresholdを更新する。shard size Sについて総メモリ式を微分しS*=sqrt(L/(KG))を導き、細かいshardingとreuse coverageのtrade-offを設定するdesign ruleも提示する。"
+        "name": "問い合わせ依存のページ保持判断",
+        "description": "容量上限がある状況で、どのKVページを残すかを現在の問い合わせに応じて決める。各ページについて注意強度、最後に参照されてからの時間、累積参照頻度、生成からの経過時間などを組み合わせて有用度を算出し、低いページを追い出す。既存の重要度方式、滑動窓方式、問い合わせ依存疎化、最近使用方式、複数特徴の適応方式などを共通枠組みに収める。適応方式では目標命中率と実測命中率の差を用いて追い出し閾値を更新し、固定規則より負荷変化へ追随することを狙う。また論文は断片サイズについて、細かく分けるほど配置自由度は増すが付随情報と保持範囲の費用が増えることをメモリ式から整理し、総量を最小にする断片サイズの解析解を導く。この構成要素は圧縮後の容量と専門家ごとの再利用偏りを受け取り、限られたメモリを再利用価値の高いページへ集中させる役割を持つ。"
       },
       {
-        "name": "Hardware-aware FPGA mapping",
-        "description": "optional構成ではAMD Alveo U55CやIntel Agilex級FPGA SmartNICをCXL Type-3 memoryへ接続し、KV payloadはDDR pool、metadata・score・codec weightだけをFPGA on-chip memoryへ置く。directory lookup、TopK/ScoreFuse、compression、scheduler、DMAを専用engineへ対応付け、GPUには選択・圧縮済みKVとindexだけを返す。代表E=64,S=256,k=4,K=16,d=128でpage-table BRAM約176KB、metadata約48KBと解析し、metadata処理をGPU critical pathから外せることを示す。"
+        "name": "FPGAとCXLを用いる付随情報処理",
+        "description": "任意のハードウェア構成では、AMD Alveo U55CまたはIntel Agilex級のFPGAをCXL Type-3メモリへ接続し、KV本体を大容量DDR側へ置く。FPGAのオンチップ領域にはディレクトリ、ページ表、得点計算に必要な付随情報、圧縮器の小規模な係数を置き、検索、専門家上位選択、得点融合、圧縮・復元、保持ページ評価、直接メモリアクセスを専用処理器へ割り当てる。GPUはモデル本体の行列計算と注意計算に集中し、細粒度な索引処理や遠隔メモリ制御を主要実行経路から外す。代表構成ではページ表用BRAMを約176KB、その他の付随情報を約48KBと見積もり、単一領域へ収容できる可能性を示す。ただしこれは資源式に基づく設計見積もりであり、実機FPGAで測った遅延やスループットではないため、ハードウェア化の実効性は別途検証が必要である。"
       }
     ],
-    "empirical_insights": [
-      "論文v3には独立したempirical evaluation sectionがなく、methodology内のcomplexity/resource analysisが中心。",
-      "KV memory最適shard sizeはS*=sqrt(L/(KG))と導出される。",
-      "compressionによるread/decode削減は理論上ρに比例するがcompute-memory balanceで飽和する。"
-    ]
+    "empirical_insights": ["第3版本文には独立した実測評価節がなく、手法節の計算量・資源量解析が中心である。", "KVメモリ量を最小化する断片サイズの解析解を導出する。", "圧縮による読み出し削減は圧縮率に応じて増えるが、計算時間との均衡点で追加利得が飽和する。"]
   },
-  "reservation": {
-    "claim_id": "claim-366e50017f388aac9c576b49",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
