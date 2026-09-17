@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-4cd9f6f884a1493be0066c89",
-  "job_id": "job-research-6e21b3d4c9b2bcc1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4cd9f6f884a1493be0066c89",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4cd9f6f884a1493be0066c89","job_id":"job-research-6e21b3d4c9b2bcc1","data":{"canonical_id":"arXiv:2409.15654","arxiv_id":"2409.15654","doi":"10.48550/arXiv.2409.15654","arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM","summary":"Cambricon-LLMは、単一バッチのLLM復号では算術強度が極端に低く、70B級モデルの重み容量と帯域要求をスマートフォン級DRAMで満たせない問題を、NPUと専用NANDフラッシュのチップレット協調で解く。モデル重みを高密度フラッシュへ置いたまま、フラッシュダイ内の軽量演算器で行列ベクトル積の一部を処理し、残りをNPUへ分担する。ページ寸法・チャネル数・演算コア数から転送量最小のタイル形状とNPU/フラッシュ負荷比を決め、読み出し要求を細片化してチャネル空隙を埋める。さらに重要な重み外れ値だけを複製保護する軽量ダイ内誤り訂正を備え、70B級を約3.4 token/s、OPT-66BをFlexGen-SSD比22.1倍で処理する。","list_summary":"NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。","authors":["Zhongkai Yu","Shengwen Liang","Tianyun Ma","Yunke Cai","Ziyuan Nan","Di Huang","Xinkai Song","Yifan Hao","Jie Zhang","Tian Zhi","Yongwei Zhao","Zidong Du","Xing Hu","Qi Guo","Tianshi Chen"],"authors_affiliations":"Institute of Computing Technology, CAS / University of Chinese Academy of Sciences / USTC / Peking University / Shanghai Innovation Center for Processor Technologies / Cambricon Technologies","published":"2024-09-24","publication":"MICRO 2024 / arXiv","publication_type":"国際会議論文・プレプリント","publication_status":"MICRO 2024; arXiv v1","lineage":"端末内LLM推論／フラッシュ計算／チップレット／重み退避","topics":["NANDフラッシュ","ダイ内計算","チップレット","NPU","端末内LLM推論","重み退避"],"importance":"SSDから重みを読むだけの退避を、フラッシュ内部で重みを消費して縮約結果だけを外へ出す計算近接型へ進め、SSD/NVMe階層の帯域壁をアーキテクチャ側から越える設計例である。","hardware_evaluation":"SSDsimで8/16/32チャネル、2/4/8チップの三構成を評価し、各チップ2ダイ、各ダイ2プレーン・1演算コア、16KBページ、tR=30usを仮定。NPUは16×16シストリック配列、2 TOPS、1GHz、LPDDR5X約40GB/s。演算コアはTSMC 65nmでVerilog合成し面積・電力を見積もる。","quality_effect":"主評価はSmoothQuantによるINT8重みで、アーキテクチャ自体は近似演算を導入しない。ただしNANDのビット誤りは品質を大きく損なうため、外れ値保護型のダイ内誤り訂正を追加する。誤り率2e-4では元精度の92〜95%を維持するが、8e-4超では保護しても実用不能になる。","references":[],"references_checked_at":"2026-09-17","references_source":"primary manuscript reference section; bibliography checked in full, normalized identities omitted from transport record","references_total":81,"source":"https://arxiv.org/abs/2409.15654","sources":["https://arxiv.org/abs/2409.15654","https://arxiv.org/html/2409.15654v1"],"code":null,"implementation":"フラッシュは拡張SSDsim、NPUはC製サイクル精度シミュレータで評価。フラッシュ演算コアと誤り訂正器はVerilog HDLで設計しTSMC 65nm向けに論理合成。実チップ製造・公開実装は論文中で確認できない。","last_checked":"2026-09-17","last_audited":null,"audit_version":0},"reservation":{"claim_id":"claim-4cd9f6f884a1493be0066c89","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
