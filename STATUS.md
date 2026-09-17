@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 01:05:44 JST**
+> 自動生成: **2026-09-18 01:52:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **45** |
-| 未claim Research job | **44** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（18分前）** |
+| 収録候補論文 | **47** |
+| 未claim Research job | **46** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（1時間4分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **45** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **9** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **4** | **3** | **1** | **0** | **0** | **8** |
-| 合計 | **27** | **7** | **6** | **1** | **1** | **0** | **8** |
+| Discovery | **18** | **4** | **4** | **0** | **0** | **0** | **8** |
+| 合計 | **27** | **7** | **7** | **0** | **1** | **0** | **8** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -93,11 +93,6 @@
   - result: `.survey/work-queue/results/research/attempt-5102e3960d728cbebfe4919a.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5102e3960d728cbebfe4919a.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md`
-- **09-17 19:33:27 JST** [research] `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents
-  - job: `.survey/work-queue/jobs/job-research-ce95464a254235a3.json`
-  - result: `.survey/work-queue/results/research/attempt-a7d7a47efa9628566d9ffaf7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a7d7a47efa9628566d9ffaf7.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md`
 
 ### Audit
 
@@ -117,6 +112,10 @@
   - result: `.survey/work-queue/results/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json`
   - 探索軸: 異種メモリアクセラレータ・KV transfer・disaggregated serving
+- **09-18 01:06:11 JST** job `job-303e9d043b4472ca` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T0116JST-discovery-specialist-near-memory-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json`
+  - 探索軸: HBM-PIM・near-memory KV管理・memory-side dequantization
 - **09-18 00:05:06 JST** job `job-f557e7cd72d205b3` / 候補 **2件**
   - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
@@ -141,10 +140,6 @@
   - result: `.survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-edge-agentic-3.json`
   - 探索軸: agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving
-- **09-17 22:00:54 JST** job `job-c0936418c1cadb8e` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
-  - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
 
 ### 直近タスク
 
@@ -177,7 +172,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 01:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **1件** / 候補: **8件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **8件**
 - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime / 異種メモリアクセラレータ・KV transfer・disaggregated serving / HBM-PIM・near-memory KV管理・memory-side dequantization
 - round `fresh-scheduling-kv-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
@@ -194,7 +189,7 @@
 - round `near-memory-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json`
   - 探索軸: HBM-PIM・near-memory KV管理・memory-side dequantization
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0116JST-discovery-specialist-near-memory-4.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -223,7 +218,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -251,10 +246,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **456** |
+| 成功result未照合のimmutable submission | **455** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
