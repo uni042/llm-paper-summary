@@ -67,6 +67,14 @@ class DiscoveryRejectionLedgerTest(unittest.TestCase):
             encoding="utf-8",
         )
 
+    def _write_job(self, filename: str, payload: dict[str, object]) -> None:
+        jobs = self.queue / "jobs"
+        jobs.mkdir(parents=True, exist_ok=True)
+        (jobs / filename).write_text(
+            json.dumps(payload, ensure_ascii=False),
+            encoding="utf-8",
+        )
+
     def test_candidate_evaluation_rejection_is_persisted_and_filtered_next_time(self) -> None:
         self._write_submission(
             "rejected-round.json",
@@ -154,6 +162,76 @@ class DiscoveryRejectionLedgerTest(unittest.TestCase):
         self.assertEqual(summary["rejection_record_count"], 0)
         ledger = json.loads((self.queue / "discovery-rejections.json").read_text(encoding="utf-8"))
         self.assertEqual(ledger["records"], {})
+
+    def test_terminal_research_rejection_is_added_and_filtered(self) -> None:
+        self._write_job(
+            "job-research-rejected.json",
+            {
+                "job_id": "job-research-rejected",
+                "type": "research",
+                "status": "rejected",
+                "canonical_id": "arXiv:2609.97777",
+                "title": "Withdrawn Research Candidate",
+                "source_url": "https://arxiv.org/abs/2609.97777",
+                "blocker": "primary source was withdrawn and cannot be verified",
+                "completed_at": "2026-09-17T05:00:00+00:00",
+                "status_submission": ".survey/work-queue/submissions/research/attempt-rejected.json",
+            },
+        )
+
+        summary = build_discovery_rejection_ledger.build_ledger(self.root)
+
+        self.assertEqual(summary["rejection_record_count"], 1)
+        ledger = json.loads((self.queue / "discovery-rejections.json").read_text(encoding="utf-8"))
+        row = ledger["records"]["id:arXiv:2609.97777"]
+        self.assertEqual(row["rejection_reason"], "primary source was withdrawn and cannot be verified")
+        self.assertEqual(row["origin"], "research_terminal_rejection")
+        self.assertEqual(row["source_submission"], ".survey/work-queue/submissions/research/attempt-rejected.json")
+
+        result = discovery_search_filter.filter_search_batch(
+            [{"arxiv_id": "2609.97777", "title": "Withdrawn Research Candidate"}],
+            snapshot_dir=self.snapshot,
+        )
+        self.assertEqual(result["results"], [])
+        self.assertEqual(result["rejection_ledger_filtered_count"], 1)
+
+    def test_transient_block_is_not_added_but_blocked_permanent_is(self) -> None:
+        self._write_job(
+            "job-research-blocked.json",
+            {
+                "job_id": "job-research-blocked",
+                "type": "research",
+                "status": "blocked",
+                "canonical_id": "arXiv:2609.98881",
+                "title": "Temporary Source Failure",
+                "source_url": "https://arxiv.org/abs/2609.98881",
+                "blocker": "temporary upstream 503",
+                "completed_at": "2026-09-17T05:10:00+00:00",
+            },
+        )
+        self._write_job(
+            "job-research-blocked-permanent.json",
+            {
+                "job_id": "job-research-blocked-permanent",
+                "type": "research",
+                "status": "blocked_permanent",
+                "canonical_id": "arXiv:2609.98882",
+                "title": "Permanently Unavailable Source",
+                "source_url": "https://arxiv.org/abs/2609.98882",
+                "blocker": "primary source remained unavailable after retry policy",
+                "blocked_attempts": 3,
+                "blocked_permanent_at": "2026-09-17T05:20:00+00:00",
+            },
+        )
+
+        summary = build_discovery_rejection_ledger.build_ledger(self.root)
+
+        self.assertEqual(summary["rejection_record_count"], 1)
+        ledger = json.loads((self.queue / "discovery-rejections.json").read_text(encoding="utf-8"))
+        self.assertNotIn("id:arXiv:2609.98881", ledger["records"])
+        row = ledger["records"]["id:arXiv:2609.98882"]
+        self.assertEqual(row["origin"], "research_blocked_permanent")
+        self.assertEqual(row["rejection_reason"], "primary source remained unavailable after retry policy")
 
 
 if __name__ == "__main__":
