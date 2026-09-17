@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-f6a5e2ca71f1c7ef9975e44d",
-  "job_id": "job-research-cf3f98aec47a974c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f6a5e2ca71f1c7ef9975e44d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-f6a5e2ca71f1c7ef9975e44d","job_id":"job-research-cf3f98aec47a974c","data":{"problem":"27B級モデルでは重みを4bit化して24 GiBへ収めても、長文脈のKV、再構成workspace、投機状態、出力head等が同時に生存してメモリ上限を超える。Apple Siliconの統合メモリではCPU側を独立した退避容量として扱えず、単なるKV圧縮だけでは実行時workspaceのピークを解消できない。","novelty":"新しい量子化器そのものではなく、TurboQuant由来4bit KVをページ単位で直接実行するKVExec、要求所有権に応じてLM head/MTP predictor/vision tower等を着脱するPhaseSwap、要求の入退場・MTP/AR切替・ページ参照解放を安全境界で行うStateTransを一つのserving runtimeへ統合し、圧縮状態が実行時に膨張する問題を扱う。","method_overview":"KVExecは256-token page上のTQ4 KVを保持し、decodeではpage-native attention、prefillでは物理page IDからQ4 indexを展開・centroid lookup・逆Hadamard回転・norm復元を融合して現在layerの浮動K/Vだけを生成し、SDPA直後に評価境界を置いてlayer間のlazy依存を残さない。PhaseSwapはcomponentを操作phaseではなくowner leaseで管理し、生成ownerがいる間はheadを保持し、中間prefill時のみ不要componentを外す。StateTransはqueue arrivalとadmissionを分離し、MTP round完了後にpeerを入れる際はtarget cacheを維持したままARへ変換し、終了・取消時はpending state/page write評価後に参照を減らす。","components":[{"name":"KVExec","description":"TQ4でK/V各vectorを16 centroidへ4bit符号化しFP16 normを保持。16 full-attention layer、4 KV head、head dim 256で1位置16,640 BとなりFP16 65,536 Bの約1/3.94。prefillの復元を融合し、全layerの浮動KVを同時保持しない。"},{"name":"PhaseSwap","description":"644.14 MiBのuntied LM headなどをowner leaseで常駐管理する。生成rowがある混在prefill/decodeではheadを保持し、最後のowner退出時のみrelease可能とする。215.21 MiBのMTP predictorはsingleton speculation時だけmaterializeする。"},{"name":"StateTrans","description":"256-token pageの固定poolと参照計数を使い、admission時にprompt+最大8192出力token分を予約する。active decode中は4 decode forwardにつき1回、最大64 tokenのprefill機会を与える。MTPからARへの切替と再昇格でtarget cacheを再構築しない。"}],"system_design":"メモリをW(重み)+K(KV)+S(再帰/投機状態)+X(workspace)+H(その他)の同時live setとして捉え、KだけでなくXと各componentの重複生存時間を制御する。pagingをKV実行interfaceとownership interfaceの両方に使い、圧縮表現・component residency・request lifecycleを協調させる。"},"reservation":{"claim_id":"claim-f6a5e2ca71f1c7ef9975e44d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
