@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 16:39:56 JST**
+> 自動生成: **2026-09-17 16:40:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **61** |
-| 未claim Research job | **59** |
+| 未claim Research job | **58** |
 | 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-17 16:39:31 JST（25秒前）** |
+| 最終検証済みResearch収録 | **09-17 16:39:31 JST（52秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **2** | **1** | **1** | **2** | **1** | — |
+| Research | **16** | **1** | **1** | **0** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **21** | **6** | **5** | **1** | **2** | **1** | **15** |
+| 合計 | **21** | **5** | **5** | **0** | **3** | **1** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,8 +131,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-75bcb3d65b7781a8fb8d4054.json` (job `job-research-bf0b422fe6562f5b`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts
   - job: `.survey/work-queue/jobs/job-research-7f3f089c5dc01c0c.json`
   - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
@@ -171,7 +170,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 16:40:11 JST** / heartbeat: **—** / lease expiry: **09-17 18:10:11 JST**
+  - evidence: `.survey/work-queue/claims/job-research-bf0b422fe6562f5b.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
