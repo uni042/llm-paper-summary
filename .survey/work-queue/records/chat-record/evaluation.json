@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4cd9f6f884a1493be0066c89","job_id":"job-research-6e21b3d4c9b2bcc1","data":{"hardware":"Cambricon-LLM-S/M/Lを8/16/32フラッシュチャネル、2/4/8チップでモデル化。各チップ2ダイ、各ダイ2プレーンと共有演算コア、16KBページ、1000MT/s、tR=30us。NPUは16×16シストリック配列、2 TOPS、1GHz、LPDDR5X約40GB/s。演算コアはTSMC 65nmで合成。","software":"フラッシュはSSDsimへ読み出し計算命令を追加してシミュレーションし、NPUはC製サイクル精度シミュレータを使用。比較はA100 80GB+Intel NVMe SSD+128GB DRAM上のFlexGen-SSD/DRAMと、Snapdragon 8 Gen 2上のMLC-LLM。","methodology":"OPT 6.7B/13B/30B/66BとLlama2 7B/13B/70Bを評価し、主系はSmoothQuant INT8。復号速度、4ビット時性能、細片化読み出しとタイル化の除去実験、タイル寸法感度、NAND誤り率に対するHellaSwag/ARC/WinoGrande精度、チャネル・チップ数スケーリング、1トークン当たり転送量・エネルギー、面積・電力・費用を測る。","models":["OPT-6.7B","OPT-13B","OPT-30B","OPT-66B","Llama2-7B","Llama2-13B","Llama2-70B"],"baselines":["FlexGen-SSD","FlexGen-DRAM","MLC-LLM"],"scope":"主要なCambricon-LLM性能値は実チップ測定ではなくSSDsimとサイクル精度NPUシミュレーションによる。演算コアのみ65nm論理合成で面積・電力を推定する。比較基盤は実機だがハードウェア世代・量子化条件が異なり、特にMLC-LLMは4ビット、Cambricon-LLM主系は8ビットなので直接比較には注意が必要である。"},"reservation":{"claim_id":"claim-4cd9f6f884a1493be0066c89","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-542ed69d76769ea2b6e90057",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-542ed69d76769ea2b6e90057",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

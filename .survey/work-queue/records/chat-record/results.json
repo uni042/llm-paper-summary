@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4cd9f6f884a1493be0066c89","job_id":"job-research-6e21b3d4c9b2bcc1","data":{"overview":"Cambricon-LLM-LはOPT-66Bを2.59 token/sで処理し、FlexGen-SSD比22.1倍、FlexGen-DRAM比6.8倍となる。OPT-6.7Bでは36.34 token/sでFlexGen-SSD比44.8倍に達する。Llama2-70Bについても約3.44 token/sを報告し、DRAM容量で13B以上を実行できないスマートフォン向け基盤と異なり70B級を収容する。性能向上はフラッシュ内部でGeMVを縮約することと、空きチャネルでNPU向け重みを同時転送することの組合せによる。転送量はFlexGen-SSDより9.7〜11.6倍少なく、転送エネルギーは67%に低下する。","key_results":[{"metric":"OPT-66B復号速度","value":"2.59 token/s","baseline":"FlexGen-SSD比22.1倍、FlexGen-DRAM比6.8倍","condition":"Cambricon-LLM-L、INT8","interpretation":"フラッシュ帯域だけで全重みを搬送する方式に対し、ダイ内縮約とNPU協調で大規模モデルの単一バッチ速度を実用域へ近づける。"},{"metric":"OPT-6.7B復号速度","value":"36.34 token/s","baseline":"FlexGen-SSD比44.8倍、FlexGen-DRAM比10.3倍","condition":"Cambricon-LLM-L、INT8","interpretation":"モデルが小さい条件ではフラッシュ並列性とNPU処理能力を十分利用でき、高い対話速度を得る。"},{"metric":"細片化読み出し効果","value":"1.6〜1.8倍高速化、帯域利用率31.6〜41.4%改善","baseline":"ページを連続転送する構成","condition":"Cambricon-LLM-S、複数OPTモデル","interpretation":"通常読み出しを読み出し計算要求の空隙へ細かく差し込むことで、縮約率の高いLLMで生じるチャネル空白を埋められる。"},{"metric":"ハードウェア認識タイル化効果","value":"1.3〜1.4倍高速化、チャネル利用率76.2〜88.9%改善","baseline":"GeMVをフラッシュだけで処理する構成","condition":"Cambricon-LLM-S","interpretation":"フラッシュに計算を集中させず、空き帯域でNPUへ重みを送り両計算資源を釣り合わせることが重要である。"},{"metric":"転送量と転送エネルギー","value":"転送量9.7〜11.6倍削減、エネルギー67%","baseline":"FlexGen-SSD","condition":"1トークン推論、Cambricon-LLM-S","interpretation":"フラッシュ→DRAM→演算器の全量移動を避け、重み近傍で縮約してから送ることが帯域だけでなくエネルギーにも効く。"}],"negative_results":"ダイ内誤り訂正は万能ではなく、NANDビット誤り率が8e-4を超えると中小重みの多数反転を保護できず精度が実用不能になる。チップ数を増やしすぎても重みを全演算コアへ十分分散できず遊休コアが増えて性能が飽和する。チャネル数増加は性能を伸ばすが、チップレット周長とNPUバッファ面積が上限になる。MLC-LLMのLlama2-7Bは4ビット量子化のため7.58 token/sでCambricon-LLM-Sの3.55 token/sを上回り、主INT8構成が常に最速ではない。","interpretation":"従来のフラッシュ退避では外部インターフェース帯域が重み全量に比例するが、Cambricon-LLMは重みの近くでGeMVを実行し、数千分の一へ縮約された結果だけを送る。ただし縮約しすぎるとチャネルが遊ぶため、その空き時間へNPU処理用重みを流す二重利用が必要になる。したがって性能はフラッシュ内演算能力だけでなく、チャネル空隙、ページ粒度、NPU能力を共同整合させることで得られる。","quality_impact":"アーキテクチャ処理自体はINT8 SmoothQuantされたモデルの演算を保持するが、NAND誤りが品質要因となる。誤り率2e-4では軽量誤り訂正により元精度の92〜95%を維持し、無保護時の約40%水準から大きく回復する。より高い誤り率では品質保証できないため、実デバイスではNAND寿命と保持誤りの管理が必要である。"},"reservation":{"claim_id":"claim-4cd9f6f884a1493be0066c89","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-542ed69d76769ea2b6e90057",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-542ed69d76769ea2b6e90057",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
