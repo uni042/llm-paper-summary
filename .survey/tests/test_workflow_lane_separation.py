@@ -17,8 +17,13 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn("group: survey-claim-main", text)
         self.assertIn(".survey/work-queue/claim-requests/*.json", text)
         self.assertIn("claim_worker.py", text)
-        self.assertIn("refresh_queue_snapshot.py", text)
+        self.assertIn("claim_worker_with_banks.py", text)
+        self.assertIn(".survey/work-queue/claim-results", text)
+        self.assertIn(".survey/work-queue/records", text)
         for forbidden in (
+            "refresh_queue_snapshot.py",
+            "render_status_dashboard.py",
+            "STATUS.md",
             "dispatch_fallback_inbox.py",
             "queue_worker.py --root",
             "dedupe_queue.py",

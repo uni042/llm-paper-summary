@@ -101,14 +101,20 @@ class StatusPublishGateTests(unittest.TestCase):
         self.assertNotIn("append_research_throughput_status.py", text)
         self.assertNotIn("refine_status_observability.py", text)
 
-    def test_fast_lanes_use_canonical_renderer_with_inert_compatibility_shims(self):
-        for workflow in (CLAIM_WORKFLOW, SUBMISSION_WORKFLOW):
-            text = workflow.read_text(encoding="utf-8")
-            with self.subTest(workflow=workflow.name):
-                self.assertIn(CANONICAL_RENDER, text)
-                self.assertNotIn(LEGACY_RENDER, text)
-                self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
-                self.assertIn("STATUS.md", text)
+    def test_claim_fast_lane_defers_dashboard_rendering_to_status_lane(self):
+        text = CLAIM_WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn(CANONICAL_RENDER, text)
+        self.assertNotIn(LEGACY_RENDER, text)
+        self.assertNotIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+        self.assertNotIn("STATUS.md", text)
+        self.assertIn(".survey/work-queue/claim-results", text)
+
+    def test_submission_fast_lane_keeps_canonical_renderer_with_inert_compatibility_shims(self):
+        text = SUBMISSION_WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn(CANONICAL_RENDER, text)
+        self.assertNotIn(LEGACY_RENDER, text)
+        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+        self.assertIn("STATUS.md", text)
 
     def test_background_helper_uses_canonical_renderer_with_inert_compatibility_shims(self):
         text = HELPER_WORKFLOW.read_text(encoding="utf-8")
