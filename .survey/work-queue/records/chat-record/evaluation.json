@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5ba7495e892c3a3a6d421a8e",
-  "job_id": "job-research-7e739eca355b8687",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5ba7495e892c3a3a6d421a8e",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5ba7495e892c3a3a6d421a8e","job_id":"job-research-7e739eca355b8687","data":{"hardware":"最大32枚のNVIDIA H100 GPUクラスタで評価する。複数モデルを同一GPUまたはモデル並列GPU群へ配置し、モデル重みと鍵値キャッシュの物理メモリを動的に共有する。","software":"SGLang上へPrismを実装し、下位のGPUメモリ管理機構として公開実装kvcachedを用いる。仮想・物理GPUページ対応付けとトークンブロック管理を既存注意カーネルに透過的に行う。","datasets":["Hyperbolic実運用追跡","Novita AI実運用追跡","Chatbot Arena追跡","58種類の代表的LLM"],"methodology":"実運用追跡は24〜129モデル、11日〜16か月の期間を含み、同時活動モデル集合、休眠率、要求変動を解析する。端末間評価では同一GPU数で初回トークンSLOと出力トークンSLOの達成率を比較し、同一SLO水準では必要GPU費用と処理可能要求数を比較する。メモリ風船化のページ割当費用、断片化、全体配置と局所調停の寄与も評価する。","settings":[{"name":"実運用負荷再生","description":"HyperbolicとNovita AIを中心とする実トレースを再生し、人気の長い裾、活動モデル集合の高速な変化、突発要求の下で複数方式のSLO達成率を測る。"},{"name":"大規模多モデル配置","description":"58種類の異なる大きさ・構造のモデルを最大32 H100へ配置し、モデル横断の重み・鍵値キャッシュ再配分が必要GPU数をどこまで減らせるか測る。"},{"name":"メモリ機構評価","description":"2MB粒度の物理ページ再配分、全層一括割当、非同期ページ準備などについて伸縮遅延と断片化を測定し、既存注意カーネルを変更せず利用できることを確認する。"}],"scope":"多数のモデルを同一クラスタで常時提供する事業者向け。単一モデルだけを最大負荷で提供する場合より、人気の偏りと休眠時間が大きい多モデル環境で利点が大きい。"},"reservation":{"claim_id":"claim-5ba7495e892c3a3a6d421a8e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
