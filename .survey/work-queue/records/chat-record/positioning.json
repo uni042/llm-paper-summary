@@ -1,13 +1,3 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-7ad6ad40100c07874c12360f",
-  "job_id": "job-research-1fd656c9a10556db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7ad6ad40100c07874c12360f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-7ad6ad40100c07874c12360f","job_id":"job-research-1fd656c9a10556db","data":{"limitations":"モデル多様性はLlama3.1-8B/70Bの2種類、評価トレースはGSM8KとMTBenchが中心で、より多くのモデル階層や混合専門家モデル、長文・マルチモーダル負荷での探索規模は未評価である。性能データベースはGPU特性と負荷分布を事前プロファイルするため、GPU価格、カーネル実装、モデル版、入力長分布が変わると再構築が必要になる。ルータの品質推定も学習済みRouteLLM系スコアとサブサンプル品質評価に依存する。最適化は起動前・再構成時の配置計画であり、秒単位で急変する負荷に対するオンライン自動スケーリングそのものを解くものではない。","differences":"RouteLLMやHybridLLMなどのモデルルーティング研究は問い合わせ難易度に応じたモデル選択を主眼とし、各モデルのGPU配置を固定または均等に扱う。BOuteはルータが作る負荷率を資源配置の入力へ閉ループ接続する。ThunderServe、Helix、Mélangeなどの異種GPUサービングはGPU種別・並列化・フェーズ配置を最適化するが、BOuteはさらに複数モデル間の品質依存ルーティングを同じ探索変数へ含める。汎用ベイズ最適化との差は、負荷率再パラメータ化、予算・在庫の硬制約、モデルGPU選好カーネル、事前シミュレーションというサービング固有構造を注入して探索時間を削減する点にある。","implementation_status":"著者はGPyTorchとBoTorchによる多目的ベイズ最適化器、推論性能シミュレータ、ルータと複数モデルサーバを束ねるコーディネータを実装し、4種類の実GPUサーバで評価している。vLLMとRouteLLM系ルータを利用し、異種GPUの実測価格・通信特性を反映する。BOute本体の公式公開コードURLは論文本文から確認できなかったため、実装詳細は論文と既存公開部品に依存する。","research_positioning":"LLMサービングのスケジューリング系統では、モデル選択とハードウェア配置を別レイヤとして扱う従来設計の境界を跨ぐ共同設計に位置付く。特に、品質制約を保ちながらモデル別到着率を変え、その到着率に応じてGPU種別・台数・並列化を再配分するため、異種GPUの費用性能を実際のモデル需要へ結び付ける。今後、モデル数が増えた場合の階層ルーティング、スポット価格や電力価格を含む時間変動費用、KVキャッシュ共有や事前充填/復号分離といった実行基盤側の配置変数を追加する研究の基準点になる。一方、リアルタイムの細粒度リクエストスケジューラというより、サービング構成を決める計画・最適化層として理解するのが適切である。"},"reservation":{"claim_id":"claim-7ad6ad40100c07874c12360f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
