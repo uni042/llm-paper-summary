@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:35:20 JST**
+> 自動生成: **2026-09-17 18:35:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 18:15:48 JST（19分前）** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **47** |
+| 直近24hの検証済みResearch収録 | **59** |
+| 最終検証済みResearch収録 | **09-17 18:35:47 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **22** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **26** | **5** | **4** | **1** | **2** | **0** | **15** |
+| 合計 | **27** | **5** | **5** | **0** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 18:35:47 JST** [research] `arXiv:2607.27090` — InferScale: GPU-Native KV Injection for Personalized LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-010509dfee08b6d5.json`
+  - result: `.survey/work-queue/results/research/attempt-a6d9e761f99fd071c0489cca.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a6d9e761f99fd071c0489cca.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md`
 - **09-17 18:15:48 JST** [research] `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding
   - job: `.survey/work-queue/jobs/job-research-e79ef27915573b54.json`
   - result: `.survey/work-queue/results/research/attempt-7c0239753483c2ddf4304e18.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-78cb43ce4509a618c85127b5.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md`
-- **09-17 15:44:33 JST** [research] `arXiv:2609.17008` — FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-ee19ffd9b6b00e19.json`
-  - result: `.survey/work-queue/results/research/attempt-ddc2745db0f900abfd7bf01e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ddc2745db0f900abfd7bf01e.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md`
 
 ### Audit
 
@@ -131,8 +131,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a6d9e761f99fd071c0489cca.json` (job `job-research-010509dfee08b6d5`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2607.27090` — InferScale: GPU-Native KV Injection for Personalized LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-010509dfee08b6d5.json`
+  - result: `.survey/work-queue/results/research/attempt-a6d9e761f99fd071c0489cca.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a6d9e761f99fd071c0489cca.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md`
 
 #### Audit (:30)
 
@@ -192,7 +196,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,7 +216,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **669** |
+| inference/training/survey配下の論文Markdown実体 | **670** |
 
 ### immutable submissionの未照合
 
@@ -220,8 +224,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **442** |
-| └ Research | **315** |
+| 成功result未照合のimmutable submission | **441** |
+| └ Research | **314** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
