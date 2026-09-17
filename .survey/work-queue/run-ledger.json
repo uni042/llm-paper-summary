@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T06:05:37.526198+00:00",
+  "updated_at": "2026-09-17T06:36:09.326800+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T06:05:37.526198+00:00",
+      "last_recorded_at": "2026-09-17T06:36:09.326800+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 193,
+        "research_completed": 194,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35087362031:1",
-          "recorded_at": "2026-09-16T10:53:22.776466+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35087362031",
-            "run_attempt": "1",
-            "source_sha": "0e8682525360e23038d80932e012cab4a9eeaafa"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35087729101:1",
           "recorded_at": "2026-09-16T10:57:32.907314+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35190535471:1",
+          "recorded_at": "2026-09-17T06:36:09.326800+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35190535471",
+            "run_attempt": "1",
+            "source_sha": "9b899d010d6987bcc9cebe71b24ceafb01f4cf33"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21960,6 +21960,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-146a535327d5e7ec",
+          "type": "research",
+          "canonical_id": "arXiv:2606.24957",
+          "title": "Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23381,7 +23389,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 657,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }

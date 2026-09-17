@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 65,
-      "completed": 468,
+      "ready": 64,
+      "completed": 469,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 1,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 65,
-    "actively_claimed": 3,
-    "claimable": 62
+    "ready_research_audit": 64,
+    "actively_claimed": 1,
+    "claimable": 63
   },
   "next_jobs": [
     {
@@ -60,6 +60,20 @@
       "title": "Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts",
       "source_url": "https://arxiv.org/abs/2602.02108",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-6be1741cdc42b913",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2609.17241",
+      "title": "ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.17241",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17241-echo-early-layer-collaborative-hierarchical-orchestration-with-bonus-logits-in-speculative-decoding.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -122,20 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-02e232341d4ef088",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2608.14376",
-      "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
-      "source_url": "https://arxiv.org/abs/2608.14376",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T06:05:38+00:00"
+  "generated_at": "2026-09-17T06:36:06+00:00"
 }
