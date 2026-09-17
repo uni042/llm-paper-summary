@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-788e1aebfc9c132ec95bfc8a",
-  "job_id": "job-research-24c58326f22e095e",
-  "data": {
-    "overview": "Megatron-LMの単純な連続エキスパート配置と比べ、MoETunerは単一ノード8×H100でエンドツーエンド9.3%、2ノード16×H200で17.5%高速化する。配置によってGPUごとの処理トークン数を均し、同時にGPU対ごとの全対全通信の最大値を抑えるため、計算と通信の両方で最遅GPUが短縮される。複数ノードではノード間帯域がNVLinkより約9倍低く通信偏りの費用が大きいため、通信を考慮した配置の相対効果が単一ノードより大きい。",
-    "key_results": [
-      {
-        "metric": "エンドツーエンド高速化",
-        "value": "9.3%",
-        "baseline": "Megatron-LMの連続エキスパート配置",
-        "condition": "単一ノード、8×H100、4EP-2TP、4データセット平均",
-        "interpretation": "同一ノード内では主にエキスパート処理負荷の均衡でGPU待ちを減らし、全対全通信の偏りも同時に抑えた結果である。"
-      },
-      {
-        "metric": "エンドツーエンド高速化",
-        "value": "17.5%",
-        "baseline": "Megatron-LMの連続エキスパート配置",
-        "condition": "2ノード、16×H200、4EP-4TP、4データセット平均",
-        "interpretation": "低帯域なノード間通信をまたぐトークン遷移の偏りを配置で抑える価値が高く、単一ノードより改善率が大きい。"
-      },
-      {
-        "metric": "トークン処理尾部遅延削減",
-        "value": "単一ノード36%、複数ノード27%",
-        "baseline": "Megatron-LM",
-        "condition": "WikiText-103、各層の最遅GPUを100ウォームアップ後10ステップで測定",
-        "interpretation": "頻出エキスパートを一つのGPUへ集中させず、クラスタ単位の処理トークン数を平均へ近づけることで最重GPUの計算時間を短縮する。"
-      },
-      {
-        "metric": "全対全通信尾部遅延削減",
-        "value": "単一ノード36.3%、複数ノード30.5%",
-        "baseline": "Megatron-LM",
-        "condition": "WikiText-103、隣接MoE層間のGPU対通信",
-        "interpretation": "層間遷移頻度とGPU対帯域を使ってクラスタ配置を決めるため、最も混雑する通信対の負荷が下がる。"
-      },
-      {
-        "metric": "平均全対全通信遅延削減",
-        "value": "単一ノード35.4%、複数ノード24.7%",
-        "baseline": "Megatron-LM",
-        "condition": "WikiText-103、単一・複数ノード実機",
-        "interpretation": "尾部だけでなく通信分布全体も改善するが、複数ノードでは残存するノード間通信費用が大きく平均改善率は小さくなる。"
-      }
-    ],
-    "negative_results": "複数ノードではテンソル並列度を4へ増やすため全集約通信が追加され、トークン処理時間の改善は単一ノードより小さい。層12〜22では短い測定反復による遅延変動が見られ、層15や30のようにノード間トークン送信が依然多い層では全対全尾部遅延の改善が小さく、スパイクが残る。提案配置は通信をゼロにするのではなく、偏りを均すためのものである。",
-    "interpretation": "単一ノードではNVLink帯域が高いため通信削減より計算負荷均衡の寄与が相対的に大きい。複数ノードではノード間ネットワークがNVLinkより大幅に遅く、同じトークン数でもどのGPU対へ流すかが尾部遅延を左右するため第2 ILPの価値が増える。一方、テンソル並列の全集約などエキスパート配置では変えられない通信は残り、規模拡大時の改善を制限する。",
-    "quality_impact": "ルータが選ぶtop-2エキスパートやモデル重みは変更せず、エキスパートの物理GPUだけを入れ替えるため、推論の数値的意味を近似して高速化する方式ではない。ILP入力の統計が不正確でも主な影響は性能であり、モデルが処理するエキスパート集合自体は変えない。"
-  },
+  "attempt_id": "attempt-2787d7fba73f540ebbeabcee",
+  "job_id": "job-research-d9f05d11667dcf83",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-788e1aebfc9c132ec95bfc8a",
+    "claim_id": "claim-2787d7fba73f540ebbeabcee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
