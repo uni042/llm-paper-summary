@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9d1cb0e0f412061d299b9fe3","job_id":"job-research-60a904da0b8faa84","data":{"limitations":"主要評価は同型H100×2の単一ノードであり、論文が強調する異種GPU世代混在への一般化は直接実証されていない。モデル配置は固定で、replica数変更、モデル移動、複数ノードnetwork contentionとの共同最適化は扱わない。監視間隔200〜300msのため急激なsub-second負荷変動では状態が陳腐化し得る。コスト予測器は対象モデル/GPUと負荷分布で学習が必要で、新ハードウェア・新モデルへの移行コストがある。品質評価は単一LLM judge中心である。","differences":"RouteLLMやIRT-Routerは主に問い合わせからモデル品質を推定しコストをモデルサイズ等で静的に扱う。CARROTは出力長を予測して問い合わせ依存コストを導入するが、GPUキューやKVキャッシュ圧力を見ない。HW-Routerは品質予測器を交換可能なまま、コストをモデル-GPU組のリアルタイム状態から予測する。Helix等の異種GPU servingはモデル配置・実行計画を最適化するのに対し、本研究は既配置の複数LLMへの要求単位ルーティングに焦点を置く。","implementation_status":"公式GitHub UCF-ML-Research/HW-Routerでコード公開。vLLM/Prometheusベースのhardware monitor、MLP cost predictor、IRT/CARROT/UMR router、データ収集・訓練・online evaluation pipelineを含む。arXiv v1は2026-06-10、DAC 2026採択。","research_positioning":"LLM serving schedulingとmodel routingの境界に位置し、routerがGPU runtime telemetryを直接使うことでapplication-level品質選択とsystems-level混雑制御を接続する。既存のqueue-aware schedulerが単一モデル内の要求順序を制御するのに対し、HW-Routerは複数モデル-GPU候補間で負荷を移す。今後は異種GPU配置、autoscaling、P/D分離、KV転送、cluster schedulerと組み合わせる余地が大きい。"},"reservation":{"claim_id":"claim-9d1cb0e0f412061d299b9fe3","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-6ab628d8fc52b643ee76552e",
+  "job_id": "job-research-2829f7afbf13ae9b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6ab628d8fc52b643ee76552e",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

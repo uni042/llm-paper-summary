@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-9d1cb0e0f412061d299b9fe3","job_id":"job-research-60a904da0b8faa84","data":{"problem":"既存の複数LLMルータは応答品質を入力依存で予測しても、推論コストはモデルサイズ、FLOPs、価格、予測出力長など静的または準静的な代理値で扱うことが多い。同じモデルでもGPU種類、現在の実行・待機キュー、KVキャッシュ圧迫、資源競合でTTFT/TPOTは大きく変わるため、静的コストでは一見安いモデルへ要求が集中し、待ち行列増大、SLO違反、他GPUの遊休を招く。HW-Routerは各問い合わせを現在状態込みのモデル-GPU組へ割り当てる問題として扱う。","novelty":"新規性は、LLMルーティングのコスト項をリアルタイムのハードウェア・サービング状態から予測する点にある。実行/待機リクエスト数、KVキャッシュ使用率、直近TTFT/TPOTをモデル/GPU識別子と問い合わせ特徴へ結合し、TTFT・TPOT・出力トークン数を予測する軽量ニューラルネットで実遅延を推定する。品質予測器は既存手法を差し替え可能なまま保ち、動的コストだけをプラグイン化するため、IRT、CARROT、UMR等の品質モデルへ適用できる。","method_overview":"各vLLMサーバからPrometheus経由で200〜300msごとに状態を取得しローカルキャッシュする。問い合わせ到着時、各モデル-GPU候補について問い合わせ特徴、one-hotモデル/GPU識別子、running_req_count、waiting_req_count、kv_cache_usage、ttft_avg、tpot_avgをコスト予測器へ入力する。2層全結合MLP（64/128 hidden units、ReLU、3出力head）がTTFT、TPOT、出力トークン数を推定し、C=TTFT+Nout×TPOTで予測遅延を構成する。別の品質予測器がQを推定し、S=(1-λ)Q-λCを最大化しつつC<BというSLO制約を満たすモデル-GPU組を選ぶ。","components":[{"name":"ハードウェア監視器","description":"各モデル-GPU組の実行キュー、待機キュー、KVキャッシュ使用率、直近TTFT/TPOTを200〜300ms間隔で取得し、ルーティング時に同期監視を発生させないようローカルへキャッシュする。"},{"name":"動的コスト予測器","description":"問い合わせ特徴・モデル/GPU識別子・実時間状態を2層MLPへ入力し、TTFT、TPOT、出力長を同時予測する。静的なモデルサイズではなく現在の混雑とメモリ圧力を反映したモデル-GPU別サービング時間を算出する。"},{"name":"品質予測器","description":"問い合わせに対する各LLMの期待品質を推定する。論文評価ではIRT系を中心に用いるが、CARROTやUMR等と交換可能で、ハードウェアコスト予測と独立に保つ。"},{"name":"SLO対応意思決定器","description":"品質Qと予測遅延Cの重み付きスコアを比較し、遅延予算Bを満たす候補から最適なモデル-GPU組を選択する。混雑GPUの一見安価なモデルを避け、遊休側へ負荷を移す。"}],"system_design":"モデル選択器の前段に継続監視と遅延予測を置き、品質ルータ自体は再利用する構成である。オンライン状態を低頻度監視でキャッシュし、要求ごとの意思決定では軽量推論だけを追加することで、負荷均衡とSLO遵守をルーティング層で同時に最適化する。"},"reservation":{"claim_id":"claim-9d1cb0e0f412061d299b9fe3","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-6ab628d8fc52b643ee76552e",
+  "job_id": "job-research-2829f7afbf13ae9b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6ab628d8fc52b643ee76552e",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
