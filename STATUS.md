@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:34:16 JST**
+> 自動生成: **2026-09-17 18:35:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 18:15:48 JST（18分前）** |
+| 最終検証済みResearch収録 | **09-17 18:15:48 JST（19分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **6** | **3** | **3** | **2** | **0** | — |
+| Research | **21** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **26** | **10** | **7** | **3** | **2** | **0** | **15** |
+| 合計 | **26** | **5** | **4** | **1** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -130,30 +130,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4b1f52337434d9ea1c49a1f1.json` (job `job-research-e79ef27915573b54`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4fd8bb83ad560a14ed7ab9fd.json` (job `job-research-6be1741cdc42b913`)
-- **成功** `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs
-  - job: `.survey/work-queue/jobs/job-research-1abdfafeb85e4df9.json`
-  - result: `.survey/work-queue/results/research/attempt-61cea03f965b827a2ed92932.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md`
-- **成功** `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding
-  - job: `.survey/work-queue/jobs/job-research-e79ef27915573b54.json`
-  - result: `.survey/work-queue/results/research/attempt-7c0239753483c2ddf4304e18.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7c0239753483c2ddf4304e18.json`
-  - paper: `papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md`
-- **成功** `arXiv:2503.01890` — AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs
-  - job: `.survey/work-queue/jobs/job-research-133abb5ee0382900.json`
-  - result: `.survey/work-queue/results/research/attempt-942af3295b1538b54adcfd38.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-942af3295b1538b54adcfd38.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-bec0c74881d95eeb32a049cb.json` (job `job-research-1abdfafeb85e4df9`)
+- 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a6d9e761f99fd071c0489cca.json` (job `job-research-010509dfee08b6d5`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
+- 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -237,8 +220,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **441** |
-| └ Research | **314** |
+| 成功result未照合のimmutable submission | **442** |
+| └ Research | **315** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
