@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-649cbf7dd4b2c0b7dbad2691",
+  "attempt_id": "attempt-788e1aebfc9c132ec95bfc8a",
   "job_id": "job-research-24c58326f22e095e",
   "data": {
     "overview": "Megatron-LMの単純な連続エキスパート配置と比べ、MoETunerは単一ノード8×H100でエンドツーエンド9.3%、2ノード16×H200で17.5%高速化する。配置によってGPUごとの処理トークン数を均し、同時にGPU対ごとの全対全通信の最大値を抑えるため、計算と通信の両方で最遅GPUが短縮される。複数ノードではノード間帯域がNVLinkより約9倍低く通信偏りの費用が大きいため、通信を考慮した配置の相対効果が単一ノードより大きい。",
@@ -48,7 +48,7 @@
     "quality_impact": "ルータが選ぶtop-2エキスパートやモデル重みは変更せず、エキスパートの物理GPUだけを入れ替えるため、推論の数値的意味を近似して高速化する方式ではない。ILP入力の統計が不正確でも主な影響は性能であり、モデルが処理するエキスパート集合自体は変えない。"
   },
   "reservation": {
-    "claim_id": "claim-649cbf7dd4b2c0b7dbad2691",
+    "claim_id": "claim-788e1aebfc9c132ec95bfc8a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

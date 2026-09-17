@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-649cbf7dd4b2c0b7dbad2691",
+  "attempt_id": "attempt-788e1aebfc9c132ec95bfc8a",
   "job_id": "job-research-24c58326f22e095e",
   "data": {
     "limitations": "評価モデルはMixtral-8x7B一種類でエキスパート数8、エキスパート並列度4に固定され、より多数のエキスパートを持つ次世代MoEでILP規模と解時間がどう増えるかは実測していない。単一ノードと複数ノードでH100/H200、CPU、NICが異なる。配置は対象タスクの事前ルーティング統計に依存するため、入力分布が急変するオンライン配信では再プロファイルや再最適化が必要になり得る。GurobiによるオフラインILPなので、短時間で頻繁に配置を変更する動的方式ではない。",
@@ -11,7 +11,7 @@
     "research_positioning": "分散MoEのエキスパート並列・通信最適化系統に属し、特に静的エキスパート配置と層間ルーティング親和性を扱う。通信総量削減だけでは最遅GPU対の全対全時間を抑えられず、計算負荷均衡だけでも低帯域ノード間通信が残るという二目的性を明示した点が位置付け上重要である。MoE-InfinityのようなCPU/GPUエキスパートキャッシュとは異なり全エキスパートはGPU群に常駐するが、将来の階層メモリMoEでも『どのエキスパートを同じ場所へ置くか』の親和性指標として組み合わせられる。"
   },
   "reservation": {
-    "claim_id": "claim-649cbf7dd4b2c0b7dbad2691",
+    "claim_id": "claim-788e1aebfc9c132ec95bfc8a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
