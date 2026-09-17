@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ad568a9def7133e0a5107c75",
-  "job_id": "job-research-5a5215eb805afa43",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ad568a9def7133e0a5107c75",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ad568a9def7133e0a5107c75","job_id":"job-research-5a5215eb805afa43","data":{"related_work":"ZeRO/FSDPはモデル状態をworkerへ分割し、ZeRO-Offload/InfinityはCPUやSSDへ状態を退避する。SmartSwitch系ATP等はネットワーク内集約で通信量を減らし、SHARPは専用スイッチへ集合通信ロジックを置く。別系統ではGPUカーネル分解・融合で計算通信重畳を改善し、従来パラメータサーバはモデル状態とoptimizerをサーバへ置く。","differences":"DisDPはこれらを部分最適化ではなく完全分離として統合する。ZeRO-Infinityと違い通信カーネルもGPU外へ出すためSMだけでなくL2/メモリ帯域競合も避ける。SHARPと違いGPUをデータチャンク管理に使わず、worker SmartNICがpush/pullを直接管理する。従来PSと違いSmartSwitchで勾配集約・パラメータ放送・信頼制御をまとめ、単一PSでも多数workerを線速で支える。","limitations":["専用FPGA SmartNICとSmartSwitchを各クラスタへ導入するハードウェア前提があり、汎用Ethernet/NCCLだけの環境へそのまま適用できない。","実機主要評価は8台A100 40GB・100Gbpsであり、256 DP拡張と32GPU費用評価はASTRA-simを含む。","U50のDMA能力はCX-5より弱く、2GPUかつGEMMなしではNCCLが28%高い帯域を示す。","小micro-batchでは通信を計算へ隠す余地が小さく、干渉除去のスループット利得も小さい。","単一PSが線速を維持するには十分なCPU、メモリ、PCIe、SSD帯域が必要で、論文は100/200Gbps向けに12 SSD級の構成を想定する。"],"implementation_status":"FPGA SmartNICはXilinx Alveo U50で実装し、SmartSwitchロジックとpush/pull/wait API、単一PS上のAdam・SSD状態管理まで含む実機プロトタイプを構築している。8台A100クラスタで実際の175B級スループット、集合通信帯域、収束を測定しており、単なるシミュレーション提案ではない。ただし超大規模DPと費用比較の一部はASTRA-simを使う。","research_positioning":"本研究はLLM分散学習の階層メモリ／オフロード系と、ネットワーク内計算・SmartNIC系を統合したハードウェア・ソフトウェア協調設計である。SSDを単なるworker側退避先として増設するのではなく、オプティマイザ状態を単一PSへ集約し、その入出力をSmartSwitchとSmartNICで線速化するため、CPU/SSDオフロードのボトルネックをネットワーク構造まで含めて再設計している。","repository_position":"学習系のオフロード・階層メモリと分散通信最適化の交点に置くべき論文であり、特にSSD活用研究では『保存容量を増やすだけではGPU通信干渉とPS処理能力が残る』ことを示す比較対象として重要である。","future_work":"400Gbps級実機SmartNIC、より大規模な複数ラック実測、CXL/新世代SSDを用いたPS階層、PS障害耐性、SmartSwitch資源共有、他の3D並列構成との共同最適化が発展方向となる。"},"reservation":{"claim_id":"claim-ad568a9def7133e0a5107c75","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
