@@ -1,15 +1,36 @@
 {
- "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-c6442bb25743e58511625734","job_id":"job-research-120be1bd98c2839e",
- "data":{
-  "problem":"LLM推論のprefillは大規模GEMM中心でcompute-bound、decodeは各tokenで重みと成長するKV cacheを読むためmemory-bandwidth-boundである。chunked prefillを使うmonolithic servingは両phaseを同一batchへ混在させGPU利用率を高めるが、軽量decode kernelがprefill kernelに阻害される。論文のQwen2.5-3B/L20動機実験ではmixed batchが平均約251ms、decode-onlyが15msで、decode kernelは最大10倍、TBTは8倍超悪化した。一方engine-level PD disaggregationはphase interferenceを除く代わりにモデル複製、decode GPU低利用、KV転送、追加hardwareを要する。既存intra-GPU方式もoffline profileやSLO違反後のfeedbackに依存し、prompt長・KV量・batch構成が変動する状況でcompute saturation、memory bandwidth、memory footprintを同時に予測できない。",
-  "novelty":"Nexusは同一GPU内PD分離をreactive制御ではなくper-batchの予測最適化として定式化する。GPU resourceには割当増加のdiminishing returnがあり、prefill/decode同時実行では共有L2/DRAM帯域競合が生じるという観測をcost modelへ組み込み、SM partitionをbatchごとに決める。workload固有の再学習やonline feedback tuningを必要とせず、configurationごとの軽量な一度のkernel profilingでモデルをparameterizeする。",
-  "method_overview":"Nexusはprefill engineとdecode engineを同一GPU内で論理分離し、非重複SM集合上で並行実行する。各batchについてcontention-aware cost modelが、phaseごとのtoken量・compute saturation・共有memory bandwidth競合・memory footprintから候補SM partition時のlatencyを予測する。runtime optimizerはprefill TTFTとdecode TBTの双方を考慮したdual-objective allocationをrelaxed latency constraint付きgreedy searchで高速に解き、SM比率を決める。partition変更はbuffered asynchronous switchingで適用し、短期的なworkload揺らぎでallocationが往復しないようhysteresis zoneを設ける。prefill側はShortest-Prompt-Firstで短promptのhead-of-line blockingを抑え、decode側はFCFSで公平性を保つ。vLLMを拡張してfine-grained SM partitioningとconcurrent phase executionを統合し、単一GPU内でengine-level分離に近いlatency isolationとmonolithic方式のhardware効率を両立する。",
-  "system_design":"requestはprefill queueとdecode queueへphase別に管理される。schedulerが各phaseのbatchを形成し、cost model/optimizerが現在のbatch状態に応じてSM allocationを選択する。allocation managerはhysteresisを介して新partitionへ非同期移行し、各phase kernelを割当SM群で実行する。prefill完了requestのKV stateは同一GPU memory内でdecodeへ引き継がれるため、engine-level disaggregationのGPU間KV transferを不要にする。共有memory bandwidthはpartitionしても物理的には共有されるため、optimizerがcontentionを明示的に見積もる。",
-  "components":[
-   {"name":"contention-aware cost model","description":"SM増加に対するcompute latencyのdiminishing returnと、prefill/decode同時実行時の共有memory-bandwidth interferenceをモデル化する。configurationごとの軽量kernel profilingでparameterizeし、workload固有の学習やSLO違反後のfeedbackなしに候補partitionのlatencyを予測する。"},
-   {"name":"dual-objective SM allocation","description":"prefill側TTFTとdecode側TBTの競合目標を同時に扱い、relaxed latency constraintsの下でfast greedy searchを使ってbatchごとのSM配分を決定する。過剰にSMを与えてもlatencyが改善しない飽和領域を避け、余剰SMを他phaseへ回す。"},
-   {"name":"buffered asynchronous switching","description":"workload変動のたびにSM partitionを即時反転するとoscillationと切替overheadが生じるため、hysteresis zoneを持つbuffered switchingで変更を平滑化する。新しい配分への移行を実行と非同期化し、sub-second粒度の適応性と安定性を両立する。"},
-   {"name":"phase-specific schedulers","description":"prefillはShortest-Prompt-Firstを用いて短いpromptのTTFTを優先し、decodeはFCFSでtoken生成の公平性と応答性を維持する。resource partitionだけでなくphase特性に合わせたqueue policyを組み合わせる。"}
- ]},
- "reservation":{"claim_id":"claim-c6442bb25743e58511625734","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-509eaca02fd513b664c5028b",
+  "job_id": "job-research-120be1bd98c2839e",
+  "data": {
+    "problem": "LLM推論のprefillは大規模GEMM中心でcompute-bound、decodeは各tokenで重みと成長するKV cacheを読むためmemory-bandwidth-boundである。chunked prefillを使うmonolithic servingは両phaseを同一batchへ混在させGPU利用率を高めるが、軽量decode kernelがprefill kernelに阻害される。論文のQwen2.5-3B/L20動機実験ではmixed batchが平均約251ms、decode-onlyが15msで、decode kernelは最大10倍、TBTは8倍超悪化した。一方engine-level PD disaggregationはphase interferenceを除く代わりにモデル複製、decode GPU低利用、KV転送、追加hardwareを要する。既存intra-GPU方式もoffline profileやSLO違反後のfeedbackに依存し、prompt長・KV量・batch構成が変動する状況でcompute saturation、memory bandwidth、memory footprintを同時に予測できない。",
+    "novelty": "Nexusは同一GPU内PD分離をreactive制御ではなくper-batchの予測最適化として定式化する。GPU resourceには割当増加のdiminishing returnがあり、prefill/decode同時実行では共有L2/DRAM帯域競合が生じるという観測をcost modelへ組み込み、SM partitionをbatchごとに決める。workload固有の再学習やonline feedback tuningを必要とせず、configurationごとの軽量な一度のkernel profilingでモデルをparameterizeする。",
+    "method_overview": "Nexusはprefill engineとdecode engineを同一GPU内で論理分離し、非重複SM集合上で並行実行する。各batchについてcontention-aware cost modelが、phaseごとのtoken量・compute saturation・共有memory bandwidth競合・memory footprintから候補SM partition時のlatencyを予測する。runtime optimizerはprefill TTFTとdecode TBTの双方を考慮したdual-objective allocationをrelaxed latency constraint付きgreedy searchで高速に解き、SM比率を決める。partition変更はbuffered asynchronous switchingで適用し、短期的なworkload揺らぎでallocationが往復しないようhysteresis zoneを設ける。prefill側はShortest-Prompt-Firstで短promptのhead-of-line blockingを抑え、decode側はFCFSで公平性を保つ。vLLMを拡張してfine-grained SM partitioningとconcurrent phase executionを統合し、単一GPU内でengine-level分離に近いlatency isolationとmonolithic方式のhardware効率を両立する。",
+    "system_design": "requestはprefill queueとdecode queueへphase別に管理される。schedulerが各phaseのbatchを形成し、cost model/optimizerが現在のbatch状態に応じてSM allocationを選択する。allocation managerはhysteresisを介して新partitionへ非同期移行し、各phase kernelを割当SM群で実行する。prefill完了requestのKV stateは同一GPU memory内でdecodeへ引き継がれるため、engine-level disaggregationのGPU間KV transferを不要にする。共有memory bandwidthはpartitionしても物理的には共有されるため、optimizerがcontentionを明示的に見積もる。",
+    "components": [
+      {
+        "name": "contention-aware cost model",
+        "description": "SM増加に対するcompute latencyのdiminishing returnと、prefill/decode同時実行時の共有memory-bandwidth interferenceをモデル化する。configurationごとの軽量kernel profilingでparameterizeし、workload固有の学習やSLO違反後のfeedbackなしに候補partitionのlatencyを予測する。"
+      },
+      {
+        "name": "dual-objective SM allocation",
+        "description": "prefill側TTFTとdecode側TBTの競合目標を同時に扱い、relaxed latency constraintsの下でfast greedy searchを使ってbatchごとのSM配分を決定する。過剰にSMを与えてもlatencyが改善しない飽和領域を避け、余剰SMを他phaseへ回す。"
+      },
+      {
+        "name": "buffered asynchronous switching",
+        "description": "workload変動のたびにSM partitionを即時反転するとoscillationと切替overheadが生じるため、hysteresis zoneを持つbuffered switchingで変更を平滑化する。新しい配分への移行を実行と非同期化し、sub-second粒度の適応性と安定性を両立する。"
+      },
+      {
+        "name": "phase-specific schedulers",
+        "description": "prefillはShortest-Prompt-Firstを用いて短いpromptのTTFTを優先し、decodeはFCFSでtoken生成の公平性と応答性を維持する。resource partitionだけでなくphase特性に合わせたqueue policyを組み合わせる。"
+      }
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-509eaca02fd513b664c5028b",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

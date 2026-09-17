@@ -1,10 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c6442bb25743e58511625734","job_id":"job-research-120be1bd98c2839e",
- "data":{
-  "hardware":"動機実験は単一NVIDIA L20 GPU上のQwen2.5-3Bで、NVIDIA MPSによりSM partitioningを制御する。論文全体では単一GPUとmulti-GPUの双方を用い、commodity NVIDIA GPU上でproduction-scale decoder-only LLMを評価する。",
-  "software":"NexusはvLLMを拡張したserving engine。比較対象はmonolithic vLLM、SGLang、engine-level disaggregated vLLM、および関連intra-GPU PD方式。GPU partitionにはMPS等のSM isolation機構を利用し、Nexus側ではcost model・partition optimizer・phase-specific schedulerを統合する。",
-  "methodology":"end-to-end servingでrequest arrival rateを変化させ、throughputとlatency指標TTFT/TBTを比較する。異なるprompt/output長分布を持つworkloadと複数LLMを用いてdynamic trafficへの適応を確認する。動機実験ではLong Data Collections workload、Qwen2.5-3B、L20、Poisson arrival 2.5 req/sを用い、prefill-only/decode-only/mixed batchのiteration latencyとkernel interferenceを測定する。さらにresource allocation、memory contention、scheduler/optimizerの寄与を分析し、monolithicおよびengine-level PDとのresource-efficiency trade-offを比較する。",
-  "scope":"主眼はlatency-sensitive online LLM servingにおけるprefill/decode interferenceの抑制とGPU utilizationの両立。モデル学習・重み圧縮・KV cache容量拡張ではなく、同一GPU内のruntime resource partitioningとschedulingを対象とする。"
- },
- "reservation":{"claim_id":"claim-c6442bb25743e58511625734","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-509eaca02fd513b664c5028b",
+  "job_id": "job-research-120be1bd98c2839e",
+  "data": {
+    "hardware": "動機実験は単一NVIDIA L20 GPU上のQwen2.5-3Bで、NVIDIA MPSによりSM partitioningを制御する。論文全体では単一GPUとmulti-GPUの双方を用い、commodity NVIDIA GPU上でproduction-scale decoder-only LLMを評価する。",
+    "software": "NexusはvLLMを拡張したserving engine。比較対象はmonolithic vLLM、SGLang、engine-level disaggregated vLLM、および関連intra-GPU PD方式。GPU partitionにはMPS等のSM isolation機構を利用し、Nexus側ではcost model・partition optimizer・phase-specific schedulerを統合する。",
+    "methodology": "end-to-end servingでrequest arrival rateを変化させ、throughputとlatency指標TTFT/TBTを比較する。異なるprompt/output長分布を持つworkloadと複数LLMを用いてdynamic trafficへの適応を確認する。動機実験ではLong Data Collections workload、Qwen2.5-3B、L20、Poisson arrival 2.5 req/sを用い、prefill-only/decode-only/mixed batchのiteration latencyとkernel interferenceを測定する。さらにresource allocation、memory contention、scheduler/optimizerの寄与を分析し、monolithicおよびengine-level PDとのresource-efficiency trade-offを比較する。",
+    "scope": "主眼はlatency-sensitive online LLM servingにおけるprefill/decode interferenceの抑制とGPU utilizationの両立。モデル学習・重み圧縮・KV cache容量拡張ではなく、同一GPU内のruntime resource partitioningとschedulingを対象とする。"
+  },
+  "reservation": {
+    "claim_id": "claim-509eaca02fd513b664c5028b",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

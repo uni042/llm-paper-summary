@@ -2,28 +2,48 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c6442bb25743e58511625734",
+  "attempt_id": "attempt-509eaca02fd513b664c5028b",
   "job_id": "job-research-120be1bd98c2839e",
   "data": {
     "canonical_id": "arXiv:2507.06608",
     "arxiv_id": "2507.06608",
     "doi": "10.48550/arXiv.2507.06608",
-    "arxiv_categories": {"primary":"cs.DC","cross_list":["cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
     "summary": "Nexusは、prefillとdecodeを同一GPU上で並行実行しつつ、計算飽和・メモリ帯域競合・実行時メモリ使用量を明示的にモデル化してSMを動的分割するLLM servingシステムである。既存のchunked-prefill型monolithic servingは混合batch内のphase interferenceを起こし、engine-level PD disaggregationは追加GPUとKV転送を要する。Nexusは軽量なcontention-aware cost model、dual-objectiveなSM allocation、hysteresis付き非同期切替、prefill用Shortest-Prompt-Firstとdecode用FCFSを組み合わせ、vLLM拡張としてcommodity GPU上に実装する。多様なモデル・workloadでvLLM比最大2.2倍throughput、20倍低いTTFT、2.5倍低いTBT、SGLang比最大2倍throughputを報告する。",
     "list_summary": "同一GPU内でprefill/decodeをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍throughput・20倍TTFT改善を達成する。",
-    "authors": ["Xiaoxiang Shi","Colin Cai","Junjia Du","Zhihao Jia"],
+    "authors": [
+      "Xiaoxiang Shi",
+      "Colin Cai",
+      "Junjia Du",
+      "Zhihao Jia"
+    ],
     "published": "2025-07-09",
     "publication": "arXiv:2507.06608v5",
     "publication_type": "arXivプレプリント",
     "publication_status": "Preprint; v5 revised 2025-08-07",
     "lineage": "serving-scheduling",
-    "topics": ["LLM serving","prefill-decode disaggregation","intra-GPU disaggregation","SM partitioning","memory bandwidth contention","scheduling"],
+    "topics": [
+      "LLM serving",
+      "prefill-decode disaggregation",
+      "intra-GPU disaggregation",
+      "SM partitioning",
+      "memory bandwidth contention",
+      "scheduling"
+    ],
     "importance": "engine-level分離とmonolithic batchingの中間に位置するintra-GPU PD設計で、reactive SLO制御ではなくresource contentionの予測モデルからbatch単位でproactiveに資源配分する点が重要。",
     "hardware_evaluation": "単一GPUおよびmulti-GPU構成でproduction-scale LLMと複数workloadを評価。動機実験ではQwen2.5-3BをNVIDIA L20上で実行し、MPSでSM partitioningを制御。",
     "quality_effect": "モデル重みや生成アルゴリズム自体を近似変更する手法ではなくserving資源配分・schedulerの変更であるため、モデル品質を直接変えることを目的としない。",
     "source": "https://arxiv.org/abs/2507.06608",
-    "sources": ["https://arxiv.org/abs/2507.06608","https://arxiv.org/html/2507.06608v5"],
+    "sources": [
+      "https://arxiv.org/abs/2507.06608",
+      "https://arxiv.org/html/2507.06608v5"
+    ],
     "code": null,
     "implementation": "vLLMを拡張し、fine-grained SM partitioningとconcurrent prefill-decode executionを実装。decoder-only LLMとcommodity NVIDIA GPUを対象とする。論文本文で公開repository URLは確認できない。",
     "last_checked": "2026-09-17",
@@ -32,5 +52,9 @@
     "references_source": "arXiv v5 HTML全文と関連研究節を確認。",
     "references_total": 0
   },
-  "reservation": {"claim_id":"claim-c6442bb25743e58511625734","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-509eaca02fd513b664c5028b",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

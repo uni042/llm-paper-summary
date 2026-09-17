@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T030500Z-scheduled-chat-discovery-specialist-04",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-120be1bd98c2839e",
+      "claim_id": "claim-509eaca02fd513b664c5028b",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-509eaca02fd513b664c5028b",
+      "claimed_at": "2026-09-17T03:04:27+00:00",
+      "expires_at": "2026-09-17T04:34:27+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-120be1bd98c2839e"
+      ],
+      "job": {
+        "job_id": "job-research-120be1bd98c2839e",
+        "type": "research",
+        "parent_job_id": "job-c862ad2804181f57",
+        "priority": 89,
+        "canonical_id": "arXiv:2507.06608",
+        "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2507.06608",
+        "paper_path": "papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md",
+        "selection_reason": "prefill/decodeを単一GPU内でproactiveに分離し、latency cost model・SM partitioning・phase-specific schedulerで最大2.2x throughput、20x TTFT改善を報告。PD設計空間の重要なintra-GPU系統。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T21:08:01+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 45.7% < 70% (Japanese=2485, Latin=2955)",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "Japanese-first prose ratio is too low: 45.7% < 70% (Japanese=2485, Latin=2955)"
+        ],
+        "last_validation_failed_at": "2026-09-17T03:03:46+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-c6442bb25743e58511625734"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-c6442bb25743e58511625734.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T03:04:27+00:00",
+  "checkpoint_released": 0
+}

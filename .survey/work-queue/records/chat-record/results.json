@@ -1,18 +1,62 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c6442bb25743e58511625734","job_id":"job-research-120be1bd98c2839e",
- "data":{
-  "overview":"Nexusはphase interferenceを予測してSMをbatch単位で分割することで、monolithic vLLMより最大2.2倍のthroughput、20倍低いTTFT、2.5倍低いTBTを達成し、SGLangに対しても最大2倍throughput、2倍低いTTFT、1.7倍低いTBTを報告する。engine-level disaggregated vLLMに対しては半分のGPU資源で同等以上の性能を達成する構成を示す。",
-  "key_results":[
-   {"metric":"throughput vs vLLM","value":"最大2.2倍","baseline":"monolithic vLLM","condition":"複数LLM・dynamic serving workloads","interpretation":"phase interferenceを避けながら同一GPUのprefill/decode資源を有効利用する。"},
-   {"metric":"TTFT vs vLLM","value":"最大20倍低減","baseline":"monolithic vLLM","condition":"latency-sensitive serving workloads","interpretation":"prefillをdecode混合batchのblockingから分離し、SPFとproactive allocationでfirst-token latencyを抑える。"},
-   {"metric":"TBT vs vLLM","value":"最大2.5倍低減","baseline":"monolithic vLLM","condition":"concurrent prefill/decode traffic","interpretation":"decode kernelへのcompute/memory interferenceをresource partitionとcontention modelで抑える。"},
-   {"metric":"throughput vs SGLang","value":"最大2倍","baseline":"SGLang","condition":"論文のend-to-end workloads","interpretation":"既存高性能monolithic servingに対してもintra-GPU PDの利点が残る。"},
-   {"metric":"mixed-batch interference","value":"mixed約251ms、decode-only約15ms; decode kernel最大10倍遅延、TBT 8倍超悪化","baseline":"phase-isolated batch","condition":"Qwen2.5-3B、NVIDIA L20、Long Data Collections、2.5 req/s","interpretation":"chunked-prefill型monolithic設計のfine-grained interferenceが主要な動機である。"},
-   {"metric":"resource efficiency","value":"disaggregated vLLMと同等以上を半分のGPU資源で達成する構成","baseline":"engine-level disaggregated vLLM","condition":"multi-GPU comparison","interpretation":"GPU間KV transferと専用decode engineの低利用を避けるintra-GPU分離の利点を示す。"}
-  ],
-  "negative_results":"GPUのSMを論理分割してもL2/DRAM memory bandwidthは物理共有のため、単純なstatic partitionだけではcontentionを除去できない。既存のoffline-profile/inverse-scaling/reactive feedback方式はworkload変化に追従しにくく、allocation oscillationも生じ得るため、Nexusではcontention modelとhysteresisが必要になる。",
-  "interpretation":"prefill/decode分離はGPU台数を物理的に分けなくても有効だが、SM数だけを分ければよいわけではない。compute saturationと共有memory bandwidthを同時に予測し、phase別schedulerと安定したpartition switchingまでruntime loopへ統合することが性能の鍵となる。",
-  "quality_impact":"生成品質を変える近似手法ではないため、報告された改善はserving throughput/latency/resource efficiencyに関するもの。"
- },
- "reservation":{"claim_id":"claim-c6442bb25743e58511625734","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-509eaca02fd513b664c5028b",
+  "job_id": "job-research-120be1bd98c2839e",
+  "data": {
+    "overview": "Nexusはphase interferenceを予測してSMをbatch単位で分割することで、monolithic vLLMより最大2.2倍のthroughput、20倍低いTTFT、2.5倍低いTBTを達成し、SGLangに対しても最大2倍throughput、2倍低いTTFT、1.7倍低いTBTを報告する。engine-level disaggregated vLLMに対しては半分のGPU資源で同等以上の性能を達成する構成を示す。",
+    "key_results": [
+      {
+        "metric": "throughput vs vLLM",
+        "value": "最大2.2倍",
+        "baseline": "monolithic vLLM",
+        "condition": "複数LLM・dynamic serving workloads",
+        "interpretation": "phase interferenceを避けながら同一GPUのprefill/decode資源を有効利用する。"
+      },
+      {
+        "metric": "TTFT vs vLLM",
+        "value": "最大20倍低減",
+        "baseline": "monolithic vLLM",
+        "condition": "latency-sensitive serving workloads",
+        "interpretation": "prefillをdecode混合batchのblockingから分離し、SPFとproactive allocationでfirst-token latencyを抑える。"
+      },
+      {
+        "metric": "TBT vs vLLM",
+        "value": "最大2.5倍低減",
+        "baseline": "monolithic vLLM",
+        "condition": "concurrent prefill/decode traffic",
+        "interpretation": "decode kernelへのcompute/memory interferenceをresource partitionとcontention modelで抑える。"
+      },
+      {
+        "metric": "throughput vs SGLang",
+        "value": "最大2倍",
+        "baseline": "SGLang",
+        "condition": "論文のend-to-end workloads",
+        "interpretation": "既存高性能monolithic servingに対してもintra-GPU PDの利点が残る。"
+      },
+      {
+        "metric": "mixed-batch interference",
+        "value": "mixed約251ms、decode-only約15ms; decode kernel最大10倍遅延、TBT 8倍超悪化",
+        "baseline": "phase-isolated batch",
+        "condition": "Qwen2.5-3B、NVIDIA L20、Long Data Collections、2.5 req/s",
+        "interpretation": "chunked-prefill型monolithic設計のfine-grained interferenceが主要な動機である。"
+      },
+      {
+        "metric": "resource efficiency",
+        "value": "disaggregated vLLMと同等以上を半分のGPU資源で達成する構成",
+        "baseline": "engine-level disaggregated vLLM",
+        "condition": "multi-GPU comparison",
+        "interpretation": "GPU間KV transferと専用decode engineの低利用を避けるintra-GPU分離の利点を示す。"
+      }
+    ],
+    "negative_results": "GPUのSMを論理分割してもL2/DRAM memory bandwidthは物理共有のため、単純なstatic partitionだけではcontentionを除去できない。既存のoffline-profile/inverse-scaling/reactive feedback方式はworkload変化に追従しにくく、allocation oscillationも生じ得るため、Nexusではcontention modelとhysteresisが必要になる。",
+    "interpretation": "prefill/decode分離はGPU台数を物理的に分けなくても有効だが、SM数だけを分ければよいわけではない。compute saturationと共有memory bandwidthを同時に予測し、phase別schedulerと安定したpartition switchingまでruntime loopへ統合することが性能の鍵となる。",
+    "quality_impact": "生成品質を変える近似手法ではないため、報告された改善はserving throughput/latency/resource efficiencyに関するもの。"
+  },
+  "reservation": {
+    "claim_id": "claim-509eaca02fd513b664c5028b",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
