@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T18:01:46+00:00",
-  "last_run_key": "2026-09-18T03:00:00+09:00",
-  "last_round": "specialist-gpu-storage-2",
+  "updated_at": "2026-09-17T19:05:29+00:00",
+  "last_run_key": "2026-09-18T04:00:00+09:00",
+  "last_round": "specialist-dllm-kv-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "direct-I/O軸では強いLLM直接候補が既収録に集中し、未収録2本は隣接storage研究で対象外だった",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:58:47+09:00",
-      "round": "specialist-heterogeneous-edge-5",
-      "axis": "異種GPU/PNM・cold MoE pool・edge KV migration",
-      "query_summary": "SLO/memory軸の後、異種ハードウェア配置とedge migrationへ移動。cold MoEのweight/KV分離、PNM上のKV-resident sparse attention、異種spot GPU配置、AI-RAN handover前KV migrationを一次資料抄録で軽量評価し、投入直前に最新HEADとcanonical IDで再dedupeした。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は今回までの新規候補の題名・識別子を起点に関連研究検索を行い、追加の強候補が出なければ複数独立軸を巡回済みとして収束判定する",
-      "source_submission": "work-queue/submissions/20260913T0110JST-discovery-specialist-heterogeneous-edge-5.json"
-    },
     {
       "run_key": "2026-09-13T00:58:47+09:00",
       "round": "specialist-runtime-reconfig-6",
@@ -6855,6 +6840,34 @@
       ],
       "next_axis_hint": "次は2026年9月新着のserving scheduling・KV memory pressure、またはHybriMoEの被引用/参考文献から未収録の直接LLM systems研究を探索する",
       "source_submission": "work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json"
+    },
+    {
+      "run_key": "2026-09-18T04:00:00+09:00",
+      "round": "specialist-dllm-kv-1",
+      "axis": "2026年9月新着・diffusion LLM・long-context KV offload/prefetch",
+      "query_summary": "直前runのnext_axis_hintから2026年9月新着のserving/KV memory pressureを優先し、LLM serving、MoE、KV cache、SSD/CXL、disaggregated servingを複数検索窓で走査。TinyServe、Mixture-of-Experts Serving、mzCache、MAPS等は最新identity snapshotで既収録を確認。GroupKVはarXiv一次資料でsystem-level設計と実測評価を確認し、最新default branchのarXiv identity shardで未収録を再照合して採用した。",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.9,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2509.12211",
+        "arXiv:2607.17880",
+        "arXiv:2609.01338",
+        "arXiv:2609.15359",
+        "arXiv:2609.16161",
+        "arXiv:2606.16135",
+        "arXiv:2605.13734",
+        "arXiv:2604.25080",
+        "arXiv:2511.20172"
+      ],
+      "next_axis_hint": "次はGroupKVの参考文献・関連研究からdLLM KV管理、または2026年9月新着の未収録serving/runtime論文を別検索窓で探索する",
+      "source_submission": "work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json"
     }
   ],
   "axes": {
@@ -11438,6 +11451,19 @@
       "duplicate_ratio": 0.7777777777777778,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次は2026年9月新着のserving scheduling・KV memory pressure、またはHybriMoEの被引用/参考文献から未収録の直接LLM systems研究を探索する"
+    },
+    "2026年9月新着・diffusion LLM・long-context KV offload/prefetch": {
+      "last_run_key": "2026-09-18T04:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.9,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はGroupKVの参考文献・関連研究からdLLM KV管理、または2026年9月新着の未収録serving/runtime論文を別検索窓で探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
