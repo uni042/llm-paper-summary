@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bbdb321c8d62a8e8e08539c1",
+  "attempt_id": "attempt-c9e86b0774fbe3177b6fb0f5",
   "job_id": "job-research-a725b9cf79d670cf",
   "data": {
     "limitations": "評価対象はLLaDAとUltraLLaDAの2系列、PCIe接続のA100/RTX 4090に限られ、他の拡散型大規模言語モデル、自己回帰モデル、多GPU相互接続、CXLやNVMeを含むさらに深い階層での有効性は未検証である。選択予算は固定値を格子探索して決めており、文脈長・バッチ・ハードウェア・注意分布に応じたオンライン適応は将来課題として明示される。近似疎注意なので品質は厳密保存ではなく、短文では選択・転送機構の費用によりGPU常駐高速方式へ負ける。公開コードURLも確認できず、再現性は論文記載の設計と実験条件に依存する。",
@@ -11,7 +11,7 @@
     "research_positioning": "リポジトリ内ではKVキャッシュ・階層メモリ・退避・先読みの系統に属するが、特に拡散型大規模言語モデルの動的KVライフサイクルへ焦点を当てる点が重要である。CPUを容量層、GPUを疎な作業層として使い、アクセス単位をトークンから連続グループへ引き上げることで、メタデータ維持費と転送量を同時に抑える設計は、SSD/NVMeやCXLまで拡張した階層KV管理を考える際にも比較基準になる。将来的には固定20%予算を負荷・帯域・文脈局所性に応じて適応化することや、CPUより下位の記憶階層で先読みを多段化する研究へ接続しやすい。一方、短文ではGPU常駐方式が優位なので、単独の万能KV方式というより、メモリ圧力に応じて切り替える長文専用バックエンドとして位置付けるのが妥当である。"
   },
   "reservation": {
-    "claim_id": "claim-bbdb321c8d62a8e8e08539c1",
+    "claim_id": "claim-c9e86b0774fbe3177b6fb0f5",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

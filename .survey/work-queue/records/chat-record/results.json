@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bbdb321c8d62a8e8e08539c1",
+  "attempt_id": "attempt-c9e86b0774fbe3177b6fb0f5",
   "job_id": "job-research-a725b9cf79d670cf",
   "data": {
     "overview": "GroupKVの利得は短文の純計算高速化ではなく、長文でGPU容量とCPU→GPU KV転送が支配的になった領域で現れる。A100では全注意Fast-dLLMが8Kまでは高速だが16K以降でメモリ不足となる一方、GroupKVは128Kまで動作し、退避系比較手法より一貫して高い端から端までの速度を示す。RTX 4090ではFast-dLLMが2Kを超えるとメモリ不足になるのに対し96Kまで処理できる。品質は20%のKV回収予算でもLongBench、RULER、NIAHで概ね維持され、疎化の程度を増やせば速度と引き換えに小幅な品質低下が生じる。",
@@ -48,7 +48,7 @@
     "quality_impact": "近似的な疎注意であり、完全な数値同値性は保証しない。既定設定ではLongBenchでLLaDAが全注意より0.37点低い一方、UltraLLaDAでは0.82点高く、RULERでも16K/32Kで全注意UltraLLaDAと同等以上の平均を示す。NIAHは128Kで95%を維持する。品質は回収率と内部選別率に依存し、より強い疎化では速度向上と引き換えに精度が低下する。"
   },
   "reservation": {
-    "claim_id": "claim-bbdb321c8d62a8e8e08539c1",
+    "claim_id": "claim-c9e86b0774fbe3177b6fb0f5",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

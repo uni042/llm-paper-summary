@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bbdb321c8d62a8e8e08539c1",
+  "attempt_id": "attempt-c9e86b0774fbe3177b6fb0f5",
   "job_id": "job-research-a725b9cf79d670cf",
   "data": {
     "hardware": "実機2構成で評価する。サーバ構成はIntel Xeon Silver 4214を2基、DDR4 1.5 TB、NVIDIA A100-80G PCIeを使用する。ワークステーション構成はNVIDIA RTX 4090-24Gを使用する。両環境はUbuntu 22.04、CUDA 12.2、GCC 9.5で、CPU退避はPCIe帯域を活かすため固定ページのホストメモリを使う。",
@@ -11,7 +11,7 @@
     "scope": "評価はA100-80GとRTX 4090-24GというPCIe接続GPU上の実測で、主にLLaDA系2モデルの長文拡散推論を対象とする。自己回帰モデル、NVLink主体の多GPU、CXL/NVMe階層、他の拡散モデル系列への一般化は直接評価していない。短文では全KVをGPUへ置くFast-dLLMの方が速いため、GroupKVの主対象はGPU容量またはPCIe転送が制約になる長文・退避支配領域である。"
   },
   "reservation": {
-    "claim_id": "claim-bbdb321c8d62a8e8e08539c1",
+    "claim_id": "claim-c9e86b0774fbe3177b6fb0f5",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
