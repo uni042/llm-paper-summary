@@ -1,1 +1,59 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"canonical_id":"arXiv:2508.02558","arxiv_id":"2508.02558","doi":"10.1609/aaai.v40i39.40586","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction","summary":"Sparse-dLLMは拡散型LLMの反復デコードで観測されるトークン重要度の時間的安定性を利用し、現在ブロック外のprefix/suffix KVを注意スコアで選別して動的に破棄する訓練不要の推論高速化法である。1-step遅延した双方向疎キャッシュにより、不安定な初期KVを避けつつ重要トークンだけを再利用する。LLaDA/Dream系列でvanilla dLLM比最大10倍throughput、ほぼ同等のpeak memoryと下流性能を報告する。","list_summary":"拡散LLMの安定した注意saliencyを利用した遅延双方向KV evictionで、長文脈推論を最大10倍高速化する。","authors":["Yuerong Song","Xiaoran Liu","Ruixiao Li","Zhigeng Liu","Zengfeng Huang","Qipeng Guo","Ziwei He","Xipeng Qiu"],"authors_affiliations":"Fudan University; Shanghai Innovation Institute; Shanghai AI Lab","published":"2026-03-14","publication":"AAAI Conference on Artificial Intelligence 40(39), 33038-33046","publication_type":"国際会議論文","publication_status":"AAAI-26 published; arXiv 2508.02558","lineage":"diffusion LLM inference / KV cache / sparse attention / dynamic eviction","topics":["拡散LLM","KVキャッシュ","疎注意","長文脈推論","推論高速化"],"importance":"自己回帰LLM向けKV pruningを双方向拡散デコードへ拡張し、cache reuseとsparse attentionを同一の動的eviction機構へ統合した。","implementation":"LLaDA/Dream native codebase上の訓練不要実装。OpenCompass評価コードを含む公式GitHubを公開。","hardware_evaluation":"NVIDIA 4090 48GB GPU。LLaDA-8B-Instruct/LLaDA-1.5、Dream-v0-7B Base/Instructを評価。","quality_effect":"多くの一般・推論タスクでvanillaと同等だが、DreamのHumanEvalでは構文上重要なtoken evictionにより低下を確認。","source":"https://arxiv.org/abs/2508.02558","sources":["https://ojs.aaai.org/index.php/AAAI/article/view/40586/44547","https://arxiv.org/abs/2508.02558"],"code":"https://github.com/OpenMOSS/Sparse-dLLM","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"AAAI-26 primary manuscript","references_total":null},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-402ad0fa7de9ab54d1c7d280",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "canonical_id": "arXiv:2608.14575",
+    "arxiv_id": "2608.14575",
+    "doi": "10.48550/arXiv.2608.14575",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.NI",
+      "cross_list": []
+    },
+    "title": "HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving",
+    "summary": "HW-Routerは複数LLMをGPU群で提供する際、モデルサイズ等の静的コストではなく、実行中・待機中リクエスト数、KVキャッシュ使用率、直近TTFT/TPOTなどの実時間ハードウェア状態を取り込んでモデル-GPU組ごとの遅延を予測し、品質とSLOを考慮して経路選択するルータである。2台のH100上の5モデル評価でCARROT/IRTに対しエンドツーエンド遅延3.4〜3.9倍低減、SLO達成率46〜48ポイント向上、GPU負荷偏り6〜8倍低減を報告する。",
+    "list_summary": "実時間のキュー・KVキャッシュ・TTFT/TPOTを遅延予測へ統合し、複数LLMルーティングのSLOとGPU負荷均衡を改善する。",
+    "authors": [
+      "Ahasan Kabir",
+      "Jiaqi Xue",
+      "Mengxin Zheng",
+      "Qian Lou"
+    ],
+    "authors_affiliations": "University of Central Florida",
+    "published": "2026-06-10",
+    "publication": "63rd Design Automation Conference (DAC 2026)",
+    "publication_type": "国際会議論文",
+    "publication_status": "Accepted at DAC 2026; arXiv v1",
+    "lineage": "multi-LLM serving / hardware-aware routing / SLO-aware scheduling / load balancing",
+    "topics": [
+      "LLMサービング",
+      "ルーティング",
+      "ハードウェア認識",
+      "SLO",
+      "GPU負荷分散"
+    ],
+    "importance": "品質予測中心だったLLMルータへ動的なサービング状態を一次入力として加え、モデル選択とGPU混雑回避を一体化した点が重要。",
+    "implementation": "vLLM Prometheusメトリクスを200〜300ms間隔で監視し、軽量MLPコスト予測器とIRT等の品質予測器を組み合わせる公式実装が公開されている。",
+    "hardware_evaluation": "単一ノード、NVIDIA H100 PCIe 80GB×2、8 CPU cores、64GB system memory。5つのinstruction-tuned LLMを固定配置して評価。",
+    "quality_effect": "モデル品質予測はハードウェア状態から分離し、Qwen-3-Next-80BによるLLM-as-a-judgeスコアで評価。著者は同等品質点で大幅な遅延改善を示し、出力品質損失なしと報告。",
+    "source": "https://arxiv.org/abs/2608.14575",
+    "sources": [
+      "https://arxiv.org/abs/2608.14575",
+      "https://jqxue1999.github.io/files/HWRouter.pdf"
+    ],
+    "code": "https://github.com/UCF-ML-Research/HW-Router",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript",
+    "references_total": 23
+  },
+  "reservation": {
+    "claim_id": "claim-402ad0fa7de9ab54d1c7d280",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

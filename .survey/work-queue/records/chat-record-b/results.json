@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"overview":"Sparse-dLLMはLLaDA/Dreamで既存cache法より高いthroughputを、vanillaに近いmemoryと概ね同等accuracyで達成する。LLaDAでは平均約3.4倍、Dreamでは約3.6倍のthroughput向上が表に示され、4K long-contextではvanilla比最大10倍を報告する。","key_results":[{"metric":"LLaDA-8B-Instruct GSM8K throughput","value":"26.45 TPS, 5.8×","baseline":"vanilla 4.57 TPS","condition":"GSM8K 4-shot","interpretation":"cache sparsificationが反復attentionを大幅削減。"},{"metric":"Dream-v0-7B-Instruct GPQA throughput","value":"32.63 TPS, 5.2×","baseline":"vanilla 6.29 TPS","condition":"GPQA 5-shot","interpretation":"Dreamでも同様の高速化。"},{"metric":"平均throughput speedup","value":"LLaDA系 約3.4×、Dream系 約3.6×","baseline":"vanilla dLLM","condition":"7 benchmarks average","interpretation":"dLLM-Cache/dKV-Cache/Fast-dLLMより高い。"},{"metric":"長文脈throughput","value":"4K sequenceで最大10×","baseline":"vanilla dLLM","condition":"context-length sweep on 4090","interpretation":"長文脈ほどsparse cacheの効果が増大。"},{"metric":"LongBench accuracy","value":"LLaDA-8B-Instruct 34.46","baseline":"base 34.55","condition":"LongBench","interpretation":"長文脈性能をほぼ維持。"}],"negative_results":"DreamのHumanEvalでは一般的evictionがvariable typeやnumeric literal等の構文上重要なtokenを落とし、性能低下が観測される。retention ratioを増やすとaccuracyは改善するがmemoryは線形増加し、0.5以降は収益逓減。delayを長くするとthroughputが低下する。","interpretation":"dLLMではKV state全体を保持する必要はなく、stepを跨いでsaliencyが安定する少数tokenを残せば、cache memoryを膨らませずattention計算を削減できる。ただしtask-dependentな重要tokenを粗いattention scoreだけで安全に識別できない場合がある。","quality_impact":"LLaDAでは平均accuracyがvanilla 59.24に対し59.86、LLaDA-1.5は60.90対60.99と同等。Dreamも平均は概ね同等だがHumanEvalで低下し、完全losslessではない。"},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-402ad0fa7de9ab54d1c7d280",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "overview": "HW-Routerは静的コストのCARROT/IRTより混雑を避け、同等品質で遅延とSLO、GPU負荷均衡を大幅に改善した。総括ではエンドツーエンド遅延3.4〜3.9倍低減、SLO達成率46〜48ポイント向上、GPU load skew 6〜8倍低減、waiting fraction 3.1〜3.4倍低減を報告する。",
+    "key_results": [
+      {
+        "metric": "同等品質での遅延",
+        "value": "quality 0.62で約16 s",
+        "baseline": "CARROT/IRT-Router 約40 s",
+        "condition": "quality-latency Pareto sweep",
+        "interpretation": "約60%の遅延削減。"
+      },
+      {
+        "metric": "SLO達成率",
+        "value": "quality 0.60で約97%; 0.63で90%; 0.65で76%",
+        "baseline": "0.60: CARROT 51%, IRT 65%; 0.63: 48%, 60%; 0.65: 両baseline 50%未満",
+        "condition": "TTFT+TPOT SLO",
+        "interpretation": "混雑を予測コストへ含めSLO違反を回避。"
+      },
+      {
+        "metric": "待機キュー比率",
+        "value": "16〜17% waiting、83〜84% running",
+        "baseline": "CARROT 53〜55% waiting、IRT 34〜39% waiting",
+        "condition": "arrival rate 15,18,21 requests/s",
+        "interpretation": "混雑GPUへの集中を抑制。"
+      },
+      {
+        "metric": "GPU load skew",
+        "value": "1.691〜2.089",
+        "baseline": "CARROT 12.903〜12.924、IRT 12.640〜12.930",
+        "condition": "arrival rate 15,18,21",
+        "interpretation": "総負荷偏りを約84〜87%削減。"
+      },
+      {
+        "metric": "追加ルーティングオーバーヘッド",
+        "value": "CARROT比 約200 μs",
+        "baseline": "CARROT",
+        "condition": "平均decision latency",
+        "interpretation": "オンライン状態利用の追加費用は小さい。"
+      }
+    ],
+    "negative_results": "コスト予測器forward passを約10msと記す一方、CARROT比の追加routing latencyを約200μsと報告し、測定範囲の違いは十分整理されていない。評価GPUは2台ともH100で、異種GPUを動機に挙げるものの混在環境を直接評価していない。",
+    "interpretation": "モデル固有の静的価格・サイズより現在のキューとKVキャッシュ圧力が実待ち時間を支配し得る。品質モデルを保ったままコスト側を動的化することで、負荷均衡を介して遅延とSLOを同時改善する。",
+    "quality_impact": "同等品質点で遅延を削減し、品質損失なしと報告。品質はQwen-3-Next-80B judgeのスコアで、人手・複数judge検証は限定的。"
+  },
+  "reservation": {
+    "claim_id": "claim-402ad0fa7de9ab54d1c7d280",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

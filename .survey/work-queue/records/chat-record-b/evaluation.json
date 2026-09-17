@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"hardware":"NVIDIA 4090 48GB GPU。","software":"LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B-Base、Dream-v0-7B-Instructのnative dLLM codebase。OpenCompassでbenchmark。比較はvanilla、dLLM-Cache、dKV-Cache、Fast-dLLM。","methodology":"default block length 32、seed 2025、retention ratio r=0.5、max-pooling kernel s=3。MMLU 5-shot、ARC-c 0-shot、PIQA 0-shot、GPQA 5-shot、GSM8K 4-shot、Math 4-shot、HumanEval 0-shotを評価し、accuracy、TPS、peak memoryを測る。性能scoreは3 independent trials平均、efficiencyは共通のrandom 10 instances平均。LongBenchとcontext length sweepも実施。delay step 0〜5、prefix-only対bidirectional、retention ratio/kernel sizeをablation。","scope":"4つの約7〜8B級dLLMと単一4090中心。native implementationのためvLLM等production serving stackでのend-to-end評価、batching/並行要求、多GPU、より大規模モデルへの一般化は未検証。"},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-402ad0fa7de9ab54d1c7d280",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "hardware": "単一ノードにNVIDIA H100 PCIe 80GBを2枚、CPU 8 cores、system memory 64GB。H100-0にPhi-3-miniとQwen2.5-14B、H100-1にQwen2.5-3B、Mistral-7B、Llama-3.1-8Bを固定配置する。",
+    "software": "各モデルはvLLMの独立processで提供しPrometheus metricsを有効化。問い合わせ埋め込みはCARROTと同じall-MiniLM-L6-v2。比較はCARROTとIRT-Routerの既定構成。品質judgeはQwen-3-Next-80B。公式コードで監視、コストモデル学習、オンライン評価パイプラインを公開。",
+    "methodology": "MixInstructから6,000、English LongBenchから2,425の計8,425 promptsを混合し、6,740 train / 1,685 evalに分割。短文と中長文を混ぜて並行性とKVキャッシュ圧力を両方発生させる。コストモデル学習ではPoisson、micro-burst、sustained-overloadの3到着パターンを巡回し、評価ではsustained-overloadのarrival rate 15/18/21 requests/sを用いる。SLOはprompt長に対する線形TTFT基準を1.2倍slackで設定し、TPOTは訓練集合70 percentile。品質-遅延Pareto、SLO達成率、running/waiting queue比率、GPU load/running/waiting skewを測る。",
+    "scope": "5つのopen-source instruction LLMを2台の同型H100へ固定配置した高負荷評価が中心。動的負荷状態への適応は直接検証されるが、V100/A100/H100混在など真の異種GPUクラスタ、大規模多ノード、モデル移動・replica増減、実運用トラフィックでの長期挙動は評価範囲外。"
+  },
+  "reservation": {
+    "claim_id": "claim-402ad0fa7de9ab54d1c7d280",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

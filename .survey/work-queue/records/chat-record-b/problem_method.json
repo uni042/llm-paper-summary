@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"problem":"拡散型LLMは各denoising stepでprompt、生成済みtoken、maskを含む全系列のQKVを再計算するため、自己回帰decodeのO(L)に対しattentionがO(L^2)となる。既存dLLM cacheは連続step間で近いKVを再利用して計算を減らすが、全layer・全系列のKVを保持するため長文脈ではmemory overheadが大きい。","novelty":"dLLM attentionにはlayer横断の疎性とstep間で安定したpivotal tokenがあるという観測に基づき、現在blockの前後両側を対象とするdynamic bidirectional cache evictionを導入する。さらにblock開始直後のKV変化が大きいことからcache構築を1 step遅らせ、安定後のsaliencyで選択する。訓練不要でsparse attentionとcache pruningを一体化する。","method_overview":"block-wise diffusion decodingで現在block外のK,Vを候補Kf,Vfとし、current-block query Qbとのattention A=Qb Kf^T/sqrt(dk)を計算する。局所情報欠落を抑えるためattention scoreへmax poolingを適用し、retention ratio rに応じてk=(L-b)r個をtop-k選択、Kc,Vcとして保持する。prefixだけでなくsuffixもpruneする。各blockの最初はfull attention、KVが安定する次stepでsparse cacheを更新し、その後reuseする。block移行時はcacheをclearしてrefreshする。","components":[{"name":"注意saliency解析","description":"dLLMのattention mapでlocal diagonalと少数pivotal keyへのvertical patternがlayer・stepを跨いで安定することを利用する。"},{"name":"双方向dynamic eviction","description":"current blockより前のprefixと後のsuffixの両方を候補にし、attention-guided top-kで重要KVだけを保持する。"},{"name":"max-pooling saliency","description":"SnapKVに着想を得て局所attention情報をmax poolingで集約し、部分的な情報保持による品質低下を抑える。"},{"name":"1-step delayed cache update","description":"block開始stepのKV変化が大きいため即時cacheせず1 step遅延し、より安定した状態からsparse cacheを構築する。"}],"system_design":"native dLLM block decodingへcache policyとして挿入し、モデル再訓練なしでattention対象token数と保持KV数を同時に減らす。defaultはblock length 32、retention ratio 0.5、pool kernel 3。"},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-402ad0fa7de9ab54d1c7d280",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "problem": "既存の複数LLMルータは応答品質を入力依存で予測しても、推論コストはモデルサイズ、FLOPs、価格、予測出力長など静的または準静的な代理値で扱うことが多い。同じモデルでもGPU種類、現在の実行・待機キュー、KVキャッシュ圧迫、資源競合でTTFT/TPOTは大きく変わるため、静的コストでは一見安いモデルへ要求が集中し、待ち行列増大、SLO違反、他GPUの遊休を招く。HW-Routerは各問い合わせを現在状態込みのモデル-GPU組へ割り当てる問題として扱う。",
+    "novelty": "新規性は、LLMルーティングのコスト項をリアルタイムのハードウェア・サービング状態から予測する点にある。実行/待機リクエスト数、KVキャッシュ使用率、直近TTFT/TPOTをモデル/GPU識別子と問い合わせ特徴へ結合し、TTFT・TPOT・出力トークン数を予測する軽量ニューラルネットで実遅延を推定する。品質予測器は既存手法を差し替え可能なまま保ち、動的コストだけをプラグイン化するため、IRT、CARROT、UMR等の品質モデルへ適用できる。",
+    "method_overview": "各vLLMサーバからPrometheus経由で200〜300msごとに状態を取得しローカルキャッシュする。問い合わせ到着時、各モデル-GPU候補について問い合わせ特徴、one-hotモデル/GPU識別子、running_req_count、waiting_req_count、kv_cache_usage、ttft_avg、tpot_avgをコスト予測器へ入力する。2層全結合MLP（64/128 hidden units、ReLU、3出力head）がTTFT、TPOT、出力トークン数を推定し、C=TTFT+Nout×TPOTで予測遅延を構成する。別の品質予測器がQを推定し、S=(1-λ)Q-λCを最大化しつつC<BというSLO制約を満たすモデル-GPU組を選ぶ。",
+    "components": [
+      {
+        "name": "ハードウェア監視器",
+        "description": "各モデル-GPU組の実行キュー、待機キュー、KVキャッシュ使用率、直近TTFT/TPOTを200〜300ms間隔で取得し、ルーティング時に同期監視を発生させないようローカルへキャッシュする。"
+      },
+      {
+        "name": "動的コスト予測器",
+        "description": "問い合わせ特徴・モデル/GPU識別子・実時間状態を2層MLPへ入力し、TTFT、TPOT、出力長を同時予測する。静的なモデルサイズではなく現在の混雑とメモリ圧力を反映したモデル-GPU別サービング時間を算出する。"
+      },
+      {
+        "name": "品質予測器",
+        "description": "問い合わせに対する各LLMの期待品質を推定する。論文評価ではIRT系を中心に用いるが、CARROTやUMR等と交換可能で、ハードウェアコスト予測と独立に保つ。"
+      },
+      {
+        "name": "SLO対応意思決定器",
+        "description": "品質Qと予測遅延Cの重み付きスコアを比較し、遅延予算Bを満たす候補から最適なモデル-GPU組を選択する。混雑GPUの一見安価なモデルを避け、遊休側へ負荷を移す。"
+      }
+    ],
+    "system_design": "モデル選択器の前段に継続監視と遅延予測を置き、品質ルータ自体は再利用する構成である。オンライン状態を低頻度監視でキャッシュし、要求ごとの意思決定では軽量推論だけを追加することで、負荷均衡とSLO遵守をルーティング層で同時に最適化する。"
+  },
+  "reservation": {
+    "claim_id": "claim-402ad0fa7de9ab54d1c7d280",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
