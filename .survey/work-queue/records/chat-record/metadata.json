@@ -4,10 +4,36 @@
   "slot": "metadata",
   "attempt_id": "attempt-dd0768548da66bf9efb0496c",
   "job_id": "job-research-36aaaee3c1110557",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-dd0768548da66bf9efb0496c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2504.09345", "arxiv_id": "2504.09345", "doi": "10.48550/arXiv.2504.09345", "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI"]},
+    "title": "MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints",
+    "summary": "MoE-Lensは、GPUメモリに全重みが入らない混合専門家モデル（Mixture-of-Experts; MoE）をCPU-GPU協調で高スループット処理するとき、PCIe帯域だけを見た従来の性能モデルでは実際の上限を捉えられない問題を扱う。CPUメモリ容量、KVキャッシュ容量、プロンプト長・生成長、GPU計算能力、CPUメモリ帯域と注意計算能力を段階的にモデル化し、実行機構まで含めた予測器へ落とし込む。そのモデルに基づき、プリフィルとデコードを同時進行させる資源認識スケジューラ、VSLPipe、連続重み転送器、AVX512最適化CPU注意カーネルを組み合わせ、限られたCPU/GPU資源を飽和点近くまで使う。",
+    "list_summary": "CPUメモリ容量と要求長まで含む性能上限モデルから、プリフィル・デコード重畳と重み転送を設計し、資源制約下MoE推論をハードウェア限界へ近づける。",
+    "authors": ["Yichao Yuan", "Lin Ma", "Nishil Talati"], "authors_affiliations": "University of Michigan",
+    "published": "2025-04-12", "publication": "arXiv", "publication_type": "プレプリント", "publication_status": "Preprint; arXiv v1",
+    "lineage": "MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論",
+    "topics": ["MoE推論", "CPUオフロード", "KVキャッシュ", "性能モデル", "プリフィル・デコード重畳", "PCIe転送"],
+    "importance": "CPU-GPU帯域だけでなくCPUメモリ容量そのものがGPUを飽和させられる並列トークン数を決めると定式化し、理論上限・実行時予測・実システム設計を一続きにした点が重要である。",
+    "hardware_evaluation": "実機評価。デュアルソケットIntel Xeon Platinum 8380、各ソケット8チャネルDDR4-3200・合計750GB、各ソケットにNVIDIA A40を2基搭載。実験はnumactlで1ソケット・1GPUへ固定し、A40 48GBのうちランダムテンソルで24〜32GBを予約して実効GPU容量を16〜24GBへ制限する。CPU側KVキャッシュは70GBまたは210GB。測定CPUメモリ帯域は約150GB/s、CPU-GPU転送帯域は1GBテンソル測定から19.5GB/s。",
+    "quality_effect": "モデルの量子化、枝刈り、近似推論などアルゴリズム変更は行わず、重み・KVキャッシュの配置、スケジューリング、CPU注意計算、転送パイプラインを変更するシステム手法である。したがって生成品質を意図的に変える方式ではない。評価は主としてスループットであり、品質劣化との交換条件は設定していない。",
+    "source": "https://arxiv.org/abs/2504.09345", "sources": ["https://arxiv.org/abs/2504.09345", "https://arxiv.org/pdf/2504.09345"],
+    "code": null,
+    "implementation": "PyTorchベースのCPU-GPU協調推論システム。重みは固定済みCPUメモリに保持し、専用C++ PyTorch拡張の連続データ転送器で100MB単位に分割転送する。CPUデコード注意はAVX512の手書きSIMD命令、ループ展開、先読みで最適化する。論文はMoE-LightningとvLLMの公開実装を比較対象に用いるが、MoE-Lens自身の公式コードURLはarXivページと本文で確認できない。",
+    "last_checked": "2026-09-18",
+    "references": [
+      {"canonical_id":"arXiv:2312.11514","arxiv_id":"2312.11514","title":"LLM in a flash: Efficient Large Language Model Inference with Limited Memory"},
+      {"canonical_id":"arXiv:2406.02069","arxiv_id":"2406.02069","title":"PyramidKV"},
+      {"canonical_id":"arXiv:2312.17238","arxiv_id":"2312.17238","title":"Fast Inference of Mixture-of-Experts Language Models with Offloading"},
+      {"canonical_id":"arXiv:2502.06888","arxiv_id":"2502.06888","title":"Klotski"},
+      {"canonical_id":"arXiv:2402.07033","arxiv_id":"2402.07033","title":"Fiddler"},
+      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},
+      {"canonical_id":"arXiv:2410.14740","arxiv_id":"2410.14740","title":"Harnessing Your DRAM and SSD for Sustainable and Accessible LLM Inference"},
+      {"canonical_id":"arXiv:2303.06865","arxiv_id":"2303.06865","title":"FlexGen"},
+      {"canonical_id":"arXiv:2401.14361","arxiv_id":"2401.14361","title":"MoE-Infinity"},
+      {"canonical_id":"arXiv:2312.07104","arxiv_id":"2312.07104","title":"SGLang"}
+    ],
+    "references_checked_at": "2026-09-18", "references_source": "primary manuscript reference section", "references_total": 52
+  },
+  "reservation": {"claim_id":"claim-dd0768548da66bf9efb0496c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
