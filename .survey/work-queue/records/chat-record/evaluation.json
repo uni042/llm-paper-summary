@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5802dd804b5c71e42ecc4823",
-  "job_id": "job-research-ee19ffd9b6b00e19",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5802dd804b5c71e42ecc4823",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5802dd804b5c71e42ecc4823","job_id":"job-research-ee19ffd9b6b00e19","data":{"hardware":"速度・オフロード評価はNVIDIA RTX PRO 6000 96GB GPUとIntel Xeon Platinum 8470Q 3.8GHz CPU。","software":"LayerSkip事前学習チェックポイントを用いたLlama2-7B、Llama2-13B、Llama3-8B、Llama3.2-1Bを評価。システム実装はFlexGenとHuggingFace Transformers上の独自バックエンド。品質評価はlm-evaluation-harnessを利用する。","methodology":"品質はWikiText、Alpaca、LAMBADA、MMLU、CommonsenseQA、SST、BoolQ、PIQA、WinoGrande、ARC、TriviaQA、RACE、MathQA、MBPPなどでDense、ShortGPT、AdaInfer、SpecEE、LayerSkipと比較する。平均退出層と正規化FLOPs、パープレキシティ、精度を測る。開放生成はAlpacaEval-LCとMT-BenchでDenseとの対生成を同じデコード設定で比較する。速度はAlpacaで重みオフロード率0/25/50/75%を設定し、早期退出なしの同一基盤とのトークン毎秒を測る。閾値はWikiText約30万トークンで一致率0.99を満たすよう事前校正する。","scope":"重みをCPUへオフロードする資源制約推論を主対象とし、オフロードなしでも計算削減効果を測る。実機GPU/CPU上でのスループット測定だが、論文自身は配備シナリオを実験機上で模擬すると記述する。LayerSkip型の層別教師あり学習済みモデルを前提とするため、任意の未調整LLMへそのまま適用する方式ではない。"},"reservation":{"claim_id":"claim-5802dd804b5c71e42ecc4823","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
