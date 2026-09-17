@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-4cd9f6f884a1493be0066c89",
-  "job_id": "job-research-6e21b3d4c9b2bcc1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4cd9f6f884a1493be0066c89",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4cd9f6f884a1493be0066c89","job_id":"job-research-6e21b3d4c9b2bcc1","data":{"limitations":"主要性能は実製造チップではなくSSDsimとサイクル精度NPUシミュレータに基づくため、実NANDの温度、製造ばらつき、チップレット配線、制御器競合を含む端末実測が必要である。演算コアは65nm合成で面積1.2%、電力4.5%と見積もるが、NANDプロセスへのロジック混載実装難度は別問題である。誤り訂正は外れ値中心で、誤り率8e-4超では品質を保てない。チャネル数はパッケージ寸法、NPU側バッファ、ダイ間リンク数に制約され、単純な並列度増加は無限に性能へ変換されない。","differences":"FlexGenや通常SSD退避は重みをSSDからDRAM/HBMへ搬送して既存GPU/NPUで計算するため外部帯域が全重み量に比例する。LLM in a Flashは疎性で読み出し量を減らすが依然としてフラッシュ内部並列性を計算へ使わない。Cambricon-LLMはNANDダイ自体へ軽量GeMVと誤り訂正を置き、NPUと専用チップレット接続して重み近傍で縮約する。従来のダイ内計算研究に対しては、LLM特有の高縮約率で空くチャネルをNPU向け通常読み出しに再利用し、品質上不可欠なダイ内誤り保護を組み込む点が異なる。","implementation_status":"研究用アーキテクチャ提案であり、フラッシュ挙動は拡張SSDsim、NPUはC製サイクル精度シミュレータで実装される。演算コアと誤り訂正器はVerilog HDLで記述しTSMC 65nm向けに合成しているため論理設計レベルの面積・電力根拠はあるが、Cambricon-LLM全体の製造済みチップや公式公開コードは論文中で確認できない。","research_positioning":"SSD/NVMe活用型LLM推論の中でも、ホストへのオフロードではなくストレージ側計算へ踏み込む系統である。CPU/GPU/SSD階層の先読みやキャッシュは外部リンクへ必要データを運ぶ前提だが、Cambricon-LLMは重みをNANDから出す前に行列ベクトル積を縮約し、帯域要求そのものを変える。将来の大容量SSD推論では、頻繁に再利用する部分をGPU/CPUへキャッシュし、低再利用の重みをストレージ近傍計算で消費する混成階層へ発展させる際の比較対象として重要である。"},"reservation":{"claim_id":"claim-4cd9f6f884a1493be0066c89","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
