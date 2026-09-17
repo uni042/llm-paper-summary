@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4e8102b097cd70d5cff78c32","job_id":"job-research-39525f58ef98f435",
- "data":{
-  "hardware":"主評価は144基のAscend 910C NPUを使う。DeepSeek-V3 671B W8A8の標準4P1D構成では、4プリフィルノードが各16 NPU・TP=8、1デコードノードが32 NPU・DP=8・TP=4で、デコードワーカー数G=8となる。規模評価ではG=4、8、16を比較し、G=16では5P1D構成を使う。実装オーバーヘッド測定ではDeepSeek-V3に加えQwen3-30B-A3Bも用いる。",
-  "software":"vllm-ascendのV1スケジューラ、連続バッチ処理、PagedAttention、デコード専用グラフ設定を使い、プリフィル・デコード間KV転送はMooncakeConnectorで行う。BalanceRouteはPython/uvloopの状態保持プロキシとして既存ワーカー前段に実装される。比較対象はvLLMルータ系のRandom、Round-Robin、Power-of-Two-Choices、Join-Shortest-Queueで、後者がvllm-ascendの既定比較対象である。",
-  "methodology":"重負荷でクラスタを飽和近くまで動かし、独自実運用トレース8000要求とAzure-2024会話トレース10000要求を評価する。独自トレースの平均プロンプト長は3197、平均出力長は1185。Azure-2024はデコード不均衡が支配的な領域を見るため出力長1000超へ絞り、平均プロンプト4652、平均出力1052とする。主要指標はデータ並列ワーカー間の段階ごとの最大・最小KV負荷差を平均した不均衡、出力トークン当たり時間の95百分位、出力トークン/秒のスループット。BR-0、H=80のBR-H完全予測、実配備可能なSurvival予測とExactMatch予測を比較する。さらにG=4/8/16の規模変化、BR-H係数βとγの感度、プロキシの1回あたり割当時間を測る。",
-  "scope":"評価は実機144 NPU規模であり、単純シミュレーションではない。一方で主ハードウェアはAscend 910C、主モデルはDeepSeek-V3 W8A8、構成はプリフィル・デコード分離かつデコード側同期障壁を持つデータ並列である。Azure-2024も出力1000トークン超へ意図的に絞っており、短い出力や低負荷、同期障壁を持たない独立レプリカ、NVIDIA GPUで同じ改善率が得られることまでは実証していない。プリフィル段階はルータの対象外なので評価指標もデコード段階中心である。"
- },
- "reservation":{"claim_id":"claim-4e8102b097cd70d5cff78c32","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-9d1cb0e0f412061d299b9fe3",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9d1cb0e0f412061d299b9fe3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

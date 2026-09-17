@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4e8102b097cd70d5cff78c32","job_id":"job-research-39525f58ef98f435",
- "data":{
-  "limitations":"対象はプリフィル・デコード分離環境のデコード層内データ並列ルーティングであり、プリフィルとデコードを同じワーカーで行う構成や、同期障壁を共有しない独立レプリカには目的関数をそのまま適用できない。主実機はAscend 910Cで、NVIDIA GPUや異種ワーカー混在での検証はない。公開Azureトレースは出力1000トークン超に限定しており、短出力・低負荷ではKV負荷不均衡自体の重要度が下がる可能性がある。BR-Hは短期終了予測の品質に依存し、完全予測との性能差が残る。制御面は単一の状態保持Pythonプロキシであり、非常に大きなクラスタでは中央状態管理自体が拡張性・障害点になり得る。論文自身も分散型またはハードウェアへオフロードした制御面を将来課題に挙げる。",
-  "differences":"一般的なRandom、Round-Robin、Power-of-Two-Choices、Join-Shortest-Queueは要求数や局所待ち行列を基準にするのに対し、BalanceRouteは同期障壁で全体時間を決める最大KV負荷を直接目的にする。既存のワークロード認識型エンドポイントルータは独立インスタンスへの要求振り分けを扱うため、全データ並列ワーカーが同じデコード段階で同期する本設定とは構造が異なる。理論寄りのLLMオンラインスケジューリング研究が単一ワーカー内のKV制約や将来予測を扱うのに対し、本論文は複数ワーカー間の同期障壁へ焦点を移し、区分線形Fスコアと二段階近似で毎段階ミリ秒級に落とし込む。直前のChenらの短期先読み整数最適化による理論的洞察を、実運用可能なルータへ具体化した位置付けである。",
-  "implementation_status":"著者はvllm-ascend上に状態保持Python/uvloopプロキシを実装し、OpenAI互換APIのペイロード変更、SSE進捗解析、MooncakeConnector、Prometheus監視を組み合わせて144 NPUクラスタへ配備している。既存vllm-ascendエンジンのバイナリ変更を必要とせず、BR-Hの1回の割当処理はG=8でP50約1.0〜1.2 ms、P99約2.5〜2.8 ms。論文本文からBalanceRoute本体の公式公開コードURLは確認できないため、第三者が同一実装をそのまま再現できる公開状態ではない。",
-  "research_positioning":"大規模LLMサービングの負荷分散研究の中でも、BalanceRouteは『プリフィル完了後、同期障壁を共有するデコードデータ並列ワーカーのどこへ要求を固定配置するか』という狭いが実運用上重要な層を対象にする。特に、KVキャッシュ移動が高価で配置変更できないこと、要求負荷が生成とともに増えること、全ワーカーの段階時間が最大負荷で決まることを一つのFスコアへ落とし込んだ点が特徴である。予測不要BR-0から短期予測BR-Hまで同一方式族にしたことで、予測基盤の成熟度に応じて段階的に導入できる。今後は中央プロキシの分散化、異種ハードウェアごとの段階時間関数を取り込む拡張、SLO緊急度とFスコアの共同最適化、プリフィル層まで含む階層的負荷分散との統合が自然な発展方向となる。"
- },
- "reservation":{"claim_id":"claim-4e8102b097cd70d5cff78c32","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-9d1cb0e0f412061d299b9fe3",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9d1cb0e0f412061d299b9fe3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

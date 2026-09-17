@@ -1,17 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4e8102b097cd70d5cff78c32","job_id":"job-research-39525f58ef98f435",
- "data":{
-  "overview":"G=8の重負荷では、予測不要のBR-0だけでも最強の一般比較方式に対し独自トレースで不均衡を4.1倍縮小してスループットを11.8%高め、Azure-2024では不均衡を1.94倍縮小して8.8%高める。実配備版BR-HのExactMatch予測は独自トレース977 tok/s、Azure-2024 909 tok/sに達し、各最強比較方式比で15.4%、14.5%向上する。完全予測BR-Hはさらに1029、957 tok/sへ達する。規模をG=4から16へ増やすとBR-Hの最強比較方式に対するスループット優位が13.4%から34.5%へ広がり、同期障壁による最大負荷罰が大規模ほど重要になるという設計動機と一致する。",
-  "key_results":[
-   {"metric":"G=8独自トレースの平均DP不均衡とスループット","value":"BR-0は不均衡51,927、942.5 tok/s。JSQは215,110、842.8 tok/sで、不均衡4.1倍縮小・スループット11.8%向上","baseline":"Join-Shortest-Queue","condition":"DeepSeek-V3 671B W8A8、G=8、重負荷の独自実運用トレース","interpretation":"現在段階の安全余裕だけでも、同期障壁を無視する待ち行列長基準よりワーカー間KV負荷を大幅に揃えられる。"},
-   {"metric":"G=8 Azure-2024の平均DP不均衡とスループット","value":"BR-0は不均衡54,051、854 tok/s。最強比較方式に対し不均衡1.94倍縮小、スループット8.8%向上","baseline":"vLLM系4方式の最強比較","condition":"出力長1000超へ絞ったAzure-2024、G=8、重負荷","interpretation":"独自トレースだけでなく公開トレースでも予測不要版の効果が再現するが、利得幅はワークロード分布に依存する。"},
-   {"metric":"実配備BR-Hのスループット","value":"ExactMatchで独自977 tok/s、Azure 909 tok/s。最強比較方式比+15.4%、+14.5%","baseline":"各トレースの最強vLLM比較方式","condition":"H=80、短期終了予測を利用する実配備構成","interpretation":"短い将来の終了情報を加えると、現在だけでは見えない負荷減少を考慮でき、BR-0より追加利得を得る。"},
-   {"metric":"規模拡大時のスループット優位","value":"BR-H完全予測はG=4で+13.4%、G=8で+21.5%、G=16で+34.5%。BR-0は約+11%、+11%、+20.5%","baseline":"各Gでの最強一般比較方式","condition":"独自トレース、G=4/8/16。G=16は5P1D・144 NPU","interpretation":"ワーカー数が増えるほど最大負荷と平均負荷の差が大きくなり、同期障壁を意識したルーティングの価値が高まる。"},
-   {"metric":"割当処理オーバーヘッド","value":"DeepSeek-V3でP50 1.20 ms、P99 2.77 ms。Qwen3でP50 1.03 ms、P99 2.52 ms","baseline":"約60 msのデコード1段階予算","condition":"G=8、Rmax=4のBR-Hプロキシ","interpretation":"中央値でエンジン段階時間の約1/50、P99でも約1/22に収まり、部分集合探索を含めても毎段階の制御時間として実用範囲にある。"}
-  ],
-  "negative_results":"G=16では絶対スループットの伸びが線形にならない。5P1D構成はデコードワーカーを倍増してもプリフィルノードを1台しか追加せず、プリフィル対デコード比が4:1から5:2へ下がるためである。またBR-Hの完全予測と実配備予測には残差があり、独自トレースでは完全予測1029 tok/sに対しExactMatch 977 tok/s、Azureでは957対909 tok/sで、予測品質が将来情報の利得を制限する。評価はAzure-2024の短出力を除外しているため、デコード負荷が小さい領域で同じ優位を示した結果ではない。",
-  "interpretation":"BalanceRouteの利得は、要求数を均等化するのではなく、各要求が持つKV負荷と同期障壁が作る『最大ワーカー負荷』を直接小さくする点から生じる。安全余裕を超えた追加負荷は全Gワーカーの段階待ちへ影響するため、大規模化するほど一般的な負荷分散との差が広がる。BR-Hは終了間近の要求によって将来空く容量を見越して割り当てるため、完全予測時の利得が大きいが、実配備予測でもその多くを回収している。",
-  "quality_impact":"生成モデル、重み、量子化方式、デコードアルゴリズム自体は比較内で変えず、プリフィル後の要求配置だけを変更するため、出力品質を速度と交換する方式ではない。論文は品質指標ではなく負荷不均衡、TPOT P95、スループットを評価し、実配備BR-Hが両トレースで最小TPOT P95も達成することで、スループット向上が尾部遅延悪化によるものではないことを示す。"
- },
- "reservation":{"claim_id":"claim-4e8102b097cd70d5cff78c32","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-9d1cb0e0f412061d299b9fe3",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9d1cb0e0f412061d299b9fe3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
