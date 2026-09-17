@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:13:03 JST**
+> 自動生成: **2026-09-17 14:13:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **76** |
-| 最終検証済みResearch収録 | **09-17 13:39:54 JST（33分前）** |
+| 直近24hの検証済みResearch収録 | **77** |
+| 最終検証済みResearch収録 | **09-17 14:13:08 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **4** | **1** | **3** | **3** | **1** | — |
+| Research | **11** | **4** | **1** | **3** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **5** | **2** | **3** | **3** | **1** | **5** |
+| 合計 | **12** | **5** | **2** | **3** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 14:13:08 JST** [research] `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management
+  - job: `.survey/work-queue/jobs/job-research-cf3f98aec47a974c.json`
+  - result: `.survey/work-queue/results/research/attempt-a48b2fb6f7f42031d9d9ac32.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a48b2fb6f7f42031d9d9ac32.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17475-justfit-200k-token-llm-serving-on-a-24-gib-laptop-with-just-in-time-state-management.md`
 - **09-17 13:39:54 JST** [research] `arXiv:2609.14773` — Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations
   - job: `.survey/work-queue/jobs/job-research-21f0d525f3274129.json`
   - result: `.survey/work-queue/results/research/attempt-8718dff912353a48271bfa65.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-b48fe8a4a8bca9a588bbc403.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b48fe8a4a8bca9a588bbc403.json`
   - paper: `papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md`
-- **09-17 12:08:28 JST** [research] `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-120be1bd98c2839e.json`
-  - result: `.survey/work-queue/results/research/attempt-79eabe22a1933fc80a491fc0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-79eabe22a1933fc80a491fc0.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md`
 
 ### Audit
 
@@ -145,10 +145,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 14:11:19 JST** / heartbeat: **—** / lease expiry: **09-17 15:41:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cf3f98aec47a974c.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
@@ -174,7 +171,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -194,7 +191,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **655** |
+| inference/training/survey配下の論文Markdown実体 | **656** |
 
 ### immutable submissionの未照合
 
@@ -202,8 +199,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **426** |
-| └ Research | **299** |
+| 成功result未照合のimmutable submission | **425** |
+| └ Research | **298** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T04:44:59.544131+00:00",
+  "updated_at": "2026-09-17T05:13:10.736286+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T04:44:59.544131+00:00",
+      "last_recorded_at": "2026-09-17T05:13:10.736286+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 191,
+        "research_completed": 192,
         "audit_completed": 0,
         "discovery_completed": 89,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35083557525:1",
-          "recorded_at": "2026-09-16T10:12:51.949491+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35083557525",
-            "run_attempt": "1",
-            "source_sha": "26874ad440282be83b74169a0c778fea3820f9fe"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35083687593:1",
           "recorded_at": "2026-09-16T10:14:00.494122+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35184848717:1",
+          "recorded_at": "2026-09-17T05:13:10.736286+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35184848717",
+            "run_attempt": "1",
+            "source_sha": "bb55c8055111740a559ed6865d367a565fa060d5"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -21936,6 +21936,14 @@
           "title": "Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-cf3f98aec47a974c",
+          "type": "research",
+          "canonical_id": "arXiv:2609.17475",
+          "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23340,7 +23348,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 655,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
