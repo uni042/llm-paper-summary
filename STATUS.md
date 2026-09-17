@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 00:45:56 JST**
+> 自動生成: **2026-09-18 00:46:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **2** | **1** | **1** | **0** | — |
+| Research | **10** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **14** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **24** | **5** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **24** | **4** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,8 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-649cbf7dd4b2c0b7dbad2691.json` (job `job-research-24c58326f22e095e`)
+- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2604.14626` — ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving
   - job: `.survey/work-queue/jobs/job-research-a1761c9ca73f9afb.json`
   - result: `.survey/work-queue/results/research/attempt-721b895c107ac359ea8048a4.json` (`ok=true`)
@@ -190,7 +189,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.06643` — MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 00:44:39 JST** / heartbeat: **—** / lease expiry: **09-18 02:14:39 JST**
+  - claim: **09-18 00:46:19 JST** / heartbeat: **—** / lease expiry: **09-18 02:16:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-24c58326f22e095e.json`
 
 #### Audit
