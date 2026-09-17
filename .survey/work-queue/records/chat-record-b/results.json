@@ -5,19 +5,18 @@
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
   "data": {
+    "overview": "InferScaleは検索メモリの反復prefillをKV直接注入へ置き換えることで、retrieval budgetが増えてもtime-to-first-tokenをほぼ一定に保つ。k=50では3モデルでMem0より72〜79%低いTTFT、100同時usersで3.7〜4.5倍のthroughputを報告する。一方、独立fact符号化はcross-fact attentionを失うため、Context-Window Encodingを用いてもprompt injectionとの精度差が一部残る。GPU常駐KVは1 conversationあたり1.8〜4.8GBを要し、CPU offloadは容量制約を緩和する代わりにend-to-end latencyへPCIe転送費を加える。",
     "key_results": [
-      "Llama-3.1-8Bではretrieval budgetをk=5から50へ増やしてもInferScaleのengine TTFTは16.6msから17.3ms程度の約4%増に留まり、Mem0は33.2msから68.3msへ約106%増加する。k=50では3モデルでTTFTを72〜79%削減し、3.6〜4.8倍高速化する。",
-      "LoCoMo accuracyではLlama-3.1-8B、w=50、k=50でInferScale 60.26%、Mem0 63.25%。独立符号化w=0では53.77%まで低下するためcontext windowが重要である。Mistral/Qwenでも大きなwindowで改善するがMem0との差は残る。",
-      "100同時users、top-50 retrievalではInferScaleがLlama/Mistral/Qwenで100/104/135 QPS、Mem0が27/23/32 QPSとなり3.7〜4.5倍。",
-      "Qwen3-14B、k=50、w=50ではGPU KVのTTFT 28.06ms、query-to-first-token 88.02ms、accuracy 69.42%に対し、Mem0は140.52ms、257.76ms、79.09%。速度差は大きい一方でaccuracy gapも約9.7 points残る。",
-      "per-conversation fact KVはLlama-3.1-8Bで約4.80GB、Mistral-7Bで2.26GB、Qwen2.5-7Bで1.78GB。Jasper graphは13.5MB程度で、容量支配項はKV storeである。",
-      "KVをpinned host DRAMへoffloadするとk=50,w=5でengine TTFTはLlama 17.52→20.45ms、Mistral 17.02→18.93ms、Qwen 17.82→19.29msと約1.5〜3ms増だが、query-to-first-tokenは約33〜38ms増える。"
+      {"metric": "Llama-3.1-8B engine TTFT", "value": "16.6→17.3 ms (k=5→50); k=50でMem0比約75%削減", "baseline": "Mem0 33.2→68.3 ms", "condition": "LoCoMo, Llama-3.1-8B, prefix caching有効", "interpretation": "retrieved memory量が10倍になってもKV注入ではmemory tokensを再prefillしないためTTFT増加が約4%に留まる。"},
+      {"metric": "k=50 TTFT speedup", "value": "3.6〜4.8×", "baseline": "Mem0 default", "condition": "Llama-3.1-8B、Mistral-7B、Qwen2.5-7B", "interpretation": "GPU-native retrievalとKV injectionの組合せにより3モデルで一貫したlatency改善を得る。"},
+      {"metric": "LoCoMo judged accuracy", "value": "60.26%", "baseline": "Mem0 63.25%", "condition": "Llama-3.1-8B, w=50, k=50", "interpretation": "大きいcontext windowで独立符号化の損失を大幅に回復するが、完全なcross-fact attentionを持つprompt injectionとの差は残る。"},
+      {"metric": "100-user serving throughput", "value": "100/104/135 QPS", "baseline": "Mem0 27/23/32 QPS", "condition": "Llama/Mistral/Qwen, top-50 facts, 50 output tokens/request", "interpretation": "短いqueryだけをprefillするためbatchへ多くのrequestを収容でき、3.7〜4.5倍のthroughputとなる。"},
+      {"metric": "Qwen3-14B TTFT", "value": "28.06 ms", "baseline": "Mem0 140.52 ms", "condition": "k=50, w=50, GPU-resident KV", "interpretation": "modelが大きくprefillが高価になるほど再計算除去のlatency利得が強まる。ただしaccuracyは69.42%対79.09%で差が残る。"},
+      {"metric": "per-conversation fact KV footprint", "value": "1.78〜4.80 GB", "baseline": "Jasper graph 13.5 MB程度", "condition": "Qwen2.5-7B〜Llama-3.1-8B", "interpretation": "retrieval indexではなく保存KVがGPU容量の支配項となり、常駐可能conversation数を制約する。"}
     ],
-    "quantitative_summary": "主な利得はrepeated memory prefillの除去であり、k増加に対するTTFTをほぼ平坦化する。最大k=50で3.6〜4.8倍のTTFT改善、100-user batchで3.7〜4.5倍のthroughputを得る。精度はcontext windowで大幅に回復するもののprompt injectionを完全には一致せず、特にmulti-hopで残差が大きい。",
-    "accuracy_tradeoff": "Chunked RoPEによる位置再配置そのものではなく、factを別々に符号化してcross-fact attentionを失うことが主な近似誤差である。w>=20ではk増加時のaccuracy崩壊を抑えるが、Llama k=50で60.3%対63.3%、Qwen3-14Bでは69.4%対79.1%とbaseline差が残る。",
-    "resource_tradeoff": "GPU-native設計はCPU検索・text転送を避ける一方、各conversationに1.8〜4.8GBのKVを要求する。CPU offloadでGDDR容量制約は緩和できるが、取得量kに比例するPCIe転送がend-to-end latencyへ数十ms追加される。",
-    "offline_cost": "Context-Window Encodingは一度だけの前処理費用だがwとともに増え、Llama-3.1-8Bでは1 conversationあたりw=0の38.91秒からw=50の206.45秒へ約5倍になる。serving latencyと保存token数はwで増えない。",
-    "empirical_equivalence": "同一prompt tokensでKV注入と再prefillを比較した18ケースではtoken-identical 9、semantic-equivalent 8、different 1で、factual accuracyは全ケース100%。bf16 reduction orderによる非決定性を除けば理論的等価性と整合する。"
+    "negative_results": "独立fact符号化w=0ではk増加とともにaccuracyが悪化し、Llamaでは62.21%から53.77%、Mistralでは54.03%から37.22%へ低下する。w>=20で回復するがmulti-hopではMem0が最大約16 points上回る場合がある。Qwen3-14Bのk=50,w=50でもInferScale 69.42%対Mem0 79.09%である。またLlamaのKV storeは約4.8GB/conversationを要する。CPU offloadではk=50,w=5のengine TTFT増加は約1.5〜3msだが、query-to-first-tokenは約33〜38ms増える。",
+    "interpretation": "速度改善は検索アルゴリズムだけではなく、同じ静的memoryを要求ごとにmodel forwardへ通す処理そのものを除去したことから生じる。GPU-native retrievalはCPU検索・text transferを削り、KV injectionはprefill計算をqueryへ限定する。精度側の残差は位置再配置よりもfact間の表現依存を切ったことに由来するため、windowを増やすほど改善するが、そのoffline encoding costは増える。",
+    "quality_impact": "KV injectionとChunked RoPEによる同一contextの位置再配置は理論上exactで、実証18ケースでも17ケースがtoken-identicalまたはsemantic-equivalent、factual accuracyは100%だった。実システムの近似は主にindependent fact encodingにあり、Context-Window Encodingで緩和するもののprompt injectionと完全同等ではない。"
   },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
