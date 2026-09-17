@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 683,
+  "active_count": 691,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -102,6 +102,14 @@
         "arXiv:2503.03777"
       ],
       "source_hash": "731b7f67d021adbf785a47a100135cbca2bb4142859ddf98e5a9b069fda0f2fc"
+    },
+    "arXiv:2504.05897": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2504.05897",
+        "arXiv:2504.05897"
+      ],
+      "source_hash": "43e11cc99e63aeb0252d5911dbe001af0637c5a0f4a5671b48d34d4967142dc8"
     },
     "arXiv:2504.09345": {
       "path": "papers/inference/01-offload-hierarchical-memory/2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md",
@@ -568,6 +576,22 @@
         "arXiv:2608.15383"
       ],
       "source_hash": "21bcdc3246e78085067fa5d9070004dcdb99816177706f447074dabb53d37eba"
+    },
+    "arXiv:2609.18063": {
+      "path": "papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.18063",
+        "arXiv:2609.18063"
+      ],
+      "source_hash": "41415397bdb55e72ddb6cd19977cbe279086106598270e93ef283165fc5851ef"
+    },
+    "arXiv:2609.18110": {
+      "path": "papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.18110",
+        "arXiv:2609.18110"
+      ],
+      "source_hash": "bfeb07155498b98288ce3657ccc70b21d55d97cd2df40ba8a63a75ac229dd4c0"
     },
     "arXiv:2308.12066": {
       "path": "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
@@ -1353,6 +1377,14 @@
       ],
       "source_hash": "7d54a3bbe2814b5291666bfd0c5a4438f8c6738eb4aff8be54b4d130e09033fe"
     },
+    "arXiv:2505.15781": {
+      "path": "papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2505.15781",
+        "arXiv:2505.15781"
+      ],
+      "source_hash": "20924fc79a0850e588c71debf87fb58584d35119be702d239d2be714b9402b6b"
+    },
     "arXiv:2607.27090": {
       "path": "papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md",
       "identifiers": [
@@ -1376,6 +1408,13 @@
         "arXiv:2609.14872"
       ],
       "source_hash": "8f720b76f7b8305930526658841f30965f4319177b491652db174088ca633bf2"
+    },
+    "arXiv:2609.17573": {
+      "path": "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+      "identifiers": [
+        "arXiv:2609.17573"
+      ],
+      "source_hash": "5d013537d80b9ac8ee4b810550ba8c189ab443aaf790abaceed1af5c9431496f"
     },
     "arXiv:2509.07379": {
       "path": "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
@@ -1628,6 +1667,28 @@
         "arXiv:2601.11822"
       ],
       "source_hash": "da7186d27ba579558689f5aee695fae7e0eff56dc4cd8aa4b8700527e2e6af67"
+    },
+    "arXiv:2602.10729": {
+      "path": "papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
+      "identifiers": [
+        "arXiv:2602.10729"
+      ],
+      "source_hash": "3ece2bb8efb17dda39b3718d96e7d54d73a231c90bba63a1c2bd44c034b6b267"
+    },
+    "arXiv:2605.06113": {
+      "path": "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
+      "identifiers": [
+        "arXiv:2605.06113"
+      ],
+      "source_hash": "9fb7ed4b4a5a2af3c9ea99aed8c913ed3df0dd544884c1500e0451b1d61a1824"
+    },
+    "arXiv:2605.24832": {
+      "path": "papers/inference/06-serving-scheduling/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2605.24832",
+        "arXiv:2605.24832"
+      ],
+      "source_hash": "c5ea051ca1872cc794fda5300badf90fb71024c0d290d198cf709bdccf7dfbff"
     },
     "arXiv:2604.09557": {
       "path": "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
@@ -5225,6 +5286,8 @@
     "arXiv:2502.09921": "arXiv:2502.09921",
     "DOI:10.48550/arxiv.2503.03777": "arXiv:2503.03777",
     "arXiv:2503.03777": "arXiv:2503.03777",
+    "DOI:10.48550/arxiv.2504.05897": "arXiv:2504.05897",
+    "arXiv:2504.05897": "arXiv:2504.05897",
     "DOI:10.48550/arxiv.2504.09345": "arXiv:2504.09345",
     "arXiv:2504.09345": "arXiv:2504.09345",
     "DOI:10.1145/3770743.3804144": "arXiv:2506.15155",
@@ -5325,6 +5388,10 @@
     "arXiv:2609.13592": "arXiv:2609.13592",
     "DOI:10.48550/arxiv.2608.15383": "arXiv:2608.15383",
     "arXiv:2608.15383": "arXiv:2608.15383",
+    "DOI:10.48550/arxiv.2609.18063": "arXiv:2609.18063",
+    "arXiv:2609.18063": "arXiv:2609.18063",
+    "DOI:10.48550/arxiv.2609.18110": "arXiv:2609.18110",
+    "arXiv:2609.18110": "arXiv:2609.18110",
     "arXiv:2308.12066": "arXiv:2308.12066",
     "arXiv:2310.18859": "arXiv:2310.18859",
     "arXiv:2410.22134": "arXiv:2410.22134",
@@ -5491,12 +5558,15 @@
     "DOI:10.48550/arxiv.2601.21198": "arXiv:2601.21198",
     "arXiv:2601.21198": "arXiv:2601.21198",
     "arXiv:2605.02960": "arXiv:2605.02960",
+    "DOI:10.48550/arxiv.2505.15781": "arXiv:2505.15781",
+    "arXiv:2505.15781": "arXiv:2505.15781",
     "DOI:10.48550/arxiv.2607.27090": "arXiv:2607.27090",
     "arXiv:2607.27090": "arXiv:2607.27090",
     "DOI:10.48550/arxiv.2609.13285": "arXiv:2609.13285",
     "arXiv:2609.13285": "arXiv:2609.13285",
     "DOI:10.48550/arxiv.2609.14872": "arXiv:2609.14872",
     "arXiv:2609.14872": "arXiv:2609.14872",
+    "arXiv:2609.17573": "arXiv:2609.17573",
     "DOI:10.48550/arxiv.2509.07379": "arXiv:2509.07379",
     "arXiv:2509.07379": "arXiv:2509.07379",
     "DOI:10.48550/arxiv.2606.15453": "arXiv:2606.15453",
@@ -5551,6 +5621,10 @@
     "arXiv:2511.20982": "arXiv:2511.20982",
     "DOI:10.48550/arxiv.2601.11822": "arXiv:2601.11822",
     "arXiv:2601.11822": "arXiv:2601.11822",
+    "arXiv:2602.10729": "arXiv:2602.10729",
+    "arXiv:2605.06113": "arXiv:2605.06113",
+    "DOI:10.48550/arxiv.2605.24832": "arXiv:2605.24832",
+    "arXiv:2605.24832": "arXiv:2605.24832",
     "DOI:10.48550/arxiv.2604.09557": "arXiv:2604.09557",
     "arXiv:2604.09557": "arXiv:2604.09557",
     "arXiv:2604.20503": "arXiv:2604.20503",

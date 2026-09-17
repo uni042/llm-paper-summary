@@ -36,6 +36,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：8  
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
 
+- **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  TuttiはGPU主導の非同期SSD読込みでKV要求をまとめ、CPU発行の小I/Oを排してGPUへ直接転送し、SSD容量を使いながらKV復元待ちを減らす方式。
+
 - **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：4  
   SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
@@ -43,10 +47,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
-
-- **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  TuttiはGPU主導の非同期SSD読込みでKV要求をまとめ、CPU発行の小I/Oを排してGPUへ直接転送し、SSD容量を使いながらKV復元待ちを減らす方式。
 
 - **2026-05 · [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -257,7 +257,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：28  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
@@ -331,7 +331,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   FastDecodeはKVと注意計算を複数CPUノードへ置き、GPUは重み計算を大バッチで進め、巨大KVのGPU転送とHBM容量制約を減らす異種パイプライン。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  

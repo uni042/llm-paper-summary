@@ -1,16 +1,28 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（8本）
+## 自動生成の論文一覧（11本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
+- **2026-02 · [BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization](2026-2602.10729-boute-heterogeneous-model-gpu-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
+
 - **2025-11 · [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   TBT違反が予測される時だけ単一GPUのSMをプリフィル/デコードへ動的分割し、集約方式のスループットと分離方式のisolationを両立する。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
+
+- **2026-05 · [Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale](2026-2605.06113-balanceroute-data-parallel-online-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同期障壁を持つデータ並列デコードで、各ワーカーの安全余裕をFスコアで評価して新規要求を割り当て、KV負荷の偏りと障壁待ちを抑えるオンラインルータBalanceRouteを提案する。
+
+- **2026-05 · [Optimus: Elastic Decoding for Efficient Diffusion LLM Serving](2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md)**  
+  実装：[✓](https://github.com/dubcyfor3/Optimus) ・ リポジトリ内被引用：0  
+  拡散LLMのブロックを再学習なしでチャンク化し、GPU飽和と有効トークン率を見ながら復号粒度を動的変更して負荷変動へ追従する。
 
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -34,11 +46,11 @@
   実装：✓ ・ リポジトリ内被引用：11  
   入力処理と逐次生成の計算をSM単位で分離しつつ高帯域メモリを共有し、完全分離方式のKV転送と保存容量の偏りを除いてエンドツーエンド遅延を最大2.58倍改善する。
 
+- **2025-01 · [AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding](2025-2501.12162-adaserve-multi-slo-speculative-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  GPU検証予算を各リクエストのSLO達成用トークンへ優先配分し、残余をスループット向上へ回す投機的デコード配信で、SLO違反を最大4.3倍削減する。
+
 - **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。
-
-- **2025-01 · [AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding](2025-2501.12162-adaserve-multi-slo-speculative-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  GPU検証予算を各リクエストのSLO達成用トークンへ優先配分し、残余をスループット向上へ回す投機的デコード配信で、SLO違反を最大4.3倍削減する。
 <!-- survey:auto:end -->

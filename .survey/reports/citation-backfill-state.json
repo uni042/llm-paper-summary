@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T16:04:58+00:00"
+      "checked_at": "2026-09-17T21:42:57+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T16:04:53+00:00"
+      "checked_at": "2026-09-17T21:42:49+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4910,7 +4910,7 @@
       "status": "blocked",
       "source_fingerprint": "7e00fef820a3e8c0749349d3154faf7b3a1c706dacdef0f03724dafacc15cf0e",
       "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-17T16:04:59+00:00"
+      "checked_at": "2026-09-17T21:42:57+00:00"
     },
     "papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": {
       "status": "complete",
@@ -5052,7 +5052,7 @@
       "status": "blocked",
       "source_fingerprint": "854c3738395df1ff08e8bd60fc12ceea018b4a7e2df147bde17c11302bec11f8",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-17T16:04:55+00:00"
+      "checked_at": "2026-09-17T21:42:53+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md": {
       "status": "complete",
@@ -5122,7 +5122,7 @@
       "status": "blocked",
       "source_fingerprint": "a75f7a788c6b5af06d4ecadf753867f064932837ba54800039ec1b237c738684",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: unable to download arXiv source archive: https://export.arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 406: Not Acceptable | https://arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 404: Not Found)",
-      "checked_at": "2026-09-17T16:04:57+00:00"
+      "checked_at": "2026-09-17T21:42:56+00:00"
     },
     "papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md": {
       "status": "complete",
@@ -5515,7 +5515,71 @@
       "normalized_references": 19,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-17T16:04:52+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md": {
+      "status": "complete",
+      "source_fingerprint": "0aece8189825bb7c58bd974dc12615619c201b67d53e598f4c9b2726e56803b6",
+      "references_total": 30,
+      "normalized_references": 20,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:46+00:00"
+    },
+    "papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md": {
+      "status": "complete",
+      "source_fingerprint": "3c5330f1ea481747b75e1e24f2a3fad68ce7f4304c1b15e9286a38d165dbd688",
+      "references_total": 33,
+      "normalized_references": 22,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:47+00:00"
+    },
+    "papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md": {
+      "status": "complete",
+      "source_fingerprint": "3cadfdcc4ac0df6ce947d0e06bd087c3983de54901687f2d72b63636f6ef85d7",
+      "references_total": 44,
+      "normalized_references": 21,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:47+00:00"
+    },
+    "papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "0f5db207339b98a23d6c1a85128770f09389d45a7325e57290dbf6d15446a92d",
+      "references_total": 57,
+      "normalized_references": 23,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:49+00:00"
+    },
+    "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md": {
+      "status": "complete",
+      "source_fingerprint": "8f5b188ff42d7906914370417bc473a805f2134129082301f4dfb68160573695",
+      "references_total": 47,
+      "normalized_references": 36,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:50+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md": {
+      "status": "complete",
+      "source_fingerprint": "133407801c17b8d949b438071e7168a3566bfb841004c04a6f5a35c4dc891817",
+      "references_total": 62,
+      "normalized_references": 36,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:51+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md": {
+      "status": "complete",
+      "source_fingerprint": "459e76bc52ef2062e3ae044744e78c4af15f0c1b9ee64f1b688f49df26521ef6",
+      "references_total": 33,
+      "normalized_references": 21,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:52+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "bd16a5281d5850a705a6799fe2815b84ebe326b7c0438c314040f47fbc6e2d5e",
+      "references_total": 54,
+      "normalized_references": 23,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T21:42:53+00:00"
     }
   },
-  "updated_at": "2026-09-17T16:05:26+00:00"
+  "updated_at": "2026-09-17T21:43:29+00:00"
 }
