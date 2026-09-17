@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-3ade85df2d9f4d0195503a71",
   "job_id": "job-research-a725b9cf79d670cf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3ade85df2d9f4d0195503a71",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価対象はLLaDAとUltraLLaDAの2系列、PCIe接続のA100/RTX 4090に限られ、他の拡散型大規模言語モデル、自己回帰モデル、多GPU相互接続、CXLやNVMeを含むさらに深い階層での有効性は未検証である。選択予算は固定値を格子探索して決めており、文脈長・バッチ・ハードウェア・注意分布に応じたオンライン適応は将来課題として明示される。近似疎注意なので品質は厳密保存ではなく、短文では選択・転送機構の費用によりGPU常駐高速方式へ負ける。公開コードURLも確認できず、再現性は論文記載の設計と実験条件に依存する。",
+    "differences": "FlexGenなど一般的な退避系は完全KVを異種メモリへ置くことが中心で、GroupKVは拡散復号の動的KVを前提に転送対象そのものをグループ単位で減らす。InfiniGen型やRetrievalAttention系のトークン単位選択は安定した自己回帰履歴や細粒度構造の再利用を前提にしやすいのに対し、本手法は短寿命KVでも維持費の低い連続グループ代表を使う。HISAの粗密選択に近い構造はあるが、GroupKVはCPU退避、層間予測先読み、局所更新による古さ補正まで一体化する。Sparse-dLLM、d2Cache、Fast-dLLMなど既存の拡散KV高速化が主に計算削減やKV再利用を狙うのに対し、GroupKVはGPU容量制約下の長文・大バッチとホスト転送を主要問題として扱う。",
+    "implementation_status": "論文では実機上で動作するGroupKVランタイムを実装し、A100-80GとRTX 4090-24Gで端から端までの推論、メモリ、部品分解、バッチ拡張性を評価している。二重ストリームの小型バッファ、CPU固定ページメモリ、ストリーミング事前充填、短文向け実行方式への振り分けまで含むシステム実装であり、概念提案やシミュレーションのみではない。ただしarXiv本文・メタデータで公式公開コードのURLは確認できなかった。",
+    "research_positioning": "リポジトリ内ではKVキャッシュ・階層メモリ・退避・先読みの系統に属するが、特に拡散型大規模言語モデルの動的KVライフサイクルへ焦点を当てる点が重要である。CPUを容量層、GPUを疎な作業層として使い、アクセス単位をトークンから連続グループへ引き上げることで、メタデータ維持費と転送量を同時に抑える設計は、SSD/NVMeやCXLまで拡張した階層KV管理を考える際にも比較基準になる。将来的には固定20%予算を負荷・帯域・文脈局所性に応じて適応化することや、CPUより下位の記憶階層で先読みを多段化する研究へ接続しやすい。一方、短文ではGPU常駐方式が優位なので、単独の万能KV方式というより、メモリ圧力に応じて切り替える長文専用バックエンドとして位置付けるのが妥当である。"
+  },
+  "reservation": {"claim_id": "claim-3ade85df2d9f4d0195503a71", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
