@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 12:32:57 JST**
+> 自動生成: **2026-09-17 13:04:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **54** |
 | 未claim Research job | **52** |
-| 直近24hの検証済みResearch収録 | **79** |
-| 最終検証済みResearch収録 | **09-17 12:12:48 JST（20分前）** |
+| 直近24hの検証済みResearch収録 | **73** |
+| 最終検証済みResearch収録 | **09-17 12:12:48 JST（51分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **1** | **2** | **1** | — |
+| Research | **6** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **10** | **3** | **2** | **1** | **2** | **1** | **6** |
+| 合計 | **9** | **3** | **2** | **1** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-73081685c32e0006998f3d67.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-73081685c32e0006998f3d67.json`
   - paper: `papers/inference/06-serving-scheduling/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md`
-- **09-17 06:35:28 JST** [research] `arXiv:2609.16491` — PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving
-  - job: `.survey/work-queue/jobs/job-research-98e8633cce3c47f1.json`
-  - result: `.survey/work-queue/results/research/attempt-9c7bc1c5f144c062d60905d3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9c7bc1c5f144c062d60905d3.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md`
 
 ### Audit
 
@@ -135,7 +130,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **—** / lease expiry: **09-17 14:02:48 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
