@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-721b895c107ac359ea8048a4",
   "job_id": "job-research-a1761c9ca73f9afb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-721b895c107ac359ea8048a4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "ASAP7 7nm FinFET、0.7V、1.0GHzで合成した論理ダイを用いる。4GB HB構成は16処理要素、W8A8 262 TOPS、W4A8 524 TOPS、HB帯域819.2GB/s。8GB構成は32処理要素、W8A8 524 TOPS、W4A8 1048 TOPS、HB帯域1638.4GB/s。HB読出しエネルギーは0.43pJ/bit。外部メモリは64GB LPDDR5-6400、8チャネル、102.4GB/s、3.88pJ/bit。集約リンク32GB/s、外部重み配送用リンク128GB/s。",
+    "software": "遅延はDuplexを基にしたサイクル精密シミュレータへ投機的デコードとキャッシュのイベント駆動モデルを追加し、RamulatorでDRAMタイミングをモデル化して評価する。全モデルの基準精度はG32 INT8対称量子化とFP16尺度。HBエキスパートキャッシュはLRU近似を用い、モデル・データセットごとのルーティング相関とバッチ増加による局所性低下を校正する。",
+    "methodology": "対象モデルはQwen3-30B-A3B、GLM-Flash、DeepSeek-V2-Lite、GPT-OSS-20Bの4種類で、活性パラメータは2.4B〜3.6B。データセットはMT-Bench、GSM8K、Alpaca、HumanEval、基準系列長は1k、バッチサイズは1〜16。投機方式として独立軽量ヘッドのEAGLE-SD、小型言語モデルを使うSLM-SD、別4ビット対象コピーを使うQuant-SD、提案Elastic-SDを比較する。ハードウェア比較は外部LPDDRのみのxPU、xPU-PIM、xPU-LogicPIM、xPU-NMP、HB-xPU、提案方式で、同じxPU計算能力と64GB LPDDR条件を揃える。",
+    "scope": "評価は合成済み論理ダイの面積・仕様値とサイクル精密シミュレーションに基づき、製造済み3D積層チップの実測ではない。主要な一般化範囲は約15.7B〜30B総パラメータのMoE、1k系列長、バッチ1〜16、4GBまたは8GB HB容量である。HB帯域利用率は行競合を含めて屋根線値より約3%低く、外部メモリはピークの1%以内としてモデル化する。長文脈ではKVキャッシュがHBを優先占有してエキスパート領域を削るため、論文自身が性能低下の可能性を明記している。"
+  },
+  "reservation": {"claim_id": "claim-721b895c107ac359ea8048a4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
