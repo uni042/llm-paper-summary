@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0f8f604e4dd41baf02109b3f",
-  "job_id": "job-research-fd53481863b8e4e0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0f8f604e4dd41baf02109b3f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0f8f604e4dd41baf02109b3f","job_id":"job-research-fd53481863b8e4e0","data":{"overview":"HybriMoEは3種類のMoEと複数入力長・GPUキャッシュ比で、CPU-GPU固定寄りのkTransformersより一貫して低いプリフィル遅延と高いデコード性能を示す。平均ではプリフィル1.33倍、デコード1.70倍。Qwen2・25%キャッシュ比の構成要素除去では、動的スケジューリングが最大の単独寄与を持ち、プリフェッチとスコア認識キャッシュが追加改善を与える。","key_results":[{"metric":"プリフィル高速化","value":"平均1.33×","baseline":"kTransformers","condition":"Mixtral、Qwen2、DeepSeek、複数入力長・GPUエキスパートキャッシュ比","interpretation":"現在層の負荷に応じたCPU-GPU割当と先読みが、固定的な高頻度エキスパート配置より資源待ちを減らす。"},{"metric":"デコード性能改善","value":"平均1.70×","baseline":"kTransformers","condition":"3種類のMoE、複数GPUエキスパートキャッシュ比","interpretation":"小さいトークン負荷でもCPU・GPU・PCIeを重ね、スコア認識キャッシュで反復間ミスを減らす効果が大きい。"},{"metric":"プリフィル構成要素除去","value":"1.47秒→スケジューリング1.17秒 (1.26×)、プリフェッチ1.39秒 (1.06×)、全機構1.13秒 (1.31×)","baseline":"kTransformersベースライン","condition":"Qwen2、GPUエキスパートキャッシュ比25%","interpretation":"プリフィルでは動的割当が主要因で、プリフェッチが追加の待ちを削減する。"},{"metric":"デコード構成要素除去","value":"0.21秒→スケジューリング0.14秒 (1.46×)、プリフェッチ0.18秒 (1.15×)、キャッシュ0.15秒 (1.38×)、全機構0.11秒 (1.86×)","baseline":"kTransformersベースライン","condition":"Qwen2、GPUエキスパートキャッシュ比25%","interpretation":"デコードでは動的割当と反復間キャッシュの双方が大きく、三機構を組み合わせると効果が累積する。"}],"negative_results":"llama.cppはプリフィルでは静的な層配置により遅い一方、デコードではエキスパート当たり計算量が小さくCPU計算が速いため相対的に強くなる。影響度駆動プリフェッチ単独の改善はQwen2・25%キャッシュ比でプリフィル1.06倍、デコード1.15倍と、動的スケジューリング単独より小さい。予測先読みは外れればPCIe帯域とキャッシュ容量を消費し得る。","interpretation":"結果は、MoEのCPU-GPU協調では『どのエキスパートをGPUへ置くか』だけでなく、現在トークン負荷に応じてCPU計算・GPU計算・転送のどれを選ぶかが主要な性能要因であることを示す。キャッシュとプリフェッチはその動的割当が待つデータを減らす補完機構として効く。","quality_impact":"同一モデルのエキスパート計算をCPU/GPUへ振り分けるシステム最適化なので、スケジューリング自体はモデル出力の意味を変更しない。実装はMarlin 4-bit量子化を用いるが、論文は量子化品質の詳細な比較を主要評価としておらず、性能改善と品質影響を分離して解釈する必要がある。"},"reservation":{"claim_id":"claim-0f8f604e4dd41baf02109b3f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
