@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6ad5a4713a80a7d9b5c877fc","job_id":"job-research-05978e704eaf8286","data":{"hardware":"主系はNVIDIA A100 PCIe Gen4 x16をVRAM 32GBへ制限し、Intel Xeon Gold 5318Y 24コア、502GBホストメモリを使用する。移植性評価は同一CPUとNVIDIA V100-32GB、PCIe Gen3 x16。","software":"DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral-8x7Bをbf16で評価し、DeepSeek-V4-Flash-Int8の疎注意事例も確認する。比較フレームワークはKTransformers 0.4.1、SGLang 0.5.4、vLLM 0.14。再現比較としてSolidAttention、ScoutAttention、HybridGen、FastDecodeを同一実行基盤へ実装する。","methodology":"ShareGPTの実会話から2K入力を作り、目標系列長までデコードする。8K/32Kは累積エンドツーエンドスループット、2Kは到達後256出力トークンの定常性能を測る。各条件を独立10回実行し平均を報告し、高速化倍率の95%信頼区間はブートストラップで±5%以内。WriteScopeと再現ベースラインのGPU常駐KV予算は2GB、DS2はMLAにより0.3GB、ネイティブフレームワークには4GBを与える。注意比較は同じ専門家スケジューラと測定基盤を共有し、KV管理機構の差を分離する。除去実験では動的分担、連続DMA、ピンポン再利用、ピン留め、物理分割形式、CPUカーネルを一つずつ置換する。","scope":"実機単一ノード評価で、主対象はVRAMが不足しCPUメモリへKVを退避する長文MoE推論である。A100/V100とMLA/GQA、3種類のMoEで移植性を確認し、DeepSeek-V4のモデル固有疎注意とも組み合わせる。一方、主評価は単一利用者であり、多利用者評価は実現可能性確認に留まる。VRAMが十分、またはCPU帯域とPCIe帯域が極端に不均衡な環境では動的分割の価値が小さい。"},"reservation":{"claim_id":"claim-6ad5a4713a80a7d9b5c877fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-81cca2a745d2540e0c24bc47",
+  "job_id": "job-research-05978e704eaf8286",
+  "data": {
+    "hardware": "主系はNVIDIA A100 PCIe Gen4 x16をVRAM 32GBへ制限し、Intel Xeon Gold 5318Y 24コア、502GBホストメモリを使用する。移植性評価は同一CPUとNVIDIA V100-32GB、PCIe Gen3 x16。",
+    "software": "DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral-8x7Bをbf16で評価し、DeepSeek-V4-Flash-Int8の疎注意事例も確認する。比較フレームワークはKTransformers 0.4.1、SGLang 0.5.4、vLLM 0.14。再現比較としてSolidAttention、ScoutAttention、HybridGen、FastDecodeを同一実行基盤へ実装する。",
+    "methodology": "ShareGPTの実会話から2K入力を作り、目標系列長までデコードする。8K/32Kは累積エンドツーエンドスループット、2Kは到達後256出力トークンの定常性能を測る。各条件を独立10回実行し平均を報告し、高速化倍率の95%信頼区間はブートストラップで±5%以内。WriteScopeと再現ベースラインのGPU常駐KV予算は2GB、DS2はMLAにより0.3GB、ネイティブフレームワークには4GBを与える。注意比較は同じ専門家スケジューラと測定基盤を共有し、KV管理機構の差を分離する。除去実験では動的分担、連続DMA、ピンポン再利用、ピン留め、物理分割形式、CPUカーネルを一つずつ置換する。",
+    "scope": "実機単一ノード評価で、主対象はVRAMが不足しCPUメモリへKVを退避する長文MoE推論である。A100/V100とMLA/GQA、3種類のMoEで移植性を確認し、DeepSeek-V4のモデル固有疎注意とも組み合わせる。一方、主評価は単一利用者であり、多利用者評価は実現可能性確認に留まる。VRAMが十分、またはCPU帯域とPCIe帯域が極端に不均衡な環境では動的分割の価値が小さい。"
+  },
+  "reservation": {
+    "claim_id": "claim-81cca2a745d2540e0c24bc47",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

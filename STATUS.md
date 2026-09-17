@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 15:39:02 JST**
+> 自動生成: **2026-09-17 15:39:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **64** |
 | 未claim Research job | **62** |
 | 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-17 15:36:06 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-17 15:36:06 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.14507` — Physically Partitioned KVCache Format for CPU--GPU Load Balancing in MoE Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 15:36:31 JST** / heartbeat: **—** / lease expiry: **09-17 17:06:31 JST**
+  - claim: **09-17 15:39:09 JST** / heartbeat: **—** / lease expiry: **09-17 17:09:09 JST**
   - evidence: `.survey/work-queue/claims/job-research-05978e704eaf8286.json`
 - `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 14:19:28 JST** / heartbeat: **09-17 15:32:33 JST** / lease expiry: **09-17 17:02:33 JST**

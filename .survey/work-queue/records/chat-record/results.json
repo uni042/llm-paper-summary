@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6ad5a4713a80a7d9b5c877fc","job_id":"job-research-05978e704eaf8286","data":{"overview":"長文領域では、CPUだけ・GPU転送だけへ偏る方式より、物理分割したKVを両側で同時処理するWriteScopeが一貫して高いスループットを示す。8K以上の三モデル・複数バッチをまとめるとA100で1.52〜2.51倍、V100で1.43〜1.71倍の幾何平均高速化となる。さらに32GB級VRAM予算でも合計100万トークン規模を完走し、主流フレームワークがメモリ不足になる領域まで容量を拡張する。配置は厳密注意を維持するため品質低下を伴わない。","key_results":[{"metric":"長文デコード幾何平均高速化","value":"A100で1.52〜2.51倍、V100で1.43〜1.71倍","baseline":"SolidAttention、ScoutAttention、HybridGen、FastDecode","condition":"3種類のMoE、系列長8K以上、バッチ4/16/32","interpretation":"CPU計算とPCIe転送の片側ボトルネックを避け、負荷に応じて両エンジンを同時利用する効果が長文で現れる。"},{"metric":"SolidAttention比高速化","value":"1.40倍から2.49倍へ増加","baseline":"SolidAttention","condition":"A100、DeepSeek-V2-Lite、バッチ32、系列長2Kから32K","interpretation":"系列が長くなるほど全KV転送の負担が増す一方、WriteScopeはCPU側へ処理を分散できるため差が拡大する。"},{"metric":"プリフィル書込時ルーティング費","value":"1365対1366トークン毎秒、差1以下","baseline":"ルーティングを省いた理想対照","condition":"DeepSeek-V2-Lite、2K入力、バッチ4の代表例","interpretation":"KVが生成中の時点で最終領域へ直接書けば、後処理コピーを増やさず物理状態を決められる。"},{"metric":"合計文脈容量","value":"100万トークン規模、バッチ32×系列32K","baseline":"vLLM、SGLang、KTransformersは長文・大バッチで広くメモリ不足","condition":"3種類のMoE、32GB VRAM予算","interpretation":"GPU側KV常駐量をD窓とピンポン領域へ限定し、系列長に伴う容量増加をCPUメモリ側へ移せる。"},{"metric":"多利用者競合時の適応効果","value":"1010msから436msへ57%短縮","baseline":"単独時分担率を固定","condition":"Qwen3-30B-A3B、バッチ4/8K、二利用者競合","interpretation":"CPU/PCIeの実効費を再計測して分担率を下げることで、実行時競合にも同じルーフライン制御が追従する。"}],"negative_results":"短い系列ではGPU常駐KVが効率的で、vLLM等がWriteScopeを上回る条件もある。CPU帯域とPCIe帯域の差が極端な環境では最適分担率が0または1へ張り付き、混合実行の利点は消える。多利用者は予備的検証であり推奨配置ではない。vLLM/SGLangへ移植する場合、KV形式だけでなく専門家側の動的メモリ配分機構が必要で、著者は約5K行規模の追加を見積もる。","interpretation":"効果の根は、GPU転送用KVとCPU計算用KVが要求する物理状態の違いを保存形式で分離したことにある。これにより分担率を変える際に既存KVをコピーせず、新規KVの配置先だけを調整できる。長文ほど単一エンジン側の費用が線形に増えるため、両側の完了時間を揃える負荷分散の価値が増す。除去実験でも単一状態のDynamicCacheへ戻すと正規化スループットが0.26〜0.79まで落ち、連続DMA、ピン留め、上書き再利用、動的分担がそれぞれ寄与する。","quality_impact":"WriteScopeは通常、KVを削除・近似せず系列をCPUとGPUへ分割して全注意を計算し、LSEで厳密に部分結果を結合するため、配置方式そのものによるモデル品質低下はない。DeepSeek-V4ではモデルが元々持つ疎注意をそのまま尊重し、追加の外部疎化を行わない。"},"reservation":{"claim_id":"claim-6ad5a4713a80a7d9b5c877fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-81cca2a745d2540e0c24bc47",
+  "job_id": "job-research-05978e704eaf8286",
+  "data": {
+    "overview": "長文領域では、CPUだけ・GPU転送だけへ偏る方式より、物理分割したKVを両側で同時処理するWriteScopeが一貫して高いスループットを示す。8K以上の三モデル・複数バッチをまとめるとA100で1.52〜2.51倍、V100で1.43〜1.71倍の幾何平均高速化となる。さらに32GB級VRAM予算でも合計100万トークン規模を完走し、主流フレームワークがメモリ不足になる領域まで容量を拡張する。配置は厳密注意を維持するため品質低下を伴わない。",
+    "key_results": [
+      {
+        "metric": "長文デコード幾何平均高速化",
+        "value": "A100で1.52〜2.51倍、V100で1.43〜1.71倍",
+        "baseline": "SolidAttention、ScoutAttention、HybridGen、FastDecode",
+        "condition": "3種類のMoE、系列長8K以上、バッチ4/16/32",
+        "interpretation": "CPU計算とPCIe転送の片側ボトルネックを避け、負荷に応じて両エンジンを同時利用する効果が長文で現れる。"
+      },
+      {
+        "metric": "SolidAttention比高速化",
+        "value": "1.40倍から2.49倍へ増加",
+        "baseline": "SolidAttention",
+        "condition": "A100、DeepSeek-V2-Lite、バッチ32、系列長2Kから32K",
+        "interpretation": "系列が長くなるほど全KV転送の負担が増す一方、WriteScopeはCPU側へ処理を分散できるため差が拡大する。"
+      },
+      {
+        "metric": "プリフィル書込時ルーティング費",
+        "value": "1365対1366トークン毎秒、差1以下",
+        "baseline": "ルーティングを省いた理想対照",
+        "condition": "DeepSeek-V2-Lite、2K入力、バッチ4の代表例",
+        "interpretation": "KVが生成中の時点で最終領域へ直接書けば、後処理コピーを増やさず物理状態を決められる。"
+      },
+      {
+        "metric": "合計文脈容量",
+        "value": "100万トークン規模、バッチ32×系列32K",
+        "baseline": "vLLM、SGLang、KTransformersは長文・大バッチで広くメモリ不足",
+        "condition": "3種類のMoE、32GB VRAM予算",
+        "interpretation": "GPU側KV常駐量をD窓とピンポン領域へ限定し、系列長に伴う容量増加をCPUメモリ側へ移せる。"
+      },
+      {
+        "metric": "多利用者競合時の適応効果",
+        "value": "1010msから436msへ57%短縮",
+        "baseline": "単独時分担率を固定",
+        "condition": "Qwen3-30B-A3B、バッチ4/8K、二利用者競合",
+        "interpretation": "CPU/PCIeの実効費を再計測して分担率を下げることで、実行時競合にも同じルーフライン制御が追従する。"
+      }
+    ],
+    "negative_results": "短い系列ではGPU常駐KVが効率的で、vLLM等がWriteScopeを上回る条件もある。CPU帯域とPCIe帯域の差が極端な環境では最適分担率が0または1へ張り付き、混合実行の利点は消える。多利用者は予備的検証であり推奨配置ではない。vLLM/SGLangへ移植する場合、KV形式だけでなく専門家側の動的メモリ配分機構が必要で、著者は約5K行規模の追加を見積もる。",
+    "interpretation": "効果の根は、GPU転送用KVとCPU計算用KVが要求する物理状態の違いを保存形式で分離したことにある。これにより分担率を変える際に既存KVをコピーせず、新規KVの配置先だけを調整できる。長文ほど単一エンジン側の費用が線形に増えるため、両側の完了時間を揃える負荷分散の価値が増す。除去実験でも単一状態のDynamicCacheへ戻すと正規化スループットが0.26〜0.79まで落ち、連続DMA、ピン留め、上書き再利用、動的分担がそれぞれ寄与する。",
+    "quality_impact": "WriteScopeは通常、KVを削除・近似せず系列をCPUとGPUへ分割して全注意を計算し、LSEで厳密に部分結果を結合するため、配置方式そのものによるモデル品質低下はない。DeepSeek-V4ではモデルが元々持つ疎注意をそのまま尊重し、追加の外部疎化を行わない。"
+  },
+  "reservation": {
+    "claim_id": "claim-81cca2a745d2540e0c24bc47",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
