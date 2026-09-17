@@ -24,9 +24,13 @@ hard platform/runtime limit、run deadline handoff guard、canonical read不能�
 
 ## 2. Claim result待機
 
-claim requestを `.survey/work-queue/claim-requests/<request_id>.json` へ耐久保存した後、対応する `.survey/work-queue/claim-results/<request_id>.json` がまだ無い場合は、**同じrequest_idを保持したまま30秒待機する。** 待機後に最新HEADと同じclaim resultを再取得する。まだ結果が無ければ、**再び30秒待機して同じrequest_idの確認を繰り返す。** resultが出るか、対応Actionsがterminal failureになるか、明示的hard stopが成立するまで繰り返す。
+claim requestを `.survey/work-queue/claim-requests/<request_id>.json` へ耐久保存した後、対応する `.survey/work-queue/claim-results/<request_id>.json` がまだ無い場合は、**同じrequest_idを保持したまま30秒待機する。** この待機は文言上の待機ではなく、利用可能なruntime wait機構（例: Pythonの `time.sleep(30)` 相当）を実際に呼び出し、**30秒の実時間を経過させること**を意味する。実時間待機の代わりに即時再取得を連続実行したり、「30秒待った」と記述するだけで代替してはならない。
 
-pending中に別request_idを発行しない。queued / in_progress / 404 / not foundは単独では失敗でもSTOP_RUNでもない。Actions runを確認できる場合も、同じpush/runを対象に30秒待機と再確認を繰り返す。assignmentが得られたら待機を終え、直ちにそのResearch/Audit実作業へ進む。
+30秒の実時間待機が完了した後でのみ、最新HEADと同じclaim resultを再取得する。まだ結果が無ければ、**同じrequest_idを保持したまま再び30秒の実時間待機を実行し、同じclaim resultを再取得する。** resultが出るか、対応Actionsがterminal failureになるか、明示的hard stopが成立するまでこのruntime wait loopを繰り返す。
+
+pending中に別request_idを発行しない。queued / in_progress / 404 / not foundは単独では失敗でもSTOP_RUNでもない。Actions runを確認できる場合も、同じpush/runを対象に30秒の実時間待機と再確認を繰り返す。assignmentが得られたら待機を終え、直ちにそのResearch/Audit実作業へ進む。
+
+run deadlineのhandoff guardに入るまでは、pendingが続くこと自体を理由にloopを抜けない。handoff guard、明示的platform/tool failure、canonical read不能など正本所定のhard stopへ到達した場合だけ、安全な耐久handoffを行った後にfinalization gateを再評価する。
 
 ## 3. Research / Audit submission result待機
 
@@ -64,10 +68,12 @@ while required_result_is_pending:
         durably_save_or_handoff_current_state()
         recheck_finalization_gate()
         break
-    wait 30 seconds
+    invoke_runtime_wait_for_30_real_seconds()
     refresh_latest_canonical_state()
     reread_the_same_result_target()
 ```
+
+`invoke_runtime_wait_for_30_real_seconds()` は利用可能な実行環境のtimer/sleep機構を実際に使う。即時tool callの連打、同じ対象の即時再取得、自然言語で待機したと述べることは実時間待機の代替ではない。
 
 「30秒を1回待った」「Actionsがまだin_progressだった」「結果ファイルがまだ404だった」は終了条件ではない。**30秒待機を結果が出るまで繰り返す。** 途中でrun deadlineのhandoff guard等のhard stopが成立した場合だけsafe handoffへ移る。
 
