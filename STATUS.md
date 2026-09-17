@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:16:19 JST**
+> 自動生成: **2026-09-17 17:16:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -178,9 +178,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.20068` — JITServe: SLO-aware LLM Serving with Imprecise Request Information / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-  - claim: **09-17 17:13:15 JST** / heartbeat: **—** / lease expiry: **09-17 18:43:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-491d6cc11a36da8c.json`
+- `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
+  - claim: **09-17 17:16:22 JST** / heartbeat: **—** / lease expiry: **09-17 18:46:22 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
