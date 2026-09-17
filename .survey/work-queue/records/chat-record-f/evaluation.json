@@ -5,11 +5,12 @@
   "attempt_id": "attempt-2f23b56c3d95acb690d3be83",
   "job_id": "job-research-133abb5ee0382900",
   "data": {
-    "setup": "評価環境はNational Supercomputing Centre Singaporeの単一ノードで、NVIDIA A100 40GB GPUを4基、AMD EPYC 7713 64コアCPU、DDR4 440GBを搭載する。GPU間接続はNVLink、CPU-GPU転送はPCIe 4.0。単一GPUと4GPUの両構成を評価し、4GPU時はZeRO-3でモデル状態を分割する。ワークロードはGPT型モデルで、2B、4B、6B、8B、10B、12B、14B、16B、18B、20B、22Bまでモデル規模を変える。隠れ次元は2048、4096、6144、8192、層数は20〜42で構成し、系列長は全条件1024。標準のグローバルバッチサイズは8とし、追加実験ではバッチサイズと利用可能GPUメモリ量を変える。",
-    "baselines": ["ZeRO-Offload", "PatrickStar", "StrongHold", "AutoHete without priority-based scheduling"],
-    "metrics": ["training throughput (TFLOPS)", "trainable model scale under memory limits", "speedup over baselines", "effect of batch size", "effect of GPU memory budget", "priority scheduler ablation"],
-    "conditions": "ZeRO-Offload、PatrickStar、StrongHoldについては、完全な活性値チェックポイントを有効・無効の双方で試し、最良性能を比較対象とする。単一GPUでは各方式の異種混在メモリ管理そのものを比較し、4GPUでは分散通信を含む。追加評価では6B・10Bモデルでバッチサイズを変え、4B・6BモデルでGPUメモリ予算を制限して、AutoHeteがハードウェア余裕に応じて退避量を変える性質を調べる。優先度スケジューラの寄与は同じAutoHeteから当該機構だけを外した構成との比較で測る。",
-    "scope_notes": "主指標は学習スループットであり、モデル品質や最終損失の比較が中心ではない。方式はモデル演算の数学的内容ではなく配置・再計算・実行順を変更するため、評価はシステム性能とメモリ容量に重点を置く。論文の実機はA100/PCIe 4.0/大容量CPUメモリの1種類のノード構成であり、異なるPCIe帯域、CPU性能、H100等への一般化は費用モデルの再プロファイルを前提とする。"
+    "hardware": "National Supercomputing Centre Singaporeの単一ノードを使用し、NVIDIA A100 40GB GPU×4、AMD EPYC 7713 64コアCPU、DDR4 440GBを搭載する。GPU間はNVLink、CPU-GPU間はPCIe 4.0で接続される。単一GPUと4GPUの両構成を評価した。",
+    "software": "AutoHeteはPyTorch上のプロトタイプで、torch.fxによる計算グラフ取得、カスタムtorch.autograd.Function、CUDAストリームとtorch.cuda.Eventを利用する。比較対象はZeRO-Offload、PatrickStar、StrongHoldで、4GPU時はZeRO-3を利用する。",
+    "methodology": "GPT型モデルを2B〜22Bまで変化させ、隠れ次元2048〜8192、20〜42層、系列長1024で評価する。標準グローバルバッチサイズは8。比較対象については完全な活性値チェックポイントを有効・無効の双方で試して最良性能を採用する。主指標は学習スループットで、単一GPU・4GPUのモデル規模別比較に加え、6B・10Bでバッチサイズ、4B・6BでGPUメモリ予算を変える。AutoHeteから優先度スケジューラを外した構成も測り、反復間重畳の寄与を分離する。",
+    "scope": "全結果は実機測定でありシミュレーションだけの性能値ではない。ただし実機構成はA100 40GB、PCIe 4.0、EPYC 7713を中心とする1種類のノードで、密なGPT型Transformerが主対象である。異なるPCIe帯域、CPU性能、H100、MoE、長系列などでは再プロファイル後の配置や改善率が変わり得る。モデル品質よりシステム性能・メモリ容量を主に評価している。",
+    "baselines": ["ZeRO-Offload", "PatrickStar", "StrongHold", "優先度スケジューラなしAutoHete"],
+    "metrics": ["学習スループット（TFLOPS）", "メモリ制約下で学習可能なモデル規模", "比較対象に対する高速化倍率", "バッチサイズ感度", "GPUメモリ予算感度", "優先度スケジューラのアブレーション"]
   },
   "reservation": {"claim_id": "claim-2f23b56c3d95acb690d3be83", "worker_id": "scheduled-chat-paper-20260917T1728JST", "worker_kind": "scheduled_chat"}
 }
