@@ -1,14 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-7ad6ad40100c07874c12360f","job_id":"job-research-1fd656c9a10556db",
-  "data":{
-    "canonical_id":"arXiv:2602.10729","arxiv_id":"2602.10729","title":"BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization",
-    "list_summary":"問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。",
-    "summary":"大規模言語モデルの提供では、簡単な問い合わせを小型モデルへ、難しい問い合わせを大型モデルへ振り分けるだけでは、各モデルに割り当てるGPU種別・台数・並列化が負荷分布と合わず、システム全体の遅延や費用が悪化し得る。BOuteは、振り分け閾値と、異種GPUへのモデル割当・資源量・データ/テンソル/パイプライン並列化を一つの探索空間として扱う。事前に各モデル・GPU・負荷の性能データベースをシミュレーションで構築し、オンラインでは構造情報を組み込んだ多目的ベイズ最適化により品質とP95遅延のパレート解を求める。予算、GPU在庫、品質、遅延を制約として直接扱い、モデル多様性とハードウェア多様性を協調利用するサービングスケジューラである。",
-    "authors":["Youhe Jiang","Fangcheng Fu","Eiko Yoneki"],"published":"2026-02-11","publication":"Proceedings of the 9th MLSys Conference, 2026","publication_type":"conference","publication_status":"published at MLSys 2026","arxiv_categories":{"primary":"cs.DC","cross_list":[]},
-    "source":"https://arxiv.org/abs/2602.10729","sources":["https://arxiv.org/abs/2602.10729","https://arxiv.org/pdf/2602.10729"],"topics":["LLMサービング","異種GPU","モデルルーティング","資源配置","多目的ベイズ最適化","コスト最適化"],
-    "implementation":"GPyTorchとBoTorchで最適化カーネルを実装し、vLLM、RouteLLM系ルータ、異種GPUクラスタを組み合わせた実システムで評価している。BOute自体の公式公開コードURLは本文から確認できなかった。","code":null,
-    "hardware_evaluation":"H100-80G、RTX PRO 6000-96G、RTX 5090-32G、RTX 4090-24Gの4種類のGPUサーバを用いた実機評価。各サーバは8 GPUで、H100はNVLink、5090/4090はPCIe接続。",
-    "quality_effect":"品質を近似的に犠牲にする単純な高速化ではなく、GSM8K精度またはMTBench得点を明示的な制約・目的として振り分け率を調整する。要求品質が高いほど大型モデルへ負荷と予算を移す。",
-    "references":[],"references_checked_at":"2026-09-17","references_source":"https://arxiv.org/pdf/2602.10729","references_total":50,"last_checked":"2026-09-17"
-  },"reservation":{"claim_id":"claim-7ad6ad40100c07874c12360f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2030753b3c0bbf7a2008b407",
+  "job_id": "job-research-e6a248e5246d3a4e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2030753b3c0bbf7a2008b407",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
