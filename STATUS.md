@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 02:30:25 JST**
+> 自動生成: **2026-09-18 02:59:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（1時間42分前）** |
+| 直近24hの検証済みResearch収録 | **46** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間11分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **6** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **21** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **30** | **6** | **6** | **0** | **1** | **0** | **3** |
+| Discovery | **21** | **1** | **0** | **1** | **0** | **0** | **1** |
+| 合計 | **27** | **4** | **3** | **1** | **1** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -78,21 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-6adea251db936612ba17864d-repair.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6adea251db936612ba17864d-repair.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md`
-- **09-17 20:41:39 JST** [research] `arXiv:2409.15654` — Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM
-  - job: `.survey/work-queue/jobs/job-research-6e21b3d4c9b2bcc1.json`
-  - result: `.survey/work-queue/results/research/attempt-4cd9f6f884a1493be0066c89.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4cd9f6f884a1493be0066c89.json`
-  - paper: `papers/inference/04-cpu-ssd-offload/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md`
-- **09-17 20:39:09 JST** [research] `arXiv:2406.08334` — ProTrain: Efficient LLM Training via Memory-Aware Techniques
-  - job: `.survey/work-queue/jobs/job-research-5862dce444505150.json`
-  - result: `.survey/work-queue/results/research/attempt-43acd19c7764b093bfb4428a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-43acd19c7764b093bfb4428a.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md`
-- **09-17 20:37:27 JST** [research] `arXiv:2604.08426` — KV Cache Offloading for Context-Intensive Tasks
-  - job: `.survey/work-queue/jobs/job-research-0b1a3df137cd07ea.json`
-  - result: `.survey/work-queue/results/research/attempt-5102e3960d728cbebfe4919a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5102e3960d728cbebfe4919a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md`
 
 ### Audit
 
@@ -171,21 +156,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 02:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **3件**
-- 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload / 高帯域フラッシュ(HBF)・階層メモリ・flash-native LLM inference / 当日新着・SSD-native trillion-parameter MoE・SSD/RAM/VRAM三階層
-- round `specialist-ssd-moe-new-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json`
-  - 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json` (`ok=true`)
-- round `specialist-hbf-memory-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T0202JST-discovery-specialist-hbf-memory-2.json`
-  - 探索軸: 高帯域フラッシュ(HBF)・階層メモリ・flash-native LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T0202JST-discovery-specialist-hbf-memory-2.json` (`ok=true`)
-- round `specialist-ssd-native-moe-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json`
-  - 探索軸: 当日新着・SSD-native trillion-parameter MoE・SSD/RAM/VRAM三階層
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json` (`ok=true`)
+- 最新観測run: **2026-09-18 03:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **1件**
+- 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache
+- round `specialist-cpu-gpu-moe-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
+  - 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -242,10 +219,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **455** |
+| 成功result未照合のimmutable submission | **456** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
