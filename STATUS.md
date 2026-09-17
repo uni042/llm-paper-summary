@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 16:37:29 JST**
+> 自動生成: **2026-09-17 16:37:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **62** |
 | 未claim Research job | **59** |
 | 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-17 15:44:33 JST（52分前）** |
+| 最終検証済みResearch収録 | **09-17 15:44:33 JST（53分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 16:35:11 JST** / heartbeat: **—** / lease expiry: **09-17 18:05:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-bf0b422fe6562f5b.json`
+- `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 16:37:36 JST** / heartbeat: **—** / lease expiry: **09-17 18:07:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7f3f089c5dc01c0c.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
