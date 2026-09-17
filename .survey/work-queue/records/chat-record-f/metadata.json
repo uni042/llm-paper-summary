@@ -26,7 +26,7 @@
     "quality_effect": "モデル構造や学習目的関数を変更せず、データ依存関係を維持したままメモリ配置・再計算・転送・更新順序を変更するシステム最適化である。論文は学習収束を変えない設計として説明しているが、主評価は性能・メモリ効率である。",
     "source": "https://arxiv.org/abs/2503.01890",
     "sources": ["https://arxiv.org/abs/2503.01890", "https://arxiv.org/pdf/2503.01890"],
-    "code": "",
+    "code": null,
     "implementation": "PyTorch上のプロトタイプとして実装。torch.fxで計算グラフを取得し、torch.autograd.Functionのカスタム処理、CUDAストリーム、torch.cuda.Event、GPUメモリ事前割当てを用いて計画された再計算・転送・CPU更新を実行する。論文本文では公開コードURLを示していない。",
     "last_checked": "2026-09-17",
     "references": [],
@@ -34,9 +34,5 @@
     "references_source": "primary-reference-section",
     "references_total": 42
   },
-  "reservation": {
-    "claim_id": "claim-2f23b56c3d95acb690d3be83",
-    "worker_id": "scheduled-chat-paper-20260917T1728JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-2f23b56c3d95acb690d3be83", "worker_id": "scheduled-chat-paper-20260917T1728JST", "worker_kind": "scheduled_chat"}
 }
