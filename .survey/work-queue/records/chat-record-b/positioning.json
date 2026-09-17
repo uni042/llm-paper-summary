@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-af88b7967bb739f0955daaa6",
-  "job_id": "job-research-8423392e3664b697",
+  "attempt_id": "attempt-797276fcf739302b269d6e80",
+  "job_id": "job-research-581beb5301e2ddf8",
   "data": {
-    "limitations": "SLO最適化は主に出力トークン間遅延TPOTを対象とし、TTFT、総完了時間、コストなど複数種類の制約を同時に扱う一般化は示していない。候補採用確率をドラフトモデルのlogitで近似するため、ドラフトと対象モデルの分布が離れると資源配分の精度が落ちる。遅れが一反復の最大進捗d+1を超えるリクエストは即座にSLOへ戻せず、1件上限n_maxによっても救済量が制限される。評価はA100単一ノード、Llama/Qwen系列の2対象モデルに限られ、異種GPU、複数ノード、プリフィル・デコード分離との統合は未評価である。",
-    "differences": "vLLMやSarathi-Serveは連続バッチ、ページ化KV、チャンクプリフィル等でGPU利用率を高めるが、同一反復内のリクエストを異なるデコード速度で進める仕組みは持たない。Priority schedulingは厳しい要求を先行させられるものの、小バッチ化や他要求の待ちを招く。SpecInfer、Medusa、EAGLE等の投機的デコードは主に単一要求または一様な速度向上を狙い、固定木や各要求の最大加速を使う。Sequoiaはハードウェアに応じた木構造最適化を行うが、AdaServeはさらに各リクエストのSLO進捗を制約として一つの検証予算をバッチ内で配分し、投機的デコードをスケジューリング機構へ拡張する。",
-    "implementation_status": "AdaServeはFlexFlow Serve上の研究実装として構築され、FlashInferのバッチプリフィルカーネルを投機と検証へ適用し、CUDA Graphでドラフトモデルの反復起動を削減する。論文はarXiv v2 (2025-05-17) のプレプリント。arXivページおよび本文から公式公開コードURLは確認できなかったため、metadata.codeはnullとしている。4×A100 80GB実機でLlama3.1-70BとQwen2.5-32Bを評価している。",
-    "research_positioning": "LLM配信スケジューリングと投機的デコードの接点に位置する。従来スケジューラがリクエスト順序、バッチ、プリフィルチャンク、GPU配置を操作するのに対し、AdaServeは『一回の対象モデル検証に何個の候補トークンを各リクエストへ割り当てるか』を新しい資源配分単位にする。これにより同一バッチを維持したままリクエストごとの実効デコード速度を変えられる。今後は複数SLO制約、分離配信、異種GPUでの検証予算、ドラフトモデル選択、予測誤差を考慮した確率的SLO保証へ拡張できる。"
+    "limitations": "CHIME-PIMは提案アーキテクチャをシミュレータ、DRAM timing、28nm論理合成、既存PIM電力モデルで評価しており、製造したDIMM-PIM実機の検証ではない。標準DDRインターフェースを維持する設計だがbank/rank演算器、softmax、再配置回路、PIM controller等のハードウェア変更を必要とする。優位性は長文脈かつKV容量がバッチを制約する条件で大きく、短文脈では縮小する。GPU全結合性能をB200等へ大幅強化するとボトルネックが注意側へ移り、HBM-PIMが有利になる領域もある。モデル品質・故障耐性・実OSメモリ競合・CXL経由増設の実性能は評価していない。",
+    "differences": "FastDecodeやNEOはKVを大容量host memoryへ置きCPUで注意を計算するため容量は得るが帯域が低い。CachedAttentionやFlexGenはhostにKVを置いてGPUへ戻すためPCIe帯域が律速になる。AttAcc、NeuPIMs、PAPI等のHBM-PIM AFDは非常に高い注意帯域を持つがHBM容量が小さく、長文脈でバッチ数を増やせずGPU全結合側が遊ぶ。CENT等のGDDR-PIMは容量・帯域を拡張できるがAFD用途では過剰帯域とコスト効率の問題がある。CHIMEはDIMMの増設可能な容量とbank PIMの帯域を組み合わせ、さらにDRMでどちらをどこまで増やすべきかを分析する点が異なる。InstAttentionのようなSSD内計算はさらに大容量だが、注意帯域が低い系統としてDRM上では別の設計点になる。",
+    "implementation_status": "arXiv v2は2026-08-07公開。CHIME-PIMはbank PU、rank PU、shared/result buffer、softmax/add/re-layout unitsを備える提案ハードウェアで、TSMC 28nmでbank PU等を合成して面積を推定する。CHIME-sysの予測スケジューラとシミュレーションモデルは記述されているが、arXiv本文から公式コード公開URLは確認できない。主要エンドツーエンド値は8×A100とDDR4 DIMM-PIMをモデル化したシミュレーションである。",
+    "research_positioning": "KVキャッシュ階層メモリ、PIM/PNM、注意・全結合分離推論、長文脈配信の交点に位置する。重要なのは『KVをどこへ置くか』だけでなく、GPU全結合側が必要とするバッチを満たす容量と、そのバッチの注意を追従処理する帯域を一対で設計するという視点である。SSD/NVMe、CXL memory、host DRAM、HBM-PIMなど異なる階層をDRMの容量・帯域曲線へ載せれば、どの階層がどのGPU・文脈長で有効かを比較する枠組みに拡張できる。MoEでもexpert全結合側の性能曲線を置き換えることで同様の分離設計分析が可能と論文は指摘する。"
   },
   "reservation": {
-    "claim_id": "claim-af88b7967bb739f0955daaa6",
+    "claim_id": "claim-797276fcf739302b269d6e80",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
