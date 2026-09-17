@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:15:35 JST**
+> 自動生成: **2026-09-17 18:15:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-17 18:10:45 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **60** |
+| 最終検証済みResearch収録 | **09-17 18:15:48 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **6** | **2** | **4** | **2** | **0** | — |
+| Research | **21** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **25** | **10** | **6** | **4** | **2** | **0** | **15** |
+| 合計 | **26** | **10** | **7** | **3** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 18:15:48 JST** [research] `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding
+  - job: `.survey/work-queue/jobs/job-research-e79ef27915573b54.json`
+  - result: `.survey/work-queue/results/research/attempt-7c0239753483c2ddf4304e18.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-7c0239753483c2ddf4304e18.json`
+  - paper: `papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md`
 - **09-17 18:10:45 JST** [research] `arXiv:2503.01890` — AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs
   - job: `.survey/work-queue/jobs/job-research-133abb5ee0382900.json`
   - result: `.survey/work-queue/results/research/attempt-942af3295b1538b54adcfd38.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-ddc2745db0f900abfd7bf01e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ddc2745db0f900abfd7bf01e.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md`
-- **09-17 15:40:17 JST** [research] `arXiv:2609.14507` — Physically Partitioned KVCache Format for CPU--GPU Load Balancing in MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-05978e704eaf8286.json`
-  - result: `.survey/work-queue/results/research/attempt-81cca2a745d2540e0c24bc47.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-81cca2a745d2540e0c24bc47.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md`
 
 ### Audit
 
@@ -131,7 +131,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-- immutable submission: **6件** / 検証済み成功: **2件** / 未完了・未検証: **4件**
+- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4b1f52337434d9ea1c49a1f1.json` (job `job-research-e79ef27915573b54`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4fd8bb83ad560a14ed7ab9fd.json` (job `job-research-6be1741cdc42b913`)
 - **成功** `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs
@@ -139,7 +139,11 @@
   - result: `.survey/work-queue/results/research/attempt-61cea03f965b827a2ed92932.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-61cea03f965b827a2ed92932.json`
   - paper: `papers/inference/06-serving-scheduling/2025-2504.08784-slos-serve-multi-slo-llm-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-7c0239753483c2ddf4304e18.json` (job `job-research-e79ef27915573b54`)
+- **成功** `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding
+  - job: `.survey/work-queue/jobs/job-research-e79ef27915573b54.json`
+  - result: `.survey/work-queue/results/research/attempt-7c0239753483c2ddf4304e18.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-7c0239753483c2ddf4304e18.json`
+  - paper: `papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md`
 - **成功** `arXiv:2503.01890` — AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs
   - job: `.survey/work-queue/jobs/job-research-133abb5ee0382900.json`
   - result: `.survey/work-queue/results/research/attempt-942af3295b1538b54adcfd38.json` (`ok=true`)
@@ -179,10 +183,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-  - claim: **09-17 18:14:24 JST** / heartbeat: **—** / lease expiry: **09-17 19:44:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e79ef27915573b54.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
@@ -205,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +226,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **668** |
+| inference/training/survey配下の論文Markdown実体 | **669** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +234,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **441** |
-| └ Research | **314** |
+| 成功result未照合のimmutable submission | **440** |
+| └ Research | **313** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 

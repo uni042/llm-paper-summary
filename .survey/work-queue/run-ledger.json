@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T09:10:50.130552+00:00",
+  "updated_at": "2026-09-17T09:15:51.274848+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T09:10:50.130552+00:00",
+      "last_recorded_at": "2026-09-17T09:15:51.274848+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 204,
+        "research_completed": 205,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35097326393:1",
-          "recorded_at": "2026-09-16T12:42:04.359646+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35097326393",
-            "run_attempt": "1",
-            "source_sha": "1e2876ba8c31a3c29e693e987726f4a5135ceff0"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35099462436:1",
           "recorded_at": "2026-09-16T13:04:45.630176+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35203676608",
             "run_attempt": "1",
             "source_sha": "8d1a74505906dee32362043b3a2010bb44c3c18e"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35204135236:1",
+          "recorded_at": "2026-09-17T09:15:51.274848+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35204135236",
+            "run_attempt": "1",
+            "source_sha": "4b4281b3569fa5a030f04bc32a8591868b1d4d0f"
           },
           "signals": [
             "research_completed"
@@ -22070,6 +22070,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.01890",
           "title": "AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-e79ef27915573b54",
+          "type": "research",
+          "canonical_id": "arXiv:2507.09201",
+          "title": "SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding",
           "from": "ready",
           "to": "completed"
         }
