@@ -1,20 +1,81 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-987e47d076f99ed6f71340e5","job_id":"job-research-4954e0b135582135",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-f7834266028442ea9afab397",
+  "job_id": "job-research-4954e0b135582135",
   "data": {
     "overview": "H2M2はLPDDRのみの同等計算資源構成に対し3モデルすべてで高速化し、最適割当Oracleへ95–97%程度まで近づく。利得はHBM容量とLPDDR側性能に強く依存し、8-HBMほど絶対性能は高くない一方、メモリエネルギーと容量拡張性で優位を示す。",
     "key_results": [
-      {"metric":"GPT3-175B平均高速化","value":"1.46倍","baseline":"LPDDR-only","condition":"batch 32、系列長256–2048","interpretation":"strict hierarchicalの1.07倍を大きく上回り、Oracleの約0.97倍に達する。"},
-      {"metric":"Chinchilla-70B平均高速化","value":"1.55倍","baseline":"LPDDR-only","condition":"batch 64、系列長512–4096","interpretation":"strict hierarchical 1.33倍を上回り、Oracleの約0.95倍。短系列で全体がHBMへ収まる場合は階層方式が有利な例外がある。"},
-      {"metric":"Llama2-70B平均高速化","value":"2.94倍","baseline":"LPDDR-only","condition":"batch 128、GQA、系列長1024–8192","interpretation":"Oracle 3.00倍、hierarchical 2.75倍に近く、GQAでも非対称メモリが有効。"},
-      {"metric":"動的系列長での平均高速化","value":"1.48倍","baseline":"LPDDR-only","condition":"GPT3-175B、batch 32、128反復でKVキャッシュ変動","interpretation":"FlexGen型静的割当1.25倍を上回り、Oracleの0.96倍に達する。"},
-      {"metric":"メモリ抽象化オーバーヘッド","value":"0.80% / 1.01% / 1.36%","baseline":"抽象化なしOracle相当","condition":"GPT3 / Chinchilla / Llama2","interpretation":"MMU/TLB導入コストは2%未満。"},
-      {"metric":"貪欲割当追加オーバーヘッド","value":"2.56% / 3.76% / 0.60%","baseline":"最適Oracle割当","condition":"GPT3 / Chinchilla / Llama2","interpretation":"高価なN^3探索なしで最適に近い割当を得る。"},
-      {"metric":"8-HBMとの性能比較","value":"H2M2 1.46倍、8-HBM 2.29倍","baseline":"LPDDR-only","condition":"GPT3-175B batch 32","interpretation":"8-HBMはH2M2より約1.57倍高速だが容量コスト・通信・エネルギーの代償がある。"},
-      {"metric":"トークン当たり相対メモリエネルギー","value":"H2M2 0.76倍、8-HBM 1.31倍","baseline":"LPDDR-only=1","condition":"GPT3-175B batch 32","interpretation":"絶対性能では8-HBMに劣る一方、H2M2はメモリエネルギー効率が高い。"}
+      {
+        "metric": "GPT3-175B平均高速化",
+        "value": "1.46倍",
+        "baseline": "LPDDR-only",
+        "condition": "batch 32、系列長256–2048",
+        "interpretation": "strict hierarchicalの1.07倍を大きく上回り、Oracleの約0.97倍に達する。"
+      },
+      {
+        "metric": "Chinchilla-70B平均高速化",
+        "value": "1.55倍",
+        "baseline": "LPDDR-only",
+        "condition": "batch 64、系列長512–4096",
+        "interpretation": "strict hierarchical 1.33倍を上回り、Oracleの約0.95倍。短系列で全体がHBMへ収まる場合は階層方式が有利な例外がある。"
+      },
+      {
+        "metric": "Llama2-70B平均高速化",
+        "value": "2.94倍",
+        "baseline": "LPDDR-only",
+        "condition": "batch 128、GQA、系列長1024–8192",
+        "interpretation": "Oracle 3.00倍、hierarchical 2.75倍に近く、GQAでも非対称メモリが有効。"
+      },
+      {
+        "metric": "動的系列長での平均高速化",
+        "value": "1.48倍",
+        "baseline": "LPDDR-only",
+        "condition": "GPT3-175B、batch 32、128反復でKVキャッシュ変動",
+        "interpretation": "FlexGen型静的割当1.25倍を上回り、Oracleの0.96倍に達する。"
+      },
+      {
+        "metric": "メモリ抽象化オーバーヘッド",
+        "value": "0.80% / 1.01% / 1.36%",
+        "baseline": "抽象化なしOracle相当",
+        "condition": "GPT3 / Chinchilla / Llama2",
+        "interpretation": "MMU/TLB導入コストは2%未満。"
+      },
+      {
+        "metric": "貪欲割当追加オーバーヘッド",
+        "value": "2.56% / 3.76% / 0.60%",
+        "baseline": "最適Oracle割当",
+        "condition": "GPT3 / Chinchilla / Llama2",
+        "interpretation": "高価なN^3探索なしで最適に近い割当を得る。"
+      },
+      {
+        "metric": "8-HBMとの性能比較",
+        "value": "H2M2 1.46倍、8-HBM 2.29倍",
+        "baseline": "LPDDR-only",
+        "condition": "GPT3-175B batch 32",
+        "interpretation": "8-HBMはH2M2より約1.57倍高速だが容量コスト・通信・エネルギーの代償がある。"
+      },
+      {
+        "metric": "トークン当たり相対メモリエネルギー",
+        "value": "H2M2 0.76倍、8-HBM 1.31倍",
+        "baseline": "LPDDR-only=1",
+        "condition": "GPT3-175B batch 32",
+        "interpretation": "絶対性能では8-HBMに劣る一方、H2M2はメモリエネルギー効率が高い。"
+      }
     ],
-    "negative_results": ["モデル全体がHBMへ収まる短系列のChinchillaではstrict hierarchicalがH2M2を上回る場合がある。", "8-HBM構成はGPT3でH2M2より約1.57倍高速。", "性能はHBM容量とLPDDR側帯域・計算能力に敏感で、HBM帯域増加だけの効果は小さい。", "評価はシミュレーションであり実製造H2M2ボードの測定ではない。"],
+    "negative_results": [
+      "モデル全体がHBMへ収まる短系列のChinchillaではstrict hierarchicalがH2M2を上回る場合がある。",
+      "8-HBM構成はGPT3でH2M2より約1.57倍高速。",
+      "性能はHBM容量とLPDDR側帯域・計算能力に敏感で、HBM帯域増加だけの効果は小さい。",
+      "評価はシミュレーションであり実製造H2M2ボードの測定ではない。"
+    ],
     "quality_impact": "推論結果の近似・枝刈り・量子化方式を比較する研究ではなく、全比較で同じモデル計算を実行するため生成品質への意図的な劣化はない。評価モデル自体はINT8を仮定する。",
     "interpretation": "H2M2の利得は、高帯域HBMを帯域感度の高いattentionへ優先配分しつつ、容量の大きいLPDDR側でもその場で計算することで、階層方式のオンデマンド移動を避けることから生じる。系列長が伸びKVキャッシュが増えるほどattentionのHBM占有を増やし、fcをLPDDRへ退避する動的割当が効く。一方、HBMへ全体が収まる条件では階層方式の移動コストが消え、非対称方式の優位は小さくなる。"
   },
-  "reservation":{"claim_id":"claim-987e47d076f99ed6f71340e5","worker_id":"scheduled-chat-paper-20260917T1330JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7834266028442ea9afab397",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

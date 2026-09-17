@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:34:20 JST**
+> 自動生成: **2026-09-17 13:34:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -131,7 +131,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference / worker `scheduled-chat-paper-20260917T1330JST`
-  - claim: **09-17 13:31:32 JST** / heartbeat: **—** / lease expiry: **09-17 15:01:32 JST**
+  - claim: **09-17 13:34:23 JST** / heartbeat: **—** / lease expiry: **09-17 15:04:23 JST**
   - evidence: `.survey/work-queue/claims/job-research-4954e0b135582135.json`
 - `arXiv:2609.14773` — Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 13:27:05 JST** / heartbeat: **—** / lease expiry: **09-17 14:57:05 JST**

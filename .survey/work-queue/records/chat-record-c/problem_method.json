@@ -1,18 +1,45 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-987e47d076f99ed6f71340e5","job_id":"job-research-4954e0b135582135",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-f7834266028442ea9afab397",
+  "job_id": "job-research-4954e0b135582135",
   "data": {
     "problem": "大規模LLMは重みと増大するKVキャッシュのため数百GB級の容量を必要とする一方、生成段階には低算術強度のGEMVが多く高帯域も必要とする。HBMだけを増やす多GPU構成は容量コストと通信・同期が大きく、LPDDR中心構成は帯域不足、HBMをLPDDRのキャッシュとして使う厳密な階層構成はLLMの低局所性ゆえ頻繁な移動に律速される。さらにKVキャッシュ量は系列長と要求終了で実行中に変化し、静的なデータ配置では適切なHBM割当が変わる。",
     "novelty": "H2M2はHBM3とLPDDR5Xを上下階層ではなく対等な非対称メモリとして並列配置し、両方へ計算器を付ける。その上で、サブレイヤをヘッド単位に分割して両側で同時実行する割当、attentionを優先する実行時の低コストな貪欲割当、論理アドレスと物理配置を分離するハードウェア統合メモリ仮想化を組み合わせる。これにより容量側メモリのデータを毎回HBMへ移すのではなく、その場で計算しつつ高帯域側を重要カーネルへ割り当てる。",
     "method_overview": "まずqkv-linear、attention、fcをHBM側とLPDDR側へ分割し、qkv-linearとattentionは独立なattention head単位、fcは列方向分割で並列実行する。同一側の複数headは融合し、各カーネル後の依存関係はハードウェア同期で処理する。実行時にはfootprint trackerがバッチ数・系列長・KVキャッシュ量を追跡し、linear solverがattention→qkv-linear→fcの順にHBM配置を優先しながら、両側のピーク実行時間をmin-maxで均衡させるhead数を選ぶ。割当変更やKVキャッシュ増加時は2MBページの論理アドレス空間を維持したまま必要な物理ページだけ割当・移動し、各側MMU/TLBを更新する。",
     "system_design": "96GB HBM3側と512GB LPDDR5X側にそれぞれ同等のアクセラレータを置き、960GB/s相互接続で結ぶ。ホスト側ソフトウェアはlinear solver、footprint tracker、free-space manager、ページテーブルを管理し、各アクセラレータ側MMUが論理アドレスを各メモリの物理ページへ変換する。",
     "components": [
-      {"name":"ヘッド認識型カーネル・メモリ割当","description":"qkv-linearとattentionをhead単位、fcを列方向に分割してHBM側とLPDDR側へ並列配置する。両側の計算時間を重ね、重み・KVキャッシュは排他的に分散して容量を節約する。同じ側の複数headを融合してGEMMサイズを大きくし、オンチップ利用率と起動効率を改善する。GPT3-175Bの解析では単純なサブレイヤ単位割当の1.27倍に対し1.50倍の高速化を得る。"},
-      {"name":"動的貪欲割当アルゴリズム","description":"各サブレイヤについてHBMに置くhead数nとLPDDRに置くN-nを容量制約内で選び、両側のピーク実行時間を最小化する。帯域律速が強くKVキャッシュ容量も増えるattentionを最優先し、次にqkv-linear、fcを割り当てる。単一スレッドC++実装で0.05msと軽量で、N^2/N^3のプロファイル探索を不要にする。"},
-      {"name":"ページベースのメモリ抽象化","description":"HBM側とLPDDR側に別々のフラットページテーブルと2048エントリTLBを設け、1TB論理空間を2MBページで管理する。KVキャッシュは論理的には連続のまま生成済みトークン分だけ物理ページを割り当て、割当変更後も物理ページが散在した状態でカーネルから連続領域として見せる。GPT3-175Bで最大内部断片化は156MB、HBM容量の0.16%。"},
-      {"name":"割当変更・移動管理","description":"各生成反復の終端で系列長増加や要求入替を検出し、必要なら割当決定、物理ページ割当、HBM/LPDDR間移動を順に実行する。典型的な系列長増加ではfc→qkv-linear→attentionの順にHBMから退避するため、一度退避した層を戻す必要が少なく、冗長移動を抑える。"},
-      {"name":"ハードウェア同期と柔軟な遠隔アクセス","description":"両メモリ側のカーネル依存をCUDA event類似のハードウェア機構で管理し、ホスト同期を減らす。次層が反対側の出力を必要とする場合は、再利用度に応じてコピーまたはzero-copyの直接アクセスを選べる論理アドレス機構を提供する。"}
+      {
+        "name": "ヘッド認識型カーネル・メモリ割当",
+        "description": "qkv-linearとattentionをhead単位、fcを列方向に分割してHBM側とLPDDR側へ並列配置する。両側の計算時間を重ね、重み・KVキャッシュは排他的に分散して容量を節約する。同じ側の複数headを融合してGEMMサイズを大きくし、オンチップ利用率と起動効率を改善する。GPT3-175Bの解析では単純なサブレイヤ単位割当の1.27倍に対し1.50倍の高速化を得る。"
+      },
+      {
+        "name": "動的貪欲割当アルゴリズム",
+        "description": "各サブレイヤについてHBMに置くhead数nとLPDDRに置くN-nを容量制約内で選び、両側のピーク実行時間を最小化する。帯域律速が強くKVキャッシュ容量も増えるattentionを最優先し、次にqkv-linear、fcを割り当てる。単一スレッドC++実装で0.05msと軽量で、N^2/N^3のプロファイル探索を不要にする。"
+      },
+      {
+        "name": "ページベースのメモリ抽象化",
+        "description": "HBM側とLPDDR側に別々のフラットページテーブルと2048エントリTLBを設け、1TB論理空間を2MBページで管理する。KVキャッシュは論理的には連続のまま生成済みトークン分だけ物理ページを割り当て、割当変更後も物理ページが散在した状態でカーネルから連続領域として見せる。GPT3-175Bで最大内部断片化は156MB、HBM容量の0.16%。"
+      },
+      {
+        "name": "割当変更・移動管理",
+        "description": "各生成反復の終端で系列長増加や要求入替を検出し、必要なら割当決定、物理ページ割当、HBM/LPDDR間移動を順に実行する。典型的な系列長増加ではfc→qkv-linear→attentionの順にHBMから退避するため、一度退避した層を戻す必要が少なく、冗長移動を抑える。"
+      },
+      {
+        "name": "ハードウェア同期と柔軟な遠隔アクセス",
+        "description": "両メモリ側のカーネル依存をCUDA event類似のハードウェア機構で管理し、ホスト同期を減らす。次層が反対側の出力を必要とする場合は、再利用度に応じてコピーまたはzero-copyの直接アクセスを選べる論理アドレス機構を提供する。"
+      }
     ],
-    "empirical_insights": ["attentionは帯域律速が強くHBM配置の価値が最も高い。", "系列長増加に伴いHBM内のattention比率が増えfc比率が減る。", "静的FlexGen型割当は動的なバッチ・系列長とサブレイヤ特性を捉えられず最適割当より性能が低い。"]
+    "empirical_insights": [
+      "attentionは帯域律速が強くHBM配置の価値が最も高い。",
+      "系列長増加に伴いHBM内のattention比率が増えfc比率が減る。",
+      "静的FlexGen型割当は動的なバッチ・系列長とサブレイヤ特性を捉えられず最適割当より性能が低い。"
+    ]
   },
-  "reservation":{"claim_id":"claim-987e47d076f99ed6f71340e5","worker_id":"scheduled-chat-paper-20260917T1330JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7834266028442ea9afab397",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -1,16 +1,44 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-987e47d076f99ed6f71340e5","job_id":"job-research-4954e0b135582135",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f7834266028442ea9afab397",
+  "job_id": "job-research-4954e0b135582135",
   "data": {
     "evaluation_summary": "サイクルレベル性能シミュレータを用い、HBM3 96GB・3TB/sとLPDDR5X 512GB・544GB/sの非対称メモリを評価する。両側は同等の4コアアクセラレータを持ち、960GB/s相互接続で接続する。基準は同じ計算資源を持つLPDDRのみの容量中心構成で、厳密な階層メモリと理想的な最適割当Oracleも比較する。GPT3-175B、Chinchilla-70B、Llama2-70Bの生成段階をINT8で評価し、動的系列長、感度分析、8-HBM構成との比較も行う。",
     "scope": "実機GPU上の完成システムではなく、既存のオープンソース多コアNPUシミュレータとDRAMシミュレータのプロファイルで交差検証したサイクル精度シミュレーションである。評価はdecoder生成段階の単一反復を中心とし、prompt段階のTTFTは対象外。",
-    "hardware": ["HBM3 96GB・3TB/s", "LPDDR5X 512GB・544GB/s", "HBM/LPDDR側に各4コアアクセラレータ", "両側間960GB/s相互接続"],
-    "models": ["GPT3-175B", "Chinchilla-70B", "Llama2-70B"],
+    "hardware": [
+      "HBM3 96GB・3TB/s",
+      "LPDDR5X 512GB・544GB/s",
+      "HBM/LPDDR側に各4コアアクセラレータ",
+      "両側間960GB/s相互接続"
+    ],
+    "models": [
+      "GPT3-175B",
+      "Chinchilla-70B",
+      "Llama2-70B"
+    ],
     "datasets": [],
     "workload": "生成段階のdecoder反復。固定評価ではGPT3 batch 32、Chinchilla batch 64、Llama2 batch 128で系列長を変化。動的試験ではGPT3 batch 32で128反復、要求がランダムに終了・置換されKVキャッシュ量が変動する。",
-    "baselines": ["LPDDR-only容量中心メモリ", "strict hierarchical HBM+LPDDR", "最適割当Oracle", "FlexGen由来の静的割当", "8-HBM 768GB構成"],
-    "metrics": ["単一生成反復の相対高速化", "相対スループット/TBT改善", "メモリ抽象化・割当ポリシーの時間オーバーヘッド", "トークン当たり相対メモリエネルギー"],
+    "baselines": [
+      "LPDDR-only容量中心メモリ",
+      "strict hierarchical HBM+LPDDR",
+      "最適割当Oracle",
+      "FlexGen由来の静的割当",
+      "8-HBM 768GB構成"
+    ],
+    "metrics": [
+      "単一生成反復の相対高速化",
+      "相対スループット/TBT改善",
+      "メモリ抽象化・割当ポリシーの時間オーバーヘッド",
+      "トークン当たり相対メモリエネルギー"
+    ],
     "predictor_accuracy": "予測器は使わず、サブレイヤの算術強度を反映したピーク実行時間モデルとmin-max割当を使用する。貪欲割当はOracleに対して全3モデルで追加劣化5%未満。",
     "control_knobs": "HBMへ割り当てるattention/qkv-linear/fcのhead相当数、物理ページ配置、必要時のHBM/LPDDR間移動。感度分析ではHBM容量・HBM帯域・LPDDR帯域・各側計算資源も変更。"
   },
-  "reservation":{"claim_id":"claim-987e47d076f99ed6f71340e5","worker_id":"scheduled-chat-paper-20260917T1330JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7834266028442ea9afab397",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

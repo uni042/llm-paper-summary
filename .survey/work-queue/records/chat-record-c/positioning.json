@@ -1,19 +1,51 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-987e47d076f99ed6f71340e5","job_id":"job-research-4954e0b135582135",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f7834266028442ea9afab397",
+  "job_id": "job-research-4954e0b135582135",
   "data": {
     "positioning": "H2M2はGPUメモリ不足をCPU/SSDへ受動的に退避する方式ではなく、容量中心メモリ側にも計算器を置き、HBM側と同時に演算する非対称メモリアーキテクチャである。FlexGenのようなGPU/CPU/disk配置最適化と比べ、PCIe越しに低速メモリのデータをGPUへ運ぶのではなく、カーネル自体をデータのある側へ分割配置する。PagedAttentionと同様に論理・物理アドレスを分離するが、KVキャッシュだけでなく全テンソルと動的な両メモリ間割当をハードウェアMMUで扱う。",
     "differences": "既存の階層メモリ/オフロード研究との最大の差は、HBMを上位キャッシュ、LPDDRを下位容量層と見なさず、両側に演算能力を持つ対等な実行場所として扱うことにある。さらに静的な重み/KV/activation比率ではなく、attention・qkv-linear・fcの帯域感度と実行時KV容量を用いてhead単位で割当を変える。",
     "relation_to_prior_work": [
-      {"work":"FlexGen","difference":"GPU/CPU/disk間の重み・KV・activation配置を最適化するのに対し、H2M2はHBM/LPDDR両側で計算し、サブレイヤ/head単位の動的カーネル割当を行う。"},
-      {"work":"vLLM PagedAttention","difference":"KVキャッシュのソフトウェアページングに対し、H2M2は全テンソルを対象にMMU/TLBで論理アドレスを提供し、割当変更や遠隔アクセスも扱う。"},
-      {"work":"CXL-PNM LPDDR accelerator","difference":"大容量LPDDR中心構成の帯域不足を、少量HBMとの非対称併用と動的割当で補う。"},
-      {"work":"multi-GPU HBM systems","difference":"多数HBMの容量拡張と同期・通信コストではなく、HBM容量を性能重要部へ集中しLPDDRで容量を安価に拡張する。"}
+      {
+        "work": "FlexGen",
+        "difference": "GPU/CPU/disk間の重み・KV・activation配置を最適化するのに対し、H2M2はHBM/LPDDR両側で計算し、サブレイヤ/head単位の動的カーネル割当を行う。"
+      },
+      {
+        "work": "vLLM PagedAttention",
+        "difference": "KVキャッシュのソフトウェアページングに対し、H2M2は全テンソルを対象にMMU/TLBで論理アドレスを提供し、割当変更や遠隔アクセスも扱う。"
+      },
+      {
+        "work": "CXL-PNM LPDDR accelerator",
+        "difference": "大容量LPDDR中心構成の帯域不足を、少量HBMとの非対称併用と動的割当で補う。"
+      },
+      {
+        "work": "multi-GPU HBM systems",
+        "difference": "多数HBMの容量拡張と同期・通信コストではなく、HBM容量を性能重要部へ集中しLPDDRで容量を安価に拡張する。"
+      }
     ],
-    "strengths": ["容量と帯域のトレードオフをカーネル配置まで含めて共同設計する。", "KVキャッシュ増減へ実行時に追従する割当を0.05msの低コストで決定する。", "メモリ抽象化のオーバーヘッドと内部断片化を定量化する。", "MHAとGQAの双方、大規模175B/70Bモデル、動的系列長を評価する。", "8-HBMとの性能・エネルギー差も示し、非対称メモリの適用条件を明確化する。"],
-    "limitations": ["評価はサイクル精度シミュレータであり、提案するH2M2ハードウェアの実チップ・実ボード測定ではない。", "生成段階のdecoder反復が中心で、prompt段階のTTFTを評価しない。", "INT8 ASICアクセラレータを仮定しており、一般的なGPUソフトウェアスタックへそのまま適用できる実装ではない。", "モデル全体がHBMに収まる短系列ではstrict hierarchicalが有利になり得る。", "絶対性能では大容量8-HBM構成に劣り、H2M2の価値は容量コスト・エネルギー・拡張性との交換条件にある。"],
+    "strengths": [
+      "容量と帯域のトレードオフをカーネル配置まで含めて共同設計する。",
+      "KVキャッシュ増減へ実行時に追従する割当を0.05msの低コストで決定する。",
+      "メモリ抽象化のオーバーヘッドと内部断片化を定量化する。",
+      "MHAとGQAの双方、大規模175B/70Bモデル、動的系列長を評価する。",
+      "8-HBMとの性能・エネルギー差も示し、非対称メモリの適用条件を明確化する。"
+    ],
+    "limitations": [
+      "評価はサイクル精度シミュレータであり、提案するH2M2ハードウェアの実チップ・実ボード測定ではない。",
+      "生成段階のdecoder反復が中心で、prompt段階のTTFTを評価しない。",
+      "INT8 ASICアクセラレータを仮定しており、一般的なGPUソフトウェアスタックへそのまま適用できる実装ではない。",
+      "モデル全体がHBMに収まる短系列ではstrict hierarchicalが有利になり得る。",
+      "絶対性能では大容量8-HBM構成に劣り、H2M2の価値は容量コスト・エネルギー・拡張性との交換条件にある。"
+    ],
     "implementation_status": "H2M2のアクセラレータ、MMU/TLB、メモリ、割当アルゴリズムをサイクルレベルでモデル化し、既存NPU/DRAMシミュレータのプロファイルで交差検証している。公開された実ハードウェア実装やコードURLは本文から確認できない。",
     "research_positioning": "階層メモリ・CPUオフロード研究を、低速容量層を単なる保管場所ではなく計算場所へ変える方向に拡張した研究である。将来のCXL/LPDDR/HBM混載アクセラレータや、CPU・GPU・PIMを跨ぐLLM推論で、どのデータだけでなくどのカーネルをどのメモリ近傍で実行するかを設計する比較軸を提供する。",
     "repository_fit": "階層メモリ系統の中心的比較対象。特にCPU/SSDオフロード、CXLメモリ、PIM、動的KV管理との境界にあり、容量側計算を導入した場合に従来の転送最適化がどう変わるかを示す。"
   },
-  "reservation":{"claim_id":"claim-987e47d076f99ed6f71340e5","worker_id":"scheduled-chat-paper-20260917T1330JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7834266028442ea9afab397",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
