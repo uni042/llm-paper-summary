@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Deterministic stop/continue gate for Scheduled Chat survey workers.
 
-The gate decides whether the whole run may stop and, for the discovery-specialist
-worker, whether the next action must be another discovery round. Transport
-backlogs, claim-result propagation delay, and job-local failures are not stop
-conditions when repository state remains readable and no explicit hard condition
+This script is the run-level continuation authority. Workers report observable
+state to the gate and follow its decision; they do not invent additional stop
+conditions from workload, perceived pressure, round counts, or apparent search
+exhaustion.
+
+Transport backlogs, claim-result propagation delay, job-local failures, and
+Discovery progression metrics are not stop conditions when repository state
+remains readable and no explicit abnormal blocker or scheduled handoff condition
 holds.
 
 Hourly Scheduled Chat workers use a one-hour run window measured from the actual
@@ -40,6 +44,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         if discovery_reset_progress_known
         else 0
     )
+    # Retained for compatibility/telemetry only. Discovery progression metrics
+    # no longer grant permission to stop a normal run.
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
@@ -104,27 +110,20 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if args.global_dependency and not independent_work and not transient_claim_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
-    # Discovery-specialist runs have an explicit progression floor. A novel
-    # candidate resets the exhaustion sweep, so voluntary exhaustion requires
-    # explicit reset-aware progress evidence. If the caller does not supply that
-    # evidence, continuing is safer than accepting an unverifiable exhaustion
-    # claim. Hard stop reasons above still win (handoff guard, platform limit,
-    # unreadable canonical state, or inability to durably preserve required work).
+    # The gate, not the worker's interpretation of Discovery progress, decides
+    # whether a run can stop. Round counts, repeated duplicates, no-novel rounds,
+    # discovery_exhausted, and lack of a currently-known next axis are telemetry.
+    # Outside an explicit handoff/abnormal blocker they therefore produce a
+    # continuation action rather than finalization permission.
     hard_stop = bool(reasons)
     if worker_kind == "discovery" and not hard_stop:
-        if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN"
-            finalization_allowed = False
-        elif discovery_exhausted and not next_axis_available and not independent_work:
-            reasons.append("discovery_exhausted_after_minimum_rounds")
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
-        else:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
-            finalization_allowed = False
+        decision = "CONTINUE"
+        finalization_allowed = False
+        required_action = (
+            "DISCOVER_AGAIN"
+            if (args.can_discover or next_axis_available or discovery_exhausted or not independent_work)
+            else "REFRESH_AND_CONTINUE"
+        )
     else:
         decision = "STOP_RUN" if reasons else "CONTINUE"
         required_action = "FINALIZE" if decision == "STOP_RUN" else "CONTINUE_WORK"
@@ -161,12 +160,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "required_action": required_action,
         "finalization_allowed": finalization_allowed,
         "stop_reasons": reasons,
+        "termination_authority": "continuation_gate",
         "worker_kind": worker_kind,
         "discovery_rounds_completed": discovery_rounds_completed,
         "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
         "discovery_reset_progress_known": discovery_reset_progress_known,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
+        "discovery_progress_fields_authorize_stop": False,
         "discovery_exhausted": discovery_exhausted,
         "next_axis_available": next_axis_available,
         "write_failure_scope": write_scope,
@@ -187,13 +188,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             and effective_seconds_to_handoff <= handoff_guard
         ),
         "rule": (
-            "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
-            "or discovery submission is never by itself a whole-run stop condition. Hourly "
+            "The worker reports observable state and follows this gate's decision; it does not "
+            "invent stop conditions. A single transport failure, pending claim result, pending "
+            "backlog, bank exhaustion, discovery submission, round count, duplicate-only round, "
+            "or apparent discovery exhaustion is not by itself a whole-run stop condition. Hourly "
             "Scheduled Chat workers prefer an actual-invocation-start + 3600 second run deadline "
-            "over the nominal schedule boundary. Discovery specialist runs may use exhaustion as "
-            "a voluntary stop reason only when reset-aware progress since the latest novel candidate "
-            "is explicitly supplied and satisfies the minimum progression floor; hard handoff/"
-            "platform/durability/read failures override that floor."
+            "over the nominal schedule boundary. Explicit scheduled handoff or abnormal canonical "
+            "blockers are the only run-stop inputs handled here."
         ),
     }
 

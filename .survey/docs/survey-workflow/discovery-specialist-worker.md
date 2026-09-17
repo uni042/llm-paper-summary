@@ -1,48 +1,38 @@
 # Discovery specialist worker
 
-この文書は、既存の論文workerとは別に毎時実行する **探索主体のScheduled Chat worker** の正本とする。平常時はcandidate在庫を継続的に積み上げる。一方、research backlogが十分に大きいときは追加readerとして働き、既存の論文workerと並列にresearchを消化する。
+この文書は、既存の論文workerとは別に毎時`:00` JSTで動く **探索主体Scheduled Chat worker** の正本とする。平常時はcandidate在庫を継続的に供給し、Research/Audit backlogが十分に大きいときは追加readerとして処理する。
 
 ## 役割
 
-- 探索専用worker: 通常はdiscovery、軽量重複判定、候補評価、priority付与、candidate投入を担当する。
-- `candidate_inventory > 50` かつactionable researchがある場合: **overflow research mode** へ切り替え、そのrunでは通常論文workerと同じresearch / audit契約、claim直列契約、品質基準、耐久保存契約に従う。
-- 既存の論文worker: 従来どおりresearch / audit / discoveryを行う。探索機能を削除・停止しない。
-- GitHub Actions: queue/state/identityの最終整合、重複抑止、job materialization、および `discovery-state.json` の統計更新を担当する。
+- 通常Discovery mode: discovery、軽量重複判定、候補評価、priority付与、candidate投入を行う。
+- `candidate_inventory > 50` かつactionable Research/Auditあり: **overflow research mode** へ切り替え、通常論文workerと同じ全文精読・5-slot・claim・durability契約でbacklogを処理する。
+- candidate inventoryが50以下、またはactionable Research/Auditがない: Discovery modeへ戻る。
+- 既存の`:30`論文workerのdiscovery機能は削除しない。
+- GitHub Actionsはqueue/state/identity整合、dedupe、job materialization、`discovery-state.json` 更新を担う。
 
-通常探索モードではresearch、audit、5-slot structured research record作成、論文Markdown生成を行わない。候補発見後に全文精読へ進まず、candidate poolへ安全に投入して次の探索軸へ進む。overflow research modeではこの制約を解除し、`always-on-worker.md` / `claim-serial-policy.md` / `candidate-buffer-policy.md` に従ってpriority上位のresearch / auditを処理する。
+通常Discovery modeではResearch/Auditの全文精読や5-slot structured research record作成を行わない。候補を安全にcandidate poolへ送った後、最新stateを再取得して次actionを決める。
 
-## 同一run内の継続不変条件
+## 終了判断の責務
 
-**1 discovery round / 1 discovery submission の完了はScheduled Chat runの完了ではない。** roundごとの耐久保存は中間checkpointとして扱い、その直後に最新HEAD、queue、`discovery-state.json`、candidate inventoryを再取得して、同じrun内の次の行動を必ず決める。
+worker自身が「時間まで決して終わってはいけない」と気負って継続理由を作る必要も、「もう十分やった」と停止理由を作る必要もない。終了可否は `.survey/scripts/continuation_gate.py` と `.survey/scripts/run_finalization_gate.py` が決める。
 
-Discovery modeのままで、**実際のScheduled Chat invocation開始時刻 + 3600秒で定義したrun deadline** まで600秒より多く残り、正本読取と耐久保存が可能で、`next_axis_hint` または他の独立した有望探索軸が残る場合は、**同じrun内で直ちに次の異なるdiscovery roundへ進む**。予定`:00`までの残り時間は、run deadlineを確定できない古いcaller向けのcompatibility fallbackに限る。`next_axis_hint` を書いたこと自体は終了理由ではなく、原則として同一runで次に試す候補軸を示す。
+workerは実測できるcanonical stateだけを取得し、gateへ渡し、返された `decision` / `required_action` / `next_action` / `finalization_permit` に従う。停止を正当化するために、存在しないエラー、platform/runtime/tool limit、canonical read failure、durable-save failure、探索枯渇を推測・生成しない。
 
-次は単独ではrun停止条件にしない。
+round数、candidate数、Research/Audit完了数、0件round、全重複round、`discovery_exhausted`、next-axis hintの有無は観測・探索戦略・throughputの指標であり、worker独自のrun終了条件ではない。
 
-- 1 round / 1 submissionを完了した。
-- candidateを5本送信した。
-- acceptedが0件だった。
-- 全候補が重複だった、または採用率が低かった。
-- Actionsが次jobをmaterializeするのを待っている。
-- 1 discovery jobがcompletedになった。
-- 1 Research/Auditを完了した。
-- 予定`:00`が近いが、実開始基準のrun deadlineには十分な時間が残っている。
+## 実行時刻とrun deadline
 
-runを終了する直前には必ず **終了監査** を行い、`discovery-exhaustive-run-policy.md` のRun-level stop conditionsのいずれかに明確に一致することを確認する。一致しない場合は終了禁止で、次のdiscovery roundまたはoverflow research modeへ進む。特に、run deadlineまで600秒より多く残り、未試行の有望な`next_axis_hint`があるのにDiscoveryを1 roundだけで終了してはならない。
+探索主体workerは毎時`:00` JSTに実行する。既存論文workerは毎時`:30` JSTに動作する。
 
-探索空間枯渇を終了理由にできるのは、`discovery-exhaustive-run-policy.md` の独立探索経路の一巡条件を満たした場合だけとする。1 round終了直後や、未試行の有望軸が明示されている状態を「枯渇」とみなしてはならない。
+Scheduled Chat invocationが実際に開始した時刻を1回だけ記録し、`run_deadline = actual_invocation_start + 3600s` とする。予定`:00`はrun識別・起動契機には使うが、handoff残時間の基準にはしない。`--seconds-to-next-scheduled-task` はactual-start deadlineを取得できない旧caller向けfallbackに限る。
 
-## 実行時刻
+新しいround/claimの前と各耐久checkpoint後に `seconds_to_run_deadline` を再計算しcontinuation gateへ渡す。600秒handoff guard、180秒finalization帯の適用はscript出力に従い、worker側で前倒し・延長しない。
 
-探索主体workerは毎時 `:00` JSTに実行する。既存の論文workerは従来どおり毎時 `:30` JSTで動作する。平常時は30分ずらすことでdiscoveryとpaper workerのqueue/state write競合を減らす。overflow research modeでは`:00` workerが長く動けば`:30` workerと自然に重なり、異なるworker IDで別jobをclaimして並列readerとして動く。
-
-予定時刻はrunの識別・起動契機に使うが、**runのhandoff時間計算には使わない。** Scheduled Chatが実際に開始した時刻を1回だけ記録し、その時刻 + 3600秒を今回runのdeadlineとして固定する。数分の早起動・遅延起動があっても、このrun-local deadlineを短縮しない。
-
-探索主体workerは既存の24-run maintenance counterへ加算しない。overflow research modeへ切り替わってもこの扱いは変えない。maintenance gateは既存の論文worker側の正本に従う。
+この`:00` workerは既存の24-run maintenance counterへ加算しない。overflow research modeでも同じ。
 
 ## 必読正本
 
-毎回default branch最新HEADを取得し、同じHEADから最低限以下を読む。
+毎回default branch最新HEADを取得し、同じHEADから少なくとも以下を確認する。
 
 1. `candidate-buffer-policy.md`
 2. `always-on-worker.md`
@@ -50,12 +40,13 @@ runを終了する直前には必ず **終了監査** を行い、`discovery-exh
 4. `queue-v10.md`
 5. `fallback-routing.md`
 6. `continuation-policy.json`
-7. `.survey/work-queue/next-jobs.json`
-8. `.survey/work-queue/discovery-state.json`
-9. `.survey/survey-state/paper-identity-index.json`
-10. 必要に応じて `.survey/survey-state/identity-deltas/**` と既存job
+7. `run-liveness-policy.md`
+8. `.survey/work-queue/next-jobs.json`
+9. `.survey/work-queue/discovery-state.json`
+10. `.survey/survey-state/paper-identity-index.json`
+11. 必要に応じて `.survey/survey-state/identity-deltas/**`、claim/submission/ACK state
 
-この文書と他文書が競合する場合、探索主体workerのモード切替については本書と `candidate-buffer-policy.md`、research実行時の継続・claim・transportについては `always-on-worker.md` / `claim-serial-policy.md`、transportについては `fallback-routing.md` / `continuation-policy.json` を優先する。
+終了判定については `continuation-policy.json` / `run-liveness-policy.md` と両gate scriptを優先する。
 
 ## candidate在庫とモード切替
 
@@ -66,141 +57,88 @@ runを終了する直前には必ず **終了監査** を行い、`discovery-exh
 - overflow research threshold: `candidate_inventory > 50`
 - target / upper cap: なし
 
-run開始時と、discovery submissionまたはresearch/auditの耐久保存後にcandidate在庫とactionable researchを再評価する。
+run開始時、各discovery submission後、Research/Audit payloadの耐久保存後にcandidate inventoryとactionable Research/Auditを再評価する。
 
-- `candidate_inventory > 50` かつactionable researchあり: overflow research mode。新規discoveryを停止し、通常論文workerと同じhigh-backlog research-only動作へ切り替える。
-- `candidate_inventory <= 50`、またはactionable researchなし: 通常探索モード。高価値候補のdiscoveryを継続する。
+candidate inventoryはrun終了条件ではなくモード切替条件である。overflow modeへ入る場合も同じrun_key/run deadlineを維持する。
 
-overflow research modeではworker IDを通常論文workerと共有しない。同じScheduled Chat worker内でも未完了claimは1件だけ保持し、1件の完全payloadをGitHubまたはLibraryへ耐久保存した後で次の1件をclaimする。別workerが同時に別claimを持つことは許可される。
+## Discovery mode
 
-## overflow research mode
+通常Discovery modeでは、直近 `discovery-state.json` を読み、同じ高重複query familyを機械的に反復しない。候補軸には少なくとも以下を含める。
 
-overflow research modeへ入ったrunでは、通常論文workerのhigh-backlog research-only契約をそのまま適用する。
+- 新着論文・recent revision
+- 収録済み重要論文のforward citation
+- 重要論文のbackward reference
+- DBMS / OS / storage / distributed systems / HPC / GPU runtime / networking / memory systems等の隣接分野
+- 直近採用candidateからのquery expansion
+- offload / hierarchical memory / SSD/NVMe / MoE expert placement・cache・prefetch / KV cache / scheduling / disaggregation / inference framework等の重点テーマ
 
-1. `checkpointed_job_ids` を除いたactionable readyからpriority順に1件claimする。
-2. 一次資料全文を取得・精読し、repository-qualityの5-slot structured research recordを作る。
-3. preflight後、immutable descriptorまたはLibrary checkpointへ完全payloadを耐久保存する。
-4. Actionsのterminal反映を待たず、最新HEAD / queue / claim stateを再取得して次の1件をclaimする。
-5. 一次資料取得・耐久保存・claimが利用可能でbacklogが十分なら、1runにつき最低3件を下限目標とし、3件を停止条件にしない。
-6. 各job保存後に `candidate_inventory` を再評価し、50以下まで減った場合は通常探索モードへ戻る。
+run全体のcandidate件数には固定quota/hard capを設けない。一方、workflow-v10の現行queue contractでは **1 immutable discovery submissionは0〜5 candidates** に制限する。強いdedupe済みcandidateが5件を超える場合は件数だけを理由に捨てず、同じ `run_key` の複数immutable submissionへ5件以下ずつ分割してすべて耐久保存する。弱い候補で件数を埋めない。5件到達やsubmission分割はrun終了理由ではない。
 
-通常論文workerと同時に動く場合も、各workerは固有の `worker_id` を使い、同じjobの二重claimやrecord bankの二重予約はclaim-fastの直列化に任せる。
-
-## 探索経路
-
-通常探索モードでは直近の `discovery-state.json` を読み、直前の高重複軸を機械的に繰り返さない。候補経路は少なくとも以下から選ぶ。
-
-- 新着論文
-- 収録済み重要論文の被引用
-- 重要論文の参考文献
-- DBMS / OS / storage / distributed systems / HPC / GPU runtime / networking等の隣接分野
-- 直近採用候補からの検索語拡張
-- offload / hierarchical memory / MoE / expert cache・placement・prefetch / KV cache / scheduling / disaggregation / inference framework等の重点テーマ
-
-固定件数で埋めない。1軸が0件または全重複なら別軸へ切り替える。
+0件roundや全重複roundは `discovery_stats` に事実として残し、最新stateとgateを再評価する。「探索空間を使い切った」という判断もtelemetry/検索戦略上の記録に留め、停止許可には使わない。
 
 ## 二重探索・二重投入の防止
 
-探索開始前とcandidate投入直前の **2段階** で重複判定する。
+探索開始前とcandidate投入直前の2段階でdedupeする。照合対象はpaper identity index、identity deltas、既収録paper、既存research/discovery jobs、GitHub fallback inbox/archive、確認可能なLibrary pending/offline seedとする。
 
-照合対象:
-
-1. paper identity index
-2. identity deltas
-3. 既収録paper
-4. 既存research / discovery jobs
-5. GitHub fallback inbox/archive
-6. 可能な範囲でLibrary pending/offline seed
-
-同一性判定はcanonical ID、arXiv ID、DOI、OpenReview IDを優先し、最後にnormalized titleを使う。
-
-探索開始後に既存workerやActionsが同じ候補を先に投入する可能性があるため、write直前に最新HEAD / queue / identityを再取得する。そこで既存化していた候補は送らない。
-
-両workerが同じ論文を同時に発見した場合も、同じcanonical IDから同一candidateとして扱い、Actions側の重複抑止で1件へ収束させる。重複候補を別jobとして意図的に作らない。
+canonical ID、arXiv ID、DOI、OpenReview IDを優先し、最後にnormalized titleを使う。write直前に最新HEAD / queue / identityを再取得し、その間に既存化した候補は送らない。
 
 ## candidate priority
 
-priorityは少なくとも以下を考慮する。
+priorityは重点テーマとの関連、新規性、既存収録との差分、実測評価、公式実装、引用関係上の重要性、SSD/NVMe・MoE・階層メモリ・serving基盤への研究価値を考慮する。単純FIFOではなく、Research workerが高価値候補から読めるようにする。
 
-- 重点テーマとの関連度
-- 新規性と既存収録との差分
-- 実測評価の有無
-- 公式実装・コード公開の有無
-- 引用関係上の重要度
-- SSD/NVMe、MoE、階層メモリ、serving基盤への研究価値
+## Discovery transport
 
-単純FIFOではなく、research workerが価値の高い候補から読めるようpriorityを付ける。
+通常Discovery modeでGitHub write可能時はworkflow-v10のself-describing discovery round transportを使い、paper/state/READMEを直接編集しない。
 
-## transport
+探索主体workerのmulti-round継続では、各roundを独立immutable submissionとして保存し、トップレベルに `operation: "submit_discovery_round"`、`candidates`、`discovery_stats` を含める。`candidates` は1 submissionあたり0〜5件とし、6件以上の強い候補は同じrun_keyの複数submissionへ分割する。この形式ではworkerが存在しない `job_id` を合成しない。Actions側がsubmission pathを一意キーとしてdeterministic ingest jobを作り、最終dedupe後にResearch jobをmaterializeする。
 
-通常探索モードでGitHub write可能時はworkflow v10の **self-describing discovery round transport** を使い、paper/state/READMEを直接編集しない。
+実在するready Discovery jobを通常workerが処理する互換経路では実在 `job_id` を使ってよいが、探索主体workerのmulti-round continuationをpre-issued jobの有無へ依存させない。
 
-探索主体workerが同一runで2 round目以降へ進むとき、Actionsが新しいDiscovery jobを作るのを待ってはならない。また、`job-discovery-specialist-...` のような **存在しないjob IDをworker側で合成してはならない**。各roundは独立したimmutable submissionとして保存し、トップレベルに `operation: "submit_discovery_round"`、`candidates`、`discovery_stats` を含める。**この形式では `job_id` を付けない。** Actionsはsubmission pathを一意キーとして内部のdeterministic Discovery ingest jobを作り、最終dedupe後にResearch jobをmaterializeする。
+## run_key
 
-通常workerが実在するready Discovery jobを1件処理する既存経路は互換のため残す。その経路では実在する `job_id` を使用してよい。しかし探索主体workerのmulti-round継続では、1 round目も含めて原則 `submit_discovery_round` を使い、pre-issued jobの有無をround継続条件にしない。
+1回の探索主体Scheduled Chat実行では開始時に1つだけ `run_key` を確定し、そのrun内の全Discovery round・全submission・overflow modeで同じ値を使う。原則は予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` で表す。予定枠を直接取得できない場合は実開始時刻をJSTで時単位に切り捨て、その後固定する。
 
-1回の探索主体Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
+`run_key` は集計識別子でありhandoff guardの時間基準ではない。handoffは実開始 + 3600秒のrun deadlineを使う。
 
-`run_key` は集計上の予定枠識別子であり、handoff guardの時間基準ではない。handoff guardは別途、実際のScheduled Chat invocation開始時刻 + 3600秒で固定したrun deadlineを使う。
+## Discovery durability
 
-これにより `STATUS.md` は複数の探索roundを「毎時の探索主体worker 1回がどれだけ探索したか」という単位で集計できる。旧データで同一時間帯に複数 `run_key` が残っている場合、dashboard側はJSTの毎時枠へbest-effortで集約する。
+Discovery modeへ入ったrunでは、候補0件でもそのrun_keyの正規discovery submissionを残し、「探索したが0件」と「run記録がない」を区別可能にする。空roundでは `candidates: []` と具体的な `empty_round_reason`、評価数、重複数、duplicate IDs、axis/query summary、next-axis hintを保存する。候補が5件を超える場合は同一run_keyの複数submissionへ分割する。
 
-```json
-{
-  "schema_version": 1,
-  "workflow_version": 10,
-  "operation": "submit_discovery_round",
-  "candidates": [
-    {
-      "canonical_id": "arXiv:2609.xxxxx",
-      "title": "...",
-      "source_url": "https://arxiv.org/abs/2609.xxxxx",
-      "paper_path": "papers/inference/.../2609.xxxxx.md",
-      "priority": 90,
-      "reason": "..."
-    }
-  ],
-  "discovery_stats": {
-    "run_key": "2026-09-12T15:00:00+09:00",
-    "round": "specialist-new-arrivals-1",
-    "axis": "2609新着・分離サービング",
-    "query_summary": "今回実際に使った探索軸と範囲の短い説明",
-    "candidate_count": 1,
-    "duplicate_filtered_count": 0,
-    "duplicate_canonical_ids": [],
-    "next_axis_hint": "次に試す異なる探索軸",
-    "empty_round_reason": null
-  }
-}
-```
+GitHub directが使えない場合は `fallback-routing.md` の承認済みChatGPT Library経路を使う。Google Drive、Notion、旧chat-inboxを新規fallbackとして使わない。
 
-`candidate_count` は検索結果の生件数ではなく、テーマ適合性等を確認して実質的に候補として評価した件数を数える。`duplicate_filtered_count` はそのうちScheduled Chat側の重複確認で除外した件数とする。`candidates` には重複除外後にActionsへ投入する候補だけを入れる。`empty_round_reason` は有効候補が残らなかった場合だけ具体的に記録すればよい。
+## Overflow research mode
 
-Scheduled Chatは `accepted_count` を確定しない。最終投入直前以降にも通常workerやActionsによって同じ候補が既存化し得るため、実際の採用数はActionsが最終dedupe後の `research_jobs_added` から確定する。
+`candidate_inventory > 50` かつactionable Research/Auditありなら、通常論文workerのhigh-backlog Research/Audit契約へ切り替える。
 
-過去に既に保存されたself-describing roundがsynthetic/unknown `job_id` またはterminal Discovery jobを参照して失敗している場合、`recover_discovery_submissions.py` が同じdeterministic ingest経路へ収束させる。`discovery_stats` を持たないさらに古いpayloadは、元の実在terminal Discovery jobを確認できる場合だけ旧recovery経路で救済する。Research/Auditのunknown job IDはこの救済対象にしない。
+1. 最新queue / identity / claim stateを取得しgateを評価する。
+2. gateが継続actionを返しactionable jobがある場合、eligible Research/Auditをpriority順に1件だけclaimする。
+3. 一次資料全文を取得・精読し、repository-qualityの5-slot structured recordを作る。
+4. claim resultで予約されたrecord bankを使いpreflightする。
+5. attempt固有immutable descriptorまたはLibrary checkpointへ完全payloadを耐久保存する。
+6. 次の判断にterminal resultが不要なら同期的に待たず最新stateへ進む。必要なら同じidentityを30秒cadenceで再取得する。
+7. gateを再評価し、overflow条件が続けば次actionへ、inventoryが50以下またはactionableなしならDiscovery modeへ戻る。
 
-GitHub write不能時は `fallback-routing.md` に従う。通常探索モードではChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。overflow research modeでは通常論文workerと同じく、完成した5-slot research/audit payloadをLibraryへcheckpointして次jobへ進む。完成Markdownは直接保存しない。
+1 workerが同時に保持する未完了claimは1件だけ。1件・3件・その他の完了件数はthroughput metricであり、最低ノルマにもrun停止条件にも使わない。
 
-同一payloadの重複保存を避け、復旧時は既存のimmutable intake経路に従う。
+## 非同期待機
 
-## discovery-state
+claim result、submission result、Library publication ACK、fallback materialization等が次の判断に必要なら `run-liveness-policy.md` の30秒cadenceを使う。同じrequest/result identityを保持して再取得し、pending中に別IDを作らない。
 
-`discovery-state.json` は **GitHub Actionsを単一writer** とする。探索主体Scheduled Chatも通常論文Scheduled Chatも、このファイルを直接更新しない。
+独立作業が可能なら待機を同期障壁にしない。queued / in_progress / 404 / result未生成をstop理由へ変換しない。
 
-通常探索モードでは各workerはdiscovery submissionの `discovery_stats` として、探索軸、query概要、候補数、Scheduled Chat側で除外した重複数、重複ID、次回推奨軸を渡す。Actionsはsubmission処理時に最終dedupe後の実採用数を確定し、以下を `discovery-state.json` へ1回だけ反映する。
+## Gate-driven continuation/finalization
 
-- candidate count
-- duplicate filtered count
-- novel candidate count
-- accepted count
-- duplicate ratio
-- exploration axis aggregate
-- last run / last round
-- empty-round streak
+各耐久checkpoint後とfinal response候補地点では、最新canonical stateとrun deadline残秒を取得して `continuation_gate.py` を評価する。
 
-submission pathを統計イベントの一意キーとして扱い、同じsubmissionをActionsが再処理しても二重加算しない。Actions workflowの直列化されたqueue処理を共有stateの競合回避点とし、Scheduled Chat側のSHA競合解消でstateを直接上書きしない。
+- `CONTINUE`: `required_action` を実行する。
+- `STOP_RUN`: active assignment、pending claim/submission/ACK、safe handoff状態とともに `run_finalization_gate.py` へ渡す。
+- `MUST_CONTINUE`: `next_action` を実行する。
+- `MAY_FINALIZE` かつ `finalization_permit.issued=true`: normal final responseを出す。
 
-## 通知
+これはworkerに無制限の継続を心理的に要求する規則ではない。終了判断を決定論的scriptへ集約し、workerは観測と作業に集中するための規則である。
 
-通常成功時はユーザーへ通知しない。GitHubとLibraryの両方へ候補またはresearch成果を耐久保存できない、継続的な重複競合でcandidate投入不能、または正本が読めず安全に探索・researchできない場合だけ問題として通知する。
+## Run終了時の記録
+
+final responseでは少なくともactual start/run_key、最終mode、Discovery roundsまたはResearch/Audit処理数、candidate統計、end inventory、durable save状態、continuation/finalization gate値、scriptが返したstop reasonとその具体的evidence、warningsを記録する。
+
+stop reasonはgate出力から取り、曖昧な「時間が厳しい」「実行環境の制約」「一区切り」「十分処理した」「次runで続ける」等をworker独自に追加しない。外部強制終了ならfinal response自体が存在しないため、次runがcanonical stateから回復する。
