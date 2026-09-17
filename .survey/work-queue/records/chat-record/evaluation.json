@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3e15395a7f97e5270e96de72",
-  "job_id": "job-research-2ce5027f5de1889a",
-  "data": {
-    "hardware": "追加学習は64基のNVIDIA A100 GPUを使用し、1.5Bモデル約8時間、7Bモデル約12時間。推論スループットはA100とH100でバッチサイズを変えて測定する。",
-    "software": "Qwen2.5-Instruct 1.5B/7Bを基盤とし、LLaMA-Nemotron後学習データを使用。訓練はDeepSpeed ZeRO-3、AdamW、flex-attentionを利用し、公式コードはNVlabs/Fast-dLLM v2で公開。評価はコード課題をEvalPlus、それ以外をLM-Evalで実行する。",
-    "methodology": "文脈長2048、バッチ256、ブロックサイズ32。1.5Bは学習率2e-5で6000段階、約31.5億トークン、7Bは1e-5で2500段階、約13.1億トークンを追加学習する。HumanEval、MBPP、GSM8K、MATH、IFEval、MMLU、GPQAを評価し、Qwen2.5の同データ・同段階次トークン予測版、LLaMA-3.2、SmolLM-2、Dream、LLaDA系と比較する。既定サブブロック8、ブロック32。品質評価は原則貪欲復号でGPQAのみ5-shot、他はzero-shot。推論では信頼度閾値、バッチサイズ、サブブロックサイズ、キャッシュ有無を変え、A100/H100上のトークン毎秒と精度を測る。",
-    "scope": "モデル規模は最大7Bで、主基盤はQwen2.5-Instructに限定される。速度比較は主にGSM8KとA100/H100で、長文サービング、多利用者連続バッチ、7B超のモデルでのエンドツーエンド提供性能は未評価。追加学習データはLLaMA-Nemotron系であり、他の事前学習系列へ同じ約10億トークンで無損失変換できる保証まではない。"
-  },
+  "attempt_id": "attempt-9728a65bf10d91c2f0a02ad3",
+  "job_id": "job-research-c61a311635c958d5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3e15395a7f97e5270e96de72",
+    "claim_id": "claim-9728a65bf10d91c2f0a02ad3",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
