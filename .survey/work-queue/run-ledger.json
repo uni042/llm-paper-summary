@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T11:37:32.576158+00:00",
+  "updated_at": "2026-09-17T11:39:12.247494+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T11:37:32.576158+00:00",
+      "last_recorded_at": "2026-09-17T11:39:12.247494+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 211,
+        "research_completed": 212,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35107100325:2",
-          "recorded_at": "2026-09-16T14:40:09.892421+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35107100325",
-            "run_attempt": "2",
-            "source_sha": "b74bd25945057776d5e839cf6b538e1116480aac"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35110328395:1",
           "recorded_at": "2026-09-16T14:42:33.913971+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35216644559",
             "run_attempt": "1",
             "source_sha": "94989fa7f355bb46631bb6efb4d2518c641d599a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35216772791:1",
+          "recorded_at": "2026-09-17T11:39:12.247494+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35216772791",
+            "run_attempt": "1",
+            "source_sha": "9e7fb857e9f06cc83a330ca04e7202c5f9f4125e"
           },
           "signals": [
             "research_completed"
@@ -22125,6 +22125,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.08426",
           "title": "KV Cache Offloading for Context-Intensive Tasks",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-5862dce444505150",
+          "type": "research",
+          "canonical_id": "arXiv:2406.08334",
+          "title": "ProTrain: Efficient LLM Training via Memory-Aware Techniques",
           "from": "ready",
           "to": "completed"
         }
