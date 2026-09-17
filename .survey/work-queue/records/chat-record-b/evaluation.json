@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-d78e5b407d31a7db6d9fe6e7",
-  "job_id": "job-research-99d754a688aca9c8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d78e5b407d31a7db6d9fe6e7",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d78e5b407d31a7db6d9fe6e7","job_id":"job-research-99d754a688aca9c8","data":{"hardware":"主要throughput図はNVIDIA A100、batch size 1、追加inference acceleration frameworkなし。repositoryにはLLaDA/Dream評価設定を提供。","software":"LLaDA、LLaDA-1.5、Dream-Base等のnative diffusion inference codeへtraining-freeで実装。比較対象にvanilla dLLM、cache-only、parallel-onlyを含み、AR baselineとしてLlama-3-8B/Qwen2.5-7Bも図示。","methodology":"GSM8K、MATH、HumanEval、MBPPを中心にaccuracyとtokens/sを測定し、generation length 256/512/1024、shot数を変えてcacheとparallelの寄与を分解する。LLaDAではblock size 32を主設定とし、PrefixCache/DualCache、confidence threshold/factor parallelをablation。KV activationのadjacent-step cosine similarity heatmapで近似cacheの妥当性を確認する。長prefill 8-shot・gen length 1024ではvanilla、parallel、PrefixCache、DualCacheをend-to-end比較する。","scope":"open-source dLLM LLaDA/Dreamとsingle-GPU batch-1中心。production batching、concurrent serving、vLLM統合は論文時点で対象外。approximate cacheとthresholdの品質はbenchmark上で検証されるが、任意distributionでの誤差保証はない。"},"reservation":{"claim_id":"claim-d78e5b407d31a7db6d9fe6e7","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
