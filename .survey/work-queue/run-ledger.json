@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T06:03:04.125776+00:00",
+  "updated_at": "2026-09-17T06:05:37.526198+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T06:03:04.125776+00:00",
+      "last_recorded_at": "2026-09-17T06:05:37.526198+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 193,
         "audit_completed": 0,
-        "discovery_completed": 89,
+        "discovery_completed": 90,
         "blocked": 12,
-        "new_jobs": 131,
+        "new_jobs": 133,
         "new_papers": 196,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35087162435:1",
-          "recorded_at": "2026-09-16T10:51:17.465010+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35087162435",
-            "run_attempt": "1",
-            "source_sha": "bb8174b19bc117ab2b01830785aa764013855366"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35087362031:1",
           "recorded_at": "2026-09-16T10:53:22.776466+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35188193239:1",
+          "recorded_at": "2026-09-17T06:05:37.526198+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35188193239",
+            "run_attempt": "1",
+            "source_sha": "69058544ce0967c80e56b88580508f4b9e604233"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -21952,6 +21952,14 @@
           "title": "End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-5041f5c489f0e9c8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -22871,6 +22879,20 @@
           "type": "research",
           "canonical_id": "arXiv:2511.04791",
           "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing"
+        },
+        {
+          "job_id": "job-5041f5c489f0e9c8",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0023a21511f803e1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.08833",
+          "title": "Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications"
         }
       ],
       "new_paper_ids": [
@@ -23280,7 +23302,8 @@
         ".survey/work-queue/results/20260917T0600JST-discovery-specialist-recent-serving-1.json",
         ".survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3a.json",
         ".survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3b.json",
-        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-runtime-communication-2.json"
+        ".survey/work-queue/results/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+        ".survey/work-queue/results/20260917T1528JST-discovery-disaggregation-evaluation-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -23358,7 +23381,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 657,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

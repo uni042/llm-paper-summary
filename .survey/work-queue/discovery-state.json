@@ -1,33 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T06:03:34+00:00",
+  "updated_at": "2026-09-17T06:04:08+00:00",
   "last_run_key": "2026-09-17T14:00:00+09:00",
-  "last_round": "training-memory-systems-3",
+  "last_round": "disaggregation-evaluation-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
+  "consecutive_empty_rounds": 5,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T22:30:00+09:00",
-      "round": "normal-critical-geo-distributed-serving-01",
-      "axis": "地理分散LLM serving・分散最適化",
-      "query_summary": "candidate在庫14件のcritical水位を受け、直前のMoE/異種GPU軸を反復せず、分散・地理分散LLM serving、SLO、冷却/エネルギー制約を含むschedulerへ探索軸を変更した。実質評価4件のうち既収録2件をidentity indexで除外し、未収録2件を投入した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.03036",
-        "arXiv:2606.18431"
-      ],
-      "next_axis_hint": "次回は同じgeo-distributed軸を機械反復せず、GPU障害・reliability-aware serving、またはinterconnect/topology-aware multi-cluster routingへ展開する",
-      "source_submission": "work-queue/submissions/20260912T2230JST-discovery-job-176b1e153b696e02.json"
-    },
     {
       "run_key": "2026-09-12T23:00:00+09:00",
       "round": "specialist-serving-network-disaggregation-01",
@@ -6753,6 +6735,32 @@
       ],
       "next_axis_hint": "distributed-serving-network-and-disaggregation-gaps",
       "source_submission": "work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json"
+    },
+    {
+      "run_key": "2026-09-17T14:00:00+09:00",
+      "round": "disaggregation-evaluation-4",
+      "axis": "distributed-serving-network-and-disaggregation-gaps",
+      "query_summary": "Disaggregated-serving and KV-transfer search after filtering AFlex, SmartGen, SpectrumKV, Lynx, 3DLS, PrefillShare and other already represented identities; one unrepresented system-evaluation paper remained.",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.01891",
+        "arXiv:2607.28150",
+        "arXiv:2606.08635",
+        "arXiv:2607.01831",
+        "arXiv:2607.01617",
+        "arXiv:2602.12029",
+        "arXiv:2401.02669"
+      ],
+      "next_axis_hint": "framework-runtime-kernel-and-batching-gaps",
+      "source_submission": "work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json"
     }
   ],
   "axes": {
@@ -11024,6 +11032,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "distributed-serving-network-and-disaggregation-gaps"
+    },
+    "distributed-serving-network-and-disaggregation-gaps": {
+      "last_run_key": "2026-09-17T14:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "framework-runtime-kernel-and-batching-gaps"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

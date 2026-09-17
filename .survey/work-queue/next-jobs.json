@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 584,
+      "completed": 585,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 64,
+      "ready": 65,
       "completed": 468,
       "superseded": 44,
       "deferred": 3,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 64,
+    "ready_research_audit": 65,
     "actively_claimed": 3,
-    "claimable": 61
+    "claimable": 62
   },
   "next_jobs": [
     {
@@ -59,7 +59,7 @@
       "canonical_id": "arXiv:2602.02108",
       "title": "Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts",
       "source_url": "https://arxiv.org/abs/2602.02108",
-      "paper_path": null,
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -73,7 +73,7 @@
       "canonical_id": "arXiv:2601.19278",
       "title": "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
       "source_url": "https://arxiv.org/abs/2601.19278",
-      "paper_path": null,
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -101,7 +101,7 @@
       "canonical_id": "arXiv:2409.00918",
       "title": "LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs",
       "source_url": "https://arxiv.org/abs/2409.00918",
-      "paper_path": null,
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T06:03:34+00:00"
+  "generated_at": "2026-09-17T06:05:38+00:00"
 }
