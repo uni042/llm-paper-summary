@@ -2,51 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-180764ce53bd95c132164263",
-  "job_id": "job-research-0923832e7cd03d20",
-  "data": {
-    "evaluation_summary": "instance-scaleとcluster-scaleの実機評価を行う。Llama系列はDistServe/vLLM系実装と比較し、DeepSeek系列はSGLang、clusterはNVIDIA Dynamoをbaselineとする。ShareGPT、LongBench、MATH-500とsynthetic heterogeneous workloadをPoisson arrivalで投入し、P90/P99 TTFT・TPOT、SLO attainment、平均E2E latency、dynamic adjustmentを測定する。",
-    "scope": "A100 80GB単node、A100 40GB 4node、H200 141GB単node、A800 80GB単nodeを含む実機評価。request rateはper-GPU。Llama3/3.1 8B・70B・405BとDeepSeek-V2-Lite 16B、DeepSeek-V3 671Bを対象にする。",
-    "hardware": [
-      "Server A: NVIDIA A100 80GB SXM4×8, NVLink",
-      "Server B: 4 nodes×NVIDIA A100 40GB SXM4×8, cross-node 200Gbps",
-      "Server C: NVIDIA H200 141GB SXM5×8, NVLink",
-      "Server D: NVIDIA A800 80GB SXM4×8, NVLink"
-    ],
-    "models": [
-      "Llama3-8B",
-      "Llama3-70B",
-      "Llama3.1-405B",
-      "DeepSeek-V2-Lite 16B",
-      "DeepSeek-V3 671B"
-    ],
-    "datasets": [
-      "ShareGPT",
-      "LongBench",
-      "MATH-500",
-      "95% ShareGPT + 5% long-input synthetic cluster workload"
-    ],
-    "workload": "datasetからrequestをsampleしPoisson arrivalで投入。Llama 8BはTP1、70BはTP4、405BはTP8/PP4、DeepSeek-V3はTP8 FP8。Llama/DeepSeek-V2-Liteは主にFP16。",
-    "baselines": [
-      "DistServe 1P1D",
-      "vLLM 0.6.0 default",
-      "vLLM SplitFuse chunk_size 1024",
-      "SGLang 0.4.4",
-      "NVIDIA Dynamo 0.1.1 2P6D"
-    ],
-    "metrics": [
-      "P90/P99 TTFT",
-      "P90/P99 TPOT",
-      "SLO attainment",
-      "average end-to-end latency",
-      "requests/s per GPU",
-      "memory utilization"
-    ],
-    "predictor_accuracy": "性能予測器ではなくSLO feedbackに基づくdynamic resource partitioningを使用するためpredictor accuracy指標はない。",
-    "control_knobs": "prefill/decode SM比率、chunked-prefill token数、decode batch size、cluster routing先。Llama評価のtight/loose SLOは単request latencyのおよそ7.5倍/10倍を基準に設定。"
-  },
+  "attempt_id": "attempt-af95b58e929cbe887fc76bfd",
+  "job_id": "job-research-491d6cc11a36da8c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-180764ce53bd95c132164263",
+    "claim_id": "claim-af95b58e929cbe887fc76bfd",
     "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
     "worker_kind": "scheduled_chat"
   }
