@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 22:00:52 JST**
+> 自動生成: **2026-09-17 22:01:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **22** | **3** | **0** | **3** | **1** | **0** | **5** |
+| Discovery | **5** | **2** | **0** | **2** | **0** | **0** | **10** |
+| 合計 | **22** | **4** | **0** | **4** | **1** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -144,8 +144,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-17 22:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **10件**
+- 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling / MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
+- round `disagg-routing-2` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
+  - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `offload-serving-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
   - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
@@ -206,10 +210,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **451** |
+| 成功result未照合のimmutable submission | **452** |
 | └ Research | **321** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **127** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
