@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:02:23 JST**
+> 自動生成: **2026-09-18 06:02:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -198,7 +198,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 06:01:12 JST** / heartbeat: **—** / lease expiry: **09-18 07:31:12 JST**
+  - claim: **09-18 06:02:52 JST** / heartbeat: **—** / lease expiry: **09-18 07:32:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-a725b9cf79d670cf.json`
 - `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale / worker `scheduled-chat-llm-survey`
   - claim: **09-18 05:35:39 JST** / heartbeat: **—** / lease expiry: **09-18 07:05:39 JST**
