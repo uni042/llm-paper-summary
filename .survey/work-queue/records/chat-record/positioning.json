@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-c6442bb25743e58511625734",
-  "job_id": "job-research-120be1bd98c2839e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c6442bb25743e58511625734",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c6442bb25743e58511625734","job_id":"job-research-120be1bd98c2839e",
+ "data":{
+  "limitations":"Nexusは同一GPU内でSMを分けるがmemory bandwidthは共有されたままで、cost modelの予測精度が悪い条件ではpartitionだけで完全なisolationを保証できない。configurationごとのkernel profilingは必要であり、GPU architectureやmodel configurationが変われば再parameterizationが必要になる。対象はdecoder-only LLM servingで、学習や異種accelerator間disaggregationを扱わない。engine-level分離のような物理的fault/resource isolationは得られず、GPU memory容量自体も単一deviceの制約を受ける。",
+  "differences":"DistServe/Splitwise/Mooncake等のengine-level PDはprefill/decodeを別GPU/engineへ置きKVを転送するのに対し、Nexusは同一GPU内でSM集合を分けKVをdevice内に保持する。Sarathi-Serve/vLLM/SGLang等のmonolithic方式はmixed batchでphaseを混在させるが、Nexusはphase別queueとschedulerを持つ。BulletやPD-Multiplexing等の先行intra-GPU方式に対して、offline heuristicやSLO違反後のreactive controlではなくcompute saturation・memory footprint・bandwidth contentionをjointに予測してproactive allocationする点が差分である。",
+  "implementation_status":"vLLM拡張としてfine-grained SM partitioning、concurrent prefill/decode、cost-model optimizer、buffered switching、phase-specific schedulerを実装しcommodity NVIDIA GPUで評価。arXiv v5本文で独立した公開コードrepository URLは確認できない。",
+  "research_positioning":"LLM servingのprefill/decode disaggregation系統のうち、物理GPUを増やすengine-level方式とmixed-batch monolithic方式の間を埋めるintra-GPU resource orchestration研究。GPU内resource partitioning、memory contention modeling、runtime schedulingを統合するため、serving schedulerとGPU runtimeの境界に位置する。"
+ },
+ "reservation":{"claim_id":"claim-c6442bb25743e58511625734","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
