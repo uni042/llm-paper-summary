@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dc4e3965dbec894ac1927257",
+  "attempt_id": "attempt-a48b2fb6f7f42031d9d9ac32",
   "job_id": "job-research-cf3f98aec47a974c",
   "data": {
     "overview": "JustFitは24 GiB機でQwen3.8-27B MXFP4の実行可能contextを大幅に拡張し、長文脈だけでなく複数要求、prefix reuse、取消後page再利用、長い数学reasoningまで同一runtimeで確認した。利得はTQ4の保存量だけではなく、復元workspaceのlayer局所化とcomponent/request lifetime制御の統合による。",
@@ -52,7 +52,7 @@
     "quality_impact": "TQ4 runtimeはAIME 2026で29/30を達成しINT8の28/30を下回らないが、単一benchmarkであり量子化品質の一般的優越を示すものではない。論文自身も統合reasoning checkとして位置付ける。"
   },
   "reservation": {
-    "claim_id": "claim-dc4e3965dbec894ac1927257",
+    "claim_id": "claim-a48b2fb6f7f42031d9d9ac32",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

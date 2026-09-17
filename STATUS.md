@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:11:16 JST**
+> 自動生成: **2026-09-17 14:11:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -147,7 +147,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 14:09:01 JST** / heartbeat: **—** / lease expiry: **09-17 15:39:01 JST**
+  - claim: **09-17 14:11:19 JST** / heartbeat: **—** / lease expiry: **09-17 15:41:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-cf3f98aec47a974c.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**

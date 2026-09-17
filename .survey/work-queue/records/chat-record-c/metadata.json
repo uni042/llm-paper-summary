@@ -1,1 +1,70 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-dc4e3965dbec894ac1927257","job_id":"job-research-cf3f98aec47a974c","data":{"canonical_id":"arXiv:2609.17475","arxiv_id":"2609.17475","title":"JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management","summary":"24 GiBの統合メモリを持つノート型計算機で27B級モデルの長文脈推論を成立させるため、圧縮したキー・バリュー状態の実行時復元、モデル部品の所有権に基づく常駐切替、要求間の状態保持と再利用を統合した推論実行系JustFitを提案する。Qwen3.8-27B MXFP4で単一要求196,608入力と16,384出力を3回完走し、比較対象の30,720位置から212,992位置へ6.93倍拡張した。","list_summary":"圧縮キー・バリュー実行、部品常駐切替、状態保持遷移を統合し、24 GiB機で27B級モデルの約213K位置の単一要求を完走する推論実行系。","source":"https://arxiv.org/abs/2609.17475","sources":["https://arxiv.org/abs/2609.17475","https://arxiv.org/html/2609.17475v1"],"authors":["Yuhua Chen"],"published":"2026-09-15","publication":"arXiv:2609.17475","publication_type":"preprint","publication_status":"preprint","arxiv_categories":{"primary":"cs.AI","cross_list":["cs.PF"]},"topics":["ローカルLLM推論","キー・バリューキャッシュ圧縮","階層メモリ","状態管理","統合メモリ"],"implementation":"MLXを基盤に実装され、論文は複数の開発版と再現用資料を保持すると述べる。論文ページでは独立した公開コード置き場は確認できない。","code":null,"last_checked":"2026-09-17","hardware_evaluation":"Apple M4 Pro搭載MacBook、24 GiB統合メモリ、Qwen3.8-27B MXFP4。21,000 MiBのプロセス物理占有量上限下で容量、速度、再利用を測定する。","quality_effect":"単一要求192K入力と16K出力を3回すべて完走して212,992位置、2要求では229,376位置を保持した。AIME 2026は圧縮状態で29/30正解。短出力32K入力では19.11 token/s、固定32K+6Kでは最終構成11.54 token/s、中央値16,374 MiB。","references":[{"canonical_id":"arXiv:2303.06865","arxiv_id":"2303.06865"},{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2402.02750","arxiv_id":"2402.02750"},{"canonical_id":"arXiv:2401.18079","arxiv_id":"2401.18079"}],"references_checked_at":"2026-09-17","references_source":"arXiv HTML v1 reference section","references_total":null},"reservation":{"claim_id":"claim-dc4e3965dbec894ac1927257","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a48b2fb6f7f42031d9d9ac32",
+  "job_id": "job-research-cf3f98aec47a974c",
+  "data": {
+    "canonical_id": "arXiv:2609.17475",
+    "arxiv_id": "2609.17475",
+    "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+    "summary": "24 GiBの統合メモリを持つノート型計算機で27B級モデルの長文脈推論を成立させるため、圧縮したキー・バリュー状態の実行時復元、モデル部品の所有権に基づく常駐切替、要求間の状態保持と再利用を統合した推論実行系JustFitを提案する。Qwen3.8-27B MXFP4で単一要求196,608入力と16,384出力を3回完走し、比較対象の30,720位置から212,992位置へ6.93倍拡張した。",
+    "list_summary": "圧縮キー・バリュー実行、部品常駐切替、状態保持遷移を統合し、24 GiB機で27B級モデルの約213K位置の単一要求を完走する推論実行系。",
+    "source": "https://arxiv.org/abs/2609.17475",
+    "sources": [
+      "https://arxiv.org/abs/2609.17475",
+      "https://arxiv.org/html/2609.17475v1"
+    ],
+    "authors": [
+      "Yuhua Chen"
+    ],
+    "published": "2026-09-15",
+    "publication": "arXiv:2609.17475",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.PF"
+      ]
+    },
+    "topics": [
+      "ローカルLLM推論",
+      "キー・バリューキャッシュ圧縮",
+      "階層メモリ",
+      "状態管理",
+      "統合メモリ"
+    ],
+    "implementation": "MLXを基盤に実装され、論文は複数の開発版と再現用資料を保持すると述べる。論文ページでは独立した公開コード置き場は確認できない。",
+    "code": null,
+    "last_checked": "2026-09-17",
+    "hardware_evaluation": "Apple M4 Pro搭載MacBook、24 GiB統合メモリ、Qwen3.8-27B MXFP4。21,000 MiBのプロセス物理占有量上限下で容量、速度、再利用を測定する。",
+    "quality_effect": "単一要求192K入力と16K出力を3回すべて完走して212,992位置、2要求では229,376位置を保持した。AIME 2026は圧縮状態で29/30正解。短出力32K入力では19.11 token/s、固定32K+6Kでは最終構成11.54 token/s、中央値16,374 MiB。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2303.06865",
+        "arxiv_id": "2303.06865"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2402.02750",
+        "arxiv_id": "2402.02750"
+      },
+      {
+        "canonical_id": "arXiv:2401.18079",
+        "arxiv_id": "2401.18079"
+      }
+    ],
+    "references_checked_at": "2026-09-17",
+    "references_source": "arXiv HTML v1 reference section",
+    "references_total": null
+  },
+  "reservation": {
+    "claim_id": "claim-a48b2fb6f7f42031d9d9ac32",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

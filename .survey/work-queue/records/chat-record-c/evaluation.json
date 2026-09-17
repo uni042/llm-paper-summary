@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dc4e3965dbec894ac1927257",
+  "attempt_id": "attempt-a48b2fb6f7f42031d9d9ac32",
   "job_id": "job-research-cf3f98aec47a974c",
   "data": {
     "hardware": "Apple M4 Pro MacBook、24 GiB unified memory。対象モデルはQwen3.8-27Bの固定MXFP4 checkpoint。",
@@ -11,7 +11,7 @@
     "scope": "単一の24 GiB M4 Pro MacBookとQwen3.8-27B MXFP4が中心で、GPUサーバや他モデルへの一般化は未検証。開発構成は複数revisionにまたがり、個別変更の完全な一因子ablationではない。容量stress testは反復text・EOS抑制を使うため実アプリworkloadそのものではないが、全tokenを実際に計算する。"
   },
   "reservation": {
-    "claim_id": "claim-dc4e3965dbec894ac1927257",
+    "claim_id": "claim-a48b2fb6f7f42031d9d9ac32",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

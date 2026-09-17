@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-dc4e3965dbec894ac1927257",
+  "attempt_id": "attempt-a48b2fb6f7f42031d9d9ac32",
   "job_id": "job-research-cf3f98aec47a974c",
   "data": {
     "limitations": "評価機は24 GiB M4 Pro 1台、主要モデルはQwen3.8-27B MXFP4に限定され、CUDA GPUや異なる統合メモリ容量での再現性は未評価。容量試験は反復textとEOS抑制で制御され、実際のcoding agent workloadのlatency分布とは異なる。開発データは複数source revisionにまたがり、TQ4・fusion・segmentation・paging・lifetime管理の各効果を完全に独立分離していない。TQ4はTurboQuant由来であり新量子化法ではない。",
@@ -11,7 +11,7 @@
     "research_positioning": "本リポジトリでは階層メモリ・KV cache・on-device inferenceの交点に位置する。SSD offloadのように別階層へ大量データを移すのではなく、統合メモリ環境で圧縮表現を保持しつつ必要な瞬間だけ実行表現へmaterializeし、owner leaseでcomponentのlive rangeを短縮する。SSD/NVMe系へ拡張するなら、PhaseSwapのfile-backed reconstructionとStateTransのadmission budgetをI/O cost予測と結合し、component/KVのprefetchとevictionを同じlifetime modelで制御する方向が自然である。"
   },
   "reservation": {
-    "claim_id": "claim-dc4e3965dbec894ac1927257",
+    "claim_id": "claim-a48b2fb6f7f42031d9d9ac32",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
