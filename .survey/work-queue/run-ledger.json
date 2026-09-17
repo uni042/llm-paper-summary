@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T07:44:35.949424+00:00",
+  "updated_at": "2026-09-17T08:05:57.298998+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T07:44:35.949424+00:00",
+      "last_recorded_at": "2026-09-17T08:05:57.298998+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 198,
         "audit_completed": 0,
         "discovery_completed": 90,
-        "blocked": 14,
+        "blocked": 15,
         "new_jobs": 133,
-        "new_papers": 196,
+        "new_papers": 201,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35090940636:1",
-          "recorded_at": "2026-09-16T11:33:34.160896+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35090940636",
-            "run_attempt": "1",
-            "source_sha": "15a3cf05368078fab96c5e4792993087460f52c6"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35093402660:1",
           "recorded_at": "2026-09-16T12:03:29.619268+00:00",
@@ -19597,6 +19583,21 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35197590424:1",
+          "recorded_at": "2026-09-17T08:05:57.298998+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35197590424",
+            "run_attempt": "1",
+            "source_sha": "62cccec0c4f5350bdffc61f67de717c61377572e"
+          },
+          "signals": [
+            "job_blocked",
+            "paper_materialized"
           ]
         }
       ],
@@ -22016,6 +22017,14 @@
           "title": "LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-f37149dfc085d0ea",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16648",
+          "title": "GrowMTP: Efficient Multi-Token Prediction via Progressive Growth",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -23147,7 +23156,12 @@
         "arXiv:2609.12208",
         "arXiv:2609.14773",
         "arXiv:2609.17193",
-        "arXiv:2609.17475"
+        "arXiv:2609.17475",
+        "arXiv:2601.19278",
+        "arXiv:2602.02108",
+        "arXiv:2606.24957",
+        "arXiv:2609.14507",
+        "arXiv:2609.17008"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -23436,8 +23450,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 657,
-      "last_successful_action": "job_blocked"
+      "paper_active_count_after": 662,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -61,7 +61,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   Fateは隣接層のルータ入力から次層専門家を予測し、層ごとのGPU常駐数と利用履歴を調整する。低頻度専門家の低ビット化も組み合わせ、エッジMoEの転送と容量を抑える。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   LayerScopeは将来専門家の先読み、CPU直接計算、必要時転送を複数バッチで一体計画し、PCIe帯域を先読みで使い切って緊急転送を遅らせる問題を抑える。
 
 ### 3年前（2023-10〜2024-09）

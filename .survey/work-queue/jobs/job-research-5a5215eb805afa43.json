@@ -17,5 +17,16 @@
   "created_at": "2026-09-17T06:03:34+00:00",
   "completed_at": "2026-09-17T07:44:31+00:00",
   "blocker": "Full primary-source reading could not be completed in this run. The official arXiv HTML for arXiv:2409.00918 was opened and read from the abstract through the background and the first part of the DisDP design, including the SmartNIC/SmartSwitch/parameter-server architecture and beginning of the SmartNIC collective implementation. The remaining design, evaluation, related-work, conclusion, and references were not retrievable because the web retrieval facility reached its actual per-run call ceiling. A materially distinct direct arXiv network retrieval through the execution container was also attempted, but the environment returned a DNS/network resolution failure. No five-slot record was generated from the partial manuscript; retry the full official primary source in a later run.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-b8e3a9c0664d271ad698f2d3.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-b8e3a9c0664d271ad698f2d3.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-17T07:44:31+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-17T07:44:31+00:00",
+      "reason": "Full primary-source reading could not be completed in this run. The official arXiv HTML for arXiv:2409.00918 was opened and read from the abstract through the background and the first part of the DisDP design, including the SmartNIC/SmartSwitch/parameter-server architecture and beginning of the SmartNIC collective implementation. The remaining design, evaluation, related-work, conclusion, and references were not retrievable because the web retrieval facility reached its actual per-run call ceiling. A materially distinct direct arXiv network retrieval through the execution container was also attempted, but the environment returned a DNS/network resolution failure. No five-slot record was generated from the partial manuscript; retry the full official primary source in a later run."
+    }
+  ],
+  "last_blocked_at": "2026-09-17T07:44:31+00:00",
+  "retry_not_before": "2026-09-17T09:04:56+00:00"
 }
