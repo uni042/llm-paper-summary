@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 01:01:15 JST**
+> 自動生成: **2026-09-18 01:02:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **45** |
 | 未claim Research job | **44** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（13分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（15分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **4** |
-| 合計 | **26** | **5** | **5** | **0** | **1** | **0** | **4** |
+| Discovery | **16** | **3** | **2** | **1** | **0** | **0** | **5** |
+| 合計 | **26** | **6** | **5** | **1** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -177,8 +177,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 01:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **4件**
-- 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime / 異種メモリアクセラレータ・KV transfer・disaggregated serving
 - round `fresh-scheduling-kv-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
   - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮
@@ -187,6 +187,10 @@
   - submission: `.survey/work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json`
   - 探索軸: GB-scale LLC・CPU階層メモリ・異種many-core runtime
   - 個別result照合: あり / `.survey/work-queue/results/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json` (`ok=true`)
+- round `heterogeneous-disagg-3` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json`
+  - 探索軸: 異種メモリアクセラレータ・KV transfer・disaggregated serving
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -243,10 +247,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **455** |
+| 成功result未照合のimmutable submission | **456** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
