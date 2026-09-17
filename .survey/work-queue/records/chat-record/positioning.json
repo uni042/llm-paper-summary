@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2a61ba1261894f97dcd2cf26",
-  "job_id": "job-research-97b8208885471bff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2a61ba1261894f97dcd2cf26",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2a61ba1261894f97dcd2cf26","job_id":"job-research-97b8208885471bff","data":{"limitations":"一度に一要求をFIFO直列処理し、並行要求やバッチ化で変わる専門家集合はモデル化していない。デコードには40層前向き当たり約44msのCPU側計算グラフ構築床が残り、SSD最適化だけでは消せない。事前ルータ利得はSSD待ちが大きいほど高く、速いストレージや熱いページキャッシュでは縮む。先読みは回収不能なステージメモリを増やしてページキャッシュを圧迫する。品質損失は長鎖推論へ集中し、AIMEで35B 6.1点、8B 10.0点の差が残る。実装基盤はMLXのみで、CUDA対応は抽象設計に留まる。","differences":"MoE-InfinityやMixtral-offloadingは過去の人気度・再利用距離から専門家をキャッシュし、予測が外れれば実ルータに従う。Edge0は予測を実ルーティングへ置換するため、ステージ集合と実行集合を必ず一致させ、フォールバックI/Oを消す代わりに品質誤差を学習へ移す。Pre-gated MoEは同一トークン内で次層を先行選択するが、Edge0はSSD読出しを隠すには一層分でなく一トークン分の先行が必要だと実測する。FlexGenは重みとKVを含む階層オフロードを扱うが、Edge0はMoE専門家の次時刻ルーティング予測と固定スロットに特化する。SSD-LLaMAが確定需要の高速配送と三階層保持を中心にするのに対し、Edge0は学習でルーティング自体を変更してSSD読出し開始を早める点で対照的である。","implementation_status":"論文はEdge0基盤、35B/8Bチェックポイント、事前ルータ、アダプタをオープンソースとして公開すると明記する。MLXバックエンド、モデル仕様、ストリーミングプール、サーバ、量子化経路を実装し、正確経路・ステージ経路・ホット経路・層全体経路を復号参照と要素単位で試験する。ただし本文抽出範囲では公式リポジトリURLを特定できないためmetadata.codeは未確認としてnullにした。","research_positioning":"Edge0はSSDを巨大MoEの重み層として使う研究の中でも、ストレージ機構だけでなくルーティング学習まで共同設計する方式である。SSDの遅さをI/O最適化だけで縮めるのではなく、将来必要になる専門家を一トークン前に決められるモデルへ変え、その近似誤差を蒸留とLoRAで補う。このため、MoE-Infinity等の予測キャッシュ系、FlexGen等の階層オフロード系、事前ゲート系、量子化回復系の交点に位置する。SSD-LLaMAのような無損失配送方式とは品質・先行時間・I/O制御の交換関係が異なり、SSDオフロード設計の別方向を示す。"},"reservation":{"claim_id":"claim-2a61ba1261894f97dcd2cf26","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
