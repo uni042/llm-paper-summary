@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5802dd804b5c71e42ecc4823",
-  "job_id": "job-research-ee19ffd9b6b00e19",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5802dd804b5c71e42ecc4823",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5802dd804b5c71e42ecc4823","job_id":"job-research-ee19ffd9b6b00e19","data":{"limitations":"LayerSkip型の層別早期退出教師あり学習済みチェックポイントを前提とし、任意の既存LLMへ学習なしで適用する方式ではない。退出は近似なのでパープレキシティや一部推論・コード課題で品質低下が残る。閾値はWikiTextで事前校正され、テキスト系ベンチマーク間では高い類似性を示すが、分布が大きく異なる領域での頑健性は未確立である。システム評価はRTX PRO 6000と単一CPUのFlexGen環境で、SSD/NVMeを直接含む多段階オフロードや多数同時要求は評価していない。","differences":"LayerSkipは浅い層をドラフトとして自己投機的デコードするが、FlexEEはTop-K候補集合を退出判定の局所語彙として再利用し、後段層自体をトークンごとに停止する。AdaInfer等の学習なし退出は各層の全語彙投影が重く、中間表現の可読性にも制約がある。FlexEEは層別教師あり学習を受け入れる代わりに、全語彙投影を一度へ減らす。従来の状態コピー・KVコピー方式は退出後の後段KVを現在トークン中に埋めるため全後段層を実行する必要があるが、FlexEEは退出隠れ状態を次トークンへ遅延して持ち越し、オフロード重みを現在トークンのためにロードしない。","implementation_status":"FlexGenとHuggingFace Transformersを基盤に自己投機層、早期退出層、動的隠れ状態管理を統合した実装で、RTX PRO 6000とXeon上の実機スループットを測定している。今回確認したarXiv一次資料本文には公式公開コードURLを特定できなかったためcodeはnullとする。","research_positioning":"オフロード研究の多くが重みやKVを『どう運ぶか』を最適化するのに対し、FlexEEは実行深度を動的に短縮して『そもそも後段重みを運ばない』選択肢を加える。したがってCPU/SSD/NVMe階層からの重みプリフェッチ方式とは直交し、退出確率を使って将来必要になる層だけをプリフェッチする制御へ発展できる。KV側ではキャッシュ容量削減ではなく、退出による欠落KVを小さい隠れ状態で遅延補償する点が特徴である。階層メモリシステムと組み合わせる場合、層の退出確率、重み転送時間、ストレージ帯域を共同で考えることで、不要なSSD/CPUからの先読みを抑える研究方向につながる。"},"reservation":{"claim_id":"claim-5802dd804b5c71e42ecc4823","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
