@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 12:07:31 JST**
+> 自動生成: **2026-09-17 12:08:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **57** |
 | 未claim Research job | **56** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（4時間45分前）** |
+| 直近24hの検証済みResearch収録 | **80** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（4時間46分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **10** | **3** | **2** | **1** | **1** | **0** | **6** |
+| Discovery | **3** | **2** | **2** | **0** | **0** | **0** | **6** |
+| 合計 | **7** | **3** | **2** | **1** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -87,18 +87,6 @@
   - result: `.survey/work-queue/results/20260917T0700JST-discovery-specialist-scheduling-memory-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json`
   - 探索軸: 2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation
-- **09-17 06:07:57 JST** job `job-5abe9b84bcfd8389` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-forward-serving-3a.json`
-  - 探索軸: 既収録重要serving論文のforward citation・2025-2026 PD disaggregation・multi-LLM servingの未収録探索
-- **09-17 06:08:01 JST** job `job-c862ad2804181f57` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T0600JST-discovery-specialist-forward-serving-3b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-forward-serving-3b.json`
-  - 探索軸: 既収録重要serving論文のforward citation・2025-2026 PD disaggregation・multi-LLM servingの未収録探索
-- **09-17 06:08:05 JST** job `job-e175f086e1eec097` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260917T0600JST-discovery-specialist-runtime-communication-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json`
-  - 探索軸: 2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack
 
 ### 直近タスク
 
@@ -183,8 +171,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **411** |
-| └ Research | **284** |
+| 成功result未照合のimmutable submission | **412** |
+| └ Research | **285** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
