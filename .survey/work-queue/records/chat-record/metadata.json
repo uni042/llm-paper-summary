@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0680c5744f77092486ad1d1d",
-  "job_id": "job-research-a06bdf20c1667dad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0680c5744f77092486ad1d1d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0680c5744f77092486ad1d1d","job_id":"job-research-a06bdf20c1667dad","data":{"canonical_id":"arXiv:2609.12208","arxiv_id":"2609.12208","doi":"10.48550/arXiv.2609.12208","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Vortex: Bridging Extreme Compression and Efficient LLM Inference","summary":"Vortexは、ベクトル量子化で重みを2ビット以下まで圧縮しても、符号帳参照の競合と復号処理のため既存ハードウェアでは実速度が上がらず、入力依存疎性もバッチ化すると消える問題を扱う。大バッチ向けの参照先行流と小バッチ向けの乗算先行流を使い分け、重み参照器、動的鍵値量子化器、疎性処理器をシストリック配列へ追加する。符号帳単位で疎性率を変えて量子化粒度と枝刈りを整合させ、端末間で最先端加速器比8.03〜23.7倍高速、5.68〜12.5倍省エネルギーを報告する。","list_summary":"超低ビットベクトル量子化と入力依存疎性を二種類の実行流へ合わせ、圧縮率を実際の推論高速化へ変換する加速器。","authors":["Haoxuan Shan","Cong Guo","Bowen Duan","Chiyue Wei","Feng Cheng","Yuzhe Fu","Yintao He","Hai Helen Li","Yiran Chen"],"published":"2026-09-10","publication":"arXiv:2609.12208v1","publication_type":"arXiv preprint","publication_status":"arXiv v1 2026-09-10。","topics":["ベクトル量子化","超低ビット推論","入力依存疎性","鍵値キャッシュ量子化","ハードウェア協調設計","シストリック配列"],"hardware_evaluation":"28nm、500MHzでRTL合成した構成要素と周期精密端末間シミュレータを用いる。32×32 FP16シストリック配列、128KB参照器、336KBバッファ、64GB/s DDR4をモデル化する。","quality_effect":"2ビットAQLM重みに30%の符号帳単位疎性を組み合わせ、Llama2-7Bでは元のAQLM精度の95%以上を保ちながら最大30%疎性を利用する。","source":"https://arxiv.org/abs/2609.12208","sources":["https://arxiv.org/abs/2609.12208","https://arxiv.org/html/2609.12208v1"],"code":null,"implementation":"シストリック配列へ符号帳参照器、量子化器、疎性処理器を追加したRTLを合成し、周期精密シミュレータで端末間評価。公式コードURLはarXivページ上で確認できなかった。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv HTML全文と参考文献節を確認。個別識別子は推測で補わない。","references_total":0},"reservation":{"claim_id":"claim-0680c5744f77092486ad1d1d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
