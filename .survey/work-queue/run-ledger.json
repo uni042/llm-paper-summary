@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T21:07:06.560292+00:00",
+  "updated_at": "2026-09-17T21:08:20.465518+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T21:07:06.560292+00:00",
+      "last_recorded_at": "2026-09-17T21:08:20.465518+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 226,
         "audit_completed": 0,
         "discovery_completed": 104,
-        "blocked": 16,
+        "blocked": 17,
         "new_jobs": 159,
         "new_papers": 222,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35164355350:1",
-          "recorded_at": "2026-09-16T23:58:08.525993+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35164355350",
-            "run_attempt": "1",
-            "source_sha": "df320edca30c12927531912e780895b398def68d"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35177033990:1",
           "recorded_at": "2026-09-17T03:08:32.905324+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35274934192:1",
+          "recorded_at": "2026-09-17T21:08:20.465518+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35274934192",
+            "run_attempt": "1",
+            "source_sha": "0237c946feff34bf29928aaf5bdac9997de57b2e"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -22364,6 +22364,14 @@
           "title": "BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e6a248e5246d3a4e",
+          "type": "research",
+          "canonical_id": "arXiv:2608.22613",
+          "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -24007,7 +24015,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 683,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
