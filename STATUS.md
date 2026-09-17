@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:37:20 JST**
+> 自動生成: **2026-09-17 18:37:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -172,9 +172,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2501.12162` — AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 18:35:05 JST** / heartbeat: **—** / lease expiry: **09-17 20:05:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8423392e3664b697.json`
+- `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 18:37:36 JST** / heartbeat: **—** / lease expiry: **09-17 20:07:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-581beb5301e2ddf8.json`
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
