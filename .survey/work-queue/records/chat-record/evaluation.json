@@ -5,37 +5,16 @@
   "attempt_id": "attempt-366e50017f388aac9c576b49",
   "job_id": "job-research-6b9319ad56fb236d",
   "data": {
-    "evaluation_summary": "arXiv v3本文を全文確認したところ、§3のmethodologyと§4 conclusionの間に独立した実験・evaluation節は存在せず、GPU cluster上のlatency、throughput、memory、task qualityをbaselineと比較した実測表も掲載されていない。評価可能な定量情報は主に理論的complexity/memory式とFPGA resource/latency modelである。したがってabstractの『memory, latency, end-to-end generation efficiencyのsignificant improvements』を具体的な測定値として記録することはできない。",
-    "scope": "設計・解析中心。公開software libraryはあるが、論文v3そのものは再現可能なhardware/software benchmark条件と実測結果を提示していない。FPGA mappingは代表parameterによるresource budget算定であり実機FPGA測定とは記載されない。",
-    "hardware": [
-      "GPU-centric multi-GPU/multi-node architecture（具体GPU型番なし）",
-      "optional AMD Alveo U55C / Intel Agilex FPGA SmartNIC",
-      "CXL Type-3 attached DDR memory"
-    ],
-    "models": [
-      "7B-scale MoE with 16 expertsは問題例として言及"
-    ],
+    "evaluation_summary": "arXiv第3版本文を最後まで確認すると、第3節の手法説明と第4節の結論の間に独立した実験節は存在しない。GPU群上での遅延、スループット、メモリ量、生成品質を比較対象と並べた実測表も掲載されていない。本文から検証できる定量情報は、主として計算量、KV転送量、一GPU当たりメモリ量、圧縮時の理論遅延、FPGA資源量に関する解析式である。したがって抄録にあるメモリ、遅延、エンドツーエンド生成効率の改善という主張を、具体的な測定値として記録してはいない。",
+    "scope": "設計と解析が中心である。公開ソフトウェア実装は存在するが、第3版本文そのものは再現可能なハードウェア構成、ソフトウェア設定、入力集合、比較対象、反復回数をそろえた実測ベンチマークを提示しない。FPGAへの写像も代表パラメータによる資源量算定であり、実機測定とは記載されない。",
+    "hardware": ["GPU中心の複数GPU・複数ノード構成。具体的GPU型番は記載されない。", "任意構成としてAMD Alveo U55CまたはIntel Agilex級FPGAを想定する。", "CXL Type-3接続のDDRメモリ領域を想定する。"],
+    "models": ["問題規模の例として70億規模、16専門家の混合専門家モデルを挙げる。"],
     "datasets": [],
-    "workload": "一般的なlong-context MoE decoding query streamを数式でモデル化。具体dataset、request trace、batch、context distributionを用いたempirical benchmarkは本文にない。",
-    "baselines": [
-      "dense globally synchronized KV cache",
-      "各routing/compression/scheduling方式はtableで機構・complexity比較のみ"
-    ],
-    "metrics": [
-      "asymptotic routing cost",
-      "KV memory traffic",
-      "reuse distance",
-      "compression reconstruction error",
-      "analytical read/decode latency",
-      "per-GPU memory formula",
-      "FPGA BRAM/URAM resource formula"
-    ],
-    "predictor_accuracy": "学習型性能予測器の精度評価はない。RL routingやMLP scorerを選択肢として列挙するがaccuracy/quality benchmarkは提示しない。",
-    "control_knobs": "expert routing k、shard size S、compression ratio ρ/rank r、retained page count K、scheduler threshold θ、routing/cache-miss penalty。"
+    "workload": "長文脈の混合専門家モデルにおけるデコード要求列を数式でモデル化する。具体的なデータ集合、要求トレース、バッチ構成、文脈長分布を使った実測は本文にない。",
+    "baselines": ["全GPUで密に同期するKVキャッシュ", "各専門家選択・圧縮・保持方式については機構と計算量の比較表が中心で、統一条件の実測比較ではない。"],
+    "metrics": ["漸近的な専門家選択計算量", "KVメモリ転送量", "再利用距離", "圧縮再構成誤差", "解析的な読み出し・復号遅延", "一GPU当たりメモリ量", "FPGAのBRAM・URAM資源量"],
+    "predictor_accuracy": "学習型の性能予測器について精度評価はない。強化学習による専門家選択や多層知覚器による得点器を選択肢として挙げるが、予測精度や生成品質の実測値は提示しない。",
+    "control_knobs": "選択専門家数、断片サイズ、圧縮率または低順位次元、保持ページ数、追い出し閾値、キャッシュ不在罰則を主要な調整変数とする。"
   },
-  "reservation": {
-    "claim_id": "claim-366e50017f388aac9c576b49",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
