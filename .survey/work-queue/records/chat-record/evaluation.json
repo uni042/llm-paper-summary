@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-bd486dddc37223eae30319f6",
-  "job_id": "job-research-f37149dfc085d0ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bd486dddc37223eae30319f6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bd486dddc37223eae30319f6","job_id":"job-research-f37149dfc085d0ea","data":{"setup":"3種類のドラフトヘッド初期状態を評価する。Qwen3-4Bはヘッドなしでランダム初期化K=5を付加、Qwen3.5-4B-Baseは強い既存K=3ヘッド、MiMo-7B-SFTは弱い既存K=1ヘッドを持つ。数学強化学習はDAPO-Math-17K、コード強化学習はTACO-Verifiedを用い、Qwen3-4Bは500ステップ、MiMo系の主要深さ比較は200ステップ。保持評価はAMC23、AIME24、AIME25、LiveCodeBench v6を用いる。","hardware":"主要測定は単一ノード8 GPUで実施される。論文の制限事項は4B〜7Bモデルまでの測定であることを明記し、大規模モデル、複数ノード、非同期強化学習では計算・通信構成が変わるため直接測定が必要としている。","software":"GrowMTPはverlへ実装し、ロールアウトはSGLangで実行する。各強化学習ステップは64プロンプト×8応答を生成し、通常8192トークン、Qwen3.5-4B-Baseでは16384トークンを上限とする。ヘッドはAdamWで更新し、ランダム初期化は学習率3e-4、事前ヘッドは1e-4、10ステップのウォームアップ後にコサイン減衰する。","methodology":"学習側では全run平均のロールアウト時間とヘッド更新費用込みステップ時間、最後の10ステップの受理長を測る。速度比の分母は同一スクリプト・データ・設定でヘッドを固定したrunで、Qwen3-4Bではヘッドなし自己回帰が基準となる。保持評価は数学で16標本平均正解率、コードで4試行の合格率を使い、同じ生成上で受理長も測る。棄却サンプリング、温度1.0、top-p 0.7、最大16384トークンで評価する。","scope":"実測範囲は4B〜7Bの3モデル、数学・コード推論、単一ノード8 GPUである。Qwen3-4Bのゼロからの育成、MiMo-7B-SFTの深さ拡張、Qwen3.5-4B-Baseの強い既存ヘッド改善という異なる初期条件を含むが、70B級以上、複数ノード、非同期強化学習は測定していない。長期runへの一部結果は仮定に基づく投影であり実測ではない。","baselines":["Qwen3-4Bではドラフトヘッドなし自己回帰強化学習","MiMo-7B-SFTとQwen3.5-4B-Baseでは出荷時ドラフトヘッドを固定した強化学習","ドラフト経路再構成の除去では最終応答による教師強制","損失比較では交差エントロピー、KL、TV連鎖損失","検証ゲートマスクの除去"],"metrics":["ロールアウト時間と速度比","ヘッド更新を含む強化学習ステップ時間と速度比","平均受理長","数学Mean@16","コードPass@4","総GPU時間"],"conditions":"Qwen3-4Bのゼロ初期化ヘッドはK=5で500ステップ。MiMo-7B-SFTはK=3/5/7を200ステップ比較し、出荷時K=1固定を基準とする。各ヘッドは同一の単層再帰型多トークン予測構造で、深さを増やしてもパラメータ数は増えない。","evidence":"一次資料の本文第1〜6節、参考文献47件、付録A〜Jまで確認した。特に実装詳細、保持評価、追加アブレーション、トップ64ロジット疎化誤差、方策更新との1ステップ遅れ解析、制限事項まで確認した。"},"reservation":{"claim_id":"claim-bd486dddc37223eae30319f6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
