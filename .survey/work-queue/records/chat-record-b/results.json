@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-d78e5b407d31a7db6d9fe6e7",
-  "job_id": "job-research-99d754a688aca9c8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d78e5b407d31a7db6d9fe6e7",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d78e5b407d31a7db6d9fe6e7","job_id":"job-research-99d754a688aca9c8","data":{"overview":"Fast-dLLMはdLLMのper-step計算と必要step数を別々に削ることで、単独cacheや単独parallelより大きなend-to-end gainを得る。LLaDA GSM8K gen length 256ではvanilla 6.7 TPSからcache 21.2、parallel 16.5、両者54.4 TPS（8.1倍）へ向上し、長prefill・gen length 1024ではDualCache+parallelがvanilla 0.7 TPSから19.3 TPSへ達して最大27.6倍となる。accuracy低下は小さく、training-freeでAR modelとのthroughput gapを大幅に縮める点が実用上の主成果である。","key_results":[{"metric":"LLaDA GSM8K throughput","value":"54.4 TPS, 8.1×","baseline":"vanilla 6.7 TPS","condition":"5-shot, max generation length 256, cache+parallel","interpretation":"cacheとparallelismの相補効果。"},{"metric":"長生成end-to-end speedup","value":"19.3 TPS, 27.6×","baseline":"vanilla 0.7 TPS","condition":"GSM8K 8-shot, gen length 1024, DualCache+parallel","interpretation":"長いprefill/generationでcache reuseとstep削減が増幅する。"},{"metric":"Parallel-only acceleration","value":"最大13.3×","baseline":"vanilla LLaDA","condition":"long-generation configuration","interpretation":"confidence-aware unmaskでstep数を大幅削減。"},{"metric":"KV-cache-only speedup","value":"概ね2〜3.6×","baseline":"vanilla backbone","condition":"複数task/length","interpretation":"block内のQKV再計算を削る効果。"},{"metric":"GSM8K quality","value":"gen256: 78.5%","baseline":"vanilla 79.3%","condition":"LLaDA cache+parallel","interpretation":"8.1×高速化に対して0.8 point低下。"}],"negative_results":"KV cacheはbidirectional full attentionに対するapproximationでありblock内KVを完全には更新しない。parallel decodeもconfidence thresholdに依存し、thresholdを下げすぎるとdependent tokenを同時確定してqualityを落とす。speedupはgeneration lengthやprompt長に強く依存し、短い出力では最大値ほど大きくない。","interpretation":"dLLMの遅さは『各stepが重い』ことと『step数が多い』ことの積である。Fast-dLLMはapproximate KV reuseで前者、confidence-aware multi-token unmaskで後者を同時に削るため、単独最適化を超えるmultiplicative speedupを得る。","quality_impact":"GSM8K/HumanEval等でaccuracyは概ねvanilla近傍。high-confidence tokenだけを並列化することで固定top-Kよりdependency violationを抑えるが、approximationとthresholdにより完全losslessではない。"},"reservation":{"claim_id":"claim-d78e5b407d31a7db6d9fe6e7","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
