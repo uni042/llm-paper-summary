@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:07:38 JST**
+> 自動生成: **2026-09-17 18:07:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -169,7 +169,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-  - claim: **09-17 18:06:07 JST** / heartbeat: **—** / lease expiry: **09-17 19:36:07 JST**
+  - claim: **09-17 18:07:44 JST** / heartbeat: **—** / lease expiry: **09-17 19:37:44 JST**
   - evidence: `.survey/work-queue/claims/job-research-1abdfafeb85e4df9.json`
 - `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
   - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
