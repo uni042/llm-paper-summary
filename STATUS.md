@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 15:44:19 JST**
+> 自動生成: **2026-09-17 15:44:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **63** |
+| 収録候補論文 | **62** |
 | 未claim Research job | **61** |
-| 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-17 15:40:17 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **64** |
+| 最終検証済みResearch収録 | **09-17 15:44:33 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **63** |
+| canonical_id確認済みの一意な候補論文 | **62** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **63** |
+| 非終端Research job合計 | **62** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **1** | **3** | **2** | **1** | — |
+| Research | **15** | **4** | **1** | **3** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **19** | **8** | **5** | **3** | **2** | **1** | **15** |
+| 合計 | **20** | **8** | **5** | **3** | **1** | **1** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 15:44:33 JST** [research] `arXiv:2609.17008` — FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-ee19ffd9b6b00e19.json`
+  - result: `.survey/work-queue/results/research/attempt-ddc2745db0f900abfd7bf01e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ddc2745db0f900abfd7bf01e.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md`
 - **09-17 15:40:17 JST** [research] `arXiv:2609.14507` — Physically Partitioned KVCache Format for CPU--GPU Load Balancing in MoE Inference
   - job: `.survey/work-queue/jobs/job-research-05978e704eaf8286.json`
   - result: `.survey/work-queue/results/research/attempt-81cca2a745d2540e0c24bc47.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-5159541999467dbc35b75137.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5159541999467dbc35b75137.json`
   - paper: `papers/inference/06-serving-scheduling/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md`
-- **09-17 13:14:19 JST** [research] `arXiv:2603.01058` — TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading
-  - job: `.survey/work-queue/jobs/job-research-476e11d12d88d15c.json`
-  - result: `.survey/work-queue/results/research/attempt-0a00f41d4ded3663e9ca00ff.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0a00f41d4ded3663e9ca00ff.json`
-  - paper: `papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md`
 
 ### Audit
 
@@ -173,10 +173,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.17008` — FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 15:43:27 JST** / heartbeat: **—** / lease expiry: **09-17 17:13:27 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ee19ffd9b6b00e19.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-discovery-specialist`
   - claim: **09-17 14:19:28 JST** / heartbeat: **09-17 15:32:33 JST** / lease expiry: **09-17 17:02:33 JST**
   - evidence: `.survey/work-queue/claims/job-research-f37149dfc085d0ea.json`
@@ -199,7 +196,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **63** |
+| ready | **62** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +216,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **659** |
+| inference/training/survey配下の論文Markdown実体 | **660** |
 
 ### immutable submissionの未照合
 
@@ -227,8 +224,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **429** |
-| └ Research | **302** |
+| 成功result未照合のimmutable submission | **428** |
+| └ Research | **301** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
