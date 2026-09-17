@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5ba7495e892c3a3a6d421a8e",
-  "job_id": "job-research-7e739eca355b8687",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5ba7495e892c3a3a6d421a8e",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5ba7495e892c3a3a6d421a8e","job_id":"job-research-7e739eca355b8687","data":{"limitations":["利点は多数モデルの人気が長い裾を持ち休眠時間が長い環境で大きく、単一モデルが常時高負荷の環境では回収可能な余剰メモリが少ない。","モデル重みをCPU主記憶へ退避した後の再読込自体はPCIe費用を持つため、極端に高速なモデル切替を無償にはできず、配置・局所調停で入替頻度を抑える必要がある。","評価は主にH100クラスタとSGLangを用いるため、異なるGPU仮想メモリ機構や提供実行器では統合費用が変わり得る。","全体配置とSLO余裕推定は現在需要に基づくため、急変時には一時的な予測外の競合や待ち行列が残り得る。"],"differences":"MuxServe系の空間共有がモデルを同居させたまま固定容量を分け、QLMやAegaeon系の時間共有がモデル単位で退避・再読込するのに対し、Prismは重みと鍵値キャッシュの物理ページを共通資源として伸縮させ、同一GPU上で両方式を同時・動的に混ぜる。単一モデル内部のPagedAttentionより一段下のGPU実行時層でモデル横断調整する点が差分である。","implementation_status":"SGLang上にPrismを実装。中核のkvcachedは公開済みで、論文では1万GPU超のクラスタを含む産業利用が報告される。","research_positioning":"多モデルLLM提供、GPU仮想メモリ、鍵値キャッシュ資源管理の系統。計算スケジューリングよりメモリ所有権を動的化し、モデル配置・重み入替・鍵値キャッシュ容量を一つの弾力的メモリ制御へ統合する研究として位置付けられる。"},"reservation":{"claim_id":"claim-5ba7495e892c3a3a6d421a8e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
