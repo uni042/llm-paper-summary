@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a17fc9940597717688ea373e",
-  "job_id": "job-research-5862dce444505150",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a17fc9940597717688ea373e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a17fc9940597717688ea373e","job_id":"job-research-5862dce444505150",
+ "data":{"limitations":"ProTrainはデータ並列とZeROを基盤として固定し、テンソル並列やパイプライン並列の選択は自動化しない。主比較の系列長は1024で、長系列では活性値比率が変わるため探索結果も変化する。CPU退避の有効性はCPUメモリ容量とCPU-GPU帯域に強く依存し、GH200のような高帯域環境については一部を推定値で議論している。費用モデルは決定論的な構造へ設計した実行を前提とするため、予測不能な通信競合や共有クラスタの外乱を直接扱うものではない。","differences":"DeepSpeedは多数のZeRO-3しきい値を利用者が調整し、Colossal-AIは静的なチャンク配置、FSDPは比較的粗いCPU退避とチェックポイント設定を使う。ProTrainはチャンク常駐数・バッファ数・活性値退避数・チェックポイント数を同じ費用モデルで共同探索する。Mistはデータ・テンソル・パイプライン並列とメモリ最適化をより広く共同探索するのに対し、ProTrainは並列化を固定する代わりに演算内一時メモリや帯域競合まで細かくモデル化する。","implementation_status":"PyTorch上に約7,600行で実装され、標準forward APIを持つモデルを実行フックで追跡する。モデルとoptimizerをラップするだけで学習ループを維持できる設計である。論文本文からは公式公開コードURLを確認できなかったため、再利用可能な公開実装の有無は未確認として扱う。","research_positioning":"LLM学習の階層メモリ研究として、ZeRO-OffloadやZeRO-InfinityのCPU/NVMe退避、StrongHold等のモデル状態管理と、活性値再計算・退避を一つの自動構成問題へ統合する位置にある。特にSSD/NVMeを含む将来の多階層化では、単純に容量を増やすだけでなく、各階層の帯域、先読み可能時間、再計算費用を共同モデル化する必要がある。ProTrainの決定論的スケジュールと費用モデル化は、そのような階層メモリ探索へ拡張しやすい設計原理を示す。"},
+ "reservation":{"claim_id":"claim-a17fc9940597717688ea373e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
