@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d78e5b407d31a7db6d9fe6e7",
-  "job_id": "job-research-99d754a688aca9c8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d78e5b407d31a7db6d9fe6e7",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d78e5b407d31a7db6d9fe6e7","job_id":"job-research-99d754a688aca9c8","data":{"canonical_id":"arXiv:2505.22618","arxiv_id":"2505.22618","doi":"10.48550/arXiv.2505.22618","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding","summary":"Fast-dLLMは拡散型LLMの2つの推論律速、すなわち双方向attentionゆえのKV再計算と、多token同時unmaskによる依存関係破壊を、block-wise approximate KV cacheとconfidence-aware parallel decodingで同時に解く訓練不要frameworkである。prefixに加えmasked suffixもcacheするDualCacheと、高confidence tokenだけを並列確定する方式を組み合わせ、LLaDA/Dreamで最大27.6倍のend-to-end throughput向上を報告する。","list_summary":"block-wise近似KV cacheとconfidence閾値並列decodeを組み合わせ、dLLMを再学習なしで最大27.6倍高速化する。","authors":["Chengyue Wu","Hao Zhang","Shuchen Xue","Zhijian Liu","Shizhe Diao","Ligeng Zhu","Ping Luo","Song Han","Enze Xie"],"authors_affiliations":"The University of Hong Kong; NVIDIA; MIT; Independent Researcher","published":"2025-05-28","publication":"International Conference on Learning Representations (ICLR 2026)","publication_type":"国際会議論文","publication_status":"ICLR 2026 accepted; arXiv v3 2025-07-03","lineage":"diffusion LLM inference / approximate KV cache / parallel decoding","topics":["拡散LLM","KVキャッシュ","並列デコード","推論高速化","block-wise decoding"],"importance":"dLLMにAR型cacheをそのまま適用できない問題とparallel decodingのquality問題を別々に定式化し、training-freeで組み合わせた基礎的高速化手法。","implementation":"LLaDA/Dream向け公式NVlabs/Fast-dLLM実装、評価script、demoを公開。","hardware_evaluation":"主図はNVIDIA A100、batch size 1、追加speedup frameworkなし。LLaDA/Dreamで評価。","quality_effect":"KV近似はadjacent-step KV similarityを根拠に精度低下を抑え、parallel decodingはconfidence thresholdでdependency violationを制限。最大speedup時もaccuracy低下は小さい。","source":"https://arxiv.org/abs/2505.22618","sources":["https://arxiv.org/pdf/2505.22618","https://research.nvidia.com/labs/eai/publication/fast-dllm/"],"code":"https://github.com/NVlabs/Fast-dLLM","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv v3 primary manuscript","references_total":null},"reservation":{"claim_id":"claim-d78e5b407d31a7db6d9fe6e7","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
