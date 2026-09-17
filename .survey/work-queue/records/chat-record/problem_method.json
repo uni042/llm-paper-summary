@@ -1,1 +1,32 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-8529c59bc17c2f018b0b86d8","job_id":"job-research-f371944d5d8c6995","data":{"problem":"LLM servingではprefillが計算律速、decodeがHBM/KV-cache律速という非対称性を持つ。集約方式では長いprefillをdecode batchへ同期的に混ぜるとTBTが膨らみ、H100で8K token budgetを使う場合prefill iterationが180ms超となり典型的100ms TBT SLOを破り得る。一方P/D分離はisolationを得る代わりにモデル複製・KV転送と時変負荷によるprefill/decode資源不均衡を招く。","novelty":"DuetServeは集約か分離かを固定選択せず、通常は全SMを共有し、attentionを含むiteration latency予測がTBT違反を示した場合だけ単一GPUをSM単位で論理分割する。これにより必要な期間だけprefill/decodeをisolateし、恒常的な分離コストを避ける。","method_overview":"各iterationでschedulerはprefill/decodeのtoken数とcontext/KV長を用い、線形層だけでなくattentionのcompute・HBM trafficを含むroofline modelから実行時間を予測する。集約実行でTBT SLOを満たすなら通常batchを全GPU資源で処理する。違反が予測されるとpartitioning optimizerがprefill側とdecode側へ割り当てるSM/TPC数を探索し、decodeのTBT制約を守りながら総throughputが最大になる分割を選ぶ。実行engineはlibsmctrlでkernel/streamごとの可視SMを制御し、二つのlogical sub-GPUを同時実行する。さらに将来decode stepのmemory/metadataを先に準備するlook-ahead decodeと非同期kernel dispatchを使い、長いprefill kernel実行中もdecodeを進め、CPU-GPU同期による中断を避ける。contentionが解消すれば空間分割を解除して全SM共有へ戻る。","components":[{"name":"attention-aware roofline model","description":"linear layerのtoken budgetだけでなくprefill attentionのsequence-length依存計算量とdecodeのKV-cache read量を含め、compute throughputとHBM bandwidthの双方からiteration latencyを予測する。"},{"name":"dynamic SM partitioning optimizer","description":"TBT違反が予測された時だけSM/TPCをprefillとdecodeへ分割し、TBT制約下でthroughputを最大化する分割比を選ぶ。固定MIG/MPSではなく実行時に細粒度変更する。"},{"name":"interruption-free execution engine","description":"libsmctrlによるSM masking、look-ahead decode、非同期kernel dispatchを組み合わせ、prefillとdecodeを別SM集合で同時実行しつつCPU-GPU同期の空隙を抑える。"}],"system_design":"単一GPU内に一時的なprefill/decode logical sub-GPUを作るadaptive colocated serving。平常時はaggregated execution、SLO危険時だけspatial multiplexingへ切り替え、負荷変化に応じて再統合する。"},"reservation":{"claim_id":"claim-8529c59bc17c2f018b0b86d8","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-5b8e027a5ceab4cc1836363d",
+  "job_id": "job-research-f371944d5d8c6995",
+  "data": {
+    "problem": "LLM servingではprefillが計算律速、decodeがHBM/KV-cache律速という非対称性を持つ。集約方式では長いprefillをdecode batchへ同期的に混ぜるとTBTが膨らみ、H100で8K token budgetを使う場合prefill iterationが180ms超となり典型的100ms TBT SLOを破り得る。一方P/D分離はisolationを得る代わりにモデル複製・KV転送と時変負荷によるprefill/decode資源不均衡を招く。",
+    "novelty": "DuetServeは集約か分離かを固定選択せず、通常は全SMを共有し、attentionを含むiteration latency予測がTBT違反を示した場合だけ単一GPUをSM単位で論理分割する。これにより必要な期間だけprefill/decodeをisolateし、恒常的な分離コストを避ける。",
+    "method_overview": "各iterationでschedulerはprefill/decodeのtoken数とcontext/KV長を用い、線形層だけでなくattentionのcompute・HBM trafficを含むroofline modelから実行時間を予測する。集約実行でTBT SLOを満たすなら通常batchを全GPU資源で処理する。違反が予測されるとpartitioning optimizerがprefill側とdecode側へ割り当てるSM/TPC数を探索し、decodeのTBT制約を守りながら総throughputが最大になる分割を選ぶ。実行engineはlibsmctrlでkernel/streamごとの可視SMを制御し、二つのlogical sub-GPUを同時実行する。さらに将来decode stepのmemory/metadataを先に準備するlook-ahead decodeと非同期kernel dispatchを使い、長いprefill kernel実行中もdecodeを進め、CPU-GPU同期による中断を避ける。contentionが解消すれば空間分割を解除して全SM共有へ戻る。",
+    "components": [
+      {
+        "name": "attention-aware roofline model",
+        "description": "linear layerのtoken budgetだけでなくprefill attentionのsequence-length依存計算量とdecodeのKV-cache read量を含め、compute throughputとHBM bandwidthの双方からiteration latencyを予測する。"
+      },
+      {
+        "name": "dynamic SM partitioning optimizer",
+        "description": "TBT違反が予測された時だけSM/TPCをprefillとdecodeへ分割し、TBT制約下でthroughputを最大化する分割比を選ぶ。固定MIG/MPSではなく実行時に細粒度変更する。"
+      },
+      {
+        "name": "interruption-free execution engine",
+        "description": "libsmctrlによるSM masking、look-ahead decode、非同期kernel dispatchを組み合わせ、prefillとdecodeを別SM集合で同時実行しつつCPU-GPU同期の空隙を抑える。"
+      }
+    ],
+    "system_design": "単一GPU内に一時的なprefill/decode logical sub-GPUを作るadaptive colocated serving。平常時はaggregated execution、SLO危険時だけspatial multiplexingへ切り替え、負荷変化に応じて再統合する。"
+  },
+  "reservation": {
+    "claim_id": "claim-5b8e027a5ceab4cc1836363d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

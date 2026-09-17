@@ -1,1 +1,23 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8529c59bc17c2f018b0b86d8","job_id":"job-research-f371944d5d8c6995","data":{"limitations":["評価は主にH100とQwen3-8B/14Bであり、他GPU世代・より大きいtensor-parallel modelで同じSM/HBM complementarityと分割効率が得られる保証はない。","単一GPU内のlogical isolationであり、モデルが1 GPUへ収まらない場合やcluster-scale fault/isolation要件では物理P/D分離を置き換えない。","attention-aware modelとpartition optimizerはworkload/context状態の予測精度に依存し、急激な負荷変化や予測誤差ではSLO marginまたはthroughputを損ない得る。","公式公開コードrepositoryはarXivページ上で確認できず、再現性は論文記述と依存する低水準SM制御機構に依存する。"],"differences":"DistServe/Splitwise/Mooncake等のP/D disaggregationがphaseを別GPUへ恒常配置するのに対し、DuetServeは同一GPU上で通常は集約し、TBT危険時だけSMを分割する。Sarathi-Serve/vLLM系chunked prefillがtoken budget中心でiteration workを制御するのに対し、attention/KV costを明示的に予測し、token数だけでは表せないlong-context latencyへ対応する。","implementation_status":"研究prototypeとして実装・実機評価。libsmctrlでkernel/streamごとのSM maskingを行い、look-ahead decode、非同期kernel dispatch、CUDA Graph等を組み合わせる。arXivの関連コード欄から著者公式repositoryは確認できなかった。","research_positioning":"LLM serving scheduling／GPU runtime resource partitioning系。物理的P/D disaggregationと集約continuous batchingの二択を、SLO予測に基づく時間可変なintra-GPU isolationへ拡張する。特にlong-contextでattention/KV costが増える環境におけるSLO-aware resource controlとして位置付けられる。"},"reservation":{"claim_id":"claim-8529c59bc17c2f018b0b86d8","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5b8e027a5ceab4cc1836363d",
+  "job_id": "job-research-f371944d5d8c6995",
+  "data": {
+    "limitations": [
+      "評価は主にH100とQwen3-8B/14Bであり、他GPU世代・より大きいtensor-parallel modelで同じSM/HBM complementarityと分割効率が得られる保証はない。",
+      "単一GPU内のlogical isolationであり、モデルが1 GPUへ収まらない場合やcluster-scale fault/isolation要件では物理P/D分離を置き換えない。",
+      "attention-aware modelとpartition optimizerはworkload/context状態の予測精度に依存し、急激な負荷変化や予測誤差ではSLO marginまたはthroughputを損ない得る。",
+      "公式公開コードrepositoryはarXivページ上で確認できず、再現性は論文記述と依存する低水準SM制御機構に依存する。"
+    ],
+    "differences": "DistServe/Splitwise/Mooncake等のP/D disaggregationがphaseを別GPUへ恒常配置するのに対し、DuetServeは同一GPU上で通常は集約し、TBT危険時だけSMを分割する。Sarathi-Serve/vLLM系chunked prefillがtoken budget中心でiteration workを制御するのに対し、attention/KV costを明示的に予測し、token数だけでは表せないlong-context latencyへ対応する。",
+    "implementation_status": "研究prototypeとして実装・実機評価。libsmctrlでkernel/streamごとのSM maskingを行い、look-ahead decode、非同期kernel dispatch、CUDA Graph等を組み合わせる。arXivの関連コード欄から著者公式repositoryは確認できなかった。",
+    "research_positioning": "LLM serving scheduling／GPU runtime resource partitioning系。物理的P/D disaggregationと集約continuous batchingの二択を、SLO予測に基づく時間可変なintra-GPU isolationへ拡張する。特にlong-contextでattention/KV costが増える環境におけるSLO-aware resource controlとして位置付けられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-5b8e027a5ceab4cc1836363d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
