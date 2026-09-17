@@ -1,30 +1,15 @@
 {
-  "schema_version": 2,
-  "updated_at": "2026-09-16T22:11:19+00:00",
-  "last_run_key": "2026-09-17T07:10:00+09:00",
-  "last_round": "legacy-invalid-recovery-2",
+  "schema_version": 3,
+  "updated_at": "2026-09-17T04:41:46+00:00",
+  "last_run_key": "2026-09-17T13:30:14+09:00",
+  "last_round": "sep15-inference-systems-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T21:30:00+09:00",
-      "round": "normal-worker-critical-inventory-expert-prefetch-rotation",
-      "axis": "moe-expert-prefetch-edge-external-memory",
-      "query_summary": "直前ラウンドが正本側で全重複になったため、KV中心探索を停止し、MoE専門家先読み、予測ミス回復、エッジ外部メモリアクセスへ軸を変更した。一次資料の題名・抄録・定量結果を軽量評価し、最新正本と探索履歴で識別子を再確認して3件を提出した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。",
-      "source_submission": "work-queue/submissions/20260912T2147JST-discovery-ef040c02e2978658.json"
-    },
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
@@ -6715,6 +6700,32 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "resume-normal-discovery",
       "source_submission": "work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-2.json"
+    },
+    {
+      "run_key": "2026-09-17T13:30:14+09:00",
+      "round": "sep15-inference-systems-1",
+      "axis": "fresh-arxiv-sep15-inference-systems",
+      "query_summary": "Fresh September 15-16 arXiv search across LLM inference, speculative decoding, memory, KV cache, edge serving, and constrained-memory runtime axes after exact identity-snapshot filtering.",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.14850",
+        "arXiv:2609.14872",
+        "arXiv:2609.15338",
+        "arXiv:2609.16161",
+        "arXiv:2609.16206",
+        "arXiv:2609.16491",
+        "arXiv:2609.14773"
+      ],
+      "next_axis_hint": "sep15-adjacent-memory-and-private-inference",
+      "source_submission": "work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json"
     }
   ],
   "axes": {
@@ -10934,6 +10945,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "resume-normal-discovery"
+    },
+    "fresh-arxiv-sep15-inference-systems": {
+      "last_run_key": "2026-09-17T13:30:14+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "sep15-adjacent-memory-and-private-inference"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
