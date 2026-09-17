@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T12:05:49+00:00",
-  "last_run_key": "2026-09-17T21:00:00+09:00",
-  "last_round": "network-disagg-4",
+  "updated_at": "2026-09-17T13:00:54+00:00",
+  "last_run_key": "2026-09-17T22:00:00+09:00",
+  "last_round": "offload-serving-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 10,
+  "consecutive_empty_rounds": 11,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-slo-serving-scheduling-06",
-      "axis": "SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation",
-      "query_summary": "heterogeneous TTFT/TPOT SLO、長文KV動的再配置、dynamic chunking、異種GPU/model allocationをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第5roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "SSD/NVMe multi-tier KV、photonic/CXL remote memory、または重要論文の引用追跡へ切り替える",
-      "source_submission": "work-queue/submissions/20260912T2314JST-discovery-specialist-06.json"
-    },
     {
       "run_key": "2026-09-12T23:00:00+09:00",
       "round": "specialist-storage-backed-kv-07",
@@ -6780,6 +6765,28 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "MoE load balancing/expert placementの新着とforward citationを探索する",
       "source_submission": "work-queue/submissions/20260917T2100JST-discovery-network-disagg-4.json"
+    },
+    {
+      "run_key": "2026-09-17T22:00:00+09:00",
+      "round": "offload-serving-1",
+      "axis": "MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer",
+      "query_summary": "2026年のMoE expert offload/prefetch、NVMe-direct KV cache、CXL shared memory、disaggregated KV communicationを独立検索し、canonical arXiv IDでdefault branchを事前照合した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.24787",
+        "arXiv:2607.28150",
+        "arXiv:2607.18141"
+      ],
+      "next_axis_hint": "network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill deflectionを探索する",
+      "source_submission": "work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json"
     }
   ],
   "axes": {
@@ -11129,6 +11136,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "MoE load balancing/expert placementの新着とforward citationを探索する"
+    },
+    "MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer": {
+      "last_run_key": "2026-09-17T22:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill deflectionを探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
