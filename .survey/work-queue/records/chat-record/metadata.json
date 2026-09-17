@@ -2,45 +2,98 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-366e50017f388aac9c576b49",
-  "job_id": "job-research-6b9319ad56fb236d",
+  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "job_id": "job-research-0923832e7cd03d20",
   "data": {
-    "canonical_id": "arXiv:2508.06526",
-    "arxiv_id": "2508.06526",
-    "doi": "10.48550/arXiv.2508.06526",
+    "canonical_id": "arXiv:2504.19867",
+    "arxiv_id": "2504.19867",
+    "doi": "10.48550/arXiv.2504.19867",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.AR"]},
-    "title": "PiKV: KV Cache Management System for Mixture of Experts",
-    "summary": "PiKVは、混合専門家モデル（Mixture of Experts）の推論では専門家選択によって計算量が疎になる一方、注意機構のKVキャッシュが過去トークン全体について密に残り、複数GPU間で容量と通信量を消費する問題を対象とする。提案系はKVを専門家単位で分散配置し、現在の問い合わせに応じた専門家選択、KV圧縮、保持ページ選択を一つの非同期処理系へ統合する。第3版本文は方式、計算量、メモリ量の解析式とFPGA/CXLへの写像を詳述するが、独立した実験節やエンドツーエンドの実測比較表は掲載していない。そのため本記録では、解析式から確認できる設計上の削減効果と、実測で未検証の性能主張を明確に分離して扱う。",
-    "list_summary": "混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。",
-    "authors": ["Dong Liu", "Yanxuan Yu", "Ben Lengerich", "Ying Nian Wu"],
-    "authors_affiliations": "University of California, Los Angeles; Yale University; Columbia University; University of Wisconsin-Madison",
-    "published": "2025-08-02",
-    "publication": "arXiv preprint arXiv:2508.06526v3",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage",
+    "summary": "semi-PDはprefill/decode分離の利点をGPU間ではなく同一GPU内のSM分割で実現し、重みとKV cacheは統合HBMで共有するLLM serving systemである。計算資源controller、unified memory manager、低overhead worker switching、SLO-aware dynamic partitioningを組み合わせ、完全分離方式のweight複製・KV転送・storage imbalance・粗粒度resource adjustmentを避ける。A100/H200/A800上のLlama/DeepSeek評価で、DeepSeek系列の平均E2E latencyを1.27–2.58倍削減し、Llama系列ではSLO内requestを1.55–1.72倍多く処理する。",
+    "list_summary": "prefill/decode計算をSM単位で分離しつつHBMを共有し、完全PDのKV転送・storage imbalanceを除いてE2E latencyを最大2.58倍改善する。",
+    "authors": [
+      "Ke Hong",
+      "Lufang Chen",
+      "Zhong Wang",
+      "Xiuhong Li",
+      "Qiuli Mao",
+      "Jianping Ma",
+      "Chao Xiong",
+      "Guanyu Wu",
+      "Buhe Han",
+      "Guohao Dai",
+      "Yu Wang"
+    ],
+    "authors_affiliations": "Tsinghua University; Infinigence-AI; Shanghai Jiao Tong University",
+    "published": "2025-04-28",
+    "publication": "arXiv preprint arXiv:2504.19867v1",
     "publication_type": "arXivプレプリント",
-    "publication_status": "2025年8月2日に初版、2026年5月19日に第3版。主分類はcs.DC、併記分類はcs.AIとcs.AR。",
-    "lineage": "moe",
-    "topics": ["混合専門家モデル推論", "KVキャッシュ", "分散キャッシュ", "専門家ルーティング", "KV圧縮", "問い合わせ依存保持", "FPGA/CXL"],
-    "importance": "混合専門家モデルの計算疎性をKVアクセスにも反映し、分散配置、専門家選択、圧縮、保持判断を同一の処理系で扱う設計を提示する。",
-    "hardware_evaluation": "実測ハードウェア評価は第3版本文に記載されない。FPGAへの写像ではAMD Alveo U55CまたはIntel AgilexとCXL Type-3を想定し、代表構成についてオンチップ資源量を解析的に見積もる。",
-    "hardware_details": "代表的なFPGA構成では、専門家数64、断片サイズ256、選択専門家数4、保持ページ数16、特徴次元128を置き、ページ表用BRAMを約176KB、付随情報を約48KBと算定する。これは実機測定値ではなく、提案した付随情報処理器が単一領域へ収まる可能性を示す資源見積もりである。",
-    "quality_effect": "KV圧縮、枝刈り、ページ保持方式は近似を含み得るため、注意計算の忠実度や生成品質へ影響する可能性がある。本文は圧縮再構成誤差の解析式を示すものの、タスク正解率、困惑度、生成品質を用いた実測比較を示していない。したがって品質を維持したまま高速化できるとは本文だけから断定しない。",
-    "bottlenecks": ["密なKV複製", "複数GPU間KV通信", "長文脈で増大するKV容量", "キャッシュ不在と再利用距離", "容量制約下のページ追い出し"],
-    "evidence_locations": ["§1 Introduction", "§3.1 Expert-Sharded Storage", "§3.2 Routing", "§3.3 Compression", "§3.4 Scheduling", "§3.5 Hardware-Aware FPGA Mapping", "§4 Conclusion"],
-    "source": "https://arxiv.org/abs/2508.06526",
-    "sources": ["https://arxiv.org/abs/2508.06526", "https://arxiv.org/pdf/2508.06526", "https://github.com/NoakLiu/PiKV"],
-    "code": "https://github.com/NoakLiu/PiKV",
-    "implementation": "公開GitHub実装がある。論文はGPU中心の処理系に加えてFPGA/CXLへの写像を設計として記述するが、第3版本文では実機ベンチマーク結果を提示しない。",
+    "publication_status": "2025年4月28日投稿のarXiv v1。主分類cs.CL。",
+    "lineage": "serving-scheduling",
+    "topics": [
+      "prefill-decode disaggregation",
+      "unified KV storage",
+      "SM partitioning",
+      "SLO-aware scheduling",
+      "KV cache",
+      "LLM serving"
+    ],
+    "importance": "計算分離とstorage分離を切り離し、PD servingのlatency isolationだけを残しながらHBM共有でmemory効率を回復する中間設計を実機評価する。",
+    "hardware_evaluation": "A100 80GB×8、A100 40GB×32、H200 141GB×8、A800 80GB×8。NVLink、cross-node 200Gbps。",
+    "hardware_details": "CUDA 12.1、NCCL 2.18、PyTorch 2.3.0。Llama3 8B/70B/405B、DeepSeek-V2-Lite 16B、DeepSeek-V3 671B。",
+    "quality_effect": "モデル計算や生成精度を近似せず、serving resource partitionとmemory managementのみを変更する。",
+    "bottlenecks": [
+      "prefill/decode latency interference",
+      "disaggregated KV transfer",
+      "prefill/decode storage imbalance",
+      "duplicated model weights",
+      "coarse GPU-level resource adjustment"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§3 Analysis and Motivation",
+      "§4 System Design",
+      "§6 Implementation",
+      "§7 Evaluation"
+    ],
+    "source": "https://arxiv.org/abs/2504.19867",
+    "sources": [
+      "https://arxiv.org/abs/2504.19867",
+      "https://arxiv.org/pdf/2504.19867"
+    ],
+    "code": null,
+    "implementation": "DistServe系実装とSGLang系実装を構築し、cluster-scaleではNVIDIA Dynamoへsemi-PD instanceを統合する。本文から公開code URLは確認できない。",
     "last_checked": "2026-09-17",
     "references": [
-      {"canonical_id": "arXiv:2406.02069", "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling"},
-      {"canonical_id": "arXiv:2310.01889", "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context"},
-      {"canonical_id": "arXiv:2406.10774", "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference"},
-      {"canonical_id": "arXiv:2405.04434", "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"}
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2405.04434",
+        "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
+      },
+      {
+        "canonical_id": "arXiv:2401.09670",
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+      },
+      {
+        "canonical_id": "arXiv:2403.02310",
+        "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
+      }
     ],
     "references_checked_at": "2026-09-17",
-    "references_source": "arXiv v3 PDF references",
+    "references_source": "arXiv v1 PDF references",
     "references_total": 4
   },
-  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

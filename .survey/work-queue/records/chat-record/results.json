@@ -2,21 +2,58 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-366e50017f388aac9c576b49",
-  "job_id": "job-research-6b9319ad56fb236d",
+  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "job_id": "job-research-0923832e7cd03d20",
   "data": {
-    "overview": "PiKV第3版から確認できる主要な定量結果は実測ベンチマークではなく、分散断片化、疎な専門家選択、圧縮、容量制約付き保持がメモリ量と転送量をどう減らすかを示す解析式である。専門家総数Eのうちk個だけを使う場合、注意計算量はBLhEからBLhkへ、KV取得量は2BLhEから2BLhkへ減るため、理論上はE/kの削減余地を持つ。圧縮率ρを導入した一段当たり時間はTstep=(dkB/ρ)(2/β+η/γ)と表され、理想化した条件では圧縮率に応じて読み出し量が減る。一GPU当たりの総KVメモリはMtotal=2d/ρ(L/(GS)+KS)と整理され、これを最小化する断片サイズとしてS*=sqrt(L/(KG))を導く。FPGA代表構成ではページ表約176KB、付随情報約48KBを見積もる。ただし、これらは実測高速化倍率ではない。本文に具体的GPU型番、データ集合、比較実装、遅延、スループット、生成品質の実測値がないため、抄録の性能改善主張を数値で検証することはできない。",
+    "overview": "semi-PDは高request rateでprefill/decodeのどちらか一方だけがlatency explosionする従来unified/disaggregated方式に対し、両phaseのP90/P99 latencyを同時に安定させる。DeepSeek系列では平均request E2E latencyをstate-of-the-art比1.27–2.58倍削減し、Llama系列では設定したTTFT/TPOT SLOを満たしながら1.55–1.72倍多いrequestを処理する。背景には、完全PDで最大89.33%発生するprefill側memory浪費とphase間KV transferを共有HBMで除き、SM単位partitionを実行中に変更できるため、decode側OOMやworkload比率変化でGPU roleを再配置する必要がないことがある。絶対的に全条件で最小latencyというより、request rateが上がり従来方式が干渉またはstorage不足で急激に悪化する領域でgoodputを維持する点が主要な実用効果である。",
     "key_results": [
-      {"metric": "疎な専門家選択の計算量", "value": "BLhEからBLhkへ減少し、理論削減比はE/k", "baseline": "全E専門家を参照する密な方式", "condition": "選択専門家数kが総専門家数Eより十分小さい場合", "interpretation": "混合専門家モデルの計算疎性をKVアクセスへ反映したときの解析上の削減幅であり、実測高速化倍率ではない。"},
-      {"metric": "KV取得転送量", "value": "2BLhEから2BLhkへ減少し、理論削減比はE/k", "baseline": "全専門家のKVを取得する方式", "condition": "各問い合わせでk専門家だけを選ぶ場合", "interpretation": "専門家選択と専門家単位の分散配置を結合した場合の通信量解析である。実ネットワーク上の測定値ではない。"},
-      {"metric": "圧縮時の解析遅延", "value": "Tstep=(dkB/ρ)(2/β+η/γ)", "baseline": "圧縮率ρ=1", "condition": "論文の理想化した帯域・計算モデル", "interpretation": "圧縮率を上げると読み出し量と復号対象が減るが、メモリ時間と計算時間が均衡する領域では追加利得が飽和すると説明する。"},
-      {"metric": "一GPU当たりKVメモリ", "value": "Mtotal=2d/ρ(L/(GS)+KS)", "baseline": "断片化も圧縮も行わない保存方式", "condition": "GPU数G、保持ページ数K、断片サイズS", "interpretation": "分散断片化、圧縮、容量制約付き保持の効果を同じ式で表し、各調整変数の関係を比較できるようにする。"},
-      {"metric": "メモリ量を最小化する断片サイズ", "value": "S*=sqrt(L/(KG))", "baseline": "任意の断片サイズS", "condition": "ρ、L、K、Gを固定", "interpretation": "細粒度化による配置自由度と保持範囲の費用の均衡点を解析的に与える。"},
-      {"metric": "FPGA代表資源量", "value": "ページ表用BRAM約176KB、付随情報約48KB", "baseline": "対応する実測比較対象なし", "condition": "E=64、S=256、k=4、K=16、d=128", "interpretation": "U55C級FPGAの単一領域へ付随情報処理器を収める可能性を示す設計見積もりであり、実測利用率ではない。"}
+      {
+        "metric": "DeepSeek系列 average E2E latency",
+        "value": "1.27–2.58倍削減",
+        "baseline": "SGLang等state-of-the-art serving",
+        "condition": "DeepSeek-V2-Lite/DeepSeek-V3、高request rate",
+        "interpretation": "phase interferenceを避けつつKV transferなしの共有storageを使うことでrequest-level latencyを改善。"
+      },
+      {
+        "metric": "Llama系列 SLO-constrained served requests",
+        "value": "1.55–1.72倍",
+        "baseline": "vLLM/DistServe等",
+        "condition": "TTFT/TPOT SLO内、90%以上attainment基準",
+        "interpretation": "単純throughputではなくlatency constraintを守れるgoodputが増える。"
+      },
+      {
+        "metric": "prefill側memory waste",
+        "value": "最大89.33%",
+        "baseline": "disaggregated storage",
+        "condition": "Llama3 8B/70B, ShareGPT/LongBench解析",
+        "interpretation": "P/D別HBM poolではprefill側KV容量が余りdecode側OOMを救えない。"
+      },
+      {
+        "metric": "storage shortage時TPOT",
+        "value": "約3倍",
+        "baseline": "ideal storage",
+        "condition": "A100 40GB、decode KV capacity exhaustion",
+        "interpretation": "storage imbalanceがlatency explosionへ直結することを動機実験で確認。"
+      },
+      {
+        "metric": "P99安定request rate",
+        "value": "Llama3-8Bで11 req/s超、Llama3-70Bで8 req/s",
+        "baseline": "他方式はTTFTまたはTPOTが急増",
+        "condition": "ShareGPT",
+        "interpretation": "tail latencyでも両phaseを同時に安定化する。"
+      }
     ],
-    "negative_results": ["第3版本文には独立した実験節がなく、遅延、スループット、メモリ量の実測比較がない。", "タスク正解率、困惑度、生成忠実度の実測がなく、損失を伴う圧縮やページ追い出しの品質影響を定量化できない。", "FPGA節は資源量と遅延の解析式を提示するが、実機FPGA上の測定を報告しない。", "複数の専門家選択、圧縮、保持方式を列挙するが、同一ワークロードで最良の組合せを比較していない。"],
-    "quality_impact": "圧縮やページ追い出しは損失を伴う可能性がある。論文は再構成誤差の解析を示すものの、生成品質への実測影響を示さないため、品質を保った高速化とは断定できない。",
-    "interpretation": "PiKVの主な価値は、混合専門家モデルの計算疎性をKVの配置と読み出しにも伝播させる構成分解と、専門家選択、圧縮、保持を一つのメモリ解析で整理した点にある。一方、実用上の性能根拠は本文だけでは不足しており、現時点では設計提案と解析結果として評価するのが妥当である。"
+    "negative_results": [
+      "低request rateでは従来方式のlatency interferenceやstorage shortageが顕在化せず、semi-PDの優位は高負荷時ほど大きい。",
+      "同一GPU内SM分割のため、prefillとdecodeに完全に異なるGPU種類を割り当てるSplitwise型heterogeneous specializationとはtrade-offが異なる。",
+      "cluster-scaleではrouterと既存P/D instanceを併用するため、全clusterをsemi-PDだけへ置換する設計ではない。"
+    ],
+    "quality_impact": "model weight、precision、attention計算をserving方式間で同等に保つsystem最適化であり、生成品質を意図的に近似しない。",
+    "interpretation": "semi-PDの結果はprefill/decode disaggregationの価値を『別GPU』ではなく『計算資源の独立性』へ分解できることを示す。storageを共有したままSMだけ分けることでlatency isolationとmemory poolingを同時に得られ、workload変動時のresource adjustmentもKV移動なしで細粒度化できる。"
   },
-  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

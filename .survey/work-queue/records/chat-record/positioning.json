@@ -2,22 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-366e50017f388aac9c576b49",
-  "job_id": "job-research-6b9319ad56fb236d",
+  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "job_id": "job-research-0923832e7cd03d20",
   "data": {
-    "positioning": "PiKVは混合専門家モデルの専門家重みを退避・再配置する研究ではなく、混合専門家モデルでも密に残りやすい注意機構のKV状態を、専門家の疎な選択に合わせて分散し必要部分だけ参照する研究である。PagedAttention系が主としてGPU内のページ割当効率を改善するのに対し、PiKVは専門家識別子を保存先の決定に含め、専門家選択、遠隔KVの局所性、圧縮、ページ追い出しを共同設計する。Quest、H2O、PyramidKVなどの個別技術を置き換えるより、それらを交換可能な方式として取り込む上位のKV提供基盤として位置付けられる。",
-    "differences": "既存のKV圧縮研究はトークンやページの削減自体を主眼とし、混合専門家モデルの専門家選択と物理的なキャッシュ局所性を直接結び付けない場合が多い。PiKVはキャッシュ不在を専門家選択得点へ戻し、専門家単位に分けた保存位置を現在の問い合わせに対する専門家選択と連動させる。また任意のFPGA/CXL構成では、付随情報処理とKV本体の保存をGPUから分離する。ただし、第3版本文では既存方式に対する実測優位性を示していない。",
+    "positioning": "semi-PDはvLLM/Sarathi-Serveのようなunified P/D schedulingと、DistServe/Splitwise/MooncakeのようなGPU-level P/D disaggregationの間で、計算とstorageを別軸として再設計する。計算はphaseごとに独立させるがweights/KVは同一GPU HBMで共有するため、unified方式のlatency interferenceと完全PD方式のstorage imbalance/KV transferを同時に避ける。NanoFlowのoperation-level intra-device schedulingより粗いSM-level phase partitionで、SLOに基づくresource adjustmentを主目的とする。",
+    "differences": "DistServeはprefill/decodeを別GPUへ置きphase-specific parallelismを選ぶためlatency isolationは強いが、両側にweightを持ちKVを転送する。semi-PDは同一GPU内でworkerを分離してSMだけをpartitionし、HBMを共有することでtransferとreplicaをなくす。Sarathi-Serveはchunked prefillで同じbatchへP/Dを混在させ干渉を緩和するが、semi-PDはkernel実行資源自体を分離する。",
     "relation_to_prior_work": [
-      {"work": "H2O / Quest", "difference": "トークンやページの重要度による疎なKV参照を、専門家単位の分散配置とキャッシュ局所性を考慮する専門家選択を含む混合専門家モデル向け処理系へ組み込む。"},
-      {"work": "PyramidKV / KV compression", "difference": "圧縮単体ではなく、専門家選択、分散断片化、ページ保持と同じ処理経路で圧縮率をメモリ量と遅延の調整変数として扱う。"},
-      {"work": "PagedAttention", "difference": "GPU内のページ割当効率化に対し、PiKVは専門家単位の複数GPU分散、問い合わせ依存保持、遠隔アクセス局所性まで対象にする。"},
-      {"work": "CXL-SpecKV", "difference": "遠隔KVメモリやFPGA高速化を単独で扱うのではなく、PiKVでは任意のハードウェア層として専門家選択、圧縮、保持判断の付随情報処理へ写像する。"}
+      {
+        "work": "DistServe",
+        "difference": "GPU-level P/D分離ではなくSM-level計算分離＋共有HBMによりKV transferとstorage imbalanceを除く。"
+      },
+      {
+        "work": "Sarathi-Serve",
+        "difference": "chunked prefillで干渉を緩和するのではなくprefill/decode workerの計算資源を独立させる。"
+      },
+      {
+        "work": "vLLM",
+        "difference": "unified storageの利点を維持しつつ、default prefill-priority schedulingが生むTPOT干渉をSM partitionで分離する。"
+      },
+      {
+        "work": "NVIDIA Dynamo",
+        "difference": "cluster baselineを置換するだけでなく、semi-PD instanceをP/D instanceと併用しKV hit率・utilization・queue depthでrouteする。"
+      }
     ],
-    "strengths": ["混合専門家モデルの計算疎性とKVアクセス疎性の不一致を明示的に扱う。", "保存、専門家選択、圧縮、ページ保持を共通処理経路へ分解し交換可能にする。", "一GPU当たりメモリ量と断片サイズの解析式を導き、主要な調整変数の関係を整理する。", "公開GitHub実装があり継続開発されている。", "FPGA/CXLへの構成写像まで提示し、細粒度な付随情報処理をGPUから分離する方向を示す。"],
-    "limitations": ["arXiv第3版本文に独立した実測評価節がなく、エンドツーエンド遅延やスループット改善を検証できない。", "具体的なGPU群、データ集合、要求トレース、比較実装条件が記載されない。", "損失を伴う圧縮やページ追い出しによるタスク品質への影響を実測しない。", "FPGAへの写像は資源量と遅延の解析モデルであり、実機評価ではない。", "多数の専門家選択、圧縮、保持方式を列挙する一方、実ワークロードでの方式選択根拠が不足する。"],
-    "implementation_status": "公開リポジトリ https://github.com/NoakLiu/PiKV が存在し、論文自身も継続開発対象と記載する。第3版本文はソフトウェア構成とFPGAへの写像を設計として説明するが、公開実装を使った再現可能な実測結果は本文に収録されていない。",
-    "research_positioning": "混合専門家モデルの提供系で、専門家重みの配置だけでなくKV状態の分散局所性を専門家選択へフィードバックする方向を示す設計研究である。実測評価が補われれば、混合専門家モデル向けKV管理の統合基盤として比較軸になり得る。現状は定量性能より、構成分解、メモリ式、遠隔アクセス削減の設計意図を重視して読む必要がある。",
-    "repository_fit": "混合専門家モデル系統とKVキャッシュ・提供系統の交点に位置する。専門家配置や通信最適化の研究に対し、密なKV状態が残すメモリ・通信ボトルネックを別の比較軸として追加する。"
+    "strengths": [
+      "計算分離とstorage分離を概念的・実装的に切り分ける明確な設計。",
+      "共有HBMによりweight replica、KV transfer、P/D storage imbalanceを同時に削減する。",
+      "SM-level switchingでKV migrationなしの細粒度resource adjustmentを実現する。",
+      "8Bから671B、A100/A800/H200、single-node/multi-node/clusterまで幅広く実機評価する。",
+      "P90/P99 latencyだけでなくSLO attainmentを主要指標にする。"
+    ],
+    "limitations": [
+      "同一GPUでP/Dが計算資源を共有するため、完全に異種GPUへphaseを割り当てる方式のhardware specializationは直接得られない。",
+      "SM partition機構はGPU runtime/kernel実装への変更を必要とし、一般的なserving stackへ無変更で適用する方式ではない。",
+      "利得は高request rateで大きく、低負荷では従来方式との差が小さくなり得る。",
+      "cluster運用ではsemi-PDと従来P/Dを混在させるrouter policyが追加される。"
+    ],
+    "implementation_status": "DistServe系およびSGLang系prototypeを実装し、NVIDIA Dynamoへcluster-scale semi-PD instanceを統合してA100/A800/H200実機で評価している。公開code URLは確認した本文には記載されない。",
+    "research_positioning": "prefill/decode disaggregation研究に対し、phase isolationに必要なのはstorage separationではなくcomputation separationだという設計点を示した研究。今後のPD systemではGPU/node単位だけでなくSM partitionやshared KV poolを含む中間粒度が比較軸になる。",
+    "repository_fit": "serving-scheduling/disaggregation系統の主要比較対象。KV cache移動、memory pooling、SLO-aware scheduling、resource elasticityを一つのsystem designで結び付ける。"
   },
-  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

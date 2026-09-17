@@ -2,19 +2,52 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-366e50017f388aac9c576b49",
-  "job_id": "job-research-6b9319ad56fb236d",
+  "attempt_id": "attempt-2e420bd391f65348ec4b92b8",
+  "job_id": "job-research-0923832e7cd03d20",
   "data": {
-    "evaluation_summary": "arXiv第3版本文を最後まで確認すると、第3節の手法説明と第4節の結論の間に独立した実験節は存在しない。GPU群上での遅延、スループット、メモリ量、生成品質を比較対象と並べた実測表も掲載されていない。本文から検証できる定量情報は、主として計算量、KV転送量、一GPU当たりメモリ量、圧縮時の理論遅延、FPGA資源量に関する解析式である。したがって抄録にあるメモリ、遅延、エンドツーエンド生成効率の改善という主張を、具体的な測定値として記録してはいない。",
-    "scope": "設計と解析が中心である。公開ソフトウェア実装は存在するが、第3版本文そのものは再現可能なハードウェア構成、ソフトウェア設定、入力集合、比較対象、反復回数をそろえた実測ベンチマークを提示しない。FPGAへの写像も代表パラメータによる資源量算定であり、実機測定とは記載されない。",
-    "hardware": ["GPU中心の複数GPU・複数ノード構成。具体的GPU型番は記載されない。", "任意構成としてAMD Alveo U55CまたはIntel Agilex級FPGAを想定する。", "CXL Type-3接続のDDRメモリ領域を想定する。"],
-    "models": ["問題規模の例として70億規模、16専門家の混合専門家モデルを挙げる。"],
-    "datasets": [],
-    "workload": "長文脈の混合専門家モデルにおけるデコード要求列を数式でモデル化する。具体的なデータ集合、要求トレース、バッチ構成、文脈長分布を使った実測は本文にない。",
-    "baselines": ["全GPUで密に同期するKVキャッシュ", "各専門家選択・圧縮・保持方式については機構と計算量の比較表が中心で、統一条件の実測比較ではない。"],
-    "metrics": ["漸近的な専門家選択計算量", "KVメモリ転送量", "再利用距離", "圧縮再構成誤差", "解析的な読み出し・復号遅延", "一GPU当たりメモリ量", "FPGAのBRAM・URAM資源量"],
-    "predictor_accuracy": "学習型の性能予測器について精度評価はない。強化学習による専門家選択や多層知覚器による得点器を選択肢として挙げるが、予測精度や生成品質の実測値は提示しない。",
-    "control_knobs": "選択専門家数、断片サイズ、圧縮率または低順位次元、保持ページ数、追い出し閾値、キャッシュ不在罰則を主要な調整変数とする。"
+    "evaluation_summary": "instance-scaleとcluster-scaleの実機評価を行う。Llama系列はDistServe/vLLM系実装と比較し、DeepSeek系列はSGLang、clusterはNVIDIA Dynamoをbaselineとする。ShareGPT、LongBench、MATH-500とsynthetic heterogeneous workloadをPoisson arrivalで投入し、P90/P99 TTFT・TPOT、SLO attainment、平均E2E latency、dynamic adjustmentを測定する。",
+    "scope": "A100 80GB単node、A100 40GB 4node、H200 141GB単node、A800 80GB単nodeを含む実機評価。request rateはper-GPU。Llama3/3.1 8B・70B・405BとDeepSeek-V2-Lite 16B、DeepSeek-V3 671Bを対象にする。",
+    "hardware": [
+      "Server A: NVIDIA A100 80GB SXM4×8, NVLink",
+      "Server B: 4 nodes×NVIDIA A100 40GB SXM4×8, cross-node 200Gbps",
+      "Server C: NVIDIA H200 141GB SXM5×8, NVLink",
+      "Server D: NVIDIA A800 80GB SXM4×8, NVLink"
+    ],
+    "models": [
+      "Llama3-8B",
+      "Llama3-70B",
+      "Llama3.1-405B",
+      "DeepSeek-V2-Lite 16B",
+      "DeepSeek-V3 671B"
+    ],
+    "datasets": [
+      "ShareGPT",
+      "LongBench",
+      "MATH-500",
+      "95% ShareGPT + 5% long-input synthetic cluster workload"
+    ],
+    "workload": "datasetからrequestをsampleしPoisson arrivalで投入。Llama 8BはTP1、70BはTP4、405BはTP8/PP4、DeepSeek-V3はTP8 FP8。Llama/DeepSeek-V2-Liteは主にFP16。",
+    "baselines": [
+      "DistServe 1P1D",
+      "vLLM 0.6.0 default",
+      "vLLM SplitFuse chunk_size 1024",
+      "SGLang 0.4.4",
+      "NVIDIA Dynamo 0.1.1 2P6D"
+    ],
+    "metrics": [
+      "P90/P99 TTFT",
+      "P90/P99 TPOT",
+      "SLO attainment",
+      "average end-to-end latency",
+      "requests/s per GPU",
+      "memory utilization"
+    ],
+    "predictor_accuracy": "性能予測器ではなくSLO feedbackに基づくdynamic resource partitioningを使用するためpredictor accuracy指標はない。",
+    "control_knobs": "prefill/decode SM比率、chunked-prefill token数、decode batch size、cluster routing先。Llama評価のtight/loose SLOは単request latencyのおよそ7.5倍/10倍を基準に設定。"
   },
-  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-2e420bd391f65348ec4b92b8",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
