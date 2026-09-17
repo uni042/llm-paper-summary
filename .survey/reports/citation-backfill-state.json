@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T23:57:20+00:00"
+      "checked_at": "2026-09-17T04:44:08+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T23:57:14+00:00"
+      "checked_at": "2026-09-17T04:44:01+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4910,7 +4910,7 @@
       "status": "blocked",
       "source_fingerprint": "7e00fef820a3e8c0749349d3154faf7b3a1c706dacdef0f03724dafacc15cf0e",
       "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-16T23:57:21+00:00"
+      "checked_at": "2026-09-17T04:44:11+00:00"
     },
     "papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": {
       "status": "complete",
@@ -5052,7 +5052,7 @@
       "status": "blocked",
       "source_fingerprint": "854c3738395df1ff08e8bd60fc12ceea018b4a7e2df147bde17c11302bec11f8",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-16T23:57:16+00:00"
+      "checked_at": "2026-09-17T04:44:05+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md": {
       "status": "complete",
@@ -5122,7 +5122,7 @@
       "status": "blocked",
       "source_fingerprint": "a75f7a788c6b5af06d4ecadf753867f064932837ba54800039ec1b237c738684",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: unable to download arXiv source archive: https://export.arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 406: Not Acceptable | https://arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 404: Not Found)",
-      "checked_at": "2026-09-16T23:57:19+00:00"
+      "checked_at": "2026-09-17T04:44:07+00:00"
     },
     "papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md": {
       "status": "complete",
@@ -5211,7 +5211,87 @@
       "normalized_references": 21,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-16T23:57:21+00:00"
+    },
+    "papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md": {
+      "status": "complete",
+      "source_fingerprint": "e5dd61a72c2551d77ec580d3ea304188d04084f73f613c1518356c7913801f89",
+      "references_total": 54,
+      "normalized_references": 22,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:43:58+00:00"
+    },
+    "papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "9e8bfb3f5fcaba757b0548f8d09f07303a27a053f80bb0a30b9deb3d3d497777",
+      "references_total": 26,
+      "normalized_references": 7,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:43:58+00:00"
+    },
+    "papers/inference/05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "1271b920e9c07233c4b63752eecb8e066e50b8777eac57d0e3efccc906cef1b2",
+      "references_total": 63,
+      "normalized_references": 38,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:01+00:00"
+    },
+    "papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md": {
+      "status": "complete",
+      "source_fingerprint": "a69bcda92d573fc535a9612fa01f35bbdda0a1479f3e2fe55d02a48d32071ebf",
+      "references_total": 38,
+      "normalized_references": 16,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:02+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "538b8f0ee95b05d836099208b3e046fd2f96c9ecbfc1224943705ca3083fb91d",
+      "references_total": 64,
+      "normalized_references": 24,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:03+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md": {
+      "status": "complete",
+      "source_fingerprint": "9fc7e81fc1b0b75326b49c9aa34d11178aa81e24d9d7db574a5d9c5bc377ffee",
+      "references_total": 68,
+      "normalized_references": 39,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:03+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md": {
+      "status": "complete",
+      "source_fingerprint": "ae355a7ef5d3a2f73508631b9f064fd2d51fb21250abe81f66f3d5c8d495051b",
+      "references_total": 49,
+      "normalized_references": 28,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:03+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2605.28302-how-far-can-disaggregation-go-a-design-space-exploration-of-attention-ffn-disaggregation-for-efficient-moe-llm-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "dcf1a9b566dffc4cf6d741343b979065fddd9568a589238495b8d3d38f68e1f2",
+      "references_total": 24,
+      "normalized_references": 11,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:09+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "336c4ec5d286feb735e022eb9961c160c2294869d6cef490b1ae8837715960dd",
+      "references_total": 71,
+      "normalized_references": 33,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:10+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md": {
+      "status": "complete",
+      "source_fingerprint": "d2f297eaaa3bf1ea86a2ab05b707d3bacd81cdf66203cc94813e3c9c5087c72f",
+      "references_total": 26,
+      "normalized_references": 13,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-17T04:44:10+00:00"
     }
   },
-  "updated_at": "2026-09-16T23:57:51+00:00"
+  "updated_at": "2026-09-17T04:44:41+00:00"
 }
