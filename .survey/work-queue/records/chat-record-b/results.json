@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-4b1f52337434d9ea1c49a1f1",
-  "job_id": "job-research-e79ef27915573b54",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b1f52337434d9ea1c49a1f1",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4b1f52337434d9ea1c49a1f1","job_id":"job-research-e79ef27915573b54","data":{"overview":"SLIMのdie-level SLC設計は、疎性予測とパイプラインを組み合わせることでSSD-GPU比最大17.6倍、DRAM-GPU比4.3倍のスループットを示し、DRAM-GPU比8.8〜10.3倍のエネルギー効率を報告する。疎性予測単体は1.28〜1.76倍、疎性+pipelineは1.8〜2.4倍の追加改善を与える。品質面ではLlama2-7B/13Bで40%疎性まで平均zero-shot低下が小さく、60%で平均2〜3ポイント程度の低下となる。","key_results":[{"metric":"生成スループット","value":"最大17.6× vs SSD-GPU、4.3× vs DRAM-GPU","baseline":"SSD-GPU / DRAM-GPU","condition":"die-level SLC、50% sparsityを含むSoA LLM評価","interpretation":"PCIeへ重みを運ばずNAND内部帯域で処理する効果が支配的。"},{"metric":"エネルギー効率","value":"8.8〜10.3× vs DRAM-GPU","baseline":"DRAM-GPU","condition":"die-level SLIM + sparsity prediction","interpretation":"FFN/MoE重み移動削減とPIM/NSP in-situ計算がデータ移動エネルギーを減らす。"},{"metric":"疎性予測の性能寄与","value":"1.28〜1.76× throughput","baseline":"同じSLIM hardwareのdense execution","condition":"モデル別 sparse prediction enabled","interpretation":"非活性ニューロンのweight fetchをNAND段階から省く効果。"},{"metric":"疎性+pipeline寄与","value":"1.8〜2.4×","baseline":"die-level SLC SLIM without optimizations","condition":"50% sparsity + inter-sequence DRAM/SSD pipeline","interpretation":"データ量削減と異種資源重畳が相乗する。"},{"metric":"die-level対channel-level","value":"1.6〜5×","baseline":"channel-level PE","condition":"同一NAND、sparsity可変","interpretation":"NAND dieごとの内部帯域を集約できる設計が高スループット。"},{"metric":"zero-shot品質","value":"Llama2-7B avg 0.65→0.64 at 40%, 0.62 at 60%; 13B 0.67→0.66 at 40%, 0.65 at 60%","baseline":"dense 0% sparsity","condition":"7 zero-shot tasks","interpretation":"40%程度まで低下は小さいが60%では2〜3ポイント程度の平均低下が出る。"},{"metric":"ハードウェア面積/電力","value":"PE area <1% NAND die overhead; total system power estimate ~15W","baseline":"NAND die area / PCIe 75W delivery","condition":"22nm-scaled ASIC estimates","interpretation":"エッジ向け追加ハードウェアの面積・電力を小さく抑える設計。"}],"negative_results":"channel-level設計はONFI channel bandwidthに制約されDRAM-GPUより遅い場合がある。TLCはSLCよりread latencyが高く、特にdie-level sparse random accessでSLC優位が大きい。疎性率を上げるとページread固定費により実効帯域が低下し、小embeddingのDeepSeek-16Bでは疎性予測相対費用も大きい。60%疎性ではzero-shot平均品質が2〜3ポイント低下する。","interpretation":"SLIMの最大の差分はSSDを『重みの待避場所』から『重みを保持したまま計算する実行装置』へ変える点にある。さらに疎性をGPU到着後のzero skipではなくNAND read選択へ押し下げることで、最も高価な重み移動そのものを消している。","quality_impact":"しきい値を上げるほど速度・エネルギーは改善するがFFN近似誤差が増える。元重みを圧縮しないためSVD系より品質低下は小さく、実行時しきい値変更で運用側が品質/性能を調整できる。"},"reservation":{"claim_id":"claim-4b1f52337434d9ea1c49a1f1","worker_id":"scheduled-chat-discovery-specialist-20260917T1800JST","worker_kind":"scheduled_chat"}}
