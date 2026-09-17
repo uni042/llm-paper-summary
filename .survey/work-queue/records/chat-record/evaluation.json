@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d86ce3c4548e1fc7cbd4c04b",
+  "attempt_id": "attempt-8718dff912353a48271bfa65",
   "job_id": "job-research-21f0d525f3274129",
   "data": {
     "hardware": "Purifierの増分処理はIntel i5-9400F 6コア 2.90GHz、23.4GB RAMで測定。LLM生成・判定はGLM-5、独立判定にはQwen3.7plus、Selector解析にはKimi K2.5も用いるが、API背後のGPU構成は論文では特定されない。",
@@ -11,7 +11,7 @@
     "scope": "実CPU上で索引処理遅延を測り、LLM側は商用APIを使ったシステム評価であるため、完全な実機GPUサービング性能比較ではない。対象の中心はコーディング会話で、エンティティ抽出と制御ルーティング評価もSWE-bench由来に偏る。BEAM 1MではM10を使わない簡略Purifierを用い、35会話中14会話のみを評価する。生産導入報告は13インスタンス・350回超のツールラウンドだが対照群を持たない。"
   },
   "reservation": {
-    "claim_id": "claim-d86ce3c4548e1fc7cbd4c04b",
+    "claim_id": "claim-8718dff912353a48271bfa65",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

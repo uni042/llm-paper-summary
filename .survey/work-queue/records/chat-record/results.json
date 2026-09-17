@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d86ce3c4548e1fc7cbd4c04b",
+  "attempt_id": "attempt-8718dff912353a48271bfa65",
   "job_id": "job-research-21f0d525f3274129",
   "data": {
     "overview": "Pullは長期対話の原文を消さずに質問ごとに必要ターンだけを実体化することで、LoCoEvalでは全履歴と同等の回答品質を保ちながら入力トークンを約7割削減した。百万トークン級のBEAM 1Mでは、単なる末尾切り詰めや検索基準より高いF1を示す。構造化ルーティング試験では、単純な密検索やBM25より、時刻・エンティティ・ライフサイクルを順に加えるほどRecall@10が上がり、M10が96.0%に達した。一方で個別失敗例は、遅延実体化そのものではなく、選択に使う索引と因果補完の誤りが品質上限になることを示す。",
@@ -61,7 +61,7 @@
     "quality_impact": "近似的な不可逆圧縮ではなく原文を必要時に再展開するため、設計上は情報を捨てない。ただし回答時にどの原文を選ぶかは近似的であり、選択漏れやM0要約の曖昧化により品質低下は起こる。主評価では平均品質は全履歴と同等または改善したが、22/64単一ホップ試料では独立判定と主判定の方向が一致せず、個別失敗も明示されている。"
   },
   "reservation": {
-    "claim_id": "claim-d86ce3c4548e1fc7cbd4c04b",
+    "claim_id": "claim-8718dff912353a48271bfa65",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
