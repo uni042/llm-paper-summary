@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2604.14626",
   "paper_path": "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
   "selection_reason": "オンプレミスMoE配信のメモリ帯域律速に対し、エキスパート弾性とビット弾性を組み合わせた自己投機的復号とハイブリッドボンディング3DメモリのHW-SW協調設計を提案する。3D積層ハードウェア上で素朴なMoE配信比平均6.6x高速化・4.4xエネルギー効率向上、先行アクセラレータ比2.2x高速化を報告し、MoEキャッシュ・メモリ階層・投機実行の交点として強い。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-17T15:01:24+00:00"
+  "created_at": "2026-09-17T15:01:24+00:00",
+  "completed_at": "2026-09-17T15:36:44+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-721b895c107ac359ea8048a4.json"
 }
