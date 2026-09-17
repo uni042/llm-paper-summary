@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:54:01 JST**
+> 自動生成: **2026-09-17 19:29:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-17 18:53:44 JST（17秒前）** |
+| 最終検証済みResearch収録 | **09-17 18:53:44 JST（35分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **4** | **4** | **0** | **1** | **0** | — |
+| Research | **20** | **4** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **30** | **8** | **8** | **0** | **1** | **0** | **15** |
+| 合計 | **25** | **8** | **8** | **0** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -186,8 +186,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-  - claim: **09-17 17:16:22 JST** / heartbeat: **09-17 17:28:54 JST** / lease expiry: **09-17 18:58:54 JST**
+- `arXiv:2609.14138` — LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 19:29:06 JST** / heartbeat: **—** / lease expiry: **09-17 20:59:06 JST**
   - evidence: `.survey/work-queue/claims/job-research-ce95464a254235a3.json`
 
 #### Audit
