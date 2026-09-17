@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T13:05:04+00:00",
-  "last_run_key": "2026-09-17T22:00:00+09:00",
-  "last_round": "storage-runtime-4",
+  "updated_at": "2026-09-17T14:02:48+00:00",
+  "last_run_key": "2026-09-17T23:00:00+09:00",
+  "last_round": "fresh-kv-agent-runtime-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-12T23:00:00+09:00",
-      "round": "specialist-moe-runtime-ssd-11",
-      "axis": "MoE expert paging・SSD cache・runtime parallelism・prefetch",
-      "query_summary": "SSD-backed expert cache、EP/TP runtime switch、expert paging、representation-based expert prefetch、AMX CPU-GPU co-executionをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第10roundのActions完了後に最新HEADと次discovery jobを取得し、5件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える",
-      "source_submission": "work-queue/submissions/20260912T2324JST-discovery-specialist-11.json"
-    },
     {
       "run_key": "2026-09-13T00:00:00+09:00",
       "round": "specialist-storage-hierarchy-1",
@@ -6806,6 +6791,24 @@
       ],
       "next_axis_hint": "recent September 2026 inference-system papersと引用追跡から未収録候補を探索する",
       "source_submission": "work-queue/submissions/20260917T2200JST-discovery-storage-runtime-4.json"
+    },
+    {
+      "run_key": "2026-09-17T23:00:00+09:00",
+      "round": "fresh-kv-agent-runtime-1",
+      "axis": "September 2026 KV eviction・agent sandbox memory・speculative agent runtime",
+      "query_summary": "直前22:00 runのstorage-runtime軸を避け、September 2026新着からKV eviction、OS-level agent sandbox memory、tool-agent speculative runtimeを探索した。canonical arXiv IDをdefault branchで事前照合し、未検出の3候補を軽量評価して投入した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "2609新着のdistributed serving/networkingと、重要KV/MoE論文のforward citationを別軸で走査する",
+      "source_submission": "work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json"
     }
   ],
   "axes": {
@@ -11220,6 +11223,19 @@
       "duplicate_ratio": 0.2,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "recent September 2026 inference-system papersと引用追跡から未収録候補を探索する"
+    },
+    "September 2026 KV eviction・agent sandbox memory・speculative agent runtime": {
+      "last_run_key": "2026-09-17T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "2609新着のdistributed serving/networkingと、重要KV/MoE論文のforward citationを別軸で走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
