@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:29:35 JST**
+> 自動生成: **2026-09-17 15:01:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-17 14:18:42 JST（10分前）** |
+| 収録候補論文 | **54** |
+| 未claim Research job | **51** |
+| 直近24hの検証済みResearch収録 | **70** |
+| 最終検証済みResearch収録 | **09-17 14:18:42 JST（42分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **4** | **1** | **3** | **3** | **1** | — |
+| Research | **12** | **4** | **1** | **3** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **13** | **5** | **2** | **3** | **3** | **1** | **5** |
+| Discovery | **2** | **1** | **1** | **0** | **0** | **0** | **4** |
+| 合計 | **14** | **5** | **2** | **3** | **3** | **0** | **4** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 15:01:06 JST** job `job-e45c04a3ba21f09c` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260917T1459JST-discovery-unrepresented-memory-systems-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json`
+  - 探索軸: fresh-and-adjacent-memory-offload-kv-systems
 - **09-17 13:41:46 JST** job `job-2910aab086edc06c` / 候補 **5件**
   - result: `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
@@ -133,19 +137,19 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 13:30 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: fresh-arxiv-sep15-inference-systems
-- round `sep15-inference-systems-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json`
-  - 探索軸: fresh-arxiv-sep15-inference-systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T1340JST-discovery-sep15-inference-systems-1.json` (`ok=true`)
+- 最新観測run: **2026-09-17 14:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **4件**
+- 探索軸: fresh-and-adjacent-memory-offload-kv-systems
+- round `unrepresented-memory-systems-1` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json`
+  - 探索軸: fresh-and-adjacent-memory-offload-kv-systems
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T1459JST-discovery-unrepresented-memory-systems-1.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 14:29:24 JST** / lease expiry: **09-17 15:59:24 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
@@ -174,7 +178,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
