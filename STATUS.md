@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 10:32:11 JST**
+> 自動生成: **2026-09-17 10:42:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **57** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-17 07:22:13 JST（3時間9分前）** |
+| 最終検証済みResearch収録 | **09-17 07:22:13 JST（3時間20分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **8** | **4** | **4** | **2** | **2** | — |
+| Research | **4** | **8** | **4** | **4** | **2** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **14** | **10** | **6** | **4** | **2** | **2** | **6** |
+| 合計 | **12** | **10** | **6** | **4** | **2** | **2** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -68,16 +68,6 @@
   - result: `.survey/work-queue/results/research/attempt-9c7bc1c5f144c062d60905d3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9c7bc1c5f144c062d60905d3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md`
-- **09-17 04:37:50 JST** [research] `arXiv:2609.14872` — AgentKV: Phase-Aware KV Eviction for Agentic LLMs
-  - job: `.survey/work-queue/jobs/job-research-71c206bf0990ca87.json`
-  - result: `.survey/work-queue/results/research/attempt-5f751e3b4a448f7f2f7978ae.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5f751e3b4a448f7f2f7978ae.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md`
-- **09-17 04:34:56 JST** [research] `arXiv:2609.16161` — LLM Inference in a Flash!
-  - job: `.survey/work-queue/jobs/job-research-99325bb434e8c117.json`
-  - result: `.survey/work-queue/results/research/attempt-9333f33610f25827f87c2af1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9333f33610f25827f87c2af1.json`
-  - paper: `papers/inference/04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md`
 
 ### Audit
 
