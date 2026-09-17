@@ -5,47 +5,19 @@
   "attempt_id": "attempt-366e50017f388aac9c576b49",
   "job_id": "job-research-6b9319ad56fb236d",
   "data": {
-    "positioning": "PiKVはMoE expert weightのoffload/cacheではなく、MoEでもdenseに残りやすいattention KV cacheをexpert sparsityへ合わせて分散・選択するsystemである。PagedAttention系が主にGPU内のKV page allocationを効率化するのに対し、PiKVはexpert identityをshard keyへ含め、routing decision、remote KV locality、compression、evictionを共同設計する。Quest/H2O/PyramidKVなど個別のsparse attention・retention・compression技術を置き換えるというより、複数方式をpluginとして組み込む上位KV serving frameworkとして位置付けられる。",
-    "differences": "既存のKV圧縮研究はtoken/page削減自体を主眼にし、MoE routingと物理cache localityを直接結び付けないことが多い。PiKVはcache missをrouting scoreへ戻し、expert-sharded storageの場所をqueryごとのexpert選択と連動させる。またoptional FPGA/CXL tierではmetadata処理とKV payload storageをGPUから分離する。ただし既存方式に対する実測優位性はv3本文では示されない。",
+    "positioning": "PiKVは混合専門家モデルの専門家重みを退避・再配置する研究ではなく、混合専門家モデルでも密に残りやすい注意機構のKV状態を、専門家の疎な選択に合わせて分散し必要部分だけ参照する研究である。PagedAttention系が主としてGPU内のページ割当効率を改善するのに対し、PiKVは専門家識別子を保存先の決定に含め、専門家選択、遠隔KVの局所性、圧縮、ページ追い出しを共同設計する。Quest、H2O、PyramidKVなどの個別技術を置き換えるより、それらを交換可能な方式として取り込む上位のKV提供基盤として位置付けられる。",
+    "differences": "既存のKV圧縮研究はトークンやページの削減自体を主眼とし、混合専門家モデルの専門家選択と物理的なキャッシュ局所性を直接結び付けない場合が多い。PiKVはキャッシュ不在を専門家選択得点へ戻し、専門家単位に分けた保存位置を現在の問い合わせに対する専門家選択と連動させる。また任意のFPGA/CXL構成では、付随情報処理とKV本体の保存をGPUから分離する。ただし、第3版本文では既存方式に対する実測優位性を示していない。",
     "relation_to_prior_work": [
-      {
-        "work": "H2O / Quest",
-        "difference": "token/page重要度によるsparse KV accessを、expert-sharded distributed placementとcache-aware routingを含むMoE systemへ組み込む。"
-      },
-      {
-        "work": "PyramidKV / KV compression",
-        "difference": "圧縮単体ではなくrouting・sharding・schedulingと同じpipeline内でcompression ratioをmemory/latency trade-offの一変数として扱う。"
-      },
-      {
-        "work": "PagedAttention",
-        "difference": "GPU内のpage allocation効率化に対し、PiKVはexpert単位のmulti-GPU shard、query-aware retention、remote access localityまで対象にする。"
-      },
-      {
-        "work": "CXL-SpecKV",
-        "difference": "remote KV memory/FPGA accelerationを単独設計するのではなく、PiKVではoptional hardware tierとしてrouting・codec・scheduler metadata engineへmappingする。"
-      }
+      {"work": "H2O / Quest", "difference": "トークンやページの重要度による疎なKV参照を、専門家単位の分散配置とキャッシュ局所性を考慮する専門家選択を含む混合専門家モデル向け処理系へ組み込む。"},
+      {"work": "PyramidKV / KV compression", "difference": "圧縮単体ではなく、専門家選択、分散断片化、ページ保持と同じ処理経路で圧縮率をメモリ量と遅延の調整変数として扱う。"},
+      {"work": "PagedAttention", "difference": "GPU内のページ割当効率化に対し、PiKVは専門家単位の複数GPU分散、問い合わせ依存保持、遠隔アクセス局所性まで対象にする。"},
+      {"work": "CXL-SpecKV", "difference": "遠隔KVメモリやFPGA高速化を単独で扱うのではなく、PiKVでは任意のハードウェア層として専門家選択、圧縮、保持判断の付随情報処理へ写像する。"}
     ],
-    "strengths": [
-      "MoE compute sparsityとKV access sparsityの不一致を明示的に扱う。",
-      "storage・routing・compression・schedulingを共通pipelineへ分解し拡張可能にする。",
-      "per-GPU memoryとshard sizeの解析式を導きdesign knobの関係を整理する。",
-      "公開GitHub libraryがあり継続開発を明記する。",
-      "FPGA/CXLへのmodule mappingまで提示しmetadata offloadの方向性を示す。"
-    ],
-    "limitations": [
-      "arXiv v3本文に独立したempirical evaluation sectionがなく、end-to-end latency/throughput改善を検証できない。",
-      "具体GPU cluster、dataset、request trace、baseline implementation条件が記載されない。",
-      "lossy compression/evictionによるtask quality影響を実測しない。",
-      "FPGA mappingはresource/latency modelであり実機評価ではない。",
-      "多数のrouting/compression/scheduling optionを列挙する一方、実workloadでのpolicy selection根拠が不足する。"
-    ],
-    "implementation_status": "公開repository https://github.com/NoakLiu/PiKV が存在し、論文自身もliving projectと記載する。v3本文はsoftware APIとFPGA mappingを設計として説明するが、公開codeを使った再現benchmark結果は本文には収録されていない。",
-    "research_positioning": "MoE serving研究でexpert weight placementだけでなくKV cacheのdistributed localityをroutingへフィードバックする方向を示す設計研究。実測評価が補われれば、MoE KV管理の統合frameworkとして比較軸になり得る。現状は定量性能よりarchitecture decompositionと解析式を重視して読む必要がある。",
-    "repository_fit": "MoE系統とKV cache/serving系統の交点。expert placement・communication研究に対し、dense KV stateが残すmemory/communication bottleneckを別軸として追加する。"
+    "strengths": ["混合専門家モデルの計算疎性とKVアクセス疎性の不一致を明示的に扱う。", "保存、専門家選択、圧縮、ページ保持を共通処理経路へ分解し交換可能にする。", "一GPU当たりメモリ量と断片サイズの解析式を導き、主要な調整変数の関係を整理する。", "公開GitHub実装があり継続開発されている。", "FPGA/CXLへの構成写像まで提示し、細粒度な付随情報処理をGPUから分離する方向を示す。"],
+    "limitations": ["arXiv第3版本文に独立した実測評価節がなく、エンドツーエンド遅延やスループット改善を検証できない。", "具体的なGPU群、データ集合、要求トレース、比較実装条件が記載されない。", "損失を伴う圧縮やページ追い出しによるタスク品質への影響を実測しない。", "FPGAへの写像は資源量と遅延の解析モデルであり、実機評価ではない。", "多数の専門家選択、圧縮、保持方式を列挙する一方、実ワークロードでの方式選択根拠が不足する。"],
+    "implementation_status": "公開リポジトリ https://github.com/NoakLiu/PiKV が存在し、論文自身も継続開発対象と記載する。第3版本文はソフトウェア構成とFPGAへの写像を設計として説明するが、公開実装を使った再現可能な実測結果は本文に収録されていない。",
+    "research_positioning": "混合専門家モデルの提供系で、専門家重みの配置だけでなくKV状態の分散局所性を専門家選択へフィードバックする方向を示す設計研究である。実測評価が補われれば、混合専門家モデル向けKV管理の統合基盤として比較軸になり得る。現状は定量性能より、構成分解、メモリ式、遠隔アクセス削減の設計意図を重視して読む必要がある。",
+    "repository_fit": "混合専門家モデル系統とKVキャッシュ・提供系統の交点に位置する。専門家配置や通信最適化の研究に対し、密なKV状態が残すメモリ・通信ボトルネックを別の比較軸として追加する。"
   },
-  "reservation": {
-    "claim_id": "claim-366e50017f388aac9c576b49",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-366e50017f388aac9c576b49", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
