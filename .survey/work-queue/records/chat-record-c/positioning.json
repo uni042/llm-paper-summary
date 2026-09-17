@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-f6a5e2ca71f1c7ef9975e44d",
-  "job_id": "job-research-cf3f98aec47a974c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f6a5e2ca71f1c7ef9975e44d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f6a5e2ca71f1c7ef9975e44d","job_id":"job-research-cf3f98aec47a974c","data":{"limitations":"評価機は24 GiB M4 Pro 1台、主要モデルはQwen3.8-27B MXFP4に限定され、CUDA GPUや異なる統合メモリ容量での再現性は未評価。容量試験は反復textとEOS抑制で制御され、実際のcoding agent workloadのlatency分布とは異なる。開発データは複数source revisionにまたがり、TQ4・fusion・segmentation・paging・lifetime管理の各効果を完全に独立分離していない。TQ4はTurboQuant由来であり新量子化法ではない。","differences":"KIVI/KVQuant/TurboQuantが低bit KV表現そのものを主眼とするのに対し、JustFitは圧縮KVのconsumer側workspaceとcomponent lifetimeまで扱う。FlexGen/LLM in a Flash/FlexInferが主に重み・activationの階層配置やoffloadを扱うのに対し、JustFitはApple unified memory内の同時live setを縮める。PagedAttention/Sarathi-Serveのpaging・chunked prefillとは、圧縮KVの直接実行とowner-based component residency、MTP/AR状態遷移を統合する点が異なる。","implementation_status":"MLX上で実装され、Metal kernel specialization、page-native decode、fused direct-inverse prefill、residency manager、continuous batching、prefix reuse、cancellation/page reuseまで実機評価されている。論文はsource snapshotとmanifestによる再現資料を述べるが、arXiv landing pageでは独立した公開repository URLを確認できなかった。","research_positioning":"本リポジトリでは階層メモリ・KV cache・on-device inferenceの交点に位置する。SSD offloadのように別階層へ大量データを移すのではなく、統合メモリ環境で圧縮表現を保持しつつ必要な瞬間だけ実行表現へmaterializeし、owner leaseでcomponentのlive rangeを短縮する。SSD/NVMe系へ拡張するなら、PhaseSwapのfile-backed reconstructionとStateTransのadmission budgetをI/O cost予測と結合し、component/KVのprefetchとevictionを同じlifetime modelで制御する方向が自然である。"},"reservation":{"claim_id":"claim-f6a5e2ca71f1c7ef9975e44d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
