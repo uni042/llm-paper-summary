@@ -2,57 +2,64 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f3d428f698e82fad885bba54",
-  "job_id": "job-research-f371944d5d8c6995",
+  "attempt_id": "attempt-0a00f41d4ded3663e9ca00ff",
+  "job_id": "job-research-476e11d12d88d15c",
   "data": {
-    "canonical_id": "arXiv:2511.04791",
-    "arxiv_id": "2511.04791",
-    "doi": "10.48550/arXiv.2511.04791",
+    "canonical_id": "arXiv:2603.01058",
+    "arxiv_id": "2603.01058",
+    "doi": "10.48550/arXiv.2603.01058",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.AI",
+        "cs.DC"
+      ]
     },
-    "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
-    "summary": "DuetServeは、同一GPUでprefillとdecodeを常時共有すると長いprefillがdecodeのTBTを悪化させる一方、物理的なP/D分離ではモデル複製・KV転送・負荷不均衡が生じる問題を扱う。通常は集約実行を維持し、attention-aware roofline modelがTBT違反を予測した時だけSM単位の空間分割を有効化する。分割比はTBT制約下のthroughput最大化で選び、look-ahead decodeと非同期kernel dispatchでCPU-GPU同期を避ける。Qwen3-8B/14Bと実運用traceで最大1.3xの総throughput改善を報告する。",
-    "list_summary": "TBT違反が予測される時だけ単一GPUのSMをprefill/decodeへ動的分割し、集約方式のthroughputと分離方式のisolationを両立する。",
+    "title": "TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading",
+    "summary": "TriMoEは、混合専門家モデルの単一GPUオフロードで、非高頻度専門家を一括して近傍データ処理へ送る二分法が中頻度専門家に適さない問題を扱う。高頻度はGPU、中頻度は行列拡張命令を備えたCPU、低頻度はDIMM近傍データ処理へ割り当て、全体完了時間を見ながら配置を補正する。さらに専門家負荷を予測し、データ配置変換とDIMM間再均衡を計算と重ねる。復号を2.12〜2.83倍、端末間処理量を2.09〜2.78倍改善した。",
+    "list_summary": "高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。",
     "authors": [
-      "Lei Gao",
-      "Chaoyi Jiang",
-      "Hossein Entezari Zarch",
-      "Daniel Wong",
-      "Mark Hill",
-      "Murali Annavaram"
+      "Yudong Pan",
+      "Yintao He",
+      "Tianhua Han",
+      "Lian Liu",
+      "Shixin Zhao",
+      "Zhirong Chen",
+      "Mengdi Wang",
+      "Cangyuan Li",
+      "Yinhe Han",
+      "Ying Wang"
     ],
-    "published": "2025-11-06",
-    "publication": "ICML; arXiv:2511.04791v2 (2026-05-30)",
+    "published": "2026-03-01",
+    "publication": "DAC 2026; arXiv:2603.01058v1",
     "publication_type": "conference paper / arXiv preprint",
-    "publication_status": "arXiv v1 2025-11-06、v2 2026-05-30。arXiv HTMLはMachine Learning, ICMLと記載。",
+    "publication_status": "DAC 2026採録。arXiv v1は2026-03-01。",
     "topics": [
-      "LLM serving",
-      "prefill-decode scheduling",
-      "GPU spatial multiplexing",
-      "SM partitioning",
-      "SLO",
-      "roofline model"
+      "MoE推論",
+      "専門家オフロード",
+      "階層メモリ",
+      "CPU行列演算",
+      "近傍データ処理",
+      "専門家配置"
     ],
-    "hardware_evaluation": "実機評価。96-core Intel Xeon Platinum 8480C、NVIDIA H100 80GB GPU×2、NVLinkを用い、単一GPU内SM分割と2GPUの分離baselineを比較する。",
-    "quality_effect": "モデル重みや生成アルゴリズムを近似変更する方式ではなく、serving schedulingとGPU resource partitioningを変更するため、論文の主要な交換条件はモデル品質ではなくthroughput・TTFT・TBT・resource utilizationである。",
-    "source": "https://arxiv.org/abs/2511.04791",
+    "hardware_evaluation": "実機・試作評価。NVIDIA H100 PCIe 80GB、Intel Xeon Platinum 8470、8チャネル主記憶、16個のDIMM近傍データ処理器を組み合わせ、PCIe 5.0のホストからGPUへの片方向帯域64GB/sを用いる。",
+    "quality_effect": "モデル近似ではなく専門家の実行場所とデータ配置を変える方式であり、主要な交換条件は生成品質ではなく処理量、復号時間、資源利用率、再配置費用である。",
+    "source": "https://arxiv.org/abs/2603.01058",
     "sources": [
-      "https://arxiv.org/abs/2511.04791",
-      "https://arxiv.org/html/2511.04791"
+      "https://arxiv.org/abs/2603.01058",
+      "https://arxiv.org/html/2603.01058"
     ],
     "code": null,
-    "implementation": "論文はlibsmctrlによるkernel/stream単位のSM masking、CUDA Graph、look-ahead decode、非同期dispatchを統合したprototypeを評価する。arXivのCode/Data欄では公式repository URLを確認できなかったためcodeはnullとする。",
+    "implementation": "GPU側はvLLM 0.8.1、CPU側はKTransformersの行列拡張命令対応カーネルを利用した異種試作系を構築。近傍データ処理器とDIMM間リンク、再配置器を含む構成を評価する。著者公式コードURLはarXivページ上で確認できなかった。",
     "last_checked": "2026-09-17",
     "references": [],
     "references_checked_at": "2026-09-17",
-    "references_source": "arXiv本文を確認。個別reference IDは今回推測で補わない。",
+    "references_source": "arXiv本文を確認し、個別識別子は推測で補わない。",
     "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-f3d428f698e82fad885bba54",
+    "claim_id": "claim-0a00f41d4ded3663e9ca00ff",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

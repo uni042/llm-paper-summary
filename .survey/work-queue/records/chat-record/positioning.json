@@ -2,21 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f3d428f698e82fad885bba54",
-  "job_id": "job-research-f371944d5d8c6995",
+  "attempt_id": "attempt-0a00f41d4ded3663e9ca00ff",
+  "job_id": "job-research-476e11d12d88d15c",
   "data": {
     "limitations": [
-      "評価は主にH100とQwen3-8B/14Bであり、他GPU世代・より大きいtensor-parallel modelで同じSM/HBM complementarityと分割効率が得られる保証はない。",
-      "単一GPU内のlogical isolationであり、モデルが1 GPUへ収まらない場合やcluster-scale fault/isolation要件では物理P/D分離を置き換えない。",
-      "attention-aware modelとpartition optimizerはworkload/context状態の予測精度に依存し、急激な負荷変化や予測誤差ではSLO marginまたはthroughputを損ない得る。",
-      "公式公開コードrepositoryはarXivページ上で確認できず、再現性は論文記述と依存する低水準SM制御機構に依存する。"
+      "DIMM近傍データ処理器と25GB/sの専用DIMM間リンクを備えた試作ハードウェアを前提とし、一般的なGPUサーバでは同じ構成をそのまま利用できない。",
+      "専門家の高・中・低頻度境界と最適割当はモデル、バッチ方式、データ分布、GPU・CPU・主記憶性能によって変わるため、費用表の事前計測が必要になる。",
+      "負荷予測の移動判断精度は78%で完全ではなく、急な人気変化では不要な先読みや再配置が発生し得る。",
+      "主眼は単一GPUでの高処理量MoE推論であり、多GPU専門家並列や分散サービング全体の通信最適化を直接扱わない。"
     ],
-    "differences": "DistServe/Splitwise/Mooncake等のP/D disaggregationがphaseを別GPUへ恒常配置するのに対し、DuetServeは同一GPU上で通常は集約し、TBT危険時だけSMを分割する。Sarathi-Serve/vLLM系chunked prefillがtoken budget中心でiteration workを制御するのに対し、attention/KV costを明示的に予測し、token数だけでは表せないlong-context latencyへ対応する。",
-    "implementation_status": "研究prototypeとして実装・実機評価。libsmctrlでkernel/streamごとのSM maskingを行い、look-ahead decode、非同期kernel dispatch、CUDA Graph等を組み合わせる。arXivの関連コード欄から著者公式repositoryは確認できなかった。",
-    "research_positioning": "LLM serving scheduling／GPU runtime resource partitioning系。物理的P/D disaggregationと集約continuous batchingの二択を、SLO予測に基づく時間可変なintra-GPU isolationへ拡張する。特にlong-contextでattention/KV costが増える環境におけるSLO-aware resource controlとして位置付けられる。"
+    "differences": "MoE-Infinityなどの退避方式が主に専門家の先読みとキャッシュを扱い、FiddlerやKTransformers系がGPUとCPUを協調させ、Monde系がGPUと近傍処理を二分するのに対し、TriMoEは中頻度専門家を独立した負荷階級として定義してCPUへ割り当てる。さらに専門家単体の最適装置ではなく三領域の全体完了時間を最小化し、縞状・局所の重み配置形式まで負荷予測に応じて変換する。",
+    "implementation_status": "H100、Xeon Platinum 8470、16個のDIMM近傍処理器からなる異種試作系で実装・評価。GPUはvLLM 0.8.1、CPUはKTransformersを利用し、近傍処理器、配置変換器、DIMM間リンクを統合する。著者公式コード公開はarXivページ上で確認できなかった。",
+    "research_positioning": "混合専門家モデルのオフロード、階層メモリ、異種計算資源配置の研究。GPUと外部メモリの間にCPU演算と近傍データ処理を役割別に置くため、専門家キャッシュだけでなく『どのメモリ階層の近くで計算するか』を含む三階層配置研究として重要である。"
   },
   "reservation": {
-    "claim_id": "claim-f3d428f698e82fad885bba54",
+    "claim_id": "claim-0a00f41d4ded3663e9ca00ff",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

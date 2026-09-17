@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:11:56 JST**
+> 自動生成: **2026-09-17 13:12:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -120,9 +120,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2511.04791` — DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 13:10:43 JST** / heartbeat: **—** / lease expiry: **09-17 14:40:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f371944d5d8c6995.json`
+- `arXiv:2603.01058` — TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-17 13:12:05 JST** / heartbeat: **—** / lease expiry: **09-17 14:42:05 JST**
+  - evidence: `.survey/work-queue/claims/job-research-476e11d12d88d15c.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`

@@ -2,35 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f3d428f698e82fad885bba54",
-  "job_id": "job-research-f371944d5d8c6995",
+  "attempt_id": "attempt-0a00f41d4ded3663e9ca00ff",
+  "job_id": "job-research-476e11d12d88d15c",
   "data": {
-    "hardware": "96-core Intel Xeon Platinum 8480C、NVIDIA H100 80GB HBM3 GPU×2、GPU間NVLink。H100上ではTPCがSM分割の最小単位で、論文はactive TPC数に対するFLOPs/HBM bandwidth scalingもmicrobenchmarkする。",
-    "software": "CUDA 13.0、PyTorch 2.8.0。比較対象は集約型vLLM系、分離型NVIDIA Dynamo系など。DuetServeはlibsmctrlでkernel/streamのSM可視性を制御する。",
+    "hardware": "NVIDIA H100 PCIe 80GB、Intel Xeon Platinum 8470、8チャネル主記憶、16個のDIMM近傍データ処理器からなる異種試作系。ホストからGPUへのPCIe 5.0片方向帯域は64GB/s。DIMM間リンクは25GB/sでCPUを介さない移動に使う。",
+    "software": "GPU実行にvLLM 0.8.1、CPUの行列拡張命令実行にKTransformersを利用する。装置別のトークン数対実行時間を事前計測して費用表を作り、オンライン割当へ利用する。",
     "datasets": [
-      "Azure-Code serving trace",
-      "Azure conversational serving trace",
-      "Mooncake serving trace"
+      "複数の代表的MoEモデル",
+      "実データ由来の専門家活性化分布",
+      "高処理量のオフライン／ジグザグ型バッチ条件"
     ],
-    "methodology": "Qwen3-8BとQwen3-14Bを実運用由来の異なるinput/output長分布でservingし、query rateを変えながらtotal token throughput、TTFT、TBTを比較する。動機実験ではQwen3-8Bを2 H100で、集約2 replicaと1P+1D分離を比較し、8K input/200 output条件でもresource imbalanceを測る。さらにroofline prediction accuracy、SM分割、execution engineのablationを行う。",
+    "methodology": "まずモデル・データ・バッチ条件を変えて専門家活性化を測り、高・中・低頻度群の比率を確認する。次にGPU、CPU、近傍処理器でトークン数を変えた専門家演算性能を測定し、中頻度群がGPUでは転送律速、近傍処理では演算律速になることを示す。端末間評価では既存の単一GPUオフロード方式と比較し、復号時間、総処理量、装置利用率を測る。割当補正、負荷予測、配置変換、DIMM間再均衡の寄与も個別に評価する。",
     "settings": [
       {
-        "name": "aggregated vs disaggregated motivation",
-        "description": "Qwen3-8B、H100×2。集約側は両GPUにreplica、token budget 8192。分離側は1 prefill + 1 decode。8K input/200 outputでQPSを変化させTTFT/TBT/throughputを測る。"
+        "name": "中頻度専門家の特性測定",
+        "description": "非高頻度群を一括せず、各専門家の処理トークン数を測定する。低頻度群は70%超の専門家を占めるが処理トークンは8%程度、中頻度群は20〜40%の専門家で最大70%のトークンを担う条件を確認する。"
       },
       {
-        "name": "realistic traces",
-        "description": "Qwen3-8B/14BをAzure-Code、Azure conversational、Mooncake traceで評価し、負荷に応じたadaptive spatial multiplexingのthroughput-latency tradeoffを比較する。"
+        "name": "三装置の演算・転送特性",
+        "description": "H100では一専門家256トークン以上でも利用率30%程度が必要で、中頻度群はそれ未満となる。CPUは行列拡張命令で数十〜数百トークンの専門家を効率よく処理し、近傍処理器は低頻度で帯域優位を得る。"
       },
       {
-        "name": "model/partition ablation",
-        "description": "attention-aware latency modelの予測、active SM/TPC数とcompute/HBM scaling、partition optimizerとlook-ahead executionの寄与を個別検証する。"
+        "name": "端末間処理量評価",
+        "description": "三者協調、律速補正、予測再配置を統合し、既存オフロード方式に対する復号高速化と総処理量改善を複数MoEモデルで測定する。"
       }
     ],
-    "scope": "H100世代GPUとQwen3-8B/14Bを中心とする実機serving評価。単一GPU内SM partitioningの有効性が中心で、異なるGPU architectureや大規模tensor-parallel modelへの一般化は将来課題として残る。"
+    "scope": "単一H100を中心とした高処理量MoE推論が対象。DIMM近傍処理器と専用DIMM間リンクを備える試作構成を前提とするため、一般的な市販サーバへそのまま適用できるわけではない。"
   },
   "reservation": {
-    "claim_id": "claim-f3d428f698e82fad885bba54",
+    "claim_id": "claim-0a00f41d4ded3663e9ca00ff",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
