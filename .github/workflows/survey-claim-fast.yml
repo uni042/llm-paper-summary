@@ -41,15 +41,9 @@ jobs:
             .survey/scripts/apply_library_checkpoint_barriers.py \
             .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/select_record_bank.py \
-            .survey/scripts/record_bank_config.py \
-            .survey/scripts/refresh_queue_snapshot.py \
-            .survey/scripts/ensure_dashboard_history.py \
-            .survey/scripts/build_status_dashboard.py \
-            .survey/scripts/render_status_dashboard.py \
-            .survey/scripts/append_research_throughput_status.py \
-            .survey/scripts/refine_status_observability.py
+            .survey/scripts/record_bank_config.py
 
-      - name: Allocate claims, reserve record banks, and publish lightweight snapshot
+      - name: Allocate claims and reserve record banks
         shell: bash
         run: |
           set -euo pipefail
@@ -65,21 +59,13 @@ jobs:
             python .survey/scripts/claim_worker_with_banks.py --repo-root .
             python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
             python .survey/scripts/enrich_claim_record_routes.py --repo-root .
-            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-            python .survey/scripts/ensure_dashboard_history.py --repo-root .
-            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
-            python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
-            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
 
             git add \
-              STATUS.md \
+              .survey/work-queue/claim-requests \
               .survey/work-queue/jobs \
               .survey/work-queue/claims \
               .survey/work-queue/claim-results \
-              .survey/work-queue/records \
-              .survey/work-queue/next-jobs.json \
-              .survey/work-queue/run-ledger.json \
-              .survey/work-queue/discovery-state.json
+              .survey/work-queue/records
 
             if git diff --cached --quiet; then
               echo 'Claim state already settled.'
