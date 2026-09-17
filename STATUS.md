@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 21:37:52 JST**
+> 自動生成: **2026-09-17 22:00:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **45** |
 | 未claim Research job | **44** |
-| 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-17 20:41:39 JST（56分前）** |
+| 直近24hの検証済みResearch収録 | **54** |
+| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間19分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **17** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **5** | **5** | **0** | **0** | **0** | **16** |
-| 合計 | **24** | **7** | **5** | **2** | **1** | **0** | **16** |
+| Discovery | **5** | **1** | **0** | **1** | **0** | **0** | **5** |
+| 合計 | **22** | **3** | **0** | **3** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -143,29 +143,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 21:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **0件** / 候補: **16件**
-- 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache / KV cache reservation・GPU L2 prefetch・multi-GPU migration / MoE expert cache ownership・online placement・resource allocation / network-aware KV transfer・decode routing・disaggregated serving evaluation / SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
-- round `cxl-memory-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json`
-  - 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-cxl-memory-3.json` (`ok=true`)
-- round `kv-scheduling-2` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json`
-  - 探索軸: KV cache reservation・GPU L2 prefetch・multi-GPU migration
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-kv-scheduling-2.json` (`ok=true`)
-- round `moe-placement-5` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-moe-placement-5.json`
-  - 探索軸: MoE expert cache ownership・online placement・resource allocation
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-moe-placement-5.json` (`ok=true`)
-- round `network-disagg-4` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-network-disagg-4.json`
-  - 探索軸: network-aware KV transfer・decode routing・disaggregated serving evaluation
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-network-disagg-4.json` (`ok=true`)
-- round `storage-moe-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json`
-  - 探索軸: SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2100JST-discovery-storage-moe-1.json` (`ok=true`)
+- 最新観測run: **2026-09-17 22:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
+- round `offload-serving-1` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
+  - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -222,10 +206,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **450** |
+| 成功result未照合のimmutable submission | **451** |
 | └ Research | **321** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
