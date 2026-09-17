@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 16:41:40 JST**
+> 自動生成: **2026-09-17 16:41:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **61** |
+| 収録候補論文 | **60** |
 | 未claim Research job | **58** |
-| 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-17 16:39:31 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **60** |
+| 最終検証済みResearch収録 | **09-17 16:41:43 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **61** |
+| canonical_id確認済みの一意な候補論文 | **60** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **61** |
+| 非終端Research job合計 | **60** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **2** | **1** | **1** | **3** | **1** | — |
+| Research | **17** | **2** | **2** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **21** | **6** | **5** | **1** | **3** | **1** | **15** |
+| 合計 | **22** | **6** | **6** | **0** | **2** | **1** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 16:41:43 JST** [research] `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
+  - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d138fd01aeed0094d3129bad.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md`
 - **09-17 16:39:31 JST** [research] `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts
   - job: `.survey/work-queue/jobs/job-research-7f3f089c5dc01c0c.json`
   - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-acc1b683ee406ecf9ec83842.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-acc1b683ee406ecf9ec83842.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2605.28302-how-far-can-disaggregation-go-a-design-space-exploration-of-attention-ffn-disaggregation-for-efficient-moe-llm-serving.md`
-- **09-17 13:24:04 JST** [research] `arXiv:2609.12208` — Vortex: Bridging Extreme Compression and Efficient LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-a06bdf20c1667dad.json`
-  - result: `.survey/work-queue/results/research/attempt-c2d1264e84b9954d425e9dd6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c2d1264e84b9954d425e9dd6.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md`
 
 ### Audit
 
@@ -131,13 +131,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts
   - job: `.survey/work-queue/jobs/job-research-7f3f089c5dc01c0c.json`
   - result: `.survey/work-queue/results/research/attempt-78cb43ce4509a618c85127b5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-78cb43ce4509a618c85127b5.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-d138fd01aeed0094d3129bad.json` (job `job-research-bf0b422fe6562f5b`)
+- **成功** `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-bf0b422fe6562f5b.json`
+  - result: `.survey/work-queue/results/research/attempt-d138fd01aeed0094d3129bad.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d138fd01aeed0094d3129bad.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md`
 
 #### Audit (:30)
 
@@ -171,10 +175,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2601.19278` — DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 16:40:11 JST** / heartbeat: **—** / lease expiry: **09-17 18:10:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-bf0b422fe6562f5b.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
@@ -200,7 +201,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **61** |
+| ready | **60** |
 
 ### 候補の重複・識別情報欠損
 
@@ -220,7 +221,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **661** |
+| inference/training/survey配下の論文Markdown実体 | **662** |
 
 ### immutable submissionの未照合
 
@@ -228,8 +229,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **431** |
-| └ Research | **304** |
+| 成功result未照合のimmutable submission | **430** |
+| └ Research | **303** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
