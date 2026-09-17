@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5b8e027a5ceab4cc1836363d",
-  "job_id": "job-research-f371944d5d8c6995",
-  "data": {
-    "overview": "DuetServeは、必要時だけSM空間分割を有効化することで、集約型の高いresource utilizationとP/D分離型のTBT isolationの中間を狙う。Qwen3-8B/14Bと三つのrealistic workloadで、低いgeneration latencyを維持しながらstate-of-the-art serving framework比で総throughputを最大1.3x改善した。",
-    "key_results": [
-      {
-        "metric": "total throughput",
-        "value": "最大1.3x改善",
-        "baseline": "state-of-the-art LLM serving frameworks",
-        "condition": "Qwen3-8B/14B、realistic serving workloads",
-        "interpretation": "恒常的なP/D分離をせず、contention時だけSM isolationを使うことでresource imbalanceを抑えた。"
-      },
-      {
-        "metric": "aggregated prefill iteration latency",
-        "value": "8K token budgetで180ms超",
-        "baseline": "100msの典型TBT SLO",
-        "condition": "H100上のprefill-only batch motivation experiment",
-        "interpretation": "linear-layer utilization最大化だけではdecode TBTを守れないことを示す。"
-      },
-      {
-        "metric": "decode latency variation",
-        "value": "同一token budget 8でもcontext増加で4x超の差",
-        "baseline": "短context decode",
-        "condition": "decode-only profiling",
-        "interpretation": "KV-cache readを含むattention costをscheduler modelへ入れる必要性を示す。"
-      },
-      {
-        "metric": "disaggregated throughput",
-        "value": "高QPS域でaggregated systemの半分未満",
-        "baseline": "Agg-vLLM",
-        "condition": "Qwen3-8B、H100×2、1P+1D vs 2 aggregated replicas、8K input/200 output",
-        "interpretation": "固定P/D分離のresource imbalanceがthroughput bottleneckになる。"
-      }
-    ],
-    "negative_results": "固定token-budget型chunked prefillはH100の大きい8K budgetでTBT SLOを破り得る。固定P/D disaggregationはTBTを安定させる一方、負荷がprefill/decode間で偏ると片側GPUがbottleneckとなり総throughputが低下する。DuetServeもSM分割中は各phaseが利用できるcompute resourceを減らすため、contentionがない時まで分割を維持するのは不利でありadaptive switchingが必要になる。",
-    "interpretation": "利得の源泉は、prefillがSM computeを、decodeがHBM bandwidthを異なる比率で消費するresource complementarityにある。H100では20%程度のSMでも約60%のpeak HBM bandwidthへ達する一方、FLOPsはSM数に概ね比例するため、decodeへ比較的少ないSMを割り当ててもmemory-bound性能を保ちやすく、残りをprefillへ回せる。",
-    "quality_impact": "モデル近似や重み変更ではなくserving executionの変更なので、主要評価は生成品質低下ではなくSLO・throughput。論文は低TBTを維持しつつthroughputを改善したと報告する。"
-  },
+  "attempt_id": "attempt-e27a1765145ab45647cea4cb",
+  "job_id": "job-research-476e11d12d88d15c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5b8e027a5ceab4cc1836363d",
+    "claim_id": "claim-e27a1765145ab45647cea4cb",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

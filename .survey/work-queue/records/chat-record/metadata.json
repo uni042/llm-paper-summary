@@ -2,57 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5b8e027a5ceab4cc1836363d",
-  "job_id": "job-research-f371944d5d8c6995",
-  "data": {
-    "canonical_id": "arXiv:2511.04791",
-    "arxiv_id": "2511.04791",
-    "doi": "10.48550/arXiv.2511.04791",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
-    "summary": "DuetServeは、同一GPUでprefillとdecodeを常時共有すると長いprefillがdecodeのTBTを悪化させる一方、物理的なP/D分離ではモデル複製・KV転送・負荷不均衡が生じる問題を扱う。通常は集約実行を維持し、attention-aware roofline modelがTBT違反を予測した時だけSM単位の空間分割を有効化する。分割比はTBT制約下のthroughput最大化で選び、look-ahead decodeと非同期kernel dispatchでCPU-GPU同期を避ける。Qwen3-8B/14Bと実運用traceで最大1.3xの総throughput改善を報告する。",
-    "list_summary": "TBT違反が予測される時だけ単一GPUのSMをprefill/decodeへ動的分割し、集約方式のthroughputと分離方式のisolationを両立する。",
-    "authors": [
-      "Lei Gao",
-      "Chaoyi Jiang",
-      "Hossein Entezari Zarch",
-      "Daniel Wong",
-      "Mark Hill",
-      "Murali Annavaram"
-    ],
-    "published": "2025-11-06",
-    "publication": "ICML; arXiv:2511.04791v2 (2026-05-30)",
-    "publication_type": "conference paper / arXiv preprint",
-    "publication_status": "arXiv v1 2025-11-06、v2 2026-05-30。arXiv HTMLはMachine Learning, ICMLと記載。",
-    "topics": [
-      "LLM serving",
-      "prefill-decode scheduling",
-      "GPU spatial multiplexing",
-      "SM partitioning",
-      "SLO",
-      "roofline model"
-    ],
-    "hardware_evaluation": "実機評価。96-core Intel Xeon Platinum 8480C、NVIDIA H100 80GB GPU×2、NVLinkを用い、単一GPU内SM分割と2GPUの分離baselineを比較する。",
-    "quality_effect": "モデル重みや生成アルゴリズムを近似変更する方式ではなく、serving schedulingとGPU resource partitioningを変更するため、論文の主要な交換条件はモデル品質ではなくthroughput・TTFT・TBT・resource utilizationである。",
-    "source": "https://arxiv.org/abs/2511.04791",
-    "sources": [
-      "https://arxiv.org/abs/2511.04791",
-      "https://arxiv.org/html/2511.04791"
-    ],
-    "code": null,
-    "implementation": "論文はlibsmctrlによるkernel/stream単位のSM masking、CUDA Graph、look-ahead decode、非同期dispatchを統合したprototypeを評価する。arXivのCode/Data欄では公式repository URLを確認できなかったためcodeはnullとする。",
-    "last_checked": "2026-09-17",
-    "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv本文を確認。個別reference IDは今回推測で補わない。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-e27a1765145ab45647cea4cb",
+  "job_id": "job-research-476e11d12d88d15c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5b8e027a5ceab4cc1836363d",
+    "claim_id": "claim-e27a1765145ab45647cea4cb",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
