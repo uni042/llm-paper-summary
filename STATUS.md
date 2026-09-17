@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 07:30:57 JST**
+> 自動生成: **2026-09-18 07:31:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **56** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 06:47:17 JST（43分前）** |
+| 最終検証済みResearch収録 | **09-18 06:47:17 JST（44分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **3** | **0** | **2** | **0** | — |
+| Research | **10** | **4** | **3** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **23** | **11** | **11** | **0** | **2** | **0** | **18** |
+| 合計 | **23** | **12** | **11** | **1** | **2** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
+- immutable submission: **4件** / 検証済み成功: **3件** / 未完了・未検証: **1件**
 - **成功** `arXiv:2509.26328` — Fast-dLLM v2: Efficient Block-Diffusion LLM
   - job: `.survey/work-queue/jobs/job-research-2ce5027f5de1889a.json`
   - result: `.survey/work-queue/results/research/attempt-3e15395a7f97e5270e96de72.json` (`ok=true`)
@@ -162,6 +162,7 @@
   - result: `.survey/work-queue/results/research/attempt-9728a65bf10d91c2f0a02ad3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9728a65bf10d91c2f0a02ad3.json`
   - paper: `papers/inference/05-moe/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a65fafc0985029a9a69cb193.json` (job `job-research-146f944f1c748398`)
 - **成功** `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
   - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
   - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
@@ -270,8 +271,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **469** |
-| └ Research | **340** |
+| 成功result未照合のimmutable submission | **470** |
+| └ Research | **341** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
