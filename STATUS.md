@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 15:45:36 JST**
+> 自動生成: **2026-09-17 15:50:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **62** |
 | 未claim Research job | **60** |
-| 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-17 15:44:33 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **63** |
+| 最終検証済みResearch収録 | **09-17 15:44:33 JST（6分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **4** | **1** | **3** | **2** | **1** | — |
+| Research | **15** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **20** | **8** | **5** | **3** | **2** | **1** | **15** |
+| 合計 | **20** | **6** | **6** | **0** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -130,20 +130,22 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-17 13:30 JST** / worker `scheduled-chat-paper-20260917T1330JST`
-- immutable submission: **4件** / 検証済み成功: **1件** / 未完了・未検証: **3件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0dacd70c0debc8b74170e20e.json` (job `job-research-6b9319ad56fb236d`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-3fd0abe9beaed22201ef8ff4.json` (job `job-research-0923832e7cd03d20`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-987e47d076f99ed6f71340e5.json` (job `job-research-4954e0b135582135`)
-- **成功** `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference
-  - job: `.survey/work-queue/jobs/job-research-4954e0b135582135.json`
-  - result: `.survey/work-queue/results/research/attempt-f7834266028442ea9afab397.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f7834266028442ea9afab397.json`
-  - paper: `papers/inference/03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md`
+- 最新観測run: **2026-09-17 15:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2609.14507` — Physically Partitioned KVCache Format for CPU--GPU Load Balancing in MoE Inference
+  - job: `.survey/work-queue/jobs/job-research-05978e704eaf8286.json`
+  - result: `.survey/work-queue/results/research/attempt-81cca2a745d2540e0c24bc47.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-81cca2a745d2540e0c24bc47.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md`
+- **成功** `arXiv:2609.17008` — FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-ee19ffd9b6b00e19.json`
+  - result: `.survey/work-queue/results/research/attempt-ddc2745db0f900abfd7bf01e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ddc2745db0f900abfd7bf01e.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-17 13:30 JST** / worker `scheduled-chat-paper-20260917T1330JST`
+- 最新観測run: **2026-09-17 15:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -173,7 +175,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2602.02108` — Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts / worker `scheduled-chat-llm-survey`
   - claim: **09-17 15:45:07 JST** / heartbeat: **—** / lease expiry: **09-17 17:15:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-7f3f089c5dc01c0c.json`
