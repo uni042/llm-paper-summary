@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ef5e846f84592864e5a802f9","job_id":"job-research-581beb5301e2ddf8","data":{"overview":"CHIMEは長文脈でKV容量と注意帯域を同時に増やせるDIMM-PIMを使うことで、HBM-PIMの容量律速とCPU/DIMMの帯域律速の中間を狙う。3モデル・長文脈実トレースの評価ではHBM-PIM比最大5.15倍、同コスト拡張HBM-PIM比3.45倍、GPU-only比3.94倍、rank-level DIMM-PIM比7.21倍のスループットを示す。主因はKV容量によるバッチ拡大で、GPU/HBM-PIM比6.6倍の平均バッチを許しながらバッチ遅延は2.2倍に留まる。内部パイプライン、再配置、PCIe重畳、予測スケジューラもそれぞれ同期バブルを削減する。","key_results":[{"metric":"エンドツーエンドスループット","value":"最大5.15×","baseline":"HBM-PIM","condition":"OPT-66B/QWEN-72B/GPT-175B、長文脈実トレース","interpretation":"HBM-PIMの極端な帯域より、2TB級KV容量でバッチを拡大してGPU全結合利用率を上げる効果が大きい。"},{"metric":"GPU-only比スループット","value":"最大3.94×","baseline":"GPU-only A100","condition":"1,000-request trace evaluations","interpretation":"KVとデコード注意をDIMM-PIMへ分離してGPUメモリ容量・注意帯域の競合を減らす。"},{"metric":"平均バッチサイズ","value":"6.6×増加","baseline":"GPU/HBM-PIM baselines","condition":"OpenR1 performance breakdown","interpretation":"容量拡張が主要性能源で、バッチ遅延は2.2×増に留まるため総スループットが上がる。"},{"metric":"容量・帯域共同スケーリング","value":"8.23× throughput","baseline":"base 1-rankset, 512GB","condition":"GPT-175B, both bandwidth and capacity 8×","interpretation":"容量のみ8×では2.28×、帯域のみ8×では1.01×に留まり、DRMの『弱い資源が律速』という主張を定量的に支持する。"},{"metric":"CHIME-PIM pipeline latency reduction","value":"27.9% MHA / 74.4% GQA","baseline":"naive bank-level DIMM-PIM","condition":"bubble-free pipelining ablation","interpretation":"rank-bank間転送をbank演算へ隠し、特にGQAのチップ間同期費を大幅に削る。"},{"metric":"scheduler TBT reduction","value":"最大70.93%","baseline":"capacity-filling scheduler","condition":"alignment-predicting scheduling","interpretation":"単に最大バッチを詰めるのではなくGPU/PIM所要時間を揃えることで待ちバブルを抑え、throughputを犠牲にしない。"},{"metric":"PCIe overhead reduction","value":"最大75.08%","baseline":"overlapなし","condition":"rankset-granular communication-computation overlap","interpretation":"独立rankset間で通信と注意計算を重ね、AFD装置間転送の大部分を隠す。"},{"metric":"総エネルギー","value":"40%削減","baseline":"GPU baseline normalized to 1","condition":"GPT-175B, OpenR1","interpretation":"大バッチ化によりGPU全結合で重みを読む回数を減らすことが主な省エネルギー源となる。"}],"negative_results":"DIMM-PIMが常に最適とは限らない。DRM分析ではGPU全結合側をB200などへ強化するとFC曲線が上がり、HBM-PIMの高帯域を活かせる領域が増えてCHIMEの優位が縮小し、条件によって逆転する。短文脈ではKV容量・帯域制約が緩むためCHIMEの相対利得も小さくなる。容量だけを8倍にしてもGPT-175Bで2.28倍、帯域だけ8倍では1.01倍であり、一資源だけの増設は効率が悪い。CHIME-PIMは提案ハードウェアのシミュレーション評価であり、実DIMM製造・実装による検証は未実施である。","interpretation":"性能の中心はPIM演算器そのものの単体高速化ではなく、長文脈KVを十分保持してGPU全結合の効率が上がるバッチまで拡張しつつ、そのバッチの注意を処理できる帯域も同時に用意することにある。内部・PCIe・進行同期の各最適化は、この容量・帯域バランスで得た理論性能を同期バブルで失わないための補完機構である。","quality_impact":"モデル演算を近似せずFP16のattention/FCを異なる装置へ配置するシステムで、出力品質を意図的に変更する手法ではない。論文は性能シミュレーションを主眼とし、タスク精度やperplexityの比較は報告していないため、数値的な実装差による品質影響は評価範囲外である。"},"reservation":{"claim_id":"claim-ef5e846f84592864e5a802f9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-af88b7967bb739f0955daaa6",
+  "job_id": "job-research-8423392e3664b697",
+  "data": {
+    "overview": "AdaServeは、固定バッチ速度や固定投機長ではなく、各リクエストの現在のSLO遅れを毎反復計算して検証トークン予算を振り分けることで、厳しい要求が増えてもSLO達成率を維持しながらGPUの残余計算をスループットへ使う。評価では最良比較対象に対してSLO違反率を最大4.3倍削減し、有効スループットを最大1.9倍改善する。SLOが厳しくなる条件でも最大1.38倍の有効スループットを維持し、CPU上の候補選択費用は全時間の0.31〜0.41%に留まる。",
+    "key_results": [
+      {
+        "metric": "SLO違反率削減",
+        "value": "最大4.3×低減",
+        "baseline": "各条件の最良比較対象",
+        "condition": "multi-SLOワークロード、Llama3.1-70B/Qwen2.5-32B、アプリ分布変化",
+        "interpretation": "厳しい要求へ必要な期待受理トークンを先に割り当てるため、連続バッチや固定投機よりSLO遅れを直接補正できる。"
+      },
+      {
+        "metric": "有効スループット",
+        "value": "最大1.9×改善",
+        "baseline": "最良比較対象",
+        "condition": "評価したmulti-SLO到着率範囲",
+        "interpretation": "SLOを満たすリクエストだけを数える有効スループットで改善し、単純な総処理量増加ではなくSLO制約下の処理能力向上を示す。"
+      },
+      {
+        "metric": "厳格SLO比率変化時の有効スループット",
+        "value": "最大64%向上",
+        "baseline": "最良比較対象",
+        "condition": "厳格SLOリクエスト比率を変更",
+        "interpretation": "連続バッチ方式が小バッチ化と混雑で悪化する条件でも、投機資源をリクエスト別に変えることで高負荷へ適応する。"
+      },
+      {
+        "metric": "厳しいSLO倍率での違反率",
+        "value": "最大4.61× / 3.05×低減",
+        "baseline": "最良比較対象",
+        "condition": "4.0 RPS、urgent比率0.6、Llama/Qwenの2設定",
+        "interpretation": "通常デコードでは達成困難なSLO倍率でも、一反復で複数トークンを進める投機的デコードが速度自由度を与える。"
+      },
+      {
+        "metric": "厳しいSLO倍率での有効スループット",
+        "value": "最大1.38×",
+        "baseline": "最良比較対象",
+        "condition": "SLO scale sweep",
+        "interpretation": "厳しい要求を優先しても残余検証予算を全体受理数へ回すため、SLO達成とスループットの両方を維持する。"
+      },
+      {
+        "metric": "CPU選択オーバーヘッド",
+        "value": "0.41% / 0.31%",
+        "baseline": "全配信時間",
+        "condition": "Llama3.1-70B / Qwen2.5-32B",
+        "interpretation": "候補木を先にGPUで生成して選択を分離したため、SLO別トークン選択自体はボトルネックにならない。"
+      }
+    ],
+    "negative_results": "固定投機方式と同様、投機の利得はドラフトモデルの採用精度に依存する。AdaServeでは高負荷時に平均受理トークン数が低下し、動的にdとwを縮めて無駄な候補生成を抑える必要がある。候補経路確率はドラフトモデルlogitによる近似であり、対象LLMの真の採用確率とずれるとSLO用予算配分が非最適になる。木深さdで一反復に進める上限を超えるほど遅れたリクエストは、その反復だけではSLOへ完全復帰できない。評価はA100と同系列ドラフトモデル中心である。",
+    "interpretation": "AdaServeの利得は投機的デコードそのものだけでなく、投機木のサイズを『全員を最大加速する値』から『各SLOを満たす最低限+残余の全体最適化』へ変えた点にある。厳しいリクエストが少ない時は緩い要求へ余力を回し、厳しい要求が増えればその要求へ多くの候補を割り当てる。活動数が増えるとd/wを下げるため、ドラフト計算が検証予算を上回って捨てられる状況も抑える。",
+    "quality_impact": "対象LLMが投機候補を通常の投機的デコード手順で検証するため、採用された出力の生成分布は元の対象モデルと同じであり、品質を近似して速度を得る方式ではない。近似するのは各候補が採用される確率と、それに基づくSLO資源配分である。近似誤差は性能・SLO達成効率へ影響するが、誤ったドラフトトークンをそのまま出力することはない。"
+  },
+  "reservation": {
+    "claim_id": "claim-af88b7967bb739f0955daaa6",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

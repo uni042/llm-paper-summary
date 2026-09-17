@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ef5e846f84592864e5a802f9","job_id":"job-research-581beb5301e2ddf8","data":{"hardware":"システム評価はAttAcc系シミュレータを拡張し、GPU側を8×A100、合計640GB HBM、16.3TB/sとしてモデル化する。CPU比較は2TB host memory・406GB/s、HBM-PIMは640GB/260.8TB/sまたは同コスト拡張320GB/130.4TB/s、rank-level DIMM-PIMは2TB/1.6TB/s、CHIME bank-level DIMM-PIMは2TB/13.0TB/s。DDR4-3200、2 ranks×8 chips×4 bank groups×4 banks等のDRAM timingを使用する。","software":"OPT-66B、QWEN-72B、GPT-175BをFP16で評価し、それぞれMHA/GQA、tensor/data parallel構成をモデル化する。GPUカーネル性能は実機A100のプロファイルと既存シミュレータに基づき、CHIME-PIMはDRAM timing、bank/rank PU演算、PCIe通信をサイクル水準でモデル化する。スケジューラのGPU時間予測にはRandom Forest Regression、PIM側には線形モデルを用いる。","methodology":"OpenR1-Math-220K、OpenThoughts-114k-math、Dolphin-r1から各評価で1,000リクエストを無作為抽出し、総出力トークン数/総実行時間でエンドツーエンドスループットを算出する。短文脈用にDolphin-r1の各文を1/10へ短縮したDolphin-shortも使う。比較対象はGPU-only、CPU注意オフロード、rank-level DIMM-PIM、HBM-PIM、同コストHBM-PIM-EXT等。容量のみ、帯域のみ、両方を8倍へ拡張するスケーラビリティ試験、bubble-free pipeline、re-layout、scheduler、PCIe重畳の各アブレーション、エネルギー・面積分析を行う。スケジューラ予測器は収集した1,000点を8:2で学習・試験する。","scope":"主要結果は提案DIMM-PIMを含むシミュレーションであり、完成したCHIME-PIM DIMM実機によるエンドツーエンド測定ではない。GPU演算はA100実測に基づくが、PIM面積・電力・DRAM動作は合成・既存モデル・タイミングパラメータを組み合わせる。長文脈の3実トレースを中心に評価し、B200等の将来GPUではDRM分析上HBM-PIMとの優位関係が逆転し得ることも示す。"},"reservation":{"claim_id":"claim-ef5e846f84592864e5a802f9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-af88b7967bb739f0955daaa6",
+  "job_id": "job-research-8423392e3664b697",
+  "data": {
+    "hardware": "単一計算ノードに4×NVIDIA A100 80GBを搭載しNVLink接続する。CPUはAMD EPYC 7763 64コア128スレッド、DRAM 256GB。Llama3.1-70B-Instructは4-way tensor parallelismで4GPU、Qwen2.5-32B-Instructは2-way tensor parallelismで2GPUを使う。ドラフトモデルは対象モデルと同系列の最小モデルを同一GPU群へ配置する。",
+    "software": "AdaServeはFlexFlow Serve上に実装し、FlashInferのバッチプリフィルカーネルを投機段階と対象LLM検証へ適用する。Llama3.1-70BにはLlama-3.2-1B-Instruct、Qwen2.5-32BにはQwen2.5-0.5B-Instructをドラフトモデルとして使う。比較対象はvLLM、Sarathi-Serve、固定投機長を持つvLLM-Specの複数構成で、同一モデル・GPU構成を用いる。",
+    "methodology": "複数のアプリケーションカテゴリに異なるTPOT SLOを割り当てたmulti-SLOワークロードを使い、リクエスト到着率、厳格SLOリクエストの割合、SLO倍率を変化させる。到着率を変える実験では負荷増加時のSLO達成率と有効スループットを測る。カテゴリ分布実験では厳しい要求の割合を変え、SLO倍率実験では最も厳しい要求の目標を通常単独実行遅延に対して段階的に締める。追加で合成バーストトレースを使い負荷変動への追従を確認し、投機受理トークン数、CPU選択処理の遅延内訳、動的d/w制御をアブレーションする。",
+    "scope": "実機A100クラスタ内の2モデルを対象に、単一ノードでのmulti-SLOデコード配信を評価する。生成品質は対象LLMによる通常の投機検証で保つが、異なるドラフトモデル系列、H100/Blackwell等の別GPU、複数ノード分散、プリフィル分離配信との組合せは主要評価に含まれない。SLO制約は主にTPOTで定式化され、TTFTなど複数種類のSLOを同時最適化する一般問題は対象外である。"
+  },
+  "reservation": {
+    "claim_id": "claim-af88b7967bb739f0955daaa6",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
