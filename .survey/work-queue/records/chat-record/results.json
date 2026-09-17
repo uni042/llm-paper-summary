@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-acc1b683ee406ecf9ec83842","job_id":"job-research-d2b8ca705732c790","data":{"overview":"設計空間探索の結論は、注意・FFN分離は万能な総処理量最適化ではないが、厳しい利用者遅延制約を満たすための有力な追加自由度になるというもの。128 B200上のDeepSeek-V3.2では厳格TTFT/TPOT条件で非AFD構成が実行可能解を持たない用途でも、AFDを含む構成は約4千token/sのシステム処理量を維持する。一方、SLOが緩く総token/sを最大化するだけなら、多くの条件でchunked prefill集約やP/D分離がAFDを上回る。したがって運用では『より細かく分離するほど良い』ではなく、負荷・注意方式・通信網・SLOから分離粒度を選ぶ必要がある。","key_results":[{"metric":"厳格SLO下システム処理量","value":"約4,000 token/s","baseline":"非AFDは実行可能構成なし","condition":"DeepSeek-V3.2、128 B200、Chat/Coding/Agentic Codingの厳格TTFT/TPOT","interpretation":"演算律速FFNとメモリ律速注意を別GPU比率へできることが遅延制約を満たす。"},{"metric":"遅延Pareto前線","value":"AFDが全評価panelで最良側","baseline":"集約およびP/D分離","condition":"利用者当たりtoken/sを重視","interpretation":"microbatch重畳と動的attention/FFN比がinteractivityを改善する。"},{"metric":"総処理量Pareto前線","value":"AFD単独が勝つのは限定的","baseline":"chunked-prefill集約、P/D分離","condition":"128 B200設計探索","interpretation":"追加通信のため、SLOが緩い時は粗粒度方式が有利な場合が多い。"},{"metric":"DeepSeek長文AFD比","value":"Agenticで2 attention + 126 FFN GPU、Chatで16 + 112","baseline":"対称分割","condition":"DeepSeek-V3.2","interpretation":"疎注意とMLAで注意費用・鍵値量が小さいため大半をFFNへ割くのが最適。"}],"negative_results":"AFDは通信を毎層二回追加するため、純粋な総処理量では常に勝たない。RAGのように入力自体は小さいが共有prefixやcontextが大きい条件では頻繁な跨node転送が分離利得を相殺し、集約が有利になり得る。注意・FFN GPUを物理位置を無視して置くとdispatch/combine混雑が増える。","interpretation":"AFDの価値はモデル内の異質性を別資源へ割り当てられることと、FFN重みをFFN GPU側へ寄せて注意GPUのメモリを鍵値キャッシュへ空けられることにある。ただしその代償が毎層通信なので、高速scale-up配置とmicrobatch重畳が成立する範囲で使う必要がある。","quality_impact":"モデル計算は変更しないため生成品質への近似損失はない。主な交換条件は通信量、GPU配分、総処理量、利用者遅延。"},"reservation":{"claim_id":"claim-acc1b683ee406ecf9ec83842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d8b169e0a547a65f26f0952f",
+  "job_id": "job-research-21f0d525f3274129",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d8b169e0a547a65f26f0952f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

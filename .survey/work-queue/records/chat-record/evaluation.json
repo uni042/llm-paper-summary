@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-acc1b683ee406ecf9ec83842","job_id":"job-research-d2b8ca705732c790","data":{"hardware":"主探索は128枚のNVIDIA B200 SXMクラスタ。GPU計算費用はTensorRT-LLM backendの測定を用い、NVLink等のscale-upとInfiniBand等のscale-outをAstraSimでモデル化する。","software":"AIC++はNVIDIA AIConfiguratorの演算・メモリ費用モデルとAstraSim通信シミュレータを統合。vLLMベースのAFD試作で全対全attention-FFN通信経路を機能確認する。","datasets":["Chat: prefix 4096, input 512, output 256","Coding: prefix 2048, input 4096, output 1024","Agentic Coding: prefix 524k, input 256, output 8192","DeepSeek-V3.2","GPT-OSS-120B","Nemotron3-120B","Qwen3-235B"],"methodology":"2〜128 GPUのreplica規模と各並列化、集約、P/D分離、AFD、両者併用を列挙し、各用途のTTFT/TPOT SLOを満たす候補から利用者当たりtoken/s対総token/sのPareto前線を作る。モデルはMLA・疎注意、GQA、Mamba混合など異なる注意特性を含む。","settings":[{"name":"厳格SLO比較","description":"DeepSeek-V3.2ではChat/Coding/Agentic CodingのTTFT上限を50/100/150ms、TPOT上限15msとして128 B200上の実行可能構成を探索する。"},{"name":"モデル構造横断","description":"DeepSeek-V3.2、GPT-OSS-120B、Nemotron3-120B、Qwen3-235Bで注意方式・専門家数の違いが最適attention/FFN比へ与える影響を調べる。"},{"name":"ネットワーク配置","description":"各層で頻発するAFD通信をscale-upへ、要求単位の鍵値転送をscale-outへ置く配置と、無頓着な配置の通信混雑を比較する。"}],"scope":"主結果はモデル化によるcluster-scale設計空間探索であり、128 B200全体を使った端末間実機測定ではない。AFD通信パターン自体はvLLM試作で検証する。"},"reservation":{"claim_id":"claim-acc1b683ee406ecf9ec83842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d8b169e0a547a65f26f0952f",
+  "job_id": "job-research-21f0d525f3274129",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d8b169e0a547a65f26f0952f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

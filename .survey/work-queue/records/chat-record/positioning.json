@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-acc1b683ee406ecf9ec83842","job_id":"job-research-d2b8ca705732c790","data":{"limitations":["128 B200規模の主要結果は実測カーネル費用と通信シミュレーションを組み合わせた設計探索で、全構成を実クラスタ上で端末間測定したものではない。","最適attention/FFN比はモデル構造、prefix、入力・出力長、SLO、通信階層に依存し、論文の具体比率を別クラスタへ固定適用できない。","AFDは毎層dispatch/combine通信を追加するため、低帯域scale-outしか使えない配置では利得が消える可能性が高い。","探索空間が大きく、性能backendや通信モデルの誤差がPareto境界付近の構成順位へ影響し得る。"],"differences":"DistServeやSplitwiseが事前充填と復号というphase単位を分離するのに対し、本研究は一層内部の注意とMoE-FFNまで別GPU群へ分け、その上でP/D分離と組み合わせる。MegaScale-InferがAFDの実装価値を示したのに対し、AIC++は複数モデル・負荷・SLO・並列化・物理ネットワークを横断してAFDが有利になる境界と具体的GPU比を探索することに重点を置く。","implementation_status":"AIConfiguratorとAstraSimを統合したAIC++を構築し、vLLMベースのAFD試作で全対全attention-FFN通信経路を検証。cluster-scale性能は主にモデル化探索。","research_positioning":"MoE提供、P/D分離、operator-level disaggregation、通信認識配置の系統。細粒度分離を常時推奨するのではなく、分離粒度そのものをSLOとネットワークを含む最適化変数として扱う比較基盤として位置付けられる。"},"reservation":{"claim_id":"claim-acc1b683ee406ecf9ec83842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-d8b169e0a547a65f26f0952f",
+  "job_id": "job-research-21f0d525f3274129",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d8b169e0a547a65f26f0952f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-acc1b683ee406ecf9ec83842","job_id":"job-research-d2b8ca705732c790","data":{"canonical_id":"arXiv:2605.28302","arxiv_id":"2605.28302","doi":"10.48550/arXiv.2605.28302","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"How Far Can Disaggregation Go? A Design-Space Exploration of Attention-FFN Disaggregation for Efficient MoE LLM Serving","summary":"本論文は、MoE推論で事前充填・復号分離より細かく注意機構と専門家FFNを別GPU群へ分離する方式が、どの負荷・モデル・通信網で有利かを体系的に探索する。GPUカーネル実測を用いるAIConfiguratorとパケット粒度通信シミュレータAstraSimを統合したAIC++で、並列化、事前充填・復号分離、注意・FFN分離、GPU配置を同時探索する。128枚B200上のDeepSeek-V3.2では厳しい遅延SLO下で非AFD方式が実行不能な条件でも約4千token/sを維持する一方、純粋な総処理量ではAFDが常に最良ではないことも示す。","list_summary":"注意とMoE-FFNの演算・通信を別GPU群へ分離する価値を、負荷・モデル・SLO・ネットワークを横断して設計空間探索する。","authors":["Hanjiang Wu","Abhimanyu Rajeshkumar Bambhaniya","Sarbartha Banerjee","Tuhin Khare","Sudarshan Srinivasan","Suvinay Subramanian","Souvik Kundu","Madhu Kumar","Midhilesh Elavazhagan","William Won","Amir Yazdanbakhsh","Tushar Krishna"],"published":"2026-05-27","publication":"arXiv:2605.28302","publication_type":"arXiv preprint","publication_status":"arXiv初稿2026-05-27。","topics":["MoE提供","注意FFN分離","事前充填復号分離","設計空間探索","GPU配置","通信シミュレーション"],"hardware_evaluation":"主評価は128枚NVIDIA B200 SXMクラスタを想定し、TensorRT-LLM由来の実測計算費用とAstraSim通信モデルを統合。vLLMベースAFD試作で通信経路の機能確認も行う。","quality_effect":"モデル計算や重みを変更せず配置・並列化を変えるため、生成品質ではなくTTFT、TPOT、利用者当たりtoken/s、システム総token/sが主要評価。","source":"https://arxiv.org/abs/2605.28302","sources":["https://arxiv.org/abs/2605.28302"],"code":null,"implementation":"AIC++はAIConfiguratorのGPU計算モデルをAstraSim通信シミュレーションで拡張し、vLLMベースAFD試作で全対全の注意・FFN通信経路を検証する。","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"arXiv全文を確認。個別識別子は推測で補わない。","references_total":0},"reservation":{"claim_id":"claim-acc1b683ee406ecf9ec83842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-d8b169e0a547a65f26f0952f",
+  "job_id": "job-research-21f0d525f3274129",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d8b169e0a547a65f26f0952f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
