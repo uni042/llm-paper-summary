@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0f8f604e4dd41baf02109b3f",
-  "job_id": "job-research-fd53481863b8e4e0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0f8f604e4dd41baf02109b3f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0f8f604e4dd41baf02109b3f","job_id":"job-research-fd53481863b8e4e0","data":{"hardware":"NVIDIA RTX A6000 GPUとIntel Xeon Gold 5220R CPUを使用し、CPUは実環境の資源制約を模擬するため10コアに制限する。GPUへ常駐できるエキスパート比率の上限を変えてメモリ制約を再現する。","software":"HybriMoEはkTransformers上に実装し、llama.cpp由来カーネル、細粒度CUDAストリーム、C++でのエキスパートタスク割当、Marlin 4-bit量子化を使用する。モデルはMixtral-8x7B-Instruct、Qwen2-57B-A14B-Instruct、DeepSeek-V2-Lite-Chat。比較対象はllama.cpp、AdapMoE、kTransformers。","methodology":"プリフィルはMT Bench、Vicuna Bench、ChatGPT Promptsから約32、128、512、1024トークンの入力を抽出し、GPUエキスパートキャッシュ比25%、50%、75%などで先頭トークン時間（Time To First Token; TTFT）を比較する。デコードはChatGPT Promptsを使い、トークン間時間（Time Between Tokens; TBT）または対応するスループットを比較する。Qwen2・キャッシュ比25%では構成要素除去実験を行い、スケジューリング、プリフェッチ、キャッシュの寄与を分離する。","scope":"エキスパート数・大きさ・共有エキスパート構造が異なる3種類のMoEを単一CPU-GPU環境で評価し、プリフィルとデコードの双方を対象にする。一方、複数GPUノード、大規模同時リクエスト配信、異なるPCIe世代やCPU構成、モデル品質への量子化影響は主評価の範囲外である。"},"reservation":{"claim_id":"claim-0f8f604e4dd41baf02109b3f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
