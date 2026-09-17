@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c10c7d06662fd8b2b83e5bcc",
-  "job_id": "job-research-ce95464a254235a3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c10c7d06662fd8b2b83e5bcc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c10c7d06662fd8b2b83e5bcc","job_id":"job-research-ce95464a254235a3","data":{"hardware":"開放重みのQwen2.5 7B InstructとLlama 3.1 8B InstructはNVIDIA RTX PRO 6000 GPUで実行する。GPT-4o miniは商用API経由で評価する。論文はGPU台数やホストCPU・メモリ容量を主要比較条件として報告しておらず、中心はエージェントの推論トークン費用と精度である。","software":"開放重みモデルはHugging Face transformers、bfloat16でローカル実行する。GPT-4o miniはOpenAI APIを使用する。デコードは貪欲法で、1応答あたり512トークン上限。LIMBO制御器は12次元特徴、二頭LinUCB、Sherman–Morrison更新で構成され、モデル重み・勾配・内部活性へアクセスしない。","models":["Qwen2.5 7B Instruct","Llama 3.1 8B Instruct","GPT-4o mini"],"workloads":"LifelongAgentBenchのDBBench（SQL）とOS Interaction（bash）を使用し、それぞれ公開500タスクの逐次スライスを評価する。3モデル×2環境の6条件で、各条件をseed 42、43、44の3回実行する。タスクは順次到着し、成功軌跡が後続タスクのメモリ候補になるため、固定独立サンプル評価ではなくオンライン適応を含む。","baselines":"再生なし、最近の成功軌跡を固定k件注入する固定再生、LongLLMLinguaによる質問依存圧縮、LifelongAgentBenchのGroup Self-Consistencyを比較する。検索再生系では共通の検索重みを固定し、方式ごとの再調整による有利さを避ける。各条件の『最強固定メモリ基準』はその環境で最も高精度の固定方式を用いる。","methodology":"精度と500タスク全体の総トークン費用を評価する。GPT-4o miniは提供者のAPI料金、ローカル7B/8Bモデルは入力100万トークン0.04ドル、出力100万トークン0.10ドルの標準化代理料金を使うため、ローカル値は実測電力・GPU占有費ではない。全LIMBO条件で同じ制御器、特徴、オンライン更新、4方式メモリ行動空間と3段階生成予算を使い、DBは検索上位8、OSは上位1を環境別に設定する。主表は3 seed平均。Qwen OSでは50タスク窓で行動比率とUCB探索ボーナスの推移も測り、オンライン学習の進行を検証する。","scope":"評価はLifelongAgentBenchのDBとOSの2環境、500タスク長、3バックボーンに限定される。Web系や長期数千〜数万タスク、異なる料金構造、より大きなメモリバンク、異なる検索器での一般化は直接検証していない。ローカルモデルのドル費用は標準化代理値なので、実運用のGPU時間・電力・待ち時間に対する削減率とは区別する必要がある。"},"reservation":{"claim_id":"claim-c10c7d06662fd8b2b83e5bcc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
