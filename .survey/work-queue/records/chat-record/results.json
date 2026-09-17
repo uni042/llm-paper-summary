@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-af95b58e929cbe887fc76bfd",
   "job_id": "job-research-491d6cc11a36da8c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-af95b58e929cbe887fc76bfd",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "JITServeは、異なるサービス品質目標を混在させたオンライン負荷で、既存方式よりサービス有効処理量を1.4倍から6.3倍へ高め、同等の有効処理量を維持する場合は必要資源を28.5%から83.2%削減する。1時間のオンライン実験では、Learn to Rankより1.3〜1.7倍、Autellixより5.3〜6.1倍高いトークン単位有効処理量を維持し、要求単位でもLearn to Rankより2.3〜4.5倍高い。未来の出力長と依存関係を完全に知るオラクル版との差は3〜9%であり、不完全な予測を逐次更新する設計が完全情報に近い判断へ到達する。複雑なスケジューリングを追加してもSarathi-Serveの総スループットの96〜98%を保つため、有効処理量改善が単純な処理量犠牲だけで生じているわけではない。",
+    "key_results": [
+      {"metric": "サービス有効処理量", "value": "既存先進方式比1.4〜6.3倍", "baseline": "Autellix、Learn to Rank、vLLM、Sarathi-Serve", "condition": "対話型・期限型・複合型を含むオンライン負荷", "interpretation": "平均遅延ではなく個々のサービス品質目標を満たした有効なトークンまたは要求を直接最大化した効果を示す。"},
+      {"metric": "同等有効処理量に必要な資源", "value": "28.5〜83.2%削減", "baseline": "既存先進方式", "condition": "同じサービス有効処理量を達成する比較", "interpretation": "期限より過剰に早く処理する要求へ資源を使い過ぎず、余剰帯域を別要求へ回すことで必要GPU資源を減らせる。"},
+      {"metric": "1時間実験のトークン単位有効処理量", "value": "Learn to Rank比1.3〜1.7倍、Autellix比5.3〜6.1倍", "baseline": "Learn to Rank、Autellix", "condition": "少なくとも1時間のオンライン実験", "interpretation": "既存方式で時間とともに先頭要求阻害と期限違反が連鎖する一方、JITServeは高い有効処理量を継続する。"},
+      {"metric": "要求単位有効処理量", "value": "Learn to Rank比2.3〜4.5倍", "baseline": "Learn to Rank", "condition": "要求全体がサービス品質目標を満たした場合だけ計数", "interpretation": "トークン単位だけでなく要求完了単位でも改善が残る。"},
+      {"metric": "完全情報オラクルとの差", "value": "3〜9%", "baseline": "出力長と実行グラフを完全に知るJITServe*", "condition": "複数の要求到着率", "interpretation": "分位点上限と生成途中の再推定、履歴グラフ照合により、不完全情報でも完全情報に近い有効処理量を得る。"},
+      {"metric": "総スループット保持率", "value": "Sarathi-Serveの96〜98%", "baseline": "先取りを行わないSarathi-Serve", "condition": "複数の要求到着率", "interpretation": "要求解析と先取りを追加しても、生の処理量低下は小さい。"}
+    ],
+    "negative_results": ["要求情報を完全に知るオラクル版より3〜9%低く、予測不確実性の影響は残る。", "高い有効処理量を優先する方策は公平性や外れ値への耐性を自動では保証しないため、別の公平性目的を混合できる設計を用意する。", "待機上限を超えた要求は過負荷防止のため棄却するため、全要求を必ず完了させる方策ではない。", "複合要求の将来依存は履歴パターンへ依存するため、履歴と大きく異なる新規実行グラフでは推定誤差が増え得る。"],
+    "quality_impact": "モデル演算自体を近似しないため生成品質を直接落とす方式ではない。ただし要求の先取り、待機、棄却を変更するので、サービスとして利用可能な出力数と応答時刻に影響する。",
+    "interpretation": "結果は、要求を可能な限り早く終えることと、サービス価値を最大化することが同じではないことを示す。期限達成に必要な最小帯域だけを保守的に確保し、生成途中で見積もりを緩めることで、限られたGPU容量をより多くの期限達成へ配分できる。特に異種要求が混在し負荷が高い領域で、平均値中心の方式より差が大きくなる。"
+  },
+  "reservation": {"claim_id": "claim-af95b58e929cbe887fc76bfd", "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST", "worker_kind": "scheduled_chat"}
 }
