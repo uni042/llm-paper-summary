@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-5802dd804b5c71e42ecc4823",
-  "job_id": "job-research-ee19ffd9b6b00e19",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5802dd804b5c71e42ecc4823",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5802dd804b5c71e42ecc4823","job_id":"job-research-ee19ffd9b6b00e19","data":{"overview":"FlexEEはオフロード率が上がるほど、後段層を実行しないことによる重み転送削減が効き、早期退出なし基準に対する高速化が増える。Llama2-7Bでは0%オフロードの1.27倍から50%で3.16倍、75%で3.29倍へ上昇し、Llama3-8Bでも1.25倍から2.83倍、3.10倍となる。品質面では平均実行深度を約18〜29%減らしながら多くの下流課題でDenseに近い精度を保ち、開放生成でもほぼ同等の評価を得る。","key_results":[{"metric":"Llama2-7Bスループット","value":"6.9から21.8 token/s、3.16倍","baseline":"早期退出なし","condition":"50%重みオフロード、Alpaca","interpretation":"退出後の層重みをロードしないため、計算削減より大きい転送削減効果が出る。"},{"metric":"Llama3-8Bスループット","value":"6.3から17.8 token/s、2.83倍","baseline":"早期退出なし","condition":"50%重みオフロード、Alpaca","interpretation":"モデル系列が変わってもオフロード-awareな早期退出の効果が維持される。"},{"metric":"75%オフロード高速化","value":"Llama2-7B 3.29倍、Llama2-13B 2.68倍、Llama3-8B 3.10倍","baseline":"早期退出なし","condition":"75%の層重みをCPUへオフロード","interpretation":"高いオフロード率ほど省ける重み転送が増えるが、退出が主に深層で起きるため50%以降の限界利得は逓減する。"},{"metric":"平均実行深度削減","value":"約18.1〜29.3%","baseline":"全層実行","condition":"Llama2-7B/13B、Llama3-8Bの複数自己投機開始層","interpretation":"トークンごとに難易度へ応じて退出し、容易なトークンだけ浅く終える。"},{"metric":"開放生成品質","value":"AlpacaEval-LC 48.7〜50.3%対Dense、MT-Bench差0.02〜0.07","baseline":"Dense decoding","condition":"Llama2-7B/Llama3-8B、greedyまたはtop-p","interpretation":"早期退出による深度削減後も対Denseの勝率がほぼ50%で、会話品質は概ね同等。"}],"negative_results":"パープレキシティはDenseより悪化する。例としてLlama2-7B WikiTextは5.32から自己投機層16で6.10、Llama3-8Bは6.20から7.15となる。一部の推論・コード課題でも数ポイントの精度低下がある。75%オフロードは50%からの追加高速化が小さく、深い層まで進むトークンが多いことが限界になる。LayerSkip型の層別教師あり学習を前提とし、未調整モデルの中間層へ直接適用すると意味可読性が不足する。","interpretation":"オフロードなしでは層計算を省く効果だけなので1.25倍前後だが、オフロード時はスキップ層のCPU-GPU重み転送も丸ごと消えるため高速化が2〜3倍へ拡大する。Top-K自己投機は全語彙退出判定より計算が小さく、退出をより早く許せる。動的隠れ状態管理はKVを後段へ即コピーせず次トークンまで意味状態を遅延させることで、後段層重みを現在トークンのためだけにロードする必要をなくす。","quality_impact":"完全無損失ではない。多数の分類・質問応答課題ではDenseと同等か小差だが、パープレキシティと一部コード・推論課題で低下する。自己投機開始を深くすると平均退出層も深くなり速度利得は下がる一方、品質は改善するため明示的な速度・品質交換条件がある。"},"reservation":{"claim_id":"claim-5802dd804b5c71e42ecc4823","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
