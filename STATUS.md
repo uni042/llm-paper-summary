@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 01:58:32 JST**
+> 自動生成: **2026-09-18 01:59:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **18** | **2** | **0** | **2** | **0** | **0** | **2** |
-| 合計 | **27** | **5** | **3** | **2** | **1** | **0** | **2** |
+| Discovery | **18** | **3** | **0** | **3** | **0** | **0** | **3** |
+| 合計 | **27** | **6** | **3** | **3** | **1** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -172,8 +172,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 02:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **2件**
-- 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload / 高帯域フラッシュ(HBF)・階層メモリ・flash-native LLM inference
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **3件**
+- 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload / 高帯域フラッシュ(HBF)・階層メモリ・flash-native LLM inference / 当日新着・SSD-native trillion-parameter MoE・SSD/RAM/VRAM三階層
 - round `specialist-ssd-moe-new-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json`
   - 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload
@@ -181,6 +181,10 @@
 - round `specialist-hbf-memory-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0202JST-discovery-specialist-hbf-memory-2.json`
   - 探索軸: 高帯域フラッシュ(HBF)・階層メモリ・flash-native LLM inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-ssd-native-moe-3` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json`
+  - 探索軸: 当日新着・SSD-native trillion-parameter MoE・SSD/RAM/VRAM三階層
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -238,10 +242,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **457** |
+| 成功result未照合のimmutable submission | **458** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
