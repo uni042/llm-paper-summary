@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T09:35:52.030014+00:00",
+  "updated_at": "2026-09-17T09:41:42.223819+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T09:35:52.030014+00:00",
+      "last_recorded_at": "2026-09-17T09:41:42.223819+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 206,
+        "research_completed": 207,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35099617495:1",
-          "recorded_at": "2026-09-16T13:06:32.942773+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35099617495",
-            "run_attempt": "1",
-            "source_sha": "6241a953d15576dee2922ee93616376da8618443"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35103040550:1",
           "recorded_at": "2026-09-16T13:37:03.619315+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35205881164",
             "run_attempt": "1",
             "source_sha": "0577efa97093d25b2641868beb4bcaf06db29642"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35206463858:1",
+          "recorded_at": "2026-09-17T09:41:42.223819+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35206463858",
+            "run_attempt": "1",
+            "source_sha": "f7644d2751cbef2fb615c18d0ecba9ecb0c04142"
           },
           "signals": [
             "research_completed"
@@ -22085,6 +22085,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.27090",
           "title": "InferScale: GPU-Native KV Injection for Personalized LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8423392e3664b697",
+          "type": "research",
+          "canonical_id": "arXiv:2501.12162",
+          "title": "AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding",
           "from": "ready",
           "to": "completed"
         }
