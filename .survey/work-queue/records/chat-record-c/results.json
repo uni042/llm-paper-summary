@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-f6a5e2ca71f1c7ef9975e44d",
-  "job_id": "job-research-cf3f98aec47a974c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f6a5e2ca71f1c7ef9975e44d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f6a5e2ca71f1c7ef9975e44d","job_id":"job-research-cf3f98aec47a974c","data":{"overview":"JustFitは24 GiB機でQwen3.8-27B MXFP4の実行可能contextを大幅に拡張し、長文脈だけでなく複数要求、prefix reuse、取消後page再利用、長い数学reasoningまで同一runtimeで確認した。利得はTQ4の保存量だけではなく、復元workspaceのlayer局所化とcomponent/request lifetime制御の統合による。","key_results":[{"metric":"単一要求の完走context","value":"212,992 positions（196,608 input + 16,384 output）、3/3 fresh process完走","baseline":"mlx-vlm 30,720 positions（24K+6K）","condition":"24 GiB M4 Pro、Qwen3.8-27B MXFP4、21,000 MiB guard","interpretation":"6.93倍。3回のpeakは20,960–20,977 MiB、decode中央値4.9853 token/s。"},{"metric":"2要求aggregate retained context","value":"229,376 positions、12.55 aggregate token/s、20,310 MiB peak","baseline":"baseline単一要求record 30,720 positions","condition":"2×(96K input+16K output)","interpretation":"aggregate容量で7.47倍。staggered arrivalでも12.51 token/s、20,247 MiB。"},{"metric":"短出力decode throughput","value":"8K:24.31、32K:19.11、64K:14.59 token/s","baseline":"mlx-vlmは32Kでguard failure","condition":"各input+64 output","interpretation":"JustFitのprocess-peak増加fitは12.5 MiB/1K positions、mlx-vlmは8–24Kで169.9 MiB/1K。"},{"metric":"固定32K+6K workload","value":"11.54 token/s、median peak 16,374 MiB","baseline":"最初の完走TQ4+MTP構成 5.98 token/s、18,203 MiB","condition":"3 fresh process/成功構成","interpretation":"decode 1.93倍、peak 1,829 MiB低下。ただし構成追加は一因子ablationではない。"},{"metric":"AIME 2026","value":"29/30、696,834 output tokens、15.04 token-weighted token/s","baseline":"uniform INT8 28/30、14.64 token/s","condition":"Paged TQ4 integrated runtime","interpretation":"圧縮状態で長い生成reasoningを維持できる統合確認。"}],"negative_results":["segmented KV構成は13.30 token/sで最終paged構成11.54 token/sより速く、paging/lifecycle管理には速度と共有状態・メモリ効率のtradeoffがある。","mlx-vlm baselineは32K+6Kでguard failureし、完走throughputを比較できないため固定workloadの速度比は最初の完走TQ4構成に対する値である。","複数revisionの測定を含み、各機構の独立寄与を厳密に分離したablationではない。"],"interpretation":"圧縮KVを保存できることと、それをメモリ上限内で実行できることを分離して扱った点が重要。特に192Kで1 layerのBF16 K/V復元だけでも768 MiBになるため、融合復元と評価境界でworkspace寿命を短くし、LM head等の常駐もowner leaseで制御することで容量を実際の完走へ結びつけた。","quality_impact":"TQ4 runtimeはAIME 2026で29/30を達成しINT8の28/30を下回らないが、単一benchmarkであり量子化品質の一般的優越を示すものではない。論文自身も統合reasoning checkとして位置付ける。"},"reservation":{"claim_id":"claim-f6a5e2ca71f1c7ef9975e44d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
