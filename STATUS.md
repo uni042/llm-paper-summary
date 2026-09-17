@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 05:35:12 JST**
+> 自動生成: **2026-09-18 05:35:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **63** |
+| 収録候補論文 | **62** |
 | 未claim Research job | **61** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-18 05:32:27 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-18 05:35:17 JST（3秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **63** |
+| canonical_id確認済みの一意な候補論文 | **62** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **63** |
+| 非終端Research job合計 | **62** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **9** | **8** | **1** | **2** | **0** | **18** |
+| 合計 | **29** | **9** | **9** | **0** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 05:35:17 JST** [research] `arXiv:2505.15781` — dKV-Cache: The Cache for Diffusion Language Models
+  - job: `.survey/work-queue/jobs/job-research-b6925d33135e854c.json`
+  - result: `.survey/work-queue/results/research/attempt-8a81151586fdc3a2613ff366.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8a81151586fdc3a2613ff366.json`
+  - paper: `papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md`
 - **09-18 05:32:27 JST** [research] `arXiv:2504.05897` — HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference
   - job: `.survey/work-queue/jobs/job-research-fd53481863b8e4e0.json`
   - result: `.survey/work-queue/results/research/attempt-0f8f604e4dd41baf02109b3f.json` (`ok=true`)
@@ -146,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 05:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-8a81151586fdc3a2613ff366.json` (job `job-research-b6925d33135e854c`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2505.15781` — dKV-Cache: The Cache for Diffusion Language Models
+  - job: `.survey/work-queue/jobs/job-research-b6925d33135e854c.json`
+  - result: `.survey/work-queue/results/research/attempt-8a81151586fdc3a2613ff366.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8a81151586fdc3a2613ff366.json`
+  - paper: `papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md`
 
 #### Audit (:30)
 
@@ -197,10 +206,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2505.15781` — dKV-Cache: The Cache for Diffusion Language Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 05:32:53 JST** / heartbeat: **—** / lease expiry: **09-18 07:02:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b6925d33135e854c.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 04:59:06 JST** / heartbeat: **—** / lease expiry: **09-18 06:29:06 JST**
   - evidence: `.survey/work-queue/claims/job-research-a725b9cf79d670cf.json`
@@ -223,7 +229,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **63** |
+| ready | **62** |
 
 ### 候補の重複・識別情報欠損
 
@@ -243,7 +249,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **687** |
+| inference/training/survey配下の論文Markdown実体 | **688** |
 
 ### immutable submissionの未照合
 
@@ -251,8 +257,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **460** |
-| └ Research | **331** |
+| 成功result未照合のimmutable submission | **459** |
+| └ Research | **330** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |

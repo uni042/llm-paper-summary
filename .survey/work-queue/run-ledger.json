@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T20:32:32.617713+00:00",
+  "updated_at": "2026-09-17T20:35:19.978002+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T20:32:32.617713+00:00",
+      "last_recorded_at": "2026-09-17T20:35:19.978002+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 223,
+        "research_completed": 224,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 16,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35157025258:1",
-          "recorded_at": "2026-09-16T22:18:49.283963+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35157025258",
-            "run_attempt": "1",
-            "source_sha": "e3c861c1c237fca617b5ef417509a21f21c499ed"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35157143897:1",
           "recorded_at": "2026-09-16T22:20:18.123659+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35271358466",
             "run_attempt": "1",
             "source_sha": "1fae088d52231936920e44ea9d50c1b7c58c3ad8"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35271676217:1",
+          "recorded_at": "2026-09-17T20:35:19.978002+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35271676217",
+            "run_attempt": "1",
+            "source_sha": "95deba657e60d9b315f0d652ad5df03a7e66de5d"
           },
           "signals": [
             "research_completed"
@@ -22338,6 +22338,14 @@
           "type": "research",
           "canonical_id": "arXiv:2504.05897",
           "title": "HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b6925d33135e854c",
+          "type": "research",
+          "canonical_id": "arXiv:2505.15781",
+          "title": "dKV-Cache: The Cache for Diffusion Language Models",
           "from": "ready",
           "to": "completed"
         }
