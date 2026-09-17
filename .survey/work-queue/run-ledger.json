@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T09:53:49.436483+00:00",
+  "updated_at": "2026-09-17T10:33:30.863487+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T09:53:49.436483+00:00",
+      "last_recorded_at": "2026-09-17T10:33:30.863487+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 209,
+        "research_completed": 210,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35109372110:1",
-          "recorded_at": "2026-09-16T14:34:02.640942+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35109372110",
-            "run_attempt": "1",
-            "source_sha": "b9e38694e238c72e5c722570cce1976bc47d9a7e"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35109856186:1",
           "recorded_at": "2026-09-16T14:38:21.244102+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35207556121",
             "run_attempt": "1",
             "source_sha": "3b55772f969daf5f249da19a712a41308ad55921"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35211086592:1",
+          "recorded_at": "2026-09-17T10:33:30.863487+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35211086592",
+            "run_attempt": "1",
+            "source_sha": "d690c26ec9b5f69538576116aca182f5048d9285"
           },
           "signals": [
             "research_completed"
@@ -22109,6 +22109,14 @@
           "type": "research",
           "canonical_id": "arXiv:2505.11329",
           "title": "TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ce95464a254235a3",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14138",
+          "title": "LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents",
           "from": "ready",
           "to": "completed"
         }
