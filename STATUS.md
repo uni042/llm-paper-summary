@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 00:47:29 JST**
+> 自動生成: **2026-09-18 00:47:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
+| 収録候補論文 | **45** |
 | 未claim Research job | **45** |
-| 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-18 00:40:31 JST（6分前）** |
+| 直近24hの検証済みResearch収録 | **52** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（4秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **45** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **45** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **2** | **1** | **1** | **0** | — |
+| Research | **11** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **14** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **24** | **5** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **25** | **5** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 00:47:32 JST** [research] `arXiv:2502.06643` — MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing
+  - job: `.survey/work-queue/jobs/job-research-24c58326f22e095e.json`
+  - result: `.survey/work-queue/results/research/attempt-788e1aebfc9c132ec95bfc8a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-788e1aebfc9c132ec95bfc8a.json`
+  - paper: `papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md`
 - **09-18 00:40:31 JST** [research] `arXiv:2504.09345` — MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints
   - job: `.survey/work-queue/jobs/job-research-36aaaee3c1110557.json`
   - result: `.survey/work-queue/results/research/attempt-dd0768548da66bf9efb0496c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a7d7a47efa9628566d9ffaf7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a7d7a47efa9628566d9ffaf7.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md`
-- **09-17 18:53:44 JST** [research] `arXiv:2505.11329` — TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-a1f4ccc94cf94fe5.json`
-  - result: `.survey/work-queue/results/research/attempt-2d17d81f9fcb9ead4849e591.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2d17d81f9fcb9ead4849e591.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md`
 
 ### Audit
 
@@ -151,13 +151,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
+- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
 - **成功** `arXiv:2604.14626` — ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving
   - job: `.survey/work-queue/jobs/job-research-a1761c9ca73f9afb.json`
   - result: `.survey/work-queue/results/research/attempt-721b895c107ac359ea8048a4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-721b895c107ac359ea8048a4.json`
   - paper: `papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-788e1aebfc9c132ec95bfc8a.json` (job `job-research-24c58326f22e095e`)
+- **成功** `arXiv:2502.06643` — MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing
+  - job: `.survey/work-queue/jobs/job-research-24c58326f22e095e.json`
+  - result: `.survey/work-queue/results/research/attempt-788e1aebfc9c132ec95bfc8a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-788e1aebfc9c132ec95bfc8a.json`
+  - paper: `papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md`
 - **成功** `arXiv:2504.09345` — MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints
   - job: `.survey/work-queue/jobs/job-research-36aaaee3c1110557.json`
   - result: `.survey/work-queue/results/research/attempt-dd0768548da66bf9efb0496c.json` (`ok=true`)
@@ -188,10 +192,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2502.06643` — MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 00:46:19 JST** / heartbeat: **—** / lease expiry: **09-18 02:16:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-24c58326f22e095e.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -211,7 +213,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **45** |
 
 ### 候補の重複・識別情報欠損
 
@@ -231,7 +233,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **682** |
+| inference/training/survey配下の論文Markdown実体 | **683** |
 
 ### immutable submissionの未照合
 
@@ -239,8 +241,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **456** |
-| └ Research | **327** |
+| 成功result未照合のimmutable submission | **455** |
+| └ Research | **326** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
