@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-6f02893266917119d611056f",
-  "job_id": "job-research-d9f05d11667dcf83",
-  "data": {
-    "limitations": "キャッシュの追い出し係数とWRSの重みは実運用トレースを使った事前計測で固定しており、未知の負荷へ常に最適とは限らない。出力長はBERT系代理モデルの予測に依存し、60%精度まで悪化すると負荷急増時の尾部遅延が増える。未来のアダプタ需要を予測する先読みは分布依存性が高いため標準評価では無効である。実験用の大規模トレースはテスト機のメモリ容量に合わせて入力・出力長を縮小した条件を含む。また主実装はS-LoRAを基盤とし、他の提供基盤での統合費用や分散データ並列環境の詳細評価は限定的である。",
-    "differences": "S-LoRAとPunicaは基盤モデルとLoRAアダプタを分離し、必要なアダプタをCPUからGPUへ都度読み込むが、Chameleonは使用終了後も空きGPUメモリへ保持して再利用する。dLoRAは実行状態に応じてアダプタを基盤モデルへ結合・分離するのに対し、Chameleonはアダプタを独立状態のままキャッシュする。μServeなどの最短処理時間優先は主に出力長で短要求を優先するため長要求が飢餓し得るが、Chameleonは入力長・出力長・アダプタ階数を統合したWRSとキュー別最低資源枠を使う。クラスタ単位の配置を扱うLlumnix等とは異なり、ノード内の反復単位スケジューリングとアダプタメモリ管理を対象にする。",
-    "implementation_status": "研究試作はオープンソースS-LoRA上へ実装され、A40/A100実機、単一GPUと最大4GPUのテンソル並列で評価されている。追加ハードウェア、OS支援、CUDAカーネル変更を必要としないためソフトウェア層だけで導入可能な設計である。一方、論文本文からChameleon固有実装の公式公開コードURLは確認できないため、再現可能性は論文記述と基盤S-LoRAの公開実装に依存する。",
-    "research_positioning": "多数のLoRAアダプタを同時提供する推論基盤の系統に位置し、特にGPUメモリ管理とオンライン要求スケジューリングの境界を結ぶ研究である。従来のアダプタ提供研究が行列演算の効率化やオンデマンド転送へ重点を置くのに対し、Chameleonは未使用GPU容量を時間変動するキャッシュ資源として扱い、次バッチのメモリ需要をスケジューラからキャッシュ管理へ伝える。したがって、KVキャッシュ管理、LoRA提供、尾部遅延を意識したスケジューリングを横断する実システムとして比較価値が高い。モデル並列やクラスタ配置とは直交し、上位の負荷分散器と組み合わせられる。"
-  },
-  "reservation": {"claim_id": "claim-6f02893266917119d611056f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-42b6429a1b73e190dbc9976c",
+  "job_id": "job-research-1e6c346844ef359a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-42b6429a1b73e190dbc9976c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
