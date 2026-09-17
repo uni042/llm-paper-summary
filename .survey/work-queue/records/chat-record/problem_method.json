@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
-  "job_id": "job-research-146f944f1c748398",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a65fafc0985029a9a69cb193",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a65fafc0985029a9a69cb193","job_id":"job-research-146f944f1c748398","data":{"problem":"拡散大規模言語モデルは双方向注意でマスク列を反復的に復元するため、長さNの生成で各デノイズ段階に全トークンの注意・FFNを再計算する。実用上N回規模の反復が必要になり、著者は全体計算量をO(N^3)と整理する。自己回帰モデルの因果注意では過去トークンのKey/Valueを固定して再利用できるが、拡散モデルでは全トークンが互いに参照し、応答トークンも段階ごとに変化するため通常のKVキャッシュを直接適用できない。一方、プロンプトは全段階で同一で、応答も隣接段階では大半の特徴がほぼ変化しないため、毎回すべて再計算するのは冗長である。","novelty":"dLLM-Cacheは冗長性を一様に扱わず、プロンプトと応答で時間スケールを分離する。プロンプト側は長間隔でK/V・Attention Output・FFN Outputを更新し、その間は再利用する。応答側はより短い間隔で全特徴を更新し、中間段階ではValueベクトルの変化を軽量に測定して変化の大きいトークンだけを完全再計算するV-verifyを用いる。Key/ValueだけでなくAttention OutputとFFN Outputまでキャッシュ対象にするため、Transformer層内の後段計算も省略できる。学習やモデル重み変更を必要としない。","method_overview":"最初のデノイズ段階では各Transformer層についてプロンプトと応答のK、V、Attention Output、FFN Outputを全計算し、Prompt CacheとResponse Cacheへ分離保存する。その後、プロンプトは更新間隔Kpに該当する段階だけ全再計算し、それ以外は保存特徴を利用する。応答は更新間隔Krに該当する段階で全再計算する。Krの中間段階では全応答トークンの現在Value投影だけを計算し、保存Valueとのコサイン類似度を求める。類似度が低い順に更新率rho分のトークンを選び、そのトークンだけKey、Attention Output、FFN Outputを再計算してキャッシュへ散布更新する。Valueは選択判定時に全トークン分が既に得られるため全体を更新する。各層はこの混合された新旧特徴で順伝播を続け、最終デノイズ段階まで反復する。","components":[{"name":"長間隔プロンプトキャッシュ","description":"入力プロンプトはデノイズ中にトークン自体が変化しないことを利用し、各層のK、V、Attention Output、FFN OutputをPrompt Cacheへ保持する。Kpごとだけ再計算し、中間段階はキャッシュを直接使う。長いプロンプトほど毎段階の固定部分再計算を削減できる。"},{"name":"短間隔応答全更新","description":"応答はプロンプトより動的なので、Krごとに全応答特徴を再計算してResponse Cacheをリセットする。近似誤差が長期間蓄積することを防ぎ、部分更新だけを永久に続けない安全弁になる。"},{"name":"V-verify適応部分更新","description":"全応答トークンの現在Valueベクトルを軽量に投影し、保存Valueとのコサイン類似度を計算する。Value変化がAttention OutputやFFN Output変化と相関する観察を使い、類似度が最も低いrho割合のトークンだけ後続特徴を再計算する。既定評価ではrho=0.25で、残りの多数トークンは保存特徴を再利用する。"},{"name":"層内特徴キャッシュ","description":"通常のKVだけでなくAttention OutputとFFN Outputも層ごと・プロンプト/応答別に保持する。選択トークン以外では注意後段やFFNの再計算も避けられるため、双方向注意でKVだけを固定できない制約下でも広い範囲の演算を削減する。"}],"system_design":"モデル重みや学習手順を変更せず推論順伝播へキャッシュ管理を挿入する。入力は通常のプロンプトとマスク済み応答、出力は元のデノイズ遷移規則による最終応答である。Kp、Kr、rhoが速度と近似度の制御点となり、全更新段階と部分更新段階を交互に配置して再利用量と品質を調整する。"},"reservation":{"claim_id":"claim-a65fafc0985029a9a69cb193","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
