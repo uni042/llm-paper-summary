@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:10:39 JST**
+> 自動生成: **2026-09-17 17:11:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **56** |
-| 未claim Research job | **55** |
+| 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 17:10:30 JST（9秒前）** |
+| 最終検証済みResearch収録 | **09-17 17:10:30 JST（33秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **18** | **1** | **1** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **23** | **5** | **5** | **0** | **1** | **0** | **15** |
+| 合計 | **23** | **5** | **5** | **0** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -170,7 +170,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
+  - claim: **09-17 17:10:47 JST** / heartbeat: **—** / lease expiry: **09-17 18:40:47 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0923832e7cd03d20.json`
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-discovery`
   - claim: **09-17 16:03:30 JST** / heartbeat: **09-17 16:32:01 JST** / lease expiry: **09-17 18:02:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
