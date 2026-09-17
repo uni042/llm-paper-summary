@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 17:15:54 JST**
+> 自動生成: **2026-09-17 17:16:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **3** | **2** | **1** | **2** | **0** | — |
+| Research | **19** | **4** | **2** | **2** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **24** | **7** | **6** | **1** | **2** | **0** | **15** |
+| 合計 | **24** | **8** | **6** | **2** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,7 +131,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 17:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1700JST`
-- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
+- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
 - **成功** `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage
   - job: `.survey/work-queue/jobs/job-research-0923832e7cd03d20.json`
   - result: `.survey/work-queue/results/research/attempt-180764ce53bd95c132164263.json` (`ok=true`)
@@ -143,6 +143,7 @@
   - result: `.survey/work-queue/results/research/attempt-366e50017f388aac9c576b49.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-366e50017f388aac9c576b49.json`
   - paper: `papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-af95b58e929cbe887fc76bfd.json` (job `job-research-491d6cc11a36da8c`)
 
 #### Audit (:30)
 
@@ -230,8 +231,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **434** |
-| └ Research | **307** |
+| 成功result未照合のimmutable submission | **435** |
+| └ Research | **308** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
