@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-8529c59bc17c2f018b0b86d8",
-  "job_id": "job-research-f371944d5d8c6995",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8529c59bc17c2f018b0b86d8",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8529c59bc17c2f018b0b86d8","job_id":"job-research-f371944d5d8c6995","data":{"hardware":"96-core Intel Xeon Platinum 8480C、NVIDIA H100 80GB HBM3 GPU×2、GPU間NVLink。H100上ではTPCがSM分割の最小単位で、論文はactive TPC数に対するFLOPs/HBM bandwidth scalingもmicrobenchmarkする。","software":"CUDA 13.0、PyTorch 2.8.0。比較対象は集約型vLLM系、分離型NVIDIA Dynamo系など。DuetServeはlibsmctrlでkernel/streamのSM可視性を制御する。","datasets":["Azure-Code serving trace","Azure conversational serving trace","Mooncake serving trace"],"methodology":"Qwen3-8BとQwen3-14Bを実運用由来の異なるinput/output長分布でservingし、query rateを変えながらtotal token throughput、TTFT、TBTを比較する。動機実験ではQwen3-8Bを2 H100で、集約2 replicaと1P+1D分離を比較し、8K input/200 output条件でもresource imbalanceを測る。さらにroofline prediction accuracy、SM分割、execution engineのablationを行う。","settings":[{"name":"aggregated vs disaggregated motivation","description":"Qwen3-8B、H100×2。集約側は両GPUにreplica、token budget 8192。分離側は1 prefill + 1 decode。8K input/200 outputでQPSを変化させTTFT/TBT/throughputを測る。"},{"name":"realistic traces","description":"Qwen3-8B/14BをAzure-Code、Azure conversational、Mooncake traceで評価し、負荷に応じたadaptive spatial multiplexingのthroughput-latency tradeoffを比較する。"},{"name":"model/partition ablation","description":"attention-aware latency modelの予測、active SM/TPC数とcompute/HBM scaling、partition optimizerとlook-ahead executionの寄与を個別検証する。"}],"scope":"H100世代GPUとQwen3-8B/14Bを中心とする実機serving評価。単一GPU内SM partitioningの有効性が中心で、異なるGPU architectureや大規模tensor-parallel modelへの一般化は将来課題として残る。"},"reservation":{"claim_id":"claim-8529c59bc17c2f018b0b86d8","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
