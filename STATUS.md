@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:53:11 JST**
+> 自動生成: **2026-09-17 18:53:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **47** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-17 18:42:36 JST（10分前）** |
+| 最終検証済みResearch収録 | **09-17 18:42:36 JST（11分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **3** | **3** | **0** | **2** | **0** | — |
+| Research | **24** | **4** | **3** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **29** | **7** | **7** | **0** | **2** | **0** | **15** |
+| 合計 | **29** | **8** | **7** | **1** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,7 +131,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
+- immutable submission: **4件** / 検証済み成功: **3件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-2d17d81f9fcb9ead4849e591.json` (job `job-research-a1f4ccc94cf94fe5`)
 - **成功** `arXiv:2504.17584` — CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM
   - job: `.survey/work-queue/jobs/job-research-581beb5301e2ddf8.json`
   - result: `.survey/work-queue/results/research/attempt-797276fcf739302b269d6e80.json` (`ok=true`)
@@ -234,8 +235,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **443** |
-| └ Research | **316** |
+| 成功result未照合のimmutable submission | **444** |
+| └ Research | **317** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
