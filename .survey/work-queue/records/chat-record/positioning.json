@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a65fafc0985029a9a69cb193",
-  "job_id": "job-research-146f944f1c748398",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a65fafc0985029a9a69cb193",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a65fafc0985029a9a69cb193","job_id":"job-research-146f944f1c748398","data":{"limitations":"キャッシュ再利用は厳密等価ではなく近似であり、Kp、Kr、rhoの選択によって速度と品質の交換条件が生じる。V-verifyでも全応答トークンのValue投影は必要なので、更新率を下げてもその費用は残る。主要評価はLLaDA 8BとDream 7B、単一RTX 4090が中心で、より大規模な拡散LLM、多GPU、連続バッチ、多利用者サービング、メモリ容量競合での挙動は未検証。長いキャッシュ間隔で特徴が陳腐化する入力分布への頑健性も追加検証余地がある。","differences":"自己回帰LLMの通常KVキャッシュは因果注意によって過去K/Vが不変であることを利用するが、dLLM-Cacheは双方向注意下の近似的な時間安定性を利用する。dKV-Cacheは復号済みトークンの遅延KV再利用を中心とするのに対し、本方式はプロンプト/応答を分け、K/Vに加えてAttention OutputとFFN Outputも再利用する。Fast-dLLMはブロック単位の近似KVキャッシュと信頼度ベース並列復号を組み合わせる一方、dLLM-Cacheは応答トークンのValue変化量を直接使う細粒度な選択更新を中心とする。","implementation_status":"公式GitHub maomaocun/dLLM-cacheでPyTorch実装を公開。LLaDA、Dreamに加えLLaDA-V、MMaDA対応が記載される。arXiv v1は2025-05-17、v3は2026-06-06、ICML 2026採択。","research_positioning":"拡散LLM推論高速化のキャッシュ系統に位置し、固定KVの可否ではなく中間特徴の時間的安定性を資源として扱う。後続の動的キャッシュ、選択的KV更新、階層キャッシュ研究に対して、プロンプトと応答の非対称性、およびValue類似度を更新優先度へ使う設計点を明確にした基準手法である。"},"reservation":{"claim_id":"claim-a65fafc0985029a9a69cb193","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
