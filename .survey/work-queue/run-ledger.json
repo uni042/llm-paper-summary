@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T21:43:48.599344+00:00",
+  "updated_at": "2026-09-17T21:44:11.000538+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T21:43:48.599344+00:00",
+      "last_recorded_at": "2026-09-17T21:44:11.000538+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 227,
+        "research_completed": 228,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 17,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35177299819:1",
-          "recorded_at": "2026-09-17T03:12:51.922128+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35177299819",
-            "run_attempt": "1",
-            "source_sha": "ba453a691378cedca1207aafd900f560cb6f9917"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35181001396:1",
           "recorded_at": "2026-09-17T04:12:39.648532+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35278237226:1",
+          "recorded_at": "2026-09-17T21:44:11.000538+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35278237226",
+            "run_attempt": "1",
+            "source_sha": "b50f8644d3004b83d2cca1d9dfc611a5bdb33bbd"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22380,6 +22380,14 @@
           "title": "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2ce5027f5de1889a",
+          "type": "research",
+          "canonical_id": "arXiv:2509.26328",
+          "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24031,7 +24039,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 691,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
