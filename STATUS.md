@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 22:30:57 JST**
+> 自動生成: **2026-09-17 23:02:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **46** |
-| 未claim Research job | **45** |
-| 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-17 20:41:39 JST（1時間49分前）** |
+| 未claim Research job | **46** |
+| 直近24hの検証済みResearch収録 | **52** |
+| 最終検証済みResearch収録 | **09-17 20:41:39 JST（2時間21分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **15** | **2** | **0** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **5** | **5** | **0** | **0** | **0** | **25** |
-| 合計 | **27** | **7** | **5** | **2** | **1** | **0** | **25** |
+| Discovery | **11** | **2** | **1** | **1** | **0** | **0** | **4** |
+| 合計 | **26** | **4** | **1** | **3** | **0** | **0** | **4** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-17 23:02:48 JST** job `job-551d7fe8863006a9` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json`
+  - 探索軸: September 2026 KV eviction・agent sandbox memory・speculative agent runtime
 - **09-17 22:02:33 JST** job `job-c6570df8edbda7b0` / 候補 **5件**
   - result: `.survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T2100JST-discovery-network-disagg-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-network-disagg-4.json`
   - 探索軸: network-aware KV transfer・decode routing・disaggregated serving evaluation
-- **09-17 21:01:15 JST** job `job-8796df7b537f4169` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T2100JST-discovery-storage-moe-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json`
-  - 探索軸: SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution
 
 ### 直近タスク
 
@@ -163,38 +163,24 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 22:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **0件** / 候補: **25件**
-- 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling / agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving / MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer / September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory / GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
-- round `disagg-routing-2` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-disagg-routing-2.json`
-  - 探索軸: network-aware disaggregated routing・mixed-precision KV transfer・load-aware prefill scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-disagg-routing-2.json` (`ok=true`)
-- round `edge-agentic-3` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-edge-agentic-3.json`
-  - 探索軸: agentic/multi-turn disaggregation・edge KV migration・heterogeneous serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-edge-agentic-3.json` (`ok=true`)
-- round `offload-serving-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-offload-serving-1.json`
-  - 探索軸: MoE predictive offload・NVMe KV cache・CXL shared memory・adaptive KV transfer
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-offload-serving-1.json` (`ok=true`)
-- round `september-memory-5` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-september-memory-5.json`
-  - 探索軸: September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-september-memory-5.json` (`ok=true`)
-- round `storage-runtime-4` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-storage-runtime-4.json`
-  - 探索軸: GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2200JST-discovery-storage-runtime-4.json` (`ok=true`)
+- 最新観測run: **2026-09-17 23:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **4件**
+- 探索軸: September 2026 KV eviction・agent sandbox memory・speculative agent runtime / September 2026 KV representation・bounded-state inference
+- round `fresh-kv-agent-runtime-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json`
+  - 探索軸: September 2026 KV eviction・agent sandbox memory・speculative agent runtime
+  - 個別result照合: あり / `.survey/work-queue/results/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json` (`ok=true`)
+- round `kv-architecture-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-kv-architecture-2.json`
+  - 探索軸: September 2026 KV representation・bounded-state inference
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.18869` — Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 21:32:19 JST** / heartbeat: **—** / lease expiry: **09-17 23:02:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f3b9350c8e883e12.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -242,10 +228,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **450** |
+| 成功result未照合のimmutable submission | **451** |
 | └ Research | **321** |
 | └ Audit | **2** |
-| └ Discovery | **125** |
+| └ Discovery | **126** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
