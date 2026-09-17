@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T06:44:37.715990+00:00",
+  "updated_at": "2026-09-17T07:39:36.400948+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T06:44:37.715990+00:00",
+      "last_recorded_at": "2026-09-17T07:39:36.400948+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 196,
+        "research_completed": 197,
         "audit_completed": 0,
         "discovery_completed": 90,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35088304453:1",
-          "recorded_at": "2026-09-16T11:05:41.174106+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35088304453",
-            "run_attempt": "1",
-            "source_sha": "2a3e206a78e2a69b8ca4be58dd15659c55d5d878"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35088740693:1",
           "recorded_at": "2026-09-16T11:09:02.648261+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35191166045",
             "run_attempt": "1",
             "source_sha": "2d433257b17dd3eab535d027505e77434690578f"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35195615801:1",
+          "recorded_at": "2026-09-17T07:39:36.400948+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35195615801",
+            "run_attempt": "1",
+            "source_sha": "9026f40426bfac2fc0bb158f22cd000b9b40d781"
           },
           "signals": [
             "research_completed"
@@ -21982,6 +21982,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.17008",
           "title": "FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7f3f089c5dc01c0c",
+          "type": "research",
+          "canonical_id": "arXiv:2602.02108",
+          "title": "Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts",
           "from": "ready",
           "to": "completed"
         }
