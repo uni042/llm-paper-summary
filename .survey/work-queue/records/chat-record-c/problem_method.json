@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-f33bcf6582c61bebc4e77283",
-  "job_id": "job-research-fe0106a025692e30",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f33bcf6582c61bebc4e77283",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-f33bcf6582c61bebc4e77283","job_id":"job-research-fe0106a025692e30","data":{"problem":"agentic AIのedge LLM requestは複数slotにまたがり、未完了requestのdecodeと新規requestの通信/prefillが重なるため、現在のserver選択が既存requestの完了時刻とKV占有を将来slotまで変える。さらに割当のlatency結果はrequest完了まで観測できず、queue lengthだけでは長さの異なるrequestのmemory pressureを表せない。","novelty":"通信、batched prefill、continuous batching型decode、KV cache増減をslot横断で結ぶfine-grained modelと、KV容量×滞在時間を正規化したmemory-time workloadを導入。長期load-balance制約をLyapunov virtual queueへ変換し、完了時に遅れて得られるrewardをLSTMのsequence return予測で過去decisionへ再配分する。","method_overview":"各slotでuser requestを1台のedge serverへ割り当て、uplink transmissionと同期待ち、batched prefill、dynamic entry-and-exit decoding(DEED)を追跡する。decode throughputはinstantaneous KV occupationの非増加関数とし、完了requestはiteration境界でKVを解放、新規prefill完了requestは容量があればlate joinする。server workloadはrequestごとのKV memory-time consumptionを能力で正規化し、server間長期偏差を制約する。LYREOはdrift-plus-penaltyからvirtual queueを更新し、PPO actor-criticへ制約圧を与える。LSTM return predictorはtruncated trajectory+critic bootstrapからreturnを予測し、隣接時点の予測差としてredistributed rewardを生成する。","components":[{"name":"Cross-slot DEED inference model","description":"backlogged requestをslotを跨いで保持し、新規requestのtransmission/prefill中もdecodeを継続。prefill完了後はlate join、完了時はearly evictionしてKVを解放し、各iterationのKV量からdecode時間を計算する。"},{"name":"KV memory-time workload","description":"単なるactive request数ではなく、KV cache占有量と滞在時間を積分したresource pressureをserver能力で正規化し、長期load balancingの指標にする。"},{"name":"Lyapunov-guided reward redistribution","description":"load deviationの長期制約をvirtual queueでadaptive penaltyへ変換し、LSTMがsequence returnを予測して遅延したcompletion rewardを早いscheduling decisionへ割り当てる。sequence truncationとvalue bootstrappingでinfinite-horizonを近似する。"}],"system_design":"service schedulerはrequest metadata、wireless state、serverの未完了request/KV stateを観測し、server assignmentをonline決定する。学習policyはlatency最小化とvirtual queueによる長期load balanceを同時に扱い、実行model側は各slot終了時にbacklog/KV状態を次slotへ引き継ぐ。"},"reservation":{"claim_id":"claim-f33bcf6582c61bebc4e77283","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
