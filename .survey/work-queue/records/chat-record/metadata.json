@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-a65fafc0985029a9a69cb193",
   "job_id": "job-research-146f944f1c748398",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a65fafc0985029a9a69cb193",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2506.06295",
+    "arxiv_id": "2506.06295",
+    "doi": "10.48550/arXiv.2506.06295",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.CL"]},
+    "title": "dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching",
+    "summary": "dLLM-Cacheは、双方向注意のため通常のKVキャッシュをそのまま使えない拡散大規模言語モデルに対し、静的なプロンプトと部分的に変化する応答の時間的冗長性を別々に利用する学習不要の適応キャッシュ方式である。プロンプト特徴は長い間隔で再計算し、応答特徴は短い間隔で全更新しつつ、中間ステップではValueベクトルのコサイン類似度を使うV-verifyで変化の大きいトークンだけを再計算する。LLaDA 8BとDream 7BをRTX 4090で評価し、LongBench-HotpotQAで最大9.1倍のFLOPs削減を報告する。",
+    "list_summary": "プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。",
+    "authors": ["Zhiyuan Liu","Yicun Yang","Yaojie Zhang","Junjie Chen","Chang Zou","Qingyan Wei","Shaobo Wang","Yichen Zhu","Linfeng Zhang"],
+    "authors_affiliations": "一次資料記載の著者情報に従う。",
+    "published": "2025-05-17",
+    "publication": "ICML 2026",
+    "publication_type": "国際会議論文",
+    "publication_status": "Accepted by ICML 2026; arXiv v3 revised 2026-06-06",
+    "lineage": "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+    "topics": ["拡散LLM", "推論高速化", "適応キャッシュ", "KVキャッシュ", "特徴再利用"],
+    "importance": "拡散LLMの双方向注意で生じる反復再計算を、プロンプトと応答で異なる時間スケールのキャッシュへ分解し、応答側はトークン単位の変化量に応じて部分更新する点が重要。",
+    "implementation": "公式PyTorch実装が公開され、LLaDA、Dream、LLaDA-V、MMaDAをサポートする。",
+    "hardware_evaluation": "LLaDA 8BおよびDream 7BのBase/Instructを単一NVIDIA RTX 4090でTPSとFLOPs評価。",
+    "quality_effect": "8ベンチマークで標準推論とのタスクスコアを比較し、最大の計算削減を得ながら競争力のある出力品質を維持すると報告する。",
+    "source": "https://arxiv.org/abs/2506.06295",
+    "sources": ["https://arxiv.org/abs/2506.06295", "https://github.com/maomaocun/dLLM-cache"],
+    "code": "https://github.com/maomaocun/dLLM-cache",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript",
+    "references_total": 0
+  },
+  "reservation": {"claim_id":"claim-a65fafc0985029a9a69cb193","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
