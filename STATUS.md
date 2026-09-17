@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:18:27 JST**
+> 自動生成: **2026-09-17 13:18:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **1** | **0** | **1** | **2** | **1** | — |
+| Research | **7** | **1** | **0** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **8** | **3** | **2** | **1** | **2** | **1** | **6** |
+| 合計 | **7** | **3** | **2** | **1** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,11 +83,6 @@
   - result: `.survey/work-queue/results/research/attempt-2b046e19162a735734acee9b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2b046e19162a735734acee9b.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md`
-- **09-17 07:18:46 JST** [research] `arXiv:2601.11822` — RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation
-  - job: `.survey/work-queue/jobs/job-research-af7d4aee1c99dd28.json`
-  - result: `.survey/work-queue/results/research/attempt-73081685c32e0006998f3d67.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-73081685c32e0006998f3d67.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md`
 
 ### Audit
 
