@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 23:39:51 JST**
+> 自動生成: **2026-09-18 00:01:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **43** |
-| 未claim Research job | **43** |
-| 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-17 23:39:36 JST（15秒前）** |
+| 収録候補論文 | **46** |
+| 未claim Research job | **46** |
+| 直近24hの検証済みResearch収録 | **50** |
+| 最終検証済みResearch収録 | **09-17 23:39:36 JST（21分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **43** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **43** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **2** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **2** | **2** | **0** | **0** | **0** | **4** |
-| 合計 | **26** | **6** | **4** | **2** | **0** | **0** | **4** |
+| Discovery | **13** | **1** | **1** | **0** | **0** | **0** | **3** |
+| 合計 | **27** | **5** | **3** | **2** | **0** | **0** | **3** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-18 00:01:24 JST** job `job-8b4601a03212a20d` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T0000JST-discovery-moe-offload-hardware-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
+  - 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
 - **09-17 23:02:48 JST** job `job-551d7fe8863006a9` / 候補 **3件**
   - result: `.survey/work-queue/results/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260917T2100JST-discovery-kv-scheduling-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-kv-scheduling-2.json`
   - 探索軸: KV cache reservation・GPU L2 prefetch・multi-GPU migration
-- **09-17 21:05:40 JST** job `job-8121fd4e50d58db5` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260917T2100JST-discovery-moe-placement-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-moe-placement-5.json`
-  - 探索軸: MoE expert cache ownership・online placement・resource allocation
 
 ### 直近タスク
 
@@ -173,17 +173,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-17 23:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **4件**
-- 探索軸: September 2026 KV eviction・agent sandbox memory・speculative agent runtime / September 2026 KV representation・bounded-state inference
-- round `fresh-kv-agent-runtime-1` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json`
-  - 探索軸: September 2026 KV eviction・agent sandbox memory・speculative agent runtime
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2300JST-discovery-fresh-kv-agent-runtime-1.json` (`ok=true`)
-- round `kv-architecture-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260917T2300JST-discovery-kv-architecture-2.json`
-  - 探索軸: September 2026 KV representation・bounded-state inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260917T2300JST-discovery-kv-architecture-2.json` (`ok=true`)
+- 最新観測run: **2026-09-18 00:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
+- 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
+- round `moe-offload-hardware-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
+  - 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0000JST-discovery-moe-offload-hardware-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -210,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **43** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
