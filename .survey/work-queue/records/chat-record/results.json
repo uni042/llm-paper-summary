@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-7ad6ad40100c07874c12360f",
-  "job_id": "job-research-1fd656c9a10556db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7ad6ad40100c07874c12360f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-7ad6ad40100c07874c12360f","job_id":"job-research-1fd656c9a10556db",
+ "data":{"overview":"BOuteは同一予算・品質要求の下で、単一モデル配置やRouteLLM、同種GPUだけで共同最適化する版より低遅延・高スループットを示す。GSM8KではRouteLLMに対しP95遅延を最大66%、平均50%削減し、スループットを最大71%、平均52%改善する。MTBenchでもRouteLLMに対して性能を最大80%、平均42%改善する。異種GPUを外したBOute-Homoとの差も残るため、利得はルーティング最適化だけでなくモデルごとのGPU適性を使う配置共同設計から得られる。同じ品質・遅延目標を満たす費用比較ではRouteLLMより平均38%低コストである。","key_results":[{"metric":"GSM8KでのP95遅延","value":"RouteLLM比で最大66%削減、平均50%削減","baseline":"RouteLLM＋モデル間均等資源配分","condition":"総負荷100 req/s、複数品質要求、同等予算","interpretation":"問い合わせ振り分け後のモデル別負荷に合わせてGPU種別・台数を再配分することが、大型モデル側のボトルネックを避ける。"},{"metric":"GSM8Kでのスループット","value":"RouteLLM比で最大71%向上、平均52%向上","baseline":"RouteLLM","condition":"同一品質要求・予算","interpretation":"ルータだけでなく配置を共同最適化することで、同じ品質を維持しながら処理能力を高める。"},{"metric":"MTBenchでの性能改善","value":"RouteLLM比で最大80%、平均42%改善","baseline":"RouteLLM","condition":"MTBench品質要求8.1/8.3/8.5付近、同等予算","interpretation":"GSM8Kだけでなく会話品質トレースでも共同最適化の利得が確認される。"},{"metric":"運用費削減","value":"RouteLLM比平均38.0%、単一モデル基準比平均39.7%、BOute-Homo比15.0%削減","baseline":"各比較方式","condition":"同一の品質下限とP95遅延上限を満たす費用","interpretation":"異種モデルと異種GPUの両方を使うことで、単なる性能向上ではなく要求SLOを満たす時間単価そのものを下げる。"},{"metric":"最適化収束時間","value":"3 GPU種24 GPUで23.5秒、6種48 GPUで1.2分","baseline":"構造情報なしは3.6〜8.9分、オフライン準備なしは約12分〜30分超","condition":"解が20反復以上安定した時点を収束と判定","interpretation":"構造情報と事前性能データベースにより探索を実運用起動時に扱える時間へ圧縮する。"}],"negative_results":"ルーティングだけでは必ずしも改善しない。論文の特性評価では小型/大型モデルへ40/60%で振り分けながらGPUを6台ずつ均等配分すると、大型モデルが詰まりP95遅延28.2秒となり、70B単独の25.6秒より悪化した。また構造情報を除くと必要なベイズ最適化評価回数が約8倍になり、3〜6 GPU種で収束時間が4〜9分へ増える。オフライン性能データベースを使わず候補ごとにシミュレーションすると12〜30分超まで悪化する。","interpretation":"利得の中心は、品質要求が変わるたびにモデル別負荷率だけでなく、その負荷を処理するGPUの費用性能と並列化まで同時に変える点にある。小型モデルは安価なRTX系で費用効率が高い一方、大型モデルはH100等の高性能GPUを多く割り当てた方がボトルネックを避けられる。品質要求が高くなるほど大型モデルへ負荷と予算を移すため、固定配置ではこの変化へ追随できない。","quality_impact":"品質はGSM8Kの集約精度またはMTBenchの集約得点として最適化目的・制約へ直接入る。したがって品質低下を隠して速度だけを上げる方式ではなく、指定された品質下限を満たすパレート解の中で遅延または費用を最小化する。ただし品質推定はサブサンプルした問い合わせトレースと既存ルータに依存するため、分布変化時には再評価が必要である。"},"reservation":{"claim_id":"claim-7ad6ad40100c07874c12360f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
