@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2d17d81f9fcb9ead4849e591","job_id":"job-research-a1f4ccc94cf94fe5","data":{"limitations":"方式はNVSHARP/Multimemを使えるHopper、Blackwell以降のNVIDIA環境への依存が強く、同等のスイッチ内削減やマルチキャスト機構を持たないGPUでは融合カーネルの利点をそのまま再現できない。主要評価は単一DGX内で、複数ノードのネットワーク通信は対象外である。分割境界と有効化しきい値は行列積実装やモデル形状に依存し、閉源cuBLASのため解析式ではなく事前計測表を使う。非常に小さい処理やMoEの小系列では完全重畳が逆効果になる。B200では対称メモリとtorch.compileが両立せず、完全方式はCUDA Graphも使えないため、評価時に実行機構を無効化する制約が残る。","differences":"FluxやTileLinkは行列積内部の細粒度タイルと通信を密に融合するため、大きな行列では通信を隠せる一方、小さな低遅延処理では分割、レジスタ、共有メモリ、小通信の損失が大きくなりやすい。NanoFlowは多数のナノバッチを資源特性に応じて協調実行する配信基盤全体の方式で、十分な処理量と大きな基盤変更を必要とする。DeepSeek系の2バッチ重畳はエキスパート並列の高価なAll-to-Allを対象とし、約20 SM規模の通信を計算へ重ねる。TokenWeaveはテンソル並列の比較的軽いAllReduceを対象に、2群だけの粗い分割、実行波を考慮した境界、RMSNorm再配置、NVSHARP/Multimem融合を組み合わせ、1K級の小処理から成立させる点が異なる。","implementation_status":"論文はMLSys 2026採択版で、著者実装は公開済みである。公式コードはMicrosoftのTokenWeaveリポジトリにあり、論文のH100系実験はvLLM V1へ統合した実装で行う。付録には融合カーネルのCUDAコード、スマート分割の事前計測手順、選択的有効化、再現用アーティファクトの依存関係と実験手順が記載される。H100実装はvLLM 0.8.5、B200実装はvLLM 0.14.1を基盤とするため、現行vLLMへそのまま統合済みの標準機能と同一視するのではなく、著者の研究実装として扱う必要がある。","research_positioning":"本論文は、分散LLM推論の通信計算重畳を『大きな計算を細かく割れば通信を隠せる』という従来の発想から、低遅延配信向けに分割自体の損失を最小化し、通信に隣接するRMSNormまで含めてクリティカルパスを再設計する方向へ進めた研究と位置付けられる。特に、テンソル並列では通信が全体の1〜2割程度に収まり、学習やエキスパート並列ほど隠蔽余地が大きくないため、通信だけを最適化するよりも、同時に正規化のHBM往復を消す方が重要だと示した。リポジトリ内ではテンソル並列推論、集合通信融合、GPUカーネル最適化、配信実行系の系統に属し、Flux、TileLink、NanoFlow、分離プリフィル・デコード系と比較する接点を持つ。"},"reservation":{"claim_id":"claim-2d17d81f9fcb9ead4849e591","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0f8f604e4dd41baf02109b3f",
+  "job_id": "job-research-fd53481863b8e4e0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0f8f604e4dd41baf02109b3f",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
