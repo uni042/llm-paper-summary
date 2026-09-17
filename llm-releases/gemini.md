@@ -6,6 +6,8 @@ Google Geminiファミリーの主要リリースを新しい順に記録する�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-09-15 | Gemini 3.8 Live | Live API向けの低latency audio-to-audioモデル。real-time voice agentと対話を主用途とし、interleaved reasoning、既定のasynchronous function calling、session client content updateを備える。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |
+| 2026-09-15 | Gemini 3.8 Live Extended Thinking | Live API向けの高reasoning audio-to-audioモデル。live audio interaction中のbackground reasoningを支援し、より深い推論が必要な音声agent用途を対象とする。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |
 | 2026-09-02 | Gemini 3.8 Flash | software engineering、エージェント型タスク（agentic tasks）、複数段階推論を3.7 Flashから強化した高速・汎用モデル。text / image / audio / video入力に対応し、最大1M-token入力文脈と64K-token出力を持つ。Gemini API等で一般利用できるproduction向けモデル。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/ |
 | 2026-09-02 | Gemini 3.8 Flash Cyber | Gemini 3.8 Flash系の基盤能力を、脆弱性探索（vulnerability discovery）や自動patch作成などcybersecurity用途へ調整した限定提供モデル。一般用途モデルではなく、Fairwind Program経由のtrusted defender向け提供として区別する。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/ |
 | 2026-08-13 | Gemini 3.7 Flash | codingとtoolを組み合わせるエージェント型workflowを中心に3.6 Flashから更新したFlash系モデル。Flash系は最大性能だけでなく、latency・cost・throughputとのbalanceを重視する位置づけ。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/ |

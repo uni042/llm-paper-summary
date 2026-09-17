@@ -1,20 +1,22 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260915-0830",
+  "attempt_id": "update-20260917-0830-rerun-0907",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
     "framework-updates/inference-engines/vllm/README.md",
     "framework-updates/inference-engines/sglang/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/gemini.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
     "framework-updates/inference-engines/vllm/README.md",
     "framework-updates/inference-engines/sglang/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/gemini.md"
   ],
-  "summary": "2026-09-15確認: vLLMのオンライン受理推定によるadaptive verification拡張とROCm DeepSeek-V4.1 mHC post/pre融合、SGLangのDeepSeek-V4.1低圧縮比層multi-stream prepareを追加。9月13日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
+  "summary": "2026-09-17の08:30 update route再実行: vLLM DeepSeek-V4.1 FlashMLA Mega Attention + NVFP4 compressed KV、SGLang DeepSeek-V4.1 FP4 indexer fusion / Hopper FP8 tuning、Gemini 3.8 Live / Live Extended Thinking GAを反映。"
 }

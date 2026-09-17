@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-15**
+- フレームワーク差分の最終確認: **2026-09-17**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-15の差分確認では、公式リリースと開発元リポジトリを基準に9月13日以降の主要な投機的デコード、DeepSeek-V4.1向けkernel fusion・multi-stream実行関連変更を再確認した。
+この2つは分けて扱う。2026-09-17の差分確認では、公式リリースと開発元リポジトリを基準に9月15日以降のDeepSeek-V4.1向け圧縮KV・attention融合、FP4 indexer kernel融合、および主要LLMの正式公開を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,30 @@
 ---
 
 ## 最新更新
+
+### 2026-09-17
+
+#### vLLM
+
+- **DeepSeek-V4.1でFlashMLA Mega AttentionとNVFP4圧縮KV cacheを統合 — merged 2026-09-16 UTC**
+
+  FlashMLAのmega-attention backendをDeepSeek-V4.1へ追加し、Q RoPE・sparse attention・inverse RoPE・FP8 castを1 launchへ融合した。圧縮KV recordはNVFP4を使い、従来のFP8系recordより約45%小さい。SM100では対応topologyで既定backendとなり、単一GB300のdecode microbenchmarkではTP1で最大約1.45倍。end-to-end評価ではNVFP4経路と従来FP8経路のaccuracy差はsampling noise内だった。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/56935
+
+#### SGLang
+
+- **DeepSeek-V4.1 low-ratio indexerのRoPE・FP4量子化・packing・cache storeを融合 — merged 2026-09-16 UTC**
+
+  key/queryのRoPE、FP4 fake quantization、68-byte index-K形式へのpacking、paged cache storeを専用CUDA/Triton kernelへまとめた。CUDA・Triton・reference pathで504条件のbyte-level一致を検証しており、DeepSeek-V4.1のFP4 indexerを複数kernelから融合経路へ移す基盤更新。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/39656
+
+#### 新規LLM
+
+- **Gemini 3.8 Live / Gemini 3.8 Live Extended Thinking — 2026-09-15 GA**: GoogleがLive API向けaudio-to-audio model 2種を一般提供。標準Liveは低latency対話、Extended Thinkingはlive audio中のbackground reasoningを重視する。
+
+  一次資料: https://ai.google.dev/gemini-api/docs/changelog
 
 ### 2026-09-15
 

@@ -3,10 +3,10 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-09-15**
+- リリース情報の最終確認: **2026-09-17**
 - 用語・可読性の最終監査: **2026-09-07**
 
-2026-09-15に主要提供元の公式公開を再確認した。9月13日以降に現在追跡している主要model familyへ追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。
+2026-09-17に主要提供元の公式公開を再確認した。Googleは9月15日にLive API向けのGemini 3.8 LiveとGemini 3.8 Live Extended Thinkingを一般提供（GA）した。トップ表は各model familyの最新リリースを示す。
 
 噂・リーク・単なる軽微variantは原則含めない。著名なmodel familyで直近半年に主要リリースがない場合は、その系統自体が一覧から消えないよう**直近の主要モデル1件だけ**を期間外として残す。
 
@@ -28,7 +28,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 |---|---|---|---|---|
 | 2026-09-03 | GPT-6 Astra | OpenAI GPT | toolを使う長時間task、coding、research、science等を重点にしたGPT-6世代上位APIモデルとして記録。API ID `gpt-6-astra`、最大1.05M-token context / 128K output。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-09-02 | Qwen3.8-Max-0902 | Qwen | 2.4T級MoEを基盤とするQwen3.8-MaxのAPI snapshot。1M contextとtext / image / video入力を維持し、coding・長時間tool taskを更新。0902自体のopen-weight checkpointとは区別。 | [Qwen系](qwen.md) |
-| 2026-09-02 | Gemini 3.8 Flash | Gemini | text / image / audio / video入力、1M input context、64K outputを持つ高速汎用APIモデル。coding・agent task・multi-step reasoningを更新。 | [Gemini系](gemini.md) |
+| 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |
 | 2026-09-02 | Muse Spark 1.3 | Meta Muse | codingとエージェント型タスク（agentic tasks）を更新し、Muse Code / Meta APIへ展開されたMuse Spark系モデル。 | [Meta Muse系](meta-muse.md) |
 | 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
 | 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・scienceなど長いmulti-step task向けの上位model群。Mythosはcybersecurity / biology等の専門領域を重点化。 | [Claude系](claude.md) |

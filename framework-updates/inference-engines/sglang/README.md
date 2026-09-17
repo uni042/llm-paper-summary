@@ -29,6 +29,12 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-09-17
+
+- **DeepSeek-V4.1 low-ratio indexerのRoPE + FP4 packingを融合 — merged 2026-09-16 UTC**: key/queryのRoPE、per-32 UE8M0 FP4 fake quantization、68-byte index-K形式へのpacking、paged cache storeをCUDA/Triton kernelへ統合。CUDA kernel・Triton pack kernel・reference pathを504条件でbyte単位照合し、round-to-nearest-evenを含むFP4 indexer経路を検証した。既存C4 indexerの既定roundingは変更しない。[PR #39656](https://github.com/sgl-project/sglang/pull/39656)
+
+- **Hopper向けblock-FP8 matmulにtiny-M専用SWAP_AB / SPLIT_K tuningを追加 — merged 2026-09-16 UTC**: DeepSeek-V4.1向けにH200の7 shapeへM=1専用のTriton kernel設定を追加し、M>=2は既存kernelを維持する。CUDA Graph replayを含めて検証し、既存configには影響しない限定最適化。[PR #39657](https://github.com/sgl-project/sglang/pull/39657)
+
 ## 2026-09-15
 
 - **DeepSeek-V4.1低圧縮比層のprepareをmulti-stream化・ratio 1 verify compressionを融合 — merged 2026-09-14 UTC**: compress ratio 1/2のdecode / target verifyでcompressor+indexer、KV write、Q chainを3 streamへ分離し、ratio 1のverify compressionもfused pathへ移した。4×GB300・TP4/EP4・DSpark・64K contextではattention-layer median **122.9 → 121.0 us**、distinct CUDA streams / verify cycle **19 → 12**。`_q_rope_store`のPDL適用ではkernel時間が約2.0 usから1.2〜1.5 usへ短縮。[PR #39445](https://github.com/sgl-project/sglang/pull/39445)

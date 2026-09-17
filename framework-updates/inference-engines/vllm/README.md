@@ -30,6 +30,10 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-17
+
+- **DeepSeek-V4.1向けFlashMLA Mega Attention + NVFP4圧縮KV cache — merged 2026-09-16 UTC**: Q RoPE、sparse attention、inverse RoPE、FP8 castをmega-attention kernelへ融合し、NVFP4 compressed KV recordを追加。SM100の対応topologyでは既定backendとなる。NVFP4 recordは従来のFP8系recordより約45%小さく、単一GB300・CUDA Graph有効のdecode microbenchmarkではTP1で最大約**1.45倍**。TP2〜TP8は概ね同等で、prefill性能は未測定。GPQA / GSM8Kのend-to-end比較ではaccuracy差はsampling noise内。[PR #56935](https://github.com/vllm-project/vllm/pull/56935)
+
 ## 2026-09-15
 
 - **オンライン受理推定でadaptive verificationをMTP / EAGLE3 / DFlash系へ拡張 — merged 2026-09-14 UTC**: draft logitsの `logit(max q)` から受理確率を継続学習し、学習済みconfidence headなしでもverification batchを動的にtrimする。concurrency 64の測定でMiMo-V2.5-Pro + DFlash **+19.0%**、Inkling + MTP8 **+17.6%**、Kimi-K2.5 + DFlash **+44.5%**、Muse-Glimmer + DFlash2 **+14.7%**の平均出力throughput向上。DeepSeek-V4-Flashではtrained headに対して確率的draftingでthroughput **+2.1%**、median TPOT **-3.8%**。[PR #52228](https://github.com/vllm-project/vllm/pull/52228)
