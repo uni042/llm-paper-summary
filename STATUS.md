@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 03:00:11 JST**
+> 自動生成: **2026-09-18 03:02:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間12分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間15分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **22** | **2** | **1** | **1** | **0** | **0** | **1** |
-| 合計 | **28** | **5** | **4** | **1** | **1** | **0** | **1** |
+| Discovery | **20** | **2** | **2** | **0** | **0** | **0** | **1** |
+| 合計 | **26** | **5** | **5** | **0** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -89,6 +89,10 @@
   - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
   - 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache
+- **09-18 03:01:46 JST** job `job-1ae655d76711b99a` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json`
+  - 探索軸: direct I/O・GPU-initiated storage・SSD-backed LLM inference
 - **09-18 01:58:45 JST** job `job-ca1a1c24ad6a887a` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json`
@@ -121,10 +125,6 @@
   - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
   - 探索軸: distributed MoE expert placement・communication skew・heterogeneous edge serving
-- **09-18 00:01:24 JST** job `job-8b4601a03212a20d` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T0000JST-discovery-moe-offload-hardware-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-moe-offload-hardware-1.json`
-  - 探索軸: MoE expert offloading・hardware-limit modeling・3D memory speculative serving
 
 ### 直近タスク
 
@@ -157,7 +157,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 03:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **1件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
 - 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache / direct I/O・GPU-initiated storage・SSD-backed LLM inference
 - round `specialist-cpu-gpu-moe-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
@@ -166,7 +166,7 @@
 - round `specialist-gpu-storage-2` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json`
   - 探索軸: direct I/O・GPU-initiated storage・SSD-backed LLM inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -223,10 +223,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **456** |
+| 成功result未照合のimmutable submission | **455** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job

@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T17:59:29+00:00",
+  "updated_at": "2026-09-17T18:01:46+00:00",
   "last_run_key": "2026-09-18T03:00:00+09:00",
-  "last_round": "specialist-cpu-gpu-moe-1",
+  "last_round": "specialist-gpu-storage-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "direct-I/O軸では強いLLM直接候補が既収録に集中し、未収録2本は隣接storage研究で対象外だった",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:58:47+09:00",
-      "round": "specialist-slo-memory-4",
-      "axis": "SLO-aware scheduling・KV memory hierarchy・動的メモリ回収",
-      "query_summary": "通信/runtime軸の後、SLOとmemory pressureの協調制御へ移動。latency-budget型KV階層管理、GH200 rotary scheduling、未知生成長のnon-clairvoyant scheduling、CUDA VMMによるprefill reserve回収を一次資料抄録で軽量評価し、投入直前に最新HEADとcanonical IDで再dedupeした。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は今回までの強候補の関連・引用系と、mobile/edge・AI-RANなど異種配置でのKV移送を確認し、既存候補との重複が多ければ探索を収束判定する",
-      "source_submission": "work-queue/submissions/20260913T0108JST-discovery-specialist-slo-memory-4.json"
-    },
     {
       "run_key": "2026-09-13T00:58:47+09:00",
       "round": "specialist-heterogeneous-edge-5",
@@ -6844,6 +6829,32 @@
       ],
       "next_axis_hint": "次はHybriMoEのforward/backward citationとkTransformers周辺実装研究、またはdirect I/O・GPU-initiated storageの独立軸へ移る",
       "source_submission": "work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json"
+    },
+    {
+      "run_key": "2026-09-18T03:00:00+09:00",
+      "round": "specialist-gpu-storage-2",
+      "axis": "direct I/O・GPU-initiated storage・SSD-backed LLM inference",
+      "query_summary": "HybriMoE投入後、独立軸としてGPU-initiated storage、GPU Direct Storage、io_uring、SSD-backed KVを走査。Tutti、HillInfer、PAM、HybridGen、TTKV等はcanonical identity indexで既収録を確認。SwarmIOとBaMは未収録だがLLM推論への直接性が不足するため不採用として耐久記録した。",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.7777777777777778,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2602.18750",
+        "arXiv:2602.11521",
+        "arXiv:2604.18529",
+        "arXiv:2604.19769",
+        "arXiv:2602.00328",
+        "arXiv:2606.16135"
+      ],
+      "next_axis_hint": "次は2026年9月新着のserving scheduling・KV memory pressure、またはHybriMoEの被引用/参考文献から未収録の直接LLM systems研究を探索する",
+      "source_submission": "work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json"
     }
   ],
   "axes": {
@@ -11414,6 +11425,19 @@
       "duplicate_ratio": 0.875,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次はHybriMoEのforward/backward citationとkTransformers周辺実装研究、またはdirect I/O・GPU-initiated storageの独立軸へ移る"
+    },
+    "direct I/O・GPU-initiated storage・SSD-backed LLM inference": {
+      "last_run_key": "2026-09-18T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.7777777777777778,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次は2026年9月新着のserving scheduling・KV memory pressure、またはHybriMoEの被引用/参考文献から未収録の直接LLM systems研究を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

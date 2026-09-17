@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T17:02:45.487062+00:00",
+  "updated_at": "2026-09-17T18:02:51.424186+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T17:02:45.487062+00:00",
+      "last_recorded_at": "2026-09-17T18:02:51.424186+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 219,
         "audit_completed": 0,
-        "discovery_completed": 100,
+        "discovery_completed": 101,
         "blocked": 15,
-        "new_jobs": 146,
+        "new_jobs": 147,
         "new_papers": 222,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35138464907:1",
-          "recorded_at": "2026-09-16T19:08:20.190607+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35138464907",
-            "run_attempt": "1",
-            "source_sha": "99f29c0e6a0e07f3dff72493886540321a624a0d"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35141399566:1",
           "recorded_at": "2026-09-16T19:34:59.636834+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35249881115",
             "run_attempt": "1",
             "source_sha": "6b73b2e094bce29e2350016401d455678e33a20d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35256108869:1",
+          "recorded_at": "2026-09-17T18:02:51.424186+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35256108869",
+            "run_attempt": "1",
+            "source_sha": "4b2287e6058fd1951ebd3f1ca50068b766847d34"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -22269,6 +22269,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-1ae655d76711b99a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23293,6 +23301,13 @@
           "type": "research",
           "canonical_id": "arXiv:2609.18110",
           "title": "SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC"
+        },
+        {
+          "job_id": "job-1ae655d76711b99a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -23739,7 +23754,8 @@
         ".survey/work-queue/results/20260917T2200JST-discovery-storage-runtime-4.json",
         ".survey/work-queue/results/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json",
         ".survey/work-queue/results/20260918T0202JST-discovery-specialist-hbf-memory-2.json",
-        ".survey/work-queue/results/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json"
+        ".survey/work-queue/results/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json",
+        ".survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
