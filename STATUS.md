@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 01:00:41 JST**
+> 自動生成: **2026-09-18 01:01:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **2** | **0** | **2** | **0** | **0** | **4** |
-| 合計 | **24** | **5** | **3** | **2** | **1** | **0** | **4** |
+| Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **4** |
+| 合計 | **26** | **5** | **5** | **0** | **1** | **0** | **4** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-18 01:00:46 JST** job `job-a49136abb1086476` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
+  - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮
+- **09-18 01:00:51 JST** job `job-8b987704cc22f477` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json`
+  - 探索軸: GB-scale LLC・CPU階層メモリ・異種many-core runtime
 - **09-18 00:05:06 JST** job `job-f557e7cd72d205b3` / 候補 **2件**
   - result: `.survey/work-queue/results/20260918T0000JST-discovery-distributed-moe-placement-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0000JST-discovery-distributed-moe-placement-2.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260917T2200JST-discovery-september-memory-5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-september-memory-5.json`
   - 探索軸: September 2026 hierarchical memory・Flash compute・CPU/GPU KV partition・mobile memory
-- **09-17 22:05:04 JST** job `job-6e2391c5d975340d` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260917T2200JST-discovery-storage-runtime-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2200JST-discovery-storage-runtime-4.json`
-  - 探索軸: GPU direct remote-memory access・3D NAND compute・NVMe KV cache・peer GPU cache
-- **09-17 21:02:08 JST** job `job-4c2d821696092d99` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260917T2100JST-discovery-cxl-memory-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json`
-  - 探索軸: CXL pooled memory・photonic fabric・near-data processing for KV cache
 
 ### 直近タスク
 
@@ -177,16 +177,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 01:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **4件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **4件**
 - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮 / GB-scale LLC・CPU階層メモリ・異種many-core runtime
 - round `fresh-scheduling-kv-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json`
   - 探索軸: 2609新着のmemory-aware scheduling・KV cache適応圧縮
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0105JST-discovery-specialist-fresh-scheduling-kv-1.json` (`ok=true`)
 - round `cpu-hierarchy-runtime-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json`
   - 探索軸: GB-scale LLC・CPU階層メモリ・異種many-core runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -243,10 +243,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **457** |
+| 成功result未照合のimmutable submission | **455** |
 | └ Research | **326** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **125** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
