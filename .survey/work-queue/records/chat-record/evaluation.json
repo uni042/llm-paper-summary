@@ -2,35 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0a00f41d4ded3663e9ca00ff",
-  "job_id": "job-research-476e11d12d88d15c",
-  "data": {
-    "hardware": "NVIDIA H100 PCIe 80GB、Intel Xeon Platinum 8470、8チャネル主記憶、16個のDIMM近傍データ処理器からなる異種試作系。ホストからGPUへのPCIe 5.0片方向帯域は64GB/s。DIMM間リンクは25GB/sでCPUを介さない移動に使う。",
-    "software": "GPU実行にvLLM 0.8.1、CPUの行列拡張命令実行にKTransformersを利用する。装置別のトークン数対実行時間を事前計測して費用表を作り、オンライン割当へ利用する。",
-    "datasets": [
-      "複数の代表的MoEモデル",
-      "実データ由来の専門家活性化分布",
-      "高処理量のオフライン／ジグザグ型バッチ条件"
-    ],
-    "methodology": "まずモデル・データ・バッチ条件を変えて専門家活性化を測り、高・中・低頻度群の比率を確認する。次にGPU、CPU、近傍処理器でトークン数を変えた専門家演算性能を測定し、中頻度群がGPUでは転送律速、近傍処理では演算律速になることを示す。端末間評価では既存の単一GPUオフロード方式と比較し、復号時間、総処理量、装置利用率を測る。割当補正、負荷予測、配置変換、DIMM間再均衡の寄与も個別に評価する。",
-    "settings": [
-      {
-        "name": "中頻度専門家の特性測定",
-        "description": "非高頻度群を一括せず、各専門家の処理トークン数を測定する。低頻度群は70%超の専門家を占めるが処理トークンは8%程度、中頻度群は20〜40%の専門家で最大70%のトークンを担う条件を確認する。"
-      },
-      {
-        "name": "三装置の演算・転送特性",
-        "description": "H100では一専門家256トークン以上でも利用率30%程度が必要で、中頻度群はそれ未満となる。CPUは行列拡張命令で数十〜数百トークンの専門家を効率よく処理し、近傍処理器は低頻度で帯域優位を得る。"
-      },
-      {
-        "name": "端末間処理量評価",
-        "description": "三者協調、律速補正、予測再配置を統合し、既存オフロード方式に対する復号高速化と総処理量改善を複数MoEモデルで測定する。"
-      }
-    ],
-    "scope": "単一H100を中心とした高処理量MoE推論が対象。DIMM近傍処理器と専用DIMM間リンクを備える試作構成を前提とするため、一般的な市販サーバへそのまま適用できるわけではない。"
-  },
+  "attempt_id": "attempt-5ba7495e892c3a3a6d421a8e",
+  "job_id": "job-research-7e739eca355b8687",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0a00f41d4ded3663e9ca00ff",
+    "claim_id": "claim-5ba7495e892c3a3a6d421a8e",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

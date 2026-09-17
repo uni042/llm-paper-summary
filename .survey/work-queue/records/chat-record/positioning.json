@@ -2,21 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0a00f41d4ded3663e9ca00ff",
-  "job_id": "job-research-476e11d12d88d15c",
-  "data": {
-    "limitations": [
-      "DIMM近傍データ処理器と25GB/sの専用DIMM間リンクを備えた試作ハードウェアを前提とし、一般的なGPUサーバでは同じ構成をそのまま利用できない。",
-      "専門家の高・中・低頻度境界と最適割当はモデル、バッチ方式、データ分布、GPU・CPU・主記憶性能によって変わるため、費用表の事前計測が必要になる。",
-      "負荷予測の移動判断精度は78%で完全ではなく、急な人気変化では不要な先読みや再配置が発生し得る。",
-      "主眼は単一GPUでの高処理量MoE推論であり、多GPU専門家並列や分散サービング全体の通信最適化を直接扱わない。"
-    ],
-    "differences": "MoE-Infinityなどの退避方式が主に専門家の先読みとキャッシュを扱い、FiddlerやKTransformers系がGPUとCPUを協調させ、Monde系がGPUと近傍処理を二分するのに対し、TriMoEは中頻度専門家を独立した負荷階級として定義してCPUへ割り当てる。さらに専門家単体の最適装置ではなく三領域の全体完了時間を最小化し、縞状・局所の重み配置形式まで負荷予測に応じて変換する。",
-    "implementation_status": "H100、Xeon Platinum 8470、16個のDIMM近傍処理器からなる異種試作系で実装・評価。GPUはvLLM 0.8.1、CPUはKTransformersを利用し、近傍処理器、配置変換器、DIMM間リンクを統合する。著者公式コード公開はarXivページ上で確認できなかった。",
-    "research_positioning": "混合専門家モデルのオフロード、階層メモリ、異種計算資源配置の研究。GPUと外部メモリの間にCPU演算と近傍データ処理を役割別に置くため、専門家キャッシュだけでなく『どのメモリ階層の近くで計算するか』を含む三階層配置研究として重要である。"
-  },
+  "attempt_id": "attempt-5ba7495e892c3a3a6d421a8e",
+  "job_id": "job-research-7e739eca355b8687",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0a00f41d4ded3663e9ca00ff",
+    "claim_id": "claim-5ba7495e892c3a3a6d421a8e",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
