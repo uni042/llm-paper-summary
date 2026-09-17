@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2a61ba1261894f97dcd2cf26",
-  "job_id": "job-research-97b8208885471bff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2a61ba1261894f97dcd2cf26",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2a61ba1261894f97dcd2cf26","job_id":"job-research-97b8208885471bff","data":{"hardware":"公開35B/8B層の速度とメモリはMac mini M4 Pro 24GB。事前ルータの同一セッションA/BはMacBook M2 16GB統合メモリで、18.4GiBの公開ディレクトリが物理メモリへ収まらずSSDページインが発生する条件。品質評価は別の計算サーバを用いる。","software":"MLX 0.30.4〜0.30.6。品質はOpenCompass。Edge0はMLX基盤を実装し、基底4ビットチェックポイント、事前ルータ、LoRAを別ファイルとしてロードする。","models":["edge0-35b / Qwen3.6-35B-A3B","edge0-8b / Ling 3.0 tiny"],"workloads":"品質はAIME 2026、HumanEval、GPQA-Diamond、MMLU-Pro、IFBench。速度は同一トークン列を再生するデコードA/Bと3.1kトークンプロンプトのプリフィルを測る。","baselines":"品質は元のfp16基底モデル。速度は要求後SSDストリーミング、全層事前ルータ付きステージ、同一機の全重み常駐mlx-lmを比較する。K=2/4/8のルーティング幅を同一キャッシュ予算で比較し、増分スタックの独立A/Bも付録で報告する。","methodology":"速度比較は各方式を別プロセスで動かし、ページキャッシュをウォームアップし、同じキャッシュ予算と同じサンプルトークン列を使う。方式の実行順をラウンドごとに交替し、反復の中央値を報告する。単発測定は±40%、16GB機ではセッション間最大2.3倍の変動があるため、論文は異なるセッション間の数値を証拠として比較しない。品質評価と速度評価も分離する。","scope":"単一要求をFIFO直列実行するMLX実装であり、並行要求やバッチ配信は対象外。事前ルータの利得はSSD待ちが大きくキャッシュが冷たいほど大きく、速いストレージや高命中キャッシュでは縮む。CUDAは基盤抽象の将来枠で、実装・評価はMLXのみ。品質は元fp16と完全一致せず、特に長鎖推論で差が残る。"},"reservation":{"claim_id":"claim-2a61ba1261894f97dcd2cf26","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
