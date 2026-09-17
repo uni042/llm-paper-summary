@@ -1,1 +1,63 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4b1f52337434d9ea1c49a1f1","job_id":"job-research-e79ef27915573b54","data":{"canonical_id":"arXiv:2507.09201","arxiv_id":"2507.09201","doi":"10.48550/arXiv.2507.09201","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":["cs.DC"]},"title":"SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding","summary":"SLIMは、エッジLLM推論でFFN/MoE重みの大容量とPCIe転送が支配的になる問題に対し、低ランク予測器と適応しきい値で実行時に活性ニューロンだけを選び、FFN/MoEを3D NAND近傍処理、QKVO・MHA・疎性予測をDRAM内処理へ割り当てるアルゴリズム・ハードウェア共同設計である。die-level SLC構成ではSSD-GPU比最大17.6倍のスループット、DRAM-GPU比8.8〜10.3倍のエネルギー効率を報告する。","list_summary":"適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。","authors":["Weihong Xu","Haein Choi","Po-kai Hsu","Shimeng Yu","Tajana Rosing"],"authors_affiliations":"University of California San Diego; Georgia Institute of Technology","published":"2025-07-12","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2025-07-12)","lineage":"edge LLM inference / SSD near-storage processing / DRAM PIM / activation sparsity / heterogeneous acceleration","topics":["SSD/NVMe","近傍ストレージ処理","PIM","エッジLLM推論","活性疎性","MoE"],"importance":"FFN/MoE重みをSSDからGPUへ毎トークン転送する従来オフロードではなく、重みの所在で計算し、疎性予測結果をアドレスとして非活性重みのNAND読出し自体を省く点がSSD活用研究として重要である。","implementation":"SSD FTLへの専用推論モードとコマンド、channel/die-level NSP PE、bit-serial DRAM-PIM、ページ整列重み配置、DRAM-PIMとSSD-NSPのパイプラインを設計。ASICはVerilogで記述しTSMC 40nm合成後22nmへスケール、システムはMQSim/TransPIMベースのcycle-accurate simulatorで評価。","hardware_evaluation":"Intel i7-11700K、64GB DDR4-2400、RTX 4090 24GBを基準系に使用。SLIMはPCIe 4.0x4 NVMe、16-channel SLC/TLC NAND、32GB DDR4-PIM、channel-levelまたはdie-level NSP PEをモデル化。","quality_effect":"元LLM重みは変更せず、低ランク予測器がしきい値未満と予測したFFNニューロンをスキップする近似を導入。Llama2-7B/13Bでは疎性40%まで平均精度低下が0〜0.02程度、60%で平均2〜3ポイント程度の低下。","source":"https://arxiv.org/abs/2507.09201","sources":["https://arxiv.org/abs/2507.09201","https://arxiv.org/html/2507.09201"],"code":null,"last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary manuscript reference section","references_total":0},"reservation":{"claim_id":"claim-4b1f52337434d9ea1c49a1f1","worker_id":"scheduled-chat-discovery-specialist-20260917T1800JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7c0239753483c2ddf4304e18",
+  "job_id": "job-research-e79ef27915573b54",
+  "data": {
+    "canonical_id": "arXiv:2507.09201",
+    "arxiv_id": "2507.09201",
+    "doi": "10.48550/arXiv.2507.09201",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding",
+    "summary": "SLIMは、エッジLLM推論でFFN/MoE重みの大容量とPCIe転送が支配的になる問題に対し、低ランク予測器と適応しきい値で実行時に活性ニューロンだけを選び、FFN/MoEを3D NAND近傍処理、QKVO・MHA・疎性予測をDRAM内処理へ割り当てるアルゴリズム・ハードウェア共同設計である。die-level SLC構成ではSSD-GPU比最大17.6倍のスループット、DRAM-GPU比8.8〜10.3倍のエネルギー効率を報告する。",
+    "list_summary": "適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。",
+    "authors": [
+      "Weihong Xu",
+      "Haein Choi",
+      "Po-kai Hsu",
+      "Shimeng Yu",
+      "Tajana Rosing"
+    ],
+    "authors_affiliations": "University of California San Diego; Georgia Institute of Technology",
+    "published": "2025-07-12",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1, 2025-07-12)",
+    "lineage": "edge LLM inference / SSD near-storage processing / DRAM PIM / activation sparsity / heterogeneous acceleration",
+    "topics": [
+      "SSD/NVMe",
+      "近傍ストレージ処理",
+      "PIM",
+      "エッジLLM推論",
+      "活性疎性",
+      "MoE"
+    ],
+    "importance": "FFN/MoE重みをSSDからGPUへ毎トークン転送する従来オフロードではなく、重みの所在で計算し、疎性予測結果をアドレスとして非活性重みのNAND読出し自体を省く点がSSD活用研究として重要である。",
+    "implementation": "SSD FTLへの専用推論モードとコマンド、channel/die-level NSP PE、bit-serial DRAM-PIM、ページ整列重み配置、DRAM-PIMとSSD-NSPのパイプラインを設計。ASICはVerilogで記述しTSMC 40nm合成後22nmへスケール、システムはMQSim/TransPIMベースのcycle-accurate simulatorで評価。",
+    "hardware_evaluation": "Intel i7-11700K、64GB DDR4-2400、RTX 4090 24GBを基準系に使用。SLIMはPCIe 4.0x4 NVMe、16-channel SLC/TLC NAND、32GB DDR4-PIM、channel-levelまたはdie-level NSP PEをモデル化。",
+    "quality_effect": "元LLM重みは変更せず、低ランク予測器がしきい値未満と予測したFFNニューロンをスキップする近似を導入。Llama2-7B/13Bでは疎性40%まで平均精度低下が0〜0.02程度、60%で平均2〜3ポイント程度の低下。",
+    "source": "https://arxiv.org/abs/2507.09201",
+    "sources": [
+      "https://arxiv.org/abs/2507.09201",
+      "https://arxiv.org/html/2507.09201"
+    ],
+    "code": null,
+    "last_checked": "2026-09-17",
+    "references": [],
+    "references_checked_at": "2026-09-17",
+    "references_source": "primary manuscript reference section",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-7c0239753483c2ddf4304e18",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

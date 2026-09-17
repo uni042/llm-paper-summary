@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4b1f52337434d9ea1c49a1f1","job_id":"job-research-e79ef27915573b54","data":{"hardware":"基準系はIntel i7-11700K、2-channel 64GB DDR4-2400（38.4GB/s）、RTX 4090 24GB。SLIMモデルはPCIe 4.0x4 NVMe、16-channel SSD、SLC 240GB/4KB page/tR=3usまたはTLC 1TB/16KB page/tR=40us、32GB DDR4-2400 PIM。channel PEは64 MAC/128KB SRAM、die PEは16 MAC/64KB SRAM、near-DRAM unitは256KB SRAM。","software":"GPU側疎性予測/QKVO/MHA基準はPyTorch。SSD/DRAM-PIMはMQSimとTransPIMを拡張したevent-driven cycle-accurate simulator。ASIC PEはVerilog HDLをSynopsys Design CompilerでTSMC 40nm合成し22nmへスケール、SRAMはCACTI-3DD。","methodology":"Llama2-7B/13B、DeepSeek-16B、Mixtral-8x7Bを8-bit量子化で評価し、既定sequence length 2048。精度はWinoGrande、HellaSwag、PIQA、BoolQ、OpenBookQA、ARC-Easy/Challengeのzero-shotとWikiText perplexity。性能はSSD-GPU（PCIe4x4）とDRAM-GPU（PCIe4x16）を比較し、SLC/TLC、channel/die-level PE、疎性0〜0.75、pipeline有無を感度分析する。NAND/PCIe energyは先行研究値、GPU powerはnvidia-smiを用いる。","scope":"実GPU基準系と詳細ハードウェアシミュレーションの混合評価で、7B〜56B相当のdense/MoEを含む。主眼は小バッチgenerationとエッジ資源制約。実チップ製造・実SSD firmware上でのend-to-end prototypeではなく、将来PCIe/ONFI世代や異なるNAND特性では絶対性能が変わる。"},"reservation":{"claim_id":"claim-4b1f52337434d9ea1c49a1f1","worker_id":"scheduled-chat-discovery-specialist-20260917T1800JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-7c0239753483c2ddf4304e18",
+  "job_id": "job-research-e79ef27915573b54",
+  "data": {
+    "hardware": "基準系はIntel i7-11700K、2-channel 64GB DDR4-2400（38.4GB/s）、RTX 4090 24GB。SLIMモデルはPCIe 4.0x4 NVMe、16-channel SSD、SLC 240GB/4KB page/tR=3usまたはTLC 1TB/16KB page/tR=40us、32GB DDR4-2400 PIM。channel PEは64 MAC/128KB SRAM、die PEは16 MAC/64KB SRAM、near-DRAM unitは256KB SRAM。",
+    "software": "GPU側疎性予測/QKVO/MHA基準はPyTorch。SSD/DRAM-PIMはMQSimとTransPIMを拡張したevent-driven cycle-accurate simulator。ASIC PEはVerilog HDLをSynopsys Design CompilerでTSMC 40nm合成し22nmへスケール、SRAMはCACTI-3DD。",
+    "methodology": "Llama2-7B/13B、DeepSeek-16B、Mixtral-8x7Bを8-bit量子化で評価し、既定sequence length 2048。精度はWinoGrande、HellaSwag、PIQA、BoolQ、OpenBookQA、ARC-Easy/Challengeのzero-shotとWikiText perplexity。性能はSSD-GPU（PCIe4x4）とDRAM-GPU（PCIe4x16）を比較し、SLC/TLC、channel/die-level PE、疎性0〜0.75、pipeline有無を感度分析する。NAND/PCIe energyは先行研究値、GPU powerはnvidia-smiを用いる。",
+    "scope": "実GPU基準系と詳細ハードウェアシミュレーションの混合評価で、7B〜56B相当のdense/MoEを含む。主眼は小バッチgenerationとエッジ資源制約。実チップ製造・実SSD firmware上でのend-to-end prototypeではなく、将来PCIe/ONFI世代や異なるNAND特性では絶対性能が変わる。"
+  },
+  "reservation": {
+    "claim_id": "claim-7c0239753483c2ddf4304e18",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

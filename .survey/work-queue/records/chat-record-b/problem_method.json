@@ -1,1 +1,40 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-4b1f52337434d9ea1c49a1f1","job_id":"job-research-e79ef27915573b54","data":{"problem":"小バッチのローカル/エッジLLM推論では重み再利用が低く、FFN/MoE重みがモデル容量の60%以上、Mixtralでは90%以上を占める。重みをSSD/DRAMへ置いてGPUへPCIe転送する方式は安価だが、実計算より重み転送が支配的になる。PIM-xPU方式は高価なHBM/PIMと大バッチを前提にしやすい。既存のReLUベースzero-skippingはSiLUモデルの再学習を要し、SVD圧縮は高圧縮時に品質低下し、いずれも実行時に精度/速度を柔軟変更しにくい。","novelty":"SLIMは、SiLUを含む既学習LLMの元重みを変えず、FFN入力から低ランク行列L,Rでゲート出力を近似してしきい値超過ニューロンだけを活性と予測する。しきい値表を切り替えるだけで実行時疎性を変更できる。ハードウェア側ではFFN/MoE重みを3D NANDへ常駐させてchannel/die-level近傍処理PEでGEMMし、書込み頻度が高いKV/MHAと遅延敏感な疎性予測をDRAM-PIMへ置く。疎性予測結果をSSD読出しアドレスへ直結し、非活性重みをPCIeへ出す前ではなくNAND読出し段階から省く。","method_overview":"導入時に各FFN/MoE層から少量の較正入力を採取し、ゲート重みのSVD上位成分で低ランク予測器L,Rを初期化する。SGDでX·WgとX·L·Rの再構成誤差を最小化し、64個程度の較正サンプルから複数の目標疎性率に対応するしきい値を事前生成する。推論要求はまずDRAMへ入り、各デコーダでDRAM-PIMがQKVO、MHA、KV更新と低ランク疎性予測を実行する。予測器は活性FFNニューロンの索引を出力し、FTLがその索引をNAND上のページ整列済み重みアドレスへ変換する。SSD側PEは活性ニューロンに対応するgate/up列とdown行を融合した順序で読み出してGEMMし、巨大な中間FFNベクトルを保持せず部分和を集約する。重みはホストGPUへ転送せずSSD内部で処理され、DRAM-PIMとSSD-NSPの間では主に活性/中間データだけを同期する。複数入力系列がある場合は、ある系列のDRAM-PIM段階と別系列のSSD-NSP段階をパイプラインして両資源を重ねる。FTLは通常NVMe read/writeと専用推論コマンドを共存させ、LPA-to-buffer補助表とページ整列配置で疎なランダム読出しのページ浪費を抑える。出力は通常LLMと同じ次トークン分布だが、しきい値に応じて小さいと予測されたFFNニューロンを省略するため品質/速度の実行時トレードオフを持つ。","components":[{"name":"低ランク適応疎性予測","description":"各FFNの入力Xから低ランクL,Rを通じてゲート射影を近似し、|XLR|がしきい値を超えるニューロンだけを活性と予測する。低ランク次元は本文設定でembedding次元の1/4とし、予測器の追加複雑度を元モデルの10%未満に抑える。64較正サンプルとSVD初期化、短時間SGDで予測器だけを学習するため元LLMのSiLUや重みを変更しない。複数しきい値を表として保存し、実行時にしきい値を切り替えて疎性率と精度を調整できる。"},{"name":"DRAM-PIM/SSD-NSP異種配置","description":"書込み頻度が高いKVキャッシュとMHA、遅延敏感な疎性予測/QKVOはDDR4ベースbit-serial PIMへ配置し、容量の大半を占め読取り中心のFFN/MoE重みは3D NANDへ置く。SSDにはchannel-levelまたはNAND die-level PEを追加し、重みをPCIe経由でGPUへ搬送せず保存場所の内部帯域で直接GEMMする。die-level PEは各dieの帯域を集約できるためchannel-levelより高帯域だが、各PEが自die内データしか参照できない制約を重み配置で補う。"},{"name":"疎性連動の融合FFN実行","description":"予測された活性ニューロン索引をFTLの読出し対象へ変換し、gate/up行列の対応列とdown projectionの対応行だけを取得する。PEは同一ニューロンに対応する3種ベクトルを融合順序で処理し、通常FFNのようにhidden次元全体の中間値を保持しない。これにより疎性は演算skipだけでなくNANDページ読出し量と内部データ移動量の削減へ直接変換される。MoEではrouterで選ばれたexpert内でも同じニューロン疎性を適用するため、expert重みが大きい条件ほど移動削減余地が大きい。"},{"name":"ページ整列配置とFTL統合","description":"疎なニューロン単位読出しで4〜16KB NANDページが無駄にならないよう、融合FFNベクトルをdie間へ均等かつページ境界に整列して配置し、ベクトルがページより小さい場合は連続ベクトルをpackingする。FTLへ専用LLM推論コマンドとLPA-to-buffer補助対応を追加する一方、通常NVMe read/writeと既存L2P表は維持する。追加メタデータ量はO(Ndec·dimh)で、通常FTL表に比べ小さい。"},{"name":"DRAM/SSDパイプライン","description":"単一系列ではMHAとFFNに依存関係があるが、独立した複数入力系列を使い、系列AのDRAM-PIM処理と系列BのSSD-NSP処理を同時進行させる。逐次時のtDRAM+tSSDを理想的にはmax(tDRAM,tSSD)へ近づけ、片側資源の待機を削減する。疎性によりSSD側時間が変わるため、しきい値は品質だけでなくパイプラインの資源バランスにも影響する。評価では疎性とパイプラインを合わせて1.8〜2.4倍の追加スループット改善を示す。"}],"system_design":"SLIMは『予測→アドレス化→保存場所で計算→異種段階を重畳』という流れでPCIe重量転送を構造的に除く。DRAM-PIMは低遅延・書込み耐性が必要な状態、NANDは大容量・読取り中心のFFN/MoEを担当し、FTLが両者をLLM実行パイプラインとして統合する。"},"reservation":{"claim_id":"claim-4b1f52337434d9ea1c49a1f1","worker_id":"scheduled-chat-discovery-specialist-20260917T1800JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-7c0239753483c2ddf4304e18",
+  "job_id": "job-research-e79ef27915573b54",
+  "data": {
+    "problem": "小バッチのローカル/エッジLLM推論では重み再利用が低く、FFN/MoE重みがモデル容量の60%以上、Mixtralでは90%以上を占める。重みをSSD/DRAMへ置いてGPUへPCIe転送する方式は安価だが、実計算より重み転送が支配的になる。PIM-xPU方式は高価なHBM/PIMと大バッチを前提にしやすい。既存のReLUベースzero-skippingはSiLUモデルの再学習を要し、SVD圧縮は高圧縮時に品質低下し、いずれも実行時に精度/速度を柔軟変更しにくい。",
+    "novelty": "SLIMは、SiLUを含む既学習LLMの元重みを変えず、FFN入力から低ランク行列L,Rでゲート出力を近似してしきい値超過ニューロンだけを活性と予測する。しきい値表を切り替えるだけで実行時疎性を変更できる。ハードウェア側ではFFN/MoE重みを3D NANDへ常駐させてchannel/die-level近傍処理PEでGEMMし、書込み頻度が高いKV/MHAと遅延敏感な疎性予測をDRAM-PIMへ置く。疎性予測結果をSSD読出しアドレスへ直結し、非活性重みをPCIeへ出す前ではなくNAND読出し段階から省く。",
+    "method_overview": "導入時に各FFN/MoE層から少量の較正入力を採取し、ゲート重みのSVD上位成分で低ランク予測器L,Rを初期化する。SGDでX·WgとX·L·Rの再構成誤差を最小化し、64個程度の較正サンプルから複数の目標疎性率に対応するしきい値を事前生成する。推論要求はまずDRAMへ入り、各デコーダでDRAM-PIMがQKVO、MHA、KV更新と低ランク疎性予測を実行する。予測器は活性FFNニューロンの索引を出力し、FTLがその索引をNAND上のページ整列済み重みアドレスへ変換する。SSD側PEは活性ニューロンに対応するgate/up列とdown行を融合した順序で読み出してGEMMし、巨大な中間FFNベクトルを保持せず部分和を集約する。重みはホストGPUへ転送せずSSD内部で処理され、DRAM-PIMとSSD-NSPの間では主に活性/中間データだけを同期する。複数入力系列がある場合は、ある系列のDRAM-PIM段階と別系列のSSD-NSP段階をパイプラインして両資源を重ねる。FTLは通常NVMe read/writeと専用推論コマンドを共存させ、LPA-to-buffer補助表とページ整列配置で疎なランダム読出しのページ浪費を抑える。出力は通常LLMと同じ次トークン分布だが、しきい値に応じて小さいと予測されたFFNニューロンを省略するため品質/速度の実行時トレードオフを持つ。",
+    "components": [
+      {
+        "name": "低ランク適応疎性予測",
+        "description": "各FFNの入力Xから低ランクL,Rを通じてゲート射影を近似し、|XLR|がしきい値を超えるニューロンだけを活性と予測する。低ランク次元は本文設定でembedding次元の1/4とし、予測器の追加複雑度を元モデルの10%未満に抑える。64較正サンプルとSVD初期化、短時間SGDで予測器だけを学習するため元LLMのSiLUや重みを変更しない。複数しきい値を表として保存し、実行時にしきい値を切り替えて疎性率と精度を調整できる。"
+      },
+      {
+        "name": "DRAM-PIM/SSD-NSP異種配置",
+        "description": "書込み頻度が高いKVキャッシュとMHA、遅延敏感な疎性予測/QKVOはDDR4ベースbit-serial PIMへ配置し、容量の大半を占め読取り中心のFFN/MoE重みは3D NANDへ置く。SSDにはchannel-levelまたはNAND die-level PEを追加し、重みをPCIe経由でGPUへ搬送せず保存場所の内部帯域で直接GEMMする。die-level PEは各dieの帯域を集約できるためchannel-levelより高帯域だが、各PEが自die内データしか参照できない制約を重み配置で補う。"
+      },
+      {
+        "name": "疎性連動の融合FFN実行",
+        "description": "予測された活性ニューロン索引をFTLの読出し対象へ変換し、gate/up行列の対応列とdown projectionの対応行だけを取得する。PEは同一ニューロンに対応する3種ベクトルを融合順序で処理し、通常FFNのようにhidden次元全体の中間値を保持しない。これにより疎性は演算skipだけでなくNANDページ読出し量と内部データ移動量の削減へ直接変換される。MoEではrouterで選ばれたexpert内でも同じニューロン疎性を適用するため、expert重みが大きい条件ほど移動削減余地が大きい。"
+      },
+      {
+        "name": "ページ整列配置とFTL統合",
+        "description": "疎なニューロン単位読出しで4〜16KB NANDページが無駄にならないよう、融合FFNベクトルをdie間へ均等かつページ境界に整列して配置し、ベクトルがページより小さい場合は連続ベクトルをpackingする。FTLへ専用LLM推論コマンドとLPA-to-buffer補助対応を追加する一方、通常NVMe read/writeと既存L2P表は維持する。追加メタデータ量はO(Ndec·dimh)で、通常FTL表に比べ小さい。"
+      },
+      {
+        "name": "DRAM/SSDパイプライン",
+        "description": "単一系列ではMHAとFFNに依存関係があるが、独立した複数入力系列を使い、系列AのDRAM-PIM処理と系列BのSSD-NSP処理を同時進行させる。逐次時のtDRAM+tSSDを理想的にはmax(tDRAM,tSSD)へ近づけ、片側資源の待機を削減する。疎性によりSSD側時間が変わるため、しきい値は品質だけでなくパイプラインの資源バランスにも影響する。評価では疎性とパイプラインを合わせて1.8〜2.4倍の追加スループット改善を示す。"
+      }
+    ],
+    "system_design": "SLIMは『予測→アドレス化→保存場所で計算→異種段階を重畳』という流れでPCIe重量転送を構造的に除く。DRAM-PIMは低遅延・書込み耐性が必要な状態、NANDは大容量・読取り中心のFFN/MoEを担当し、FTLが両者をLLM実行パイプラインとして統合する。"
+  },
+  "reservation": {
+    "claim_id": "claim-7c0239753483c2ddf4304e18",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1800JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
