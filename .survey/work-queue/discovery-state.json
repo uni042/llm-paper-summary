@@ -1,36 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T16:00:51+00:00",
+  "updated_at": "2026-09-17T16:02:46+00:00",
   "last_run_key": "2026-09-18T01:00:00+09:00",
-  "last_round": "cpu-hierarchy-runtime-2",
+  "last_round": "heterogeneous-disagg-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 8,
+  "consecutive_empty_rounds": 9,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:00:00+09:00",
-      "round": "specialist-moe-saturated-6",
-      "axis": "MoE専門家配置・先読み・協調スケジューリング",
-      "query_summary": "MoE expert placement、expert prefetch、dynamic replication、request/expert coordinated schedulingを新着・既存関連候補から再走査した。強候補はすべて最新正本で既収録または既存jobだった。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.17880",
-        "arXiv:2603.06350",
-        "arXiv:2603.19289",
-        "arXiv:2606.15177",
-        "arXiv:2602.21626"
-      ],
-      "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する",
-      "source_submission": "work-queue/submissions/20260913T0015JST-discovery-moe-saturated-6.json"
-    },
     {
       "run_key": "2026-09-13T00:00:00+09:00",
       "round": "specialist-kv-saturated-7",
@@ -6817,6 +6796,28 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "ネットワーク認識型KV移送・remote memory・disaggregated servingの2608-2609新着とforward citationを走査する",
       "source_submission": "work-queue/submissions/20260918T0108JST-discovery-specialist-cpu-hierarchy-runtime-2.json"
+    },
+    {
+      "run_key": "2026-09-18T01:00:00+09:00",
+      "round": "heterogeneous-disagg-3",
+      "axis": "異種メモリアクセラレータ・KV transfer・disaggregated serving",
+      "query_summary": "ネットワーク/KV移送へ軸を変更。SmartGen、SwiftCache等の既知候補を再投入せず、GDDR prefillとHBM decodeを跨ぐcross-vendor disaggregationを新規強候補として選定し、canonical IDを投入直前に再照合した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2606.16135",
+        "arXiv:2512.18194"
+      ],
+      "next_axis_hint": "GPU direct remote memory・CXL/NDP以外のnear-memory execution、または新規候補の引用系から未走査候補を確認する",
+      "source_submission": "work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json"
     }
   ],
   "axes": {
@@ -11309,6 +11310,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "ネットワーク認識型KV移送・remote memory・disaggregated servingの2608-2609新着とforward citationを走査する"
+    },
+    "異種メモリアクセラレータ・KV transfer・disaggregated serving": {
+      "last_run_key": "2026-09-18T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "GPU direct remote memory・CXL/NDP以外のnear-memory execution、または新規候補の引用系から未走査候補を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
