@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-6ab628d8fc52b643ee76552e",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ab628d8fc52b643ee76552e",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-6ab628d8fc52b643ee76552e","job_id":"job-research-2829f7afbf13ae9b","data":{"problem":"拡散型LLMは各denoising stepでprompt、生成済みtoken、maskを含む全系列のQKVを再計算するため、自己回帰decodeのO(L)に対しattentionがO(L^2)となる。既存dLLM cacheは連続step間で近いKVを再利用して計算を減らすが、全layer・全系列のKVを保持するため長文脈ではmemory overheadが大きい。","novelty":"dLLM attentionにはlayer横断の疎性とstep間で安定したpivotal tokenがあるという観測に基づき、現在blockの前後両側を対象とするdynamic bidirectional cache evictionを導入する。さらにblock開始直後のKV変化が大きいことからcache構築を1 step遅らせ、安定後のsaliencyで選択する。訓練不要でsparse attentionとcache pruningを一体化する。","method_overview":"block-wise diffusion decodingで現在block外のK,Vを候補Kf,Vfとし、current-block query Qbとのattention A=Qb Kf^T/sqrt(dk)を計算する。局所情報欠落を抑えるためattention scoreへmax poolingを適用し、retention ratio rに応じてk=(L-b)r個をtop-k選択、Kc,Vcとして保持する。prefixだけでなくsuffixもpruneする。各blockの最初はfull attention、KVが安定する次stepでsparse cacheを更新し、その後reuseする。block移行時はcacheをclearしてrefreshする。","components":[{"name":"注意saliency解析","description":"dLLMのattention mapでlocal diagonalと少数pivotal keyへのvertical patternがlayer・stepを跨いで安定することを利用する。"},{"name":"双方向dynamic eviction","description":"current blockより前のprefixと後のsuffixの両方を候補にし、attention-guided top-kで重要KVだけを保持する。"},{"name":"max-pooling saliency","description":"SnapKVに着想を得て局所attention情報をmax poolingで集約し、部分的な情報保持による品質低下を抑える。"},{"name":"1-step delayed cache update","description":"block開始stepのKV変化が大きいため即時cacheせず1 step遅延し、より安定した状態からsparse cacheを構築する。"}],"system_design":"native dLLM block decodingへcache policyとして挿入し、モデル再訓練なしでattention対象token数と保持KV数を同時に減らす。defaultはblock length 32、retention ratio 0.5、pool kernel 3。"},"reservation":{"claim_id":"claim-6ab628d8fc52b643ee76552e","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
