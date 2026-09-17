@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8718dff912353a48271bfa65",
-  "job_id": "job-research-21f0d525f3274129",
-  "data": {
-    "limitations": "評価と抽出器はコーディング会話へ強く偏り、低エンティティ密度の一般対話へ同じRecallが出る保証はない。M0は抽出的でも約100文字への縮約で細部を落とし、修正版と旧版を区別できない失敗がある。規則ベースカスケードは不要な因果ブロックを展開し得る。主評価はGLM-5を生成と判定の両方に使い、別系列判定で方向を確認しているものの22/64試料では方向が異なる。BEAM 1Mは35会話中14会話で簡略Purifierを使用する。287セッションの導入分析は単一利用者ログで、生産13インスタンスにも対照群がない。",
-    "differences": "LLMLingua2などのプロンプト圧縮は一度落とした情報を戻せないのに対し、Pullは原文を保持して質問ごとに別のターンを再実体化する。MemGPT/LettaはLLM自身が記憶ページングを行い、Mem0やZepは主にセッション間の長期記憶を扱うが、Pullはセッション内の作業記憶を対象にし、索引維持をゼロLLMの決定論処理へ分離する。ACEも可逆な履歴提示を扱うが、抽象化維持をLLMで行う点が異なる。KVキャッシュ圧縮や長文脈モデルとは層が異なり、上流で投入トークンを減らすため併用可能である。",
-    "implementation_status": "著者実装と再現スクリプトが公開されている。論文ではローカルPurifierをIntel CPUで測定し、実運用のコーディング支援系13個のSWE-bench Proインスタンス、350回超のツールラウンドでゼロクラッシュと報告する。ただし生産導入には無作為化対照や大規模複数利用者評価はなく、APIモデル背後のGPU構成も非公開である。",
-    "research_positioning": "本リポジトリの推論系では、GPU内KV管理やSSD退避のように生成途中の状態を物理メモリ階層で動かす研究とは異なり、LLMへ入る前の会話履歴そのものを論理的な作業記憶階層として扱う系統に位置付く。特に、活動・凍結・外部アーカイブという三層と遅延実体化はOSの階層記憶に近い抽象をアプリケーション文脈へ持ち込み、KVキャッシュのprefill負荷を間接的に下げる。今後は、正規表現中心のエンティティ被覆を軽量ニューラル抽出へ広げること、固定5件カスケードを学習または価値推定で制御すること、SSD/NVMeを含む第三層アーカイブの実I/OとSelectorを共同最適化することが、既存の階層メモリ研究と接続しやすい。"
-  },
+  "attempt_id": "attempt-3fd0abe9beaed22201ef8ff4",
+  "job_id": "job-research-0923832e7cd03d20",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8718dff912353a48271bfa65",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-3fd0abe9beaed22201ef8ff4",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
     "worker_kind": "scheduled_chat"
   }
 }

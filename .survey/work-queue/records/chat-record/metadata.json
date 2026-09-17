@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8718dff912353a48271bfa65","job_id":"job-research-21f0d525f3274129","data":{"canonical_id":"arXiv:2609.14773","arxiv_id":"2609.14773","title":"Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations","summary":"長期対話で毎回全履歴を再注入すると、1要求あたりの文脈長だけでなくセッション全体の累積転送量が二次的に増え、切り詰めや要約では過去状態を不可逆に失う。本論文は、各ターンをローカルかつ決定論的に注釈した索引として保持し、質問時に必要な原文ターンだけを遅延実体化するセッションルータPullを提案する。LoCoEvalでは単一ホップで75.1%、複数ホップで72.0%の第二段階トークンを削減しながら品質を維持し、百万トークン級BEAM 1Mでは切り詰め基準よりF1を55.2%改善した。","list_summary":"長期対話を決定論的な索引で管理し、質問ごとに必要な原文ターンだけを可逆的に実体化して入力トークンを削減するセッションルータ。","source":"https://arxiv.org/abs/2609.14773","sources":["https://arxiv.org/abs/2609.14773","https://arxiv.org/html/2609.14773v1","https://github.com/wulun811/kongmen-pull"],"authors":["Jiangang Chen"],"published":"2026-09-13","publication":"arXiv:2609.14773","publication_type":"preprint","publication_status":"preprint","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"topics":["長期対話","作業記憶","文脈圧縮","遅延実体化","セッションルーティング"],"implementation":"著者がコードと再現スクリプトを公開しており、論文では実運用のコーディング支援系13個のSWE-bench Proインスタンス、350回超のツールラウンドで統合したと報告する。","code":"https://github.com/wulun811/kongmen-pull","last_checked":"2026-09-17","hardware_evaluation":"Purifierのローカル処理はIntel i5-9400F 6コア 2.90GHz、23.4GB RAM、Python 3.12.3で測定され、800ターンまでの増分処理でP50 3.22ms/turn、P99 32.5ms/turnを報告する。生成・判定はGLM-5等のAPIモデルを用いるため、LLM側GPU構成は公開されていない。","quality_effect":"LoCoEval単一ホップでは全履歴0.6694に対しPull 0.6676で差は-0.0018、等価性検定を通過する。複数ホップではPull 0.6500、全履歴0.6326。BEAM 1Mでは切り詰め0.299からPull 0.464へ改善する一方、個別失敗例ではカスケード過展開、短いM0要約、正規表現のエンティティ抽出漏れにより品質が低下する。","references":[{"canonical_id":"arXiv:2504.19413","arxiv_id":"2504.19413"},{"canonical_id":"arXiv:2404.16130","arxiv_id":"2404.16130"},{"canonical_id":"arXiv:2505.06120","arxiv_id":"2505.06120"},{"canonical_id":"arXiv:2606.31564","arxiv_id":"2606.31564"},{"canonical_id":"arXiv:2603.06358","arxiv_id":"2603.06358"},{"canonical_id":"arXiv:2310.08560","arxiv_id":"2310.08560"},{"canonical_id":"arXiv:2403.12968","arxiv_id":"2403.12968"},{"canonical_id":"arXiv:2501.13956","arxiv_id":"2501.13956"},{"canonical_id":"arXiv:2510.27246","arxiv_id":"2510.27246"},{"canonical_id":"arXiv:2502.15957","arxiv_id":"2502.15957"},{"canonical_id":"arXiv:2104.07567","arxiv_id":"2104.07567"}],"references_checked_at":"2026-09-17","references_source":"arXiv HTML v1 reference section","references_total":26},"reservation":{"claim_id":"claim-8718dff912353a48271bfa65","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3fd0abe9beaed22201ef8ff4",
+  "job_id": "job-research-0923832e7cd03d20",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3fd0abe9beaed22201ef8ff4",
+    "worker_id": "scheduled-chat-paper-20260917T1330JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

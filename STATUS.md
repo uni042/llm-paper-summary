@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:39:38 JST**
+> 自動生成: **2026-09-17 13:39:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **48** |
-| 未claim Research job | **45** |
+| 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **79** |
 | 最終検証済みResearch収録 | **09-17 13:36:46 JST（2分前）** |
 | 整合性異常 | **0** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **3** | **1** | **2** | **3** | **0** | — |
+| Research | **9** | **3** | **1** | **2** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **9** | **5** | **3** | **2** | **3** | **0** | **6** |
+| 合計 | **9** | **5** | **3** | **2** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -140,13 +140,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.14773` — Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 13:38:20 JST** / heartbeat: **—** / lease expiry: **09-17 15:08:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-21f0d525f3274129.json`
-- `arXiv:2508.06526` — PiKV: KV Cache Management System for Mixture of Experts / worker `scheduled-chat-paper-20260917T1330JST`
-  - claim: **09-17 13:37:17 JST** / heartbeat: **—** / lease expiry: **09-17 15:07:17 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6b9319ad56fb236d.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2504.19867` — semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage / worker `scheduled-chat-paper-20260917T1330JST`
+  - claim: **09-17 13:39:43 JST** / heartbeat: **—** / lease expiry: **09-17 15:09:43 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0923832e7cd03d20.json`
 - `arXiv:2606.24957` — Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-17 12:32:48 JST** / heartbeat: **09-17 13:06:02 JST** / lease expiry: **09-17 14:36:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-146a535327d5e7ec.json`
