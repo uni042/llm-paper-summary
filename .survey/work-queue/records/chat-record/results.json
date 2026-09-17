@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-7d9e9117902e3933bb8ea91d",
   "job_id": "job-research-0b1a3df137cd07ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7d9e9117902e3933bb8ea91d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "同一PCIe転送予算で比較すると、既存KV退避方式は文脈集約型課題で完全注意から大きく精度を落とす一方、YAKVは特にQwen3系で差を大幅に縮める。Qwen3-4Bの4課題平均は完全注意71.87に対してYAKV67.50で、ShadowKV55.58、LRQK60.02を上回る。Qwen3-30B-A3Bでも完全注意78.47に対しYAKV73.04で、ShadowKV64.44、LRQK70.68より高い。さらにGPUメモリ節約で大きなバッチを収容でき、単一H200の連続処理では実データの思考モデルで最大4.95倍のスループットを示す。ただし個々の出力トークン遅延は増えるため、利点は主として同時処理量の増加から生じる。",
+    "key_results": [
+      {"metric": "4課題平均精度", "value": "67.50", "baseline": "完全注意71.87、ShadowKV55.58、LRQK60.02", "condition": "Qwen3-4B-Instruct-2507、同程度のPCIe転送予算", "interpretation": "YAKVは完全注意との差を4.37点に抑え、既存の代表的KV退避方式より文脈集約型課題の精度を大きく維持する。"},
+      {"metric": "4課題平均精度", "value": "73.04", "baseline": "完全注意78.47、ShadowKV64.44、LRQK70.68", "condition": "Qwen3-30B-A3B-Instruct-2507、同程度のPCIe転送予算", "interpretation": "大きい混合専門家モデルでも量子化鍵による個別選択が有効で、低ランク・グループ選択より完全注意へ近い。"},
+      {"metric": "推論スループット", "value": "127.0 tok/s、4.95倍", "baseline": "完全注意25.64 tok/s", "condition": "単一H200、Qwen3-30B-A3B-Thinking-2507、実データ、YAKV batch 32対baseline batch 1", "interpretation": "KV本体をCPUへ退避してGPUメモリを解放することで同時バッチ数を増やし、復号の長い負荷では転送・選択コストを上回る処理量向上が得られる。"},
+      {"metric": "推論スループット", "value": "76.2 tok/s、2.89倍", "baseline": "完全注意26.32 tok/s", "condition": "単一H200、Qwen3-30B-A3B-Instruct-2507、実データ、YAKV batch 32対baseline batch 1", "interpretation": "プリフィル比率が高い条件でも、メモリ節約による連続バッチ拡大が全体スループットを約2.9倍へ押し上げる。"},
+      {"metric": "ランドマーク残差量子化のメモリ削減", "value": "2ビットランドマークに近い精度で25%少ないメモリ", "baseline": "2ビットHIGGSランドマーク", "condition": "付録の1.5ビット相当残差量子化", "interpretation": "主YAKVには含めないが、選択用表現にはさらにメモリ・精度の改善余地があることを示す。"}
+    ],
+    "negative_results": "ShadowKV標準SVDランク160は、文脈集約型課題では読み戻しトークン数を10倍にしても完全注意へ届かない場合がある。SVDを外してもShadowKVやArkValeのグループランドマークはオラクル選択より多くのKVを必要とし、外れ値予算や局所窓を倍増しても差は解消しない。Llama-3.1-8BではText2JSONが完全注意46.75に対しYAKV30.60、LongProcが22.71に対し14.02で、改善後も大きな差が残る。単一要求の出力トークン時間もYAKVでは増加し、Qwen3-30B-A3B Instruct実データでは38msからbatch 32で420msとなる。",
+    "interpretation": "結果は、KV退避が文脈集約型課題に本質的に不適というより、必要KVを選ぶ代理表現の誤差が支配的であることを支持する。粗いSVDやグループ平均は少数の針を探す課題では十分でも、多数の正しい鍵を繰り返し上位へ置く必要があると誤順位が累積する。低ビットでもトークン単位の鍵表現を残す方が重要度順位を保ちやすく、転送予算を有効なKVへ集中できる。スループット向上は各トークンの処理が速くなるからではなく、GPU常駐KVを減らして大きいバッチを収容できるためである。",
+    "quality_impact": "近似方式なので品質無損失を保証しない。Qwen3ではYAKVが完全注意に近い精度を示すが、課題・モデルによって残差があり、特に弱いLlama 3系では構造化出力の破綻が精度を押し下げる。したがって運用時は針探し型だけでなく、実際の文脈集約度に近い評価で品質を確認する必要がある。"
+  },
+  "reservation": {"claim_id": "claim-7d9e9117902e3933bb8ea91d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
