@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d138fd01aeed0094d3129bad",
-  "job_id": "job-research-bf0b422fe6562f5b",
-  "data": {
-    "hardware": "主環境は8×NVIDIA H20-3e 141GB、90 CPU cores、900GB RAM。追加のクロスハードウェア評価は単一NVIDIA A100-40GB。",
-    "software": "PyTorch 2.8.0。DART学習はSGLang SpecForgeを基盤とし、Flex Attentionでprefix-shared sparse maskを実装。tree pruningと3-gram trieはC++、OpenMP/NUMA bindingを使用。Qwen3-1.7B/4B/8B/14B/32BおよびLLaMA2-Chat-7Bを対象とする。",
-    "methodology": "通常batch size 1、DART/EAGLE3のdraft length 8で、MT-Bench、HumanEval、Alpaca、Math500、CodeAlpaca、LiveCodeBench、MBPPを評価する。指標は自己回帰基準に対する実wall-clock speedup、平均受理長tau、draft forward/tree search latency。EAGLE3、SPS、Medusa、Hydra、Lookahead、PLD等と比較する。学習はcontext 6400、AdamW lr 2e-5、3 epochs、ShareGPT+UltraChat約280K例。shifted logits、N-gram、KL減衰gammaをablationし、batch size 2〜64とA100でも速度傾向を検証する。",
-    "scope": "lossless speculative decodingの速度評価が中心で、生成品質は最終分布が対象モデルと一致するため別途報告しない。主結果はH20-3eでbatch size 1に最適化された状況であり、大batchではcompute-bound化して利得が縮小する。DiffuSpec/SpecDiffは実装非公開のため直接比較していない。"
-  },
+  "attempt_id": "attempt-afb867c7067bd524852f7243",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d138fd01aeed0094d3129bad",
+    "claim_id": "claim-afb867c7067bd524852f7243",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

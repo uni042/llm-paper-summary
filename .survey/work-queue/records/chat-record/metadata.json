@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d138fd01aeed0094d3129bad","job_id":"job-research-bf0b422fe6562f5b","data":{"canonical_id":"arXiv:2601.19278","arxiv_id":"2601.19278","doi":"10.48550/arXiv.2601.19278","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference","summary":"DARTは投機的デコーディングのドラフト段階を自己回帰ロールアウトから並列多位置予測へ置き換える。対象LLMの複数中間層特徴を再利用する単一軽量Transformer層が、固定長マスクブロックに対して複数未来位置のロジットを1回で出力し、N-gram連続性を用いた木刈り込みで検証候補を構成する。Qwen3系等で自己回帰基準比2.03〜3.44倍、EAGLE3比平均約30%高い速度向上を報告する。","list_summary":"対象LLM特徴から未来ロジットを1回で並列予測しN-gram木刈り込みを行い、EAGLE3より平均約30%高い投機デコード高速化を得る。","authors":["Fuliang Liu","Xue Li","Ketai Zhao","Yinxi Gao","Ziyan Zhou","Zhonghui Zhang","Zhibin Wang","Wanchun Dou","Sheng Zhong","Chen Tian"],"authors_affiliations":"Nanjing University; Alibaba Group","published":"2026-01-27","publication":"arXiv / ICML submission","publication_type":"プレプリント","publication_status":"Preprint v1","lineage":"speculative decoding / parallel drafting / diffusion-inspired language modeling","topics":["投機的デコーディング","並列ドラフト","拡散型言語モデル","N-gram","木検証"],"importance":"受理長だけでなくドラフト自身の実時間遅延を主要ボトルネックとして扱い、EAGLE3型の軽量特徴ドラフタを非自己回帰化する。","implementation":"SGLang SpecForgeを基盤に学習し、Flex Attention、C++/OpenMP木刈り込み、CPU RAM上の3-gram trieを用いる公開実装。","hardware_evaluation":"主に8×NVIDIA H20-3e 141GBサーバ、追加で単一A100-40GB。","quality_effect":"対象モデルによる通常の投機検証を維持するため最終出力分布は標準自己回帰デコードと一致する無損失方式。","source":"https://arxiv.org/abs/2601.19278","sources":["https://arxiv.org/abs/2601.19278","https://arxiv.org/html/2601.19278v1"],"code":"https://github.com/fvliang/DART","last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary manuscript","references_total":40},"reservation":{"claim_id":"claim-d138fd01aeed0094d3129bad","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-afb867c7067bd524852f7243",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-afb867c7067bd524852f7243",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d138fd01aeed0094d3129bad",
-  "job_id": "job-research-bf0b422fe6562f5b",
-  "data": {
-    "overview": "DARTはQwen3系とLLaMA2-Chat-7Bで標準自己回帰デコード比2.03〜3.44倍のwall-clock speedupを示し、EAGLE3より平均約30%高い高速化を得た。Qwen3-14Bではdraft forwardが約1.5msでEAGLE3比6.8倍、SPS比53.3倍高速、tree pruningは約2msだった。平均受理長tauはEAGLE3と概ね同等で、ドラフト遅延削減が総スループット差を生む。",
-    "key_results": [
-      {
-        "metric": "end-to-end speedup",
-        "value": "2.03×〜3.44×",
-        "baseline": "vanilla autoregressive decoding",
-        "condition": "Qwen3/LLaMA2、7 benchmarks、主にbatch=1 H20-3e",
-        "interpretation": "並列draftで対象モデル呼出回数削減の利得をdraft overheadに食われにくくする。"
-      },
-      {
-        "metric": "EAGLE3比平均高速化",
-        "value": "約30% higher speedup",
-        "baseline": "EAGLE3",
-        "condition": "主評価全体",
-        "interpretation": "tau最大化だけでなくdraft latency最小化が重要であることを示す。"
-      },
-      {
-        "metric": "Qwen3-14B draft forward latency",
-        "value": "1.5 ms、EAGLE3比6.8×、SPS比53.3×高速",
-        "baseline": "EAGLE3 / Qwen3-1.7B SPS",
-        "condition": "H20-3e、draft length 8 (SPSは5)",
-        "interpretation": "自己回帰rollout除去が直接draft stage bottleneckを削る。"
-      },
-      {
-        "metric": "N-gram pruning効果",
-        "value": "tau +0.48〜+0.74",
-        "baseline": "N-gramなし",
-        "condition": "HumanEval/Alpaca/Math500/CodeAlpaca",
-        "interpretation": "独立位置logitの組合せに短距離連続性を入れることで受理可能なtreeを増やす。"
-      },
-      {
-        "metric": "shifted first-position accuracy",
-        "value": "57.7% → 71.1% (+13.4pt)",
-        "baseline": "unshifted logits",
-        "condition": "Qwen3-4B ablation",
-        "interpretation": "最重要の先頭draft位置を改善し、早期rejectを減らす。"
-      },
-      {
-        "metric": "large-batch Qwen3-4B speedup",
-        "value": "batch 64で1.45× (EAGLE3 1.22×)",
-        "baseline": "autoregressive / EAGLE3",
-        "condition": "HumanEval H20-3e",
-        "interpretation": "batch増加で利得は縮小するが4Bでは大batchでも優位が残る。"
-      }
-    ],
-    "negative_results": "batch増加で投機デコードの利得は縮小する。Qwen3-8Bではbatch 64でDART 1.01×、EAGLE3 0.98×とほぼ利得が消える。DARTの3-gram trieはdisk約43.5GB、実行時CPU RAM約100GBを必要とし、サーバ級host memoryを前提とする。DARTのtauは常にEAGLE3を上回るわけではなく差は概ね0.2以内で、優位性は主に低draft latencyから生じる。",
-    "interpretation": "DARTは『より正確な自己回帰ドラフタ』の延長ではなく、受理長を多少犠牲にしてもdraftを一回の並列forwardへ変換する設計点を選ぶ。対象モデルが大きくmemory-boundでbatchが小さいほど、この固定的な数msのdraft overhead削減がwall-clockへ効く。CPU RAMをN-gram辞書へ使う点はGPU以外の余剰資源を高速化へ転換する実装上の特徴でもある。",
-    "quality_impact": "通常の投機的検証でtarget distributionを厳密に保つため生成品質は標準自己回帰デコードと同一。DART/N-gramは候補提案だけを変え、reject時の補正規則を変えない。"
-  },
+  "attempt_id": "attempt-afb867c7067bd524852f7243",
+  "job_id": "job-research-f3b9350c8e883e12",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d138fd01aeed0094d3129bad",
+    "claim_id": "claim-afb867c7067bd524852f7243",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
