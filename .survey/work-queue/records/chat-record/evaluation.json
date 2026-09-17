@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-42b6429a1b73e190dbc9976c",
-  "job_id": "job-research-1e6c346844ef359a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-42b6429a1b73e190dbc9976c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-42b6429a1b73e190dbc9976c","job_id":"job-research-1e6c346844ef359a","data":{"hardware":"主実験機はIntel Ultra5 230F CPU、NVIDIA GeForce RTX 5090 32GB VRAM、16GBホストDRAM、4TB NVMe SSDで、SSDの逐次読出し上限は9 GiB/s。CPU-GPU間はPCIe 5.0 x16で理論64 GB/s。追加のハードウェア感度評価ではRTX 5060 TiとRTX 5090、RAM 8GB・16GB・32GBを組み合わせる。","software":"llama.cppを基盤にSSD-LLaMAを実装する。比較対象としてllama.cpp、KTransformers、利用可能なモデルではColibriを用いる。SSD配送にはio_uring、GPU転送と復号にはCUDAを使い、量子化済み公式チェックポイントをそのまま対象とする。","models":["DeepSeek-V4-Flash","Kimi-K2.7-Code","GLM-5.2","Kimi-K3（追加マイクロ評価）"],"workloads":"MMLUとAlpacaを用い、プリフィルと自己回帰デコードを別々に測定する。DeepSeek-V4-Flashは密層FP8 E4M3・MoEエキスパートMXFP4、Kimi-K2.7-CodeとGLM-5.2はQ4_0を使用する。Kimi-K3は2.8兆パラメータ規模で追加評価する。","baselines":"llama.cpp、KTransformers、GLM-5.2ではColibriを比較する。I/O分析ではSSD読出し帯域だけでなくトークン当たり読出し量も比較し、単にSSDを高帯域で読んだ方式を効率的とみなさない。アブレーションではエキスパートパックの適用範囲、VRAMキャッシュ対象、CPUへ割り当てるエキスパート数を個別に変える。","methodology":"主評価は同一の一般消費者向けPC上でトークン生成率を測り、MMLUとAlpacaの結果をモデル別・プリフィル/デコード別に比較する。SSD帯域は総読出し量を総読出し時間で割り、両ワークロード平均を報告する。CPU-GPU分担は同じキャッシュ容量と同じSSD読出し回数・総量を維持してエキスパートのCPU割当数だけを変え、トークン当たり時間で選ぶ。SSD耐久性は2400 TBWの4TB SSDと1プロンプト512生成トークンを仮定した推定であり、実寿命測定ではない。","scope":"結果は主として単一のPCIe 5.0 SSD、RTX 5090、16GB RAMを備えたLinux系一般消費者向けPCでの単一要求推論に基づく。SSD-LLaMAはMoEエキスパート重み配送を対象とし、KVキャッシュ管理や複数要求スケジューリングは設計範囲外である。評価モデルはいずれも疎なMoEで、密モデルや異なるSSD世代、複数SSD、他社GPUへの一般化は直接測っていない。エネルギー効率も主評価しておらず、関連研究がSSDオフロードのトークン当たりエネルギー増加を指摘している。"},"reservation":{"claim_id":"claim-42b6429a1b73e190dbc9976c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
