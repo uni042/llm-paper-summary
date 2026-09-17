@@ -1,22 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f73b2644bb575cea292a8186","job_id":"job-research-3dcfddcaf0f956d5",
-  "data":{
-    "canonical_id":"arXiv:2401.02669","arxiv_id":"2401.02669","doi":"10.48550/arXiv.2401.02669","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AR"]},
-    "title":"Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache",
-    "summary":"Infinite-LLMは、文脈長が数トークンから200万トークンまで大きく変動する大規模言語モデル提供で、注意層のKV容量だけが文脈長とともに増える一方、非注意層の重みと計算特性はほぼ固定である点を利用する。注意計算とKVを推論インスタンスの境界から切り離すDistAttentionを導入し、系列方向に分割したKVを複数GPUへ保持したまま、問い合わせベクトルと小さな集約値だけを通信して元の注意計算と数学的に等価な結果を得る。さらにクラスタ全体のGPUメモリを共有資源として扱い、長文脈で容量不足のインスタンスから空き容量を持つインスタンスへKV断片を移す。32基のA100評価では最大200万トークンを処理し、vLLM系比較に対してエンドツーエンドのスループットを1.35〜3.4倍改善する。",
-    "list_summary":"注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。",
-    "authors":["Bin Lin","Chen Zhang","Tao Peng","Hanyu Zhao","Wencong Xiao","Minmin Sun","Anmin Liu","Zhipeng Zhang","Lanbo Li","Xiafei Qiu","Shen Li","Zhigang Ji","Tao Xie","Yong Li","Wei Lin"],
-    "authors_affiliations":"Alibaba Group; Shanghai Jiao Tong University; Peking University","published":"2024-01-05","publication":"arXiv preprint arXiv:2401.02669v2","publication_type":"arXivプレプリント","publication_status":"2024年1月5日に初版、2024年7月4日に第2版。主分類cs.DC、併記分類cs.AR。","lineage":"serving-scheduling",
-    "topics":["長文脈推論","分散注意","分散KVキャッシュ","クラスタメモリ共有","動的配置","大規模言語モデル提供"],
-    "importance":"注意層だけを非注意層から分離し、文脈長に応じて注意計算とKV保存だけをクラスタ規模で伸縮させることで、静的モデル並列が長文脈と短文脈の双方へ同時適応できない問題を解く。",
-    "hardware_evaluation":"4ノード・32基のNVIDIA A100 80GBで評価する。各ノード内はNVLink 600GB/s、ノード間はEthernet 125MB/s。",
-    "hardware_details":"LLaMA2 7B、13B、70Bを用い、ShareGPT4、L-Eval、実サービス由来の長文脈分布から9種類のトレースを構成する。文脈長範囲は最大200万トークン。",
-    "quality_effect":"DistAttentionはオンラインソフトマックスの等価変形を用い、元の注意計算と数学的に等価である。KV追い出しによる近似を使わないため、方式自体による精度低下を意図しない。",
-    "bottlenecks":["静的モデル並列","長文脈KV容量","インスタンス間メモリ偏在","長文脈時のバッチ縮小","分散注意の通信量"],
-    "evidence_locations":["§2.2 System Design Challenges","§3 System Overview","§4 DistAttention","§5 Cluster-scale Throughput Optimization","§6 System Design","§7 Evaluation"],
-    "source":"https://arxiv.org/abs/2401.02669","sources":["https://arxiv.org/abs/2401.02669","https://arxiv.org/html/2401.02669","https://arxiv.org/pdf/2401.02669"],"code":null,
-    "implementation":"中央gManagerと各インスタンス併設rManager、DistAttention、KV移動プロトコル、性能モデルに基づく貪欲配置を実装して32基A100で評価する。本文から公式公開コードURLは確認できない。","last_checked":"2026-09-17",
-    "references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"canonical_id":"arXiv:2310.01889","title":"Ring Attention with Blockwise Transformers for Near-Infinite Context"}],"references_checked_at":"2026-09-17","references_source":"arXiv v2 HTML references","references_total":2
-  },
-  "reservation":{"claim_id":"claim-f73b2644bb575cea292a8186","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-8941df7cf722e02c81ac6a22",
+  "job_id": "job-research-1abdfafeb85e4df9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8941df7cf722e02c81ac6a22",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST-b",
+    "worker_kind": "scheduled_chat"
+  }
 }

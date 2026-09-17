@@ -1,19 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f73b2644bb575cea292a8186","job_id":"job-research-3dcfddcaf0f956d5",
-  "data":{
-    "positioning":"Infinite-LLMは、vLLMのPagedAttentionのように単一インスタンス内のKV断片化を改善する方式から一段上がり、KVと注意計算をモデルインスタンス境界の外へ分散する。DistServeが入力処理と逐次生成という時間的段階を別インスタンスへ分離するのに対し、Infinite-LLMは同じデコード段階の中で注意層と非注意層を機能的に分離する。RingAttentionなどの系列並列は主に長文脈学習を対象にKVブロックを巡回させるが、DistAttentionは自回帰推論でKVを保存位置に残し、問い合わせと小さな集約値だけを動かす。したがって、注意分離、KVプール化、クラスタ規模配置を結び付ける初期の重要な長文脈提供系として位置付けられる。",
-    "differences":"vLLMは各モデル複製の内部でページ単位KV管理を行うため、別インスタンスの空きメモリを長文脈要求へ貸し出せない。Infinite-LLMは要求のKVを複数インスタンスへ分割配置できる。vLLM-singleのように最長文脈へ合わせてモデル全体を全GPUへ分割すると非注意層の計算効率が落ちるが、Infinite-LLMは非注意層の効率的な並列構成を保つ。RingAttentionは大きなKVブロック通信を伴うのに対し、DistAttentionは局所注意結果を小さく集約する。Llumnixのような要求全体の再配置よりも、系列断片単位でKVだけを移す細粒度な調整を行う。",
-    "relation_to_prior_work":[
-      {"work":"vLLM","difference":"インスタンス内ページ管理をクラスタ全体のKV配置へ拡張し、別インスタンスの空きGPUメモリを長文脈要求へ利用する。"},
-      {"work":"RingAttention","difference":"KVブロックを巡回転送する代わりにKVを保存位置へ残し、問い合わせと局所注意の小集約値を通信する。"},
-      {"work":"DistServe","difference":"入力処理と逐次生成の段階分離ではなく、注意層と非注意層を分離して文脈長依存資源だけを伸縮させる。"},
-      {"work":"Llumnix","difference":"要求全体のインスタンス移動より細かく、要求内の任意系列断片のKVを複数インスタンスへ分散配置できる。"}
-    ],
-    "strengths":["DistAttentionが通常注意と数学的に等価で精度近似を不要にする。","注意KVと非注意層を別々に伸縮させ、短文脈計算効率と長文脈容量を両立する。","32基A100で最大200万トークンまで評価する。","クラスタ全体の未使用GPUメモリをKV容量として共有する。","中央計画と分散rManager、事前予約を組み合わせて動的状態の古さへ対処する。"],
-    "limitations":["KV移動量が大きいと通信を計算で隠せず、32トークン/段階では8.6%のスループット低下を測定する。","中央状態は周期更新のため古くなり得て、移動予約失敗時は次周期まで再計画を待つ。","評価モデルがLLaMA2 7B/13B/70Bに集中する。","ノード間通信が125MB/sの特定環境であり、より高速・異種ネットワークでは配置方策の最適点が変わる。","KV共有はクラスタ内GPUメモリを利用する設計で、CPUやSSD階層まで直接扱わない。"],
-    "implementation_status":"4ノード32基A100上でDistAttention、性能モデル、貪欲KV配置、gManager/rManager制御、KV移動予約プロトコルを実装し、vLLM比較を行う。本文から公式公開コードURLは確認できない。",
-    "research_positioning":"長文脈提供でモデル全体を最大文脈長へ合わせて静的に拡張するのではなく、注意計算とKV保存だけをクラスタ規模で弾力化する設計を示す。後続の注意分離、KVプール、遠隔KV、階層メモリ研究を比較する際の基準点になり得る。",
-    "repository_fit":"提供・スケジューリング系統とKVキャッシュ系統の交点に位置し、特に注意分離、クラスタ規模メモリ共有、長文脈推論の重要比較対象である。"
-  },
-  "reservation":{"claim_id":"claim-f73b2644bb575cea292a8186","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-8941df7cf722e02c81ac6a22",
+  "job_id": "job-research-1abdfafeb85e4df9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8941df7cf722e02c81ac6a22",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST-b",
+    "worker_kind": "scheduled_chat"
+  }
 }
