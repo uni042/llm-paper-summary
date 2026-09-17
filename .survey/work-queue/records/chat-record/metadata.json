@@ -1,1 +1,133 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2a61ba1261894f97dcd2cf26","job_id":"job-research-97b8208885471bff","data":{"canonical_id":"arXiv:2609.18063","arxiv_id":"2609.18063","doi":"10.48550/arXiv.2609.18063","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction","summary":"Edge0は、35B級混合専門家モデル（Mixture-of-Experts; MoE）の4ビット重み19.5GBをSSDへ置き、必要エキスパートだけを実行時にストリーミングする推論基盤である。単純な要求後読出しでは各層のルーティング確定までSSD読出しを始められないため、層Nの状態から次トークン・次層のルーティングを予測する学習済み事前ルータを導入し、その予測自体を実際のルーティングとして使う。これにより予測集合と実行集合を一致させ、読出しを一トークン前へ移して計算と重ねる。4ビット量子化とルーティング置換の品質損失は、展開時に基底へ統合しない回復LoRAを学生経路上で蒸留して補う。24GB Mac miniで35B級をピーク2.9GiB、20.4トークン/秒で実行する。","list_summary":"学習済み事前ルータの予測を実ルーティングとして一トークン先行させ、SSD上のMoE重みを計算と重ねて配送し、35B級を約3GiBで動かす。","authors":["Yu Lin","Yiming Wang","Runyuan Cai","Hanze Liu","Xiaodong Zeng"],"authors_affiliations":"AutoArk","published":"2026-09-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1 (2026-09-16)","lineage":"MoE推論／SSDストリーミング／エキスパート先読み／ルーティング予測／量子化回復","topics":["MoE","SSD","エキスパートストリーミング","事前ルータ","LoRA","4ビット量子化","MLX"],"importance":"SSD先読みの予測誤りを実行時のフォールバックで処理する代わりに、予測をルーティングそのものへ変え、学習で品質損失を返済する設計により、SSD読出しを確実に一トークン前へ移した点が特徴である。","implementation":"MLX 0.30.4〜0.30.6を用いる実装。量子化エキスパートsafetensorsをmmapし、OSページキャッシュ、LRU、固定スロット二重バッファ、増分スタックを使う。事前ルータと回復LoRAは別safetensorsとして基底へ統合せず読み込む。論文は基盤・チェックポイント・アダプタをオープンソースと記す。","hardware_evaluation":"公開層の性能はMac mini M4 Pro 24GB、事前ルータA/BはMacBook M2 16GB統合メモリで測定。品質評価は別の計算サーバ上でOpenCompassを使用する。","quality_effect":"4ビット量子化と元ルータを事前ルータへ置換するため完全な無損失方式ではない。回復LoRAで平均差を35Bで3.9点、8Bで2.8点まで縮めるが、AIMEでは35Bで6.1点、8Bで10.0点の低下が残る。","source":"https://arxiv.org/abs/2609.18063","sources":["https://arxiv.org/abs/2609.18063","https://arxiv.org/pdf/2609.18063"],"code":null,"last_checked":"2026-09-18","references":[{"canonical_id":"arXiv:2305.14314","arxiv_id":"2305.14314","title":"QLoRA"},{"canonical_id":"arXiv:2101.03961","arxiv_id":"2101.03961","title":"Switch Transformers"},{"canonical_id":"arXiv:2306.08543","arxiv_id":"2306.08543","title":"MiniLLM"},{"canonical_id":"arXiv:2608.14728","arxiv_id":"2608.14728","title":"Tail-aware top-k on-policy distillation"},{"canonical_id":"arXiv:2308.12066","arxiv_id":"2308.12066","title":"Pre-gated MoE"},{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088","title":"Mixtral of Experts"},{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180","title":"PagedAttention"},{"canonical_id":"arXiv:2006.16668","arxiv_id":"2006.16668","title":"GShard"},{"canonical_id":"arXiv:2605.18643","arxiv_id":"2605.18643","title":"Post-trained MoE can skip half experts via self-distillation"},{"canonical_id":"arXiv:2201.05596","arxiv_id":"2201.05596","title":"DeepSpeed-MoE"},{"canonical_id":"arXiv:2303.06865","arxiv_id":"2303.06865","title":"FlexGen"},{"canonical_id":"arXiv:2312.12456","arxiv_id":"2312.12456","title":"PowerInfer"},{"canonical_id":"arXiv:2503.05139","arxiv_id":"2503.05139","title":"Every FLOP Counts"},{"canonical_id":"arXiv:2401.14361","arxiv_id":"2401.14361","title":"MoE-Infinity"}],"references_checked_at":"2026-09-18","references_source":"primary manuscript reference section","references_total":33},"reservation":{"claim_id":"claim-2a61ba1261894f97dcd2cf26","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-d1f7aa5ebc3945e6ec100e5b",
+  "job_id": "job-research-97b8208885471bff",
+  "data": {
+    "canonical_id": "arXiv:2609.18063",
+    "arxiv_id": "2609.18063",
+    "doi": "10.48550/arXiv.2609.18063",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+    "summary": "Edge0は、35B級混合専門家モデル（Mixture-of-Experts; MoE）の4ビット重み19.5GBをSSDへ置き、必要エキスパートだけを実行時にストリーミングする推論基盤である。単純な要求後読出しでは各層のルーティング確定までSSD読出しを始められないため、層Nの状態から次トークン・次層のルーティングを予測する学習済み事前ルータを導入し、その予測自体を実際のルーティングとして使う。これにより予測集合と実行集合を一致させ、読出しを一トークン前へ移して計算と重ねる。4ビット量子化とルーティング置換の品質損失は、展開時に基底へ統合しない回復LoRAを学生経路上で蒸留して補う。24GB Mac miniで35B級をピーク2.9GiB、20.4トークン/秒で実行する。",
+    "list_summary": "学習済み事前ルータの予測を実ルーティングとして一トークン先行させ、SSD上のMoE重みを計算と重ねて配送し、35B級を約3GiBで動かす。",
+    "authors": [
+      "Yu Lin",
+      "Yiming Wang",
+      "Runyuan Cai",
+      "Hanze Liu",
+      "Xiaodong Zeng"
+    ],
+    "authors_affiliations": "AutoArk",
+    "published": "2026-09-16",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1 (2026-09-16)",
+    "lineage": "MoE推論／SSDストリーミング／エキスパート先読み／ルーティング予測／量子化回復",
+    "topics": [
+      "MoE",
+      "SSD",
+      "エキスパートストリーミング",
+      "事前ルータ",
+      "LoRA",
+      "4ビット量子化",
+      "MLX"
+    ],
+    "importance": "SSD先読みの予測誤りを実行時のフォールバックで処理する代わりに、予測をルーティングそのものへ変え、学習で品質損失を返済する設計により、SSD読出しを確実に一トークン前へ移した点が特徴である。",
+    "implementation": "MLX 0.30.4〜0.30.6を用いる実装。量子化エキスパートsafetensorsをmmapし、OSページキャッシュ、LRU、固定スロット二重バッファ、増分スタックを使う。事前ルータと回復LoRAは別safetensorsとして基底へ統合せず読み込む。論文は基盤・チェックポイント・アダプタをオープンソースと記す。",
+    "hardware_evaluation": "公開層の性能はMac mini M4 Pro 24GB、事前ルータA/BはMacBook M2 16GB統合メモリで測定。品質評価は別の計算サーバ上でOpenCompassを使用する。",
+    "quality_effect": "4ビット量子化と元ルータを事前ルータへ置換するため完全な無損失方式ではない。回復LoRAで平均差を35Bで3.9点、8Bで2.8点まで縮めるが、AIMEでは35Bで6.1点、8Bで10.0点の低下が残る。",
+    "source": "https://arxiv.org/abs/2609.18063",
+    "sources": [
+      "https://arxiv.org/abs/2609.18063",
+      "https://arxiv.org/pdf/2609.18063"
+    ],
+    "code": null,
+    "last_checked": "2026-09-18",
+    "references": [
+      {
+        "canonical_id": "arXiv:2305.14314",
+        "arxiv_id": "2305.14314",
+        "title": "QLoRA"
+      },
+      {
+        "canonical_id": "arXiv:2101.03961",
+        "arxiv_id": "2101.03961",
+        "title": "Switch Transformers"
+      },
+      {
+        "canonical_id": "arXiv:2306.08543",
+        "arxiv_id": "2306.08543",
+        "title": "MiniLLM"
+      },
+      {
+        "canonical_id": "arXiv:2608.14728",
+        "arxiv_id": "2608.14728",
+        "title": "Tail-aware top-k on-policy distillation"
+      },
+      {
+        "canonical_id": "arXiv:2308.12066",
+        "arxiv_id": "2308.12066",
+        "title": "Pre-gated MoE"
+      },
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088",
+        "title": "Mixtral of Experts"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2006.16668",
+        "arxiv_id": "2006.16668",
+        "title": "GShard"
+      },
+      {
+        "canonical_id": "arXiv:2605.18643",
+        "arxiv_id": "2605.18643",
+        "title": "Post-trained MoE can skip half experts via self-distillation"
+      },
+      {
+        "canonical_id": "arXiv:2201.05596",
+        "arxiv_id": "2201.05596",
+        "title": "DeepSpeed-MoE"
+      },
+      {
+        "canonical_id": "arXiv:2303.06865",
+        "arxiv_id": "2303.06865",
+        "title": "FlexGen"
+      },
+      {
+        "canonical_id": "arXiv:2312.12456",
+        "arxiv_id": "2312.12456",
+        "title": "PowerInfer"
+      },
+      {
+        "canonical_id": "arXiv:2503.05139",
+        "arxiv_id": "2503.05139",
+        "title": "Every FLOP Counts"
+      },
+      {
+        "canonical_id": "arXiv:2401.14361",
+        "arxiv_id": "2401.14361",
+        "title": "MoE-Infinity"
+      }
+    ],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript reference section",
+    "references_total": 33
+  },
+  "reservation": {
+    "claim_id": "claim-d1f7aa5ebc3945e6ec100e5b",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
