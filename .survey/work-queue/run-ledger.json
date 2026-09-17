@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T19:44:01.054740+00:00",
+  "updated_at": "2026-09-17T20:32:32.617713+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T19:44:01.054740+00:00",
+      "last_recorded_at": "2026-09-17T20:32:32.617713+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 222,
+        "research_completed": 223,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 16,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35156362596:1",
-          "recorded_at": "2026-09-16T22:13:44.579225+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35156362596",
-            "run_attempt": "1",
-            "source_sha": "f8ebedd1cd602557f0f42fd93accbf88eaee6b11"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35157025258:1",
           "recorded_at": "2026-09-16T22:18:49.283963+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35266583087",
             "run_attempt": "1",
             "source_sha": "88e44de8f1eb2118e1a5584185be4782e6a8fa0a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35271358466:1",
+          "recorded_at": "2026-09-17T20:32:32.617713+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35271358466",
+            "run_attempt": "1",
+            "source_sha": "1fae088d52231936920e44ea9d50c1b7c58c3ad8"
           },
           "signals": [
             "research_completed"
@@ -22330,6 +22330,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.24832",
           "title": "Optimus: Elastic Decoding for Efficient Diffusion LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-fd53481863b8e4e0",
+          "type": "research",
+          "canonical_id": "arXiv:2504.05897",
+          "title": "HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference",
           "from": "ready",
           "to": "completed"
         }
