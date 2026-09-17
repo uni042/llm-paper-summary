@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 23:35:36 JST**
+> 自動生成: **2026-09-17 23:36:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **44** |
-| 未claim Research job | **44** |
+| 未claim Research job | **43** |
 | 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-17 23:35:32 JST（4秒前）** |
+| 最終検証済みResearch収録 | **09-17 23:35:32 JST（44秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **2** | **1** | **1** | **0** | **0** | — |
+| Research | **13** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **12** | **2** | **2** | **0** | **0** | **0** | **4** |
-| 合計 | **25** | **4** | **3** | **1** | **0** | **0** | **4** |
+| 合計 | **25** | **4** | **3** | **1** | **1** | **0** | **4** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -183,8 +183,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2409.00918` — LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs / worker `scheduled-chat-llm-survey`
+  - claim: **09-17 23:36:05 JST** / heartbeat: **—** / lease expiry: **09-18 01:06:05 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5a5215eb805afa43.json`
 
 #### Audit
 
