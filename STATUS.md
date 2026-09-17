@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 13:39:09 JST**
+> 自動生成: **2026-09-17 13:39:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **1** | **1** | **3** | **0** | — |
+| Research | **9** | **3** | **1** | **2** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **9** | **4** | **3** | **1** | **3** | **0** | **6** |
+| 合計 | **9** | **5** | **3** | **2** | **3** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -107,7 +107,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 13:30 JST** / worker `scheduled-chat-paper-20260917T1330JST`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0dacd70c0debc8b74170e20e.json` (job `job-research-6b9319ad56fb236d`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-987e47d076f99ed6f71340e5.json` (job `job-research-4954e0b135582135`)
 - **成功** `arXiv:2504.14893` — Hardware-based Heterogeneous Memory Management for Large Language Model Inference
   - job: `.survey/work-queue/jobs/job-research-4954e0b135582135.json`
@@ -196,8 +197,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **420** |
-| └ Research | **293** |
+| 成功result未照合のimmutable submission | **422** |
+| └ Research | **295** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
