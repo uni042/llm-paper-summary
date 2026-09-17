@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ad568a9def7133e0a5107c75",
-  "job_id": "job-research-5a5215eb805afa43",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ad568a9def7133e0a5107c75",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ad568a9def7133e0a5107c75","job_id":"job-research-5a5215eb805afa43","data":{"overview":"DisDPは保存容量だけをworker外へ逃がす従来オフロードと異なり、集合通信実行もGPUからSmartNICへ移すことで計算・通信干渉を除き、単一PSへオプティマイザを集約する。8GPU・175BではZeRO-Infinity比最大3.98倍、1.3BでもZeRO-Infinity/ZeRO-3/ATP比2.90/2.33/6.28倍を示す。容量面ではworker数によらず単一層がGPUに収まる限り1Tまで扱える。大規模DPと費用効率にも利得を示すが、一部はシミュレーションである。","key_results":[{"metric":"175B実機スループット","value":"最大134 token/s、ZeRO-Infinity比3.98倍","baseline":"8 worker ZeRO-Infinity","condition":"Custom-175B、8×A100 40GB、100Gbps、micro-batch可変","interpretation":"通信をGPU外へ移し、PS optimizerをbackwardへ隠すことで計算と通信の直列化を大幅に減らす。"},{"metric":"最大学習可能モデル","value":"1Tまで評価、8-worker ZeRO-Infinityは175B","baseline":"ZeRO-Infinity、ZeRO-3、ATP","condition":"単一層がGPUへ収まることが上限。OPT同型の合成巨大モデルを含む。","interpretation":"モデル状態をworker CPU/GPU/SSDへ分散保持せずPSへ集約するため、worker数による状態容量制約から離れる。"},{"metric":"MFU","value":"13B〜175BでZeRO-3比2.04倍以上、ZeRO-Infinity比2.34倍以上。276Bでも59%","baseline":"ZeRO-3およびZeRO-Infinity","condition":"各モデルで最大trainable micro-batch","interpretation":"通信と計算の資源競合を除くことでGPUを行列積へ集中させ、大規模モデルでも高利用率を維持する。"},{"metric":"SmartNIC通信帯域","value":"並行GEMM下でNCCL比2/35/44%高い帯域（2/4/8 GPU）","baseline":"NCCL AllReduce","condition":"100Gbps、GEMM同時実行","interpretation":"GPU外DMA経路はGEMMとの干渉が小さく、GPU通信カーネルを使うNCCLとの差がworker数とともに拡大する。"},{"metric":"256 DP拡張","value":"PAT版ZeRO-Infinity比2.0倍、ring版比15.1倍","baseline":"ZeRO-Infinity PAT/ring","condition":"ASTRA-sim、175B、TP8、PP16、DP256","interpretation":"SmartSwitch階層の短い集約経路と干渉除去により大DP度の依存鎖増大を抑えるが、これはシミュレーション結果である。"},{"metric":"費用効率","value":"DGX ZeRO-Infinity比1.96倍 throughput/dollar","baseline":"32GPU DGX上ZeRO-Infinity","condition":"32GPU費用比較。DisDPはDGX価格の60%、スループット1.17倍。性能はASTRA-simを含む。","interpretation":"高価なNVLink/DGX構成より、比較的低速な100Gbpsと専用ネットワーク処理を組み合わせる設計が費用効率で有利になる。"}],"negative_results":"小micro-batch 2〜4では計算時間が通信より短く、干渉なし通信の利得は小さい。2GPU・GEMMなしではU50のDMA能力がCX-5より弱く、NCCLがDisDPより28%高いアルゴリズム帯域を示す。505Bと1Tでは学習可能micro-batchが16/8へ下がりMFUも大きく低下する。大規模DPと32GPU費用評価の一部は実機ではなくASTRA-simである。","quality_impact":"DisDPはbf16学習の通信・保存配置を変えるシステムで、近似圧縮や勾配省略を導入しない。OPT-66Bをrm-staticで微調整した比較ではDisDPとZeRO-Infinityの損失曲線がほぼ重なり、収束率を維持した。","interpretation":"主要利得は通信量削減だけではなく、GPU上で集合通信カーネルを実行しないことでSMとメモリ帯域の競合を除く点にある。そのためSHARPや仮想的なSM preemptionだけでは残るメモリ帯域干渉を回避できる。PS集約はSSD容量を活用しつつworker側の状態容量を解放するが、専用SmartNIC/SmartSwitchと十分なPS SSD帯域が前提になる。"},"reservation":{"claim_id":"claim-ad568a9def7133e0a5107c75","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
