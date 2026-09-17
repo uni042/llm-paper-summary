@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 08:02:30 JST**
+> 自動生成: **2026-09-18 08:03:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **56** |
+| 収録候補論文 | **55** |
 | 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 06:47:17 JST（1時間15分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-18 08:03:04 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **56** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **56** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **11** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **20** | **11** | **11** | **0** | **1** | **0** | **18** |
+| 合計 | **21** | **11** | **11** | **0** | **0** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 08:03:04 JST** [research] `arXiv:2506.06295` — dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
+  - job: `.survey/work-queue/jobs/job-research-146f944f1c748398.json`
+  - result: `.survey/work-queue/results/research/attempt-dbef48f08bbefbb3ea1b0135.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-dbef48f08bbefbb3ea1b0135.json`
+  - paper: `papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md`
 - **09-18 06:47:17 JST** [research] `arXiv:2602.21140` — ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments
   - job: `.survey/work-queue/jobs/job-research-c61a311635c958d5.json`
   - result: `.survey/work-queue/results/research/attempt-9728a65bf10d91c2f0a02ad3.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-d1f7aa5ebc3945e6ec100e5b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d1f7aa5ebc3945e6ec100e5b.json`
   - paper: `papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md`
-- **09-18 04:33:26 JST** [research] `arXiv:2609.18110` — SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC
-  - job: `.survey/work-queue/jobs/job-research-1e6c346844ef359a.json`
-  - result: `.survey/work-queue/results/research/attempt-42b6429a1b73e190dbc9976c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-42b6429a1b73e190dbc9976c.json`
-  - paper: `papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md`
 
 ### Audit
 
@@ -216,10 +216,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2506.06295` — dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 08:02:23 JST** / heartbeat: **—** / lease expiry: **09-18 09:32:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-146f944f1c748398.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -239,7 +237,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **56** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -259,7 +257,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **693** |
+| inference/training/survey配下の論文Markdown実体 | **694** |
 
 ### immutable submissionの未照合
 
