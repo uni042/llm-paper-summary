@@ -2,21 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a4e4d8c3f36aed305d4ea174",
-  "job_id": "job-research-5bed14c683ee7a49",
-  "data": {
-    "limitations": [
-      "完全無損失ではなく、文脈疎化とINT2量子化により平均4.4〜7.6%の下流性能低下を伴う。",
-      "疎化閾値と予測器は標本化した活性分布や層間類似性に依存するため、モデルや入力分布が変わると最適設定・予測精度が変わり得る。",
-      "主眼は単一GPU・低バッチ・PCIe律速の対話的推論であり、多GPUデータセンターの高スループット提供へそのまま一般化できるとは限らない。",
-      "公開実装は研究用試作で、READMEの実行条件は利用可能GPUメモリ12GB超としており、論文の最小11GB VRAM主張と実装の簡易実行条件は区別して扱う必要がある。"
-    ],
-    "differences": "既存のMoE-InfinityやProMoE系が主に『どの専門家を先読み・キャッシュするか』を扱い、Hobbit等が専門家の精度を調整して転送量を減らすのに対し、FloEは選択済み専門家の内部チャネルまで文脈依存で削り、upだけをINT2化する射影別圧縮を採用する。さらに専門家選択と専門家内部疎性を同時に早期予測し、必要な圧縮断片だけを先読みする点で、キャッシュ命中率だけでなく一回のミス/ロードの転送量そのものを減らす。",
-    "implementation_status": "著者公式GitHub `zju-stu-lizheng/FloE` で実装公開済み。計算・データロードのパイプライン、オフロード形式変換、Mixtral改変、Tritonカーネル、CUDA転送戦略、感度試験コードを含む。README記載環境はPython 3.10.16、Transformers 4.47.0、PyTorch 2.5.1、HQQ 0.2.3。",
-    "research_positioning": "専門家オフロード／階層メモリ系。特にPCIe帯域が支配的な小容量GPUで、専門家単位の配置・キャッシュより細かい『専門家内部の必要チャネル』を転送単位へ落とす研究として位置付けられる。SSD/NVMeを直接扱う研究ではないが、CPU DRAMや将来のより低速な階層から専門家を読む場合にも、転送前圧縮と予測先読みを組み合わせる設計原理は関連が深い。"
-  },
+  "attempt_id": "attempt-8529c59bc17c2f018b0b86d8",
+  "job_id": "job-research-f371944d5d8c6995",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a4e4d8c3f36aed305d4ea174",
+    "claim_id": "claim-8529c59bc17c2f018b0b86d8",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
