@@ -4,7 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-31cfc3803071967ca5c668cf",
   "job_id": "job-research-010509dfee08b6d5",
-  "data": {},
+  "data": {
+    "setup": "評価はLoCoMo上でMem0を主baselineとして行う。全実験はNVIDIA RTX PRO 6000 Blackwell Server Edition 96GB GDDR7 1枚、PCIe 5.0 x16上で、vLLM v0.19.1、bf16 KV cache、16-token pageを使用する。vLLM prefix cachingは両方式で有効化する。主モデルはLlama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.3、Qwen2.5-7B-Instructで、Qwen3-14Bも追加評価する。検索budget kは主に5/10/20/50、Context-Window Encodingのwindow wは0/5/20/50を比較する。",
+    "baselines": ["Mem0 default: Qdrant CPU vector store + prompt injection", "Mem0 + Jasper GPU retrieval backend ablation", "InferScale GPU-resident KV", "InferScale CPU-offloaded KV"],
+    "metrics": ["vLLM engine TTFT", "end-to-end query-to-first-token", "query-to-full-answer", "LoCoMo judged accuracy", "queries per second", "offline KV precomputation time", "per-conversation GPU/CPU memory footprint"],
+    "workloads": "LoCoMoのanswerable questions 1,540件をlatency/accuracyで用いる。throughputではN=10/25/50/75/100 usersが同一conversation memoryを共有し、各userが2 queryを発行、全2N requestを一括投入し、greedy decodingで各50 output tokensを生成する。prefix cacheは測定前にresetする。",
+    "fairness": "InferScaleとMem0は同じMem0抽出・top-k fact retrieval pipelineを用いる。デフォルトMem0との差にはGPU-native retrievalとKV injectionの双方が含まれるため、Jasper対Qdrantのbackend ablationを別途行いretrieval寄与を分離する。prefix cachingもbaselineで有効化する。",
+    "ablation": "wを0/5/20/50で変えてcontext-windowの精度回復とoffline costを測る。Jasper GPUとQdrant CPUを比較して検索backendのend-to-end latency寄与を測る。GPU-residentとCPU-offloaded KVを比較して容量・PCIe latency trade-offを測る。Qwen3-14Bでモデル規模への頑健性を確認する。",
+    "scope_limits": "評価は単一96GB GPUとLoCoMo中心で、production multi-GPU clusterや多数の独立conversationを同時に入れ替える運用は直接評価していない。throughput試験ではN usersが一つのconversation memory corpusを共有するため、ユーザーごとに別々のGB級KV storeを保持する実運用とは容量条件が異なる。"
+  },
   "reservation": {
     "claim_id": "claim-31cfc3803071967ca5c668cf",
     "worker_id": "scheduled-chat-llm-survey",
