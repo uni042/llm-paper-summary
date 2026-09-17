@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-75bcb3d65b7781a8fb8d4054","job_id":"job-research-bf0b422fe6562f5b","data":{"problem":"投機的デコーディングでは軽量ドラフトモデルが複数候補を提案し、対象モデルがまとめて検証することで対象モデル呼出回数を減らす。しかしEAGLE3のように受理率を高めた特徴ベースドラフタも複数stepの自己回帰ロールアウトを残しており、ドラフト前向きだけで総推論時間の20〜40%を占める場合がある。小型Qwen3-1.7Bを通常ドラフタにするとQwen3-14B/32Bでドラフトが75%/60%以上を占める例もあり、受理長を伸ばすだけでは高速化が頭打ちになる。一方、既存の拡散型LLMをそのままドラフタにすると双方向full-sequence目的とprefix条件付き投機生成が不一致で、モデル自体も大きく低遅延化できない。単純に各未来位置を独立並列予測すると組合せ木が指数的に増え、位置間の意味的連続性も失われる。","novelty":"DARTは拡散モデルそのものを使わず、mask位置を並列予測する発想だけをEAGLE3型の対象モデル結合ドラフタへ移植する。対象LLMの低・中・高層hidden stateを連結・射影し、単一カスタムdecoder層へprefixとd-1個のmaskを入力してd位置のlogitを1回で生成するため、ドラフト長に依存する自己回帰forwardを除去する。さらに早い位置の誤りほど受理長へ強く効く性質を、位置ごとにgamma^(t-1)で減衰する対象モデル分布とのKL学習へ組み込む。独立位置logitの組合せ爆発には3-gram連続性を確率スコアへ混ぜたbeam/tree pruningを用い、N-gramを単独ドラフタではなく低遅延な整合性制約として再利用する。","method_overview":"対象モデルのprefill/verification後に複数中間層hidden stateを取り出してFCで圧縮し、shiftしたtoken embeddingと結合する。prefix末尾の出力を第1未来token、後続mask位置の出力を第2以降の未来tokenとして解釈するshifted logits predictionを使う。ドラフタはstrict causal maskを維持し、d個の未来分布を単一forwardで出す。学習時は一つの系列内の複数prefixを共有し、それぞれにmask blockを付け、別block間注意を禁止する疎maskをFlex Attentionで処理する。教師は対象モデルのtoken分布で、未来ほどKL重みをgamma=0.6で減衰させる。推論では各位置top-25候補をlogit scoreと3-gram scoreで評価し、beam width 20、最大tree size 59に刈り込み、最終treeを対象モデルのTree Attentionでlossless検証する。","components":[{"name":"対象特徴再利用の単一層並列ドラフタ","description":"対象LLMの1層目、中間付近、末尾近くのhidden stateを入力に使い、FC・1 decoder layer・LM headだけを学習する。d-1 maskを追加した1回のforwardでd未来位置を予測するため、EAGLE3の複数自己回帰stepとドラフトKV管理を不要にする。"},{"name":"shifted logitsとprefix-shared masked training","description":"mask位置自身ではなく次tokenを予測するshift方式で第1位置精度を高める。学習では複数prefixに対応するmask blockを同一forwardへ詰め、各blockは自分のprefixだけを参照しblock内はcausal、block間は非接続とする。Flex Attentionでこの疎構造を実装する。"},{"name":"位置減衰KL教師","description":"対象モデル分布qとドラフト分布pのKLを未来位置tごとにgamma^(t-1)で重み付けする。投機検証では早い位置の誤りが後続受理を全て打ち切るため、遠い位置より初期位置へ学習容量を寄せる。gamma=0.6がHumanEval ablationで最大tauを示す。"},{"name":"N-gram連続性付き木刈り込み","description":"各未来位置のtop-k logitを組み合わせる際、3-gram trieの条件付き確率をlogit scoreへ加え、深さごとbeam pruningする。1.3B node、disk 43.5GB、実行時CPU RAM約100GBのtrieをC++で保持し、warmup後約6us/queryで検索する。木処理もC++/OpenMPで並列化する。"}],"system_design":"GPU側では対象モデル検証と軽量DART forwardを行い、CPU側では大容量3-gram trieと低遅延tree pruningを担当する。ドラフトforwardを約1.5ms、tree pruningを約2msに抑え、対象モデル検証の間隔を平均受理長3〜4token程度へ延ばすことでwall-clock速度を改善する。"},"reservation":{"claim_id":"claim-75bcb3d65b7781a8fb8d4054","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-78cb43ce4509a618c85127b5",
+  "job_id": "job-research-7f3f089c5dc01c0c",
+  "data": {
+    "problem": "LLMの長文脈継続学習では、モデル重みや最適化状態だけでなく各トークンに対応する活性化と注意用KV状態が系列長に比例して増える。FlashAttentionや通常の勾配チェックポイントを用いても、単一GPUでは32K程度から活性化メモリが支配的になり、文脈並列は複数GPUと高帯域通信を必要とする。長文脈能力の獲得自体は比較的少ない学習ステップで済む場合があるため、著者らは最大スループットよりも『限られた装置で一つの極端に長い系列を学習可能にすること』を主目的に置く。チャンク単位で直列化すれば活性化を捨てて再計算できるが、その場合は過去チャンクのKVキャッシュと、その逆伝播勾配が新しい線形メモリ障壁になる。さらに単純なtensor concatでは再確保・コピー・断片化が生じ、理論必要量の約3倍まで膨らみ得る。",
+    "novelty": "OOMBの新規性は、チャンク再帰型学習だけでなく、学習時のKVキャッシュとその勾配を推論用PagedAttentionに類似した固定ページへ載せ、PyTorch autograd外の専用カーネルで前向き・後ろ向きと勾配加算を直接実行する点にある。その上で、GPUに残る系列長依存状態をCPUへ非同期退避し、密注意・局所注意では次層ページを先読みし、検索型疎注意ではquery射影後に必要ページを決めてK/V射影と転送を重ねる。ページ単位Top-K疎注意も同じページ管理上へ統合するため、計算量削減とCPU-GPU転送量削減が同時に効く。SeCOのチャンク学習を、演算子・ページ管理・オフロード・疎注意まで共同設計した実用システムへ拡張した位置付けである。",
+    "method_overview": "長い系列を固定長チャンクへ分割し、前向きではチャンクiを過去全チャンクのKV状態に注意させる。チャンクの中間活性化は前向き直後に破棄し、逆伝播時に再計算するため、活性化メモリは全系列長ではなく一チャンク分に固定される。過去KVとdKVは固定サイズページで管理し、専用Triton/CUDA演算子がページ上で注意計算とatomic_addによる勾配累積を行う。KVをautograd graphから外すことで不要な活性化保持を避ける。密注意・局所注意では層i-1計算中に層iのページをpinned CPU memoryから専用CUDA streamで先読みする。Qwen2.5向け疎注意では各key pageの平均ベクトルとquery tokenの類似度を計算し、query pageごとの投票でTop-K key pagesを選択する。選択indexは後ろ向きでも再利用する。疎注意の前向きはquery射影後に選択・DMA転送を開始し、その時間をK/V射影へ重ねる。",
+    "components": [
+      {
+        "name": "チャンク再帰型学習と活性化再計算",
+        "description": "系列をチャンクへ分割して順次処理し、各チャンクの活性化を前向き後に破棄、逆伝播時に再計算する。全チャンクの活性化を保持しないため、活性化メモリを系列長Nに対してO(1)へする。代償は再計算とチャンク間直列性であり、残る状態として過去KVとdKVを明示する。"
+      },
+      {
+        "name": "学習対応ページ化KV/勾配管理",
+        "description": "増分KVと勾配を固定ページへ配置し、tensor concatによる再確保・コピー・断片化を避ける。専用Tritonカーネルが前向きと後ろ向きをページ上で処理し、勾配はatomic_addでin-place累積する。KVをPyTorch autogradから切り離すことでKV自体が通常活性化として保持されることも防ぐ。"
+      },
+      {
+        "name": "注意型別の非同期CPUオフロード",
+        "description": "密注意・局所注意では必要ページが事前に分かるため、現在層の計算と次層KV転送を重ねる。検索型疎注意ではquery射影後に必要ページを決定して直ちに転送し、K/V射影と重ねる。後ろ向きでは前向きで保存したページindexを使って先読み可能にする。pinned memory、専用CUDA stream、DMA engineで転送を計算から隠す。"
+      },
+      {
+        "name": "ページ単位疎注意",
+        "description": "Qwen2.5では各key pageの平均ベクトルを代表値とし、query tokenとの類似度をsoftmax後にquery page内で集約して関連key pageを選ぶ。ページサイズ128ではH200上の検索費用は小さいと報告される。GPT-OSSの局所注意層は直近ページだけを取得し、密注意層は同じTop-K検索を使う。"
+      }
+    ],
+    "system_design": "チャンク直列化で活性化メモリを固定化し、ページ化KV/dKVを中心状態として専用カーネル・CPU階層メモリ・疎注意を統合する。各最適化は独立ではなく、ページ単位管理が疎注意の転送粒度と非同期オフロードを成立させ、疎注意が転送量と注意計算を同時に減らす共同設計である。"
+  },
+  "reservation": {
+    "claim_id": "claim-78cb43ce4509a618c85127b5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

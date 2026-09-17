@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-75bcb3d65b7781a8fb8d4054","job_id":"job-research-bf0b422fe6562f5b","data":{"limitations":"投機高速化はmemory-boundな小batchで最大化し、batchが大きくcompute-boundになるほど縮小する。Qwen3-8Bではbatch 48〜64でほぼ1倍まで低下する。連続性補正に使う3-gram trieは約1.3B nodes、disk 43.5GB、CPU RAM約100GBを消費し、host memoryが小さい環境には重い。draft modelは対象モデルごとにShareGPT/UltraChat等で3 epoch学習する必要がありtraining-freeではない。DiffuSpec/SpecDiffなど一部の直接競合はclosed-sourceのため同一実装環境で比較されていない。","differences":"EAGLE3は対象モデルhidden featureを使う軽量一層drafterだが未来tokenを自己回帰的に複数step生成する。DARTは同じ『target-coupled lightweight drafter』の利点を残しつつ、mask blockの未来位置logitを単一forwardで並列生成する。Medusaの独立multi-head予測よりも対象分布KLと中間特徴を用いて精度を高め、独立位置の不整合はN-gram tree pruningで補う。DiffuSpec等が独立した大きなdiffusion LLMをdraft modelとして使うのに対し、DARTはdiffusionの並列mask予測原理だけを小型専用層へ移し、tokenizer/モデル可用性とdraft latency問題を避ける。Lookahead/PLDのN-gram方式とは、N-gramを主予測器ではなくneural parallel logitsの枝整合性フィルタとして使う点が異なる。","implementation_status":"公式コードはfvliang/DARTで公開。学習はSGLang SpecForgeを基盤とし、Flex Attention、C++/OpenMP tree pruning、NUMA-aware 3-gram trieを含む。arXiv v1 (2026-01-27)でICML表記のプレプリント。","research_positioning":"投機的デコーディング研究におけるボトルネックを『target verification回数』から『drafter自身の逐次forward』へ移して捉えた研究である。拡散型言語モデルの非自己回帰並列性、EAGLE系のtarget-feature reuse、N-gram/lookup系の低コスト連続性情報を組み合わせ、受理長とdraft latencyの二目的設計として整理できる。特に大規模target・batch 1のオンライン生成で有効な系統である。"},"reservation":{"claim_id":"claim-75bcb3d65b7781a8fb8d4054","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-78cb43ce4509a618c85127b5",
+  "job_id": "job-research-7f3f089c5dc01c0c",
+  "data": {
+    "limitations": "チャンク間を直列処理するため、十分なGPU群を使える完全並列・文脈並列方式に対して遅延面の不利が残る。CPUオフロードはPCIe/NVLink等のCPU-GPU実効帯域に依存し、低帯域環境では計算との重畳が崩れる可能性がある。Top-Kページ疎注意は密注意を近似するため、密な大域依存を必要とする下流タスクへの影響は十分検証されていない。品質検証は主にlossと勾配近似誤差で、長文脈推論ベンチマークの最終能力評価は限定的である。主要な詳細評価がQwen2.5-7B中心であり、より大規模なモデルや異なる注意構造への一般性は今後の課題である。",
+    "differences": "Ring Attention/Ring Flash AttentionやDeepSpeed Ulyssesは系列を複数装置へ並列分割してGPUメモリを増やすのに対し、OOMBは一つの系列をチャンク直列化し、活性化を再計算して単一装置でも扱えるようにする。SeCOもチャンク学習でO(1)活性化を狙うが、OOMBは学習時KV勾配まで扱うページ管理、autograd外専用カーネル、非同期CPUオフロード、ページ疎注意を統合し、単一GPUでの到達文脈を大幅に伸ばす。PagedAttention系の推論研究とは、同じページ化思想を逆伝播とdKVへ拡張した点が異なる。通常のactivation checkpointingは層内活性化を再計算しても系列長に比例する状態を残すが、OOMBはチャンク単位で全系列活性化保持を避ける。",
+    "implementation_status": "公式コードがGitHubのwenhaoli-xmu/OOMBで公開されている。論文はv4 (2026-03-01) のarXivプレプリント。Triton/CUDAカーネル、pinned CPU memory、専用CUDA streamを用いた実システムとしてH200/A100で評価されている。",
+    "research_positioning": "階層メモリを用いたLLM学習の中でも、CPUを単なる重み・optimizer offload先ではなく、系列長とともに増えるKV/dKVの主保持層として使う点が重要である。推論で成熟したページ化KV管理と非同期prefetchを長文脈学習へ持ち込み、activation recomputationと疎注意を同じページ粒度へ統合したため、オフロード、長文脈訓練、疎注意、メモリ管理の系統を横断する研究として位置付けられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-78cb43ce4509a618c85127b5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
