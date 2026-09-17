@@ -2,53 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-78cb43ce4509a618c85127b5",
-  "job_id": "job-research-7f3f089c5dc01c0c",
+  "attempt_id": "attempt-d138fd01aeed0094d3129bad",
+  "job_id": "job-research-bf0b422fe6562f5b",
   "data": {
-    "overview": "OOMBは活性化再計算とKV/dKVのページ化・CPUオフロードにより、Qwen2.5-7Bで文脈長に対するGPUメモリ増加をほぼ平坦化した。著者は追加10Kトークンあたり約10MBの学習メモリ増加を報告し、単一H200で4M文脈を学習可能とする。64K以上では疎注意が大きな速度向上を示し、256Kでは最大約13.5倍の高速化を報告する。4×H200では1M文脈256 stepを約10時間で学習し、追加実験では8M文脈まで動作を示す。",
+    "overview": "DARTはQwen3系とLLaMA2-Chat-7Bで標準自己回帰デコード比2.03〜3.44倍のwall-clock speedupを示し、EAGLE3より平均約30%高い高速化を得た。Qwen3-14Bではdraft forwardが約1.5msでEAGLE3比6.8倍、SPS比53.3倍高速、tree pruningは約2msだった。平均受理長tauはEAGLE3と概ね同等で、ドラフト遅延削減が総スループット差を生む。",
     "key_results": [
       {
-        "metric": "長文脈メモリ増加率",
-        "value": "約10MB / 追加10K tokens",
-        "baseline": "Qwen2.5-7B OOMB end-to-end training",
-        "condition": "CPU offloadを含む構成",
-        "interpretation": "系列長依存状態の大部分をCPUへ移し、GPU上の増分を極小化する。"
+        "metric": "end-to-end speedup",
+        "value": "2.03×〜3.44×",
+        "baseline": "vanilla autoregressive decoding",
+        "condition": "Qwen3/LLaMA2、7 benchmarks、主にbatch=1 H20-3e",
+        "interpretation": "並列draftで対象モデル呼出回数削減の利得をdraft overheadに食われにくくする。"
       },
       {
-        "metric": "最大単一GPU文脈",
-        "value": "4M tokens",
-        "baseline": "従来の単一GPU長文脈学習",
-        "condition": "Qwen2.5-7B, 1×H200",
-        "interpretation": "著者らが比較する文脈並列の大規模クラスタ依存を避ける。"
+        "metric": "EAGLE3比平均高速化",
+        "value": "約30% higher speedup",
+        "baseline": "EAGLE3",
+        "condition": "主評価全体",
+        "interpretation": "tau最大化だけでなくdraft latency最小化が重要であることを示す。"
       },
       {
-        "metric": "疎注意速度向上",
-        "value": "約3.7× at 64K、最大13.5× at 256K",
-        "baseline": "dense/parallel training baseline",
-        "condition": "長文脈でpage-level sparse attention",
-        "interpretation": "ページ検索で注意計算量とCPU-GPU転送量を同時に削減する効果が文脈長とともに増える。"
+        "metric": "Qwen3-14B draft forward latency",
+        "value": "1.5 ms、EAGLE3比6.8×、SPS比53.3×高速",
+        "baseline": "EAGLE3 / Qwen3-1.7B SPS",
+        "condition": "H20-3e、draft length 8 (SPSは5)",
+        "interpretation": "自己回帰rollout除去が直接draft stage bottleneckを削る。"
       },
       {
-        "metric": "256K device throughput",
-        "value": "OOMB dense 266.13 tok/s、sparse 1301.60 tok/s",
-        "baseline": "4×H200 RFA 218.41 tok/s per device",
-        "condition": "OOMB 1×H200、4K chunk、checkpoint+CPU offload、sparse budget 8192",
-        "interpretation": "単一H200でもRFAのdevice当たり処理量を上回り、疎注意では差が大きい。"
+        "metric": "N-gram pruning効果",
+        "value": "tau +0.48〜+0.74",
+        "baseline": "N-gramなし",
+        "condition": "HumanEval/Alpaca/Math500/CodeAlpaca",
+        "interpretation": "独立位置logitの組合せに短距離連続性を入れることで受理可能なtreeを増やす。"
       },
       {
-        "metric": "1M学習実行",
-        "value": "256 stepsを約10時間",
-        "baseline": "なし",
-        "condition": "4×H200 TP、sparse attention; 4K+8192では176.305 s/iter・67944MB/device",
-        "interpretation": "百万トークン級で単なるメモリ到達性だけでなく継続学習を実行可能である。"
+        "metric": "shifted first-position accuracy",
+        "value": "57.7% → 71.1% (+13.4pt)",
+        "baseline": "unshifted logits",
+        "condition": "Qwen3-4B ablation",
+        "interpretation": "最重要の先頭draft位置を改善し、早期rejectを減らす。"
+      },
+      {
+        "metric": "large-batch Qwen3-4B speedup",
+        "value": "batch 64で1.45× (EAGLE3 1.22×)",
+        "baseline": "autoregressive / EAGLE3",
+        "condition": "HumanEval H20-3e",
+        "interpretation": "batch増加で利得は縮小するが4Bでは大batchでも優位が残る。"
       }
     ],
-    "negative_results": "チャンク直列化には完全並列学習に対する遅延上の代償がある。疎注意は密注意の近似で、1Mでは大きい32K retrieval budgetでも学習後半に軽微な不安定性が観測された。疎注意lossは1Mでdense 4.3125に対し4K+8192が4.71875、4K+32768が4.78125であり、極端な長さで近似が常に無損失とは言えない。オフロード性能はCPU-GPU接続帯域に依存する。",
-    "interpretation": "OOMBの中心的成果は『活性化をO(1)にする』だけでなく、その結果支配的になるKV/dKVを学習向けページ管理と階層メモリへ再設計した点にある。密注意版は精度近似なしでメモリ効率を改善し、疎注意版はさらに計算・通信を削る代わりに近似誤差を受け入れる二段階の設計空間を提供する。",
-    "quality_impact": "密注意構成は注意を近似しない。疎注意構成はTop-Kページ選択により勾配とlossへ近似誤差を導入するが、256Kでは8K/32K budgetの学習曲線がほぼ一致しloss<1.2へ収束した。1Mでは収束するものの軽微な不安定性とdenseとの差が残る。"
+    "negative_results": "batch増加で投機デコードの利得は縮小する。Qwen3-8Bではbatch 64でDART 1.01×、EAGLE3 0.98×とほぼ利得が消える。DARTの3-gram trieはdisk約43.5GB、実行時CPU RAM約100GBを必要とし、サーバ級host memoryを前提とする。DARTのtauは常にEAGLE3を上回るわけではなく差は概ね0.2以内で、優位性は主に低draft latencyから生じる。",
+    "interpretation": "DARTは『より正確な自己回帰ドラフタ』の延長ではなく、受理長を多少犠牲にしてもdraftを一回の並列forwardへ変換する設計点を選ぶ。対象モデルが大きくmemory-boundでbatchが小さいほど、この固定的な数msのdraft overhead削減がwall-clockへ効く。CPU RAMをN-gram辞書へ使う点はGPU以外の余剰資源を高速化へ転換する実装上の特徴でもある。",
+    "quality_impact": "通常の投機的検証でtarget distributionを厳密に保つため生成品質は標準自己回帰デコードと同一。DART/N-gramは候補提案だけを変え、reject時の補正規則を変えない。"
   },
   "reservation": {
-    "claim_id": "claim-78cb43ce4509a618c85127b5",
+    "claim_id": "claim-d138fd01aeed0094d3129bad",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

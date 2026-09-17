@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-78cb43ce4509a618c85127b5",
-  "job_id": "job-research-7f3f089c5dc01c0c",
+  "attempt_id": "attempt-d138fd01aeed0094d3129bad",
+  "job_id": "job-research-bf0b422fe6562f5b",
   "data": {
-    "hardware": "主評価はNVIDIA H200。単一H200でQwen2.5-7Bの8K〜256K効率・メモリを測定し、4×H200テンソル並列で256K/1Mの疎注意学習と最大8Mのスケーラビリティを評価する。チャンクサイズablationには単一A100 80GBも使用。Ring Flash Attention比較は4×H200等を含む。",
-    "software": "Qwen2.5-7B、bfloat16全パラメータ微調整、Adam (lr 5e-5, betas 0.9/0.98)、per-GPU batch size 1。OOMBはTriton/CUDAのページ化注意・逆伝播、pinned CPU memoryとCUDA streamによるオフロード、Top-Kページ疎注意を実装。比較対象はFlashAttention+layer-wise gradient checkpointingとRing Flash Attention。",
-    "methodology": "arXivデータを連結して指定文脈長を作り、ピークGPUメモリをPyTorch max_memory_allocated()、反復遅延をCUDA eventsで測定し、3回独立実行の最小値を報告する。8K〜256Kでチャンクサイズ4K/8K/12K、疎注意budget、checkpoint、CPU offloadをablationする。文脈並列とはdevice当たりtokens/sで比較する。疎注意の品質は16K〜1Mでdense attentionに対する勾配近似誤差とlossを測定し、256K/1Mで実際の学習曲線を確認する。",
-    "scope": "主にQwen2.5-7Bの長文脈継続学習システム効率を検証する。4M単一H200の到達可能性と4×H200で8Mまでのスケーラビリティを示す一方、下流長文脈ベンチマークでの最終能力、より大規模な密モデル/MoEの広範な品質評価、CPU-GPU帯域が低い環境での一般化は限定的である。"
+    "hardware": "主環境は8×NVIDIA H20-3e 141GB、90 CPU cores、900GB RAM。追加のクロスハードウェア評価は単一NVIDIA A100-40GB。",
+    "software": "PyTorch 2.8.0。DART学習はSGLang SpecForgeを基盤とし、Flex Attentionでprefix-shared sparse maskを実装。tree pruningと3-gram trieはC++、OpenMP/NUMA bindingを使用。Qwen3-1.7B/4B/8B/14B/32BおよびLLaMA2-Chat-7Bを対象とする。",
+    "methodology": "通常batch size 1、DART/EAGLE3のdraft length 8で、MT-Bench、HumanEval、Alpaca、Math500、CodeAlpaca、LiveCodeBench、MBPPを評価する。指標は自己回帰基準に対する実wall-clock speedup、平均受理長tau、draft forward/tree search latency。EAGLE3、SPS、Medusa、Hydra、Lookahead、PLD等と比較する。学習はcontext 6400、AdamW lr 2e-5、3 epochs、ShareGPT+UltraChat約280K例。shifted logits、N-gram、KL減衰gammaをablationし、batch size 2〜64とA100でも速度傾向を検証する。",
+    "scope": "lossless speculative decodingの速度評価が中心で、生成品質は最終分布が対象モデルと一致するため別途報告しない。主結果はH20-3eでbatch size 1に最適化された状況であり、大batchではcompute-bound化して利得が縮小する。DiffuSpec/SpecDiffは実装非公開のため直接比較していない。"
   },
   "reservation": {
-    "claim_id": "claim-78cb43ce4509a618c85127b5",
+    "claim_id": "claim-d138fd01aeed0094d3129bad",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
