@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 14:18:36 JST**
+> 自動生成: **2026-09-17 14:18:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-17 14:13:08 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **75** |
+| 最終検証済みResearch収録 | **09-17 14:18:42 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **4** | **1** | **3** | **3** | **1** | — |
+| Research | **12** | **4** | **1** | **3** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **1** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **12** | **5** | **2** | **3** | **3** | **1** | **5** |
+| 合計 | **13** | **5** | **2** | **3** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 14:18:42 JST** [research] `arXiv:2609.17193` — End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services
+  - job: `.survey/work-queue/jobs/job-research-fe0106a025692e30.json`
+  - result: `.survey/work-queue/results/research/attempt-482caf37761abfd8d593db1f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-482caf37761abfd8d593db1f.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md`
 - **09-17 14:13:08 JST** [research] `arXiv:2609.17475` — JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management
   - job: `.survey/work-queue/jobs/job-research-cf3f98aec47a974c.json`
   - result: `.survey/work-queue/results/research/attempt-a48b2fb6f7f42031d9d9ac32.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a4e4d8c3f36aed305d4ea174.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a4e4d8c3f36aed305d4ea174.json`
   - paper: `papers/inference/05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md`
-- **09-17 12:10:06 JST** [research] `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-411dee2b8db54e04.json`
-  - result: `.survey/work-queue/results/research/attempt-b48fe8a4a8bca9a588bbc403.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b48fe8a4a8bca9a588bbc403.json`
-  - paper: `papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md`
 
 ### Audit
 
@@ -145,10 +145,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.17193` — End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 14:16:41 JST** / heartbeat: **—** / lease expiry: **09-17 15:46:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-fe0106a025692e30.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.17241` — ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding / worker `scheduled-chat-paper-20260917T1330JST`
   - claim: **09-17 13:43:36 JST** / heartbeat: **09-17 14:05:58 JST** / lease expiry: **09-17 15:35:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-6be1741cdc42b913.json`
@@ -174,7 +171,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -194,7 +191,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **656** |
+| inference/training/survey配下の論文Markdown実体 | **657** |
 
 ### immutable submissionの未照合
 
@@ -202,8 +199,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **427** |
-| └ Research | **300** |
+| 成功result未照合のimmutable submission | **426** |
+| └ Research | **299** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
