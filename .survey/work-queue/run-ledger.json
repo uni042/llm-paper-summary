@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T14:31:29.149588+00:00",
+  "updated_at": "2026-09-17T14:35:36.779504+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T14:31:29.149588+00:00",
+      "last_recorded_at": "2026-09-17T14:35:36.779504+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 214,
+        "research_completed": 215,
         "audit_completed": 0,
         "discovery_completed": 97,
         "blocked": 15,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35123195589:1",
-          "recorded_at": "2026-09-16T16:38:56.936754+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35123195589",
-            "run_attempt": "1",
-            "source_sha": "7cb1902405200b583815bc6a4b2d854b897c1715"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35123381973:1",
           "recorded_at": "2026-09-16T16:40:50.357150+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35234108655",
             "run_attempt": "1",
             "source_sha": "cc6fb97bc3734bf97066b802972a20d9815ed667"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35234568098:1",
+          "recorded_at": "2026-09-17T14:35:36.779504+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35234568098",
+            "run_attempt": "1",
+            "source_sha": "5a8fdc878bf1400d03c3b3f423e37d6defae6d2f"
           },
           "signals": [
             "research_completed"
@@ -22204,6 +22204,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.18869",
           "title": "Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f37149dfc085d0ea",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16648",
+          "title": "GrowMTP: Efficient Multi-Token Prediction via Progressive Growth",
           "from": "ready",
           "to": "completed"
         }

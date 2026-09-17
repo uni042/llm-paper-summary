@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 23:34:56 JST**
+> 自動生成: **2026-09-17 23:35:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **45** |
+| 収録候補論文 | **44** |
 | 未claim Research job | **44** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-17 23:31:24 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **53** |
+| 最終検証済みResearch収録 | **09-17 23:35:32 JST（4秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **45** |
+| canonical_id確認済みの一意な候補論文 | **44** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **44** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **13** | **2** | **1** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **12** | **2** | **2** | **0** | **0** | **0** | **4** |
-| 合計 | **24** | **3** | **2** | **1** | **1** | **0** | **4** |
+| 合計 | **25** | **4** | **3** | **1** | **0** | **0** | **4** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 23:35:32 JST** [research] `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth
+  - job: `.survey/work-queue/jobs/job-research-f37149dfc085d0ea.json`
+  - result: `.survey/work-queue/results/research/attempt-bd486dddc37223eae30319f6-repair.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bd486dddc37223eae30319f6-repair.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md`
 - **09-17 23:31:24 JST** [research] `arXiv:2503.18869` — Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design
   - job: `.survey/work-queue/jobs/job-research-f3b9350c8e883e12.json`
   - result: `.survey/work-queue/results/research/attempt-6adea251db936612ba17864d-repair.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a6d9e761f99fd071c0489cca.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a6d9e761f99fd071c0489cca.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md`
-- **09-17 18:15:48 JST** [research] `arXiv:2507.09201` — SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding
-  - job: `.survey/work-queue/jobs/job-research-e79ef27915573b54.json`
-  - result: `.survey/work-queue/results/research/attempt-7c0239753483c2ddf4304e18.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7c0239753483c2ddf4304e18.json`
-  - paper: `papers/inference/04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md`
 
 ### Audit
 
@@ -151,7 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **成功** `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth
+  - job: `.survey/work-queue/jobs/job-research-f37149dfc085d0ea.json`
+  - result: `.survey/work-queue/results/research/attempt-bd486dddc37223eae30319f6-repair.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bd486dddc37223eae30319f6-repair.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-bd486dddc37223eae30319f6.json` (job `job-research-f37149dfc085d0ea`)
 
 #### Audit (:30)
@@ -178,10 +183,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth / worker `scheduled-chat-llm-survey`
-  - claim: **09-17 23:31:54 JST** / heartbeat: **—** / lease expiry: **09-18 01:01:54 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f37149dfc085d0ea.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +204,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **44** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +224,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **678** |
+| inference/training/survey配下の論文Markdown実体 | **679** |
 
 ### immutable submissionの未照合
 
