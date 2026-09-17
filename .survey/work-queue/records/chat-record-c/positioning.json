@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "attempt_id": "attempt-f7223a811e0f833d18c9ef93",
   "job_id": "job-research-411dee2b8db54e04",
   "data": {
     "limitations": "評価は主に単一バッチ生成であり、多数要求を同時処理するサービングのスループットや尾部遅延は対象外である。GPUでは復元後に密行列演算を行うため、疎性を演算量削減へ使えていない。SSD帯域が依然として上限となり、著者らも複数SSDへの分散を将来課題として挙げる。量子化で値幅を縮めるほど1ビット位置ビットマップの相対費用が増え、圧縮率は低下する。論文時点では対応モデルがOPT-66BとLlama2-70B中心で、コードは公開予定とされるが本文に公開URLはない。",
@@ -11,8 +11,8 @@
     "research_positioning": "CPU/SSD階層を使うLLM退避推論で、枝刈りアルゴリズムとI/Oシステムの間を埋めるデータ形式研究に位置する。特にNVMe帯域が支配的な個人GPU環境では、量子化、GPUダイレクトストレージ、複数SSD、先読みと組み合わせる基礎要素として重要である。"
   },
   "reservation": {
-    "claim_id": "claim-9730536bfd6295c896a732be",
-    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "claim_id": "claim-f7223a811e0f833d18c9ef93",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

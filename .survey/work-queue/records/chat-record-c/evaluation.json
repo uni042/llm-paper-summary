@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "attempt_id": "attempt-f7223a811e0f833d18c9ef93",
   "job_id": "job-research-411dee2b8db54e04",
   "data": {
     "hardware": "主系はRTX 4080 16GB、ホストDRAM 64GB、SK Hynix P31 NVMe 2TB。OPT-66B FP16は132GB相当で、GPU 0〜4層、CPU 5〜12層、SSD 13〜63層へ配置する。GPUダイレクトストレージ対応経路も評価する。",
@@ -11,8 +11,8 @@
     "scope": "主目的は単一バッチの遅延削減であり、高並列サービングのスループット最適化ではない。疎性は保存・転送量削減に使うが、GPU上の行列計算自体は密計算のままで、非構造疎性による演算削減は未利用である。"
   },
   "reservation": {
-    "claim_id": "claim-9730536bfd6295c896a732be",
-    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "claim_id": "claim-f7223a811e0f833d18c9ef93",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

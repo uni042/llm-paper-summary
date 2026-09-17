@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "attempt_id": "attempt-f7223a811e0f833d18c9ef93",
   "job_id": "job-research-411dee2b8db54e04",
   "data": {
     "overview": "Endorは50%非構造枝刈りFP16重みを元サイズの56%へ縮め、GPU復元費用を小さく保つことで転送支配の退避推論を高速化する。同一配置のOPT-66Bでは54秒から35.8秒へ短縮し、圧縮によりCPU常駐層を8層から14層へ増やすと密重みAccelerate比1.70倍となる。GPUダイレクトストレージではOPT-66Bの1回通過が24.2秒となり約2.23倍、論文全体ではOPT-66B最大約2.25倍、Llama2-70B最大2.37倍を報告する。",
@@ -55,8 +55,8 @@
     "quality_impact": "形式自体は無損失で、品質は枝刈り方式に依存する。OPT-66BではSparseGPT 50%非構造枝刈りで密モデルとほぼ同じperplexityを維持した。"
   },
   "reservation": {
-    "claim_id": "claim-9730536bfd6295c896a732be",
-    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "claim_id": "claim-f7223a811e0f833d18c9ef93",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

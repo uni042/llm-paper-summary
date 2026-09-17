@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-9730536bfd6295c896a732be",
+  "attempt_id": "attempt-f7223a811e0f833d18c9ef93",
   "job_id": "job-research-411dee2b8db54e04",
   "data": {
     "problem": "GPUメモリに収まらないLLMでは層ごとの重みをCPU DRAMやSSDへ置き、使用直前にGPUへ転送する。OPT-66BをRTX 4080環境で測ると1回の全層通過に54秒かかり、SSD配置層では約1秒のうち約80%がSSDからCPU、約20%がCPUからGPUへの転送で、計算時間はほぼゼロだった。この条件では計算と転送の重畳だけでは効果が小さい。枝刈りでゼロを増やしても、非構造な疎パターンを密行列のまま保存すれば転送量は減らず、CSRのような索引形式も50%疎では索引費用が大きい。",
@@ -29,8 +29,8 @@
     ]
   },
   "reservation": {
-    "claim_id": "claim-9730536bfd6295c896a732be",
-    "worker_id": "scheduled-chat-normal-20260917T0723",
+    "claim_id": "claim-f7223a811e0f833d18c9ef93",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
