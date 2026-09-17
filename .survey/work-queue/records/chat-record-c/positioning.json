@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-f33bcf6582c61bebc4e77283",
-  "job_id": "job-research-fe0106a025692e30",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f33bcf6582c61bebc4e77283",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f33bcf6582c61bebc4e77283","job_id":"job-research-fe0106a025692e30","data":{"limitations":"実評価はvLLM profiling値を使うsimulationで、実際のmulti-edge serving deploymentではない。output token長を既知/推定済みと仮定し、その推定誤差は評価しない。prefillはKV容量が十分ならdecodeから独立したrateとし、downlink latencyも無視する。1秒slot・毎user毎slot1 requestというarrival abstractionはburst性や非同期arrivalを簡略化する。","differences":"vLLM/Orca等が単一engine内のcontinuous batchingやKV管理を最適化するのに対し、LYREOは複数edge serverへのrequest assignmentを通信状態と未完了decode状態まで含めて扱う。従来edge DRL/Lyapunov schedulerはslotごとの即時signalやatomic task近似が中心だが、本手法はrequest completionまで遅延するfeedbackをredistributeする。Least-Loadedのrequest数ではなくKV memory-timeをloadとして使う点も差分。","implementation_status":"PyTorch 1.8によるpolicy/reward predictorと、RTX 3080/3090/4090上のLlama-3.2-1B vLLM offline profilingを用いたsimulation実装。論文・arXivページに公開code repositoryは記載されていない。","research_positioning":"本リポジトリのserving scheduling系では、GPU内batch schedulingより上位のdistributed edge routing層に位置する。KV cacheを単なる容量制約でなくtime-integrated workload signalとして使うため、Llumnix等のstate-aware schedulingやdisaggregationと接続しやすい。将来的には実serverのKV pressure、network RTT、prefill/decode分離clusterのtelemetryをvirtual queue stateへ直接入れ、simulation前提を外すことが重要。"},"reservation":{"claim_id":"claim-f33bcf6582c61bebc4e77283","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
