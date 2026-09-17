@@ -2,7 +2,40 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-366e50017f388aac9c576b49",
+  "job_id": "job-research-6b9319ad56fb236d",
+  "data": {
+    "evaluation_summary": "arXiv v3本文を全文確認したところ、§3のmethodologyと§4 conclusionの間に独立した実験・evaluation節は存在せず、GPU cluster上のlatency、throughput、memory、task qualityをbaselineと比較した実測表も掲載されていない。評価可能な定量情報は主に理論的complexity/memory式とFPGA resource/latency modelである。したがってabstractの『memory, latency, end-to-end generation efficiencyのsignificant improvements』を具体的な測定値として記録することはできない。",
+    "scope": "設計・解析中心。公開software libraryはあるが、論文v3そのものは再現可能なhardware/software benchmark条件と実測結果を提示していない。FPGA mappingは代表parameterによるresource budget算定であり実機FPGA測定とは記載されない。",
+    "hardware": [
+      "GPU-centric multi-GPU/multi-node architecture（具体GPU型番なし）",
+      "optional AMD Alveo U55C / Intel Agilex FPGA SmartNIC",
+      "CXL Type-3 attached DDR memory"
+    ],
+    "models": [
+      "7B-scale MoE with 16 expertsは問題例として言及"
+    ],
+    "datasets": [],
+    "workload": "一般的なlong-context MoE decoding query streamを数式でモデル化。具体dataset、request trace、batch、context distributionを用いたempirical benchmarkは本文にない。",
+    "baselines": [
+      "dense globally synchronized KV cache",
+      "各routing/compression/scheduling方式はtableで機構・complexity比較のみ"
+    ],
+    "metrics": [
+      "asymptotic routing cost",
+      "KV memory traffic",
+      "reuse distance",
+      "compression reconstruction error",
+      "analytical read/decode latency",
+      "per-GPU memory formula",
+      "FPGA BRAM/URAM resource formula"
+    ],
+    "predictor_accuracy": "学習型性能予測器の精度評価はない。RL routingやMLP scorerを選択肢として列挙するがaccuracy/quality benchmarkは提示しない。",
+    "control_knobs": "expert routing k、shard size S、compression ratio ρ/rank r、retained page count K、scheduler threshold θ、routing/cache-miss penalty。"
+  },
+  "reservation": {
+    "claim_id": "claim-366e50017f388aac9c576b49",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

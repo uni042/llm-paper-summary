@@ -2,7 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-366e50017f388aac9c576b49",
+  "job_id": "job-research-6b9319ad56fb236d",
+  "data": {
+    "problem": "MoEは各tokenで少数expertだけを起動して計算を疎化するが、通常の推論runtimeではKV cacheは依然として過去token全体を密に保持・参照し、複数GPU/複数nodeで同期・複製される。論文は7B級MoE、128K context、16 expertsでfull KVが24GB超になり得る例を示す。FlashAttentionなどはattention kernelのIOを減らしても、分散nodeから大量KVを読み出す容量・通信問題そのものは解消しない。H2O等の選択方式も静的heuristicや単一device上のtoken重要度を中心にし、どのexpertへrouteされたqueryがどのshardをremote accessするかというsystem costを直接最適化しない。PiKVはこの計算sparsityとKV access sparsityの不一致を対象とする。",
+    "novelty": "PiKVはexpert-sharded KV storageを基盤に、cache missを考慮するexpert routing、複数方式を差し替え可能なKV compression、attention/recency/frequency等を使うpage retention schedulingを同一pipelineへ統合する。KV cacheを受動的な履歴保存ではなくquery-driven retrieval systemとして扱い、optional FPGA/CXL tierへmetadata-heavy処理を移せる構成まで定式化する点が特徴である。",
+    "method_overview": "各decode stepでPiKV Routingがqueryからtop-k expert集合を決め、encoderが新しいK/Vを生成する。選択expertごとにtoken indexとexpert IDからshardを決定し、compression moduleがK/Vを低次元表現へ変換してexpert別circular bufferへmetadata付きで挿入する。次にschedulerが現在queryに対するattention intensity、recency、frequency、age等からpage utilityを計算し、bounded memory内で保持するK pagesを更新する。attentionは選択されたexpertと保持pageだけを読み出す。storageはGPU間にshardされるためfull KV複製を避け、routingはcache miss penaltyを加えてremote lookupを減らし、compressionは1/ρに幅を縮め、schedulerは不要pageを落とす。これらを非同期pipelineとして毎token繰り返し、各moduleのmetadataを次段へ渡す。FPGA構成ではGPUがencoding/attentionを担当し、CXL接続FPGAがdirectory lookup、routing score、compression codec、page scoring、DMAを処理し、KV本体はdisaggregated DDRへ置く。",
+    "system_design": "GPU-centric版はexpertごとのdistributed circular KV shard、routing policy、compression codec、page schedulerを持つ。FPGA版はCXL Type-3 memory pool、PiKV-CTRL、directory、ScoreFuse、Codec、DMAを追加し、GPUをmetadata critical pathから外す。",
+    "components": [
+      {
+        "name": "Expert-sharded KV storage",
+        "description": "従来の全GPU full KV replicationではなく、token tとexpert eからshardを決め、各shardを一つのGPUへ割り当てる。各shardは容量Sのcircular bufferでO(1) insertを行い、圧縮後幅d'=d/ρを保存する。論文の式ではper-GPU token storageをO(L/G+L/E)へ下げ、保持page数Kも含む総メモリを2d/ρ(L/(GS)+KS)として表す。expert routingと物理KV配置を同じkeyで結び付けることで、MoEの計算sparsityをcache placementにも反映する。"
+      },
+      {
+        "name": "PiKV Routing",
+        "description": "queryごとにE expertsからk≪Eを選ぶrouting層で、round-robin、TopK、load-balanced TopK、cache-aware PiKVRouter、entropy penalty、RL adaptive、hierarchical routingを共通interfaceで扱う。cache-aware variantはexpert miss countに対するpenaltyをscoreへ加え、計算上のexpert適合度だけでなくKV localityも考慮する。理論上、dense accessのBLhEに対しsparse accessはBLhkとなり、KV fetch量も2BLhEから2BLhkへ減るためE/kの削減余地を持つ。"
+      },
+      {
+        "name": "PiKV Compression",
+        "description": "KV幅dをd'<dへ変換し、LoRA低rank、LoRA++、PyramidKV、ChunkKV、truncated SVD、FastV、distillation、structured pruningを差し替え可能にする。各方式について再構成誤差と計算量を整理し、圧縮率ρを上げるとread/decode時間が1/ρに比例して減る解析式を示す。ただしdecode computeとmemory readが同程度になると利得が飽和するため、圧縮率だけを無制限に上げる設計ではない。"
+      },
+      {
+        "name": "PiKV Scheduling",
+        "description": "bounded memory下でKV pageごとのutilityをattention、recency、frequency、age等から計算し、H2O、sliding window、QUEST、LRU/LRU+、adaptive multi-feature、Duoなどのretention policyを統一的に扱う。adaptive variantは目標hit-rateと実測hit-rateの差からeviction thresholdを更新する。shard size Sについて総メモリ式を微分しS*=sqrt(L/(KG))を導き、細かいshardingとreuse coverageのtrade-offを設定するdesign ruleも提示する。"
+      },
+      {
+        "name": "Hardware-aware FPGA mapping",
+        "description": "optional構成ではAMD Alveo U55CやIntel Agilex級FPGA SmartNICをCXL Type-3 memoryへ接続し、KV payloadはDDR pool、metadata・score・codec weightだけをFPGA on-chip memoryへ置く。directory lookup、TopK/ScoreFuse、compression、scheduler、DMAを専用engineへ対応付け、GPUには選択・圧縮済みKVとindexだけを返す。代表E=64,S=256,k=4,K=16,d=128でpage-table BRAM約176KB、metadata約48KBと解析し、metadata処理をGPU critical pathから外せることを示す。"
+      }
+    ],
+    "empirical_insights": [
+      "論文v3には独立したempirical evaluation sectionがなく、methodology内のcomplexity/resource analysisが中心。",
+      "KV memory最適shard sizeはS*=sqrt(L/(KG))と導出される。",
+      "compressionによるread/decode削減は理論上ρに比例するがcompute-memory balanceで飽和する。"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-366e50017f388aac9c576b49",
+    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

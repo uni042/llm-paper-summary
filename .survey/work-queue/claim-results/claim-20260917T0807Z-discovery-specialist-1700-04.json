@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T0807Z-discovery-specialist-1700-04",
+  "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-6b9319ad56fb236d",
+      "claim_id": "claim-366e50017f388aac9c576b49",
+      "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-366e50017f388aac9c576b49",
+      "claimed_at": "2026-09-17T08:07:22+00:00",
+      "expires_at": "2026-09-17T09:37:22+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-6b9319ad56fb236d"
+      ],
+      "job": {
+        "job_id": "job-research-6b9319ad56fb236d",
+        "type": "research",
+        "parent_job_id": "job-81d9561e39a761a9",
+        "priority": 86,
+        "canonical_id": "arXiv:2508.06526",
+        "title": "PiKV: KV Cache Management System for Mixture of Experts",
+        "source_url": "https://arxiv.org/abs/2508.06526",
+        "paper_path": "papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md",
+        "selection_reason": "MoE推論でdenseかつglobalに同期されるKV cacheをexpert-sharded storageへ分割し、routing・adaptive scheduling・compressionを統合する分散KV管理系。multi-GPU/multi-nodeのmemory/communication bottleneckを直接扱い、MoE expert配置・KV cache・serving runtimeの交点として既存サーベイとの差分が明確。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T20:02:46+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[2].description is too short | Japanese-first prose ratio is too low: 49.7% < 70% (Japanese=3461, Latin=3509)",
+        "validation_errors": [
+          "problem_method.components[2].description is too short",
+          "Japanese-first prose ratio is too low: 49.7% < 70% (Japanese=3461, Latin=3509)"
+        ],
+        "last_validation_failed_at": "2026-09-17T04:39:54+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-0dacd70c0debc8b74170e20e"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-0dacd70c0debc8b74170e20e.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T08:07:22+00:00",
+  "checkpoint_released": 0
+}
