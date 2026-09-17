@@ -17,6 +17,9 @@ import argparse
 import json
 
 
+ASYNC_WAIT_POLL_SECONDS = 10
+
+
 def yn(value: str) -> bool:
     value = value.strip().lower()
     if value in {"yes", "y", "true", "1"}:
@@ -52,11 +55,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
     handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
 
-    # Preferred semantics for hourly Scheduled Chat workers: the run receives a
-    # fresh one-hour budget at the actual invocation start, even when the
-    # platform starts it a few minutes before or after the nominal schedule.
-    # The schedule-boundary value remains a compatibility fallback for older
-    # callers that have not yet captured an invocation-local deadline.
     if seconds_to_deadline is not None:
         effective_seconds_to_handoff = int(seconds_to_deadline)
         handoff_time_source = "run_deadline"
@@ -96,20 +94,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         or (args.can_discover and any_durable_transport)
     )
 
-    # A freshly written claim request whose matching result has not propagated
-    # yet is a transient synchronization state, not proof that all remaining
-    # work is globally blocked. Keep the run alive so the same request/result
-    # pair can be re-read. A second claim request must not be issued meanwhile.
     transient_claim_wait = bool(args.claim_result_pending and args.github_read)
     if args.global_dependency and not independent_work and not transient_claim_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
-    # Discovery-specialist runs have an explicit progression floor. A novel
-    # candidate resets the exhaustion sweep, so voluntary exhaustion requires
-    # explicit reset-aware progress evidence. If the caller does not supply that
-    # evidence, continuing is safer than accepting an unverifiable exhaustion
-    # claim. Hard stop reasons above still win (handoff guard, platform limit,
-    # unreadable canonical state, or inability to durably preserve required work).
     hard_stop = bool(reasons)
     if worker_kind == "discovery" and not hard_stop:
         if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
@@ -149,11 +137,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     claim_wait_action = "none"
     claim_wait_seconds = 0
     if transient_claim_wait:
-        claim_wait_seconds = 30
+        claim_wait_seconds = ASYNC_WAIT_POLL_SECONDS
         claim_wait_action = (
-            "keep_same_request_id; do_not_issue_another_claim; wait_30_seconds; "
+            "keep_same_request_id; do_not_issue_another_claim; wait_10_real_seconds; "
             "refresh_latest_head_and_matching_claim_result; if_available_check_survey_claim_fast; "
-            "if_result_still_pending_wait_30_seconds_again; repeat_until_result_or_terminal_hard_stop"
+            "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
         )
 
     return {
@@ -188,12 +176,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         ),
         "rule": (
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
-            "or discovery submission is never by itself a whole-run stop condition. Hourly "
-            "Scheduled Chat workers prefer an actual-invocation-start + 3600 second run deadline "
-            "over the nominal schedule boundary. Discovery specialist runs may use exhaustion as "
-            "a voluntary stop reason only when reset-aware progress since the latest novel candidate "
-            "is explicitly supplied and satisfies the minimum progression floor; hard handoff/"
-            "platform/durability/read failures override that floor."
+            "or discovery submission is never by itself a whole-run stop condition. Required "
+            "claim results are polled every 10 real seconds using the same request identity until "
+            "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
+            "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
+            "Discovery specialist runs may use exhaustion as a voluntary stop reason only when "
+            "reset-aware progress since the latest novel candidate is explicitly supplied and "
+            "satisfies the minimum progression floor; hard handoff/platform/durability/read "
+            "failures override that floor."
         ),
     }
 
