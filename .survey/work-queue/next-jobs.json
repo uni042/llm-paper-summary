@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 602,
+      "completed": 603,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 45,
+      "ready": 47,
       "completed": 494,
       "superseded": 44,
       "deferred": 3,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 45,
+    "ready_research_audit": 47,
     "actively_claimed": 1,
-    "claimable": 44
+    "claimable": 46
   },
   "next_jobs": [
     {
@@ -80,6 +80,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e6a248e5246d3a4e",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2608.22613",
+      "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.22613",
+      "paper_path": "papers/inference/05-pim-near-memory/2026-2608.22613-nova-near-memory-processing-hybrid-llm-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-b85568c75bac4939",
       "type": "research",
       "lane": null,
@@ -122,20 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-a1874def735a479b",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2508.12851",
-      "title": "Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement",
-      "source_url": "https://arxiv.org/abs/2508.12851",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-17T16:02:46+00:00"
+  "generated_at": "2026-09-17T16:06:11+00:00"
 }

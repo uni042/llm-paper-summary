@@ -1,35 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T16:02:46+00:00",
+  "updated_at": "2026-09-17T16:06:11+00:00",
   "last_run_key": "2026-09-18T01:00:00+09:00",
-  "last_round": "heterogeneous-disagg-3",
+  "last_round": "near-memory-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 9,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:00:00+09:00",
-      "round": "specialist-kv-saturated-7",
-      "axis": "KV multi-turn管理・復元・予約不確実性",
-      "query_summary": "multi-turn KV sharing、KV restoration、output-length uncertainty、non-uniform KV retentionを独立軸で再走査した。強候補は最新正本で既収録または既存jobだった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2607.16892",
-        "arXiv:2606.06302",
-        "arXiv:2604.25080"
-      ],
-      "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする",
-      "source_submission": "work-queue/submissions/20260913T0017JST-discovery-kv-saturated-7.json"
-    },
     {
       "run_key": "2026-09-13T00:00:00+09:00",
       "round": "specialist-fresh-framework-saturated-8",
@@ -6818,6 +6798,26 @@
       ],
       "next_axis_hint": "GPU direct remote memory・CXL/NDP以外のnear-memory execution、または新規候補の引用系から未走査候補を確認する",
       "source_submission": "work-queue/submissions/20260918T0112JST-discovery-specialist-heterogeneous-disagg-3.json"
+    },
+    {
+      "run_key": "2026-09-18T01:00:00+09:00",
+      "round": "near-memory-4",
+      "axis": "HBM-PIM・near-memory KV管理・memory-side dequantization",
+      "query_summary": "第3roundからnear-memory executionへ移動し、CXL/NDP既知系とは異なるHBM4 heterogeneous PIM、hybrid LLM向け2-tier NMP、memory-side dequantizationを探索。投入直前にcanonical arXiv IDでdefault branchを再照合した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "final_duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2511.00321"
+      ],
+      "next_axis_hint": "今回採用候補のforward/backward citationと直近2609新着を再走査し、強候補がなければ空roundを蓄積して収束判定する",
+      "source_submission": "work-queue/submissions/20260918T0116JST-discovery-specialist-near-memory-4.json"
     }
   ],
   "axes": {
@@ -11323,6 +11323,19 @@
       "duplicate_ratio": 0.75,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "GPU direct remote memory・CXL/NDP以外のnear-memory execution、または新規候補の引用系から未走査候補を確認する"
+    },
+    "HBM-PIM・near-memory KV管理・memory-side dequantization": {
+      "last_run_key": "2026-09-18T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "final_duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "今回採用候補のforward/backward citationと直近2609新着を再走査し、強候補がなければ空roundを蓄積して収束判定する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
