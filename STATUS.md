@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 04:10:26 JST**
+> 自動生成: **2026-09-18 04:31:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **64** |
-| 未claim Research job | **63** |
+| 収録候補論文 | **68** |
+| 未claim Research job | **67** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（3時間22分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（3時間44分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **64** |
+| canonical_id確認済みの一意な候補論文 | **68** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **64** |
+| 非終端Research job合計 | **68** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **8** | **7** | **1** | **0** | **0** | **18** |
-| 合計 | **26** | **9** | **7** | **2** | **1** | **0** | **18** |
+| Discovery | **21** | **8** | **8** | **0** | **0** | **0** | **18** |
+| 合計 | **27** | **9** | **8** | **1** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -109,6 +109,10 @@
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-resilience-security-6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-resilience-security-6.json`
   - 探索軸: fault tolerance・failure recovery・confidential serving・resource isolation
+- **09-18 04:10:46 JST** job `job-7461140400013bb2` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-lineage-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-lineage-8.json`
+  - 探索軸: multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing
 - **09-18 04:10:15 JST** job `job-262a244fbc8c0261` / 候補 **3件**
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-recovery-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json`
@@ -121,10 +125,6 @@
   - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json`
   - 探索軸: direct I/O・GPU-initiated storage・SSD-backed LLM inference
-- **09-18 01:58:45 JST** job `job-ca1a1c24ad6a887a` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0159JST-discovery-specialist-ssd-moe-new-1.json`
-  - 探索軸: 2026年9月17日新着・SSD-backed MoE expert streaming/offload
 
 ### 直近タスク
 
@@ -143,7 +143,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 04:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **1件** / 候補: **18件**
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **18件**
 - 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction / dLLM delayed KV cache・dual adaptive cache・conference lineage / 2026年9月新着・diffusion LLM・long-context KV offload/prefetch / diffusion LLM serving・elastic decoding・KV reuse・parallel decoding / 2026年9月新着・multi-tenant serving・latency isolation・fair scheduling / fault tolerance・failure recovery・confidential serving・resource isolation / multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing / heterogeneous multi-model routing・resource allocation・MoE failure recovery
 - round `specialist-dllm-cache-lineage-3` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
@@ -172,7 +172,7 @@
 - round `specialist-routing-lineage-8` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-lineage-8.json`
   - 探索軸: multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-lineage-8.json` (`ok=true`)
 - round `specialist-routing-recovery-7` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json`
   - 探索軸: heterogeneous multi-model routing・resource allocation・MoE failure recovery
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **64** |
+| ready | **68** |
 
 ### 候補の重複・識別情報欠損
 
@@ -233,10 +233,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **457** |
+| 成功result未照合のimmutable submission | **456** |
 | └ Research | **327** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **125** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
