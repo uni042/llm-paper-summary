@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 06:35:05 JST**
+> 自動生成: **2026-09-18 06:35:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文 | **59** |
 | 未claim Research job | **58** |
-| 直近24hの検証済みResearch収録 | **49** |
+| 直近24hの検証済みResearch収録 | **48** |
 | 最終検証済みResearch収録 | **09-18 06:07:01 JST（28分前）** |
 | 整合性異常 | **2** |
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **10** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **27** | **9** | **9** | **0** | **1** | **0** | **18** |
+| 合計 | **27** | **10** | **9** | **1** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 05:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4e8102b097cd70d5cff78c32.json` (job `job-research-39525f58ef98f435`)
 - **成功** `arXiv:2505.15781` — dKV-Cache: The Cache for Diffusion Language Models
   - job: `.survey/work-queue/jobs/job-research-b6925d33135e854c.json`
   - result: `.survey/work-queue/results/research/attempt-8a81151586fdc3a2613ff366.json` (`ok=true`)
@@ -257,8 +258,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **462** |
-| └ Research | **333** |
+| 成功result未照合のimmutable submission | **463** |
+| └ Research | **334** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 | └ Other/Unknown | **2** |
