@@ -1,5 +1,55 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a17fc9940597717688ea373e","job_id":"job-research-5862dce444505150",
- "data":{"overview":"ProTrainはGPU容量を使い切る構成を自動選択し、単なる容量拡大だけでなく通信と計算の重畳を改善する。4×RTX 3090では平均2090 tokens/sを達成し、比較基盤より1.77〜2.71倍高い。4×A100ではDeepSpeed、Colossal-AI、FSDPに対してそれぞれ1.85、1.43、2.22倍のスループットを示す。最大モデル容量も単一A100で75B、4×A100で87Bまで拡大する。175B GPTの16×A100多ノード評価でも2218.70 tokens/sでDeepSpeedの2.58倍、Colossal-AIの2.09倍となる。費用モデルの予測誤差は主実験で4%以内であり、計測と探索の負担も小さい。","key_results":[{"metric":"平均訓練スループット改善","value":"1.77〜2.71倍","baseline":"DeepSpeed、Colossal-AI、FSDP","condition":"4×RTX 3090、複数モデル・最適バッチ","interpretation":"低容量・低PCIe帯域環境でも、常駐量と再計算・退避を共同調整することで既存基盤を一貫して上回る。"},{"metric":"A100スループット改善","value":"1.85倍 / 1.43倍 / 2.22倍","baseline":"DeepSpeed / Colossal-AI / FSDP","condition":"4×A100、複数モデル・最適バッチ","interpretation":"大容量GPUとNVLink環境では退避を減らし、GPU常駐とバッファを増やす別構成を自動選択して性能を維持する。"},{"metric":"最大訓練可能モデル","value":"単一A100 75B、4×A100 87B","baseline":"単一A100でDeepSpeed 34B、Colossal-AI 53B、FSDP 10B","condition":"GPT-2系容量評価","interpretation":"CPUメモリとGPUメモリを協調利用することで、追加GPUなしでも訓練可能モデル規模を大幅に広げる。"},{"metric":"多ノードスループット","value":"2218.70 tokens/s","baseline":"DeepSpeed比2.58倍、Colossal-AI比2.09倍、FSDPはOOM","condition":"175B GPT、batch 256、4ノード16×A100、100Gb InfiniBand","interpretation":"単一ノード向けのメモリ管理が多ノードZeRO環境でも有効であることを示す。"},{"metric":"費用モデル精度","value":"実行時間・ピークメモリ誤差4%以内","baseline":"実測値","condition":"10B GPT-2の多様なメモリ構成","interpretation":"候補構成を実学習せずに探索しても、最速構成を選べる精度の予測が可能である。"}],"negative_results":"最適化効果はハードウェア依存である。RTX 3090ではPCIe 3.0が既にパラメータ先読みで飽和しやすく、交互ブロック管理を外して全ブロックをチェックポイント化しても平均低下は1.04倍に留まる。帯域が狭い条件では活性値退避を増やす利点が小さい。またProTrainは並列化方式自体を探索しないため、並列構成が不適切ならその上でのメモリ最適化に限定される。","interpretation":"性能差は固定の退避方式が常に優れることから生じるのではなく、モデル・バッチ・GPU容量・CPU-GPU帯域に応じて最適な常駐、退避、再計算の比率が変わることから生じる。RTX 3090では通信制約のためチェックポイントを増やし、A100では高帯域と大容量を利用して活性値を保持し三つ程度の先読みバッファを使うなど、探索結果がハードウェア特性に沿って変化する。","quality_impact":"学習アルゴリズムを変更しないシステム最適化なので、精度近似による品質低下を導入しない。主なリスクは誤った費用予測による性能低下やOOMだが、ピークメモリ推定を保守的に行い、追加評価では最大10%の過大推定に抑えて安全側へ寄せる。"},
- "reservation":{"claim_id":"claim-a17fc9940597717688ea373e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5102e3960d728cbebfe4919a",
+  "job_id": "job-research-0b1a3df137cd07ea",
+  "data": {
+    "overview": "同一PCIe転送予算で比較すると、既存KV退避方式は文脈集約型課題で完全注意から大きく精度を落とす一方、YAKVは特にQwen3系で差を大幅に縮める。Qwen3-4Bの4課題平均は完全注意71.87に対してYAKV67.50で、ShadowKV55.58、LRQK60.02を上回る。Qwen3-30B-A3Bでも完全注意78.47に対しYAKV73.04で、ShadowKV64.44、LRQK70.68より高い。さらにGPUメモリ節約で大きなバッチを収容でき、単一H200の連続処理では実データの思考モデルで最大4.95倍のスループットを示す。ただし個々の出力トークン遅延は増えるため、利点は主として同時処理量の増加から生じる。",
+    "key_results": [
+      {
+        "metric": "4課題平均精度",
+        "value": "67.50",
+        "baseline": "完全注意71.87、ShadowKV55.58、LRQK60.02",
+        "condition": "Qwen3-4B-Instruct-2507、同程度のPCIe転送予算",
+        "interpretation": "YAKVは完全注意との差を4.37点に抑え、既存の代表的KV退避方式より文脈集約型課題の精度を大きく維持する。"
+      },
+      {
+        "metric": "4課題平均精度",
+        "value": "73.04",
+        "baseline": "完全注意78.47、ShadowKV64.44、LRQK70.68",
+        "condition": "Qwen3-30B-A3B-Instruct-2507、同程度のPCIe転送予算",
+        "interpretation": "大きい混合専門家モデルでも量子化鍵による個別選択が有効で、低ランク・グループ選択より完全注意へ近い。"
+      },
+      {
+        "metric": "推論スループット",
+        "value": "127.0 tok/s、4.95倍",
+        "baseline": "完全注意25.64 tok/s",
+        "condition": "単一H200、Qwen3-30B-A3B-Thinking-2507、実データ、YAKV batch 32対baseline batch 1",
+        "interpretation": "KV本体をCPUへ退避してGPUメモリを解放することで同時バッチ数を増やし、復号の長い負荷では転送・選択コストを上回る処理量向上が得られる。"
+      },
+      {
+        "metric": "推論スループット",
+        "value": "76.2 tok/s、2.89倍",
+        "baseline": "完全注意26.32 tok/s",
+        "condition": "単一H200、Qwen3-30B-A3B-Instruct-2507、実データ、YAKV batch 32対baseline batch 1",
+        "interpretation": "プリフィル比率が高い条件でも、メモリ節約による連続バッチ拡大が全体スループットを約2.9倍へ押し上げる。"
+      },
+      {
+        "metric": "ランドマーク残差量子化のメモリ削減",
+        "value": "2ビットランドマークに近い精度で25%少ないメモリ",
+        "baseline": "2ビットHIGGSランドマーク",
+        "condition": "付録の1.5ビット相当残差量子化",
+        "interpretation": "主YAKVには含めないが、選択用表現にはさらにメモリ・精度の改善余地があることを示す。"
+      }
+    ],
+    "negative_results": "ShadowKV標準SVDランク160は、文脈集約型課題では読み戻しトークン数を10倍にしても完全注意へ届かない場合がある。SVDを外してもShadowKVやArkValeのグループランドマークはオラクル選択より多くのKVを必要とし、外れ値予算や局所窓を倍増しても差は解消しない。Llama-3.1-8BではText2JSONが完全注意46.75に対しYAKV30.60、LongProcが22.71に対し14.02で、改善後も大きな差が残る。単一要求の出力トークン時間もYAKVでは増加し、Qwen3-30B-A3B Instruct実データでは38msからbatch 32で420msとなる。",
+    "interpretation": "結果は、KV退避が文脈集約型課題に本質的に不適というより、必要KVを選ぶ代理表現の誤差が支配的であることを支持する。粗いSVDやグループ平均は少数の針を探す課題では十分でも、多数の正しい鍵を繰り返し上位へ置く必要があると誤順位が累積する。低ビットでもトークン単位の鍵表現を残す方が重要度順位を保ちやすく、転送予算を有効なKVへ集中できる。スループット向上は各トークンの処理が速くなるからではなく、GPU常駐KVを減らして大きいバッチを収容できるためである。",
+    "quality_impact": "近似方式なので品質無損失を保証しない。Qwen3ではYAKVが完全注意に近い精度を示すが、課題・モデルによって残差があり、特に弱いLlama 3系では構造化出力の破綻が精度を押し下げる。したがって運用時は針探し型だけでなく、実際の文脈集約度に近い評価で品質を確認する必要がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-5102e3960d728cbebfe4919a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
