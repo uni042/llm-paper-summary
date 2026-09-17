@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 03:32:15 JST**
+> 自動生成: **2026-09-18 03:32:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間44分前）** |
+| 最終検証済みResearch収録 | **09-18 00:47:32 JST（2時間45分前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -159,9 +159,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2411.17741` — Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 02:30:12 JST** / heartbeat: **—** / lease expiry: **09-18 04:00:12 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d9f05d11667dcf83.json`
+- `arXiv:2609.18110` — SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 03:32:33 JST** / heartbeat: **—** / lease expiry: **09-18 05:02:33 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1e6c346844ef359a.json`
 
 #### Audit
 
