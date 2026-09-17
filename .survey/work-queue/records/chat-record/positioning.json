@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-42b6429a1b73e190dbc9976c","job_id":"job-research-1e6c346844ef359a","data":{"limitations":"主要評価はRTX 5090、単一4TB PCIe 5.0 NVMe SSD、16GB RAMの一台構成に集中しており、複数SSD、低速SSD、他社GPU、異なるOSで同じ利得が出るかは未検証である。対象はMoEエキスパート重みであり、KVキャッシュ管理と複数要求スケジューリングは扱わない。CPU-GPU最適分担は対象機での実測探索に依存し、別CPU/GPUでは再計測が必要である。SSD耐久性は2400 TBWと512生成トークンを仮定した推定で、実際の長期故障試験ではない。さらに関連研究がSSD重みオフロードのエネルギーをHBM比最大12倍と報告している一方、本論文はトークン当たりエネルギーを直接評価していない。","differences":"MoE-InfinityやProMoEは過去のルーティングから次エキスパートを予測して先読みするが、SSD-LLaMAは予測が外れる問題を主解法にせず、確定した実需要のSSD配送そのものを高速化し、その後の再利用を三階層キャッシュで拾う。FlashMoEはSSD/DRAM間の機械学習型置換を中心とするのに対し、SSD-LLaMAはSSDレイアウト、直接並列I/O、RAM/VRAM保持、GPU復号、CPU-GPU実行配置まで一つの経路として扱う。KTransformersはCPU-GPU異種計算とエキスパート遅延実行が中心で、SSD-LLaMAは重み所在と計算場所を切り離しつつ、対象RTX 5090では実測結果に従い全エキスパートGPU実行を選ぶ。SMoEのようなエキスパート代替を使わないため品質近似も導入しない。","implementation_status":"著者はllama.cppを基盤とする実システムを実装し、論文ではエキスパートパック、io_uring直接I/O、固定ピン留めRAM、CUDA非同期転送、CUDA rANS復号、RAM/VRAMキャッシュ、CPU-GPU分担を実機評価している。本文は再現用アーティファクトが正確なソフトウェア版とメモリ使用量を報告すると記すが、arXiv本文の書誌欄ではSSD-LLaMA専用の公開コードURLを明示していないため、公式コード公開済みとは断定しない。","research_positioning":"本論文は、個人PC上の巨大MoE推論でSSDを『容量不足時だけ読む最後の退避先』から『RAM・VRAMと協調して毎トークン利用する実行時メモリ層』へ変える研究に位置付けられる。特にエキスパートの疎な実需要とプロンプト内局所性を利用し、全モデルをDRAMへ載せる従来のCPU-GPU協調方式より少ないRAMで兆パラメータ級へ拡張する。リポジトリ内ではMoE-Infinity、FlashMoE、LLM in a FlashなどSSD/階層メモリ系と、KTransformersなどCPU-GPU異種実行系の交点にあり、SSDレイアウトからGPU実行までを一体化した点が特徴である。KVキャッシュ階層化や要求スケジューリングとは直交するため、将来はPagedAttention、反復スケジューリング、エキスパート先読み等との組合せ余地がある。"},"reservation":{"claim_id":"claim-42b6429a1b73e190dbc9976c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-2a61ba1261894f97dcd2cf26",
+  "job_id": "job-research-97b8208885471bff",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2a61ba1261894f97dcd2cf26",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
