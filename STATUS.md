@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 18:13:12 JST**
+> 自動生成: **2026-09-17 18:13:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **4** | **2** | **2** | **2** | **0** | — |
+| Research | **20** | **5** | **2** | **3** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **5** | **4** | **4** | **0** | **0** | **0** | **15** |
-| 合計 | **25** | **8** | **6** | **2** | **2** | **0** | **15** |
+| 合計 | **25** | **9** | **6** | **3** | **2** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,7 +131,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-17 18:00 JST** / worker `scheduled-chat-discovery-specialist-20260917T1800JST`
-- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
+- immutable submission: **5件** / 検証済み成功: **2件** / 未完了・未検証: **3件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4b1f52337434d9ea1c49a1f1.json` (job `job-research-e79ef27915573b54`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-4fd8bb83ad560a14ed7ab9fd.json` (job `job-research-6be1741cdc42b913`)
 - **成功** `arXiv:2504.08784` — SLOs-Serve: Optimized Serving of Multi-SLO LLMs
   - job: `.survey/work-queue/jobs/job-research-1abdfafeb85e4df9.json`
@@ -231,8 +232,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **439** |
-| └ Research | **312** |
+| 成功result未照合のimmutable submission | **440** |
+| └ Research | **313** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 
