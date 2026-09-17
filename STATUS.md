@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 05:35:20 JST**
+> 自動生成: **2026-09-18 05:35:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **62** |
 | 未claim Research job | **61** |
 | 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-18 05:35:17 JST（3秒前）** |
+| 最終検証済みResearch収録 | **09-18 05:35:17 JST（18秒前）** |
 | 整合性異常 | **2** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **9** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **29** | **9** | **9** | **0** | **1** | **0** | **18** |
+| 合計 | **28** | **9** | **9** | **0** | **1** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -93,11 +93,6 @@
   - result: `.survey/work-queue/results/research/attempt-ad568a9def7133e0a5107c75-repair.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ad568a9def7133e0a5107c75-repair.json`
   - paper: `papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md`
-- **09-17 23:35:32 JST** [research] `arXiv:2609.16648` — GrowMTP: Efficient Multi-Token Prediction via Progressive Growth
-  - job: `.survey/work-queue/jobs/job-research-f37149dfc085d0ea.json`
-  - result: `.survey/work-queue/results/research/attempt-bd486dddc37223eae30319f6-repair.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bd486dddc37223eae30319f6-repair.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md`
 
 ### Audit
 
