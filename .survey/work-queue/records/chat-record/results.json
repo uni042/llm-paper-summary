@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-542ed69d76769ea2b6e90057",
-  "job_id": "job-research-f3b9350c8e883e12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-542ed69d76769ea2b6e90057",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-542ed69d76769ea2b6e90057","job_id":"job-research-f3b9350c8e883e12","data":{"key_results":[{"metric":"KVキャッシュ無損失圧縮","value":"WikiTextで44.8%、BookSumで46.9%の総フットプリント削減","context":"LLaMA 3.1 8B、32層、BF16 KV、4KBブロック。ZSTDの総圧縮比は通常配置の1.21/1.33から提案配置の1.81/1.88へ向上し、圧縮比改善は50.3%/41.7%。"},{"metric":"重み無損失圧縮","value":"LLaMA 3.1 8B BF16で25.2%削減","context":"ZSTD圧縮比1.34。LLaMA 3.1 70Bは25.6%、Mixtral 8x7Bは24.4%、LLaMA-MoE-3.5Bは24.9%。FP8/INT4では既に冗長性が減るため追加の無損失利得は小さい。"},{"metric":"動的量子化との総容量削減","value":"LLaMA 3.1 8B FP8で54.1%、INT4で75.2%の総削減","context":"BF16からの損失あり量子化による削減へ、ビットプレーン配置上の無損失圧縮を追加した値。無損失部分だけではFP8 8.3%、INT4 0.9%。"},{"metric":"DRAMアクセスエネルギー","value":"最大29.9%削減","context":"DRAMSim3。BF16ではLLaMA 3.1 8B 27.8%、70B 25.9%、Mixtral 8x7B 29.9%、LLaMA-MoE-3.5B 27.2%。MixtralではFP8 19.6%、INT4 17.9%で、低精度ほど追加削減幅は小さくなる。"},{"metric":"モデル読出し遅延","value":"最大30.0%削減","context":"DRAMSim3上の平均モデルロード遅延。Mixtral 8x7B BF16は705.90msから495.06ms、LLaMA 3.1 70B BF16は910.58msから674.73msへ低下。エンドツーエンドの生成遅延ではない。"},{"metric":"RTLスループットと面積","value":"32レーン合計2TB/s、最大面積5.694平方ミリメートル","context":"7nm、2GHz。各レーン512Gbps。ZSTD 65,536ビットブロックが5.694平方ミリメートル、LZ4同条件は4.834平方ミリメートル。"}],"quality_results":"無損失圧縮経路は完全復元するため品質劣化を導入しない。動的KV量子化の例ではLLaMA 3.1 8B＋BookSumで完全KVのパープレキシティ10.49に対し、上位5ページBF16・次5ページFP8が11.60、上位5ページBF16・次3ページFP8・次2ページFP4が11.87、Questの上位5ページBF16は12.49である。これは動的量子化自体の品質・容量交換であり、メモリ制御器の無損失圧縮による誤差ではない。","interpretation":"効果の中心は、浮動小数点の意味に沿って物理配置を変えると汎用圧縮器が指数部の冗長性を利用できる点にある。KVではさらに同一チャネルをトークン横断で集めて指数差分を小さくするため、重みより大きな約45〜47%の削減が得られる。低精度重みは元から情報量が少なく圧縮余地が減るので、無損失圧縮の追加利得はBF16より縮小する。一方、ビットプレーンを個別に読める構造は低精度時ほど不要プレーンを省くため、圧縮率とは別経路でDRAM帯域とエネルギーを削減する。","caveats":"DRAM遅延・エネルギーはDRAMSim3によるシミュレーション、圧縮器はRTL合成評価であり、商用GPUへ統合した実機エンドツーエンド推論の測定ではない。KVの主要圧縮評価はLLaMA 3.1 8Bの32層とWikiText/BookSumに集中する。動的量子化評価ではモデルをMoDE化しルータを調整しているため、その品質特性を一般の未変更モデルへ直接外挿できない。ZSTDはLZ4より圧縮率を得やすい一方、RTL面積・電力も大きい。"},"reservation":{"claim_id":"claim-542ed69d76769ea2b6e90057","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
