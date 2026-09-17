@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T17:01:11+00:00",
-  "last_run_key": "2026-09-18T02:00:00+09:00",
-  "last_round": "specialist-ssd-native-moe-3",
+  "updated_at": "2026-09-17T17:59:29+00:00",
+  "last_run_key": "2026-09-18T03:00:00+09:00",
+  "last_round": "specialist-cpu-gpu-moe-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T00:58:47+09:00",
-      "round": "specialist-network-runtime-3",
-      "axis": "分散推論・collective通信・disaggregated電力/runtime",
-      "query_summary": "前roundのSSD/KV先読み軸から通信・runtimeへ移り、Attention/FFN分離とDVFS、インターネット規模分散推論、collective communication体系化を軽量評価。一次資料の抄録を確認し、投入直前に最新HEADとcanonical arXiv IDでrepo再検索した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は動的メモリ回収・admission control・SLO-aware scheduler、または今回候補のforward/backward citationへ軸を移す",
-      "source_submission": "work-queue/submissions/20260913T0105JST-discovery-specialist-network-runtime-3.json"
-    },
     {
       "run_key": "2026-09-13T00:58:47+09:00",
       "round": "specialist-slo-memory-4",
@@ -6833,6 +6818,32 @@
       ],
       "next_axis_hint": "次はSSD-LLaMAの関連系統からdirect I/O、expert delivery scheduling、CPU-GPU hybrid MoE executionを独立検索する",
       "source_submission": "work-queue/submissions/20260918T0205JST-discovery-specialist-ssd-native-moe-3.json"
+    },
+    {
+      "run_key": "2026-09-18T03:00:00+09:00",
+      "round": "specialist-cpu-gpu-moe-1",
+      "axis": "SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache",
+      "query_summary": "直前runのSSD-LLaMA next_axis_hintを引き継ぎ、CPU-GPU hybrid MoE execution、expert delivery、expert cache/prefetchを独立検索。HybriMoE、OD-MoE、DuoServe-MoE、APEX、kernel-managed expert cache、DraftExpert等を確認し、canonical identity indexで既収録を除外。HybriMoEのみ未収録かつ品質基準を満たす候補として投入前に最新default branchで再照合した。",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.875,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.03927",
+        "arXiv:2509.07379",
+        "arXiv:2608.11688",
+        "arXiv:2608.12103",
+        "arXiv:2607.24434",
+        "arXiv:2603.19289",
+        "arXiv:2401.14361"
+      ],
+      "next_axis_hint": "次はHybriMoEのforward/backward citationとkTransformers周辺実装研究、またはdirect I/O・GPU-initiated storageの独立軸へ移る",
+      "source_submission": "work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json"
     }
   ],
   "axes": {
@@ -11390,6 +11401,19 @@
       "duplicate_ratio": 0.5,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次はSSD-LLaMAの関連系統からdirect I/O、expert delivery scheduling、CPU-GPU hybrid MoE executionを独立検索する"
+    },
+    "SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache": {
+      "last_run_key": "2026-09-18T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.875,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はHybriMoEのforward/backward citationとkTransformers周辺実装研究、またはdirect I/O・GPU-initiated storageの独立軸へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
