@@ -7,7 +7,15 @@ DOCS = ROOT / "docs" / "survey-workflow"
 
 
 class RunLivenessPolicyTests(unittest.TestCase):
-    def test_canonical_policy_covers_each_async_wait_with_30_second_repeat(self):
+    @staticmethod
+    def _section(text: str, heading: str) -> str:
+        start = text.index(heading)
+        end = text.find("\n## ", start + len(heading))
+        if end == -1:
+            end = len(text)
+        return text[start:end]
+
+    def test_each_required_async_wait_uses_10_second_real_time_polling_until_terminal(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
         sections = [
             "## 2. Claim result待機",
@@ -18,24 +26,24 @@ class RunLivenessPolicyTests(unittest.TestCase):
         ]
         for heading in sections:
             with self.subTest(heading=heading):
-                start = text.index(heading)
-                end = text.find("\n## ", start + len(heading))
-                if end == -1:
-                    end = len(text)
-                body = text[start:end]
-                self.assertIn("30秒待機", body)
+                body = self._section(text, heading)
+                self.assertIn("10秒", body)
+                self.assertIn("実時間", body)
                 self.assertIn("同じ", body)
+                self.assertIn("terminal", body)
                 self.assertIn("繰り返", body)
 
-    def test_claim_wait_requires_actual_elapsed_runtime_delay(self):
+    def test_runtime_wait_cannot_be_replaced_by_immediate_rechecks(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
-        start = text.index("## 2. Claim result待機")
-        end = text.find("\n## ", start + 1)
-        body = text[start:end]
-        self.assertIn("実時間", body)
+        body = self._section(text, "## 7. 10秒wait loopの共通形")
         self.assertIn("runtime wait", body)
         self.assertIn("即時再取得", body)
-        self.assertIn("代替してはならない", body)
+        self.assertIn("代替", body)
+        self.assertIn("10秒", body)
+
+    def test_old_30_second_contract_is_absent(self):
+        text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
+        self.assertNotIn("30秒", text)
 
     def test_final_response_requires_deterministic_permit(self):
         text = (DOCS / "run-liveness-policy.md").read_text(encoding="utf-8")
@@ -55,7 +63,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         ):
             with self.subTest(name=name):
                 self.assertIn(name, text)
-        self.assertIn("30秒待機を新しい同期障壁にしない", text)
+        self.assertIn("新しい同期障壁にしない", text)
 
 
 if __name__ == "__main__":

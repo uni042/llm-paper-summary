@@ -43,7 +43,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertFalse(result["finalization_permit"]["issued"])
         self.assertIn("active_assignment_requires_work", result["blocking_reasons"])
 
-    def test_each_async_pending_state_requires_30_second_wait_loop(self):
+    def test_each_async_pending_state_requires_10_second_wait_loop(self):
         cases = (
             ("claim_result_pending", "claim_result"),
             ("submission_result_pending", "submission_result"),
@@ -53,10 +53,11 @@ class RunFinalizationGateTests(unittest.TestCase):
             with self.subTest(field=field):
                 result = mod.decide(make_args(**{field: True}))
                 self.assertEqual(result["decision"], "MUST_CONTINUE")
-                self.assertEqual(result["wait_seconds"], 30)
-                self.assertEqual(result["next_action"], "WAIT_30_SECONDS_AND_RECHECK")
+                self.assertEqual(result["wait_seconds"], 10)
+                self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
                 self.assertIn(target, result["wait_targets"])
                 self.assertFalse(result["finalization_permit"]["issued"])
+                self.assertIn("terminal", result["rule"].lower())
 
     def test_stop_run_without_finalization_allowed_still_cannot_finalize(self):
         result = mod.decide(make_args(
