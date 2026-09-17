@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 04:06:32 JST**
+> 自動生成: **2026-09-18 04:07:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **2** | **1** | **1** | **0** | **0** | **3** |
-| 合計 | **20** | **3** | **1** | **2** | **1** | **0** | **3** |
+| Discovery | **14** | **3** | **1** | **2** | **0** | **0** | **8** |
+| 合計 | **20** | **4** | **1** | **3** | **1** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -143,8 +143,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 04:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **3件**
-- 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch / diffusion LLM serving・elastic decoding・KV reuse・parallel decoding
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **8件**
+- 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction / 2026年9月新着・diffusion LLM・long-context KV offload/prefetch / diffusion LLM serving・elastic decoding・KV reuse・parallel decoding
+- round `specialist-dllm-cache-lineage-3` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
+  - 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-dllm-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-kv-1.json`
   - 探索軸: 2026年9月新着・diffusion LLM・long-context KV offload/prefetch
@@ -209,10 +213,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **457** |
+| 成功result未照合のimmutable submission | **458** |
 | └ Research | **327** |
 | └ Audit | **2** |
-| └ Discovery | **126** |
+| └ Discovery | **127** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
