@@ -2,62 +2,66 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5102e3960d728cbebfe4919a",
-  "job_id": "job-research-0b1a3df137cd07ea",
+  "attempt_id": "attempt-43acd19c7764b093bfb4428a",
+  "job_id": "job-research-5862dce444505150",
   "data": {
-    "canonical_id": "arXiv:2604.08426",
-    "arxiv_id": "2604.08426",
-    "doi": "10.48550/arXiv.2604.08426",
+    "canonical_id": "arXiv:2406.08334",
+    "arxiv_id": "2406.08334",
+    "doi": "10.48550/arXiv.2406.08334",
     "arxiv_categories": {
-      "primary": "cs.LG",
+      "primary": "cs.DC",
       "cross_list": [
         "cs.AI",
-        "cs.CL"
+        "cs.LG",
+        "cs.PF"
       ]
     },
-    "title": "KV Cache Offloading for Context-Intensive Tasks",
-    "summary": "長文推論のKVキャッシュ退避は、必要なKVだけをCPUメモリからGPUへ戻すことで容量と転送量を抑えるが、従来評価は少数の情報だけを探す課題に偏っていた。本論文は、多数の文脈情報を同時に回収する文脈集約型課題で既存方式を系統評価し、低ランク鍵圧縮とグループ代表値による選択が精度低下の主要因であることを分解実験で示す。さらに、鍵・値を4ビットHIGGSで退避し、GPU上の2ビットHIGGS鍵近似からトークン単位で読み戻し対象を選ぶ簡素なYAKVを提案し、同程度のPCIe転送予算で既存方式より高い精度と大きなバッチによる高スループットを両立する。",
-    "list_summary": "文脈集約型課題でKV退避の選択誤差を分析し、低ビット量子化によるYAKVで精度とスループットを改善する。",
+    "title": "ProTrain: Efficient LLM Training via Memory-Aware Techniques",
+    "summary": "ProTrainは、大規模言語モデル学習でモデル状態、活性値、CPU退避、勾配チェックポイントがGPUメモリとCPU-GPU帯域を奪い合い、手動調整ではモデル・ハードウェアごとに最適設定が変わる問題を扱う。モデル状態を永続・非永続チャンクへ整理する階層チャンク管理と、各Transformerブロックへ退避・再計算・無最適化を割り当てる交互ブロック管理を導入し、単一GPUの実行追跡から演算時間、転送帯域、一時メモリを測る。これらを実行時間とピークメモリの費用モデルへ変換し、GPU容量制約下で反復時間を最小化する設定を自動探索する。学習アルゴリズム自体は変更せず、RTX 3090とA100で既存基盤より高いモデル容量と1.43〜2.71倍の平均スループット改善を報告する。",
+    "list_summary": "モデル状態と活性値の階層管理を費用モデルで自動調整し、限られたGPUメモリで学習容量とスループットを高める。",
     "authors": [
-      "Andrey Bocharnikov",
-      "Ivan Ermakov",
-      "Denis Kuznedelev",
-      "Vyacheslav Zhdanovskiy",
-      "Yegor Yershov"
+      "Hanmei Yang",
+      "Jin Zhou",
+      "Yao Fu",
+      "Xiaoqun Wang",
+      "Ramine Roane",
+      "Hui Guan",
+      "Tongping Liu"
     ],
-    "authors_affiliations": "HSE / Yandex / NSU",
-    "published": "2026-04-09",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v5 (2026-09-01)",
-    "lineage": "KVキャッシュ退避／長文推論／KV選択／KV量子化",
+    "authors_affiliations": "University of Massachusetts Amherst / Advanced Micro Devices, Inc.",
+    "published": "2024-06-12",
+    "publication": "Proceedings of the 9th MLSys Conference, 2026 / arXiv",
+    "publication_type": "国際会議採択論文・プレプリント",
+    "publication_status": "Accepted to MLSys 2026; arXiv v2 (2026-04-20)",
+    "lineage": "LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索",
     "topics": [
-      "KVキャッシュ退避",
-      "長文推論",
-      "KV量子化",
-      "疎な注意機構",
-      "CPU-GPUメモリ階層"
+      "LLM学習",
+      "GPUメモリ管理",
+      "CPU退避",
+      "ZeRO",
+      "勾配チェックポイント",
+      "自動構成探索"
     ],
-    "importance": "KV退避を単純な検索課題だけで評価すると見逃す精度崩壊を、文脈集約度という軸で明示し、方式そのものではなく選択近似が失敗原因であることを示した点が重要である。",
-    "hardware_evaluation": "精度・分解評価は単一A100 80GB、512GiB RAM、16 vCPU程度で再現可能。実行性能評価は単一H200、PCIe Gen5 x16、同程度のCPU/RAMを使用する。全開発・再実行を含む計算量は約8500 A100時間、24 B200時間未満と報告される。",
-    "quality_effect": "YAKVは近似選択と4ビット量子化を用いるため数学的な無損失方式ではないが、Qwen3では同じ転送予算の既存KV退避方式より一貫して完全注意に近い精度を維持する。一方、Llama 3のText2JSONやLongProcではYAKVを含む全方式に大きな精度差が残る。",
+    "importance": "CPUメモリを単なる退避先ではなく、モデル状態・活性値・帯域競合を共同最適化する資源として扱い、ハードウェアごとに異なる最適戦略を自動探索する点が重要である。",
+    "hardware_evaluation": "4×RTX 3090 24GB、384GB CPU DRAM、PCIe 3.0 15.8GB/s、NVLinkなしの環境と、4×A100 80GB、1TB CPU DRAM、PCIe 4.0 31.5GB/s、NVLink 3.0 300GB/sの環境を主評価に使用。さらに4ノード16×A100、100Gb InfiniBandで175B GPTを評価する。",
+    "quality_effect": "学習アルゴリズム、損失関数、数値精度の意味を変更せず、配置・退避・再計算・実行順だけを調整するため、方式自体は学習精度を意図的に変えない。",
     "references": [],
     "references_checked_at": "2026-09-17",
-    "references_source": "primary manuscript reference section; normalized reference identities were not transcribed into this record because the HTML bibliography does not expose stable identifiers uniformly",
-    "references_total": 113,
-    "source": "https://arxiv.org/abs/2604.08426",
+    "references_source": "primary manuscript reference section; normalized identifiers not transcribed uniformly from HTML bibliography",
+    "references_total": 46,
+    "source": "https://arxiv.org/abs/2406.08334",
     "sources": [
-      "https://arxiv.org/abs/2604.08426",
-      "https://arxiv.org/html/2604.08426v5"
+      "https://arxiv.org/abs/2406.08334",
+      "https://arxiv.org/html/2406.08334v2"
     ],
-    "code": "https://github.com/yandex-research/context-intensive-kv-offloading",
-    "implementation": "Mini-SGLang上の研究実装。CPU側に全KVキャッシュを置き、選択KV用の共有中間バッファをGPUに確保する。HIGGS量子化・選択スコア・CPU→GPU読み出しはCUDA、上位K選択はTritonで実装し、CPUメモリをGPUアドレス空間へ直接写像してPCIe読み出しを行う。現状はチャンク化プリフィルとページ化された全KV配置を未統合である。",
+    "code": null,
+    "implementation": "PyTorch上に約7,600行で実装。モデルとoptimizerを提供インターフェースで包み、通常の学習ループを維持する。実行フックで演算・テンソル利用順を追跡し、単一ストリーム割当と専用固定メモリアロケータを含む。",
     "last_checked": "2026-09-17",
     "last_audited": null,
     "audit_version": 0
   },
   "reservation": {
-    "claim_id": "claim-5102e3960d728cbebfe4919a",
+    "claim_id": "claim-43acd19c7764b093bfb4428a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
