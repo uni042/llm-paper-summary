@@ -1,13 +1,3 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-9728a65bf10d91c2f0a02ad3",
-  "job_id": "job-research-c61a311635c958d5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9728a65bf10d91c2f0a02ad3",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9728a65bf10d91c2f0a02ad3","job_id":"job-research-c61a311635c958d5","data":{"limitations":"現設計は孤立した単一NPU故障を対象とし、ネットワーク分断、複数ノード同時故障、大規模障害は扱わない。故障検知は明瞭なデバイス故障を中心にしており、論文が結論で挙げる低速化や電力問題のような性能劣化型障害は未対応である。評価はHuawei Ascend/XCCLとDeepSeek V3に集中し、NVIDIA/NCCLや別ランタイムへの一般化は未実証。高速な欠損専門家方式はEP32以上の単一故障相当でのみ品質影響が小さく、EPが小さい場合や最後の専門家複製を失う場合は高価な役割切替が必要になる。事前グラフキャッシュは想定故障構成を平常時に準備する必要がある。","differences":"大規模クラスタ信頼性研究が故障率分析や予防を主眼とし、訓練復旧がチェックポイントから学習状態を戻すのに対し、ReviveMoEは顧客向け推論で静的重みを極力維持したままサービスを継続する。Expert-as-a-Service系の分離MoE耐障害方式は冗長専門家に依存しP2P通信を使うのに対し、ReviveMoEはNPUで高性能な集合通信を再構築し、冗長専門家、役割切替、欠損専門家の三択を提供し、MA同居構成も扱う。パイプライン並列復旧のKV複製方式が故障ハードウェアの早期復帰を仮定するのに対し、本方式は故障NPUが戻らなくても残存資源で構成を縮退させる。","implementation_status":"Huawei Cloud MaaSのxDeepServe/FlowServeとXCCLへ統合された実システム実装で、CloudMatrix384上の80 Ascend NPU実験まで行われている。Kubernetes NPU Device Plugin、Ray actor、HCCL/GLOO/XCCL、Dynamo/Ascend IRグラフキャッシュを連携する。論文からReviveMoE固有コードの公開リポジトリは確認できず、Huawei内部基盤への依存も大きいため、第三者が同一環境をそのまま再現できる公開実装状態ではない。","research_positioning":"MoE推論研究の中では性能最適化ではなく可用性を第一目的とし、既存のデータ並列・専門家複製・分離サービングが持つ冗長性を障害復旧へ転用する系統に位置付く。特に要求KV状態、スケジューラのブロック表、専門家重み、集合通信ランク、コンパイル済みグラフという異なる状態層を同じ生成段階境界で整合させる点がシステム上の中心である。今後は性能劣化型障害の検知、複数同時故障、故障確率に応じた専門家複製配置、グラフキャッシュの組合せ爆発を抑える動的コンパイル、異種GPU/NPUクラスタへの拡張が自然な課題となる。"},"reservation":{"claim_id":"claim-9728a65bf10d91c2f0a02ad3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
