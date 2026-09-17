@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-17 12:09:57 JST**
+> 自動生成: **2026-09-17 12:10:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **56** |
+| 収録候補論文 | **55** |
 | 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-17 12:08:28 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-17 12:10:06 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **56** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **56** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **5** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **6** | **1** | **0** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **2** | **2** | **0** | **0** | **0** | **6** |
-| 合計 | **8** | **3** | **2** | **1** | **1** | **0** | **6** |
+| 合計 | **9** | **3** | **2** | **1** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-17 12:10:06 JST** [research] `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-411dee2b8db54e04.json`
+  - result: `.survey/work-queue/results/research/attempt-b48fe8a4a8bca9a588bbc403.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b48fe8a4a8bca9a588bbc403.json`
+  - paper: `papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md`
 - **09-17 12:08:28 JST** [research] `arXiv:2507.06608` — Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving
   - job: `.survey/work-queue/jobs/job-research-120be1bd98c2839e.json`
   - result: `.survey/work-queue/results/research/attempt-79eabe22a1933fc80a491fc0.json` (`ok=true`)
@@ -125,10 +130,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.11674` — Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-17 12:09:01 JST** / heartbeat: **—** / lease expiry: **09-17 13:39:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-411dee2b8db54e04.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -148,7 +151,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **56** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -168,7 +171,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **646** |
+| inference/training/survey配下の論文Markdown実体 | **647** |
 
 ### immutable submissionの未照合
 
@@ -176,8 +179,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **412** |
-| └ Research | **285** |
+| 成功result未照合のimmutable submission | **411** |
+| └ Research | **284** |
 | └ Audit | **2** |
 | └ Discovery | **125** |
 

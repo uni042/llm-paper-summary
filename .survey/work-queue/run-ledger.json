@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-17T03:08:32.905324+00:00",
+  "updated_at": "2026-09-17T03:10:11.244126+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-17T03:08:32.905324+00:00",
+      "last_recorded_at": "2026-09-17T03:10:11.244126+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 182,
+        "research_completed": 183,
         "audit_completed": 0,
         "discovery_completed": 89,
         "blocked": 12,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35077201557:1",
-          "recorded_at": "2026-09-16T09:03:38.438497+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35077201557",
-            "run_attempt": "1",
-            "source_sha": "ec36fcf5f0d6869bb439d0a10b41987cf3843f5a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35077808584:1",
           "recorded_at": "2026-09-16T09:09:45.405312+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35177033990",
             "run_attempt": "1",
             "source_sha": "5d5d6aea844f53999176c73b9acb1e50c667d723"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35177131714:1",
+          "recorded_at": "2026-09-17T03:10:11.244126+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35177131714",
+            "run_attempt": "1",
+            "source_sha": "b2dd19b11869220d2b2484eb739b12032afa8192"
           },
           "signals": [
             "research_completed"
@@ -21863,6 +21863,14 @@
           "type": "research",
           "canonical_id": "arXiv:2507.06608",
           "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-411dee2b8db54e04",
+          "type": "research",
+          "canonical_id": "arXiv:2406.11674",
+          "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
           "from": "ready",
           "to": "completed"
         }
