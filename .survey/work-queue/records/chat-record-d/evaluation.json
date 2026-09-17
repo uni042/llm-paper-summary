@@ -1,13 +1,16 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-f73b2644bb575cea292a8186",
-  "job_id": "job-research-3dcfddcaf0f956d5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f73b2644bb575cea292a8186",
-    "worker_id": "scheduled-chat-discovery-specialist-20260917T1700JST-b",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f73b2644bb575cea292a8186","job_id":"job-research-3dcfddcaf0f956d5",
+  "data":{
+    "evaluation_summary":"4ノード・32基のA100 80GBクラスタでLLaMA2 7B、13B、70Bを評価する。短文脈はShareGPT4由来、長文脈はL-Evalと実サービス由来分布を使い、1〜200万トークンまで9種類のトレースを構成する。要求到着は複数到着率のポアソン分布。比較対象は同じ小規模インスタンス構成を使うvLLM-multiと、全32GPUを一つの大インスタンスへまとめるvLLM-singleである。文脈長別最大バッチスループット、エンドツーエンドのスループット・遅延、分散注意単体性能、KV移動費用を測定する。",
+    "scope":"短文脈1〜60K、長文脈1〜200Kから1〜2000Kまでのトレースを用い、文脈長分散とインスタンス数が資源偏在へ与える影響も比較する。最大文脈長評価では各モデルについて1K、vLLM-multi上限直後、Infinite-LLMの最大対応長を測る。",
+    "hardware":["4ノード×NVIDIA A100 80GB 8基、合計32基","ノード内NVLink 600GB/s","ノード間Ethernet 125MB/s"],
+    "models":["LLaMA2-7B","LLaMA2-13B","LLaMA2-70B"],
+    "datasets":["ShareGPT4","L-Eval","実オンラインサービス由来長文脈分布"],
+    "workload":"9種類の文脈長トレースをポアソン到着で投入する。短文脈トレースは1〜60K、長文脈トレースは最大200K、280K、600K、480K、1200K、2000Kまで広げる。",
+    "baselines":["vLLM-multi: Infinite-LLMと同じ数・並列構成の複数小インスタンス","vLLM-single: 全クラスタ資源を一つの大インスタンスへ集約","RingAttention","ヘッド方向テンソル並列注意"],
+    "metrics":["tokens/sスループット","要求遅延","最大対応文脈長","分散注意実行時間","KV移動によるスループット低下","性能モデル予測と実測の一致"],
+    "predictor_accuracy":"クラスタスループット性能モデルは実測と整合すると報告するが、本文HTMLで単一の誤差率数値は示されない。モデルは非注意層のバッチ依存性能と注意層の系列長依存性能を別々に測定して組み合わせる。",
+    "control_knobs":"非注意層のインスタンス並列構成、債務側バッチ閾値、債権側メモリ利用率閾値、DistAttentionブロック数、周期的再配置間隔、1デコード段階当たりKV移動量を調整する。"
+  },
+  "reservation":{"claim_id":"claim-f73b2644bb575cea292a8186","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}
 }
