@@ -1,34 +1,31 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-f50e208383daab47e4b14e74",
+  "claim_id": "claim-75c5f2ac1208d6c73a28184c",
   "job_id": "job-research-5bed14c683ee7a49",
-  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_id": "scheduled-chat-llm-survey-project",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-f50e208383daab47e4b14e74",
-  "request_id": "claim-20260917T000700Z-scheduled-chat-discovery-specialist-03",
-  "claimed_at": "2026-09-17T00:05:17+00:00",
-  "expires_at": "2026-09-17T00:05:57+00:00",
+  "attempt_id": "attempt-75c5f2ac1208d6c73a28184c",
+  "request_id": "claim-20260917T003059Z-scheduled-chat-llm-survey-project-01",
+  "claimed_at": "2026-09-17T00:31:36+00:00",
+  "expires_at": "2026-09-17T02:01:36+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-5bed14c683ee7a49"
   ],
-  "previous_claim_id": "claim-7ec1d1e19aea8ef2d1f6362f",
-  "record_bank": "a",
-  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "previous_claim_id": "claim-f50e208383daab47e4b14e74",
+  "record_bank": "c",
+  "record_bank_recovery": "repair-required-latest-immutable-descriptor",
   "record_bank_recovery_attempt_ids": [
-    "attempt-7ec1d1e19aea8ef2d1f6362f"
+    "attempt-f50e208383daab47e4b14e74"
   ],
-  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-7ec1d1e19aea8ef2d1f6362f.json",
-  "record_bank_root": ".survey/work-queue/records/chat-record",
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-f50e208383daab47e4b14e74.json",
+  "record_bank_root": ".survey/work-queue/records/chat-record-c",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record/results.json",
-    "positioning": ".survey/work-queue/records/chat-record/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-17T00:05:57+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-c/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+  }
 }
