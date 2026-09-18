@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [{"canonical_id":"arXiv:2606.20537","title":"Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving","source_url":"https://arxiv.org/abs/2606.20537","priority":68,"reason":"KV cacheだけでなくrecurrent/convolution/MTP stateとmetadataを含む完全なrestorable execution stateをgraph-bound capsuleとしてsnapshot/restore/fork/rollbackするruntime設計。small-batch/on-device agent再入場のstate-management問題を扱い、CUDA graph/static-buffer runtimeとcheckpoint機構を一体化するため隣接systemとして価値がある。"}],
+  "rejected_candidates": [],
+  "discovery_stats": {"run_key":"2026-09-19T01:00:00+09:00","round":"specialist-execution-state-5","axis":"execution-state checkpoint/restore・agent fork/rollback・small-batch serving runtime","query_summary":"persistent agent stateからcheckpoint/restore・migration・fork/rollbackへ展開。CacheFlow、BanaServe、Continuum、LUMEN、Pallasはidentity shardで既知。Execution-State Capsules(arXiv:2606.20537)はarxiv-2606 shardに不在で一次情報からsystem contributionを確認。","candidate_count":1,"duplicate_filtered_count":5,"duplicate_canonical_ids":["arXiv:2604.25080","arXiv:2510.13223","arXiv:2511.02230","arXiv:2606.17787","arXiv:2608.16477"],"next_axis_hint":"fault-tolerant serving・KV checkpoint placement・model reload overlap・request recoveryを走査する"}
+}
