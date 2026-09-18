@@ -35,7 +35,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     finalization_allowed = bool(args.continuation_finalization_allowed)
     active_assignment = bool(args.active_assignment)
     active_assignment_handoff_safe = bool(args.active_assignment_handoff_safe)
-    claim_state_checked = bool(getattr(args, "claim_state_checked", False))
+    claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     hard_stop = bool(args.hard_stop)
     handoff_safe = bool(args.handoff_safe)
 
