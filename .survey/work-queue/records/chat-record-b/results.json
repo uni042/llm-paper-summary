@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c077ca2784f3c91498be745d",
-  "job_id": "job-research-fbee62800783475d",
-  "data": {
-    "overview": "同じGPUクラスタ・同じSLOでも配備構成だけで達成可能な相対品質得点が0.30〜0.56まで変化し、最大87%の差となった。4 A100の実配備ではRouterWiseは50/60/70 RPSで平均TTFT目標をほぼ満たし、80 RPSでも500ms目標に対し600msだった。一方、同等品質へ調整したFrugalGPTは1500〜24200ms、RouteLLMは820〜7800msへ悪化し、高負荷ほど配備非対応ルータとの差が拡大した。",
-    "key_results": [
-      {
-        "metric": "同一SLO下の達成品質差",
-        "value": "相対得点0.30〜0.56、最大87%差",
-        "baseline": "異なる実行可能GPU構成",
-        "condition": "4/8 A100、同一クラスタ・同一SLO",
-        "interpretation": "GPUを遊ばせた差ではなく、利用率100%条件を通した構成間でも資源のモデル別配分だけでルーティング可能な品質前線が大きく変わる。"
-      },
-      {
-        "metric": "平均TTFT @50 RPS",
-        "value": "860ms",
-        "baseline": "FrugalGPT 1500ms、RouteLLM 820ms",
-        "condition": "4 A100、目標800ms、品質0.59付近",
-        "interpretation": "低負荷ではRouteLLMも近いが、RouterWiseは同等品質で目標近傍を維持する。"
-      },
-      {
-        "metric": "平均TTFT @70 RPS",
-        "value": "565ms",
-        "baseline": "FrugalGPT 12300ms、RouteLLM 2500ms",
-        "condition": "4 A100、目標500ms、品質約0.56",
-        "interpretation": "負荷上昇時、固定・孤立配備では人気モデルが飽和するが、共同最適化は資源を振り分け比率に合わせるため遅延爆発を抑える。"
-      },
-      {
-        "metric": "平均TTFT @80 RPS",
-        "value": "600ms",
-        "baseline": "FrugalGPT 24200ms、RouteLLM 7800ms",
-        "condition": "4 A100、目標500ms、品質約0.51",
-        "interpretation": "RouterWiseも100ms超過するが、比較ルータは秒〜十秒級へ崩れ、配備適応の重要性が高負荷で顕著になる。"
-      },
-      {
-        "metric": "構成探索規模",
-        "value": "3モデル最大約700、4モデル・最大8GPUで約17000残存構成",
-        "baseline": "素朴な直積全列挙",
-        "condition": "計算予算・利用率・メモリ配置フィルタ後",
-        "interpretation": "組合せ爆発は残るが、実験規模では事前フィルタにより探索可能な範囲へ削減できる。"
-      }
-    ],
-    "negative_results": "80 RPSでは500ms目標を100ms超過し、オフライン遅延モデルが実配備を完全には予測できないことが表れる。論文自身も共置き干渉、バースト、基盤雑音により実測TTFTがプロファイルからずれると認める。また固定プロンプト分布・固定到着率を仮定し、分布変化や負荷変動へのオンライン再最適化は未実装である。",
-    "interpretation": "FrugalGPTは小モデルから段階的に試すため小モデルのキューを先に飽和させ、RouteLLMは直接割当でも孤立配備のままなので人気モデルがボトルネックになる。RouterWiseは品質ルータ自体だけで勝つのではなく、そのルータが生む負荷へGPU計算率とテンソル並列配置を合わせることでSLOを維持する。",
-    "quality_impact": "比較では各ベースラインの品質・コスト係数を調整しRouterWiseとの平均品質差を0.01以内に揃えているため、TTFT改善を低品質モデルへの単純偏重で説明しにくい。"
-  },
+  "attempt_id": "attempt-89f83eec45aa0f2c99d9a95d",
+  "job_id": "job-research-659c7469c0065c08",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c077ca2784f3c91498be745d",
+    "claim_id": "claim-89f83eec45aa0f2c99d9a95d",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

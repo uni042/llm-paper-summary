@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c077ca2784f3c91498be745d",
-  "job_id": "job-research-fbee62800783475d",
-  "data": {
-    "limitations": "固定かつ既知のプロンプト分布でルータと双対価格を計算し、固定到着率λに対して構成を選ぶため、実サービスの分布変化・日内負荷変動へ自動追随しない。構成別遅延曲線は各モデルを単独プロファイルして作り、MPS計算率とメモリ分割が共置き干渉を十分抑えると仮定するが、実際には干渉・バースト・ネットワーク雑音が残る。平均遅延SLOのみを扱い、P95/P99尾部遅延は将来課題。モデル数と構成選択肢が増えると外側探索は直積的に増大する。",
-    "differences": "RouteLLMやFrugalGPTなど従来ルータはプロンプト内容からモデルを選ぶが、モデルの実行配置を固定またはAPI的なブラックボックスとして扱う。RouterWiseは品質予測器そのものを新しくするより、予測得点にモデル別双対価格を加えて目標負荷比率を実現し、その負荷比率とGPU配置を共同探索する。MuxServeなどの複数モデルGPU共有は資源多重化を扱うが、RouterWiseはその資源配置をプロンプト単位の品質ルーティング目的関数へ直接結び付ける。",
-    "implementation_status": "4/8台A100上でvLLMとNVIDIA MPSを用いた実配備評価がある。論文は生産運用完成品ではなく、共同最適化の原理実証を主目的と明記する。公開コードURLは本文・arXivメタデータから確認できなかった。",
-    "research_positioning": "LLMサービングのスケジューリング系統で、ルーティング層と資源管理層の境界を跨ぐ研究として位置付けられる。モデル選択が作る負荷をGPU割当へ戻し、GPU割当が作る遅延をモデル選択へ戻す閉ループを明示した点が重要である。特に複数モデルを同一GPU群へ共置きする環境では、ルータ評価を固定レイテンシで行うだけでは実配備性能を代表しないことを定量化する。"
-  },
+  "attempt_id": "attempt-89f83eec45aa0f2c99d9a95d",
+  "job_id": "job-research-659c7469c0065c08",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c077ca2784f3c91498be745d",
+    "claim_id": "claim-89f83eec45aa0f2c99d9a95d",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

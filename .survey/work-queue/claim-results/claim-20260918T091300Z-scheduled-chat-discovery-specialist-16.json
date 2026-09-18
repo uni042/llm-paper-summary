@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T091300Z-scheduled-chat-discovery-specialist-16",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-659c7469c0065c08",
+      "claim_id": "claim-89f83eec45aa0f2c99d9a95d",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-89f83eec45aa0f2c99d9a95d",
+      "claimed_at": "2026-09-18T09:12:35+00:00",
+      "expires_at": "2026-09-18T10:42:35+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-659c7469c0065c08"
+      ],
+      "job": {
+        "job_id": "job-research-659c7469c0065c08",
+        "type": "research",
+        "parent_job_id": "job-94ba33215899ac74",
+        "priority": 82,
+        "canonical_id": "arXiv:2609.14850",
+        "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2609.14850",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models.md",
+        "selection_reason": "model自身がsemantic dependenceを注釈しruntimeがそれを使う設計を、PASTAのparallel autoregressive decoding、TIPのintermediate reasoning KV eviction、Planned Diffusionのdenoising orderへ統一する。単一技法よりthesis的だが、model-runtime co-designで推論実行戦略を動的化する観点が既存serving/scheduling系と差別化される。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T18:02:50+00:00",
+        "blocker": "このrunではFathomとPATの一次資料全文取得後、RouterWiseのarXiv公式HTML取得時に取得基盤からDisabledErrorが実際に返り、外部一次資料取得経路が利用不能になった状態で本jobが割り当てられた。前回attemptも同じ取得上限により本文未取得でblockedであり、今回もarXiv:2609.14850の公式PDF/HTML全文を安全に取得できていない。abstractや第三者資料からPASTA、TIP、Planned Diffusionの科学的詳細・評価結果を推測生成しないため、一時的blockedとして耐久保存する。永久除外にはせず、外部取得枠が復旧したrunでarXiv公式HTML/PDFおよび利用可能なら著者公式全文経路を確認して再試行する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-343da371de8ebc332895bc1b.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-18T05:42:12+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T00:52:39+00:00",
+            "reason": "このrunでは直前の一次資料取得中にWeb取得基盤から明示的な外部アクセス上限エラー（web.run too many times; do not call this tool again）を受け、以後の外部一次資料取得が禁止された状態で本jobが割り当てられた。arXiv公式PDF/HTMLを全文取得していないため、abstractや二次資料から5-slotを推測生成せず一時的blockedとして耐久保存する。次回の取得枠が利用可能なrunで https://arxiv.org/abs/2609.14850 と公式PDF/HTMLを全文確認して再試行する。"
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-18T05:42:12+00:00",
+            "reason": "このrunではFathomとPATの一次資料全文取得後、RouterWiseのarXiv公式HTML取得時に取得基盤からDisabledErrorが実際に返り、外部一次資料取得経路が利用不能になった状態で本jobが割り当てられた。前回attemptも同じ取得上限により本文未取得でblockedであり、今回もarXiv:2609.14850の公式PDF/HTML全文を安全に取得できていない。abstractや第三者資料からPASTA、TIP、Planned Diffusionの科学的詳細・評価結果を推測生成しないため、一時的blockedとして耐久保存する。永久除外にはせず、外部取得枠が復旧したrunでarXiv公式HTML/PDFおよび利用可能なら著者公式全文経路を確認して再試行する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T05:42:12+00:00",
+        "retry_queued_at": "2026-09-18T07:03:06+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T09:12:35+00:00",
+  "checkpoint_released": 0
+}
