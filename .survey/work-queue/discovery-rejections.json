@@ -7,9 +7,9 @@
   ],
   "updated_at": "2026-09-18T10:00:00+09:00",
   "submission_count": 9,
-  "research_terminal_rejection_count": 2,
-  "rejection_observation_count": 34,
-  "rejection_record_count": 34,
+  "research_terminal_rejection_count": 3,
+  "rejection_observation_count": 35,
+  "rejection_record_count": 35,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -253,6 +253,28 @@
       "run_key": null,
       "source_submission": ".survey/work-queue/submissions/research/attempt-1e4fa52e86e4bdb94b38a79b.json",
       "origin": "research_terminal_rejection"
+    },
+    "id:arXiv:2608.22613": {
+      "primary_identity": "id:arXiv:2608.22613",
+      "identity_tokens": [
+        "id:arXiv:2608.22613",
+        "title:nova technologyarchitecture codesign of nearmemory processing for attentionssmmoe hybrid llm inference",
+        "url:https://arxiv.org/abs/2608.22613"
+      ],
+      "canonical_id": "arXiv:2608.22613",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.22613",
+      "rejection_reason": "blocked retryとして一次資料経路を再確認した。検索サービス経由ではarXiv公式abstract（arXiv:2608.22613）の書誌・抄録を取得できたが、この実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できなかった。著者・研究プロジェクトの同一論文公式全文コピーも検索で確認できず、得られたalphaXiv・AIDB・Moonlight等は二次資料のため科学的内容の補完には使用していない。過去2 attemptとは別runで再試行したが一次資料全文未取得のため、今回も一時的blockedとして耐久保存し、5-slotは生成しない。blocked_permanentへの遷移可否は正本のretry policyとActions側判定に委ねる。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T04:00:36+00:00",
+      "last_rejected_at": "2026-09-18T04:00:36+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-b0e2c7ec2fd69933c27ee41a.json",
+      "origin": "research_blocked_permanent"
     },
     "id:arXiv:2609.10266": {
       "primary_identity": "id:arXiv:2609.10266",
