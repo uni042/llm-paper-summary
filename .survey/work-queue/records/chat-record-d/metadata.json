@@ -1,2 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bc68d740adca0b4c200156a1","job_id":"job-research-9d3c210288b42eb4","data":{"canonical_id":"arXiv:2505.16056","arxiv_id":"2505.16056","doi":"10.48550/arXiv.2505.16056","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models","summary":"MoEのエキスパートオフロードがモデルごとに効きやすさを大きく異にする理由を、連続トークンで同じエキスパートが使われる局所ルーティング一貫性として定式化する研究。セグメントルーティング最良性能（SRP）とセグメントキャッシュ最良ヒット率（SCH）を提案し、20種のMoE LLMと制御した小型モデルで、局所負荷分散とのトレードオフ、共有エキスパートとエキスパート組合せ空間、ドメイン専門化の影響を検証する。多くのモデルでキャッシュ比率約2がキャッシュ効果と容量効率の均衡点になる。","list_summary":"20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。","authors":["Jingcong Liang","Siyuan Wang","Miren Tian","Yitong Li","Duyu Tang","Zhongyu Wei"],"authors_affiliations":"Fudan University; University of Southern California; Huawei Technologies Ltd.; Shanghai Innovation Institute","published":"2025-05-21","publication":"ICLR 2026 / arXiv","publication_type":"国際会議論文","publication_status":"ICLR 2026会議論文として公開、arXiv v4は2026-02-28","lineage":"MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性","topics":["MoE","エキスパートオフロード","エキスパートキャッシュ","ルーティング一貫性","負荷分散"],"importance":"オフロード方式そのものではなく、モデル側のルーティング特性からオフロード適性を比較可能にし、キャッシュ設計とMoEアーキテクチャ設計の双方に使える定量指標を与える。","implementation":"公式再現コード ljcleo/moe-lrc を公開。20実モデルのルーティング履歴解析と1.43B OLMoE類似小型モデル群の事前学習実験を実施。","hardware_evaluation":"主眼はルーティング履歴とキャッシュ模擬で、論文本文は特定GPU上の端末間オフロード遅延を主評価にしていない。小型モデル学習用計算資源はCFFF platform支援と記載。","quality_effect":"推論品質を変える新しいオフロード近似ではなく、既存モデルのルーティングを観測する分析。小型モデルではperplexityも併記し、局所一貫性向上と負荷分散・構成変更の副作用を確認する。","source":"https://arxiv.org/abs/2505.16056","sources":["https://arxiv.org/abs/2505.16056","https://arxiv.org/html/2505.16056","https://openreview.net/pdf/e461bf4f82b93bbabb6b78655ea94d679b00ec11.pdf"],"code":"https://github.com/ljcleo/moe-lrc","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文のReferences節まで確認。正規識別子抽出は今回の構造化記録では未登録。","references_total":44},"reservation":{"claim_id":"claim-bc68d740adca0b4c200156a1","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-96fb17309957a72dddfd6294",
+  "job_id": "job-research-44bb3b5d160bad25",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-96fb17309957a72dddfd6294",
+    "worker_id": "scheduled-chat-llm-survey-turn7",
+    "worker_kind": "scheduled_chat"
+  }
+}
