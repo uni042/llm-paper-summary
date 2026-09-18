@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84f02d757a3785e53894f6fb",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-84f02d757a3785e53894f6fb","job_id":"job-research-11c68d7adc12c492","data":{"overview":"Dynamic-dLLMはaccuracyをほぼ維持しつつ3モデルで大幅なthroughput改善を示す。LLaDA-8B-Instructではfeature cacheのみで平均2.63倍、parallel decoding併用で平均3.21倍、GSM8Kで最大4.48倍。LLaDA-1.5はGSM8K 4.46倍、Dream-v0-7B-Instructは3.91倍。dynamic thresholdは高い初期threshold条件でfixed thresholdよりinference stepsを約30%削減する。","key_results":[{"metric":"LLaDA-8B-Instruct平均speedup","value":"2.63x; APD併用3.21x","baseline":"unaccelerated LLaDA-8B-Instruct","condition":"5 benchmarks","interpretation":"dynamic cache allocation単体でも既存cache法を上回り、parallel decodingで追加改善。"},{"metric":"最大speedup","value":"4.48x (37.29 vs 8.32 TPS)","baseline":"LLaDA-8B-Instruct GSM8K","condition":"Dynamic-dLLM + parallel decoding","interpretation":"accuracy 78.01 vs baseline 78.21で大幅高速化。"},{"metric":"cross-model speedup","value":"LLaDA-1.5 GSM8K 4.46x; Dream-v0-7B-Instruct GSM8K 3.91x","baseline":"各未加速model","condition":"parallel decoding併用","interpretation":"特定dLLM一種に限定されない。"},{"metric":"dynamic threshold step削減","value":"約30%","baseline":"fixed threshold","condition":"initial threshold 0.9付近","interpretation":"confidence concentrationとtemporal instabilityの適応が不要stepを削減。"}],"negative_results":"B_layer/B_windowを小さくしすぎるとaccuracyが低下し、増やすほどthroughputが落ちる。特に小さいmandatory windowのaccuracy低下が大きい。APDもthreshold初期値とのtrade-offを持つ。著者自身がmultimodal理解と複雑reasoningを未探索とする。","interpretation":"dLLMの冗長性は一様ではないため、cache更新量とunmask基準を固定値からruntime signal駆動へ変えることで、trainingなしでも計算budgetを変化の大きいlayer/tokenへ集中できる。","quality_impact":"LLaDA-8B-Instructの5-task平均accuracyはbaseline 59.67、Dynamic-dLLM 59.51、APD併用59.33と近傍。速度改善は小さなaccuracy変動を伴うが、大幅な性能崩壊は観測されない。"},"reservation":{"claim_id":"claim-84f02d757a3785e53894f6fb","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
