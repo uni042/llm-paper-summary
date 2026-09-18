@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:59:43 JST**
+> 自動生成: **2026-09-19 04:00:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **3** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **30** | **5** | **4** | **1** | **0** | **0** | **5** |
+| Discovery | **14** | **3** | **1** | **2** | **0** | **0** | **15** |
+| 合計 | **28** | **7** | **4** | **3** | **0** | **0** | **15** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -137,14 +137,14 @@
   - result: `.survey/work-queue/results/20260919T0234JST-discovery-specialist-elastic-migration-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0234JST-discovery-specialist-elastic-migration-7.json`
   - 探索軸: request/KV migration・elastic memory・model/KV co-migration
-- **09-18 22:00:01 JST** job `job-17d06195f049b5ad` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T2202JST-discovery-specialist-swiftspec-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2202JST-discovery-specialist-swiftspec-2.json`
-  - 探索軸: 非同期speculative decoding・tensor parallel・KV/kernel co-design
-- **09-18 22:00:08 JST** job `job-38610c3f6ec1d1a2` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T2205JST-discovery-specialist-cxl-kv-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2205JST-discovery-specialist-cxl-kv-3.json`
-  - 探索軸: CXL・KV cache memory disaggregation・PNM/FPGA
+- **09-18 22:00:35 JST** job `job-347fd1674f143577` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2206JST-discovery-specialist-moe-edge-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2206JST-discovery-specialist-moe-edge-4.json`
+  - 探索軸: MoE expert offload・cacheless edge-distributed inference
+- **09-18 22:00:44 JST** job `job-e6e1156d52f4ec20` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2207JST-discovery-specialist-network-kv-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2207JST-discovery-specialist-network-kv-5.json`
+  - 探索軸: RDMA・KV transfer・disaggregated serving networking
 
 ### 直近タスク
 
@@ -178,12 +178,20 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 03:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **15件**
+- 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath / in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration / network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
 - round `specialist-nonarxiv-storage-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json`
   - 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath
   - 個別result照合: あり / `.survey/work-queue/results/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json` (`ok=true`)
+- round `specialist-near-memory-2` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260919T0418JST-discovery-specialist-near-memory-2.json`
+  - 探索軸: in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-network-serving-3` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260919T0427JST-discovery-specialist-network-serving-3.json`
+  - 探索軸: network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -238,10 +246,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **550** |
+| 成功result未照合のimmutable submission | **552** |
 | └ Research | **421** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
