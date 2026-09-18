@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-18T20:00:00+09:00",
-  "submission_count": 15,
+  "updated_at": "2026-09-19T06:00:00+09:00",
+  "submission_count": 17,
   "research_terminal_rejection_count": 4,
-  "rejection_observation_count": 44,
-  "rejection_record_count": 44,
+  "rejection_observation_count": 46,
+  "rejection_record_count": 46,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -254,6 +254,28 @@
       "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2511.17593": {
+      "primary_identity": "id:arXiv:2511.17593",
+      "identity_tokens": [
+        "id:arXiv:2511.17593",
+        "title:comparative analysis of large language model inference serving systems a performance study of vllm and huggingface tgi",
+        "url:https://arxiv.org/abs/2511.17593"
+      ],
+      "canonical_id": "arXiv:2511.17593",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Comparative Analysis of Large Language Model Inference Serving Systems: A Performance Study of vLLM and HuggingFace TGI",
+      "source_url": "https://arxiv.org/abs/2511.17593",
+      "rejection_reason": "vLLMとTGIの比較ベンチマークが主目的で、新規の推論システム機構・runtime設計・アルゴリズムを提案する論文ではないため、現行の新規systems候補としては優先度不足。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T06:00:00+09:00",
+      "last_rejected_at": "2026-09-19T06:00:00+09:00",
+      "axis": "heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture",
+      "run_key": "2026-09-19T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2604.06668": {
       "primary_identity": "id:arXiv:2604.06668",
       "identity_tokens": [
@@ -297,6 +319,28 @@
       "run_key": null,
       "source_submission": ".survey/work-queue/submissions/research/attempt-1e4fa52e86e4bdb94b38a79b.json",
       "origin": "research_terminal_rejection"
+    },
+    "id:arXiv:2605.01280": {
+      "primary_identity": "id:arXiv:2605.01280",
+      "identity_tokens": [
+        "id:arXiv:2605.01280",
+        "title:position llm serving needs mathematical optimization and algorithmic foundations not just heuristics",
+        "url:https://arxiv.org/abs/2605.01280"
+      ],
+      "canonical_id": "arXiv:2605.01280",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Position: LLM Serving Needs Mathematical Optimization and Algorithmic Foundations, Not Just Heuristics",
+      "source_url": "https://arxiv.org/abs/2605.01280",
+      "rejection_reason": "LLM servingの重要な問題提起だがposition paperが主で、新規serving system/algorithmの実装と直接的なsystem-level評価を主要貢献として提示していないためDiscovery candidateには採用しない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T06:00:00+09:00",
+      "last_rejected_at": "2026-09-19T06:00:00+09:00",
+      "axis": "programmable serving・agentic runtime・application-specific generation loop",
+      "run_key": "2026-09-19T06:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2607.28633": {
       "primary_identity": "id:arXiv:2607.28633",
