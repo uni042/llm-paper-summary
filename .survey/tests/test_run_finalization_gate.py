@@ -16,6 +16,7 @@ def make_args(**overrides):
         continuation_finalization_allowed=False,
         active_assignment=False,
         active_assignment_handoff_safe=False,
+        claim_state_checked=False,
         claim_result_pending=False,
         submission_result_pending=False,
         ack_result_pending=False,
@@ -38,6 +39,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
             active_assignment=True,
+            claim_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
@@ -51,7 +53,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         )
         for field, target in cases:
             with self.subTest(field=field):
-                result = mod.decide(make_args(**{field: True}))
+                result = mod.decide(make_args(claim_state_checked=True, **{field: True}))
                 self.assertEqual(result["decision"], "MUST_CONTINUE")
                 self.assertEqual(result["wait_seconds"], 10)
                 self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
@@ -63,15 +65,28 @@ class RunFinalizationGateTests(unittest.TestCase):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=False,
+            claim_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
         self.assertIn("continuation_gate_did_not_allow_finalization", result["blocking_reasons"])
 
+    def test_unchecked_claim_state_blocks_finalization(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=False,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("claim_state_not_checked", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "CHECK_CLAIM_STATE")
+
     def test_clean_stop_run_issues_permit(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
+            claim_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MAY_FINALIZE")
         self.assertTrue(result["finalization_permit"]["issued"])

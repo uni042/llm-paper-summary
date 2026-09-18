@@ -99,7 +99,7 @@ Scheduled Chat / Work workerは次を守る。
 3. Actions runが取得可能なら `survey-claim-fast` の当該push runを確認し、queued / in_progressはtransient pendingとして扱う。
 4. runがsuccessになったら最新HEADを再取得し、対応result JSONを読み、その内容でassignment有無を判定する。
 5. runがfailure / cancelled等でterminalになった場合だけclaim-fast障害として診断し、最新queue・write可否・fallback経路を再評価する。
-6. pending中にplatform limitなど別のhard conditionが成立していなければ、自発的にrunを終了しない。`continuation_gate.py`を使う場合は `--claim-result-pending yes` を渡す。
+6. pending中にplatform limitなど別のhard conditionが成立していなければ、自発的にrunを終了しない。`continuation_gate.py`を使う場合は、最新request/resultを実際に確認したことを示す `--claim-state-checked yes` と `--claim-result-pending yes` を渡す。未確認なら `--claim-state-checked yes` を推測で付けず、gateの `CHECK_CLAIM_STATE` に従って先に確認する。
 
 特に、claim requestのcommitだけを読んで「高速レーンが詰まっている」「結果を取得できないため終了」と判断するのは禁止する。高速レーンが通常どおり数秒〜数十秒でresult commitを生成する場合があるため、**少なくとも対応Actionsのterminal状態または対応resultの出現のどちらかを確認してから**現行claim経路の成否を判断する。
 

@@ -68,6 +68,9 @@ GitHub Actionsはclaim、immutable submission、backgroundの3レーンに分離
 
 1. candidate在庫水位と最新queue/backlogを確認する。25本以上でactionable researchがある場合はhigh-backlog research-only modeへ入る。
 2. `claim-serial-policy.md`に従い、priority最上位のResearch/Auditを**1件だけclaim**する。未完了claimを複数保有しない。
+   - request保存後にresultがまだ無ければclaim-wait stateへ入り、同じrequest_idを10秒実時間間隔で再確認する。
+   - claim-wait stateはアイドル状態ではない。queued / in_progress / 404を観測しただけでfinal responseへ進まず、assignmentまたはterminal failureが確定するまで同じrunで待機を継続する。
+   - assignment取得後は待機を終了し、そのまま次の全文精読工程へ進む。
 3. 一次資料を全文精読し、5-slot recordを作成してpreflightする。
 4. GitHub正常時は5 slotを書いた後、attempt固有immutable descriptorを作成する。GitHub write不能時はLibraryへ完全payloadをcheckpointする。
 5. descriptor/checkpointが耐久保存できたら前jobのActions terminal待ちをせず、最新queue/claim stateを再取得して次の1件をclaimする。
@@ -92,7 +95,7 @@ Research/Auditの処理件数には、最低件数・目標件数・固定batch�
 
 high-backlog research-only modeでは探索枯渇を終了理由に使わず、actionable researchを優先する。ただし§0の引き継ぎガードはhigh-backlog時にも優先する。
 
-終了直前には `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。`CONTINUE` なら最終応答だけを出して終了せず、同じrunで次の独立作業へ進む。ただし§0の引き継ぎガードが成立している場合は `STOP_RUN` とし、次の独立作業へ進まない。
+終了直前には `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。`CONTINUE` なら最終応答だけを出して終了せず、同じrunで次の独立作業へ進む。claim requestを発行したrunでは、終了判定前に最新request/result対応を実際に確認し、`continuation_gate.py --claim-state-checked yes` を使う。対応resultがpendingなら同時に `--claim-result-pending yes` とし、返された `WAIT_FOR_CLAIM_RESULT` に従って10秒実時間pollingを継続する。claim stateを未確認のまま省略した場合は `CHECK_CLAIM_STATE` となり通常終了できない。ただし§0の引き継ぎガードが成立している場合は `STOP_RUN` とし、次の独立作業へ進まない。
 
 ## 7. 特殊run
 

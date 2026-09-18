@@ -35,6 +35,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     any_durable_transport = bool(args.github_write or fallback_writable)
 
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
+    claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
     rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
     discovery_reset_progress_known = rounds_since_last_novel_raw is not None
@@ -94,7 +95,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         or (args.can_discover and any_durable_transport)
     )
 
-    transient_claim_wait = bool(args.claim_result_pending and args.github_read)
+    transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
     if args.global_dependency and not independent_work and not transient_claim_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
@@ -114,9 +115,22 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
             finalization_allowed = False
     else:
-        decision = "STOP_RUN" if reasons else "CONTINUE"
-        required_action = "FINALIZE" if decision == "STOP_RUN" else "CONTINUE_WORK"
-        finalization_allowed = decision == "STOP_RUN"
+        if reasons:
+            decision = "STOP_RUN"
+            required_action = "FINALIZE"
+            finalization_allowed = True
+        elif not claim_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_CLAIM_STATE"
+            finalization_allowed = False
+        elif transient_claim_wait:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_CLAIM_RESULT"
+            finalization_allowed = False
+        else:
+            decision = "CONTINUE"
+            required_action = "CONTINUE_WORK"
+            finalization_allowed = False
 
     write_scope = "none"
     write_action = "normal"
@@ -159,6 +173,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "next_axis_available": next_axis_available,
         "write_failure_scope": write_scope,
         "write_action": write_action,
+        "claim_state_checked": claim_state_checked,
         "claim_result_pending": bool(args.claim_result_pending),
         "claim_wait_action": claim_wait_action,
         "claim_wait_seconds": claim_wait_seconds,
@@ -176,7 +191,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         ),
         "rule": (
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
-            "or discovery submission is never by itself a whole-run stop condition. Required "
+            "or discovery submission is never by itself a whole-run stop condition. Normal workers "
+            "must explicitly confirm the latest claim state before ordinary work/finalization. Required "
             "claim results are polled every 10 real seconds using the same request identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
@@ -202,6 +218,7 @@ def main() -> int:
     ap.add_argument("--independent-work", type=yn, default=True)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
+    ap.add_argument("--claim-state-checked", type=yn, default=False)
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
