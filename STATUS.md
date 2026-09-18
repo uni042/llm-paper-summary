@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 06:33:49 JST**
+> 自動生成: **2026-09-19 06:34:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **53** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 05:35:57 JST（57分前）** |
+| 最終検証済みResearch収録 | **09-19 05:35:57 JST（58分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -183,9 +183,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 06:31:24 JST** / heartbeat: **—** / lease expiry: **09-19 08:01:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
+- `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 06:33:57 JST** / heartbeat: **—** / lease expiry: **09-19 08:03:57 JST**
+  - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
 - `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding / worker `scheduled-chat-discovery-specialist`
   - claim: **09-19 05:31:18 JST** / heartbeat: **—** / lease expiry: **09-19 07:01:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-b3520b6ffb18fc43.json`
