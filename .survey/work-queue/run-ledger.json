@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T07:05:38.066210+00:00",
+  "updated_at": "2026-09-18T07:36:04.910520+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T07:05:38.066210+00:00",
+      "last_recorded_at": "2026-09-18T07:36:04.910520+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 244,
+        "research_completed": 245,
         "audit_completed": 0,
         "discovery_completed": 129,
         "blocked": 21,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35216644559:1",
-          "recorded_at": "2026-09-17T11:37:32.576158+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35216644559",
-            "run_attempt": "1",
-            "source_sha": "94989fa7f355bb46631bb6efb4d2518c641d599a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35216772791:1",
           "recorded_at": "2026-09-17T11:39:12.247494+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35320167364:1",
+          "recorded_at": "2026-09-18T07:36:04.910520+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35320167364",
+            "run_attempt": "1",
+            "source_sha": "aadec1c3aa123b2ac86fd4440872eb2be869e1f2"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22752,6 +22752,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-61cb466957462432",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14643",
+          "title": "BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24690,7 +24698,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 708,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
