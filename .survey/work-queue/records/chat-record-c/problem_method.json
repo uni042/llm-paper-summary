@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84f02d757a3785e53894f6fb",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-84f02d757a3785e53894f6fb","job_id":"job-research-11c68d7adc12c492","data":{"problem":"dLLMは各denoising stepでsequence全体をbidirectional attentionに通すため長さLに対し計算量がO(L^3)へ膨らみ、ARのKV cacheをそのまま使えない。既存feature/KV cacheは全layerで固定budget/周期、parallel decodingは固定confidence thresholdを使うため、layer間のfeature変化量やstep間のconfidence変動を無視し、無駄な再計算または誤った早期unmaskを招く。","novelty":"Dynamic Cache Updating（DCU）でlayer inputのstep間cosine distanceをintermediate feature変化のproxyとして使い、総cache更新budgetをlayer dynamism比例で再配分する。さらに更新されないtokenが後続layerでも変化量0になり続けるstuck-in-the-mud問題を、直前key token周辺のmandatory update windowで防ぐ。Adaptive Parallel Decoding（APD）はtop-2確率の集中度と隣接step間logit分布のcosine distanceを用いてtoken別thresholdを動的更新する。","method_overview":"step t・layer lで各tokenのlayer inputと前step inputのcosine distance dを計算し、layer平均sを得る。次stepのlayer budgetは前stepのsに比例して全layer総budgetを配分し、d上位tokenを更新する。直前にunmaskされたkey token周辺B_windowは強制更新する。APDではprediction分布の2番目確率からconcentration cを作り、logit分布の時間差Hと組み合わせてtau_t=tau_{t+1}-alpha*c+beta*Hとし、安定tokenを早くunmask、揺らぐtokenを保留する。","components":[{"name":"DCU layer-adaptive budget","description":"layer input変化をproxyにcache update需要を測り、固定budgetを動的再配分する。"},{"name":"Mandatory Update Window","description":"直前key token周辺を必ず更新し、未更新tokenが後続layerで永続的に選外になる問題を抑える。"},{"name":"APD confidence concentration","description":"prediction分布の集中度に応じてtoken別unmask thresholdを下げ、安定tokenを早期確定する。"},{"name":"APD temporal instability","description":"隣接stepのprediction分布変化が大きいtokenではthresholdを上げ、premature decodingを防ぐ。"}],"system_design":"cache reuseとparallel decodingを別々の静的heuristicとしてではなく、layer-wise dynamicsとstep/token-wise uncertaintyに応じて同時適応させるtraining-free runtime制御。"},"reservation":{"claim_id":"claim-84f02d757a3785e53894f6fb","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
