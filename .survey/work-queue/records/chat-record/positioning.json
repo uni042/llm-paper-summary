@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-047d00d1f0ec1e00c2aa57ad",
   "job_id": "job-research-2072895e5b6f0b68",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-047d00d1f0ec1e00c2aa57ad",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主要な制約は評価が実機ではなくシミュレーションである点で、NCCL等の集合通信実装、カーネル実行競合、GPUメモリ容量、PCIe/NVLink階層、多段ネットワーク、実際の要求到着揺らぎを含まない。交通行列を事前に知ることを基本とし、75%ノイズでも改善は残るものの性能は低下する。異種同居条件はNP困難で最適性を保証せず、評価上は平均1.07倍の差である。対象は各8エキスパートのB/16・B/32統計で、現代の大規模LLM型MoEにおける数十〜数百エキスパート、専門家並列とテンソル並列の併用は直接評価していない。著者も将来課題として異なるネットワーク構成・通信方式、変動負荷への動的適応、ジョブスケジューリングや網構成との統合を挙げる。",
+    "differences": "FasterMoE、Tutel、DeepSpeed-MoE等は全対全通信そのものの高速化や負荷均衡を主眼にするのに対し、Auroraは交通行列から転送順序を決め、さらにGPU割当とエキスパート同居まで同じ推論時間目的へ統合する。Linaは同一モデル内の複数エキスパートを同一GPUへ詰めて資源利用を改善するが、同じ同期全対全通信の障壁を共有する。Auroraは異なるモデル同士を同居させ、片方の待ち時間へ他方を重ねる点が中心的な差である。FlexMoEやProphet等の配置・複製系は人気度に応じてエキスパート位置を変えるが、Auroraは異種GPU性能と全対全通信順序を理論モデルへ同時に入れる。",
+    "implementation_status": "2024年10月公開のarXivプレプリント。著者Rui Panの公式サイトとMax Planck Societyの公開基盤で全文PDFを確認した。論文はアルゴリズムとシミュレーションを提示するが、本文・一次公開先からAurora専用の公開コードリポジトリは確認できず、実機推論基盤へ統合済みとは判断できない。",
+    "research_positioning": "MoE推論システム研究のうち、エキスパート配置と通信スケジューリングを共同最適化する系統に位置する。特に『通信量を減らす』のではなく、既に生じる不均一なトークン交通を競合しない順序へ並べ、人気エキスパートを適切なGPUへ置き、異モデル同居で同期待ちを隠すという三層の最適化を統一する。オフロード系がGPUメモリ容量とCPU/SSD転送を扱うのに対し、AuroraはGPUクラスタ内の専門家並列通信と配置が主対象であり、将来的にはエキスパートキャッシュや階層メモリ方式へ通信・配置最適化を組み合わせる比較軸になる。"
+  },
+  "reservation": {"claim_id": "claim-047d00d1f0ec1e00c2aa57ad", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
