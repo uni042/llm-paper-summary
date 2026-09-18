@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 08:05:33 JST**
+> 自動生成: **2026-09-19 08:06:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（39分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（41分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -248,8 +248,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **574** |
-| └ Research | **445** |
+| 成功result未照合のimmutable submission | **575** |
+| └ Research | **446** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
