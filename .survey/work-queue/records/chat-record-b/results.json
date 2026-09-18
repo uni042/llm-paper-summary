@@ -2,67 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
-  "job_id": "job-research-fb4ae3eceb455bfc",
-  "data": {
-    "overview": "ASPIREは3モデル・5 workloadすべてで自己回帰復号を高速化し、Qwen3-1.7Bで平均3.34倍、Qwen3-8Bで2.08倍、DS-Llama-8Bで2.14倍。長文脈ほど利得が拡大し、80k-100kでは最大4.58倍。強い既存self-speculative baselineに対する平均speedup改善は約27%。mixed executionとschedulerの寄与はcontext長とともに増え、refreshは長いdraftでacceptance低下を抑える。",
-    "key_results": [
-      {
-        "metric": "最大decode throughput speedup",
-        "value": "4.58×",
-        "baseline": "AutoRegressive",
-        "condition": "Qwen3-1.7B, LongBench-v2 80k-100k, 963.5 vs 210.5 tok/s",
-        "interpretation": "KV read支配が強い長文脈ほどself-speculationと非同期batchの償却効果が大きい。"
-      },
-      {
-        "metric": "平均speedup",
-        "value": "3.34× / 2.08× / 2.14×",
-        "baseline": "AutoRegressive",
-        "condition": "Qwen3-1.7B / Qwen3-8B / DS-Llama-8B, 5 workloads平均",
-        "interpretation": "モデル規模・architectureを跨いで一貫した改善。"
-      },
-      {
-        "metric": "非同期mixed+scheduler寄与",
-        "value": "2.75× vs 2.22×",
-        "baseline": "ASPIRE-Fixed",
-        "condition": "Qwen3-8B, LB-v2 80k-100k",
-        "interpretation": "固定同期draft長との差が長文脈で拡大し、要求別verification timingの価値を示す。"
-      },
-      {
-        "metric": "refreshによるacceptance",
-        "value": "76.6% vs 60.3%",
-        "baseline": "refreshなし",
-        "condition": "Qwen3-8B, LB 16k-18k, fixed draft length γ=10",
-        "interpretation": "draftが長くなった際のsparse context stalenessを16.4 percentage points緩和。"
-      },
-      {
-        "metric": "refresh overhead",
-        "value": "1.03% at 16k / 1.06% at 32k cycle time",
-        "baseline": "refreshなしcycle",
-        "condition": "Qwen3-8B, 5-draft/1-verify",
-        "interpretation": "1層full attentionの追加費用がacceptance改善に対して小さい。"
-      },
-      {
-        "metric": "output quality macro",
-        "value": "51.72 vs 51.92 (-0.20)",
-        "baseline": "AutoRegressive greedy",
-        "condition": "Qwen3-8B, LongBench-v1 8 tasks, 1,460 examples",
-        "interpretation": "full-attention verificationにより実質的にtarget distributionを維持し、差は小さい。"
-      },
-      {
-        "metric": "scheduler oracle gap",
-        "value": "mean 10.4%; long-context mean 8.5%",
-        "baseline": "hindsight oracle",
-        "condition": "same mixed-forward backend",
-        "interpretation": "online schedulerはoracleへ比較的近いが、なお4.7〜20.2%のheadroomがある。"
-      }
-    ],
-    "negative_results": "ASPIREが各workloadで必ず最良とは限らず、Qwen3-1.7B AIME25ではVegasが僅差、CodeEloではASPIRE-Fixedが上回る。簡易ASPIRE-FSMもverification preferenceが安定する場合は同等以上になり得る。refresh layerは最初のlayerではacceptanceが38.7〜76.4%と悪く、最終layerもpenultimateより一貫して劣る。主throughputはprefillを除外しておりend-to-end request latency改善を直接示さない。一般continuous batching engineやchunked prefillとの統合は未実装。",
-    "interpretation": "ASPIREの利得は疎attentionだけではなく、要求間・要求内で最適draft長が変動することをschedulerへ取り込んだ点にある。長文脈ほどfull-attention verify費用が大きく、固定同期による過不足の損失が増えるためmixed executionの価値も増す。refreshはdraft lengthを伸ばすほど重要になり、非同期schedulerが選べる投機範囲を広げる補完関係にある。",
-    "quality_impact": "self-speculative verificationはtarget modelのfull-attention分布でproposalを検証するためexact by construction。実測LongBench品質差はmacro -0.20 pointsで、著者はbatched kernelの浮動小数点非決定性と整合する範囲とする。"
-  },
+  "attempt_id": "attempt-c3837abe3035158dff8a8ff1",
+  "job_id": "job-research-a2e0c7f004aa0b3e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "claim_id": "claim-c3837abe3035158dff8a8ff1",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

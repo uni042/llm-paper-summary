@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
-  "job_id": "job-research-fb4ae3eceb455bfc",
-  "data": {
-    "limitations": "throughput測定はdecode forwardのみでprefillを除外するためend-to-end latencyを直接表さない。主評価は単一H100 NVLで、mixed draft/verify forwardをvLLM等の汎用continuous batching、chunked prefill、admission controlと統合する作業は将来課題。schedulerのtiming model係数はmodel/datasetのsample generation runtime traceからfitするため、hardware・batch regime変更時は再較正が必要。疎context selectionは7% budget等の設定に依存し、refresh layer full attentionはcontext長に比例する追加memory trafficを持つ。online schedulerはhindsight oracleに平均10.4%のgapが残る。",
-    "differences": "MagicDecはwindow-based sparse drafting、Vegasはverification tokenのattention scoreで疎contextを選ぶが、いずれもbatched executionをglobal draft/verify phaseへ同期させる。ASPIREは同一target-model invocationでdraftとverifyを混在させ、要求別にverification timingを選ぶ点が第一の差である。Vegas等はverification境界で疎contextを更新するためdraft中にstaleになるのに対し、ASPIREは各draft stepのpenultimate layerだけfull attentionして次stepのpagesを更新する。通常のvLLM asynchronous schedulingはrequest-level concurrencyを扱うが、ASPIREは一つのbatched target-model forward内部でspeculation roleを非同期化する別の同期境界を対象とする。",
-    "implementation_status": "COLM 2026採択。公式コード https://github.com/Amir-zsh/ASPIRE とプロジェクトページを公開。PyTorch/FlashInferベースでH100 NVL上の実測評価を行い、TP評価も含む。汎用production serving engineへの完全統合は未完了。",
-    "research_positioning": "長文脈推論のmemory-bound attentionをself-speculative decodingで緩和する系統に属するが、draft modelや単一requestのacceptance改善ではなく、batched serving時の同期制約を主要対象にする。要求別schedulerをmixed forwardへ直接結びつけるため、speculative decodingとcontinuous batching/schedulingの境界を跨ぐ研究であり、長文脈ほどbatch内heterogeneityのコストが増えることを定量化している。"
-  },
+  "attempt_id": "attempt-c3837abe3035158dff8a8ff1",
+  "job_id": "job-research-a2e0c7f004aa0b3e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "claim_id": "claim-c3837abe3035158dff8a8ff1",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

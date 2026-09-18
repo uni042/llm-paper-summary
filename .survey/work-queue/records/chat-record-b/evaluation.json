@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
-  "job_id": "job-research-fb4ae3eceb455bfc",
-  "data": {
-    "hardware": "主評価は1×NVIDIA H100 NVL 96GB。追加評価でQwen3-8BのTP=2、AIME 2024-2026 expanded analysisではTP=4を使用。",
-    "software": "Qwen3-1.7B、Qwen3-8B、DeepSeek-R1-Distill-LLaMA-8B。bfloat16、torch.compile、CUDA graphs、FlashInfer JIT kernels。page size 16、sparsity 7%、kmin=32、recent L=8、dmax=16、γinit=3、ω=0.8、α0=0.9、refresh layer=N-2。",
-    "methodology": "AIME 2025、CodeElo、LongBench 16k-18k、LongBench-v2 30k-40k/80k-100kの5 workloadでdecode forwardのみのoutput tok/sを測定し、requestsを安定までcyclic replayする。temperature 0.7、top-k 50、top-p 0.9、seed 123。比較はAutoRegressive、MagicDec-StreamingLLM、Vegas、固定同期ASPIRE-Fixed、簡易feedback ASPIRE-FSM。品質はQwen3-8B greedyでLongBench-v1 8 tasks/1,460 examplesを比較。追加でhindsight oracle、TP、refresh layer/page size/smoothing sensitivity、refresh有無のdraft-length sweepを評価する。",
-    "scope": "長文脈および長いchain-of-thoughtのdecode throughputに焦点を置き、prefill時間はthroughput測定から除外する。主結果は単一H100で、一般continuous-batching engineへの統合、chunked prefillとの共存、multi-GPU大規模production servingは今後の課題。"
-  },
+  "attempt_id": "attempt-c3837abe3035158dff8a8ff1",
+  "job_id": "job-research-a2e0c7f004aa0b3e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "claim_id": "claim-c3837abe3035158dff8a8ff1",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
