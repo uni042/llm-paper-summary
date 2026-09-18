@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-120d2d3cb0fa96918f480540",
-  "job_id": "job-research-56fbeb640bc1560d",
-  "data": {},
+  "attempt_id": "attempt-e82cbbaad928ffed36c0f0b0",
+  "job_id": "job-research-6af027835df580e1",
+  "data": {
+    "hardware": "単一GPU環境はTesla V100S、48コアCPU二基で計96コア、128GB DDR4、3.8TB NVMe SSD。複数GPU環境はAlibaba Cloudの8×H100-80GB NVLink、224-core Intel Platinum 8480C、2TB ECC RAM、4×3.5TB NVMe SSD。4×H100ではGPUごとに独立PCIe root domainとSSD経路を使う。",
+    "software": "DeepSpeedへGoCkpt/GoCkpt-Oを統合。比較対象はDeepSpeed同期保存、DCP、Torch Snapshot、DCP-Async、DLRover-Flash、DataStates-LLM、および同じ転送最適化を持つ再現Async/Async-O。",
+    "methodology": "Wikidataを固定系列長へ整形し、LLaMA3.2-1B、Qwen3-0.6B、OPT-350Mを単一GPU、LLaMA3-8Bを複数GPUで学習。単一GPUはdevice batch 1、複数GPUは4。チェックポイント間隔50/200 stepで処理量と停止時間を比較し、600秒ごとに障害が起きる模擬復旧実験では各方式の停止時間から理論最適チェックポイント間隔を計算して総スループットを測る。分解測定、CPU利用率、GPU-CPU帯域、4×H100拡張性も評価する。",
+    "scope": "主にDeepSpeed混合精度学習、AdamW、単一V100Sと最大4×H100の実測。8×H100サーバ構成を説明するが拡張性図は4 GPU。複数GPUでは各GPUに独立PCIe/SSD経路がある構成で、共有PCIeや共有SSDが律速するクラスタへの一般化は追加検証が必要。"
+  },
   "reservation": {
-    "claim_id": "claim-120d2d3cb0fa96918f480540",
+    "claim_id": "claim-e82cbbaad928ffed36c0f0b0",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

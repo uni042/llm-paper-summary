@@ -2,11 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-120d2d3cb0fa96918f480540",
-  "job_id": "job-research-56fbeb640bc1560d",
-  "data": {},
+  "attempt_id": "attempt-e82cbbaad928ffed36c0f0b0",
+  "job_id": "job-research-6af027835df580e1",
+  "data": {
+    "overview": "GoCkptは従来の非同期チェックポイントに対して6.8〜38.4%、勾配転送を次ステップへさらに隠すGoCkpt-Oは6.7〜40.1%の学習スループット改善を示し、理想的な保存費用ゼロ条件との差をそれぞれ0.2〜1.8%、1.2%未満まで縮める。同じGPU-CPU転送最適化を持つAsync/Async-Oと比べても最大4.3%程度改善し、差が単なる固定メモリや多スレッドI/Oではなく複数ステップ重畳とCPU再構築から来ることを示す。LLaMA3.2-1BではGoCkpt-OがAsync-O比で停止時間を86.4〜99.2%削減し、600秒ごとの模擬障害を含む最適頻度実験でも794.1 tokens/sを達成してAsync-Oの776.3を2.3%、転送最適化Asyncの758.0を4.8%上回る。",
+    "key_results": [
+      {
+        "metric": "従来非同期方式比スループット",
+        "value": "GoCkpt 6.8〜38.4%増、GoCkpt-O 6.7〜40.1%増",
+        "baseline": "従来非同期チェックポイント",
+        "condition": "三モデル、チェックポイント間隔50/200 step",
+        "interpretation": "大容量状態転送を複数学習ステップへ隠すことで理想保存なし条件へ近づく。"
+      },
+      {
+        "metric": "理想条件との差",
+        "value": "GoCkpt 0.2〜1.8%、GoCkpt-O 1.2%未満",
+        "baseline": "保存遅延・計算停止ゼロのIdeal",
+        "condition": "性能評価全般",
+        "interpretation": "チェックポイントの可視費用をほぼ消せる。"
+      },
+      {
+        "metric": "停止時間削減",
+        "value": "GoCkpt-O 86.4〜99.2%削減",
+        "baseline": "Async-O",
+        "condition": "LLaMA3.2-1B",
+        "interpretation": "勾配転送を次前向き計算まで重ねることで残存停止をほぼ隠す。"
+      },
+      {
+        "metric": "模擬障害込み最適スループット",
+        "value": "794.1 tokens/s",
+        "baseline": "Async-O 776.3、Async 758.0、DCP-Async 697.8、DeepSpeed 411.9",
+        "condition": "LLaMA3.2-1B、平均600秒ごとに障害",
+        "interpretation": "停止時間短縮により最適保存間隔も32 stepまで短縮でき、障害損失込みでも高い総処理量。"
+      },
+      {
+        "metric": "4×H100拡張性",
+        "value": "Ideal差1.5〜2.6%、DCP-Async比23.2〜50.9%増",
+        "baseline": "Ideal / DCP-Async",
+        "condition": "LLaMA3-8B、4×H100",
+        "interpretation": "独立PCIe経路を持つ複数GPUでも重畳効果を維持。"
+      }
+    ],
+    "negative_results": "通常GoCkptは勾配転送時に短い停止が残り、帯域波形も二つのピークに分かれて最大GPU-CPU帯域を継続利用できない。GoCkpt-Oは勾配領域が次の逆伝播まで保持される実装を前提にこの停止を隠す。七ステップ後にもモデル・最適化器転送が残る場合は、勾配転送量増加を避けるため残量を同期転送する。",
+    "interpretation": "チェックポイントの一貫性をGPU転送時点で強制せず、CPUへ移した後に小さい勾配ログで最新状態へ追いつかせることで、状態転送の時間窓を一ステップから複数ステップへ広げられる。これはストレージ帯域だけでなくGPU-CPU転送そのものを計算で隠す設計。",
+    "quality_impact": "CPU再構築はGPUと同じAdamW更新を用いて各古いブロックを最後のステップ版へ更新し、永続化前に一貫したモデル・最適化器状態を作る。復元手順は通常方式と同じSSD→CPU→GPUで、一貫版の次ステップから再開する。"
+  },
   "reservation": {
-    "claim_id": "claim-120d2d3cb0fa96918f480540",
+    "claim_id": "claim-e82cbbaad928ffed36c0f0b0",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
