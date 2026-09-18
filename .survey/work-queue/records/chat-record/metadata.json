@@ -2,53 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ff353eb4bf9505979ad79bf0",
-  "job_id": "job-research-2bbcf1d996d23713",
-  "data": {
-    "canonical_id": "URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal",
-    "arxiv_id": null,
-    "doi": null,
-    "openreview_id": null,
-    "title": "SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems",
-    "summary": "SYMPHONYは、複数ターンのチャットやエージェントで長時間保持されるKVキャッシュを計算ノードから分離し、遠隔メモリ階層へ永続化しながら低遅延で再利用するメモリ管理層である。ユーザーの入力開始やエージェント呼出しグラフから将来要求を示す助言要求を生成し、実要求より前にKVを移動する。予測の不確実性には層単位優先度、推論基盤との協調HBM管理、層単位非同期転送で対処し、セッション固定を外して要求単位の負荷分散を可能にする。",
-    "list_summary": "将来要求の助言信号でKVキャッシュを事前移動し、層優先度と協調HBM管理で不確実性を吸収して計算・メモリ分離を低遅延化する。",
-    "authors": [
-      "Saurabh Agarwal",
-      "Bodun Hu",
-      "Anyong Mao",
-      "Aditya Akella",
-      "Shivaram Venkataraman"
-    ],
-    "published": "2026-05-04",
-    "publication": "23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 26)",
-    "publication_type": "Conference paper",
-    "publication_status": "Published",
-    "lineage": "disaggregated KV cache / multi-turn serving / prefetch scheduling",
-    "topics": [
-      "KVキャッシュ",
-      "分離メモリ",
-      "事前読込み",
-      "LLMサービング"
-    ],
-    "importance": "状態を計算ノードから切り離して要求単位負荷分散を可能にし、遠隔KV転送遅延をワークロード由来の予告信号で隠す分散LLMサービング研究。",
-    "hardware_evaluation": "2ノード、各4×NVIDIA A100 80GB、256GB DRAM、4TB SSD、100Gbps Ethernetで評価。",
-    "quality_effect": "KV内容を近似せず保持・転送するシステム方式で、生成品質を意図的に変更しない。",
-    "source": "https://www.usenix.org/system/files/nsdi26-agarwal.pdf",
-    "sources": [
-      "https://www.usenix.org/conference/nsdi26/presentation/agarwal",
-      "https://www.usenix.org/system/files/nsdi26-agarwal.pdf"
-    ],
-    "implementation": "約2400行のPythonで実装。gRPCで全体スケジューラとノード管理器を接続し、vLLMスケジューラへ協調メモリ管理を統合。",
-    "code": null,
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "primary-reference-section",
-    "references_total": 54
-  },
+  "attempt_id": "attempt-36c57fcf48c2c1e3a7418b1f",
+  "job_id": "job-research-21d6a425148ac99f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ff353eb4bf9505979ad79bf0",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-36c57fcf48c2c1e3a7418b1f",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
