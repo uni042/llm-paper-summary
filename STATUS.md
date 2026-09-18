@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:23:36 JST**
+> 自動生成: **2026-09-19 07:24:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 07:20:25 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-19 07:20:25 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -213,7 +213,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2402.15678` — Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:21:09 JST** / heartbeat: **—** / lease expiry: **09-19 08:51:09 JST**
+  - claim: **09-19 07:24:43 JST** / heartbeat: **—** / lease expiry: **09-19 08:54:43 JST**
   - evidence: `.survey/work-queue/claims/job-research-b3f94863f38e0308.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
