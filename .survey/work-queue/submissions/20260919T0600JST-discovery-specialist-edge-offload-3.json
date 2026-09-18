@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2505.16502",
+      "title": "Recursive Offloading for LLM Serving in Multi-tier Networks",
+      "source_url": "https://arxiv.org/abs/2505.16502",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md",
+      "priority": 67,
+      "reason": "device-edge-cloudの多階層でLLM servingを行う直接的offloading framework。task-specific hierarchical confidenceとsliding-window dynamic offloadingでroutingを適応化し、8 datasetsで既存cascade servingに対するservice quality/communication効率と中央cloud比50%以上の通信量削減を評価している。GPU datacenter中心の既存系統とは異なるmulti-tier serving設計を補完する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T06:00:00+09:00",
+    "round": "specialist-edge-offload-3",
+    "axis": "device-edge-cloud multi-tier serving・recursive offloading・network-aware inference",
+    "query_summary": "heterogeneous hardwareからnetwork/edge servingへ軸を変更。2510.11331のheterogeneous edge speculative decodingと2512.25059のresilient collectiveはidentity shardで既収録を確認。2505.16502 RecServeは2505 shardに未登録で、一次arXiv抄録から直接LLM servingのoffloading機構と8 dataset評価を確認したため候補化した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "novel_candidate_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2510.11331", "arXiv:2512.25059", "arXiv:2608.15118", "arXiv:2603.17456"],
+    "next_axis_hint": "agentic workflow servingのbackward references、または2024-2025のcloud-edge collaborative inferenceで未代表かつsystem-level evaluationを持つ研究を探索する",
+    "empty_round_reason": null
+  }
+}
