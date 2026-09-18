@@ -1,0 +1,9 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2605.05639","title":"TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2605.05639","paper_path":"papers/inference/02-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md","priority":90,"reason":"HBM4-based heterogeneous PIM/dense layers plus runtime KV placement/migration; reports 1.62x throughput and 1.70x SLO capacity over AttAcc."},
+  {"canonical_id":"arXiv:2609.00407","title":"DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference","source_url":"https://arxiv.org/abs/2609.00407","paper_path":"papers/inference/05-moe-expert-offload/2026-2609.00407-dynande-near-data-expert-scheduling.md","priority":88,"reason":"Near-data NPU/NDP cooperative expert scheduling addresses hardware heterogeneity, dynamic expert concurrency and temporal reuse in batched MoE inference."}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-cxl-pim-ndp-adjacent-7","axis":"CXL/PIM/NDP・隣接memory systems","query_summary":"CXL/PIM/NDPへ隣接分野探索。既知のCXL-NDP、Photonic-CXL、BOOSTを早期除外し、HBM-PIM runtimeとNDP MoE schedulingの未収録候補を抽出。","candidate_count":5,"duplicate_filtered_count":3,"duplicate_canonical_ids":["arXiv:2509.03377","arXiv:2607.27187","arXiv:2609.13592"],"next_axis_hint":"次は推論決定性・speculative decoding・output-length schedulingの新着へ移る","empty_round_reason":null}
+}
