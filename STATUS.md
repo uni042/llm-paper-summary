@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 17:32:28 JST**
+> 自動生成: **2026-09-18 17:49:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-18 16:41:52 JST（50分前）** |
-| 整合性異常 | **16** |
+| 最終検証済みResearch収録 | **09-18 16:41:52 JST（1時間7分前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -270,31 +270,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **16** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **16** |
-
-### 対応jobなしsubmissionの診断対象
-
-上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
-
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r01.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r02.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r03.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r04.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r05.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r06.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r07.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r08.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r09.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r01.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r02.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r03.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r04.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r05.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r06.json`
-- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r07.json`
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
