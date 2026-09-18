@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-70bc34fb123b636715b220f9",
-  "job_id": "job-research-e4eebc0f5643e0fd",
-  "data": {
-    "limitations": "主対象は大量の独立要求を処理するオフライン推論であり、要求をホスト側で蓄積して大バッチを作るため、対話型サービスの先頭トークン時間や個別要求遅延には適さない。単一GPUと大容量ホストメモリを前提としており、複数GPU・複数ノードへそのまま一般化した評価ではない。KVキャッシュ全面退避も小規模データセットや十分大きいGPUでは逆に余分な転送を生み得る。さらに最適構成はCPU性能、PCIe帯域、GPU容量、モデル構造に依存するため、事前計測と探索が必要である。大バッチ時にはエキスパート負荷が均されるという前提を利用しており、極端に偏ったルーティングでは順次実行と先読みの釣り合いが崩れる可能性がある。",
-    "differences": "MoE-Infinity、ProMoE、Pregate-MoEなどは将来使われるエキスパートを予測して先読み・キャッシュし、小バッチ対話推論の転送待ちを減らす方向が中心である。MoE-Genは予測精度を上げるのではなく、十分多数の要求を集めることで各エキスパートを大バッチ化し、ほぼ全エキスパートが活性化する高スループット領域で計算と転送を重ねる。FlexGenやMoE-LightningはCPU-GPUオフロードと転送重畳を扱うが、モデル全体で共通のバッチ寸法を使うためMoEのルータ分岐後にエキスパートバッチが小さくなる。MoE-Genは注意機構とエキスパートのバッチ境界を分離する点が差分である。FiddlerやPowerInferのCPU-GPU協調とも異なり、CPUへ大量の重み計算を移すのではなく、自己注意の一部だけをCPUへ回し、大規模行列演算はGPUの大バッチで処理する。",
-    "implementation_status": "著者実装が公開されている。論文はMoE-Genエンジン、構成探索スケジューラ、CPU自己注意カーネル、ホストからGPUおよびGPUからホストへの非同期転送を組み合わせ、A5000/A6000実機でDeepSeek-V2やMixtralを評価している。公開コードURLは https://github.com/EfficientMoE/MoE-Gen 。",
-    "research_positioning": "本リポジトリでは混合専門家モデル推論と階層メモリ・オフロードの交点に位置付ける価値が高い。既存のエキスパートキャッシュ、配置、予測先読み研究が『どの重みをGPUへ置くか・いつ運ぶか』を主に最適化するのに対し、本論文は『各モジュールへ何トークンまとめて渡すか』を独立した制御軸として前面に出す。特にホストメモリを単なる重み退避先ではなく、トークンをモジュール境界で蓄積してGPU演算密度を作るための容量として利用する点が重要である。SSD/NVMeへ直接拡張する研究ではないが、低速階層から重みを供給する際にも、転送1回あたりの再利用量を大きくするという設計原理は階層メモリ推論の比較軸になる。"
-  },
-  "reservation": {"claim_id": "claim-70bc34fb123b636715b220f9", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8",
+  "job_id": "job-research-23f0e2222a013ba4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-78cfe446e04d42ebf3f9efb8",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

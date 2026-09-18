@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-70bc34fb123b636715b220f9",
-  "job_id": "job-research-e4eebc0f5643e0fd",
-  "data": {
-    "hardware": "実機は少なくとも3構成で、C1はNVIDIA A5000 24GB、AMD EPYC 7453 28コア、256GBホストメモリ、C2は同GPU・CPUで512GBホストメモリ、C3はNVIDIA A6000 48GB、AMD EPYC 7313P 16コア、480GBホストメモリを使用する。A5000構成はPCIe 4.0接続を前提にGPU計算とCPU-GPU転送の重畳を測る。",
-    "software": "対象はDeepSeek-V2 236BやMixtral系列などの公開MoE。比較対象にはDeepSpeed-Inference、FlexGen、MoE-Lightningなどのモデル単位オフロード方式と、vLLM、Ollama経由のllama.cppなど連続バッチ方式を含む。著者実装MoE-Genは公開コードで再現可能な形を提供する。",
-    "methodology": "大量オフライン推論を対象とし、プリフィルとデコードを分けたスループット、データセット全体の完了時間、長文コンテキスト時のスループット、GPU演算利用率、エキスパートへ実際に届く平均バッチ寸法、重み・KV転送量を比較する。Chatbot Arena、LongBench、MMLU、GSM8Kなど、8千〜11万6千件規模のプロンプト集合を含む複数ワークロードで測定する。DeepSeek-V2の代表測定ではコンテキスト768トークン、うち入力512・生成256を使う。",
-    "scope": "評価は単一GPUと大容量CPUメモリを組み合わせた実機オフロード環境に限定され、オンライン対話の低遅延最適化や複数GPU・複数ノードの分散推論を主対象としない。方式は要求をモジュール境界で蓄積して大バッチ化するため、十分な数の独立プロンプトが存在するオフライン処理で最も有利になる。GPUメモリがモデルとKVを十分収容できる場合や、要求数が少なく蓄積待ちが支配的な場合への一般化は限定的である。",
-    "baselines": ["DeepSpeed-Inference", "FlexGen", "MoE-Lightning", "vLLM", "Ollama/llama.cpp"],
-    "models": ["DeepSeek-V2 236B", "Mixtral"],
-    "workloads": ["Chatbot Arena", "LongBench", "MMLU", "GSM8K"]
-  },
-  "reservation": {"claim_id": "claim-70bc34fb123b636715b220f9", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8",
+  "job_id": "job-research-23f0e2222a013ba4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-78cfe446e04d42ebf3f9efb8",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
