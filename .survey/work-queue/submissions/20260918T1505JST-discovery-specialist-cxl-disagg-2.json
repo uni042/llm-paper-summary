@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-cxl-shared-memory-kv-cache.md",
+      "priority": 94,
+      "reason": "prefill/decode分離servingのKV転送をRDMAからCXL shared memoryへ置き換え、rack-wide prefix-aware KV cacheとしても利用する。Dynamo上の実装でRDMA/DRAM cache baselineに対し平均TTFT最大9.8x、P99 latency最大6.2x、peak throughput最大1.6x改善を報告し、CXL・階層メモリ・disaggregated servingの重点範囲に直接適合する。"
+    },
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/05-offload-memory/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+      "priority": 88,
+      "reason": "CXL capacity memoryの帯域律速に対し、CXL.mem interfaceやモデル変更なしでbit-plane dynamic quantizationとweight/KV lossless compressionをnear-data processingで実行する。end-to-end servingでthroughput 43%向上、最大context length 87%拡大、KV footprint 46.9%削減を報告し、CXL階層memoryとLLM inferenceのco-designとして価値が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T15:00:00+09:00",
+    "round": "specialist-cxl-disaggregated-2",
+    "axis": "CXL shared memory・disaggregated serving・near-data processing・KV transfer",
+    "query_summary": "KV reservation軸からCXL/NVMe階層memoryとnetwork-aware disaggregated servingへ切り替えた。検索結果のTutti/LMCache/INFERCEPT/Preble/P-D Serve等は既知・既収録として早期除外し、GitHub正本検索で未収録を再確認したTraCTとCXL-NDPを一次arXiv abstractで軽量評価して採用した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2510.09665", "arXiv:2402.01869", "arXiv:2407.00023", "arXiv:2408.08147"],
+    "next_axis_hint": "次はnetwork transport/RDMA contention、GPU-initiated I/O、distributed KV placementのforward/backward隣接経路へ移る",
+    "empty_round_reason": null
+  }
+}
