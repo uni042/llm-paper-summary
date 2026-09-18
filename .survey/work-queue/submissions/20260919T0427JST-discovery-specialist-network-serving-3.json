@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00098",
+      "title": "Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
+      "priority": 88,
+      "reason": "ISCA 2026の査読論文。長文脈servingでsequence parallelismをrequest単位ではなくtoken chunk単位に動的割当し、disaggregated clusterでstage-specific parallelismとresource fragmentationを同時に扱う。最大4.35x TTFT改善、median TBT最大40.1%削減、request capacity最大45%増を報告する強いserving候補。"
+    },
+    {
+      "canonical_id": "URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal",
+      "title": "SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems",
+      "source_url": "https://www.usenix.org/conference/nsdi26/presentation/agarwal",
+      "priority": 90,
+      "reason": "NSDI 2026の査読論文。KV cache storageをcomputeから分離し、user interaction/workload structure由来のadvisory prefetch、priority-based KV management、GPU-serving framework協調memory管理を設計する。LLaMA/ShareGPT/Burst-GPT評価でend-to-end latency 2.4x改善、低latencyのまま4x requestを処理し、disaggregated memory重点系統に直接該当。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408460",
+      "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems",
+      "source_url": "https://ieeexplore.ieee.org/document/11408460/",
+      "priority": 82,
+      "reason": "HPCA 2026の査読論文。LLM tensor parallelismのcollectiveをcompute memory semanticsへ整合させるCAISを提案し、compute-aware ISA/microarchitecture、thread-block coordination、graph-level overlapを協調設計する。LLM workloadでNVLS solution比平均1.38x、T3比1.61x end-to-end speedupを報告するnetwork/runtime交差候補。"
+    },
+    {
+      "canonical_id": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+      "title": "PLA-Serve: A Prefill-Length-Aware LLM Serving System",
+      "source_url": "https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+      "priority": 80,
+      "reason": "MLSys 2026の査読論文。prompt lengthによるprefill bottleneck差を利用し、long/short prefillを分離するlength-aware serving、dual queue、temporal/spatial disaggregation、CUDA Graph clusteringを設計する。SGLang比prefill latency 30%以上削減、multi-instance SLO violation 28%削減、Qwen2.5-32Bでthroughput 35%改善を報告。"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3805621.3807651",
+      "title": "Hardware-Aware Co-Design of Multi-Chip LLM Serving via Performance Modeling",
+      "source_url": "https://doi.org/10.1145/3805621.3807651",
+      "priority": 74,
+      "reason": "EuroMLSys 2026の査読systems workshop論文。multi-chip accelerator上のLLM servingをhardware-aware performance modelingで扱い、tensor parallelismやchunked prefillを含むhardware-algorithm co-designを対象とする。非arXiv workshop経路の補完として、GPU runtime/serving設計空間の比較基盤に価値がある。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T03:00:00+09:00",
+    "round": "specialist-network-serving-3",
+    "axis": "network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems",
+    "query_summary": "storage/PIM軸を離れてISCA/NSDI/HPCA/MLSys/EuroMLSysのnetwork/disaggregation/servingへ切替。SmartGen、MorphServe、既知のCXL/KV migration系はcanonical title/arXivで早期除外し、Tetris、SYMPHONY、CAIS、PLA-Serve、Hardware-Aware Co-Designは対応title shardに不在で一次会議ページからsystems寄与と評価を確認した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2607.28150", "title:morphserve-efficient-and-workload-aware-llm-serving-via-runtime-quantized-layer-swapping-and-kv-cache-resizing"],
+    "next_axis_hint": "次はGPU runtime/compiler、persistent kernel、collective communicationの2025-2026非arXiv会議/workshopへ移り、今回のserving scheduling系はcooldownする"
+  }
+}
