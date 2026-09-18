@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T014100Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-6c1a5d06d3b875ce",
+      "claim_id": "claim-80a2ded70f5038ea226f4ec9",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-80a2ded70f5038ea226f4ec9",
+      "claimed_at": "2026-09-18T01:32:14+00:00",
+      "expires_at": "2026-09-18T03:02:14+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-6c1a5d06d3b875ce"
+      ],
+      "job": {
+        "job_id": "job-research-6c1a5d06d3b875ce",
+        "type": "research",
+        "parent_job_id": "job-58ba9b968390ace8",
+        "priority": 91,
+        "canonical_id": "arXiv:2609.18849",
+        "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It",
+        "source_url": "https://arxiv.org/abs/2609.18849",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md",
+        "selection_reason": "Exposes tool-progress signals to KV retention/offload policy; production-engine integration reduces post-tool p90 TTFT by about 20.7-20.8%, a concrete agentic-serving systems contribution.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T01:04:09+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[4].description is too short | Japanese-first prose ratio is too low: 59.0% < 70% (Japanese=3495, Latin=2430)",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[4].description is too short",
+          "Japanese-first prose ratio is too low: 59.0% < 70% (Japanese=3495, Latin=2430)"
+        ],
+        "last_validation_failed_at": "2026-09-18T01:30:43+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-d9c12dafdcacdf57f28b369a"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-d9c12dafdcacdf57f28b369a.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T01:32:14+00:00",
+  "checkpoint_released": 0
+}
