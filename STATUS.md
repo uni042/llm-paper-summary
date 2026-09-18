@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 00:30:24 JST**
+> 自動生成: **2026-09-19 00:31:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **26** | **10** | **10** | **0** | **1** | **0** | **2** |
+| 合計 | **26** | **10** | **9** | **1** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -130,17 +130,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling
-  - job: `.survey/work-queue/jobs/job-research-2072895e5b6f0b68.json`
-  - result: `.survey/work-queue/results/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json`
-  - paper: `papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md`
+- 最新観測run: **2026-09-19 00:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-d1fab66f48e43669c98dd751.json` (job `job-research-ebde0cc040167968`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 23:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 00:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -241,8 +237,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **527** |
-| └ Research | **398** |
+| 成功result未照合のimmutable submission | **528** |
+| └ Research | **399** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
