@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-109930730e8c121fc0ac5c18",
-  "job_id": "job-research-455581782889dbd1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-109930730e8c121fc0ac5c18",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-109930730e8c121fc0ac5c18","job_id":"job-research-455581782889dbd1","data":{"problem":"SGLangの最長接頭辞一致やvLLMの先着順は、現在キャッシュに何があるかは見ても、待機列の要求同士が将来どの接頭辞を共有するかを見ない。キャッシュが冷たいと共有群の先頭要求が全て同率になり到着順で交互実行され、ある群をプリフィルした直後に別群がKVを追い出し、後続兄弟で再計算するスラッシングが起きる。追い出しもLRU/LFUで独立しており、次に待つ要求が必要とするKVを捨て得る。","novelty":"PEEKは待機列を増分基数木として常時保持し、現在キャッシュと将来待機需要を同時に使う。SGLangでは待機木とRadixCacheを木対木で共同走査して共有群単位にLPMを償却し、共有群の先頭・兄弟を近接実行するcLPMを構成する。同じ木のpending_countを追い出し保護にも使うため、スケジューリングとKV追い出しが明示通信なしで同じ需要予測へ整合する。さらに単独要求向け公平レーンを動的に増やし、局所性と飢餓回避を両立する。","method_overview":"要求到着時に先頭トークン列を圧縮基数木へO(D)で挿入し、各節点のpending_countを更新する。各スケジューリング周期ではSGLangならこの待機木とキャッシュ基数木を共同下降し、共有枝のキャッシュ一致を一度計算して配下要求へ伝播する。vLLMでは各要求のブロックハッシュ一致を既存APIで取得し、共有群統計だけを待機木から読む。各要求についてキャッシュ一致長、warm/pioneer/sibling区分、最深共有祖先の群サイズ、経路上の深さ重み付き需要スコアを作り、warm→pioneer→siblingを主キーに、長い一致・大きい需要・大群を優先して並べる。任意のgroup-majorで群を連続化しつつ、到着順公平レーンをstrideで混ぜ、単独要求割合と最古待ち時間から公平比率をEMA更新する。KV不足時は同じpending_countと深さから各ブロックの将来需要を評価し、需要ゼロ・低需要ブロックから追い出す。要求をadmitすると待機木から削除し、プリフィルで生成されたKVは同群の後続が直ちに再利用する。共有が無い場合はhas_sharingガードで既存FCFSへ戻る。","components":[{"name":"増分待機基数木と二重走査","description":"待機プロンプトを圧縮trieへ保持し、葉に要求ID、内部節点にその接頭辞を通る待機要求数を持つ。挿入・削除はプロンプト経路だけを更新するためO(D)で、周期ごとの再構築を避ける。SGLangでは待機木の共有枝とRadixCacheを同時に下降し、同じ共有枝に属するN要求のLPMを群C単位で計算するためO(CD)となり、高共有時にO(ND)の個別探索を償却する。vLLMではキャッシュが平坦なハッシュ表なので個別一致探索を残すが、群サイズと需要スコアは同じ待機木から得る。"},{"name":"群認識cLPM admission","description":"各要求をキャッシュ一致が閾値を超えるwarm、周期内で先頭32トークンが未選択のpioneer、それ以外のsiblingへ分ける。section、一致長、経路上pending_count×edge長の総和、共有群サイズ、到着時刻の順で整列し、冷たい群ではまずpioneerを実行して共有KVを作り、その直後に同群兄弟が再利用できるようにする。これによりキャッシュが冷たいと全要求のLPMが0で到着順へ退化する既存LPMの弱点を解消する。"},{"name":"動的公平レーン","description":"群を強くまとめると単独要求が後回しになるため、局所性レーンとsection・到着順中心の公平レーンをstrideで混ぜる。単独要求の割合と最古単独要求の待ち時間を2秒SLOに対する圧力へ変換し、公平側比率を0.10〜0.60へクランプしてEMAで平滑化する。共有が多いと局所性を優先し、単独要求が増えるか待ち時間が伸びると公平枠を自動拡大する。"},{"name":"待機需要認識KV追い出し","description":"キャッシュブロックのトークン列が待機木のどの祖先に属するかを調べ、pending_count×深さの最大値を将来需要スコアにする。メモリ確保時はスコアが低いブロック、特に待機需要ゼロを先に犠牲にし、大きな待機群が深い接頭辞として必要とするブロックを最後まで保護する。SGLangではEvictionStrategyを差し替え、vLLMではBlockPoolのvictim選択を需要ゼロ優先へ変更するため、admissionが作った時間局所性を追い出し側が壊しにくい。"}],"system_design":"Rust約1.6kLOCで待機木・共同走査・群統計を実装しPyO3でPythonへ公開する。SGLangはRadixCacheとScheduler、vLLM v1はSchedulerとBlockPoolを約800LOCずつのshimでmonkey-patchする。既存KV格納形式やattention kernelは変更せず、要求順序とvictim選択の政策層として既存prefix cache上へ重なる。"},"reservation":{"claim_id":"claim-109930730e8c121fc0ac5c18","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
