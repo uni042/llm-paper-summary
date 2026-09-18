@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 23:35:52 JST**
+> 自動生成: **2026-09-18 23:36:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-18 21:43:39 JST（1時間52分前）** |
+| 最終検証済みResearch収録 | **09-18 21:43:39 JST（1時間53分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **4** | **2** | **2** | **1** | **0** | — |
+| Research | **8** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **28** | **13** | **11** | **2** | **1** | **0** | **2** |
+| 合計 | **28** | **10** | **9** | **1** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -140,24 +140,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 21:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
-- **成功** `arXiv:2609.17983` — Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits
-  - job: `.survey/work-queue/jobs/job-research-326d710987e96b1f.json`
-  - result: `.survey/work-queue/results/research/attempt-67c677bdf0613551686265c8-repair1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-67c677bdf0613551686265c8-repair1.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-67c677bdf0613551686265c8.json` (job `job-research-326d710987e96b1f`)
-- **成功** `arXiv:2609.14717` — Carryover Drafting: Recycling Rejected States for Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-3736e6c195a4f8a9.json`
-  - result: `.survey/work-queue/results/research/attempt-b8073f0637a56eac35f5c473-repair1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473-repair1.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473.json` (job `job-research-3736e6c195a4f8a9`)
+- 最新観測run: **2026-09-18 23:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (job `job-research-2072895e5b6f0b68`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 21:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 23:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -258,8 +247,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **527** |
-| └ Research | **398** |
+| 成功result未照合のimmutable submission | **528** |
+| └ Research | **399** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
