@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b8073f0637a56eac35f5c473",
-  "job_id": "job-research-3736e6c195a4f8a9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b8073f0637a56eac35f5c473",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b8073f0637a56eac35f5c473","job_id":"job-research-3736e6c195a4f8a9",
+ "data":{
+  "limitations":"評価対象はQwen3-4BとGemma 4 12B、単一H200、DFlashとDSpark由来Markovドラフターに限定される。提案長15を固定し、DSparkの信頼度スケジューリングを無効にしているため、高同時実行時に検証長を適応させる実運用との共同効果は未検証。信頼度スケジューリングと組み合わせる場合、Carryover自身が候補分布を変えるため信頼度推定と閾値の再較正、同じスケジュール方針での再学習が必要になる。木構造検証では複数棄却枝から何を残すかが未解決で、複数ラウンド保持も現在の並列学習では扱わない。タスク別利得は1.1%から28.6%まで大きく変動し、棄却状態が将来系列へ再収束しにくい仕事では効果が小さい。",
+  "differences":"EAGLE/EAGLE-3、DFlash、DSparkはターゲット隠れ状態をドラフト品質向上へ使うが、基本的に確定済み・現在文脈側の状態を利用する。Carryoverは検証済みなのに棄却されたターゲット状態を次ラウンドだけ追加する点が差である。Token Recycling、Lookahead、Ouroborosは候補トークンやn-gram・フレーズなど離散的投機計算を再利用するのに対し、本方式は順序付きのターゲット隠れ状態列をKVとして再利用する。SD2は検証器由来の操舵ベクトルをMLPへ注入し、Lyannaはドラフター隠れ状態をトークン木へ再利用するため、情報源と注入経路が異なる。DFlash 2、Domino、DSpark等のブロック内依存性強化とは直交し、Markov基準でも利得が残る。",
+  "implementation_status":"ICLR 2027査読中のarXiv v1。論文ではvLLM上でDFlash/Markovへ実装して単一H200実測を行っている。全文・参考文献・付録を確認した範囲では著者公式コード公開URLは記載されていない。",
+  "research_positioning":"投機的復号の『検証で払った計算を次ラウンドへ再利用する』系統に位置する。特にターゲット隠れ状態型ドラフターに対し、棄却枝も情報資源として扱うことで、現在ブロックの候補生成アルゴリズムを置換せず受理長を底上げする補完機構である。再収束性が利得を説明するという分析は、将来の選択的棄却状態保持、木検証との統合、状態価値予測へつながる。"
+ },
+ "reservation":{"claim_id":"claim-b8073f0637a56eac35f5c473","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
