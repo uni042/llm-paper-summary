@@ -8,11 +8,14 @@
   "source_url": "https://arxiv.org/abs/2607.08993",
   "paper_path": "papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md",
   "selection_reason": "HBM base dieへ軽量dequantization blockを置き、GPU側CUDA coreでのweight dequantizationと余分なHBM trafficを除く。end-to-end LLM inferenceでlatency最大54.68%削減、decode throughput最大2.20倍を報告し、memory-side computeの実装比較として有用。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-17T16:06:11+00:00"
+  "created_at": "2026-09-17T16:06:11+00:00",
+  "completed_at": "2026-09-18T18:47:36+00:00",
+  "blocker": "今回runではarXiv:2607.08993の公式HTML一次資料を取得し、全476行中、少なくとも冒頭からDQB microarchitectureのS/Z request generator説明（約180行目）までを精読できた。論文後半にはoperation flow、diverse formats、deployment/scalability、NMP challenges、evaluation setup/results、end-to-end evaluation、limitations相当の内容が残るが、一次資料取得ツールのrun内呼び出し上限に実際に到達し、後半を取得できなくなった。未読部分をabstractや既読前半から推測して5-slotを完成させない。次回は同じarXiv公式HTMLの後半（約181〜476行）または公式PDFを取得して全文精読を完了し、その後5-slotを作成する。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-86c6a56d718fe98a07ff5740.json"
 }

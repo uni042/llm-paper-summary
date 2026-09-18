@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:46:36.047832+00:00",
+  "updated_at": "2026-09-18T18:47:41.691030+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:46:36.047832+00:00",
+      "last_recorded_at": "2026-09-18T18:47:41.691030+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,27 +18692,12 @@
         "research_completed": 268,
         "audit_completed": 0,
         "discovery_completed": 147,
-        "blocked": 29,
+        "blocked": 30,
         "new_jobs": 223,
         "new_papers": 269,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35293758906:1",
-          "recorded_at": "2026-09-18T01:07:10.308738+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35293758906",
-            "run_attempt": "1",
-            "source_sha": "1c84e1de72b93e203910e1d95323dd4b55e6d00d"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35293933360:1",
           "recorded_at": "2026-09-18T01:10:23.382429+00:00",
@@ -19599,6 +19584,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35382219417:1",
+          "recorded_at": "2026-09-18T18:47:41.691030+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35382219417",
+            "run_attempt": "1",
+            "source_sha": "bf486d2202c0d411c77d5ec4811f95f5186304a1"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -23154,6 +23153,14 @@
           "title": "SpecAttn: Co-Designing Sparse Attention with Self-Speculative Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-f7dcdf40e7d3538f",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08993",
+          "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -25335,7 +25342,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
