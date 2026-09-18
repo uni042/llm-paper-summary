@@ -110,6 +110,10 @@ GitHub direct writeもLibrary保存もできない場合だけ、未checkpoint�
 
 1. 最新queue / checkpointed stateを取得する。
 2. actionable readyをpriority順に1件claimする。1 workerが同時に持つ未完了claimは1件だけ。
+   - claim requestを耐久保存した時点で、assignment取得までは **claim-wait state** とする。
+   - 対応resultが未生成、404、queued、in_progressなら、同じrequest_idを保持して `run-liveness-policy.md` の10秒実時間pollingを繰り返す。別requestを発行しない。
+   - claim-wait state中は「担当確保要求を保存した」こと自体を中間成果として扱い、通常のfinal responseを出さない。continuation gateでは実際に最新claim stateを確認した場合だけ `claim_state_checked=true` とし、pendingなら `claim_result_pending=true` を渡す。
+   - assignmentが返ったら同じrun内で直ちに全文精読へ進む。対応Actions/resultがterminal failure、明示的hard stop、またはrun deadline handoff guardに到達するまではclaim待ちだけを理由に終了しない。
 3. claim resultの `record_bank` / `record_bank_fallback` を正本扱いする。workerが別bankを選び直さない。
 4. 一次資料本文を最後まで読み、科学的判断・監査判断を行う。
 5. 予約bankへ `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5 slotを書く。
