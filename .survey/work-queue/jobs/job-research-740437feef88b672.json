@@ -6,7 +6,7 @@
   "canonical_id": "DOI:10.1145/3695053.3731073",
   "title": "AiF: Accelerating On-Device LLM Inference Using In-Flash Processing",
   "source_url": "https://doi.org/10.1145/3695053.3731073",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md",
   "selection_reason": "ISCA 2025の一次査読論文。SSD offloadの外部帯域制約を避けるためGEMVをNAND flash内部へ移し、charge-recycling readとbias-error encodingで内部read帯域とECC実装性を改善する。8モデルのfull-system評価でbaseline SSD offload比平均14.6x throughput、in-memory比平均1.4x throughputを報告し、SSD/NVMe階層・near-storage inferenceの重点系統に直接該当する。",
   "status": "ready",
   "workflow_version": 10,

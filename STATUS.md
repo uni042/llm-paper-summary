@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 04:00:48 JST**
+> 自動生成: **2026-09-19 04:01:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 03:46:31 JST（14分前）** |
+| 最終検証済みResearch収録 | **09-19 03:46:31 JST（15分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **3** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **3** | **1** | **2** | **0** | **0** | **15** |
-| 合計 | **26** | **7** | **4** | **3** | **0** | **0** | **15** |
+| Discovery | **9** | **3** | **1** | **2** | **0** | **0** | **15** |
+| 合計 | **23** | **7** | **4** | **3** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -137,14 +137,10 @@
   - result: `.survey/work-queue/results/20260919T0234JST-discovery-specialist-elastic-migration-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0234JST-discovery-specialist-elastic-migration-7.json`
   - 探索軸: request/KV migration・elastic memory・model/KV co-migration
-- **09-18 22:01:21 JST** job `job-13db76269ce893af` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T2208JST-discovery-specialist-agent-kv-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2208JST-discovery-specialist-agent-kv-6.json`
-  - 探索軸: agentic serving・tool-call progress・KV lifecycle
-- **09-18 22:01:30 JST** job `job-8045b60ddcfce5d3` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T2209JST-discovery-specialist-fairness-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2209JST-discovery-specialist-fairness-7.json`
-  - 探索軸: multi-tenant serving・token latency fairness・SLO isolation
+- **09-18 22:05:21 JST** job `job-8453bd5099fe9bf0` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
+  - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
 
 ### 直近タスク
 

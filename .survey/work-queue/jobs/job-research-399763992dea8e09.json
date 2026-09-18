@@ -6,7 +6,7 @@
   "canonical_id": "DOI:10.1109/HPCA68181.2026.11408592",
   "title": "PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System",
   "source_url": "https://ieeexplore.ieee.org/document/11408592/",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md",
   "selection_reason": "HPCA 2026の一次査読論文。長文脈LLM向けPIMでchannel underutilization、I/O bottleneck、static KV allocationを同時に扱い、token-centric partitioning、dynamic command scheduling、dynamic memory accessをMLIR compilerと協調設計する。cycle-accurate評価でPIM-only最大11.3x、xPU+PIM最大8.4xを報告し、PIM/階層memory系統の重要候補。",
   "status": "ready",
   "workflow_version": 10,
