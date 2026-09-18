@@ -2,62 +2,91 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-64f721f42b66b8d451936690",
-  "job_id": "job-research-12153d10b82fca3c",
+  "attempt_id": "attempt-3482ada8e43cfce3d8d1cfd9",
+  "job_id": "job-research-d9f05d11667dcf83",
   "data": {
-    "canonical_id": "arXiv:2506.04203",
-    "arxiv_id": "2506.04203",
-    "doi": "10.48550/arXiv.2506.04203",
+    "canonical_id": "arXiv:2411.17741",
+    "arxiv_id": "2411.17741",
+    "doi": "10.1145/3725843.3756083",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
       "cross_list": []
     },
-    "title": "Cascadia: An Efficient Cascade Serving System for Large Language Models",
-    "summary": "Cascadiaは、複数規模の大規模言語モデルを段階的に利用するモデルカスケードにおいて、要求経路だけでなくGPU資源配分とデータ・テンソル・パイプライン並列構成まで共同最適化する推論サービング基盤である。内側の混合整数線形計画が現在の経路方策に対する配置を求め、外側のチェビシェフ誘導最適化が品質制約を満たしながら経路しきい値を更新する。ICLR 2026の公式論文では32基のH100を用い、単一モデルおよびCascadeServeに対し、目標品質を維持しつつ最大4倍厳しい遅延SLOと最大5倍の処理性能を報告する。",
-    "list_summary": "モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。",
+    "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
+    "summary": "多数の低ランク適応（Low-Rank Adaptation; LoRA）アダプタを共有基盤モデル上で同時提供すると、アダプタの頻繁なCPUからGPUへの転送がPCIe帯域を圧迫し、さらに入力長・出力長・アダプタ階数の違いが処理時間のばらつきを増やす。Chameleonは、空いているGPUメモリを動的なアダプタキャッシュとして再利用し、頻度・最近性・サイズを考慮して追い出し対象を決める。同時に、入力長・予測出力長・アダプタサイズから重み付き要求サイズを計算し、複数キューへ分類して資源割当を行うことで、短い要求の先頭待ちと長い要求の飢餓を同時に抑える。S-LoRA上の実装では、高負荷時のP99初回トークン時間を80.7%削減し、持続可能なスループットを1.5倍へ高めた。",
+    "list_summary": "多数LoRA提供で生じるアダプタ転送競合と要求時間のばらつきを、動的GPUアダプタキャッシュとサイズ認識型複数キュースケジューリングの協調で抑え、高負荷時のP99初回トークン時間を80.7%削減する。",
     "authors": [
-      "Youhe Jiang",
-      "Fangcheng Fu",
-      "Wanru Zhao",
-      "Stephan Rabanser",
-      "Jintao Zhang",
-      "Nicholas D. Lane",
-      "Binhang Yuan"
+      "Nikoleta Iliakopoulou",
+      "Jovan Stojkovic",
+      "Chloe Alverti",
+      "Tianyin Xu",
+      "Hubertus Franke",
+      "Josep Torrellas"
     ],
-    "authors_affiliations": "The Hong Kong University of Science and Technology; Shanghai Jiaotong University; University of Cambridge; Princeton University; Tsinghua University",
-    "published": "2026-04-23",
-    "publication": "International Conference on Learning Representations (ICLR 2026)",
-    "publication_type": "国際会議論文",
-    "publication_status": "Published as a conference paper at ICLR 2026",
-    "lineage": "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
+    "authors_affiliations": "University of Illinois at Urbana-Champaign; IBM Research",
+    "published": "2025-11-12",
+    "publication": "58th IEEE/ACM International Symposium on Microarchitecture (MICRO 2025)",
+    "publication_type": "Conference paper",
+    "publication_status": "Published",
+    "lineage": "many-adapter LLM serving / LoRA serving / inference scheduling",
     "topics": [
-      "LLMサービング",
-      "モデルカスケード",
-      "資源配分",
-      "並列化戦略",
-      "要求ルーティング",
-      "SLO"
+      "LLM推論",
+      "LoRA",
+      "アダプタキャッシュ",
+      "スケジューリング",
+      "GPUメモリ"
     ],
-    "importance": "従来は別々に扱われがちだったモデルカスケードの経路方策と実際のGPU配置・並列構成を、要求分布が配置を変え、配置が遅延を変えて次の経路判断へ戻る閉ループとして最適化した点が重要である。",
-    "implementation": "論文はSGLang上の実モデル実験とETH EASL Scratchpad系シミュレータを用いる。公開コードURLは公式論文本文から確認できなかった。",
-    "hardware_evaluation": "4台のGPUサーバに各8基のNVIDIA H100 80GB、サーバ内NVLink 400GB/s、サーバ間InfiniBand 200GB/sの合計32 GPU環境。",
-    "quality_effect": "GPT-4oを大規模言語モデル判定器として応答品質を0〜100で評価し、品質要件70、80、85、90などを満たす条件で遅延SLOと処理性能を比較する。",
-    "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf",
+    "importance": "多数アダプタ提供で、転送とスケジューリングを別問題として扱わず、GPU内キャッシュと要求分類を協調させた実システム研究。",
+    "hardware_evaluation": "主評価はAMD EPYC 9454 CPUと48GB NVIDIA A40 GPUの実機。拡張評価は24/48/80GB構成のA100、複数GPU評価は80GB A100を4基使用する。",
+    "quality_effect": "モデル重みやアダプタ値を近似・量子化する手法ではなく、キャッシュ配置と要求順序だけを変更するため、生成品質そのものを意図的に変えない。出力長予測誤差は性能へ影響するが、意味品質の近似ではない。",
+    "source": "https://arxiv.org/abs/2411.17741",
     "sources": [
-      "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b76105b94a8c1286c860ad885ec588f1-Abstract-Conference.html",
-      "https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf",
-      "https://arxiv.org/abs/2506.04203"
+      "https://arxiv.org/abs/2411.17741",
+      "https://arxiv.org/html/2411.17741",
+      "https://doi.org/10.1145/3725843.3756083"
     ],
     "code": null,
+    "implementation": "オープンソースのS-LoRAを基盤に実装。追加のハードウェア、OS支援、CUDAカーネル変更は不要。論文本文では公式コードURLを確認できない。",
     "last_checked": "2026-09-18",
-    "references": [],
     "references_checked_at": "2026-09-18",
-    "references_source": "ICLR 2026 official conference paper",
-    "references_total": 45
+    "references_source": "primary-reference-section",
+    "references_total": 60,
+    "references": [
+      {
+        "canonical_id": "arXiv:2307.01789",
+        "arxiv_id": "2307.01789",
+        "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters"
+      },
+      {
+        "canonical_id": "arXiv:2310.18547",
+        "arxiv_id": "2310.18547",
+        "title": "Punica: Multi-Tenant LoRA Serving"
+      },
+      {
+        "canonical_id": "arXiv:2401.11240",
+        "arxiv_id": "2401.11240",
+        "title": "CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference"
+      },
+      {
+        "canonical_id": "arXiv:2408.15792",
+        "arxiv_id": "2408.15792",
+        "title": "Efficient LLM Scheduling by Learning to Rank"
+      },
+      {
+        "canonical_id": "arXiv:2205.14135",
+        "arxiv_id": "2205.14135",
+        "title": "FlashAttention"
+      },
+      {
+        "canonical_id": "arXiv:2312.11514",
+        "arxiv_id": "2312.11514",
+        "title": "LLM in a Flash"
+      }
+    ]
   },
   "reservation": {
-    "claim_id": "claim-64f721f42b66b8d451936690",
+    "claim_id": "claim-3482ada8e43cfce3d8d1cfd9",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
