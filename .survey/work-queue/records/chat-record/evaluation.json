@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-67c677bdf0613551686265c8","job_id":"job-research-326d710987e96b1f","data":{"hardware":"壁時計測定は単一RTX 5090、bfloat16、batch 1。モデル挙動評価はLlama-3.1-8B-Instruct、Qwen3-8B、Mistral-7B-Instruct-v0.3を使用。","software":"3モデルともbfloat16・SDPA注意、chain-of-thoughtなしの貪欲復号。Qwen3は空think blockを与えて直接回答させる。選択的再計算ハーネスは修復キャッシュ経路とfull forwardを回答位置で比較する凍結ガードを持つ。","methodology":"背景にはHotpotQA fullwiki validation段落をシャッフルして約5000トークン文脈を作るが、HotpotQAの質問・回答は使わない。約30%位置の文書境界へ合成事実を挿入し、old/new prefixが3トークナイザすべてで同長、差分1区間6トークン以下、編集位置25〜40%になるよう構築する。direct/derivedを対にし、開発100項目と異なるseed/HotpotQA indexのheld-outを使用。保持数はLlama direct 75/derived 34、Qwen 75/75、Mistral 60/58。主予算K=32、補助8/16/64。MR、最大16トークンFlip、KL回復を測る。95%区間は10,000 bootstrap、K=32の15方策対比較はモデル・条件内でHolm補正したpaired Wilcoxon。距離variantはcarrierをd=0/250/1500へ移す。失敗ゲートはLlama/Qwenで保持フィルタなし各条件n=175を用い、ridge/random forestをgrouped 5-fold CVで評価。性能は4K/8K文脈でfull prefillとspan+K32 repairを各20回（warmup 3回）測定する。","scope":"単一・連続・長さ不変で回答鎖に関係する合成編集を対象とし、dense約7〜8Bモデル、単一GPU・batch 1で検証する。長さ変更、複数編集、巨大／疎モデル、本番多重サービング、長い自由生成は未評価。"},"reservation":{"claim_id":"claim-67c677bdf0613551686265c8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-047d00d1f0ec1e00c2aa57ad",
+  "job_id": "job-research-2072895e5b6f0b68",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-047d00d1f0ec1e00c2aa57ad",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-67c677bdf0613551686265c8","job_id":"job-research-326d710987e96b1f","data":{"limitations":"編集は単一・連続・長さ不変で、合成ブロックはすべて回答鎖に関係するため、98.8%以上というstale failure率を任意の文書編集へ一般化できない。評価回答はold/newの二値的短答で、長い自由生成を測らない。Llamaはheld-out derived 75候補中34だけを保持し、d=250でも約3分の1の解ける項目だけなので選択バイアスがある。距離変更はcarrier距離と同時に絶対位置・recencyも変える。EditLocal@∂は曲線を見た後に導いた探索的規則で登録済み比較ではない。モデルはdense約7〜8B、性能はRTX 5090単一GPU・batch 1で、複数編集、長さ変更、MoE/大型モデル、本番サービングは未評価。","differences":"RAGCache/TurboRAGは文書KVを再利用するが元文書変更後の同期を扱わない。CacheBlend/ProphetKV/EPIC/Cache-Craft/KVShareは主に変更されていないチャンクを新しい組合せやクエリで使う際の文脈不一致を選択再計算するため、KV偏差やquery relevanceが有効になり得る。本研究は元ソース自体が編集され、下流KVの入力依存鎖が古くなる別故障を対象にする。KVEraserは学習済みsteering stateで局所消去し、MTN系は因果効果で下流状態を順位付けするが、本研究は訓練不要の事実置換とmatched-budget実再計算を比較する。Leylineは削除・置換などキャッシュ編集primitiveを提供し、本研究は長さ不変置換後にどこまで再計算すべきかを補完する。","implementation_status":"arXiv v1の実験研究。既存の選択的再計算primitiveを用いたハーネスで3モデルを実測し、RTX 5090で壁時計時間も測る。本文・参考文献までの確認範囲で著者公式コードURLは記載されていない。","research_positioning":"KVキャッシュ再利用の性能最適化だけでなく、キャッシュ元文書が変わった後の整合性・correctnessを扱う系統を明確化する論文である。重要な設計原則は、stale入力から状態を再構成するときは位置ごとのimportanceではなく、新鮮な入力が次位置へ伝播する連続coverageを確保すること。移植・activation patchingで得た因果重要度をそのまま実再計算の選択器へ使えないという結果は、今後のincremental KV repair評価方法にも影響する。"},"reservation":{"claim_id":"claim-67c677bdf0613551686265c8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-047d00d1f0ec1e00c2aa57ad",
+  "job_id": "job-research-2072895e5b6f0b68",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-047d00d1f0ec1e00c2aa57ad",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

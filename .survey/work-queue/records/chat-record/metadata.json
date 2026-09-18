@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-67c677bdf0613551686265c8","job_id":"job-research-326d710987e96b1f","data":{"canonical_id":"arXiv:2609.17983","arxiv_id":"2609.17983","doi":"10.48550/arXiv.2609.17983","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits","summary":"RAGやエージェントが文書KVキャッシュを再利用中に元文書を編集すると、因果注意のため編集位置より後ろのKVも古い入力に依存したままになる。全文再プリフィルは正しいが高価で、重要度の高い位置だけを散発的に再計算しても周囲の古い状態を読んでしまう。本研究はこの問題を、既知の編集区間を必ず更新したうえで追加K位置だけを再計算する予算付き修復として定式化する。約5000トークンの事実RAG文脈、Llama/Qwen/Mistralの3系統で、編集直後の連続窓EditLocalを構造・古いキャッシュ注意・CacheBlend型KV偏差・ランダム・因果診断と比較する。K=32で隣接した派生回答のマージン回復は0.937〜1.007、Flip率0.95〜1.00で全代替を大幅に上回る。クリーン状態の移植で重要に見える散在位置は実再計算では失敗し、修復には重要度より編集から依存テキストまでの連続経路を再構築する必要がある。RTX 5090では全文再プリフィルより13〜21倍高速である。","list_summary":"文書編集で古くなったKVは重要位置の散発再計算より編集直後を連続再計算する方が有効で、隣接依存なら13〜21倍高速にほぼ完全修復する。","authors":["Mingyang Mao","Wyatt Mackey","Xiaomin Lin"],"authors_affiliations":"University of South Florida, Electrical and Computer Engineering; DEVCOM Army Research Laboratory","published":"2026-09-16","publication":"arXiv:2609.17983v1","publication_type":"プレプリント","publication_status":"arXiv preprint","lineage":"KVキャッシュ再利用・選択的再計算・RAGキャッシュ編集","topics":["KV cache","stale cache","selective recomputation","RAG","cache editing","EditLocal"],"importance":"KV再利用後の文書編集という正しさ問題を、実再計算の依存鎖として整理し、注意度やKV偏差など位置単体の重要度指標より連続被覆が重要であることを示す。RAGCache/TurboRAG/CacheBlend系の再利用機構へ更新整合性を加える際の基準になる。","hardware_evaluation":"性能測定は単一RTX 5090、bfloat16、batch 1。モデル評価はLlama-3.1-8B-Instruct、Qwen3-8B、Mistral-7B-Instruct-v0.3。","quality_effect":"古いKVから編集後の正しい回答へ戻す正確性そのものをMargin Recovery、Flip率、KL回復で評価する。近似キャッシュ圧縮ではない。","source":"https://arxiv.org/abs/2609.17983","sources":["https://arxiv.org/abs/2609.17983","https://arxiv.org/pdf/2609.17983"],"code":"","implementation":"選択的再計算演算子を用いた実験実装。全文・参考文献まで確認した範囲で著者公式コードURLは記載されていない。","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv PDF全8ページを参考文献末尾まで確認。","references_total":0},"reservation":{"claim_id":"claim-67c677bdf0613551686265c8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-047d00d1f0ec1e00c2aa57ad",
+  "job_id": "job-research-2072895e5b6f0b68",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-047d00d1f0ec1e00c2aa57ad",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
