@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:07:27 JST**
+> 自動生成: **2026-09-19 07:07:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **55** |
+| 収録候補論文 | **54** |
 | 未claim Research job | **53** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 05:35:57 JST（1時間31分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-19 07:07:34 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **55** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **55** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **3** | **0** | **3** | **2** | **1** | — |
+| Research | **20** | **3** | **1** | **2** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **32** | **6** | **3** | **3** | **2** | **1** | **3** |
+| 合計 | **33** | **6** | **4** | **2** | **1** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 07:07:34 JST** [research] `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
+  - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
+  - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
 - **09-19 05:35:57 JST** [research] `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
   - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
   - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-b9d676ed397522f747b185c2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b9d676ed397522f747b185c2.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md`
-- **09-19 03:36:57 JST** [research] `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
-  - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
-  - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
 
 ### Audit
 
@@ -151,9 +151,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **3件** / 検証済み成功: **0件** / 未完了・未検証: **3件**
+- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5adb86bd27e2666265386057.json` (job `job-research-56fbeb640bc1560d`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json` (job `job-research-56fbeb640bc1560d`)
+- **成功** `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
+  - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
+  - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-ab3069d4b8b31db28dbe64b7.json` (job `job-research-56fbeb640bc1560d`)
 
 #### Audit (:30)
@@ -184,10 +188,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:06:26 JST** / heartbeat: **—** / lease expiry: **09-19 08:36:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -210,7 +211,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **55** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
@@ -230,7 +231,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **739** |
+| inference/training/survey配下の論文Markdown実体 | **740** |
 
 ### immutable submissionの未照合
 
@@ -238,8 +239,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **567** |
-| └ Research | **438** |
+| 成功result未照合のimmutable submission | **566** |
+| └ Research | **437** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
