@@ -49,6 +49,27 @@ window keyは次を含む。
 
 Actions側の `queue_worker.record_discovery_stats()` が単一writerとして `discovery-state.json` へ集約し、windowごとの `unseen_rate`、`duplicate_rate`、`candidate_acceptance_rate`、`last_position`、`scan_count`、`last_run_key`、`last_round` を耐久化する。次回workerは `last_position` をprovider adapterの再開・window shift判断に利用できる。件数がない場合に率を推測してはならず、0件は0として扱う。
 
+## 外部アクセス効率を最大化する実務指針
+
+探索では、外部検索・abstract取得・全文取得を同じコストの呼び出しとして扱わない。限られた外部アクセス枠から最大の未評価候補を得るため、次を標準的な運用指針とする。
+
+1. **canonical identityを外部検索より先に使う。** 検索候補のarXiv ID / DOI / OpenReview ID / canonical IDが得られた時点で、最新identity snapshot、`_represented_papers.json`、rejection ledger、既存jobをまとめて照合する。既知候補ごとに外部abstractや全文を取り直さない。GitHub code searchは補助に限り、canonical identity shard / represented-paper resolverを主判定にする。
+2. **1回の外部検索を複数候補へ再利用する。** 1 query / 1 result pageを1論文確認に消費せず、得られた結果集合から複数のstable identifier、title、abstract相当情報、評価値をまとめて回収し、collector bufferへ入れる。同じ取得結果をcandidate評価・重複照合・次検索軸の語彙抽出に再利用する。
+3. **軽量取得を先に使い、全文取得をDiscoveryでは原則避ける。** 検索結果、公式abstract、HTMLの冒頭・書誌情報で、対象範囲への直接性、システム寄与、実測評価の有無を判定できる場合はそこでcandidate評価を行う。Discovery段階でPDF全文取得や高コストな一次資料精読へ進まず、Researchへ送る価値がある候補だけを耐久投入する。
+4. **検索軸は高重複を確認したら早く切り替える。** 同一queryの再送や同じ上位結果の反復より、topic、date range、category、citation direction、query familyを変える。特に、新着→memory/offload→MoE→KV/network→scheduling→speculative decoding→GPU runtime→隣接分野、のように独立軸を明示的に切り替える。同じ軸を深掘りする場合もcursor/offset/date windowを進め、未走査集合を対象にする。
+5. **検索語は一般語から機構語へ絞る。** `LLM inference` や `GPU runtime` のような一般語で既知率が高い場合、`NVMe`、`CXL`、`expert cache`、`expert prefetch`、`KV transport`、`output-length scheduling`、`persistent kernel`、`prefix routing` など具体的な機構へ寄せる。新規候補率が低いquery familyはcooldownへ送る。
+6. **厳密な日付指定が低収益なら、月・ID範囲・テーマ軸へ戻す。** providerによっては「特定提出日」検索が空振りしやすい。結果0件を探索枯渇とせず、arXiv月、ID帯、カテゴリ、隣接キーワードへ検索窓を変える。結果が出ない厳密日付queryを繰り返さない。
+7. **非同期処理を探索の同期障壁にしない。** Discovery submission保存後、GitHub Actionsによるdedupe / materialization待ちだけを理由に停止しない。submission自体の耐久保存を確認したら、同じrunの次の独立探索軸へ進み、後で最新identity/stateを再取得して取り込み結果を確認する。
+8. **run-local exclusionを即時更新する。** 今回runで重複・不採用と確認したidentityは、Actionsやledger反映を待たずrun-local exclusionへ入れる。同じrunで同じ候補に外部アクセスを再消費しない。
+9. **空ラウンドも情報として使う。** ある軸が全既知・全不採用だった場合、それを失敗として同じqueryを繰り返さず、そのwindowのduplicate率・unseen率低下の証拠として次軸選択へ利用する。連続空ラウンドが出ても、独立未走査軸が残る限り探索は継続する。
+10. **7 round以上回せたrunでは再現可能性を残す。** 最終通知では、どの検索軸順序が高収益だったか、どのquery/windowが低収益だったか、1回の外部取得をどう複数候補へ再利用したか、canonical identity照合でどの無駄アクセスを避けたか、非同期待ちをどう回避したかを短く報告する。外部アクセス回数や残量が実測できない場合は推測値を作らない。
+
+### search-window選択への反映
+
+次windowを選ぶ際は、単純な「未走査か」だけでなく、**期待情報利得 / 外部アクセスコスト**も考慮する。具体的には、過去の `unseen_rate` と `candidate_acceptance_rate` が高く `duplicate_rate` が低いwindow、または未走査で重点テーマに直結する具体的機構queryを優先する。一方、直近runで高重複・空振り・低受理が続いた一般queryや厳密日付queryはcooldownへ送る。
+
+ただし、この効率化は品質基準を緩める理由にしてはならない。候補の採否基準、一次資料精読のResearch契約、最終dedupe契約は従来どおり維持する。
+
 ## workerへ返った後の処理
 
 collectorが返したbufferに対してのみrelevance評価、priority付与、candidate選定を行う。品質基準を満たすdedupe済みcandidateがあればworkflow-v10契約に従い5件以下ずつimmutable Discovery submissionへ耐久保存する。5件はsubmission単位の上限であり、run全体の探索上限ではない。
