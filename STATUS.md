@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:24:49 JST**
+> 自動生成: **2026-09-19 07:25:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 07:20:25 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-19 07:20:25 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **10** | **5** | **5** | **2** | **0** | — |
+| Research | **21** | **11** | **5** | **6** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **13** | **8** | **5** | **2** | **0** | **3** |
+| 合計 | **34** | **14** | **8** | **6** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **10件** / 検証済み成功: **5件** / 未完了・未検証: **5件**
+- immutable submission: **11件** / 検証済み成功: **5件** / 未完了・未検証: **6件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`)
 - **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
   - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
@@ -165,6 +165,7 @@
   - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-89e2edf847dd8923a0885b8e.json` (job `job-research-b3f94863f38e0308`)
 - **成功** `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models
   - job: `.survey/work-queue/jobs/job-research-3001166a9d479500.json`
   - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
@@ -181,7 +182,6 @@
   - result: `.survey/work-queue/results/research/attempt-c2a51a6ace4a43448c42f0b1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c2a51a6ace4a43448c42f0b1.json`
   - paper: `papers/inference/08-speculative-decoding/2026-2609.15504-orthrus-numerical-precision-losslessness.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c94b0bb7795aeb0a202c4cca.json` (job `job-research-f7dcdf40e7d3538f`)
 
 #### Audit (:30)
 
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **569** |
-| └ Research | **440** |
+| 成功result未照合のimmutable submission | **570** |
+| └ Research | **441** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
