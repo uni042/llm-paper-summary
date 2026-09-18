@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:41:02 JST**
+> 自動生成: **2026-09-19 03:41:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.07223` — SpecAttn: Co-Designing Sparse Attention with Self-Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 03:37:22 JST** / heartbeat: **—** / lease expiry: **09-19 05:07:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-469eef375f5f828e.json`
+- `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 03:41:20 JST** / heartbeat: **—** / lease expiry: **09-19 05:11:20 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ebde0cc040167968.json`
 
 #### Audit
 
