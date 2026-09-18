@@ -6,10 +6,10 @@
     "terminal_research_rejections"
   ],
   "updated_at": "2026-09-18T20:00:00+09:00",
-  "submission_count": 14,
+  "submission_count": 15,
   "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 42,
-  "rejection_record_count": 42,
+  "rejection_observation_count": 43,
+  "rejection_record_count": 43,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -186,6 +186,28 @@
       "axis": "KV cache metadata・RDMA・分離サービングnetwork transport",
       "run_key": "2026-09-18T16:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260918T1701JST-discovery-specialist-kv-metadata-3.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2506.06472": {
+      "primary_identity": "id:arXiv:2506.06472",
+      "identity_tokens": [
+        "id:arXiv:2506.06472",
+        "title:costefficient llm training with lifetimeaware tensor offloading via gpudirect storage",
+        "url:https://arxiv.org/abs/2506.06472"
+      ],
+      "canonical_id": "arXiv:2506.06472",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
+      "source_url": "https://arxiv.org/abs/2506.06472",
+      "rejection_reason": "GPUDirect StorageとSSDへのlifetime-aware tensor offloadは技術的に強いが、対象はLLM training activation/tensor migrationであり、現在のinference systems収録範囲外。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T20:00:00+09:00",
+      "last_rejected_at": "2026-09-18T20:00:00+09:00",
+      "axis": "2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload",
+      "run_key": "2026-09-18T20:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260918T2021JST-discovery-specialist-2025-memory-4.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2509.12993": {
