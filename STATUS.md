@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 21:04:45 JST**
+> 自動生成: **2026-09-18 21:05:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
-| 未claim Research job | **52** |
+| 収録候補論文 | **53** |
+| 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **37** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間57分前）** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間58分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -200,9 +200,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 21:04:04 JST** / heartbeat: **—** / lease expiry: **09-18 22:34:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-37f936e1437c5b29.json`
+- `arXiv:2608.21719` — PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 21:04:50 JST** / heartbeat: **—** / lease expiry: **09-18 22:34:50 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f97acaf8df0df8b2.json`
 - `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving / worker `scheduled-chat-llm-survey`
   - claim: **09-18 20:28:41 JST** / heartbeat: **—** / lease expiry: **09-18 21:58:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-7fcd5e4f3604dab7.json`
@@ -225,7 +225,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
