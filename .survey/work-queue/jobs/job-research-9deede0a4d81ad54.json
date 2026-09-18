@@ -17,5 +17,16 @@
   "created_at": "2026-09-18T19:02:33+00:00",
   "completed_at": "2026-09-18T20:18:32+00:00",
   "blocker": "一次資料全文を安全に取得できなかった。DOI 10.1109/LCA.2026.3660969のIEEE掲載情報は確認できたが、本文全文へ到達できず、題名・DOI・著者で探索してもarXivや著者公式の同一論文全文は確認できなかった。後続一次論文FLINTやHBFlexがH3を先行研究として引用していることは確認したが、それらの記述をH3本文の代替証拠には使用しなかった。検索で得られた二次解説も全文精読の代わりにせず、推測による5-slot生成を避けて再試行可能なblockedとして保存する。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-5dff7f0f4fd678a8b6c50581.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-5dff7f0f4fd678a8b6c50581.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-18T20:18:32+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-18T20:18:32+00:00",
+      "reason": "一次資料全文を安全に取得できなかった。DOI 10.1109/LCA.2026.3660969のIEEE掲載情報は確認できたが、本文全文へ到達できず、題名・DOI・著者で探索してもarXivや著者公式の同一論文全文は確認できなかった。後続一次論文FLINTやHBFlexがH3を先行研究として引用していることは確認したが、それらの記述をH3本文の代替証拠には使用しなかった。検索で得られた二次解説も全文精読の代わりにせず、推測による5-slot生成を避けて再試行可能なblockedとして保存する。"
+    }
+  ],
+  "last_blocked_at": "2026-09-18T20:18:32+00:00",
+  "retry_not_before": "2026-09-18T22:05:28+00:00"
 }

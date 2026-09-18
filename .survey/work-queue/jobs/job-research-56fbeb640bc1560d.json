@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2603.28018",
   "paper_path": "papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md",
   "selection_reason": "edge LLM handoverでKV cache転送とtoken forwarding後のprefill再計算をjoint schedulingし、backhaul帯域下のservice interruptionを最小化する。KV移動と再計算の境界条件を扱う隣接研究。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-18T16:24:23+00:00",
-  "completed_at": "2026-09-18T16:24:23+00:00",
-  "retry_not_before": "2026-09-18T19:40:17+00:00"
+  "retry_queued_at": "2026-09-18T21:05:28+00:00"
 }

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **704本**。
+収録論文: **713本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**704本**。
+推論論文：**713本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -38,7 +38,7 @@
 | [02-moe-inference](02-moe-inference/README.md) | 1 |
 | [02-moe-offload](02-moe-offload/README.md) | 2 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
-| [03-hierarchical-memory](03-hierarchical-memory/README.md) | 1 |
+| [03-hierarchical-memory](03-hierarchical-memory/README.md) | 2 |
 | [03-kv-cache](03-kv-cache/README.md) | 3 |
 | [03-moe-expert-offload](03-moe-expert-offload/README.md) | 4 |
 | [03-offload-hierarchical-memory](03-offload-hierarchical-memory/README.md) | 2 |
@@ -71,6 +71,7 @@
 | [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 18 |
 | [08-quantization-kernels](08-quantization-kernels/README.md) | 1 |
+| [08-speculative-decoding](08-speculative-decoding/README.md) | 1 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 16 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
@@ -81,5 +82,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 60 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 67 |
 <!-- survey:auto:end -->
