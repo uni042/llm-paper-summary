@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.17538",
+      "title": "D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation",
+      "source_url": "https://arxiv.org/abs/2607.17538",
+      "priority": 82,
+      "reason": "RAG inferenceのvector retrievalをNAND array内部へ押し込み、Dual-Bound Tight Similarity Sensingとcontrastive adapterを協調設計するin-storage accelerator。CPU比最大41.7x高速・71x高energy efficiency、既存in-storage RAG accelerator比12.13x throughputを報告し、storage-side inference pipelineの隣接系統として価値が高い。"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3679240.3734604",
+      "title": "StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices",
+      "source_url": "https://doi.org/10.1145/3679240.3734604",
+      "priority": 76,
+      "reason": "ACM e-Energy 2025の一次査読論文。attention matrixの再計算を永続storage accessへ置換するcompute-vs-storage設計を提案し、LazyLLM比1.45x energy改善、MoE/PTQ拡張で2.64x/2.83x energy reductionを報告する。通常のKV offloadとは異なるstorage materialization系統として差分が明確。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+      "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3660969",
+      "priority": 84,
+      "reason": "IEEE Computer Architecture Letters 2026の査読論文。HBMとHigh Bandwidth Flashを役割分担し、巨大なread-only data、とくにshared precomputed KV cacheをHBFへ置くhybrid architectureを評価する。HBM-only比最大2.69x throughput-per-powerを報告し、HBF階層memory系統の基礎候補として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2605.23294",
+      "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.23294",
+      "priority": 86,
+      "reason": "MoEのdynamic sparse expert activationを3D NAND CIMへ直接適合させ、CAM maskingとactivated expert computationを統合するarchitecture。実験で既存design比4-114.8x performance、3.9-70x energy efficiencyを報告し、MoE expert residencyとflash computeを交差させる重点候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.09216",
+      "title": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies",
+      "source_url": "https://arxiv.org/abs/2603.09216",
+      "priority": 83,
+      "reason": "product-level PIM-enabled systemでprefill/decode間のmemory attributeとweight layout不整合を特定し、DRAM double bufferingとonline weight rearrangementでsoftware-onlyに解消する。Llama 3.2評価で約47.8-49.7% memory capacity節約と理論最大に近い性能を報告し、PIM実装上のsystem integration課題を直接扱う。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T03:00:00+09:00",
+    "round": "specialist-near-memory-2",
+    "axis": "in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration",
+    "query_summary": "第1roundのflash/PIM/CXLから機構語へ展開し、computational storage、near-storage、GPU-SSD、NAND CIM、HBFを走査した。HILOS、SLIM、Smart-Infinity、NVLLM、DUAL-BLADE、KVDrive、FlashAccel、FLINTはcanonical title/arXiv shardで既存を確認し早期除外。未収録のD-NOVA、StoreLLM、H3、NASiC、PIM-SHERPAは一次arXiv/ACM/IEEE情報でLLM systemsへの直接性と定量評価を確認した。",
+    "candidate_count": 13,
+    "duplicate_filtered_count": 8,
+    "duplicate_canonical_ids": ["arXiv:2502.09921", "arXiv:2507.09201", "arXiv:2403.06664", "arXiv:2604.25699", "arXiv:2604.26557", "arXiv:2605.18071", "arXiv:2607.10186", "title:flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration"],
+    "next_axis_hint": "第1-2roundでstorage/flash/PIMの新規候補を十分得たため、次はnetwork collective/disaggregationまたはGPU runtime/compilerの非arXiv会議論文へ軸を切り替える"
+  }
+}
