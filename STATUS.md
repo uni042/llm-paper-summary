@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 23:35:17 JST**
+> 自動生成: **2026-09-18 23:35:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **5** | **2** | **3** | **1** | **1** | — |
+| Research | **8** | **4** | **2** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **28** | **14** | **11** | **3** | **1** | **1** | **2** |
+| 合計 | **28** | **13** | **11** | **2** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -141,8 +141,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 21:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **2件** / 未完了・未検証: **3件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-047d00d1f0ec1e00c2aa57ad.json` (job `job-research-2072895e5b6f0b68`)
+- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
 - **成功** `arXiv:2609.17983` — Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits
   - job: `.survey/work-queue/jobs/job-research-326d710987e96b1f.json`
   - result: `.survey/work-queue/results/research/attempt-67c677bdf0613551686265c8-repair1.json` (`ok=true`)
@@ -208,9 +207,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 22:29:13 JST** / heartbeat: **09-18 23:32:13 JST** / lease expiry: **09-19 01:02:13 JST**
+  - claim: **09-18 23:35:23 JST** / heartbeat: **—** / lease expiry: **09-19 01:05:23 JST**
   - evidence: `.survey/work-queue/claims/job-research-2072895e5b6f0b68.json`
 
 #### Audit
