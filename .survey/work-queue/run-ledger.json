@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T10:04:06.131100+00:00",
+  "updated_at": "2026-09-18T10:06:51.361651+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T10:04:06.131100+00:00",
+      "last_recorded_at": "2026-09-18T10:06:51.361651+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 249,
+        "research_completed": 250,
         "audit_completed": 0,
         "discovery_completed": 133,
         "blocked": 22,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35235006349:1",
-          "recorded_at": "2026-09-17T14:39:41.046300+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35235006349",
-            "run_attempt": "1",
-            "source_sha": "218c6d922e1f998c873c14e32b63d0911cb79212"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35237448609:1",
           "recorded_at": "2026-09-17T15:04:40.492528+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35333007686:1",
+          "recorded_at": "2026-09-18T10:06:51.361651+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35333007686",
+            "run_attempt": "1",
+            "source_sha": "853a78d9f02cab62cc9671a0c37f8df44dd89103"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22833,6 +22833,14 @@
           "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-2afdd6d968c4500a",
+          "type": "research",
+          "canonical_id": "arXiv:2406.19707",
+          "title": "InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24819,7 +24827,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 710,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
