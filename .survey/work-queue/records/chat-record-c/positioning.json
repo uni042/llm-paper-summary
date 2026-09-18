@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e7451954f296ee21fbc9ac8c",
-  "job_id": "job-research-21b30a62610ad176",
-  "data": {
-    "limitations": "主評価は12台A30上のLlama-2-7B/ShareGPTで、より大規模な異種GPUクラスタや複数model混在、prefill/decode分離構成でのend-to-end評価は限定的。出力長推定器はmodel/tokenizerごとに40k組でfine-tuneする一回のoffline costを持ち、workload drift時には再学習が必要になり得る。PredictorはCPU simulationを行うため低負荷では単純heuristicよりscheduler overheadが大きい。Vidur系simulationがbackend schedulingを十分再現できることが前提で、未知の将来到着は完全には予測できない。migration比較はreleased Llumnixを忠実に使い、当該workload向け再調整はしていない。",
-    "differences": "Round-robinやMinQPMは現在の粗いload proxyだけで配送するのに対し、Astrolabeは要求の予想出力長と各instanceのbatch/memory状態をsimulationして利用者向けE2E遅延を直接予測する。TetriServe/DynamoLLM等の中央予測型に対し、重いinstance状態を中央へ集約せずsidecarで局所予測する。full fanout予測に対しPo2で問い合わせ数を定数化しherdingを無作為化する。Llumnixのlive migrationに対しては、実行前のone-shot placementで負荷偏りを防ぎKV cache転送を基本経路から除く。",
-    "implementation_status": "SYSTOR 2026採択論文、DOI 10.1145/3793230.3837768。arXiv v3全文HTMLで実装・評価詳細を公開。prototypeはVidur-derived Predictor、RoBERTa length tagger、vLLM status API統合、stateless global schedulerから構成される。論文本文から公開code URLは確認できなかった。",
-    "research_positioning": "LLM servingのglobal scheduling/load balancing系統で、予測駆動schedulerとrandomized load balancingを統合するsystems研究。KV cache移送を避ける点でnetwork-aware servingとも接続し、将来はP-D disaggregationやheterogeneous hardwareでPredictor objectiveをTTFT、E2E、memory pressure等へ切り替える拡張が考えられる。単純なqueue-length schedulingとmigration-based rebalancingの間に、低fanoutな予測one-shot dispatchという設計点を示す。"
-  },
+  "attempt_id": "attempt-85ce7c28af347af9007d9c33",
+  "job_id": "job-research-ebde0cc040167968",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e7451954f296ee21fbc9ac8c",
+    "claim_id": "claim-85ce7c28af347af9007d9c33",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e7451954f296ee21fbc9ac8c",
-  "job_id": "job-research-21b30a62610ad176",
-  "data": {
-    "hardware": "主環境はCloudLabの12ノードで、各ノードにAMD EPYC 7302 16-core CPU×2、128GB ECC、NVIDIA A30 24GB×1、25Gbps NICを搭載する。migration比較は2ノード各4×A100 40GB、100Gbps NIC。長さ推定器は専用L40で学習・オフライン推論。",
-    "software": "主評価はLlama-2-7B FP16、vLLM、FlashInfer、greedy decoding、最大batch 48、chunked prefill 512。各instanceに16 Predictor replicas。追加でQwen2-7B、Llama-2-70B TP=4を評価。比較schedulerはround-robin、Random、MinQPM、INFaaS++、Llumnix-、full Llumnix、fanout等。",
-    "methodology": "ShareGPT 50k会話を主workloadとし、Poisson到着率を変化させる。各scheduler/QPS点は10k requests。SLO容量はP99 TTFT<=10秒を満たす最大QPS。TTFT、E2E、throughput、preemption、scheduler overhead、CPU/RSSを測定し、別provision clusterでも再現性を確認する。BurstGPT、gamma burst、予測noise、batch/chunk/model変更、k=2/4/8/12、oracle lengthを追加評価。",
-    "scope": "multi-instance aggregated LLM servingのglobal dispatchを主対象とする。主結果は単一GPU instance群のLlama-2-7Bだが、Qwen2-7B、Llama-2-70B TP=4、A100 migration比較で一般性を補足する。length estimatorはmodel/tokenizerごとの事前fine-tuneを要する。"
-  },
+  "attempt_id": "attempt-85ce7c28af347af9007d9c33",
+  "job_id": "job-research-ebde0cc040167968",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e7451954f296ee21fbc9ac8c",
+    "claim_id": "claim-85ce7c28af347af9007d9c33",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
