@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:19:33 JST**
+> 自動生成: **2026-09-19 07:20:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-19 07:15:47 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **51** |
+| 最終検証済みResearch収録 | **09-19 07:20:25 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **8** | **4** | **4** | **2** | **0** | — |
+| Research | **22** | **9** | **5** | **4** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **11** | **7** | **4** | **2** | **0** | **3** |
+| 合計 | **35** | **12** | **8** | **4** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 07:20:25 JST** [research] `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
+  - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
+  - result: `.survey/work-queue/results/research/attempt-59bd34d06f011611b0132598.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-59bd34d06f011611b0132598.json`
+  - paper: `papers/inference/05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md`
 - **09-19 07:15:47 JST** [research] `arXiv:2609.15504` — How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus
   - job: `.survey/work-queue/jobs/job-research-9c0ef4e091be369c.json`
   - result: `.survey/work-queue/results/research/attempt-c2a51a6ace4a43448c42f0b1.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-ff353eb4bf9505979ad79bf0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ff353eb4bf9505979ad79bf0.json`
   - paper: `papers/inference/99-other-inference-systems/2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md`
-- **09-19 04:39:51 JST** [research] `DOI:10.52202/085713-1587` — HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-ca0df1c4e0a9af97.json`
-  - result: `.survey/work-queue/results/research/attempt-818968501d26285ed6167878.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-818968501d26285ed6167878.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md`
 
 ### Audit
 
@@ -151,7 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **8件** / 検証済み成功: **4件** / 未完了・未検証: **4件**
+- immutable submission: **9件** / 検証済み成功: **5件** / 未完了・未検証: **4件**
+- **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
+  - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
+  - result: `.survey/work-queue/results/research/attempt-59bd34d06f011611b0132598.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-59bd34d06f011611b0132598.json`
+  - paper: `papers/inference/05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5adb86bd27e2666265386057.json` (job `job-research-56fbeb640bc1560d`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-792a11fa4fd24a27f2b17f5c.json` (job `job-research-b3520b6ffb18fc43`)
 - **成功** `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
@@ -205,10 +210,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:19:26 JST** / heartbeat: **—** / lease expiry: **09-19 08:49:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b3520b6ffb18fc43.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -231,7 +233,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -251,7 +253,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **743** |
+| inference/training/survey配下の論文Markdown実体 | **744** |
 
 ### immutable submissionの未照合
 

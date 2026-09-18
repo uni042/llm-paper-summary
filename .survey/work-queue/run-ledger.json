@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T22:15:52.434034+00:00",
+  "updated_at": "2026-09-18T22:20:29.411678+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T22:15:52.434034+00:00",
+      "last_recorded_at": "2026-09-18T22:20:29.411678+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 279,
+        "research_completed": 280,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35317435409:1",
-          "recorded_at": "2026-09-18T07:03:11.892207+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35317435409",
-            "run_attempt": "1",
-            "source_sha": "651e49e3516c2e6fae10eaf666acd7e22b31a96f"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35317594570:1",
           "recorded_at": "2026-09-18T07:05:38.066210+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35400695068",
             "run_attempt": "1",
             "source_sha": "69301190ae1ac508c5eb5ba4112c34d5178a0dbe"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35401084626:1",
+          "recorded_at": "2026-09-18T22:20:29.411678+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35401084626",
+            "run_attempt": "1",
+            "source_sha": "4245aaa3b39ed982cb255343a95c613d02cd4fc0"
           },
           "signals": [
             "research_completed"
@@ -23300,6 +23300,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.15504",
           "title": "How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b3520b6ffb18fc43",
+          "type": "research",
+          "canonical_id": "arXiv:2503.08467",
+          "title": "Accelerating MoE Model Inference with Expert Sharding",
           "from": "ready",
           "to": "completed"
         }
