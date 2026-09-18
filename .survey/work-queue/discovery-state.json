@@ -1,54 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T17:02:47+00:00",
+  "updated_at": "2026-09-18T17:03:27+00:00",
   "last_run_key": "2026-09-19T01:00:00+09:00",
-  "last_round": "specialist-execution-state-5",
+  "last_round": "specialist-elastic-migration-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 19,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 21,
+  "last_empty_round_reason": "elastic migrationの上位system候補は既にcanonical identityへ収録済みだった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T07:00:13+09:00",
-      "round": "specialist-kv-moe-memory-revalidation-1",
-      "axis": "KVページ制御・MoEメモリ分離・復元系の再探索",
-      "query_summary": "KVページ制御、冷間MoEの重み/KV分離、KV復元、非一様KV、MoE専門家先読みを軽量評価し、決定論的research job IDと既存正本を照合した。PersistentKV、CrossPool、CacheFlow、Tangram、SPICEはいずれも既収録または既存jobであることを確認した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2606.26666",
-        "arxiv:2606.24506",
-        "arxiv:2604.25080",
-        "arxiv:2606.06302",
-        "arxiv:2608.21240"
-      ],
-      "next_axis_hint": "2609新着・recent revisionを再確認し、その後forward citationと隣接OS/GPU runtime軸へ移る",
-      "source_submission": "work-queue/submissions/20260913T0704JST-discovery-02deb7897ac2d559.json"
-    },
-    {
-      "run_key": "2026-09-13T07:00:13+09:00",
-      "round": "specialist-adaptive-prefill-scheduling-2",
-      "axis": "適応プリフィル・KV予約・デコード干渉スケジューリング",
-      "query_summary": "長文脈サービングのプリフィル分割・KV予約・デコード干渉を軽量評価し、P-PAS、SLOWeave、Robust KV Cache Managementを比較した。SLOWeaveとRobust KVは既収録で、P-PASは最新HEADのjob/identity delta/repo検索およびLibrary pendingで未登録を確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2609.07883",
-        "arxiv:2607.16892"
-      ],
-      "next_axis_hint": "新規候補が得られたため枯渇判定をリセットし、2609新着、forward citation、OS/GPU runtime、MoE expert I/O、CXL/SSDの独立軸を再走査する",
-      "source_submission": "work-queue/submissions/20260913T0707JST-discovery-909ac1eecafe8335.json"
-    },
     {
       "run_key": "2026-09-13T07:00:13+09:00",
       "round": "specialist-exhaustion-final-3",
@@ -7115,6 +7076,55 @@
       ],
       "next_axis_hint": "fault-tolerant serving・KV checkpoint placement・model reload overlap・request recoveryを走査する",
       "source_submission": "work-queue/submissions/20260919T0223JST-discovery-specialist-execution-state-5.json"
+    },
+    {
+      "run_key": "2026-09-19T01:00:00+09:00",
+      "round": "specialist-fault-recovery-6",
+      "axis": "fault-tolerant LLM serving・KV checkpoint/replication・failure recovery",
+      "query_summary": "KV state persistenceからfailure recoveryへ展開。KevlarFlow、GhostServe、LUMEN、FailSafe、R2CCL等を確認したが、主要system候補はcanonical identity shardで既収録/既投入だったため新規candidateなし。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.22438",
+        "arXiv:2605.00831",
+        "arXiv:2606.17787",
+        "arXiv:2511.14116",
+        "arXiv:2512.25059"
+      ],
+      "next_axis_hint": "2024-2025のrequest migration・elastic serving・KV placementと、model/KV co-migrationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260919T0228JST-discovery-specialist-fault-recovery-6.json"
+    },
+    {
+      "run_key": "2026-09-19T01:00:00+09:00",
+      "round": "specialist-elastic-migration-7",
+      "axis": "request/KV migration・elastic memory・model/KV co-migration",
+      "query_summary": "2024-2026のrequest migration、elastic memory、runtime layer swapping、KV/model migrationを走査。MELL、eLLM、MorphServe、BanaServe、Pallas、MemServe等の主要候補はcanonical identity shardで既知だった。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2501.06709",
+        "arXiv:2506.15155",
+        "arXiv:2506.02006",
+        "arXiv:2510.13223",
+        "arXiv:2608.16477",
+        "arXiv:2406.17565"
+      ],
+      "next_axis_hint": "新規性が高い未走査のworkshop/measurement、非arXiv systems論文、2026年後半のstorage/serving隣接分野へ戻る",
+      "source_submission": "work-queue/submissions/20260919T0234JST-discovery-specialist-elastic-migration-7.json"
     }
   ],
   "axes": {
@@ -12556,6 +12566,32 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "fault-tolerant serving・KV checkpoint placement・model reload overlap・request recoveryを走査する"
+    },
+    "fault-tolerant LLM serving・KV checkpoint/replication・failure recovery": {
+      "last_run_key": "2026-09-19T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2024-2025のrequest migration・elastic serving・KV placementと、model/KV co-migrationへ軸を移す"
+    },
+    "request/KV migration・elastic memory・model/KV co-migration": {
+      "last_run_key": "2026-09-19T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "新規性が高い未走査のworkshop/measurement、非arXiv systems論文、2026年後半のstorage/serving隣接分野へ戻る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
