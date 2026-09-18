@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1b78e7fa82b82abe032f6a4d","job_id":"job-research-06a7e035a0f5ff0b","data":{"canonical_id":"arXiv:2609.17184","arxiv_id":"2609.17184","doi":"10.48550/arXiv.2609.17184","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers","summary":"LoopSpecは同じTransformerブロックを複数の再帰深度で反復するループ型Transformer向けの、学習不要な自己投機復号である。早い再帰状態の次トークン分布を第一提案として未来トークンの計算を先行させ、現在トークンの最終深度検証と同じ共有ブロックのバッチ内で並行実行する。第一提案が外れた際の全再開を減らすため、より深い状態から残差分布に基づく第二提案を必要時だけ生成し、段階的棄却標本化で厳密な目標分布を維持する。SGLang実装、枝ごとのKVキャッシュ管理、CUDA Graph最適化を用い、2系列7チェックポイントの推論で最大6.83倍の損失なし高速化を示す。","list_summary":"ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。","authors":["SangLyul Cho","Langqing Cui","Sehoon Kim","Dongsu Han","Insu Han"],"authors_affiliations":"Seoul National University; KAIST","published":"2026-09-15","publication":"arXiv:2609.17184","publication_type":"プレプリント","publication_status":"arXiv v1公開","lineage":"投機復号・自己投機・ループ型Transformer・推論パイプライン","topics":["投機復号","ループ型Transformer","自己投機","パイプライン","KVキャッシュ"],"importance":"共有重みを再帰深度ごとに繰り返し読むためメモリ帯域律速になりやすいループ型Transformerで、中間状態を無料に近いドラフタとして再利用し、異なるトークン位置・深度の枝を同一共有ブロック呼出しへまとめる。外部ドラフタ学習・追加重みなしで損失なし高速化する。","implementation":"SGLang上に実装し、枝単位KVキャッシュ管理とCUDA Graphを利用。公式コード kaist-flexml-lab/loopspec とプロジェクトページを公開。","hardware_evaluation":"論文実験はSGLang実装で複数のRaven/Ouro系ループ型Transformerを推論評価。詳細GPU構成は実験付録に記載され、主指標はwall-clock speedup、平均受理長、実効バッチ等。","quality_effect":"棄却標本化と残差再標本化によりsampling時も最終深度の目標分布を厳密に保持し、greedy時も最終モデルと同じトークンを確定する損失なし方式。","source":"https://arxiv.org/abs/2609.17184","sources":["https://arxiv.org/abs/2609.17184","https://arxiv.org/html/2609.17184","https://arxiv.org/pdf/2609.17184"],"code":"https://github.com/kaist-flexml-lab/loopspec","project":"https://langq1225.github.io/loopspec/","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文のReferences節を確認。","references_total":37},"reservation":{"claim_id":"claim-1b78e7fa82b82abe032f6a4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-09f66508f5726f1ca0af561e",
+  "job_id": "job-research-4fd6dcd288e7197d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-09f66508f5726f1ca0af561e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

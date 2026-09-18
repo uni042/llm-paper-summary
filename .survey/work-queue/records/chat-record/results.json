@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1b78e7fa82b82abe032f6a4d","job_id":"job-research-06a7e035a0f5ff0b","data":{"overview":"LoopSpecはOuro系R=4で最大3.36倍、Raven系R=32で最大6.83倍のdecoding wall-clock高速化を示す。Ravenでは第一提案d1=2と第二提案d2=8または10の組合せが早い投機開始と高受理率を両立し、第一提案だけでは失敗する早期候補を第二提案が回収する。thinkingモデルでもgreedy最大2.95倍、sampling最大2.83倍を維持する。残差第二提案とゲートを順に追加するアブレーションで全ベンチマークの速度が改善し、学習型DFlashより最大1.7倍高速である。","key_results":[{"metric":"最大decoding速度向上","value":"6.83倍","baseline":"標準自己回帰復号","condition":"Raven-TinyLlama-3T、HumanEval+、d1=2,d2=10","interpretation":"深いR=32のループ型モデルでは再帰深度をトークン位置並列性へ変換する余地が大きい。"},{"metric":"Raven系最大速度範囲","value":"5.88〜6.83倍","baseline":"標準自己回帰復号","condition":"R=32 base checkpoints、一般推論・数学・コード","interpretation":"複数Ravenチェックポイントで一貫して大きな高速化を得る。"},{"metric":"Ouro系最大速度","value":"最大3.36倍","baseline":"標準自己回帰復号","condition":"R=4 base models","interpretation":"再帰深度が浅くても共有重みパイプラインで明確な改善がある。"},{"metric":"thinkingモデル","value":"greedy最大2.95倍、sampling最大2.83倍","baseline":"標準自己回帰復号","condition":"GSM8K/MATH-500/AIME 2024/2025","interpretation":"長い推論列と確率的samplingでも損失なし高速化が維持される。"},{"metric":"残差第二提案＋ゲート","value":"3.74〜5.00倍","baseline":"非残差第二提案3.24〜4.59倍","condition":"Raven-Llama-3.2、sampling、d1=2,d2=8","interpretation":"残差分布で第一提案失敗後の確率質量を狙い、必要時だけ枝を増やす設計が実速度にも寄与する。"},{"metric":"DFlash比較","value":"最大1.7倍高速","baseline":"学習型DFlash","condition":"Ouro thinking models、greedyとsampling","interpretation":"追加学習不要でもループ構造固有の中間状態再利用により学習型ドラフタを上回る。"}],"negative_results":"平均受理長γが最大の深度設定が必ずwall-clock最速とは限らない。d1を浅くしすぎるとドラフト生成、枝初期化、Ravenの重い前後処理層の頻度が増え、再帰回数削減を相殺する。第一提案のみでは浅いd1の受理率低下で再開が増える。第二枝を常時生成すると枝数が急増するためゲートが必要。手法はループ型Transformer構造を前提とする。","interpretation":"ループ型Transformerの『同じ重みを何度も読む』弱点を、同じ重みだから異なるトークン・深度の枝をまとめて処理できるという利点へ反転させる。再帰深度を直列計算として消費せず、未来トークンの投機進捗へ変換することが核心である。","quality_impact":"greedyでは最終深度argmax、samplingでは最終深度分布p_Rを棄却標本化で厳密に再現するため、近似による品質劣化を導入しない。"},"reservation":{"claim_id":"claim-1b78e7fa82b82abe032f6a4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-09f66508f5726f1ca0af561e",
+  "job_id": "job-research-4fd6dcd288e7197d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-09f66508f5726f1ca0af561e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
