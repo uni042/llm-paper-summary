@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:12:02 JST**
+> 自動生成: **2026-09-19 01:12:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **37** |
-| 最終検証済みResearch収録 | **09-19 01:05:05 JST（6分前）** |
+| 最終検証済みResearch収録 | **09-19 01:05:05 JST（7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -187,9 +187,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.21719` — PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:10:33 JST** / heartbeat: **—** / lease expiry: **09-19 02:40:33 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f97acaf8df0df8b2.json`
+- `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:12:18 JST** / heartbeat: **—** / lease expiry: **09-19 02:42:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-37f936e1437c5b29.json`
 
 #### Audit
 
