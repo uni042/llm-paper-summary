@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-1b78e7fa82b82abe032f6a4d",
-  "job_id": "job-research-06a7e035a0f5ff0b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1b78e7fa82b82abe032f6a4d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1b78e7fa82b82abe032f6a4d","job_id":"job-research-06a7e035a0f5ff0b","data":{"limitations":"LoopSpecはループ型Transformerの共有再帰ブロックを前提とし、通常の層ごとに異なる重みを持つTransformerには直接適用できない。複数投機枝を同じ重みでバッチしても実時間増加が小さいという利得は、低バッチでメモリ帯域律速の復号に依存し、計算律速や大きな既存バッチでは縮小し得る。prefillは高速化対象外。Ravenのように前処理・後処理層が重いモデルでは浅いd1による枝初期化回数増加がwall-clock利得を相殺し、平均受理長だけでは最適設定を選べない。第二枝の分岐増加はゲートで抑えるが、KVキャッシュ容量と実効バッチは増える。","differences":"外部小型ドラフタを使う通常の投機復号やEAGLE/DFlash系と異なり、追加モデル・追加学習なしで目標ループ型モデル自身の中間再帰状態を提案に使う。Draft & VerifyやLayerSkipなど一般Transformerの自己投機が層スキップ・早期退出を使うのに対し、LoopSpecは共有ブロックを異なるトークン位置と再帰深度で同時実行して直列再帰をパイプラインへ変える。SPEEDは循環共有モデルの投機パイプラインに近いが専用学習とgreedy限定で、LoopSpecは既存チェックポイントへ学習不要で適用しsamplingも厳密に保持する。","implementation_status":"arXiv v1、公式プロジェクトページとGitHubコードを公開。SGLangを拡張し、枝単位KV管理、CUDA Graph、Triton attention、FlashInfer TinyGEMMを用いた実装で実GPU評価済み。","research_positioning":"投機復号とループ型Transformer推論の交点にあるシステム研究。パラメータ共有でモデルを小さくする代わりに増えた再帰メモリアクセスを、同じ共有重みを複数投機枝で再利用するバッチ並列へ変換する。メモリ容量削減型アーキテクチャの推論遅延を、外部ドラフタを追加せず回復する設計として位置付けられる。"},"reservation":{"claim_id":"claim-1b78e7fa82b82abe032f6a4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
