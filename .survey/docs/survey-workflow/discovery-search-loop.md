@@ -64,6 +64,23 @@ Actions側の `queue_worker.record_discovery_stats()` が単一writerとして `
 9. **空ラウンドも情報として使う。** ある軸が全既知・全不採用だった場合、それを失敗として同じqueryを繰り返さず、そのwindowのduplicate率・unseen率低下の証拠として次軸選択へ利用する。連続空ラウンドが出ても、独立未走査軸が残る限り探索は継続する。
 10. **7 round以上回せたrunでは再現可能性を残す。** 最終通知では、どの検索軸順序が高収益だったか、どのquery/windowが低収益だったか、1回の外部取得をどう複数候補へ再利用したか、canonical identity照合でどの無駄アクセスを避けたか、非同期待ちをどう回避したかを短く報告する。外部アクセス回数や残量が実測できない場合は推測値を作らない。
 
+### 過去運用から得た再発防止知見
+
+過去の多ラウンド探索では、探索そのものよりも **重複判定・継続判定・submission transport・非同期反映確認** の不整合が実効スループットを大きく落とした。以下を再発防止の標準則とする。
+
+1. **GitHub code searchをnovelty判定の正本にしない。** 過去にはcode searchで見つからない既収録論文を新規扱いし、最終dedupeで大量除外され、連続空ラウンド化した。探索前とwrite直前は、Actionsの最終ゲートと同系統のcanonical identity snapshot / represented-paper resolver / rejection ledgerを使う。
+2. **retrieval-stageで既知を落としてからpaginationを進める。** 既収録論文が上位を埋めるproviderでは、1ページ目をそのまま評価へ渡すと評価workerが既知論文ばかり処理する。各ページで既知・過去不採用・alias重複を即除外し、未評価bufferが標準10件前後になるまでcursor / offset / 次windowをcollector側で進める。
+3. **1 submission / accepted 0 / 全重複を停止条件にしない。** 過去には次探索軸が残っているのに1 roundで終了するrunがあり、探索量が不安定になった。continuation gateを毎round後に実際に評価し、未走査の有望軸がある限り次roundへ進む。Actions待ちも停止理由にしない。
+4. **multi-round submissionでjob IDを自作しない。** 過去にはActions待ちを避けるためsynthetic / terminal Discovery job IDを付けたsubmissionが大量に未処理となり、見かけ上の候補数だけ増えてResearch jobへmaterializeされなかった。探索主体workerのmulti-round経路ではself-describing `submit_discovery_round` を使い、`job_id` を付けない。
+5. **同一Scheduled Chat runでは `run_key` を固定する。** round時刻・submission時刻・Actions待ち後の再開時刻ごとにrun_keyを変えると、1時間の探索量・連続round・停止理由の可観測性が壊れる。予定実行枠またはrun開始時刻から決めた1つのrun_keyを全roundで共有する。
+6. **「提出済み」と「Research job化済み」を区別する。** submissionのGitHub保存が成功しても、Actionsのdedupe / materializationが未完了なら最終採用数として数えない。最終通知ではdurably submitted、validated、materialized、Research readyを区別し、未反映分を成功として水増ししない。
+7. **Actions / state表示だけでround数を断定しない。** 過去には実際は7round以上保存されているのに`discovery-state.json`が第1roundのみを表示する可観測性不整合があった。必要ならimmutable submission群とrun_keyを正として実round数を確認し、集約stateは補助証拠として扱う。
+8. **recoveryは原本を壊さず冪等にする。** transport不整合で失敗した過去submissionを救済する場合、原本を上書きせずdeterministic ingest / recovered artifactへ収束させ、同じsubmissionの二重replayを防ぐ。Actions完走前は復旧完了とみなさない。
+9. **高重複windowは履歴でcooldownする。** 同じ軸の上位結果が既知で埋まる場合、語句を少し変えて機械的に再検索するのではなく、`discovery-state.json`のduplicate率・unseen率・acceptance率を使って後順位へ送り、引用方向・年月・隣接分野・具体的機構へ移る。
+10. **検索結果の“候補数”より最終materialization率を見る。** 過去には多数の候補を送ってもtransport不整合や最終dedupeで実採用0件になったrunがあった。探索効率の評価ではraw hit数やsubmission candidate数ではなく、重複除外後のnovel candidate、validated submission、Research job materializationまでを分けて追跡する。
+
+これらは探索量を減らすための保守策ではない。**無効な候補・無効なsubmission・既知論文への再アクセスを早期に落とし、節約した外部アクセスとrun時間を次の独立探索軸へ再配分するための規則**として適用する。
+
 ### search-window選択への反映
 
 次windowを選ぶ際は、単純な「未走査か」だけでなく、**期待情報利得 / 外部アクセスコスト**も考慮する。具体的には、過去の `unseen_rate` と `candidate_acceptance_rate` が高く `duplicate_rate` が低いwindow、または未走査で重点テーマに直結する具体的機構queryを優先する。一方、直近runで高重複・空振り・低受理が続いた一般queryや厳密日付queryはcooldownへ送る。
