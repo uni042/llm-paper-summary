@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-71a9a76625d025d32bc3f2ef",
-  "job_id": "job-research-ca0df1c4e0a9af97",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71a9a76625d025d32bc3f2ef",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-71a9a76625d025d32bc3f2ef","job_id":"job-research-ca0df1c4e0a9af97","data":{"hardware":"Dell PowerEdge R750xa、Intel Xeon Silver 4310×2、NVIDIA A100 80 GiB×2、256 GiB DDR4。HiFC用に1 TB NVMe Gen4 SSDの200 GiB pSLC領域、システム用にSamsung PM893 7.68 TB SATA SSDを使用。","software":"Ubuntu 22.04.5 LTS、vLLM v0.6.6、CUDA Toolkit 12.3、PyTorch 2.5.1、GDS 1.8.1.2。vLLMへフラッシュキャッシュ割当器とGDS交換機構を統合。","methodology":"主評価はDeepSeek-R1-Distill-Qwen-32B。追加でDeepSeek-Llama-8B、DeepSeek-Qwen-14B、Mistral-7BをQasper、GovReport、NarrativeQAで評価。DRAM交換とHiFCを入力・出力長、同時系列数、ブロックサイズ、GPU:SSD構成を変えて比較し、gdsioで順次・ランダムI/O帯域、SMARTログで書込み増幅率、100 GiBまでのKV初期化時間、3年間の購入費・電力費も測定・推定した。","scope":"実GPUと市販NVMe SSDを用いたシステム実測であり、シミュレーションだけではない。ただしpSLC挙動と耐久性は製品依存で、評価は制御されたSSD構成に限定される。100B超モデルは未評価で、短文脈・低並列・共有SSDの帯域競合では結果が一般化しない可能性がある。"},"reservation":{"claim_id":"claim-71a9a76625d025d32bc3f2ef","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
