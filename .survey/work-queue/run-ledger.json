@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T00:49:18.883142+00:00",
+  "updated_at": "2026-09-18T00:52:43.714202+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T00:49:18.883142+00:00",
+      "last_recorded_at": "2026-09-18T00:52:43.714202+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,29 +18689,15 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 235,
+        "research_completed": 237,
         "audit_completed": 0,
         "discovery_completed": 104,
-        "blocked": 18,
+        "blocked": 19,
         "new_jobs": 159,
         "new_papers": 233,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35188007024:1",
-          "recorded_at": "2026-09-17T06:03:04.125776+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35188007024",
-            "run_attempt": "1",
-            "source_sha": "57e6d1c006a00b6afe472742c628d7b18aa58815"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35188193239:1",
           "recorded_at": "2026-09-17T06:05:37.526198+00:00",
@@ -19592,6 +19578,21 @@
             "source_sha": "9d4033ffb51daefd508af72e2f6fda100ddcfb51"
           },
           "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35292948436:1",
+          "recorded_at": "2026-09-18T00:52:43.714202+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35292948436",
+            "run_attempt": "1",
+            "source_sha": "fdc9d98b9886aab3cc980c4bea12ac229dc62b2a"
+          },
+          "signals": [
+            "research_completed",
             "job_blocked"
           ]
         }
@@ -22452,6 +22453,30 @@
           "title": "RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-659c7469c0065c08",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14850",
+          "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-ec631b9aeb6c5c21",
+          "type": "research",
+          "canonical_id": "arXiv:2503.18599",
+          "title": "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ef418ddc1bde46e9",
+          "type": "research",
+          "canonical_id": "arXiv:2509.23094",
+          "title": "d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [

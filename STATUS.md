@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:52:10 JST**
+> 自動生成: **2026-09-18 09:52:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-18 09:46:00 JST（6分前）** |
+| 収録候補論文 | **47** |
+| 未claim Research job | **45** |
+| 直近24hの検証済みResearch収録 | **56** |
+| 最終検証済みResearch収録 | **09-18 09:52:39 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **3** | **0** | **3** | **0** | — |
+| Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **24** | **11** | **11** | **0** | **3** | **0** | **18** |
+| 合計 | **26** | **11** | **11** | **0** | **2** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,16 @@
 
 ### Research
 
+- **09-18 09:52:39 JST** [research] `arXiv:2509.23094` — d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching
+  - job: `.survey/work-queue/jobs/job-research-ef418ddc1bde46e9.json`
+  - result: `.survey/work-queue/results/research/attempt-157887f293007c13f3ac66f5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-157887f293007c13f3ac66f5.json`
+  - paper: `papers/inference/06-kv-cache-memory/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md`
+- **09-18 09:52:39 JST** [research] `arXiv:2503.18599` — Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization
+  - job: `.survey/work-queue/jobs/job-research-ec631b9aeb6c5c21.json`
+  - result: `.survey/work-queue/results/research/attempt-9ec710a3abfce49d2eb368dc.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-9ec710a3abfce49d2eb368dc.json`
+  - paper: `papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md`
 - **09-18 09:46:00 JST** [research] `arXiv:2508.12851` — Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement
   - job: `.survey/work-queue/jobs/job-research-a1874def735a479b.json`
   - result: `.survey/work-queue/results/research/attempt-328004e23af6006bc125dba7.json` (`ok=true`)
@@ -88,16 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-3e15395a7f97e5270e96de72.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e15395a7f97e5270e96de72.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md`
-- **09-18 06:37:33 JST** [research] `arXiv:2605.06113` — Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale
-  - job: `.survey/work-queue/jobs/job-research-39525f58ef98f435.json`
-  - result: `.survey/work-queue/results/research/attempt-e11f604e90f13e08b8a7042f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e11f604e90f13e08b8a7042f.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md`
-- **09-18 06:07:01 JST** [research] `arXiv:2602.10729` — BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization
-  - job: `.survey/work-queue/jobs/job-research-1fd656c9a10556db.json`
-  - result: `.survey/work-queue/results/research/attempt-7ad6ad40100c07874c12360f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7ad6ad40100c07874c12360f.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md`
 
 ### Audit
 
@@ -208,10 +208,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.14850` — Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:51:26 JST** / heartbeat: **—** / lease expiry: **09-18 11:21:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-659c7469c0065c08.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
@@ -237,7 +234,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,7 +254,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **699** |
+| inference/training/survey配下の論文Markdown実体 | **701** |
 
 ### immutable submissionの未照合
 
@@ -265,8 +262,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **481** |
-| └ Research | **352** |
+| 成功result未照合のimmutable submission | **479** |
+| └ Research | **350** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
