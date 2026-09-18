@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:03:59 JST**
+> 自動生成: **2026-09-19 03:04:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -200,7 +200,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 03:02:22 JST** / heartbeat: **—** / lease expiry: **09-19 04:32:22 JST**
+  - claim: **09-19 03:04:30 JST** / heartbeat: **—** / lease expiry: **09-19 04:34:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-6af027835df580e1.json`
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
   - claim: **09-19 01:41:16 JST** / heartbeat: **—** / lease expiry: **09-19 03:11:16 JST**
