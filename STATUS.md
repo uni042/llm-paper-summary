@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:51:13 JST**
+> 自動生成: **2026-09-18 09:51:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -209,9 +209,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2509.23094` — d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:50:15 JST** / heartbeat: **—** / lease expiry: **09-18 11:20:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ef418ddc1bde46e9.json`
+- `arXiv:2609.14850` — Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:51:26 JST** / heartbeat: **—** / lease expiry: **09-18 11:21:26 JST**
+  - evidence: `.survey/work-queue/claims/job-research-659c7469c0065c08.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
