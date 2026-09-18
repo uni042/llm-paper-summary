@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-01bc2c1e0ef21dcae1e71886",
   "job_id": "job-research-7b5d4afbd3eabe62",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01bc2c1e0ef21dcae1e71886",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "LAPSは、短・長プリフィルを同一バッチへ混ぜる構造的な無駄を除き、短要求をCUDA Graphに適した均質バッチへ集約することで、通常のSGLang PD分離よりプリフィル遅延とSLO違反を下げる。高並行・混合要求ではQwen2.5-32Bのプリフィル要求スループットを35%改善した。付録のQwen2.5-72B/8×H200再現条件でも、高並行ほど通常SGLangとの差が大きく、cc=64で255.4 req/sから369.1 req/sへ増える。",
+    "key_results": [
+      {"metric": "prefill latency", "value": ">30% reduction", "baseline": "vanilla SGLang under prefill-decode disaggregation", "condition": "real multi-turn workloads", "interpretation": "プリフィル段階内部の長短分離により、PD分離だけでは残る干渉を削減した。"},
+      {"metric": "SLO violation rate", "value": "28% reduction", "baseline": "vanilla data-parallel multi-instance deployment", "condition": "multi-instance serving", "interpretation": "長短専用インスタンスと動的割当が負荷偏りを抑え、期限違反を減らした。"},
+      {"metric": "request throughput", "value": "35% improvement", "baseline": "SGLang serving baseline", "condition": "high-concurrency mixed requests, Qwen2.5-32B prefill instance", "interpretation": "短要求の集約とGraph再利用により、混合負荷でもプリフィル処理量が増加した。"},
+      {"metric": "request throughput", "value": "369.1 req/s vs 255.4 req/s", "baseline": "vanilla SGLang", "condition": "Qwen2.5-72B-Instruct, TP=4, one prefill instance on 4×H200, concurrency 64", "interpretation": "高並行時に長短分離と短要求集約の効果が大きくなることを再現用付録が示す。"},
+      {"metric": "mixed-batch TTFT penalty", "value": "29.3× (7B), 31.0× (32B)", "baseline": "8×64-token short-only batch", "condition": "7×64 + 1×2048 padded mixed batch on H200", "interpretation": "長短混合ではGEMM約85%、attention約87%がパディングで無駄になり、分離対象となる構造的干渉が非常に大きい。"}
+    ],
+    "negative_results": "非PD構成でプリフィルとデコードを同じ実行へ混ぜると、短プリフィルを連続的に集約できず、CUDA Graphによるスループット利得が低下する。CUDA Graphは一個あたり約228〜277MBを消費し、初回捕捉に約8〜12秒かかるため、形状を細分化しすぎるとメモリと初期化コストが増える。",
+    "interpretation": "利得の源泉は、単なる優先度変更ではなく、メモリ律速の短要求と計算律速の長要求を物理的または時間的に同居させないことにある。短系列では重み読み込みの固定費が支配的なので同形状要求をまとめても追加計算が小さく、Graph起動効率が上がる。一方、長系列ではパディング量がそのままGEMM計算量へ効くため、短要求との混合を避けるほど効果が大きい。",
+    "quality_impact": "生成アルゴリズムやモデル重みを近似変更しないため、精度劣化を許容して速度を得る方式ではない。論文は回答品質よりサービング性能を評価対象としており、品質を変えないスケジューリング／実行構成として扱うのが妥当である。"
+  },
+  "reservation": {"claim_id": "claim-01bc2c1e0ef21dcae1e71886", "worker_id": "scheduled-chat-discovery-20260919T0700JST", "worker_kind": "scheduled_chat"}
 }
