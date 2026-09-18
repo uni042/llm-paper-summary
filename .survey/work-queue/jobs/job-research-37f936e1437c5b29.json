@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-37f936e1437c5b29",
+  "type": "research",
+  "parent_job_id": "job-fb6e71b1d7480608",
+  "priority": 88,
+  "canonical_id": "arXiv:2609.06498",
+  "title": "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+  "source_url": "https://arxiv.org/abs/2609.06498",
+  "paper_path": "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+  "selection_reason": "block diffusion型投機的復号で従来破棄されるrejected suffixのtarget verifier hidden stateを次roundへ再利用し、追加target計算なしでdraft品質を上げる。Qwen3系でacceptance lengthと高並列時throughput改善を報告し、投機的復号runtimeの計算再利用として明確な差分がある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T11:02:46+00:00"
+}

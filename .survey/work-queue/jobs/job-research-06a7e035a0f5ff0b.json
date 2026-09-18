@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-06a7e035a0f5ff0b",
+  "type": "research",
+  "parent_job_id": "job-fb6e71b1d7480608",
+  "priority": 82,
+  "canonical_id": "arXiv:2609.17184",
+  "title": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
+  "source_url": "https://arxiv.org/abs/2609.17184",
+  "paper_path": "papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md",
+  "selection_reason": "looped Transformerの中間recurrent stateをdraftに使い、future draft generationとcurrent target verificationをpipeline overlapするtraining-free self-speculative decoding。最大6.83倍の推論高速化を報告し、共有weightを繰り返し読むlooped architecture固有のmemory/latency問題へのsystem-level対処として価値がある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T11:02:46+00:00"
+}
