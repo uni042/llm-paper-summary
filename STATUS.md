@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:45:22 JST**
+> 自動生成: **2026-09-18 14:45:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **47** |
-| 未claim Research job | **47** |
+| 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（8秒前）** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（34秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **5** | **3** | **2** | **0** | **0** | — |
+| Research | **14** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **32** | **7** | **5** | **2** | **0** | **0** | **1** |
+| 合計 | **32** | **8** | **5** | **3** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / 未完了・未検証: **2件**
+- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
 - **成功** `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction
   - job: `.survey/work-queue/jobs/job-research-2829f7afbf13ae9b.json`
   - result: `.survey/work-queue/results/research/attempt-134d632c037ba813a7f76d95.json` (`ok=true`)
@@ -169,6 +169,7 @@
   - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
   - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c0cab04c270b3f1647d6bd86.json` (job `job-research-fbee62800783475d`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c45eda0ca290930fb74c6805.json` (job `job-research-2072895e5b6f0b68`)
 
 #### Audit (:30)
 
@@ -194,8 +195,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 14:45:30 JST** / heartbeat: **—** / lease expiry: **09-18 16:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2072895e5b6f0b68.json`
 
 #### Audit
 
@@ -243,8 +246,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **504** |
-| └ Research | **375** |
+| 成功result未照合のimmutable submission | **505** |
+| └ Research | **376** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
