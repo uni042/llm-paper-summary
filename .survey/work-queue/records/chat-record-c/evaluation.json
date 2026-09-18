@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-28b65afcabd4bd1893000925",
+  "attempt_id": "attempt-e7451954f296ee21fbc9ac8c",
   "job_id": "job-research-21b30a62610ad176",
   "data": {
     "hardware": "主環境はCloudLabの12ノードで、各ノードにAMD EPYC 7302 16-core CPU×2、128GB ECC、NVIDIA A30 24GB×1、25Gbps NICを搭載する。migration比較は2ノード各4×A100 40GB、100Gbps NIC。長さ推定器は専用L40で学習・オフライン推論。",
@@ -11,7 +11,7 @@
     "scope": "multi-instance aggregated LLM servingのglobal dispatchを主対象とする。主結果は単一GPU instance群のLlama-2-7Bだが、Qwen2-7B、Llama-2-70B TP=4、A100 migration比較で一般性を補足する。length estimatorはmodel/tokenizerごとの事前fine-tuneを要する。"
   },
   "reservation": {
-    "claim_id": "claim-28b65afcabd4bd1893000925",
+    "claim_id": "claim-e7451954f296ee21fbc9ac8c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
