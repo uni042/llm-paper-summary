@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-gpu-runtime-8",
+    "axis": "GPU runtime・persistent kernel・CUDA Graph・JIT compilation",
+    "query_summary": "persistent megakernel、CUDA Graph cold-start、JIT/Graph hybrid、attention engineを横断。Mirage Persistent Kernel、Foundry、Hybrid JIT-CUDA Graphは最新identity shardで既収録を確認した。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2512.22219", "arXiv:2604.06664", "arXiv:2604.23467"],
+    "next_axis_hint": "新着差分・引用方向・古い重要system omissionへ切り替える",
+    "empty_round_reason": "GPU runtime/kernel系の強候補は既収録だった。"
+  }
+}
