@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-scheduling-saturation-9",
+    "axis": "operator autoscaling・SLO-aware scheduling・phase-aware power control",
+    "query_summary": "serving resource-control近接としてOpScale、Cascade、既投入済みPowerSliderを照合。OpScale/Cascadeは起動時canonical snapshotで既収録、PowerSliderは今回run内で既投入のためrun-local exclusionにより除外した。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2608.13499","arXiv:2608.06557","arXiv:2608.21719"],
+    "next_axis_hint": "最新speculative decodingとKV repairの近接新着を最終独立窓として確認する",
+    "empty_round_reason": "resource-controlの強い候補は既収録または今回run内投入済みだった。"
+  }
+}
