@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-moe-edge-4",
+    "axis": "MoE expert offload・cacheless edge-distributed inference",
+    "query_summary": "expert cache、on-demand loading、distributed edge MoEを走査。OD-MoEを含む主要候補は最新identity snapshotで既収録。SSD-LLaMAも2609 shardで既収録を再確認した。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2512.03927", "arXiv:2609.18110"],
+    "next_axis_hint": "RDMA・KV transfer・network-aware servingへ切り替える",
+    "empty_round_reason": "強いMoE offload候補は既収録だった。"
+  }
+}
