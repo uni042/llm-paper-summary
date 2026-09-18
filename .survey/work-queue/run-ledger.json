@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T13:07:07.617307+00:00",
+  "updated_at": "2026-09-18T14:37:10.374567+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T13:07:07.617307+00:00",
+      "last_recorded_at": "2026-09-18T14:37:10.374567+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 254,
+        "research_completed": 255,
         "audit_completed": 0,
         "discovery_completed": 147,
         "blocked": 29,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35271676217:1",
-          "recorded_at": "2026-09-17T20:35:19.978002+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35271676217",
-            "run_attempt": "1",
-            "source_sha": "95deba657e60d9b315f0d652ad5df03a7e66de5d"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35274484048:1",
           "recorded_at": "2026-09-17T21:03:49.243177+00:00",
@@ -19600,6 +19586,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35357324509:1",
+          "recorded_at": "2026-09-18T14:37:10.374567+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35357324509",
+            "run_attempt": "1",
+            "source_sha": "2f5cfb75e4e1e3ce1ae0ecb933e75edde8266408"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23043,6 +23043,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2072895e5b6f0b68",
+          "type": "research",
+          "canonical_id": "arXiv:2410.17043",
+          "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25212,7 +25220,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 718,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }

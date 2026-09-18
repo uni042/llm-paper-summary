@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2410.17043",
   "paper_path": "papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
   "selection_reason": "Auroraはexpert/model deploymentとall-to-all communication schedulingを共同最適化し、homogeneous clusterで最大2.38x、heterogeneous環境で3.54x高速化を報告。expert placementと通信skewを統合する比較軸として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -33,13 +33,6 @@
   ],
   "last_blocked_at": "2026-09-18T10:02:59+00:00",
   "retry_queued_at": "2026-09-18T13:03:31+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
-  "validation_errors": [
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short"
-  ],
-  "last_validation_failed_at": "2026-09-18T14:35:11+00:00"
+  "completed_at": "2026-09-18T14:37:05+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json"
 }

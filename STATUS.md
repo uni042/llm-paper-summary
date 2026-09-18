@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 23:36:53 JST**
+> 自動生成: **2026-09-18 23:37:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **55** |
+| 収録候補論文 | **54** |
 | 未claim Research job | **54** |
-| 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-18 21:43:39 JST（1時間53分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-18 23:37:05 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **55** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **55** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **9** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **28** | **10** | **9** | **1** | **1** | **0** | **2** |
+| 合計 | **29** | **10** | **10** | **0** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 23:37:05 JST** [research] `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling
+  - job: `.survey/work-queue/jobs/job-research-2072895e5b6f0b68.json`
+  - result: `.survey/work-queue/results/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json`
+  - paper: `papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md`
 - **09-18 21:43:39 JST** [research] `arXiv:2609.17983` — Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits
   - job: `.survey/work-queue/jobs/job-research-326d710987e96b1f.json`
   - result: `.survey/work-queue/results/research/attempt-67c677bdf0613551686265c8-repair1.json` (`ok=true`)
@@ -141,8 +146,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (job `job-research-2072895e5b6f0b68`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling
+  - job: `.survey/work-queue/jobs/job-research-2072895e5b6f0b68.json`
+  - result: `.survey/work-queue/results/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0e6b871e3cbc07f693bcc4eb.json`
+  - paper: `papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md`
 
 #### Audit (:30)
 
@@ -196,10 +205,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 23:35:23 JST** / heartbeat: **—** / lease expiry: **09-19 01:05:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2072895e5b6f0b68.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -219,7 +226,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **55** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
@@ -239,7 +246,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **718** |
+| inference/training/survey配下の論文Markdown実体 | **719** |
 
 ### immutable submissionの未照合
 
@@ -247,8 +254,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **528** |
-| └ Research | **399** |
+| 成功result未照合のimmutable submission | **527** |
+| └ Research | **398** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
