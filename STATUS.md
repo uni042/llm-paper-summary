@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:43:39 JST**
+> 自動生成: **2026-09-18 14:44:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **49** |
-| 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-18 14:37:48 JST（5分前）** |
+| 収録候補論文 | **48** |
+| 未claim Research job | **47** |
+| 直近24hの検証済みResearch収録 | **50** |
+| 最終検証済みResearch収録 | **09-18 14:44:01 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **49** |
+| canonical_id確認済みの一意な候補論文 | **48** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **49** |
+| 非終端Research job合計 | **48** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **1** | **4** | **1** | **0** | — |
+| Research | **13** | **4** | **2** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **30** | **7** | **3** | **4** | **1** | **0** | **1** |
+| 合計 | **31** | **6** | **4** | **2** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 14:44:01 JST** [research] `arXiv:2511.22333` — PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel
+  - job: `.survey/work-queue/jobs/job-research-a2e0c7f004aa0b3e.json`
+  - result: `.survey/work-queue/results/research/attempt-3eb6a05e4e42907dd24b50f1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3eb6a05e4e42907dd24b50f1.json`
+  - paper: `papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md`
 - **09-18 14:37:48 JST** [research] `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
   - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
   - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-3482ada8e43cfce3d8d1cfd9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3482ada8e43cfce3d8d1cfd9.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md`
-- **09-18 09:41:43 JST** [research] `arXiv:2506.04203` — Cascadia: An Efficient Cascade Serving System for Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-12153d10b82fca3c.json`
-  - result: `.survey/work-queue/results/research/attempt-64f721f42b66b8d451936690.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-64f721f42b66b8d451936690.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md`
 
 ### Audit
 
@@ -151,10 +151,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **1件** / 未完了・未検証: **4件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0ee0523cc013293152fce8f1.json` (job `job-research-2829f7afbf13ae9b`)
+- immutable submission: **4件** / 検証済み成功: **2件** / 未完了・未検証: **2件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-343da371de8ebc332895bc1b.json` (job `job-research-659c7469c0065c08`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-3eb6a05e4e42907dd24b50f1.json` (job `job-research-a2e0c7f004aa0b3e`)
+- **成功** `arXiv:2511.22333` — PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel
+  - job: `.survey/work-queue/jobs/job-research-a2e0c7f004aa0b3e.json`
+  - result: `.survey/work-queue/results/research/attempt-3eb6a05e4e42907dd24b50f1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3eb6a05e4e42907dd24b50f1.json`
+  - paper: `papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md`
 - **成功** `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
   - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
   - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
@@ -187,9 +190,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.22333` — PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 14:42:27 JST** / heartbeat: **—** / lease expiry: **09-18 16:12:27 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a2e0c7f004aa0b3e.json`
+- `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 14:43:54 JST** / heartbeat: **—** / lease expiry: **09-18 16:13:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
 
 #### Audit
 
@@ -209,7 +212,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **49** |
+| ready | **48** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +232,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **706** |
+| inference/training/survey配下の論文Markdown実体 | **707** |
 
 ### immutable submissionの未照合
 
@@ -237,8 +240,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **505** |
-| └ Research | **376** |
+| 成功result未照合のimmutable submission | **504** |
+| └ Research | **375** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

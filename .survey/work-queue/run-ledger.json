@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T05:42:17.665697+00:00",
+  "updated_at": "2026-09-18T05:44:06.022455+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T05:42:17.665697+00:00",
+      "last_recorded_at": "2026-09-18T05:44:06.022455+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 242,
+        "research_completed": 243,
         "audit_completed": 0,
         "discovery_completed": 118,
         "blocked": 20,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35203676608:1",
-          "recorded_at": "2026-09-17T09:10:50.130552+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35203676608",
-            "run_attempt": "1",
-            "source_sha": "8d1a74505906dee32362043b3a2010bb44c3c18e"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35204135236:1",
           "recorded_at": "2026-09-17T09:15:51.274848+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35311936987:1",
+          "recorded_at": "2026-09-18T05:44:06.022455+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35311936987",
+            "run_attempt": "1",
+            "source_sha": "074df8622e1a2669724b9bdf508c25e87da31b9f"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22639,6 +22639,14 @@
           "title": "Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-a2e0c7f004aa0b3e",
+          "type": "research",
+          "canonical_id": "arXiv:2511.22333",
+          "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24465,7 +24473,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 705,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
