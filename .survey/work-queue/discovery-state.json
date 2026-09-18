@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T11:06:40+00:00",
-  "last_run_key": "2026-09-18T20:00:00+09:00",
-  "last_round": "specialist-early2026-offload-11",
+  "updated_at": "2026-09-18T12:59:34+00:00",
+  "last_run_key": "2026-09-18T21:00:00+09:00",
+  "last_round": "specialist-speculative-cosine-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 5,
-  "last_empty_round_reason": "2026前半の代表的offload/network/MoE候補はすべて既収録だった。",
+  "consecutive_empty_rounds": 6,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T05:00:25+09:00",
-      "round": "specialist-agent-os-memory-2",
-      "axis": "エージェントサンドボックス・OS資源管理・状態管理",
-      "query_summary": "前roundの全重複を受けてKV系から独立したOS／エージェント実行基盤へ切り替えた。高ファンアウトサンドボックスのメモリ圧縮、差分チェックポイント、ツール呼出し単位のOS資源制御、エージェント型クラウド基盤の実測研究を一次資料の題名・抄録・書誌情報で軽量評価し、決定論的research job IDと正本検索で未登録を確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 4,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す",
-      "source_submission": "work-queue/submissions/20260913T0508JST-discovery-specialist-agent-os-memory.json"
-    },
     {
       "run_key": "2026-09-13T05:00:25+09:00",
       "round": "specialist-disaggregated-serving-3",
@@ -7069,6 +7054,27 @@
       ],
       "next_axis_hint": "今回の主要独立経路は4連続で新規強候補なし。次回は新着差分または新しいcitation edgeを優先する",
       "source_submission": "work-queue/submissions/20260918T2043JST-discovery-specialist-early2026-offload-11.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-speculative-cosine-1",
+      "axis": "分散speculative inference・heterogeneous drafter orchestration",
+      "query_summary": "2025-2026のspeculative servingを再走査し、SPECTRE/SPIN等の既収録候補をidentity shardで早期除外。CoSineはarXiv一次ページでsystem-level contributionと定量評価を確認し、arxiv-2503 identity shardに不在、rejection ledgerにも不在であることを確認して採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.08151",
+        "arXiv:2503.15921"
+      ],
+      "next_axis_hint": "2024-2025の分散speculative serving、GPU runtime/kernel scheduling、CXL/KV memoryを独立に走査する",
+      "source_submission": "work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json"
     }
   ],
   "axes": {
@@ -12328,6 +12334,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "今回の主要独立経路は4連続で新規強候補なし。次回は新着差分または新しいcitation edgeを優先する"
+    },
+    "分散speculative inference・heterogeneous drafter orchestration": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2024-2025の分散speculative serving、GPU runtime/kernel scheduling、CXL/KV memoryを独立に走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
