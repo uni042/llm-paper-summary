@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.11668",
+      "title": "A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.11668",
+      "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md",
+      "priority": 95,
+      "reason": "High-Bandwidth FlashをSSD型KV offload stackへ置換した際のfull-stack挙動を、TokenSim拡張、4本の2時間production trace、dense/MoE 5モデル、H100/B200 profileで検証する。SSD/NVMeの次段memory tier設計に直結し、HBFで何がボトルネックへ移るかを比較できる重点候補。"
+    },
+    {
+      "canonical_id": "arXiv:2608.21719",
+      "title": "PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response",
+      "source_url": "https://arxiv.org/abs/2608.21719",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.21719-powerslider-phase-asymmetry-demand-response.md",
+      "priority": 88,
+      "reason": "prefill・thinking・answer decodeの電力/メモリ非対称性を利用し、phase別DVFS・KV制御・disaggregationをonline solverで統合するSGLang serving system。production traceと実電力cap replayでgoodputを大幅改善しており、resource schedulingとKV capacity couplingの新しい系統。"
+    },
+    {
+      "canonical_id": "arXiv:2608.08340",
+      "title": "OpRAG: A Resource-Deterministic Runtime for GPU-Backed Multi-Stage RAG Workflows",
+      "source_url": "https://arxiv.org/abs/2608.08340",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md",
+      "priority": 78,
+      "reason": "multi-stage RAGでGPU decoding以外のpreprocess/embedding/retrieval/context/index更新を含むorchestration overhead、serialization、batchingをruntime resource管理問題として扱う。agentic/RAG servingのend-to-end runtime系統として従来のmodel-serving単体研究を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.00101",
+      "title": "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+      "source_url": "https://arxiv.org/abs/2608.00101",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md",
+      "priority": 80,
+      "reason": "GitHub Copilotの3.2M users・13M sessions・761M LLM calls・95T tokensというproduction-scale traceからagentic coding workloadをsystems観点でcharacterizeする。従来chat servingと異なるtool execution・長時間state・multi-call構造を定量化するため、agentic serving設計の基礎データとして強い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-august-systems-3",
+    "axis": "2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload",
+    "query_summary": "9月新着から一段遡り、8月のmemory/offload/runtime/production workloadを独立窓で走査。arxiv-2608 identity shardを先に照合し、既収録のOpScale、Cascade、AgentSysBench等を除外して4件を採用した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2608.13499","arXiv:2608.06557","arXiv:2608.15127","arXiv:2608.15241"],
+    "next_axis_hint": "8月のMoE expert offload・KV transport・GPU storageをさらに深掘りし、その後2025 systems重要欠落へ移る",
+    "empty_round_reason": null,
+    "search_windows": [
+      {"topic":"hierarchical memory and HBF","source":"web-arxiv","date_range":"2026-08","category":"systems","citation_direction":"none","query_family":"flash / KV serving / memory"},
+      {"topic":"production serving runtime","source":"web-arxiv","date_range":"2026-08","category":"systems","citation_direction":"none","query_family":"power / RAG runtime / agentic workload"}
+    ]
+  }
+}
