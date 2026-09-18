@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:45:17.201979+00:00",
+  "updated_at": "2026-09-18T18:46:36.047832+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:45:17.201979+00:00",
+      "last_recorded_at": "2026-09-18T18:46:36.047832+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 267,
+        "research_completed": 268,
         "audit_completed": 0,
         "discovery_completed": 147,
         "blocked": 29,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35292948436:1",
-          "recorded_at": "2026-09-18T00:52:43.714202+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35292948436",
-            "run_attempt": "1",
-            "source_sha": "fdc9d98b9886aab3cc980c4bea12ac229dc62b2a"
-          },
-          "signals": [
-            "research_completed",
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35293758906:1",
           "recorded_at": "2026-09-18T01:07:10.308738+00:00",
@@ -19597,6 +19582,20 @@
             "run_id": "35381988068",
             "run_attempt": "1",
             "source_sha": "535b8c1aa1b2f0c697b80fb389bbb69a670b561f"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35382096580:1",
+          "recorded_at": "2026-09-18T18:46:36.047832+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35382096580",
+            "run_attempt": "1",
+            "source_sha": "cac1659088262074766b9431ed7d6a6d69c7c657"
           },
           "signals": [
             "research_completed"
@@ -23145,6 +23144,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.23036",
           "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-469eef375f5f828e",
+          "type": "research",
+          "canonical_id": "arXiv:2602.07223",
+          "title": "SpecAttn: Co-Designing Sparse Attention with Self-Speculative Decoding",
           "from": "ready",
           "to": "completed"
         }
