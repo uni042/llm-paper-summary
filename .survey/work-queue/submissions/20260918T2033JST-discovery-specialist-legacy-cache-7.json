@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-legacy-cache-7",
+    "axis": "2024 personal-machine MoE cache・2025 multimodal KV compression serving",
+    "query_summary": "older foundationとしてMoE-InfinityとFastCacheを確認したが、2401/2503 identity shardで双方とも既収録。新規candidate評価へは渡さず早期dedupeした。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2401.14361","arXiv:2503.08461"],
+    "next_axis_hint": "2025 distributed KV networking・2026前半GPU-initiated storageの未走査窓へ移る",
+    "empty_round_reason": "強い候補はすべて既収録だった。"
+  }
+}
