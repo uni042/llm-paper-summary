@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0ef81dffe6156af3523ba01f","job_id":"job-research-37f936e1437c5b29","data":{"overview":"greedy decodingでDFlowはDFlashの平均acceptance lengthをQwen3-1.7Bで3.56→3.93、4Bで3.71→4.20、8Bで3.66→4.15へ改善し、相対10.4%/13.2%/13.4%増。sampling T=1でも2.99→3.26、3.15→3.54、3.10→3.45。relay追加遅延は0.51ms/round、DFlash比1.2%に留まり、高並列SGLangでもDFlashよりthroughputが一貫して高い。","key_results":[{"metric":"greedy average acceptance length","value":"3.93 / 4.20 / 4.15","baseline":"DFlash 3.56 / 3.71 / 3.66","condition":"Qwen3-1.7B / 4B / 8B、6 benchmarks、T=0","interpretation":"相対10.4% / 13.2% / 13.4%改善。"},{"metric":"sampling average acceptance length","value":"3.26 / 3.54 / 3.45","baseline":"DFlash 2.99 / 3.15 / 3.10","condition":"Qwen3-1.7B / 4B / 8B、T=1","interpretation":"samplingでもcross-round verifier情報がdraft品質を改善。"},{"metric":"relay runtime overhead","value":"0.51 ms, 1.2%","baseline":"DFlash per-round latency","condition":"runtime decomposition","interpretation":"target hidden stateは既存verificationから再利用するため追加target forward不要。"},{"metric":"Qwen3-8B GSM8K throughput concurrency 32","value":"2198.17 TPS (1.35x baseline)","baseline":"DFlash 1891.10 TPS (1.16x), autoregressive 1630.10 TPS","condition":"SGLang, concurrency 32","interpretation":"高batchでもacceptance改善がthroughputへ反映。"},{"metric":"relay ablation","value":"3.93","baseline":"DFlash 3.56; multi-round mask 3.67; DFlow model relay-off 3.66","condition":"Qwen3-1.7B greedy average","interpretation":"multi-round trainingだけの改善は小さく、relay情報再利用が主因。"},{"metric":"Domino compatibility","value":"4.50","baseline":"DFlash 3.56; Domino 4.02","condition":"Qwen3-1.7B T=0, online rollout","interpretation":"round内causal modelingとround間verifier reuseは補完的。"}],"negative_results":"DominoへDFlowを単純結合しteacher-forced predictionからrelay suffixを作るとacceptance lengthは2.22まで悪化する。実推論draft trajectoryを再現するonline rolloutを訓練に入れると4.50へ回復するため、relay trainingはtrain-inference trajectory mismatchに敏感。","interpretation":"rejected tokenそのものはcommit不能でも、target verifierがその位置で作ったcontinuous representationには将来continuation情報が残る。DFlowは既に支払ったverification計算を情報資産として次roundへ渡し、追加target計算をほぼ増やさずdraft acceptanceを上げる。","quality_impact":"exact-match target verificationを維持するlossless speculative decodingであり、accepted outputはtarget modelに一致する。改善対象はdraft acceptanceとthroughput。"},"reservation":{"claim_id":"claim-0ef81dffe6156af3523ba01f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-7637dd4f80065a38131593e0",
+  "job_id": "job-research-f97acaf8df0df8b2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7637dd4f80065a38131593e0",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

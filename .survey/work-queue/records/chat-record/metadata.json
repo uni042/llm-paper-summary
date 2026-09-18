@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0ef81dffe6156af3523ba01f","job_id":"job-research-37f936e1437c5b29","data":{"canonical_id":"arXiv:2609.06498","arxiv_id":"2609.06498","doi":"10.48550/arXiv.2609.06498","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding","summary":"DFlowはblock diffusion型投機的復号で、検証時に最初の不一致より後ろのrejected suffixに対してtarget verifierが既に計算したhidden stateを捨てず、次roundの重複未来位置へ引き継ぐ。rejectionはtoken commit可否であって連続表現の有用性まで否定しないという観察に基づき、境界token差を使う軽量relay moduleで表現を補正しmask embeddingへ注入する。追加target forwardなしでdraft品質を上げ、Qwen3 1.7B/4B/8Bのgreedy decodingでDFlash比平均acceptance lengthを10.4%/13.2%/13.4%改善する。","list_summary":"検証済みだが棄却されたsuffixのtarget hidden stateを次draft roundへ再利用し、追加target forwardなしでblock diffusion投機復号のacceptance lengthを約10〜13%改善する。","authors":["Yaojie Zhang","Linfeng Zhang","Bin Cui","Xupeng Miao"],"authors_affiliations":"Peking University; University of Electronic Science and Technology of China; Shanghai Jiao Tong University; Institute of Computational Social Science, Peking University (Qingdao)","published":"2026-09-06","publication":"arXiv:2609.06498","publication_type":"プレプリント","publication_status":"arXiv v1公開","lineage":"speculative decoding・block diffusion drafting・verifier representation reuse","topics":["speculative decoding","block diffusion","verifier hidden states","draft quality","LLM serving"],"importance":"投機的実行で既に支払ったtarget verification計算から得られる連続表現を次roundへ再利用し、target計算追加なしでaccepted token数を増やすため、投機的復号runtimeの計算再利用として明確な差分がある。","implementation":"5-layer DFlash drafter、block size 16を基礎にverifier relay moduleとmulti-round self-conditioned trainingを追加。高並列評価はSGLangを使用。","hardware_evaluation":"単一ノード8×NVIDIA A800 GPU。Qwen3-1.7B/4B/8Bを評価。","quality_effect":"lossless speculative decodingのexact-match verification自体は維持し、target model出力を変更せずdraft acceptanceを改善する。","source":"https://arxiv.org/abs/2609.06498","sources":["https://arxiv.org/abs/2609.06498","https://arxiv.org/html/2609.06498","https://arxiv.org/pdf/2609.06498"],"code":null,"project":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文と参考文献節を確認。","references_total":0},"reservation":{"claim_id":"claim-0ef81dffe6156af3523ba01f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7637dd4f80065a38131593e0",
+  "job_id": "job-research-f97acaf8df0df8b2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7637dd4f80065a38131593e0",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
