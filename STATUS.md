@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:42:32 JST**
+> 自動生成: **2026-09-18 10:42:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-18 09:52:39 JST（49分前）** |
+| 最終検証済みResearch収録 | **09-18 09:52:39 JST（50分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **0** | **3** | **1** | **0** | — |
+| Research | **16** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **10** | **10** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **10** | **3** | **1** | **0** | **28** |
+| 合計 | **26** | **12** | **10** | **2** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,8 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 10:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **0件** / 未完了・未検証: **3件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-305d9b66de58d5ff329ee5d8.json` (job `job-research-6c1a5d06d3b875ce`)
+- immutable submission: **2件** / 検証済み成功: **0件** / 未完了・未検証: **2件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-6c458e301f48fc5cacbfbf06.json` (job `job-research-660ceb86238a1a21`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-73e778f4334326a6472d6105.json` (job `job-research-fb4ae3eceb455bfc`)
 
@@ -213,9 +212,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 10:41:23 JST** / heartbeat: **—** / lease expiry: **09-18 12:11:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-660ceb86238a1a21.json`
+- `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 10:42:39 JST** / heartbeat: **—** / lease expiry: **09-18 12:12:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6c1a5d06d3b875ce.json`
 
 #### Audit
 
