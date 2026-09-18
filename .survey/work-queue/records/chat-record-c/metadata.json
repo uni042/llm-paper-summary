@@ -2,61 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f0acf688ceaad1c0809f2085",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {
-    "canonical_id": "arXiv:2606.26120",
-    "arxiv_id": "2606.26120",
-    "doi": "10.48550/arXiv.2606.26120",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM",
-    "summary": "拡散型大規模言語モデルでは、反復復元の各段階で系列全体を再計算するため計算量が急増する。本研究は、層ごとのトークン表現変化に応じてキャッシュ更新量を配分する動的キャッシュ更新と、予測分布の集中度・時間変化から確定基準を調整する適応並列復号を統合する。追加学習なしでLLaDA系とDream系へ適用し、標準課題の精度をほぼ維持したまま平均3倍級、最大4.48倍の高速化を報告する。",
-    "list_summary": "層別キャッシュ更新量とトークン別確定基準を動的化し、追加学習なしで最大4.48倍の拡散型LLM推論高速化を実現する。",
-    "authors": [
-      "Tianyi Wu",
-      "Xiaoxi Sun",
-      "Yanhua Jiao",
-      "Yulin Li",
-      "Yixin Chen",
-      "Yunhao Cao",
-      "Yiqi Hu",
-      "Zhuotao Tian"
-    ],
-    "authors_affiliations": "Harbin Institute of Technology, Shenzhen; Huawei; Shenzhen Loop Area Institute",
-    "published": "2026-05-27",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1 (2026-05-27)",
-    "lineage": "拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号",
-    "topics": [
-      "拡散型LLM",
-      "キャッシュ更新",
-      "並列復号",
-      "推論高速化",
-      "追加学習不要"
-    ],
-    "importance": "従来の固定周期・一律更新量を、実行時に観測できる層・トークンの変化へ適応させ、キャッシュ再利用と並列復号を一つの動的推論制御として扱う。",
-    "implementation": "公式再現コードを公開し、既存のLLaDA系・Dream系モデルへ追加学習なしで適用する。",
-    "hardware_evaluation": "NVIDIA Pro6000 GPU上で処理量を測定している。",
-    "quality_effect": "MMLU、ARC-C、GSM8K、GPQA、HumanEvalで正答率を同時測定し、未高速化モデルに近い精度を維持する設定を採用する。",
-    "source": "https://arxiv.org/abs/2606.26120",
-    "sources": [
-      "https://arxiv.org/abs/2606.26120",
-      "https://arxiv.org/html/2606.26120"
-    ],
-    "code": "https://github.com/TianyiWu233/DYNAMIC-DLLM",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "未抽出（本文は全文確認済み）",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-5b9295062587c5654fd78a44",
+  "job_id": "job-research-21b30a62610ad176",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f0acf688ceaad1c0809f2085",
+    "claim_id": "claim-5b9295062587c5654fd78a44",
     "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
     "worker_kind": "scheduled_chat"
   }
