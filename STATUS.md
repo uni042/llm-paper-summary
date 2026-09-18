@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:12:00 JST**
+> 自動生成: **2026-09-19 05:15:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **57** |
 | 未claim Research job | **56** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 04:44:17 JST（27分前）** |
+| 最終検証済みResearch収録 | **09-19 04:44:17 JST（30分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -198,7 +198,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.23294` — NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 05:09:30 JST** / heartbeat: **—** / lease expiry: **09-19 06:39:30 JST**
+  - claim: **09-19 05:14:50 JST** / heartbeat: **—** / lease expiry: **09-19 06:44:50 JST**
   - evidence: `.survey/work-queue/claims/job-research-8de660021e1eaf46.json`
 
 #### Audit
