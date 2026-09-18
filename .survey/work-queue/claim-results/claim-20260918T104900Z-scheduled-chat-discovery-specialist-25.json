@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T104900Z-scheduled-chat-discovery-specialist-25",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-9d3c210288b42eb4",
+      "claim_id": "claim-9f87be3eccb556ffce963b80",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-9f87be3eccb556ffce963b80",
+      "claimed_at": "2026-09-18T10:09:41+00:00",
+      "expires_at": "2026-09-18T11:39:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-9d3c210288b42eb4"
+      ],
+      "job": {
+        "job_id": "job-research-9d3c210288b42eb4",
+        "type": "research",
+        "parent_job_id": "job-8b4601a03212a20d",
+        "priority": 82,
+        "canonical_id": "arXiv:2505.16056",
+        "title": "Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models",
+        "source_url": "https://arxiv.org/abs/2505.16056",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "selection_reason": "MoEエキスパートオフロードの成立性を左右す局所ルーティング一貫性をSRP/SCH指標で定量化し、20種のMoE LLMを比較する。モデル構造・共有エキスパート・専門化とキャッシュヒット率の関係を明らかにし、多くのモデルでアクティブエキスパート数のおよそ2倍のキャッシュ容量が効率と有効性の転換点になることを示すため、エキスパートキャッシュ設計の基礎的評価として有用。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T15:01:24+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T10:09:41+00:00",
+  "checkpoint_released": 0
+}
