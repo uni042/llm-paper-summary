@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-71a9a76625d025d32bc3f2ef","job_id":"job-research-ca0df1c4e0a9af97","data":{"limitations":"短文脈または単一要求に近い低並列環境では、SSD交換遅延を別系列の計算で隠す余裕が小さく、トークン処理遅延が増える可能性がある。複数GPUが1台のSSDを共有する場合は帯域競合を避けるスケジューリングが必要である。安定した性能にはpSLC設定、ファイルシステム、LBA配置などSSD固有の調整知識を要する。評価SSDの耐久性と内部ガベージコレクション特性は製品依存であり、100B超モデルへの一般化も未検証である。","differences":"vLLM標準のDRAM交換はCPUメモリを容量層として使うのに対し、HiFCはDRAMを交換経路から外す。FlexGen型SSDオフロードがCPU DRAM中継を含むのに対しGDSでGPUとSSDを直結する。InstInferのような計算ストレージ方式はSSD側で注意計算を実行する専用CSDを必要とするが、HiFCは市販NVMe SSDへ通常のKVブロックを退避し、vLLMスケジューラでI/O遅延を隠す。AttentionStoreのDRAM/SSD階層とも異なり、オンライン長文脈推論でDRAMなしを狙う。","implementation_status":"vLLM v0.6.6を基盤にフラッシュキャッシュブロック割当、追記配置、CUDA/GDSキャッシュエンジンを実装し、市販A100 GPUとNVMe Gen4 SSDで実機評価している。新規データセットや事前学習モデルは公開せず、論文は実装方式と評価を報告する。","research_positioning":"KVキャッシュの階層メモリ研究のうち、SSDを低価格な大容量交換層として実用化する系統に位置する。重要なのはSSDの遅さを単純に受け入れるのではなく、GDSによる中継排除、順次I/O化、pSLC耐久性、系列パイプラインによる遅延隠蔽を一体化し、性能だけでなく3年間費用と寿命まで設計指標へ含めた点である。"},"reservation":{"claim_id":"claim-71a9a76625d025d32bc3f2ef","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-818968501d26285ed6167878",
+  "job_id": "job-research-ca0df1c4e0a9af97",
+  "data": {
+    "limitations": "短文脈または単一要求に近い低並列環境では、SSD交換遅延を別系列の計算で隠す余裕が小さく、トークン処理遅延が増える可能性がある。複数GPUが1台のSSDを共有する場合は帯域競合を避けるスケジューリングが必要である。安定した性能にはpSLC設定、ファイルシステム、LBA配置などSSD固有の調整知識を要する。評価SSDの耐久性と内部ガベージコレクション特性は製品依存であり、100B超モデルへの一般化も未検証である。",
+    "differences": "vLLM標準のDRAM交換はCPUメモリを容量層として使うのに対し、HiFCはDRAMを交換経路から外す。FlexGen型SSDオフロードがCPU DRAM中継を含むのに対しGDSでGPUとSSDを直結する。InstInferのような計算ストレージ方式はSSD側で注意計算を実行する専用CSDを必要とするが、HiFCは市販NVMe SSDへ通常のKVブロックを退避し、vLLMスケジューラでI/O遅延を隠す。AttentionStoreのDRAM/SSD階層とも異なり、オンライン長文脈推論でDRAMなしを狙う。",
+    "implementation_status": "vLLM v0.6.6を基盤にフラッシュキャッシュブロック割当、追記配置、CUDA/GDSキャッシュエンジンを実装し、市販A100 GPUとNVMe Gen4 SSDで実機評価している。新規データセットや事前学習モデルは公開せず、論文は実装方式と評価を報告する。",
+    "research_positioning": "KVキャッシュの階層メモリ研究のうち、SSDを低価格な大容量交換層として実用化する系統に位置する。重要なのはSSDの遅さを単純に受け入れるのではなく、GDSによる中継排除、順次I/O化、pSLC耐久性、系列パイプラインによる遅延隠蔽を一体化し、性能だけでなく3年間費用と寿命まで設計指標へ含めた点である。"
+  },
+  "reservation": {
+    "claim_id": "claim-818968501d26285ed6167878",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
