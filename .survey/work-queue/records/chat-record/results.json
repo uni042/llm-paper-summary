@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-c8a599afd4a259e75ab961db",
-  "job_id": "job-research-8de660021e1eaf46",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c8a599afd4a259e75ab961db",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c8a599afd4a259e75ab961db","job_id":"job-research-8de660021e1eaf46",
+ "data":{
+  "overview":"NASiCはT1のCAM選択で未選択expertの計算を消し、T2でblock内並列性、T3でmultibit storage/computationを順に増やすことで、従来NAND CIMの疎なMoEに対する利用率低下を反転させる。current variationが大きいほどBaseはinput dimension制約でserial cycleが増える一方、NASiCのfine-grained interleavingはT1だけでも4〜16倍のthroughput gainを示す。最終構成はA100、Cambricon-LLM、AiF、Baseに対し最大85/93.4/114.8/68倍のthroughput改善を報告する。",
+  "key_results":[
+   {"metric":"T1 throughput gain","value":"4–16x","baseline":"従来3D NAND CIM Base","condition":"fine-grained interleaved expert mapping、Flash current variation増加時","interpretation":"CAM maskが未選択expertの冗長計算を除去し、input dimension制約下でも有効parallelismを維持する。"},
+   {"metric":"総合throughput improvement","value":"5–85x / 5.5–93.4x / 6.8–114.8x / 4–68x","baseline":"A100 / Cambricon-LLM / AiF / Base","condition":"T1〜T3を統合したcross-layer NASiC","interpretation":"expert選択、block並列化、multibit cellの累積効果でGPUおよびnear-NAND系acceleratorを上回るsimulation結果。"},
+   {"metric":"energy efficiency improvement","value":"53–70x / 17.5–23x / 3.9–5.1x","baseline":"A100 / Cambricon-LLM / Base","condition":"NASiC構成比較","interpretation":"未選択expertのarray precharge/compute削減が大きく、Base比ではT1〜T3統合後も3.9〜5.1倍を維持する。"},
+   {"metric":"AEDP reduction","value":"3.5–8.3x","baseline":"Base","condition":"T1〜T3、sparsity条件を変化","interpretation":"CAM layerの面積costやT2のstorage-density trade-offを含めてもarea-energy-delay productは改善する。"},
+   {"metric":"CAM area overhead","value":"area efficiency reduction <0.05","baseline":"CAMなし","condition":"r=1/32、3-bit CAM","interpretation":"multibit CAMでexpert IDを少数layerへ圧縮すれば高sparsityでもCAM占有の面積損失を小さくできる。"}
+  ],
+  "negative_results":"T2はmodified thermometer encodingでstorage densityをparallelismへ交換するため単独ではarea efficiencyを下げる。T3を3-bitへ高密度化するとthroughputは上がる一方、ADC energyとlatencyが急増し2-bitよりenergy efficiencyが低下するため、speedとenergyのtrade-offがある。全結果はsimulation/modelingでありsilicon実測ではない。",
+  "interpretation":"改善の本質は、MoEのalgorithmic sparsityをhost softwareで後処理するのではなく、NAND stringのconductance pathへ直接expert-selection maskとして埋め込むことにある。これにより高密度保存と疎な計算を同じphysical organizationで両立し、その上でNAND固有のblock/threshold-state特性を並列計算へ再利用できる。",
+  "quality_impact":"Flash current variationによるperplexity悪化を避けるためinput dimensionを制限する前提で性能を評価する。NASiCはaccuracy向上法ではなく、許容variation条件を守りながら冗長計算を削減するarchitectureである。"
+ },
+ "reservation":{"claim_id":"claim-c8a599afd4a259e75ab961db","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
