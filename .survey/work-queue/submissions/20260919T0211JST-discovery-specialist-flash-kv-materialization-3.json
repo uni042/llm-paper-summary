@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.22195",
+      "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.22195",
+      "priority": 80,
+      "reason": "RAG文書のKVを事前計算してflash SSDへmaterializeし、prefill再計算をstorage readへ置換するLLM inference system。GPU計算とflash容量・帯域を明示的に交換し、KV loadとdecodeのoverlap、低性能GPU活用まで評価しており、SSDを単なるspill先ではなく再利用可能な計算状態層として使う点が既存offload系と差別化される。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-flash-kv-materialization-3",
+    "axis": "flash KV materialization・RAG prefill reuse・compute-storage tradeoff",
+    "query_summary": "computational storage、near-storage attention、flash/NVMe expert offloadからKV materializationへ検索軸を展開。FlashMoE(arXiv:2601.17063)、INF^2(arXiv:2502.09921)、Endor(arXiv:2406.11674)、InstInfer(arXiv:2409.04992)、SSD energy analysis(arXiv:2508.06978)はidentity shardで既知を確認。MatKV(arXiv:2512.22195)はarxiv-2512 identity shardに不在で、一次arXiv情報からflash-backed KV reuseのsystem contributionと定量評価を確認して採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2601.17063", "arXiv:2502.09921", "arXiv:2406.11674", "arXiv:2409.04992", "arXiv:2508.06978"],
+    "next_axis_hint": "RAG/prefix KV materialization、semantic/prefix cache persistence、flash-backed cross-request reuseを独立に走査する"
+  }
+}
