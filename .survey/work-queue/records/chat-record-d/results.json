@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b754dde5123b74a7ef8d3fca",
+  "attempt_id": "attempt-bc68d740adca0b4c200156a1",
   "job_id": "job-research-9d3c210288b42eb4",
   "data": {
     "overview": "モデル間の長期局所routing一貫性は大きく異なる。m=16のSRPはLLaMA-MoE-v2 78.16、Qwen3 54.14、OLMoE 50.91に対し、DeepSeek-V2-Lite 37.92、OpenMoE 28.77、SwitchTransformer encoder 19.33。局所load balanceを強めるとSRPが下がり、shared expertや小さいexpert combination spaceも低SRPと関連する。一方、domain-specialized expertは高い局所一貫性とglobal load balanceを両立し得る。SCHはLRU/LFU hit rateと高相関で、rho≈2付近が多くのモデルでcache効果と容量の均衡点になる。",
@@ -48,8 +48,8 @@
     "quality_impact": "本研究の指標計算自体は元モデルの出力品質を変更しない。toy model設計変更ではperplexityを併記しているが、offloading-friendly routingを強めた場合の下流task品質を広範に最適化する研究ではない。"
   },
   "reservation": {
-    "claim_id": "claim-b754dde5123b74a7ef8d3fca",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-bc68d740adca0b4c200156a1",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

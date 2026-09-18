@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-b754dde5123b74a7ef8d3fca",
+  "attempt_id": "attempt-bc68d740adca0b4c200156a1",
   "job_id": "job-research-9d3c210288b42eb4",
   "data": {
     "problem": "MoEのエキスパートオフロードは、GPUなど高速メモリに一部expertだけを保持し、miss時にCPU計算または低速メモリからloadすることで巨大MoEを限られたメモリで動かす。しかし既存研究はMixtral等の少数モデルで『近接tokenが同じexpertを使いやすい』ことを経験的に利用する一方、その局所性がモデル間でどの程度違い、どのmodel/training designがオフロード向きかを体系的に測る尺度がなかった。短い区間でroutingが頻繁に変わればcache missと転送が増えるため、system側のcache/prefetch最適化だけでは限界がある。",
@@ -33,8 +33,8 @@
     "system_design": "system実装のcache policyを直接提案するのではなく、model routing trace→SRP/SCH→cache適性という分析層を設ける。これによりoffloading system設計前にmodel selectionやcache容量を見積もり、逆にMoE training/architecture側でoffloading-friendlyなroutingを設計するための指標として使う。"
   },
   "reservation": {
-    "claim_id": "claim-b754dde5123b74a7ef8d3fca",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-bc68d740adca0b4c200156a1",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

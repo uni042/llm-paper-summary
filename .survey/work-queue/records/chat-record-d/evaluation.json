@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b754dde5123b74a7ef8d3fca",
+  "attempt_id": "attempt-bc68d740adca0b4c200156a1",
   "job_id": "job-research-9d3c210288b42eb4",
   "data": {
     "hardware": "本研究はrouting trace解析とcache simulationが中心で、特定GPUでのend-to-end offloading latency/throughput比較を主要評価にしない。20実モデルの推論traceを収集し、追加で1.43B toy MoE群を事前学習する。",
@@ -11,8 +11,8 @@
     "scope": "モデル側のexpert routing localityとexpert cache適性を広く比較する分析研究。実際のPCIe/NVLink帯域、expert weight size、prefetch overlap、CPU/GPU execution、concurrent request schedulingを含むend-to-end serving性能は直接測っていないため、SRP/SCHから実システムspeedupをそのまま予測する用途には追加検証が必要。"
   },
   "reservation": {
-    "claim_id": "claim-b754dde5123b74a7ef8d3fca",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-bc68d740adca0b4c200156a1",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
