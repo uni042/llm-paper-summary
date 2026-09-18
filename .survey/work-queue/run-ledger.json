@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:18:35.081209+00:00",
+  "updated_at": "2026-09-18T20:21:07.119404+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:18:35.081209+00:00",
+      "last_recorded_at": "2026-09-18T20:21:07.119404+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 272,
+        "research_completed": 273,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 34,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35305223438:1",
-          "recorded_at": "2026-09-18T04:01:12.027323+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35305223438",
-            "run_attempt": "1",
-            "source_sha": "c898f9b1d982b5676f6f1621d356e0cd52d0178f"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35309244361:1",
           "recorded_at": "2026-09-18T05:05:19.903175+00:00",
@@ -19597,6 +19582,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35390942567:1",
+          "recorded_at": "2026-09-18T20:21:07.119404+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35390942567",
+            "run_attempt": "1",
+            "source_sha": "88ea7d2c58ce8a0ff3ba3ad8a7b251d1c3bd6a16"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23240,6 +23239,14 @@
           "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-b3afe97f03f9606a",
+          "type": "research",
+          "canonical_id": "arXiv:2603.09216",
+          "title": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25507,7 +25514,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
