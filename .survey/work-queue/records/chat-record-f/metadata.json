@@ -4,10 +4,33 @@
   "slot": "metadata",
   "attempt_id": "attempt-01bc2c1e0ef21dcae1e71886",
   "job_id": "job-research-7b5d4afbd3eabe62",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01bc2c1e0ef21dcae1e71886",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+    "title": "PLA-Serve: A Prefill-Length-Aware LLM Serving System",
+    "summary": "LAPSは、プリフィル・デコード分離後にも残るプリフィル内部の干渉に着目し、短いプリフィル／再プリフィルと長いプリフィルを長さ境界で分類して別キュー・別実行モードへ分離するサービング方式である。短い要求には待機窓とCUDA Graph形状クラスタリングを使ってバッチ効率を高め、複数GPUではキュー圧に応じて短・長プリフィル用インスタンス数を動的に調整する。MLSys 2026論文と公開アーティファクトにより、実機H200上でSGLangを基準に遅延、SLO違反率、要求スループットを評価している。",
+    "source": "https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf",
+    "sources": ["https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html", "https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf"],
+    "authors": ["Jianshu She", "Zonghang Li", "Hongchao Du", "Shangyu Wu", "Wenhao Zheng", "Eric P. Xing", "Zhengzhong Liu", "Huaxiu Yao", "Jason Xue", "Qirong Ho"],
+    "published": "2026",
+    "publication": "Proceedings of Machine Learning and Systems 8 (MLSys 2026)",
+    "publication_type": "conference",
+    "publication_status": "published",
+    "topics": ["LLM serving", "prefill scheduling", "prefill-decode disaggregation", "CUDA Graph", "SLO-aware scheduling"],
+    "implementation": "LAPS v1.0。SGLang v0.4.6.post5系を基盤に、二重キュー、待機窓、CUDA Graph対応、動的GPU割当を実装。論文付録に再現用スクリプトと環境を記載。",
+    "code": "https://github.com/Jianshu-She/LAPS",
+    "last_checked": "2026-09-19",
+    "hardware_evaluation": "実機評価。主にNVIDIA H200を使用し、付録では8×H200を推奨、PD分離評価は最低2 GPU。A100/H100も十分なメモリがあれば利用可能と記載。",
+    "quality_effect": "モデルの近似・量子化ではなくスケジューリング変更であり、生成品質を変更する機構ではない。評価の中心はTTFT、P90 TTFT、要求スループット、SLO違反率。",
+    "references": [
+      {"arxiv_id": "2312.07104", "canonical_id": "arXiv:2312.07104"},
+      {"arxiv_id": "2401.09670", "canonical_id": "arXiv:2401.09670"},
+      {"arxiv_id": "2507.17120", "canonical_id": "arXiv:2507.17120"},
+      {"arxiv_id": "2309.11998", "canonical_id": "arXiv:2309.11998"},
+      {"arxiv_id": "2403.01876", "canonical_id": "arXiv:2403.01876"}
+    ],
+    "references_checked_at": "2026-09-19",
+    "references_source": "MLSys 2026 proceedings PDF reference section",
+    "references_total": 5
+  },
+  "reservation": {"claim_id": "claim-01bc2c1e0ef21dcae1e71886", "worker_id": "scheduled-chat-discovery-20260919T0700JST", "worker_kind": "scheduled_chat"}
 }
