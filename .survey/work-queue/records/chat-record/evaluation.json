@@ -1,18 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-63cfbded74c721cbf2f18246",
-  "job_id": "job-research-78d3e9d2047890ea",
-  "data": {
-    "hardware": "主評価はNVIDIA A100-SXM4-80GB 1基、PCIe 4.0、2TB host RAM。Qwen3-8B/Qwen3-4B/Qwen2.5-7B/Qwen2.5-7B-Instruct-1Mのactivation・fidelity・RULER-style・timingをA100で測定し、Llama-3.1-8B 4kのみNVIDIA L4でactivation取得後に同じfidelity codeで評価。",
-    "software": "PyTorch/HuggingFace系generationとTriton prototype kernelsを使用し、著者公式GitHub repositoryでcode/resultsを公開。host-resident bit-plane run gather、scan kernel、top-k、winner-row gatherをresearch harnessで構成。",
-    "methodology": "Wikitext-103 trainでkey variance/KLT等をcalibrationしtest splitで7 model/context設定のattention-output relative L2 errorを評価。128 decode positions（128kでは64）についてsink 4 + local 32 + method score上位k-36をquery headごとに選びdense attention出力と比較する。RULER-styleでは32k Qwen3-8Bで6 task×40 samples、128k Qwen2.5-7B-Instruct-1Mで4 task×20 samplesをdense prefillから同一KV cacheで分岐しgreedy sparse decoding。実agent評価はOpenHands/SWE-rebenchの実trajectoryをrepositoryごとに約80k〜100k tokenへ連結し、40 session(k=512)または20 session(k=2048)でexact top-kとのword-level step agreementを測る。timingはweightsをGPU、K/V rowsと原則scan storeをpinned host memoryに置き、scan→top-k→PCIe winner gather→exact attentionのdecode stepをGPU profiler time中心に測定。256k〜1M timingはsynthetic KV、32k〜128kはreal prefill。",
-    "scope": "比較対象はDouble Sparsity c=32、Loki r=32/64、SparQ r=16/32、2-bit all-channel thumbnail、8-token block mean landmark、exact top-k oracle、dense attention。主張対象はscan index自体もhost memoryに退避される長文脈・多session regimeであり、HBM-resident indexをcontrolとして明示的に評価する。"
-  },
-  "reservation": {
-    "claim_id": "claim-63cfbded74c721cbf2f18246",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-63cfbded74c721cbf2f18246","job_id":"job-research-78d3e9d2047890ea","data":{"hardware":"主評価はNVIDIA A100-SXM4-80GB一基、第四世代PCIe接続、ホストメモリ二テラバイトの環境で行う。Qwen3-8Bは一万六千・三万二千、Qwen3-4Bは一万六千、Qwen2.5-7Bは三万二千、Qwen2.5-7B-Instruct-1Mは三万二千・十二万八千トークンで活性値、忠実度、長文脈課題、時間を測る。Llama-3.1-8Bの四千トークン条件だけNVIDIA L4で活性値を取得し、同じ忠実度計算へ渡す。百万トークン級の時間計測では実モデルがその長さを事前計算できないため、較正鍵を繰り返した合成鍵値キャッシュを用いる。","software":"著者公式GitHubリポジトリに実験コードと結果を公開する。推論は既存のモデル生成経路を基礎にし、ホスト常駐ビット面を連続区間で集める処理と可変深度走査をTriton試作カーネルで実装する。各段階では索引転送、近似得点計算、上位候補選択、勝者鍵値行の転送、選択集合上の厳密注意を順に実行する。時間評価は研究用Python制御器の壁時計時間だけに依存せず、GPUプロファイラが記録するカーネル時間とメモリ転送時間の合計を主尺度とする。","methodology":"鍵チャネル分散と必要な回転基底はWikitext-103の学習分割で較正し、同じ文脈長の試験分割で評価する。忠実度評価では文脈末尾の百二十八復号位置、十二万八千条件では六十四位置を使い、全層・全鍵値頭を対象とする。選択集合は先頭四トークン、直近三十二トークン、それ以外の近似得点上位から構成し、選択集合上の厳密注意出力と密注意出力の相対二乗誤差を平均する。候補数は通常、四千で百二十八、一万六千で二百五十六、三万二千で五百十二とし、十二万八千では比率依存性も別に測る。長文脈検索・状態追跡課題では、Qwen3-8Bの三万二千条件で六種類各四十標本、Qwen2.5-7B-Instruct-1Mの十二万八千条件で四種類各二十標本を用いる。各標本は一度だけ密な事前計算を行い、同じ鍵値状態から各方式の貪欲復号へ分岐する。実エージェント評価ではOpenHandsの実軌跡をリポジトリ単位で八万から十万トークンへ連結し、同じ事前計算状態から各方式が次のエージェント段階を生成する。候補数五百十二では四十セッション、二千四十八では二十セッションを使い、厳密上位候補方式の生成との語列一致率を測る。時間評価ではモデル重みをGPU、鍵値行と原則として索引を固定ホストメモリへ置き、索引走査から厳密注意まで一段階全体を測定する。","scope":"比較対象はDouble Sparsity、Loki、SparQ、全チャネル二ビット縮約、八トークン区画平均の代表索引、厳密上位候補、密注意である。固定深度方式には同じ四ビット符号と同じ区画尺度を与え、読取ビット数の比較条件を揃える。主張対象は鍵値行だけでなく候補索引もホストメモリへ退避される長文脈・多数常駐セッションの構成である。対照実験として索引だけGPU高帯域メモリへ置く条件も測り、その場合に高速化しないことを確認する。これにより、単なるカーネル最適化ではなく遅い記憶階層を横断するバイト数削減が効果源であることを切り分ける。"},"reservation":{"claim_id":"claim-63cfbded74c721cbf2f18246","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
