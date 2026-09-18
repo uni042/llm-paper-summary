@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-fault-recovery-6",
+    "axis": "fault-tolerant LLM serving・KV checkpoint/replication・failure recovery",
+    "query_summary": "KV state persistenceからfailure recoveryへ展開。KevlarFlow、GhostServe、LUMEN、FailSafe、R2CCL等を確認したが、主要system候補はcanonical identity shardで既収録/既投入だったため新規candidateなし。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2601.22438", "arXiv:2605.00831", "arXiv:2606.17787", "arXiv:2511.14116", "arXiv:2512.25059"],
+    "next_axis_hint": "2024-2025のrequest migration・elastic serving・KV placementと、model/KV co-migrationへ軸を移す",
+    "empty_round_reason": "fault-recovery上位候補は既にcanonical identityへ収録済みだった。"
+  }
+}
