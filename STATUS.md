@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:34:18 JST**
+> 自動生成: **2026-09-19 03:34:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 03:30:37 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-19 03:30:37 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **13** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **29** | **8** | **8** | **0** | **1** | **0** | **5** |
+| 合計 | **29** | **8** | **7** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,17 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling
-  - job: `.survey/work-queue/jobs/job-research-21b30a62610ad176.json`
-  - result: `.survey/work-queue/results/research/attempt-e7451954f296ee21fbc9ac8c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e7451954f296ee21fbc9ac8c.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md`
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e89e063d9080990c8ecc0d26.json` (job `job-research-4fd6dcd288e7197d`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -253,8 +249,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **546** |
-| └ Research | **417** |
+| 成功result未照合のimmutable submission | **547** |
+| └ Research | **418** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
