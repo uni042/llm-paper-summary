@@ -2,65 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5e14ce9ab5f740202d8cecb7",
-  "job_id": "job-research-61cb466957462432",
-  "data": {
-    "canonical_id": "arXiv:2609.14643",
-    "arxiv_id": "2609.14643",
-    "doi": "10.48550/arXiv.2609.14643",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": [
-        "cs.DC"
-      ]
-    },
-    "title": "BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices",
-    "summary": "スマートフォンで大規模な混合専門家モデル（Mixture-of-Experts; MoE）を動かすと、DRAMに収まらないエキスパート重みをUFSフラッシュから読み、NPU用バッファへ写像し、さらにVTCMへ移す多段データ移動が逐次生成を支配する。BigMoMoは投機的復号（speculative decoding）の複数候補トークンを一括検証する窓を、単なるトークン生成高速化ではなくエキスパート移動のスケジューリング窓として使う。受理確率・ルータ影響・移動費用で無駄な候補とエキスパートを削り、直近の同時読出し履歴からフラッシュ上の配置を連続読出し向けに再編し、準備済みエキスパートをNPUで計算しながら残りを移動する。4種類の21〜30B級MoEを実スマートフォンで評価し、オンデマンド自己回帰オフロード比で平均4.83倍、最良の投機対応比較方式比で平均1.76倍高速化する。",
-    "list_summary": "投機的復号の複数トークン窓でエキスパート再利用・フラッシュ連続読出し・NPU計算との移動重畳を行い、30B級MoEのスマホ推論を平均4.83倍高速化する。",
-    "authors": [
-      "Maoliang Li",
-      "Hailong Zou",
-      "Taohong Han",
-      "Haoze Chi",
-      "Jiayu Chen",
-      "Zihao Zheng",
-      "Jie Zhang",
-      "Guojie Luo",
-      "Xiang Chen"
-    ],
-    "authors_affiliations": "Peking University; Tianjin University",
-    "published": "2026-09-13",
-    "publication": "arXiv preprint",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1",
-    "lineage": "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング",
-    "topics": [
-      "Mixture of Experts",
-      "mobile inference",
-      "speculative decoding",
-      "expert offloading",
-      "flash storage",
-      "NPU scheduling"
-    ],
-    "importance": "投機的復号で露出する複数トークンのエキスパート需要を、フラッシュ→DRAM→NPUバッファ→VTCMというモバイル固有の階層全体で共同最適化し、30B級MoEを実スマートフォンへ持ち込む。",
-    "implementation": "llama.cppとHexagon NPUバックエンドへ約5,000行を追加して実装。論文では実機Android上のTermux環境で評価。公開コードURLは一次資料から確認できない。",
-    "hardware_evaluation": "OnePlus 15/Snapdragon 8 Elite Gen 5、OnePlus 13/Snapdragon 8 Elite、OnePlus Ace 5/Snapdragon 8 Gen 3の実スマートフォン。DRAM 12〜24GB、UFS 4.0/4.1、Qualcomm Hexagon NPUを使用。",
-    "quality_effect": "候補ノード削減は表示精度で品質を変えず、エキスパート削減追加後の低下はGSM8K 0.13、HumanEval 0.05、MMLU-Pro 0.18ポイント。",
-    "source": "https://arxiv.org/abs/2609.14643",
-    "sources": [
-      "https://arxiv.org/abs/2609.14643"
-    ],
-    "code": "",
-    "project": "",
-    "last_checked": "2026-09-18",
-    "references": [],
-    "references_checked_at": "2026-09-18",
-    "references_source": "arXiv HTML全文の参考文献節まで確認。個別参考文献は構造化配列へ転記していない。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-109930730e8c121fc0ac5c18",
+  "job_id": "job-research-455581782889dbd1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5e14ce9ab5f740202d8cecb7",
+    "claim_id": "claim-109930730e8c121fc0ac5c18",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

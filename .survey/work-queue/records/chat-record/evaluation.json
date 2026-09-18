@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5e14ce9ab5f740202d8cecb7",
-  "job_id": "job-research-61cb466957462432",
-  "data": {
-    "hardware": "3台の市販Androidスマートフォンで実機評価。OnePlus 15はSnapdragon 8 Elite Gen 5、16GB DRAM中11.52GB利用可能、256GB UFS 4.1。OnePlus 13はSnapdragon 8 Elite、24GB中18.23GB利用可能、1TB UFS 4.0。OnePlus Ace 5はSnapdragon 8 Gen 3、12GB中6GB利用可能、512GB UFS 4.0。Qualcomm Hexagon NPUのHMX/HVXと8MiB VTCMを利用する。",
-    "software": "llama.cppとHexagon NPUバックエンドへ約5,000行を追加。Android上のTermuxで直接実行し、対象MoEはすべてQ4_0量子化。比較方式SpecMoEOff、SP-MoE、MoE-SpAcの論文上のアルゴリズムを同じモバイル実行基盤へ再実装して比較する。",
-    "methodology": "対象はQwen3-30B-A3B（128エキスパート、Top-8）、LFM2-24B-A2B（64、Top-4）、Gemma-4-26B-A4B-it（128、Top-8+共有）、ERNIE-4.5-21B-A3B（64、Top-6+共有2）で、それぞれ小型下書きモデルを組み合わせる。通常の投機設定は下書き長2・分岐幅2。GSM8K、HumanEval、MT-Bench、MMLU-Pro、CNN/DailyMailを使い、CNN/DailyMailは256出力トークン、他は128。各ワークロードで評価集合と分離した1,024サンプルをオフライン統計・頻出エキスパート選択へ使う。主要指標は出力1トークン当たり時間（Time Per Output Token; TPOT）で、P50/P90/P99とエンドツーエンド遅延も測定し、各結果を10回平均する。比較はオンデマンド自己回帰、投機+オンデマンド、SpecMoEOff、SP-MoE、MoE-SpAc。",
-    "scope": "評価はモバイルのフラッシュ→DRAM→Hexagon NPU階層に特化し、サーバGPU向けPCIe/NVLink環境ではない。主結果はSnapdragon 8 Elite Gen 5とGen 3上の4モデル×5ベンチマークで、3端末横断結果も別途提示する。性能は論文著者が同一バックエンドへ再実装した比較アルゴリズムとの比較であり、各既存システムの元実装をそのまま端末上で走らせた比較ではない。"
-  },
+  "attempt_id": "attempt-109930730e8c121fc0ac5c18",
+  "job_id": "job-research-455581782889dbd1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5e14ce9ab5f740202d8cecb7",
+    "claim_id": "claim-109930730e8c121fc0ac5c18",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
