@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2512.22195",
   "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
   "source_url": "https://arxiv.org/abs/2512.22195",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md",
   "selection_reason": "RAG文書のKVを事前計算してflash SSDへmaterializeし、prefill再計算をstorage readへ置換するLLM inference system。GPU計算とflash容量・帯域を明示的に交換し、KV loadとdecodeのoverlap、低性能GPU活用まで評価しており、SSDを単なるspill先ではなく再利用可能な計算状態層として使う点が既存offload系と差別化される。",
   "status": "ready",
   "workflow_version": 10,

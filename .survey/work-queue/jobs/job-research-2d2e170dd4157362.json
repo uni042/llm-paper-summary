@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2505.03780",
   "title": "An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD",
   "source_url": "https://arxiv.org/abs/2505.03780",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2505.03780-an-i-o-characterizing-study-of-offloading-llm-models-and-kv-caches-to-nvme-ssd.md",
   "selection_reason": "CHEOPS 2025の査読付きsystems/storage研究で、DeepSpeedとFlexGenの実際のLLM推論offloadからblock-layer I/O traceを採取し、model/KV-cacheのNVMeアクセス粒度・read/write帯域・POSIX対libaio・SSD非飽和を定量化する。SSD/NVMe階層memory設計に直接使える実測characterizationで、既存のoffload mechanism論文を補完する一次データとして価値が高い。",
   "status": "ready",
   "workflow_version": 10,

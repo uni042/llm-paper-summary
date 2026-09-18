@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e82cbbaad928ffed36c0f0b0",
+  "attempt_id": "attempt-50d319b76e34955de23ce2f8",
   "job_id": "job-research-6af027835df580e1",
   "data": {
     "overview": "GoCkptは従来の非同期チェックポイントに対して6.8〜38.4%、勾配転送を次ステップへさらに隠すGoCkpt-Oは6.7〜40.1%の学習スループット改善を示し、理想的な保存費用ゼロ条件との差をそれぞれ0.2〜1.8%、1.2%未満まで縮める。同じGPU-CPU転送最適化を持つAsync/Async-Oと比べても最大4.3%程度改善し、差が単なる固定メモリや多スレッドI/Oではなく複数ステップ重畳とCPU再構築から来ることを示す。LLaMA3.2-1BではGoCkpt-OがAsync-O比で停止時間を86.4〜99.2%削減し、600秒ごとの模擬障害を含む最適頻度実験でも794.1 tokens/sを達成してAsync-Oの776.3を2.3%、転送最適化Asyncの758.0を4.8%上回る。",
@@ -48,7 +48,7 @@
     "quality_impact": "CPU再構築はGPUと同じAdamW更新を用いて各古いブロックを最後のステップ版へ更新し、永続化前に一貫したモデル・最適化器状態を作る。復元手順は通常方式と同じSSD→CPU→GPUで、一貫版の次ステップから再開する。"
   },
   "reservation": {
-    "claim_id": "claim-e82cbbaad928ffed36c0f0b0",
+    "claim_id": "claim-50d319b76e34955de23ce2f8",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

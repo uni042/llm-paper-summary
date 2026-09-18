@@ -6,7 +6,7 @@
   "canonical_id": "doi:10.1145/3788106",
   "title": "Towards Scalable Storage Architectures for GPU Clusters Running Large Language Models",
   "source_url": "https://doi.org/10.1145/3788106",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-80288018997a-towards-scalable-storage-architectures-for-gpu-clusters-running-large-language-models.md",
   "selection_reason": "SIGMETRICS/Measurement系のsystems研究として、libaio・io_uring・SPDK・GPUDirect StorageをSATA SSD/NVMe/Optane上で25,000超の構成にわたり比較し、LLMのpre-training/fine-tuning/inference各phaseのstorage datapathを実測する。特にSSD/NVMeをLLM推論階層memoryへ使う際のsoftware datapath選択とCPU costを定量化しており、mechanism論文群を横断する基礎データとして有用。",
   "status": "ready",
   "workflow_version": 10,

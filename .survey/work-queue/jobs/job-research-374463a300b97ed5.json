@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2606.20537",
   "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
   "source_url": "https://arxiv.org/abs/2606.20537",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
   "selection_reason": "KV cacheだけでなくrecurrent/convolution/MTP stateとmetadataを含む完全なrestorable execution stateをgraph-bound capsuleとしてsnapshot/restore/fork/rollbackするruntime設計。small-batch/on-device agent再入場のstate-management問題を扱い、CUDA graph/static-buffer runtimeとcheckpoint機構を一体化するため隣接systemとして価値がある。",
   "status": "ready",
   "workflow_version": 10,
