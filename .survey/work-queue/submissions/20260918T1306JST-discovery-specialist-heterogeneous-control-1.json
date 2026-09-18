@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.02987",
+      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+      "source_url": "https://arxiv.org/abs/2602.02987",
+      "paper_path": "papers/inference/06-serving-scheduling/2026-2602.02987-large-scale-heterogeneous-workloads-optimal-control.md",
+      "priority": 78,
+      "reason": "prefill/decode共有GPUでの状態依存干渉と異種ワークロードを多サーバ待ち行列としてモデル化し、gate-and-route制御の漸近最適性を示す。実測iteration-timeで較正した評価を含み、serving schedulingの理論と実システム制御の橋渡しとして価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07472",
+      "title": "Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference",
+      "source_url": "https://arxiv.org/abs/2604.07472",
+      "paper_path": "papers/inference/06-serving-scheduling/2026-2604.07472-fast-heterogeneous-serving.md",
+      "priority": 76,
+      "reason": "異種GPU・モデル選択・並列度・SLO・予算を同時に扱う配置問題に対し高速な制約対応ヒューリスティックを提案し、大規模設定で厳密解法比260倍超の高速化を報告する。heterogeneous servingの運用設計比較に有用。"
+    },
+    {
+      "canonical_id": "arXiv:2603.12707",
+      "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2603.12707",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-cross-tier-gpu-heterogeneity.md",
+      "priority": 80,
+      "reason": "vision encoderとlanguage generationのハードウェア特性差を利用し、modality境界で分離することで転送量を抑えた異種GPU servingを構築する。実装評価で予算効率とthroughput改善を示し、multimodal disaggregationの比較対象として強い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T12:00:00+09:00",
+    "round": "specialist-heterogeneous-control-1",
+    "axis": "heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation",
+    "query_summary": "直近のscheduling軸から異種GPU配置と制御へ移動し、検索結果と一次arXiv抄録を軽量評価した。既知のHetis等を避け、canonical IDを最新default branchのコード検索でも投入直前に再照合した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年新着と、CXL/NVMe/SSD階層メモリの未走査集合へ移る",
+    "empty_round_reason": null
+  }
+}
