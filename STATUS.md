@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:17:03 JST**
+> 自動生成: **2026-09-19 01:17:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -192,9 +192,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.21719` — PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:16:10 JST** / heartbeat: **—** / lease expiry: **09-19 02:46:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f97acaf8df0df8b2.json`
+- `arXiv:2502.05202` — Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:17:08 JST** / heartbeat: **—** / lease expiry: **09-19 02:47:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-044cfc2969a67347.json`
 
 #### Audit
 
