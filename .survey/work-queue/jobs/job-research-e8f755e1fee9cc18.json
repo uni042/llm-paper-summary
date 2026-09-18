@@ -8,11 +8,14 @@
   "source_url": "https://ieeexplore.ieee.org/document/11408460/",
   "paper_path": "papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md",
   "selection_reason": "HPCA 2026の査読論文。LLM tensor parallelismのcollectiveをcompute memory semanticsへ整合させるCAISを提案し、compute-aware ISA/microarchitecture、thread-block coordination、graph-level overlapを協調設計する。LLM workloadでNVLS solution比平均1.38x、T3比1.61x end-to-end speedupを報告するnetwork/runtime交差候補。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-18T19:02:42+00:00"
+  "created_at": "2026-09-18T19:02:42+00:00",
+  "completed_at": "2026-09-18T20:25:24+00:00",
+  "blocker": "一次資料全文を安全に取得できなかった。正本の一次URLであるIEEE Xplore文書11408460への直接取得を試みたが、この実行環境では取得に失敗した。DOIは10.1109/HPCA68181.2026.11408460である。今回の実行では外部検索経路が利用上限へ到達しており、著者公開版・会議公式コピー等の独立した一次資料経路を追加確認できないため、二次資料やジョブのselection_reasonから科学的内容を補完せず、再試行可能なblockedとして耐久保存する。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ad2aa4a0cc57fca75380b5da.json"
 }

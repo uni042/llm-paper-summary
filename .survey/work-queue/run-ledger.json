@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:24:00.156778+00:00",
+  "updated_at": "2026-09-18T20:25:29.396606+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:24:00.156778+00:00",
+      "last_recorded_at": "2026-09-18T20:25:29.396606+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 274,
         "audit_completed": 0,
         "discovery_completed": 149,
-        "blocked": 34,
+        "blocked": 35,
         "new_jobs": 235,
         "new_papers": 269,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35311536852:1",
-          "recorded_at": "2026-09-18T05:37:52.552435+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35311536852",
-            "run_attempt": "1",
-            "source_sha": "95214a3b344348d2f5ec30fc25707d7846cdedf9"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35311754331:1",
           "recorded_at": "2026-09-18T05:42:17.665697+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35391345279:1",
+          "recorded_at": "2026-09-18T20:25:29.396606+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35391345279",
+            "run_attempt": "1",
+            "source_sha": "7e6e9ef9bf05ddaa3cec166fc5ab56e0b463e0ff"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -23255,6 +23255,14 @@
           "title": "D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e8f755e1fee9cc18",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/HPCA68181.2026.11408460",
+          "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -25522,7 +25530,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
