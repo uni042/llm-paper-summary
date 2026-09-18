@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.26289",
+      "title": "Stateful Inference for Low-Latency Multi-Agent Tool Calling",
+      "source_url": "https://arxiv.org/abs/2605.26289",
+      "priority": 73,
+      "reason": "multi-turn agent/tool-call servingで会話状態をrequest間に永続化し、KV cacheを差分更新するstateful inference architectureを提示する。radix prefix cacheとprompt-lookup speculative decodingを組み合わせ、vLLM/SGLang比較で6-turn時2.1x、35-turn中央値4.2xのper-turn高速化を報告しており、agentic workloadのKV lifecycle管理という未収録のsystem軸を補完する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-agent-state-4",
+    "axis": "agentic multi-turn serving・persistent KV state・delta-only inference",
+    "query_summary": "flash-backed cross-request reuseからpersistent KV lifecycleとagentic servingへ軸を移動。LMCache(arXiv:2510.09665)、Shared RAG-DCache(arXiv:2504.11765)、ObjectCache(arXiv:2605.22850)、TokenLake(arXiv:2508.17219)、ShadowServe(arXiv:2509.16857)はidentity shardで既知を確認。Stateful Inference(arXiv:2605.26289)はarxiv-2605 shardに不在で、一次情報からsystem mechanismとvLLM/SGLang比較を確認して採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2510.09665", "arXiv:2504.11765", "arXiv:2605.22850", "arXiv:2508.17219", "arXiv:2509.16857"],
+    "next_axis_hint": "execution-state checkpoint/restore、agent session migration、KV state persistence/fork/rollbackを走査する"
+  }
+}
