@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-85ce7c28af347af9007d9c33",
-  "job_id": "job-research-ebde0cc040167968",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-85ce7c28af347af9007d9c33",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-85ce7c28af347af9007d9c33","job_id":"job-research-ebde0cc040167968","data":{"canonical_id":"arXiv:2602.23036","arxiv_id":"2602.23036","doi":"10.1109/ISPASS69572.2026.00012","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure","summary":"LLMServingSim 2.0は、異種アクセラレータ、多階層メモリ、事前充填・復号分離、MoE、接頭辞キャッシュ、計算・メモリ退避を単一の実行時ループで扱うLLMサービング用システムシミュレータである。演算子プロファイルと要求駆動の実行グラフを結び、スケジューリング、データ移動、通信競合、電力を相互作用込みで再現する。実機検証では主要性能・メモリ・電力指標を平均誤差約0.95%で再現し、複雑な構成でも概ね10分規模のシミュレーション時間を維持する。","list_summary":"異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。","authors":["Jaehong Cho","Hyunmin Choi","Guseul Heo","Jongse Park"],"authors_affiliations":"School of Computing, KAIST, Daejeon, South Korea","published":"2026-02-26","publication":"IEEE ISPASS 2026 / arXiv","publication_type":"国際会議論文","publication_status":"arXiv v2 (2026-03-23), ISPASS 2026","lineage":"LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design","topics":["推論シミュレーション","異種アクセラレータ","分離サービング","多階層メモリ","MoE","電力モデル"],"importance":"ハードウェア性能だけ、またはサービング方策だけを静的に評価するのではなく、要求到着から一括処理、配置、鍵値移動、通信競合までを同じ時間軸で反復するため、異種資源と分離構成の相互作用を設計探索できる。","implementation":"著者公式casys-kaist/LLMServingSimで公開。ASTRA-simとChakraを異種計算・演算子駆動推論向けに拡張し、PyTorch/HuggingFace演算子プロファイラ、Serving Engine、Model Serving Group、System Simulatorを統合。","hardware_evaluation":"実機はRTX A6000×4+Xeon Gold 6326、H100-SXM-80GB×8、Google Cloud TPU-v6e-1。将来PIMは演算子プロファイルを与える模擬構成で評価。","quality_effect":"モデル生成品質を変更する手法ではなく、既存サービング実装の性能・メモリ・電力を模擬する研究基盤。","source":"https://arxiv.org/abs/2602.23036","sources":["https://arxiv.org/abs/2602.23036","https://arxiv.org/html/2602.23036"],"code":"https://github.com/casys-kaist/LLMServingSim","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv v2 HTML全文の参考文献節を確認。個別転記なし。","references_total":0},"reservation":{"claim_id":"claim-85ce7c28af347af9007d9c33","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
