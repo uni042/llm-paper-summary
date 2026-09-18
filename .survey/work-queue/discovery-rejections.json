@@ -6,10 +6,10 @@
     "terminal_research_rejections"
   ],
   "updated_at": "2026-09-18T16:00:00+09:00",
-  "submission_count": 12,
+  "submission_count": 13,
   "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 39,
-  "rejection_record_count": 39,
+  "rejection_observation_count": 40,
+  "rejection_record_count": 40,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -164,6 +164,28 @@
       "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
       "run_key": "2026-09-17T07:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2505.21919": {
+      "primary_identity": "id:arXiv:2505.21919",
+      "identity_tokens": [
+        "id:arXiv:2505.21919",
+        "title:towards efficient keyvalue cache management for prefix prefilling in llm inference",
+        "url:https://arxiv.org/abs/2505.21919"
+      ],
+      "canonical_id": "arXiv:2505.21919",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2505.21919",
+      "rejection_reason": "実運用traceとRedis/CHIME/Shermanを用いたKV metadata管理のcharacterizationとして有用だが、新しいLLM inference system mechanismの実装・end-to-end改善を提示する研究ではなく、現サーベイのsystems候補としては寄与が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T16:00:00+09:00",
+      "last_rejected_at": "2026-09-18T16:00:00+09:00",
+      "axis": "KV cache metadata・RDMA・分離サービングnetwork transport",
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260918T1701JST-discovery-specialist-kv-metadata-3.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2509.12993": {
