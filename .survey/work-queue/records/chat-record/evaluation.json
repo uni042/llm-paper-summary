@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-478619d2b2eab68cb5a0f0d3","job_id":"job-research-b3afe97f03f9606a","data":{"hardware":"Samsung Galaxy S24+のExynos 2400を使用する。大コアCortex-X4と中コアA720のうち四コアを行列積、二コアをコピーへ割り当てる。六コア合計のBF16理論性能は321 GFLOPS、LPDDR5X-8533四チャネルの帯域は68.264 GB/s。対象はLlama 3.2 1Bと3B、バッチ1である。","software":"端末内実行基盤はExecuTorch。PIM向け配置変換器、並べ替え付きメモリコピー、二重バッファ用コピー・計算スレッドを実装する。生成時間はARM対応へ変更したPIMLibraryでLPDDR5X-PIMを模擬し、機能確認にはPIM Simulatorを併用する。","methodology":"比較は重み二重保存、メモリ制御器変更が属性問題まで理想的に解けると仮定したFACIL、SHERPA二重バッファ、SHERPA逐次方式。BF16のLlama 3.2 1B/3BでDRAM必要量と初回トークン時間を測る。入力・出力系列長は主に64〜192。端末のキャッシュ不能連続領域は約1GBしかなく全重みが入らないため、前処理時間はダミー重みで測定し、機能確認は実重みをキャッシュ可能領域へ置いて変換後出力を元のExecuTorchと照合する。生成はLPDDR5X-PIM模擬で時間を測り、実HBM-PIMとの比較では模擬誤差0.1〜3.6%を確認する。","scope":"商用スマートフォン上でコピーとCPU前処理を実測する一方、対象端末に実LPDDR5X-PIMがないため生成PIMは模擬である。また約1GBの連続キャッシュ不能領域制約により全モデルを同じ物理配置で端から端まで実測できず、時間経路と機能経路を分離している。GPU/NPUへの適用は議論とモデル化であり実測ではない。"},"reservation":{"claim_id":"claim-478619d2b2eab68cb5a0f0d3","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-49a5f136c96efe1a74ef7842",
+  "job_id": "job-research-b2d29fa9c529bdfd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-49a5f136c96efe1a74ef7842",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

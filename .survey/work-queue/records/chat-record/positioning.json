@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-478619d2b2eab68cb5a0f0d3","job_id":"job-research-b3afe97f03f9606a","data":{"limitations":"Galaxy S24+には実LPDDR5X-PIMがないため生成性能は模擬であり、端末の約1GBというキャッシュ不能連続領域制約から全モデルを同じ物理配置で端から端まで実測していない。二重バッファはコピー用スレッドと計算用スレッドの同期・負荷分散が必要で、短い入力ではコピーが臨界経路になる。逐次方式は簡単だがコピー遅延を必ず負う。高演算性能のGPU等では同じ入力長でもコピー費用の割合が増えるため、最適な入力長の境界が移動する。","differences":"HBM-PIMやPAISEは前処理用のキャッシュ可能・ホスト向け重みと、生成用のキャッシュ不能・PIM向け重みを二重保存して矛盾を回避するため容量費用が大きい。FACILはメモリ制御器へアドレス変換機構を追加して単一PIM配置をホスト向けに見せるが、ハードウェア変更が必要でメモリ属性矛盾を直接扱わない。PIM-SHERPAは既存ハードウェアのまま、実行時コピーで属性と配置を同時に変換し、単一重みを共有する。IANUS、NeuPIMs、AttAcc等がPIM演算配置やスケジューリングを主眼とするのに対し、本研究は前処理と生成の境界で生じる実装上の整合性を対象とする。","implementation_status":"ExecuTorch上で二重バッファ、並べ替え付きコピー、逐次方式を実装し、Galaxy S24+で前処理の実行時間と機能を評価している。生成側はARM対応へ変更したPIMLibraryとPIM Simulatorを用いる。論文本文から独立した公開PIM-SHERPAリポジトリは確認できない。","research_positioning":"PIMを用いたLLM推論の中でも、演算器設計ではなく製品級ソフトウェア統合に焦点を当てる。特にキャッシュ属性とDRAM物理配置という、抽象的な性能モデルでは見落としやすい制約がPIM実用化時に重み二重保存を招くことを示した。今後のPIM対応ランタイムやメモリ制御器設計では、前処理と生成の双方から同一重みを扱う際の基準点になる。"},"reservation":{"claim_id":"claim-478619d2b2eab68cb5a0f0d3","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-49a5f136c96efe1a74ef7842",
+  "job_id": "job-research-b2d29fa9c529bdfd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-49a5f136c96efe1a74ef7842",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
