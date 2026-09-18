@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:43:15 JST**
+> 自動生成: **2026-09-18 09:43:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
-| 未claim Research job | **50** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-18 09:41:43 JST（1分前）** |
+| 収録候補論文 | **52** |
+| 未claim Research job | **49** |
+| 直近24hの検証済みResearch収録 | **53** |
+| 最終検証済みResearch収録 | **09-18 09:43:20 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **3** | **3** | **0** | **3** | **0** | — |
+| Research | **15** | **3** | **3** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **22** | **11** | **11** | **0** | **3** | **0** | **18** |
+| 合計 | **23** | **11** | **11** | **0** | **3** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 09:43:20 JST** [research] `arXiv:2411.17741` — Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments
+  - job: `.survey/work-queue/jobs/job-research-d9f05d11667dcf83.json`
+  - result: `.survey/work-queue/results/research/attempt-3482ada8e43cfce3d8d1cfd9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3482ada8e43cfce3d8d1cfd9.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md`
 - **09-18 09:41:43 JST** [research] `arXiv:2506.04203` — Cascadia: An Efficient Cascade Serving System for Large Language Models
   - job: `.survey/work-queue/jobs/job-research-12153d10b82fca3c.json`
   - result: `.survey/work-queue/results/research/attempt-64f721f42b66b8d451936690.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c9e86b0774fbe3177b6fb0f5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c9e86b0774fbe3177b6fb0f5.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md`
-- **09-18 05:35:17 JST** [research] `arXiv:2505.15781` — dKV-Cache: The Cache for Diffusion Language Models
-  - job: `.survey/work-queue/jobs/job-research-b6925d33135e854c.json`
-  - result: `.survey/work-queue/results/research/attempt-8a81151586fdc3a2613ff366.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8a81151586fdc3a2613ff366.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md`
 
 ### Audit
 
@@ -237,7 +237,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,7 +257,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **697** |
+| inference/training/survey配下の論文Markdown実体 | **698** |
 
 ### immutable submissionの未照合
 
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **477** |
-| └ Research | **348** |
+| 成功result未照合のimmutable submission | **476** |
+| └ Research | **347** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

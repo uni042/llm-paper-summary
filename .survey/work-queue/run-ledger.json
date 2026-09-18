@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T00:41:46.600797+00:00",
+  "updated_at": "2026-09-18T00:43:24.913762+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T00:41:46.600797+00:00",
+      "last_recorded_at": "2026-09-18T00:43:24.913762+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 233,
+        "research_completed": 234,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 17,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35182859890:1",
-          "recorded_at": "2026-09-17T04:44:59.544131+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35182859890",
-            "run_attempt": "1",
-            "source_sha": "55f58a05227d615d98faf3d7ec988da9e6348d7b"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35184848717:1",
           "recorded_at": "2026-09-17T05:13:10.736286+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35292242457",
             "run_attempt": "1",
             "source_sha": "d8fc0b24ed5c5c36ec2df516935878cc25bed7c2"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35292339386:1",
+          "recorded_at": "2026-09-18T00:43:24.913762+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35292339386",
+            "run_attempt": "1",
+            "source_sha": "cf69a09f88663c341efb2f522d81c78da33c9d00"
           },
           "signals": [
             "research_completed"
@@ -22426,6 +22426,14 @@
           "type": "research",
           "canonical_id": "arXiv:2506.04203",
           "title": "Cascadia: An Efficient Cascade Serving System for Large Language Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d9f05d11667dcf83",
+          "type": "research",
+          "canonical_id": "arXiv:2411.17741",
+          "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
           "from": "ready",
           "to": "completed"
         }
