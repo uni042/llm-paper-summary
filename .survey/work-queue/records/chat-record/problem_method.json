@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-c8a599afd4a259e75ab961db",
-  "job_id": "job-research-8de660021e1eaf46",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c8a599afd4a259e75ab961db",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-c8a599afd4a259e75ab961db","job_id":"job-research-8de660021e1eaf46",
+  "data":{
+    "problem":"MoEは各tokenで少数expertだけを活性化するため計算量を抑えられる一方、全expert parameterを保存する必要がありon-deviceでは容量が支配的になる。3D NANDはterabyte級の高密度を持つが、従来CIMはdense GEMV向けで、横長pageへ複数expertを連続配置して入力をbroadcastするため、top-kで未選択のexpertまで計算してしまう。さらに3D NAND blockでは1 cycleに選べるpageがSSLで制限され、multibit入力を時間方向にserial展開するため並列性が低い。既存NAND CIMがSLC利用に偏ることも、多値Flash本来の保存密度を失わせる。",
+    "novelty":"NASiCの中心は、3D NAND string上部をCAM、下部をCIMとして同居させ、routerのexpert ID照合と選択expertのGEMVを同一cycleへ融合する点にある。これをinterleaved expert mappingと組み合わせて疎なexpertだけを物理的に通電させる。さらに複数SSLを同時活性化するblock-wise modified thermometer encoding、source-line電圧で符号付き多bit入力を表すin-situ expansion、多値Flash threshold stateをCIM weightへ使うmultibit cellをco-designし、architecture・circuit・cellの三層でNANDの疎性不整合を解く。",
+    "method_overview":"まず各expertの識別子をstring上部のCAM layerへ、expert weightを下部CIM layerへ格納し、expertをpage方向へinterleaveする。router出力のIDを全blockのCAMへbroadcastすると、一致したstringだけがconductiveになり、CAM mask MとCIM積xWが物理的に結合して選択expertだけの出力を生成する。CAMはmulti-level Flashのthreshold stateを利用して少数layerで多bit IDを表現できる。次に同一block内の複数SSLを同時に有効化し、複数cellのthreshold state数でsigned weight magnitudeを表す修正thermometer encodingを使う。正負weightはcomplementaryなdual-blockで表現し、source-line voltageの多値化でsigned multibit inputをin-situ展開する。最後にSLC二値だけでなく3-state/4-state以上のFlash cellへthreshold stateを追加し、複数read voltage pulseの結果を加算して多bit weightを計算する。追加read delayは3D NANDの大きいprecharge RCに対して小さいため、state数増加によるoperation数の増加がdelay増加を上回る設計を狙う。",
+    "components":[
+      {"name":"CAM-selected CIMとinterleaved expert mapping","description":"3D NAND string上部のCAM cellにexpert ID、下部のCIM cellにweightを格納する。router queryと一致したstringだけをconductiveにして、未選択expertのredundant GEMVを回路レベルで抑止する。expertをinterleave配置してもCAM maskで相互干渉を防げるため、従来方式のように空領域を残さずstorage utilizationとcompute parallelismを両立する。より多数のexpertにはmulti-bit CAMや複数CAM layerを直列化して識別bit幅を拡張できる。"},
+      {"name":"block-wise parallel computation","description":"従来はblock内のSSLを1つずつ選ぶが、NASiCは複数SSLを同時活性化し、modified thermometer encodingでそれらを統合したmultibit weightとして扱う。complementary dual-blockでsigned weightを表し、source-line voltageを多値化してsigned inputも同一cycle内で展開する。CAM選択によって入力並列性を確保した上で適用するため、この回路最適化が実効throughputへつながる。"},
+      {"name":"multibit NAND CIM cell","description":"SLCの2 threshold stateだけでなく3-state、4-state、任意m-stateへweight mappingを拡張する。selected word lineへ複数read voltage pulseを与え、各bit-line currentを加算して最終積を得る。state数増加でread/sensingは増えるが固定precharge delayが大きいため総delayはsub-linearに増え、保存密度と演算数を同時に高める。"}
+    ],
+    "system_design":"NASiCはMoE routerのexpert IDを3D NAND planeへbroadcastし、CAM mask→CIM GEMV→bit-line sensing/ADCへ接続するin-flash acceleratorである。software serving schedulerやGPU expert cacheを主対象にせず、expert weightを高密度NAND内へ常駐させたまま選択と計算を実行する。"
+  },
+  "reservation":{"claim_id":"claim-c8a599afd4a259e75ab961db","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
