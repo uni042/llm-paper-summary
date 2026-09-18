@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T02:09:55.700636+00:00",
+  "updated_at": "2026-09-18T02:11:51.383824+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T02:09:55.700636+00:00",
+      "last_recorded_at": "2026-09-18T02:11:51.383824+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 239,
+        "research_completed": 240,
         "audit_completed": 0,
         "discovery_completed": 115,
         "blocked": 19,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35195954858:1",
-          "recorded_at": "2026-09-17T07:43:52.274835+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35195954858",
-            "run_attempt": "1",
-            "source_sha": "6a4577e3e15bfd5bca6be6844d9d48ba27a29124"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35196035343:1",
           "recorded_at": "2026-09-17T07:44:35.949424+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35298367860:1",
+          "recorded_at": "2026-09-18T02:11:51.383824+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35298367860",
+            "run_attempt": "1",
+            "source_sha": "90d4ac20ae182eae27c453e4bc328c33b7375478"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22583,6 +22583,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-fb4ae3eceb455bfc",
+          "type": "research",
+          "canonical_id": "arXiv:2609.17943",
+          "title": "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24376,7 +24384,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 703,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }

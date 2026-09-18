@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 11:11:35 JST**
+> 自動生成: **2026-09-18 11:11:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **54** |
+| 収録候補論文 | **53** |
 | 未claim Research job | **53** |
-| 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-18 10:47:22 JST（24分前）** |
+| 直近24hの検証済みResearch収録 | **59** |
+| 最終検証済みResearch収録 | **09-18 11:11:47 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **54** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **54** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **18** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **14** | **4** | **4** | **0** | **0** | **0** | **20** |
-| 合計 | **31** | **6** | **6** | **0** | **1** | **0** | **20** |
+| 合計 | **32** | **6** | **6** | **0** | **0** | **0** | **20** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 11:11:47 JST** [research] `arXiv:2609.17943` — ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-fb4ae3eceb455bfc.json`
+  - result: `.survey/work-queue/results/research/attempt-cec69bfeb43d99a153789edc.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cec69bfeb43d99a153789edc.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md`
 - **09-18 10:47:22 JST** [research] `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving
   - job: `.survey/work-queue/jobs/job-research-660ceb86238a1a21.json`
   - result: `.survey/work-queue/results/research/attempt-e915931ec4f50a06d7908b39.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-209883d907162cbb35ff1d30.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-209883d907162cbb35ff1d30.json`
   - paper: `papers/inference/06-serving-scheduling/2026-2608.14575-hw-router-hardware-aware-multi-llm-serving.md`
-- **09-18 08:03:04 JST** [research] `arXiv:2506.06295` — dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
-  - job: `.survey/work-queue/jobs/job-research-146f944f1c748398.json`
-  - result: `.survey/work-queue/results/research/attempt-dbef48f08bbefbb3ea1b0135.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-dbef48f08bbefbb3ea1b0135.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md`
 
 ### Audit
 
@@ -195,10 +195,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.17943` — ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 11:10:15 JST** / heartbeat: **—** / lease expiry: **09-18 12:40:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-fb4ae3eceb455bfc.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -218,7 +216,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **54** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,7 +236,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **703** |
+| inference/training/survey配下の論文Markdown実体 | **704** |
 
 ### immutable submissionの未照合
 
@@ -246,8 +244,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **491** |
-| └ Research | **362** |
+| 成功result未照合のimmutable submission | **490** |
+| └ Research | **361** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
