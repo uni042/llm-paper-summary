@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T13:01:40+00:00",
+  "updated_at": "2026-09-18T13:05:21+00:00",
   "last_run_key": "2026-09-18T21:00:00+09:00",
-  "last_round": "specialist-gpu-runtime-8",
+  "last_round": "specialist-new-arrivals-9",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 13,
-  "last_empty_round_reason": "GPU runtime/kernel系の強候補は既収録だった。",
+  "consecutive_empty_rounds": 14,
+  "last_empty_round_reason": "新着差分で追加の未収録強候補を確認できず、今回runでspeculative/CXL/MoE/network/agent/fairness/GPU runtime/new-arrivalの独立経路を一巡した。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T06:02:25+09:00",
-      "round": "specialist-adaptive-kv-agent-energy-1",
-      "axis": "適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving",
-      "query_summary": "直前のhash/KV系探索をそのまま反復せず、2026年8-9月のKV適応制御、multi-agent prefix状態スケジューリング、Attention/FFN分離サービングへ軸を分散して一次arXivページを軽量評価した。投入直前に最新main HEADとrepo全体の識別子検索、Library pendingを再確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はGPU runtime/kernel scheduling、forward citation、またはSSD/NVMe expert I/Oの独立軸を優先する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0602JST-kv-serving-1.json"
-    },
     {
       "run_key": "2026-09-13T06:02:25+09:00",
       "round": "specialist-kernel-chain-serving-2",
@@ -7096,6 +7081,24 @@
       ],
       "next_axis_hint": "新着差分・引用方向・古い重要system omissionへ切り替える",
       "source_submission": "work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-new-arrivals-9",
+      "axis": "2026-09-17以降の新着差分・arXiv 2609後半",
+      "query_summary": "直近新着のLLM serving/inference、GPU、MoE、KV cacheを日付・2609後半IDで再走査。検索providerでは17 Sep提出分の追加強候補を取得できず、16 Sepまでの主要system候補は最新2609 identity shardで既収録だった。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json"
     }
   ],
   "axes": {
@@ -12459,6 +12462,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "新着差分・引用方向・古い重要system omissionへ切り替える"
+    },
+    "2026-09-17以降の新着差分・arXiv 2609後半": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

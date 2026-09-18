@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 22:04:44 JST**
+> 自動生成: **2026-09-18 22:07:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-18 21:43:39 JST（21分前）** |
+| 最終検証済みResearch収録 | **09-18 21:43:39 JST（23分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **4** | **2** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **9** | **8** | **1** | **0** | **0** | **2** |
-| 合計 | **33** | **13** | **10** | **3** | **0** | **0** | **2** |
+| Discovery | **24** | **9** | **9** | **0** | **0** | **0** | **2** |
+| 合計 | **34** | **13** | **11** | **2** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -137,14 +137,14 @@
   - result: `.survey/work-queue/results/20260918T2212JST-discovery-specialist-gpu-runtime-8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json`
   - 探索軸: GPU runtime・persistent kernel・CUDA Graph・JIT compilation
+- **09-18 22:05:21 JST** job `job-8453bd5099fe9bf0` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
+  - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
 - **09-18 20:02:46 JST** job `job-fb6e71b1d7480608` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T2001JST-discovery-specialist-memory-specdecode-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
   - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
-- **09-18 20:03:17 JST** job `job-500decdb4fb2421b` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260918T2008JST-discovery-specialist-serving-measurement-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json`
-  - 探索軸: serving measurement・replicated KV correctness・production workflow・MoE routing prediction
 
 ### 直近タスク
 
@@ -174,7 +174,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 21:00 JST**
-- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **1件** / 候補: **2件**
+- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **9件** / 個別result照合: **9件** / 個別result未照合: **0件** / 候補: **2件**
 - 探索軸: 分散speculative inference・heterogeneous drafter orchestration / 非同期speculative decoding・tensor parallel・KV/kernel co-design / CXL・KV cache memory disaggregation・PNM/FPGA / MoE expert offload・cacheless edge-distributed inference / RDMA・KV transfer・disaggregated serving networking / agentic serving・tool-call progress・KV lifecycle / multi-tenant serving・token latency fairness・SLO isolation / GPU runtime・persistent kernel・CUDA Graph・JIT compilation / 2026-09-17以降の新着差分・arXiv 2609後半
 - round `specialist-speculative-cosine-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json`
@@ -211,7 +211,7 @@
 - round `specialist-new-arrivals-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
   - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -266,10 +266,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **527** |
+| 成功result未照合のimmutable submission | **526** |
 | └ Research | **397** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
