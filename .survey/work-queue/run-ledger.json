@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T00:46:05.424071+00:00",
+  "updated_at": "2026-09-18T00:49:18.883142+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T00:46:05.424071+00:00",
+      "last_recorded_at": "2026-09-18T00:49:18.883142+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 235,
         "audit_completed": 0,
         "discovery_completed": 104,
-        "blocked": 17,
+        "blocked": 18,
         "new_jobs": 159,
         "new_papers": 233,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35185210500:1",
-          "recorded_at": "2026-09-17T05:18:46.234296+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35185210500",
-            "run_attempt": "1",
-            "source_sha": "2ea3681dab4c1818e5ecb1c80d9b243b05a0aa9c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35188007024:1",
           "recorded_at": "2026-09-17T06:03:04.125776+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35292721304:1",
+          "recorded_at": "2026-09-18T00:49:18.883142+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35292721304",
+            "run_attempt": "1",
+            "source_sha": "9d4033ffb51daefd508af72e2f6fda100ddcfb51"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -22444,6 +22444,14 @@
           "title": "Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-fbee62800783475d",
+          "type": "research",
+          "canonical_id": "arXiv:2604.10907",
+          "title": "RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -24098,7 +24106,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 694,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
