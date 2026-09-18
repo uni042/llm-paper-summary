@@ -1,0 +1,10 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2609.11744","title":"Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs","source_url":"https://arxiv.org/abs/2609.11744","paper_path":"papers/inference/04-kv-cache-offload/2026-2609.11744-py-kvcache-vllm-nvme-external-cache.md","priority":94,"reason":"New September work characterizing GPU/CPU/NVMe KV-cache tradeoffs and implementing asynchronous direct-I/O, bounded staging, scheduler-aware preloading in a vLLM connector."},
+  {"canonical_id":"arXiv:2605.18071","title":"KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference","source_url":"https://arxiv.org/abs/2605.18071","paper_path":"papers/inference/04-kv-cache-offload/2026-2605.18071-kvdrive-multitier-kv-cache.md","priority":91,"reason":"GPU/DRAM/SSD multi-tier KV system jointly orchestrates placement, pipelining and cross-tier transfer; directly relevant to storage-backed inference."},
+  {"canonical_id":"arXiv:2605.22850","title":"ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse","source_url":"https://arxiv.org/abs/2605.22850","paper_path":"papers/inference/04-kv-cache-offload/2026-2605.22850-objectcache-layerwise-object-storage-kv-reuse.md","priority":88,"reason":"S3-compatible object-storage KV reuse with layerwise transfer scheduling and NIXL/Ceph/DAOS prototype; useful remote-storage tier design."}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-storage-nvme-kv-5","axis":"NVMe/SSD/object-storage KV offload","query_summary":"SSD/NVMe、GPU-direct I/O、storage-centric KVを検索。既知のTuttiは探索結果段階で除外し、新着py-kvcacheと未収録候補を抽出。","candidate_count":4,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2605.03375"],"next_axis_hint":"次はMoE expert placement/cache/prefetchの9月新着と過去欠落へ移る","empty_round_reason":null}
+}
