@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2510.24051",
+      "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
+      "source_url": "https://arxiv.org/abs/2510.24051",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md",
+      "priority": 86,
+      "reason": "LLM servingの生成ループを細粒度handlerへ分解し、WebAssembly上のapplication-provided inferletでKV cache戦略・生成ロジック・I/O統合をプログラム可能にする直接的systems研究。標準タスクで3-12%のoverheadに抑えつつagentic workflowで1.3-3.4xのlatency/throughput改善を報告し、現行repoのagent/runtime・serving系統を補完する。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2605.01280",
+      "title": "Position: LLM Serving Needs Mathematical Optimization and Algorithmic Foundations, Not Just Heuristics",
+      "source_url": "https://arxiv.org/abs/2605.01280",
+      "rejection_reason": "LLM servingの重要な問題提起だがposition paperが主で、新規serving system/algorithmの実装と直接的なsystem-level評価を主要貢献として提示していないためDiscovery candidateには採用しない。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T06:00:00+09:00",
+    "round": "specialist-programmable-serving-1",
+    "axis": "programmable serving・agentic runtime・application-specific generation loop",
+    "query_summary": "直近2609新着の上位結果がcanonical identityで既収録に集中したため、未走査のprogrammable serving/agentic runtimeへ軸を変更。Pieは2510 identity shardとrepo所在補助検索で未代表を確認し、一次arXiv抄録のsystem design・実装・評価を軽量確認して採用。position paper 2605.01280は未代表だが実装systems貢献不足として不採用記録した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 6,
+    "novel_candidate_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2609.12551", "arXiv:2608.03036", "arXiv:2605.15051", "arXiv:2607.16892", "arXiv:2606.16135", "arXiv:2605.18071"],
+    "next_axis_hint": "MoE expert lifecycle・heterogeneous memory/offloadの2025後半未走査ID帯、またはagentic servingの関連研究を独立に探索する",
+    "empty_round_reason": null
+  }
+}
