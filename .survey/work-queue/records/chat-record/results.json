@@ -1,2 +1,62 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-7637dd4f80065a38131593e0","job_id":"job-research-f97acaf8df0df8b2","data":{"overview":"non-reasoningではbursty QPS14で全class 100% goodputを60% power reductionまで維持。reasoning 128-GPU/QPS60では30% reductionでonline 78.3%、BE 54% goodputを保ち、最良baseline SLOs-Serve+のonline 47.6%/BE 0%に対し1.64倍。深いcapでもtail latencyをnear-nominalに抑え、KKT/PTA/Flexの三要素すべてが寄与する。","key_results":[{"metric":"reasoning online goodput","value":"78.3%","baseline":"best baseline 47.6%","condition":"128 GPU, QPS60, CoV13, 30% power-cap reduction","interpretation":"1.64x goodput。BEも54%残し、baselineのBE 0%よりgraceful degradation。"},{"metric":"non-reasoning goodput","value":"100% all classes through 60% reduction","baseline":"POLCA online 67.7%; others <15% beyond 40%","condition":"QPS14, CoV7.5 Azure Function Trace","interpretation":"memory-bound decodeを0.57x frequency kneeまで下げるstage asymmetryとFlex slackが大きなheadroomを作る。"},{"metric":"P90 tail latency","value":"LC TTLT 89s, TTFAT 54s","baseline":"uncapped比1.1x/1.3x; POLCA LC TTLT 220s","condition":"60% power reduction","interpretation":"capacityをadmitted load以上に保ちqueue explosionを防止。"},{"metric":"component ablation","value":"removing any component raises LC TTLT 74–100%, TTFAT 59–101%","baseline":"full PowerSlider","condition":"30% reduction","interpretation":"KKT allocation、PTA isolation、Flex slackは異なるbottleneckを担当し単独では代替不能。"},{"metric":"PSOpt solve time","value":"7.7ms at 9 groups; 63ms at 81 groups","baseline":"100ms DVFS interval","condition":"20 bisection iterations, 80 decision levels/group","interpretation":"cluster sizeではなくgroup countでscaleしcap変化へonline追随可能。"},{"metric":"PTA vs PD latency","value":"12.5x lower end-to-end latency","baseline":"PD","condition":"long reasoning, 40% cap reduction","interpretation":"thinking KVをanswer decodeから隔離してdecode queueingをほぼ消す。"},{"metric":"SLO-mix drift","value":"95–100% online goodput","baseline":"POLCA 10%","condition":"Flex share 5%→80% dynamic sweep","interpretation":"static pool assumptionsに依存せずmix変化へ追随。"}],"negative_results":"DVFSだけではstatic power floor以下の深いcapを満たせずGPU consolidation/power-gatingが必要。PTAはreasoning requestごとにthink→answerの追加KV transferを1回増やすが、nominal powerではpipeline overlapでほぼ隠れる。hardware power modelは機種ごとの再profileが必要。","interpretation":"PowerSliderの核心は『同じ1W削減でもstageによるthroughput costが違う』ことと『reasoningではpowerだけでなくKV capacityも同時にbindする』ことをsolverへ入れた点。浅いcapはDVFS配分で吸収し、深いcapではPTA memory isolationと契約済みFlex slack、さらにstatic floor以下ではconsolidationへ段階的に移る。","quality_impact":"モデル生成品質は変更せずserving SLO/goodputを最適化。Flex contractは許容latency degradationの確率上限を明示し、60% reductionでもworst observed violation fraction 27.5%でrho=0.3以内と報告。"},"reservation":{"claim_id":"claim-7637dd4f80065a38131593e0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-26ea570f1e76c6a687e67786",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {
+    "overview": "greedy decodingでDFlowはDFlashの平均acceptance lengthをQwen3-1.7Bで3.56→3.93、4Bで3.71→4.20、8Bで3.66→4.15へ改善し、相対10.4%/13.2%/13.4%増。sampling T=1でも2.99→3.26、3.15→3.54、3.10→3.45。relay追加遅延は0.51ms/round、DFlash比1.2%に留まり、高並列SGLangでもDFlashよりthroughputが一貫して高い。",
+    "key_results": [
+      {
+        "metric": "greedy average acceptance length",
+        "value": "3.93 / 4.20 / 4.15",
+        "baseline": "DFlash 3.56 / 3.71 / 3.66",
+        "condition": "Qwen3-1.7B / 4B / 8B、6 benchmarks、T=0",
+        "interpretation": "相対10.4% / 13.2% / 13.4%改善。"
+      },
+      {
+        "metric": "sampling average acceptance length",
+        "value": "3.26 / 3.54 / 3.45",
+        "baseline": "DFlash 2.99 / 3.15 / 3.10",
+        "condition": "Qwen3-1.7B / 4B / 8B、T=1",
+        "interpretation": "samplingでもcross-round verifier情報がdraft品質を改善。"
+      },
+      {
+        "metric": "relay runtime overhead",
+        "value": "0.51 ms, 1.2%",
+        "baseline": "DFlash per-round latency",
+        "condition": "runtime decomposition",
+        "interpretation": "target hidden stateは既存verificationから再利用するため追加target forward不要。"
+      },
+      {
+        "metric": "Qwen3-8B GSM8K throughput concurrency 32",
+        "value": "2198.17 TPS (1.35x baseline)",
+        "baseline": "DFlash 1891.10 TPS (1.16x), autoregressive 1630.10 TPS",
+        "condition": "SGLang, concurrency 32",
+        "interpretation": "高batchでもacceptance改善がthroughputへ反映。"
+      },
+      {
+        "metric": "relay ablation",
+        "value": "3.93",
+        "baseline": "DFlash 3.56; multi-round mask 3.67; DFlow model relay-off 3.66",
+        "condition": "Qwen3-1.7B greedy average",
+        "interpretation": "multi-round trainingだけの改善は小さく、relay情報再利用が主因。"
+      },
+      {
+        "metric": "Domino compatibility",
+        "value": "4.50",
+        "baseline": "DFlash 3.56; Domino 4.02",
+        "condition": "Qwen3-1.7B T=0, online rollout",
+        "interpretation": "round内causal modelingとround間verifier reuseは補完的。"
+      }
+    ],
+    "negative_results": "DominoへDFlowを単純結合しteacher-forced predictionからrelay suffixを作るとacceptance lengthは2.22まで悪化する。実推論draft trajectoryを再現するonline rolloutを訓練に入れると4.50へ回復するため、relay trainingはtrain-inference trajectory mismatchに敏感。",
+    "interpretation": "rejected tokenそのものはcommit不能でも、target verifierがその位置で作ったcontinuous representationには将来continuation情報が残る。DFlowは既に支払ったverification計算を情報資産として次roundへ渡し、追加target計算をほぼ増やさずdraft acceptanceを上げる。",
+    "quality_impact": "exact-match target verificationを維持するlossless speculative decodingであり、accepted outputはtarget modelに一致する。改善対象はdraft acceptanceとthroughput。"
+  },
+  "reservation": {
+    "claim_id": "claim-26ea570f1e76c6a687e67786",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

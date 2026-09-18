@@ -1,2 +1,18 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-7637dd4f80065a38131593e0","job_id":"job-research-f97acaf8df0df8b2","data":{"hardware":"DGX-A100とGH200 serversで8 GPU node以下のreal-system評価。64〜512 GPU規模はtestbed profileで拡張したSplitwiseSim discrete-event simulator。A100 nominal 1410MHz、DVFS floor 210MHz。KV RDMAは100Gbps InfiniBandで11.2GB/s、TCPは6.8GB/s。","software":"SGLang + Mooncake KV transfer engineを基盤にPTA disaggregation、PSOpt、PSSched、PSRouteを実装。NVMLでlocked clocksとper-GPU power limitsを制御。","methodology":"reasoningはMagpie-Reasoning/S1K、non-reasoningはAzure LLM inference coding/chat tracesを使用し、bursty Gamma arrivalも生成。default traffic mixはLC 30%、Flex 30% (alpha=3,rho=0.3)、BE 40%でsaturation throughput。static power-cap reduction 0〜60%と24h dynamic demand-response traceを評価。metricsはclass別goodput、P90/P99 TTFAT/TTLT、normalized BE throughput。baselinesはUniform、POLCA、SplitWise、DynamoLLM+、SLOs-Serve+。simulatorはheld-out measurementでcomponent MAPE <4%、power fit R2>0.95、8-GPU trace replayでgoodput差<4%、P90 TTLT差<9%。","scope":"real-systemは8 GPU node以下、cluster-scale 64〜512 GPU結果はvalidated simulationを含む。reasoning/non-reasoning混在、static/dynamic cap、SLO mix driftを評価。power modelはhardware typeごとにrefitが必要。"},"reservation":{"claim_id":"claim-7637dd4f80065a38131593e0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-26ea570f1e76c6a687e67786",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {
+    "hardware": "単一ノード8×NVIDIA A800 GPUで訓練・評価。",
+    "software": "Qwen3-1.7B/4B/8B target、5-layer DFlash drafter、draft block size 16。高並列serving throughputはSGLang上で測定。",
+    "methodology": "80K ShareGPT samplesで各target向けdrafterをscratch training。標準Multi-Round Self-Conditioned Trainingは初回mask round後にk=2 reject-conditioned rounds。評価は数学GSM8K/MATH-500、code HumanEval/MBPP、dialogue MT-Bench/Alpaca。低並列ではgreedy T=0とsampling T=1のaverage acceptance lengthをEAGLE-3/DFlashと比較。高並列ではQwen3-4B/8BのGSM8K/HumanEvalをconcurrency 1,2,4,8,16,32でbaseline autoregressive、EAGLE-3、DFlash、DFlow比較。relay ablation、runtime overhead、Domino互換性も評価。",
+    "scope": "target modelはQwen3 1.7B/4B/8Bに限定。block diffusion drafterはDFlash系が中心で、他のtarget familiesやproduction heterogeneous hardwareは未評価。高並列は最大32 concurrency、単一8×A800 node。"
+  },
+  "reservation": {
+    "claim_id": "claim-26ea570f1e76c6a687e67786",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
