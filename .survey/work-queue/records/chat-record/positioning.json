@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-7637dd4f80065a38131593e0",
-  "job_id": "job-research-f97acaf8df0df8b2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7637dd4f80065a38131593e0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-7637dd4f80065a38131593e0","job_id":"job-research-f97acaf8df0df8b2","data":{"limitations":"64〜512 GPUの主要cluster-scale結果はvalidated simulatorを含み、全規模を実クラスタで測定したわけではない。power cubicとthroughput modelはhardware/model/TPごとにprofileが必要で、shipping GPUのclock変更は数十〜数百msかかるためper-request即時DVFSはできず50〜100ms vote-commitへbatchする。PTAはthink→answer KV transferを追加し、networkが遅い/overlap不能な環境では利得が縮み得る。DVFS最低周波数でもstatic board/HBM powerが残るため極端なcapはGPU consolidation/power-gatingなしでは達成不能。","differences":"DynamoLLMやVoltanaLLM等はenergy/SLOを静的power targetで最適化し、POLCAはpriority thresholdでfrequencyを制御する。PowerWeave/Power Sloshing/PowerGradは固定envelope内の電力再配分で、grid由来のmoving capをstage・SLO・KV configurationへ変換しない。DistServe/Splitwiseはprefill-decode分離だがreasoning thinkingを独立stageにせず、長いthinking KVがanswer pool capacityを圧迫する。PowerSliderはPTA、Flex contract、online KKT solveを統合してmoving capをfirst-class inputにする。","implementation_status":"SGLang上にreal runtimeを実装し、Mooncake系KV transfer、TCP/RDMA session pool、NVML clock/power-limit control、drain-before-reassignを実装。DGX-A100/GH200実機とvalidated simulatorで評価。arXiv本文から公開code repositoryは確認できなかった。","research_positioning":"LLM serving schedulerを電力・compute・HBM/KV capacityの複数resource controlへ拡張する研究。特にreasoning workloadではthinking KVの長期占有を独立capacity constraintとして扱い、stage disaggregationとKV chunk/admissionをDVFS/GPU allocationと同じsolverへ結合する点が、従来のpower-aware servingやPD disaggregationからの重要な拡張。"},"reservation":{"claim_id":"claim-7637dd4f80065a38131593e0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
