@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d9b26ca882eb56a4dbd626e5","job_id":"job-research-ef418ddc1bde46e9","data":{"overview":"d²CacheはLLaDAとDreamのBase/Instruct、複数課題で通常復号より平均3.2〜3.5倍高速化し、速度向上と同時に平均課題得点を維持または改善する。Dream-InstructのGSM8Kでは生成性能が2.62から12.25トークン/秒へ上がり4.7倍となる。Fast-dLLMとの比較ではDream-Instructで1.5倍高速で、6課題平均精度も1.7ポイント高い。確定性事前分布による非自己回帰復号は標準の確信度復号より大幅に高い品質を示し、Dream-Instructの4課題平均で29.0から58.8へ改善する。","key_results":[{"metric":"通常復号比平均高速化","value":"3.2〜3.5倍","baseline":"Vanilla","condition":"LLaDA/DreamのBase・Instruct、6ベンチマーク","interpretation":"トークン単位で更新対象を絞ることで双方向注意の全系列KV再計算を大きく削減する。"},{"metric":"Dream-Instruct GSM8K処理性能","value":"12.25トークン/秒、4.7倍","baseline":"Vanilla 2.62トークン/秒","condition":"Dream-Instruct、GSM8K","interpretation":"代表的な最大級改善例で、近似KV再利用の実効性を示す。"},{"metric":"Fast-dLLM比","value":"Dream-Instructで1.5倍高速、6課題平均精度+1.7ポイント","baseline":"Fast-dLLM","condition":"Dream-Instruct、6ベンチマーク平均","interpretation":"固定ブロックより細粒度な適応更新が速度だけでなく品質でも優位。"},{"metric":"確定性事前分布復号","value":"Dream-Instruct 4課題平均58.8、LLaDA-Instruct 44.1","baseline":"標準NAR確信度復号はDream 29.0、LLaDA 32.7","condition":"非自己回帰設定、d²Cacheなしの復号方策比較","interpretation":"既知文脈近傍から進む準左から右の順序が系列末尾の早期過信を抑える。"},{"metric":"d²Cache付きNAR品質","value":"Dream-Instruct 4課題平均60.6、LLaDA-Instruct 44.4","baseline":"Semi-AR VanillaはDream 57.6、LLaDA 43.9","condition":"確定性事前分布とd²Cacheの組合せ","interpretation":"高速化用キャッシュと復号順序改善を組み合わせても品質が維持・向上する。"}],"negative_results":"近似キャッシュであるため、選択されなかった位置のKVが実際には大きく変化する場合は古い状態を使う。確定性事前分布のガウス幅、第一段階の選択数、第二段階の注意累積しきい値は調整要素であり、課題やモデルが変わると最適値が変わり得る。注意ロールアウト自体にも計算費用があり、短い系列や少ない復号段階では相対利得が小さくなる可能性がある。評価は単一GPU中心で、運用サービング時の同時要求干渉は未検証である。","interpretation":"拡散LLMのKVは全位置が同じ速度で変化するわけではなく、未確定位置は復号直前だけ急変し、既知位置では注意影響が少数位置へ集中する。この時間的不均一性と空間的不均一性を別々の選択器で捉えることが、固定更新区間より高い再利用率と品質維持につながる。","quality_impact":"通常の近似キャッシュが速度と精度の交換になり得るのに対し、d²Cacheは確定性事前分布を復号順序へ利用することで平均品質も改善する。特に標準NARの系列末尾早期確定を抑える効果が大きい。"},"reservation":{"claim_id":"claim-d9b26ca882eb56a4dbd626e5","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-f5b4bf9c2056ececfd115ca5",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f5b4bf9c2056ececfd115ca5",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}

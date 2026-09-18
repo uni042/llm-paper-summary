@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d9b26ca882eb56a4dbd626e5","job_id":"job-research-ef418ddc1bde46e9","data":{"canonical_id":"arXiv:2509.23094","arxiv_id":"2509.23094","doi":"10.48550/arXiv.2509.23094","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching","summary":"d²Cacheは、双方向注意のため通常の鍵・値キャッシュを使えない拡散型大規模言語モデルに対し、各復号段階で本当に更新が必要なトークンだけを二段階で選ぶ訓練不要の近似キャッシュ手法である。マスク位置では予測確信度と既知トークン密度からなる確定性事前分布を用い、残りの入力・確定済み位置では注意ロールアウトで影響度の高い位置を選ぶ。選択位置だけ隠れ状態と鍵・値を更新し、それ以外は前段階の鍵・値を再利用する。LLaDAとDreamで平均3.2〜3.5倍、Dream-InstructのGSM8Kで4.7倍の高速化を得ながら、平均生成品質も維持または改善する。","list_summary":"確定性事前分布と注意影響度で更新対象トークンを細粒度選択し、拡散LLMのKV再計算を削減しながら生成品質も改善する。","authors":["Yuchu Jiang","Yue Cai","Xiangzhong Luo","Jiale Fu","Jiarui Wang","Chonghan Liu","Xu Yang"],"authors_affiliations":"Southeast University; Qiyuan Tech","published":"2025-09-27","publication":"International Conference on Learning Representations (ICLR 2026)","publication_type":"国際会議論文","publication_status":"ICLR 2026 accepted; arXiv v2 2026-02-17","lineage":"拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御","topics":["拡散LLM","KVキャッシュ","注意ロールアウト","推論高速化","適応復号"],"importance":"固定ブロックや固定更新周期ではなく、トークンごとの状態変化と注意重要度から更新対象を毎段階選ぶことで、近似KVキャッシュを細粒度化し、速度だけでなく復号信頼性の改善も狙う点が重要である。","implementation":"公式Kamichanw/d2CacheでLLaDA、Dream、SDAR向け実装と評価設定を公開。","hardware_evaluation":"主要評価はNVIDIA RTX 3090 24GB。LLaDA-8BとDream-v0-7BのBase/Instructを評価。","quality_effect":"確定性事前分布が準左から右の復号順序を誘導し、系列末尾を早期に過信して確定する問題を抑える。速度向上と同時に複数ベンチマークの平均品質をVanilla以上に保つ。","source":"https://proceedings.iclr.cc/paper_files/paper/2026/hash/de4f2e3b8263aff39f0dd7571a8dc4b1-Abstract-Conference.html","sources":["https://openreview.net/pdf/d4ec34f2b9349457f8eec750cbee2c77eefdd332.pdf","https://arxiv.org/abs/2509.23094"],"code":"https://github.com/Kamichanw/d2Cache","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"ICLR/OpenReview primary manuscript","references_total":0},"reservation":{"claim_id":"claim-d9b26ca882eb56a4dbd626e5","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f5b4bf9c2056ececfd115ca5",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f5b4bf9c2056ececfd115ca5",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}
