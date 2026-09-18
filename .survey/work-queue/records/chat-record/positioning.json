@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ab76d4a962a0d6ea991a05b2",
-  "job_id": "job-research-3001166a9d479500",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ab76d4a962a0d6ea991a05b2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ab76d4a962a0d6ea991a05b2","job_id":"job-research-3001166a9d479500",
+ "data":{
+   "limitations":"厳密な状態再利用は第1層にほぼ限定される。第2層以降では双方向注意により、現在ブロックの更新が他トークンの隠れ状態へ伝播するため、古い状態を使えば近似となる。FP8部分は低精度行列積を高速に処理できるGPUへ依存し、旧世代ハードウェアでは利得が縮小する。短い入力やDPadで既に文脈を強く削った条件では不変領域が少なく、キャッシュの追加効果も小さい。評価対象はLLaDA系に集中しており、異なる拡散LLM実装や大規模同時リクエスト環境での一般性は追加検証が必要である。",
+   "differences":"Fast-dLLMは信頼度に基づく並列復号でノイズ除去ステップ数を減らし、DPadは接尾辞を落として注意対象を短くする。D2 CacheやdLLM-Cacheは隠れ状態やKVの近似再利用を狙う。LaCacheはこれらと異なり、同一ブロック内で入力が変化しないことから厳密に同一となる演算結果とFlashAttentionのオンライン状態を第1層で再利用し、別軸として第2層以降をFP8化する。このため生成スケジュールを変更する手法と合成しやすい。",
+   "implementation_status":"論文はEmbedCache、RoPECache、FACacheのGPUメモリ配置、FlashAttentionオンライン状態の再開、DeepGEMMによるFP8線形層、AddNorm・SwiGLUとの融合まで実装レベルで説明し、実GPUで評価している。ただし確認した一次資料には公式公開コードのURLを確認できなかったため、再現可能性は論文記述に依存する。",
+   "research_positioning":"拡散型LLM推論の高速化を、生成アルゴリズムだけでなく演算子・カーネル内部の重複除去まで掘り下げたシステム研究として位置付けられる。特にFlashAttentionのオンラインソフトマックス状態そのものを厳密キャッシュする発想は、通常のKVキャッシュでは扱いにくい双方向注意でも不変部分を再利用する具体例である。既存の並列復号・文脈削減と競合せず追加利得を出すため、拡散LLMサービング基盤のカーネル最適化系統を補完する。"
+ },
+ "reservation":{"claim_id":"claim-ab76d4a962a0d6ea991a05b2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
