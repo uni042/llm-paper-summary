@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-32601b58ea85c529e281cb7c",
-  "job_id": "job-research-78d3e9d2047890ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-32601b58ea85c529e281cb7c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-32601b58ea85c529e281cb7c","job_id":"job-research-78d3e9d2047890ea","data":{"canonical_id":"arXiv:2609.17652","arxiv_id":"2609.17652","doi":"10.48550/arXiv.2609.17652","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.CL","cs.DC"]},"title":"Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches","summary":"長文脈の疎注意で鍵値キャッシュと索引をホストメモリへ退避すると、全鍵を順位付けする索引走査のPCIe転送量が復号律速になる。Fathomは4ビット鍵キャッシュをチャネル主順のビットプレーンとして保存し、問い合わせごとの重要度に応じて逆水充填で各チャネルの読取ビット深度を0〜4ビットへ配分する。Qwen3-8B・100万トークンで136ビット固定深度走査よりGPU時間を1.67倍高速化し、SparQの68ビット走査と同等GPU時間で18%少ない読取量と低い注意誤差を達成する一方、索引がGPU高帯域メモリに常駐する場合は高速化しない。","list_summary":"問い合わせ別に鍵チャネルの読取深度を配分し、ホスト退避KVの索引走査量を削減して100万トークン復号を最大1.67倍高速化する。","authors":["Vivek Kalyanarangan"],"authors_affiliations":"arXiv本文で所属表記を確認できず","published":"2026-09-15","publication":"arXiv preprint","publication_type":"プレプリント","publication_status":"arXiv v2, 19 pages, revised 2026-09-17","lineage":"offloaded KV cache・sparse attention・top-k retrieval・KV quantization・host-memory bandwidth","topics":["KV cache offloading","sparse attention","bit-plane quantization","reverse water-filling","long-context inference"],"importance":"疎注意の候補索引を固定ビット幅の別構造として扱うのではなく、既存4ビット鍵キャッシュ自体を多解像度索引化し、問い合わせごと・チャネルごとに転送量を変えることでホストメモリ退避時のPCIe帯域律速を直接削減する。","implementation":"著者公式GitHub repositoryでコードと評価結果を公開。Tritonによるホストメモリ連続run gatherとbit-plane scanを含む研究実装。","hardware_evaluation":"NVIDIA A100-SXM4-80GB、PCIe 4.0、2TB host RAMを主評価。Llama-3.1-8Bのactivation取得のみNVIDIA L4も使用。","quality_effect":"7 model/context設定で固定深度走査とattention-output errorを比較し、RULER-style課題ではexact top-kと同等範囲、実OpenHands coding-agent sessionではstep agreementも評価。","source":"https://arxiv.org/abs/2609.17652","sources":["https://arxiv.org/abs/2609.17652","https://arxiv.org/html/2609.17652v2","https://github.com/vivekkalyanarangan30/fathom"],"code":"https://github.com/vivekkalyanarangan30/fathom","project":"https://github.com/vivekkalyanarangan30/fathom","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv v2本文・参考文献・付録を全文確認。個別参考文献は構造化配列へ転記していない。","references_total":0},"reservation":{"claim_id":"claim-32601b58ea85c529e281cb7c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
