@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-8941df7cf722e02c81ac6a22","job_id":"job-research-1abdfafeb85e4df9","data":{"overview":"6アプリケーションのエンドツーエンド評価で、SLOs-ServeはGPU当たりサービング容量をvLLM比1.76倍、Sarathi-Serve比1.94倍、DistServe比2.6倍とし、最良のvLLM/Sarathi系に対する幾何平均改善は約2.2倍と報告する。安定負荷では動的バッチとSLO適応型投機的デコード、バースト負荷では達成不能要求の遅延、複数レプリカではSLO駆動ルーティングが寄与する。資源計画器の呼出しオーバーヘッドは常に10ms未満、多くは2ms未満で、性能モデルR²は0.82〜0.93。","key_results":[{"metric":"GPU当たりサービング容量","value":"vLLM比1.76×、Sarathi-Serve比1.94×、DistServe比2.6×","baseline":"vLLM / Sarathi-Serve / DistServe","condition":"6シナリオ、SLO違反10%未満の最大要求負荷","interpretation":"多段階SLOを共同最適化することで単一段階優先・静的分離構成を上回る。"},{"metric":"最良既存系に対する平均容量","value":"幾何平均2.2×","baseline":"best of vLLM and Sarathi-Serve","condition":"6 LLM application scenarios","interpretation":"特定アプリだけでなく異なるSLO/負荷形態で一貫した改善を示す。"},{"metric":"厳格2%違反制約のChatBot容量","value":"vLLM比1.91×、Sarathi比2.19×、DistServe比2.4×","baseline":"各既存系","condition":"SLO violation <=2%","interpretation":"達成不能要求を遅延する効果だけに依存せず、厳格な達成率でも容量優位を維持する。"},{"metric":"バースト系容量","value":"Coder最大2.1×、ToolLLM最大1.90×","baseline":"比較ベースライン","condition":"Azure由来のbursty arrivals","interpretation":"ソフト入場制御とbest-effort退避が負荷急増時の連鎖SLO違反を抑える。"},{"metric":"Reasoning容量","value":"2.4×","baseline":"比較ベースライン","condition":"DeepSeek-R1-Qwen-1.5B、投機モデルなし","interpretation":"長いthinking/decodeを持つ多段階要求でも動的SLOスケジューリング自体が有効。"},{"metric":"4レプリカスケーリング","value":"ChatBot 4.61×、ToolLLM 5.44×、Coder 6.2× vs 1 replica","baseline":"1 replica","condition":"OPT-7B, A100, 最大4 replicas","interpretation":"レプリカ間ルーティングにより要求集合の選択余地が増え、一部で超線形スケーリングを示す。"},{"metric":"ablation","value":"routing 1.19×、SLO-adaptive speculative decoding 1.66×、burst-resilient serving 1.34×","baseline":"対応最適化を除去した構成","condition":"4 scenarios","interpretation":"各機構が独立に容量改善へ寄与し、投機デコードはdecode-heavy、routing/burst制御はCoderで特に効く。"},{"metric":"スケジューラオーバーヘッド/性能モデル精度","value":"常に<10ms、多くは<2ms; R²=0.82〜0.93","baseline":"実測バッチ時間","condition":"複数モデル・TP・A100/H100・投機設定","interpretation":"オンライン再計画に使える程度の低オーバーヘッドと予測精度を示す。"}],"negative_results":"最適化はGPUごとのプロファイル性能モデルに依存し、GPU世代が変われば再プロファイルが必要である。評価では全ベースラインにdecode長の事前知識を仮定しており、実運用での予測誤差は別問題として残る。複数レプリカの逐次ルーティングは一つの実装選択であり、著者ら自身がより広いルーティング方式探索を将来課題としている。達成不能要求はbest-effortへ遅延されるため、標準サービスのSLO達成率向上と全要求の待ち時間は別指標として解釈する必要がある。","interpretation":"本質はバッチサイズを単に大きくすることではなく、各要求の将来SLO需要をトークン予算線として扱い、達成可能な要求だけを選んでから残余資源を最大化することにある。これによりプリフィルとデコードの優先順位競合を、要求全体の可否判定へ変換している。","quality_impact":"生成品質を変更する手法ではない。投機的デコードは通常の受理検証を用いるため意味品質を保ちつつ、投機長をSLO別に変える。主なトレードオフは、達成不能要求をbest-effortへ遅延することで標準サービスのSLOを保護する点にある。"},"reservation":{"claim_id":"claim-8941df7cf722e02c81ac6a22","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-a785e8e9e0aaf4f974c5e86c",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "overview": "主結果は、品質予測だけを高度化しても解消できなかった実行時混雑を、現在のハードウェア状態を費用へ入れることで直接回避できた点にある。H100を2台、モデルを5種類使った持続過負荷評価では、CARROTおよびIRT-Routerに対して端から端までの遅延を3.4〜3.9倍低減し、サービス水準目標達成率を46〜48ポイント改善した。さらにGPU総負荷の偏りを6〜8倍、待機要求の割合を3.1〜3.4倍改善した。同等品質0.62では約40秒から16秒へ短縮し、毎秒15〜21要求でも全待ち行列の83〜84%を実行中状態に保つ。小さいモデルへ固定的に要求を集中させるより、現在空いているモデル・GPUへ要求を逃がす方が、システム全体の遅延と期限遵守を同時に改善できることを示す。",
+    "key_results": [
+      {
+        "metric": "同等品質での遅延",
+        "value": "品質0.62で約16秒",
+        "baseline": "CARROTとIRT-Routerは約40秒",
+        "condition": "品質と遅延のパレート曲線",
+        "interpretation": "現在状態を使うことで約60%の遅延削減。"
+      },
+      {
+        "metric": "サービス水準目標達成率",
+        "value": "品質0.60で約97%、0.63で90%、0.65で76%",
+        "baseline": "品質0.60ではCARROT 51%、IRT 65%。0.63では48%、60%。0.65では両者50%未満",
+        "condition": "初回トークン待ち時間とトークン間遅延から定義した期限",
+        "interpretation": "待ち時間を含む実サービング時間の予測が期限違反回避へ直結する。"
+      },
+      {
+        "metric": "待機要求比率",
+        "value": "待機16〜17%、実行中83〜84%",
+        "baseline": "CARROTは待機53〜55%、IRTは34〜39%",
+        "condition": "到着率15、18、21要求毎秒",
+        "interpretation": "一つのGPUへの集中を抑え、待機より実行へ資源を回す。"
+      },
+      {
+        "metric": "GPU総負荷偏り",
+        "value": "1.691〜2.089",
+        "baseline": "CARROT 12.903〜12.924、IRT 12.640〜12.930",
+        "condition": "到着率15、18、21要求毎秒",
+        "interpretation": "総負荷偏りを約84〜87%削減して両GPUを活用する。"
+      },
+      {
+        "metric": "追加ルーティング時間",
+        "value": "CARROT比で約200マイクロ秒",
+        "baseline": "CARROT",
+        "condition": "平均意思決定時間",
+        "interpretation": "ハードウェア認識を加える重要経路の費用は小さいと報告する。"
+      }
+    ],
+    "negative_results": "費用予測器の順伝播を約10ミリ秒と記す一方、CARROT比の追加ルーティング時間を約200マイクロ秒と報告しており、両者の測定範囲の違いは十分説明されていない。評価GPUは2台ともH100で、異種GPUを動機に挙げるもののV100、A100、H100を混在させた直接評価はない。",
+    "interpretation": "モデル規模や単価は単独実行時の効率を示す代理値に過ぎず、オンライン推論では待ち行列とKVキャッシュ圧力が実効効率の順位を逆転させる。HW-Routerはこの順位を問い合わせごとに再推定し、負荷分散を偶然の副作用ではなく閉ループ制御として実現する。",
+    "quality_impact": "同等品質の動作点で遅延と期限達成率を比較し、出力品質を落とさず改善したと報告する。品質判定はQwen-3-Next-80Bを用いた単一の大規模言語モデル判定が中心で、人手や複数判定器による頑健性検証は限定的である。"
+  },
+  "reservation": {
+    "claim_id": "claim-a785e8e9e0aaf4f974c5e86c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8941df7cf722e02c81ac6a22","job_id":"job-research-1abdfafeb85e4df9","data":{"limitations":"性能モデルは対象GPU上のプロファイル回帰に依存し、A100からH100などハードウェアが変われば特性化が必要である。動的計画法の状態空間は新規要求数、SLO層数、メモリ単位に依存し、論文では典型的な新規要求0〜10件で低オーバーヘッドとするが、極端な同時到着やSLO種類増加時のスケールは制約になり得る。評価はdecode長の事前知識を全方式へ与えており、実際の長さ予測誤差を含む頑健性は未検証である。達成不能要求をbest-effortへ回すため、標準サービスSLO最大化と個々の遅延・公平性にはトレードオフがある。複数レプリカの逐次ルーティングは単純な一方式で、異種GPU・広域ネットワーク・大規模クラスタでの最適ルーティングは今後の課題である。","differences":"vLLMはプリフィルを積極的に進めTTFTを優先し、Sarathi-Serveはチャンク化プリフィルでデコード干渉を抑えるが、いずれも段階単位の貪欲優先が中心である。SLOs-Serveは要求の全段階SLOを一つの可否制約として扱い、ソフト入場制御と動的計画法で採用集合を選ぶ点が異なる。DistServe等のプリフィル/デコード分離方式は段階ごとのGPU比率を固定または再構成するのに対し、SLOs-Serveは同居実行でトークン割当とバッチサイズを細粒度に変える。LlumnixやDynamoLLM等のSLO指向システムに対しても、代理的な負荷指標ではなく多段階SLO達成可能性を資源計画とレプリカルーティングの中心状態にする。AdaServeに近いSLO別投機長も含むが、SLOs-Serveはデコード単独ではなくプリフィルを含む多段階全体を最適化する。","implementation_status":"論文はarXiv v1プレプリント。本文ではvLLMバックエンド上に実装し、PagedAttentionとRayを利用、Python約10K行とC++資源計画器約1.5K行のプロトタイプをA100/H100で評価している。arXivページ上では公式コードURLは明示されていないため、コード公開状態は未確認として扱う。","research_positioning":"LLMサービング研究のうち、TTFT/TPOTの単一指標最適化から、reasoning・tool-useを含むアプリケーション/段階別SLOの共同最適化へ進む系統に位置する。特に『要求を受けた後どう高速化するか』だけでなく、『どの要求集合なら将来までSLOを守れるか』をオンラインで解き、入場制御、バッチ形成、投機デコード、複数レプリカ配置を同じSLO達成可能性で接続した点が、スケジューリング系統上の主要な差分である。"},"reservation":{"claim_id":"claim-8941df7cf722e02c81ac6a22","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a785e8e9e0aaf4f974c5e86c",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "limitations": "主要評価は同型H100×2の単一ノードであり、論文が強調する異種GPU世代混在への一般化は直接実証されていない。モデル配置は固定で、replica数変更、モデル移動、複数ノードnetwork contentionとの共同最適化は扱わない。監視間隔200〜300msのため急激なsub-second負荷変動では状態が陳腐化し得る。コスト予測器は対象モデル/GPUと負荷分布で学習が必要で、新ハードウェア・新モデルへの移行コストがある。品質評価は単一LLM judge中心である。",
+    "differences": "RouteLLMやIRT-Routerは主に問い合わせからモデル品質を推定しコストをモデルサイズ等で静的に扱う。CARROTは出力長を予測して問い合わせ依存コストを導入するが、GPUキューやKVキャッシュ圧力を見ない。HW-Routerは品質予測器を交換可能なまま、コストをモデル-GPU組のリアルタイム状態から予測する。Helix等の異種GPU servingはモデル配置・実行計画を最適化するのに対し、本研究は既配置の複数LLMへの要求単位ルーティングに焦点を置く。",
+    "implementation_status": "公式GitHub UCF-ML-Research/HW-Routerでコード公開。vLLM/Prometheusベースのhardware monitor、MLP cost predictor、IRT/CARROT/UMR router、データ収集・訓練・online evaluation pipelineを含む。arXiv v1は2026-06-10、DAC 2026採択。",
+    "research_positioning": "LLM serving schedulingとmodel routingの境界に位置し、routerがGPU runtime telemetryを直接使うことでapplication-level品質選択とsystems-level混雑制御を接続する。既存のqueue-aware schedulerが単一モデル内の要求順序を制御するのに対し、HW-Routerは複数モデル-GPU候補間で負荷を移す。今後は異種GPU配置、autoscaling、P/D分離、KV転送、cluster schedulerと組み合わせる余地が大きい。"
+  },
+  "reservation": {
+    "claim_id": "claim-a785e8e9e0aaf4f974c5e86c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

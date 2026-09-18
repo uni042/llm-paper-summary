@@ -1,1 +1,59 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8941df7cf722e02c81ac6a22","job_id":"job-research-1abdfafeb85e4df9","data":{"canonical_id":"arXiv:2504.08784","arxiv_id":"2504.08784","doi":"10.48550/arXiv.2504.08784","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG"]},"title":"SLOs-Serve: Optimized Serving of Multi-SLO LLMs","summary":"SLOs-Serveは、アプリケーションや処理段階ごとに異なるサービスレベル目標（SLO）を持つLLM要求を対象に、達成可能な要求集合の選択とトークン割当を動的計画法で同時最適化するサービングシステムである。チャンク化プリフィル、動的バッチサイズ、SLO適応型投機的デコード、ソフト入場制御、複数レプリカ間ルーティングを統合し、6シナリオで従来系よりGPU当たりサービング容量を平均2.2倍改善した。","list_summary":"段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。","authors":["Siyuan Chen","Zhipeng Jia","Samira Khan","Arvind Krishnamurthy","Phillip B. Gibbons"],"authors_affiliations":"Carnegie Mellon University; Google","published":"2025-04-05","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2025-04-05)","lineage":"LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing","topics":["LLMサービング","SLO対応スケジューリング","動的計画法","投機的デコード","入場制御","複数レプリカ"],"importance":"単一段階のTTFTまたはTPOTを貪欲に最適化する既存スケジューラに対し、要求全体の複数段階SLOを同時に満たせる要求集合とバッチ計画を明示的に最適化する点が重要である。","implementation":"vLLMをバックエンドに用い、PagedAttentionでメモリ管理、Rayでスケジューラと実行器をオーケストレーションする実装。スケジューリング・フロントエンド約10K行Python、資源計画器約1.5K行C++。","hardware_evaluation":"主にGoogle a2-highgpu-4gの40GB A100×4、スケーラビリティ評価にa3-highgpu-8gの80GB H100×8。OPT-13B/30Bでは2/4-way tensor parallelism。","quality_effect":"モデル品質自体は変更せず、SLO達成率とGPU当たり要求容量を最適化する。投機的デコードでは受理率を考慮して投機長をSLO別に調整する。","source":"https://arxiv.org/abs/2504.08784","sources":["https://arxiv.org/abs/2504.08784","https://arxiv.org/html/2504.08784"],"code":null,"last_checked":"2026-09-17","references":[],"references_checked_at":"2026-09-17","references_source":"primary manuscript reference section","references_total":null},"reservation":{"claim_id":"claim-8941df7cf722e02c81ac6a22","worker_id":"scheduled-chat-discovery-specialist-20260917T1700JST-b","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a785e8e9e0aaf4f974c5e86c",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "canonical_id": "arXiv:2608.14575",
+    "arxiv_id": "2608.14575",
+    "doi": "10.48550/arXiv.2608.14575",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.NI",
+      "cross_list": []
+    },
+    "title": "HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving",
+    "summary": "HW-Routerは複数LLMをGPU群で提供する際、モデルサイズ等の静的コストではなく、実行中・待機中リクエスト数、KVキャッシュ使用率、直近TTFT/TPOTなどの実時間ハードウェア状態を取り込んでモデル-GPU組ごとの遅延を予測し、品質とSLOを考慮して経路選択するルータである。2台のH100上の5モデル評価でCARROT/IRTに対しエンドツーエンド遅延3.4〜3.9倍低減、SLO達成率46〜48ポイント向上、GPU負荷偏り6〜8倍低減を報告する。",
+    "list_summary": "実時間のキュー・KVキャッシュ・TTFT/TPOTを遅延予測へ統合し、複数LLMルーティングのSLOとGPU負荷均衡を改善する。",
+    "authors": [
+      "Ahasan Kabir",
+      "Jiaqi Xue",
+      "Mengxin Zheng",
+      "Qian Lou"
+    ],
+    "authors_affiliations": "University of Central Florida",
+    "published": "2026-06-10",
+    "publication": "63rd Design Automation Conference (DAC 2026)",
+    "publication_type": "国際会議論文",
+    "publication_status": "Accepted at DAC 2026; arXiv v1",
+    "lineage": "multi-LLM serving / hardware-aware routing / SLO-aware scheduling / load balancing",
+    "topics": [
+      "LLMサービング",
+      "ルーティング",
+      "ハードウェア認識",
+      "SLO",
+      "GPU負荷分散"
+    ],
+    "importance": "品質予測中心だったLLMルータへ動的なサービング状態を一次入力として加え、モデル選択とGPU混雑回避を一体化した点が重要。",
+    "implementation": "vLLM Prometheusメトリクスを200〜300ms間隔で監視し、軽量MLPコスト予測器とIRT等の品質予測器を組み合わせる公式実装が公開されている。",
+    "hardware_evaluation": "単一ノード、NVIDIA H100 PCIe 80GB×2、8 CPU cores、64GB system memory。5つのinstruction-tuned LLMを固定配置して評価。",
+    "quality_effect": "モデル品質予測はハードウェア状態から分離し、Qwen-3-Next-80BによるLLM-as-a-judgeスコアで評価。著者は同等品質点で大幅な遅延改善を示し、出力品質損失なしと報告。",
+    "source": "https://arxiv.org/abs/2608.14575",
+    "sources": [
+      "https://arxiv.org/abs/2608.14575",
+      "https://jqxue1999.github.io/files/HWRouter.pdf"
+    ],
+    "code": "https://github.com/UCF-ML-Research/HW-Router",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript",
+    "references_total": 23
+  },
+  "reservation": {
+    "claim_id": "claim-a785e8e9e0aaf4f974c5e86c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

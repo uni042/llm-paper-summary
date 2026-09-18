@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-b2986b566a2c98de31284cba",
-  "job_id": "job-research-99d754a688aca9c8",
-  "data": {
-    "limitations": "block-wise KV reuseはfull bidirectional attentionの厳密cacheではなく、adjacent-step similarityに依存する近似である。confidence-aware parallel decodeもtask/modelごとのconfidence calibrationに影響される。評価はsingle-GPU batch-1中心で、concurrent requestsやproduction schedulerとのinteractionは未検証。vLLM等AR-oriented serving frameworkへの統合には追加実装が必要。",
-    "differences": "dKV-Cache/dLLM-Cache等が主にdLLM KV reuseへ焦点を置くのに対し、Fast-dLLMはKV cacheとparallel token selectionを統合してper-step costとstep countを同時削減する。LLaDA標準top-K unmaskは毎step固定数を確定するが、本手法はconfidence thresholdで並列数を動的化する。後続Sparse-dLLMはFast-dLLMが保持するblock外KV自体をsaliencyでevictしmemory/attentionをさらに疎化する。Fast-dLLM v2はtraining-free近似からblock-diffusion fine-tuningとhierarchical cacheへ発展する。",
-    "implementation_status": "ICLR 2026 accepted。NVlabs/Fast-dLLMでv1/v2を公開し、LLaDA/Dream inference、benchmark scripts、interactive demoを提供。v1はtraining-freeで既存checkpointへ適用可能。",
-    "research_positioning": "diffusion LLM inference最適化の基礎系統として、ARで当然だったKV cacheをbidirectional modelへ近似的に持ち込み、dLLM固有のparallel generationをquality-awareに制御する二本柱を確立した。後続のcache eviction、hierarchical caching、confidence-guided sparse attentionの比較基準となる。"
-  },
+  "attempt_id": "attempt-bee8326435df2b286b51b470",
+  "job_id": "job-research-12153d10b82fca3c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b2986b566a2c98de31284cba",
+    "claim_id": "claim-bee8326435df2b286b51b470",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
