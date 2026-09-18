@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.11688",
+      "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.11688",
+      "paper_path": "papers/inference/03-moe-expert-placement-caching/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "priority": 88,
+      "reason": "edge MoEでattention block前に軽量routerを使ってexpertを予測取得し、correctness-preserving modeでtoken latency最大26%、energy-delay product最大41%改善を報告する。expert prefetch重点テーマに直接該当する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "paper_path": "papers/inference/03-moe-expert-placement-caching/2026-2608.12103-kernel-managed-expert-cache-tiering.md",
+      "priority": 91,
+      "reason": "最大1.45TBのexpert poolを持つtrillion-parameter MoEでOS page cacheをexpert tierとして実測し、user-space専用cache設計との比較を行う。MGLRU、memory pressure、router lookaheadまで含む実機評価で、階層メモリとexpert cache双方の重要比較対象になる。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T12:00:00+09:00",
+    "round": "specialist-moe-cache-2",
+    "axis": "MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering",
+    "query_summary": "異種GPU servingからMoE expert cache/prefetchへ軸を変更し、2026年8-9月を中心に一次arXiv抄録を軽量評価した。MoE-Infinity等の既知基礎を候補化せず、2件のcanonical IDを最新default branchで再照合した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はagentic servingのstate/KV persistence、interruption/resumption、sandbox memoryへ移る",
+    "empty_round_reason": null
+  }
+}
