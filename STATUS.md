@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 04:44:09 JST**
+> 自動生成: **2026-09-19 04:44:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **60** |
+| 収録候補論文 | **59** |
 | 未claim Research job | **59** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 04:39:51 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-19 04:44:17 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **60** |
+| canonical_id確認済みの一意な候補論文 | **59** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **60** |
+| 非終端Research job合計 | **59** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **2** | **1** | **1** | **0** | — |
+| Research | **17** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **26** | **6** | **5** | **1** | **1** | **0** | **15** |
+| 合計 | **27** | **6** | **6** | **0** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 04:44:17 JST** [research] `URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal` — SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems
+  - job: `.survey/work-queue/jobs/job-research-2bbcf1d996d23713.json`
+  - result: `.survey/work-queue/results/research/attempt-ff353eb4bf9505979ad79bf0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ff353eb4bf9505979ad79bf0.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md`
 - **09-19 04:39:51 JST** [research] `DOI:10.52202/085713-1587` — HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference
   - job: `.survey/work-queue/jobs/job-research-ca0df1c4e0a9af97.json`
   - result: `.survey/work-queue/results/research/attempt-818968501d26285ed6167878.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-bc68d740adca0b4c200156a1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bc68d740adca0b4c200156a1.json`
   - paper: `papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md`
-- **09-19 03:05:17 JST** [research] `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training
-  - job: `.survey/work-queue/jobs/job-research-6af027835df580e1.json`
-  - result: `.survey/work-queue/results/research/attempt-c40db7283a5c53be666dfa56.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c40db7283a5c53be666dfa56.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md`
 
 ### Audit
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 04:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
+- immutable submission: **3件** / 検証済み成功: **3件** / 未完了・未検証: **0件**
 - **成功** `DOI:10.1145/3695053.3731073` — AiF: Accelerating On-Device LLM Inference Using In-Flash Processing
   - job: `.survey/work-queue/jobs/job-research-740437feef88b672.json`
   - result: `.survey/work-queue/results/research/attempt-0d9a61003cc7a37046392d50.json` (`ok=true`)
@@ -162,7 +162,11 @@
   - result: `.survey/work-queue/results/research/attempt-818968501d26285ed6167878.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-818968501d26285ed6167878.json`
   - paper: `papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-ff353eb4bf9505979ad79bf0.json` (job `job-research-2bbcf1d996d23713`)
+- **成功** `URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal` — SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems
+  - job: `.survey/work-queue/jobs/job-research-2bbcf1d996d23713.json`
+  - result: `.survey/work-queue/results/research/attempt-ff353eb4bf9505979ad79bf0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ff353eb4bf9505979ad79bf0.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md`
 
 #### Audit (:30)
 
@@ -192,10 +196,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal` — SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 04:43:05 JST** / heartbeat: **—** / lease expiry: **09-19 06:13:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2bbcf1d996d23713.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -215,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **60** |
+| ready | **59** |
 
 ### 候補の重複・識別情報欠損
 
@@ -235,7 +237,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **734** |
+| inference/training/survey配下の論文Markdown実体 | **735** |
 
 ### immutable submissionの未照合
 
@@ -243,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **554** |
-| └ Research | **425** |
+| 成功result未照合のimmutable submission | **553** |
+| └ Research | **424** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
