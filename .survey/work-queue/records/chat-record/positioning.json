@@ -1,18 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ca7ce8f5ef0840d351aa01d2",
-  "job_id": "job-research-b4ff298d10321769",
-  "data": {
-    "limitations": "prompt chunkの順序を自由に変えても意味・品質が保たれるという仮定が適用範囲を限定する。実評価はprefill token costであり、GPU上のend-to-end latency、scheduler overhead、cache bookkeeping、model-specific positional effectsを直接測っていない。O(3^m) exact algorithmは指数時間で大規模trafficへ直接使えず、実運用ではheuristicまたはwindowed optimizationが必要。DFS順によるone-request-cache最適性もrequest reordering latencyやSLO制約が厳しいonline servingではそのまま適用できない。",
-    "differences": "vLLM/SGLang/TensorRT-LLM等のprefix cacheは既に保存済みKVのexact-prefix reuseを行うが、通常はprompt componentの順序をoptimization variableとして扱わない。本研究はcache evictionやradix-tree implementationではなく、同じchunk集合をどのrequestでどの順に並べるかをrequest hierarchyとして最適化する。RadixAttention系がprefix matchingとcache管理を効率化するのに対し、本研究はprefixそのものが一致しやすいlayoutを生成する上流最適化で補完的。さらにhierarchyのDFS leaf orderをschedulerへ使い、layoutと有限cacheを一体で扱う。",
-    "implementation_status": "著者公式GitHub repositoryに論文全文、Python exact solver、heuristic、verification、BEIR評価script、data取得scriptを公開。production serving engine pluginではなく、algorithm/evaluation artifactとして再現可能な状態。",
-    "research_positioning": "KV/prefix cache研究の中でも、memory allocationやevictionではなくprompt assemblyとrequest orderingを組合せ最適化として扱う系統。RAG、agent tool catalog、few-shot promptなどset-valued contextが増えるほど適用価値が高く、既存serving engineのexact-prefix cacheを変更せず上流layoutだけでprefill workを削減できる点が実装上の特徴である。"
-  },
-  "reservation": {
-    "claim_id": "claim-ca7ce8f5ef0840d351aa01d2",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ca7ce8f5ef0840d351aa01d2","job_id":"job-research-b4ff298d10321769","data":{"limitations":"入力部品の順序を変えても意味と品質が保たれるという仮定が適用範囲を限定する。実評価の中心は事前計算トークン量であり、画像処理装置上の端から端までの応答時間、要求処理器の追加費用、キャッシュ管理費、位置によるモデル出力変化を直接測っていない。厳密解法は要求数に対して指数時間なので大規模なオンライン要求全体へそのまま適用できず、近似法や有限の並べ替え時間窓が必要になる。深さ優先順で小容量キャッシュでも最適共有を得る理論も、厳しい待ち時間目標のある運用では要求の並べ替え自由度に制約される。","differences":"既存のvLLM、SGLang、TensorRT-LLMなどは保存済み鍵値を完全一致する先頭部分で再利用するが、通常は入力を構成する文書や道具定義の順序自体を最適化対象にしない。本研究はキャッシュから何を追い出すか、基数木をどう実装するかではなく、同じ部品集合を要求ごとにどの順で並べるかを要求階層として決める。したがって既存の先頭照合・キャッシュ管理技術と競合するのではなく、それらが一致を見つけやすい入力配置を上流で作る補完的手法である。さらに同じ階層の深さ優先葉順を要求処理器へ渡し、入力配置と有限キャッシュの利用を一体化する。","implementation_status":"著者公式公開場所に論文全文、厳密動的計画法、凝集型近似、検証処理、三つの実検索データ集合を使う評価処理、データ取得処理を公開している。既存サービング基盤へ直接組み込む完成済み拡張機能ではないが、理論結果と評価値を再現する研究成果物は公開されている。","research_positioning":"鍵値キャッシュ研究の中でも、記憶割当てや追い出し方ではなく、入力組立てと要求処理順を組合せ最適化として扱う位置にある。検索拡張生成、道具を多数持つエージェント、少数例入力のように集合から入力を構成する用途が増えるほど価値が高い。既存の完全一致先頭キャッシュを変更せず、上流の配置だけで事前計算を減らせる点が実装上の利点である。"},"reservation":{"claim_id":"claim-ca7ce8f5ef0840d351aa01d2","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
