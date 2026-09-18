@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-18T10:00:00+09:00",
-  "submission_count": 9,
+  "updated_at": "2026-09-18T15:00:00+09:00",
+  "submission_count": 10,
   "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 35,
-  "rejection_record_count": 35,
+  "rejection_observation_count": 36,
+  "rejection_record_count": 36,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -275,6 +275,28 @@
       "run_key": null,
       "source_submission": ".survey/work-queue/submissions/research/attempt-b0e2c7ec2fd69933c27ee41a.json",
       "origin": "research_blocked_permanent"
+    },
+    "id:arXiv:2608.23658": {
+      "primary_identity": "id:arXiv:2608.23658",
+      "identity_tokens": [
+        "id:arXiv:2608.23658",
+        "title:elastic kv cache for llm servinga working reclamation mechanism and why chunked prefill already closes the gap",
+        "url:https://arxiv.org/abs/2608.23658"
+      ],
+      "canonical_id": "arXiv:2608.23658",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Elastic KV Cache for LLM Serving:A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "rejection_reason": "CUDA VMMを用いる実装自体は興味深いが、論文自身の制御実験でchunked prefillの単純調整がほぼ同等以上にKV reserveを回収でき、主要機構の実運用上の改善余地が限定的というnegative resultであるため、現在の候補在庫では優先採用しない。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T15:00:00+09:00",
+      "last_rejected_at": "2026-09-18T15:00:00+09:00",
+      "axis": "network-constrained KV transfer・proactive migration・elastic KV reclamation",
+      "run_key": "2026-09-18T15:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json",
+      "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.10266": {
       "primary_identity": "id:arXiv:2609.10266",
