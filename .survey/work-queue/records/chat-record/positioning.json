@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ca7ce8f5ef0840d351aa01d2","job_id":"job-research-b4ff298d10321769","data":{"limitations":"入力部品の順序を変えても意味と品質が保たれるという仮定が適用範囲を限定する。実評価の中心は事前計算トークン量であり、画像処理装置上の端から端までの応答時間、要求処理器の追加費用、キャッシュ管理費、位置によるモデル出力変化を直接測っていない。厳密解法は要求数に対して指数時間なので大規模なオンライン要求全体へそのまま適用できず、近似法や有限の並べ替え時間窓が必要になる。深さ優先順で小容量キャッシュでも最適共有を得る理論も、厳しい待ち時間目標のある運用では要求の並べ替え自由度に制約される。","differences":"既存のvLLM、SGLang、TensorRT-LLMなどは保存済み鍵値を完全一致する先頭部分で再利用するが、通常は入力を構成する文書や道具定義の順序自体を最適化対象にしない。本研究はキャッシュから何を追い出すか、基数木をどう実装するかではなく、同じ部品集合を要求ごとにどの順で並べるかを要求階層として決める。したがって既存の先頭照合・キャッシュ管理技術と競合するのではなく、それらが一致を見つけやすい入力配置を上流で作る補完的手法である。さらに同じ階層の深さ優先葉順を要求処理器へ渡し、入力配置と有限キャッシュの利用を一体化する。","implementation_status":"著者公式公開場所に論文全文、厳密動的計画法、凝集型近似、検証処理、三つの実検索データ集合を使う評価処理、データ取得処理を公開している。既存サービング基盤へ直接組み込む完成済み拡張機能ではないが、理論結果と評価値を再現する研究成果物は公開されている。","research_positioning":"鍵値キャッシュ研究の中でも、記憶割当てや追い出し方ではなく、入力組立てと要求処理順を組合せ最適化として扱う位置にある。検索拡張生成、道具を多数持つエージェント、少数例入力のように集合から入力を構成する用途が増えるほど価値が高い。既存の完全一致先頭キャッシュを変更せず、上流の配置だけで事前計算を減らせる点が実装上の利点である。"},"reservation":{"claim_id":"claim-ca7ce8f5ef0840d351aa01d2","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ce3285262dcb4c07529a0b28",
+  "job_id": "job-research-2829f7afbf13ae9b",
+  "data": {
+    "limitations": "attention-guided evictionは経験的saliency安定性に依存し、誤差保証はない。HumanEvalで示されるようにコード等の細粒度長距離依存では重要tokenを落とし得る。単一4090・native dLLM実装中心でproduction serving framework、batching、多GPUへの適用は未評価。retention ratio/kernel/delayはモデル・task依存の可能性がある。",
+    "differences": "dLLM-Cacheはprompt/response cacheのrefresh intervalやfeature similarityで部分更新、dKV-Cacheはone-step delayed caching、Fast-dLLMはcurrent block外の全KVをcacheする。Sparse-dLLMはcache内部をさらにattention saliencyで疎化し、dLLMの双方向性に合わせprefixとsuffixを同時evictする。AR向けSnapKV等が過去prefixだけを扱うのに対し、future-side suffixも対象となる。",
+    "implementation_status": "AAAI-26採択・公開済み。公式OpenMOSS/Sparse-dLLM repositoryがあり、LLaDA/Dream向け実装とOpenCompass speed evaluation scriptsを提供。訓練不要のplug-and-play方式。",
+    "research_positioning": "拡散LLM推論のKV-cache系統で、単なるcache reuseからcache sparsificationへ進めた初期代表例。時間方向のKV安定性とtoken方向のattention sparsityを組み合わせ、長文脈dLLMでcomputeとmemoryの両方を抑える。後続のconfidence-guided sparse attentionやactivation reuseと比較する基準点になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-ce3285262dcb4c07529a0b28",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}
