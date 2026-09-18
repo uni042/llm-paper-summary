@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:04:08 JST**
+> 自動生成: **2026-09-18 20:04:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **6** | **1** | **5** | **0** | **0** | **14** |
-| 合計 | **25** | **8** | **3** | **5** | **0** | **0** | **14** |
+| Discovery | **16** | **9** | **1** | **8** | **0** | **0** | **14** |
+| 合計 | **25** | **11** | **3** | **8** | **0** | **0** | **14** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -167,8 +167,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 20:00 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **5件** / 候補: **14件**
-- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction / 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload / 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload / 2025 KV parameter remapping・CPU-light offload・multi-tenant memory / CXL rack-scale KV transport・eDRAM KV co-design・edge memory
+- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **8件** / 候補: **14件**
+- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction / 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload / 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload / 2025 KV parameter remapping・CPU-light offload・multi-tenant memory / CXL rack-scale KV transport・eDRAM KV co-design・edge memory / 2024 personal-machine MoE cache・2025 multimodal KV compression serving / distributed KV networking・SmartNIC・CXL transfer / operator autoscaling・SLO-aware scheduling・phase-aware power control
 - round `specialist-memory-specdecode-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
   - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
@@ -192,6 +192,18 @@
 - round `specialist-cxl-edram-6` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T2029JST-discovery-specialist-cxl-edram-6.json`
   - 探索軸: CXL rack-scale KV transport・eDRAM KV co-design・edge memory
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-legacy-cache-7` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2033JST-discovery-specialist-legacy-cache-7.json`
+  - 探索軸: 2024 personal-machine MoE cache・2025 multimodal KV compression serving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-network-kv-8` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2036JST-discovery-specialist-network-kv-8.json`
+  - 探索軸: distributed KV networking・SmartNIC・CXL transfer
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-scheduling-saturation-9` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2038JST-discovery-specialist-scheduling-saturation-9.json`
+  - 探索軸: operator autoscaling・SLO-aware scheduling・phase-aware power control
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -247,10 +259,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **525** |
+| 成功result未照合のimmutable submission | **528** |
 | └ Research | **391** |
 | └ Audit | **2** |
-| └ Discovery | **132** |
+| └ Discovery | **135** |
 
 ### 厳格検証が未成立のcompleted job
 
