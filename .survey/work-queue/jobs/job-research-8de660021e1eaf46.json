@@ -16,11 +16,9 @@
   "schema_version": 1,
   "created_at": "2026-09-18T19:02:33+00:00",
   "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[1].description is too short | problem_method.components[2].description is too short | Japanese-first prose ratio is too low: 48.2% < 70% (Japanese=2563, Latin=2757)",
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
   "validation_errors": [
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "Japanese-first prose ratio is too low: 48.2% < 70% (Japanese=2563, Latin=2757)"
+    "problem_method.method_overview must explain the end-to-end mechanism"
   ],
-  "last_validation_failed_at": "2026-09-18T20:08:55+00:00"
+  "last_validation_failed_at": "2026-09-18T20:11:43+00:00"
 }
