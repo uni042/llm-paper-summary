@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-85e31171313f0f31636868a0",
-  "job_id": "job-research-56fbeb640bc1560d",
-  "data": {
-    "hardware": "実機Edge LLMクラスタではなくシミュレーション。LLMパラメータはQwen2.5-7B-Instruct: 28 Transformer layers、4 KV heads、head dimension 128、16-bit elements。これよりKV payloadは458,752 bit/token、3072-token contextで176MBと算出する。",
-    "software": "解析・シミュレーション研究。prefill delayはp(L)=aL+bの線形modelで、default a=9.4267e-5、b=2.4e-3。比較は提案ctHO、全tokenをprefillするtHO（L=Cmax）、全KVをbackhaul転送するcHO（L=0）。コード公開は論文中に記載されない。",
-    "methodology": "基本設定はK=4 UE、C_iをUnif[1024,Cmax]からsample、batch prefill cycle Tc=0.01s。source/target BSを300m離した1D line networkに置き、UE初期位置120〜130m、速度20m/s、150m境界でhandoverする。backhaul rate、prefill speed 1/a、Cmax、UE数Kをsweepしてworst-user LLM HO delayを比較する。追加評価ではhandover後G=1024 tokenのwireless streamingも含め、BS間距離をsweepする。wireless modelはreference SNR 10dB at 20m、path-loss exponent 3.5、bandwidth 2MHz、token size 12bitを用いる。",
-    "scope": "理論的global optimalityとネットワーク/LLMパラメータを用いた数値評価が中心で、実際のGPU prefill時間変動、KV serialization/DMA、backhaul protocol overhead、異種model/BS、handover予測誤差などは実機検証されていない。sourceとtargetは同一LLM architecture/parametersを持つ前提で、hard handover中はdecodeを停止する。"
-  },
+  "attempt_id": "attempt-c94b0bb7795aeb0a202c4cca",
+  "job_id": "job-research-f7dcdf40e7d3538f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-85e31171313f0f31636868a0",
+    "claim_id": "claim-c94b0bb7795aeb0a202c4cca",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-85e31171313f0f31636868a0",
-  "job_id": "job-research-56fbeb640bc1560d",
-  "data": {
-    "overview": "ctHOはbackhaul帯域とprefill計算の一方だけへ依存せず、条件に応じて最適prefix長を変えるため、評価した全sweepでtHO/cHO以下のworst-user handover delayを達成した。代表的にはbackhaul 2GbpsでcHOの遅延がctHOの3.1倍超となり、論文全体でtHO比最大3.7倍の改善を報告する。UE数増加時にも差が拡大し、K=12ではctHO約0.95s、tHO約1.25s、cHO約3.35sである。",
-    "key_results": [
-      {
-        "metric": "worst-user HO delay vs cHO",
-        "value": "最大3.1×削減相当",
-        "baseline": "cHO (all KV transfer)",
-        "condition": "代表点 R_bh=2 GbpsでcHO delayがctHOの3.1×超",
-        "interpretation": "backhaul不足時に一部をprefillへ逃がす効果が大きい。"
-      },
-      {
-        "metric": "worst-user HO delay vs tHO",
-        "value": "最大3.7×削減",
-        "baseline": "tHO (all token prefill)",
-        "condition": "simulation sweep",
-        "interpretation": "prefillがボトルネックの領域では残余KV直接転送との並行化が有効。"
-      },
-      {
-        "metric": "K=12 multi-user delay",
-        "value": "ctHO≈0.95s, tHO≈1.25s, cHO≈3.35s",
-        "baseline": "tHO/cHO",
-        "condition": "R_bh=4.5 Gbps",
-        "interpretation": "UE増加で共有資源競合が強くなってもjoint allocationが優位で、特にcHOとの差が拡大する。"
-      },
-      {
-        "metric": "3072-token KV size",
-        "value": "176 MB",
-        "baseline": "Qwen2.5-7B-Instruct parameterization",
-        "condition": "28 layers, 4 KV heads, d_h=128, 16-bit K/V",
-        "interpretation": "Edge handoverでKV直接転送が現実にbackhaul負荷となる規模を示す。"
-      },
-      {
-        "metric": "HO vs no-HO total streaming",
-        "value": "D_bs=500mでno-HOがctHOより2.1s超遅い",
-        "baseline": "source BSへ接続継続するno-HO",
-        "condition": "R_bh=4.5Gbps, G=1024 generated tokens",
-        "interpretation": "handover自体の停止時間を払っても、無線link劣化が大きい距離ではtargetへ移る総遅延利得が上回る。"
-      }
-    ],
-    "negative_results": "backhaulが十分高速になるとcHOはctHOへ近づき、prefillが十分高速ならtHO側の不利も縮むため、joint方式の利得は資源の中間領域で大きい。no-HOとの比較ではBS間距離375m未満でhandover停止時間がないno-HOの方が総遅延が小さい。提案はhard HOを前提にし、handover中もsource decodeを継続するsoft HOは未対応。",
-    "interpretation": "本質はKV cacheを単なる転送対象ではなく『同じ状態をtokenから再計算可能なデータ』として扱い、通信量と計算量を交換可能にした点にある。prefillとtransferのmaxが停止時間を決めるため、両者を等しくする境界がmin-max最適となる。",
-    "quality_impact": "contextに対応する同一KV状態をprefillまたは直接転送で再構築するため、compression/quantizationのような近似品質劣化は導入しない。論文はCacheGen等のKV圧縮を直交技術として位置付け、組み合わせればさらに転送遅延を減らせるとしている。"
-  },
+  "attempt_id": "attempt-c94b0bb7795aeb0a202c4cca",
+  "job_id": "job-research-f7dcdf40e7d3538f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-85e31171313f0f31636868a0",
+    "claim_id": "claim-c94b0bb7795aeb0a202c4cca",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
