@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-50d319b76e34955de23ce2f8",
+  "attempt_id": "attempt-c40db7283a5c53be666dfa56",
   "job_id": "job-research-6af027835df580e1",
   "data": {
     "limitations": "CPU側再構築は混合精度学習で勾配が完全チェックポイントより小さいことと、CPUでGPUと同じ最適化器更新を再現できることを利用するため、任意の最適化器・学習方式へそのまま適用できるとは限らない。GoCkpt-Oは勾配バッファが次の逆伝播まで保持されるDeepSpeed系実装特性に依存する。複数GPU評価は各GPUが独立PCIe root domainとNVMe経路を持つ構成で、共有スイッチや共有SSDが飽和する場合の拡張性は未実証。復元読込み自体は従来同期方式のままで高速化対象外。",
@@ -11,7 +11,7 @@
     "research_positioning": "学習時の耐久状態I/Oを、単なるSSD書込み最適化ではなくGPU-CPU転送・CPU状態再構築・NVMe永続化の三段階パイプラインとして扱う研究。特に『古い状態＋その後の勾配』をCPUへ送り最新チェックポイントを再演算する考え方は、転送時点の一貫性制約を緩めて長い時間窓へI/Oを分散する。階層メモリ研究の観点ではGPU→CPU→SSDの各層を並列化し、4MBチャンクと多スレッド永続化で下位層帯域を使い切る具体例となる。"
   },
   "reservation": {
-    "claim_id": "claim-50d319b76e34955de23ce2f8",
+    "claim_id": "claim-c40db7283a5c53be666dfa56",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

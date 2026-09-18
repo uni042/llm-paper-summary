@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-50d319b76e34955de23ce2f8",
+  "attempt_id": "attempt-c40db7283a5c53be666dfa56",
   "job_id": "job-research-6af027835df580e1",
   "data": {
     "hardware": "単一GPU環境はTesla V100S、48コアCPU二基で計96コア、128GB DDR4、3.8TB NVMe SSD。複数GPU環境はAlibaba Cloudの8×H100-80GB NVLink、224-core Intel Platinum 8480C、2TB ECC RAM、4×3.5TB NVMe SSD。4×H100ではGPUごとに独立PCIe root domainとSSD経路を使う。",
@@ -11,7 +11,7 @@
     "scope": "主にDeepSpeed混合精度学習、AdamW、単一V100Sと最大4×H100の実測。8×H100サーバ構成を説明するが拡張性図は4 GPU。複数GPUでは各GPUに独立PCIe/SSD経路がある構成で、共有PCIeや共有SSDが律速するクラスタへの一般化は追加検証が必要。"
   },
   "reservation": {
-    "claim_id": "claim-50d319b76e34955de23ce2f8",
+    "claim_id": "claim-c40db7283a5c53be666dfa56",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
