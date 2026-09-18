@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:31:25 JST**
+> 自動生成: **2026-09-19 07:33:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（5分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **11** | **6** | **5** | **3** | **1** | — |
+| Research | **22** | **12** | **6** | **6** | **3** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **35** | **14** | **9** | **5** | **3** | **1** | **3** |
+| 合計 | **35** | **15** | **9** | **6** | **3** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **11件** / 検証済み成功: **6件** / 未完了・未検証: **5件**
+- immutable submission: **12件** / 検証済み成功: **6件** / 未完了・未検証: **6件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-11b5e62465ce56e739adae95.json` (job `job-research-c790156bc5f9f1f9`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`)
 - **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
   - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
@@ -181,11 +182,6 @@
   - submission: `.survey/work-queue/submissions/research/attempt-a3bba0a36c53f4970b6d1719.json`
   - paper: `papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-ab3069d4b8b31db28dbe64b7.json` (job `job-research-56fbeb640bc1560d`)
-- **成功** `arXiv:2609.15504` — How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus
-  - job: `.survey/work-queue/jobs/job-research-9c0ef4e091be369c.json`
-  - result: `.survey/work-queue/results/research/attempt-c2a51a6ace4a43448c42f0b1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c2a51a6ace4a43448c42f0b1.json`
-  - paper: `papers/inference/08-speculative-decoding/2026-2609.15504-orthrus-numerical-precision-losslessness.md`
 
 #### Audit (:30)
 
@@ -272,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **569** |
-| └ Research | **440** |
+| 成功result未照合のimmutable submission | **570** |
+| └ Research | **441** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
