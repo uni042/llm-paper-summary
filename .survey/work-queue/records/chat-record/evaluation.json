@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0ef81dffe6156af3523ba01f",
-  "job_id": "job-research-37f936e1437c5b29",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0ef81dffe6156af3523ba01f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0ef81dffe6156af3523ba01f","job_id":"job-research-37f936e1437c5b29","data":{"hardware":"単一ノード8×NVIDIA A800 GPUで訓練・評価。","software":"Qwen3-1.7B/4B/8B target、5-layer DFlash drafter、draft block size 16。高並列serving throughputはSGLang上で測定。","methodology":"80K ShareGPT samplesで各target向けdrafterをscratch training。標準Multi-Round Self-Conditioned Trainingは初回mask round後にk=2 reject-conditioned rounds。評価は数学GSM8K/MATH-500、code HumanEval/MBPP、dialogue MT-Bench/Alpaca。低並列ではgreedy T=0とsampling T=1のaverage acceptance lengthをEAGLE-3/DFlashと比較。高並列ではQwen3-4B/8BのGSM8K/HumanEvalをconcurrency 1,2,4,8,16,32でbaseline autoregressive、EAGLE-3、DFlash、DFlow比較。relay ablation、runtime overhead、Domino互換性も評価。","scope":"target modelはQwen3 1.7B/4B/8Bに限定。block diffusion drafterはDFlash系が中心で、他のtarget familiesやproduction heterogeneous hardwareは未評価。高並列は最大32 concurrency、単一8×A800 node。"},"reservation":{"claim_id":"claim-0ef81dffe6156af3523ba01f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
