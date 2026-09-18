@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:25:29.396606+00:00",
+  "updated_at": "2026-09-18T20:35:59.412980+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:25:29.396606+00:00",
+      "last_recorded_at": "2026-09-18T20:35:59.412980+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 274,
+        "research_completed": 275,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35311754331:1",
-          "recorded_at": "2026-09-18T05:42:17.665697+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35311754331",
-            "run_attempt": "1",
-            "source_sha": "d68050c5c670efcd6bbf04ddb7157517ca4a2e7c"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35311936987:1",
           "recorded_at": "2026-09-18T05:44:06.022455+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35392308933:1",
+          "recorded_at": "2026-09-18T20:35:59.412980+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35392308933",
+            "run_attempt": "1",
+            "source_sha": "f7b84d7c246aebc2ede9a5716b247baad62d0284"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23263,6 +23263,14 @@
           "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-be1193ba1dd42ac7",
+          "type": "research",
+          "canonical_id": "arXiv:2508.08457",
+          "title": "Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25530,7 +25538,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:35:01 JST**
+> 自動生成: **2026-09-19 05:35:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 05:23:55 JST（11分前）** |
+| 最終検証済みResearch収録 | **09-19 05:35:57 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **21** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **30** | **4** | **3** | **1** | **2** | **0** | **15** |
+| 合計 | **31** | **5** | **4** | **1** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 05:35:57 JST** [research] `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
+  - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
+  - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
+  - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
 - **09-19 05:23:55 JST** [research] `arXiv:2607.17538` — D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation
   - job: `.survey/work-queue/jobs/job-research-b2d29fa9c529bdfd.json`
   - result: `.survey/work-queue/results/research/attempt-49a5f136c96efe1a74ef7842.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
-- **09-19 03:30:37 JST** [research] `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling
-  - job: `.survey/work-queue/jobs/job-research-21b30a62610ad176.json`
-  - result: `.survey/work-queue/results/research/attempt-e7451954f296ee21fbc9ac8c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e7451954f296ee21fbc9ac8c.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md`
 
 ### Audit
 
@@ -151,8 +151,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 05:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a79bd772dccd9a8939166474.json` (job `job-research-9c0ef4e091be369c`)
+- **成功** `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
+  - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
+  - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
+  - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
 
 #### Audit (:30)
 
@@ -182,10 +187,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 05:33:56 JST** / heartbeat: **—** / lease expiry: **09-19 07:03:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be1193ba1dd42ac7.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding / worker `scheduled-chat-discovery-specialist`
   - claim: **09-19 05:31:18 JST** / heartbeat: **—** / lease expiry: **09-19 07:01:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-b3520b6ffb18fc43.json`
@@ -208,7 +210,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -228,7 +230,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **738** |
+| inference/training/survey配下の論文Markdown実体 | **739** |
 
 ### immutable submissionの未照合
 
