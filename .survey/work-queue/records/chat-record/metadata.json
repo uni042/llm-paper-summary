@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-5b5769ffc299e3f095219b3d",
-  "job_id": "job-research-a2e0c7f004aa0b3e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5b5769ffc299e3f095219b3d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5b5769ffc299e3f095219b3d","job_id":"job-research-a2e0c7f004aa0b3e","data":{"canonical_id":"arXiv:2511.22333","arxiv_id":"2511.22333","doi":"10.1145/3779212.3790200","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.CL"]},"title":"PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel","summary":"PATは、複数要求が共有する階層的な接頭辞を復号注意カーネル内部でも再利用し、同じ鍵値接頭辞を大域メモリから要求ごとに繰り返し読む無駄を削減する。要求を共有接頭辞ごとに協調スレッド配列へ詰める段階、要求数と鍵値長に応じて複数のタイル形状から実行カーネルを選ぶ段階、複数部分結果をオンラインソフトマックスで統合する段階を組み合わせる。さらに複数実行流と長い鍵値区間の分割で末尾の実行空洞を減らす。vLLM 0.9.0へ外付け注意後端として統合され、A100上の共有接頭辞条件でFlashAttention比の注意遅延を平均67.8%、FlashInfer比を52.1%削減し、オンライン配信では出力一トークン当たり時間を基準方式より17.0〜93.1%削減する。","list_summary":"共有接頭辞を要求間で一度だけ読む詰込みと動的タイル選択により、復号注意の大域メモリ読出しと実行空洞を同時に削減する。","authors":["Jinjun Yi","Zhixin Zhao","Yitao Hu","Ke Yan","Weiwei Sun","Hao Wang","Laiping Zhao","Yuhao Zhang","Wenxin Li","Keqiu Li"],"authors_affiliations":"Jinjun Yi、Zhixin Zhao、Yitao Hu、Ke Yan、Weiwei Sun、Laiping Zhao、Yuhao Zhang、Wenxin Li、Keqiu LiはTianjin University、Hao WangはStevens Institute of Technology。","published":"2025-11-27","publication":"ASPLOS 2026","publication_type":"国際会議論文","publication_status":"ASPLOS 2026採択、arXiv第3版は2026年3月16日改訂","lineage":"復号注意・共有接頭辞・鍵値キャッシュ・GPUカーネル・vLLM","topics":["接頭辞認識注意","鍵値キャッシュ再利用","動的タイル","GPUカーネルスケジューリング","オンライン推論"],"importance":"既存の接頭辞キャッシュは保存容量を減らしても、復号注意カーネルが要求ごとに同じ共有鍵値を大域メモリから読み直す問題を残す。PATは接頭辞共有をカーネルの作業分割へ持ち込み、帯域削減とGPU資源利用率を同時に最適化する。","implementation":"約三千行のCutlass/CuTeとC++で注意カーネルを実装し、約千二百行のPythonでvLLM 0.9.0へ外付け後端として統合。公式GitHub、Zenodo、事前構築済みDocker評価環境を公開。","hardware_evaluation":"主にNVIDIA A100 80GB、カーネル評価ではH100も使用。分散評価ではA100四基、混合専門家評価ではA100一基。","quality_effect":"近似注意ではなくオンラインソフトマックスで部分結果を厳密統合する実装で、主評価は注意遅延、初回トークン時間、出力一トークン当たり時間、要求完了時間。","source":"https://arxiv.org/abs/2511.22333","sources":["https://arxiv.org/abs/2511.22333","https://arxiv.org/html/2511.22333v3","https://github.com/flashserve/PAT"],"code":"https://github.com/flashserve/PAT","project":"https://github.com/flashserve/PAT","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv第3版の本文、評価、議論、成果物付録、参考文献まで全文確認。","references_total":0},"reservation":{"claim_id":"claim-5b5769ffc299e3f095219b3d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
