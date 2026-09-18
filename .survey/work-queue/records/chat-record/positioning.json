@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-59bd34d06f011611b0132598",
-  "job_id": "job-research-b3520b6ffb18fc43",
-  "data": {
-    "limitations": "評価は4基A100をNVLink接続した単一サーバとSwitch-Baseエンコーダに限定され、自己回帰デコーダのトークン単位生成や多ノード通信では検証されない。全入力トークンを全GPUへ複製するためGPU数増加とともに通信量・受信メモリが増え、論文の4 GPUで小さいという見積りが大規模クラスタへそのまま成立する保証はない。均質GPU、モデル全体が集合GPUメモリに収まること、エキスパート断片数がGPU数で割り切れることを仮定する。偏り評価用ルータは本番品質のルーティングではない。",
-    "differences": "DeepSpeed-MoEや一般的エキスパート並列はエキスパートをGPUへ丸ごと静的配置し、ルーティング後にトークンを所在GPUへ送るため人気偏りが計算偏りになる。LazarusやProphetは人気エキスパートの複製・配置最適化で対応するが、追加メモリやプロファイルを要し人気変動に追随する必要がある。MoEShardは各エキスパートを全GPUへ均等分割して人気とGPU負荷を切り離す。通常のテンソル並列と似るが、MoEの各エキスパート行列に列・行の組合せを適用し、中間同期を避けつつルーティング偏りの解消を目的にする点が異なる。",
-    "implementation_status": "Python/PyTorchで実装され、公開リポジトリがある。4 A100上でDeepSpeed-MoEと実測比較し、エキスパート断片計算のカーネル起動削減にMegaBlocksを統合する。エキスパート数が少ない場合はMegaBlocksを使わない構成も評価しており、64エキスパート付近を境に疎行列統合の利得が大きくなる。",
-    "research_positioning": "MoE推論のエキスパート配置・負荷分散系統に位置するが、オフロードやキャッシュではなくテンソル分割によって計算を均等化する研究である。エキスパート人気を予測して配置する方式に対し、人気分布への依存を構造的に消す点が重要で、expert placementやreplication研究の比較基準になる。一方、全トークン複製という通信コストを払うため、GPU間帯域が十分高い単一ノードと、計算量が大きいエンコーダ型MoEで特に有利な設計である。"
-  },
+  "attempt_id": "attempt-55ad2e2507991e421d05d6e8",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-59bd34d06f011611b0132598",
+    "claim_id": "claim-55ad2e2507991e421d05d6e8",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

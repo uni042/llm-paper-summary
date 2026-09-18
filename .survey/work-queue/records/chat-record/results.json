@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-59bd34d06f011611b0132598",
-  "job_id": "job-research-b3520b6ffb18fc43",
-  "data": {
-    "overview": "MoEShardはルーティング偏りが大きく、バッチまたはエキスパート数が増えて従来エキスパート並列のGPU待機時間が増えるほど優位になる。バッチ250・系列長120・128エキスパートの層評価ではDeepSpeedの177〜180msに対して41.5〜43.5msで最大4.25倍高速化した。TTFTではエキスパート数走査で最大6.45倍、バッチ走査でバッチ450時に約6.24倍となる。一方バッチ10ではDeepSpeedより遅く、MegaBlocksも少数エキスパートでは起動コストが利得を上回る。",
-    "key_results": [
-      {
-        "metric": "エンコーダ層forward遅延",
-        "value": "41.5〜43.5 ms vs 177〜180 ms、最大4.25×高速化",
-        "baseline": "DeepSpeed-MoE",
-        "condition": "batch=250, seq=120, experts=128, 100 iterations",
-        "interpretation": "実ルータの偏りでもエキスパート断片を全GPUへ均等化する効果が大きい。"
-      },
-      {
-        "metric": "TTFT速度向上・エキスパート数走査",
-        "value": "最大6.45×、その後も2.39×以上",
-        "baseline": "DeepSpeed-MoE",
-        "condition": "experts=8〜256, batch=250, seq=120, skew=0.6",
-        "interpretation": "エキスパート数増加で負荷偏りの待機を削減するが、DeepSpeedが50超でトークンを落とすため相対差が縮む領域がある。"
-      },
-      {
-        "metric": "TTFT速度向上・バッチ走査",
-        "value": "batch=450で約6.24×",
-        "baseline": "DeepSpeed-MoE",
-        "condition": "experts=128, batch=10〜450",
-        "interpretation": "バッチ増加で絶対的なルーティング偏りが増え、静的配置GPUの待機が拡大するためMoEShardの利得がほぼ線形に増える。"
-      },
-      {
-        "metric": "MegaBlocks切替点",
-        "value": "約64 expertsから有利",
-        "baseline": "MoEShard without MegaBlocks",
-        "condition": "batch=250のexpert sweep",
-        "interpretation": "疎行列カーネル生成コストは少数expertで重く、多数expertでは起動統合の利得が上回る。"
-      }
-    ],
-    "negative_results": "バッチ10ではMoEShardはDeepSpeedより遅く、著者はDeepSpeed側の細粒度最適化がMoEShard実装にないことを理由として推測する。MegaBlocksもエキスパート数64未満では無効化した方が速い。全トークンを全GPUへ複製する通信は4 GPU NVLinkでは小さいと見積もられるが、大規模多ノードでは評価されていない。DeepSpeed比較では容量係数により50エキスパート超でトークンを落とすため、完全な同一計算量比較ではない領域がある。",
-    "interpretation": "MoEShardは動的な人気予測を改善するのではなく、人気という変動要因がGPU計算量へ伝播しない配置へ問題を変形する。通信量を増やしてでも全GPUへ同じトークン集合を与え、重み側を均等分割することで、計算律速の大バッチMoEエンコーダでは静的エキスパート配置のアイドル時間を大幅に減らす。",
-    "quality_impact": "エキスパート行列の列・行分割による部分出力を総和するため数学的には元のエキスパート計算と等価で、MoEShard自身はトークンを落とさない。比較対象DeepSpeedは容量係数により一部設定でトークンを落とす。"
-  },
+  "attempt_id": "attempt-55ad2e2507991e421d05d6e8",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-59bd34d06f011611b0132598",
+    "claim_id": "claim-55ad2e2507991e421d05d6e8",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

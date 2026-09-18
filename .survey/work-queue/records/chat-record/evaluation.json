@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-59bd34d06f011611b0132598",
-  "job_id": "job-research-b3520b6ffb18fc43",
-  "data": {
-    "hardware": "NVIDIA A100 80GB GPU×4を同一ノードに搭載しNVLinkで接続。CPUはAMD EPYC 7543 32コア、最大3.7GHz。GPU-CPUはPCIe接続。",
-    "software": "Python 3 / PyTorch実装、CUDA 12.6。比較対象はDeepSpeed-MoEのエキスパート並列。カーネル起動削減の疎行列積にはMegaBlocksを利用し、MoEShardのソースコードを公開。",
-    "methodology": "Switch TransformerのSwitch-BaseエンコーダとBookCorpusを使用する。層遅延評価はバッチ250、系列長120、128エキスパート、100反復の平均で元のルータを使用。TTFT評価では系列長120、偏りエキスパート数を全体の10%、ルータ偏り係数0.6に固定し、エキスパート数8〜256（バッチ250）またはバッチ10〜450（128エキスパート）を走査する。DeepSpeedはトークン損失を減らすため容量係数をmin(E,50)に設定するが、それ以上はメモリ問題が生じた。MegaBlocks有無のアブレーションも同条件で比較する。",
-    "scope": "評価対象は自己回帰デコーダではなく計算量の大きいSwitch-Baseエンコーダ部分で、単一サーバ・均質4 GPU・高速NVLink環境に限定される。偏り走査用の独自ルータは確率的で意味のあるルーティングを目的とせず、本番利用には不適切と著者が明記する。MoEShardは全トークンを全GPUへ複製するためGPU数が大きい場合の通信スケーラビリティは未評価。エキスパート断片数がGPU数で割り切れる前提を置く。"
-  },
+  "attempt_id": "attempt-55ad2e2507991e421d05d6e8",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-59bd34d06f011611b0132598",
+    "claim_id": "claim-55ad2e2507991e421d05d6e8",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

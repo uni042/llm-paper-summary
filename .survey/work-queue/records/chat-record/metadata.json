@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-59bd34d06f011611b0132598",
-  "job_id": "job-research-b3520b6ffb18fc43",
-  "data": {
-    "canonical_id": "arXiv:2503.08467",
-    "arxiv_id": "2503.08467",
-    "doi": "10.1145/3721146.3721938",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "Accelerating MoE Model Inference with Expert Sharding",
-    "summary": "MoEShardはエキスパート並列MoE推論で、人気エキスパートを載せたGPUだけが過負荷になる問題を、エキスパートそのもののテンソル分割で解く。各エキスパートの第1行列を列方向、第2行列を行方向に分割し、全GPUが全エキスパートの一部を保持することで、ルーティング偏りに関係なく各トークンのエキスパート計算を全GPUへ均等配分する。全トークンをGPU間へ複製する通信増加と多数の小GEMMが生じるため、エキスパート別トークン連結とMegaBlocksの可変サイズ疎行列積でカーネル起動を削減する。4基A100上のSwitch-Baseエンコーダ評価でDeepSpeed-MoE比、層遅延最大4.25倍、TTFT最大6.45倍の高速化を報告する。",
-    "list_summary": "全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。",
-    "authors": [
-      "Oana Balmau",
-      "Anne-Marie Kermarrec",
-      "Rafael Pires",
-      "André Loureiro Espírito Santo",
-      "Martijn de Vos",
-      "Milos Vujasinovic"
-    ],
-    "authors_affiliations": "McGill University; EPFL",
-    "published": "2025-03-11",
-    "publication": "EuroMLSys '25 / arXiv",
-    "publication_type": "ワークショップ論文",
-    "publication_status": "EuroMLSys 2025採択・arXiv v1",
-    "lineage": "MoE inference / expert sharding / tensor parallelism / load balancing",
-    "topics": [
-      "MoE推論",
-      "エキスパート分割",
-      "テンソル並列",
-      "負荷分散",
-      "MegaBlocks"
-    ],
-    "importance": "エキスパート人気の時間変動を予測・複製するのではなく、全エキスパート計算を構造的に全GPUへ分割して完全負荷分散を得る。",
-    "implementation": "Python/PyTorch実装。MegaBlocksによる可変サイズ疎行列積を選択的に利用。公開コードあり。",
-    "hardware_evaluation": "NVIDIA A100 80GB×4、NVLink、AMD EPYC 7543、CUDA 12.6。",
-    "quality_effect": "トークンを落とさず、各エキスパートの分割部分出力を加算して元のエキスパート行列積と等価な出力を構成する。",
-    "source": "https://arxiv.org/abs/2503.08467",
-    "sources": [
-      "https://arxiv.org/abs/2503.08467",
-      "https://arxiv.org/html/2503.08467v1"
-    ],
-    "code": "https://github.com/sacs-epfl/moe-inference",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "primary manuscript",
-    "references_total": 25
-  },
+  "attempt_id": "attempt-55ad2e2507991e421d05d6e8",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-59bd34d06f011611b0132598",
+    "claim_id": "claim-55ad2e2507991e421d05d6e8",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
