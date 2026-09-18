@@ -39,14 +39,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-37f936e1437c5b29",
+      "job_id": "job-research-f97acaf8df0df8b2",
       "type": "research",
       "lane": null,
       "priority": 88,
-      "canonical_id": "arXiv:2609.06498",
-      "title": "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2609.06498",
-      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+      "canonical_id": "arXiv:2608.21719",
+      "title": "PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response",
+      "source_url": "https://arxiv.org/abs/2608.21719",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.21719-powerslider-phase-asymmetry-demand-response.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T16:07:12+00:00"
+  "generated_at": "2026-09-18T16:09:13+00:00"
 }
