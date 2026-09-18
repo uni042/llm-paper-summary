@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:38:35 JST**
+> 自動生成: **2026-09-19 08:04:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **49** |
 | 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（12分前）** |
+| 直近24hの検証済みResearch収録 | **51** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（38分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **21** | **15** | **6** | **9** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **18** | **9** | **9** | **3** | **0** | **3** |
+| Discovery | **6** | **3** | **3** | **0** | **0** | **0** | **3** |
+| 合計 | **27** | **18** | **9** | **9** | **3** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -129,22 +129,6 @@
   - result: `.survey/work-queue/results/20260919T0427JST-discovery-specialist-network-serving-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0427JST-discovery-specialist-network-serving-3.json`
   - 探索軸: network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
-- **09-19 02:00:50 JST** job `job-e07c9322ac71f48e` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0159JST-discovery-specialist-nvme-characterization-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json`
-  - 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath
-- **09-19 02:01:58 JST** job `job-9b6f2006f483290b` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0204JST-discovery-specialist-storage-datapath-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0204JST-discovery-specialist-storage-datapath-2.json`
-  - 探索軸: SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement
-- **09-19 02:02:08 JST** job `job-19b9378212c1c3a7` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json`
-  - 探索軸: flash KV materialization・RAG prefill reuse・compute-storage tradeoff
-- **09-19 02:02:38 JST** job `job-cb30e802e8c19550` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0217JST-discovery-specialist-agent-state-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0217JST-discovery-specialist-agent-state-4.json`
-  - 探索軸: agentic multi-turn serving・persistent KV state・delta-only inference
 
 ### 直近タスク
 
@@ -208,9 +192,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:37:19 JST** / heartbeat: **—** / lease expiry: **09-19 09:07:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7623de796f4f2b46.json`
+- `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 08:03:59 JST** / heartbeat: **—** / lease expiry: **09-19 09:33:59 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7b5d4afbd3eabe62.json`
 - `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale / worker `scheduled-chat-llm-survey-turn7`
   - claim: **09-19 07:31:15 JST** / heartbeat: **—** / lease expiry: **09-19 09:01:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-44bb3b5d160bad25.json`
