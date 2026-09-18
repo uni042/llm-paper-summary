@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:49:54 JST**
+> 自動生成: **2026-09-18 09:50:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-18 09:46:00 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-18 09:46:00 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -209,9 +209,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.18599` — Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:48:47 JST** / heartbeat: **—** / lease expiry: **09-18 11:18:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ec631b9aeb6c5c21.json`
+- `arXiv:2509.23094` — d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:50:15 JST** / heartbeat: **—** / lease expiry: **09-18 11:20:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ef418ddc1bde46e9.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **478** |
-| └ Research | **349** |
+| 成功result未照合のimmutable submission | **479** |
+| └ Research | **350** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
