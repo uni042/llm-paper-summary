@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c3199f327d8e2f9e461a73e8",
+  "attempt_id": "attempt-77e0aef16ff8f3aa4d9a089d",
   "job_id": "job-research-07d26e029c945d64",
   "data": {
     "limitations": "1回のオフラインプロファイルを前提とし、その費用は平均41.5推論反復相当と大きい。テンソル識別は作成元コールスタックと割当順序、カーネル識別は起動元情報に依存するため、動的に構造・割当順が大きく変わるワークロードではprofile mismatchが増え、該当先読みが無効化され得る。主評価は単一GPU・UVMのCPU backing storeで、分散推論、NVMe/SSD階層、continuous batchingの多要求serving、学習は未評価。Forestは論文設定をoffline access-pattern analysisでエミュレートしており、元実装のオンライン検出費用を除いている。モデルコードは不要でもPyTorch allocator、NVBit、Compute Sanitizer、UVM driver計測などシステム側変更・計測基盤を要する。",
@@ -10,5 +10,9 @@
     "implementation_status": "論文はPyTorch統合のソフトウェアプロトタイプを実装し、RTX3060/A100/H100 NVL実機で評価している。tensor-creation hook、NVBit、Compute Sanitizer API、cudaMallocManaged置換を使用。arXiv本文から独立した公開コードURLは確認できなかったためcode/project欄は未設定。",
     "research_positioning": "階層メモリ／オフロード系統のうち、CPU-GPU間をUVMで透過化した際のページフォルトと過剰移送を、フレームワーク意味情報を用いた選択的先読みで抑える研究。SSD/NVMeをさらに下位階層へ追加する場合にも、テンソル単位の将来アクセス情報と転送必要性分類をprefetch schedulerへ渡す設計は応用可能で、単なる帯域増強や固定粒度prefetchとは異なる基準点になる。"
   },
-  "reservation": {"claim_id":"claim-c3199f327d8e2f9e461a73e8","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-77e0aef16ff8f3aa4d9a089d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
