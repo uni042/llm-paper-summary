@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-new-arrivals-9",
+    "axis": "2026-09-17以降の新着差分・arXiv 2609後半",
+    "query_summary": "直近新着のLLM serving/inference、GPU、MoE、KV cacheを日付・2609後半IDで再走査。検索providerでは17 Sep提出分の追加強候補を取得できず、16 Sepまでの主要system候補は最新2609 identity shardで既収録だった。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": null,
+    "empty_round_reason": "新着差分で追加の未収録強候補を確認できず、今回runでspeculative/CXL/MoE/network/agent/fairness/GPU runtime/new-arrivalの独立経路を一巡した。"
+  }
+}
