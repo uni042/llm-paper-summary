@@ -16,7 +16,8 @@ run終了前は必ず次の順で判定する。
 1. 最新canonical stateを再取得し、`continuation-policy.json` / `.survey/scripts/continuation_gate.py` を評価する。
 2. continuation result、active assignment、claim/submission/ACK pending、hard stop、safe handoff状態を `.survey/scripts/run_finalization_gate.py` へ渡す。
 3. `decision=MUST_CONTINUE` または `finalization_permit.issued=false` ならfinal responseは禁止し、返された `next_action` を同じinvocation内で実行する。
-4. `decision=MAY_FINALIZE` かつ `finalization_permit.issued=true` の場合だけnormal final responseを出せる。
+4. 通常workerはgate呼び出し直前に最新のclaim request/result対応を実際に確認する。確認済みの場合だけ `--claim-state-checked yes` を渡す。最新requestのresultが未生成・queued・in_progressなら `--claim-result-pending yes` も渡す。状態確認を省略するとgateは `CHECK_CLAIM_STATE` を返し、finalization permitを発行しない。
+5. `decision=MAY_FINALIZE` かつ `finalization_permit.issued=true` の場合だけnormal final responseを出せる。
 
 `continuation_gate.py` が `CONTINUE` の間はfinalization permitを発行しない。有効なResearch/Audit assignmentが未処理の間もpermitを発行しない。claim result、submission result、Library ACK等の必要結果がpendingならpermitを発行しない。
 
