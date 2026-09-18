@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5b9295062587c5654fd78a44","job_id":"job-research-21b30a62610ad176","data":{"overview":"主A30環境ではAstrolabeはSLO容量31.6 QPSで最良負荷認識baseline Llumnix-の31.5 QPS、full fanoutの31.7 QPSとほぼ同等ながら、TTFTと高負荷時preemptionを改善する。出力長予測MAPEは24.4%、simulator絶対誤差は10〜15%程度でも、相対順位で配送するため40〜80%の確率で実際の最良instanceを選ぶ。A100 migration比較ではLlumnixがQPS20以降に崩れ、QPS36でAstrolabe no-CPは2.57倍throughput、36倍低いmean E2E、123倍低いmean token latencyを示す。","key_results":[{"metric":"主環境SLO容量","value":"31.6 QPS","baseline":"Llumnix- 31.5 QPS; full fanout 31.7 QPS","condition":"12×A30, Llama-2-7B, ShareGPT, P99 TTFT<=10s","interpretation":"2候補だけの問い合わせで全候補fanoutとほぼ同じ容量を達成。"},{"metric":"TTFT改善","value":"mean 8〜36%低減、P99 16〜77%低減","baseline":"各QPSで最良の非Astrolabe scheduler","condition":"default A30 sweep","interpretation":"将来E2E負荷を予測したone-shot dispatchがhead-of-line blockingを抑える。"},{"metric":"preemption","value":"約300 vs 約1,800","baseline":"Llumnix-等のoverload時","condition":"QPS=32付近","interpretation":"長要求が偏ったinstanceでKV memory pressureを起こす頻度を大幅に削減。"},{"metric":"migration比較throughput","value":"2.57x (18.7k vs 7.3k tok/s)","baseline":"full Llumnix","condition":"8×A100, QPS=36, Astrolabe without chunked prefill","interpretation":"高負荷でKV migrationがnetwork/PCIeと競合する条件ではone-shot dispatchが大幅優位。"},{"metric":"Predictor CPU","value":"20.3% vs 56.3% per predictor","baseline":"full fanout","condition":"A30 cluster, QPS=20","interpretation":"Po2は12候補fanoutに対し約2.8倍低いper-predictor CPU。"},{"metric":"予測noise耐性","value":"最大mean E2E +6.3%, P99 +3.7%","baseline":"noise-free Astrolabe","condition":"length/latency各0〜100% Gaussian noise grid","interpretation":"絶対値より2候補の相対順位を使うため大きな予測誤差にも比較的頑健。"}],"negative_results":"低負荷では予測RPCとsimulationによりAstrolabeのscheduler overheadはLlumnixより高く、A100でQPS<=19では23〜29ms対5〜7ms。出力長推定MAPE 24.4%、simulator誤差10〜15%がありoracle lengthなら容量はさらに約3%改善する。kを増やすと予測候補品質は上がるがCPU・通信費用も増え、実験ではk=4が最良折衷だったため既定k=2は理論的慣例を優先した設定。","interpretation":"multi-instance LLM schedulingでは現在負荷より『新要求を追加した後の将来遅延』を比較する方が有効であり、その予測を全台へ問い合わせる必要もない。無作為2択は予測コストを定数化すると同時にburst時のherdingを壊し、migrationなしでも高負荷のtail latencyとthroughputを改善できる。","quality_impact":"schedulerは配送先だけを変え、model、temperature、生成長上限等の推論意味論を変更しないため、生成品質への近似誤差は導入しない。"},"reservation":{"claim_id":"claim-5b9295062587c5654fd78a44","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0a6b1c36a0f0f237ef599b6b",
+  "job_id": "job-research-21b30a62610ad176",
+  "data": {
+    "overview": "主A30環境ではAstrolabeはSLO容量31.6 QPSで最良負荷認識baseline Llumnix-の31.5 QPS、full fanoutの31.7 QPSとほぼ同等ながら、TTFTと高負荷時preemptionを改善する。出力長予測MAPEは24.4%、simulator絶対誤差は10〜15%程度でも、相対順位で配送するため40〜80%の確率で実際の最良instanceを選ぶ。A100 migration比較ではLlumnixがQPS20以降に崩れ、QPS36でAstrolabe no-CPは2.57倍throughput、36倍低いmean E2E、123倍低いmean token latencyを示す。",
+    "key_results": [
+      {
+        "metric": "主環境SLO容量",
+        "value": "31.6 QPS",
+        "baseline": "Llumnix- 31.5 QPS; full fanout 31.7 QPS",
+        "condition": "12×A30, Llama-2-7B, ShareGPT, P99 TTFT<=10s",
+        "interpretation": "2候補だけの問い合わせで全候補fanoutとほぼ同じ容量を達成。"
+      },
+      {
+        "metric": "TTFT改善",
+        "value": "mean 8〜36%低減、P99 16〜77%低減",
+        "baseline": "各QPSで最良の非Astrolabe scheduler",
+        "condition": "default A30 sweep",
+        "interpretation": "将来E2E負荷を予測したone-shot dispatchがhead-of-line blockingを抑える。"
+      },
+      {
+        "metric": "preemption",
+        "value": "約300 vs 約1,800",
+        "baseline": "Llumnix-等のoverload時",
+        "condition": "QPS=32付近",
+        "interpretation": "長要求が偏ったinstanceでKV memory pressureを起こす頻度を大幅に削減。"
+      },
+      {
+        "metric": "migration比較throughput",
+        "value": "2.57x (18.7k vs 7.3k tok/s)",
+        "baseline": "full Llumnix",
+        "condition": "8×A100, QPS=36, Astrolabe without chunked prefill",
+        "interpretation": "高負荷でKV migrationがnetwork/PCIeと競合する条件ではone-shot dispatchが大幅優位。"
+      },
+      {
+        "metric": "Predictor CPU",
+        "value": "20.3% vs 56.3% per predictor",
+        "baseline": "full fanout",
+        "condition": "A30 cluster, QPS=20",
+        "interpretation": "Po2は12候補fanoutに対し約2.8倍低いper-predictor CPU。"
+      },
+      {
+        "metric": "予測noise耐性",
+        "value": "最大mean E2E +6.3%, P99 +3.7%",
+        "baseline": "noise-free Astrolabe",
+        "condition": "length/latency各0〜100% Gaussian noise grid",
+        "interpretation": "絶対値より2候補の相対順位を使うため大きな予測誤差にも比較的頑健。"
+      }
+    ],
+    "negative_results": "低負荷では予測RPCとsimulationによりAstrolabeのscheduler overheadはLlumnixより高く、A100でQPS<=19では23〜29ms対5〜7ms。出力長推定MAPE 24.4%、simulator誤差10〜15%がありoracle lengthなら容量はさらに約3%改善する。kを増やすと予測候補品質は上がるがCPU・通信費用も増え、実験ではk=4が最良折衷だったため既定k=2は理論的慣例を優先した設定。",
+    "interpretation": "multi-instance LLM schedulingでは現在負荷より『新要求を追加した後の将来遅延』を比較する方が有効であり、その予測を全台へ問い合わせる必要もない。無作為2択は予測コストを定数化すると同時にburst時のherdingを壊し、migrationなしでも高負荷のtail latencyとthroughputを改善できる。",
+    "quality_impact": "schedulerは配送先だけを変え、model、temperature、生成長上限等の推論意味論を変更しないため、生成品質への近似誤差は導入しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-0a6b1c36a0f0f237ef599b6b",
+    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

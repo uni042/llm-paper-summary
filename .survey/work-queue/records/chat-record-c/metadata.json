@@ -1,1 +1,58 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5b9295062587c5654fd78a44","job_id":"job-research-21b30a62610ad176","data":{"canonical_id":"arXiv:2508.03611","arxiv_id":"2508.03611","doi":"10.1145/3793230.3837768","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling","summary":"複数インスタンスのLLMサービングでは、出力長・KVキャッシュ消費・バッチ干渉が実行前に不明なため、単純な利用率や待ち行列長では要求の将来負荷を表せない。Astrolabeは軽量な出力長推定器と各インスタンスの実行状態を用いる局所シミュレータを組み合わせ、要求ごとに無作為に選んだ2台だけへ予測問い合わせを行い、予測遅延が小さい側へ一回で配送する。12台A30環境で最良負荷認識方式と同等のSLO容量を保ちながら末尾TTFTを改善し、A100環境ではKV移送を伴うLlumnixが高負荷で崩れる条件で最大約2.6倍の処理量を示す。","list_summary":"出力長予測とインスタンス局所シミュレーションを2択無作為配送へ統合し、KV移送なしでLLMクラスタの負荷分散を改善する。","authors":["Wei Da","Evangelia Kalyvianaki"],"authors_affiliations":"University of Cambridge, Cambridge, United Kingdom","published":"2026-09-08","publication":"SYSTOR 2026","publication_type":"国際会議論文","publication_status":"SYSTOR 2026; arXiv v3 (2026-08-11)","lineage":"LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance","topics":["LLMサービング","負荷分散","予測スケジューリング","出力長予測","KVキャッシュ"],"importance":"実行後の移送で負荷を直す代わりに、配送時点で将来の要求長とインスタンス状態を予測し、少数候補だけを比較することで制御面の費用とherdingを抑える。","implementation":"Vidurを単一インスタンス予測用に再設計したPredictor sidecar、RoBERTa-base出力長推定器、stateless global schedulerを実装しvLLM/FlashInferで評価。","hardware_evaluation":"主評価は12ノード×A30 24GB・25Gbps、追加評価は2ノード各4×A100 40GB・100Gbps。出力長推定はL40で学習・オフライン評価。","quality_effect":"配送先のみを変え推論パラメータ・生成結果は変更しない。主指標はTTFT、E2E遅延、SLO容量、throughput、preemption、CPU overhead。","source":"https://arxiv.org/abs/2508.03611","sources":["https://arxiv.org/abs/2508.03611","https://arxiv.org/html/2508.03611","https://doi.org/10.1145/3793230.3837768"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"未抽出（本文は全文確認済み）","references_total":0},"reservation":{"claim_id":"claim-5b9295062587c5654fd78a44","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0a6b1c36a0f0f237ef599b6b",
+  "job_id": "job-research-21b30a62610ad176",
+  "data": {
+    "canonical_id": "arXiv:2508.03611",
+    "arxiv_id": "2508.03611",
+    "doi": "10.1145/3793230.3837768",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling",
+    "summary": "複数インスタンスのLLMサービングでは、出力長・KVキャッシュ消費・バッチ干渉が実行前に不明なため、単純な利用率や待ち行列長では要求の将来負荷を表せない。Astrolabeは軽量な出力長推定器と各インスタンスの実行状態を用いる局所シミュレータを組み合わせ、要求ごとに無作為に選んだ2台だけへ予測問い合わせを行い、予測遅延が小さい側へ一回で配送する。12台A30環境で最良負荷認識方式と同等のSLO容量を保ちながら末尾TTFTを改善し、A100環境ではKV移送を伴うLlumnixが高負荷で崩れる条件で最大約2.6倍の処理量を示す。",
+    "list_summary": "出力長予測とインスタンス局所シミュレーションを2択無作為配送へ統合し、KV移送なしでLLMクラスタの負荷分散を改善する。",
+    "authors": [
+      "Wei Da",
+      "Evangelia Kalyvianaki"
+    ],
+    "authors_affiliations": "University of Cambridge, Cambridge, United Kingdom",
+    "published": "2026-09-08",
+    "publication": "SYSTOR 2026",
+    "publication_type": "国際会議論文",
+    "publication_status": "SYSTOR 2026; arXiv v3 (2026-08-11)",
+    "lineage": "LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance",
+    "topics": [
+      "LLMサービング",
+      "負荷分散",
+      "予測スケジューリング",
+      "出力長予測",
+      "KVキャッシュ"
+    ],
+    "importance": "実行後の移送で負荷を直す代わりに、配送時点で将来の要求長とインスタンス状態を予測し、少数候補だけを比較することで制御面の費用とherdingを抑える。",
+    "implementation": "Vidurを単一インスタンス予測用に再設計したPredictor sidecar、RoBERTa-base出力長推定器、stateless global schedulerを実装しvLLM/FlashInferで評価。",
+    "hardware_evaluation": "主評価は12ノード×A30 24GB・25Gbps、追加評価は2ノード各4×A100 40GB・100Gbps。出力長推定はL40で学習・オフライン評価。",
+    "quality_effect": "配送先のみを変え推論パラメータ・生成結果は変更しない。主指標はTTFT、E2E遅延、SLO容量、throughput、preemption、CPU overhead。",
+    "source": "https://arxiv.org/abs/2508.03611",
+    "sources": [
+      "https://arxiv.org/abs/2508.03611",
+      "https://arxiv.org/html/2508.03611",
+      "https://doi.org/10.1145/3793230.3837768"
+    ],
+    "code": null,
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "未抽出（本文は全文確認済み）",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-0a6b1c36a0f0f237ef599b6b",
+    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
