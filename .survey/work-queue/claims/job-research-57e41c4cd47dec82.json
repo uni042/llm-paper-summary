@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "claim_id": "claim-7f45d6e571878a675120650e",
+  "job_id": "job-research-57e41c4cd47dec82",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "attempt_id": "attempt-7f45d6e571878a675120650e",
+  "request_id": "claim-20260918T2016Z-scheduled-chat-discovery-specialist-09d",
+  "claimed_at": "2026-09-18T20:16:40+00:00",
+  "expires_at": "2026-09-18T21:46:40+00:00",
+  "kind": "research",
+  "depends_on_job_ids": [
+    "job-research-57e41c4cd47dec82"
+  ],
+  "record_bank": "a",
+  "record_bank_root": ".survey/work-queue/records/chat-record",
+  "record_slot_paths": {
+    "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record/results.json",
+    "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+  }
+}

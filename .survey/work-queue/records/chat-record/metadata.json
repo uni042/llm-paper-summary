@@ -2,65 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-2c5886028263df416e6db1bd",
-  "job_id": "job-research-8de660021e1eaf46",
-  "data": {
-    "canonical_id": "arXiv:2605.23294",
-    "arxiv_id": "2605.23294",
-    "doi": "10.48550/arXiv.2605.23294",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": []
-    },
-    "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference",
-    "summary": "NASiCは、専門家混合（Mixture-of-Experts; MoE）モデルを端末内へ置く際に、全専門家の重みを保存する巨大容量と、毎回ごく一部だけを使う疎な計算を同時に扱う三次元NAND型の計算内メモリ（computing-in-memory; CIM）である。従来の三次元NAND計算内メモリは密な行列積を前提とするため、同じページに並ぶ未選択専門家まで計算して電力と並列性を浪費する。NASiCは同じNAND文字列の上部を内容アドレスメモリ（content-addressable memory; CAM）、下部を計算領域として使い、経路選択器が指定した専門家番号に一致した文字列だけを導通させる。さらに、ブロック単位の並列計算、符号付き多値入力、複数しきい値状態を使う多値記憶セルを組み合わせ、高密度保存と疎な専門家計算を一体化する。回路シミュレーションとシステム解析では、比較対象に対して最大114.8倍の処理性能改善と最大70倍のエネルギー効率改善を報告する。",
-    "list_summary": "三次元NAND内部で専門家番号の照合と選択専門家の計算を一体化し、多値記憶とブロック並列化によって専門家混合モデルを高密度に直接実行する。",
-    "authors": [
-      "Weikai Xu",
-      "Meng Li",
-      "Shuzhang Zhong",
-      "Tianyang Luo",
-      "Dongxue Zhao",
-      "Ling Liang",
-      "Zongwei Wang",
-      "Qianqian Huang",
-      "Yimao Cai",
-      "Ru Huang"
-    ],
-    "authors_affiliations": "Peking University; Beijing Advanced Innovation Center for Integrated Circuits",
-    "published": "2026-05-22",
-    "publication": "arXiv:2605.23294v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1公開",
-    "lineage": "専門家混合推論・三次元NAND・計算内メモリ・フラッシュ内処理・端末内推論",
-    "topics": [
-      "専門家混合",
-      "三次元NAND",
-      "計算内メモリ",
-      "内容アドレスメモリ",
-      "端末内推論",
-      "多値フラッシュ"
-    ],
-    "importance": "NANDを単なる専門家重みの保管場所ではなく計算場所へ変え、動的な専門家選択をフラッシュ文字列内の照合回路へ直接写像する点が重要である。専門家を下位記憶から上位メモリへ毎回運ぶ方式とは異なり、保存場所で選択と積和演算を完結させるため、専門家配置、記憶階層、NAND活用研究を結ぶ設計点になる。",
-    "implementation": "提案は回路・システム設計であり、65ナノメートルの浮遊ゲート素子モデルを用いたSPICE回路シミュレーションとシステム解析で検証する。公開ソフトウェア、公開RTL、製造済み試作チップは本文から確認できない。",
-    "hardware_evaluation": "典型的な三次元NAND平面を基礎に、65ナノメートル浮遊ゲート素子のVerilog-Aモデル、文献由来の配線寄生要素、SPICE回路シミュレーションを使用する。実機測定ではなく、素子非理想性を含むモデル評価である。",
-    "quality_effect": "フラッシュ電流ばらつきがモデルのパープレキシティへ与える影響を調べ、主要評価では標準偏差0.15を用いる。提案は精度向上法ではなく、許容される入力次元を守ったまま未選択専門家の無駄な計算を減らす。",
-    "source": "https://arxiv.org/abs/2605.23294",
-    "sources": [
-      "https://arxiv.org/abs/2605.23294",
-      "https://arxiv.org/html/2605.23294"
-    ],
-    "code": null,
-    "project": null,
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "arXivのHTML全文を末尾の参考文献節まで確認した。",
-    "references_total": 40
-  },
+  "attempt_id": "attempt-7f45d6e571878a675120650e",
+  "job_id": "job-research-57e41c4cd47dec82",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2c5886028263df416e6db1bd",
+    "claim_id": "claim-7f45d6e571878a675120650e",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
