@@ -1,13 +1,7 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b1510ac72994dff0cbb0df8f",
-  "job_id": "job-research-be1193ba1dd42ac7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1510ac72994dff0cbb0df8f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b1510ac72994dff0cbb0df8f","job_id":"job-research-be1193ba1dd42ac7","data":{
+"limitations":"性能値はTimeloopを基盤とするシミュレーションで、M3D BEOLメモリを搭載した実チップ測定ではない。512MB〜1GB級の追加オンチップ容量について面積、電力、熱、歩留まり、配線遅延を含む製造実装の総費用は評価していない。対象はLlama3.1-8B/70B、FP16、TPUv6e/v7風単一ノード、最大128K文脈であり、GPUや分散推論へそのまま倍率を移せない。短いプリフィルでは先読み時間不足により大容量メモリの効果が限定される。",
+"differences":"Sarathi-Serve系の要求パッキングはプリフィルとデコードを同時実行して重み再利用を高めるが、デコード注意のKV転送は残る。PRESERVE系プリフェッチはKVや重みを事前転送するが、本研究は通信区間だけでなく計算律速プリフィル全体を先読み窓として使う。さらにソフトウェアスケジューリングだけでは大量の先読みKVを保持できない問題に対し、CMOS+X系のM3D BEOL高密度メモリを数百MB〜1GB級の専用バッファとして組み合わせる。したがって既存のパッキング、プリフェッチ、メモリ階層を個別に改善するのではなく、時間的余裕と空間的余裕を同時に設計する点が差である。",
+"implementation_status":"著者はTimeloopをカスタマイズしたLLM推論シミュレーションフレームワークで提案方式を実装・評価しているが、本文に公式コード公開URLはない。M3D BEOLメモリを備えた実アクセラレータ実装は示されておらず、ハードウェア部分は技術予測を用いたモデル化である。",
+"research_positioning":"階層メモリ・KVキャッシュ・先読み系統と、要求スケジューリング系統の接点に位置する。特に『SSD/CPUから必要データを先読みする』研究と同様、転送先バッファ容量と先読み窓の長さが性能を共同決定することをオンチップ/HBM階層で示している。将来の研究ではM3Dを固定前提にせず、SRAM、HBMキャッシュ、CXL/CPU、NVMeまで含む階層ごとに、どの計算区間の余剰帯域をどの将来データへ割り当てるかを統一スケジューラで最適化する方向へ拡張できる。"
+},"reservation":{"claim_id":"claim-b1510ac72994dff0cbb0df8f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
