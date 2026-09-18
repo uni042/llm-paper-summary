@@ -2,16 +2,42 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8a84e34f15c4ef8ffd049438",
-  "job_id": "job-research-3001166a9d479500",
+  "attempt_id": "attempt-c2a51a6ace4a43448c42f0b1",
+  "job_id": "job-research-9c0ef4e091be369c",
   "data": {
-    "hardware": "実GPUで評価。本文は設計GPUと記載し、付録で別種GPUでも一貫した傾向を確認している。方式のFP8部分は低精度行列積を高速実行できる現代GPUを前提とする。",
-    "software": "LLaDA-base、LLaDA-Instruct、LLaDA-1.5を対象とし、比較対象は素のLLaDA、Fast-dLLMによる並列復号、DPadによる接尾辞削減、およびそれらとLaCacheの組合せ。FP8線形層にはDeepGEMMを利用し、量子化処理を周辺演算へ融合する。",
-    "methodology": "推論効率は1例あたり平均遅延と毎秒トークン数で測定し、品質は推論課題の柔軟一致・厳密一致、コード生成のpass@1等で比較する。GSM8K 4-shot、MATH 4-shot、HumanEval 0-shot、MBPP 3-shotを主要表で評価し、PIQA、ARC、HellaSwag、WinoGrande、GPQAも付録で確認する。キャッシュ単独、量子化粒度、系列長について除去実験も行う。",
-    "scope": "実機推論のエンドツーエンド測定であり、シミュレーションではない。主評価はLLaDA系の拡散型LLMに限定され、自己回帰LLM一般への直接一般化は対象外。厳密キャッシュの適用範囲は第1層までで、FP8高速化は対応GPUに依存する。"
+    "hardware": "独自Orthrusの学習はNVIDIA H100 GPU 8基。生成軌跡と下流評価はNVIDIA GeForce RTX 3090 23GB（compute capability 8.6）の実機で行う。",
+    "software": "学習はCUDA 13.3.73、PyTorch 2.13.0、Transformers 5.8.0。軌跡評価はPython 3.10.12、PyTorch 2.8.0+cu128、CUDA 12.8、Transformers 5.8.1、eager attentionを使用する。",
+    "methodology": "Qwen3-1.7Bから生成した4,113,358件の蒸留標本で独自Orthrusを学習し、著者公開chiennv/Orthrus-Qwen3-1.7Bと比較する。12領域計1,190プロンプトで、max_new_tokens=128、do_sample=False、temperature=0.0の貪欲復号を行い、各Orthrusの全生成トークン列を対応するQwen3-1.7B参照列と比較する。まずBF16で測定し、モデル・プロンプト・復号手順を固定したままFP32へ変更して再測定する。さらに参照応答の条件付きパープレキシティと完全一致の関係を、応答長と領域を統制したロジスティック回帰で調べる。下流品質はlm-eval-harnessのGSM8K、HumanEval、IFEvalで別途評価する。",
+    "scope": "実機評価でありシミュレーションではない。軌跡評価はQwen3-1.7B規模、単一RTX 3090、貪欲復号、eager attentionに限定される。FP32で一致が回復する原因となる具体的な演算段階は特定しておらず、他GPU、別カーネル、量子化、サンプリング復号、より大規模モデルへの一般化は未検証。下流評価も3ベンチマークに限られる。",
+    "datasets": [
+      "code",
+      "code-ru",
+      "creative-en",
+      "gec-en",
+      "gec-ru",
+      "math",
+      "math-ru",
+      "poetry-en",
+      "poetry-ru",
+      "qa",
+      "qa-ru",
+      "wmt ru-en",
+      "GSM8K",
+      "HumanEval",
+      "IFEval"
+    ],
+    "metrics": [
+      "1回の順伝播で確定するトークン数（Tokens Per Forward; TPF）",
+      "生成軌跡完全一致率",
+      "分岐率",
+      "応答条件付きパープレキシティ",
+      "GSM8K完全一致率",
+      "HumanEval pass@1",
+      "IFEval指示追従精度"
+    ]
   },
   "reservation": {
-    "claim_id": "claim-8a84e34f15c4ef8ffd049438",
+    "claim_id": "claim-c2a51a6ace4a43448c42f0b1",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

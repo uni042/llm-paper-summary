@@ -2,88 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-8a84e34f15c4ef8ffd049438",
-  "job_id": "job-research-3001166a9d479500",
+  "attempt_id": "attempt-c2a51a6ace4a43448c42f0b1",
+  "job_id": "job-research-9c0ef4e091be369c",
   "data": {
-    "canonical_id": "arXiv:2607.16339",
-    "arxiv_id": "2607.16339",
-    "doi": "10.48550/arXiv.2607.16339",
+    "canonical_id": "arXiv:2609.15504",
+    "arxiv_id": "2609.15504",
+    "doi": "10.48550/arXiv.2609.15504",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.AI",
+      "primary": "cs.CL",
       "cross_list": []
     },
-    "title": "LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models",
-    "summary": "拡散型大規模言語モデルの半自己回帰生成では、同一ブロック内の反復ステップごとに変化しないトークンまで埋め込み、注意機構、全結合ネットワークを再計算する。LaCacheは、変化しない領域の埋め込み・第1層のRoPE適用済み状態・FlashAttentionのオンラインソフトマックス中間状態を再利用し、さらに第2層以降の全結合ネットワークへ細粒度FP8量子化を適用する。キャッシュ部分は出力を変えずに演算を省き、量子化部分は現代GPUの低精度演算器を使って主要な線形演算を高速化する。",
-    "list_summary": "拡散型LLMの反復生成で不変なトークン状態とFlashAttention中間状態を無損失再利用し、第2層以降をFP8化して、既存の生成ステップ削減法と組み合わせ可能な推論高速化を実現する。",
+    "title": "How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus",
+    "summary": "Orthrusは凍結した自己回帰モデルへ軽量な拡散生成部を追加し、複数トークンを並列提案して自己回帰側との合意で検証することで、元モデルと同じ生成を保つ無損失投機的復号を主張する。本研究はその主張を独立実装と著者公開チェックポイントの双方で再検証し、有限精度が生成軌跡の同一性を壊し得ることを示した。BF16では12領域1,190プロンプトに対する完全一致率が公開モデル45%、独自学習モデル43%に留まる一方、FP32へ変更すると両モデルとも1,190件すべてで自己回帰参照と一致した。さらに不一致は参照モデルが応答へ与える条件付きパープレキシティが高いほど起きやすいが、GSM8K、HumanEval、IFEvalの下流性能には系統的な悪化が見られない。したがって『無損失』は下流精度だけでなく、生成軌跡の同一性と数値精度を明示して評価する必要がある。",
+    "list_summary": "Orthrusの無損失投機的復号を独立再現し、BF16では生成軌跡の完全一致が43〜45%に留まる一方、FP32では1,190件すべて一致することを示した再現・評価研究。",
     "authors": [
-      "Xingru Chen",
-      "Zelang Liang",
-      "Yongjia Ma",
-      "Jiqing Zhan",
-      "Shuling Yang",
-      "Lian Wen",
-      "Kun Zhan"
+      "Ilya Koziev",
+      "Leonid Sinev",
+      "Ivan Oseledets"
     ],
-    "authors_affiliations": "Li Auto Inc.",
-    "published": "2026-07-16",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "diffusion-llm-inference / caching / low-precision",
+    "authors_affiliations": "本文に所属表記なし。",
+    "published": "2026-09-14",
+    "publication": "arXiv:2609.15504v1",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint; under review",
+    "lineage": "投機的復号・Orthrus・推論再現性・数値精度",
     "topics": [
-      "拡散型LLM推論",
-      "キャッシュ",
-      "FlashAttention",
-      "FP8量子化",
-      "推論高速化"
+      "speculative decoding",
+      "numerical precision",
+      "inference reproducibility",
+      "Orthrus",
+      "trajectory equivalence"
     ],
-    "importance": "半自己回帰型の拡散LLMに固有の演算子単位の冗長性を対象とし、近似的な隠れ状態再利用ではなく第1層までの厳密再利用と低精度演算を分離して組み合わせた点が重要。",
-    "hardware_evaluation": "実GPU上でLLaDA系3モデルを評価。本文は設計GPUと記述し、付録では別種GPUでも追加評価しているが、本文HTMLで製品型番は明示されていない。FP8 Tensor Core相当の低精度行列演算支援を前提とする。",
-    "quality_effect": "無損失状態メモ化部分は数学的に同一出力を狙う。一方FP8量子化は近似だが、GSM8K、MATH、HumanEval、MBPP等で精度は概ね維持され、一部指標では小幅改善も観測された。",
-    "storage_targets": [
-      "GPU HBM"
-    ],
-    "bottlenecks": [
-      "反復ステップ間の重複演算",
-      "線形層の演算・メモリ帯域"
-    ],
-    "source": "https://arxiv.org/abs/2607.16339",
+    "importance": "高速化方式の新規提案ではなく、投機的復号でいう無損失性を実装上の数値精度まで含めて検証する再現研究。アルゴリズム上の合意機構があってもBF16では離散的な生成軌跡が分岐し得ることを定量化し、システム正しさの評価条件として精度形式を明示すべきことを示す。",
+    "implementation": "Orthrusを独立実装・学習し、著者公開のchiennv/Orthrus-Qwen3-1.7Bチェックポイントと比較。本文では独自実装の公開URLは記載されていない。",
+    "hardware_evaluation": "学習はNVIDIA H100 GPU 8基、CUDA 13.3.73、PyTorch 2.13.0、Transformers 5.8.0。軌跡評価はNVIDIA GeForce RTX 3090 23GB、CUDA 12.8、PyTorch 2.8.0+cu128、Transformers 5.8.1。",
+    "quality_effect": "BF16で軌跡は頻繁に分岐するが、GSM8K、HumanEval、IFEvalでは自己回帰基準に対する系統的な品質低下は確認されず、軌跡同一性と下流タスク品質は別の評価軸である。",
+    "source": "https://arxiv.org/abs/2609.15504",
     "sources": [
-      "https://arxiv.org/abs/2607.16339",
-      "https://arxiv.org/html/2607.16339"
+      "https://arxiv.org/abs/2609.15504",
+      "https://arxiv.org/pdf/2609.15504"
     ],
-    "code": null,
-    "implementation": "論文はEmbedCache、RoPECache、FACache、DeepGEMMを用いたFP8線形層と融合演算の実装を説明するが、確認した一次資料には公式コードURLの記載を確認できなかった。",
+    "code": "",
     "last_checked": "2026-09-19",
-    "references": [
-      {
-        "canonical_id": "arXiv:2508.14148",
-        "arxiv_id": "2508.14148"
-      },
-      {
-        "canonical_id": "arXiv:2509.23094",
-        "arxiv_id": "2509.23094"
-      },
-      {
-        "canonical_id": "arXiv:2506.06295",
-        "arxiv_id": "2506.06295"
-      },
-      {
-        "canonical_id": "arXiv:2506.17298",
-        "arxiv_id": "2506.17298"
-      },
-      {
-        "canonical_id": "arXiv:2412.19437",
-        "arxiv_id": "2412.19437"
-      }
-    ],
+    "references": [],
     "references_checked_at": "2026-09-19",
-    "references_source": "primary-reference-section",
-    "references_total": 40
+    "references_source": "arXiv PDF全文の参考文献節まで確認。個別参考文献は構造化配列へ転記していない。",
+    "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-8a84e34f15c4ef8ffd049438",
+    "claim_id": "claim-c2a51a6ace4a43448c42f0b1",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
