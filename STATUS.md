@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 15:42:19 JST**
+> 自動生成: **2026-09-18 15:49:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
-| 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（57分前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **6** | **3** | **3** | **1** | **0** | — |
+| Research | **9** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **22** | **4** | **4** | **0** | **0** | **0** | **8** |
-| 合計 | **33** | **10** | **7** | **3** | **1** | **0** | **8** |
+| 合計 | **31** | **10** | **7** | **3** | **1** | **0** | **8** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -93,11 +93,6 @@
   - result: `.survey/work-queue/results/research/attempt-9ec710a3abfce49d2eb368dc.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9ec710a3abfce49d2eb368dc.json`
   - paper: `papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md`
-- **09-18 09:46:00 JST** [research] `arXiv:2508.12851` — Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement
-  - job: `.survey/work-queue/jobs/job-research-a1874def735a479b.json`
-  - result: `.survey/work-queue/results/research/attempt-328004e23af6006bc125dba7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-328004e23af6006bc125dba7.json`
-  - paper: `papers/inference/04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md`
 
 ### Audit
 
