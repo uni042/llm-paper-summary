@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 11:21:13 JST**
+> 自動生成: **2026-09-18 11:22:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-18 11:11:47 JST（9分前）** |
+| 最終検証済みResearch収録 | **09-18 11:11:47 JST（11分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -196,9 +196,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 11:20:56 JST** / heartbeat: **—** / lease expiry: **09-18 12:50:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
+- `arXiv:2609.13692` — Prefix Sharing Is a Sorting Problem / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 11:22:48 JST** / heartbeat: **—** / lease expiry: **09-18 12:52:48 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b4ff298d10321769.json`
 
 #### Audit
 
@@ -246,8 +246,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **495** |
-| └ Research | **366** |
+| 成功result未照合のimmutable submission | **496** |
+| └ Research | **367** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
