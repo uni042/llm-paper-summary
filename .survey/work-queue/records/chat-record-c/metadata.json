@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-328004e23af6006bc125dba7",
-  "job_id": "job-research-a1874def735a479b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-328004e23af6006bc125dba7",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-328004e23af6006bc125dba7","job_id":"job-research-a1874def735a479b","data":{"canonical_id":"arXiv:2508.12851","arxiv_id":"2508.12851","doi":"10.48550/arXiv.2508.12851","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement","summary":"Prismは、異種GPUを備えた複数のエッジサーバで混合専門家モデルを協調推論するため、各サーバ・各層の専門家活性化頻度とGPUメモリ容量に応じて専門家を配置し、遠隔専門家呼出しを減らす基盤である。層ごとの配置数を活性化エントロピーと容量から決め、頻出専門家を貪欲配置し、未配置専門家の全体被覆も保証する。さらに5分ごとに最新活性化統計から候補配置を再計算し、通信削減が専門家移動費用を上回る場合だけ移行する。4基A100の実機でDeepSeek-V2-Liteの平均推論遅延をEPLB比最大30.6%削減する。","list_summary":"活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。","authors":["Tian Wu","Liming Wang","Zijian Wen","Xiaoxi Zhang","Xu Chen","Jingpu Duan","Xianwei Zhang","Jinhang Zuo"],"authors_affiliations":"Sun Yat-sen University; City University of Hong Kong; Peng Cheng Laboratory","published":"2025-08-18","publication":"arXiv preprint","publication_type":"プレプリント","publication_status":"arXiv v4, 2026-04-15","lineage":"分散MoE推論 / 専門家配置 / エッジ推論 / 動的専門家移行","topics":["MoE推論","専門家配置","異種GPU","エッジサービング","通信削減","動的移行"],"importance":"データセンタ向けの均質な専門家並列ではなく、GPU容量・通信帯域・要求分布がサーバごとに異なるエッジ環境で、専門家活性化の局所性を直接配置へ使う点が重要である。","implementation":"MoE-Infinityの公開実装を基盤に複数サーバ協調推論系を構築。専用コードURLは本文で確認できない。","hardware_evaluation":"A100 40GBを4基、RAM 256GBの1台を論理的な3エッジサーバへ分割し、GPU配分1・1・2、DockerネットワークをLinux tcで500Mbpsへ制限。","quality_effect":"モデルやゲート出力を近似せず専門家の配置場所を変えるシステム手法であり、生成品質を意図的に変更しない。","source":"https://arxiv.org/pdf/2508.12851","sources":["https://arxiv.org/abs/2508.12851","https://arxiv.org/pdf/2508.12851"],"code":null,"last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv v4 primary manuscript","references_total":37},"reservation":{"claim_id":"claim-328004e23af6006bc125dba7","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
