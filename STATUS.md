@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 18:10:07 JST**
+> 自動生成: **2026-09-18 18:10:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -206,7 +206,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.10907` — RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 18:07:22 JST** / heartbeat: **—** / lease expiry: **09-18 19:37:22 JST**
+  - claim: **09-18 18:10:16 JST** / heartbeat: **—** / lease expiry: **09-18 19:40:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-fbee62800783475d.json`
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **—** / lease expiry: **09-18 19:02:15 JST**
