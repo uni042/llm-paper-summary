@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:20:35 JST**
+> 自動生成: **2026-09-19 01:21:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -197,9 +197,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2502.05202` — Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:19:31 JST** / heartbeat: **—** / lease expiry: **09-19 02:49:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-044cfc2969a67347.json`
+- `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:20:58 JST** / heartbeat: **—** / lease expiry: **09-19 02:50:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6af027835df580e1.json`
 
 #### Audit
 
