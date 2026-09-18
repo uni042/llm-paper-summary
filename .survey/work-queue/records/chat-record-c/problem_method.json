@@ -2,34 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-28e413fc54e88f5b4c9b871b",
-  "job_id": "job-research-60a904da0b8faa84",
+  "attempt_id": "attempt-b2986b566a2c98de31284cba",
+  "job_id": "job-research-99d754a688aca9c8",
   "data": {
-    "problem": "複数の大規模言語モデルを複数のGPUへ配置する推論基盤では、各問い合わせについて応答品質だけでなく、現在どのモデルとGPUの組が最短で処理できるかを判断する必要がある。従来のルータは品質を問い合わせごとに予測しても、推論費用はパラメータ数、演算量、単価、予測出力長などの静的な代理値で扱うことが多い。しかし実遅延はGPU種類だけでなく、実行中要求数、待機要求数、KVキャッシュ占有率、バッチ形成、直近の初回トークン待ち時間とトークン間遅延によって刻々と変わる。そのため小さいモデルでも混雑時には大きいモデルより遅くなり得る。静的費用はこの順位逆転を表せず、同じモデルへ要求が集中して待ち行列が増え、さらに遅延とサービス水準目標違反が増える一方、別GPUが遊休する。既存のCARROTやIRT系ルータも実行時の混雑状態を費用へ直接取り込まないため、この循環を十分解消できない。",
-    "novelty": "HW-Routerはモデル選択を、問い合わせとモデル属性だけでなく、現在のモデル・GPU実行状態まで含めたオンライン判断へ変更する。各サーバから実行中要求数、待機要求数、KVキャッシュ使用率、直近の初回トークン待ち時間とトークン間遅延を継続収集し、問い合わせ特徴とモデル・GPU識別情報を合わせて、組ごとの実遅延を予測する。品質予測器は既存方式と交換可能なまま費用予測器から分離し、品質と遅延の重み付き得点にサービス水準目標の上限制約を加えて選択する。これにより既存の品質ルータを作り直さず、動的なハードウェア費用だけを差し込める。",
-    "method_overview": "起動後、ハードウェア監視器が各vLLMサーバのPrometheus計測値を200〜300ミリ秒周期で取得し、モデル・GPU組ごとの待ち行列圧力、KVキャッシュ圧力、直近遅延をローカルへ保存する。問い合わせ到着時には遠隔計測を待たず、問い合わせ特徴、モデル・GPU識別子、保存済み実行状態を連結して軽量な二層全結合ニューラルネットへ入力する。予測器は初回トークン待ち時間、トークン間遅延、出力トークン数を別々に推定し、前者と後二者の積の和から総サービング時間を求める。並行して品質予測器が各モデルの期待品質を推定する。意思決定器は予測遅延が許容時間を超える候補を除外し、残りから品質と費用の重み付き得点が最大のモデル・GPU組へ要求を送る。あるGPUへ要求が集中すると次回監視で待機数や遅延が増え、その組の予測費用が上昇して後続要求が別GPUへ移るため、負の帰還として負荷分散が働く。モデル配置や推論器そのものは変更しない。",
+    "problem": "open-source diffusion LLMは理論上複数tokenを並列生成できるが、実際にはAR LLMより遅い。第一にbidirectional full attentionでは各denoising stepでprompt・確定token・maskを含む全系列のQKVを再計算し、AR decodeのような厳密KV cacheを使えない。第二にspeedのため複数maskを同時確定すると、各位置をconditional independentなmarginalからsampleするため、本来依存するtoken組を独立に選び『high house』のような不整合を生みqualityが落ちる。LLaDAの固定top-K parallelismはconfidenceが低い位置まで強制的にunmaskし得るため、単純にparallel token数を増やすだけでは品質を保てない。",
+    "novelty": "Fast-dLLMはこの2律速を独立componentとして解く。KV側ではsequenceをblock-wiseに生成し、current block外のactivationが隣接stepで高cosine similarityを持つことを利用してprefix KVをblock内でreuseし、block完了時だけ全cacheをrefreshする近似cacheを導入する。DualCacheはbidirectional性を逆に利用して未生成masked suffixもcacheする。parallel側では固定Kではなくconfidence thresholdを超えたtokenだけを同時確定し、高confidence regimeでindependent marginalのgreedy parallel decodeがsequential joint decodeと一致する条件を理論化する。",
+    "method_overview": "promptとgeneration領域をblocksへ分ける。Block 0開始前にpromptのKVを計算・保存し、block内の複数diffusion stepsではprefix cacheを再利用してcurrent blockだけを更新する。blockが完成した時点で全tokenのKVを再計算し次block用cacheへ更新するため、近似誤差をblock境界でresetする。DualCacheではcurrent block後方のmask-only suffix KVも保存し、attentionのprefix/current/suffixのうちcurrentだけを毎step再計算する。各stepのlogitsからmasked positionごとのmax-softmax confidenceを算出し、threshold以上のpositionを同時unmaskする。該当0件なら最高confidence 1 tokenを必ず確定してprogressを保証する。factor-based variantではconfidence順位と許容誤差factorから並列数をadaptiveに決める。cacheで1 stepのcostを下げ、parallel decodeで必要step数を減らすため両者の効果は乗算的に働く。",
     "components": [
       {
-        "name": "ハードウェア監視器",
-        "description": "各vLLMサーバから実行中要求数、待機要求数、KVキャッシュ使用率、直近の初回トークン待ち時間とトークン間遅延を200〜300ミリ秒周期で収集する。値はモデル・GPU組ごとにローカル保存されるため、問い合わせ処理の重要経路で遠隔取得を待たない。待機数は混雑、KV使用率はバッチ余力、直近遅延は現在負荷下の実効性能を表し、静的なモデルサイズだけでは見えない性能順位の逆転を捉える。"
+        "name": "Block-wise Prefix KV Cache",
+        "description": "生成領域をblockへ分割し、block内ではpromptと既完了blockのKVを固定してreuseする。masked diffusionのfull attentionでは厳密cacheではないが、隣接step間のprefix KV cosine similarityがほぼ1という観測を根拠に近似する。block完了時に全cacheをrefreshして累積誤差を抑え、current blockのQKVだけを反復計算することでper-step attention costを削る。"
       },
       {
-        "name": "動的費用予測器",
-        "description": "問い合わせ特徴、モデル・GPU識別子、監視状態を二層の全結合ニューラルネットへ入力し、初回トークン待ち時間、トークン間遅延、出力長を同時予測する。三つを組み合わせて要求完了までの時間を推定するため、入力処理、生成量、生成速度を分けて学習できる。学習時にはポアソン到着、短時間集中、持続過負荷を混ぜ、遊休状態から深い待ち行列まで経験させる。"
+        "name": "DualCache",
+        "description": "dLLMのbidirectional attentionではcurrent blockより後ろのsuffix mask tokenも参照される。DualCacheはprefixだけでなく、このmask-only suffixのK/Vもblock内でreuseする。suffix KVも隣接stepで高similarityを示すため、current blockだけをdynamic regionとして残し、長いgenerationでさらに計算量を減らす。"
       },
       {
-        "name": "交換可能な品質予測器",
-        "description": "問い合わせに対する各モデルの期待応答品質を推定する部分で、ハードウェア状態とは意図的に分離される。IRT系、CARROT系など既存の品質予測を差し替えて使えるため、品質モデルを同じに保ったまま静的費用だけを動的費用へ置き換えられる。これにより改善が品質推定の変更ではなく、実行時混雑を認識した費用推定に由来するかを切り分けられる。"
+        "name": "Confidence-Aware Parallel Decoding",
+        "description": "各masked positionの予測confidenceを計算し、global thresholdを超えるtokenだけを同じstepでunmaskする。固定top-Kと違い、曖昧なstepでは並列数を自然に減らし、高confidence stepでは多数を同時確定する。候補0なら最大confidence tokenを1個選びdeadlockを防ぐ。token dependencyを壊しやすい低confidence同時sampleを避け、speedとqualityを両立する。"
       },
       {
-        "name": "サービス水準目標対応の意思決定器",
-        "description": "各モデル・GPU組の品質と予測遅延を受け取り、品質重視度と費用重視度を調整する係数で得点化する。同時に予測遅延が許容時間を超える候補を除外する。あるGPUの待ち行列が増えると費用予測が悪化し、空いている側が選ばれやすくなるため、ルータ自体が負荷分散の帰還制御として機能する。"
+        "name": "High-confidence theoretical criterion",
+        "description": "conditional marginalの積で選ぶparallel greedyと真のjoint/sequential greedyが一致するhigh-confidence条件を解析し、confidenceが十分高いtoken群ならindependence approximationによるargmax崩壊が起きにくいことを示す。factor-based parallel strategyはこの関係を利用し、n番目confidenceとfactorから安全なparallel token数をadaptiveに決める。"
       }
     ],
-    "system_design": "既存の複数モデル推論基盤とモデル配置を維持したまま、その上へ実行状態の保存、遅延予測、品質予測、制約付き配送という薄い制御層を追加する。単一モデル内部で要求順を決めるスケジューラとは競合せず、複数モデル・GPU間で交通量を移す上位制御として補完する。学習時には多様な到着パターンから遅延予測器を作り、オンライン時には監視値だけを更新する。配送結果が次の監視状態へ反映される閉ループによって、混雑の自己増幅を抑える。"
+    "system_design": "Fast-dLLMはmodel weightやtraining objectiveを変更せず、既存LLaDA/Dreamのsampling loopへcache lifecycleとunmask policyだけを挿入する。cache componentは1 step当たりのTransformer計算を削減し、confidence componentはdenoising step数を削減する。block境界でcacheをrefreshし、step内ではconfidenceに応じてparallelismを変える二重のadaptive executionにより、長いprompt/generationほど大きいend-to-end speedupを得る。"
   },
   "reservation": {
-    "claim_id": "claim-28e413fc54e88f5b4c9b871b",
+    "claim_id": "claim-b2986b566a2c98de31284cba",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

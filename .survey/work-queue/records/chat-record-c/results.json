@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-28e413fc54e88f5b4c9b871b",
-  "job_id": "job-research-60a904da0b8faa84",
+  "attempt_id": "attempt-b2986b566a2c98de31284cba",
+  "job_id": "job-research-99d754a688aca9c8",
   "data": {
-    "overview": "主結果は、品質予測だけを高度化しても解消できなかった実行時混雑を、現在のハードウェア状態を費用へ入れることで直接回避できた点にある。H100を2台、モデルを5種類使った持続過負荷評価では、CARROTおよびIRT-Routerに対して端から端までの遅延を3.4〜3.9倍低減し、サービス水準目標達成率を46〜48ポイント改善した。さらにGPU総負荷の偏りを6〜8倍、待機要求の割合を3.1〜3.4倍改善した。同等品質0.62では約40秒から16秒へ短縮し、毎秒15〜21要求でも全待ち行列の83〜84%を実行中状態に保つ。小さいモデルへ固定的に要求を集中させるより、現在空いているモデル・GPUへ要求を逃がす方が、システム全体の遅延と期限遵守を同時に改善できることを示す。",
+    "overview": "Fast-dLLMはdLLMのper-step計算と必要step数を別々に削ることで、単独cacheや単独parallelより大きなend-to-end gainを得る。LLaDA GSM8K gen length 256ではvanilla 6.7 TPSからcache 21.2、parallel 16.5、両者54.4 TPS（8.1倍）へ向上し、長prefill・gen length 1024ではDualCache+parallelがvanilla 0.7 TPSから19.3 TPSへ達して最大27.6倍となる。accuracy低下は小さく、training-freeでAR modelとのthroughput gapを大幅に縮める点が実用上の主成果である。",
     "key_results": [
       {
-        "metric": "同等品質での遅延",
-        "value": "品質0.62で約16秒",
-        "baseline": "CARROTとIRT-Routerは約40秒",
-        "condition": "品質と遅延のパレート曲線",
-        "interpretation": "現在状態を使うことで約60%の遅延削減。"
+        "metric": "LLaDA GSM8K throughput",
+        "value": "54.4 TPS, 8.1×",
+        "baseline": "vanilla 6.7 TPS",
+        "condition": "5-shot, max generation length 256, cache+parallel",
+        "interpretation": "cacheとparallelismの相補効果。"
       },
       {
-        "metric": "サービス水準目標達成率",
-        "value": "品質0.60で約97%、0.63で90%、0.65で76%",
-        "baseline": "品質0.60ではCARROT 51%、IRT 65%。0.63では48%、60%。0.65では両者50%未満",
-        "condition": "初回トークン待ち時間とトークン間遅延から定義した期限",
-        "interpretation": "待ち時間を含む実サービング時間の予測が期限違反回避へ直結する。"
+        "metric": "長生成end-to-end speedup",
+        "value": "19.3 TPS, 27.6×",
+        "baseline": "vanilla 0.7 TPS",
+        "condition": "GSM8K 8-shot, gen length 1024, DualCache+parallel",
+        "interpretation": "長いprefill/generationでcache reuseとstep削減が増幅する。"
       },
       {
-        "metric": "待機要求比率",
-        "value": "待機16〜17%、実行中83〜84%",
-        "baseline": "CARROTは待機53〜55%、IRTは34〜39%",
-        "condition": "到着率15、18、21要求毎秒",
-        "interpretation": "一つのGPUへの集中を抑え、待機より実行へ資源を回す。"
+        "metric": "Parallel-only acceleration",
+        "value": "最大13.3×",
+        "baseline": "vanilla LLaDA",
+        "condition": "long-generation configuration",
+        "interpretation": "confidence-aware unmaskでstep数を大幅削減。"
       },
       {
-        "metric": "GPU総負荷偏り",
-        "value": "1.691〜2.089",
-        "baseline": "CARROT 12.903〜12.924、IRT 12.640〜12.930",
-        "condition": "到着率15、18、21要求毎秒",
-        "interpretation": "総負荷偏りを約84〜87%削減して両GPUを活用する。"
+        "metric": "KV-cache-only speedup",
+        "value": "概ね2〜3.6×",
+        "baseline": "vanilla backbone",
+        "condition": "複数task/length",
+        "interpretation": "block内のQKV再計算を削る効果。"
       },
       {
-        "metric": "追加ルーティング時間",
-        "value": "CARROT比で約200マイクロ秒",
-        "baseline": "CARROT",
-        "condition": "平均意思決定時間",
-        "interpretation": "ハードウェア認識を加える重要経路の費用は小さいと報告する。"
+        "metric": "GSM8K quality",
+        "value": "gen256: 78.5%",
+        "baseline": "vanilla 79.3%",
+        "condition": "LLaDA cache+parallel",
+        "interpretation": "8.1×高速化に対して0.8 point低下。"
       }
     ],
-    "negative_results": "費用予測器の順伝播を約10ミリ秒と記す一方、CARROT比の追加ルーティング時間を約200マイクロ秒と報告しており、両者の測定範囲の違いは十分説明されていない。評価GPUは2台ともH100で、異種GPUを動機に挙げるもののV100、A100、H100を混在させた直接評価はない。",
-    "interpretation": "モデル規模や単価は単独実行時の効率を示す代理値に過ぎず、オンライン推論では待ち行列とKVキャッシュ圧力が実効効率の順位を逆転させる。HW-Routerはこの順位を問い合わせごとに再推定し、負荷分散を偶然の副作用ではなく閉ループ制御として実現する。",
-    "quality_impact": "同等品質の動作点で遅延と期限達成率を比較し、出力品質を落とさず改善したと報告する。品質判定はQwen-3-Next-80Bを用いた単一の大規模言語モデル判定が中心で、人手や複数判定器による頑健性検証は限定的である。"
+    "negative_results": "KV cacheはbidirectional full attentionに対するapproximationでありblock内KVを完全には更新しない。parallel decodeもconfidence thresholdに依存し、thresholdを下げすぎるとdependent tokenを同時確定してqualityを落とす。speedupはgeneration lengthやprompt長に強く依存し、短い出力では最大値ほど大きくない。",
+    "interpretation": "dLLMの遅さは『各stepが重い』ことと『step数が多い』ことの積である。Fast-dLLMはapproximate KV reuseで前者、confidence-aware multi-token unmaskで後者を同時に削るため、単独最適化を超えるmultiplicative speedupを得る。",
+    "quality_impact": "GSM8K/HumanEval等でaccuracyは概ねvanilla近傍。high-confidence tokenだけを並列化することで固定top-Kよりdependency violationを抑えるが、approximationとthresholdにより完全losslessではない。"
   },
   "reservation": {
-    "claim_id": "claim-28e413fc54e88f5b4c9b871b",
+    "claim_id": "claim-b2986b566a2c98de31284cba",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
