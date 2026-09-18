@@ -2,17 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-6b31bd6e3a7371ca844ccbc1",
-  "job_id": "job-research-6c1a5d06d3b875ce",
+  "attempt_id": "attempt-7ff67242dae88bb287c5c390",
+  "job_id": "job-research-2afdd6d968c4500a",
   "data": {
-    "limitations": "進捗が存在しないremote API、人間入力待ち、最初のbyte前で停止するdownload等には適用できない。未知出力形式や内部単位を隠すbuild systemにはparserが必要で、現在のcoverageはcoding-agentで頻出するtool familyに偏る。verbose switch、dry run、生成コードへのinstrumentationは副経路で隠してもツール実行自体を変える可能性があり、完全な意味的非干渉を一般に保証しない。multi-phaseや不均一単位では割合を信頼できずweak signalへ降格する。エンドツーエンド評価は4×H100のvLLM replayであり、本番multi-tenant規模や他engineでの検証は未実施。不正report対策はpreliminary simulationであり、敵対的tenantへの強い保証はまだない。",
-    "differences": "Continuum、CacheWise、InferCeptはツール種別・引数・履歴から実行時間を予測し、TokenCakeやMooncake/SGLang/vLLM等のagent-aware提案は呼び出し前のdeclared durationを利用する。本研究はこれらの固定推定を、実行中に更新されるtool-originated progress streamへ置換する。MORIやConServeはengine側のoccupancy/idlenessを観測するがtool内部の作業進捗は見ない。ThunderAgent等のphase markerとも異なり、tool出力・filesystem・hook・生成コードから実作業量を読む。既存のMCP progress notificationやKV hint APIは通信機構を提供していたが、本研究はその間を結び、in-flightで更新可能なprogressをKV保持/offload/reloadの最初のserving-side consumerとして評価する。",
-    "implementation_status": "研究用ハーネス、progress parser/tap、controller、およびvLLMへの数百行規模のrefresh/release/query patchを実装し、4×H100で評価している。論文本文・arXivページでは専用公式コードリポジトリの公開を確認できないため、再現には実装詳細の再構築が必要。",
-    "research_positioning": "エージェント型LLM配信におけるtool-call idle window活用の系統で、KV cacheのplacement policyそのものより『判断に使う情報の観測面』を変更する研究である。予測精度改善競争を避け、tool execution planeからserving planeへの明示的progress channelを設けることで、階層メモリ、KV retention、prefetch/reload schedulingへ共通利用できる信号を作る。MCP等の標準進捗通知が普及すればハーネス依存を減らせるため、agent protocolとLLM serving systemの境界を接続する基盤的提案として位置付けられる。"
+    "limitations": "評価機はRTX A6000とPCIe 3.0 x16の単一GPU構成で、NVLinkやPCIe 5.0、H100/H200級GPU、分散推論では通信と計算の比率が変わり得る。部分重み比率とalphaはモデルごとの感度評価で選んでおり、未知モデルへ無調整で適用できる保証はない。部分クエリ重みと部分キーをGPUへ置く標準実装は追加メモリを必要とし、比率0.3でそれぞれ全モデル重みの2.5%、全KVの15%に相当する。CPUプールが十分大きいことを基本にしており、強いCPU容量制約では利用回数追い出しが必要になる。100万トークン条件は注意分布解析であり、100万トークンのエンドツーエンド速度を実測したものではない。",
+    "differences": "FlexGenはモデル重みやKVをCPU・ディスクへ退避して容量制約を解くが、注意計算時には必要なKV転送そのものが残る。InfiniGenはFlexGenを置き換えず、そのKV転送を次レイヤー予測で選択的にする補完方式である。H2Oは過去の注意重要度と近傍性から固定予算のKVをGPU側へ残し、捨てたKVを後から復活できないのに対し、InfiniGenはCPU側に履歴を保持して各生成反復で重要度を再評価する。量子化は1エントリ当たりの転送バイトを減らすが全トークン転送は系列長に比例し続けるのに対し、InfiniGenは転送するトークン数自体を減らす。vLLMのPagedAttentionは断片化・重複によるGPU KVメモリ浪費を減らす方式で、CPU退避時のPCIe転送削減を狙う本研究とは異なる。",
+    "implementation_status": "OSDI 2024採択論文で、著者公式GitHubにApache-2.0ライセンスの実装、精度評価と高速化評価のスクリプト、環境構築手順が公開されている。研究用再現実装として利用可能だが、vLLMやTensorRT-LLM等の現行本番推論基盤へ統合済みとは論文・公式リポジトリから確認できない。",
+    "research_positioning": "階層メモリ型LLM推論の中でも、CPUをKVの大容量保存層、GPUをその時点で必要なKVだけを置く高速層として使い、次レイヤーの注意疎性を予測して通信を削る系統に位置する。後続のKVオフロード研究に対して、単なる非同期転送ではなく『どのKVを転送するか』をモデル内部信号から先読みする代表的設計であり、SSD/NVMeをさらに下位層へ加える研究でも選択・先読み機構の基準点になる。"
   },
   "reservation": {
-    "claim_id": "claim-6b31bd6e3a7371ca844ccbc1",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-7ff67242dae88bb287c5c390",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
