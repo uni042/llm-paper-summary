@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2608.22613",
   "paper_path": "papers/inference/05-pim-near-memory/2026-2608.22613-nova-near-memory-processing-hybrid-llm-inference.md",
   "selection_reason": "GQA/SSM/MoE混成LLMの異なる演算強度に対し、peri-dieとbase-dieの2-tier near-memory processingを割り当てるtechnology-architecture co-design。Qwen3等で平均throughput 4.5倍、end-to-end latency 69.8%削減、energy efficiency 5倍を報告し、MoEと階層near-memory executionを横断する比較価値が高い。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-18T00:29:37+00:00",
-  "completed_at": "2026-09-18T00:29:37+00:00",
-  "retry_not_before": "2026-09-18T02:05:58+00:00"
+  "retry_queued_at": "2026-09-18T02:06:27+00:00"
 }

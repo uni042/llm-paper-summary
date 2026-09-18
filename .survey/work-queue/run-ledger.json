@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T01:47:25.755498+00:00",
+  "updated_at": "2026-09-18T02:07:31.439832+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T01:47:25.755498+00:00",
+      "last_recorded_at": "2026-09-18T02:07:31.439832+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 239,
         "audit_completed": 0,
-        "discovery_completed": 112,
+        "discovery_completed": 113,
         "blocked": 19,
-        "new_jobs": 171,
-        "new_papers": 240,
+        "new_jobs": 173,
+        "new_papers": 242,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35195615801:1",
-          "recorded_at": "2026-09-17T07:39:36.400948+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35195615801",
-            "run_attempt": "1",
-            "source_sha": "9026f40426bfac2fc0bb158f22cd000b9b40d781"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35195796992:1",
           "recorded_at": "2026-09-17T07:41:47.691375+00:00",
@@ -19595,6 +19581,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35297870329:1",
+          "recorded_at": "2026-09-18T02:07:31.439832+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35297870329",
+            "run_attempt": "1",
+            "source_sha": "f8f62571554f27cfb6bbdc69f26fa745931de25c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -22558,6 +22559,14 @@
           "title": "Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-20e98114d5b4cc73",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23757,6 +23766,20 @@
           "type": "research",
           "canonical_id": "arXiv:2609.17943",
           "title": "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference"
+        },
+        {
+          "job_id": "job-20e98114d5b4cc73",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-b4ff298d10321769",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13692",
+          "title": "Prefix Sharing Is a Sorting Problem"
         }
       ],
       "new_paper_ids": [
@@ -23999,7 +24022,9 @@
         "arXiv:2506.04203",
         "arXiv:2508.12851",
         "arXiv:2509.23094",
-        "arXiv:2608.14575"
+        "arXiv:2608.14575",
+        "arXiv:2609.18112",
+        "arXiv:2609.18849"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -24233,7 +24258,8 @@
         ".survey/work-queue/results/20260918T1049JST-discovery-a63d1f04.json",
         ".survey/work-queue/results/20260918T1055JST-discovery-b94e2d70.json",
         ".survey/work-queue/results/20260918T1102JST-discovery-c15e7a48.json",
-        ".survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json"
+        ".survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json",
+        ".survey/work-queue/results/20260918T1120JST-discovery-specialist-agent-runtime-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -24310,8 +24336,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 701,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 703,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

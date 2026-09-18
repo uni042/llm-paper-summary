@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T02:04:08+00:00",
+  "updated_at": "2026-09-18T02:04:43+00:00",
   "last_run_key": "2026-09-18T11:00:00+09:00",
-  "last_round": "specialist-sep-systems-1",
+  "last_round": "specialist-agent-runtime-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:55:54+09:00",
-      "round": "specialist-distserve-citation-backfill-5",
-      "axis": "DistServe周辺のforward citation・backward reference補完",
-      "query_summary": "優先テーマの直接検索から離れ、DistServe/現行serving研究の引用・関連研究から未収録の基礎/派生システムを探索した。FastServeを重要な古い未収録基礎として拾い、energy-aware disaggregation、動的module/KV migration、dynamic batchingの派生3件を選別。最新mainでcanonical ID再検索し既存一致なしを確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は引用系統から離れ、training/serving境界のco-serving・adapter/LoRA multiplexing・agentic long-running state runtimeへ軸を変える",
-      "source_submission": "work-queue/submissions/20260913T0207JST-discovery-376c29b504bdcaf6.json"
-    },
     {
       "run_key": "2026-09-13T01:55:54+09:00",
       "round": "specialist-multilora-coserving-6",
@@ -6940,6 +6925,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はagent workflow scheduling、power-aware disaggregated serving、heterogeneous edge/cluster routingへ軸を変更する",
       "source_submission": "work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json"
+    },
+    {
+      "run_key": "2026-09-18T11:00:00+09:00",
+      "round": "specialist-agent-runtime-2",
+      "axis": "agentic workflow・prefix state・power-aware disaggregated serving",
+      "query_summary": "agentic serving、prefix cache、power-aware servingへ検索軸を変更。検索結果のabstract/metadataを複数候補に再利用し、GitHub canonical ID検索で既存一致を早期除外したうえで5件を提出。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はCXL/CPU-GPU/NAND/SSDなどmemory hierarchyとhardware-runtime co-designへ移る",
+      "source_submission": "work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json"
     }
   ],
   "axes": {
@@ -11770,6 +11773,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はagent workflow scheduling、power-aware disaggregated serving、heterogeneous edge/cluster routingへ軸を変更する"
+    },
+    "agentic workflow・prefix state・power-aware disaggregated serving": {
+      "last_run_key": "2026-09-18T11:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.8,
+      "next_axis_hint": "次はCXL/CPU-GPU/NAND/SSDなどmemory hierarchyとhardware-runtime co-designへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
