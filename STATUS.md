@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 17:00:52 JST**
+> 自動生成: **2026-09-18 17:00:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **19** | **11** | **7** | **4** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **9** | **4** | **0** | **0** | **28** |
+| Discovery | **20** | **11** | **8** | **3** | **0** | **0** | **28** |
+| 合計 | **27** | **13** | **10** | **3** | **0** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-18 16:59:19 JST** job `job-5c2166c716255464` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json`
+  - 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport
 - **09-18 16:01:25 JST** job `job-46c92d11d4e3d7f9` / 候補 **2件**
   - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260918T1505JST-discovery-specialist-cxl-disagg-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1505JST-discovery-specialist-cxl-disagg-2.json`
   - 探索軸: CXL shared memory・disaggregated serving・near-data processing・KV transfer
-- **09-18 15:02:18 JST** job `job-64652f621bf5a4ef` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T1510JST-discovery-specialist-kv-migration-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json`
-  - 探索軸: network-constrained KV transfer・proactive migration・elastic KV reclamation
 
 ### 直近タスク
 
@@ -157,12 +157,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 16:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **4件** / 候補: **28件**
+- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **3件** / 候補: **28件**
 - 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport / MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling / KV cache metadata・RDMA・分離サービングnetwork transport / 2024-2025 on-device heterogeneous CPU/GPU/NPU offload / 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング / CXL共有メモリ・NVMe KVキャッシュ / MoE expert placement・offload・heterogeneous runtime / edge MoE・expert prefetch・Flash/NPU・distributed routing / PD disaggregation・RDMA・CXL KV transport / agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse / prefix-affinity routing・queue-aware KV・agent scheduling
 - round `specialist-late-sep-storage-1` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json`
   - 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json` (`ok=true`)
 - round `specialist-moe-backward-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T1659JST-discovery-specialist-moe-backward-2.json`
   - 探索軸: MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling
@@ -253,10 +253,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **513** |
+| 成功result未照合のimmutable submission | **512** |
 | └ Research | **380** |
 | └ Audit | **2** |
-| └ Discovery | **131** |
+| └ Discovery | **130** |
 
 ### 厳格検証が未成立のcompleted job
 

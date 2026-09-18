@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T07:04:23+00:00",
+  "updated_at": "2026-09-18T07:59:19+00:00",
   "last_run_key": "2026-09-18T16:00:00+09:00",
-  "last_round": "specialist-prefix-routing-7",
+  "last_round": "specialist-late-sep-storage-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "all_strong_results_already_represented",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T03:02:31+09:00",
-      "round": "specialist-memory-communication-overlap-6",
-      "axis": "GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap",
-      "query_summary": "DBMS/QoS schedulingから低層memory/communication overlapへ軸を変更し、GPU L2 prefetch、HBM-PIM、cross-vendor memory-heterogeneous P/D、MoE tile signaling、distributed prefetchを一次arXiv metadata/abstractで軽量評価した。DAKは最新repoで既存completed jobを確認して除外。送信直前に最新default branch HEAD、identity index、next queue、5件の決定論的research job path、Library pending、GitHub fallback-inboxを再照合し、5件を未収録と判断した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 5,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.16666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.26074"
-      ],
-      "next_axis_hint": "次はmemory/communication overlapを離れ、MoE expert placement/prefetchの未収録、forward/backward citation、またはedge/on-device offloadを独立に確認する",
-      "source_submission": "work-queue/submissions/20260913T0326JST-discovery-specialist-memory-overlap-6.json"
-    },
     {
       "run_key": "2026-09-13T03:30:44+09:00",
       "round": "specialist-edge-ondevice-memory-1",
@@ -6989,6 +6972,36 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "inference framework runtime updates・kernel scheduling・continuous batching",
       "source_submission": "work-queue/submissions/discovery-specialist-20260918T1600JST-r7.json"
+    },
+    {
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "round": "specialist-late-sep-storage-1",
+      "axis": "2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport",
+      "query_summary": "2026年9月後半のLLM inference/serving、SSD/NVMe offload、MoE expert prefetch、KV cache、disaggregated servingを独立検索し、さらに2024-2026のstorage/CXL/RDMA/CPU-GPU階層メモリ系を横断した。検索で得たEdge0 (2609.18063)、PATTON (2609.11392)、Composable CXL Memory (2609.10790)、MAPS (2609.15359)、Calibrate Then Route (2609.16206)、KVShareArena (2609.10266)、GrowPage (2609.03494)、Tutti (2605.03375)、CXL-NDP (2509.03377)、Photonic-CXL (2607.27187)、Cache-Resident LLC (2606.25353) 等は最新canonical discovery identity snapshotで既代表化済みと確認した。GitHub code searchの不一致は未収録根拠に使わず、月別identity snapshotを優先した。新規未評価候補は残らなかったため0件提出とする。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.18063",
+        "arXiv:2609.11392",
+        "arXiv:2609.10790",
+        "arXiv:2609.15359",
+        "arXiv:2609.16206",
+        "arXiv:2609.10266",
+        "arXiv:2609.03494",
+        "arXiv:2605.03375",
+        "arXiv:2509.03377",
+        "arXiv:2607.27187",
+        "arXiv:2606.25353"
+      ],
+      "next_axis_hint": "次は新着検索ランキングを離れ、重要な既収録SSD/NVMe・MoE offload論文のforward/backward citation、2024-2025のOS/DBMS/storage隣接分野からLLM推論へ転用された未収録systems論文を探索する",
+      "source_submission": "work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json"
     }
   ],
   "axes": {
@@ -12053,6 +12066,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.6,
       "next_axis_hint": "inference framework runtime updates・kernel scheduling・continuous batching"
+    },
+    "2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport": {
+      "last_run_key": "2026-09-18T16:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次は新着検索ランキングを離れ、重要な既収録SSD/NVMe・MoE offload論文のforward/backward citation、2024-2025のOS/DBMS/storage隣接分野からLLM推論へ転用された未収録systems論文を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -12079,6 +12105,29 @@
       "cooldown": false,
       "last_run_key": "2026-09-18T10:00:00+09:00",
       "last_round": "specialist-2609-memory-moe-new-arrivals-1"
+    },
+    "window-f0c222f7916a32509a19": {
+      "topic": "late-september-llm-serving",
+      "source": "web-arxiv",
+      "date_range": "2026-09-01/2026-09-18",
+      "category": "cs.*",
+      "citation_direction": "none",
+      "query_family": "serving-kv-moe-storage",
+      "search_window_key": "window-f0c222f7916a32509a19",
+      "scan_count": 1,
+      "raw_result_count": 11,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 11,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "last_position": "multi-query search window",
+      "unseen_rate": 0.0,
+      "duplicate_rate": 1.0,
+      "candidate_acceptance_rate": 0.0,
+      "cooldown": true,
+      "last_run_key": "2026-09-18T16:00:00+09:00",
+      "last_round": "specialist-late-sep-storage-1"
     }
   },
   "recent_search_windows": [
@@ -12102,6 +12151,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 1.0,
       "last_position": "search-batch-1"
+    },
+    {
+      "topic": "late-september-llm-serving",
+      "source": "web-arxiv",
+      "date_range": "2026-09-01/2026-09-18",
+      "category": "cs.*",
+      "citation_direction": "none",
+      "query_family": "serving-kv-moe-storage",
+      "search_window_key": "window-f0c222f7916a32509a19",
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "round": "specialist-late-sep-storage-1",
+      "raw_result_count": 11,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 11,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.0,
+      "duplicate_rate": 1.0,
+      "candidate_acceptance_rate": 0.0,
+      "last_position": "multi-query search window"
     }
   ],
   "search_window_history_limit": 96,

@@ -67,7 +67,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-10〜2024-09）
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  
-  実装：[✓](https://github.com/timlee0212/SiDA-MoE) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/timlee0212/SiDA-MoE) ・ リポジトリ内被引用：5  
   SiDA-MoEは小型LSTMで各トークンの専門家を先に予測し、予測した重みだけをCPUからGPUへ読む。予測結果をルーティングにも使うため、外れれば品質が変わる近似方式である。
 
 ### 4年前（2022-10〜2023-09）

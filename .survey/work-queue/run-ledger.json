@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T07:41:56.884556+00:00",
+  "updated_at": "2026-09-18T08:00:57.364762+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T07:41:56.884556+00:00",
+      "last_recorded_at": "2026-09-18T08:00:57.364762+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 246,
         "audit_completed": 0,
-        "discovery_completed": 129,
+        "discovery_completed": 130,
         "blocked": 21,
-        "new_jobs": 194,
-        "new_papers": 247,
+        "new_jobs": 195,
+        "new_papers": 249,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35217019450:1",
-          "recorded_at": "2026-09-17T11:41:42.005847+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35217019450",
-            "run_attempt": "1",
-            "source_sha": "4c8d7c1e43963a7fc1da5265d876c9cdad680765"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35218825892:1",
           "recorded_at": "2026-09-17T12:05:03.813659+00:00",
@@ -19597,6 +19583,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35322059039:1",
+          "recorded_at": "2026-09-18T08:00:57.364762+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35322059039",
+            "run_attempt": "1",
+            "source_sha": "1350d6ca362a19e533dd027172d9eabde8528696"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -22768,6 +22769,14 @@
           "title": "PEEK: Predictive Queue-Informed KV Cache Management for LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-5c2166c716255464",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24128,6 +24137,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.19662",
           "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents"
+        },
+        {
+          "job_id": "job-5c2166c716255464",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -24377,7 +24393,9 @@
         "arXiv:2609.17943",
         "arXiv:2508.02558",
         "arXiv:2511.22333",
-        "arXiv:2609.17652"
+        "arXiv:2609.17652",
+        "arXiv:2607.02525",
+        "arXiv:2609.14643"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -24628,7 +24646,8 @@
         ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r4.json",
         ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r5.json",
         ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r6.json",
-        ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r7.json"
+        ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r7.json",
+        ".survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -24705,8 +24724,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 708,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 710,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
