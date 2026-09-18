@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-e3f6cbbee3a78ecd5c91e72c",
+  "job_id": "job-research-2bbcf1d996d23713",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-e3f6cbbee3a78ecd5c91e72c.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short",
+  "processed_at": "2026-09-18T19:42:34+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
