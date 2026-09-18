@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:40:41 JST**
+> 自動生成: **2026-09-18 14:41:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-18 14:37:48 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-18 14:37:48 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **12** | **3** | **1** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **30** | **4** | **3** | **1** | **1** | **0** | **1** |
+| 合計 | **30** | **5** | **3** | **2** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-0ee0523cc013293152fce8f1.json` (job `job-research-2829f7afbf13ae9b`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5b5769ffc299e3f095219b3d.json` (job `job-research-a2e0c7f004aa0b3e`)
 - **成功** `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
   - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
@@ -184,9 +185,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 14:40:23 JST** / heartbeat: **—** / lease expiry: **09-18 16:10:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
+- `arXiv:2604.10907` — RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 14:41:08 JST** / heartbeat: **—** / lease expiry: **09-18 16:11:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-fbee62800783475d.json`
 
 #### Audit
 
@@ -234,8 +235,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **501** |
-| └ Research | **372** |
+| 成功result未照合のimmutable submission | **502** |
+| └ Research | **373** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
