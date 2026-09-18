@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-386de3001d7d0291d3e77d66",
-  "job_id": "job-research-9d3c210288b42eb4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-386de3001d7d0291d3e77d66",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-386de3001d7d0291d3e77d66","job_id":"job-research-9d3c210288b42eb4","data":{"hardware":"本研究はrouting trace解析とcache simulationが中心で、特定GPUでのend-to-end offloading latency/throughput比較を主要評価にしない。20実モデルの推論traceを収集し、追加で1.43B toy MoE群を事前学習する。","software":"20種のMoE LLM（LLaMA-MoE-v2、Yuan2.0、PowerMoE、Qwen3、Phi-3.5-MoE、OLMoE、GRIN-MoE、Mixtral-8x7B、DeepSeek系、SwitchTransformer等）とOLMoE-like 1.43B toy models。公式再現コード ljcleo/moe-lrc。","methodology":"RedPajamaのC4/CommonCrawl/Books/Wikipedia/ArXiv/StackExchange/GitHubと、LMArena、OpenMathInstruct-2、OpenCodeInstruct、OpenScienceReasoning-2から22,528 samplesを構成し、各sampleを512 tokensとする。全MoE layerのrouting decisionsを記録し、segment length mを変えてSRPとsize ratioを算出する。SCHはcache ratio rhoを変えてoracle segment cacheをsimulationする。toy modelsでは一つのarchitecture/training factorを変更してSRP/perplexityを比較。SCHの95%信頼区間はfull corpusから1,000回bootstrapで算出し、LRU/LFU/Fixedおよびclairvoyant optimumとも比較する。","scope":"モデル側のexpert routing localityとexpert cache適性を広く比較する分析研究。実際のPCIe/NVLink帯域、expert weight size、prefetch overlap、CPU/GPU execution、concurrent request schedulingを含むend-to-end serving性能は直接測っていないため、SRP/SCHから実システムspeedupをそのまま予測する用途には追加検証が必要。"},"reservation":{"claim_id":"claim-386de3001d7d0291d3e77d66","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
