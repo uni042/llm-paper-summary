@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-71a9a76625d025d32bc3f2ef",
-  "job_id": "job-research-ca0df1c4e0a9af97",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71a9a76625d025d32bc3f2ef",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-71a9a76625d025d32bc3f2ef","job_id":"job-research-ca0df1c4e0a9af97","data":{"canonical_id":"DOI:10.52202/085713-1587","arxiv_id":null,"doi":"10.52202/085713-1587","openreview_id":null,"title":"HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference","summary":"HiFCは、長文脈LLM推論でGPU HBMから溢れるKVキャッシュを高価なホストDRAMではなく市販NVMe SSDへ直接退避する方式である。GPUダイレクトストレージ（GPU Direct Storage; GDS）でGPUとSSDを直結し、擬似SLC領域、追記型の順次ブロック配置、4 KB整列を組み合わせてSSDのランダム書込み低下と摩耗を抑える。vLLMの系列パイプラインがSSD交換遅延を計算と重ねることで、DRAM交換に近いエンドツーエンド性能を維持しながら大容量KV領域の費用を削減する。","list_summary":"GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。","authors":["Inho Jeong","Sunghyeon Woo","Sol Namkung","Dongsuk Jeon"],"published":"2025-12-02","publication":"Advances in Neural Information Processing Systems 38 (NeurIPS 2025) Main Conference Track","publication_type":"Conference paper","publication_status":"Published","lineage":"KV cache offload / SSD swapping / GPU Direct Storage","topics":["KVキャッシュ","SSDオフロード","GPUダイレクトストレージ","長文脈推論"],"importance":"市販SSDをDRAM代替のKV交換層として実機統合し、性能、耐久性、総所有費用を同時評価したストレージ階層型LLM推論研究。","hardware_evaluation":"Dell PowerEdge R750xa、2基のIntel Xeon Silver 4310、2基のNVIDIA A100 80 GiB、256 GiB DDR4、1 TB NVMe Gen4 SSDの200 GiB pSLC領域を用いた実機評価。","quality_effect":"KVキャッシュ内容を近似・圧縮する手法ではなく保存場所と転送経路を変更するため、数値品質を意図的に劣化させない。","source":"https://papers.nips.cc/paper_files/paper/2025/file/4431224d3762aa655f0aee4eaf04ff16-Paper-Conference.pdf","sources":["https://papers.nips.cc/paper_files/paper/2025/hash/4431224d3762aa655f0aee4eaf04ff16-Abstract-Conference.html","https://papers.nips.cc/paper_files/paper/2025/file/4431224d3762aa655f0aee4eaf04ff16-Paper-Conference.pdf"],"implementation":"vLLM v0.6.6へフラッシュキャッシュブロック割当器とGDS対応キャッシュエンジンを統合。CUDA Toolkit 12.3、PyTorch 2.5.1、GDS 1.8.1.2で評価。","code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":36},"reservation":{"claim_id":"claim-71a9a76625d025d32bc3f2ef","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
