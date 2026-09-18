@@ -1,0 +1,4 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round","candidates":[],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-citation-relatedwork-10","axis":"citation/related-work・LMCache/DistServe lineage","query_summary":"LMCache/DistServe/vLLM KV関連のrelated-work窓を独立走査。TokenDance、HyMCache、Tutti等はcanonical stateまたはrun前履歴で既知と判定し、新規強候補なし。単一空roundでは停止せず、他軸走査済み証拠と合わせて枯渇判定へ進む。","candidate_count":3,"duplicate_filtered_count":3,"duplicate_canonical_ids":["arXiv:2604.03143","arXiv:2607.18141","arXiv:2605.03375"],"next_axis_hint":null,"empty_round_reason":"related-work window exhausted after early canonical dedupe; no unseen strong systems candidate remained"}
+}
