@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b1cfa5a843dac02733d41490",
+  "attempt_id": "attempt-b581730c00b4de922bbbc7da",
   "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
     "hardware": "NVIDIA 4090 48GB GPU。",
@@ -11,8 +11,8 @@
     "scope": "4つの約7〜8B級dLLMと単一4090中心。native implementationのためvLLM等production serving stackでのend-to-end評価、batching/並行要求、多GPU、より大規模モデルへの一般化は未検証。"
   },
   "reservation": {
-    "claim_id": "claim-b1cfa5a843dac02733d41490",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-b581730c00b4de922bbbc7da",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }

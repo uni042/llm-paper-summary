@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-b1cfa5a843dac02733d41490",
+  "attempt_id": "attempt-b581730c00b4de922bbbc7da",
   "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
     "problem": "拡散型LLMは各denoising stepでprompt、生成済みtoken、maskを含む全系列のQKVを再計算するため、自己回帰decodeのO(L)に対しattentionがO(L^2)となる。既存dLLM cacheは連続step間で近いKVを再利用して計算を減らすが、全layer・全系列のKVを保持するため長文脈ではmemory overheadが大きい。",
@@ -29,8 +29,8 @@
     "system_design": "native dLLM block decodingへcache policyとして挿入し、モデル再訓練なしでattention対象token数と保持KV数を同時に減らす。defaultはblock length 32、retention ratio 0.5、pool kernel 3。"
   },
   "reservation": {
-    "claim_id": "claim-b1cfa5a843dac02733d41490",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-b581730c00b4de922bbbc7da",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }

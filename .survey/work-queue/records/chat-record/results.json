@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b1cfa5a843dac02733d41490",
+  "attempt_id": "attempt-b581730c00b4de922bbbc7da",
   "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
     "overview": "Sparse-dLLMはLLaDA/Dreamで既存cache法より高いthroughputを、vanillaに近いmemoryと概ね同等accuracyで達成する。LLaDAでは平均約3.4倍、Dreamでは約3.6倍のthroughput向上が表に示され、4K long-contextではvanilla比最大10倍を報告する。",
@@ -48,8 +48,8 @@
     "quality_impact": "LLaDAでは平均accuracyがvanilla 59.24に対し59.86、LLaDA-1.5は60.90対60.99と同等。Dreamも平均は概ね同等だがHumanEvalで低下し、完全losslessではない。"
   },
   "reservation": {
-    "claim_id": "claim-b1cfa5a843dac02733d41490",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-b581730c00b4de922bbbc7da",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }
