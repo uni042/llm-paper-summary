@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T21:01:55+00:00",
+  "updated_at": "2026-09-18T21:02:30+00:00",
   "last_run_key": "2026-09-19T06:00:00+09:00",
-  "last_round": "specialist-programmable-serving-1",
+  "last_round": "specialist-heterogeneous-hardware-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,53 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T07:58:39+09:00",
-      "round": "specialist-sparse-kernel-compiler-4",
-      "axis": "疎注意サービング・GPUメガカーネル・動的コンパイラ",
-      "query_summary": "直前のMoE軸後にKV sparse-attention、GPU kernel/compiler、framework integrationを独立走査した。SPIN、KARAT、HyMCache、Mirage Persistent Kernel、Harness Engineeringは最新正本の既存jobへ収束。Vortex、Event Tensor、Ada-MKは投入直前の最新main HEADで決定論的research job不存在、repo識別子/題名未検出、Library pendingにも同候補なしを確認した。",
-      "candidate_count": 8,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 3,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.625,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.26837",
-        "arXiv:2608.03555",
-        "arXiv:2607.18141",
-        "arXiv:2512.22219",
-        "arXiv:2607.17979"
-      ],
-      "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。新着差分、forward/backward citation、CXL/SSD、network collective/disaggregation、MoE placement/cache、KV compression、隣接OS/HPCを一巡して最終枯渇判定する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json"
-    },
-    {
-      "run_key": "2026-09-13T07:58:39+09:00",
-      "round": "specialist-moe-placement-network-5",
-      "axis": "multi-node MoE活性パターン配置・edge expert類似性routing",
-      "query_summary": "最後のstrong batch後にCXL/SSD、network collective、MoE placement、KV圧縮、GPU runtime、OS/HPCを再走査した。Composable CXL Memory、SAC、DUAL-BLADE、Foundry、KernelFlume、HyMCache、SPIN、KARAT、CompressKV、ScoutAttentionは最新正本の既存jobへ収束。Scaling Multi-Node MoEとOrderMoEは投入直前の最新main HEADで決定論的research job不存在、repo識別子/題名未検出、Library pendingにも同候補なしを確認した。",
-      "candidate_count": 12,
-      "duplicate_filtered_count": 10,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.8333333333333334,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.10790",
-        "arXiv:2606.19746",
-        "arXiv:2604.26557",
-        "arXiv:2604.06664",
-        "arXiv:2606.29207",
-        "arXiv:2607.18141",
-        "arXiv:2604.26837",
-        "arXiv:2608.03555",
-        "arXiv:2606.24467",
-        "arXiv:2603.27138"
-      ],
-      "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。2609最新差分、両方向citation、storage/CXL、KV、network、MoE、GPU compiler、agent/runtimeを最後に再走査する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0820JST-moe-placement-network-5.json"
-    },
     {
       "run_key": "2026-09-13T08:26:04+09:00",
       "round": "specialist-hybrid-attention-pic-1",
@@ -7132,6 +7085,53 @@
       ],
       "next_axis_hint": "MoE expert lifecycle・heterogeneous memory/offloadの2025後半未走査ID帯、またはagentic servingの関連研究を独立に探索する",
       "source_submission": "work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json"
+    },
+    {
+      "run_key": "2026-09-19T06:00:00+09:00",
+      "round": "specialist-edge-offload-3",
+      "axis": "device-edge-cloud multi-tier serving・recursive offloading・network-aware inference",
+      "query_summary": "heterogeneous hardwareからnetwork/edge servingへ軸を変更。2510.11331のheterogeneous edge speculative decodingと2512.25059のresilient collectiveはidentity shardで既収録を確認。2505.16502 RecServeは2505 shardに未登録で、一次arXiv抄録から直接LLM servingのoffloading機構と8 dataset評価を確認したため候補化した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2510.11331",
+        "arXiv:2512.25059",
+        "arXiv:2608.15118",
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "agentic workflow servingのbackward references、または2024-2025のcloud-edge collaborative inferenceで未代表かつsystem-level evaluationを持つ研究を探索する",
+      "source_submission": "work-queue/submissions/20260919T0600JST-discovery-specialist-edge-offload-3.json"
+    },
+    {
+      "run_key": "2026-09-19T06:00:00+09:00",
+      "round": "specialist-heterogeneous-hardware-2",
+      "axis": "heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture",
+      "query_summary": "programmable servingから独立して2025年後半のheterogeneous inference/hardware軸を走査。CLOや既知KV/offload系はidentity shardで除外し、2511.06174 LUT-LLMは2511 shardに未登録で、一次arXiv抄録から実装・実測を伴う直接LLM inference contributionを確認して採用。単なるframework比較研究2511.17593は不採用。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.7142857142857143,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2511.14510",
+        "arXiv:2512.11920",
+        "arXiv:2512.22195",
+        "arXiv:2509.07379",
+        "arXiv:2604.13327"
+      ],
+      "next_axis_hint": "2025後半のagentic serving・workflow runtime、またはnetwork/collectiveとKV transportの未走査ID帯を探索する",
+      "source_submission": "work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json"
     }
   ],
   "axes": {
@@ -12651,6 +12651,32 @@
       "duplicate_ratio": 0.75,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "MoE expert lifecycle・heterogeneous memory/offloadの2025後半未走査ID帯、またはagentic servingの関連研究を独立に探索する"
+    },
+    "device-edge-cloud multi-tier serving・recursive offloading・network-aware inference": {
+      "last_run_key": "2026-09-19T06:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "agentic workflow servingのbackward references、または2024-2025のcloud-edge collaborative inferenceで未代表かつsystem-level evaluationを持つ研究を探索する"
+    },
+    "heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture": {
+      "last_run_key": "2026-09-19T06:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.7142857142857143,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "2025後半のagentic serving・workflow runtime、またはnetwork/collectiveとKV transportの未走査ID帯を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
