@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e3f6cbbee3a78ecd5c91e72c",
-  "job_id": "job-research-2bbcf1d996d23713",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3f6cbbee3a78ecd5c91e72c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e3f6cbbee3a78ecd5c91e72c","job_id":"job-research-2bbcf1d996d23713","data":{"hardware":"2ノード構成で、各ノードにNVIDIA A100 80GB×4、256GB DRAM、4TB SSDを搭載し、ノード間は100Gbps Ethernetで接続。","software":"約2400行のPython実装。gRPCで全体スケジューラとノード管理器を接続し、vLLMスケジューラへブロック管理と協調メモリ管理を統合。","methodology":"LLaMA-3.1-8B（128K文脈）とLLaMA-2-13B（32K文脈）をShareGPTおよびBurstGPT由来の複数ターントレースで評価。比較対象はvLLM、InferCept、Llumnix、Llumnix+InferCept、LMCache。MetaGPTエージェントではParrot-Serveとも比較した。指標は出力トークン当たり時間、最初のトークンまでの時間、秒当たり要求数、正規化エンドツーエンド遅延。助言欠落・誤報率、協調管理、層優先度、層単位読込みの除去実験も行う。","scope":"ShareGPTには実到着時刻がないため、人間の読解・入力速度から次要求時刻を合成し、BurstGPTで別の到着統計も検証する。主対象は助言信号を得られる対話・エージェント・RAG等であり、助言が得られない一括処理は対象外。実験はA100クラスタと2種類のLLaMAモデルに限定される。"},"reservation":{"claim_id":"claim-e3f6cbbee3a78ecd5c91e72c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
