@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 18:05:31 JST**
+> 自動生成: **2026-09-18 18:06:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-18 18:02:43 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-18 18:02:43 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -201,7 +201,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2407.05858` — Fast On-device LLM Inference with NPUs / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 18:02:51 JST** / heartbeat: **—** / lease expiry: **09-18 19:32:51 JST**
+  - claim: **09-18 18:05:36 JST** / heartbeat: **—** / lease expiry: **09-18 19:35:36 JST**
   - evidence: `.survey/work-queue/claims/job-research-23f0e2222a013ba4.json`
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **—** / lease expiry: **09-18 19:02:15 JST**
