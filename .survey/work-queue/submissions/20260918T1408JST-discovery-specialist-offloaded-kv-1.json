@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.17652",
+      "title": "Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches",
+      "source_url": "https://arxiv.org/abs/2609.17652",
+      "paper_path": "papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md",
+      "priority": 94,
+      "reason": "百万token級のagentic sessionでKV cache/indexをhost memoryへoffloadした際、top-k sparse decodingのkey scan帯域が律速になる問題を直接扱う。4-bit K cacheをchannel-major bit-plane化し、queryごとにreverse water-fillingでchannel別read depthを決める。Qwen3-8B・1M tokenで136-bit scan系よりdecode step GPU timeを1.67x高速化し、SparQ 68-bit相当時間では18%少ないread bytesを報告。offloaded KV・長文脈・帯域最適化の重点範囲に強く適合する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T14:00:00+09:00",
+    "round": "specialist-offloaded-kv-sparse-1",
+    "axis": "offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth",
+    "query_summary": "2026年9月のLLM serving/KV cache/MoE/offload新着を横断検索し、検索結果を最新mainのpaper identity indexへ早期照合した。SeqMoE、predictive expert replication、ST-MoE、APEX、PDD、LLM Inference in a Flash、Edge0等は既収録と確認して外部全文取得を省略。未収録だったFathomのみarXiv一次abstractでscope・定量評価・限界を確認して採用した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 7,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.12978",
+      "arXiv:2605.11537",
+      "arXiv:2606.15453",
+      "arXiv:2608.11688",
+      "arXiv:2609.13161",
+      "arXiv:2609.16161",
+      "arXiv:2609.18063"
+    ],
+    "next_axis_hint": "次は2609後半のagentic serving・KV reuse/eviction・GPU/network runtimeへ移り、既収録identityを検索結果段階で除外する",
+    "empty_round_reason": null
+  }
+}
