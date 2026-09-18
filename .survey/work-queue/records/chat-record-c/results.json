@@ -1,13 +1,14 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b1510ac72994dff0cbb0df8f",
-  "job_id": "job-research-be1193ba1dd42ac7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1510ac72994dff0cbb0df8f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b1510ac72994dff0cbb0df8f","job_id":"job-research-be1193ba1dd42ac7","data":{
+"overview":"パッキングで線形演算を計算律速化したうえで、その計算時間と余剰HBM帯域をKVプリフェッチへ回すと、長文デコード注意の転送待ちを大幅に隠せる。Llama3.1-8Bでは2048トークンのプリフィルと128K KV条件でデコード最大8.06倍、全体では条件により最大1.83倍となる。追加オンチップ容量を増やすほど改善するが、プリフィルが短い場合は転送時間が不足して容量効果が小さい。複数要求でも長いarXiv要約ほど先読み窓が増え、パッキング単独より大きなスループット改善を得る。",
+"key_results":[
+{"metric":"デコードのトークン間時間高速化", "value":"最大8.06倍", "baseline":"直列プリフィル→デコード。パッキング単独は同条件1.41倍", "condition":"Llama3.1-8B、TPUv6e-like、2048プリフィルトークン、128K KV、追加512MB先読みメモリ", "interpretation":"長いプリフィルが十分な先読み時間を作り、大容量オンチップメモリが先読みKVを保持するため注意のHBM待ちをほぼ隠せる。"},
+{"metric":"プリフィル+デコード全体遅延高速化", "value":"最大1.83倍", "baseline":"直列実行", "condition":"Llama3.1-8B、512プリフィルトークン、16K KV。別条件1024プリフィルでは1.72倍、パッキング単独1.20倍", "interpretation":"プリフィル自身は高速化しないためデコード単体ほど倍率は高くないが、先読みで全体遅延も短縮する。"},
+{"metric":"追加先読みメモリ容量によるデコード高速化", "value":"0MBで1.73倍から512MBで6.49倍", "baseline":"直列実行", "condition":"Llama3.1-8B、64K KV、1024または2048プリフィルトークン", "interpretation":"先読み時間が十分な条件では性能上限がオンチップ保持容量へ移り、大容量M3Dメモリの空間的利点が直接効く。"},
+{"metric":"サービススループット", "value":"パッキング単独比1.7〜2.4倍。8Bではarxiv summarization 2.4倍、openchat sharegpt4 1.8倍", "baseline":"要求パッキングのみ", "condition":"ポアソン到着、P99スケジューリング遅延1秒、P99 TBT SLO、Llama3.1-8B/70B", "interpretation":"長い要約入力はプリフィルチャンクが多く先読み機会が増えるため、絶対スループットは低くても相対改善が大きい。"},
+{"metric":"HBM帯域相当削減", "value":"1.5〜2.4倍。8B arxiv summarizationでは1.95 QPS条件で最大2.4倍", "baseline":"同じスループットを得るためHBM帯域を増強したパッキング単独", "condition":"複数要求サービス評価", "interpretation":"計算中の未使用帯域を時間的に再配置することで、同等スループットに必要なピークHBM帯域を抑えられる。"},
+{"metric":"厳しいP99 TBT制約下のスループット", "value":"最大3.0倍", "baseline":"パッキング単独", "condition":"Llama3.1-8B、arxiv summarization、P99 TBT 31ms", "interpretation":"遅延制約が厳しい領域でも先読みで注意待ちを削るため、単なる大チャンク化より高い処理量を維持する。"}],
+"negative_results":"プリフィルが512トークンと短い場合、余剰帯域を使える時間が短く、KVが大きくなるほど先読みで転送遅延を隠し切れない。この条件ではオンチップ容量を増やしても改善が小さい。70Bは8BよりKV先読み時間が長く、TPUv7-likeの計算・HBM向上だけでは相対的に追い付かないため絶対スループットが低い。大きいプリフィルチャンクは先読み窓を増やす一方でプリフィル遅延を増やし、要求到着が詰まるとスループットは飽和する。",
+"interpretation":"方式の効果には時間と空間の二つの条件がある。十分長い計算律速プリフィルがあればHBM転送を前倒しでき、十分大きいM3Dバッファがあれば運んだKVを注意開始まで保持できる。どちらか一方が不足するともう一方を増やしても性能は飽和するため、スケジューラとメモリ容量を同時に設計する必要がある。",
+"quality_impact":"KVを圧縮・削除・近似せず、同じFP16推論のデータ移動時刻と保持場所を変える方式なので、アルゴリズム上のモデル品質低下は導入しない。報告性能はシミュレーション値であり、品質ではなくハードウェア実現性とモデル化誤差が主要な不確実性である。"
+},"reservation":{"claim_id":"claim-b1510ac72994dff0cbb0df8f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
