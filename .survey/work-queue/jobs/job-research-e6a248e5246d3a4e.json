@@ -17,16 +17,21 @@
   "created_at": "2026-09-17T16:06:11+00:00",
   "blocker": "一次資料全文の再取得を実施した。検索サービス経由ではarXiv公式abstractのメタデータと抄録は取得できたが、arXiv公式abstract https://arxiv.org/abs/2608.22613、公式PDF https://arxiv.org/pdf/2608.22613、公式HTML https://arxiv.org/html/2608.22613 を直接取得するといずれもDisabledErrorとなった。検索結果には二次資料の長文解説も存在したが、一次資料全文ではないため科学的内容の補完には使用していない。前回とは別runで公式abstract/PDF/HTMLを再試行して同じ実行環境制限を確認したため、このattemptは一時的取得障害としてblockedで耐久保存し、5-slotは生成しない。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-49730322c2e1a64c60b740a8.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-17T21:08:15+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-18T00:29:37+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-17T21:08:15+00:00",
       "reason": "一次資料全文を安全に取得できなかった。arXiv公式PDF https://arxiv.org/pdf/2608.22613 は取得時にDisabledError、arXiv公式abstract https://arxiv.org/abs/2608.22613 もDisabledErrorとなった。別経路として export.arxiv.org/pdf/2608.22613 と ar5iv.labs.arxiv.org/html/2608.22613 も試したが実行環境からアクセス不能だった。検索結果では抄録と二次資料本文は得られたが、workflow-v10は抄録・二次資料から未確認の科学的内容を補完することを禁止しているため5-slotは生成していない。一時的取得障害として再試行対象にする。"
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-18T00:29:37+00:00",
+      "reason": "一次資料全文の再取得を実施した。検索サービス経由ではarXiv公式abstractのメタデータと抄録は取得できたが、arXiv公式abstract https://arxiv.org/abs/2608.22613、公式PDF https://arxiv.org/pdf/2608.22613、公式HTML https://arxiv.org/html/2608.22613 を直接取得するといずれもDisabledErrorとなった。検索結果には二次資料の長文解説も存在したが、一次資料全文ではないため科学的内容の補完には使用していない。前回とは別runで公式abstract/PDF/HTMLを再試行して同じ実行環境制限を確認したため、このattemptは一時的取得障害としてblockedで耐久保存し、5-slotは生成しない。"
     }
   ],
-  "last_blocked_at": "2026-09-17T21:08:15+00:00",
-  "retry_queued_at": "2026-09-17T23:44:33+00:00",
-  "completed_at": "2026-09-18T00:29:37+00:00"
+  "last_blocked_at": "2026-09-18T00:29:37+00:00",
+  "completed_at": "2026-09-18T00:29:37+00:00",
+  "retry_not_before": "2026-09-18T02:05:58+00:00"
 }

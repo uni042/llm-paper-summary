@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 618,
+      "completed": 619,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 47,
+      "ready": 48,
       "completed": 512,
       "superseded": 44,
       "deferred": 3,
@@ -19,11 +19,25 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 47,
+    "ready_research_audit": 48,
     "actively_claimed": 2,
-    "claimable": 45
+    "claimable": 46
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-6c1a5d06d3b875ce",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2609.18849",
+      "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It",
+      "source_url": "https://arxiv.org/abs/2609.18849",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-6be1741cdc42b913",
       "type": "research",
@@ -123,20 +137,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2072895e5b6f0b68",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2410.17043",
-      "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
-      "source_url": "https://arxiv.org/abs/2410.17043",
-      "paper_path": "papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T01:03:35+00:00"
+  "generated_at": "2026-09-18T01:05:53+00:00"
 }

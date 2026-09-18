@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 694,
+  "active_count": 701,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -897,6 +897,14 @@
       ],
       "source_hash": "335a15c8a66a7e201ffd77a11e5a840998f990eb721a3d03c26b32afeede0146"
     },
+    "arXiv:2508.12851": {
+      "path": "papers/inference/04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2508.12851",
+        "arXiv:2508.12851"
+      ],
+      "source_hash": "e4ceaa1259ac40d60c6bad1249ce3e7664232fd7b26621c492ae2e1cbafb83e9"
+    },
     "arXiv:2509.17863": {
       "path": "papers/inference/04-moe-parallelism-communication/2025-2509.17863-expert-as-a-service-moe-serving.md",
       "identifiers": [
@@ -1384,6 +1392,14 @@
       ],
       "source_hash": "7d54a3bbe2814b5291666bfd0c5a4438f8c6738eb4aff8be54b4d130e09033fe"
     },
+    "arXiv:2503.18599": {
+      "path": "papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+      "identifiers": [
+        "DOI:10.1145/3695053.3731019",
+        "arXiv:2503.18599"
+      ],
+      "source_hash": "a76f8c3dad1d83a1cafdde3d3daff53b36c4d6f2807a2db271c4f50982560dae"
+    },
     "arXiv:2505.15781": {
       "path": "papers/inference/06-kv-cache-memory/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
       "identifiers": [
@@ -1392,6 +1408,14 @@
       ],
       "source_hash": "20924fc79a0850e588c71debf87fb58584d35119be702d239d2be714b9402b6b"
     },
+    "arXiv:2505.22618": {
+      "path": "papers/inference/06-kv-cache-memory/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2505.22618",
+        "arXiv:2505.22618"
+      ],
+      "source_hash": "ddf8e1df887c2d92e0410c667ce26a64c3778163652e2f9abc1ead36dd8f9ed9"
+    },
     "arXiv:2506.06295": {
       "path": "papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md",
       "identifiers": [
@@ -1399,6 +1423,14 @@
         "arXiv:2506.06295"
       ],
       "source_hash": "a0e3bd2da0cfe0d46f610e983857f33c687daf75f4aca68c0375a39145e750d8"
+    },
+    "arXiv:2509.23094": {
+      "path": "papers/inference/06-kv-cache-memory/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2509.23094",
+        "arXiv:2509.23094"
+      ],
+      "source_hash": "376bb31ddac9b4451d1ef7abdcd3a0aeaa136a58cb0fb235039ff724f81d7c72"
     },
     "arXiv:2607.27090": {
       "path": "papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md",
@@ -1651,6 +1683,14 @@
       ],
       "source_hash": "3d24fa64cd91725e1803597ec1853d29f30259d2285ebf13318555c746de58e1"
     },
+    "arXiv:2506.04203": {
+      "path": "papers/inference/06-serving-scheduling/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2506.04203",
+        "arXiv:2506.04203"
+      ],
+      "source_hash": "b0ebc64c34f23f13a6caaeb98b8ae99b98da5125ff8a7f84258d2e8dbfc1f5f3"
+    },
     "arXiv:2507.06608": {
       "path": "papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md",
       "identifiers": [
@@ -1704,6 +1744,14 @@
         "arXiv:2605.24832"
       ],
       "source_hash": "c5ea051ca1872cc794fda5300badf90fb71024c0d290d198cf709bdccf7dfbff"
+    },
+    "arXiv:2608.14575": {
+      "path": "papers/inference/06-serving-scheduling/2026-2608.14575-hw-router-hardware-aware-multi-llm-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.14575",
+        "arXiv:2608.14575"
+      ],
+      "source_hash": "1158170f8452e5a4781f2940ad93c096c0f8173e5701eb2c5efe3eb115b57960"
     },
     "arXiv:2604.09557": {
       "path": "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
@@ -3180,6 +3228,14 @@
         "arXiv:2411.07447"
       ],
       "source_hash": "b7236dc747dbc6bac9df3a133f29c910419a15185d9a2ded7872fb6bf184068f"
+    },
+    "arXiv:2411.17741": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+      "identifiers": [
+        "DOI:10.1145/3725843.3756083",
+        "arXiv:2411.17741"
+      ],
+      "source_hash": "de8483a23c602b1ec26b284ae097f75e11025d7be86bfb2ad61279be9ed8ceb7"
     },
     "arXiv:2501.06709": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.06709-mell-multi-gpu-kv-cache-management.md",
@@ -5478,6 +5534,8 @@
     "arXiv:2605.21427": "arXiv:2605.21427",
     "DOI:10.48550/arxiv.2502.06643": "arXiv:2502.06643",
     "arXiv:2502.06643": "arXiv:2502.06643",
+    "DOI:10.48550/arxiv.2508.12851": "arXiv:2508.12851",
+    "arXiv:2508.12851": "arXiv:2508.12851",
     "arXiv:2509.17863": "arXiv:2509.17863",
     "DOI:10.48550/arxiv.2601.03992": "arXiv:2601.03992",
     "arXiv:2601.03992": "arXiv:2601.03992",
@@ -5581,10 +5639,16 @@
     "DOI:10.48550/arxiv.2601.21198": "arXiv:2601.21198",
     "arXiv:2601.21198": "arXiv:2601.21198",
     "arXiv:2605.02960": "arXiv:2605.02960",
+    "DOI:10.1145/3695053.3731019": "arXiv:2503.18599",
+    "arXiv:2503.18599": "arXiv:2503.18599",
     "DOI:10.48550/arxiv.2505.15781": "arXiv:2505.15781",
     "arXiv:2505.15781": "arXiv:2505.15781",
+    "DOI:10.48550/arxiv.2505.22618": "arXiv:2505.22618",
+    "arXiv:2505.22618": "arXiv:2505.22618",
     "DOI:10.48550/arxiv.2506.06295": "arXiv:2506.06295",
     "arXiv:2506.06295": "arXiv:2506.06295",
+    "DOI:10.48550/arxiv.2509.23094": "arXiv:2509.23094",
+    "arXiv:2509.23094": "arXiv:2509.23094",
     "DOI:10.48550/arxiv.2607.27090": "arXiv:2607.27090",
     "arXiv:2607.27090": "arXiv:2607.27090",
     "DOI:10.48550/arxiv.2609.13285": "arXiv:2609.13285",
@@ -5638,6 +5702,8 @@
     "arXiv:2504.19867": "arXiv:2504.19867",
     "DOI:10.48550/arxiv.2505.04021": "arXiv:2505.04021",
     "arXiv:2505.04021": "arXiv:2505.04021",
+    "DOI:10.48550/arxiv.2506.04203": "arXiv:2506.04203",
+    "arXiv:2506.04203": "arXiv:2506.04203",
     "DOI:10.48550/arxiv.2507.06608": "arXiv:2507.06608",
     "arXiv:2507.06608": "arXiv:2507.06608",
     "DOI:10.48550/arxiv.2511.04791": "arXiv:2511.04791",
@@ -5650,6 +5716,8 @@
     "arXiv:2605.06113": "arXiv:2605.06113",
     "DOI:10.48550/arxiv.2605.24832": "arXiv:2605.24832",
     "arXiv:2605.24832": "arXiv:2605.24832",
+    "DOI:10.48550/arxiv.2608.14575": "arXiv:2608.14575",
+    "arXiv:2608.14575": "arXiv:2608.14575",
     "DOI:10.48550/arxiv.2604.09557": "arXiv:2604.09557",
     "arXiv:2604.09557": "arXiv:2604.09557",
     "arXiv:2604.20503": "arXiv:2604.20503",
@@ -5950,6 +6018,8 @@
     "arXiv:2408.15792": "arXiv:2408.15792",
     "DOI:10.48550/arxiv.2411.07447": "arXiv:2411.07447",
     "arXiv:2411.07447": "arXiv:2411.07447",
+    "DOI:10.1145/3725843.3756083": "arXiv:2411.17741",
+    "arXiv:2411.17741": "arXiv:2411.17741",
     "DOI:10.1109/infocom55648.2025.11044533": "arXiv:2501.06709",
     "arXiv:2501.06709": "arXiv:2501.06709",
     "arXiv:2501.08090": "arXiv:2501.08090",

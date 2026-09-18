@@ -1,39 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T01:03:35+00:00",
+  "updated_at": "2026-09-18T01:04:09+00:00",
   "last_run_key": "2026-09-18T10:00:00+09:00",
-  "last_round": "specialist-disaggregated-network-runtime-2",
+  "last_round": "specialist-agentic-kv-tool-progress-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:26:11+09:00",
-      "round": "specialist-older-serving-omissions-6",
-      "axis": "異種/edge serving・hybrid cache schedulingの過去重要欠落",
-      "query_summary": "直近候補投入後にstorage-centric KV、multi-agent/KV reservation、heterogeneous/edge/speculative servingを横断。Tutti、DUAL-BLADE、Tokencake、Robust KV、SPECTRE、Hetis、SwiftSpec、ShuntServeはexisting jobで除外し、最新mainでjob未存在のSpecEdgeとApt-Serveを過去重要欠落として選別した。",
-      "candidate_count": 10,
-      "duplicate_filtered_count": 8,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.8,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.03375",
-        "arXiv:2604.26557",
-        "arXiv:2510.18586",
-        "arXiv:2607.16892",
-        "arXiv:2605.08151",
-        "arXiv:2509.08309",
-        "arXiv:2506.11309",
-        "arXiv:2606.18600"
-      ],
-      "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する",
-      "source_submission": "work-queue/submissions/20260913T0140JST-discovery-1f8a64f753d53399.json"
-    },
     {
       "run_key": "2026-09-13T01:26:11+09:00",
       "round": "specialist-kernel-runtime-determinism-7",
@@ -6909,6 +6885,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はagentic serving・sandbox/state offload・multi-turn KV reuseへ移る",
       "source_submission": "work-queue/submissions/20260918T1015JST-discovery-b421e80d.json"
+    },
+    {
+      "run_key": "2026-09-18T10:00:00+09:00",
+      "round": "specialist-agentic-kv-tool-progress-3",
+      "axis": "agentic serving・tool wait・multi-turn KV retention",
+      "query_summary": "agentic workloadのtool wait、KV eviction、multi-turn retentionを独立検索。abstract/metadataを1取得単位から複数候補評価へ再利用し、benchmark主体のKVShareArenaはrejectとして記録。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はGPU kernel/runtime・CUDA graph・attention kernelの新着へ移る",
+      "source_submission": "work-queue/submissions/20260918T1021JST-discovery-c7329e11.json"
     }
   ],
   "axes": {
@@ -11622,6 +11616,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はagentic serving・sandbox/state offload・multi-turn KV reuseへ移る"
+    },
+    "agentic serving・tool wait・multi-turn KV retention": {
+      "last_run_key": "2026-09-18T10:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次はGPU kernel/runtime・CUDA graph・attention kernelの新着へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

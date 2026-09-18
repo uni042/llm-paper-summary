@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T00:52:43.714202+00:00",
+  "updated_at": "2026-09-18T01:07:10.308738+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T00:52:43.714202+00:00",
+      "last_recorded_at": "2026-09-18T01:07:10.308738+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 237,
         "audit_completed": 0,
-        "discovery_completed": 104,
+        "discovery_completed": 105,
         "blocked": 19,
-        "new_jobs": 159,
-        "new_papers": 233,
+        "new_jobs": 161,
+        "new_papers": 240,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35188193239:1",
-          "recorded_at": "2026-09-17T06:05:37.526198+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35188193239",
-            "run_attempt": "1",
-            "source_sha": "69058544ce0967c80e56b88580508f4b9e604233"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35190535471:1",
           "recorded_at": "2026-09-17T06:36:09.326800+00:00",
@@ -19594,6 +19580,21 @@
           "signals": [
             "research_completed",
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35293758906:1",
+          "recorded_at": "2026-09-18T01:07:10.308738+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35293758906",
+            "run_attempt": "1",
+            "source_sha": "1c84e1de72b93e203910e1d95323dd4b55e6d00d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -22477,6 +22478,14 @@
           "title": "d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-58ba9b968390ace8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23592,6 +23601,20 @@
           "type": "research",
           "canonical_id": "arXiv:2509.23094",
           "title": "d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching"
+        },
+        {
+          "job_id": "job-58ba9b968390ace8",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-6c1a5d06d3b875ce",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.18849",
+          "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It"
         }
       ],
       "new_paper_ids": [
@@ -23827,7 +23850,14 @@
         "arXiv:2609.18110",
         "arXiv:2506.06295",
         "arXiv:2509.26328",
-        "arXiv:2602.21140"
+        "arXiv:2602.21140",
+        "arXiv:2411.17741",
+        "arXiv:2503.18599",
+        "arXiv:2505.22618",
+        "arXiv:2506.04203",
+        "arXiv:2508.12851",
+        "arXiv:2509.23094",
+        "arXiv:2608.14575"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -24053,7 +24083,8 @@
         ".survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json",
         ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json",
         ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json",
-        ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json"
+        ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json",
+        ".survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -24130,8 +24161,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 694,
-      "last_successful_action": "job_blocked"
+      "paper_active_count_after": 701,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

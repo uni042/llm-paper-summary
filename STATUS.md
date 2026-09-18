@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:06:34 JST**
+> 自動生成: **2026-09-18 10:07:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **45** |
+| 収録候補論文 | **48** |
+| 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-18 09:52:39 JST（13分前）** |
+| 最終検証済みResearch収録 | **09-18 09:52:39 JST（14分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **48** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **48** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **9** | **10** | **2** | **8** | **0** | **0** | **28** |
-| 合計 | **27** | **13** | **5** | **8** | **2** | **0** | **28** |
+| Discovery | **10** | **10** | **3** | **7** | **0** | **0** | **28** |
+| 合計 | **28** | **13** | **6** | **7** | **2** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -113,6 +113,10 @@
   - result: `.survey/work-queue/results/20260918T1015JST-discovery-b421e80d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1015JST-discovery-b421e80d.json`
   - 探索軸: 分離サービング・routing・HPC scale-out
+- **09-18 10:04:09 JST** job `job-58ba9b968390ace8` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1021JST-discovery-c7329e11.json`
+  - 探索軸: agentic serving・tool wait・multi-turn KV retention
 - **09-18 04:08:05 JST** job `job-eb22aac21645da23` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
@@ -173,7 +177,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 10:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **8件** / 候補: **28件**
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **7件** / 候補: **28件**
 - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion / NVMe/SSD/object-storage KV offload / MoE expert cache・prefetch・offload / CXL/PIM/NDP・隣接memory systems / output-length scheduling・deterministic inference / 最新9月17日新着・CXL cluster memory/speculative serving / citation/related-work・LMCache/DistServe lineage
 - round `specialist-2609-memory-moe-new-arrivals-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
@@ -186,7 +190,7 @@
 - round `specialist-agentic-kv-tool-progress-3` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1021JST-discovery-c7329e11.json`
   - 探索軸: agentic serving・tool wait・multi-turn KV retention
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json` (`ok=true`)
 - round `specialist-gpu-kernel-runtime-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
   - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
@@ -246,7 +250,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **48** |
 
 ### 候補の重複・識別情報欠損
 
@@ -274,10 +278,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **487** |
+| 成功result未照合のimmutable submission | **486** |
 | └ Research | **350** |
 | └ Audit | **2** |
-| └ Discovery | **135** |
+| └ Discovery | **134** |
 
 ### 厳格検証が未成立のcompleted job
 
