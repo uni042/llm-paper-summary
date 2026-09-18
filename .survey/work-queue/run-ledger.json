@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T12:39:05.193934+00:00",
+  "updated_at": "2026-09-18T12:43:43.814398+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T12:39:05.193934+00:00",
+      "last_recorded_at": "2026-09-18T12:43:43.814398+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 253,
+        "research_completed": 254,
         "audit_completed": 0,
         "discovery_completed": 143,
         "blocked": 29,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35266147403:1",
-          "recorded_at": "2026-09-17T19:39:27.487132+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35266147403",
-            "run_attempt": "1",
-            "source_sha": "c146d1483968bd9e49605f12c6981a1897f270cb"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35266583087:1",
           "recorded_at": "2026-09-17T19:44:01.054740+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35345727140",
             "run_attempt": "1",
             "source_sha": "e3fee2423d8b427274b78f4bf7916045b968b921"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35346169083:1",
+          "recorded_at": "2026-09-18T12:43:43.814398+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35346169083",
+            "run_attempt": "1",
+            "source_sha": "22e0275926914b6ffad68cb9e7b6274e1cfb6249"
           },
           "signals": [
             "research_completed"
@@ -23000,6 +23000,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.14717",
           "title": "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-326d710987e96b1f",
+          "type": "research",
+          "canonical_id": "arXiv:2609.17983",
+          "title": "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
           "from": "ready",
           "to": "completed"
         }
