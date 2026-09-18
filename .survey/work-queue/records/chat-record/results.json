@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-49a5f136c96efe1a74ef7842",
-  "job_id": "job-research-b2d29fa9c529bdfd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-49a5f136c96efe1a74ef7842",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-49a5f136c96efe1a74ef7842","job_id":"job-research-b2d29fa9c529bdfd","data":{"overview":"D-NOVAは候補埋め込みをNAND外へ読み出して再順位付けする経路をなくすことで、CPU基準に対して33〜41倍低遅延、58〜71倍低エネルギーを達成する。既存の記憶内検索器REISに対しても保守構成で3.01〜3.79倍低遅延、攻めた構成で最大7.53倍低遅延となり、定常処理量は最大8.6〜12.1倍へ伸びる。局所性配置は検索で触るサブブロック数を約4割減らし、周辺加算器の面積費用はプレーン面積の1.5%未満である。","key_results":[{"metric":"CPU比検索遅延","value":"33〜41倍低減","baseline":"128コアCPU上のFP32 IVF-Flat","condition":"六データ集合・二エンコーダ、保守的D-NOVA構成","interpretation":"完全埋め込みをDRAMへ置いてCPU計算する経路に対し、NAND内二値検出と小さな得点転送だけで検索する効果を示す。"},{"metric":"CPU比エネルギー効率","value":"58〜71倍低エネルギー","baseline":"CPUソフトウェア基準","condition":"六データ集合・二エンコーダ","interpretation":"大量のDRAMアクセスとCPU類似度計算を除去し、NAND配列内検出へ置換することで消費を削減する。"},{"metric":"REIS比定常処理量","value":"4.3〜6.1倍、攻めた構成8.6〜12.1倍","baseline":"REIS記憶内検索器","condition":"大バッチで処理系を飽和","interpretation":"REISが最終候補をQLCから読み制御器でINT8再順位付けするのに対し、D-NOVAは第三段階まで配列内で処理する。"},{"metric":"局所性配置による活性化削減","value":"中央値約38%〜44%","baseline":"通常の先詰め配置","condition":"NQとHotpotQAの第二・第三検索段階","interpretation":"同時参照されやすいクラスタを近接配置して、問合せごとに起動するサブブロックとプレーンを減らす。"},{"metric":"周辺回路面積","value":"0.023 mm²/plane、1.5%未満","baseline":"1.476 mm²のプレーン面積","condition":"256ビット線ごとに共有加算器、64加算器/plane","interpretation":"得点集約回路は既存CMOS-under-Array領域へ収まり、ダイ面積への影響を小さくできる。"}],"negative_results":"QLCしきい値ばらつき下で許容幅1では検出精度が10%未満まで崩れ、実用にならない。許容幅を2以上へ広げる必要があるが、大きすぎる3では偽陽性が増える条件がある。同時活性化ワード線数を増やすほど処理量は上がるが検索精度は下がり、最も攻めた構成はFP32-IVF基準から数%のRecall@100低下を許容する。実機SSDではなくモデル評価である。","interpretation":"従来方式の支配費用はNAND検出そのものより、候補の多値読出し、制御器への搬送、制御器側再順位付けにある。D-NOVAは検索得点をNANDの導通判定として直接得るため、この配列外経路をほぼ消す。同時活性化数を増やしても総ワード線切替数は大きく変わらないので、エネルギーは近いまま検出周期だけを短縮しやすい。","quality_impact":"近似検索であり完全に損失なしではない。対照学習アダプタと許容幅2により多くの条件でFP32-IVFに近いRecall@100を維持するが、高並列構成では数%の精度低下と処理量向上を交換する。"},"reservation":{"claim_id":"claim-49a5f136c96efe1a74ef7842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
