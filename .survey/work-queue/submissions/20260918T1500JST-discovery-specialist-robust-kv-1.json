@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/06-serving-scheduling/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "priority": 87,
+      "reason": "LLM servingで出力長不確実性に起因するKV cache予約の過不足を直接扱い、GPU parallelism、request-class別KV reservation、heterogeneous serving group routing、prefix cachingをSLO制約下で共同最適化する。Wasserstein distributionally robust optimizationとblock coordinate descentを用い、BurstGPT/Azure/ShareGPT traceで固定quantile予約より最大56%低コストを報告しており、KV memory managementとserving schedulingの交差領域として収録価値が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T15:00:00+09:00",
+    "round": "specialist-robust-kv-uncertainty-1",
+    "axis": "KV reservation・output-length uncertainty・heterogeneous serving routing・SLO",
+    "query_summary": "新着2609の重複率が高かったため、KV cache managementとserving schedulingの隣接期間へ検索窓を移した。検索結果段階で既知のINFERCEPT/Preble/CacheFlow等を除外し、未収録をGitHub正本で再照合。arXiv一次abstractから問題設定・手法・trace-driven定量評価が確認できた2607.16892を採用した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2402.01869", "arXiv:2407.00023", "arXiv:2604.25080", "arXiv:2509.07379", "arXiv:2607.08057"],
+    "next_axis_hint": "次はDBMS/OS由来のuncertainty-aware resource reservation、CXL/NVMe階層KV、network-aware disaggregated servingへ軸を移す",
+    "empty_round_reason": null
+  }
+}
