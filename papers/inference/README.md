@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **679本**。
+収録論文: **682本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**679本**。
+推論論文：**682本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -38,7 +38,7 @@
 | [02-moe-offload](02-moe-offload/README.md) | 2 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
 | [03-hierarchical-memory](03-hierarchical-memory/README.md) | 1 |
-| [03-kv-cache](03-kv-cache/README.md) | 1 |
+| [03-kv-cache](03-kv-cache/README.md) | 3 |
 | [03-moe-expert-offload](03-moe-expert-offload/README.md) | 4 |
 | [03-offload-hierarchical-memory](03-offload-hierarchical-memory/README.md) | 2 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 9 |
@@ -57,7 +57,7 @@
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 9 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 10 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |

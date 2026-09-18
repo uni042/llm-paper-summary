@@ -17,5 +17,16 @@
   "created_at": "2026-09-16T19:03:45+00:00",
   "completed_at": "2026-09-18T05:45:59+00:00",
   "blocker": "このrunではFathomとPATの一次資料全文を精読した後、arXiv公式HTML取得に対して外部取得基盤からDisabledErrorが実際に返り、以後の一次資料全文取得が利用不能となった状態で本jobが新規割当された。arXiv:2410.17043の公式PDF/HTML本文をこのattemptでは取得・精読できていないため、selection_reasonや二次資料からAuroraの手法・評価条件・主要結果・限界を5-slotへ推測生成しない。一時的blockedとして耐久保存し、永久除外にはしない。外部取得枠が復旧したrunでarXiv公式PDF/HTMLと、存在する場合は会議・著者公式全文経路を確認して全文精読から再試行する。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-c45eda0ca290930fb74c6805.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c45eda0ca290930fb74c6805.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-18T05:45:59+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-18T05:45:59+00:00",
+      "reason": "このrunではFathomとPATの一次資料全文を精読した後、arXiv公式HTML取得に対して外部取得基盤からDisabledErrorが実際に返り、以後の一次資料全文取得が利用不能となった状態で本jobが新規割当された。arXiv:2410.17043の公式PDF/HTML本文をこのattemptでは取得・精読できていないため、selection_reasonや二次資料からAuroraの手法・評価条件・主要結果・限界を5-slotへ推測生成しない。一時的blockedとして耐久保存し、永久除外にはしない。外部取得枠が復旧したrunでarXiv公式PDF/HTMLと、存在する場合は会議・著者公式全文経路を確認して全文精読から再試行する。"
+    }
+  ],
+  "last_blocked_at": "2026-09-18T05:45:59+00:00",
+  "retry_not_before": "2026-09-18T07:00:41+00:00"
 }

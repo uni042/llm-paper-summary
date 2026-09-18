@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T05:03:37+00:00",
-  "last_run_key": "2026-09-18T14:00:00+09:00",
-  "last_round": "specialist-late-september-inference-2",
+  "updated_at": "2026-09-18T05:59:23+00:00",
+  "last_run_key": "2026-09-18T15:00:00+09:00",
+  "last_round": "specialist-robust-kv-uncertainty-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "late-September inference検索窓の有望結果が最新canonical identityで既収録だった",
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T02:29:24+09:00",
-      "round": "specialist-kv-compression-temporal-revisit-1",
-      "axis": "新着KV圧縮・時間集約・長推論再参照",
-      "query_summary": "2026年9月新着を中心にKV cache compression、decode-time eviction、long-reasoning revisit patternを検索し、abstract・書誌情報・一次資料リンクを軽量評価した。最新mainのidentity/queueとrepository code searchでcanonical IDとタイトルを再確認し、未収録と判断した2件だけを送信した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は9月新着のMoE expert placement/cache/prefetchまたは異種GPU・CXL/NVMe階層メモリへ軸を移す",
-      "source_submission": "work-queue/submissions/20260913T0230JST-discovery-specialist-kv-compression.json"
-    },
     {
       "run_key": "2026-09-13T02:29:24+09:00",
       "round": "specialist-important-systems-omissions-2",
@@ -6970,6 +6955,30 @@
       ],
       "next_axis_hint": "次は時系列新着から離れ、既収録の高価値systems論文のforward/backward citationとDBMS/OS/storage隣接分野へ移る",
       "source_submission": "work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json"
+    },
+    {
+      "run_key": "2026-09-18T15:00:00+09:00",
+      "round": "specialist-robust-kv-uncertainty-1",
+      "axis": "KV reservation・output-length uncertainty・heterogeneous serving routing・SLO",
+      "query_summary": "新着2609の重複率が高かったため、KV cache managementとserving schedulingの隣接期間へ検索窓を移した。検索結果段階で既知のINFERCEPT/Preble/CacheFlow等を除外し、未収録をGitHub正本で再照合。arXiv一次abstractから問題設定・手法・trace-driven定量評価が確認できた2607.16892を採用した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2402.01869",
+        "arXiv:2407.00023",
+        "arXiv:2604.25080",
+        "arXiv:2509.07379",
+        "arXiv:2607.08057"
+      ],
+      "next_axis_hint": "次はDBMS/OS由来のuncertainty-aware resource reservation、CXL/NVMe階層KV、network-aware disaggregated servingへ軸を移す",
+      "source_submission": "work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json"
     }
   ],
   "axes": {
@@ -11891,6 +11900,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次は時系列新着から離れ、既収録の高価値systems論文のforward/backward citationとDBMS/OS/storage隣接分野へ移る"
+    },
+    "KV reservation・output-length uncertainty・heterogeneous serving routing・SLO": {
+      "last_run_key": "2026-09-18T15:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はDBMS/OS由来のuncertainty-aware resource reservation、CXL/NVMe階層KV、network-aware disaggregated servingへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

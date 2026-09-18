@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T05:46:02.577359+00:00",
+  "updated_at": "2026-09-18T06:01:32.064502+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T05:46:02.577359+00:00",
+      "last_recorded_at": "2026-09-18T06:01:32.064502+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 244,
         "audit_completed": 0,
-        "discovery_completed": 118,
+        "discovery_completed": 119,
         "blocked": 21,
-        "new_jobs": 180,
-        "new_papers": 244,
+        "new_jobs": 181,
+        "new_papers": 247,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35206463858:1",
-          "recorded_at": "2026-09-17T09:41:42.223819+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35206463858",
-            "run_attempt": "1",
-            "source_sha": "f7644d2751cbef2fb615c18d0ecba9ecb0c04142"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35206570845:1",
           "recorded_at": "2026-09-17T09:42:39.146975+00:00",
@@ -19596,6 +19582,21 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35312949399:1",
+          "recorded_at": "2026-09-18T06:01:32.064502+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35312949399",
+            "run_attempt": "1",
+            "source_sha": "c1fb07afedbb591bfbd4ad249685683ee5b0beed"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -22663,6 +22664,14 @@
           "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-a3b20fcf00af86ca",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23925,6 +23934,13 @@
           "type": "research",
           "canonical_id": "arXiv:2609.17652",
           "title": "Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches"
+        },
+        {
+          "job_id": "job-a3b20fcf00af86ca",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -24171,7 +24187,10 @@
         "arXiv:2609.18112",
         "arXiv:2609.18849",
         "arXiv:2609.13692",
-        "arXiv:2609.17943"
+        "arXiv:2609.17943",
+        "arXiv:2508.02558",
+        "arXiv:2511.22333",
+        "arXiv:2609.17652"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -24411,7 +24430,8 @@
         ".survey/work-queue/results/20260918T1136JST-discovery-specialist-scheduling-4.json",
         ".survey/work-queue/results/20260918T1310JST-discovery-specialist-moe-cache-2.json",
         ".survey/work-queue/results/20260918T1408JST-discovery-specialist-offloaded-kv-1.json",
-        ".survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json"
+        ".survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json",
+        ".survey/work-queue/results/20260918T1500JST-discovery-specialist-robust-kv-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -24488,8 +24508,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 705,
-      "last_successful_action": "job_blocked"
+      "paper_active_count_after": 708,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
