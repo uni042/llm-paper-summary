@@ -1,0 +1,16 @@
+name: claim-wait-regression
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m unittest .survey/tests/test_continuation_gate_claim_wait.py .survey/tests/test_run_finalization_gate.py
