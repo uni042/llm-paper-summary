@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-76e7571f47153ba10e1f8ee9","job_id":"job-research-56fbeb640bc1560d","data":{"canonical_id":"arXiv:2603.28018","arxiv_id":"2603.28018","doi":"10.48550/arXiv.2603.28018","openreview_id":null,"arxiv_categories":{"primary":"eess.SP","cross_list":[]},"title":"Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill","summary":"モバイル端末がEdge LLMを持つ基地局間でハンドオーバすると、target側は過去tokenのKVキャッシュを復元するまで生成を再開できない。全tokenを送りprefill再計算するtoken-based HOは計算が重く、全KVをbackhaul転送するcache-based HOは帯域を圧迫する。本研究のjoint cache-token handover（ctHO）は、複数UEに共通のprefill長Lと残余KVのbackhaul rate schedulingを共同最適化し、worst-user handover delayを最小化する。prefill遅延がLとともに増え、最小cache-transfer遅延が減る単調性から両者を均衡させ、固定Lでは最早deadline優先のconstructive schedulerで最適値を達成する。Qwen2.5-7B-Instruct由来のKVサイズを用いたシミュレーションで、cHO比最大3.1倍、tHO比最大3.7倍の遅延削減を報告する。","list_summary":"Edge LLM移動時にprefill再計算するprefix長と残余KVのbackhaul転送を共同最適化し、複数UEの最悪ハンドオーバ停止時間を最小化する。","authors":["Seunghun Lee","Jihong Park","Ce Zheng","Hyuncheol Park"],"authors_affiliations":"KAIST; Singapore University of Technology and Design; Pengcheng Lab","published":"2026-03-30","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"Edge LLM / KV cache transfer / mobility handover / prefill recomputation / network scheduling","topics":["Edge LLM","KVキャッシュ転送","prefill再計算","ハンドオーバ","backhaul scheduling"],"importance":"KV状態を『転送するか再計算するか』の二択ではなくtoken位置で分割し、通信帯域とprefill計算を同時利用する最適境界を解析的に与える。","implementation":"実システム実装ではなく解析モデルとシミュレーション。固定prefill長に対する最小cache-transfer delayと実現可能なrate schedulingを閉形式・constructive policyで導出。","hardware_evaluation":"実GPU実測ではなく、Qwen2.5-7B-Instruct（28 layers, 4 KV heads, head dim 128, 16-bit）からKV payloadを算出し、線形prefill delay modelを用いたシミュレーション。","quality_effect":"同一LLM・同一context状態をKV転送またはtoken prefillで再構築するため、モデル出力品質を近似して削る方式ではない。","source":"https://arxiv.org/abs/2603.28018","sources":["https://arxiv.org/abs/2603.28018","https://arxiv.org/html/2603.28018v1"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":11},"reservation":{"claim_id":"claim-76e7571f47153ba10e1f8ee9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3b62c6bd3d0c2191dd7cade2",
+  "job_id": "job-research-c2f58815c322fab7",
+  "data": {
+    "canonical_id": "arXiv:2510.24051",
+    "arxiv_id": "2510.24051",
+    "doi": "10.1145/3731569.3764814",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
+    "summary": "Pieは、従来の単一化されたprefill-decode生成ループをembed・forward・sample・KV操作などの細粒度サービスハンドラへ分解し、利用者提供のWebAssemblyプログラムであるinferletへ生成制御を委譲するプログラマブルLLMサービングシステムである。アプリケーションがKVキャッシュの割当・共有・マスク、独自デコード、外部I/Oを同じ制御フロー内で組み合わせられる一方、制御層がAPI呼び出しを水平・垂直バッチ化してGPU効率を維持する。NVIDIA L4上のLlama 3 1B/3B/8B評価では通常テキスト生成の遅延オーバーヘッドを3〜12%程度に抑え、エージェント型ワークフローや複雑な推論では1.1〜2.4倍低遅延、1.3〜3.4倍高スループットを報告する。",
+    "list_summary": "生成ループを細粒度APIへ分解し、Wasm inferletがKV・デコード・I/Oを直接制御しつつ適応バッチ処理でGPU効率を維持するプログラマブルLLMサービング基盤。",
+    "authors": [
+      "In Gim",
+      "Zhiyao Ma",
+      "Seung-seob Lee",
+      "Lin Zhong"
+    ],
+    "authors_affiliations": "Yale University",
+    "published": "2025-10-28",
+    "publication": "SOSP 2025",
+    "publication_type": "査読済み会議論文",
+    "publication_status": "ACM SOSP 2025; arXiv v1",
+    "lineage": "LLM serving / programmable inference / KV cache / agentic workflows",
+    "topics": [
+      "プログラマブル推論",
+      "LLMサービング",
+      "KVキャッシュ",
+      "エージェント型ワークフロー",
+      "WebAssembly",
+      "適応バッチ処理"
+    ],
+    "importance": "アプリケーション固有のKV管理・生成手順・外部I/Oをサービングシステム改造なしに要求単位で組み合わせるため、promptではなくprogramをサービス単位にする設計を実装・評価した。",
+    "implementation": "PieをWebAssembly inferlet runtime、中央制御層、GPU推論層の3層で実装。42 API（LLM実行・資源管理18、runtime/I/O等24）を公開し、公式コードを公開。",
+    "hardware_evaluation": "GCP g2-standard-32、NVIDIA L4 24GB。Llama 3 1B/3B/8BをBF16で評価。",
+    "quality_effect": "主眼はサービングの表現力と性能で、モデル重みや通常の生成意味論を変更しない。独自attentionやsamplingはinferlet側の選択により品質特性が変わり得る。",
+    "source": "https://arxiv.org/abs/2510.24051",
+    "sources": [
+      "https://arxiv.org/abs/2510.24051",
+      "https://arxiv.org/html/2510.24051",
+      "https://doi.org/10.1145/3731569.3764814"
+    ],
+    "code": "https://github.com/pie-project/pie",
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary manuscript",
+    "references_total": null
+  },
+  "reservation": {
+    "claim_id": "claim-3b62c6bd3d0c2191dd7cade2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

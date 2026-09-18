@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-76e7571f47153ba10e1f8ee9","job_id":"job-research-56fbeb640bc1560d","data":{"hardware":"実機Edge LLMクラスタではなくシミュレーション。LLMパラメータはQwen2.5-7B-Instruct: 28 Transformer layers、4 KV heads、head dimension 128、16-bit elements。これよりKV payloadは458,752 bit/token、3072-token contextで176MBと算出する。","software":"解析・シミュレーション研究。prefill delayはp(L)=aL+bの線形modelで、default a=9.4267e-5、b=2.4e-3。比較は提案ctHO、全tokenをprefillするtHO（L=Cmax）、全KVをbackhaul転送するcHO（L=0）。コード公開は論文中に記載されない。","methodology":"基本設定はK=4 UE、C_iをUnif[1024,Cmax]からsample、batch prefill cycle Tc=0.01s。source/target BSを300m離した1D line networkに置き、UE初期位置120〜130m、速度20m/s、150m境界でhandoverする。backhaul rate、prefill speed 1/a、Cmax、UE数Kをsweepしてworst-user LLM HO delayを比較する。追加評価ではhandover後G=1024 tokenのwireless streamingも含め、BS間距離をsweepする。wireless modelはreference SNR 10dB at 20m、path-loss exponent 3.5、bandwidth 2MHz、token size 12bitを用いる。","scope":"理論的global optimalityとネットワーク/LLMパラメータを用いた数値評価が中心で、実際のGPU prefill時間変動、KV serialization/DMA、backhaul protocol overhead、異種model/BS、handover予測誤差などは実機検証されていない。sourceとtargetは同一LLM architecture/parametersを持つ前提で、hard handover中はdecodeを停止する。"},"reservation":{"claim_id":"claim-76e7571f47153ba10e1f8ee9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-3b62c6bd3d0c2191dd7cade2",
+  "job_id": "job-research-c2f58815c322fab7",
+  "data": {
+    "hardware": "GCP g2-standard-32 VM、NVIDIA L4 GPU 24GBをPieと比較系に共通使用。Llama 3 1B/3B/8BをBF16 weights、BF16 KV cache/activationsで評価する。主要なagentic workflow評価は1Bモデルを使用し、system overheadは最大896 concurrent inferlets等で測定する。",
+    "software": "PieはWebAssembly runtime（wasmtime pooled allocation）、中央control layer、Pythonを含むinference layer、42 APIとsupport libraryで構成。比較対象はvLLM、SGLang、および機能別の専用実装（例: StreamingLLM、LMQL等）。ReACT、CodeACT、Swarm、Tree/Graph/Recursion-of-Thought、attention sink/windowed attention、prefix caching、speculative/constrained decoding、beam search等をinferletとして実装する。",
+    "methodology": "評価はQ1: 新興LLMアプリを表現できるか、Q2: end-to-end latency/throughputを既存servingと比較して改善できるか、Q3: programmabilityのsystem overheadはいくらか、の3問で構成する。agentic workflowではReACT/CodeACT/SwarmをvLLM/SGLangのPython client実装と比較し、外部I/O回数を含むend-to-end latencyとagents/sを測る。複雑推論・attention・既存serving機能をinferletで再現し性能比較する。microbenchmarkではinferlet cold/warm launch、API call latency、text completion TPOT、API細粒度化のopportunity cost、model size、batching strategyを分解測定する。",
+    "scope": "単一NVIDIA L4・単一推論backendを中心とした実装評価であり、分散multi-GPU/multi-node環境のload balancing、KvPage locality、SLO、fault toleranceは未評価。通常テキスト生成からagentic/branching workflowまで幅広いが、商用multi-tenant security hardeningや大規模分散スケールは今後の課題である。"
+  },
+  "reservation": {
+    "claim_id": "claim-3b62c6bd3d0c2191dd7cade2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

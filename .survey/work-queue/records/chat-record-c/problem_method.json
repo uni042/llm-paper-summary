@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-76e7571f47153ba10e1f8ee9","job_id":"job-research-56fbeb640bc1560d","data":{"problem":"Edge LLMで移動UEがsource BSからtarget BSへハンドオーバすると、autoregressive decodeが依存する過去contextのKV cacheをtarget側へ復元する必要があり、その間token streamingが停止する。token-based handover（tHO）は過去tokenを送りtargetでprefillしてKVを再計算するためTTFTが大きく、複数UEのbatch prefillでは最悪ユーザ遅延が問題になる。cache-based handover（cHO）はKVを直接backhaul転送して計算を避けるが、billion-parameter LLMではKVが数百MB〜GB級となり、共有backhaulがボトルネックになる。研究課題は、各UEのhandover時刻とcontext長が異なる状況で、prefill計算とKV転送をどう分担・スケジュールすればworst-user service interruptionを最小化できるかである。","novelty":"ctHOは全prefillまたは全KV転送という両端の方式を統一し、全UEに共通のprefix長Lをbatch prefillで再計算し、各UEの残り(C_i-L)^+ token分KVだけをbackhaulで送る。固定Lに対する最小worst-user cache-transfer delayを累積残余需要S_k(L)から閉形式で導き、その下界を達成するconstructive rate schedulerを与える。さらにprefill delayはLに対して非減少、cache-transfer delayは非増加であることを使い、両者が等しくなるLを選べばglobal optimumとなることを証明する。通信と計算の境界を明示的に均衡させる点が中心的貢献である。","method_overview":"K UEをhandover時刻τ_i順に並べ、UE iのcontext C_iのうちmin(C_i,L) tokenを共通batch prefill、残り(C_i-L)^+をKV転送する。backhaul容量R_bhをtoken当たりKV payload s_KVで正規化してR tokens/sとし、各時刻のUE別rate合計をR以下に制約する。目的D(L,r)は各UEでprefill完了とKV転送完了の遅い方からhandover時刻を引いた値の最大。固定Lでは最初のk UEの残余需要S_k(L)を用い、最小転送遅延D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+を得る。実現policyはactive UEのうちtarget completion time d_i=τ_i+D_tx*が最小のUEへ全backhaulを割り当て、到着・完了時に切替える。最後にV(L)=max(D_pf(L),D_tx*(L))を最小化する。","components":[{"name":"Token/KV分割によるctHO","description":"共通prefix Lをtoken転送後にtarget側でbatch prefillし、prefix以降だけsourceからKVとして転送する。L=0がcHO、L=CmaxがtHOなので両方式を同一設計空間へ包含する。"},{"name":"固定Lの最小cache-transfer delay解析","description":"handover済みUEの累積残余KV需要と利用可能backhaul時間から任意policyの下界を導き、D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+と閉形式化する。"},{"name":"Constructive backhaul scheduler","description":"各UEに共通worst-delayからtarget deadline d_iを定め、active集合で最小deadlineのUEへ全容量Rを割り当てる。active集合変化時だけ切替え、解析下界を達成して固定Lで最適となる。"},{"name":"Prefill/transfer均衡によるL選択","description":"D_pf(L)が非減少、D_tx*(L)が非増加なので、交点があれば両者を等しくするLがV(L)を最小化する。交点がなければL=0またはCmaxの境界解となる。"}],"system_design":"target BSは最新handover後のbatch cycle境界から共通prefixをprefillし、source BSはhandover発生後から残余KVをbackhaul送信する。二処理は並行し、decode再開は両方完了後となるため、遅い側を均衡させるmin-max設計になる。"},"reservation":{"claim_id":"claim-76e7571f47153ba10e1f8ee9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-3b62c6bd3d0c2191dd7cade2",
+  "job_id": "job-research-c2f58815c322fab7",
+  "data": {
+    "problem": "vLLM等の既存LLMサービング基盤は、高スループットのテキスト補完を想定した単一化されたprefill-decodeループを中心に設計され、KVキャッシュ管理、次トークン予測・sampling、外部処理との接続をシステム側の全体方針として固定する。この構造ではTree/Graph/Recursion-of-Thoughtのように実行時状態に応じて特定KVを保持・複製・破棄する処理、投機的デコードや制約付き生成のように生成手順を要求ごとに変える処理、ReACT等で外部APIやコード実行を生成途中に挟む処理が難しい。外部ツール呼出しをクライアントへ戻す方式ではネットワーク往復に加え、要求間でKV状態を失って再prefillする場合がある。著者らは次世代基盤の要件を、アプリケーション固有KV制御、生成過程のカスタマイズ、計算・I/Oの統合の3点として定義する。",
+    "novelty": "Pieの中心的な新規性は、promptをサービス単位とする固定生成パイプラインではなく、生成を細粒度ハンドラへ分解し、Turing完全な利用者プログラムinferletをサービス単位にする点にある。inferletはKVページを明示管理し、embed・forward・sampleを任意順序で組み合わせ、HTTP等のI/Oも同一プログラム内で実行できる。一方でGPU操作を各inferletが直接実行するのではなく、中央制御層がcommand queueの依存関係を利用して複数inferlet間の水平バッチと同一queue内の互換な連続操作の垂直バッチを形成するため、要求ごとのプログラマビリティと共有GPUのバッチ効率を両立する。",
+    "method_overview": "Pieはアプリケーション層、制御層、推論層の3層構成を採る。アプリケーション層ではWebAssembly runtime上で単一スレッド・イベント駆動のinferletを隔離実行し、非同期APIで並行I/Oを扱う。APIはLLM forwardをembed、forward、sampleへ分解し、Embedと8〜32 token単位のKvPageを明示資源として扱う。各inferletは仮想資源アドレス空間を持ち、KVのallocate/deallocate/copy/mask/import/exportを制御する。GPU処理を伴うAPIはcommand queueへ入り、制御層のwork-conserving adaptive batch schedulerが依存関係を守りつつバッチ化し、推論層がGPU kernel/backendを実行する。外部I/Oやinferlet間通信は制御層で直接処理する。",
+    "components": [
+      {
+        "name": "InferletとWebAssembly隔離実行",
+        "description": "利用者提供プログラムinferletが生成全体を制御する。Wasm runtimeで軽量隔離し、C++/Rust/Python等Wasmへコンパイル可能な言語を利用できる。単一スレッド・イベント駆動とasync APIにより、外部API待ちを含むagentic workflowを自然に記述する。"
+      },
+      {
+        "name": "細粒度LLM APIと明示的KV資源管理",
+        "description": "42 APIのうち18をLLM実行・資源管理に割り当て、embed/forward/sampleとKvPage操作を公開する。KvPageは8〜32 tokenの連続KVブロックで、inferletが割当、解放、コピー、token-level mask、import/exportを明示制御する。output distributionは既定top-K=256へ切り詰め転送量を抑える。"
+      },
+      {
+        "name": "Command queueと適応バッチスケジューラ",
+        "description": "GPU処理APIは依存関係と優先度を示すcommand queueに投入される。制御層は異なるqueueの同種操作をまとめる水平バッチと、同一queue内で競合しない連続同種操作をまとめる垂直バッチを形成する。GPUがidleになると即座にbatch形成を促すwork-conserving方式で、細粒度APIによるGPU利用率低下を抑える。"
+      },
+      {
+        "name": "計算・I/O統合とinferlet間共有",
+        "description": "HTTP、client通信、broadcast/subscribe等24のruntime/I/O APIを制御層で処理する。agentは生成途中のtool callをクライアント往復なしに実行でき、KVを保持したまま再開できる。KV import/exportによりinferlet間で状態共有も可能。"
+      }
+    ],
+    "system_design": "アプリケーション固有ロジックをWasm側へ分離し、制御層が仮想資源管理とGPU APIバッチ化を担当、推論層が低水準GPU実行を担当する。kernel fusion、量子化、tensor parallel等は推論層の直交課題として残し、上位APIはTransformer系モデルの生成フローをプログラム可能にすることへ集中する。"
+  },
+  "reservation": {
+    "claim_id": "claim-3b62c6bd3d0c2191dd7cade2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
