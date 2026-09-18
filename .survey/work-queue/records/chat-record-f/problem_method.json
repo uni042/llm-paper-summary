@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-463bea41cf8b4856e744cae4",
+  "attempt_id": "attempt-406c30cc4c225531bcd809ab",
   "job_id": "job-research-7b5d4afbd3eabe62",
   "data": {
     "problem": "既存のプリフィル・デコード分離は、計算律速のプリフィルとメモリ律速のデコードを別GPUへ分けるが、プリフィル内部では要求をほぼ同質として扱う。実際の複数ターン対話では、新規トークンが短い再プリフィルが多数を占め、長い初回プリフィルと同じバッチに入ると、短い要求は長いGEMMの後ろで待たされ、長い要求側もKVキャッシュ入出力との競合を受ける。さらにパディング型バッチでは64トークン級の短要求と2048トークン級の長要求を混ぜるだけで大部分の計算が無駄になる。従来の長さバケット化はパディング量を減らすが、プリフィルと再プリフィルの計算・メモリ特性差や、同一プリフィル段階内の資源干渉そのものは分離しない。",
@@ -25,7 +25,7 @@
     "system_design": "SGLangのプリフィル・デコード分離構成のプリフィル側を拡張する。要求分類器→短／長二重キュー→期限・Graph効率を考慮する短要求スケジューラと固定チャンク長要求スケジューラ→専用プリフィルインスタンス→Mooncake等によるKV転送→デコードインスタンス、という流れで構成される。複数GPUでは上位の圧力制御器がインスタンス役割を変更する。"
   },
   "reservation": {
-    "claim_id": "claim-463bea41cf8b4856e744cae4",
+    "claim_id": "claim-406c30cc4c225531bcd809ab",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

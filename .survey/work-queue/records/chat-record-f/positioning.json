@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-463bea41cf8b4856e744cae4",
+  "attempt_id": "attempt-406c30cc4c225531bcd809ab",
   "job_id": "job-research-7b5d4afbd3eabe62",
   "data": {
     "limitations": "評価はH200中心で、他世代GPUでは律速境界Lmや最適なGraph形状・待機窓が変わる。CUDA Graphは固定形状ごとに追加メモリと初期捕捉時間を必要とする。非PD構成でデコードとプリフィルを混在させると短要求集約の利得が低下する。また、負荷分類は主にトークン長と履歴長に基づくため、同じ長さでも異なるモデル・カーネル・テンソル並列度で律速特性が変わる場合は再プロファイルが必要である。",
@@ -11,7 +11,7 @@
     "research_positioning": "LLMサービング研究の中では、プリフィル・デコード分離の次段階として『プリフィル内部の異質性』を扱うスケジューリング系統に位置する。長コンテキストだけでなく、複数ターン対話、ツール利用、投機的デコードなどが短い再プリフィルを高頻度に発生させる現在の負荷に適合する。既存のPD分離基盤を置換せず上乗せできるため、SGLang系の実運用へ組み込みやすい一方、最適境界はハードウェアとモデルごとの実測に依存する。"
   },
   "reservation": {
-    "claim_id": "claim-463bea41cf8b4856e744cae4",
+    "claim_id": "claim-406c30cc4c225531bcd809ab",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

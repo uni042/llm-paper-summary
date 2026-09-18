@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-463bea41cf8b4856e744cae4",
+  "attempt_id": "attempt-406c30cc4c225531bcd809ab",
   "job_id": "job-research-7b5d4afbd3eabe62",
   "data": {
     "hardware": "主評価はNVIDIA H200。屋根線分析ではQwen2.5-7Bを単一H200で16〜2048トークンまで測定し、混合バッチのカーネル分析ではQwen2.5-7B/32BをH200で評価する。アーティファクト付録は最大8×H200とInfiniBandを推奨し、PD分離ベンチマークは最低2 GPU。",
@@ -36,7 +36,7 @@
     "scope": "シミュレーションではなくGPU実機のシステム評価で、主張の中心はプリフィル・デコード分離環境におけるプリフィル段階の最適化である。H200中心の評価なので他GPU・ネットワークへの一般化はアーティファクト互換性以上には直接測定されていない。また非PD構成でデコードと混在すると短プリフィルのCUDA Graph集約効果が低下するため、効果範囲はPD分離構成で最も強い。"
   },
   "reservation": {
-    "claim_id": "claim-463bea41cf8b4856e744cae4",
+    "claim_id": "claim-406c30cc4c225531bcd809ab",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

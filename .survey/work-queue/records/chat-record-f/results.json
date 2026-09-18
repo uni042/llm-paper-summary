@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-463bea41cf8b4856e744cae4",
+  "attempt_id": "attempt-406c30cc4c225531bcd809ab",
   "job_id": "job-research-7b5d4afbd3eabe62",
   "data": {
     "overview": "LAPSは、短・長プリフィルを同一バッチへ混ぜる構造的な無駄を除き、短要求をCUDA Graphに適した均質バッチへ集約することで、通常のSGLang PD分離よりプリフィル遅延とSLO違反を下げる。高並行・混合要求ではQwen2.5-32Bのプリフィル要求スループットを35%改善した。付録のQwen2.5-72B/8×H200再現条件でも、高並行ほど通常SGLangとの差が大きく、cc=64で255.4 req/sから369.1 req/sへ増える。",
@@ -48,7 +48,7 @@
     "quality_impact": "生成アルゴリズムやモデル重みを近似変更しないため、精度劣化を許容して速度を得る方式ではない。論文は回答品質よりサービング性能を評価対象としており、品質を変えないスケジューリング／実行構成として扱うのが妥当である。"
   },
   "reservation": {
-    "claim_id": "claim-463bea41cf8b4856e744cae4",
+    "claim_id": "claim-406c30cc4c225531bcd809ab",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
