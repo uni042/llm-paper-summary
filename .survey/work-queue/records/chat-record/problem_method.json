@@ -2,12 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-4056bf95127577b43a850588",
-  "job_id": "job-research-b3520b6ffb18fc43",
-  "data": {},
+  "attempt_id": "attempt-ab3069d4b8b31db28dbe64b7",
+  "job_id": "job-research-56fbeb640bc1560d",
+  "data": {
+    "problem": "Edge LLMで移動UEがsource BSからtarget BSへハンドオーバすると、autoregressive decodeが依存する過去contextのKV cacheをtarget側へ復元する必要があり、その間token streamingが停止する。token-based handover（tHO）は過去tokenを送りtargetでprefillしてKVを再計算するためTTFTが大きく、複数UEのbatch prefillでは最悪ユーザ遅延が問題になる。cache-based handover（cHO）はKVを直接backhaul転送して計算を避けるが、billion-parameter LLMではKVが数百MB〜GB級となり、共有backhaulがボトルネックになる。研究課題は、各UEのhandover時刻とcontext長が異なる状況で、prefill計算とKV転送をどう分担・スケジュールすればworst-user service interruptionを最小化できるかである。",
+    "novelty": "ctHOは全prefillまたは全KV転送という両端の方式を統一し、全UEに共通のprefix長Lをbatch prefillで再計算し、各UEの残り(C_i-L)^+ token分KVだけをbackhaulで送る。固定Lに対する最小worst-user cache-transfer delayを累積残余需要S_k(L)から閉形式で導き、その下界を達成するconstructive rate schedulerを与える。さらにprefill delayはLに対して非減少、cache-transfer delayは非増加であることを使い、両者が等しくなるLを選べばglobal optimumとなることを証明する。通信と計算の境界を明示的に均衡させる点が中心的貢献である。",
+    "method_overview": "K UEをhandover時刻τ_i順に並べ、UE iのcontext C_iのうちmin(C_i,L) tokenを共通batch prefill、残り(C_i-L)^+をKV転送する。backhaul容量R_bhをtoken当たりKV payload s_KVで正規化してR tokens/sとし、各時刻のUE別rate合計をR以下に制約する。目的D(L,r)は各UEでprefill完了とKV転送完了の遅い方からhandover時刻を引いた値の最大。固定Lでは最初のk UEの残余需要S_k(L)を用い、最小転送遅延D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+を得る。実現policyはactive UEのうちtarget completion time d_i=τ_i+D_tx*が最小のUEへ全backhaulを割り当て、到着・完了時に切替える。最後にV(L)=max(D_pf(L),D_tx*(L))を最小化する。",
+    "components": [
+      {
+        "name": "Token/KV分割によるctHO",
+        "description": "共通prefix Lをtoken転送後にtarget側でbatch prefillし、prefix以降だけsourceからKVとして転送する。L=0がcHO、L=CmaxがtHOなので両方式を同一設計空間へ包含する。"
+      },
+      {
+        "name": "固定Lの最小cache-transfer delay解析",
+        "description": "handover済みUEの累積残余KV需要と利用可能backhaul時間から任意policyの下界を導き、D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+と閉形式化する。"
+      },
+      {
+        "name": "Constructive backhaul scheduler",
+        "description": "各UEに共通worst-delayからtarget deadline d_iを定め、active集合で最小deadlineのUEへ全容量Rを割り当てる。active集合変化時だけ切替え、解析下界を達成して固定Lで最適となる。"
+      },
+      {
+        "name": "Prefill/transfer均衡によるL選択",
+        "description": "D_pf(L)が非減少、D_tx*(L)が非増加なので、交点があれば両者を等しくするLがV(L)を最小化する。交点がなければL=0またはCmaxの境界解となる。"
+      }
+    ],
+    "system_design": "target BSは最新handover後のbatch cycle境界から共通prefixをprefillし、source BSはhandover発生後から残余KVをbackhaul送信する。二処理は並行し、decode再開は両方完了後となるため、遅い側を均衡させるmin-max設計になる。"
+  },
   "reservation": {
-    "claim_id": "claim-4056bf95127577b43a850588",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-ab3069d4b8b31db28dbe64b7",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
 }
