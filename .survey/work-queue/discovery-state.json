@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T13:05:21+00:00",
-  "last_run_key": "2026-09-18T21:00:00+09:00",
-  "last_round": "specialist-new-arrivals-9",
+  "updated_at": "2026-09-18T17:00:50+00:00",
+  "last_run_key": "2026-09-19T01:00:00+09:00",
+  "last_round": "specialist-nvme-characterization-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 14,
-  "last_empty_round_reason": "新着差分で追加の未収録強候補を確認できず、今回runでspeculative/CXL/MoE/network/agent/fairness/GPU runtime/new-arrivalの独立経路を一巡した。",
+  "consecutive_empty_rounds": 15,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T06:02:25+09:00",
-      "round": "specialist-kernel-chain-serving-2",
-      "axis": "GPU低ビットkernel/runtime・大容量メモリ型chain serving",
-      "query_summary": "05:28のlast strong batch後の独立経路としてGPU kernel/runtimeとserving基礎最適化を探索した。arXiv一次ページで題名・抄録・評価概要を軽量確認し、投入直前に最新main HEAD、決定論的research job ID、repo全体検索、最新queue、Library pendingを再照合した。既存の2607.08786はready jobを確認して除外し、未登録の2件だけを投入した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.08786"
-      ],
-      "next_axis_hint": "このstrong batchで枯渇判定をリセットし、MoE recent revision、forward/backward citation、storage/networking/GPU runtime、新着差分を独立に再一巡する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0607JST-kernel-chain-2.json"
-    },
     {
       "run_key": "2026-09-13T06:02:25+09:00",
       "round": "specialist-moe-prefetch-resweep-3",
@@ -7099,6 +7082,31 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json"
+    },
+    {
+      "run_key": "2026-09-19T01:00:00+09:00",
+      "round": "specialist-nvme-characterization-1",
+      "axis": "NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath",
+      "query_summary": "SSD/NVMe、GPUDirect Storage、CXL、KV-cache offloadを2025中心に走査。2609.18112、2609.16206、2603.19289、2604.25699、2604.26557、2508.06978等の強候補はcanonical identity shardで既収録/既投入を確認して早期除外した。CHEOPS 2025論文はarXiv:2505.03780として公式IBM/著者/ACM系一次情報で内容とDOI 10.1145/3719330.3721230を確認し、arxiv-2505 identity shardに不在だったため採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.18112",
+        "arXiv:2609.16206",
+        "arXiv:2603.19289",
+        "arXiv:2604.25699",
+        "arXiv:2604.26557",
+        "arXiv:2508.06978"
+      ],
+      "next_axis_hint": "storage datapathの引用・被引用、SPDK/io_uring/GDSを用いるLLM inference、2024-2026のworkshop/measurement論文へ展開する",
+      "source_submission": "work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json"
     }
   ],
   "axes": {
@@ -12475,6 +12483,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath": {
+      "last_run_key": "2026-09-19T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "storage datapathの引用・被引用、SPDK/io_uring/GDSを用いるLLM inference、2024-2026のworkshop/measurement論文へ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
