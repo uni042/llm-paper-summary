@@ -2,31 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-047d00d1f0ec1e00c2aa57ad",
+  "attempt_id": "attempt-0e6b871e3cbc07f693bcc4eb",
   "job_id": "job-research-2072895e5b6f0b68",
   "data": {
     "canonical_id": "arXiv:2410.17043",
     "arxiv_id": "2410.17043",
     "doi": "10.48550/arXiv.2410.17043",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.NI"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.NI"
+      ]
+    },
     "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
     "summary": "Auroraは、混合専門家モデル（Mixture-of-Experts; MoE）推論で支配的になる全対全通信の帯域競合、同期通信によるGPU遊休、異種GPUへの配置を別々に扱わず、エキスパート配置・GPU割当・通信順序を一体で最適化する。排他的配置／異モデル間の同居と、同種／異種GPUの組合せから4条件を定式化し、3条件では最適解を導出する。最も難しい異種GPU上の同居条件は3次元マッチングとしてNP困難であることを示し、2段の二部マッチングへ分解する近似法を用いる。Google由来のMoE統計を使うシミュレーションでは、同種環境で最大2.38倍、異種環境で最大3.54倍の推論高速化と、Lina比最大1.50倍のGPU利用率向上を報告する。",
     "list_summary": "MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。",
-    "authors": ["Jialong Li", "Shreyansh Tripathi", "Lakshay Rastogi", "Yiming Lei", "Rui Pan", "Yiting Xia"],
+    "authors": [
+      "Jialong Li",
+      "Shreyansh Tripathi",
+      "Lakshay Rastogi",
+      "Yiming Lei",
+      "Rui Pan",
+      "Yiting Xia"
+    ],
     "authors_affiliations": "Max Planck Institute for Informaticsほか。著者公式公開PDFとarXiv本文を確認。",
     "published": "2024-10-22",
     "publication": "arXiv:2410.17043 v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv公開",
     "lineage": "MoE推論・エキスパート配置・全対全通信スケジューリング・異種GPU",
-    "topics": ["MoE inference", "expert placement", "communication scheduling", "GPU heterogeneity", "expert colocation"],
+    "topics": [
+      "MoE inference",
+      "expert placement",
+      "communication scheduling",
+      "GPU heterogeneity",
+      "expert colocation"
+    ],
     "importance": "MoEの通信最適化と配置最適化を4種類のクラスタ条件で統一的に定式化し、同種条件だけでなく異種GPUと複数モデル同居まで理論的な最適性または近似解へ落とし込む点が重要。",
     "implementation": "論文はアルゴリズムとシミュレーション評価を提示する。著者公開ページから全文PDFを確認したが、独立した公開実装リポジトリは本文から確認できない。",
     "hardware_evaluation": "実機測定ではなくシミュレーション。同種クラスタは100Gbps、異種クラスタは100/80/50/40Gbpsの4種類を同数配置し、GoogleのB/16・B/32 MoE統計を入力にする。",
     "quality_effect": "モデル精度を変更する方式ではなく配置・通信スケジュールを変更するシステム最適化であり、品質指標は評価していない。",
     "source": "https://arxiv.org/abs/2410.17043",
-    "sources": ["https://arxiv.org/abs/2410.17043", "https://ruipan.xyz/publications/arxiv24_aurora.pdf", "https://pure.mpg.de/pubman/item/item_3625055_1"],
+    "sources": [
+      "https://arxiv.org/abs/2410.17043",
+      "https://ruipan.xyz/publications/arxiv24_aurora.pdf",
+      "https://pure.mpg.de/pubman/item/item_3625055_1"
+    ],
     "code": "",
     "last_checked": "2026-09-18",
     "references": [],
@@ -34,5 +56,9 @@
     "references_source": "著者公式PDFを参考文献節の末尾まで全文確認。個別参考文献は配列へ転記していない。",
     "references_total": 44
   },
-  "reservation": {"claim_id": "claim-047d00d1f0ec1e00c2aa57ad", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0e6b871e3cbc07f693bcc4eb",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
