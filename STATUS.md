@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:04:49 JST**
+> 自動生成: **2026-09-19 01:05:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **56** |
-| 未claim Research job | **55** |
-| 直近24hの検証済みResearch収録 | **36** |
-| 最終検証済みResearch収録 | **09-18 23:37:05 JST（1時間27分前）** |
+| 収録候補論文 | **55** |
+| 未claim Research job | **54** |
+| 直近24hの検証済みResearch収録 | **37** |
+| 最終検証済みResearch収録 | **09-19 01:05:05 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **56** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **56** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **26** | **10** | **9** | **1** | **1** | **0** | **2** |
+| 合計 | **27** | **10** | **9** | **1** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 01:05:05 JST** [research] `arXiv:2609.06172` — AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription
+  - job: `.survey/work-queue/jobs/job-research-07d26e029c945d64.json`
+  - result: `.survey/work-queue/results/research/attempt-77e0aef16ff8f3aa4d9a089d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-77e0aef16ff8f3aa4d9a089d.json`
+  - paper: `papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md`
 - **09-18 23:37:05 JST** [research] `arXiv:2410.17043` — Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling
   - job: `.survey/work-queue/jobs/job-research-2072895e5b6f0b68.json`
   - result: `.survey/work-queue/results/research/attempt-0e6b871e3cbc07f693bcc4eb.json` (`ok=true`)
@@ -187,9 +192,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06172` — AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:03:10 JST** / heartbeat: **—** / lease expiry: **09-19 02:33:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-07d26e029c945d64.json`
+- `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:04:52 JST** / heartbeat: **—** / lease expiry: **09-19 02:34:52 JST**
+  - evidence: `.survey/work-queue/claims/job-research-37f936e1437c5b29.json`
 
 #### Audit
 
@@ -209,7 +214,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **56** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +234,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **719** |
+| inference/training/survey配下の論文Markdown実体 | **720** |
 
 ### immutable submissionの未照合
 
@@ -237,8 +242,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **530** |
-| └ Research | **401** |
+| 成功result未照合のimmutable submission | **529** |
+| └ Research | **400** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2609.06172",
   "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
   "selection_reason": "GPUメモリ超過時の統合仮想メモリ（Unified Virtual Memory; UVM）ページフォルトを、深層学習フレームワークのtensor-level access情報とruntime memory pressureに基づく自動prefetchで抑えるsystem。10 LLMでbaseline UVM比平均3.1倍、既存prefetcher比1.9倍を報告し、階層メモリ・prefetch重点テーマへ直接適合する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -28,14 +28,6 @@
   ],
   "last_blocked_at": "2026-09-18T12:01:44+00:00",
   "retry_queued_at": "2026-09-18T15:40:04+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short"
-  ],
-  "last_validation_failed_at": "2026-09-18T16:03:00+00:00"
+  "completed_at": "2026-09-18T16:05:05+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-77e0aef16ff8f3aa4d9a089d.json"
 }
