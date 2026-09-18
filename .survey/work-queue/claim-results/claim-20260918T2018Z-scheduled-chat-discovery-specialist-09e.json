@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T2018Z-scheduled-chat-discovery-specialist-09e",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-9deede0a4d81ad54",
+      "claim_id": "claim-5dff7f0f4fd678a8b6c50581",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5dff7f0f4fd678a8b6c50581",
+      "claimed_at": "2026-09-18T20:17:56+00:00",
+      "expires_at": "2026-09-18T21:47:56+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-9deede0a4d81ad54"
+      ],
+      "job": {
+        "job_id": "job-research-9deede0a4d81ad54",
+        "type": "research",
+        "parent_job_id": "job-9b8c216a46edd0b5",
+        "priority": 84,
+        "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+        "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
+        "source_url": "https://doi.org/10.1109/LCA.2026.3660969",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-27b000808907-h3-hybrid-architecture-using-high-bandwidth-memory-and-high-bandwidth-flash-for-cost-efficient-llm-inference.md",
+        "selection_reason": "IEEE Computer Architecture Letters 2026の査読論文。HBMとHigh Bandwidth Flashを役割分担し、巨大なread-only data、とくにshared precomputed KV cacheをHBFへ置くhybrid architectureを評価する。HBM-only比最大2.69x throughput-per-powerを報告し、HBF階層memory系統の基礎候補として重要。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T19:02:33+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T20:17:56+00:00",
+  "checkpoint_released": 0
+}
