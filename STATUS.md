@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 11:04:08 JST**
+> 自動生成: **2026-09-18 11:04:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-18 10:47:22 JST（16分前）** |
+| 最終検証済みResearch収録 | **09-18 10:47:22 JST（17分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **3** | **2** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **27** | **4** | **2** | **2** | **1** | **0** | **5** |
+| Discovery | **11** | **2** | **1** | **1** | **0** | **0** | **10** |
+| 合計 | **28** | **5** | **3** | **2** | **1** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-18 11:04:08 JST** job `job-bf970c66df9bea3f` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
+  - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
 - **09-18 10:03:07 JST** job `job-45da248bd3f7388b` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T1008JST-discovery-9f31a2c7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260918T1102JST-discovery-c15e7a48.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1102JST-discovery-c15e7a48.json`
   - 探索軸: 最新9月17日新着・CXL cluster memory/speculative serving
-- **09-18 10:08:42 JST** job `job-e18f24aa2b99e6e9` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1108JST-discovery-d61b3e92.json`
-  - 探索軸: citation/related-work・LMCache/DistServe lineage
 
 ### 直近タスク
 
@@ -173,11 +173,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 11:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **10件**
+- 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime / agentic workflow・prefix state・power-aware disaggregated serving
 - round `specialist-sep-systems-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
   - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
+- round `specialist-agent-runtime-2` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json`
+  - 探索軸: agentic workflow・prefix state・power-aware disaggregated serving
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
