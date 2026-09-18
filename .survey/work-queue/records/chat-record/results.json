@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-29348de66411f1087b13d3e2",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {
-    "overview": "Sparse-dLLMは、拡散型大規模言語モデルの反復注意で毎回すべての鍵値を保持・参照する必要がないことを実験で示し、重要トークンだけを残す双方向疎キャッシュによって処理量を大きく改善する。LLaDA系列では平均約3.4倍、Dream系列では平均約3.6倍の処理量向上を得て、4千トークン級の長文脈では通常の拡散復号に対して最大10倍まで高速化する。一方でピークメモリは通常方式に近く、LongBenchや一般課題の精度も概ね維持するため、単なる計算削減ではなく長文脈拡散推論の計算量とメモリ量を同時に抑える実用的な方策である。ただしコード生成では重要トークンの誤破棄による低下があり、完全に無損失な方式ではない。",
-    "key_results": [
-      {
-        "metric": "LLaDA-8B-InstructのGSM8K処理量",
-        "value": "26.45 TPS、5.8倍",
-        "baseline": "通常復号 4.57 TPS",
-        "condition": "GSM8K 4-shot",
-        "interpretation": "キャッシュ疎化により反復注意の読出しと計算を大幅に削減する。"
-      },
-      {
-        "metric": "Dream-v0-7B-InstructのGPQA処理量",
-        "value": "32.63 TPS、5.2倍",
-        "baseline": "通常復号 6.29 TPS",
-        "condition": "GPQA 5-shot",
-        "interpretation": "異なる拡散型LLMでも同様の高速化が成立する。"
-      },
-      {
-        "metric": "平均処理量向上",
-        "value": "LLaDA系 約3.4倍、Dream系 約3.6倍",
-        "baseline": "通常の拡散型LLM復号",
-        "condition": "7種類の評価課題平均",
-        "interpretation": "既存キャッシュ法より高い処理量を広い課題で維持する。"
-      },
-      {
-        "metric": "長文脈処理量",
-        "value": "4K系列で最大10倍",
-        "baseline": "通常の拡散型LLM復号",
-        "condition": "4090上の文脈長変化評価",
-        "interpretation": "系列が長く全鍵値参照の費用が増えるほど疎キャッシュの利得が大きくなる。"
-      },
-      {
-        "metric": "LongBench精度",
-        "value": "LLaDA-8B-Instruct 34.46",
-        "baseline": "通常復号 34.55",
-        "condition": "LongBench",
-        "interpretation": "長文脈性能をほぼ維持したまま計算を削減できる。"
-      }
-    ],
-    "negative_results": "DreamのHumanEvalでは一般的な注意重要度だけで破棄すると、変数型や数値リテラルなど構文上重要なトークンを落として性能が低下する。保持率を増やせば精度は改善するがキャッシュ量も線形に増え、0.5以降は改善幅が小さくなる。一段階より長く更新を遅延すると処理量が低下するため、遅延量にも最適域がある。",
-    "interpretation": "拡散型LLMでは鍵値状態全体を保持する必要はなく、復号段階を跨いで注意重要度が安定する少数トークンを残せば、キャッシュメモリを膨らませず注意計算を削減できる。ただし課題依存の重要トークンを注意得点だけで安全に識別できない場合があり、精度保証のある選択則は今後の課題となる。",
-    "quality_impact": "LLaDAでは平均精度が通常復号59.24に対して59.86、LLaDA-1.5では60.90に対して60.99とほぼ同等である。Dreamも平均では概ね同等だがHumanEvalで低下があり、方式は完全な無損失ではない。"
-  },
+  "attempt_id": "attempt-32601b58ea85c529e281cb7c",
+  "job_id": "job-research-78d3e9d2047890ea",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-29348de66411f1087b13d3e2",
+    "claim_id": "claim-32601b58ea85c529e281cb7c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
