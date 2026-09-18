@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13592",
+      "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.13592",
+      "paper_path": "papers/inference/02-hierarchical-memory/2026-2609.13592-boost-concurrent-host-memory-hbm-llm-inference.md",
+      "priority": 94,
+      "reason": "Wave-aware page placement/runtime enables concurrent proportional host-memory+HBM bandwidth use without kernel changes; vLLM/Grace-Hopper evaluation reports 31% average throughput gain. Directly relevant to hierarchical memory/offload systems."
+    },
+    {
+      "canonical_id": "arXiv:2609.18063",
+      "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+      "source_url": "https://arxiv.org/abs/2609.18063",
+      "paper_path": "papers/inference/05-moe-expert-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
+      "priority": 98,
+      "reason": "Streaming 35B-class MoE inference from SSD using one-token-ahead trained routing prediction; directly targets SSD expert offload and reports 20 tok/s with ~3 GiB peak active memory on a 24GB machine."
+    },
+    {
+      "canonical_id": "arXiv:2609.17475",
+      "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+      "source_url": "https://arxiv.org/abs/2609.17475",
+      "paper_path": "papers/inference/02-hierarchical-memory/2026-2609.17475-justfit-jit-state-management-local-llm-serving.md",
+      "priority": 88,
+      "reason": "MLX runtime combines compressed KV execution, component residency switching, and state-preserving transitions to extend local long-context serving under tight memory capacity; strong on-device systems relevance."
+    },
+    {
+      "canonical_id": "arXiv:2609.17573",
+      "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.17573",
+      "paper_path": "papers/inference/03-kv-cache/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+      "priority": 90,
+      "reason": "Hierarchical KV management for diffusion LLMs with coarse-to-fine sparse selection, predictive prefetch, staleness correction and streaming prefill; reports up to 3.73x end-to-end speedup in offload settings."
+    },
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/05-moe-expert-offload/2026-2609.04895-cache-aware-router-adaptation-moe-inference.md",
+      "priority": 89,
+      "reason": "Joint post-training of MoE and lightweight cache routers targets expert-cache hit rate/traffic while preserving Top-K routing; Qwen3/GPT-OSS evaluation reports substantial traffic reductions."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T10:00:00+09:00",
+    "round": "specialist-2609-memory-moe-new-arrivals-1",
+    "axis": "2026年9月新着・階層メモリ/SSD MoE/KV管理",
+    "query_summary": "2026年9月のLLM inference/serving新着を、hierarchical memory、SSD MoE、KV cache、GPU runtimeの複数query familyで横断。検索結果からarXiv IDを抽出し、最新mainのqueue/code照合で既知候補を早期除外した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はnetwork/disaggregated serving、GPU kernel/runtime、agentic servingの2026年9月新着へ軸を変更する",
+    "empty_round_reason": null,
+    "search_windows": [
+      {"topic":"memory-moe-kv","source":"web-arxiv-index","date_range":"2026-09","category":"inference-systems","citation_direction":"none","query_family":"new-arrivals-memory-offload","raw_result_count":12,"unseen_result_count":5,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":5,"candidate_accepted_count":5,"position":"search-batch-1"}
+    ]
+  }
+}
