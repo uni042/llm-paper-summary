@@ -2,46 +2,100 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3eed7d3f4032ec5695d646ca",
+  "attempt_id": "attempt-d0fe97adcacea05d58b20b59",
   "job_id": "job-research-660ceb86238a1a21",
   "data": {
     "canonical_id": "arXiv:2609.18112",
     "arxiv_id": "2609.18112",
     "doi": "10.48550/arXiv.2609.18112",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving",
     "summary": "FairInferenceは、マルチテナントLLMサービングで長期処理量の公平性ではなく、各トークンの遅延を分離実行時から最大δだけに抑えるδ-token fairnessを定義・実装する。分離実行のトークン完了時刻を性能モデルとシミュレータで推定し、per-token deadlineを用いてprefill/decodeをスケジュールすると同時に、KV復元時間からクライアント別の非退避予約量を決める。SGLang v0.3.0上、単一A100 80GB・Llama-3 8B Instructで評価し、高需要テナント存在下でもwell-behaved clientのp99 TTFT/TBT/TTLTを大幅に保護する。",
     "list_summary": "分離実行比δ以内のトークン遅延を保証するdeadline schedulingとKV予約を統合し、高需要テナント下のp99 latency isolationを実現する。",
-    "authors": ["Dev Bali", "Soujanya Ponnapalli", "Yichuan Wang", "Natacha Crooks", "Scott Shenker", "Matei Zaharia"],
+    "authors": [
+      "Dev Bali",
+      "Soujanya Ponnapalli",
+      "Yichuan Wang",
+      "Natacha Crooks",
+      "Scott Shenker",
+      "Matei Zaharia"
+    ],
     "authors_affiliations": "University of California, Berkeley",
     "published": "2026-09-16",
     "publication": "arXiv preprint arXiv:2609.18112v1",
     "publication_type": "arXivプレプリント",
     "publication_status": "2026年9月16日投稿のarXiv初版。主分類cs.DC、併記分類cs.LG。",
     "lineage": "serving-scheduling",
-    "topics": ["LLMサービング", "マルチテナント", "性能分離", "トークン遅延", "KVキャッシュ", "deadline scheduling"],
+    "topics": [
+      "LLMサービング",
+      "マルチテナント",
+      "性能分離",
+      "トークン遅延",
+      "KVキャッシュ",
+      "deadline scheduling"
+    ],
     "importance": "throughput fairness中心だったLLM公平スケジューリングに、分離実行を基準とする明示的なtoken-level latency boundを導入する。",
     "hardware_evaluation": "NVIDIA A100 80GBを1基。",
     "hardware_details": "Llama-3 8B Instruct、KV cache約320,000 tokens。microbenchmarkは10分計測+2分warmup、macrobenchmarkはWildChat由来。",
     "quality_effect": "モデル自体や生成アルゴリズムを近似せず、schedulerとKV cache policyを変更するシステム最適化。",
-    "bottlenecks": ["prefill/decode scheduling interference", "shared KV cache eviction", "GPUの細粒度資源分割不足", "isolated latency推定誤差"],
-    "evidence_locations": ["§3", "§4", "§5", "§6", "§7", "§9"],
+    "bottlenecks": [
+      "prefill/decode scheduling interference",
+      "shared KV cache eviction",
+      "GPUの細粒度資源分割不足",
+      "isolated latency推定誤差"
+    ],
+    "evidence_locations": [
+      "§3",
+      "§4",
+      "§5",
+      "§6",
+      "§7",
+      "§9"
+    ],
     "source": "https://arxiv.org/abs/2609.18112",
-    "sources": ["https://arxiv.org/abs/2609.18112", "https://arxiv.org/html/2609.18112v1", "https://arxiv.org/pdf/2609.18112"],
+    "sources": [
+      "https://arxiv.org/abs/2609.18112",
+      "https://arxiv.org/html/2609.18112v1",
+      "https://arxiv.org/pdf/2609.18112"
+    ],
     "code": null,
     "implementation": "SGLang v0.3.0 forkへ3–4k LOCのδ-fair schedulerを実装し、Cの別worker threadでisolated-execution simulatorを動かす。本文では将来forkをopen-source予定としており、確認時点で公開コードURLはない。",
     "last_checked": "2026-09-18",
     "references": [
-      {"canonical_id": "arXiv:2401.00588", "title": "Fairness in Serving Large Language Models"},
-      {"canonical_id": "arXiv:2501.14312", "title": "Locality-aware Fair Scheduling in LLM Serving"},
-      {"canonical_id": "arXiv:2601.20030", "title": "Delta Fair Sharing: Performance Isolation for Multi-Tenant Storage Systems"},
-      {"canonical_id": "arXiv:2510.14392", "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference"},
-      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"}
+      {
+        "canonical_id": "arXiv:2401.00588",
+        "title": "Fairness in Serving Large Language Models"
+      },
+      {
+        "canonical_id": "arXiv:2501.14312",
+        "title": "Locality-aware Fair Scheduling in LLM Serving"
+      },
+      {
+        "canonical_id": "arXiv:2601.20030",
+        "title": "Delta Fair Sharing: Performance Isolation for Multi-Tenant Storage Systems"
+      },
+      {
+        "canonical_id": "arXiv:2510.14392",
+        "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      }
     ],
     "references_checked_at": "2026-09-18",
     "references_source": "arXiv HTML参考文献節",
     "references_total": 5
   },
-  "reservation": {"claim_id": "claim-3eed7d3f4032ec5695d646ca", "worker_id": "scheduled-chat-llm-discovery", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d0fe97adcacea05d58b20b59",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
