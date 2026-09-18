@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-854ec831672b054b5c8ebfe2",
-  "job_id": "job-research-c2f58815c322fab7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-854ec831672b054b5c8ebfe2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-854ec831672b054b5c8ebfe2","job_id":"job-research-c2f58815c322fab7","data":{"hardware":"GCP g2-standard-32 VM、NVIDIA L4 GPU 24GBをPieと比較系に共通使用。Llama 3 1B/3B/8BをBF16 weights、BF16 KV cache/activationsで評価する。主要なagentic workflow評価は1Bモデルを使用し、system overheadは最大896 concurrent inferlets等で測定する。","software":"PieはWebAssembly runtime（wasmtime pooled allocation）、中央control layer、Pythonを含むinference layer、42 APIとsupport libraryで構成。比較対象はvLLM、SGLang、および機能別の専用実装（例: StreamingLLM、LMQL等）。ReACT、CodeACT、Swarm、Tree/Graph/Recursion-of-Thought、attention sink/windowed attention、prefix caching、speculative/constrained decoding、beam search等をinferletとして実装する。","methodology":"評価はQ1: 新興LLMアプリを表現できるか、Q2: end-to-end latency/throughputを既存servingと比較して改善できるか、Q3: programmabilityのsystem overheadはいくらか、の3問で構成する。agentic workflowではReACT/CodeACT/SwarmをvLLM/SGLangのPython client実装と比較し、外部I/O回数を含むend-to-end latencyとagents/sを測る。複雑推論・attention・既存serving機能をinferletで再現し性能比較する。microbenchmarkではinferlet cold/warm launch、API call latency、text completion TPOT、API細粒度化のopportunity cost、model size、batching strategyを分解測定する。","scope":"単一NVIDIA L4・単一推論backendを中心とした実装評価であり、分散multi-GPU/multi-node環境のload balancing、KvPage locality、SLO、fault toleranceは未評価。通常テキスト生成からagentic/branching workflowまで幅広いが、商用multi-tenant security hardeningや大規模分散スケールは今後の課題である。"},"reservation":{"claim_id":"claim-854ec831672b054b5c8ebfe2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
