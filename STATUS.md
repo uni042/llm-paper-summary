@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 06:33:20 JST**
+> 自動生成: **2026-09-19 06:33:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **2** | **1** | **1** | **2** | **0** | — |
+| Research | **20** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **33** | **5** | **4** | **1** | **2** | **0** | **3** |
+| 合計 | **33** | **4** | **3** | **1** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,18 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 05:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a79bd772dccd9a8939166474.json` (job `job-research-9c0ef4e091be369c`)
-- **成功** `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
-  - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
-  - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
-  - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
+- 最新観測run: **2026-09-19 06:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-854ec831672b054b5c8ebfe2.json` (job `job-research-c2f58815c322fab7`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 05:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 06:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -241,8 +236,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **562** |
-| └ Research | **433** |
+| 成功result未照合のimmutable submission | **563** |
+| └ Research | **434** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
