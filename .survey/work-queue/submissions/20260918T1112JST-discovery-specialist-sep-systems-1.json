@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"canonical_id":"arXiv:2609.07966","title":"MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference","source_url":"https://arxiv.org/abs/2609.07966","paper_path":"papers/inference/03-kv-cache/2026-2609.07966-metakv-adaptive-kv-cache-compression.md","priority":84,"reason":"入力ごとの遅延・ピークメモリ制約に応じてKV圧縮方式を適応選択するシステム。複数圧縮方式を横断する軽量予測と制約付き選択を実装・評価しており、KVキャッシュ運用の実システム比較に有用。"},
+    {"canonical_id":"arXiv:2609.15359","title":"MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving","source_url":"https://arxiv.org/abs/2609.15359","paper_path":"papers/inference/04-scheduling/2026-2609.15359-maps-memory-aware-predictive-scheduling.md","priority":90,"reason":"prefill/decode分離環境で端末側出力長予測と不確実性較正、階層型global-local schedulingを組み合わせ、decode負荷偏りとHOL blockingを抑える。実ワークロードで平均・tail latencyを大幅削減する重点serving研究。"},
+    {"canonical_id":"arXiv:2609.17475","title":"JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management","source_url":"https://arxiv.org/abs/2609.17475","paper_path":"papers/inference/01-offload-hierarchical-memory/2026-2609.17475-justfit-jit-state-management.md","priority":93,"reason":"24 GiB laptop上の長文脈推論を、圧縮KV実行・component residency切替・state-preserving transitionで実現するMLX runtime。階層メモリと状態寿命管理の重点テーマに直接該当する。"},
+    {"canonical_id":"arXiv:2609.14237","title":"OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving","source_url":"https://arxiv.org/abs/2609.14237","paper_path":"papers/inference/05-disaggregated-serving/2026-2609.14237-opweave-flexible-operator-disaggregation.md","priority":94,"reason":"attention/FFN/MoE等のoperator境界を固定せず、異種GPU群への分割と配置を解析モデル・planner・vLLM runtimeで統合する。SLOを満たしつつserving cost削減を報告するoperator-level disaggregation研究。"},
+    {"canonical_id":"arXiv:2609.17008","title":"FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference","source_url":"https://arxiv.org/abs/2609.17008","paper_path":"papers/inference/01-offload-hierarchical-memory/2026-2609.17008-flexee-offloading-aware-early-exit.md","priority":88,"reason":"weight offload環境でlayer実行とweight movementを同時に削減するearly-exit/self-speculative方式。KV整合性を保つ動的hidden-state管理を含み、50% weight offload時に大きなend-to-end speedupを報告する。"}
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key":"2026-09-18T11:00:00+09:00",
+    "round":"specialist-sep-systems-1",
+    "axis":"2026年9月新着のKV圧縮・分離serving・offload・local runtime",
+    "query_summary":"複数の新着/重点テーマ検索をまとめて取得し、検索結果とabstract相当の軽量情報からsystems寄与を評価。GitHub default branchのcanonical IDを投入直前に照合し、未一致の強い5件のみ提出した。",
+    "candidate_count":5,
+    "duplicate_filtered_count":0,
+    "duplicate_canonical_ids":[],
+    "next_axis_hint":"次はagent workflow scheduling、power-aware disaggregated serving、heterogeneous edge/cluster routingへ軸を変更する",
+    "empty_round_reason":null
+  }
+}
