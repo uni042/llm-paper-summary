@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:05:08 JST**
+> 自動生成: **2026-09-19 03:05:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **55** |
+| 収録候補論文 | **54** |
 | 未claim Research job | **53** |
-| 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-19 01:35:47 JST（1時間29分前）** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-19 03:05:17 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **55** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **55** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **11** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **26** | **8** | **7** | **1** | **2** | **0** | **5** |
+| 合計 | **27** | **8** | **7** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 03:05:17 JST** [research] `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training
+  - job: `.survey/work-queue/jobs/job-research-6af027835df580e1.json`
+  - result: `.survey/work-queue/results/research/attempt-c40db7283a5c53be666dfa56.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c40db7283a5c53be666dfa56.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md`
 - **09-19 01:35:47 JST** [research] `arXiv:2606.26120` — Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM
   - job: `.survey/work-queue/jobs/job-research-11c68d7adc12c492.json`
   - result: `.survey/work-queue/results/research/attempt-f0acf688ceaad1c0809f2085.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-292079eab3cc522a1a9de5d7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-292079eab3cc522a1a9de5d7.json`
   - paper: `papers/inference/05-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md`
-- **09-18 21:08:10 JST** [research] `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents
-  - job: `.survey/work-queue/jobs/job-research-abd379cf035bd8f0.json`
-  - result: `.survey/work-queue/results/research/attempt-8bc32c98f4efa2a4da6345d3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8bc32c98f4efa2a4da6345d3.json`
-  - paper: `papers/inference/kv-cache/2608.19662.md`
 
 ### Audit
 
@@ -198,10 +198,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 03:04:30 JST** / heartbeat: **—** / lease expiry: **09-19 04:34:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6af027835df580e1.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
   - claim: **09-19 01:41:16 JST** / heartbeat: **—** / lease expiry: **09-19 03:11:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-21b30a62610ad176.json`
@@ -224,7 +221,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **55** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
@@ -244,7 +241,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **724** |
+| inference/training/survey配下の論文Markdown実体 | **725** |
 
 ### immutable submissionの未照合
 
@@ -252,8 +249,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **545** |
-| └ Research | **416** |
+| 成功result未照合のimmutable submission | **544** |
+| └ Research | **415** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
