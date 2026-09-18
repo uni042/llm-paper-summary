@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:10:35 JST**
+> 自動生成: **2026-09-19 07:10:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -191,7 +191,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2607.08993` — StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:08:18 JST** / heartbeat: **—** / lease expiry: **09-19 08:38:18 JST**
+  - claim: **09-19 07:10:44 JST** / heartbeat: **—** / lease expiry: **09-19 08:40:44 JST**
   - evidence: `.survey/work-queue/claims/job-research-f7dcdf40e7d3538f.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
