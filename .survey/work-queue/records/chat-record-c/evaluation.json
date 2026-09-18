@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3482ada8e43cfce3d8d1cfd9",
-  "job_id": "job-research-d9f05d11667dcf83",
-  "data": {
-    "hardware": "主実験は48GB NVIDIA A40 GPUと48コアAMD EPYC 9454 CPU、377GB主メモリ。拡張性評価は24GB・48GB・80GBへ容量設定したA100を使い、複数GPU評価は80GB A100を4基使用する。",
-    "software": "オープンソースS-LoRA上にChameleonを実装し、比較対象はFIFOと非キャッシュ先読みを使うS-LoRA、およびμServe由来の最短処理時間優先スケジューラ。CUDAカーネル変更は行わない。",
-    "methodology": "主にLlama-7Bを使い、容量が許す条件ではLlama-13Bと30Bも評価する。入力長・出力長はAzure由来のSplitwise実運用トレースを用い、到着間隔はポアソン分布で負荷を変える。標準条件は100種類のLoRAアダプタ、階数8・16・32・64・128を同数用意し、階数人気は一様、同一階数内のアダプタ人気はべき分布とする。指標は初回トークン時間、トークン間時間、エンドツーエンド遅延、SLOを満たせる最大要求率。追加でWildChat-1MとLMSYS-Chat-1M、10〜200アダプタ、異なる人気分布、出力長予測精度、GPU容量、モデル規模、テンソル並列度を変える。",
-    "scope": "結果は実GPU上のオンライン推論実験であり、シミュレーションだけの評価ではない。ただし大規模実運用トレースはテスト機の容量へ合わせて入力・出力長を一定倍率で縮小した条件を含む。主比較はS-LoRA上で同じ基盤モデルとアダプタを使ったシステム性能で、生成品質の比較ではない。標準係数はSplitwise系トレースで調整しているが、WildChat-1MとLMSYS-Chat-1Mでは再調整せず一般化を確認する。"
-  },
+  "attempt_id": "attempt-328004e23af6006bc125dba7",
+  "job_id": "job-research-a1874def735a479b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3482ada8e43cfce3d8d1cfd9",
+    "claim_id": "claim-328004e23af6006bc125dba7",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
