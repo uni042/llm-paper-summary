@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:36:34 JST**
+> 自動生成: **2026-09-19 06:02:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **49** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 05:35:57 JST（37秒前）** |
+| 最終検証済みResearch収録 | **09-19 05:35:57 JST（26分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **20** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **31** | **5** | **4** | **1** | **1** | **0** | **15** |
+| Discovery | **11** | **2** | **1** | **1** | **0** | **0** | **2** |
+| 合計 | **31** | **4** | **2** | **2** | **1** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-19 06:01:55 JST** job `job-d209a14a1856b2db` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
+  - 探索軸: programmable serving・agentic runtime・application-specific generation loop
 - **09-19 03:59:35 JST** job `job-43d9a8057337c9ad` / 候補 **5件**
   - result: `.survey/work-queue/results/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260919T0228JST-discovery-specialist-fault-recovery-6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0228JST-discovery-specialist-fault-recovery-6.json`
   - 探索軸: fault-tolerant LLM serving・KV checkpoint/replication・failure recovery
-- **09-19 02:03:27 JST** job `job-fa98432f228f6281` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260919T0234JST-discovery-specialist-elastic-migration-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0234JST-discovery-specialist-elastic-migration-7.json`
-  - 探索軸: request/KV migration・elastic memory・model/KV co-migration
 
 ### 直近タスク
 
@@ -167,21 +167,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 03:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **15件**
-- 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath / in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration / network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
-- round `specialist-nonarxiv-storage-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json`
-  - 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json` (`ok=true`)
-- round `specialist-near-memory-2` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260919T0418JST-discovery-specialist-near-memory-2.json`
-  - 探索軸: in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0418JST-discovery-specialist-near-memory-2.json` (`ok=true`)
-- round `specialist-network-serving-3` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260919T0427JST-discovery-specialist-network-serving-3.json`
-  - 探索軸: network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0427JST-discovery-specialist-network-serving-3.json` (`ok=true`)
+- 最新観測run: **2026-09-19 06:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture / programmable serving・agentic runtime・application-specific generation loop
+- round `specialist-heterogeneous-hardware-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
+  - 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-programmable-serving-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
+  - 探索軸: programmable serving・agentic runtime・application-specific generation loop
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -210,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,10 +234,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **562** |
+| 成功result未照合のimmutable submission | **563** |
 | └ Research | **433** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
