@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-specdecode-saturation-10",
+    "axis": "最新batched speculative decoding・VLM block drafting・KV repair",
+    "query_summary": "最新speculative系のASPIREとGLANCEは2609 identity shardで既収録、Carryover/LoopSpec/DFlow/stale-KV repairは今回run内で既投入済みのため再評価せず除外。独立した最新specdecode窓で追加強候補は得られなかった。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": ["arXiv:2609.17943","arXiv:2609.00355","arXiv:2609.14717","arXiv:2609.17184","arXiv:2609.06498","arXiv:2609.17983"],
+    "next_axis_hint": "未走査の新着が次回追加されるまで、今回確認した主要memory/specdecode/network/scheduling窓は高重複状態",
+    "empty_round_reason": "最新specdecode/KV repairの強い候補は既収録または今回run内投入済みだった。"
+  }
+}
