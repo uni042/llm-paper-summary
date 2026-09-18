@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 18:04:07 JST**
+> 自動生成: **2026-09-18 18:04:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **2** | **2** | **0** | **2** | **0** | — |
+| Research | **6** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **13** | **0** | **2** | **0** | **28** |
+| 合計 | **25** | **13** | **13** | **0** | **2** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
   - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
-- **09-18 12:04:15 JST** [research] `arXiv:2609.13692` — Prefix Sharing Is a Sorting Problem
-  - job: `.survey/work-queue/jobs/job-research-b4ff298d10321769.json`
-  - result: `.survey/work-queue/results/research/attempt-36ebd37ab918e1cf55c1a45f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-36ebd37ab918e1cf55c1a45f.json`
-  - paper: `papers/inference/03-kv-cache/2026-2609.13692-prefix-sharing-sorting-problem.md`
 
 ### Audit
 
