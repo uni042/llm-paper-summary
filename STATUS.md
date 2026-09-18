@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:29:19 JST**
+> 自動生成: **2026-09-19 03:30:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -150,13 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 00:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-28b65afcabd4bd1893000925.json` (job `job-research-21b30a62610ad176`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-d1fab66f48e43669c98dd751.json` (job `job-research-ebde0cc040167968`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 00:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -200,7 +200,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 03:28:25 JST** / heartbeat: **—** / lease expiry: **09-19 04:58:25 JST**
+  - claim: **09-19 03:29:59 JST** / heartbeat: **—** / lease expiry: **09-19 04:59:59 JST**
   - evidence: `.survey/work-queue/claims/job-research-21b30a62610ad176.json`
 
 #### Audit
