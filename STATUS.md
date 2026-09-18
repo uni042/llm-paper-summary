@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 19:09:07 JST**
+> 自動生成: **2026-09-18 19:10:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **44** |
-| 未claim Research job | **42** |
+| 収録候補論文 | **42** |
+| 未claim Research job | **40** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **44** |
+| canonical_id確認済みの一意な候補論文 | **42** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **44** |
+| 非終端Research job合計 | **42** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -215,9 +215,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 19:08:54 JST** / heartbeat: **—** / lease expiry: **09-18 20:38:54 JST**
-  - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
+- `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 19:09:41 JST** / heartbeat: **—** / lease expiry: **09-18 20:39:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9d3c210288b42eb4.json`
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **09-18 18:32:58 JST** / lease expiry: **09-18 20:02:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
@@ -240,7 +240,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **44** |
+| ready | **42** |
 
 ### 候補の重複・識別情報欠損
 
@@ -268,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **518** |
-| └ Research | **389** |
+| 成功result未照合のimmutable submission | **519** |
+| └ Research | **390** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

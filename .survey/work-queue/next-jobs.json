@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 44,
+      "ready": 42,
       "completed": 525,
       "superseded": 44,
-      "blocked": 4,
+      "blocked": 6,
       "deferred": 3,
       "blocked_permanent": 2,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 44,
-    "actively_claimed": 1,
-    "claimable": 43
+    "ready_research_audit": 42,
+    "actively_claimed": 2,
+    "claimable": 40
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-6af027835df580e1",
+      "job_id": "job-research-11c68d7adc12c492",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2511.07035",
-      "title": "GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training",
-      "source_url": "https://arxiv.org/abs/2511.07035",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+      "canonical_id": "arXiv:2606.26120",
+      "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM",
+      "source_url": "https://arxiv.org/abs/2606.26120",
+      "paper_path": "papers/inference/06-kv-cache-memory/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T10:08:05+00:00"
+  "generated_at": "2026-09-18T10:09:56+00:00"
 }
