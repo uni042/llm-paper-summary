@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-32601b58ea85c529e281cb7c",
-  "job_id": "job-research-78d3e9d2047890ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-32601b58ea85c529e281cb7c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-32601b58ea85c529e281cb7c","job_id":"job-research-78d3e9d2047890ea","data":{"limitations":"対象はscan index自体がhost memory等の遅いtierにある構成で、indexがGPU HBMに常駐すると可変bit-plane抽出の算術負荷により固定4-bit scanより速くない。別indexとして持つ場合のstore容量は68 bytes/token/KV-headでDouble Sparsityの17 bytesや32-byte landmarkより大きく、4-bit channel-major K cacheをserving stackが既に採用する場合にだけ追加storeを省けるが、そのwinner key再構成経路は未実装・未計測。128k超のtimingはsynthetic KVで、many-session動機はindex sizeから論証しているが主timingはbatch 1とbatch 2一例のみ。Triton kernelとPython offload harnessはprototypeでwall-clockにmethod-dependent host overheadが残る。品質評価はattention error、RULER-style、exact top-kとのagent step agreementまでで、各scanを使ったend-to-end coding/test execution successは未測定。calibration domain、selection ratio、per-layer planのcontext長依存も残る。","differences":"Lokiは固定rankのPCA座標、Double Sparsityはoffline選択した固定チャネル、SparQはqueryで選ぶ固定個数チャネルを全深度、thumbnailは全チャネルを固定2-bitで読む。Fathomはチャネルを選ぶだけでなく各チャネルの読取深度自体をqueryごとに0〜4bitへ連続的に変え、同一4-bit K storeのprefix planesをそのまま多解像度indexとして使う。Quest/ShadowKV/InfLLMのpage・chunk・landmark方式がscoreする対象数を減らす軸なのに対し、Fathomはper-token scan一件当たりのbitsを減らす直交軸。Self-Indexing KVCacheも圧縮K自体をindex化するが固定1-bit representationであり、Fathomはquery/channelごとのdepth allocationを導入する。RetroInfer/MagicPIG等CPU retrievalとは直接比較していない。","implementation_status":"著者公式GitHub repositoryにcode/resultsを公開し、A100上のTriton bit-plane scan、host gather、評価harnessまで実装済み。ただしproduction serving engineへ統合したfused kernelではなくresearch prototypeで、既存4-bit channel-major KV stackとstoreを共用する完全経路も未構築。","research_positioning":"KV cache offloadingとlong-context sparse attentionの交点で、SSD/CPU/host tierからGPUへ何を読むかという帯域最適化のうち、候補索引のread depthをquery-adaptiveにする系統。階層memory研究ではcache placementやprefetchだけでなく、slow-tierから読む情報量そのものを精度予算に応じて縮める設計として重要であり、page-level retrievalやwinner-row offloadと組み合わせられる。特に百万token級agent sessionを多数residentにする構成でindex trafficが線形増加する問題へ直接対応する。"},"reservation":{"claim_id":"claim-32601b58ea85c529e281cb7c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
