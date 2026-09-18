@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-d9b26ca882eb56a4dbd626e5",
-  "job_id": "job-research-ef418ddc1bde46e9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9b26ca882eb56a4dbd626e5",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d9b26ca882eb56a4dbd626e5","job_id":"job-research-ef418ddc1bde46e9","data":{"hardware":"主要評価はNVIDIA RTX 3090 24GB GPU。単一GPU推論で速度と品質を比較する。","software":"LLaDA-8BのBase/InstructとDream-v0-7BのBase/Instructを評価。比較は通常復号、dLLM-Cache、Fast-dLLM、d²Cache。公式実装はLLaDA、Dream、SDAR向け設定を提供する。","methodology":"GSM8K、MBPP、HumanEval、Math-500、GPQA、MMLU-Proの6ベンチマークで、平均生成トークン毎秒、サンプル当たり推論時間、課題得点を測る。主要設定では注意選択の累積確率しきい値pを0.1とし、確定性事前分布による復号も評価する。標準の半自己回帰復号と非自己回帰復号、確信度復号と確定性事前復号を分離比較し、急変期だけKVを更新する場合と緩慢期も更新する場合を除去実験する。","scope":"単一GPU・代表的な二種類の拡散LLMが中心で、同時多要求サービング、バッチング、分散推論、vLLM等の運用基盤との統合は主要評価ではない。近似KVの選択しきい値と確定性事前分布の幅はモデル・課題に依存し得る。"},"reservation":{"claim_id":"claim-d9b26ca882eb56a4dbd626e5","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
