@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-55ad2e2507991e421d05d6e8","job_id":"job-research-b3f94863f38e0308","data":{"overview":"MinionsはLlama2-70B-chatでvLLM比平均2.70〜3.10倍の正規化遅延改善、平均2.69〜3.02倍のスループット向上を3データセットで示す。各基盤との最大値ではFastGen比で遅延最大7.06倍、スループット最大6.84倍など大きい。OPT-13Bでも同様に改善するが、一部batch=32では高度に最適化されたTensorRT-LLMがMinionsを上回る。多数決、適応投機長、パイプラインはそれぞれ追加利得を持ち、制御処理の合計オーバーヘッドは最大2.37%。","key_results":[{"metric":"Llama2-70B-chat latency vs vLLM","value":"平均3.10× / 2.86× / 2.70× speedup","baseline":"vLLM","condition":"finance/chatbot/dialogue","interpretation":"複数SSM、多数決、適応長、パイプラインの統合で要求当たり正規化遅延を削減。"},{"metric":"Llama2-70B-chat throughput vs vLLM","value":"平均3.02× / 2.76× / 2.69×","baseline":"vLLM","condition":"finance/chatbot/dialogue","interpretation":"LLM検証を連続稼働させるパイプラインと受理率改善が寄与。"},{"metric":"Ablation: majority","value":"+9.56% OPT-13B, +59.82% Llama2-70B","baseline":"traditional speculative decoding","condition":"finance, batch=16","interpretation":"複数SSMを一本の候補へ集約して検証量を増やさず受理品質を改善。"},{"metric":"Ablation: adaptive selector","value":"追加+35.07% / +5.91% throughput","baseline":"majority enabled","condition":"OPT-13B / Llama2-70B","interpretation":"固定sが最適から遠いOPTで特に大きい。"},{"metric":"Ablation: pipeline","value":"追加+34.27% / +55.37% throughput","baseline":"majority+selector","condition":"OPT-13B / Llama2-70B","interpretation":"SSMとLLMの直列待機を重ね合わせる効果。"},{"metric":"SpecInfer comparison","value":"7.61〜14.49× throughput, 6.34〜8.89× latency speedup","baseline":"SpecInfer","condition":"OPT-13B, batch=32","interpretation":"ただし比較SpecInfer実装には既知問題があり慎重な解釈が必要。"}],"negative_results":"一部データセットのbatch=32ではTensorRT-LLMがMinionsより高速。SpecInfer比較はFlexFlow演算子問題で比較側性能が論文報告より低く、Llama2-70Bでは注意重みロード失敗で比較できない。多数決はSSM能力が似るOPT financeでは追加利得が小さく、適応投機長も既定sが最適に近いLlama2では利得が小さい。","interpretation":"単一のドラフトモデルや固定投機長だけを改善するのではなく、候補品質、検証コスト、SSM/LLM資源待機、KV滞留をサービング系全体で連動制御する点が性能源である。","quality_impact":"投機検証はLLMの分布を用いた受理・再サンプリング規則に従い、LLM本体を量子化・枝刈りしない。SSMは蒸留微調整されるが最終出力の権威はLLM検証側にある。"},"reservation":{"claim_id":"claim-55ad2e2507991e421d05d6e8","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-89e2edf847dd8923a0885b8e",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {
+    "overview": "MinionsはLlama2-70B-chatでvLLM比平均2.70〜3.10倍の正規化遅延改善、平均2.69〜3.02倍のスループット向上を3データセットで示す。各基盤との最大値ではFastGen比で遅延最大7.06倍、スループット最大6.84倍など大きい。OPT-13Bでも同様に改善するが、一部batch=32では高度に最適化されたTensorRT-LLMがMinionsを上回る。多数決、適応投機長、パイプラインはそれぞれ追加利得を持ち、制御処理の合計オーバーヘッドは最大2.37%。",
+    "key_results": [
+      {
+        "metric": "Llama2-70B-chat latency vs vLLM",
+        "value": "平均3.10× / 2.86× / 2.70× speedup",
+        "baseline": "vLLM",
+        "condition": "finance/chatbot/dialogue",
+        "interpretation": "複数SSM、多数決、適応長、パイプラインの統合で要求当たり正規化遅延を削減。"
+      },
+      {
+        "metric": "Llama2-70B-chat throughput vs vLLM",
+        "value": "平均3.02× / 2.76× / 2.69×",
+        "baseline": "vLLM",
+        "condition": "finance/chatbot/dialogue",
+        "interpretation": "LLM検証を連続稼働させるパイプラインと受理率改善が寄与。"
+      },
+      {
+        "metric": "Ablation: majority",
+        "value": "+9.56% OPT-13B, +59.82% Llama2-70B",
+        "baseline": "traditional speculative decoding",
+        "condition": "finance, batch=16",
+        "interpretation": "複数SSMを一本の候補へ集約して検証量を増やさず受理品質を改善。"
+      },
+      {
+        "metric": "Ablation: adaptive selector",
+        "value": "追加+35.07% / +5.91% throughput",
+        "baseline": "majority enabled",
+        "condition": "OPT-13B / Llama2-70B",
+        "interpretation": "固定sが最適から遠いOPTで特に大きい。"
+      },
+      {
+        "metric": "Ablation: pipeline",
+        "value": "追加+34.27% / +55.37% throughput",
+        "baseline": "majority+selector",
+        "condition": "OPT-13B / Llama2-70B",
+        "interpretation": "SSMとLLMの直列待機を重ね合わせる効果。"
+      },
+      {
+        "metric": "SpecInfer comparison",
+        "value": "7.61〜14.49× throughput, 6.34〜8.89× latency speedup",
+        "baseline": "SpecInfer",
+        "condition": "OPT-13B, batch=32",
+        "interpretation": "ただし比較SpecInfer実装には既知問題があり慎重な解釈が必要。"
+      }
+    ],
+    "negative_results": "一部データセットのbatch=32ではTensorRT-LLMがMinionsより高速。SpecInfer比較はFlexFlow演算子問題で比較側性能が論文報告より低く、Llama2-70Bでは注意重みロード失敗で比較できない。多数決はSSM能力が似るOPT financeでは追加利得が小さく、適応投機長も既定sが最適に近いLlama2では利得が小さい。",
+    "interpretation": "単一のドラフトモデルや固定投機長だけを改善するのではなく、候補品質、検証コスト、SSM/LLM資源待機、KV滞留をサービング系全体で連動制御する点が性能源である。",
+    "quality_impact": "投機検証はLLMの分布を用いた受理・再サンプリング規則に従い、LLM本体を量子化・枝刈りしない。SSMは蒸留微調整されるが最終出力の権威はLLM検証側にある。"
+  },
+  "reservation": {
+    "claim_id": "claim-89e2edf847dd8923a0885b8e",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

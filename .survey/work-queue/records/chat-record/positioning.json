@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-55ad2e2507991e421d05d6e8","job_id":"job-research-b3f94863f38e0308","data":{"limitations":"SSMをLLM生成データで蒸留微調整するため、対象LLM本体の再学習は不要でも補助モデル準備コストはある。評価はA100最大4基、Llama2-70B-chat/OPT-13B、会話系3データセットに限定され、現代の大規模MoEや長文脈での挙動は未検証。パイプラインはSSMがLLMより十分速いことを前提にし、intermediate pool制御もLLMバッチサイズを基準とする。TensorRT-LLMより遅い設定があり、SpecInfer比較には比較実装の問題が混入する。","differences":"標準投機的復号は単一SSMとLLMを交互実行し固定投機長を使う。SpecInferは複数SSM候補を利用するがLLM側の検証仕事も増える。Minionsは複数SSM候補を重み付き多数決で一本へ集約して検証量を抑え、さらに投機長を実行時適応し、SSMとLLMをintermediate poolで非同期化する。Medusa等の追加ヘッド方式と違いLLM構造を変更・再学習せず、vLLMのサービング層へ統合する。","implementation_status":"Python/vLLM上のシステムプロトタイプを実装し、PagedAttentionとBlockManagerを投機トークンのKV管理へ拡張。NVIDIA MPSでSSMとLLMを同時実行する。論文は他サービング基盤への適用可能性を主張するが実装はvLLMのみ。SSMはデータセットごとにLLMの正答生成を用いた蒸留で微調整する。","research_positioning":"投機的復号のアルゴリズムとLLMサービングスケジューラを結合するシステム研究。受理率だけでなくLLM検証コストとの比、パイプライン空泡、KVキャッシュ滞留まで同時に扱うため、単一要求のdecode高速化よりも高並行サービングでの資源利用を重視する。後続の投機的復号研究ではドラフト木、動的長、非同期検証などがさらに発展しており、Minionsは複数ドラフトとオンライン制御を早期に統合した比較対象となる。"},"reservation":{"claim_id":"claim-55ad2e2507991e421d05d6e8","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-89e2edf847dd8923a0885b8e",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {
+    "limitations": "SSMをLLM生成データで蒸留微調整するため、対象LLM本体の再学習は不要でも補助モデル準備コストはある。評価はA100最大4基、Llama2-70B-chat/OPT-13B、会話系3データセットに限定され、現代の大規模MoEや長文脈での挙動は未検証。パイプラインはSSMがLLMより十分速いことを前提にし、intermediate pool制御もLLMバッチサイズを基準とする。TensorRT-LLMより遅い設定があり、SpecInfer比較には比較実装の問題が混入する。",
+    "differences": "標準投機的復号は単一SSMとLLMを交互実行し固定投機長を使う。SpecInferは複数SSM候補を利用するがLLM側の検証仕事も増える。Minionsは複数SSM候補を重み付き多数決で一本へ集約して検証量を抑え、さらに投機長を実行時適応し、SSMとLLMをintermediate poolで非同期化する。Medusa等の追加ヘッド方式と違いLLM構造を変更・再学習せず、vLLMのサービング層へ統合する。",
+    "implementation_status": "Python/vLLM上のシステムプロトタイプを実装し、PagedAttentionとBlockManagerを投機トークンのKV管理へ拡張。NVIDIA MPSでSSMとLLMを同時実行する。論文は他サービング基盤への適用可能性を主張するが実装はvLLMのみ。SSMはデータセットごとにLLMの正答生成を用いた蒸留で微調整する。",
+    "research_positioning": "投機的復号のアルゴリズムとLLMサービングスケジューラを結合するシステム研究。受理率だけでなくLLM検証コストとの比、パイプライン空泡、KVキャッシュ滞留まで同時に扱うため、単一要求のdecode高速化よりも高並行サービングでの資源利用を重視する。後続の投機的復号研究ではドラフト木、動的長、非同期検証などがさらに発展しており、Minionsは複数ドラフトとオンライン制御を早期に統合した比較対象となる。"
+  },
+  "reservation": {
+    "claim_id": "claim-89e2edf847dd8923a0885b8e",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

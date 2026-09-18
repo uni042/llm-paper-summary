@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-55ad2e2507991e421d05d6e8","job_id":"job-research-b3f94863f38e0308","data":{"hardware":"NVIDIA A100 80GB×4をNVLink接続。OPT-13Bは2 GPU、Llama2-70B-chatは4 GPUのテンソル並列。","software":"Ubuntu 20.04、CUDA 11.8、cuDNN 8.9.0、PyTorch 2.0.1、transformers 4.34.0、xformers 0.0.22、pydantic 1.10.13。vLLMを基盤にPython実装し、NVIDIA MPSでSSMとLLMを同時実行。","methodology":"LLMはLlama2-70B-chatとOPT-13B、SSMは蒸留微調整したLlama-160MとOPT-125M。Finance Alpaca、Chatbot Instruction Prompts、Empathetic Dialoguesの3データセットで各要求最大128新規トークンを生成する。比較対象はvLLM、TGI、DeepSpeed-FastGen、TensorRT-LLMで全てFP16。正規化要求遅延とスループットを主要指標とし、batch=16で多数決、適応投機長、パイプラインを段階追加するアブレーション、固定投機長2〜12との比較、batch=32でSpecInfer比較、制御処理オーバーヘッド測定を行う。","scope":"SSMはLLM生成データによる蒸留微調整が必要で、完全な追加学習不要方式ではない。評価モデルは2023年前後のLlama2/OPT系、ハードウェアはA100 4基まで。TensorRT-LLMより一部batch=32設定で遅い。SpecInfer比較では比較実装に既知の演算子問題があり、Llama2-70Bでは注意重みロード失敗のため比較不能。Minionsの基盤はvLLMであり他サービング系への移植は未実装。"},"reservation":{"claim_id":"claim-55ad2e2507991e421d05d6e8","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-89e2edf847dd8923a0885b8e",
+  "job_id": "job-research-b3f94863f38e0308",
+  "data": {
+    "hardware": "NVIDIA A100 80GB×4をNVLink接続。OPT-13Bは2 GPU、Llama2-70B-chatは4 GPUのテンソル並列。",
+    "software": "Ubuntu 20.04、CUDA 11.8、cuDNN 8.9.0、PyTorch 2.0.1、transformers 4.34.0、xformers 0.0.22、pydantic 1.10.13。vLLMを基盤にPython実装し、NVIDIA MPSでSSMとLLMを同時実行。",
+    "methodology": "LLMはLlama2-70B-chatとOPT-13B、SSMは蒸留微調整したLlama-160MとOPT-125M。Finance Alpaca、Chatbot Instruction Prompts、Empathetic Dialoguesの3データセットで各要求最大128新規トークンを生成する。比較対象はvLLM、TGI、DeepSpeed-FastGen、TensorRT-LLMで全てFP16。正規化要求遅延とスループットを主要指標とし、batch=16で多数決、適応投機長、パイプラインを段階追加するアブレーション、固定投機長2〜12との比較、batch=32でSpecInfer比較、制御処理オーバーヘッド測定を行う。",
+    "scope": "SSMはLLM生成データによる蒸留微調整が必要で、完全な追加学習不要方式ではない。評価モデルは2023年前後のLlama2/OPT系、ハードウェアはA100 4基まで。TensorRT-LLMより一部batch=32設定で遅い。SpecInfer比較では比較実装に既知の演算子問題があり、Llama2-70Bでは注意重みロード失敗のため比較不能。Minionsの基盤はvLLMであり他サービング系への移植は未実装。"
+  },
+  "reservation": {
+    "claim_id": "claim-89e2edf847dd8923a0885b8e",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
