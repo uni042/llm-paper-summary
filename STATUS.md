@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 13:33:08 JST**
+> 自動生成: **2026-09-18 14:02:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **50** |
-| 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（1時間28分前）** |
+| 未claim Research job | **50** |
+| 直近24hの検証済みResearch収録 | **50** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（1時間58分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **12** | **1** | **0** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **5** |
-| 合計 | **28** | **3** | **2** | **1** | **1** | **0** | **5** |
+| Discovery | **16** | **1** | **0** | **1** | **0** | **0** | **1** |
+| 合計 | **28** | **2** | **0** | **2** | **0** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -162,26 +162,20 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 12:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation / MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
-- round `specialist-heterogeneous-control-1` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
-  - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
-- round `specialist-moe-cache-2` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json`
-  - 探索軸: MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1310JST-discovery-specialist-moe-cache-2.json` (`ok=true`)
+- 最新観測run: **2026-09-18 14:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **1件**
+- 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
+- round `specialist-offloaded-kv-sparse-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
+  - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 12:29:23 JST** / heartbeat: **—** / lease expiry: **09-18 13:59:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -229,10 +223,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **499** |
+| 成功result未照合のimmutable submission | **500** |
 | └ Research | **370** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
