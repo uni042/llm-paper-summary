@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a3bba0a36c53f4970b6d1719",
-  "job_id": "job-research-f7dcdf40e7d3538f",
+  "attempt_id": "attempt-8a84e34f15c4ef8ffd049438",
+  "job_id": "job-research-3001166a9d479500",
   "data": {
-    "overview": "StreamDQは大バッチでCUDAコア逆量子化がテンソルコア利用率を制約する領域ほど効果が大きい。混合精度GEMMではソフトウェア融合方式に対して最大7.08倍高速化し、エネルギーを最大90.23%削減する。端から端までのLLM推論では最大54.68%の遅延削減と最大2.20倍のデコードスループット向上を報告する。一方、INT4→FP16の小バッチでは共有メモリを利用するAWQ-v2やGPTQ融合カーネルがわずかに速く、StreamDQの優位性は計算律速化するにつれて現れる。",
+    "overview": "LLaDA-InstructではLaCache単独が素の実装に対して課題により約10〜42%の遅延短縮・スループット向上を示し、MATHでは9.93秒から6.97秒へ短縮した。Fast-dLLMとの併用でも追加改善が残り、GSM8Kでは3.52秒から2.48秒へ短縮する。キャッシュだけの除去実験では改善は概ね数%に留まり、全体の大きな改善には第2層以降のFP8線形演算が重要である。一方、長い文脈では既存法との合成効果が大きく、論文全体では最大40.2倍の高速化を報告する。",
     "key_results": [
       {
-        "metric": "混合精度GEMM速度向上",
-        "value": "最大7.08×",
-        "baseline": "GPTQ/AWQ/TorchAO等のソフトウェア逆量子化方式",
-        "condition": "K=N=4096、Mを変化、4種の量子化→計算形式",
-        "interpretation": "大バッチでCUDA逆量子化をテンソルコア経路から外す効果が大きい。"
+        "metric": "MATH平均推論遅延",
+        "value": "6.97秒",
+        "baseline": "Vanilla 9.93秒",
+        "condition": "LLaDA-Instruct、MATH 4-shot、LaCache単独",
+        "interpretation": "約30%の遅延短縮で、同じ生成長を保ちながら線形層低精度化と第1層再利用が効いている。"
       },
       {
-        "metric": "混合精度GEMMエネルギー",
-        "value": "最大90.23%削減",
-        "baseline": "ソフトウェア融合カーネル",
-        "condition": "StreamDQ-SimのA100校正電力モデル",
-        "interpretation": "DQB追加電力が小さく、実行時間とGPU内通信の削減が総エネルギーを下げる。"
+        "metric": "GSM8K平均推論遅延",
+        "value": "2.48秒",
+        "baseline": "Fast-dLLM 3.52秒",
+        "condition": "LLaDA-Instruct、GSM8K 4-shot、Fast-dLLM + LaCache",
+        "interpretation": "生成ステップ削減法の上にLaCacheを重ねても約30%の追加短縮があり、最適化軸が直交的であることを示す。"
       },
       {
-        "metric": "端から端までの推論遅延",
-        "value": "最大54.68%削減",
-        "baseline": "AWQ/GPTQ",
-        "condition": "LLaMA-3.1-8B、Qwen3-8B、Mistral-7B、入力/出力各1024、複数バッチ",
-        "interpretation": "逆量子化をメモリ読出しへ重ねることで高スループット領域のソフトウェア処理を除去する。"
+        "metric": "HumanEval平均推論遅延",
+        "value": "11.83秒",
+        "baseline": "Vanilla 15.87秒",
+        "condition": "LLaDA-Instruct、HumanEval 0-shot、LaCache単独",
+        "interpretation": "短い入力ではキャッシュ利得が小さいものの、FP8を含む全体方式では約25%の短縮が得られる。"
       },
       {
-        "metric": "デコードスループット",
-        "value": "最大2.20×",
-        "baseline": "AWQ/GPTQ",
-        "condition": "同上の端から端までの評価",
-        "interpretation": "バッチが大きく計算律速になるほどテンソルコア待ちと余分なHBM往復の除去が効く。"
+        "metric": "キャッシュ単独のMATH遅延",
+        "value": "9.09秒",
+        "baseline": "Vanilla 9.93秒",
+        "condition": "LLaDA-Instruct、MATH 4-shot、FP8なし",
+        "interpretation": "厳密キャッシュだけでも改善するが、完全方式6.97秒との差から主要な追加利得は低精度線形演算に由来する。"
       },
       {
-        "metric": "DQB回路コスト",
-        "value": "0.127 mm²、0.355 W / DQB",
-        "baseline": "12nm RTL合成",
-        "condition": "328MHz、512bit外部、1024bit内部、20%トグル率",
-        "interpretation": "32疑似チャネル基準で面積約3.36%、11.36W/スタックの追加となる。"
+        "metric": "最大エンドツーエンド高速化",
+        "value": "最大40.2倍",
+        "baseline": "Vanilla DLLM",
+        "condition": "長文脈を含む既存加速法との組合せ",
+        "interpretation": "LaCacheが生成スケジュール削減法と合成可能で、条件が合うと累積効果が非常に大きい。"
       }
     ],
-    "negative_results": "INT4→FP16のバッチ4以下ではAWQ-v2がStreamDQをわずかに上回り、端から端まででも小バッチではGPTQ融合カーネルが有利な場合がある。これはメモリ律速領域で融合カーネルが共有メモリを使い追加HBMアクセスを避けられるためである。GPTQはバッチ64以上で分離カーネルへ切り替えるとテンソルコア利用率を戻せるが、逆量子化済み重みのHBM書き戻し・再読込が増える。StreamDQの相対利得もバッチが非常に大きくなり逆量子化比率自体が低下すると縮小する。",
-    "interpretation": "StreamDQの価値は量子化方式そのものを変えることではなく、逆量子化をデータがGPUへ到着する前のメモリ読出し経路へ移すことで、CUDAコアとテンソルコアの生産者・消費者直列依存を切る点にある。大バッチではさらに、分離カーネルが必要とする高精度重みのオフチップ往復を消せるため、計算と帯域の両方に効果が出る。",
-    "quality_impact": "既存のW4A16/W8A16量子化重みをそのまま対象とし、StreamDQは追加の近似圧縮を行わない。浮動小数点変換や整数から浮動小数点への変換も対象形式の数値表現を保つよう設計されるため、性能向上のための追加品質劣化は報告されていない。"
+    "negative_results": "短いプロンプトでは不変領域が小さくキャッシュ効果が弱い。キャッシュだけではGSM8Kで10.59秒から10.54秒など改善がほぼない場合がある。DPadが接尾辞を大きく削る条件ではLaCacheが再利用できるトークン自体が減り、追加利得が小さくなる。深い層へキャッシュを拡張すると双方向注意で状態が変わるため厳密性を失い、更新間隔を長くするほど速度と精度の交換関係が生じる。",
+    "interpretation": "性能差は、同一ブロック内で再利用できる不変トークンの量と、FP8化できる線形演算の比率で説明できる。長い系列や多くの反復ステップでは不変領域が大きく、キャッシュの固定費を上回る。逆に短い系列やDPadで文脈を既に削った場合は再利用対象が減る。第1層をFP8化しない設計は精度を守る代わりに一部計算を高精度のまま残すため、キャッシュと第2層以降のFP8を組み合わせて補完している。",
+    "quality_impact": "厳密キャッシュ部分は同一入力に対する中間状態を再利用するため無損失。FP8部分は近似だが、主要ベンチマークで精度は概ね同等で、GSM8Kでは柔軟一致76.04から76.35、厳密一致48.67から49.43へ小幅上昇した。MATHでも厳密一致32.20から32.48で、HumanEvalは35.98から39.63と上昇したが、生成長や低精度化による出力傾向の変化もあるため、改善を量子化そのものの品質向上と一般化すべきではない。"
   },
   "reservation": {
-    "claim_id": "claim-a3bba0a36c53f4970b6d1719",
+    "claim_id": "claim-8a84e34f15c4ef8ffd049438",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

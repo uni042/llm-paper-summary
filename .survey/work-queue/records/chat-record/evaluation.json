@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a3bba0a36c53f4970b6d1719",
-  "job_id": "job-research-f7dcdf40e7d3538f",
+  "attempt_id": "attempt-8a84e34f15c4ef8ffd049438",
+  "job_id": "job-research-3001166a9d479500",
   "data": {
-    "hardware": "実行時評価はNVIDIA A100 PCIe 40GB GPU（HBM2 5スタック）を使用する。DQBは12nm CMOSロジックプロセスで合成し、1個あたり512ビット外部インターフェース、1024ビット内部データパス、328MHz、0.127mm²、0.355W。HBM統合の面積・電力評価は公開HBM3仕様の121mm²ベースダイ、16チャネル・各2疑似チャネルを基準とし、32 DQBでベースダイ面積の約3.36%、合計11.36Wと見積もる。熱評価はFloTHERMによるカスタムHBM相当モデルを用いる。",
-    "software": "vLLM 0.11.0 v1エンジン、PyTorch 2.8.0、CUDA 12.8。StreamDQ-SimはNVBitベースのAccel-Simトレーサ、StreamDQ動作を組み込んだAccel-Sim、A100向けに拡張したAccelWattch、実GPU測定での校正モジュールから成る。比較対象は混合精度GEMMでGPTQ、AWQ-v1、AWQ-v2、TorchAO、端から端までの推論でAWQとGPTQ。",
-    "methodology": "LLaMA-3.1-8B-Instruct、Qwen3-8B、Mistral-7B-Instruct-v0.3をW4A16/W8A16で評価し、INT4→FP16、INT4→BF16、INT8→FP16、INT8→BF16の4変換を扱う。混合精度GEMMはK=N=4096でMを変化させ、各実験を16回反復して平均を報告する。シミュレータは全精度GEMMの実測とAccel-Sim結果の関係で校正し、FP16/BF16の電力モデル相関係数は0.833/0.866、平均絶対百分率誤差は28.67%/27.26%、大きいGEMMでは13.35%/7.67%まで低下する。端から端までの評価は入力・出力長1024でバッチサイズを変え、Nsight Systemsで得た混合精度GEMM比率へシミュレーション速度向上を適用する。GPTQ/AWQは各バッチで最良の融合・分離カーネルを選ぶ。",
-    "scope": "DQB回路はRTL合成されるが、StreamDQを実際に組み込んだHBMシリコンやGPUは存在せず、性能・エネルギーの主要結果はA100実測で校正したシミュレーションに基づく。熱もモデル評価である。対象は高スループット・大バッチの重みのみ量子化推論であり、小バッチのメモリ律速領域では融合ソフトウェアカーネルが有利な場合がある。将来形式には追加の形式固有ロジックが必要で、独自GPUの実際のHBMインターリーブ方策は公開されていない。"
+    "hardware": "実GPUで評価。本文は設計GPUと記載し、付録で別種GPUでも一貫した傾向を確認している。方式のFP8部分は低精度行列積を高速実行できる現代GPUを前提とする。",
+    "software": "LLaDA-base、LLaDA-Instruct、LLaDA-1.5を対象とし、比較対象は素のLLaDA、Fast-dLLMによる並列復号、DPadによる接尾辞削減、およびそれらとLaCacheの組合せ。FP8線形層にはDeepGEMMを利用し、量子化処理を周辺演算へ融合する。",
+    "methodology": "推論効率は1例あたり平均遅延と毎秒トークン数で測定し、品質は推論課題の柔軟一致・厳密一致、コード生成のpass@1等で比較する。GSM8K 4-shot、MATH 4-shot、HumanEval 0-shot、MBPP 3-shotを主要表で評価し、PIQA、ARC、HellaSwag、WinoGrande、GPQAも付録で確認する。キャッシュ単独、量子化粒度、系列長について除去実験も行う。",
+    "scope": "実機推論のエンドツーエンド測定であり、シミュレーションではない。主評価はLLaDA系の拡散型LLMに限定され、自己回帰LLM一般への直接一般化は対象外。厳密キャッシュの適用範囲は第1層までで、FP8高速化は対応GPUに依存する。"
   },
   "reservation": {
-    "claim_id": "claim-a3bba0a36c53f4970b6d1719",
+    "claim_id": "claim-8a84e34f15c4ef8ffd049438",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
