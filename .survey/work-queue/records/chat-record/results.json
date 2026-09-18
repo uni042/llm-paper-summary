@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ab76d4a962a0d6ea991a05b2",
-  "job_id": "job-research-3001166a9d479500",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ab76d4a962a0d6ea991a05b2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ab76d4a962a0d6ea991a05b2","job_id":"job-research-3001166a9d479500",
+ "data":{
+   "overview":"LLaDA-InstructではLaCache単独が素の実装に対して課題により約10〜42%の遅延短縮・スループット向上を示し、MATHでは9.93秒から6.97秒へ短縮した。Fast-dLLMとの併用でも追加改善が残り、GSM8Kでは3.52秒から2.48秒へ短縮する。キャッシュだけの除去実験では改善は概ね数%に留まり、全体の大きな改善には第2層以降のFP8線形演算が重要である。一方、長い文脈では既存法との合成効果が大きく、論文全体では最大40.2倍の高速化を報告する。",
+   "key_results":[
+     {"metric":"MATH平均推論遅延","value":"6.97秒","baseline":"Vanilla 9.93秒","condition":"LLaDA-Instruct、MATH 4-shot、LaCache単独","interpretation":"約30%の遅延短縮で、同じ生成長を保ちながら線形層低精度化と第1層再利用が効いている。"},
+     {"metric":"GSM8K平均推論遅延","value":"2.48秒","baseline":"Fast-dLLM 3.52秒","condition":"LLaDA-Instruct、GSM8K 4-shot、Fast-dLLM + LaCache","interpretation":"生成ステップ削減法の上にLaCacheを重ねても約30%の追加短縮があり、最適化軸が直交的であることを示す。"},
+     {"metric":"HumanEval平均推論遅延","value":"11.83秒","baseline":"Vanilla 15.87秒","condition":"LLaDA-Instruct、HumanEval 0-shot、LaCache単独","interpretation":"短い入力ではキャッシュ利得が小さいものの、FP8を含む全体方式では約25%の短縮が得られる。"},
+     {"metric":"キャッシュ単独のMATH遅延","value":"9.09秒","baseline":"Vanilla 9.93秒","condition":"LLaDA-Instruct、MATH 4-shot、FP8なし","interpretation":"厳密キャッシュだけでも改善するが、完全方式6.97秒との差から主要な追加利得は低精度線形演算に由来する。"},
+     {"metric":"最大エンドツーエンド高速化","value":"最大40.2倍","baseline":"Vanilla DLLM","condition":"長文脈を含む既存加速法との組合せ","interpretation":"LaCacheが生成スケジュール削減法と合成可能で、条件が合うと累積効果が非常に大きい。"}
+   ],
+   "negative_results":"短いプロンプトでは不変領域が小さくキャッシュ効果が弱い。キャッシュだけではGSM8Kで10.59秒から10.54秒など改善がほぼない場合がある。DPadが接尾辞を大きく削る条件ではLaCacheが再利用できるトークン自体が減り、追加利得が小さくなる。深い層へキャッシュを拡張すると双方向注意で状態が変わるため厳密性を失い、更新間隔を長くするほど速度と精度の交換関係が生じる。",
+   "interpretation":"性能差は、同一ブロック内で再利用できる不変トークンの量と、FP8化できる線形演算の比率で説明できる。長い系列や多くの反復ステップでは不変領域が大きく、キャッシュの固定費を上回る。逆に短い系列やDPadで文脈を既に削った場合は再利用対象が減る。第1層をFP8化しない設計は精度を守る代わりに一部計算を高精度のまま残すため、キャッシュと第2層以降のFP8を組み合わせて補完している。",
+   "quality_impact":"厳密キャッシュ部分は同一入力に対する中間状態を再利用するため無損失。FP8部分は近似だが、主要ベンチマークで精度は概ね同等で、GSM8Kでは柔軟一致76.04から76.35、厳密一致48.67から49.43へ小幅上昇した。MATHでも厳密一致32.20から32.48で、HumanEvalは35.98から39.63と上昇したが、生成長や低精度化による出力傾向の変化もあるため、改善を量子化そのものの品質向上と一般化すべきではない。"
+ },
+ "reservation":{"claim_id":"claim-ab76d4a962a0d6ea991a05b2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
