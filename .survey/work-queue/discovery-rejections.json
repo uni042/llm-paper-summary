@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-18T15:00:00+09:00",
-  "submission_count": 10,
+  "updated_at": "2026-09-18T16:00:00+09:00",
+  "submission_count": 11,
   "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 36,
-  "rejection_record_count": 36,
+  "rejection_observation_count": 38,
+  "rejection_record_count": 38,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -296,6 +296,50 @@
       "axis": "network-constrained KV transfer・proactive migration・elastic KV reclamation",
       "run_key": "2026-09-18T15:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.00891": {
+      "primary_identity": "id:arXiv:2609.00891",
+      "identity_tokens": [
+        "id:arXiv:2609.00891",
+        "title:gva a framework for efficient kv cache compression via grouped vector attention",
+        "url:https://arxiv.org/abs/2609.00891"
+      ],
+      "canonical_id": "arXiv:2609.00891",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "GVA: A Framework for Efficient KV Cache Compression via Grouped Vector Attention",
+      "source_url": "https://arxiv.org/abs/2609.00891",
+      "rejection_reason": "主貢献が注意機構アーキテクチャと学習時のKV圧縮で、重点対象の推論基盤・階層メモリ・サービング資源管理から外れるため。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T16:00:00+09:00",
+      "last_rejected_at": "2026-09-18T16:00:00+09:00",
+      "axis": "2609新着・KVキャッシュ・マルチエージェント推論スケジューリング",
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.04971": {
+      "primary_identity": "id:arXiv:2609.04971",
+      "identity_tokens": [
+        "id:arXiv:2609.04971",
+        "title:kvsharearena benchmarking intrarequest kv cache sharing for efficient llm inference",
+        "url:https://arxiv.org/abs/2609.04971"
+      ],
+      "canonical_id": "arXiv:2609.04971",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "KVShareArena: Benchmarking Intra-Request KV Cache Sharing for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "rejection_reason": "主眼が既存KV共有手法の統一ベンチマークであり、新規の推論システム機構・資源管理方式そのものの提案ではないため。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T16:00:00+09:00",
+      "last_rejected_at": "2026-09-18T16:00:00+09:00",
+      "axis": "2609新着・KVキャッシュ・マルチエージェント推論スケジューリング",
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.10266": {
