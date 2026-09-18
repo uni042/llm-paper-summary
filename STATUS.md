@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:02:43 JST**
+> 自動生成: **2026-09-18 14:03:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **0** | **1** | **0** | **0** | — |
+| Research | **11** | **1** | **0** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **1** | **0** | **1** | **0** | **0** | **1** |
-| 合計 | **28** | **2** | **0** | **2** | **0** | **0** | **1** |
+| Discovery | **16** | **2** | **0** | **2** | **0** | **0** | **1** |
+| 合計 | **27** | **3** | **0** | **3** | **0** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -163,11 +163,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 14:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **1件**
-- 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **1件**
+- 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth / 2609後半・agentic serving・speculative decoding・KV representation
 - round `specialist-offloaded-kv-sparse-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
   - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-late-september-inference-2` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json`
+  - 探索軸: 2609後半・agentic serving・speculative decoding・KV representation
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -223,10 +227,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **500** |
+| 成功result未照合のimmutable submission | **501** |
 | └ Research | **370** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
