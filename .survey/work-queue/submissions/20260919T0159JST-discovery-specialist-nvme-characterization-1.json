@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2505.03780",
+      "title": "An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD",
+      "source_url": "https://arxiv.org/abs/2505.03780",
+      "priority": 78,
+      "reason": "CHEOPS 2025の査読付きsystems/storage研究で、DeepSpeedとFlexGenの実際のLLM推論offloadからblock-layer I/O traceを採取し、model/KV-cacheのNVMeアクセス粒度・read/write帯域・POSIX対libaio・SSD非飽和を定量化する。SSD/NVMe階層memory設計に直接使える実測characterizationで、既存のoffload mechanism論文を補完する一次データとして価値が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-nvme-characterization-1",
+    "axis": "NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath",
+    "query_summary": "SSD/NVMe、GPUDirect Storage、CXL、KV-cache offloadを2025中心に走査。2609.18112、2609.16206、2603.19289、2604.25699、2604.26557、2508.06978等の強候補はcanonical identity shardで既収録/既投入を確認して早期除外した。CHEOPS 2025論文はarXiv:2505.03780として公式IBM/著者/ACM系一次情報で内容とDOI 10.1145/3719330.3721230を確認し、arxiv-2505 identity shardに不在だったため採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": ["arXiv:2609.18112", "arXiv:2609.16206", "arXiv:2603.19289", "arXiv:2604.25699", "arXiv:2604.26557", "arXiv:2508.06978"],
+    "next_axis_hint": "storage datapathの引用・被引用、SPDK/io_uring/GDSを用いるLLM inference、2024-2026のworkshop/measurement論文へ展開する"
+  }
+}
