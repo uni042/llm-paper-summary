@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0e6b871e3cbc07f693bcc4eb",
-  "job_id": "job-research-2072895e5b6f0b68",
-  "data": {
-    "hardware": "評価は実機クラスタではなくシミュレーション。全GPUは大型スイッチへ接続される。同種クラスタは各GPUのネットワーク帯域を100Gbpsとし、異種クラスタは100、80、50、40Gbpsの4種類を同数ずつ配置する。排他的配置では各MoEモデルが帯域を独立利用し、同居配置では同じGPUに置かれたモデル間だけ帯域競合する。",
-    "software": "論文の理論モデルとアルゴリズムを用いたシミュレーション評価。通信順序の比較対象は最短ジョブ優先（Shortest Job First; SJF）とランダム通信順序、異種GPU割当はランダム割当、同居はランダム同居とLinaの同一モデル内同居機構を比較する。Linaについては訓練固有の全対全通信優先機構を除き、関連するエキスパート同居部分を実装して比較する。",
-    "methodology": "Googleの公開済み本番モデル統計を使い、B/16とB/32という2つのMoEモデル、各8エキスパート、4層分の交通情報をCOCOとImageNet条件から取り出してシミュレーション入力とする。4つの配置条件すべてで推論時間を測り、GPU利用率はゲート・FFN・集約の計算時間を総推論時間で割って定義する。異種同居条件では総当たり探索で得た最適解とも比較する。交通予測誤差への頑健性は第1層の交通行列を最適化入力にし、他3層の交通を順次ノイズとして加えて0〜75%の不正確さを模擬する。",
-    "scope": "評価はGoogle由来のMoE交通統計を使うシミュレーションであり、実GPU上のNCCL実行、カーネル干渉、PCIe/NVLink階層、スイッチ多段構成、要求到着の待ち行列、モデル品質は直接測定していない。クラスタ網は単一大型スイッチとして抽象化され、モデルは各8エキスパートのB/16・B/32に限定されるため、より大規模なLLM型MoEへ結果をそのまま外挿するには追加実機検証が必要である。"
-  },
+  "attempt_id": "attempt-d1fab66f48e43669c98dd751",
+  "job_id": "job-research-ebde0cc040167968",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0e6b871e3cbc07f693bcc4eb",
+    "claim_id": "claim-d1fab66f48e43669c98dd751",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
