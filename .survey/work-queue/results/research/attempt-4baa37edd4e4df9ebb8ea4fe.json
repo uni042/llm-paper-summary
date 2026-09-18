@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-4baa37edd4e4df9ebb8ea4fe",
+  "job_id": "job-research-044cfc2969a67347",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-4baa37edd4e4df9ebb8ea4fe.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | results.overview must explain the main result and its practical meaning",
+  "processed_at": "2026-09-18T16:19:23+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "results.overview must explain the main result and its practical meaning"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}

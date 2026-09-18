@@ -27,5 +27,12 @@
     }
   ],
   "last_blocked_at": "2026-09-18T10:08:05+00:00",
-  "retry_queued_at": "2026-09-18T13:03:31+00:00"
+  "retry_queued_at": "2026-09-18T13:03:31+00:00",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | results.overview must explain the main result and its practical meaning",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "results.overview must explain the main result and its practical meaning"
+  ],
+  "last_validation_failed_at": "2026-09-18T16:19:23+00:00"
 }
