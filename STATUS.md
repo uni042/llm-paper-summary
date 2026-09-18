@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:38:56 JST**
+> 自動生成: **2026-09-18 09:39:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **55** |
-| 未claim Research job | **53** |
+| 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-18 09:38:51 JST（5秒前）** |
+| 最終検証済みResearch収録 | **09-18 09:38:51 JST（17秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **3** | **3** | **0** | **2** | **0** | — |
+| Research | **12** | **3** | **3** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **20** | **11** | **11** | **0** | **2** | **0** | **18** |
+| 合計 | **20** | **11** | **11** | **0** | **3** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -208,7 +208,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2505.22618` — Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:39:01 JST** / heartbeat: **—** / lease expiry: **09-18 11:09:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-99d754a688aca9c8.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
