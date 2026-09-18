@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 18:02:39 JST**
+> 自動生成: **2026-09-18 18:02:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **50** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-18 16:41:52 JST（1時間20分前）** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-18 18:02:43 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **2** | **2** | **0** | **2** | **0** | — |
+| Research | **7** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **25** | **13** | **13** | **0** | **2** | **0** | **28** |
+| 合計 | **26** | **13** | **13** | **0** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 18:02:43 JST** [research] `arXiv:2503.09716` — MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching
+  - job: `.survey/work-queue/jobs/job-research-e4eebc0f5643e0fd.json`
+  - result: `.survey/work-queue/results/research/attempt-70bc34fb123b636715b220f9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-70bc34fb123b636715b220f9.json`
+  - paper: `papers/inference/02-moe-inference/2025-2503.09716-moe-gen-module-based-batching.md`
 - **09-18 16:41:52 JST** [research] `arXiv:2607.02525` — PEEK: Predictive Queue-Informed KV Cache Management for LLM Serving
   - job: `.survey/work-queue/jobs/job-research-455581782889dbd1.json`
   - result: `.survey/work-queue/results/research/attempt-71d88f013604453cc1c44327.json` (`ok=true`)
@@ -199,10 +204,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.09716` — MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 17:59:55 JST** / heartbeat: **—** / lease expiry: **09-18 19:29:55 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e4eebc0f5643e0fd.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **—** / lease expiry: **09-18 19:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
@@ -225,7 +227,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -245,7 +247,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **710** |
+| inference/training/survey配下の論文Markdown実体 | **711** |
 
 ### immutable submissionの未照合
 
@@ -253,8 +255,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **510** |
-| └ Research | **381** |
+| 成功result未照合のimmutable submission | **509** |
+| └ Research | **380** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
