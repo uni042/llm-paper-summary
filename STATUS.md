@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:22:37 JST**
+> 自動生成: **2026-09-19 07:23:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **9** | **5** | **4** | **2** | **0** | — |
+| Research | **21** | **10** | **5** | **5** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **12** | **8** | **4** | **2** | **0** | **3** |
+| 合計 | **34** | **13** | **8** | **5** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **9件** / 検証済み成功: **5件** / 未完了・未検証: **4件**
+- immutable submission: **10件** / 検証済み成功: **5件** / 未完了・未検証: **5件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`)
 - **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
   - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
   - result: `.survey/work-queue/results/research/attempt-59bd34d06f011611b0132598.json` (`ok=true`)
@@ -264,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **568** |
-| └ Research | **439** |
+| 成功result未照合のimmutable submission | **569** |
+| └ Research | **440** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
