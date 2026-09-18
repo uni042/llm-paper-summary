@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e39029e7aceaac1f85b0d43a",
+  "attempt_id": "attempt-71d88f013604453cc1c44327",
   "job_id": "job-research-455581782889dbd1",
   "data": {
     "limitations": "待機列がsingleton優勢になると共有群数Cが要求数Nへ近づき、SGLang二重走査のN/C償却は1へ縮む。cLPMの最終sortはPythonでO(N log N)のまま。評価アクセラレータはH100のみで、小容量GPUやマルチモーダルprefixは未評価。群優先は公平性を損ね得るため動的レーンが必要で、厳密な個別SLO保証そのものではない。vLLMは平坦block-hash cacheのためSGLangのような木対木共同走査はできず、LPM探索は要求ごとに残る。",
@@ -11,7 +11,7 @@
     "research_positioning": "prefix cache研究の中で、キャッシュ機構そのものではなく『待機要求をどの順で走らせ、どのKVを残すか』を共同最適化する政策層。cross-replica prefix-affinity routerの下、各replica内で動作でき、LMCache等の分散KVやRAGCache等の保存機構とも組み合わせ可能。特にqueueを短期未来需要として直接使う点が、LRU/LFUの過去参照ベース政策からの転換である。"
   },
   "reservation": {
-    "claim_id": "claim-e39029e7aceaac1f85b0d43a",
+    "claim_id": "claim-71d88f013604453cc1c44327",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

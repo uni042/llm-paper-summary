@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e39029e7aceaac1f85b0d43a",
+  "attempt_id": "attempt-71d88f013604453cc1c44327",
   "job_id": "job-research-455581782889dbd1",
   "data": {
     "overview": "共有構造があるW1〜W3でPEEKはSGLang/vLLMの標準基準に対し、最大cache hit 3.0倍/2.6倍、TTFT 7.9倍/7.1倍、E2E 6.7倍/5.5倍、throughput 3.6倍/4.5倍を達成する。共有が少ないW4/W5ではE2E・throughputを概ね±2%内に保ち、has_sharingと公平レーンが低headroom負荷の回帰を抑える。",
@@ -55,7 +55,7 @@
     "quality_impact": "モデル演算・attention・KV値を変更しないため生成品質を近似しない。変わるのは要求の実行順序と待ち時間であり、品質上の主なリスクではなく公平性/SLOが問題になるためdynamic laneで制御する。"
   },
   "reservation": {
-    "claim_id": "claim-e39029e7aceaac1f85b0d43a",
+    "claim_id": "claim-71d88f013604453cc1c44327",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
