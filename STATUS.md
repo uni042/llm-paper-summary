@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:45:51 JST**
+> 自動生成: **2026-09-18 10:46:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **1** | **2** | **1** | **0** | — |
+| Research | **16** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **10** | **10** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **11** | **2** | **1** | **0** | **28** |
+| 合計 | **26** | **12** | **11** | **1** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,8 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 10:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5c663e048fea18307db0a4ec.json` (job `job-research-660ceb86238a1a21`)
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-73e778f4334326a6472d6105.json` (job `job-research-fb4ae3eceb455bfc`)
 - **成功** `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
   - job: `.survey/work-queue/jobs/job-research-6c1a5d06d3b875ce.json`
@@ -218,7 +217,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 10:44:22 JST** / heartbeat: **—** / lease expiry: **09-18 12:14:22 JST**
+  - claim: **09-18 10:45:56 JST** / heartbeat: **—** / lease expiry: **09-18 12:15:56 JST**
   - evidence: `.survey/work-queue/claims/job-research-660ceb86238a1a21.json`
 
 #### Audit
