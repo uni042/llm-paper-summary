@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-network-kv-5",
+    "axis": "RDMA・KV transfer・disaggregated serving networking",
+    "query_summary": "selective KV transfer、block-free RDMA transfer、network-aware disaggregated servingを走査。SmartGen、FlowKV、P/D-Serve等の強候補はidentity snapshotで既収録を確認した。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2607.28150", "arXiv:2504.03775", "arXiv:2408.08147"],
+    "next_axis_hint": "agentic serving・tool-call KV lifecycleへ切り替える",
+    "empty_round_reason": "network/KV transferの上位system候補は既収録だった。"
+  }
+}
