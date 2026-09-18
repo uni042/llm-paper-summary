@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T06:04:12.555594+00:00",
+  "updated_at": "2026-09-18T07:03:11.892207+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T06:04:12.555594+00:00",
+      "last_recorded_at": "2026-09-18T07:03:11.892207+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 244,
         "audit_completed": 0,
-        "discovery_completed": 122,
+        "discovery_completed": 123,
         "blocked": 21,
-        "new_jobs": 184,
+        "new_jobs": 185,
         "new_papers": 247,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35207556121:1",
-          "recorded_at": "2026-09-17T09:53:49.436483+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35207556121",
-            "run_attempt": "1",
-            "source_sha": "3b55772f969daf5f249da19a712a41308ad55921"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35211086592:1",
           "recorded_at": "2026-09-17T10:33:30.863487+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35313029347",
             "run_attempt": "1",
             "source_sha": "a8ca3ea938a5dd82c18573bd3746e1fbf3b0bbfe"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35317435409:1",
+          "recorded_at": "2026-09-18T07:03:11.892207+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35317435409",
+            "run_attempt": "1",
+            "source_sha": "651e49e3516c2e6fae10eaf666acd7e22b31a96f"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -22696,6 +22696,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-46c92d11d4e3d7f9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23986,6 +23994,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-46c92d11d4e3d7f9",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -24479,7 +24494,8 @@
         ".survey/work-queue/results/20260918T1500JST-discovery-specialist-robust-kv-1.json",
         ".survey/work-queue/results/20260918T1505JST-discovery-specialist-cxl-disagg-2.json",
         ".survey/work-queue/results/20260918T1510JST-discovery-specialist-kv-migration-3.json",
-        ".survey/work-queue/results/20260918T1515JST-discovery-specialist-moe-runtime-4.json"
+        ".survey/work-queue/results/20260918T1515JST-discovery-specialist-moe-runtime-4.json",
+        ".survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",

@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2604.10907",
   "paper_path": "papers/inference/06-serving-scheduling/2026-2604.10907-routerwise-resource-allocation-routing.md",
   "selection_reason": "multi-model LLM servingでroutingとGPU resource allocationの相互依存を明示し、profiling由来latency modelとdual-price routingでSLO下のquality最大化を共同最適化する。system setupだけでquality scoreが最大87%変動することを示す。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-18T05:42:12+00:00",
-  "completed_at": "2026-09-18T05:42:12+00:00",
-  "retry_not_before": "2026-09-18T07:00:41+00:00"
+  "retry_queued_at": "2026-09-18T07:03:06+00:00"
 }

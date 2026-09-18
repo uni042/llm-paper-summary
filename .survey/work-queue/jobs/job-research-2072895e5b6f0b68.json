@@ -8,14 +8,13 @@
   "source_url": "https://arxiv.org/abs/2410.17043",
   "paper_path": "papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
   "selection_reason": "Auroraはexpert/model deploymentとall-to-all communication schedulingを共同最適化し、homogeneous clusterで最大2.38x、heterogeneous環境で3.54x高速化を報告。expert placementと通信skewを統合する比較軸として価値がある。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-16T19:03:45+00:00",
-  "completed_at": "2026-09-18T05:45:59+00:00",
   "blocker": "このrunではFathomとPATの一次資料全文を精読した後、arXiv公式HTML取得に対して外部取得基盤からDisabledErrorが実際に返り、以後の一次資料全文取得が利用不能となった状態で本jobが新規割当された。arXiv:2410.17043の公式PDF/HTML本文をこのattemptでは取得・精読できていないため、selection_reasonや二次資料からAuroraの手法・評価条件・主要結果・限界を5-slotへ推測生成しない。一時的blockedとして耐久保存し、永久除外にはしない。外部取得枠が復旧したrunでarXiv公式PDF/HTMLと、存在する場合は会議・著者公式全文経路を確認して全文精読から再試行する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-c45eda0ca290930fb74c6805.json",
   "blocked_attempts": 1,
@@ -28,5 +27,5 @@
     }
   ],
   "last_blocked_at": "2026-09-18T05:45:59+00:00",
-  "retry_not_before": "2026-09-18T07:00:41+00:00"
+  "retry_queued_at": "2026-09-18T07:03:06+00:00"
 }

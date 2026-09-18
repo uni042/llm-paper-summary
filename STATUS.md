@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:03:05 JST**
+> 自動生成: **2026-09-18 16:03:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **45** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間17分前）** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間18分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **22** | **7** | **0** | **7** | **0** | **0** | **26** |
-| 合計 | **29** | **13** | **3** | **10** | **1** | **0** | **26** |
+| Discovery | **22** | **7** | **1** | **6** | **0** | **0** | **26** |
+| 合計 | **29** | **13** | **4** | **9** | **1** | **0** | **26** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-18 16:01:25 JST** job `job-46c92d11d4e3d7f9` / 候補 **2件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
+  - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
 - **09-18 14:59:23 JST** job `job-a3b20fcf00af86ca` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T1500JST-discovery-specialist-robust-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
   - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
-- **09-18 11:04:43 JST** job `job-20e98114d5b4cc73` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260918T1120JST-discovery-specialist-agent-runtime-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json`
-  - 探索軸: agentic workflow・prefix state・power-aware disaggregated serving
 
 ### 直近タスク
 
@@ -165,12 +165,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 16:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **26件**
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **26件**
 - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング / CXL共有メモリ・NVMe KVキャッシュ / MoE expert placement・offload・heterogeneous runtime / edge MoE・expert prefetch・Flash/NPU・distributed routing / PD disaggregation・RDMA・CXL KV transport / agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse / prefix-affinity routing・queue-aware KV・agent scheduling
 - round `specialist-kv-scheduling-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
   - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
 - round `specialist-cxl-nvme-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r2.json`
   - 探索軸: CXL共有メモリ・NVMe KVキャッシュ
@@ -223,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -251,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **512** |
+| 成功result未照合のimmutable submission | **511** |
 | └ Research | **376** |
 | └ Audit | **2** |
-| └ Discovery | **134** |
+| └ Discovery | **133** |
 
 ### 厳格検証が未成立のcompleted job
 

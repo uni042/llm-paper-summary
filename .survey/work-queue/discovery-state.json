@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T06:02:28+00:00",
-  "last_run_key": "2026-09-18T15:00:00+09:00",
-  "last_round": "specialist-moe-runtime-4",
+  "updated_at": "2026-09-18T07:01:25+00:00",
+  "last_run_key": "2026-09-18T16:00:00+09:00",
+  "last_round": "specialist-kv-scheduling-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 5,
+  "consecutive_empty_rounds": 6,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T02:29:24+09:00",
-      "round": "specialist-foundry-backward-coldstart-elasticity-5",
-      "axis": "Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity",
-      "query_summary": "直前採用候補Foundryの一次資料にある関連研究・参考文献から、Gyges、Expert-as-a-Service、WarmServe、HydraServe、λScaleを抽出し、各arXiv抄録だけで軽量評価した。投入直前に最新mainのidentity index、next discovery job、決定論的research job pathを照合し5件とも未収録・job未存在を確認した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る",
-      "source_submission": "work-queue/submissions/20260913T0245JST-discovery-specialist-foundry-backward.json"
-    },
     {
       "run_key": "2026-09-13T02:29:24+09:00",
       "round": "specialist-agent-state-memory-6",
@@ -6999,6 +6984,24 @@
       ],
       "next_axis_hint": "次はGPU kernel/runtime、continuous batching、compiler/graph captureの未収録重要研究へ移る",
       "source_submission": "work-queue/submissions/20260918T1515JST-discovery-specialist-moe-runtime-4.json"
+    },
+    {
+      "run_key": "2026-09-18T16:00:00+09:00",
+      "round": "specialist-kv-scheduling-1",
+      "axis": "2609新着・KVキャッシュ・マルチエージェント推論スケジューリング",
+      "query_summary": "2026年9月のarXiv新着をKV cache、LLM serving、scheduling、MoE inferenceの検索軸で横断し、システム評価を持つ未収録候補を選別。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "MoE expert placement/offloadとCXL/NVMe階層メモリの2026年夏〜秋新着・引用追跡",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json"
     }
   ],
   "axes": {
@@ -11972,6 +11975,19 @@
       "duplicate_ratio": 0.4,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はGPU kernel/runtime、continuous batching、compiler/graph captureの未収録重要研究へ移る"
+    },
+    "2609新着・KVキャッシュ・マルチエージェント推論スケジューリング": {
+      "last_run_key": "2026-09-18T16:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "MoE expert placement/offloadとCXL/NVMe階層メモリの2026年夏〜秋新着・引用追跡"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
