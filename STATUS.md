@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:41:32 JST**
+> 自動生成: **2026-09-19 02:01:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **47** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-19 01:35:47 JST（5分前）** |
+| 最終検証済みResearch収録 | **09-19 01:35:47 JST（25分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **1** | **0** | **1** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **30** | **10** | **9** | **1** | **3** | **0** | **2** |
+| Discovery | **21** | **2** | **1** | **1** | **0** | **0** | **2** |
+| 合計 | **31** | **3** | **1** | **2** | **3** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-19 02:00:50 JST** job `job-e07c9322ac71f48e` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0159JST-discovery-specialist-nvme-characterization-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json`
+  - 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath
 - **09-18 21:59:34 JST** job `job-bfe6701d4307a48c` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T2157JST-discovery-specialist-speculative-cosine-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
   - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
-- **09-18 20:02:46 JST** job `job-fb6e71b1d7480608` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260918T2001JST-discovery-specialist-memory-specdecode-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
-  - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
 
 ### 直近タスク
 
@@ -162,45 +162,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 21:00 JST**
-- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **9件** / 個別result照合: **9件** / 個別result未照合: **0件** / 候補: **2件**
-- 探索軸: 分散speculative inference・heterogeneous drafter orchestration / 非同期speculative decoding・tensor parallel・KV/kernel co-design / CXL・KV cache memory disaggregation・PNM/FPGA / MoE expert offload・cacheless edge-distributed inference / RDMA・KV transfer・disaggregated serving networking / agentic serving・tool-call progress・KV lifecycle / multi-tenant serving・token latency fairness・SLO isolation / GPU runtime・persistent kernel・CUDA Graph・JIT compilation / 2026-09-17以降の新着差分・arXiv 2609後半
-- round `specialist-speculative-cosine-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json`
-  - 探索軸: 分散speculative inference・heterogeneous drafter orchestration
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2157JST-discovery-specialist-speculative-cosine-1.json` (`ok=true`)
-- round `specialist-swiftspec-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T2202JST-discovery-specialist-swiftspec-2.json`
-  - 探索軸: 非同期speculative decoding・tensor parallel・KV/kernel co-design
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2202JST-discovery-specialist-swiftspec-2.json` (`ok=true`)
-- round `specialist-cxl-kv-3` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2205JST-discovery-specialist-cxl-kv-3.json`
-  - 探索軸: CXL・KV cache memory disaggregation・PNM/FPGA
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2205JST-discovery-specialist-cxl-kv-3.json` (`ok=true`)
-- round `specialist-moe-edge-4` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2206JST-discovery-specialist-moe-edge-4.json`
-  - 探索軸: MoE expert offload・cacheless edge-distributed inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2206JST-discovery-specialist-moe-edge-4.json` (`ok=true`)
-- round `specialist-network-kv-5` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2207JST-discovery-specialist-network-kv-5.json`
-  - 探索軸: RDMA・KV transfer・disaggregated serving networking
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2207JST-discovery-specialist-network-kv-5.json` (`ok=true`)
-- round `specialist-agent-kv-6` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2208JST-discovery-specialist-agent-kv-6.json`
-  - 探索軸: agentic serving・tool-call progress・KV lifecycle
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2208JST-discovery-specialist-agent-kv-6.json` (`ok=true`)
-- round `specialist-fairness-7` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2209JST-discovery-specialist-fairness-7.json`
-  - 探索軸: multi-tenant serving・token latency fairness・SLO isolation
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2209JST-discovery-specialist-fairness-7.json` (`ok=true`)
-- round `specialist-gpu-runtime-8` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json`
-  - 探索軸: GPU runtime・persistent kernel・CUDA Graph・JIT compilation
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2212JST-discovery-specialist-gpu-runtime-8.json` (`ok=true`)
-- round `specialist-new-arrivals-9` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
-  - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
+- 最新観測run: **2026-09-19 01:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath / SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement
+- round `specialist-nvme-characterization-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json`
+  - 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0159JST-discovery-specialist-nvme-characterization-1.json` (`ok=true`)
+- round `specialist-storage-datapath-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T0204JST-discovery-specialist-storage-datapath-2.json`
+  - 探索軸: SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -235,7 +207,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -263,10 +235,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **543** |
+| 成功result未照合のimmutable submission | **544** |
 | └ Research | **414** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
