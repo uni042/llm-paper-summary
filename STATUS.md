@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 19:10:52 JST**
+> 自動生成: **2026-09-18 20:02:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **41** |
 | 未claim Research job | **40** |
-| 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（55分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **13** | **0** | **1** | **0** | **28** |
+| Discovery | **17** | **1** | **0** | **1** | **0** | **0** | **5** |
+| 合計 | **26** | **3** | **2** | **1** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -166,49 +166,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 16:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **11件** / 個別result照合: **11件** / 個別result未照合: **0件** / 候補: **28件**
-- 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport / MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling / KV cache metadata・RDMA・分離サービングnetwork transport / 2024-2025 on-device heterogeneous CPU/GPU/NPU offload / 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング / CXL共有メモリ・NVMe KVキャッシュ / MoE expert placement・offload・heterogeneous runtime / edge MoE・expert prefetch・Flash/NPU・distributed routing / PD disaggregation・RDMA・CXL KV transport / agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse / prefix-affinity routing・queue-aware KV・agent scheduling
-- round `specialist-late-sep-storage-1` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json`
-  - 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json` (`ok=true`)
-- round `specialist-moe-backward-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T1659JST-discovery-specialist-moe-backward-2.json`
-  - 探索軸: MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1659JST-discovery-specialist-moe-backward-2.json` (`ok=true`)
-- round `specialist-kv-metadata-3` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T1701JST-discovery-specialist-kv-metadata-3.json`
-  - 探索軸: KV cache metadata・RDMA・分離サービングnetwork transport
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1701JST-discovery-specialist-kv-metadata-3.json` (`ok=true`)
-- round `specialist-ondevice-npu-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T1703JST-discovery-specialist-ondevice-npu-4.json`
-  - 探索軸: 2024-2025 on-device heterogeneous CPU/GPU/NPU offload
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1703JST-discovery-specialist-ondevice-npu-4.json` (`ok=true`)
-- round `specialist-kv-scheduling-1` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
-  - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
-- round `specialist-cxl-nvme-2` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r2.json`
-  - 探索軸: CXL共有メモリ・NVMe KVキャッシュ
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r2.json` (`ok=true`)
-- round `specialist-moe-offload-3` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r3.json`
-  - 探索軸: MoE expert placement・offload・heterogeneous runtime
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r3.json` (`ok=true`)
-- round `specialist-edge-moe-4` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r4.json`
-  - 探索軸: edge MoE・expert prefetch・Flash/NPU・distributed routing
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r4.json` (`ok=true`)
-- round `specialist-disaggregation-5` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r5.json`
-  - 探索軸: PD disaggregation・RDMA・CXL KV transport
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r5.json` (`ok=true`)
-- round `specialist-agentic-kv-6` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r6.json`
-  - 探索軸: agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse
-  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r6.json` (`ok=true`)
+- 最新観測run: **2026-09-18 20:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
+- round `specialist-memory-specdecode-1` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
+  - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -265,10 +229,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **520** |
+| 成功result未照合のimmutable submission | **521** |
 | └ Research | **391** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
