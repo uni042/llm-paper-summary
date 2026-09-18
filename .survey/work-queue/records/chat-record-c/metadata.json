@@ -2,64 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-9ec710a3abfce49d2eb368dc",
-  "job_id": "job-research-ec631b9aeb6c5c21",
+  "attempt_id": "attempt-157887f293007c13f3ac66f5",
+  "job_id": "job-research-ef418ddc1bde46e9",
   "data": {
-    "canonical_id": "arXiv:2503.18599",
-    "arxiv_id": "2503.18599",
-    "doi": "10.1145/3695053.3731019",
+    "canonical_id": "arXiv:2509.23094",
+    "arxiv_id": "2509.23094",
+    "doi": "10.48550/arXiv.2509.23094",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": [
-        "cs.LG"
-      ]
+      "primary": "cs.CL",
+      "cross_list": []
     },
-    "title": "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
-    "summary": "大規模バッチのLLM生成では要求ごとのKVキャッシュを共有できず、注意計算がメモリ帯域律速となる一方、KV容量もバッチと文脈長に比例して増える。OakenはKV分布がモデル・層ごとには固有だが入力データには比較的安定する性質を使い、外れ値境界だけを約100回のオフライン推論で決め、オンラインでは各トークンを3群へ分類して単純統計から量子化尺度を求める。大値群の範囲をシフトして4ビット化し、密な4ビット本体の空き位置へ疎な外れ値情報を融合する。さらに量子化・逆量子化器と密・疎二表のメモリ管理器をLPUのDMAへ組み込み、転送と注意計算へ量子化処理を重ねる。ISCA 2025評価ではbatch 256でvLLM比平均1.79倍、QServe比1.58倍のスループットを示し、FP16比平均精度低下0.87%、モジュール面積増8.21%だった。",
-    "list_summary": "KV外れ値の境界だけをオフライン学習し、オンライン3群量子化と専用DMA量子化・メモリ管理器を共同設計して、大規模バッチのKV帯域・容量を同時に削減する。",
+    "title": "d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching",
+    "summary": "d²Cacheは、双方向注意のため通常の鍵・値キャッシュを使えない拡散型大規模言語モデルに対し、各復号段階で本当に更新が必要なトークンだけを二段階で選ぶ訓練不要の近似キャッシュ手法である。マスク位置では予測確信度と既知トークン密度からなる確定性事前分布を用い、残りの入力・確定済み位置では注意ロールアウトで影響度の高い位置を選ぶ。選択位置だけ隠れ状態と鍵・値を更新し、それ以外は前段階の鍵・値を再利用する。LLaDAとDreamで平均3.2〜3.5倍、Dream-InstructのGSM8Kで4.7倍の高速化を得ながら、平均生成品質も維持または改善する。",
+    "list_summary": "確定性事前分布と注意影響度で更新対象トークンを細粒度選択し、拡散LLMのKV再計算を削減しながら生成品質も改善する。",
     "authors": [
-      "Minsu Kim",
-      "Seongmin Hong",
-      "RyeoWook Ko",
-      "Soongyu Choi",
-      "Hunjong Lee",
-      "Junsoo Kim",
-      "Joo-Young Kim",
-      "Jongse Park"
+      "Yuchu Jiang",
+      "Yue Cai",
+      "Xiangzhong Luo",
+      "Jiale Fu",
+      "Jiarui Wang",
+      "Chonghan Liu",
+      "Xu Yang"
     ],
-    "authors_affiliations": "KAIST; HyperAccel",
-    "published": "2025-03-24",
-    "publication": "Proceedings of the 52nd Annual International Symposium on Computer Architecture (ISCA '25), June 21–25, 2025, Tokyo, Japan",
-    "publication_type": "査読付き国際会議論文",
-    "publication_status": "Published",
-    "lineage": "kv-cache-memory",
+    "authors_affiliations": "Southeast University; Qiyuan Tech",
+    "published": "2025-09-27",
+    "publication": "International Conference on Learning Representations (ICLR 2026)",
+    "publication_type": "国際会議論文",
+    "publication_status": "ICLR 2026 accepted; arXiv v2 2026-02-17",
+    "lineage": "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御",
     "topics": [
-      "KVキャッシュ量子化",
-      "LLMサービング",
-      "メモリ帯域",
-      "ハードウェア共同設計",
-      "大規模バッチ"
+      "拡散LLM",
+      "KVキャッシュ",
+      "注意ロールアウト",
+      "推論高速化",
+      "適応復号"
     ],
-    "importance": "KV量子化の圧縮率だけでなく、オンライン外れ値検出費用と疎データ配置まで専用ハードウェアと共同設計し、低ビット化を実スループットへ変換する点が重要。",
-    "hardware_evaluation": "OakenをLPUシミュレータへ統合しLPDDR/HBM構成を評価。RTLをSystemVerilogで実装・VCS検証し、TSMC 28nm・1GHzでDesign Compiler合成。GPU比較はA100 80GB、巨大モデルは2基。",
-    "quality_effect": "FP16比平均精度低下0.87%。KVQuantより0.54%、KIVIより0.32%低い一方、QServeより1.38%高い精度。",
-    "source": "https://arxiv.org/abs/2503.18599",
+    "importance": "固定ブロックや固定更新周期ではなく、トークンごとの状態変化と注意重要度から更新対象を毎段階選ぶことで、近似KVキャッシュを細粒度化し、速度だけでなく復号信頼性の改善も狙う点が重要である。",
+    "implementation": "公式Kamichanw/d2CacheでLLaDA、Dream、SDAR向け実装と評価設定を公開。",
+    "hardware_evaluation": "主要評価はNVIDIA RTX 3090 24GB。LLaDA-8BとDream-v0-7BのBase/Instructを評価。",
+    "quality_effect": "確定性事前分布が準左から右の復号順序を誘導し、系列末尾を早期に過信して確定する問題を抑える。速度向上と同時に複数ベンチマークの平均品質をVanilla以上に保つ。",
+    "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/de4f2e3b8263aff39f0dd7571a8dc4b1-Abstract-Conference.html",
     "sources": [
-      "https://arxiv.org/abs/2503.18599",
-      "https://arxiv.org/html/2503.18599",
-      "https://doi.org/10.1145/3695053.3731019"
+      "https://openreview.net/pdf/d4ec34f2b9349457f8eec750cbee2c77eefdd332.pdf",
+      "https://arxiv.org/abs/2509.23094"
     ],
-    "code": null,
-    "implementation": "Oaken量子化器・逆量子化器とMMUをLPU DMAへ統合したRTLをSystemVerilogで実装し、ハードウェアシミュレータでエンドツーエンド評価。",
-    "last_checked": "2026-09-17",
+    "code": "https://github.com/Kamichanw/d2Cache",
+    "last_checked": "2026-09-18",
     "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv HTML参考文献節を確認。",
-    "references_total": 91
+    "references_checked_at": "2026-09-18",
+    "references_source": "ICLR/OpenReview primary manuscript",
+    "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-9ec710a3abfce49d2eb368dc",
+    "claim_id": "claim-157887f293007c13f3ac66f5",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

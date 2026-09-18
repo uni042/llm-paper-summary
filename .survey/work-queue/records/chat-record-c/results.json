@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9ec710a3abfce49d2eb368dc",
-  "job_id": "job-research-ec631b9aeb6c5c21",
+  "attempt_id": "attempt-157887f293007c13f3ac66f5",
+  "job_id": "job-research-ef418ddc1bde46e9",
   "data": {
-    "overview": "batch 256ではOaken-LPDDRがvLLM比平均1.79倍、QServe比1.58倍のスループットを達成した。KV圧縮により注意計算時間はLPU比平均55.0%短縮し、batch 64で量子化・逆量子化は全体遅延の1.29%・3.23%に留まる。精度はFP16比平均0.87%低下し、KVQuant/KIVIよりやや低いがQServeより1.38%高い。専用モジュールの面積増は8.21%。",
+    "overview": "d²CacheはLLaDAとDreamのBase/Instruct、複数課題で通常復号より平均3.2〜3.5倍高速化し、速度向上と同時に平均課題得点を維持または改善する。Dream-InstructのGSM8Kでは生成性能が2.62から12.25トークン/秒へ上がり4.7倍となる。Fast-dLLMとの比較ではDream-Instructで1.5倍高速で、6課題平均精度も1.7ポイント高い。確定性事前分布による非自己回帰復号は標準の確信度復号より大幅に高い品質を示し、Dream-Instructの4課題平均で29.0から58.8へ改善する。",
     "key_results": [
       {
-        "metric": "batch 256スループット",
-        "value": "vLLM比平均1.79倍、QServe比1.58倍",
-        "baseline": "A100上vLLM/QServe",
-        "condition": "6モデル、入力1K・出力1K",
-        "interpretation": "KV低ビット化で帯域と容量を同時に緩和し、大規模バッチでも飽和を遅らせる。"
+        "metric": "通常復号比平均高速化",
+        "value": "3.2〜3.5倍",
+        "baseline": "Vanilla",
+        "condition": "LLaDA/DreamのBase・Instruct、6ベンチマーク",
+        "interpretation": "トークン単位で更新対象を絞ることで双方向注意の全系列KV再計算を大きく削減する。"
       },
       {
-        "metric": "注意計算時間",
-        "value": "LPU比平均55.0%短縮",
-        "baseline": "量子化なしLPU",
-        "condition": "バッチ増加評価",
-        "interpretation": "外部メモリから読むKV量の削減が帯域律速の注意演算を直接短縮する。"
+        "metric": "Dream-Instruct GSM8K処理性能",
+        "value": "12.25トークン/秒、4.7倍",
+        "baseline": "Vanilla 2.62トークン/秒",
+        "condition": "Dream-Instruct、GSM8K",
+        "interpretation": "代表的な最大級改善例で、近似KV再利用の実効性を示す。"
       },
       {
-        "metric": "量子化処理費",
-        "value": "batch 64で量子化1.29%、逆量子化3.23%",
-        "baseline": "全体推論遅延",
-        "condition": "Llama2-7B Oaken-LPDDR",
-        "interpretation": "専用DMA処理と要求間重畳により量子化費用が圧縮利得を相殺しない。"
+        "metric": "Fast-dLLM比",
+        "value": "Dream-Instructで1.5倍高速、6課題平均精度+1.7ポイント",
+        "baseline": "Fast-dLLM",
+        "condition": "Dream-Instruct、6ベンチマーク平均",
+        "interpretation": "固定ブロックより細粒度な適応更新が速度だけでなく品質でも優位。"
       },
       {
-        "metric": "精度",
-        "value": "FP16比平均-0.87%、KVQuant比-0.54%、KIVI比-0.32%、QServe比+1.38%",
-        "baseline": "FP16およびKV量子化方式",
-        "condition": "8モデル・4データセット",
-        "interpretation": "最高精度の外れ値方式より少し品質を譲る代わりにオンライン処理を大幅に軽くする。"
+        "metric": "確定性事前分布復号",
+        "value": "Dream-Instruct 4課題平均58.8、LLaDA-Instruct 44.1",
+        "baseline": "標準NAR確信度復号はDream 29.0、LLaDA 32.7",
+        "condition": "非自己回帰設定、d²Cacheなしの復号方策比較",
+        "interpretation": "既知文脈近傍から進む準左から右の順序が系列末尾の早期過信を抑える。"
       },
       {
-        "metric": "ハードウェア面積",
-        "value": "Oakenモジュール追加8.21%",
-        "baseline": "LPU基盤面積",
-        "condition": "TSMC 28nm、1GHz合成",
-        "interpretation": "専用量子化器とMMUの面積費用は報告されたスループット利得に対して限定的。"
+        "metric": "d²Cache付きNAR品質",
+        "value": "Dream-Instruct 4課題平均60.6、LLaDA-Instruct 44.4",
+        "baseline": "Semi-AR VanillaはDream 57.6、LLaDA 43.9",
+        "condition": "確定性事前分布とd²Cacheの組合せ",
+        "interpretation": "高速化用キャッシュと復号順序改善を組み合わせても品質が維持・向上する。"
       }
     ],
-    "negative_results": "OakenアルゴリズムをGPU上でそのまま実行すると3群分類に伴うCUDA warp divergenceで量子化・逆量子化が長くなり、専用ハードウェアなしでは同じ利得を得にくい。HBM版は小モデル・小バッチでは高速だが、大モデルや大バッチでは容量不足で飽和する。精度はKVQuant/KIVIより平均0.54%/0.32%低い。",
-    "interpretation": "KV量子化はビット数だけ下げても、外れ値探索や疎配置の処理費が残れば実効帯域は上がらない。Oakenは入力依存でない処理をオフラインへ移し、残るオンライン処理をDMA専用回路へ落とすことで、表現圧縮とメモリシステムを一つの設計問題として扱う。",
-    "quality_impact": "FP16比平均0.87%の精度低下。3群比率は圧縮率と精度のパレート点として4/90/6%を採用し、群数を増やすと精度は改善するが索引ビットとアラインメント費用が増える。"
+    "negative_results": "近似キャッシュであるため、選択されなかった位置のKVが実際には大きく変化する場合は古い状態を使う。確定性事前分布のガウス幅、第一段階の選択数、第二段階の注意累積しきい値は調整要素であり、課題やモデルが変わると最適値が変わり得る。注意ロールアウト自体にも計算費用があり、短い系列や少ない復号段階では相対利得が小さくなる可能性がある。評価は単一GPU中心で、運用サービング時の同時要求干渉は未検証である。",
+    "interpretation": "拡散LLMのKVは全位置が同じ速度で変化するわけではなく、未確定位置は復号直前だけ急変し、既知位置では注意影響が少数位置へ集中する。この時間的不均一性と空間的不均一性を別々の選択器で捉えることが、固定更新区間より高い再利用率と品質維持につながる。",
+    "quality_impact": "通常の近似キャッシュが速度と精度の交換になり得るのに対し、d²Cacheは確定性事前分布を復号順序へ利用することで平均品質も改善する。特に標準NARの系列末尾早期確定を抑える効果が大きい。"
   },
   "reservation": {
-    "claim_id": "claim-9ec710a3abfce49d2eb368dc",
+    "claim_id": "claim-157887f293007c13f3ac66f5",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

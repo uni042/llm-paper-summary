@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9ec710a3abfce49d2eb368dc",
-  "job_id": "job-research-ec631b9aeb6c5c21",
+  "attempt_id": "attempt-157887f293007c13f3ac66f5",
+  "job_id": "job-research-ef418ddc1bde46e9",
   "data": {
-    "hardware": "OakenをLPUアーキテクチャへ統合したハードウェアシミュレータでLPDDR版とHBM版を評価。RTLはSystemVerilog、Synopsys VCSで機能検証、TSMC 28nm・1GHzでDesign Compiler合成。GPU基準はA100 80GB、OPT-30B/Mixtral-8x7B/Llama2-70Bは2基をパイプライン並列で使用。",
-    "software": "LPU simulatorを拡張。GPU側はvLLM、KVQuant、KIVI、QServe、アクセラレータ比較はTender。量子化比較はKVのみ4ビットへ統一。",
-    "methodology": "Llama2 7B/13B/70B、OPT 6.7B/13B/30B、Mistral 7B、Mixtral 8x7Bの8モデル。精度はWikitext2 perplexity、PIQA/Winogrande/Hellaswag zero-shot accuracy。性能は主に入力1K・出力1K、batch 16〜256で測り、Azure ConversationとBurstGPT実運用トレースから可変長バッチも合成する。外側4%、中間90%、内側6%を全モデル共通比率とし、各モデルの層別閾値はWikitext2約100推論で個別プロファイルする。",
-    "scope": "専用アクセラレータはシミュレーションと28nm RTL合成に基づき、製造チップ実測ではない。主要性能比較はLPU由来アーキテクチャとA100 GPUで、最新GPU世代や一般GPUへの専用回路なし実装性能は対象外。"
+    "hardware": "主要評価はNVIDIA RTX 3090 24GB GPU。単一GPU推論で速度と品質を比較する。",
+    "software": "LLaDA-8BのBase/InstructとDream-v0-7BのBase/Instructを評価。比較は通常復号、dLLM-Cache、Fast-dLLM、d²Cache。公式実装はLLaDA、Dream、SDAR向け設定を提供する。",
+    "methodology": "GSM8K、MBPP、HumanEval、Math-500、GPQA、MMLU-Proの6ベンチマークで、平均生成トークン毎秒、サンプル当たり推論時間、課題得点を測る。主要設定では注意選択の累積確率しきい値pを0.1とし、確定性事前分布による復号も評価する。標準の半自己回帰復号と非自己回帰復号、確信度復号と確定性事前復号を分離比較し、急変期だけKVを更新する場合と緩慢期も更新する場合を除去実験する。",
+    "scope": "単一GPU・代表的な二種類の拡散LLMが中心で、同時多要求サービング、バッチング、分散推論、vLLM等の運用基盤との統合は主要評価ではない。近似KVの選択しきい値と確定性事前分布の幅はモデル・課題に依存し得る。"
   },
   "reservation": {
-    "claim_id": "claim-9ec710a3abfce49d2eb368dc",
+    "claim_id": "claim-157887f293007c13f3ac66f5",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
