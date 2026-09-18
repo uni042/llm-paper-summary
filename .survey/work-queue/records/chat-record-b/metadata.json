@@ -2,99 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-6c458e301f48fc5cacbfbf06",
-  "job_id": "job-research-660ceb86238a1a21",
+  "attempt_id": "attempt-a45c6670fc2432985588dfbd",
+  "job_id": "job-research-6c1a5d06d3b875ce",
   "data": {
-    "canonical_id": "arXiv:2609.18112",
-    "arxiv_id": "2609.18112",
-    "doi": "10.48550/arXiv.2609.18112",
+    "canonical_id": "arXiv:2609.18849",
+    "arxiv_id": "2609.18849",
+    "doi": "10.48550/arXiv.2609.18849",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
       "cross_list": [
-        "cs.LG"
+        "cs.AI",
+        "cs.OS"
       ]
     },
-    "title": "Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving",
-    "summary": "FairInferenceは、マルチテナントLLMサービングで長期処理量の公平性ではなく、各トークンの遅延を分離実行時から最大δだけに抑えるδ-token fairnessを定義・実装する。分離実行のトークン完了時刻を性能モデルとシミュレータで推定し、per-token deadlineを用いてprefill/decodeをスケジュールすると同時に、KV復元時間からクライアント別の非退避予約量を決める。SGLang v0.3.0上、単一A100 80GB・Llama-3 8B Instructで評価し、高需要テナント存在下でもwell-behaved clientのp99 TTFT/TBT/TTLTを大幅に保護する。",
-    "list_summary": "分離実行比δ以内のトークン遅延を保証するdeadline schedulingとKV予約を統合し、高需要テナント下のp99 latency isolationを実現する。",
+    "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It",
+    "summary": "エージェント型LLMのツール呼び出し中に遊休化するKVキャッシュを、呼び出し前の実行時間予測ではなく、実行中ツール自身が発する進捗信号で管理する方式を提案する。エージェントに見える出力を変えない副経路で進捗を抽出し、vLLMへ小規模なヒントAPIを追加してKV保持・解放・再読込を制御する。4×H100の再生評価でLRU比のツール後p90初回トークン時間をHBMのみで20.7%、HBM+DRAMで20.8%削減した。",
+    "list_summary": "ツール実行中の進捗を副経路でKV管理へ伝え、vLLM上でLRU比p90ツール後TTFTを約21%削減する。",
     "authors": [
-      "Dev Bali",
-      "Soujanya Ponnapalli",
-      "Yichuan Wang",
-      "Natacha Crooks",
-      "Scott Shenker",
-      "Matei Zaharia"
+      "Yipeng Liu",
+      "Yingqiang Zhang",
+      "Feifei Li",
+      "Huanchen Zhang"
     ],
-    "authors_affiliations": "University of California, Berkeley",
+    "authors_affiliations": "Tsinghua University; Zhejiang University; Alibaba Cloud Computing",
     "published": "2026-09-16",
-    "publication": "arXiv preprint arXiv:2609.18112v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "2026年9月16日投稿のarXiv初版。主分類cs.DC、併記分類cs.LG。",
-    "lineage": "serving-scheduling",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1, 2026-09-16)",
+    "lineage": "agentic LLM serving / KV-cache retention and offload / tool-call scheduling / progress-aware systems",
     "topics": [
-      "LLMサービング",
-      "マルチテナント",
-      "性能分離",
-      "トークン遅延",
-      "KVキャッシュ",
-      "deadline scheduling"
+      "エージェント型LLM配信",
+      "KVキャッシュ管理",
+      "ツール進捗",
+      "オフロード",
+      "vLLM"
     ],
-    "importance": "throughput fairness中心だったLLM公平スケジューリングに、分離実行を基準とする明示的なtoken-level latency boundを導入する。",
-    "hardware_evaluation": "NVIDIA A100 80GBを1基。",
-    "hardware_details": "Llama-3 8B Instruct、KV cache約320,000 tokens。microbenchmarkは10分計測+2分warmup、macrobenchmarkはWildChat由来。",
-    "quality_effect": "モデル自体や生成アルゴリズムを近似せず、schedulerとKV cache policyを変更するシステム最適化。",
-    "bottlenecks": [
-      "prefill/decode scheduling interference",
-      "shared KV cache eviction",
-      "GPUの細粒度資源分割不足",
-      "isolated latency推定誤差"
-    ],
-    "evidence_locations": [
-      "§3",
-      "§4",
-      "§5",
-      "§6",
-      "§7",
-      "§9"
-    ],
-    "source": "https://arxiv.org/abs/2609.18112",
+    "importance": "ツール呼び出し時間を外部特徴から予測する従来方式に対し、実行中ツールの内部進捗をサービング側が直接読むという新しい情報経路を導入し、環境変動に強い残り時間推定をKV保持・再読込へ接続した。",
+    "implementation": "エージェント観測を変えない副経路ハーネスと、vLLMへ数百行規模で追加したrefresh/release/queryヒントAPIおよび外部コントローラを実装。論文中に公式コード公開URLの記載は確認できない。",
+    "hardware_evaluation": "エンドツーエンド評価は4×NVIDIA H100 SXM。HBMのみ、およびHBM+ホストDRAMオフロードの2構成。",
+    "quality_effect": "100件のSWE-bench Verifiedサンプルで副経路構成は解決数・ステップ・トークン・ツール時間・壁時計時間に有意な悪化を示さず、エージェントへ返す観測はバイト同一を維持する設計。",
+    "source": "https://arxiv.org/abs/2609.18849",
     "sources": [
-      "https://arxiv.org/abs/2609.18112",
-      "https://arxiv.org/html/2609.18112v1",
-      "https://arxiv.org/pdf/2609.18112"
+      "https://arxiv.org/abs/2609.18849",
+      "https://arxiv.org/pdf/2609.18849"
     ],
     "code": null,
-    "implementation": "SGLang v0.3.0 forkへ3–4k LOCのδ-fair schedulerを実装し、Cの別worker threadでisolated-execution simulatorを動かす。本文では将来forkをopen-source予定としており、確認時点で公開コードURLはない。",
     "last_checked": "2026-09-18",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.00588",
-        "title": "Fairness in Serving Large Language Models"
-      },
-      {
-        "canonical_id": "arXiv:2501.14312",
-        "title": "Locality-aware Fair Scheduling in LLM Serving"
-      },
-      {
-        "canonical_id": "arXiv:2601.20030",
-        "title": "Delta Fair Sharing: Performance Isolation for Multi-Tenant Storage Systems"
-      },
-      {
-        "canonical_id": "arXiv:2510.14392",
-        "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference"
-      },
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
-      }
-    ],
+    "references": [],
     "references_checked_at": "2026-09-18",
-    "references_source": "arXiv HTML参考文献節",
-    "references_total": 5
+    "references_source": "primary manuscript",
+    "references_total": 62
   },
   "reservation": {
-    "claim_id": "claim-6c458e301f48fc5cacbfbf06",
+    "claim_id": "claim-a45c6670fc2432985588dfbd",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
