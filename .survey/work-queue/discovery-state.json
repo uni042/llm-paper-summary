@@ -1,35 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-17T19:10:46+00:00",
-  "last_run_key": "2026-09-18T04:00:00+09:00",
-  "last_round": "specialist-routing-lineage-8",
+  "updated_at": "2026-09-18T01:03:07+00:00",
+  "last_run_key": "2026-09-18T10:00:00+09:00",
+  "last_round": "specialist-2609-memory-moe-new-arrivals-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:26:11+09:00",
-      "round": "specialist-moe-placement-coexecution-4",
-      "axis": "MoE expert配置・CPU-GPU協調実行",
-      "query_summary": "MoE expert placement、prefetch、CPU-GPU co-executionを探索。既収録のMoEless、Speculating Experts、Mixture-of-Experts Serving、ELDRを決定論的job IDで除外し、最新mainでjob未存在を再確認したDirectorとCoX-MoEだけを投入した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2603.06350",
-        "arXiv:2603.19289",
-        "arXiv:2607.17880",
-        "arXiv:2607.00466"
-      ],
-      "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る",
-      "source_submission": "work-queue/submissions/20260913T0136JST-discovery-a510d87d9cbc3222.json"
-    },
     {
       "run_key": "2026-09-13T01:26:11+09:00",
       "round": "specialist-resilience-crosslayer-scheduling-5",
@@ -6914,6 +6894,24 @@
       ],
       "next_axis_hint": "次はrouting系統から離れ、kernel/runtime compilation、memory allocator、communication collective、multimodal servingの独立軸を走査する",
       "source_submission": "work-queue/submissions/20260918T0400JST-discovery-specialist-routing-lineage-8.json"
+    },
+    {
+      "run_key": "2026-09-18T10:00:00+09:00",
+      "round": "specialist-2609-memory-moe-new-arrivals-1",
+      "axis": "2026年9月新着・階層メモリ/SSD MoE/KV管理",
+      "query_summary": "2026年9月のLLM inference/serving新着を、hierarchical memory、SSD MoE、KV cache、GPU runtimeの複数query familyで横断。検索結果からarXiv IDを抽出し、最新mainのqueue/code照合で既知候補を早期除外した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はnetwork/disaggregated serving、GPU kernel/runtime、agentic servingの2026年9月新着へ軸を変更する",
+      "source_submission": "work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json"
     }
   ],
   "axes": {
@@ -11601,7 +11599,70 @@
       "duplicate_ratio": 0.3333333333333333,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次はrouting系統から離れ、kernel/runtime compilation、memory allocator、communication collective、multimodal servingの独立軸を走査する"
+    },
+    "2026年9月新着・階層メモリ/SSD MoE/KV管理": {
+      "last_run_key": "2026-09-18T10:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はnetwork/disaggregated serving、GPU kernel/runtime、agentic servingの2026年9月新着へ軸を変更する"
     }
   },
-  "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
+  "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
+  "search_windows": {
+    "window-3e965b5b3dca9e8f900e": {
+      "topic": "memory-moe-kv",
+      "source": "web-arxiv-index",
+      "date_range": "2026-09",
+      "category": "inference-systems",
+      "citation_direction": "none",
+      "query_family": "new-arrivals-memory-offload",
+      "search_window_key": "window-3e965b5b3dca9e8f900e",
+      "scan_count": 1,
+      "raw_result_count": 12,
+      "unseen_result_count": 5,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 5,
+      "candidate_accepted_count": 5,
+      "last_position": "search-batch-1",
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 1.0,
+      "cooldown": false,
+      "last_run_key": "2026-09-18T10:00:00+09:00",
+      "last_round": "specialist-2609-memory-moe-new-arrivals-1"
+    }
+  },
+  "recent_search_windows": [
+    {
+      "topic": "memory-moe-kv",
+      "source": "web-arxiv-index",
+      "date_range": "2026-09",
+      "category": "inference-systems",
+      "citation_direction": "none",
+      "query_family": "new-arrivals-memory-offload",
+      "search_window_key": "window-3e965b5b3dca9e8f900e",
+      "run_key": "2026-09-18T10:00:00+09:00",
+      "round": "specialist-2609-memory-moe-new-arrivals-1",
+      "raw_result_count": 12,
+      "unseen_result_count": 5,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 5,
+      "candidate_accepted_count": 5,
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 1.0,
+      "last_position": "search-batch-1"
+    }
+  ],
+  "search_window_history_limit": 96,
+  "high_duplicate_cooldown_threshold": 0.8
 }
