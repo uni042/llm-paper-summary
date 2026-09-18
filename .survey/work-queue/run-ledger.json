@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:21:07.119404+00:00",
+  "updated_at": "2026-09-18T20:24:00.156778+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:21:07.119404+00:00",
+      "last_recorded_at": "2026-09-18T20:24:00.156778+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 273,
+        "research_completed": 274,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 34,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35309244361:1",
-          "recorded_at": "2026-09-18T05:05:19.903175+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35309244361",
-            "run_attempt": "1",
-            "source_sha": "5affb7350add8df94dafd16ec02c5b698624bc95"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35311536852:1",
           "recorded_at": "2026-09-18T05:37:52.552435+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35390942567",
             "run_attempt": "1",
             "source_sha": "88ea7d2c58ce8a0ff3ba3ad8a7b251d1c3bd6a16"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35391208144:1",
+          "recorded_at": "2026-09-18T20:24:00.156778+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35391208144",
+            "run_attempt": "1",
+            "source_sha": "3c31807303c7dddc37827dada634bf548bd0c7f2"
           },
           "signals": [
             "research_completed"
@@ -23245,6 +23245,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.09216",
           "title": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b2d29fa9c529bdfd",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17538",
+          "title": "D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation",
           "from": "ready",
           "to": "completed"
         }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:23:50 JST**
+> 自動生成: **2026-09-19 05:24:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
+| 収録候補論文 | **52** |
 | 未claim Research job | **52** |
-| 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 05:21:03 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **52** |
+| 最終検証済みResearch収録 | **09-19 05:23:55 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **20** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **29** | **6** | **6** | **0** | **1** | **0** | **15** |
+| 合計 | **30** | **6** | **6** | **0** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 05:23:55 JST** [research] `arXiv:2607.17538` — D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation
+  - job: `.survey/work-queue/jobs/job-research-b2d29fa9c529bdfd.json`
+  - result: `.survey/work-queue/results/research/attempt-49a5f136c96efe1a74ef7842.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-49a5f136c96efe1a74ef7842.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md`
 - **09-19 05:21:03 JST** [research] `arXiv:2603.09216` — PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies
   - job: `.survey/work-queue/jobs/job-research-b3afe97f03f9606a.json`
   - result: `.survey/work-queue/results/research/attempt-478619d2b2eab68cb5a0f0d3.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-e7451954f296ee21fbc9ac8c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e7451954f296ee21fbc9ac8c.json`
   - paper: `papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md`
-- **09-19 03:12:08 JST** [research] `arXiv:2609.17184` — LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers
-  - job: `.survey/work-queue/jobs/job-research-06a7e035a0f5ff0b.json`
-  - result: `.survey/work-queue/results/research/attempt-1b78e7fa82b82abe032f6a4d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1b78e7fa82b82abe032f6a4d.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md`
 
 ### Audit
 
@@ -196,10 +196,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.17538` — D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 05:21:45 JST** / heartbeat: **—** / lease expiry: **09-19 06:51:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b2d29fa9c529bdfd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -219,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -239,7 +237,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **737** |
+| inference/training/survey配下の論文Markdown実体 | **738** |
 
 ### immutable submissionの未照合
 
@@ -247,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **560** |
-| └ Research | **431** |
+| 成功result未照合のimmutable submission | **559** |
+| └ Research | **430** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

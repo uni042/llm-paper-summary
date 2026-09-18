@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.17538",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md",
   "selection_reason": "RAG inferenceのvector retrievalをNAND array内部へ押し込み、Dual-Bound Tight Similarity Sensingとcontrastive adapterを協調設計するin-storage accelerator。CPU比最大41.7x高速・71x高energy efficiency、既存in-storage RAG accelerator比12.13x throughputを報告し、storage-side inference pipelineの隣接系統として価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-18T19:02:33+00:00"
+  "created_at": "2026-09-18T19:02:33+00:00",
+  "completed_at": "2026-09-18T20:23:55+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-49a5f136c96efe1a74ef7842.json"
 }
