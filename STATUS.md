@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:30:40 JST**
+> 自動生成: **2026-09-18 16:31:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **6** | **3** | **3** | **1** | **0** | — |
+| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **7** | **7** | **0** | **0** | **0** | **26** |
-| 合計 | **26** | **13** | **10** | **3** | **1** | **0** | **26** |
+| 合計 | **26** | **8** | **7** | **1** | **1** | **0** | **26** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -135,30 +135,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
-- **成功** `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction
-  - job: `.survey/work-queue/jobs/job-research-2829f7afbf13ae9b.json`
-  - result: `.survey/work-queue/results/research/attempt-134d632c037ba813a7f76d95.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-134d632c037ba813a7f76d95.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-343da371de8ebc332895bc1b.json` (job `job-research-659c7469c0065c08`)
-- **成功** `arXiv:2511.22333` — PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel
-  - job: `.survey/work-queue/jobs/job-research-a2e0c7f004aa0b3e.json`
-  - result: `.survey/work-queue/results/research/attempt-3eb6a05e4e42907dd24b50f1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3eb6a05e4e42907dd24b50f1.json`
-  - paper: `papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md`
-- **成功** `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
-  - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
-  - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
-  - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c0cab04c270b3f1647d6bd86.json` (job `job-research-fbee62800783475d`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c45eda0ca290930fb74c6805.json` (job `job-research-2072895e5b6f0b68`)
+- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-287737077740300cf826ad65.json` (job `job-research-2afdd6d968c4500a`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -251,8 +234,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **505** |
-| └ Research | **376** |
+| 成功result未照合のimmutable submission | **506** |
+| └ Research | **377** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
