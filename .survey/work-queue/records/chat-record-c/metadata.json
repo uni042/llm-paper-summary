@@ -1,13 +1,23 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-bee8326435df2b286b51b470",
-  "job_id": "job-research-12153d10b82fca3c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bee8326435df2b286b51b470",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bee8326435df2b286b51b470","job_id":"job-research-12153d10b82fca3c",
+  "data":{
+    "canonical_id":"arXiv:2506.04203","arxiv_id":"2506.04203","doi":"10.48550/arXiv.2506.04203","openreview_id":null,
+    "arxiv_categories":{"primary":"cs.DC","cross_list":[]},
+    "title":"Cascadia: An Efficient Cascade Serving System for Large Language Models",
+    "summary":"Cascadiaは、複数規模の大規模言語モデルを段階的に利用するモデルカスケードにおいて、要求経路だけでなくGPU資源配分とデータ・テンソル・パイプライン並列構成まで共同最適化する推論サービング基盤である。内側の混合整数線形計画が現在の経路方策に対する配置を求め、外側のチェビシェフ誘導最適化が品質制約を満たしながら経路しきい値を更新する。ICLR 2026の公式論文では32基のH100を用い、単一モデルおよびCascadeServeに対し、目標品質を維持しつつ最大4倍厳しい遅延SLOと最大5倍の処理性能を報告する。",
+    "list_summary":"モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。",
+    "authors":["Youhe Jiang","Fangcheng Fu","Wanru Zhao","Stephan Rabanser","Jintao Zhang","Nicholas D. Lane","Binhang Yuan"],
+    "authors_affiliations":"The Hong Kong University of Science and Technology; Shanghai Jiaotong University; University of Cambridge; Princeton University; Tsinghua University",
+    "published":"2026-04-23","publication":"International Conference on Learning Representations (ICLR 2026)","publication_type":"国際会議論文","publication_status":"Published as a conference paper at ICLR 2026",
+    "lineage":"モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
+    "topics":["LLMサービング","モデルカスケード","資源配分","並列化戦略","要求ルーティング","SLO"],
+    "importance":"従来は別々に扱われがちだったモデルカスケードの経路方策と実際のGPU配置・並列構成を、要求分布が配置を変え、配置が遅延を変えて次の経路判断へ戻る閉ループとして最適化した点が重要である。",
+    "implementation":"論文はSGLang上の実モデル実験とETH EASL Scratchpad系シミュレータを用いる。公開コードURLは公式論文本文から確認できなかった。",
+    "hardware_evaluation":"4台のGPUサーバに各8基のNVIDIA H100 80GB、サーバ内NVLink 400GB/s、サーバ間InfiniBand 200GB/sの合計32 GPU環境。",
+    "quality_effect":"GPT-4oを大規模言語モデル判定器として応答品質を0〜100で評価し、品質要件70、80、85、90などを満たす条件で遅延SLOと処理性能を比較する。",
+    "source":"https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf",
+    "sources":["https://proceedings.iclr.cc/paper_files/paper/2026/hash/b76105b94a8c1286c860ad885ec588f1-Abstract-Conference.html","https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf","https://arxiv.org/abs/2506.04203"],
+    "code":null,"last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"ICLR 2026 official conference paper","references_total":45
+  },
+  "reservation":{"claim_id":"claim-bee8326435df2b286b51b470","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
 }
