@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d9c12dafdcacdf57f28b369a","job_id":"job-research-6c1a5d06d3b875ce","data":{"hardware":"ツール進捗の再生・環境変動評価では同一sandboxをidle、継続contention、途中からcontention、途中までcontention等で比較する。エンドツーエンドKV評価は4×NVIDIA H100 SXMで、HBMのみとHBM+ホストDRAMオフロードの2構成を使用。","software":"mini-SWE-agent、OpenHands、SWE-bench Verified等の公開エージェント実行を分析し、自前の100件SWE-bench VerifiedではQwen 3.8 Flash等を用いる。比較する残り時間推定はContinuumのper-tool TTL、CacheWiseの名前・引数クラスタ、TokenCakeの最近履歴EWMA、InferCeptのprofile/elapsed rule。KV実装はprefix caching有効のvLLMへrefresh/release/queryヒントを追加する。","methodology":"まず4公開コーパスをsource/scaffold/command class/durationで層化抽出し、strong/weak/declared/negligible/unparsable信号と抽出手段を分類する。次に同一ツール呼び出しを環境条件を変えて再生し、50%時点のeviction判断と90%時点・return直前のreload判断で、call durationに対するmedian absolute ETA errorとtimely trigger率を比較する。エージェント非干渉性はstock、side-channel、side-channel+prompt、de-suppressed構成を100 SWE-bench Verified tasksで比較し、解決数、steps、completion tokens、tool/wall time、exit codesをbootstrap CIで評価する。最後に同一agent sessionsを全方式で4×H100へ再生し、LRUとoracleを含めてpost-tool TTFT p90、throughput、DRAM reload量を測る。","scope":"対象は主にcoding-agentのshell/test/build/install/script系ツール呼び出しであり、4公開コーパスとSWE-bench中心。遠隔API、人待ち、最初のbyte前にstallするdownloadなど進捗を露出しないツールはcoverage外となる。エンドツーエンド結果は4×H100のvLLM再生環境で、他GPU・他serving engine・大規模multi-tenant本番環境への一般化は未検証。"},"reservation":{"claim_id":"claim-d9c12dafdcacdf57f28b369a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0e066ec26fdaec0aa229eda2",
+  "job_id": "job-research-fb4ae3eceb455bfc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0e066ec26fdaec0aa229eda2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
