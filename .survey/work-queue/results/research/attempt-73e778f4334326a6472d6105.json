@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-73e778f4334326a6472d6105",
+  "job_id": "job-research-fb4ae3eceb455bfc",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-73e778f4334326a6472d6105.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | Japanese-first prose ratio is too low: 69.2% < 70% (Japanese=3711, Latin=1650)",
+  "processed_at": "2026-09-18T01:35:03+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "Japanese-first prose ratio is too low: 69.2% < 70% (Japanese=3711, Latin=1650)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
