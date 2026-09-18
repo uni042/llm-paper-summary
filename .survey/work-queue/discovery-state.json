@@ -1,64 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T13:00:44+00:00",
+  "updated_at": "2026-09-18T13:01:40+00:00",
   "last_run_key": "2026-09-18T21:00:00+09:00",
-  "last_round": "specialist-network-kv-5",
+  "last_round": "specialist-gpu-runtime-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 10,
-  "last_empty_round_reason": "network/KV transferの上位system候補は既収録だった。",
+  "consecutive_empty_rounds": 13,
+  "last_empty_round_reason": "GPU runtime/kernel系の強候補は既収録だった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T05:28:14+09:00",
-      "round": "specialist-recent-kv-1",
-      "axis": "2609新着・KVキャッシュ最適化/サービング",
-      "query_summary": "2026年9月の新着を中心にKVキャッシュ圧縮・再利用・RAG serving・共有メモリservingを横断して軽量評価し、identity deltaと既存research jobで再重複確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.10266",
-        "arXiv:2609.10790",
-        "arXiv:2609.11209"
-      ],
-      "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2028Z-recent-kv.json"
-    },
-    {
-      "run_key": "2026-09-13T05:28:14+09:00",
-      "round": "specialist-kv-backref-2",
-      "axis": "KVキャッシュ幾何学指標・backward reference",
-      "query_summary": "ECOKVから幾何学的多様性を用いるKV eviction系統へ遡り、attention非依存のkey-similarity系手法と関連圧縮手法を軽量評価した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2034Z-kv-backref.json"
-    },
-    {
-      "run_key": "2026-09-13T05:28:14+09:00",
-      "round": "specialist-hash-kv-family-3",
-      "axis": "LSH・hashing系KVアクセス/eviction/sharing・query expansion",
-      "query_summary": "ECOKV/KeyDiffからハッシュ・近似探索・attention非依存KV管理へ検索語を展開し、LSH eviction、CPU-GPU協調attention sampling、deep hashing、semantic KV sharingを軽量評価。最新HEADのidentity delta、既存research job、コード検索で再重複確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 4,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2036Z-hash-kv-family.json"
-    },
     {
       "run_key": "2026-09-13T06:02:25+09:00",
       "round": "specialist-adaptive-kv-agent-energy-1",
@@ -7081,6 +7032,70 @@
       ],
       "next_axis_hint": "agentic serving・tool-call KV lifecycleへ切り替える",
       "source_submission": "work-queue/submissions/20260918T2207JST-discovery-specialist-network-kv-5.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-agent-kv-6",
+      "axis": "agentic serving・tool-call progress・KV lifecycle",
+      "query_summary": "tool wait中のKV保持/退避、agent interruption、multi-turn prefix reuseを走査。Ask the Tool, Don't Guessは最新2609 identity shardで既収録、INFERCEPTやPrebleも既存系統として収録済みを確認した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.18849",
+        "arXiv:2402.01869",
+        "arXiv:2407.00023"
+      ],
+      "next_axis_hint": "multi-tenant fairness・SLO schedulingへ切り替える",
+      "source_submission": "work-queue/submissions/20260918T2208JST-discovery-specialist-agent-kv-6.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-fairness-7",
+      "axis": "multi-tenant serving・token latency fairness・SLO isolation",
+      "query_summary": "multi-tenant LLM servingのlatency isolation、deadline scheduling、SLO-aware memory/schedulingを走査。FairInference（Token Latency Fairness）は2609 identity shardで既収録、関連する既知schedulerもrepresented側にあるため新規投入なし。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.18112"
+      ],
+      "next_axis_hint": "新着差分またはGPU runtime/kernel compilationの未走査窓へ進む",
+      "source_submission": "work-queue/submissions/20260918T2209JST-discovery-specialist-fairness-7.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-gpu-runtime-8",
+      "axis": "GPU runtime・persistent kernel・CUDA Graph・JIT compilation",
+      "query_summary": "persistent megakernel、CUDA Graph cold-start、JIT/Graph hybrid、attention engineを横断。Mirage Persistent Kernel、Foundry、Hybrid JIT-CUDA Graphは最新identity shardで既収録を確認した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.22219",
+        "arXiv:2604.06664",
+        "arXiv:2604.23467"
+      ],
+      "next_axis_hint": "新着差分・引用方向・古い重要system omissionへ切り替える",
+      "source_submission": "work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json"
     }
   ],
   "axes": {
@@ -12405,6 +12420,45 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "agentic serving・tool-call KV lifecycleへ切り替える"
+    },
+    "agentic serving・tool-call progress・KV lifecycle": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "multi-tenant fairness・SLO schedulingへ切り替える"
+    },
+    "multi-tenant serving・token latency fairness・SLO isolation": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "新着差分またはGPU runtime/kernel compilationの未走査窓へ進む"
+    },
+    "GPU runtime・persistent kernel・CUDA Graph・JIT compilation": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "新着差分・引用方向・古い重要system omissionへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

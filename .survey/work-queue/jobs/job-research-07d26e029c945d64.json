@@ -17,5 +17,16 @@
   "created_at": "2026-09-18T11:02:46+00:00",
   "completed_at": "2026-09-18T12:01:44+00:00",
   "blocker": "一次資料全文を安全に取得できなかったため一時blocked。arXivの公式 abstract (https://arxiv.org/abs/2609.06172)、HTML full rendering (https://arxiv.org/html/2609.06172)、PDF (https://arxiv.org/pdf/2609.06172) の3経路を個別に試したが、この実行環境ではいずれも DisabledError で取得不能だった。著者所属研究室 MoCA Lab の公式Researchページでは同一論文が IEEE ICCD 2026 論文として掲載されていることを確認したが、同ページから本文全文は取得できなかった。検索索引・第三者解説では抄録や詳細説明を取得できたが、二次資料から未確認の科学的内容を補完することは禁止されているため5-slotは生成していない。次回はarXiv取得経路の復旧、ICCD公式公開版、または著者公式コピーを再試行する。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-df013fdec9ead4452da41508.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-df013fdec9ead4452da41508.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-18T12:01:44+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-18T12:01:44+00:00",
+      "reason": "一次資料全文を安全に取得できなかったため一時blocked。arXivの公式 abstract (https://arxiv.org/abs/2609.06172)、HTML full rendering (https://arxiv.org/html/2609.06172)、PDF (https://arxiv.org/pdf/2609.06172) の3経路を個別に試したが、この実行環境ではいずれも DisabledError で取得不能だった。著者所属研究室 MoCA Lab の公式Researchページでは同一論文が IEEE ICCD 2026 論文として掲載されていることを確認したが、同ページから本文全文は取得できなかった。検索索引・第三者解説では抄録や詳細説明を取得できたが、二次資料から未確認の科学的内容を補完することは禁止されているため5-slotは生成していない。次回はarXiv取得経路の復旧、ICCD公式公開版、または著者公式コピーを再試行する。"
+    }
+  ],
+  "last_blocked_at": "2026-09-18T12:01:44+00:00",
+  "retry_not_before": "2026-09-18T14:03:31+00:00"
 }

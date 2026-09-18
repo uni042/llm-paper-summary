@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 665,
+      "completed": 668,
       "ready": 1
     },
     "audit": {
@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 49,
+      "ready": 55,
       "completed": 529,
       "superseded": 44,
-      "blocked": 9,
+      "blocked": 3,
       "deferred": 3,
       "blocked_permanent": 3,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 49,
+    "ready_research_audit": 55,
     "actively_claimed": 0,
-    "claimable": 49
+    "claimable": 55
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-11c68d7adc12c492",
+      "job_id": "job-research-2072895e5b6f0b68",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2606.26120",
-      "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM",
-      "source_url": "https://arxiv.org/abs/2606.26120",
-      "paper_path": "papers/inference/06-kv-cache-memory/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md",
+      "canonical_id": "arXiv:2410.17043",
+      "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
+      "source_url": "https://arxiv.org/abs/2410.17043",
+      "paper_path": "papers/inference/05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T13:00:45+00:00"
+  "generated_at": "2026-09-18T13:03:31+00:00"
 }
