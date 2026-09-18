@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-49a5f136c96efe1a74ef7842","job_id":"job-research-b2d29fa9c529bdfd","data":{"limitations":"実製品SSDではなく周期精度シミュレータと回路モデルによる評価であり、製造ばらつき・保持劣化はモデル化しているが、実機の制御器ソフトウェア、温度、長期書換え、誤り訂正、複数利用者競合まで含む測定ではない。二重境界得点は余弦類似度の近似で、対照学習アダプタを各エンコーダ・データ分布へ適応させる必要がある。補数表現と専用縦配置を使うため、通常のQLCページ配置だけで検索する方式よりデータ配置管理が複雑になる。高並列構成は再現率を数%犠牲にする。","differences":"CPU-IVFは埋め込みをDRAMへ置きFP32余弦類似度を計算するため高精度だが容量・帯域・電力が大きい。近接記憶処理NSPはQLCからINT8埋め込みを読み出して外部演算器で類似度を計算するため、ホスト転送は減ってもNAND読出しが残る。REISは粗い二値検索をNAND内で行うが、最終候補を多値読出ししてSSD制御器でINT8再順位付けする。D-NOVAは第三段階までNAND配列内の二重境界検出で処理し、完全埋め込みの外部搬送を避ける点が中心的な差である。","implementation_status":"MICRO 2026掲載予定のハードウェア・ソフトウェア共同設計。独自周期精度シミュレータ、Spectre回路解析、OpenROADによる周辺回路合成で実現可能性を評価しているが、公開製品SSDや公開実装コードは本文から確認できない。","research_positioning":"LLM本体の重み・KV退避ではなく、RAGの外部知識検索をSSD内部へ移す系統に位置する。SSDをLLM推論の受動的な容量層から能動的な検索演算層へ変えるため、SSD/NVMe活用研究を検索パイプライン側へ拡張する代表例である。今後は実SSDでの精度・耐久性・更新処理、複数問い合わせの競合、生成器と検索器を統合した端から端までのRAG性能評価が必要になる。"},"reservation":{"claim_id":"claim-49a5f136c96efe1a74ef7842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ad2aa4a0cc57fca75380b5da",
+  "job_id": "job-research-e8f755e1fee9cc18",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ad2aa4a0cc57fca75380b5da",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

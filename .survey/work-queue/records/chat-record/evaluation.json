@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-49a5f136c96efe1a74ef7842","job_id":"job-research-b2d29fa9c529bdfd","data":{"hardware":"自己完結型NVMe SSDをモデル化し、PCIe 4.0 x4、8チャネル各2.0 GB/s、各チャネル8ダイ、各ダイ12プレーン、各プレーン256ブロック、128ワード線・16Kビット線・16選択線を使用する。制御器は約8MB SRAM。QLC読出し140マイクロ秒、SLC相当二値検出30マイクロ秒、ページ読出しエネルギー294.9nJを既存測定から設定する。","software":"周期精度イベント駆動型の独自シミュレータでワード線活性化、ページバッファ、制御器集約、配置を追跡する。回路はSpectre 19.1と14nm PTM-MGでモンテカルロ解析し、周辺加算器はASAP7 7nm標準セルとOpenROADで1GHz合成する。検索基準はFAISS IVF-Flat。","methodology":"NQ、HotpotQA、FEVER、FiQA、wiki_en、MIRACL-Englishの六データ集合を使い、384次元MiniLMと768次元mpnetを共通エンコーダとして評価する。FP32のIVF-Flat余弦類似度を精度基準とし、同じクラスタ数・探索クラスタ数・候補予算でRecall@25/100を比較する。D-NOVAはINT4埋め込み、段階別同時活性化数、許容幅2を標準設定とする。CPU基準は128コア二ソケット、1.5TB DDR4上のFAISS。比較対象REISはNAND側粗検索後に制御器でINT8再順位付け、NSPはQLCからINT8埋め込みを読み近接演算器で検索する。遅延、問合せ当たりエネルギー、定常問合せ毎秒を測る。","scope":"実SSDシリコン上の測定ではなく、既存NAND測定値を用いた周期精度システムモデルと回路レベル非理想性解析である。GPU検索は帯域・入出力律速という前提から比較対象外。RAG全体のLLM生成時間ではなく検索段階を評価し、検索精度は六データ集合と二エンコーダに限定される。"},"reservation":{"claim_id":"claim-49a5f136c96efe1a74ef7842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-ad2aa4a0cc57fca75380b5da",
+  "job_id": "job-research-e8f755e1fee9cc18",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ad2aa4a0cc57fca75380b5da",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
