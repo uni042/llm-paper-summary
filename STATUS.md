@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 15:49:39 JST**
+> 自動生成: **2026-09-18 16:01:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間4分前）** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間16分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **6** | **3** | **3** | **1** | **0** | — |
+| Research | **7** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **22** | **4** | **4** | **0** | **0** | **0** | **8** |
-| 合計 | **31** | **10** | **7** | **3** | **1** | **0** | **8** |
+| Discovery | **22** | **1** | **0** | **1** | **0** | **0** | **2** |
+| 合計 | **29** | **7** | **3** | **4** | **1** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -83,16 +83,6 @@
   - result: `.survey/work-queue/results/research/attempt-a45c6670fc2432985588dfbd.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a45c6670fc2432985588dfbd.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md`
-- **09-18 09:52:39 JST** [research] `arXiv:2509.23094` — d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching
-  - job: `.survey/work-queue/jobs/job-research-ef418ddc1bde46e9.json`
-  - result: `.survey/work-queue/results/research/attempt-157887f293007c13f3ac66f5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-157887f293007c13f3ac66f5.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md`
-- **09-18 09:52:39 JST** [research] `arXiv:2503.18599` — Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization
-  - job: `.survey/work-queue/jobs/job-research-ec631b9aeb6c5c21.json`
-  - result: `.survey/work-queue/results/research/attempt-9ec710a3abfce49d2eb368dc.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9ec710a3abfce49d2eb368dc.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md`
 
 ### Audit
 
@@ -174,25 +164,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 15:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **8件**
-- 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO / CXL shared memory・disaggregated serving・near-data processing・KV transfer / network-constrained KV transfer・proactive migration・elastic KV reclamation / MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism
-- round `specialist-robust-kv-uncertainty-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json`
-  - 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1500JST-discovery-specialist-robust-kv-1.json` (`ok=true`)
-- round `specialist-cxl-disaggregated-2` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260918T1505JST-discovery-specialist-cxl-disagg-2.json`
-  - 探索軸: CXL shared memory・disaggregated serving・near-data processing・KV transfer
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1505JST-discovery-specialist-cxl-disagg-2.json` (`ok=true`)
-- round `specialist-kv-transfer-migration-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json`
-  - 探索軸: network-constrained KV transfer・proactive migration・elastic KV reclamation
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1510JST-discovery-specialist-kv-migration-3.json` (`ok=true`)
-- round `specialist-moe-runtime-4` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260918T1515JST-discovery-specialist-moe-runtime-4.json`
-  - 探索軸: MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1515JST-discovery-specialist-moe-runtime-4.json` (`ok=true`)
+- 最新観測run: **2026-09-18 16:00 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
+- round `specialist-kv-scheduling-1` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
+  - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -249,10 +227,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **505** |
+| 成功result未照合のimmutable submission | **506** |
 | └ Research | **376** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
