@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-818968501d26285ed6167878",
-  "job_id": "job-research-ca0df1c4e0a9af97",
-  "data": {
-    "overview": "HiFCは長文脈の実機評価でDRAM交換とほぼ同じエンドツーエンドスループットを維持し、複数モデル・データセットでも差を概ね1〜2%に抑えた。pSLC内の順次GDS読み書きは約4.7〜5.0 GiB/sを維持し、追記配置により書込み増幅率は1.02となった。128 GiB DRAMを1 TiB pSLC構成SSDで置き換える比較では、当初の3年間総費用を4.5分の1にし、更新価格では6.1分の1と推定している。",
-    "key_results": [
-      {
-        "metric": "長文脈推論スループット差",
-        "value": "概ね1〜2%以内",
-        "baseline": "DRAM KV交換",
-        "condition": "DS-Llama-8B、DS-Qwen-14B、Mistral-7BとQasper/GovReport/NarrativeQA",
-        "interpretation": "SSDの生帯域差を系列パイプラインの計算重畳で隠し、DRAM交換相当の性能を維持する。"
-      },
-      {
-        "metric": "GovReportスループット",
-        "value": "182 tokens/s",
-        "baseline": "DRAM交換172 tokens/s",
-        "condition": "DS-Llama-8B、2 GPU環境の代表評価",
-        "interpretation": "専用GDS経路によりDRAM競合を避け、評価条件ではSSD交換が律速にならない。"
-      },
-      {
-        "metric": "書込み増幅率",
-        "value": "1.02",
-        "baseline": "SSD仕様上の代表値1.40",
-        "condition": "232.5 GiBのKV追記交換",
-        "interpretation": "順次追記配置が内部の余分なNAND書込みを抑え、耐久性を改善する。"
-      },
-      {
-        "metric": "3年間メモリ拡張費",
-        "value": "$136、DRAM比4.5分の1",
-        "baseline": "128 GiB DRAM $614",
-        "condition": "初期費用と電力費を含む論文主表のTCOモデル",
-        "interpretation": "大容量KV交換層としてSSDを使う経済的動機を定量化する。"
-      },
-      {
-        "metric": "100 GiB KV初期化時間",
-        "value": "32秒",
-        "baseline": "DRAM 90秒",
-        "condition": "10〜100 GiBのセッション初期化比較",
-        "interpretation": "事前生成フラッシュキャッシュファイルを直接利用するため大容量で初期化が2.81倍高速になる。"
-      }
-    ],
-    "negative_results": "DRAMの生の交換帯域はHiFCより2倍以上高く、HiFCの優位はI/O自体の低遅延化ではなく重畳による隠蔽に依存する。pSLC内の順次書込みは平均4.715 GiB/sだがランダム書込みは1.617 GiB/s、900 GiB範囲へ広げた順次書込みも1.689 GiB/sまで低下する。128・256トークンの大ブロックでは64トークン付近より不要な交換が増える。短文脈や遅延敏感、共有SSD競合ではフラッシュ遅延が表面化し得る。",
-    "interpretation": "十分な同時系列があると、ある系列をSSDへ交換する間に別系列のGPU計算を進められるため、交換時間がパイプライン余裕時間以内なら性能差が見えない。逆に並列度が低い場合やSSDアクセスがランダム化すると余裕時間を使い切り、DRAMとの差が現れる。HiFCは媒体そのものをDRAM並みに速くするのではなく、アクセス形状とスケジューリングをSSDに合わせる方式である。",
-    "quality_impact": "KV値を近似変換せずそのまま退避・復元するため、方式自体による生成品質低下は想定しない。評価の主眼は性能、容量、耐久性、費用である。"
-  },
+  "attempt_id": "attempt-e3f6cbbee3a78ecd5c91e72c",
+  "job_id": "job-research-2bbcf1d996d23713",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-818968501d26285ed6167878",
+    "claim_id": "claim-e3f6cbbee3a78ecd5c91e72c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
