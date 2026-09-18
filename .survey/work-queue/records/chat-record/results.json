@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-5b5769ffc299e3f095219b3d",
-  "job_id": "job-research-a2e0c7f004aa0b3e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5b5769ffc299e3f095219b3d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5b5769ffc299e3f095219b3d","job_id":"job-research-a2e0c7f004aa0b3e","data":{"overview":"共有接頭辞を持つA100カーネル条件で、PATはFlashAttention比で注意遅延を平均67.8%、FlashInfer比で52.1%削減し、構成によってFlashAttentionへ最大21.5倍、FlashInferへ11.7倍、FastTreeへ3.2倍の高速化を示す。オンライン配信では同一要求率で出力一トークン当たり時間を基準方式より17.0〜93.1%削減する。共有接頭辞がない条件でも複数タイルと複数実行流により平均1.6%の遅延削減が残る。","key_results":[{"metric":"共有接頭辞条件の平均注意遅延削減","value":"FlashAttention比67.8%、FlashInfer比52.1%削減","baseline":"要求中心注意カーネル","condition":"A100 80GB、複数の接頭辞木・バッチ・注意頭構成","interpretation":"同じ共有鍵値を要求ごとに大域メモリから再読出しする費用を、接頭辞単位の詰込みで一度へ近づける効果が大きい。"},{"metric":"カーネル最大高速化","value":"FlashAttention比21.5倍、FlashInfer比11.7倍、FastTree比3.2倍、RelayAttention比11.9倍、RelayAttention++比5.7倍","baseline":"七種類の既存注意実装","condition":"共有接頭辞を含む合成復号バッチの各対応可能構成","interpretation":"接頭辞共有だけでなく、動的タイルと複数実行流が不均一な要求数・鍵値長での資源浪費を抑える。"},{"metric":"オンライン配信の出力一トークン当たり時間","value":"基準方式より17.0〜93.1%削減","baseline":"FlashAttention、FlashInfer、RelayAttention++等","condition":"Qwen3-8BとLlama-3-8B、toolagentとconversation追跡、vLLM 0.9.0、A100一基","interpretation":"カーネル単体の改善が実際の連続バッチ配信でも出力待ち時間へ反映される。"},{"metric":"分散・混合専門家配信","value":"Qwen2.5-72B-Instructで14.3〜26.7%、Qwen3-30B-A3Bで5.53〜16.9%の平均出力一トークン当たり時間削減","baseline":"三基準方式","condition":"前者はA100四基でテンソル並列二・パイプライン並列二、後者はA100一基","interpretation":"注意頭や層の分割、混合専門家の前向き計算は接頭辞認識注意と独立で、同じカーネル最適化を適用できる。"},{"metric":"削除実験","value":"計算量指向詰込みで4.6%、単純詰込みで10.4%、固定タイルで39%、直列複数カーネルで4.8%遅延増","baseline":"完全PAT","condition":"Llama-3-8B相当注意頭構成の合成追跡","interpretation":"メモリ量を目的にした詰込みと複数タイルが特に重要で、複数実行流も残余空洞を削減する。"}],"negative_results":"共有接頭辞が少ない小バッチでは、接頭辞認識詰込みによる大域メモリ削減余地が小さく、利得は複数タイル等の小幅な改善へ縮む。GPUの協調スレッド配列配置はソフトウェアから完全制御できないため、複数実行流を使っても実行空洞は残り理論最適には到達しない。MLA、線形注意、鍵値状態を強く圧縮または除去する構造では、通常のMHA/GQAより鍵値読出しが小さいため効果が縮む可能性がある。","interpretation":"PATの本質は、接頭辞キャッシュの『保存の共有』を復号注意の『読出しの共有』へ拡張した点にある。単に共有鍵値を一つだけ保存しても、要求ごとの注意カーネルが同じ大域メモリを繰り返し読む限り帯域は減らない。要求を共有接頭辞ごとに同じ協調スレッド配列へまとめ、同時にその配列の形へカーネル資源を合わせることで、帯域と占有率の二つの無駄を同時に削減する。","quality_impact":"注意計算は部分結果をオンラインソフトマックスで厳密に統合するため、近似疎注意や量子化によるモデル品質低下を導入しない。評価の中心は性能であり、精度差ではなく同じ注意結果をより少ない大域メモリ読出しと高いGPU利用率で計算する。"},"reservation":{"claim_id":"claim-5b5769ffc299e3f095219b3d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
