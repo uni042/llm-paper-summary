@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T16:00:00+09:00",
+    "round": "specialist-late-sep-storage-1",
+    "axis": "2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport",
+    "query_summary": "2026年9月後半のLLM inference/serving、SSD/NVMe offload、MoE expert prefetch、KV cache、disaggregated servingを独立検索し、さらに2024-2026のstorage/CXL/RDMA/CPU-GPU階層メモリ系を横断した。検索で得たEdge0 (2609.18063)、PATTON (2609.11392)、Composable CXL Memory (2609.10790)、MAPS (2609.15359)、Calibrate Then Route (2609.16206)、KVShareArena (2609.10266)、GrowPage (2609.03494)、Tutti (2605.03375)、CXL-NDP (2509.03377)、Photonic-CXL (2607.27187)、Cache-Resident LLC (2606.25353) 等は最新canonical discovery identity snapshotで既代表化済みと確認した。GitHub code searchの不一致は未収録根拠に使わず、月別identity snapshotを優先した。新規未評価候補は残らなかったため0件提出とする。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 11,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.18063",
+      "arXiv:2609.11392",
+      "arXiv:2609.10790",
+      "arXiv:2609.15359",
+      "arXiv:2609.16206",
+      "arXiv:2609.10266",
+      "arXiv:2609.03494",
+      "arXiv:2605.03375",
+      "arXiv:2509.03377",
+      "arXiv:2607.27187",
+      "arXiv:2606.25353"
+    ],
+    "next_axis_hint": "次は新着検索ランキングを離れ、重要な既収録SSD/NVMe・MoE offload論文のforward/backward citation、2024-2025のOS/DBMS/storage隣接分野からLLM推論へ転用された未収録systems論文を探索する",
+    "empty_round_reason": "all_strong_results_already_represented",
+    "search_windows": [
+      {
+        "topic": "late-september-llm-serving",
+        "source": "web-arxiv",
+        "date_range": "2026-09-01/2026-09-18",
+        "category": "cs.*",
+        "citation_direction": "none",
+        "query_family": "serving-kv-moe-storage",
+        "raw_result_count": 11,
+        "unseen_result_count": 0,
+        "duplicate_filtered_count": 11,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 0,
+        "candidate_accepted_count": 0,
+        "position": "multi-query search window"
+      }
+    ]
+  }
+}
