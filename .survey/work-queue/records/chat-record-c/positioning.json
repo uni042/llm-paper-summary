@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8bc32c98f4efa2a4da6345d3",
-  "job_id": "job-research-abd379cf035bd8f0",
-  "data": {
-    "limitations": "評価はQwen3-4BとQwen3-1.7Bの2規模に限定され、主結果は4Bである。より大きいモデルや別アーキテクチャへの一般化は未確認。注意マスクと位置配置を変更するため完全微調整を前提とし、凍結モデルへそのまま適用できない。システム指示とリソーススキーマが比較的安定し、同じリソースを要求間で再利用できる環境を想定する。リソース間依存や検索順序自体が重要な動的環境では、リソース独立化が情報を失う可能性がある。完全ReCacheは特に分布外で密注意より呼出しF1が5.5ポイント低い。",
-    "differences": "通常の接頭辞キャッシュは同一先頭列にしかKVを再利用できない。Prompt Cache、EPIC、CacheBlend、KVLinkなどの位置非依存再利用は、位置補正、選択的再計算、コンパイルなどで既存KVを統合するのに対し、ReCacheは学習時からリソース間注意を切り位置を局所化し、各リソースのKV自体を組合せ非依存にする。DepthKVやDuoAttention、SPEEDなどは層・ヘッドのKV可視性を削るが、ReCacheはツール呼出し損失への寄与で層とKVヘッド群を選ぶ。GistやBeaconなど一般文圧縮と違い、リソース名・引数名・引数説明を明示的に保持してAPI呼出しの厳密性を守る。",
-    "implementation_status": "著者公式GitHub EIT-NLP/ReCacheでコード公開。arXiv v1は2026-08-20公開。論文はQwen3の完全微調整と独自の注意マスク・位置再配置・構造／意味枝刈りを前提とする。",
-    "research_positioning": "KVキャッシュ再利用とエージェント推論の交点に位置する。従来のKV共有が文章断片や同一接頭辞の再利用を主対象にしたのに対し、ReCacheはツール／スキルスキーマを再利用単位として定義し、動的な検索組合せでもキャッシュを使えるようにする。さらにKV圧縮をトークン、層、KVヘッド群の3次元で組み合わせるため、エージェント基盤でツール数が増えた際のプリフィル、メモリ、デコード注意計算を一体的に削る系統として位置づけられる。"
-  },
+  "attempt_id": "attempt-386de3001d7d0291d3e77d66",
+  "job_id": "job-research-9d3c210288b42eb4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8bc32c98f4efa2a4da6345d3",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-386de3001d7d0291d3e77d66",
+    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
     "worker_kind": "scheduled_chat"
   }
 }
