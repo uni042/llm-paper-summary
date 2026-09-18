@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-287737077740300cf826ad65","job_id":"job-research-2afdd6d968c4500a","data":{"hardware":"NVIDIA RTX A6000 48GB GPU、Intel Xeon Gold 6136、96GB DDR4-2666、CPU-GPU間PCIe 3.0 x16の単一サーバ実機。OPT-30Bではモデル重みの30%もCPUへ退避する条件を含む。","software":"InfiniGenをFlexGenベースの明示的オフロード環境へ実装し、CUDA統合仮想メモリ（Unified Virtual Memory; UVM）も比較。比較対象は完全KVをCPUから読むFlexGen、20%固定KV予算のH2O、FlexGen上の4ビット非対称量子化。著者公式GitHubで精度・性能評価コードを公開。","methodology":"モデルはOPT 6.7B/13B/30BとLlama-2 7B/13B。品質はlm-evaluation-harnessのCOPA、OpenBookQA、WinoGrande、PIQA、RTEを5-shotで評価し、WikiText-2とPenn Treebankではパープレキシティを測定する。長系列性能にはPG-19の無作為文を用いる。実行時間はプリフィルとデコードを含む壁時計時間で測り、系列長、バッチサイズ、モデルサイズを変える。標準設定は部分重み比率0.3、alphaはOPT=4、Llama-2=5で、平均選択KVは全体の10%未満、層ごとの上限は20%。CPU KVプール容量制限ではFIFO、LRU、利用回数方式を比較する。","scope":"中心評価は単一GPUのCPUメモリ退避型推論であり、PCIe帯域がKV転送の主要ボトルネックになる条件。分散GPU間通信やNVLink、現代のH100/H200世代、連続バッチ型本番サーバの要求到着過程は直接評価していない。長文品質は最大32KのLlama-2派生モデルまで実測し、100万トークンについてはLlama-3-8B-1048Kの注意分布解析で将来性を検討する。"},"reservation":{"claim_id":"claim-287737077740300cf826ad65","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-fa2024c0d558cd54b9908dbc",
+  "job_id": "job-research-61cb466957462432",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fa2024c0d558cd54b9908dbc",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
