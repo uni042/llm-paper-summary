@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:05:41.890238+00:00",
+  "updated_at": "2026-09-18T20:15:52.774398+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:05:41.890238+00:00",
+      "last_recorded_at": "2026-09-18T20:15:52.774398+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 271,
+        "research_completed": 272,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 32,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35298429675:1",
-          "recorded_at": "2026-09-18T02:12:42.321454+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35298429675",
-            "run_attempt": "1",
-            "source_sha": "2533fe1aa18edaad0f4458f8e47a55c708a74e9d"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35298485952:1",
           "recorded_at": "2026-09-18T02:13:34.977637+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35390466616:1",
+          "recorded_at": "2026-09-18T20:15:52.774398+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35390466616",
+            "run_attempt": "1",
+            "source_sha": "b93742769e29f2a4f8743a82106314028ea22c8f"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23216,6 +23216,14 @@
           "title": "PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-8de660021e1eaf46",
+          "type": "research",
+          "canonical_id": "arXiv:2605.23294",
+          "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25483,7 +25491,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
