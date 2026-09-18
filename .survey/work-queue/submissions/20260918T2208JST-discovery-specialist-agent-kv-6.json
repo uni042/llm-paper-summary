@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-agent-kv-6",
+    "axis": "agentic serving・tool-call progress・KV lifecycle",
+    "query_summary": "tool wait中のKV保持/退避、agent interruption、multi-turn prefix reuseを走査。Ask the Tool, Don't Guessは最新2609 identity shardで既収録、INFERCEPTやPrebleも既存系統として収録済みを確認した。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2609.18849", "arXiv:2402.01869", "arXiv:2407.00023"],
+    "next_axis_hint": "multi-tenant fairness・SLO schedulingへ切り替える",
+    "empty_round_reason": "agentic KV lifecycleの主要system候補は既収録だった。"
+  }
+}
