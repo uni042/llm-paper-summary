@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0c33b0e589ba86d190e9e1f5","job_id":"job-research-b4ff298d10321769","data":{"limitations":"prompt chunkの順序を自由に変えても意味・品質が保たれるという仮定が適用範囲を限定する。実評価はprefill token costであり、GPU上のend-to-end latency、scheduler overhead、cache bookkeeping、model-specific positional effectsを直接測っていない。O(3^m) exact algorithmは指数時間で大規模trafficへ直接使えず、実運用ではheuristicまたはwindowed optimizationが必要。DFS順によるone-request-cache最適性もrequest reordering latencyやSLO制約が厳しいonline servingではそのまま適用できない。","differences":"vLLM/SGLang/TensorRT-LLM等のprefix cacheは既に保存済みKVのexact-prefix reuseを行うが、通常はprompt componentの順序をoptimization variableとして扱わない。本研究はcache evictionやradix-tree implementationではなく、同じchunk集合をどのrequestでどの順に並べるかをrequest hierarchyとして最適化する。RadixAttention系がprefix matchingとcache管理を効率化するのに対し、本研究はprefixそのものが一致しやすいlayoutを生成する上流最適化で補完的。さらにhierarchyのDFS leaf orderをschedulerへ使い、layoutと有限cacheを一体で扱う。","implementation_status":"著者公式GitHub repositoryに論文全文、Python exact solver、heuristic、verification、BEIR評価script、data取得scriptを公開。production serving engine pluginではなく、algorithm/evaluation artifactとして再現可能な状態。","research_positioning":"KV/prefix cache研究の中でも、memory allocationやevictionではなくprompt assemblyとrequest orderingを組合せ最適化として扱う系統。RAG、agent tool catalog、few-shot promptなどset-valued contextが増えるほど適用価値が高く、既存serving engineのexact-prefix cacheを変更せず上流layoutだけでprefill workを削減できる点が実装上の特徴である。"},"reservation":{"claim_id":"claim-0c33b0e589ba86d190e9e1f5","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-70bc34fb123b636715b220f9",
+  "job_id": "job-research-e4eebc0f5643e0fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-70bc34fb123b636715b220f9",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
