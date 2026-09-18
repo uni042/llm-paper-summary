@@ -1,13 +1,20 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-bee8326435df2b286b51b470",
-  "job_id": "job-research-12153d10b82fca3c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bee8326435df2b286b51b470",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bee8326435df2b286b51b470","job_id":"job-research-12153d10b82fca3c",
+  "data":{
+    "overview":"Cascadiaは、品質要件を維持しながらモデル経路とGPU配置を共同最適化することで、単一モデル配置と既存カスケード基盤の双方を上回る。論文全体の要約では、遅延SLOを最大4倍、平均2.3倍厳しくでき、処理性能を最大5倍、平均2.4倍高める。CascadeServeとの直接比較では遅延期限を最大2.5倍、平均1.7倍縮め、処理性能を最大3.3倍、平均1.7倍向上する。別のLlamaカスケードでも最大3.8倍、平均2.6倍の改善を示し、特定モデル系列だけに依存しないことを確認する。",
+    "key_results":[
+      {"metric":"遅延SLO","value":"最大4倍、平均2.3倍厳しい期限で同等のSLO達成","baseline":"品質帯に応じた単一DeepSeek 70Bまたは671B配置","condition":"複数ワークロード軌跡、品質要求70〜90、95% SLO達成点","interpretation":"簡単な要求を小型モデルで止めつつ、負荷に合わせて各段階の資源を再配分する効果。"},
+      {"metric":"処理性能","value":"最大5倍、平均2.4倍","baseline":"単一モデル配置","condition":"DeepSeek 7B/70B/671Bカスケード、32基H100","interpretation":"カスケード化だけでなく配置と並列構成の共同最適化がGPU利用効率を高める。"},
+      {"metric":"CascadeServe比","value":"遅延期限 最大2.5倍・平均1.7倍改善、処理性能 最大3.3倍・平均1.7倍","baseline":"CascadeServe","condition":"同じ品質要件とワークロード軌跡","interpretation":"入力・出力長と要求複雑度を含めた大規模言語モデル固有の共同最適化が既存カスケードより有効。"},
+      {"metric":"Llama系列での一般化","value":"最大3.8倍、平均2.6倍の性能改善","baseline":"Llama3 70B単一配置およびCascadeServe","condition":"Llama3 8B/70Bカスケード","interpretation":"DeepSeek固有のモデル構成だけでなく別系列でも改善が維持される。"},
+      {"metric":"Sarathi-Serve比処理性能","value":"最大1.95倍、平均1.64倍","baseline":"Sarathi-ServeのvLLM実装を各条件で最適なチャンクサイズへ調整","condition":"品質要求90、3ワークロード軌跡","interpretation":"高度な前処理分割スケジューリングを持つ単一モデル基盤に対してもカスケード共同最適化が上回る。"},
+      {"metric":"RouteLLM比","value":"95% SLO達成に必要な尺度を平均21.3%削減、処理性能を平均18.8%向上","baseline":"RouteLLM","condition":"追加比較実験","interpretation":"経路だけでなくシステム配置まで共同設計する利点を示す。"},
+      {"metric":"運用費","value":"CascadeServe比で平均20〜39%削減、単一モデル比で33〜61%削減","baseline":"CascadeServeおよび単一モデル配置","condition":"論文付録の費用効率評価","interpretation":"処理性能向上が資源費用の削減にもつながる。"},
+      {"metric":"変動ワークロード","value":"処理性能 最大4.4倍、平均2.2倍。品質90ではSLO尺度8.99","baseline":"CascadeServe 13.55、単一モデル16.37","condition":"軌跡1→2→3を8分・16分・10分で切替","interpretation":"再スケジューリングの計算と再配置費用を含めても動的負荷で優位。"}
+    ],
+    "negative_results":"共同最適化は無視できない再構成費用を持つ。32 GPUではスケジューリング算法が約10〜20秒、モデル再構成も約2〜20秒かかる。論文は現行配置で処理を継続し、変更対象をローリング更新して停止を避けるが、秒単位より速い負荷変動には追随しにくい。また配置性能はシミュレータ推定に依存し、実測誤差は2〜7%である。除去実験では並列構成最適化を一律化すると最大1.6倍・平均1.4倍、資源配分を一律化すると最大2.1倍・平均1.7倍性能が悪化し、各構成要素が必要であることを示す。",
+    "interpretation":"モデルカスケードでは経路と配置を独立に最適化すると、経路変更が生む負荷偏りを配置が追従できない。Cascadiaは要求処理比率を配置問題へ戻し、配置から得た遅延を再び経路問題へ戻すため、品質制約下で負荷を均衡させた計画へ収束できる。",
+    "quality_impact":"GPT-4oによる品質判定で設定した最低品質を制約として扱うため、高速化のために品質を自由に下げる方式ではない。主要比較は品質70、80、85、90などの同一品質条件で行われる。ただし品質評価は主に大規模言語モデル判定器へ依存する。"
+  },
+  "reservation":{"claim_id":"claim-bee8326435df2b286b51b470","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
 }
