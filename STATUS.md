@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 19:03:42 JST**
+> 自動生成: **2026-09-18 19:04:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
+| 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-18 18:12:03 JST（51分前）** |
+| 最終検証済みResearch収録 | **09-18 18:12:03 JST（52分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **2** | **2** | **0** | **2** | **0** | — |
+| Research | **8** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **25** | **13** | **13** | **0** | **2** | **0** | **28** |
+| 合計 | **25** | **13** | **13** | **0** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -209,10 +209,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 19:03:27 JST** / heartbeat: **—** / lease expiry: **09-18 20:33:27 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ebde0cc040167968.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **09-18 18:32:58 JST** / lease expiry: **09-18 20:02:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
@@ -235,7 +232,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -263,8 +260,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **514** |
-| └ Research | **385** |
+| 成功result未照合のimmutable submission | **515** |
+| └ Research | **386** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

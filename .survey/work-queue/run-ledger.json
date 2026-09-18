@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T10:03:04.252470+00:00",
+  "updated_at": "2026-09-18T10:04:06.131100+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T10:03:04.252470+00:00",
+      "last_recorded_at": "2026-09-18T10:04:06.131100+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 249,
         "audit_completed": 0,
         "discovery_completed": 133,
-        "blocked": 21,
+        "blocked": 22,
         "new_jobs": 200,
         "new_papers": 249,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35234568098:1",
-          "recorded_at": "2026-09-17T14:35:36.779504+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35234568098",
-            "run_attempt": "1",
-            "source_sha": "5a8fdc878bf1400d03c3b3f423e37d6defae6d2f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35235006349:1",
           "recorded_at": "2026-09-17T14:39:41.046300+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35332646792",
             "run_attempt": "1",
             "source_sha": "1908aa04d6df459b04d1cc5ec0f1d9f27016a2b5"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35332710036:1",
+          "recorded_at": "2026-09-18T10:04:06.131100+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35332710036",
+            "run_attempt": "1",
+            "source_sha": "d8f19a056cd3a2c3fd32ab47c709c1787efd6fc4"
           },
           "signals": [
             "job_blocked"
@@ -22825,6 +22825,14 @@
           "title": "RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-ebde0cc040167968",
+          "type": "research",
+          "canonical_id": "arXiv:2602.23036",
+          "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
