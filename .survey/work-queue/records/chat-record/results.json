@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-384f6c5d18e06374b6aa837f","job_id":"job-research-044cfc2969a67347","data":{"overview":"実測では文字列完全一致方式が自己回帰復号比で最大2.79倍、トークン交差方式が最大1.77倍のスループット高速化を達成する。最大例はCodeLlama-13Bを対象モデル、Tiny StarCoderを提案器としてHumanEvalを一基A6000で実行した文字列完全一致方式で、毎秒21.4トークンから59.7トークンへ増加した。Mixtral-8x22BやPhi-4のように同一語彙を持つ十分小さな既製提案器が用意されていない対象でも、Qwen2.5-0.5BやVicuna-68Mなど異系列の小型モデルをそのまま提案器として利用して高速化できる。さらにPhi-4では異系列Qwen2.5-0.5Bを使う文字列完全一致方式が1.59倍となり、同系列Phi-3.5-miniの1.19倍を上回る例があり、共有語彙制約を外すことが単なる互換性向上だけでなく、速度と近似精度のより良い提案器を広いモデル集合から選べる利点につながる。一方、CodeLlama-7BやDeepSeek 1.5Bを不適切な組合せで使った例では0.63〜0.94倍となり自己回帰より遅い。したがって実用上の意味は『異種語彙なら自動的に高速』ではなく、『専用提案器を再訓練せず候補集合を大幅に広げ、その中から対象分布をよく近似し十分高速な既製モデルを選べる』ことにある。文字列完全一致方式とトークン交差方式がHugging Face Transformersへ統合され既定経路になったことも、提案が理論上だけでなく一般推論基盤で利用可能な実装へ到達したことを示す。","key_results":[{"metric":"文字列完全一致方式の最大高速化","value":"2.79倍","baseline":"自己回帰復号","condition":"CodeLlama-13B、HumanEval、一基A6000、Tiny StarCoder提案器","interpretation":"毎秒21.4トークンから59.7トークンへ向上し、異種語彙提案器でも大幅高速化。"},{"metric":"トークン交差方式の最大高速化","value":"1.77倍","baseline":"自己回帰復号","condition":"CodeLlama-13B、HumanEval、一基A6000、CodeLlama-7B提案器","interpretation":"共通語彙への確率再配分で標準棄却標本化を異種語彙へ適用できる。"},{"metric":"Mixtral-8x22Bでのトークン交差方式","value":"最大1.69倍","baseline":"自己回帰復号","condition":"SCROLLS、四基H100 NVL、Qwen2.5-0.5B提案器","interpretation":"対象モデルに既製の同語彙小型提案器がなくても異系列モデルで高速化。"},{"metric":"Phi-4での文字列完全一致","value":"1.59倍","baseline":"自己回帰復号","condition":"SCROLLS、一基H100 NVL、Qwen2.5-0.5B提案器","interpretation":"同系列Phi-3.5-miniの1.19倍より異系列小型Qwen提案器が有効。"},{"metric":"低性能組合せの例","value":"0.63〜0.94倍","baseline":"自己回帰復号","condition":"HumanEvalでCodeLlama-7BやDeepSeek 1.5B等を不適切な提案器として使用","interpretation":"提案器の順伝播遅延と受理率が悪いと投機的復号自体が減速する。"}],"negative_results":"文字列棄却標本化方式は完全一致より高い期待受理率を理論保証する一方、提案語彙に長いトークンが多いと同一文字列を構成するトークン列の列挙・確率和計算が急増し、実行時費用が実用性を損なう。トークン交差方式は語彙共通部分が小さいと受理率が下がり、共通部分が空なら機能しない。実測でも提案器選択が悪い場合は自己回帰より遅い。","interpretation":"共有語彙は投機的復号の本質条件ではなく、対象分布を保存できる共通検証表現または確率写像があれば異なるトークナイザ間でも損失なし検証が可能。これにより提案器選択を同系列で最小のモデルから、対象分布を十分近似し、かつ順伝播が速い任意の既製モデルへ広げられる。","quality_impact":"三方式はいずれも対象分布を保存する損失なし方式として証明される。文字列完全一致は対象モデルが選んだトークンとの一致を要求し、文字列棄却標本化とトークン交差方式は補正分布を用いて対象確率分布を維持する。"},"reservation":{"claim_id":"claim-384f6c5d18e06374b6aa837f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-75bcc03e6fad92c2b911b240",
+  "job_id": "job-research-6af027835df580e1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-75bcc03e6fad92c2b911b240",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

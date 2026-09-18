@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-384f6c5d18e06374b6aa837f",
-  "job_id": "job-research-044cfc2969a67347",
-  "data": {
-    "hardware": "H100 NVL、RTX 6000、A6000などを一基または四基使用。表ではMixtral-8x22Bに四基H100 NVL、Phi-4に一基H100 NVL、DeepSeek-R1-Distill-Qwen-14Bに一基RTX 6000、CodeLlama-13Bに一基A6000などを使用。",
-    "software": "Hugging Face Transformersへ実装された文字列完全一致方式とトークン交差方式。再現用ベンチマーク保管庫hf-benchを公開。",
-    "methodology": "要約のCNN/DailyMail、コード生成のHumanEval、長文課題SCROLLS等で自己回帰復号と比較する。文字列完全一致方式は温度0、トークン交差方式は温度1で比較し、初回トークン時間、各後続トークン時間、毎秒トークン数、自己回帰比高速化を測定する。対象モデルはMixtral-8x22B、Phi-4、DeepSeek-R1-Distill-Qwen-14B、CodeLlama-13B等、提案器はQwen2.5-0.5B、Vicuna-68M、Tiny StarCoder、DeepSeek-R1-Distill-Qwen-1.5B等を組み合わせる。語彙サイズ、共通部分サイズ、課題別共通部分も付録で調査する。",
-    "scope": "主な実測は文字列完全一致方式とトークン交差方式。文字列棄却標本化方式は理論保証を示すが、文字列確率計算が長トークン語彙で高価なため同等規模の実用性能評価は限定的。提案器の精度・速度と語彙重複に性能が依存する。"
-  },
+  "attempt_id": "attempt-75bcc03e6fad92c2b911b240",
+  "job_id": "job-research-6af027835df580e1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-384f6c5d18e06374b6aa837f",
+    "claim_id": "claim-75bcc03e6fad92c2b911b240",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
