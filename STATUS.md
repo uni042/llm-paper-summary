@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:04:11 JST**
+> 自動生成: **2026-09-19 07:04:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -184,7 +184,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:03:19 JST** / heartbeat: **—** / lease expiry: **09-19 08:33:19 JST**
+  - claim: **09-19 07:04:18 JST** / heartbeat: **—** / lease expiry: **09-19 08:34:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
