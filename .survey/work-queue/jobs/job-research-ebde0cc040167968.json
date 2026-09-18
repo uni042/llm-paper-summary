@@ -17,16 +17,21 @@
   "created_at": "2026-09-16T21:07:57+00:00",
   "blocker": "再試行で同一一次資料の独立経路を確認した。arXiv:2602.23036の公式HTML全文は取得系でDisabledErrorとなり本文取得不能。著者公式casys-kaist/LLMServingSimのREADMEからISPASS 2026採択版（DOI 10.1109/ISPASS69572.2026.00012）と公式実装・Zenodo artifactを確認したが、IEEE DOI本文もこのrunの取得系ではアクセス不能で、公式repository自体には論文全文が収録されていない。検索で得られたalphaXiv等の二次全文解説は科学的内容の補完には使用していない。複数の独立した一次資料経路（arXiv HTML、IEEE採択版、著者公式repository）を試したが全文を安全に最後まで読めなかったため、5-slotを推測生成せずstatus-only blockedとして耐久保存する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-d1fab66f48e43669c98dd751.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-18T10:04:01+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-18T15:31:08+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-18T10:04:01+00:00",
       "reason": "今回runではarXiv:2602.23036の公式abstractを取得し、公開情報からv2の概要と著者公式GitHub実装の存在も確認したが、arXiv公式HTML/PDF本文を一次資料として最後まで取得できなかった。第三者の全文解説にはMSG、実行DAG、異種アクセラレータ、MoE、prefill/decode分離、階層メモリ、実機検証の詳細があるものの、正本契約に従い二次資料だけで5-slotを完成させない。次回はarXiv公式HTML/PDFまたは著者・KAIST公式の論文全文経路を取得して再試行する。"
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-18T15:31:08+00:00",
+      "reason": "再試行で同一一次資料の独立経路を確認した。arXiv:2602.23036の公式HTML全文は取得系でDisabledErrorとなり本文取得不能。著者公式casys-kaist/LLMServingSimのREADMEからISPASS 2026採択版（DOI 10.1109/ISPASS69572.2026.00012）と公式実装・Zenodo artifactを確認したが、IEEE DOI本文もこのrunの取得系ではアクセス不能で、公式repository自体には論文全文が収録されていない。検索で得られたalphaXiv等の二次全文解説は科学的内容の補完には使用していない。複数の独立した一次資料経路（arXiv HTML、IEEE採択版、著者公式repository）を試したが全文を安全に最後まで読めなかったため、5-slotを推測生成せずstatus-only blockedとして耐久保存する。"
     }
   ],
-  "last_blocked_at": "2026-09-18T10:04:01+00:00",
-  "retry_queued_at": "2026-09-18T13:03:31+00:00",
-  "completed_at": "2026-09-18T15:31:08+00:00"
+  "last_blocked_at": "2026-09-18T15:31:08+00:00",
+  "completed_at": "2026-09-18T15:31:08+00:00",
+  "retry_not_before": "2026-09-18T16:40:04+00:00"
 }

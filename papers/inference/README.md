@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **692本**。
+収録論文: **693本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**692本**。
+推論論文：**693本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -54,7 +54,7 @@
 | [05-kv-cache-offloading](05-kv-cache-offloading/README.md) | 7 |
 | [05-memory-architecture-near-data](05-memory-architecture-near-data/README.md) | 1 |
 | [05-moe](05-moe/README.md) | 2 |
-| [05-moe-expert-offload](05-moe-expert-offload/README.md) | 2 |
+| [05-moe-expert-offload](05-moe-expert-offload/README.md) | 3 |
 | [05-offload-hierarchical-memory](05-offload-hierarchical-memory/README.md) | 1 |
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
