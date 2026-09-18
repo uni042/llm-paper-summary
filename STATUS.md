@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:45:54 JST**
+> 自動生成: **2026-09-18 09:46:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
-| 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-18 09:43:20 JST（2分前）** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **48** |
+| 直近24hの検証済みResearch収録 | **54** |
+| 最終検証済みResearch収録 | **09-18 09:46:00 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **3** | **3** | **0** | **3** | **0** | — |
+| Research | **16** | **3** | **3** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **23** | **11** | **11** | **0** | **3** | **0** | **18** |
+| 合計 | **24** | **11** | **11** | **0** | **3** | **0** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 09:46:00 JST** [research] `arXiv:2508.12851` — Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement
+  - job: `.survey/work-queue/jobs/job-research-a1874def735a479b.json`
+  - result: `.survey/work-queue/results/research/attempt-328004e23af6006bc125dba7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-328004e23af6006bc125dba7.json`
+  - paper: `papers/inference/04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md`
 - **09-18 09:43:20 JST** [research] `arXiv:2411.17741` — Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments
   - job: `.survey/work-queue/jobs/job-research-d9f05d11667dcf83.json`
   - result: `.survey/work-queue/results/research/attempt-3482ada8e43cfce3d8d1cfd9.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-7ad6ad40100c07874c12360f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-7ad6ad40100c07874c12360f.json`
   - paper: `papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md`
-- **09-18 06:03:44 JST** [research] `arXiv:2609.17573` — GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-a725b9cf79d670cf.json`
-  - result: `.survey/work-queue/results/research/attempt-c9e86b0774fbe3177b6fb0f5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c9e86b0774fbe3177b6fb0f5.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md`
 
 ### Audit
 
@@ -237,7 +237,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -257,7 +257,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **698** |
+| inference/training/survey配下の論文Markdown実体 | **699** |
 
 ### immutable submissionの未照合
 
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **477** |
-| └ Research | **348** |
+| 成功result未照合のimmutable submission | **476** |
+| └ Research | **347** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T00:43:24.913762+00:00",
+  "updated_at": "2026-09-18T00:46:05.424071+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T00:43:24.913762+00:00",
+      "last_recorded_at": "2026-09-18T00:46:05.424071+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 234,
+        "research_completed": 235,
         "audit_completed": 0,
         "discovery_completed": 104,
         "blocked": 17,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35184848717:1",
-          "recorded_at": "2026-09-17T05:13:10.736286+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35184848717",
-            "run_attempt": "1",
-            "source_sha": "bb55c8055111740a559ed6865d367a565fa060d5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35185210500:1",
           "recorded_at": "2026-09-17T05:18:46.234296+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35292339386",
             "run_attempt": "1",
             "source_sha": "cf69a09f88663c341efb2f522d81c78da33c9d00"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35292515949:1",
+          "recorded_at": "2026-09-18T00:46:05.424071+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35292515949",
+            "run_attempt": "1",
+            "source_sha": "f3ffc6c4806b4bc6377c74310bb0b498d823b046"
           },
           "signals": [
             "research_completed"
@@ -22434,6 +22434,14 @@
           "type": "research",
           "canonical_id": "arXiv:2411.17741",
           "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a1874def735a479b",
+          "type": "research",
+          "canonical_id": "arXiv:2508.12851",
+          "title": "Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement",
           "from": "ready",
           "to": "completed"
         }
