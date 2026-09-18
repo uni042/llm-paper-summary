@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-49730322c2e1a64c60b740a8",
-  "job_id": "job-research-e6a248e5246d3a4e",
-  "data": {},
+  "attempt_id": "attempt-28e413fc54e88f5b4c9b871b",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "hardware": "単一ノードにNVIDIA H100 PCIe 80GBを2枚、CPU 8 cores、system memory 64GB。H100-0にPhi-3-miniとQwen2.5-14B、H100-1にQwen2.5-3B、Mistral-7B、Llama-3.1-8Bを固定配置する。",
+    "software": "各モデルはvLLMの独立processで提供しPrometheus metricsを有効化。問い合わせ埋め込みはCARROTと同じall-MiniLM-L6-v2。比較はCARROTとIRT-Routerの既定構成。品質judgeはQwen-3-Next-80B。公式コードで監視、コストモデル学習、オンライン評価パイプラインを公開。",
+    "methodology": "MixInstructから6,000、English LongBenchから2,425の計8,425 promptsを混合し、6,740 train / 1,685 evalに分割。短文と中長文を混ぜて並行性とKVキャッシュ圧力を両方発生させる。コストモデル学習ではPoisson、micro-burst、sustained-overloadの3到着パターンを巡回し、評価ではsustained-overloadのarrival rate 15/18/21 requests/sを用いる。SLOはprompt長に対する線形TTFT基準を1.2倍slackで設定し、TPOTは訓練集合70 percentile。品質-遅延Pareto、SLO達成率、running/waiting queue比率、GPU load/running/waiting skewを測る。",
+    "scope": "5つのopen-source instruction LLMを2台の同型H100へ固定配置した高負荷評価が中心。動的負荷状態への適応は直接検証されるが、V100/A100/H100混在など真の異種GPUクラスタ、大規模多ノード、モデル移動・replica増減、実運用トラフィックでの長期挙動は評価範囲外。"
+  },
   "reservation": {
-    "claim_id": "claim-49730322c2e1a64c60b740a8",
+    "claim_id": "claim-28e413fc54e88f5b4c9b871b",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
