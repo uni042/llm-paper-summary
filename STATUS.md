@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 21:04:00 JST**
+> 自動生成: **2026-09-18 21:04:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -200,9 +200,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 21:00:58 JST** / heartbeat: **—** / lease expiry: **09-18 22:30:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
+- `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 21:04:04 JST** / heartbeat: **—** / lease expiry: **09-18 22:34:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-37f936e1437c5b29.json`
 - `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving / worker `scheduled-chat-llm-survey`
   - claim: **09-18 20:28:41 JST** / heartbeat: **—** / lease expiry: **09-18 21:58:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-7fcd5e4f3604dab7.json`
@@ -253,8 +253,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **522** |
-| └ Research | **393** |
+| 成功result未照合のimmutable submission | **523** |
+| └ Research | **394** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
