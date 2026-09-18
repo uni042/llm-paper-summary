@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Render STATUS.md with compatibility handling for durable legacy Discovery failures."""
+"""Render STATUS.md with current durable-evidence normalization and diagnostics."""
 from __future__ import annotations
 
 import importlib.util
-import json
 from datetime import timedelta
 from pathlib import Path
 from typing import Any
@@ -23,7 +22,6 @@ except ModuleNotFoundError as exc:
     spec.loader.exec_module(_core)
 
 
-_LEGACY_INVALID_DISCOVERY_ERROR = "ValueError: invalid submit_discovery_round payload"
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
@@ -81,68 +79,6 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _known_candidate_canonical_ids(repo_root: Path, jobs: dict[str, dict[str, Any]]) -> set[str]:
-    known: set[str] = set()
-    for job in jobs.values():
-        canonical_id = str(job["payload"].get("canonical_id") or "").strip()
-        if canonical_id:
-            known.add(canonical_id.casefold())
-    index_path = repo_root / ".survey" / "survey-state" / "paper-identity-index.json"
-    try:
-        index = json.loads(index_path.read_text(encoding="utf-8"))
-    except (OSError, ValueError, UnicodeError):
-        index = {}
-    papers = index.get("papers") if isinstance(index, dict) else None
-    if isinstance(papers, dict):
-        for canonical_id in papers:
-            value = str(canonical_id or "").strip()
-            if value:
-                known.add(value.casefold())
-    return known
-
-
-def _fully_recovered_invalid_discovery_submission_paths(
-    repo_root: Path,
-    submissions: list[dict[str, Any]],
-    results: list[dict[str, Any]],
-    jobs: dict[str, dict[str, Any]],
-) -> set[Path]:
-    known = _known_candidate_canonical_ids(repo_root, jobs)
-    resolved: set[Path] = set()
-    for result in results:
-        result_payload = result["payload"]
-        if result_payload.get("ok") is not False:
-            continue
-        if str(result_payload.get("error") or "").strip() != _LEGACY_INVALID_DISCOVERY_ERROR:
-            continue
-        submission = _core.evidence._submission_for_result(repo_root, result, submissions)
-        if submission is None or submission["kind"] != "discovery":
-            continue
-        if submission["job_id"] and submission["job_id"] in jobs:
-            continue
-        if _core._discovery_round_identity(submission) is not None:
-            continue
-        payload = submission["payload"]
-        if payload.get("operation") != "submit_discovery_round":
-            continue
-        candidates = payload.get("candidates")
-        if not isinstance(candidates, list) or not candidates:
-            continue
-        canonical_ids: list[str] = []
-        for candidate in candidates:
-            if not isinstance(candidate, dict):
-                canonical_ids = []
-                break
-            canonical_id = str(candidate.get("canonical_id") or "").strip()
-            if not canonical_id:
-                canonical_ids = []
-                break
-            canonical_ids.append(canonical_id.casefold())
-        if canonical_ids and all(canonical_id in known for canonical_id in canonical_ids):
-            resolved.add(submission["path"])
-    return resolved
-
-
 def _current_orphan_submission_paths(
     repo_root: Path,
     submissions: list[dict[str, Any]],
@@ -150,14 +86,12 @@ def _current_orphan_submission_paths(
     jobs: dict[str, dict[str, Any]],
 ) -> set[Path]:
     terminally_rejected = _core._terminally_rejected_submission_paths(repo_root, submissions, results)
-    resolved_legacy = _fully_recovered_invalid_discovery_submission_paths(repo_root, submissions, results, jobs)
     return {
         row["path"]
         for row in submissions
         if (not row["job_id"] or row["job_id"] not in jobs)
         and row["path"] not in terminally_rejected
         and not (row["kind"] == "discovery" and _core._discovery_round_identity(row) is not None)
-        and row["path"] not in resolved_legacy
     }
 
 
@@ -182,13 +116,6 @@ def _direct_evidence_metrics(
         active=active,
         now=now,
     )
-    resolved = _fully_recovered_invalid_discovery_submission_paths(repo_root, submissions, results, jobs)
-    if resolved:
-        consistency = dict(metrics["consistency"])
-        resolved_count = min(len(resolved), int(consistency.get("orphan_submissions", 0) or 0))
-        consistency["orphan_submissions"] = max(0, int(consistency.get("orphan_submissions", 0) or 0) - resolved_count)
-        metrics["consistency"] = consistency
-        metrics["consistency_total"] = max(0, int(metrics.get("consistency_total", 0) or 0) - resolved_count)
     metrics["orphan_submission_paths"] = sorted(
         str(path.relative_to(repo_root))
         for path in _current_orphan_submission_paths(repo_root, submissions, results, jobs)
@@ -198,16 +125,6 @@ def _direct_evidence_metrics(
 
 def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
     lines = _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS(metrics)
-    compatibility_note = (
-        " 旧形式のDiscovery submissionが `invalid submit_discovery_round payload` で失敗した履歴は、"
-        "そのsubmission内の全candidateが現在のjobまたはpaper identity indexで確認できる場合に限り、"
-        "履歴として保持したまま現在の異常から除外します。"
-    )
-    for index, line in enumerate(lines):
-        if line.startswith("直接矛盾を確認できる耐久レコードだけを異常とします。"):
-            lines[index] = line + compatibility_note
-        elif line.startswith("- **整合性異常**:"):
-            lines[index] = line + compatibility_note
     orphan_paths = metrics.get("orphan_submission_paths") or []
     if orphan_paths:
         lines.extend([
