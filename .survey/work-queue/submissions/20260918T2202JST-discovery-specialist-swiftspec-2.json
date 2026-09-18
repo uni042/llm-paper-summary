@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2506.11309",
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2506.11309",
+      "priority": 84,
+      "reason": "非同期・分離型speculative decodingをsystemとして設計し、parallel tree generation、tree-aware KV cache管理、融合kernelを統合。5 model family・6 datasetで平均1.75x高速化、Llama3-70Bを8 Hopper GPUで348 token/sとする定量評価があり、分散推論・KV・kernelの複合系統として価値が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-swiftspec-2",
+    "axis": "非同期speculative decoding・tensor parallel・KV/kernel co-design",
+    "query_summary": "分散speculative servingからtensor-parallel・非同期verificationへ軸を移し、一次arXiv抄録でsystem設計と実測評価を確認。最新arxiv-2506 identity shardとrejection ledgerで未収録・未不採用を確認した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/KV memory、RDMA/KV transport、GPU runtimeを別軸で走査する"
+  }
+}
