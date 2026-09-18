@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-d9b26ca882eb56a4dbd626e5",
-  "job_id": "job-research-ef418ddc1bde46e9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9b26ca882eb56a4dbd626e5",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d9b26ca882eb56a4dbd626e5","job_id":"job-research-ef418ddc1bde46e9","data":{"limitations":"第一段階の選択数、確定性事前分布のガウス幅、第二段階の注意累積しきい値という調整要素を持ち、未知モデルや未知課題で同じ設定が最適とは限らない。注意ロールアウトを毎段階の選択へ使うため、全系列再計算削減と引き換えに選択処理の追加費用がある。鍵・値を近似再利用する以上、選択器が状態急変位置を取り逃すと品質低下が起こり得る。主要評価はRTX 3090の単一GPUで、同時多要求、バッチング、分散キャッシュ、運用スケジューラとの相互作用は未評価である。","differences":"dLLM-Cacheは入力文と応答を区間分割して異なる頻度で更新し、Fast-dLLMは半自己回帰ブロックの現在部分を更新する。d²Cacheは固定区間ではなく、未確定位置の復号接近度と、既知位置の注意影響度という二種類のトークン単位指標で毎段階の更新集合を作る。dKV-Cacheの一段階遅延保存とも異なり、更新必要性を位置ごとに適応判定する。さらにキャッシュ手法そのものが確定性事前分布を提供し、それを復号順序改善へ再利用する点が特徴である。","implementation_status":"ICLR 2026採択。公式GitHub Kamichanw/d2CacheでApache-2.0実装を公開し、LLaDA-8B、Dream-v0-7B、SDAR-8B-Chatと複数評価課題の設定を提供する。","research_positioning":"拡散LLM向け近似KVキャッシュの細粒度化を進めた系統であり、Fast-dLLMのブロック再利用からトークン選択型キャッシュへ移る代表例である。今後は選択処理自体の軽量化、KVメモリ削減、サービング基盤でのバッチ統合、SSDやCPU階層との組合せを比較する際の基準となる。"},"reservation":{"claim_id":"claim-d9b26ca882eb56a4dbd626e5","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
