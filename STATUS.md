@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:04:50 JST**
+> 自動生成: **2026-09-18 10:05:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **7** | **2** | **5** | **0** | **0** | **24** |
-| 合計 | **28** | **10** | **5** | **5** | **2** | **0** | **24** |
+| Discovery | **10** | **8** | **2** | **6** | **0** | **0** | **26** |
+| 合計 | **28** | **11** | **5** | **6** | **2** | **0** | **26** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -177,8 +177,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 10:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **5件** / 候補: **24件**
-- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion / NVMe/SSD/object-storage KV offload / MoE expert cache・prefetch・offload / CXL/PIM/NDP・隣接memory systems
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **6件** / 候補: **26件**
+- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion / NVMe/SSD/object-storage KV offload / MoE expert cache・prefetch・offload / CXL/PIM/NDP・隣接memory systems / output-length scheduling・deterministic inference
 - round `specialist-2609-memory-moe-new-arrivals-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
   - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理
@@ -206,6 +206,10 @@
 - round `specialist-cxl-pim-ndp-adjacent-7` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1049JST-discovery-a63d1f04.json`
   - 探索軸: CXL/PIM/NDP・隣接memory systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-scheduling-determinism-8` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260918T1055JST-discovery-b94e2d70.json`
+  - 探索軸: output-length scheduling・deterministic inference
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -266,10 +270,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **484** |
+| 成功result未照合のimmutable submission | **485** |
 | └ Research | **350** |
 | └ Audit | **2** |
-| └ Discovery | **132** |
+| └ Discovery | **133** |
 
 ### 厳格検証が未成立のcompleted job
 
