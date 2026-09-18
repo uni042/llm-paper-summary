@@ -1,53 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T17:00:50+00:00",
+  "updated_at": "2026-09-18T17:02:08+00:00",
   "last_run_key": "2026-09-19T01:00:00+09:00",
-  "last_round": "specialist-nvme-characterization-1",
+  "last_round": "specialist-flash-kv-materialization-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 15,
+  "consecutive_empty_rounds": 17,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T06:02:25+09:00",
-      "round": "specialist-moe-prefetch-resweep-3",
-      "axis": "MoE expert prefetch・offload・speculative execution再走査",
-      "query_summary": "直前strong batch後の枯渇判定をリセットしてMoE recent/older-important omissionを再走査した。SPICE、APEX、SpecPrefetch、ST-MoE、SP-MoEは決定論的research job照合で既収録または既存jobと確認し除外。MoE-SpeQのみ最新main HEADでresearch job不存在、repo検索でも識別子・題名未検出、Library pendingも空であることを投入直前に確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.8333333333333334,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.21240",
-        "arXiv:2608.11688",
-        "arXiv:2607.24787",
-        "arXiv:2606.15453",
-        "arXiv:2510.10302"
-      ],
-      "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0610JST-moe-prefetch-3.json"
-    },
-    {
-      "run_key": "2026-09-13T06:02:25+09:00",
-      "round": "specialist-storage-runtime-4",
-      "axis": "near-storage KV処理・動的layer/KV runtime adaptation",
-      "query_summary": "MoE-SpeQ後の独立軸としてstorage/NVMe、GPU runtime、動的serving adaptationを再走査した。OServeは決定論的job照合で既収録を確認して除外。INF^2とMorphServeは一次arXiv抄録でシステム貢献・評価を軽量確認し、投入直前の最新main HEADで決定論的research job不存在、repo検索でも識別子・題名未検出、Library pending空を確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2602.12151"
-      ],
-      "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0613JST-storage-runtime-4.json"
-    },
     {
       "run_key": "2026-09-13T06:02:25+09:00",
       "round": "specialist-agent-runtime-5",
@@ -7107,6 +7069,52 @@
       ],
       "next_axis_hint": "storage datapathの引用・被引用、SPDK/io_uring/GDSを用いるLLM inference、2024-2026のworkshop/measurement論文へ展開する",
       "source_submission": "work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json"
+    },
+    {
+      "run_key": "2026-09-19T01:00:00+09:00",
+      "round": "specialist-storage-datapath-2",
+      "axis": "SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement",
+      "query_summary": "前roundのNVMe I/O characterizationからstorage datapath方向へ引用・隣接検索を展開。Tutti(arXiv:2605.03375)、DUAL-BLADE(arXiv:2604.26557)、InstInfer(arXiv:2409.04992)はidentity shardで既知を確認。2026年SIGMETRICS系のstorage datapath measurement論文はDOI 10.1145/3788106で一次出版情報を確認し、GitHub既存所在検索でも該当を確認できなかったため候補化した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2604.26557",
+        "arXiv:2409.04992"
+      ],
+      "next_axis_hint": "workshop/measurement系のLLM storage研究、GPU-initiated I/O、external KV cache serviceの学術論文へ展開する",
+      "source_submission": "work-queue/submissions/20260919T0204JST-discovery-specialist-storage-datapath-2.json"
+    },
+    {
+      "run_key": "2026-09-19T01:00:00+09:00",
+      "round": "specialist-flash-kv-materialization-3",
+      "axis": "flash KV materialization・RAG prefill reuse・compute-storage tradeoff",
+      "query_summary": "computational storage、near-storage attention、flash/NVMe expert offloadからKV materializationへ検索軸を展開。FlashMoE(arXiv:2601.17063)、INF^2(arXiv:2502.09921)、Endor(arXiv:2406.11674)、InstInfer(arXiv:2409.04992)、SSD energy analysis(arXiv:2508.06978)はidentity shardで既知を確認。MatKV(arXiv:2512.22195)はarxiv-2512 identity shardに不在で、一次arXiv情報からflash-backed KV reuseのsystem contributionと定量評価を確認して採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.17063",
+        "arXiv:2502.09921",
+        "arXiv:2406.11674",
+        "arXiv:2409.04992",
+        "arXiv:2508.06978"
+      ],
+      "next_axis_hint": "RAG/prefix KV materialization、semantic/prefix cache persistence、flash-backed cross-request reuseを独立に走査する",
+      "source_submission": "work-queue/submissions/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json"
     }
   ],
   "axes": {
@@ -12496,6 +12504,32 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "storage datapathの引用・被引用、SPDK/io_uring/GDSを用いるLLM inference、2024-2026のworkshop/measurement論文へ展開する"
+    },
+    "SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement": {
+      "last_run_key": "2026-09-19T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "workshop/measurement系のLLM storage研究、GPU-initiated I/O、external KV cache serviceの学術論文へ展開する"
+    },
+    "flash KV materialization・RAG prefill reuse・compute-storage tradeoff": {
+      "last_run_key": "2026-09-19T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "RAG/prefix KV materialization、semantic/prefix cache persistence、flash-backed cross-request reuseを独立に走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

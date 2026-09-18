@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-03744b5cb143a715",
+  "type": "research",
+  "parent_job_id": "job-19b9378212c1c3a7",
+  "priority": 80,
+  "canonical_id": "arXiv:2512.22195",
+  "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
+  "source_url": "https://arxiv.org/abs/2512.22195",
+  "paper_path": null,
+  "selection_reason": "RAG文書のKVを事前計算してflash SSDへmaterializeし、prefill再計算をstorage readへ置換するLLM inference system。GPU計算とflash容量・帯域を明示的に交換し、KV loadとdecodeのoverlap、低性能GPU活用まで評価しており、SSDを単なるspill先ではなく再利用可能な計算状態層として使う点が既存offload系と差別化される。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T17:02:08+00:00"
+}
