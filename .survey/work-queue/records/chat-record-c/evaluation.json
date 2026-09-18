@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-b1510ac72994dff0cbb0df8f",
-  "job_id": "job-research-be1193ba1dd42ac7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1510ac72994dff0cbb0df8f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b1510ac72994dff0cbb0df8f","job_id":"job-research-be1193ba1dd42ac7","data":{
+"hardware":"TimeloopでTPUv6e-likeとTPUv7-likeをモデル化する。8B側はFP16 918 TFLOPS、128×128×16シストリック配列、128×16×16ベクトル器、80MB計算用オンチップメモリ+最大512MB先読みメモリ、HBM 32GB・1.64TB/s。70B側は4614 TFLOPS、256×256×16、256×32×16、160MB+最大1GB、HBM 220GB・7.4TB/s。","software":"著者開発のエンドツーエンドLLM推論フレームワークからTimeloopを呼び出し、演算単位マッピング、演算融合、FlashAttention、要求パッキング、KVプリフェッチをモデル化する。公開コードURLは本文にない。","methodology":"Llama3.1-8BをTPUv6e-like、Llama3.1-70BをTPUv7-likeの単一ノードFP16推論としてシミュレーションする。段階評価ではプリフィルトークン長、KV文脈長、追加オンチップ容量を変え、直列プリフィル→デコードとパッキング単独を比較する。サービス評価ではopenchat sharegpt4とarxiv summarizationの実ワークロード長分布を使い、要求到着をポアソン分布、P99スケジューリング遅延上限を1秒とする。32並行デコード・各4K初期KV条件から定めたP99トークン間時間制約下で毎秒処理要求数を測る。","scope":"評価は実機ではなくアーキテクチャシミュレーションである。M3D BEOLメモリの512MB〜1GB容量は将来技術を前提にし、製造歩留まり、熱、実際のアクセス回路・電力、ランタイム実装費用はエンドツーエンド実機で検証していない。最大128K文脈、Llama3.1-8B/70B、TPU風構成に限定されるため、GPU実装や別モデルへの数値の直接一般化には注意が必要。"
+},"reservation":{"claim_id":"claim-b1510ac72994dff0cbb0df8f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
