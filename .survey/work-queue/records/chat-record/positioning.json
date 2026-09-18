@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-bc5a8fd4186a7939c0b7b5f9",
-  "job_id": "job-research-51ff641061ba8ecf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bc5a8fd4186a7939c0b7b5f9",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-bc5a8fd4186a7939c0b7b5f9","job_id":"job-research-51ff641061ba8ecf","data":{"limitations":"評価はAttAccとRamulator 2.0を組み合わせたサイクル精密シミュレーションで、実HBM3-PIMチップ上の検証ではない。RH+はGEMVのMAC_AB行局所性だけを最適化し、attention、KVキャッシュ参照、再配置命令などは直接改善しない。バッチ1で出力系列が長いほどattention比率が増え、端末間速度向上が下がる。重みのK次元オフライン並べ替えを実際のモデル配布・ロード系へ組み込む運用費用や、実機の熱・電力供給制約は評価外である。行律速除去後はnCCDABが次の律速になるためRH+だけでPIMの全制約を解消するわけではない。","differences":"AttAccやNeuPIMsはHBM-PIM上のLLM推論で電力制約nCCDABを重要なスケジュール制約として扱うが、RH+は基準GEMVではnRCが10〜11倍長くnCCDABを完全に隠すことを示す。新しい演算器やバッファを追加せず、ホスト向けストライド64配置をPIM向けストライド1へ変える点が中心である。従来の電力制約最適化を否定するのではなく、行律速を先に除去した後にnCCDAB最適化が有効になるため補完関係にある。","implementation_status":"arXiv v1で公開。AttAccシミュレータへRamulator 2.0を統合した評価を記述するが、論文本文で独立した公式コード公開URLは確認できなかった。RH+自体はK次元のオフライン重み並べ替えとMAC_ABアドレス生成ストライド変更として定義される。","research_positioning":"LLM推論の階層メモリ・PIM系統におけるDRAMマイクロアーキテクチャ認識型スケジューリング研究。CPU/GPUへのオフロードではなくHBM3内部でデータ移動を避けるPIMを対象とするが、『汎用ホスト向けデータ配置をそのまま推論アクセラレータへ持ち込むと局所性を壊す』という知見は、SSD・CPU・GPUを跨ぐ配置研究にも共通する。帯域だけでなく行バッファ粒度、転送単位、アクセス順序を実際の推論カーネルに合わせる重要性を定量的に示す。"},"reservation":{"claim_id":"claim-bc5a8fd4186a7939c0b7b5f9","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
