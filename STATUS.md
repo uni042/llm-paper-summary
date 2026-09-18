@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:36:26 JST**
+> 自動生成: **2026-09-19 03:37:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
+| 収録候補論文 | **49** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 03:30:37 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-19 03:36:57 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **14** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **29** | **8** | **8** | **0** | **1** | **0** | **5** |
+| 合計 | **30** | **8** | **8** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 03:36:57 JST** [research] `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
+  - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
 - **09-19 03:30:37 JST** [research] `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling
   - job: `.survey/work-queue/jobs/job-research-21b30a62610ad176.json`
   - result: `.survey/work-queue/results/research/attempt-e7451954f296ee21fbc9ac8c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-f4f02ec489067157d3a72d32.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f4f02ec489067157d3a72d32.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md`
-- **09-19 01:05:05 JST** [research] `arXiv:2609.06172` — AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription
-  - job: `.survey/work-queue/jobs/job-research-07d26e029c945d64.json`
-  - result: `.survey/work-queue/results/research/attempt-77e0aef16ff8f3aa4d9a089d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-77e0aef16ff8f3aa4d9a089d.json`
-  - paper: `papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md`
 
 ### Audit
 
@@ -150,17 +150,17 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling
-  - job: `.survey/work-queue/jobs/job-research-21b30a62610ad176.json`
-  - result: `.survey/work-queue/results/research/attempt-e7451954f296ee21fbc9ac8c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e7451954f296ee21fbc9ac8c.json`
-  - paper: `papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md`
+- **成功** `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
+  - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 02:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -202,10 +202,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 03:35:51 JST** / heartbeat: **—** / lease expiry: **09-19 05:05:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4fd6dcd288e7197d.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -225,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -245,7 +243,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **729** |
+| inference/training/survey配下の論文Markdown実体 | **730** |
 
 ### immutable submissionの未照合
 

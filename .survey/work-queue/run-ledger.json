@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:30:41.129058+00:00",
+  "updated_at": "2026-09-18T18:37:01.510211+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:30:41.129058+00:00",
+      "last_recorded_at": "2026-09-18T18:37:01.510211+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 265,
+        "research_completed": 266,
         "audit_completed": 0,
         "discovery_completed": 147,
         "blocked": 29,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35292339386:1",
-          "recorded_at": "2026-09-18T00:43:24.913762+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35292339386",
-            "run_attempt": "1",
-            "source_sha": "cf69a09f88663c341efb2f522d81c78da33c9d00"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35292515949:1",
           "recorded_at": "2026-09-18T00:46:05.424071+00:00",
@@ -19597,6 +19583,20 @@
             "run_id": "35380561227",
             "run_attempt": "1",
             "source_sha": "498a96d3c90cc10a9193bc449a7fd65517c9d94c"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35381194830:1",
+          "recorded_at": "2026-09-18T18:37:01.510211+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35381194830",
+            "run_attempt": "1",
+            "source_sha": "acc72255953d335f945a9a8c547f41da1ecbdc75"
           },
           "signals": [
             "research_completed"
@@ -23129,6 +23129,14 @@
           "type": "research",
           "canonical_id": "arXiv:2508.03611",
           "title": "Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4fd6dcd288e7197d",
+          "type": "research",
+          "canonical_id": "arXiv:2503.10325",
+          "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
           "from": "ready",
           "to": "completed"
         }
