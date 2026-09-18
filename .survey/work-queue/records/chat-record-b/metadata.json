@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-cb5d2b02a2622c74cd9e23d6","job_id":"job-research-fbee62800783475d","data":{"canonical_id":"arXiv:2604.10907","arxiv_id":"2604.10907","doi":"10.48550/arXiv.2604.10907","openreview_id":null,"arxiv_categories":{"primary":"cs.NI","cross_list":["cs.DC"]},"title":"RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving","summary":"複数LLMへのプロンプト振り分けでは、従来は各モデルの遅延を固定値として扱うことが多いが、自己運用クラスタでは遅延はGPU割当、テンソル並列度、共有計算率、振り分けが生む負荷に依存する。RouterWiseはGPU配置と振り分けを一体で最適化し、プロファイリングから構成別遅延曲線を作り、双対価格で各プロンプトの品質得点とモデル負荷を結び付ける。固定SLO下で同じクラスタでも構成により達成品質が最大87%変わることを示し、ルータだけでなく配備構成が品質・遅延前線を決めることを実証する。","list_summary":"GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。","authors":["Hossein Hosseini Kasnavieh","Gholamreza Haffari","Christopher Leckie","Adel N. Toosi"],"authors_affiliations":"The University of Melbourne / Monash University","published":"2026-04-13","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"multi-model LLM serving / prompt routing / resource allocation","topics":["マルチモデルLLM","プロンプトルーティング","GPU共有","資源割当","SLO"],"importance":"振り分け品質とGPU配備を別問題として扱わず、自己運用環境で相互依存する負荷・遅延・品質を一つの最適化へ統合する。","hardware_evaluation":"4台または8台のNVIDIA A100 80GB PCIe GPUで実機評価。NVIDIA MPSで共有計算率を制御する。","quality_effect":"生成モデル自体を近似変更せず、RouterBench由来の予測品質得点を最大化目的に置く。比較では基準ルータと品質を0.01以内に合わせてTTFTを比較する。","source":"https://arxiv.org/abs/2604.10907","sources":["https://arxiv.org/abs/2604.10907","https://arxiv.org/html/2604.10907"],"code":null,"implementation":"各モデルをvLLMプロセスとして起動し、NVIDIA MPSのCUDA_MPS_ACTIVE_THREAD_PERCENTAGEで計算率を制限する実配備を評価する。","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-cb5d2b02a2622c74cd9e23d6","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c077ca2784f3c91498be745d",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {
+    "canonical_id": "arXiv:2604.10907",
+    "arxiv_id": "2604.10907",
+    "doi": "10.48550/arXiv.2604.10907",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.NI",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving",
+    "summary": "複数LLMへのプロンプト振り分けでは、従来は各モデルの遅延を固定値として扱うことが多いが、自己運用クラスタでは遅延はGPU割当、テンソル並列度、共有計算率、振り分けが生む負荷に依存する。RouterWiseはGPU配置と振り分けを一体で最適化し、プロファイリングから構成別遅延曲線を作り、双対価格で各プロンプトの品質得点とモデル負荷を結び付ける。固定SLO下で同じクラスタでも構成により達成品質が最大87%変わることを示し、ルータだけでなく配備構成が品質・遅延前線を決めることを実証する。",
+    "list_summary": "GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。",
+    "authors": [
+      "Hossein Hosseini Kasnavieh",
+      "Gholamreza Haffari",
+      "Christopher Leckie",
+      "Adel N. Toosi"
+    ],
+    "authors_affiliations": "The University of Melbourne / Monash University",
+    "published": "2026-04-13",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "multi-model LLM serving / prompt routing / resource allocation",
+    "topics": [
+      "マルチモデルLLM",
+      "プロンプトルーティング",
+      "GPU共有",
+      "資源割当",
+      "SLO"
+    ],
+    "importance": "振り分け品質とGPU配備を別問題として扱わず、自己運用環境で相互依存する負荷・遅延・品質を一つの最適化へ統合する。",
+    "hardware_evaluation": "4台または8台のNVIDIA A100 80GB PCIe GPUで実機評価。NVIDIA MPSで共有計算率を制御する。",
+    "quality_effect": "生成モデル自体を近似変更せず、RouterBench由来の予測品質得点を最大化目的に置く。比較では基準ルータと品質を0.01以内に合わせてTTFTを比較する。",
+    "source": "https://arxiv.org/abs/2604.10907",
+    "sources": [
+      "https://arxiv.org/abs/2604.10907",
+      "https://arxiv.org/html/2604.10907"
+    ],
+    "code": null,
+    "implementation": "各モデルをvLLMプロセスとして起動し、NVIDIA MPSのCUDA_MPS_ACTIVE_THREAD_PERCENTAGEで計算率を制限する実配備を評価する。",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-c077ca2784f3c91498be745d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,31 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-cb5d2b02a2622c74cd9e23d6","job_id":"job-research-fbee62800783475d","data":{"hardware":"NVIDIA A100 80GB PCIe GPUを4台または8台使用。モデル共置き時の計算共有はNVIDIA MPSで制御し、メモリは明示的に分割する。","software":"Mistral-7B-Chat、WizardLM-13B-V1.2、Yi-34B-ChatをvLLMで提供し、RouterBenchの36,000プロンプトを使用。品質予測ルータはDeBERTa-v3-Largeにモデル別回帰ヘッドを持たせて学習する。","methodology":"研究1では4/8 GPU、到着率50〜80 RPS、複数TTFT目標の下で、利用率フィルタと配置制約を通る全構成について達成可能品質と遅延を測り、Equal-Split、Size-Proportional、Isolatedの資源割当と比較する。研究2では4 A100上で50/60/70/80 RPS、500または800msの平均TTFT目標を用い、FrugalGPTとRouteLLMをRouterWiseと品質差0.01以内に調整して実測TTFTを比較する。tpは1/2/4、MPS計算率は10〜100%を10%刻みで探索する。","scope":"平均遅延SLOを対象とし、P95/P99尾部遅延は直接最適化しない。プロンプト分布と到着率を既知・固定としてオフライン計画し、構成別遅延モデルも事前プロファイルから作る。実クラスタの共置き干渉やバーストは完全にはモデル化せず、絶対遅延保証より構成の相対順位を利用する。","baselines":["Equal-Split","Size-Proportional","Isolated","FrugalGPT","RouteLLM"],"models":["Mistral-7B-Chat","WizardLM-13B-V1.2","Yi-34B-Chat"],"dataset":"RouterBench 36,000 prompts"},"reservation":{"claim_id":"claim-cb5d2b02a2622c74cd9e23d6","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c077ca2784f3c91498be745d",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {
+    "hardware": "NVIDIA A100 80GB PCIe GPUを4台または8台使用。モデル共置き時の計算共有はNVIDIA MPSで制御し、メモリは明示的に分割する。",
+    "software": "Mistral-7B-Chat、WizardLM-13B-V1.2、Yi-34B-ChatをvLLMで提供し、RouterBenchの36,000プロンプトを使用。品質予測ルータはDeBERTa-v3-Largeにモデル別回帰ヘッドを持たせて学習する。",
+    "methodology": "研究1では4/8 GPU、到着率50〜80 RPS、複数TTFT目標の下で、利用率フィルタと配置制約を通る全構成について達成可能品質と遅延を測り、Equal-Split、Size-Proportional、Isolatedの資源割当と比較する。研究2では4 A100上で50/60/70/80 RPS、500または800msの平均TTFT目標を用い、FrugalGPTとRouteLLMをRouterWiseと品質差0.01以内に調整して実測TTFTを比較する。tpは1/2/4、MPS計算率は10〜100%を10%刻みで探索する。",
+    "scope": "平均遅延SLOを対象とし、P95/P99尾部遅延は直接最適化しない。プロンプト分布と到着率を既知・固定としてオフライン計画し、構成別遅延モデルも事前プロファイルから作る。実クラスタの共置き干渉やバーストは完全にはモデル化せず、絶対遅延保証より構成の相対順位を利用する。",
+    "baselines": [
+      "Equal-Split",
+      "Size-Proportional",
+      "Isolated",
+      "FrugalGPT",
+      "RouteLLM"
+    ],
+    "models": [
+      "Mistral-7B-Chat",
+      "WizardLM-13B-V1.2",
+      "Yi-34B-Chat"
+    ],
+    "dataset": "RouterBench 36,000 prompts"
+  },
+  "reservation": {
+    "claim_id": "claim-c077ca2784f3c91498be745d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
