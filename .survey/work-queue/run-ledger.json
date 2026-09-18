@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T12:05:10.579333+00:00",
+  "updated_at": "2026-09-18T12:05:31.991478+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T12:05:10.579333+00:00",
+      "last_recorded_at": "2026-09-18T12:05:31.991478+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 250,
         "audit_completed": 0,
         "discovery_completed": 143,
-        "blocked": 28,
+        "blocked": 29,
         "new_jobs": 219,
         "new_papers": 253,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35256108869:1",
-          "recorded_at": "2026-09-17T18:02:51.424186+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35256108869",
-            "run_attempt": "1",
-            "source_sha": "4b2287e6058fd1951ebd3f1ca50068b766847d34"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35262996680:1",
           "recorded_at": "2026-09-17T19:09:35.184277+00:00",
@@ -19596,6 +19582,20 @@
             "run_id": "35342704540",
             "run_attempt": "1",
             "source_sha": "3040d906edd5091284710e569d4f5739931d3f9f"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35342758876:1",
+          "recorded_at": "2026-09-18T12:05:31.991478+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35342758876",
+            "run_attempt": "1",
+            "source_sha": "e5e096ff536160bffe2d3cfba5b78347c184d316"
           },
           "signals": [
             "job_blocked"
@@ -22968,6 +22968,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.06498",
           "title": "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-f97acaf8df0df8b2",
+          "type": "research",
+          "canonical_id": "arXiv:2608.21719",
+          "title": "PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response",
           "from": "ready",
           "to": "blocked"
         }
