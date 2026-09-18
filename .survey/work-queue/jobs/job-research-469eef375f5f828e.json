@@ -14,5 +14,16 @@
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-16T19:06:06+00:00"
+  "created_at": "2026-09-16T19:06:06+00:00",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | results.overview must explain the main result and its practical meaning",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "results.overview must explain the main result and its practical meaning"
+  ],
+  "last_validation_failed_at": "2026-09-18T18:39:54+00:00"
 }

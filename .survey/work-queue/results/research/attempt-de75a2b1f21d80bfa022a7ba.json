@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-de75a2b1f21d80bfa022a7ba",
+  "job_id": "job-research-469eef375f5f828e",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-de75a2b1f21d80bfa022a7ba.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | results.overview must explain the main result and its practical meaning",
+  "processed_at": "2026-09-18T18:39:54+00:00",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "results.overview must explain the main result and its practical meaning"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
