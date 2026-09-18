@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:59:45 JST**
+> 自動生成: **2026-09-18 15:00:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **6** | **3** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **18** | **3** | **0** | **3** | **0** | **0** | **5** |
-| 合計 | **32** | **9** | **3** | **6** | **0** | **0** | **5** |
+| Discovery | **18** | **4** | **0** | **4** | **0** | **0** | **8** |
+| 合計 | **32** | **10** | **3** | **7** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -180,8 +180,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 15:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **5件**
-- 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO / CXL shared memory・disaggregated serving・near-data processing・KV transfer / network-constrained KV transfer・proactive migration・elastic KV reclamation
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **8件**
+- 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO / CXL shared memory・disaggregated serving・near-data processing・KV transfer / network-constrained KV transfer・proactive migration・elastic KV reclamation / MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism
 - round `specialist-robust-kv-uncertainty-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json`
   - 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO
@@ -193,6 +193,10 @@
 - round `specialist-kv-transfer-migration-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json`
   - 探索軸: network-constrained KV transfer・proactive migration・elastic KV reclamation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-runtime-4` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T1515JST-discovery-specialist-moe-runtime-4.json`
+  - 探索軸: MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -248,10 +252,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **508** |
+| 成功result未照合のimmutable submission | **509** |
 | └ Research | **376** |
 | └ Audit | **2** |
-| └ Discovery | **130** |
+| └ Discovery | **131** |
 
 ### 厳格検証が未成立のcompleted job
 
