@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:19:27 JST**
+> 自動生成: **2026-09-19 01:19:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **53** |
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-19 01:19:23 JST（4秒前）** |
+| 最終検証済みResearch収録 | **09-19 01:19:23 JST（16秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -198,7 +198,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.05202` — Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:17:08 JST** / heartbeat: **—** / lease expiry: **09-19 02:47:08 JST**
+  - claim: **09-19 01:19:31 JST** / heartbeat: **—** / lease expiry: **09-19 02:49:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-044cfc2969a67347.json`
 
 #### Audit
