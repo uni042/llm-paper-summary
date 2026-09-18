@@ -1,0 +1,9 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2609.01068","title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","source_url":"https://arxiv.org/abs/2609.01068","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-speculative-backbones.md","priority":87,"reason":"Reuses speculative-decoding backbone representations for low-overhead output-length prediction and improves saturated disaggregated-serving tail latency; strong scheduling relevance."},
+  {"canonical_id":"arXiv:2609.00363","title":"Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance","source_url":"https://arxiv.org/abs/2609.00363","paper_path":"papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md","priority":80,"reason":"Systems analysis of cross-kernel deterministic inference and quantization-scale design; complements existing deterministic serving work with a numerical/kernel perspective."}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-scheduling-determinism-8","axis":"output-length scheduling・deterministic inference","query_summary":"speculative decodingとoutput-length scheduling、deterministic inferenceへ軸を切替。既知のTIE/SPECTRE/CoRunを検索結果段階で除外し、9月新着2件を抽出。","candidate_count":5,"duplicate_filtered_count":3,"duplicate_canonical_ids":["arXiv:2604.00499","arXiv:2605.08151","arXiv:2608.14376"],"next_axis_hint":"次runは最新discovery-stateの受理結果を確認し、未走査のcitation/related-work窓を優先する","empty_round_reason":null}
+}
