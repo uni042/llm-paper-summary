@@ -2,63 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-77e0aef16ff8f3aa4d9a089d",
-  "job_id": "job-research-07d26e029c945d64",
-  "data": {
-    "canonical_id": "arXiv:2609.06172",
-    "arxiv_id": "2609.06172",
-    "doi": "10.48550/arXiv.2609.06172",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.OS",
-      "cross_list": [
-        "cs.PF"
-      ]
-    },
-    "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
-    "summary": "AutoUVMは、PyTorchのキャッシュアロケータが多数のテンソルを大きな統合仮想メモリ（Unified Virtual Memory; UVM）管理領域へ詰め込むためUVMドライバからテンソル境界が見えない問題を解く。1回のオフラインプロファイルでカーネル―テンソル対応と短期再利用を復元し、オンラインではCPU-GPU相互接続律速のカーネルに必要なテンソルだけを細粒度に先読みする。実行時のメモリ圧力変化に応じて分類を更新し、モデルコード変更なしで動作する。10モデル・RTX 3060/A100/H100 NVL評価で、2.0倍オーバーサブスクリプション時に標準UVM比平均3.1倍、最良既存先読み器DeepUM比1.9倍高速化し、平均エネルギーも31%削減する。",
-    "list_summary": "PyTorch内部のテンソル意味情報をUVM先読みに持ち込み、必要テンソルだけを選択的にCPU→GPU移送して標準UVM比平均3.1倍高速化する。",
-    "authors": [
-      "Mao Lin",
-      "Hui Feng",
-      "Xianzhong Ding",
-      "Guilherme Cox",
-      "Qian Wang",
-      "Hyeran Jeon"
-    ],
-    "authors_affiliations": "University of California, Merced; NVIDIA",
-    "published": "2026-09-05",
-    "publication": "arXiv:2609.06172; IEEE ICCD 2026 paper listing reported by authors' lab",
-    "publication_type": "プレプリント／会議論文",
-    "publication_status": "arXiv v1公開（2026-09-05）",
-    "lineage": "UVM・GPUメモリオーバーサブスクリプション・テンソル単位先読み・階層メモリ",
-    "topics": [
-      "Unified Virtual Memory",
-      "prefetching",
-      "GPU memory oversubscription",
-      "LLM inference",
-      "PyTorch allocator"
-    ],
-    "importance": "CPUメモリをGPU容量超過時の透過的な下位層として使うUVM経路で、フレームワークのテンソル意味情報を利用して転送必要性そのものを選別するため、階層メモリ・先読み研究に直接関係する。",
-    "implementation": "PyTorchのCUDA caching allocatorをcudaMallocManagedへ変更し、tensor-creation hook、NVBit、Compute Sanitizer APIを組み合わせたソフトウェア実装。論文本文ではモデルコード変更不要とする。",
-    "hardware_evaluation": "RTX 3060 12GB、A100、H100 NVLの3 GPUプラットフォーム。RTX 3060系はRyzen 7 5800X/32GB、A100系はXeon Gold 5320/128GB、H100 NVL系はAMD EPYC 9454/560GB。",
-    "quality_effect": "計算内容自体は変更せず、テンソル移送のタイミングと対象を変える方式。アドレス・プロファイル不一致時は該当テンソルの先読みを無効化して正しさを維持する。",
-    "source": "https://arxiv.org/abs/2609.06172",
-    "sources": [
-      "https://arxiv.org/abs/2609.06172",
-      "https://arxiv.org/html/2609.06172",
-      "https://arxiv.org/pdf/2609.06172"
-    ],
-    "code": null,
-    "project": null,
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "arXiv HTML全文の参考文献節まで確認。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-0ef81dffe6156af3523ba01f",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-77e0aef16ff8f3aa4d9a089d",
+    "claim_id": "claim-0ef81dffe6156af3523ba01f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

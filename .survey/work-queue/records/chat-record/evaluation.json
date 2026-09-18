@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-77e0aef16ff8f3aa4d9a089d",
-  "job_id": "job-research-07d26e029c945d64",
-  "data": {
-    "hardware": "3構成で評価: (1) AMD Ryzen 7 5800X + GeForce RTX 3060 + 32GB RAM、Linux 6.11、driver 560.28.03、CUDA 12.1、(2) Intel Xeon Gold 5320 + NVIDIA A100 + 128GB RAM、Linux 6.16、driver 580.65.06、CUDA 12.1、(3) AMD EPYC 9454 + NVIDIA H100 NVL + 560GB RAM、Linux 5.15、driver 560.35.05、CUDA 12.4。",
-    "software": "PyTorch CUDA caching allocatorをcudaMallocManaged利用へ変更したAutoUVM。NVBitでFLOP/メモリアクセスを観測し、Compute Sanitizer APIでprefetch/affinity primitiveを注入。比較対象は標準UVM、オブジェクト単位SUV、オブジェクト単位Forest、UM-block相関先読みDeepUM。",
-    "methodology": "SmolLM2 S/M/L、Qwen2.5、Qwen1.5、Deepseek-coder、AMD-Llama、Llama、Helium-1、EuroLLMの10モデルを評価。GPU実効容量を別helper processの固定device allocationで制約してオーバーサブスクリプション率を制御し、NVIDIA UVM driver moduleへカウンタを追加してページフォルト数を測定。中心比較はoversubscription factor 2.0で実行時間を標準UVMへ正規化。1.5/1.75/2.0の感度、RTX3060/A100/H100 NVLの機種差、tensor-only→affinity追加→policy追加のablation、消費電力・エネルギー、オフラインprofiling overhead、torch.compileによるfused kernel条件も評価する。",
-    "scope": "10モデルのメモリfootprintは約1.4GB〜11.4GB、標準系列長は約1.9K〜4.0K。主評価は単一GPUでCPUメモリをUVM backing storeとして使うオーバーサブスクリプション。大規模分散推論、複数同時requestの本番continuous batching、NVMe/SSD階層、モデル学習は直接評価していない。"
-  },
+  "attempt_id": "attempt-0ef81dffe6156af3523ba01f",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-77e0aef16ff8f3aa4d9a089d",
+    "claim_id": "claim-0ef81dffe6156af3523ba01f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

@@ -2,67 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-77e0aef16ff8f3aa4d9a089d",
-  "job_id": "job-research-07d26e029c945d64",
-  "data": {
-    "overview": "AutoUVMはoversubscription factor 2.0で10モデル平均3.1倍の標準UVM比高速化を達成し、SUV比4.7倍、Forest比4.1倍、最良既存比較DeepUM比1.9倍。オーバーサブスクリプションが強いほど効果が増え、GPU世代を変えても2.7〜3.1倍の標準UVM比改善を維持した。tensor-level visibilityだけで2.0倍、affinity追加で2.5倍、policy selectivity追加で3.1倍となり、3要素が段階的に寄与する。",
-    "key_results": [
-      {
-        "metric": "平均実行時間高速化",
-        "value": "3.1x / 4.7x / 4.1x / 1.9x",
-        "baseline": "標準UVM / SUV / Forest / DeepUM",
-        "condition": "10 LLM、oversubscription factor 2.0",
-        "interpretation": "テンソル単位の必要データだけを移送し、粗粒度先読みの不要転送とthrashingを抑える。"
-      },
-      {
-        "metric": "オーバーサブスクリプション感度",
-        "value": "1.4x, 2.2x, 3.1x",
-        "baseline": "標準UVM",
-        "condition": "factor 1.5, 1.75, 2.0",
-        "interpretation": "GPU容量制約が強くページングが増えるほど選択的先読みの価値が高まる。"
-      },
-      {
-        "metric": "GPU世代別高速化",
-        "value": "RTX3060 3.1x; A100 2.9x; H100 NVL 2.7x",
-        "baseline": "標準UVM",
-        "condition": "oversubscription factor 2.0",
-        "interpretation": "高速な新世代相互接続でも効果は残るが、帯域改善により相対利得はやや縮小する。"
-      },
-      {
-        "metric": "アブレーション",
-        "value": "T 2.0x; T+A 2.5x; T+A+P 3.1x",
-        "baseline": "標準UVM",
-        "condition": "tensor prefetchのみ→affinity追加→policy追加",
-        "interpretation": "テンソル可視性が基礎効果を作り、短期滞在制御と転送必要性の選別がさらに改善する。"
-      },
-      {
-        "metric": "エネルギー削減",
-        "value": "平均31%削減、object-level prefetcher比最大74%削減",
-        "baseline": "標準UVMおよびobject-level方式",
-        "condition": "10モデル評価",
-        "interpretation": "GPU平均電力は3〜4W増に留まり、実行時間短縮が総エネルギーを下げる。"
-      },
-      {
-        "metric": "fused kernel条件",
-        "value": "2.3x",
-        "baseline": "標準UVM",
-        "condition": "torch.compile/Inductor、factor 2.0",
-        "interpretation": "eager execution以外でもテンソル単位先読みの効果が残る。"
-      },
-      {
-        "metric": "オフラインprofiling cost",
-        "value": "平均41.5x single inference iteration",
-        "baseline": "1 inference iteration",
-        "condition": "profile生成1回",
-        "interpretation": "一度作成して後続実行へ再利用する前提の大きな初期費用。"
-      }
-    ],
-    "negative_results": "新しいGPUほど標準UVM比高速化はRTX3060 3.1倍からH100 NVL 2.7倍へ縮む。オフラインプロファイルは単一推論反復の平均41.5倍と重く、モデル・実行形態ごとの再生成が必要になり得る。torch.compileのfused kernelでは平均2.3倍で、eager条件の3.1倍より効果が低い。",
-    "interpretation": "性能差の中心は、PyTorchの大きなmanaged objectを丸ごと動かすのではなく、次カーネルが実際に触るテンソルだけを移し、さらに相互接続律速のときだけ積極移送する点にある。ページフォルト数と実行時間には強い相関があり、AutoUVMが最少のページフォルトを示すことが高速化機序と整合する。",
-    "quality_impact": "演算結果を近似せずデータ配置・移送のみを変えるため、論文はモデル品質指標の劣化を主要問題として扱っていない。プロファイル識別不一致時は先読みを無効化する安全策を採る。"
-  },
+  "attempt_id": "attempt-0ef81dffe6156af3523ba01f",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-77e0aef16ff8f3aa4d9a089d",
+    "claim_id": "claim-0ef81dffe6156af3523ba01f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
