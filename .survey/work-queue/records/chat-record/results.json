@@ -4,10 +4,21 @@
   "slot": "results",
   "attempt_id": "attempt-292079eab3cc522a1a9de5d7",
   "job_id": "job-research-7fcd5e4f3604dab7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-292079eab3cc522a1a9de5d7",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "SSD型KVプールの保存先だけをHBFへ置き換えると、媒体は高速でもシステム全体は一貫して悪化した。H100/B200の完全構成比較では平均エンドツーエンド遅延が2〜5.5倍へ増え、SLOを満たす最大有効スループットは1.1〜2.7倍低下する。媒体遅延を3.75倍改善しても平均遅延は1%未満しか動かず、HBF上の露出I/Oが小さいことを示す。さらにHBF層は全トレースで読取より書込が多く、熱モデルでは202.27GB/sで80度上限へ達し、耐久予算では容量整合SSDより寿命が短い。",
+    "key_results": [
+      {"metric": "完全構成の平均エンドツーエンド遅延", "value": "2–5.5x slower", "baseline": "容量整合SSD Mooncake型KVプール", "condition": "H100/B200、HBF-1/HBF-2、5モデル×4本番トレース", "interpretation": "HBF媒体の高速化より、HBFを積むために減る近接メモリ容量・帯域と待ち行列悪化の損失が大きい。"},
+      {"metric": "最大SLO有効スループット", "value": "1.1–2.7x lower", "baseline": "容量整合SSD構成", "condition": "H100/B200の完全構成比較", "interpretation": "近接KV容量低下で同時入場できる要求が減り、高速な二次層を持ってもSLO内で処理できる負荷が下がる。"},
+      {"metric": "HBF媒体遅延感度", "value": "3.75x latency improvement changes mean E2E by <1%", "baseline": "同一GPU構成・同一方針でHBF読書遅延のみ掃引", "condition": "8/80〜30/300マイクロ秒読取／書込", "interpretation": "二次層I/Oの露出割合fは約1%で、媒体を理想的に高速化してもエンドツーエンド改善余地が小さい。"},
+      {"metric": "HBF基底ダイ近傍注意計算", "value": "-0.03% mean attention-time improvement", "baseline": "GPU注意計算", "condition": "DeepSeek-V3.2、8×H100、HBF2、40負荷点", "interpretation": "HBF常駐KVが平均15.48%しかなく、データ近傍計算を置いても対象範囲が狭いためボトルネックを移せない。"},
+      {"metric": "HBF層の書込／読取比", "value": "1.14–4.90x writes/reads; rho=0.20–0.88", "baseline": "読取が書込を償う損益分岐rho>約1", "condition": "4本の完全2時間トレース", "interpretation": "再利用の多いブロックは近接層に残り、HBFには書込み後ほぼ読まれない冷たいKVが集まるため、全トレースで読取主体にならない。"},
+      {"metric": "SSD型書込バッチ化のp50改善", "value": "SSD 13.98% vs HBF-2 2.69% overall", "baseline": "同一媒体のバッチなし", "condition": "traceA/traceB、16/128/512トークンブロック", "interpretation": "SSDでは固定操作費と散在アクセスを償却できるが、HBFでは残る固定費が小さく、大ブロックではバッチ化が逆効果になる。"},
+      {"metric": "熱制約下の単一HBFスタック持続帯域", "value": "202.27 GB/s at 80°C and 53.72 W", "baseline": "公称インターフェースピーク", "condition": "16層TLC 3D-ICEモデル、書込主体KVトラフィック", "interpretation": "書込み電力により公称ピークより低い帯域で温度上限へ達し、熱スロットリングを無視した帯域見積りは待ち行列を過小評価する。"},
+      {"metric": "耐久寿命", "value": "0.56x capacity-matched SSD lifetime", "baseline": "4×KIOXIA CM7-V容量整合SSDプール", "condition": "HBF-2 2時間トレースを日次化、48–140TB/day書込、線形TBW消耗", "interpretation": "HBFの有利な単位書込増幅仮定でも書込予算21.7TB/日がSSDの38.4TB/日より小さく、過渡的KVの大量書込みが寿命を縮める。"}
+    ],
+    "negative_results": "HBFはSSDより媒体性能が高いにもかかわらず、SSD型KV階層への単純置換では全体性能を悪化させる。HBF基底ダイ近傍計算も平均では改善せず、SSDで有効な書込バッチ化もHBFでは小効果または大ブロックで負効果となる。KVブロックを16から128、512トークンへ粗粒度化すると見かけの先頭一致率は上がるが、HBF書込量は188→237→258TBへ増える。",
+    "interpretation": "高速な遠隔層が価値を持つのは、二次層読取が実際に臨界経路を占め、その層へ一度書いたデータが何度も読まれ、必要帯域を熱・耐久制約下で維持できる場合だけである。過渡的KVは熱い再利用部分が近接層に残るためHBFへ届く時点で低再利用・書込主体となり、3条件を同時に破る。",
+    "quality_impact": "生成品質を近似する方式ではなく、同一KV内容・同一保存復元方針の配置先を比較するため、主評価は性能・容量・熱・耐久性である。"
+  },
+  "reservation": {"claim_id": "claim-292079eab3cc522a1a9de5d7", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
