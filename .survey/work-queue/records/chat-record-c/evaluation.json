@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-a79bd772dccd9a8939166474",
   "job_id": "job-research-9c0ef4e091be369c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a79bd772dccd9a8939166474",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "setup": "独自OrthrusはQwen3-1.7Bから生成した4,113,358件の蒸留標本で学習し、著者公開のchiennv/Orthrus-Qwen3-1.7Bと並べて評価する。軌跡評価はPython 3.10.12、PyTorch 2.8.0+cu128、CUDA 12.8、Transformers 5.8.1、GeForce RTX 3090 23GB、eager attentionを使用。生成条件はmax_new_tokens=128、do_sample=False、temperature=0.0。BF16評価後、同じモデル・プロンプト・復号手順をFP32で再実行する。",
+    "datasets": ["code", "code-ru", "creative-en", "gec-en", "gec-ru", "math", "math-ru", "poetry-en", "poetry-ru", "qa", "qa-ru", "wmt ru-en", "GSM8K", "HumanEval", "IFEval"],
+    "models": ["Qwen3-1.7B", "chiennv/Orthrus-Qwen3-1.7B", "Orthrus-1.7B-final"],
+    "metrics": ["Tokens Per Forward (TPF)", "生成軌跡完全一致率", "分岐率", "応答条件付きパープレキシティ", "GSM8K exact match", "HumanEval pass@1", "IFEval prompt-level loose/strict accuracy"],
+    "comparisons": "12領域の軌跡評価は各100プロンプト、gec-enのみ90で計1,190件。公開Orthrusと独自学習Orthrusをそれぞれ対応するQwen3-1.7B自己回帰生成と比較する。下流評価ではQwen3-1.7Bを直接比較対象とし、lm-eval-harnessでGSM8K、HumanEval、IFEvalを測定する。",
+    "statistical_analysis": "完全一致と対数応答条件付きパープレキシティの関係を、応答長とプロンプト領域を共変量にしたロジスティック回帰で分析。TPF、軌跡率、下流得点には95%信頼区間を報告する。",
+    "scope_limits": "軌跡評価はQwen3-1.7B規模、単一RTX 3090、貪欲復号、eager attentionに限定される。FP32で一致が回復する原因となる具体的な演算段階は特定しておらず、他GPU、別カーネル、量子化、サンプリング復号、より大規模モデルへの一般化は未検証。下流評価も3ベンチマークに限られ、得点差の多くは不確実性範囲内である。"
+  },
+  "reservation": {"claim_id": "claim-a79bd772dccd9a8939166474", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
