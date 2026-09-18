@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:13:27 JST**
+> 自動生成: **2026-09-19 07:13:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
+| 収録候補論文 | **52** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 07:11:49 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-19 07:13:34 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **6** | **2** | **4** | **2** | **1** | — |
+| Research | **22** | **6** | **3** | **3** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **9** | **5** | **4** | **2** | **1** | **3** |
+| 合計 | **35** | **9** | **6** | **3** | **1** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 07:13:34 JST** [research] `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models
+  - job: `.survey/work-queue/jobs/job-research-3001166a9d479500.json`
+  - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
 - **09-19 07:11:49 JST** [research] `arXiv:2607.08993` — StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration
   - job: `.survey/work-queue/jobs/job-research-f7dcdf40e7d3538f.json`
   - result: `.survey/work-queue/results/research/attempt-a3bba0a36c53f4970b6d1719.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-0d9a61003cc7a37046392d50.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0d9a61003cc7a37046392d50.json`
   - paper: `papers/inference/99-other-inference-systems/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md`
-- **09-19 03:46:31 JST** [research] `arXiv:2602.07223` — SpecAttn: Co-Designing Sparse Attention with Self-Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-469eef375f5f828e.json`
-  - result: `.survey/work-queue/results/research/attempt-a9d8c2cf570fd3b13fb6b628.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a9d8c2cf570fd3b13fb6b628.json`
-  - paper: `papers/inference/08-speculative-decoding/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md`
 
 ### Audit
 
@@ -151,14 +151,18 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **6件** / 検証済み成功: **2件** / 未完了・未検証: **4件**
+- immutable submission: **6件** / 検証済み成功: **3件** / 未完了・未検証: **3件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5adb86bd27e2666265386057.json` (job `job-research-56fbeb640bc1560d`)
 - **成功** `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
   - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
   - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json` (job `job-research-3001166a9d479500`)
+- **成功** `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models
+  - job: `.survey/work-queue/jobs/job-research-3001166a9d479500.json`
+  - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
 - **成功** `arXiv:2607.08993` — StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration
   - job: `.survey/work-queue/jobs/job-research-f7dcdf40e7d3538f.json`
   - result: `.survey/work-queue/results/research/attempt-a3bba0a36c53f4970b6d1719.json` (`ok=true`)
@@ -195,10 +199,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:12:36 JST** / heartbeat: **—** / lease expiry: **09-19 08:42:36 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3001166a9d479500.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -221,7 +222,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -241,7 +242,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **741** |
+| inference/training/survey配下の論文Markdown実体 | **742** |
 
 ### immutable submissionの未照合
 
@@ -249,8 +250,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **568** |
-| └ Research | **439** |
+| 成功result未照合のimmutable submission | **567** |
+| └ Research | **438** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
