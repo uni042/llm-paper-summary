@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-1b78e7fa82b82abe032f6a4d",
-  "job_id": "job-research-06a7e035a0f5ff0b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1b78e7fa82b82abe032f6a4d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1b78e7fa82b82abe032f6a4d","job_id":"job-research-06a7e035a0f5ff0b","data":{"hardware":"全実験をNVIDIA RTX PRO 6000 Blackwell GPU 1基で実行する。BF16精度を使用する。","software":"SGLang serving engineを拡張してLoopSpecを実装。attentionはTriton backend、GEMMはFlashInfer提供TinyGEMM backendを使用し、枝単位KV管理とCUDA Graphを追加する。","methodology":"Ouro系R=4とRaven系R=32の2系列、計7チェックポイントを一般推論、数学、コード、thinking推論で評価する。GSM8K、MATH-500、BBH、HumanEval+、MBPP+、AIME 2024/2025等を使用。greedyは温度0、samplingは温度1.0・top-p 0.7。標準自己回帰復号に対するprefill後のdecoding wall-clock speedupと、R再帰回あたり平均何トークン確定できたかを表す平均受理長γを測る。提案深度d1,d2を変え、第二提案の残差化、ゲート、DFlash比較もアブレーションする。","scope":"ループ型Transformer専用の自己投機方式であり、通常の非再帰Transformerへそのまま適用する手法ではない。速度向上は共有重みの再帰とメモリ帯域律速により複数枝バッチの追加費用が小さいことに依存する。prefill時間はspeedup指標から除外しdecoding区間を評価する。"},"reservation":{"claim_id":"claim-1b78e7fa82b82abe032f6a4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
