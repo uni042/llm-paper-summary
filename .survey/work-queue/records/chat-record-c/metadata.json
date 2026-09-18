@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84f02d757a3785e53894f6fb",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-84f02d757a3785e53894f6fb","job_id":"job-research-11c68d7adc12c492","data":{"canonical_id":"arXiv:2606.26120","arxiv_id":"2606.26120","doi":"10.48550/arXiv.2606.26120","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM","summary":"拡散型LLM（dLLM）の各denoising stepで全tokenを再計算する冗長性に対し、layerごとのtoken変化量に応じてcache更新budgetを動的配分するDCUと、prediction分布の集中度・時間的不安定性からunmask thresholdをtokenごとに調整するAPDを統合したtraining-free推論高速化。LLaDA/Dream系3モデルで精度をほぼ維持しつつ平均3倍級、最大4.48倍の高速化を報告する。","list_summary":"dLLMのlayer別cache更新量とtoken別unmask閾値を動的化し、学習なしで最大4.48倍の推論高速化を実現する。","authors":["Tianyi Wu","Xiaoxi Sun","Yanhua Jiao","Yulin Li","Yixin Chen","Yunhao Cao","Yiqi Hu","Zhuotao Tian"],"authors_affiliations":"Harbin Institute of Technology, Shenzhen; Huawei; Shenzhen Loop Area Institute","published":"2026-05-27","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1 (2026-05-27)","lineage":"diffusion LLM inference / feature cache / KV cache / parallel decoding","topics":["拡散型LLM","キャッシュ更新","並列デコード","推論高速化","training-free"],"importance":"dLLM cacheを固定周期・固定budgetからlayer/token dynamics適応へ進め、cache reuseとparallel decodingを同じdynamic inference制御として統合する。","implementation":"公式コード TianyiWu233/DYNAMIC-DLLM。training-freeで既存LLaDA/Dreamへ適用。","hardware_evaluation":"NVIDIA Pro6000 GPUでthroughputを評価。","quality_effect":"MMLU、ARC-C、GSM8K、GPQA、HumanEvalでaccuracyを併測し、baseline近傍を維持する設定を採用。","source":"https://arxiv.org/abs/2606.26120","sources":["https://arxiv.org/abs/2606.26120","https://arxiv.org/html/2606.26120"],"code":"https://github.com/TianyiWu233/DYNAMIC-DLLM","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":null},"reservation":{"claim_id":"claim-84f02d757a3785e53894f6fb","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
