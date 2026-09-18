@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0e066ec26fdaec0aa229eda2",
-  "job_id": "job-research-fb4ae3eceb455bfc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0e066ec26fdaec0aa229eda2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0e066ec26fdaec0aa229eda2","job_id":"job-research-fb4ae3eceb455bfc","data":{"canonical_id":"arXiv:2609.17943","arxiv_id":"2609.17943","doi":"10.48550/arXiv.2609.17943","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference","summary":"ASPIREは長文脈LLMの自己投機的復号で、バッチ全体をdraft/verifyへ同期させる従来方式を廃し、同一forward内で要求ごとにdraftとverifyを混在させる。要求別受理率とバッチ依存コストモデルから検証時点をオンライン選択し、draft中に1層だけfull attentionして疎KV文脈を更新する。3モデル・5 workloadで自己回帰比1.70〜4.58倍の復号throughputを達成した。","list_summary":"draft/verify混在forward・要求別オンラインscheduler・draft内KV refreshで長文脈自己投機復号を最大4.58倍高速化する。","authors":["Amir Ziashahabi","Hossein Entezari Zarch","Lei Gao","Murali Annavaram","Salman Avestimehr"],"authors_affiliations":"University of Southern California","published":"2026-09-16","publication":"Conference on Language Modeling (COLM) 2026","publication_type":"国際会議採択論文","publication_status":"Accepted at COLM 2026; arXiv v1 (2026-09-16)","lineage":"self-speculative decoding / long-context inference / sparse attention / continuous batching","topics":["自己投機的復号","長文脈推論","非同期バッチ","疎注意","KVキャッシュ"],"importance":"自己投機復号のdraft品質だけでなく、異質な要求を同一draft長へ同期させるバッチ境界自体をボトルネックとして扱い、target modelの共有MLP batchingを保ちながら要求ごとの投機軌跡を独立化する。","implementation":"PyTorch、torch.compile、CUDA graphs、FlashInfer JIT attention logitsを用いた研究実装。公式GitHubコードとプロジェクトページを公開。","hardware_evaluation":"主評価は1×NVIDIA H100 NVL 96GB。追加でtensor parallelism TP=2/4も評価。","quality_effect":"自己投機復号はproposalをtarget modelのfull-attention distributionで検証するため原理的にexact。LongBench-v1 1,460例でQwen3-8B greedy macro scoreはAR 51.92、ASPIRE 51.72（-0.20）。","source":"https://arxiv.org/abs/2609.17943","sources":["https://arxiv.org/abs/2609.17943","https://arxiv.org/pdf/2609.17943"],"code":"https://github.com/Amir-zsh/ASPIRE","project":"https://amir-zsh.github.io/ASPIRE","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"primary manuscript"},"reservation":{"claim_id":"claim-0e066ec26fdaec0aa229eda2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
