@@ -2,34 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-a785e8e9e0aaf4f974c5e86c",
-  "job_id": "job-research-60a904da0b8faa84",
+  "attempt_id": "attempt-b754dde5123b74a7ef8d3fca",
+  "job_id": "job-research-9d3c210288b42eb4",
   "data": {
-    "problem": "複数の大規模言語モデルを複数のGPUへ配置する推論基盤では、各問い合わせについて応答品質だけでなく、現在どのモデルとGPUの組が最短で処理できるかを判断する必要がある。従来のルータは品質を問い合わせごとに予測しても、推論費用はパラメータ数、演算量、単価、予測出力長などの静的な代理値で扱うことが多い。しかし実遅延はGPU種類だけでなく、実行中要求数、待機要求数、KVキャッシュ占有率、バッチ形成、直近の初回トークン待ち時間とトークン間遅延によって刻々と変わる。そのため小さいモデルでも混雑時には大きいモデルより遅くなり得る。静的費用はこの順位逆転を表せず、同じモデルへ要求が集中して待ち行列が増え、さらに遅延とサービス水準目標違反が増える一方、別GPUが遊休する。既存のCARROTやIRT系ルータも実行時の混雑状態を費用へ直接取り込まないため、この循環を十分解消できない。",
-    "novelty": "HW-Routerはモデル選択を、問い合わせとモデル属性だけでなく、現在のモデル・GPU実行状態まで含めたオンライン判断へ変更する。各サーバから実行中要求数、待機要求数、KVキャッシュ使用率、直近の初回トークン待ち時間とトークン間遅延を継続収集し、問い合わせ特徴とモデル・GPU識別情報を合わせて、組ごとの実遅延を予測する。品質予測器は既存方式と交換可能なまま費用予測器から分離し、品質と遅延の重み付き得点にサービス水準目標の上限制約を加えて選択する。これにより既存の品質ルータを作り直さず、動的なハードウェア費用だけを差し込める。",
-    "method_overview": "起動後、ハードウェア監視器が各vLLMサーバのPrometheus計測値を200〜300ミリ秒周期で取得し、モデル・GPU組ごとの待ち行列圧力、KVキャッシュ圧力、直近遅延をローカルへ保存する。問い合わせ到着時には遠隔計測を待たず、問い合わせ特徴、モデル・GPU識別子、保存済み実行状態を連結して軽量な二層全結合ニューラルネットへ入力する。予測器は初回トークン待ち時間、トークン間遅延、出力トークン数を別々に推定し、前者と後二者の積の和から総サービング時間を求める。並行して品質予測器が各モデルの期待品質を推定する。意思決定器は予測遅延が許容時間を超える候補を除外し、残りから品質と費用の重み付き得点が最大のモデル・GPU組へ要求を送る。あるGPUへ要求が集中すると次回監視で待機数や遅延が増え、その組の予測費用が上昇して後続要求が別GPUへ移るため、負の帰還として負荷分散が働く。モデル配置や推論器そのものは変更しない。",
+    "problem": "MoEのエキスパートオフロードは、GPUなど高速メモリに一部expertだけを保持し、miss時にCPU計算または低速メモリからloadすることで巨大MoEを限られたメモリで動かす。しかし既存研究はMixtral等の少数モデルで『近接tokenが同じexpertを使いやすい』ことを経験的に利用する一方、その局所性がモデル間でどの程度違い、どのmodel/training designがオフロード向きかを体系的に測る尺度がなかった。短い区間でroutingが頻繁に変わればcache missと転送が増えるため、system側のcache/prefetch最適化だけでは限界がある。",
+    "novelty": "局所ルーティング一貫性（local routing consistency）をモデル固有の性質として切り出し、パラメータなしでsegment routerがtoken-wise routingをどこまで再現できるかを測るSRPと、有限cache容量下で将来m tokenのactivation頻度を用いるoracle cacheのhit rateを測るSCHの二指標を導入する。20種の実MoEを同一corpusで比較し、さらに1.43B OLMoE-like toy modelでload-balance loss、shared expert、expert数・active数、dense layer挿入等を一要因ずつ変えて因果候補を検証する。",
+    "method_overview": "各入力について全MoE layerのexpert activationを収集する。SRPではsegment長mごとに、単一expertならsegment内で常時active/常時inactiveを予測するestimatorの最大F1、expert groupなら固定expert集合を選ぶsegment routerの最大F1を求め、過剰activationをsegment routing size ratioで補助評価する。SCHではcache ratio rho=cache size/active expertsを定義し、次m tokenでactivation頻度が最も低いexpertをevictするoracle segment cacheをsimulationしてhit rateを測る。実モデル間比較に加えtoy modelで設計要因を操作し、domain/vocabulary specializationとの相関、LRU/LFU等のcache hit rateとの相関も評価する。",
     "components": [
       {
-        "name": "ハードウェア監視器",
-        "description": "各vLLMサーバから実行中要求数、待機要求数、KVキャッシュ使用率、直近の初回トークン待ち時間とトークン間遅延を200〜300ミリ秒周期で収集する。値はモデル・GPU組ごとにローカル保存されるため、問い合わせ処理の重要経路で遠隔取得を待たない。待機数は混雑、KV使用率はバッチ余力、直近遅延は現在負荷下の実効性能を表し、静的なモデルサイズだけでは見えない性能順位の逆転を捉える。"
+        "name": "SRP",
+        "description": "segment単位で固定routingを行う仮想routerの最大F1により、特定cache方式に依存しない局所routing一貫性を測る。group評価では余分なexpert選択をsegment routing size ratioで監視する。"
       },
       {
-        "name": "動的費用予測器",
-        "description": "問い合わせ特徴、モデル・GPU識別子、監視状態を二層の全結合ニューラルネットへ入力し、初回トークン待ち時間、トークン間遅延、出力長を同時予測する。三つを組み合わせて要求完了までの時間を推定するため、入力処理、生成量、生成速度を分けて学習できる。学習時にはポアソン到着、短時間集中、持続過負荷を混ぜ、遊休状態から深い待ち行列まで経験させる。"
+        "name": "SCH",
+        "description": "有限expert cacheを仮定し、次m tokenのactivation頻度をoracle情報としてevictionするsegment cacheのhit rate。実offloadingのcache制約へSRPを接続する実用寄り指標。"
       },
       {
-        "name": "交換可能な品質予測器",
-        "description": "問い合わせに対する各モデルの期待応答品質を推定する部分で、ハードウェア状態とは意図的に分離される。IRT系、CARROT系など既存の品質予測を差し替えて使えるため、品質モデルを同じに保ったまま静的費用だけを動的費用へ置き換えられる。これにより改善が品質推定の変更ではなく、実行時混雑を認識した費用推定に由来するかを切り分けられる。"
+        "name": "20実モデル横断解析",
+        "description": "3B〜57Bの20 MoE LLMを、RedPajama 7 domainとLMArena/OpenMath/OpenCode/OpenScienceを含む22,528×512-token corpusで同一条件比較する。"
       },
       {
-        "name": "サービス水準目標対応の意思決定器",
-        "description": "各モデル・GPU組の品質と予測遅延を受け取り、品質重視度と費用重視度を調整する係数で得点化する。同時に予測遅延が許容時間を超える候補を除外する。あるGPUの待ち行列が増えると費用予測が悪化し、空いている側が選ばれやすくなるため、ルータ自体が負荷分散の帰還制御として機能する。"
+        "name": "制御toy model実験",
+        "description": "1.43B OLMoE-like modelでload balance、shared expert、expert combination space、dense/MoE layer配置を個別変更し、SRPとperplexityを比較する。"
+      },
+      {
+        "name": "specialization/cache接続解析",
+        "description": "domain specializationとvocabulary specializationをexpert単位でSRPと相関させ、さらにSCHとLRU/LFU/Fixed cache hit rate、clairvoyant optimumとの関係を調べる。"
       }
     ],
-    "system_design": "既存の複数モデル推論基盤とモデル配置を維持したまま、その上へ実行状態の保存、遅延予測、品質予測、制約付き配送という薄い制御層を追加する。単一モデル内部で要求順を決めるスケジューラとは競合せず、複数モデル・GPU間で交通量を移す上位制御として補完する。学習時には多様な到着パターンから遅延予測器を作り、オンライン時には監視値だけを更新する。配送結果が次の監視状態へ反映される閉ループによって、混雑の自己増幅を抑える。"
+    "system_design": "system実装のcache policyを直接提案するのではなく、model routing trace→SRP/SCH→cache適性という分析層を設ける。これによりoffloading system設計前にmodel selectionやcache容量を見積もり、逆にMoE training/architecture側でoffloading-friendlyなroutingを設計するための指標として使う。"
   },
   "reservation": {
-    "claim_id": "claim-a785e8e9e0aaf4f974c5e86c",
+    "claim_id": "claim-b754dde5123b74a7ef8d3fca",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

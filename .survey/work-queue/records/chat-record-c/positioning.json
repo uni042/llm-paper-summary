@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-386de3001d7d0291d3e77d66","job_id":"job-research-9d3c210288b42eb4","data":{"limitations":"SCHは将来m tokenのexpert activation頻度を知るoracle cacheであり、実装可能なpolicyそのものではない。LRU/LFUとの高いモデル間相関は示すが、実際のoffloading speedupはexpert weight size、PCIe/NVLink帯域、CPU計算、prefetch overlap、batchingやconcurrencyに依存する。20モデル比較は広い一方、routing trace中心でend-to-end serving latency/energyは測定していない。toy modelで個別要因を操作するが、実モデルではarchitecture・training data・load-balance objective等が交絡する。rho≈2は一般的設計指針で全モデルの厳密最適値ではない。","differences":"Fast MoE offloadingやLRU/prefetch系は特定モデルでcache policy・weight transferを最適化するのに対し、本研究は『そもそもどのMoEがcache/offloadしやすいか』をモデル横断で定量化する。Mixtralでの短期expert reuse観測を20モデル・長いsegmentへ一般化し、SRPでcache policy非依存のrouting locality、SCHで有限cacheとの接続を与える。OLMoE等のexpert specialization研究とは、specialization自体ではなくoffloading適性との関係を分析する点が異なる。","implementation_status":"ICLR 2026 conference paperとして公開。arXiv v4の完全HTMLが利用可能で、公式再現コード https://github.com/ljcleo/moe-lrc を公開している。","research_positioning":"MoE inferenceのexpert offloading / expert cache系統におけるmodel-side characterization研究。既存のexpert placement/cache/prefetch研究に対して、system policyを適用する前のmodel suitability判定とcache sizingの基準を提供する。特にSSD/CPU offload研究では、同じI/O帯域でもrouting localityの低いモデルほどweight movementが増えるため、SRP/SCHをoffload schedulerやexpert cache評価のモデル特性として併記する価値がある。"},"reservation":{"claim_id":"claim-386de3001d7d0291d3e77d66","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
+  "job_id": "job-research-11c68d7adc12c492",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-84f02d757a3785e53894f6fb",
+    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
