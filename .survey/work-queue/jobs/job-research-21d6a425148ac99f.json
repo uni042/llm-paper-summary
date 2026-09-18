@@ -8,14 +8,13 @@
   "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
   "paper_path": "papers/inference/99-other-inference-systems/2020-2026.00098-tetris-efficient-long-context-llm-serving-with-chunkwise-dynamic-sequence-parallelism.md",
   "selection_reason": "ISCA 2026の査読論文。長文脈servingでsequence parallelismをrequest単位ではなくtoken chunk単位に動的割当し、disaggregated clusterでstage-specific parallelismとresource fragmentationを同時に扱う。最大4.35x TTFT改善、median TBT最大40.1%削減、request capacity最大45%増を報告する強いserving候補。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-18T19:02:42+00:00",
-  "completed_at": "2026-09-18T20:04:22+00:00",
   "blocker": "Primary full text could not be safely obtained in this run after materially distinct official routes. IEEE Xplore/DOI exposes metadata, abstract, outline and only the beginning of the article before sign-in; the corresponding arXiv record 2511.06247 was identified as the same work/preprint, but arXiv HTML returned 404 and direct PDF retrieval failed; the first author's official publication page exposes publication metadata and abstract but no full text. No five-slot record was generated from partial text or secondary snippets. Retrieval evidence: IEEE Xplore DOI 10.1109/ISCA66397.2026.00098 (full article gated); arXiv:2511.06247 (HTML 404/direct PDF failed in runtime); Cong Li official publication page (metadata/abstract only).",
   "status_submission": ".survey/work-queue/submissions/research/attempt-36c57fcf48c2c1e3a7418b1f.json",
   "blocked_attempts": 1,
@@ -28,5 +27,5 @@
     }
   ],
   "last_blocked_at": "2026-09-18T20:04:22+00:00",
-  "retry_not_before": "2026-09-18T22:05:28+00:00"
+  "retry_queued_at": "2026-09-18T23:25:01+00:00"
 }

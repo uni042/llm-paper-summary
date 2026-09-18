@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **713本**。
+収録論文: **719本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**713本**。
+推論論文：**719本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -54,12 +54,13 @@
 | [05-kv-cache-offloading](05-kv-cache-offloading/README.md) | 7 |
 | [05-memory-architecture-near-data](05-memory-architecture-near-data/README.md) | 1 |
 | [05-moe](05-moe/README.md) | 2 |
-| [05-moe-expert-offload](05-moe-expert-offload/README.md) | 3 |
+| [05-moe-expert-offload](05-moe-expert-offload/README.md) | 4 |
 | [05-offload-hierarchical-memory](05-offload-hierarchical-memory/README.md) | 2 |
+| [05-pim-near-memory](05-pim-near-memory/README.md) | 1 |
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 13 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 14 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
@@ -71,7 +72,7 @@
 | [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 18 |
 | [08-quantization-kernels](08-quantization-kernels/README.md) | 1 |
-| [08-speculative-decoding](08-speculative-decoding/README.md) | 1 |
+| [08-speculative-decoding](08-speculative-decoding/README.md) | 2 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 16 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
@@ -82,5 +83,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 67 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 69 |
 <!-- survey:auto:end -->
