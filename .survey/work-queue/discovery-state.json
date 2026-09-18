@@ -1,56 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T13:00:08+00:00",
+  "updated_at": "2026-09-18T13:00:44+00:00",
   "last_run_key": "2026-09-18T21:00:00+09:00",
-  "last_round": "specialist-cxl-kv-3",
+  "last_round": "specialist-network-kv-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 8,
-  "last_empty_round_reason": "強いCXL/KV system候補はすべて既収録だった。",
+  "consecutive_empty_rounds": 10,
+  "last_empty_round_reason": "network/KV transferの上位system候補は既収録だった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T05:00:25+09:00",
-      "round": "specialist-moe-expert-cache-5",
-      "axis": "MoE expert cache・offload・OS tiering",
-      "query_summary": "MoEのexpert cache、offload、prefetch、near-data実行、OSページキャッシュ管理を横断して強い既知候補を再点検した。Cache-Aware Joint Router Adaptation、DynaNDE、Expert Pruning in Over-Dispersed MoE、Kernel-Managed Expert Cache、SPICE、MoElessはいずれも最新正本の既存jobまたは重複記録で収録済みと確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 6,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.04895",
-        "arXiv:2609.00407",
-        "arXiv:2609.04453",
-        "arXiv:2608.12103",
-        "arXiv:2608.21240",
-        "arXiv:2603.06350"
-      ],
-      "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する",
-      "source_submission": "work-queue/submissions/20260913T0521JST-discovery-specialist-moe-expert-cache.json"
-    },
-    {
-      "run_key": "2026-09-13T05:00:25+09:00",
-      "round": "specialist-gpu-runtime-6",
-      "axis": "GPU runtime・CUDA Graph・persistent kernel・決定論的推論",
-      "query_summary": "JIT/CUDA Graph、persistent GPU scheduler、page-aware decode scheduling、決定論的runtimeを横断した。Hybrid JIT-CUDA Graph、Blink、PersistentKVは最新正本で既収録。CoRunは一次資料を軽量評価し、最新HEADの決定論的research job IDとrepo検索で未登録を確認したため投入した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.23467",
-        "arXiv:2604.07609",
-        "arXiv:2606.26666"
-      ],
-      "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する",
-      "source_submission": "work-queue/submissions/20260913T0524JST-discovery-specialist-gpu-runtime.json"
-    },
     {
       "run_key": "2026-09-13T05:28:14+09:00",
       "round": "specialist-recent-kv-1",
@@ -7079,6 +7038,49 @@
       ],
       "next_axis_hint": "MoE expert offload・edge distributed inferenceへ切り替える",
       "source_submission": "work-queue/submissions/20260918T2205JST-discovery-specialist-cxl-kv-3.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-moe-edge-4",
+      "axis": "MoE expert offload・cacheless edge-distributed inference",
+      "query_summary": "expert cache、on-demand loading、distributed edge MoEを走査。OD-MoEを含む主要候補は最新identity snapshotで既収録。SSD-LLaMAも2609 shardで既収録を再確認した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.03927",
+        "arXiv:2609.18110"
+      ],
+      "next_axis_hint": "RDMA・KV transfer・network-aware servingへ切り替える",
+      "source_submission": "work-queue/submissions/20260918T2206JST-discovery-specialist-moe-edge-4.json"
+    },
+    {
+      "run_key": "2026-09-18T21:00:00+09:00",
+      "round": "specialist-network-kv-5",
+      "axis": "RDMA・KV transfer・disaggregated serving networking",
+      "query_summary": "selective KV transfer、block-free RDMA transfer、network-aware disaggregated servingを走査。SmartGen、FlowKV、P/D-Serve等の強候補はidentity snapshotで既収録を確認した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2504.03775",
+        "arXiv:2408.08147"
+      ],
+      "next_axis_hint": "agentic serving・tool-call KV lifecycleへ切り替える",
+      "source_submission": "work-queue/submissions/20260918T2207JST-discovery-specialist-network-kv-5.json"
     }
   ],
   "axes": {
@@ -12377,6 +12379,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "MoE expert offload・edge distributed inferenceへ切り替える"
+    },
+    "MoE expert offload・cacheless edge-distributed inference": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "RDMA・KV transfer・network-aware servingへ切り替える"
+    },
+    "RDMA・KV transfer・disaggregated serving networking": {
+      "last_run_key": "2026-09-18T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "agentic serving・tool-call KV lifecycleへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
