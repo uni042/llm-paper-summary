@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T01:10:23.382429+00:00",
+  "updated_at": "2026-09-18T01:44:09.925174+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T01:10:23.382429+00:00",
+      "last_recorded_at": "2026-09-18T01:44:09.925174+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 237,
+        "research_completed": 238,
         "audit_completed": 0,
         "discovery_completed": 112,
         "blocked": 19,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35190844394:1",
-          "recorded_at": "2026-09-17T06:40:22.056256+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35190844394",
-            "run_attempt": "1",
-            "source_sha": "d4297b6451b53d96e11e75df16fbb3a777ff191a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35191166045:1",
           "recorded_at": "2026-09-17T06:44:37.715990+00:00",
@@ -19595,6 +19581,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35296500356:1",
+          "recorded_at": "2026-09-18T01:44:09.925174+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35296500356",
+            "run_attempt": "1",
+            "source_sha": "24c526df9b5b9bcba87988fee94e571cdbd7b96f"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -22542,6 +22542,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-6c1a5d06d3b875ce",
+          "type": "research",
+          "canonical_id": "arXiv:2609.18849",
+          "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24295,7 +24303,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 701,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
