@@ -27,5 +27,11 @@
     }
   ],
   "last_blocked_at": "2026-09-18T12:05:05+00:00",
-  "retry_queued_at": "2026-09-18T15:40:04+00:00"
+  "retry_queued_at": "2026-09-18T15:40:04+00:00",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 34.5% < 70% (Japanese=2032, Latin=3862)",
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 34.5% < 70% (Japanese=2032, Latin=3862)"
+  ],
+  "last_validation_failed_at": "2026-09-18T16:07:12+00:00"
 }

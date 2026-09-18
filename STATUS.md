@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:06:39 JST**
+> 自動生成: **2026-09-19 01:07:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **37** |
-| 最終検証済みResearch収録 | **09-19 01:05:05 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-19 01:05:05 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **6** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **27** | **10** | **9** | **1** | **1** | **0** | **2** |
+| 合計 | **26** | **10** | **9** | **1** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-8bc32c98f4efa2a4da6345d3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8bc32c98f4efa2a4da6345d3.json`
   - paper: `papers/inference/kv-cache/2608.19662.md`
-- **09-18 19:06:47 JST** [research] `arXiv:2406.19707` — InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management
-  - job: `.survey/work-queue/jobs/job-research-2afdd6d968c4500a.json`
-  - result: `.survey/work-queue/results/research/attempt-7ff67242dae88bb287c5c390.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7ff67242dae88bb287c5c390.json`
-  - paper: `papers/inference/06-kv-cache-memory/2024-2406.19707-infinigen-dynamic-kv-cache-management.md`
 
 ### Audit
 
@@ -192,9 +187,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:04:52 JST** / heartbeat: **—** / lease expiry: **09-19 02:34:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-37f936e1437c5b29.json`
+- `arXiv:2608.21719` — PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:06:45 JST** / heartbeat: **—** / lease expiry: **09-19 02:36:45 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f97acaf8df0df8b2.json`
 
 #### Audit
 
