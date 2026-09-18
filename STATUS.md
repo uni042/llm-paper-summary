@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:45:00 JST**
+> 自動生成: **2026-09-19 03:45:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
+| 収録候補論文 | **49** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-19 03:36:57 JST（8分前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-19 03:45:13 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **3** | **1** | **2** | **1** | **0** | — |
+| Research | **13** | **3** | **2** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **28** | **10** | **8** | **2** | **1** | **0** | **5** |
+| 合計 | **29** | **10** | **9** | **1** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 03:45:13 JST** [research] `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure
+  - job: `.survey/work-queue/jobs/job-research-ebde0cc040167968.json`
+  - result: `.survey/work-queue/results/research/attempt-b9d676ed397522f747b185c2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b9d676ed397522f747b185c2.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md`
 - **09-19 03:36:57 JST** [research] `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
   - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
   - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-abc07453f6c8270e1217af7d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-abc07453f6c8270e1217af7d.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.21719-powerslider-phase-asymmetry-demand-response.md`
-- **09-19 01:15:54 JST** [research] `arXiv:2609.06498` — DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-37f936e1437c5b29.json`
-  - result: `.survey/work-queue/results/research/attempt-f4f02ec489067157d3a72d32.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f4f02ec489067157d3a72d32.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md`
 
 ### Audit
 
@@ -151,13 +151,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
 - **成功** `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
   - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
   - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b9d676ed397522f747b185c2.json` (job `job-research-ebde0cc040167968`)
+- **成功** `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure
+  - job: `.survey/work-queue/jobs/job-research-ebde0cc040167968.json`
+  - result: `.survey/work-queue/results/research/attempt-b9d676ed397522f747b185c2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b9d676ed397522f747b185c2.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-de75a2b1f21d80bfa022a7ba.json` (job `job-research-469eef375f5f828e`)
 
 #### Audit (:30)
@@ -204,10 +208,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 03:44:31 JST** / heartbeat: **—** / lease expiry: **09-19 05:14:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ebde0cc040167968.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -227,7 +229,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,7 +249,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **730** |
+| inference/training/survey配下の論文Markdown実体 | **731** |
 
 ### immutable submissionの未照合
 
@@ -255,8 +257,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **550** |
-| └ Research | **421** |
+| 成功result未照合のimmutable submission | **549** |
+| └ Research | **420** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

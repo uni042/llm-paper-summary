@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:41:00.547103+00:00",
+  "updated_at": "2026-09-18T18:45:17.201979+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:41:00.547103+00:00",
+      "last_recorded_at": "2026-09-18T18:45:17.201979+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 266,
+        "research_completed": 267,
         "audit_completed": 0,
         "discovery_completed": 147,
         "blocked": 29,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35292721304:1",
-          "recorded_at": "2026-09-18T00:49:18.883142+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35292721304",
-            "run_attempt": "1",
-            "source_sha": "9d4033ffb51daefd508af72e2f6fda100ddcfb51"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35292948436:1",
           "recorded_at": "2026-09-18T00:52:43.714202+00:00",
@@ -19600,6 +19586,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35381988068:1",
+          "recorded_at": "2026-09-18T18:45:17.201979+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35381988068",
+            "run_attempt": "1",
+            "source_sha": "535b8c1aa1b2f0c697b80fb389bbb69a670b561f"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23139,6 +23139,14 @@
           "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-ebde0cc040167968",
+          "type": "research",
+          "canonical_id": "arXiv:2602.23036",
+          "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25320,7 +25328,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
