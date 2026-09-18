@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 54,
+      "ready": 53,
       "completed": 530,
       "superseded": 44,
-      "blocked": 3,
+      "blocked": 4,
       "deferred": 3,
       "blocked_permanent": 3,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 54,
+    "ready_research_audit": 53,
     "actively_claimed": 0,
-    "claimable": 54
+    "claimable": 53
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ebde0cc040167968",
+      "job_id": "job-research-044cfc2969a67347",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2602.23036",
-      "title": "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
-      "source_url": "https://arxiv.org/abs/2602.23036",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md",
+      "canonical_id": "arXiv:2502.05202",
+      "title": "Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies",
+      "source_url": "https://arxiv.org/abs/2502.05202",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T14:37:05+00:00"
+  "generated_at": "2026-09-18T15:31:08+00:00"
 }
