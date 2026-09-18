@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-292079eab3cc522a1a9de5d7",
   "job_id": "job-research-7fcd5e4f3604dab7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-292079eab3cc522a1a9de5d7",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "TokenSim上の8 GPU構成。H100はSSD基準96GB HBM/3.0TB/s、B200は192GB HBM/8.0TB/s。HBF-1は各GPUの近接層をGDDR7へ変更し、H100で48GB/1.344TB/sと共有24TB HBF、B200で96GB/2.688TB/sと共有48TB HBF。HBF-2はH100で48GB HBM3e/1.5TB/sと共有12TB HBF、B200で96GB HBM3e/4.0TB/sと共有24TB HBF。SSDはKIOXIA CM7-V 3.2TB、14.0/6.75GB/s逐次読書性能を用いる。",
+    "software": "拡張TokenSimを使用し、連続バッチ、ページ化KV、入場制御、プリエンプション、再計算に加え、Mooncake型16トークンハッシュ検索、KV保存・復元、SSD/HBF転送、層別読書計数、コネクタ待ち、SLO出力を実装。拡張部分はブロック／バイト保存則、保存復元順序、決定的再生、層別計数で回帰確認する。熱解析は3D-ICE。",
+    "methodology": "Aliyun Qwen-Bailian由来の完全な2時間本番トレース4本を使用する。traceAは43,058要求、traceBは172,800要求、coderは43,011要求、thinkingは10,812要求で、要求順・入出力長・セッション・16トークンKV識別子を保持する。モデルはQwen3-4B/32B、DeepSeek-V3.2-685B、GLM-5.2-753B、Kimi-K2.7-Code-1.1T。テンソル並列8、パイプライン／データ並列1、MoEは専門家並列を使用し、到着時刻だけを伸縮して0.05〜32 QPSを掃引する。指標はTTFT、TBT、エンドツーエンド遅延、要求／トークンスループット、待ち時間、KVヒット、読書バイト、読書比、再計算、SLO有効スループット。HBF媒体遅延は読取／書込8/80〜30/300マイクロ秒を掃引する。熱モデルは16層128-layer TLC、80度上限、耐久性は2時間書込量の日次換算で比較する。",
+    "scope": "HBFロードマップの2028年HBF-1と2030年HBF-2を、既存SSD型KVプールへそのまま適用した場合のモデル化研究であり、実HBF製品上の実測ではない。完全構成比較は近接層容量と帯域を同時に変えるため両要因を個別分離しない一方、媒体遅延掃引で媒体単体感度を別途測る。熱・耐久結果も明記した温度方針とTLC書込予算に基づくモデル値である。"
+  },
+  "reservation": {"claim_id": "claim-292079eab3cc522a1a9de5d7", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
