@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-343da371de8ebc332895bc1b",
-  "job_id": "job-research-659c7469c0065c08",
-  "data": {},
+  "attempt_id": "attempt-3eb6a05e4e42907dd24b50f1",
+  "job_id": "job-research-a2e0c7f004aa0b3e",
+  "data": {
+    "hardware": "カーネル単体はNVIDIA A100 80GBとH100で評価し、オンライン配信はA100一基でQwen3-8BとLlama-3-8Bを実行する。分散拡張ではQwen2.5-72B-InstructをA100四基でテンソル並列二・パイプライン並列二、混合専門家拡張ではQwen3-30B-A3BをA100一基で評価する。成果物再現環境はx86-64 Linux、主記憶六十四ギガバイト以上、空きディスク二百ギガバイト、A100 80GBを要求する。",
+    "software": "CUDA 12.4、PyTorch 2.7.0、vLLM 0.9.0を使用する。注意カーネル本体は約三千行のCutlass/CuTeとC++、非同期詰込み器と呼出し包装もC++、vLLM統合は約千二百行のPythonで実装する。大域メモリから共有メモリへの転送は非同期コピー命令と二重緩衝を使う。公式GitHub、MITライセンスのコード、Zenodo保存物、事前構築済みDocker像を公開する。",
+    "methodology": "カーネル評価では接頭辞木の各階層節数と鍵値長を人工的に指定した復号バッチを作り、共有接頭辞構造、バッチ数、注意頭構成を変える。注意頭・鍵値頭の組は六十四対八、三十二対八、十六対八、三十二対三十二、頭次元は百二十八、半精度を使う。各構成を二十回実行し平均注意遅延を報告する。比較対象はFlashAttention 2.5.9、FlashInfer 0.2.5、FastTree、RelayAttention、著者拡張RelayAttention++、DeFT、Cascade Inferenceである。オンライン評価はvLLM上で二つの実追跡を用いる。toolagentは道具・エージェント要求で全体キャッシュ命中率五九％、conversationは共通システム指示とBurstGPT由来要求を組み合わせ、言語・国欄を変えて三階層接頭辞を作る。費用制約から各追跡の先頭三十分を使い、要求完了時間、初回トークン時間、出力一トークン当たり時間を測る。削除実験では詰込み利益モデル、複数タイル、複数実行流を個別に無効化して寄与を分離する。",
+    "scope": "論文は復号注意カーネルの大域メモリ帯域とGPU資源利用を対象とし、モデル精度を近似する方式ではない。共有接頭辞が多いほど利益が大きい一方、共有なし条件も測り、複数タイルと複数実行流だけで平均一・六％の遅延削減が残ることを確認する。vLLMのページ化鍵値管理やCPU・NVMeへの退避とは直交し、必要鍵値がGPUへ存在した後の注意実行を最適化する。"
+  },
   "reservation": {
-    "claim_id": "claim-343da371de8ebc332895bc1b",
+    "claim_id": "claim-3eb6a05e4e42907dd24b50f1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
