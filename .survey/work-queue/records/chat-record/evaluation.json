@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-743169f37b3c8abb5e5c9007","job_id":"job-research-f97acaf8df0df8b2","data":{"hardware":"実機はDGX-A100とGH200サーバを用い、八GPU以下のノードで測定する。64〜512 GPU規模は実機測定値で拡張した離散事象シミュレータを使用する。A100は公称1410MHz、最低210MHz。100Gbps InfiniBand上のRDMAによるKV転送は一リンク11.2GB/s、TCPは6.8GB/s。","software":"SGLangとMooncake系KV転送機構を基盤に、三段階分離、電力最適化器、配置制御器、要求振分け制御器を実装する。GPU周波数固定と電力上限はNVMLで制御する。","methodology":"推論型負荷にはMagpie-ReasoningとS1K、通常負荷にはAzureのLLM推論コード・対話トレースを使い、突発性を持つガンマ到着過程も生成する。既定の要求構成は厳格等級30%、柔軟等級30%、最善努力等級40%で、柔軟等級は基準遅延の三倍までをイベント時間の30%以内で許す。静的電力削減率0〜60%と24時間の動的需要応答トレースを評価する。指標は等級別のSLO達成要求率、回答開始までと完了までの90・99百分位遅延、最善努力処理量。比較対象は一律周波数方式、POLCA、SplitWise、DynamoLLM拡張、SLOs-Serve拡張。シミュレータは未使用測定点に対して構成要素誤差4%未満、電力近似の決定係数0.95超、八GPUトレース再生で達成要求率差4%未満、90百分位完了遅延差9%未満を確認する。","scope":"八GPU以下は実機、64〜512 GPU規模は検証済みシミュレーションを含む。推論型と通常型の混在、静的・動的電力上限、サービス等級構成の時間変動を評価する。電力モデルはGPU機種ごとに再適合が必要。"},"reservation":{"claim_id":"claim-743169f37b3c8abb5e5c9007","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f0c1f66b2996525adb35ad1f",
+  "job_id": "job-research-37f936e1437c5b29",
+  "data": {
+    "hardware": "単一ノードのNVIDIA A800 GPU八基で訓練と評価を行う。",
+    "software": "対象モデルはQwen3の17億、40億、80億パラメータ版。軽量提案器は五層のDFlashで、並列提案幅は十六トークン。高並列の提供性能はSGLang上で測定する。",
+    "methodology": "各対象モデル向け提案器をShareGPTの八万標本から新規訓練する。自己条件付き複数回訓練は、初回の通常マスク予測後に二回の棄却条件付き予測を展開する。評価課題は数学推論のGSM8KとMATH-500、コード生成のHumanEvalとMBPP、対話のMT-BenchとAlpaca。低並列では貪欲復号と温度一の標本化復号について平均受理長をEAGLE-3およびDFlashと比較する。高並列ではQwen3の40億・80億版でGSM8KとHumanEvalを使い、同時要求数一、二、四、八、十六、三十二の提供スループットを自己回帰基準、EAGLE-3、DFlash、DFlowで比較する。さらに情報引継ぎの除去実験、実行時追加遅延、Dominoとの併用を調べる。",
+    "scope": "対象モデルはQwen3三規模に限定され、Llama系や混合専門家モデルへの一般化は直接実証していない。高並列評価は単一ノードで最大三十二同時要求までであり、複数ノード分散提供は対象外。"
+  },
+  "reservation": {
+    "claim_id": "claim-f0c1f66b2996525adb35ad1f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
