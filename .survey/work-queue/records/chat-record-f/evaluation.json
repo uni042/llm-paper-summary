@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2f23b56c3d95acb690d3be83",
-  "job_id": "job-research-133abb5ee0382900",
-  "data": {
-    "hardware": "National Supercomputing Centre Singaporeの単一ノードを使用し、NVIDIA A100 40GB GPU×4、AMD EPYC 7713 64コアCPU、DDR4 440GBを搭載する。GPU間はNVLink、CPU-GPU間はPCIe 4.0で接続される。単一GPUと4GPUの両構成を評価した。",
-    "software": "AutoHeteはPyTorch上のプロトタイプで、torch.fxによる計算グラフ取得、カスタムtorch.autograd.Function、CUDAストリームとtorch.cuda.Eventを利用する。比較対象はZeRO-Offload、PatrickStar、StrongHoldで、4GPU時はZeRO-3を利用する。",
-    "methodology": "GPT型モデルを2B〜22Bまで変化させ、隠れ次元2048〜8192、20〜42層、系列長1024で評価する。標準グローバルバッチサイズは8。比較対象については完全な活性値チェックポイントを有効・無効の双方で試して最良性能を採用する。主指標は学習スループットで、単一GPU・4GPUのモデル規模別比較に加え、6B・10Bでバッチサイズ、4B・6BでGPUメモリ予算を変える。AutoHeteから優先度スケジューラを外した構成も測り、反復間重畳の寄与を分離する。",
-    "scope": "全結果は実機測定でありシミュレーションだけの性能値ではない。ただし実機構成はA100 40GB、PCIe 4.0、EPYC 7713を中心とする1種類のノードで、密なGPT型Transformerが主対象である。異なるPCIe帯域、CPU性能、H100、MoE、長系列などでは再プロファイル後の配置や改善率が変わり得る。モデル品質よりシステム性能・メモリ容量を主に評価している。",
-    "baselines": ["ZeRO-Offload", "PatrickStar", "StrongHold", "優先度スケジューラなしAutoHete"],
-    "metrics": ["学習スループット（TFLOPS）", "メモリ制約下で学習可能なモデル規模", "比較対象に対する高速化倍率", "バッチサイズ感度", "GPUメモリ予算感度", "優先度スケジューラのアブレーション"]
-  },
-  "reservation": {"claim_id": "claim-2f23b56c3d95acb690d3be83", "worker_id": "scheduled-chat-paper-20260917T1728JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d5d1d97c5ccead2488ec70ab",
+  "job_id": "job-research-03744b5cb143a715",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d5d1d97c5ccead2488ec70ab",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

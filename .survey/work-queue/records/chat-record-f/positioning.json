@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2f23b56c3d95acb690d3be83",
-  "job_id": "job-research-133abb5ee0382900",
-  "data": {
-    "limitations": [
-      "評価ハードウェアはA100 40GB、PCIe 4.0、AMD EPYC 7713を中心とする1種類のノードであり、CPUが遅い構成やPCIe帯域が狭い構成では最適配置と得られる重畳率が変わる。",
-      "計画単位をTransformerブロックへ粗粒度化しているため、ブロック内部でメモリ量や計算費用が大きく異なる非一様モデルでは細粒度の最適解を逃す可能性がある。",
-      "整数線形計画は事前プロファイル値を前提とするため、実行中の帯域競合、CPU負荷変動、複数ジョブ共有などで費用が変動する環境では計画と実際の最良配置がずれ得る。",
-      "主評価は密なGPT型Transformerで、MoE、長系列、異なるオプティマイザ、H100等の新しいハードウェアへの評価は示されていない。",
-      "PyTorchプロトタイプの実装詳細は説明されるが、arXiv本文とメタデータから公式公開コードURLを確認できず、第三者による再現の容易さには制約がある。"
-    ],
-    "differences": [
-      "ZeRO-Offloadは勾配とオプティマイザ状態を一律CPUへ置くが、AutoHeteはGPU/CPU容量と実測費用から必要部分だけCPUへ置き、FP16パラメータ退避と活性値再計算も同時に選ぶ。",
-      "PatrickStarは実行時の動的メモリ配置を中心とするのに対し、AutoHeteはGPUピークメモリと非同期実行時間を事前プロファイルし、3種類の戦略を整数線形計画で共同決定する。",
-      "StrongHoldは単一反復内の先読み重畳を行うが、AutoHeteは勾配退避とCPU更新の順番を先頭ブロック優先へ変え、次反復のパラメータ先読みと順伝播を前反復へ重ねる。",
-      "活性値再計算専用方式と異なり、活性値だけでなくパラメータ・勾配・オプティマイザ状態を含むCPU/GPU配置を同時に扱い、再計算費用と転送・CPU更新費用を比較して選択する。"
-    ],
-    "implementation_status": "論文はPyTorch上で動作するAutoHeteプロトタイプを実装し、実機A100環境で評価している。torch.fx、カスタム自動微分処理、CUDAストリーム・イベント、GPUメモリ事前割当てまで実装内容は説明されるが、arXiv本文およびメタデータから公式公開コードURLは確認できない。",
-    "research_positioning": "CPU/SSDオフロードと階層メモリの研究系統に近いが、対象は推論ではなく学習である。『どの状態を高速メモリへ残し、どれを低速・大容量側へ逃がすかを費用モデルで決め、避けられない転送を計算へ重ねる』という設計原理は推論時の重み・KVキャッシュ・エキスパート配置にも共通する。一方でAutoHeteの階層はCPU DRAMまででSSD/NVMeを直接使わず、順伝播・逆伝播・オプティマイザ更新という規則的な学習反復を利用するため、オンライン推論の不規則な要求到着へそのまま適用できるわけではない。重要な示唆は、異種混在メモリの性能を『何を退避するか』だけでなく『次に必要な状態をどの順で更新・復帰させるか』まで含めて最適化すべきという点にある。"
-  },
-  "reservation": {"claim_id": "claim-2f23b56c3d95acb690d3be83", "worker_id": "scheduled-chat-paper-20260917T1728JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d5d1d97c5ccead2488ec70ab",
+  "job_id": "job-research-03744b5cb143a715",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d5d1d97c5ccead2488ec70ab",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2f23b56c3d95acb690d3be83",
-  "job_id": "job-research-133abb5ee0382900",
-  "data": {
-    "overview": "AutoHeteは単一GPUと4GPUの双方で既存の異種混在LLM学習方式を上回った。単一GPUでは、GPUメモリに余裕がある小〜中規模モデルで不要なCPU退避を避け、大規模モデルでは活性値再計算・パラメータ退避・オプティマイザ退避を組み合わせて学習可能規模を維持する。4GPUでは分散通信を含んでも転送と計算の重畳が機能する。特に優先度スケジューラは、CPU更新が遅れて次反復を止める大規模条件ほど効果が増え、配置最適化だけでは残る反復境界の空白を削減する。",
-    "key_results": [
-      {"metric": "単一GPU学習スループット", "value": "平均1.85倍、最大2.08倍", "baseline": "ZeRO-Offload", "condition": "A100 40GB単一GPU、2B〜評価可能最大規模のGPT型モデル", "interpretation": "ZeRO-Offloadがオプティマイザ状態を一律CPUへ置くのに対し、AutoHeteはGPUメモリへ残せる状態を選んで転送とCPU更新を減らす。ZeRO-Offloadは12B超でGPUメモリ不足となる。"},
-      {"metric": "単一GPU学習スループット", "value": "平均1.63倍、最大1.91倍", "baseline": "PatrickStar", "condition": "A100 40GB単一GPU、モデル規模別比較", "interpretation": "同期的な動的配置より、非同期処理費用を含む共同費用モデルとストリーム重畳が有効である。4Bでは21ブロック中13ブロック分だけオプティマイザ状態をCPUへ置く。"},
-      {"metric": "単一GPU学習スループット", "value": "平均1.32倍、最大1.41倍", "baseline": "StrongHold", "condition": "A100 40GB単一GPU、モデル規模別比較", "interpretation": "StrongHoldの反復内先読みだけでなく、反復境界をまたいだCPU更新・次反復先読みの重畳が追加の空白時間を削る。"},
-      {"metric": "4GPU学習スループット", "value": "ZeRO-Offload比平均2.23倍・最大2.67倍、PatrickStar比平均1.65倍・最大1.79倍、StrongHold比平均1.44倍・最大1.52倍", "baseline": "ZeRO-Offload、PatrickStar、StrongHold", "condition": "A100 40GB×4、NVLink、ZeRO-3、最大22B級GPT型モデル", "interpretation": "GPU間通信が加わっても重畳が維持される。ZeRO-Offloadは22BでCPUメモリ不足に達し、集約GPUメモリへ一部状態を残せる方式との差が広がる。"},
-      {"metric": "優先度スケジューラの追加効果", "value": "単一GPU平均1.16倍・最大1.24倍、4GPU平均1.21倍・最大1.30倍", "baseline": "優先度スケジューラなしAutoHete", "condition": "同一配置最適化のアブレーション", "interpretation": "退避するオプティマイザが少ない2B・4Bでは差が小さいが、大規模化でCPU処理がGPUより遅れるほど次反復を早期開始する効果が増える。"},
-      {"metric": "低GPUメモリ予算での学習スループット", "value": "12GB使用時でも比較3方式の40GB予算時を上回る", "baseline": "40GB予算のStrongHold、PatrickStar、ZeRO-Offload", "condition": "4B・6BモデルのGPUメモリ予算変更", "interpretation": "メモリ容量を単に使い切るのではなく、再計算と退避の組合せを費用に応じて選ぶことで、少ないGPUメモリでも高い実効性能を維持できる。"}
-    ],
-    "negative_results": "バッチサイズを増やす初期領域では計算量が増えて再計算を通信・CPU更新へ隠しやすくなりスループットが伸びるが、さらに増やすと活性値メモリが増え、より多くのモデル状態をCPUへ退避する必要が生じて通信とCPU処理が増えるため伸びが鈍化する。優先度スケジューラも2B・4BのようにCPU処理が既に逆伝播へ隠れる条件では改善が小さい。ZeRO-Offloadは6Bでバッチ24超、10Bでバッチ12超でGPUメモリ不足となり、GPUメモリ予算では4Bが16GB未満、6Bが24GB未満で実行不能となる。",
-    "interpretation": "改善の中心は、GPUメモリが余る条件では不要なCPU退避を減らし、CPUへ退避せざるを得ない条件では転送・CPU更新をGPU計算へ隠すことの両立にある。小規模モデルでは静的な全量オフロードの無駄を除ける。大規模モデルでは退避量自体は増えるが、先頭ブロックのCPU更新を優先して次反復を早く始めることで、反復内重畳だけでは残る待ちを削る。したがって改善率は単純にモデルが大きいほど一定に増えるのではなく、GPUメモリ余裕、CPU処理時間、通信量、計算時間の相対関係で決まる。",
-    "quality_impact": "近似、量子化、枝刈りを用いず、モデル定義と学習演算のデータ依存関係を維持したまま配置・再計算・実行順を変える方式であるため、性能改善は品質低下との交換を意図していない。論文は収束を変えないシステム設計として説明するが、主要実験はスループットとメモリ効率であり、最終モデル品質の大規模比較は中心ではない。"
-  },
-  "reservation": {"claim_id": "claim-2f23b56c3d95acb690d3be83", "worker_id": "scheduled-chat-paper-20260917T1728JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d5d1d97c5ccead2488ec70ab",
+  "job_id": "job-research-03744b5cb143a715",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d5d1d97c5ccead2488ec70ab",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
