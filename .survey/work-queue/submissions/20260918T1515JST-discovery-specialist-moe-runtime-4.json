@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.22541",
+      "title": "ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill",
+      "source_url": "https://arxiv.org/abs/2606.22541",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md",
+      "priority": 92,
+      "reason": "MoE prefillでattention DPとexpert EP間のglobal synchronization barrierがarrival/sequence varianceでstallを生む問題に対し、attention/MoEを分離してfully asynchronous pipelineと専用communication primitivesを導入する。CloudMatrix384 super-nodeでSLO-compliant prefill throughputを90%改善しており、MoE serving・通信・scheduling重点に直接適合する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.24434",
+      "title": "DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.24434",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.24434-draftexpert-expansion-aware-offloaded-moe.md",
+      "priority": 86,
+      "reason": "CPU-GPU/Flash-NPUへexpertをoffloadするMoE推論でself-speculative decodingとexpert loadingをco-designし、固定footprint drafter、expansion-aware truncation、target-expert prefetchを組み合わせる。DeepSeek-V2-Lite/Moonlight-16B-A3Bで平均1.45x decode throughput、86–88% prefetch hitを報告し、expert offload/prefetch重点に合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2504.02263",
+      "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+      "source_url": "https://arxiv.org/abs/2504.02263",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "priority": 90,
+      "reason": "attentionとMoE FFNをlayer内で分離し、独立scaling・異種deployment・ping-pong pipeline parallelismとM2N communication libraryで通信を隠蔽する大規模MoE serving system。最大1.90x per-GPU throughputを報告しており、expert parallelism・disaggregation・communicationの基幹研究として重要。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T15:00:00+09:00",
+    "round": "specialist-moe-runtime-4",
+    "axis": "MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism",
+    "query_summary": "KV transfer軸からMoE runtime/network topologyへ移り、検索結果を一括取得してASAP、DraftExpert、MegaScale-Inferを抽出した。各canonical IDをGitHub正本で早期照合し未収録を確認後、一次arXiv abstractのsystem mechanismと定量評価のみで軽量評価して3件を採用した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2407.00023", "arXiv:2402.01869"],
+    "next_axis_hint": "次はGPU kernel/runtime、continuous batching、compiler/graph captureの未収録重要研究へ移る",
+    "empty_round_reason": null
+  }
+}
