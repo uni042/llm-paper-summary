@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-71b258cd2299dbe5dbd5b763",
+  "job_id": "job-research-f97acaf8df0df8b2",
+  "claim_id": "claim-71b258cd2299dbe5dbd5b763",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.21719-powerslider-phase-asymmetry-demand-response.md",
+  "reason": "一次資料全文を安全に取得できなかったため一時blocked。arXiv公式HTML (https://arxiv.org/html/2608.21719) と公式PDF (https://arxiv.org/pdf/2608.21719) を個別に試したが、この実行環境では双方とも DisabledError だった。別の公式経路としてMicrosoft Researchの論文ページと共著者Haoran Qiuの公式publicationページを確認し、著者・題名・プレプリント状態・抄録・主要結果は一致したが、取得できた本文は抄録相当で全文ではなかった。第三者の詳細解説は利用可能だったが、二次資料から未確認の科学的内容を補完せず5-slot生成を見送った。次回はarXiv復旧、Microsoft Research側の全文リンク、または著者公開PDFを再試行する。"
+}
