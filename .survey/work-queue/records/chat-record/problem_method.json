@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-ab3069d4b8b31db28dbe64b7",
+  "attempt_id": "attempt-5adb86bd27e2666265386057",
   "job_id": "job-research-56fbeb640bc1560d",
   "data": {
     "problem": "Edge LLMで移動UEがsource BSからtarget BSへハンドオーバすると、autoregressive decodeが依存する過去contextのKV cacheをtarget側へ復元する必要があり、その間token streamingが停止する。token-based handover（tHO）は過去tokenを送りtargetでprefillしてKVを再計算するためTTFTが大きく、複数UEのbatch prefillでは最悪ユーザ遅延が問題になる。cache-based handover（cHO）はKVを直接backhaul転送して計算を避けるが、billion-parameter LLMではKVが数百MB〜GB級となり、共有backhaulがボトルネックになる。研究課題は、各UEのhandover時刻とcontext長が異なる状況で、prefill計算とKV転送をどう分担・スケジュールすればworst-user service interruptionを最小化できるかである。",
@@ -29,7 +29,7 @@
     "system_design": "target BSは最新handover後のbatch cycle境界から共通prefixをprefillし、source BSはhandover発生後から残余KVをbackhaul送信する。二処理は並行し、decode再開は両方完了後となるため、遅い側を均衡させるmin-max設計になる。"
   },
   "reservation": {
-    "claim_id": "claim-ab3069d4b8b31db28dbe64b7",
+    "claim_id": "claim-5adb86bd27e2666265386057",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
