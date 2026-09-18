@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 21:38:50 JST**
+> 自動生成: **2026-09-18 21:39:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
+| 収録候補論文 | **49** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-18 21:34:16 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-18 21:39:01 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **9** | **2** | **1** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **22** | **11** | **11** | **0** | **0** | **0** | **14** |
-| 合計 | **30** | **13** | **11** | **2** | **1** | **0** | **14** |
+| 合計 | **31** | **13** | **12** | **1** | **0** | **0** | **14** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 21:39:01 JST** [research] `arXiv:2609.14717` — Carryover Drafting: Recycling Rejected States for Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-3736e6c195a4f8a9.json`
+  - result: `.survey/work-queue/results/research/attempt-b8073f0637a56eac35f5c473-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473-repair1.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md`
 - **09-18 21:34:16 JST** [research] `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving
   - job: `.survey/work-queue/jobs/job-research-7fcd5e4f3604dab7.json`
   - result: `.survey/work-queue/results/research/attempt-292079eab3cc522a1a9de5d7.json` (`ok=true`)
@@ -141,8 +146,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 21:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / 未完了・未検証: **2件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473-repair1.json` (job `job-research-3736e6c195a4f8a9`)
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **成功** `arXiv:2609.14717` — Carryover Drafting: Recycling Rejected States for Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-3736e6c195a4f8a9.json`
+  - result: `.survey/work-queue/results/research/attempt-b8073f0637a56eac35f5c473-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473-repair1.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md`
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473.json` (job `job-research-3736e6c195a4f8a9`)
 
 #### Audit (:30)
@@ -201,10 +210,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.14717` — Carryover Drafting: Recycling Rejected States for Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 21:35:01 JST** / heartbeat: **—** / lease expiry: **09-18 23:05:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3736e6c195a4f8a9.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -224,7 +231,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -244,7 +251,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **716** |
+| inference/training/survey配下の論文Markdown実体 | **717** |
 
 ### immutable submissionの未照合
 
@@ -252,8 +259,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **526** |
-| └ Research | **397** |
+| 成功result未照合のimmutable submission | **525** |
+| └ Research | **396** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
