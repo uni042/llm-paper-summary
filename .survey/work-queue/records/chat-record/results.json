@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3eb6a05e4e42907dd24b50f1",
-  "job_id": "job-research-a2e0c7f004aa0b3e",
+  "attempt_id": "attempt-134d632c037ba813a7f76d95",
+  "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
-    "overview": "共有接頭辞を持つA100カーネル条件で、PATはFlashAttention比で注意遅延を平均67.8%、FlashInfer比で52.1%削減し、構成によってFlashAttentionへ最大21.5倍、FlashInferへ11.7倍、FastTreeへ3.2倍の高速化を示す。オンライン配信では同一要求率で出力一トークン当たり時間を基準方式より17.0〜93.1%削減する。共有接頭辞がない条件でも複数タイルと複数実行流により平均1.6%の遅延削減が残る。",
+    "overview": "Sparse-dLLMは、拡散型大規模言語モデルの反復注意で毎回すべての鍵値を保持・参照する必要がないことを実験で示し、重要トークンだけを残す双方向疎キャッシュによって処理量を大きく改善する。LLaDA系列では平均約3.4倍、Dream系列では平均約3.6倍の処理量向上を得て、4千トークン級の長文脈では通常の拡散復号に対して最大10倍まで高速化する。一方でピークメモリは通常方式に近く、LongBenchや一般課題の精度も概ね維持するため、単なる計算削減ではなく長文脈拡散推論の計算量とメモリ量を同時に抑える実用的な方策である。ただしコード生成では重要トークンの誤破棄による低下があり、完全に無損失な方式ではない。",
     "key_results": [
       {
-        "metric": "共有接頭辞条件の平均注意遅延削減",
-        "value": "FlashAttention比67.8%、FlashInfer比52.1%削減",
-        "baseline": "要求中心注意カーネル",
-        "condition": "A100 80GB、複数の接頭辞木・バッチ・注意頭構成",
-        "interpretation": "同じ共有鍵値を要求ごとに大域メモリから再読出しする費用を、接頭辞単位の詰込みで一度へ近づける効果が大きい。"
+        "metric": "LLaDA-8B-InstructのGSM8K処理量",
+        "value": "26.45 TPS、5.8倍",
+        "baseline": "通常復号 4.57 TPS",
+        "condition": "GSM8K 4-shot",
+        "interpretation": "キャッシュ疎化により反復注意の読出しと計算を大幅に削減する。"
       },
       {
-        "metric": "カーネル最大高速化",
-        "value": "FlashAttention比21.5倍、FlashInfer比11.7倍、FastTree比3.2倍、RelayAttention比11.9倍、RelayAttention++比5.7倍",
-        "baseline": "七種類の既存注意実装",
-        "condition": "共有接頭辞を含む合成復号バッチの各対応可能構成",
-        "interpretation": "接頭辞共有だけでなく、動的タイルと複数実行流が不均一な要求数・鍵値長での資源浪費を抑える。"
+        "metric": "Dream-v0-7B-InstructのGPQA処理量",
+        "value": "32.63 TPS、5.2倍",
+        "baseline": "通常復号 6.29 TPS",
+        "condition": "GPQA 5-shot",
+        "interpretation": "異なる拡散型LLMでも同様の高速化が成立する。"
       },
       {
-        "metric": "オンライン配信の出力一トークン当たり時間",
-        "value": "基準方式より17.0〜93.1%削減",
-        "baseline": "FlashAttention、FlashInfer、RelayAttention++等",
-        "condition": "Qwen3-8BとLlama-3-8B、toolagentとconversation追跡、vLLM 0.9.0、A100一基",
-        "interpretation": "カーネル単体の改善が実際の連続バッチ配信でも出力待ち時間へ反映される。"
+        "metric": "平均処理量向上",
+        "value": "LLaDA系 約3.4倍、Dream系 約3.6倍",
+        "baseline": "通常の拡散型LLM復号",
+        "condition": "7種類の評価課題平均",
+        "interpretation": "既存キャッシュ法より高い処理量を広い課題で維持する。"
       },
       {
-        "metric": "分散・混合専門家配信",
-        "value": "Qwen2.5-72B-Instructで14.3〜26.7%、Qwen3-30B-A3Bで5.53〜16.9%の平均出力一トークン当たり時間削減",
-        "baseline": "三基準方式",
-        "condition": "前者はA100四基でテンソル並列二・パイプライン並列二、後者はA100一基",
-        "interpretation": "注意頭や層の分割、混合専門家の前向き計算は接頭辞認識注意と独立で、同じカーネル最適化を適用できる。"
+        "metric": "長文脈処理量",
+        "value": "4K系列で最大10倍",
+        "baseline": "通常の拡散型LLM復号",
+        "condition": "4090上の文脈長変化評価",
+        "interpretation": "系列が長く全鍵値参照の費用が増えるほど疎キャッシュの利得が大きくなる。"
       },
       {
-        "metric": "削除実験",
-        "value": "計算量指向詰込みで4.6%、単純詰込みで10.4%、固定タイルで39%、直列複数カーネルで4.8%遅延増",
-        "baseline": "完全PAT",
-        "condition": "Llama-3-8B相当注意頭構成の合成追跡",
-        "interpretation": "メモリ量を目的にした詰込みと複数タイルが特に重要で、複数実行流も残余空洞を削減する。"
+        "metric": "LongBench精度",
+        "value": "LLaDA-8B-Instruct 34.46",
+        "baseline": "通常復号 34.55",
+        "condition": "LongBench",
+        "interpretation": "長文脈性能をほぼ維持したまま計算を削減できる。"
       }
     ],
-    "negative_results": "共有接頭辞が少ない小バッチでは、接頭辞認識詰込みによる大域メモリ削減余地が小さく、利得は複数タイル等の小幅な改善へ縮む。GPUの協調スレッド配列配置はソフトウェアから完全制御できないため、複数実行流を使っても実行空洞は残り理論最適には到達しない。MLA、線形注意、鍵値状態を強く圧縮または除去する構造では、通常のMHA/GQAより鍵値読出しが小さいため効果が縮む可能性がある。",
-    "interpretation": "PATの本質は、接頭辞キャッシュの『保存の共有』を復号注意の『読出しの共有』へ拡張した点にある。単に共有鍵値を一つだけ保存しても、要求ごとの注意カーネルが同じ大域メモリを繰り返し読む限り帯域は減らない。要求を共有接頭辞ごとに同じ協調スレッド配列へまとめ、同時にその配列の形へカーネル資源を合わせることで、帯域と占有率の二つの無駄を同時に削減する。",
-    "quality_impact": "注意計算は部分結果をオンラインソフトマックスで厳密に統合するため、近似疎注意や量子化によるモデル品質低下を導入しない。評価の中心は性能であり、精度差ではなく同じ注意結果をより少ない大域メモリ読出しと高いGPU利用率で計算する。"
+    "negative_results": "DreamのHumanEvalでは一般的な注意重要度だけで破棄すると、変数型や数値リテラルなど構文上重要なトークンを落として性能が低下する。保持率を増やせば精度は改善するがキャッシュ量も線形に増え、0.5以降は改善幅が小さくなる。一段階より長く更新を遅延すると処理量が低下するため、遅延量にも最適域がある。",
+    "interpretation": "拡散型LLMでは鍵値状態全体を保持する必要はなく、復号段階を跨いで注意重要度が安定する少数トークンを残せば、キャッシュメモリを膨らませず注意計算を削減できる。ただし課題依存の重要トークンを注意得点だけで安全に識別できない場合があり、精度保証のある選択則は今後の課題となる。",
+    "quality_impact": "LLaDAでは平均精度が通常復号59.24に対して59.86、LLaDA-1.5では60.90に対して60.99とほぼ同等である。Dreamも平均では概ね同等だがHumanEvalで低下があり、方式は完全な無損失ではない。"
   },
   "reservation": {
-    "claim_id": "claim-3eb6a05e4e42907dd24b50f1",
+    "claim_id": "claim-134d632c037ba813a7f76d95",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
