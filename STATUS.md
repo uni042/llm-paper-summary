@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 02:02:07 JST**
+> 自動生成: **2026-09-19 02:02:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
-| 未claim Research job | **48** |
+| 収録候補論文 | **53** |
+| 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **41** |
 | 最終検証済みResearch収録 | **09-19 01:35:47 JST（26分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **1** | **0** | **1** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **21** | **4** | **1** | **3** | **0** | **0** | **4** |
-| 合計 | **31** | **5** | **1** | **4** | **3** | **0** | **4** |
+| Discovery | **23** | **5** | **3** | **2** | **0** | **0** | **5** |
+| 合計 | **33** | **6** | **3** | **3** | **3** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -109,6 +109,14 @@
   - result: `.survey/work-queue/results/20260919T0159JST-discovery-specialist-nvme-characterization-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json`
   - 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath
+- **09-19 02:01:58 JST** job `job-9b6f2006f483290b` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0204JST-discovery-specialist-storage-datapath-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0204JST-discovery-specialist-storage-datapath-2.json`
+  - 探索軸: SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement
+- **09-19 02:02:08 JST** job `job-19b9378212c1c3a7` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json`
+  - 探索軸: flash KV materialization・RAG prefill reuse・compute-storage tradeoff
 - **09-18 21:59:34 JST** job `job-bfe6701d4307a48c` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T2157JST-discovery-specialist-speculative-cosine-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260918T2209JST-discovery-specialist-fairness-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2209JST-discovery-specialist-fairness-7.json`
   - 探索軸: multi-tenant serving・token latency fairness・SLO isolation
-- **09-18 22:01:40 JST** job `job-a8a74b6ff1e39445` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T2212JST-discovery-specialist-gpu-runtime-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json`
-  - 探索軸: GPU runtime・persistent kernel・CUDA Graph・JIT compilation
-- **09-18 22:05:21 JST** job `job-8453bd5099fe9bf0` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
-  - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
 
 ### 直近タスク
 
@@ -163,8 +163,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 01:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **4件**
-- 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath / SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement / flash KV materialization・RAG prefill reuse・compute-storage tradeoff / agentic multi-turn serving・persistent KV state・delta-only inference
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **5件**
+- 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath / SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement / flash KV materialization・RAG prefill reuse・compute-storage tradeoff / agentic multi-turn serving・persistent KV state・delta-only inference / execution-state checkpoint/restore・agent fork/rollback・small-batch serving runtime
 - round `specialist-nvme-characterization-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0159JST-discovery-specialist-nvme-characterization-1.json`
   - 探索軸: NVMe SSD model/KV-cache offload・block I/O characterization・storage datapath
@@ -172,14 +172,18 @@
 - round `specialist-storage-datapath-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0204JST-discovery-specialist-storage-datapath-2.json`
   - 探索軸: SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0204JST-discovery-specialist-storage-datapath-2.json` (`ok=true`)
 - round `specialist-flash-kv-materialization-3` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json`
   - 探索軸: flash KV materialization・RAG prefill reuse・compute-storage tradeoff
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0211JST-discovery-specialist-flash-kv-materialization-3.json` (`ok=true`)
 - round `specialist-agent-state-4` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0217JST-discovery-specialist-agent-state-4.json`
   - 探索軸: agentic multi-turn serving・persistent KV state・delta-only inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-execution-state-5` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T0223JST-discovery-specialist-execution-state-5.json`
+  - 探索軸: execution-state checkpoint/restore・agent fork/rollback・small-batch serving runtime
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -215,7 +219,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -243,10 +247,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **546** |
+| 成功result未照合のimmutable submission | **545** |
 | └ Research | **414** |
 | └ Audit | **2** |
-| └ Discovery | **130** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
