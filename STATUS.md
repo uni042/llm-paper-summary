@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:37:41 JST**
+> 自動生成: **2026-09-19 07:38:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **14** | **6** | **8** | **3** | **0** | — |
+| Research | **21** | **15** | **6** | **9** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **34** | **17** | **9** | **8** | **3** | **0** | **3** |
+| 合計 | **34** | **18** | **9** | **9** | **3** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **14件** / 検証済み成功: **6件** / 未完了・未検証: **8件**
+- immutable submission: **15件** / 検証済み成功: **6件** / 未完了・未検証: **9件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-01bc2c1e0ef21dcae1e71886.json` (job `job-research-7b5d4afbd3eabe62`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-11b5e62465ce56e739adae95.json` (job `job-research-c790156bc5f9f1f9`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`)
@@ -167,6 +167,7 @@
   - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-894fefc24cb4ea7b63f3faa6.json` (job `job-research-7623de796f4f2b46`)
 - **成功** `arXiv:2402.15678` — Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution
   - job: `.survey/work-queue/jobs/job-research-b3f94863f38e0308.json`
   - result: `.survey/work-queue/results/research/attempt-89e2edf847dd8923a0885b8e.json` (`ok=true`)
@@ -177,11 +178,6 @@
   - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
-- **成功** `arXiv:2607.08993` — StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration
-  - job: `.survey/work-queue/jobs/job-research-f7dcdf40e7d3538f.json`
-  - result: `.survey/work-queue/results/research/attempt-a3bba0a36c53f4970b6d1719.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a3bba0a36c53f4970b6d1719.json`
-  - paper: `papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md`
 
 #### Audit (:30)
 
@@ -268,8 +264,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **572** |
-| └ Research | **443** |
+| 成功result未照合のimmutable submission | **573** |
+| └ Research | **444** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
