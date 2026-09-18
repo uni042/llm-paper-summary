@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.06174",
+      "title": "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+      "source_url": "https://arxiv.org/abs/2511.06174",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
+      "priority": 74,
+      "reason": "FPGAのon-chip memoryをtable lookup中心のLLM推論へ転用する直接的なinference architectureで、1B+モデルの実装とAMD V80上の実測評価を持つ。GPU以外のheterogeneous inference/near-memory系統を補完し、MI210/A100とのlatency・energy比較もある。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2511.17593",
+      "title": "Comparative Analysis of Large Language Model Inference Serving Systems: A Performance Study of vLLM and HuggingFace TGI",
+      "source_url": "https://arxiv.org/abs/2511.17593",
+      "rejection_reason": "vLLMとTGIの比較ベンチマークが主目的で、新規の推論システム機構・runtime設計・アルゴリズムを提案する論文ではないため、現行の新規systems候補としては優先度不足。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T06:00:00+09:00",
+    "round": "specialist-heterogeneous-hardware-2",
+    "axis": "heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture",
+    "query_summary": "programmable servingから独立して2025年後半のheterogeneous inference/hardware軸を走査。CLOや既知KV/offload系はidentity shardで除外し、2511.06174 LUT-LLMは2511 shardに未登録で、一次arXiv抄録から実装・実測を伴う直接LLM inference contributionを確認して採用。単なるframework比較研究2511.17593は不採用。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 5,
+    "novel_candidate_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2511.14510", "arXiv:2512.11920", "arXiv:2512.22195", "arXiv:2509.07379", "arXiv:2604.13327"],
+    "next_axis_hint": "2025後半のagentic serving・workflow runtime、またはnetwork/collectiveとKV transportの未走査ID帯を探索する",
+    "empty_round_reason": null
+  }
+}
