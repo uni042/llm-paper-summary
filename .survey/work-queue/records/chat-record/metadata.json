@@ -2,31 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c94b0bb7795aeb0a202c4cca",
+  "attempt_id": "attempt-a3bba0a36c53f4970b6d1719",
   "job_id": "job-research-f7dcdf40e7d3538f",
   "data": {
     "canonical_id": "arXiv:2607.08993",
     "arxiv_id": "2607.08993",
     "doi": "10.48550/arXiv.2607.08993",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
     "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
     "summary": "StreamDQは重みのみ量子化された大規模言語モデル推論で、GPUのCUDAコアが担う逆量子化を高帯域メモリ（HBM）のベースダイへ移す近メモリ方式である。各疑似チャネルの読み出し経路に小型の逆量子化ブロック（DQB）を配置し、通常のメモリ読み出し要求へ付加する数ビットの側帯タグで変換形式を指定する。重みとスケール・ゼロ点を同一疑似チャネルへ配置して局所処理し、GPU側の命令・オンチップ通信と、大バッチ時に発生する逆量子化済み重みのHBM書き戻し・再読込を除去する。A100実測で校正したシミュレータと12nm RTL合成を用い、混合精度GEMMで最大7.08倍高速化・90.23%省エネルギー、端から端までの推論で最大54.68%低遅延・2.20倍デコードスループットを報告する。",
     "list_summary": "HBMベースダイ上で重みを読み出しながら逆量子化し、GPU側CUDA逆量子化と中間重みの余分なHBM往復を除去する近メモリ推論機構。",
-    "authors": ["Minki Jeong","Daegun Yoon","Soohong Ahn","Seungyong Lee","Nameun Kang","Hyeonseok Ju","Ieryung Park","Joonseop Sim","Youngpyo Joo","Hoshik Kim"],
+    "authors": [
+      "Minki Jeong",
+      "Daegun Yoon",
+      "Soohong Ahn",
+      "Seungyong Lee",
+      "Nameun Kang",
+      "Hyeonseok Ju",
+      "Ieryung Park",
+      "Joonseop Sim",
+      "Youngpyo Joo",
+      "Hoshik Kim"
+    ],
     "authors_affiliations": "SK Hynix, Icheon, South Korea",
     "published": "2026-07-09",
     "publication": "arXiv",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1",
     "lineage": "近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション",
-    "topics": ["近メモリ処理", "HBM", "重みのみ量子化", "逆量子化", "混合精度GEMM", "LLM推論"],
+    "topics": [
+      "近メモリ処理",
+      "HBM",
+      "重みのみ量子化",
+      "逆量子化",
+      "混合精度GEMM",
+      "LLM推論"
+    ],
     "importance": "GPU計算パイプラインを大きく変更せず、メモリ読み出し経路で逆量子化を完了させることで、高スループット時のCUDAコア逆量子化と余分なデータ移動を同時に除去する。",
     "implementation": "DQBを12nm CMOSでRTL合成し、StreamDQ-SimとしてAccel-Sim/AccelWattchを拡張。GPU側には量子化重み領域を登録する小型領域表と側帯タグ生成機構を想定する。",
     "hardware_evaluation": "NVIDIA A100 PCIe 40GB上の実測プロファイルでシミュレータを校正し、DQBは12nmで0.127 mm^2、0.355 W、328 MHz。HBM3公開仕様を基準に32疑似チャネル配置時の面積・電力と熱を評価。",
     "quality_effect": "既存の重みのみ量子化形式を入力とし、StreamDQ自体は追加の近似量子化を導入しない。INTからFPへの変換では数値精度を維持する変換経路を設計する。",
     "source": "https://arxiv.org/abs/2607.08993",
-    "sources": ["https://arxiv.org/abs/2607.08993", "https://arxiv.org/html/2607.08993v1"],
+    "sources": [
+      "https://arxiv.org/abs/2607.08993",
+      "https://arxiv.org/html/2607.08993v1"
+    ],
     "code": null,
     "last_checked": "2026-09-19",
     "references": [],
@@ -34,5 +58,9 @@
     "references_source": "primary manuscript",
     "references_total": 0
   },
-  "reservation": {"claim_id":"claim-c94b0bb7795aeb0a202c4cca","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a3bba0a36c53f4970b6d1719",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
