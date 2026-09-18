@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:05:36 JST**
+> 自動生成: **2026-09-19 03:06:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **54** |
-| 未claim Research job | **53** |
+| 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 03:05:17 JST（19秒前）** |
+| 最終検証済みResearch収録 | **09-19 03:05:17 JST（47秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **11** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **27** | **8** | **7** | **1** | **1** | **0** | **5** |
+| 合計 | **27** | **8** | **7** | **1** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -198,7 +198,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 03:05:44 JST** / heartbeat: **—** / lease expiry: **09-19 04:35:44 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9d3c210288b42eb4.json`
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
   - claim: **09-19 01:41:16 JST** / heartbeat: **—** / lease expiry: **09-19 03:11:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-21b30a62610ad176.json`
