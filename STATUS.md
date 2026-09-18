@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:02:44 JST**
+> 自動生成: **2026-09-18 20:03:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **41** |
-| 未claim Research job | **40** |
+| 収録候補論文 | **46** |
+| 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（55分前）** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（56分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **41** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **41** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **9** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **26** | **3** | **2** | **1** | **1** | **0** | **5** |
+| Discovery | **18** | **2** | **1** | **1** | **0** | **0** | **9** |
+| 合計 | **27** | **4** | **3** | **1** | **0** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -100,6 +100,10 @@
 
 ### Discovery
 
+- **09-18 20:02:46 JST** job `job-fb6e71b1d7480608` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T2001JST-discovery-specialist-memory-specdecode-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
+  - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
 - **09-18 16:59:19 JST** job `job-5c2166c716255464` / 候補 **0件**
   - result: `.survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json`
@@ -136,10 +140,6 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r5.json`
   - 探索軸: PD disaggregation・RDMA・CXL KV transport
-- **09-18 16:04:17 JST** job `job-15908731b431da9b` / 候補 **5件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r6.json`
-  - 探索軸: agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse
 
 ### 直近タスク
 
@@ -167,21 +167,23 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 20:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **9件**
+- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction
 - round `specialist-memory-specdecode-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
   - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2001JST-discovery-specialist-memory-specdecode-1.json` (`ok=true`)
+- round `specialist-serving-measurement-2` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json`
+  - 探索軸: serving measurement・replicated KV correctness・production workflow・MoE routing prediction
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 17:32:15 JST** / heartbeat: **09-18 18:32:58 JST** / lease expiry: **09-18 20:02:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +203,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **41** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
