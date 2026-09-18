@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 12:29:29 JST**
+> 自動生成: **2026-09-18 12:59:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（55分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **12** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **4** | **4** | **0** | **0** | **0** | **20** |
-| 合計 | **29** | **6** | **6** | **0** | **1** | **0** | **20** |
+| Discovery | **15** | **2** | **1** | **1** | **0** | **0** | **5** |
+| 合計 | **27** | **4** | **3** | **1** | **1** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-18 12:59:12 JST** job `job-9409898dd94f1482` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
+  - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation
 - **09-18 11:04:08 JST** job `job-bf970c66df9bea3f` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260918T1035JST-discovery-e19a4b63.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1035JST-discovery-e19a4b63.json`
   - 探索軸: NVMe/SSD/object-storage KV offload
-- **09-18 10:08:04 JST** job `job-bdbb80a64ce29677` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260918T1042JST-discovery-f54c0a91.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1042JST-discovery-f54c0a91.json`
-  - 探索軸: MoE expert cache・prefetch・offload
 
 ### 直近タスク
 
@@ -171,25 +171,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 11:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **20件**
-- 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime / agentic workflow・prefix state・power-aware disaggregated serving / CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV / multi-tenant isolation・network flow・SLO・batching・heterogeneous routing
-- round `specialist-sep-systems-1` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
-  - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
-- round `specialist-agent-runtime-2` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json`
-  - 探索軸: agentic workflow・prefix state・power-aware disaggregated serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1120JST-discovery-specialist-agent-runtime-2.json` (`ok=true`)
-- round `specialist-memory-hardware-3` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260918T1128JST-discovery-specialist-memory-hardware-3.json`
-  - 探索軸: CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1128JST-discovery-specialist-memory-hardware-3.json` (`ok=true`)
-- round `specialist-scheduling-4` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260918T1136JST-discovery-specialist-scheduling-4.json`
-  - 探索軸: multi-tenant isolation・network flow・SLO・batching・heterogeneous routing
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1136JST-discovery-specialist-scheduling-4.json` (`ok=true`)
+- 最新観測run: **2026-09-18 12:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation / MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
+- round `specialist-heterogeneous-control-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
+  - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
+- round `specialist-moe-cache-2` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json`
+  - 探索軸: MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -246,10 +238,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **498** |
+| 成功result未照合のimmutable submission | **499** |
 | └ Research | **369** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **128** |
 
 ### 厳格検証が未成立のcompleted job
 
