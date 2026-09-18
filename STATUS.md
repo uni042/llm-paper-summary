@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:46:09 JST**
+> 自動生成: **2026-09-18 14:59:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（55秒前）** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（14分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **6** | **3** | **3** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **32** | **8** | **5** | **3** | **0** | **0** | **1** |
+| Discovery | **18** | **2** | **0** | **2** | **0** | **0** | **3** |
+| 合計 | **32** | **8** | **3** | **5** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -179,17 +179,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-18 14:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
-- 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth / 2609後半・agentic serving・speculative decoding・KV representation
-- round `specialist-offloaded-kv-sparse-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
-  - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1408JST-discovery-specialist-offloaded-kv-1.json` (`ok=true`)
-- round `specialist-late-september-inference-2` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json`
-  - 探索軸: 2609後半・agentic serving・speculative decoding・KV representation
-  - 個別result照合: あり / `.survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json` (`ok=true`)
+- 最新観測run: **2026-09-18 15:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **3件**
+- 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO / CXL shared memory・disaggregated serving・near-data processing・KV transfer
+- round `specialist-robust-kv-uncertainty-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json`
+  - 探索軸: KV reservation・output-length uncertainty・heterogeneous serving routing・SLO
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cxl-disaggregated-2` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260918T1505JST-discovery-specialist-cxl-disagg-2.json`
+  - 探索軸: CXL shared memory・disaggregated serving・near-data processing・KV transfer
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -244,10 +244,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **505** |
+| 成功result未照合のimmutable submission | **507** |
 | └ Research | **376** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
