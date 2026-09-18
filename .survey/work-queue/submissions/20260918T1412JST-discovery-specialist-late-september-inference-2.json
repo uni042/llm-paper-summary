@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T14:00:00+09:00",
+    "round": "specialist-late-september-inference-2",
+    "axis": "2609後半・agentic serving・speculative decoding・KV representation",
+    "query_summary": "2609.16-2609.18帯のLLM inference/serving/cache/GPU関連を独立に走査した。GrowMTP、Grouped Value Attention、Edge0、PDD、LLM Inference in a Flash等の有望結果は最新mainのidentity indexで既収録を確認したため、重い全文取得へ進めず除外した。未収録かつ正本品質基準を満たす追加候補はこの窓では得られなかった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.16648",
+      "arXiv:2609.13285",
+      "arXiv:2609.18063",
+      "arXiv:2609.13161",
+      "arXiv:2609.16161"
+    ],
+    "next_axis_hint": "次は時系列新着から離れ、既収録の高価値systems論文のforward/backward citationとDBMS/OS/storage隣接分野へ移る",
+    "empty_round_reason": "late-September inference検索窓の有望結果が最新canonical identityで既収録だった"
+  }
+}
