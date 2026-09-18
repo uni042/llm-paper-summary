@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:28:51 JST**
+> 自動生成: **2026-09-18 20:53:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **55** |
 | 未claim Research job | **54** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間22分前）** |
+| 直近24hの検証済みResearch収録 | **37** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間46分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **6** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **26** | **11** | **11** | **0** | **0** | **0** | **14** |
-| 合計 | **35** | **13** | **13** | **0** | **1** | **0** | **14** |
+| 合計 | **32** | **13** | **13** | **0** | **1** | **0** | **14** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,21 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-5e14ce9ab5f740202d8cecb7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5e14ce9ab5f740202d8cecb7.json`
   - paper: `papers/inference/moe/2609.14643.md`
-- **09-18 14:45:14 JST** [research] `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction
-  - job: `.survey/work-queue/jobs/job-research-2829f7afbf13ae9b.json`
-  - result: `.survey/work-queue/results/research/attempt-134d632c037ba813a7f76d95.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-134d632c037ba813a7f76d95.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md`
-- **09-18 14:44:01 JST** [research] `arXiv:2511.22333` — PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel
-  - job: `.survey/work-queue/jobs/job-research-a2e0c7f004aa0b3e.json`
-  - result: `.survey/work-queue/results/research/attempt-3eb6a05e4e42907dd24b50f1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3eb6a05e4e42907dd24b50f1.json`
-  - paper: `papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md`
-- **09-18 14:37:48 JST** [research] `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
-  - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
-  - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
-  - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
 
 ### Audit
 
