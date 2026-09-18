@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-85ce7c28af347af9007d9c33","job_id":"job-research-ebde0cc040167968","data":{"overview":"LLMServingSim 2.0は、RTX A6000とH100の実サービングに対して時系列処理量の平均誤差5.14%と3.29%、実行全体の処理量・遅延集約では0.99%と1.54%の平均誤差を示した。メモリ・接頭辞キャッシュでは単一インスタンス0.93%、CPU共有の複数インスタンス0.41%、エネルギーは1.34%の誤差で実機挙動を再現した。TPUでも時系列処理量3.95%、集約指標0.3%未満であり、GPU以外へ同じプロファイル方式を拡張できることを示す。複雑な分離・MoE構成を含む比較では主要指標の平均誤差1.81%で、既存シミュレータが未対応または大きな誤差となる設計空間を扱える。実務上は、実クラスタを構築する前に異種資源・メモリ階層・サービング方策の相互作用を分単位のシミュレーションで比較できる点が主要成果である。","key_results":[{"metric":"実機集約性能誤差","value":"0.99% / 1.54%","baseline":"実vLLM","condition":"RTX A6000 / H100","interpretation":"処理量と遅延を実行全体で高精度に再現。"},{"metric":"時系列処理量誤差","value":"5.14% / 3.29%","baseline":"実vLLM","condition":"RTX A6000 / H100","interpretation":"動的一括処理や段階遷移を含む時間変動も追従。"},{"metric":"エネルギー誤差","value":"1.34%","baseline":"実RTX A6000サーバ","condition":"テンソル並列1・2、パルス負荷","interpretation":"三状態GPUと七成分電力モデルが実測消費を再現。"},{"metric":"メモリ・接頭辞挙動誤差","value":"0.93% / 0.41%","baseline":"実システム","condition":"単一インスタンス / CPU共有複数インスタンス","interpretation":"階層キャッシュの成長と共有命中率を再現。"},{"metric":"TPU集約性能誤差","value":"0.3%未満","baseline":"実TPU-v6e-1 vLLM","condition":"Llama 3.1-8B単一インスタンス","interpretation":"非GPUアクセラレータへプロファイル方式を移植可能。"},{"metric":"GPU+PIM復号処理量","value":"1.43倍","baseline":"GPUのみ","condition":"Llama 3.1-8B、prefill後decode期間","interpretation":"PIMがメモリ律速復号を加速する設計探索例。"},{"metric":"GPU+PIMエネルギー","value":"J/token 14.8%削減","baseline":"GPUのみ","condition":"PIM事例","interpretation":"性能だけでなく電力を同時比較できる。"}],"negative_results":"詳細な実行時・メモリ挙動を扱うためVidurやTokenSimなど軽量GPU中心シミュレータよりシミュレーション時間は長い。PIMのsub-batch interleavingは小一括数ではGPUの実効一括数を下げ、GPUのみと同程度の性能なのに追加PIM分だけエネルギーが増えた。SBIが有効なのは256以上の非常に大きな一括数が持続する区間だった。","interpretation":"演算子単体の精度だけではなく、要求・キャッシュ・通信の状態を閉ループで更新することが、分離サービングや異種資源でのシステム性能再現に重要である。PIM事例のように単体ハードウェアが高速でもサービング方策との組合せ次第で逆効果になるケースを事前に発見できる。","quality_impact":"生成品質の評価手法ではない。シミュレータの忠実度を実機の性能・メモリ・電力指標との誤差で検証している。"},"reservation":{"claim_id":"claim-85ce7c28af347af9007d9c33","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-b9d676ed397522f747b185c2",
+  "job_id": "job-research-ebde0cc040167968",
+  "data": {
+    "overview": "LLMServingSim 2.0は、RTX A6000とH100の実サービングに対して時系列処理量の平均誤差5.14%と3.29%、実行全体の処理量・遅延集約では0.99%と1.54%の平均誤差を示した。メモリ・接頭辞キャッシュでは単一インスタンス0.93%、CPU共有の複数インスタンス0.41%、エネルギーは1.34%の誤差で実機挙動を再現した。TPUでも時系列処理量3.95%、集約指標0.3%未満であり、GPU以外へ同じプロファイル方式を拡張できることを示す。複雑な分離・MoE構成を含む比較では主要指標の平均誤差1.81%で、既存シミュレータが未対応または大きな誤差となる設計空間を扱える。実務上は、実クラスタを構築する前に異種資源・メモリ階層・サービング方策の相互作用を分単位のシミュレーションで比較できる点が主要成果である。",
+    "key_results": [
+      {
+        "metric": "実機集約性能誤差",
+        "value": "0.99% / 1.54%",
+        "baseline": "実vLLM",
+        "condition": "RTX A6000 / H100",
+        "interpretation": "処理量と遅延を実行全体で高精度に再現。"
+      },
+      {
+        "metric": "時系列処理量誤差",
+        "value": "5.14% / 3.29%",
+        "baseline": "実vLLM",
+        "condition": "RTX A6000 / H100",
+        "interpretation": "動的一括処理や段階遷移を含む時間変動も追従。"
+      },
+      {
+        "metric": "エネルギー誤差",
+        "value": "1.34%",
+        "baseline": "実RTX A6000サーバ",
+        "condition": "テンソル並列1・2、パルス負荷",
+        "interpretation": "三状態GPUと七成分電力モデルが実測消費を再現。"
+      },
+      {
+        "metric": "メモリ・接頭辞挙動誤差",
+        "value": "0.93% / 0.41%",
+        "baseline": "実システム",
+        "condition": "単一インスタンス / CPU共有複数インスタンス",
+        "interpretation": "階層キャッシュの成長と共有命中率を再現。"
+      },
+      {
+        "metric": "TPU集約性能誤差",
+        "value": "0.3%未満",
+        "baseline": "実TPU-v6e-1 vLLM",
+        "condition": "Llama 3.1-8B単一インスタンス",
+        "interpretation": "非GPUアクセラレータへプロファイル方式を移植可能。"
+      },
+      {
+        "metric": "GPU+PIM復号処理量",
+        "value": "1.43倍",
+        "baseline": "GPUのみ",
+        "condition": "Llama 3.1-8B、prefill後decode期間",
+        "interpretation": "PIMがメモリ律速復号を加速する設計探索例。"
+      },
+      {
+        "metric": "GPU+PIMエネルギー",
+        "value": "J/token 14.8%削減",
+        "baseline": "GPUのみ",
+        "condition": "PIM事例",
+        "interpretation": "性能だけでなく電力を同時比較できる。"
+      }
+    ],
+    "negative_results": "詳細な実行時・メモリ挙動を扱うためVidurやTokenSimなど軽量GPU中心シミュレータよりシミュレーション時間は長い。PIMのsub-batch interleavingは小一括数ではGPUの実効一括数を下げ、GPUのみと同程度の性能なのに追加PIM分だけエネルギーが増えた。SBIが有効なのは256以上の非常に大きな一括数が持続する区間だった。",
+    "interpretation": "演算子単体の精度だけではなく、要求・キャッシュ・通信の状態を閉ループで更新することが、分離サービングや異種資源でのシステム性能再現に重要である。PIM事例のように単体ハードウェアが高速でもサービング方策との組合せ次第で逆効果になるケースを事前に発見できる。",
+    "quality_impact": "生成品質の評価手法ではない。シミュレータの忠実度を実機の性能・メモリ・電力指標との誤差で検証している。"
+  },
+  "reservation": {
+    "claim_id": "claim-b9d676ed397522f747b185c2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
