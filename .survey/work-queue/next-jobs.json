@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 53,
-      "completed": 537,
+      "ready": 52,
+      "completed": 538,
       "superseded": 44,
       "deferred": 3,
       "blocked": 2,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 53,
+    "ready_research_audit": 52,
     "actively_claimed": 1,
-    "claimable": 52
+    "claimable": 51
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-51ff641061ba8ecf",
+      "job_id": "job-research-06a7e035a0f5ff0b",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2606.05511",
-      "title": "RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference",
-      "source_url": "https://arxiv.org/abs/2606.05511",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md",
+      "canonical_id": "arXiv:2609.17184",
+      "title": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2609.17184",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T18:07:27+00:00"
+  "generated_at": "2026-09-18T18:09:45+00:00"
 }

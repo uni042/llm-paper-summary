@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 03:09:36 JST**
+> 自動生成: **2026-09-19 03:09:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
+| 収録候補論文 | **52** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-19 03:07:27 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-19 03:09:45 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **7** | **7** | **0** | **0** | **0** | **5** |
-| 合計 | **27** | **8** | **7** | **1** | **2** | **0** | **5** |
+| 合計 | **28** | **8** | **7** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 03:09:45 JST** [research] `arXiv:2606.05511` — RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-51ff641061ba8ecf.json`
+  - result: `.survey/work-queue/results/research/attempt-bc5a8fd4186a7939c0b7b5f9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bc5a8fd4186a7939c0b7b5f9.json`
+  - paper: `papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md`
 - **09-19 03:07:27 JST** [research] `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models
   - job: `.survey/work-queue/jobs/job-research-9d3c210288b42eb4.json`
   - result: `.survey/work-queue/results/research/attempt-bc68d740adca0b4c200156a1.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-67c677bdf0613551686265c8-repair1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-67c677bdf0613551686265c8-repair1.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md`
-- **09-18 21:39:01 JST** [research] `arXiv:2609.14717` — Carryover Drafting: Recycling Rejected States for Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-3736e6c195a4f8a9.json`
-  - result: `.survey/work-queue/results/research/attempt-b8073f0637a56eac35f5c473-repair1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b8073f0637a56eac35f5c473-repair1.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md`
 
 ### Audit
 
@@ -198,10 +198,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.05511` — RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 03:07:52 JST** / heartbeat: **—** / lease expiry: **09-19 04:37:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-51ff641061ba8ecf.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
   - claim: **09-19 01:41:16 JST** / heartbeat: **—** / lease expiry: **09-19 03:11:16 JST**
   - evidence: `.survey/work-queue/claims/job-research-21b30a62610ad176.json`
@@ -224,7 +221,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -244,7 +241,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **726** |
+| inference/training/survey配下の論文Markdown実体 | **727** |
 
 ### immutable submissionの未照合
 
@@ -252,8 +249,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **545** |
-| └ Research | **416** |
+| 成功result未照合のimmutable submission | **544** |
+| └ Research | **415** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
