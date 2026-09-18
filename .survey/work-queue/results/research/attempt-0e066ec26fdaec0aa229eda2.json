@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-0e066ec26fdaec0aa229eda2",
+  "job_id": "job-research-fb4ae3eceb455bfc",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-0e066ec26fdaec0aa229eda2.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.components[2].description is too short | Japanese-first prose ratio is too low: 42.7% < 70% (Japanese=2338, Latin=3136)",
+  "processed_at": "2026-09-18T01:32:39+00:00",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.components[2].description is too short",
+    "Japanese-first prose ratio is too low: 42.7% < 70% (Japanese=2338, Latin=3136)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
