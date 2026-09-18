@@ -1,18 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-71d88f013604453cc1c44327",
-  "job_id": "job-research-455581782889dbd1",
-  "data": {
-    "limitations": "待機列がsingleton優勢になると共有群数Cが要求数Nへ近づき、SGLang二重走査のN/C償却は1へ縮む。cLPMの最終sortはPythonでO(N log N)のまま。評価アクセラレータはH100のみで、小容量GPUやマルチモーダルprefixは未評価。群優先は公平性を損ね得るため動的レーンが必要で、厳密な個別SLO保証そのものではない。vLLMは平坦block-hash cacheのためSGLangのような木対木共同走査はできず、LPM探索は要求ごとに残る。",
-    "differences": "SGLang LPM/DFS_WEIGHTは現在のRadixCache位置だけを見て待機要求同士の共有を知らず、vLLM FCFS+APCは到着順でprefix局所性を作らない。PEEKはKV格納方式を新設せず、待機queue trieを将来需要信号として上位政策へ追加する。H2O/SnapKV/InfiniGen等のsequence内KV圧縮・offloadとは直交し、PEEKはrequest間のblock allocationと実行順序を扱う。KVFlow/Marconiの予測がworkflow graphや過去trafficから未来を推定するのに対し、PEEKは現在待機中で実行予定が確定した要求を直接数える。",
-    "implementation_status": "公式GitHubでコード公開。Rust約1.6kLOC native core、SGLang統合約814LOC、vLLM統合約800LOC。upstream fork不要のmonkey patch方式で、SGLang mainとvLLM 0.19.1を対象とする。",
-    "research_positioning": "prefix cache研究の中で、キャッシュ機構そのものではなく『待機要求をどの順で走らせ、どのKVを残すか』を共同最適化する政策層。cross-replica prefix-affinity routerの下、各replica内で動作でき、LMCache等の分散KVやRAGCache等の保存機構とも組み合わせ可能。特にqueueを短期未来需要として直接使う点が、LRU/LFUの過去参照ベース政策からの転換である。"
-  },
-  "reservation": {
-    "claim_id": "claim-71d88f013604453cc1c44327",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-71d88f013604453cc1c44327","job_id":"job-research-455581782889dbd1","data":{"limitations":"待機列が単独要求優勢になると共有群数が要求数へ近づき、木の共同走査による償却効果はほぼ消える。最終的な要求整列は依然として言語処理層で要求数の対数倍に比例する計算を行う。評価アクセラレータは高性能データセンター向け装置に限られ、小容量装置や画像を含む複合入力の接頭辞は未評価である。群優先は公平性を損ね得るため動的な公平レーンが必要で、厳密な個別遅延保証そのものではない。平坦なブロックハッシュ型キャッシュでは基数木同士の共同走査ができず、一致探索は要求ごとに残る。","differences":"既存の最長接頭辞一致方式は現在キャッシュ上の位置だけを見て待機要求同士の共有を知らず、先着順方式は到着順のままなので接頭辞局所性を意図的に作らない。本方式は鍵値の格納形式を新設せず、待機要求の圧縮木を将来需要信号として政策層へ追加する。系列内の鍵値圧縮や退避は一つの要求内部で保持量を減らすのに対し、本方式は複数要求間でどのブロックをいつ再利用するかを扱う。過去の交通量や処理グラフから未来を推定する方式とも異なり、すでに待機中で近く実行されることが確定している要求を直接数えるため、学習済み予測器や外部の処理グラフを必要としない。","implementation_status":"公式実装が公開されている。中核の圧縮木・共同走査・群統計は高速なネイティブ言語で実装し、二つの主要推論基盤へ薄い言語処理層を追加する。上流基盤を分岐させず実行時の差し替えで統合し、環境設定により各機構を個別に無効化できる。","research_positioning":"接頭辞キャッシュ研究の中でも、保存形式や注意計算核ではなく、待機要求をどの順で走らせ、限られた鍵値領域からどのブロックを追い出すかを共同最適化する政策層に位置する。重要な発想は、待機列を単なる順番待ちの容器ではなく、数周期先までの参照予定が書かれた短期需要表として扱うことである。ある共有群の先頭要求を実行して接頭辞を作った直後に、その接頭辞を必要とする兄弟要求を続けて処理し、同時に追い出し側ではその群が必要とする深い接頭辞を保護する。このため要求順序と記憶管理が同じ需要情報に沿って動き、片方の最適化をもう片方が打ち消しにくい。複数サーバ間の接頭辞親和性ルータは『どの複製へ送るか』を決め、本方式は送られた複製内部で『どの要求を次に走らせるか』を決めるため階層的に併用できる。また分散鍵値保存、検索拡張生成向けキャッシュ、系列内圧縮とも対象軸が異なり、既存の再利用機構を変更せず上位から再利用機会を増やせる。過去参照だけを見る最終利用時刻方式から、確定済み近未来参照を直接使う方式への転換として、待機列が長く接頭辞共有が強い運用ほど価値が高い。"},"reservation":{"claim_id":"claim-71d88f013604453cc1c44327","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
