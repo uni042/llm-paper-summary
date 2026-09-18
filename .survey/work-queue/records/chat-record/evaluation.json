@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-32601b58ea85c529e281cb7c",
-  "job_id": "job-research-78d3e9d2047890ea",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-32601b58ea85c529e281cb7c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-32601b58ea85c529e281cb7c","job_id":"job-research-78d3e9d2047890ea","data":{"hardware":"主評価はNVIDIA A100-SXM4-80GB 1基、PCIe 4.0、2TB host RAM。Qwen3-8B/Qwen3-4B/Qwen2.5-7B/Qwen2.5-7B-Instruct-1Mのactivation・fidelity・RULER-style・timingをA100で測定し、Llama-3.1-8B 4kのみNVIDIA L4でactivation取得後に同じfidelity codeで評価。","software":"PyTorch/HuggingFace系generationとTriton prototype kernelsを使用し、著者公式GitHub repositoryでcode/resultsを公開。host-resident bit-plane run gather、scan kernel、top-k、winner-row gatherをresearch harnessで構成。","methodology":"Wikitext-103 trainでkey variance/KLT等をcalibrationしtest splitで7 model/context設定のattention-output relative L2 errorを評価。128 decode positions（128kでは64）についてsink 4 + local 32 + method score上位k-36をquery headごとに選びdense attention出力と比較する。RULER-styleでは32k Qwen3-8Bで6 task×40 samples、128k Qwen2.5-7B-Instruct-1Mで4 task×20 samplesをdense prefillから同一KV cacheで分岐しgreedy sparse decoding。実agent評価はOpenHands/SWE-rebenchの実trajectoryをrepositoryごとに約80k〜100k tokenへ連結し、40 session(k=512)または20 session(k=2048)でexact top-kとのword-level step agreementを測る。timingはweightsをGPU、K/V rowsと原則scan storeをpinned host memoryに置き、scan→top-k→PCIe winner gather→exact attentionのdecode stepをGPU profiler time中心に測定。256k〜1M timingはsynthetic KV、32k〜128kはreal prefill。","scope":"比較対象はDouble Sparsity c=32、Loki r=32/64、SparQ r=16/32、2-bit all-channel thumbnail、8-token block mean landmark、exact top-k oracle、dense attention。主張対象はscan index自体もhost memoryに退避される長文脈・多session regimeであり、HBM-resident indexをcontrolとして明示的に評価する。"},"reservation":{"claim_id":"claim-32601b58ea85c529e281cb7c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
