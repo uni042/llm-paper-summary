@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T01:07:10.308738+00:00",
+  "updated_at": "2026-09-18T01:10:23.382429+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T01:07:10.308738+00:00",
+      "last_recorded_at": "2026-09-18T01:10:23.382429+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 237,
         "audit_completed": 0,
-        "discovery_completed": 105,
+        "discovery_completed": 112,
         "blocked": 19,
-        "new_jobs": 161,
+        "new_jobs": 171,
         "new_papers": 240,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35190535471:1",
-          "recorded_at": "2026-09-17T06:36:09.326800+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35190535471",
-            "run_attempt": "1",
-            "source_sha": "9b899d010d6987bcc9cebe71b24ceafb01f4cf33"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35190844394:1",
           "recorded_at": "2026-09-17T06:40:22.056256+00:00",
@@ -19595,6 +19581,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35293933360:1",
+          "recorded_at": "2026-09-18T01:10:23.382429+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35293933360",
+            "run_attempt": "1",
+            "source_sha": "36f265bc88dce3224cd1eb2337b5a63c3a5e3134"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -22486,6 +22486,62 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-25709c76eaead837",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-8a3bf85fa44edf31",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b6b273ebecde8f15",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bdbb80a64ce29677",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c696a959fe0176ef",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e18f24aa2b99e6e9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f7a9e21348e7d3cb",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -23615,6 +23671,76 @@
           "type": "research",
           "canonical_id": "arXiv:2609.18849",
           "title": "Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It"
+        },
+        {
+          "job_id": "job-25709c76eaead837",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-8a3bf85fa44edf31",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-b6b273ebecde8f15",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-bdbb80a64ce29677",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-c696a959fe0176ef",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e18f24aa2b99e6e9",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f7a9e21348e7d3cb",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-a2e0c7f004aa0b3e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.22333",
+          "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel"
+        },
+        {
+          "job_id": "job-research-c790156bc5f9f1f9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00363",
+          "title": "Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance"
+        },
+        {
+          "job_id": "job-research-fb4ae3eceb455bfc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.17943",
+          "title": "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -24084,7 +24210,14 @@
         ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json",
         ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json",
         ".survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json",
-        ".survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json"
+        ".survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json",
+        ".survey/work-queue/results/20260918T1028JST-discovery-d80f7c22.json",
+        ".survey/work-queue/results/20260918T1035JST-discovery-e19a4b63.json",
+        ".survey/work-queue/results/20260918T1042JST-discovery-f54c0a91.json",
+        ".survey/work-queue/results/20260918T1049JST-discovery-a63d1f04.json",
+        ".survey/work-queue/results/20260918T1055JST-discovery-b94e2d70.json",
+        ".survey/work-queue/results/20260918T1102JST-discovery-c15e7a48.json",
+        ".survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -24162,7 +24295,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 701,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

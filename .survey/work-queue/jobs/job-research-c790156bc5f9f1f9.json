@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-c790156bc5f9f1f9",
+  "type": "research",
+  "parent_job_id": "job-8a3bf85fa44edf31",
+  "priority": 80,
+  "canonical_id": "arXiv:2609.00363",
+  "title": "Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance",
+  "source_url": "https://arxiv.org/abs/2609.00363",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md",
+  "selection_reason": "Systems analysis of cross-kernel deterministic inference and quantization-scale design; complements existing deterministic serving work with a numerical/kernel perspective.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T01:08:23+00:00"
+}

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:07:11 JST**
+> 自動生成: **2026-09-18 10:10:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
-| 未claim Research job | **46** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-18 09:52:39 JST（14分前）** |
+| 最終検証済みResearch収録 | **09-18 09:52:39 JST（17分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **10** | **3** | **7** | **0** | **0** | **28** |
-| 合計 | **28** | **13** | **6** | **7** | **2** | **0** | **28** |
+| Discovery | **11** | **10** | **10** | **0** | **0** | **0** | **28** |
+| 合計 | **29** | **13** | **13** | **0** | **2** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -117,34 +117,34 @@
   - result: `.survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1021JST-discovery-c7329e11.json`
   - 探索軸: agentic serving・tool wait・multi-turn KV retention
-- **09-18 04:08:05 JST** job `job-eb22aac21645da23` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
-  - 探索軸: dLLM cache lineage・adaptive caching・hierarchical caching・dynamic eviction
-- **09-18 04:08:12 JST** job `job-81083356e015ff3c` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-4.json`
-  - 探索軸: dLLM delayed KV cache・dual adaptive cache・conference lineage
-- **09-18 04:08:18 JST** job `job-28c58a04ea5f0b58` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-serving-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-serving-2.json`
-  - 探索軸: diffusion LLM serving・elastic decoding・KV reuse・parallel decoding
-- **09-18 04:09:59 JST** job `job-6dc94e2aaef6c414` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-multitenant-fairness-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-multitenant-fairness-5.json`
-  - 探索軸: 2026年9月新着・multi-tenant serving・latency isolation・fair scheduling
-- **09-18 04:10:07 JST** job `job-cae0e4713a22115e` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-resilience-security-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-resilience-security-6.json`
-  - 探索軸: fault tolerance・failure recovery・confidential serving・resource isolation
-- **09-18 04:10:46 JST** job `job-7461140400013bb2` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-lineage-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-lineage-8.json`
-  - 探索軸: multi-model routing lineage・predictive load balancing・DP routing・hardware-aware routing
-- **09-18 04:10:15 JST** job `job-262a244fbc8c0261` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-recovery-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json`
-  - 探索軸: heterogeneous multi-model routing・resource allocation・MoE failure recovery
+- **09-18 10:07:45 JST** job `job-f7a9e21348e7d3cb` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T1028JST-discovery-d80f7c22.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
+  - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
+- **09-18 10:07:55 JST** job `job-25709c76eaead837` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260918T1035JST-discovery-e19a4b63.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1035JST-discovery-e19a4b63.json`
+  - 探索軸: NVMe/SSD/object-storage KV offload
+- **09-18 10:08:04 JST** job `job-bdbb80a64ce29677` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260918T1042JST-discovery-f54c0a91.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1042JST-discovery-f54c0a91.json`
+  - 探索軸: MoE expert cache・prefetch・offload
+- **09-18 10:08:14 JST** job `job-b6b273ebecde8f15` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T1049JST-discovery-a63d1f04.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1049JST-discovery-a63d1f04.json`
+  - 探索軸: CXL/PIM/NDP・隣接memory systems
+- **09-18 10:08:23 JST** job `job-8a3bf85fa44edf31` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T1055JST-discovery-b94e2d70.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1055JST-discovery-b94e2d70.json`
+  - 探索軸: output-length scheduling・deterministic inference
+- **09-18 10:08:33 JST** job `job-c696a959fe0176ef` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T1102JST-discovery-c15e7a48.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1102JST-discovery-c15e7a48.json`
+  - 探索軸: 最新9月17日新着・CXL cluster memory/speculative serving
+- **09-18 10:08:42 JST** job `job-e18f24aa2b99e6e9` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1108JST-discovery-d61b3e92.json`
+  - 探索軸: citation/related-work・LMCache/DistServe lineage
 
 ### 直近タスク
 
@@ -177,7 +177,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 10:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **7件** / 候補: **28件**
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **0件** / 候補: **28件**
 - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion / NVMe/SSD/object-storage KV offload / MoE expert cache・prefetch・offload / CXL/PIM/NDP・隣接memory systems / output-length scheduling・deterministic inference / 最新9月17日新着・CXL cluster memory/speculative serving / citation/related-work・LMCache/DistServe lineage
 - round `specialist-2609-memory-moe-new-arrivals-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
@@ -194,31 +194,31 @@
 - round `specialist-gpu-kernel-runtime-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
   - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1028JST-discovery-d80f7c22.json` (`ok=true`)
 - round `specialist-storage-nvme-kv-5` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1035JST-discovery-e19a4b63.json`
   - 探索軸: NVMe/SSD/object-storage KV offload
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1035JST-discovery-e19a4b63.json` (`ok=true`)
 - round `specialist-moe-prefetch-tiering-6` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260918T1042JST-discovery-f54c0a91.json`
   - 探索軸: MoE expert cache・prefetch・offload
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1042JST-discovery-f54c0a91.json` (`ok=true`)
 - round `specialist-cxl-pim-ndp-adjacent-7` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1049JST-discovery-a63d1f04.json`
   - 探索軸: CXL/PIM/NDP・隣接memory systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1049JST-discovery-a63d1f04.json` (`ok=true`)
 - round `specialist-scheduling-determinism-8` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1055JST-discovery-b94e2d70.json`
   - 探索軸: output-length scheduling・deterministic inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1055JST-discovery-b94e2d70.json` (`ok=true`)
 - round `specialist-late-new-arrivals-9` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1102JST-discovery-c15e7a48.json`
   - 探索軸: 最新9月17日新着・CXL cluster memory/speculative serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1102JST-discovery-c15e7a48.json` (`ok=true`)
 - round `specialist-citation-relatedwork-10` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T1108JST-discovery-d61b3e92.json`
   - 探索軸: citation/related-work・LMCache/DistServe lineage
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1108JST-discovery-d61b3e92.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -250,7 +250,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -278,10 +278,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **486** |
+| 成功result未照合のimmutable submission | **479** |
 | └ Research | **350** |
 | └ Audit | **2** |
-| └ Discovery | **134** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
