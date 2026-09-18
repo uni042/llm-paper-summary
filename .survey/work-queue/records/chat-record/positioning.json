@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-de75a2b1f21d80bfa022a7ba","job_id":"job-research-469eef375f5f828e","data":{"limitations":"自己投機復号で削減できるのは主に鍵値キャッシュ読み出しなので、文脈が十分長い、または一括数が大きく注意処理がフィードフォワード層より支配的な条件で効果が大きい。遅延最優先の小一括数・短文脈では追加の候補生成を償却しにくい。実験機はH100 NVLに限定され、異なるGPU世代・帯域比での境界は未評価。疎率と候補長γはモデル・作業負荷ごとの事前掃引を必要とする。","differences":"MagicDec-Streamは固定的な窓型疎注意で選択費は小さいが長距離重要語を逃しやすい。MagicDec-Questは現在の問い合わせから毎候補語で重要度を再推定するため精度は高いが選択費が大きい。SpecExtendは対象モデル最終注意層の最後の受理語を使うため、候補列後半で一語の注意様式へ過適合しやすい。SparseSpecは検証誘導という着想が近いが全候補語の注意重みを使うため再実体化費が大きい。Vegasは第一候補語とボーナス語のsoftmax前ロジットだけを使い、複数位置の被覆と低書き出し費を両立する。","implementation_status":"ICML 2026採択、arXiv v2。vLLM統合実装と改造FlashAttention-3カーネルを含むコードをplatformxlab/vegasで公開。再学習や専用小型候補モデルは不要。","research_positioning":"長文LLMの鍵値帯域削減と投機復号を共同設計する系統。従来の疎注意は候補生成器内部で重要度を推定し、投機復号は検証を正解性判定だけに使うことが多かった。Vegasは検証の完全注意を次反復の鍵値選択器としても使う循環依存を導入し、検証計算の副産物をスケジューリング・メモリ選択へ再利用する設計として位置づけられる。"},"reservation":{"claim_id":"claim-de75a2b1f21d80bfa022a7ba","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a9d8c2cf570fd3b13fb6b628",
+  "job_id": "job-research-469eef375f5f828e",
+  "data": {
+    "limitations": "自己投機復号で削減できるのは主に鍵値キャッシュ読み出しなので、文脈が十分長い、または一括数が大きく注意処理がフィードフォワード層より支配的な条件で効果が大きい。遅延最優先の小一括数・短文脈では追加の候補生成を償却しにくい。実験機はH100 NVLに限定され、異なるGPU世代・帯域比での境界は未評価。疎率と候補長γはモデル・作業負荷ごとの事前掃引を必要とする。",
+    "differences": "MagicDec-Streamは固定的な窓型疎注意で選択費は小さいが長距離重要語を逃しやすい。MagicDec-Questは現在の問い合わせから毎候補語で重要度を再推定するため精度は高いが選択費が大きい。SpecExtendは対象モデル最終注意層の最後の受理語を使うため、候補列後半で一語の注意様式へ過適合しやすい。SparseSpecは検証誘導という着想が近いが全候補語の注意重みを使うため再実体化費が大きい。Vegasは第一候補語とボーナス語のsoftmax前ロジットだけを使い、複数位置の被覆と低書き出し費を両立する。",
+    "implementation_status": "ICML 2026採択、arXiv v2。vLLM統合実装と改造FlashAttention-3カーネルを含むコードをplatformxlab/vegasで公開。再学習や専用小型候補モデルは不要。",
+    "research_positioning": "長文LLMの鍵値帯域削減と投機復号を共同設計する系統。従来の疎注意は候補生成器内部で重要度を推定し、投機復号は検証を正解性判定だけに使うことが多かった。Vegasは検証の完全注意を次反復の鍵値選択器としても使う循環依存を導入し、検証計算の副産物をスケジューリング・メモリ選択へ再利用する設計として位置づけられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-a9d8c2cf570fd3b13fb6b628",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

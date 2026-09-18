@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-de75a2b1f21d80bfa022a7ba","job_id":"job-research-469eef375f5f828e","data":{"overview":"VegasはAIME25とCodeEloの短入力・長い推論出力で、既定vLLMに対して1.25〜2.70倍、最有力のMagicDec-Streamに対して1.15〜1.23倍の復号処理量を達成した。さらに96K〜120K語のLongBench-v2では最有力既存方式より18〜29%高い処理量となり、論文全体の最大値は既定vLLM比2.81倍、既存の疎注意型自己投機方式比1.29倍である。実務上の意味は、完全注意による正解性を維持したまま、長文で支配的になる鍵値キャッシュの読み出し回数を複数の受理候補語へ償却できる点にある。特に文脈が長いほど、検証時に既に得られた重要度を再利用する費用は相対的に小さくなり、独立した鍵値探索を毎候補語で行う方式との差が広がる。一方で短文脈や小一括数では注意読み出しが支配的でないため、候補生成の追加計算を回収できる条件を見極める必要がある。","key_results":[{"metric":"復号処理量","value":"1.25–2.70倍","baseline":"既定vLLM","condition":"AIME25/CodeElo、複数モデル","interpretation":"疎な自己投機で完全鍵値読み出し回数を削減。"},{"metric":"復号処理量","value":"1.15–1.23倍","baseline":"MagicDec-Stream","condition":"AIME25/CodeElo","interpretation":"固定窓に近い低選択費を保ちながら候補受理精度を改善。"},{"metric":"長文復号処理量","value":"18–29%向上","baseline":"最有力既存方式","condition":"LongBench-v2、96K–120K入力","interpretation":"文脈が長く鍵値帯域が支配的になるほど検証誘導選択の利点が拡大。"},{"metric":"鍵値選択追加費","value":"5.9–9.4%","baseline":"理想的な選択費ゼロ反復","condition":"評価モデル群","interpretation":"2問い合わせ収集で問い合わせ依存選択の追加帯域を抑制。"},{"metric":"全位置収集から2位置収集への精度差","value":"6.13→6.11 / 6.25→6.24 accepted tokens","baseline":"全候補位置のロジット収集","condition":"Qwen3-8B / gpt-oss-20b、γ=7、7%疎率","interpretation":"収集位置を大幅削減しても受理数はほぼ維持。"},{"metric":"棄却候補を重要度推定から除外","value":"平均受理語数3–14%低下","baseline":"棄却候補も利用するVegas","condition":"γ=7、Qwen3-8Bとgpt-oss-20b","interpretation":"棄却語の注意様式にも将来重要度の有用情報がある。"}],"negative_results":"gpt-oss-20bは全注意層が半数しかなく、疎注意を適用できる範囲が狭いため自己投機方式全般の速度向上が小さい。短文脈・小一括数では鍵値読み出しが支配的でなく、Vegasの追加候補生成を償却できない。Qwen3-8BではAIME25で一括数8から利益が出る一方、LongBench-v2では一括数1から利益が出る。","interpretation":"重要鍵値を高精度に選ぶための独立した探索を毎回実行するのではなく、必須の完全注意検証から得られる情報を次反復へ再利用することで、精度の高い問い合わせ依存疎注意と固定方式に近い低費用を両立できる。","quality_impact":"自己投機復号の完全注意検証が候補を受理・訂正するため、疎注意は候補生成のみに使われ、最終出力分布は通常の完全注意生成と一致する。"},"reservation":{"claim_id":"claim-de75a2b1f21d80bfa022a7ba","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-a9d8c2cf570fd3b13fb6b628",
+  "job_id": "job-research-469eef375f5f828e",
+  "data": {
+    "overview": "VegasはAIME25とCodeEloの短入力・長い推論出力で、既定vLLMに対して1.25〜2.70倍、最有力のMagicDec-Streamに対して1.15〜1.23倍の復号処理量を達成した。さらに96K〜120K語のLongBench-v2では最有力既存方式より18〜29%高い処理量となり、論文全体の最大値は既定vLLM比2.81倍、既存の疎注意型自己投機方式比1.29倍である。実務上の意味は、完全注意による正解性を維持したまま、長文で支配的になる鍵値キャッシュの読み出し回数を複数の受理候補語へ償却できる点にある。特に文脈が長いほど、検証時に既に得られた重要度を再利用する費用は相対的に小さくなり、独立した鍵値探索を毎候補語で行う方式との差が広がる。一方で短文脈や小一括数では注意読み出しが支配的でないため、候補生成の追加計算を回収できる条件を見極める必要がある。",
+    "key_results": [
+      {
+        "metric": "復号処理量",
+        "value": "1.25–2.70倍",
+        "baseline": "既定vLLM",
+        "condition": "AIME25/CodeElo、複数モデル",
+        "interpretation": "疎な自己投機で完全鍵値読み出し回数を削減。"
+      },
+      {
+        "metric": "復号処理量",
+        "value": "1.15–1.23倍",
+        "baseline": "MagicDec-Stream",
+        "condition": "AIME25/CodeElo",
+        "interpretation": "固定窓に近い低選択費を保ちながら候補受理精度を改善。"
+      },
+      {
+        "metric": "長文復号処理量",
+        "value": "18–29%向上",
+        "baseline": "最有力既存方式",
+        "condition": "LongBench-v2、96K–120K入力",
+        "interpretation": "文脈が長く鍵値帯域が支配的になるほど検証誘導選択の利点が拡大。"
+      },
+      {
+        "metric": "鍵値選択追加費",
+        "value": "5.9–9.4%",
+        "baseline": "理想的な選択費ゼロ反復",
+        "condition": "評価モデル群",
+        "interpretation": "2問い合わせ収集で問い合わせ依存選択の追加帯域を抑制。"
+      },
+      {
+        "metric": "全位置収集から2位置収集への精度差",
+        "value": "6.13→6.11 / 6.25→6.24 accepted tokens",
+        "baseline": "全候補位置のロジット収集",
+        "condition": "Qwen3-8B / gpt-oss-20b、γ=7、7%疎率",
+        "interpretation": "収集位置を大幅削減しても受理数はほぼ維持。"
+      },
+      {
+        "metric": "棄却候補を重要度推定から除外",
+        "value": "平均受理語数3–14%低下",
+        "baseline": "棄却候補も利用するVegas",
+        "condition": "γ=7、Qwen3-8Bとgpt-oss-20b",
+        "interpretation": "棄却語の注意様式にも将来重要度の有用情報がある。"
+      }
+    ],
+    "negative_results": "gpt-oss-20bは全注意層が半数しかなく、疎注意を適用できる範囲が狭いため自己投機方式全般の速度向上が小さい。短文脈・小一括数では鍵値読み出しが支配的でなく、Vegasの追加候補生成を償却できない。Qwen3-8BではAIME25で一括数8から利益が出る一方、LongBench-v2では一括数1から利益が出る。",
+    "interpretation": "重要鍵値を高精度に選ぶための独立した探索を毎回実行するのではなく、必須の完全注意検証から得られる情報を次反復へ再利用することで、精度の高い問い合わせ依存疎注意と固定方式に近い低費用を両立できる。",
+    "quality_impact": "自己投機復号の完全注意検証が候補を受理・訂正するため、疎注意は候補生成のみに使われ、最終出力分布は通常の完全注意生成と一致する。"
+  },
+  "reservation": {
+    "claim_id": "claim-a9d8c2cf570fd3b13fb6b628",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
