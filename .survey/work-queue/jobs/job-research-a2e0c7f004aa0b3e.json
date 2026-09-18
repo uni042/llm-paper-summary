@@ -17,5 +17,16 @@
   "created_at": "2026-09-18T01:07:45+00:00",
   "completed_at": "2026-09-18T02:12:39+00:00",
   "blocker": "一次資料の複数経路を確認した。検索サービス経由ではarXiv公式abstract（arXiv:2511.22333）の書誌・抄録を取得でき、ASPLOS 2026公式programで採択・著者情報、著者公式GitHub（flashserve/PAT）で実装公開とvLLM plugin情報も確認できた。しかしこの実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できず、ACM/ASPLOS側からも論文本文そのものには到達できなかった。alphaXiv等の二次的長文解説には評価詳細があるが、一次資料全文ではないため5-slotの科学的内容を補完していない。このattemptは一時的なprimary-source full-text retrieval failureとしてblockedで耐久保存し、全文未読の5-slotは生成しない。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-c3837abe3035158dff8a8ff1.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c3837abe3035158dff8a8ff1.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-18T02:12:39+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-18T02:12:39+00:00",
+      "reason": "一次資料の複数経路を確認した。検索サービス経由ではarXiv公式abstract（arXiv:2511.22333）の書誌・抄録を取得でき、ASPLOS 2026公式programで採択・著者情報、著者公式GitHub（flashserve/PAT）で実装公開とvLLM plugin情報も確認できた。しかしこの実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できず、ACM/ASPLOS側からも論文本文そのものには到達できなかった。alphaXiv等の二次的長文解説には評価詳細があるが、一次資料全文ではないため5-slotの科学的内容を補完していない。このattemptは一時的なprimary-source full-text retrieval failureとしてblockedで耐久保存し、全文未読の5-slotは生成しない。"
+    }
+  ],
+  "last_blocked_at": "2026-09-18T02:12:39+00:00",
+  "retry_not_before": "2026-09-18T05:00:36+00:00"
 }

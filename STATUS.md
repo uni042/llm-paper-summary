@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 12:59:42 JST**
+> 自動生成: **2026-09-18 13:01:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（55分前）** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（56分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **15** | **2** | **1** | **1** | **0** | **0** | **5** |
-| 合計 | **27** | **4** | **3** | **1** | **1** | **0** | **5** |
+| Discovery | **16** | **2** | **2** | **0** | **0** | **0** | **5** |
+| 合計 | **28** | **4** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -109,6 +109,10 @@
   - result: `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
   - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation
+- **09-18 12:59:37 JST** job `job-684aef3e77ab5ff6` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260918T1310JST-discovery-specialist-moe-cache-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json`
+  - 探索軸: MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
 - **09-18 11:04:08 JST** job `job-bf970c66df9bea3f` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260918T1028JST-discovery-d80f7c22.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
   - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
-- **09-18 10:07:55 JST** job `job-25709c76eaead837` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T1035JST-discovery-e19a4b63.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1035JST-discovery-e19a4b63.json`
-  - 探索軸: NVMe/SSD/object-storage KV offload
 
 ### 直近タスク
 
@@ -172,7 +172,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 12:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **5件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **5件**
 - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation / MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
 - round `specialist-heterogeneous-control-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
@@ -181,7 +181,7 @@
 - round `specialist-moe-cache-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json`
   - 探索軸: MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1310JST-discovery-specialist-moe-cache-2.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -238,10 +238,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **499** |
+| 成功result未照合のimmutable submission | **498** |
 | └ Research | **369** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 

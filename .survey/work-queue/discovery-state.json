@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T03:59:12+00:00",
+  "updated_at": "2026-09-18T03:59:37+00:00",
   "last_run_key": "2026-09-18T12:00:00+09:00",
-  "last_round": "specialist-heterogeneous-control-1",
+  "last_round": "specialist-moe-cache-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:55:54+09:00",
-      "round": "specialist-slo-data-movement-9",
-      "axis": "SLO budget・KV restoration/reconfiguration・adaptive prefill execution",
-      "query_summary": "KV reservation/admission軸から、SLO-aware data movementとprefill execution controlへ移動した。schedulerとmulti-tier KV、recompute/I-O overlap、adaptive chunking、fine-grained offload/preemptionを対象に一次arXiv情報で軽量評価し、最新mainで5件のcanonical IDが未収録であることを再確認した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る",
-      "source_submission": "work-queue/submissions/20260913T0216JST-discovery-5d7000d72e974f06.json"
-    },
     {
       "run_key": "2026-09-13T01:55:54+09:00",
       "round": "specialist-hardware-runtime-codesign-10",
@@ -6947,6 +6932,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年新着と、CXL/NVMe/SSD階層メモリの未走査集合へ移る",
       "source_submission": "work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json"
+    },
+    {
+      "run_key": "2026-09-18T12:00:00+09:00",
+      "round": "specialist-moe-cache-2",
+      "axis": "MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering",
+      "query_summary": "異種GPU servingからMoE expert cache/prefetchへ軸を変更し、2026年8-9月を中心に一次arXiv抄録を軽量評価した。MoE-Infinity等の既知基礎を候補化せず、2件のcanonical IDを最新default branchで再照合した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はagentic servingのstate/KV persistence、interruption/resumption、sandbox memoryへ移る",
+      "source_submission": "work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json"
     }
   ],
   "axes": {
@@ -11829,6 +11832,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年新着と、CXL/NVMe/SSD階層メモリの未走査集合へ移る"
+    },
+    "MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering": {
+      "last_run_key": "2026-09-18T12:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はagentic servingのstate/KV persistence、interruption/resumption、sandbox memoryへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
