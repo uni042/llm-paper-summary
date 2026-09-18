@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-80a2ded70f5038ea226f4ec9",
-  "job_id": "job-research-6c1a5d06d3b875ce",
+  "attempt_id": "attempt-73e778f4334326a6472d6105",
+  "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
-    "limitations": "進捗が存在しないremote API、人間入力待ち、最初のbyte前で停止するdownload等には適用できない。未知出力形式や内部単位を隠すbuild systemにはparserが必要で、現在のcoverageはcoding-agentで頻出するtool familyに偏る。verbose switch、dry run、生成コードへのinstrumentationは副経路で隠してもツール実行自体を変える可能性があり、完全な意味的非干渉を一般に保証しない。multi-phaseや不均一単位では割合を信頼できずweak signalへ降格する。エンドツーエンド評価は4×H100のvLLM replayであり、本番multi-tenant規模や他engineでの検証は未実施。不正report対策はpreliminary simulationであり、敵対的tenantへの強い保証はまだない。",
-    "differences": "Continuum、CacheWise、InferCeptはツール種別・引数・履歴から実行時間を予測し、TokenCakeやMooncake/SGLang/vLLM等のagent-aware提案は呼び出し前のdeclared durationを利用する。本研究はこれらの固定推定を、実行中に更新されるtool-originated progress streamへ置換する。MORIやConServeはengine側のoccupancy/idlenessを観測するがtool内部の作業進捗は見ない。ThunderAgent等のphase markerとも異なり、tool出力・filesystem・hook・生成コードから実作業量を読む。既存のMCP progress notificationやKV hint APIは通信機構を提供していたが、本研究はその間を結び、in-flightで更新可能なprogressをKV保持/offload/reloadの最初のserving-side consumerとして評価する。",
-    "implementation_status": "研究用ハーネス、progress parser/tap、controller、およびvLLMへの数百行規模のrefresh/release/query patchを実装し、4×H100で評価している。論文本文・arXivページでは専用公式コードリポジトリの公開を確認できないため、再現には実装詳細の再構築が必要。",
-    "research_positioning": "エージェント型LLM配信におけるtool-call idle window活用の系統で、KV cacheのplacement policyそのものより『判断に使う情報の観測面』を変更する研究である。予測精度改善競争を避け、tool execution planeからserving planeへの明示的progress channelを設けることで、階層メモリ、KV retention、prefetch/reload schedulingへ共通利用できる信号を作る。MCP等の標準進捗通知が普及すればハーネス依存を減らせるため、agent protocolとLLM serving systemの境界を接続する基盤的提案として位置付けられる。"
+    "limitations": "throughput測定はdecode forwardのみでprefillを除外するためend-to-end latencyを直接表さない。主評価は単一H100 NVLで、mixed draft/verify forwardをvLLM等の汎用continuous batching、chunked prefill、admission controlと統合する作業は将来課題。schedulerのtiming model係数はmodel/datasetのsample generation runtime traceからfitするため、hardware・batch regime変更時は再較正が必要。疎context selectionは7% budget等の設定に依存し、refresh layer full attentionはcontext長に比例する追加memory trafficを持つ。online schedulerはhindsight oracleに平均10.4%のgapが残る。",
+    "differences": "MagicDecはwindow-based sparse drafting、Vegasはverification tokenのattention scoreで疎contextを選ぶが、いずれもbatched executionをglobal draft/verify phaseへ同期させる。ASPIREは同一target-model invocationでdraftとverifyを混在させ、要求別にverification timingを選ぶ点が第一の差である。Vegas等はverification境界で疎contextを更新するためdraft中にstaleになるのに対し、ASPIREは各draft stepのpenultimate layerだけfull attentionして次stepのpagesを更新する。通常のvLLM asynchronous schedulingはrequest-level concurrencyを扱うが、ASPIREは一つのbatched target-model forward内部でspeculation roleを非同期化する別の同期境界を対象とする。",
+    "implementation_status": "COLM 2026採択。公式コード https://github.com/Amir-zsh/ASPIRE とプロジェクトページを公開。PyTorch/FlashInferベースでH100 NVL上の実測評価を行い、TP評価も含む。汎用production serving engineへの完全統合は未完了。",
+    "research_positioning": "長文脈推論のmemory-bound attentionをself-speculative decodingで緩和する系統に属するが、draft modelや単一requestのacceptance改善ではなく、batched serving時の同期制約を主要対象にする。要求別schedulerをmixed forwardへ直接結びつけるため、speculative decodingとcontinuous batching/schedulingの境界を跨ぐ研究であり、長文脈ほどbatch内heterogeneityのコストが増えることを定量化している。"
   },
   "reservation": {
-    "claim_id": "claim-80a2ded70f5038ea226f4ec9",
+    "claim_id": "claim-73e778f4334326a6472d6105",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
