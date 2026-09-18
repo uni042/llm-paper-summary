@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-fa2024c0d558cd54b9908dbc","job_id":"job-research-61cb466957462432","data":{"overview":"BigMoMoは4種類の21〜30B級MoE、5ベンチマーク、2主要モバイル基盤の全組合せで最小TPOTを示し、オンデマンド自己回帰オフロード比で平均4.83倍、投機+オンデマンド比で3.00倍、最良の投機対応MoE比較方式比で1.76倍高速化した。Qwen3-30B-A3Bでは最良比較方式の露出エキスパート移動待ち142.41ms/tokenを13.62ms/tokenへ削減し、性能改善の中心が移動待ち除去にあることを示す。","key_results":[{"metric":"平均TPOT高速化","value":"4.83x / 3.00x / 1.76x","baseline":"OnDemand / SD-OnDemand / best of SpecMoEOff, SP-MoE, MoE-SpAc","condition":"4 MoEモデル×5ベンチマーク、Snapdragon 8 Elite Gen 5と8 Gen 3","interpretation":"投機窓をエキスパート移動の共同最適化へ使うことで、単純投機や既存の投機対応オフロードより一貫して短い復号時間を得る。"},{"metric":"モデル別best-baseline比TPOT高速化","value":"1.73x Qwen3 / 1.47x LFM2 / 1.80x Gemma4 / 2.03x ERNIE4.5","baseline":"各構成で最良の投機対応MoE比較方式","condition":"5ベンチマーク平均","interpretation":"エキスパート数・Top-k・共有エキスパート構造が異なる4モデルで改善が残る。"},{"metric":"露出エキスパート移動待ち","value":"142.41→13.62 ms/token","baseline":"best baseline","condition":"Qwen3-30B-A3B、Snapdragon 8 Elite Gen 5。SD-OnDemandは237.86ms/token","interpretation":"計算時間よりもフラッシュ・写像・VTCM準備の待ちを重畳できたことが主要な高速化要因。"},{"metric":"移動許可の削減効果","value":"TPOT 23% reduction","baseline":"no pruning","condition":"ノード削減後にエキスパート削減を追加。検証ノード0.86、エキスパート要求0.59へ減少","interpretation":"受理されにくい候補と移動費用の高い低影響エキスパートを除くことで、投機が生む無駄なI/Oを抑える。"},{"metric":"実行時フラッシュ配置","value":"read requests/token 15.06% reduction; effective bandwidth 1.23x","baseline":"offline co-activation organization","condition":"4対象MoE平均","interpretation":"直近の実際の同時ロード集合へ配置を追従させることで、固定配置より連続UFS読出しを増やす。"},{"metric":"HTP utilization","value":"18.96–45.03% → 83.78–98.30%","baseline":"全エキスパート準備待ちのdefault execution","condition":"VTCM二重バッファ+階層横断スケジューリング","interpretation":"準備済みエキスパートを先に計算し、残り移動をHMX計算へ重ねることでNPU空転を大幅に減らす。"},{"metric":"3端末横断best-baseline比高速化","value":"1.82x OnePlus 15 / 1.73x OnePlus 13 / 1.78x OnePlus Ace 5","baseline":"best speculative MoE baseline","condition":"異なるSnapdragon世代・DRAM容量・UFS構成","interpretation":"端末世代が変わっても効果が残るが、DRAMが大きくフラッシュ常駐エキスパートが減る端末では改善余地がやや小さい。"}],"negative_results":"投機木を大きくすれば常に速くなるわけではなく、下書き長2・分岐幅2でTPOT 304.4ms/tokenが最小、4・4では493.1ms/tokenへ悪化する。NPU写像バッファへ常駐させるエキスパートも多いほど良いわけではなく、OnePlus 15では24個が最良で、それ以上はHVXが使う注意重みとのバッファ競合によりTPOTが増える。フラッシュ再配置は出力1トークン当たり13.42MiBの書込みを追加し、通常読出し量の4.04%に相当する。","interpretation":"単一トークンでは重み移動1回に対する計算が小さすぎるが、投機検証窓なら同じエキスパートを複数候補で共有でき、複数I/O要求を同時に観測でき、NPU計算時間も長くなる。この三つをそれぞれ許可制御・配置・階層横断スケジューリングへ結び付けることで、移動を減らすだけでなく残った移動を隠している。","quality_impact":"候補ノード削減ではGSM8K 90.70、HumanEval 89.60、MMLU-Pro 69.70が表示精度で不変。エキスパート削減を加えると90.57、89.55、69.52となり、それぞれ0.13、0.05、0.18ポイント低下する。したがって高速化の一部は近似的なエキスパート混合との小さな品質交換を含む。"},"reservation":{"claim_id":"claim-fa2024c0d558cd54b9908dbc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5e14ce9ab5f740202d8cecb7",
+  "job_id": "job-research-61cb466957462432",
+  "data": {
+    "overview": "BigMoMoは4種類の21〜30B級MoE、5ベンチマーク、2主要モバイル基盤の全組合せで最小TPOTを示し、オンデマンド自己回帰オフロード比で平均4.83倍、投機+オンデマンド比で3.00倍、最良の投機対応MoE比較方式比で1.76倍高速化した。Qwen3-30B-A3Bでは最良比較方式の露出エキスパート移動待ち142.41ms/tokenを13.62ms/tokenへ削減し、性能改善の中心が移動待ち除去にあることを示す。",
+    "key_results": [
+      {
+        "metric": "平均TPOT高速化",
+        "value": "4.83x / 3.00x / 1.76x",
+        "baseline": "OnDemand / SD-OnDemand / best of SpecMoEOff, SP-MoE, MoE-SpAc",
+        "condition": "4 MoEモデル×5ベンチマーク、Snapdragon 8 Elite Gen 5と8 Gen 3",
+        "interpretation": "投機窓をエキスパート移動の共同最適化へ使うことで、単純投機や既存の投機対応オフロードより一貫して短い復号時間を得る。"
+      },
+      {
+        "metric": "モデル別best-baseline比TPOT高速化",
+        "value": "1.73x Qwen3 / 1.47x LFM2 / 1.80x Gemma4 / 2.03x ERNIE4.5",
+        "baseline": "各構成で最良の投機対応MoE比較方式",
+        "condition": "5ベンチマーク平均",
+        "interpretation": "エキスパート数・Top-k・共有エキスパート構造が異なる4モデルで改善が残る。"
+      },
+      {
+        "metric": "露出エキスパート移動待ち",
+        "value": "142.41→13.62 ms/token",
+        "baseline": "best baseline",
+        "condition": "Qwen3-30B-A3B、Snapdragon 8 Elite Gen 5。SD-OnDemandは237.86ms/token",
+        "interpretation": "計算時間よりもフラッシュ・写像・VTCM準備の待ちを重畳できたことが主要な高速化要因。"
+      },
+      {
+        "metric": "移動許可の削減効果",
+        "value": "TPOT 23% reduction",
+        "baseline": "no pruning",
+        "condition": "ノード削減後にエキスパート削減を追加。検証ノード0.86、エキスパート要求0.59へ減少",
+        "interpretation": "受理されにくい候補と移動費用の高い低影響エキスパートを除くことで、投機が生む無駄なI/Oを抑える。"
+      },
+      {
+        "metric": "実行時フラッシュ配置",
+        "value": "read requests/token 15.06% reduction; effective bandwidth 1.23x",
+        "baseline": "offline co-activation organization",
+        "condition": "4対象MoE平均",
+        "interpretation": "直近の実際の同時ロード集合へ配置を追従させることで、固定配置より連続UFS読出しを増やす。"
+      },
+      {
+        "metric": "HTP utilization",
+        "value": "18.96–45.03% → 83.78–98.30%",
+        "baseline": "全エキスパート準備待ちのdefault execution",
+        "condition": "VTCM二重バッファ+階層横断スケジューリング",
+        "interpretation": "準備済みエキスパートを先に計算し、残り移動をHMX計算へ重ねることでNPU空転を大幅に減らす。"
+      },
+      {
+        "metric": "3端末横断best-baseline比高速化",
+        "value": "1.82x OnePlus 15 / 1.73x OnePlus 13 / 1.78x OnePlus Ace 5",
+        "baseline": "best speculative MoE baseline",
+        "condition": "異なるSnapdragon世代・DRAM容量・UFS構成",
+        "interpretation": "端末世代が変わっても効果が残るが、DRAMが大きくフラッシュ常駐エキスパートが減る端末では改善余地がやや小さい。"
+      }
+    ],
+    "negative_results": "投機木を大きくすれば常に速くなるわけではなく、下書き長2・分岐幅2でTPOT 304.4ms/tokenが最小、4・4では493.1ms/tokenへ悪化する。NPU写像バッファへ常駐させるエキスパートも多いほど良いわけではなく、OnePlus 15では24個が最良で、それ以上はHVXが使う注意重みとのバッファ競合によりTPOTが増える。フラッシュ再配置は出力1トークン当たり13.42MiBの書込みを追加し、通常読出し量の4.04%に相当する。",
+    "interpretation": "単一トークンでは重み移動1回に対する計算が小さすぎるが、投機検証窓なら同じエキスパートを複数候補で共有でき、複数I/O要求を同時に観測でき、NPU計算時間も長くなる。この三つをそれぞれ許可制御・配置・階層横断スケジューリングへ結び付けることで、移動を減らすだけでなく残った移動を隠している。",
+    "quality_impact": "候補ノード削減ではGSM8K 90.70、HumanEval 89.60、MMLU-Pro 69.70が表示精度で不変。エキスパート削減を加えると90.57、89.55、69.52となり、それぞれ0.13、0.05、0.18ポイント低下する。したがって高速化の一部は近似的なエキスパート混合との小さな品質交換を含む。"
+  },
+  "reservation": {
+    "claim_id": "claim-5e14ce9ab5f740202d8cecb7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

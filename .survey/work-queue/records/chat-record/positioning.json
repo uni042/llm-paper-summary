@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-fa2024c0d558cd54b9908dbc","job_id":"job-research-61cb466957462432","data":{"limitations":"対象はQualcomm Hexagon NPUとUFSフラッシュを持つ3台のOnePlus端末であり、Apple Neural Engine、MediaTek、GPU中心のモバイル実行系へ同じ効果が出るかは未評価。既存SpecMoEOff/SP-MoE/MoE-SpAcは著者が同一バックエンドへアルゴリズムを再実装しており、元システムの最適化済み実装との直接比較ではない。エキスパート削減は対象モデルの厳密な計算を変える近似で、評価上の品質低下は最大0.18ポイントと小さいが、未評価タスクや分布外入力での影響は不明。配置最適化はフラッシュへ追加書込みを発生させ、長期的な書込み耐久性やエネルギー消費は評価していない。最適な投機木サイズ・常駐エキスパート数は資源競合に依存し、単調には改善しない。","differences":"従来のMoEオフロードは単一トークンのルーティング後に必要エキスパートをロードし、キャッシュや先読みで移動を隠す。SpecMoEOff等は投機的復号を使って移動再利用や先読みを増やすが、BigMoMoはモバイル固有のフラッシュ不連続読出しとNPU多段準備まで含めて、投機窓を三つの階層最適化へ使う。MoE-Specのような検証時エキスパート容量制約に対しては、受理確率だけでなくルータ影響と現在の階層別移動費用を組み合わせて削減順を決める。固定の共起配置に対しては実行時に実際に同時ロードされた集合へフラッシュ配置を漸進追従させ、全エキスパート準備後にNPUを起動する方式に対しては到着済み群から計算を開始する。","implementation_status":"llama.cppのHexagon NPUバックエンドを基盤に約5,000行追加した研究実装で、市販Android端末のTermux上で直接評価されている。論文本文では実装の公開リポジトリURLを確認できず、現時点で公開コードの有無は未確認。","research_positioning":"MoEエキスパートの階層メモリ管理と投機的復号を結ぶ研究で、特にフラッシュを実際の下位記憶層として使う点が重要。サーバ向けCPU/GPUオフロードでは比較的単純だった『重みが計算可能になるまで』を、フラッシュ読出し、DRAM常駐、NPU写像、VTCM転送・逆量子化、HMX計算へ分解し、投機窓で各段を共同スケジュールする。SSD/NVMeを使うMoE推論研究に対しても、複数トークンの将来需要を束ねて連続I/Oと計算重畳へ変換する設計例として関連が強い。"},"reservation":{"claim_id":"claim-fa2024c0d558cd54b9908dbc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5e14ce9ab5f740202d8cecb7",
+  "job_id": "job-research-61cb466957462432",
+  "data": {
+    "limitations": "対象はQualcomm Hexagon NPUとUFSフラッシュを持つ3台のOnePlus端末であり、Apple Neural Engine、MediaTek、GPU中心のモバイル実行系へ同じ効果が出るかは未評価。既存SpecMoEOff/SP-MoE/MoE-SpAcは著者が同一バックエンドへアルゴリズムを再実装しており、元システムの最適化済み実装との直接比較ではない。エキスパート削減は対象モデルの厳密な計算を変える近似で、評価上の品質低下は最大0.18ポイントと小さいが、未評価タスクや分布外入力での影響は不明。配置最適化はフラッシュへ追加書込みを発生させ、長期的な書込み耐久性やエネルギー消費は評価していない。最適な投機木サイズ・常駐エキスパート数は資源競合に依存し、単調には改善しない。",
+    "differences": "従来のMoEオフロードは単一トークンのルーティング後に必要エキスパートをロードし、キャッシュや先読みで移動を隠す。SpecMoEOff等は投機的復号を使って移動再利用や先読みを増やすが、BigMoMoはモバイル固有のフラッシュ不連続読出しとNPU多段準備まで含めて、投機窓を三つの階層最適化へ使う。MoE-Specのような検証時エキスパート容量制約に対しては、受理確率だけでなくルータ影響と現在の階層別移動費用を組み合わせて削減順を決める。固定の共起配置に対しては実行時に実際に同時ロードされた集合へフラッシュ配置を漸進追従させ、全エキスパート準備後にNPUを起動する方式に対しては到着済み群から計算を開始する。",
+    "implementation_status": "llama.cppのHexagon NPUバックエンドを基盤に約5,000行追加した研究実装で、市販Android端末のTermux上で直接評価されている。論文本文では実装の公開リポジトリURLを確認できず、現時点で公開コードの有無は未確認。",
+    "research_positioning": "MoEエキスパートの階層メモリ管理と投機的復号を結ぶ研究で、特にフラッシュを実際の下位記憶層として使う点が重要。サーバ向けCPU/GPUオフロードでは比較的単純だった『重みが計算可能になるまで』を、フラッシュ読出し、DRAM常駐、NPU写像、VTCM転送・逆量子化、HMX計算へ分解し、投機窓で各段を共同スケジュールする。SSD/NVMeを使うMoE推論研究に対しても、複数トークンの将来需要を束ねて連続I/Oと計算重畳へ変換する設計例として関連が強い。"
+  },
+  "reservation": {
+    "claim_id": "claim-5e14ce9ab5f740202d8cecb7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
