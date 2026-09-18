@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 21:33:58 JST**
+> 自動生成: **2026-09-18 21:34:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **50** |
-| 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-18 21:08:10 JST（25分前）** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-18 21:34:16 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **8** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **22** | **11** | **11** | **0** | **0** | **0** | **14** |
-| 合計 | **29** | **13** | **13** | **0** | **1** | **0** | **14** |
+| 合計 | **30** | **12** | **12** | **0** | **0** | **0** | **14** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 21:34:16 JST** [research] `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-7fcd5e4f3604dab7.json`
+  - result: `.survey/work-queue/results/research/attempt-292079eab3cc522a1a9de5d7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-292079eab3cc522a1a9de5d7.json`
+  - paper: `papers/inference/05-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md`
 - **09-18 21:08:10 JST** [research] `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents
   - job: `.survey/work-queue/jobs/job-research-abd379cf035bd8f0.json`
   - result: `.survey/work-queue/results/research/attempt-8bc32c98f4efa2a4da6345d3.json` (`ok=true`)
@@ -135,22 +140,17 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
-- **成功** `arXiv:2609.14643` — BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices
-  - job: `.survey/work-queue/jobs/job-research-61cb466957462432.json`
-  - result: `.survey/work-queue/results/research/attempt-5e14ce9ab5f740202d8cecb7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5e14ce9ab5f740202d8cecb7.json`
-  - paper: `papers/inference/moe/2609.14643.md`
-- **成功** `arXiv:2607.02525` — PEEK: Predictive Queue-Informed KV Cache Management for LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-455581782889dbd1.json`
-  - result: `.survey/work-queue/results/research/attempt-71d88f013604453cc1c44327.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-71d88f013604453cc1c44327.json`
-  - paper: `papers/inference/scheduling/2607.02525.md`
+- 最新観測run: **2026-09-18 19:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-7fcd5e4f3604dab7.json`
+  - result: `.survey/work-queue/results/research/attempt-292079eab3cc522a1a9de5d7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-292079eab3cc522a1a9de5d7.json`
+  - paper: `papers/inference/05-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 19:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -204,10 +204,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 20:28:41 JST** / heartbeat: **—** / lease expiry: **09-18 21:58:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7fcd5e4f3604dab7.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -227,7 +225,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,7 +245,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **715** |
+| inference/training/survey配下の論文Markdown実体 | **716** |
 
 ### immutable submissionの未照合
 
