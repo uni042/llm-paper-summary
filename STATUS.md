@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:30:20 JST**
+> 自動生成: **2026-09-18 09:30:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -209,9 +209,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.14575` — HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:29:51 JST** / heartbeat: **—** / lease expiry: **09-18 10:59:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-60a904da0b8faa84.json`
+- `arXiv:2505.22618` — Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:30:27 JST** / heartbeat: **—** / lease expiry: **09-18 11:00:27 JST**
+  - evidence: `.survey/work-queue/claims/job-research-99d754a688aca9c8.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
