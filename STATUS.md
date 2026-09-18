@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:05:46 JST**
+> 自動生成: **2026-09-18 20:08:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **50** |
+| 収録候補論文 | **55** |
+| 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（58分前）** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **11** | **2** | **9** | **0** | **0** | **14** |
-| 合計 | **26** | **13** | **4** | **9** | **0** | **0** | **14** |
+| Discovery | **26** | **11** | **11** | **0** | **0** | **0** | **14** |
+| 合計 | **35** | **13** | **13** | **0** | **0** | **0** | **14** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -108,38 +108,38 @@
   - result: `.survey/work-queue/results/20260918T2008JST-discovery-specialist-serving-measurement-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json`
   - 探索軸: serving measurement・replicated KV correctness・production workflow・MoE routing prediction
-- **09-18 16:59:19 JST** job `job-5c2166c716255464` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T1657JST-discovery-specialist-late-sep-storage-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1657JST-discovery-specialist-late-sep-storage-1.json`
-  - 探索軸: 2026年9月後半新着・SSD/NVMe/CXL・MoE expert prefetch・KV transport
-- **09-18 17:01:36 JST** job `job-0cb28894ab861300` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T1659JST-discovery-specialist-moe-backward-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1659JST-discovery-specialist-moe-backward-2.json`
-  - 探索軸: MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling
-- **09-18 17:01:46 JST** job `job-bf8b2b888ef8e96f` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T1701JST-discovery-specialist-kv-metadata-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1701JST-discovery-specialist-kv-metadata-3.json`
-  - 探索軸: KV cache metadata・RDMA・分離サービングnetwork transport
-- **09-18 17:01:56 JST** job `job-27c84efbe30148e1` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T1703JST-discovery-specialist-ondevice-npu-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1703JST-discovery-specialist-ondevice-npu-4.json`
-  - 探索軸: 2024-2025 on-device heterogeneous CPU/GPU/NPU offload
-- **09-18 16:01:25 JST** job `job-46c92d11d4e3d7f9` / 候補 **2件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
-  - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
-- **09-18 16:03:50 JST** job `job-bb4198ed318d485b` / 候補 **3件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r2.json`
-  - 探索軸: CXL共有メモリ・NVMe KVキャッシュ
-- **09-18 16:03:57 JST** job `job-cfae50e810afb638` / 候補 **3件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r3.json`
-  - 探索軸: MoE expert placement・offload・heterogeneous runtime
-- **09-18 16:04:03 JST** job `job-58a8014d8c04bb84` / 候補 **4件**
-  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r4.json`
-  - 探索軸: edge MoE・expert prefetch・Flash/NPU・distributed routing
+- **09-18 20:05:47 JST** job `job-86a761ccdc72a4aa` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260918T2014JST-discovery-specialist-august-systems-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2014JST-discovery-specialist-august-systems-3.json`
+  - 探索軸: 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload
+- **09-18 20:05:53 JST** job `job-262b4d80e25831ae` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2021JST-discovery-specialist-2025-memory-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2021JST-discovery-specialist-2025-memory-4.json`
+  - 探索軸: 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload
+- **09-18 20:06:00 JST** job `job-e898bc3612b44242` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2025JST-discovery-specialist-kv-remap-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2025JST-discovery-specialist-kv-remap-5.json`
+  - 探索軸: 2025 KV parameter remapping・CPU-light offload・multi-tenant memory
+- **09-18 20:06:07 JST** job `job-71af74bc26ccde14` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260918T2029JST-discovery-specialist-cxl-edram-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2029JST-discovery-specialist-cxl-edram-6.json`
+  - 探索軸: CXL rack-scale KV transport・eDRAM KV co-design・edge memory
+- **09-18 20:06:13 JST** job `job-905a3cc1e83641b8` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2033JST-discovery-specialist-legacy-cache-7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2033JST-discovery-specialist-legacy-cache-7.json`
+  - 探索軸: 2024 personal-machine MoE cache・2025 multimodal KV compression serving
+- **09-18 20:06:20 JST** job `job-c804efd389c67ae1` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2036JST-discovery-specialist-network-kv-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2036JST-discovery-specialist-network-kv-8.json`
+  - 探索軸: distributed KV networking・SmartNIC・CXL transfer
+- **09-18 20:06:27 JST** job `job-9231fb439db812a1` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2038JST-discovery-specialist-scheduling-saturation-9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2038JST-discovery-specialist-scheduling-saturation-9.json`
+  - 探索軸: operator autoscaling・SLO-aware scheduling・phase-aware power control
+- **09-18 20:06:34 JST** job `job-6812e2190fca4972` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T2040JST-discovery-specialist-specdecode-saturation-10.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T2040JST-discovery-specialist-specdecode-saturation-10.json`
+  - 探索軸: 最新batched speculative decoding・VLM block drafting・KV repair
 
 ### 直近タスク
 
@@ -167,7 +167,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 20:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **9件** / 候補: **14件**
+- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **11件** / 個別result照合: **11件** / 個別result未照合: **0件** / 候補: **14件**
 - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction / 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload / 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload / 2025 KV parameter remapping・CPU-light offload・multi-tenant memory / CXL rack-scale KV transport・eDRAM KV co-design・edge memory / 2024 personal-machine MoE cache・2025 multimodal KV compression serving / distributed KV networking・SmartNIC・CXL transfer / operator autoscaling・SLO-aware scheduling・phase-aware power control / 最新batched speculative decoding・VLM block drafting・KV repair / 2026前半SmartSSD・MoE speculative expert・CPU-free SmartNIC・NVL72 remote expert
 - round `specialist-memory-specdecode-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
@@ -180,35 +180,35 @@
 - round `specialist-august-systems-3` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260918T2014JST-discovery-specialist-august-systems-3.json`
   - 探索軸: 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2014JST-discovery-specialist-august-systems-3.json` (`ok=true`)
 - round `specialist-2025-memory-4` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2021JST-discovery-specialist-2025-memory-4.json`
   - 探索軸: 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2021JST-discovery-specialist-2025-memory-4.json` (`ok=true`)
 - round `specialist-kv-remap-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2025JST-discovery-specialist-kv-remap-5.json`
   - 探索軸: 2025 KV parameter remapping・CPU-light offload・multi-tenant memory
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2025JST-discovery-specialist-kv-remap-5.json` (`ok=true`)
 - round `specialist-cxl-edram-6` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T2029JST-discovery-specialist-cxl-edram-6.json`
   - 探索軸: CXL rack-scale KV transport・eDRAM KV co-design・edge memory
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2029JST-discovery-specialist-cxl-edram-6.json` (`ok=true`)
 - round `specialist-legacy-cache-7` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2033JST-discovery-specialist-legacy-cache-7.json`
   - 探索軸: 2024 personal-machine MoE cache・2025 multimodal KV compression serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2033JST-discovery-specialist-legacy-cache-7.json` (`ok=true`)
 - round `specialist-network-kv-8` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2036JST-discovery-specialist-network-kv-8.json`
   - 探索軸: distributed KV networking・SmartNIC・CXL transfer
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2036JST-discovery-specialist-network-kv-8.json` (`ok=true`)
 - round `specialist-scheduling-saturation-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2038JST-discovery-specialist-scheduling-saturation-9.json`
   - 探索軸: operator autoscaling・SLO-aware scheduling・phase-aware power control
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2038JST-discovery-specialist-scheduling-saturation-9.json` (`ok=true`)
 - round `specialist-specdecode-saturation-10` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2040JST-discovery-specialist-specdecode-saturation-10.json`
   - 探索軸: 最新batched speculative decoding・VLM block drafting・KV repair
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T2040JST-discovery-specialist-specdecode-saturation-10.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -235,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -263,10 +263,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **529** |
+| 成功result未照合のimmutable submission | **520** |
 | └ Research | **391** |
 | └ Audit | **2** |
-| └ Discovery | **136** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
