@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-795dba1598f051e075af3ec9",
+  "attempt_id": "attempt-29348de66411f1087b13d3e2",
   "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
     "overview": "Sparse-dLLMは、拡散型大規模言語モデルの反復注意で毎回すべての鍵値を保持・参照する必要がないことを実験で示し、重要トークンだけを残す双方向疎キャッシュによって処理量を大きく改善する。LLaDA系列では平均約3.4倍、Dream系列では平均約3.6倍の処理量向上を得て、4千トークン級の長文脈では通常の拡散復号に対して最大10倍まで高速化する。一方でピークメモリは通常方式に近く、LongBenchや一般課題の精度も概ね維持するため、単なる計算削減ではなく長文脈拡散推論の計算量とメモリ量を同時に抑える実用的な方策である。ただしコード生成では重要トークンの誤破棄による低下があり、完全に無損失な方式ではない。",
@@ -48,8 +48,8 @@
     "quality_impact": "LLaDAでは平均精度が通常復号59.24に対して59.86、LLaDA-1.5では60.90に対して60.99とほぼ同等である。Dreamも平均では概ね同等だがHumanEvalで低下があり、方式は完全な無損失ではない。"
   },
   "reservation": {
-    "claim_id": "claim-795dba1598f051e075af3ec9",
-    "worker_id": "scheduled-chat-discovery-routing",
+    "claim_id": "claim-29348de66411f1087b13d3e2",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

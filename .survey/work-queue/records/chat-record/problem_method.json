@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-795dba1598f051e075af3ec9",
+  "attempt_id": "attempt-29348de66411f1087b13d3e2",
   "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
     "problem": "拡散型大規模言語モデルは、複数のマスク位置を反復的に復元する各段階で長い系列全体へ注意計算を繰り返すため、系列長が伸びるほど鍵値読出しと注意計算が急増する。既存の拡散型LLM向けキャッシュ法は隣接段階で似た鍵値を再利用するが、全層・全系列の鍵値を保持すると長文脈でメモリ負荷が大きく、重要でないトークンまで注意対象に残る。Sparse-dLLMは再利用対象そのものを注意重要度で疎化し、計算量とキャッシュ量を同時に削減する。",
@@ -29,8 +29,8 @@
     "system_design": "既存の拡散型LLMのブロック復号へキャッシュ方策として挿入し、モデル重みや学習手順は変更しない。各ブロックで全注意による初期化、一段階後の重要度推定、前後両領域からの鍵値上位選択、疎キャッシュ再利用、ブロック終了時の破棄を繰り返す。これにより注意対象トークン数、鍵値保持量、反復的なメモリ読出しを同時に減らす。"
   },
   "reservation": {
-    "claim_id": "claim-795dba1598f051e075af3ec9",
-    "worker_id": "scheduled-chat-discovery-routing",
+    "claim_id": "claim-29348de66411f1087b13d3e2",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
