@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 19:03:18 JST**
+> 自動生成: **2026-09-18 19:03:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -210,9 +210,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.19707` — InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 19:02:50 JST** / heartbeat: **—** / lease expiry: **09-18 20:32:50 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2afdd6d968c4500a.json`
+- `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 19:03:27 JST** / heartbeat: **—** / lease expiry: **09-18 20:33:27 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ebde0cc040167968.json`
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **09-18 18:32:58 JST** / lease expiry: **09-18 20:02:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
