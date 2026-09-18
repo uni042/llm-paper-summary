@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:05:20.664167+00:00",
+  "updated_at": "2026-09-18T18:07:31.301305+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:05:20.664167+00:00",
+      "last_recorded_at": "2026-09-18T18:07:31.301305+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 261,
+        "research_completed": 262,
         "audit_completed": 0,
         "discovery_completed": 147,
         "blocked": 29,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35291404525:1",
-          "recorded_at": "2026-09-18T00:29:39.696964+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35291404525",
-            "run_attempt": "1",
-            "source_sha": "a84ee2e37a01fdbf56fc7c1b65c6e78c2fea7ea5"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35292050172:1",
           "recorded_at": "2026-09-18T00:38:56.480495+00:00",
@@ -19597,6 +19583,20 @@
             "run_id": "35378085740",
             "run_attempt": "1",
             "source_sha": "53fe2ea99837deda4877cc167d00afb64b1b9fd4"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35378280644:1",
+          "recorded_at": "2026-09-18T18:07:31.301305+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35378280644",
+            "run_attempt": "1",
+            "source_sha": "06d1316610ab3e3a44751d85516b9499a7302b47"
           },
           "signals": [
             "research_completed"
@@ -23097,6 +23097,14 @@
           "type": "research",
           "canonical_id": "arXiv:2511.07035",
           "title": "GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-9d3c210288b42eb4",
+          "type": "research",
+          "canonical_id": "arXiv:2505.16056",
+          "title": "Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models",
           "from": "ready",
           "to": "completed"
         }
