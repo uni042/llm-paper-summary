@@ -1,0 +1,10 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2609.00097","title":"Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding","source_url":"https://arxiv.org/abs/2609.00097","paper_path":"papers/inference/03-kv-cache/2026-2609.00097-faster-flash-decoding-sparse-attention-kernel.md","priority":91,"reason":"Fused selector/compute sparse-attention kernel avoids external metadata and reports up to 11.6x kernel speedup and 2.37x end-to-end throughput for long-context decoding."},
+  {"canonical_id":"arXiv:2604.23467","title":"Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference","source_url":"https://arxiv.org/abs/2604.23467","paper_path":"papers/inference/99-other-inference-systems/2026-2604.23467-hybrid-jit-cuda-graph-llm-inference.md","priority":82,"reason":"Hybrid JIT/CUDA Graph runtime partitions static/dynamic decode execution and reports up to 66% TTFT reduction; useful runtime-design omission."},
+  {"canonical_id":"arXiv:2511.22333","title":"PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel","source_url":"https://arxiv.org/abs/2511.22333","paper_path":"papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md","priority":87,"reason":"Prefix-aware decode-attention kernel reduces repeated shared-prefix KV loads and integrates as a vLLM plugin; reports large attention/TPOT reductions."}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-gpu-kernel-runtime-4","axis":"GPU attention kernel・CUDA Graph・runtime fusion","query_summary":"9月新着kernel検索を起点にCUDA Graph、prefix-aware attentionへcitation/adjacent queryを拡張。軽量abstractを再利用しsystems実装とend-to-end評価のある候補に限定。","candidate_count":3,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"次はSSD/NVMe・storage-centric KV・GPU-direct I/Oの過去/新着欠落へ移る","empty_round_reason":null}
+}
