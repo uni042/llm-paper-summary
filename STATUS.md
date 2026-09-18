@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:31:32 JST**
+> 自動生成: **2026-09-18 16:32:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -184,9 +184,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.19707` — InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 15:31:03 JST** / heartbeat: **—** / lease expiry: **09-18 17:01:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2afdd6d968c4500a.json`
+- `arXiv:2609.14643` — BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 16:31:51 JST** / heartbeat: **—** / lease expiry: **09-18 18:01:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-61cb466957462432.json`
 
 #### Audit
 
