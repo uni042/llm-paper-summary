@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-854ec831672b054b5c8ebfe2",
-  "job_id": "job-research-c2f58815c322fab7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-854ec831672b054b5c8ebfe2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-854ec831672b054b5c8ebfe2","job_id":"job-research-c2f58815c322fab7","data":{"limitations":"現実装のcontrol layerは中央集約型batch schedulerから単一inference backendへ接続する構成で、multi-GPU/multi-node分散時のload balancing、KvPage配置・移動、end-to-end SLO、fault toleranceは未解決である。利用者inferletへネットワークI/Oとtoken distributionアクセスを許すため、side-channel、resource exhaustion、jailbreak/model extraction支援等の攻撃面が広がり、capability-based I/O、rate limit/quota、logit露出制限等のhardeningが必要。Transformer向け細粒度APIは表現力と引き換えにプログラミング複雑性を増し、通常生成ではpipeline fusionを失うオーバーヘッドもある。既存vLLM/SGLangへ後付けするにはruntime、低水準資源API、API単位batch schedulerの大幅な構造変更が必要である。","differences":"vLLM/TGIはprompt要求を固定prefill-decode loopへ載せ、KVやsamplingをsystem-wide policyで扱うのに対し、Pieはprogramをサービス単位にして要求ごとに生成過程自体を変更できる。SGLang/Parrot等もLLM program抽象を提供するが、著者らの整理では基礎の生成loopは依然モノリシックで、Pieほどtokenization、attention、KV、sampling、I/Oを段階ごとに制御しない。LMQL/Guidance/Outlines/XGrammar等は主に生成結果の制約を記述するのに対し、Pieは生成の『何を』だけでなく『どのように実行するか』をTuring完全なinferletで制御する。AICIもWasmを利用するが、PieはKV資源とserving-level batching/I/Oまで対象を広げる。","implementation_status":"SOSP 2025査読済み論文で、公式実装はpie-project/pieとして公開されている。論文はartifact available / functional / results reproducedのACM badgeを掲示する。実装はWasm application layer、control layer、inference layer、42 API、support libraryからなり、NVIDIA L4上で実システム評価されている。","research_positioning":"LLM serving研究の中でPieはschedulerやcache policyを一つ改善する方式ではなく、アプリケーションとserving runtimeの境界を再定義するprogrammability-first系統に位置付く。特にagentic servingでは、外部tool orchestrationとKV lifetimeを同じinferletへ置くことで、client round-tripと再prefillを構造的に除去する。KV cache研究との接点では、PagedAttention型ページを単なるsystem-managed allocation unitではなくapplication-visible resourceへ引き上げ、明示的な共有・mask・寿命制御を可能にした点が重要である。"},"reservation":{"claim_id":"claim-854ec831672b054b5c8ebfe2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
