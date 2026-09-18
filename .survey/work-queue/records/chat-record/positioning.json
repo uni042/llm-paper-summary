@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-292079eab3cc522a1a9de5d7",
-  "job_id": "job-research-7fcd5e4f3604dab7",
-  "data": {
-    "limitations": "HBF-1/HBF-2は2028/2030ロードマップ構成をモデル化したもので実製品実測ではない。完全構成比較ではHBF導入と同時に近接層の容量と帯域がともに変わるため、その2要因の寄与を個別には分離していない。TokenSim拡張は保存則・順序・決定的再生等で回帰確認しているが、HBF実機が存在しないため実装全体の実測検証はできない。熱解析は16層TLC、80度制御、指定アクセスエネルギーに依存し、耐久比較も単位書込増幅を仮定した線形TBW消耗モデルである。コストは実価格ではなくパッケージ資源の機会費用として扱う。評価はMooncake型の変更なしKV方針に限定され、再利用予測や選択配置を備えたHBF専用ランタイムの性能を直接測っていない。",
-    "differences": "Mooncake、LMCache、Strata、TuttiはCPU・SSD・ネットワークへKVを階層退避し、主に容量とI/O経路を最適化する。本研究はそのSSD型階層を維持したまま媒体をHBFへ替えると何が起きるかを評価する。H3は読取専用の重みと共有済みKVをHBFへ置き、生成中の書込主体状態をHBMへ残すため、本研究が導く『高再利用・読取主体だけをHBFへ置く』方向と整合する。HAVENもベクトル集合という読取主体データをHBFへ置く。FlashAccelやPOSTECHの研究はHBFを主メモリに近い構成として使うのに対し、本研究はロードマップ上のGDDR-HBF/HBM-HBF構成とSSD型KVプールの組合せを対象にする。",
-    "implementation_status": "評価は公開TokenSimを拡張したシミュレーション主体で、論文脚注からTokenSimリポジトリを確認できる。HBFはロードマップ段階のため実HBFサーバ上の実装ではない。3D-ICE熱解析とOCP HBF基底ダイ仕様を組み合わせて、実機不在部分を明示的なモデルとして扱っている。",
-    "research_positioning": "階層メモリ・SSD/NVMeオフロード系統に対する重要な反例・設計境界の論文である。『下位層が速ければ階層全体も速くなる』という媒体中心の発想を否定し、遠隔層を選ぶ際に臨界経路露出、読取／書込比、持続帯域を同時に見る必要があると示す。特にSSDより高速な新メモリ層を検討する研究では、近接GPUメモリをどれだけ犠牲にするか、熱いKVを上位層が吸収した後に下位層へ何が残るか、書込耐久性と熱スロットリングを含むか、という評価軸を追加する基準点になる。"
-  },
-  "reservation": {"claim_id": "claim-292079eab3cc522a1a9de5d7", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-b8073f0637a56eac35f5c473",
+  "job_id": "job-research-3736e6c195a4f8a9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b8073f0637a56eac35f5c473",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
