@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-8ecddb04699c1299dadcd793",
   "job_id": "job-research-abd379cf035bd8f0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8ecddb04699c1299dadcd793",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主モデルQwen3-4BはNVIDIA A800 GPUで完全微調整し、構造予算のモデル規模感度を調べるQwen3-1.7Bの予備実験はNVIDIA RTX 5000 GPUで実施する。",
+    "software": "Qwen3-4BとQwen3-1.7Bを使用。著者公式コードはEIT-NLP/ReCacheで公開。比較対象には通常の密注意、リソース間注意だけを遮断するBlock、SPEED、注意量で経路選択する方式、Gist、Activation Beacon、フィールド認識型意味枝刈り単独などを含む。",
+    "methodology": "ToolACE、APIGEN、ToolMind、ToolRet、Toucan、SkillRouter、WildToolBenchの7データ源を統合する。無効呼出しや未宣言リソースを除外し、同じリソース名・候補集合への偏りを抑える多様性優先抽出を行い、学習49,424例を構成する。予備実験は5,000例。評価は学習で見たリソースを使う分布内1,000例と、学習に存在しないリソースだけを使う分布外1,000例。正確なリソース名と全引数が一致した場合だけ正解とするターン平均呼出しF1、リソース識別F1、存在しないリソース名の幻覚率を測る。効率はキャッシュ命中時の先頭トークン待ち時間、出力1トークン当たり時間、注意計算遅延、KVテンソル割当メモリを測る。",
+    "scope": "エンドツーエンド結果は主にQwen3-4Bで、Qwen3-1.7Bは構造予算の規模依存性確認に使う。評価はツール／スキル呼出しという構造化リソース利用に集中し、一般長文生成や検索拡張生成全般を直接対象にしない。完全パラメータ微調整が前提で、凍結モデルへの適用、Qwen以外のアーキテクチャ、大規模な実運用エージェント基盤は未評価である。"
+  },
+  "reservation": {"claim_id": "claim-8ecddb04699c1299dadcd793", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
