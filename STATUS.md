@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 11:20:52 JST**
+> 自動生成: **2026-09-18 11:21:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -196,9 +196,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13692` — Prefix Sharing Is a Sorting Problem / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 11:18:31 JST** / heartbeat: **—** / lease expiry: **09-18 12:48:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b4ff298d10321769.json`
+- `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 11:20:56 JST** / heartbeat: **—** / lease expiry: **09-18 12:50:56 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
 
 #### Audit
 
