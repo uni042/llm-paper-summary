@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-36ebd37ab918e1cf55c1a45f",
-  "job_id": "job-research-b4ff298d10321769",
+  "attempt_id": "attempt-795dba1598f051e075af3ec9",
+  "job_id": "job-research-2829f7afbf13ae9b",
   "data": {
-    "hardware": "画像処理装置の演算核性能を測る実験ではなく、中央処理装置上で再現できる組合せ最適化と検索履歴解析が中心である。厳密動的計画法は要求数16の問題を二秒未満で解けると報告する。",
-    "software": "著者公式公開物の評価処理を用い、三つのBEIRデータ集合へBM25検索を適用する。文書長はcl100k_baseで実際のトークン数を数え、厳密動的計画法、検証処理、凝集型近似を同じ公開物から再現できる。",
-    "methodology": "理論面では、二部品要求、四部品から三部品を選ぶ完全な反例、一部品だけ欠く要求族を解析し、単一共通順序と要求別自由順序の費用差および近似保証を証明する。実証面ではNFCorpus、SciFact、FiQAへBM25検索を行い、各問い合わせが取得した文書集合を一要求、文書のトークン数を部品重みとして扱う。通常の検索順位順と要求階層から得た配置について、共有後に必要となる事前計算トークン数を比較する。取得文書数を変えて重複度と削減率の関係を調べ、順序変更へ品質保護条件を加えた評価も行う。さらに人気文書を共有する最大13要求の小集団を取り出し、指数時間の厳密解と凝集型近似の差を測る。",
-    "scope": "意味を変えずに順序交換できる再利用部品から入力を組み立てる要求を主対象とする。主指標は完全一致する先頭部分を共有した後に残る事前計算トークン量であり、実機上のモデル順伝播時間や演算核時間そのものは測定しない。順序依存で品質が変わり得る場面は品質保護条件付き評価として分離する。"
+    "hardware": "NVIDIA 4090 48GB GPU。",
+    "software": "LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B-Base、Dream-v0-7B-Instructのnative dLLM codebase。OpenCompassでbenchmark。比較はvanilla、dLLM-Cache、dKV-Cache、Fast-dLLM。",
+    "methodology": "default block length 32、seed 2025、retention ratio r=0.5、max-pooling kernel s=3。MMLU 5-shot、ARC-c 0-shot、PIQA 0-shot、GPQA 5-shot、GSM8K 4-shot、Math 4-shot、HumanEval 0-shotを評価し、accuracy、TPS、peak memoryを測る。性能scoreは3 independent trials平均、efficiencyは共通のrandom 10 instances平均。LongBenchとcontext length sweepも実施。delay step 0〜5、prefix-only対bidirectional、retention ratio/kernel sizeをablation。",
+    "scope": "4つの約7〜8B級dLLMと単一4090中心。native implementationのためvLLM等production serving stackでのend-to-end評価、batching/並行要求、多GPU、より大規模モデルへの一般化は未検証。"
   },
   "reservation": {
-    "claim_id": "claim-36ebd37ab918e1cf55c1a45f",
+    "claim_id": "claim-795dba1598f051e075af3ec9",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
