@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:39:53 JST**
+> 自動生成: **2026-09-18 14:40:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **12** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **30** | **3** | **3** | **0** | **1** | **0** | **1** |
+| 合計 | **30** | **4** | **3** | **1** | **1** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5b5769ffc299e3f095219b3d.json` (job `job-research-a2e0c7f004aa0b3e`)
 - **成功** `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
   - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
   - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
@@ -233,8 +234,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **500** |
-| └ Research | **371** |
+| 成功result未照合のimmutable submission | **501** |
+| └ Research | **372** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
