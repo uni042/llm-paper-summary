@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2609.06498",
   "paper_path": "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
   "selection_reason": "block diffusion型投機的復号で従来破棄されるrejected suffixのtarget verifier hidden stateを次roundへ再利用し、追加target計算なしでdraft品質を上げる。Qwen3系でacceptance lengthと高並列時throughput改善を報告し、投機的復号runtimeの計算再利用として明確な差分がある。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -28,7 +28,6 @@
   ],
   "last_blocked_at": "2026-09-18T12:05:05+00:00",
   "retry_queued_at": "2026-09-18T15:40:04+00:00",
-  "repair_required": true,
-  "validation_error": "ValueError: metadata.list_summary failed quality checks: 日本語比率 31.5% < 70.0%; 日本語化できる英語専門語が裸で残っている: forward, draft",
-  "last_validation_failed_at": "2026-09-18T16:13:41+00:00"
+  "completed_at": "2026-09-18T16:15:54+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-f4f02ec489067157d3a72d32.json"
 }
