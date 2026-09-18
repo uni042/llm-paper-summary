@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84f02d757a3785e53894f6fb",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-84f02d757a3785e53894f6fb","job_id":"job-research-11c68d7adc12c492","data":{"hardware":"全実験をNVIDIA Pro6000 GPUで実施。","software":"LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B-Instruct。比較はdLLM-Cache、dKV-Cache、Fast-dLLM、およびparallel decoding併用版。Dynamic-dLLMの既定B_layer=32、B_window=32、APD alpha=0.001、beta=0.0008。","methodology":"MMLU 5-shot、ARC-C 0-shot、GPQA 5-shot、GSM8K 4-shot、HumanEval 0-shotでaccuracyとtokens/sを併測。通常はsteps=256、block length=32、generation length=256、HumanEvalは512 steps/512 generation。feature-cache系とKV-cache+parallel decoding系を分けて比較し、B_layer、B_window、thresholdをablation。","scope":"text-only dLLM inferenceのthroughput/accuracy評価。3モデル・5 benchmarkでcross-model generalizationを確認するが、multimodal、より複雑なreasoning、異なるGPU/長文脈条件への一般化は未検証。"},"reservation":{"claim_id":"claim-84f02d757a3785e53894f6fb","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
