@@ -1,13 +1,21 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-b8073f0637a56eac35f5c473",
-  "job_id": "job-research-3736e6c195a4f8a9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b8073f0637a56eac35f5c473",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b8073f0637a56eac35f5c473","job_id":"job-research-3736e6c195a4f8a9",
+  "data":{
+    "canonical_id":"arXiv:2609.14717","arxiv_id":"2609.14717","doi":"10.48550/arXiv.2609.14717","openreview_id":null,
+    "arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},
+    "title":"Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+    "summary":"投機的復号では軽量ドラフターが複数トークンを提案し、ターゲットモデルが一度に検証するが、棄却された提案についてもターゲットの隠れ状態は既に計算されている。Carryover Draftingは、この捨てられていた棄却隠れ状態を次のドラフト1回だけ一時的なKV文脈として再利用する。既存ドラフターのターゲット隠れ状態→KV投影経路をそのまま使い、棄却状態を識別する学習埋め込みを1個だけ追加するため、受理長の改善をドラフト遅延増で相殺しにくい。さらに、記録済みターゲット応答上の多数の位置で『ドラフト→凍結ターゲット検証→位置をずらした再ドラフト』を独立並列に構成し、推論時と整合する棄却状態を逐次ロールアウトなしで学習する。Qwen3-4BとGemma 4 12B、DFlashとDSpark由来Markovドラフターでは平均受理長を6.5〜14.7%、vLLMのエンドツーエンド高速化倍率を7.9〜14.4%改善した。",
+    "list_summary":"検証済みだが棄却されたターゲット隠れ状態を次回ドラフトの一時KV文脈へ再利用し、追加投影器なしで受理長を6.5〜14.7%改善する。",
+    "authors":["Jahyun Koo","Sunghyeon Woo","Jaeeun Kil","Jeongtae Lee","Sungjae Lee","Kyomin Jung","Minsub Kim"],
+    "authors_affiliations":"Seoul National University; NAVER Cloud",
+    "published":"2026-09-13","publication":"Under review as a conference paper at ICLR 2027; arXiv:2609.14717v1","publication_type":"査読中プレプリント","publication_status":"Under review at ICLR 2027",
+    "lineage":"投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト",
+    "topics":["speculative decoding","drafting","KV cache","hidden-state reuse","DFlash","DSpark"],
+    "importance":"検証で既に計算した棄却枝の表現を無駄にせず、既存ドラフターのKV入力へ低コストで戻す設計を示す。現在ブロック内の依存性改善とは直交し、より強いドラフターでも再利用利得が残る。",
+    "hardware_evaluation":"単一NVIDIA H200 GPU上のvLLM。オフライン・オンライン推論と同時実行数1〜32のサービング評価。",
+    "quality_effect":"ターゲットモデルによる通常の投機的検証を維持するため生成分布の正しさを変えず、主に受理長と実行速度を改善する。",
+    "source":"https://arxiv.org/abs/2609.14717","sources":["https://arxiv.org/abs/2609.14717","https://arxiv.org/pdf/2609.14717"],"code":"","implementation":"論文はvLLM上でDFlashおよびDSpark由来Markovドラフターへ統合して評価するが、本文・参考文献節までの確認範囲では著者公式コードURLは提示されていない。",
+    "last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv PDF全18ページを参考文献・付録・AI use statementまで確認。個別参考文献は配列へ転記していない。","references_total":0
+  },
+  "reservation":{"claim_id":"claim-b8073f0637a56eac35f5c473","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
