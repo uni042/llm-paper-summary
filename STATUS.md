@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:31:02 JST**
+> 自動生成: **2026-09-19 05:31:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -197,12 +197,12 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 05:31:18 JST** / heartbeat: **—** / lease expiry: **09-19 07:01:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b3520b6ffb18fc43.json`
 - `arXiv:2609.15504` — How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus / worker `scheduled-chat-llm-survey`
   - claim: **09-19 05:30:46 JST** / heartbeat: **—** / lease expiry: **09-19 07:00:46 JST**
   - evidence: `.survey/work-queue/claims/job-research-9c0ef4e091be369c.json`
-- `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 05:28:56 JST** / heartbeat: **—** / lease expiry: **09-19 06:58:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3001166a9d479500.json`
 
 #### Audit
 
