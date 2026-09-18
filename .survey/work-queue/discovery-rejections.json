@@ -7,9 +7,9 @@
   ],
   "updated_at": "2026-09-18T20:00:00+09:00",
   "submission_count": 15,
-  "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 43,
-  "rejection_record_count": 43,
+  "research_terminal_rejection_count": 4,
+  "rejection_observation_count": 44,
+  "rejection_record_count": 44,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -517,6 +517,28 @@
       "run_key": "2026-09-17T03:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json",
       "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.14850": {
+      "primary_identity": "id:arXiv:2609.14850",
+      "identity_tokens": [
+        "id:arXiv:2609.14850",
+        "title:selforchestrating language models leveraging semantic dependence for efficient inference",
+        "url:https://arxiv.org/abs/2609.14850"
+      ],
+      "canonical_id": "arXiv:2609.14850",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2609.14850",
+      "rejection_reason": "今回runではarXiv:2609.14850の公式abstractは取得できたが、公式HTML全文の直接取得はDisabledErrorで失敗した。別の公式一次経路としてMIT EECS/CSAILの博士論文発表ページを確認し、さらに論文を構成するPASTA（arXiv:2502.11517）とPlanned Diffusion（arXiv:2510.18087）の公式一次資料情報も確認できた。しかし博士論文本文全体、とくにThinking in Placeを含む全章・評価表・limitations・referencesを一次資料として最後まで安全に取得できていない。部分資料や二次資料から未確認の5-slotを推測生成しないため、このattemptは一時的blockedとして耐久保存する。永久除外にはせず、次回はarXiv公式HTML/PDFまたはMITの正式な学位論文全文経路が利用可能なrunで再試行する。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T11:04:30+00:00",
+      "last_rejected_at": "2026-09-18T11:04:30+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-89f83eec45aa0f2c99d9a95d.json",
+      "origin": "research_blocked_permanent"
     },
     "id:arXiv:2609.14883": {
       "primary_identity": "id:arXiv:2609.14883",
