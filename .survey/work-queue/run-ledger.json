@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T11:08:13.660405+00:00",
+  "updated_at": "2026-09-18T12:01:49.521989+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T11:08:13.660405+00:00",
+      "last_recorded_at": "2026-09-18T12:01:49.521989+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 250,
         "audit_completed": 0,
         "discovery_completed": 143,
-        "blocked": 26,
+        "blocked": 27,
         "new_jobs": 219,
         "new_papers": 253,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35249827121:1",
-          "recorded_at": "2026-09-17T17:00:23.699551+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35249827121",
-            "run_attempt": "1",
-            "source_sha": "10a0c5d977e0fd5692e9b5e18bfa407d7650f78e"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35249881115:1",
           "recorded_at": "2026-09-17T17:02:45.487062+00:00",
@@ -19599,6 +19585,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35342443212:1",
+          "recorded_at": "2026-09-18T12:01:49.521989+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35342443212",
+            "run_attempt": "1",
+            "source_sha": "0a0d97858c844b221176c8f36bb7d3bad8c4ac35"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -22954,6 +22954,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-07d26e029c945d64",
+          "type": "research",
+          "canonical_id": "arXiv:2609.06172",
+          "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -25087,7 +25095,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 714,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

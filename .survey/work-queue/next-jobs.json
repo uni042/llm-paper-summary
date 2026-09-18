@@ -9,49 +9,21 @@
       "completed": 6
     },
     "research": {
-      "ready": 55,
+      "ready": 54,
       "completed": 525,
       "superseded": 44,
-      "blocked": 6,
+      "blocked": 7,
       "deferred": 3,
       "blocked_permanent": 3,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 55,
-    "actively_claimed": 1,
-    "claimable": 54
+    "ready_research_audit": 54,
+    "actively_claimed": 2,
+    "claimable": 52
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-07d26e029c945d64",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2609.06172",
-      "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
-      "source_url": "https://arxiv.org/abs/2609.06172",
-      "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-abd379cf035bd8f0",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2608.19662",
-      "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
-      "source_url": "https://arxiv.org/abs/2608.19662",
-      "paper_path": "papers/inference/kv-cache/2608.19662.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-6be1741cdc42b913",
       "type": "research",
@@ -137,6 +109,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-3736e6c195a4f8a9",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2609.14717",
+      "title": "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.14717",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-326d710987e96b1f",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2609.17983",
+      "title": "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
+      "source_url": "https://arxiv.org/abs/2609.17983",
+      "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T11:53:07+00:00"
+  "generated_at": "2026-09-18T12:01:44+00:00"
 }
