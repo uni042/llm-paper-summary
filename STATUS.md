@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:03:14 JST**
+> 自動生成: **2026-09-18 20:03:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **18** | **2** | **1** | **1** | **0** | **0** | **9** |
-| 合計 | **27** | **4** | **3** | **1** | **0** | **0** | **9** |
+| Discovery | **16** | **4** | **1** | **3** | **0** | **0** | **13** |
+| 合計 | **25** | **6** | **3** | **3** | **0** | **0** | **13** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -167,8 +167,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 20:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **9件**
-- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **13件**
+- 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair / serving measurement・replicated KV correctness・production workflow・MoE routing prediction / 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload / 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload
 - round `specialist-memory-specdecode-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json`
   - 探索軸: UVM oversubscription・投機的復号state reuse・stale KV repair
@@ -176,6 +176,14 @@
 - round `specialist-serving-measurement-2` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json`
   - 探索軸: serving measurement・replicated KV correctness・production workflow・MoE routing prediction
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-august-systems-3` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260918T2014JST-discovery-specialist-august-systems-3.json`
+  - 探索軸: 2026年8月のHBF・power-aware serving・RAG runtime・agentic production workload
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-2025-memory-4` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2021JST-discovery-specialist-2025-memory-4.json`
+  - 探索軸: 2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -231,10 +239,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **521** |
+| 成功result未照合のimmutable submission | **523** |
 | └ Research | **391** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **130** |
 
 ### 厳格検証が未成立のcompleted job
 
