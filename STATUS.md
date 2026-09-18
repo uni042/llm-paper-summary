@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:34:17 JST**
+> 自動生成: **2026-09-18 16:34:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -135,13 +135,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-fa2024c0d558cd54b9908dbc.json` (job `job-research-61cb466957462432`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-287737077740300cf826ad65.json` (job `job-research-2afdd6d968c4500a`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -185,7 +185,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.14643` — BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 16:31:51 JST** / heartbeat: **—** / lease expiry: **09-18 18:01:51 JST**
+  - claim: **09-18 16:34:22 JST** / heartbeat: **—** / lease expiry: **09-18 18:04:22 JST**
   - evidence: `.survey/work-queue/claims/job-research-61cb466957462432.json`
 
 #### Audit
