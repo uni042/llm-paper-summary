@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:15:52.774398+00:00",
+  "updated_at": "2026-09-18T20:17:33.261521+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:15:52.774398+00:00",
+      "last_recorded_at": "2026-09-18T20:17:33.261521+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 272,
         "audit_completed": 0,
         "discovery_completed": 149,
-        "blocked": 32,
+        "blocked": 33,
         "new_jobs": 235,
         "new_papers": 269,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35298485952:1",
-          "recorded_at": "2026-09-18T02:13:34.977637+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35298485952",
-            "run_attempt": "1",
-            "source_sha": "c557906a621f299fbcb42824b940ead58197bdee"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35301756075:1",
           "recorded_at": "2026-09-18T03:04:20.630650+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35390597143:1",
+          "recorded_at": "2026-09-18T20:17:33.261521+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35390597143",
+            "run_attempt": "1",
+            "source_sha": "6d1416f8ca0fbf36044344f69f255acb35afc773"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -23224,6 +23224,14 @@
           "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-57e41c4cd47dec82",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/LCA.2026.3703982",
+          "title": "HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -25491,7 +25499,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
