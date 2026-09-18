@@ -2,67 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a45c6670fc2432985588dfbd",
-  "job_id": "job-research-6c1a5d06d3b875ce",
+  "attempt_id": "attempt-5c663e048fea18307db0a4ec",
+  "job_id": "job-research-660ceb86238a1a21",
   "data": {
-    "overview": "実行中ツールから抽出した進捗は、履歴ベース予測よりKV判断時点の残り時間を大幅に正確に推定し、環境負荷変化にも追随した。4×H100のvLLM再生ではLRU比でpost-tool TTFT p90をHBMのみ20.7%、HBM+DRAM 20.8%削減し、throughputもそれぞれ2.2%、2.1%改善した。DRAM構成ではreload量6.0GiBでoracle 6.5GiBに近く、予測ベース方式の51.7〜77.7GiBより大幅に少ない。",
+    "overview": "FairInferenceは高需要利用者が存在しても適正需要利用者のトークン尾部遅延を静的分割に近い水準へ抑え、余剰資源を高需要側へ貸すことで全体処理量を増やした。生成長干渉のミクロ評価では標準SGLangのp99初回トークン217秒、VTC 92.5秒、DLPM 73.7秒に対しδ=1秒で1.06秒。WildChatマクロ評価でも標準SGLang 512秒、VTC 171秒、DLPM 273秒に対し1.15秒だった。",
     "key_results": [
       {
-        "metric": "50%時点median absolute ETA error / call duration",
-        "value": "21.8%",
-        "baseline": "best published history predictor 32.6%",
-        "condition": "eviction decision point; matching sandbox historyをbaselineへ与える",
-        "interpretation": "呼び出し途中でも現在進捗が履歴予測より残り時間を正確に順位付けする。"
+        "metric": "生成長干渉時p99初回トークン時間",
+        "value": "1.06秒",
+        "baseline": "静的分割0.90秒、VTC 92.5秒、DLPM 73.7秒、標準SGLang 217秒",
+        "condition": "δ=1秒、三適正需要+一高需要利用者",
+        "interpretation": "高需要利用者の長い生成がprefillを任意時間止める干渉を期限制御で抑える。"
       },
       {
-        "metric": "90%時点median absolute ETA error / call duration",
-        "value": "9.0%",
-        "baseline": "best published history predictor 82.0%",
-        "condition": "reload decision near return",
-        "interpretation": "終盤では履歴分布が現在callを表さなくなるため差が約1桁へ拡大する。"
+        "metric": "生成長干渉時p99最終トークン時間",
+        "value": "3.87秒",
+        "baseline": "静的分割10.8秒、VTC 96.4秒、DLPM 76.5秒、標準SGLang 220秒",
+        "condition": "δ=1秒",
+        "interpretation": "共有実行のバッチ効率を使うため静的分割よりも最終完了が速くなる。"
       },
       {
-        "metric": "post-tool TTFT p90",
-        "value": "-20.7% vs LRU",
-        "baseline": "LRU",
-        "condition": "4×H100 SXM, HBM only",
-        "interpretation": "進捗順序で戻りの近いcontextを保護することで、oracle -27.7%に接近する。"
+        "metric": "WildChatマクロp99初回トークン時間",
+        "value": "1.15秒",
+        "baseline": "静的分割0.83秒、VTC 171秒、DLPM 273秒、標準SGLang 512秒",
+        "condition": "δ=1秒、七適正需要+一高需要利用者",
+        "interpretation": "実会話由来の可変長・複数ターンでも尾部遅延分離を維持する。"
       },
       {
-        "metric": "post-tool TTFT p90",
-        "value": "-20.8% vs LRU",
-        "baseline": "LRU",
-        "condition": "4×H100 SXM, HBM + DRAM",
-        "interpretation": "oracle -22.6%に近く、host tierでも帰還時刻を使うoffload/reloadが有効。"
+        "metric": "WildChatマクロ全体completion処理量",
+        "value": "1475 tok/s",
+        "baseline": "静的分割930 tok/s",
+        "condition": "δ=1秒",
+        "interpretation": "適正需要利用者を保護しながら余剰資源を高需要利用者へ利用させ、静的分割比約1.6倍。"
       },
       {
-        "metric": "throughput",
-        "value": "+2.2% HBM only / +2.1% HBM+DRAM",
-        "baseline": "LRU",
-        "condition": "same replay workload",
-        "interpretation": "tail latency改善のためにthroughputを犠牲にせず、小幅ながら向上する。"
-      },
-      {
-        "metric": "DRAM reload volume",
-        "value": "6.0 GiB",
-        "baseline": "Continuum 31.1, CacheWise 77.7, TokenCake 53.8, InferCept 51.7 GiB; oracle 6.5 GiB",
-        "condition": "HBM+DRAM",
-        "interpretation": "早過ぎるreloadを避け、oracle並みの転送量へ抑える。"
-      },
-      {
-        "metric": "timely trigger within tolerance",
-        "value": "61% at 2s target / 33% at 0.5s target",
-        "baseline": "best baseline 3% / 0%",
-        "condition": "all families pooled, tolerance=recovery budget",
-        "interpretation": "return直前の再読込開始時刻を履歴方式より高確率で適切に捉える。"
+        "metric": "接頭辞干渉時p99初回トークン時間",
+        "value": "64.7 ms",
+        "baseline": "静的分割57.8 ms、VTC 370.0 ms、DLPM 374.5 ms、標準SGLang 371.3 ms",
+        "condition": "δ=1秒、適正需要側working setが予約内",
+        "interpretation": "δ公平キャッシュ予約が高需要側のランダム鍵値による追い出しを防ぐ。"
       }
     ],
-    "negative_results": "進捗coverageが主要な残存ボトルネックで、1分以上の少数long callsでは平均TTFT改善が約25%へ低下する一方oracleはより大きな利得を保つ。oracle情報を未観測phaseだけへ与えるとoracleとの差の63%を回収し、既観測phaseだけでは17%なので、精度向上よりcoverage拡大が重要。build/installは作業単位が不均一でtight recovery budgetのtimely trigger率が低く、0.5秒budgetではbuild/install 1.9%。de-suppressed構成は信号量を増やさずnon-zero exit codesを455増加させ、エージェント可視出力を直接変える方式は不適切だった。虚偽報告対策のledgerはpreliminary simulationのみで、lyingによるmemory増加6%のうち5%を回収する程度の初期評価に留まる。",
-    "interpretation": "性能差は高度な予測モデルではなく、情報源を『呼び出し前の外部特徴』から『実行中ツール自身』へ移したことに由来する。とくに環境変動とcall終盤で履歴方式が破綻する一方、進捗は現在速度を観測できる。vLLM側は既存LRUを置換せずhintで補強するため導入面も軽い。今後の最大レバーはETAモデルの精緻化より、MCP等を通じてツール自身がprogressを標準公開しcoverageを増やすことにある。",
-    "quality_impact": "side-channel構成ではagent観測をbyte-identicalに保ち、100 SWE-bench Verified tasksで解決数の有意な悪化を示さない。より侵襲的なde-suppressionはexit code挙動を変えるため、非干渉副経路の設計が品質維持に重要。"
+    "negative_results": "δを大きくすると予約保証が弱まり、接頭辞干渉ではδ=5秒のp99初回トークンが379.4msまで悪化する。理論保証には共有decodeが分離decodeより十分速いheadroom条件が必要で、極端に軽い利用者の非常に短い分離遅延は保証できない。分離時刻は配置固有の性能モデルに依存し、モデル誤差や負荷変化の影響を受ける。実装は進行中で、複数GPUやhybrid batchingは未評価。",
+    "interpretation": "長期処理量の公平化だけではトークン単位の応答性を守れない。FairInferenceは『公平割当を専有したならいつ生成できたか』を基準に期限を作ることで、高需要利用者に余剰資源を貸しながら適正需要利用者の追加遅延だけを制限する。計算スケジューリングと鍵値容量の両方をδ予算へ組み込むことが重要である。",
+    "quality_impact": "モデル計算や生成分布を近似せず、要求順序と鍵値保持方針だけを変更するため生成品質そのものへの近似誤差は導入しない。"
   },
   "reservation": {
-    "claim_id": "claim-a45c6670fc2432985588dfbd",
+    "claim_id": "claim-5c663e048fea18307db0a4ec",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

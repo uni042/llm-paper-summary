@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a45c6670fc2432985588dfbd",
-  "job_id": "job-research-6c1a5d06d3b875ce",
+  "attempt_id": "attempt-5c663e048fea18307db0a4ec",
+  "job_id": "job-research-660ceb86238a1a21",
   "data": {
-    "limitations": "進捗が存在しないremote API、人間入力待ち、最初のbyte前で停止するdownload等には適用できない。未知出力形式や内部単位を隠すbuild systemにはparserが必要で、現在のcoverageはcoding-agentで頻出するtool familyに偏る。verbose switch、dry run、生成コードへのinstrumentationは副経路で隠してもツール実行自体を変える可能性があり、完全な意味的非干渉を一般に保証しない。multi-phaseや不均一単位では割合を信頼できずweak signalへ降格する。エンドツーエンド評価は4×H100のvLLM replayであり、本番multi-tenant規模や他engineでの検証は未実施。不正report対策はpreliminary simulationであり、敵対的tenantへの強い保証はまだない。",
-    "differences": "Continuum、CacheWise、InferCeptはツール種別・引数・履歴から実行時間を予測し、TokenCakeやMooncake/SGLang/vLLM等のagent-aware提案は呼び出し前のdeclared durationを利用する。本研究はこれらの固定推定を、実行中に更新されるtool-originated progress streamへ置換する。MORIやConServeはengine側のoccupancy/idlenessを観測するがtool内部の作業進捗は見ない。ThunderAgent等のphase markerとも異なり、tool出力・filesystem・hook・生成コードから実作業量を読む。既存のMCP progress notificationやKV hint APIは通信機構を提供していたが、本研究はその間を結び、in-flightで更新可能なprogressをKV保持/offload/reloadの最初のserving-side consumerとして評価する。",
-    "implementation_status": "研究用ハーネス、progress parser/tap、controller、およびvLLMへの数百行規模のrefresh/release/query patchを実装し、4×H100で評価している。論文本文・arXivページでは専用公式コードリポジトリの公開を確認できないため、再現には実装詳細の再構築が必要。",
-    "research_positioning": "エージェント型LLM配信におけるtool-call idle window活用の系統で、KV cacheのplacement policyそのものより『判断に使う情報の観測面』を変更する研究である。予測精度改善競争を避け、tool execution planeからserving planeへの明示的progress channelを設けることで、階層メモリ、KV retention、prefetch/reload schedulingへ共通利用できる信号を作る。MCP等の標準進捗通知が普及すればハーネス依存を減らせるため、agent protocolとLLM serving systemの境界を接続する基盤的提案として位置付けられる。"
+    "limitations": "保証は共有環境のdecode処理が公平割当へ分割した分離環境に対して十分なバッチ効率を持つというheadroom仮定に依存する。極端に軽い利用者では分離decodeがこの下限より速くなり、低いδを保証できない。性能モデルはハードウェアとモデルごとに再当てはめが必要で、主評価は単一A100・Llama-3 8B・prefill優先SGLangに限定される。複数GPU、chunked/hybrid batching、FairRAGの合成保証、Kairos/FairBatchingとの実験比較は今後の作業。実装自体も論文でongoing projectとされ、公開forkは将来予定である。",
+    "differences": "VTC、DLPM、FairServe、Equinoxは長期サービス量や仮想トークン消費を公平化するが、個々の初回・中間・最終トークンが分離実行から何秒遅れるかを保証しない。KairosやFairBatchingはSLOや期限を使うが、絶対的な最悪遅延を基準とする。FairInferenceは各利用者が公平割当資源を専有した仮想分離実行を基準に相対的な追加遅延δを保証する。またスケジューラだけでなく、復元遅延を持つ共有鍵値キャッシュへ利用者別予約を導入し、計算共有と容量共有の遅延を同じ保証へ合成する点が異なる。",
+    "implementation_status": "SGLang v0.3.0 fork上に約3〜4千行のδ公平スケジューラ、利用者別鍵値カウンタ、C言語の分離実行シミュレータを実装してA100で評価。論文時点ではforkの公開を将来作業としており、公式コードURLはまだ示されていない。",
+    "research_positioning": "LLM配信の公平スケジューリングを、処理量公平性からリアルタイム系に近い遅延分離保証へ拡張する研究である。ストレージ分野のDelta Fair Sharingにある『分離実行比δ以内』という考えをトークンストリームへ移し、初回トークン・トークン間隔・最終トークンを同時に扱う。鍵値キャッシュの復元遅延まで保証対象に含めるため、fair scheduling、SLO scheduling、KV cache resource isolationの交差領域に位置する。"
   },
   "reservation": {
-    "claim_id": "claim-a45c6670fc2432985588dfbd",
+    "claim_id": "claim-5c663e048fea18307db0a4ec",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
