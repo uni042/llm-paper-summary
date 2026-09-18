@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:33:42 JST**
+> 自動生成: **2026-09-18 16:34:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -135,13 +135,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-287737077740300cf826ad65.json` (job `job-research-2afdd6d968c4500a`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-fa2024c0d558cd54b9908dbc.json` (job `job-research-61cb466957462432`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 15:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 16:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -234,8 +234,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **506** |
-| └ Research | **377** |
+| 成功result未照合のimmutable submission | **507** |
+| └ Research | **378** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
