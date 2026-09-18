@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18123",
+      "title": "AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines",
+      "source_url": "https://arxiv.org/abs/2609.18123",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md",
+      "priority": 79,
+      "reason": "vLLM/SGLangとGPU kernelのagent自動調整で生じるstrawman baseline、machine非移植性、飽和task、infrastructure defectを測定protocolとして封じるbenchmark。619 model callsと公開artifactを伴い、推論基盤最適化の評価信頼性を直接扱うためサーベイの監査・再現性面で価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.15021",
+      "title": "Shared KV Caching for Replicated 27B Inference: Correctness Failures and Performance Boundaries",
+      "source_url": "https://arxiv.org/abs/2609.15021",
+      "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md",
+      "priority": 77,
+      "reason": "2つの27B vLLM replicaと256GiB LMCache共有poolでcross-replica KV reuseのcorrectness failureとlocality境界を実測するengineering case study。CUDA stream依存欠落をbyte-level testで切り分け、128k/256k入力でTTFTを大幅短縮しており、分散KV cacheの実装上の失敗条件を具体化する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.06128",
+      "title": "Substrate-Portable Execution for Production LLM Workflows",
+      "source_url": "https://arxiv.org/abs/2609.06128",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.06128-substrate-portable-production-llm-workflows.md",
+      "priority": 76,
+      "reason": "Amazon Rufusのproduction workloadを背景に、typed dataflowをreal-time streaming、durable asynchronous orchestration、Flink batchへ同一workflow定義からcompileするbinding-adaptive execution platform。数百万顧客規模と複数orchestration patternで検証され、agentic inference orchestrationのproduction systems資料として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.17940",
+      "title": "Beyond the Previous Layer: Residual Predictive Structure in Sparse MoE Routing",
+      "source_url": "https://arxiv.org/abs/2609.17940",
+      "paper_path": "papers/inference/07-moe-inference/2026-2609.17940-beyond-previous-layer-moe-routing-history.md",
+      "priority": 72,
+      "reason": "OLMoE/JetMoEで直前layerだけでなく複数layerのexpert-selection履歴に次routerを予測する残余情報があることを定量化。直接のserving system提案ではないためpriorityは抑えるが、expert prefetch/cacheのrouting predictor設計に直結する一次的な予測可能性証拠として重要。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2609.06940",
+      "title": "Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2609.06940",
+      "rejection_reason": "model routing・KV placement・edge/cloud placementを統合する問題設定は関連するが、既存技術のsynthesisとworkload-level analytical simulationが中心で、実装済み推論systemとしての新規mechanism・実機評価が不足する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.06674",
+      "title": "Detokenization Leaks: Reconstructing Local LLM Outputs From Cache Traces",
+      "source_url": "https://arxiv.org/abs/2609.06674",
+      "rejection_reason": "実LLM runtimeを対象とする重要なsecurity研究だが、主眼はCPU cache side-channel攻撃と防御であり、現在の推論性能・memory/offload/MoE/serving systemsサーベイの収録範囲から外れる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-serving-measurement-2",
+    "axis": "serving measurement・replicated KV correctness・production workflow・MoE routing prediction",
+    "query_summary": "第1roundと異なるserving engineering/measurement/MoE routing軸へ移動。最新arXiv identity shardにない候補を抽出し、system-level evidenceと実機/production評価を優先して4件採用、analytical synthesisとsecurity-only 2件を不採用として耐久記録した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": ["arXiv:2609.18063","arXiv:2609.16206","arXiv:2609.17193","arXiv:2609.14237","arXiv:2609.13134","arXiv:2609.10790"],
+    "next_axis_hint": "forward/backward citationと2026年8月末の未収録GPU runtime・memory oversubscriptionを探索する",
+    "empty_round_reason": null,
+    "search_windows": [
+      {"topic":"serving measurement and production workflow","source":"web-arxiv","date_range":"2026-09","category":"systems","citation_direction":"none","query_family":"serving engine / benchmark / workflow"},
+      {"topic":"MoE routing prediction","source":"web-arxiv","date_range":"2026-09","category":"ML systems","citation_direction":"none","query_family":"MoE routing history / expert prediction"}
+    ]
+  }
+}
