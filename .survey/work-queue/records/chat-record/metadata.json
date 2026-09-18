@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-55ad2e2507991e421d05d6e8",
-  "job_id": "job-research-b3f94863f38e0308",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-55ad2e2507991e421d05d6e8",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-55ad2e2507991e421d05d6e8","job_id":"job-research-b3f94863f38e0308","data":{"canonical_id":"arXiv:2402.15678","arxiv_id":"2402.15678","doi":"10.48550/arXiv.2402.15678","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution","summary":"Minionsは複数の小型投機モデルを重み付き多数決で統合し、検証対象を一本の代表系列へ絞ることで大規模モデルの追加検証負荷を抑えつつ受理率を高める投機的復号システムである。大規模モデルの検証時間を受理トークン数で割った指標を実行時監視し、投機長をオンライン調整する。さらに小型モデル復号と大規模モデル検証の間に中間結果プールを置いて非同期化し、プール量を大規模モデルのバッチサイズ付近へ制御してパイプライン空泡とKVキャッシュ過剰滞留を同時に抑える。vLLM上に実装し、4基A100でLlama2-70B-chatとOPT-13Bを評価して既存サービング基盤やSpecInferに対する低遅延・高スループットを報告する。","list_summary":"複数小型モデルの重み付き多数決、オンライン投機長調整、SSM/LLM非同期パイプラインを統合した投機的復号サービング。","authors":["Siqi Wang","Hailong Yang","Xuezhu Wang","Tongxuan Liu","Pengbo Wang","Xuning Liang","Kejie Ma","Tianyu Feng","Xin You","Yongjun Bao","Yi Liu","Zhongzhi Luan","Depei Qian"],"authors_affiliations":"Beihang University et al. (see primary manuscript)","published":"2024-10-30","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v2","lineage":"speculative decoding / LLM serving / adaptive scheduling","topics":["投機的復号","複数ドラフトモデル","適応投機長","パイプライン","vLLM"],"importance":"投機モデルの精度、投機長、SSM/LLM直列待機という三つのボトルネックを一つのサービング系で同時に扱う。","implementation":"PythonでvLLMを拡張。PagedAttentionの複数投機トークン入力、失敗トークンKV削除、NVIDIA MPSによるSSM/LLM同時実行を実装。","hardware_evaluation":"NVIDIA A100 80GB×4、NVLink。OPT-13Bは2 GPU、Llama2-70B-chatは4 GPUのテンソル並列。","quality_effect":"対象LLM本体は変更・再学習しない。SSMは蒸留で微調整する。投機検証は通常の受理・再サンプリング規則を用いる。","source":"https://arxiv.org/abs/2402.15678","sources":["https://arxiv.org/abs/2402.15678","https://arxiv.org/html/2402.15678v2"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":51},"reservation":{"claim_id":"claim-55ad2e2507991e421d05d6e8","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
