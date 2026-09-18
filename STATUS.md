@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:03:04 JST**
+> 自動生成: **2026-09-18 10:03:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **8** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **26** | **4** | **3** | **1** | **2** | **0** | **5** |
+| Discovery | **9** | **3** | **1** | **2** | **0** | **0** | **12** |
+| 合計 | **27** | **6** | **4** | **2** | **2** | **0** | **12** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-18 10:03:07 JST** job `job-45da248bd3f7388b` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T1008JST-discovery-9f31a2c7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
+  - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理
 - **09-18 04:08:05 JST** job `job-eb22aac21645da23` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-dllm-cache-lineage-3.json`
@@ -169,11 +173,19 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 10:00 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
-- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **12件**
+- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention
 - round `specialist-2609-memory-moe-new-arrivals-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
   - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1008JST-discovery-9f31a2c7.json` (`ok=true`)
+- round `specialist-disaggregated-network-runtime-2` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260918T1015JST-discovery-b421e80d.json`
+  - 探索軸: 分離サービング・routing・HPC scale-out
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agentic-kv-tool-progress-3` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T1021JST-discovery-c7329e11.json`
+  - 探索軸: agentic serving・tool wait・multi-turn KV retention
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -234,10 +246,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **480** |
+| 成功result未照合のimmutable submission | **481** |
 | └ Research | **350** |
 | └ Audit | **2** |
-| └ Discovery | **128** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
