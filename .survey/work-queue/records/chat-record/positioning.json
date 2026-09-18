@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c2a51a6ace4a43448c42f0b1",
-  "job_id": "job-research-9c0ef4e091be369c",
-  "data": {
-    "limitations": "数値差がどの層・カーネル・演算で生じるかは局所化していない。Qwen3-1.7BとOrthrus、RTX 3090、貪欲復号を中心とするため、別ハードウェア・モデル規模・注意実装・量子化・サンプリング条件で同じ一致率になるとは限らない。FP32は厳密一致を回復するが、BF16より計算・メモリ費用が大きく、実運用で無損失性と高速化を両立する具体策は未提示である。",
-    "differences": "直接の対象であるOrthrus（arXiv:2605.12825）は、凍結自己回帰モデルへ軽量な拡散ビューを加え、モデル内合意による無損失並列生成を提案する。本研究はその高速化機構を置換せず、公開チェックポイントと独立再現モデルで無損失主張の運用上の境界を検証する。リポジトリ内の多くの投機的復号研究が受理トークン数、スループット、ドラフト品質、検証効率を改善するのに対し、本論文は高速化後の出力が本当に元モデルと同一かという正しさを数値精度別に監査する。一般的なLLM推論の数値的非決定性研究とも関連するが、参照自己回帰軌跡との厳密同値へ焦点を絞る。",
-    "implementation_status": "Orthrusを独立実装・学習して再現実験を実施している。論文本文には独自コードの公開URLは記載されていない。比較対象の著者OrthrusチェックポイントはHugging Faceのchiennv/Orthrus-Qwen3-1.7Bとして公開されている。",
-    "research_positioning": "投機的復号の性能最適化系統に対する再現性・正しさ監査の枝として位置付ける。Orthrusの高速化効果自体を否定する結果ではなく、有限精度実装で『無損失』を保証したい場合には、下流品質だけでなく生成軌跡と数値精度を評価契約へ含める必要があることを示す。RLロールアウト、決定論的評価、再現可能性が必要なサービスでは特に重要であり、全FP32化せず合意判定や一部ロジット計算だけを高精度化して一致を回復できるかが次のシステム研究課題となる。"
-  },
+  "attempt_id": "attempt-792a11fa4fd24a27f2b17f5c",
+  "job_id": "job-research-b3520b6ffb18fc43",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c2a51a6ace4a43448c42f0b1",
+    "claim_id": "claim-792a11fa4fd24a27f2b17f5c",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

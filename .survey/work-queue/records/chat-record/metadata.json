@@ -2,56 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c2a51a6ace4a43448c42f0b1",
-  "job_id": "job-research-9c0ef4e091be369c",
-  "data": {
-    "canonical_id": "arXiv:2609.15504",
-    "arxiv_id": "2609.15504",
-    "doi": "10.48550/arXiv.2609.15504",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus",
-    "summary": "Orthrusは凍結した自己回帰モデルへ軽量な拡散生成部を追加し、複数トークンを並列提案して自己回帰側との合意で検証することで、元モデルと同じ生成を保つ無損失投機的復号を主張する。本研究はその主張を独立実装と著者公開チェックポイントの双方で再検証し、有限精度が生成軌跡の同一性を壊し得ることを示した。BF16では12領域1,190プロンプトに対する完全一致率が公開モデル45%、独自学習モデル43%に留まる一方、FP32へ変更すると両モデルとも1,190件すべてで自己回帰参照と一致した。さらに不一致は参照モデルが応答へ与える条件付きパープレキシティが高いほど起きやすいが、GSM8K、HumanEval、IFEvalの下流性能には系統的な悪化が見られない。したがって『無損失』は下流精度だけでなく、生成軌跡の同一性と数値精度を明示して評価する必要がある。",
-    "list_summary": "Orthrusの無損失投機的復号を独立再現し、BF16では生成軌跡の完全一致が43〜45%に留まる一方、FP32では1,190件すべて一致することを示した再現・評価研究。",
-    "authors": [
-      "Ilya Koziev",
-      "Leonid Sinev",
-      "Ivan Oseledets"
-    ],
-    "authors_affiliations": "本文に所属表記なし。",
-    "published": "2026-09-14",
-    "publication": "arXiv:2609.15504v1",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint; under review",
-    "lineage": "投機的復号・Orthrus・推論再現性・数値精度",
-    "topics": [
-      "speculative decoding",
-      "numerical precision",
-      "inference reproducibility",
-      "Orthrus",
-      "trajectory equivalence"
-    ],
-    "importance": "高速化方式の新規提案ではなく、投機的復号でいう無損失性を実装上の数値精度まで含めて検証する再現研究。アルゴリズム上の合意機構があってもBF16では離散的な生成軌跡が分岐し得ることを定量化し、システム正しさの評価条件として精度形式を明示すべきことを示す。",
-    "implementation": "Orthrusを独立実装・学習し、著者公開のchiennv/Orthrus-Qwen3-1.7Bチェックポイントと比較。本文では独自実装の公開URLは記載されていない。",
-    "hardware_evaluation": "学習はNVIDIA H100 GPU 8基、CUDA 13.3.73、PyTorch 2.13.0、Transformers 5.8.0。軌跡評価はNVIDIA GeForce RTX 3090 23GB、CUDA 12.8、PyTorch 2.8.0+cu128、Transformers 5.8.1。",
-    "quality_effect": "BF16で軌跡は頻繁に分岐するが、GSM8K、HumanEval、IFEvalでは自己回帰基準に対する系統的な品質低下は確認されず、軌跡同一性と下流タスク品質は別の評価軸である。",
-    "source": "https://arxiv.org/abs/2609.15504",
-    "sources": [
-      "https://arxiv.org/abs/2609.15504",
-      "https://arxiv.org/pdf/2609.15504"
-    ],
-    "code": "",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "arXiv PDF全文の参考文献節まで確認。個別参考文献は構造化配列へ転記していない。",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-792a11fa4fd24a27f2b17f5c",
+  "job_id": "job-research-b3520b6ffb18fc43",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c2a51a6ace4a43448c42f0b1",
+    "claim_id": "claim-792a11fa4fd24a27f2b17f5c",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

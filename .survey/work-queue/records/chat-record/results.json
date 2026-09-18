@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c2a51a6ace4a43448c42f0b1",
-  "job_id": "job-research-9c0ef4e091be369c",
-  "data": {
-    "overview": "Orthrusの合意機構は高精度計算では自己回帰参照と同じ軌跡を再現する一方、実用的なBF16では微小な数値差が離散的なトークン選択へ増幅され、半数以上の生成が途中で分岐した。公開チェックポイントと独立学習モデルの双方で同じ傾向が出るため、特定学習設定だけの現象ではない。FP32へ切り替えると全1,190件で完全一致が回復し、無損失性の実装条件として数値精度が重要であることを示す。ただし軌跡分岐はGSM8K、HumanEval、IFEvalの系統的な品質低下には結び付かず、厳密な再現性と下流品質は分離して評価すべきである。",
-    "key_results": [
-      {
-        "metric": "BF16生成軌跡完全一致率",
-        "value": "公開Orthrus 0.45±0.03、独自Orthrus 0.43±0.03（各1,190件）",
-        "baseline": "対応するQwen3-1.7B自己回帰生成との完全一致",
-        "condition": "RTX 3090、BF16、eager attention、貪欲復号、12領域",
-        "interpretation": "無損失を主張する合意機構でも有限精度実装では半数以上の軌跡が少なくとも一度分岐する。"
-      },
-      {
-        "metric": "FP32生成軌跡完全一致率",
-        "value": "公開Orthrus 1.00、独自Orthrus 1.00（各1,190件）",
-        "baseline": "対応するQwen3-1.7B自己回帰生成との完全一致",
-        "condition": "BF16実験と同じモデル・プロンプト・復号手順で精度だけFP32へ変更",
-        "interpretation": "BF16での不一致が高精度化で消えるため、実用上の無損失性が数値精度に依存する。"
-      },
-      {
-        "metric": "応答条件付きパープレキシティと一致確率の関係",
-        "value": "回帰係数は公開モデル-8.10（95% CI -10.50〜-5.71、p=3e-11）、独自モデル-10.92（-13.60〜-8.24、p=1.3e-15）",
-        "baseline": "応答長とプロンプト領域を統制した完全一致のロジスティック回帰",
-        "condition": "BF16軌跡評価1,190件",
-        "interpretation": "参照モデルが応答へ低い確信しか持たない条件ほど、微小な数値差で順位が変わり軌跡が分岐しやすい。"
-      },
-      {
-        "metric": "並列生成効率",
-        "value": "独自モデルは12領域中10領域で公開モデルより高いTPF。code 3.44対3.24、code-ru 3.93対3.59、wmt ru-en 2.46対2.04",
-        "baseline": "chiennv/Orthrus-Qwen3-1.7B",
-        "condition": "12領域の軌跡評価用プロンプト",
-        "interpretation": "基盤モデル自身の生成軌跡を用いた蒸留データでもOrthrusを再現でき、多くの領域で並列確定トークン数を改善できる。"
-      },
-      {
-        "metric": "下流タスク性能",
-        "value": "Qwen3/公開Orthrus/独自OrthrusでGSM8K 0.4003/0.4238/0.4147、HumanEval pass@1 0.4024/0.3659/0.4146、IFEval strict 0.1682/0.1756/0.1830",
-        "baseline": "Qwen3-1.7B自己回帰モデル",
-        "condition": "lm-eval-harness、BF16と同じ生成設定",
-        "interpretation": "軌跡が厳密一致しなくても下流品質が一方向に悪化するわけではなく、ベンチマーク得点だけでは無損失性を検証できない。"
-      }
-    ],
-    "negative_results": "BF16では公開モデル55%、独自モデル57%の軌跡が分岐し、厳密な無損失性を満たさない。独自モデルのTPFも全領域で改善するわけではなく、gec-enは4.23対5.00、mathは4.99対8.08で公開モデルを下回る。下流得点差は不確実性が大きく、独自モデルの点推定上の改善を統計的な性能向上とは解釈できない。",
-    "interpretation": "無損失という性質はアルゴリズムの受理規則だけでなく、実際に使う浮動小数点精度まで含めて定義する必要がある。BF16で生じる小さなロジット差は、参照モデルの確信が弱い応答ほど最大トークンを入れ替えやすく、その一度の差が後続KVキャッシュと生成列を変える。FP32で全件一致する結果はこの説明と整合する。",
-    "quality_impact": "BF16では厳密なトークン列同一性は失われるが、GSM8K、HumanEval、IFEvalで系統的な品質悪化は観測されない。したがって本論文でいう損失は主に参照軌跡との不一致であり、近似推論のような一貫した精度低下とは異なる。FP32では評価範囲内で軌跡同一性も回復する。"
-  },
+  "attempt_id": "attempt-792a11fa4fd24a27f2b17f5c",
+  "job_id": "job-research-b3520b6ffb18fc43",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c2a51a6ace4a43448c42f0b1",
+    "claim_id": "claim-792a11fa4fd24a27f2b17f5c",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
