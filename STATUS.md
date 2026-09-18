@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 19:08:13 JST**
+> 自動生成: **2026-09-18 19:08:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **44** |
-| 未claim Research job | **43** |
+| 未claim Research job | **42** |
 | 直近24hの検証済みResearch収録 | **41** |
 | 最終検証済みResearch収録 | **09-18 19:06:47 JST（1分前）** |
 | 整合性異常 | **0** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **9** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **17** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **13** | **0** | **1** | **0** | **28** |
+| 合計 | **26** | **13** | **13** | **0** | **2** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -214,7 +214,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 19:08:17 JST** / heartbeat: **—** / lease expiry: **09-18 20:38:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6af027835df580e1.json`
 - `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
   - claim: **09-18 17:32:15 JST** / heartbeat: **09-18 18:32:58 JST** / lease expiry: **09-18 20:02:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
@@ -265,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **517** |
-| └ Research | **388** |
+| 成功result未照合のimmutable submission | **518** |
+| └ Research | **389** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
