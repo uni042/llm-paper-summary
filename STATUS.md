@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:03:04 JST**
+> 自動生成: **2026-09-19 01:03:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **56** |
 | 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **36** |
-| 最終検証済みResearch収録 | **09-18 23:37:05 JST（1時間25分前）** |
+| 最終検証済みResearch収録 | **09-18 23:37:05 JST（1時間26分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -188,7 +188,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.06172` — AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:00:32 JST** / heartbeat: **—** / lease expiry: **09-19 02:30:32 JST**
+  - claim: **09-19 01:03:10 JST** / heartbeat: **—** / lease expiry: **09-19 02:33:10 JST**
   - evidence: `.survey/work-queue/claims/job-research-07d26e029c945d64.json`
 
 #### Audit
