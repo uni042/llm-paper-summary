@@ -5,13 +5,12 @@
   "attempt_id": "attempt-a79bd772dccd9a8939166474",
   "job_id": "job-research-9c0ef4e091be369c",
   "data": {
-    "setup": "独自OrthrusはQwen3-1.7Bから生成した4,113,358件の蒸留標本で学習し、著者公開のchiennv/Orthrus-Qwen3-1.7Bと並べて評価する。軌跡評価はPython 3.10.12、PyTorch 2.8.0+cu128、CUDA 12.8、Transformers 5.8.1、GeForce RTX 3090 23GB、eager attentionを使用。生成条件はmax_new_tokens=128、do_sample=False、temperature=0.0。BF16評価後、同じモデル・プロンプト・復号手順をFP32で再実行する。",
+    "hardware": "独自Orthrusの学習はNVIDIA H100 GPU 8基。生成軌跡と下流評価はNVIDIA GeForce RTX 3090 23GB（compute capability 8.6）の実機で行う。",
+    "software": "学習はCUDA 13.3.73、PyTorch 2.13.0、Transformers 5.8.0。軌跡評価はPython 3.10.12、PyTorch 2.8.0+cu128、CUDA 12.8、Transformers 5.8.1、eager attentionを使用する。",
+    "methodology": "Qwen3-1.7Bから生成した4,113,358件の蒸留標本で独自Orthrusを学習し、著者公開chiennv/Orthrus-Qwen3-1.7Bと比較する。12領域計1,190プロンプトで、max_new_tokens=128、do_sample=False、temperature=0.0の貪欲復号を行い、各Orthrusの全生成トークン列を対応するQwen3-1.7B参照列と比較する。まずBF16で測定し、モデル・プロンプト・復号手順を固定したままFP32へ変更して再測定する。さらに参照応答の条件付きパープレキシティと完全一致の関係を、応答長と領域を統制したロジスティック回帰で調べる。下流品質はlm-eval-harnessのGSM8K、HumanEval、IFEvalで別途評価する。",
+    "scope": "実機評価でありシミュレーションではない。軌跡評価はQwen3-1.7B規模、単一RTX 3090、貪欲復号、eager attentionに限定される。FP32で一致が回復する原因となる具体的な演算段階は特定しておらず、他GPU、別カーネル、量子化、サンプリング復号、より大規模モデルへの一般化は未検証。下流評価も3ベンチマークに限られる。",
     "datasets": ["code", "code-ru", "creative-en", "gec-en", "gec-ru", "math", "math-ru", "poetry-en", "poetry-ru", "qa", "qa-ru", "wmt ru-en", "GSM8K", "HumanEval", "IFEval"],
-    "models": ["Qwen3-1.7B", "chiennv/Orthrus-Qwen3-1.7B", "Orthrus-1.7B-final"],
-    "metrics": ["Tokens Per Forward (TPF)", "生成軌跡完全一致率", "分岐率", "応答条件付きパープレキシティ", "GSM8K exact match", "HumanEval pass@1", "IFEval prompt-level loose/strict accuracy"],
-    "comparisons": "12領域の軌跡評価は各100プロンプト、gec-enのみ90で計1,190件。公開Orthrusと独自学習Orthrusをそれぞれ対応するQwen3-1.7B自己回帰生成と比較する。下流評価ではQwen3-1.7Bを直接比較対象とし、lm-eval-harnessでGSM8K、HumanEval、IFEvalを測定する。",
-    "statistical_analysis": "完全一致と対数応答条件付きパープレキシティの関係を、応答長とプロンプト領域を共変量にしたロジスティック回帰で分析。TPF、軌跡率、下流得点には95%信頼区間を報告する。",
-    "scope_limits": "軌跡評価はQwen3-1.7B規模、単一RTX 3090、貪欲復号、eager attentionに限定される。FP32で一致が回復する原因となる具体的な演算段階は特定しておらず、他GPU、別カーネル、量子化、サンプリング復号、より大規模モデルへの一般化は未検証。下流評価も3ベンチマークに限られ、得点差の多くは不確実性範囲内である。"
+    "metrics": ["1回の順伝播で確定するトークン数（Tokens Per Forward; TPF）", "生成軌跡完全一致率", "分岐率", "応答条件付きパープレキシティ", "GSM8K完全一致率", "HumanEval pass@1", "IFEval指示追従精度"]
   },
   "reservation": {"claim_id": "claim-a79bd772dccd9a8939166474", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
