@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T07:36:04.910520+00:00",
+  "updated_at": "2026-09-18T07:41:56.884556+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T07:36:04.910520+00:00",
+      "last_recorded_at": "2026-09-18T07:41:56.884556+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 245,
+        "research_completed": 246,
         "audit_completed": 0,
         "discovery_completed": 129,
         "blocked": 21,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35216772791:1",
-          "recorded_at": "2026-09-17T11:39:12.247494+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35216772791",
-            "run_attempt": "1",
-            "source_sha": "9e7fb857e9f06cc83a330ca04e7202c5f9f4125e"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35217019450:1",
           "recorded_at": "2026-09-17T11:41:42.005847+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35320167364",
             "run_attempt": "1",
             "source_sha": "aadec1c3aa123b2ac86fd4440872eb2be869e1f2"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35320657328:1",
+          "recorded_at": "2026-09-18T07:41:56.884556+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35320657328",
+            "run_attempt": "1",
+            "source_sha": "4f365b3d3d88e35289a3dcd03c3abd1efab65d13"
           },
           "signals": [
             "research_completed"
@@ -22758,6 +22758,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.14643",
           "title": "BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-455581782889dbd1",
+          "type": "research",
+          "canonical_id": "arXiv:2607.02525",
+          "title": "PEEK: Predictive Queue-Informed KV Cache Management for LLM Serving",
           "from": "ready",
           "to": "completed"
         }
