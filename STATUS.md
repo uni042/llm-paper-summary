@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 22:00:50 JST**
+> 自動生成: **2026-09-18 22:01:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **10** | **4** | **2** | **2** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **27** | **7** | **5** | **2** | **0** | **0** | **2** |
-| 合計 | **37** | **11** | **7** | **4** | **0** | **0** | **2** |
+| Discovery | **27** | **9** | **5** | **4** | **0** | **0** | **2** |
+| 合計 | **37** | **13** | **7** | **6** | **0** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 21:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **2件** / 候補: **2件**
-- 探索軸: 分散speculative inference・heterogeneous drafter orchestration / 非同期speculative decoding・tensor parallel・KV/kernel co-design / CXL・KV cache memory disaggregation・PNM/FPGA / MoE expert offload・cacheless edge-distributed inference / RDMA・KV transfer・disaggregated serving networking / agentic serving・tool-call progress・KV lifecycle / multi-tenant serving・token latency fairness・SLO isolation
+- 耐久探索round: **9件** / immutable submission: **9件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **4件** / 候補: **2件**
+- 探索軸: 分散speculative inference・heterogeneous drafter orchestration / 非同期speculative decoding・tensor parallel・KV/kernel co-design / CXL・KV cache memory disaggregation・PNM/FPGA / MoE expert offload・cacheless edge-distributed inference / RDMA・KV transfer・disaggregated serving networking / agentic serving・tool-call progress・KV lifecycle / multi-tenant serving・token latency fairness・SLO isolation / GPU runtime・persistent kernel・CUDA Graph・JIT compilation / 2026-09-17以降の新着差分・arXiv 2609後半
 - round `specialist-speculative-cosine-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T2157JST-discovery-specialist-speculative-cosine-1.json`
   - 探索軸: 分散speculative inference・heterogeneous drafter orchestration
@@ -203,6 +203,14 @@
 - round `specialist-fairness-7` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T2209JST-discovery-specialist-fairness-7.json`
   - 探索軸: multi-tenant serving・token latency fairness・SLO isolation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-gpu-runtime-8` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2212JST-discovery-specialist-gpu-runtime-8.json`
+  - 探索軸: GPU runtime・persistent kernel・CUDA Graph・JIT compilation
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-new-arrivals-9` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260918T2215JST-discovery-specialist-new-arrivals-9.json`
+  - 探索軸: 2026-09-17以降の新着差分・arXiv 2609後半
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -258,10 +266,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **528** |
+| 成功result未照合のimmutable submission | **530** |
 | └ Research | **397** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **131** |
 
 ### 厳格検証が未成立のcompleted job
 
