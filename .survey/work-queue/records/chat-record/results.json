@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e3f6cbbee3a78ecd5c91e72c",
-  "job_id": "job-research-2bbcf1d996d23713",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3f6cbbee3a78ecd5c91e72c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e3f6cbbee3a78ecd5c91e72c","job_id":"job-research-2bbcf1d996d23713","data":{"overview":"SYMPHONYは助言要求でKV移動を実要求より前へ出し、セッション固定を外した負荷分散と再計算削減を組み合わせることで、vLLMや状態保持型基準より低遅延・高負荷を実現した。LLaMA-3.1-8BではvLLMの64ユーザー時と近い出力トークン遅延で512ユーザーを処理する例があり、InferCept比でも高負荷時4.2倍超の要求を扱う。助言が不完全でも層優先度と協調管理により性能劣化を抑える。","key_results":[{"metric":"最初のトークンまでの時間","value":"最大2.4倍短縮","baseline":"vLLMおよびInferCept","condition":"ShareGPT系複数ターン評価","interpretation":"過去KVの再計算とクリティカルパス上の再読込みを助言事前読込みで削減する。"},{"metric":"同等TPOTで処理可能なユーザー数","value":"最大8倍","baseline":"vLLM","condition":"LLaMA-3.1-8B、vLLM 64ユーザー18ms/tokenに対しSYMPHONY 512ユーザー20.5ms/token","interpretation":"要求単位負荷分散とKV再利用により同一GPU数で高い多重度を維持する。"},{"metric":"InferCept比高負荷容量","value":"4.2倍超","baseline":"InferCept","condition":"1024ユーザー高負荷","interpretation":"セッション固定によるノード間負荷偏りを回避する効果が大きい。"},{"metric":"MetaGPT完了時間","value":"vLLM比2.8倍、Parrot-Serve比1.7倍高速","baseline":"vLLM、Parrot-Serve","condition":"LLaMA-3.1-8B、8 GPUのエージェントワークフロー","interpretation":"呼出しグラフ由来の助言を使うエージェントでも事前読込みが有効。"}],"negative_results":"助言を10%見逃すとトークン遅延が21.3msから24.4msへ増え、助言を100%失うとInferCeptのような状態保持型基準に近づく。協調メモリ管理を外すとメモリ不足による交換で7倍超の低速化が起こり、層優先度を外すとピーク負荷で最大21.7%、層単位読込みを外すと高負荷で約18.4%性能が落ちる。一方、1024要求で60%の誤報助言を追加しても劣化は2.1%に留まる。","interpretation":"性能の核は予測精度そのものより、助言が与える数秒の先行時間を利用して状態移動をクリティカルパスから外すことと、誤報・容量予測誤差を優先度と回収可能なHBMキャッシュで吸収することにある。再計算削減だけでなく、状態を計算ノードから切り離して負荷分散を要求単位へ細粒度化する効果が大きい。","quality_impact":"KVを再利用・移動するシステム方式でモデル演算を近似しないため、生成品質を意図的に変更しない。LMCacheのような損失圧縮とは異なる。"},"reservation":{"claim_id":"claim-e3f6cbbee3a78ecd5c91e72c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
