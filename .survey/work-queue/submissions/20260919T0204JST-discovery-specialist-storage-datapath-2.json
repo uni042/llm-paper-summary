@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "doi:10.1145/3788106",
+      "title": "Towards Scalable Storage Architectures for GPU Clusters Running Large Language Models",
+      "source_url": "https://doi.org/10.1145/3788106",
+      "priority": 76,
+      "reason": "SIGMETRICS/Measurement系のsystems研究として、libaio・io_uring・SPDK・GPUDirect StorageをSATA SSD/NVMe/Optane上で25,000超の構成にわたり比較し、LLMのpre-training/fine-tuning/inference各phaseのstorage datapathを実測する。特にSSD/NVMeをLLM推論階層memoryへ使う際のsoftware datapath選択とCPU costを定量化しており、mechanism論文群を横断する基礎データとして有用。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-storage-datapath-2",
+    "axis": "SPDK・io_uring・GPUDirect Storage・LLM storage datapath measurement",
+    "query_summary": "前roundのNVMe I/O characterizationからstorage datapath方向へ引用・隣接検索を展開。Tutti(arXiv:2605.03375)、DUAL-BLADE(arXiv:2604.26557)、InstInfer(arXiv:2409.04992)はidentity shardで既知を確認。2026年SIGMETRICS系のstorage datapath measurement論文はDOI 10.1145/3788106で一次出版情報を確認し、GitHub既存所在検索でも該当を確認できなかったため候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2604.26557", "arXiv:2409.04992"],
+    "next_axis_hint": "workshop/measurement系のLLM storage研究、GPU-initiated I/O、external KV cache serviceの学術論文へ展開する"
+  }
+}
