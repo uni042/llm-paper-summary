@@ -35,6 +35,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     finalization_allowed = bool(args.continuation_finalization_allowed)
     active_assignment = bool(args.active_assignment)
     active_assignment_handoff_safe = bool(args.active_assignment_handoff_safe)
+    claim_state_checked = bool(getattr(args, "claim_state_checked", False))
     hard_stop = bool(args.hard_stop)
     handoff_safe = bool(args.handoff_safe)
 
@@ -50,6 +51,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         blocking_reasons.append("continuation_decision_is_continue")
     if not finalization_allowed:
         blocking_reasons.append("continuation_gate_did_not_allow_finalization")
+
+    if not claim_state_checked and not (hard_stop and handoff_safe):
+        blocking_reasons.append("claim_state_not_checked")
 
     if active_assignment and not (hard_stop and handoff_safe and active_assignment_handoff_safe):
         blocking_reasons.append("active_assignment_requires_work")
@@ -68,7 +72,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         wait_seconds = 0
     else:
         decision = "MUST_CONTINUE"
-        if wait_targets and not hard_stop:
+        if not claim_state_checked and not hard_stop:
+            next_action = "CHECK_CLAIM_STATE"
+            wait_seconds = 0
+        elif wait_targets and not hard_stop:
             next_action = "WAIT_10_SECONDS_AND_RECHECK"
             wait_seconds = ASYNC_WAIT_POLL_SECONDS
         elif active_assignment:
@@ -95,10 +102,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "continuation_finalization_allowed": finalization_allowed,
         "active_assignment": active_assignment,
         "active_assignment_handoff_safe": active_assignment_handoff_safe,
+        "claim_state_checked": claim_state_checked,
         "hard_stop": hard_stop,
         "handoff_safe": handoff_safe,
         "rule": (
-            "Final response is forbidden without an issued permit. Pending claim/submission/ACK "
+            "Final response is forbidden without an issued permit. Normal finalization also requires "
+            "an explicit check of the latest claim request/result state. Pending claim/submission/ACK "
             "results require 10-second real-time polling of the same target, repeated until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off."
         ),
@@ -111,6 +120,7 @@ def main() -> int:
     ap.add_argument("--continuation-finalization-allowed", type=yn, required=True)
     ap.add_argument("--active-assignment", type=yn, default=False)
     ap.add_argument("--active-assignment-handoff-safe", type=yn, default=False)
+    ap.add_argument("--claim-state-checked", type=yn, default=False)
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--ack-result-pending", type=yn, default=False)
