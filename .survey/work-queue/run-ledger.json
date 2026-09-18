@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T05:37:52.552435+00:00",
+  "updated_at": "2026-09-18T05:42:17.665697+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T05:37:52.552435+00:00",
+      "last_recorded_at": "2026-09-18T05:42:17.665697+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35203523435:1",
-          "recorded_at": "2026-09-17T09:09:41.205646+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35203523435",
-            "run_attempt": "1",
-            "source_sha": "b2284bcf6c2c29ad2695144680a3a9f29232a960"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35203676608:1",
           "recorded_at": "2026-09-17T09:10:50.130552+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35311754331:1",
+          "recorded_at": "2026-09-18T05:42:17.665697+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35311754331",
+            "run_attempt": "1",
+            "source_sha": "d68050c5c670efcd6bbf04ddb7157517ca4a2e7c"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24465,7 +24465,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 705,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
