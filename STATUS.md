@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:34:06 JST**
+> 自動生成: **2026-09-19 07:34:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **12** | **6** | **6** | **3** | **0** | — |
+| Research | **22** | **13** | **6** | **7** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **35** | **15** | **9** | **6** | **3** | **0** | **3** |
+| 合計 | **35** | **16** | **9** | **7** | **3** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **12件** / 検証済み成功: **6件** / 未完了・未検証: **6件**
+- immutable submission: **13件** / 検証済み成功: **6件** / 未完了・未検証: **7件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-11b5e62465ce56e739adae95.json` (job `job-research-c790156bc5f9f1f9`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`)
 - **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
@@ -212,9 +212,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2512.22195` — MatKV: Trading Compute for Flash Storage in LLM Inference / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:33:43 JST** / heartbeat: **—** / lease expiry: **09-19 09:03:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-03744b5cb143a715.json`
+- `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System / worker `scheduled-chat-discovery-20260919T0700JST`
+  - claim: **09-19 07:34:29 JST** / heartbeat: **—** / lease expiry: **09-19 09:04:29 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7b5d4afbd3eabe62.json`
 - `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale / worker `scheduled-chat-llm-survey-turn7`
   - claim: **09-19 07:31:15 JST** / heartbeat: **—** / lease expiry: **09-19 09:01:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-44bb3b5d160bad25.json`
@@ -268,8 +268,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **570** |
-| └ Research | **441** |
+| 成功result未照合のimmutable submission | **571** |
+| └ Research | **442** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
