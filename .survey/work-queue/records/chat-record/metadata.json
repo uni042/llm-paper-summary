@@ -9,40 +9,24 @@
     "arxiv_id": "2609.13692",
     "doi": "10.48550/arXiv.2609.13692",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DS",
-      "cross_list": [
-        "cs.CL"
-      ]
-    },
+    "arxiv_categories": {"primary": "cs.DS", "cross_list": ["cs.CL"]},
     "title": "Prefix Sharing Is a Sorting Problem",
     "summary": "再利用可能な検索文書、道具定義、少数例などから入力文を組み立てる場合、含まれる情報の集合が同じでも並べ方によって完全一致する先頭部分の長さが変わり、共有できる鍵値キャッシュと事前計算量が変化する。本研究は、要求ごとに部品順序を自由に変えられる最小先頭木問題を、要求集合上の二分階層を選ぶ問題へ等価変換する構造定理を示す。指数時間の厳密解法、共通部分に基づく凝集型近似、深さ優先順の要求処理を同じ階層表現から導き、三つの実検索データ集合で通常の検索順位順より事前計算を17〜36%削減する。",
-    "list_summary": "入力部品の並びと要求処理順を階層的に最適化し、実検索データで先頭共有を増やして事前計算量を17〜36%削減する。",
-    "authors": [
-      "Rong He"
-    ],
+    "list_summary": "入力部品の並びと要求処理順を階層的に最適化し、既存の先頭キャッシュを変更せず実検索データで先頭共有を増やして事前計算量を17〜36%削減する。",
+    "authors": ["Rong He"],
     "authors_affiliations": "論文本文と著者公式公開物で所属表記を確認できず",
     "published": "2026-09-12",
     "publication": "arXiv preprint",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1、15 pages",
     "lineage": "先頭共有・鍵値キャッシュ・検索拡張生成・要求処理順・組合せ最適化",
-    "topics": [
-      "先頭共有",
-      "鍵値キャッシュ",
-      "検索拡張生成",
-      "要求クラスタリング",
-      "要求処理順"
-    ],
+    "topics": ["先頭共有", "鍵値キャッシュ", "検索拡張生成", "要求クラスタリング", "要求処理順"],
     "importance": "既存の先頭キャッシュが保存済み情報の再利用方法だけを工夫するのに対し、本研究はキャッシュへ入る前の入力部品順序そのものを最適化対象にする。単一の共通順序が常に良いという暗黙の前提を理論的に崩し、要求ごとの適応的な順序と要求処理順を一つの階層で表現するため、既存サービング基盤へ上流側の最適化として組み合わせられる。",
     "implementation": "著者公式公開場所に論文全文、厳密解法、近似法、検証用処理、実検索データ評価処理、データ取得処理を公開している。",
     "hardware_evaluation": "画像処理装置の演算核性能を測る研究ではなく、実検索履歴と実際のトークン数に基づいて事前計算量を評価する。",
     "quality_effect": "入力部品の順序変更が意味内容を保つ場面を主対象とし、順序変更へ品質保護条件を加えた場合でも13〜23%の事前計算削減が残る。",
     "source": "https://arxiv.org/abs/2609.13692",
-    "sources": [
-      "https://arxiv.org/abs/2609.13692",
-      "https://github.com/Darrenus/prefix-sharing-is-sorting/blob/master/paper.md"
-    ],
+    "sources": ["https://arxiv.org/abs/2609.13692", "https://github.com/Darrenus/prefix-sharing-is-sorting/blob/master/paper.md"],
     "code": "https://github.com/Darrenus/prefix-sharing-is-sorting",
     "project": "https://github.com/Darrenus/prefix-sharing-is-sorting",
     "last_checked": "2026-09-18",
@@ -51,9 +35,5 @@
     "references_source": "著者公式の論文全文を確認。個別参考文献は構造化配列へ転記していない。",
     "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-36ebd37ab918e1cf55c1a45f",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-36ebd37ab918e1cf55c1a45f", "worker_id": "scheduled-chat-discovery-routing", "worker_kind": "scheduled_chat"}
 }
