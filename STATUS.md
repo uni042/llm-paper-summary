@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 08:45:37 JST**
+> 自動生成: **2026-09-18 09:06:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **57** |
-| 未claim Research job | **56** |
+| 未claim Research job | **55** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-18 08:03:04 JST（42分前）** |
+| 最終検証済みResearch収録 | **09-18 08:03:04 JST（1時間3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **11** | **3** | **3** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **8** | **8** | **0** | **0** | **0** | **18** |
-| 合計 | **21** | **11** | **11** | **0** | **1** | **0** | **18** |
+| Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **18** |
+| 合計 | **19** | **11** | **11** | **0** | **2** | **1** | **18** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -137,14 +137,6 @@
   - result: `.survey/work-queue/results/20260918T0400JST-discovery-specialist-routing-recovery-7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T0400JST-discovery-specialist-routing-recovery-7.json`
   - 探索軸: heterogeneous multi-model routing・resource allocation・MoE failure recovery
-- **09-18 02:59:29 JST** job `job-4c07976a89c00fbe` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-cpu-gpu-moe-1.json`
-  - 探索軸: SSD-LLaMA関連・CPU-GPU hybrid MoE execution・expert delivery/cache
-- **09-18 03:01:46 JST** job `job-1ae655d76711b99a` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T0300JST-discovery-specialist-gpu-storage-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json`
-  - 探索軸: direct I/O・GPU-initiated storage・SSD-backed LLM inference
 
 ### 直近タスク
 
@@ -216,10 +208,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 08:03:55 JST** / heartbeat: **—** / lease expiry: **09-18 09:33:55 JST**
+  - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
+- `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving / worker `scheduled-chat-llm-discovery`
+  - claim: **09-18 09:06:03 JST** / heartbeat: **—** / lease expiry: **09-18 10:36:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-660ceb86238a1a21.json`
 
 #### Audit
 
