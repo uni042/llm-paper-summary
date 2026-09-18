@@ -13,4 +13,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python -m unittest .survey/tests/test_continuation_gate_claim_wait.py .survey/tests/test_run_finalization_gate.py
+      - run: python .survey/tests/test_continuation_gate_claim_wait.py
+      - run: python .survey/tests/test_run_finalization_gate.py
