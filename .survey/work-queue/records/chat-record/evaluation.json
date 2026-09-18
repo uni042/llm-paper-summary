@@ -1,10 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c8a599afd4a259e75ab961db","job_id":"job-research-8de660021e1eaf46",
- "data":{
-  "hardware":"典型的3D NAND planeをモデル化し、floating-gate transistorは65nm compact Verilog-A model、3D NAND構造parasiticは既存測定文献から導入する。回路levelはSPICE、system-levelはdevice non-idealityを含む解析。比較にはNVIDIA A100 GPU、Cambricon-LLM、AiF、従来3D NAND CIM（Base）を含むが、NASiC自身の実チップ測定ではない。",
-  "software":"回路simulationとsystem-level modelingが中心。公開compiler/runtime実装は本文に示されない。MoE workloadのsparsity、Flash current variation、CIM cell state数を変え、architecture/circuit/cellの3 techniqueをablationする。",
-  "methodology":"まずFlash current variationの標準偏差sigmaがMoE perplexityへ与える影響から許容input dimensionを決め、主要評価では文献実験由来sigma=0.15とinput dimension 128を使用する。throughputはT1 CAM selection、T2 block-wise parallelism、T3 multibit cellを順次追加してBase比を測定し、activated expert ratio rとcell state数を変える。energyは8-bit SAR ADCを含むNAND array/ADC breakdownで評価し、area efficiencyとarea-energy-delay product（AEDP）も算出する。最終比較ではA100、Cambricon-LLM、AiF、Baseに対するthroughput/energy efficiencyを報告する。",
-  "scope":"評価は回路・system simulationであり、製造済み3D NAND PIM chip、実際のSSD controller、host I/O、end-to-end LLM serving latencyを測ったものではない。MoEのexpert GEMV加速に焦点を置き、attention、router計算、token scheduling、host側処理を含む完全なLLM systemの実測ではない。"
- },
- "reservation":{"claim_id":"claim-c8a599afd4a259e75ab961db","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2a8029da178add8c961b6d50",
+  "job_id": "job-research-8de660021e1eaf46",
+  "data": {
+    "hardware": "典型的3D NAND planeをモデル化し、floating-gate transistorは65nm compact Verilog-A model、3D NAND構造parasiticは既存測定文献から導入する。回路levelはSPICE、system-levelはdevice non-idealityを含む解析。比較にはNVIDIA A100 GPU、Cambricon-LLM、AiF、従来3D NAND CIM（Base）を含むが、NASiC自身の実チップ測定ではない。",
+    "software": "回路simulationとsystem-level modelingが中心。公開compiler/runtime実装は本文に示されない。MoE workloadのsparsity、Flash current variation、CIM cell state数を変え、architecture/circuit/cellの3 techniqueをablationする。",
+    "methodology": "まずFlash current variationの標準偏差sigmaがMoE perplexityへ与える影響から許容input dimensionを決め、主要評価では文献実験由来sigma=0.15とinput dimension 128を使用する。throughputはT1 CAM selection、T2 block-wise parallelism、T3 multibit cellを順次追加してBase比を測定し、activated expert ratio rとcell state数を変える。energyは8-bit SAR ADCを含むNAND array/ADC breakdownで評価し、area efficiencyとarea-energy-delay product（AEDP）も算出する。最終比較ではA100、Cambricon-LLM、AiF、Baseに対するthroughput/energy efficiencyを報告する。",
+    "scope": "評価は回路・system simulationであり、製造済み3D NAND PIM chip、実際のSSD controller、host I/O、end-to-end LLM serving latencyを測ったものではない。MoEのexpert GEMV加速に焦点を置き、attention、router計算、token scheduling、host側処理を含む完全なLLM systemの実測ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-2a8029da178add8c961b6d50",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

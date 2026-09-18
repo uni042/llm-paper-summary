@@ -1,10 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c8a599afd4a259e75ab961db","job_id":"job-research-8de660021e1eaf46",
- "data":{
-  "limitations":"65nm compact modelと文献由来parasiticを用いたSPICE/system-level評価で、製造済み3D NAND CIM chipやSSDでの実測ではない。host interface、controller、wear/endurance、program disturb、thermal、ECC、router/attentionを含むend-to-end MoE serving costは評価範囲外。3-bit cellはthroughputを伸ばす一方ADC energy/latencyでenergy efficiencyが悪化し、cell state数を増やせば常に有利という結果ではない。CAM layerは小さいながらstorage areaを消費し、T2もstorage densityとparallelismを交換する。",
-  "differences":"SSD/NVMe offload方式はexpertをNANDからGPU/DRAMへ転送して計算するためdata movementが残るのに対し、NASiCはexpertをNANDへ常駐させたままGEMVする。AiFや従来3D NAND CIMはdense計算を主眼とし、MoEのtop-k sparsityに対して未選択expert計算や低parallelismが生じる。NASiCはCAMをstring内へ融合してrouting結果を物理maskへ変換する点が差である。Pre-gated MoE等のsoftware/system手法がexpert予測や転送を早めるのに対し、本研究はstorage device内部のarchitecture/circuit/cell co-designである。",
-  "implementation_status":"arXiv v1のarchitecture研究。本文ではSPICEとsystem-level modelを用いるが、公開RTL/compiler/runtime、製造chip、一般利用可能なsoftware repositoryは確認できない。したがって再現性は論文記載のmodel/configurationに依存する。",
-  "research_positioning":"MoE推論とNAND/SSD系研究の交点で、expert offloadを高速化するのではなく『expertをstorageから動かさずstorage内で選択・計算する』方向を代表する。階層メモリ研究に対しては最下位NAND tierをactive compute tierへ変える設計点であり、expert cache/placement/prefetch系とは補完的。実用化にはSSD controller、endurance、host scheduling、attention処理との統合評価が次の課題になる。"
- },
- "reservation":{"claim_id":"claim-c8a599afd4a259e75ab961db","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-2a8029da178add8c961b6d50",
+  "job_id": "job-research-8de660021e1eaf46",
+  "data": {
+    "limitations": "65nm compact modelと文献由来parasiticを用いたSPICE/system-level評価で、製造済み3D NAND CIM chipやSSDでの実測ではない。host interface、controller、wear/endurance、program disturb、thermal、ECC、router/attentionを含むend-to-end MoE serving costは評価範囲外。3-bit cellはthroughputを伸ばす一方ADC energy/latencyでenergy efficiencyが悪化し、cell state数を増やせば常に有利という結果ではない。CAM layerは小さいながらstorage areaを消費し、T2もstorage densityとparallelismを交換する。",
+    "differences": "SSD/NVMe offload方式はexpertをNANDからGPU/DRAMへ転送して計算するためdata movementが残るのに対し、NASiCはexpertをNANDへ常駐させたままGEMVする。AiFや従来3D NAND CIMはdense計算を主眼とし、MoEのtop-k sparsityに対して未選択expert計算や低parallelismが生じる。NASiCはCAMをstring内へ融合してrouting結果を物理maskへ変換する点が差である。Pre-gated MoE等のsoftware/system手法がexpert予測や転送を早めるのに対し、本研究はstorage device内部のarchitecture/circuit/cell co-designである。",
+    "implementation_status": "arXiv v1のarchitecture研究。本文ではSPICEとsystem-level modelを用いるが、公開RTL/compiler/runtime、製造chip、一般利用可能なsoftware repositoryは確認できない。したがって再現性は論文記載のmodel/configurationに依存する。",
+    "research_positioning": "MoE推論とNAND/SSD系研究の交点で、expert offloadを高速化するのではなく『expertをstorageから動かさずstorage内で選択・計算する』方向を代表する。階層メモリ研究に対しては最下位NAND tierをactive compute tierへ変える設計点であり、expert cache/placement/prefetch系とは補完的。実用化にはSSD controller、endurance、host scheduling、attention処理との統合評価が次の課題になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-2a8029da178add8c961b6d50",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
