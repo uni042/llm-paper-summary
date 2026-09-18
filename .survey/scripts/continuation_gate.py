@@ -35,7 +35,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     any_durable_transport = bool(args.github_write or fallback_writable)
 
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
-    claim_state_checked = bool(getattr(args, "claim_state_checked", False))
+    claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
     rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
     discovery_reset_progress_known = rounds_since_last_novel_raw is not None
