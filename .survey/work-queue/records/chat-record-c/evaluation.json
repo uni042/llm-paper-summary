@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-209883d907162cbb35ff1d30",
-  "job_id": "job-research-60a904da0b8faa84",
+  "attempt_id": "attempt-801a2a163f3b28325e33acce",
+  "job_id": "job-research-99d754a688aca9c8",
   "data": {
-    "hardware": "単一ノードにNVIDIA H100 PCIe 80GBを2枚、CPU 8 cores、system memory 64GB。H100-0にPhi-3-miniとQwen2.5-14B、H100-1にQwen2.5-3B、Mistral-7B、Llama-3.1-8Bを固定配置する。",
-    "software": "各モデルはvLLMの独立processで提供しPrometheus metricsを有効化。問い合わせ埋め込みはCARROTと同じall-MiniLM-L6-v2。比較はCARROTとIRT-Routerの既定構成。品質judgeはQwen-3-Next-80B。公式コードで監視、コストモデル学習、オンライン評価パイプラインを公開。",
-    "methodology": "MixInstructから6,000、English LongBenchから2,425の計8,425 promptsを混合し、6,740 train / 1,685 evalに分割。短文と中長文を混ぜて並行性とKVキャッシュ圧力を両方発生させる。コストモデル学習ではPoisson、micro-burst、sustained-overloadの3到着パターンを巡回し、評価ではsustained-overloadのarrival rate 15/18/21 requests/sを用いる。SLOはprompt長に対する線形TTFT基準を1.2倍slackで設定し、TPOTは訓練集合70 percentile。品質-遅延Pareto、SLO達成率、running/waiting queue比率、GPU load/running/waiting skewを測る。",
-    "scope": "5つのopen-source instruction LLMを2台の同型H100へ固定配置した高負荷評価が中心。動的負荷状態への適応は直接検証されるが、V100/A100/H100混在など真の異種GPUクラスタ、大規模多ノード、モデル移動・replica増減、実運用トラフィックでの長期挙動は評価範囲外。"
+    "hardware": "主要throughput図はNVIDIA A100、batch size 1、追加inference acceleration frameworkなし。repositoryにはLLaDA/Dream評価設定を提供。",
+    "software": "LLaDA、LLaDA-1.5、Dream-Base等のnative diffusion inference codeへtraining-freeで実装。比較対象にvanilla dLLM、cache-only、parallel-onlyを含み、AR baselineとしてLlama-3-8B/Qwen2.5-7Bも図示。",
+    "methodology": "GSM8K、MATH、HumanEval、MBPPを中心にaccuracyとtokens/sを測定し、generation length 256/512/1024、shot数を変えてcacheとparallelの寄与を分解する。LLaDAではblock size 32を主設定とし、PrefixCache/DualCache、confidence threshold/factor parallelをablation。KV activationのadjacent-step cosine similarity heatmapで近似cacheの妥当性を確認する。長prefill 8-shot・gen length 1024ではvanilla、parallel、PrefixCache、DualCacheをend-to-end比較する。",
+    "scope": "open-source dLLM LLaDA/Dreamとsingle-GPU batch-1中心。production batching、concurrent serving、vLLM統合は論文時点で対象外。approximate cacheとthresholdの品質はbenchmark上で検証されるが、任意distributionでの誤差保証はない。"
   },
   "reservation": {
-    "claim_id": "claim-209883d907162cbb35ff1d30",
+    "claim_id": "claim-801a2a163f3b28325e33acce",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
