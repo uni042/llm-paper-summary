@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-292079eab3cc522a1a9de5d7",
   "job_id": "job-research-7fcd5e4f3604dab7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-292079eab3cc522a1a9de5d7",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.11668",
+    "arxiv_id": "2608.11668",
+    "doi": "10.48550/arXiv.2608.11668",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "title": "HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving",
+    "summary": "高帯域フラッシュ（High-Bandwidth Flash; HBF）はSSDより低遅延・高帯域なので、SSDへKVキャッシュを退避する既存ランタイムの保存先だけをHBFへ置き換えれば高速化できるように見える。本研究はこの直感を、拡張TokenSim、Qwen-Bailian由来の2時間本番トレース4本、Dense/MoE 5モデル、H100/B200構成で全スタック評価する。結果は逆で、HBF-1/HBF-2はパッケージ内の高速近接メモリ容量・帯域を犠牲にし、HBFへ届くKVは再利用性の低い書き込み主体になるため、平均エンドツーエンド遅延が2〜5.5倍へ悪化し、SLOを満たす最大有効スループットも1.1〜2.7倍低下する。論文は、遠隔層高速化が有効になる必要条件を、露出した読取I/Oが支配的であること、読取量が書込量を上回ること、実効帯域を熱・耐久制約下で維持できることの3条件として整理し、過渡的KVでは全条件が破れると示す。",
+    "list_summary": "SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。",
+    "authors": ["Zhuoran Li", "Zhuohang Bian", "Xin Huang", "Yibo Zhao", "Guangyu Sun", "Youwei Zhuo"],
+    "authors_affiliations": "Peking University; Fudan University",
+    "published": "2026-08-12",
+    "publication": "arXiv:2608.11668v4",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint; arXiv v4 (2026-09-14)",
+    "lineage": "KVキャッシュ階層メモリ・SSD/HBFオフロード・フラッシュ特性評価",
+    "topics": ["KV cache", "HBF", "SSD offloading", "hierarchical memory", "LLM serving", "thermal throttling", "flash endurance"],
+    "importance": "媒体単体の帯域・遅延ではなく、近接メモリとのパッケージ資源交換、KV再利用分布、書込量、熱、耐久性まで含めて遠隔メモリ層の有効性を判定する3条件を提示する。SSD/NVMeの次段としてHBFを検討する際の設計境界を直接与える。",
+    "hardware_evaluation": "8 GPU構成をTokenSimでモデル化。H100/B200、HBF-1（GDDR7+HBF）、HBF-2（HBM3e+HBF）、容量整合SSD群を比較。HBFサービス値はロードマップ・OCP仕様・既報デバイス値に基づくモデル値。",
+    "quality_effect": "モデル品質そのものは変更せず、同一KV保存・復元方針下のシステム性能、SLO有効スループット、熱、耐久性を評価する。",
+    "source": "https://arxiv.org/abs/2608.11668",
+    "sources": ["https://arxiv.org/abs/2608.11668", "https://arxiv.org/html/2608.11668", "https://github.com/pku-lemonade/TokenSim"],
+    "code": "https://github.com/pku-lemonade/TokenSim",
+    "implementation": "既存TokenSimを拡張し、Mooncake型KV検索・保存／復元、SSD/HBF層、HBF-1/HBF-2構成、層別I/O計数、SLO出力を追加。論文脚注からTokenSim公開実装を確認。",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "arXiv HTML全文の参考文献節まで確認。個別参考文献は構造化配列へ転記していない。",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-292079eab3cc522a1a9de5d7", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
