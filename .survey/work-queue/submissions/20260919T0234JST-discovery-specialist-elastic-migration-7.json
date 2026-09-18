@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T01:00:00+09:00",
+    "round": "specialist-elastic-migration-7",
+    "axis": "request/KV migration・elastic memory・model/KV co-migration",
+    "query_summary": "2024-2026のrequest migration、elastic memory、runtime layer swapping、KV/model migrationを走査。MELL、eLLM、MorphServe、BanaServe、Pallas、MemServe等の主要候補はcanonical identity shardで既知だった。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": ["arXiv:2501.06709", "arXiv:2506.15155", "arXiv:2506.02006", "arXiv:2510.13223", "arXiv:2608.16477", "arXiv:2406.17565"],
+    "next_axis_hint": "新規性が高い未走査のworkshop/measurement、非arXiv systems論文、2026年後半のstorage/serving隣接分野へ戻る",
+    "empty_round_reason": "elastic migrationの上位system候補は既にcanonical identityへ収録済みだった。"
+  }
+}
