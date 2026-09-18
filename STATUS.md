@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 12:04:08 JST**
+> 自動生成: **2026-09-18 12:04:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
-| 未claim Research job | **50** |
-| 直近24hの検証済みResearch収録 | **59** |
-| 最終検証済みResearch収録 | **09-18 11:11:47 JST（52分前）** |
+| 収録候補論文 | **50** |
+| 未claim Research job | **49** |
+| 直近24hの検証済みResearch収録 | **60** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **16** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **14** | **4** | **4** | **0** | **0** | **0** | **20** |
-| 合計 | **29** | **6** | **6** | **0** | **1** | **0** | **20** |
+| 合計 | **30** | **6** | **6** | **0** | **1** | **0** | **20** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 12:04:15 JST** [research] `arXiv:2609.13692` — Prefix Sharing Is a Sorting Problem
+  - job: `.survey/work-queue/jobs/job-research-b4ff298d10321769.json`
+  - result: `.survey/work-queue/results/research/attempt-36ebd37ab918e1cf55c1a45f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-36ebd37ab918e1cf55c1a45f.json`
+  - paper: `papers/inference/03-kv-cache/2026-2609.13692-prefix-sharing-sorting-problem.md`
 - **09-18 11:11:47 JST** [research] `arXiv:2609.17943` — ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference
   - job: `.survey/work-queue/jobs/job-research-fb4ae3eceb455bfc.json`
   - result: `.survey/work-queue/results/research/attempt-cec69bfeb43d99a153789edc.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-801a2a163f3b28325e33acce.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-801a2a163f3b28325e33acce.json`
   - paper: `papers/inference/06-kv-cache-memory/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md`
-- **09-18 09:38:51 JST** [research] `arXiv:2608.14575` — HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-60a904da0b8faa84.json`
-  - result: `.survey/work-queue/results/research/attempt-209883d907162cbb35ff1d30.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-209883d907162cbb35ff1d30.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2608.14575-hw-router-hardware-aware-multi-llm-serving.md`
 
 ### Audit
 
@@ -218,7 +218,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,7 +238,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **704** |
+| inference/training/survey配下の論文Markdown実体 | **705** |
 
 ### immutable submissionの未照合
 
