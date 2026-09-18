@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ab76d4a962a0d6ea991a05b2",
-  "job_id": "job-research-3001166a9d479500",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ab76d4a962a0d6ea991a05b2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ab76d4a962a0d6ea991a05b2","job_id":"job-research-3001166a9d479500",
+ "data":{
+   "hardware":"実GPUで評価。本文は設計GPUと記載し、付録で別種GPUでも一貫した傾向を確認している。方式のFP8部分は低精度行列積を高速実行できる現代GPUを前提とする。",
+   "software":"LLaDA-base、LLaDA-Instruct、LLaDA-1.5を対象とし、比較対象は素のLLaDA、Fast-dLLMによる並列復号、DPadによる接尾辞削減、およびそれらとLaCacheの組合せ。FP8線形層にはDeepGEMMを利用し、量子化処理を周辺演算へ融合する。",
+   "methodology":"推論効率は1例あたり平均遅延と毎秒トークン数で測定し、品質は推論課題の柔軟一致・厳密一致、コード生成のpass@1等で比較する。GSM8K 4-shot、MATH 4-shot、HumanEval 0-shot、MBPP 3-shotを主要表で評価し、PIQA、ARC、HellaSwag、WinoGrande、GPQAも付録で確認する。キャッシュ単独、量子化粒度、系列長について除去実験も行う。",
+   "scope":"実機推論のエンドツーエンド測定であり、シミュレーションではない。主評価はLLaDA系の拡散型LLMに限定され、自己回帰LLM一般への直接一般化は対象外。厳密キャッシュの適用範囲は第1層までで、FP8高速化は対応GPUに依存する。"
+ },
+ "reservation":{"claim_id":"claim-ab76d4a962a0d6ea991a05b2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
