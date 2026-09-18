@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T05:44:06.022455+00:00",
+  "updated_at": "2026-09-18T05:45:19.596981+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T05:44:06.022455+00:00",
+      "last_recorded_at": "2026-09-18T05:45:19.596981+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 243,
+        "research_completed": 244,
         "audit_completed": 0,
         "discovery_completed": 118,
         "blocked": 20,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35204135236:1",
-          "recorded_at": "2026-09-17T09:15:51.274848+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35204135236",
-            "run_attempt": "1",
-            "source_sha": "4b4281b3569fa5a030f04bc32a8591868b1d4d0f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35205881164:1",
           "recorded_at": "2026-09-17T09:35:52.030014+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35311936987",
             "run_attempt": "1",
             "source_sha": "074df8622e1a2669724b9bdf508c25e87da31b9f"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35312029389:1",
+          "recorded_at": "2026-09-18T05:45:19.596981+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35312029389",
+            "run_attempt": "1",
+            "source_sha": "57a1a3df23b5cae0ca0aa6bd983578830f1f699e"
           },
           "signals": [
             "research_completed"
@@ -22645,6 +22645,14 @@
           "type": "research",
           "canonical_id": "arXiv:2511.22333",
           "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2829f7afbf13ae9b",
+          "type": "research",
+          "canonical_id": "arXiv:2508.02558",
+          "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
           "from": "ready",
           "to": "completed"
         }
