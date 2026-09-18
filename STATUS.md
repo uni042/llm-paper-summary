@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 06:02:27 JST**
+> 自動生成: **2026-09-19 06:02:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
-| 未claim Research job | **50** |
+| 収録候補論文 | **53** |
+| 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **51** |
 | 最終検証済みResearch収録 | **09-19 05:35:57 JST（26分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **53** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **53** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **20** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **11** | **3** | **1** | **2** | **0** | **0** | **3** |
-| 合計 | **31** | **5** | **2** | **3** | **1** | **0** | **3** |
+| Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
+| 合計 | **33** | **5** | **4** | **1** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-19 06:02:20 JST** job `job-fc0b32f4684c9e75` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-edge-offload-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-edge-offload-3.json`
+  - 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference
+- **09-19 06:02:30 JST** job `job-8b03115ae2cdf87d` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
+  - 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture
 - **09-19 06:01:55 JST** job `job-d209a14a1856b2db` / 候補 **1件**
   - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260919T0217JST-discovery-specialist-agent-state-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0217JST-discovery-specialist-agent-state-4.json`
   - 探索軸: agentic multi-turn serving・persistent KV state・delta-only inference
-- **09-19 02:02:47 JST** job `job-521a57671b0e5d8a` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0223JST-discovery-specialist-execution-state-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0223JST-discovery-specialist-execution-state-5.json`
-  - 探索軸: execution-state checkpoint/restore・agent fork/rollback・small-batch serving runtime
-- **09-19 02:03:17 JST** job `job-f12003189ab11321` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260919T0228JST-discovery-specialist-fault-recovery-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0228JST-discovery-specialist-fault-recovery-6.json`
-  - 探索軸: fault-tolerant LLM serving・KV checkpoint/replication・failure recovery
 
 ### 直近タスク
 
@@ -168,16 +168,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 06:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **3件**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **3件**
 - 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference / heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture / programmable serving・agentic runtime・application-specific generation loop
 - round `specialist-edge-offload-3` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-edge-offload-3.json`
   - 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-edge-offload-3.json` (`ok=true`)
 - round `specialist-heterogeneous-hardware-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
   - 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json` (`ok=true`)
 - round `specialist-programmable-serving-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
   - 探索軸: programmable serving・agentic runtime・application-specific generation loop
@@ -210,7 +210,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **53** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,10 +238,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **564** |
+| 成功result未照合のimmutable submission | **562** |
 | └ Research | **433** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
