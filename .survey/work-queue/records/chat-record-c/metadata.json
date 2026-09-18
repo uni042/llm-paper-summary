@@ -9,56 +9,30 @@
     "arxiv_id": "2505.22618",
     "doi": "10.48550/arXiv.2505.22618",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
     "title": "Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding",
-    "summary": "Fast-dLLMは拡散型LLMの2つの推論律速、すなわち双方向attentionゆえのKV再計算と、多token同時unmaskによる依存関係破壊を、block-wise approximate KV cacheとconfidence-aware parallel decodingで同時に解く訓練不要frameworkである。prefixに加えmasked suffixもcacheするDualCacheと、高confidence tokenだけを並列確定する方式を組み合わせ、LLaDA/Dreamで最大27.6倍のend-to-end throughput向上を報告する。",
-    "list_summary": "block-wise近似KV cacheとconfidence閾値並列decodeを組み合わせ、dLLMを再学習なしで最大27.6倍高速化する。",
-    "authors": [
-      "Chengyue Wu",
-      "Hao Zhang",
-      "Shuchen Xue",
-      "Zhijian Liu",
-      "Shizhe Diao",
-      "Ligeng Zhu",
-      "Ping Luo",
-      "Song Han",
-      "Enze Xie"
-    ],
+    "summary": "Fast-dLLMは拡散型大規模言語モデルの二つの推論律速、すなわち双方向注意機構のために鍵・値キャッシュを再利用しにくい問題と、複数トークンを同時確定したときに依存関係を壊して品質が低下する問題を、ブロック単位の近似鍵・値キャッシュと確信度を用いた並列復号で同時に解く訓練不要の推論高速化手法である。接頭辞だけでなく未生成の接尾辞も再利用する二重キャッシュと、高確信度の位置だけを並列確定する方式を組み合わせ、LLaDAとDreamで最大27.6倍の端から端までの処理性能向上を報告する。",
+    "list_summary": "ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。",
+    "authors": ["Chengyue Wu","Hao Zhang","Shuchen Xue","Zhijian Liu","Shizhe Diao","Ligeng Zhu","Ping Luo","Song Han","Enze Xie"],
     "authors_affiliations": "The University of Hong Kong; NVIDIA; MIT; Independent Researcher",
     "published": "2025-05-28",
     "publication": "International Conference on Learning Representations (ICLR 2026)",
     "publication_type": "国際会議論文",
     "publication_status": "ICLR 2026 accepted; arXiv v3 2025-07-03",
-    "lineage": "diffusion LLM inference / approximate KV cache / parallel decoding",
-    "topics": [
-      "拡散LLM",
-      "KVキャッシュ",
-      "並列デコード",
-      "推論高速化",
-      "block-wise decoding"
-    ],
-    "importance": "dLLMにAR型cacheをそのまま適用できない問題とparallel decodingのquality問題を別々に定式化し、training-freeで組み合わせた基礎的高速化手法。",
-    "implementation": "LLaDA/Dream向け公式NVlabs/Fast-dLLM実装、評価script、demoを公開。",
-    "hardware_evaluation": "主図はNVIDIA A100、batch size 1、追加speedup frameworkなし。LLaDA/Dreamで評価。",
-    "quality_effect": "KV近似はadjacent-step KV similarityを根拠に精度低下を抑え、parallel decodingはconfidence thresholdでdependency violationを制限。最大speedup時もaccuracy低下は小さい。",
+    "lineage": "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+    "topics": ["拡散LLM","KVキャッシュ","並列デコード","推論高速化","ブロック単位復号"],
+    "importance": "拡散型LLMに自己回帰型モデルのキャッシュをそのまま適用できない問題と、並列復号時の品質低下を別々に定式化し、追加学習なしで両方を組み合わせた基礎的な高速化手法である。",
+    "implementation": "LLaDAとDream向けの公式実装、評価用スクリプト、デモがNVlabs/Fast-dLLMで公開されている。",
+    "hardware_evaluation": "主要な処理性能評価はNVIDIA A100、バッチサイズ1、追加の推論高速化基盤なしで実施され、LLaDAとDreamを評価対象とする。",
+    "quality_effect": "近似キャッシュは隣接する拡散段階間の鍵・値表現の類似性を利用し、並列復号は確信度のしきい値によって依存関係を壊しやすい低確信度トークンの同時確定を避ける。最大高速化時にも精度低下は小さいと報告される。",
     "source": "https://arxiv.org/abs/2505.22618",
-    "sources": [
-      "https://arxiv.org/pdf/2505.22618",
-      "https://research.nvidia.com/labs/eai/publication/fast-dllm/"
-    ],
+    "sources": ["https://arxiv.org/pdf/2505.22618","https://research.nvidia.com/labs/eai/publication/fast-dllm/"],
     "code": "https://github.com/NVlabs/Fast-dLLM",
     "last_checked": "2026-09-18",
     "references": [],
     "references_checked_at": "2026-09-18",
-    "references_source": "arXiv v3 primary manuscript",
-    "references_total": null
+    "references_source": "arXiv v3 primary manuscript; individual references were not transported in the recovered record",
+    "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-b2986b566a2c98de31284cba",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-b2986b566a2c98de31284cba","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
 }
