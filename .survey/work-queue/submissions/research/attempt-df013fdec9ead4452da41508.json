@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-df013fdec9ead4452da41508",
+  "job_id": "job-research-07d26e029c945d64",
+  "claim_id": "claim-df013fdec9ead4452da41508",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
+  "reason": "一次資料全文を安全に取得できなかったため一時blocked。arXivの公式 abstract (https://arxiv.org/abs/2609.06172)、HTML full rendering (https://arxiv.org/html/2609.06172)、PDF (https://arxiv.org/pdf/2609.06172) の3経路を個別に試したが、この実行環境ではいずれも DisabledError で取得不能だった。著者所属研究室 MoCA Lab の公式Researchページでは同一論文が IEEE ICCD 2026 論文として掲載されていることを確認したが、同ページから本文全文は取得できなかった。検索索引・第三者解説では抄録や詳細説明を取得できたが、二次資料から未確認の科学的内容を補完することは禁止されているため5-slotは生成していない。次回はarXiv取得経路の復旧、ICCD公式公開版、または著者公式コピーを再試行する。"
+}
