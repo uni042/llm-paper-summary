@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 52,
-      "completed": 538,
+      "ready": 51,
+      "completed": 539,
       "superseded": 44,
       "deferred": 3,
       "blocked": 2,
@@ -19,8 +19,8 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 52,
-    "actively_claimed": 1,
+    "ready_research_audit": 51,
+    "actively_claimed": 0,
     "claimable": 51
   },
   "next_jobs": [
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-06a7e035a0f5ff0b",
+      "job_id": "job-research-21b30a62610ad176",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2609.17184",
-      "title": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
-      "source_url": "https://arxiv.org/abs/2609.17184",
-      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md",
+      "canonical_id": "arXiv:2508.03611",
+      "title": "Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling",
+      "source_url": "https://arxiv.org/abs/2508.03611",
+      "paper_path": "papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T18:09:45+00:00"
+  "generated_at": "2026-09-18T18:12:08+00:00"
 }
