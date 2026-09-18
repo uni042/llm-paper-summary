@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2503.09716",
+      "title": "MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching",
+      "source_url": "https://arxiv.org/abs/2503.09716",
+      "paper_path": "papers/inference/02-moe-inference/2025-2503.09716-moe-gen-module-based-batching.md",
+      "priority": 88,
+      "reason": "単一GPUのMoEオフライン推論で、従来のmodel-based/continuous batchingがattention/expert moduleごとに小さすぎるbatchを形成する問題を、host memory上でtokenを蓄積してmodule単位に大batchを起動するmodule-based batchingで解く。module別batch sizeを最適化してGPU計算と通信を重畳し、DeepSeek/MixtralでFlexGen・MoE-Lightning・DeepSpeed等に対し8〜31倍のthroughput向上を報告する。MoE-Infinity等のexpert cache/offload系とは異なるbatching/runtime軸を補完し、公式コードも公開されているため優先度が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T16:00:00+09:00",
+    "round": "specialist-moe-backward-2",
+    "axis": "MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling",
+    "query_summary": "新着ランキングが既代表化済みだったため、MoE-Infinity、SSD expert offload、FlexGen周辺の隣接・過去年代へ探索窓を移した。検索結果を月別canonical identity snapshotと照合し、DuoServe-MoE、SSD energy analysis、HybridServe、L2 KV prefetch等の既代表化済み論文を早期除外。MoE-Gen (2503.09716) はarxiv-2503 identity snapshotに存在せず、rejection ledgerにも該当せず、一次arXiv abstractでsystems contributionと実測評価を確認したため採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2509.07379",
+      "arXiv:2508.06978",
+      "arXiv:2504.06319",
+      "arXiv:2501.01792",
+      "arXiv:2401.14361"
+    ],
+    "next_axis_hint": "次はMoE batchingから離れ、2024-2025のKV cache metadata/RDMA、storage hierarchy、GPU runtime系の重要論文を月別identity snapshotと照合して欠落を探す",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "moe-offload-adjacent-systems",
+        "source": "web-arxiv",
+        "date_range": "2024-01-01/2025-12-31",
+        "category": "cs.DC/cs.LG/cs.PF",
+        "citation_direction": "backward-adjacent",
+        "query_family": "moe-expert-cache-batching-offload",
+        "raw_result_count": 6,
+        "unseen_result_count": 1,
+        "duplicate_filtered_count": 5,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 1,
+        "candidate_accepted_count": 1,
+        "position": "multi-query search window"
+      }
+    ]
+  }
+}
