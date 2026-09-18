@@ -2,13 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-01bc2c1e0ef21dcae1e71886",
-  "job_id": "job-research-7b5d4afbd3eabe62",
+  "attempt_id": "attempt-894fefc24cb4ea7b63f3faa6",
+  "job_id": "job-research-7623de796f4f2b46",
   "data": {
-    "limitations": "評価はH200中心で、他世代GPUでは律速境界Lmや最適なGraph形状・待機窓が変わる。CUDA Graphは固定形状ごとに追加メモリと初期捕捉時間を必要とする。非PD構成でデコードとプリフィルを混在させると短要求集約の利得が低下する。また、負荷分類は主にトークン長と履歴長に基づくため、同じ長さでも異なるモデル・カーネル・テンソル並列度で律速特性が変わる場合は再プロファイルが必要である。",
-    "differences": "DistServeなどのプリフィル・デコード分離はフェーズ間の計算／メモリ非対称性を扱うのに対し、LAPSは分離後のプリフィル内部をさらに短・長へ分解する。BucketServe型の長さバケット化は主にパディングとバッチ均質性を改善するが、LAPSは短プリフィル／再プリフィルがメモリ律速、長プリフィルが計算律速になる境界を明示し、キューだけでなくインスタンス役割まで分離する。CUDA Graph単体の高速化とも異なり、Graph形状の再利用率を上げるために先に長短を分離する設計である。",
-    "implementation_status": "公開実装あり。LAPS v1.0はSGLang v0.4.6.post5系を基盤とし、Apache 2.0ライセンスのGitHubリポジトリ、インストール手順、LMSYS-Chat-1Mサブセット、ベンチマークスクリプト、再現期待値がMLSys 2026アーティファクト付録に明記されている。",
-    "research_positioning": "LLMサービング研究の中では、プリフィル・デコード分離の次段階として『プリフィル内部の異質性』を扱うスケジューリング系統に位置する。長コンテキストだけでなく、複数ターン対話、ツール利用、投機的デコードなどが短い再プリフィルを高頻度に発生させる現在の負荷に適合する。既存のPD分離基盤を置換せず上乗せできるため、SGLang系の実運用へ組み込みやすい一方、最適境界はハードウェアとモデルごとの実測に依存する。"
+    "limitations": "評価とソルバは単一GPU VMを前提とし、複数GPUや分散クラスタ、GPU間KV転送を含む配置最適化は未対応。性能モデルはVMごとのCTCF事前プロファイルに依存するため、新GPU、ドライバ、推論ランタイム、モデル族へ移る際は再測定が必要。評価モデルはOPT 1.3B/2.7B/6.7Bが中心で、MoEやGQAを持つ最新大規模モデルへの予測精度は未実証。クラウド価格も時点・地域依存であり、スポット価格や動的価格、起動待ち時間はモデル化していない。",
+    "differences": "Melange等はGPU異種性と要求特性から配置を選ぶがKVオフロードの容量・転送費を候補生成へ入れない。SplitWise/ThunderServeはprefill/decodeを別GPUへ分けるが高速相互接続を前提とし、一般的な単一VMの選択問題とは異なる。FlexGen等は所与のハードウェア上でオフロード実行を最適化するのに対し、InferSaveはオフロード率による性能低下を予測して『そのVMを借りるべきか』を決める上位層の資源選択器である。",
+    "implementation_status": "Python 3.10.14とNumPy 1.24.3で実装され、FlexGenのKVオフロードを利用する。完全なソースコードと関連ツールはGitHubのlass-lab/InferSaveで公開。AWS実機4 GPU VMで検証。",
+    "research_positioning": "階層メモリ/オフロードをクラウド経済性へ接続する運用最適化研究。SSD/CPUオフロード技法そのものの帯域を改善するのではなく、転送帯域と容量を性能モデルへ組み込み、どのハードウェア階層をどのSLOで使うと費用対効果が高いかを決める。今後、NVMe帯域・SSD価格・量子化KV・複数GPUを変数へ加えれば、より広い階層メモリ配置ソルバへ拡張できる。"
   },
-  "reservation": {"claim_id": "claim-01bc2c1e0ef21dcae1e71886", "worker_id": "scheduled-chat-discovery-20260919T0700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-894fefc24cb4ea7b63f3faa6",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

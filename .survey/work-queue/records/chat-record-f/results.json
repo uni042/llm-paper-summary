@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-01bc2c1e0ef21dcae1e71886",
-  "job_id": "job-research-7b5d4afbd3eabe62",
+  "attempt_id": "attempt-894fefc24cb4ea7b63f3faa6",
+  "job_id": "job-research-7623de796f4f2b46",
   "data": {
-    "overview": "LAPSは、短・長プリフィルを同一バッチへ混ぜる構造的な無駄を除き、短要求をCUDA Graphに適した均質バッチへ集約することで、通常のSGLang PD分離よりプリフィル遅延とSLO違反を下げる。高並行・混合要求ではQwen2.5-32Bのプリフィル要求スループットを35%改善した。付録のQwen2.5-72B/8×H200再現条件でも、高並行ほど通常SGLangとの差が大きく、cc=64で255.4 req/sから369.1 req/sへ増える。",
+    "overview": "InferSaveはSLOを満たす範囲で最大性能GPUより安価なVMを選び、オンライン400 TPSではg4dn.xlargeが620.17 TPSを0.71ドルで提供し、g6e.xlargeの2.699ドルに対して73.7%低コストとなる。600 TPSではg6.xlargeを選び56.75%低コスト。長入力のオフラインではKVオフロードにより低VRAM VMを候補に残し、100 TPSでg4dn.xlargeを選択して総費用2.13ドル、最大性能VMより約21%安く、200 TPSでも低価格VMを選択する。CTCFはT4デコード約1%、L4プリフィル約2%の予測誤差を示す。",
     "key_results": [
-      {"metric": "prefill latency", "value": ">30% reduction", "baseline": "vanilla SGLang under prefill-decode disaggregation", "condition": "real multi-turn workloads", "interpretation": "プリフィル段階内部の長短分離により、PD分離だけでは残る干渉を削減した。"},
-      {"metric": "SLO violation rate", "value": "28% reduction", "baseline": "vanilla data-parallel multi-instance deployment", "condition": "multi-instance serving", "interpretation": "長短専用インスタンスと動的割当が負荷偏りを抑え、期限違反を減らした。"},
-      {"metric": "request throughput", "value": "35% improvement", "baseline": "SGLang serving baseline", "condition": "high-concurrency mixed requests, Qwen2.5-32B prefill instance", "interpretation": "短要求の集約とGraph再利用により、混合負荷でもプリフィル処理量が増加した。"},
-      {"metric": "request throughput", "value": "369.1 req/s vs 255.4 req/s", "baseline": "vanilla SGLang", "condition": "Qwen2.5-72B-Instruct, TP=4, one prefill instance on 4×H200, concurrency 64", "interpretation": "高並行時に長短分離と短要求集約の効果が大きくなることを再現用付録が示す。"},
-      {"metric": "mixed-batch TTFT penalty", "value": "29.3× (7B), 31.0× (32B)", "baseline": "8×64-token short-only batch", "condition": "7×64 + 1×2048 padded mixed batch on H200", "interpretation": "長短混合ではGEMM約85%、attention約87%がパディングで無駄になり、分離対象となる構造的干渉が非常に大きい。"}
+      {
+        "metric": "オンライン400 TPS費用",
+        "value": "g4dn.xlarge $0.71、620.17 TPS；g6e.xlarge $2.699に対し73.7%低コスト",
+        "baseline": "Max-Performance",
+        "condition": "OPT-2.7B、batch 32、128入力/512出力、3000要求",
+        "interpretation": "SLO超過性能を買わず、必要性能を満たす最安側VMへ落とせる。"
+      },
+      {
+        "metric": "オンライン600 TPS費用",
+        "value": "g6.xlarge $1.167、800.15 TPS；g6e.xlarge比56.75%低コスト",
+        "baseline": "Max-Performance",
+        "condition": "同オンライン workload",
+        "interpretation": "SLOが厳しくなると選択VMをT4からL4へ引き上げる。"
+      },
+      {
+        "metric": "オフライン100 TPS",
+        "value": "g4dn.xlarge、100% KV offload、169.17 TPS、総費用$2.13",
+        "baseline": "g6e.xlarge $2.699",
+        "condition": "1024入力/128出力、1000要求",
+        "interpretation": "長入力ではKVオフロードを許すことで安価な16GB GPUを候補にできる。"
+      },
+      {
+        "metric": "CTCF予測誤差",
+        "value": "g4dn.xlargeデコード約1%、g6.xlargeプリフィル約2%",
+        "baseline": "実測時間",
+        "condition": "OPT-2.7B、512入力/128出力",
+        "interpretation": "公称FLOPSだけより実LLM性能に近いVM比較を可能にする。"
+      },
+      {
+        "metric": "オフライン節約効果",
+        "value": "論文全体でKV offloading考慮により最大約20.19%、議論では条件により最大28%のコスト削減機会",
+        "baseline": "オフロード非考慮/最大性能選択",
+        "condition": "長入力batch workload",
+        "interpretation": "オフロードは全 workloadで有利ではなく、緩いSLOと長入力で特に価値が高い。"
+      }
     ],
-    "negative_results": "非PD構成でプリフィルとデコードを同じ実行へ混ぜると、短プリフィルを連続的に集約できず、CUDA Graphによるスループット利得が低下する。CUDA Graphは一個あたり約228〜277MBを消費し、初回捕捉に約8〜12秒かかるため、形状を細分化しすぎるとメモリと初期化コストが増える。",
-    "interpretation": "利得の源泉は、単なる優先度変更ではなく、メモリ律速の短要求と計算律速の長要求を物理的または時間的に同居させないことにある。短系列では重み読み込みの固定費が支配的なので同形状要求をまとめても追加計算が小さく、Graph起動効率が上がる。一方、長系列ではパディング量がそのままGEMM計算量へ効くため、短要求との混合を避けるほど効果が大きい。",
-    "quality_impact": "生成アルゴリズムやモデル重みを近似変更しないため、精度劣化を許容して速度を得る方式ではない。論文は回答品質よりサービング性能を評価対象としており、品質を変えないスケジューリング／実行構成として扱うのが妥当である。"
+    "negative_results": "オンラインの代表workloadではKV全量がGPUへ収まるため、オフロードを考慮しないInferSaveと最大性能方策が同じg6e.xlargeを選ぶ場合があり、オフロード自体は常に有益ではない。安価VMでオフロード率が高いと転送遅延により厳しいSLOを満たせず候補から外れる。",
+    "interpretation": "KVオフロードの価値は単純なOOM回避ではなく、SLOに余裕がある時にVRAM容量の小さい安価GPUを使える選択肢を増やすことにある。性能予測へ転送費を入れることで、オフロード率を上げすぎてSLOを破る構成と、高性能すぎて費用を浪費する構成の双方を避ける。",
+    "quality_impact": "同一モデルを同一精度で実行し、品質指標を変更しない。最適化対象はTPS/SLO、タスク完了時間、クラウド費用。"
   },
-  "reservation": {"claim_id": "claim-01bc2c1e0ef21dcae1e71886", "worker_id": "scheduled-chat-discovery-20260919T0700JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-894fefc24cb4ea7b63f3faa6",
+    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
