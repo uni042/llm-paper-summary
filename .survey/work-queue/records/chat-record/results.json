@@ -1,19 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b8073f0637a56eac35f5c473","job_id":"job-research-3736e6c195a4f8a9",
- "data":{
-  "overview":"Carryoverは2ターゲット×2ドラフター×温度0/1の全組合せで受理長を改善し、平均受理長の相対改善は6.5〜14.7%。一時KVの投影・注意計算を含むオンラインvLLMでも、自己回帰復号に対する高速化倍率が対応する基準ドラフターより7.9〜14.4%向上した。特に翻訳ではQwen3-4B Markov・温度1で受理長+28.6%、オフライン高速化倍率+28.8%を記録する。棄却状態を実際に与えると、同一アンカーで与えない場合よりRecall@1が1.28〜5.60ポイント、Recall@16が0.29〜1.89ポイント高く、棄却枝が将来の正解へ再収束する頻度と利得が強く相関する。",
-  "key_results":[
-   {"metric":"平均受理長の相対改善","value":"6.5–14.7%","baseline":"同一DFlashまたはMarkovドラフター","condition":"Qwen3-4B/Gemma 4 12B、温度0/1、844プロンプト8タスク","interpretation":"棄却ターゲット状態には次の提案を改善する情報が残り、完全並列・半自己回帰の両ドラフターで効果がある。"},
-   {"metric":"オンラインvLLM平均高速化倍率の相対改善","value":"7.9–14.4%","baseline":"対応するCarryoverなしドラフター","condition":"混合844プロンプト、同時実行1、最大1024出力、単一H200","interpretation":"一時KVの投影・注意オーバーヘッドを含めても受理長増加が上回り、実時間改善へつながる。"},
-   {"metric":"翻訳での最大受理長改善","value":"28.6%","baseline":"Qwen3-4B Markov","condition":"translation、温度1","interpretation":"棄却枝が後の正解系列へ再収束しやすいタスクほど再利用価値が大きい。"},
-   {"metric":"翻訳での最大オフライン高速化倍率改善","value":"28.8%","baseline":"Qwen3-4B Markov 1.94x vs Carryover 2.50x","condition":"translation、温度1、バッチ1、最大2048出力","interpretation":"タスク依存の大きな受理長増加が直接ウォールクロック高速化へ反映される。"},
-   {"metric":"棄却状態の予測寄与","value":"Recall@1 +1.28–5.60 points; Recall@16 +0.29–1.89 points","baseline":"Carryover学習済み重みから一時状態だけを除いたOFF条件","condition":"Qwen3-4B Markov、844プロンプト、温度0、同一アンカー比較","interpretation":"改善が単なる追加学習ではなく、推論時に供給する棄却状態の情報利用から生じることを支持する。"},
-   {"metric":"一時KVへの注意割合","value":"19.78% overall; 23.40% with 15 rejected states","baseline":"Carryover注意全体","condition":"DFlash、MT-Bench注意診断","interpretation":"既存注意層が棄却KVを実際に参照しており、単一埋め込みで情報源として区別・利用できる。"},
-   {"metric":"再収束とタスク別利得の相関","value":"r=0.96; translation除外でも0.90","baseline":"受理後一致や棄却状態数との相関","condition":"Qwen3-4B Markov、温度0、8タスク","interpretation":"棄却枝の長さそのものより、棄却枝の予測が最終的な確定系列へ再び一致する性質がCarryoverの効き方を説明する。"}
-  ],
-  "negative_results":"同時実行数を1から32へ上げるとCarryoverと基準方式の双方で自己回帰復号比の高速化倍率は低下する。固定検証長を使っており、DSparkの信頼度スケジューリングとの共同最適化は未評価。Carryover用の専用投影器は小規模プローブで受理長をわずかに改善するが、ドラフト経路へ追加投影費用を持ち込むため採用していない。タスク差も大きく、Qwen3-4B DFlash・温度1のRAGでは受理長改善が1.1%に留まる。",
-  "interpretation":"棄却枝は最終的に不採用でも、ターゲットモデルがその枝を処理した隠れ状態には将来の正解系列へ戻る手掛かりが残る。Carryoverはその表現を1ラウンドだけ読み取り可能にし、確定履歴へ混ぜずに次の候補分布を改善する。より強いMarkovドラフターはDFlashより平均再収束位置が2.76対2.51と多く、8タスク中7タスクでCarryover利得も大きいため、ドラフターが強くなっても再利用価値が消えるとは限らない。",
-  "quality_impact":"ターゲット検証の受理規則自体を変更せず、ドラフター候補を改善するため、投機的復号の出力整合性を維持する設計である。"
- },
- "reservation":{"claim_id":"claim-b8073f0637a56eac35f5c473","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-67c677bdf0613551686265c8",
+  "job_id": "job-research-326d710987e96b1f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-67c677bdf0613551686265c8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

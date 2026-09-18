@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b8073f0637a56eac35f5c473","job_id":"job-research-3736e6c195a4f8a9",
- "data":{
-  "hardware":"全推論評価は単一NVIDIA H200 GPU。vLLMを用い、オフラインのデータセット別測定、オンラインの混合844プロンプト測定、同時実行数1/2/4/8/16/32のスループット測定を行う。",
-  "software":"ターゲットはQwen3-4BとGemma 4 12B。ドラフターは5層・15提案トークンのDFlashと、DSparkのrank-256一次補正ヘッドを加えたMarkov半自己回帰版。比較を固定長検証に揃えるためDSparkの信頼度スケジューリングは無効。実行基盤はvLLM。",
-  "methodology":"学習プロンプトはUltraChat-200KとMagpie-Llama-3.1-Pro-300K-Filteredを合わせた50万件で、各ターゲットが応答を再生成し、基準方式とCarryoverで同じ記録済み応答を共有する。基準ドラフターを10エポック学習後、Carryoverは同じ応答から3エポック追加学習する。各応答から512アンカーを使う。評価はRed Hat speculator benchmarkの844プロンプトで、HumanEval 164、tool calling 200、Math/MT-Bench/QA/RAG/要約/翻訳は各80。温度0と1を評価する。データセット別はオフラインvLLM・バッチ1・最大2048出力、平均高速化はオンラインvLLM・同時実行1・最大1024出力、同時実行掃引は1〜32・温度0・最大1024出力。受理長は検証ボーナストークンを含み、全検証ラウンドでマイクロ平均する。",
-  "scope":"固定15トークン検証長のDFlash/Markov系を中心に、Qwen3-4BとGemma 4 12B、単一H200で評価する。DSpark本来の信頼度スケジューリング、木構造検証、複数ラウンドにわたる棄却状態保持は未評価。平均高速化とデータセット別高速化は別プロトコルで測定され、単純平均ではない。"
- },
- "reservation":{"claim_id":"claim-b8073f0637a56eac35f5c473","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-67c677bdf0613551686265c8",
+  "job_id": "job-research-326d710987e96b1f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-67c677bdf0613551686265c8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
