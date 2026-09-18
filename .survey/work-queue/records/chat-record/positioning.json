@@ -1,18 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-26ea570f1e76c6a687e67786",
-  "job_id": "job-research-37f936e1437c5b29",
-  "data": {
-    "limitations": "評価targetはQwen3 1.7B/4B/8Bのみで、Llama系やMoE targetへの一般化は未実証。訓練は80K ShareGPT、8×A800を用い、既存drafterへ単純post-hoc適用するのではなくmulti-round self-conditioned retrainingが必要。relay stateは旧speculative context由来なので境界補正が必要で、Dominoとの単純teacher-forced結合ではacceptance lengthが2.22へ大幅悪化する。高並列評価は単一node・最大32 concurrencyで、クラスタ分散servingは未評価。",
-    "differences": "EAGLE系列はautoregressive speculative drafting、DFlashはblock diffusionでK tokenを並列draftする。DFlareはtarget複数layer featureの使い方をdraft layerごとに改善し、Dominoは同一draft round内のcausal dependencyを軽量headで補う。DFlowはこれらと異なり、target verification後に通常捨てるrejected suffix hidden statesを次roundへ跨いで再利用する。KV accessやexpert prefetchへspeculative情報を使う研究が後続operationの削減を狙うのに対し、DFlowはverifier contextual representationをdraft入力へ戻して次proposal自体の品質を上げる。",
-    "implementation_status": "論文はDFlashベースの5-layer drafterとrelay moduleを実装し、SGLang上の高並列throughputまで評価。arXiv本文から公式code repository URLは確認できなかった。",
-    "research_positioning": "投機的復号の『棄却された計算結果も再利用可能』という系統。target verificationは通常accepted token判定のためだけに使われるが、DFlowはrejected suffixのhidden stateを次round draftへ流すことでtarget計算の情報効率を上げる。SP-MoEやpredictive prefetchのようにspeculationをシステム先読みへ使う研究と共通して、投機実行を単なる候補生成ではなく将来状態を観測するprobeとして扱う。"
-  },
-  "reservation": {
-    "claim_id": "claim-26ea570f1e76c6a687e67786",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-26ea570f1e76c6a687e67786","job_id":"job-research-37f936e1437c5b29","data":{"limitations":"評価対象はQwen3の三規模だけで、Llama系や混合専門家型対象モデルへの一般化は未実証。訓練にはShareGPT八万標本とA800八基を用い、既存提案器へ後付けするだけではなく複数回自己条件付き再訓練が必要になる。引き継ぐ表現は古い投機文脈由来なので棄却境界に応じた補正が必要で、Dominoと教師強制のまま単純結合すると平均受理長が2.22へ大幅悪化する。高並列評価は単一ノードで最大三十二同時要求までで、複数ノード分散提供は未評価。","differences":"EAGLE系列は自己回帰的に投機候補を作り、DFlashはブロック拡散で複数トークンを並列提案する。DFlareは対象モデルの複数層表現の使い方を提案器層ごとに改善し、Dominoは同一提案回の中で失われた因果依存を軽量ヘッドで補う。DFlowはこれらと異なり、対象モデルの検証後に通常捨てる棄却後続位置の中間表現を次の提案回へまたいで再利用する。投機情報をKVアクセス予測や専門家先読みに使う研究が後続処理の削減を狙うのに対し、DFlowは検証器の文脈表現を提案入力へ戻して次の候補そのものの品質を上げる。","implementation_status":"論文ではDFlashを基礎とする五層提案器へ情報引継ぎ機構を実装し、SGLang上で高並列スループットまで評価している。arXiv本文から著者公式の公開コード保管庫は確認できなかった。","research_positioning":"投機的復号で棄却された計算結果も再利用可能だと捉える系統に位置する。対象モデル検証は通常、候補トークンを確定できるか判定するためだけに使われるが、DFlowは棄却後続位置の中間表現を次回提案へ流し、同じ対象モデル計算から得られる情報量を増やす。投機実行を単なる候補生成ではなく、将来状態を観測する探索信号として利用する設計原理を示す。"},"reservation":{"claim_id":"claim-26ea570f1e76c6a687e67786","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
