@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a9d8c2cf570fd3b13fb6b628",
-  "job_id": "job-research-469eef375f5f828e",
-  "data": {
-    "hardware": "全実験はNVIDIA H100 NVL 94GB×2搭載サーバ。AIME25とCodeEloの短入力・長推論出力では単一H100を使用し、最大一括数128。LongBench-v2では事前充填と復号を2GPUへ分離し、復号GPUの最大一括数はモデルごとに4、4、5、20。",
-    "software": "vLLMへVegasを統合し、投機提案器のPython実装、1語ページのPagedAttention疎注意、注意ロジット収集用に改造したFlashAttention-3を使用。gpt-oss-20bのMoE重みはMXFP4量子化。",
-    "methodology": "Qwen3-4B、Qwen3-8B、Qwen3-30B-A3B-Thinking-2507-FP8、gpt-oss-20bを評価。比較対象は既定vLLM、MagicDec-Stream、MagicDec-Quest、SpecExtendで、すべてvLLM内に実装。短入力ではAIME25とCodeEloを十分反復投入し、約400要求処理後の安定した復号処理量を測定。AIME25は平均入力182語、Qwen3-8Bで平均出力19,680語。長入力ではLongBench-v2から96K〜120K語の要求を使用。各方式の疎率とγは同じ調整手順で個別最適化し、Vegasでは実験上7%疎率が準最適。",
-    "scope": "主評価は処理量指向の長文復号。推論系短入力・長出力と長入力の双方を含むが、低一括数の遅延最優先サービングは主要対象ではない。"
-  },
+  "attempt_id": "attempt-86c6a56d718fe98a07ff5740",
+  "job_id": "job-research-f7dcdf40e7d3538f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a9d8c2cf570fd3b13fb6b628",
+    "claim_id": "claim-86c6a56d718fe98a07ff5740",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
