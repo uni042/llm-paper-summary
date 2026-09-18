@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0ee0523cc013293152fce8f1",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {
-    "limitations": "attention-guided evictionは経験的saliency安定性に依存し、誤差保証はない。HumanEvalで示されるようにコード等の細粒度長距離依存では重要tokenを落とし得る。単一4090・native dLLM実装中心でproduction serving framework、batching、多GPUへの適用は未評価。retention ratio/kernel/delayはモデル・task依存の可能性がある。",
-    "differences": "dLLM-Cacheはprompt/response cacheのrefresh intervalやfeature similarityで部分更新、dKV-Cacheはone-step delayed caching、Fast-dLLMはcurrent block外の全KVをcacheする。Sparse-dLLMはcache内部をさらにattention saliencyで疎化し、dLLMの双方向性に合わせprefixとsuffixを同時evictする。AR向けSnapKV等が過去prefixだけを扱うのに対し、future-side suffixも対象となる。",
-    "implementation_status": "AAAI-26採択・公開済み。公式OpenMOSS/Sparse-dLLM repositoryがあり、LLaDA/Dream向け実装とOpenCompass speed evaluation scriptsを提供。訓練不要のplug-and-play方式。",
-    "research_positioning": "拡散LLM推論のKV-cache系統で、単なるcache reuseからcache sparsificationへ進めた初期代表例。時間方向のKV安定性とtoken方向のattention sparsityを組み合わせ、長文脈dLLMでcomputeとmemoryの両方を抑える。後続のconfidence-guided sparse attentionやactivation reuseと比較する基準点になる。"
-  },
+  "attempt_id": "attempt-c0cab04c270b3f1647d6bd86",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0ee0523cc013293152fce8f1",
+    "claim_id": "claim-c0cab04c270b3f1647d6bd86",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
