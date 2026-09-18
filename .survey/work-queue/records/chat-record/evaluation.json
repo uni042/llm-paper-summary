@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e89e063d9080990c8ecc0d26",
+  "attempt_id": "attempt-acffb77470592a9e8f9dbd06",
   "job_id": "job-research-4fd6dcd288e7197d",
   "data": {
     "hardware": "検証サーバはAMAX workstationのNVIDIA A100 80GB×4をNVLink接続。投機クラスタは個別ノードとしてRTX 2080Ti×8とRTX 3090×8を100Mbps Ethernetで接続し、両ハードウェア群は10Gbps Ethernet・sub-1msで接続。",
@@ -11,7 +11,7 @@
     "scope": "異種multi-node speculative servingを対象とし、offline latency/throughput、online latency/cost efficiency、component ablationを評価する。ドラフタは対象5分野でdomain-specialized fine-tuningされ、受理長は1.69〜3.20程度の差を持つ。ネットワークは実験構成固定で、より広域・高遅延環境の評価はない。"
   },
   "reservation": {
-    "claim_id": "claim-e89e063d9080990c8ecc0d26",
+    "claim_id": "claim-acffb77470592a9e8f9dbd06",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
