@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T05:45:19.596981+00:00",
+  "updated_at": "2026-09-18T05:46:02.577359+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T05:45:19.596981+00:00",
+      "last_recorded_at": "2026-09-18T05:46:02.577359+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 244,
         "audit_completed": 0,
         "discovery_completed": 118,
-        "blocked": 20,
+        "blocked": 21,
         "new_jobs": 180,
         "new_papers": 244,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35205881164:1",
-          "recorded_at": "2026-09-17T09:35:52.030014+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35205881164",
-            "run_attempt": "1",
-            "source_sha": "0577efa97093d25b2641868beb4bcaf06db29642"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35206463858:1",
           "recorded_at": "2026-09-17T09:41:42.223819+00:00",
@@ -19596,6 +19582,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35312076274:1",
+          "recorded_at": "2026-09-18T05:46:02.577359+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35312076274",
+            "run_attempt": "1",
+            "source_sha": "241143325efdd9037875c9c6d2fee0f7eb31a355"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -22655,6 +22655,14 @@
           "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2072895e5b6f0b68",
+          "type": "research",
+          "canonical_id": "arXiv:2410.17043",
+          "title": "Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -24481,7 +24489,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 705,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
