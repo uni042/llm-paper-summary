@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-11b5e62465ce56e739adae95",
-  "job_id": "job-research-c790156bc5f9f1f9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-11b5e62465ce56e739adae95",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-11b5e62465ce56e739adae95","job_id":"job-research-c790156bc5f9f1f9","data":{"canonical_id":"arXiv:2609.00363","arxiv_id":"2609.00363","doi":"10.48550/arXiv.2609.00363","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance","summary":"INT8 W8A8推論で同じインターフェースを実装するCUTLASSとTritonが、正確なINT32累積後のスケール適用・BF16丸めだけで異なる出力を生む問題を対象に、既存適合性試験の検出能力と2の冪スケールの実用性を測る。Qwen3-1.7Bの196層から取得した実オペランドへ9種類の既知故障を注入した8,232セルでは、修正版予測行列に対する偽陽性・偽陰性は0だが、5種中4種のエピローグ故障を全く検出できず、1 ULP許容差では構造的にカーネル同値性を保証できない。一方、元BF16重みから2の冪スケールで正しく再量子化するとQwen3 1.7B/8B/14Bでカーネル間の生成をバイト一致させ、perplexity点推定変化を-0.28%〜+0.48%に抑える。","list_summary":"INT8 GPUカーネル差の故障注入検証で1 ULP許容差の限界を示し、再量子化2の冪スケールをビット単位決定性の実用条件として検証。","authors":["Teng-Ruei Chen"],"authors_affiliations":"Krixvon, Taipei, Taiwan","published":"2026-08-25","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"deterministic inference / INT8 quantization / GPU kernels / numerical conformance","topics":["決定的推論","INT8 W8A8","CUTLASS","Triton","2の冪量子化尺度","故障注入"],"importance":"許容誤差ベース試験が保証できる範囲を実故障で測定し、カーネル間ビット一致を得る量子化条件の精度コストまで評価する。","implementation":"故障注入器、適合性チェック、再量子化パイプラインを実装。論文時点でアーティファクトリポジトリは非公開で公開予定。","hardware_evaluation":"単一NVIDIA RTX 4090。Qwen3-1.7B/8B/14B、vLLM内CUTLASS/Triton INT8カーネル。","quality_effect":"最近傍2の冪スケール再量子化のperplexity点推定は1.7B +0.32%、8B -0.28%、14B +0.48%。90%区間上端は1.7B +0.71%、14B +0.76%。","source":"https://arxiv.org/abs/2609.00363","sources":["https://arxiv.org/abs/2609.00363","https://arxiv.org/html/2609.00363v1"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":26},"reservation":{"claim_id":"claim-11b5e62465ce56e739adae95","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
