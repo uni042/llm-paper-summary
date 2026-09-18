@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5adb86bd27e2666265386057",
+  "attempt_id": "attempt-85e31171313f0f31636868a0",
   "job_id": "job-research-56fbeb640bc1560d",
   "data": {
     "hardware": "実機Edge LLMクラスタではなくシミュレーション。LLMパラメータはQwen2.5-7B-Instruct: 28 Transformer layers、4 KV heads、head dimension 128、16-bit elements。これよりKV payloadは458,752 bit/token、3072-token contextで176MBと算出する。",
@@ -11,7 +11,7 @@
     "scope": "理論的global optimalityとネットワーク/LLMパラメータを用いた数値評価が中心で、実際のGPU prefill時間変動、KV serialization/DMA、backhaul protocol overhead、異種model/BS、handover予測誤差などは実機検証されていない。sourceとtargetは同一LLM architecture/parametersを持つ前提で、hard handover中はdecodeを停止する。"
   },
   "reservation": {
-    "claim_id": "claim-5adb86bd27e2666265386057",
+    "claim_id": "claim-85e31171313f0f31636868a0",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

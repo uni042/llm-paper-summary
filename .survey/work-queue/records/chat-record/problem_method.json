@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-5adb86bd27e2666265386057",
+  "attempt_id": "attempt-85e31171313f0f31636868a0",
   "job_id": "job-research-56fbeb640bc1560d",
   "data": {
     "problem": "エッジ大規模言語モデル（Edge LLM）を利用する移動端末が送信元基地局から移動先基地局へハンドオーバすると、自回帰デコード（autoregressive decode）が依存する過去文脈のKVキャッシュ（KV cache）を移動先で復元するまで生成を再開できない。トークン方式ハンドオーバ（token-based handover; tHO）は過去トークンを送り移動先でプリフィル（prefill）してKVを再計算するため計算遅延が大きい。一方、キャッシュ方式ハンドオーバ（cache-based handover; cHO）はKVを直接バックホール（backhaul）転送して再計算を避けるが、大規模モデルではKVが数百MBからGB級となり共有回線がボトルネックになる。研究課題は、複数端末でハンドオーバ時刻と文脈長が異なる状況において、再計算とKV転送をどう分担・スケジュールすれば最悪ユーザのサービス中断時間を最小化できるかである。",
@@ -29,7 +29,7 @@
     "system_design": "移動先基地局は対象端末群の共通接頭辞をバッチプリフィルし、送信元基地局は各端末がハンドオーバ可能になった時点から残余KVを共有バックホールへ流す。プリフィルとKV転送は並行して進み、両方が完了した時点でその端末のデコードを再開する。したがって片方だけを高速化しても他方が支配的なら中断時間は縮まらず、提案法は計算側と通信側の完了時刻を均衡させる最小最大（min-max）設計としてシステム全体を扱う。"
   },
   "reservation": {
-    "claim_id": "claim-5adb86bd27e2666265386057",
+    "claim_id": "claim-85e31171313f0f31636868a0",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }

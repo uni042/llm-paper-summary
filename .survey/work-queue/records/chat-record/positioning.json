@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5adb86bd27e2666265386057",
+  "attempt_id": "attempt-85e31171313f0f31636868a0",
   "job_id": "job-research-56fbeb640bc1560d",
   "data": {
     "limitations": "評価は解析modelとsimulationのみで、実Edge GPU・backhaul上のend-to-end prototypeはない。source/target BSが同一LLM architecture/parametersを持ち、token送信時間はKV transfer/prefillより無視でき、prefill delayを線形p(L)=aL+bで近似できる前提を置く。全UEに共通prefix長Lを使うbatch prefillのため、UEごとに異なる計算/通信境界を最適化する一般形は扱わない。handover時刻とcontext長をsourceが既知とし、hard HO中はstreamingを停止する。soft HO、予測誤差、heterogeneous accelerators、実network jitter、KV serialization/compression overheadは今後の課題である。",
@@ -11,7 +11,7 @@
     "research_positioning": "KV cache memory系統とEdge/distributed inference系統の接点に位置する。特にdisaggregated servingで議論されるKV transfer対recomputeの判断を、モバイルhandoverと共有backhaulのmin-max schedulingへ拡張した研究と見なせる。SSD/CPU offloadとは階層が異なるが、『高価な状態を移動するか再計算するか』という共通の設計原理をネットワーク越しKVへ適用している。"
   },
   "reservation": {
-    "claim_id": "claim-5adb86bd27e2666265386057",
+    "claim_id": "claim-85e31171313f0f31636868a0",
     "worker_id": "scheduled-chat-discovery-20260919T0700JST",
     "worker_kind": "scheduled_chat"
   }
