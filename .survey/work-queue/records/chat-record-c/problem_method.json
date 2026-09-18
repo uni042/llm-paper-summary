@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-854ec831672b054b5c8ebfe2","job_id":"job-research-c2f58815c322fab7","data":{"problem":"vLLM等の既存LLMサービング基盤は、高スループットのテキスト補完を想定した単一化されたprefill-decodeループを中心に設計され、KVキャッシュ管理、次トークン予測・sampling、外部処理との接続をシステム側の全体方針として固定する。この構造ではTree/Graph/Recursion-of-Thoughtのように実行時状態に応じて特定KVを保持・複製・破棄する処理、投機的デコードや制約付き生成のように生成手順を要求ごとに変える処理、ReACT等で外部APIやコード実行を生成途中に挟む処理が難しい。外部ツール呼出しをクライアントへ戻す方式ではネットワーク往復に加え、要求間でKV状態を失って再prefillする場合がある。著者らは次世代基盤の要件を、アプリケーション固有KV制御、生成過程のカスタマイズ、計算・I/Oの統合の3点として定義する。","novelty":"Pieの中心的な新規性は、promptをサービス単位とする固定生成パイプラインではなく、生成を細粒度ハンドラへ分解し、Turing完全な利用者プログラムinferletをサービス単位にする点にある。inferletはKVページを明示管理し、embed・forward・sampleを任意順序で組み合わせ、HTTP等のI/Oも同一プログラム内で実行できる。一方でGPU操作を各inferletが直接実行するのではなく、中央制御層がcommand queueの依存関係を利用して複数inferlet間の水平バッチと同一queue内の互換な連続操作の垂直バッチを形成するため、要求ごとのプログラマビリティと共有GPUのバッチ効率を両立する。","method_overview":"Pieはアプリケーション層、制御層、推論層の3層構成を採る。アプリケーション層ではWebAssembly runtime上で単一スレッド・イベント駆動のinferletを隔離実行し、非同期APIで並行I/Oを扱う。APIはLLM forwardをembed、forward、sampleへ分解し、Embedと8〜32 token単位のKvPageを明示資源として扱う。各inferletは仮想資源アドレス空間を持ち、KVのallocate/deallocate/copy/mask/import/exportを制御する。GPU処理を伴うAPIはcommand queueへ入り、制御層のwork-conserving adaptive batch schedulerが依存関係を守りつつバッチ化し、推論層がGPU kernel/backendを実行する。外部I/Oやinferlet間通信は制御層で直接処理する。","components":[{"name":"InferletとWebAssembly隔離実行","description":"利用者提供プログラムinferletが生成全体を制御する。Wasm runtimeで軽量隔離し、C++/Rust/Python等Wasmへコンパイル可能な言語を利用できる。単一スレッド・イベント駆動とasync APIにより、外部API待ちを含むagentic workflowを自然に記述する。"},{"name":"細粒度LLM APIと明示的KV資源管理","description":"42 APIのうち18をLLM実行・資源管理に割り当て、embed/forward/sampleとKvPage操作を公開する。KvPageは8〜32 tokenの連続KVブロックで、inferletが割当、解放、コピー、token-level mask、import/exportを明示制御する。output distributionは既定top-K=256へ切り詰め転送量を抑える。"},{"name":"Command queueと適応バッチスケジューラ","description":"GPU処理APIは依存関係と優先度を示すcommand queueに投入される。制御層は異なるqueueの同種操作をまとめる水平バッチと、同一queue内で競合しない連続同種操作をまとめる垂直バッチを形成する。GPUがidleになると即座にbatch形成を促すwork-conserving方式で、細粒度APIによるGPU利用率低下を抑える。"},{"name":"計算・I/O統合とinferlet間共有","description":"HTTP、client通信、broadcast/subscribe等24のruntime/I/O APIを制御層で処理する。agentは生成途中のtool callをクライアント往復なしに実行でき、KVを保持したまま再開できる。KV import/exportによりinferlet間で状態共有も可能。"}],"system_design":"アプリケーション固有ロジックをWasm側へ分離し、制御層が仮想資源管理とGPU APIバッチ化を担当、推論層が低水準GPU実行を担当する。kernel fusion、量子化、tensor parallel等は推論層の直交課題として残し、上位APIはTransformer系モデルの生成フローをプログラム可能にすることへ集中する。"},"reservation":{"claim_id":"claim-854ec831672b054b5c8ebfe2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-76e7571f47153ba10e1f8ee9",
+  "job_id": "job-research-56fbeb640bc1560d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-76e7571f47153ba10e1f8ee9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
