@@ -1,36 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T01:03:07+00:00",
+  "updated_at": "2026-09-18T01:03:35+00:00",
   "last_run_key": "2026-09-18T10:00:00+09:00",
-  "last_round": "specialist-2609-memory-moe-new-arrivals-1",
+  "last_round": "specialist-disaggregated-network-runtime-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:26:11+09:00",
-      "round": "specialist-resilience-crosslayer-scheduling-5",
-      "axis": "耐障害serving・予測型cross-layer scheduling",
-      "query_summary": "MoE軸の後、CXL/SSD軸、耐障害serving、二層schedulingへ探索を広げた。HyMCache、Photonic-CXL、CXL-PNM、CXL-NDP、prefill-decode最適制御は既存jobとして除外。最新mainで決定論的jobが存在しないFailSafeとSynergySchedを投入した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.7142857142857143,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.18141",
-        "arXiv:2607.27187",
-        "arXiv:2511.00321",
-        "arXiv:2509.03377",
-        "arXiv:2602.02987"
-      ],
-      "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する",
-      "source_submission": "work-queue/submissions/20260913T0138JST-discovery-d3909a842ae76980.json"
-    },
     {
       "run_key": "2026-09-13T01:26:11+09:00",
       "round": "specialist-older-serving-omissions-6",
@@ -6912,6 +6891,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はnetwork/disaggregated serving、GPU kernel/runtime、agentic servingの2026年9月新着へ軸を変更する",
       "source_submission": "work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json"
+    },
+    {
+      "run_key": "2026-09-18T10:00:00+09:00",
+      "round": "specialist-disaggregated-network-runtime-2",
+      "axis": "分離サービング・routing・HPC scale-out",
+      "query_summary": "9月新着をP/D・operator disaggregation、routing、network/scale-outへ切替。軽量abstractでsystems contributionと実測評価を確認し、最新main検索で既存一致を早期除外。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はagentic serving・sandbox/state offload・multi-turn KV reuseへ移る",
+      "source_submission": "work-queue/submissions/20260918T1015JST-discovery-b421e80d.json"
     }
   ],
   "axes": {
@@ -11612,6 +11609,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はnetwork/disaggregated serving、GPU kernel/runtime、agentic servingの2026年9月新着へ軸を変更する"
+    },
+    "分離サービング・routing・HPC scale-out": {
+      "last_run_key": "2026-09-18T10:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はagentic serving・sandbox/state offload・multi-turn KV reuseへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
