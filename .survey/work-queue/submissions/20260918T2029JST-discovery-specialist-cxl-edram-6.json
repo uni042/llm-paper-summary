@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2510.16040",
+      "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
+      "source_url": "https://arxiv.org/abs/2510.16040",
+      "paper_path": "papers/inference/06-kv-cache-memory/2025-2510.16040-kelle-kv-cache-edram-edge-serving.md",
+      "priority": 73,
+      "reason": "edge LLM serving向けにKV cache eviction/recomputation policyとeDRAM refresh/memory-controller設計をco-designする。専用hardware寄りのためpriorityは抑えるが、KV cache policyとmemory technologyを同時最適化する系統が既存収録にないため比較価値がある。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-cxl-edram-6",
+    "axis": "CXL rack-scale KV transport・eDRAM KV co-design・edge memory",
+    "query_summary": "CXL rack-scale KV cacheのTraCTは最新2512 identity shardで既収録を確認。一方、eDRAMとKV policyをco-designするKelleは2510 shardに未登録で、独立したmemory-hardware系候補として採用した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2512.18194"],
+    "next_axis_hint": "2024 personal-machine MoE expert cache・older offload foundationsと2025 multimodal KV servingへ移る",
+    "empty_round_reason": null
+  }
+}
