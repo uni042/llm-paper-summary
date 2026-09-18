@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8b40f93e75f1e5b4253573cb",
+  "attempt_id": "attempt-6c458e301f48fc5cacbfbf06",
   "job_id": "job-research-660ceb86238a1a21",
   "data": {
     "overview": "FairInferenceは高需要利用者が存在しても適正需要利用者のトークン尾部遅延を静的分割に近い水準へ抑え、余剰資源を高需要側へ貸すことで全体処理量を増やした。生成長干渉のミクロ評価では標準SGLangのp99初回トークン217秒、VTC 92.5秒、DLPM 73.7秒に対しδ=1秒で1.06秒。WildChatマクロ評価でも標準SGLang 512秒、VTC 171秒、DLPM 273秒に対し1.15秒だった。",
@@ -48,7 +48,7 @@
     "quality_impact": "モデル計算や生成分布を近似せず、要求順序と鍵値保持方針だけを変更するため生成品質そのものへの近似誤差は導入しない。"
   },
   "reservation": {
-    "claim_id": "claim-8b40f93e75f1e5b4253573cb",
+    "claim_id": "claim-6c458e301f48fc5cacbfbf06",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

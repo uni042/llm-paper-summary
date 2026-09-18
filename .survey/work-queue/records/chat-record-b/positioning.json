@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8b40f93e75f1e5b4253573cb",
+  "attempt_id": "attempt-6c458e301f48fc5cacbfbf06",
   "job_id": "job-research-660ceb86238a1a21",
   "data": {
     "limitations": "保証は共有環境のdecode処理が公平割当へ分割した分離環境に対して十分なバッチ効率を持つというheadroom仮定に依存する。極端に軽い利用者では分離decodeがこの下限より速くなり、低いδを保証できない。性能モデルはハードウェアとモデルごとに再当てはめが必要で、主評価は単一A100・Llama-3 8B・prefill優先SGLangに限定される。複数GPU、chunked/hybrid batching、FairRAGの合成保証、Kairos/FairBatchingとの実験比較は今後の作業。実装自体も論文でongoing projectとされ、公開forkは将来予定である。",
@@ -11,7 +11,7 @@
     "research_positioning": "LLM配信の公平スケジューリングを、処理量公平性からリアルタイム系に近い遅延分離保証へ拡張する研究である。ストレージ分野のDelta Fair Sharingにある『分離実行比δ以内』という考えをトークンストリームへ移し、初回トークン・トークン間隔・最終トークンを同時に扱う。鍵値キャッシュの復元遅延まで保証対象に含めるため、fair scheduling、SLO scheduling、KV cache resource isolationの交差領域に位置する。"
   },
   "reservation": {
-    "claim_id": "claim-8b40f93e75f1e5b4253573cb",
+    "claim_id": "claim-6c458e301f48fc5cacbfbf06",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
