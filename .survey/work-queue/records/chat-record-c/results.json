@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-328004e23af6006bc125dba7",
-  "job_id": "job-research-a1874def735a479b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-328004e23af6006bc125dba7",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-328004e23af6006bc125dba7","job_id":"job-research-a1874def735a479b","data":{"overview":"Prismは遠隔専門家呼出しを減らす配置によって、特に専門家数が多く配置自由度の高いDeepSeek-V2-Liteで大きな改善を示す。BIG-benchの10秒ポアソン到着ではDeepSeek-V2-Liteの平均遅延をEPLBの9.56秒から6.63秒へ下げ、30.6%削減する。MultiDataでは14.93秒から13.29秒で10.9%削減する。Mixtral-8x7Bでは専門家数が少なく配置余地が狭いため改善は小さく、BIG-benchで2.16秒から2.09秒、MultiDataで9.36秒から9.17秒となる。負荷分布が変わる実験では移行ありで平均遅延7.48秒から6.73秒へ10%改善する。","key_results":[{"metric":"DeepSeek-V2-Lite BIG-bench平均遅延","value":"6.63秒、30.6%削減","baseline":"EPLB 9.56秒","condition":"3サーバ、10秒ポアソン到着、A100 4基","interpretation":"専門家数が64と多く、活性化局所性に合わせた配置で遠隔呼出しを大きく減らせる。"},{"metric":"DeepSeek-V2-Lite MultiData平均遅延","value":"13.29秒、10.9%削減","baseline":"EPLB 14.93秒","condition":"MMLU-Pro・WikiText・Takoを3サーバへ分配、20秒ポアソン到着","interpretation":"異なる課題分布を持つサーバでも活性化対応配置が有効。"},{"metric":"Mixtral BIG-bench平均遅延","value":"2.09秒","baseline":"EPLB 2.16秒","condition":"8専門家中2活性化、10秒ポアソン到着","interpretation":"専門家数が少なくGPU容量制約もあるため最適化余地が小さく、改善は一貫するが限定的。"},{"metric":"動的移行の平均遅延","value":"6.73秒、10%削減","baseline":"移行なし7.48秒","condition":"各サーバ200件のMultiDataから200件のBIG-benchへ分布変更","interpretation":"古い活性化統計に固定されず、費用に見合う専門家移行で局所実行率を回復する。"},{"metric":"大規模シミュレーション","value":"GPU数増加で平均処理時間9〜19%低下。帯域増加効果は4 GPUで55%以上、256 GPUで35%","baseline":"少GPU・低帯域構成","condition":"4〜256 GPU、100〜1000Mbps、ポアソン到着8・10・15秒","interpretation":"通信帯域は小規模ほど支配的で、規模拡大後は計算・待ち行列の比重が増える。"}],"negative_results":"Mixtral-8x7BではEPLBとの差がBIG-benchで約3%、MultiDataで約2%と小さく、専門家数が少なく配置自由度が低いモデルでは利得が限定される。実機は同型A100を一台に載せた環境を論理的に分割しており、論文が動機とする異種GPU・実ネットワークのばらつきを直接再現していない。移行判断は配置変更後から現在までの累積統計を使うため、分布切替直後には旧データが混ざり、実験でも二回目の移行後に追加の三回目移行が必要になった。","interpretation":"MoE分散推論では計算負荷均衡だけでなく、どのサーバの要求がどの専門家を頻繁に使うかという局所性が通信費用を決める。EPLBのような負荷均衡配置より、要求発生場所と専門家活性化を対応付ける方がエッジの低帯域環境では有利になる。","quality_impact":"専門家の配置先と遠隔実行先を変更するだけで、ゲートが選択する専門家やモデル重みは変更しないため、生成品質を犠牲にする高速化ではない。"},"reservation":{"claim_id":"claim-328004e23af6006bc125dba7","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
