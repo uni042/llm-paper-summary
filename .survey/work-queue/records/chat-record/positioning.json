@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-109930730e8c121fc0ac5c18","job_id":"job-research-455581782889dbd1","data":{"limitations":"待機列がsingleton優勢になると共有群数Cが要求数Nへ近づき、SGLang二重走査のN/C償却は1へ縮む。cLPMの最終sortはPythonでO(N log N)のまま。評価アクセラレータはH100のみで、小容量GPUやマルチモーダルprefixは未評価。群優先は公平性を損ね得るため動的レーンが必要で、厳密な個別SLO保証そのものではない。vLLMは平坦block-hash cacheのためSGLangのような木対木共同走査はできず、LPM探索は要求ごとに残る。","differences":"SGLang LPM/DFS_WEIGHTは現在のRadixCache位置だけを見て待機要求同士の共有を知らず、vLLM FCFS+APCは到着順でprefix局所性を作らない。PEEKはKV格納方式を新設せず、待機queue trieを将来需要信号として上位政策へ追加する。H2O/SnapKV/InfiniGen等のsequence内KV圧縮・offloadとは直交し、PEEKはrequest間のblock allocationと実行順序を扱う。KVFlow/Marconiの予測がworkflow graphや過去trafficから未来を推定するのに対し、PEEKは現在待機中で実行予定が確定した要求を直接数える。","implementation_status":"公式GitHubでコード公開。Rust約1.6kLOC native core、SGLang統合約814LOC、vLLM統合約800LOC。upstream fork不要のmonkey patch方式で、SGLang mainとvLLM 0.19.1を対象とする。","research_positioning":"prefix cache研究の中で、キャッシュ機構そのものではなく『待機要求をどの順で走らせ、どのKVを残すか』を共同最適化する政策層。cross-replica prefix-affinity routerの下、各replica内で動作でき、LMCache等の分散KVやRAGCache等の保存機構とも組み合わせ可能。特にqueueを短期未来需要として直接使う点が、LRU/LFUの過去参照ベース政策からの転換である。"},"reservation":{"claim_id":"claim-109930730e8c121fc0ac5c18","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e39029e7aceaac1f85b0d43a",
+  "job_id": "job-research-455581782889dbd1",
+  "data": {
+    "limitations": "待機列がsingleton優勢になると共有群数Cが要求数Nへ近づき、SGLang二重走査のN/C償却は1へ縮む。cLPMの最終sortはPythonでO(N log N)のまま。評価アクセラレータはH100のみで、小容量GPUやマルチモーダルprefixは未評価。群優先は公平性を損ね得るため動的レーンが必要で、厳密な個別SLO保証そのものではない。vLLMは平坦block-hash cacheのためSGLangのような木対木共同走査はできず、LPM探索は要求ごとに残る。",
+    "differences": "SGLang LPM/DFS_WEIGHTは現在のRadixCache位置だけを見て待機要求同士の共有を知らず、vLLM FCFS+APCは到着順でprefix局所性を作らない。PEEKはKV格納方式を新設せず、待機queue trieを将来需要信号として上位政策へ追加する。H2O/SnapKV/InfiniGen等のsequence内KV圧縮・offloadとは直交し、PEEKはrequest間のblock allocationと実行順序を扱う。KVFlow/Marconiの予測がworkflow graphや過去trafficから未来を推定するのに対し、PEEKは現在待機中で実行予定が確定した要求を直接数える。",
+    "implementation_status": "公式GitHubでコード公開。Rust約1.6kLOC native core、SGLang統合約814LOC、vLLM統合約800LOC。upstream fork不要のmonkey patch方式で、SGLang mainとvLLM 0.19.1を対象とする。",
+    "research_positioning": "prefix cache研究の中で、キャッシュ機構そのものではなく『待機要求をどの順で走らせ、どのKVを残すか』を共同最適化する政策層。cross-replica prefix-affinity routerの下、各replica内で動作でき、LMCache等の分散KVやRAGCache等の保存機構とも組み合わせ可能。特にqueueを短期未来需要として直接使う点が、LRU/LFUの過去参照ベース政策からの転換である。"
+  },
+  "reservation": {
+    "claim_id": "claim-e39029e7aceaac1f85b0d43a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
