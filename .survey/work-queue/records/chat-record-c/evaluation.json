@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-328004e23af6006bc125dba7","job_id":"job-research-a1874def735a479b","data":{"hardware":"実機はNVIDIA A100 40GBを4基とRAM 256GB。これを論理的な3エッジサーバへ分け、GPU配分を1基、1基、2基とする。サーバ間通信はDockerネットワークを用い、Linux Traffic Controlで500Mbpsへ制限する。","software":"MoE-Infinityの公開コードを基盤に複数サーバMoE推論系を実装する。比較対象はUniform、Redundance、SmartMoEの配置部分、DeepSeekのEPLBを異種構成へ再実装したもの。","methodology":"Mixtral-8x7BとDeepSeek-V2-Liteを使用する。Mixtralは32層で各層8専門家中2を活性化し、DeepSeek-V2-Liteは26層で64専門家中8を活性化する。エッジ制約を模擬するため利用可能GPUメモリをMixtralで総容量の70%、DeepSeek-V2-Liteで30%へ制限する。データはBIG-bench、MMLU-Pro、WikiText、Takoを用い、特化構成では3サーバが別々のBIG-bench課題を処理し、異種構成ではMMLU-Pro、WikiText、Takoを各サーバへ割り当てる。BIG-benchは平均10秒、MultiDataは平均20秒のポアソン到着。配置移行候補を5分ごとに評価し、計算時間推定を30秒ごとに更新する。実機に加えて4〜256 GPU、100〜1000Mbpsの事象駆動シミュレーションを行う。","scope":"主実機は同一物理マシン上のA100 4基をDockerネットワークで3サーバ相当に分割した環境であり、実際に地理的に離れた異種GPUサーバを接続した試験ではない。GPUメモリ容量と通信帯域は人工的に制約してエッジ条件を模擬する。大規模256 GPU評価はシミュレーションである。"},"reservation":{"claim_id":"claim-328004e23af6006bc125dba7","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d9b26ca882eb56a4dbd626e5",
+  "job_id": "job-research-ef418ddc1bde46e9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d9b26ca882eb56a4dbd626e5",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-328004e23af6006bc125dba7","job_id":"job-research-a1874def735a479b","data":{"limitations":"主実機はA100 40GBを4基搭載した一台のマシンを3サーバとして論理分割し、通信を500Mbpsへ制限した構成であるため、RTX 4090やA4000など異種GPUを物理的に離れたエッジ拠点で混在させた評価ではない。配置は過去の活性化頻度に依存し、急激な要求分布変化では統計が遅れて一時的に不適切な専門家を保持する。移行は5分周期で、累積統計の旧データが残るため複数回の修正移行が起こり得る。256 GPUまでの拡張結果は実機ではなく事象駆動シミュレーションである。","differences":"MoE-InfinityやEdgeMoEなどは単一のメモリ制約デバイスでCPUオフロードや専門家先読みを行うのに対し、Prismは複数サーバのGPUを一つの協調層として使い、要求発生場所ごとの活性化局所性に合わせて専門家を分散配置する。EPLBやMoetunerは主にデータセンタの均質GPU群で負荷均衡や冗長専門家を最適化するが、Prismは低帯域通信、異なるメモリ容量、サーバごとの異なる要求分布を前提に遠隔呼出しそのものを減らす。FasterMoEやSmartMoEなど学習向け専門家配置とは異なり、推論時の要求局所性と動的移行を対象とする。","implementation_status":"MoE-Infinityの公開実装を基盤に複数サーバMoE推論系を実装し、A100実機で評価している。論文本文ではPrism固有コードの公開URLを確認できない。arXiv v4は2026-04-15。","research_positioning":"MoE推論の専門家配置系統のうち、エッジ環境における通信局所性を主目的とする研究である。専門家キャッシュ・オフロードが時間方向の再利用を扱うのに対し、Prismは空間方向にどのサーバへ専門家を置くかを活性化統計から決める。動的移行を持つため、将来的には異種GPU性能モデル、専門家キャッシュ、SSD階層、要求ルータと共同最適化できる余地がある。"},"reservation":{"claim_id":"claim-328004e23af6006bc125dba7","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-d9b26ca882eb56a4dbd626e5",
+  "job_id": "job-research-ef418ddc1bde46e9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d9b26ca882eb56a4dbd626e5",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}
