@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e3f6cbbee3a78ecd5c91e72c",
-  "job_id": "job-research-2bbcf1d996d23713",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3f6cbbee3a78ecd5c91e72c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e3f6cbbee3a78ecd5c91e72c","job_id":"job-research-2bbcf1d996d23713","data":{"limitations":"助言信号が得られない一括処理には中心機構を適用しにくく、助言欠落率が増えるほど性能は状態保持型方式へ近づく。ShareGPTの要求時刻は人間の読解・入力速度から合成しており、実サービスのユーザー行動との差が残る。ノード間KV移動は100Gbps Ethernetと階層ストレージを前提とし、ネットワークや低速層の構成で結果が変わる。評価はA100、LLaMA-3.1-8BとLLaMA-2-13B中心で、より巨大なモデル・異種アクセラレータへの一般化は追加検証が必要。","differences":"vLLMはターン間KVを破棄して再計算し、InferCeptはホストメモリへ退避する代わりにセッションをノードへ固定する。Llumnixは実要求実行中にKVを移動して負荷分散するため移動完了まで過負荷ノードに残る。SYMPHONYは実要求前の助言信号でKVを先に移し、計算先と状態所在を分離する。LMCacheの損失圧縮・ストリーミングとも異なり、KV内容を変えずに移動タイミングと階層管理を最適化する。","implementation_status":"約2400行のPythonで実装され、gRPCによる全体スケジューラ・ノード管理器通信とvLLMスケジューラへの協調メモリ管理統合を実機8×A100クラスタで評価している。チャットの入力イベント用助言APIとエージェント呼出しグラフ由来助言の双方を実装・評価。","research_positioning":"分離KVキャッシュ研究の中でも、遠隔メモリの帯域向上ではなく『次に状態が必要になる前に知らせる』アプリケーション・ワークロード信号をメモリ管理へ取り込む系統である。階層メモリの事前読込みと分散負荷分散を統合し、状態を保持するLLMサービスをデータベースやサーバレスの計算・状態分離に近づける。"},"reservation":{"claim_id":"claim-e3f6cbbee3a78ecd5c91e72c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
