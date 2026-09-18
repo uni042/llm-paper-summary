@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-109930730e8c121fc0ac5c18",
-  "job_id": "job-research-455581782889dbd1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-109930730e8c121fc0ac5c18",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-109930730e8c121fc0ac5c18","job_id":"job-research-455581782889dbd1","data":{"canonical_id":"arXiv:2607.02525","arxiv_id":"2607.02525","doi":"10.48550/arXiv.2607.02525","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"PEEK: Predictive Queue-Informed KV Cache Management for LLM Serving","summary":"PEEKは、既存LLM推論基盤が現在のKVキャッシュ状態だけを見て要求を順序付け、待機列内の将来の接頭辞共有を無視するため、キャッシュ圧迫時に共有群を交互実行してスラッシングする問題を扱う。待機要求を増分基数木に保持し、待機木とSGLangのキャッシュ木を同時走査して全要求の最長接頭辞一致をまとめて得る。共有群の先頭要求を優先して同群を近接実行し、同じ待機木から将来需要のあるKVブロックを保護し、単独要求が飢餓しないよう動的公平レーンを混ぜる。SGLang/vLLM、最大4×H100で、接頭辞構造がある負荷ではキャッシュ命中・初回トークン時間・E2E・スループットを大幅改善し、共有がない負荷ではほぼ無回帰である。","list_summary":"待機列の接頭辞共有を増分基数木で可視化し、要求順序とKV追い出しを同じ将来需要信号で協調させ、キャッシュ圧迫下のスラッシングを抑える。","authors":["Bing Xie","Zhipeng Wang","Masahiro Tanaka","Zheng Zhen"],"authors_affiliations":"一次資料本文の著者欄では所属表示を確認できず","published":"2026-09-12","publication":"arXiv preprint v2","publication_type":"プレプリント","publication_status":"arXiv v2","lineage":"prefix caching・LLM scheduling・KV eviction・queue-aware serving","topics":["KV cache","prefix caching","scheduling","eviction","SGLang","vLLM"],"importance":"現在キャッシュだけでなく待機列そのものを近未来KV需要として使い、要求スケジューリングと追い出しを共同最適化する。","implementation":"Rust約1.6kLOCの基数木・dual-walkコアと、SGLang/vLLM各約800LOCのPython統合。公式GitHub公開。","hardware_evaluation":"単一H100から最大4×H100、DP=2 over TP=2まで。Qwen2.5系を含む複数モデル・5負荷。","quality_effect":"モデル計算やKV内容は変更せず要求順序とキャッシュ管理のみを変更するため、生成品質そのものは変えない設計。","source":"https://arxiv.org/abs/2607.02525","sources":["https://arxiv.org/abs/2607.02525","https://github.com/xiexbing/peek"],"code":"https://github.com/xiexbing/peek","project":"https://github.com/xiexbing/peek","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"arXiv HTML本文・付録・参考文献まで確認。","references_total":0},"reservation":{"claim_id":"claim-109930730e8c121fc0ac5c18","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
