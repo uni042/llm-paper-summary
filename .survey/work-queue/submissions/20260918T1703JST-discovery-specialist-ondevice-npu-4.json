@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2407.05858",
+      "title": "Fast On-device LLM Inference with NPUs",
+      "source_url": "https://arxiv.org/abs/2407.05858",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+      "priority": 87,
+      "reason": "オンデバイスNPUへprefillをオフロードするLLM inference systemで、可変長promptの固定chunk化、outlierをCPU/GPUへ分離してNPUと並列実行、blockをhardware affinity/accuracy sensitivityに応じてCPU/GPU/NPUへout-of-order schedulingする三層co-designを提案する。競合baseline比で平均22.4倍のprefill高速化、30.7倍のenergy saving、実アプリで最大32.8倍、billion-scale modelで1000 tok/s超prefillを報告しており、heterogeneous/offload系統の重要な未収録systems研究。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T16:00:00+09:00",
+    "round": "specialist-ondevice-npu-4",
+    "axis": "2024-2025 on-device heterogeneous CPU/GPU/NPU offload",
+    "query_summary": "KV metadataからon-device heterogeneous executionへ独立軸を変更。SpecOffload等の既代表化済み候補を除外し、2407.05858がarxiv-2407 canonical identity snapshotに存在しないことを確認。一次arXiv abstractでsystem designと実機評価を確認して採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2505.10259", "arXiv:2607.10183"],
+    "next_axis_hint": "次はon-deviceを離れ、2024のserving scheduling・interception・multi-turn KV reuse系統の欠落を確認する",
+    "empty_round_reason": null
+  }
+}
