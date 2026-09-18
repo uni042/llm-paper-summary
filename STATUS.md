@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:48:06 JST**
+> 自動生成: **2026-09-18 10:48:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-18 10:47:22 JST（44秒前）** |
+| 最終検証済みResearch収録 | **09-18 10:47:22 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **17** | **3** | **2** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **10** | **10** | **0** | **0** | **0** | **28** |
-| 合計 | **27** | **12** | **12** | **0** | **1** | **0** | **28** |
+| 合計 | **27** | **13** | **12** | **1** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 10:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / 未完了・未検証: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
 - **成功** `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
   - job: `.survey/work-queue/jobs/job-research-6c1a5d06d3b875ce.json`
   - result: `.survey/work-queue/results/research/attempt-a45c6670fc2432985588dfbd.json` (`ok=true`)
@@ -162,6 +162,7 @@
   - result: `.survey/work-queue/results/research/attempt-e915931ec4f50a06d7908b39.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json`
   - paper: `papers/inference/06-serving-scheduling/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-fc2c32d55842a220811f8fe6.json` (job `job-research-fb4ae3eceb455bfc`)
 
 #### Audit (:30)
 
@@ -270,8 +271,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **489** |
-| └ Research | **360** |
+| 成功result未照合のimmutable submission | **490** |
+| └ Research | **361** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
