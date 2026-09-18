@@ -2,53 +2,67 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e915931ec4f50a06d7908b39",
-  "job_id": "job-research-660ceb86238a1a21",
+  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
-    "overview": "FairInferenceは高需要利用者が存在しても適正需要利用者のトークン尾部遅延を静的分割に近い水準へ抑え、余剰資源を高需要側へ貸すことで全体処理量を増やした。生成長干渉のミクロ評価では標準SGLangのp99初回トークン217秒、VTC 92.5秒、DLPM 73.7秒に対しδ=1秒で1.06秒。WildChatマクロ評価でも標準SGLang 512秒、VTC 171秒、DLPM 273秒に対し1.15秒だった。",
+    "overview": "ASPIREは3モデル・5 workloadすべてで自己回帰復号を高速化し、Qwen3-1.7Bで平均3.34倍、Qwen3-8Bで2.08倍、DS-Llama-8Bで2.14倍。長文脈ほど利得が拡大し、80k-100kでは最大4.58倍。強い既存self-speculative baselineに対する平均speedup改善は約27%。mixed executionとschedulerの寄与はcontext長とともに増え、refreshは長いdraftでacceptance低下を抑える。",
     "key_results": [
       {
-        "metric": "生成長干渉時p99初回トークン時間",
-        "value": "1.06秒",
-        "baseline": "静的分割0.90秒、VTC 92.5秒、DLPM 73.7秒、標準SGLang 217秒",
-        "condition": "δ=1秒、三適正需要+一高需要利用者",
-        "interpretation": "高需要利用者の長い生成がprefillを任意時間止める干渉を期限制御で抑える。"
+        "metric": "最大decode throughput speedup",
+        "value": "4.58×",
+        "baseline": "AutoRegressive",
+        "condition": "Qwen3-1.7B, LongBench-v2 80k-100k, 963.5 vs 210.5 tok/s",
+        "interpretation": "KV read支配が強い長文脈ほどself-speculationと非同期batchの償却効果が大きい。"
       },
       {
-        "metric": "生成長干渉時p99最終トークン時間",
-        "value": "3.87秒",
-        "baseline": "静的分割10.8秒、VTC 96.4秒、DLPM 76.5秒、標準SGLang 220秒",
-        "condition": "δ=1秒",
-        "interpretation": "共有実行のバッチ効率を使うため静的分割よりも最終完了が速くなる。"
+        "metric": "平均speedup",
+        "value": "3.34× / 2.08× / 2.14×",
+        "baseline": "AutoRegressive",
+        "condition": "Qwen3-1.7B / Qwen3-8B / DS-Llama-8B, 5 workloads平均",
+        "interpretation": "モデル規模・architectureを跨いで一貫した改善。"
       },
       {
-        "metric": "WildChatマクロp99初回トークン時間",
-        "value": "1.15秒",
-        "baseline": "静的分割0.83秒、VTC 171秒、DLPM 273秒、標準SGLang 512秒",
-        "condition": "δ=1秒、七適正需要+一高需要利用者",
-        "interpretation": "実会話由来の可変長・複数ターンでも尾部遅延分離を維持する。"
+        "metric": "非同期mixed+scheduler寄与",
+        "value": "2.75× vs 2.22×",
+        "baseline": "ASPIRE-Fixed",
+        "condition": "Qwen3-8B, LB-v2 80k-100k",
+        "interpretation": "固定同期draft長との差が長文脈で拡大し、要求別verification timingの価値を示す。"
       },
       {
-        "metric": "WildChatマクロ全体completion処理量",
-        "value": "1475 tok/s",
-        "baseline": "静的分割930 tok/s",
-        "condition": "δ=1秒",
-        "interpretation": "適正需要利用者を保護しながら余剰資源を高需要利用者へ利用させ、静的分割比約1.6倍。"
+        "metric": "refreshによるacceptance",
+        "value": "76.6% vs 60.3%",
+        "baseline": "refreshなし",
+        "condition": "Qwen3-8B, LB 16k-18k, fixed draft length γ=10",
+        "interpretation": "draftが長くなった際のsparse context stalenessを16.4 percentage points緩和。"
       },
       {
-        "metric": "接頭辞干渉時p99初回トークン時間",
-        "value": "64.7 ms",
-        "baseline": "静的分割57.8 ms、VTC 370.0 ms、DLPM 374.5 ms、標準SGLang 371.3 ms",
-        "condition": "δ=1秒、適正需要側working setが予約内",
-        "interpretation": "δ公平キャッシュ予約が高需要側のランダム鍵値による追い出しを防ぐ。"
+        "metric": "refresh overhead",
+        "value": "1.03% at 16k / 1.06% at 32k cycle time",
+        "baseline": "refreshなしcycle",
+        "condition": "Qwen3-8B, 5-draft/1-verify",
+        "interpretation": "1層full attentionの追加費用がacceptance改善に対して小さい。"
+      },
+      {
+        "metric": "output quality macro",
+        "value": "51.72 vs 51.92 (-0.20)",
+        "baseline": "AutoRegressive greedy",
+        "condition": "Qwen3-8B, LongBench-v1 8 tasks, 1,460 examples",
+        "interpretation": "full-attention verificationにより実質的にtarget distributionを維持し、差は小さい。"
+      },
+      {
+        "metric": "scheduler oracle gap",
+        "value": "mean 10.4%; long-context mean 8.5%",
+        "baseline": "hindsight oracle",
+        "condition": "same mixed-forward backend",
+        "interpretation": "online schedulerはoracleへ比較的近いが、なお4.7〜20.2%のheadroomがある。"
       }
     ],
-    "negative_results": "δを大きくすると予約保証が弱まり、接頭辞干渉ではδ=5秒のp99初回トークンが379.4msまで悪化する。理論保証には共有decodeが分離decodeより十分速いheadroom条件が必要で、極端に軽い利用者の非常に短い分離遅延は保証できない。分離時刻は配置固有の性能モデルに依存し、モデル誤差や負荷変化の影響を受ける。実装は進行中で、複数GPUやhybrid batchingは未評価。",
-    "interpretation": "長期処理量の公平化だけではトークン単位の応答性を守れない。FairInferenceは『公平割当を専有したならいつ生成できたか』を基準に期限を作ることで、高需要利用者に余剰資源を貸しながら適正需要利用者の追加遅延だけを制限する。計算スケジューリングと鍵値容量の両方をδ予算へ組み込むことが重要である。",
-    "quality_impact": "モデル計算や生成分布を近似せず、要求順序と鍵値保持方針だけを変更するため生成品質そのものへの近似誤差は導入しない。"
+    "negative_results": "ASPIREが各workloadで必ず最良とは限らず、Qwen3-1.7B AIME25ではVegasが僅差、CodeEloではASPIRE-Fixedが上回る。簡易ASPIRE-FSMもverification preferenceが安定する場合は同等以上になり得る。refresh layerは最初のlayerではacceptanceが38.7〜76.4%と悪く、最終layerもpenultimateより一貫して劣る。主throughputはprefillを除外しておりend-to-end request latency改善を直接示さない。一般continuous batching engineやchunked prefillとの統合は未実装。",
+    "interpretation": "ASPIREの利得は疎attentionだけではなく、要求間・要求内で最適draft長が変動することをschedulerへ取り込んだ点にある。長文脈ほどfull-attention verify費用が大きく、固定同期による過不足の損失が増えるためmixed executionの価値も増す。refreshはdraft lengthを伸ばすほど重要になり、非同期schedulerが選べる投機範囲を広げる補完関係にある。",
+    "quality_impact": "self-speculative verificationはtarget modelのfull-attention分布でproposalを検証するためexact by construction。実測LongBench品質差はmacro -0.20 pointsで、著者はbatched kernelの浮動小数点非決定性と整合する範囲とする。"
   },
   "reservation": {
-    "claim_id": "claim-e915931ec4f50a06d7908b39",
+    "claim_id": "claim-fc2c32d55842a220811f8fe6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

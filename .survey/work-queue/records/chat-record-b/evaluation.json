@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e915931ec4f50a06d7908b39",
-  "job_id": "job-research-660ceb86238a1a21",
+  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
-    "hardware": "単一NVIDIA A100 80GB。鍵値キャッシュ容量は全実験で約32万トークン。",
-    "software": "Llama-3 8B Instruct、SGLang v0.3.0を基盤としたFairInference実装。δ公平スケジューラは約3〜4千行で、分離実行シミュレータはC言語の別ワーカースレッドとしてPython本体へ動的結合する。比較は標準SGLang、VTC、DLPM、利用者ごとに鍵値容量を1/N固定する静的分割。",
-    "methodology": "ミクロ評価では適正需要利用者と高需要利用者を組み合わせ、接頭辞再利用差と生成長差による干渉を測る。主要な尾部指標は初回トークン時間、トークン間隔、最終トークン時間の99百分位。処理量はprefill入力トークンとcompletionトークンを利用者種別・全体で測る。マクロ評価ではWildChatの実会話履歴から八利用者を構成し、七適正需要利用者と一高需要利用者を競合させる。δ=0、1秒、5秒を比較し、静的分割に対する利用率改善と既存公平スケジューラに対する遅延分離を確認する。",
-    "scope": "主評価は単一A100とLlama-3 8B Instruct、prefill優先型SGLangである。複数GPU、ハイブリッドprefill/decodeバッチ、最新SLO公平方式との広範比較、FairRAGを含むツール呼び出し合成保証は将来作業として残る。"
+    "hardware": "主評価は1×NVIDIA H100 NVL 96GB。追加評価でQwen3-8BのTP=2、AIME 2024-2026 expanded analysisではTP=4を使用。",
+    "software": "Qwen3-1.7B、Qwen3-8B、DeepSeek-R1-Distill-LLaMA-8B。bfloat16、torch.compile、CUDA graphs、FlashInfer JIT kernels。page size 16、sparsity 7%、kmin=32、recent L=8、dmax=16、γinit=3、ω=0.8、α0=0.9、refresh layer=N-2。",
+    "methodology": "AIME 2025、CodeElo、LongBench 16k-18k、LongBench-v2 30k-40k/80k-100kの5 workloadでdecode forwardのみのoutput tok/sを測定し、requestsを安定までcyclic replayする。temperature 0.7、top-k 50、top-p 0.9、seed 123。比較はAutoRegressive、MagicDec-StreamingLLM、Vegas、固定同期ASPIRE-Fixed、簡易feedback ASPIRE-FSM。品質はQwen3-8B greedyでLongBench-v1 8 tasks/1,460 examplesを比較。追加でhindsight oracle、TP、refresh layer/page size/smoothing sensitivity、refresh有無のdraft-length sweepを評価する。",
+    "scope": "長文脈および長いchain-of-thoughtのdecode throughputに焦点を置き、prefill時間はthroughput測定から除外する。主結果は単一H100で、一般continuous-batching engineへの統合、chunked prefillとの共存、multi-GPU大規模production servingは今後の課題。"
   },
   "reservation": {
-    "claim_id": "claim-e915931ec4f50a06d7908b39",
+    "claim_id": "claim-fc2c32d55842a220811f8fe6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e915931ec4f50a06d7908b39",
-  "job_id": "job-research-660ceb86238a1a21",
+  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
-    "limitations": "保証は共有環境のdecode処理が公平割当へ分割した分離環境に対して十分なバッチ効率を持つというheadroom仮定に依存する。極端に軽い利用者では分離decodeがこの下限より速くなり、低いδを保証できない。性能モデルはハードウェアとモデルごとに再当てはめが必要で、主評価は単一A100・Llama-3 8B・prefill優先SGLangに限定される。複数GPU、chunked/hybrid batching、FairRAGの合成保証、Kairos/FairBatchingとの実験比較は今後の作業。実装自体も論文でongoing projectとされ、公開forkは将来予定である。",
-    "differences": "VTC、DLPM、FairServe、Equinoxは長期サービス量や仮想トークン消費を公平化するが、個々の初回・中間・最終トークンが分離実行から何秒遅れるかを保証しない。KairosやFairBatchingはSLOや期限を使うが、絶対的な最悪遅延を基準とする。FairInferenceは各利用者が公平割当資源を専有した仮想分離実行を基準に相対的な追加遅延δを保証する。またスケジューラだけでなく、復元遅延を持つ共有鍵値キャッシュへ利用者別予約を導入し、計算共有と容量共有の遅延を同じ保証へ合成する点が異なる。",
-    "implementation_status": "SGLang v0.3.0 fork上に約3〜4千行のδ公平スケジューラ、利用者別鍵値カウンタ、C言語の分離実行シミュレータを実装してA100で評価。論文時点ではforkの公開を将来作業としており、公式コードURLはまだ示されていない。",
-    "research_positioning": "LLM配信の公平スケジューリングを、処理量公平性からリアルタイム系に近い遅延分離保証へ拡張する研究である。ストレージ分野のDelta Fair Sharingにある『分離実行比δ以内』という考えをトークンストリームへ移し、初回トークン・トークン間隔・最終トークンを同時に扱う。鍵値キャッシュの復元遅延まで保証対象に含めるため、fair scheduling、SLO scheduling、KV cache resource isolationの交差領域に位置する。"
+    "limitations": "throughput測定はdecode forwardのみでprefillを除外するためend-to-end latencyを直接表さない。主評価は単一H100 NVLで、mixed draft/verify forwardをvLLM等の汎用continuous batching、chunked prefill、admission controlと統合する作業は将来課題。schedulerのtiming model係数はmodel/datasetのsample generation runtime traceからfitするため、hardware・batch regime変更時は再較正が必要。疎context selectionは7% budget等の設定に依存し、refresh layer full attentionはcontext長に比例する追加memory trafficを持つ。online schedulerはhindsight oracleに平均10.4%のgapが残る。",
+    "differences": "MagicDecはwindow-based sparse drafting、Vegasはverification tokenのattention scoreで疎contextを選ぶが、いずれもbatched executionをglobal draft/verify phaseへ同期させる。ASPIREは同一target-model invocationでdraftとverifyを混在させ、要求別にverification timingを選ぶ点が第一の差である。Vegas等はverification境界で疎contextを更新するためdraft中にstaleになるのに対し、ASPIREは各draft stepのpenultimate layerだけfull attentionして次stepのpagesを更新する。通常のvLLM asynchronous schedulingはrequest-level concurrencyを扱うが、ASPIREは一つのbatched target-model forward内部でspeculation roleを非同期化する別の同期境界を対象とする。",
+    "implementation_status": "COLM 2026採択。公式コード https://github.com/Amir-zsh/ASPIRE とプロジェクトページを公開。PyTorch/FlashInferベースでH100 NVL上の実測評価を行い、TP評価も含む。汎用production serving engineへの完全統合は未完了。",
+    "research_positioning": "長文脈推論のmemory-bound attentionをself-speculative decodingで緩和する系統に属するが、draft modelや単一requestのacceptance改善ではなく、batched serving時の同期制約を主要対象にする。要求別schedulerをmixed forwardへ直接結びつけるため、speculative decodingとcontinuous batching/schedulingの境界を跨ぐ研究であり、長文脈ほどbatch内heterogeneityのコストが増えることを定量化している。"
   },
   "reservation": {
-    "claim_id": "claim-e915931ec4f50a06d7908b39",
+    "claim_id": "claim-fc2c32d55842a220811f8fe6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
