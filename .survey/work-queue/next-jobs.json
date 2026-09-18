@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 51,
-    "actively_claimed": 0,
-    "claimable": 51
+    "actively_claimed": 1,
+    "claimable": 50
   },
   "next_jobs": [
     {
@@ -95,20 +95,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2829f7afbf13ae9b",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2508.02558",
-      "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
-      "source_url": "https://arxiv.org/abs/2508.02558",
-      "paper_path": "papers/inference/06-kv-cache-memory/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-b85568c75bac4939",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-7c979683209fb954",
+      "type": "research",
+      "lane": null,
+      "priority": 83,
+      "canonical_id": "arXiv:2604.00499",
+      "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+      "source_url": "https://arxiv.org/abs/2604.00499",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-tie-uncertainty-aware-output-length-scheduling.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T02:13:30+00:00"
+  "generated_at": "2026-09-18T02:16:45+00:00"
 }
