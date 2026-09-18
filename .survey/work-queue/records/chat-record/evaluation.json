@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-11b5e62465ce56e739adae95",
-  "job_id": "job-research-c790156bc5f9f1f9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-11b5e62465ce56e739adae95",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-11b5e62465ce56e739adae95","job_id":"job-research-c790156bc5f9f1f9","data":{"hardware":"単一NVIDIA RTX 4090 24GB、固定ソフトウェアスタック。14Bは捕捉経路が24GBを超えるため層単位比較なし。","software":"vLLM内のCUTLASSおよびTriton INT8 W8A8線形カーネルを比較。故障注入器、7チェック適合性試験、チェックポイント再量子化・バイト一致再構築パイプラインを使用。","methodology":"Qwen3-1.7Bの196線形層から捕捉した実INT8 operandsに9故障族を3強度、通常/2の冪scaleで注入し8,232セルを評価。77 check-fault予測セルは63セルを事前固定し2層smoke後に3訂正して再固定。2の冪再量子化はQwen3-1.7B/8B/14Bで、各層CUTLASS/Triton一致と8固定prompt×64 tokenのgreedy byte-identical生成を測る。accuracy costは256 WikiText windowsのpaired cluster bootstrap 10,000 draws、90%区間。throughputは1.7Bのみ6 batch-length設定。","scope":"一つのモデル族Qwen3、一つのカーネル対CUTLASS/Triton、一台RTX 4090に限定。故障検出0 FNは選んだ9故障族に対する結果で未知故障を保証しない。token-level risk checkは層故障注入では未測定。14Bはend-to-endのみ、8B/14B throughput未測定、ceiling scale armは1.7Bのみ。3予測セルはsmoke data後に訂正され全て試験に有利な方向で、元行列結果も併記される。"},"reservation":{"claim_id":"claim-11b5e62465ce56e739adae95","worker_id":"scheduled-chat-discovery-20260919T0700JST","worker_kind":"scheduled_chat"}}
