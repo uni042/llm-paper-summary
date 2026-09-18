@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-01bc2c1e0ef21dcae1e71886",
   "job_id": "job-research-7b5d4afbd3eabe62",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01bc2c1e0ef21dcae1e71886",
-    "worker_id": "scheduled-chat-discovery-20260919T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価はNVIDIA H200。屋根線分析ではQwen2.5-7Bを単一H200で16〜2048トークンまで測定し、混合バッチのカーネル分析ではQwen2.5-7B/32BをH200で評価する。アーティファクト付録は最大8×H200とInfiniBandを推奨し、PD分離ベンチマークは最低2 GPU。",
+    "software": "LAPS v1.0をSGLang v0.4.6.post5系に実装。Python 3.10+、PyTorch 2.4+、CUDA 12.4+、FlashAttention 2.6+、Mooncake KV転送基盤を使用。公開コードと自動実験スクリプトがある。",
+    "methodology": "LMSYS-Chat-1Mの実対話トレースを用い、短・長プリフィル比率と複数ターン再プリフィルを含む負荷を評価する。比較対象は通常のSGLang PD分離、SGLangルータ付き構成、通常のデータ並列構成、CUDA Graphを使うプリフィル構成など。指標は要求毎秒、平均TTFT、P90 TTFT、SLO違反率、蒸留ワークロードの総処理時間。さらにカーネルプロファイラでGEMM、活性化、メモリ、リダクション時間を分解し、長短混合時のパディング浪費を測る。",
+    "datasets": ["LMSYS-Chat-1M", "ShareGPT"],
+    "models": ["Qwen2.5-7B", "Qwen2.5-14B", "Qwen2.5-32B", "Qwen2.5-72B-Instruct", "Llama-3.3-8B", "Qwen3-30B-A3B"],
+    "baselines": ["SGLang vanilla PD disaggregation", "SGLang router/load balancing", "vanilla data parallel", "prefill CUDA Graph configuration"],
+    "metrics": ["request throughput", "mean TTFT", "P90 TTFT", "SLO violation rate", "end-to-end processing time"],
+    "scope": "シミュレーションではなくGPU実機のシステム評価で、主張の中心はプリフィル・デコード分離環境におけるプリフィル段階の最適化である。H200中心の評価なので他GPU・ネットワークへの一般化はアーティファクト互換性以上には直接測定されていない。また非PD構成でデコードと混在すると短プリフィルのCUDA Graph集約効果が低下するため、効果範囲はPD分離構成で最も強い。"
+  },
+  "reservation": {"claim_id": "claim-01bc2c1e0ef21dcae1e71886", "worker_id": "scheduled-chat-discovery-20260919T0700JST", "worker_kind": "scheduled_chat"}
 }
