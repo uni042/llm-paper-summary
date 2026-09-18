@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:35:08 JST**
+> 自動生成: **2026-09-18 10:35:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **2** | **3** | **0** | — |
+| Research | **17** | **1** | **0** | **1** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **10** | **10** | **0** | **0** | **0** | **28** |
-| 合計 | **27** | **12** | **10** | **2** | **3** | **0** | **28** |
+| 合計 | **27** | **11** | **10** | **1** | **3** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,9 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 10:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / 未完了・未検証: **2件**
+- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-73e778f4334326a6472d6105.json` (job `job-research-fb4ae3eceb455bfc`)
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-80a2ded70f5038ea226f4ec9.json` (job `job-research-6c1a5d06d3b875ce`)
 
 #### Audit (:30)
 
@@ -212,9 +211,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.17943` — ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 10:33:45 JST** / heartbeat: **—** / lease expiry: **09-18 12:03:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-fb4ae3eceb455bfc.json`
+- `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 10:35:12 JST** / heartbeat: **—** / lease expiry: **09-18 12:05:12 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6c1a5d06d3b875ce.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
