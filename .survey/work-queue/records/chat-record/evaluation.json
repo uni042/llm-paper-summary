@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0d9a61003cc7a37046392d50",
-  "job_id": "job-research-740437feef88b672",
-  "data": {
-    "hardware": "AiFChip回路をVerilog HDLで実装し45 nm、200 MHzで合成。実TLC NANDの読み出し遅延・誤り特性を測定。システム比較のCPUはIntel Core i9-14900KS、メモリ内方式は128 GB DDR5、AiFとSSD退避方式は8 GBホストメモリと1 TB SSD相当を使用。AiFSSDは16 AiFChip、各6.4 GB/s、合計内部帯域102.4 GB/sをモデル化。",
-    "software": "NVMeVirtへ専用命令とAiFSSDタイミングモデルを追加し、llama.cppおよびLinux NVMeドライバを拡張してフルシステム評価。",
-    "methodology": "LLaMA2-7B、LLaMA3-8B、Falcon-11B、LLaMA2-13B、Mixtral-8x7B、GPT-NeoX-20B、Falcon-40B、LLaMA3-70Bの8モデルをINT8で評価。比較対象は全重みをDRAMに置くメモリ内方式、8 GBメモリからSSDへ退避する方式、読み出し最適化を外したAiFである。フラッシュ特性は実測と回路シミュレーションを使い、システム性能はNVMeVirt上のタイミングシミュレーションで測る。",
-    "scope": "NAND読み出し特性と回路面積・電力は実デバイス測定および回路合成を含むが、LLMのエンドツーエンド生成性能は実AiFSSD試作機ではなくフルシステムシミュレーションである。シミュレータはGEMV遅延を再現し、計算結果ベクトル自体はダミー値を返すため、生成品質ではなく性能評価に限定される。"
-  },
+  "attempt_id": "attempt-71a9a76625d025d32bc3f2ef",
+  "job_id": "job-research-ca0df1c4e0a9af97",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0d9a61003cc7a37046392d50",
+    "claim_id": "claim-71a9a76625d025d32bc3f2ef",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

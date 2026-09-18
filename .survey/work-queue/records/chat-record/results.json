@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0d9a61003cc7a37046392d50",
-  "job_id": "job-research-740437feef88b672",
-  "data": {
-    "overview": "AiFはNAND内部読み出し帯域を高め、重み行列をSSD外へ転送しないことで、8モデル平均で通常のSSD退避方式を14.6倍上回る生成スループットを示した。102.4 GB/sの内部帯域とホスト並列実行により、容量制約のない128 GB DDR5メモリ内方式に対しても平均1.4倍となった。一方、SSD容量を増やして内部帯域を倍増しても性能向上は1.35〜1.68倍に留まり、ベクトル演算やNVMe制御が次の律速になる。",
-    "key_results": [
-      {
-        "metric": "生成スループット高速化",
-        "value": "平均14.6倍",
-        "baseline": "8 GBホストメモリ＋通常SSD退避",
-        "condition": "8種類のINT8 LLM",
-        "interpretation": "外部SSD帯域ではなくNAND内部帯域で重みを処理する効果を示す。"
-      },
-      {
-        "metric": "生成スループット高速化",
-        "value": "平均1.4倍",
-        "baseline": "128 GB DDR5メモリ内推論",
-        "condition": "8種類のINT8 LLM",
-        "interpretation": "102.4 GB/sのSSD内部帯域とホスト並列実行により86.4 GB/s級DRAM比較対象を上回る。"
-      },
-      {
-        "metric": "Falcon-40B生成速度",
-        "value": "2.7 tokens/s",
-        "baseline": "読み出し最適化なしAiFの0.74 tokens/s",
-        "condition": "Falcon-40B、8 GBホストメモリ",
-        "interpretation": "電荷再利用読み出しと誤り偏向符号化が大モデルで内部帯域不足を緩和する。"
-      },
-      {
-        "metric": "AiFChip読み出し帯域",
-        "value": "4倍",
-        "baseline": "通常フラッシュ読み出し",
-        "condition": "電荷再利用読み出しと誤り偏向符号化の併用",
-        "interpretation": "16チップ構成で102.4 GB/sの内部帯域を成立させる基礎となる。"
-      }
-    ],
-    "negative_results": "容量を1 TBから2 TB、4 TBへ増やして理論内部帯域を倍増しても、スループット向上は1.35〜1.68倍と線形には伸びない。GEMV以外のベクトル演算、NVMeの割込みやDMA、チップ数増加に伴う入力ベクトル配布が残るためである。また誤り偏向符号化はMSBページの読み出しを遅くするので、IFPブロックへの限定適用が必要になる。",
-    "interpretation": "AiFの利得は、重み読み出しが支配的な大規模モデルほどSSD外部帯域を回避する効果から生じる。ただし内部帯域を十分に増やすと、ホスト演算と制御経路へ律速が移る。小さいモデルではホストDRAMに保持できる部分行列が増え、ホストとSSDの並列実行が利得へ寄与する。",
-    "quality_impact": "重みの近似や枝刈りで転送量を減らす方式ではなく、NAND読み出し誤りをECC_LITEで訂正する設計である。性能シミュレーションはダミー出力ベクトルを使うため生成品質の実測比較はなく、設計上は正確なGEMV結果を前提とする。"
-  },
+  "attempt_id": "attempt-71a9a76625d025d32bc3f2ef",
+  "job_id": "job-research-ca0df1c4e0a9af97",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0d9a61003cc7a37046392d50",
+    "claim_id": "claim-71a9a76625d025d32bc3f2ef",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

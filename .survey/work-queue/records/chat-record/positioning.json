@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0d9a61003cc7a37046392d50",
-  "job_id": "job-research-740437feef88b672",
-  "data": {
-    "limitations": "エンドツーエンド性能は実AiFSSD試作機ではなくNVMeVirtを用いたシミュレーションであり、実機統合時のファームウェア、熱、製造ばらつき、長期耐久性は残る。アプリケーションは行列のLBAを管理し、専用領域へ配置する必要がある。容量増加による帯域拡張はNVMe制御とGEMV以外の演算で頭打ちになり、追加スケジューリング最適化が必要である。誤り偏向符号化はMSB読み出しを遅くするため適用ブロックを限定する必要がある。",
-    "differences": "従来のSSDオフロードは重みをホストへ読み出し、ストレージ内処理はSSD制御器で計算するためフラッシュチャネル帯域が残る。AiFは計算をNANDチップ内まで押し込み、重みそのものをチャネルへ出さない点が異なる。また既存のフラッシュ内処理に対して、LLMが要求する高帯域と厳密な誤り訂正を両立するため、読み出しシーケンスとTLC状態符号化を共同設計している。",
-    "implementation_status": "AiFChipの追加論理はVerilog HDLで実装・合成され、NAND特性は実デバイス測定で検証されている。システム側はNVMeVirt、llama.cpp、Linux NVMeドライバを拡張した評価実装であり、商用または物理AiFSSD試作機によるエンドツーエンド実証ではない。",
-    "research_positioning": "LLM推論の階層メモリ研究の中でも、CPU/GPU側の先読みやキャッシュではなくSSD/NAND内部へ演算を移す近ストレージ計算の系統に位置する。特にSSD/NVMeを単なる低速大容量層として扱うのではなく、内部並列帯域を計算資源として利用するため、ストレージ活用型推論の設計空間をハードウェア側へ広げる研究である。"
-  },
+  "attempt_id": "attempt-71a9a76625d025d32bc3f2ef",
+  "job_id": "job-research-ca0df1c4e0a9af97",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0d9a61003cc7a37046392d50",
+    "claim_id": "claim-71a9a76625d025d32bc3f2ef",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
