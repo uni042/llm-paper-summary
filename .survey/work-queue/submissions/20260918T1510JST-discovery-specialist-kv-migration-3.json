@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-transfer.md",
+      "priority": 91,
+      "reason": "prefill/decode分離時のnetwork bandwidth飽和に対し、profile-based proactive、parallel on-demand、speculativeの3経路で選択的KV転送を行う。full KV transfer比でtime-to-second-token最大4.3x改善を報告し、network-constrained disaggregated servingの直接的system contribution。"
+    },
+    {
+      "canonical_id": "arXiv:2608.16477",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "source_url": "https://arxiv.org/abs/2608.16477",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration.md",
+      "priority": 82,
+      "reason": "移動ユーザーのhandover前にKV stateをproactive migrationし、stable prefixをtargetで再計算しつつevolving suffixをsourceからstreamする。vLLM prototypeでservice interruption timeを2.28–89.68x削減し、KV state migrationとruntime telemetryに基づくprefetch window schedulingを実装評価している。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "identity": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving:A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "rejection_reason": "CUDA VMMを用いる実装自体は興味深いが、論文自身の制御実験でchunked prefillの単純調整がほぼ同等以上にKV reserveを回収でき、主要機構の実運用上の改善余地が限定的というnegative resultであるため、現在の候補在庫では優先採用しない。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-18T15:00:00+09:00",
+    "round": "specialist-kv-transfer-migration-3",
+    "axis": "network-constrained KV transfer・proactive migration・elastic KV reclamation",
+    "query_summary": "CXL共有memoryからnetwork/RDMA制約下のKV transferとdistributed state migrationへ検索軸を移した。1回の検索結果からSmartGen、Pallas、Elastic KV Cacheを抽出し、GitHub正本でcanonical IDを早期照合。前2件はsystem contributionと定量評価が明確なため採用し、Elastic KVは論文自身のnegative resultを踏まえて不採用台帳へ送った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2512.18194"],
+    "next_axis_hint": "次はMoE expert placement/cacheのnetwork topology、multi-GPU communication overlap、GPU runtime schedulingへ移る",
+    "empty_round_reason": null
+  }
+}
