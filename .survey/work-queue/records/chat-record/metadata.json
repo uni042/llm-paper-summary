@@ -1,5 +1,49 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f10a68668c560da436b6998f","job_id":"job-research-740437feef88b672",
-  "data":{"canonical_id":"DOI:10.1145/3695053.3731073","arxiv_id":null,"doi":"10.1145/3695053.3731073","openreview_id":null,"title":"AiF: Accelerating On-Device LLM Inference Using In-Flash Processing","summary":"AiFは、端末上LLMで重みをSSDへ退避した際に外部PCIe帯域とフラッシュチャネル帯域が律速になる問題に対し、行列ベクトル積をNANDフラッシュチップ内部で実行する方式である。連続ワード線読み出しで充放電工程を省く電荷再利用読み出しと、LLM重みを高速かつ高信頼なLSBページへ偏らせる誤り偏向符号化を組み合わせ、軽量なチップ内誤り訂正で高い内部帯域を利用する。ホスト側計算との並列化も行い、容量制約を抑えつつ生成性能を高める。","list_summary":"LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。","authors":["Jihong Kim et al."],"published":"2025-06-20","publication":"ISCA '25: Proceedings of the 52nd Annual International Symposium on Computer Architecture","publication_type":"Conference paper","publication_status":"Published","lineage":"in-flash processing / SSD offload / on-device LLM inference","topics":["SSDオフロード","フラッシュ内処理","端末上LLM推論","NANDフラッシュ"],"importance":"SSDの外部帯域制約を回避するため計算自体をフラッシュ内部へ移す、階層メモリ型LLM推論の重要なハードウェア協調方式。","hardware_evaluation":"実TLC NAND特性測定と45 nm回路合成・アナログ混載回路シミュレーションに加え、NVMeVirtとllama.cppを統合したフルシステムシミュレーション。","quality_effect":"近似的な重み削減ではなく、ECC_LITEで読み出し誤りを訂正して通常の推論精度を維持する設計。性能シミュレーションでは出力ベクトル内容をダミー化しているため精度そのものは評価対象外。","source":"https://doi.org/10.1145/3695053.3731073","sources":["https://doi.org/10.1145/3695053.3731073"],"implementation":"NVMeVirtとllama.cppを拡張したフルシステム評価実装。AiFChip回路はVerilog HDLで実装し45 nmで合成評価。","code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":91},
-  "reservation":{"claim_id":"claim-f10a68668c560da436b6998f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0d9a61003cc7a37046392d50",
+  "job_id": "job-research-740437feef88b672",
+  "data": {
+    "canonical_id": "DOI:10.1145/3695053.3731073",
+    "arxiv_id": null,
+    "doi": "10.1145/3695053.3731073",
+    "openreview_id": null,
+    "title": "AiF: Accelerating On-Device LLM Inference Using In-Flash Processing",
+    "summary": "AiFは、端末上LLMで重みをSSDへ退避した際に外部PCIe帯域とフラッシュチャネル帯域が律速になる問題に対し、行列ベクトル積をNANDフラッシュチップ内部で実行する方式である。連続ワード線読み出しで充放電工程を省く電荷再利用読み出しと、LLM重みを高速かつ高信頼なLSBページへ偏らせる誤り偏向符号化を組み合わせ、軽量なチップ内誤り訂正で高い内部帯域を利用する。ホスト側計算との並列化も行い、容量制約を抑えつつ生成性能を高める。",
+    "list_summary": "LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。",
+    "authors": [
+      "Jihong Kim et al."
+    ],
+    "published": "2025-06-20",
+    "publication": "ISCA '25: Proceedings of the 52nd Annual International Symposium on Computer Architecture",
+    "publication_type": "Conference paper",
+    "publication_status": "Published",
+    "lineage": "in-flash processing / SSD offload / on-device LLM inference",
+    "topics": [
+      "SSDオフロード",
+      "フラッシュ内処理",
+      "端末上LLM推論",
+      "NANDフラッシュ"
+    ],
+    "importance": "SSDの外部帯域制約を回避するため計算自体をフラッシュ内部へ移す、階層メモリ型LLM推論の重要なハードウェア協調方式。",
+    "hardware_evaluation": "実TLC NAND特性測定と45 nm回路合成・アナログ混載回路シミュレーションに加え、NVMeVirtとllama.cppを統合したフルシステムシミュレーション。",
+    "quality_effect": "近似的な重み削減ではなく、ECC_LITEで読み出し誤りを訂正して通常の推論精度を維持する設計。性能シミュレーションでは出力ベクトル内容をダミー化しているため精度そのものは評価対象外。",
+    "source": "https://doi.org/10.1145/3695053.3731073",
+    "sources": [
+      "https://doi.org/10.1145/3695053.3731073"
+    ],
+    "implementation": "NVMeVirtとllama.cppを拡張したフルシステム評価実装。AiFChip回路はVerilog HDLで実装し45 nmで合成評価。",
+    "code": null,
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary-reference-section",
+    "references_total": 91
+  },
+  "reservation": {
+    "claim_id": "claim-0d9a61003cc7a37046392d50",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
