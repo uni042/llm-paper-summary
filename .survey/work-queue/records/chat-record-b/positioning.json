@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-d0fe97adcacea05d58b20b59",
-  "job_id": "job-research-660ceb86238a1a21",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d0fe97adcacea05d58b20b59",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d0fe97adcacea05d58b20b59","job_id":"job-research-660ceb86238a1a21","data":{"limitations":"保証は共有環境のdecode処理が公平割当へ分割した分離環境に対して十分なバッチ効率を持つというheadroom仮定に依存する。極端に軽い利用者では分離decodeがこの下限より速くなり、低いδを保証できない。性能モデルはハードウェアとモデルごとに再当てはめが必要で、主評価は単一A100・Llama-3 8B・prefill優先SGLangに限定される。複数GPU、chunked/hybrid batching、FairRAGの合成保証、Kairos/FairBatchingとの実験比較は今後の作業。実装自体も論文でongoing projectとされ、公開forkは将来予定である。","differences":"VTC、DLPM、FairServe、Equinoxは長期サービス量や仮想トークン消費を公平化するが、個々の初回・中間・最終トークンが分離実行から何秒遅れるかを保証しない。KairosやFairBatchingはSLOや期限を使うが、絶対的な最悪遅延を基準とする。FairInferenceは各利用者が公平割当資源を専有した仮想分離実行を基準に相対的な追加遅延δを保証する。またスケジューラだけでなく、復元遅延を持つ共有鍵値キャッシュへ利用者別予約を導入し、計算共有と容量共有の遅延を同じ保証へ合成する点が異なる。","implementation_status":"SGLang v0.3.0 fork上に約3〜4千行のδ公平スケジューラ、利用者別鍵値カウンタ、C言語の分離実行シミュレータを実装してA100で評価。論文時点ではforkの公開を将来作業としており、公式コードURLはまだ示されていない。","research_positioning":"LLM配信の公平スケジューリングを、処理量公平性からリアルタイム系に近い遅延分離保証へ拡張する研究である。ストレージ分野のDelta Fair Sharingにある『分離実行比δ以内』という考えをトークンストリームへ移し、初回トークン・トークン間隔・最終トークンを同時に扱う。鍵値キャッシュの復元遅延まで保証対象に含めるため、fair scheduling、SLO scheduling、KV cache resource isolationの交差領域に位置する。"},"reservation":{"claim_id":"claim-d0fe97adcacea05d58b20b59","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
