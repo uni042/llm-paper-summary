@@ -1,0 +1,10 @@
+{
+  "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+  "candidates":[
+    {"canonical_id":"arXiv:2609.10790","title":"Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving","source_url":"https://arxiv.org/abs/2609.10790","paper_path":"papers/inference/memory/2609.10790.md","priority":96,"reason":"構成可能CXLメモリをKubernetesの動的資源割当とvLLM/llm-d共有KVキャッシュへ統合する、LLMサービング向け階層・共有メモリ基盤の直接的研究。"},
+    {"canonical_id":"arXiv:2605.03375","title":"Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving","source_url":"https://arxiv.org/abs/2605.03375","paper_path":"papers/inference/storage/2605.03375.md","priority":98,"reason":"GPU中心のNVMe SSD-backed KVキャッシュ、GPU io_uring、I/OスケジューリングをvLLMへ統合し、TTFT・要求率・コストを実測する重点テーマ直結研究。"},
+    {"canonical_id":"arXiv:2604.26557","title":"DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference","source_url":"https://arxiv.org/abs/2604.26557","paper_path":"papers/inference/storage/2604.26557.md","priority":96,"reason":"ページキャッシュ経路とNVMe直結経路を動的選択しGPU DMAとI/Oを重畳するKVオフロードシステムで、SSD利用率と推論遅延を実測している。"}
+  ],
+  "rejected_candidates":[],
+  "discovery_stats":{"run_key":"2026-09-18T16:00:00+09:00","round":"specialist-cxl-nvme-2","axis":"CXL共有メモリ・NVMe KVキャッシュ","query_summary":"CXL、NVMe、SSD-backed KV cache、GPU direct I/Oを2026年新着・周辺検索で探索。","candidate_count":3,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"MoE expert placement/offloadの2026年6〜8月とedge/heterogeneous runtime","empty_round_reason":null}
+}
