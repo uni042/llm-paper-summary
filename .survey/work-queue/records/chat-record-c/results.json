@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-96c05ff24251413ee512b790",
+  "attempt_id": "attempt-f0acf688ceaad1c0809f2085",
   "job_id": "job-research-11c68d7adc12c492",
   "data": {
     "overview": "Dynamic-dLLMはaccuracyをほぼ維持しつつ3モデルで大幅なthroughput改善を示す。LLaDA-8B-Instructではfeature cacheのみで平均2.63倍、parallel decoding併用で平均3.21倍、GSM8Kで最大4.48倍。LLaDA-1.5はGSM8K 4.46倍、Dream-v0-7B-Instructは3.91倍。dynamic thresholdは高い初期threshold条件でfixed thresholdよりinference stepsを約30%削減する。",
@@ -41,7 +41,7 @@
     "quality_impact": "LLaDA-8B-Instructの5-task平均accuracyはbaseline 59.67、Dynamic-dLLM 59.51、APD併用59.33と近傍。速度改善は小さなaccuracy変動を伴うが、大幅な性能崩壊は観測されない。"
   },
   "reservation": {
-    "claim_id": "claim-96c05ff24251413ee512b790",
+    "claim_id": "claim-f0acf688ceaad1c0809f2085",
     "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
     "worker_kind": "scheduled_chat"
   }
