@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-76e7571f47153ba10e1f8ee9",
-  "job_id": "job-research-56fbeb640bc1560d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-76e7571f47153ba10e1f8ee9",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-76e7571f47153ba10e1f8ee9","job_id":"job-research-56fbeb640bc1560d","data":{"limitations":"評価は解析modelとsimulationのみで、実Edge GPU・backhaul上のend-to-end prototypeはない。source/target BSが同一LLM architecture/parametersを持ち、token送信時間はKV transfer/prefillより無視でき、prefill delayを線形p(L)=aL+bで近似できる前提を置く。全UEに共通prefix長Lを使うbatch prefillのため、UEごとに異なる計算/通信境界を最適化する一般形は扱わない。handover時刻とcontext長をsourceが既知とし、hard HO中はstreamingを停止する。soft HO、予測誤差、heterogeneous accelerators、実network jitter、KV serialization/compression overheadは今後の課題である。","differences":"tHOは過去tokenを全てtargetへ送りprefillでKVを再計算するためbackhaul payloadは小さいがcompute-heavy、cHOは全KVを直接転送してcomputeを避けるがcommunication-heavyである。ctHOは両者をLの両端として包含し、prefixをprefill・suffix KVを転送して並行実行する。CacheGen等はKV payload自体を圧縮するのに対し、ctHOはどの部分を再計算しどの部分を送るかとmulti-UE backhaul schedulingを最適化するため直交する。通常のKV migration研究がcacheを状態として移すのに対し、本研究はtoken historyからの再生成可能性を通信-計算tradeoffへ明示的に利用する。","implementation_status":"arXiv v1の解析・シミュレーション研究。Proposition 1〜3でstep-wise solution、固定Lのcache-transfer lower bound/achievability、最適prefill長条件を証明し、constructive one-UE-at-a-time backhaul schedulerを提示する。公開コードは一次資料に記載されていない。","research_positioning":"KV cache memory系統とEdge/distributed inference系統の接点に位置する。特にdisaggregated servingで議論されるKV transfer対recomputeの判断を、モバイルhandoverと共有backhaulのmin-max schedulingへ拡張した研究と見なせる。SSD/CPU offloadとは階層が異なるが、『高価な状態を移動するか再計算するか』という共通の設計原理をネットワーク越しKVへ適用している。"},"reservation":{"claim_id":"claim-76e7571f47153ba10e1f8ee9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
