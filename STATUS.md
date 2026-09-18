@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:03:31 JST**
+> 自動生成: **2026-09-18 16:05:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **49** |
-| 未claim Research job | **48** |
+| 収録候補論文 | **52** |
+| 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間18分前）** |
+| 最終検証済みResearch収録 | **09-18 14:45:14 JST（1時間20分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **49** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **49** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **6** | **3** | **3** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **22** | **7** | **1** | **6** | **0** | **0** | **26** |
-| 合計 | **29** | **13** | **4** | **9** | **1** | **0** | **26** |
+| Discovery | **26** | **7** | **7** | **0** | **0** | **0** | **26** |
+| 合計 | **33** | **13** | **10** | **3** | **1** | **0** | **26** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -94,6 +94,30 @@
   - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
   - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング
+- **09-18 16:03:50 JST** job `job-bb4198ed318d485b` / 候補 **3件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r2.json`
+  - 探索軸: CXL共有メモリ・NVMe KVキャッシュ
+- **09-18 16:03:57 JST** job `job-cfae50e810afb638` / 候補 **3件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r3.json`
+  - 探索軸: MoE expert placement・offload・heterogeneous runtime
+- **09-18 16:04:03 JST** job `job-58a8014d8c04bb84` / 候補 **4件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r4.json`
+  - 探索軸: edge MoE・expert prefetch・Flash/NPU・distributed routing
+- **09-18 16:04:10 JST** job `job-1efc93aab899cf17` / 候補 **4件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r5.json`
+  - 探索軸: PD disaggregation・RDMA・CXL KV transport
+- **09-18 16:04:17 JST** job `job-15908731b431da9b` / 候補 **5件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r6.json`
+  - 探索軸: agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse
+- **09-18 16:04:23 JST** job `job-61226c0c8eacab26` / 候補 **5件**
+  - result: `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r7.json`
+  - 探索軸: prefix-affinity routing・queue-aware KV・agent scheduling
 - **09-18 14:59:23 JST** job `job-a3b20fcf00af86ca` / 候補 **1件**
   - result: `.survey/work-queue/results/20260918T1500JST-discovery-specialist-robust-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1500JST-discovery-specialist-robust-kv-1.json`
@@ -106,30 +130,6 @@
   - result: `.survey/work-queue/results/20260918T1510JST-discovery-specialist-kv-migration-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1510JST-discovery-specialist-kv-migration-3.json`
   - 探索軸: network-constrained KV transfer・proactive migration・elastic KV reclamation
-- **09-18 15:02:28 JST** job `job-29bd3dc4df4a9d69` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T1515JST-discovery-specialist-moe-runtime-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1515JST-discovery-specialist-moe-runtime-4.json`
-  - 探索軸: MoE asynchronous prefill・expert offload/prefetch・disaggregated expert parallelism
-- **09-18 14:03:28 JST** job `job-ea2bc33c8f1495f0` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260918T1408JST-discovery-specialist-offloaded-kv-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
-  - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
-- **09-18 14:03:37 JST** job `job-1b47de6fd2d6d3b6` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json`
-  - 探索軸: 2609後半・agentic serving・speculative decoding・KV representation
-- **09-18 12:59:12 JST** job `job-9409898dd94f1482` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
-  - 探索軸: heterogeneous GPU serving・prefill/decode contention・SLO-constrained allocation・multimodal disaggregation
-- **09-18 12:59:37 JST** job `job-684aef3e77ab5ff6` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T1310JST-discovery-specialist-moe-cache-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1310JST-discovery-specialist-moe-cache-2.json`
-  - 探索軸: MoE expert prefetch・kernel-managed expert cache・edge/trillion-parameter tiering
-- **09-18 11:04:08 JST** job `job-bf970c66df9bea3f` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260918T1112JST-discovery-specialist-sep-systems-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
-  - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime
 
 ### 直近タスク
 
@@ -165,7 +165,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 16:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **26件**
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **0件** / 候補: **26件**
 - 探索軸: 2609新着・KVキャッシュ・マルチエージェント推論スケジューリング / CXL共有メモリ・NVMe KVキャッシュ / MoE expert placement・offload・heterogeneous runtime / edge MoE・expert prefetch・Flash/NPU・distributed routing / PD disaggregation・RDMA・CXL KV transport / agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse / prefix-affinity routing・queue-aware KV・agent scheduling
 - round `specialist-kv-scheduling-1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json`
@@ -174,27 +174,27 @@
 - round `specialist-cxl-nvme-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r2.json`
   - 探索軸: CXL共有メモリ・NVMe KVキャッシュ
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r2.json` (`ok=true`)
 - round `specialist-moe-offload-3` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r3.json`
   - 探索軸: MoE expert placement・offload・heterogeneous runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r3.json` (`ok=true`)
 - round `specialist-edge-moe-4` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r4.json`
   - 探索軸: edge MoE・expert prefetch・Flash/NPU・distributed routing
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r4.json` (`ok=true`)
 - round `specialist-disaggregation-5` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r5.json`
   - 探索軸: PD disaggregation・RDMA・CXL KV transport
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r5.json` (`ok=true`)
 - round `specialist-agentic-kv-6` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r6.json`
   - 探索軸: agentic/multi-turn KV storage・CXL hybrid memory・prefix reuse
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r6.json` (`ok=true`)
 - round `specialist-prefix-routing-7` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r7.json`
   - 探索軸: prefix-affinity routing・queue-aware KV・agent scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/discovery-specialist-20260918T1600JST-r7.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -223,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **49** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -251,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **511** |
+| 成功result未照合のimmutable submission | **505** |
 | └ Research | **376** |
 | └ Audit | **2** |
-| └ Discovery | **133** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
