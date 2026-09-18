@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:10:59 JST**
+> 自動生成: **2026-09-19 07:11:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **54** |
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-19 07:07:34 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-19 07:07:34 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **4** | **1** | **3** | **2** | **1** | — |
+| Research | **20** | **5** | **1** | **4** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **33** | **7** | **4** | **3** | **2** | **1** | **3** |
+| 合計 | **33** | **8** | **4** | **4** | **2** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,13 +151,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
-- immutable submission: **4件** / 検証済み成功: **1件** / 未完了・未検証: **3件**
+- immutable submission: **5件** / 検証済み成功: **1件** / 未完了・未検証: **4件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-5adb86bd27e2666265386057.json` (job `job-research-56fbeb640bc1560d`)
 - **成功** `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
   - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
   - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a3bba0a36c53f4970b6d1719.json` (job `job-research-f7dcdf40e7d3538f`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-ab3069d4b8b31db28dbe64b7.json` (job `job-research-56fbeb640bc1560d`)
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-c94b0bb7795aeb0a202c4cca.json` (job `job-research-f7dcdf40e7d3538f`)
 
@@ -243,8 +244,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **567** |
-| └ Research | **438** |
+| 成功result未照合のimmutable submission | **568** |
+| └ Research | **439** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
