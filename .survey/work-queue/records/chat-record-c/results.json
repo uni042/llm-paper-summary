@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-8ecddb04699c1299dadcd793",
   "job_id": "job-research-abd379cf035bd8f0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8ecddb04699c1299dadcd793",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "リソース単位注意だけでも、密注意の呼出しF1 82.4に対して82.3を維持し、キャッシュ命中時の先頭トークン待ち時間を26.319msから7.200msへ短縮して3.655倍高速化した。Qwen3-4Bで36層中20層・8 KVヘッド群中3群を残す寄与誘導型構造枝刈りは、KVメモリを79.27%削減しつつ呼出しF1 82.1を維持する。構造枝刈りと意味枝刈りを組み合わせたReCacheは、分布内でKVテンソル割当を92.43%削減し注意計算を1.423倍高速化、呼出しF1は80.3となる。分布外では密注意66.3に対して60.8で、未知リソースでも密注意性能の91.8%を保持する。リソース長が1万トークン以上へ伸びる条件では、密注意の先頭トークン待ち時間が5秒超へ増える一方、ReCacheは約5ms強でほぼ一定、KV割当も0.03GiBに抑える。",
+    "key_results": [
+      {"metric": "先頭トークン待ち時間", "value": "7.200 ms", "baseline": "Dense 26.319 ms", "condition": "リソース単位注意の完全可視構成、分布内", "interpretation": "組合せ非依存KVの再利用により3.655倍高速化。"},
+      {"metric": "KVテンソル割当メモリ削減", "value": "92.43%削減", "baseline": "Dense", "condition": "完全ReCache、分布内", "interpretation": "構造経路と保持トークンの両方を削ることで大幅なKV削減。"},
+      {"metric": "注意計算高速化", "value": "1.423倍", "baseline": "Dense", "condition": "完全ReCache、分布内", "interpretation": "リソースKVを参照する層・ヘッド群・トークンを同時に減らした効果。"},
+      {"metric": "呼出しF1", "value": "IND 80.3 / OOD 60.8", "baseline": "Dense IND 82.4 / OOD 66.3", "condition": "完全ReCache", "interpretation": "密注意性能の97.5%と91.8%を保持し、未知リソースで損失が大きくなる。"},
+      {"metric": "長リソース時のスケーリング", "value": "TTFT 約5ms強、KV 0.03GiB", "baseline": "DenseはXLでTTFT 5,000ms超、KVは約8GiB", "condition": "総リソース長1万トークン以上", "interpretation": "事前構築KV再利用によりオンラインプリフィル費用が総リソース長へほぼ依存しない。"}
+    ],
+    "negative_results": "圧縮を強くすると精度損失は無視できない。完全ReCacheの分布外呼出しF1は66.3から60.8へ低下する。一般要約型GistはKVを99.22%削減する一方、分布内呼出しF1が39.2、分布外9.7まで崩れ、細粒度な名前・引数情報を捨てすぎる。小さいQwen3-1.7BではKVヘッド群を強く削ると性能が落ちやすく、6/8群保持でも予備データでは完全可視より呼出しF1が18.7%低下した。",
+    "interpretation": "エージェント用スキーマでは、別リソースとの相互注意や大域的な並び順よりも各リソース内部の意味が支配的であるため、KVを独立化しても品質がほぼ保たれる。一方、呼出しに必要な情報は層・ヘッド群・トークン全体へ均等には分布せず、寄与の大きい経路と構造化フィールドへ集中している。この二種類の偏りを利用することで、再利用だけでは残るKV保存・注意計算費用まで削減できる。",
+    "quality_impact": "再利用だけの構成は密注意と0.1ポイント差の呼出しF1だが、完全ReCacheではINDで2.1ポイント、OODで5.5ポイント低下する。したがって大幅な効率改善と引き換えに、特に未知リソースでは一定の有効性損失がある。幻覚率は完全ReCacheでIND 0.2%、OOD 0.6%と低く、SPEEDや注意量ベース構造枝刈りより未知リソースで頑健だった。"
+  },
+  "reservation": {"claim_id": "claim-8ecddb04699c1299dadcd793", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
