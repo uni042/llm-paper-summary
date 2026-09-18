@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2505.21919",
+      "identity": "id:arXiv:2505.21919",
+      "title": "Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2505.21919",
+      "rejection_reason": "実運用traceとRedis/CHIME/Shermanを用いたKV metadata管理のcharacterizationとして有用だが、新しいLLM inference system mechanismの実装・end-to-end改善を提示する研究ではなく、現サーベイのsystems候補としては寄与が弱い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-18T16:00:00+09:00",
+    "round": "specialist-kv-metadata-3",
+    "axis": "KV cache metadata・RDMA・分離サービングnetwork transport",
+    "query_summary": "MoE batchingからKV metadata/RDMAへ軸を変更。TraCT、LMCache等はcanonical identityで既代表化済み。2505.21919は未代表だったため一次arXiv abstractで評価したが、characterization中心でsystem mechanismの新規性・実装評価が弱く不採用とした。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2512.18194", "arXiv:2510.09665"],
+    "next_axis_hint": "GPU kernel/runtime・compile/autotuningの2024-2025欠落へ移る",
+    "empty_round_reason": "evaluated_candidate_rejected"
+  }
+}
