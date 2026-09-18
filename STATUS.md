@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 20:59:20 JST**
+> 自動生成: **2026-09-18 21:01:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **53** |
 | 直近24hの検証済みResearch収録 | **37** |
-| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間52分前）** |
+| 最終検証済みResearch収録 | **09-18 19:06:47 JST（1時間54分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **26** | **11** | **11** | **0** | **0** | **0** | **14** |
-| 合計 | **32** | **13** | **13** | **0** | **2** | **0** | **14** |
+| Discovery | **25** | **11** | **11** | **0** | **0** | **0** | **14** |
+| 合計 | **31** | **13** | **13** | **0** | **2** | **0** | **14** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -200,9 +200,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06172` — AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-18 20:59:10 JST** / heartbeat: **—** / lease expiry: **09-18 22:29:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-07d26e029c945d64.json`
+- `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-18 21:00:58 JST** / heartbeat: **—** / lease expiry: **09-18 22:30:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
 - `arXiv:2608.11668` — A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving / worker `scheduled-chat-llm-survey`
   - claim: **09-18 20:28:41 JST** / heartbeat: **—** / lease expiry: **09-18 21:58:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-7fcd5e4f3604dab7.json`
@@ -253,8 +253,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **520** |
-| └ Research | **391** |
+| 成功result未照合のimmutable submission | **521** |
+| └ Research | **392** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
