@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8",
-  "job_id": "job-research-23f0e2222a013ba4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-78cfe446e04d42ebf3f9efb8",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version": 1, "transport_version": 10, "slot": "positioning", "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8", "job_id": "job-research-23f0e2222a013ba4",
+  "data": {
+    "limitations": "NPUの命令、量子化形式、固定形状制約へ強く依存するため、別ベンダーや別世代NPUへ移すとプロファイルと配置判断の再調整が必要になる。主な狙いはプリフィルであり、メモリ帯域支配のデコードを同程度に高速化する方式ではない。外れ値抽出とCPU/GPU補助経路には同期・合成費用があり、外れ値が増える条件ではNPUへ残せる計算割合が減る。低ビット実行は完全無損失ではなく、平均では小さいものの精度差が残る。",
+    "differences": "llama.cppなどCPU中心のオンデバイス実行に対し、llm.npuは端末に既設のNPUをプリフィルの主要演算器として使う。単純なNPU全面移植とも異なり、可変長入力を固定長へ変換し、量子化外れ値だけCPU/GPUへ分離し、さらにブロック単位で装置を選ぶ。PowerInfer系のCPU-GPU協調が重み活性やGPU容量を主問題とするのに対し、本研究はモバイルNPUの実行制約とLLM構造の不一致を主問題にする。後続のNPU専用低ビット研究から見ると、CPU/GPU補助を残す異種協調型の代表的基準となる。",
+    "implementation_status": "ASPLOS 2025で発表された実システム研究で、著者系統のmllm実装が公開されている。論文は市販端末上でCPU、GPU、NPUを実際に協調実行し、複数モデル・品質ベンチマーク・実アプリで評価する。コードは https://github.com/UbiquitousLearning/mllm 。",
+    "research_positioning": "本リポジトリでは階層メモリそのものより、異種ハードウェアへの計算オフロード系統として重要である。特に『高速だが制約の強い装置へ規則的な大部分を送り、不規則・精度敏感な少量部分だけ汎用装置へ残す』という分解原理は、GPU-CPU-NPUや将来の専用アクセラレータを組み合わせる推論設計に共通する。オフロード対象が重みだけでなく演算ブロックとテンソル成分まで細分化されている点で、単純な層単位配置より細粒度な異種実行の事例となる。"
+  },
+  "reservation": {"claim_id": "claim-78cfe446e04d42ebf3f9efb8", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
