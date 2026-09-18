@@ -17,7 +17,9 @@ run終了前は必ず次の順で判定する。
 2. continuation result、active assignment、claim/submission/ACK pending、hard stop、safe handoff状態を `.survey/scripts/run_finalization_gate.py` へ渡す。
 3. `decision=MUST_CONTINUE` または `finalization_permit.issued=false` ならfinal responseは禁止し、返された `next_action` を同じinvocation内で実行する。
 4. 通常workerはgate呼び出し直前に最新のclaim request/result対応を実際に確認する。確認済みの場合だけ `--claim-state-checked yes` を渡す。最新requestのresultが未生成・queued・in_progressなら `--claim-result-pending yes` も渡す。状態確認を省略するとgateは `CHECK_CLAIM_STATE` を返し、finalization permitを発行しない。
-5. `decision=MAY_FINALIZE` かつ `finalization_permit.issued=true` の場合だけnormal final responseを出せる。
+5. 通常workerは最新のimmutable Research/Audit descriptorと対応するsubmission result / `survey-submission-fast` 状態も実際に確認する。確認済みの場合だけ `--submission-state-checked yes` を渡し、result未生成・queued・in_progressなら `--submission-result-pending yes` も渡す。状態確認を省略するとgateは `CHECK_SUBMISSION_STATE` を返し、pending中はfinalization permitを発行しない。
+6. gateが返す `next_action_message` は「次に何を実行するか」の人間可読な正本表示とする。スクリプトへ判定を委ねた後は、この文言を確認して対応する `next_action` / `required_action` を実行する。非同期待機を開始する場合に `progress_notice` が非空なら、Scheduled Chatの進捗表示へ同じ意味を保って出し、**処理完了または明示的hard stopまでrunを終了しない**ことを利用者へ明示する。
+7. `decision=MAY_FINALIZE` かつ `finalization_permit.issued=true` の場合だけnormal final responseを出せる。
 
 `continuation_gate.py` が `CONTINUE` の間はfinalization permitを発行しない。有効なResearch/Audit assignmentが未処理の間もpermitを発行しない。claim result、submission result、Library ACK等の必要結果がpendingならpermitを発行しない。
 
@@ -35,7 +37,9 @@ run deadlineのhandoff guardに入るまでは、pendingが続くこと自体を
 
 ## 3. Research / Audit submission result待機
 
-5-slot + immutable descriptorをGitHubへ耐久保存済みなら、通常throughputでは前jobのsubmission terminal結果を待たず次の独立作業へ進む。これは `always-on-worker.md` のwork-conserving契約を維持するためであり、10秒pollingを新しい同期障壁にしない。
+5-slot + immutable descriptorをGitHubへ耐久保存済みなら、通常throughputでは前jobのsubmission terminal結果を待たず次の独立作業へ進む。これは `always-on-worker.md` のwork-conserving契約を維持するためであり、10秒pollingを新しい同期障壁にしない。ただし **submission-fastが処理中だからrunを終了することは禁止**する。pending中に独立作業があるなら終了せずその独立作業へ進み、独立作業が無い場合だけ同一submissionを10秒実時間pollingする。
+
+最終応答前には、最新のdescriptor/result/Actions状態を必ず再確認する。未確認なら `CHECK_SUBMISSION_STATE`、pendingで独立作業なしなら `WAIT_FOR_SUBMISSION_RESULT`、pendingで独立作業ありなら `CONTINUE_WORK` とし、いずれもnormal final responseへ進まない。
 
 一方、recovery、result validation、terminal ownership確認などで **同じsubmission resultが次の判断に必須** になった場合は、その同じjob / attempt / descriptorを保持し、**10秒の実時間待機 → 同じsubmission resultまたは対応Actionsを再取得**する。未確定なら再び10秒の実時間待機を行い、同じ対象がterminalになるまで繰り返す。実時間待機はruntime wait機構を実際に使い、即時再取得の連打で代替してはならない。pendingだからという理由で同一descriptorを重複submitせず、別attemptを勝手に作らない。
 
@@ -76,7 +80,7 @@ while required_result_is_pending:
 
 `invoke_runtime_wait_for_10_real_seconds()` は利用可能な実行環境のtimer/sleep機構を実際に使う。即時tool callの連打、同じ対象の即時再取得、自然言語で待機したと述べることは実時間runtime waitの代替ではない。
 
-「10秒を1回待った」「Actionsがまだin_progressだった」「結果ファイルがまだ404だった」は終了条件ではない。**必要結果がterminalになるまで10秒実時間pollingを繰り返す。** 途中でrun deadlineのhandoff guard等のhard stopが成立した場合だけsafe handoffへ移る。
+「10秒を1回待った」「Actionsがまだin_progressだった」「結果ファイルがまだ404だった」は終了条件ではない。**必要結果がterminalになるまで10秒実時間pollingを繰り返す。** 待機開始時にはgateの `progress_notice` をScheduled Chatへ表示し、「この処理中は終了せず、同じ対象を待機・再確認する」ことを明示する。 途中でrun deadlineのhandoff guard等のhard stopが成立した場合だけsafe handoffへ移る。
 
 ## 8. 次runでの強制回復
 
