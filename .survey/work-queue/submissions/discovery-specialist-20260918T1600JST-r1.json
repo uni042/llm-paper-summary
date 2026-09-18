@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"canonical_id":"arXiv:2609.10266","title":"The Age of Inference: Multi-Agent LLM Inference at Scale","source_url":"https://arxiv.org/abs/2609.10266","paper_path":"papers/inference/serving/2609.10266.md","priority":92,"reason":"Multi-agent LLM servingを対象に動的バッチングと先読み投機的スケジューリングを統合し、スループット・遅延・SLOでシステム評価しているため。"},
+    {"canonical_id":"arXiv:2609.13285","title":"BeaconKV: An Attention-Aware KV Cache Reduction Scheme for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2609.13285","paper_path":"papers/inference/kv-cache/2609.13285.md","priority":90,"reason":"注意度に基づくKVキャッシュ削減を推論システムへ組み込み、長文推論でTTFT・TPOT・スループットを実測評価しているため。"}
+  ],
+  "rejected_candidates": [
+    {"canonical_id":"arXiv:2609.04971","title":"KVShareArena: Benchmarking Intra-Request KV Cache Sharing for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2609.04971","rejection_reason":"主眼が既存KV共有手法の統一ベンチマークであり、新規の推論システム機構・資源管理方式そのものの提案ではないため。"},
+    {"canonical_id":"arXiv:2609.00891","title":"GVA: A Framework for Efficient KV Cache Compression via Grouped Vector Attention","source_url":"https://arxiv.org/abs/2609.00891","rejection_reason":"主貢献が注意機構アーキテクチャと学習時のKV圧縮で、重点対象の推論基盤・階層メモリ・サービング資源管理から外れるため。"}
+  ],
+  "discovery_stats": {"run_key":"2026-09-18T16:00:00+09:00","round":"specialist-kv-scheduling-1","axis":"2609新着・KVキャッシュ・マルチエージェント推論スケジューリング","query_summary":"2026年9月のarXiv新着をKV cache、LLM serving、scheduling、MoE inferenceの検索軸で横断し、システム評価を持つ未収録候補を選別。","candidate_count":4,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"MoE expert placement/offloadとCXL/NVMe階層メモリの2026年夏〜秋新着・引用追跡","empty_round_reason":null}
+}
