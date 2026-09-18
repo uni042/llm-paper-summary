@@ -1,0 +1,9 @@
+{
+ "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2609.17943","title":"ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference","source_url":"https://arxiv.org/abs/2609.17943","paper_path":"papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md","priority":90,"reason":"Very recent long-context serving system removes globally synchronized draft/verify phases via mixed asynchronous batching, directly addressing speculative-serving inefficiency."},
+  {"canonical_id":"arXiv:2609.10790","title":"Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving","source_url":"https://arxiv.org/abs/2609.10790","paper_path":"papers/inference/02-hierarchical-memory/2026-2609.10790-composable-cxl-kubernetes-shared-memory-llm-serving.md","priority":89,"reason":"Kubernetes DRA exposes composable CXL as shared cross-node KV tier for vLLM/llm-d; concrete cluster-memory disaggregation design with cross-node prefix reuse."}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-18T10:00:00+09:00","round":"specialist-late-new-arrivals-9","axis":"最新9月17日新着・CXL cluster memory/speculative serving","query_summary":"最新日付の新着をcommodity-memory、vLLM、speculative servingの複数窓で確認。既にこのrunで投入したMAPS/Calibrate/BOOSTはrun-local exclusionで再評価せず除外。","candidate_count":5,"duplicate_filtered_count":3,"duplicate_canonical_ids":["arXiv:2609.15359","arXiv:2609.16206","arXiv:2609.13592"],"next_axis_hint":"次はcitation/related-work由来の過去重要欠落を確認する","empty_round_reason":null}
+}
