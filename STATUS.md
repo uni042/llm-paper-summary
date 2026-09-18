@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 16:42:01 JST**
+> 自動生成: **2026-09-18 16:48:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 16:41:52 JST（9秒前）** |
-| 整合性異常 | **0** |
+| 最終検証済みResearch収録 | **09-18 16:41:52 JST（6分前）** |
+| 整合性異常 | **16** |
 
 ## 現在の収録候補
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **2** | **0** | **0** | **0** | — |
+| Research | **7** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **7** | **7** | **0** | **0** | **0** | **26** |
-| 合計 | **28** | **9** | **9** | **0** | **0** | **0** | **26** |
+| 合計 | **26** | **9** | **9** | **0** | **0** | **0** | **26** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,16 +83,6 @@
   - result: `.survey/work-queue/results/research/attempt-cec69bfeb43d99a153789edc.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cec69bfeb43d99a153789edc.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md`
-- **09-18 10:47:22 JST** [research] `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-660ceb86238a1a21.json`
-  - result: `.survey/work-queue/results/research/attempt-e915931ec4f50a06d7908b39.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json`
-  - paper: `papers/inference/06-serving-scheduling/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md`
-- **09-18 10:44:05 JST** [research] `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
-  - job: `.survey/work-queue/jobs/job-research-6c1a5d06d3b875ce.json`
-  - result: `.survey/work-queue/results/research/attempt-a45c6670fc2432985588dfbd.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a45c6670fc2432985588dfbd.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md`
 
 ### Audit
 
@@ -266,15 +256,36 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 ### 整合性異常
 
-直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。 旧形式のDiscovery submissionが `invalid submit_discovery_round payload` で失敗した履歴は、そのsubmission内の全candidateが現在のjobまたはpaper identity indexで確認できる場合に限り、履歴として保持したまま現在の異常から除外します。
+直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。
 
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **0** |
+| 対応jobなしsubmission（有効Discovery round除外） | **16** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **0** |
+| 異常レコード合計（重複排除） | **16** |
+
+### 対応jobなしsubmissionの診断対象
+
+上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
+
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r01.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r02.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r03.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r04.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r05.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r06.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r07.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r08.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2100-r09.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r01.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r02.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r03.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r04.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r05.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r06.json`
+- `.survey/work-queue/submissions/discovery-specialist-20260916T2200-r07.json`
 
 ### このSTATUSが採用する証拠
 
