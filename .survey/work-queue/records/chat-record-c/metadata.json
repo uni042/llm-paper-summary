@@ -1,23 +1,59 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bee8326435df2b286b51b470","job_id":"job-research-12153d10b82fca3c",
-  "data":{
-    "canonical_id":"arXiv:2506.04203","arxiv_id":"2506.04203","doi":"10.48550/arXiv.2506.04203","openreview_id":null,
-    "arxiv_categories":{"primary":"cs.DC","cross_list":[]},
-    "title":"Cascadia: An Efficient Cascade Serving System for Large Language Models",
-    "summary":"Cascadiaは、複数規模の大規模言語モデルを段階的に利用するモデルカスケードにおいて、要求経路だけでなくGPU資源配分とデータ・テンソル・パイプライン並列構成まで共同最適化する推論サービング基盤である。内側の混合整数線形計画が現在の経路方策に対する配置を求め、外側のチェビシェフ誘導最適化が品質制約を満たしながら経路しきい値を更新する。ICLR 2026の公式論文では32基のH100を用い、単一モデルおよびCascadeServeに対し、目標品質を維持しつつ最大4倍厳しい遅延SLOと最大5倍の処理性能を報告する。",
-    "list_summary":"モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。",
-    "authors":["Youhe Jiang","Fangcheng Fu","Wanru Zhao","Stephan Rabanser","Jintao Zhang","Nicholas D. Lane","Binhang Yuan"],
-    "authors_affiliations":"The Hong Kong University of Science and Technology; Shanghai Jiaotong University; University of Cambridge; Princeton University; Tsinghua University",
-    "published":"2026-04-23","publication":"International Conference on Learning Representations (ICLR 2026)","publication_type":"国際会議論文","publication_status":"Published as a conference paper at ICLR 2026",
-    "lineage":"モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
-    "topics":["LLMサービング","モデルカスケード","資源配分","並列化戦略","要求ルーティング","SLO"],
-    "importance":"従来は別々に扱われがちだったモデルカスケードの経路方策と実際のGPU配置・並列構成を、要求分布が配置を変え、配置が遅延を変えて次の経路判断へ戻る閉ループとして最適化した点が重要である。",
-    "implementation":"論文はSGLang上の実モデル実験とETH EASL Scratchpad系シミュレータを用いる。公開コードURLは公式論文本文から確認できなかった。",
-    "hardware_evaluation":"4台のGPUサーバに各8基のNVIDIA H100 80GB、サーバ内NVLink 400GB/s、サーバ間InfiniBand 200GB/sの合計32 GPU環境。",
-    "quality_effect":"GPT-4oを大規模言語モデル判定器として応答品質を0〜100で評価し、品質要件70、80、85、90などを満たす条件で遅延SLOと処理性能を比較する。",
-    "source":"https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf",
-    "sources":["https://proceedings.iclr.cc/paper_files/paper/2026/hash/b76105b94a8c1286c860ad885ec588f1-Abstract-Conference.html","https://proceedings.iclr.cc/paper_files/paper/2026/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf","https://arxiv.org/abs/2506.04203"],
-    "code":null,"last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"ICLR 2026 official conference paper","references_total":45
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-209883d907162cbb35ff1d30",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "canonical_id": "arXiv:2608.14575",
+    "arxiv_id": "2608.14575",
+    "doi": "10.48550/arXiv.2608.14575",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.NI",
+      "cross_list": []
+    },
+    "title": "HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving",
+    "summary": "HW-Routerは複数LLMをGPU群で提供する際、モデルサイズ等の静的コストではなく、実行中・待機中リクエスト数、KVキャッシュ使用率、直近TTFT/TPOTなどの実時間ハードウェア状態を取り込んでモデル-GPU組ごとの遅延を予測し、品質とSLOを考慮して経路選択するルータである。2台のH100上の5モデル評価でCARROT/IRTに対しエンドツーエンド遅延3.4〜3.9倍低減、SLO達成率46〜48ポイント向上、GPU負荷偏り6〜8倍低減を報告する。",
+    "list_summary": "実時間のキュー・KVキャッシュ・TTFT/TPOTを遅延予測へ統合し、複数LLMルーティングのSLOとGPU負荷均衡を改善する。",
+    "authors": [
+      "Ahasan Kabir",
+      "Jiaqi Xue",
+      "Mengxin Zheng",
+      "Qian Lou"
+    ],
+    "authors_affiliations": "University of Central Florida",
+    "published": "2026-06-10",
+    "publication": "63rd Design Automation Conference (DAC 2026)",
+    "publication_type": "国際会議論文",
+    "publication_status": "Accepted at DAC 2026; arXiv v1",
+    "lineage": "multi-LLM serving / hardware-aware routing / SLO-aware scheduling / load balancing",
+    "topics": [
+      "LLMサービング",
+      "ルーティング",
+      "ハードウェア認識",
+      "SLO",
+      "GPU負荷分散"
+    ],
+    "importance": "品質予測中心だったLLMルータへ動的なサービング状態を一次入力として加え、モデル選択とGPU混雑回避を一体化した点が重要。",
+    "implementation": "vLLM Prometheusメトリクスを200〜300ms間隔で監視し、軽量MLPコスト予測器とIRT等の品質予測器を組み合わせる公式実装が公開されている。",
+    "hardware_evaluation": "単一ノード、NVIDIA H100 PCIe 80GB×2、8 CPU cores、64GB system memory。5つのinstruction-tuned LLMを固定配置して評価。",
+    "quality_effect": "モデル品質予測はハードウェア状態から分離し、Qwen-3-Next-80BによるLLM-as-a-judgeスコアで評価。著者は同等品質点で大幅な遅延改善を示し、出力品質損失なしと報告。",
+    "source": "https://arxiv.org/abs/2608.14575",
+    "sources": [
+      "https://arxiv.org/abs/2608.14575",
+      "https://jqxue1999.github.io/files/HWRouter.pdf"
+    ],
+    "code": "https://github.com/UCF-ML-Research/HW-Router",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "primary manuscript",
+    "references_total": 23
   },
-  "reservation":{"claim_id":"claim-bee8326435df2b286b51b470","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-209883d907162cbb35ff1d30",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
 }

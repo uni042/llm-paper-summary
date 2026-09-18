@@ -1,10 +1,18 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bee8326435df2b286b51b470","job_id":"job-research-12153d10b82fca3c",
-  "data":{
-    "hardware":"4台のGPUサーバを使用し、各サーバにNVIDIA H100 80GBを8基搭載する合計32 GPU環境。サーバ内GPUはNVLink 400GB/s、サーバ間はInfiniBand 200GB/sで接続する。スケジューリング算法の実行時間は12コアCPUでも測定し、16〜80 GPU規模への拡張性を確認する。",
-    "software":"モデル実行はSGLangを用いる。主カスケードはDeepSeek蒸留7B、DeepSeek蒸留70B、INT4量子化したDeepSeek 671Bで構成し、別系統としてLlama3 8Bと70Bも評価する。品質判定器にはGPT-4oを用いる。配置候補の95パーセンタイル遅延推定にはETH EASL Scratchpad系シミュレータを用い、実測との誤差は付録で2〜7%と報告する。",
-    "methodology":"実世界データに基づく複数のワークロード軌跡を作り、入力長、出力長、到着率、要求複雑度が異なる条件で評価する。品質要求は主に70、80、85、90の段階で設定し、95%の要求が期限内に終わるために必要なSLO尺度と、単位時間当たり処理要求数を測る。比較対象は、同じ資源上で最適な並列構成へ調整した単一DeepSeekモデル、既存カスケード基盤CascadeServe、Llama系評価、Sarathi-Serve、RouteLLMである。資源配分と並列構成を一律化する除去実験、品質要求に応じた段階別GPU配分と要求処理比率の事例、変動ワークロードでの再スケジューリングも評価する。再スケジューリング実験では軌跡1、2、3を8分、16分、10分で切り替える。",
-    "scope":"主結果は32基H100の単一クラスタと、研究側が管理する複数モデルを前提とする。外部APIを混ぜた費用最適化ではなく、自前配置したモデルカスケードの資源・並列・経路共同最適化が対象である。性能推定はシミュレータを含むため完全な実測だけではないが、シミュレータ誤差を2〜7%で検証している。品質はGPT-4oによる大規模言語モデル判定が中心で、人手評価の頑健性は主要評価では扱わない。"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-209883d907162cbb35ff1d30",
+  "job_id": "job-research-60a904da0b8faa84",
+  "data": {
+    "hardware": "単一ノードにNVIDIA H100 PCIe 80GBを2枚、CPU 8 cores、system memory 64GB。H100-0にPhi-3-miniとQwen2.5-14B、H100-1にQwen2.5-3B、Mistral-7B、Llama-3.1-8Bを固定配置する。",
+    "software": "各モデルはvLLMの独立processで提供しPrometheus metricsを有効化。問い合わせ埋め込みはCARROTと同じall-MiniLM-L6-v2。比較はCARROTとIRT-Routerの既定構成。品質judgeはQwen-3-Next-80B。公式コードで監視、コストモデル学習、オンライン評価パイプラインを公開。",
+    "methodology": "MixInstructから6,000、English LongBenchから2,425の計8,425 promptsを混合し、6,740 train / 1,685 evalに分割。短文と中長文を混ぜて並行性とKVキャッシュ圧力を両方発生させる。コストモデル学習ではPoisson、micro-burst、sustained-overloadの3到着パターンを巡回し、評価ではsustained-overloadのarrival rate 15/18/21 requests/sを用いる。SLOはprompt長に対する線形TTFT基準を1.2倍slackで設定し、TPOTは訓練集合70 percentile。品質-遅延Pareto、SLO達成率、running/waiting queue比率、GPU load/running/waiting skewを測る。",
+    "scope": "5つのopen-source instruction LLMを2台の同型H100へ固定配置した高負荷評価が中心。動的負荷状態への適応は直接検証されるが、V100/A100/H100混在など真の異種GPUクラスタ、大規模多ノード、モデル移動・replica増減、実運用トラフィックでの長期挙動は評価範囲外。"
   },
-  "reservation":{"claim_id":"claim-bee8326435df2b286b51b470","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-209883d907162cbb35ff1d30",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
 }
