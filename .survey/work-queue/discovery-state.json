@@ -1,50 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T02:04:43+00:00",
+  "updated_at": "2026-09-18T02:08:16+00:00",
   "last_run_key": "2026-09-18T11:00:00+09:00",
-  "last_round": "specialist-agent-runtime-2",
+  "last_round": "specialist-scheduling-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T01:55:54+09:00",
-      "round": "specialist-multilora-coserving-6",
-      "axis": "multi-LoRA・推論/微調整co-serving・cross-model KV reuse",
-      "query_summary": "引用系統backfillから離れ、training/serving境界とmulti-adapter runtimeへ探索軸を変更した。fine-tuning主体のみの研究は避け、推論SLO、serving integration、KV reuseに明確なシステム寄与を持つ3件を選別し、最新mainでcanonical ID再検索して未収録を確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 3,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.25,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.06370"
-      ],
-      "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る",
-      "source_submission": "work-queue/submissions/20260913T0209JST-discovery-d4eb0caeda27a63f.json"
-    },
-    {
-      "run_key": "2026-09-13T01:55:54+09:00",
-      "round": "specialist-agent-state-interception-7",
-      "axis": "agentic multi-turn state・interruption・distributed prefix sharing",
-      "query_summary": "multi-LoRA/co-servingから離れ、tool callを挟むmulti-turn agentのKV state保持、中断/再開、multi-agent collective sharing、distributed prefix schedulingへ軸を変更した。重要な古い未収録2件と2026年agent serving候補2件を軽量評価し、最新mainでcanonical IDの未収録を再確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 4,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.23521",
-        "arXiv:2606.18741"
-      ],
-      "next_axis_hint": "次はagent stateから離れ、output-length uncertaintyを考慮したKV reservation・memory-constrained online scheduling・admission controlへ移る",
-      "source_submission": "work-queue/submissions/20260913T0211JST-discovery-582553a19b973e3b.json"
-    },
     {
       "run_key": "2026-09-13T01:55:54+09:00",
       "round": "specialist-kv-admission-uncertainty-8",
@@ -6943,6 +6908,42 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はCXL/CPU-GPU/NAND/SSDなどmemory hierarchyとhardware-runtime co-designへ移る",
       "source_submission": "work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json"
+    },
+    {
+      "run_key": "2026-09-18T11:00:00+09:00",
+      "round": "specialist-memory-hardware-3",
+      "axis": "CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV",
+      "query_summary": "memory hierarchy/hardware co-designへ軸変更。複数queryの1回取得で候補をまとめ、abstract段階でsystem寄与を評価してGitHub ID照合。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "multi-tenant scheduling・batching・SLO admission・load balancingへ移る",
+      "source_submission": "work-queue/submissions/20260918T1128JST-discovery-specialist-memory-hardware-3.json"
+    },
+    {
+      "run_key": "2026-09-18T11:00:00+09:00",
+      "round": "specialist-scheduling-4",
+      "axis": "multi-tenant isolation・network flow・SLO・batching・heterogeneous routing",
+      "query_summary": "memory系からschedulingへ移動し、multi-tenant/SLO/load-balancing/batchingを並列検索。軽量abstract評価後にGitHub ID照合を行い、未収録5件を提出。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はspeculative decoding runtime、draft/verify分離、branch parallelismへ移る",
+      "source_submission": "work-queue/submissions/20260918T1136JST-discovery-specialist-scheduling-4.json"
     }
   ],
   "axes": {
@@ -11786,6 +11787,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.8,
       "next_axis_hint": "次はCXL/CPU-GPU/NAND/SSDなどmemory hierarchyとhardware-runtime co-designへ移る"
+    },
+    "CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV": {
+      "last_run_key": "2026-09-18T11:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 4,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.8,
+      "next_axis_hint": "multi-tenant scheduling・batching・SLO admission・load balancingへ移る"
+    },
+    "multi-tenant isolation・network flow・SLO・batching・heterogeneous routing": {
+      "last_run_key": "2026-09-18T11:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はspeculative decoding runtime、draft/verify分離、branch parallelismへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 11:07:32 JST**
+> 自動生成: **2026-09-18 11:09:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
-| 未claim Research job | **52** |
+| 収録候補論文 | **54** |
+| 未claim Research job | **53** |
 | 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-18 10:47:22 JST（20分前）** |
+| 最終検証済みResearch収録 | **09-18 10:47:22 JST（22分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **17** | **3** | **2** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **4** | **2** | **2** | **0** | **0** | **20** |
-| 合計 | **29** | **7** | **4** | **3** | **1** | **0** | **20** |
+| Discovery | **14** | **4** | **4** | **0** | **0** | **0** | **20** |
+| 合計 | **31** | **7** | **6** | **1** | **1** | **0** | **20** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -113,6 +113,14 @@
   - result: `.survey/work-queue/results/20260918T1120JST-discovery-specialist-agent-runtime-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1120JST-discovery-specialist-agent-runtime-2.json`
   - 探索軸: agentic workflow・prefix state・power-aware disaggregated serving
+- **09-18 11:08:06 JST** job `job-142163cff9fb23f9` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T1128JST-discovery-specialist-memory-hardware-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1128JST-discovery-specialist-memory-hardware-3.json`
+  - 探索軸: CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV
+- **09-18 11:08:16 JST** job `job-32c4663a55233678` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260918T1136JST-discovery-specialist-scheduling-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1136JST-discovery-specialist-scheduling-4.json`
+  - 探索軸: multi-tenant isolation・network flow・SLO・batching・heterogeneous routing
 - **09-18 10:03:07 JST** job `job-45da248bd3f7388b` / 候補 **5件**
   - result: `.survey/work-queue/results/20260918T1008JST-discovery-9f31a2c7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260918T1042JST-discovery-f54c0a91.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1042JST-discovery-f54c0a91.json`
   - 探索軸: MoE expert cache・prefetch・offload
-- **09-18 10:08:14 JST** job `job-b6b273ebecde8f15` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T1049JST-discovery-a63d1f04.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1049JST-discovery-a63d1f04.json`
-  - 探索軸: CXL/PIM/NDP・隣接memory systems
-- **09-18 10:08:23 JST** job `job-8a3bf85fa44edf31` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260918T1055JST-discovery-b94e2d70.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1055JST-discovery-b94e2d70.json`
-  - 探索軸: output-length scheduling・deterministic inference
 
 ### 直近タスク
 
@@ -173,7 +173,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 11:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **2件** / 候補: **20件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **20件**
 - 探索軸: 2026年9月新着のKV圧縮・分離serving・offload・local runtime / agentic workflow・prefix state・power-aware disaggregated serving / CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV / multi-tenant isolation・network flow・SLO・batching・heterogeneous routing
 - round `specialist-sep-systems-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1112JST-discovery-specialist-sep-systems-1.json`
@@ -186,11 +186,11 @@
 - round `specialist-memory-hardware-3` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1128JST-discovery-specialist-memory-hardware-3.json`
   - 探索軸: CXL・CPU/GPU協調・3D NAND・PIM・SSD-backed KV
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1128JST-discovery-specialist-memory-hardware-3.json` (`ok=true`)
 - round `specialist-scheduling-4` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1136JST-discovery-specialist-scheduling-4.json`
   - 探索軸: multi-tenant isolation・network flow・SLO・batching・heterogeneous routing
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1136JST-discovery-specialist-scheduling-4.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -219,7 +219,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,10 +247,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **492** |
+| 成功result未照合のimmutable submission | **490** |
 | └ Research | **361** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
