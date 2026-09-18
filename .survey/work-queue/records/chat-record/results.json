@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e650ce18f4f36888e2078aa7",
+  "attempt_id": "attempt-36ebd37ab918e1cf55c1a45f",
   "job_id": "job-research-b4ff298d10321769",
   "data": {
     "overview": "理論上、全要求へ同じ部品順序を使う方式は各要求が高々二部品なら最適だが、三部品から最適性が崩れる。一部品だけ欠く要求族では共通順序の費用が要求数の二乗規模まで増えるのに対し、要求階層を使う自由配置は要求数掛ける対数規模に抑えられる。共通部分に基づく凝集型近似は節約量の二分の一を最悪時にも保証し、実検索データの小集団では厳密解へほぼ一致した。三つのBEIR検索データ集合では通常の検索順位順より事前計算を17〜36%削減し、順序変更へ品質保護条件を加えても13〜23%の削減が残る。これは既存キャッシュの保存方式を変えなくても、入力部品配置だけで実際の計算量を減らせることを意味する。",
@@ -55,7 +55,7 @@
     "quality_impact": "研究は再利用部品の順序交換が意味を保つ場面を中心にする。順序変更へ品質保護条件を加えた実験でも13〜23%の事前計算削減が残り、利得が無制限な並べ替えだけに依存しないことを示す。"
   },
   "reservation": {
-    "claim_id": "claim-e650ce18f4f36888e2078aa7",
+    "claim_id": "claim-36ebd37ab918e1cf55c1a45f",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
