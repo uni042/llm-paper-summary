@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-75bcc03e6fad92c2b911b240",
-  "job_id": "job-research-6af027835df580e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-75bcc03e6fad92c2b911b240",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-75bcc03e6fad92c2b911b240","job_id":"job-research-6af027835df580e1","data":{"canonical_id":"arXiv:2511.07035","arxiv_id":"2511.07035","doi":"10.48550/arXiv.2511.07035","openreview_id":null,"arxiv_categories":{"primary":"cs.OS","cross_list":[]},"title":"GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training","summary":"GoCkptは大規模言語モデル学習のチェックポイントを一つの学習ステップ内でGPUからCPUへ全量転送する従来方式をやめ、モデル・最適化器状態を複数ステップへ分割して計算と重ねる。異なるステップ版がCPUへ届く不整合は、混合精度学習で小容量な低精度勾配も転送し、CPU上でAdamW更新を再現して最新の一貫版へ揃えることで解消する。固定メモリ、4MBチャンク、多スレッドSSD永続化も組み合わせ、従来非同期方式比最大38.4%、最適化版で40.1%の学習スループット改善を示す。","list_summary":"チェックポイント転送を複数学習ステップへ分散し、低精度勾配でCPU側の版を一貫状態へ再構築することで、GPU停止を大幅に隠して学習スループットを最大約40%改善する。","authors":["Keyao Zhang","Yiquan Chen","Zhuo Hu","Wenhai Lin","Jiexiong Xu","Wenzhi Chen"],"authors_affiliations":"Zhejiang University; Alibaba Group","published":"2025-11-10","publication":"arXiv:2511.07035; manuscript indicates March 22-26, 2026 Pittsburgh conference placeholder","publication_type":"プレプリント／会議投稿原稿","publication_status":"arXiv v1公開","lineage":"学習チェックポイント・GPU-CPU転送・SSD永続化・障害回復","topics":["チェックポイント","学習I/O","GPU-CPU転送","SSD永続化","混合精度学習"],"importance":"GPUからCPUへのチェックポイント転送を一ステップの同期境界から解放し、CPU再構築によって複数ステップにまたがる非一貫スナップショットを正しい最新版へ戻す。GPU-CPU帯域とNVMe SSD書込みの両方を最適化する耐久状態I/O研究。","implementation":"Python/C++約2000行でDeepSpeedへ統合。Pybind11 API、PyTorch固定CPUメモリ、独立CUDA stream、C++多スレッド、DeepSpeed CPU AdamWを利用。","hardware_evaluation":"単一GPU: Tesla V100S、96 CPU cores、128GB DDR4、3.8TB NVMe SSD。複数GPU: 8×H100-80GB NVLink、224-core Xeon Platinum 8480C、2TB ECC RAM、4×3.5TB NVMe。4×H100評価も実施。","quality_effect":"チェックポイントの最終状態はCPU上で同じAdamW更新を適用して最新ステップのモデル・最適化器状態へ再構築し、復元可能な一貫版を保持する。","source":"https://arxiv.org/abs/2511.07035","sources":["https://arxiv.org/abs/2511.07035","https://arxiv.org/html/2511.07035","https://arxiv.org/pdf/2511.07035"],"code":null,"project":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文・参考文献まで確認。","references_total":0},"reservation":{"claim_id":"claim-75bcc03e6fad92c2b911b240","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
