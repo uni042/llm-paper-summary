@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bc5a8fd4186a7939c0b7b5f9","job_id":"job-research-51ff641061ba8ecf","data":{"overview":"RH+は24構成すべてで大幅な端末間改善を示し、バッチ1では8.25〜11.51倍、バッチ4では10.77〜11.88倍高速化する。GEMV比率が高く隠れ次元が大きいMegatron-Turing 530Bで効果が大きく、長い出力でattention比率が増えるLLaMA-65B等では下限側になる。エネルギーは74.5〜77.1%減少し、基準方式で総エネルギーの約67%を占める背景待機を実行時間短縮で削減する。時間とエネルギーが同時に下がるためエネルギー遅延積は32.4〜52.0倍改善する。","key_results":[{"metric":"端末間速度向上","value":"8.25〜11.88倍","baseline":"ストライド64の基準HBM3-PIM","condition":"4 LLM、24構成、HBM3 5.2Gbps","interpretation":"毎MACの行ミスを32連続行ヒットへ変えるだけでGEMV支配の復号時間を約1桁短縮する。"},{"metric":"バッチ1速度向上","value":"8.25〜11.51倍","baseline":"基準方式","condition":"バッチ1、入力/出力長3組","interpretation":"長い出力ではRH+対象外のattention比率が増えるため全体速度向上が低下する。"},{"metric":"バッチ4速度向上","value":"10.77〜11.88倍","baseline":"基準方式","condition":"バッチ4","interpretation":"GEMV比率が高まるためモデル間差が縮まりRH+効果がより直接現れる。"},{"metric":"総エネルギー削減","value":"74.5〜77.1%削減","baseline":"基準方式","condition":"全24構成","interpretation":"ACT/PRE削減に加え、約10倍の時間短縮で常時発生するHBM3背景エネルギーも大幅に減る。"},{"metric":"エネルギー遅延積改善","value":"32.4〜52.0倍","baseline":"基準方式","condition":"全24構成、最大はMT-530Bバッチ4","interpretation":"遅延短縮と背景エネルギー削減が乗算され、速度向上以上の効率改善になる。"}],"negative_results":"RH+はattentionやMAC_ABを使わない再配置処理を高速化しないため、長い出力でattention比率が高いバッチ1構成では速度向上が下がる。基準方式では電力制約モードと非電力制約モードが同じ性能で、nCCDAB最適化だけでは効果がない。RH+後は逆にnCCDABが次の律速となり、電力制約モードは非電力制約モードより1.36倍遅い。評価はシミュレーションであり実HBM3-PIMチップ上の結果ではない。","interpretation":"PIMではホスト向けメモリアドレス配置をそのまま使うと、外部帯域を稼ぐための交互配置が内部演算には不要な行ミスを生む。PIM固有のアクセス粒度へ物理配置と命令順序を合わせることで、追加演算器なしでも大きな性能余地がある。","quality_impact":"重みのK次元配置順を変えるだけで積和対象は同じであり、近似、量子化、枝刈りを導入しない。したがって論文の想定ではGEMV結果とモデル品質を保持する。"},"reservation":{"claim_id":"claim-bc5a8fd4186a7939c0b7b5f9","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-1b78e7fa82b82abe032f6a4d",
+  "job_id": "job-research-06a7e035a0f5ff0b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1b78e7fa82b82abe032f6a4d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

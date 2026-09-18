@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bc5a8fd4186a7939c0b7b5f9","job_id":"job-research-51ff641061ba8ecf","data":{"canonical_id":"arXiv:2606.05511","arxiv_id":"2606.05511","doi":"10.48550/arXiv.2606.05511","openreview_id":null,"arxiv_categories":{"primary":"cs.ET","cross_list":[]},"title":"RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference","summary":"RH+はHBM3処理インメモリ（PIM）によるLLM自己回帰復号で、従来研究が電力制約間隔nCCDABを主律速と見なしていたのに対し、実際にはDRAM行サイクルnRCが10〜11倍長く、ホスト向けアドレス交互配置のため全バンクMACが毎回別行へ飛ぶ0%行ヒットが支配的であると示す。MACのアドレス間隔を64列から1列へ変え、同一行内で32回連続MACを行うRH+によりACT/PREを32演算で償却する。Ramulator 2.0を統合したサイクル精密模擬で4種LLMを評価し、8.25〜11.88倍高速化、74.5〜77.1%エネルギー削減、32.4〜52.0倍のエネルギー遅延積改善を示す。","list_summary":"HBM3-PIM復号の真の律速をDRAM行サイクルと特定し、同一行32連続MACへ並べ替えるRH+で8.25〜11.88倍高速化する。","authors":["Yongchan Jung","Shafayat Mowla Anik","Byeong Kil Lee","Jeeho Ryoo"],"authors_affiliations":"Fairleigh Dickinson University; University of Colorado Colorado Springs","published":"2026-06-03","publication":"arXiv:2606.05511","publication_type":"プレプリント","publication_status":"arXiv v1公開","lineage":"PIM・HBM3・LLM推論・DRAM行局所性・メモリスケジューリング","topics":["処理インメモリ","HBM3","DRAM行ヒット","LLM復号","スケジューリング"],"importance":"PIM向けLLM推論で従来の電力制約中心の最適化前提を覆し、ホスト向けアドレス配置がPIM内部演算には不要な行ミスを作ることを示す。単純な配置・スケジュール変更だけで大幅な速度・エネルギー改善を得るハードウェア認識型推論研究。","implementation":"AttAccシミュレータへRamulator 2.0を統合し、HBM3-PIMコマンド単位のサイクルとエネルギーを追跡。RH+は重みK次元の一回限りのオフライン並べ替えとMAC_ABアドレス間隔変更として実装。","hardware_evaluation":"実機ではなくサイクル精密シミュレーション。HBM3 5.2Gbps、5スタック、テンソル並列8をモデル化し、GPT-175B、LLaMA-65B、Megatron-Turing 530B、OPT-66Bを評価。","quality_effect":"重み要素をK次元に沿ってオフラインで並べ替えるだけでGEMVの数学的結果は変えない。累積順序は可換であり、推論品質を近似で犠牲にする方式ではない。","source":"https://arxiv.org/abs/2606.05511","sources":["https://arxiv.org/abs/2606.05511","https://arxiv.org/html/2606.05511","https://arxiv.org/pdf/2606.05511"],"code":null,"last_checked":"2026-09-19","references":[{"canonical_id":"arXiv:2302.13971","arxiv_id":"2302.13971"},{"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053"},{"canonical_id":"arXiv:2205.01068","arxiv_id":"2205.01068"}],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文のReferences節を確認し、明示されたarXiv識別子を正規化。","references_total":14},"reservation":{"claim_id":"claim-bc5a8fd4186a7939c0b7b5f9","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-1b78e7fa82b82abe032f6a4d",
+  "job_id": "job-research-06a7e035a0f5ff0b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1b78e7fa82b82abe032f6a4d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

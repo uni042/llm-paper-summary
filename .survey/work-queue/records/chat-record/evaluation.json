@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bc5a8fd4186a7939c0b7b5f9","job_id":"job-research-51ff641061ba8ecf","data":{"hardware":"サイクル精密シミュレーションでHBM3-PIMをモデル化する。HBM3 5.2Gbps、5スタック、テンソル並列8を使用し、各スタックは16チャネル、32疑似チャネル、合計1024バンクを持つ仕様を反映する。実機測定ではない。","software":"AttAccのLLM推論シミュレータを拡張し、Ramulator 2.0でDRAMコマンド単位のタイミングを追跡する。エネルギーはIDDベースDRAMPower手法でMAC計算、再配置、ACT/PRE/REF、背景待機へ分解する。","methodology":"GPT-175B、LLaMA-65B、Megatron-Turing 530B、OPT-66Bの4モデルを評価する。各モデルで入力/出力長128/2048、2048/128、2048/2048の3組とバッチ1、4を組み合わせ、1モデル6構成、全24構成を基準ストライド64とRH+ストライド1で比較する。全構成はHBM3 5.2Gbps。端末間性能、エネルギー、エネルギー遅延積、エネルギー内訳を測り、電力制約モードと非電力制約モードのMACカーネル差も確認する。","scope":"HBM3-PIMのアドレス配置とDRAMタイミングを対象とするシミュレーション研究であり、実チップ上のソフトウェア・配線・熱・電力供給制約は未実証。GEMVが支配的な低バッチ自己回帰復号で効果が最大となり、attentionなどMAC_ABを使わない処理はRH+では高速化しない。"},"reservation":{"claim_id":"claim-bc5a8fd4186a7939c0b7b5f9","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-1b78e7fa82b82abe032f6a4d",
+  "job_id": "job-research-06a7e035a0f5ff0b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1b78e7fa82b82abe032f6a4d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
