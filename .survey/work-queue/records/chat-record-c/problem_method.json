@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-386de3001d7d0291d3e77d66",
-  "job_id": "job-research-9d3c210288b42eb4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-386de3001d7d0291d3e77d66",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-386de3001d7d0291d3e77d66","job_id":"job-research-9d3c210288b42eb4","data":{"problem":"MoEのエキスパートオフロードは、GPUなど高速メモリに一部expertだけを保持し、miss時にCPU計算または低速メモリからloadすることで巨大MoEを限られたメモリで動かす。しかし既存研究はMixtral等の少数モデルで『近接tokenが同じexpertを使いやすい』ことを経験的に利用する一方、その局所性がモデル間でどの程度違い、どのmodel/training designがオフロード向きかを体系的に測る尺度がなかった。短い区間でroutingが頻繁に変わればcache missと転送が増えるため、system側のcache/prefetch最適化だけでは限界がある。","novelty":"局所ルーティング一貫性（local routing consistency）をモデル固有の性質として切り出し、パラメータなしでsegment routerがtoken-wise routingをどこまで再現できるかを測るSRPと、有限cache容量下で将来m tokenのactivation頻度を用いるoracle cacheのhit rateを測るSCHの二指標を導入する。20種の実MoEを同一corpusで比較し、さらに1.43B OLMoE-like toy modelでload-balance loss、shared expert、expert数・active数、dense layer挿入等を一要因ずつ変えて因果候補を検証する。","method_overview":"各入力について全MoE layerのexpert activationを収集する。SRPではsegment長mごとに、単一expertならsegment内で常時active/常時inactiveを予測するestimatorの最大F1、expert groupなら固定expert集合を選ぶsegment routerの最大F1を求め、過剰activationをsegment routing size ratioで補助評価する。SCHではcache ratio rho=cache size/active expertsを定義し、次m tokenでactivation頻度が最も低いexpertをevictするoracle segment cacheをsimulationしてhit rateを測る。実モデル間比較に加えtoy modelで設計要因を操作し、domain/vocabulary specializationとの相関、LRU/LFU等のcache hit rateとの相関も評価する。","components":[{"name":"SRP","description":"segment単位で固定routingを行う仮想routerの最大F1により、特定cache方式に依存しない局所routing一貫性を測る。group評価では余分なexpert選択をsegment routing size ratioで監視する。"},{"name":"SCH","description":"有限expert cacheを仮定し、次m tokenのactivation頻度をoracle情報としてevictionするsegment cacheのhit rate。実offloadingのcache制約へSRPを接続する実用寄り指標。"},{"name":"20実モデル横断解析","description":"3B〜57Bの20 MoE LLMを、RedPajama 7 domainとLMArena/OpenMath/OpenCode/OpenScienceを含む22,528×512-token corpusで同一条件比較する。"},{"name":"制御toy model実験","description":"1.43B OLMoE-like modelでload balance、shared expert、expert combination space、dense/MoE layer配置を個別変更し、SRPとperplexityを比較する。"},{"name":"specialization/cache接続解析","description":"domain specializationとvocabulary specializationをexpert単位でSRPと相関させ、さらにSCHとLRU/LFU/Fixed cache hit rate、clairvoyant optimumとの関係を調べる。"}],"system_design":"system実装のcache policyを直接提案するのではなく、model routing trace→SRP/SCH→cache適性という分析層を設ける。これによりoffloading system設計前にmodel selectionやcache容量を見積もり、逆にMoE training/architecture側でoffloading-friendlyなroutingを設計するための指標として使う。"},"reservation":{"claim_id":"claim-386de3001d7d0291d3e77d66","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
