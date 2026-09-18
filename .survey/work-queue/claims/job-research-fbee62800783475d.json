@@ -1,29 +1,26 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-c0cab04c270b3f1647d6bd86",
+  "claim_id": "claim-cb5d2b02a2622c74cd9e23d6",
   "job_id": "job-research-fbee62800783475d",
-  "worker_id": "scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-discovery-specialist",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-c0cab04c270b3f1647d6bd86",
-  "request_id": "claim-20260918T055500Z-scheduled-chat-llm-survey-18",
-  "claimed_at": "2026-09-18T05:41:08+00:00",
-  "expires_at": "2026-09-18T05:41:49+00:00",
+  "attempt_id": "attempt-cb5d2b02a2622c74cd9e23d6",
+  "request_id": "claim-20260918T090800Z-scheduled-chat-discovery-specialist-14",
+  "claimed_at": "2026-09-18T09:07:22+00:00",
+  "expires_at": "2026-09-18T10:37:22+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-fbee62800783475d"
   ],
-  "previous_claim_id": "claim-f5b4bf9c2056ececfd115ca5",
-  "record_bank": "a",
-  "record_bank_root": ".survey/work-queue/records/chat-record",
+  "previous_claim_id": "claim-c0cab04c270b3f1647d6bd86",
+  "record_bank": "b",
+  "record_bank_root": ".survey/work-queue/records/chat-record-b",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record/results.json",
-    "positioning": ".survey/work-queue/records/chat-record/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-18T05:41:49+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-b/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+  }
 }

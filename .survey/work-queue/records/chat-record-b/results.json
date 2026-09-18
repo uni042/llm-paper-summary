@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4854b5c1592585d0d8ecaae7",
-  "job_id": "job-research-23f0e2222a013ba4",
-  "data": {
-    "overview": "llm.npuは競合するオンデバイス推論方式に対してプリフィルを平均22.4倍高速化し、エネルギー消費を平均30.7倍削減した。実アプリでは最大32.8倍のエンドツーエンド高速化を報告し、Qwen1.5-1.8B級の10億パラメータモデルでプリフィル1000トークン毎秒超を達成する。性能だけでなく、外れ値分離とブロック選択によってFP16基準からの平均精度低下を1%未満に抑えるため、NPUの低ビット演算を全面適用して品質を落としただけの高速化ではない。効果は計算並列性が高くNPUが得意なプリフィルに集中し、CPU/GPUはNPUが苦手な少量処理を補助する。",
-    "key_results": [
-      {
-        "metric": "プリフィル速度",
-        "value": "平均22.4倍高速",
-        "baseline": "競合オンデバイス推論方式",
-        "condition": "複数のモバイル向けLLMと端末実機",
-        "interpretation": "固定長化でNPUの高速経路を使い、主要行列演算をNPUへ移しつつCPU/GPUと並列化した効果を示す。"
-      },
-      {
-        "metric": "エネルギー効率",
-        "value": "平均30.7倍の省エネルギー",
-        "baseline": "競合オンデバイス推論方式",
-        "condition": "端末上のプリフィル処理",
-        "interpretation": "汎用CPU/GPUだけで大規模行列演算を行う時間を減らし、NPUの高い演算効率を利用することで待ち時間と消費電力を同時に削減する。"
-      },
-      {
-        "metric": "実アプリ高速化",
-        "value": "最大32.8倍",
-        "baseline": "従来オンデバイス実行",
-        "condition": "長い入力を含む実世界アプリケーション",
-        "interpretation": "マイクロベンチマークのNPU演算だけでなく、入力再構成や同期費用を含むアプリ全体でもプリフィル短縮が支配的に効く。"
-      },
-      {
-        "metric": "絶対プリフィルスループット",
-        "value": "1000 tokens/s超",
-        "baseline": "従来の10億規模モデル端末実行",
-        "condition": "Qwen1.5-1.8B級モデル",
-        "interpretation": "10億パラメータ級モデルの長文入力を端末内で実用的な時間へ近づける絶対性能を示す。"
-      },
-      {
-        "metric": "品質低下",
-        "value": "平均1%未満",
-        "baseline": "FP16モデル",
-        "condition": "LAMBADA、HellaSwag、WinoGrande、MMLU等",
-        "interpretation": "外れ値と精度敏感ブロックをCPU/GPU側へ残すことで、NPU低ビット実行による精度損失を局所化する。"
-      }
-    ],
-    "negative_results": "NPUへ全演算を単純移植する方式ではない。固定形状制約と量子化外れ値があるため、CPU/GPU側の補助経路が必要になる。精度敏感なブロックをNPUへ無理に載せると品質低下が増え、逆にCPU/GPUへ残しすぎるとNPU高速化の利点が縮む。プリフィル向けの設計であり、生成1トークンずつのデコードでは同じ高速化倍率を期待できない。",
-    "interpretation": "NPUは大きく規則的な低ビット行列演算で強いが、可変長・外れ値・ブロックごとの不均一性がその利用を妨げる。三層の再構成はこれらの不規則部分をNPU経路から切り離し、規則的な大部分だけをNPUへ集める。そのため速度とエネルギーの双方が改善する。品質感度を配置判断へ含めるため、単純な全層量子化より精度を保てる。",
-    "quality_impact": "近似計算を含む低ビットNPU実行なので数学的な無損失方式ではない。ただし外れ値分離と精度敏感ブロックの異種配置により、標準ベンチマークでFP16基準からの平均精度低下を1%未満へ抑えたと報告する。"
-  },
+  "attempt_id": "attempt-cb5d2b02a2622c74cd9e23d6",
+  "job_id": "job-research-fbee62800783475d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4854b5c1592585d0d8ecaae7",
+    "claim_id": "claim-cb5d2b02a2622c74cd9e23d6",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
