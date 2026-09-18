@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-09f66508f5726f1ca0af561e","job_id":"job-research-4fd6dcd288e7197d","data":{"overview":"offline servingではCoSineがLLaMA pairで最強baseline比17.9〜27.1%、Qwen pairで15.2〜20.5%のtoken latency削減を示す。throughputはLLaMA pairでSpecInfer比1.31〜1.62倍、PipeInfer比1.24〜1.46倍。vLLM比ではLLaMA 3.15〜4.71倍、Qwen 2.84〜3.79倍。onlineでも低・高・変動到着率でSpecInferより1.2〜1.6倍低遅延。論文要約では同等資源費用条件で最大23.2% latency削減、32.5% throughput向上を報告する。","key_results":[{"metric":"offline latency reduction","value":"17.9–27.1%","baseline":"strongest baseline (SpecInfer/PipeInfer)","condition":"LLaMA pair, batch 1–16","interpretation":"専門routing、fusion、batch schedulingの組合せでbatch規模全域の遅延を低減。"},{"metric":"offline latency reduction","value":"15.2–20.5%","baseline":"strongest baseline","condition":"Qwen pair, batch 1–16","interpretation":"モデル規模比が小さい組でも優位を維持。"},{"metric":"throughput vs PipeInfer","value":"1.24–1.46x","baseline":"PipeInfer","condition":"LLaMA pair, batch 1–16","interpretation":"draft/verificationを動的に均衡させるpipelineがidle時間を削減。"},{"metric":"throughput vs vLLM","value":"3.15–4.71x LLaMA; 2.84–3.79x Qwen","baseline":"vLLM","condition":"offline serving","interpretation":"speculationと異種資源分離を含む総合効果。"},{"metric":"online latency","value":"1.2–1.6x lower","baseline":"SpecInfer","condition":"low/high/fluctuating arrivals","interpretation":"動的負荷でも協調pipelineの優位が維持。"},{"metric":"ablation cooperative generation","value":"29–33% throughput loss when removed","baseline":"full CoSine","condition":"1–8 cooperative devices","interpretation":"専門drafter routingが主要寄与。"},{"metric":"ablation token fusion","value":"17–34% throughput loss when removed","baseline":"full CoSine","condition":"1–8 cooperative devices","interpretation":"複数drafterを増やした際の品質飽和をfusionが抑える。"}],"negative_results":"batch size 1から16への変化でCoSine自身もlatencyが23%変動し、完全な負荷不変ではない。複数専門drafterはdomain-specific fine-tuningを前提とし、routing/fusionと星形通信の追加制御を要する。論文のcost comparisonはhardware差を計算量正規化しており、実際の運用費・ネットワーク費を含む完全なTCO評価ではない。","interpretation":"投機復号ではdrafterを単に高速化するだけでなく、memory-bound draftingとcompute-bound verificationを異種資源へ分離し、drafter expertiseとverification feedbackをroutingへ戻し、両段階の処理率を同期させることでsystem throughputを押し上げられる。","quality_impact":"受理拒否機構によりtarget LLM分布への整合を維持する設計。評価は生成品質ベンチマークではなく受理・serving効率中心で、domain-specialized drafterの融合自体の最終品質改善を独立には測定していない。"},"reservation":{"claim_id":"claim-09f66508f5726f1ca0af561e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-e89e063d9080990c8ecc0d26",
+  "job_id": "job-research-4fd6dcd288e7197d",
+  "data": {
+    "overview": "offline servingではCoSineがLLaMA pairで最強baseline比17.9〜27.1%、Qwen pairで15.2〜20.5%のtoken latency削減を示す。throughputはLLaMA pairでSpecInfer比1.31〜1.62倍、PipeInfer比1.24〜1.46倍。vLLM比ではLLaMA 3.15〜4.71倍、Qwen 2.84〜3.79倍。onlineでも低・高・変動到着率でSpecInferより1.2〜1.6倍低遅延。論文要約では同等資源費用条件で最大23.2% latency削減、32.5% throughput向上を報告する。",
+    "key_results": [
+      {
+        "metric": "offline latency reduction",
+        "value": "17.9–27.1%",
+        "baseline": "strongest baseline (SpecInfer/PipeInfer)",
+        "condition": "LLaMA pair, batch 1–16",
+        "interpretation": "専門routing、fusion、batch schedulingの組合せでbatch規模全域の遅延を低減。"
+      },
+      {
+        "metric": "offline latency reduction",
+        "value": "15.2–20.5%",
+        "baseline": "strongest baseline",
+        "condition": "Qwen pair, batch 1–16",
+        "interpretation": "モデル規模比が小さい組でも優位を維持。"
+      },
+      {
+        "metric": "throughput vs PipeInfer",
+        "value": "1.24–1.46x",
+        "baseline": "PipeInfer",
+        "condition": "LLaMA pair, batch 1–16",
+        "interpretation": "draft/verificationを動的に均衡させるpipelineがidle時間を削減。"
+      },
+      {
+        "metric": "throughput vs vLLM",
+        "value": "3.15–4.71x LLaMA; 2.84–3.79x Qwen",
+        "baseline": "vLLM",
+        "condition": "offline serving",
+        "interpretation": "speculationと異種資源分離を含む総合効果。"
+      },
+      {
+        "metric": "online latency",
+        "value": "1.2–1.6x lower",
+        "baseline": "SpecInfer",
+        "condition": "low/high/fluctuating arrivals",
+        "interpretation": "動的負荷でも協調pipelineの優位が維持。"
+      },
+      {
+        "metric": "ablation cooperative generation",
+        "value": "29–33% throughput loss when removed",
+        "baseline": "full CoSine",
+        "condition": "1–8 cooperative devices",
+        "interpretation": "専門drafter routingが主要寄与。"
+      },
+      {
+        "metric": "ablation token fusion",
+        "value": "17–34% throughput loss when removed",
+        "baseline": "full CoSine",
+        "condition": "1–8 cooperative devices",
+        "interpretation": "複数drafterを増やした際の品質飽和をfusionが抑える。"
+      }
+    ],
+    "negative_results": "batch size 1から16への変化でCoSine自身もlatencyが23%変動し、完全な負荷不変ではない。複数専門drafterはdomain-specific fine-tuningを前提とし、routing/fusionと星形通信の追加制御を要する。論文のcost comparisonはhardware差を計算量正規化しており、実際の運用費・ネットワーク費を含む完全なTCO評価ではない。",
+    "interpretation": "投機復号ではdrafterを単に高速化するだけでなく、memory-bound draftingとcompute-bound verificationを異種資源へ分離し、drafter expertiseとverification feedbackをroutingへ戻し、両段階の処理率を同期させることでsystem throughputを押し上げられる。",
+    "quality_impact": "受理拒否機構によりtarget LLM分布への整合を維持する設計。評価は生成品質ベンチマークではなく受理・serving効率中心で、domain-specialized drafterの融合自体の最終品質改善を独立には測定していない。"
+  },
+  "reservation": {
+    "claim_id": "claim-e89e063d9080990c8ecc0d26",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

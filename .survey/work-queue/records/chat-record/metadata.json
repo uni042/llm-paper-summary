@@ -1,1 +1,63 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-09f66508f5726f1ca0af561e","job_id":"job-research-4fd6dcd288e7197d","data":{"canonical_id":"arXiv:2503.10325","arxiv_id":"2503.10325","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG"]},"title":"Collaborative Speculative Inference for Efficient LLM Inference Serving","summary":"CoSineは投機復号の逐次ドラフト生成と並列検証を異種ノードへ分離し、専門化した複数ドラフタの適応的ルーティング、信頼度に基づくトークン融合、バッチ割当と適応投機制御を組み合わせる。4×A100検証サーバと2080Ti/3090計16台の投機クラスタで評価し、同等資源費用条件で既存投機方式に対し最大23.2%の遅延削減、32.5%のスループット向上を報告する。","list_summary":"異種GPUへドラフト生成と検証を分離し、専門ドラフタ協調と動的パイプライン制御で投機推論の資源利用と受理率を改善する。","authors":["Luyao Gao","Jianchun Liu","Hongli Xu","Xichong Zhang","Yunming Liao","Liusheng Huang"],"authors_affiliations":"University of Science and Technology of China, Hefei, China","published":"2025-03-13","publication":"arXiv preprint","publication_type":"プレプリント","publication_status":"arXiv v2 (2025-05-15)","lineage":"speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling","topics":["投機推論","LLMサービング","異種GPU","複数ドラフタ","パイプラインスケジューリング"],"importance":"単一GPU内でドラフトと検証を交互実行する設計から、メモリ帯域指向のドラフトと計算指向の検証を物理的に分離し、複数専門ドラフタを動的協調させるシステム設計へ拡張した点が重要。","implementation":"Python 4.2k LoC、PyTorch 2.1、DeepSpeed 0.12。Docker化した専門ドラフタ群とA100検証サーバ、信頼度融合、動的パイプラインを実装。","hardware_evaluation":"AMAX workstationの4×NVIDIA A100 80GB NVLinkと、8×RTX 2080Ti + 8×RTX 3090の16ノード投機クラスタ。投機クラスタ内部100Mbps Ethernet、両側は10Gbps Ethernet・sub-1ms。","quality_effect":"標準の受理拒否検証を維持しつつ、ドラフト候補生成と融合を改善する。生成品質の独立ベンチマークより受理率・遅延・スループット・費用効率を主評価。","source":"https://arxiv.org/abs/2503.10325","sources":["https://arxiv.org/abs/2503.10325","https://arxiv.org/html/2503.10325v2"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv v2 HTML全文・参考文献節を確認","references_total":34},"reservation":{"claim_id":"claim-09f66508f5726f1ca0af561e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-e89e063d9080990c8ecc0d26",
+  "job_id": "job-research-4fd6dcd288e7197d",
+  "data": {
+    "canonical_id": "arXiv:2503.10325",
+    "arxiv_id": "2503.10325",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+    "summary": "CoSineは投機復号の逐次ドラフト生成と並列検証を異種ノードへ分離し、専門化した複数ドラフタの適応的ルーティング、信頼度に基づくトークン融合、バッチ割当と適応投機制御を組み合わせる。4×A100検証サーバと2080Ti/3090計16台の投機クラスタで評価し、同等資源費用条件で既存投機方式に対し最大23.2%の遅延削減、32.5%のスループット向上を報告する。",
+    "list_summary": "異種GPUへドラフト生成と検証を分離し、専門ドラフタ協調と動的パイプライン制御で投機推論の資源利用と受理率を改善する。",
+    "authors": [
+      "Luyao Gao",
+      "Jianchun Liu",
+      "Hongli Xu",
+      "Xichong Zhang",
+      "Yunming Liao",
+      "Liusheng Huang"
+    ],
+    "authors_affiliations": "University of Science and Technology of China, Hefei, China",
+    "published": "2025-03-13",
+    "publication": "arXiv preprint",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v2 (2025-05-15)",
+    "lineage": "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling",
+    "topics": [
+      "投機推論",
+      "LLMサービング",
+      "異種GPU",
+      "複数ドラフタ",
+      "パイプラインスケジューリング"
+    ],
+    "importance": "単一GPU内でドラフトと検証を交互実行する設計から、メモリ帯域指向のドラフトと計算指向の検証を物理的に分離し、複数専門ドラフタを動的協調させるシステム設計へ拡張した点が重要。",
+    "implementation": "Python 4.2k LoC、PyTorch 2.1、DeepSpeed 0.12。Docker化した専門ドラフタ群とA100検証サーバ、信頼度融合、動的パイプラインを実装。",
+    "hardware_evaluation": "AMAX workstationの4×NVIDIA A100 80GB NVLinkと、8×RTX 2080Ti + 8×RTX 3090の16ノード投機クラスタ。投機クラスタ内部100Mbps Ethernet、両側は10Gbps Ethernet・sub-1ms。",
+    "quality_effect": "標準の受理拒否検証を維持しつつ、ドラフト候補生成と融合を改善する。生成品質の独立ベンチマークより受理率・遅延・スループット・費用効率を主評価。",
+    "source": "https://arxiv.org/abs/2503.10325",
+    "sources": [
+      "https://arxiv.org/abs/2503.10325",
+      "https://arxiv.org/html/2503.10325v2"
+    ],
+    "code": null,
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "arXiv v2 HTML全文・参考文献節を確認",
+    "references_total": 34
+  },
+  "reservation": {
+    "claim_id": "claim-e89e063d9080990c8ecc0d26",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
