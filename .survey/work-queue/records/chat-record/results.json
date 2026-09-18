@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-109930730e8c121fc0ac5c18",
-  "job_id": "job-research-455581782889dbd1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-109930730e8c121fc0ac5c18",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-109930730e8c121fc0ac5c18","job_id":"job-research-455581782889dbd1","data":{"overview":"共有構造があるW1〜W3でPEEKはSGLang/vLLMの標準基準に対し、最大cache hit 3.0倍/2.6倍、TTFT 7.9倍/7.1倍、E2E 6.7倍/5.5倍、throughput 3.6倍/4.5倍を達成する。共有が少ないW4/W5ではE2E・throughputを概ね±2%内に保ち、has_sharingと公平レーンが低headroom負荷の回帰を抑える。","key_results":[{"metric":"最大cache-hit向上","value":"3.0x SGLang / 2.6x vLLM","baseline":"strongest stock baseline","condition":"shared-prefix workloads, KV pressure up to 16x","interpretation":"待機群を連続admitして共有prefixが追い出される前に兄弟が再利用する。"},{"metric":"最大TTFT高速化","value":"7.9x / 7.1x","baseline":"SGLang / vLLM stock","condition":"W1-W3 prefix-rich workloads","interpretation":"高圧時の再prefillとqueue thrashing削減が初回トークン待ちを大幅短縮する。"},{"metric":"最大E2E高速化","value":"6.7x / 5.5x","baseline":"SGLang / vLLM stock","condition":"W1-W3","interpretation":"TTFT削減がdecode側の小さなTPOT増加を上回る。"},{"metric":"最大throughput向上","value":"3.6x / 4.5x","baseline":"SGLang / vLLM stock","condition":"W1-W3","interpretation":"共有prefill再利用により同じGPU時間で処理できる要求数が増える。"},{"metric":"W1 heavy cache hit","value":"+28–61 pp SGLang / +20–49 pp vLLM","baseline":"stock","condition":"KV oversubscription 2x–16x","interpretation":"KV圧迫が強いほど既存政策のthrashing差が拡大する。"},{"metric":"cLPM contribution","value":"full stack within 3 pp cache hit","baseline":"full PEEK","condition":"W1 ablation","interpretation":"共有群認識admissionが主効果で、evictionとfairnessは補助的。"}],"negative_results":"W1ではPEEKのTPOTが基準より8〜26%高く、群形成・順序変更の効果は主にprefill/TTFT側から来る。group-major単独はsingletonを遅らせ、TTFT/E2Eを最大10〜29%悪化させ得るためdynamic fairness laneが必要。vLLMではqueue-aware eviction追加効果がほぼ平坦で、schedulerが時間局所性を作らなければevictionだけでは改善しない。","interpretation":"待機列は未観測の未来ではなく、数周期以内に確実に実行する要求集合なので、一般LRUより強いKV需要予測信号になる。PEEKはこの信号をadmissionとevictionの双方へ共有し、prefixを作る要求とそれを使う要求を時間的に近づけ、同じprefixを必要とする間はKVを保護する。","quality_impact":"モデル演算・attention・KV値を変更しないため生成品質を近似しない。変わるのは要求の実行順序と待ち時間であり、品質上の主なリスクではなく公平性/SLOが問題になるためdynamic laneで制御する。"},"reservation":{"claim_id":"claim-109930730e8c121fc0ac5c18","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
