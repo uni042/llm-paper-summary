@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2502.05202",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md",
   "selection_reason": "Removes the shared-vocabulary restriction between draft and target models while preserving the target distribution, broadening practical drafter selection without retraining.",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -28,11 +28,6 @@
   ],
   "last_blocked_at": "2026-09-18T10:08:05+00:00",
   "retry_queued_at": "2026-09-18T13:03:31+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | results.overview must explain the main result and its practical meaning",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "results.overview must explain the main result and its practical meaning"
-  ],
-  "last_validation_failed_at": "2026-09-18T16:19:23+00:00"
+  "completed_at": "2026-09-18T16:21:10+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-384f6c5d18e06374b6aa837f.json"
 }
