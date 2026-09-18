@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 04:34:24 JST**
+> 自動生成: **2026-09-19 04:34:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **62** |
 | 未claim Research job | **61** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 03:46:31 JST（47分前）** |
+| 最終検証済みResearch収録 | **09-19 03:46:31 JST（48分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **14** | **4** | **3** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **24** | **4** | **3** | **1** | **1** | **0** | **15** |
+| 合計 | **24** | **7** | **6** | **1** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,13 +150,28 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 04:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-f10a68668c560da436b6998f.json` (job `job-research-740437feef88b672`)
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **4件** / 検証済み成功: **3件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-86c6a56d718fe98a07ff5740.json` (job `job-research-f7dcdf40e7d3538f`)
+- **成功** `arXiv:2602.07223` — SpecAttn: Co-Designing Sparse Attention with Self-Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-469eef375f5f828e.json`
+  - result: `.survey/work-queue/results/research/attempt-a9d8c2cf570fd3b13fb6b628.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a9d8c2cf570fd3b13fb6b628.json`
+  - paper: `papers/inference/08-speculative-decoding/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md`
+- **成功** `arXiv:2503.10325` — Collaborative Speculative Inference for Efficient LLM Inference Serving
+  - job: `.survey/work-queue/jobs/job-research-4fd6dcd288e7197d.json`
+  - result: `.survey/work-queue/results/research/attempt-acffb77470592a9e8f9dbd06.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-acffb77470592a9e8f9dbd06.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md`
+- **成功** `arXiv:2602.23036` — LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure
+  - job: `.survey/work-queue/jobs/job-research-ebde0cc040167968.json`
+  - result: `.survey/work-queue/results/research/attempt-b9d676ed397522f747b185c2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b9d676ed397522f747b185c2.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 04:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 03:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -184,7 +199,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3695053.3731073` — AiF: Accelerating On-Device LLM Inference Using In-Flash Processing / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 04:30:57 JST** / heartbeat: **—** / lease expiry: **09-19 06:00:57 JST**
+  - claim: **09-19 04:34:26 JST** / heartbeat: **—** / lease expiry: **09-19 06:04:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-740437feef88b672.json`
 
 #### Audit
