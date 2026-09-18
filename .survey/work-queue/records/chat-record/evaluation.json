@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b581730c00b4de922bbbc7da",
-  "job_id": "job-research-2829f7afbf13ae9b",
+  "attempt_id": "attempt-ca7ce8f5ef0840d351aa01d2",
+  "job_id": "job-research-b4ff298d10321769",
   "data": {
-    "hardware": "NVIDIA 4090 48GB GPU。",
-    "software": "LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B-Base、Dream-v0-7B-Instructのnative dLLM codebase。OpenCompassでbenchmark。比較はvanilla、dLLM-Cache、dKV-Cache、Fast-dLLM。",
-    "methodology": "default block length 32、seed 2025、retention ratio r=0.5、max-pooling kernel s=3。MMLU 5-shot、ARC-c 0-shot、PIQA 0-shot、GPQA 5-shot、GSM8K 4-shot、Math 4-shot、HumanEval 0-shotを評価し、accuracy、TPS、peak memoryを測る。性能scoreは3 independent trials平均、efficiencyは共通のrandom 10 instances平均。LongBenchとcontext length sweepも実施。delay step 0〜5、prefix-only対bidirectional、retention ratio/kernel sizeをablation。",
-    "scope": "4つの約7〜8B級dLLMと単一4090中心。native implementationのためvLLM等production serving stackでのend-to-end評価、batching/並行要求、多GPU、より大規模モデルへの一般化は未検証。"
+    "hardware": "GPU kernel benchmarkではなく、CPU上で再現可能な組合せ最適化・retrieval trace解析が中心。exact DPはm=16を2秒未満で解けると報告。",
+    "software": "著者公式repositoryのPython code/phase2.py等、BEIR corpora、BM25 retrieval、cl100k_base tokenizerによる実token count。exact O(3^m) solver、verification scripts、agglomerative heuristicを公開。",
+    "methodology": "理論評価では2-chunk request、4-chunk complete 3-uniform hypergraph、leave-one-out familyを解析し、global orderとfree hierarchyのcost差、近似保証を証明する。実証評価ではBEIRのNFCorpus、SciFact、FiQAにBM25 retrievalを適用し、queryごとのretrieved passage集合をrequest、passage token数をchunk weightとしてproduction RAG orderingとhierarchy layoutのprefill token costを比較する。retrieval depthを変えて重複度とgainの関係を測り、quality-preserving constraintも評価する。さらにpopular passageを共有する最大13 requestのgroupを抽出し、O(3^m) exact optimumとagglomerative heuristicを比較する。",
+    "scope": "対象はpromptが意味的に順序交換可能な再利用chunk集合として扱えるtraffic。exact-prefix KV reuseのprefill計算量を主metricとし、model forward latencyやGPU kernel時間そのものは測定しない。順序が意味・品質へ影響するケースはquality-preserving constraintで別評価する。"
   },
   "reservation": {
-    "claim_id": "claim-b581730c00b4de922bbbc7da",
+    "claim_id": "claim-ca7ce8f5ef0840d351aa01d2",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

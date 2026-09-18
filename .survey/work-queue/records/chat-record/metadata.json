@@ -1,1 +1,59 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b581730c00b4de922bbbc7da","job_id":"job-research-2829f7afbf13ae9b","data":{"canonical_id":"arXiv:2508.02558","arxiv_id":"2508.02558","doi":"10.1609/aaai.v40i39.40586","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction","summary":"Sparse-dLLMは拡散型大規模言語モデルの反復復号で観測されるトークン重要度の時間的安定性を利用し、現在ブロック外の前方・後方の鍵値を注意得点で選別して動的に破棄する訓練不要の推論高速化法である。一段階遅延した双方向疎キャッシュにより、不安定な初期鍵値を避けつつ重要トークンだけを再利用する。LLaDAとDream系列で通常の拡散復号比最大10倍の処理量を報告し、ピークメモリをほぼ維持する。","list_summary":"拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。","authors":["Yuerong Song","Xiaoran Liu","Ruixiao Li","Zhigeng Liu","Zengfeng Huang","Qipeng Guo","Ziwei He","Xipeng Qiu"],"authors_affiliations":"Fudan University; Shanghai Innovation Institute; Shanghai AI Lab","published":"2026-03-14","publication":"AAAI Conference on Artificial Intelligence 40(39), 33038-33046","publication_type":"国際会議論文","publication_status":"AAAI-26 published; arXiv 2508.02558","lineage":"拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄","topics":["拡散型LLM","鍵値キャッシュ","疎注意","長文脈推論","推論高速化"],"importance":"自己回帰型LLM向けの鍵値削減を双方向拡散復号へ拡張し、キャッシュ再利用と疎注意を同一の動的破棄機構へ統合した。","implementation":"LLaDA/Dreamの公式実装系を基盤にした訓練不要方式で、OpenCompass評価コードを含む公式GitHubを公開。","hardware_evaluation":"NVIDIA 4090 48GB GPU。LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B Base/Instructを評価。","quality_effect":"多くの一般・推論課題で通常復号と同等だが、DreamのHumanEvalでは構文上重要なトークンの破棄により低下を確認。","source":"https://arxiv.org/abs/2508.02558","sources":["https://ojs.aaai.org/index.php/AAAI/article/view/40586/44547","https://arxiv.org/abs/2508.02558"],"code":"https://github.com/OpenMOSS/Sparse-dLLM","project":"https://github.com/OpenMOSS/Sparse-dLLM","last_checked":"2026-09-18","references":[],"references_checked_at":"2026-09-18","references_source":"AAAI-26 primary manuscript","references_total":0},"reservation":{"claim_id":"claim-b581730c00b4de922bbbc7da","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ca7ce8f5ef0840d351aa01d2",
+  "job_id": "job-research-b4ff298d10321769",
+  "data": {
+    "canonical_id": "arXiv:2609.13692",
+    "arxiv_id": "2609.13692",
+    "doi": "10.48550/arXiv.2609.13692",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DS",
+      "cross_list": [
+        "cs.CL"
+      ]
+    },
+    "title": "Prefix Sharing Is a Sorting Problem",
+    "summary": "再利用可能なRAG文書・ツール定義・few-shot例を含む要求では、同じ集合でも並べ方により完全一致prefixで共有できるKV計算量が変わる。本研究は自由な要求別順序の最小prefix trie問題を、要求上の二分階層を選ぶ問題へ等価変換する構造定理を示す。O(3^m)厳密法、共通部分による凝集クラスタリングのtightな1/2近似、DFS要求順による有限cache最適化を導き、BEIRのBM25実traceでproduction RAG順序よりprefillを17〜36%削減する。",
+    "list_summary": "prefix共有の順序設計を要求階層の最適化へ変換し、BEIR実traceでprefillを17〜36%削減する。",
+    "authors": [
+      "Rong He"
+    ],
+    "authors_affiliations": "論文本文・公式repositoryで所属表記を確認できず",
+    "published": "2026-09-12",
+    "publication": "arXiv preprint",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1、15 pages",
+    "lineage": "prefix cache・RAG serving・KV reuse・request scheduling・combinatorial optimization",
+    "topics": [
+      "prefix sharing",
+      "KV cache",
+      "RAG serving",
+      "request clustering",
+      "scheduling"
+    ],
+    "importance": "prefix cacheを単なるcache evictionではなく、prompt部品の順序と要求処理順を共同最適化する組合せ最適化問題として定式化し、global orderの限界を理論・実traceの両方で示す。",
+    "implementation": "著者公式GitHub repositoryにpaper.md/paper.tex、O(3^m) solver、verification、BEIR評価script、data pipelineを公開。",
+    "hardware_evaluation": "GPU kernel実測ではなく、BEIR retrieval traceと実token countに基づくprefill cost評価。",
+    "quality_effect": "prompt内の再利用可能chunkの順序変更が意味内容を保つ前提で評価し、quality-preserving constraint下でも13〜23%のprefill削減が残る。",
+    "source": "https://arxiv.org/abs/2609.13692",
+    "sources": [
+      "https://arxiv.org/abs/2609.13692",
+      "https://github.com/Darrenus/prefix-sharing-is-sorting/blob/master/paper.md"
+    ],
+    "code": "https://github.com/Darrenus/prefix-sharing-is-sorting",
+    "project": "https://github.com/Darrenus/prefix-sharing-is-sorting",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "著者公式paper.md全文を確認。個別参考文献は構造化配列へ転記していない。",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-ca7ce8f5ef0840d351aa01d2",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}

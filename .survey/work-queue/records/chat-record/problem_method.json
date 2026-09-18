@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-b581730c00b4de922bbbc7da","job_id":"job-research-2829f7afbf13ae9b","data":{"problem":"拡散型大規模言語モデルは、複数のマスク位置を反復的に復元する各段階で、入力文・生成済みトークン・未確定トークンを含む長い系列全体に対して注意計算を繰り返す。このため系列長が伸びるほど鍵値の読出しと注意行列計算が急増し、自己回帰型復号より長文脈で計算量が重い。既存の拡散型LLM向けキャッシュ法は隣接する復号段階で似た鍵値を再利用して再計算を減らすが、全層・全系列の鍵値を保持する方式では長文脈時のメモリ負荷が大きく、不要なトークンまで注意対象として残る。Sparse-dLLMは、この再利用対象そのものを重要度に応じて疎化し、計算量とキャッシュ量を同時に削減することを狙う。","novelty":"拡散型LLMの注意には層を跨いだ疎性と復号段階間で安定した重要トークンがあるという観測に基づき、現在ブロックの前後両側を対象とする動的な双方向キャッシュ破棄を導入する。さらにブロック開始直後は鍵値変化が大きいことからキャッシュ構築を一段階遅らせ、安定後の注意重要度で選択する。モデル再学習を必要とせず、疎注意とキャッシュ削減を同じ選択機構で実現する点が特徴である。","method_overview":"復号はブロック単位で進み、現在処理中のブロック外にある前方・後方の鍵値を候補集合として扱う。まずブロック開始時は全注意を実行して不安定な初期状態をそのままキャッシュしない。次の復号段階で現在ブロックの問い合わせと候補鍵値から注意得点を計算し、局所的に重要な位置を落としにくくする最大値プーリングを適用する。その得点に基づき保持率で定まる上位トークンだけを選び、選択済み鍵値を疎キャッシュとして後続段階で再利用する。現在ブロックより前だけでなく後ろ側の未確定領域も候補に含めるため、拡散復号の双方向依存を保ったまま注意対象を削減できる。ブロックが切り替わると古い疎キャッシュを破棄して全注意から再構築し、重要位置の変化へ追随する。標準設定ではブロック長32、保持率0.5、プーリング幅3を用いる。","components":[{"name":"注意重要度の時間安定性解析","description":"拡散復号の注意図を層・復号段階ごとに観察し、対角近傍の局所注意に加えて、少数の重要な鍵位置へ縦方向に集中するパターンが繰り返し現れることを利用する。重要位置が隣接段階で大きく変わらないなら、全トークンの鍵値を毎回保持・参照する必要はない。この経験的性質をキャッシュ削減の根拠とし、重要度が安定した段階だけを再利用対象にする。"},{"name":"双方向の動的キャッシュ破棄","description":"現在ブロックより前の確定済み領域だけでなく、後ろ側の未確定領域も候補に含め、現在ブロックの問い合わせから得た注意得点で重要な鍵値だけを上位選択する。自己回帰型モデル向けの過去方向だけの削減と異なり、拡散型モデルが持つ双方向依存を前提に前後双方を同時に疎化する。保持率を調整することで計算削減と精度維持の交換関係を制御できる。"},{"name":"最大値プーリングによる局所保護","description":"単一点の注意得点だけで上位選択すると、近傍に分散した重要情報や局所的な依存を誤って落とす可能性がある。そこで注意得点へ最大値プーリングを適用し、強い注意を受けた位置の近傍も高い重要度を持つようにしてから上位選択する。これにより疎化しながら局所情報を保持しやすくし、単純なトークン単位破棄より品質低下を抑える。"},{"name":"一段階遅延したキャッシュ更新","description":"各ブロックの最初の復号段階では鍵値表現が後続段階より大きく変化するため、そこで作った疎キャッシュを長く再利用すると誤った重要度判断を固定化しやすい。Sparse-dLLMは最初の段階では全注意を実行し、次の段階で安定した注意分布を観測してから疎キャッシュを構築する。ブロック移行時には再び全注意へ戻して更新することで、古い重要度が次ブロックへ持ち越されることを防ぐ。"}],"system_design":"既存の拡散型LLMのブロック復号へキャッシュ方策として挿入し、モデル重みや学習手順は変更しない。各ブロックで全注意による初期化、遅延した重要度推定、双方向鍵値の上位選択、疎キャッシュ再利用を繰り返し、注意対象トークン数と保持鍵値数を同時に減らす。"},"reservation":{"claim_id":"claim-b581730c00b4de922bbbc7da","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-ca7ce8f5ef0840d351aa01d2",
+  "job_id": "job-research-b4ff298d10321769",
+  "data": {
+    "problem": "LLM servingのprefix cacheは完全一致prefixだけを再利用する。RAG passage、tool definition、few-shot exemplarなどpromptが再利用可能chunkの集合から組み立てられる場合、集合が同じでもchunk順序によりprefix trieの形とprefill/KV再利用量が変わる。既存deploymentはretrieval rankやdocument IDなど単一global orderを全requestへ適用するが、それが要求ごとに順序を変えられる自由配置に対してどこまで最適かは未解明だった。",
+    "novelty": "Minimum Prefix Trie with Free Permutationsを定式化し、各requestの順列を直接探索する代わりにrequest集合上のbinary hierarchy Hを選べばよいという構造定理を証明する。chunk xを必要とするrequest集合S_xのcanonical decomposition size t_x(H)を使い、OPT_free=min_H sum_x w(x)t_x(H)と表す。この同値性からexact subset DP、global orderが最適な境界、unbounded separation、1/2-approximation、finite-cache schedulingまで一つの理論枠組みで導く。",
+    "method_overview": "入力はtoken weight w(x)を持つchunk集合Uとrequest集合R_iで、目的は各R_i内のchunk順序を選びprefix trie全nodeのchunk weight和を最小化すること。構造定理では任意layoutのtrie nodeを通過request集合へ写像してlaminar familyを作りbinary hierarchyへ拡張し、chunk xの出現node数がS_xのcanonical decomposition以上になることを示す。逆に任意hierarchyから各clusterの共通intersection差分をtop-downにemitすることで同じcostのlayoutを構成する。これによりsubset Bの共通chunk weightを使うO(3^m) DPでexact optimumを計算できる。実用heuristicはcluster間の共通intersection weightが大きいpairを凝集的にmergeし、得られたhierarchyからrequest別chunk orderを生成する。さらにrequestをhierarchyのDFS leaf orderでserveすると、一request分だけ保持できるcacheでもunbounded-cache optimumと同じprefix reuseを達成する。",
+    "components": [
+      {
+        "name": "要求階層への構造変換",
+        "description": "各chunk xについて、それを必要とするrequest集合S_xがbinary hierarchy H内で何個の最大clusterに分解されるかt_x(H)を数える。自由なchunk permutationの最小prefix-trie costがsum_x w(x)t_x(H)の最小値と一致するため、膨大なrequest別順列探索を一つのrequest hierarchy設計へ置き換える。証明はtrieからlaminar request集合を抽出する下界と、hierarchyの親子intersection差分をemitしてlayoutを構成する上界の双方を与える。"
+      },
+      {
+        "name": "厳密subset DPとglobal-order境界",
+        "description": "cluster Bの共通chunk集合I(B)のweightを利益として、Bを二分する全partitionを再帰的に評価するsubset DPによりO(3^m)でexact optimumを求める。この枠組みからrequestが高々2 chunkならglobal orderとfree orderが一致し、2-chunk caseはminimum vertex coverになる一方、4 chunkの全3-subsetからなる最小例でfree cost 8、global cost 9となることを示す。leave-one-out familyではglobalがTheta(n^2)、freeがTheta(n log n)となり差が非有界に拡大する。"
+      },
+      {
+        "name": "共通部分による凝集クラスタリング",
+        "description": "実規模requestへ適用するため、共通chunk intersectionによるsavingが大きいcluster pairを順次mergeしてbinary hierarchyを構築する。著者はこのagglomerative ruleがachievable savingに対するtightな1/2-approximationであることを示し、level-wise greedy hitting setがleave-one-out familyでTheta(n^2)へ退化するのと対比する。BEIRから抽出した小さなoverlap groupをO(3^m) exact solverと比較すると平均gapはNFCorpus 0.05%、SciFact 0.00%で、実traceではほぼexactだった。"
+      },
+      {
+        "name": "DFS request schedulingによる有限cache対応",
+        "description": "最適または近似hierarchyはchunk layoutだけでなくrequest処理順も与える。hierarchyのleafをDFS順にserveすると、直前requestのcontext一つ分しか保持できないcacheでも、共通cluster内のrequestが連続するため必要なprefix reuseを失わず、unbounded-cacheで得られるhierarchy costを正確に達成できる。したがってcache capacityとrequest reorder windowを交換可能な資源として扱え、layout最適化とschedulerを同じtreeで連携できる。"
+      }
+    ],
+    "system_design": "offlineまたはwindow内のrequest集合からchunk incidenceとtoken weightを作り、exact DPまたはagglomerative clusteringでrequest hierarchyを構成する。hierarchyから各requestのchunk順序を生成し、可能ならDFS leaf順にrequestをdispatchする。既存prefix cacheのexact-match機構自体は変更せず、cacheへ入るprompt layoutとrequest順序を上流で最適化する設計である。"
+  },
+  "reservation": {
+    "claim_id": "claim-ca7ce8f5ef0840d351aa01d2",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}
