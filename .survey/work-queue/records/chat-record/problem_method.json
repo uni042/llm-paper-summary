@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-32601b58ea85c529e281cb7c","job_id":"job-research-78d3e9d2047890ea","data":{"problem":"百万トークン級の長文脈を複数セッションで保持すると鍵値キャッシュと疎注意用索引をGPU高帯域メモリに置けず、ホストメモリ等へ退避する。top-k疎注意は勝者の鍵値行だけを取得して密注意より読出しを減らすが、勝者を知る前に全n鍵の軽量表現を走査して順位付けする必要があり、この走査量は文脈長に比例する。Qwen3-8Bでは32k時点で136ビット索引走査がstep当たり約160MB、100万トークンでは5.1GBへ増える一方、勝者行取得は約200MB付近に留まる。Loki、Double Sparsity、SparQ、2-bit thumbnailなど既存per-token索引は選んだチャネルの読取深度を設計時に固定するため、問い合わせごとに重要度が偏るチャネルへ必要以上のビットを転送し、ホスト退避時のPCIe帯域を浪費する。","novelty":"Fathomは4ビット鍵キャッシュをチャネル主順のビットプレーンとして配置し、上位tプレーンだけを読むと同じblock scaleを使う厳密なtビット中点量子化になる性質を利用して、一つの4ビット保存形式を可変精度索引として使う。各問い合わせについて共有KV head内のquery head群と鍵チャネル分散からscore variance寄与g_jを計算し、量子化誤差が追加1ビットごとに4分の1になるモデルに対する逆水充填で各チャネル深度t_jを0〜4へ配分する。固定個数チャネルを全深度読む方式と異なり、重要チャネルへ深く、弱いチャネルへ浅くまたは0ビットを割り当て、同じ誤差で索引転送量を減らす。","method_overview":"各層・KV headの鍵を64-token block単位でchannel-wise symmetric 4-bit codeへ量子化し、各チャネルの4ビットをMSBから4枚のbit planeとしてchannel-majorに格納する。復号時は同じKV headを共有するquery head群から各チャネルの重要度g_j=sum_h q_hj^2 Var(k_j)を求め、総bit budget Bを満たすwater line thetaをlog空間30回の二分探索で決定し、t_j=clip(round(log4(g_j/theta)),0,4)を得る。t_j=0のチャネルを飛ばし、残るチャネルについてhost memory上で先頭t_j planeを長い連続runとしてstaging bufferへPCIe転送する。GPU上でその可変深度表現から全tokenの近似attention scoreを計算し、query headごとにsink 4、local 32と残りtop-kを選ぶ。選択されたquery head群のwinner row unionだけbf16 K/Vからhost→GPUへ取得し、最後はその集合上でexact attentionを実行する。QK-normを持つQwen3はraw channelを使い、持たないLlama-3.1/Qwen2.5はcalibration KLT basisへ回転してvarianceを集中させる。layer別budgetは任意のcalibration最適化で、既定はcontext長依存がないflat budgetである。","components":[{"name":"チャネル主順ビットプレーン鍵ストア","description":"鍵をチャネルごと・64-token blockごとの対称4ビット整数へ一度量子化し、各bit位置を64-bit wordのplaneへpackingしてMSBから順に配置する。先頭t planeは別の低精度コピーを作らず厳密なt-bit uniform quantizerとして復元できるため、同じ4-bit K copyを1〜4ビットの多解像度索引として読める。channel-major配置により、長いsequenceでも選択チャネルの先頭plane群が連続runとなり、細粒度random PCIe readを避けてlink rateに近い転送を可能にする。"},{"name":"問い合わせ別逆水充填ビット配分","description":"共有KV head内のquery head群についてqの二乗とcalibration key varianceを掛けたg_jをscore varianceへのチャネル寄与として用いる。tビット量子化誤差がg_j*4^{-t_j}に比例する近似から、総budget Bの下で誤差和を最小化する逆水充填を解き、重要チャネルには複数plane、弱いチャネルには1 planeまたは0を割り当てる。30回のlog-theta二分探索で整数深度を決め、同一KV headのquery群で一つのread planを共有するため、query headごとに同じK bytesを重複取得しない。"},{"name":"モデル依存basis選択","description":"water-fillingはscore varianceが少数座標へ偏るほど有効なので、QK-normalizationを持つQwen3ではraw channelを保持する。QK-normのないLlama-3.1-8BとQwen2.5系ではcalibration keysのKarhunen–Loève transformを用い、固有値順ではなくscore varianceに沿うbasisで鍵とqueryを回転してから同じbit-depth配分を適用する。全D座標を保存してqueryが深度を選ぶためLokiの低rank切断とは異なり、basis選択はモデルごとに一度calibrationして固定する。"},{"name":"ホスト常駐索引の連続run gather","description":"host memory上のplaneをGPU kernelからword単位で直接読むと小さなscatter transactionでPCIe効率が落ちるため、active channelごとにt_j*n/8 bytesの連続runを固定長run listで記述し、scaleとともにstaging bufferへgatherする。inactive slotは長さ0としてhost synchronizationを不要にし、scan自体はHBM上で実行する。実測では4KB〜512KB runで約25.1〜26.2GB/sを達成し、可変チャネル・可変深度という不規則な論理選択を物理的には大きな連続転送へ変換する。"}],"system_design":"長文脈servingで4-bit K representationまたは別indexをhost memoryへ置き、各decode stepでquery-derived bit planを生成して必要planeだけPCIeでGPU stagingへ転送する。近似scan→per-query-head top-k→winner unionのK/V row取得→exact attentionという疎注意pipelineに挿入され、model weightや学習は変更しない。効果はindex transferが律速する構成に限定され、indexがHBM常駐ならbit extractionの算術負荷が勝つ。"},"reservation":{"claim_id":"claim-32601b58ea85c529e281cb7c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-63cfbded74c721cbf2f18246",
+  "job_id": "job-research-78d3e9d2047890ea",
+  "data": {
+    "problem": "百万トークン級の長文脈を複数セッションで保持すると鍵値キャッシュと疎注意用索引をGPU高帯域メモリに置けず、ホストメモリ等へ退避する。top-k疎注意は勝者の鍵値行だけを取得して密注意より読出しを減らすが、勝者を知る前に全n鍵の軽量表現を走査して順位付けする必要があり、この走査量は文脈長に比例する。Qwen3-8Bでは32k時点で136ビット索引走査がstep当たり約160MB、100万トークンでは5.1GBへ増える一方、勝者行取得は約200MB付近に留まる。Loki、Double Sparsity、SparQ、2-bit thumbnailなど既存per-token索引は選んだチャネルの読取深度を設計時に固定するため、問い合わせごとに重要度が偏るチャネルへ必要以上のビットを転送し、ホスト退避時のPCIe帯域を浪費する。",
+    "novelty": "Fathomは4ビット鍵キャッシュをチャネル主順のビットプレーンとして配置し、上位tプレーンだけを読むと同じblock scaleを使う厳密なtビット中点量子化になる性質を利用して、一つの4ビット保存形式を可変精度索引として使う。各問い合わせについて共有KV head内のquery head群と鍵チャネル分散からscore variance寄与g_jを計算し、量子化誤差が追加1ビットごとに4分の1になるモデルに対する逆水充填で各チャネル深度t_jを0〜4へ配分する。固定個数チャネルを全深度読む方式と異なり、重要チャネルへ深く、弱いチャネルへ浅くまたは0ビットを割り当て、同じ誤差で索引転送量を減らす。",
+    "method_overview": "各層・KV headの鍵を64-token block単位でchannel-wise symmetric 4-bit codeへ量子化し、各チャネルの4ビットをMSBから4枚のbit planeとしてchannel-majorに格納する。復号時は同じKV headを共有するquery head群から各チャネルの重要度g_j=sum_h q_hj^2 Var(k_j)を求め、総bit budget Bを満たすwater line thetaをlog空間30回の二分探索で決定し、t_j=clip(round(log4(g_j/theta)),0,4)を得る。t_j=0のチャネルを飛ばし、残るチャネルについてhost memory上で先頭t_j planeを長い連続runとしてstaging bufferへPCIe転送する。GPU上でその可変深度表現から全tokenの近似attention scoreを計算し、query headごとにsink 4、local 32と残りtop-kを選ぶ。選択されたquery head群のwinner row unionだけbf16 K/Vからhost→GPUへ取得し、最後はその集合上でexact attentionを実行する。QK-normを持つQwen3はraw channelを使い、持たないLlama-3.1/Qwen2.5はcalibration KLT basisへ回転してvarianceを集中させる。layer別budgetは任意のcalibration最適化で、既定はcontext長依存がないflat budgetである。",
+    "components": [
+      {
+        "name": "チャネル主順ビットプレーン鍵ストア",
+        "description": "鍵をチャネルごと・64-token blockごとの対称4ビット整数へ一度量子化し、各bit位置を64-bit wordのplaneへpackingしてMSBから順に配置する。先頭t planeは別の低精度コピーを作らず厳密なt-bit uniform quantizerとして復元できるため、同じ4-bit K copyを1〜4ビットの多解像度索引として読める。channel-major配置により、長いsequenceでも選択チャネルの先頭plane群が連続runとなり、細粒度random PCIe readを避けてlink rateに近い転送を可能にする。"
+      },
+      {
+        "name": "問い合わせ別逆水充填ビット配分",
+        "description": "共有KV head内のquery head群についてqの二乗とcalibration key varianceを掛けたg_jをscore varianceへのチャネル寄与として用いる。tビット量子化誤差がg_j*4^{-t_j}に比例する近似から、総budget Bの下で誤差和を最小化する逆水充填を解き、重要チャネルには複数plane、弱いチャネルには1 planeまたは0を割り当てる。30回のlog-theta二分探索で整数深度を決め、同一KV headのquery群で一つのread planを共有するため、query headごとに同じK bytesを重複取得しない。"
+      },
+      {
+        "name": "モデル依存basis選択",
+        "description": "water-fillingはscore varianceが少数座標へ偏るほど有効なので、QK-normalizationを持つQwen3ではraw channelを保持する。QK-normのないLlama-3.1-8BとQwen2.5系ではcalibration keysのKarhunen–Loève transformを用い、固有値順ではなくscore varianceに沿うbasisで鍵とqueryを回転してから同じbit-depth配分を適用する。全D座標を保存してqueryが深度を選ぶためLokiの低rank切断とは異なり、basis選択はモデルごとに一度calibrationして固定する。"
+      },
+      {
+        "name": "ホスト常駐索引の連続run gather",
+        "description": "host memory上のplaneをGPU kernelからword単位で直接読むと小さなscatter transactionでPCIe効率が落ちるため、active channelごとにt_j*n/8 bytesの連続runを固定長run listで記述し、scaleとともにstaging bufferへgatherする。inactive slotは長さ0としてhost synchronizationを不要にし、scan自体はHBM上で実行する。実測では4KB〜512KB runで約25.1〜26.2GB/sを達成し、可変チャネル・可変深度という不規則な論理選択を物理的には大きな連続転送へ変換する。"
+      }
+    ],
+    "system_design": "長文脈servingで4-bit K representationまたは別indexをhost memoryへ置き、各decode stepでquery-derived bit planを生成して必要planeだけPCIeでGPU stagingへ転送する。近似scan→per-query-head top-k→winner unionのK/V row取得→exact attentionという疎注意pipelineに挿入され、model weightや学習は変更しない。効果はindex transferが律速する構成に限定され、indexがHBM常駐ならbit extractionの算術負荷が勝つ。"
+  },
+  "reservation": {
+    "claim_id": "claim-63cfbded74c721cbf2f18246",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
