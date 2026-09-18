@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T18:59:35+00:00",
+  "updated_at": "2026-09-18T19:02:42+00:00",
   "last_run_key": "2026-09-19T03:00:00+09:00",
-  "last_round": "specialist-nonarxiv-storage-1",
+  "last_round": "specialist-network-serving-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,47 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T07:58:39+09:00",
-      "round": "specialist-new-arrivals-1",
-      "axis": "2609新着・端末メモリ管理・エッジクラウド協調推論",
-      "query_summary": "直前runの枯渇判定後の新着差分を再走査し、HBFSim、MetaKV、mzCache、AceSpec、InertiaKV、分離サービング電力制御を軽量評価した。投入直前に最新main HEAD、決定論的research job、repo identity/title検索、GitHub fallback inbox、Library pendingを再確認し、HBFSim・MetaKV・InertiaKV・分離サービング電力制御は既存、mzCacheとAceSpecのみ未登録と判定した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.09800",
-        "arXiv:2609.07966",
-        "arXiv:2609.03515",
-        "arXiv:2609.11133"
-      ],
-      "next_axis_hint": "strong candidate発見により枯渇判定をリセット。forward citation、backward reference、MoE expert I/O、CXL/SSD、GPU runtime/networkingを独立に再走査する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0804JST-new-arrivals-1.json"
-    },
-    {
-      "run_key": "2026-09-13T07:58:39+09:00",
-      "round": "specialist-moe-cache-fault-2",
-      "axis": "MoE expert cache・Flash階層・expert-parallel耐障害性",
-      "query_summary": "新着batch後にMoE expert I/O/cache、forward-citation、fault tolerance、CXL/KV隣接を独立走査した。SliceMoEとEEPを強候補として軽量評価し、AgentZip、Elastic KV Cache、PATTON、SwiftCache、SmartGenは最新正本の決定論的jobまたは既収録履歴へ収束した。投入直前の最新main HEADでSliceMoE/EEPの決定論的research job不存在、repo識別子/題名未検出、Library pendingに同候補なしを再確認した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.7142857142857143,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.11294",
-        "arXiv:2608.23658",
-        "arXiv:2609.11392",
-        "arXiv:2606.16135",
-        "arXiv:2607.28150"
-      ],
-      "next_axis_hint": "strong candidate発見により再び枯渇判定をリセット。GPU kernel/runtime、network collective、backward references、KV sparse-attention、framework implementation差分を再走査する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json"
-    },
     {
       "run_key": "2026-09-13T07:58:39+09:00",
       "round": "specialist-moe-serving-runtime-3",
@@ -7119,6 +7078,54 @@
       ],
       "next_axis_hint": "flash/PIM/CXLのbackward/forward referencesから、2024-2026の非arXiv storage/architecture会議論文、computational storage、near-data processing、GPU-storage datapathの未走査集合へ展開する",
       "source_submission": "work-queue/submissions/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json"
+    },
+    {
+      "run_key": "2026-09-19T03:00:00+09:00",
+      "round": "specialist-near-memory-2",
+      "axis": "in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration",
+      "query_summary": "第1roundのflash/PIM/CXLから機構語へ展開し、computational storage、near-storage、GPU-SSD、NAND CIM、HBFを走査した。HILOS、SLIM、Smart-Infinity、NVLLM、DUAL-BLADE、KVDrive、FlashAccel、FLINTはcanonical title/arXiv shardで既存を確認し早期除外。未収録のD-NOVA、StoreLLM、H3、NASiC、PIM-SHERPAは一次arXiv/ACM/IEEE情報でLLM systemsへの直接性と定量評価を確認した。",
+      "candidate_count": 13,
+      "duplicate_filtered_count": 8,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.6153846153846154,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2502.09921",
+        "arXiv:2507.09201",
+        "arXiv:2403.06664",
+        "arXiv:2604.25699",
+        "arXiv:2604.26557",
+        "arXiv:2605.18071",
+        "arXiv:2607.10186",
+        "title:flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration"
+      ],
+      "next_axis_hint": "第1-2roundでstorage/flash/PIMの新規候補を十分得たため、次はnetwork collective/disaggregationまたはGPU runtime/compilerの非arXiv会議論文へ軸を切り替える",
+      "source_submission": "work-queue/submissions/20260919T0418JST-discovery-specialist-near-memory-2.json"
+    },
+    {
+      "run_key": "2026-09-19T03:00:00+09:00",
+      "round": "specialist-network-serving-3",
+      "axis": "network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems",
+      "query_summary": "storage/PIM軸を離れてISCA/NSDI/HPCA/MLSys/EuroMLSysのnetwork/disaggregation/servingへ切替。SmartGen、MorphServe、既知のCXL/KV migration系はcanonical title/arXivで早期除外し、Tetris、SYMPHONY、CAIS、PLA-Serve、Hardware-Aware Co-Designは対応title shardに不在で一次会議ページからsystems寄与と評価を確認した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.2857142857142857,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "title:morphserve-efficient-and-workload-aware-llm-serving-via-runtime-quantized-layer-swapping-and-kv-cache-resizing"
+      ],
+      "next_axis_hint": "次はGPU runtime/compiler、persistent kernel、collective communicationの2025-2026非arXiv会議/workshopへ移り、今回のserving scheduling系はcooldownする",
+      "source_submission": "work-queue/submissions/20260919T0427JST-discovery-specialist-network-serving-3.json"
     }
   ],
   "axes": {
@@ -12599,6 +12606,32 @@
       "duplicate_ratio": 0.16666666666666666,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "flash/PIM/CXLのbackward/forward referencesから、2024-2026の非arXiv storage/architecture会議論文、computational storage、near-data processing、GPU-storage datapathの未走査集合へ展開する"
+    },
+    "in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration": {
+      "last_run_key": "2026-09-19T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 13,
+      "duplicate_filtered_count": 8,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.6153846153846154,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "第1-2roundでstorage/flash/PIMの新規候補を十分得たため、次はnetwork collective/disaggregationまたはGPU runtime/compilerの非arXiv会議論文へ軸を切り替える"
+    },
+    "network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems": {
+      "last_run_key": "2026-09-19T03:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.2857142857142857,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はGPU runtime/compiler、persistent kernel、collective communicationの2025-2026非arXiv会議/workshopへ移り、今回のserving scheduling系はcooldownする"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

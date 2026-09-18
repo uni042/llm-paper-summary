@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T18:47:41.691030+00:00",
+  "updated_at": "2026-09-18T19:04:31.812224+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T18:47:41.691030+00:00",
+      "last_recorded_at": "2026-09-18T19:04:31.812224+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 268,
         "audit_completed": 0,
-        "discovery_completed": 147,
+        "discovery_completed": 149,
         "blocked": 30,
-        "new_jobs": 223,
+        "new_jobs": 235,
         "new_papers": 269,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35293933360:1",
-          "recorded_at": "2026-09-18T01:10:23.382429+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35293933360",
-            "run_attempt": "1",
-            "source_sha": "36f265bc88dce3224cd1eb2337b5a63c3a5e3134"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35296500356:1",
           "recorded_at": "2026-09-18T01:44:09.925174+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35383456892:1",
+          "recorded_at": "2026-09-18T19:04:31.812224+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35383456892",
+            "run_attempt": "1",
+            "source_sha": "e94583c712bbeff7561c53aed4f081fd8079c320"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -23161,6 +23161,22 @@
           "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-1e48c57afdf71a43",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9b8c216a46edd0b5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -24724,6 +24740,90 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-1e48c57afdf71a43",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-9b8c216a46edd0b5",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-21d6a425148ac99f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/ISCA66397.2026.00098",
+          "title": "Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism"
+        },
+        {
+          "job_id": "job-research-2bbcf1d996d23713",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "URL:https://www.usenix.org/conference/nsdi26/presentation/agarwal",
+          "title": "SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems"
+        },
+        {
+          "job_id": "job-research-7b5d4afbd3eabe62",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+          "title": "PLA-Serve: A Prefill-Length-Aware LLM Serving System"
+        },
+        {
+          "job_id": "job-research-8590c31aaee62eb7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3679240.3734604",
+          "title": "StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices"
+        },
+        {
+          "job_id": "job-research-8de660021e1eaf46",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.23294",
+          "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference"
+        },
+        {
+          "job_id": "job-research-9deede0a4d81ad54",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+          "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-adff039fb9e24979",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3805621.3807651",
+          "title": "Hardware-Aware Co-Design of Multi-Chip LLM Serving via Performance Modeling"
+        },
+        {
+          "job_id": "job-research-b2d29fa9c529bdfd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17538",
+          "title": "D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation"
+        },
+        {
+          "job_id": "job-research-b3afe97f03f9606a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.09216",
+          "title": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies"
+        },
+        {
+          "job_id": "job-research-e8f755e1fee9cc18",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/HPCA68181.2026.11408460",
+          "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems"
         }
       ],
       "new_paper_ids": [
@@ -25264,7 +25364,9 @@
         ".survey/work-queue/results/20260918T2208JST-discovery-specialist-agent-kv-6.json",
         ".survey/work-queue/results/20260918T2209JST-discovery-specialist-fairness-7.json",
         ".survey/work-queue/results/20260918T2212JST-discovery-specialist-gpu-runtime-8.json",
-        ".survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json"
+        ".survey/work-queue/results/20260918T2215JST-discovery-specialist-new-arrivals-9.json",
+        ".survey/work-queue/results/20260919T0418JST-discovery-specialist-near-memory-2.json",
+        ".survey/work-queue/results/20260919T0427JST-discovery-specialist-network-serving-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -25342,7 +25444,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 730,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
