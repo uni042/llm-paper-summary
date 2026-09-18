@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-7637dd4f80065a38131593e0",
-  "job_id": "job-research-f97acaf8df0df8b2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7637dd4f80065a38131593e0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-7637dd4f80065a38131593e0","job_id":"job-research-f97acaf8df0df8b2","data":{"canonical_id":"arXiv:2608.21719","arxiv_id":"2608.21719","doi":"10.48550/arXiv.2608.21719","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"PowerSlider: Exploiting Phase Asymmetry for LLM Serving under Demand Response","summary":"PowerSliderは、データセンターが需要応答（Demand Response）で時変の瞬時電力上限を課される状況に対し、LLM servingのprefill・thinking・answer decodeでDVFS感度とKVメモリ圧力が異なることを利用して電力を再配分する。Prefill–Think–Answer（PTA）分離、許容遅延を契約化するFlex SLO、KKT条件から導くオンライン最適化、stage別DVFS/KV chunk/GPU pool制御を統合する。SGLang実装とproduction trace評価でreasoning高負荷・30% cap reduction時にonline goodput 78.3%（最良baseline 47.6%）、CAISO緊急日replayでも深いcap下で高goodputを維持する。","list_summary":"prefill・thinking・answerの電力/KV非対称性をstage別DVFS・KV容量・GPU割当に利用し、時変電力cap下のLLM serving goodputを維持する。","authors":["Yueying Li","Jiayang Chen","Yuanfan Chen","Leo Han","Haoran Qiu","Esha Choukse","Rodrigo Fonseca","Udit Gupta"],"authors_affiliations":"Cornell University; Microsoft Azure Research; Cornell Tech","published":"2026-08-22","publication":"arXiv:2608.21719","publication_type":"プレプリント","publication_status":"arXiv v1公開","lineage":"LLM serving scheduling・power-aware serving・prefill/decode disaggregation・reasoning KV management","topics":["demand response","DVFS","LLM serving","reasoning inference","KV cache","SGLang"],"importance":"瞬時電力capをfirst-class constraintとして、stage別compute/memory特性、reasoning KV容量、multi-SLO slackを同時最適化する。resource schedulingとKV capacity couplingを扱う新しいserving系統。","implementation":"SGLang上にPTA disaggregation、PSOpt、PSSched、PSRouteを実装。KV transferはTCP/RDMA、GPU clock/power limitはNVML。","hardware_evaluation":"DGX-A100およびGH200実機（8 GPU以下）と、実機profileで検証した64〜512 GPU SplitwiseSim拡張simulator。A100 DVFS 210〜1410MHz。","quality_effect":"モデル出力品質ではなくgoodput/SLO/power capを対象。LC/Flex/BEの契約とadmission controlで遅延劣化を制限する。","source":"https://arxiv.org/abs/2608.21719","sources":["https://arxiv.org/abs/2608.21719","https://arxiv.org/html/2608.21719","https://arxiv.org/pdf/2608.21719"],"code":null,"project":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文・appendix・referencesを確認。","references_total":0},"reservation":{"claim_id":"claim-7637dd4f80065a38131593e0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
