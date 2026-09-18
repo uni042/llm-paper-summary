@@ -4,10 +4,36 @@
   "slot": "metadata",
   "attempt_id": "attempt-c8a599afd4a259e75ab961db",
   "job_id": "job-research-8de660021e1eaf46",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c8a599afd4a259e75ab961db",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.23294",
+    "arxiv_id": "2605.23294",
+    "doi": "10.48550/arXiv.2605.23294",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "title": "NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference",
+    "summary": "NASiCは、全expertを保存する必要があるMoEの容量問題と、疎なexpert活性化が従来3D NAND計算内メモリ（computing-in-memory; CIM）の並列性・エネルギー効率を損なう問題を、3D NANDのstring構造そのものへexpert選択機構を埋め込むことで解く。上部Flash層を多値コンテンツアドレスメモリ（content-addressable memory; CAM）、下部をCIMとして同一string上に統合し、routerが選んだexpert IDに一致したstringだけを同一計算cycleで有効化する。さらにblock単位の修正thermometer encoding、source-line電圧による符号付き多bit入力展開、多値Flash CIM cellを組み合わせ、疎なMoEを高密度3D NAND上で直接計算する。65nm素子modelを用いたSPICEとsystem-level解析では、GPU・near-NAND・従来NAND CIMに対して大幅なthroughput/energy効率改善を報告する。",
+    "list_summary": "3D NAND string内でCAMによるexpert選択とCIM計算を融合し、多値Flashとblock並列化でMoEを高密度に直接実行して最大114.8倍のthroughput改善を報告する。",
+    "authors": ["Weikai Xu","Meng Li","Shuzhang Zhong","Tianyang Luo","Dongxue Zhao","Ling Liang","Zongwei Wang","Qianqian Huang","Yimao Cai","Ru Huang"],
+    "authors_affiliations": "Peking University; Beijing Advanced Innovation Center for Integrated Circuits",
+    "published": "2026-05-22",
+    "publication": "arXiv:2605.23294v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1公開",
+    "lineage": "MoE推論・3D NAND・計算内メモリ・in-flash processing・on-device inference",
+    "topics": ["Mixture-of-Experts","3D NAND","computing-in-memory","CAM","on-device inference","multibit Flash"],
+    "importance": "SSD/NANDを単なるexpert保管層ではなく計算層へ変え、動的expert routingをFlash string内のCAM maskingへ直接写像する。MoE expert residencyとNAND計算を一体化するため、SSD/NVMe・MoE・階層メモリ系統との接点が強い。",
+    "implementation": "論文は回路・system-level設計を提示し、65nm compact Verilog-A modelによるSPICE simulationと解析で評価する。公開ソフトウェア実装や実チップは本文から確認できない。",
+    "hardware_evaluation": "典型的3D NAND plane構成を基に、65nm floating-gate transistor compact Verilog-A model、文献由来の3D NAND parasitic parameters、SPICE simulationとsystem-level modelingで評価。実チップ測定ではない。",
+    "quality_effect": "device current variationを含めMoE perplexityへの影響を解析し、実験由来sigma=0.15を主要評価に使用。NASiCはCAM選択により不要expert計算を除去するが、精度そのものを改善する手法ではない。",
+    "source": "https://arxiv.org/abs/2605.23294",
+    "sources": ["https://arxiv.org/abs/2605.23294","https://arxiv.org/html/2605.23294"],
+    "code": null,
+    "project": null,
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "arXiv HTML全文のReferences節まで確認。",
+    "references_total": 40
+  },
+  "reservation": {"claim_id":"claim-c8a599afd4a259e75ab961db","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
