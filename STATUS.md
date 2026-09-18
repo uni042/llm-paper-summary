@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:47:12 JST**
+> 自動生成: **2026-09-18 10:47:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
+| 収録候補論文 | **49** |
 | 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-18 10:44:05 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **58** |
+| 最終検証済みResearch収録 | **09-18 10:47:22 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **1** | **2** | **1** | **0** | — |
+| Research | **17** | **3** | **2** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **10** | **10** | **0** | **0** | **0** | **28** |
-| 合計 | **26** | **13** | **11** | **2** | **1** | **0** | **28** |
+| 合計 | **27** | **13** | **12** | **1** | **0** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 10:47:22 JST** [research] `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-660ceb86238a1a21.json`
+  - result: `.survey/work-queue/results/research/attempt-e915931ec4f50a06d7908b39.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md`
 - **09-18 10:44:05 JST** [research] `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
   - job: `.survey/work-queue/jobs/job-research-6c1a5d06d3b875ce.json`
   - result: `.survey/work-queue/results/research/attempt-a45c6670fc2432985588dfbd.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-dbef48f08bbefbb3ea1b0135.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-dbef48f08bbefbb3ea1b0135.json`
   - paper: `papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md`
-- **09-18 06:47:17 JST** [research] `arXiv:2602.21140` — ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments
-  - job: `.survey/work-queue/jobs/job-research-c61a311635c958d5.json`
-  - result: `.survey/work-queue/results/research/attempt-9728a65bf10d91c2f0a02ad3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9728a65bf10d91c2f0a02ad3.json`
-  - paper: `papers/inference/05-moe/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md`
 
 ### Audit
 
@@ -151,14 +151,18 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 10:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **1件** / 未完了・未検証: **2件**
+- immutable submission: **3件** / 検証済み成功: **2件** / 未完了・未検証: **1件**
 - **未完了または未検証** `.survey/work-queue/submissions/research/attempt-73e778f4334326a6472d6105.json` (job `job-research-fb4ae3eceb455bfc`)
 - **成功** `arXiv:2609.18849` — Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
   - job: `.survey/work-queue/jobs/job-research-6c1a5d06d3b875ce.json`
   - result: `.survey/work-queue/results/research/attempt-a45c6670fc2432985588dfbd.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a45c6670fc2432985588dfbd.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md`
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json` (job `job-research-660ceb86238a1a21`)
+- **成功** `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-660ceb86238a1a21.json`
+  - result: `.survey/work-queue/results/research/attempt-e915931ec4f50a06d7908b39.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json`
+  - paper: `papers/inference/06-serving-scheduling/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md`
 
 #### Audit (:30)
 
@@ -216,10 +220,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.18112` — Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 10:45:56 JST** / heartbeat: **—** / lease expiry: **09-18 12:15:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-660ceb86238a1a21.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -239,7 +241,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -259,7 +261,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **702** |
+| inference/training/survey配下の論文Markdown実体 | **703** |
 
 ### immutable submissionの未照合
 
@@ -267,8 +269,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **490** |
-| └ Research | **361** |
+| 成功result未照合のimmutable submission | **489** |
+| └ Research | **360** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

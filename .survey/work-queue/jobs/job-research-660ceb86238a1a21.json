@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2609.18112",
   "paper_path": "papers/inference/06-serving-scheduling/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md",
   "selection_reason": "multi-tenant LLM servingでthroughput fairnessではなくtoken-level latency isolationを保証するFairInferenceを提案。per-token deadline scheduling、GPU compute sharing delayのbound、shared KV cache delayの考慮を統合し、well-behaved clientのlatency spikeを抑えつつthroughputも改善する。2026-09-16提出の新着で、既存fair scheduling系統との差分が明確。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -28,10 +28,6 @@
   ],
   "last_blocked_at": "2026-09-17T19:39:22+00:00",
   "retry_queued_at": "2026-09-17T23:44:33+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism"
-  ],
-  "last_validation_failed_at": "2026-09-18T01:45:47+00:00"
+  "completed_at": "2026-09-18T01:47:22+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-e915931ec4f50a06d7908b39.json"
 }
