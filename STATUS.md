@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 06:53:28 JST**
+> 自動生成: **2026-09-19 07:03:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **55** |
 | 未claim Research job | **53** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 05:35:57 JST（1時間17分前）** |
+| 最終検証済みResearch収録 | **09-19 05:35:57 JST（1時間27分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **20** | **2** | **1** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **13** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **33** | **4** | **3** | **1** | **2** | **0** | **3** |
+| 合計 | **33** | **5** | **4** | **1** | **2** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,13 +150,18 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-76e7571f47153ba10e1f8ee9.json` (job `job-research-56fbeb640bc1560d`)
+- 最新観測run: **2026-09-19 05:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-a79bd772dccd9a8939166474.json` (job `job-research-9c0ef4e091be369c`)
+- **成功** `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
+  - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
+  - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
+  - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 06:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 05:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -182,13 +187,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-discovery-20260919T0700JST`
+  - claim: **09-19 07:03:19 JST** / heartbeat: **—** / lease expiry: **09-19 08:33:19 JST**
+  - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 06:36:03 JST** / heartbeat: **—** / lease expiry: **09-19 08:06:03 JST**
+  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 07:03:19 JST** / lease expiry: **09-19 08:33:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
-- `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 05:31:18 JST** / heartbeat: **—** / lease expiry: **09-19 07:01:18 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b3520b6ffb18fc43.json`
 
 #### Audit
 
