@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:24:06 JST**
+> 自動生成: **2026-09-19 01:24:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
-| 未claim Research job | **51** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-19 01:21:10 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-19 01:21:10 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -202,9 +202,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 01:23:29 JST** / heartbeat: **—** / lease expiry: **09-19 02:53:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-56fbeb640bc1560d.json`
+- `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 01:24:14 JST** / heartbeat: **—** / lease expiry: **09-19 02:54:14 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6af027835df580e1.json`
 
 #### Audit
 
@@ -224,7 +224,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 

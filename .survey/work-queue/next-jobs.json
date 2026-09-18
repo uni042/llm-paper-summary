@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 52,
+      "ready": 51,
       "completed": 534,
       "superseded": 44,
       "deferred": 3,
+      "blocked": 2,
       "blocked_permanent": 3,
-      "rejected": 1,
-      "blocked": 1
+      "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 52,
+    "ready_research_audit": 51,
     "actively_claimed": 1,
-    "claimable": 51
+    "claimable": 50
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-6af027835df580e1",
+      "job_id": "job-research-9d3c210288b42eb4",
       "type": "research",
       "lane": null,
       "priority": 82,
-      "canonical_id": "arXiv:2511.07035",
-      "title": "GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training",
-      "source_url": "https://arxiv.org/abs/2511.07035",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+      "canonical_id": "arXiv:2505.16056",
+      "title": "Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models",
+      "source_url": "https://arxiv.org/abs/2505.16056",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T16:23:35+00:00"
+  "generated_at": "2026-09-18T16:24:23+00:00"
 }
