@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5b5769ffc299e3f095219b3d","job_id":"job-research-a2e0c7f004aa0b3e","data":{"limitations":"性能向上はバッチ内で複数要求が同じ接頭辞を共有し、復号注意が鍵値読出し帯域に律速されるほど大きくなる。小バッチや共有接頭辞のない要求では詰込みによる読出し削減余地が小さい。MLA、線形注意、鍵値状態を圧縮・除去する構造では通常の多頭注意やグループ問い合わせ注意より利得が縮む可能性がある。GPUの実際の協調スレッド配列配置は完全制御できないため、複数実行流でも末尾空洞が残る。詰込みは厳密最適化ではなく大域メモリ量に基づくヒューリスティックであり、動的な全配置空間の最適性保証はない。オンライン評価は二つの実追跡の先頭三十分に限定される。","differences":"FlashAttentionやFlashInferは要求ごとに独立した協調スレッド配列を使うため、物理的に共有された接頭辞鍵値を要求数だけ再読出しする。RelayAttentionやChunkAttention系は共有接頭辞を鍵値中心にまとめるが、単一階層または固定タイル形状への依存が強い。FastTreeは多階層接頭辞を扱うが計算量中心の詰込み費用モデルと少数固定タイルを使う。PATは多階層接頭辞を大域メモリ転送量中心で詰め、要求数と鍵値長に応じた複数タイル、複数実行流、長鍵値分割を同時に用いる。vLLMやSGLangの接頭辞キャッシュが保存容量と事前計算再利用を改善するのに対し、PATは復号中の同一鍵値再読出しを減らすため補完的である。","implementation_status":"公式GitHubで実装を公開し、Zenodoへ成果物を保存している。約三千行のCutlass/CuTe・C++カーネル、C++非同期詰込み器、約千二百行のvLLM統合を含み、環境変数だけで注意後端を切替可能。事前構築済みDocker像、評価用データ、再現手順も提供し、カーネル実験は約一・五時間、選択した配信実験は八から十GPU時間、全配信実験は六十GPU時間超と記載する。","research_positioning":"接頭辞キャッシュ研究とGPU注意カーネル研究を接続する方式である。従来の接頭辞再利用は『一度計算した鍵値を一つだけ保存する』ところまでを主に扱ったが、PATは同じ鍵値を複数問い合わせが復号時に読む際の大域メモリ帯域まで共有する。CPUやNVMeへの鍵値退避とも直交し、必要ブロックがGPUへ到着した後の注意実行を高速化する。長いシステム指示、道具定義、検索文書を多数要求が共有するエージェント配信では特に適合し、接頭辞木をそのままGPU作業分割へ反映する実装系統として重要である。"},"reservation":{"claim_id":"claim-5b5769ffc299e3f095219b3d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0ee0523cc013293152fce8f1",
+  "job_id": "job-research-2829f7afbf13ae9b",
+  "data": {
+    "limitations": "attention-guided evictionは経験的saliency安定性に依存し、誤差保証はない。HumanEvalで示されるようにコード等の細粒度長距離依存では重要tokenを落とし得る。単一4090・native dLLM実装中心でproduction serving framework、batching、多GPUへの適用は未評価。retention ratio/kernel/delayはモデル・task依存の可能性がある。",
+    "differences": "dLLM-Cacheはprompt/response cacheのrefresh intervalやfeature similarityで部分更新、dKV-Cacheはone-step delayed caching、Fast-dLLMはcurrent block外の全KVをcacheする。Sparse-dLLMはcache内部をさらにattention saliencyで疎化し、dLLMの双方向性に合わせprefixとsuffixを同時evictする。AR向けSnapKV等が過去prefixだけを扱うのに対し、future-side suffixも対象となる。",
+    "implementation_status": "AAAI-26採択・公開済み。公式OpenMOSS/Sparse-dLLM repositoryがあり、LLaDA/Dream向け実装とOpenCompass speed evaluation scriptsを提供。訓練不要のplug-and-play方式。",
+    "research_positioning": "拡散LLM推論のKV-cache系統で、単なるcache reuseからcache sparsificationへ進めた初期代表例。時間方向のKV安定性とtoken方向のattention sparsityを組み合わせ、長文脈dLLMでcomputeとmemoryの両方を抑える。後続のconfidence-guided sparse attentionやactivation reuseと比較する基準点になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-0ee0523cc013293152fce8f1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
