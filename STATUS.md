@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 04:38:57 JST**
+> 自動生成: **2026-09-19 04:39:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **61** |
 | 未claim Research job | **60** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 04:35:25 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-19 04:35:25 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **15** | **2** | **1** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **25** | **4** | **4** | **0** | **1** | **0** | **15** |
+| 合計 | **25** | **5** | **4** | **1** | **1** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,12 +151,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 04:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- immutable submission: **2件** / 検証済み成功: **1件** / 未完了・未検証: **1件**
 - **成功** `DOI:10.1145/3695053.3731073` — AiF: Accelerating On-Device LLM Inference Using In-Flash Processing
   - job: `.survey/work-queue/jobs/job-research-740437feef88b672.json`
   - result: `.survey/work-queue/results/research/attempt-0d9a61003cc7a37046392d50.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0d9a61003cc7a37046392d50.json`
   - paper: `papers/inference/99-other-inference-systems/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md`
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-818968501d26285ed6167878.json` (job `job-research-ca0df1c4e0a9af97`)
 
 #### Audit (:30)
 
@@ -237,8 +238,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **552** |
-| └ Research | **423** |
+| 成功result未照合のimmutable submission | **553** |
+| └ Research | **424** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
