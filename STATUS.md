@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:30:29 JST**
+> 自動生成: **2026-09-19 01:30:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **51** |
-| 未claim Research job | **49** |
+| 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **40** |
 | 最終検証済みResearch収録 | **09-19 01:21:10 JST（9分前）** |
 | 整合性異常 | **0** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **0** | **1** | **2** | **0** | — |
+| Research | **9** | **1** | **0** | **1** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **29** | **10** | **9** | **1** | **2** | **0** | **2** |
+| 合計 | **29** | **10** | **9** | **1** | **3** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -201,9 +201,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
-  - claim: **09-19 01:28:01 JST** / heartbeat: **—** / lease expiry: **09-19 02:58:01 JST**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2606.26120` — Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
+  - claim: **09-19 01:30:32 JST** / heartbeat: **—** / lease expiry: **09-19 03:00:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-11c68d7adc12c492.json`
+- `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 01:30:32 JST** / heartbeat: **—** / lease expiry: **09-19 03:00:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-9d3c210288b42eb4.json`
 - `arXiv:2511.07035` — GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training / worker `scheduled-chat-discovery-specialist`
   - claim: **09-19 01:24:14 JST** / heartbeat: **—** / lease expiry: **09-19 02:54:14 JST**
