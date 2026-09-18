@@ -5,28 +5,28 @@
   "attempt_id": "attempt-5adb86bd27e2666265386057",
   "job_id": "job-research-56fbeb640bc1560d",
   "data": {
-    "problem": "Edge LLMで移動UEがsource BSからtarget BSへハンドオーバすると、autoregressive decodeが依存する過去contextのKV cacheをtarget側へ復元する必要があり、その間token streamingが停止する。token-based handover（tHO）は過去tokenを送りtargetでprefillしてKVを再計算するためTTFTが大きく、複数UEのbatch prefillでは最悪ユーザ遅延が問題になる。cache-based handover（cHO）はKVを直接backhaul転送して計算を避けるが、billion-parameter LLMではKVが数百MB〜GB級となり、共有backhaulがボトルネックになる。研究課題は、各UEのhandover時刻とcontext長が異なる状況で、prefill計算とKV転送をどう分担・スケジュールすればworst-user service interruptionを最小化できるかである。",
-    "novelty": "ctHOは全prefillまたは全KV転送という両端の方式を統一し、全UEに共通のprefix長Lをbatch prefillで再計算し、各UEの残り(C_i-L)^+ token分KVだけをbackhaulで送る。固定Lに対する最小worst-user cache-transfer delayを累積残余需要S_k(L)から閉形式で導き、その下界を達成するconstructive rate schedulerを与える。さらにprefill delayはLに対して非減少、cache-transfer delayは非増加であることを使い、両者が等しくなるLを選べばglobal optimumとなることを証明する。通信と計算の境界を明示的に均衡させる点が中心的貢献である。",
-    "method_overview": "K UEをhandover時刻τ_i順に並べ、UE iのcontext C_iのうちmin(C_i,L) tokenを共通batch prefill、残り(C_i-L)^+をKV転送する。backhaul容量R_bhをtoken当たりKV payload s_KVで正規化してR tokens/sとし、各時刻のUE別rate合計をR以下に制約する。目的D(L,r)は各UEでprefill完了とKV転送完了の遅い方からhandover時刻を引いた値の最大。固定Lでは最初のk UEの残余需要S_k(L)を用い、最小転送遅延D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+を得る。実現policyはactive UEのうちtarget completion time d_i=τ_i+D_tx*が最小のUEへ全backhaulを割り当て、到着・完了時に切替える。最後にV(L)=max(D_pf(L),D_tx*(L))を最小化する。",
+    "problem": "エッジ大規模言語モデル（Edge LLM）を利用する移動端末が送信元基地局から移動先基地局へハンドオーバすると、自回帰デコード（autoregressive decode）が依存する過去文脈のKVキャッシュ（KV cache）を移動先で復元するまで生成を再開できない。トークン方式ハンドオーバ（token-based handover; tHO）は過去トークンを送り移動先でプリフィル（prefill）してKVを再計算するため計算遅延が大きい。一方、キャッシュ方式ハンドオーバ（cache-based handover; cHO）はKVを直接バックホール（backhaul）転送して再計算を避けるが、大規模モデルではKVが数百MBからGB級となり共有回線がボトルネックになる。研究課題は、複数端末でハンドオーバ時刻と文脈長が異なる状況において、再計算とKV転送をどう分担・スケジュールすれば最悪ユーザのサービス中断時間を最小化できるかである。",
+    "novelty": "共同キャッシュ・トークンハンドオーバ（joint cache-token handover; ctHO）は、全プリフィルまたは全KV転送という二つの極端な方式を一つの設計空間へ統合する。全端末に共通する接頭辞長Lまでをバッチプリフィル（batch prefill）で再計算し、それより後ろの残余部分だけをKVとして転送する。固定したLに対する最小の最悪ユーザ転送遅延を累積残余需要から閉形式で導き、その下界を実際に達成する構成的な帯域割当スケジューラを示す。さらに、Lを増やすほどプリフィル遅延は増え、KV転送遅延は減るという単調性を利用し、両者を均衡させるLが全体の最悪遅延を最小化することを示す。通信と計算を単なる二択ではなく連続的に交換可能な資源として扱う点が中心的貢献である。",
+    "method_overview": "まずK台の端末をハンドオーバ時刻の順に並べ、端末iの文脈長C_iのうちLまでの共通接頭辞を移動先基地局でまとめてプリフィルし、Lを超える残余トークンに対応するKVだけを送信元基地局から転送する。次に、バックホール容量を1トークン当たりKV量で正規化してトークン毎秒の容量Rとして扱い、任意時刻に全端末へ割り当てる転送率の総和がRを超えないよう制約する。固定Lでは、先頭からk台までの残余KV需要と各端末のハンドオーバ時刻差から、どのスケジューリングでも下回れない最小転送遅延を導く。そのうえで、各端末に共通の最悪遅延から完了期限を設定し、現在転送可能な端末のうち期限が最も早い端末へバックホール全容量を割り当て、端末の到着または転送完了時だけ割当先を切り替える。この構成的スケジューラが解析下界を達成するため、固定Lで最適である。最後に、バッチプリフィル完了時間と最適KV転送完了時間の大きい方がサービス中断時間になるので、前者がLに対して非減少、後者が非増加という性質を使い、両者が交差する接頭辞長を選ぶ。交点が存在しない場合は全KV転送または全プリフィルの境界解を選ぶ。これにより、接頭辞分割、帯域割当、最悪遅延最小化までを一つの端から端までの最適化手順として解く。",
     "components": [
       {
-        "name": "Token/KV分割によるctHO",
-        "description": "共通prefix Lをtoken転送後にtarget側でbatch prefillし、prefix以降だけsourceからKVとして転送する。L=0がcHO、L=CmaxがtHOなので両方式を同一設計空間へ包含する。"
+        "name": "トークン・KV分割による共同ハンドオーバ",
+        "description": "共通接頭辞長Lまでの履歴はトークンとして移動先へ渡し、複数端末をまとめてプリフィルしてKVを再生成する。一方、Lより後ろの履歴は送信元に既に存在するKVを直接バックホール転送する。L=0なら全KV転送のcHO、Lが最大文脈長なら全プリフィルのtHOとなるため、従来二方式を同じ変数Lで連続的に表現できる。"
       },
       {
-        "name": "固定Lの最小cache-transfer delay解析",
-        "description": "handover済みUEの累積残余KV需要と利用可能backhaul時間から任意policyの下界を導き、D_tx*(L)=max_k[S_k(L)/R-(τ_k-τ_1)]^+と閉形式化する。"
+        "name": "固定接頭辞長での最小KV転送遅延解析",
+        "description": "各端末のハンドオーバ時刻までに利用できるバックホール時間と、その時点までに到着した端末群の累積残余KV需要を比較し、任意の帯域割当方策が満たすべき遅延下界を導く。これを全端末について最大化することで固定Lに対する最小可能転送遅延を閉形式化し、後段の接頭辞長最適化で繰り返し評価できる形にする。"
       },
       {
-        "name": "Constructive backhaul scheduler",
-        "description": "各UEに共通worst-delayからtarget deadline d_iを定め、active集合で最小deadlineのUEへ全容量Rを割り当てる。active集合変化時だけ切替え、解析下界を達成して固定Lで最適となる。"
+        "name": "期限優先の構成的バックホールスケジューラ",
+        "description": "解析で得た共通の最悪遅延から各端末の転送完了期限を定め、転送可能になった端末のうち期限が最も早いものへ全バックホール容量を集中させる。新しい端末がハンドオーバする時点または現在端末の転送が完了した時点だけ割当を更新する。この方策が累積需要から得た下界を達成するため、単なるヒューリスティックではなく固定Lに対する最適スケジューリングとなる。"
       },
       {
-        "name": "Prefill/transfer均衡によるL選択",
-        "description": "D_pf(L)が非減少、D_tx*(L)が非増加なので、交点があれば両者を等しくするLがV(L)を最小化する。交点がなければL=0またはCmaxの境界解となる。"
+        "name": "プリフィルと転送の均衡による接頭辞長選択",
+        "description": "接頭辞長Lを増やすと移動先で再計算する量が増えるのでプリフィル遅延は単調に増える一方、直接送る残余KV量が減るので最適転送遅延は単調に減る。したがってサービス中断時間を決める二つの遅延の最大値は、原則として両者が均衡する点で最小になる。交点が範囲外ならL=0または最大文脈長の境界を選び、通信優先か計算優先かを資源条件に応じて自動的に決める。"
       }
     ],
-    "system_design": "target BSは最新handover後のbatch cycle境界から共通prefixをprefillし、source BSはhandover発生後から残余KVをbackhaul送信する。二処理は並行し、decode再開は両方完了後となるため、遅い側を均衡させるmin-max設計になる。"
+    "system_design": "移動先基地局は対象端末群の共通接頭辞をバッチプリフィルし、送信元基地局は各端末がハンドオーバ可能になった時点から残余KVを共有バックホールへ流す。プリフィルとKV転送は並行して進み、両方が完了した時点でその端末のデコードを再開する。したがって片方だけを高速化しても他方が支配的なら中断時間は縮まらず、提案法は計算側と通信側の完了時刻を均衡させる最小最大（min-max）設計としてシステム全体を扱う。"
   },
   "reservation": {
     "claim_id": "claim-5adb86bd27e2666265386057",
