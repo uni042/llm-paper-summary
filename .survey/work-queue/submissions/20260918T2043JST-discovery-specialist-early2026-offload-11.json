@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-early2026-offload-11",
+    "axis": "2026前半SmartSSD・MoE speculative expert・CPU-free SmartNIC・NVL72 remote expert",
+    "query_summary": "2026前半へ遡り、HillInfer、Speculating Experts、Blink、DWDPを照合。2602/2603/2604 canonical identity shardですべて既収録を確認し、外部全文取得を行わず早期dedupeした。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2602.18750","arXiv:2603.19289","arXiv:2604.07609","arXiv:2604.01621"],
+    "next_axis_hint": "今回の主要独立経路は4連続で新規強候補なし。次回は新着差分または新しいcitation edgeを優先する",
+    "empty_round_reason": "2026前半の代表的offload/network/MoE候補はすべて既収録だった。"
+  }
+}
