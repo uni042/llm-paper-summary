@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:38:58 JST**
+> 自動生成: **2026-09-19 01:39:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -208,7 +208,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2508.03611` — Block: Balancing Load in LLM Serving with Context, Knowledge and Predictive Scheduling / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
-  - claim: **09-19 01:36:33 JST** / heartbeat: **—** / lease expiry: **09-19 03:06:33 JST**
+  - claim: **09-19 01:39:33 JST** / heartbeat: **—** / lease expiry: **09-19 03:09:33 JST**
   - evidence: `.survey/work-queue/claims/job-research-21b30a62610ad176.json`
 - `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-llm-survey`
   - claim: **09-19 01:30:32 JST** / heartbeat: **—** / lease expiry: **09-19 03:00:32 JST**
