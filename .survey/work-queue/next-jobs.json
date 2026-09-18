@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 650,
+      "completed": 651,
       "ready": 1
     },
     "audit": {
@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 46,
+      "ready": 50,
       "completed": 525,
       "superseded": 44,
-      "blocked": 7,
+      "blocked": 6,
       "deferred": 3,
-      "blocked_permanent": 2,
+      "blocked_permanent": 3,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 46,
-    "actively_claimed": 1,
-    "claimable": 45
+    "ready_research_audit": 50,
+    "actively_claimed": 0,
+    "claimable": 50
   },
   "next_jobs": [
     {
@@ -33,6 +33,20 @@
       "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
       "source_url": "https://arxiv.org/abs/2609.06172",
       "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-abd379cf035bd8f0",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2608.19662",
+      "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+      "source_url": "https://arxiv.org/abs/2608.19662",
+      "paper_path": "papers/inference/kv-cache/2608.19662.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -123,20 +137,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-326d710987e96b1f",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2609.17983",
-      "title": "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
-      "source_url": "https://arxiv.org/abs/2609.17983",
-      "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-18T11:02:46+00:00"
+  "generated_at": "2026-09-18T11:04:30+00:00"
 }

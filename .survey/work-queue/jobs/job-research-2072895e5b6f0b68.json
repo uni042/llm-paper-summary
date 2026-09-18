@@ -17,16 +17,21 @@
   "created_at": "2026-09-16T19:03:45+00:00",
   "blocker": "今回runではarXiv:2410.17043の公式abstractに加え、Max Planck SocietyのPUREで公開されている同一論文PDFの索引済み本文断片からAuroraの設計・評価節を確認できた。しかしPDF本体の直接取得は403で失敗し、reference sectionを含む本文全体を一次資料として最後まで安全に取得できなかった。確認できた断片だけでも、異モデルexpertのcolocation、通信順序最適化、異種GPU割当、4クラスタ設定、最大2.38倍/3.54倍高速化、GPU利用率改善、最適解との差1.07倍等は一次PDF由来と確認できるが、未取得部分を補って5-slotを完成させることはしない。次回はarXiv公式HTML/PDF、PURE PDF、または著者・機関公式コピーの全文取得可能経路で再試行する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-893b8b493433eaafb94a68d9.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-18T05:45:59+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-18T10:02:59+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-18T05:45:59+00:00",
       "reason": "このrunではFathomとPATの一次資料全文を精読した後、arXiv公式HTML取得に対して外部取得基盤からDisabledErrorが実際に返り、以後の一次資料全文取得が利用不能となった状態で本jobが新規割当された。arXiv:2410.17043の公式PDF/HTML本文をこのattemptでは取得・精読できていないため、selection_reasonや二次資料からAuroraの手法・評価条件・主要結果・限界を5-slotへ推測生成しない。一時的blockedとして耐久保存し、永久除外にはしない。外部取得枠が復旧したrunでarXiv公式PDF/HTMLと、存在する場合は会議・著者公式全文経路を確認して全文精読から再試行する。"
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-18T10:02:59+00:00",
+      "reason": "今回runではarXiv:2410.17043の公式abstractに加え、Max Planck SocietyのPUREで公開されている同一論文PDFの索引済み本文断片からAuroraの設計・評価節を確認できた。しかしPDF本体の直接取得は403で失敗し、reference sectionを含む本文全体を一次資料として最後まで安全に取得できなかった。確認できた断片だけでも、異モデルexpertのcolocation、通信順序最適化、異種GPU割当、4クラスタ設定、最大2.38倍/3.54倍高速化、GPU利用率改善、最適解との差1.07倍等は一次PDF由来と確認できるが、未取得部分を補って5-slotを完成させることはしない。次回はarXiv公式HTML/PDF、PURE PDF、または著者・機関公式コピーの全文取得可能経路で再試行する。"
     }
   ],
-  "last_blocked_at": "2026-09-18T05:45:59+00:00",
-  "retry_queued_at": "2026-09-18T07:03:06+00:00",
-  "completed_at": "2026-09-18T10:02:59+00:00"
+  "last_blocked_at": "2026-09-18T10:02:59+00:00",
+  "completed_at": "2026-09-18T10:02:59+00:00",
+  "retry_not_before": "2026-09-18T12:04:30+00:00"
 }

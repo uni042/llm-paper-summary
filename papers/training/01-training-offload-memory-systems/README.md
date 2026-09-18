@@ -55,7 +55,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   SSD上のパラメータと最適化状態をCPU・GPUへ毎回戻さず、FPGA搭載SmartSSD内でAdam更新を実行して、PCIeを通る状態転送量と学習のI/O待ちを減らす方式。
 
 - **2023-10 · [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)**  
-  実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：4  
   テンソルの生存期間と次回利用時刻を実行グラフから求め、GPU・ホストメモリ・SSD間の退避と先読みを自動化して、ページフォルトと転送待ちを減らす学習システム。
 
 - **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  

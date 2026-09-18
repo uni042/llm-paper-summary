@@ -49,7 +49,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：27  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 - **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
@@ -73,6 +73,6 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 4年前（2022-10〜2023-09）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：57  
+  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：58  
   Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
 <!-- survey:auto:end -->

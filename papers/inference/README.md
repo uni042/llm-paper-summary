@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **684本**。
+収録論文: **688本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,16 +25,17 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**684本**。
+推論論文：**688本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 50 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 51 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 1 |
 | [02-hardware-accelerators](02-hardware-accelerators/README.md) | 8 |
 | [02-memory-offload](02-memory-offload/README.md) | 1 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
+| [02-moe-inference](02-moe-inference/README.md) | 1 |
 | [02-moe-offload](02-moe-offload/README.md) | 2 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
 | [03-hierarchical-memory](03-hierarchical-memory/README.md) | 1 |
@@ -57,12 +58,12 @@
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 10 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 11 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
-| [06-serving-scheduling](06-serving-scheduling/README.md) | 14 |
+| [06-serving-scheduling](06-serving-scheduling/README.md) | 15 |
 | [06-speculative-decoding](06-speculative-decoding/README.md) | 6 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 41 |
