@@ -26,6 +26,7 @@ _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
 _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
+_ORIGINAL_DISCOVERY_ROUND_IDENTITY = _core._discovery_round_identity
 
 
 def __getattr__(name: str) -> Any:
@@ -42,6 +43,22 @@ def _scheduled_half_hour_from_claimed_at(value: Any):
     else:
         local = local.replace(minute=30, second=0, microsecond=0)
     return local.astimezone(claimed_at.tzinfo)
+
+
+def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
+    """Accept both current and durable pre-v10 Discovery round identities."""
+    identity = _ORIGINAL_DISCOVERY_ROUND_IDENTITY(submission)
+    if identity is not None:
+        return identity
+    payload = submission["payload"]
+    stats = payload.get("discovery_stats")
+    if not isinstance(stats, dict):
+        return None
+    run_key = str(payload.get("run_key") or "").strip()
+    round_id = str(stats.get("round") or "").strip()
+    if not run_key or not round_id:
+        return None
+    return run_key, round_id
 
 
 def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
@@ -139,6 +156,7 @@ def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
 
 
 _core.evidence._collect_submissions = _collect_submissions
+_core._discovery_round_identity = _discovery_round_identity
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
 
