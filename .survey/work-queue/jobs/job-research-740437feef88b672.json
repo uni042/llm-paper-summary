@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-740437feef88b672",
+  "type": "research",
+  "parent_job_id": "job-43d9a8057337c9ad",
+  "priority": 91,
+  "canonical_id": "DOI:10.1145/3695053.3731073",
+  "title": "AiF: Accelerating On-Device LLM Inference Using In-Flash Processing",
+  "source_url": "https://doi.org/10.1145/3695053.3731073",
+  "paper_path": null,
+  "selection_reason": "ISCA 2025の一次査読論文。SSD offloadの外部帯域制約を避けるためGEMVをNAND flash内部へ移し、charge-recycling readとbias-error encodingで内部read帯域とECC実装性を改善する。8モデルのfull-system評価でbaseline SSD offload比平均14.6x throughput、in-memory比平均1.4x throughputを報告し、SSD/NVMe階層・near-storage inferenceの重点系統に直接該当する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T18:59:35+00:00"
+}
