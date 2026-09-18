@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:03:07 JST**
+> 自動生成: **2026-09-18 14:05:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **50** |
+| 収録候補論文 | **52** |
+| 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（1時間58分前）** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（2時間1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **1** | **0** | **1** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **16** | **2** | **0** | **2** | **0** | **0** | **1** |
-| 合計 | **27** | **3** | **0** | **3** | **0** | **0** | **1** |
+| Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
+| 合計 | **29** | **3** | **2** | **1** | **0** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,14 @@
 
 ### Discovery
 
+- **09-18 14:03:28 JST** job `job-ea2bc33c8f1495f0` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260918T1408JST-discovery-specialist-offloaded-kv-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
+  - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
+- **09-18 14:03:37 JST** job `job-1b47de6fd2d6d3b6` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json`
+  - 探索軸: 2609後半・agentic serving・speculative decoding・KV representation
 - **09-18 12:59:12 JST** job `job-9409898dd94f1482` / 候補 **3件**
   - result: `.survey/work-queue/results/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1306JST-discovery-specialist-heterogeneous-control-1.json`
@@ -137,14 +145,6 @@
   - result: `.survey/work-queue/results/20260918T1015JST-discovery-b421e80d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260918T1015JST-discovery-b421e80d.json`
   - 探索軸: 分離サービング・routing・HPC scale-out
-- **09-18 10:04:09 JST** job `job-58ba9b968390ace8` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T1021JST-discovery-c7329e11.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1021JST-discovery-c7329e11.json`
-  - 探索軸: agentic serving・tool wait・multi-turn KV retention
-- **09-18 10:07:45 JST** job `job-f7a9e21348e7d3cb` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260918T1028JST-discovery-d80f7c22.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
-  - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
 
 ### 直近タスク
 
@@ -163,16 +163,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 14:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **1件**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **0件** / 候補: **1件**
 - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth / 2609後半・agentic serving・speculative decoding・KV representation
 - round `specialist-offloaded-kv-sparse-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260918T1408JST-discovery-specialist-offloaded-kv-1.json`
   - 探索軸: offloaded KV cache・million-token sparse decoding・host-memory scan bandwidth
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1408JST-discovery-specialist-offloaded-kv-1.json` (`ok=true`)
 - round `specialist-late-september-inference-2` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260918T1412JST-discovery-specialist-late-september-inference-2.json`
   - 探索軸: 2609後半・agentic serving・speculative decoding・KV representation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260918T1412JST-discovery-specialist-late-september-inference-2.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -199,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
@@ -227,10 +227,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **501** |
+| 成功result未照合のimmutable submission | **499** |
 | └ Research | **370** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **127** |
 
 ### 厳格検証が未成立のcompleted job
 
