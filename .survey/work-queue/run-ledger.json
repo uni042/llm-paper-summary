@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T20:17:33.261521+00:00",
+  "updated_at": "2026-09-18T20:18:35.081209+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T20:17:33.261521+00:00",
+      "last_recorded_at": "2026-09-18T20:18:35.081209+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 272,
         "audit_completed": 0,
         "discovery_completed": 149,
-        "blocked": 33,
+        "blocked": 34,
         "new_jobs": 235,
         "new_papers": 269,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35301756075:1",
-          "recorded_at": "2026-09-18T03:04:20.630650+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35301756075",
-            "run_attempt": "1",
-            "source_sha": "0b8d2592e7ec50395af01395f653c2817d057589"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35305223438:1",
           "recorded_at": "2026-09-18T04:01:12.027323+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35390597143",
             "run_attempt": "1",
             "source_sha": "6d1416f8ca0fbf36044344f69f255acb35afc773"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35390718463:1",
+          "recorded_at": "2026-09-18T20:18:35.081209+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35390718463",
+            "run_attempt": "1",
+            "source_sha": "f97e1ca962e36ce9d0e961d55d46ed64b165f9ae"
           },
           "signals": [
             "job_blocked"
@@ -23230,6 +23230,14 @@
           "type": "research",
           "canonical_id": "DOI:10.1109/LCA.2026.3703982",
           "title": "HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-9deede0a4d81ad54",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+          "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
           "from": "ready",
           "to": "blocked"
         }

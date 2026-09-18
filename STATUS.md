@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 05:18:17 JST**
+> 自動生成: **2026-09-19 05:18:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **55** |
+| 収録候補論文 | **54** |
 | 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **50** |
 | 最終検証済みResearch収録 | **09-19 05:15:47 JST（2分前）** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **55** |
+| canonical_id確認済みの一意な候補論文 | **54** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **55** |
+| 非終端Research job合計 | **54** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **18** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **10** | **3** | **3** | **0** | **0** | **0** | **15** |
-| 合計 | **28** | **6** | **6** | **0** | **1** | **0** | **15** |
+| 合計 | **28** | **6** | **6** | **0** | **0** | **0** | **15** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -196,10 +196,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/LCA.2026.3660969` — H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 05:17:56 JST** / heartbeat: **—** / lease expiry: **09-19 06:47:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9deede0a4d81ad54.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -219,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **55** |
+| ready | **54** |
 
 ### 候補の重複・識別情報欠損
 
@@ -247,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **558** |
-| └ Research | **429** |
+| 成功result未照合のimmutable submission | **559** |
+| └ Research | **430** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
