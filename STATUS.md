@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:35:43 JST**
+> 自動生成: **2026-09-19 01:35:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-19 01:21:10 JST（14分前）** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-19 01:35:47 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **1** | **0** | **1** | **3** | **0** | — |
+| Research | **10** | **1** | **0** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **20** | **9** | **9** | **0** | **0** | **0** | **2** |
-| 合計 | **29** | **10** | **9** | **1** | **3** | **0** | **2** |
+| 合計 | **30** | **10** | **9** | **1** | **2** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 01:35:47 JST** [research] `arXiv:2606.26120` — Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM
+  - job: `.survey/work-queue/jobs/job-research-11c68d7adc12c492.json`
+  - result: `.survey/work-queue/results/research/attempt-f0acf688ceaad1c0809f2085.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f0acf688ceaad1c0809f2085.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md`
 - **09-19 01:21:10 JST** [research] `arXiv:2502.05202` — Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies
   - job: `.survey/work-queue/jobs/job-research-044cfc2969a67347.json`
   - result: `.survey/work-queue/results/research/attempt-384f6c5d18e06374b6aa837f.json` (`ok=true`)
@@ -201,10 +206,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.26120` — Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
-  - claim: **09-19 01:34:35 JST** / heartbeat: **—** / lease expiry: **09-19 03:04:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-11c68d7adc12c492.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-llm-survey`
   - claim: **09-19 01:30:32 JST** / heartbeat: **—** / lease expiry: **09-19 03:00:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-9d3c210288b42eb4.json`
@@ -230,7 +232,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -250,7 +252,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **723** |
+| inference/training/survey配下の論文Markdown実体 | **724** |
 
 ### immutable submissionの未照合
 
@@ -258,8 +260,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **542** |
-| └ Research | **413** |
+| 成功result未照合のimmutable submission | **541** |
+| └ Research | **412** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
