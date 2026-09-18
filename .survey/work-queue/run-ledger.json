@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-18T22:07:38.165843+00:00",
+  "updated_at": "2026-09-18T22:11:52.413644+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-18T22:07:38.165843+00:00",
+      "last_recorded_at": "2026-09-18T22:11:52.413644+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 276,
+        "research_completed": 277,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35312076274:1",
-          "recorded_at": "2026-09-18T05:46:02.577359+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35312076274",
-            "run_attempt": "1",
-            "source_sha": "241143325efdd9037875c9c6d2fee0f7eb31a355"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35312949399:1",
           "recorded_at": "2026-09-18T06:01:32.064502+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35400090659",
             "run_attempt": "1",
             "source_sha": "7a289e87f9cb18b7603adb86eed4a380f0d5a54e"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35400429231:1",
+          "recorded_at": "2026-09-18T22:11:52.413644+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35400429231",
+            "run_attempt": "1",
+            "source_sha": "1a396634444019b67efe60ebab53e006ca9d984c"
           },
           "signals": [
             "research_completed"
@@ -23277,6 +23277,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.28018",
           "title": "Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f7dcdf40e7d3538f",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08993",
+          "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
           "from": "ready",
           "to": "completed"
         }
