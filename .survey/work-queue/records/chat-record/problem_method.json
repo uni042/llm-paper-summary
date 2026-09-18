@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-c3199f327d8e2f9e461a73e8",
   "job_id": "job-research-07d26e029c945d64",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c3199f327d8e2f9e461a73e8",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "GPUメモリを超えるLLMをNVIDIA統合仮想メモリ（Unified Virtual Memory; UVM）で動かすと、GPUにないページへのアクセスがページフォルトを起こしCPU―GPU間のオンデマンド移送が支配的になる。既存の自動UVM先読みはcudaMallocManaged単位など粗い管理オブジェクトしか見えない一方、PyTorchは大きなキャッシュプール内に多数の寿命・アクセス特性の異なるテンソルをサブアロケートするため、UVM側からテンソル境界とカーネルごとの必要データが見えない。論文の単純なオブジェクト単位先読みでは、実際に使うデータの平均6倍、最大23倍の不要データを先読みして帯域とGPU容量を浪費する。",
+    "novelty": "AutoUVMは深層学習フレームワークのテンソル意味情報とUVMを橋渡しし、モデルコードを書き換えずにテンソル単位の自動先読みを行う。1回のオフラインプロファイルでカーネル―テンソル対応を復元し、作成元コールスタックと割当カウンタによる安定識別子で実行間のアドレス変動を吸収する。さらに全テンソルを盲目的に移送せず、ルーフライン着想の方針でCPU-GPU相互接続律速カーネルだけを選択し、短期再利用テンソルをGPUへ滞在させる。オンライン監視でメモリ圧力によるカーネル特性変化も再分類する点が特徴。",
+    "method_overview": "オフライン段階ではExecution Tracerがカーネル起動とテンソルアクセスの対応、テンソル作成情報、実行統計を1回の実行から収集する。UVM AnalyzerはカーネルをGPU計算律速、GPUメモリ律速、CPU-GPU相互接続律速へ分類し、連続カーネル間で再利用されるテンソルのaffinityも求め、Execution Profile Databaseへ保存する。オンライン段階ではPrefetch Engineが次カーネルに必要なテンソルだけをcudaMemPrefetchAsync等で事前移送し、相互接続律速でないカーネルでは不要な移送を避ける。再利用性の高いテンソルにはcudaMemAdviseを使って再利用区間中のGPU滞在を促す。Runtime Monitorは実行時間等を継続観測し、オーバーサブスクリプションによる退避でカーネル分類が変化した場合に方針を更新する。",
+    "components": [
+      {"name":"カーネル―テンソル追跡と安定テンソル識別","description":"動的計算グラフや実行ごとのアドレス変動に依存せず、カーネルとアクセス対象テンソルの組を記録する。テンソルは作成元コールスタックと単調増加割当カウンタ、カーネルは起動元コールスタックハッシュと起動カウンタで識別する。不一致時は対象先読みを無効化して正しさを優先する。"},
+      {"name":"ルーフライン着想の選択的先読み","description":"GPU計算・GPUメモリ・CPU-GPU相互接続の各上限からカーネルの律速要因を分類し、CPU-GPU転送遅延に敏感なカーネルだけを積極先読みする。これにより帯域とGPU容量を、性能に効く移送へ集中させる。"},
+      {"name":"look-ahead tensor affinity","description":"連続カーネルで短期再利用されるテンソルを検出し、cudaMemAdviseでGPU滞在を促す。再移送とページフォルトを減らす補助機構。"},
+      {"name":"オンライン適応監視","description":"オーバーサブスクリプション時の退避で実行特性がオフラインプロファイルからずれるため、実行時間を軽量監視してカーネル分類を動的更新し、Prefetch Engineの判断へ反映する。"}
+    ],
+    "system_design": "Offline Profiler、Execution Profile Database、Online Executorの三部構成。PyTorchのCUDA caching allocatorへ軽量hookを入れ、UVM利用のためcudaMallocをcudaMallocManagedへ置換する。NVBitでFLOP命令・メモリロードを計測し、Compute Sanitizer APIで先読み・affinity primitiveを注入する。"
+  },
+  "reservation": {"claim_id":"claim-c3199f327d8e2f9e461a73e8","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
