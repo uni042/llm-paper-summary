@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:42:50 JST**
+> 自動生成: **2026-09-18 09:43:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -209,9 +209,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2411.17741` — Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:41:51 JST** / heartbeat: **—** / lease expiry: **09-18 11:11:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d9f05d11667dcf83.json`
+- `arXiv:2508.12851` — Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:43:10 JST** / heartbeat: **—** / lease expiry: **09-18 11:13:10 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a1874def735a479b.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
@@ -265,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **476** |
-| └ Research | **347** |
+| 成功result未照合のimmutable submission | **477** |
+| └ Research | **348** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
