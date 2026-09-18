@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 17:03:46 JST**
+> 自動生成: **2026-09-18 17:32:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **52** |
-| 未claim Research job | **52** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 16:41:52 JST（21分前）** |
+| 未claim Research job | **51** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-18 16:41:52 JST（50分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **2** | **2** | **0** | **0** | **0** | — |
+| Research | **6** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **11** | **11** | **0** | **0** | **0** | **28** |
-| 合計 | **30** | **13** | **13** | **0** | **0** | **0** | **28** |
+| Discovery | **19** | **11** | **11** | **0** | **0** | **0** | **28** |
+| 合計 | **25** | **13** | **13** | **0** | **1** | **0** | **28** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-36ebd37ab918e1cf55c1a45f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-36ebd37ab918e1cf55c1a45f.json`
   - paper: `papers/inference/03-kv-cache/2026-2609.13692-prefix-sharing-sorting-problem.md`
-- **09-18 11:11:47 JST** [research] `arXiv:2609.17943` — ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-fb4ae3eceb455bfc.json`
-  - result: `.survey/work-queue/results/research/attempt-cec69bfeb43d99a153789edc.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cec69bfeb43d99a153789edc.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md`
 
 ### Audit
 
@@ -204,8 +199,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.19662` — ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents / worker `scheduled-chat-llm-survey`
+  - claim: **09-18 17:32:15 JST** / heartbeat: **—** / lease expiry: **09-18 19:02:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-abd379cf035bd8f0.json`
 
 #### Audit
 
