@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-b9d676ed397522f747b185c2",
-  "job_id": "job-research-ebde0cc040167968",
-  "data": {
-    "limitations": "演算子プロファイル駆動なので、未計測の新ハードウェアでは外部シミュレータまたは実機プロファイルの品質に精度が依存する。ASTRA-sim/Chakraを拡張した詳細な要求駆動模擬は軽量シミュレータより実行時間が長く、非常に大きな探索空間では費用が増える。TPU実機検証は当時のvLLM-TPUが安定対応する単一インスタンス密モデルに限定され、TPU上のPD分離や接頭辞キャッシュは仮想探索に留まる。PIM事例も実機ではなくプロファイルによる将来ハードウェアケーススタディである。",
-    "differences": "初代LLMServingSimは単一インスタンスの実行統計中心で、複数インスタンス、MoE、分散鍵値配置、PD分離に非対応。Vidur/APEXは演算子プロファイルと構成探索に強いが、多階層メモリ、異種配置、接頭辞共有などの相互作用が限定的。TokenSimは動的要求と注意状態再利用を扱うがメモリ抽象化が簡略で、帯域競合や鍵値移動の忠実度が不足する。2.0は異種デバイスプール、演算子配置、詳細メモリ移動、専門家経路、分離グループ、電力を同じ実行グラフと時間軸へ統合する。",
-    "implementation_status": "ISPASS 2026採択版。著者公式GitHubでシミュレータとartifactを公開し、arXiv v2にはartifact appendix、導入・実験手順・設定変更方法を収録。演算子プロファイラはGPUだけでなくTPUへ拡張済みで、外部性能モデルから将来PIMも取り込める。",
-    "research_positioning": "推論基盤研究の評価インフラ系統に位置し、単一の新スケジューラではなく、スケジューラ、鍵値階層、オフロード、MoE、PD分離、異種アクセラレータを共通の実行時意味論で比較する土台を提供する。特にSSD/CXL/遠隔メモリ、PIM、異種GPUなど、実機構築費が高い設計をサービング方策と共同探索する研究に直接利用できる。"
-  },
+  "attempt_id": "attempt-a79bd772dccd9a8939166474",
+  "job_id": "job-research-9c0ef4e091be369c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b9d676ed397522f747b185c2",
+    "claim_id": "claim-a79bd772dccd9a8939166474",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

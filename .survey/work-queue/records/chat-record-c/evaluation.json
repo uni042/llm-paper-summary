@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b9d676ed397522f747b185c2",
-  "job_id": "job-research-ebde0cc040167968",
-  "data": {
-    "hardware": "実機検証は(1) RTX A6000×4とIntel Xeon Gold 6326、(2) H100-SXM-80GB×8、(3) Google Cloud TPU-v6e-1。A6000は40GB・936GB/s・PCIe 4.0×16、H100は80GB・3.35TB/s・NVLink、TPUは32GB・1.6TB/s・800GB/s相互接続として設定。PIM事例は256チャネル、各1GB HBM2、2000MT/s。",
-    "software": "実サービングはvLLM。CPU共有接頭辞キャッシュ検証ではLMCacheを併用。シミュレータは改造ASTRA-sim/Chakra、PyTorch/HuggingFace演算子プロファイラ、公開LLMServingSim 2.0実装を使用。",
-    "methodology": "密モデルLlama 3.1-8B/70BとMoEのPhi-mini MoE、Mixtral 8×7Bを使用。通常評価はShareGPTから300要求を抽出し、毎秒10要求のPoisson到着を生成。実機との時系列処理量、TTFT、TPOT、総合遅延、メモリ使用量、接頭辞命中率、電力・エネルギーを比較。比較シミュレータはVidur、APEX、TokenSim、初代LLMServingSim。複雑な分離・MoE構成では各比較方式が実行可能な範囲だけ比較する。",
-    "scope": "同種GPUの単一インスタンスだけでなく、複数インスタンス、接頭辞共有、事前充填・復号分離、MoE、TPU、仮想PIMを含む。プロファイルに基づくシステムレベル精度を狙い、個々のGPUマイクロアーキテクチャを命令単位で模擬する方式ではない。"
-  },
+  "attempt_id": "attempt-a79bd772dccd9a8939166474",
+  "job_id": "job-research-9c0ef4e091be369c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b9d676ed397522f747b185c2",
+    "claim_id": "claim-a79bd772dccd9a8939166474",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
