@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-49a5f136c96efe1a74ef7842",
-  "job_id": "job-research-b2d29fa9c529bdfd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-49a5f136c96efe1a74ef7842",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-49a5f136c96efe1a74ef7842","job_id":"job-research-b2d29fa9c529bdfd","data":{"canonical_id":"arXiv:2607.17538","arxiv_id":"2607.17538","doi":"10.48550/arXiv.2607.17538","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation","summary":"D-NOVAは検索拡張生成（Retrieval-Augmented Generation; RAG）の密ベクトル検索を、SSD制御器の外付け演算器ではなく三次元NAND配列そのものへ押し込む記憶内検索加速器である。従来方式は候補埋め込みをNANDから読み出して制御器や近接演算器で再順位付けするため、検索時間の大部分がデータ移動に残る。D-NOVAはNAND文字列の直列導通を利用した二重境界類似度検出を導入し、元ベクトルと補数ベクトルに対する二つの上限判定から類似度を直接検出する。さらに検索段階ごとに同時活性化ワード線数を変え、埋め込みをこの離散距離へ適応させる軽量対照学習アダプタ、近いクラスタを近接配置する写像を組み合わせる。六つの検索データ集合で、CPU基準より最大41.7倍高速・71倍高効率、既存記憶内検索器REISより最大12.1倍の処理量を報告する。","list_summary":"RAGのベクトル検索を三次元NAND配列内の二重境界検出へ変換し、候補埋め込みの外部読出しを避けてCPU比最大41.7倍高速化する。","authors":["Chang Eun Song","Sumukh Pinge","Tianqi Zhang","Sung Eun Kim","Tajana S Rosing","Mingu Kang"],"authors_affiliations":"University of California, San Diego","published":"2026-07-20","publication":"The 58th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026), arXiv:2607.17538v1","publication_type":"国際会議論文・プレプリント","publication_status":"MICRO 2026掲載予定、arXiv v1公開","lineage":"検索拡張生成・三次元NAND・記憶内検索・ベクトル検索・計算ストレージ","topics":["検索拡張生成","三次元NAND","近似最近傍検索","倒立ファイル索引","記憶内処理","QLC"],"importance":"SSDを単なる文書・埋め込み保存層ではなく、RAG検索の三段階類似度計算まで担う演算層へ変える。NANDから完全な候補埋め込みを読み出さず、配列内でしきい値判定と得点集約を行うため、SSD活用型LLM推論の直接的な隣接系統である。","implementation":"周期精度イベント駆動型の独自シミュレータ、Spectre 19.1と14nm PTM-MGによる回路モンテカルロ解析、ASAP7/OpenROADによる周辺集積回路合成を組み合わせる。実製品SSD上のソフトウェア実装ではない。","hardware_evaluation":"PCIe 4.0 x4、8チャネル各2.0 GB/s、各チャネル8ダイ、各ダイ12プレーン、各プレーン256ブロック、128ワード線・16Kビット線・16選択線。QLC読出し140マイクロ秒、SLC相当検出30マイクロ秒をモデル化する。","quality_effect":"FP32のIVF-Flatを精度基準とし、Recall@25/100で評価する。対照学習アダプタと許容幅2の二重境界検出により、NANDしきい値ばらつきを含めても基準に近い再現率を維持する。攻めた並列構成では数%の再現率低下と引き換えに処理量を増やす。","source":"https://arxiv.org/abs/2607.17538","sources":["https://arxiv.org/abs/2607.17538","https://arxiv.org/html/2607.17538"],"code":null,"project":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"arXiv HTML全文の参考文献節まで確認したが、個別識別子は構造化配列へ転記していない。","references_total":0},"reservation":{"claim_id":"claim-49a5f136c96efe1a74ef7842","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
