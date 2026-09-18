@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-75bcc03e6fad92c2b911b240","job_id":"job-research-6af027835df580e1","data":{"limitations":"CPU側再構築は混合精度学習で勾配が完全チェックポイントより小さいことと、CPUでGPUと同じ最適化器更新を再現できることを利用するため、任意の最適化器・学習方式へそのまま適用できるとは限らない。GoCkpt-Oは勾配バッファが次の逆伝播まで保持されるDeepSpeed系実装特性に依存する。複数GPU評価は各GPUが独立PCIe root domainとNVMe経路を持つ構成で、共有スイッチや共有SSDが飽和する場合の拡張性は未実証。復元読込み自体は従来同期方式のままで高速化対象外。","differences":"CheckFreqやDataStates-LLMなどは一つの学習ステップ内でスナップショット転送を計算と重ねるが、一貫性境界のため転送時間が一ステップを超えると停止が残る。PCCheck等はSSD/永続化パイプラインを高速化してもGPU-CPU転送律速を根本的に消さない。GoCkptはCPU上で後から一貫性を再構築できるよう低精度勾配を追加転送することで、スナップショット転送そのものを複数ステップへまたがせる点が異なる。","implementation_status":"Python/C++約2000行をDeepSpeedへ統合し、save_checkpoint、backward_begin、update_beginの三API、Pybind11、独立CUDA stream、固定CPUメモリ、C++多スレッド、DeepSpeed CPU AdamWを実装。V100SとH100実機で評価。arXiv本文では独立公開コードURLは確認できなかった。","research_positioning":"学習時の耐久状態I/Oを、単なるSSD書込み最適化ではなくGPU-CPU転送・CPU状態再構築・NVMe永続化の三段階パイプラインとして扱う研究。特に『古い状態＋その後の勾配』をCPUへ送り最新チェックポイントを再演算する考え方は、転送時点の一貫性制約を緩めて長い時間窓へI/Oを分散する。階層メモリ研究の観点ではGPU→CPU→SSDの各層を並列化し、4MBチャンクと多スレッド永続化で下位層帯域を使い切る具体例となる。"},"reservation":{"claim_id":"claim-75bcc03e6fad92c2b911b240","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-120d2d3cb0fa96918f480540",
+  "job_id": "job-research-56fbeb640bc1560d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-120d2d3cb0fa96918f480540",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
