@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-acffb77470592a9e8f9dbd06",
-  "job_id": "job-research-4fd6dcd288e7197d",
-  "data": {
-    "hardware": "検証サーバはAMAX workstationのNVIDIA A100 80GB×4をNVLink接続。投機クラスタは個別ノードとしてRTX 2080Ti×8とRTX 3090×8を100Mbps Ethernetで接続し、両ハードウェア群は10Gbps Ethernet・sub-1msで接続。",
-    "software": "Python 4.2k LoC、PyTorch 2.1、DeepSpeed 0.12、Ubuntu 22.04、Docker。A100側はtensor/pipeline parallelism、4-stage pipeline・16 microbatches。Hugging Face generate()へCUDA rejection samplingを追加。",
-    "methodology": "PIQA、MedQA、FIQA、Alpaca、OASST2から比率を保って8192 promptsを無作為抽出。DeepSeek-R1-Distill-Llama-70B/LLaMA68MとDeepSeek-R1-Distill-Qwen-32B/Qwen2.5-0.5Bを評価。FP16、input 256 tokens、output 128 tokens、greedy sampling。offlineはbatch size 1〜16、10独立試行・95% CI。onlineは1分warm-up後2時間、低・高・変動到着率。比較はvLLM、Vanilla speculative inference、PipeInfer、SpecInfer。",
-    "scope": "異種multi-node speculative servingを対象とし、offline latency/throughput、online latency/cost efficiency、component ablationを評価する。ドラフタは対象5分野でdomain-specialized fine-tuningされ、受理長は1.69〜3.20程度の差を持つ。ネットワークは実験構成固定で、より広域・高遅延環境の評価はない。"
-  },
+  "attempt_id": "attempt-de75a2b1f21d80bfa022a7ba",
+  "job_id": "job-research-469eef375f5f828e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-acffb77470592a9e8f9dbd06",
+    "claim_id": "claim-de75a2b1f21d80bfa022a7ba",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

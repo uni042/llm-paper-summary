@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-acffb77470592a9e8f9dbd06",
-  "job_id": "job-research-4fd6dcd288e7197d",
-  "data": {
-    "limitations": "評価は4×A100と16台の2080Ti/3090という固定異種構成、256-token input/128-token output、5分野の8192 promptsに限定される。投機クラスタ内部100Mbps、サーバ間10Gbps・sub-1msというネットワーク条件であり、WANや混雑ネットワークへの感度は示されない。専門drafterのdomain fine-tuningが必要で、新規分野やworkload drift時の維持費は未評価。cost efficiencyは計算量正規化を含み、電力・ネットワーク・管理費を含むTCOではない。公開code URLは本文から確認できない。",
-    "differences": "Vanilla speculative inferenceは単一drafterとverificationを結合実行するのに対し、CoSineは物理ノードを分離する。PipeInferもpipeline化するがruntime状態に応じたdrafter参加・投機量の動的均衡が弱い。SpecInferは複数drafterのtree候補を使うが、CoSineはdomain expertiseとhistorical verificationを使うrouting、生成途中のconfidence fusion、異種資源へのphase placementを追加する。Minions等のcollective speculative decodingに対しても、serving-level batch assignmentとverification-side parallelismを含むend-to-end systemとして位置づけられる。",
-    "implementation_status": "arXiv v2の研究prototype。Python約4.2k LoC、PyTorch 2.1、DeepSpeed 0.12、Dockerで実装し、A100/2080Ti/3090実機で評価。Hugging Face generate()へCUDA rejection samplingを追加し、論文ではsequential decoding比1.7× faster verificationを報告。公開repository URLは本文に記載なし。",
-    "research_positioning": "speculative decodingを単一ノード内アルゴリズムからheterogeneous multi-node servingへ拡張する系統。特に、drafter knowledge specializationをrouting信号として扱う空間制御と、draft/verifyの処理率を合わせる時間制御を統合している。P/D disaggregationと同様にphase特性に応じてhardwareを分ける発想をspeculative inferenceへ適用し、multi-drafter tree verification系統とserving scheduler系統を接続する。"
-  },
+  "attempt_id": "attempt-de75a2b1f21d80bfa022a7ba",
+  "job_id": "job-research-469eef375f5f828e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-acffb77470592a9e8f9dbd06",
+    "claim_id": "claim-de75a2b1f21d80bfa022a7ba",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
