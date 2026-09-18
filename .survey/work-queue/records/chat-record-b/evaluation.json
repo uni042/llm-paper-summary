@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-d0fe97adcacea05d58b20b59",
-  "job_id": "job-research-660ceb86238a1a21",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d0fe97adcacea05d58b20b59",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d0fe97adcacea05d58b20b59","job_id":"job-research-660ceb86238a1a21","data":{"hardware":"単一NVIDIA A100 80GB。鍵値キャッシュ容量は全実験で約32万トークン。","software":"Llama-3 8B Instruct、SGLang v0.3.0を基盤としたFairInference実装。δ公平スケジューラは約3〜4千行で、分離実行シミュレータはC言語の別ワーカースレッドとしてPython本体へ動的結合する。比較は標準SGLang、VTC、DLPM、利用者ごとに鍵値容量を1/N固定する静的分割。","methodology":"ミクロ評価では適正需要利用者と高需要利用者を組み合わせ、接頭辞再利用差と生成長差による干渉を測る。主要な尾部指標は初回トークン時間、トークン間隔、最終トークン時間の99百分位。処理量はprefill入力トークンとcompletionトークンを利用者種別・全体で測る。マクロ評価ではWildChatの実会話履歴から八利用者を構成し、七適正需要利用者と一高需要利用者を競合させる。δ=0、1秒、5秒を比較し、静的分割に対する利用率改善と既存公平スケジューラに対する遅延分離を確認する。","scope":"主評価は単一A100とLlama-3 8B Instruct、prefill優先型SGLangである。複数GPU、ハイブリッドprefill/decodeバッチ、最新SLO公平方式との広範比較、FairRAGを含むツール呼び出し合成保証は将来作業として残る。"},"reservation":{"claim_id":"claim-d0fe97adcacea05d58b20b59","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
