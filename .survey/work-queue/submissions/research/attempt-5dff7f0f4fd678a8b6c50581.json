@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-5dff7f0f4fd678a8b6c50581",
+  "job_id": "job-research-9deede0a4d81ad54",
+  "claim_id": "claim-5dff7f0f4fd678a8b6c50581",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "reason": "一次資料全文を安全に取得できなかった。DOI 10.1109/LCA.2026.3660969のIEEE掲載情報は確認できたが、本文全文へ到達できず、題名・DOI・著者で探索してもarXivや著者公式の同一論文全文は確認できなかった。後続一次論文FLINTやHBFlexがH3を先行研究として引用していることは確認したが、それらの記述をH3本文の代替証拠には使用しなかった。検索で得られた二次解説も全文精読の代わりにせず、推測による5-slot生成を避けて再試行可能なblockedとして保存する。",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-27b000808907-h3-hybrid-architecture-using-high-bandwidth-memory-and-high-bandwidth-flash-for-cost-efficient-llm-inference.md"
+}
