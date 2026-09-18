@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 09:45:25 JST**
+> 自動生成: **2026-09-18 09:45:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -209,9 +209,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.12851` — Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement / worker `scheduled-chat-discovery-routing`
-  - claim: **09-18 09:43:10 JST** / heartbeat: **—** / lease expiry: **09-18 11:13:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a1874def735a479b.json`
+- `arXiv:2509.23094` — d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching / worker `scheduled-chat-discovery-routing`
+  - claim: **09-18 09:45:42 JST** / heartbeat: **—** / lease expiry: **09-18 11:15:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ef418ddc1bde46e9.json`
 - `arXiv:2508.02558` — Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction / worker `scheduled-chat-discovery-specialist`
   - claim: **09-18 08:03:55 JST** / heartbeat: **09-18 09:06:03 JST** / lease expiry: **09-18 10:36:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-2829f7afbf13ae9b.json`
