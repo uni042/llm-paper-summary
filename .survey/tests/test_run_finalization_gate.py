@@ -18,6 +18,7 @@ def make_args(**overrides):
         active_assignment_handoff_safe=False,
         claim_state_checked=False,
         claim_result_pending=False,
+        submission_state_checked=False,
         submission_result_pending=False,
         ack_result_pending=False,
         hard_stop=False,
@@ -40,6 +41,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             continuation_finalization_allowed=True,
             active_assignment=True,
             claim_state_checked=True,
+            submission_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
@@ -53,7 +55,11 @@ class RunFinalizationGateTests(unittest.TestCase):
         )
         for field, target in cases:
             with self.subTest(field=field):
-                result = mod.decide(make_args(claim_state_checked=True, **{field: True}))
+                result = mod.decide(make_args(
+                    claim_state_checked=True,
+                    submission_state_checked=(field != "submission_result_pending"),
+                    **{field: True},
+                ))
                 self.assertEqual(result["decision"], "MUST_CONTINUE")
                 self.assertEqual(result["wait_seconds"], 10)
                 self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
@@ -66,6 +72,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=False,
             claim_state_checked=True,
+            submission_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
@@ -82,11 +89,42 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertIn("claim_state_not_checked", result["blocking_reasons"])
         self.assertEqual(result["next_action"], "CHECK_CLAIM_STATE")
 
+    def test_unchecked_submission_state_blocks_finalization(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=False,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("submission_state_not_checked", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "CHECK_SUBMISSION_STATE")
+        self.assertIn("submission", result["next_action_message"].lower())
+        self.assertTrue(result["next_action_message"])
+
+    def test_pending_submission_exposes_non_finalizing_progress_notice(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            submission_result_pending=True,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("終了しません", result["progress_notice"])
+        self.assertIn("待機", result["progress_notice"])
+        self.assertIn("再確認", result["progress_notice"])
+        self.assertEqual(result["next_action_message"], result["progress_notice"])
+
     def test_clean_stop_run_issues_permit(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",
             continuation_finalization_allowed=True,
             claim_state_checked=True,
+            submission_state_checked=True,
         ))
         self.assertEqual(result["decision"], "MAY_FINALIZE")
         self.assertTrue(result["finalization_permit"]["issued"])

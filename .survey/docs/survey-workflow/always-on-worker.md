@@ -45,11 +45,11 @@
 Research/Auditについて、5 slot + attempt固有immutable descriptorがGitHubへ耐久保存済み、または完全payloadがChatGPT Libraryへ耐久checkpoint済みなら、**Actionsがそのjobをterminalへ反映するまで待つことをrun内の同期障壁にしない**。
 
 - 送信済み・checkpoint済みjob IDをrun内で保持し、GitHub上でまだ`ready`でも同じjobを再精読しない。
-- descriptor送信後は`survey-submission-fast`の完了を待たず、最新queue/claim stateを再取得して次の1件だけclaimする。
+- descriptor送信後は`survey-submission-fast`の完了を待たず、最新queue/claim stateを再取得して次の1件だけclaimする。**submission-fastが処理中という理由でrunを終了してはならない。** 独立作業がある限り次作業へ進み、独立作業が無い場合だけ同一submissionを10秒実時間で再確認する。
 - 前jobが未保存の間は次jobを先取りclaimしない。
 - 未解決immutable descriptorが参照しているrecord bankはoccupiedとみなし上書きしない。
 - 別bankが空いていれば次jobでは別bankを使う。bankが空いていなくてもLibraryへ完全payloadを耐久保存できるなら研究を続ける。
-- Actions resultのterminal確認は必要だが、独立作業開始の前提条件にはしない。
+- Actions resultのterminal確認は必要だが、独立作業開始の前提条件にはしない。最終応答前には最新submission状態を必ず確認し、未確認・pendingのままnormal finalizationしない。
 - high-backlog research-only mode中はActions待ちをdiscoveryで埋めず、次Research/Auditを優先する。
 
 GitHub Actionsはclaim、immutable submission、backgroundの3レーンに分離されている。background側のfallback、citation、maintenance、index処理が詰まってもclaim-fastを待たせない。
@@ -77,7 +77,8 @@ GitHub Actionsはclaim、immutable submission、backgroundの3レーンに分離
 6. actionable readyがなければspillover candidateを処理する。
 7. 論文ストック0、candidate在庫low watermark未満、またはactionable researchが尽きた場合だけdiscoveryする。25本以上かつactionable researchありならdiscovery分岐へ入らない。
 8. discovery各ラウンド、blocked化、checkpoint後にもqueue/backlog/discovery stateを再取得する。
-9. 次の独立作業を始める前に§0の引き継ぎガードを評価する。ガード外で次の独立作業があれば1へ戻る。ガード内なら耐久保存と終了処理を行って終了する。
+9. continuation/finalization gateを呼んだら、返された `next_action_message` を次操作の人間可読表示として確認する。長時間の非同期待機を開始する場合は `progress_notice` をScheduled Chatへ表示し、「処理完了または明示的hard stopまで終了せず待機・再確認する」ことを明示する。
+10. 次の独立作業を始める前に§0の引き継ぎガードを評価する。ガード外で次の独立作業があれば1へ戻る。ガード内なら耐久保存と終了処理を行って終了する。
 
 Research/Auditの処理件数には、最低件数・目標件数・固定batch数・run当たり上限を設けない。high-backlog research-only modeを含め、一次資料取得と耐久保存経路が利用可能でactionable Research/Auditが残っており、§0の引き継ぎガード外である限り、完了件数に関係なく次jobへ進み、**そのrunで安全に処理できるだけ処理する**。何件完了したかは観測値であり、継続・終了判定には使わない。
 

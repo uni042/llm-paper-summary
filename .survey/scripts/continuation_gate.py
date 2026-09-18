@@ -36,6 +36,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
     claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
+    submission_state_checked = bool(
+        getattr(args, "submission_state_checked", False)
+        or getattr(args, "submission_result_pending", False)
+    )
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
     rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
     discovery_reset_progress_known = rounds_since_last_novel_raw is not None
@@ -96,7 +100,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     )
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
-    if args.global_dependency and not independent_work and not transient_claim_wait:
+    transient_submission_wait = bool(
+        submission_state_checked
+        and getattr(args, "submission_result_pending", False)
+        and args.github_read
+    )
+    if args.global_dependency and not independent_work and not transient_claim_wait and not transient_submission_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     hard_stop = bool(reasons)
@@ -126,6 +135,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif transient_claim_wait:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_CLAIM_RESULT"
+            finalization_allowed = False
+        elif not submission_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_SUBMISSION_STATE"
+            finalization_allowed = False
+        elif transient_submission_wait and not independent_work:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_SUBMISSION_RESULT"
             finalization_allowed = False
         else:
             decision = "CONTINUE"
@@ -158,6 +175,52 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
         )
 
+    submission_wait_action = "none"
+    submission_wait_seconds = 0
+    if transient_submission_wait and not independent_work:
+        submission_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        submission_wait_action = (
+            "keep_same_submission_identity; do_not_duplicate_submission; wait_10_real_seconds; "
+            "refresh_latest_head_and_matching_submission_result; if_available_check_survey_submission_fast; "
+            "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
+        )
+
+    progress_notice = ""
+    if required_action == "WAIT_FOR_CLAIM_RESULT":
+        progress_notice = (
+            "担当確保結果を待機しています。この処理が完了または明示的hard stopになるまで"
+            "この処理中はrunを終了しません。同じrequest_idを10秒ごとに待機・再確認します。"
+        )
+    elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
+        progress_notice = (
+            "submission fast laneの結果を待機しています。この処理が完了または明示的hard stopになるまで"
+            "この処理中はrunを終了しません。同じsubmissionを10秒ごとに待機・再確認します。"
+        )
+
+    if required_action == "CHECK_CLAIM_STATE":
+        next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
+    elif required_action == "WAIT_FOR_CLAIM_RESULT":
+        next_action_message = progress_notice
+    elif required_action == "CHECK_SUBMISSION_STATE":
+        next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
+    elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
+        next_action_message = progress_notice
+    elif required_action == "CONTINUE_WORK" and transient_submission_wait:
+        next_action_message = (
+            "submission fast laneは処理中ですが、この処理中は終了しません。最新queueを再取得して"
+            "次の独立Research/Auditまたは許可された独立作業へ進みます。"
+        )
+    elif required_action == "CONTINUE_WORK":
+        next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
+    elif required_action == "DISCOVER_AGAIN":
+        next_action_message = "未走査の探索軸へ進み、次のDiscovery roundを実行します。"
+    elif required_action == "REFRESH_AND_CONTINUE":
+        next_action_message = "最新canonical stateを再取得し、返された次の独立作業へ進みます。"
+    elif required_action == "FINALIZE":
+        next_action_message = "正本所定の停止条件を満たしたため、安全な最終化処理へ進みます。"
+    else:
+        next_action_message = required_action
+
     return {
         "decision": decision,
         "required_action": required_action,
@@ -177,6 +240,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "claim_result_pending": bool(args.claim_result_pending),
         "claim_wait_action": claim_wait_action,
         "claim_wait_seconds": claim_wait_seconds,
+        "submission_state_checked": submission_state_checked,
+        "submission_result_pending": bool(getattr(args, "submission_result_pending", False)),
+        "submission_wait_action": submission_wait_action,
+        "submission_wait_seconds": submission_wait_seconds,
+        "next_action_message": next_action_message,
+        "progress_notice": progress_notice,
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
@@ -192,8 +261,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "rule": (
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
-            "must explicitly confirm the latest claim state before ordinary work/finalization. Required "
-            "claim results are polled every 10 real seconds using the same request identity until "
+            "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
+            "claim/submission results are polled every 10 real seconds using the same target identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "Discovery specialist runs may use exhaustion as a voluntary stop reason only when "
@@ -220,6 +289,8 @@ def main() -> int:
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)
     ap.add_argument("--claim-result-pending", type=yn, default=False)
+    ap.add_argument("--submission-state-checked", type=yn, default=False)
+    ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)

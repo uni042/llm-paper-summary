@@ -119,7 +119,9 @@ GitHub direct writeもLibrary保存もできない場合だけ、未checkpoint�
 5. 予約bankへ `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5 slotを書く。
 6. Actionsと同じvalidator基準でpreflightする。
 7. 各slotの実際のGit blob SHAを取得し、attempt固有descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ保存する。GitHub write不能なら完全payloadをLibraryへcheckpointする。
-8. 完全payloadを耐久保存したらActions terminal反映を同期的に待たず、最新queue / candidate水位を再取得して次の独立作業へ進む。
+8. descriptor送信後にsubmission-fastがqueued / in_progress / result未生成でも、それをrun終了理由にしない。最新submission状態を確認済みとしてgateへ渡し、独立作業があれば終了せず次のResearch/Auditへ進む。独立作業が無ければ同一submissionを10秒実時間pollingする。
+9. continuation/finalization gateが返す `next_action_message` を次操作の表示として使用する。非同期処理を待ち始める場合、`progress_notice` が非空ならScheduled Chatへ表示し、「この処理が完了または明示的hard stopになるまでrunを終了せず、同じ対象を待機・再確認する」ことを明示する。
+10. 完全payloadを耐久保存したらActions terminal反映を同期的に待たず、最新queue / candidate水位を再取得して次の独立作業へ進む。
 
 完成MarkdownをScheduled Chatから送らない。固定件数・固定batch数・「1本完了したら終了」は設けない。
 
