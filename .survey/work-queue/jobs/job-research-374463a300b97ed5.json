@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-374463a300b97ed5",
+  "type": "research",
+  "parent_job_id": "job-521a57671b0e5d8a",
+  "priority": 68,
+  "canonical_id": "arXiv:2606.20537",
+  "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+  "source_url": "https://arxiv.org/abs/2606.20537",
+  "paper_path": null,
+  "selection_reason": "KV cacheだけでなくrecurrent/convolution/MTP stateとmetadataを含む完全なrestorable execution stateをgraph-bound capsuleとしてsnapshot/restore/fork/rollbackするruntime設計。small-batch/on-device agent再入場のstate-management問題を扱い、CUDA graph/static-buffer runtimeとcheckpoint機構を一体化するため隣接systemとして価値がある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T17:02:47+00:00"
+}
