@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 01:34:31 JST**
+> 自動生成: **2026-09-19 01:34:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -203,7 +203,7 @@
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.26120` — Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM / worker `scheduled-chat-discovery-specialist-20260919T012707JST`
-  - claim: **09-19 01:32:37 JST** / heartbeat: **—** / lease expiry: **09-19 03:02:37 JST**
+  - claim: **09-19 01:34:35 JST** / heartbeat: **—** / lease expiry: **09-19 03:04:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-11c68d7adc12c492.json`
 - `arXiv:2505.16056` — Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models / worker `scheduled-chat-llm-survey`
   - claim: **09-19 01:30:32 JST** / heartbeat: **—** / lease expiry: **09-19 03:00:32 JST**
