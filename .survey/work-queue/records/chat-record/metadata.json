@@ -4,10 +4,43 @@
   "slot": "metadata",
   "attempt_id": "attempt-ab76d4a962a0d6ea991a05b2",
   "job_id": "job-research-3001166a9d479500",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ab76d4a962a0d6ea991a05b2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2607.16339",
+    "arxiv_id": "2607.16339",
+    "doi": "10.48550/arXiv.2607.16339",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "title": "LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models",
+    "summary": "拡散型大規模言語モデルの半自己回帰生成では、同一ブロック内の反復ステップごとに変化しないトークンまで埋め込み、注意機構、全結合ネットワークを再計算する。LaCacheは、変化しない領域の埋め込み・第1層のRoPE適用済み状態・FlashAttentionのオンラインソフトマックス中間状態を再利用し、さらに第2層以降の全結合ネットワークへ細粒度FP8量子化を適用する。キャッシュ部分は出力を変えずに演算を省き、量子化部分は現代GPUの低精度演算器を使って主要な線形演算を高速化する。",
+    "list_summary": "拡散型LLMの反復生成で不変なトークン状態とFlashAttention中間状態を無損失再利用し、第2層以降をFP8化して、既存の生成ステップ削減法と組み合わせ可能な推論高速化を実現する。",
+    "authors": ["Xingru Chen", "Zelang Liang", "Yongjia Ma", "Jiqing Zhan", "Shuling Yang", "Lian Wen", "Kun Zhan"],
+    "authors_affiliations": "Li Auto Inc.",
+    "published": "2026-07-16",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "diffusion-llm-inference / caching / low-precision",
+    "topics": ["拡散型LLM推論", "キャッシュ", "FlashAttention", "FP8量子化", "推論高速化"],
+    "importance": "半自己回帰型の拡散LLMに固有の演算子単位の冗長性を対象とし、近似的な隠れ状態再利用ではなく第1層までの厳密再利用と低精度演算を分離して組み合わせた点が重要。",
+    "hardware_evaluation": "実GPU上でLLaDA系3モデルを評価。本文は設計GPUと記述し、付録では別種GPUでも追加評価しているが、本文HTMLで製品型番は明示されていない。FP8 Tensor Core相当の低精度行列演算支援を前提とする。",
+    "quality_effect": "無損失状態メモ化部分は数学的に同一出力を狙う。一方FP8量子化は近似だが、GSM8K、MATH、HumanEval、MBPP等で精度は概ね維持され、一部指標では小幅改善も観測された。",
+    "storage_targets": ["GPU HBM"],
+    "bottlenecks": ["反復ステップ間の重複演算", "線形層の演算・メモリ帯域"],
+    "source": "https://arxiv.org/abs/2607.16339",
+    "sources": ["https://arxiv.org/abs/2607.16339", "https://arxiv.org/html/2607.16339"],
+    "code": null,
+    "implementation": "論文はEmbedCache、RoPECache、FACache、DeepGEMMを用いたFP8線形層と融合演算の実装を説明するが、確認した一次資料には公式コードURLの記載を確認できなかった。",
+    "last_checked": "2026-09-19",
+    "references": [
+      {"canonical_id":"arXiv:2508.14148","arxiv_id":"2508.14148"},
+      {"canonical_id":"arXiv:2509.23094","arxiv_id":"2509.23094"},
+      {"canonical_id":"arXiv:2506.06295","arxiv_id":"2506.06295"},
+      {"canonical_id":"arXiv:2506.17298","arxiv_id":"2506.17298"},
+      {"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"}
+    ],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary-reference-section",
+    "references_total": 40
+  },
+  "reservation": {"claim_id":"claim-ab76d4a962a0d6ea991a05b2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
