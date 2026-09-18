@@ -2,62 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-134d632c037ba813a7f76d95",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {
-    "canonical_id": "arXiv:2508.02558",
-    "arxiv_id": "2508.02558",
-    "doi": "10.1609/aaai.v40i39.40586",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
-    "summary": "Sparse-dLLMは拡散型大規模言語モデルの反復復号で観測されるトークン重要度の時間的安定性を利用し、現在ブロック外の前方・後方の鍵値を注意得点で選別して動的に破棄する訓練不要の推論高速化法である。一段階遅延した双方向疎キャッシュにより、不安定な初期鍵値を避けつつ重要トークンだけを再利用する。LLaDAとDream系列で通常の拡散復号比最大10倍の処理量を報告し、ピークメモリをほぼ維持する。",
-    "list_summary": "拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。",
-    "authors": [
-      "Yuerong Song",
-      "Xiaoran Liu",
-      "Ruixiao Li",
-      "Zhigeng Liu",
-      "Zengfeng Huang",
-      "Qipeng Guo",
-      "Ziwei He",
-      "Xipeng Qiu"
-    ],
-    "authors_affiliations": "Fudan University; Shanghai Innovation Institute; Shanghai AI Lab",
-    "published": "2026-03-14",
-    "publication": "AAAI Conference on Artificial Intelligence 40(39), 33038-33046",
-    "publication_type": "国際会議論文",
-    "publication_status": "AAAI-26 published; arXiv 2508.02558",
-    "lineage": "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄",
-    "topics": [
-      "拡散型LLM",
-      "鍵値キャッシュ",
-      "疎注意",
-      "長文脈推論",
-      "推論高速化"
-    ],
-    "importance": "自己回帰型LLM向けの鍵値削減を双方向拡散復号へ拡張し、キャッシュ再利用と疎注意を同一の動的破棄機構へ統合した。",
-    "implementation": "LLaDA/Dreamの公式実装系を基盤にした訓練不要方式で、OpenCompass評価コードを含む公式GitHubを公開。",
-    "hardware_evaluation": "NVIDIA 4090 48GB GPU。LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B Base/Instructを評価。",
-    "quality_effect": "多くの一般・推論課題で通常復号と同等だが、DreamのHumanEvalでは構文上重要なトークンの破棄により低下を確認。",
-    "source": "https://arxiv.org/abs/2508.02558",
-    "sources": [
-      "https://ojs.aaai.org/index.php/AAAI/article/view/40586/44547",
-      "https://arxiv.org/abs/2508.02558"
-    ],
-    "code": "https://github.com/OpenMOSS/Sparse-dLLM",
-    "project": "https://github.com/OpenMOSS/Sparse-dLLM",
-    "last_checked": "2026-09-18",
-    "references": [],
-    "references_checked_at": "2026-09-18",
-    "references_source": "AAAI-26 primary manuscript",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-c45eda0ca290930fb74c6805",
+  "job_id": "job-research-2072895e5b6f0b68",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-134d632c037ba813a7f76d95",
+    "claim_id": "claim-c45eda0ca290930fb74c6805",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

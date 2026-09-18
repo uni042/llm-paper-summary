@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-134d632c037ba813a7f76d95",
-  "job_id": "job-research-2829f7afbf13ae9b",
-  "data": {
-    "hardware": "NVIDIA 4090 48GB GPU。",
-    "software": "LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-7B-Base、Dream-v0-7B-Instructのnative dLLM codebase。OpenCompassでbenchmark。比較はvanilla、dLLM-Cache、dKV-Cache、Fast-dLLM。",
-    "methodology": "default block length 32、seed 2025、retention ratio r=0.5、max-pooling kernel s=3。MMLU 5-shot、ARC-c 0-shot、PIQA 0-shot、GPQA 5-shot、GSM8K 4-shot、Math 4-shot、HumanEval 0-shotを評価し、accuracy、TPS、peak memoryを測る。性能scoreは3 independent trials平均、efficiencyは共通のrandom 10 instances平均。LongBenchとcontext length sweepも実施。delay step 0〜5、prefix-only対bidirectional、retention ratio/kernel sizeをablation。",
-    "scope": "4つの約7〜8B級dLLMと単一4090中心。native implementationのためvLLM等production serving stackでのend-to-end評価、batching/並行要求、多GPU、より大規模モデルへの一般化は未検証。"
-  },
+  "attempt_id": "attempt-c45eda0ca290930fb74c6805",
+  "job_id": "job-research-2072895e5b6f0b68",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-134d632c037ba813a7f76d95",
+    "claim_id": "claim-c45eda0ca290930fb74c6805",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
