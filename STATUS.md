@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:34:51 JST**
+> 自動生成: **2026-09-18 14:35:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（2時間30分前）** |
+| 最終検証済みResearch収録 | **09-18 12:04:15 JST（2時間31分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -150,13 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 11:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-32601b58ea85c529e281cb7c.json` (job `job-research-78d3e9d2047890ea`)
+- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-29348de66411f1087b13d3e2.json` (job `job-research-2829f7afbf13ae9b`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-18 11:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
 - このrunにAudit submissionはありません。
 
@@ -180,7 +180,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 14:32:04 JST** / heartbeat: **—** / lease expiry: **09-18 16:02:04 JST**
+  - claim: **09-18 14:35:08 JST** / heartbeat: **—** / lease expiry: **09-18 16:05:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-78d3e9d2047890ea.json`
 
 #### Audit
