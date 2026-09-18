@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-bee8326435df2b286b51b470",
-  "job_id": "job-research-12153d10b82fca3c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bee8326435df2b286b51b470",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bee8326435df2b286b51b470","job_id":"job-research-12153d10b82fca3c",
+  "data":{
+    "hardware":"4台のGPUサーバを使用し、各サーバにNVIDIA H100 80GBを8基搭載する合計32 GPU環境。サーバ内GPUはNVLink 400GB/s、サーバ間はInfiniBand 200GB/sで接続する。スケジューリング算法の実行時間は12コアCPUでも測定し、16〜80 GPU規模への拡張性を確認する。",
+    "software":"モデル実行はSGLangを用いる。主カスケードはDeepSeek蒸留7B、DeepSeek蒸留70B、INT4量子化したDeepSeek 671Bで構成し、別系統としてLlama3 8Bと70Bも評価する。品質判定器にはGPT-4oを用いる。配置候補の95パーセンタイル遅延推定にはETH EASL Scratchpad系シミュレータを用い、実測との誤差は付録で2〜7%と報告する。",
+    "methodology":"実世界データに基づく複数のワークロード軌跡を作り、入力長、出力長、到着率、要求複雑度が異なる条件で評価する。品質要求は主に70、80、85、90の段階で設定し、95%の要求が期限内に終わるために必要なSLO尺度と、単位時間当たり処理要求数を測る。比較対象は、同じ資源上で最適な並列構成へ調整した単一DeepSeekモデル、既存カスケード基盤CascadeServe、Llama系評価、Sarathi-Serve、RouteLLMである。資源配分と並列構成を一律化する除去実験、品質要求に応じた段階別GPU配分と要求処理比率の事例、変動ワークロードでの再スケジューリングも評価する。再スケジューリング実験では軌跡1、2、3を8分、16分、10分で切り替える。",
+    "scope":"主結果は32基H100の単一クラスタと、研究側が管理する複数モデルを前提とする。外部APIを混ぜた費用最適化ではなく、自前配置したモデルカスケードの資源・並列・経路共同最適化が対象である。性能推定はシミュレータを含むため完全な実測だけではないが、シミュレータ誤差を2〜7%で検証している。品質はGPT-4oによる大規模言語モデル判定が中心で、人手評価の頑健性は主要評価では扱わない。"
+  },
+  "reservation":{"claim_id":"claim-bee8326435df2b286b51b470","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
 }
