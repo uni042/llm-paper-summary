@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 14:37:34 JST**
+> 自動生成: **2026-09-18 14:37:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-18 12:04:15 JST（2時間33分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-18 14:37:48 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **12** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **18** | **2** | **2** | **0** | **0** | **0** | **1** |
-| 合計 | **29** | **3** | **2** | **1** | **1** | **0** | **1** |
+| 合計 | **30** | **3** | **3** | **0** | **0** | **0** | **1** |
 
 - 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-18 14:37:48 JST** [research] `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
+  - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
+  - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
+  - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
 - **09-18 12:04:15 JST** [research] `arXiv:2609.13692` — Prefix Sharing Is a Sorting Problem
   - job: `.survey/work-queue/jobs/job-research-b4ff298d10321769.json`
   - result: `.survey/work-queue/results/research/attempt-36ebd37ab918e1cf55c1a45f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-64f721f42b66b8d451936690.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-64f721f42b66b8d451936690.json`
   - paper: `papers/inference/06-serving-scheduling/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md`
-- **09-18 09:40:12 JST** [research] `arXiv:2505.22618` — Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding
-  - job: `.survey/work-queue/jobs/job-research-99d754a688aca9c8.json`
-  - result: `.survey/work-queue/results/research/attempt-801a2a163f3b28325e33acce.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-801a2a163f3b28325e33acce.json`
-  - paper: `papers/inference/06-kv-cache-memory/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md`
 
 ### Audit
 
@@ -151,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-18 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json` (job `job-research-78d3e9d2047890ea`)
+- immutable submission: **1件** / 検証済み成功: **1件** / 未完了・未検証: **0件**
+- **成功** `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches
+  - job: `.survey/work-queue/jobs/job-research-78d3e9d2047890ea.json`
+  - result: `.survey/work-queue/results/research/attempt-63cfbded74c721cbf2f18246.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json`
+  - paper: `papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md`
 
 #### Audit (:30)
 
@@ -178,10 +182,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.17652` — Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches / worker `scheduled-chat-llm-survey`
-  - claim: **09-18 14:35:08 JST** / heartbeat: **—** / lease expiry: **09-18 16:05:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-78d3e9d2047890ea.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +203,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +223,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **705** |
+| inference/training/survey配下の論文Markdown実体 | **706** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +231,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **501** |
-| └ Research | **372** |
+| 成功result未照合のimmutable submission | **500** |
+| └ Research | **371** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

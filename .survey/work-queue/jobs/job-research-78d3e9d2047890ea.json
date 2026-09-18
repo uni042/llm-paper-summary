@@ -8,17 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.17652",
   "paper_path": "papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md",
   "selection_reason": "百万token級のagentic sessionでKV cache/indexをhost memoryへoffloadした際、top-k sparse decodingのkey scan帯域が律速になる問題を直接扱う。4-bit K cacheをchannel-major bit-plane化し、queryごとにreverse water-fillingでchannel別read depthを決める。Qwen3-8B・1M tokenで136-bit scan系よりdecode step GPU timeを1.67x高速化し、SparQ 68-bit相当時間では18%少ないread bytesを報告。offloaded KV・長文脈・帯域最適化の重点範囲に強く適合する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-18T05:03:28+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 46.0% < 70% (Japanese=3047, Latin=3570)",
-  "validation_errors": [
-    "Japanese-first prose ratio is too low: 46.0% < 70% (Japanese=3047, Latin=3570)"
-  ],
-  "last_validation_failed_at": "2026-09-18T05:34:43+00:00"
+  "completed_at": "2026-09-18T05:37:48+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-63cfbded74c721cbf2f18246.json"
 }
