@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-84f02d757a3785e53894f6fb",
-  "job_id": "job-research-11c68d7adc12c492",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84f02d757a3785e53894f6fb",
-    "worker_id": "scheduled-chat-discovery-specialist-20260919T012707JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-84f02d757a3785e53894f6fb","job_id":"job-research-11c68d7adc12c492","data":{"limitations":"評価GPUがPro6000に限定され、memory bandwidthやkernel特性の異なるhardwareでのspeedupは未検証。B_layer/B_window/alpha/betaというhyperparameterを持ち、完全なparameter-free adaptationではない。text-only 3モデル・標準benchmark中心で、multimodal理解や複雑reasoningへの一般化は著者も未探索としている。cache reuseは近似なので、より長いsequenceやdistribution shiftでquality trade-offが変わる可能性がある。","differences":"dLLM-Cache/dKV-Cacheが固定refresh intervalやuniform cache policyを使うのに対し、DCUはlayer input変化からstepごとにbudgetを再配分する。Fast-dLLMのfixed confidence thresholdに対し、APDはtoken prediction分布の集中度と時間変化からthresholdを逐次更新する。Sparse-dLLM等のcache eviction最適化とも異なり、cache更新とparallel unmaskを同一frameworkで適応化する。","implementation_status":"arXiv v1プレプリント。公式コード https://github.com/TianyiWu233/DYNAMIC-DLLM を公開。training-freeのplug-and-play frameworkとしてLLaDA/Dreamで評価。","research_positioning":"diffusion LLM inferenceのcache/runtime scheduling系。KV/feature cache容量そのものより『どのlayer/tokenへ再計算budgetを割くか』を動的制御するため、adaptive cache schedulingとparallel decodingの接点に位置する。将来的にはGPU memory pressureやrequest-level schedulerとDCU budgetを共同制御する拡張が考えられる。"},"reservation":{"claim_id":"claim-84f02d757a3785e53894f6fb","worker_id":"scheduled-chat-discovery-specialist-20260919T012707JST","worker_kind":"scheduled_chat"}}
