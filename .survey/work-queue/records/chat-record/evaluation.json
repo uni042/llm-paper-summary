@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-71d88f013604453cc1c44327",
-  "job_id": "job-research-455581782889dbd1",
-  "data": {
-    "hardware": "NVIDIA H100 80GBを単一GPUから最大4GPUまで使用。最大構成はデータ並列2×テンソル並列2。",
-    "software": "SGLang 0.5.9とvLLM 0.19.1を対象。Rust/PyO3コアとPython shimで統合し、SGLang LPM+LRU、vLLM FCFS+APC+LRUを各エンジンの強い標準基準とする。",
-    "methodology": "W1共有プロンプトchatはKV圧迫2〜16倍、W2はRepoBench-Pythonの8192-token共有接頭辞を持つ長文RAG、W3は70B級の複数GPU/DP構成、W4は到着順ですでにprefix-coherentなagentic burst、W5はsingleton優勢chat。moderateは持続queue 60〜127、heavyは128以上を狙いPoisson到着を使う。各セル3 seed、約10〜20% warmup除外。cache hit、TTFT、TPOT、ITL、E2E、throughputを測定し、W1ではcLPM、group-major、dynamic lane、pending-aware evictionの全ablationを行う。",
-    "scope": "オンラインstreaming servingが本文の中心で、offline batch版も付録評価。評価GPUはH100のみで、小容量アクセラレータやマルチモーダルprefixは未評価。PEEKは生成内容を変更せず、intra-replica要求順序とKV victim政策だけを変更する。"
-  },
+  "attempt_id": "attempt-d3223a75e45bdcfc607e3137",
+  "job_id": "job-research-abd379cf035bd8f0",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-71d88f013604453cc1c44327",
+    "claim_id": "claim-d3223a75e45bdcfc607e3137",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
