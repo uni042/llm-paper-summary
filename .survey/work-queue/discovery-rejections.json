@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-18T16:00:00+09:00",
-  "submission_count": 13,
+  "updated_at": "2026-09-18T20:00:00+09:00",
+  "submission_count": 14,
   "research_terminal_rejection_count": 3,
-  "rejection_observation_count": 40,
-  "rejection_record_count": 40,
+  "rejection_observation_count": 42,
+  "rejection_record_count": 42,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -384,6 +384,50 @@
       "axis": "2609新着・KVキャッシュ・マルチエージェント推論スケジューリング",
       "run_key": "2026-09-18T16:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/discovery-specialist-20260918T1600JST-r1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.06674": {
+      "primary_identity": "id:arXiv:2609.06674",
+      "identity_tokens": [
+        "id:arXiv:2609.06674",
+        "title:detokenization leaks reconstructing local llm outputs from cache traces",
+        "url:https://arxiv.org/abs/2609.06674"
+      ],
+      "canonical_id": "arXiv:2609.06674",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Detokenization Leaks: Reconstructing Local LLM Outputs From Cache Traces",
+      "source_url": "https://arxiv.org/abs/2609.06674",
+      "rejection_reason": "実LLM runtimeを対象とする重要なsecurity研究だが、主眼はCPU cache side-channel攻撃と防御であり、現在の推論性能・memory/offload/MoE/serving systemsサーベイの収録範囲から外れる。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T20:00:00+09:00",
+      "last_rejected_at": "2026-09-18T20:00:00+09:00",
+      "axis": "serving measurement・replicated KV correctness・production workflow・MoE routing prediction",
+      "run_key": "2026-09-18T20:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.06940": {
+      "primary_identity": "id:arXiv:2609.06940",
+      "identity_tokens": [
+        "id:arXiv:2609.06940",
+        "title:unified ai gateway a framework for joint model routing and kv cache management",
+        "url:https://arxiv.org/abs/2609.06940"
+      ],
+      "canonical_id": "arXiv:2609.06940",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2609.06940",
+      "rejection_reason": "model routing・KV placement・edge/cloud placementを統合する問題設定は関連するが、既存技術のsynthesisとworkload-level analytical simulationが中心で、実装済み推論systemとしての新規mechanism・実機評価が不足する。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-18T20:00:00+09:00",
+      "last_rejected_at": "2026-09-18T20:00:00+09:00",
+      "axis": "serving measurement・replicated KV correctness・production workflow・MoE routing prediction",
+      "run_key": "2026-09-18T20:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.10266": {
