@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.06172",
+      "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
+      "source_url": "https://arxiv.org/abs/2609.06172",
+      "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
+      "priority": 94,
+      "reason": "GPUメモリ超過時の統合仮想メモリ（Unified Virtual Memory; UVM）ページフォルトを、深層学習フレームワークのtensor-level access情報とruntime memory pressureに基づく自動prefetchで抑えるsystem。10 LLMでbaseline UVM比平均3.1倍、既存prefetcher比1.9倍を報告し、階層メモリ・prefetch重点テーマへ直接適合する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.06498",
+      "title": "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.06498",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+      "priority": 88,
+      "reason": "block diffusion型投機的復号で従来破棄されるrejected suffixのtarget verifier hidden stateを次roundへ再利用し、追加target計算なしでdraft品質を上げる。Qwen3系でacceptance lengthと高並列時throughput改善を報告し、投機的復号runtimeの計算再利用として明確な差分がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.14717",
+      "title": "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.14717",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md",
+      "priority": 86,
+      "reason": "投機的復号のverificationで計算済みだが棄却されたtarget hidden statesを一時KV contextとしてdraftへ再利用する方式。DFlash/DSpark系で平均acceptance length 6.5〜14.7%、end-to-end vLLM speedup 7.9〜14.4%改善を報告し、DFlowと近接しつつKV-context reuseという別設計を比較できる。"
+    },
+    {
+      "canonical_id": "arXiv:2609.17184",
+      "title": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2609.17184",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md",
+      "priority": 82,
+      "reason": "looped Transformerの中間recurrent stateをdraftに使い、future draft generationとcurrent target verificationをpipeline overlapするtraining-free self-speculative decoding。最大6.83倍の推論高速化を報告し、共有weightを繰り返し読むlooped architecture固有のmemory/latency問題へのsystem-level対処として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.17983",
+      "title": "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
+      "source_url": "https://arxiv.org/abs/2609.17983",
+      "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md",
+      "priority": 84,
+      "reason": "RAG/agent context編集後にstale化したKV cacheを全prefillせずbudgeted recomputationで修復する問題を定式化。連続したedit-local windowがimportance-based選択を上回り、full re-prefill比13〜21倍高速と報告しており、KV再利用のcorrectnessとincremental recomputationを扱う未収録系統として強い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-memory-specdecode-1",
+    "axis": "UVM oversubscription・投機的復号state reuse・stale KV repair",
+    "query_summary": "2026年9月新着をmemory/runtime/speculative decoding軸で複数検索窓から収集。最新HEADのarXiv-2609 identity shardで既知候補を先に除外し、未収録のAutoUVM、DFlow、Carryover Drafting、LoopSpec、stale-KV repairを一次arXiv identityへ正規化して採用した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 12,
+    "duplicate_canonical_ids": ["arXiv:2608.23658","arXiv:2605.03375","arXiv:2607.16892","arXiv:2606.16135","arXiv:2609.17943","arXiv:2609.00355","arXiv:2609.07966","arXiv:2609.10266","arXiv:2609.11133","arXiv:2609.16161","arXiv:2609.14237","arXiv:2609.15359"],
+    "next_axis_hint": "新着のserving measurement/replicated KV correctnessを確認後、MoE routing predictionとforward/backward citationへ移る",
+    "empty_round_reason": null,
+    "search_windows": [
+      {"topic":"LLM inference memory/runtime","source":"web-arxiv","date_range":"2026-09","category":"systems","citation_direction":"none","query_family":"KV cache / UVM / serving"},
+      {"topic":"speculative decoding","source":"web-arxiv","date_range":"2026-09","category":"inference","citation_direction":"none","query_family":"speculative decoding / verifier reuse"}
+    ]
+  }
+}
