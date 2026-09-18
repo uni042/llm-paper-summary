@@ -1,18 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-743169f37b3c8abb5e5c9007",
-  "job_id": "job-research-f97acaf8df0df8b2",
-  "data": {
-    "hardware": "DGX-A100とGH200 serversで8 GPU node以下のreal-system評価。64〜512 GPU規模はtestbed profileで拡張したSplitwiseSim discrete-event simulator。A100 nominal 1410MHz、DVFS floor 210MHz。KV RDMAは100Gbps InfiniBandで11.2GB/s、TCPは6.8GB/s。",
-    "software": "SGLang + Mooncake KV transfer engineを基盤にPTA disaggregation、PSOpt、PSSched、PSRouteを実装。NVMLでlocked clocksとper-GPU power limitsを制御。",
-    "methodology": "reasoningはMagpie-Reasoning/S1K、non-reasoningはAzure LLM inference coding/chat tracesを使用し、bursty Gamma arrivalも生成。default traffic mixはLC 30%、Flex 30% (alpha=3,rho=0.3)、BE 40%でsaturation throughput。static power-cap reduction 0〜60%と24h dynamic demand-response traceを評価。metricsはclass別goodput、P90/P99 TTFAT/TTLT、normalized BE throughput。baselinesはUniform、POLCA、SplitWise、DynamoLLM+、SLOs-Serve+。simulatorはheld-out measurementでcomponent MAPE <4%、power fit R2>0.95、8-GPU trace replayでgoodput差<4%、P90 TTLT差<9%。",
-    "scope": "real-systemは8 GPU node以下、cluster-scale 64〜512 GPU結果はvalidated simulationを含む。reasoning/non-reasoning混在、static/dynamic cap、SLO mix driftを評価。power modelはhardware typeごとにrefitが必要。"
-  },
-  "reservation": {
-    "claim_id": "claim-743169f37b3c8abb5e5c9007",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-743169f37b3c8abb5e5c9007","job_id":"job-research-f97acaf8df0df8b2","data":{"hardware":"実機はDGX-A100とGH200サーバを用い、八GPU以下のノードで測定する。64〜512 GPU規模は実機測定値で拡張した離散事象シミュレータを使用する。A100は公称1410MHz、最低210MHz。100Gbps InfiniBand上のRDMAによるKV転送は一リンク11.2GB/s、TCPは6.8GB/s。","software":"SGLangとMooncake系KV転送機構を基盤に、三段階分離、電力最適化器、配置制御器、要求振分け制御器を実装する。GPU周波数固定と電力上限はNVMLで制御する。","methodology":"推論型負荷にはMagpie-ReasoningとS1K、通常負荷にはAzureのLLM推論コード・対話トレースを使い、突発性を持つガンマ到着過程も生成する。既定の要求構成は厳格等級30%、柔軟等級30%、最善努力等級40%で、柔軟等級は基準遅延の三倍までをイベント時間の30%以内で許す。静的電力削減率0〜60%と24時間の動的需要応答トレースを評価する。指標は等級別のSLO達成要求率、回答開始までと完了までの90・99百分位遅延、最善努力処理量。比較対象は一律周波数方式、POLCA、SplitWise、DynamoLLM拡張、SLOs-Serve拡張。シミュレータは未使用測定点に対して構成要素誤差4%未満、電力近似の決定係数0.95超、八GPUトレース再生で達成要求率差4%未満、90百分位完了遅延差9%未満を確認する。","scope":"八GPU以下は実機、64〜512 GPU規模は検証済みシミュレーションを含む。推論型と通常型の混在、静的・動的電力上限、サービス等級構成の時間変動を評価する。電力モデルはGPU機種ごとに再適合が必要。"},"reservation":{"claim_id":"claim-743169f37b3c8abb5e5c9007","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
