@@ -1,13 +1,12 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8",
-  "job_id": "job-research-23f0e2222a013ba4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-78cfe446e04d42ebf3f9efb8",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version": 1, "transport_version": 10, "slot": "evaluation", "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8", "job_id": "job-research-23f0e2222a013ba4",
+  "data": {
+    "hardware": "市販スマートフォン級のシステムオンチップに含まれるCPU、GPU、NPUを使う実機評価。NPUを単独のアクセラレータとしてではなく、CPU/GPUと同時利用する異種計算環境として測定する。",
+    "software": "Qwen1.5-1.8B、Gemma-2B、LLaMA-2-7Bなど複数のモバイル向けLLMを対象とする。実装はC/C++とアセンブリを含む約1万行規模で、公開mllm系実装を通じてNPU経路を提供する。",
+    "methodology": "主指標はプリフィルのトークン毎秒、既存方式に対する高速化倍率、エネルギー消費、標準言語ベンチマークでの精度差、および実アプリのエンドツーエンド待ち時間。LAMBADA、HellaSwag、WinoGrande、MMLUなどで量子化後の品質を確認し、単に低精度化して速度を得た結果と区別する。画面UI理解など長い入力を必要とする実アプリでも測定し、プリフィル改善が利用者待ち時間へ反映されるかを見る。",
+    "scope": "モバイル端末内のプリフィル高速化が中心であり、クラウドGPUサービングや大規模バッチ処理を対象にしない。NPUの固定形状・量子化制約へ合わせた設計なので、NPU命令セットやコンパイラ、CPU/GPUとの共有メモリ構成が異なる端末では再調整が必要である。デコードはメモリ帯域支配になりやすく、本論文の最大効果は計算並列性の高いプリフィルにある。",
+    "models": ["Qwen1.5-1.8B", "Gemma-2B", "LLaMA-2-7B"],
+    "quality_benchmarks": ["LAMBADA", "HellaSwag", "WinoGrande", "MMLU"]
+  },
+  "reservation": {"claim_id": "claim-78cfe446e04d42ebf3f9efb8", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
