@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 07:37:14 JST**
+> 自動生成: **2026-09-19 07:37:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -212,9 +212,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
-- `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System / worker `scheduled-chat-discovery-20260919T0700JST`
-  - claim: **09-19 07:34:29 JST** / heartbeat: **—** / lease expiry: **09-19 09:04:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7b5d4afbd3eabe62.json`
+- `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading / worker `scheduled-chat-discovery-20260919T0700JST`
+  - claim: **09-19 07:37:19 JST** / heartbeat: **—** / lease expiry: **09-19 09:07:19 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7623de796f4f2b46.json`
 - `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale / worker `scheduled-chat-llm-survey-turn7`
   - claim: **09-19 07:31:15 JST** / heartbeat: **—** / lease expiry: **09-19 09:01:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-44bb3b5d160bad25.json`
