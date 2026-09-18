@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2506.06472",
+      "title": "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
+      "source_url": "https://arxiv.org/abs/2506.06472",
+      "rejection_reason": "GPUDirect StorageとSSDへのlifetime-aware tensor offloadは技術的に強いが、対象はLLM training activation/tensor migrationであり、現在のinference systems収録範囲外。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-18T20:00:00+09:00",
+    "round": "specialist-2025-memory-4",
+    "axis": "2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload",
+    "query_summary": "2025のMoE expert prefetch、SmartNIC prefix cache、multi-GPU KV migration、SSD/GDS offloadへ遡及。DuoServe-MoE、ShadowServe、MELLは最新identity shardで既収録を確認。TERAIOはtraining専用のため不採用記録とした。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2509.07379","arXiv:2509.16857","arXiv:2501.06709"],
+    "next_axis_hint": "2025 KV remapping・CXL・multi-tenant cacheと2024 personal-machine MoE cacheへ移る",
+    "empty_round_reason": "未収録1件はtraining専用でscope外、強いinference systems候補は既収録だった。"
+  }
+}
