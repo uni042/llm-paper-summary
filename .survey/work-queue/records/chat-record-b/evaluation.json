@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
   "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
     "hardware": "主評価は1×NVIDIA H100 NVL 96GB。追加評価でQwen3-8BのTP=2、AIME 2024-2026 expanded analysisではTP=4を使用。",
@@ -11,8 +11,8 @@
     "scope": "長文脈および長いchain-of-thoughtのdecode throughputに焦点を置き、prefill時間はthroughput測定から除外する。主結果は単一H100で、一般continuous-batching engineへの統合、chunked prefillとの共存、multi-GPU大規模production servingは今後の課題。"
   },
   "reservation": {
-    "claim_id": "claim-fc2c32d55842a220811f8fe6",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }

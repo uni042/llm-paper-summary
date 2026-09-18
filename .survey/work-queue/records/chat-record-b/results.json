@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
   "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
     "overview": "ASPIREは3モデル・5 workloadすべてで自己回帰復号を高速化し、Qwen3-1.7Bで平均3.34倍、Qwen3-8Bで2.08倍、DS-Llama-8Bで2.14倍。長文脈ほど利得が拡大し、80k-100kでは最大4.58倍。強い既存self-speculative baselineに対する平均speedup改善は約27%。mixed executionとschedulerの寄与はcontext長とともに増え、refreshは長いdraftでacceptance低下を抑える。",
@@ -62,8 +62,8 @@
     "quality_impact": "self-speculative verificationはtarget modelのfull-attention分布でproposalを検証するためexact by construction。実測LongBench品質差はmacro -0.20 pointsで、著者はbatched kernelの浮動小数点非決定性と整合する範囲とする。"
   },
   "reservation": {
-    "claim_id": "claim-fc2c32d55842a220811f8fe6",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }

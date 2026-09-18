@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-fc2c32d55842a220811f8fe6",
+  "attempt_id": "attempt-cec69bfeb43d99a153789edc",
   "job_id": "job-research-fb4ae3eceb455bfc",
   "data": {
     "limitations": "throughput測定はdecode forwardのみでprefillを除外するためend-to-end latencyを直接表さない。主評価は単一H100 NVLで、mixed draft/verify forwardをvLLM等の汎用continuous batching、chunked prefill、admission controlと統合する作業は将来課題。schedulerのtiming model係数はmodel/datasetのsample generation runtime traceからfitするため、hardware・batch regime変更時は再較正が必要。疎context selectionは7% budget等の設定に依存し、refresh layer full attentionはcontext長に比例する追加memory trafficを持つ。online schedulerはhindsight oracleに平均10.4%のgapが残る。",
@@ -11,8 +11,8 @@
     "research_positioning": "長文脈推論のmemory-bound attentionをself-speculative decodingで緩和する系統に属するが、draft modelや単一requestのacceptance改善ではなく、batched serving時の同期制約を主要対象にする。要求別schedulerをmixed forwardへ直接結びつけるため、speculative decodingとcontinuous batching/schedulingの境界を跨ぐ研究であり、長文脈ほどbatch内heterogeneityのコストが増えることを定量化している。"
   },
   "reservation": {
-    "claim_id": "claim-fc2c32d55842a220811f8fe6",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-cec69bfeb43d99a153789edc",
+    "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
 }
