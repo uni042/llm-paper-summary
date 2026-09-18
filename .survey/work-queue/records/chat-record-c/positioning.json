@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-801a2a163f3b28325e33acce",
-  "job_id": "job-research-99d754a688aca9c8",
+  "attempt_id": "attempt-64f721f42b66b8d451936690",
+  "job_id": "job-research-12153d10b82fca3c",
   "data": {
-    "limitations": "block-wise KV reuseはfull bidirectional attentionの厳密cacheではなく、adjacent-step similarityに依存する近似である。confidence-aware parallel decodeもtask/modelごとのconfidence calibrationに影響される。評価はsingle-GPU batch-1中心で、concurrent requestsやproduction schedulerとのinteractionは未検証。vLLM等AR-oriented serving frameworkへの統合には追加実装が必要。",
-    "differences": "dKV-Cache/dLLM-Cache等が主にdLLM KV reuseへ焦点を置くのに対し、Fast-dLLMはKV cacheとparallel token selectionを統合してper-step costとstep countを同時削減する。LLaDA標準top-K unmaskは毎step固定数を確定するが、本手法はconfidence thresholdで並列数を動的化する。後続Sparse-dLLMはFast-dLLMが保持するblock外KV自体をsaliencyでevictしmemory/attentionをさらに疎化する。Fast-dLLM v2はtraining-free近似からblock-diffusion fine-tuningとhierarchical cacheへ発展する。",
-    "implementation_status": "ICLR 2026 accepted。NVlabs/Fast-dLLMでv1/v2を公開し、LLaDA/Dream inference、benchmark scripts、interactive demoを提供。v1はtraining-freeで既存checkpointへ適用可能。",
-    "research_positioning": "diffusion LLM inference最適化の基礎系統として、ARで当然だったKV cacheをbidirectional modelへ近似的に持ち込み、dLLM固有のparallel generationをquality-awareに制御する二本柱を確立した。後続のcache eviction、hierarchical caching、confidence-guided sparse attentionの比較基準となる。"
+    "limitations": "評価は研究側がすべてのモデルを保有するカスケードを前提とし、外部APIの料金やレート制限を含む混成環境は対象外である。主環境は32基の同型H100であり、異種GPU世代を混ぜた配置最適化は主要評価ではない。配置候補の遅延はシミュレータで推定し、実測との誤差は2〜7%に収まるものの、予測誤差が最適計画の順位へ影響する可能性がある。オンライン再最適化は32 GPUで10〜20秒、モデル再構成に2〜20秒かかるため、極端に速い負荷変化には追随しにくい。品質判定はGPT-4o中心であり、判定器の偏りや費用も運用上の制約となる。",
+    "differences": "FrugalGPTやRouteLLMなどは主に要求ごとにどのモデルを選ぶかという算法側の経路最適化へ重点を置く。CascadeServeはカスケード配置と実時間負荷への適応を扱うが、Cascadiaは入力・出力長、要求複雑度、モデルサイズに応じた並列構成とGPU配分を経路方策と明示的に共同最適化する。Sarathi-ServeやDistServeのような単一モデル内の前処理・復号スケジューリングとは階層が異なり、Cascadiaは複数モデル段階間で要求と資源を動かす上位制御である。後続の複数モデル経路研究と比較する際は、単なる品質ルータではなく、配置・並列構成まで含むシステム・算法共同設計として位置付けるべきである。",
+    "implementation_status": "ICLR 2026の公式会議論文として公開済み。論文はSGLangを用いた32基H100の実験、GPT-4o品質判定、ETH EASL Scratchpad系シミュレータによる配置候補評価を記載する。今回確認した公式論文本文と会議ページでは専用コードリポジトリのURLを確認できなかった。",
+    "research_positioning": "複数LLMサービングのうち、モデル選択、GPU資源配分、並列化戦略を同じ最適化ループへ接続する系統に位置する。要求経路が負荷分布を決め、負荷分布が配置を決め、配置が遅延を決め、その遅延が次の経路選択へ戻るという相互依存を正面から扱う。したがって、品質・費用ルーティング研究とクラスタ資源スケジューリング研究の橋渡しとなり、将来的には異種GPU配置、前処理・復号分離、オートスケーリング、KVキャッシュ転送を同じ上位計画へ組み込む基盤になり得る。"
   },
   "reservation": {
-    "claim_id": "claim-801a2a163f3b28325e33acce",
+    "claim_id": "claim-64f721f42b66b8d451936690",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

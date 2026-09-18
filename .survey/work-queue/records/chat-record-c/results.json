@@ -2,53 +2,74 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-801a2a163f3b28325e33acce",
-  "job_id": "job-research-99d754a688aca9c8",
+  "attempt_id": "attempt-64f721f42b66b8d451936690",
+  "job_id": "job-research-12153d10b82fca3c",
   "data": {
-    "overview": "Fast-dLLMはdLLMのper-step計算と必要step数を別々に削ることで、単独cacheや単独parallelより大きなend-to-end gainを得る。LLaDA GSM8K gen length 256ではvanilla 6.7 TPSからcache 21.2、parallel 16.5、両者54.4 TPS（8.1倍）へ向上し、長prefill・gen length 1024ではDualCache+parallelがvanilla 0.7 TPSから19.3 TPSへ達して最大27.6倍となる。accuracy低下は小さく、training-freeでAR modelとのthroughput gapを大幅に縮める点が実用上の主成果である。",
+    "overview": "Cascadiaは、品質要件を維持しながらモデル経路とGPU配置を共同最適化することで、単一モデル配置と既存カスケード基盤の双方を上回る。論文全体の要約では、遅延SLOを最大4倍、平均2.3倍厳しくでき、処理性能を最大5倍、平均2.4倍高める。CascadeServeとの直接比較では遅延期限を最大2.5倍、平均1.7倍縮め、処理性能を最大3.3倍、平均1.7倍向上する。別のLlamaカスケードでも最大3.8倍、平均2.6倍の改善を示し、特定モデル系列だけに依存しないことを確認する。",
     "key_results": [
       {
-        "metric": "LLaDA GSM8K throughput",
-        "value": "54.4 TPS, 8.1×",
-        "baseline": "vanilla 6.7 TPS",
-        "condition": "5-shot, max generation length 256, cache+parallel",
-        "interpretation": "cacheとparallelismの相補効果。"
+        "metric": "遅延SLO",
+        "value": "最大4倍、平均2.3倍厳しい期限で同等のSLO達成",
+        "baseline": "品質帯に応じた単一DeepSeek 70Bまたは671B配置",
+        "condition": "複数ワークロード軌跡、品質要求70〜90、95% SLO達成点",
+        "interpretation": "簡単な要求を小型モデルで止めつつ、負荷に合わせて各段階の資源を再配分する効果。"
       },
       {
-        "metric": "長生成end-to-end speedup",
-        "value": "19.3 TPS, 27.6×",
-        "baseline": "vanilla 0.7 TPS",
-        "condition": "GSM8K 8-shot, gen length 1024, DualCache+parallel",
-        "interpretation": "長いprefill/generationでcache reuseとstep削減が増幅する。"
+        "metric": "処理性能",
+        "value": "最大5倍、平均2.4倍",
+        "baseline": "単一モデル配置",
+        "condition": "DeepSeek 7B/70B/671Bカスケード、32基H100",
+        "interpretation": "カスケード化だけでなく配置と並列構成の共同最適化がGPU利用効率を高める。"
       },
       {
-        "metric": "Parallel-only acceleration",
-        "value": "最大13.3×",
-        "baseline": "vanilla LLaDA",
-        "condition": "long-generation configuration",
-        "interpretation": "confidence-aware unmaskでstep数を大幅削減。"
+        "metric": "CascadeServe比",
+        "value": "遅延期限 最大2.5倍・平均1.7倍改善、処理性能 最大3.3倍・平均1.7倍",
+        "baseline": "CascadeServe",
+        "condition": "同じ品質要件とワークロード軌跡",
+        "interpretation": "入力・出力長と要求複雑度を含めた大規模言語モデル固有の共同最適化が既存カスケードより有効。"
       },
       {
-        "metric": "KV-cache-only speedup",
-        "value": "概ね2〜3.6×",
-        "baseline": "vanilla backbone",
-        "condition": "複数task/length",
-        "interpretation": "block内のQKV再計算を削る効果。"
+        "metric": "Llama系列での一般化",
+        "value": "最大3.8倍、平均2.6倍の性能改善",
+        "baseline": "Llama3 70B単一配置およびCascadeServe",
+        "condition": "Llama3 8B/70Bカスケード",
+        "interpretation": "DeepSeek固有のモデル構成だけでなく別系列でも改善が維持される。"
       },
       {
-        "metric": "GSM8K quality",
-        "value": "gen256: 78.5%",
-        "baseline": "vanilla 79.3%",
-        "condition": "LLaDA cache+parallel",
-        "interpretation": "8.1×高速化に対して0.8 point低下。"
+        "metric": "Sarathi-Serve比処理性能",
+        "value": "最大1.95倍、平均1.64倍",
+        "baseline": "Sarathi-ServeのvLLM実装を各条件で最適なチャンクサイズへ調整",
+        "condition": "品質要求90、3ワークロード軌跡",
+        "interpretation": "高度な前処理分割スケジューリングを持つ単一モデル基盤に対してもカスケード共同最適化が上回る。"
+      },
+      {
+        "metric": "RouteLLM比",
+        "value": "95% SLO達成に必要な尺度を平均21.3%削減、処理性能を平均18.8%向上",
+        "baseline": "RouteLLM",
+        "condition": "追加比較実験",
+        "interpretation": "経路だけでなくシステム配置まで共同設計する利点を示す。"
+      },
+      {
+        "metric": "運用費",
+        "value": "CascadeServe比で平均20〜39%削減、単一モデル比で33〜61%削減",
+        "baseline": "CascadeServeおよび単一モデル配置",
+        "condition": "論文付録の費用効率評価",
+        "interpretation": "処理性能向上が資源費用の削減にもつながる。"
+      },
+      {
+        "metric": "変動ワークロード",
+        "value": "処理性能 最大4.4倍、平均2.2倍。品質90ではSLO尺度8.99",
+        "baseline": "CascadeServe 13.55、単一モデル16.37",
+        "condition": "軌跡1→2→3を8分・16分・10分で切替",
+        "interpretation": "再スケジューリングの計算と再配置費用を含めても動的負荷で優位。"
       }
     ],
-    "negative_results": "KV cacheはbidirectional full attentionに対するapproximationでありblock内KVを完全には更新しない。parallel decodeもconfidence thresholdに依存し、thresholdを下げすぎるとdependent tokenを同時確定してqualityを落とす。speedupはgeneration lengthやprompt長に強く依存し、短い出力では最大値ほど大きくない。",
-    "interpretation": "dLLMの遅さは『各stepが重い』ことと『step数が多い』ことの積である。Fast-dLLMはapproximate KV reuseで前者、confidence-aware multi-token unmaskで後者を同時に削るため、単独最適化を超えるmultiplicative speedupを得る。",
-    "quality_impact": "GSM8K/HumanEval等でaccuracyは概ねvanilla近傍。high-confidence tokenだけを並列化することで固定top-Kよりdependency violationを抑えるが、approximationとthresholdにより完全losslessではない。"
+    "negative_results": "共同最適化は無視できない再構成費用を持つ。32 GPUではスケジューリング算法が約10〜20秒、モデル再構成も約2〜20秒かかる。論文は現行配置で処理を継続し、変更対象をローリング更新して停止を避けるが、秒単位より速い負荷変動には追随しにくい。また配置性能はシミュレータ推定に依存し、実測誤差は2〜7%である。除去実験では並列構成最適化を一律化すると最大1.6倍・平均1.4倍、資源配分を一律化すると最大2.1倍・平均1.7倍性能が悪化し、各構成要素が必要であることを示す。",
+    "interpretation": "モデルカスケードでは経路と配置を独立に最適化すると、経路変更が生む負荷偏りを配置が追従できない。Cascadiaは要求処理比率を配置問題へ戻し、配置から得た遅延を再び経路問題へ戻すため、品質制約下で負荷を均衡させた計画へ収束できる。",
+    "quality_impact": "GPT-4oによる品質判定で設定した最低品質を制約として扱うため、高速化のために品質を自由に下げる方式ではない。主要比較は品質70、80、85、90などの同一品質条件で行われる。ただし品質評価は主に大規模言語モデル判定器へ依存する。"
   },
   "reservation": {
-    "claim_id": "claim-801a2a163f3b28325e33acce",
+    "claim_id": "claim-64f721f42b66b8d451936690",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
