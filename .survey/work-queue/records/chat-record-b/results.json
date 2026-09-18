@@ -2,11 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1eac671838fd0684baafb7d6",
-  "job_id": "job-research-ebde0cc040167968",
-  "data": {},
+  "attempt_id": "attempt-f8d4f6dc7c20d590cd0cbc74",
+  "job_id": "job-research-2afdd6d968c4500a",
+  "data": {
+    "overview": "InfiniGenは完全KVを毎回転送するFlexGen、固定20%を転送するH2O、全KVを4ビット化して転送する方式より、層と生成トークンごとに必要量だけを選ぶことで通信量を抑える。OPT-13B・2048トークン・バッチ20では各比較対象に対して1.63〜32.93倍高速化し、系列長を512から2048へ伸ばすとFlexGen比高速化は最大5.28倍まで増える。平均利用KVを10%未満へ絞っても品質は完全キャッシュに近く、永久追い出し方式より長系列でパープレキシティの乖離が小さい。",
+    "key_results": [
+      {
+        "metric": "推論遅延高速化",
+        "value": "1.63–32.93x",
+        "baseline": "UVM、UVM+H2O、FlexGen、INT4、H2O",
+        "condition": "OPT-13B、1920入力+128出力、系列長2048、バッチ20、プリフィル+デコード",
+        "interpretation": "動的KV選択によりCPUからGPUへ読むデータ量を固定比率方式より小さくし、転送支配の実行時間を削減した。"
+      },
+      {
+        "metric": "系列長2048でのFlexGen比高速化",
+        "value": "最大5.28x",
+        "baseline": "FlexGen",
+        "condition": "OPT-13B、バッチ8、128出力、総系列長512〜2048",
+        "interpretation": "重要トークン数は系列長に比例せず37、60、66、73と緩やかに増えるため、固定20%のH2Oより長系列ほど相対的に転送削減が大きい。"
+      },
+      {
+        "metric": "バッチ拡大時のスループット",
+        "value": "27.36→41.99 tokens/s",
+        "baseline": "同一InfiniGenのバッチ4→20。INT4は12.22→14.02、H2Oは21.31→25.70",
+        "condition": "OPT-13B、系列長2048",
+        "interpretation": "KV転送量を必要数へ適応させるため、バッチ増加でPCIe転送が線形増加しにくく、計算資源利用率を上げやすい。"
+      },
+      {
+        "metric": "30BモデルでのFlexGen比高速化",
+        "value": "1.34x",
+        "baseline": "FlexGen。INT4 1.18x、H2O 1.28x",
+        "condition": "OPT-30B、モデル重み30%もCPUへ退避、1920入力+128出力、バッチ4",
+        "interpretation": "重み転送がKVより1.7倍大きくなってKV最適化の寄与が薄れる条件でも改善が残る。"
+      },
+      {
+        "metric": "理想GPU常駐実行との差",
+        "value": "1.52x slower than Ideal",
+        "baseline": "全計算をGPU上で行いCPU-GPU転送なしのIdeal",
+        "condition": "OPT-13B、系列長2048、バッチ8の単一Transformerブロック",
+        "interpretation": "FlexGenとH2Oでは転送が実行時間の96.9%と91.8%を占めるのに対し、InfiniGenは転送量を削って理想実行との差を大幅に縮める。"
+      },
+      {
+        "metric": "CPU KVプール80%制限時の品質",
+        "value": "Counter/LRUは100%容量とほぼ同一パープレキシティ",
+        "baseline": "100% KVプールとFIFO/LRU/Counter",
+        "condition": "OPT 6.7B/13B/30B、Llama-2 7B/13B、WikiText-2/PTB、系列長2048",
+        "interpretation": "利用回数に基づく追い出しならCPU容量まで制限しても、古い順に捨てるFIFOの大きな品質悪化を避けられる。"
+      }
+    ],
+    "negative_results": "OPT-30Bではモデル重み自体のCPU退避が支配的になり、FlexGen比高速化は1.34倍まで縮む。部分重み比率0.3では部分クエリ重みがモデル重みの2.5%、部分キーが全KVの15%に相当する追加GPU記憶を使う。予測精度と速度はalphaおよび部分重み比率に依存し、モデルごとに調整している。最初のレイヤーでは外れ値を利用できないため先読みはレイヤー1から開始する。",
+    "interpretation": "InfiniGenが効く理由は、長系列でも各生成トークンが強く参照するKV数が系列長と同じ速度では増えない一方、従来の固定比率方式は系列長に比例して転送量を増やす点にある。CPU側へ全履歴を残すことで、ある時点で重要でなかったトークンが数千反復後に再び重要になる場合も回復できる。",
+    "quality_impact": "5-shot評価では相対KV使用量10%未満でも量子化やH2Oより一貫して高い精度を示し、10%以上では完全キャッシュに近い。WikiText-2の長系列ではH2Oのパープレキシティが徐々に完全キャッシュから離れるのに対し、InfiniGenは近い値を維持する。Llama-2-7B-32Kでも小さな相対キャッシュ比率で品質を保つ傾向を確認している。"
+  },
   "reservation": {
-    "claim_id": "claim-1eac671838fd0684baafb7d6",
+    "claim_id": "claim-f8d4f6dc7c20d590cd0cbc74",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

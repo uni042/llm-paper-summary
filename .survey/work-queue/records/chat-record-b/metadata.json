@@ -2,11 +2,61 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1eac671838fd0684baafb7d6",
-  "job_id": "job-research-ebde0cc040167968",
-  "data": {},
+  "attempt_id": "attempt-f8d4f6dc7c20d590cd0cbc74",
+  "job_id": "job-research-2afdd6d968c4500a",
+  "data": {
+    "canonical_id": "arXiv:2406.19707",
+    "arxiv_id": "2406.19707",
+    "doi": "10.48550/arXiv.2406.19707",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management",
+    "summary": "長文生成ではKVキャッシュが系列長とバッチサイズに比例して増え、CPUメモリへ退避するとPCIe転送が新たなボトルネックになる。InfiniGenは完全なKVキャッシュをCPU側に保持しつつ、前段レイヤーの注意入力と次段レイヤーの部分クエリ重み・部分キーキャッシュから次段で重要になるトークンを先読み予測し、必要なKVだけをGPUへ転送する。特異値分解（Singular Value Decomposition; SVD）でクエリ・キー重みを等価変換して少数列へ情報を集中させ、各トークン・各層で転送量を動的に変えることで、固定比率の追い出しや量子化より精度を保ちながらCPU-GPU間通信を削減する。OSDI 2024実機評価ではFlexGen等に対して最大3.00倍の性能向上を報告する。",
+    "list_summary": "CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。",
+    "authors": [
+      "Wonbeom Lee",
+      "Jungi Lee",
+      "Junghwan Seo",
+      "Jaewoong Sim"
+    ],
+    "authors_affiliations": "Seoul National University",
+    "published": "2024-06-28",
+    "publication": "18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24), pp. 155-172",
+    "publication_type": "査読付き国際会議論文",
+    "publication_status": "OSDI 2024採択・公開",
+    "lineage": "KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算",
+    "topics": [
+      "KV cache",
+      "offloading",
+      "prefetching",
+      "long-context inference",
+      "attention sparsity"
+    ],
+    "importance": "KVキャッシュを永久追い出しせずCPU側に残し、直前層から次層の重要KVを予測して転送することで、オフロード推論のPCIe帯域問題を直接扱う。固定キャッシュ比率ではなく要求トークンと層ごとに転送量を変える点が重要。",
+    "implementation": "著者公式GitHubでInfiniGen実装と精度・高速化評価スクリプトをApache-2.0で公開。FlexGen系オフロード推論上へ実装。",
+    "hardware_evaluation": "NVIDIA RTX A6000 48GB、Intel Xeon Gold 6136、96GB DDR4-2666、PCIe 3.0 x16の実機。OPT 6.7B/13B/30BとLlama-2 7B/13Bを評価。",
+    "quality_effect": "平均10%未満のKVキャッシュ転送でも完全キャッシュに近い精度・パープレキシティを維持し、H2Oの永久追い出しより長系列で品質劣化を抑える。",
+    "source": "https://arxiv.org/abs/2406.19707",
+    "sources": [
+      "https://arxiv.org/abs/2406.19707",
+      "https://www.usenix.org/conference/osdi24/presentation/lee",
+      "https://github.com/snu-comparch/InfiniGen"
+    ],
+    "code": "https://github.com/snu-comparch/InfiniGen",
+    "project": "https://github.com/snu-comparch/InfiniGen",
+    "last_checked": "2026-09-18",
+    "references": [],
+    "references_checked_at": "2026-09-18",
+    "references_source": "arXiv HTML全文の参考文献節まで確認。個別参考文献は構造化配列へ転記していない。",
+    "references_total": 0
+  },
   "reservation": {
-    "claim_id": "claim-1eac671838fd0684baafb7d6",
+    "claim_id": "claim-f8d4f6dc7c20d590cd0cbc74",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
