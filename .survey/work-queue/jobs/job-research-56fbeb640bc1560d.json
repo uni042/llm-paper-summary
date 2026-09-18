@@ -17,16 +17,21 @@
   "created_at": "2026-09-17T13:02:42+00:00",
   "blocker": "このretryでは直前までarXiv公式HTMLを用いた一次資料全文読解を継続していたが、外部Web取得基盤から『約0 calls left』という明示的な呼出し上限通知を受け、arXiv:2603.28018の公式HTML/PDFや著者公式経路を新たに取得・全文確認できなくなった。前回blocked attemptではarXiv公式abstractと公開索引から方式概要・Qwen2.5-7B-Instruct・3072トークン文脈・176MB KV・最大3.1倍/3.7倍の遅延削減まで確認済みだが、正本契約が要求する一次資料全文の数式・証明・評価・限界・参考文献確認には不足する。二次索引から未確認内容を補完せず、一時的blockedとして耐久保存する。次回は外部取得枠が利用可能な状態でarXiv公式HTML/PDFまたは著者公式全文を再試行する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-120d2d3cb0fa96918f480540.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-18T10:09:56+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-18T16:24:23+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-18T10:09:56+00:00",
       "reason": "今回runではarXiv公式abstractを取得し、公開索引から論文が12節・3命題・25式・4図で構成され、ctHOが複数UEの最悪ハンドオーバ遅延を最小化するためprefill長とKV backhaul転送を共同最適化すること、Qwen2.5-7B-Instruct・3072トークン文脈・176MB KV等のシミュレーション条件や最大3.1倍/3.7倍の遅延削減が報告されることまで確認した。しかしarXiv公式HTML/PDF本文を一次資料として最後まで取得できず、利用可能な別経路も二次索引または全文未公開ページだった。未確認の数式・証明・参考文献を補完せず一時的blockedとして保存し、次回はarXiv公式全文または著者公式PDF経路で再試行する。"
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-18T16:24:23+00:00",
+      "reason": "このretryでは直前までarXiv公式HTMLを用いた一次資料全文読解を継続していたが、外部Web取得基盤から『約0 calls left』という明示的な呼出し上限通知を受け、arXiv:2603.28018の公式HTML/PDFや著者公式経路を新たに取得・全文確認できなくなった。前回blocked attemptではarXiv公式abstractと公開索引から方式概要・Qwen2.5-7B-Instruct・3072トークン文脈・176MB KV・最大3.1倍/3.7倍の遅延削減まで確認済みだが、正本契約が要求する一次資料全文の数式・証明・評価・限界・参考文献確認には不足する。二次索引から未確認内容を補完せず、一時的blockedとして耐久保存する。次回は外部取得枠が利用可能な状態でarXiv公式HTML/PDFまたは著者公式全文を再試行する。"
     }
   ],
-  "last_blocked_at": "2026-09-18T10:09:56+00:00",
-  "retry_queued_at": "2026-09-18T13:03:31+00:00",
-  "completed_at": "2026-09-18T16:24:23+00:00"
+  "last_blocked_at": "2026-09-18T16:24:23+00:00",
+  "completed_at": "2026-09-18T16:24:23+00:00",
+  "retry_not_before": "2026-09-18T19:40:17+00:00"
 }

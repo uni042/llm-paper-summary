@@ -33,7 +33,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 2年前（2024-10〜2025-09）
 
 - **2025-06 · [Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage](2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   テンソルごとの次回利用までの空き時間を測り、長く不要な重み・勾配・活性値をNVMe SSDへ退避し、先読みをGPU計算に重ねて固定的な層単位方式のI/O待ちを減らす学習方式。
 
 - **2025-05 · [ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates](2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md)**  

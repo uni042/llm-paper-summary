@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **693本**。
+収録論文: **704本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,11 +25,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**693本**。
+推論論文：**704本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 51 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 53 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 1 |
 | [02-hardware-accelerators](02-hardware-accelerators/README.md) | 8 |
@@ -55,17 +55,17 @@
 | [05-memory-architecture-near-data](05-memory-architecture-near-data/README.md) | 1 |
 | [05-moe](05-moe/README.md) | 2 |
 | [05-moe-expert-offload](05-moe-expert-offload/README.md) | 3 |
-| [05-offload-hierarchical-memory](05-offload-hierarchical-memory/README.md) | 1 |
+| [05-offload-hierarchical-memory](05-offload-hierarchical-memory/README.md) | 2 |
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 12 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 13 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
-| [06-serving-scheduling](06-serving-scheduling/README.md) | 15 |
-| [06-speculative-decoding](06-speculative-decoding/README.md) | 7 |
+| [06-serving-scheduling](06-serving-scheduling/README.md) | 16 |
+| [06-speculative-decoding](06-speculative-decoding/README.md) | 9 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 41 |
 | [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
@@ -75,11 +75,11 @@
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 16 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
 | [10-sparse-attention](10-sparse-attention/README.md) | 1 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 219 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 220 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 3 |
 | [kv-cache](kv-cache/README.md) | 1 |
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 57 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 60 |
 <!-- survey:auto:end -->

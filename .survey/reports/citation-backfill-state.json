@@ -4186,7 +4186,7 @@
       "status": "blocked",
       "source_fingerprint": "7506d1246488fe9350237906b6c0594143b7d9cb5f5e5b754eaaa99406deab64",
       "error": "ValueError: arXiv HTML failed (ValueError: arXiv HTML contained no ltx_bibitem reference entries); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-18T15:40:19+00:00"
+      "checked_at": "2026-09-18T18:40:30+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md": {
       "status": "complete",
@@ -4248,7 +4248,7 @@
       "status": "blocked",
       "source_fingerprint": "7ef8fa0066826343b8c8e037e1099c9a6bf715c9c677750d96f1452439300c27",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-18T15:40:14+00:00"
+      "checked_at": "2026-09-18T18:40:24+00:00"
     },
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": {
       "status": "complete",
@@ -4910,7 +4910,7 @@
       "status": "blocked",
       "source_fingerprint": "7e00fef820a3e8c0749349d3154faf7b3a1c706dacdef0f03724dafacc15cf0e",
       "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-18T15:40:19+00:00"
+      "checked_at": "2026-09-18T18:40:33+00:00"
     },
     "papers/inference/04-kv-prefix-cache/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": {
       "status": "complete",
@@ -5052,7 +5052,7 @@
       "status": "blocked",
       "source_fingerprint": "854c3738395df1ff08e8bd60fc12ceea018b4a7e2df147bde17c11302bec11f8",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-18T15:40:15+00:00"
+      "checked_at": "2026-09-18T18:40:27+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md": {
       "status": "complete",
@@ -5122,7 +5122,7 @@
       "status": "blocked",
       "source_fingerprint": "a75f7a788c6b5af06d4ecadf753867f064932837ba54800039ec1b237c738684",
       "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: unable to download arXiv source archive: https://export.arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 406: Not Acceptable | https://arxiv.org/e-print/2604.09613: HTTPError: HTTP Error 404: Not Found)",
-      "checked_at": "2026-09-18T15:40:18+00:00"
+      "checked_at": "2026-09-18T18:40:29+00:00"
     },
     "papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md": {
       "status": "complete",
@@ -5803,7 +5803,95 @@
       "normalized_references": 11,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-18T15:40:15+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md": {
+      "status": "complete",
+      "source_fingerprint": "1b11e632b96edd69687dfbe9ffe5e37747f4131767c43c7082af5e0418e71db3",
+      "references_total": 66,
+      "normalized_references": 55,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:23+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md": {
+      "status": "complete",
+      "source_fingerprint": "8ca11af48df078728168dea935022035e7543f8183540500aad366c5f0c8a26d",
+      "references_total": 14,
+      "normalized_references": 3,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:23+00:00"
+    },
+    "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md": {
+      "status": "complete",
+      "source_fingerprint": "758d3ac985c12136322dc48f74aa4f713cc9397efd457df733a1fb7201e100a4",
+      "references_total": 35,
+      "normalized_references": 4,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:25+00:00"
+    },
+    "papers/inference/06-kv-cache-memory/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md": {
+      "status": "complete",
+      "source_fingerprint": "d5e634270503ac59829608b891d0f0a63dea80992699ae054a67a478e98c219c",
+      "references_total": 47,
+      "normalized_references": 19,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:25+00:00"
+    },
+    "papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md": {
+      "status": "complete",
+      "source_fingerprint": "f795fe60f4056489fe8e6e84b89d6462d706deae647b04824d86a049a210be29",
+      "references_total": 78,
+      "normalized_references": 61,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:27+00:00"
+    },
+    "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md": {
+      "status": "complete",
+      "source_fingerprint": "377fcc6bd3fde773b1cb7426f6e741bd861f256fbf2dee0d98f307939e6258e1",
+      "references_total": 34,
+      "normalized_references": 27,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:28+00:00"
+    },
+    "papers/inference/06-speculative-decoding/2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md": {
+      "status": "complete",
+      "source_fingerprint": "452fbf13540c41664ed66fb2cd550722d6bf550bbf23041353ed2b1bdd764811",
+      "references_total": 32,
+      "normalized_references": 24,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:28+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.21719-powerslider-phase-asymmetry-demand-response.md": {
+      "status": "complete",
+      "source_fingerprint": "1e97b1ec132851a1b13993300b81ec776a97062e58c8ac8bb20c21e1b1de0791",
+      "references_total": 82,
+      "normalized_references": 13,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:31+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md": {
+      "status": "complete",
+      "source_fingerprint": "f4ac2ff83d88c98d13fee525d978dae7370ec97d0bffe7a08172418ad2a0a668",
+      "references_total": 32,
+      "normalized_references": 24,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:31+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "c0b9c7d61a6697af462739f0046729327490967efe640fc65a4ad0e6b6e2e1b0",
+      "references_total": 34,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:31+00:00"
+    },
+    "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md": {
+      "status": "complete",
+      "source_fingerprint": "a5ab08cd24429c1f633a929d66d897ac4fd50220e9b601bf1f9f5a28d7a71579",
+      "references_total": 48,
+      "normalized_references": 38,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-09-18T18:40:32+00:00"
     }
   },
-  "updated_at": "2026-09-18T15:40:49+00:00"
+  "updated_at": "2026-09-18T18:40:50+00:00"
 }
