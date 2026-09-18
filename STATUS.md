@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-18 10:03:58 JST**
+> 自動生成: **2026-09-18 10:04:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **18** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **10** | **4** | **2** | **2** | **0** | **0** | **15** |
-| 合計 | **28** | **7** | **5** | **2** | **2** | **0** | **15** |
+| Discovery | **10** | **6** | **2** | **4** | **0** | **0** | **22** |
+| 合計 | **28** | **9** | **5** | **4** | **2** | **0** | **22** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -177,8 +177,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-18 10:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **2件** / 候補: **15件**
-- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **4件** / 候補: **22件**
+- 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理 / 分離サービング・routing・HPC scale-out / agentic serving・tool wait・multi-turn KV retention / GPU attention kernel・CUDA Graph・runtime fusion / NVMe/SSD/object-storage KV offload / MoE expert cache・prefetch・offload
 - round `specialist-2609-memory-moe-new-arrivals-1` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260918T1008JST-discovery-9f31a2c7.json`
   - 探索軸: 2026年9月新着・階層メモリ/SSD MoE/KV管理
@@ -194,6 +194,14 @@
 - round `specialist-gpu-kernel-runtime-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260918T1028JST-discovery-d80f7c22.json`
   - 探索軸: GPU attention kernel・CUDA Graph・runtime fusion
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-storage-nvme-kv-5` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260918T1035JST-discovery-e19a4b63.json`
+  - 探索軸: NVMe/SSD/object-storage KV offload
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-prefetch-tiering-6` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260918T1042JST-discovery-f54c0a91.json`
+  - 探索軸: MoE expert cache・prefetch・offload
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -254,10 +262,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **481** |
+| 成功result未照合のimmutable submission | **483** |
 | └ Research | **350** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **131** |
 
 ### 厳格検証が未成立のcompleted job
 
