@@ -26,6 +26,8 @@ def make_args(**overrides):
         can_discover=True,
         claim_state_checked=False,
         claim_result_pending=False,
+        submission_state_checked=False,
+        submission_result_pending=False,
         write_failed=False,
         probe="not-run",
         seconds_to_run_deadline=1800,
@@ -49,6 +51,7 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["required_action"], "CHECK_CLAIM_STATE")
         self.assertFalse(result["finalization_allowed"])
         self.assertFalse(result["claim_state_checked"])
+        self.assertIn("claim", result["next_action_message"].lower())
 
     def test_checked_pending_claim_requires_wait_loop(self):
         result = mod.decide(make_args(
@@ -60,11 +63,50 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["claim_wait_seconds"], 10)
         self.assertIn("keep_same_request_id", result["claim_wait_action"])
         self.assertTrue(result["claim_state_checked"])
+        self.assertIn("終了しません", result["next_action_message"])
+
+    def test_unchecked_submission_state_requires_refresh(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=False,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CHECK_SUBMISSION_STATE")
+        self.assertIn("submission", result["next_action_message"].lower())
+
+    def test_pending_submission_with_independent_work_continues_without_finalizing(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=True,
+            submission_result_pending=True,
+            independent_work=True,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CONTINUE_WORK")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertIn("終了しません", result["next_action_message"])
+        self.assertIn("次", result["next_action_message"])
+
+    def test_pending_submission_without_independent_work_waits(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=True,
+            submission_result_pending=True,
+            independent_work=False,
+            spillover_work=False,
+            can_discover=False,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "WAIT_FOR_SUBMISSION_RESULT")
+        self.assertEqual(result["submission_wait_seconds"], 10)
+        self.assertIn("終了しません", result["progress_notice"])
+        self.assertIn("再確認", result["progress_notice"])
 
     def test_checked_clear_claim_state_allows_normal_work(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             claim_result_pending=False,
+            submission_state_checked=True,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "CONTINUE_WORK")
