@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2503.10325",
+      "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2503.10325",
+      "priority": 82,
+      "reason": "CoSineは複数ノード上の異種drafterを協調させ、speculationとverificationを分離・パイプライン化し、batch schedulingとadaptive speculation controlまで含むsystem-level serving研究。等資源条件で最大23.2% latency低減・32.5% throughput向上を報告しており、既存の単一drafter/ローカルspeculative decoding系統との差分が明確。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-18T21:00:00+09:00",
+    "round": "specialist-speculative-cosine-1",
+    "axis": "分散speculative inference・heterogeneous drafter orchestration",
+    "query_summary": "2025-2026のspeculative servingを再走査し、SPECTRE/SPIN等の既収録候補をidentity shardで早期除外。CoSineはarXiv一次ページでsystem-level contributionと定量評価を確認し、arxiv-2503 identity shardに不在、rejection ledgerにも不在であることを確認して採用した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2605.08151", "arXiv:2503.15921"],
+    "next_axis_hint": "2024-2025の分散speculative serving、GPU runtime/kernel scheduling、CXL/KV memoryを独立に走査する"
+  }
+}
