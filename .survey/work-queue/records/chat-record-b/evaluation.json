@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-cff94da844c9d4caaf2fc60b",
-  "job_id": "job-research-1182cce822dbe6dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cff94da844c9d4caaf2fc60b",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-cff94da844c9d4caaf2fc60b","job_id":"job-research-1182cce822dbe6dc","data":{"hardware":"主系は2×NVIDIA H100 PCIe、TP=2、94GiB/GPUで、専門家重み72.0GiB/GPU、初期KVプール8.02GiB/GPU。拡張評価は4×NVIDIA H200 NVLink、TP=4、140GiB/GPU、専門家重み36.0GiB/GPU、初期KVプール86.92GiB/GPU。","software":"Qwen3-Next-80B-A3B-Instruct（512 routed experts/layer、top-k=10、48層、256K native context）、vLLM 0.15.1 + VAMP patch、prefix caching、chunked prefill、PyTorch 2.9.1、CUDA 12.8。VAMPは約7,100 LOC。","methodology":"4種類の負荷で評価する。Heavy-48 SWE-agent閉ループは48 SWE-bench Lite課題を6時間実行し各構成n=3。主比較はbaselineで記録した2,103ターンを同一要求列としてvLLM/VAMP-10/15/20で再生しn=5。LMCache traceは64/128 sessions、固定60分窓でn=3。自作multi-turnは決定論的12ターンsessionを並行数変更して容量境界を測り各点n=5。TTFT、TPOT、request throughput、TPS、prefix-cache hit率、preemptionを測定し、再生では128ターン後からdrain前までを主要測定区間とする。","scope":"単一MoEモデルQwen3-Next-80B-A3B-Instructに限定されるが、PCIe H100 TP2とNVLink H200 TP4の2プラットフォーム、閉ループ・固定再生・容量境界の複数負荷を用いる。閉ループはモデル出力で軌跡が分岐するためmatched-input効果とは扱わず、因果比較は固定2,103ターン再生を中心とする。"},"reservation":{"claim_id":"claim-cff94da844c9d4caaf2fc60b","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
