@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 20:02:06 JST**
+> 自動生成: **2026-09-19 20:02:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **40** | **2** | **1** | **1** | **0** | **0** | **7** |
-| 合計 | **47** | **5** | **3** | **1** | **1** | **0** | **7** |
+| Discovery | **40** | **3** | **1** | **2** | **0** | **0** | **9** |
+| 合計 | **47** | **6** | **3** | **2** | **1** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -159,8 +159,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 20:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **7件**
-- 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **9件**
+- 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control / agentic workflow physical planning・agent-aware serving runtime
 - round `specialist-memory-paths-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
   - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
@@ -168,6 +168,10 @@
 - round `specialist-energy-heterogeneity-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
   - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-runtime-3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json`
+  - 探索軸: agentic workflow physical planning・agent-aware serving runtime
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -225,10 +229,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **619** |
+| 成功result未照合のimmutable submission | **620** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **146** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
