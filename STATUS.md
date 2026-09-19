@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:52:59 JST**
+> 自動生成: **2026-09-19 22:01:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **46** |
+| 収録候補論文 | **47** |
+| 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（20秒前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（8分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **55** | **8** | **8** | **0** | **0** | **0** | **16** |
-| 合計 | **67** | **11** | **10** | **0** | **0** | **0** | **16** |
+| Discovery | **56** | **2** | **1** | **1** | **0** | **0** | **6** |
+| 合計 | **68** | **5** | **3** | **1** | **0** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-19 22:01:30 JST** job `job-bbc2ca917b7c80e4` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
+  - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving
 - **09-19 21:04:01 JST** job `job-3cd73ee92069ad52` / 候補 **2件**
   - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260919T2008JST-discovery-specialist-memory-paths-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
   - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
-- **09-19 20:05:05 JST** job `job-f666c653bd64eec2` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
-  - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
 
 ### 直近タスク
 
@@ -173,41 +173,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 21:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **16件**
-- 探索軸: resource-fair batching・prefix-aware batching / CXL near-data processing・MoE predictive expert replication / CXL-hybrid KV memory・SSD-backed MoE expert cache / consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / retrieval sparse attention・hierarchical KV memory・segment-level KV reuse / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
-- round `specialist-batching-fairness-8` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json`
-  - 探索軸: resource-fair batching・prefix-aware batching
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json` (`ok=true`)
-- round `specialist-cxl-expert-replication-6` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json`
-  - 探索軸: CXL near-data processing・MoE predictive expert replication
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json` (`ok=true`)
-- round `specialist-cxl-flash-moe-5` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-flash-moe-5.json`
-  - 探索軸: CXL-hybrid KV memory・SSD-backed MoE expert cache
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-cxl-flash-moe-5.json` (`ok=true`)
-- round `specialist-local-runtime-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-local-runtime-4.json`
-  - 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-local-runtime-4.json` (`ok=true`)
-- round `specialist-pd-agent-runtime-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-pd-agent-runtime-3.json`
-  - 探索軸: disaggregated prefill deflection・agent-aware serving runtime
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-pd-agent-runtime-3.json` (`ok=true`)
-- round `specialist-runtime-hardware-2` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-runtime-hardware-2.json`
-  - 探索軸: page-aware decode runtime・non-GPU accelerator serving field study
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-runtime-hardware-2.json` (`ok=true`)
-- round `specialist-sparse-kv-7` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-sparse-kv-7.json`
-  - 探索軸: retrieval sparse attention・hierarchical KV memory・segment-level KV reuse
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-sparse-kv-7.json` (`ok=true`)
-- round `specialist-ssd-moe-routing-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json`
-  - 探索軸: SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json` (`ok=true`)
+- 最新観測run: **2026-09-19 22:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **6件**
+- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer
+- round `specialist-flash-agent-runtime-1` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
+  - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json` (`ok=true`)
+- round `specialist-moe-cxl-history-2` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json`
+  - 探索軸: 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -234,7 +210,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -262,10 +238,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **622** |
+| 成功result未照合のimmutable submission | **623** |
 | └ Research | **475** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
+| └ Discovery | **146** |
 
 ### 厳格検証が未成立のcompleted job
 
