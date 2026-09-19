@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2401.07851",
+      "arxiv_id": "2401.07851",
+      "title": "Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2401.07851",
+      "paper_path": "papers/survey/03-inference-engines/2024-2401.07851-speculative-decoding-survey.md",
+      "priority": 86,
+      "reason": "Directly relevant survey consolidating speculative-decoding methods, useful as a lineage map and comparison baseline for the survey repository."
+    },
+    {
+      "canonical_id": "arXiv:2405.01814",
+      "arxiv_id": "2405.01814",
+      "title": "Efficient and Economic Large Language Model Inference with Attention Offloading",
+      "source_url": "https://arxiv.org/abs/2405.01814",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+      "priority": 95,
+      "reason": "Focused heterogeneous inference system that offloads memory-intensive attention to better-matched devices to improve accelerator utilization and serving economics."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920T0346JST-offset100",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920T0346JST-offset100.json",
+    "receipt": "sha256:e8e76ca1e0879ea5e0f4cd2a6aa2c695b0c12d69d3e57269ab19808a9f334e8b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20T0346JST",
+    "round": "refcuration-stress-offset100-c",
+    "axis": "structured references stress probe at raw offset 100",
+    "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice c records were evaluated with unrelated/borderline papers durably classified.",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "OpenReview:RkRrPp7GKO",
+      "DOI:10.1109/hpca61900.2025.00102"
+    ],
+    "accepted_canonical_ids": [
+      "arXiv:2401.07851",
+      "arXiv:2405.01814"
+    ],
+    "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer."
+  }
+}
