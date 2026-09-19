@@ -8,7 +8,7 @@
   "source_url": "https://ieeexplore.ieee.org/document/11568525/",
   "paper_path": "papers/inference/99-other-inference-systems/2026-a21e1445aad5-hbm-hbf-centric-memory-pooling-architecture-with-custom-base-die-for-terabyte-scale-llm-inference.md",
   "selection_reason": "IEEE Computer Architecture Letters 2026の一次査読論文。HBM背後にHigh Bandwidth Flashをstackし、custom base dieでlayer-wise prefetchとbuffered write-backをhost非介在で処理してTB級memory poolを構成する。LLaMA-4 Maverickのsimulationで極端なmemory pressure下最大87.4x throughputを報告し、HBF/SSD階層memory設計の直接的な研究価値がある。",
-  "status": "blocked",
+  "status": "blocked_permanent",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -17,8 +17,8 @@
   "created_at": "2026-09-18T18:59:35+00:00",
   "blocker": "一次資料全文をこの再試行でも取得できなかった。IEEE DOI 10.1109/LCA.2026.3703982 はこの実行環境から直接取得できず、既知のIEEE Xplore document 11568525にも全文経路を確立できなかった。著者所属KAISTの公式セミナーページでは同研究題目『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』の講演とHBF技術概要を確認したが、査読論文本文そのものではないため5-slotの根拠には使用しなかった。複数回の公式経路再試行後も本文未取得のため、抄録・講演概要・二次資料から科学的内容を推測せずblockedとして保存する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-11067fab859094f25d88d7c5.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-19T00:59:19+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-19T09:35:49+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -29,9 +29,14 @@
       "attempt": 2,
       "blocked_at": "2026-09-19T00:59:19+00:00",
       "reason": "一次資料全文を再取得できなかった。IEEE Xplore document 11568525 / DOI 10.1109/LCA.2026.3703982 は2026-06-16公開のIEEE Computer Architecture Letters 25(2), pp.259-262として書誌・抄録を確認できたが、本文全文は取得できなかった。題名・DOIで公式/著者公開経路を再探索し、KAIST TERA Lab公式サイトとKAIST EE公式セミナーページでは同テーマのHBF資料および2026-02-10の『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』講演の存在を確認したものの、この査読論文そのものの全文ではないため代用しなかった。ResearchGateもfull-text unavailableで著者へのrequestのみ。二次資料やabstractから未確認の5-slot科学的内容を生成せず、再試行可能なblockedとして保存する。"
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-19T09:35:49+00:00",
+      "reason": "一次資料全文をこの再試行でも取得できなかった。IEEE DOI 10.1109/LCA.2026.3703982 はこの実行環境から直接取得できず、既知のIEEE Xplore document 11568525にも全文経路を確立できなかった。著者所属KAISTの公式セミナーページでは同研究題目『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』の講演とHBF技術概要を確認したが、査読論文本文そのものではないため5-slotの根拠には使用しなかった。複数回の公式経路再試行後も本文未取得のため、抄録・講演概要・二次資料から科学的内容を推測せずblockedとして保存する。"
     }
   ],
-  "last_blocked_at": "2026-09-19T00:59:19+00:00",
-  "retry_queued_at": "2026-09-19T06:34:33+00:00",
-  "completed_at": "2026-09-19T09:35:49+00:00"
+  "last_blocked_at": "2026-09-19T09:35:49+00:00",
+  "completed_at": "2026-09-19T09:35:49+00:00",
+  "blocked_permanent_at": "2026-09-19T10:04:33+00:00"
 }

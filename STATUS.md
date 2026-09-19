@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:05:38 JST**
+> 自動生成: **2026-09-19 19:05:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **5** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **24** | **18** | **5** | **13** | **0** | **0** | **28** |
-| 合計 | **29** | **33** | **11** | **13** | **0** | **0** | **28** |
+| Discovery | **25** | **19** | **6** | **13** | **0** | **0** | **30** |
+| 合計 | **30** | **34** | **12** | **13** | **0** | **0** | **30** |
 
-- 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -84,6 +84,10 @@
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-scheduling-5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
   - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
+- **09-19 19:02:31 JST** job `job-7f0f0baa3d9ba4a7` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json`
+  - 探索軸: agentic workload characterization / sandbox memory / secure mobile serving
 - **09-19 19:01:01 JST** job `job-81062042be174d85` / 候補 **2件**
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
@@ -116,10 +120,6 @@
   - result: `.survey/work-queue/results/20260919T1700JST-round12-citation-omissions.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
   - 探索軸: recent candidatesの関連研究・過去1年重要omission横断
-- **09-19 17:03:37 JST** job `job-4c37098b536c4ac0` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1708JST-discovery-specialist-flash-cim-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
-  - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
 
 ### 直近タスク
 
@@ -169,8 +169,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **13件** / 候補: **28件**
-- 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation / related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / online/offline co-serving / fine-grained GPU harvesting / preemption / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration / multi-tenant performance isolation / adaptive persistent-kernel MoE serving / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / multi-LLM prewarming / shared decode execution / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling
+- 耐久探索round: **19件** / immutable submission: **19件** / 検証済み成功result: **6件** / 個別result照合: **6件** / 個別result未照合: **13件** / 候補: **30件**
+- 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation / related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / online/offline co-serving / fine-grained GPU harvesting / preemption / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration / multi-tenant performance isolation / adaptive persistent-kernel MoE serving / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / multi-LLM prewarming / shared decode execution / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling / serving security isolation / inference-finetuning co-execution
 - round `specialist-agent-adjacent-14` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
   - 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation
@@ -186,7 +186,7 @@
 - round `specialist-agent-systems-6` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json`
   - 探索軸: agentic workload characterization / sandbox memory / secure mobile serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json` (`ok=true`)
 - round `specialist-coserving-15` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-coserving-15.json`
   - 探索軸: online/offline co-serving / fine-grained GPU harvesting / preemption

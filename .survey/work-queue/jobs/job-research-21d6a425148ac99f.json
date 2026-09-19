@@ -8,7 +8,7 @@
   "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
   "paper_path": "papers/inference/99-other-inference-systems/2020-2026.00098-tetris-efficient-long-context-llm-serving-with-chunkwise-dynamic-sequence-parallelism.md",
   "selection_reason": "ISCA 2026の査読論文。長文脈servingでsequence parallelismをrequest単位ではなくtoken chunk単位に動的割当し、disaggregated clusterでstage-specific parallelismとresource fragmentationを同時に扱う。最大4.35x TTFT改善、median TBT最大40.1%削減、request capacity最大45%増を報告する強いserving候補。",
-  "status": "blocked",
+  "status": "blocked_permanent",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -17,8 +17,8 @@
   "created_at": "2026-09-18T19:02:42+00:00",
   "blocker": "Primary full text remains unavailable in this retry after materially distinct official routes. The official IEEE DOI resolves to IEEE Xplore document 11617445, but the runtime receives only the JavaScript/robot-verification gate rather than article text. The same-work arXiv record arXiv:2511.06247 is reachable on the official arXiv abstract endpoint and confirms the title lineage, authors, abstract and quantitative headline results, but arXiv explicitly marks the preprint withdrawn to align with the affiliated organization's internal publication policies, provides no PDF for the current version, and the official HTML route returns 404. Because the peer-reviewed ISCA article full text was not retrieved and the arXiv preprint is withdrawn/unavailable, no five-slot scientific record was generated from the abstract or secondary material.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-c4322b286efe70010b6b1d91.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-19T00:02:41+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-19T09:30:01+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -29,9 +29,14 @@
       "attempt": 2,
       "blocked_at": "2026-09-19T00:02:41+00:00",
       "reason": "Primary full text remains unavailable after retrying materially distinct routes. IEEE Xplore/DOI 10.1109/ISCA66397.2026.00098 exposes the abstract, metadata, section outline and only the beginning of the article before sign-in; the same-work preprint arXiv:2511.06247 is indexed by multiple scholarly services but the primary arXiv full-text route is unavailable in this runtime; Li-Wen Chang's official publication page confirms the ISCA 2026 paper but does not expose a full-text copy. Search also found third-party metadata/request pages only, which are insufficient for a repository-quality five-slot record. No scientific content was inferred from secondary summaries. Retrieval evidence checked in this retry: IEEE Xplore DOI/Document 11617445; arXiv:2511.06247 identity/indexing; Li-Wen Chang official publication page."
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-19T09:30:01+00:00",
+      "reason": "Primary full text remains unavailable in this retry after materially distinct official routes. The official IEEE DOI resolves to IEEE Xplore document 11617445, but the runtime receives only the JavaScript/robot-verification gate rather than article text. The same-work arXiv record arXiv:2511.06247 is reachable on the official arXiv abstract endpoint and confirms the title lineage, authors, abstract and quantitative headline results, but arXiv explicitly marks the preprint withdrawn to align with the affiliated organization's internal publication policies, provides no PDF for the current version, and the official HTML route returns 404. Because the peer-reviewed ISCA article full text was not retrieved and the arXiv preprint is withdrawn/unavailable, no five-slot scientific record was generated from the abstract or secondary material."
     }
   ],
-  "last_blocked_at": "2026-09-19T00:02:41+00:00",
-  "retry_queued_at": "2026-09-19T06:34:33+00:00",
-  "completed_at": "2026-09-19T09:30:01+00:00"
+  "last_blocked_at": "2026-09-19T09:30:01+00:00",
+  "completed_at": "2026-09-19T09:30:01+00:00",
+  "blocked_permanent_at": "2026-09-19T10:04:33+00:00"
 }
