@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:18:34 JST**
+> 自動生成: **2026-09-19 11:18:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **44** |
-| 未claim Research job | **42** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 11:15:18 JST（3分前）** |
+| 収録候補論文 | **43** |
+| 未claim Research job | **41** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-19 11:18:39 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **44** |
+| canonical_id確認済みの一意な候補論文 | **43** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **44** |
+| 非終端Research job合計 | **43** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **15** | **15** | **6** | **9** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **17** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **18** | **18** | **9** | **9** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:18:39 JST** [research] `arXiv:2609.18123` — AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines
+  - job: `.survey/work-queue/jobs/job-research-66ea885d5e740aba.json`
+  - result: `.survey/work-queue/results/research/attempt-fa2bf0d161766edfda517f4d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-fa2bf0d161766edfda517f4d.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md`
 - **09-19 11:15:18 JST** [research] `arXiv:2412.18934` — Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference
   - job: `.survey/work-queue/jobs/job-research-c26aa10b960d27a4.json`
   - result: `.survey/work-queue/results/research/attempt-6ad53a550a3c7bedcb56aa8c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
-- **09-19 07:11:49 JST** [research] `arXiv:2607.08993` — StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration
-  - job: `.survey/work-queue/jobs/job-research-f7dcdf40e7d3538f.json`
-  - result: `.survey/work-queue/results/research/attempt-a3bba0a36c53f4970b6d1719.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a3bba0a36c53f4970b6d1719.json`
-  - paper: `papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md`
 
 ### Audit
 
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **44** |
+| ready | **43** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +225,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **750** |
+| inference/training/survey配下の論文Markdown実体 | **751** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +233,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **582** |
-| └ Research | **453** |
+| 成功result未照合のimmutable submission | **581** |
+| └ Research | **452** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
