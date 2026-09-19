@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:30:34 JST**
+> 自動生成: **2026-09-19 22:31:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（37分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（38分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **85** | **19** | **18** | **0** | **1** | **0** | **30** |
+| 合計 | **85** | **19** | **18** | **1** | **1** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,9 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 21:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-077c5dd04f678c8541964e90.json` (job `job-research-a6905e04777fde1f`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-077c5dd04f678c8541964e90.json` (`ok=false`)
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f9592fd052ad29b9a163d874.json` (job `job-research-f85e83252e35c61b`)
 
 #### Audit (:30)
 
@@ -212,9 +211,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.04511` — SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:29:41 JST** / heartbeat: **—** / lease expiry: **09-19 23:59:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f85e83252e35c61b.json`
+- `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 22:31:00 JST** / heartbeat: **—** / lease expiry: **09-20 00:01:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a6905e04777fde1f.json`
 
 #### Audit
 
@@ -262,8 +261,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **623** |
-| └ Research | **476** |
+| 成功result未照合のimmutable submission | **624** |
+| └ Research | **477** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
