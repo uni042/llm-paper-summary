@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:04:13 JST**
+> 自動生成: **2026-09-19 21:05:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **51** |
-| 未claim Research job | **50** |
+| 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（1時間29分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（1時間30分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
+| Research | **7** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **54** | **8** | **7** | **1** | **0** | **0** | **16** |
-| 合計 | **61** | **11** | **9** | **1** | **1** | **0** | **16** |
+| Discovery | **55** | **8** | **8** | **0** | **0** | **0** | **16** |
+| 合計 | **62** | **11** | **10** | **0** | **0** | **0** | **16** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-19 21:04:01 JST** job `job-3cd73ee92069ad52` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json`
+  - 探索軸: resource-fair batching・prefix-aware batching
 - **09-19 21:03:23 JST** job `job-1012bfac264d4ba9` / 候補 **2件**
   - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
   - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
-- **09-19 20:05:14 JST** job `job-64ce17a0f48858b0` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2022JST-discovery-specialist-agent-runtime-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json`
-  - 探索軸: agentic workflow physical planning・agent-aware serving runtime
 
 ### 直近タスク
 
@@ -159,12 +159,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 21:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **1件** / 候補: **16件**
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **16件**
 - 探索軸: resource-fair batching・prefix-aware batching / CXL near-data processing・MoE predictive expert replication / CXL-hybrid KV memory・SSD-backed MoE expert cache / consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / retrieval sparse attention・hierarchical KV memory・segment-level KV reuse / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
 - round `specialist-batching-fairness-8` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json`
   - 探索軸: resource-fair batching・prefix-aware batching
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json` (`ok=true`)
 - round `specialist-cxl-expert-replication-6` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json`
   - 探索軸: CXL near-data processing・MoE predictive expert replication
@@ -198,10 +198,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.06472` — Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 19:34:49 JST** / heartbeat: **—** / lease expiry: **09-19 21:04:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ff33bdbdc4dfa309.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -249,10 +247,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **619** |
+| 成功result未照合のimmutable submission | **618** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **146** |
+| └ Discovery | **145** |
 
 ### 厳格検証が未成立のcompleted job
 

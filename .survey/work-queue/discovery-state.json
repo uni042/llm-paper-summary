@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T12:03:30+00:00",
+  "updated_at": "2026-09-19T12:04:01+00:00",
   "last_run_key": "2026-09-19T21:00:00+09:00",
-  "last_round": "specialist-sparse-kv-7",
+  "last_round": "specialist-batching-fairness-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T10:00:00+09:00",
-      "round": "specialist-serving-restoration-1",
-      "axis": "KV復元・分離serving network scheduling・MoE elastic/offload・KV survey",
-      "query_summary": "直前のadaptive KV軸からずらし、KV cache restorationのcompute/I/O協調、分離servingのmulti-stage network flow、MoE expertのserverless elasticityとfine-grained offload、system-aware KV surveyを探索した。投入直前に最新mainとGitHub repository searchでcanonical arXiv IDの既登録を再確認した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次roundはGPU runtime/collectiveとKV transferのco-scheduling、またはCXL/NVMeを含むexpert/KV I/O pathへ移る",
-      "source_submission": "work-queue/submissions/20260915T1000JST-discovery-specialist-serving-restoration-1.json"
-    },
     {
       "run_key": "2026-09-15T12:00:00+09:00",
       "round": "specialist-cold-moe-pooling-1",
@@ -7331,6 +7316,29 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はmulti-model serving、GPU power/thermal、またはbatching/fairnessへ移る。",
       "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-sparse-kv-7.json"
+    },
+    {
+      "run_key": "2026-09-19T21:00:00+09:00",
+      "round": "specialist-batching-fairness-8",
+      "axis": "resource-fair batching・prefix-aware batching",
+      "query_summary": "batching/fairnessへ探索軸を変更。2件を一次arXiv情報で軽量評価し、最新default branch repository searchでID未収録を確認した。直近FairInferenceは既知のため候補化しなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2608.02244",
+        "arXiv:2605.23389"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.18112"
+      ],
+      "next_axis_hint": "次はmulti-model/multi-tenant placement、request migration、またはinference cost optimizationへ移る。",
+      "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json"
     }
   ],
   "axes": {
@@ -13568,6 +13576,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はmulti-model serving、GPU power/thermal、またはbatching/fairnessへ移る。"
+    },
+    "resource-fair batching・prefix-aware batching": {
+      "last_run_key": "2026-09-19T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はmulti-model/multi-tenant placement、request migration、またはinference cost optimizationへ移る。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
