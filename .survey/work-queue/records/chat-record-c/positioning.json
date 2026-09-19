@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-d22f06504ab5d2e1d4cebc14",
-  "job_id": "job-research-7353bc1b63a704fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d22f06504ab5d2e1d4cebc14",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d22f06504ab5d2e1d4cebc14","job_id":"job-research-7353bc1b63a704fc","data":{"limitations":"LoRA-as-inputは全用途LoRAの寸法一致を要求し、異なるrankを持つadapterには固定グラフのまま対応できない。CTGはcompile時に定義したstyle集合を前提とし、動的なstyle追加にはグラフ変更やメモリ複製が必要になる。DS2Dのforecast embeddingは各推論stepで入力内容に適応しないため、長期依存や意味変化が大きい入力で受理率低下があり得る。基盤モデルとLoRA学習の詳細が非公開で、公開コードも確認できず、再現性は限定的である。評価SoCがSamsung端末上のQualcomm NPU中心で、他ハードウェアへの一般性も未検証である。","differences":"MobiLlama等の小型モデル研究がモデル設計自体の軽量化を主眼とするのに対し、本研究は一つの商用基盤モデルを複数taskへ適応・配備するruntime/system設計に重点を置く。QLoRA/QaLoRAは主に低精度でのadapter学習効率を扱うが、本研究のLoRA-as-inputは凍結された端末推論グラフ上でadapterを動的交換する。EAGLE/Medusa等が別headやdraft機構を追加するのに対し、DS2Dはprefix tuningと同一LLMのforecast embeddingでdraftを生成し、追加モデル常駐を避ける。FlashAttentionのようなGPU向けkernel最適化ではなく、SHA分割や1x1 convolution変換でモバイルNPUの既存operatorへ合わせる点も異なる。","implementation_status":"Samsung Research/Samsung Electronicsによる実機システムで、Galaxy S24/S25系列のGalaxy AI機能への商用展開を論文が報告する。ACL 2026 Findings採択。公開された独立実装リポジトリは一次資料上で確認できない。","research_positioning":"エッジLLM推論の中でも、単一モデルの圧縮だけでなく『複数用途adapterを固定グラフ上でどう切り替えるか』『複数候補生成をどうNPUへ詰めるか』『draft modelなしで投機的復号をどう成立させるか』を一体化したdeployment研究である。モデル圧縮、PEFT、投機的復号、hardware-aware graph optimizationを商用スマートフォンの実装制約へ収束させた実証例として位置付けられる。"},"reservation":{"claim_id":"claim-d22f06504ab5d2e1d4cebc14","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
