@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4acdd901db9ea9968da5dd65",
-  "job_id": "job-research-7623de796f4f2b46",
-  "data": {
-    "overview": "InferSaveはSLOを満たす範囲で最大性能GPUより安価なVMを選び、オンライン400 TPSではg4dn.xlargeが620.17 TPSを0.71ドルで提供し、g6e.xlargeの2.699ドルに対して73.7%低コストとなる。600 TPSではg6.xlargeを選び56.75%低コスト。長入力のオフラインではKVオフロードにより低VRAM VMを候補に残し、100 TPSでg4dn.xlargeを選択して総費用2.13ドル、最大性能VMより約21%安く、200 TPSでも低価格VMを選択する。CTCFはT4デコード約1%、L4プリフィル約2%の予測誤差を示す。",
-    "key_results": [
-      {
-        "metric": "オンライン400 TPS費用",
-        "value": "g4dn.xlarge $0.71、620.17 TPS；g6e.xlarge $2.699に対し73.7%低コスト",
-        "baseline": "Max-Performance",
-        "condition": "OPT-2.7B、batch 32、128入力/512出力、3000要求",
-        "interpretation": "SLO超過性能を買わず、必要性能を満たす最安側VMへ落とせる。"
-      },
-      {
-        "metric": "オンライン600 TPS費用",
-        "value": "g6.xlarge $1.167、800.15 TPS；g6e.xlarge比56.75%低コスト",
-        "baseline": "Max-Performance",
-        "condition": "同オンライン workload",
-        "interpretation": "SLOが厳しくなると選択VMをT4からL4へ引き上げる。"
-      },
-      {
-        "metric": "オフライン100 TPS",
-        "value": "g4dn.xlarge、100% KV offload、169.17 TPS、総費用$2.13",
-        "baseline": "g6e.xlarge $2.699",
-        "condition": "1024入力/128出力、1000要求",
-        "interpretation": "長入力ではKVオフロードを許すことで安価な16GB GPUを候補にできる。"
-      },
-      {
-        "metric": "CTCF予測誤差",
-        "value": "g4dn.xlargeデコード約1%、g6.xlargeプリフィル約2%",
-        "baseline": "実測時間",
-        "condition": "OPT-2.7B、512入力/128出力",
-        "interpretation": "公称FLOPSだけより実LLM性能に近いVM比較を可能にする。"
-      },
-      {
-        "metric": "オフライン節約効果",
-        "value": "論文全体でKV offloading考慮により最大約20.19%、議論では条件により最大28%のコスト削減機会",
-        "baseline": "オフロード非考慮/最大性能選択",
-        "condition": "長入力batch workload",
-        "interpretation": "オフロードは全 workloadで有利ではなく、緩いSLOと長入力で特に価値が高い。"
-      }
-    ],
-    "negative_results": "オンラインの代表workloadではKV全量がGPUへ収まるため、オフロードを考慮しないInferSaveと最大性能方策が同じg6e.xlargeを選ぶ場合があり、オフロード自体は常に有益ではない。安価VMでオフロード率が高いと転送遅延により厳しいSLOを満たせず候補から外れる。",
-    "interpretation": "KVオフロードの価値は単純なOOM回避ではなく、SLOに余裕がある時にVRAM容量の小さい安価GPUを使える選択肢を増やすことにある。性能予測へ転送費を入れることで、オフロード率を上げすぎてSLOを破る構成と、高性能すぎて費用を浪費する構成の双方を避ける。",
-    "quality_impact": "同一モデルを同一精度で実行し、品質指標を変更しない。最適化対象はTPS/SLO、タスク完了時間、クラウド費用。"
-  },
+  "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
+  "job_id": "job-research-c26aa10b960d27a4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4acdd901db9ea9968da5dd65",
+    "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

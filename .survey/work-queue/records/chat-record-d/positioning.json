@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-4acdd901db9ea9968da5dd65",
-  "job_id": "job-research-7623de796f4f2b46",
-  "data": {
-    "limitations": "評価とソルバは単一GPU VMを前提とし、複数GPUや分散クラスタ、GPU間KV転送を含む配置最適化は未対応。性能モデルはVMごとのCTCF事前プロファイルに依存するため、新GPU、ドライバ、推論ランタイム、モデル族へ移る際は再測定が必要。評価モデルはOPT 1.3B/2.7B/6.7Bが中心で、MoEやGQAを持つ最新大規模モデルへの予測精度は未実証。クラウド価格も時点・地域依存であり、スポット価格や動的価格、起動待ち時間はモデル化していない。",
-    "differences": "Melange等はGPU異種性と要求特性から配置を選ぶがKVオフロードの容量・転送費を候補生成へ入れない。SplitWise/ThunderServeはprefill/decodeを別GPUへ分けるが高速相互接続を前提とし、一般的な単一VMの選択問題とは異なる。FlexGen等は所与のハードウェア上でオフロード実行を最適化するのに対し、InferSaveはオフロード率による性能低下を予測して『そのVMを借りるべきか』を決める上位層の資源選択器である。",
-    "implementation_status": "Python 3.10.14とNumPy 1.24.3で実装され、FlexGenのKVオフロードを利用する。完全なソースコードと関連ツールはGitHubのlass-lab/InferSaveで公開。AWS実機4 GPU VMで検証。",
-    "research_positioning": "階層メモリ/オフロードをクラウド経済性へ接続する運用最適化研究。SSD/CPUオフロード技法そのものの帯域を改善するのではなく、転送帯域と容量を性能モデルへ組み込み、どのハードウェア階層をどのSLOで使うと費用対効果が高いかを決める。今後、NVMe帯域・SSD価格・量子化KV・複数GPUを変数へ加えれば、より広い階層メモリ配置ソルバへ拡張できる。"
-  },
+  "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
+  "job_id": "job-research-c26aa10b960d27a4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4acdd901db9ea9968da5dd65",
+    "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

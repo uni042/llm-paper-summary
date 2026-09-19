@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4acdd901db9ea9968da5dd65",
-  "job_id": "job-research-7623de796f4f2b46",
-  "data": {
-    "canonical_id": "arXiv:2504.11816",
-    "arxiv_id": "2504.11816",
-    "doi": "10.48550/arXiv.2504.11816",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading",
-    "summary": "クラウドLLM推論ではGPU価格・性能・VRAM・PCIe帯域がVMごとに異なり、KVキャッシュのオフロードは安価なGPUで大バッチを可能にする一方、転送遅延でSLOを破ることがある。InferSaveはモデル、入出力長、バッチ、予算、目標TPSからモデル・活性値・KV容量を計算し、各AWS GPU VMで必要なKVオフロード率を導出する。プリフィルとデコードの計算量・GPU/CPU転送量を式で予測し、理論FLOPSと実測差はVM別の線形Compute Time Calibration Functionで補正する。SLOを満たす候補のうちコスト効率最大のVMとオフロード構成を選ぶ。AWS T4/A10G/L4/L40s実測で、オンライン400 TPSではg4dn.xlargeを選び最大性能VMより73.7%低コスト、オフラインではKVオフロードを考慮することで最大約20%の節約を報告する。",
-    "list_summary": "SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。",
-    "authors": [
-      "Kihyun Kim",
-      "Jinwoo Kim",
-      "Hyunsun Chung",
-      "Myung-Hoon Cha",
-      "Hong-Yeon Kim",
-      "Youngjae Kim"
-    ],
-    "authors_affiliations": "Sogang University; ETRI",
-    "published": "2025-04-16",
-    "publication": "arXiv:2504.11816v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "Preprint",
-    "lineage": "offload-hierarchical-memory",
-    "topics": [
-      "KVキャッシュオフロード",
-      "クラウドLLMサービング",
-      "VM選択",
-      "SLO",
-      "コスト最適化"
-    ],
-    "importance": "KVオフロードを単体性能技法ではなく、クラウドGPUの価格・容量・帯域とSLOを含む配置最適化変数として扱う点が特徴。",
-    "hardware_evaluation": "AWS us-east-1でT4(g4dn.xlarge)、A10G(g5.xlarge)、L4(g6.xlarge)、L40s(g6e.xlarge)を2024-12〜2025-03に実測。",
-    "quality_effect": "モデル出力品質を変更する手法ではなく、同一モデルのVM/オフロード構成選択を行う。品質劣化ではなくTPS/SLOとコストを最適化対象とする。",
-    "source": "https://arxiv.org/abs/2504.11816",
-    "sources": [
-      "https://arxiv.org/abs/2504.11816",
-      "https://arxiv.org/html/2504.11816"
-    ],
-    "code": "https://github.com/lass-lab/InferSave",
-    "implementation": "Python 3.10.14、NumPy 1.24.3、FlexGenを基盤とする公開ソフトウェア。",
-    "last_checked": "2026-09-17",
-    "references": [],
-    "references_checked_at": "2026-09-17",
-    "references_source": "arXiv HTML参考文献節を確認。",
-    "references_total": 22
-  },
+  "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
+  "job_id": "job-research-c26aa10b960d27a4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4acdd901db9ea9968da5dd65",
+    "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

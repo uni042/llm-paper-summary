@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4acdd901db9ea9968da5dd65",
-  "job_id": "job-research-7623de796f4f2b46",
-  "data": {
-    "hardware": "AWS us-east-1のg4dn.xlarge/T4 16GB、g5.xlarge/A10G 24GB、g6.xlarge/L4 24GB、g6e.xlarge/L40s 48GB。論文記載価格は0.71、1.466、1.167、2.699ドル/時、PCIe帯域はT4 6GB/s、他3種12GB/s。",
-    "software": "Python 3.10.14、NumPy 1.24.3、FlexGenベースのInferSave。公開GitHub実装あり。",
-    "methodology": "OPT-1.3B/2.7B/6.7Bを単一GPUでbatch 1〜64評価。代表結果はOPT-2.7B、batch 32、最大予算3ドル/時。オンラインは入力128・出力512、3000要求、SLO 400/600 TPS。オフラインは入力1024・出力128、1000要求、SLO 100/200 TPS。各VMで3回測定し平均。2024年12月〜2025年3月、AWS us-east-1a〜1fへ分散して実施。",
-    "scope": "単一GPU VMを対象とし、マルチGPU・分散クラスタ最適化は扱わない。VM別CTCFは事前プロファイルを必要とし、評価はAWS 4種GPUとOPT系モデルが中心。"
-  },
+  "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
+  "job_id": "job-research-c26aa10b960d27a4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4acdd901db9ea9968da5dd65",
+    "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
