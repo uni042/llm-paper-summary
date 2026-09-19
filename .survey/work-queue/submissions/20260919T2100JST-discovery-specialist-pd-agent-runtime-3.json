@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"canonical_id":"arXiv:2607.02043","title":"Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving","source_url":"https://arxiv.org/abs/2607.02043","priority":88,"reason":"prefill/decode分離サービングでdecode側の遊休計算資源へprefillをdeflectしKV転送を除去するvLLM実装。production-style A100 clusterでP95 TTFT最大81%削減、SLO attainment最大79%向上を報告する。"},
+    {"canonical_id":"arXiv:2605.27744","title":"A Policy-Driven Runtime Layer for Agentic LLM Serving","source_url":"https://arxiv.org/abs/2605.27744","priority":82,"reason":"agent frameworkとserving engine間にagent-aware policy runtimeを導入。CacheSage実装で5つのmulti-agent workloadにおいてcache hit率+13〜37ポイント、平均TTFT 12〜29%低減、throughput 6〜14%向上を報告する。"}
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-pd-agent-runtime-3","axis":"disaggregated prefill deflection・agent-aware serving runtime","query_summary":"P/D分離サービングのload imbalanceとagentic serving runtimeを独立軸として探索。両候補を一次arXiv情報で評価し、最新default branch repository searchでID未収録を確認した。","candidate_count":2,"duplicate_filtered_count":0,"novel_candidate_count":2,"accepted_count":2,"duplicate_ratio":0.0,"accepted_canonical_ids":["arXiv:2607.02043","arXiv:2605.27744"],"duplicate_canonical_ids":[],"next_axis_hint":"heterogeneous GPU serving、network/KV transfer co-scheduling、kernel/graph executionへ軸を変更する。"}
+}
