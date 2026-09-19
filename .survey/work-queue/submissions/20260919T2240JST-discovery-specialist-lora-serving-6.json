@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.06370",
+      "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+      "source_url": "https://arxiv.org/abs/2604.06370",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.06370-forkkv.md",
+      "priority": 89,
+      "reason": "Multi-LoRA agent serving system applying OS-style copy-on-write semantics to shared versus adapter-specific KV state, with a DualRadixTree and SRAM reconstruction kernel; reports up to 3.0x throughput over multi-LoRA serving baselines."
+    },
+    {
+      "canonical_id": "arXiv:2512.17910",
+      "title": "Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA",
+      "source_url": "https://arxiv.org/abs/2512.17910",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2512.17910-activated-lora-kv-reuse.md",
+      "priority": 87,
+      "reason": "vLLM-based serving engine enabling cross-model prefix-cache reuse between base and adapted models through Activated LoRA, base-aligned block hashing and activation-aware masking; reports up to 58x end-to-end latency reduction and >100x TTFT improvement versus standard LoRA baselines."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-lora-serving-6",
+    "axis": "multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing",
+    "query_summary": "collective/network軸からmulti-model/LoRA co-servingへ切り替え、2025-2026のadapter cache・multi-agent shared contextを探索した。Punicaは既知基礎系統、SwiftCacheは既知候補として除外し、ForkKVとActivated-LoRA servingをdefault branchのcanonical ID/title検索で未収録確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2310.18547", "arXiv:2606.16135"],
+    "next_axis_hint": "speculative decoding runtime・draft/verification schedulingではなく、memory allocator/fragmentation・GPU virtual memoryへ移る",
+    "empty_round_reason": null
+  }
+}
