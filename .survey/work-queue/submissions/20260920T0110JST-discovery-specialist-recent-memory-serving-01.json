@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_precheck": {
+    "request_id": "20260920T0101JST-specialist-recent-memory-serving-01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260920T0101JST-specialist-recent-memory-serving-01.json",
+    "receipt": "sha256:8c3ec8664a44ae30fe1718015f5404f763a4e8f5153f9cf8589eb2a1fdf4108f"
+  },
+  "discovery_stats": {
+    "run_key": "2026-09-20T01:01:07+09:00",
+    "round": "specialist-recent-memory-serving-01",
+    "axis": "recent heterogeneous KV memory pooling and robust KV reservation",
+    "query_summary": "SwiftCache, CrossPool, and robust KV reservation were found via recent primary arXiv search; mandatory authoritative precheck removed all three as already represented in canonical retrieval identities.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2606.16135","arXiv:2606.24506","arXiv:2607.16892"],
+    "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference.",
+    "empty_round_reason": "All raw records were removed by the mandatory authoritative precheck."
+  }
+}
