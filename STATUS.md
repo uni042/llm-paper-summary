@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 16:02:05 JST**
+> 自動生成: **2026-09-19 16:02:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **5** | **0** | **5** | **0** | **0** | **3** |
-| 合計 | **7** | **6** | **0** | **5** | **0** | **0** | **3** |
+| Discovery | **0** | **7** | **0** | **7** | **0** | **0** | **4** |
+| 合計 | **7** | **8** | **0** | **7** | **0** | **0** | **4** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -110,8 +110,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 16:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **3件**
-- 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL / MoE expert cache・prefetch・placement・heterogeneous offload / network・GPU collective・disaggregated transport・runtime adaptation / 2026年9月新着・runtime memory・serving safety横断 / memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **4件**
+- 探索軸: agentic serving・multimodal serving・stateful runtime / SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL / MoE expert cache・prefetch・placement・heterogeneous offload / network・GPU collective・disaggregated transport・runtime adaptation / 2026年9月新着・runtime memory・serving safety横断 / memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler / speculative decoding・deterministic inference・output-length prediction
+- round `specialist-agent-multimodal-6` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json`
+  - 探索軸: agentic serving・multimodal serving・stateful runtime
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-hierarchical-memory-2` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json`
   - 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL
@@ -131,6 +135,10 @@
 - round `specialist-scheduling-kernel-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-scheduling-kernel-5.json`
   - 探索軸: memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-speculative-length-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-speculative-length-7.json`
+  - 探索軸: speculative decoding・deterministic inference・output-length prediction
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -186,10 +194,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **600** |
+| 成功result未照合のimmutable submission | **602** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **139** |
+| └ Discovery | **141** |
 
 ### 厳格検証が未成立のcompleted job
 
