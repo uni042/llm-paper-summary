@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-19T18:08:00+00:00",
-  "record_count": 3,
+  "updated_at": "2026-09-19T18:18:00+00:00",
+  "record_count": 7,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -40,6 +40,54 @@
       "last_checked_at": "2026-09-19T18:08:00+00:00",
       "linked_from": [],
       "title": "Evaluating Large Language Models Trained on Code"
+    },
+    "arXiv:1803.05457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.05457",
+      "identity_tokens": [
+        "arXiv:1803.05457"
+      ],
+      "reason": "Benchmark/dataset paper rather than an LLM inference or training systems contribution.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge"
+    },
+    "arXiv:2009.03300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.03300",
+      "identity_tokens": [
+        "arXiv:2009.03300"
+      ],
+      "reason": "Capability benchmark paper rather than a systems contribution.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Measuring Massive Multitask Language Understanding"
+    },
+    "arXiv:2308.14508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.14508",
+      "identity_tokens": [
+        "arXiv:2308.14508"
+      ],
+      "reason": "Long-context benchmark paper; useful for evaluation but not itself a systems method.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
+    },
+    "arXiv:1609.07843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1609.07843",
+      "identity_tokens": [
+        "arXiv:1609.07843"
+      ],
+      "reason": "Pre-Transformer language-model architecture unrelated to the current LLM systems survey scope.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Pointer Sentinel Mixture Models"
     }
   }
 }

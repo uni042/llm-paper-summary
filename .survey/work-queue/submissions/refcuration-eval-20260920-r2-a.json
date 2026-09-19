@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2309.17453",
+      "arxiv_id": "2309.17453",
+      "openreview_id": "NG7sS51zVF",
+      "identifiers": [
+        "arXiv:2309.17453",
+        "OpenReview:NG7sS51zVF"
+      ],
+      "title": "Efficient Streaming Language Models with Attention Sinks",
+      "source_url": "https://arxiv.org/abs/2309.17453",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2023-2309.17453-streamingllm.md",
+      "priority": 94,
+      "reason": "StreamingLLM is a focused inference framework for bounded KV retention in effectively unbounded streaming contexts, with direct memory and decoding-speed effects."
+    },
+    {
+      "canonical_id": "arXiv:2006.16668",
+      "arxiv_id": "2006.16668",
+      "title": "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding",
+      "source_url": "https://arxiv.org/abs/2006.16668",
+      "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+      "priority": 93,
+      "reason": "Foundational distributed MoE training system combining automatic sharding with conditional computation at very large scale."
+    },
+    {
+      "canonical_id": "arXiv:2402.02750",
+      "arxiv_id": "2402.02750",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "source_url": "https://arxiv.org/abs/2402.02750",
+      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2402.02750-kivi.md",
+      "priority": 93,
+      "reason": "Focused KV-cache quantization method with hardware-conscious implementation and direct peak-memory, batch-size, and throughput improvements."
+    },
+    {
+      "canonical_id": "arXiv:2305.13245",
+      "arxiv_id": "2305.13245",
+      "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+      "source_url": "https://arxiv.org/abs/2305.13245",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2023-2305.13245-gqa.md",
+      "priority": 88,
+      "reason": "Foundational grouped-query attention method targeting decoder inference speed and KV bandwidth while preserving quality."
+    },
+    {
+      "canonical_id": "arXiv:1911.02150",
+      "arxiv_id": "1911.02150",
+      "title": "Fast Transformer Decoding: One Write-Head is All You Need",
+      "source_url": "https://arxiv.org/abs/1911.02150",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2019-1911.02150-multi-query-attention.md",
+      "priority": 89,
+      "reason": "Foundational multi-query attention paper explicitly reducing KV tensor memory-bandwidth cost in incremental Transformer decoding."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r2b",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r2b.json",
+    "receipt": "sha256:adcac869020e471498e22024a38c2007ea53a20490db211a7cdd0a963bfb09c6"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20-r2b",
+    "round": "refcuration-eval-r2-a",
+    "axis": "structured references relevance curation round 2 after alias fix",
+    "query_summary": "Structured-reference curation round 2 after DOI/arXiv alias normalization. Evaluated exactly 20 allowed records; one OpenReview record was identified as an alias of StreamingLLM and attached to the accepted arXiv candidate.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2309.17453",
+      "arXiv:2006.16668",
+      "arXiv:2402.02750",
+      "arXiv:2305.13245",
+      "arXiv:1911.02150"
+    ],
+    "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle."
+  }
+}

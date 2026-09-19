@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:08:00+00:00",
-  "record_count": 9,
+  "updated_at": "2026-09-19T18:18:00+00:00",
+  "record_count": 16,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -112,6 +112,90 @@
       "last_checked_at": "2026-09-19T18:08:00+00:00",
       "linked_from": [],
       "title": "Qwen2.5 Technical Report"
+    },
+    "DOI:10.48550/arxiv.2310.06825": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2310.06825",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.06825"
+      ],
+      "reason": "Model report with inference-efficient GQA/SWA architecture, but not a focused systems paper; keep available for later reconsideration.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Mistral 7B"
+    },
+    "arXiv:2001.08361": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2001.08361",
+      "identity_tokens": [
+        "arXiv:2001.08361"
+      ],
+      "reason": "Important training-efficiency background, but empirical scaling-law analysis rather than a training systems implementation.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Scaling Laws for Neural Language Models"
+    },
+    "arXiv:2508.10925": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.10925",
+      "identity_tokens": [
+        "arXiv:2508.10925"
+      ],
+      "reason": "Contains deployment-relevant architecture/quantization context, but is primarily a model card rather than a focused systems paper.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "gpt-oss-120b & gpt-oss-20b Model Card"
+    },
+    "arXiv:2407.10671": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.10671",
+      "identity_tokens": [
+        "arXiv:2407.10671"
+      ],
+      "reason": "Broad model technical report; systems-relevant background but lower priority than focused systems work.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Qwen2 Technical Report"
+    },
+    "arXiv:2401.06066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.06066",
+      "identity_tokens": [
+        "arXiv:2401.06066"
+      ],
+      "reason": "Strong MoE architecture paper, but primarily model architecture rather than serving/offload/parallel-runtime systems; retain for optional reconsideration.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
+    },
+    "arXiv:2309.16609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.16609",
+      "identity_tokens": [
+        "arXiv:2309.16609"
+      ],
+      "reason": "Broad model technical report rather than a focused inference/training system paper.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Qwen Technical Report"
+    },
+    "arXiv:2004.05150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2004.05150",
+      "identity_tokens": [
+        "arXiv:2004.05150"
+      ],
+      "reason": "Efficient-attention architecture with historical relevance, but outside the focused LLM systems scope for immediate Research.",
+      "first_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "linked_from": [],
+      "title": "Longformer: The Long-Document Transformer"
     }
   }
 }

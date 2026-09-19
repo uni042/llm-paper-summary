@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2406.02069",
+      "arxiv_id": "2406.02069",
+      "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+      "source_url": "https://arxiv.org/abs/2406.02069",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "priority": 90,
+      "reason": "Layer-adaptive KV-cache compression method with strong memory-retention reductions and long-context evaluation."
+    },
+    {
+      "canonical_id": "arXiv:2411.01433",
+      "arxiv_id": "2411.01433",
+      "title": "HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference",
+      "source_url": "https://arxiv.org/abs/2411.01433",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2024-2411.01433-hobbit.md",
+      "priority": 96,
+      "reason": "Directly on-scope MoE expert offloading system using mixed precision, adaptive prefetching, and caching; implemented on llama.cpp."
+    },
+    {
+      "canonical_id": "arXiv:2205.14135",
+      "arxiv_id": "2205.14135",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "source_url": "https://arxiv.org/abs/2205.14135",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md",
+      "priority": 96,
+      "reason": "Seminal IO-aware exact attention algorithm reducing HBM/SRAM traffic; foundational to modern attention-kernel systems."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r2b",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r2b.json",
+    "receipt": "sha256:adcac869020e471498e22024a38c2007ea53a20490db211a7cdd0a963bfb09c6"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20-r2b",
+    "round": "refcuration-eval-r2-b",
+    "axis": "structured references relevance curation round 2 after alias fix",
+    "query_summary": "Structured-reference curation round 2 after DOI/arXiv alias normalization. Evaluated exactly 20 allowed records; one OpenReview record was identified as an alias of StreamingLLM and attached to the accepted arXiv candidate.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2406.02069",
+      "arXiv:2411.01433",
+      "arXiv:2205.14135"
+    ],
+    "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle."
+  }
+}
