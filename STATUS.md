@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:02:10 JST**
+> 自動生成: **2026-09-19 21:02:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **48** | **4** | **1** | **3** | **0** | **0** | **7** |
-| 合計 | **55** | **7** | **3** | **3** | **1** | **0** | **7** |
+| Discovery | **48** | **5** | **1** | **4** | **0** | **0** | **9** |
+| 合計 | **55** | **8** | **3** | **4** | **1** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -159,8 +159,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 21:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **7件**
-- 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **9件**
+- 探索軸: CXL-hybrid KV memory・SSD-backed MoE expert cache / consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
+- round `specialist-cxl-flash-moe-5` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-flash-moe-5.json`
+  - 探索軸: CXL-hybrid KV memory・SSD-backed MoE expert cache
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-local-runtime-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-local-runtime-4.json`
   - 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime
@@ -233,10 +237,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **621** |
+| 成功result未照合のimmutable submission | **622** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **148** |
+| └ Discovery | **149** |
 
 ### 厳格検証が未成立のcompleted job
 
