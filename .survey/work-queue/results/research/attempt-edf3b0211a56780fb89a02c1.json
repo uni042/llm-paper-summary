@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-edf3b0211a56780fb89a02c1",
+  "job_id": "job-research-ac3d391d822b215f",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-edf3b0211a56780fb89a02c1.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references[0] requires a normalized identity | problem_method.method_overview must explain the end-to-end mechanism",
+  "processed_at": "2026-09-19T21:42:01+00:00",
+  "validation_errors": [
+    "metadata.references[0] requires a normalized identity",
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}

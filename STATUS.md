@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:41:49 JST**
+> 自動生成: **2026-09-20 06:42:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **93** |
-| 未claim Research job | **92** |
-| 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 05:45:06 JST（56分前）** |
+| 収録候補論文 | **92** |
+| 未claim Research job | **91** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-20 06:42:02 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **93** |
+| canonical_id確認済みの一意な候補論文 | **92** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **93** |
+| 非終端Research job合計 | **92** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **3** | **0** | **2** | **1** | **0** | — |
+| Research | **12** | **3** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **4** | **1** | **2** | **1** | **0** | **5** |
+| 合計 | **19** | **4** | **2** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 06:42:02 JST** [research] `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
+  - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
+  - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
+  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
 - **09-20 05:45:06 JST** [research] `arXiv:2503.01840` — EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test
   - job: `.survey/work-queue/jobs/job-research-e279074fae9402fc.json`
   - result: `.survey/work-queue/results/research/attempt-19f5527d6ca7024729812f1a.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
-- **09-20 00:48:02 JST** [research] `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
-  - job: `.survey/work-queue/jobs/job-research-8ff9887a327d8124.json`
-  - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json`
-  - paper: `papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md`
 
 ### Audit
 
@@ -139,11 +139,16 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **2件**
+- immutable submission: **3件** / 検証済み成功: **1件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json` (job `job-research-b33b8317e97d5549`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-edf3b0211a56780fb89a02c1.json` (job `job-research-ac3d391d822b215f`)
+- **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
+  - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
+  - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
+  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-edf3b0211a56780fb89a02c1.json` (job `job-research-ac3d391d822b215f`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-edf3b0211a56780fb89a02c1.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -188,7 +193,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **93** |
+| ready | **92** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +213,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **780** |
+| inference/training/survey配下の論文Markdown実体 | **781** |
 
 ### immutable submissionの未照合
 
@@ -216,8 +221,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **671** |
-| └ Research | **510** |
+| 成功result未照合のimmutable submission | **670** |
+| └ Research | **509** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
