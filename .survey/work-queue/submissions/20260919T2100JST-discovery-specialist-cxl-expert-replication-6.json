@@ -1,0 +1,8 @@
+{
+ "schema_version":1,"transport_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2509.03377","title":"Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing","source_url":"https://arxiv.org/abs/2509.03377","priority":91,"reason":"CXL memory device内でdynamic quantizationとlossless compressionを透明に行うnear-data processing architecture。end-to-end servingでthroughput 43%向上、最大context 87%拡大、KV footprint 46.9%削減を報告し、CXL/NDP・階層メモリの重要な未収録候補。"},
+  {"canonical_id":"arXiv:2605.11537","title":"Fast MoE Inference via Predictive Prefetching and Expert Replication","source_url":"https://arxiv.org/abs/2605.11537","priority":78,"reason":"次batchで過負荷になるexpertを予測して動的replicationするMoE推論手法。大規模Switch MoEでGPU utilizationをほぼ100%へ引き上げ最大3x高速化を報告し、expert placement/prefetch/load balance系統に関連する。"}
+ ],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-cxl-expert-replication-6","axis":"CXL near-data processing・MoE predictive expert replication","query_summary":"CXL memory bandwidth増幅とexpert migration/prefetch近傍へ探索を展開。2件を一次arXiv情報で評価し、最新default branch repository searchでID未収録を確認した。","candidate_count":2,"duplicate_filtered_count":0,"novel_candidate_count":2,"accepted_count":2,"duplicate_ratio":0.0,"accepted_canonical_ids":["arXiv:2509.03377","arXiv:2605.11537"],"duplicate_canonical_ids":[],"next_axis_hint":"次はKV圧縮・sparse attention、multi-model serving、またはGPU power/thermal schedulingへ移る。"}
+}
