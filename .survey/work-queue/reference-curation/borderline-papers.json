@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:25:30+00:00",
-  "record_count": 21,
+  "updated_at": "2026-09-19T18:45:00+00:00",
+  "record_count": 27,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -260,6 +260,82 @@
       "last_checked_at": "2026-09-19T18:22:00+00:00",
       "linked_from": [],
       "title": "Code Llama: Open Foundation Models for Code"
+    },
+    "arXiv:2204.02311": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.02311",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2204.02311",
+        "arXiv:2204.02311"
+      ],
+      "reason": "Broad foundation-model report with scaling infrastructure context but not a focused inference/training systems paper.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "PaLM: Scaling Language Modeling with Pathways"
+    },
+    "arXiv:1910.03771": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1910.03771",
+      "identity_tokens": [
+        "arXiv:1910.03771"
+      ],
+      "reason": "Important general software library/framework, but not a focused LLM inference/training systems method for immediate Research.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "HuggingFace's Transformers: State-of-the-art Natural Language Processing"
+    },
+    "arXiv:2106.09685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.09685",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2106.09685",
+        "OpenReview:nZeVKeeFYf9",
+        "arXiv:2106.09685"
+      ],
+      "reason": "Parameter-efficient adaptation method rather than a training-system implementation; useful context but lower systems-specific value.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+    },
+    "arXiv:2005.14165": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.14165",
+      "identity_tokens": [
+        "arXiv:2005.14165"
+      ],
+      "reason": "Broad model/capability paper rather than a focused inference/training systems contribution.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "Language Models are Few-Shot Learners"
+    },
+    "arXiv:2403.05530": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.05530",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.05530",
+        "arXiv:2403.05530"
+      ],
+      "reason": "Broad model technical report with long-context context, but not a focused systems contribution for immediate Research.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context"
+    },
+    "arXiv:2502.09992": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.09992",
+      "identity_tokens": [
+        "arXiv:2502.09992"
+      ],
+      "reason": "Model architecture/training work relevant as background, but not a focused inference/training systems implementation.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "Large Language Diffusion Models"
     }
   }
 }
