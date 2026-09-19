@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:42:38 JST**
+> 自動生成: **2026-09-20 00:43:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -188,9 +188,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier? / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 00:41:39 JST** / heartbeat: **—** / lease expiry: **09-20 02:11:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1a87bd753fb86450.json`
+- `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 00:42:53 JST** / heartbeat: **—** / lease expiry: **09-20 02:12:53 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8ff9887a327d8124.json`
 
 #### Audit
 
