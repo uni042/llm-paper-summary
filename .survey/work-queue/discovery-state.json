@@ -1,103 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T09:00:05+00:00",
+  "updated_at": "2026-09-19T09:02:57+00:00",
   "last_run_key": "2026-09-19T17:00:00+09:00",
-  "last_round": "specialist-moe-kernel-cache-2",
+  "last_round": "specialist-heterogeneous-runtime-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 14,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-multitenant-runtime-6",
-      "axis": "multi-tenant runtime制御・適応parallelism・latency attribution",
-      "query_summary": "network軸の全重複後、異種GPU・電力制御・Superchip/CPU-GPU offloadを確認して既収録を多数除外し、さらにmulti-tenant runtime controlへ展開した。NitsumとLLMVisorは一次arXiv抄録を軽量評価し、最新HEADで決定論的research job不在を直接確認した。Flying Serving、Robust KV Cache Management、CrossPoolは既存jobで重複確認済み。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.6,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2602.22593",
-        "arxiv:2607.16892",
-        "arxiv:2606.24506"
-      ],
-      "next_axis_hint": "multi-tenant servingの直後反復を避け、古い重要未収録の探索または新着kernel/runtime・edge系のforward/adjacent expansionへ移る",
-      "source_submission": "work-queue/submissions/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json"
-    },
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-foundational-omissions-7",
-      "axis": "基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA",
-      "query_summary": "新着・multi-tenant軸で新規候補を得た後、古い重要論文の収録漏れ探索へ切り替えた。DistServe、Sarathi-Serve、Splitwise、Punicaを一次arXiv抄録で軽量評価し、送信直前の最新HEADで各canonical_idの決定論的research jobが不存在、repo内title/arXiv ID検索も不一致であることを確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 4,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "基礎サービング軸を継続し、PagedAttention/vLLM、SGLang/RadixAttention、DeepSpeed-FastGenなどの既収録確認後、未収録がなければkernel/runtimeまたはedge系の古い重要論文へ軸を変える",
-      "source_submission": "work-queue/submissions/20260913T0947JST-discovery-specialist-foundational-omissions-7.json"
-    },
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-foundational-runtime-8",
-      "axis": "基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse",
-      "query_summary": "基礎サービング重要未収録軸を別系統へ展開し、PagedAttention/vLLM、SGLang、DeepSpeed-FastGenを一次arXiv抄録で軽量評価した。送信直前の最新HEADで決定論的research jobはいずれも不存在で、repo内title/arXiv ID検索にも一致がなかったためActions最終identity gateへ送る。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は長文脈・分離KV・preemptible cloudの基礎系（LoongServe、Mooncake、SpotServe）を確認し、その後はrecent kernel/edgeへ軸を変える",
-      "source_submission": "work-queue/submissions/20260913T0950JST-discovery-specialist-foundational-runtime-8.json"
-    },
-    {
-      "run_key": "2026-09-13T09:57:59+09:00",
-      "round": "specialist-disagg-slo-1",
-      "axis": "分離型サービングの負荷偏り・SLO適応",
-      "query_summary": "直前のfoundational-runtime軸を反復せず、prefill/decode分離サービングの負荷偏り、集約/分離切替、長文脈配置を探索。MetaKV、ZipServ、Prefill-as-a-Service、理論的prefill/decode制御など既収録候補を最新job/identityで除外し、未収録の実装指向2件を送信した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 3,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5714285714285714,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2609.07966",
-        "arxiv:2603.17435",
-        "arxiv:2604.15039",
-        "arxiv:2602.02987"
-      ],
-      "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す",
-      "source_submission": "work-queue/submissions/20260913T1004JST-discovery-specialist-disagg-slo-1.json"
-    },
-    {
-      "run_key": "2026-09-13T09:57:59+09:00",
-      "round": "specialist-storage-kernel-2",
-      "axis": "NVMe重み先読み・疎推論GPUカーネル・fleet資源配置",
-      "query_summary": "前roundの分離型サービングから独立して、NVMeを能動的な重み供給層にする疎推論、低ビット疎GPU kernel、MoE expert cache/prefetch、vLLM fleet配置を探索。Cache-Aware Router、APEX、SPECTREは既存jobで除外し、未収録の実装・評価が強い4件を送信した。",
-      "candidate_count": 8,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 5,
-      "accepted_count": 4,
-      "duplicate_ratio": 0.375,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2609.04895",
-        "arxiv:2608.11688",
-        "arxiv:2605.08151"
-      ],
-      "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する",
-      "source_submission": "work-queue/submissions/20260913T1007JST-discovery-specialist-storage-kernel-2.json"
-    },
     {
       "run_key": "2026-09-13T10:16:01+09:00",
       "round": "specialist-new-systems-1",
@@ -7184,6 +7096,109 @@
       ],
       "next_axis_hint": "次はKV transfer/RDMA・collective communication、または長文脈KV階層化の2026年8〜9月新着へ移る",
       "source_submission": "work-queue/submissions/20260919T1809JST-discovery-specialist-moe-kernel-cache-2.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-kv-hierarchy-3",
+      "axis": "長文脈KV・CXL/SSD階層・cross-model GPU memory sharing",
+      "query_summary": "MoE cache軸から独立してKV cacheのCXL/SSD/host/GPU階層化へ移動。Robust KV Cache Management (2607.16892) は既知候補として早期除外し、一次arXiv抄録でHyMCache、KVDrive、SwiftCacheを評価。最新mainのcanonical ID検索で未登録を確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.25,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "次はnetwork/RDMA KV transferまたはGPU runtime/kernelの新着へ移る",
+      "source_submission": "work-queue/submissions/20260919T1814JST-discovery-specialist-kv-hierarchy-3.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-network-kv-4",
+      "axis": "network/RDMA・KV transfer・topology-aware routing",
+      "query_summary": "KV階層化からnetwork transferへ軸を変更。PDD (2609.13161) とSmartGen (2607.28150) は既知候補として除外。Topology-Aware Data MovementとNetKVは一次arXiv抄録を評価したがsimulation/projected analysis中心のため品質基準で不採用。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.13161",
+        "arXiv:2607.28150"
+      ],
+      "next_axis_hint": "次はGPU kernel/runtime・attention実装、または古い重要systemの収録漏れへ移る",
+      "source_submission": "work-queue/submissions/20260919T1819JST-discovery-specialist-network-kv-4.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-kernel-energy-5",
+      "axis": "GPU attention kernel・operator-level DVFS・runtime",
+      "query_summary": "network軸からGPU kernel/runtimeへ変更し、attention batchingとoperator-level energy controlを探索。FlashInferは既知の基礎systemとして除外し、AFlexとPackInferを一次arXiv抄録で評価。最新mainのcanonical ID検索で未登録を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2501.01005"
+      ],
+      "next_axis_hint": "次は古い重要推論systemの収録漏れ、agentic serving/interception、またはrecent speculative decodingへ移る",
+      "source_submission": "work-queue/submissions/20260919T1824JST-discovery-specialist-kernel-energy-5.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-agent-kv-6",
+      "axis": "agentic serving・workflow-aware KV cache・speculative serving",
+      "query_summary": "kernel/runtimeからagentic servingへ軸を変更。SwiftSpecとSPECTREは直近探索で既知、speculative latency modelはsystem contributionよりanalysis中心として見送り。CacheScoutは一次arXiv抄録と最新main canonical ID検索で未登録を確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2506.11309",
+        "arXiv:2605.08151"
+      ],
+      "next_axis_hint": "次は古い基礎system収録漏れと2026年新着のCPU/GPU heterogeneous inferenceを横断する",
+      "source_submission": "work-queue/submissions/20260919T1829JST-discovery-specialist-agent-kv-6.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-heterogeneous-runtime-7",
+      "axis": "CPU/GPU・many-core・PIM異種推論runtime",
+      "query_summary": "agentic servingから異種計算runtimeへ変更。ATSInferとHybridGenは既知候補として除外し、PIM-only simulation中心候補は優先度を下げ、実装・実機比較を持つTHInferを一次arXiv抄録で評価。最新main canonical ID検索で未登録を確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.10183",
+        "arXiv:2604.18529"
+      ],
+      "next_axis_hint": "次はSmartNIC/CPU-free serving、peer-GPU memory pooling、または古い基礎systemの収録漏れへ移る",
+      "source_submission": "work-queue/submissions/20260919T1834JST-discovery-specialist-heterogeneous-runtime-7.json"
     }
   ],
   "axes": {
@@ -12901,6 +12916,71 @@
       "duplicate_ratio": 0.6666666666666666,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はKV transfer/RDMA・collective communication、または長文脈KV階層化の2026年8〜9月新着へ移る"
+    },
+    "長文脈KV・CXL/SSD階層・cross-model GPU memory sharing": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.25,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はnetwork/RDMA KV transferまたはGPU runtime/kernelの新着へ移る"
+    },
+    "network/RDMA・KV transfer・topology-aware routing": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はGPU kernel/runtime・attention実装、または古い重要systemの収録漏れへ移る"
+    },
+    "GPU attention kernel・operator-level DVFS・runtime": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次は古い重要推論systemの収録漏れ、agentic serving/interception、またはrecent speculative decodingへ移る"
+    },
+    "agentic serving・workflow-aware KV cache・speculative serving": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次は古い基礎system収録漏れと2026年新着のCPU/GPU heterogeneous inferenceを横断する"
+    },
+    "CPU/GPU・many-core・PIM異種推論runtime": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次はSmartNIC/CPU-free serving、peer-GPU memory pooling、または古い基礎systemの収録漏れへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
