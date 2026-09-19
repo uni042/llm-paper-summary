@@ -109,10 +109,10 @@ Discovery modeで1つの探索単位を開始したら、workerは検索結果�
 - `schema_version: 3`
 - `operation: "precheck_discovery_candidates"`
 - 必須: `request_id`, `collector_id`, `run_key`, `axis`, `provider`, `source_url`
-- 任意: `target_unseen`（既定10）, `page_size`, `initial_cursor`, `max_pages`
+- 任意: `target_unseen`（既定20）, `page_size`, `initial_cursor`, `max_pages`
 - **禁止**: workerが抽出した `records[]`、`provider_has_more`、`previous_request_id` / `previous_receipt` による手動page chain
 
-専用GitHub Actionsは最新mainからidentity snapshot / represented-paper resolver / rejection ledgerを再構築し、`discovery_provider_adapter.py` で `source_url` のpage 1を取得する。その後 `collect_until_unseen()` が同じ検索結果集合のpage/cursor/offsetを進め、各ページで既収録・既投入・過去不採用・alias重複を除外する。未収録bufferが既定10件に達するか、providerが尽きるか、安全上限に達するまでprecheck内部でpage 2, page 3...へ進む。
+専用GitHub Actionsは最新mainからidentity snapshot / represented-paper resolver / rejection ledgerを再構築し、`discovery_provider_adapter.py` で `source_url` のpage 1を取得する。その後 `collect_until_unseen()` が同じ検索結果集合のpage/cursor/offsetを進め、各ページで既収録・既投入・過去不採用・alias重複を除外する。未収録bufferが既定20件に達するか、providerが尽きるか、安全上限に達するまでprecheck内部でpage 2, page 3...へ進む。
 
 このためworker側に `CONTINUE_FETCH` を返して別queryを「次ページ相当」として作らせない。**別キーワード、別期間、別カテゴリ、別citation directionは次ページではなく別Discovery roundである。**
 
