@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:00:14 JST**
+> 自動生成: **2026-09-20 04:02:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **102** |
 | 未claim Research job | **97** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間8分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間10分前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **3** | **2** | **0** | **5** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **50** | **4** | **3** | **0** | **5** | **1** | **5** |
+| Discovery | **39** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **48** | **4** | **3** | **0** | **5** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -181,9 +181,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
-- `arXiv:2408.12757` — NanoFlow: Towards Optimal Large Language Model Serving Throughput / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:00:01 JST** / heartbeat: **—** / lease expiry: **09-20 05:30:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6882c5cf191305a1.json`
+- `DOI:10.1145/3651890.3672274` — CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving / worker `scheduled-chat-discovery-routing`
+  - claim: **09-20 04:02:29 JST** / heartbeat: **—** / lease expiry: **09-20 05:32:29 JST**
+  - evidence: `.survey/work-queue/claims/job-research-958b0ab5aeb9819d.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
