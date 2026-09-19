@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:32:23 JST**
+> 自動生成: **2026-09-19 11:33:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **41** |
+| 収録候補論文 | **40** |
 | 未claim Research job | **40** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-19 11:18:39 JST（13分前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **41** |
+| canonical_id確認済みの一意な候補論文 | **40** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **41** |
+| 非終端Research job合計 | **40** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **15** | **6** | **9** | **1** | **1** | — |
+| Research | **14** | **15** | **6** | **9** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **16** | **18** | **9** | **9** | **1** | **1** | **3** |
+| 合計 | **17** | **18** | **9** | **9** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:33:35 JST** [research] `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications
+  - job: `.survey/work-queue/jobs/job-research-c2f58815c322fab7.json`
+  - result: `.survey/work-queue/results/research/attempt-3b62c6bd3d0c2191dd7cade2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3b62c6bd3d0c2191dd7cade2.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md`
 - **09-19 11:18:39 JST** [research] `arXiv:2609.18123` — AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines
   - job: `.survey/work-queue/jobs/job-research-66ea885d5e740aba.json`
   - result: `.survey/work-queue/results/research/attempt-fa2bf0d161766edfda517f4d.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-c2a51a6ace4a43448c42f0b1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c2a51a6ace4a43448c42f0b1.json`
   - paper: `papers/inference/08-speculative-decoding/2026-2609.15504-orthrus-numerical-precision-losslessness.md`
-- **09-19 07:13:34 JST** [research] `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-3001166a9d479500.json`
-  - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
 
 ### Audit
 
@@ -179,10 +179,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
-- `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 11:31:13 JST** / lease expiry: **09-19 13:01:13 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -202,7 +200,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **41** |
+| ready | **40** |
 
 ### 候補の重複・識別情報欠損
 
@@ -222,7 +220,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **751** |
+| inference/training/survey配下の論文Markdown実体 | **752** |
 
 ### immutable submissionの未照合
 

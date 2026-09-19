@@ -8,23 +8,13 @@
   "source_url": "https://arxiv.org/abs/2510.24051",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md",
   "selection_reason": "LLM servingの生成ループを細粒度handlerへ分解し、WebAssembly上のapplication-provided inferletでKV cache戦略・生成ロジック・I/O統合をプログラム可能にする直接的systems研究。標準タスクで3-12%のoverheadに抑えつつagentic workflowで1.3-3.4xのlatency/throughput改善を報告し、現行repoのagent/runtime・serving系統を補完する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-18T21:01:55+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 56.7% < 70% (Japanese=3105, Latin=2371)",
-  "validation_errors": [
-    "metadata.references_total must be a non-negative integer",
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short",
-    "Japanese-first prose ratio is too low: 56.7% < 70% (Japanese=3105, Latin=2371)"
-  ],
-  "last_validation_failed_at": "2026-09-18T21:34:03+00:00"
+  "completed_at": "2026-09-19T02:33:35+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-3b62c6bd3d0c2191dd7cade2.json"
 }

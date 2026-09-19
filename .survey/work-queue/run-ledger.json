@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:20:10.118586+00:00",
+  "updated_at": "2026-09-19T02:33:40.286188+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:20:10.118586+00:00",
+      "last_recorded_at": "2026-09-19T02:33:40.286188+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 287,
+        "research_completed": 288,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 38,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35337648609:1",
-          "recorded_at": "2026-09-18T11:05:12.677473+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35337648609",
-            "run_attempt": "1",
-            "source_sha": "02937c349012f5177760d2812ca8c2ee23af3c9b"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35337869512:1",
           "recorded_at": "2026-09-18T11:08:13.660405+00:00",
@@ -19594,6 +19579,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35416001117:1",
+          "recorded_at": "2026-09-19T02:33:40.286188+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35416001117",
+            "run_attempt": "1",
+            "source_sha": "8fceca50161b8aeb723ca699d1ceef2c13466053"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23389,6 +23388,14 @@
           "title": "CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-c2f58815c322fab7",
+          "type": "research",
+          "canonical_id": "arXiv:2510.24051",
+          "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25671,7 +25678,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 745,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
