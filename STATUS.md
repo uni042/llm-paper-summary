@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:43:49 JST**
+> 自動生成: **2026-09-19 18:43:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **40** |
+| 収録候補論文 | **39** |
 | 未claim Research job | **39** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 18:42:15 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-19 18:43:52 JST（5秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **40** |
+| canonical_id確認済みの一意な候補論文 | **39** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **40** |
+| 非終端Research job合計 | **39** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **15** | **6** | **0** | **1** | **0** | — |
+| Research | **4** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **19** | **19** | **0** | **0** | **0** | **25** |
-| 合計 | **22** | **34** | **25** | **0** | **1** | **0** | **25** |
+| 合計 | **23** | **34** | **25** | **0** | **0** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 18:43:52 JST** [research] `arXiv:2604.25777` — SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission
+  - job: `.survey/work-queue/jobs/job-research-c1b7543305e71c40.json`
+  - result: `.survey/work-queue/results/research/attempt-cf5ac77834bd3c3ec6c8a715.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cf5ac77834bd3c3ec6c8a715.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md`
 - **09-19 18:42:15 JST** [research] `arXiv:2401.11240` — CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference
   - job: `.survey/work-queue/jobs/job-research-49ee16176ca66925.json`
   - result: `.survey/work-queue/results/research/attempt-aad8189707bf1017dc2b3caf.json` (`ok=true`)
@@ -206,10 +211,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.25777` — SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:43:00 JST** / heartbeat: **—** / lease expiry: **09-19 20:13:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c1b7543305e71c40.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -229,7 +232,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **40** |
+| ready | **39** |
 
 ### 候補の重複・識別情報欠損
 
@@ -249,7 +252,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **755** |
+| inference/training/survey配下の論文Markdown実体 | **756** |
 
 ### immutable submissionの未照合
 
@@ -257,8 +260,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **614** |
-| └ Research | **467** |
+| 成功result未照合のimmutable submission | **613** |
+| └ Research | **466** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
