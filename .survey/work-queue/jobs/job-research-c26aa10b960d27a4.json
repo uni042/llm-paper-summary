@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2412.18934",
   "paper_path": "papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
   "selection_reason": "draftをGPU、target verificationをCPUへ分担するheterogeneous speculative decodingでconsumer hardwareを活用。LLaMA2-Chat-7Bで3GB VRAM時5.86 token/s、CPU-only比約2.77xを報告し、CPU-GPU協調推論の隣接研究として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-16T19:06:06+00:00"
+  "created_at": "2026-09-16T19:06:06+00:00",
+  "completed_at": "2026-09-19T02:15:18+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-6ad53a550a3c7bedcb56aa8c.json"
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:15:01 JST**
+> 自動生成: **2026-09-19 11:15:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **44** |
-| 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 11:13:03 JST（1分前）** |
+| 収録候補論文 | **45** |
+| 未claim Research job | **43** |
+| 直近24hの検証済みResearch収録 | **46** |
+| 最終検証済みResearch収録 | **09-19 11:15:18 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **45** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **45** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **15** | **15** | **6** | **9** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **17** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **18** | **18** | **9** | **9** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:15:18 JST** [research] `arXiv:2412.18934` — Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference
+  - job: `.survey/work-queue/jobs/job-research-c26aa10b960d27a4.json`
+  - result: `.survey/work-queue/results/research/attempt-6ad53a550a3c7bedcb56aa8c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-6ad53a550a3c7bedcb56aa8c.json`
+  - paper: `papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md`
 - **09-19 11:13:03 JST** [research] `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading
   - job: `.survey/work-queue/jobs/job-research-7623de796f4f2b46.json`
   - result: `.survey/work-queue/results/research/attempt-4acdd901db9ea9968da5dd65.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a3bba0a36c53f4970b6d1719.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a3bba0a36c53f4970b6d1719.json`
   - paper: `papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md`
-- **09-19 07:07:34 JST** [research] `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
-  - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
-  - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
 
 ### Audit
 
@@ -180,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2412.18934` — Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:12:48 JST** / heartbeat: **—** / lease expiry: **09-19 12:42:48 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c26aa10b960d27a4.json`
+- `arXiv:2402.01528` — Decoding Speculative Decoding / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 11:15:06 JST** / heartbeat: **—** / lease expiry: **09-19 12:45:06 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0e6ed88f587a40d2.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **45** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +225,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **749** |
+| inference/training/survey配下の論文Markdown実体 | **750** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +233,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **581** |
-| └ Research | **452** |
+| 成功result未照合のimmutable submission | **580** |
+| └ Research | **451** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

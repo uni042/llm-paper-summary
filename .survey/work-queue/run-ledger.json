@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:13:06.721188+00:00",
+  "updated_at": "2026-09-19T02:15:23.998053+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:13:06.721188+00:00",
+      "last_recorded_at": "2026-09-19T02:15:23.998053+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 285,
+        "research_completed": 286,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35332710036:1",
-          "recorded_at": "2026-09-18T10:04:06.131100+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35332710036",
-            "run_attempt": "1",
-            "source_sha": "d8f19a056cd3a2c3fd32ab47c709c1787efd6fc4"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35333007686:1",
           "recorded_at": "2026-09-18T10:06:51.361651+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35414965833",
             "run_attempt": "1",
             "source_sha": "f6fd4f9614d958536a3fc271ab5ed0577ba2b19b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35415080567:1",
+          "recorded_at": "2026-09-19T02:15:23.998053+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35415080567",
+            "run_attempt": "1",
+            "source_sha": "7485a6c3ed4725f5c10611c6e5e4f99edecb3e8a"
           },
           "signals": [
             "research_completed"
@@ -23347,6 +23347,14 @@
           "type": "research",
           "canonical_id": "arXiv:2504.11816",
           "title": "Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c26aa10b960d27a4",
+          "type": "research",
+          "canonical_id": "arXiv:2412.18934",
+          "title": "Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference",
           "from": "ready",
           "to": "completed"
         }
