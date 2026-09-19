@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-cff94da844c9d4caaf2fc60b","job_id":"job-research-1182cce822dbe6dc","data":{"overview":"VAMPはH100上で専門家HBMをKVへ転用し、VAMP-15でKVプールを8.0GiBから18.5GiB、VAMP-20で21.8GiBへ拡張した。固定2,103ターンSWE-agent再生ではVAMP-15がTTFT tail、queueing、preemption、prefix hit率を大幅改善しrequest throughputも向上したが、専門家転送によりTPOTは悪化した。容量境界実験ではoffload比率を上げるほどprefix-cache cliffが高並行度へ移る一方、必要以上のoffloadは転送コストを増やし、単一比率が全SLOで最良ではない。","key_results":[{"metric":"KVプール容量","value":"8.0→18.5GiB/GPU (VAMP-15, 2.30×); 8.0→21.8GiB/GPU (VAMP-20, 2.71×)","baseline":"vLLM","condition":"H100 PCIe TP2","interpretation":"専門家HBMを実際のKV backingへ転用できる。"},{"metric":"TTFT p90","value":"26.1±0.7s→1.10±0.17s (23.6× lower)","baseline":"vLLM","condition":"2,103-turn SWE-agent replay, VAMP-15, n=5","interpretation":"固定要求列でもprefix-cache cliff回避がtail first-token latencyを大幅改善する。"},{"metric":"request throughput","value":"0.596±0.007→0.720±0.008 req/s (+20.7%)","baseline":"vLLM","condition":"2,103-turn replay, VAMP-15","interpretation":"TTFT改善だけでなく完了要求率も向上する。"},{"metric":"prefix-cache hit / preemption","value":"0.19±0.03%→89.8±3.4%; 562.7±13.3→0.18±0.41 preemptions/1k turns","baseline":"vLLM","condition":"2,103-turn replay, VAMP-15","interpretation":"再利用接頭辞保持とpreemption抑制が主要な改善機序。"},{"metric":"TPOT","value":"170.9±1.8→224.0±2.0ms (+31.1%)","baseline":"vLLM","condition":"2,103-turn replay, VAMP-15","interpretation":"専門家host-to-device stagingのdecode-time代償が明確に存在する。"},{"metric":"H200容量境界","value":"c=32でTTFT p99 92.8±0.3s→9.1±0.3s (10.2× lower)","baseline":"vLLM","condition":"4×H200 NVLink TP4, VAMP-20, in-house multi-turn","interpretation":"より大容量・4GPU構成でも容量境界を高並行度へ移せる。"}],"negative_results":"LMCache traceの128 sessionsではVAMP-15はTTFT p99を29.3sから4.01sへ改善する一方、TPSは205.2から115.2へ低下しTPOTは118.9msから263.2msへ増加した。固定60分窓で完了できたturnもbaseline約95%に対しVAMP-15約72%、VAMP-20約67%。H100の自作負荷ではVAMP-15自身もc=24で容量境界を越えるとTTFT p99 54.7sとなりbaselineより約26%悪い。H200 c=28のように容量不足でない領域ではVAMP-25はbaselineよりTTFT/TPOTとも悪化する。","interpretation":"VAMPは容量不足を万能に解消するのではなく、専門家転送という継続的なdecodeコストと引き換えにKV容量を買う機構である。価値はprefix reuseが高く固定KV容量がcliffを起こす領域で最大化し、負荷とSLOに応じたoffload比率選択が必要になる。","quality_impact":"専門家を省略せずoffload領域全体をstageして元のrouting結果を保持するため近似推論ではない。ただし転送待ちがTPOTを増やし、時間窓内に処理できるturn数やtoken throughputを低下させ得る。"},"reservation":{"claim_id":"claim-cff94da844c9d4caaf2fc60b","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-1279db88435e4b62e38bfd5e",
+  "job_id": "job-research-1182cce822dbe6dc",
+  "data": {
+    "overview": "VAMPはH100上で専門家HBMをKVへ転用し、VAMP-15でKVプールを8.0GiBから18.5GiB、VAMP-20で21.8GiBへ拡張した。固定2,103ターンSWE-agent再生ではVAMP-15がTTFT tail、queueing、preemption、prefix hit率を大幅改善しrequest throughputも向上したが、専門家転送によりTPOTは悪化した。容量境界実験ではoffload比率を上げるほどprefix-cache cliffが高並行度へ移る一方、必要以上のoffloadは転送コストを増やし、単一比率が全SLOで最良ではない。",
+    "key_results": [
+      {
+        "metric": "KVプール容量",
+        "value": "8.0→18.5GiB/GPU (VAMP-15, 2.30×); 8.0→21.8GiB/GPU (VAMP-20, 2.71×)",
+        "baseline": "vLLM",
+        "condition": "H100 PCIe TP2",
+        "interpretation": "専門家HBMを実際のKV backingへ転用できる。"
+      },
+      {
+        "metric": "TTFT p90",
+        "value": "26.1±0.7s→1.10±0.17s (23.6× lower)",
+        "baseline": "vLLM",
+        "condition": "2,103-turn SWE-agent replay, VAMP-15, n=5",
+        "interpretation": "固定要求列でもprefix-cache cliff回避がtail first-token latencyを大幅改善する。"
+      },
+      {
+        "metric": "request throughput",
+        "value": "0.596±0.007→0.720±0.008 req/s (+20.7%)",
+        "baseline": "vLLM",
+        "condition": "2,103-turn replay, VAMP-15",
+        "interpretation": "TTFT改善だけでなく完了要求率も向上する。"
+      },
+      {
+        "metric": "prefix-cache hit / preemption",
+        "value": "0.19±0.03%→89.8±3.4%; 562.7±13.3→0.18±0.41 preemptions/1k turns",
+        "baseline": "vLLM",
+        "condition": "2,103-turn replay, VAMP-15",
+        "interpretation": "再利用接頭辞保持とpreemption抑制が主要な改善機序。"
+      },
+      {
+        "metric": "TPOT",
+        "value": "170.9±1.8→224.0±2.0ms (+31.1%)",
+        "baseline": "vLLM",
+        "condition": "2,103-turn replay, VAMP-15",
+        "interpretation": "専門家host-to-device stagingのdecode-time代償が明確に存在する。"
+      },
+      {
+        "metric": "H200容量境界",
+        "value": "c=32でTTFT p99 92.8±0.3s→9.1±0.3s (10.2× lower)",
+        "baseline": "vLLM",
+        "condition": "4×H200 NVLink TP4, VAMP-20, in-house multi-turn",
+        "interpretation": "より大容量・4GPU構成でも容量境界を高並行度へ移せる。"
+      }
+    ],
+    "negative_results": "LMCache traceの128 sessionsではVAMP-15はTTFT p99を29.3sから4.01sへ改善する一方、TPSは205.2から115.2へ低下しTPOTは118.9msから263.2msへ増加した。固定60分窓で完了できたturnもbaseline約95%に対しVAMP-15約72%、VAMP-20約67%。H100の自作負荷ではVAMP-15自身もc=24で容量境界を越えるとTTFT p99 54.7sとなりbaselineより約26%悪い。H200 c=28のように容量不足でない領域ではVAMP-25はbaselineよりTTFT/TPOTとも悪化する。",
+    "interpretation": "VAMPは容量不足を万能に解消するのではなく、専門家転送という継続的なdecodeコストと引き換えにKV容量を買う機構である。価値はprefix reuseが高く固定KV容量がcliffを起こす領域で最大化し、負荷とSLOに応じたoffload比率選択が必要になる。",
+    "quality_impact": "専門家を省略せずoffload領域全体をstageして元のrouting結果を保持するため近似推論ではない。ただし転送待ちがTPOTを増やし、時間窓内に処理できるturn数やtoken throughputを低下させ得る。"
+  },
+  "reservation": {
+    "claim_id": "claim-1279db88435e4b62e38bfd5e",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
+}
