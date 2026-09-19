@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:04:32 JST**
+> 自動生成: **2026-09-19 23:04:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 22:37:55 JST（26分前）** |
+| 最終検証済みResearch収録 | **09-19 22:37:55 JST（27分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **72** | **5** | **0** | **5** | **0** | **0** | **15** |
-| 合計 | **86** | **8** | **2** | **5** | **1** | **0** | **15** |
+| Discovery | **72** | **6** | **0** | **6** | **0** | **0** | **18** |
+| 合計 | **86** | **9** | **2** | **6** | **1** | **0** | **18** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 23:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **15件**
-- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching / MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation / PD分離routing・selective KV transfer・multi-turn append-prefill / speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **6件** / 候補: **18件**
+- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching / MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation / PD分離routing・selective KV transfer・multi-turn append-prefill / speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching / agentic KV eviction・tool-call idle offload・workflow-aware caching
 - round `specialist-memory-runtime-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json`
   - 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime
@@ -195,6 +195,10 @@
 - round `specialist-serving-runtime-5` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2324JST-discovery-specialist-serving-runtime-5.json`
   - 探索軸: speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-agent-state-6` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260919T2330JST-discovery-specialist-agent-state-6.json`
+  - 探索軸: agentic KV eviction・tool-call idle offload・workflow-aware caching
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -252,10 +256,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **632** |
+| 成功result未照合のimmutable submission | **633** |
 | └ Research | **480** |
 | └ Audit | **2** |
-| └ Discovery | **150** |
+| └ Discovery | **151** |
 
 ### 厳格検証が未成立のcompleted job
 
