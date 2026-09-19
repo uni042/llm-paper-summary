@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0de7f01d0f136308a95819c7",
-  "job_id": "job-research-b6a4fe55f122cf41",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0de7f01d0f136308a95819c7",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0de7f01d0f136308a95819c7","job_id":"job-research-b6a4fe55f122cf41","data":{"hardware":"DGXサーバ1台。48コアCPU×2、メモリ2TB、NVIDIA H100×8を900GB/sの全結合NVLinkで接続。Llama-3.1 8BとQwen-2.5 14BはH100 1枚、Llama-3.1 70BはH100 4枚のテンソル並列で評価した。GPUの動的電圧周波数制御とPythonガベージコレクタは遅延揺らぎ低減のため無効化した。","software":"Ubuntu 22.04、CUDA 12.8、vLLM 0.8.4。全モデルFP16。比較対象はオンライン専用vLLM、オフライン完走を許す非プリエンプティブ方式、Sarathiのチャンクプリフィルを共同サービングへ拡張したSarathi-P、プリフィル・デコード分離型のDistServe-P。各比較対象もvLLM 0.8.4へ実装または移植し、チャンクプリフィルを有効化して調整した。","methodology":"オンライン実トレースにはBurstGPT、オフラインにはDuReader、MultiNews、VCSUMを用い、10分間の実負荷と混合・個別データセットを評価した。合成負荷はガンマ過程で生成し、要求率、SLOの厳しさ、入力・出力長、変動係数CVを変える。オンライン指標はP99 TTFTとP99 TBT、オフライン指標はプリフィル・デコードを含むtokens/s。さらに各機構をSarathi-Pへ順次追加するアブレーション、KV転送帯域・収集カーネル費用、安全点費用を単体測定した。","scope":"同一モデルをオンラインとオフライン推論で共有する共同サービングが中心で、オンラインSLOを維持しつつ遊休GPUを回収できるかを検証する。H100とLlama-3.1/Qwen-2.5、単一DGX内の1〜4 GPU構成での実機結果は強いが、異種GPU、複数ノード、低帯域CPU-GPU接続、異なる推論エンジン、MoEモデルへの一般化は直接評価されていない。"},"reservation":{"claim_id":"claim-0de7f01d0f136308a95819c7","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
