@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5054a5121094256f2071bd0e",
-  "job_id": "job-research-c1b7543305e71c40",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5054a5121094256f2071bd0e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5054a5121094256f2071bd0e","job_id":"job-research-c1b7543305e71c40","data":{"hardware":"サーバ・作業者構成をNVIDIA A800 GPU上で模擬する。2作業者はそれぞれLLaMA-7BとLLaMA-13Bを保持し、調整サーバは草稿用LLaMA-68Mを実行する。","software":"連合推論は2作業者の確率分布をw1=w2=1/2で重み付き平均する。両作業者でk1=k2とし、上位K再正規化方式と残余質量再配分方式を比較する。公式コード公開URLは本文・arXivメタデータから確認できない。","methodology":"WMT14英独データセットを用い、まず圧縮なしの連合LLM推論で生成系列と各生成位置の完全語彙分布を保存する。同じ分布に上位K圧縮と2種類の再構成を適用し、元の集約分布に対するL1集約偏りを全ステップ・標本で平均する。語彙数は32,000で、K/|V|を0.1%、1%、10%、100%へ変化させる。さらに温度T=0.8、1.0、1.2を用いて確率分布の集中度を変え、平均集約偏り、重み付き残余質量、平均受理率偏りを測定し、理論上界との整合性を検証する。最終タスク正解率だけでは自己回帰標本化の乱数差を圧縮誤差と分離しにくいため、分布水準の偏りを主指標とする。","scope":"実験は2作業者、等重み、同一K、LLaMA-7B/13Bと68M草稿モデル、単一データセットに限定される。論文自身も端から端までの通信費、実測復号スループット、最終生成品質の理論解析を将来課題としており、大規模作業者数、非等重み、異なるK、実ネットワーク遅延での評価は示していない。"},"reservation":{"claim_id":"claim-5054a5121094256f2071bd0e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
