@@ -1,65 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T15:01:42+00:00",
+  "updated_at": "2026-09-19T15:04:31+00:00",
   "last_run_key": "2026-09-20T00:00:00+09:00",
-  "last_round": "specialist-recent-memory-systems-1",
+  "last_round": "specialist-edge-measurement-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T07:00:00+09:00",
-      "round": "specialist-simulation-12",
-      "axis": "現代的分離LLMサービングの高忠実度シミュレーション",
-      "query_summary": "サービングシミュレーションを探索し、Frontier（arXiv:2605.21312）、AgentServeSim（arXiv:2606.09613）、LLM-Emu（arXiv:2605.00616）を軽量評価した。最新identityでAgentServeSimとLLM-Emuは既収録、Frontierは未収録・未job化だった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.09613",
-        "arXiv:2605.00616"
-      ],
-      "next_axis_hint": "candidate inventoryがoverflow条件へ到達する見込みのため、最新queue/stateを再取得し、>50かつactionable Research/Auditなら通常worker契約へ切り替える。",
-      "source_submission": "work-queue/submissions/20260915T0744JST-discovery-specialist-simulation-12.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-pnm-kv-2",
-      "axis": "retrieval-based sparse attention向けKV常駐PNM・異種decode serving",
-      "query_summary": "GPU HBM外へKVを置く長文脈servingを探索し、KARAT（arXiv:2608.03555）とSwiftCache（arXiv:2606.16135）を軽量評価した。最新identityでSwiftCacheは既収録、KARATは未収録・未job化と判断した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135"
-      ],
-      "next_axis_hint": "次はKV圧縮とtensor parallelismの費用対効果境界、またはCXL/PCIe上のretrieval index・KV配置と通信スケジューリングへ展開する。",
-      "source_submission": "work-queue/submissions/20260915T0812JST-discovery-specialist-pnm-kv-2.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-moe-prefetch-9",
-      "axis": "MoE expert speculation/prefetch・miss recovery・heterogeneous expert residency",
-      "query_summary": "expert offloadのprefetch predictorとheterogeneous residencyを探索し、SPICE（2608.21240）、Speculating Experts（2603.19289）、NPUMoE（2604.18788）を一次arXiv abstractで軽量評価した。run開始後に取得したidentity-delta一覧には3 IDのdeltaがなく、既存repository検索でも同一IDの収録を確認できなかったため候補化した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はMoE expert cache replacement・CPU/GPU dynamic assignment・routing workload predictionへ進み、DALI等の未収録 여부をidentity正本で確認する。",
-      "source_submission": "work-queue/submissions/20260915T0813JST-discovery-specialist-moe-prefetch-9.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-cacheflow-3",
@@ -7423,6 +7373,62 @@
       ],
       "next_axis_hint": "次は2609.15-19のspeculative decoding runtime、GPU kernel/quantized serving、disaggregated schedulingを未走査集合として探索する。",
       "source_submission": "work-queue/submissions/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json"
+    },
+    {
+      "run_key": "2026-09-20T00:00:00+09:00",
+      "round": "specialist-kv-specdecode-2",
+      "axis": "2609後半のKV圧縮・speculative decoding・RL rollout acceleration",
+      "query_summary": "直前roundのmemory/offload軸から、2609.15-19のspeculative decodingと新規KV圧縮へ切替。ECHO (2609.17241) は最新queueですでにresearch readyのため外部評価後に重複除外し、DeepSeek-V4.1-FlashとGrowMTPを一次arXiv abstractで確認して候補化した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.17241"
+      ],
+      "next_axis_hint": "次は2609中旬のdisaggregated serving/autoscaling、GPU runtime/kernel、quantized servingを未走査軸として探索する。",
+      "source_submission": "work-queue/submissions/20260920T0014JST-discovery-specialist-kv-specdecode-2.json"
+    },
+    {
+      "run_key": "2026-09-20T00:00:00+09:00",
+      "round": "specialist-cross-dc-disagg-3",
+      "axis": "cross-datacenter prefill/decode disaggregationとWAN KV transfer",
+      "query_summary": "disaggregated serving/autoscaling軸を探索。PDDを一次arXiv abstractで確認し、最新default branch検索で2609.13161が未収録であることを確認した。検索結果の多くは既知一般論または対象外で、強候補のみ1件送信した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はGPU kernel/runtime、quantization serving、communication collectivesの2026 systems論文へ軸を移す。",
+      "source_submission": "work-queue/submissions/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json"
+    },
+    {
+      "run_key": "2026-09-20T00:00:00+09:00",
+      "round": "specialist-edge-measurement-4",
+      "axis": "GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張",
+      "query_summary": "GPU kernel/runtime・quantization・collective communicationを探索。2608.15118はsurvey中心のため不採用としてimmutable rejectionに記録し、2609.08307は複数hardware/quantizationの実測system studyとして採用した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はagentic servingのtail scheduling、interception、memory reuseとproduction trace系へ探索軸を切り替える。",
+      "source_submission": "work-queue/submissions/20260920T0022JST-discovery-specialist-edge-measurement-4.json"
     }
   ],
   "axes": {
@@ -14063,6 +14069,45 @@
       "duplicate_ratio": 0.5,
       "final_duplicate_ratio": 0.75,
       "next_axis_hint": "次は2609.15-19のspeculative decoding runtime、GPU kernel/quantized serving、disaggregated schedulingを未走査集合として探索する。"
+    },
+    "2609後半のKV圧縮・speculative decoding・RL rollout acceleration": {
+      "last_run_key": "2026-09-20T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次は2609中旬のdisaggregated serving/autoscaling、GPU runtime/kernel、quantized servingを未走査軸として探索する。"
+    },
+    "cross-datacenter prefill/decode disaggregationとWAN KV transfer": {
+      "last_run_key": "2026-09-20T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はGPU kernel/runtime、quantization serving、communication collectivesの2026 systems論文へ軸を移す。"
+    },
+    "GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張": {
+      "last_run_key": "2026-09-20T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "次はagentic servingのtail scheduling、interception、memory reuseとproduction trace系へ探索軸を切り替える。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
