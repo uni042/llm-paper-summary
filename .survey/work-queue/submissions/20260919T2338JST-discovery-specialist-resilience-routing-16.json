@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.14116",
+      "title": "FailSafe: High-performance Resilient Serving",
+      "source_url": "https://arxiv.org/abs/2511.14116",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.14116-failsafe.md",
+      "priority": 87,
+      "reason": "Fault-tolerant tensor-parallel serving with cyclic KV placement, hybrid attention, load-aware routing, proactive KV backup and on-demand weight recovery; 8xH100 evaluation reports up to 2x throughput and two orders lower recovery latency under failures."
+    },
+    {
+      "canonical_id": "arXiv:2606.17787",
+      "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.17787",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.17787-lumen.md",
+      "priority": 85,
+      "reason": "Treats distributed LLM recovery as load-aware coordination across checkpoint placement, interrupted-request redistribution and capacity restoration during model reload; combines prototype experiments and large-scale simulations."
+    },
+    {
+      "canonical_id": "arXiv:2608.14575",
+      "title": "HW-Router: Hardware-Aware Routing for Scalable Multi-LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.14575",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14575-hw-router.md",
+      "priority": 84,
+      "reason": "Dynamic multi-LLM routing using real-time queue, KV utilization and TTFT/TPOT hardware signals; reports 3.4-3.9x lower end-to-end latency and 46-48 percentage-point higher SLO attainment with released code."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-resilience-routing-16",
+    "axis": "fault tolerance/recovery・hardware-aware multi-LLM routing",
+    "query_summary": "heterogeneous GPU schedulingからfailure recoveryとruntime hardware-aware routingへ切り替えた。FailSafe、LUMEN、HW-Routerはいずれも明確なserving-system寄与を持ち、default branchのcanonical ID/title検索で未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "KV compression/reuse systemの2025 omissions、then batching/admission control、then framework-specific runtime systemsへ移る",
+    "empty_round_reason": null
+  }
+}
