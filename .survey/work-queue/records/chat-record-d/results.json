@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f1d600cd7542c0db96d93c65","job_id":"job-research-e8f755e1fee9cc18","data":{"overview":"CAISは、NVLS対応テンソル並列より推論で幾何平均1.38倍、学習で1.37倍高速化し、NVLSを使わないT3に対して推論1.61倍、学習1.60倍を示す。NVLS拡張済みのCoCoNet、FuseLib、T3に対しても推論でそれぞれ1.25倍、1.21倍、1.45倍の幾何平均高速化が残る。性能向上は、要求到着時刻を揃えるTB協調と、双方向リンクを相補的に使うグラフ最適化の双方から生じる。帯域利用率はCAIS-Baseの62.4%からグラフ最適化のみで84.7%、完全CAISで90.2%へ上がる。32 GPUまで増やしても8 GPU比のGPU当たり性能低下は5%以内で、追加回路面積も小さい。","key_results":[{"metric":"推論エンドツーエンド高速化","value":"幾何平均1.38×、最大1.43×","baseline":"TP-NVLS","condition":"3 LLM、8 GPU、プリフィル中心","interpretation":"集合通信単体を速めるNVLSに対し、計算カーネルと通信の細粒度重畳が追加利益を生む。"},{"metric":"推論高速化","value":"幾何平均1.61×、最大1.65×","baseline":"T3","condition":"同一評価系","interpretation":"NVLSを使わない既存のハードウェア支援重畳より、スイッチ内マージと意味論整合の組合せが有利。"},{"metric":"学習エンドツーエンド高速化","value":"幾何平均1.37× over TP-NVLS、1.60× over T3","baseline":"TP-NVLS / T3","condition":"3 LLM、8 GPU","interpretation":"効果は推論プリフィルだけでなく前向き・後ろ向きを含む学習でも維持される。"},{"metric":"帯域利用率","value":"62.4% → 84.7% → 90.2%","baseline":"CAIS-Base → CAIS-Partial → CAIS","condition":"全サブレイヤの双方向リンク平均","interpretation":"非対称通信カーネルの重畳でまず利用率を上げ、トラフィック制御が競合を抑えてさらに改善する。"},{"metric":"要求到着時刻ずれ","value":"平均35 µs → 3 µs","baseline":"TB協調なし → マージ認識型TB協調","condition":"同一データへ向かうGPU間要求","interpretation":"時間整合を約10倍改善し、スイッチ内マージ成功率と表効率を高める。"},{"metric":"スケーラビリティ","value":"32 GPUでも8 GPU比のGPU当たり性能低下5%以内","baseline":"8 GPU CAIS","condition":"GPU数に合わせモデルhidden dimensionを拡大","interpretation":"マージ表容量を単一GPUの未完了遠隔要求量で上限化する設計がGPU数増加時の表肥大を防ぐ。"}],"negative_results":"評価は実CAISハードウェアではなくシミュレーションであり、フルサイズ最先端モデルはシミュレータ制約から直接評価できない。主要行列次元とSM数を50%へ縮小した系を使うため、実機のキャッシュ、ランタイム、スケジューリング揺らぎ、ネットワーク混雑が結果へ与える影響は残る。CAIS-Baseだけでは完全CAISより明確に遅く、大域バリア除去だけでは要求到着ずれと双方向帯域不均衡を解消できない。","interpretation":"CAISの結果は『スイッチ内計算を導入すれば速い』という単純なものではなく、通信命令を計算のread/write意味論へ合わせた後に、要求の時間局所性とカーネル間データフローまで整える必要があることを示す。特に帯域利用率の段階的改善とCAIS-Baseとの差は、ISA・マイクロアーキテクチャだけでは性能を取り切れないことを裏付ける。","quality_impact":"演算の数学的近似や量子化は導入せず、通信要求の集約と実行順序を変えるため、モデル品質低下は想定しない。ただし論文の主評価は性能であり、数値再現性や長時間学習時のビット単位一致を独立指標としては評価していない。"},"reservation":{"claim_id":"claim-f1d600cd7542c0db96d93c65","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0083927c844f95c6af151465",
+  "job_id": "job-research-e8f755e1fee9cc18",
+  "data": {
+    "overview": "CAISは、NVLS対応テンソル並列より推論で幾何平均1.38倍、学習で1.37倍高速化し、NVLSを使わないT3に対して推論1.61倍、学習1.60倍を示す。NVLS拡張済みのCoCoNet、FuseLib、T3に対しても推論でそれぞれ1.25倍、1.21倍、1.45倍の幾何平均高速化が残る。性能向上は、要求到着時刻を揃えるTB協調と、双方向リンクを相補的に使うグラフ最適化の双方から生じる。帯域利用率はCAIS-Baseの62.4%からグラフ最適化のみで84.7%、完全CAISで90.2%へ上がる。32 GPUまで増やしても8 GPU比のGPU当たり性能低下は5%以内で、追加回路面積も小さい。",
+    "key_results": [
+      {
+        "metric": "推論エンドツーエンド高速化",
+        "value": "幾何平均1.38×、最大1.43×",
+        "baseline": "TP-NVLS",
+        "condition": "3 LLM、8 GPU、プリフィル中心",
+        "interpretation": "集合通信単体を速めるNVLSに対し、計算カーネルと通信の細粒度重畳が追加利益を生む。"
+      },
+      {
+        "metric": "推論高速化",
+        "value": "幾何平均1.61×、最大1.65×",
+        "baseline": "T3",
+        "condition": "同一評価系",
+        "interpretation": "NVLSを使わない既存のハードウェア支援重畳より、スイッチ内マージと意味論整合の組合せが有利。"
+      },
+      {
+        "metric": "学習エンドツーエンド高速化",
+        "value": "幾何平均1.37× over TP-NVLS、1.60× over T3",
+        "baseline": "TP-NVLS / T3",
+        "condition": "3 LLM、8 GPU",
+        "interpretation": "効果は推論プリフィルだけでなく前向き・後ろ向きを含む学習でも維持される。"
+      },
+      {
+        "metric": "帯域利用率",
+        "value": "62.4% → 84.7% → 90.2%",
+        "baseline": "CAIS-Base → CAIS-Partial → CAIS",
+        "condition": "全サブレイヤの双方向リンク平均",
+        "interpretation": "非対称通信カーネルの重畳でまず利用率を上げ、トラフィック制御が競合を抑えてさらに改善する。"
+      },
+      {
+        "metric": "要求到着時刻ずれ",
+        "value": "平均35 µs → 3 µs",
+        "baseline": "TB協調なし → マージ認識型TB協調",
+        "condition": "同一データへ向かうGPU間要求",
+        "interpretation": "時間整合を約10倍改善し、スイッチ内マージ成功率と表効率を高める。"
+      },
+      {
+        "metric": "スケーラビリティ",
+        "value": "32 GPUでも8 GPU比のGPU当たり性能低下5%以内",
+        "baseline": "8 GPU CAIS",
+        "condition": "GPU数に合わせモデルhidden dimensionを拡大",
+        "interpretation": "マージ表容量を単一GPUの未完了遠隔要求量で上限化する設計がGPU数増加時の表肥大を防ぐ。"
+      }
+    ],
+    "negative_results": "評価は実CAISハードウェアではなくシミュレーションであり、フルサイズ最先端モデルはシミュレータ制約から直接評価できない。主要行列次元とSM数を50%へ縮小した系を使うため、実機のキャッシュ、ランタイム、スケジューリング揺らぎ、ネットワーク混雑が結果へ与える影響は残る。CAIS-Baseだけでは完全CAISより明確に遅く、大域バリア除去だけでは要求到着ずれと双方向帯域不均衡を解消できない。",
+    "interpretation": "CAISの結果は『スイッチ内計算を導入すれば速い』という単純なものではなく、通信命令を計算のread/write意味論へ合わせた後に、要求の時間局所性とカーネル間データフローまで整える必要があることを示す。特に帯域利用率の段階的改善とCAIS-Baseとの差は、ISA・マイクロアーキテクチャだけでは性能を取り切れないことを裏付ける。",
+    "quality_impact": "演算の数学的近似や量子化は導入せず、通信要求の集約と実行順序を変えるため、モデル品質低下は想定しない。ただし論文の主評価は性能であり、数値再現性や長時間学習時のビット単位一致を独立指標としては評価していない。"
+  },
+  "reservation": {
+    "claim_id": "claim-0083927c844f95c6af151465",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
