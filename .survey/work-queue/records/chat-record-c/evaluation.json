@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d2549d6138b40f3d17e6f087","job_id":"job-research-0bb313ba6c58f22b","data":{"hardware":"推論ホストにNVIDIA RTX PRO 6000 Blackwell Server Edition 2基を評価レプリカとして使用し、各GPUは約97,887 MiB。CPUはAMD EPYC 9455 48コアを2基、共有ホストRAMは256 GiB。","software":"vLLM 0.28.0、LMCache 0.5.4、PyTorch 2.13.0+cu129。Qwen3.8-27B-NVFP4系チェックポイント、FP8 KV、HND配置、接頭辞キャッシュ有効。共有層は1,568トークンチャンク、LRU。","methodology":"OFF–ON–ON–OFFの4独立再起動ブロックで共有LMCacheなし・ありを二組の対として比較し、各ブロック192測定要求、合計768要求を収集する。8k、32k、128k、256k入力のチェーンで冷計算、同GPU再利用、別GPU再利用、受信側再利用を測る。6ターン会話は32k/128k初期文脈で固定GPUと交互GPUを比較する。別に512/2048トークン強制生成と4/8並行セッションを測る。正しさは遅延注入バイト試験、実アロケータ、サービス回帰、正確値応答で段階検証する。","scope":"一つのモデル構成、一台のホスト、二つの独立ブロック対に限定され、信頼区間や有意差主張は行わない。共有プール飽和、持続的開ループ容量、ホスト間共有、実ゲートウェイの負荷駆動移動は未評価。ホストは完全専有ではなく、別GPU活動がある区間も存在する。"},"reservation":{"claim_id":"claim-d2549d6138b40f3d17e6f087","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-e7ba10673d975ae5c16659a8",
+  "job_id": "job-research-0bb313ba6c58f22b",
+  "data": {
+    "hardware": "推論ホストにNVIDIA RTX PRO 6000 Blackwell Server Edition 2基を評価レプリカとして使用し、各GPUは約97,887 MiB。CPUはAMD EPYC 9455 48コアを2基、共有ホストRAMは256 GiB。",
+    "software": "vLLM 0.28.0、LMCache 0.5.4、PyTorch 2.13.0+cu129。Qwen3.8-27B-NVFP4系チェックポイント、FP8 KV、HND配置、接頭辞キャッシュ有効。共有層は1,568トークンチャンク、LRU。",
+    "methodology": "OFF–ON–ON–OFFの4独立再起動ブロックで共有LMCacheなし・ありを二組の対として比較し、各ブロック192測定要求、合計768要求を収集する。8k、32k、128k、256k入力のチェーンで冷計算、同GPU再利用、別GPU再利用、受信側再利用を測る。6ターン会話は32k/128k初期文脈で固定GPUと交互GPUを比較する。別に512/2048トークン強制生成と4/8並行セッションを測る。正しさは遅延注入バイト試験、実アロケータ、サービス回帰、正確値応答で段階検証する。",
+    "scope": "一つのモデル構成、一台のホスト、二つの独立ブロック対に限定され、信頼区間や有意差主張は行わない。共有プール飽和、持続的開ループ容量、ホスト間共有、実ゲートウェイの負荷駆動移動は未評価。ホストは完全専有ではなく、別GPU活動がある区間も存在する。"
+  },
+  "reservation": {
+    "claim_id": "claim-e7ba10673d975ae5c16659a8",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
+}

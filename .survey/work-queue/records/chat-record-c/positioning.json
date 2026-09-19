@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d2549d6138b40f3d17e6f087","job_id":"job-research-0bb313ba6c58f22b","data":{"limitations":"一台のホスト、2 GPUレプリカ、1モデル構成、2独立ブロック対という工学事例であり、大規模分散環境の統計的性能保証ではない。256 GiB共有プールの飽和、ホスト間共有、持続的高負荷、実ゲートウェイの親和性制御や負荷移動は未評価。コピー試験は単一バイトオブジェクトを対象とし、すべての登録カーネルグループのバイト等価性を直接検証したわけではない。元の障害要求の完全なCUDA転送トレースもない。","differences":"LMCacheやMarconiのような共有・ハイブリッドKVキャッシュ機構そのものを新規提案するのではなく、既存共有層を27Bハイブリッドモデルへ適用した際の正しさ障害と局所性境界を実証する。ヒット率やHTTP成功を正しさ指標にせず、パック済みページ表現、CUDAストリーム順序、実アロケータ、全容量ピン留め、サービス応答を別層で検証する点が特徴。性能面では共有再利用だけでなく同GPUローカル再利用を強い比較対象として残す。","implementation_status":"vLLM 0.28.0とLMCache 0.5.4の実運用相当構成で、既存パック済みサブページパッチ、既存mixed allocator、PyTorchピン留め確保設定を組み合わせる。論文は利用したLMCache、PyTorch、モデルの具体的コミット・リビジョンを記録する。","research_positioning":"分散KVキャッシュ研究に対する実装検証・性能境界のケーススタディであり、共有キャッシュの設計だけでなく、非同期GPU転送の順序契約と要求配置の局所性が実際の効果を左右することを示す。共有RAMを常時ローカルGPUキャッシュの代替にするのではなく、親和性を基本にしつつレプリカ移動時の再利用層として組み合わせる設計を支持する。"},"reservation":{"claim_id":"claim-d2549d6138b40f3d17e6f087","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e7ba10673d975ae5c16659a8",
+  "job_id": "job-research-0bb313ba6c58f22b",
+  "data": {
+    "limitations": "一台のホスト、2 GPUレプリカ、1モデル構成、2独立ブロック対という工学事例であり、大規模分散環境の統計的性能保証ではない。256 GiB共有プールの飽和、ホスト間共有、持続的高負荷、実ゲートウェイの親和性制御や負荷移動は未評価。コピー試験は単一バイトオブジェクトを対象とし、すべての登録カーネルグループのバイト等価性を直接検証したわけではない。元の障害要求の完全なCUDA転送トレースもない。",
+    "differences": "LMCacheやMarconiのような共有・ハイブリッドKVキャッシュ機構そのものを新規提案するのではなく、既存共有層を27Bハイブリッドモデルへ適用した際の正しさ障害と局所性境界を実証する。ヒット率やHTTP成功を正しさ指標にせず、パック済みページ表現、CUDAストリーム順序、実アロケータ、全容量ピン留め、サービス応答を別層で検証する点が特徴。性能面では共有再利用だけでなく同GPUローカル再利用を強い比較対象として残す。",
+    "implementation_status": "vLLM 0.28.0とLMCache 0.5.4の実運用相当構成で、既存パック済みサブページパッチ、既存mixed allocator、PyTorchピン留め確保設定を組み合わせる。論文は利用したLMCache、PyTorch、モデルの具体的コミット・リビジョンを記録する。",
+    "research_positioning": "分散KVキャッシュ研究に対する実装検証・性能境界のケーススタディであり、共有キャッシュの設計だけでなく、非同期GPU転送の順序契約と要求配置の局所性が実際の効果を左右することを示す。共有RAMを常時ローカルGPUキャッシュの代替にするのではなく、親和性を基本にしつつレプリカ移動時の再利用層として組み合わせる設計を支持する。"
+  },
+  "reservation": {
+    "claim_id": "claim-e7ba10673d975ae5c16659a8",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
+}
