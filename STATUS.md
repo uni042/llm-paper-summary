@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:02:30 JST**
+> 自動生成: **2026-09-19 22:02:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **47** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（9分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（10分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **56** | **5** | **1** | **4** | **0** | **0** | **8** |
-| 合計 | **68** | **8** | **3** | **4** | **0** | **0** | **8** |
+| Discovery | **56** | **6** | **1** | **5** | **0** | **0** | **10** |
+| 合計 | **68** | **9** | **3** | **5** | **0** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 22:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **8件**
-- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control / GPU kernel/runtime・quantized execution・CUDA graph / distributed inference collective communication・runtime adaptation・interconnect
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **5件** / 候補: **10件**
+- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control / GPU kernel/runtime・quantized execution・CUDA graph / distributed inference collective communication・runtime adaptation・interconnect / multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing
 - round `specialist-flash-agent-runtime-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
   - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving
@@ -195,6 +195,10 @@
 - round `specialist-collectives-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T2234JST-discovery-specialist-collectives-5.json`
   - 探索軸: distributed inference collective communication・runtime adaptation・interconnect
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-lora-serving-6` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2240JST-discovery-specialist-lora-serving-6.json`
+  - 探索軸: multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -250,10 +254,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **626** |
+| 成功result未照合のimmutable submission | **627** |
 | └ Research | **475** |
 | └ Audit | **2** |
-| └ Discovery | **149** |
+| └ Discovery | **150** |
 
 ### 厳格検証が未成立のcompleted job
 
