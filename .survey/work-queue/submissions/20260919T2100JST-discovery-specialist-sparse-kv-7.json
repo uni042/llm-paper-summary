@@ -1,0 +1,9 @@
+{
+ "schema_version":1,"transport_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2608.03555","title":"Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention","source_url":"https://arxiv.org/abs/2608.03555","priority":94,"reason":"KV cache/indexをPNM側へ移しGPUと異種協調するretrieval-based sparse attention serving system。実agentic traceでthroughput/TDPをGPU-only比2.09〜6.13x改善し、PNM・KV階層・sparse attentionの重点領域に直接合致する。"},
+  {"canonical_id":"arXiv:2604.26837","title":"Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving","source_url":"https://arxiv.org/abs/2604.26837","priority":93,"reason":"SPINは複数sparse attentionを統一page abstractionへ写像し、HBM/CPU階層KV管理とPCIe localityをco-designするvLLM framework。throughput 1.66〜5.66x、TTFT 7〜9x改善を報告する。"},
+  {"canonical_id":"arXiv:2606.01751","title":"SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving","source_url":"https://arxiv.org/abs/2606.01751","priority":80,"reason":"prefix以外のcross-request/cross-turn/cross-agent segmentを再利用するKV sharingをSparse-Q recomputationとvLLM統合で実現。agent/RAG/multi-turn servingにおけるKV reuse系統の新規systems候補。"}
+ ],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-sparse-kv-7","axis":"retrieval sparse attention・hierarchical KV memory・segment-level KV reuse","query_summary":"KV圧縮/sparse attentionへ軸を変更し、PNM異種serving、HBM-CPU階層KV、segment-level reuseの3件を一次arXiv情報で評価。最新default branch repository searchで各ID未収録を確認した。","candidate_count":3,"duplicate_filtered_count":0,"novel_candidate_count":3,"accepted_count":3,"duplicate_ratio":0.0,"accepted_canonical_ids":["arXiv:2608.03555","arXiv:2604.26837","arXiv:2606.01751"],"duplicate_canonical_ids":[],"next_axis_hint":"次はmulti-model serving、GPU power/thermal、またはbatching/fairnessへ移る。"}
+}
