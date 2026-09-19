@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6c0676d0cc5caf5a13ce6002",
-  "job_id": "job-research-0023a21511f803e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c0676d0cc5caf5a13ce6002",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"relation_to_repository":"DistServe、Splitwise、Mooncake等がprefill/decode分離による干渉除去・独立スケーリング・KV転送基盤を設計するのに対し、本論文は新規serving機構よりも比較方法と境界条件を主題とする。特に分離側2 GPU対colocation側1 GPUという既存比較の資源差を除き、2-GPU colocationを置くことで、分離そのものの利得を再評価する。CPU/DRAM/NVMeを介すKV移送も同一vLLM/LMCache基盤で比較するため、リポジトリのCPU/SSD offload系とphase-disaggregation系をつなぐ評価資料になる。","difference_from_prior_work":"DistServe等の高速GPU間転送中心の評価に、同資源colocation、CPU DRAM、NVMeの転送tierとenergy breakdownを加える。DynamoLLMやGPU DVFS研究がcolocated servingで周波数最適化を扱うのに対し、prefill/decodeを独立周波数設定できることが本当にenergy利得になるかを実測し、少なくとも本条件ではならないことを示す。","practical_takeaway":"分離サービングを既定の高速化手段とみなさず、GPU当たりprefill負荷、KV容量圧力、転送tier、TTFT/TPOT SLOを同時に見るべきである。小〜中batchでは同数GPUのcolocationがTTFTとenergyで有利になり得る一方、KVがGPU容量を圧迫する大batchや厳しいTPOTでは分離が有利になる。SSD/CPU経路はGPU直結より転送・energy費用が大きいので、容量拡張の価値がその費用を上回る領域で使うのが妥当。","caveats":"結果は2×A100 PCIe Gen3と3Bモデルの固定synthetic workloadに依存し、NVLink/RDMA、multi-node、実arrival trace、prefix reuse、より大規模モデルでは境界が変わり得る。dis-diskのTPOT挙動には未解明点が残る。"},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
