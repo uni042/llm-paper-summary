@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:35:54 JST**
+> 自動生成: **2026-09-19 23:36:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **52** |
+| 収録候補論文 | **51** |
 | 未claim Research job | **51** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 22:37:55 JST（57分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-19 23:36:01 JST（4秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **52** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **52** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **15** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **72** | **11** | **11** | **0** | **0** | **0** | **33** |
-| 合計 | **86** | **12** | **11** | **1** | **1** | **0** | **33** |
+| 合計 | **87** | **12** | **12** | **0** | **0** | **0** | **33** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 23:36:01 JST** [research] `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI
+  - job: `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
+  - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.00866-mori.md`
 - **09-19 22:37:55 JST** [research] `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows
   - job: `.survey/work-queue/jobs/job-research-2dcd265cd3f3852c.json`
   - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-ff20bcaca705be66e1a1b76e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ff20bcaca705be66e1a1b76e.json`
   - paper: `papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md`
-- **09-19 18:48:26 JST** [research] `arXiv:2608.08340` — OpRAG: A Resource-Deterministic Runtime for GPU-Backed Multi-Stage RAG Workflows
-  - job: `.survey/work-queue/jobs/job-research-ee7c0fc62bdc554b.json`
-  - result: `.survey/work-queue/results/research/attempt-a1b38cbb586fe670600b1d26.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a1b38cbb586fe670600b1d26.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md`
 
 ### Audit
 
@@ -151,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json` (job `job-research-ca62fa2224d4eac8`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI
+  - job: `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
+  - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.00866-mori.md`
 
 #### Audit (:30)
 
@@ -210,10 +214,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 23:32:24 JST** / heartbeat: **—** / lease expiry: **09-20 01:02:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ca62fa2224d4eac8.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -233,7 +235,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **52** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -253,7 +255,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **766** |
+| inference/training/survey配下の論文Markdown実体 | **767** |
 
 ### immutable submissionの未照合
 
@@ -261,8 +263,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **628** |
-| └ Research | **481** |
+| 成功result未照合のimmutable submission | **627** |
+| └ Research | **480** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
