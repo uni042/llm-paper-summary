@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e1fd57ed695526cd97dd92b5",
-  "job_id": "job-research-153b45adc3c50a28",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e1fd57ed695526cd97dd92b5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e1fd57ed695526cd97dd92b5","job_id":"job-research-153b45adc3c50a28","data":{"overview":"反復予測器はvLLM由来データでR² 0.852を達成し、ISRTFはほぼ全条件でFCFSの平均JCTを改善した。本文のbatch size 4評価では平均改善7.36%、最大21.40%で、batch size 1を含む全評価では最大19.58%短縮を報告する。LLaMA2-13B・5×RPSの代表例ではJCTを16.45%、queueing delayを16.75%削減し、scheduler＋初回予測のoverheadは11.04ms、モデル平均遅延8610.2msの0.13%に留まる。H100 50 workerでは18.77 RPSまでほぼ線形に拡張した。","key_results":[{"metric":"応答長予測精度","value":"MAE 19.923, RMSE 34.327, R² 0.852","baseline":"LMSYSのみでfine-tuneしたBGEはR² 0.48","condition":"13 LLM由来105,295 cleaned rows","interpretation":"実際の生成モデル群から収集した反復学習データで残り長予測が大幅に改善する。"},{"metric":"平均JCT改善","value":"平均7.36%、最大21.40%（batch size 4系列）; 全評価で最大19.58%報告","baseline":"FCFS","condition":"A100, 5 LLM, Gamma arrival workload","interpretation":"短い残作業を先に処理することでhead-of-line blockingを減らす。"},{"metric":"LLaMA2-13B 5×RPS","value":"FCFS 451.59s → ISRTF 377.29s","baseline":"FCFS","condition":"batch size 4","interpretation":"高負荷代表条件で約16.45% JCTを短縮する。"},{"metric":"queueing delay reduction","value":"16.75%","baseline":"FCFS","condition":"LLaMA2-13B, 5×RPS","interpretation":"JCT改善16.45%との差が0.30ポイントで、主因が計算短縮ではなく待ち時間削減だと示す。"},{"metric":"scheduler overhead","value":"11.04ms, model latency比0.13%","baseline":"LLaMA2-13B average latency 8610.2ms","condition":"batching＋initial predictor","interpretation":"予測・再順位付けの費用がJCT短縮効果より十分小さい。"},{"metric":"50-worker scalability","value":"18.77 RPS","baseline":"10 workerで2.31 RPS","condition":"H100, one worker/GPU, queue delay <=0.5s","interpretation":"非同期frontendとload balancerにより大規模worker数でもほぼ線形に拡張する。"}],"negative_results":"ISRTFは全条件で必ず勝つわけではない。batch size 4ではOPT-6.7Bの1×/5×RPS、LLaMA2-13Bの3×RPS、LLaMA2-7Bの1×RPSなどでFCFSよりJCTが悪化する。論文は小batch・高RPSではqueueに大量のpromptが溜まりpriority schedulingの効果が薄れ、system throughput依存が強くなると説明する。また実サービスtraceではpreemptionが必要な負荷が稀だったため、preemption policy自体の詳細な性能評価は省略されている。","interpretation":"ELISの利点は予測器単体の精度ではなく、自己回帰生成から50トークンごとに新情報を得て残り長を更新し、その更新を次batch順序へ直結させる閉ループにある。誤予測を次反復で修正できるため、一回予測SJFより運用上頑健である。一方、GPUが純粋なthroughput飽和状態になると並べ替えだけでは処理能力を増やせず、改善幅が消える。","quality_impact":"生成モデル本体を変更しないため回答品質を直接劣化させる機構ではない。影響対象は主に待ち時間と公平性であり、短いjob優先は長いjobの待機を延ばす可能性があるためstarvation防止policyが必要となる。"},"reservation":{"claim_id":"claim-e1fd57ed695526cd97dd92b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
