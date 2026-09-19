@@ -1,0 +1,1018 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-stress-probe-20260920-offset1000",
+  "collector_id": "repository-reference-curation-stress-probe",
+  "run_key": "manual-stress-2026-09-20",
+  "axis": "structured references stress probe at raw offset 1000",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "1100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b6d68835dc2666319f88c8ddade008494b2839f1",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "results": [
+    {
+      "canonical_id": "arXiv:2604.09603",
+      "identity_tokens": [
+        "arXiv:2604.09603"
+      ],
+      "arxiv_id": "2604.09603",
+      "source_url": "https://arxiv.org/abs/2604.09603",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+        "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "linked_from_titles": [
+        "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+        "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding"
+      ],
+      "linked_from_lineages": [
+        "Speculative decoding × MoE",
+        "speculative-decoding"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2604.12171",
+      "identity_tokens": [
+        "arXiv:2604.12171"
+      ],
+      "arxiv_id": "2604.12171",
+      "source_url": "https://arxiv.org/abs/2604.12171",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18741-remp-runtime-model-parallelism-reconfiguration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"
+      ],
+      "linked_from_titles": [
+        "Adaptive Context Parallelism for Production LLM Serving",
+        "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "llm-serving-scheduling-disaggregation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2604.15804",
+      "identity_tokens": [
+        "arXiv:2604.15804"
+      ],
+      "arxiv_id": "2604.15804",
+      "source_url": "https://arxiv.org/abs/2604.15804",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"
+      ],
+      "linked_from_titles": [
+        "Adaptive Context Parallelism for Production LLM Serving",
+        "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2604.22750",
+      "identity_tokens": [
+        "arXiv:2604.22750"
+      ],
+      "arxiv_id": "2604.22750",
+      "source_url": "https://arxiv.org/abs/2604.22750",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "AgentKV: Phase-Aware KV Eviction for Agentic LLMs",
+        "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+      ],
+      "linked_from_lineages": [
+        "agentic serving / KV cache eviction / persistent multi-turn serving",
+        "llm-serving-scheduling-disaggregation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2605.00674",
+      "identity_tokens": [
+        "arXiv:2605.00674"
+      ],
+      "arxiv_id": "2605.00674",
+      "source_url": "https://arxiv.org/abs/2605.00674",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "linked_from_titles": [
+        "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime",
+        "Unlocking Lossless Speedups in LLMs via Discrete Diffusion"
+      ],
+      "linked_from_lineages": [
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "agentic workflow serving / workflow physical planning / adaptive serving"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2605.18810",
+      "identity_tokens": [
+        "arXiv:2605.18810"
+      ],
+      "arxiv_id": "2605.18810",
+      "source_url": "https://arxiv.org/abs/2605.18810",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+        "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md"
+      ],
+      "linked_from_titles": [
+        "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+        "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding"
+      ],
+      "linked_from_lineages": [
+        "投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2605.26297",
+      "identity_tokens": [
+        "arXiv:2605.26297"
+      ],
+      "arxiv_id": "2605.26297",
+      "source_url": "https://arxiv.org/abs/2605.26297",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+        "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+      ],
+      "linked_from_titles": [
+        "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+        "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2605.29343",
+      "identity_tokens": [
+        "arXiv:2605.29343"
+      ],
+      "arxiv_id": "2605.29343",
+      "source_url": "https://arxiv.org/abs/2605.29343",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md",
+        "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+      ],
+      "linked_from_titles": [
+        "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+        "GrowMTP: Can RL Grow Its Own Draft Head?"
+      ],
+      "linked_from_lineages": [
+        "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習",
+        "投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2606.02091",
+      "identity_tokens": [
+        "arXiv:2606.02091"
+      ],
+      "arxiv_id": "2606.02091",
+      "source_url": "https://arxiv.org/abs/2606.02091",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+        "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md"
+      ],
+      "linked_from_titles": [
+        "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+        "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation"
+      ],
+      "linked_from_lineages": [
+        "speculative-decoding",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2607.25852",
+      "identity_tokens": [
+        "arXiv:2607.25852"
+      ],
+      "arxiv_id": "2607.25852",
+      "source_url": "https://arxiv.org/abs/2607.25852",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md"
+      ],
+      "linked_from_titles": [
+        "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+        "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching"
+      ],
+      "linked_from_lineages": [
+        "KVキャッシュオフロード・再計算",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1007/s10107-024-02118-8",
+      "identity_tokens": [
+        "DOI:10.1007/s10107-024-02118-8"
+      ],
+      "doi": "10.1007/s10107-024-02118-8",
+      "source_url": "https://doi.org/10.1007/s10107-024-02118-8",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1007/s11704-024-40555-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11704-024-40555-y"
+      ],
+      "doi": "10.1007/s11704-024-40555-y",
+      "source_url": "https://doi.org/10.1007/s11704-024-40555-y",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+      ],
+      "linked_from_titles": [
+        "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+        "KV Cache Offloading for Context-Intensive Tasks"
+      ],
+      "linked_from_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "KVキャッシュ退避／長文推論／KV選択／KV量子化"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/0304-3975(94)90151-1",
+      "identity_tokens": [
+        "DOI:10.1016/0304-3975(94)90151-1"
+      ],
+      "doi": "10.1016/0304-3975(94)90151-1",
+      "source_url": "https://doi.org/10.1016/0304-3975(94)90151-1",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.mejo.2016.04.006",
+      "identity_tokens": [
+        "DOI:10.1016/j.mejo.2016.04.006"
+      ],
+      "doi": "10.1016/j.mejo.2016.04.006",
+      "source_url": "https://doi.org/10.1016/j.mejo.2016.04.006",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+        "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "linked_from_titles": [
+        "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+        "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード",
+        "先行するNPUの単一計算領域DVFSを、部品単位の空間的DVFSへ拡張。ReGateなどの電力遮断とは補完関係。"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.tcs.2004.05.023",
+      "identity_tokens": [
+        "DOI:10.1016/j.tcs.2004.05.023"
+      ],
+      "doi": "10.1016/j.tcs.2004.05.023",
+      "source_url": "https://doi.org/10.1016/j.tcs.2004.05.023",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/s0167-8191(06)80021-9",
+      "identity_tokens": [
+        "DOI:10.1016/s0167-8191(06)80021-9"
+      ],
+      "doi": "10.1016/s0167-8191(06)80021-9",
+      "source_url": "https://doi.org/10.1016/s0167-8191(06)80021-9",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md"
+      ],
+      "linked_from_titles": [
+        "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
+        "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems"
+      ],
+      "linked_from_lineages": [
+        "moe-parallelism-communication",
+        "other-inference-systems"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/s0304-3975(02)00488-7",
+      "identity_tokens": [
+        "DOI:10.1016/s0304-3975(02)00488-7"
+      ],
+      "doi": "10.1016/s0304-3975(02)00488-7",
+      "source_url": "https://doi.org/10.1016/s0304-3975(02)00488-7",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1016/s0377-2217(02)00123-6",
+      "identity_tokens": [
+        "DOI:10.1016/s0377-2217(02)00123-6"
+      ],
+      "doi": "10.1016/s0377-2217(02)00123-6",
+      "source_url": "https://doi.org/10.1016/s0377-2217(02)00123-6",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1038/s41592-019-0686-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41592-019-0686-2"
+      ],
+      "doi": "10.1038/s41592-019-0686-2",
+      "source_url": "https://doi.org/10.1038/s41592-019-0686-2",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md"
+      ],
+      "linked_from_titles": [
+        "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+        "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy"
+      ],
+      "linked_from_lineages": [
+        "Adaptive Expert Computation / Compression",
+        "Speculative Decoding / MoE"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1109/cloud67622.2025.00028",
+      "identity_tokens": [
+        "DOI:10.1109/cloud67622.2025.00028"
+      ],
+      "doi": "10.1109/cloud67622.2025.00028",
+      "source_url": "https://doi.org/10.1109/cloud67622.2025.00028",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md"
+      ],
+      "linked_from_titles": [
+        "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+        "UCCL-Zip: Lossless Compression Supercharged GPU Communication"
+      ],
+      "linked_from_lineages": [
+        "GPU collective communication / communication compression / LLM serving disaggregation",
+        "Offload / Hierarchical Memory"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.09603",
+      "identity_tokens": [
+        "id:arXiv:2604.09603",
+        "url:https://arxiv.org/abs/2604.09603"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2604.09603",
+        "identity_tokens": [
+          "arXiv:2604.09603"
+        ],
+        "arxiv_id": "2604.09603",
+        "source_url": "https://arxiv.org/abs/2604.09603",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+          "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+        ],
+        "linked_from_titles": [
+          "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+          "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding"
+        ],
+        "linked_from_lineages": [
+          "Speculative decoding × MoE",
+          "speculative-decoding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12171",
+      "identity_tokens": [
+        "id:arXiv:2604.12171",
+        "url:https://arxiv.org/abs/2604.12171"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2604.12171",
+        "identity_tokens": [
+          "arXiv:2604.12171"
+        ],
+        "arxiv_id": "2604.12171",
+        "source_url": "https://arxiv.org/abs/2604.12171",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18741-remp-runtime-model-parallelism-reconfiguration.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"
+        ],
+        "linked_from_titles": [
+          "Adaptive Context Parallelism for Production LLM Serving",
+          "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15804",
+      "identity_tokens": [
+        "id:arXiv:2604.15804",
+        "url:https://arxiv.org/abs/2604.15804"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2604.15804",
+        "identity_tokens": [
+          "arXiv:2604.15804"
+        ],
+        "arxiv_id": "2604.15804",
+        "source_url": "https://arxiv.org/abs/2604.15804",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"
+        ],
+        "linked_from_titles": [
+          "Adaptive Context Parallelism for Production LLM Serving",
+          "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.22750",
+      "identity_tokens": [
+        "id:arXiv:2604.22750",
+        "url:https://arxiv.org/abs/2604.22750"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2604.22750",
+        "identity_tokens": [
+          "arXiv:2604.22750"
+        ],
+        "arxiv_id": "2604.22750",
+        "source_url": "https://arxiv.org/abs/2604.22750",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "AgentKV: Phase-Aware KV Eviction for Agentic LLMs",
+          "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+        ],
+        "linked_from_lineages": [
+          "agentic serving / KV cache eviction / persistent multi-turn serving",
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.00674",
+      "identity_tokens": [
+        "id:arXiv:2605.00674",
+        "url:https://arxiv.org/abs/2605.00674"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2605.00674",
+        "identity_tokens": [
+          "arXiv:2605.00674"
+        ],
+        "arxiv_id": "2605.00674",
+        "source_url": "https://arxiv.org/abs/2605.00674",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+          "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+        ],
+        "linked_from_titles": [
+          "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime",
+          "Unlocking Lossless Speedups in LLMs via Discrete Diffusion"
+        ],
+        "linked_from_lineages": [
+          "Other Inference Systems / Lossless Parallel Decoding",
+          "agentic workflow serving / workflow physical planning / adaptive serving"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18810",
+      "identity_tokens": [
+        "id:arXiv:2605.18810",
+        "url:https://arxiv.org/abs/2605.18810"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2605.18810",
+        "identity_tokens": [
+          "arXiv:2605.18810"
+        ],
+        "arxiv_id": "2605.18810",
+        "source_url": "https://arxiv.org/abs/2605.18810",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+          "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md"
+        ],
+        "linked_from_titles": [
+          "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+          "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding"
+        ],
+        "linked_from_lineages": [
+          "投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト",
+          "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26297",
+      "identity_tokens": [
+        "id:arXiv:2605.26297",
+        "url:https://arxiv.org/abs/2605.26297"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2605.26297",
+        "identity_tokens": [
+          "arXiv:2605.26297"
+        ],
+        "arxiv_id": "2605.26297",
+        "source_url": "https://arxiv.org/abs/2605.26297",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+          "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+        ],
+        "linked_from_titles": [
+          "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+          "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29343",
+      "identity_tokens": [
+        "id:arXiv:2605.29343",
+        "url:https://arxiv.org/abs/2605.29343"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2605.29343",
+        "identity_tokens": [
+          "arXiv:2605.29343"
+        ],
+        "arxiv_id": "2605.29343",
+        "source_url": "https://arxiv.org/abs/2605.29343",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-speculative-decoding/2026-2609.14717-carryover-drafting-recycling-rejected-states.md",
+          "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+        ],
+        "linked_from_titles": [
+          "Carryover Drafting: Recycling Rejected States for Speculative Decoding",
+          "GrowMTP: Can RL Grow Its Own Draft Head?"
+        ],
+        "linked_from_lineages": [
+          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習",
+          "投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02091",
+      "identity_tokens": [
+        "id:arXiv:2606.02091",
+        "url:https://arxiv.org/abs/2606.02091"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2606.02091",
+        "identity_tokens": [
+          "arXiv:2606.02091"
+        ],
+        "arxiv_id": "2606.02091",
+        "source_url": "https://arxiv.org/abs/2606.02091",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+          "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md"
+        ],
+        "linked_from_titles": [
+          "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+          "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation"
+        ],
+        "linked_from_lineages": [
+          "speculative-decoding",
+          "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25852",
+      "identity_tokens": [
+        "id:arXiv:2607.25852",
+        "url:https://arxiv.org/abs/2607.25852"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2607.25852",
+        "identity_tokens": [
+          "arXiv:2607.25852"
+        ],
+        "arxiv_id": "2607.25852",
+        "source_url": "https://arxiv.org/abs/2607.25852",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-speculative-decoding/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md"
+        ],
+        "linked_from_titles": [
+          "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+          "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching"
+        ],
+        "linked_from_lineages": [
+          "KVキャッシュオフロード・再計算",
+          "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10107-024-02118-8",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10107-024-02118-8",
+        "url:https://doi.org/10.1007/s10107-024-02118-8"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1007/s10107-024-02118-8",
+        "identity_tokens": [
+          "DOI:10.1007/s10107-024-02118-8"
+        ],
+        "doi": "10.1007/s10107-024-02118-8",
+        "source_url": "https://doi.org/10.1007/s10107-024-02118-8",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11704-024-40555-y",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11704-024-40555-y",
+        "url:https://doi.org/10.1007/s11704-024-40555-y"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1007/s11704-024-40555-y",
+        "identity_tokens": [
+          "DOI:10.1007/s11704-024-40555-y"
+        ],
+        "doi": "10.1007/s11704-024-40555-y",
+        "source_url": "https://doi.org/10.1007/s11704-024-40555-y",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
+          "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+        ],
+        "linked_from_titles": [
+          "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+          "KV Cache Offloading for Context-Intensive Tasks"
+        ],
+        "linked_from_lineages": [
+          "11-llm-serving-scheduling-disaggregation",
+          "KVキャッシュ退避／長文推論／KV選択／KV量子化"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/0304-3975(94)90151-1",
+      "identity_tokens": [
+        "id:DOI:10.1016/0304-3975(94)90151-1",
+        "url:https://doi.org/10.1016/0304-3975(94)90151-1"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/0304-3975(94)90151-1",
+        "identity_tokens": [
+          "DOI:10.1016/0304-3975(94)90151-1"
+        ],
+        "doi": "10.1016/0304-3975(94)90151-1",
+        "source_url": "https://doi.org/10.1016/0304-3975(94)90151-1",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.mejo.2016.04.006",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.mejo.2016.04.006",
+        "url:https://doi.org/10.1016/j.mejo.2016.04.006"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/j.mejo.2016.04.006",
+        "identity_tokens": [
+          "DOI:10.1016/j.mejo.2016.04.006"
+        ],
+        "doi": "10.1016/j.mejo.2016.04.006",
+        "source_url": "https://doi.org/10.1016/j.mejo.2016.04.006",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+          "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+        ],
+        "linked_from_titles": [
+          "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+          "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード",
+          "先行するNPUの単一計算領域DVFSを、部品単位の空間的DVFSへ拡張。ReGateなどの電力遮断とは補完関係。"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.tcs.2004.05.023",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.tcs.2004.05.023",
+        "url:https://doi.org/10.1016/j.tcs.2004.05.023"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/j.tcs.2004.05.023",
+        "identity_tokens": [
+          "DOI:10.1016/j.tcs.2004.05.023"
+        ],
+        "doi": "10.1016/j.tcs.2004.05.023",
+        "source_url": "https://doi.org/10.1016/j.tcs.2004.05.023",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/s0167-8191(06)80021-9",
+      "identity_tokens": [
+        "id:DOI:10.1016/s0167-8191(06)80021-9",
+        "url:https://doi.org/10.1016/s0167-8191(06)80021-9"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/s0167-8191(06)80021-9",
+        "identity_tokens": [
+          "DOI:10.1016/s0167-8191(06)80021-9"
+        ],
+        "doi": "10.1016/s0167-8191(06)80021-9",
+        "source_url": "https://doi.org/10.1016/s0167-8191(06)80021-9",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
+          "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md"
+        ],
+        "linked_from_titles": [
+          "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
+          "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems"
+        ],
+        "linked_from_lineages": [
+          "moe-parallelism-communication",
+          "other-inference-systems"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/s0304-3975(02)00488-7",
+      "identity_tokens": [
+        "id:DOI:10.1016/s0304-3975(02)00488-7",
+        "url:https://doi.org/10.1016/s0304-3975(02)00488-7"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/s0304-3975(02)00488-7",
+        "identity_tokens": [
+          "DOI:10.1016/s0304-3975(02)00488-7"
+        ],
+        "doi": "10.1016/s0304-3975(02)00488-7",
+        "source_url": "https://doi.org/10.1016/s0304-3975(02)00488-7",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/s0377-2217(02)00123-6",
+      "identity_tokens": [
+        "id:DOI:10.1016/s0377-2217(02)00123-6",
+        "url:https://doi.org/10.1016/s0377-2217(02)00123-6"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1016/s0377-2217(02)00123-6",
+        "identity_tokens": [
+          "DOI:10.1016/s0377-2217(02)00123-6"
+        ],
+        "doi": "10.1016/s0377-2217(02)00123-6",
+        "source_url": "https://doi.org/10.1016/s0377-2217(02)00123-6",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41592-019-0686-2",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41592-019-0686-2",
+        "url:https://doi.org/10.1038/s41592-019-0686-2"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1038/s41592-019-0686-2",
+        "identity_tokens": [
+          "DOI:10.1038/s41592-019-0686-2"
+        ],
+        "doi": "10.1038/s41592-019-0686-2",
+        "source_url": "https://doi.org/10.1038/s41592-019-0686-2",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md"
+        ],
+        "linked_from_titles": [
+          "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+          "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy"
+        ],
+        "linked_from_lineages": [
+          "Adaptive Expert Computation / Compression",
+          "Speculative Decoding / MoE"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cloud67622.2025.00028",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud67622.2025.00028",
+        "url:https://doi.org/10.1109/cloud67622.2025.00028"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1109/cloud67622.2025.00028",
+        "identity_tokens": [
+          "DOI:10.1109/cloud67622.2025.00028"
+        ],
+        "doi": "10.1109/cloud67622.2025.00028",
+        "source_url": "https://doi.org/10.1109/cloud67622.2025.00028",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md"
+        ],
+        "linked_from_titles": [
+          "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+          "UCCL-Zip: Lossless Compression Supercharged GPU Communication"
+        ],
+        "linked_from_lineages": [
+          "GPU collective communication / communication compression / LLM serving disaggregation",
+          "Offload / Hierarchical Memory"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:cac39d8568fc9817fa2f84d4cc67ce7cbb64f79eaea1a00473dd25141f0f790b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
