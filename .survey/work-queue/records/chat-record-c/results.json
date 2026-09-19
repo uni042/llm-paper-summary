@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3b62c6bd3d0c2191dd7cade2",
-  "job_id": "job-research-c2f58815c322fab7",
-  "data": {
-    "overview": "Pieは通常テキスト生成ではプログラマビリティの代償を小さく抑えつつ、アプリケーション固有のKV再利用や入出力統合が効く複雑ワークフローで既存基盤を上回る。論文全体では高度なタスクで1.1〜2.4倍の低遅延、1.3〜3.4倍の高スループットを報告する。ReACTでは最大15%低遅延・30%高スループット、思考木・思考グラフ・再帰的推論では最大28%低遅延・34%高スループットを示す。8B通常生成ではvLLMの64.06ミリ秒/トークンに対しPieは65.59ミリ秒/トークンで、増加率は2.39%に留まる。",
-    "key_results": [
-      {"metric": "高度なLLMワークフロー性能", "value": "遅延1.1〜2.4倍改善、スループット1.3〜3.4倍向上", "baseline": "既存LLMサービングシステム", "condition": "思考グラフやエージェント型ワークフローなど", "interpretation": "要求固有KV制御と生成・入出力統合が複雑ワークフローで性能に直結する。"},
-      {"metric": "ReACT性能", "value": "遅延最大15%削減、スループット最大30%向上", "baseline": "vLLM/SGLangのクライアント主導実装", "condition": "1Bモデル、代表負荷で外部入出力8回", "interpretation": "クライアント・サーバ往復除去とKV保持の効果を示す。"},
-      {"metric": "複雑推論戦略", "value": "遅延最大28%削減、スループット最大34%向上", "baseline": "vLLM/SGLang系実装", "condition": "思考木・思考グラフ・再帰的推論など", "interpretation": "プログラム制御KV再利用が動的な分岐構造で暗黙キャッシュ方針より有効である。"},
-      {"metric": "8Bテキスト補完のトークン当たり時間", "value": "vLLM 64.06 ms、Pie 65.59 ms、差+1.53 ms（2.39%）", "baseline": "vLLM", "condition": "Llama 3 8B BF16、NVIDIA L4", "interpretation": "モデル計算が大きいほどプログラマビリティの固定費が償却される。"},
-      {"metric": "モデル規模別処理負荷", "value": "1B 11.41%、3B 5.64%、8B 2.39%", "baseline": "vLLMのトークン当たり時間", "condition": "Llama 3 BF16", "interpretation": "固定的な制御・API費用の相対比がモデル規模とともに低下する。"},
-      {"metric": "適応一括処理のスループット", "value": "84.85要求/秒", "baseline": "即時実行5.61、水平のみ30.09、垂直のみ78.11要求/秒", "condition": "128並行inferlet、飽和状態", "interpretation": "作業保存型の適応一括処理が細粒度APIでも高いGPU利用率を維持する。"},
-      {"metric": "inferlet起動処理負荷", "value": "再利用時10〜50 ms、初回35〜81 ms", "baseline": "なし", "condition": "最大896同時起動", "interpretation": "WebAssemblyの事前確保機構により多数inferletの起動時間をトークン生成時間と同程度以下へ抑える。"},
-      {"metric": "API呼出し処理負荷", "value": "制御層30 µs未満/呼出し、推論層10〜300 µs/呼出し", "baseline": "処理本体の実行時間を除外", "condition": "最大896並行inferlet", "interpretation": "主な拡大要因はPythonの単一スレッド逆直列化で、ネイティブ多スレッド実装に改善余地がある。"}
-    ],
-    "negative_results": "通常生成ではPieがvLLMより遅く、1Bではトークン当たり16.83ミリ秒に対し18.75ミリ秒で11.41%の相対処理負荷となる。細粒度APIによりGPU上の入力埋め込み・標本化を順伝播とパイプライン化しにくいことが最大の機会損失で、0.23〜1.39ミリ秒/トークン程度を占める。注意シンクの30倍超スループット比較は基盤GPUカーネルライブラリ差の影響を受けるため、純粋なプログラマビリティ効果としては解釈できない。",
-    "interpretation": "結果は『常に単一化基盤より速い』ことではなく、通常生成では小さな性能税を払い、アプリケーション固有最適化が必要なワークフローではその制御自由度で大きく回収する設計点を示す。特にKV寿命をアプリ側が知るエージェント型・分岐処理と外部入出力の統合で利点が大きい。",
-    "quality_impact": "Pie自体はモデル精度を近似して高速化する方式ではない。通常生成は同じモデル計算をAPI分解して実行する。一方、inferletで注意マスク、投機的・制約付き復号、標本化などを変更できるため、それら個別アルゴリズムの品質特性はアプリケーション側の実装に依存する。"
-  },
-  "reservation": {"claim_id": "claim-3b62c6bd3d0c2191dd7cade2", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5054a5121094256f2071bd0e",
+  "job_id": "job-research-c1b7543305e71c40",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5054a5121094256f2071bd0e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
