@@ -61,7 +61,7 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
                     "schema_version": 1,
                     "operation": "precheck_discovery_candidates",
                     "request_id": "req-1",
-                    "run_key": "2026-09-20T01:00:00+09:00",
+                    "run_key": "validation-round",
                     "axis": "memory",
                     "records": [
                         {"canonical_id": "arXiv:2609.00001", "title": "Known"},
@@ -97,12 +97,14 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         self.repo = Path(self.tmp.name)
         self.survey = self.repo / ".survey"
         self.queue = self.survey / "work-queue"
+        self.submissions = self.queue / "submissions"
         self.results = self.queue / "discovery-precheck" / "results"
+        self.submissions.mkdir(parents=True)
         self.results.mkdir(parents=True)
         queue_worker.ROOT = self.survey
         queue_worker.QUEUE = self.queue
         queue_worker.JOBS = self.queue / "jobs"
-        queue_worker.SUBMISSIONS = self.queue / "submissions"
+        queue_worker.SUBMISSIONS = self.submissions
         queue_worker.RESULTS = self.queue / "results"
         queue_worker.STATE = self.queue / "state.json"
         queue_worker.ARCHIVE = self.queue / "archive"
@@ -115,22 +117,39 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "add", "README.md"], cwd=self.repo, check=True)
         subprocess.run(["git", "commit", "-qm", "init"], cwd=self.repo, check=True)
 
+        self.old_submission = self.submissions / "old-round.json"
+        self.old_submission.write_text("{}\n", encoding="utf-8")
+        subprocess.run(["git", "add", self.old_submission.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "historical discovery submission"], cwd=self.repo, check=True)
+
+        marker = self.queue / "discovery-precheck" / "ENFORCED"
+        marker.write_text("enforced\n", encoding="utf-8")
+        subprocess.run(["git", "add", marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "enable discovery precheck"], cwd=self.repo, check=True)
+
     def tearDown(self) -> None:
         for name, value in self.originals.items():
             setattr(queue_worker, name, value)
         self.tmp.cleanup()
 
     @staticmethod
-    def _sub(run_key: str = "2026-09-20T01:00:00+09:00") -> dict:
+    def _base_sub() -> dict:
         return {
             "operation": "submit_discovery_round",
             "candidates": [{"canonical_id": "arXiv:2609.99999", "title": "New"}],
             "discovery_stats": {
-                "run_key": run_key,
+                "run_key": "validation-round",
                 "round": "r1",
                 "axis": "memory",
             },
         }
+
+    def _commit_submission(self, name: str = "new-round.json") -> str:
+        path = self.submissions / name
+        path.write_text("{}\n", encoding="utf-8")
+        subprocess.run(["git", "add", path.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", f"add {name}"], cwd=self.repo, check=True)
+        return f"work-queue/submissions/{name}"
 
     def _commit_result(self, *, author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com") -> Path:
         path = self.results / "req-1.json"
@@ -141,7 +160,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
                     "operation": "precheck_discovery_candidates",
                     "ok": True,
                     "request_id": "req-1",
-                    "run_key": "2026-09-20T01:00:00+09:00",
+                    "run_key": "validation-round",
                     "axis": "memory",
                     "snapshot_source_commit": "abc123",
                     "allowed_records": [
@@ -163,20 +182,30 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "commit", "-qm", "precheck result"], cwd=self.repo, check=True, env=env)
         return path
 
-    def test_historical_round_remains_compatible_without_precheck(self) -> None:
-        sub = self._sub("2026-09-19T23:00:00+09:00")
+    def test_historical_submission_predating_marker_remains_compatible(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = "work-queue/submissions/old-round.json"
         self.assertIsNone(queue_worker.validate_discovery_precheck(sub))
 
-    def test_future_round_without_precheck_returns_actionable_guidance(self) -> None:
+    def test_new_submission_without_precheck_returns_actionable_guidance(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
         with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
-            queue_worker.validate_discovery_precheck(self._sub())
+            queue_worker.validate_discovery_precheck(sub)
         self.assertEqual(ctx.exception.code, "discovery_precheck_required")
         self.assertIn("NEW immutable Discovery submission", ctx.exception.next_action)
         self.assertTrue(any("precheck" in step for step in ctx.exception.recovery_steps))
 
+    def test_uncommitted_new_submission_fails_closed(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = "work-queue/submissions/not-yet-in-history.json"
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError):
+            queue_worker.validate_discovery_precheck(sub)
+
     def test_workflow_produced_result_allows_only_emitted_candidate(self) -> None:
         self._commit_result()
-        sub = self._sub()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
         sub["discovery_precheck"] = {
             "request_id": "req-1",
             "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
@@ -187,7 +216,8 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
 
     def test_handwritten_result_is_rejected_with_recovery_guidance(self) -> None:
         self._commit_result(author_email="worker@example.com")
-        sub = self._sub()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
         sub["discovery_precheck"] = {
             "request_id": "req-1",
             "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
@@ -199,7 +229,8 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
 
     def test_candidate_not_emitted_by_result_is_rejected(self) -> None:
         self._commit_result()
-        sub = self._sub()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
         sub["candidates"] = [{"canonical_id": "arXiv:2609.88888", "title": "Bypass"}]
         sub["discovery_precheck"] = {
             "request_id": "req-1",
