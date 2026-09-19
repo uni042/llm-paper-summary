@@ -2,22 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-707dea46767d27bb3baa733f",
+  "attempt_id": "attempt-0ff59bc0d504d0b2b89bbcc6",
   "job_id": "job-research-376e535ed84f7cfa",
   "data": {
     "overview": "DeepSeek-V4.1-Flashは552B backboneにもかかわらずCEDでプリフィル8B/token、デコード16B/tokenを活性化し、CSA2+FP4でHBM上グローバルKVを890 bytes/tokenへ、SWA限定再実行を加えて永続KVをV4-Flash比約1/8へ削減する。4Kから1Mへ文脈を256倍にしても精度加重単一トークンDecode FLOPsの増加は約25%に留まる。能力面でもDeepSWE v1.1 74.2%、Terminal-Bench 2.1 90.6%など前世代を大幅に上回る。",
     "key_results": [
-      {"metric": "グローバルKV容量", "value": "890 bytes/token", "baseline": "DeepSeek-V4-Flashの約1/4、DeepSeek-V1の約1/437", "condition": "同一系列長、実行時グローバルKVはHBM常駐", "interpretation": "CSA2層間再利用とFP4主KVがHBM容量・転送量を大幅に削減する。"},
-      {"metric": "永続KV容量", "value": "DeepSeek-V4-Flash比 約1/8", "baseline": "DeepSeek-V4-Flash", "condition": "SSDまたはホストメモリ上のprefix再利用用永続KV", "interpretation": "SWA KVを永続層から外す約1/2効果と、残るグローバルKVの約1/4圧縮が乗算的に効く。"},
-      {"metric": "長文脈デコード計算増加", "value": "4K→1M（256x）で約+25%", "baseline": "4K context", "condition": "BF16=1、FP8=0.5、FP4=0.25で精度加重したsingle-token Decode FLOPs", "interpretation": "疎注意と階層索引により系列長増加に対するデコード計算の伸びをほぼ抑える。"},
-      {"metric": "DeepSWE v1.1", "value": "74.2%", "baseline": "V4-Flash 54.4%、V4-Pro 67.6%、Opus-5 74.0%、GPT-5.6 Sol 73.0%（論文表）", "condition": "Max reasoning effort、論文指定scaffold", "interpretation": "大幅なKV圧縮と小さい活性化量でもコードエージェント性能を維持・向上した。"},
-      {"metric": "Terminal-Bench 2.1", "value": "90.6%", "baseline": "V4-Flash 82.7%、Opus-5 89.1%、GLM-5.3 88.2%（論文表）", "condition": "DeepSeek Harness Minimal、1M context、temperature 1.0、top-p 0.95", "interpretation": "長期エージェント用途で前世代より高い成功率を報告する。"},
-      {"metric": "reasoning effort制御", "value": "平均Pass@1 67.1%→76.3%、出力token約2.5x", "baseline": "effort 25→100", "condition": "8個の推論集約ベンチマーク平均", "interpretation": "推論費用と精度を単一スカラーで連続的に調整できるが、高effortでは逓減が大きい。"},
-      {"metric": "複数エージェントProgramBench", "value": "8hで30.04% Almost@1", "baseline": "single-agent 20.39%", "condition": "172 golden tasks、最大3 rollouts/task", "interpretation": "並列協調学習により時間予算を増やした際のtest-time compute scalingを改善する。"}
+      {
+        "metric": "グローバルKV容量",
+        "value": "890 bytes/token",
+        "baseline": "DeepSeek-V4-Flashの約1/4、DeepSeek-V1の約1/437",
+        "condition": "同一系列長、実行時グローバルKVはHBM常駐",
+        "interpretation": "CSA2層間再利用とFP4主KVがHBM容量・転送量を大幅に削減する。"
+      },
+      {
+        "metric": "永続KV容量",
+        "value": "DeepSeek-V4-Flash比 約1/8",
+        "baseline": "DeepSeek-V4-Flash",
+        "condition": "SSDまたはホストメモリ上のprefix再利用用永続KV",
+        "interpretation": "SWA KVを永続層から外す約1/2効果と、残るグローバルKVの約1/4圧縮が乗算的に効く。"
+      },
+      {
+        "metric": "長文脈デコード計算増加",
+        "value": "4K→1M（256x）で約+25%",
+        "baseline": "4K context",
+        "condition": "BF16=1、FP8=0.5、FP4=0.25で精度加重したsingle-token Decode FLOPs",
+        "interpretation": "疎注意と階層索引により系列長増加に対するデコード計算の伸びをほぼ抑える。"
+      },
+      {
+        "metric": "DeepSWE v1.1",
+        "value": "74.2%",
+        "baseline": "V4-Flash 54.4%、V4-Pro 67.6%、Opus-5 74.0%、GPT-5.6 Sol 73.0%（論文表）",
+        "condition": "Max reasoning effort、論文指定scaffold",
+        "interpretation": "大幅なKV圧縮と小さい活性化量でもコードエージェント性能を維持・向上した。"
+      },
+      {
+        "metric": "Terminal-Bench 2.1",
+        "value": "90.6%",
+        "baseline": "V4-Flash 82.7%、Opus-5 89.1%、GLM-5.3 88.2%（論文表）",
+        "condition": "DeepSeek Harness Minimal、1M context、temperature 1.0、top-p 0.95",
+        "interpretation": "長期エージェント用途で前世代より高い成功率を報告する。"
+      },
+      {
+        "metric": "reasoning effort制御",
+        "value": "平均Pass@1 67.1%→76.3%、出力token約2.5x",
+        "baseline": "effort 25→100",
+        "condition": "8個の推論集約ベンチマーク平均",
+        "interpretation": "推論費用と精度を単一スカラーで連続的に調整できるが、高effortでは逓減が大きい。"
+      },
+      {
+        "metric": "複数エージェントProgramBench",
+        "value": "8hで30.04% Almost@1",
+        "baseline": "single-agent 20.39%",
+        "condition": "172 golden tasks、最大3 rollouts/task",
+        "interpretation": "並列協調学習により時間予算を増やした際のtest-time compute scalingを改善する。"
+      }
     ],
     "negative_results": "科学系の難しいagent taskでは巨大モデルとの差が残り、視覚agentでも最上位closed-sourceとの差を認める。CSA2の疎選択誤りとSWA限定再実行の近似状態復元は未試験の極端条件で能力低下を起こす可能性がある。reasoning effortは60〜80で多くの利得を回収し、100への増加はagent trajectoryを1.6〜1.8倍長くして改善が小さい。",
     "interpretation": "主なシステム上の成果は、KVを単に量子化するだけでなく、層間で生成自体を共有し、短寿命SWAを永続保存から再計算へ移すことでHBMとSSDの両階層を同時に縮めた点にある。これにより大規模MoEと100万トークン文脈を両立しつつ、能力評価でも前世代より改善している。",
     "quality_impact": "内部評価ではKV圧縮・限定再実行による系統的能力劣化は観測されず、V4.1-Flashは多くの基礎・事後学習評価でV4-Flashを上回る。ただし著者は有限評価では極端な疎検索・cache-resumption境界を覆えないと明示する。"
   },
-  "reservation": {"claim_id": "claim-707dea46767d27bb3baa733f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0ff59bc0d504d0b2b89bbcc6",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

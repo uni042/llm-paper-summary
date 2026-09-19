@@ -2,31 +2,48 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-707dea46767d27bb3baa733f",
+  "attempt_id": "attempt-0ff59bc0d504d0b2b89bbcc6",
   "job_id": "job-research-376e535ed84f7cfa",
   "data": {
     "canonical_id": "arXiv:2609.19969",
     "arxiv_id": "2609.19969",
     "doi": "10.48550/arXiv.2609.19969",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
     "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
     "summary": "長期エージェントでは長文計算だけでなく、KVキャッシュのHBM常駐量、SSD・ホストメモリへの永続保存量、再利用時の転送帯域が配備費用を支配する。DeepSeek-V4.1-Flashは552BのマルチモーダルMoEを、因果エンコーダ・デコーダ（Causal Encoder-Decoder; CED）、圧縮疎注意2（Compressed Sparse Attention 2; CSA2）の層間KV・索引再利用、FP4主KV、SWA限定再実行（SWA Bounded Replay）で共同設計する。プリフィルでは8B、デコードでは16Bを活性化し、100万トークン文脈を支えながらグローバルKVを890 bytes/token、DeepSeek-V4-Flash比約1/4へ、永続KVを約1/8へ削減する。45Tトークンのマルチモーダル事前学習と標準的なSFT・RL・オンポリシー蒸留を組み合わせ、エージェント系ベンチマークでも前世代を大幅に上回る。",
     "list_summary": "CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/token、永続KVを前世代比約1/8へ圧縮する。",
-    "authors": ["DeepSeek-AI"],
+    "authors": [
+      "DeepSeek-AI"
+    ],
     "authors_affiliations": "DeepSeek-AI（論文著者591名。構造化欄では組織著者を代表記載）",
     "published": "2026-09-17",
     "publication": "arXiv:2609.19969v1 [cs.CL]",
     "publication_type": "技術報告・arXivプレプリント",
     "publication_status": "arXiv v1公開",
     "lineage": "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
-    "topics": ["KV cache compression", "sparse attention", "FP4", "persistent KV cache", "SSD offload", "Mixture-of-Experts", "long-context inference"],
+    "topics": [
+      "KV cache compression",
+      "sparse attention",
+      "FP4",
+      "persistent KV cache",
+      "SSD offload",
+      "Mixture-of-Experts",
+      "long-context inference"
+    ],
     "importance": "HBM上の実行時KVとSSD/ホスト上の永続KVを同時に圧縮し、層間共有・低精度化・再計算をモデル構造と配備系で一体設計している。特に永続SWA KVをSSDから外し、短TTLのDRAMプールと限定再実行へ置き換える点は階層メモリ型エージェント推論に直接関係する。",
     "implementation": "モデルチェックポイントをHugging Faceで公開。論文はFlashMLA、DeepGEMM、TileKernels、DeepSelect等のDeepSeek系カーネルを用いた推論実装とEncoder–Prefill–Decode分離配備を記述する。",
     "hardware_evaluation": "論文は大規模学習・配備基盤と内部評価を報告するが、主要能力表では特定の単一GPU機種・台数を統一条件として開示していない。エージェント評価はLinuxコンテナ、1M-token context、temperature 1.0、top-p 0.95、最大500生成ラウンド等を明示。",
     "quality_effect": "CSA2選択誤差とSWA近似再構成による未知境界での能力劣化可能性を認める一方、内部評価では系統的劣化を観測せず、前世代より能力を向上。",
     "source": "https://arxiv.org/abs/2609.19969",
-    "sources": ["https://arxiv.org/abs/2609.19969", "https://arxiv.org/pdf/2609.19969", "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"],
+    "sources": [
+      "https://arxiv.org/abs/2609.19969",
+      "https://arxiv.org/pdf/2609.19969",
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    ],
     "code": null,
     "project": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
     "last_checked": "2026-09-20",
@@ -35,5 +52,9 @@
     "references_source": "arXiv PDF全文のReferences節（p.37以降）まで確認。個別参考文献は構造化配列へ転記していない。",
     "references_total": 0
   },
-  "reservation": {"claim_id": "claim-707dea46767d27bb3baa733f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0ff59bc0d504d0b2b89bbcc6",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
