@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:40:42 JST**
+> 自動生成: **2026-09-20 05:40:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **95** |
+| 収録候補論文 | **94** |
 | 未claim Research job | **94** |
-| 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-20 05:37:39 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-20 05:40:52 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **95** |
+| canonical_id確認済みの一意な候補論文 | **94** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **95** |
+| 非終端Research job合計 | **94** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **11** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **12** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **22** | **2** | **2** | **0** | **1** | **0** | **5** |
+| 合計 | **23** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 05:40:52 JST** [research] `arXiv:2306.00978` — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
+  - job: `.survey/work-queue/jobs/job-research-d5e83a73eb90a616.json`
+  - result: `.survey/work-queue/results/research/attempt-e2c1eb9d827322f9fbb93f0b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e2c1eb9d827322f9fbb93f0b.json`
+  - paper: `papers/inference/08-quantization-kernels/2023-2306.00978-awq.md`
 - **09-20 05:37:39 JST** [research] `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference
   - job: `.survey/work-queue/jobs/job-research-53def9917e580440.json`
   - result: `.survey/work-queue/results/research/attempt-58ec9dfded7ec0db6d9bb446.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-bb1ec81341e2780a2eb5259f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bb1ec81341e2780a2eb5259f.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md`
-- **09-20 00:38:21 JST** [research] `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
-  - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
-  - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0ff59bc0d504d0b2b89bbcc6.json`
-  - paper: `papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2306.00978` — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration / worker `llm-research-survey-scheduled-chat`
-  - claim: **09-20 05:38:27 JST** / heartbeat: **—** / lease expiry: **09-20 06:38:27 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d5e83a73eb90a616.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **95** |
+| ready | **94** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **778** |
+| inference/training/survey配下の論文Markdown実体 | **779** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **665** |
-| └ Research | **504** |
+| 成功result未照合のimmutable submission | **664** |
+| └ Research | **503** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

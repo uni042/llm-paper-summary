@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 95,
-      "completed": 589,
+      "ready": 94,
+      "completed": 590,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 95,
+    "ready_research_audit": 94,
     "actively_claimed": 0,
-    "claimable": 95
+    "claimable": 94
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d5e83a73eb90a616",
-      "type": "research",
-      "lane": null,
-      "priority": 95,
-      "canonical_id": "arXiv:2306.00978",
-      "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
-      "source_url": "https://arxiv.org/abs/2306.00978",
-      "paper_path": "papers/inference/08-quantization-kernels/2023-2306.00978-awq.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-e279074fae9402fc",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-708ae0cc33daae20",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2607.11586",
+      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference",
+      "source_url": "https://arxiv.org/abs/2607.11586",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2607.11586-hcrmap.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T20:37:40+00:00"
+  "generated_at": "2026-09-19T20:40:53+00:00"
 }
