@@ -2,62 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f914ad852b23c42a60113aaf",
-  "job_id": "job-research-8ff9887a327d8124",
-  "data": {
-    "canonical_id": "arXiv:2505.21889",
-    "arxiv_id": "2505.21889",
-    "doi": "10.48550/arXiv.2505.21889",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse",
-    "summary": "コード補完などの穴埋めでは接頭部と接尾部を並べるFIM形式が使われるが、複数ターンで接頭部末尾が伸びると後続する接尾部のKVキャッシュが毎回無効化され、要求間KV再利用の効果が大きく失われる。EFIMは既存FIMの共通接頭部と接尾部を固定したまま増分だけを末尾へ移すプロンプト変換により、両方のKVを再利用可能にする。変換に伴って語途中から生成する能力が必要になるため、学習データを多数の断片へ分けて個別にトークン化するfragment tokenizationを導入する。DeepSeek-Coder-6.7BとLlama3.1-8Bで平均遅延52%削減、要求スループット98%向上を報告する。",
-    "list_summary": "FIMの増分を末尾へ移して接頭部・接尾部KVを要求間再利用し、断片トークン化学習で語途中生成能力を補って平均遅延52%削減・スループット98%向上。",
-    "authors": [
-      "Tianyu Guo",
-      "Hande Dong",
-      "Yichong Leng",
-      "Feng Liu",
-      "Cheater Lin",
-      "Nong Xiao",
-      "Xianwei Zhang"
-    ],
-    "authors_affiliations": "Sun Yat-sen University; Tencent; University of Science and Technology of China",
-    "published": "2025-05-29",
-    "publication": "arXiv:2505.21889v2 [cs.CL]",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "arXiv v2公開",
-    "lineage": "要求間KVキャッシュ再利用・穴埋め推論・コード補完・継続事前学習",
-    "topics": [
-      "KV cache reuse",
-      "infilling",
-      "FIM",
-      "serving",
-      "fragment tokenization"
-    ],
-    "importance": "物理メモリ階層を増やすのではなく、プロンプトの並び順そのものを変えて要求間で同一になるKV範囲を拡大する。一般的prefix cacheでは取りこぼす穴埋め特有のsuffix再計算を直接削減する。",
-    "implementation": "著者公式GitHubでEFIMソースコードを公開。vLLM 0.6.2上で評価し、モデル構造変更は不要。既存モデルには継続事前学習でfragment tokenization能力を追加する。",
-    "hardware_evaluation": "継続事前学習は64基のA100で各モデル1週間未満。推論はAMD EPYC 7742、256GBホストメモリ、NVIDIA A100の単一サーバ。",
-    "quality_effect": "fragment tokenizationなしでEFIMを直接使うとsubtokenを含むrandom-spanやCCEvalで大幅劣化するが、強化モデルでは元FIMと同等水準まで回復する。",
-    "source": "https://arxiv.org/abs/2505.21889",
-    "sources": [
-      "https://arxiv.org/abs/2505.21889",
-      "https://arxiv.org/pdf/2505.21889",
-      "https://github.com/gty111/EFIM"
-    ],
-    "code": "https://github.com/gty111/EFIM",
-    "project": "https://github.com/gty111/EFIM",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv PDF全文のReferences 1–40まで確認。個別配列への転記は省略。",
-    "references_total": 40
-  },
+  "attempt_id": "attempt-d22f06504ab5d2e1d4cebc14",
+  "job_id": "job-research-7353bc1b63a704fc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f914ad852b23c42a60113aaf",
+    "claim_id": "claim-d22f06504ab5d2e1d4cebc14",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
