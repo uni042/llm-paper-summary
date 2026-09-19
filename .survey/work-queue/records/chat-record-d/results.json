@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-fa2bf0d161766edfda517f4d","job_id":"job-research-66ea885d5e740aba","data":{"overview":"正直な基準線と再測定を強制すると、自動チューニングの派手な速度向上の多くが縮むか消える。geluカーネルは弱い初期基準線なら10.6倍だが実際に改善対象だった基準線比では2.03倍。同一設定は一台で1.174倍、別機械で1.0049倍となり絶対時間の移植不能性を示す。NCUヒントA/Bは両群が約2.48〜2.50msの同じ壁へ初回で達し真のnull。KernelBench Level-1は51/100正解したが速度中央値1.0001倍で事前1.2倍バーを失敗し、53再測定の中央値偏差は0.60%。一方SGLang設定探索ではngram投機が既定比1.2561倍requests/sを複数測定で維持し、信頼できる正の結果も残る。","key_results":[{"metric":"基準線感度","value":"10.6× → 2.03×","baseline":"naive baseline → honest search baseline","condition":"best gelu tuning kernel","interpretation":"見出し速度は候補品質だけでなく基準線選択に支配され、弱い基準線を隔離すべき。"},{"metric":"機械間移植性","value":"1.174× vs 1.0049×","baseline":"各機械のper-box default","condition":"same ngram speculative-decoding configuration","interpretation":"同一構成でも機械状態で利得が約35倍違い、絶対時間や単一箱の比率を輸出できない。"},{"metric":"事前登録A/B","value":"2.4840 ms off vs 2.4957 ms on","baseline":"NCU hints off/on","condition":"n=20 per arm、共有性能壁","interpretation":"処置到達を確認した上で両群が初回から飽和し、真のnullと判定。"},{"metric":"KernelBench Level-1","value":"51/100 correct、median speedup 1.0001×","baseline":"PyTorch eager","condition":"pass@1、100 tasks","interpretation":"正解率50%バーは通るが速度1.2×バーは失敗し、負の結果を規約変更せず保存する。"},{"metric":"再測定安定性","value":"53/53 correctness reproduced、median deviation 0.60%、max 3.97%","baseline":"cold remeasurement","condition":"53 candidates","interpretation":"速度中央値の失敗は測定ノイズではなく再現可能な結果。"},{"metric":"SGLang設定探索","value":"best 1.2561× requests/s","baseline":"SGLang own frozen default","condition":"Qwen2.5-7B-Instruct、ngram speculative decoding","interpretation":"複数構成・複数実行で1.2065倍以上を維持し、ngram投機へ帰属できる正の結果。"}],"negative_results":"KernelBenchの事前速度バーは中央値1.0001倍で失敗し、NCUヒントA/Bも共有壁で改善なし。ランダム提案器は飽和タスクで偶然同じ最良速度へ到達したが利用可能反復は3/20で、最終速度だけでは提案器品質を区別できない。外部アンカーでも5カーネル全てが±10%帯へ入るわけではなく、既定実装の既最適化やGB10周波数・帯域条件を機構的に説明する必要があった。","interpretation":"AutoTuneBenchの主要成果は新しい最速カーネルではなく、どの速度主張を信じてよいかを機械的に分離できることにある。負の結果、飽和、再測定差、処置未到達、不正候補をデータとして保存することで、エージェントが測定層の弱点を報酬へ変換する余地を狭める。","quality_impact":"候補正解性を性能より先に検査し、複数形状で参照実装との許容差を満たさない候補を拒否する。生成モデルの回答品質を直接評価する研究ではないが、性能最適化が意味論を壊して得た速度を採用しないことが品質保証に相当する。"},"reservation":{"claim_id":"claim-fa2bf0d161766edfda517f4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-44ca12bdb60bffdc4da96065",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-44ca12bdb60bffdc4da96065",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-fa2bf0d161766edfda517f4d","job_id":"job-research-66ea885d5e740aba","data":{"limitations":"GPU性能結果の大半はDGX Spark GB10一台であり、他GPUへの絶対速度一般化を意図しない。外部アンカーも異なるハードウェア上の公開比との比較なので、完全一致ではなく機構説明付きparityを重視する。KernelBench Level-1や限られたvLLM/SGLang設定空間が対象で、全エンジン・全ワークロードの自動調整品質を代表するわけではない。測定プロトコル自体も特定の反復数、seed、費用上限を凍結するため、別研究条件では事前に新しい根拠付きプロトコルを定義する必要がある。","differences":"KernelBenchやMLPerfのような静的ベンチマークは課題・指標を固定するが、測定層そのものが正しく、候補を生成する最適化主体が評価基盤を攻撃しないことを暗黙に仮定する。AutoTuneBenchはエージェントが報酬信号へ適応する前提で、正解実装、基準線、DB投入、異常値、処置到達まで信頼境界へ含める。従来のvLLM/SGLang自動チューニング研究が探索効率や最終性能を主眼にするのに対し、本研究は『測定が成立したか』を第一級成果とし、負の結果やインフラ欠陥も監査証跡として保存する。","implementation_status":"公式オープンアーティファクトがGitHub li-ch/autotunebenchで公開され、MITライセンス、ARTIFACT.md、protocol設定、ハーネス、ゲート、vLLM/SGLangエンジン実験、観測・オーケストレーションコードを含む。論文はarXiv:2609.18123。","research_positioning":"LLM推論基盤研究のメタ評価層に位置する。自動チューニングエージェントがvLLM/SGLang設定やGPUカーネルを変更する時代には、探索アルゴリズムだけでなく測定ハーネスが攻撃面・最適化対象になる。本研究は再現性、ベンチマーク監査、エージェント安全な評価、クロスマシン比較を統合し、今後の自律的性能工学で速度主張を受理するための測定契約として使える。"},"reservation":{"claim_id":"claim-fa2bf0d161766edfda517f4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-44ca12bdb60bffdc4da96065",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-44ca12bdb60bffdc4da96065",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

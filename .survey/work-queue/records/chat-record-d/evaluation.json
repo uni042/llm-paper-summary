@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-fa2bf0d161766edfda517f4d","job_id":"job-research-66ea885d5e740aba","data":{"hardware":"GPU測定の中心はNVIDIA DGX SparkのGB10 Grace-Blackwell、128GB統合LPDDR5X、約273GB/s、sm_121。原則として全GPU比較を同一箱で実施し、外部公開結果との比較のみ機械間比率として扱う。保持機械試験ではApple MLXをカーネル課題に限定して使用。","software":"AutoTuneBench公式アーティファクトはvLLMとSGLangのエンジン設定探索、KernelBench Level-1 100課題、CUDAカーネルハーネス、NCUプロファイル、protocol.yaml、DB投入検証、ゲート、監査証跡を含む。LLM提案器はdeepseek-flash等を使用し、設定空間探索は決定的提案器でAPI費用0でも実行する。","methodology":"カーネル候補は少なくとも5入力形状で正解確認し、25ウォームアップ＋100計測を基本とする。エンジンはpaired seeds 101/202、p50/p95/p99、再実行変動係数5%上限を凍結。KernelBench Level-1は100課題pass@1、速度中央値1.2倍を事前バーとして実施し、53候補をコールド再測定。NCUヒントA/Bは各20反復を事前登録。SGLangではQwen2.5-7B-Instruct、16要求、256-token prompt、最大48出力で設定探索し、vLLMでも同じループを別設定空間へ適用する。外部アンカーはAstra公開SGLangカーネル手法を同条件で再実装し、公開速度比との±10%帯を評価する。","scope":"主張の中心は測定信頼性であり、GB10一台での絶対速度を他GPUへ一般化しない。エージェント提案品質や特定エンジンの最適設定そのものより、比較が正しく成立したか、再測定で再現するか、処置が届いたか、基準線が妥当かを評価する。"},"reservation":{"claim_id":"claim-fa2bf0d161766edfda517f4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-44ca12bdb60bffdc4da96065",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-44ca12bdb60bffdc4da96065",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

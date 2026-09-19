@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-fa2bf0d161766edfda517f4d","job_id":"job-research-66ea885d5e740aba","data":{"canonical_id":"arXiv:2609.18123","arxiv_id":"2609.18123","doi":"10.48550/arXiv.2609.18123","openreview_id":null,"arxiv_categories":{"primary":"cs.DB","cross_list":[]},"title":"AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines","summary":"AutoTuneBenchは、LLMエージェントがGPUカーネルやvLLM/SGLang設定を自動調整する際、評価基盤の欠陥や不正確な比較を『改善』として学習してしまう問題を扱う測定プロトコル兼ベンチマークである。619モデル呼出しの予備運用から、弱い基準線、機械間で移植不能な絶対時間、飽和タスク、基盤不具合の4失敗様式を抽出する。プロトコルを出典付きコードとして凍結し、DB投入時検証、エージェント変更範囲外の正解実装、10倍異常値隔離、事前登録A/B、同一機械基準比、公開結果への外部アンカーを強制する。正直な測定ではKernelBench Level-1の正解率51%に対し速度中央値は1.0001倍に留まり、SGLangではngram投機設定が既定比約1.256倍を持続するなど、派手な単発速度より再現可能な証拠を重視する。","list_summary":"自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。","authors":["Li Chen"],"authors_affiliations":"harnets.ai","published":"2026-09-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1","lineage":"LLM serving autotuning / measurement methodology / benchmark auditing","topics":["自動チューニング","LLM配信","測定プロトコル","ベンチマーク監査","GPUカーネル"],"importance":"エージェント自動最適化では測定値そのものが報酬になるため、評価基盤の欠陥を速度向上として学習する危険をプロトコル構造で封じ、推論基盤最適化の再現性を扱う。","implementation":"公式GitHub li-ch/autotunebenchでプロトコル、ハーネス、ゲート、vLLM/SGLangエンジン実験、監査用アーティファクトを公開。protocol.yamlを凍結し、DB投入検証と回帰テストで逸脱を拒否する。","hardware_evaluation":"主GPU測定はNVIDIA DGX SparkのGB10 Grace-Blackwell、128GB統合LPDDR5X、約273GB/s、sm_121。保持機械再試験としてApple MLXも限定利用。","quality_effect":"モデル生成品質の改善手法ではなく、最適化候補の正しさと性能主張の信頼性を保証する測定層。正解比較は少なくとも5入力形状、絶対・相対許容差0.01を要求する。","source":"https://arxiv.org/abs/2609.18123","sources":["https://arxiv.org/abs/2609.18123","https://github.com/li-ch/autotunebench"],"code":"https://github.com/li-ch/autotunebench","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary paper mirror and official artifact repository","references_total":0},"reservation":{"claim_id":"claim-fa2bf0d161766edfda517f4d","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-44ca12bdb60bffdc4da96065",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-44ca12bdb60bffdc4da96065",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
