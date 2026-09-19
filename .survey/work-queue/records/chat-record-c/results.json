@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-7aff70bfd2cb5f9104c750c1",
-  "job_id": "job-research-3ae1410a48dc456e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7aff70bfd2cb5f9104c750c1",
-    "worker_id": "scheduled-chat-llm-survey-2130",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-7aff70bfd2cb5f9104c750c1","job_id":"job-research-3ae1410a48dc456e","data":{"overview":"Xiaomi 14のCPU評価では、MNN-LLMはllama.cppに対してプリフィル最大8.6倍、デコード最大2.3倍、fastllmに対してプリフィル最大20.5倍、デコード最大8.9倍を報告する。GPUではllama.cppに対してプリフィル最大25.3倍、デコード最大7.1倍、MLC-LLMに対して最大2.8倍と1.7倍である。一方Qwen2-7Bの短い入力ではMLC-LLMが対称量子化の利点で上回る条件があり、全条件で優位ではない。Flash利用ではQwen2-7Bの埋め込みを移すとDRAMを約15%、bf16換算約2.18GB削減でき、KV先読みは計算時間内に収まる範囲なら追加I/Oを隠せる。","key_results":[{"metric":"CPUプリフィル速度","value":"llama.cpp比最大8.6倍、fastllm比最大20.5倍","baseline":"llama.cpp、fastllm","condition":"Xiaomi 14、4 CPUスレッド、Qwen2-1.5B/7BとLlama3-8B、入力64〜1024トークン","interpretation":"命令幅に合わせた重み・入力配置、量子化行列積、コア負荷分散がモバイルCPUの演算資源を従来方式より効率よく使う。"},{"metric":"GPU推論速度","value":"llama.cpp比プリフィル最大25.3倍・デコード最大7.1倍、MLC-LLM比最大2.8倍・1.7倍","baseline":"llama.cpp、MLC-LLM","condition":"Xiaomi 14 OpenCL GPU、複数モデル・入力長","interpretation":"連続アクセスと128ビット読出し、画像メモリに合わせた配置が帯域利用を改善するが、量子化方式差により一部条件ではMLC-LLMが有利。"},{"metric":"埋め込みFlash配置のDRAM削減","value":"Qwen2-7Bで約15%、bf16換算約2.18GB削減","baseline":"全重みをDRAM保持","condition":"デコードで埋め込み表から現トークン分だけ読む性質を利用","interpretation":"利用率の低い大容量重みだけを低速Flashへ移すことで、層重みを退避する場合より小さい速度影響で容量を確保できる。"}],"negative_results":"FlashはLPDDR5Xより大幅に遅く、KVのFlash格納量が増えて先読み時間が層計算時間を超えると待ちが顕在化する。GPU評価ではQwen2-7Bの短い入力などでMLC-LLMがMNN-LLMを上回る条件があり、論文はMLC-LLMの対称量子化が有利と説明する。比較方式間の量子化条件も完全には同一でない。","interpretation":"大きな高速化は、LLMのプリフィルが計算律速、デコードがメモリ律速という段階差と、モバイルCPU/GPU固有のデータアクセス特性を別々に最適化した結果である。Flashは容量問題を解くが帯域は低いため、低利用重みの選別と計算中先読みがなければ速度低下へ転じる。","quality_impact":"量子化を含むため厳密な無損失最適化ではない。論文は精度影響が大きいLM headの精度を高く保つなどの設計を行うが、主評価は速度であり、各量子化構成のタスク精度を網羅的に比較する研究ではない。"},"reservation":{"claim_id":"claim-7aff70bfd2cb5f9104c750c1","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
