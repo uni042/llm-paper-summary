@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:35:25 JST**
+> 自動生成: **2026-09-20 00:35:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 23:39:47 JST（55分前）** |
+| 最終検証済みResearch収録 | **09-19 23:39:47 JST（56分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **4** | **2** | **0** | **1** | **0** | — |
+| Research | **15** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **85** | **7** | **3** | **0** | **1** | **0** | **2** |
+| 合計 | **85** | **4** | **1** | **1** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,26 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **成功** `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI
-  - job: `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
-  - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.00866-mori.md`
-- **成功** `arXiv:2605.20706` — Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU
-  - job: `.survey/work-queue/jobs/job-research-3899c287a2c2de7d.json`
-  - result: `.survey/work-queue/results/research/attempt-208eafaf198f5f787bed68e4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-208eafaf198f5f787bed68e4.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-50cee29d6acc38369f1897e6.json` (job `job-research-7353bc1b63a704fc`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-50cee29d6acc38369f1897e6.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-854ea9c24744be653d5bb7d3.json` (job `job-research-3f8214d2f0afeac1`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-854ea9c24744be653d5bb7d3.json` (`ok=false`)
+- 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-707dea46767d27bb3baa733f.json` (job `job-research-376e535ed84f7cfa`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 23:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -246,8 +233,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **631** |
-| └ Research | **482** |
+| 成功result未照合のimmutable submission | **632** |
+| └ Research | **483** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **2** |
