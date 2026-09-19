@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:27:44 JST**
+> 自動生成: **2026-09-20 03:28:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **83** |
 | 未claim Research job | **78** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間35分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間36分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **2** | **2** | **0** | **5** | **1** | — |
+| Research | **14** | **2** | **2** | **0** | **5** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **55** | **3** | **3** | **0** | **5** | **1** | **5** |
+| 合計 | **55** | **3** | **3** | **0** | **5** | **2** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -183,7 +183,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **2件**
+- `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 01:52:38 JST** / heartbeat: **09-20 03:28:08 JST** / lease expiry: **09-20 04:58:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
+- `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `manual-refcuration-savecheck-20260920`
+  - claim: **09-20 03:25:19 JST** / heartbeat: **09-20 03:28:08 JST** / lease expiry: **09-20 04:58:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
 - `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference / worker `work-refcuration-validation-20260920`
   - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-53def9917e580440.json`
@@ -193,12 +199,6 @@
 - `arXiv:2306.00978` — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration / worker `work-refcuration-validation-20260920`
   - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-d5e83a73eb90a616.json`
-- `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `manual-refcuration-savecheck-20260920`
-  - claim: **09-20 03:25:19 JST** / heartbeat: **09-20 03:25:19 JST** / lease expiry: **09-20 04:55:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
-- `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:52:38 JST** / heartbeat: **09-20 01:58:10 JST** / lease expiry: **09-20 03:28:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
 
 #### Audit
 
@@ -246,8 +246,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **648** |
-| └ Research | **492** |
+| 成功result未照合のimmutable submission | **649** |
+| └ Research | **493** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **9** |
