@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:40:54 JST**
+> 自動生成: **2026-09-19 21:41:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-19 21:36:08 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-19 21:36:08 JST（5分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -204,9 +204,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2506.10443` — MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices / worker `scheduled-chat-llm-survey-2130`
-  - claim: **09-19 21:38:24 JST** / heartbeat: **—** / lease expiry: **09-19 23:08:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3ae1410a48dc456e.json`
+- `DOI:10.1145/3797905.3807846` — CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool / worker `scheduled-chat-llm-survey-2130`
+  - claim: **09-19 21:41:19 JST** / heartbeat: **—** / lease expiry: **09-19 23:11:19 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8f1455c9a8468d9c.json`
 
 #### Audit
 
