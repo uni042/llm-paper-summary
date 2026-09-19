@@ -6,9 +6,9 @@
 
 `.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後、Scheduled Chatはこのfilterを任意の参照実装として扱わない。現在の強制経路は **workerがproviderの1ページ/1バッチを取得し、workflow precheckが未収録bufferを累積する反復protocol** とする。
 
-最初のrequestは `schema_version: 2`、`collector_id`、`provider_has_more`、`records[]` を必須とし、`previous_request_id` / `previous_receipt` は付けない。専用workflowは最新mainからidentity snapshot/rejection ledgerを再構築してfilterを実行する。未収録bufferが `target_unseen`（既定10）未満で `provider_has_more=true` の場合、resultは `evaluation_allowed=false` / `decision=CONTINUE_FETCH` を返す。この段階ではcandidate評価もDiscovery submissionも禁止する。
+最初のrequestは `schema_version: 2`、`collector_id`、`provider_has_more`、`records[]` を必須とし、`previous_request_id` / `previous_receipt` は付けない。専用workflowは最新mainからidentity snapshot/rejection ledgerを再構築してfilterを実行する。未収録bufferが `target_unseen`（既定20）未満で `provider_has_more=true` の場合、resultは `evaluation_allowed=false` / `decision=CONTINUE_FETCH` を返す。この段階ではcandidate評価もDiscovery submissionも禁止する。
 
-workerは次ページ/cursor/offset、またはpagination非公開providerなら次の同一collector内search windowを取得し、**新しいimmutable request**へ `previous_request_id` と `previous_receipt` を付けて送る。workflowは前回bufferを最新snapshotで再検証したうえで新ページを追加し、ページ間identity/alias重複も畳み込む。10件以上に達した、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` を返す。
+workerは次ページ/cursor/offset、またはpagination非公開providerなら次の同一collector内search windowを取得し、**新しいimmutable request**へ `previous_request_id` と `previous_receipt` を付けて送る。workflowは前回bufferを最新snapshotで再検証したうえで新ページを追加し、ページ間identity/alias重複も畳み込む。20件以上に達した、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` を返す。
 
 最終 `submit_discovery_round` は **READY_FOR_EVALUATIONを返した最終result** のrequest_id/result_path/receiptを必須とし、queue processorがGit commit author provenance、terminal判定、candidate identityを検証する。中間の `CONTINUE_FETCH` resultをsubmissionへ参照してもfail-closedで拒否する。これにより手順書の読み飛ばし、1ページだけの探索、GitHub code search等の別経路、手書きresultによる迂回を防ぐ。
 
@@ -39,9 +39,9 @@ fuzzy title判定は `paper_identity.py` の共通実装を使い、既定thresh
 
 Discoveryの標準経路では、1ページごとの検索結果をcandidate評価workerへ返さない。`discovery_search_filter.collect_until_unseen(...)` が定義する「filterしながら10件までページを進める」意味論を、強制precheckではworker/workflowの反復protocolとして実現する。providerアクセス自体はworkerが担当し、workflow precheckが前回resultのbufferを受け継いでcanonical filter・再検証・ページ間dedupe・到達判定を担当する。
 
-標準閾値は `DEFAULT_PREFETCH_UNSEEN = 10` とする。10件はcandidate採用ノルマではなく、candidate評価へ一度に渡す前処理済み検索結果bufferの大きさである。10件未満かつproviderに続きがある間は `CONTINUE_FETCH` なので、workerは評価へ進まず次ページを取得する。
+標準閾値は `DEFAULT_PREFETCH_UNSEEN = 20` とする。20件はcandidate採用ノルマではなく、candidate評価へ一度に渡す前処理済み検索結果bufferの大きさである。20件未満かつproviderに続きがある間は `CONTINUE_FETCH` なので、workerは評価へ進まず次ページを取得する。
 
-最後に取得したページで10件を超えた場合、そのページ内の未収録結果を切り捨てない。providerが尽きた場合は10件未満でも `READY_FOR_EVALUATION` とし、その時点までの累積bufferを返す。
+最後に取得したページで20件を超えた場合、そのページ内の未収録結果を切り捨てない。providerが尽きた場合は20件未満でも `READY_FOR_EVALUATION` とし、その時点までの累積bufferを返す。
 
 ## 検索結果取得時の必須処理
 
@@ -55,8 +55,8 @@ collectorが検索providerから1ページまたは1バッチを受け取るた�
 6. 同一ページ内で、primary identity一致だけでなくrun-local alias resolverでも同一paperを1件へ畳み込む。
 7. どの除外面にも一致しない結果だけをcollector内部へ蓄積する。
 8. collectorが走査した複数ページ間でも同じprimary identityまたはpaper aliasは1件へ畳み込む。
-9. bufferが10件未満で `next_cursor` / page / offset が残るなら、collector自身が次ページを取得して処理を繰り返す。
-10. bufferが10件以上になった時点、providerが尽きた時点、または明示的な安全上限へ達した時点でのみcollector結果をcallerへ返す。
+9. bufferが20件未満で `next_cursor` / page / offset が残るなら、collector自身が次ページを取得して処理を繰り返す。
+10. bufferが20件以上になった時点、providerが尽きた時点、または明示的な安全上限へ達した時点でのみcollector結果をcallerへ返す。
 
 identity snapshot、manifest、manifestが参照するrepresented-paper resolver、または存在するrejection ledgerが取得不能・不整合なら、検索結果を未収録と推定して通してはならない。正本再取得を試み、それでも照合不能なら既存のcontinuation/finalization gateへcanonical read failureとして渡す。
 
@@ -115,7 +115,7 @@ paginationを公開しないproviderで同じ検索窓を何度も再走査し�
 
 ## 多段の重複・再評価防止
 
-- 第1段階: collector内部で複数検索ページを走査し、exact identity、represented-paper alias、過去の評価落ち、ページ間paper duplicateを除外して未収録/未評価落ち10件前後のbufferを作る。
+- 第1段階: collector内部で複数検索ページを走査し、exact identity、represented-paper alias、過去の評価落ち、ページ間paper duplicateを除外して未収録/未評価落ち20件前後のbufferを作る。
 - 第2段階: candidate採用時に最新default branchのidentity snapshotとrepresented-paper resolverを再取得して照合する。
 - 第3段階: immutable Discovery submission書き込み直前に再度最新HEADへ更新し、同じ照合を行う。
 - candidate評価落ちは同じsubmissionの `rejected_candidates` に保存し、ledger更新後の次回検索から第1段階で除外する。
