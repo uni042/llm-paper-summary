@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-240fced74ff3bf00f6e22330","job_id":"job-research-ac3d391d822b215f","data":{"hardware":"実機クラスタは8×H100または8×H20を搭載するノード群で、各GPUに専用ConnectX-7 NICを接続し、ノード間は400 Gbps RoCE。LaminaはH100を計算装置、H20を注意/KV装置として使う。等費用比較ではLLaMA-33BにH100×1+H20×2対vLLM H100×2、65B/70BにH100×2+H20×4対vLLM H100×4を用いる。","software":"Laminaは約6000行のPython/C/C++と少量CUDA、改造rdma-core、Rayで実装。比較対象はvLLMで、デコードだけを公平に比較するため評価時はvLLMのプリフィルを除く。FP16のLLaMA-33B、LLaMA-65B、LLaMA3-70Bを使用する。","methodology":"Azure-Conv 19,366件、Azure-Code 8,819件、Kimi-Conv 12,031件、Kimi-TA 23,608件の実運用系列長トレースを使い、内容は同じ長さのダミートークンで再現する。主要指標はデコードスループット、トークン間時間（Time Between Tokens; TBT）、平均バッチサイズ、同等費用での性能。固定文脈4096/8192では遅延内訳を測り、ネットワークは400Gbps RoCE上のGPU間ping-pongでNCCL/Gloo/FHBNを比較する。通信重畳はLLaMA-65BとLLaMA3-70Bで有無を切り分ける。","scope":"デコード段階の演算子分離に焦点を当て、プリフィルの性能は主要評価から除外する。H100/H20という特定の異種GPUと高速RoCE環境での実証であり、一般Ethernet、CPU/DRAM、PIM等の代替メモリ装置は議論のみ。モデル品質は演算を近似しないため評価対象ではなく、オンラインSLOに対するTBTと費用効率を中心に検証する。"},"reservation":{"claim_id":"claim-240fced74ff3bf00f6e22330","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-5955db85de95e6c2e1066e60",
+  "job_id": "job-research-708ae0cc33daae20",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5955db85de95e6c2e1066e60",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
