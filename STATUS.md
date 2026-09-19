@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:06:59 JST**
+> 自動生成: **2026-09-19 11:07:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -181,7 +181,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/HPCA68181.2026.11408460` — Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:04:29 JST** / heartbeat: **—** / lease expiry: **09-19 12:34:29 JST**
+  - claim: **09-19 11:07:04 JST** / heartbeat: **—** / lease expiry: **09-19 12:37:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-e8f755e1fee9cc18.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
