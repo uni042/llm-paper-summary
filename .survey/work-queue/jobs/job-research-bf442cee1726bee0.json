@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.02942",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
   "selection_reason": "agentic workflowの各LLM nodeについてmodel・verification policy・backendを物理計画として共同選択し、live backend pressureに応じて事前生成variantをruntime切替するcompiler-runtime co-design。4 workloadで高精度baseline比1.1〜6.8倍のmean latency改善を示し、agentic servingの制御層研究として強い。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T11:05:14+00:00"
+  "created_at": "2026-09-19T11:05:14+00:00",
+  "completed_at": "2026-09-19T12:36:08+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-df7f245a6a689a36570a6d97.json"
 }

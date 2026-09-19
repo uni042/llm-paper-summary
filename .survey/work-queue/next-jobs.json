@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 51,
-      "completed": 570,
+      "ready": 50,
+      "completed": 571,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 51,
-    "actively_claimed": 0,
-    "claimable": 51
+    "ready_research_audit": 50,
+    "actively_claimed": 1,
+    "claimable": 49
   },
   "next_jobs": [
     {
@@ -80,20 +80,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-bf442cee1726bee0",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2607.02942",
-      "title": "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime",
-      "source_url": "https://arxiv.org/abs/2607.02942",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-b85568c75bac4939",
       "type": "research",
       "lane": null,
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-fbca0f6d99c20b64",
+      "type": "research",
+      "lane": null,
+      "priority": 81,
+      "canonical_id": "arXiv:2608.15118",
+      "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination",
+      "source_url": "https://arxiv.org/abs/2608.15118",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.15118-collective-communication-for-distributed-llm-systems-planning-runtime-adaptation-and-computation-coordination.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T12:05:20+00:00"
+  "generated_at": "2026-09-19T12:36:09+00:00"
 }
