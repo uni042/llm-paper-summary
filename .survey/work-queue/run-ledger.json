@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T21:47:54.327485+00:00",
+  "updated_at": "2026-09-19T21:49:21.046592+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T21:47:54.327485+00:00",
+      "last_recorded_at": "2026-09-19T21:49:21.046592+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 319,
         "audit_completed": 0,
         "discovery_completed": 193,
-        "blocked": 42,
+        "blocked": 43,
         "new_jobs": 296,
         "new_papers": 312,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35414912566:1",
-          "recorded_at": "2026-09-19T02:11:27.360487+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35414912566",
-            "run_attempt": "1",
-            "source_sha": "a126412790eefaa7bddac3d1cb641185ce769086"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35414965833:1",
           "recorded_at": "2026-09-19T02:13:06.721188+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35471534517:1",
+          "recorded_at": "2026-09-19T21:49:21.046592+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35471534517",
+            "run_attempt": "1",
+            "source_sha": "39e2d85c6eff019f6efe26d3579f1e6bead38845"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24033,6 +24033,14 @@
           "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-7462825d21914fcd",
+          "type": "research",
+          "canonical_id": "DOI:10.48550/arxiv.2307.08691",
+          "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -26809,7 +26817,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 773,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

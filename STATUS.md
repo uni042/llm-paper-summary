@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:49:11 JST**
+> 自動生成: **2026-09-20 06:49:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **90** |
+| 収録候補論文 | **89** |
 | 未claim Research job | **89** |
 | 直近24hの検証済みResearch収録 | **44** |
 | 最終検証済みResearch収録 | **09-20 06:47:50 JST（1分前）** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **90** |
+| canonical_id確認済みの一意な候補論文 | **89** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **90** |
+| 非終端Research job合計 | **89** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **3** | **1** | **1** | **0** | — |
+| Research | **12** | **5** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **6** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **19** | **6** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,8 +139,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-092a0a5a1923de06a9082271.json` (job `job-research-7462825d21914fcd`)
+- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-092a0a5a1923de06a9082271.json` (job `job-research-7462825d21914fcd`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-092a0a5a1923de06a9082271.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
 - **成功** `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills
@@ -179,10 +180,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:48:51 JST** / heartbeat: **—** / lease expiry: **09-20 08:18:51 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7462825d21914fcd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -202,7 +201,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **90** |
+| ready | **89** |
 
 ### 候補の重複・識別情報欠損
 

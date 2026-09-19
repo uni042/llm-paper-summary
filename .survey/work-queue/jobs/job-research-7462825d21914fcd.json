@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2307.08691",
   "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md",
   "selection_reason": "Core attention-kernel systems work improving GPU work partitioning and parallelism; directly relevant to inference kernel performance.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -20,5 +20,8 @@
   "validation_errors": [
     "Japanese-first prose ratio is too low: 32.1% < 70% (Japanese=1737, Latin=3672)"
   ],
-  "last_validation_failed_at": "2026-09-19T21:46:44+00:00"
+  "last_validation_failed_at": "2026-09-19T21:46:44+00:00",
+  "completed_at": "2026-09-19T21:49:15+00:00",
+  "blocker": "Repository content validation requires a Japanese-first prose ratio of at least 70%; the fully read five-slot FlashAttention-2 record in attempt-292a5f32d168fabd11a080be measured 32.1%. Scientific extraction is complete, but the record needs a Japanese localization rewrite before it can be accepted. This is a durable handoff, not a completed paper addition.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-092a0a5a1923de06a9082271.json"
 }
