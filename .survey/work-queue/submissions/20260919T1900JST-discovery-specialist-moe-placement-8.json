@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "priority": 80,
+      "reason": "MoE serving system addressing dynamic expert load imbalance through layer-aware load prediction plus elastic serverless expert scaling/placement. Prototype and real-workload evaluation report latency and cost reductions."
+    },
+    {
+      "canonical_id": "arXiv:2504.05897",
+      "title": "HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2504.05897",
+      "priority": 78,
+      "reason": "Implemented kTransformers-based MoE inference framework combining dynamic CPU-GPU intra-layer scheduling, inter-layer prefetch, and score-based expert caching, with measured prefill/decode speedups."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "identity": "arXiv:2607.17880",
+      "title": "Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2607.17880",
+      "rejection_reason": "Primarily a theoretical online/offline algorithmic model with competitive-ratio and hardness results rather than an implemented LLM inference system with systems evaluation; lower fit for the repository's inference-system survey."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-moe-placement-8",
+    "axis": "MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache",
+    "query_summary": "Followed expert prediction with the independent placement/load-balancing axis. OD-MoE was already known; MoEless and HybriMoE were not found by repository code search and provide implemented systems mechanisms. A theory-only MoE-serving paper was rejected for systems-fit reasons.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "novel_candidate_count": 3,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.25,
+    "accepted_canonical_ids": ["arXiv:2603.06350", "arXiv:2504.05897"],
+    "duplicate_canonical_ids": ["arXiv:2512.03927"],
+    "next_axis_hint": "Use backward/forward references from the newly found MoE systems or switch to framework/runtime kernel omissions; avoid another generic MoE cache query."
+  }
+}
