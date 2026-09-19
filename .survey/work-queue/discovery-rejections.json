@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-19T17:00:00+09:00",
-  "submission_count": 21,
+  "updated_at": "2026-09-19T19:00:00+09:00",
+  "submission_count": 22,
   "research_terminal_rejection_count": 5,
-  "rejection_observation_count": 52,
-  "rejection_record_count": 50,
+  "rejection_observation_count": 53,
+  "rejection_record_count": 51,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -1110,6 +1110,28 @@
       "axis": "2026-09新着のdistributed inference communication・GPU runtime・expert movement・serving stack",
       "run_key": "2026-09-17T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0600JST-discovery-specialist-runtime-communication-2.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.19657": {
+      "primary_identity": "id:arXiv:2609.19657",
+      "identity_tokens": [
+        "id:arXiv:2609.19657",
+        "title:prefixbenchh100 characterizing prefix reuse and timetofirsttoken in h100 llm serving",
+        "url:https://arxiv.org/abs/2609.19657"
+      ],
+      "canonical_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.19657",
+      "rejection_reason": "Useful benchmark/characterization but explicitly does not introduce a new caching or serving mechanism; lower priority than mechanism-bearing systems papers for this repository's discovery criteria.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T19:00:00+09:00",
+      "last_rejected_at": "2026-09-19T19:00:00+09:00",
+      "axis": "agentic workload characterization / sandbox memory / secure mobile serving",
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json",
       "origin": "discovery_candidate_rejection"
     }
   }
