@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-83b90f0b9afa469d0eb73d37",
-  "job_id": "job-research-3ae1410a48dc456e",
-  "data": {
-    "hardware": "Xiaomi 14スマートフォン。CPUは4スレッドで測定し、GPUはOpenCL経路を使用する。",
-    "software": "MNN-LLMをllama.cpp、MLC-LLM、fastllmと比較。Qwen2-1.5B、Qwen2-7B、Llama3-8Bの量子化モデルを使用する。MLC-LLMはCPU非対応、fastllmはGPU非対応のため該当比較を除外する。",
-    "methodology": "入力長64、256、1024トークンでプリフィル速度とデコード速度を測定し、デコードは最大16トークンに制限する。CPUとGPUを分け、複数モデルで比較する。MLC-LLMは非対称量子化モデルの性能が低いため対称量子化結果を使い、他方式は非対称量子化を使うという条件差が明記される。メモリ最適化ではQwen2-7Bの埋め込み配置とKV先読み可能量を分析し、計算最適化ではCPU命令別タイル、GPU配置、LoRA計算順序を個別に説明する。",
-    "scope": "単一スマートフォン機種での実測が中心で、端末横断の一般化や消費電力は評価していない。比較方式間で量子化条件が完全には一致しない箇所がある。Flash階層の利点はUFS速度、DRAM帯域、層計算時間に依存し、長すぎるKVでは先読みでI/Oを隠し切れない。"
-  },
+  "attempt_id": "attempt-3f055771f7f9d3ba6c79aa24",
+  "job_id": "job-research-883cceac74650e2e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-83b90f0b9afa469d0eb73d37",
+    "claim_id": "claim-3f055771f7f9d3ba6c79aa24",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }

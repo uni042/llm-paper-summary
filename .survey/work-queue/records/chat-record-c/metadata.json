@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-83b90f0b9afa469d0eb73d37",
-  "job_id": "job-research-3ae1410a48dc456e",
-  "data": {
-    "canonical_id": "arXiv:2506.10443",
-    "arxiv_id": "2506.10443",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices",
-    "summary": "スマートフォン上のLLM推論で支配的なDRAM容量とメモリ帯域、CPU・GPUの機種差を同時に扱う汎用推論エンジン。利用頻度の低い埋め込み重みや増大したKVキャッシュをFlashへ退避し、KVは次層計算中に先読みしてI/Oを隠す。さらに重み・活性値・KVを役割別に量子化し、CPU命令幅やGPUの連続読出し特性に合わせてデータ配置を変換し、big.LITTLE型CPUのコア別負荷配分、混合精度、LoRA計算順序も最適化する。Xiaomi 14上でllama.cpp、MLC-LLM、fastllmと比較し、CPUプリフィルで最大8.6倍などの高速化を示す。",
-    "list_summary": "DRAMとFlashの階層利用、役割別量子化、CPU/GPU別データ配置と負荷分散を統合し、スマートフォン上のLLM推論を高速・省メモリ化する。",
-    "authors": [
-      "Zhaode Wang",
-      "Jingbang Yang",
-      "Xinyu Qian",
-      "Shiwen Xing",
-      "Xiaotang Jiang",
-      "Chengfei Lv",
-      "Shengyu Zhang"
-    ],
-    "authors_affiliations": "Alibaba Group; Zhejiang University",
-    "published": "2025-06-12",
-    "publication": "arXiv / MM Asia 2024",
-    "publication_type": "Conference/Preprint",
-    "publication_status": "Preprint",
-    "lineage": "on-device LLM inference / mobile inference / Flash offload",
-    "topics": [
-      "端末内LLM推論",
-      "DRAM-Flash階層",
-      "量子化",
-      "モバイルCPU/GPU最適化"
-    ],
-    "importance": "Flashを受動的保存先ではなく、KV先読みと利用頻度別重み配置を伴う実行時メモリ階層として使うモバイルLLMエンジン。",
-    "hardware_evaluation": "Xiaomi 14のCPU 4スレッドとOpenCL GPUでQwen2-1.5B、Qwen2-7B、Llama3-8Bを実測。",
-    "quality_effect": "主評価は推論速度で、重みはint4/int8、活性値やKVも役割に応じて量子化するため厳密な無損失方式ではない。LM headは精度影響を考慮してint8を優先する。",
-    "source": "https://arxiv.org/abs/2506.10443",
-    "sources": [
-      "https://arxiv.org/abs/2506.10443",
-      "https://arxiv.org/pdf/2506.10443"
-    ],
-    "code": "https://github.com/alibaba/MNN",
-    "implementation": "汎用モバイル推論基盤MNN上に実装され、ONNX変換、演算融合、実行時LoRA、CPU/OpenCL GPU経路を統合する。",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "primary-reference-section",
-    "references_total": 29
-  },
+  "attempt_id": "attempt-3f055771f7f9d3ba6c79aa24",
+  "job_id": "job-research-883cceac74650e2e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-83b90f0b9afa469d0eb73d37",
+    "claim_id": "claim-3f055771f7f9d3ba6c79aa24",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }

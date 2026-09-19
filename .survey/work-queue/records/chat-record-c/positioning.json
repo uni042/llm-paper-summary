@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-83b90f0b9afa469d0eb73d37",
-  "job_id": "job-research-3ae1410a48dc456e",
-  "data": {
-    "limitations": "性能評価はXiaomi 14一機種が中心で、異なるSoC、DRAM/UFS世代、iOS端末などへの一般化はこの論文だけでは確認できない。消費電力や熱による長時間性能低下も主評価ではない。Flashへ退避したKVが増え、先読み時間が層計算時間を超えるとI/O待ちが表面化する。比較対象との量子化条件は一部異なり、MLC-LLMは対称量子化、他方式は非対称量子化を使う条件がある。量子化によるタスク品質変化の包括評価より性能を主眼とする。",
-    "differences": "LLM in a FlashやPowerInfer-2のように限られたメモリで大モデルを動かす方式と関連するが、MNN-LLMは特定モデル構造への変更だけでなく、汎用MNN上で変換・量子化・Flash階層・CPU/GPUカーネルを統合する。llama.cppやMLC-LLMのようなLLM専用実行系に対して、CV等を含む既存MNNの広い演算子・モデル対応を維持する点も異なる。Flash利用では低利用埋め込みと閾値超過KVを選別し、KVを計算中に先読みするため、単純な重みストリーミングよりI/Oを隠す設計が明示的である。",
-    "implementation_status": "AlibabaのMNN基盤上の実装で、論文はモデル変換、CPU、OpenCL GPU、LoRA、量子化、DRAM-Flash階層を一体化して評価する。MNNの公開リポジトリが存在する。",
-    "research_positioning": "端末内LLM推論の総合実行基盤に位置し、とくにSSD/FlashをDRAM不足時の能動的メモリ階層として使う研究系統に重要である。サーバ向けNVMeオフロードと異なり、UFS FlashとモバイルDRAMの大きな帯域差を前提に、低利用重みの選別と層計算へ重ねるKV先読みで待ちを隠す。したがって階層メモリ研究とモバイル向けカーネル最適化を接続する実装例として価値がある。"
-  },
+  "attempt_id": "attempt-3f055771f7f9d3ba6c79aa24",
+  "job_id": "job-research-883cceac74650e2e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-83b90f0b9afa469d0eb73d37",
+    "claim_id": "claim-3f055771f7f9d3ba6c79aa24",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }
