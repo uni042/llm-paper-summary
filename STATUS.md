@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:34:31 JST**
+> 自動生成: **2026-09-19 22:35:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（41分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（42分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **0** | **1** | **1** | **0** | — |
+| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **85** | **20** | **18** | **1** | **1** | **0** | **30** |
+| 合計 | **85** | **19** | **18** | **1** | **1** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,10 +151,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **個別result未照合** `.survey/work-queue/submissions/research/attempt-52fd234ea45de5f63b71cc39.json` (job `job-research-2dcd265cd3f3852c`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e2ac0d42f447fbcb7a899c55.json` (job `job-research-a6905e04777fde1f`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-e2ac0d42f447fbcb7a899c55.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -213,9 +211,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:32:32 JST** / heartbeat: **—** / lease expiry: **09-20 00:02:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2dcd265cd3f3852c.json`
+- `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 22:34:37 JST** / heartbeat: **—** / lease expiry: **09-20 00:04:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a6905e04777fde1f.json`
 
 #### Audit
 
