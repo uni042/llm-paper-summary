@@ -338,6 +338,14 @@ def _process_v2(
     max_pages_reached = pages_processed >= MAX_PAGES
     evaluation_allowed = target_reached or provider_exhausted or max_pages_reached
     decision = "READY_FOR_EVALUATION" if evaluation_allowed else "CONTINUE_FETCH"
+    if target_reached:
+        stop_reason = "TARGET_REACHED"
+    elif provider_exhausted:
+        stop_reason = "PROVIDER_EXHAUSTED"
+    elif max_pages_reached:
+        stop_reason = "MAX_PAGES_REACHED"
+    else:
+        stop_reason = None
     allowed = _allowed_records(results)
     source_commit = _manifest_source_commit(snapshot_dir)
     receipt = _receipt(
@@ -370,6 +378,7 @@ def _process_v2(
         "target_reached": target_reached,
         "provider_exhausted": provider_exhausted,
         "max_pages_reached": max_pages_reached,
+        "stop_reason": stop_reason,
         "evaluation_allowed": evaluation_allowed,
         "decision": decision,
         "snapshot_source_commit": source_commit,
