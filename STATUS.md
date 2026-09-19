@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:35:38 JST**
+> 自動生成: **2026-09-19 21:36:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（2時間0分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（2時間1分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -199,9 +199,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.02942` — Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime / worker `scheduled-chat-llm-survey-2130`
-  - claim: **09-19 21:33:15 JST** / heartbeat: **—** / lease expiry: **09-19 23:03:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-bf442cee1726bee0.json`
+- `DOI:10.1145/3797905.3807846` — CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool / worker `scheduled-chat-llm-survey-2130`
+  - claim: **09-19 21:36:00 JST** / heartbeat: **—** / lease expiry: **09-19 23:06:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8f1455c9a8468d9c.json`
 
 #### Audit
 
@@ -249,8 +249,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **618** |
-| └ Research | **471** |
+| 成功result未照合のimmutable submission | **619** |
+| └ Research | **472** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
