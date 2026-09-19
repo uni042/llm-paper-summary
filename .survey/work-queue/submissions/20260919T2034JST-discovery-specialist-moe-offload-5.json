@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2502.05370",
+      "title": "fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2502.05370",
+      "paper_path": "papers/inference/02-moe-expert-management/2025-2502.05370-fmoe-fine-grained-expert-offloading.md",
+      "priority": 84,
+      "reason": "MoE expertを粗粒度にoffloadする既存方式のlatency-memory trade-offに対し、expert selection patternとprompt semantic hintを用いてprefetch/cache/offloadを細粒度制御する実装。6-GPU実機でlatency 47%削減、expert hit rate 36%改善を報告し、expert cache/offload系統の基礎比較対象として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2509.07379",
+      "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference",
+      "source_url": "https://arxiv.org/abs/2509.07379",
+      "paper_path": "papers/inference/02-moe-expert-management/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+      "priority": 85,
+      "reason": "prefillではexpert活性が密、decodeでは疎というphase差を明示的に利用し、prefillは2-stream CUDA pipeline、decodeはlayer-level predictorでexpert prefetchを行う。Mixtralでend-to-end latency 1.42〜7.54倍改善、peak memoryをfull modelの15%に抑え、phase-aware expert offloadとして差分が明確。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-moe-offload-5",
+    "axis": "MoE expert offload・phase-aware prefetch/cache scheduling",
+    "query_summary": "network軸の新規性が低かったためMoEの過去未収録系統へ切替。最近のDirector等は直近探索と重なるため避け、default branch canonical ID検索で未収録のfine-grained offloadとdual-phase prefetchの2件を送信した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2607.08782", "arXiv:2607.17880"],
+    "next_axis_hint": "次はKV prefix cachingの古い重要欠落、multi-turn reuse、distributed prompt schedulingへ移る",
+    "empty_round_reason": null
+  }
+}
