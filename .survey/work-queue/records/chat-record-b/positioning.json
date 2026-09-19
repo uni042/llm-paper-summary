@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-dd9c1d77b61e438ec7443c80",
-  "job_id": "job-research-e279074fae9402fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-dd9c1d77b61e438ec7443c80",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-dd9c1d77b61e438ec7443c80","job_id":"job-research-e279074fae9402fc",
+ "data":{"limitations":"ドラフトモデルは対象モデルごとに別途訓練が必要で、ShareGPT/UltraChat等に対象モデル自身の応答を生成させる学習費がある。データ規模拡大で受理率が伸びることは示すが、405B・671B級はGPU制約で未評価。生産系大バッチでは計算余剰が減るため利得が縮み、vLLMバッチ56では1.01倍まで低下する。SGLang/vLLMの大バッチ実験は完全な動的木ではなく短いchainを用いるため、論文主要表と条件が異なる。多層特徴を対象モデルから取得するため実装側が中間層特徴を効率的に露出する必要もある。","differences":"EAGLE/EAGLE-2は対象モデル最上層特徴の次特徴を回帰し、特徴損失でドラフトを拘束するのに対し、EAGLE-3は特徴回帰を廃止して直接トークン予測し、自己生成内部表現を次段入力へ使う。HASSも訓練時に多段推論を模擬するが、目的はEAGLEの特徴予測誤差蓄積緩和であり、特徴損失と最上層特徴入力を維持する。EAGLE-3は表現制約自体を外し、低・中・高層特徴融合を導入する点が異なる。Medusa/Hydra等の複数ヘッド方式に対しては対象特徴を再利用する単一decoder型ドラフトを使い、EAGLE-2の動的木を継承する。","implementation_status":"SafeAILab/EAGLEリポジトリでコード公開。EAGLE-2の動的ドラフト木と互換で、SGLang v0.4.4では単一H100上でバッチ64まで、vLLMでも大バッチスループットを評価。SGLangチームによる統合・評価結果も論文へ掲載されている。","research_positioning":"投機的復号のEAGLE系統において、特徴レベル自己回帰から直接トークン予測へ転換し、訓練時テストで多段自己生成入力を学習分布へ取り込んだ後継手法。ドラフトモデルの性能を単に大きくするのではなく、訓練データ量を増やすと受理率・高速化が伸びる構造へ変更した点が重要である。また単一要求の低遅延だけでなく、SGLang/vLLMで従来EAGLEが不利になる大バッチ域まで正のスループット効果を延長しており、実運用の投機的復号比較で主要な基準点になる。"},
+ "reservation":{"claim_id":"claim-dd9c1d77b61e438ec7443c80","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
