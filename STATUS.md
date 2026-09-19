@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:44:58 JST**
+> 自動生成: **2026-09-20 05:45:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **94** |
+| 収録候補論文 | **93** |
 | 未claim Research job | **93** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-20 05:40:52 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-20 05:45:06 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **94** |
+| canonical_id確認済みの一意な候補論文 | **93** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **94** |
+| 非終端Research job合計 | **93** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **12** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **12** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **23** | **2** | **2** | **0** | **1** | **0** | **5** |
+| 合計 | **24** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 05:45:06 JST** [research] `arXiv:2503.01840` — EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test
+  - job: `.survey/work-queue/jobs/job-research-e279074fae9402fc.json`
+  - result: `.survey/work-queue/results/research/attempt-19f5527d6ca7024729812f1a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-19f5527d6ca7024729812f1a.json`
+  - paper: `papers/inference/05-speculative-decoding/2025-2503.01840-eagle-3.md`
 - **09-20 05:40:52 JST** [research] `arXiv:2306.00978` — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
   - job: `.survey/work-queue/jobs/job-research-d5e83a73eb90a616.json`
   - result: `.survey/work-queue/results/research/attempt-e2c1eb9d827322f9fbb93f0b.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json`
   - paper: `papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md`
-- **09-20 00:43:12 JST** [research] `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?
-  - job: `.survey/work-queue/jobs/job-research-1a87bd753fb86450.json`
-  - result: `.survey/work-queue/results/research/attempt-bb1ec81341e2780a2eb5259f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bb1ec81341e2780a2eb5259f.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.01840` — EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test / worker `llm-research-survey-scheduled-chat`
-  - claim: **09-20 05:44:14 JST** / heartbeat: **—** / lease expiry: **09-20 06:44:14 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e279074fae9402fc.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **94** |
+| ready | **93** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **779** |
+| inference/training/survey配下の論文Markdown実体 | **780** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **666** |
-| └ Research | **505** |
+| 成功result未照合のimmutable submission | **665** |
+| └ Research | **504** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
