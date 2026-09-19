@@ -300,6 +300,19 @@ def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
     )
 
 
+def _precheck_result_has_workflow_provenance(result_path: PurePosixPath) -> bool:
+    """Accept only result files committed by the dedicated precheck workflow bot."""
+    import subprocess
+
+    proc = subprocess.run(
+        ["git", "log", "-1", "--format=%ae", "--", result_path.as_posix()],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    return proc.returncode == 0 and proc.stdout.strip() == "survey-discovery-precheck[bot]@users.noreply.github.com"
+
+
 def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
     """Verify that a new Discovery payload can only contain records emitted by precheck."""
     if not _discovery_precheck_required(sub):
@@ -334,6 +347,11 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
     if not result:
         raise _precheck_guidance(
             "Referenced Discovery precheck result does not exist yet. Wait for the precheck workflow result before submitting candidates."
+        )
+    if not _precheck_result_has_workflow_provenance(result_path):
+        raise _precheck_guidance(
+            "Referenced Discovery precheck result was not committed by the dedicated precheck workflow. "
+            "Do not hand-write or copy result files; create a request and use the workflow-produced result."
         )
     if result.get("ok") is not True:
         raise _precheck_guidance(
