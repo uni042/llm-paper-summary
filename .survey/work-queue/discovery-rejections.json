@@ -6,10 +6,10 @@
     "terminal_research_rejections"
   ],
   "updated_at": "2026-09-19T19:00:00+09:00",
-  "submission_count": 24,
+  "submission_count": 25,
   "research_terminal_rejection_count": 5,
-  "rejection_observation_count": 55,
-  "rejection_record_count": 53,
+  "rejection_observation_count": 56,
+  "rejection_record_count": 54,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -230,6 +230,28 @@
       "axis": "2025 expert prefetch・distributed prefix cache・multi-GPU KV・SSD offload",
       "run_key": "2026-09-18T20:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260918T2021JST-discovery-specialist-2025-memory-4.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2508.08448": {
+      "primary_identity": "id:arXiv:2508.08448",
+      "identity_tokens": [
+        "id:arXiv:2508.08448",
+        "title:towards efficient and practical gpu multitasking in the era of llm",
+        "url:https://arxiv.org/abs/2508.08448"
+      ],
+      "canonical_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Towards Efficient and Practical GPU Multitasking in the Era of LLM",
+      "source_url": "https://arxiv.org/abs/2508.08448",
+      "rejection_reason": "Primarily a vision/position paper outlining GPU multitasking requirements and future resource-management directions rather than a standalone evaluated inference system.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T19:00:00+09:00",
+      "last_rejected_at": "2026-09-19T19:00:00+09:00",
+      "axis": "related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving",
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T1900JST-discovery-specialist-related-memory-12.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2509.12993": {
