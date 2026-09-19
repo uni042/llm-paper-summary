@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18675",
+      "title": "HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution",
+      "source_url": "https://arxiv.org/abs/2609.18675",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md",
+      "priority": 94,
+      "reason": "Full-HBF memory system for LLM serving; directly studies KV placement, read/write interference, lifetime-aware reclamation, and reports up to 1.58x throughput over FlashAccel and 3.30x over H3. Strong fit to SSD/flash and hierarchical-memory lineage."
+    },
+    {
+      "canonical_id": "arXiv:2609.16161",
+      "title": "LLM Inference in a Flash!",
+      "source_url": "https://arxiv.org/abs/2609.16161",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16161-llm-inference-in-a-flash.md",
+      "priority": 93,
+      "reason": "Compute-in-Flash LLM inference with integer-only quantization and dictionary-based KV compression; targets both model weights and KV state near flash and reports 15x reduction in dynamic KV traffic. Directly relevant to SSD/near-storage inference."
+    },
+    {
+      "canonical_id": "arXiv:2609.16491",
+      "title": "PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2609.16491",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16491-pipeswift.md",
+      "priority": 90,
+      "reason": "Agentic-serving systems work that revisits pipeline parallelism under completion-time-oriented workloads; appears to provide an open-source runtime and at-scale systems evaluation, making it a strong serving/scheduling candidate."
+    },
+    {
+      "canonical_id": "arXiv:2609.17475",
+      "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+      "source_url": "https://arxiv.org/abs/2609.17475",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17475-justfit.md",
+      "priority": 88,
+      "reason": "MLX inference runtime combining compressed KV execution, phase-aware component swapping, and state-preserving transitions on a 24 GiB laptop; reports 6.93x larger completed single-request context than its mlx-vlm baseline and concrete end-to-end throughput/memory measurements."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-flash-agent-runtime-1",
+    "axis": "2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving",
+    "query_summary": "直前のbatching/fairness軸を反復せず、2026年9月14-17日の新着を中心にLLM inference/serving、Flash/HBF、GPU/runtime、agentic servingを横断検索した。一次arXiv情報を優先してsystems寄与と実測評価を軽量確認し、投入直前にcanonical arXiv ID/titleをGitHub default branchで再検索した。KVShareArenaは主にbenchmark、AutoTuneBenchはmeasurement benchmark、LYREOはsimulation中心のedge schedulingのため今回の強候補から除外した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "HBFlex/Flash系のforward/backward citationからnear-storage computeとKV state placementを追い、その後MoE expert I/OとCXL/NVMe階層の未走査2025-2026論文へ移る",
+    "empty_round_reason": null
+  }
+}
