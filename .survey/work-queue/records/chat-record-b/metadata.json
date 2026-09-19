@@ -1,13 +1,14 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
-  "job_id": "job-research-d5e83a73eb90a616",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e2c1eb9d827322f9fbb93f0b","job_id":"job-research-d5e83a73eb90a616",
+ "data":{
+  "canonical_id":"arXiv:2306.00978","arxiv_id":"2306.00978","doi":"10.48550/arXiv.2306.00978","openreview_id":null,"title":"AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+  "summary":"AWQは、低ビット重みのみ量子化で重要な重みチャネルを保護するため、重みの大きさではなく入力活性の平均振幅から顕著なチャネルを特定し、そのチャネルを等価変換で拡大して相対量子化誤差を下げる手法である。実際に1%だけFP16へ残す混合精度は精度を大幅改善するが実装効率が悪いため、AWQは全重みを同一低ビット形式に保ったままチャネル別スケーリングとクリッピングを適用する。回帰や逆伝播を使わず小規模較正データの統計だけで尺度を探索するため、較正分布への過適合を抑える。付随するTinyChatは実行時逆量子化、装置別重みパッキング、カーネル融合でW4A16の帯域削減を実速度へ変換し、RTX 4090やJetson OrinでHugging Face FP16比2.7〜3.9倍の高速化を示す。",
+  "list_summary":"活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。",
+  "authors":["Ji Lin","Jiaming Tang","Haotian Tang","Shang Yang","Wei-Ming Chen","Wei-Chen Wang","Guangxuan Xiao","Xingyu Dang","Chuang Gan","Song Han"],"published":"2023-06-01","publication":"MLSys 2024","publication_type":"Conference paper","publication_status":"Published; MLSys 2024 Best Paper Award; arXiv v6 revised 2026-04-25","arxiv_categories":{"primary":"cs.CL","cross_list":[]},
+  "lineage":"重み専用量子化 / 推論カーネル","topics":["重み専用量子化","活性認識量子化","W4A16","カーネル融合","エッジ推論"],"importance":"GPTQ系の再構成とは異なる活性統計ベースの訓練不要量子化として広く採用され、量子化アルゴリズムと実機カーネルを結び付けて4ビット重みの容量削減を端末上の3倍級高速化へ変換した基礎研究。",
+  "hardware_evaluation":"速度評価はRTX 4090、Jetson Orin、ラップトップRTX 4070、Raspberry Pi等。RTX 4090は約1TB/sメモリ帯域・165TFLOPSを前提に屋根線分析し、バッチ1生成の算術強度が約1でメモリ律速と分析。","quality_effect":"LLaMA/Llama-2、OPT、Mistral/Mixtral、Vicuna、OpenFlamingo、LLaVA/VILA、CodeLlama等でINT3/INT4を評価。Llama-2ではGPTQより低いパープレキシティを示し、OpenFlamingo INT4の32-shot CIDEr劣化をRTNの4.57から1.17へ縮小。",
+  "source":"https://arxiv.org/abs/2306.00978","sources":["https://arxiv.org/abs/2306.00978","https://arxiv.org/html/2306.00978","https://github.com/mit-han-lab/llm-awq"],"implementation":"公式AWQ実装とTinyChat推論基盤を公開。TinyChatはPyTorchフロントエンドとCUDA/PTX、ARM Neon、AVX等の装置別バックエンドを持ち、実行時逆量子化と重みパッキング、融合カーネルを実装。","code":"https://github.com/mit-han-lab/llm-awq","last_checked":"2026-09-20",
+  "references":[{"canonical_id":"arXiv:2210.17323","arxiv_id":"2210.17323"},{"canonical_id":"arXiv:2212.09720","arxiv_id":"2212.09720"},{"canonical_id":"arXiv:2208.07339","arxiv_id":"2208.07339"},{"canonical_id":"arXiv:2211.10438","arxiv_id":"2211.10438"},{"canonical_id":"arXiv:2303.08774","arxiv_id":"2303.08774"},{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":63
+ },
+ "reservation":{"claim_id":"claim-e2c1eb9d827322f9fbb93f0b","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
