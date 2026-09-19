@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-b98a636b188a72a813dae1cd",
-  "job_id": "job-research-49ee16176ca66925",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b98a636b188a72a813dae1cd",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-b98a636b188a72a813dae1cd","job_id":"job-research-49ee16176ca66925","data":{"problem":"多数のLoRAアダプタを共有基盤LLM上で提供する場合、基盤重みだけをGPUへ常駐させ、要求されたアダプタをホストメモリから都度転送するとGPU容量を節約できる。しかしランク64のLlama2-7B用アダプタでも約100MiBとなり、転送は数〜数十msかかる。継続バッチでは新要求のプリフィルが既存デコードへ割り込むため、この読込待ちは新要求のTTFTだけでなく進行中要求も遅らせる。さらにLoRAランクが異なるとBGMVは最大ランク、MBGMVは平均ランクに遅延が依存し、単純な最空き・先着配置ではSLOを守れない。","novelty":"CaraServeはアダプタ転送完了を待たず、CPU側で新要求のLoRAプリフィル計算を開始してGPUの基盤LLM計算と並行させ、転送完了後にGPU LoRAへ切り替える。CPU/GPUを層ごとに同期する専用演算子と共有メモリ通信で起動費を1ms未満へ抑え、長いプロンプトでは複数CPUへLoRA計算を分散する。加えてLoRAカーネルごとのランク依存遅延を計測モデル化し、新要求が既存バッチへ加わった際の追加プリフィル・デコード費用とSLO違反を配置コストとして使う。","method_overview":"基盤LLMはGPUへ常駐し、多数のLoRAアダプタはホストメモリへ保持する。新要求が未常駐アダプタを要求すると、通常ならGPU転送が終わるまでプリフィルを開始できない。CaraServeは転送を非同期に開始すると同時に、そのアダプタのLoRA行列積を独立CPUプロセスで実行し、GPU上の基盤LLMが各Transformer層で作る中間値と合成する。CPU計算が先に進む間もGPU転送を続け、アダプタがGPUへ到着した時点で、未完了プリフィルがあればGPU側へ切り替え、その後のデコードは継続バッチへ合流する。素朴なPyTorch同期では層ごとのホスト転送・通知がGPUカーネル発行を止めるため、専用CUDA演算子が非同期コピーと通知を一つの流れへ組み込み、共有メモリで基盤LLMプロセスと複数CPU LoRAプロセスのデータ交換を行う。CPUが長文プリフィルのボトルネックになる場合は事前計測に基づき複数コアへLoRA処理を分割する。クラスタ側では、各推論サーバの実行中バッチと待ち行列を取得し、LoRAカーネルの性能モデルから新要求追加時のプリフィル増分と一トークン当たりデコード増分を予測する。SLOを超える候補には大きな罰点を加え、既存要求数も考慮した総費用が最小のサーバへルーティングする。これによりコールドスタート隠蔽と異種ランク混在の配置最適化を独立ではなく一つの提供基盤で扱う。","components":[{"name":"CPU先行LoRA計算と非同期切替","description":"未常駐アダプタのGPU転送と同時にCPUでLoRAプリフィルを開始し、転送完了までの待ち時間を有用な計算へ変える。各層ではGPU基盤LLMの中間値をCPU LoRAへ渡して結果を合成する必要があるため、素朴なプロセス間通信では頻繁な同期がGPU発行を止める。CaraServeは専用CUDA演算子で非同期メモリコピーと通知を連携させ、共有メモリを使ってシリアライズと余分なコピーを避ける。CPU LoRAはアダプタごとに隔離プロセスとして動かし、長い入力では複数CPUへ並列化する。アダプタ転送が完了すると残りのプリフィルとデコードをGPU側へ移し、通常の継続バッチへ参加させる。"},{"name":"ランク依存性能モデルによるSLO配置","description":"異なるLoRAランクを同じバッチへ入れた際の遅延はカーネル実装で変わる。Punica型BGMVでは最大ランク、S-LoRA型MBGMVでは平均ランクの影響が大きいため、単純な要求数だけでは追加負荷を判断できない。CaraServeはプリフィルとデコードの性能を事前計測してモデル化し、新要求を各候補サーバへ仮追加したときのプリフィル増分とデコード一トークン増分を計算する。予測デコード遅延がSLOを超える候補には大きな罰点を加え、待ち行列と実行中要求を含む総費用が最小のサーバを選ぶ。この方式により同じランク64要求でも、現在のバッチ構成とカーネル特性に応じて異なるサーバを選択できる。"}],"system_design":"LightLLMを基盤に、GPU常駐の基盤LLM、ホスト側LoRA保管庫、CPU LoRAプロセス、共有メモリ、要求待ち行列、クラスタスケジューラを組み合わせる。GPU LoRAはPunica由来BGMVを使い、CPU LoRAはPyTorch上に実装、同期部分はPyBind11の専用CUDA拡張とする。複数GPU基盤モデルにはテンソル並列と同じ分割方向でLoRA行列を分割する。"},"reservation":{"claim_id":"claim-b98a636b188a72a813dae1cd","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
