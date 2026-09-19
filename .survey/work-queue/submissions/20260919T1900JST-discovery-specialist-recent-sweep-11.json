@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-recent-sweep-11",
+    "axis": "September 2026 recent serving/offload/cache/runtime sweep",
+    "query_summary": "Ran a fresh recent-paper sweep across serving, offload, cache, scheduler, runtime, agent, and MoE terms. Returned strong results were already known or submitted in this/previous runs (including LLM Inference in a Flash, SwiftCache, Robust KV Cache Management, CacheFlow, FineServe, SuperInfer); no additional strong novel candidate survived early dedupe/fit filtering.",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 6,
+    "novel_candidate_count": 0,
+    "accepted_count": 0,
+    "duplicate_ratio": 1.0,
+    "accepted_canonical_ids": [],
+    "duplicate_canonical_ids": ["arXiv:2609.16161", "arXiv:2606.16135", "arXiv:2607.16892", "arXiv:2604.25080", "arXiv:2509.06261", "arXiv:2601.20309"],
+    "next_axis_hint": "Use backward/forward citation and related-work paths from this run's newly found MoE/CXL/agent systems rather than repeating broad keyword search."
+  }
+}
