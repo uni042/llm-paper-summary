@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 09:03:25 JST**
+> 自動生成: **2026-09-19 09:30:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（1時間37分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（2時間5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **15** | **6** | **9** | **1** | **0** | — |
+| Research | **16** | **15** | **6** | **9** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **6** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **27** | **18** | **9** | **9** | **1** | **0** | **3** |
+| 合計 | **22** | **18** | **9** | **9** | **1** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -191,9 +191,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 08:32:22 JST** / lease expiry: **09-19 10:02:22 JST**
+  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 09:30:39 JST** / lease expiry: **09-19 11:00:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
 
 #### Audit
