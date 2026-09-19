@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T13:36:21.829607+00:00",
+  "updated_at": "2026-09-19T13:37:59.562781+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T13:36:21.829607+00:00",
+      "last_recorded_at": "2026-09-19T13:37:59.562781+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 301,
+        "research_completed": 302,
         "audit_completed": 0,
         "discovery_completed": 188,
         "blocked": 38,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35382219417:1",
-          "recorded_at": "2026-09-18T18:47:41.691030+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35382219417",
-            "run_attempt": "1",
-            "source_sha": "bf486d2202c0d411c77d5ec4811f95f5186304a1"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35383456892:1",
           "recorded_at": "2026-09-18T19:04:31.812224+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35446218265",
             "run_attempt": "1",
             "source_sha": "88bd1266fb6f42d0e4f763c14b1f7dbbf46a99a6"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35446319988:1",
+          "recorded_at": "2026-09-19T13:37:59.562781+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35446319988",
+            "run_attempt": "1",
+            "source_sha": "c0d1ee159b2433407821825df4cabc7da781f3eb"
           },
           "signals": [
             "research_completed"
@@ -23812,6 +23812,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.18675",
           "title": "HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2dcd265cd3f3852c",
+          "type": "research",
+          "canonical_id": "arXiv:2507.07400",
+          "title": "KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows",
           "from": "ready",
           "to": "completed"
         }

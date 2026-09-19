@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:37:40 JST**
+> 自動生成: **2026-09-19 22:37:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **49** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-19 22:36:16 JST（1分前）** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **48** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-19 22:37:55 JST（4秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **14** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **86** | **20** | **19** | **1** | **1** | **0** | **30** |
+| 合計 | **87** | **20** | **20** | **0** | **1** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 22:37:55 JST** [research] `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows
+  - job: `.survey/work-queue/jobs/job-research-2dcd265cd3f3852c.json`
+  - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md`
 - **09-19 22:36:16 JST** [research] `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
   - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
   - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a1b38cbb586fe670600b1d26.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a1b38cbb586fe670600b1d26.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md`
-- **09-19 18:43:52 JST** [research] `arXiv:2604.25777` — SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission
-  - job: `.survey/work-queue/jobs/job-research-c1b7543305e71c40.json`
-  - result: `.survey/work-queue/results/research/attempt-cf5ac77834bd3c3ec6c8a715.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cf5ac77834bd3c3ec6c8a715.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md`
 
 ### Audit
 
@@ -151,13 +151,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
   - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
   - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json` (job `job-research-2dcd265cd3f3852c`)
+- **成功** `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows
+  - job: `.survey/work-queue/jobs/job-research-2dcd265cd3f3852c.json`
+  - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md`
 
 #### Audit (:30)
 
@@ -216,9 +220,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:36:41 JST** / heartbeat: **—** / lease expiry: **09-20 00:06:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2dcd265cd3f3852c.json`
+- `arXiv:2512.03416` — TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 22:37:49 JST** / heartbeat: **—** / lease expiry: **09-20 00:07:49 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9c4412ae5a3ea169.json`
 
 #### Audit
 
@@ -238,7 +242,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,7 +262,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **765** |
+| inference/training/survey配下の論文Markdown実体 | **766** |
 
 ### immutable submissionの未照合
 
@@ -266,8 +270,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **627** |
-| └ Research | **480** |
+| 成功result未照合のimmutable submission | **626** |
+| └ Research | **479** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
