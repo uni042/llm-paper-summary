@@ -143,6 +143,41 @@ PROFILES = {
             "元データを直して survey.py build を再実行する。",
         ],
     },
+    "build_repository_inventory.py": {
+        "task": "検査用リポジトリ inventory の生成",
+        "next": [
+            "生成された inventory を check_repository.py の --inventory に渡す。",
+            "inventory 生成後に対象ファイルを変更した場合は、古い inventory を使わず生成し直す。",
+        ],
+        "recovery": [
+            "root と output が意図したリポジトリ・出力先を指しているか確認する。",
+            "inventory を手編集せず、元ファイルを修正して再生成する。",
+        ],
+    },
+    "maintenance_health.py": {
+        "task": "保守状態・品質レポートの健全性検査",
+        "next": [
+            "status / errors / warnings を確認する。",
+            "issues_found の場合は findings を解消してから後続の公開・最終化へ進む。",
+            "passed の場合は通常の次段へ進む。",
+        ],
+        "recovery": [
+            "missing quality report や index drift の原因を先に修正する。",
+            "fail_on_error を無効化して問題を無視するのではなく、findings を解消して再実行する。",
+        ],
+    },
+    "full_gc.py": {
+        "task": "不要な一時状態・回復済みデータの GC",
+        "next": [
+            "deleted / skipped / protected を確認する。",
+            "GC 後に queue / repository の整合性検査を実行する。",
+        ],
+        "recovery": [
+            "protected path を手作業で削除しない。",
+            "参照中・未完了の項目は削除せず、先に対応する処理を terminal 状態へ進める。",
+            "状態整合後に GC を再実行する。",
+        ],
+    },
     "check_repository.py": {
         "task": "リポジトリ整合性検査",
         "next": [
