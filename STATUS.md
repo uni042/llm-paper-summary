@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:31:25 JST**
+> 自動生成: **2026-09-20 01:31:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **5** | **3** | **0** | **1** | **0** | — |
+| Research | **14** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **68** | **9** | **7** | **0** | **1** | **0** | **0** |
+| 合計 | **68** | **8** | **7** | **0** | **1** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
   - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
@@ -162,8 +162,6 @@
   - result: `.survey/work-queue/results/research/attempt-bb1ec81341e2780a2eb5259f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bb1ec81341e2780a2eb5259f.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d22f06504ab5d2e1d4cebc14.json` (job `job-research-7353bc1b63a704fc`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-d22f06504ab5d2e1d4cebc14.json` (`ok=false`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e5893e2a1bdb6a4c8b277786.json` (job `job-research-2a8c8a978e102c67`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-e5893e2a1bdb6a4c8b277786.json` (`ok=true`)
 - **成功** `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
@@ -206,7 +204,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:29:15 JST** / heartbeat: **—** / lease expiry: **09-20 02:59:15 JST**
+  - claim: **09-20 01:31:30 JST** / heartbeat: **—** / lease expiry: **09-20 03:01:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-7353bc1b63a704fc.json`
 
 #### Audit
