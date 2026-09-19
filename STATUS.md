@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:46:27 JST**
+> 自動生成: **2026-09-20 00:46:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **48** |
-| 未claim Research job | **48** |
+| 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **51** |
 | 最終検証済みResearch収録 | **09-20 00:43:12 JST（3分前）** |
 | 整合性異常 | **7** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **2** | **0** | **0** | **0** | — |
+| Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **84** | **7** | **3** | **0** | **0** | **0** | **2** |
+| 合計 | **84** | **6** | **3** | **0** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,9 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-0ab169f82c4835ab94982856.json` (job `job-research-8ff9887a327d8124`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-0ab169f82c4835ab94982856.json` (`ok=false`)
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
   - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
@@ -195,8 +193,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 00:46:44 JST** / heartbeat: **—** / lease expiry: **09-20 02:16:44 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8ff9887a327d8124.json`
 
 #### Audit
 
