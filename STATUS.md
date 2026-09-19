@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 20:02:30 JST**
+> 自動生成: **2026-09-19 20:03:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（27分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（28分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **40** | **3** | **1** | **2** | **0** | **0** | **9** |
-| 合計 | **47** | **6** | **3** | **2** | **1** | **0** | **9** |
+| Discovery | **40** | **5** | **1** | **4** | **0** | **0** | **13** |
+| 合計 | **47** | **8** | **3** | **4** | **1** | **0** | **13** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -159,8 +159,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 20:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **9件**
-- 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control / agentic workflow physical planning・agent-aware serving runtime
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **4件** / 候補: **13件**
+- 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control / agentic workflow physical planning・agent-aware serving runtime / ultra-low-bit GPU kernel・near-storage/PIM sparse inference / MoE expert offload・phase-aware prefetch/cache scheduling
 - round `specialist-memory-paths-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
   - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
@@ -172,6 +172,14 @@
 - round `specialist-agent-runtime-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json`
   - 探索軸: agentic workflow physical planning・agent-aware serving runtime
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-lowbit-storage-4` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2028JST-discovery-specialist-lowbit-storage-4.json`
+  - 探索軸: ultra-low-bit GPU kernel・near-storage/PIM sparse inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-offload-5` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2034JST-discovery-specialist-moe-offload-5.json`
+  - 探索軸: MoE expert offload・phase-aware prefetch/cache scheduling
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -229,10 +237,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **620** |
+| 成功result未照合のimmutable submission | **622** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **147** |
+| └ Discovery | **149** |
 
 ### 厳格検証が未成立のcompleted job
 
