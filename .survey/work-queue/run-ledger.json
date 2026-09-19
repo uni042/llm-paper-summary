@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T10:05:49.502615+00:00",
+  "updated_at": "2026-09-19T10:09:28.543125+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T10:05:49.502615+00:00",
+      "last_recorded_at": "2026-09-19T10:09:28.543125+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 293,
         "audit_completed": 0,
-        "discovery_completed": 163,
+        "discovery_completed": 177,
         "blocked": 38,
-        "new_jobs": 249,
+        "new_jobs": 272,
         "new_papers": 296,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35367408138:1",
-          "recorded_at": "2026-09-18T16:15:56.972638+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35367408138",
-            "run_attempt": "1",
-            "source_sha": "74f5a0239b3e66fc8a2749b3df5240ffe10b1b6d"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35367752299:1",
           "recorded_at": "2026-09-18T16:19:27.587015+00:00",
@@ -19593,6 +19579,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35436466106:1",
+          "recorded_at": "2026-09-19T10:09:28.543125+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35436466106",
+            "run_attempt": "1",
+            "source_sha": "201a915346de02436383096bb18398752c796907"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -23548,6 +23548,118 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-136bbed0754c23c7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-17d13b2cc7746c9a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-30b575397d0968eb",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-321b6dfb8d533f50",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-4f034304603b9dd0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7ecaafbdba512fbc",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-87b9d6c6b65bc79d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9cc2b588611ef20c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b34555c80ea4673f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bd9f20068990b1ad",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ca8974d52c93b2d2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ddb6caf040e981de",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-eb6f5f5d3ac52523",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-fedfeb6fc48d7e58",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25293,6 +25405,167 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-136bbed0754c23c7",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-17d13b2cc7746c9a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-30b575397d0968eb",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-321b6dfb8d533f50",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-4f034304603b9dd0",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-7ecaafbdba512fbc",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-87b9d6c6b65bc79d",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-9cc2b588611ef20c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-b34555c80ea4673f",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-bd9f20068990b1ad",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ca8974d52c93b2d2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ddb6caf040e981de",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-eb6f5f5d3ac52523",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-fedfeb6fc48d7e58",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0a2c1791c2461b69",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.16400",
+          "title": "CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters"
+        },
+        {
+          "job_id": "job-research-188f6649e816eaae",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.15186",
+          "title": "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines"
+        },
+        {
+          "job_id": "job-research-36d91dd4e28f7f52",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.02599",
+          "title": "SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving"
+        },
+        {
+          "job_id": "job-research-40eb7e0c17cbbe4d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.10676",
+          "title": "Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models"
+        },
+        {
+          "job_id": "job-research-483d71fcff10e180",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.01229",
+          "title": "LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving"
+        },
+        {
+          "job_id": "job-research-997345af7c8d2bf4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.25431",
+          "title": "Here is a GIFT: Enforcing User Data Isolation in LLM Serving via GPU Information Flow Tracking"
+        },
+        {
+          "job_id": "job-research-a0019729a1aa7605",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.13605",
+          "title": "Orla: A Library for Serving LLM-Based Multi-Agent Systems"
+        },
+        {
+          "job_id": "job-research-b6a4fe55f122cf41",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2410.01228",
+          "title": "ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving"
+        },
+        {
+          "job_id": "job-research-ff33bdbdc4dfa309",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.06472",
+          "title": "Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management"
         }
       ],
       "new_paper_ids": [
@@ -25873,7 +26146,21 @@
         ".survey/work-queue/results/20260919T1747JST-discovery-specialist-speculative-network-8.json",
         ".survey/work-queue/results/20260919T1804JST-discovery-specialist-memory-systems-1.json",
         ".survey/work-queue/results/20260919T1809JST-discovery-specialist-moe-kernel-cache-2.json",
-        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json"
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-adjacent-14.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-related-13.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-coserving-15.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-energy-9.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-heterocloud-17.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-isolation-moe-16.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-moe-placement-8.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-moe-prefetch-7.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-multillm-18.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-pd-20.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-quant-runtime-10.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-recent-sweep-11.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-related-memory-12.json",
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-security-coexec-19.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -25951,7 +26238,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 757,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

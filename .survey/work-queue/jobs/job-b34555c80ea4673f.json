@@ -1,0 +1,21 @@
+{
+  "job_id": "job-b34555c80ea4673f",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-19T10:06:28+00:00",
+  "completed_at": "2026-09-19T10:06:35+00:00",
+  "result_summary": {
+    "submitted_candidates": 1,
+    "final_duplicate_filtered_count": 1,
+    "research_jobs_added": 0
+  }
+}
