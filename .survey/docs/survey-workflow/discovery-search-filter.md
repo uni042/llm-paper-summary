@@ -2,6 +2,12 @@
 
 この文書はDiscovery検索結果をcandidate評価へ渡す前の取得時filter/collector契約を定義する。目的は、既収録・既投入論文や過去にcandidate評価で不採用となった論文が検索上位を占有しても、それらを再評価せず、より深い未収録・未評価結果まで到達することである。
 
+## 実行強制契約
+
+2026-09-20 00:00 JST以降、Scheduled Chatはこのfilterを任意の参照実装として扱わない。Discovery modeの各raw検索バッチは `.survey/work-queue/discovery-precheck/requests/*.json` へ保存し、専用workflowが最新mainからidentity snapshot/rejection ledgerを再構築して本filterを実行する。workerへ候補評価対象として渡してよいのはworkflow生成resultの `results[]` だけである。
+
+最終 `submit_discovery_round` は対応するworkflow生成resultのrequest_id/result_path/receiptを必須とし、queue processorがGit commit author provenanceとcandidate identityを検証する。これにより手順書の読み飛ばし、GitHub code search等の別経路、手書きresultによる迂回をfail-closedにする。拒否時はresultに正規precheck経路への `next_action` と `recovery_steps` を返す。
+
 ## 正本
 
 既収録・既投入論文の重複照合正本は最新default branchの `.survey/work-queue/discovery-identities/` とする。この照合面は `queue_worker.existing_candidate_keys()` から生成され、最終重複ゲートと同じ正規化済みidentity token集合を持つ。
