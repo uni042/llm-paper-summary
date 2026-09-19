@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:33:56 JST**
+> 自動生成: **2026-09-19 18:34:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
+| 収録候補論文 | **45** |
 | 未claim Research job | **45** |
-| 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（7時間0分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-19 18:34:04 JST（5秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **45** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **45** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **1** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **19** | **19** | **0** | **0** | **0** | **25** |
-| 合計 | **19** | **20** | **19** | **0** | **1** | **0** | **25** |
+| 合計 | **20** | **20** | **19** | **0** | **0** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,7 +48,11 @@
 
 ### Research
 
-- 検証済み完了なし。
+- **09-19 18:34:04 JST** [research] `arXiv:2602.06072` — PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-c7f741bd6a7395ee.json`
+  - result: `.survey/work-queue/results/research/attempt-35ffcfb18fd8c03e9c06c8cb.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-35ffcfb18fd8c03e9c06c8cb.json`
+  - paper: `papers/inference/09-kernel-runtime-compilation/2026-2602.06072-packinfer-batched-attention.md`
 
 ### Audit
 
@@ -162,10 +166,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.06072` — PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:33:10 JST** / heartbeat: **—** / lease expiry: **09-19 20:03:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c7f741bd6a7395ee.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -185,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **45** |
 
 ### 候補の重複・識別情報欠損
 
@@ -205,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **752** |
+| inference/training/survey配下の論文Markdown実体 | **753** |
 
 ### immutable submissionの未照合
 
@@ -213,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **610** |
-| └ Research | **463** |
+| 成功result未照合のimmutable submission | **609** |
+| └ Research | **462** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
