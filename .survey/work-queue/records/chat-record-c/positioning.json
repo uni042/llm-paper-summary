@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-1a88ffa8349a43c660f5f730",
-  "job_id": "job-research-188f6649e816eaae",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a88ffa8349a43c660f5f730",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1a88ffa8349a43c660f5f730","job_id":"job-research-188f6649e816eaae","data":{"limitations":"集約LLMパイプラインは異なるLLM間の同時ファンアウトを直列として扱うため、LLM間並列が強いワークフローでは臨界経路を正確に表せない。単一LLMが異なる役割や複数ワークフローで二峰性の負荷分布を持つ場合、一つの集約分布では最適でない割り当てを選び得る。長時間の外部ツール処理も現在のパイプラインから除外され、LLM以外が遅延支配的なら予測が外れる。配置探索時間はLLM数やGPU数とともに増え、論文の拡張性図では5 LLMで数十秒級、GPU数増加でも大きくなる。評価規模は最大16 GPUで、より大規模クラスタの探索・配置コストは未検証である。","differences":"ParrotやAyoはワークフロー構造を使って要求実行を最適化するが、専用表現や単一LLM前提があり、GPU資源割り当て自体は中心ではない。AutellixやJITServeは動的要求を予測・優先度制御するが、複数異種LLMの共同資源配分を扱わない。AlpaServe、MuxServe、Aegaeon等は複数LLMを多重化できる一方、各LLMを独立サービスとして最適化し、エージェント内依存を資源配分へ反映しない。Scepsyは低水準トレースからワークフローの相対需要を抽出し、GPU分数・テンソル並列・複製数を同時に選ぶ点が異なる。","implementation_status":"約25K行のPythonプロトタイプとして実装。Kubernetes上で変更device pluginとNVIDIA MPSを用い、任意のエージェントフレームワークとvLLM/SGLang系実行エンジンを想定する。論文記載のコードURLは匿名査読用 `https://github.com/anon/Scepsy` で、arXiv v1時点ではpost-acceptance公開予定との記載である。","research_positioning":"エージェント推論基盤のうち、要求の時間スケジューリングではなく『どのLLMへ何割のGPU、何複製、何テンソル並列を与えるか』というクラスタ資源計画を扱う。動的制御フローを静的解析せず、定常的な相対需要へ圧縮する発想により、フレームワーク非依存性とワークフロー認識を両立する。GPU空間共有、テンソル並列、データ並列、接続構造対応配置を一つのオーケストレーション問題へ統合する研究である。"},"reservation":{"claim_id":"claim-1a88ffa8349a43c660f5f730","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
