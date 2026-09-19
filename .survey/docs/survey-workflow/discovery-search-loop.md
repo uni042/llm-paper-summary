@@ -1,26 +1,26 @@
 # Discovery automatic search loop
 
-この文書は、Discoveryで検索結果を1ページ/1バッチずつcandidate評価workerへ返さず、取得時filter/collector層で複数ページを先に消化してから評価対象をまとめて渡すための反復契約を定義する。
+この文書は、Discoveryで検索結果を1ページ/1バッチずつcandidate評価workerへ返さず、取得時filter/collector層で複数ページを先に消化してから評価対象をまとめて渡すための反復契約を定義する。Scheduled Chatの強制経路ではprovider取得をworker、buffer累積・重複除外・継続判定をworkflow precheckへ分割して実行する。
 
 ## 目的
 
-検索ランキング上位が既収録論文や過去のcandidate評価落ち論文で埋まっていても、そのページだけをworkerへ渡して探索判断をさせず、`discovery_search_filter.collect_until_unseen(...)` が同一探索軸を深掘りし、それらを除外した未評価結果を既定10件まで蓄積してからcandidate評価へ渡す。
+検索ランキング上位が既収録論文や過去のcandidate評価落ち論文で埋まっていても、そのページだけをworkerへ渡して探索判断をさせない。`discovery_search_filter.collect_until_unseen(...)` が定義する「未評価結果を既定10件まで蓄積する」意味論を、実運用ではschema-v2 precheckの `CONTINUE_FETCH` / `READY_FOR_EVALUATION` 反復として強制する。
 
 ## filter/collector内部の自動反復
 
 通常Discovery modeでは、1回の検索単位について次の処理をfilter/collector層の標準動作とする。
 
-1. 最新default branchのidentity snapshot、同snapshotの `_represented_papers.json`、`.survey/work-queue/discovery-rejections.json` を取得する。
-2. provider adapterから現在cursorの1ページ/1バッチを取得する。
+1. workerがprovider adapterから現在cursorの1ページ/1バッチを取得し、schema-v2 precheck requestとして保存する。最初のrequestで `collector_id` を固定し、`provider_has_more` を明示する。
+2. workflow precheckが最新default branchのidentity snapshot、同snapshotの `_represented_papers.json`、`.survey/work-queue/discovery-rejections.json` を取得する。
 3. `discovery-search-filter.md` に従い、candidate評価より前にexact identity、represented-paper alias、過去のcandidate評価落ち結果を除外する。
-4. 残った未評価結果だけをcollector内部bufferへ追加し、同一primary identityだけでなく、arXiv / DOI / OpenReview / URL / exact normalized titleで同じpaperへ解決できるprovider結果もページ内・ページ間で1件へ畳み込む。
+4. 前回resultがある場合はその未評価bufferを最新snapshotで再検証し、今回ページの未評価結果を追加する。同一primary identityだけでなく、arXiv / DOI / OpenReview / URL / exact normalized titleで同じpaperへ解決できるprovider結果もページ間で1件へ畳み込む。
 5. stable identifierを持たない検索結果については、first authorとpublication yearが一致し、normalized title similarityが高信頼thresholdを満たす場合だけrepresented-paper fuzzy matchを使う。stable identifierがある結果を似たtitleだけで除外しない。
-6. bufferが10件未満でproviderに次ページ/cursor/offsetがある場合は、candidate評価workerへ制御を返さずcollector自身が次ページを取得して2へ戻る。
+6. bufferが10件未満でproviderに次ページ/cursor/offsetがある場合は `evaluation_allowed=false` / `decision=CONTINUE_FETCH` を返す。workerはcandidate評価へ進まず、同じcollectorで次ページを取得して新しいrequestを作り、直前resultの `previous_request_id` / `previous_receipt` を連結して1へ戻る。
 7. 最後のページで10件を超えた場合は、そのページの未評価結果を切り捨てずbufferへ保持する。
-8. bufferが10件以上になった、providerが尽きた、または明示的な安全上限に達した場合だけcollector結果をcandidate評価workerへ返す。
+8. bufferが10件以上になった、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` を返し、その最終bufferだけをcandidate評価workerへ渡す。
 9. providerがpaginationを直接公開しない場合はprovider adapterが期間、arXiv月、引用方向、隣接キーワード、会議/カテゴリ等の検索窓をずらし、未走査集合を次cursor相当として供給する。同じqueryをそのまま繰り返さない。
 
-つまりcandidate評価workerが通常見る単位は「検索1ページ」ではなく、**既収録・既投入・過去の評価落ち・同一paper aliasを除外済みの未評価検索結果buffer（標準10件前後）**である。
+つまりcandidate評価workerが通常見る単位は「検索1ページ」でも「中間precheck result」でもなく、**READY_FOR_EVALUATIONまで反復し、既収録・既投入・過去の評価落ち・同一paper aliasを除外済みの未評価検索結果buffer（標準10件前後）**である。
 
 ## pagination非公開providerのsearch-window選択
 
