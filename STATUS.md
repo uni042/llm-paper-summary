@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:39:57 JST**
+> 自動生成: **2026-09-19 23:40:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **50** |
-| 未claim Research job | **50** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 23:39:47 JST（10秒前）** |
+| 最終検証済みResearch収録 | **09-19 23:39:47 JST（37秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **2** | **2** | **0** | **0** | **0** | — |
+| Research | **16** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **72** | **11** | **11** | **0** | **0** | **0** | **33** |
-| 合計 | **88** | **13** | **13** | **0** | **0** | **0** | **33** |
+| 合計 | **88** | **13** | **13** | **0** | **1** | **0** | **33** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -219,8 +219,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2605.14249` — EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 23:40:04 JST** / heartbeat: **—** / lease expiry: **09-20 01:10:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3f8214d2f0afeac1.json`
 
 #### Audit
 
