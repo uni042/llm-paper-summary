@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18112",
+      "title": "Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.18112",
+      "priority": 84,
+      "reason": "Very recent multi-tenant serving work introducing a token-level latency-isolation guarantee and deadline scheduler that explicitly accounts for GPU compute and shared KV-cache delays; strong fit for scheduling/isolation coverage."
+    },
+    {
+      "canonical_id": "arXiv:2607.18002",
+      "title": "ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels",
+      "source_url": "https://arxiv.org/abs/2607.18002",
+      "priority": 82,
+      "reason": "MoE serving system addressing coarse prefill/decode resource allocation using disaggregation and adaptive persistent kernels, directly relevant to expert-serving/runtime and dynamic routed-load management."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-isolation-moe-16",
+    "axis": "multi-tenant performance isolation / adaptive persistent-kernel MoE serving",
+    "query_summary": "Used an independent GPU-sharing/isolation search after co-serving and picked a very recent fairness system; the same search exposed an unrelated high-value MoE persistent-kernel system. Both arXiv IDs were absent from repository code search.",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2609.18112", "arXiv:2607.18002"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Inspect heterogeneous-cloud/multi-LLM placement or run additional empty-round checks across unrelated axes before exhaustion."
+  }
+}
