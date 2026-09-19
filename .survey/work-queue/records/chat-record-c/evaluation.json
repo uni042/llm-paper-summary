@@ -1,5 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ddbd5f7c97d18185436bf163","job_id":"job-research-1a87bd753fb86450",
- "data":{"hardware":"RunPod L4、A100 80GB PCIe、H100 PCIe。2026年7月の時間単価はそれぞれ$0.39、$1.39、$2.89。三つの独立pod sessionを使う。","software":"Qwen2.5-7B-Instruct、vLLM 0.12.0。実測最適化はAWQ-4bit、online FP8 weights、naive FP8 KV cache、n-gram prompt-lookup speculation、batching。sparse attentionはsimulation-only。draft-model speculationはvLLM V1のNotImplementedErrorと対象EAGLE head不在で未実測。","methodology":"serving workloadは512 input/128 outputでexact token-count contract。54 anchorを3 GPU×複数armで測り、TTFT/TPOT P50/P99、throughput、GPU memory、cost/Mtokenを記録。品質はGSM8K 200問、5-shot、greedyでFP16/AWQ/FP8 weights/FP8 KVをstrictとflexible extractionの双方で評価する。校正gridは36構成で、anchor batch sizeは補間一致、cross-campaign driftは1.5%未満。品質floorはFP16 strictの95%相当を用いる。","scope":"モデルはQwen2.5-7B-Instruct一つ、実測品質taskはGSM8K一つでn=200（約±3 percentage points）。long-context/code/chatはprotocol表にはあるが今回品質実測していない。H2O/PyramidKVやscale-calibrated FP8 KV、EAGLE-3 draft speculationは実測anchorではない。sparse attentionは完全にsimulation依存。価格は2026年7月RunPod snapshot。"},
- "reservation":{"claim_id":"claim-ddbd5f7c97d18185436bf163","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-4f46d323b29b7bbf8b12aa9d",
+  "job_id": "job-research-1a87bd753fb86450",
+  "data": {
+    "hardware": "RunPod L4、A100 80GB PCIe、H100 PCIe。2026年7月の時間単価はそれぞれ$0.39、$1.39、$2.89。三つの独立pod sessionを使う。",
+    "software": "Qwen2.5-7B-Instruct、vLLM 0.12.0。実測最適化はAWQ-4bit、online FP8 weights、naive FP8 KV cache、n-gram prompt-lookup speculation、batching。sparse attentionはsimulation-only。draft-model speculationはvLLM V1のNotImplementedErrorと対象EAGLE head不在で未実測。",
+    "methodology": "serving workloadは512 input/128 outputでexact token-count contract。54 anchorを3 GPU×複数armで測り、TTFT/TPOT P50/P99、throughput、GPU memory、cost/Mtokenを記録。品質はGSM8K 200問、5-shot、greedyでFP16/AWQ/FP8 weights/FP8 KVをstrictとflexible extractionの双方で評価する。校正gridは36構成で、anchor batch sizeは補間一致、cross-campaign driftは1.5%未満。品質floorはFP16 strictの95%相当を用いる。",
+    "scope": "モデルはQwen2.5-7B-Instruct一つ、実測品質taskはGSM8K一つでn=200（約±3 percentage points）。long-context/code/chatはprotocol表にはあるが今回品質実測していない。H2O/PyramidKVやscale-calibrated FP8 KV、EAGLE-3 draft speculationは実測anchorではない。sparse attentionは完全にsimulation依存。価格は2026年7月RunPod snapshot。"
+  },
+  "reservation": {
+    "claim_id": "claim-4f46d323b29b7bbf8b12aa9d",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
