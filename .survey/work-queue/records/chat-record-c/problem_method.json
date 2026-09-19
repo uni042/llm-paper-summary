@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-d22f06504ab5d2e1d4cebc14",
-  "job_id": "job-research-7353bc1b63a704fc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d22f06504ab5d2e1d4cebc14",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-d22f06504ab5d2e1d4cebc14","job_id":"job-research-7353bc1b63a704fc","data":{"problem":"スマートフォン上で一つの基盤LLMを多数の言語・用途へ使い回すには、クラウドと異なり推論グラフを実行時に自由に再コンパイルできず、メモリ・初期化時間・生成遅延にも厳しい上限がある。用途ごとにLoRAを静的マージした複数グラフを持てば容量が増え、単一グラフへ全LoRAを埋め込むマスク方式では実行時メモリが増える。またモバイルNPUはサーバGPU向け演算やFlashAttentionをそのまま効率良く実行できず、通常のdraft-model型投機的復号は追加モデルのメモリを必要とする。","novelty":"本研究は、同一rankのLoRA重みを凍結した単一推論グラフのプレースホルダへ実行時入力として与える方式を中心に、NPUに適した単頭注意の並列化・線形層の1x1畳み込み変換・定数畳み込み・低精度化を統合する。さらに、共通prefillと分離KV領域を共有して複数スタイルを同時生成する並行トークン生成（CTG）と、別draft modelを持たずprefix tuningでforecast embeddingから複数draft tokenを出し木構造で検証する動的自己投機的復号（DS2D）を組み合わせ、商用スマートフォンの固定グラフ制約下で適応性と高速化を両立する。","method_overview":"1B/3BのLLaMA系decoder-onlyモデルのQ/K/V/O射影へLoRA-A/Bを付与し、基盤グラフ側にはLoRA入力用の固定形状プレースホルダを置く。用途切替時はグラフを変えず対象LoRA重みをtokenとともに入力する。演算側ではMHAを独立SHAへ分割してNPUコアへ並列配置し、dense linearを1x1 convolutionへ写像、静的演算をconstant foldingし、重みINT4・activation INT8等の混合精度量子化を用いる。CTGでは一度のprefill後に複数初期tokenをsamplingし、KV cacheをstream別領域へ分割したmaskで8系列を同時decodeする。DS2Dではprefix tuningしたforecast prefix/embeddingを追加し、一度に1+m token候補を生成、用途ごとのbranch構成で木状候補を作り、次stepで検証と次候補生成を同時に行う。","components":[{"name":"LoRA-as-runtime-input","description":"同一寸法の用途別LoRAを推論グラフへ静的埋込みせず、固定プレースホルダへの実行時入力として渡す。グラフ再コンパイルや再量子化なしで用途を切替え、複数グラフ方式の保存量と全LoRAマスク方式の常駐メモリを避ける。"},{"name":"モバイルNPU向けグラフ変換","description":"MHAを複数SHAへ分解して並列実行し、線形層を1x1 convolutionへ変換、constant folding・operator fusion・K転置等を適用する。NPUが得意な演算へ寄せ、kernel起動・メモリアクセス・待ち時間を減らす。"},{"name":"混合精度量子化","description":"QAT/PTQを用いて主に重みINT4、activation INT8、LoRAは高めの精度を維持する構成を採る。1BモデルではFP16 LLM 1800MBからINT4 LLM 600MBへ圧縮し、LoRA 120MBを追加する。"},{"name":"並行トークン生成（CTG）","description":"共通prefillから複数初期tokenを作り、KV cacheをstream別に隔離するattention maskで8出力を一つの生成グラフに束ねる。各streamは共通promptと自身の履歴だけを参照し、スタイル候補を逐次8回生成する処理を並列化する。"},{"name":"動的自己投機的復号（DS2D）","description":"prefix tuningでforecast embeddingを学習し、凍結LLM自身に1個の通常tokenとm個の低忠実度draft tokenを同時生成させる。候補を木構造化し、次stepで検証しながら新draftを生成する。branch構成はNPUで効率の良い32行程度の入力形状に合わせ、用途ごとの受理率が最大になるものを選ぶ。"}],"system_design":"固定形状・単一グラフを最上位制約とし、その範囲でLoRA切替、複数出力、投機的復号をmaskと入力tensorの設計へ落とし込む。モデル構造だけでなくNPU operator、量子化、KV配置、branch形状を共同設計することで、追加モデルやグラフ複製を避けつつスマートフォン上の実効レイテンシとメモリを改善する。"},"reservation":{"claim_id":"claim-d22f06504ab5d2e1d4cebc14","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
