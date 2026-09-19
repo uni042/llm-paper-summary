@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1279db88435e4b62e38bfd5e",
+  "attempt_id": "attempt-cdfba8deb741b6462d744e41",
   "job_id": "job-research-1182cce822dbe6dc",
   "data": {
     "limitations": "評価モデルはQwen3-Next-80B-A3B-Instruct 1種類で、他のMoE familyへの一般性は未検証。cost modelのalpha、tau、prefill/scheduling係数、c_effは実測転送時間ではなくaction比較用に開発時に一度設定した固定係数で、policy自体の単純always-offload等に対する独立ablationは限定的。最大offload比率はKV headroomとstaging costのトレードオフを持ち、controllerはKV圧力が下がった際に専門家resident状態を戻さない。host-to-device転送とtensor-parallel通信の競合はinterconnectに依存し、PCIeではTPOT悪化が大きい。host側KV offloadとの統合は将来課題。",
@@ -11,7 +11,7 @@
     "research_positioning": "MoE expert offloadとKV-cache管理を別々の最適化問題として扱う従来設計を横断し、HBMを単一の可変資源として扱う研究。特に長時間multi-turn agentでprefix reuseが高い場合、専門家重みのresident容量を削ってKV再利用を守る方が再prefillやpreemptionより安いという価値比較を明示し、動的階層メモリ管理・MoE expert caching/offload・agentic servingの交点に位置する。"
   },
   "reservation": {
-    "claim_id": "claim-1279db88435e4b62e38bfd5e",
+    "claim_id": "claim-cdfba8deb741b6462d744e41",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

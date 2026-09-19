@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1279db88435e4b62e38bfd5e",
+  "attempt_id": "attempt-cdfba8deb741b6462d744e41",
   "job_id": "job-research-1182cce822dbe6dc",
   "data": {
     "overview": "VAMPはH100上で専門家HBMをKVへ転用し、VAMP-15でKVプールを8.0GiBから18.5GiB、VAMP-20で21.8GiBへ拡張した。固定2,103ターンSWE-agent再生ではVAMP-15がTTFT tail、queueing、preemption、prefix hit率を大幅改善しrequest throughputも向上したが、専門家転送によりTPOTは悪化した。容量境界実験ではoffload比率を上げるほどprefix-cache cliffが高並行度へ移る一方、必要以上のoffloadは転送コストを増やし、単一比率が全SLOで最良ではない。",
@@ -55,7 +55,7 @@
     "quality_impact": "専門家を省略せずoffload領域全体をstageして元のrouting結果を保持するため近似推論ではない。ただし転送待ちがTPOTを増やし、時間窓内に処理できるturn数やtoken throughputを低下させ得る。"
   },
   "reservation": {
-    "claim_id": "claim-1279db88435e4b62e38bfd5e",
+    "claim_id": "claim-cdfba8deb741b6462d744e41",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-1279db88435e4b62e38bfd5e",
+  "attempt_id": "attempt-cdfba8deb741b6462d744e41",
   "job_id": "job-research-1182cce822dbe6dc",
   "data": {
     "problem": "MoEでは全専門家重みがHBMの大半を占有する一方、マルチターン・エージェント処理では再利用可能なKV状態がターンごとに増える。vLLM等は起動時に重み領域とKVキャッシュ領域を固定するため、Qwen3-Next-80Bを2×H100 TP2で動かす例では各GPU 94GiB中72.0GiBを専門家重みが占め、KVプールは8.02GiBに留まる。KVプールが飽和するとLRU退避と要求プリエンプションが再利用接頭辞を破壊し、再prefillが増えてTTFTが閾値的に悪化するprefix-cache cliffが生じる。既存の専門家オフロードは空いたHBMをKVへ直接転用せず、既存KV管理も重み領域を借りられない。",
@@ -29,7 +29,7 @@
     "system_design": "vLLM schedulerのKV allocation failure pathにcost比較を置き、その出力をVMM resource orchestratorとMoE execution pathへ接続する。control planeは『何を捨てるか』を決め、memory planeはexpert physical pageをKV backingへ変換し、execution planeは失われたresident expertをhost stagingで補う。これによりcapacity、cache reuse、decode transfer costが同一loopで結び付く。"
   },
   "reservation": {
-    "claim_id": "claim-1279db88435e4b62e38bfd5e",
+    "claim_id": "claim-cdfba8deb741b6462d744e41",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }

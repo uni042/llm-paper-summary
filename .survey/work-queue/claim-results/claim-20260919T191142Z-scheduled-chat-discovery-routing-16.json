@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T191142Z-scheduled-chat-discovery-routing-16",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-1182cce822dbe6dc",
+      "claim_id": "claim-cdfba8deb741b6462d744e41",
+      "worker_id": "scheduled-chat-discovery-routing",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-cdfba8deb741b6462d744e41",
+      "claimed_at": "2026-09-19T19:12:01+00:00",
+      "expires_at": "2026-09-19T20:42:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-1182cce822dbe6dc"
+      ],
+      "job": {
+        "job_id": "job-research-1182cce822dbe6dc",
+        "type": "research",
+        "parent_job_id": "job-9c9cc21b468d8cd8",
+        "priority": 96,
+        "canonical_id": "arXiv:2609.13537",
+        "title": "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
+        "source_url": "https://arxiv.org/abs/2609.13537",
+        "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2609.13537-dynamic-hbm-repartitioning.md",
+        "selection_reason": "VAMPはMoE expert weight領域とKV cacheのHBM境界を実行時に動的変更し、CUDA VMMでresident KVをコピーせず再割当する。Qwen3-Next-80Bのmulti-turn servingでTTFT p90とthroughputを実測しており、MoE offloadとKV memoryの交点として直接性が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T17:04:30+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 67.7% < 70% (Japanese=3379, Latin=1611)",
+        "validation_errors": [
+          "Japanese-first prose ratio is too low: 67.7% < 70% (Japanese=3379, Latin=1611)"
+        ],
+        "last_validation_failed_at": "2026-09-19T19:11:31+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-1279db88435e4b62e38bfd5e"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-1279db88435e4b62e38bfd5e.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T19:12:01+00:00",
+  "checkpoint_released": 0
+}
