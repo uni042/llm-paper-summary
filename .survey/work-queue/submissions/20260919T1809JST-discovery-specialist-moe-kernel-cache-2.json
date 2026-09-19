@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "paper_path": "papers/inference/02-moe-expert-placement-cache/2026-2608.12103-kernel-managed-expert-cache-tiering.md",
+      "priority": 94,
+      "reason": "最大1.45TBのexpert poolを持つtrillion-parameter MoEで、ユーザー空間のexpert cacheではなくOS page cache/LRUをtierとして利用する設計を実機GH200で検証する。256GB条件でkernel LRUの需要供給率75.3%が同一ドメインoracle frequency tableの74.6%に匹敵し、kernel-managed cachingでdecodeを1.09〜1.10倍改善。MoE expert cacheとOS階層メモリの境界を直接検証する重点候補。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-moe-kernel-cache-2",
+    "axis": "MoE expert cache・prefetch・OS page cache",
+    "query_summary": "前roundの一般階層メモリからMoE expert cacheへ軸を変更。APEX (2608.11688) とCache-Aware Joint Router Adaptation (2609.04895) は直近canonical stateで既知候補として早期除外し、kernel-managed expert tieringを一次arXiv抄録で評価。最新mainのcanonical ID検索で未登録を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2608.11688", "arXiv:2609.04895"],
+    "next_axis_hint": "次はKV transfer/RDMA・collective communication、または長文脈KV階層化の2026年8〜9月新着へ移る",
+    "empty_round_reason": null
+  }
+}
