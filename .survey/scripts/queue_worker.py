@@ -1098,6 +1098,7 @@ def process_submissions(st: dict):
                 raise ValueError("invalid submit_discovery_round payload")
             if should_ingest_round:
                 job = process_discovery_round_submission(sub, st, template_job=template_job)
+                summary = job.get("result_summary") if isinstance(job.get("result_summary"), dict) else {}
                 result.update({
                     "ok": True,
                     "operation": "submit_discovery_round",
@@ -1106,6 +1107,15 @@ def process_submissions(st: dict):
                     "job_type": "discovery",
                     "artifact": None,
                     "job_status": job.get("status"),
+                    "submitted_candidates": summary.get("submitted_candidates", len(sub.get("candidates") or [])),
+                    "final_duplicate_filtered_count": summary.get("final_duplicate_filtered_count", 0),
+                    "research_jobs_added": summary.get("research_jobs_added", 0),
+                    "precheck_request_id": summary.get("precheck_request_id"),
+                    "next_action": (
+                        "Refresh .survey/work-queue/next-jobs.json, confirm the generated Research jobs, "
+                        "then claim exactly one ready Research/Audit job through claim_worker_with_banks.py. "
+                        "Do not edit queue/state files or synthesize Research job IDs."
+                    ),
                 })
                 write_json(rp, result)
                 continue
