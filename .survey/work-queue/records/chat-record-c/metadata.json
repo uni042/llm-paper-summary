@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1a88ffa8349a43c660f5f730",
-  "job_id": "job-research-188f6649e816eaae",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a88ffa8349a43c660f5f730",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1a88ffa8349a43c660f5f730","job_id":"job-research-188f6649e816eaae","data":{"canonical_id":"arXiv:2604.15186","arxiv_id":"2604.15186","doi":"10.48550/arXiv.2604.15186","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines","summary":"Scepsyは、分岐・反復・ファンアウトを含む複数LLMエージェント処理を、個々の制御フローを予測せずGPU群へ割り当てるサービングシステムである。各LLMがワークフロー全体の実行時間に占める相対比率が要求間で安定するという観測から、低水準のLLM呼び出しトレースと並列度別プロファイルを集約LLMパイプライン（Aggregate LLM Pipeline）へ変換する。この軽量予測器を使い、GPU分数、テンソル並列度、複製数を共同探索し、最後にNVLink等の接続構造と断片化を考慮して配置する。16 GPU評価では既存方式に対し最大2.4倍のピークスループットまたは最大27倍低い平均遅延を報告する。","list_summary":"LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。","authors":["Marcel Wagenländer","Otto White","Britannio Jarrett","Pedro Silvestre","Yanda Tao","Guo Li","Huanzhou Zhu","Llúis Vilanova","Peter Pietzuch"],"authors_affiliations":"Imperial College London; Independent Researcher","published":"2026-04-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1","lineage":"agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement","topics":["エージェントサービング","複数LLM","GPU割り当て","テンソル並列","GPU共有"],"importance":"動的なエージェント制御フローそのものではなく、LLM別の定常的な相対需要をモデル化することで、任意フレームワークの複数LLMワークフローへ自動GPU割り当てを可能にする。","implementation":"約25K行のPythonプロトタイプ。Kubernetes、変更したdevice plugin、NVIDIA MPSを用い、vLLMやSGLang等の実行エンジンを対象とする。","hardware_evaluation":"16 GPUクラスタを中心に、4/8 GPU規模を含む評価。接続構造を考慮したテンソル並列配置を検証。","quality_effect":"モデル出力や推論アルゴリズムは変更せず、GPU資源配分と配置を最適化するため、品質近似は導入しない。","source":"https://arxiv.org/abs/2604.15186","sources":["https://arxiv.org/abs/2604.15186","https://arxiv.org/pdf/2604.15186"],"code":"https://github.com/anon/Scepsy","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":67},"reservation":{"claim_id":"claim-1a88ffa8349a43c660f5f730","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
