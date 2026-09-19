@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-cff94da844c9d4caaf2fc60b",
-  "job_id": "job-research-1182cce822dbe6dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cff94da844c9d4caaf2fc60b",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-cff94da844c9d4caaf2fc60b","job_id":"job-research-1182cce822dbe6dc","data":{"problem":"MoEでは全専門家重みがHBMの大半を占有する一方、マルチターン・エージェント処理では再利用可能なKV状態がターンごとに増える。vLLM等は起動時に重み領域とKVキャッシュ領域を固定するため、Qwen3-Next-80Bを2×H100 TP2で動かす例では各GPU 94GiB中72.0GiBを専門家重みが占め、KVプールは8.02GiBに留まる。KVプールが飽和するとLRU退避と要求プリエンプションが再利用接頭辞を破壊し、再prefillが増えてTTFTが閾値的に悪化するprefix-cache cliffが生じる。既存の専門家オフロードは空いたHBMをKVへ直接転用せず、既存KV管理も重み領域を借りられない。","novelty":"VAMPの中心は、単一の稼働中MoEモデル自身の専門家HBMをKVキャッシュへ動的転用し、その判断を専門家オフロード、KV退避、要求プリエンプションの3者コスト比較として統合する点にある。CUDA仮想メモリ管理（VMM）で専門家テンソルの仮想アドレスを保持したまま物理HBMページをKVプールへ再マップするため、既存KVデータのコピーなしに境界を変更できる。Oneirosが他テナントの休眠denseモデル領域を回収するのに対し、VAMPは単一MoEの稼働専門家領域を回収する。","method_overview":"KV割当に不足が生じるたび、VAMPは観測prefix hit率とLRU年齢からKV退避後の再prefillコストCc、オフロード専門家領域を各層で再転送する将来コストCe、要求プリエンプションによる再スケジュール・部分ブロック再prefillコストCp、必要に応じてオフロードとKV退避を組み合わせるCbを計算し、実行可能な最小コスト案を選ぶ。専門家オフロードが選ばれると、ページ整列したexpert groupをCUDA VMMでunmapし、その物理ページをKVプールへmapする。オフロード領域は各層実行前にhost DRAMからstaging bufferへ転送し、2重バッファと専用copy streamで前層計算に重畳する。","components":[{"name":"3方向価値認識型コストモデル","description":"prefix hit率とLRU年齢から再利用確率を推定してKV退避の再prefillコストを算出し、専門家転送コストと要求プリエンプションコストを同じ割当不足量に対して比較する。専門家拡張粒度の端数にはoffload+evictionの複合案も評価する。"},{"name":"CUDA VMMによる動的HBM再分割","description":"専門家groupの物理HBMページを外し、専門家テンソルの仮想アドレス予約は維持したままKVプールへ再マップする。Qwen3-Nextではgroupは6MiBで、評価構成は4 group単位でKV容量を拡張する。TP rank間では追加可能KV block数の最小値に揃える。"},{"name":"バッチ認識型専門家ステージング","description":"top-k=10でも連続バッチでは1層あたり多数の専門家が必要になるため、routing後の個別cache miss方式を避け、各層の連続offload領域全体を事前転送する。2重バッファで層N計算中にN+1層の重みを転送する。"},{"name":"オフロード上限制御","description":"staging buffer容量と設定比率VAMP-rで最大offload量を制約する。評価ではVAMP-10/15/20/25等を使い、KV容量増加とTPOT増加のトレードオフを調べる。"}],"system_design":"vLLM schedulerのKV割当失敗点へ価値比較を挿入し、CUDA VMM orchestratorとMoE実行パスのhost-to-device stagingを連動させる。メモリ容量を増やす機構と、その容量を増やすべきかを決めるpolicyを分離しつつ、割当時に統合している。"},"reservation":{"claim_id":"claim-cff94da844c9d4caaf2fc60b","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
