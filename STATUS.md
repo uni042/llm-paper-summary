@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:34:38 JST**
+> 自動生成: **2026-09-19 19:35:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 19:34:03 JST（35秒前）** |
+| 収録候補論文 | **46** |
+| 未claim Research job | **45** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（5秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **7** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **39** | **20** | **20** | **0** | **0** | **0** | **31** |
-| 合計 | **45** | **22** | **21** | **1** | **1** | **0** | **31** |
+| 合計 | **46** | **22** | **22** | **0** | **1** | **0** | **31** |
 
 - 最新Discovery runの耐久探索round: **20件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 19:34:56 JST** [research] `arXiv:2604.15186` — Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines
+  - job: `.survey/work-queue/jobs/job-research-188f6649e816eaae.json`
+  - result: `.survey/work-queue/results/research/attempt-cd9ea16c565464e02e01a24b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cd9ea16c565464e02e01a24b.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md`
 - **09-19 19:34:03 JST** [research] `arXiv:2410.01228` — ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving
   - job: `.survey/work-queue/jobs/job-research-b6a4fe55f122cf41.json`
   - result: `.survey/work-queue/results/research/attempt-ff20bcaca705be66e1a1b76e.json` (`ok=true`)
@@ -131,8 +136,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 19:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-cd9ea16c565464e02e01a24b.json` (job `job-research-188f6649e816eaae`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2604.15186` — Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines
+  - job: `.survey/work-queue/jobs/job-research-188f6649e816eaae.json`
+  - result: `.survey/work-queue/results/research/attempt-cd9ea16c565464e02e01a24b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cd9ea16c565464e02e01a24b.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md`
 - **成功** `arXiv:2410.01228` — ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving
   - job: `.survey/work-queue/jobs/job-research-b6a4fe55f122cf41.json`
   - result: `.survey/work-queue/results/research/attempt-ff20bcaca705be66e1a1b76e.json` (`ok=true`)
@@ -196,9 +205,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.15186` — Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 19:33:46 JST** / heartbeat: **—** / lease expiry: **09-19 21:03:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-188f6649e816eaae.json`
+- `arXiv:2605.06472` — Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 19:34:49 JST** / heartbeat: **—** / lease expiry: **09-19 21:04:49 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ff33bdbdc4dfa309.json`
 
 #### Audit
 
@@ -218,7 +227,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -238,7 +247,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **758** |
+| inference/training/survey配下の論文Markdown実体 | **759** |
 
 ### immutable submissionの未照合
 
@@ -246,8 +255,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **618** |
-| └ Research | **471** |
+| 成功result未照合のimmutable submission | **617** |
+| └ Research | **470** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
