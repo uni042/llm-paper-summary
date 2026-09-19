@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:37:44 JST**
+> 自動生成: **2026-09-20 00:38:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 23:39:47 JST（57分前）** |
+| 最終検証済みResearch収録 | **09-19 23:39:47 JST（58分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -183,9 +183,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 00:36:10 JST** / heartbeat: **—** / lease expiry: **09-20 02:06:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-376e535ed84f7cfa.json`
+- `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier? / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 00:37:59 JST** / heartbeat: **—** / lease expiry: **09-20 02:07:59 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1a87bd753fb86450.json`
 
 #### Audit
 
