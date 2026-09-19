@@ -28,9 +28,10 @@ PROFILES = {
     "process_discovery_precheck.py": {
         "task": "探索候補の取得・重複除外・ページ送り",
         "next": [
-            "result JSON の decision と evaluation_allowed を確認する。",
-            "READY_FOR_EVALUATION の場合だけ results[] を評価し、result_path と receipt を submit_discovery_round 側へ渡す。",
-            "同一 source_url のページ送りはこのスクリプトに任せ、ワーカー側で検索結果ページを手選別しない。",
+            "指定した --result の JSON を開き、decision / evaluation_allowed / receipt / results[] を確認する。",
+            "decision=READY_FOR_EVALUATION かつ evaluation_allowed=true の場合だけ results[] を軽量評価する。",
+            "採用候補0〜5件を operation=submit_discovery_round の不変 submission として .survey/work-queue/submissions/ に保存し、precheck の result_path と receipt を参照させる。",
+            "submission 保存後は最新 queue / identity を再取得する。同一 source_url の追加ページをワーカー側で手取得しない。",
         ],
         "recovery": [
             "失敗した request は変更せず証跡として残す。",
@@ -42,9 +43,10 @@ PROFILES = {
     "queue_worker.py": {
         "task": "キュー整合・次ジョブ一覧の更新",
         "next": [
-            "next-jobs.json または標準出力の next_jobs を確認する。",
-            "claimable なジョブは claim 経路で割り当てを取得してから処理する。",
-            "discovery ジョブは探索 precheck の正規経路へ進み、直接候補をキューへ書き込まない。",
+            ".survey/work-queue/next-jobs.json の next_jobs と counts を確認する。",
+            "Research/Audit がある場合は claim request を作成し、claim_worker_with_banks.py の正規経路で max_jobs=1 の割り当てを取得する。",
+            "割り当てがなければ最新 queue を再確認し、Discovery が必要なら process_discovery_precheck.py の schema v3 経路へ進む。",
+            "next-jobs.json や state.json を直接編集してジョブを取得・完了扱いにしない。",
         ],
         "recovery": [
             "work-queue の jobs / submissions / state を手作業で成功扱いに変更しない。",
@@ -55,9 +57,10 @@ PROFILES = {
     "claim_worker.py": {
         "task": "ジョブ割り当て（claim）の処理",
         "next": [
-            "出力の assignments と request ごとの result を確認する。",
-            "割り当てがある場合だけ、その assignment の job / instructions に従って処理する。",
-            "処理完了後は正規の submission 経路へ渡し、claim/state を直接完了扱いにしない。",
+            ".survey/work-queue/claim-results/ の該当 request result と出力 assignments を確認する。",
+            "assignment が1件ある場合だけ、その job / instructions / attempt_id / claim_id に従って処理する。",
+            "Research/Audit 完了後は5スロットを保存し、attempt固有の immutable descriptor を .survey/work-queue/submissions/research/ または audit/ に作る。",
+            "assignment が0件なら queue_worker.py で最新 queue を再取得し、別jobを手動選択しない。",
         ],
         "recovery": [
             "claim request と worker_id / worker_kind / attempt_id の整合を確認する。",
@@ -68,9 +71,10 @@ PROFILES = {
     "claim_worker_with_banks.py": {
         "task": "ジョブ割り当てと作業バンク予約",
         "next": [
-            "assignments と banks_* の結果を確認する。",
-            "割り当てに紐づく予約済みバンクだけを使って処理する。",
-            "完了物は正規の submission 経路へ渡し、別バンクへ自己判断で移さない。",
+            ".survey/work-queue/claim-results/ の assignment と record_bank / record_bank_fallback を確認する。",
+            "record_bank がある場合は、その予約済みbankの metadata / problem_method / evaluation / results / positioning の5スロットだけを使う。",
+            "record_bank_fallback=library の場合はGitHub上で別bankを選ばず、完全5スロットpayloadを ChatGPT Library /LLM-survey-outbox/pending/ へ保存する。",
+            "耐久保存後は attempt固有 immutable descriptor またはLibrary checkpointを正本として、queue_worker.py で次の状態を取り直す。",
         ],
         "recovery": [
             "claim と bank descriptor の対応を手作業で差し替えない。",
@@ -81,9 +85,9 @@ PROFILES = {
     "process_immutable_submission_batch.py": {
         "task": "不変 submission の一括処理",
         "next": [
-            "summary の failures を確認する。",
-            "failures=0 なら後続の正規化・描画・検査へ進む。",
-            "失敗が残る場合は保存済み descriptor / result を使って再試行し、成功分を作り直さない。",
+            "標準出力 summary の failures と effects-dir に生成されたeffect/resultを確認する。",
+            "failures=0 なら normalize_required_metadata.py → normalize_research_paper_paths.py → survey.py build → build_repository_inventory.py → check_repository.py の検査系へ進む。",
+            "failures>0 なら失敗descriptorだけを回復対象にし、成功済みattemptを再生成しない。",
         ],
         "recovery": [
             "descriptors-file が正規の immutable submission descriptor 一覧を指すことを確認する。",
@@ -94,9 +98,10 @@ PROFILES = {
     "continuation_gate.py": {
         "task": "継続可否判定",
         "next": [
-            "出力 decision / finalization_allowed / next_action をそのまま実行する。",
-            "CONTINUE の場合は指示された作業を続ける。",
-            "STOP_RUN でも finalization_allowed を確認し、最終応答前に finalization gate を通す。",
+            "出力の decision / finalization_allowed / next_action / wait_seconds / wait_targets を確認する。",
+            "decision=CONTINUE なら next_action の対象を実行し、pending target があれば同一targetを指定された間隔で再確認する。",
+            "decision=STOP_RUN の場合も直接終了せず、その出力値を run_finalization_gate.py に渡す。",
+            "最終応答は run_finalization_gate.py が明示的に許可するまで出さない。",
         ],
         "recovery": [
             "最新の claim 状態と submission 状態を確認してから判定をやり直す。",
@@ -107,9 +112,9 @@ PROFILES = {
     "run_finalization_gate.py": {
         "task": "最終化許可判定",
         "next": [
-            "permit / next_action / wait_targets を確認する。",
-            "待機指示がある間は同じ claim / submission / ACK 対象を再確認する。",
-            "明示的な最終化許可が出た場合だけ最終応答へ進む。",
+            "出力の permit / blocking_reasons / next_action / wait_targets / wait_seconds を確認する。",
+            "permit が出ていなければ wait_targets の同一 claim / submission / ACK を再確認し、状態を更新して run_finalization_gate.py を再実行する。",
+            "permit が明示的に出た場合だけ最終応答へ進む。",
         ],
         "recovery": [
             "continuation decision と finalization_allowed を再確認する。",
@@ -120,9 +125,10 @@ PROFILES = {
     "update_worker.py": {
         "task": "更新 payload の検証・適用",
         "next": [
-            ".survey/update-worker/result.json を確認する。",
-            "ok=true の場合だけ updated_paths を後続の検査対象として扱う。",
-            "適用後はリポジトリ検査を実行し、生成物と状態の整合を確認する。",
+            ".survey/update-worker/result.json を開き、ok / updated_paths / created_paths を確認する。",
+            "ok=true の場合だけ、必要なら survey.py build で派生物を再生成する。",
+            "その後 build_repository_inventory.py で新しいinventoryを作り、check_repository.py に渡して整合性を確認する。",
+            "check_repository.py が passed になるまで更新完了扱いにしない。",
         ],
         "recovery": [
             "update-inbox.json と固定 update-payload.json の attempt_id を一致させる。",
@@ -133,9 +139,10 @@ PROFILES = {
     "survey.py": {
         "task": "論文索引・比較表・識別子状態の再生成",
         "next": [
-            "生成差分を確認する。",
-            "check_repository.py を実行して構造・メタデータ・索引の整合を検査する。",
-            "検査成功後にのみ後続の公開・完了処理へ進む。",
+            "生成された README / comparison.md / .survey/survey-state/paper-identity-index.json の差分を確認する。",
+            "build_repository_inventory.py --root . --output <new-inventory> で現在HEADのinventoryを作る。",
+            "check_repository.py --root . --inventory <new-inventory> --report <report> を実行する。",
+            "report の status=passed を確認してから publish / submission / finalization の次段へ進む。",
         ],
         "recovery": [
             "エラー対象の論文メタデータや重複識別子を修正する。",
@@ -146,8 +153,9 @@ PROFILES = {
     "build_repository_inventory.py": {
         "task": "検査用リポジトリ inventory の生成",
         "next": [
-            "生成された inventory を check_repository.py の --inventory に渡す。",
-            "inventory 生成後に対象ファイルを変更した場合は、古い inventory を使わず生成し直す。",
+            "この実行で指定した --output の inventory ファイルをそのまま check_repository.py --inventory に渡す。",
+            "例: python .survey/scripts/check_repository.py --root . --inventory <output> --report <report>。",
+            "inventory 生成後にリポジトリ対象ファイルを変更した場合は、そのinventoryを破棄して build_repository_inventory.py からやり直す。",
         ],
         "recovery": [
             "root と output が意図したリポジトリ・出力先を指しているか確認する。",
@@ -157,9 +165,10 @@ PROFILES = {
     "maintenance_health.py": {
         "task": "保守状態・品質レポートの健全性検査",
         "next": [
-            "status / errors / warnings を確認する。",
-            "issues_found の場合は findings を解消してから後続の公開・最終化へ進む。",
-            "passed の場合は通常の次段へ進む。",
+            "生成reportの status / findings / errors / warnings を確認する。",
+            "status=issues_found なら findings が指す元データ・queue・派生indexを修正し、maintenance_health.py を再実行する。",
+            "status=passed なら build_repository_inventory.py → check_repository.py で最終整合性を確認する。",
+            "check_repository.py も passed の場合だけ maintenance 完了扱いにする。",
         ],
         "recovery": [
             "missing quality report や index drift の原因を先に修正する。",
@@ -169,8 +178,9 @@ PROFILES = {
     "full_gc.py": {
         "task": "不要な一時状態・回復済みデータの GC",
         "next": [
-            "deleted / skipped / protected を確認する。",
-            "GC 後に queue / repository の整合性検査を実行する。",
+            "GC report の deleted / skipped / protected を確認し、未完了対象が deleted に入っていないことを確認する。",
+            "GC後に queue_worker.py で queue snapshot を再構築する。",
+            "続けて survey.py build → build_repository_inventory.py → check_repository.py を実行し、派生物とリポジトリ整合性を確認する。",
         ],
         "recovery": [
             "protected path を手作業で削除しない。",
@@ -181,8 +191,10 @@ PROFILES = {
     "check_repository.py": {
         "task": "リポジトリ整合性検査",
         "next": [
-            "検査成功なら、その処理系の publish / submission / finalization の次段へ進む。",
-            "検査結果に警告・失敗がある場合は先に原因を修正する。",
+            "--report で指定したJSONを開き、status / findings / missing_files / working_changes を確認する。",
+            "status=passed なら、元の処理がResearch/Auditなら最新 queue/claim state取得、Discoveryならsubmission確認、maintenance/updateなら完了判定へ戻る。",
+            "status=issues_found なら findings の元ファイル・生成元・stateを修正し、必要な生成スクリプトを再実行してから新しいinventoryで check_repository.py を再実行する。",
+            "passed になるまで publish / finalization を行わない。",
         ],
         "recovery": [
             "失敗項目を無視して publish / finalization へ進まない。",
