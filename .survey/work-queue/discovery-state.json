@@ -1,34 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T11:06:00+00:00",
-  "last_run_key": "2026-09-19T20:00:00+09:00",
-  "last_round": "specialist-slo-scaling-8",
+  "updated_at": "2026-09-19T12:01:01+00:00",
+  "last_run_key": "2026-09-19T21:00:00+09:00",
+  "last_round": "specialist-ssd-moe-routing-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T07:00:00+09:00",
-      "round": "specialist-transfer-path-10",
-      "axis": "GPU・ホストメモリ間の複数経路転送と分離サービング通信",
-      "query_summary": "分離サービングのKV転送・メモリファブリックを探索し、Multi-stage Flow Scheduling（arXiv:2603.17456）、TraCT（arXiv:2512.18194）、HMA-Serve（arXiv:2606.29986）、MultiPath Transfer Engine（arXiv:2512.16056）を軽量評価した。最新identityで前3件は既収録、MultiPath Transfer Engineのみ未収録だった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2603.17456",
-        "arXiv:2512.18194",
-        "arXiv:2606.29986"
-      ],
-      "next_axis_hint": "推論基盤のCPU制御オーバーヘッド、永続kernel、CUDA Graph、kernel fusion、動的compileへ移り、runtime/kernel系の未収録論文を探索する。",
-      "source_submission": "work-queue/submissions/20260915T0742JST-discovery-specialist-transfer-path-10.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-elastic-kv-1",
@@ -7300,6 +7281,26 @@
       ],
       "next_axis_hint": "次はreasoning/long-output serving、elastic batching、early exit・adaptive compute servingへ移る",
       "source_submission": "work-queue/submissions/20260919T2053JST-discovery-specialist-slo-scaling-8.json"
+    },
+    {
+      "run_key": "2026-09-19T21:00:00+09:00",
+      "round": "specialist-ssd-moe-routing-1",
+      "axis": "SSD-backed MoE expert streaming・trained routing prediction・expert prefetch",
+      "query_summary": "2026年9月のMoE推論、SSD offload、expert prefetchを一次資料中心に探索。arXiv:2609.18063を最新default branchのrepository searchとrejection ledgerで照合し、既収録・過去不採用を確認できなかったため候補化した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2609.18063"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はcommodity GPU向けpage-aware decode scheduling、非GPU accelerator serving、または2026年9月のdisaggregated serving/runtime新着へ軸を移す。",
+      "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json"
     }
   ],
   "axes": {
@@ -13446,6 +13447,19 @@
       "duplicate_ratio": 0.25,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はreasoning/long-output serving、elastic batching、early exit・adaptive compute servingへ移る"
+    },
+    "SSD-backed MoE expert streaming・trained routing prediction・expert prefetch": {
+      "last_run_key": "2026-09-19T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はcommodity GPU向けpage-aware decode scheduling、非GPU accelerator serving、または2026年9月のdisaggregated serving/runtime新着へ軸を移す。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

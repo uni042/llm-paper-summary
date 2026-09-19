@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:02:03 JST**
+> 自動生成: **2026-09-19 21:02:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **47** | **4** | **0** | **4** | **0** | **0** | **7** |
-| 合計 | **54** | **7** | **2** | **4** | **1** | **0** | **7** |
+| Discovery | **48** | **4** | **1** | **3** | **0** | **0** | **7** |
+| 合計 | **55** | **7** | **3** | **3** | **1** | **0** | **7** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-19 21:01:01 JST** job `job-80340174f4bc603a` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json`
+  - 探索軸: SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
 - **09-19 20:01:55 JST** job `job-f01200ff7b9a34ab` / 候補 **4件**
   - result: `.survey/work-queue/results/20260919T2008JST-discovery-specialist-memory-paths-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-adjacent-14.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
   - 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation
-- **09-19 19:06:35 JST** job `job-b34555c80ea4673f` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-related-13.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json`
-  - 探索軸: related-work path from agentic workload systems to predictability-driven agent-native serving
 
 ### 直近タスク
 
@@ -159,7 +159,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 21:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **7件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **7件**
 - 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
 - round `specialist-local-runtime-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-local-runtime-4.json`
@@ -176,7 +176,7 @@
 - round `specialist-ssd-moe-routing-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json`
   - 探索軸: SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -233,10 +233,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **622** |
+| 成功result未照合のimmutable submission | **621** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **149** |
+| └ Discovery | **148** |
 
 ### 厳格検証が未成立のcompleted job
 

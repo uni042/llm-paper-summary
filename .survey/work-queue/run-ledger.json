@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T11:09:07.052145+00:00",
+  "updated_at": "2026-09-19T12:02:09.044287+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T11:09:07.052145+00:00",
+      "last_recorded_at": "2026-09-19T12:02:09.044287+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 295,
         "audit_completed": 0,
-        "discovery_completed": 184,
+        "discovery_completed": 185,
         "blocked": 38,
-        "new_jobs": 282,
+        "new_jobs": 283,
         "new_papers": 298,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35369384647:1",
-          "recorded_at": "2026-09-18T16:35:51.633007+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35369384647",
-            "run_attempt": "1",
-            "source_sha": "6b12d6e04ad269410e48b4607399b0e018c6f116"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35378085740:1",
           "recorded_at": "2026-09-18T18:05:20.664167+00:00",
@@ -19594,6 +19580,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35441651010:1",
+          "recorded_at": "2026-09-19T12:02:09.044287+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35441651010",
+            "run_attempt": "1",
+            "source_sha": "d6ba277c372930c5eaf540955f4be095e61f40ed"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -23733,6 +23733,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-80340174f4bc603a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25709,6 +25717,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.02942",
           "title": "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
+        },
+        {
+          "job_id": "job-80340174f4bc603a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -26312,7 +26327,8 @@
         ".survey/work-queue/results/20260919T2034JST-discovery-specialist-moe-offload-5.json",
         ".survey/work-queue/results/20260919T2041JST-discovery-specialist-prefix-locality-6.json",
         ".survey/work-queue/results/20260919T2047JST-discovery-specialist-mobile-storage-7.json",
-        ".survey/work-queue/results/20260919T2053JST-discovery-specialist-slo-scaling-8.json"
+        ".survey/work-queue/results/20260919T2053JST-discovery-specialist-slo-scaling-8.json",
+        ".survey/work-queue/results/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -26390,7 +26406,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 759,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
