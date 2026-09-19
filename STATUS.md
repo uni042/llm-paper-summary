@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 15:35:50 JST**
+> 自動生成: **2026-09-19 16:01:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **43** |
 | 未claim Research job | **43** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（4時間2分前）** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（4時間27分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **7** | **0** | **7** | **0** | **0** | **11** |
-| 合計 | **7** | **8** | **0** | **7** | **0** | **0** | **11** |
+| Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **1** |
+| 合計 | **7** | **4** | **0** | **3** | **0** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -109,36 +109,20 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 12:00 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **11件**
-- 探索軸: CXL・PIM・near-memory・chiplet LLM inference / CPU-GPU/CXL協調・異種GPU・disaggregated serving制御 / KV reuse・prefix cache・long-context serving関連研究 / network・RDMA・collective・distributed serving / GPU runtime・kernel・production serving再確認 / 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving / agent state・NVMe・storage/OS隣接
-- round `specialist-cxl-pim-2` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-cxl-pim-2.json`
-  - 探索軸: CXL・PIM・near-memory・chiplet LLM inference
+- 最新観測run: **2026-09-19 16:00 JST**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **1件**
+- 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL / MoE expert cache・prefetch・placement・heterogeneous offload / 2026年9月新着・runtime memory・serving safety横断
+- round `specialist-hierarchical-memory-2` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json`
+  - 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-heterogeneous-serving-3` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-heterogeneous-serving-3.json`
-  - 探索軸: CPU-GPU/CXL協調・異種GPU・disaggregated serving制御
+- round `specialist-moe-saturation-3` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-moe-saturation-3.json`
+  - 探索軸: MoE expert cache・prefetch・placement・heterogeneous offload
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-kv-known-6` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-kv-known-6.json`
-  - 探索軸: KV reuse・prefix cache・long-context serving関連研究
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-network-saturation-4` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-network-saturation-4.json`
-  - 探索軸: network・RDMA・collective・distributed serving
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-runtime-known-5` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-runtime-known-5.json`
-  - 探索軸: GPU runtime・kernel・production serving再確認
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-sep-new-systems-1` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-sep-new-systems-1.json`
-  - 探索軸: 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-storage-state-7` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-storage-state-7.json`
-  - 探索軸: agent state・NVMe・storage/OS隣接
+- round `specialist-recent-runtime-security-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-recent-runtime-security-1.json`
+  - 探索軸: 2026年9月新着・runtime memory・serving safety横断
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -194,10 +178,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **595** |
+| 成功result未照合のimmutable submission | **598** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **134** |
+| └ Discovery | **137** |
 
 ### 厳格検証が未成立のcompleted job
 
