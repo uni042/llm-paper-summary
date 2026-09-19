@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-30d00f89d27bcfb30faf78ef",
-  "job_id": "job-research-b33b8317e97d5549",
+  "attempt_id": "attempt-edf3b0211a56780fb89a02c1",
+  "job_id": "job-research-ac3d391d822b215f",
   "data": {
-    "hardware": "NVIDIA L40S GPU 1基を全実験で使用する。モデルはQwen2.5-7B、Llama3.1-8B、Yi1.5-9B。高並行度の複数利用者サービングでは送信率を最大30 QPSまで変化させる。",
-    "software": "vLLM 0.4.1を基盤に約2K行のPythonでKVShareを実装し、キャッシュ認識スケジューリングとDHD再計算を統合する。比較用CacheBlendは公開実装から移植する。比較対象は完全再計算、全KVをそのまま再利用するNaive、CacheBlend、EPIC。",
-    "methodology": "品質評価はGSM8KのAccuracy、DROPのExact Match、SAMSumのRouge-Lを用い、3モデルそれぞれで再計算率10/20/30/40%を比較する。プリフィルのみの再計算と、各デコード段階で追加3トークンを再計算する二段階構成を分けて測定する。サービング効率はShareGPT等の実ユーザー指示を用い、QPSを変えながらTTFTと入力スループットを測る。キャッシュ認識スケジューリングの有無も切り分けてTTFTへの寄与を確認する。",
-    "scope": "複数利用者が類似文脈を持つサービングでの要求間KV再利用が中心であり、単一L40S上の7B〜9B級モデルで評価する。異なるGPU、分散サービング、より大規模モデル、非常に低い再利用率のワークロードへの一般化は直接検証されていない。精度回復は三つの代表タスクで評価されるが、広範な長文脈ベンチマークや安全性評価は対象外である。"
+    "hardware": "実機クラスタは8×H100または8×H20を搭載するノード群で、各GPUに専用ConnectX-7 NICを接続し、ノード間は400 Gbps RoCE。LaminaはH100を計算装置、H20を注意/KV装置として使う。等費用比較ではLLaMA-33BにH100×1+H20×2対vLLM H100×2、65B/70BにH100×2+H20×4対vLLM H100×4を用いる。",
+    "software": "Laminaは約6000行のPython/C/C++と少量CUDA、改造rdma-core、Rayで実装。比較対象はvLLMで、デコードだけを公平に比較するため評価時はvLLMのプリフィルを除く。FP16のLLaMA-33B、LLaMA-65B、LLaMA3-70Bを使用する。",
+    "methodology": "Azure-Conv 19,366件、Azure-Code 8,819件、Kimi-Conv 12,031件、Kimi-TA 23,608件の実運用系列長トレースを使い、内容は同じ長さのダミートークンで再現する。主要指標はデコードスループット、トークン間時間（Time Between Tokens; TBT）、平均バッチサイズ、同等費用での性能。固定文脈4096/8192では遅延内訳を測り、ネットワークは400Gbps RoCE上のGPU間ping-pongでNCCL/Gloo/FHBNを比較する。通信重畳はLLaMA-65BとLLaMA3-70Bで有無を切り分ける。",
+    "scope": "デコード段階の演算子分離に焦点を当て、プリフィルの性能は主要評価から除外する。H100/H20という特定の異種GPUと高速RoCE環境での実証であり、一般Ethernet、CPU/DRAM、PIM等の代替メモリ装置は議論のみ。モデル品質は演算を近似しないため評価対象ではなく、オンラインSLOに対するTBTと費用効率を中心に検証する。"
   },
   "reservation": {
-    "claim_id": "claim-30d00f89d27bcfb30faf78ef",
+    "claim_id": "claim-edf3b0211a56780fb89a02c1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -1,1 +1,74 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-30d00f89d27bcfb30faf78ef","job_id":"job-research-b33b8317e97d5549","data":{"canonical_id":"arXiv:2503.16525","arxiv_id":"2503.16525","doi":"10.48550/arXiv.2503.16525","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI"]},"title":"KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse","summary":"KVShareは、複数利用者の要求間で同じトークン断片のKVキャッシュを再利用しつつ、異なる前置文脈が生む注意出力のずれを選択的再計算で補正するLLMサービング機構である。可変長断片の再利用、注意重みとV偏差から重要トークンを選ぶ二段階高偏差（Dual-Stage High Deviation; DHD）再計算、KVヒット率で要求を並べるキャッシュ認識スケジューリングを組み合わせる。Qwen2.5-7B、Llama3.1-8B、Yi1.5-9Bを単一L40Sで評価し、完全再計算比でTTFTを最大9.39倍短縮、平均スループットを1.2倍にし、既存のCacheBlend等より生成品質を改善した。","list_summary":"要求間KV再利用を可変長断片・DHD再計算・ヒット率別バッチングで安全に広げ、TTFT最大9.39倍短縮と平均1.2倍のスループット向上を示す。","authors":["Huan Yang","Renji Zhang","Mingzhe Huang","Weijun Wang","Yin Tang","Yuanchun Li","Yunxin Liu","Deyu Zhang"],"authors_affiliations":"Central South University; Tsinghua University","published":"2025-03-17","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v2, 2025-05-16)","lineage":"KV cache reuse / context caching / multi-tenant LLM serving / selective recomputation","topics":["KVキャッシュ再利用","複数利用者サービング","選択的再計算","キャッシュ認識スケジューリング","連続バッチング"],"importance":"完全一致する接頭辞だけでなく、異なる前置文脈を持つ要求間でもKVキャッシュを共有するため、精度回復とサービング性能を同時に扱う。","implementation":"vLLM 0.4.1を基盤に約2K行のPythonコードでKV Retriever、Cache-Aware Scheduler、DHD Selector、KV Writerを実装した研究プロトタイプ。","hardware_evaluation":"NVIDIA L40S GPU 1基。Qwen2.5-7B、Llama3.1-8B、Yi1.5-9Bを評価。","quality_effect":"KV再利用による注意偏差をプリフィルとデコードの両段階で選択的に再計算して回復する。一方、デコード段階の追加再計算はTPOTを増加させる。","source":"https://arxiv.org/abs/2503.16525","sources":["https://arxiv.org/abs/2503.16525","https://arxiv.org/html/2503.16525"],"code":"","last_checked":"2026-09-20","references":[{"title":"Prompt Cache: Modular Attention Reuse for Low-Latency Inference"},{"title":"SGLang: Efficient Execution of Structured Language Model Programs"},{"title":"CacheBlend: Fast Large Language Model Serving with Cached Knowledge Fusion","arxiv_id":"2405.16444"},{"title":"EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models","arxiv_id":"2410.15332"},{"title":"Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving","arxiv_id":"2407.00079"},{"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},{"title":"H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models","arxiv_id":"2306.14048"},{"title":"SnapKV: LLM Knows What You Are Looking for Before Generation"},{"title":"Efficient Streaming Language Models with Attention Sinks","arxiv_id":"2309.17453"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":21},"reservation":{"claim_id":"claim-30d00f89d27bcfb30faf78ef","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-edf3b0211a56780fb89a02c1",
+  "job_id": "job-research-ac3d391d822b215f",
+  "data": {
+    "canonical_id": "arXiv:2405.01814",
+    "arxiv_id": "2405.01814",
+    "doi": "10.48550/arXiv.2405.01814",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation",
+    "summary": "LaminaはLLMデコードを注意演算とそれ以外へさらに分離し、KVキャッシュ保持とメモリ帯域支配の注意演算を安価なH20、行列積主体の演算をH100へ割り当てる異種GPUサービングシステムである。層ごとに発生する遠隔GPU通信を、CPUを制御経路から外すネットワーク、計算グラフの自動分割、注意の部分計算と通信の重畳、回転型パイプラインで隠す。実運用トレースとLLaMA-33B/65B/LLaMA3-70Bで、同程度の機器費用のvLLMより16.1〜90.1%高いデコードスループットを示した。",
+    "list_summary": "注意演算とその他をH20/H100へ分離し、CPU非介在通信と自動分割・パイプラインで層間通信を隠して、同費用vLLM比16.1〜90.1%高いデコードスループットを得る。",
+    "authors": [
+      "Shaoyuan Chen",
+      "Wencong Xiao",
+      "Yutong Lin",
+      "Mingxing Zhang",
+      "Yingdi Shan",
+      "Jinlei Jiang",
+      "Kang Chen",
+      "Yongwei Wu"
+    ],
+    "authors_affiliations": "Tsinghua University; ByteDance",
+    "published": "2024-05-03",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v2, 2025-04-10)",
+    "lineage": "heterogeneous inference / attention offloading / operator disaggregation / distributed LLM serving",
+    "topics": [
+      "注意オフロード",
+      "異種GPU",
+      "KVキャッシュ",
+      "演算子分離",
+      "GPU間通信",
+      "LLMサービング"
+    ],
+    "importance": "プリフィル/デコード分離より細粒度に、デコード内部のメモリ支配演算と計算支配演算を別ハードウェアへ割り当て、資源比率をモデルとワークロードに合わせられることを実機で示す。",
+    "implementation": "Laminaを約6000行のPython/C/C++と少量CUDAで実装。改造rdma-core、Ray、独自の完全CPU非介在ネットワークを使用。",
+    "hardware_evaluation": "H100計算GPU、H20メモリGPU、各GPUにConnectX-7 NIC、400 Gbps RoCE。LLaMA-33B/65B/LLaMA3-70Bを評価。",
+    "quality_effect": "モデル演算自体は近似しないためモデル品質の交換条件はない。主な交換条件はネットワーク・スケジューリングによるTBT増加と、より大きいバッチによる遅延増加。",
+    "source": "https://arxiv.org/abs/2405.01814",
+    "sources": [
+      "https://arxiv.org/abs/2405.01814",
+      "https://arxiv.org/html/2405.01814v2"
+    ],
+    "code": "",
+    "last_checked": "2026-09-20",
+    "references": [
+      "DistServe",
+      "Splitwise",
+      "Orca",
+      "vLLM / PagedAttention",
+      "FlexGen",
+      "TensorRT-LLM",
+      "Megatron-LM"
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 59
+  },
+  "reservation": {
+    "claim_id": "claim-edf3b0211a56780fb89a02c1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
