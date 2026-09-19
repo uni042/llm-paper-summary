@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:17:35 JST**
+> 自動生成: **2026-09-20 04:17:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **101** |
+| 収録候補論文 | **100** |
 | 未claim Research job | **96** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-20 04:13:06 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-20 04:17:50 JST（5秒前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **101** |
+| canonical_id確認済みの一意な候補論文 | **100** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **101** |
+| 非終端Research job合計 | **100** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **2** | **0** | **5** | **0** | — |
+| Research | **11** | **3** | **2** | **0** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **23** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **33** | **4** | **3** | **0** | **5** | **0** | **5** |
+| 合計 | **34** | **4** | **3** | **0** | **4** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 04:17:50 JST** [research] `arXiv:2205.14135` — FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+  - job: `.survey/work-queue/jobs/job-research-25491a773c352e2c.json`
+  - result: `.survey/work-queue/results/research/attempt-210ab028fb8916623648a61a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-210ab028fb8916623648a61a.json`
+  - paper: `papers/inference/09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md`
 - **09-20 04:13:06 JST** [research] `arXiv:2609.13537` — Dynamic HBM Repartitioning for Multi-Turn MoE Serving
   - job: `.survey/work-queue/jobs/job-research-1182cce822dbe6dc.json`
   - result: `.survey/work-queue/results/research/attempt-cdfba8deb741b6462d744e41.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md`
-- **09-19 22:36:16 JST** [research] `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
-  - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
-  - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md`
 
 ### Audit
 
@@ -185,10 +185,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **0件**
-- `arXiv:2205.14135` — FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:16:29 JST** / heartbeat: **—** / lease expiry: **09-20 05:46:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-25491a773c352e2c.json`
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
@@ -220,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **101** |
+| ready | **100** |
 
 ### 候補の重複・識別情報欠損
 
@@ -240,7 +237,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **774** |
+| inference/training/survey配下の論文Markdown実体 | **775** |
 
 ### immutable submissionの未照合
 
@@ -248,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **659** |
-| └ Research | **498** |
+| 成功result未照合のimmutable submission | **658** |
+| └ Research | **497** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
