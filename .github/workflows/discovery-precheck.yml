@@ -1,0 +1,119 @@
+name: Discovery precheck gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/discovery-precheck/requests/*.json'
+  workflow_dispatch:
+    inputs:
+      request:
+        description: 'Repository-relative Discovery precheck request path'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discovery-precheck-main
+  cancel-in-progress: false
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Process unsettled Discovery precheck requests
+        shell: bash
+        env:
+          MANUAL_REQUEST: ${{ inputs.request }}
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-discovery-precheck[bot]'
+          git config user.email 'survey-discovery-precheck[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            rm -rf /tmp/discovery-identities
+            rm -f /tmp/discovery-rejections.json
+            python .survey/scripts/build_discovery_identity_snapshot.py \
+              --root .survey \
+              --output /tmp/discovery-identities \
+              --source-commit "$(git rev-parse HEAD)"
+            python .survey/scripts/build_discovery_rejection_ledger.py \
+              --root .survey \
+              --output /tmp/discovery-rejections.json
+
+            mapfile -t requests < <(
+              find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
+            )
+
+            if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
+              requests=("$MANUAL_REQUEST")
+            fi
+
+            processed=0
+            failures=0
+            for request in "${requests[@]:-}"; do
+              [ -n "$request" ] || continue
+              case "$request" in
+                .survey/work-queue/discovery-precheck/requests/*.json) ;;
+                *) echo "Unsupported precheck request path: $request" >&2; exit 2 ;;
+              esac
+              name="$(basename "$request")"
+              result=".survey/work-queue/discovery-precheck/results/$name"
+              if [ -f "$result" ]; then
+                continue
+              fi
+              mkdir -p "$(dirname "$result")"
+              if python .survey/scripts/process_discovery_precheck.py \
+                --request "$request" \
+                --result "$result" \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json; then
+                :
+              else
+                failures=1
+              fi
+              processed=$((processed + 1))
+            done
+
+            if [ "$processed" -eq 0 ]; then
+              echo 'No unsettled Discovery precheck requests remain.'
+              exit 0
+            fi
+
+            git add .survey/work-queue/discovery-precheck/results
+            git commit -m 'survey: publish discovery precheck results'
+
+            if git push origin HEAD:main; then
+              if [ "$failures" -ne 0 ]; then
+                echo 'One or more precheck failures were persisted with recovery guidance.' >&2
+                exit 1
+              fi
+              exit 0
+            fi
+
+            echo "Precheck push race on attempt ${attempt}; recomputing from latest main."
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to publish Discovery precheck results after retries.' >&2
+          exit 1

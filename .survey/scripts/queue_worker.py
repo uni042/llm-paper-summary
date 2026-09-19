@@ -36,6 +36,17 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
+DISCOVERY_PRECHECK_CUTOVER = datetime.fromisoformat("2026-09-20T01:00:00+09:00")
+
+
+class DiscoveryPrecheckError(ValueError):
+    """Future Discovery submissions must prove they passed the canonical retrieval gate."""
+
+    def __init__(self, code: str, message: str, *, next_action: str, recovery_steps: list[str]):
+        super().__init__(message)
+        self.code = code
+        self.next_action = next_action
+        self.recovery_steps = list(recovery_steps)
 
 DISCOVERY_INSTRUCTIONS = (
     "Search primary sources for strong LLM inference-system papers not already "
@@ -253,6 +264,138 @@ def is_discovery_round_submission(sub: dict) -> bool:
         if not isinstance(value, str) or not value.strip():
             return False
     return True
+
+
+def _discovery_precheck_required(sub: dict) -> bool:
+    """Require the canonical precheck for new runs without breaking historical submissions."""
+    meta = sub.get("discovery_stats") if isinstance(sub.get("discovery_stats"), dict) else {}
+    run_key = str(meta.get("run_key") or "").strip()
+    try:
+        parsed = datetime.fromisoformat(run_key.replace("Z", "+00:00"))
+    except ValueError:
+        # Historical run keys were not always ISO timestamps. Keep them readable.
+        return isinstance(sub.get("discovery_precheck"), dict)
+    if parsed.tzinfo is None:
+        return isinstance(sub.get("discovery_precheck"), dict)
+    return parsed >= DISCOVERY_PRECHECK_CUTOVER
+
+
+def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
+    return DiscoveryPrecheckError(
+        "discovery_precheck_required",
+        reason,
+        next_action=(
+            "Route raw search results through the Discovery precheck gate, evaluate only the returned "
+            "results[], then create a NEW immutable Discovery submission that references that result."
+        ),
+        recovery_steps=[
+            "Do not edit or overwrite the failed Discovery submission.",
+            "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with operation "
+            "'precheck_discovery_candidates', request_id, the same run_key/axis, and raw search records.",
+            "Wait for .survey/work-queue/discovery-precheck/results/<same-name>.json with ok=true.",
+            "Evaluate only records in that result's results[] array; filtered records must not be re-added.",
+            "Create a NEW submit_discovery_round submission and set discovery_precheck.request_id, "
+            "discovery_precheck.result_path, and discovery_precheck.receipt from the successful result.",
+        ],
+    )
+
+
+def _precheck_result_has_workflow_provenance(result_path: PurePosixPath) -> bool:
+    """Accept only result files committed by the dedicated precheck workflow bot."""
+    import subprocess
+
+    proc = subprocess.run(
+        ["git", "log", "-1", "--format=%ae", "--", result_path.as_posix()],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    return proc.returncode == 0 and proc.stdout.strip() == "survey-discovery-precheck[bot]@users.noreply.github.com"
+
+
+def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
+    """Verify that a new Discovery payload can only contain records emitted by precheck."""
+    if not _discovery_precheck_required(sub):
+        return None
+
+    proof = sub.get("discovery_precheck")
+    if not isinstance(proof, dict):
+        raise _precheck_guidance("Discovery precheck receipt is required for this run.")
+
+    request_id = str(proof.get("request_id") or "").strip()
+    result_path_value = str(proof.get("result_path") or "").strip()
+    receipt = str(proof.get("receipt") or "").strip()
+    if not request_id or not result_path_value or not receipt:
+        raise _precheck_guidance(
+            "discovery_precheck must include request_id, result_path, and receipt from a successful precheck result."
+        )
+
+    result_path = PurePosixPath(result_path_value)
+    expected_prefix = (".survey", "work-queue", "discovery-precheck", "results")
+    if (
+        result_path.is_absolute()
+        or ".." in result_path.parts
+        or len(result_path.parts) != 5
+        or result_path.parts[:4] != expected_prefix
+        or result_path.suffix != ".json"
+    ):
+        raise _precheck_guidance(
+            "discovery_precheck.result_path must point to .survey/work-queue/discovery-precheck/results/<name>.json."
+        )
+
+    result = read_json(ROOT.parent / Path(result_path.as_posix()), {}) or {}
+    if not result:
+        raise _precheck_guidance(
+            "Referenced Discovery precheck result does not exist yet. Wait for the precheck workflow result before submitting candidates."
+        )
+    if not _precheck_result_has_workflow_provenance(result_path):
+        raise _precheck_guidance(
+            "Referenced Discovery precheck result was not committed by the dedicated precheck workflow. "
+            "Do not hand-write or copy result files; create a request and use the workflow-produced result."
+        )
+    if result.get("ok") is not True:
+        raise _precheck_guidance(
+            "Referenced Discovery precheck result is not successful. Follow its recovery_steps and create a new request."
+        )
+    if result.get("operation") != "precheck_discovery_candidates":
+        raise _precheck_guidance("Referenced result is not a Discovery precheck result.")
+    if str(result.get("request_id") or "") != request_id:
+        raise _precheck_guidance("Discovery precheck request_id does not match the referenced result.")
+    if str(result.get("receipt") or "") != receipt:
+        raise _precheck_guidance("Discovery precheck receipt does not match the referenced result.")
+
+    meta = sub.get("discovery_stats") if isinstance(sub.get("discovery_stats"), dict) else {}
+    if str(result.get("run_key") or "") != str(meta.get("run_key") or ""):
+        raise _precheck_guidance("Discovery precheck run_key does not match this Discovery round.")
+    if str(result.get("axis") or "") != str(meta.get("axis") or ""):
+        raise _precheck_guidance("Discovery precheck axis does not match this Discovery round.")
+
+    allowed_rows = result.get("allowed_records")
+    if not isinstance(allowed_rows, list):
+        raise _precheck_guidance("Discovery precheck result is missing allowed_records.")
+    allowed_token_sets: list[set[str]] = []
+    for row in allowed_rows:
+        if not isinstance(row, dict):
+            continue
+        values = row.get("identity_tokens")
+        if isinstance(values, list):
+            token_set = {value for value in values if isinstance(value, str) and value}
+            if token_set:
+                allowed_token_sets.append(token_set)
+
+    bypassed: list[str] = []
+    for candidate in sub.get("candidates") or []:
+        tokens = paper_identity.identity_tokens(candidate)
+        if not tokens or not any(tokens & allowed for allowed in allowed_token_sets):
+            bypassed.append(
+                str(candidate.get("canonical_id") or candidate.get("title") or candidate_key(candidate) or "<unknown>")
+            )
+    if bypassed:
+        sample = ", ".join(bypassed[:5])
+        raise _precheck_guidance(
+            "Discovery submission contains candidate(s) not emitted by the referenced precheck result: " + sample
+        )
+    return result
 
 
 def discovery_ingest_job(source_submission: str, submitted_job_id: str | None = None, template_job: dict | None = None) -> dict:
@@ -532,6 +675,7 @@ def process_discovery(sub: dict, job: dict, st: dict):
         raise ValueError("candidates must be a list")
     if len(candidates) > MAX_DISCOVERY_CANDIDATES:
         raise ValueError("discovery submission may contain at most 5 candidates")
+    precheck_result = validate_discovery_precheck(sub)
     seen = existing_candidate_keys()
     represented_resolver = existing_represented_resolver()
     accepted_records: list[dict[str, Any]] = []
@@ -567,6 +711,9 @@ def process_discovery(sub: dict, job: dict, st: dict):
         "final_duplicate_filtered_count": final_duplicate_filtered_count,
         "research_jobs_added": added,
     }
+    if precheck_result is not None:
+        job["result_summary"]["precheck_request_id"] = precheck_result.get("request_id")
+        job["result_summary"]["precheck_snapshot_source_commit"] = precheck_result.get("snapshot_source_commit")
     st["stats"]["discovered"] += len(candidates)
     st["stats"]["selected"] += added
     record_discovery_stats(
@@ -810,6 +957,11 @@ def process_submissions(st: dict):
             result.update({"ok": True, "job_id": jid, "job_type": job["type"], "artifact": artifact, "job_status": job.get("status")})
         except Exception as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"
+            if isinstance(exc, DiscoveryPrecheckError):
+                result["error_code"] = exc.code
+                result["retryable"] = True
+                result["next_action"] = exc.next_action
+                result["recovery_steps"] = exc.recovery_steps
         write_json(rp, result)
 
 
