@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:17:33 JST**
+> 自動生成: **2026-09-20 00:18:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 23:39:47 JST（37分前）** |
-| 整合性異常 | **4** |
+| 最終検証済みResearch収録 | **09-19 23:39:47 JST（38分前）** |
+| 整合性異常 | **5** |
 
 ## 現在の収録候補
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **16** | **4** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **69** | **4** | **4** | **0** | **0** | **0** | **8** |
-| 合計 | **85** | **8** | **6** | **0** | **0** | **0** | **8** |
+| Discovery | **69** | **1** | **0** | **1** | **0** | **0** | **1** |
+| 合計 | **85** | **5** | **2** | **1** | **0** | **0** | **1** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -175,25 +175,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-20 00:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **8件**
-- 探索軸: 2026-09中旬の新着memory/offload/MoE/inference-engineering systems / 2609後半のKV圧縮・speculative decoding・RL rollout acceleration / cross-datacenter prefill/decode disaggregationとWAN KV transfer / GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張
-- round `specialist-recent-memory-systems-1` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json`
-  - 探索軸: 2026-09中旬の新着memory/offload/MoE/inference-engineering systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json` (`ok=true`)
-- round `specialist-kv-specdecode-2` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260920T0014JST-discovery-specialist-kv-specdecode-2.json`
-  - 探索軸: 2609後半のKV圧縮・speculative decoding・RL rollout acceleration
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0014JST-discovery-specialist-kv-specdecode-2.json` (`ok=true`)
-- round `specialist-cross-dc-disagg-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json`
-  - 探索軸: cross-datacenter prefill/decode disaggregationとWAN KV transfer
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json` (`ok=true`)
-- round `specialist-edge-measurement-4` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260920T0022JST-discovery-specialist-edge-measurement-4.json`
-  - 探索軸: GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0022JST-discovery-specialist-edge-measurement-4.json` (`ok=true`)
+- 最新観測run: **2026-09-20 00:16 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **1件**
+- 探索軸: validation-precheck-gate
+- round `validation-bypass` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
+  - 探索軸: validation-precheck-gate
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -248,10 +236,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **629** |
+| 成功result未照合のimmutable submission | **630** |
 | └ Research | **482** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
+| └ Other/Unknown | **1** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -268,10 +257,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **4** |
+| 対応jobなしsubmission（有効Discovery round除外） | **5** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **4** |
+| 異常レコード合計（重複排除） | **5** |
 
 ### 対応jobなしsubmissionの診断対象
 
@@ -281,6 +270,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - `.survey/work-queue/submissions/20260919T1700JST-round10-rdma-network.json`
 - `.survey/work-queue/submissions/20260919T1700JST-round11-recent-crosscheck.json`
 - `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
+- `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
 
 ### このSTATUSが採用する証拠
 
