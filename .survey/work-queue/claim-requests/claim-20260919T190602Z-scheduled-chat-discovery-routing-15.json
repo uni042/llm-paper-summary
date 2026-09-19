@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "request_id": "claim-20260919T190602Z-scheduled-chat-discovery-routing-15",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "requested_at": "2026-09-19T19:06:02Z",
+  "max_jobs": 1,
+  "job_types": ["research", "audit"],
+  "checkpointed_jobs": [
+    {
+      "job_id": "job-research-0e84e93a7c48f41f",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/attempt-419c292422737fc99e76b4d3.json"
+    }
+  ]
+}
