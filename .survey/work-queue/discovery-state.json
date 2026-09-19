@@ -1,35 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T09:02:57+00:00",
-  "last_run_key": "2026-09-19T17:00:00+09:00",
-  "last_round": "specialist-heterogeneous-runtime-7",
+  "updated_at": "2026-09-19T10:00:28+00:00",
+  "last_run_key": "2026-09-19T19:00:00+09:00",
+  "last_round": "specialist-elastic-kv-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
+  "consecutive_empty_rounds": 3,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T10:16:01+09:00",
-      "round": "specialist-new-systems-1",
-      "axis": "新着LLM推論システム・通信／疎注意／多ターンKV",
-      "query_summary": "2026年9月の新着推論システムを、フォトニック相互接続、長文脈疎注意カーネル、多ターンKVキャッシュ容量設計へ広げて軽量評価し、既存identity/jobとの重複を投入直前に再確認した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 3,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.5714285714285714,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.11133",
-        "arXiv:2609.10790",
-        "arXiv:2609.00407",
-        "arXiv:2609.03515"
-      ],
-      "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す",
-      "source_submission": "work-queue/submissions/20260913T1019JST-discovery-specialist-new-systems-1.json"
-    },
     {
       "run_key": "2026-09-13T10:16:01+09:00",
       "round": "specialist-runtime-communication-2",
@@ -7199,6 +7179,30 @@
       ],
       "next_axis_hint": "次はSmartNIC/CPU-free serving、peer-GPU memory pooling、または古い基礎systemの収録漏れへ移る",
       "source_submission": "work-queue/submissions/20260919T1834JST-discovery-specialist-heterogeneous-runtime-7.json"
+    },
+    {
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "round": "specialist-elastic-kv-1",
+      "axis": "KV cache dynamic reclamation / CUDA virtual memory / serving memory management",
+      "query_summary": "Searched recent LLM serving KV-cache memory-management work after excluding recent high-overlap hierarchical-memory and heterogeneous-runtime axes. arXiv:2608.23658 was not found in repository code search and was selected based on its implemented CUDA VMM mechanism and measured serving evaluation.",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2608.23658"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2607.16892",
+        "arXiv:2606.06302"
+      ],
+      "next_axis_hint": "Move to GPU memory allocator / virtual-memory / paging work adjacent to serving, then recent scheduler-memory co-design rather than repeating heterogeneous KV tiering.",
+      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json"
     }
   ],
   "axes": {
@@ -12981,6 +12985,19 @@
       "duplicate_ratio": 0.5,
       "final_duplicate_ratio": 0.5,
       "next_axis_hint": "次はSmartNIC/CPU-free serving、peer-GPU memory pooling、または古い基礎systemの収録漏れへ移る"
+    },
+    "KV cache dynamic reclamation / CUDA virtual memory / serving memory management": {
+      "last_run_key": "2026-09-19T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "Move to GPU memory allocator / virtual-memory / paging work adjacent to serving, then recent scheduler-memory co-design rather than repeating heterogeneous KV tiering."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
