@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:06:42 JST**
+> 自動生成: **2026-09-19 22:10:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **47** |
+| 収録候補論文 | **51** |
+| 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（14分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（17分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **51** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **51** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **57** | **18** | **2** | **16** | **0** | **0** | **30** |
-| 合計 | **69** | **21** | **4** | **16** | **0** | **0** | **30** |
+| Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
+| 合計 | **85** | **21** | **20** | **0** | **0** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -113,38 +113,38 @@
   - result: `.survey/work-queue/results/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json`
   - 探索軸: 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer
-- **09-19 21:04:01 JST** job `job-3cd73ee92069ad52` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json`
-  - 探索軸: resource-fair batching・prefix-aware batching
-- **09-19 21:03:23 JST** job `job-1012bfac264d4ba9` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json`
-  - 探索軸: CXL near-data processing・MoE predictive expert replication
-- **09-19 21:02:38 JST** job `job-ead12281e8e06aef` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-cxl-flash-moe-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-flash-moe-5.json`
-  - 探索軸: CXL-hybrid KV memory・SSD-backed MoE expert cache
-- **09-19 21:02:45 JST** job `job-a42c97f37f2421ce` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-local-runtime-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-local-runtime-4.json`
-  - 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime
-- **09-19 21:02:52 JST** job `job-7a6ebdb83b96de6c` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-pd-agent-runtime-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-pd-agent-runtime-3.json`
-  - 探索軸: disaggregated prefill deflection・agent-aware serving runtime
-- **09-19 21:03:00 JST** job `job-d95074768a0a885f` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-runtime-hardware-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-runtime-hardware-2.json`
-  - 探索軸: page-aware decode runtime・non-GPU accelerator serving field study
-- **09-19 21:03:30 JST** job `job-e32795a218109c68` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-sparse-kv-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-sparse-kv-7.json`
-  - 探索軸: retrieval sparse attention・hierarchical KV memory・segment-level KV reuse
-- **09-19 21:01:01 JST** job `job-80340174f4bc603a` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-ssd-moe-routing-1.json`
-  - 探索軸: SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
+- **09-19 22:05:56 JST** job `job-67ae7b496b5c69d3` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2222JST-discovery-specialist-thermal-energy-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2222JST-discovery-specialist-thermal-energy-3.json`
+  - 探索軸: 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control
+- **09-19 22:06:07 JST** job `job-9fb882aadab65802` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260919T2228JST-discovery-specialist-kernel-runtime-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2228JST-discovery-specialist-kernel-runtime-4.json`
+  - 探索軸: GPU kernel/runtime・quantized execution・CUDA graph
+- **09-19 22:06:17 JST** job `job-e734620a0895b582` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260919T2234JST-discovery-specialist-collectives-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2234JST-discovery-specialist-collectives-5.json`
+  - 探索軸: distributed inference collective communication・runtime adaptation・interconnect
+- **09-19 22:06:27 JST** job `job-8fd3acc28169d9bb` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2240JST-discovery-specialist-lora-serving-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2240JST-discovery-specialist-lora-serving-6.json`
+  - 探索軸: multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing
+- **09-19 22:06:37 JST** job `job-e2622e1e043df78b` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T2246JST-discovery-specialist-vmm-memory-7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2246JST-discovery-specialist-vmm-memory-7.json`
+  - 探索軸: GPU virtual memory・KV fragmentation・memory allocator lineage
+- **09-19 22:06:48 JST** job `job-169a24322b788066` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T2252JST-discovery-specialist-agent-kvflow-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2252JST-discovery-specialist-agent-kvflow-8.json`
+  - 探索軸: agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy
+- **09-19 22:06:58 JST** job `job-c665f7764fe4adc2` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T2257JST-discovery-specialist-mobile-runtime-9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2257JST-discovery-specialist-mobile-runtime-9.json`
+  - 探索軸: edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding
+- **09-19 22:07:08 JST** job `job-661e44d354be132d` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2303JST-discovery-specialist-speculative-serving-10.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2303JST-discovery-specialist-speculative-serving-10.json`
+  - 探索軸: speculative decoding serving・draft/verification disaggregation・runtime scheduling
 
 ### 直近タスク
 
@@ -174,7 +174,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 22:00 JST**
-- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **16件** / 候補: **30件**
+- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **18件** / 個別result照合: **18件** / 個別result未照合: **0件** / 候補: **30件**
 - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control / GPU kernel/runtime・quantized execution・CUDA graph / distributed inference collective communication・runtime adaptation・interconnect / multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing / GPU virtual memory・KV fragmentation・memory allocator lineage / agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy / edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding / speculative decoding serving・draft/verification disaggregation・runtime scheduling / CPU/GPU heterogeneous KV offload・PCIe zero-copy・GPU-centric synchronization / serverless model loading・cold start・LoRA artifact sharing / long-context sparse attention・HBM/DRAM KV offload・lookahead prefetch / LLM serving autoscaling・P/D burst handling・SLO-aware provisioning / heterogeneous GPU serving・fine-grained dynamic parallelism・online dispatch / fault tolerance/recovery・hardware-aware multi-LLM routing / workload-aware runtime adaptation・quantized layer swapping・KV resizing / SLO-aware admission control・adaptive batching・augmented request scheduling
 - round `specialist-flash-agent-runtime-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
@@ -187,35 +187,35 @@
 - round `specialist-thermal-energy-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2222JST-discovery-specialist-thermal-energy-3.json`
   - 探索軸: 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2222JST-discovery-specialist-thermal-energy-3.json` (`ok=true`)
 - round `specialist-kernel-runtime-4` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T2228JST-discovery-specialist-kernel-runtime-4.json`
   - 探索軸: GPU kernel/runtime・quantized execution・CUDA graph
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2228JST-discovery-specialist-kernel-runtime-4.json` (`ok=true`)
 - round `specialist-collectives-5` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T2234JST-discovery-specialist-collectives-5.json`
   - 探索軸: distributed inference collective communication・runtime adaptation・interconnect
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2234JST-discovery-specialist-collectives-5.json` (`ok=true`)
 - round `specialist-lora-serving-6` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2240JST-discovery-specialist-lora-serving-6.json`
   - 探索軸: multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2240JST-discovery-specialist-lora-serving-6.json` (`ok=true`)
 - round `specialist-vmm-memory-7` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T2246JST-discovery-specialist-vmm-memory-7.json`
   - 探索軸: GPU virtual memory・KV fragmentation・memory allocator lineage
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2246JST-discovery-specialist-vmm-memory-7.json` (`ok=true`)
 - round `specialist-agent-kvflow-8` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T2252JST-discovery-specialist-agent-kvflow-8.json`
   - 探索軸: agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2252JST-discovery-specialist-agent-kvflow-8.json` (`ok=true`)
 - round `specialist-mobile-runtime-9` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T2257JST-discovery-specialist-mobile-runtime-9.json`
   - 探索軸: edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2257JST-discovery-specialist-mobile-runtime-9.json` (`ok=true`)
 - round `specialist-speculative-serving-10` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2303JST-discovery-specialist-speculative-serving-10.json`
   - 探索軸: speculative decoding serving・draft/verification disaggregation・runtime scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2303JST-discovery-specialist-speculative-serving-10.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -242,7 +242,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **51** |
 
 ### 候補の重複・識別情報欠損
 
@@ -270,10 +270,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **638** |
+| 成功result未照合のimmutable submission | **622** |
 | └ Research | **475** |
 | └ Audit | **2** |
-| └ Discovery | **161** |
+| └ Discovery | **145** |
 
 ### 厳格検証が未成立のcompleted job
 
