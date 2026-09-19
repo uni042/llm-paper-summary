@@ -87,18 +87,22 @@ target_unseen: 20
 
 ### 4.1 探索方法
 
-次の4経路はすべて同じschema v3 precheckを通す。
+次の4経路はすべて同じschema v3 precheckを通すが、**実行順序は固定**する。
 
-1. 通常検索・新着検索: OpenAlex / Semantic Scholar等の固定検索URL。
-2. backward reference（収録論文が引用している論文）: `openalex_references` 等、参照先を列挙できる固定ソース。
-3. forward citation（収録論文を引用している論文）: OpenAlex等の被引用検索を固定ソースとして指定。
-4. structured-reference curation（収録済み論文の構造化 `references` 全体から未収録候補を掘る）: `provider: repository_references`、`source_url: repository://structured-references` を使う任意の探索軸。
+1. **最優先・毎runの初手**: structured-reference curation。収録済み論文の構造化 `references` 全体から未収録候補を掘る。必ず `provider: repository_references`、`source_url: repository://structured-references`、原則 `target_unseen: 20` を使う。
+2. 通常検索・新着検索: OpenAlex / Semantic Scholar等の固定検索URL。
+3. backward reference（収録論文が引用している論文）: `openalex_references` 等、参照先を列挙できる固定ソース。
+4. forward citation（収録論文を引用している論文）: OpenAlex等の被引用検索を固定ソースとして指定。
 
-OpenAlexで直接ページ送り・引用関係を取得できる場合はOpenAlexを優先してよい。提供元を変える場合は別探索軸として記録する。
+**structured-reference curation が候補を1件でも返す限り、2〜4へ切り替えない。** 次回Discovery runも再び1から開始し、無関係・微妙・Research化済み候補が除外された後の次の山を掘る。
+
+2〜4の従来探索へ移ってよいのは、そのrunの最初に実行した `repository_references` precheckが `unseen_result_count=0` かつ `provider_exhausted=true` を返した場合だけ。その場合、従来providerを使うDiscovery submissionには、0件だったprecheckの `request_id` / `result_path` / `receipt` を `reference_pool_fallback` として添付する。ゲートがこの証明を検証し、山が残っているのに従来探索へ迂回したsubmissionは拒否する。
+
+OpenAlexで直接ページ送り・引用関係を取得できる場合でも、`repository_references` が0件になった後のフォールバックとして使う。提供元を変える場合は別探索軸として記録する。
 
 #### 4.1.1 structured-reference curation の進め方
 
-この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを上限の目安としてよい。
+この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを処理する。**この候補集合が空になるまで、Discovery runごとにこの経路を繰り返す。**
 
 - 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文に加え、`.survey/work-queue/reference-curation/unrelated-papers.json` と `.survey/work-queue/reference-curation/borderline-papers.json` の登録済み候補を通常時は除外する。
 - **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で無関係台帳へ永続保存する。同じ論文を後続runで再判定しない。
@@ -129,7 +133,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` → `claim_worker_with_banks.py` の順へ戻る。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
 
-1探索軸が0件、全重複、低採用率、単一provider障害でも、それだけでrunを終わらせない。通常検索、forward citation、backward reference、隣接分野、query family、providerを切り替える。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
+`repository_references` が候補を返したrunでは、採用0件・低採用率でも従来探索へ切り替えず、分類結果を台帳へ保存して次runも同じ山を掘る。そのrun最初の `repository_references` が0件かつprovider exhaustedだった場合だけ、通常検索、forward citation、backward reference、隣接分野、query family、providerへ切り替える。単一provider障害は「0件」とみなさない。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
 
 ## 5. 重複排除
 
