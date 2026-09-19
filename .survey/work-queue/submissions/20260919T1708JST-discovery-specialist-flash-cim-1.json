@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.16161",
+      "title": "LLM Inference in a Flash!",
+      "source_url": "https://arxiv.org/abs/2609.16161",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.16161-llm-inference-in-a-flash.md",
+      "priority": 92,
+      "reason": "Compute-in-FlashをLLM推論へ適用し、整数のみの量子化とdictionary-based KV cache compressionでFlash近傍計算の制約と書込耐久性を同時に扱う。Llama-3.1-8B/Qwen-2.5-7BでKV cache trafficを15倍削減しており、SSD/Flash活用・階層メモリという重点テーマに直接該当する。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2609.10266",
+      "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+      "source_url": "https://arxiv.org/abs/2609.10266",
+      "rejection_reason": "KV再利用の評価基盤・ベンチマークとして有用だが、主寄与は既存repair手法の統一評価とleaderboardであり、新しい推論システム機構そのものではないため今回のsystems候補から除外。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-flash-cim-1",
+    "axis": "Compute-in-Flash・SSD/Flash近傍計算・KV圧縮",
+    "query_summary": "2026年9月のLLM inference memory/offload/KV系新着を検索し、一次arXiv抄録で軽量評価。既知のTutti/SwiftCache/Robust KV等を早期除外し、2609.16161は最新mainのrepo検索で未登録を再確認。KVShareArenaはbenchmark中心のため不採用として記録した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2605.03375","arXiv:2606.16135","arXiv:2607.16892","arXiv:2603.17456"],
+    "next_axis_hint": "MoE expert placement/cache、GPU runtime、network/collective、energy-aware servingへ独立軸を切り替える",
+    "empty_round_reason": null
+  }
+}
