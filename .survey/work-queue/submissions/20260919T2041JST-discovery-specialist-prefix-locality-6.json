@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2501.08192",
+      "title": "PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2501.08192",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2501.08192-preserve-prefetch-weights-kv-collectives.md",
+      "priority": 82,
+      "reason": "model weight/KV cacheのmemory readをcollective communicationと重ねるprefetch frameworkで、commercial accelerator上で最大1.6倍end-to-end speedupを報告。通信待ち時間をmemory transferの隠蔽へ転用する点が、offloadとdistributed servingの境界を埋める。"
+    },
+    {
+      "canonical_id": "arXiv:2501.14312",
+      "title": "Locality-aware Fair Scheduling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2501.14312",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling.md",
+      "priority": 81,
+      "reason": "prefix localityとclient fairnessを同時に扱うDLPM/D2LPM schedulingを提案し、distributed setupでfairness・locality・load balancingを統合。VTC比throughput最大2.87倍、既存distributed serving比client latency最大7.18倍改善を示し、prefix cacheを含む公平スケジューリング系統の重要候補。"
+    },
+    {
+      "canonical_id": "arXiv:2505.21889",
+      "title": "EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2505.21889",
+      "paper_path": "papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+      "priority": 77,
+      "reason": "infilling promptのprefix/suffix構造でKV reuseが崩れる問題に対しprompt formatとfragment tokenization trainingを共同設計。2モデルでlatency 52%削減、throughput 98%改善を報告し、一般prefix cacheとは異なるinfilling特有のcross-request reuseを扱う。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-prefix-locality-6",
+    "axis": "prefix locality・fair scheduling・KV reuse・communication-overlap prefetch",
+    "query_summary": "最近論文の高重複を避け、2025年の重要欠落を期間軸で探索。distributed prefetch、locality-aware fairness、infilling KV reuseの3件を一次資料抄録で評価し、default branch canonical ID検索で未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2407.00023"],
+    "next_axis_hint": "次はedge/on-device CPU-GPU offload、unified memory、mobile inference runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
