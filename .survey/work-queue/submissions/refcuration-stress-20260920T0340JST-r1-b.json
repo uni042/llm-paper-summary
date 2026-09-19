@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2408.00741",
+      "arxiv_id": "2408.00741",
+      "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency",
+      "source_url": "https://arxiv.org/abs/2408.00741",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+      "priority": 94,
+      "reason": "Cluster-level LLM inference system jointly targeting performance and energy efficiency through workload-aware resource orchestration."
+    },
+    {
+      "canonical_id": "arXiv:2407.11550",
+      "arxiv_id": "2407.11550",
+      "title": "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2407.11550",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+      "priority": 92,
+      "reason": "Focused KV-cache eviction method with adaptive per-head budget allocation, directly relevant to constrained long-context inference."
+    },
+    {
+      "canonical_id": "arXiv:2404.14294",
+      "arxiv_id": "2404.14294",
+      "title": "A Survey on Efficient Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.14294",
+      "paper_path": "papers/survey/03-inference-engines/2024-2404.14294-survey-efficient-inference-llms.md",
+      "priority": 86,
+      "reason": "Broad but directly relevant efficient-inference survey spanning data-, model-, and system-level optimization with comparative experimental analysis."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-20260920T0340JST-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-20260920T0340JST-r1.json",
+    "receipt": "sha256:b587702739419731def5b014f6a7150934546fd2497f83abe2c711e9644be4e0"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20T0340JST",
+    "round": "refcuration-stress-r1-b",
+    "axis": "structured references relevance curation stress round 1",
+    "query_summary": "Stress-test round 1 over the second 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2408.00741",
+      "arXiv:2407.11550",
+      "arXiv:2404.14294"
+    ],
+    "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false."
+  }
+}
