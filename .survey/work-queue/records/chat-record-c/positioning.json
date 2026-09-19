@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-bbe39256ef1a577ca7b375df",
-  "job_id": "job-research-8f1455c9a8468d9c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bbe39256ef1a577ca7b375df",
-    "worker_id": "scheduled-chat-llm-survey-2130",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-bbe39256ef1a577ca7b375df","job_id":"job-research-8f1455c9a8468d9c","data":{"limitations":"現行評価はCXLカード6枚と最大12ノードで、数十〜数百ノードの集団通信は検証していない。CXLプールは少数ノード共有を想定しており、カード数を固定したままランク数を増やすと競合が急増する。現行GPUは転送方向ごとにDMAエンジンが一つで、複数CXL機器を並列に置いても単一GPUがPCIe Gen5 x16を完全には使えない。小メッセージではCUDAコピー起動・同期の固定費が大きく、InfiniBandより遅くなる場合がある。AllReduceではリング型の中間削減再利用がなく拡張性が弱い。","differences":"従来のCXL利用研究がメモリ拡張、分離メモリ、KVキャッシュの長期保管などを主用途とするのに対し、本研究は共有メモリプール自体をGPU集団通信のノード間媒体として扱う。RDMA型NCCLのネットワーク作業要求とコピー・通信パイプラインに対し、CXLのロード・ストア意味論、決定論的なデータ配置、共有ドアベルを用いる。単なる共有メモリ通信と異なり、集団通信固有の規則的アクセスを利用して機器競合を避け、チャンク単位で公開と取得を重ねる点が中心である。","implementation_status":"NCCL 2.28.3上の1020行実装で、3〜12ノードの実機CXL環境とH100で評価されている。論文は研究用途でByteDance技術へ未導入と明記する。公開ソースコードURLは一次資料から確認できなかった。","research_positioning":"LLMシステムの観点では、GPUメモリ階層そのものより、複数ノードへ広がった学習・推論の通信ボトルネックをCXLメモリプールで置換する研究に位置する。CXLをKVキャッシュや重みの退避先として使う系統と相補的で、同じ共有プールを容量資源だけでなく通信資源として活用できる可能性を示す。一方で大規模クラスタのInfiniBandを全面代替する証拠ではなく、少数ノード・大きな転送・十分なCXLカード帯域という適用範囲を明確に見る必要がある。"},"reservation":{"claim_id":"claim-bbe39256ef1a577ca7b375df","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
