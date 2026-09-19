@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:01:03 JST**
+> 自動生成: **2026-09-19 19:01:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **37** |
-| 未claim Research job | **37** |
+| 収録候補論文 | **38** |
+| 未claim Research job | **38** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 18:48:26 JST（12分前）** |
+| 最終検証済みResearch収録 | **09-19 18:48:26 JST（13分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **37** |
+| canonical_id確認済みの一意な候補論文 | **38** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **37** |
+| 非終端Research job合計 | **38** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **5** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **4** | **1** | **3** | **0** | **0** | **5** |
-| 合計 | **25** | **19** | **7** | **3** | **0** | **0** | **5** |
+| Discovery | **22** | **5** | **3** | **2** | **0** | **0** | **6** |
+| 合計 | **27** | **20** | **9** | **2** | **0** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -80,10 +80,18 @@
 
 ### Discovery
 
+- **09-19 19:01:01 JST** job `job-81062042be174d85` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
+  - 探索軸: CXL memory pooling / photonic fabric / NMP for hybrid LLM inference
 - **09-19 19:00:28 JST** job `job-6a54a063ec9c9c50` / 候補 **1件**
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-elastic-kv-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json`
   - 探索軸: KV cache dynamic reclamation / CUDA virtual memory / serving memory management
+- **09-19 19:01:11 JST** job `job-7181bafc0df2e4c1` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-nmp-memory-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-nmp-memory-2.json`
+  - 探索軸: near-memory processing / 3D DRAM / KV allocation co-design
 - **09-19 17:05:34 JST** job `job-287a4ddc76a7d8bf` / 候補 **0件**
   - result: `.survey/work-queue/results/20260919T1700JST-round09-os-pagecache.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
@@ -112,14 +120,6 @@
   - result: `.survey/work-queue/results/20260919T1719JST-discovery-specialist-disagg-network-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1719JST-discovery-specialist-disagg-network-3.json`
   - 探索軸: prefill/decode分離・WAN KV transfer・load-aware deflection
-- **09-19 17:06:25 JST** job `job-f8303ccd18e14095` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260919T1724JST-discovery-specialist-energy-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1724JST-discovery-specialist-energy-4.json`
-  - 探索軸: energy-aware serving・GPU power control
-- **09-19 17:06:35 JST** job `job-d87f2d548240d4a4` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T1729JST-discovery-specialist-heterogeneous-runtime-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1729JST-discovery-specialist-heterogeneous-runtime-5.json`
-  - 探索軸: CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving
 
 ### 直近タスク
 
@@ -169,12 +169,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **5件**
-- 探索軸: CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / near-memory processing / 3D DRAM / KV allocation co-design / prefill/decode fairness / adaptive batching / SLO scheduling
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **6件**
+- 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / near-memory processing / 3D DRAM / KV allocation co-design / prefill/decode fairness / adaptive batching / SLO scheduling
+- round `specialist-agent-scheduling-5` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
+  - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-cxl-nmp-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
   - 探索軸: CXL memory pooling / photonic fabric / NMP for hybrid LLM inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
 - round `specialist-elastic-kv-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json`
   - 探索軸: KV cache dynamic reclamation / CUDA virtual memory / serving memory management
@@ -182,7 +186,7 @@
 - round `specialist-nmp-memory-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-nmp-memory-2.json`
   - 探索軸: near-memory processing / 3D DRAM / KV allocation co-design
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-nmp-memory-2.json` (`ok=true`)
 - round `specialist-scheduling-4` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-scheduling-4.json`
   - 探索軸: prefill/decode fairness / adaptive batching / SLO scheduling
@@ -213,7 +217,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **37** |
+| ready | **38** |
 
 ### 候補の重複・識別情報欠損
 
@@ -241,10 +245,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **618** |
+| 成功result未照合のimmutable submission | **617** |
 | └ Research | **468** |
 | └ Audit | **2** |
-| └ Discovery | **148** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
