@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:04:39 JST**
+> 自動生成: **2026-09-19 19:05:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **39** |
 | 未claim Research job | **39** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 18:48:26 JST（16分前）** |
+| 最終検証済みResearch収録 | **09-19 18:48:26 JST（17分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **5** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **24** | **15** | **5** | **10** | **0** | **0** | **21** |
-| 合計 | **29** | **30** | **11** | **10** | **0** | **0** | **21** |
+| Discovery | **24** | **18** | **5** | **13** | **0** | **0** | **28** |
+| 合計 | **29** | **33** | **11** | **13** | **0** | **0** | **28** |
 
-- 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -169,8 +169,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **15件** / immutable submission: **15件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **10件** / 候補: **21件**
-- 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation / related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / online/offline co-serving / fine-grained GPU harvesting / preemption / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling
+- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **13件** / 候補: **28件**
+- 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation / related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / online/offline co-serving / fine-grained GPU harvesting / preemption / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration / multi-tenant performance isolation / adaptive persistent-kernel MoE serving / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / multi-LLM prewarming / shared decode execution / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling
 - round `specialist-agent-adjacent-14` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
   - 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation
@@ -203,13 +203,13 @@
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-energy-9.json`
   - 探索軸: thermal-aware / energy-aware LLM serving scheduling
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-moe-placement-8` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-moe-placement-8.json`
-  - 探索軸: MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache
+- round `specialist-heterocloud-17` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-heterocloud-17.json`
+  - 探索軸: heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-moe-prefetch-7` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-moe-prefetch-7.json`
-  - 探索軸: MoE expert prediction / prefetch / CPU-GPU offload
+- round `specialist-isolation-moe-16` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-isolation-moe-16.json`
+  - 探索軸: multi-tenant performance isolation / adaptive persistent-kernel MoE serving
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -265,10 +265,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **625** |
+| 成功result未照合のimmutable submission | **628** |
 | └ Research | **468** |
 | └ Audit | **2** |
-| └ Discovery | **155** |
+| └ Discovery | **158** |
 
 ### 厳格検証が未成立のcompleted job
 
