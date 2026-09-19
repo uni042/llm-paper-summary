@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:45:21 JST**
+> 自動生成: **2026-09-20 06:31:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **93** |
 | 未claim Research job | **93** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 05:45:06 JST（15秒前）** |
+| 最終検証済みResearch収録 | **09-20 05:45:06 JST（45分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **24** | **2** | **2** | **0** | **0** | **0** | **5** |
+| Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **19** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -133,18 +133,6 @@
   - result: `.survey/work-queue/results/manual-fixedsource-openalex-20260920T0159JST-round1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
   - 探索軸: OpenAlex search: LLM inference serving KV cache
-- **09-20 00:29:05 JST** job `job-d28909a47c5b1f9e` / 候補 **0件**
-  - result: `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
-  - 探索軸: validation-precheck-gate
-- **09-20 00:01:42 JST** job `job-5e05bc11371bf443` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json`
-  - 探索軸: 2026-09中旬の新着memory/offload/MoE/inference-engineering systems
-- **09-20 00:04:10 JST** job `job-2b02a086f7aef2f5` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260920T0014JST-discovery-specialist-kv-specdecode-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0014JST-discovery-specialist-kv-specdecode-2.json`
-  - 探索軸: 2609後半のKV圧縮・speculative decoding・RL rollout acceleration
 
 ### 直近タスク
 
