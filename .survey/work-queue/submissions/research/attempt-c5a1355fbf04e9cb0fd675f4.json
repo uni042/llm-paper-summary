@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-c5a1355fbf04e9cb0fd675f4",
+  "job_id": "job-research-9deede0a4d81ad54",
+  "claim_id": "claim-c5a1355fbf04e9cb0fd675f4",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "reason": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のretryではDOI 10.1109/LCA.2026.3660969、IEEE Xploreの公式PDF経路（arnumber=11371745）、題名完全一致、DOI完全一致、著者名を含む検索を独立に確認した。IEEE公式PDF/DOI経路は実行環境から本文取得不可だった。ResearchGateには同一論文の書誌・abstractがあるが明示的にNo full-text availableであり、一次資料全文ではない。検索結果ではIEEE Computer Architecture Letters 25(1):49-52、Minho Ha / Euiseok Kim / Hoshik Kim、最大2.69x throughput-per-powerというabstract由来情報までは確認できたが、全文精読要件を満たさない。FLINT等の後続一次論文や二次解説にはH3の追加設計記述があるが、H3本文の代替証拠には使用しなかった。全文未読のまま5-slotを推測生成していない。",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-27b000808907-h3-hybrid-architecture-using-high-bandwidth-memory-and-high-bandwidth-flash-for-cost-efficient-llm-inference.md"
+}
