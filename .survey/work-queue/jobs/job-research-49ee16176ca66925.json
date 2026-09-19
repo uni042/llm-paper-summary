@@ -8,14 +8,13 @@
   "source_url": "https://arxiv.org/abs/2401.11240",
   "paper_path": "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md",
   "selection_reason": "LoRA adapter servingでCPU-assisted execution、rank-aware scheduling、custom CUDA operatorsを用いてcold adapter loadingとheterogeneous rankを扱う。multi-adapter serving lineageの比較対象としてChameleon等の前史を補完する。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-16T19:06:02+00:00",
-  "completed_at": "2026-09-19T02:20:06+00:00",
   "blocker": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2401.11240 を対象に、GitHub横断検索でarXiv PDF/absへの参照、LoRA serving paper list、CaraServe技術ノートまでは確認したが、著者公式またはarXiv一次本文の取得可能コピーは得られなかった。arXiv PDFの直接取得も試みたが、実行基盤が『URLをweb.runで先に開く必要がある』として拒否し、その時点でweb取得系は明示的な呼出し上限に達しており追加の一次資料経路を安全に開けなかった。二次ノートや検索断片から5-slotを推測生成していない。この取得制約は今回runの一次資料取得系に対する実際のplatform/tool limitだが、GitHub正本操作自体は継続可能であるためwhole-run failureにはせず、論文単位を一時blockedとして保存する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-a1bac985be00bf6316d3c783.json",
   "blocked_attempts": 1,
@@ -28,5 +27,5 @@
     }
   ],
   "last_blocked_at": "2026-09-19T02:20:06+00:00",
-  "retry_not_before": "2026-09-19T07:34:33+00:00"
+  "retry_queued_at": "2026-09-19T08:04:52+00:00"
 }

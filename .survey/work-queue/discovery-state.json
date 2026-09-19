@@ -1,34 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-18T21:02:30+00:00",
-  "last_run_key": "2026-09-19T06:00:00+09:00",
-  "last_round": "specialist-heterogeneous-hardware-2",
+  "updated_at": "2026-09-19T08:03:37+00:00",
+  "last_run_key": "2026-09-19T17:00:00+09:00",
+  "last_round": "specialist-flash-cim-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T08:26:04+09:00",
-      "round": "specialist-hybrid-attention-pic-1",
-      "axis": "hybrid-attention・MLA・位置非依存キャッシュ",
-      "query_summary": "直前のMoE expert placement/network軸を反復せず、hybrid-attentionとMLAでのposition-independent cachingへ探索軸を変更した。一次arXivの題名・抄録・評価概要を軽量確認し、GrowPage、Speculative Macro Commit、CacheScoutは既存jobで除外。LinearKV、HYPIC、MEPIC、Irminsulは決定論的research job pathとrepo検索で既存一致がないことを投入直前の最新mainで再確認した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 4,
-      "accepted_count": 4,
-      "duplicate_ratio": 0.42857142857142855,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.03494",
-        "arXiv:2609.03236",
-        "arXiv:2608.14624"
-      ],
-      "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る",
-      "source_submission": "work-queue/submissions/20260913T0830JST-discovery-specialist-hybrid-pic.json"
-    },
     {
       "run_key": "2026-09-13T08:26:04+09:00",
       "round": "specialist-pic-relatedwork-2",
@@ -7132,6 +7113,29 @@
       ],
       "next_axis_hint": "2025後半のagentic serving・workflow runtime、またはnetwork/collectiveとKV transportの未走査ID帯を探索する",
       "source_submission": "work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-flash-cim-1",
+      "axis": "Compute-in-Flash・SSD/Flash近傍計算・KV圧縮",
+      "query_summary": "2026年9月のLLM inference memory/offload/KV系新着を検索し、一次arXiv抄録で軽量評価。既知のTutti/SwiftCache/Robust KV等を早期除外し、2609.16161は最新mainのrepo検索で未登録を再確認。KVShareArenaはbenchmark中心のため不採用として記録した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2606.16135",
+        "arXiv:2607.16892",
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "MoE expert placement/cache、GPU runtime、network/collective、energy-aware servingへ独立軸を切り替える",
+      "source_submission": "work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json"
     }
   ],
   "axes": {
@@ -12677,6 +12681,19 @@
       "duplicate_ratio": 0.7142857142857143,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "2025後半のagentic serving・workflow runtime、またはnetwork/collectiveとKV transportの未走査ID帯を探索する"
+    },
+    "Compute-in-Flash・SSD/Flash近傍計算・KV圧縮": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.5,
+      "next_axis_hint": "MoE expert placement/cache、GPU runtime、network/collective、energy-aware servingへ独立軸を切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

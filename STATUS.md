@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 17:04:44 JST**
+> 自動生成: **2026-09-19 17:04:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **43** |
-| 未claim Research job | **42** |
+| 収録候補論文 | **47** |
+| 未claim Research job | **46** |
 | 直近24hの検証済みResearch収録 | **42** |
 | 最終検証済みResearch収録 | **09-19 11:33:35 JST（5時間31分前）** |
-| 整合性異常 | **0** |
+| 整合性異常 | **2** |
 
 ## 現在の収録候補
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **43** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **43** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **8** | **0** | **8** | **0** | **0** | **12** |
-| 合計 | **7** | **9** | **0** | **8** | **1** | **0** | **12** |
+| Discovery | **1** | **10** | **1** | **9** | **0** | **0** | **12** |
+| 合計 | **8** | **11** | **1** | **9** | **1** | **0** | **12** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -90,7 +90,10 @@
 
 ### Discovery
 
-- 検証済み成功なし。
+- **09-19 17:03:37 JST** job `job-4c37098b536c4ac0` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T1708JST-discovery-specialist-flash-cim-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
+  - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
 
 ### 直近タスク
 
@@ -110,12 +113,20 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **8件** / 候補: **12件**
-- 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **9件** / 候補: **12件**
+- 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding
+- round `specialist-os-pagecache-9` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
+  - 探索軸: OS page cache・kernel-managed expert tiering
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-rdma-network-10` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260919T1700JST-round10-rdma-network.json`
+  - 探索軸: RDMA・KV transfer・collective scheduling
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-flash-cim-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
   - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1708JST-discovery-specialist-flash-cim-1.json` (`ok=true`)
 - round `specialist-moe-cache-2` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1713JST-discovery-specialist-moe-cache-2.json`
   - 探索軸: MoE expert cache・router adaptation・weight traffic
@@ -172,7 +183,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **43** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -200,10 +211,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **614** |
+| 成功result未照合のimmutable submission | **615** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **153** |
+| └ Discovery | **152** |
+| └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -220,10 +232,17 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **0** |
+| 対応jobなしsubmission（有効Discovery round除外） | **2** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **0** |
+| 異常レコード合計（重複排除） | **2** |
+
+### 対応jobなしsubmissionの診断対象
+
+上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
+
+- `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
+- `.survey/work-queue/submissions/20260919T1700JST-round10-rdma-network.json`
 
 ### このSTATUSが採用する証拠
 
