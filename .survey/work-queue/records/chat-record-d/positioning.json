@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b98a636b188a72a813dae1cd","job_id":"job-research-49ee16176ca66925","data":{"limitations":"CPU支援の有効性はCPU演算能力、PCIe転送時間、入力長、アダプタランクに依存し、長文プリフィルではCPU側が新たな律速になり得る。複数CPUプロセスと共有メモリを必要とするため、GPUのみの提供系より実装複雑性が高い。大規模スケジューラ結果の一部は計測値に基づくシミュレーションであり、60台実機での検証ではない。","differences":"S-LoRAやPunicaが基盤LLM共有と多数LoRAのGPU効率的バッチ演算を主眼とするのに対し、CaraServeは未常駐アダプタの転送時間そのものをCPU先行計算で隠す。単純な非同期転送や人気予測型プリフェッチと異なり、転送中に要求固有の実計算を進めるため予測を必要としない。またクラスタ配置では要求数ではなく、LoRAランクと使用カーネルが既存バッチへ与える遅延増分を直接評価する。","implementation_status":"LightLLM上に実装し、GPU LoRA用BGMV、CPU LoRA、共有メモリ、専用CUDA/PyBind11同期演算子、ランク認識スケジューラを統合してA10実機で評価している。論文では二重盲検査読後に公開予定と記載されており、一次資料で現在の公式公開リポジトリは確認できない。","research_positioning":"マルチアダプタLLM提供で、GPUメモリ容量を節約するための動的アダプタ読込と低TTFTを両立させる初期システム研究である。CPUを単なる重み保管先ではなくコールドスタート中の計算資源として利用し、さらに異種LoRAランクをクラスタスケジューリングへ結び付ける。後続のアダプタキャッシュ、予測配置、階層メモリ、異種CPU/GPU協調方式と比較する際の基準となる。"},"reservation":{"claim_id":"claim-b98a636b188a72a813dae1cd","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-aad8189707bf1017dc2b3caf",
+  "job_id": "job-research-49ee16176ca66925",
+  "data": {
+    "limitations": "CPU支援の有効性はCPU演算能力、PCIe転送時間、入力長、アダプタランクに依存し、長文プリフィルではCPU側が新たな律速になり得る。複数CPUプロセスと共有メモリを必要とするため、GPUのみの提供系より実装複雑性が高い。大規模スケジューラ結果の一部は計測値に基づくシミュレーションであり、60台実機での検証ではない。",
+    "differences": "S-LoRAやPunicaが基盤LLM共有と多数LoRAのGPU効率的バッチ演算を主眼とするのに対し、CaraServeは未常駐アダプタの転送時間そのものをCPU先行計算で隠す。単純な非同期転送や人気予測型プリフェッチと異なり、転送中に要求固有の実計算を進めるため予測を必要としない。またクラスタ配置では要求数ではなく、LoRAランクと使用カーネルが既存バッチへ与える遅延増分を直接評価する。",
+    "implementation_status": "LightLLM上に実装し、GPU LoRA用BGMV、CPU LoRA、共有メモリ、専用CUDA/PyBind11同期演算子、ランク認識スケジューラを統合してA10実機で評価している。論文では二重盲検査読後に公開予定と記載されており、一次資料で現在の公式公開リポジトリは確認できない。",
+    "research_positioning": "マルチアダプタLLM提供で、GPUメモリ容量を節約するための動的アダプタ読込と低TTFTを両立させる初期システム研究である。CPUを単なる重み保管先ではなくコールドスタート中の計算資源として利用し、さらに異種LoRAランクをクラスタスケジューリングへ結び付ける。後続のアダプタキャッシュ、予測配置、階層メモリ、異種CPU/GPU協調方式と比較する際の基準となる。"
+  },
+  "reservation": {
+    "claim_id": "claim-aad8189707bf1017dc2b3caf",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
+}

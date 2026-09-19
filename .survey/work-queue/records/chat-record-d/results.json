@@ -1,1 +1,48 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b98a636b188a72a813dae1cd","job_id":"job-research-49ee16176ca66925","data":{"overview":"CaraServeはアダプタ読込中のCPU先行計算により、オンデマンド読込やS-LoRAで生じる長いプリフィル停止を大幅に隠し、平均要求提供遅延を最大1.4倍高速化した。専用同期と複数CPU化によりCPU側を新たなボトルネックにしにくくし、ランク認識スケジューラは60サーバ規模のシミュレーションで99%、8台A10実機で80%のSLO達成率を示した。","key_results":[{"metric":"平均要求提供遅延","value":"最大1.4倍高速化","baseline":"S-LoRA等の既存LoRA提供方式","condition":"Llama2系列、合成・実トレースを用いた評価","interpretation":"アダプタ転送待ちとプリフィルを重ねることでコールドスタートを隠す。"},{"metric":"プリフィル遅延","value":"最大57.9%削減","baseline":"CPU支援最適化なし","condition":"専用CPU/GPU協調と複数CPU化","interpretation":"層ごとの同期停止を非同期化し、CPU LoRA計算を並列化した効果。"},{"metric":"SLO達成率","value":"99%","baseline":"MostIdle、Random、FirstFit","condition":"40,000関数、約340 RPS、60サーバの計測値駆動シミュレーション","interpretation":"ランク依存のバッチ遅延を配置コストへ入れることで、要求数だけを見る配置よりSLO違反を避けられる。"},{"metric":"平均一トークン時間","value":"最大36.4%削減","baseline":"MostIdle、Random、FirstFit","condition":"60サーバ規模スケジューラ評価","interpretation":"新要求が既存バッチへ与える遅延増分を性能モデルで予測する効果。"}],"negative_results":"全アダプタをGPUへ常駐できるCACHEDには追加転送がないため、CaraServeはそれを超えることではなく近づく設計である。CPU先行計算は長い入力でCPU能力が不足するとボトルネックになり得るため複数CPU化が必要となる。99% SLOは大規模シミュレーション値で、8台A10の実機テストでは80%だった。ランクが小さく転送時間が短い場合は隠蔽できるコールドスタート自体が小さくなる。","interpretation":"コールドスタートを単なる先読みで避けるのではなく、転送中にCPUで本来必要なLoRA計算を進めるため、人気予測が外れても無駄な事前転送を増やさない。ランク認識配置はBGMVとMBGMVで遅延を決める統計量が異なることまで性能モデルへ取り込み、バックエンド固有のバッチ特性を配置へ反映する。","quality_impact":"同じLoRA行列積をCPUまたはGPUで実行して基盤LLM出力へ加えるため、近似やアダプタ削減による品質変化を導入しない。"},"reservation":{"claim_id":"claim-b98a636b188a72a813dae1cd","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-aad8189707bf1017dc2b3caf",
+  "job_id": "job-research-49ee16176ca66925",
+  "data": {
+    "overview": "CaraServeはアダプタ読込中のCPU先行計算により、オンデマンド読込やS-LoRAで生じる長いプリフィル停止を大幅に隠し、平均要求提供遅延を最大1.4倍高速化した。専用同期と複数CPU化によりCPU側を新たなボトルネックにしにくくし、ランク認識スケジューラは60サーバ規模のシミュレーションで99%、8台A10実機で80%のSLO達成率を示した。",
+    "key_results": [
+      {
+        "metric": "平均要求提供遅延",
+        "value": "最大1.4倍高速化",
+        "baseline": "S-LoRA等の既存LoRA提供方式",
+        "condition": "Llama2系列、合成・実トレースを用いた評価",
+        "interpretation": "アダプタ転送待ちとプリフィルを重ねることでコールドスタートを隠す。"
+      },
+      {
+        "metric": "プリフィル遅延",
+        "value": "最大57.9%削減",
+        "baseline": "CPU支援最適化なし",
+        "condition": "専用CPU/GPU協調と複数CPU化",
+        "interpretation": "層ごとの同期停止を非同期化し、CPU LoRA計算を並列化した効果。"
+      },
+      {
+        "metric": "SLO達成率",
+        "value": "99%",
+        "baseline": "MostIdle、Random、FirstFit",
+        "condition": "40,000関数、約340 RPS、60サーバの計測値駆動シミュレーション",
+        "interpretation": "ランク依存のバッチ遅延を配置コストへ入れることで、要求数だけを見る配置よりSLO違反を避けられる。"
+      },
+      {
+        "metric": "平均一トークン時間",
+        "value": "最大36.4%削減",
+        "baseline": "MostIdle、Random、FirstFit",
+        "condition": "60サーバ規模スケジューラ評価",
+        "interpretation": "新要求が既存バッチへ与える遅延増分を性能モデルで予測する効果。"
+      }
+    ],
+    "negative_results": "全アダプタをGPUへ常駐できるCACHEDには追加転送がないため、CaraServeはそれを超えることではなく近づく設計である。CPU先行計算は長い入力でCPU能力が不足するとボトルネックになり得るため複数CPU化が必要となる。99% SLOは大規模シミュレーション値で、8台A10の実機テストでは80%だった。ランクが小さく転送時間が短い場合は隠蔽できるコールドスタート自体が小さくなる。",
+    "interpretation": "コールドスタートを単なる先読みで避けるのではなく、転送中にCPUで本来必要なLoRA計算を進めるため、人気予測が外れても無駄な事前転送を増やさない。ランク認識配置はBGMVとMBGMVで遅延を決める統計量が異なることまで性能モデルへ取り込み、バックエンド固有のバッチ特性を配置へ反映する。",
+    "quality_impact": "同じLoRA行列積をCPUまたはGPUで実行して基盤LLM出力へ加えるため、近似やアダプタ削減による品質変化を導入しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-aad8189707bf1017dc2b3caf",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
+}

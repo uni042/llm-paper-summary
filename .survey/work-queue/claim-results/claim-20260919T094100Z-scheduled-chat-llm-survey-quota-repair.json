@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T094100Z-scheduled-chat-llm-survey-quota-repair",
+  "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-49ee16176ca66925",
+      "claim_id": "claim-aad8189707bf1017dc2b3caf",
+      "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-aad8189707bf1017dc2b3caf",
+      "claimed_at": "2026-09-19T09:41:15+00:00",
+      "expires_at": "2026-09-19T11:11:15+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-49ee16176ca66925"
+      ],
+      "job": {
+        "job_id": "job-research-49ee16176ca66925",
+        "type": "research",
+        "parent_job_id": "job-95e9425e7c1dbc3e",
+        "priority": 78,
+        "canonical_id": "arXiv:2401.11240",
+        "title": "CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference",
+        "source_url": "https://arxiv.org/abs/2401.11240",
+        "paper_path": "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md",
+        "selection_reason": "LoRA adapter servingでCPU-assisted execution、rank-aware scheduling、custom CUDA operatorsを用いてcold adapter loadingとheterogeneous rankを扱う。multi-adapter serving lineageの比較対象としてChameleon等の前史を補完する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:06:02+00:00",
+        "blocker": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2401.11240 を対象に、GitHub横断検索でarXiv PDF/absへの参照、LoRA serving paper list、CaraServe技術ノートまでは確認したが、著者公式またはarXiv一次本文の取得可能コピーは得られなかった。arXiv PDFの直接取得も試みたが、実行基盤が『URLをweb.runで先に開く必要がある』として拒否し、その時点でweb取得系は明示的な呼出し上限に達しており追加の一次資料経路を安全に開けなかった。二次ノートや検索断片から5-slotを推測生成していない。この取得制約は今回runの一次資料取得系に対する実際のplatform/tool limitだが、GitHub正本操作自体は継続可能であるためwhole-run failureにはせず、論文単位を一時blockedとして保存する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-a1bac985be00bf6316d3c783.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-19T02:20:06+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-19T02:20:06+00:00",
+            "reason": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2401.11240 を対象に、GitHub横断検索でarXiv PDF/absへの参照、LoRA serving paper list、CaraServe技術ノートまでは確認したが、著者公式またはarXiv一次本文の取得可能コピーは得られなかった。arXiv PDFの直接取得も試みたが、実行基盤が『URLをweb.runで先に開く必要がある』として拒否し、その時点でweb取得系は明示的な呼出し上限に達しており追加の一次資料経路を安全に開けなかった。二次ノートや検索断片から5-slotを推測生成していない。この取得制約は今回runの一次資料取得系に対する実際のplatform/tool limitだが、GitHub正本操作自体は継続可能であるためwhole-run failureにはせず、論文単位を一時blockedとして保存する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-19T02:20:06+00:00",
+        "retry_queued_at": "2026-09-19T08:04:52+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: results.overview must explain the main result and its practical meaning",
+        "validation_errors": [
+          "results.overview must explain the main result and its practical meaning"
+        ],
+        "last_validation_failed_at": "2026-09-19T09:40:42+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-b98a636b188a72a813dae1cd"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-b98a636b188a72a813dae1cd.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T09:41:15+00:00",
+  "checkpoint_released": 0
+}
