@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e8ec2848c993c87c9d340e2f","job_id":"job-research-0e6ed88f587a40d2","data":{"limitations":"主な実測はA100上であり、GPU世代や実装によって層深度と幅の遅延比が変われば最適ドラフトも変化する。ドラフトを浅くしすぎると受理数が急減し、単純な最小モデル選択では性能を最大化できない。対象モデルや負荷が変わると必要な受理数差も変わるため、796M・5層という具体値自体を普遍的な最適値とはみなせない。","differences":"従来の投機的デコード研究が受理率向上、オンライン学習、複数候補木、対象モデルの早期退出などを中心に扱うのに対し、本論文はドラフト自身のハードウェア遅延を第一級の設計目標とする。自己投機的デコードのように対象モデルの一部層を再利用せず、独立した極浅ドラフトを構造化枝刈りで作るため、候補生成に必要な逐次層数を大幅に減らせる。","implementation_status":"DeepSpeed上で投機的デコードを実装し、Sheared-LLaMAの枝刈り機構で複数の浅広ドラフトを実際に生成してA100で評価している。論文はNAACL 2025採録。一次資料本文から公式コード公開URLは確認できない。","research_positioning":"投機的デコードをアルゴリズム上の受理率問題だけでなく、ドラフト自己回帰経路のハードウェア効率問題として捉え直す基礎的実証研究である。後続のドラフト設計や対象モデルとの共同設計では、受理率だけでなく一候補生成遅延、層深度、KV容量を同時に評価すべきことを示す。性能モデルにより、ハードウェアや負荷が変わった際に大きいドラフトへ切り替える境界も分析できる。"},"reservation":{"claim_id":"claim-e8ec2848c993c87c9d340e2f","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5a917c38b6ba1fa11da229e2",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a917c38b6ba1fa11da229e2",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
+}
