@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:01:29 JST**
+> 自動生成: **2026-09-19 19:01:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **38** |
-| 未claim Research job | **38** |
+| 収録候補論文 | **39** |
+| 未claim Research job | **39** |
 | 直近24hの検証済みResearch収録 | **44** |
 | 最終検証済みResearch収録 | **09-19 18:48:26 JST（13分前）** |
 | 整合性異常 | **4** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **38** |
+| canonical_id確認済みの一意な候補論文 | **39** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **38** |
+| 非終端Research job合計 | **39** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **5** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **22** | **5** | **3** | **2** | **0** | **0** | **6** |
-| 合計 | **27** | **20** | **9** | **2** | **0** | **0** | **6** |
+| Discovery | **24** | **6** | **5** | **1** | **0** | **0** | **8** |
+| 合計 | **29** | **21** | **11** | **1** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -80,6 +80,10 @@
 
 ### Discovery
 
+- **09-19 19:01:40 JST** job `job-eede52e50f431a91` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-scheduling-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
+  - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
 - **09-19 19:01:01 JST** job `job-81062042be174d85` / 候補 **2件**
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
@@ -92,6 +96,10 @@
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-nmp-memory-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-nmp-memory-2.json`
   - 探索軸: near-memory processing / 3D DRAM / KV allocation co-design
+- **09-19 19:01:50 JST** job `job-78174755e89d23c3` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-scheduling-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-scheduling-4.json`
+  - 探索軸: prefill/decode fairness / adaptive batching / SLO scheduling
 - **09-19 17:05:34 JST** job `job-287a4ddc76a7d8bf` / 候補 **0件**
   - result: `.survey/work-queue/results/20260919T1700JST-round09-os-pagecache.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
@@ -112,14 +120,6 @@
   - result: `.survey/work-queue/results/20260919T1708JST-discovery-specialist-flash-cim-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
   - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
-- **09-19 17:06:05 JST** job `job-e6b50dad2a11bb70` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1713JST-discovery-specialist-moe-cache-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1713JST-discovery-specialist-moe-cache-2.json`
-  - 探索軸: MoE expert cache・router adaptation・weight traffic
-- **09-19 17:06:15 JST** job `job-2ccf8f4e787d35e5` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T1719JST-discovery-specialist-disagg-network-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1719JST-discovery-specialist-disagg-network-3.json`
-  - 探索軸: prefill/decode分離・WAN KV transfer・load-aware deflection
 
 ### 直近タスク
 
@@ -169,11 +169,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **6件**
-- 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / near-memory processing / 3D DRAM / KV allocation co-design / prefill/decode fairness / adaptive batching / SLO scheduling
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **1件** / 候補: **8件**
+- 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / near-memory processing / 3D DRAM / KV allocation co-design / prefill/decode fairness / adaptive batching / SLO scheduling
 - round `specialist-agent-scheduling-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
   - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-scheduling-5.json` (`ok=true`)
+- round `specialist-agent-systems-6` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json`
+  - 探索軸: agentic workload characterization / sandbox memory / secure mobile serving
   - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-cxl-nmp-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
@@ -190,7 +194,7 @@
 - round `specialist-scheduling-4` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-scheduling-4.json`
   - 探索軸: prefill/decode fairness / adaptive batching / SLO scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-scheduling-4.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -217,7 +221,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **38** |
+| ready | **39** |
 
 ### 候補の重複・識別情報欠損
 
@@ -245,10 +249,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **617** |
+| 成功result未照合のimmutable submission | **616** |
 | └ Research | **468** |
 | └ Audit | **2** |
-| └ Discovery | **147** |
+| └ Discovery | **146** |
 
 ### 厳格検証が未成立のcompleted job
 
