@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13592",
+      "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.13592",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13592-boost.md",
+      "priority": 94,
+      "reason": "Grace Hopper上でHBMとhost memoryをwave-awareに同時・帯域比例利用するvLLM統合runtime。階層メモリ/オフロード重点テーマに直接一致し、kernel変更なしで平均throughput 31%向上という実機評価がある。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.07609-blink.md",
+      "priority": 90,
+      "reason": "SmartNIC RDMAとpersistent GPU kernelでhost CPUをsteady-state serving pathから外し、batching/scheduling/KV管理をGPU側へ移すend-to-end serving system。vLLM/SGLang/TensorRT-LLM比較とCPU interference下の実測がある。"
+    },
+    {
+      "canonical_id": "arXiv:2605.20706",
+      "title": "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU",
+      "source_url": "https://arxiv.org/abs/2605.20706",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md",
+      "priority": 82,
+      "reason": "llama.cpp向けWebGPU backendとしてstatic memory planning、効率的model loading、複数量子化形式kernelを実装。16 devices/8 vendorsで評価し、既存browser framework比29-33%省メモリ、decode throughput 45-69%向上を報告する実装系論文。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T23:00:00+09:00",
+    "round": "specialist-memory-runtime-1",
+    "axis": "HBM-host同時アクセス・CPU-free serving・portable local runtime",
+    "query_summary": "2026年のLLM inference/serving systemsを階層メモリ、GPU/SmartNIC runtime、ローカル推論backendの独立軸で走査。検索結果のabstractを軽量評価し、GitHub default branchでcanonical arXiv IDを再照合して未収録候補のみ提出した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "2609新着のGPU/CPU unified memory、CXL/remote memory、network/KV transfer、および収録済み重要論文のforward citationへ移る",
+    "empty_round_reason": null
+  }
+}
