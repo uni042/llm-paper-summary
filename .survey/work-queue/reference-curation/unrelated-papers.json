@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-19T18:25:00+00:00",
-  "record_count": 10,
+  "updated_at": "2026-09-19T18:45:00+00:00",
+  "record_count": 16,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -128,6 +128,81 @@
       "last_checked_at": "2026-09-19T18:25:00+00:00",
       "linked_from": [],
       "title": "Code Llama: Open Foundation Models for Code"
+    },
+    "arXiv:1810.04805": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.04805",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1810.04805",
+        "arXiv:1810.04805"
+      ],
+      "reason": "Foundational NLP representation-model paper rather than an LLM inference/training systems contribution.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    },
+    "arXiv:2404.06654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06654",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.06654",
+        "arXiv:2404.06654"
+      ],
+      "reason": "Long-context benchmark/evaluation paper rather than an inference or training systems method.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "RULER: What's the Real Context Size of Your Long-Context Language Models?"
+    },
+    "arXiv:1905.07830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.07830",
+      "identity_tokens": [
+        "arXiv:1905.07830"
+      ],
+      "reason": "Commonsense benchmark/dataset paper rather than an LLM systems contribution.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "HellaSwag: Can a Machine Really Finish Your Sentence?"
+    },
+    "arXiv:2210.03629": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.03629",
+      "identity_tokens": [
+        "arXiv:2210.03629"
+      ],
+      "reason": "Agent reasoning/acting methodology rather than an inference/training systems contribution.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+    },
+    "arXiv:2103.03874": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.03874",
+      "identity_tokens": [
+        "arXiv:2103.03874"
+      ],
+      "reason": "Benchmark/dataset paper rather than an inference or training systems contribution.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "Measuring Mathematical Problem Solving With the MATH Dataset"
+    },
+    "arXiv:2308.08155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08155",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.08155",
+        "arXiv:2308.08155"
+      ],
+      "reason": "Application-level multi-agent framework rather than a model inference/training systems optimization.",
+      "first_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "linked_from": [],
+      "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation"
     }
   }
 }
