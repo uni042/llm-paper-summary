@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T17:04:03+00:00",
-  "last_run_key": "2026-09-20T01:00:00+09:00",
-  "last_round": "fixedsource-openalex-01",
+  "updated_at": "2026-09-19T17:04:30+00:00",
+  "last_run_key": "2026-09-20T01:58:54+09:00",
+  "last_round": "specialist-moe-offload-openalex-02",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-tiered-storage-5",
-      "axis": "外部KVストレージ帯域・階層構成最適化・prefill/decode経路",
-      "query_summary": "CacheFlowから外部KV storageの隣接研究へ展開し、DualPath（arXiv:2602.21548）とKareto（arXiv:2603.08739）を軽量評価した。最新identityの同一lineageでは2602.18755→2602.21626間、2603.07917→2603.10342間に各IDが存在しないことを確認し、未収録候補として送信した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は同じ外部KV復元系のbackward referenceから、conversation-specific KV圧縮・recompute/load pipeline、またはSSD/NVMe直結I/O schedulerへ軸をずらす。",
-      "source_submission": "work-queue/submissions/20260915T0826JST-discovery-specialist-tiered-storage-5.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-speculative-serving-16",
@@ -7465,6 +7450,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次roundは同一検索URLの続きではなく、別collectorとして重要serving論文のforward citationまたはMoE expert offloadの固定検索結果集合を開始する。",
       "source_submission": "work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json"
+    },
+    {
+      "run_key": "2026-09-20T01:58:54+09:00",
+      "round": "specialist-moe-offload-openalex-02",
+      "axis": "MoE expert cache offload placement prefetch inference systems",
+      "query_summary": "OpenAlexの単一検索結果URLを固定し、precheck内部でcursor paginationを3ページ実行。30件取得、既収録15件を除外して未収録15件を得た後、一次arXiv abstractで5件を候補評価・投入した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はCXL/NVMe/SSD direct I/Oとexpert/KV階層memoryを別の固定OpenAlex source_urlで探索する。",
+      "source_submission": "work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json"
     }
   ],
   "axes": {
@@ -14222,6 +14225,19 @@
       "duplicate_ratio": 0.2222222222222222,
       "final_duplicate_ratio": 0.09523809523809523,
       "next_axis_hint": "次roundは同一検索URLの続きではなく、別collectorとして重要serving論文のforward citationまたはMoE expert offloadの固定検索結果集合を開始する。"
+    },
+    "MoE expert cache offload placement prefetch inference systems": {
+      "last_run_key": "2026-09-20T01:58:54+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次はCXL/NVMe/SSD direct I/Oとexpert/KV階層memoryを別の固定OpenAlex source_urlで探索する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -14478,6 +14494,29 @@
       "cooldown": false,
       "last_run_key": "2026-09-20T01:00:00+09:00",
       "last_round": "fixedsource-openalex-01"
+    },
+    "window-2265b8f9c6def71e0e13": {
+      "topic": "moe expert cache offload placement prefetch inference systems",
+      "source": "openalex",
+      "date_range": "2024-01-01:2026-09-20",
+      "category": "moe/offload/hierarchical-memory",
+      "citation_direction": "none",
+      "query_family": "keyword-search",
+      "search_window_key": "window-2265b8f9c6def71e0e13",
+      "scan_count": 1,
+      "raw_result_count": 30,
+      "unseen_result_count": 15,
+      "duplicate_filtered_count": 15,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 5,
+      "candidate_accepted_count": 5,
+      "last_position": "3 cursor pages",
+      "unseen_rate": 0.5,
+      "duplicate_rate": 0.5,
+      "candidate_acceptance_rate": 1.0,
+      "cooldown": false,
+      "last_run_key": "2026-09-20T01:58:54+09:00",
+      "last_round": "specialist-moe-offload-openalex-02"
     }
   },
   "recent_search_windows": [
@@ -14711,6 +14750,27 @@
       "duplicate_rate": 0.2,
       "candidate_acceptance_rate": 0.25,
       "last_position": "cursor-after-page-3"
+    },
+    {
+      "topic": "moe expert cache offload placement prefetch inference systems",
+      "source": "openalex",
+      "date_range": "2024-01-01:2026-09-20",
+      "category": "moe/offload/hierarchical-memory",
+      "citation_direction": "none",
+      "query_family": "keyword-search",
+      "search_window_key": "window-2265b8f9c6def71e0e13",
+      "run_key": "2026-09-20T01:58:54+09:00",
+      "round": "specialist-moe-offload-openalex-02",
+      "raw_result_count": 30,
+      "unseen_result_count": 15,
+      "duplicate_filtered_count": 15,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 5,
+      "candidate_accepted_count": 5,
+      "unseen_rate": 0.5,
+      "duplicate_rate": 0.5,
+      "candidate_acceptance_rate": 1.0,
+      "last_position": "3 cursor pages"
     }
   ],
   "search_window_history_limit": 96,
