@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ee58aa534ed82a58b5fa7386",
-  "job_id": "job-research-44bb3b5d160bad25",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ee58aa534ed82a58b5fa7386",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ee58aa534ed82a58b5fa7386","job_id":"job-research-44bb3b5d160bad25","data":{"canonical_id":"arXiv:2608.00101","arxiv_id":"2608.00101","doi":"10.48550/arXiv.2608.00101","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.LG"]},"title":"Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale","summary":"GitHub Copilotの実運用テレメトリを用い、コーディングエージェントが従来の独立・短時間・状態なしのLLM要求とは異なる負荷を作ることを定量化した研究である。2026年6月の1週間から320万ユーザー、1350万セッション、7.605億LLM呼出し、7.747億ツール呼出しを解析し、LLMとツールがほぼ1対1で直列連鎖すること、呼出しの87%がエージェント起点であること、入力が中央値68Kトークンに対し出力247トークンと極端に入力偏重であることを示す。ターン内ではKVキャッシュ再利用が高い一方、ターン境界・モデル切替・文脈圧縮で再利用率が崩れる。さらにターン境界の長い遊休時間を予測する軽量モデルを作り、総遊休時間の86〜90%を捕捉できることから、エージェント向け基盤ではセッション単位のキャッシュ・コンテナ資源管理が必要だと論じる。","list_summary":"1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。","authors":["Banruo Liu","Haoran Qiu","Íñigo Goiri","Rodrigo Fonseca","Ricardo Bianchini","Esha Choukse"],"authors_affiliations":"University of Illinois Urbana-Champaign; Microsoft Azure Research; Microsoft Azure","published":"2026-07-30","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1","lineage":"agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation","topics":["エージェント推論","実運用ワークロード","KVキャッシュ","資源回収","コーディングエージェント"],"importance":"合成ベンチマークではなく大規模実運用トレースから、エージェント推論のセッション構造、キャッシュ再利用、ツール待ち、利用者差を同時に測定し、要求単位設計からセッション／ワークフロー単位設計へ移る根拠を与える。","implementation":"匿名化クライアント側テレメトリを再構成・集計する解析基盤と、ターン境界の遊休時間を予測するLightGBM量子回帰器12本の約2MBアンサンブルを実装。衛生化したトレースは将来公開予定と記載され、論文時点で公開データURLは未提示。","hardware_evaluation":"推論サーバ実機性能の直接評価ではない。遊休時間予測器の学習は16-vCPU AMD EPYC 7763単一ノードで1分未満、推論はターン境界あたり3ms未満。","quality_effect":"プロンプト・応答内容を収集しないためタスク品質と資源効率の相関は評価不能。論文自身が品質信号欠如を主要制約として明記する。","source":"https://arxiv.org/abs/2608.00101","sources":["https://arxiv.org/abs/2608.00101","https://arxiv.org/html/2608.00101v1","https://haoran-qiu.com/publication/agentic-coding-in-the-wild/"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary arXiv HTML reference section","references_total":43},"reservation":{"claim_id":"claim-ee58aa534ed82a58b5fa7386","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
