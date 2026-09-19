@@ -1,1 +1,76 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d22f06504ab5d2e1d4cebc14","job_id":"job-research-7353bc1b63a704fc","data":{"canonical_id":"arXiv:2604.18655","arxiv_id":"2604.18655","doi":"10.18653/v1/2026.findings-acl.2106","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI","cs.CL"]},"title":"Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM","summary":"Samsung Galaxy S24/S25上で単一のLLaMA系基盤モデルを複数用途・多言語へ展開するため、LoRA重みを凍結推論グラフの実行時入力として切り替える方式、NPU向け演算変換、並行トークン生成、自己投機的復号を統合したオンデバイス推論フレームワーク。1BモデルではINT4量子化とグラフ最適化によりピーク967MB・41.32 token/sを実測し、3BモデルではDS2Dにより用途別に約2倍の生成速度向上を示す。","list_summary":"実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。","authors":["Sravanth Kodavanti","Sowmya Vajrala","Srinivas Miriyala","Utsav Tiwari","Uttam Kumar","Utkarsh Kumar Mahawar","Achal Pratap Singh","Arya D","Narendra Mutyala","Vikram Nelvoy Rajendiran","Sharan Kumar Allur","Euntaik Lee","Dohyoung Kim","HyeonSu Lee","Gyusung Cho","JungBae Kim"],"authors_affiliations":"Samsung Research Institute Bangalore, India; Samsung Electronics, Suwon, South Korea","published":"2026-04-20","publication":"Findings of the Association for Computational Linguistics: ACL 2026","publication_type":"国際会議論文","publication_status":"Accepted at ACL 2026 Findings; arXiv v2 (2026-04-24)","lineage":"on-device LLM inference / multi-LoRA runtime / speculative decoding / mobile NPU optimization","topics":["オンデバイスLLM","Multi-LoRA","モバイルNPU","投機的復号","量子化","並行トークン生成"],"importance":"サーバ向け推論手法をそのまま縮小するのではなく、凍結グラフ・固定形状・NPU演算特性というスマートフォン固有制約に合わせ、適応・量子化・複数出力・復号高速化を一つの商用実装へ統合している。","implementation":"Samsung Galaxy S24/S25のQualcomm SM8650/SM8750 NPU上へ実装し、Galaxy AI機能として商用展開。論文から独立した公開コードリポジトリは確認できない。","hardware_evaluation":"Galaxy S24 Ultra (Qualcomm SM8650 NPU)で1Bモデル、Galaxy S25 Ultra (Qualcomm SM8750 NPU)で3Bモデルを評価。","quality_effect":"量子化後の相対精度をFP32と比較し、9言語・複数タスクで概ね高い保持率を示すが、一部条件では低下があり、DS2Dの静的forecast embeddingは入力によって受理率が下がる。","source":"https://arxiv.org/abs/2604.18655","sources":["https://arxiv.org/abs/2604.18655","https://arxiv.org/html/2604.18655v2","https://aclanthology.org/2026.findings-acl.2106/"],"code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":10},"reservation":{"claim_id":"claim-d22f06504ab5d2e1d4cebc14","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7c1d01d3a896395f0388795a",
+  "job_id": "job-research-7353bc1b63a704fc",
+  "data": {
+    "canonical_id": "arXiv:2604.18655",
+    "arxiv_id": "2604.18655",
+    "doi": "10.18653/v1/2026.findings-acl.2106",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    "title": "Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM",
+    "summary": "Samsung Galaxy S24/S25上で単一のLLaMA系基盤モデルを複数用途・多言語へ展開するため、LoRA重みを凍結推論グラフの実行時入力として切り替える方式、NPU向け演算変換、並行トークン生成、自己投機的復号を統合したオンデバイス推論フレームワーク。1BモデルではINT4量子化とグラフ最適化によりピーク967MB・41.32 token/sを実測し、3BモデルではDS2Dにより用途別に約2倍の生成速度向上を示す。",
+    "list_summary": "実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。",
+    "authors": [
+      "Sravanth Kodavanti",
+      "Sowmya Vajrala",
+      "Srinivas Miriyala",
+      "Utsav Tiwari",
+      "Uttam Kumar",
+      "Utkarsh Kumar Mahawar",
+      "Achal Pratap Singh",
+      "Arya D",
+      "Narendra Mutyala",
+      "Vikram Nelvoy Rajendiran",
+      "Sharan Kumar Allur",
+      "Euntaik Lee",
+      "Dohyoung Kim",
+      "HyeonSu Lee",
+      "Gyusung Cho",
+      "JungBae Kim"
+    ],
+    "authors_affiliations": "Samsung Research Institute Bangalore, India; Samsung Electronics, Suwon, South Korea",
+    "published": "2026-04-20",
+    "publication": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "publication_type": "国際会議論文",
+    "publication_status": "Accepted at ACL 2026 Findings; arXiv v2 (2026-04-24)",
+    "lineage": "on-device LLM inference / multi-LoRA runtime / speculative decoding / mobile NPU optimization",
+    "topics": [
+      "オンデバイスLLM",
+      "Multi-LoRA",
+      "モバイルNPU",
+      "投機的復号",
+      "量子化",
+      "並行トークン生成"
+    ],
+    "importance": "サーバ向け推論手法をそのまま縮小するのではなく、凍結グラフ・固定形状・NPU演算特性というスマートフォン固有制約に合わせ、適応・量子化・複数出力・復号高速化を一つの商用実装へ統合している。",
+    "implementation": "Samsung Galaxy S24/S25のQualcomm SM8650/SM8750 NPU上へ実装し、Galaxy AI機能として商用展開。論文から独立した公開コードリポジトリは確認できない。",
+    "hardware_evaluation": "Galaxy S24 Ultra (Qualcomm SM8650 NPU)で1Bモデル、Galaxy S25 Ultra (Qualcomm SM8750 NPU)で3Bモデルを評価。",
+    "quality_effect": "量子化後の相対精度をFP32と比較し、9言語・複数タスクで概ね高い保持率を示すが、一部条件では低下があり、DS2Dの静的forecast embeddingは入力によって受理率が下がる。",
+    "source": "https://arxiv.org/abs/2604.18655",
+    "sources": [
+      "https://arxiv.org/abs/2604.18655",
+      "https://arxiv.org/html/2604.18655v2",
+      "https://aclanthology.org/2026.findings-acl.2106/"
+    ],
+    "code": null,
+    "last_checked": "2026-09-20",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary manuscript reference section",
+    "references_total": 10
+  },
+  "reservation": {
+    "claim_id": "claim-7c1d01d3a896395f0388795a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

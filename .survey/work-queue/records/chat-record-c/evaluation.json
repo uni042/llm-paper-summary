@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d22f06504ab5d2e1d4cebc14","job_id":"job-research-7353bc1b63a704fc","data":{"hardware":"1BモデルはSamsung Galaxy S24 UltraのQualcomm SM8650 NPU、3BモデルはGalaxy S25 UltraのQualcomm SM8750 NPUで実機評価する。論文はS25系への商用展開と、Flip/Fold 7向けExynos展開予定も記載する。","software":"LLaMA系1B/3B decoder-only基盤モデル、用途別LoRA、QAT/PTQ、INT4/INT8中心の混合精度、NPU向けMHA→SHA分割・linear→1x1 convolution・constant folding、CTG、prefix-tuning型DS2Dを統合。基盤モデルとLoRAの学習詳細はプロプライエタリとして非公開。","methodology":"GS24ではLoRA weight sharing、masking、LoRA-as-inputを2 task条件でサイズとprefill/generative latencyにより比較し、CTGは1 stream対8 streamsで生成時間を比較する。1Bモデルは4 task・9言語の36 use-caseで量子化後の品質とメモリ・初回token・token生成率を測る。GS25では8 use-caseについてDS2D有無のdecode latency、tokens/s、peak memory、初期化時間を比較し、複数branch configurationの平均accepted tokens/inferenceとtokens/sを測定する。品質はFP32とon-device QATを9言語・Correction/Style/Smart Reply/SummarizationでG-EvalおよびRelative Accuracyにより比較する。","scope":"商用スマートフォン上の実測を重視したシステム評価であり、1B/3BのSamsung社内LLaMA系モデルとQualcomm NPUが中心。公開サーバGPU、他社SoC、より大きなLLM、任意rank LoRA、ユーザ定義スタイルへの一般化は直接評価されない。G-EvalはGPT-4.5を評価器として使うため、品質評価は自動評価器依存でもある。"},"reservation":{"claim_id":"claim-d22f06504ab5d2e1d4cebc14","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-7c1d01d3a896395f0388795a",
+  "job_id": "job-research-7353bc1b63a704fc",
+  "data": {
+    "hardware": "1BモデルはSamsung Galaxy S24 UltraのQualcomm SM8650 NPU、3BモデルはGalaxy S25 UltraのQualcomm SM8750 NPUで実機評価する。論文はS25系への商用展開と、Flip/Fold 7向けExynos展開予定も記載する。",
+    "software": "LLaMA系1B/3B decoder-only基盤モデル、用途別LoRA、QAT/PTQ、INT4/INT8中心の混合精度、NPU向けMHA→SHA分割・linear→1x1 convolution・constant folding、CTG、prefix-tuning型DS2Dを統合。基盤モデルとLoRAの学習詳細はプロプライエタリとして非公開。",
+    "methodology": "GS24ではLoRA weight sharing、masking、LoRA-as-inputを2 task条件でサイズとprefill/generative latencyにより比較し、CTGは1 stream対8 streamsで生成時間を比較する。1Bモデルは4 task・9言語の36 use-caseで量子化後の品質とメモリ・初回token・token生成率を測る。GS25では8 use-caseについてDS2D有無のdecode latency、tokens/s、peak memory、初期化時間を比較し、複数branch configurationの平均accepted tokens/inferenceとtokens/sを測定する。品質はFP32とon-device QATを9言語・Correction/Style/Smart Reply/SummarizationでG-EvalおよびRelative Accuracyにより比較する。",
+    "scope": "商用スマートフォン上の実測を重視したシステム評価であり、1B/3BのSamsung社内LLaMA系モデルとQualcomm NPUが中心。公開サーバGPU、他社SoC、より大きなLLM、任意rank LoRA、ユーザ定義スタイルへの一般化は直接評価されない。G-EvalはGPT-4.5を評価器として使うため、品質評価は自動評価器依存でもある。"
+  },
+  "reservation": {
+    "claim_id": "claim-7c1d01d3a896395f0388795a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
