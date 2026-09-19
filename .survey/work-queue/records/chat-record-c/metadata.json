@@ -2,54 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-86ffe82b1cb0e347b528f5b0",
-  "job_id": "job-research-883cceac74650e2e",
-  "data": {
-    "canonical_id": "arXiv:2509.04576",
-    "arxiv_id": "2509.04576",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "eess.SP",
-      "cross_list": []
-    },
-    "title": "Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding",
-    "summary": "端末側の小型モデルと基地局側の大型モデルで分散投機的デコードを行う際、端末が各ドラフトトークンについて語彙全体の確率分布を上り送信する通信ボトルネックを削減する。TK-SLTは小型モデルの上位K候補だけを確率値とトークン番号の疎表現として送り、投機検証の補正則を保つことで大型モデル単独と同じ出力分布を維持する。さらに受理率、小型モデル時間、通信時間、大型モデル検証時間から高速化率を定式化し、Lambert W関数を用いて最適ドラフト長を求め、高速化が1以下なら単独大型モデルへ戻す。",
-    "list_summary": "分散投機的デコードの上り通信を語彙全体分布から上位K疎ロジットへ圧縮し、出力分布を維持したまま通信量と最適ドラフト長を共同最適化する。",
-    "authors": [
-      "Ce Zheng",
-      "Tingting Yang"
-    ],
-    "authors_affiliations": "Pengcheng Laboratory, Shenzhen, China",
-    "published": "2025-09-04",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "distributed speculative decoding / edge collaborative inference / communication-efficient inference",
-    "topics": [
-      "投機的デコード",
-      "端末・エッジ協調推論",
-      "通信圧縮",
-      "AI-RAN"
-    ],
-    "importance": "投機的デコードの通信分離環境で、語彙サイズに比例する確率分布転送を疎化し、通信とドラフト長を解析的に結び付けた研究。",
-    "hardware_evaluation": "68M-Llamaと7B-Llamaを別々のNVIDIA A800 80GB GPUへ配置したハードウェア組込みシミュレーション。",
-    "quality_effect": "TK-SLTはドラフト分布を上位Kへ変えるため受理率は変化するが、投機検証の補正により最終トークン分布は大型モデル単独と理論上同一に保つ。",
-    "source": "https://arxiv.org/abs/2509.04576",
-    "sources": [
-      "https://arxiv.org/abs/2509.04576",
-      "https://arxiv.org/pdf/2509.04576"
-    ],
-    "code": null,
-    "implementation": "最適ドラフト長決定と適応的投機選択をアルゴリズム化し、A800上のモデル実行と50 Mbps通信モデルを組み合わせて評価。公開コードURLは確認できない。",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "primary-reference-section",
-    "references_total": 9
-  },
+  "attempt_id": "attempt-d2549d6138b40f3d17e6f087",
+  "job_id": "job-research-0bb313ba6c58f22b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-86ffe82b1cb0e347b528f5b0",
+    "claim_id": "claim-d2549d6138b40f3d17e6f087",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }

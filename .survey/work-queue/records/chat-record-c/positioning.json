@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-86ffe82b1cb0e347b528f5b0",
-  "job_id": "job-research-883cceac74650e2e",
-  "data": {
-    "limitations": "評価は2枚のA800上のモデル実行と50 Mbps通信モデルを組み合わせたシミュレーションで、実際の無線端末・基地局における変動帯域、往復時間、エネルギー、同時利用者競合は測っていない。端末と大型モデルが同じ語彙を共有する必要があり、受理率を実運用で推定・更新する費用も未評価。上り分布が支配的として下り通信を簡略化している。",
-    "differences": "通常の分散投機的デコードは補正に必要なドラフト分布を語彙全体送るのに対し、TK-SLTはドラフト分布自体を上位Kへ疎化して送信量をKに比例させる。不確実性が低いトークンの送信を省く方式と異なり、投機補正を維持して大型モデル単独と同じ出力分布を保つ。さらに通信圧縮だけで終わらず、通信費と小型モデル費、受理率から最適ドラフト長を閉形式で求め、投機が不利なら単独推論へ戻す。",
-    "implementation_status": "論文は最適ドラフト長決定と適応的投機選択を擬似コードで示し、68M-Llamaと7B-LlamaをA800上で実行して検証する。公開コードURLは一次資料で確認できなかった。",
-    "research_positioning": "投機的デコード研究のうち、ドラフト・検証を端末とエッジへ分離した際の通信ボトルネックを主対象とする。サーバ内の投機方式がGPU計算削減を中心に扱うのに対し、無線帯域を第一級の費用として最適化式へ入れる点が特徴で、端末・エッジ協調推論や分離型推論の通信圧縮研究と接続する。"
-  },
+  "attempt_id": "attempt-d2549d6138b40f3d17e6f087",
+  "job_id": "job-research-0bb313ba6c58f22b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-86ffe82b1cb0e347b528f5b0",
+    "claim_id": "claim-d2549d6138b40f3d17e6f087",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }
