@@ -237,7 +237,7 @@ class DiscoverySearchFilterTest(unittest.TestCase):
         self.assertTrue(result["provider_exhausted"])
         self.assertIsNone(result["next_cursor"])
 
-    def test_collector_defaults_to_ten_unseen_results(self) -> None:
+    def test_collector_defaults_to_twenty_unseen_results(self) -> None:
         calls: list[str | None] = []
 
         def fetch_page(cursor: str | None) -> dict[str, object]:
@@ -258,11 +258,11 @@ class DiscoverySearchFilterTest(unittest.TestCase):
             snapshot_dir=self.snapshot,
         )
 
-        self.assertEqual(calls, [None, "2"])
+        self.assertEqual(calls, [None, "2", "3", "4"])
         self.assertEqual(result["target_unseen"], 20)
-        self.assertEqual(result["unseen_result_count"], 10)
+        self.assertEqual(result["unseen_result_count"], 20)
         self.assertTrue(result["target_reached"])
-        self.assertEqual(result["next_cursor"], "3")
+        self.assertEqual(result["next_cursor"], "5")
 
 
 if __name__ == "__main__":
