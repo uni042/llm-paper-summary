@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 16:31:37 JST**
+> 自動生成: **2026-09-19 17:03:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **43** |
 | 未claim Research job | **42** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（4時間58分前）** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（5時間29分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **11** | **0** | **11** | **0** | **0** | **4** |
-| 合計 | **7** | **12** | **0** | **11** | **1** | **0** | **4** |
+| Discovery | **0** | **2** | **0** | **2** | **0** | **0** | **2** |
+| 合計 | **7** | **3** | **0** | **2** | **1** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -109,48 +109,16 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 16:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **11件** / 候補: **4件**
-- 探索軸: agentic serving・multimodal serving・stateful runtime / CPU-only・CPU/GPU heterogeneous inference runtime / energy・power-aware serving・DVFS / serving framework control-plane・CPU-free runtime / SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL / KV quantization・compressed-domain attention・memory runtime / MoE expert cache・prefetch・placement・heterogeneous offload / network・GPU collective・disaggregated transport・runtime adaptation / 2026年9月新着・runtime memory・serving safety横断 / memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler / speculative decoding・deterministic inference・output-length prediction
-- round `specialist-agent-multimodal-6` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json`
-  - 探索軸: agentic serving・multimodal serving・stateful runtime
+- 最新観測run: **2026-09-19 17:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **2件**
+- 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic
+- round `specialist-flash-cim-1` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
+  - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-cpu-heterogeneous-10` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-cpu-heterogeneous-10.json`
-  - 探索軸: CPU-only・CPU/GPU heterogeneous inference runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-energy-saturation-11` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-energy-saturation-11.json`
-  - 探索軸: energy・power-aware serving・DVFS
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-framework-control-8` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-framework-control-8.json`
-  - 探索軸: serving framework control-plane・CPU-free runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-hierarchical-memory-2` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json`
-  - 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-kv-quant-runtime-9` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-kv-quant-runtime-9.json`
-  - 探索軸: KV quantization・compressed-domain attention・memory runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-moe-saturation-3` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-moe-saturation-3.json`
-  - 探索軸: MoE expert cache・prefetch・placement・heterogeneous offload
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-network-runtime-4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-network-runtime-4.json`
-  - 探索軸: network・GPU collective・disaggregated transport・runtime adaptation
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-recent-runtime-security-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-recent-runtime-security-1.json`
-  - 探索軸: 2026年9月新着・runtime memory・serving safety横断
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-scheduling-kernel-5` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-scheduling-kernel-5.json`
-  - 探索軸: memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler
+- round `specialist-moe-cache-2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T1713JST-discovery-specialist-moe-cache-2.json`
+  - 探索軸: MoE expert cache・router adaptation・weight traffic
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -208,10 +176,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **606** |
+| 成功result未照合のimmutable submission | **608** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
