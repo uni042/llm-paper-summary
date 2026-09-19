@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-52fd234ea45de5f63b71cc39",
-  "job_id": "job-research-2dcd265cd3f3852c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-52fd234ea45de5f63b71cc39",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-52fd234ea45de5f63b71cc39","job_id":"job-research-2dcd265cd3f3852c","data":{"limitations":"効果はワークフロー構造が既知で、固定プロンプトが繰り返し再利用されることを前提とする。完全自律エージェントのように次の呼出しが予測しにくい場合は利点が小さくなり得る。分岐では複数候補を保守的に先読みするため、予測候補が多いほど不要転送とGPU容量消費が増える。active requestだけでGPU容量を使い切る極端な高並行領域は対象外である。SGLangのKV断片化によるPCIe帯域利用率低下は未解決で、現実的PEER型promptでは最大改善が1.08〜1.12倍と合成長文promptより小さい。","differences":"SGLang RadixAttention/HiCacheはprefix共有とCPU階層化を提供するが、基本追出しは過去アクセスに依存し、CPUからの復元も必要時の反応的動作が中心である。KVFlowはAgent Step Graphから将来実行距離を得てRadix木ノードの保持優先度へ変換し、次候補を事前転送する。InferCeptはtool-callで中断された単一要求の保持・swap判断を予測するのに対し、KVFlowは複数エージェントから成るworkflow全体のprefix再利用を対象とする。AutellixやParrotはagentic programのrequest schedulingを扱うがprefix cache管理は中心対象ではない。","implementation_status":"SGLang v0.4.4のfrontend/backendを変更した研究prototype。論文はarXiv v1でunder review。本文では独立した公式code URLは提示されていない。","research_positioning":"KVキャッシュ管理へアプリケーション意味論を取り込む研究として位置付けられる。CPUオフロード自体を新規提案するのではなく、将来の再利用距離を追出し、先読み、request schedulingの共通信号として使い、階層KVキャッシュの転送を隠す点が重要である。"},"reservation":{"claim_id":"claim-52fd234ea45de5f63b71cc39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
