@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-58ec9dfded7ec0db6d9bb446",
-  "job_id": "job-research-53def9917e580440",
-  "data": {
-    "hardware": "RTX 4090構成は24GB GPUメモリ、256GB CPUメモリ、64 CPUコア、PCIe 4.0理論32GB/s。Jetson AGX Orinは32GB統合メモリと12 CPUコア。モデル重みの外部格納にはSamsung 980 PRO NVMe SSDを使用し、理論読込み7,000MB/s、実測約3,000MB/s。CPU-GPU協調評価ではRTX 4090＋CPUを使用。",
-    "software": "llama.cppを基盤に約8,000行のC++/Cを追加。比較対象はTransformers、DeepSpeed-Inference、llama.cpp、MoE-Offloading、MoE-Infinity、Fiddler。GPU中心モードではFloat16モデルの低精度代替にInt4、JetsonのInt8モデルにはInt2専門家を使用する。",
-    "methodology": "Mixtral-8x7B（45B総パラメータ、32層、8専門家/層、Top-2、1トークン14B活性）とPhi-MoE（42B、32層、16専門家/層、Top-2、6.6B活性）を評価。Alpacaから60サンプルを抽出し、半数は入力16、半数は入力128。入力/出力長[16,32]、[16,128]、[128,32]、[128,128]、バッチ1で事前充填遅延と復号トークン/秒を測定する。品質はGSM8KのTop-1正解率とTruthfulQAの真実性・情報性で比較。構成要素除去では動的読込み、適応プリフェッチ、多次元キャッシュを個別評価する。",
-    "scope": "メモリ制約のあるエッジ端末・エッジサーバ上の単一要求MoE推論が主対象。主評価モデルはMixtral-8x7BとPhi-MoEの2種類で、どちらもTop-2ルーティング。低精度代替の閾値やキャッシュ方針の重みは較正データで設定するため、未評価モデルへ無調整で同じ性能が出る保証はない。JetsonではFloat16がSSD読込みのため大きすぎるのでInt8版を用い、比較可能な基線も一部に限定される。"
-  },
+  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
+  "job_id": "job-research-d5e83a73eb90a616",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-58ec9dfded7ec0db6d9bb446",
+    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
     "worker_id": "llm-research-survey-scheduled-chat",
     "worker_kind": "scheduled_chat"
   }

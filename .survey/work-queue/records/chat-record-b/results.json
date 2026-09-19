@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-58ec9dfded7ec0db6d9bb446",
-  "job_id": "job-research-53def9917e580440",
-  "data": {
-    "overview": "Jetson AGX Orinでは、HOBBITはllama.cpp比でMixtral-8x7Bを平均13.0倍、Phi-MoEを18.9倍高速に復号し、事前充填遅延を79%・80%削減した。MoE-Infinity比でも復号は3.64倍・9.93倍、事前充填は60%・72%短縮した。RTX 4090ではMoE-Offloading比で3.21倍・3.29倍、MoE-Infinity比で2.30倍・3.92倍の復号高速化を示す。混合精度化によるGSM8K/TruthfulQAの精度低下は1%以内。",
-    "key_results": [
-      {
-        "metric": "Jetson上の復号高速化",
-        "value": "Mixtral-8x7B 13.0倍、Phi-MoE 18.9倍",
-        "baseline": "llama.cpp",
-        "condition": "Jetson AGX Orin、Int8モデル＋Int2低精度代替、バッチ1",
-        "interpretation": "統合メモリ不足によるページフォールトとSSD読込みが重い環境で、MoE疎性と低精度専門家読込みを使う効果が最大化した。"
-      },
-      {
-        "metric": "Jetson上のMoE専用基線比高速化",
-        "value": "3.64倍、9.93倍",
-        "baseline": "MoE-Infinity",
-        "condition": "Mixtral-8x7B、Phi-MoE",
-        "interpretation": "動的混合精度によりSSDから読むデータ量を削減し、サーバ向けプリフェッチ中心方式より遅いストレージ環境へ適応した。"
-      },
-      {
-        "metric": "RTX 4090上の復号高速化",
-        "value": "MoE-Offloading比3.21倍/3.29倍、MoE-Infinity比2.30倍/3.92倍",
-        "baseline": "MoE-OffloadingおよびMoE-Infinity",
-        "condition": "Float16モデル＋Int4低精度代替、Mixtral-8x7B/Phi-MoE",
-        "interpretation": "CPUメモリへ全専門家を保持できる場合でも、キャッシュミス専門家の転送量削減が有効。"
-      },
-      {
-        "metric": "事前充填遅延削減",
-        "value": "Jetsonで60〜80%、RTX 4090でMoE-Offloading比51〜54%、MoE-Infinity比14〜29%",
-        "baseline": "各比較方式",
-        "condition": "入力長16または128、バッチ1",
-        "interpretation": "事前充填では専門家予測精度が実質100%となるためプリフェッチの重畳効果も大きい。"
-      },
-      {
-        "metric": "動的専門家読込み単独効果",
-        "value": "1.19〜1.57倍",
-        "baseline": "動的混合精度なし",
-        "condition": "全ハードウェア・モデル構成の構成要素除去",
-        "interpretation": "転送速度が遅いJetsonと専門家サイズが大きいMixtralで特に利得が大きい。"
-      },
-      {
-        "metric": "多次元キャッシュのミス罰則削減",
-        "value": "LRU比4.69〜8.68%、LFU比2.13〜4.19%削減",
-        "baseline": "LRU/LFU",
-        "condition": "複数モデル・環境",
-        "interpretation": "高精度専門家のミスを重く扱うLHUと層距離を組み合わせることで、単純ヒット率より実転送費に沿った置換ができる。"
-      }
-    ],
-    "negative_results": "適応プリフェッチ単独では復号利得が小さく、Float16のみではMixtralで1.01倍、Phi-MoEではわずかに悪化する。誤予測した高精度専門家のcudaMemcpyを途中停止できず罰則が大きいためで、混合精度と組み合わせて両モデル約1.05倍になる。CPU-GPU協調モードではMixtralに対してFiddler比0.99倍と僅かに劣り、HOBBITのllama.cpp演算子が同一専門家5ms、FiddlerのPyTorch実装が3msであることが原因。",
-    "interpretation": "HOBBITの主要な利得は、キャッシュミスをゼロにするのではなく、ミスしたときに運ぶ専門家の精度を重要度に応じて下げ、ミス罰則そのものを小さくする点にある。この性質がプリフェッチ誤りとキャッシュ置換にも波及し、従来は高価だった誤予測を低精度転送で緩和できる。専門家読込みが計算より一桁以上長いエッジ条件ほど効果が大きい。",
-    "quality_impact": "GSM8KではMixtral Float16 0.52に対しFloat16+Int4 0.51、Phi-MoEは0.83対0.82。TruthfulQAも差は概ね0.01以内で、Int8+Int2を含め全評価モデル・データセットで精度低下は1%以内と報告される。重要なTop-1専門家を常に高精度へ残すことが品質維持に寄与する。"
-  },
+  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
+  "job_id": "job-research-d5e83a73eb90a616",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-58ec9dfded7ec0db6d9bb446",
+    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
     "worker_id": "llm-research-survey-scheduled-chat",
     "worker_kind": "scheduled_chat"
   }
