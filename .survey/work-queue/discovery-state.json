@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T10:01:11+00:00",
+  "updated_at": "2026-09-19T10:01:50+00:00",
   "last_run_key": "2026-09-19T19:00:00+09:00",
-  "last_round": "specialist-nmp-memory-2",
+  "last_round": "specialist-scheduling-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,41 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T10:16:01+09:00",
-      "round": "specialist-kv-compression-4",
-      "axis": "KVページ圧縮・低ランク表現・GPUカーネル",
-      "query_summary": "端末内メモリ探索からKVページ・圧縮へ軸を移し、PuzzleKV、STAR-KV、量子化KV品質回復、SPINを軽量評価した。SPINは既収録、品質回復論文はシステム寄与が相対的に弱いため候補投入を見送り、2件のみ送信する。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 3,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.25,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.26837"
-      ],
-      "next_axis_hint": "KV圧縮以外へ分離し、推論scheduler・batching・resource allocationの新着、または既存重要論文のforward citationを探索する",
-      "source_submission": "work-queue/submissions/20260913T1028JST-discovery-specialist-kv-compression-4.json"
-    },
-    {
-      "run_key": "2026-09-13T10:16:01+09:00",
-      "round": "specialist-scheduling-5",
-      "axis": "分離サービングSLO・batch fairness・resource allocation",
-      "query_summary": "prefill/decode分離、batching、SLO、GPU resource allocationへ軸を変更した。AFlexとBiScaleは既収録済みとして除外し、Kairosとresource-fair batchingは最新HEADのexisting jobsで未登録を再確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.01891",
-        "arXiv:2602.18755"
-      ],
-      "next_axis_hint": "投機的復号のruntime/resource sharing、特にremote drafter・draft vocabulary・edge memory-aware schedulingへ移る",
-      "source_submission": "work-queue/submissions/20260913T1031JST-discovery-specialist-scheduling-5.json"
-    },
     {
       "run_key": "2026-09-13T10:16:01+09:00",
       "round": "specialist-specdecode-6",
@@ -7210,6 +7175,53 @@
       ],
       "next_axis_hint": "Search CXL/NMP/PIM memory-side execution and memory pooling papers, then switch to network/KV-transfer scheduling if overlap rises.",
       "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-nmp-memory-2.json"
+    },
+    {
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "round": "specialist-agent-scheduling-5",
+      "axis": "agentic multi-turn scheduling / tool-call pauses / KV cache TTL",
+      "query_summary": "Moved from generic batching to agentic multi-turn serving. SPECTRE, SPIN, and SwiftSpec were already known in the recent discovery history; Continuum was not found by repository code search and has a distinct tool-aware cache-retention and program-scheduling contribution.",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2511.02230"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.08151",
+        "arXiv:2503.15921",
+        "arXiv:2506.11309"
+      ],
+      "next_axis_hint": "Search agentic serving memory isolation/sandboxing and prefix-cache lifecycle, then switch to MoE placement if overlap rises.",
+      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json"
+    },
+    {
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "round": "specialist-scheduling-4",
+      "axis": "prefill/decode fairness / adaptive batching / SLO scheduling",
+      "query_summary": "Changed to scheduler/resource-allocation work after three memory-system rounds. MFS and SuperInfer were already represented in the known search state; FairBatching was not found by repository code search and provides concrete scheduler mechanisms plus realistic trace evaluation.",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2510.14392"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.17456",
+        "arXiv:2601.20309"
+      ],
+      "next_axis_hint": "Move to speculative-decoding serving/runtime or agentic multi-turn scheduling, avoiding generic SLO scheduling overlap.",
+      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-scheduling-4.json"
     }
   ],
   "axes": {
@@ -13031,6 +13043,32 @@
       "duplicate_ratio": 0.6666666666666666,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Search CXL/NMP/PIM memory-side execution and memory pooling papers, then switch to network/KV-transfer scheduling if overlap rises."
+    },
+    "agentic multi-turn scheduling / tool-call pauses / KV cache TTL": {
+      "last_run_key": "2026-09-19T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "Search agentic serving memory isolation/sandboxing and prefix-cache lifecycle, then switch to MoE placement if overlap rises."
+    },
+    "prefill/decode fairness / adaptive batching / SLO scheduling": {
+      "last_run_key": "2026-09-19T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Move to speculative-decoding serving/runtime or agentic multi-turn scheduling, avoiding generic SLO scheduling overlap."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
