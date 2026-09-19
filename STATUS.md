@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:50:22 JST**
+> 自動生成: **2026-09-20 01:50:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **2** | **1** | **0** | **1** | **0** | — |
+| Research | **13** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **67** | **6** | **5** | **0** | **1** | **0** | **0** |
+| 合計 | **67** | **5** | **5** | **0** | **1** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,14 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
   - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e1fd57ed695526cd97dd92b5.json` (job `job-research-153b45adc3c50a28`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-e1fd57ed695526cd97dd92b5.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -194,7 +192,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:42:40 JST** / heartbeat: **—** / lease expiry: **09-20 03:12:40 JST**
+  - claim: **09-20 01:50:30 JST** / heartbeat: **—** / lease expiry: **09-20 03:20:30 JST**
   - evidence: `.survey/work-queue/claims/job-research-153b45adc3c50a28.json`
 
 #### Audit
