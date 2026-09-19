@@ -1,16 +1,48 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5fffc5f2bfc3aa8b62dc1383","job_id":"job-research-c7f741bd6a7395ee",
- "data":{
-  "overview":"FlashAttentionと比べ、PackInferは異種系列長のバッチでTBTを13.0〜20.1%、TTLTを3.8〜20.2%、TTFTを最大18.6%短縮した。トークンスループットは9.3〜24.9%向上し、バッチ量掃引では一貫して約1.2〜1.3倍を示す。改善は短い要求の無駄タイルを複数要求で埋める計算詰め合わせと、KVを連続化して共有接頭辞の重複転送を減らす入出力詰め合わせの双方から生じる。",
-  "key_results":[
-   {"metric":"TBT遅延","value":"13.0〜20.1%削減","baseline":"FlashAttention","condition":"実トレースを用いたQwen3-4BおよびMistral-7B等のエンドツーエンド推論","interpretation":"系列長不均衡によるSM末尾待ちとKV入出力の散在を同時に減らした効果。"},
-   {"metric":"TTFT遅延","value":"最大18.6%削減","baseline":"FlashAttention","condition":"Alpaca、LMSYS、Text2SQLを含む評価","interpretation":"プリフィルでも短い要求のパディング計算を詰め合わせで回収できる。"},
-   {"metric":"トークンスループット","value":"9.3〜24.9%向上","baseline":"FlashAttention","condition":"異種系列長ワークロード。バッチ量掃引では約1.2〜1.3倍","interpretation":"不均一度が大きいほど、要求境界を越えた詰め合わせで回収できる遊休資源が増える。"},
-   {"metric":"GPU実行資源利用","value":"Tensor Core指標18%→33%、SM命令発行指標17%→25%","baseline":"FlashAttention","condition":"論文Table 3のカーネル利用率測定","interpretation":"高水準の遅延改善が、演算器の実利用改善としても観測される。"}
-  ],
-  "negative_results":"群容量を大きくしすぎると内部断片化が増え、性能は単調には伸びない。評価では群容量2048付近が頂点となる凸型傾向を示す。またKV連続化にはコピー費用があるため、接尾辞用余白を設けて複数デコード段階へ償却する。系列長が均一なバッチでは詰め合わせで回収できる不均衡自体が小さく、利得も縮小する。",
-  "interpretation":"計算側だけでもカーネル起動数と無駄タイルを減らせるが、入出力側を加えると共有接頭辞の再読込と非連続KV参照も減るため追加改善が得られる。H100、A100、A40でTBTを11〜19%削減し、4台A100のテンソル並列でも改善が維持されたことから、特定GPU一機種だけの効果ではない。一方で最適群容量はハードウェアと負荷に依存するため、計測に基づく適応が必要である。",
-  "quality_impact":"注意演算の数学的意味を維持する無損失方式であり、近似・量子化・KV削除による品質劣化は導入しない。"
- },
- "reservation":{"claim_id":"claim-5fffc5f2bfc3aa8b62dc1383","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-35ffcfb18fd8c03e9c06c8cb",
+  "job_id": "job-research-c7f741bd6a7395ee",
+  "data": {
+    "overview": "FlashAttentionと比べ、PackInferは異種系列長のバッチでTBTを13.0〜20.1%、TTLTを3.8〜20.2%、TTFTを最大18.6%短縮した。トークンスループットは9.3〜24.9%向上し、バッチ量掃引では一貫して約1.2〜1.3倍を示す。改善は短い要求の無駄タイルを複数要求で埋める計算詰め合わせと、KVを連続化して共有接頭辞の重複転送を減らす入出力詰め合わせの双方から生じる。",
+    "key_results": [
+      {
+        "metric": "TBT遅延",
+        "value": "13.0〜20.1%削減",
+        "baseline": "FlashAttention",
+        "condition": "実トレースを用いたQwen3-4BおよびMistral-7B等のエンドツーエンド推論",
+        "interpretation": "系列長不均衡によるSM末尾待ちとKV入出力の散在を同時に減らした効果。"
+      },
+      {
+        "metric": "TTFT遅延",
+        "value": "最大18.6%削減",
+        "baseline": "FlashAttention",
+        "condition": "Alpaca、LMSYS、Text2SQLを含む評価",
+        "interpretation": "プリフィルでも短い要求のパディング計算を詰め合わせで回収できる。"
+      },
+      {
+        "metric": "トークンスループット",
+        "value": "9.3〜24.9%向上",
+        "baseline": "FlashAttention",
+        "condition": "異種系列長ワークロード。バッチ量掃引では約1.2〜1.3倍",
+        "interpretation": "不均一度が大きいほど、要求境界を越えた詰め合わせで回収できる遊休資源が増える。"
+      },
+      {
+        "metric": "GPU実行資源利用",
+        "value": "Tensor Core指標18%→33%、SM命令発行指標17%→25%",
+        "baseline": "FlashAttention",
+        "condition": "論文Table 3のカーネル利用率測定",
+        "interpretation": "高水準の遅延改善が、演算器の実利用改善としても観測される。"
+      }
+    ],
+    "negative_results": "群容量を大きくしすぎると内部断片化が増え、性能は単調には伸びない。評価では群容量2048付近が頂点となる凸型傾向を示す。またKV連続化にはコピー費用があるため、接尾辞用余白を設けて複数デコード段階へ償却する。系列長が均一なバッチでは詰め合わせで回収できる不均衡自体が小さく、利得も縮小する。",
+    "interpretation": "計算側だけでもカーネル起動数と無駄タイルを減らせるが、入出力側を加えると共有接頭辞の再読込と非連続KV参照も減るため追加改善が得られる。H100、A100、A40でTBTを11〜19%削減し、4台A100のテンソル並列でも改善が維持されたことから、特定GPU一機種だけの効果ではない。一方で最適群容量はハードウェアと負荷に依存するため、計測に基づく適応が必要である。",
+    "quality_impact": "注意演算の数学的意味を維持する無損失方式であり、近似・量子化・KV削除による品質劣化は導入しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-35ffcfb18fd8c03e9c06c8cb",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
 }

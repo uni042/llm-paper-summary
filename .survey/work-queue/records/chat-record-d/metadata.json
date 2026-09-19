@@ -2,30 +2,47 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5fffc5f2bfc3aa8b62dc1383",
+  "attempt_id": "attempt-35ffcfb18fd8c03e9c06c8cb",
   "job_id": "job-research-c7f741bd6a7395ee",
   "data": {
     "canonical_id": "arXiv:2602.06072",
     "arxiv_id": "2602.06072",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference",
     "summary": "実運用のLLM推論では長さの異なる要求を同じバッチへ混在させるため、固定タイル単位の注意計算では短い要求のパディング計算と長い要求による末尾待ちが生じる。PackInferは、要求を実効系列長で負荷均衡した実行群へ詰め直し、共有接頭辞を考慮してKVキャッシュを群ごとの連続領域へ再配置する。計算側と入出力側を同時に整えることで、注意計算の意味を変えずにGPUの演算器利用率とメモリ帯域利用率を高めるカーネル級の方式である。",
     "list_summary": "異種長要求を負荷均衡した群へ詰め、共有接頭辞を考慮した連続KV配置と一体化することで、注意計算の無駄と入出力断片化を同時に削減する。",
-    "authors": ["Rui Ning", "Wei Zhang", "Fan Lai"],
+    "authors": [
+      "Rui Ning",
+      "Wei Zhang",
+      "Fan Lai"
+    ],
     "authors_affiliations": "Nanjing University; University of Illinois Urbana-Champaign",
     "published": "2026-02-03",
     "publication": "arXiv",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "attention kernel / heterogeneous batched inference / KV-cache layout",
-    "topics": ["attention kernel", "batched inference", "KV cache", "GPU utilization"],
+    "topics": [
+      "attention kernel",
+      "batched inference",
+      "KV cache",
+      "GPU utilization"
+    ],
     "importance": "実運用バッチの系列長不均衡を、カーネル実行領域とKV配置の共同設計で扱う。",
     "hardware_evaluation": "NVIDIA A100 40GBを既定環境とし、4台A100の分散評価、H200とA40への移植評価も実施。",
     "quality_effect": "注意計算は無損失で、モデル構造や出力品質を変更しない。",
     "source": "https://arxiv.org/abs/2602.06072",
-    "sources": ["https://arxiv.org/abs/2602.06072", "https://arxiv.org/pdf/2602.06072"],
+    "sources": [
+      "https://arxiv.org/abs/2602.06072",
+      "https://arxiv.org/pdf/2602.06072"
+    ],
     "code": null,
     "implementation": "約1000行のCUDA/C++によるモジュール型ライブラリとして実装し、FlashAttention互換APIとしてNano-vLLMへ統合。論文中に公式コード公開URLの記載は確認できない。",
     "last_checked": "2026-09-19",
@@ -34,5 +51,9 @@
     "references_source": "primary-reference-section",
     "references_total": 0
   },
-  "reservation": {"claim_id": "claim-5fffc5f2bfc3aa8b62dc1383", "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-35ffcfb18fd8c03e9c06c8cb",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
 }
