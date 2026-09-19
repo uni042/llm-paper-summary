@@ -98,6 +98,24 @@ class DiscoveryMultiRoundIngestTest(unittest.TestCase):
         ]
         self.assertEqual([row.get("canonical_id") for row in research], ["arXiv:2609.99991"])
 
+    def test_discovery_preserves_identity_aliases_on_research_job(self) -> None:
+        payload = self._round_payload()
+        payload["candidates"][0]["openreview_id"] = "alias-review-id"
+        payload["candidates"][0]["identifiers"] = ["DOI:10.5555/example"]
+        source = queue_worker.SUBMISSIONS / "round-with-aliases.json"
+        source.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
+        queue_worker.process_submissions(self._state())
+
+        research = [
+            json.loads(path.read_text(encoding="utf-8"))
+            for path in queue_worker.JOBS.glob("*.json")
+            if json.loads(path.read_text(encoding="utf-8")).get("type") == "research"
+        ]
+        self.assertEqual(len(research), 1)
+        self.assertEqual(research[0].get("openreview_id"), "alias-review-id")
+        self.assertEqual(research[0].get("identifiers"), ["DOI:10.5555/example"])
+
     def test_recovery_accepts_legacy_unknown_specialist_job_id(self) -> None:
         payload = self._round_payload()
         payload.pop("operation")
