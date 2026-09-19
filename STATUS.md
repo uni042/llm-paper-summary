@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 09:02:09 JST**
+> 自動生成: **2026-09-19 09:02:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **54** |
 | 未claim Research job | **52** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（1時間36分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（1時間37分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -192,9 +192,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/ISCA66397.2026.00098` — Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 09:01:57 JST** / heartbeat: **—** / lease expiry: **09-19 10:31:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-21d6a425148ac99f.json`
+- `DOI:10.1109/HPCA68181.2026.11408592` — PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 09:02:34 JST** / heartbeat: **—** / lease expiry: **09-19 10:32:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-399763992dea8e09.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 08:32:22 JST** / lease expiry: **09-19 10:02:22 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -245,8 +245,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **575** |
-| └ Research | **446** |
+| 成功result未照合のimmutable submission | **576** |
+| └ Research | **447** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
