@@ -1,34 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T12:04:01+00:00",
-  "last_run_key": "2026-09-19T21:00:00+09:00",
-  "last_round": "specialist-batching-fairness-8",
+  "updated_at": "2026-09-19T13:01:30+00:00",
+  "last_run_key": "2026-09-19T22:00:00+09:00",
+  "last_round": "specialist-flash-agent-runtime-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T12:00:00+09:00",
-      "round": "specialist-cold-moe-pooling-1",
-      "axis": "cold MoE multi-model serving・weight/KV disaggregation",
-      "query_summary": "直近のLLM serving、MoE、KV cache、disaggregationを一次資料中心に探索し、既存queue/repositoryのcanonical IDを再確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2608.16477",
-        "arXiv:2606.02964"
-      ],
-      "next_axis_hint": "MoE expert poolのGPU間配置・cold-model weight streaming、またはmulti-model servingのCXL/NVMe階層へ軸を移す",
-      "source_submission": "work-queue/submissions/20260915T1204JST-discovery-crosspool.json"
-    },
     {
       "run_key": "2026-09-15T12:00:00+09:00",
       "round": "specialist-handoff-guard",
@@ -7339,6 +7320,24 @@
       ],
       "next_axis_hint": "次はmulti-model/multi-tenant placement、request migration、またはinference cost optimizationへ移る。",
       "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-batching-fairness-8.json"
+    },
+    {
+      "run_key": "2026-09-19T22:00:00+09:00",
+      "round": "specialist-flash-agent-runtime-1",
+      "axis": "2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving",
+      "query_summary": "直前のbatching/fairness軸を反復せず、2026年9月14-17日の新着を中心にLLM inference/serving、Flash/HBF、GPU/runtime、agentic servingを横断検索した。一次arXiv情報を優先してsystems寄与と実測評価を軽量確認し、投入直前にcanonical arXiv ID/titleをGitHub default branchで再検索した。KVShareArenaは主にbenchmark、AutoTuneBenchはmeasurement benchmark、LYREOはsimulation中心のedge schedulingのため今回の強候補から除外した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.42857142857142855,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "HBFlex/Flash系のforward/backward citationからnear-storage computeとKV state placementを追い、その後MoE expert I/OとCXL/NVMe階層の未走査2025-2026論文へ移る",
+      "source_submission": "work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json"
     }
   ],
   "axes": {
@@ -13589,6 +13588,19 @@
       "duplicate_ratio": 0.3333333333333333,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "次はmulti-model/multi-tenant placement、request migration、またはinference cost optimizationへ移る。"
+    },
+    "2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving": {
+      "last_run_key": "2026-09-19T22:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.42857142857142855,
+      "next_axis_hint": "HBFlex/Flash系のforward/backward citationからnear-storage computeとKV state placementを追い、その後MoE expert I/OとCXL/NVMe階層の未走査2025-2026論文へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
