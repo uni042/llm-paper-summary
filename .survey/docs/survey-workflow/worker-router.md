@@ -87,13 +87,24 @@ target_unseen: 20
 
 ### 4.1 探索方法
 
-次の3経路はすべて同じschema v3 precheckを通す。
+次の4経路はすべて同じschema v3 precheckを通す。
 
 1. 通常検索・新着検索: OpenAlex / Semantic Scholar等の固定検索URL。
 2. backward reference（収録論文が引用している論文）: `openalex_references` 等、参照先を列挙できる固定ソース。
 3. forward citation（収録論文を引用している論文）: OpenAlex等の被引用検索を固定ソースとして指定。
+4. structured-reference curation（収録済み論文の構造化 `references` 全体から未収録候補を掘る）: `provider: repository_references`、`source_url: repository://structured-references` を使う任意の探索軸。
 
 OpenAlexで直接ページ送り・引用関係を取得できる場合はOpenAlexを優先してよい。提供元を変える場合は別探索軸として記録する。
+
+#### 4.1.1 structured-reference curation の進め方
+
+この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを上限の目安としてよい。
+
+- 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文は除外し、専用台帳 `.survey/work-queue/reference-curation/unrelated-papers.json` に登録済みの候補も除外する。
+- **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で専用台帳へ永続保存する。同じ論文を後続runで再判定しない。
+- 「重要度が低い」「今は優先しない」「関連性が微妙」だけでは無関係台帳へ入れない。永久除外してよいのは対象外と判断できる場合だけである。
+- 関連ありの候補は一次資料でtitle/abstract/書誌を補完してから、当該schema v3 precheck result / receiptを参照する通常のDiscovery submissionへ送る。canonical IDだけをtitle代わりにして提出しない。
+- この経路からResearch jobを直接生成しない。Candidate投入以降は4.2〜4.3の一本道へ合流する。
 
 ### 4.2 Candidate投入
 

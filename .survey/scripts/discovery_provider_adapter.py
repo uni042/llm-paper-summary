@@ -353,6 +353,50 @@ def openalex_references_fetcher(
 
     return fetch_page
 
+
+def repository_reference_pool_fetcher(
+    source_url: str,
+    *,
+    page_size: int = 100,
+    repo_root: Path | None = None,
+    unrelated_ledger_path: Path | None = None,
+) -> Callable[[str | None], dict[str, Any]]:
+    """Page through the repository-wide structured-reference candidate pool."""
+    if source_url != reference_pool.SOURCE_URL:
+        raise DiscoveryProviderError(
+            f"repository_references source_url must be {reference_pool.SOURCE_URL!r}"
+        )
+    if page_size <= 0 or page_size > 100:
+        raise ValueError("page_size must be between 1 and 100")
+    root = Path(repo_root or Path.cwd()).resolve()
+    ledger = (
+        Path(unrelated_ledger_path)
+        if unrelated_ledger_path is not None
+        else root / reference_pool.DEFAULT_LEDGER
+    )
+    pool = reference_pool.build_reference_pool(
+        root,
+        unrelated_ledger_path=ledger,
+    )
+    records = list(pool["candidates"])
+
+    def fetch_page(cursor: str | None) -> dict[str, Any]:
+        index = int(cursor or "0")
+        if index < 0:
+            raise DiscoveryProviderError("repository reference cursor must be non-negative")
+        chunk = records[index:index + page_size]
+        next_index = index + len(chunk)
+        next_cursor = str(next_index) if next_index < len(records) else None
+        return {
+            "records": chunk,
+            "next_cursor": next_cursor,
+            "page_url": source_url,
+            "position": index,
+            "pool_candidate_count": len(records),
+        }
+
+    return fetch_page
+
 def make_fetcher(
     provider: str,
     source_url: str,
