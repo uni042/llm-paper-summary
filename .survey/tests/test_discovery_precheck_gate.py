@@ -236,6 +236,11 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "add", marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
         subprocess.run(["git", "commit", "-qm", "enable discovery precheck"], cwd=self.repo, check=True)
 
+        iterative_marker = self.queue / "discovery-precheck" / "ITERATIVE_ENFORCED"
+        iterative_marker.write_text("schema_version=2\n", encoding="utf-8")
+        subprocess.run(["git", "add", iterative_marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "enable iterative discovery precheck"], cwd=self.repo, check=True)
+
     def tearDown(self) -> None:
         for name, value in self.originals.items():
             setattr(queue_worker, name, value)
@@ -264,7 +269,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         self,
         *,
         author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com",
-        schema_version: int = 1,
+        schema_version: int = 2,
         evaluation_allowed: bool = True,
     ) -> Path:
         path = self.results / "req-1.json"
@@ -342,6 +347,19 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         }
         result = queue_worker.validate_discovery_precheck(sub)
         self.assertEqual(result["request_id"], "req-1")
+
+    def test_schema_v1_result_cannot_authorize_post_iterative_submission(self) -> None:
+        self._commit_result(schema_version=1)
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertIn("schema-v2", str(ctx.exception))
 
     def test_intermediate_iterative_result_cannot_authorize_submission(self) -> None:
         self._commit_result(schema_version=2, evaluation_allowed=False)
