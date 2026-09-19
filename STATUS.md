@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:35:27 JST**
+> 自動生成: **2026-09-20 04:45:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文 | **97** |
 | 未claim Research job | **94** |
-| 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-20 04:35:23 JST（4秒前）** |
-| 整合性異常 | **21** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-20 04:35:23 JST（10分前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **1** | **0** | **3** | **0** | — |
+| Research | **10** | **1** | **1** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **23** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **2** | **2** | **0** | **3** | **0** | **5** |
+| 合計 | **33** | **2** | **2** | **0** | **3** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -256,36 +256,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **21** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **21** |
-
-### 対応jobなしsubmissionの診断対象
-
-上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
-
-- `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
-- `.survey/work-queue/submissions/20260919T1700JST-round10-rdma-network.json`
-- `.survey/work-queue/submissions/20260919T1700JST-round11-recent-crosscheck.json`
-- `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
-- `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
-- `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r1-a.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r1-b.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r2-a.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r2-b.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-a.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-b.json`
-- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-c.json`
-- `.survey/work-queue/submissions/refcuration-stress-20260920T0340JST-r1-a.json`
-- `.survey/work-queue/submissions/refcuration-stress-20260920T0340JST-r1-b.json`
-- `.survey/work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-a.json`
-- `.survey/work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-b.json`
-- `.survey/work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-c.json`
-- `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
-- `.survey/work-queue/submissions/validation-precheck-gate-bypass2-20260920T001652JST.json`
-- `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
