@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:44:41 JST**
+> 自動生成: **2026-09-20 06:45:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **92** |
-| 未claim Research job | **91** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-20 06:42:02 JST（2分前）** |
+| 収録候補論文 | **91** |
+| 未claim Research job | **90** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-20 06:44:57 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **92** |
+| canonical_id確認済みの一意な候補論文 | **91** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **92** |
+| 非終端Research job合計 | **91** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **4** | **1** | **2** | **1** | **0** | — |
+| Research | **12** | **4** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **5** | **2** | **2** | **1** | **0** | **5** |
+| 合計 | **19** | **5** | **3** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 06:44:57 JST** [research] `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading
+  - job: `.survey/work-queue/jobs/job-research-ac3d391d822b215f.json`
+  - result: `.survey/work-queue/results/research/attempt-fa744ec1780cd6efcfcf4336.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json`
+  - paper: `papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md`
 - **09-20 06:42:02 JST** [research] `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f61b26d21a391bc924304828.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md`
-- **09-20 01:42:00 JST** [research] `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
-  - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
-  - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
 
 ### Audit
 
@@ -139,16 +139,21 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **2件**
+- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-bb1596f9270c7fb349dddddf.json` (job `job-research-576a090cf3d34dc3`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bb1596f9270c7fb349dddddf.json` (job `job-research-576a090cf3d34dc3`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-bb1596f9270c7fb349dddddf.json` (`ok=false`)
 - **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json` (job `job-research-ac3d391d822b215f`)
+- **成功** `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading
+  - job: `.survey/work-queue/jobs/job-research-ac3d391d822b215f.json`
+  - result: `.survey/work-queue/results/research/attempt-fa744ec1780cd6efcfcf4336.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json`
+  - paper: `papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md`
 
 #### Audit (:30)
 
@@ -193,7 +198,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **92** |
+| ready | **91** |
 
 ### 候補の重複・識別情報欠損
 
@@ -213,7 +218,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **781** |
+| inference/training/survey配下の論文Markdown実体 | **782** |
 
 ### immutable submissionの未照合
 
@@ -221,8 +226,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **672** |
-| └ Research | **511** |
+| 成功result未照合のimmutable submission | **671** |
+| └ Research | **510** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

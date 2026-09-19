@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T21:42:07.231628+00:00",
+  "updated_at": "2026-09-19T21:45:02.660493+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T21:42:07.231628+00:00",
+      "last_recorded_at": "2026-09-19T21:45:02.660493+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 317,
+        "research_completed": 318,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 42,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35414763327:1",
-          "recorded_at": "2026-09-19T02:09:10.439664+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35414763327",
-            "run_attempt": "1",
-            "source_sha": "1c889061588a274910136d343d6659751cf39772"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35414864341:1",
           "recorded_at": "2026-09-19T02:10:29.150831+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35471146009",
             "run_attempt": "1",
             "source_sha": "0da08912bf0187e8b849b0106cc3bc5211ce6271"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35471301464:1",
+          "recorded_at": "2026-09-19T21:45:02.660493+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35471301464",
+            "run_attempt": "1",
+            "source_sha": "a143f46d8c84accbaffce8cf60e6551878f0cbf3"
           },
           "signals": [
             "research_completed"
@@ -24015,6 +24015,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.16525",
           "title": "KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ac3d391d822b215f",
+          "type": "research",
+          "canonical_id": "arXiv:2405.01814",
+          "title": "Efficient and Economic Large Language Model Inference with Attention Offloading",
           "from": "ready",
           "to": "completed"
         }
