@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-1b0b6909960f493a2fbeb493",
-  "job_id": "job-research-b33b8317e97d5549",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1b0b6909960f493a2fbeb493",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1b0b6909960f493a2fbeb493","job_id":"job-research-b33b8317e97d5549","data":{"hardware":"NVIDIA L40S GPU 1基を全実験で使用する。モデルはQwen2.5-7B、Llama3.1-8B、Yi1.5-9B。高並行度の複数利用者サービングでは送信率を最大30 QPSまで変化させる。","software":"vLLM 0.4.1を基盤に約2K行のPythonでKVShareを実装し、キャッシュ認識スケジューリングとDHD再計算を統合する。比較用CacheBlendは公開実装から移植する。比較対象は完全再計算、全KVをそのまま再利用するNaive、CacheBlend、EPIC。","methodology":"品質評価はGSM8KのAccuracy、DROPのExact Match、SAMSumのRouge-Lを用い、3モデルそれぞれで再計算率10/20/30/40%を比較する。プリフィルのみの再計算と、各デコード段階で追加3トークンを再計算する二段階構成を分けて測定する。サービング効率はShareGPT等の実ユーザー指示を用い、QPSを変えながらTTFTと入力スループットを測る。キャッシュ認識スケジューリングの有無も切り分けてTTFTへの寄与を確認する。","scope":"複数利用者が類似文脈を持つサービングでの要求間KV再利用が中心であり、単一L40S上の7B〜9B級モデルで評価する。異なるGPU、分散サービング、より大規模モデル、非常に低い再利用率のワークロードへの一般化は直接検証されていない。精度回復は三つの代表タスクで評価されるが、広範な長文脈ベンチマークや安全性評価は対象外である。"},"reservation":{"claim_id":"claim-1b0b6909960f493a2fbeb493","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
