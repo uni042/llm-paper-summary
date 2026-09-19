@@ -105,7 +105,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
                 repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
             )
             self.assertIn("| Research | **0** | **1** | **0** | **1** |", text)
-            self.assertIn("未完了または未検証", text)
+            self.assertIn("個別result未照合", text)
 
     def test_latest_paper_worker_requires_result_submission_job_and_paper(self):
         with tempfile.TemporaryDirectory() as td:

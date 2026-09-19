@@ -521,6 +521,7 @@ def _render_latest_paper_kind(
     paper_worker_id: str | None,
     submissions: list[dict[str, Any]],
     verified_by_submission: dict[Path, dict[str, Any]],
+    result_by_submission: dict[Path, dict[str, Any]],
 ) -> list[str]:
     label = LABELS[kind]
     lines = [f"#### {label} (:30)", ""]
@@ -534,10 +535,9 @@ def _render_latest_paper_kind(
         f" / worker `{paper_worker_id or '—'}`"
     )
     succeeded = [row for row in selected if row["path"] in verified_by_submission]
-    lines.append(
-        f"- immutable submission: **{len(selected)}件** / 検証済み成功: **{len(succeeded)}件** / "
-        f"未完了・未検証: **{len(selected) - len(succeeded)}件**"
-    )
+    matched_non_success = [row for row in selected if row["path"] in result_by_submission and row["path"] not in verified_by_submission]
+    missing_result = [row for row in selected if row["path"] not in result_by_submission]
+    lines.append(f"- immutable submission: **{len(selected)}件** / 検証済み成功: **{len(succeeded)}件** / result照合済み非成功: **{len(matched_non_success)}件** / 個別result未照合: **{len(missing_result)}件**")
     if not selected:
         lines.append(f"- このrunに{label} submissionはありません。")
         return lines
@@ -545,10 +545,13 @@ def _render_latest_paper_kind(
     for submission in selected[:10]:
         verified_row = verified_by_submission.get(submission["path"])
         if verified_row is None:
-            lines.append(
-                f"- **未完了または未検証** `{evidence._rel(repo_root, submission['path'])}` "
-                f"(job `{submission['job_id'] or '—'}`)"
-            )
+            matched_result = result_by_submission.get(submission["path"])
+            if matched_result is not None:
+                failure_class = str(matched_result["payload"].get("failure_class") or "non_success")
+                lines.append(f"- **result照合済み非成功** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`, failure_class `{failure_class}`)")
+                lines.append(f"  - result: `{evidence._rel(repo_root, matched_result['path'])}` (`ok={str(matched_result['payload'].get('ok')).lower()}`)")
+            else:
+                lines.append(f"- **個別result未照合** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`)")
             continue
         lines.append(
             f"- **成功** {evidence._label(verified_row['job']['payload'], verified_row['job_id'])}"
@@ -572,6 +575,11 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     results = evidence._collect_results(repo_root)
     verified = evidence._verified_completions(repo_root, jobs, submissions, results)
     verified_by_submission = evidence._verified_by_submission(verified)
+    result_by_submission: dict[Path, dict[str, Any]] = {}
+    for result in results:
+        submission = evidence._submission_for_result(repo_root, result, submissions)
+        if submission is not None:
+            result_by_submission[submission["path"]] = result
     verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)
     active = evidence._active_claims(repo_root, jobs, now)
     candidate_backlog = _durable_candidate_backlog(jobs)
@@ -644,10 +652,8 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         kind: len(latest_by_kind[kind]) for kind in KINDS
     } | {"other": 0}
     latest_success_counts = latest_success | {"other": 0}
-    latest_unverified_counts = {
-        kind: latest_submission_counts[kind] - latest_success_counts[kind]
-        for kind in (*KINDS, "other")
-    }
+    latest_result_counts = {kind: sum(row["path"] in result_by_submission for row in latest_by_kind[kind]) for kind in KINDS} | {"other": 0}
+    latest_unverified_counts = {kind: latest_submission_counts[kind] - latest_result_counts[kind] for kind in (*KINDS, "other")}
     candidate_count = _candidate_count(latest_discovery_submissions)
 
     lines: list[str] = [
@@ -750,6 +756,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
             paper_worker_id=paper_worker_id,
             submissions=latest_paper_submissions,
             verified_by_submission=verified_by_submission,
+            result_by_submission=result_by_submission,
         )
     )
     lines += [""]
@@ -761,6 +768,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
             paper_worker_id=paper_worker_id,
             submissions=latest_paper_submissions,
             verified_by_submission=verified_by_submission,
+            result_by_submission=result_by_submission,
         )
     )
 
