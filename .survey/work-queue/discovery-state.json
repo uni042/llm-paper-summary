@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T18:18:25+00:00",
-  "last_run_key": "manual-eval-2026-09-20-r2b",
-  "last_round": "refcuration-eval-r2-b",
+  "updated_at": "2026-09-19T18:22:27+00:00",
+  "last_run_key": "manual-eval-2026-09-20-r3",
+  "last_round": "refcuration-eval-r3-c",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,51 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-crosspool-orbitflow-21",
-      "axis": "cold MoE weight/KV disaggregation・SLO-aware fine-grained KV placement",
-      "query_summary": "memory poolingとadaptive offloadの近接研究を探索し、CrossPool（2606.24506）とORBITFLOW（2601.10729）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はActions反映後にinventoryを再確認し、overflow未満なら2026年8-9月のrecent serving systemを追加探索する。",
-      "source_submission": "work-queue/submissions/20260915T0838JST-discovery-specialist-crosspool-orbitflow-21.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-adaptcache-7",
-      "axis": "DRAM/SSD KV階層における圧縮率・配置・品質の共同最適化",
-      "query_summary": "SmartSSD/NVMe隣接軸からSSD-backed KV hierarchyを探索し、AdaptCache（arXiv:2509.00105）を評価した。最新identityのKV offloading lineageでは2507.03153から2511.00321の間に同IDがなく、identity-delta一覧にも2509.00105.jsonが存在しないことを確認した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はMoE expert cache/offloadへ移り、SSD/CPU expert residency、routing locality、prefetch schedulingの未収録候補を探索する。",
-      "source_submission": "work-queue/submissions/20260915T0840JST-discovery-specialist-adaptcache-7.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-cox-shuntserve-22",
-      "axis": "CPU/GPU MoE co-execution・heterogeneous spot GPU serving",
-      "query_summary": "MoE CPU/GPU協調とheterogeneous cluster servingへ探索軸を広げ、CoX-MoE（2605.17889）とShuntServe（2606.18600）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は最新Actions反映後のinventoryを確認し、overflow未満ならdistributed KV/prefix cache schedulingかrecent 2608-2609 serving systemを探索する。",
-      "source_submission": "work-queue/submissions/20260915T0840JST-discovery-specialist-cox-shuntserve-22.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-vertumnus-saecache-23",
@@ -7500,6 +7455,77 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle.",
       "source_submission": "work-queue/submissions/refcuration-eval-20260920-r2-b.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20-r3",
+      "round": "refcuration-eval-r3-a",
+      "axis": "structured references relevance curation round 3",
+      "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 7,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2401.18079",
+        "arXiv:2406.10774",
+        "arXiv:2404.08509",
+        "arXiv:2306.00978"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r3-a.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20-r3",
+      "round": "refcuration-eval-r3-b",
+      "axis": "structured references relevance curation round 3",
+      "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 7,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2306.14048",
+        "arXiv:2312.12456",
+        "arXiv:2404.14469"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r3-b.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20-r3",
+      "round": "refcuration-eval-r3-c",
+      "axis": "structured references relevance curation round 3",
+      "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2211.17192",
+        "arXiv:2310.01801",
+        "arXiv:2408.12757",
+        "arXiv:2401.17644"
+      ],
+      "duplicate_canonical_ids": [
+        "OpenReview:B1ckMDqlg",
+        "DOI:10.18653/v1/2024.acl-long.172"
+      ],
+      "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r3-c.json"
     }
   ],
   "axes": {
@@ -14296,6 +14322,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle."
+    },
+    "structured references relevance curation round 3": {
+      "last_run_key": "manual-eval-2026-09-20-r3",
+      "rounds": 3,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 18,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 18,
+      "accepted_count": 11,
+      "duplicate_ratio": 0.1,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
