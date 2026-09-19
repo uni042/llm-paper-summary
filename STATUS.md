@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:33:07 JST**
+> 自動生成: **2026-09-19 19:33:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **48** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-19 18:48:26 JST（44分前）** |
+| 最終検証済みResearch収録 | **09-19 18:48:26 JST（45分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **5** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **5** | **2** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **39** | **20** | **20** | **0** | **0** | **0** | **31** |
-| 合計 | **44** | **21** | **20** | **0** | **1** | **0** | **31** |
+| 合計 | **44** | **22** | **20** | **1** | **1** | **0** | **31** |
 
 - 最新Discovery runの耐久探索round: **20件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,9 +126,10 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 19:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-1a88ffa8349a43c660f5f730.json` (job `job-research-188f6649e816eaae`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-1a88ffa8349a43c660f5f730.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-ff20bcaca705be66e1a1b76e.json` (job `job-research-b6a4fe55f122cf41`)
 
 #### Audit (:30)
 
@@ -237,8 +238,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **617** |
-| └ Research | **470** |
+| 成功result未照合のimmutable submission | **618** |
+| └ Research | **471** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
