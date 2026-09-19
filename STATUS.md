@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:08:16 JST**
+> 自動生成: **2026-09-19 11:08:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（3時間42分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（3時間43分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -180,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/HPCA68181.2026.11408460` — Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:07:04 JST** / heartbeat: **—** / lease expiry: **09-19 12:37:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e8f755e1fee9cc18.json`
+- `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 11:08:23 JST** / heartbeat: **—** / lease expiry: **09-19 12:38:23 JST**
+  - evidence: `.survey/work-queue/claims/job-research-44bb3b5d160bad25.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
