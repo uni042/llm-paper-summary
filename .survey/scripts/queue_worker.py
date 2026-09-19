@@ -36,7 +36,7 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
-DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")
+DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")\nDISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
@@ -314,6 +314,67 @@ def _post_marker_submission_paths() -> set[str] | None:
     return paths
 
 
+def _submission_path_added_after_marker(
+    sub: dict,
+    marker: PurePosixPath,
+    *,
+    cache_key_suffix: str,
+) -> bool:
+    """Return whether this durable Discovery submission was added after one marker."""
+    import subprocess
+
+    source_submission = str(sub.get("_file") or "").strip()
+    if not source_submission:
+        return False
+    source_path = PurePosixPath(source_submission)
+    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
+        return True
+    if len(source_path.parts) == 3 and source_path.parts[:2] == ("work-queue", "submissions"):
+        source_path = PurePosixPath(".survey") / source_path
+    elif len(source_path.parts) == 4 and source_path.parts[:3] == (".survey", "work-queue", "submissions"):
+        pass
+    else:
+        return True
+
+    marker_path = ROOT.parent / Path(marker.as_posix())
+    if not marker_path.exists():
+        return False
+
+    repo_key = str(ROOT.parent.resolve()) + "::" + cache_key_suffix
+    if repo_key not in _POST_MARKER_SUBMISSION_CACHE:
+        marker_commit = _git_introducing_commit(marker)
+        if not marker_commit:
+            _POST_MARKER_SUBMISSION_CACHE[repo_key] = None
+        else:
+            proc = subprocess.run(
+                [
+                    "git", "diff", "--name-only", "--diff-filter=A",
+                    f"{marker_commit}..HEAD", "--", ".survey/work-queue/submissions",
+                ],
+                cwd=ROOT.parent,
+                text=True,
+                capture_output=True,
+            )
+            _POST_MARKER_SUBMISSION_CACHE[repo_key] = (
+                {line.strip() for line in proc.stdout.splitlines() if line.strip()}
+                if proc.returncode == 0
+                else None
+            )
+    paths = _POST_MARKER_SUBMISSION_CACHE[repo_key]
+    if paths is None:
+        return True
+    return source_path.as_posix() in paths
+
+
+def _iterative_discovery_precheck_required(sub: dict) -> bool:
+    """Require schema-v2 terminal precheck for submissions added after ITERATIVE_ENFORCED."""
+    return _submission_path_added_after_marker(
+        sub,
+        DISCOVERY_ITERATIVE_PRECHECK_MARKER,
+        cache_key_suffix="iterative",
+    )
+
+
 def _discovery_precheck_required(sub: dict) -> bool:
     """Require precheck for Discovery submissions introduced after the enforcement marker."""
     proof_present = isinstance(sub.get("discovery_precheck"), dict)
@@ -435,7 +496,19 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
         raise _precheck_guidance("Discovery precheck receipt does not match the referenced result.")
 
     schema_version = result.get("schema_version")
-    if isinstance(schema_version, int) and not isinstance(schema_version, bool) and schema_version >= 2:
+    iterative_required = _iterative_discovery_precheck_required(sub)
+    if iterative_required and (
+        isinstance(schema_version, bool)
+        or not isinstance(schema_version, int)
+        or schema_version < 2
+    ):
+        raise _precheck_guidance(
+            "This Discovery submission is after ITERATIVE_ENFORCED and must reference a schema-v2 "
+            "iterative precheck result. Historical schema-v1 results cannot authorize new submissions."
+        )
+    if iterative_required or (
+        isinstance(schema_version, int) and not isinstance(schema_version, bool) and schema_version >= 2
+    ):
         if result.get("evaluation_allowed") is not True or result.get("decision") != "READY_FOR_EVALUATION":
             raise _precheck_guidance(
                 "Referenced iterative Discovery precheck result is not final. "
