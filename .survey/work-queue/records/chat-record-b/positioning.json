@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-bb1596f9270c7fb349dddddf","job_id":"job-research-576a090cf3d34dc3","data":{"limitations":"Sarathiはthroughput中心の実行層最適化で、オンラインサービングの待ち行列遅延、TTFT/TBT SLO、公平性、preemptionは設計目標に含めない。最適chunk sizeはモデル、GPU、系列長、P:D比、タイルサイズに依存し、論文ではP:D比が事前に分かる前提の分析が多い。単一GPU実験の多くはbatch内要求が同じprefill/decode長という単純化を置く。実機評価は最大3K系列で、10K〜100K級長文脈ではattention二次コストとKV再読込みが支配的になり、線形演算融合の相対利得が低下し得る。64 A100のGPT-3結果は実機クラスタではなく、8GPU実測で5%以内を確認したプロファイル駆動simulationである。","differences":"FasterTransformer型のrequest-level batchingはbatch完了まで構成を固定し、Orca/vLLM型のiteration-level schedulingは各反復で要求を入れ替えるが、通常は新規要求のprefill全体を一度に投入する。Sarathiはprefill自体を複数反復へ分割するため、decodeと混ぜる機会を意図的に増やす。Orcaのprefill/decode overlapが到着時刻の副作用なのに対し、Sarathiは一つのprefill chunkと最大数のdecodeというbatch形状を明示的に作る。vLLM/PagedAttentionはKVメモリ割当を改善してbatch容量を増やす補完技術であり、Sarathiは同じ容量の中でtoken構成と演算融合を最適化する。FlashAttention/xFormersはattention kernel自体を高速化する補完技術で、Sarathiの主利得はQKV/O/FFNなど線形演算の重み再利用から来る。","implementation_status":"nanoGPTベースの研究実装でchunked-prefills、decode-maximal batching、混合線形演算、xFormers attention、事前確保KV cacheを実装している。LLaMA-13B/33Bは実GPUで測定し、GPT-3 PPは実測プロファイルから構築したsimulatorで評価する。arXiv v1（2023-08-31）のプレプリントで、arXivメタデータから公式コードURLは確認できなかった。","research_positioning":"LLMサービングのスケジューリング研究において、Sarathiはprefill/decodeを別フェーズとして分離するのではなく、両者の資源特性を同じGPU反復内で相補利用する系統に位置する。後のchunked prefill、continuous batching、prefill prioritization研究に重要な設計点を与える。特に『prefillを分割するとTTFTを平滑化できる』だけでなく、『compute-bound prefillへmemory-bound decodeをpiggybackして重み帯域を共有する』という機構を定量化し、pipeline parallelismのuniform micro-batchにも結び付けた点が特徴である。"},"reservation":{"claim_id":"claim-bb1596f9270c7fb349dddddf","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-fa744ec1780cd6efcfcf4336",
+  "job_id": "job-research-ac3d391d822b215f",
+  "data": {
+    "limitations": "H100/H20と各GPU専用ConnectX-7、400Gbps RoCEという高速データセンター環境を前提にしており、NIC共有や低帯域ネットワークでは層ごとの通信を隠せない可能性がある。デコードのみを主要対象とし、プリフィルからデコードまでの完全なサービス経路の費用・遅延は別問題として残る。異種装置数の最適比はモデル、GQA比、文脈長、トレースで変わるため事前プロファイルが必要で、固定構成が常に最適ではない。大バッチ化とネットワーク・スケジューリングによりTBTは同種GPU方式より増え得る。独自ネットワークはNICのUARをGPUへマップしRDMA投入をCUDA側へ実装するため、可搬性と運用複雑性も高い。",
+    "differences": "DistServeやSplitwiseはプリフィルとデコードを別資源へ置く段階分離であり、Laminaはさらにデコード内部を注意と非注意へ分ける。FlexGenは層・トークン単位でCPU/GPU/ストレージを使う異種推論だが、層内演算子の計算/帯域特性に応じた別GPU配置は主眼ではない。vLLM/PagedAttentionはKVメモリ管理を効率化して同じGPU群の容量利用を改善するのに対し、LaminaはKV自体を別のメモリ最適GPU群へ移して容量比を物理的に拡張する。Mooncake等のKV分離がプリフィル/デコード間KV転送を中心にするのに対し、Laminaは各層・各デコード反復でQKVと注意出力を往復させるため、通信遅延最適化の要求がより厳しい。",
+    "implementation_status": "実システムLaminaを約6000行で実装し、H100/H20異種クラスタ上で運用トレースを用いて評価している。改造rdma-coreとGPU側RDMA制御を含む研究実装で、arXivメタデータ上では公式コードURLを確認できなかった。論文はarXiv v2（2025-04-10）のプレプリント。",
+    "research_positioning": "階層メモリ型オフロードの一種だが、CPUやSSDへ受動的にKVを退避するのではなく、KVを保持する装置自身が注意演算を実行する点が重要である。これによりKV転送を毎トークン計算GPUへ戻す必要を避け、代わりに小さいQ/K/V・注意出力を高速ネットワークで往復させる。計算資源とメモリ資源の分離、演算子粒度の異種配置、GPU主導ネットワークを統合したサービング設計として、オフロード系と分離サービング系の橋渡しに位置する。"
+  },
+  "reservation": {
+    "claim_id": "claim-fa744ec1780cd6efcfcf4336",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

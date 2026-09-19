@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bb1596f9270c7fb349dddddf","job_id":"job-research-576a090cf3d34dc3","data":{"overview":"SarathiはLLaMA-13B/A6000でデコードスループットを2.8〜10倍、E2Eを最大1.33倍にし、LLaMA-33B/A100ではデコード最大4.25倍、E2E最大1.25倍を達成した。Orca best-caseに対しても1K/2K/3K系列で1.27/1.25/1.23倍のbaseline比スループットを維持する。GPT-3の64 A100シミュレーションではパイプラインbubble中央値を6.29倍削減し、TP+PPの完了時間を1.91倍高速化した。","key_results":[{"metric":"LLaMA-13B decode throughput","value":"2.8〜10×、最大10×","baseline":"prefill-only/decode-only baseline","condition":"A6000、chunk=256、系列長とbatchを変化","interpretation":"prefillとdecodeの線形演算を融合し、重みロードを共有することでdecodeの限界費用を大幅に下げる。"},{"metric":"LLaMA-13B E2E throughput","value":"最大1.33×","baseline":"prefill/decode分離実行","condition":"A6000、1K系列で表4のpeak条件","interpretation":"decode単体の大幅高速化はprefillを変えないためE2Eでは約33%改善に圧縮される。"},{"metric":"LLaMA-33B E2E/decode","value":"E2E最大1.25×、decode最大4.25×","baseline":"prefill/decode分離実行","condition":"A100 80GB、1K〜3K系列","interpretation":"FLOPS/帯域比の高いA100でも適切なchunkを選べば混合バッチ利得が残る。"},{"metric":"Orca比較","value":"Sarathi 1.27×/1.25×/1.23× vs baseline（1K/2K/3K）","baseline":"Orca best-case peakは1Kで1.11×","condition":"LLaMA-13B/A6000、chunk=256、最適P:D","interpretation":"全prefillを一度に投入するOrcaより、chunk化でpiggyback機会を複数反復へ分散できる。"},{"metric":"pipeline bubble","value":"中央値6.29×削減","baseline":"best-case Orca-style TP+PP","condition":"GPT-3、64×A100 simulation、8-way TP×8-way PP","interpretation":"均一計算量のmicro-batchが段間待機を減らす。"},{"metric":"pipeline E2E throughput","value":"baseline TP+PP比1.91×、TP-only比1.48×","baseline":"Orca-style TP+PP / 8-way TP replicas","condition":"10K requests、P:D=10、chunk=256","interpretation":"KV容量面で有利なpipeline parallelismの大batchを、bubble削減によって実効性能へ変換する。"}],"negative_results":"チャンクを小さくしすぎるとprefill性能が大きく悪化する。chunk=64ではattentionが約3倍、prefill全体が約5倍遅くなる。chunk=256/512ならprefill損失は20%/10%以内に抑えられる。系列長が伸びるとattentionの二次コストが増え、Sarathiが最適化する線形演算の比率が下がるためdecode speedupは縮小する。P:Dが極端にprefillまたはdecodeへ偏ると相乗り相手が枯渇して利得が下がる。","interpretation":"Sarathiの中心効果は、prefillの高算術強度をdecode高速化の『キャリア』として使うことにある。chunkingはキャリアの回数を増やし、decode-maximal batchingは重みロードを共有し、uniform batchingはpipeline bubbleを減らす。したがって利得はP:D、chunk、batch、系列長のバランスに依存するが、単一GPUとPPで同じ機構が異なる形の非効率を改善する。","quality_impact":"演算順序とバッチ構成を変えるが、chunked prefillの因果maskにより完全prefillと数学的等価性を保ち、モデルの近似やtoken削減は行わない。品質交換条件ではなく、主な交換条件はchunking overhead、latency/fairness未最適化、scheduler complexityである。"},"reservation":{"claim_id":"claim-bb1596f9270c7fb349dddddf","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-fa744ec1780cd6efcfcf4336",
+  "job_id": "job-research-ac3d391d822b215f",
+  "data": {
+    "overview": "Laminaは同程度の機器費用で構成したvLLM/H100同種クラスタに対し、3モデル・4実運用トレースの全条件で16.1〜90.1%高いデコードスループットを示した。主因は安価なH20へKVと注意を移して平均バッチサイズをvLLMの2.39倍まで拡大し、H100側の行列積利用率を上げたことにある。ネットワーク最適化では完全ホスト非介在方式が小メッセージ往復を66.6µsから33.0µsへ半減し、大メッセージでは45.7GB/s、線速の91.4%へ到達した。",
+    "key_results": [
+      {
+        "metric": "等費用デコードスループット",
+        "value": "vLLM比+16.1〜90.1%",
+        "baseline": "vLLM on homogeneous H100",
+        "condition": "LLaMA-33B/65B/LLaMA3-70B、Azure/Kimi 4トレース",
+        "interpretation": "H20の大容量・高帯域をKV/注意へ使うことで大きなバッチを許し、H100の計算能力をより高く利用する。"
+      },
+      {
+        "metric": "平均バッチサイズ",
+        "value": "vLLMの2.39×",
+        "baseline": "vLLM",
+        "condition": "等費用構成",
+        "interpretation": "KVをH20群へ分離して容量制約を緩めたことがスループット改善の直接要因になる。"
+      },
+      {
+        "metric": "FHBN小メッセージ往復遅延",
+        "value": "33.0 µs、NCCL 66.6 µs比50.5%削減",
+        "baseline": "NCCL",
+        "condition": "異なるノードのGPU間、400Gbps RoCE ping-pong",
+        "interpretation": "CPU同期とホスト側RDMA制御をクリティカルパスから外す効果を示す。"
+      },
+      {
+        "metric": "FHBNピーク帯域",
+        "value": "45.7 GB/s、線速の91.4%",
+        "baseline": "NCCL 35.5 GB/s",
+        "condition": "大きいGPUメモリ転送、400Gbps RoCE",
+        "interpretation": "演算子分離で必要な層ごとのデータ転送を高帯域で処理できる。"
+      },
+      {
+        "metric": "通信・計算重畳によるTBT削減",
+        "value": "LLaMA-65Bで最大13.2%、LLaMA3-70Bで最大3.5%",
+        "baseline": "自動重畳無効",
+        "condition": "文脈4096、各種バッチサイズ",
+        "interpretation": "KVが大きいMHAモデルほどQ先行送信と部分注意の重畳余地が大きく、GQAでKVが1/8のLLaMA3では効果が小さい。"
+      }
+    ],
+    "negative_results": "LaminaはvLLMより大きいバッチを使い、遠隔通信とスケジューリングも加わるため、トークン生成遅延は同種GPU方式より増える。論文は平均バッチサイズが2.39倍となる一方で遅延増加を認め、オンラインSLO内に収まることを主張する。LLaMA3-70BではGQAによりKVが小さく、注意装置追加や通信重畳の限界利得が小さい。注意装置を増やし続けても計算GPUが飽和するとスループットは伸びない。",
+    "interpretation": "演算子分離の価値はH20がH100より単純に速いことではなく、注意の必要資源比と行列積の必要資源比を別々に調達できる点にある。KV容量を増やすことでバッチを大きくし、計算GPUの算術強度を上げる間接効果が大きい。ネットワーク最適化はこの構成を成立させるための必要条件で、特に層ごとの多数の短通信ではCPU介在を外すことが重要になる。",
+    "quality_impact": "注意計算を別GPUへ移すが、注意そのものを近似・量子化・疎化しないため、モデル出力品質を犠牲にする方式ではない。交換条件は主にTBT、ネットワーク要件、装置構成の複雑さである。"
+  },
+  "reservation": {
+    "claim_id": "claim-fa744ec1780cd6efcfcf4336",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bb1596f9270c7fb349dddddf","job_id":"job-research-576a090cf3d34dc3","data":{"hardware":"実機はLLaMA-13BをNVIDIA A6000 48GB 1基、LLaMA-33BをA100 80GB 1基で評価する。大規模GPT-3は64×A100 80GBを8台サーバに配置し、ノード内8-way tensor parallel、ノード間8-way pipeline parallelを想定したプロファイル駆動シミュレーションで評価する。","software":"nanoGPT上にSarathiを実装し、xFormersのmemory-efficient attentionを使用する。KVキャッシュは各実験の最大系列長に合わせて事前確保し、生成に応じてインプレース更新する。Orca相当の反復単位スケジューリング比較は同じ混合バッチ実装を使い、バッチ形成方針だけを変えて実装差を抑える。","methodology":"単一GPUでは系列長1K/2K/3K、バッチサイズ、プリフィル対デコードtoken比P:D、チャンクサイズ64〜512を変え、decode token当たり時間とE2E tokens/msを測る。Orcaは全prefillを一度に投入するbest/worst caseと比較する。パイプライン評価では実機プロファイルから各演算と通信の回帰モデルを作り、8GPU DGXで予測誤差5%以内を確認した上で64 A100をシミュレートする。10K要求、系列長1K〜4KをZipf θ=0.4から取り、P:D=10、chunk=256でbubble時間と完了時間を比較する。","scope":"主対象はスループット最大化であり、オンライン要求の待ち行列遅延、公平性、SLO最適化は扱わない。単一GPU実機は13B/33Bと最大3K系列、大規模GPT-3はシミュレーションである。要求ごとのprefill/decode長が同一という単純化を多くの単一GPU実験で置き、可変長は大規模シミュレーションでのみ導入する。"},"reservation":{"claim_id":"claim-bb1596f9270c7fb349dddddf","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-fa744ec1780cd6efcfcf4336",
+  "job_id": "job-research-ac3d391d822b215f",
+  "data": {
+    "hardware": "実機クラスタは8×H100または8×H20を搭載するノード群で、各GPUに専用ConnectX-7 NICを接続し、ノード間は400 Gbps RoCE。LaminaはH100を計算装置、H20を注意/KV装置として使う。等費用比較ではLLaMA-33BにH100×1+H20×2対vLLM H100×2、65B/70BにH100×2+H20×4対vLLM H100×4を用いる。",
+    "software": "Laminaは約6000行のPython/C/C++と少量CUDA、改造rdma-core、Rayで実装。比較対象はvLLMで、デコードだけを公平に比較するため評価時はvLLMのプリフィルを除く。FP16のLLaMA-33B、LLaMA-65B、LLaMA3-70Bを使用する。",
+    "methodology": "Azure-Conv 19,366件、Azure-Code 8,819件、Kimi-Conv 12,031件、Kimi-TA 23,608件の実運用系列長トレースを使い、内容は同じ長さのダミートークンで再現する。主要指標はデコードスループット、トークン間時間（Time Between Tokens; TBT）、平均バッチサイズ、同等費用での性能。固定文脈4096/8192では遅延内訳を測り、ネットワークは400Gbps RoCE上のGPU間ping-pongでNCCL/Gloo/FHBNを比較する。通信重畳はLLaMA-65BとLLaMA3-70Bで有無を切り分ける。",
+    "scope": "デコード段階の演算子分離に焦点を当て、プリフィルの性能は主要評価から除外する。H100/H20という特定の異種GPUと高速RoCE環境での実証であり、一般Ethernet、CPU/DRAM、PIM等の代替メモリ装置は議論のみ。モデル品質は演算を近似しないため評価対象ではなく、オンラインSLOに対するTBTと費用効率を中心に検証する。"
+  },
+  "reservation": {
+    "claim_id": "claim-fa744ec1780cd6efcfcf4336",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
