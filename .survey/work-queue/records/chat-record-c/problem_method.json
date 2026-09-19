@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-077c5dd04f678c8541964e90",
-  "job_id": "job-research-a6905e04777fde1f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-077c5dd04f678c8541964e90",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-077c5dd04f678c8541964e90","job_id":"job-research-a6905e04777fde1f","data":{"problem":"HBFは多数planeの並列性でHBM級読出し帯域と大容量を狙えるが、HBM/HBF混載では固定パッケージ予算の一部をHBMが占め、HBF plane数と帯域を減らす。全HBF化すると動的KVもNAND上へ移り、要求終了・再活性化と細粒度attentionによるplane負荷不均衡、約75usの非プリエンプトprogramによるread干渉、異なるKV寿命のblock混在によるGC書込み増幅が問題になる。DeepSeek-V4-Proの分析ではGC書込み増幅が約30倍に達する。","novelty":"HBFlexは全HBF構成を前提に、論理的な細粒度prefix再利用と物理的なplane stripingを分離し、KV読出し・program・eraseを別々でなく共同設計する。base-die SRAMとprefill/decode同居を使い、配置とattention scheduling、計算窓認識writeback、寿命認識block packingと遅延回収を統合する。","method_overview":"GPUごとに6個の全HBF stackを置き、各stackのbase dieへ40MB SRAMを用意する。KVは物理pageを複数planeへstripeしつつ論理page粒度のprefix再利用を維持する。配置時にplane負荷を平準化し、実行時にはhot-plane pageのSRAM offloadと配置認識CTA schedulingでattention readを分散する。decode生成KVはSRAMへ蓄積し、weightを先読みして連続演算区間を作り、長いprefill計算中にまとめてprogramする。回収では同一要求の層横断KVと開始時刻が近いrequest seriesを同一寿命区間へまとめ、eviction 90%、GC 95%の閾値分離で無効page蓄積を待つ。","components":[{"name":"HBF認識KV配置と実行時読出し平準化","description":"論理reuse粒度と物理stripingを分離し、plane-balanced placementで保存KVを分散する。attention時の残余衝突はtop-loaded planeのKVをbase-die SRAMへ選択的offloadし、CTAを配置認識で割り当ててread waveを減らす。"},{"name":"計算窓認識KV書戻し","description":"decode KVをSRAMへ遅延蓄積し、複数step/requestをstripe幅まで集約する。weight prefetchでreadのない長い演算区間を形成し、特にprefill計算中へNAND programを重畳する。SRAM逼迫時のみ強制writebackする。"},{"name":"寿命認識KV回収","description":"同一requestの異なるTransformer layerのKVを同一blockへpackingし、root request開始時刻からseries寿命区間を付与する。evictionと物理GCを分離して無効pageを増やしてからvictim blockをeraseし、有効page移動を削減する。"},{"name":"全HBFと共有base-die SRAM","description":"HBMを保持せずHBF plane資源を最大化し、stackあたり40MB SRAMをweight prefetch、decode KV buffering、hot-plane offload、GC migrationで共有する。"}],"system_design":"細粒度LLM状態を粗粒度NAND操作へ直接押し込まず、配置・runtime read・program timing・block reclamationの各層でHBF物理制約へ適応させるcross-layer設計である。"},"reservation":{"claim_id":"claim-077c5dd04f678c8541964e90","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
