@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13537",
+      "title": "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.13537",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2609.13537-dynamic-hbm-repartitioning.md",
+      "priority": 96,
+      "reason": "VAMPはMoE expert weight領域とKV cacheのHBM境界を実行時に動的変更し、CUDA VMMでresident KVをコピーせず再割当する。Qwen3-Next-80Bのmulti-turn servingでTTFT p90とthroughputを実測しており、MoE offloadとKV memoryの交点として直接性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.11586",
+      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference",
+      "source_url": "https://arxiv.org/abs/2607.11586",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2607.11586-hcrmap.md",
+      "priority": 94,
+      "reason": "expert hotness・weight loading cost・migration overhead・runtime pressureを使い、複数memory tier上のhot-expert replicaをpromotion/retention/demotion/evictionするMoE residency管理。prefill/decode双方で複数baseline比のend-to-end latency改善を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.06989",
+      "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
+      "source_url": "https://arxiv.org/abs/2608.06989",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md",
+      "priority": 92,
+      "reason": "prefill/decodeやMoE routingで実行deviceが変化する問題に対し、物理layoutとNPU/PIM向けlogical viewを分離するdual-view memoryとruntime schedulingを提案。LLMで最大2.32x throughput改善を報告する階層memory研究。"
+    },
+    {
+      "canonical_id": "arXiv:2608.12114",
+      "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
+      "source_url": "https://arxiv.org/abs/2608.12114",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12114-file-backed-weights.md",
+      "priority": 91,
+      "reason": "OS page cache上のfile-backed weightをDLPack経由でframework storageとしてzero-copy採用し、page cacheをreclaimable accelerator-storage tierとして扱う。大規模checkpointの初回token時間・複数process容量・llama.cpp等を実測しており、storage/DRAM/GPU階層の研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23805",
+      "title": "Memory-Sovereign Inference: Output-Exact Execution Beyond Full Residency",
+      "source_url": "https://arxiv.org/abs/2608.23805",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
+      "priority": 88,
+      "reason": "full-residencyを超えるstorage-backed inferenceについて、resource accountingとoutput exactnessを明示的に検証し、Qwen3-NextでLRU/直接・非同期source pathを評価する。offload手法の性能だけでなく正確性・memory authorityを扱う点が既存系統との差分になる。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260920T0203JST-specialist-moe-offload-openalex-02",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260920T0203JST-specialist-moe-offload-openalex-02.json",
+    "receipt": "sha256:2976603d6a9e8c3da6107e9710d100fbe920ac778dc5f2df4a4c06f29051530d"
+  },
+  "discovery_stats": {
+    "run_key": "2026-09-20T01:58:54+09:00",
+    "round": "specialist-moe-offload-openalex-02",
+    "axis": "MoE expert cache offload placement prefetch inference systems",
+    "query_summary": "OpenAlexの単一検索結果URLを固定し、precheck内部でcursor paginationを3ページ実行。30件取得、既収録15件を除外して未収録15件を得た後、一次arXiv abstractで5件を候補評価・投入した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はCXL/NVMe/SSD direct I/Oとexpert/KV階層memoryを別の固定OpenAlex source_urlで探索する。",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "MoE expert cache offload placement prefetch inference systems",
+        "source": "OpenAlex",
+        "date_range": "2024-01-01:2026-09-20",
+        "category": "MoE/offload/hierarchical-memory",
+        "citation_direction": "none",
+        "query_family": "keyword-search",
+        "raw_result_count": 30,
+        "unseen_result_count": 15,
+        "duplicate_filtered_count": 15,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 5,
+        "candidate_accepted_count": 5,
+        "position": "3 cursor pages"
+      }
+    ]
+  }
+}
