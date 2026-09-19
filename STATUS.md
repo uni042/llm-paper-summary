@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 02:04:17 JST**
+> 自動生成: **2026-09-20 02:06:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **49** |
+| 収録候補論文 | **55** |
+| 未claim Research job | **54** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（12分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（14分前）** |
 | 整合性異常 | **9** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **55** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **55** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **2** | **2** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **55** | **1** | **0** | **1** | **0** | **0** | **5** |
-| 合計 | **69** | **3** | **2** | **1** | **1** | **1** | **5** |
+| Discovery | **49** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **63** | **3** | **3** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-20 02:04:30 JST** job `job-9c9cc21b468d8cd8` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260920T0204JST-specialist-moe-openalex-round1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
+  - 探索軸: MoE expert cache offload placement prefetch inference systems
 - **09-20 01:04:25 JST** job `job-d8da75d9869c16a7` / 候補 **0件**
   - result: `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260920T0014JST-discovery-specialist-kv-specdecode-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0014JST-discovery-specialist-kv-specdecode-2.json`
   - 探索軸: 2609後半のKV圧縮・speculative decoding・RL rollout acceleration
-- **09-20 00:04:20 JST** job `job-417db956534731a7` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json`
-  - 探索軸: cross-datacenter prefill/decode disaggregationとWAN KV transfer
 
 ### 直近タスク
 
@@ -172,12 +172,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-20 01:58 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
 - 探索軸: MoE expert cache offload placement prefetch inference systems
 - round `specialist-moe-offload-openalex-02` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
   - 探索軸: MoE expert cache offload placement prefetch inference systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260920T0204JST-specialist-moe-openalex-round1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -206,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **55** |
 
 ### 候補の重複・識別情報欠損
 
@@ -234,11 +234,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **641** |
+| 成功result未照合のimmutable submission | **640** |
 | └ Research | **491** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **3** |
+| └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
 
