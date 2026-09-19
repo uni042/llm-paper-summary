@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cd9ea16c565464e02e01a24b",
-  "job_id": "job-research-188f6649e816eaae",
-  "data": {
-    "hardware": "最大16 GPUのクラスタで評価し、4 GPU・8 GPU構成でも比較する。論文はGPU間高速接続をテンソル並列配置制約として扱い、複数ノード・複数GPU分数の配置を評価する。",
-    "software": "約25K行のPython実装。Kubernetes上のオーケストレーション、変更device plugin、NVIDIA MPSによる空間共有を使用する。LLM実行エンジンとしてvLLM等を利用し、Aegaeon比較とAyo比較を実施する。",
-    "methodology": "RAG+reranker、ビーム探索、両者の複合という3種の現実的エージェントワークロードを用いる。代表実行をHTTPプロキシでトレースし、LLMごとに到着率とテンソル並列度を掃引してプロファイルを作る。評価では到着率を変えたスループット・平均遅延曲線、4/8 GPUでのAegaeon・Ayo比較、複数ワークフロー同時実行、集約パイプライン予測精度、探索時間とGPU分数粒度の拡張性を測る。",
-    "scope": "動的な複数LLMエージェント処理のクラスタ資源割り当てが対象で、単一LLMカーネルやKV管理そのものは既存実行エンジンへ委ねる。相対LLM需要が安定し、ツール実行時間がLLMに比べ小さいワークロードを主対象とする。異なるLLM間の同時ファンアウトや二峰性負荷、長時間ツールは議論で制約として明示される。"
-  },
+  "attempt_id": "attempt-b5f09b0fdcd071771ee2f21d",
+  "job_id": "job-research-ff33bdbdc4dfa309",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cd9ea16c565464e02e01a24b",
+    "claim_id": "claim-b5f09b0fdcd071771ee2f21d",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
