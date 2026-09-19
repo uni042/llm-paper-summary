@@ -282,16 +282,36 @@ def _git_introducing_commit(relative_path: PurePosixPath) -> str | None:
     return commits[-1] if commits else None
 
 
-def _git_is_ancestor(ancestor: str, descendant: str) -> bool:
+_POST_MARKER_SUBMISSION_CACHE: dict[str, set[str] | None] = {}
+
+
+def _post_marker_submission_paths() -> set[str] | None:
+    """Return current Discovery submission paths added after the enforcement marker."""
     import subprocess
 
+    repo_key = str(ROOT.parent.resolve())
+    if repo_key in _POST_MARKER_SUBMISSION_CACHE:
+        return _POST_MARKER_SUBMISSION_CACHE[repo_key]
+
+    marker_commit = _git_introducing_commit(DISCOVERY_PRECHECK_MARKER)
+    if not marker_commit:
+        _POST_MARKER_SUBMISSION_CACHE[repo_key] = None
+        return None
     proc = subprocess.run(
-        ["git", "merge-base", "--is-ancestor", ancestor, descendant],
+        [
+            "git", "diff", "--name-only", "--diff-filter=A",
+            f"{marker_commit}..HEAD", "--", ".survey/work-queue/submissions",
+        ],
         cwd=ROOT.parent,
         text=True,
         capture_output=True,
     )
-    return proc.returncode == 0
+    if proc.returncode != 0:
+        _POST_MARKER_SUBMISSION_CACHE[repo_key] = None
+        return None
+    paths = {line.strip() for line in proc.stdout.splitlines() if line.strip()}
+    _POST_MARKER_SUBMISSION_CACHE[repo_key] = paths
+    return paths
 
 
 def _discovery_precheck_required(sub: dict) -> bool:
@@ -318,12 +338,11 @@ def _discovery_precheck_required(sub: dict) -> bool:
     if not marker_path.exists():
         return proof_present
 
-    marker_commit = _git_introducing_commit(DISCOVERY_PRECHECK_MARKER)
-    submission_commit = _git_introducing_commit(source_path)
-    if not marker_commit or not submission_commit:
-        # Once the marker exists, inability to prove a submission predates it fails closed.
+    post_marker_paths = _post_marker_submission_paths()
+    if post_marker_paths is None:
+        # Once the marker exists, inability to prove the boundary fails closed.
         return True
-    return marker_commit == submission_commit or _git_is_ancestor(marker_commit, submission_commit)
+    return proof_present or source_path.as_posix() in post_marker_paths
 
 
 def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
