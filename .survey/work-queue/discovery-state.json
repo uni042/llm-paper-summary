@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T17:04:30+00:00",
-  "last_run_key": "2026-09-20T01:58:54+09:00",
-  "last_round": "specialist-moe-offload-openalex-02",
+  "updated_at": "2026-09-19T18:10:15+00:00",
+  "last_run_key": "manual-eval-2026-09-20",
+  "last_round": "refcuration-eval-r1-b",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,36 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-speculative-serving-16",
-      "axis": "multi-tenant remote drafter・asynchronous disaggregated speculative decoding",
-      "query_summary": "memory/offload系以外のserving systemを補完するためspeculative decodingへ探索を広げ、SPECTRE（2605.08151）とSwiftSpec（2506.11309）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はSLO-aware batch/scheduler、prefill/decode resource orchestration、またはrecent 2608-2609 serving systemsを探索する。",
-      "source_submission": "work-queue/submissions/20260915T0828JST-discovery-specialist-speculative-serving-16.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-slo-network-17",
-      "axis": "SLO-aware memory rotation・multi-stage KV/collective network flow scheduling",
-      "query_summary": "SLO-aware serving schedulerとnetwork contentionへ探索を広げ、SuperInfer（2601.20309）とMFS（2603.17456）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は最新Actions反映後のinventoryを再確認し、overflowへ達していなければrecent 2608-2609 serving systemsまたはMoE/KV近接論文を追加探索する。",
-      "source_submission": "work-queue/submissions/20260915T0830JST-discovery-specialist-slo-network-17.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-metakv-19",
@@ -7468,6 +7438,52 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はCXL/NVMe/SSD direct I/Oとexpert/KV階層memoryを別の固定OpenAlex source_urlで探索する。",
       "source_submission": "work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20",
+      "round": "refcuration-eval-r1-a",
+      "axis": "structured references relevance curation round 1 retry",
+      "query_summary": "Structured-reference curation experiment: evaluated 20 top-ranked unseen references in two immutable submission batches; unrelated/borderline records were durably classified before handoff.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:1909.08053",
+        "DOI:10.48550/arxiv.2405.04434",
+        "arXiv:2308.16369",
+        "DOI:10.48550/arxiv.2302.01318",
+        "arXiv:2210.17323"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r1-a.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20",
+      "round": "refcuration-eval-r1-b",
+      "axis": "structured references relevance curation round 1 retry",
+      "query_summary": "Structured-reference curation experiment: evaluated 20 top-ranked unseen references in two immutable submission batches; unrelated/borderline records were durably classified before handoff.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "DOI:10.48550/arxiv.2307.08691",
+        "arXiv:2401.11181",
+        "arXiv:1701.06538"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r1-b.json"
     }
   ],
   "axes": {
@@ -14238,6 +14254,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次はCXL/NVMe/SSD direct I/Oとexpert/KV階層memoryを別の固定OpenAlex source_urlで探索する。"
+    },
+    "structured references relevance curation round 1 retry": {
+      "last_run_key": "manual-eval-2026-09-20",
+      "rounds": 2,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 8,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
