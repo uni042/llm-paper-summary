@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-210ab028fb8916623648a61a",
-  "job_id": "job-research-25491a773c352e2c",
-  "data": {
-    "hardware": "注意カーネルの主要評価はNVIDIA A100。論文はA100の高帯域メモリが40〜80GB、帯域1.5〜2.0TB/s、各ストリーミングマルチプロセッサのオンチップSRAMが192KBで、推定帯域約19TB/sという階層差を設計根拠にする。",
-    "software": "手書きCUDAカーネルとしてFlashAttentionとblock-sparse版を実装し、PyTorch標準注意、HuggingFace、Megatron-LM、MLPerf記録、複数の近似注意実装と比較する。公式コードを公開している。",
-    "methodology": "カーネル単体では系列長128〜2Kを中心に標準注意と実時間・メモリ・高帯域メモリアクセス量を比較し、ブロック寸法変更でアクセス量と実時間の相関を確認する。モデル全体ではBERT-large、GPT-2、Long Range Arenaを学習し、長い文脈が可能になったときの学習時間と品質を測る。さらにPath-X 16KとPath-256 64Kで長系列能力を検証する。密FlashAttentionは厳密注意なので同一設定では近似誤差を持たない。",
-    "scope": "評価は注意カーネル単体の速度だけでなく、モデル学習の端から端までの壁時計時間、長文脈による品質向上、メモリ使用量、理論入出力量を結び付けている。標準注意との比較では演算回数が増えても高帯域メモリ往復が減ると高速化することを示し、演算量だけではGPU実時間を説明できない点を実証する。一方、現代の推論専用デコード、最新GPU世代、グループ化クエリ注意などは原論文の直接評価範囲外である。"
-  },
+  "attempt_id": "attempt-90ecc70a87e2f17fa0c6886e",
+  "job_id": "job-research-726ba562ef40d04f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-210ab028fb8916623648a61a",
+    "claim_id": "claim-90ecc70a87e2f17fa0c6886e",
     "worker_id": "scheduled-chat-discovery-routing",
     "worker_kind": "scheduled_chat"
   }
