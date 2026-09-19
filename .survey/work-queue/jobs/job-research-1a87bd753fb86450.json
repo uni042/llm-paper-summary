@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1a87bd753fb86450",
+  "type": "research",
+  "parent_job_id": "job-5e05bc11371bf443",
+  "priority": 82,
+  "canonical_id": "arXiv:2609.17863",
+  "title": "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
+  "source_url": "https://arxiv.org/abs/2609.17863",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md",
+  "selection_reason": "Qwen2.5-7B-Instruct/vLLM 0.12をL4/A100/H100で54構成実測し、quantization・KV cache・speculative decoding等のcost/quality/latency Pareto frontierを比較する。個別高速化の単純比較ではなく組合せと品質劣化を同一軸で評価しており、推論基盤の設計選択を横断比較する資料価値が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T15:01:42+00:00"
+}

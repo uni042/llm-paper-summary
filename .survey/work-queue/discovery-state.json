@@ -1,33 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T14:08:16+00:00",
-  "last_run_key": "2026-09-19T23:00:00+09:00",
-  "last_round": "specialist-memory-scheduling-11",
+  "updated_at": "2026-09-19T15:01:42+00:00",
+  "last_run_key": "2026-09-20T00:00:00+09:00",
+  "last_round": "specialist-recent-memory-systems-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T07:00:00+09:00",
-      "round": "specialist-emulation-jit-security-11",
-      "axis": "推論runtimeのエミュレーション・即時コンパイル制御面・kernel実行基盤",
-      "query_summary": "runtime/kernel系を探索し、Revati（arXiv:2601.00397）、LLM-Emu（arXiv:2605.00616）、JITterFlip（arXiv:2608.29745）、Nitsum（arXiv:2605.05467）を軽量評価した。最新identityでLLM-EmuとNitsumは既収録、RevatiとJITterFlipは未収録だった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.00616",
-        "arXiv:2605.05467"
-      ],
-      "next_axis_hint": "candidate inventoryを再確認し、overflow条件に達していなければquantization・compression runtime、達していれば通常workerと同じResearch/Auditへ切り替える。",
-      "source_submission": "work-queue/submissions/20260915T0743JST-discovery-specialist-emulation-jit-security-11.json"
-    },
     {
       "run_key": "2026-09-15T07:00:00+09:00",
       "round": "specialist-simulation-12",
@@ -7418,6 +7400,29 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "外部検索呼び出し枠が回復した次回はforward citationと未走査OS/storage/HPC軸を継続する",
       "source_submission": "work-queue/submissions/20260919T2356JST-discovery-specialist-memory-scheduling-11.json"
+    },
+    {
+      "run_key": "2026-09-20T00:00:00+09:00",
+      "round": "specialist-recent-memory-systems-1",
+      "axis": "2026-09中旬の新着memory/offload/MoE/inference-engineering systems",
+      "query_summary": "2609中旬のLLM inference/serving、KV cache、MoE offload、SSD/Flash、speculative decodingを横断検索し、一次arXiv abstractで軽量評価。SwiftCache/Tutti/CacheFlow等の既知候補は早期除外し、最新default branchのrepository検索でも4 arXiv IDが未収録であることをwrite直前に再確認した。",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2605.03375",
+        "arXiv:2604.25080",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "次は2609.15-19のspeculative decoding runtime、GPU kernel/quantized serving、disaggregated schedulingを未走査集合として探索する。",
+      "source_submission": "work-queue/submissions/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json"
     }
   ],
   "axes": {
@@ -14045,6 +14050,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "外部検索呼び出し枠が回復した次回はforward citationと未走査OS/storage/HPC軸を継続する"
+    },
+    "2026-09中旬の新着memory/offload/MoE/inference-engineering systems": {
+      "last_run_key": "2026-09-20T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.75,
+      "next_axis_hint": "次は2609.15-19のspeculative decoding runtime、GPU kernel/quantized serving、disaggregated schedulingを未走査集合として探索する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
