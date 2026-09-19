@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.09800",
+      "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+      "source_url": "https://arxiv.org/abs/2609.09800",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.09800-hbfsim-high-bandwidth-flash-simulation.md",
+      "priority": 93,
+      "reason": "高帯域フラッシュ（High-Bandwidth Flash; HBF）をHBM直下の推論メモリ階層として扱い、実GPU上で実際の推論カーネルを走らせながら容量・タイミング・熱影響を評価する実行系。PTX書換えとkernel launch gatingで実計算とHBFアクセスを結合し、vLLM 0.15.1/Qwen3-30B-A3Bで機能検証している。SSD/NVMe・階層メモリ研究から次世代HBFへ直接つながる高優先候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01338",
+      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
+      "source_url": "https://arxiv.org/abs/2609.01338",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.01338-mzcache-on-device-memory-management.md",
+      "priority": 89,
+      "reason": "モバイルのマルチタスクによるOSメモリ圧力でモデル重み・KVキャッシュが追い出される問題を対象に、細粒度共有バッファ、部分退避・復元、GPU推論とCPU側復元の並行化、hybrid swapを組み合わせる。llama.cpp上のAndroid実装でstorage-backed partial offload比TTFT 2.1〜5.5倍改善を報告し、ストレージ階層と実運用メモリ管理の接点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.13592",
+      "title": "BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.13592",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.13592-boost-concurrent-host-memory-hbm.md",
+      "priority": 92,
+      "reason": "HBMとhost memoryを単なる階層として扱わず、GPU threadblock waveごとのアクセス比を意識して両帯域を同時利用するruntime。静的重みと動的KVページの配置をwave-awareにし、kernel変更なしでvLLMへ統合。Grace Hopper評価で高throughput時平均31% throughput改善を報告しており、CPU/GPU階層メモリ・offload系統への重要な差分がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.15230",
+      "title": "ETCInfer: An Energy-efficient Thermal-aware Cooling-joint Scheduler for LLM Inference in AI Datacenters",
+      "source_url": "https://arxiv.org/abs/2609.15230",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-scheduler.md",
+      "priority": 80,
+      "reason": "LLM推論のGPU周波数・micro-batch制御とデータセンター冷却設定を結合し、熱安全性とSLOを守りながら推論＋冷却エネルギーを最適化するscheduler。実トレースsimulationとvalidationで総job energy最大33.1%削減、thermal throttle exposure最大92.9%削減を報告し、serving resource managementの隣接系統として評価価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.25498",
+      "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.25498",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.25498-dops-dynamic-operator-scheduling.md",
+      "priority": 86,
+      "reason": "prefill/decode分離より細粒度にoperatorを異種デバイスへ動的配置し、blockwise weight layoutも共同最適化するhardware-aware closed-loop framework。NPU+PIM構成でscheduler単体1.20〜2.23倍、weight layout追加でさらに1.28〜1.33倍の幾何平均speedupを報告し、異種推論・動的配置研究として既存PD分離系統を補完する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-memory-systems-1",
+    "axis": "高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling",
+    "query_summary": "直前runのcitation/reference収束を反復せず、2026年9月の階層メモリ・HBF・host/HBM・端末内memory pressure・thermal schedulingと、異種NPU/PIM operator schedulingへ軸を変更。検索結果から一次arXiv抄録を軽量評価し、canonical arXiv IDとtitleを最新mainのGitHub検索で投入直前に再照合して未登録5件を選定した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年8〜9月新着、またはGPU collective/networkingとKV transferの隣接軸へ移る",
+    "empty_round_reason": null
+  }
+}
