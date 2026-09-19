@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:37:20 JST**
+> 自動生成: **2026-09-20 06:37:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **12** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **3** | **1** | **2** | **1** | **0** | **5** |
+| 合計 | **19** | **3** | **1** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,9 +139,11 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **2件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-1b0b6909960f493a2fbeb493.json` (job `job-research-b33b8317e97d5549`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-240fced74ff3bf00f6e22330.json` (job `job-research-ac3d391d822b215f`)
+- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-1b0b6909960f493a2fbeb493.json` (job `job-research-b33b8317e97d5549`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-1b0b6909960f493a2fbeb493.json` (`ok=false`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-240fced74ff3bf00f6e22330.json` (job `job-research-ac3d391d822b215f`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-240fced74ff3bf00f6e22330.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -164,9 +166,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:35:41 JST** / heartbeat: **—** / lease expiry: **09-20 08:05:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ac3d391d822b215f.json`
+- `arXiv:2607.11586` — HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:37:24 JST** / heartbeat: **—** / lease expiry: **09-20 08:07:24 JST**
+  - evidence: `.survey/work-queue/claims/job-research-708ae0cc33daae20.json`
 
 #### Audit
 
