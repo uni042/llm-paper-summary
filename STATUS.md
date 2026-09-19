@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:28:52 JST**
+> 自動生成: **2026-09-20 00:31:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-19 23:39:47 JST（49分前）** |
+| 最終検証済みResearch収録 | **09-19 23:39:47 JST（51分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **16** | **4** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **69** | **3** | **0** | **1** | **0** | **0** | **2** |
-| 合計 | **85** | **7** | **2** | **1** | **0** | **0** | **2** |
+| Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
+| 合計 | **86** | **7** | **3** | **0** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-20 00:29:05 JST** job `job-d28909a47c5b1f9e` / 候補 **0件**
+  - result: `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
+  - 探索軸: validation-precheck-gate
 - **09-20 00:01:42 JST** job `job-5e05bc11371bf443` / 候補 **4件**
   - result: `.survey/work-queue/results/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0008JST-discovery-specialist-recent-memory-systems-1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260919T2324JST-discovery-specialist-serving-runtime-5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2324JST-discovery-specialist-serving-runtime-5.json`
   - 探索軸: speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching
-- **09-19 23:07:07 JST** job `job-87f6dac53c74d4cb` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2330JST-discovery-specialist-agent-state-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2330JST-discovery-specialist-agent-state-6.json`
-  - 探索軸: agentic KV eviction・tool-call idle offload・workflow-aware caching
 
 ### 直近タスク
 
@@ -176,7 +176,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-20 00:16 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **2件**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **2件**
 - 探索軸: validation-precheck-gate
 - round `validation-bypass` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
@@ -189,7 +189,7 @@
 - round `validation-proper` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
   - 探索軸: validation-precheck-gate
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -244,11 +244,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **632** |
+| 成功result未照合のimmutable submission | **631** |
 | └ Research | **482** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **3** |
+| └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
 

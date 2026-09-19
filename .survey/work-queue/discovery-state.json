@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T15:04:31+00:00",
-  "last_run_key": "2026-09-20T00:00:00+09:00",
-  "last_round": "specialist-edge-measurement-4",
+  "updated_at": "2026-09-19T15:29:05+00:00",
+  "last_run_key": "2026-09-20T00:16:52+09:00",
+  "last_round": "validation-proper",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 3,
+  "last_empty_round_reason": "All raw search results were removed by the mandatory authoritative precheck.",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-cacheflow-3",
-      "axis": "KV復元の計算・I/O協調と3次元並列化",
-      "query_summary": "長文脈要求のKV復元を外部I/Oと再計算の協調問題として扱う研究を探索した。CacheFlow（arXiv:2604.25080）は一次資料で3D parallel restorationとbatch-aware schedulerを確認し、最新repo検索・commit検索では同IDを確認できなかったため候補化した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はKV圧縮対tensor parallelismのコスト境界、または外部KV復元をSSD/NVMeのI/O schedulingへ直接接続する研究を探索する。",
-      "source_submission": "work-queue/submissions/20260915T0817JST-discovery-specialist-cacheflow-3.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-kv-storage-network-11",
@@ -7429,6 +7414,28 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はagentic servingのtail scheduling、interception、memory reuseとproduction trace系へ探索軸を切り替える。",
       "source_submission": "work-queue/submissions/20260920T0022JST-discovery-specialist-edge-measurement-4.json"
+    },
+    {
+      "run_key": "2026-09-20T00:16:52+09:00",
+      "round": "validation-proper",
+      "axis": "validation-precheck-gate",
+      "query_summary": "Controlled production validation using three real LLM-serving papers; authoritative precheck classified all three as already represented.",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.16477",
+        "arXiv:2607.28150",
+        "arXiv:2607.08057"
+      ],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json"
     }
   ],
   "axes": {
@@ -14108,6 +14115,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.5,
       "next_axis_hint": "次はagentic servingのtail scheduling、interception、memory reuseとproduction trace系へ探索軸を切り替える。"
+    },
+    "validation-precheck-gate": {
+      "last_run_key": "2026-09-20T00:16:52+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
