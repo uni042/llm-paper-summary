@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d2549d6138b40f3d17e6f087",
-  "job_id": "job-research-0bb313ba6c58f22b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d2549d6138b40f3d17e6f087",
-    "worker_id": "scheduled-chat-llm-survey-2130",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d2549d6138b40f3d17e6f087","job_id":"job-research-0bb313ba6c58f22b","data":{"canonical_id":"arXiv:2609.15021","arxiv_id":"2609.15021","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Shared KV Caching for Replicated 27B Inference: Correctness Failures and Performance Boundaries","summary":"2つの27B vLLMレプリカが256 GiBのLMCache共有ホストメモリを使う構成で、共有KV再利用の正しさと性能境界を実機検証する工学事例。パック済みページ表現の不整合と、非既定CUDAストリーム依存を欠く生ポインタコピー経路を切り分け、バイト単位試験、実アロケータ試験、全容量ピン留め、サービス回帰を段階的に確認する。修復後、別GPUへ移動した128k入力の初回トークン時間は31.715秒から0.605秒、256kでは92.047秒から0.790秒へ低下する一方、同じGPUへ固定した会話では共有層の利得がほぼない。","list_summary":"共有KVキャッシュのページ表現・CUDAストリーム順序・全容量ピン留めを段階検証し、レプリカ移動時だけ大きな長文プリフィル再利用効果が得られる境界を実測する。","authors":["Frank Li"],"authors_affiliations":"UNSW Sydney","published":"2026-09-14","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"distributed KV cache / shared host memory / replicated LLM serving","topics":["KVキャッシュ共有","LMCache","vLLM","CUDAストリーム順序","レプリカ間再利用"],"importance":"共有KV層がヒットしているだけでは正しさを保証できないことを実障害で示し、転送経路の検証方法と局所性による性能境界を具体化した。","hardware_evaluation":"NVIDIA RTX PRO 6000 Blackwell Server Edition 2基、AMD EPYC 9455×2、256 GiB共有RAM、27B Qwen系モデルを用いた実機評価。","quality_effect":"共有状態転送の正しさを正確値応答とバイト単位試験で検証する。性能実験は生成品質改善を目的とせず、強制長出力は意味品質を評価していない。","source":"https://arxiv.org/abs/2609.15021","sources":["https://arxiv.org/abs/2609.15021","https://arxiv.org/pdf/2609.15021"],"code":null,"implementation":"vLLM 0.28.0、LMCache 0.5.4、PyTorch 2.13.0+cu129。既存LMCacheパッチとmixed allocator経路を利用し、追加の診断・ベンチマークを実施。","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":14},"reservation":{"claim_id":"claim-d2549d6138b40f3d17e6f087","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
