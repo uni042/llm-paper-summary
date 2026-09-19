@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:18:00+00:00",
-  "record_count": 16,
+  "updated_at": "2026-09-19T18:22:00+00:00",
+  "record_count": 21,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -196,6 +196,66 @@
       "last_checked_at": "2026-09-19T18:18:00+00:00",
       "linked_from": [],
       "title": "Longformer: The Long-Document Transformer"
+    },
+    "arXiv:2312.11805": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.11805",
+      "identity_tokens": [
+        "arXiv:2312.11805"
+      ],
+      "reason": "Broad multimodal model report; relevant background but not a focused systems paper for immediate Research.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "Gemini: A Family of Highly Capable Multimodal Models"
+    },
+    "arXiv:2404.14219": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.14219",
+      "identity_tokens": [
+        "arXiv:2404.14219"
+      ],
+      "reason": "Deployment-oriented model report, but primarily a model/data/training report rather than a focused inference system.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone"
+    },
+    "arXiv:2507.20534": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.20534",
+      "identity_tokens": [
+        "arXiv:2507.20534"
+      ],
+      "reason": "Broad model/agentic capability report rather than a focused serving, memory, or training-system contribution.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "Kimi K2: Open Agentic Intelligence"
+    },
+    "arXiv:2512.02556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.02556",
+      "identity_tokens": [
+        "arXiv:2512.02556"
+      ],
+      "reason": "Broad model technical report with systems context but lower immediate value than focused systems papers.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2308.12950": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2308.12950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.12950"
+      ],
+      "reason": "Model-family report focused on code capability and training rather than systems implementation.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "Code Llama: Open Foundation Models for Code"
     }
   }
 }

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2211.17192",
+      "arxiv_id": "2211.17192",
+      "title": "Fast Inference from Transformers via Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2211.17192",
+      "paper_path": "papers/inference/05-speculative-decoding/2022-2211.17192-speculative-decoding.md",
+      "priority": 98,
+      "reason": "Foundational lossless speculative decoding method; central ancestor of the repository's speculative-decoding lineage."
+    },
+    {
+      "canonical_id": "arXiv:2310.01801",
+      "arxiv_id": "2310.01801",
+      "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
+      "source_url": "https://arxiv.org/abs/2310.01801",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "priority": 91,
+      "reason": "Adaptive per-head KV-cache construction/eviction for generative inference with CUDA-kernel implementation."
+    },
+    {
+      "canonical_id": "arXiv:2408.12757",
+      "arxiv_id": "2408.12757",
+      "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
+      "source_url": "https://arxiv.org/abs/2408.12757",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+      "priority": 97,
+      "reason": "Focused serving framework using intra-device overlap and nano-batching to approach optimal GPU throughput."
+    },
+    {
+      "canonical_id": "arXiv:2401.17644",
+      "arxiv_id": "2401.17644",
+      "title": "BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2401.17644",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2024-2401.17644-burstgpt.md",
+      "priority": 86,
+      "reason": "Large real-world LLM serving trace dataset directly useful for evaluating scheduling, KV management, and disaggregation systems under realistic burstiness."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r3",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r3.json",
+    "receipt": "sha256:fbfdcc6b2e0697c82615cb83548d0d697ad4608df3345d4c445dd890f0ca5ea0"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20-r3",
+    "round": "refcuration-eval-r3-c",
+    "axis": "structured references relevance curation round 3",
+    "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "OpenReview:B1ckMDqlg",
+      "DOI:10.18653/v1/2024.acl-long.172"
+    ],
+    "accepted_canonical_ids": [
+      "arXiv:2211.17192",
+      "arXiv:2310.01801",
+      "arXiv:2408.12757",
+      "arXiv:2401.17644"
+    ],
+    "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds."
+  }
+}

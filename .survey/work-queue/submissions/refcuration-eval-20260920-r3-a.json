@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2401.18079",
+      "arxiv_id": "2401.18079",
+      "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2401.18079",
+      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md",
+      "priority": 94,
+      "reason": "Focused KV-cache quantization work with custom CUDA kernels and direct long-context memory/inference-speed implications."
+    },
+    {
+      "canonical_id": "arXiv:2406.10774",
+      "arxiv_id": "2406.10774",
+      "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2406.10774",
+      "paper_path": "papers/inference/10-sparse-attention/2024-2406.10774-quest.md",
+      "priority": 93,
+      "reason": "Query-aware sparse attention system that selects critical KV pages to reduce KV loading and long-context inference latency."
+    },
+    {
+      "canonical_id": "arXiv:2404.08509",
+      "arxiv_id": "2404.08509",
+      "title": "Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction",
+      "source_url": "https://arxiv.org/abs/2404.08509",
+      "paper_path": "papers/inference/06-serving-scheduling/2024-2404.08509-ssjf.md",
+      "priority": 91,
+      "reason": "Focused LLM serving scheduler using proxy-model output-length prediction to reduce head-of-line blocking and improve throughput/JCT."
+    },
+    {
+      "canonical_id": "arXiv:2306.00978",
+      "arxiv_id": "2306.00978",
+      "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+      "source_url": "https://arxiv.org/abs/2306.00978",
+      "paper_path": "papers/inference/08-quantization-kernels/2023-2306.00978-awq.md",
+      "priority": 95,
+      "reason": "Foundational hardware-friendly weight-only LLM quantization plus TinyChat inference framework with kernel fusion and platform-aware packing."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r3",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r3.json",
+    "receipt": "sha256:fbfdcc6b2e0697c82615cb83548d0d697ad4608df3345d4c445dd890f0ca5ea0"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20-r3",
+    "round": "refcuration-eval-r3-a",
+    "axis": "structured references relevance curation round 3",
+    "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2401.18079",
+      "arXiv:2406.10774",
+      "arXiv:2404.08509",
+      "arXiv:2306.00978"
+    ],
+    "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds."
+  }
+}

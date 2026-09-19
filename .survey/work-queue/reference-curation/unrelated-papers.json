@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-19T18:18:00+00:00",
-  "record_count": 7,
+  "updated_at": "2026-09-19T18:22:00+00:00",
+  "record_count": 9,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -69,11 +69,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2308.14508",
       "identity_tokens": [
-        "arXiv:2308.14508"
+        "arXiv:2308.14508",
+        "DOI:10.18653/v1/2024.acl-long.172"
       ],
       "reason": "Long-context benchmark paper; useful for evaluation but not itself a systems method.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
       "linked_from": [],
       "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
     },
@@ -88,6 +89,30 @@
       "last_checked_at": "2026-09-19T18:18:00+00:00",
       "linked_from": [],
       "title": "Pointer Sentinel Mixture Models"
+    },
+    "arXiv:2309.11998": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11998",
+      "identity_tokens": [
+        "arXiv:2309.11998"
+      ],
+      "reason": "Conversation dataset rather than an inference/training systems method or serving workload benchmark.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "LMSYS-Chat-1M: A Large-Scale Real-World LLM Conversation Dataset"
+    },
+    "arXiv:2108.07732": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.07732",
+      "identity_tokens": [
+        "arXiv:2108.07732"
+      ],
+      "reason": "Code-generation capability/method paper rather than an LLM systems contribution.",
+      "first_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "linked_from": [],
+      "title": "Program Synthesis with Large Language Models"
     }
   }
 }

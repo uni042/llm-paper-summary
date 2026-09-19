@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2306.14048",
+      "arxiv_id": "2306.14048",
+      "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2306.14048",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "priority": 94,
+      "reason": "Focused KV-cache eviction method for generative inference with implementation-level throughput and latency evaluation."
+    },
+    {
+      "canonical_id": "arXiv:2312.12456",
+      "arxiv_id": "2312.12456",
+      "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+      "source_url": "https://arxiv.org/abs/2312.12456",
+      "paper_path": "papers/inference/02-cpu-offload/2023-2312.12456-powerinfer.md",
+      "priority": 97,
+      "reason": "Directly on-scope GPU-CPU hybrid inference engine exploiting activation locality to run large models on consumer GPUs."
+    },
+    {
+      "canonical_id": "arXiv:2404.14469",
+      "arxiv_id": "2404.14469",
+      "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+      "source_url": "https://arxiv.org/abs/2404.14469",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "priority": 92,
+      "reason": "Practical fine-tuning-free per-head KV selection/compression method targeting long-context memory and generation speed."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r3",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r3.json",
+    "receipt": "sha256:fbfdcc6b2e0697c82615cb83548d0d697ad4608df3345d4c445dd890f0ca5ea0"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20-r3",
+    "round": "refcuration-eval-r3-b",
+    "axis": "structured references relevance curation round 3",
+    "query_summary": "Structured-reference curation round 3. Evaluated exactly 20 allowed records after prior related/borderline/unrelated decisions; duplicate publication/OpenReview aliases were folded into existing identities.",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2306.14048",
+      "arXiv:2312.12456",
+      "arXiv:2404.14469"
+    ],
+    "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds."
+  }
+}
