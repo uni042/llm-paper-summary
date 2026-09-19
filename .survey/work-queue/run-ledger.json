@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:15:23.998053+00:00",
+  "updated_at": "2026-09-19T02:15:58.267442+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:15:23.998053+00:00",
+      "last_recorded_at": "2026-09-19T02:15:58.267442+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 286,
         "audit_completed": 0,
         "discovery_completed": 149,
-        "blocked": 35,
+        "blocked": 36,
         "new_jobs": 235,
         "new_papers": 284,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35333007686:1",
-          "recorded_at": "2026-09-18T10:06:51.361651+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35333007686",
-            "run_attempt": "1",
-            "source_sha": "853a78d9f02cab62cc9671a0c37f8df44dd89103"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35333117706:1",
           "recorded_at": "2026-09-18T10:08:10.322892+00:00",
@@ -19594,6 +19580,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35415122633:1",
+          "recorded_at": "2026-09-19T02:15:58.267442+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35415122633",
+            "run_attempt": "1",
+            "source_sha": "49901e9a048fa58f8bc68ae5165a63b467354437"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -23357,6 +23357,14 @@
           "title": "Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-0e6ed88f587a40d2",
+          "type": "research",
+          "canonical_id": "arXiv:2402.01528",
+          "title": "Decoding Speculative Decoding",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -25639,7 +25647,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 745,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

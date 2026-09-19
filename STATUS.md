@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:15:39 JST**
+> 自動生成: **2026-09-19 11:15:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **45** |
-| 未claim Research job | **43** |
+| 収録候補論文 | **44** |
+| 未claim Research job | **42** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 11:15:18 JST（21秒前）** |
+| 最終検証済みResearch収録 | **09-19 11:15:18 JST（40秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **45** |
+| canonical_id確認済みの一意な候補論文 | **44** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **45** |
+| 非終端Research job合計 | **44** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **14** | **15** | **6** | **9** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **18** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **17** | **18** | **9** | **9** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -180,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2402.01528` — Decoding Speculative Decoding / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:15:06 JST** / heartbeat: **—** / lease expiry: **09-19 12:45:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0e6ed88f587a40d2.json`
+- `arXiv:2609.18123` — AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 11:15:47 JST** / heartbeat: **—** / lease expiry: **09-19 12:45:47 JST**
+  - evidence: `.survey/work-queue/claims/job-research-66ea885d5e740aba.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **45** |
+| ready | **44** |
 
 ### 候補の重複・識別情報欠損
 
