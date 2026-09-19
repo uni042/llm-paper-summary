@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-0de7f01d0f136308a95819c7",
-  "job_id": "job-research-b6a4fe55f122cf41",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0de7f01d0f136308a95819c7",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0de7f01d0f136308a95819c7","job_id":"job-research-b6a4fe55f122cf41","data":{"limitations":"評価はH100 DGX内の単一ノードに限定され、CPU-GPU接続やノード間通信が遅い環境で増分KV転送を計算へ隠せるかは未検証である。対象モデルもLlama-3.1とQwen-2.5の密モデルで、混合専門家モデルや異種GPUへの一般性は示されていない。オフライン処理は遊休資源を使うため、オンライン負荷が高く計算余裕が小さい条件、非常に長い入力、短い出力では得られるスループットが小さくなる。性能モデルはモデル・ハードウェアごとの事前プロファイルを必要とし、70Bでも約20分を要する。オンラインSLO予測が実環境変動で外れる場合の保守的余裕や自動再学習は主要評価ではない。","differences":"vLLMやOrcaは連続バッチ化とKVページ管理で単一種ワークロードの効率を高めるが、ConServeはオンラインとオフラインを同一モデル上で共同実行する。Sarathi-Serveのチャンクプリフィルは固定トークン予算で先頭待ちを減らすのに対し、ConServeは現在の計算トークンと累積KV量から遅延を予測して毎反復の予算を変える。DistServeやSplitwiseはプリフィルとデコードを別GPU群へ分離するのに対し、ConServeは同一GPUの時間・メモリの隙間を回収する。訓練や微調整とのGPU共有方式と比べ、同一モデルの推論要求を使うためモデル切替や別プロセス再配置を避けられる。","implementation_status":"vLLM 0.8.4上の実システムとして実装され、H100実機で評価されている。論文はarXiv v2が2025-09-03に公開され、ICML 2026 Posterとして採択されている。論文本文から独立した公式コードURLは確認できなかったためcode欄は空欄とした。","research_positioning":"LLMサービングのGPU利用率問題を、オートスケールや別クラスタ分離ではなく、オンライン・オフライン推論の細粒度共同配置で解く系統に位置する。特に、スケジューラだけでなくGPU実行の中断粒度とKV状態の退避粒度まで揃える点が重要で、資源収穫、SLO対応スケジューリング、プリエンプティブ実行、階層KV管理を横断する。CPU側メモリは長期オフロード先というより、頻繁な中断を安価にする一時的なKVチェックポイント層として使われる。"},"reservation":{"claim_id":"claim-0de7f01d0f136308a95819c7","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
