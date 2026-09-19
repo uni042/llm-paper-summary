@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2507.07400",
+      "title": "KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2507.07400",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md",
+      "priority": 87,
+      "reason": "Workflow-aware KV cache management for agentic serving using Agent Step Graph proximity for eviction plus overlapped CPU-to-GPU prefetch; reports up to 1.83x single-workflow and 2.19x concurrent-workflow speedup over SGLang hierarchical radix cache."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-agent-kvflow-8",
+    "axis": "agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy",
+    "query_summary": "VMM軸からprefix-cache placement/evictionへ移り、2025-2026のagent workflow-aware cache管理を探索した。KVFlowは一次arXiv abstractで明確なsystems設計・SGLang比較を持ち、default branchのcanonical ID/title検索で未収録を確認した。ServerlessLLM/SLIMは既知系統として再投入しなかった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2401.14351", "arXiv:2507.09201"],
+    "next_axis_hint": "edge/mobile runtime、次いでspeculative decoding serving scheduling、最後にDB/OS adjacent cache policiesを走査する",
+    "empty_round_reason": null
+  }
+}
