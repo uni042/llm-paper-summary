@@ -1,0 +1,8 @@
+{
+ "schema_version":1,"transport_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2607.18141","title":"HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory","source_url":"https://arxiv.org/abs/2607.18141","priority":96,"reason":"CXL-hybrid memoryでdevice DRAMとSSD-backed capacityを統合し、request-level prefix prefetchとwrite bufferingでTB級KV reuseを実現する。実CXL-HM prototypeでlocal LMCache比3.0x、P/D分離で1.45xを報告し、CXL・SSD・KV階層メモリの重点テーマに極めて直接的。"},
+  {"canonical_id":"arXiv:2601.17063","title":"FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices","source_url":"https://arxiv.org/abs/2601.17063","priority":92,"reason":"inactive expertをSSDへoffloadし、学習型cache replacementでexpert reuseを高めるedge MoE inference system。user-grade desktop実機でcache hit最大51%改善、既存MoE inference system比最大2.6x高速化を報告し、SSD expert cache系統に直接合致する。"}
+ ],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-cxl-flash-moe-5","axis":"CXL-hybrid KV memory・SSD-backed MoE expert cache","query_summary":"CXL/remote memoryとSSD expert cacheへ探索軸を変更。HyMCacheとFlashMoEを一次arXiv情報で評価し、最新default branch repository searchで両ID未収録を確認した。","candidate_count":2,"duplicate_filtered_count":0,"novel_candidate_count":2,"accepted_count":2,"duplicate_ratio":0.0,"accepted_canonical_ids":["arXiv:2607.18141","arXiv:2601.17063"],"duplicate_canonical_ids":[],"next_axis_hint":"次はCXL memory pooling、SSD/NVMe KV restoration、またはexpert migration/prefetchへ移る。"}
+}
