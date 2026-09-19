@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2505.04021",
+      "title": "Prism: Cost-Efficient Multi-LLM Serving via GPU Memory Ballooning",
+      "source_url": "https://arxiv.org/abs/2505.04021",
+      "priority": 84,
+      "reason": "OSDI 2026 multi-LLM serving system using GPU memory ballooning/kvcached to unify spatial and temporal sharing. It is production-relevant, deployed at large scale, and directly connects virtualized elastic KV memory with load-aware placement and SLO-aware arbitration."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "identity": "arXiv:2508.08448",
+      "title": "Towards Efficient and Practical GPU Multitasking in the Era of LLM",
+      "source_url": "https://arxiv.org/abs/2508.08448",
+      "rejection_reason": "Primarily a vision/position paper outlining GPU multitasking requirements and future resource-management directions rather than a standalone evaluated inference system."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-related-memory-12",
+    "axis": "related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving",
+    "query_summary": "Used the newly found elastic-KV path to inspect closely related virtualized GPU-memory work rather than repeating broad search. Prism emerged as a strong OSDI 2026 omission; the associated GPU-multitasking vision paper was rejected as non-system/position-oriented.",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2505.04021"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Continue related-work path through Prism/kvcached to co-serving/harvesting systems, then independently inspect agent-serving related work."
+  }
+}
