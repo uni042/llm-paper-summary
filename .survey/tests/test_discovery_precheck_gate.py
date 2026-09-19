@@ -196,6 +196,17 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         self.assertIn("NEW immutable Discovery submission", ctx.exception.next_action)
         self.assertTrue(any("precheck" in step for step in ctx.exception.recovery_steps))
 
+    def test_bypass_rejection_does_not_create_ingest_job(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission("bypass-round.json")
+        queue_worker.JOBS.mkdir(parents=True, exist_ok=True)
+        state = {"stats": {"discovered": 0, "selected": 0}}
+
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError):
+            queue_worker.process_discovery_round_submission(sub, state)
+
+        self.assertEqual(list(queue_worker.JOBS.glob("*.json")), [])
+
     def test_uncommitted_new_submission_fails_closed(self) -> None:
         sub = self._base_sub()
         sub["_file"] = "work-queue/submissions/not-yet-in-history.json"

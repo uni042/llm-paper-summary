@@ -715,13 +715,17 @@ def record_discovery_stats(
     return True
 
 
-def process_discovery(sub: dict, job: dict, st: dict):
+_PRECHECK_UNSET = object()
+
+
+def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = _PRECHECK_UNSET):
     candidates = sub.get("candidates") or []
     if not isinstance(candidates, list):
         raise ValueError("candidates must be a list")
     if len(candidates) > MAX_DISCOVERY_CANDIDATES:
         raise ValueError("discovery submission may contain at most 5 candidates")
-    precheck_result = validate_discovery_precheck(sub)
+    if precheck_result is _PRECHECK_UNSET:
+        precheck_result = validate_discovery_precheck(sub)
     seen = existing_candidate_keys()
     represented_resolver = existing_represented_resolver()
     accepted_records: list[dict[str, Any]] = []
@@ -776,13 +780,14 @@ def process_discovery_round_submission(sub: dict, st: dict, template_job: dict |
     source_submission = str(sub.get("_file") or "").strip()
     if not source_submission:
         raise ValueError("discovery round requires durable source submission path")
+    precheck_result = validate_discovery_precheck(sub)
     submitted_job_id = sub.get("job_id") if isinstance(sub.get("job_id"), str) else None
     job = discovery_ingest_job(source_submission, submitted_job_id=submitted_job_id, template_job=template_job)
     if job.get("status") == "completed":
         return job
     if job.get("status") in TERMINAL:
         raise ValueError(f"discovery ingest job already terminal: {job.get('status')}")
-    process_discovery(sub, job, st)
+    process_discovery(sub, job, st, precheck_result=precheck_result)
     update_job(job)
     job["_path"] = JOBS / f"{job['job_id']}.json"
     return job
