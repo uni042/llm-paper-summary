@@ -414,7 +414,8 @@ def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
         next_action=(
             "Route each raw search page/batch through the iterative Discovery precheck gate. "
             "If it returns CONTINUE_FETCH, fetch the next page/cursor/window and chain a new request. "
-            "Evaluate candidates only after a workflow result returns READY_FOR_EVALUATION."
+            "Evaluate candidates only after a workflow result returns READY_FOR_EVALUATION, then create "
+            "a NEW immutable Discovery submission that references that final result."
         ),
         recovery_steps=[
             "Do not edit or overwrite the failed Discovery submission.",
