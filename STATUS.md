@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:02:01 JST**
+> 自動生成: **2026-09-19 18:29:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **47** |
-| 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（6時間28分前）** |
+| 未claim Research job | **47** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（6時間55分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **14** | **19** | **14** | **5** | **0** | **0** | **25** |
-| 合計 | **14** | **20** | **14** | **5** | **1** | **0** | **25** |
+| Discovery | **19** | **19** | **19** | **0** | **0** | **0** | **25** |
+| 合計 | **19** | **20** | **19** | **0** | **0** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,7 +115,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **19件** / immutable submission: **19件** / 検証済み成功result: **14件** / 個別result照合: **14件** / 個別result未照合: **5件** / 候補: **25件**
+- 耐久探索round: **19件** / immutable submission: **19件** / 検証済み成功result: **19件** / 個別result照合: **19件** / 個別result未照合: **0件** / 候補: **25件**
 - 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding / 高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling / MoE expert cache・prefetch・OS page cache / 長文脈KV・CXL/SSD階層・cross-model GPU memory sharing / network/RDMA・KV transfer・topology-aware routing / GPU attention kernel・operator-level DVFS・runtime / agentic serving・workflow-aware KV cache・speculative serving / CPU/GPU・many-core・PIM異種推論runtime
 - round `specialist-os-pagecache-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
@@ -162,10 +162,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/HPCA68181.2026.11408592` — PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System / worker `scheduled-chat-llm-survey-20260919T172734JST-turn11`
-  - claim: **09-19 17:31:20 JST** / heartbeat: **—** / lease expiry: **09-19 19:01:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-399763992dea8e09.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -213,10 +211,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **611** |
-| └ Research | **459** |
+| 成功result未照合のimmutable submission | **607** |
+| └ Research | **460** |
 | └ Audit | **2** |
-| └ Discovery | **150** |
+| └ Discovery | **145** |
 
 ### 厳格検証が未成立のcompleted job
 

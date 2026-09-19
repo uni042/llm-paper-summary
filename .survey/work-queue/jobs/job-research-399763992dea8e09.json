@@ -8,15 +8,15 @@
   "source_url": "https://ieeexplore.ieee.org/document/11408592/",
   "paper_path": "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md",
   "selection_reason": "HPCA 2026の一次査読論文。長文脈LLM向けPIMでchannel underutilization、I/O bottleneck、static KV allocationを同時に扱い、token-centric partitioning、dynamic command scheduling、dynamic memory accessをMLIR compilerと協調設計する。cycle-accurate評価でPIM-only最大11.3x、xPU+PIM最大8.4xを報告し、PIM/階層memory系統の重要候補。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-18T18:59:35+00:00",
-  "blocker": "Primary full text remains unavailable after a retry across materially distinct routes. IEEE Xplore document 11408592 exposes authoritative metadata and abstract but not the full article text in this runtime. The same work is indexed as arXiv:2412.20166 (21 pages; HPCA 2026 accepted), but no accessible primary arXiv full-text rendering/PDF could be obtained here. Additional search surfaced scholarly indexes and alphaXiv rendering/AI summaries, but these are secondary and were not used to construct a five-slot scientific record. No unverified scientific details were inferred. Retrieval evidence checked in this retry: IEEE Xplore DOI 10.1109/HPCA68181.2026.11408592; arXiv:2412.20166 identity/indexing; scholarly index pages for route discovery only.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-6fdeab836bd63e2b91a8d840.json",
+  "blocker": "Primary full text could not be safely obtained through an official primary route in this retry. The official arXiv abstract page for arXiv:2412.20166 was successfully retrieved and confirms the current PIMphony title, authors, 21-page HPCA 2026 acceptance, cs.AR primary category with cs.AI cross-list, and official PDF/HTML/source links. The official arXiv HTML route failed in this runtime (DisabledError); the official PDF route was rejected because the 14,364,622-byte document exceeded the retrieval limit; and the official TeX source route was rejected as unsupported application/gzip. A complete ar5iv rendering was reachable and inspected only as route evidence, but because it is not an official primary-source endpoint and appears to expose an older LoL-PIM version, it was not used to construct a five-slot record. No scientific details were inferred from partial or secondary text.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-83b77a5cbef20d42a5d9940d.json",
   "blocked_attempts": 2,
   "last_recorded_blocked_event": "2026-09-19T00:03:07+00:00",
   "block_history": [
@@ -32,5 +32,6 @@
     }
   ],
   "last_blocked_at": "2026-09-19T00:03:07+00:00",
-  "retry_queued_at": "2026-09-19T06:34:33+00:00"
+  "retry_queued_at": "2026-09-19T06:34:33+00:00",
+  "completed_at": "2026-09-19T09:29:09+00:00"
 }
