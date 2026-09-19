@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-ddbd5f7c97d18185436bf163",
+  "job_id": "job-research-1a87bd753fb86450",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-ddbd5f7c97d18185436bf163.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.components[0].description is too short | Japanese-first prose ratio is too low: 52.4% < 70% (Japanese=2178, Latin=1975)",
+  "processed_at": "2026-09-19T15:40:04+00:00",
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.components[0].description is too short",
+    "Japanese-first prose ratio is too low: 52.4% < 70% (Japanese=2178, Latin=1975)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
