@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-collectives-5",
+    "axis": "distributed inference collective communication・runtime adaptation・interconnect",
+    "query_summary": "2026年9-7月のcollective communication/runtime adaptationを探索した。2608.15118は最新canonical queueで既にResearch ready、検索結果の他候補は既知のLlumnix/FastServe/Preble等の収録系統へ戻ったため新規投入しなかった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2608.15118", "arXiv:2406.03243", "arXiv:2305.05920", "arXiv:2407.00023"],
+    "next_axis_hint": "multi-model/LoRA co-serving・adapter cache・model multiplexingへ移る",
+    "empty_round_reason": "評価対象がcanonical queueまたは既存の主要serving系統と重複した。"
+  }
+}
