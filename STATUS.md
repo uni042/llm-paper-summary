@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:50:43 JST**
+> 自動生成: **2026-09-20 04:00:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **102** |
-| 未claim Research job | **98** |
+| 未claim Research job | **97** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間58分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間8分前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **2** | **0** | **4** | **0** | — |
+| Research | **9** | **3** | **2** | **0** | **5** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **51** | **4** | **3** | **0** | **4** | **0** | **5** |
+| 合計 | **50** | **4** | **3** | **0** | **5** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -93,11 +93,6 @@
   - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md`
-- **09-19 21:52:39 JST** [research] `arXiv:2609.15021` — Shared KV Caching for Replicated 27B Inference: Correctness Failures and Performance Boundaries
-  - job: `.survey/work-queue/jobs/job-research-0bb313ba6c58f22b.json`
-  - result: `.survey/work-queue/results/research/attempt-e7ba10673d975ae5c16659a8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e7ba10673d975ae5c16659a8.json`
-  - paper: `papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md`
 
 ### Audit
 
@@ -185,9 +180,12 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
+- `arXiv:2408.12757` — NanoFlow: Towards Optimal Large Language Model Serving Throughput / worker `scheduled-chat-discovery-routing`
+  - claim: **09-20 04:00:01 JST** / heartbeat: **—** / lease expiry: **09-20 05:30:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6882c5cf191305a1.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 03:29:29 JST** / heartbeat: **—** / lease expiry: **09-20 04:59:29 JST**
+  - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
 - `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference / worker `work-refcuration-validation-20260920`
   - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
