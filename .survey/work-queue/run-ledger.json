@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T19:35:27.121429+00:00",
+  "updated_at": "2026-09-19T20:33:13.273889+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T19:35:27.121429+00:00",
+      "last_recorded_at": "2026-09-19T20:33:13.273889+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 312,
+        "research_completed": 313,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 42,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35405479372:1",
-          "recorded_at": "2026-09-18T23:25:53.924721+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35405479372",
-            "run_attempt": "1",
-            "source_sha": "cb77190c6e67c7c7f12fc9f68d872f74ac5452ef"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35407931098:1",
           "recorded_at": "2026-09-19T00:02:46.459445+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35464776620",
             "run_attempt": "1",
             "source_sha": "d8b1dd3307af05cb4022dfff23cb713fa9bf6864"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35467711973:1",
+          "recorded_at": "2026-09-19T20:33:13.273889+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35467711973",
+            "run_attempt": "1",
+            "source_sha": "c13341194e968ddf4baa2838a1d28efb8fc9c14d"
           },
           "signals": [
             "research_completed"
@@ -23975,6 +23975,14 @@
           "type": "research",
           "canonical_id": "arXiv:2211.17192",
           "title": "Fast Inference from Transformers via Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b41274093aac35dc",
+          "type": "research",
+          "canonical_id": "arXiv:2312.12456",
+          "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
           "from": "ready",
           "to": "completed"
         }

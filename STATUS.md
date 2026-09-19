@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:32:55 JST**
+> 自動生成: **2026-09-20 05:33:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **97** |
+| 収録候補論文 | **96** |
 | 未claim Research job | **96** |
-| 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-20 04:35:23 JST（57分前）** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-20 05:33:07 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **97** |
+| canonical_id確認済みの一意な候補論文 | **96** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **97** |
+| 非終端Research job合計 | **96** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **1** | **0** | **1** | **0** | — |
+| Research | **11** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **12** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **22** | **2** | **2** | **0** | **1** | **0** | **5** |
+| 合計 | **23** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 05:33:07 JST** [research] `arXiv:2312.12456` — PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU
+  - job: `.survey/work-queue/jobs/job-research-b41274093aac35dc.json`
+  - result: `.survey/work-queue/results/research/attempt-84eae2b617467dab6d9fa45e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-84eae2b617467dab6d9fa45e.json`
+  - paper: `papers/inference/02-cpu-offload/2023-2312.12456-powerinfer.md`
 - **09-20 04:35:23 JST** [research] `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-d0436ba646148687.json`
   - result: `.survey/work-queue/results/research/attempt-5dce2562aaf6112c45659534.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-208eafaf198f5f787bed68e4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-208eafaf198f5f787bed68e4.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md`
-- **09-19 23:36:01 JST** [research] `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI
-  - job: `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
-  - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.00866-mori.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2312.12456` — PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU / worker `llm-research-survey-scheduled-chat`
-  - claim: **09-20 05:32:02 JST** / heartbeat: **—** / lease expiry: **09-20 06:32:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b41274093aac35dc.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **97** |
+| ready | **96** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **776** |
+| inference/training/survey配下の論文Markdown実体 | **777** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **664** |
-| └ Research | **503** |
+| 成功result未照合のimmutable submission | **663** |
+| └ Research | **502** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
