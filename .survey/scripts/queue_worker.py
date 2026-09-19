@@ -304,13 +304,13 @@ def _discovery_precheck_required(sub: dict) -> bool:
         return proof_present
 
     source_path = PurePosixPath(source_submission)
-    if (
-        source_path.is_absolute()
-        or ".." in source_path.parts
-        or len(source_path.parts) != 4
-        or source_path.parts[:3] != (".survey", "work-queue", "submissions")
-        or source_path.suffix != ".json"
-    ):
+    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
+        return True
+    if len(source_path.parts) == 3 and source_path.parts[:2] == ("work-queue", "submissions"):
+        source_path = PurePosixPath(".survey") / source_path
+    elif len(source_path.parts) == 4 and source_path.parts[:3] == (".survey", "work-queue", "submissions"):
+        pass
+    else:
         # Unexpected durable Discovery transport is not a compatibility escape hatch.
         return True
 
