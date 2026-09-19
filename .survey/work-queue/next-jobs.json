@@ -9,17 +9,18 @@
       "completed": 6
     },
     "research": {
-      "ready": 100,
+      "ready": 99,
       "completed": 586,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
-      "rejected": 2
+      "rejected": 2,
+      "blocked": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 100,
-    "actively_claimed": 5,
+    "ready_research_audit": 99,
+    "actively_claimed": 4,
     "claimable": 95
   },
   "next_jobs": [
@@ -66,14 +67,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-a568c8de790c8043",
+      "job_id": "job-research-726ba562ef40d04f",
       "type": "research",
       "lane": null,
       "priority": 96,
-      "canonical_id": "DOI:10.1145/3731569.3764815",
-      "title": "Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market",
-      "source_url": "https://doi.org/10.1145/3731569.3764815",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md",
+      "canonical_id": "arXiv:2406.16858",
+      "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+      "source_url": "https://arxiv.org/abs/2406.16858",
+      "paper_path": "papers/inference/05-speculative-decoding/2024-2406.16858-eagle-2.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T19:19:15+00:00"
+  "generated_at": "2026-09-19T19:20:26+00:00"
 }
