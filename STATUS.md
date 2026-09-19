@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:35:17 JST**
+> 自動生成: **2026-09-20 04:35:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **98** |
+| 収録候補論文 | **97** |
 | 未claim Research job | **94** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-20 04:17:50 JST（17分前）** |
+| 最終検証済みResearch収録 | **09-20 04:35:23 JST（4秒前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **98** |
+| canonical_id確認済みの一意な候補論文 | **97** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **98** |
+| 非終端Research job合計 | **97** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **0** | **1** | **4** | **0** | — |
+| Research | **12** | **1** | **1** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **23** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **34** | **2** | **1** | **1** | **4** | **0** | **5** |
+| 合計 | **35** | **2** | **2** | **0** | **3** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 04:35:23 JST** [research] `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-d0436ba646148687.json`
+  - result: `.survey/work-queue/results/research/attempt-5dce2562aaf6112c45659534.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5dce2562aaf6112c45659534.json`
+  - paper: `papers/inference/05-speculative-decoding/2022-2211.17192-speculative-decoding.md`
 - **09-20 04:17:50 JST** [research] `arXiv:2205.14135` — FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
   - job: `.survey/work-queue/jobs/job-research-25491a773c352e2c.json`
   - result: `.survey/work-queue/results/research/attempt-210ab028fb8916623648a61a.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-056e88f904b8cb0a268543b1.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.00866-mori.md`
-- **09-19 22:37:55 JST** [research] `arXiv:2507.07400` — KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows
-  - job: `.survey/work-queue/jobs/job-research-2dcd265cd3f3852c.json`
-  - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md`
 
 ### Audit
 
@@ -151,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 04:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5dce2562aaf6112c45659534.json` (job `job-research-d0436ba646148687`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-d0436ba646148687.json`
+  - result: `.survey/work-queue/results/research/attempt-5dce2562aaf6112c45659534.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5dce2562aaf6112c45659534.json`
+  - paper: `papers/inference/05-speculative-decoding/2022-2211.17192-speculative-decoding.md`
 
 #### Audit (:30)
 
@@ -174,10 +178,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
-- `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 04:34:11 JST** / heartbeat: **—** / lease expiry: **09-20 06:04:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
 - `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference / worker `work-refcuration-validation-20260920`
   - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-53def9917e580440.json`
@@ -206,7 +207,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **98** |
+| ready | **97** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +227,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **775** |
+| inference/training/survey配下の論文Markdown実体 | **776** |
 
 ### immutable submissionの未照合
 
@@ -234,8 +235,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **663** |
-| └ Research | **502** |
+| 成功result未照合のimmutable submission | **662** |
+| └ Research | **501** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
