@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18063",
+      "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+      "source_url": "https://arxiv.org/abs/2609.18063",
+      "priority": 95,
+      "reason": "SSDから35B級MoEを供給する際のexpert weight I/Oを、次層routingの学習予測で事前化する推論システム。SSD/NVMe offload、MoE expert prefetch、consumer hardware servingの重点テーマに直接合致し、4-bit 35Bを24GB単一機で約20 tok/s・peak active memory 3 GiBとする実測評価と公開実装を報告する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T21:00:00+09:00",
+    "round": "specialist-ssd-moe-routing-1",
+    "axis": "SSD-backed MoE expert streaming・trained routing prediction・expert prefetch",
+    "query_summary": "2026年9月のMoE推論、SSD offload、expert prefetchを一次資料中心に探索。arXiv:2609.18063を最新default branchのrepository searchとrejection ledgerで照合し、既収録・過去不採用を確認できなかったため候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2609.18063"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はcommodity GPU向けpage-aware decode scheduling、非GPU accelerator serving、または2026年9月のdisaggregated serving/runtime新着へ軸を移す。"
+  }
+}
