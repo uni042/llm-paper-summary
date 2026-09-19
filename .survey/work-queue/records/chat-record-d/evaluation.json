@@ -1,1 +1,43 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ee58aa534ed82a58b5fa7386","job_id":"job-research-44bb3b5d160bad25","data":{"hardware":"本研究は配信サーバのGPU性能測定ではなくクライアント側実運用テレメトリの解析であり、推論基盤のGPU型、GPU利用率、キュー長、バッチサイズ、メモリ圧力は取得しない。遊休予測器のみ16-vCPU AMD EPYC 7763単一ノードで学習し、約2MBの12モデル構成を用いる。","software":"GitHub CopilotコーディングエージェントのVisual Studio／VS Codeテレメトリを解析する。観測期間は2026年6月第1週で、27以上のLLMモデルと45以上のツールを含む。遊休時間予測にはLightGBM量子回帰器を使い、12分位点それぞれ400木の勾配ブースティングモデルを学習する。","methodology":"匿名化テレメトリは1350万セッション、9510万ターン、320万ユーザー、7.605億LLM呼出し、7.747億ツール呼出し、449億ではなく44.9兆のプロンプトトークン、393億完了トークンを含む。集計指標以外は機密保護のため標本化された部分集合を解析し、地域は米国内の最大3時間帯に限定される。プロンプト本文、応答本文、ソースコード、ツール引数、個人識別情報は収集しない。遊休予測器は1週間から15万セッションを学習、翌週5万セッションを評価に使い、60秒超遊休の識別ROC-AUC、時間経過ごとの正解率・F1、捕捉した総遊休時間割合で評価する。","scope":"GitHub Copilotという単一の本番コーディングエージェント、米国地域、2026年前半の挙動に基づく。クライアント側観測なのでGPU側の実負荷や配信キューを直接説明できず、内容を収集しないためタスク成功品質との相関も測れない。著者らは主要特性が2026年1〜6月で安定していたとするが、モデル・ツール・自律戦略の急速な更新により将来分布が変わる可能性がある。"},"reservation":{"claim_id":"claim-ee58aa534ed82a58b5fa7386","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-1f99c691ecf3b25036733d54",
+  "job_id": "job-research-7b5d4afbd3eabe62",
+  "data": {
+    "hardware": "主評価はNVIDIA H200。屋根線分析ではQwen2.5-7Bを単一H200で16〜2048トークンまで測定し、混合バッチのカーネル分析ではQwen2.5-7B/32BをH200で評価する。アーティファクト付録は最大8×H200とInfiniBandを推奨し、PD分離ベンチマークは最低2 GPU。",
+    "software": "LAPS v1.0をSGLang v0.4.6.post5系に実装。Python 3.10+、PyTorch 2.4+、CUDA 12.4+、FlashAttention 2.6+、Mooncake KV転送基盤を使用。公開コードと自動実験スクリプトがある。",
+    "methodology": "LMSYS-Chat-1Mの実対話トレースを用い、短・長プリフィル比率と複数ターン再プリフィルを含む負荷を評価する。比較対象は通常のSGLang PD分離、SGLangルータ付き構成、通常のデータ並列構成、CUDA Graphを使うプリフィル構成など。指標は要求毎秒、平均TTFT、P90 TTFT、SLO違反率、蒸留ワークロードの総処理時間。さらにカーネルプロファイラでGEMM、活性化、メモリ、リダクション時間を分解し、長短混合時のパディング浪費を測る。",
+    "datasets": [
+      "LMSYS-Chat-1M",
+      "ShareGPT"
+    ],
+    "models": [
+      "Qwen2.5-7B",
+      "Qwen2.5-14B",
+      "Qwen2.5-32B",
+      "Qwen2.5-72B-Instruct",
+      "Llama-3.3-8B",
+      "Qwen3-30B-A3B"
+    ],
+    "baselines": [
+      "SGLang vanilla PD disaggregation",
+      "SGLang router/load balancing",
+      "vanilla data parallel",
+      "prefill CUDA Graph configuration"
+    ],
+    "metrics": [
+      "request throughput",
+      "mean TTFT",
+      "P90 TTFT",
+      "SLO violation rate",
+      "end-to-end processing time"
+    ],
+    "scope": "シミュレーションではなくGPU実機のシステム評価で、主張の中心はプリフィル・デコード分離環境におけるプリフィル段階の最適化である。H200中心の評価なので他GPU・ネットワークへの一般化はアーティファクト互換性以上には直接測定されていない。また非PD構成でデコードと混在すると短プリフィルのCUDA Graph集約効果が低下するため、効果範囲はPD分離構成で最も強い。"
+  },
+  "reservation": {
+    "claim_id": "claim-1f99c691ecf3b25036733d54",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

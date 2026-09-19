@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ee58aa534ed82a58b5fa7386","job_id":"job-research-44bb3b5d160bad25","data":{"overview":"実運用コーディングエージェントは、中央値1セッション15 LLM呼出し・13ツール呼出しで、呼出しの87%がエージェント自身から発生する。各LLM呼出しは中央値68K入力に対し247出力と極端に入力偏重で、ターン内では接頭辞キャッシュが高効率だが、利用者入力を挟むターン境界、モデル切替、文脈圧縮で再利用が大きく崩れる。深い失敗ループは全ターンの9.1%ながら36 LLM呼出し・34ツール群という高負荷を生み、利用者類型間の一回のキャッシュミス再プリフィル費用は23K対1.1Mトークンで約50倍違う。ターン境界ではKVキャッシュ遊休中央値172秒、コンテナ243秒とターン内より二桁以上長く、軽量予測器は総遊休時間の86〜90%を捕捉する。","key_results":[{"metric":"エージェント起点LLM呼出し率","value":"87%","baseline":"利用者起点13%","condition":"GitHub Copilot実運用トレース","interpretation":"配信負荷の大半は利用者要求そのものではなく、一つのターン内で自律的に連鎖する後続呼出しから生じる。"},{"metric":"入力／出力トークン中央値","value":"68K prompt / 247 completion、275:1超","baseline":"従来チャットのより均衡した要求","condition":"LLM呼出し単位","interpretation":"生成よりプリフィルとKVキャッシュ再利用が支配的な最適化対象になる。"},{"metric":"KVキャッシュ再利用","value":"ターン内平均約90%、ターン境界55%、モデル切替後平均8%","baseline":"同一ターン内継続","condition":"接頭辞キャッシュ済みトークン比率","interpretation":"キャッシュ寿命は要求単位ではなくセッション構造とモデル経路に支配される。"},{"metric":"文脈圧縮影響","value":"7.8%のセッションが44.2%の総トークンを占め、圧縮後キャッシュヒット率中央値66.1%低下","baseline":"圧縮前の高再利用状態","condition":"文脈圧縮イベント","interpretation":"少数の最重量セッションで圧縮が長いプリフィルとキャッシュ再構築を同時に発生させる。"},{"metric":"ターン間遊休中央値","value":"コンテナ243秒、KVキャッシュ172秒","baseline":"ターン内5.8秒、1.2秒","condition":"連続ツール／LLM呼出し間隔","interpretation":"ターン境界は退避・休止費用を償却できる自然な資源回収点になる。"},{"metric":"遊休予測","value":"60秒超識別ROC-AUC 0.73、総遊休時間捕捉86〜90%","baseline":"直前遊休だけのヒューリスティックROC-AUC 0.58","condition":"15万セッション学習、翌週5万セッション評価","interpretation":"正確な終了時刻を当てなくても、回収価値の高い長い遊休を高い割合で識別できる。"}],"negative_results":"遊休予測の点ごとの正解率とF1は経過時間が長くなるほど低下し、30秒時点の約80〜88%から30分時点では25〜43%まで落ちる。クライアント側テレメトリのみなのでGPU利用率・キュー・バッチ・メモリ圧力を直接観測できず、提案する資源管理方針のエンドツーエンド節約量を実配信基盤で実証してはいない。プロンプト／応答内容がないため資源節約とタスク品質の関係も評価できない。","interpretation":"重要なのは平均要求サイズではなく、セッション内の位置とイベントで資源価値が急変することである。ターン内では次のLLM呼出しが近くKVキャッシュ保持価値が高いが、ターン境界では分単位の遊休が生じる。さらに深いループ利用者はキャッシュミス費用が桁違いに大きいため、固定TTLや全利用者一律のLRUだけでは費用を最小化しにくい。","quality_impact":"測定研究でありモデル出力品質を変更する手法ではない。ただし内容を収集しない設計上、成功率やコード品質と資源消費の相関を検証できず、資源回収を積極化した際の品質・利用者体験への影響は今後の課題である。"},"reservation":{"claim_id":"claim-ee58aa534ed82a58b5fa7386","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-1f99c691ecf3b25036733d54",
+  "job_id": "job-research-7b5d4afbd3eabe62",
+  "data": {
+    "overview": "LAPSは、短・長プリフィルを同一バッチへ混ぜる構造的な無駄を除き、短要求をCUDA Graphに適した均質バッチへ集約することで、通常のSGLang PD分離よりプリフィル遅延とSLO違反を下げる。高並行・混合要求ではQwen2.5-32Bのプリフィル要求スループットを35%改善した。付録のQwen2.5-72B/8×H200再現条件でも、高並行ほど通常SGLangとの差が大きく、cc=64で255.4 req/sから369.1 req/sへ増える。",
+    "key_results": [
+      {
+        "metric": "prefill latency",
+        "value": ">30% reduction",
+        "baseline": "vanilla SGLang under prefill-decode disaggregation",
+        "condition": "real multi-turn workloads",
+        "interpretation": "プリフィル段階内部の長短分離により、PD分離だけでは残る干渉を削減した。"
+      },
+      {
+        "metric": "SLO violation rate",
+        "value": "28% reduction",
+        "baseline": "vanilla data-parallel multi-instance deployment",
+        "condition": "multi-instance serving",
+        "interpretation": "長短専用インスタンスと動的割当が負荷偏りを抑え、期限違反を減らした。"
+      },
+      {
+        "metric": "request throughput",
+        "value": "35% improvement",
+        "baseline": "SGLang serving baseline",
+        "condition": "high-concurrency mixed requests, Qwen2.5-32B prefill instance",
+        "interpretation": "短要求の集約とGraph再利用により、混合負荷でもプリフィル処理量が増加した。"
+      },
+      {
+        "metric": "request throughput",
+        "value": "369.1 req/s vs 255.4 req/s",
+        "baseline": "vanilla SGLang",
+        "condition": "Qwen2.5-72B-Instruct, TP=4, one prefill instance on 4×H200, concurrency 64",
+        "interpretation": "高並行時に長短分離と短要求集約の効果が大きくなることを再現用付録が示す。"
+      },
+      {
+        "metric": "mixed-batch TTFT penalty",
+        "value": "29.3× (7B), 31.0× (32B)",
+        "baseline": "8×64-token short-only batch",
+        "condition": "7×64 + 1×2048 padded mixed batch on H200",
+        "interpretation": "長短混合ではGEMM約85%、attention約87%がパディングで無駄になり、分離対象となる構造的干渉が非常に大きい。"
+      }
+    ],
+    "negative_results": "非PD構成でプリフィルとデコードを同じ実行へ混ぜると、短プリフィルを連続的に集約できず、CUDA Graphによるスループット利得が低下する。CUDA Graphは一個あたり約228〜277MBを消費し、初回捕捉に約8〜12秒かかるため、形状を細分化しすぎるとメモリと初期化コストが増える。",
+    "interpretation": "利得の源泉は、単なる優先度変更ではなく、メモリ律速の短要求と計算律速の長要求を物理的または時間的に同居させないことにある。短系列では重み読み込みの固定費が支配的なので同形状要求をまとめても追加計算が小さく、Graph起動効率が上がる。一方、長系列ではパディング量がそのままGEMM計算量へ効くため、短要求との混合を避けるほど効果が大きい。",
+    "quality_impact": "生成アルゴリズムやモデル重みを近似変更しないため、精度劣化を許容して速度を得る方式ではない。論文は回答品質よりサービング性能を評価対象としており、品質を変えないスケジューリング／実行構成として扱うのが妥当である。"
+  },
+  "reservation": {
+    "claim_id": "claim-1f99c691ecf3b25036733d54",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
