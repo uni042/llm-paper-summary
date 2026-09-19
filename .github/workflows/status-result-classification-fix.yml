@@ -1,0 +1,65 @@
+name: Validate STATUS result classification fix
+
+on:
+  push:
+    branches:
+      - status-fix-result-classification-20260919
+    paths:
+      - '.survey/maintenance/status-result-classification-trigger.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: status-fix-result-classification-20260919
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply minimal core fix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.survey/scripts/render_status_dashboard_core.py')
+          s = p.read_text(encoding='utf-8')
+          replacements = []
+          replacements.append(('''def _render_latest_paper_kind(\n    repo_root: Path,\n    *,\n    kind: str,\n    paper_run_time: datetime | None,\n    paper_worker_id: str | None,\n    submissions: list[dict[str, Any]],\n    verified_by_submission: dict[Path, dict[str, Any]],\n) -> list[str]:''','''def _render_latest_paper_kind(\n    repo_root: Path,\n    *,\n    kind: str,\n    paper_run_time: datetime | None,\n    paper_worker_id: str | None,\n    submissions: list[dict[str, Any]],\n    verified_by_submission: dict[Path, dict[str, Any]],\n    result_by_submission: dict[Path, dict[str, Any]],\n) -> list[str]:'''))
+          replacements.append(('''    succeeded = [row for row in selected if row["path"] in verified_by_submission]\n    lines.append(\n        f"- immutable submission: **{len(selected)}件** / 検証済み成功: **{len(succeeded)}件** / "\n        f"未完了・未検証: **{len(selected) - len(succeeded)}件**"\n    )''','''    succeeded = [row for row in selected if row["path"] in verified_by_submission]\n    matched_non_success = [row for row in selected if row["path"] in result_by_submission and row["path"] not in verified_by_submission]\n    missing_result = [row for row in selected if row["path"] not in result_by_submission]\n    lines.append(\n        f"- immutable submission: **{len(selected)}件** / 検証済み成功: **{len(succeeded)}件** / "\n        f"result照合済み非成功: **{len(matched_non_success)}件** / 個別result未照合: **{len(missing_result)}件**"\n    )'''))
+          replacements.append(('''        if verified_row is None:\n            lines.append(\n                f"- **未完了または未検証** `{evidence._rel(repo_root, submission['path'])}` "\n                f"(job `{submission['job_id'] or '—'}`)"\n            )\n            continue''','''        if verified_row is None:\n            matched_result = result_by_submission.get(submission["path"])\n            if matched_result is not None:\n                failure_class = str(matched_result["payload"].get("failure_class") or "non_success")\n                lines.append(f"- **result照合済み非成功** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`, failure_class `{failure_class}`)")\n                lines.append(f"  - result: `{evidence._rel(repo_root, matched_result['path'])}` (`ok={str(matched_result['payload'].get('ok')).lower()}`)")\n            else:\n                lines.append(f"- **個別result未照合** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`)")\n            continue'''))
+          replacements.append(('''    verified_by_submission = evidence._verified_by_submission(verified)\n    verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)''','''    verified_by_submission = evidence._verified_by_submission(verified)\n    result_by_submission: dict[Path, dict[str, Any]] = {}\n    for result in results:\n        submission = evidence._submission_for_result(repo_root, result, submissions)\n        if submission is not None:\n            result_by_submission[submission["path"]] = result\n    verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)'''))
+          replacements.append(('''    latest_success_counts = latest_success | {"other": 0}\n    latest_unverified_counts = {\n        kind: latest_submission_counts[kind] - latest_success_counts[kind]\n        for kind in (*KINDS, "other")\n    }''','''    latest_success_counts = latest_success | {"other": 0}\n    latest_result_counts = {kind: sum(row["path"] in result_by_submission for row in latest_by_kind[kind]) for kind in KINDS} | {"other": 0}\n    latest_non_success_counts = {kind: latest_result_counts[kind] - latest_success_counts[kind] for kind in (*KINDS, "other")}\n    latest_unverified_counts = {kind: latest_submission_counts[kind] - latest_result_counts[kind] for kind in (*KINDS, "other")}'''))
+          for old,new in replacements:
+              assert old in s, old[:80]
+              s=s.replace(old,new,1)
+          s=s.replace('| 最新run検証済み成功 | 最新run個別result未照合 | 現在claim |','| 最新run検証済み成功 | 最新run result照合済み非成功 | 最新run個別result未照合 | 現在claim |',1)
+          s=s.replace('|---|---:|---:|---:|---:|---:|---:|---:|','|---|---:|---:|---:|---:|---:|---:|---:|---:|',1)
+          s=s.replace('f"**{latest_success_counts[kind]}** | **{latest_unverified_counts[kind]}** | "','f"**{latest_success_counts[kind]}** | **{latest_non_success_counts[kind]}** | **{latest_unverified_counts[kind]}** | "',1)
+          s=s.replace('f"| {LABELS[\'other\']} | **0** | **0** | **0** | **0** | "','f"| {LABELS[\'other\']} | **0** | **0** | **0** | **0** | **0** | "',1)
+          s=s.replace('''    total_success = sum(latest_success_counts[kind] for kind in KINDS)\n    total_unverified = sum(latest_unverified_counts[kind] for kind in KINDS)''','''    total_success = sum(latest_success_counts[kind] for kind in KINDS)\n    total_non_success = sum(latest_non_success_counts[kind] for kind in KINDS)\n    total_unverified = sum(latest_unverified_counts[kind] for kind in KINDS)''',1)
+          s=s.replace('''f"| 合計 | **{total_recent}** | **{total_submissions}** | **{total_success}** | "\n        f"**{total_unverified}** |''','''f"| 合計 | **{total_recent}** | **{total_submissions}** | **{total_success}** | "\n        f"**{total_non_success}** | **{total_unverified}** |''',1)
+          old='''            verified_by_submission=verified_by_submission,\n        )'''
+          assert s.count(old) >= 2
+          s=s.replace(old,'''            verified_by_submission=verified_by_submission,\n            result_by_submission=result_by_submission,\n        )''',2)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Install and validate
+        run: |
+          python -m pip install -r .survey/scripts/requirements.txt
+          python -m compileall -q .survey/scripts
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+          python .survey/scripts/render_status_dashboard.py --repo-root . --output /tmp/STATUS.md
+          grep -F 'result照合済み非成功: **1件** / 個別result未照合: **0件**' /tmp/STATUS.md
+          grep -F '**result照合済み非成功** `.survey/work-queue/submissions/research/attempt-73b8f63ceffa41235b1708c8.json`' /tmp/STATUS.md
+          ! grep -F '**個別result未照合** `.survey/work-queue/submissions/research/attempt-73b8f63ceffa41235b1708c8.json`' /tmp/STATUS.md
+      - name: Commit validated fix
+        run: |
+          git config user.name 'status-maintenance[bot]'
+          git config user.email 'status-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/render_status_dashboard_core.py
+          git commit -m 'fix: distinguish matched non-success STATUS results'
+          git push origin HEAD:status-fix-result-classification-20260919
