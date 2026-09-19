@@ -2,61 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-aabaad10b18cbdb1c36dc544",
-  "job_id": "job-research-576a090cf3d34dc3",
+  "attempt_id": "attempt-20ee46a86ecf2a97d52cff02",
+  "job_id": "job-research-7462825d21914fcd",
   "data": {
-    "canonical_id": "arXiv:2308.16369",
-    "arxiv_id": "2308.16369",
-    "doi": "10.48550/arXiv.2308.16369",
+    "canonical_id": "arXiv:2307.08691",
+    "arxiv_id": "2307.08691",
+    "doi": "10.48550/arXiv.2307.08691",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.LG",
-      "cross_list": [
-        "cs.DC"
-      ]
+      "cross_list": []
     },
-    "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
-    "summary": "Sarathiは、計算効率の高いプリフィルを一定サイズの断片へ分割し、その断片と多数のデコードトークンを同じ行列演算へ混載することで、メモリ帯域支配のデコードをプリフィルの重み読込みへ相乗りさせるLLM推論スケジューラである。均一な計算量の混合バッチはパイプライン並列のバブルも削減する。LLaMA-13B/A6000でデコード最大10倍・E2E最大1.33倍、LLaMA-33B/A100で最大4.25倍・1.25倍、64 A100のGPT-3シミュレーションでバブル6.29倍削減・E2E 1.91倍を示す。",
-    "list_summary": "プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "summary": "FlashAttention-2は、正確なattentionをHBM/SRAM間のI/O削減で高速化したFlashAttentionを、非行列積演算削減、系列長方向のthread-block並列化、warp間shared-memory通信削減で再設計するGPU attention kernelである。A100でFlashAttention比1.7〜3.0倍、最大230 TFLOPs/s（理論値73%）、GPT学習で最大225 TFLOPs/s/GPU（72% MFU）を達成する。",
+    "list_summary": "FlashAttentionのonline-softmax tilingを保ちつつ非GEMM演算・block/warp分割を再設計し、A100で最大73%理論FLOPsとFlashAttention比約2倍を達成する。",
     "authors": [
-      "Amey Agrawal",
-      "Ashish Panwar",
-      "Jayashree Mohan",
-      "Nipun Kwatra",
-      "Bhargav S. Gulavani",
-      "Ramachandran Ramjee"
+      "Tri Dao"
     ],
-    "authors_affiliations": "Georgia Institute of Technology; Microsoft Research India",
-    "published": "2023-08-31",
+    "authors_affiliations": "Princeton University; Stanford University",
+    "published": "2023-07-17",
     "publication": "arXiv",
     "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2023-08-31)",
-    "lineage": "LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism",
+    "publication_status": "Preprint (v1, 2023-07-17)",
+    "lineage": "exact attention / IO-aware attention / GPU kernel optimization / FlashAttention",
     "topics": [
-      "チャンク化プリフィル",
-      "デコード最大化バッチング",
-      "混合バッチ",
-      "パイプラインバブル",
-      "LLMサービング"
+      "注意カーネル",
+      "GPU並列化",
+      "ワーク分割",
+      "オンラインsoftmax",
+      "長文脈"
     ],
-    "importance": "プリフィルとデコードのGPU資源特性差を、別々に処理するのではなく同じ行列積へ混ぜて相補的に利用する発想を示し、後続のchunked prefill系サービング設計につながる。",
-    "implementation": "nanoGPTを基盤にchunked-prefillsとdecode-maximal batchingを実装し、注意にはxFormersを使用。KVキャッシュは最大系列長に応じて事前確保しインプレース更新する。",
-    "hardware_evaluation": "LLaMA-13B/A6000 48GB、LLaMA-33B/A100 80GBは実機。GPT-3は64×A100 80GB（8-way TP×8-way PP）をプロファイル駆動シミュレーション。",
-    "quality_effect": "注意マスクを正しく設定したchunked prefillは完全プリフィルと数学的に等価で、モデル品質を近似しない。交換条件はプリフィル断片化の再読込・低算術強度による性能費用。",
-    "source": "https://arxiv.org/abs/2308.16369",
+    "importance": "FlashAttentionのI/O最適性だけでは残っていたGPU occupancyとwarp通信の非効率を解消し、exact attentionをGEMMに近い実効効率へ押し上げた。",
+    "implementation": "CUDA実装をflash-attentionリポジトリで公開。MHAに加えMQA/GQA、causal mask、forward/backwardを扱う。",
+    "hardware_evaluation": "A100 80GB SXM4を主要評価、H100でも特殊命令未使用の同実装を測定。E2Eは8×A100でGPT 1.3B/2.7B。",
+    "quality_effect": "近似なしでstandard attentionと同じ出力を計算する。性能のみを変更し、モデル品質の交換条件はない。",
+    "source": "https://arxiv.org/abs/2307.08691",
     "sources": [
-      "https://arxiv.org/abs/2308.16369",
-      "https://arxiv.org/html/2308.16369v1"
+      "https://arxiv.org/abs/2307.08691",
+      "https://arxiv.org/html/2307.08691v1"
     ],
-    "code": "",
+    "code": "https://github.com/Dao-AILab/flash-attention",
     "last_checked": "2026-09-20",
     "references": [],
     "references_checked_at": "2026-09-20",
     "references_source": "primary-reference-section",
-    "references_total": 48
+    "references_total": 20
   },
   "reservation": {
-    "claim_id": "claim-aabaad10b18cbdb1c36dc544",
+    "claim_id": "claim-20ee46a86ecf2a97d52cff02",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

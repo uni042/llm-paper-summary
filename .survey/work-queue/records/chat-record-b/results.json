@@ -2,60 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-aabaad10b18cbdb1c36dc544",
-  "job_id": "job-research-576a090cf3d34dc3",
+  "attempt_id": "attempt-20ee46a86ecf2a97d52cff02",
+  "job_id": "job-research-7462825d21914fcd",
   "data": {
-    "overview": "SarathiはLLaMA-13B/A6000でデコードスループットを2.8〜10倍、E2Eを最大1.33倍にし、LLaMA-33B/A100ではデコード最大4.25倍、E2E最大1.25倍を達成した。Orca best-caseに対しても1K/2K/3K系列で1.27/1.25/1.23倍のbaseline比スループットを維持する。GPT-3の64 A100シミュレーションではパイプラインbubble中央値を6.29倍削減し、TP+PPの完了時間を1.91倍高速化した。",
+    "overview": "A100 attention benchmarkでFlashAttention-2は初代FlashAttention比1.7〜3.0倍、Triton版比1.3〜2.5倍、standard attention比3〜10倍となり、最大230 TFLOPs/s、理論FP16/BF16性能の73%へ到達した。GPT 1.3B/2.7Bの8×A100学習では初代FlashAttention比最大1.3倍、非FlashAttention baseline比最大2.8倍で、225 TFLOPs/s/GPU・72% model FLOPs utilizationを達成した。",
     "key_results": [
       {
-        "metric": "LLaMA-13B decode throughput",
-        "value": "2.8〜10×、最大10×",
-        "baseline": "prefill-only/decode-only baseline",
-        "condition": "A6000、chunk=256、系列長とbatchを変化",
-        "interpretation": "prefillとdecodeの線形演算を融合し、重みロードを共有することでdecodeの限界費用を大幅に下げる。"
+        "metric": "attention kernel speedup",
+        "value": "FlashAttention比1.7〜3.0×",
+        "baseline": "FlashAttention",
+        "condition": "A100 80GB、seq 512〜16K、head dim 64/128、causal有無",
+        "interpretation": "I/O最適化後に残るparallelism/work partitioningが大きな性能余地だった。"
       },
       {
-        "metric": "LLaMA-13B E2E throughput",
-        "value": "最大1.33×",
-        "baseline": "prefill/decode分離実行",
-        "condition": "A6000、1K系列で表4のpeak条件",
-        "interpretation": "decode単体の大幅高速化はprefillを変えないためE2Eでは約33%改善に圧縮される。"
+        "metric": "A100 kernel throughput",
+        "value": "最大230 TFLOPs/s、理論値73%",
+        "baseline": "A100 FP16/BF16 theoretical 312 TFLOPs/s",
+        "condition": "attention microbenchmark",
+        "interpretation": "exact attentionがGEMMに近いGPU効率へ到達する。"
       },
       {
-        "metric": "LLaMA-33B E2E/decode",
-        "value": "E2E最大1.25×、decode最大4.25×",
-        "baseline": "prefill/decode分離実行",
-        "condition": "A100 80GB、1K〜3K系列",
-        "interpretation": "FLOPS/帯域比の高いA100でも適切なchunkを選べば混合バッチ利得が残る。"
+        "metric": "standard attention比較",
+        "value": "最大10×高速",
+        "baseline": "PyTorch standard attention",
+        "condition": "A100 microbenchmark",
+        "interpretation": "N² intermediate HBM traffic削減と実行配置改善の合成効果。"
       },
       {
-        "metric": "Orca比較",
-        "value": "Sarathi 1.27×/1.25×/1.23× vs baseline（1K/2K/3K）",
-        "baseline": "Orca best-case peakは1Kで1.11×",
-        "condition": "LLaMA-13B/A6000、chunk=256、最適P:D",
-        "interpretation": "全prefillを一度に投入するOrcaより、chunk化でpiggyback機会を複数反復へ分散できる。"
+        "metric": "E2E GPT training",
+        "value": "最大225 TFLOPs/s/GPU、72% MFU",
+        "baseline": "FlashAttention / no-FlashAttention",
+        "condition": "GPT 1.3B/2.7B、context 2K/8K、8×A100",
+        "interpretation": "kernel高速化がattention-heavyな8K contextでE2Eへ大きく反映される。"
       },
       {
-        "metric": "pipeline bubble",
-        "value": "中央値6.29×削減",
-        "baseline": "best-case Orca-style TP+PP",
-        "condition": "GPT-3、64×A100 simulation、8-way TP×8-way PP",
-        "interpretation": "均一計算量のmicro-batchが段間待機を減らす。"
+        "metric": "E2E speedup",
+        "value": "FlashAttention比最大1.3×、baseline比最大2.8×",
+        "baseline": "FlashAttention / no FlashAttention",
+        "condition": "8×A100 GPT training",
+        "interpretation": "attention以外のmodel計算が残るためkernel単体2倍前後よりE2E利得は小さい。"
       },
       {
-        "metric": "pipeline E2E throughput",
-        "value": "baseline TP+PP比1.91×、TP-only比1.48×",
-        "baseline": "Orca-style TP+PP / 8-way TP replicas",
-        "condition": "10K requests、P:D=10、chunk=256",
-        "interpretation": "KV容量面で有利なpipeline parallelismの大batchを、bubble削減によって実効性能へ変換する。"
+        "metric": "H100参考性能",
+        "value": "最大335 TFLOPs/s",
+        "baseline": "same implementation",
+        "condition": "H100、新TMA/4th-gen Tensor Core専用最適化なし",
+        "interpretation": "移植だけでも高速だがH100固有機能の余地を残す。"
       }
     ],
-    "negative_results": "チャンクを小さくしすぎるとprefill性能が大きく悪化する。chunk=64ではattentionが約3倍、prefill全体が約5倍遅くなる。chunk=256/512ならprefill損失は20%/10%以内に抑えられる。系列長が伸びるとattentionの二次コストが増え、Sarathiが最適化する線形演算の比率が下がるためdecode speedupは縮小する。P:Dが極端にprefillまたはdecodeへ偏ると相乗り相手が枯渇して利得が下がる。",
-    "interpretation": "Sarathiの中心効果は、prefillの高算術強度をdecode高速化の『キャリア』として使うことにある。chunkingはキャリアの回数を増やし、decode-maximal batchingは重みロードを共有し、uniform batchingはpipeline bubbleを減らす。したがって利得はP:D、chunk、batch、系列長のバランスに依存するが、単一GPUとPPで同じ機構が異なる形の非効率を改善する。",
-    "quality_impact": "演算順序とバッチ構成を変えるが、chunked prefillの因果maskにより完全prefillと数学的等価性を保ち、モデルの近似やtoken削減は行わない。品質交換条件ではなく、主な交換条件はchunking overhead、latency/fairness未最適化、scheduler complexityである。"
+    "negative_results": "block sizeを大きくするとshared-memory trafficは減るがregister/shared-memory消費が増え、register spillingや容量超過で遅くなるため64/128の少数候補をhead dimensionごとに手動tuningする。H100固有命令、FP8、AMDは未最適化。長系列で計算量O(N²d)自体は変わらず、アルゴリズム的なsubquadratic attentionではない。",
+    "interpretation": "初代FlashAttentionでHBM trafficを削った後のボトルネックが、非Tensor-Core FLOPs、SM occupancy、warp間shared-memory通信へ移ったことを示す。FlashAttention-2は同じexact tilingを保ったまま、その新しいボトルネックに合わせてkernel execution mappingを再設計したため、追加の約2倍高速化を得る。",
+    "quality_impact": "standard softmax attentionと数学的に同じoutputとgradientを返し、近似・疎化・量子化を導入しない。したがってモデル品質への交換条件はなく、性能・実装複雑性・hardware tuningが主要な論点である。"
   },
   "reservation": {
-    "claim_id": "claim-aabaad10b18cbdb1c36dc544",
+    "claim_id": "claim-20ee46a86ecf2a97d52cff02",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
