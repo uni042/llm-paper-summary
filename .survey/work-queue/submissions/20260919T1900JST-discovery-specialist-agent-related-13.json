@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25899",
+      "title": "Pythia: Exploiting Workflow Predictability for Efficient Agent-Native LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.25899",
+      "priority": 84,
+      "reason": "Agent-native serving system exploiting workflow semantics/predictability for proactive caching, scheduling and scaling. It is grounded in production traces and reports substantial throughput/JCT/TTFT improvements, making it a strong agent-serving lineage candidate."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-agent-related-13",
+    "axis": "related-work path from agentic workload systems to predictability-driven agent-native serving",
+    "query_summary": "Followed the agent-serving related-work path after broad search. Pythia was surfaced as a concrete workflow-aware serving system, and repository code search did not find its arXiv identity.",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2604.25899"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Inspect adjacent agent-serving systems Orla / prediction-based KV management / Scepsy, then use independent framework/runtime axis."
+  }
+}
