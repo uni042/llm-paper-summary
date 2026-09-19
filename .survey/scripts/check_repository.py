@@ -222,4 +222,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    from worker_guidance import run_guided
+
+    raise SystemExit(run_guided(main, script=__file__))
