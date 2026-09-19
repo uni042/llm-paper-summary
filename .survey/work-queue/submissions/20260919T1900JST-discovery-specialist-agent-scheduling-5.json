@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.02230",
+      "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+      "source_url": "https://arxiv.org/abs/2511.02230",
+      "priority": 79,
+      "reason": "Agentic serving system combining tool-duration-aware KV-cache TTL with program-level scheduling. It directly targets multi-turn tool-call pauses, cache retention/offload decisions, and job completion time, with real agent workloads and multiple hardware/offload settings."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-agent-scheduling-5",
+    "axis": "agentic multi-turn scheduling / tool-call pauses / KV cache TTL",
+    "query_summary": "Moved from generic batching to agentic multi-turn serving. SPECTRE, SPIN, and SwiftSpec were already known in the recent discovery history; Continuum was not found by repository code search and has a distinct tool-aware cache-retention and program-scheduling contribution.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.75,
+    "accepted_canonical_ids": ["arXiv:2511.02230"],
+    "duplicate_canonical_ids": ["arXiv:2605.08151", "arXiv:2503.15921", "arXiv:2506.11309"],
+    "next_axis_hint": "Search agentic serving memory isolation/sandboxing and prefix-cache lifecycle, then switch to MoE placement if overlap rises."
+  }
+}
