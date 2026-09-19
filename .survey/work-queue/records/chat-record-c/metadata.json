@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-52fd234ea45de5f63b71cc39",
-  "job_id": "job-research-2dcd265cd3f3852c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-52fd234ea45de5f63b71cc39",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-52fd234ea45de5f63b71cc39","job_id":"job-research-2dcd265cd3f3852c","data":{"canonical_id":"arXiv:2507.07400","arxiv_id":"2507.07400","doi":"10.48550/arXiv.2507.07400","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows","summary":"KVFlowは複数エージェントの実行順をエージェント・ステップ・グラフとしてサービング層へ渡し、将来の実行までの近さに基づいてKVキャッシュを追い出す。さらに次に実行されるエージェントの固定プロンプトKVをCPUからGPUへ先読みし、ロード中要求を一時的に飛ばす状態認識スケジューリングで転送をGPU計算へ重ねる。SGLang階層Radixキャッシュに対し、長い固定プロンプトの単一ワークフローで最大1.83倍、高並行条件で最大2.19倍の高速化を報告する。","list_summary":"エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。","authors":["Zaifeng Pan","Ajjkumar Patel","Zhengding Hu","Yipeng Shen","Yue Guan","Wan-Lu Li","Lianhui Qin","Yida Wang","Yufei Ding"],"authors_affiliations":"University of California San Diego; AWS","published":"2025-07-10","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint, under review (v1, 2025-07-10)","lineage":"agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling","topics":["KVキャッシュ","プレフィックスキャッシュ","エージェント・ワークフロー","CPUオフロード","先読み"],"importance":"アプリケーション層が既に持つエージェント依存関係を、バックエンドのKV保持・追出し・先読み判断へ直接利用する。","implementation":"SGLang v0.4.4のフロントエンドとバックエンドを拡張した試作実装。Radix木へ将来実行優先度とKV状態を追加し、背景スレッドでCPU-GPU転送を行う。","hardware_evaluation":"Llama-3.1-8B/A10G 24GB・PCIe Gen1 2GB/s、およびQwen2.5-32B/H100 80GB・PCIe Gen5 64GB/s。","quality_effect":"モデル重み、プロンプト、復号ロジックを変更しないシステム最適化であり、出力意味を維持する。","source":"https://arxiv.org/abs/2507.07400","sources":["https://arxiv.org/abs/2507.07400","https://arxiv.org/pdf/2507.07400"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":40},"reservation":{"claim_id":"claim-52fd234ea45de5f63b71cc39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
