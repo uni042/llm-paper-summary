@@ -1,6 +1,45 @@
 {
   "schema_version": 1,
+  "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "record_count": 0,
-  "records": {}
+  "updated_at": "2026-09-19T18:08:00+00:00",
+  "record_count": 3,
+  "records": {
+    "arXiv:2303.08774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.08774",
+      "identity_tokens": [
+        "arXiv:2303.08774"
+      ],
+      "reason": "General model technical report; not a focused LLM inference/training systems contribution for this survey lane.",
+      "first_checked_at": "2026-09-19T18:08:00+00:00",
+      "last_checked_at": "2026-09-19T18:08:00+00:00",
+      "linked_from": [],
+      "title": "GPT-4 Technical Report"
+    },
+    "arXiv:2110.14168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.14168",
+      "identity_tokens": [
+        "arXiv:2110.14168"
+      ],
+      "reason": "Reasoning/verifier and benchmark work rather than an LLM systems, memory, serving, or training-system contribution.",
+      "first_checked_at": "2026-09-19T18:08:00+00:00",
+      "last_checked_at": "2026-09-19T18:08:00+00:00",
+      "linked_from": [],
+      "title": "Training Verifiers to Solve Math Word Problems"
+    },
+    "arXiv:2107.03374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.03374",
+      "identity_tokens": [
+        "arXiv:2107.03374"
+      ],
+      "reason": "Code-model capability/evaluation paper rather than a systems contribution in the repository scope.",
+      "first_checked_at": "2026-09-19T18:08:00+00:00",
+      "last_checked_at": "2026-09-19T18:08:00+00:00",
+      "linked_from": [],
+      "title": "Evaluating Large Language Models Trained on Code"
+    }
+  }
 }

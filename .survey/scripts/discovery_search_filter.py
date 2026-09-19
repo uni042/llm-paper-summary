@@ -324,6 +324,11 @@ def collect_until_unseen(
         unresolved_identity_count += filtered["unresolved_identity_count"]
 
         for record in filtered["results"]:
+            # A provider page may contain more unseen papers than the requested buffer.
+            # Stop at the exact target so target_unseen=20 never leaks a 100-record page
+            # into candidate evaluation.
+            if len(results) >= target_unseen:
+                break
             primary = paper_identity.primary_identity_key(record)
             if primary and primary in seen_primary_identities:
                 cross_page_duplicate_filtered_count += 1

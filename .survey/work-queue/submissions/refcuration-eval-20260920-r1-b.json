@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.48550/arxiv.2307.08691",
+      "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "source_url": "https://arxiv.org/abs/2307.08691",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md",
+      "priority": 94,
+      "reason": "Core attention-kernel systems work improving GPU work partitioning and parallelism; directly relevant to inference kernel performance."
+    },
+    {
+      "canonical_id": "arXiv:2401.11181",
+      "title": "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads",
+      "source_url": "https://arxiv.org/abs/2401.11181",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+      "priority": 92,
+      "reason": "TetriInfer is a focused serving-system paper on prefill/decode disaggregation and scheduling, with direct TTFT/JCT/resource-efficiency evaluation."
+    },
+    {
+      "canonical_id": "arXiv:1701.06538",
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "source_url": "https://arxiv.org/abs/1701.06538",
+      "paper_path": "papers/inference/05-moe/2017-1701.06538-sparsely-gated-moe.md",
+      "priority": 82,
+      "reason": "Seminal sparse-MoE foundation repeatedly cited across the repository; worthwhile older omission because it defines the conditional-computation lineage underlying modern MoE systems."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r1b",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r1b.json",
+    "receipt": "sha256:78fdaea7a72f057c78616b557f2359dd0e6e20dfaca3bb8ee73ecba18ac2fa3b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20",
+    "round": "refcuration-eval-r1-b",
+    "axis": "structured references relevance curation round 1 retry",
+    "query_summary": "Structured-reference curation experiment: evaluated 20 top-ranked unseen references in two immutable submission batches; unrelated/borderline records were durably classified before handoff.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "DOI:10.48550/arxiv.2307.08691",
+      "arXiv:2401.11181",
+      "arXiv:1701.06538"
+    ],
+    "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle.",
+    "empty_round_reason": null
+  }
+}

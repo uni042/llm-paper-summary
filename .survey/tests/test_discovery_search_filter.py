@@ -148,13 +148,13 @@ class DiscoverySearchFilterTest(unittest.TestCase):
         self.assertEqual(calls, [None, "page-2", "page-3"])
         self.assertEqual(
             [row["arxiv_id"] for row in result["results"]],
-            ["2609.90001", "2609.90002", "2609.90003", "2609.90004"],
+            ["2609.90001", "2609.90002", "2609.90003"],
         )
         self.assertEqual(result["pages_fetched"], 3)
         self.assertEqual(result["raw_search_result_count"], 7)
         self.assertEqual(result["retrieval_duplicate_filtered_count"], 2)
         self.assertEqual(result["cross_page_duplicate_filtered_count"], 1)
-        self.assertEqual(result["unseen_result_count"], 4)
+        self.assertEqual(result["unseen_result_count"], 3)
         self.assertTrue(result["target_reached"])
         self.assertFalse(result["provider_exhausted"])
         self.assertEqual(result["next_cursor"], "page-4")

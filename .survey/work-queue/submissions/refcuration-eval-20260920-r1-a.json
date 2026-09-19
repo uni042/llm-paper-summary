@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:1909.08053",
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+      "source_url": "https://arxiv.org/abs/1909.08053",
+      "paper_path": "papers/training/03-pipeline-parallel-modular-training/2019-1909.08053-megatron-lm.md",
+      "priority": 91,
+      "reason": "Seminal large-model training systems work: practical intra-layer model parallelism with measured scaling efficiency. It fills an important foundation gap for distributed LLM training."
+    },
+    {
+      "canonical_id": "DOI:10.48550/arxiv.2405.04434",
+      "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+      "source_url": "https://arxiv.org/abs/2405.04434",
+      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2405.04434-deepseek-v2-mla.md",
+      "priority": 88,
+      "reason": "Introduces Multi-head Latent Attention (MLA) and DeepSeekMoE; MLA directly targets inference KV-cache footprint and the report quantifies large cache and throughput effects."
+    },
+    {
+      "canonical_id": "arXiv:2308.16369",
+      "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
+      "source_url": "https://arxiv.org/abs/2308.16369",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+      "priority": 94,
+      "reason": "Focused LLM inference-system paper combining chunked prefills and decode-maximal batching to reduce prefill/decode interference and pipeline bubbles."
+    },
+    {
+      "canonical_id": "DOI:10.48550/arxiv.2302.01318",
+      "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+      "source_url": "https://arxiv.org/abs/2302.01318",
+      "paper_path": "papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md",
+      "priority": 95,
+      "reason": "Foundational speculative-decoding method providing lossless acceleration through draft generation plus corrected acceptance/rejection sampling."
+    },
+    {
+      "canonical_id": "arXiv:2210.17323",
+      "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+      "source_url": "https://arxiv.org/abs/2210.17323",
+      "paper_path": "papers/inference/08-quantization-kernels/2022-2210.17323-gptq.md",
+      "priority": 90,
+      "reason": "Foundational practical LLM post-training weight quantization work with direct memory-capacity and end-to-end inference-speed implications."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-eval-20260920-r1b",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-eval-20260920-r1b.json",
+    "receipt": "sha256:78fdaea7a72f057c78616b557f2359dd0e6e20dfaca3bb8ee73ecba18ac2fa3b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-eval-2026-09-20",
+    "round": "refcuration-eval-r1-a",
+    "axis": "structured references relevance curation round 1 retry",
+    "query_summary": "Structured-reference curation experiment: evaluated 20 top-ranked unseen references in two immutable submission batches; unrelated/borderline records were durably classified before handoff.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:1909.08053",
+      "DOI:10.48550/arxiv.2405.04434",
+      "arXiv:2308.16369",
+      "DOI:10.48550/arxiv.2302.01318",
+      "arXiv:2210.17323"
+    ],
+    "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle.",
+    "empty_round_reason": null
+  }
+}
