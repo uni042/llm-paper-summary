@@ -360,7 +360,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
             payload.update(
                 {
                     "collector_id": "collector-1",
-                    "target_unseen": 10,
+                    "target_unseen": 20,
                     "pages_processed": 1,
                     "evaluation_allowed": evaluation_allowed,
                     "decision": "READY_FOR_EVALUATION" if evaluation_allowed else "CONTINUE_FETCH",
