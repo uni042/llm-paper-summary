@@ -1,0 +1,8 @@
+{
+ "schema_version":1,"transport_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2608.02244","title":"Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling","source_url":"https://arxiv.org/abs/2608.02244","priority":74,"reason":"異なるKV footprintを持つrequestのco-batching外部性をresource fairnessとして定式化し、ISJL batching policyとcompetitive boundを提示する。serving scheduling/fairness系統の理論・数値評価候補。"},
+  {"canonical_id":"arXiv:2605.23389","title":"AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System","source_url":"https://arxiv.org/abs/2605.23389","priority":86,"reason":"KV長を揃えるprefix-aware batchingとGPU-Prefetch-For-GPUでdecode iteration bubbleを削減。throughput最大1.98x、latency最大7.4x改善を報告するserving frameworkで、batching/KV scheduling系統に直接関連する。"}
+ ],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-batching-fairness-8","axis":"resource-fair batching・prefix-aware batching","query_summary":"batching/fairnessへ探索軸を変更。2件を一次arXiv情報で軽量評価し、最新default branch repository searchでID未収録を確認した。直近FairInferenceは既知のため候補化しなかった。","candidate_count":3,"duplicate_filtered_count":1,"novel_candidate_count":2,"accepted_count":2,"duplicate_ratio":0.3333333333,"accepted_canonical_ids":["arXiv:2608.02244","arXiv:2605.23389"],"duplicate_canonical_ids":["arXiv:2609.18112"],"next_axis_hint":"次はmulti-model/multi-tenant placement、request migration、またはinference cost optimizationへ移る。"}
+}
