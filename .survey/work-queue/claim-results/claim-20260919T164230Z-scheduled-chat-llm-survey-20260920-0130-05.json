@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T164230Z-scheduled-chat-llm-survey-20260920-0130-05",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-153b45adc3c50a28",
+      "claim_id": "claim-e1fd57ed695526cd97dd92b5",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e1fd57ed695526cd97dd92b5",
+      "claimed_at": "2026-09-19T16:42:40+00:00",
+      "expires_at": "2026-09-19T18:12:40+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-153b45adc3c50a28"
+      ],
+      "job": {
+        "job_id": "job-research-153b45adc3c50a28",
+        "type": "research",
+        "parent_job_id": "job-e64ad8e5caaeb00f",
+        "priority": 76,
+        "canonical_id": "arXiv:2505.09142",
+        "title": "ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor",
+        "source_url": "https://arxiv.org/abs/2505.09142",
+        "paper_path": "papers/inference/99-other-inference-systems/2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md",
+        "selection_reason": "Cloud-native Kubernetes LLM serving scheduler combining response-length prediction with iterative shortest-remaining-time-first scheduling; reports up to 19.6% average JCT reduction.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T22:05:07+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T16:42:40+00:00",
+  "checkpoint_released": 0
+}

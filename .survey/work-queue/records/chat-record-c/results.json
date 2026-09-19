@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-257fe813bf991760822038e3",
-  "job_id": "job-research-7353bc1b63a704fc",
-  "data": {
-    "overview": "LoRA-as-inputは2-task条件でmaskingより小さい実行サイズと低いLoRA追加遅延を示し、多用途へ拡張しやすい。1Bモデルの量子化ではLLM本体ROMがFP16 1800MBからINT4 600MBへ約3分の1となり、GS24上でピーク967MB、first-token 155.9ms、41.32 tokens/sを達成した。CTGは8候補の逐次相当174msを63msへ短縮する。3B GS25ではDS2Dにより用途別tokens/sが非投機時の約22〜38から約26〜45へ改善し、論文は概ね2倍のdecode高速化を報告する。",
-    "key_results": [
-      {
-        "metric": "1B量子化ROM",
-        "value": "FP16 LLM 1800MB → INT4 LLM 600MB（LoRAは各構成120MB）",
-        "baseline": "FP16 LLM + LoRA",
-        "condition": "GS24向け1Bモデル",
-        "interpretation": "基盤モデル部分を約3分の1へ圧縮し、オンデバイス常駐性を高める。"
-      },
-      {
-        "metric": "1B実機生成性能",
-        "value": "peak 967MB; first token 155.9ms; 24.19ms/token; 41.32 tokens/s; E2E 2.85s",
-        "baseline": "なし",
-        "condition": "Galaxy S24 Ultra, one-for-all 1B model",
-        "interpretation": "複数用途を単一モデルへ統合した状態で実時間生成可能な水準を示す。"
-      },
-      {
-        "metric": "LoRA runtime方式",
-        "value": "LoRA-as-input 686MB, prefill 52ms, generative 25ms; masking 894MB, 75ms, 30ms",
-        "baseline": "LoRA masking",
-        "condition": "2 tasks; base size 718MB",
-        "interpretation": "実行時入力方式は全LoRA常駐mask方式よりメモリと遅延の双方で有利。"
-      },
-      {
-        "metric": "CTG 8-stream総時間",
-        "value": "174ms → 63ms",
-        "baseline": "1-streamを8出力分逐次実行",
-        "condition": "prefill 40ms, AR 23ms",
-        "interpretation": "共通prefillと同時stream処理により複数候補生成を約2.76倍高速化する。"
-      },
-      {
-        "metric": "DS2D生成率",
-        "value": "用途別で約26.49〜44.84 tokens/s（非DS2D約22.3〜37.75 tokens/s）",
-        "baseline": "non-speculative decoding",
-        "condition": "3B model, Galaxy S25 Ultra, 8 use cases",
-        "interpretation": "用途別branch最適化により追加draft modelなしでdecodeを高速化する。"
-      },
-      {
-        "metric": "DS2D branch best example",
-        "value": "Correction 49.6 tokens/s at branch 1,2,2; 2.27 tokens/inference",
-        "baseline": "branch configuration比較",
-        "condition": "GS25 SM8750",
-        "interpretation": "固定32行程度のNPU効率と受理率の両方を見てbranch形状を用途別に選ぶ必要がある。"
-      }
-    ],
-    "negative_results": "LoRA-as-inputは全LoRAのrank/形状が同一であることを前提とし、異種LoRAを動的形状で扱えない。DS2Dのforecast embeddingは推論中に入力系列へ適応せず静的なため、意味変動や長期依存が強い入力では受理率が低下し得る。CTGのstyle variantも事前定義で、任意のユーザ指定styleを無変更で追加できない。品質表ではJapanese Smart ReplyのRelative Accuracyが88.79%、Chinese Summarizationが82.92%など低下する条件もあり、量子化が常に無損失ではない。",
-    "interpretation": "主要な価値は個別最適化の新規性だけでなく、固定グラフというモバイルNPUの制約を破らずにMulti-LoRA・複数出力・自己投機的復号を入力tensorとmaskの操作として実現した統合設計にある。特にLoRA-as-inputは用途追加時のグラフ複製を避け、CTG/DS2Dは同じ単一グラフ資産をより高い並列度で使う。",
-    "quality_impact": "9言語の多くのtaskではQAT後G-EvalのRelative Accuracyが概ね97〜103%付近だが、言語・taskによっては80%台まで低下する。DS2Dは通常tokenを凍結LLMの分布から生成しdraftを次stepで検証するため生成品質維持を意図するが、論文の主評価は速度・実装効率中心である。"
-  },
+  "attempt_id": "attempt-e1fd57ed695526cd97dd92b5",
+  "job_id": "job-research-153b45adc3c50a28",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-257fe813bf991760822038e3",
+    "claim_id": "claim-e1fd57ed695526cd97dd92b5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
