@@ -1,0 +1,20 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": false,
+  "request_id": "manual-fixedsource-20260920T0157JST-llm-serving",
+  "collector_id": "manual-fixedsource-20260920T0157JST-llm-serving",
+  "run_key": "2026-09-20T01:00:00+09:00",
+  "axis": "Semantic Scholar search: LLM inference serving KV cache",
+  "error": "DiscoveryProviderError: Semantic Scholar page fetch failed at offset 0: HTTP Error 429: ",
+  "evaluation_allowed": false,
+  "decision": "FIX_REQUEST",
+  "next_action": "Create a NEW schema-v3 precheck request with one fixed provider search source_url/API query. Do not supply hand-picked records and do not emulate pagination by changing the query.",
+  "recovery_steps": [
+    "Keep the failed request unchanged.",
+    "Use schema_version=3.",
+    "Provide provider, source_url, collector_id, run_key, axis, and optional target_unseen/page_size.",
+    "The source_url must identify one fixed result set; the precheck will fetch page 1, page 2, and later pages itself.",
+    "If that result set is exhausted below target_unseen, accept the smaller buffer and start a separate Discovery round for a different query/axis."
+  ]
+}
