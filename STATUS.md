@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:12:52 JST**
+> 自動生成: **2026-09-19 11:13:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **45** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 11:11:24 JST（1分前）** |
+| 収録候補論文 | **46** |
+| 未claim Research job | **44** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-19 11:13:03 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **14** | **15** | **6** | **9** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **16** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **17** | **18** | **9** | **9** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:13:03 JST** [research] `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading
+  - job: `.survey/work-queue/jobs/job-research-7623de796f4f2b46.json`
+  - result: `.survey/work-queue/results/research/attempt-4acdd901db9ea9968da5dd65.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4acdd901db9ea9968da5dd65.json`
+  - paper: `papers/inference/03-offload-hierarchical-memory/2025-2504.11816-infersave-vm-selection-kv-offloading.md`
 - **09-19 11:11:24 JST** [research] `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System
   - job: `.survey/work-queue/jobs/job-research-7b5d4afbd3eabe62.json`
   - result: `.survey/work-queue/results/research/attempt-1f99c691ecf3b25036733d54.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
-- **09-19 05:35:57 JST** [research] `arXiv:2508.08457` — Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories
-  - job: `.survey/work-queue/jobs/job-research-be1193ba1dd42ac7.json`
-  - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
-  - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
 
 ### Audit
 
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +225,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **748** |
+| inference/training/survey配下の論文Markdown実体 | **749** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +233,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **581** |
-| └ Research | **452** |
+| 成功result未照合のimmutable submission | **580** |
+| └ Research | **451** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 

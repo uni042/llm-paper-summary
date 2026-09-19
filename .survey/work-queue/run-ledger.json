@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:11:27.360487+00:00",
+  "updated_at": "2026-09-19T02:13:06.721188+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:11:27.360487+00:00",
+      "last_recorded_at": "2026-09-19T02:13:06.721188+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 284,
+        "research_completed": 285,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35332646792:1",
-          "recorded_at": "2026-09-18T10:03:04.252470+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35332646792",
-            "run_attempt": "1",
-            "source_sha": "1908aa04d6df459b04d1cc5ec0f1d9f27016a2b5"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35332710036:1",
           "recorded_at": "2026-09-18T10:04:06.131100+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35414912566",
             "run_attempt": "1",
             "source_sha": "a126412790eefaa7bddac3d1cb641185ce769086"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35414965833:1",
+          "recorded_at": "2026-09-19T02:13:06.721188+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35414965833",
+            "run_attempt": "1",
+            "source_sha": "f6fd4f9614d958536a3fc271ab5ed0577ba2b19b"
           },
           "signals": [
             "research_completed"
@@ -23339,6 +23339,14 @@
           "type": "research",
           "canonical_id": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
           "title": "PLA-Serve: A Prefill-Length-Aware LLM Serving System",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7623de796f4f2b46",
+          "type": "research",
+          "canonical_id": "arXiv:2504.11816",
+          "title": "Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading",
           "from": "ready",
           "to": "completed"
         }
