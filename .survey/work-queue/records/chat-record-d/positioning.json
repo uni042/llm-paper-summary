@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0083927c844f95c6af151465",
-  "job_id": "job-research-e8f755e1fee9cc18",
-  "data": {
-    "limitations": "最大の制約はCAIS対応GPU/NVSwitch実機ではなくサイクル精密シミュレータ上の評価であること。NVLS部分は実機NCCL AllReduceと照合して平均誤差3.87%まで検証しているが、新規CAIS命令、マージユニット、TB群同期、グラフ最適化の実装コストやタイミングは実シリコンで未検証である。シミュレーション時間のためモデル行列次元とSM数を50%へ縮小しており、フルサイズLLMのキャッシュ圧力や実ランタイム挙動を完全には再現しない。推論は通信負荷の高いプリフィル中心で、デコードや動的バッチ、複数ノードを跨ぐネットワークは主要対象外。方式はNVLink/NVSwitch型の密結合GPU基盤へ強く依存し、Ethernet/InfiniBand主体のクラスタへそのまま適用できるとは限らない。",
-    "differences": "NVLSはAllGatherやReduce-Scatterなど集合通信そのものをスイッチ内で高速化するが、計算カーネルのread/write要求とは独立で大域同期を残す。CoCoNetやFuseLibはソフトウェア融合・スケジューリングで通信と計算を重ね、T3はハードウェア支援で細粒度重畳するが、CAISはNVSwitch内の要求マージを計算カーネルのメモリ意味論へ直接接続する。T3-NVLSでもReduce-Scatter、LayerNorm、AllGather間の依存が粗く残るのに対し、CAISはTB粒度依存と非対称方向の通信を利用して後続GEMMまで重ねる。LADMのような局所性認識TB配置は主にGPU内／GPU間の遠隔アクセス量削減を狙うのに対し、CAISのTB協調は同一データへの要求時刻を揃えてスイッチ内マージ効率を上げる。",
-    "implementation_status": "HPCA 2026査読論文として公開済みで、同一内容のarXiv:2605.05628v1が公開されている。著者らはAccel-SimとBookSim2を拡張したサイクル精密シミュレータへCAISを実装し、H100/NVSwitch相当条件で評価している。論文本文および確認した一次公開ページでは公式コードリポジトリURLを確認できないため、公開実装の有無は未確認とする。",
-    "research_positioning": "LLM分散実行研究のうち、テンソル並列の通信最適化とスイッチ内計算の交差領域に位置する。従来の集合通信高速化を『通信を速くする』問題として扱うのではなく、GEMM等の計算カーネルが必要とする遠隔メモリアクセスへ集合通信機能を埋め込む点が特徴である。通信計算重畳、GPU相互接続、プログラマブル／専用スイッチ、コンパイラ協調スケジューリングを横断し、将来のNVSwitch系ファブリックを計算意味論まで認識する方向へ拡張する研究として重要である。"
-  },
+  "attempt_id": "attempt-ee58aa534ed82a58b5fa7386",
+  "job_id": "job-research-44bb3b5d160bad25",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0083927c844f95c6af151465",
+    "claim_id": "claim-ee58aa534ed82a58b5fa7386",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
