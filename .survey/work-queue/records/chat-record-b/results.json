@@ -2,61 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-19f5527d6ca7024729812f1a",
-  "job_id": "job-research-e279074fae9402fc",
-  "data": {
-    "overview": "温度0ではEAGLE-3はVicuna-13Bで5タスク平均5.51倍、Llama 3.1 8Bで4.44倍、Llama 3.3 70Bで4.12倍、DeepSeek-R1蒸留8Bで4.16倍の自己回帰比高速化を達成し、各モデルでEAGLE-2を20〜40%上回る。最大はVicuna-13B HumanEvalの6.47倍、平均受理長7.54。温度1でもVicuna平均4.65倍など優位を維持する。SGLangではH100・バッチ1で158.34から373.25トークン/秒へ増加し、バッチ64でも1.38倍のスループットを保つ。",
-    "key_results": [
-      {
-        "metric": "Vicuna-13B温度0平均高速化",
-        "value": "5.51倍、平均受理長6.62",
-        "baseline": "通常自己回帰1.0倍；EAGLE-2平均4.22倍",
-        "condition": "MT-Bench/HumanEval/GSM8K/Alpaca/CNN-DM",
-        "interpretation": "特徴制約除去と訓練時テスト、多層特徴融合でドラフト受理長が伸びる。"
-      },
-      {
-        "metric": "最大高速化",
-        "value": "6.47倍、平均受理長7.54",
-        "baseline": "通常自己回帰",
-        "condition": "Vicuna-13B、HumanEval、温度0",
-        "interpretation": "コード生成の固定的構造はドラフトしやすく長い連続受理を得る。"
-      },
-      {
-        "metric": "Llama 3.1 8B構成要素除去",
-        "value": "EAGLE-2 3.16倍→特徴制約除去3.82倍→多層融合4.40倍",
-        "baseline": "EAGLE-2",
-        "condition": "MT-Bench、温度0",
-        "interpretation": "二つの主要設計変更がそれぞれ独立に速度・受理長へ寄与する。"
-      },
-      {
-        "metric": "SGLangバッチ1スループット",
-        "value": "373.25 tokens/s",
-        "baseline": "SGLang通常158.34、EAGLE-2 244.10 tokens/s",
-        "condition": "1x H100、Llama 3.1 8B、MT-Bench",
-        "interpretation": "生産向け実装でもドラフト精度向上が実スループットへ反映される。"
-      },
-      {
-        "metric": "SGLang大バッチスループット",
-        "value": "バッチ64で1.38倍",
-        "baseline": "投機なしSGLang 1.0倍；EAGLE 0.99倍",
-        "condition": "1x H100、chain length 3、木なし",
-        "interpretation": "従来EAGLEが大バッチで計算余剰を失って逆効果になる条件でも利得が残る。"
-      },
-      {
-        "metric": "vLLM大バッチ",
-        "value": "バッチ2で1.75倍、24で1.42倍、56で1.01倍",
-        "baseline": "投機なしvLLM",
-        "condition": "Llama 3.1 8B、MT-Bench、chain length 2",
-        "interpretation": "バッチ増加で利得は縮むがEAGLEより高いバッチまで正の効果を維持する。"
-      }
-    ],
-    "negative_results": "投機的復号の一般的制約としてバッチが増えるほど対象モデル計算資源の余剰が減り利得は縮小する。vLLMではバッチ56で1.01倍まで低下する。405Bと671BはGPU制約で未評価。特徴回帰制約だけを外して訓練時テストを行わない場合、一段目受理率は上がるが二段目以降は自己生成入力と訓練分布のずれで受理率が大幅低下するため、単純な制約除去だけでは成立しない。",
-    "interpretation": "EAGLE-3の本質はドラフトモデルを対象モデルの最上層特徴模倣器として扱うのをやめ、多段トークン予測器として直接訓練する点にある。自己生成した内部表現を訓練時にも入力することで推論時分布へ合わせ、さらに複数層特徴を使うことで一段先専用の最上層表現から解放する。この表現自由度が追加データを受理率向上へ変換し、結果として検証1回あたりの受理トークン数を増やす。",
-    "quality_impact": "厳密な投機的サンプリング受理規則で対象モデルの確率分布を保存するため、生成品質は通常自己回帰と同一という前提の損失なし高速化。温度1でも同じ受理補正を使い、Medusa等の受理条件緩和方式とは区別される。"
-  },
+  "attempt_id": "attempt-1b0b6909960f493a2fbeb493",
+  "job_id": "job-research-b33b8317e97d5549",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-19f5527d6ca7024729812f1a",
-    "worker_id": "llm-research-survey-scheduled-chat",
+    "claim_id": "claim-1b0b6909960f493a2fbeb493",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

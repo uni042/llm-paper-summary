@@ -2,84 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-19f5527d6ca7024729812f1a",
-  "job_id": "job-research-e279074fae9402fc",
-  "data": {
-    "canonical_id": "arXiv:2503.01840",
-    "arxiv_id": "2503.01840",
-    "doi": "10.48550/arXiv.2503.01840",
-    "openreview_id": null,
-    "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
-    "summary": "EAGLE-3は、投機的復号のドラフトモデルを特徴予測から直接トークン予測へ変更し、訓練時に自己生成した中間表現を次段入力へ戻す訓練時テストで多段予測時の分布ずれへ適応させる手法である。EAGLE/EAGLE-2が対象モデル最上層特徴の次特徴を回帰する制約を持つため訓練データを増やしても改善が飽和する問題を解き、低・中・高層特徴を融合してより豊かな対象モデル情報を再利用する。EAGLE-2の動的ドラフト木と厳密な投機的サンプリング検証を維持し、Vicuna、Llama 3.1/3.3、DeepSeek-R1蒸留モデルで自己回帰比最大約6.5倍、EAGLE-2比20〜40%の改善を示す。SGLangではH100・バッチ64でも1.38倍のスループットを達成する。",
-    "list_summary": "特徴回帰制約を外して直接トークン予測し、訓練時に自己生成入力を再投入することでドラフト学習のデータ規模拡大を有効化したEAGLE系投機的復号。",
-    "authors": [
-      "Yuhui Li",
-      "Fangyun Wei",
-      "Chao Zhang",
-      "Hongyang Zhang"
-    ],
-    "published": "2025-03-03",
-    "publication": "arXiv preprint",
-    "publication_type": "Preprint",
-    "publication_status": "arXiv preprint",
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "lineage": "投機的復号 / EAGLE",
-    "topics": [
-      "投機的復号",
-      "ドラフトモデル",
-      "訓練時テスト",
-      "多層特徴融合",
-      "SGLang",
-      "vLLM"
-    ],
-    "importance": "EAGLEの特徴回帰制約を除去してドラフト学習に明確なデータ規模拡大則を生み、単一要求の遅延だけでなくSGLang/vLLMの大バッチでもスループット向上を示した主要な投機的復号手法。",
-    "hardware_evaluation": "主要な手法比較は複数対象モデルで実施。SGLang v0.4.4評価は単一H100、Llama 3.1 Instruct 8B、MT-Bench、バッチ2〜64。vLLM評価はLlama 3.1 Instruct 8B、MT-Benchでバッチ2〜56。",
-    "quality_effect": "対象モデル重みを変更せず、厳密な投機的サンプリング受理規則を使うため生成分布は通常自己回帰復号と一致する損失なし高速化として評価し、品質指標は別途測らない。",
-    "source": "https://arxiv.org/abs/2503.01840",
-    "sources": [
-      "https://arxiv.org/abs/2503.01840",
-      "https://arxiv.org/html/2503.01840",
-      "https://github.com/SafeAILab/EAGLE"
-    ],
-    "implementation": "SafeAILab/EAGLEでコード公開。EAGLE-2の動的ドラフト木と互換で、SGLangおよびvLLM統合評価を実施。",
-    "code": "https://github.com/SafeAILab/EAGLE",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.10774",
-        "arxiv_id": "2401.10774"
-      },
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "arxiv_id": "2302.01318"
-      },
-      {
-        "canonical_id": "arXiv:2402.05109",
-        "arxiv_id": "2402.05109"
-      },
-      {
-        "canonical_id": "arXiv:2402.02057",
-        "arxiv_id": "2402.02057"
-      },
-      {
-        "canonical_id": "arXiv:2407.21783",
-        "arxiv_id": "2407.21783"
-      },
-      {
-        "canonical_id": "arXiv:2501.12948",
-        "arxiv_id": "2501.12948"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 39
-  },
+  "attempt_id": "attempt-1b0b6909960f493a2fbeb493",
+  "job_id": "job-research-b33b8317e97d5549",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-19f5527d6ca7024729812f1a",
-    "worker_id": "llm-research-survey-scheduled-chat",
+    "claim_id": "claim-1b0b6909960f493a2fbeb493",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

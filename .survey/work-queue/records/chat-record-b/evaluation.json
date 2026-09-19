@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-19f5527d6ca7024729812f1a",
-  "job_id": "job-research-e279074fae9402fc",
-  "data": {
-    "hardware": "対象モデルはVicuna-13B、Llama 3.1 Instruct 8B、Llama 3.3 Instruct 70B、DeepSeek-R1-Distill-Llama 8B。GPU制約により405B・671Bは未評価。SGLang v0.4.4の生産系評価は単一H100、Llama 3.1 8B。vLLM大バッチ評価は同8Bモデルで実施。",
-    "software": "SafeAILab/EAGLE実装。EAGLE-2の動的ドラフト木と互換。比較対象は通常自己回帰、標準投機的サンプリング、PLD、Medusa、Lookahead、Hydra、HASS、EAGLE、EAGLE-2。SGLang v0.4.4とvLLMへ統合してスループットも評価。",
-    "methodology": "MT-Bench、HumanEval、GSM8K、Alpaca、CNN/DailyMailの5タスクを同一ドラフト重みで評価し、温度0と1を測る。速度倍率は通常自己回帰を1.0とし、平均受理長τとn段自己予測入力時の受理率も測定。ドラフト訓練はShareGPT約68K、UltraChat-200K約464Kを使い、対象モデル自身に応答を生成させる。DeepSeek-R1蒸留8BではOpenThoughts-114k-mathも追加。AdamW、β=(0.9,0.95)、学習率5e-5、勾配クリップ0.5。SGLangでは木を使わずchain length 3、バッチ2〜64、vLLMではchain length 2、バッチ2〜56でMT-Benchを評価。",
-    "scope": "対象モデルの厳密検証を使う損失なし投機的復号であり、品質向上ではなく受理率・遅延・スループットを対象とする。ドラフトモデルを対象モデルごとに訓練する必要があり、学習データ拡大が前提。大規模405B/671Bは未評価で、SGLang/vLLMの大バッチ評価では完全な動的ドラフト木を使わない簡略条件も含む。"
-  },
+  "attempt_id": "attempt-1b0b6909960f493a2fbeb493",
+  "job_id": "job-research-b33b8317e97d5549",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-19f5527d6ca7024729812f1a",
-    "worker_id": "llm-research-survey-scheduled-chat",
+    "claim_id": "claim-1b0b6909960f493a2fbeb493",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
