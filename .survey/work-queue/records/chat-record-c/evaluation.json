@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3f055771f7f9d3ba6c79aa24","job_id":"job-research-883cceac74650e2e","data":{"hardware":"68M-Llamaドラフトモデルと7B-Llama検証モデルを別々のNVIDIA A800 80GB GPUへ配置したハードウェア組込み評価。","software":"語彙サイズ3.2万。大型モデルは温度0の貪欲生成と温度1の確率生成を評価し、小型モデルは温度1の上位K標本化を使用する。","methodology":"Kを3、32、320、3200、32000と変え、ドラフト分布と大型モデル分布の重なりから受理率を測る。通信はFP16ロジットを50 Mbpsで送るモデルとし、全語彙送信時の通信時間比b約0.07、小型モデル計算時間比c約0.23を推定する。受理率αと合計費用L=b+cを変えた数値解析で高速化率と最適ドラフト長の理論式を検証し、K変更による通信費・受理率・最適長の連動を評価する。","scope":"実ネットワーク上のエンドツーエンド配備ではなく、A800上の実モデル実行と50 Mbps通信モデルを組み合わせたハードウェア組込みシミュレーションである。下り通信量を無視できるとし、端末と基地局が同じ語彙を共有する前提。受理率推定と通信速度が変動する実運用での追随費用は未評価。"},"reservation":{"claim_id":"claim-3f055771f7f9d3ba6c79aa24","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-86ffe82b1cb0e347b528f5b0",
+  "job_id": "job-research-883cceac74650e2e",
+  "data": {
+    "hardware": "68M-Llamaドラフトモデルと7B-Llama検証モデルを別々のNVIDIA A800 80GB GPUへ配置したハードウェア組込み評価。",
+    "software": "語彙サイズ3.2万。大型モデルは温度0の貪欲生成と温度1の確率生成を評価し、小型モデルは温度1の上位K標本化を使用する。",
+    "methodology": "Kを3、32、320、3200、32000と変え、ドラフト分布と大型モデル分布の重なりから受理率を測る。通信はFP16ロジットを50 Mbpsで送るモデルとし、全語彙送信時の通信時間比b約0.07、小型モデル計算時間比c約0.23を推定する。受理率αと合計費用L=b+cを変えた数値解析で高速化率と最適ドラフト長の理論式を検証し、K変更による通信費・受理率・最適長の連動を評価する。",
+    "scope": "実ネットワーク上のエンドツーエンド配備ではなく、A800上の実モデル実行と50 Mbps通信モデルを組み合わせたハードウェア組込みシミュレーションである。下り通信量を無視できるとし、端末と基地局が同じ語彙を共有する前提。受理率推定と通信速度が変動する実運用での追随費用は未評価。"
+  },
+  "reservation": {
+    "claim_id": "claim-86ffe82b1cb0e347b528f5b0",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
+}
