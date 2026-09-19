@@ -61,7 +61,7 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
                     "schema_version": 1,
                     "operation": "precheck_discovery_candidates",
                     "request_id": "req-1",
-                    "run_key": "2026-09-20T00:00:00+09:00",
+                    "run_key": "2026-09-20T01:00:00+09:00",
                     "axis": "memory",
                     "records": [
                         {"canonical_id": "arXiv:2609.00001", "title": "Known"},
@@ -121,7 +121,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         self.tmp.cleanup()
 
     @staticmethod
-    def _sub(run_key: str = "2026-09-20T00:00:00+09:00") -> dict:
+    def _sub(run_key: str = "2026-09-20T01:00:00+09:00") -> dict:
         return {
             "operation": "submit_discovery_round",
             "candidates": [{"canonical_id": "arXiv:2609.99999", "title": "New"}],
@@ -141,7 +141,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
                     "operation": "precheck_discovery_candidates",
                     "ok": True,
                     "request_id": "req-1",
-                    "run_key": "2026-09-20T00:00:00+09:00",
+                    "run_key": "2026-09-20T01:00:00+09:00",
                     "axis": "memory",
                     "snapshot_source_commit": "abc123",
                     "allowed_records": [
