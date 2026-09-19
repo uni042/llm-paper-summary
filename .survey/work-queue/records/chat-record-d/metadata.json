@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e8ec2848c993c87c9d340e2f",
-  "job_id": "job-research-0e6ed88f587a40d2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e8ec2848c993c87c9d340e2f",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e8ec2848c993c87c9d340e2f","job_id":"job-research-0e6ed88f587a40d2","data":{"canonical_id":"arXiv:2402.01528","arxiv_id":"2402.01528","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.CL"]},"title":"Decoding Speculative Decoding","summary":"投機的デコードでは小さなドラフトモデルが候補トークンを逐次生成し、大きな対象モデルがまとめて検証するため、候補受理数だけでなくドラフト生成遅延が全体スループットを左右する。本論文は350件超の実験から、言語課題の精度は受理トークン数と強く相関せず、同じ規模なら層数がドラフト遅延を強く支配することを示す。その知見に基づき、既存モデルより浅く広い構成を構造化枝刈りで作り、対象モデルとの出力整合を保ちながら投機的デコード向けのハードウェア効率を高める。","list_summary":"350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。","authors":["Minghao Yan","Saurabh Agarwal","Shivaram Venkataraman"],"authors_affiliations":"University of Wisconsin-Madison","published":"2024-02-02","publication":"NAACL 2025","publication_type":"Conference paper","publication_status":"Published","lineage":"speculative decoding / draft-model design","topics":["speculative decoding","draft model","LLM inference","structured pruning"],"importance":"ドラフトモデル選択を言語精度中心から実測遅延と層深度中心へ転換する実証研究。","hardware_evaluation":"4台のNVIDIA A100 80GBで主評価。","quality_effect":"対象モデルによる通常の投機的検証を維持するため、受理された出力の品質を対象モデルから変えない。","source":"https://arxiv.org/abs/2402.01528","sources":["https://arxiv.org/abs/2402.01528","https://arxiv.org/pdf/2402.01528"],"code":null,"implementation":"Microsoft DeepSpeed上に投機的デコードを実装し、Sheared-LLaMAの構造化枝刈りを用いて浅く広いドラフトモデルを生成。論文本文から公式実装URLは確認できない。","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-e8ec2848c993c87c9d340e2f","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
