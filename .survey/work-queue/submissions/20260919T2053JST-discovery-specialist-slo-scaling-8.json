@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.13499",
+      "title": "OpScale: Operator-level Provisioning and Autoscaling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.13499",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13499-opscale-operator-level-autoscaling.md",
+      "priority": 88,
+      "reason": "model全体ではなくoperatorをscaling unitとし、profiling・provisioning・placement・runtime servingをoperator granularityで統合。production traceを用いた最大40 A100/24 GB200評価でSLOを満たしつつGPU 36.3%削減・power 28%削減、固定costでthroughput 44%改善を示す実装研究。"
+    },
+    {
+      "canonical_id": "arXiv:2601.10729",
+      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "source_url": "https://arxiv.org/abs/2601.10729",
+      "paper_path": "papers/inference/04-kv-cache/2026-2601.10729-orbitflow-fine-grained-kv-reconfiguration.md",
+      "priority": 86,
+      "reason": "long-context servingでrequest/layer単位にGPU保持KVをILPで選び、runtime feedbackでplacementを再構成するadaptive offload system。TPOT/TBT SLO attainmentを最大66%/48%改善、p95 latency 38%削減、throughput最大3.3倍を報告し、静的offloadとの差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2504.08784",
+      "title": "SLOs-Serve: Optimized Serving of Multi-SLO LLMs",
+      "source_url": "https://arxiv.org/abs/2504.08784",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.08784-slos-serve-multi-slo-serving.md",
+      "priority": 81,
+      "reason": "application/stage別SLOに対しchunked prefillとoptional speculative decodingのtoken allocationをdynamic programmingで連続最適化し、multi-replica routingまで統合。6 application scenarioでper-GPU serving capacity平均2.2倍を示す。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-slo-scaling-8",
+    "axis": "operator-level autoscaling・SLO-aware KV reconfiguration・multi-SLO token allocation",
+    "query_summary": "mobile runtimeからcloud capacity/SLO制御へ切替。autoscaling、long-context KV reconfiguration、multi-SLO schedulingを探索し、default branch canonical ID検索で未収録の3件を送信した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2606.22013"],
+    "next_axis_hint": "次はreasoning/long-output serving、elastic batching、early exit・adaptive compute servingへ移る",
+    "empty_round_reason": null
+  }
+}
