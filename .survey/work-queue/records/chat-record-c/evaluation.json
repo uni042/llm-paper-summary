@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-6c0676d0cc5caf5a13ce6002",
-  "job_id": "job-research-0023a21511f803e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c0676d0cc5caf5a13ce6002",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"hardware":"1 nodeにNVIDIA A100 40GBを2基、同一PCIe Gen3 bridgeで接続。CPUはIntel Xeon E5-2697 v4 18-core 2.3/3.6GHz、DDR4 1TB、Samsung NVMe SSD 3.2TB。A100周波数範囲0.21〜1.41GHz。colocation/disaggregationとも2 GPUを使用して資源量を揃える。","software":"vLLM V1を各GPUの推論engineとし、LMCacheConnectorV1でKV transferを構成。GPU P2PはNVIDIA NIXLのcuda_ipc、CPU offloadは125GB DRAM＋Redis lookup、disk offloadは125GB NVMe＋fs_connectorで実装する。電力計測はpynvml/NVML、Intel RAPL、IPMI。","methodology":"Llama-3.2-3B、RandomDataset、input 16,384 tokens/output 256 tokens、infinite request rateを使用。Experiment 1はbatch 2〜64、KV総量3.5〜112GBでco-2gpus/dis-gpu/dis-cpu/dis-diskを比較し、median TTFT/TPOT、prefill/decode throughput、joule/tokenとhardware別energyを測る。Experiment 2はbatch 16でGPU frequencyを0.36〜1.26GHzへ掃引し、各構成のTTFT-energy/TPOT-energy Pareto frontierを構築する。","scope":"単一node、2×A100 40GB、PCIe Gen3、3Bモデル、固定16K input/256 outputのsynthetic workloadに限定される。NVLink/InfiniBand/RDMAの実測やmulti-node routing、実traceのarrival process、prefix reuse率の変動、より大規模model/MoE、最新GPUでの結果は含まれない。dis-diskがdis-cpuよりTPOTで速い予想外の現象は著者自身が未解明としている。"},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
