@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:38:06 JST**
+> 自動生成: **2026-09-19 22:38:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 22:37:55 JST（11秒前）** |
+| 最終検証済みResearch収録 | **09-19 22:37:55 JST（1分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **87** | **20** | **20** | **0** | **1** | **0** | **30** |
+| 合計 | **87** | **21** | **20** | **0** | **1** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
   - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
   - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
@@ -162,6 +162,8 @@
   - result: `.survey/work-queue/results/research/attempt-3aa111fe2ce9b9bc130ae594.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3aa111fe2ce9b9bc130ae594.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2507.07400-kvflow.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-42614834081dae5484b02f8c.json` (job `job-research-9c4412ae5a3ea169`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-42614834081dae5484b02f8c.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -270,8 +272,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **626** |
-| └ Research | **479** |
+| 成功result未照合のimmutable submission | **627** |
+| └ Research | **480** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
