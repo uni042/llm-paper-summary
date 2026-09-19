@@ -1,49 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T12:03:00+00:00",
+  "updated_at": "2026-09-19T12:03:30+00:00",
   "last_run_key": "2026-09-19T21:00:00+09:00",
-  "last_round": "specialist-runtime-hardware-2",
+  "last_round": "specialist-sparse-kv-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-mimo-production-24",
-      "axis": "Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling",
-      "query_summary": "production-scale distributed cache infrastructureを探索し、MiMo-V2.5 full-pipeline serving（2607.13095）を一次arXiv本文で軽量評価した。競合後に最新HEAD・queue・repo検索を再取得し、同IDの既収録なし、research ready 44でoverflow条件未満、新discovery job job-1ebd066dfd741cf5を確認して再送した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。",
-      "source_submission": "work-queue/submissions/20260915T0844JST-discovery-specialist-mimo-production-24.json"
-    },
-    {
-      "run_key": "2026-09-15T09:00:00+09:00",
-      "round": "specialist-adaptive-kv-1",
-      "axis": "新着KV圧縮・制約適応runtime policy",
-      "query_summary": "直近arXivのLLM serving/KV cache/MoE inferenceを横断検索し、MetaKV、既収録のTutti・Robust KV、既知のSPICE等を軽量評価した。MetaKVはarXiv IDと題名で最新default branchを再検索し未収録を確認したため1件のみ投入する。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.03375",
-        "arXiv:2607.16892",
-        "arXiv:2608.21240"
-      ],
-      "next_axis_hint": "2609新着の分離サービング・GPU runtime・通信最適化、または重要serving論文のforward citationへ軸を移す",
-      "source_submission": "work-queue/submissions/20260915T0903JST-discovery-specialist-adaptive-kv-1.json"
-    },
     {
       "run_key": "2026-09-15T10:00:00+09:00",
       "round": "specialist-serving-restoration-1",
@@ -7322,6 +7288,49 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は2026年9月のagent serving runtime、disaggregated P/D network scheduling、またはGPU kernel/graph executionの新着へ移る。",
       "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-runtime-hardware-2.json"
+    },
+    {
+      "run_key": "2026-09-19T21:00:00+09:00",
+      "round": "specialist-cxl-expert-replication-6",
+      "axis": "CXL near-data processing・MoE predictive expert replication",
+      "query_summary": "CXL memory bandwidth増幅とexpert migration/prefetch近傍へ探索を展開。2件を一次arXiv情報で評価し、最新default branch repository searchでID未収録を確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2509.03377",
+        "arXiv:2605.11537"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はKV圧縮・sparse attention、multi-model serving、またはGPU power/thermal schedulingへ移る。",
+      "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-cxl-expert-replication-6.json"
+    },
+    {
+      "run_key": "2026-09-19T21:00:00+09:00",
+      "round": "specialist-sparse-kv-7",
+      "axis": "retrieval sparse attention・hierarchical KV memory・segment-level KV reuse",
+      "query_summary": "KV圧縮/sparse attentionへ軸を変更し、PNM異種serving、HBM-CPU階層KV、segment-level reuseの3件を一次arXiv情報で評価。最新default branch repository searchで各ID未収録を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2608.03555",
+        "arXiv:2604.26837",
+        "arXiv:2606.01751"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はmulti-model serving、GPU power/thermal、またはbatching/fairnessへ移る。",
+      "source_submission": "work-queue/submissions/20260919T2100JST-discovery-specialist-sparse-kv-7.json"
     }
   ],
   "axes": {
@@ -13533,6 +13542,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.5,
       "next_axis_hint": "次は2026年9月のagent serving runtime、disaggregated P/D network scheduling、またはGPU kernel/graph executionの新着へ移る。"
+    },
+    "CXL near-data processing・MoE predictive expert replication": {
+      "last_run_key": "2026-09-19T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はKV圧縮・sparse attention、multi-model serving、またはGPU power/thermal schedulingへ移る。"
+    },
+    "retrieval sparse attention・hierarchical KV memory・segment-level KV reuse": {
+      "last_run_key": "2026-09-19T21:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はmulti-model serving、GPU power/thermal、またはbatching/fairnessへ移る。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
