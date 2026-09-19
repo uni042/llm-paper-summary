@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:51:47 JST**
+> 自動生成: **2026-09-20 01:51:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
+| 収録候補論文 | **46** |
 | 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-20 01:42:00 JST（9分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（4秒前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **46** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **46** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **14** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **67** | **6** | **5** | **1** | **1** | **0** | **0** |
+| 合計 | **68** | **6** | **6** | **0** | **0** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 01:51:54 JST** [research] `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor
+  - job: `.survey/work-queue/jobs/job-research-153b45adc3c50a28.json`
+  - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f61b26d21a391bc924304828.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md`
 - **09-20 01:42:00 JST** [research] `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
   - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-e7ba10673d975ae5c16659a8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e7ba10673d975ae5c16659a8.json`
   - paper: `papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md`
-- **09-19 21:48:34 JST** [research] `arXiv:2509.04576` — Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-883cceac74650e2e.json`
-  - result: `.survey/work-queue/results/research/attempt-86ffe82b1cb0e347b528f5b0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-86ffe82b1cb0e347b528f5b0.json`
-  - paper: `papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md`
 
 ### Audit
 
@@ -151,13 +151,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
   - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f61b26d21a391bc924304828.json` (job `job-research-153b45adc3c50a28`)
+- **成功** `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor
+  - job: `.survey/work-queue/jobs/job-research-153b45adc3c50a28.json`
+  - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f61b26d21a391bc924304828.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md`
 
 #### Audit (:30)
 
@@ -191,10 +195,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:50:30 JST** / heartbeat: **—** / lease expiry: **09-20 03:20:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-153b45adc3c50a28.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -214,7 +216,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **46** |
 
 ### 候補の重複・識別情報欠損
 
@@ -234,7 +236,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **772** |
+| inference/training/survey配下の論文Markdown実体 | **773** |
 
 ### immutable submissionの未照合
 
@@ -242,8 +244,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **641** |
-| └ Research | **492** |
+| 成功result未照合のimmutable submission | **640** |
+| └ Research | **491** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **2** |

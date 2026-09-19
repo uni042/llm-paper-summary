@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T16:42:06.033011+00:00",
+  "updated_at": "2026-09-19T16:51:58.469156+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T16:42:06.033011+00:00",
+      "last_recorded_at": "2026-09-19T16:51:58.469156+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 308,
+        "research_completed": 309,
         "audit_completed": 0,
         "discovery_completed": 192,
         "blocked": 40,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35394650087:1",
-          "recorded_at": "2026-09-18T21:06:41.620595+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35394650087",
-            "run_attempt": "1",
-            "source_sha": "95a8a7ff602bad9511e230e81138349f888301b6"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35400090659:1",
           "recorded_at": "2026-09-18T22:07:38.165843+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35455750706",
             "run_attempt": "1",
             "source_sha": "693f981c232a90e73e84e158c82275bc9844cd45"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35456280821:1",
+          "recorded_at": "2026-09-19T16:51:58.469156+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35456280821",
+            "run_attempt": "1",
+            "source_sha": "32ac715018c3cb9c6d91619ec423af304a34f22b"
           },
           "signals": [
             "research_completed"
@@ -23918,6 +23918,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.18655",
           "title": "Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-153b45adc3c50a28",
+          "type": "research",
+          "canonical_id": "arXiv:2505.09142",
+          "title": "ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor",
           "from": "ready",
           "to": "completed"
         }
