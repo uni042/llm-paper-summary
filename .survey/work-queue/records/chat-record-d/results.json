@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e8ec2848c993c87c9d340e2f",
-  "job_id": "job-research-0e6ed88f587a40d2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e8ec2848c993c87c9d340e2f",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e8ec2848c993c87c9d340e2f","job_id":"job-research-0e6ed88f587a40d2","data":{"overview":"主要な結果は、ドラフトの言語課題精度より自己回帰遅延が投機的デコードの実効性能を強く支配し、その遅延は同規模モデルでも層深度に大きく依存するという点である。浅く広いNoFT-Wide-796Mは既存Sheared-LLaMA-1.3Bに対し温度付き生成で97.7〜111.8%高いスループットを示し、5層未満まで削ると受理数低下が遅延利得を上回るため性能が再び落ちる。","key_results":[{"metric":"投機的デコード・スループット","value":"97.7〜111.8%向上","baseline":"Sheared-LLaMA-1.3B","condition":"NoFT-Wide-796M、温度0.5または1.0、MMLU/HellaSwag/Chatbot Arena","interpretation":"高精度な大型ドラフトより、浅く低遅延な専用ドラフトの方が候補生成時間を大幅に短縮できる。"},{"metric":"同規模構成のドラフト遅延","value":"13.13ms→6.69ms","baseline":"NoFT-1.3B","condition":"NoFT-Wide-1.3Bとの比較。TARは3.81→3.70","interpretation":"受理数をほぼ維持したまま層を浅く幅を広げることで自己回帰遅延を約半減し、23.10→32.59 tokens/sへ向上する。"},{"metric":"自己投機的デコード比較","value":"最大53%高スループット","baseline":"self-speculative decoding","condition":"LLaMA-2-70B、CNNDM/XSum比較","interpretation":"対象モデルの多数層を部分実行する方式より、5層の独立ドラフトの方が候補生成経路を短くできる。"},{"metric":"KVキャッシュ量","value":"37%削減","baseline":"従来ドラフト設計","condition":"論文で設計ドラフトの副次効果として報告","interpretation":"浅いドラフトはドラフト側KV保持量も減らし、より大きなバッチ量を許容する。"}],"negative_results":"ドラフトを5層未満へさらに浅くすると対象モデルとの出力整合が急に低下し、受理トークン数の損失が遅延短縮を上回ってスループットが低下する。新しい負荷で1.3Bドラフトが125Mより受理数を2以上多く稼げる場合には大きいドラフトが逆転し得る。またA100以外で層深度と幅の遅延比が変われば最適構成も変わる。","interpretation":"投機的デコードの反復では対象モデルが候補列を並列検証するのに対し、ドラフトは候補を逐次生成する。この非対称性により、ドラフトの一段階遅延を減らす効果が大きい。言語課題精度の差はすべてのトークン一致へ直結しないため、精度向上のためにモデルを深くしても受理数増加が遅延増加を補えない場合が多い。","quality_impact":"対象モデルが候補を通常の投機的検証規則で受理・拒否するため、最終生成分布を対象モデルから近似的に変更しない無損失高速化である。"},"reservation":{"claim_id":"claim-e8ec2848c993c87c9d340e2f","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
