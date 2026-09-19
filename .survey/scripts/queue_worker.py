@@ -36,7 +36,8 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
-DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")\nDISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
+DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")
+DISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
