@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6c0676d0cc5caf5a13ce6002",
-  "job_id": "job-research-0023a21511f803e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c0676d0cc5caf5a13ce6002",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"key_results":["同じ2 GPU資源で比較すると、batch 2〜64の全条件でco-2gpusがmedian TTFT最良だった。分離構成では1台のprefill GPUが全batchを処理するため、prefill/decode干渉除去の利点よりGPU当たり要求数増加が支配した。","co-2gpusはbatch sizeが32を超えるとTPOTが急増した。各GPUのKV割当28GBを超えてKV evictionと再計算が発生するためで、大batchでは分離構成がdecode latencyで優位になり得る。","分離構成のTTFT/throughput/energyはGPU P2Pのdis-gpuが最良で、CPU DRAM、NVMeと深いtierほど概ね悪化した。非GPU階層を触るほどCPU/DRAM/disk由来energyも増えた。","batch=16で0.36〜1.26GHzを掃引すると多くのlatency-energy frontierはU字型となり、約0.81GHz付近以降では周波数増加によるlatency改善が小さくpower増が支配した。","段階別に周波数を独立設定できても、評価した全KV転送経路でdisaggregated構成はcolocated基準よりenergy消費を下回らなかった。一方dis-gpuとdis-diskはTPOTではcolocationより良い領域があり、厳しいTPOT SLOでは高energyとの交換で選択肢になる。"],"quantitative_results":{"batch_range":"2-64 requests","input_output_tokens":"16,384 input / 256 output tokens per request","kv_cache_range":"3.5-112 GB total","colocated_kv_allocation":"28 GB per GPU","throughput_saturation":"disaggregated setups increase throughput up to batch 16 then plateau; co-2gpus drops around batch 32 due to KV capacity pressure","dvfs_range":"0.36-1.26 GHz sampled evenly on both GPUs","dvfs_marginal_threshold_example":"approximately 0.81 GHz"},"limitations":["単一ノード2×A100 40GB、PCIe Gen3、Llama-3.2-3B、synthetic固定長workloadであり、multi-node/RDMA/NVLink、実トレース、大規模モデルやMoEへの一般化は未検証。","dis-diskがdis-cpuよりTPOTで高速という予想外の結果は論文時点で原因未解明。","評価は性能・energyであり、出力品質や実アプリケーションQoEの包括評価は行わない。"],"implementation_status":"vLLM V1 + LMCacheConnectorV1を用いた実測ベンチマーク。GPU P2PはNIXL/cuda_ipc、CPU経路はDRAM+Redis、disk経路はNVMe+fs_connector。独自コード公開URLは一次資料で確認できない。","evidence":["https://arxiv.org/html/2601.08833v1#S5.SS1","https://arxiv.org/html/2601.08833v1#S5.SS2"]},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
