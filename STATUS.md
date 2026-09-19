@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:33:03 JST**
+> 自動生成: **2026-09-19 18:33:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（6時間59分前）** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（7時間0分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -164,7 +164,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2602.06072` — PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:30:10 JST** / heartbeat: **—** / lease expiry: **09-19 20:00:10 JST**
+  - claim: **09-19 18:33:10 JST** / heartbeat: **—** / lease expiry: **09-19 20:03:10 JST**
   - evidence: `.survey/work-queue/claims/job-research-c7f741bd6a7395ee.json`
 
 #### Audit
@@ -213,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **609** |
-| └ Research | **462** |
+| 成功result未照合のimmutable submission | **610** |
+| └ Research | **463** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
