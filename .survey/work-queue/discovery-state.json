@@ -1,54 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T10:00:28+00:00",
+  "updated_at": "2026-09-19T10:01:11+00:00",
   "last_run_key": "2026-09-19T19:00:00+09:00",
-  "last_round": "specialist-elastic-kv-1",
+  "last_round": "specialist-nmp-memory-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T10:16:01+09:00",
-      "round": "specialist-runtime-communication-2",
-      "axis": "GPU実行環境・collective通信・prefill/decode共存",
-      "query_summary": "GPU runtime、collective communication、MoE rollout、長期運用の隣接軸を探索し、KVShareArena、HeadWiseKV、collective survey、SuperInfer、software agingは既存job/収録済みとして除外した。投入直前に最新mainとjob/コード検索でAInfer-PDの未登録を再確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.8333333333333334,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.10266",
-        "arXiv:2609.02029",
-        "arXiv:2608.15118",
-        "arXiv:2601.20309",
-        "arXiv:2606.11916"
-      ],
-      "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る",
-      "source_submission": "work-queue/submissions/20260913T1023JST-discovery-specialist-runtime-2.json"
-    },
-    {
-      "run_key": "2026-09-13T10:16:01+09:00",
-      "round": "specialist-edge-memory-3",
-      "axis": "端末内LLM・OSメモリ圧力・Flash/NPU実行",
-      "query_summary": "モバイル端末のOSメモリ圧力、Flashコールドスタート、NPU実行、CPU-GPU/NPU協調を探索した。HybridGenとATSInferは既存job/収録済みとして除外し、4候補は最新HEAD上で決定論的job IDが未実体化であることを再確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 4,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.18529",
-        "arXiv:2607.10183"
-      ],
-      "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る",
-      "source_submission": "work-queue/submissions/20260913T1026JST-discovery-specialist-edge-memory-3.json"
-    },
     {
       "run_key": "2026-09-13T10:16:01+09:00",
       "round": "specialist-kv-compression-4",
@@ -7203,6 +7164,52 @@
       ],
       "next_axis_hint": "Move to GPU memory allocator / virtual-memory / paging work adjacent to serving, then recent scheduler-memory co-design rather than repeating heterogeneous KV tiering.",
       "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "round": "specialist-cxl-nmp-3",
+      "axis": "CXL memory pooling / photonic fabric / NMP for hybrid LLM inference",
+      "query_summary": "Expanded the NMP axis to recent CXL memory pooling and hybrid-model near-memory processing. MFS was recognized as an already-known networking result; NOVA and the Photonic-CXL appliance were not found by repository code search and have direct inference-system relevance.",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [
+        "arXiv:2608.22613",
+        "arXiv:2607.27187"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "Switch away from memory hardware to scheduler/resource allocation and distributed serving new work to keep search independence.",
+      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json"
+    },
+    {
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "round": "specialist-nmp-memory-2",
+      "axis": "near-memory processing / 3D DRAM / KV allocation co-design",
+      "query_summary": "Shifted from CUDA virtual-memory reclamation to adjacent memory-system hardware/software co-design. Existing SuperInfer and vAttention were treated as known/high-overlap; Helios arXiv:2603.04797 was not found by repository code search and has concrete system mechanisms and evaluation.",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2603.04797"
+      ],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.20309",
+        "arXiv:2405.04437"
+      ],
+      "next_axis_hint": "Search CXL/NMP/PIM memory-side execution and memory pooling papers, then switch to network/KV-transfer scheduling if overlap rises.",
+      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-nmp-memory-2.json"
     }
   ],
   "axes": {
@@ -12998,6 +13005,32 @@
       "duplicate_ratio": 0.75,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "Move to GPU memory allocator / virtual-memory / paging work adjacent to serving, then recent scheduler-memory co-design rather than repeating heterogeneous KV tiering."
+    },
+    "CXL memory pooling / photonic fabric / NMP for hybrid LLM inference": {
+      "last_run_key": "2026-09-19T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "Switch away from memory hardware to scheduler/resource allocation and distributed serving new work to keep search independence."
+    },
+    "near-memory processing / 3D DRAM / KV allocation co-design": {
+      "last_run_key": "2026-09-19T19:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Search CXL/NMP/PIM memory-side execution and memory pooling papers, then switch to network/KV-transfer scheduling if overlap rises."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

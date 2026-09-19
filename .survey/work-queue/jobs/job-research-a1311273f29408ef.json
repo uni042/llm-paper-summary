@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-a1311273f29408ef",
+  "type": "research",
+  "parent_job_id": "job-7181bafc0df2e4c1",
+  "priority": 76,
+  "canonical_id": "arXiv:2603.04797",
+  "title": "Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator",
+  "source_url": "https://arxiv.org/abs/2603.04797",
+  "paper_path": null,
+  "selection_reason": "Systems/hardware-software co-design for dynamic LLM serving on near-memory processing. It includes spatially aware KV allocation, distributed tiled attention, inter-PE communication primitives, and quantitative GPU/NMP comparisons, making it relevant to hierarchical memory and inference-system architecture.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T10:01:11+00:00"
+}
