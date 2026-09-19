@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-kernel-runtime-4",
+    "axis": "GPU kernel/runtime・quantized execution・CUDA graph",
+    "query_summary": "2026年のGPU kernel/runtime、量子化実行、CUDA Graph系を探索した。CoRunとFluxBinは正本側の既知Research候補、GPU INT8 KV量子化はシステム寄与が限定的、Hybrid JIT-CUDA Graphは単一7B・単一GPU中心で現時点の強候補基準を満たす確証が弱いため投入しなかった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2608.14376", "arXiv:2608.15602"],
+    "next_axis_hint": "collective communication・network runtime adaptation・interconnect schedulingへ移る",
+    "empty_round_reason": "未収録候補は確認できたが、今回の正本品質基準で強候補として耐久投入するには評価規模またはsystems寄与が不足した。"
+  }
+}
