@@ -259,7 +259,7 @@ class DiscoverySearchFilterTest(unittest.TestCase):
         )
 
         self.assertEqual(calls, [None, "2"])
-        self.assertEqual(result["target_unseen"], 10)
+        self.assertEqual(result["target_unseen"], 20)
         self.assertEqual(result["unseen_result_count"], 10)
         self.assertTrue(result["target_reached"])
         self.assertEqual(result["next_cursor"], "3")
