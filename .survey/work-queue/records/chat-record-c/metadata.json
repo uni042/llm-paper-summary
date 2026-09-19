@@ -9,53 +9,30 @@
     "arxiv_id": "2510.24051",
     "doi": "10.1145/3731569.3764814",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
     "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
-    "summary": "Pieは、従来の単一化されたprefill-decode生成ループをembed・forward・sample・KV操作などの細粒度サービスハンドラへ分解し、利用者提供のWebAssemblyプログラムであるinferletへ生成制御を委譲するプログラマブルLLMサービングシステムである。アプリケーションがKVキャッシュの割当・共有・マスク、独自デコード、外部I/Oを同じ制御フロー内で組み合わせられる一方、制御層がAPI呼び出しを水平・垂直バッチ化してGPU効率を維持する。NVIDIA L4上のLlama 3 1B/3B/8B評価では通常テキスト生成の遅延オーバーヘッドを3〜12%程度に抑え、エージェント型ワークフローや複雑な推論では1.1〜2.4倍低遅延、1.3〜3.4倍高スループットを報告する。",
-    "list_summary": "生成ループを細粒度APIへ分解し、Wasm inferletがKV・デコード・I/Oを直接制御しつつ適応バッチ処理でGPU効率を維持するプログラマブルLLMサービング基盤。",
-    "authors": [
-      "In Gim",
-      "Zhiyao Ma",
-      "Seung-seob Lee",
-      "Lin Zhong"
-    ],
+    "summary": "Pieは、従来の単一化された事前計算・復号生成ループを埋め込み、順伝播、標本化、KV操作などの細粒度サービス処理へ分解し、利用者提供のWebAssemblyプログラムであるinferletへ生成制御を委譲するプログラマブルLLMサービングシステムである。アプリケーションがKVキャッシュの割当・共有・マスク、独自復号、外部入出力を同じ制御フロー内で組み合わせられる一方、制御層がAPI呼び出しを水平・垂直に一括処理してGPU効率を維持する。NVIDIA L4上のLlama 3 1B/3B/8B評価では通常テキスト生成の遅延増加を3〜12%程度に抑え、エージェント型ワークフローや複雑な推論では1.1〜2.4倍の低遅延、1.3〜3.4倍の高スループットを報告する。",
+    "list_summary": "生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。",
+    "authors": ["In Gim", "Zhiyao Ma", "Seung-seob Lee", "Lin Zhong"],
     "authors_affiliations": "Yale University",
     "published": "2025-10-28",
     "publication": "SOSP 2025",
     "publication_type": "査読済み会議論文",
     "publication_status": "ACM SOSP 2025; arXiv v1",
     "lineage": "LLM serving / programmable inference / KV cache / agentic workflows",
-    "topics": [
-      "プログラマブル推論",
-      "LLMサービング",
-      "KVキャッシュ",
-      "エージェント型ワークフロー",
-      "WebAssembly",
-      "適応バッチ処理"
-    ],
-    "importance": "アプリケーション固有のKV管理・生成手順・外部I/Oをサービングシステム改造なしに要求単位で組み合わせるため、promptではなくprogramをサービス単位にする設計を実装・評価した。",
-    "implementation": "PieをWebAssembly inferlet runtime、中央制御層、GPU推論層の3層で実装。42 API（LLM実行・資源管理18、runtime/I/O等24）を公開し、公式コードを公開。",
+    "topics": ["プログラマブル推論", "LLMサービング", "KVキャッシュ", "エージェント型ワークフロー", "WebAssembly", "適応一括処理"],
+    "importance": "アプリケーション固有のKV管理・生成手順・外部入出力をサービングシステム改造なしに要求単位で組み合わせるため、プロンプトではなくプログラムをサービス単位にする設計を実装・評価した。",
+    "implementation": "PieをWebAssembly inferlet実行環境、中央制御層、GPU推論層の3層で実装。42個のAPI（LLM実行・資源管理18個、実行環境・入出力等24個）を公開し、公式コードも公開している。",
     "hardware_evaluation": "GCP g2-standard-32、NVIDIA L4 24GB。Llama 3 1B/3B/8BをBF16で評価。",
-    "quality_effect": "主眼はサービングの表現力と性能で、モデル重みや通常の生成意味論を変更しない。独自attentionやsamplingはinferlet側の選択により品質特性が変わり得る。",
+    "quality_effect": "主眼はサービングの表現力と性能で、モデル重みや通常の生成意味論を変更しない。独自注意機構や標本化をinferlet側で選択した場合の品質特性は、そのアプリケーション実装に依存する。",
     "source": "https://arxiv.org/abs/2510.24051",
-    "sources": [
-      "https://arxiv.org/abs/2510.24051",
-      "https://arxiv.org/html/2510.24051",
-      "https://doi.org/10.1145/3731569.3764814"
-    ],
+    "sources": ["https://arxiv.org/abs/2510.24051", "https://arxiv.org/html/2510.24051", "https://doi.org/10.1145/3731569.3764814"],
     "code": "https://github.com/pie-project/pie",
     "last_checked": "2026-09-19",
     "references": [],
     "references_checked_at": "2026-09-19",
     "references_source": "primary manuscript",
-    "references_total": null
+    "references_total": 82
   },
-  "reservation": {
-    "claim_id": "claim-3b62c6bd3d0c2191dd7cade2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-3b62c6bd3d0c2191dd7cade2", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
