@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.09472",
+      "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.09472",
+      "priority": 75,
+      "reason": "Multi-LLM serving system that uses workload predictability to prewarm multiple models on GPUs, targeting burst handling and TTFT while improving shared-cluster resource efficiency."
+    },
+    {
+      "canonical_id": "arXiv:2603.02599",
+      "title": "SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving",
+      "source_url": "https://arxiv.org/abs/2603.02599",
+      "priority": 76,
+      "reason": "Distinct multi-model serving design enabling shared decode execution via common frozen decode modules and model-agnostic routing; reports throughput-per-GPU gains and supports quantized shared decoding."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-multillm-18",
+    "axis": "multi-LLM prewarming / shared decode execution",
+    "query_summary": "Followed heterogeneous multi-model serving with two distinct resource-sharing mechanisms: predictive one-for-many prewarming and cross-model shared decode execution. Neither arXiv ID appeared in repository code search.",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2512.09472", "arXiv:2603.02599"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Move to distributed-network/storage or older important omission; broad multi-LLM serving now has substantial coverage this run."
+  }
+}
