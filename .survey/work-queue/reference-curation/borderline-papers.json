@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:18:00+00:00",
+  "updated_at": "2026-09-19T18:20:00+00:00",
   "record_count": 16,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -117,11 +117,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.48550/arxiv.2310.06825",
       "identity_tokens": [
-        "DOI:10.48550/arxiv.2310.06825"
+        "DOI:10.48550/arxiv.2310.06825",
+        "arXiv:2310.06825"
       ],
-      "reason": "Model report with inference-efficient GQA/SWA architecture, but not a focused systems paper; keep available for later reconsideration.",
+      "reason": "Model/architecture report with inference-efficient GQA/SWA, but not a focused systems paper for immediate Research.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "Mistral 7B"
     },
@@ -129,11 +130,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2001.08361",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2001.08361",
         "arXiv:2001.08361"
       ],
-      "reason": "Important training-efficiency background, but empirical scaling-law analysis rather than a training systems implementation.",
+      "reason": "Important training methodology background, but not primarily a training-system implementation or systems optimization paper.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "Scaling Laws for Neural Language Models"
     },
@@ -141,11 +143,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2508.10925",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.10925",
         "arXiv:2508.10925"
       ],
-      "reason": "Contains deployment-relevant architecture/quantization context, but is primarily a model card rather than a focused systems paper.",
+      "reason": "Model card with useful implementation context but insufficient standalone systems novelty for immediate Research.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "gpt-oss-120b & gpt-oss-20b Model Card"
     },
@@ -153,11 +156,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2407.10671",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.10671",
         "arXiv:2407.10671"
       ],
-      "reason": "Broad model technical report; systems-relevant background but lower priority than focused systems work.",
+      "reason": "Broad model technical report; useful background but lower systems-specific value than focused candidates.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "Qwen2 Technical Report"
     },
@@ -165,11 +169,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2401.06066",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.06066",
         "arXiv:2401.06066"
       ],
-      "reason": "Strong MoE architecture paper, but primarily model architecture rather than serving/offload/parallel-runtime systems; retain for optional reconsideration.",
+      "reason": "Focused MoE architecture/training contribution, but not primarily an inference/training systems implementation paper.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     },
@@ -177,11 +182,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2309.16609",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.16609",
         "arXiv:2309.16609"
       ],
-      "reason": "Broad model technical report rather than a focused inference/training system paper.",
+      "reason": "Broad model technical report rather than a focused systems contribution.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "Qwen Technical Report"
     },
@@ -189,11 +195,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2004.05150",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2004.05150",
         "arXiv:2004.05150"
       ],
-      "reason": "Efficient-attention architecture with historical relevance, but outside the focused LLM systems scope for immediate Research.",
+      "reason": "Influential efficient-attention architecture, but outside the focused modern LLM systems lane unless revisited explicitly.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
+      "last_checked_at": "2026-09-19T18:20:00+00:00",
       "linked_from": [],
       "title": "Longformer: The Long-Document Transformer"
     }
