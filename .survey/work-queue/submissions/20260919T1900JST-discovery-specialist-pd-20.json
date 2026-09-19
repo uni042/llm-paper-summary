@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.11822",
+      "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
+      "source_url": "https://arxiv.org/abs/2601.11822",
+      "priority": 74,
+      "reason": "Inference-serving work targeting the utilization/latency tradeoff between hybrid batching and conventional prefill/decode disaggregation through intra-GPU P/D disaggregation; directly relevant to serving scheduling and resource partitioning."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-pd-20",
+    "axis": "prefill/decode intra-GPU disaggregation",
+    "query_summary": "Used a distinct disaggregation result surfaced from the prior systems search. RAPID-Serve's arXiv identity was absent from repository code search and fits the P/D serving lineage.",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2601.11822"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Refresh canonical state and inspect materialization/dedupe; if external discovery remains available, move to distributed storage/networking or framework runtime."
+  }
+}
