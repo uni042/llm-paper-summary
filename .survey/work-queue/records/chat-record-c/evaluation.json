@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1a88ffa8349a43c660f5f730","job_id":"job-research-188f6649e816eaae","data":{"hardware":"最大16 GPUのクラスタで評価し、4 GPU・8 GPU構成でも比較する。論文はGPU間高速接続をテンソル並列配置制約として扱い、複数ノード・複数GPU分数の配置を評価する。","software":"約25K行のPython実装。Kubernetes上のオーケストレーション、変更device plugin、NVIDIA MPSによる空間共有を使用する。LLM実行エンジンとしてvLLM等を利用し、Aegaeon比較とAyo比較を実施する。","methodology":"RAG+reranker、ビーム探索、両者の複合という3種の現実的エージェントワークロードを用いる。代表実行をHTTPプロキシでトレースし、LLMごとに到着率とテンソル並列度を掃引してプロファイルを作る。評価では到着率を変えたスループット・平均遅延曲線、4/8 GPUでのAegaeon・Ayo比較、複数ワークフロー同時実行、集約パイプライン予測精度、探索時間とGPU分数粒度の拡張性を測る。","scope":"動的な複数LLMエージェント処理のクラスタ資源割り当てが対象で、単一LLMカーネルやKV管理そのものは既存実行エンジンへ委ねる。相対LLM需要が安定し、ツール実行時間がLLMに比べ小さいワークロードを主対象とする。異なるLLM間の同時ファンアウトや二峰性負荷、長時間ツールは議論で制約として明示される。"},"reservation":{"claim_id":"claim-1a88ffa8349a43c660f5f730","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-ff20bcaca705be66e1a1b76e",
+  "job_id": "job-research-b6a4fe55f122cf41",
+  "data": {
+    "hardware": "DGXサーバ1台。48コアCPU×2、メモリ2TB、NVIDIA H100×8を900GB/sの全結合NVLinkで接続。Llama-3.1 8BとQwen-2.5 14BはH100 1枚、Llama-3.1 70BはH100 4枚のテンソル並列で評価した。GPUの動的電圧周波数制御とPythonガベージコレクタは遅延揺らぎ低減のため無効化した。",
+    "software": "Ubuntu 22.04、CUDA 12.8、vLLM 0.8.4。全モデルFP16。比較対象はオンライン専用vLLM、オフライン完走を許す非プリエンプティブ方式、Sarathiのチャンクプリフィルを共同サービングへ拡張したSarathi-P、プリフィル・デコード分離型のDistServe-P。各比較対象もvLLM 0.8.4へ実装または移植し、チャンクプリフィルを有効化して調整した。",
+    "methodology": "オンライン実トレースにはBurstGPT、オフラインにはDuReader、MultiNews、VCSUMを用い、10分間の実負荷と混合・個別データセットを評価した。合成負荷はガンマ過程で生成し、要求率、SLOの厳しさ、入力・出力長、変動係数CVを変える。オンライン指標はP99 TTFTとP99 TBT、オフライン指標はプリフィル・デコードを含むtokens/s。さらに各機構をSarathi-Pへ順次追加するアブレーション、KV転送帯域・収集カーネル費用、安全点費用を単体測定した。",
+    "scope": "同一モデルをオンラインとオフライン推論で共有する共同サービングが中心で、オンラインSLOを維持しつつ遊休GPUを回収できるかを検証する。H100とLlama-3.1/Qwen-2.5、単一DGX内の1〜4 GPU構成での実機結果は強いが、異種GPU、複数ノード、低帯域CPU-GPU接続、異なる推論エンジン、MoEモデルへの一般化は直接評価されていない。"
+  },
+  "reservation": {
+    "claim_id": "claim-ff20bcaca705be66e1a1b76e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
