@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:41:08 JST**
+> 自動生成: **2026-09-19 18:41:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -173,7 +173,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2401.11240` — CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:38:51 JST** / heartbeat: **—** / lease expiry: **09-19 20:08:51 JST**
+  - claim: **09-19 18:41:15 JST** / heartbeat: **—** / lease expiry: **09-19 20:11:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-49ee16176ca66925.json`
 
 #### Audit
