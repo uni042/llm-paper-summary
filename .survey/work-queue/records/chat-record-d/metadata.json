@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
-  "job_id": "job-research-c26aa10b960d27a4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6ad53a550a3c7bedcb56aa8c","job_id":"job-research-c26aa10b960d27a4","data":{"canonical_id":"arXiv:2412.18934","arxiv_id":"2412.18934","doi":"10.48550/arXiv.2412.18934","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference","summary":"Dovetailは、GPUメモリが小さくCPUが相対的に強い旧型サーバや個人PCで、巨大モデルの層をPCIe越しに頻繁に入れ替える従来オフロードの通信費を避けるため、ターゲットモデルをCPU、ドラフトモデルをGPUへ置く異種投機的デコード方式である。CPUは候補トークンをまとめて検証し、GPUは小型ドラフトで次候補を作るため、CPU-GPU転送粒度をTransformer層からトークンへ縮小する。さらにCPU検証が遅い環境では候補数を減らし、その余裕でドラフトを深くして受理率を上げ、隠れ状態と埋込みを動的ゲート融合する。RTX 2080/3090やGTX 1050でLLaMA2-Chat/Vicunaを評価し、13BではCPU単独比最大10.14倍、7Bでは約3GB VRAMでも実用的な速度を示す。","list_summary":"ターゲットLLMをCPU、深くした小型ドラフトをGPUへ分離し、候補数削減・動的ゲート融合・複数Transformerブロックで低VRAM環境の投機的デコードを高速化する。","authors":["Libo Zhang","Zhaoning Zhang","Baizhou Xu","Rui Li","Zhiliang Tian","Songzhu Mei","Dongsheng Li"],"authors_affiliations":"National University of Defense Technology, Changsha, China","published":"2024-12-25","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v2, revised 2025-09-09","lineage":"speculative decoding / heterogeneous CPU-GPU inference / consumer hardware","topics":["投機的デコード","CPU-GPU協調","低VRAM推論","異種計算","ドラフトモデル"],"importance":"層単位オフロードではなくCPU側ターゲット検証とGPU側ドラフト生成を役割分担し、PCIe転送量と低VRAM制約を同時に緩和する。","implementation":"公式GitHub実装ddInference/Dovetailを公開。EAGLE-2系の木状ドラフト生成を基礎に、CPUターゲット検証、動的ゲート融合、複数Transformerブロックのドラフトを実装する。","hardware_evaluation":"Intel Xeon Silver 4214R + RTX 2080 SUPER 8GB/PCIe Gen3x16、Xeon Silver 4310 + RTX 3090 24GB/PCIe Gen4x16、Core i5-9300H + GTX 1050 Mobile 4GB/PCIe Gen3x8で実機評価。ドラフト学習は8×A800 80GB。","quality_effect":"投機的デコード自体はターゲットモデル分布を維持する無損失高速化。個人PC評価ではCPU側ターゲットへ8-bit動的量子化を別途適用するため、その構成では量子化由来の品質影響はDovetail本体と分離して考える必要がある。","source":"https://arxiv.org/abs/2412.18934","sources":["https://arxiv.org/abs/2412.18934","https://arxiv.org/html/2412.18934v2","https://github.com/ddInference/Dovetail"],"code":"https://github.com/ddInference/Dovetail","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary arXiv HTML reference section","references_total":0},"reservation":{"claim_id":"claim-6ad53a550a3c7bedcb56aa8c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
