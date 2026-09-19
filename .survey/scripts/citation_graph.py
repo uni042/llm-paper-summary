@@ -48,6 +48,14 @@ def normalize_doi(value: Any) -> str | None:
     return None
 
 
+def arxiv_alias_from_doi(value: Any) -> str | None:
+    """Return the arXiv identifier encoded by DataCite's 10.48550/arXiv.* DOI."""
+    doi = normalize_doi(value)
+    if not doi or not doi.startswith("10.48550/arxiv."):
+        return None
+    return normalize_arxiv(doi.split("10.48550/arxiv.", 1)[1])
+
+
 def normalize_openreview(value: Any) -> str | None:
     if value in (None, ""):
         return None
@@ -71,6 +79,9 @@ def normalized_identifiers(meta: dict[str, Any]) -> list[str]:
             ids.append("arXiv:" + aid)
         elif doi:
             ids.append("DOI:" + doi)
+            arxiv_alias = arxiv_alias_from_doi(doi)
+            if arxiv_alias:
+                ids.append("arXiv:" + arxiv_alias)
         elif oid and cid_text.lower().startswith("openreview:"):
             ids.append("OpenReview:" + oid)
         else:
@@ -82,6 +93,9 @@ def normalized_identifiers(meta: dict[str, Any]) -> list[str]:
         ids.append("arXiv:" + aid)
     if doi:
         ids.append("DOI:" + doi)
+        arxiv_alias = arxiv_alias_from_doi(doi)
+        if arxiv_alias:
+            ids.append("arXiv:" + arxiv_alias)
     if oid:
         ids.append("OpenReview:" + oid)
     return list(dict.fromkeys(ids))
