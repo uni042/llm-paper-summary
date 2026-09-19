@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e1fd57ed695526cd97dd92b5",
-  "job_id": "job-research-153b45adc3c50a28",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e1fd57ed695526cd97dd92b5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e1fd57ed695526cd97dd92b5","job_id":"job-research-153b45adc3c50a28","data":{"limitations":"応答長予測器は特定の13モデルから収集したデータで学習され、未知モデル・domainへの転移や継続的再学習の費用は十分検証されない。実到着分布はFabriX trace由来だが、評価prompt本文はLMSYSから生成するため完全なproduction replayではない。優先度制御はGPU throughput自体を増やさないので、小batch・高負荷でqueueが厚い条件ではFCFSより悪化する例がある。短いjob優先は長いjobのstarvationを招き得る。preemption policyは実装されるが実トレースで必要頻度が低いとして詳細評価されず、KV cache切替コストが高い環境での効果は未確定である。","differences":"ORCA型continuous batchingはiteration単位で枠を再利用するが基本FCFSで、ELISは各窓で残り長を予測してpriorityを更新する。QiuらのBERT予測＋SJFは一回だけ長さを推定するのに対し、ELISは途中生成を入力へ足して反復予測するため誤差を補正できる。PiAのように生成LLM自身をinstruction tuningして長さを出させる方式と異なり、独立BGE予測器なので生成モデルの応答品質を変えない。FastServeのMLFQはtrial-and-errorでpriorityを適応するが、ELISは意味埋め込みから残長を直接予測して探索的priority調整のoverheadを避ける。","implementation_status":"Samsung SDS Cloud Research TeamによるPython約3.1K行のprototype。vLLM 0.5.0へ100行未満の変更を加え、Kubernetes frontend/backend pod、StatefulSet、Serviceとして実装されている。論文はpublic codeとYAML公開を明記するが、今回確認した一次資料から確実なrepository URLは取得できなかった。","research_positioning":"LLM serving scheduler研究の中で、モデル実行kernelやKV配置そのものではなく『将来の残りdecode量を意味理解モデルで推定し、continuous batchingの順序へ反映する』予測駆動型の系統に属する。特に一回予測ではなく生成途中で予測を閉ループ更新し、Kubernetes/vLLMの実装・実サービス由来到着分布・50 GPU規模のscale-outまで接続した点で、アルゴリズムとproduction orchestrationの橋渡しをする研究である。"},"reservation":{"claim_id":"claim-e1fd57ed695526cd97dd92b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
