@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T18:22:27+00:00",
-  "last_run_key": "manual-eval-2026-09-20-r3",
-  "last_round": "refcuration-eval-r3-c",
+  "updated_at": "2026-09-19T18:44:26+00:00",
+  "last_run_key": "manual-stress-2026-09-20T0340JST",
+  "last_round": "refcuration-stress-r1-b",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,36 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-vertumnus-saecache-23",
-      "axis": "adaptive context parallelism・semantic-aware prefix cache eviction",
-      "query_summary": "recent production servingとprefix cache schedulingを探索し、Vertumnus（2609.04774）とSAECache（2605.18825）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はActions反映後のcandidate inventoryを再確認し、overflow未満ならrecent production servingまたはdistributed cache infrastructureを探索する。",
-      "source_submission": "work-queue/submissions/20260915T0842JST-discovery-specialist-vertumnus-saecache-23.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-moe-prefetch-8",
-      "axis": "MoE expert weight streaming・CPU/GPU hybrid・prefill通信重畳",
-      "query_summary": "KV階層からMoE expert cache/offload軸へ移動し、consumer CPU-GPUでのexpert streaming（arXiv:2606.10493）とprefill-onlyでのasynchronous expert weight gathering（arXiv:2605.02960）を一次arXivで軽量評価した。最新identityのexpert-offloading/serving関連lineageで両IDが見当たらず、identity-delta一覧にも対応IDが存在しないことを確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はexpert prefetch predictor・routing locality・CPU/SSD expert cacheに軸をずらし、既存CoX/FlashMoE等との差分が大きい候補だけを評価する。",
-      "source_submission": "work-queue/submissions/20260915T0844JST-discovery-specialist-moe-prefetch-8.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-kvserve-25",
@@ -7526,6 +7496,52 @@
       ],
       "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds.",
       "source_submission": "work-queue/submissions/refcuration-eval-20260920-r3-c.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20T0340JST",
+      "round": "refcuration-stress-r1-a",
+      "axis": "structured references relevance curation stress round 1",
+      "query_summary": "Stress-test round 1 over the first 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2308.14352",
+        "DOI:10.1145/3651890.3672274",
+        "arXiv:2503.01840",
+        "arXiv:2402.16363",
+        "arXiv:2406.16858"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0340JST-r1-a.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20T0340JST",
+      "round": "refcuration-stress-r1-b",
+      "axis": "structured references relevance curation stress round 1",
+      "query_summary": "Stress-test round 1 over the second 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2408.00741",
+        "arXiv:2407.11550",
+        "arXiv:2404.14294"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0340JST-r1-b.json"
     }
   ],
   "axes": {
@@ -14335,6 +14351,19 @@
       "duplicate_ratio": 0.1,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Continue structured-reference curation from the next ranked unseen references; quality remains high after three rounds."
+    },
+    "structured references relevance curation stress round 1": {
+      "last_run_key": "manual-stress-2026-09-20T0340JST",
+      "rounds": 2,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 8,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
