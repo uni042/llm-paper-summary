@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18526",
+      "title": "Running an LLM Locally Doesn't Keep Prompts Private: They Survive in Allocator Memory After Inference",
+      "source_url": "https://arxiv.org/abs/2609.18526",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.18526-local-llm-prompts-survive-allocator-memory-after-inference.md",
+      "priority": 72,
+      "reason": "consumer local-LLM serving stackのruntime memory残留を実測し、4モデル系列・2実行基盤で推論後のplaintext prompt回収を追跡するsystems研究。LLAnalyzerによるcomponent-level attributionとllama.cppを含む実ランタイム評価があり、推論runtimeのメモリ管理・安全性という隣接systems軸として収録価値がある。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-recent-runtime-security-1",
+    "axis": "2026年9月新着・runtime memory・serving safety横断",
+    "query_summary": "9月新着のLLM inference/serving、KV cache、MoE、GPU runtime、CXL/NVMeを複数検索族で走査し、canonical identity snapshotを先に照合した。OpWeave、MAPS、Vertumnus、LRU multi-turn analysis、Composable CXL Memory、learned disaggregated routing、phase-decoupled power control、OUTLETS等は既知identityとして早期除外。2609.18526だけが最新arXiv identity snapshotに未存在で、一次arXiv情報を確認してruntime systems候補として残した。",
+    "candidate_count": 9,
+    "duplicate_filtered_count": 8,
+    "duplicate_canonical_ids": ["arXiv:2609.14237", "arXiv:2609.15359", "arXiv:2609.04774", "arXiv:2609.02027", "arXiv:2609.10790", "arXiv:2609.16206", "arXiv:2609.11133", "arXiv:2609.01068"],
+    "next_axis_hint": "9月新着の主要serving軸は高重複のため、次は2026年のSSD/NVMe・PIM/CXL・heterogeneous servingの月別未走査集合または重要論文の引用方向へ移る",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "sep-2026-recent-runtime-systems",
+        "source": "web-arxiv-search",
+        "date_range": "2026-09",
+        "category": "inference-serving-runtime",
+        "citation_direction": "none",
+        "query_family": "llm-serving-kv-moe-gpu-runtime-cxl-nvme",
+        "raw_result_count": 20,
+        "unseen_result_count": 1,
+        "duplicate_filtered_count": 8,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 9,
+        "candidate_accepted_count": 1,
+        "position": "web-search-multi-query-1"
+      }
+    ]
+  }
+}
