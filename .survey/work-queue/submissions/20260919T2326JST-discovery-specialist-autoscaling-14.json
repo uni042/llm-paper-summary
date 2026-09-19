@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.03416",
+      "title": "TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity",
+      "source_url": "https://arxiv.org/abs/2512.03416",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale.md",
+      "priority": 86,
+      "reason": "Autoscaling for P/D-disaggregated serving using token velocity as a cross-stage leading indicator and convertible decoders as burst buffers; production-trace evaluation improves SLO attainment to 80-96% and reduces cost 4-14%."
+    },
+    {
+      "canonical_id": "arXiv:2501.08090",
+      "title": "Hierarchical Autoscaling for Large Language Model Serving with Chiron",
+      "source_url": "https://arxiv.org/abs/2501.08090",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.08090-chiron.md",
+      "priority": 81,
+      "reason": "Hierarchical-backpressure autoscaler incorporating queue size, utilization and request SLOs for mixed interactive/batch LLM serving; reports up to 90% higher SLO attainment and 70% better GPU efficiency."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-autoscaling-14",
+    "axis": "LLM serving autoscaling・P/D burst handling・SLO-aware provisioning",
+    "query_summary": "sparse-attention offloadからcluster provisioning/autoscalingへ切り替えた。OpScaleは直近runの既知候補として除外し、TokenScaleとChironはdefault branchのcanonical ID/title検索で未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2608.13499"],
+    "next_axis_hint": "heterogeneous GPU routing/provisioning、multi-region serving、then cache-aware request routingへ移る",
+    "empty_round_reason": null
+  }
+}
