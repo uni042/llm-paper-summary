@@ -3,7 +3,7 @@
   "name": "scheduled-chat-continuation-gate",
   "principle": "A normal survey-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
   "always_on_policy": {
-    "canonical_doc": ".survey/docs/survey-workflow/always-on-worker.md",
+    "canonical_doc": ".survey/docs/survey-workflow/worker-router.md",
     "paper_stock_zero_action": "DISCOVER_NOW",
     "empty_discovery_round_action": "CHANGE_AXIS_AND_DISCOVER_AGAIN",
     "after_research_or_checkpoint": "REFRESH_STATE_AND_CONTINUE",
@@ -80,8 +80,8 @@
     "rule": "Each distinct research blocked event is counted once by GitHub Actions. Attempts 1 and 2 remain blocked for a one-hour cooldown and are then returned to ready without losing block history. The third blocked event is promoted to blocked_permanent and is not automatically retried. Repeated survey-helper runs must not double-count the same blocked event."
   },
   "fallback_policy": {
-    "canonical_doc": ".survey/docs/survey-workflow/fallback-routing.md",
-    "backlog_doc": ".survey/docs/survey-workflow/backlog-resilience.md",
+    "canonical_doc": ".survey/docs/survey-workflow/worker-router.md",
+    "backlog_doc": ".survey/docs/survey-workflow/worker-router.md",
     "library_pending_path": "/LLM-survey-outbox/pending/",
     "github_intake_path": ".survey/work-queue/fallback-inbox/",
     "github_archive_path": ".survey/work-queue/fallback-archive/",
@@ -124,5 +124,24 @@
   "end_of_run_gate": {
     "rule": "Before emitting a final response or ending voluntarily, first apply scheduled_handoff_policy and continuation_gate.py. For hourly :00 discovery and :30 normal paper workers, the preferred time basis is the run-local deadline captured as actual invocation start + 3600 seconds, not the nominal schedule boundary. When that run deadline is within handoff_guard_seconds, STOP_RUN after durable finalization and do not claim or start another independent unit. The next nominal :00/:30 boundary is only a compatibility fallback when no actual-start deadline is available. Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. Refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, candidate inventory, and discovery-state. For the :00 discovery specialist in normal Discovery mode, fewer than four materially distinct completed rounds cannot establish exhaustion and the gate must return DISCOVER_AGAIN unless a hard stop applies. Four rounds is not a completion quota; after the floor is met, continue while next_axis_available or other independent work remains. For the :00 specialist, overflow conditions require research rather than voluntary termination. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis. STOP_RUN for no-work is allowed only after the discovery progression floor is met, multiple materially distinct search axes including citation/related-implementation and adjacent-topic expansion have been attempted, and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
     "default_decision": "CONTINUE"
+  },
+  "canonical_worker_doc": ".survey/docs/survey-workflow/worker-router.md",
+  "worker_instruction_policy": {
+    "single_human_canonical": true,
+    "canonical_doc": ".survey/docs/survey-workflow/worker-router.md",
+    "queue_doc_role": "implementation_reference_only",
+    "discovery_new_request_schema": 3,
+    "discovery_default_target_unseen": 20,
+    "retired_new_write_routes": [
+      "google_drive",
+      "notion",
+      "/LLM-survey-fallback/",
+      ".survey/work-queue/submissions/chat-inbox.json",
+      "discovery_schema_v1",
+      "discovery_schema_v2",
+      "manual_library_recovery_workflow",
+      "manual_serverlesslora_recovery_workflow",
+      "library_replay_bundle_workflow"
+    ]
   }
 }
