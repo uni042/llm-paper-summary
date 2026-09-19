@@ -5,14 +5,10 @@
   "attempt_id": "attempt-3b62c6bd3d0c2191dd7cade2",
   "job_id": "job-research-c2f58815c322fab7",
   "data": {
-    "limitations": "現実装のcontrol layerは中央集約型batch schedulerから単一inference backendへ接続する構成で、multi-GPU/multi-node分散時のload balancing、KvPage配置・移動、end-to-end SLO、fault toleranceは未解決である。利用者inferletへネットワークI/Oとtoken distributionアクセスを許すため、side-channel、resource exhaustion、jailbreak/model extraction支援等の攻撃面が広がり、capability-based I/O、rate limit/quota、logit露出制限等のhardeningが必要。Transformer向け細粒度APIは表現力と引き換えにプログラミング複雑性を増し、通常生成ではpipeline fusionを失うオーバーヘッドもある。既存vLLM/SGLangへ後付けするにはruntime、低水準資源API、API単位batch schedulerの大幅な構造変更が必要である。",
-    "differences": "vLLM/TGIはprompt要求を固定prefill-decode loopへ載せ、KVやsamplingをsystem-wide policyで扱うのに対し、Pieはprogramをサービス単位にして要求ごとに生成過程自体を変更できる。SGLang/Parrot等もLLM program抽象を提供するが、著者らの整理では基礎の生成loopは依然モノリシックで、Pieほどtokenization、attention、KV、sampling、I/Oを段階ごとに制御しない。LMQL/Guidance/Outlines/XGrammar等は主に生成結果の制約を記述するのに対し、Pieは生成の『何を』だけでなく『どのように実行するか』をTuring完全なinferletで制御する。AICIもWasmを利用するが、PieはKV資源とserving-level batching/I/Oまで対象を広げる。",
-    "implementation_status": "SOSP 2025査読済み論文で、公式実装はpie-project/pieとして公開されている。論文はartifact available / functional / results reproducedのACM badgeを掲示する。実装はWasm application layer、control layer、inference layer、42 API、support libraryからなり、NVIDIA L4上で実システム評価されている。",
-    "research_positioning": "LLM serving研究の中でPieはschedulerやcache policyを一つ改善する方式ではなく、アプリケーションとserving runtimeの境界を再定義するprogrammability-first系統に位置付く。特にagentic servingでは、外部tool orchestrationとKV lifetimeを同じinferletへ置くことで、client round-tripと再prefillを構造的に除去する。KV cache研究との接点では、PagedAttention型ページを単なるsystem-managed allocation unitではなくapplication-visible resourceへ引き上げ、明示的な共有・mask・寿命制御を可能にした点が重要である。"
+    "limitations": "現実装の制御層は中央集約型の一括処理スケジューラから単一推論バックエンドへ接続する構成で、複数GPU・複数ノード分散時の負荷分散、KvPage配置・移動、端から端までのサービス水準目標、耐障害性は未解決である。利用者inferletへネットワーク入出力とトークン分布へのアクセスを許すため、側信道、資源枯渇、脱獄・モデル抽出支援などの攻撃面が広がり、権限に基づく入出力制御、流量制限・割当量、ロジット露出制限などの安全性強化が必要である。Transformer向け細粒度APIは表現力と引き換えにプログラミング複雑性を増し、通常生成では処理融合を失う性能負担もある。既存vLLM/SGLangへ後付けするには実行環境、低水準資源API、API単位一括処理スケジューラの大幅な構造変更が必要である。",
+    "differences": "vLLMやTGIはプロンプト要求を固定された事前計算・復号ループへ載せ、KVや標本化をシステム全体の方針で扱うのに対し、Pieはプログラムをサービス単位にして要求ごとに生成過程自体を変更できる。SGLangやParrotなどもLLMプログラム抽象を提供するが、著者らの整理では基礎の生成ループは依然として単一化され、Pieほどトークン化、注意機構、KV、標本化、入出力を段階ごとに制御しない。LMQL、Guidance、Outlines、XGrammarなどは主に生成結果の制約を記述するのに対し、Pieは生成の『何を』だけでなく『どのように実行するか』をチューリング完全なinferletで制御する。AICIもWebAssemblyを利用するが、PieはKV資源とサービング水準の一括処理・入出力まで対象を広げる。",
+    "implementation_status": "SOSP 2025査読済み論文で、公式実装はpie-project/pieとして公開されている。論文は成果物利用可能、機能確認、結果再現のACMバッジを掲示する。実装はWebAssemblyアプリケーション層、制御層、推論層、42個のAPI、支援ライブラリからなり、NVIDIA L4上で実システム評価されている。",
+    "research_positioning": "LLMサービング研究の中でPieはスケジューラやキャッシュ方針を一つ改善する方式ではなく、アプリケーションとサービング実行環境の境界を再定義するプログラマビリティ優先系統に位置付く。特にエージェント型サービングでは、外部ツール連携とKV寿命を同じinferletへ置くことで、クライアント往復と再事前計算を構造的に除去する。KVキャッシュ研究との接点では、PagedAttention型ページを単なるシステム管理の割当単位ではなくアプリケーションから見える資源へ引き上げ、明示的な共有・マスク・寿命制御を可能にした点が重要である。"
   },
-  "reservation": {
-    "claim_id": "claim-3b62c6bd3d0c2191dd7cade2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-3b62c6bd3d0c2191dd7cade2", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
