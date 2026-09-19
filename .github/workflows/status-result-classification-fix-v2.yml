@@ -1,3 +1,4 @@
+# temporary validation workflow
 name: Validate STATUS result classification fix v2
 on:
   push:
@@ -32,12 +33,6 @@ jobs:
         run: |
           python -m pip install -r .survey/scripts/requirements.txt
           python -m compileall -q .survey/scripts
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('.survey/tests/test_status_dashboard.py'); s=p.read_text()
-          s=s.replace('self.assertIn("| Research | **0** | **1** | **0** | **1** |", text)','self.assertIn("| Research | **0** | **1** | **0** | **1** |", text)')
-          p.write_text(s)
-          PY
           python -m unittest discover -s .survey/tests -p 'test_*.py'
           python .survey/scripts/render_status_dashboard.py --repo-root . --output /tmp/STATUS.md
           grep -F 'result照合済み非成功: **1件** / 個別result未照合: **0件**' /tmp/STATUS.md
