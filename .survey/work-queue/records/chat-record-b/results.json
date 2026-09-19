@@ -2,21 +2,61 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f805b2a422f2a20e26aa493c",
+  "attempt_id": "attempt-210ab028fb8916623648a61a",
   "job_id": "job-research-25491a773c352e2c",
   "data": {
     "overview": "FlashAttentionは二次元注意行列の高帯域メモリ往復を除去することで、標準注意より演算回数が増える場合でも実時間を短縮する。GPT-2の注意演算で最大7.6倍、一般的な系列長128〜2Kで最大約3倍の高速化を示し、追加メモリを系列長に対して線形にする。モデル全体でもBERT-large、GPT-2、Long Range Arenaの学習を高速化し、長い文脈を使えることで品質も改善する。",
     "key_results": [
-      {"metric":"注意演算速度","value":"GPT-2で最大7.6倍","baseline":"PyTorch標準注意","condition":"A100上の注意カーネル","interpretation":"二次元中間行列を高帯域メモリへ保存しない効果が大きい。"},
-      {"metric":"高帯域メモリアクセス量","value":"典型条件で最大約9倍削減","baseline":"標準注意","condition":"head dimension 64〜128、SRAM約100KB級","interpretation":"理論入出力複雑度の削減が実時間短縮と対応する。"},
-      {"metric":"BERT-large学習","value":"15%高速","baseline":"MLPerf 1.1 training speed record","condition":"系列長512","interpretation":"カーネル単体だけでなく端から端の学習時間を改善する。"},
-      {"metric":"GPT-2学習","value":"約3倍高速","baseline":"HuggingFace/Megatron-LM系実装","condition":"系列長1K","interpretation":"厳密注意のまま大幅な壁時計短縮を達成する。"},
-      {"metric":"Long Range Arena","value":"平均2.4倍高速","baseline":"既存実装","condition":"系列長1K〜4K","interpretation":"長系列タスクでも入出力認識設計が有効。"},
-      {"metric":"Path-X / Path-256","value":"16Kで61.4%、64Kで63.1%","baseline":"従来Transformerはchance以下","condition":"Path-Xは密FlashAttention、Path-256はblock-sparse版","interpretation":"メモリ効率により従来困難だった長系列能力を可能にする。"}
+      {
+        "metric": "注意演算速度",
+        "value": "GPT-2で最大7.6倍",
+        "baseline": "PyTorch標準注意",
+        "condition": "A100上の注意カーネル",
+        "interpretation": "二次元中間行列を高帯域メモリへ保存しない効果が大きい。"
+      },
+      {
+        "metric": "高帯域メモリアクセス量",
+        "value": "典型条件で最大約9倍削減",
+        "baseline": "標準注意",
+        "condition": "head dimension 64〜128、SRAM約100KB級",
+        "interpretation": "理論入出力複雑度の削減が実時間短縮と対応する。"
+      },
+      {
+        "metric": "BERT-large学習",
+        "value": "15%高速",
+        "baseline": "MLPerf 1.1 training speed record",
+        "condition": "系列長512",
+        "interpretation": "カーネル単体だけでなく端から端の学習時間を改善する。"
+      },
+      {
+        "metric": "GPT-2学習",
+        "value": "約3倍高速",
+        "baseline": "HuggingFace/Megatron-LM系実装",
+        "condition": "系列長1K",
+        "interpretation": "厳密注意のまま大幅な壁時計短縮を達成する。"
+      },
+      {
+        "metric": "Long Range Arena",
+        "value": "平均2.4倍高速",
+        "baseline": "既存実装",
+        "condition": "系列長1K〜4K",
+        "interpretation": "長系列タスクでも入出力認識設計が有効。"
+      },
+      {
+        "metric": "Path-X / Path-256",
+        "value": "16Kで61.4%、64Kで63.1%",
+        "baseline": "従来Transformerはchance以下",
+        "condition": "Path-Xは密FlashAttention、Path-256はblock-sparse版",
+        "interpretation": "メモリ効率により従来困難だった長系列能力を可能にする。"
+      }
     ],
     "negative_results": "FlashAttentionは注意の演算量O(N²d)そのものを削減しないため、系列長が十分長く計算量自体が支配的になる領域では線形・疎な近似注意が速くなる場合がある。論文では系列長1Kを超えるとLinformerなど一部近似法が密FlashAttentionより速くなる領域を報告する。block-sparse版はさらに高速だが、密版と異なり近似注意である。",
     "interpretation": "主要な結論は、GPUでは浮動小数点演算数よりデータ移動が支配する演算が多く、再計算で演算を増やしてでも高帯域メモリ入出力を減らす方が速い場合があること。FlashAttentionはこの原理を注意へ具体化し、後続カーネル最適化の基準になった。",
     "quality_impact": "密版は厳密注意なので同じモデル設定の出力品質を近似で落とさない。長文脈を利用できることでGPT-2 perplexityを0.7改善し、長文書分類で平均6.4点の向上を報告する。"
   },
-  "reservation": {"claim_id":"claim-f805b2a422f2a20e26aa493c","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-210ab028fb8916623648a61a",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
 }

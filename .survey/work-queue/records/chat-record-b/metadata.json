@@ -2,31 +2,52 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f805b2a422f2a20e26aa493c",
+  "attempt_id": "attempt-210ab028fb8916623648a61a",
   "job_id": "job-research-25491a773c352e2c",
   "data": {
     "canonical_id": "arXiv:2205.14135",
     "arxiv_id": "2205.14135",
     "doi": "10.48550/arXiv.2205.14135",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.LG","cross_list":["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
     "summary": "FlashAttentionは、注意機構の計算量だけでなくGPUの高帯域メモリとオンチップSRAM間の入出力を設計対象にする厳密注意アルゴリズムである。Q・K・VをSRAMに収まるタイルへ分割し、オンラインsoftmax統計で部分結果を厳密に結合することで二次元の注意行列を高帯域メモリへ実体化しない。逆伝播では注意行列を保存せず、出力と正規化統計からSRAM上で再計算する。標準注意の高帯域メモリアクセス量を大幅に削減し、追加メモリを系列長に対して線形にする。GPT-2の注意演算で最大7.6倍、BERT-large学習で15%、GPT-2学習で約3倍、Long Range Arenaで平均2.4倍の高速化を報告する。",
     "list_summary": "タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。",
-    "authors": ["Tri Dao","Daniel Y. Fu","Stefano Ermon","Atri Rudra","Christopher Ré"],
+    "authors": [
+      "Tri Dao",
+      "Daniel Y. Fu",
+      "Stefano Ermon",
+      "Atri Rudra",
+      "Christopher Ré"
+    ],
     "authors_affiliations": "Stanford University; University at Buffalo, SUNY",
     "published": "2022-05-27",
     "publication": "NeurIPS 2022",
     "publication_type": "国際会議論文",
     "publication_status": "Published at NeurIPS 2022; arXiv v2",
     "lineage": "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
-    "topics": ["厳密注意","タイル化","高帯域メモリ削減","オンチップSRAM","オンラインsoftmax","再計算"],
+    "topics": [
+      "厳密注意",
+      "タイル化",
+      "高帯域メモリ削減",
+      "オンチップSRAM",
+      "オンラインsoftmax",
+      "再計算"
+    ],
     "importance": "浮動小数点演算回数の削減だけでは実時間短縮を保証しないことを示し、GPUメモリ階層のデータ移動量を第一級のアルゴリズム設計指標にした基礎研究。後続のFlashAttention-2/3や多数の学習・推論基盤の注意カーネル設計に直接つながる。",
     "implementation": "CUDA実装を公式公開。単一カーネル内で行列積、mask、softmax、dropout、出力積を融合し、逆伝播も再計算を利用する。",
     "hardware_evaluation": "主にNVIDIA A100を用い、注意カーネル、BERT-large、GPT-2、Long Range Arena、長文書分類を評価。",
     "quality_effect": "密FlashAttentionは厳密注意であり近似による品質低下を導入しない。長い系列を実用的に扱えることでGPT-2 perplexityや長文書分類精度を改善。block-sparse版のみ近似である。",
     "source": "https://arxiv.org/abs/2205.14135",
-    "sources": ["https://arxiv.org/abs/2205.14135","https://github.com/HazyResearch/flash-attention"],
+    "sources": [
+      "https://arxiv.org/abs/2205.14135",
+      "https://github.com/HazyResearch/flash-attention"
+    ],
     "code": "https://github.com/HazyResearch/flash-attention",
     "last_checked": "2026-09-20",
     "references": [],
@@ -34,5 +55,9 @@
     "references_source": "primary manuscript",
     "references_total": 0
   },
-  "reservation": {"claim_id":"claim-f805b2a422f2a20e26aa493c","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-210ab028fb8916623648a61a",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
 }

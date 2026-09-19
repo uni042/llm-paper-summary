@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f805b2a422f2a20e26aa493c",
+  "attempt_id": "attempt-210ab028fb8916623648a61a",
   "job_id": "job-research-25491a773c352e2c",
   "data": {
     "limitations": "密FlashAttentionは注意計算量そのものを二次から線形へ変えないため、極端な長系列では計算量削減型の近似注意が有利になり得る。原論文の実装と評価は主に当時のNVIDIA GPUと学習用途で、後年のHopper世代、推論デコード、グループ化クエリ注意、可変長バッチなどは後続研究の対象である。block-sparse版は高速化と引き換えに厳密性を失う。",
@@ -10,5 +10,9 @@
     "implementation_status": "公式CUDA実装が公開され、後に広範な学習・推論基盤へ統合された。原論文時点でも公開コードを提供し、密厳密版とblock-sparse版を実装している。",
     "research_positioning": "注意カーネル最適化とGPUメモリ階層設計の基礎論文。演算量最小化だけでなく入出力複雑度をアルゴリズム設計へ持ち込み、タイル化、オンライン正規化、再計算、カーネル融合を一体化した。推論基盤の観点ではprefill注意の主要実装原理となり、KVキャッシュ最適化、量子化、投機的デコードなど別系統の最適化と直交して組み合わせられる。"
   },
-  "reservation": {"claim_id":"claim-f805b2a422f2a20e26aa493c","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-210ab028fb8916623648a61a",
+    "worker_id": "scheduled-chat-discovery-routing",
+    "worker_kind": "scheduled_chat"
+  }
 }
