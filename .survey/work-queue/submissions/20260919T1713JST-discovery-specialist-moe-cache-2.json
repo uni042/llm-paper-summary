@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/02-moe-expert-placement/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "priority": 91,
+      "reason": "GPUに収まらないMoE expertの反復weight transferを対象に、native Top-Kを維持したcache-aware router適応を提案する。Qwen3/GPT-OSSで評価し、強いprefetch baseline比でtrafficを最大53.3%削減しており、expert cache/prefetchの重点テーマに直接該当する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-moe-cache-2",
+    "axis": "MoE expert cache・router adaptation・weight traffic",
+    "query_summary": "Flash/CIM軸からMoE expert cacheへ切り替え、2026年9月の一次arXivを検索。2609.04895は最新mainのrepo検索で未登録を確認し、Qwen3/GPT-OSS実測とexpert traffic削減を伴うため採用。一般的GPU kernel generationはLLM inference system本体ではないため候補化しなかった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2601.17063","arXiv:2608.12103"],
+    "next_axis_hint": "network/collective・disaggregated servingとenergy-aware runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
