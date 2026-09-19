@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:06:22 JST**
+> 自動生成: **2026-09-19 23:06:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **68** | **10** | **1** | **9** | **0** | **0** | **30** |
-| 合計 | **82** | **13** | **3** | **9** | **1** | **0** | **30** |
+| Discovery | **65** | **11** | **1** | **10** | **0** | **0** | **33** |
+| 合計 | **79** | **14** | **3** | **10** | **1** | **0** | **33** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 23:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **9件** / 候補: **30件**
-- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching / MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation / PD分離routing・selective KV transfer・multi-turn append-prefill / speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching / agentic KV eviction・tool-call idle offload・workflow-aware caching / power-aware serving・on-device thermal control・multi-GPU energy modeling / hierarchical KV・CPU LLC residency・peer GPU cache tier / 2609新着・cross-DC PD・near-data MoE・offloaded KV sparse scan / NVMe delta prefetch・3D NAND compute・near-storage attention
+- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **10件** / 候補: **33件**
+- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching / MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation / PD分離routing・selective KV transfer・multi-turn append-prefill / speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching / agentic KV eviction・tool-call idle offload・workflow-aware caching / power-aware serving・on-device thermal control・multi-GPU energy modeling / hierarchical KV・CPU LLC residency・peer GPU cache tier / 2609新着・cross-DC PD・near-data MoE・offloaded KV sparse scan / NVMe delta prefetch・3D NAND compute・near-storage attention / elastic GPU memory・PIM hierarchy・prediction-guided dispatch
 - round `specialist-memory-runtime-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json`
   - 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime
@@ -272,10 +272,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **636** |
+| 成功result未照合のimmutable submission | **637** |
 | └ Research | **480** |
 | └ Audit | **2** |
-| └ Discovery | **154** |
+| └ Discovery | **155** |
 
 ### 厳格検証が未成立のcompleted job
 
