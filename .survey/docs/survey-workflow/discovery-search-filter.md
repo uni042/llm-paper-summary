@@ -4,7 +4,7 @@
 
 ## 実行強制契約
 
-2026-09-20 01:00 JST以降、Scheduled Chatはこのfilterを任意の参照実装として扱わない。Discovery modeの各raw検索バッチは `.survey/work-queue/discovery-precheck/requests/*.json` へ保存し、専用workflowが最新mainからidentity snapshot/rejection ledgerを再構築して本filterを実行する。workerへ候補評価対象として渡してよいのはworkflow生成resultの `results[]` だけである。
+`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後、Scheduled Chatはこのfilterを任意の参照実装として扱わない。Discovery modeの各raw検索バッチは `.survey/work-queue/discovery-precheck/requests/*.json` へ保存し、専用workflowが最新mainからidentity snapshot/rejection ledgerを再構築して本filterを実行する。workerへ候補評価対象として渡してよいのはworkflow生成resultの `results[]` だけである。
 
 最終 `submit_discovery_round` は対応するworkflow生成resultのrequest_id/result_path/receiptを必須とし、queue processorがGit commit author provenanceとcandidate identityを検証する。これにより手順書の読み飛ばし、GitHub code search等の別経路、手書きresultによる迂回をfail-closedにする。拒否時はresultに正規precheck経路への `next_action` と `recovery_steps` を返す。
 
