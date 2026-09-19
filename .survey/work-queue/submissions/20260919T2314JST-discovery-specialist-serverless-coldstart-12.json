@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2502.15524",
+      "title": "Towards Swift Serverless LLM Cold Starts with ParaServe",
+      "source_url": "https://arxiv.org/abs/2502.15524",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2502.15524-paraserve.md",
+      "priority": 86,
+      "reason": "Serverless cold-start system using pipeline parallelism to aggregate network bandwidth for model fetch, overlapping fetch/load/runtime initialization and consolidating pipelines after warmup; reports up to 4.7x cold-start reduction and 1.74x SLO attainment."
+    },
+    {
+      "canonical_id": "arXiv:2505.14468",
+      "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+      "source_url": "https://arxiv.org/abs/2505.14468",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2505.14468-serverlesslora.md",
+      "priority": 84,
+      "reason": "Serverless multi-LoRA system with shared backbone, artifact preloading, contention-aware batching and offloading; industrial workloads report up to 86% TTFT reduction and 89% cost reduction."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-serverless-coldstart-12",
+    "axis": "serverless model loading・cold start・LoRA artifact sharing",
+    "query_summary": "CPU-light KV offloadからmodel loading/cold-startへ切り替えた。ServerlessLLMは既知基礎系統として除外し、ParaServeとServerlessLoRAはdefault branchのcanonical ID/title検索で未収録を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2401.14351"],
+    "next_axis_hint": "long-context sparse attention offload、then model multiplexing/weight cache placement、then inference autoscalingへ移る",
+    "empty_round_reason": null
+  }
+}
