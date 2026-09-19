@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.24626",
+      "title": "SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.24626",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2509.24626-sparseserve.md",
+      "priority": 91,
+      "reason": "Hierarchical HBM-DRAM KV management for dynamic sparse attention with GPU-direct fragmented loading, working-set-aware batching and layer-segmented prefill; reports up to 9.26x lower mean TTFT and 3.14x higher token throughput."
+    },
+    {
+      "canonical_id": "arXiv:2606.04511",
+      "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.04511",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.04511-sparda.md",
+      "priority": 89,
+      "reason": "Decoupled sparse-attention architecture predicts next-layer KV blocks to overlap CPU-to-GPU prefetch with current execution; reports up to 1.7x decode speedup and 5.3x higher decode throughput than non-offload sparse baseline, with released code."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-sparse-offload-13",
+    "axis": "long-context sparse attention・HBM/DRAM KV offload・lookahead prefetch",
+    "query_summary": "serverless cold-startからlong-context sparse-attention offloadへ切り替えた。SparseServeとSparDAはいずれも階層メモリ/転送を中心とするsystems寄与と実測評価を持ち、canonical ID/titleをdefault branchで再検索して未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "model multiplexing/weight cache placement、autoscaling/provisioning、then inference framework runtime updatesの学術論文へ移る",
+    "empty_round_reason": null
+  }
+}
