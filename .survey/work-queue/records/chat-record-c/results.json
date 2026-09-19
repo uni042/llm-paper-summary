@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4ab7a2c9a05726d96681eda6",
+  "attempt_id": "attempt-257fe813bf991760822038e3",
   "job_id": "job-research-7353bc1b63a704fc",
   "data": {
     "overview": "LoRA-as-inputは2-task条件でmaskingより小さい実行サイズと低いLoRA追加遅延を示し、多用途へ拡張しやすい。1Bモデルの量子化ではLLM本体ROMがFP16 1800MBからINT4 600MBへ約3分の1となり、GS24上でピーク967MB、first-token 155.9ms、41.32 tokens/sを達成した。CTGは8候補の逐次相当174msを63msへ短縮する。3B GS25ではDS2Dにより用途別tokens/sが非投機時の約22〜38から約26〜45へ改善し、論文は概ね2倍のdecode高速化を報告する。",
@@ -55,7 +55,7 @@
     "quality_impact": "9言語の多くのtaskではQAT後G-EvalのRelative Accuracyが概ね97〜103%付近だが、言語・taskによっては80%台まで低下する。DS2Dは通常tokenを凍結LLMの分布から生成しdraftを次stepで検証するため生成品質維持を意図するが、論文の主評価は速度・実装効率中心である。"
   },
   "reservation": {
-    "claim_id": "claim-4ab7a2c9a05726d96681eda6",
+    "claim_id": "claim-257fe813bf991760822038e3",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
