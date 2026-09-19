@@ -1,0 +1,9 @@
+{
+ "schema_version":1,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2608.01891","title":"Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling","source_url":"https://arxiv.org/abs/2608.01891","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-dvfs.md","priority":84,"reason":"AttentionとFFNを分離しoperator-level DVFS、resource provisioning、interleaved pipelineを共同最適化するAFlexをSGLangへ実装。A800/Qwen3-32B/Mixtral-8x7Bとproduction traceでSLOを満たしつつenergy/token最大49%削減を報告し、推論基盤のoperator-level resource controlとして強い実測候補。"},
+  {"canonical_id":"arXiv:2602.06072","title":"PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference","source_url":"https://arxiv.org/abs/2602.06072","paper_path":"papers/inference/09-kernel-runtime-compilation/2026-2602.06072-packinfer-batched-attention.md","priority":85,"reason":"異なるsequence lengthを含むbatch推論でcompute/I-O imbalanceを抑えるattention kernel framework。request packingとshared-prefix I/O-aware grouping、KV layout再編で実workload上latency 13.0〜20.1%削減、FlashAttention比throughput 20%改善を報告し、serving向けkernel/runtime系統の重要候補。"}
+ ],
+ "rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T17:00:00+09:00","round":"specialist-kernel-energy-5","axis":"GPU attention kernel・operator-level DVFS・runtime","query_summary":"network軸からGPU kernel/runtimeへ変更し、attention batchingとoperator-level energy controlを探索。FlashInferは既知の基礎systemとして除外し、AFlexとPackInferを一次arXiv抄録で評価。最新mainのcanonical ID検索で未登録を確認した。","candidate_count":3,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2501.01005"],"next_axis_hint":"次は古い重要推論systemの収録漏れ、agentic serving/interception、またはrecent speculative decodingへ移る","empty_round_reason":null}
+}
