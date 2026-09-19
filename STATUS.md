@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 14:30:19 JST**
+> 自動生成: **2026-09-19 15:29:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **40** |
-| 未claim Research job | **39** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（2時間56分前）** |
+| 未claim Research job | **40** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（3時間55分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **7** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **7** | **0** | **7** | **0** | **0** | **11** |
-| 合計 | **7** | **8** | **0** | **8** | **1** | **0** | **11** |
+| 合計 | **7** | **8** | **0** | **7** | **0** | **0** | **11** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -97,13 +97,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 13:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / 未完了・未検証: **1件**
-- **未完了または未検証** `.survey/work-queue/submissions/research/attempt-73b8f63ceffa41235b1708c8.json` (job `job-research-c1b7543305e71c40`)
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-73b8f63ceffa41235b1708c8.json` (job `job-research-c1b7543305e71c40`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-73b8f63ceffa41235b1708c8.json` (`ok=false`)
 
 #### Audit (:30)
 
 - 最新観測run: **2026-09-19 13:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **0件** / 検証済み成功: **0件** / 未完了・未検証: **0件**
+- immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
 #### Discovery (:00)
@@ -144,10 +145,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.25777` — SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-19 15:02:13 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c1b7543305e71c40.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -195,8 +194,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **594** |
-| └ Research | **458** |
+| 成功result未照合のimmutable submission | **595** |
+| └ Research | **459** |
 | └ Audit | **2** |
 | └ Discovery | **134** |
 
