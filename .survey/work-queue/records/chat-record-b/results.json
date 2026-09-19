@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
-  "job_id": "job-research-d5e83a73eb90a616",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e2c1eb9d827322f9fbb93f0b","job_id":"job-research-d5e83a73eb90a616",
+ "data":{
+  "overview":"AWQはLLaMA/Llama-2のINT3/INT4量子化でRTNとGPTQを一貫して上回り、活性基準のチャネル保護が低ビット精度を改善することを示した。TinyChatはRTX 4090上でHugging Face FP16比2.7〜3.9倍、Jetson Orinでも最大3.5倍程度の高速化を実現する。RTX 4070 8GBではFP16で7Bすら収まりにくい条件でLlama-2-13Bを約33トークン/秒で実行でき、VLMでもVILA-7BをOrinで約3.1倍高速化する。較正データもGPTQの約10分の1で良好な性能に達し、分布ずれへの劣化が小さい。",
+  "key_results":[
+   {"metric":"Llama-2 INT4パープレキシティ","value":"7B 5.60、13B 4.97、70B 3.41","baseline":"FP16 5.47/4.88/3.32、GPTQ 5.69/4.98/3.42","condition":"WikiText-2、INT4、group size 128","interpretation":"4ビットでもFP16との差を小さく保ち、GPTQと同等以上の品質を訓練・再構成なしで得る。"},
+   {"metric":"Llama-2 INT3パープレキシティ","value":"7B 6.24、13B 5.32、70B 3.74","baseline":"GPTQ 6.43/5.48/3.88、RTN 6.66/5.52/3.98","condition":"WikiText-2、INT3、group size 128","interpretation":"より厳しい3ビット条件で活性認識スケーリングの差が明確になる。"},
+   {"metric":"OpenFlamingo-9B INT4 32-shot CIDEr","value":"80.53、FP16 81.70からの劣化1.17","baseline":"RTN劣化4.57、GPTQ劣化6.72","condition":"COCO Captioning、INT4-g128","interpretation":"較正分布への再構成を使わないため、視覚言語・少数例文脈へも一般化する。"},
+   {"metric":"TinyChat RTX 4090高速化","value":"2.7〜3.9倍","baseline":"Hugging Face FP16","condition":"Llama-2、MPT、Falcon、バッチ1、4トークン入力から200トークン生成","interpretation":"W4A16の重み帯域削減を融合逆量子化・パッキング・カーネル融合で実速度へ変換する。"},
+   {"metric":"ラップトップRTX 4070上Llama-2-13B","value":"約33トークン/秒","baseline":"FP16では7Bモデルも8GB VRAMに収まらない","condition":"RTX 4070 8GB、AWQ/TinyChat","interpretation":"量子化が速度だけでなく端末で扱えるモデル規模を拡大する。"},
+   {"metric":"較正データ効率","value":"16系列でGPTQ 192系列より良好なパープレキシティ","baseline":"GPTQ","condition":"OPT-6.7B、INT3-g128","interpretation":"平均活性統計だけを使うため再構成法より較正データ依存が小さい。"}
+  ],
+  "negative_results":"顕著チャネルの尺度を大きくしすぎると同一量子化グループの最大値と量子化刻みが増え、非顕著チャネルの誤差が悪化する。OPT-6.7Bでは単純尺度s=2がPPL 11.92で良いがs=4では12.36へ悪化するため、尺度探索が必要。INT2ではRTNが完全に破綻し、AWQもGPTQと組み合わせて初めて実用性が改善する。W4A16は逆量子化費があるため、専用カーネルなしでは理論4倍帯域削減がそのまま速度にならない。",
+  "interpretation":"AWQの利点は『重要な重みだけ高精度に残す』という精度上有効だがハードウェア非効率な観察を、等価チャネル尺度変換によって均一な低ビット形式へ写像した点にある。生成は重み読込み律速なので4ビット化で理論上の算術強度を約4倍にできるが、実際の速度には逆量子化、アンパック、カーネル起動が残る。TinyChatがこれらを融合・装置最適化することで3倍級の実測高速化へ近づける。",
+  "quality_impact":"Llama-2/OPTだけでなくVicuna、Mistral/Mixtral、CodeLlama、OpenFlamingo、LLaVA/VILAへ一般化。GSM8KではLlama-2-70B FP16 56.41に対しAWQ INT4 56.40、MBPPではCodeLlama-7B FP16 pass@1 38.53に対しAWQ 40.64。VILA INT4も11ベンチで概ね元モデルと同等の値を維持する。"
+ },
+ "reservation":{"claim_id":"claim-e2c1eb9d827322f9fbb93f0b","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
