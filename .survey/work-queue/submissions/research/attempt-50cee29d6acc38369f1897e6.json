@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-50cee29d6acc38369f1897e6",
+  "job_id": "job-research-7353bc1b63a704fc",
+  "claim_id": "claim-50cee29d6acc38369f1897e6",
+  "worker_id": "scheduled-chat-llm-survey",
+  "status": "blocked",
+  "reason": "Primary-source full-text retrieval could not be started safely because the web retrieval subsystem had already emitted an explicit approximately-zero-calls-remaining platform-limit signal in this invocation. No scientific content was inferred from the queue selection reason.",
+  "retrieval_evidence": [
+    "The canonical queue identifies the primary source as arXiv:2604.18655.",
+    "Immediately before this claim, the web retrieval subsystem explicitly reported approximately 0 calls remaining; therefore the required full primary-source read and reference-section verification could not be performed."
+  ]
+}
