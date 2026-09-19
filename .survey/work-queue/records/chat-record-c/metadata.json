@@ -1,5 +1,63 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5054a5121094256f2071bd0e","job_id":"job-research-c1b7543305e71c40",
-  "data":{"canonical_id":"arXiv:2604.25777","arxiv_id":"2604.25777","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"eess.SP","cross_list":["cs.DC"]},"title":"SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission","summary":"SpecFedは、複数の異種LLMの確率分布を重み付き平均する連合推論に投機的復号を組み込み、各作業者が語彙全体の確率分布ではなく上位Kトークンの識別子と確率だけを送信することで通信量を削減する方式である。サーバ側では上位K内を再正規化する方式と、残余確率質量を上位K外へ一様再配分する方式の2種類を比較する。局所再構成誤差、集約分布の偏り、投機的復号の受理率変動について残余確率質量に基づく上界を導出し、LLaMA-7Bと13Bの異種2作業者、LLaMA-68M草稿モデル、NVIDIA A800、WMT14英独データで検証した。語彙32,000に対して小さいKでも分布偏りと受理率偏りが小さく、通信量と生成忠実度の両立を示す。","list_summary":"連合LLM投機的復号で上位K確率だけを送信し、2種の確率再構成と誤差上界により通信量を削減する方式。","authors":["Ce Zheng","Xinghan Wang","Jiahong Ning","Yuxuan Shi","Ning Huang","Tingting Yang"],"authors_affiliations":"Pengcheng Laboratory; Dalian Maritime University","published":"2026-04-28","publication":"IEEE International Symposium on Information Theory (ISIT) 2026","publication_type":"査読済み会議論文","publication_status":"ISIT 2026; arXiv v2 (2026-07-04)","lineage":"federated inference / speculative decoding / communication-efficient LLM inference","topics":["連合推論","投機的復号","上位K圧縮","分散LLM推論","エッジ推論"],"importance":"計算量だけでなく、分散投機的復号で語彙全体の確率分布を毎回送る通信ボトルネックを直接対象とし、圧縮による受理率変動まで理論的に結び付けた。","implementation":"論文は方式、理論解析、A800上の実験を提示するが、arXiv本文およびメタデータで公式コード公開URLは確認できない。","hardware_evaluation":"NVIDIA A800 GPU上でLLaMA-7B、LLaMA-13B、サーバ側LLaMA-68Mを実行。","quality_effect":"上位K圧縮は損失を伴うため完全な分布一致は保証しないが、局所再構成誤差・集約偏り・受理率偏りを残余確率質量で上界化する。最終タスク精度や端から端の生成品質の理論解析は将来課題。","source":"https://arxiv.org/abs/2604.25777","sources":["https://arxiv.org/abs/2604.25777","https://arxiv.org/pdf/2604.25777"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript reference section","references_total":24},
-  "reservation":{"claim_id":"claim-5054a5121094256f2071bd0e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-9c66b930469f0eead6be7cda",
+  "job_id": "job-research-c1b7543305e71c40",
+  "data": {
+    "canonical_id": "arXiv:2604.25777",
+    "arxiv_id": "2604.25777",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "eess.SP",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "title": "SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission",
+    "summary": "SpecFedは、複数の異種LLMの確率分布を重み付き平均する連合推論に投機的復号を組み込み、各作業者が語彙全体の確率分布ではなく上位Kトークンの識別子と確率だけを送信することで通信量を削減する方式である。サーバ側では上位K内を再正規化する方式と、残余確率質量を上位K外へ一様再配分する方式の2種類を比較する。局所再構成誤差、集約分布の偏り、投機的復号の受理率変動について残余確率質量に基づく上界を導出し、LLaMA-7Bと13Bの異種2作業者、LLaMA-68M草稿モデル、NVIDIA A800、WMT14英独データで検証した。語彙32,000に対して小さいKでも分布偏りと受理率偏りが小さく、通信量と生成忠実度の両立を示す。",
+    "list_summary": "連合LLM投機的復号で上位K確率だけを送信し、2種の確率再構成と誤差上界により通信量を削減する方式。",
+    "authors": [
+      "Ce Zheng",
+      "Xinghan Wang",
+      "Jiahong Ning",
+      "Yuxuan Shi",
+      "Ning Huang",
+      "Tingting Yang"
+    ],
+    "authors_affiliations": "Pengcheng Laboratory; Dalian Maritime University",
+    "published": "2026-04-28",
+    "publication": "IEEE International Symposium on Information Theory (ISIT) 2026",
+    "publication_type": "査読済み会議論文",
+    "publication_status": "ISIT 2026; arXiv v2 (2026-07-04)",
+    "lineage": "federated inference / speculative decoding / communication-efficient LLM inference",
+    "topics": [
+      "連合推論",
+      "投機的復号",
+      "上位K圧縮",
+      "分散LLM推論",
+      "エッジ推論"
+    ],
+    "importance": "計算量だけでなく、分散投機的復号で語彙全体の確率分布を毎回送る通信ボトルネックを直接対象とし、圧縮による受理率変動まで理論的に結び付けた。",
+    "implementation": "論文は方式、理論解析、A800上の実験を提示するが、arXiv本文およびメタデータで公式コード公開URLは確認できない。",
+    "hardware_evaluation": "NVIDIA A800 GPU上でLLaMA-7B、LLaMA-13B、サーバ側LLaMA-68Mを実行。",
+    "quality_effect": "上位K圧縮は損失を伴うため完全な分布一致は保証しないが、局所再構成誤差・集約偏り・受理率偏りを残余確率質量で上界化する。最終タスク精度や端から端の生成品質の理論解析は将来課題。",
+    "source": "https://arxiv.org/abs/2604.25777",
+    "sources": [
+      "https://arxiv.org/abs/2604.25777",
+      "https://arxiv.org/pdf/2604.25777"
+    ],
+    "code": null,
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary manuscript reference section",
+    "references_total": 24
+  },
+  "reservation": {
+    "claim_id": "claim-9c66b930469f0eead6be7cda",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
