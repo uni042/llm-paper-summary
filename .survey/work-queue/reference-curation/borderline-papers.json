@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:22:00+00:00",
+  "updated_at": "2026-09-19T18:25:30+00:00",
   "record_count": 21,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -201,11 +201,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2312.11805",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.11805",
         "arXiv:2312.11805"
       ],
-      "reason": "Broad multimodal model report; relevant background but not a focused systems paper for immediate Research.",
+      "reason": "Broad model technical report with deployment context, but not a focused systems paper for immediate Research.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:30+00:00",
       "linked_from": [],
       "title": "Gemini: A Family of Highly Capable Multimodal Models"
     },
@@ -213,11 +214,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2404.14219",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.14219",
         "arXiv:2404.14219"
       ],
-      "reason": "Deployment-oriented model report, but primarily a model/data/training report rather than a focused inference system.",
+      "reason": "On-device deployment is relevant context, but this is primarily a broad model technical report rather than a focused systems contribution.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:30+00:00",
       "linked_from": [],
       "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone"
     },
@@ -225,11 +227,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2507.20534",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.20534",
         "arXiv:2507.20534"
       ],
-      "reason": "Broad model/agentic capability report rather than a focused serving, memory, or training-system contribution.",
+      "reason": "Broad model technical report; useful architectural context but lower systems-specific value than focused inference/training-system papers.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:30+00:00",
       "linked_from": [],
       "title": "Kimi K2: Open Agentic Intelligence"
     },
@@ -237,11 +240,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2512.02556",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.02556",
         "arXiv:2512.02556"
       ],
-      "reason": "Broad model technical report with systems context but lower immediate value than focused systems papers.",
+      "reason": "Contains efficient-attention and training details, but remains a broad model report; defer unless its systems components need explicit re-evaluation.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:30+00:00",
       "linked_from": [],
       "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
     },
