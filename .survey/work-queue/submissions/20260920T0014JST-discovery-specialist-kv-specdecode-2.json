@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.19969",
+      "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2609.19969",
+      "paper_path": "papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+      "priority": 96,
+      "reason": "1M contextの552B MoEで、CSA2のcross-layer KV reuseとFP4 KV cacheによりHBM常駐global KVを890 bytes/tokenへ縮小し、SWA Bounded ReplayでSSD/host常駐persistent KVをDeepSeek-V4-Flash比約1/8へ削減する。KV圧縮・階層メモリ・SSD offload・MoEという重点テーマが同一実装で交差するため最優先候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.16648",
+      "title": "GrowMTP: Can RL Grow Its Own Draft Head?",
+      "source_url": "https://arxiv.org/abs/2609.16648",
+      "paper_path": "papers/training/99-other-training-systems/2026-2609.16648-growmtp-online-draft-head-rl-rollout.md",
+      "priority": 84,
+      "reason": "RL rolloutのverification supervisionを利用してdraft headをRL loop内でゼロからオンライン学習し、policy backboneから更新を分離する。Qwen3-4B等でrollout最大2.13x、end-to-end最大1.60x高速化を報告し、speculative decodingをtraining systemへ統合する実装系研究として価値がある。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-20T00:00:00+09:00",
+    "round": "specialist-kv-specdecode-2",
+    "axis": "2609後半のKV圧縮・speculative decoding・RL rollout acceleration",
+    "query_summary": "直前roundのmemory/offload軸から、2609.15-19のspeculative decodingと新規KV圧縮へ切替。ECHO (2609.17241) は最新queueですでにresearch readyのため外部評価後に重複除外し、DeepSeek-V4.1-FlashとGrowMTPを一次arXiv abstractで確認して候補化した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2609.17241"],
+    "next_axis_hint": "次は2609中旬のdisaggregated serving/autoscaling、GPU runtime/kernel、quantized servingを未走査軸として探索する。",
+    "empty_round_reason": null
+  }
+}
