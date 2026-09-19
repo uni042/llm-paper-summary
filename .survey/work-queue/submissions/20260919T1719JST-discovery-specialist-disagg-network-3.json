@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13161",
+      "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+      "source_url": "https://arxiv.org/abs/2609.13161",
+      "paper_path": "papers/inference/03-serving-scheduling/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md",
+      "priority": 89,
+      "reason": "prefill/decode分離をデータセンター間へ拡張し、RelayDecodeでWAN KV転送とdecodeを重畳する3層構成を提案。RadixCache、handoff、multi-stage orchestrationを組み合わせ、H100/H200異種配置でSLA準拠goodputの費用対効果を最大37.5%改善しており、分離サービングとnetwork/KV transferの強いsystems候補。"
+    },
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/03-serving-scheduling/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 86,
+      "reason": "bursty workloadでprefill側が飽和しdecode側が遊休する非対称性に対し、decode nodeへchunked prefillをSLO安全にdeflectしてKV転送自体を回避する。vLLM実装とproduction-style traceでP95 TTFT最大81%削減、SLO attainment最大79%向上を示す。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-disagg-network-3",
+    "axis": "prefill/decode分離・WAN KV transfer・load-aware deflection",
+    "query_summary": "MoE cacheからnetwork/disaggregated servingへ切り替え、WAN跨ぎPDとprefill/decode負荷非対称性を探索。PDDとload-aware prefill deflectionは一次arXiv抄録・定量評価を確認し、最新mainのrepo検索で未登録を確認した。MFS/P-D Serve等の既知系統は除外。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2603.17456","arXiv:2408.08147","arXiv:2606.30391","arXiv:2607.25498"],
+    "next_axis_hint": "energy/power、CPU/heterogeneous runtime、citation expansion、recent-new-arrival crosscheckへ移る",
+    "empty_round_reason": null
+  }
+}
