@@ -1,0 +1,95 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-size-probe-500-20260920",
+  "collector_id": "repository-reference-size-probe",
+  "run_key": "manual-size-probe-2026-09-20",
+  "axis": "structured references pool size probe offset 500",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 1,
+  "page_size": 1,
+  "pages_fetched": 1,
+  "next_cursor": "501",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce07d2aef3f3e2a6c01ef4b724b9357af28e59c1",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "results": [
+    {
+      "canonical_id": "DOI:10.18653/v1/n18-2097",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-2097"
+      ],
+      "doi": "10.18653/v1/n18-2097",
+      "source_url": "https://doi.org/10.18653/v1/n18-2097",
+      "relation_count": 4,
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+        "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md"
+      ],
+      "linked_from_titles": [
+        "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+        "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+        "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+        "TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference"
+      ],
+      "linked_from_lineages": [
+        "llm-serving-scheduling-disaggregation",
+        "テンソル並列推論／通信計算重畳／集合通信融合／配信カーネル"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/n18-2097",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/n18-2097",
+        "url:https://doi.org/10.18653/v1/n18-2097"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.18653/v1/n18-2097",
+        "identity_tokens": [
+          "DOI:10.18653/v1/n18-2097"
+        ],
+        "doi": "10.18653/v1/n18-2097",
+        "source_url": "https://doi.org/10.18653/v1/n18-2097",
+        "relation_count": 4,
+        "linked_from": [
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+          "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md"
+        ],
+        "linked_from_titles": [
+          "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+          "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+          "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+          "TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation",
+          "テンソル並列推論／通信計算重畳／集合通信融合／配信カーネル"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:0c3345e63943e8d4735bd5945a2d5d4292797538a9beaf4b21dbb94a9ccd4f9a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

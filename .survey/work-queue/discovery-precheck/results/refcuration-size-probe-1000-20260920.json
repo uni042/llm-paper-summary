@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-size-probe-1000-20260920",
+  "collector_id": "repository-reference-size-probe",
+  "run_key": "manual-size-probe-2026-09-20",
+  "axis": "structured references pool size probe offset 1000",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 1,
+  "page_size": 1,
+  "pages_fetched": 1,
+  "next_cursor": "1001",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce07d2aef3f3e2a6c01ef4b724b9357af28e59c1",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "results": [
+    {
+      "canonical_id": "arXiv:2601.02780",
+      "identity_tokens": [
+        "arXiv:2601.02780"
+      ],
+      "arxiv_id": "2601.02780",
+      "source_url": "https://arxiv.org/abs/2601.02780",
+      "relation_count": 2,
+      "linked_from": [
+        "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md"
+      ],
+      "linked_from_titles": [
+        "Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter",
+        "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding"
+      ],
+      "linked_from_lineages": [
+        "llm-serving-scheduling-disaggregation",
+        "投機的復号 / LLMサービング・ベンチマーク"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.02780",
+      "identity_tokens": [
+        "id:arXiv:2601.02780",
+        "url:https://arxiv.org/abs/2601.02780"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2601.02780",
+        "identity_tokens": [
+          "arXiv:2601.02780"
+        ],
+        "arxiv_id": "2601.02780",
+        "source_url": "https://arxiv.org/abs/2601.02780",
+        "relation_count": 2,
+        "linked_from": [
+          "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md"
+        ],
+        "linked_from_titles": [
+          "Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter",
+          "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation",
+          "投機的復号 / LLMサービング・ベンチマーク"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c2b1e8a398e1734590f55fa8ea5d14469c6e1ad76929d7273c64f86e30d0809b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

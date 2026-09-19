@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-size-probe-4000-20260920",
+  "collector_id": "repository-reference-size-probe",
+  "run_key": "manual-size-probe-2026-09-20",
+  "axis": "structured references pool size probe offset 4000",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 1,
+  "page_size": 1,
+  "pages_fetched": 1,
+  "next_cursor": "4001",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce07d2aef3f3e2a6c01ef4b724b9357af28e59c1",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "results": [
+    {
+      "canonical_id": "DOI:10.18653/v1/p16-1162",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p16-1162"
+      ],
+      "doi": "10.18653/v1/p16-1162",
+      "source_url": "https://doi.org/10.18653/v1/p16-1162",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md"
+      ],
+      "linked_from_titles": [
+        "Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies"
+      ],
+      "linked_from_lineages": [
+        "投機的復号・異種語彙・トークナイザ互換性・損失なし検証"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/p16-1162",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/p16-1162",
+        "url:https://doi.org/10.18653/v1/p16-1162"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.18653/v1/p16-1162",
+        "identity_tokens": [
+          "DOI:10.18653/v1/p16-1162"
+        ],
+        "doi": "10.18653/v1/p16-1162",
+        "source_url": "https://doi.org/10.18653/v1/p16-1162",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md"
+        ],
+        "linked_from_titles": [
+          "Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies"
+        ],
+        "linked_from_lineages": [
+          "投機的復号・異種語彙・トークナイザ互換性・損失なし検証"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5c8e2dc26d5e0fa7c03bcf7833992a5d104cf70aee77e2eba2c02953b0dcc79d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
