@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 21:01:28 JST**
+> 自動生成: **2026-09-19 21:02:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **50** |
 | 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（1時間26分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（1時間27分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **47** | **2** | **0** | **2** | **0** | **0** | **3** |
-| 合計 | **54** | **5** | **2** | **2** | **1** | **0** | **3** |
+| Discovery | **47** | **4** | **0** | **4** | **0** | **0** | **7** |
+| 合計 | **54** | **7** | **2** | **4** | **1** | **0** | **7** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -159,8 +159,16 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 21:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **3件**
-- 探索軸: page-aware decode runtime・non-GPU accelerator serving field study / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **7件**
+- 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime / disaggregated prefill deflection・agent-aware serving runtime / page-aware decode runtime・non-GPU accelerator serving field study / SSD-backed MoE expert streaming・trained routing prediction・expert prefetch
+- round `specialist-local-runtime-4` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-local-runtime-4.json`
+  - 探索軸: consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-pd-agent-runtime-3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-pd-agent-runtime-3.json`
+  - 探索軸: disaggregated prefill deflection・agent-aware serving runtime
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-runtime-hardware-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2100JST-discovery-specialist-runtime-hardware-2.json`
   - 探索軸: page-aware decode runtime・non-GPU accelerator serving field study
@@ -225,10 +233,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **620** |
+| 成功result未照合のimmutable submission | **622** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **147** |
+| └ Discovery | **149** |
 
 ### 厳格検証が未成立のcompleted job
 
