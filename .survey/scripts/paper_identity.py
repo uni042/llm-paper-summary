@@ -67,6 +67,16 @@ def safe_norm_id(value: Any) -> str | None:
         return text
 
 
+def arxiv_alias_from_identifier(value: Any) -> str | None:
+    if not value:
+        return None
+    text = str(value).strip()
+    match = re.fullmatch(r"(?:DOI:)?10\.48550/arxiv\.(\d{4}\.\d{4,5})", text, re.I)
+    if not match:
+        return None
+    return safe_norm_id("arXiv:" + match.group(1))
+
+
 def field_identifier(field: str, value: Any) -> str | None:
     if not value:
         return None
@@ -102,6 +112,9 @@ def ids_from_url(value: Any) -> set[str]:
         normalized = safe_norm_id("DOI:" + body) if body else None
         if normalized:
             out.add(normalized)
+            arxiv_alias = arxiv_alias_from_identifier(normalized)
+            if arxiv_alias:
+                out.add(arxiv_alias)
     return out
 
 
@@ -132,10 +145,16 @@ def record_identifiers(record: dict[str, Any]) -> set[str]:
         normalized = field_identifier(field, record.get(field))
         if normalized:
             ids.add(normalized)
+            arxiv_alias = arxiv_alias_from_identifier(normalized)
+            if arxiv_alias:
+                ids.add(arxiv_alias)
     for value in record.get("identifiers") or []:
         normalized = safe_norm_id(value)
         if normalized:
             ids.add(normalized)
+            arxiv_alias = arxiv_alias_from_identifier(normalized)
+            if arxiv_alias:
+                ids.add(arxiv_alias)
     for field in URL_FIELDS:
         ids.update(ids_from_url(record.get(field)))
     return ids
