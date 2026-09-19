@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T08:07:06+00:00",
+  "updated_at": "2026-09-19T08:09:28+00:00",
   "last_run_key": "2026-09-19T17:00:00+09:00",
-  "last_round": "specialist-speculative-network-8",
+  "last_round": "specialist-citation-omissions-12",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 11,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 12,
+  "last_empty_round_reason": "独立citation/reference経路も既知候補へ収束",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-uncertainty-scheduling-3",
-      "axis": "出力長不確実性・tail-aware scheduling隣接",
-      "query_summary": "agentic servingから軸を変え、出力長予測・需要不確実性・tail latencyを扱うLLM scheduling研究を探索した。Beyond Predictionは決定論的research jobで既収録completedと判定し、SageSchedとTIEは最新HEADで対応job不在を確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2606.18431"
-      ],
-      "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る",
-      "source_submission": "work-queue/submissions/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json"
-    },
     {
       "run_key": "2026-09-13T09:28:10+09:00",
       "round": "specialist-speculative-serving-4",
@@ -7175,6 +7158,30 @@
       ],
       "next_axis_hint": "OS/page-cache、GPU kernel/runtime、recent September arrivals、citation omissionsを継続確認",
       "source_submission": "work-queue/submissions/20260919T1747JST-discovery-specialist-speculative-network-8.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-citation-omissions-12",
+      "axis": "recent candidatesの関連研究・過去1年重要omission横断",
+      "query_summary": "今回発見したCXL/heterogeneous/KV restoration/speculative系から関連研究方向を横断し、SwiftCache、Apt-Serve、vLLM、InferCept、Prebleなど既知代表系統へ収束。追加の強い未収録候補は確認できなかった。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2504.07494",
+        "arXiv:2309.06180",
+        "arXiv:2402.01869",
+        "arXiv:2407.00023"
+      ],
+      "next_axis_hint": "次回runは新着差分と今回submissionのActions反映後identityから再開",
+      "source_submission": "work-queue/submissions/20260919T1700JST-round12-citation-omissions.json"
     }
   ],
   "axes": {
@@ -12853,6 +12860,19 @@
       "duplicate_ratio": 0.5,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "OS/page-cache、GPU kernel/runtime、recent September arrivals、citation omissionsを継続確認"
+    },
+    "recent candidatesの関連研究・過去1年重要omission横断": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次回runは新着差分と今回submissionのActions反映後identityから再開"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
