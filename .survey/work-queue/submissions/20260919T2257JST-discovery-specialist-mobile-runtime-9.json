@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.18655",
+      "title": "Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM",
+      "source_url": "https://arxiv.org/abs/2604.18655",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md",
+      "priority": 80,
+      "reason": "Hardware-aware on-device inference framework evaluated on Galaxy S24/S25 Qualcomm platforms; combines runtime LoRA switching without recompilation, multi-stream decoding, self-speculative decoding and INT4, reporting 4-6x overall memory/latency improvements across 9 languages and 8 tasks."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-mobile-runtime-9",
+    "axis": "edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding",
+    "query_summary": "agentic KV cacheからedge/local inferenceへ切り替え、実機スマートフォン上のruntime最適化を探索した。2604.18655はGalaxy S24/S25実機評価を持ち、canonical ID/titleをdefault branchで再検索して未収録を確認した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "speculative decoding serving system、次いでCPU/GPU heterogeneous local inferenceとmobile memory hierarchyへ移る",
+    "empty_round_reason": null
+  }
+}
