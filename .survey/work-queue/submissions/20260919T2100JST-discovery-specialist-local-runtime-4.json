@@ -1,0 +1,8 @@
+{
+ "schema_version":1,"transport_version":10,"operation":"submit_discovery_round",
+ "candidates":[
+  {"canonical_id":"arXiv:2607.10183","title":"Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices","source_url":"https://arxiv.org/abs/2607.10183","priority":90,"reason":"consumer device向けCPU-GPU offloadをtensor粒度で静的配置・load-aware動的転送・非同期協調するATSInfer。dense/MoE双方でprefill最大1.94x、decode最大3.29xを報告し、ローカル推論・階層メモリ・PCIe活用の重点テーマに直接合致する。"},
+  {"canonical_id":"arXiv:2604.23467","title":"Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference","source_url":"https://arxiv.org/abs/2604.23467","priority":76,"reason":"autoregressive decodeを静的CUDA Graph replayと動的JIT kernelへ分割するruntime最適化。短系列batch-1でTTFT最大66%削減とP99改善を報告し、kernel launch/graph execution系統の候補として価値がある。"}
+ ],"rejected_candidates":[],
+ "discovery_stats":{"run_key":"2026-09-19T21:00:00+09:00","round":"specialist-local-runtime-4","axis":"consumer CPU-GPU tensor offload・JIT/CUDA Graph runtime","query_summary":"heterogeneous/local inferenceとkernel/graph executionを探索。arXiv:2607.10183と2604.23467を一次arXiv情報で軽量評価し、最新default branch repository searchでID未収録を確認した。","candidate_count":2,"duplicate_filtered_count":0,"novel_candidate_count":2,"accepted_count":2,"duplicate_ratio":0.0,"accepted_canonical_ids":["arXiv:2607.10183","arXiv:2604.23467"],"duplicate_canonical_ids":[],"next_axis_hint":"次はMoE expert placement/cache、CXL/remote memory、またはKV transfer networkへ移る。"}
+}
