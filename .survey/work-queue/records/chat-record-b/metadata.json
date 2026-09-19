@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ba82b7e0582e687a14fee4a3",
-  "job_id": "job-research-e12ae17b96a85ee5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ba82b7e0582e687a14fee4a3",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ba82b7e0582e687a14fee4a3","job_id":"job-research-e12ae17b96a85ee5","data":{"canonical_id":"arXiv:2309.17453","arxiv_id":"2309.17453","doi":"10.48550/arXiv.2309.17453","openreview_id":"NG7sS51zVF","arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI"]},"title":"Efficient Streaming Language Models with Attention Sinks","summary":"StreamingLLMは、長時間ストリーミング生成でKVキャッシュを最近のトークンだけにすると、先頭トークンを捨てた瞬間に注意分布が崩れてパープレキシティが急増する問題を扱う。著者らは意味的重要性と無関係に先頭トークンへ大きな注意値が集まる注意シンク（attention sink）を観測し、先頭4トークン程度のKVと直近トークンのローリングKVキャッシュだけを保持する方式を提案した。再学習なしでキャッシュ量を一定に保ち、Llama-2、MPT、Falcon、Pythiaで400万トークン超まで安定した言語モデリングを示す。再計算付きスライディング窓に対して最大22.2倍高速化し、学習時に専用シンクトークンを置けば1トークンだけで安定化できることも示す。","list_summary":"先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。","authors":["Guangxuan Xiao","Yuandong Tian","Beidi Chen","Song Han","Mike Lewis"],"authors_affiliations":"MIT; Meta AI（論文著者所属）","published":"2023-09-29","publication":"ICLR 2024","publication_type":"国際会議論文","publication_status":"Published; arXiv v4 (2024-04-07)","lineage":"KV cache memory management / streaming inference / attention sinks / length extrapolation","topics":["KVキャッシュ","ストリーミング推論","注意シンク","長文脈","ローリングキャッシュ"],"importance":"長文脈そのものを拡張するのではなく、ストリーミング時に過去全体を保持せず最近の文脈だけを安定利用するための最小KV保持則を示し、後続のKVキャッシュ圧縮・ストリーミング注意研究の基礎となった。","implementation":"公式実装はMIT Han LabのStreamingLLMとして公開され、Llama-2、MPT、Falcon、Pythia向けのローリングKVキャッシュと位置処理を実装する。","hardware_evaluation":"言語モデリング評価は複数モデル規模で実施し、速度評価では再計算付きスライディング窓とのデコード時間を比較する。","quality_effect":"最近のキャッシュだけを残す単純窓注意は品質が崩壊するが、先頭4トークン程度を加えると再計算付き窓に近いパープレキシティへ回復する。ただし保持外の古い内容を検索・利用できる方式ではない。","source":"https://arxiv.org/abs/2309.17453","sources":["https://arxiv.org/abs/2309.17453","https://arxiv.org/html/2309.17453v4","https://openreview.net/forum?id=NG7sS51zVF"],"code":"https://github.com/mit-han-lab/streaming-llm","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":0},"reservation":{"claim_id":"claim-ba82b7e0582e687a14fee4a3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
