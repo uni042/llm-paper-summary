@@ -58,11 +58,13 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
         request.write_text(
             json.dumps(
                 {
-                    "schema_version": 1,
+                    "schema_version": 2,
                     "operation": "precheck_discovery_candidates",
                     "request_id": "req-1",
+                    "collector_id": "collector-1",
                     "run_key": "validation-round",
                     "axis": "memory",
+                    "provider_has_more": False,
                     "records": [
                         {"canonical_id": "arXiv:2609.00001", "title": "Known"},
                         {"canonical_id": "arXiv:2609.99999", "title": "New"},
@@ -84,7 +86,114 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
         self.assertEqual(result["results"][0]["canonical_id"], "arXiv:2609.99999")
         self.assertEqual(result["snapshot_source_commit"], "abc123")
         self.assertTrue(result["receipt"].startswith("sha256:"))
+        self.assertTrue(result["evaluation_allowed"])
+        self.assertEqual(result["decision"], "READY_FOR_EVALUATION")
+        self.assertEqual(result["stop_reason"], "PROVIDER_EXHAUSTED")
         self.assertIn("id:arXiv:2609.99999", result["allowed_records"][0]["identity_tokens"])
+
+    def test_iterative_processor_forces_next_page_and_collapses_cross_page_duplicate(self) -> None:
+        request1 = self.root / "request-1.json"
+        request1.write_text(
+            json.dumps(
+                {
+                    "schema_version": 2,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "req-page-1",
+                    "collector_id": "collector-pages",
+                    "run_key": "validation-round",
+                    "axis": "citations",
+                    "target_unseen": 2,
+                    "provider_has_more": True,
+                    "records": [
+                        {"canonical_id": "arXiv:2609.90001", "title": "New A"},
+                        {"canonical_id": "arXiv:2609.00001", "title": "Known"},
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        first = process_discovery_precheck.process_request(
+            request1,
+            snapshot_dir=self.snapshot,
+            rejection_ledger_path=self.ledger,
+        )
+        self.assertFalse(first["evaluation_allowed"])
+        self.assertEqual(first["decision"], "CONTINUE_FETCH")
+        self.assertEqual(first["unseen_result_count"], 1)
+        self.assertEqual(first["pages_processed"], 1)
+
+        results_dir = self.root / "results"
+        results_dir.mkdir()
+        (results_dir / "req-page-1.json").write_text(
+            json.dumps(first),
+            encoding="utf-8",
+        )
+
+        request2 = self.root / "request-2.json"
+        request2.write_text(
+            json.dumps(
+                {
+                    "schema_version": 2,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "req-page-2",
+                    "collector_id": "collector-pages",
+                    "run_key": "validation-round",
+                    "axis": "citations",
+                    "target_unseen": 2,
+                    "provider_has_more": True,
+                    "previous_request_id": "req-page-1",
+                    "previous_receipt": first["receipt"],
+                    "records": [
+                        {
+                            "source_url": "https://arxiv.org/abs/2609.90001",
+                            "title": "New A",
+                        },
+                        {"canonical_id": "arXiv:2609.90002", "title": "New B"},
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        second = process_discovery_precheck.process_request(
+            request2,
+            snapshot_dir=self.snapshot,
+            rejection_ledger_path=self.ledger,
+        )
+        self.assertTrue(second["evaluation_allowed"])
+        self.assertEqual(second["decision"], "READY_FOR_EVALUATION")
+        self.assertEqual(second["stop_reason"], "TARGET_REACHED")
+        self.assertEqual(second["pages_processed"], 2)
+        self.assertEqual(second["cross_page_duplicate_filtered_count"], 1)
+        self.assertEqual(
+            [row["title"] for row in second["results"]],
+            ["New A", "New B"],
+        )
+
+    def test_iterative_request_requires_explicit_provider_has_more(self) -> None:
+        request = self.root / "request-missing-more.json"
+        request.write_text(
+            json.dumps(
+                {
+                    "schema_version": 2,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "req-missing-more",
+                    "collector_id": "collector-missing-more",
+                    "run_key": "validation-round",
+                    "axis": "references",
+                    "records": [],
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        with self.assertRaises(process_discovery_precheck.DiscoveryPrecheckRequestError):
+            process_discovery_precheck.process_request(
+                request,
+                snapshot_dir=self.snapshot,
+                rejection_ledger_path=self.ledger,
+            )
 
 
 class DiscoveryPrecheckGateTest(unittest.TestCase):
@@ -151,28 +260,43 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "commit", "-qm", f"add {name}"], cwd=self.repo, check=True)
         return f"work-queue/submissions/{name}"
 
-    def _commit_result(self, *, author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com") -> Path:
+    def _commit_result(
+        self,
+        *,
+        author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com",
+        schema_version: int = 1,
+        evaluation_allowed: bool = True,
+    ) -> Path:
         path = self.results / "req-1.json"
-        path.write_text(
-            json.dumps(
+        payload = {
+            "schema_version": schema_version,
+            "operation": "precheck_discovery_candidates",
+            "ok": True,
+            "request_id": "req-1",
+            "run_key": "validation-round",
+            "axis": "memory",
+            "snapshot_source_commit": "abc123",
+            "allowed_records": [
                 {
-                    "schema_version": 1,
-                    "operation": "precheck_discovery_candidates",
-                    "ok": True,
-                    "request_id": "req-1",
-                    "run_key": "validation-round",
-                    "axis": "memory",
-                    "snapshot_source_commit": "abc123",
-                    "allowed_records": [
-                        {
-                            "primary_identity": "id:arXiv:2609.99999",
-                            "identity_tokens": ["id:arXiv:2609.99999"],
-                            "record": {"canonical_id": "arXiv:2609.99999", "title": "New"},
-                        }
-                    ],
-                    "receipt": "sha256:receipt",
+                    "primary_identity": "id:arXiv:2609.99999",
+                    "identity_tokens": ["id:arXiv:2609.99999"],
+                    "record": {"canonical_id": "arXiv:2609.99999", "title": "New"},
                 }
-            ),
+            ],
+            "receipt": "sha256:receipt",
+        }
+        if schema_version >= 2:
+            payload.update(
+                {
+                    "collector_id": "collector-1",
+                    "target_unseen": 10,
+                    "pages_processed": 1,
+                    "evaluation_allowed": evaluation_allowed,
+                    "decision": "READY_FOR_EVALUATION" if evaluation_allowed else "CONTINUE_FETCH",
+                }
+            )
+        path.write_text(
+            json.dumps(payload),
             encoding="utf-8",
         )
         subprocess.run(["git", "add", path.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
@@ -218,6 +342,19 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         }
         result = queue_worker.validate_discovery_precheck(sub)
         self.assertEqual(result["request_id"], "req-1")
+
+    def test_intermediate_iterative_result_cannot_authorize_submission(self) -> None:
+        self._commit_result(schema_version=2, evaluation_allowed=False)
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertIn("not final", str(ctx.exception))
 
     def test_handwritten_result_is_rejected_with_recovery_guidance(self) -> None:
         self._commit_result(author_email="worker@example.com")
