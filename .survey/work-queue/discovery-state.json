@@ -1,60 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T16:04:25+00:00",
+  "updated_at": "2026-09-19T16:06:53+00:00",
   "last_run_key": "2026-09-20T01:01:07+09:00",
-  "last_round": "specialist-recent-memory-serving-01",
+  "last_round": "specialist-nvme-flash-04",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "All raw records were removed by the mandatory authoritative precheck.",
+  "consecutive_empty_rounds": 7,
+  "last_empty_round_reason": "All raw records were removed by authoritative precheck.",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-cxl-kv-12",
-      "axis": "CXL-hybrid SSD-backed KV・photonic pooled memory",
-      "query_summary": "CXLをKV階層/transfer substrateとして使う近接研究を探索し、HyMCache（2607.18141）とPhotonic-CXL Memory Appliance（2607.27187）を一次arXiv情報で軽量評価した。送信前のdefault branch検索では両IDとも既収録を確認できず、最新queueもresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はGPU-direct SSD/NVMeのI/O stack、KV object store、SmartSSD/near-storage compute、またはCXL-attached expert cacheへ軸を広げる。",
-      "source_submission": "work-queue/submissions/20260915T0820JST-discovery-specialist-cxl-kv-12.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-kv-tp-cost-4",
-      "axis": "KV圧縮対テンソル並列のコスト・容量・遅延境界",
-      "query_summary": "KVメモリ不足をGPU追加とcache圧縮のどちらで解消すべきかを定量比較する研究を探索した。arXiv:2608.23962は一次arXiv情報でA100/A40/H100上のcost-normalized比較を確認し、最新repo検索では同IDを確認できなかったため候補化した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は新着・recent revisionへ軸を切り替え、2609中旬のserving / memory / MoE systems論文を探索する。",
-      "source_submission": "work-queue/submissions/20260915T0820JST-discovery-specialist-kv-tp-cost-4.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-ssd-expert-retrieval-13",
-      "axis": "SSD expert cache replacement・CPU-offloaded KV retrieval",
-      "query_summary": "SSD/CXL軸をexpert storageとretrieval-based KVへ展開し、FlashMoE（2601.17063）とParisKV（2602.07721）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はSSD/CXL expert prefetchの近接研究、GPU-direct storage stack、またはdisaggregated KV cache transferのrecent 2026論文を追加探索する。",
-      "source_submission": "work-queue/submissions/20260915T0822JST-discovery-specialist-ssd-expert-retrieval-13.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-kvdrive-14",
@@ -7443,6 +7398,67 @@
       ],
       "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference.",
       "source_submission": "work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json"
+    },
+    {
+      "run_key": "2026-09-20T01:01:07+09:00",
+      "round": "specialist-energy-disagg-02",
+      "axis": "energy-aware disaggregated Attention-FFN serving and operator-level DVFS",
+      "query_summary": "AFlex was identified from recent primary arXiv search; authoritative precheck found it already represented.",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.01891"
+      ],
+      "next_axis_hint": "CUDA-VMM elastic KV reclamation and NVMe-direct/flash inference",
+      "source_submission": "work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json"
+    },
+    {
+      "run_key": "2026-09-20T01:01:07+09:00",
+      "round": "specialist-elastic-kv-03",
+      "axis": "CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction",
+      "query_summary": "Elastic KV Cache was identified as a recent systems result with a negative-result analysis; authoritative precheck found it already represented.",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.23658"
+      ],
+      "next_axis_hint": "NVMe-direct KV offload and NAND-centric inference",
+      "source_submission": "work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json"
+    },
+    {
+      "run_key": "2026-09-20T01:01:07+09:00",
+      "round": "specialist-nvme-flash-04",
+      "axis": "NVMe-direct KV offload and NAND-centric edge LLM inference",
+      "query_summary": "DUAL-BLADE and NVLLM were found via primary arXiv storage-system search; authoritative precheck found both already represented.",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.26557",
+        "arXiv:2604.25699"
+      ],
+      "next_axis_hint": "Shift away from recently saturated memory/storage axes toward new September scheduling, networking, and speculative-serving papers.",
+      "source_submission": "work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json"
     }
   ],
   "axes": {
@@ -14148,6 +14164,45 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference."
+    },
+    "energy-aware disaggregated Attention-FFN serving and operator-level DVFS": {
+      "last_run_key": "2026-09-20T01:01:07+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "CUDA-VMM elastic KV reclamation and NVMe-direct/flash inference"
+    },
+    "CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction": {
+      "last_run_key": "2026-09-20T01:01:07+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "NVMe-direct KV offload and NAND-centric inference"
+    },
+    "NVMe-direct KV offload and NAND-centric edge LLM inference": {
+      "last_run_key": "2026-09-20T01:01:07+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Shift away from recently saturated memory/storage axes toward new September scheduling, networking, and speculative-serving papers."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
