@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260920T0115JST-specialist-length-aware-05",
+  "run_key": "2026-09-20T01:01:07+09:00",
+  "axis": "length-aware batching, KV prefetch, and multi-instance scheduling",
+  "snapshot_source_commit": "64ec4da52255f6094c0b15d1c013667f7ca1fcfe",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unseen_result_count": 0,
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:74ff7658f14bd35643545ba3472b31f7cd5ae4ef2689a22a5e7a889c59fb5d14",
+  "next_action": "Evaluate only records in results[]. Do not re-add filtered records. When writing submit_discovery_round, include discovery_precheck.result_path and this receipt."
+}
