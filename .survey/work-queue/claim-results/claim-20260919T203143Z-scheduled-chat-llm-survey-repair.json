@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T203143Z-scheduled-chat-llm-survey-repair",
+  "worker_id": "llm-research-survey-scheduled-chat",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-b41274093aac35dc",
+      "claim_id": "claim-84eae2b617467dab6d9fa45e",
+      "worker_id": "llm-research-survey-scheduled-chat",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-84eae2b617467dab6d9fa45e",
+      "claimed_at": "2026-09-19T20:32:02+00:00",
+      "expires_at": "2026-09-19T21:32:02+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b41274093aac35dc"
+      ],
+      "job": {
+        "job_id": "job-research-b41274093aac35dc",
+        "type": "research",
+        "parent_job_id": "job-4b7aa531112dcd29",
+        "priority": 97,
+        "canonical_id": "arXiv:2312.12456",
+        "arxiv_id": "2312.12456",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+        "source_url": "https://arxiv.org/abs/2312.12456",
+        "paper_path": "papers/inference/02-cpu-offload/2023-2312.12456-powerinfer.md",
+        "selection_reason": "Directly on-scope GPU-CPU hybrid inference engine exploiting activation locality to run large models on consumer GPUs.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:22:19+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-19T20:31:20+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-70dbcf11b20ef9fe6a096897"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-70dbcf11b20ef9fe6a096897.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T20:32:02+00:00",
+  "checkpoint_released": 0
+}
