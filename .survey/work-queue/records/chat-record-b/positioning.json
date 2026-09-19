@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
-  "job_id": "job-research-d5e83a73eb90a616",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e2c1eb9d827322f9fbb93f0b","job_id":"job-research-d5e83a73eb90a616",
+ "data":{
+  "limitations":"AWQは重み専用量子化を主対象とし、活性量子化やKVキャッシュ量子化は扱わない。尺度探索には少量ながら較正データと各層の活性統計収集が必要で、完全なデータ非依存方式ではない。チャネル尺度を過度に増やすと量子化グループの最大値が変わり非顕著重みの誤差が増えるため探索が必要。INT2の極低ビットではAWQ単独で十分ではなくGPTQとの併用が必要になる。TinyChatの速度結果は専用の融合逆量子化、装置別パッキング、非線形カーネル融合を含むため、AWQ形式そのもののアルゴリズム利得と実装利得を分離して解釈する必要がある。",
+  "differences":"GPTQは較正入力に対する層出力再構成と二次情報を使って量子化誤差を補償するのに対し、AWQは平均活性振幅から顕著チャネルを見つけ、等価尺度変換とクリッピングだけで保護するため逆伝播・回帰を行わない。SmoothQuant等のW8A8は活性も8ビット化して計算形式を揃えるが、AWQは低バッチ生成が重み帯域律速であることに着目してW4A16/W3A16を選ぶ。単純RTNやllama.cpp型の一般的INT4と比べ、量子化前にチャネル重要度を反映して品質を高める。TinyChatは量子化方式だけでなく実行時逆量子化と装置別重み配置まで共同設計する。",
+  "implementation_status":"公式実装はmit-han-lab/llm-awqで公開され、AWQ量子化とTinyChat推論を提供する。論文ではHugging Face Transformers、TensorRT-LLM、DirectML、Intel Neural Compressor、Vertex AI、SageMaker、AMD、FastChat、vLLM、LMDeploy等への採用を報告する。TinyChatはRTX 4090、Jetson Orin、RTX 4070、Raspberry Piを含む複数端末で実機評価済み。",
+  "research_positioning":"訓練後量子化の中で、活性統計を『重みの顕著性』判定へ使い、混合精度の精度利得を規則的な全低ビット形式へ変換した代表的手法である。システム面では、低ビット重みで削減したメモリ帯域を実際のトークン生成速度へ変換するには、逆量子化を行列積へ融合し、SIMD/GPUに合わせて重みをパックし、周辺演算も融合する必要があることを示す。後続の量子化カーネル、量子化オフロード、ローカルLLM推論を比較する際の基準点であり、SSD/CPUオフロードと組み合わせる場合も転送量を直接4分の1近くへ下げる前処理として重要である。"
+ },
+ "reservation":{"claim_id":"claim-e2c1eb9d827322f9fbb93f0b","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
