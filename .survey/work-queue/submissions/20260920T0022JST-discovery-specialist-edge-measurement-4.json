@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.08307",
+      "title": "A Measurement Study of LLM Inference Trade-offs Across Edge Continuum Hardware",
+      "source_url": "https://arxiv.org/abs/2609.08307",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.08307-edge-continuum-inference-tradeoffs.md",
+      "priority": 76,
+      "reason": "Jetson AGX Orinとnear-edge CPU/GPUを統制条件で比較し、accuracy・footprint・prefill/decode latency・energyを同時測定する。量子化variantとstreaming overheadを含むPareto分析により、edge配置判断をsystem-levelに評価しており、推論基盤の実測比較資料として収録価値がある。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "identity": "arXiv:2608.15118",
+      "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination",
+      "source_url": "https://arxiv.org/abs/2608.15118",
+      "rejection_reason": "tutorial-style taxonomy/surveyが主目的で、新規の推論system手法・実装成果を提示する原著候補ではないため今回のDiscovery品質基準では不採用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-20T00:00:00+09:00",
+    "round": "specialist-edge-measurement-4",
+    "axis": "GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張",
+    "query_summary": "GPU kernel/runtime・quantization・collective communicationを探索。2608.15118はsurvey中心のため不採用としてimmutable rejectionに記録し、2609.08307は複数hardware/quantizationの実測system studyとして採用した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はagentic servingのtail scheduling、interception、memory reuseとproduction trace系へ探索軸を切り替える。",
+    "empty_round_reason": null
+  }
+}
