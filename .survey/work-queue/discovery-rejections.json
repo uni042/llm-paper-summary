@@ -7,9 +7,9 @@
   ],
   "updated_at": "2026-09-19T17:00:00+09:00",
   "submission_count": 21,
-  "research_terminal_rejection_count": 4,
-  "rejection_observation_count": 51,
-  "rejection_record_count": 49,
+  "research_terminal_rejection_count": 5,
+  "rejection_observation_count": 52,
+  "rejection_record_count": 50,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -165,6 +165,28 @@
       "run_key": "2026-09-17T07:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json",
       "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2505.03780": {
+      "primary_identity": "id:arXiv:2505.03780",
+      "identity_tokens": [
+        "id:arXiv:2505.03780",
+        "title:an io characterizing study of offloading llm models and kv caches to nvme ssd",
+        "url:https://arxiv.org/abs/2505.03780"
+      ],
+      "canonical_id": "arXiv:2505.03780",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD",
+      "source_url": "https://arxiv.org/abs/2505.03780",
+      "rejection_reason": "Canonical identity is invalid for the queued title. The job declares arXiv:2505.03780 as 'An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD', but the official arXiv primary PDF for arXiv:2505.03780 is 'GPU Performance Portability Needs Autotuning' by Burkhard Ringlein, Thomas Parnell, and Radu Stoica (arXiv v3, cs.AR). This is a different paper and cannot be used as source evidence for the queued NVMe-offload title. Because the canonical primary identity itself resolves to another work, retrying this job under the same identity would be meaningless; no five-slot record was generated.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T09:49:40+00:00",
+      "last_rejected_at": "2026-09-19T09:49:40+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-158b34272885fa400b854050.json",
+      "origin": "research_terminal_rejection"
     },
     "id:arXiv:2505.21919": {
       "primary_identity": "id:arXiv:2505.21919",
