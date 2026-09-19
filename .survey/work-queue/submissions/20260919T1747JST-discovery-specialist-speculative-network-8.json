@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/03-serving-scheduling/2026-2605.08151-spectre-hybrid-speculative-serving.md",
+      "priority": 87,
+      "reason": "multi-model cloudの遊休tail-modelをremote drafterとして再利用し、draft/verify並列化・priority scheduling・prompt compressionをSGLangへ実装。Qwen3-235B-A22Bを含む評価でautoregressive比最大2.28倍、強いspeculative baseline比さらに66%改善するsystems研究。"
+    },
+    {
+      "canonical_id": "arXiv:2608.16477",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "source_url": "https://arxiv.org/abs/2608.16477",
+      "paper_path": "papers/inference/03-serving-scheduling/2026-2608.16477-pallas-proactive-kv-cache-migration.md",
+      "priority": 81,
+      "reason": "mobile handover前にKV cacheをstable prefix再計算とevolving suffix streamingへ分割し、source推論と並行してtargetへproactive migrationするvLLM-based runtime。100-500Mbps環境でservice interruptionを2.28-89.68倍削減しており、KV migration/network schedulingの独立系統として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2506.11309",
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2506.11309",
+      "paper_path": "papers/inference/03-serving-scheduling/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+      "priority": 85,
+      "reason": "speculative decodingを非同期・分離構成へ再設計し、parallel tree generation、tree-aware KV management、fused kernelでdraft overheadとTP通信をcritical pathから外す。5 model familyで平均1.75倍、Llama3-70Bを8 Hopper GPUで348 tok/sと報告。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-speculative-network-8",
+    "axis": "speculative serving・KV migration・asynchronous decoding",
+    "query_summary": "KV restorationからspeculative servingとnetwork state migrationへ切り替えた。SPECTRE/Pallas/SwiftSpecは一次arXiv抄録でsystem mechanismと実装・定量評価を確認し、最新main repo検索でID未登録を確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2402.01869","arXiv:2408.08147","arXiv:2309.06180"],
+    "next_axis_hint": "OS/page-cache、GPU kernel/runtime、recent September arrivals、citation omissionsを継続確認",
+    "empty_round_reason": null
+  }
+}
