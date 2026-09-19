@@ -1,83 +1,56 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260917-0830-rerun-0907",
+  "attempt_id": "update-20260920-0830",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "af3462530f3f1c1d63b6a448442220ce2cd27b1c",
+      "expected_blob_sha": "3ad4c3b059635d66834aa5e1830584326f3f4771",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-15**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-17**"
+          "old": "- フレームワーク差分の最終確認: **2026-09-17**",
+          "new": "- フレームワーク差分の最終確認: **2026-09-20**"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-15の差分確認では、公式リリースと開発元リポジトリを基準に9月13日以降の主要な投機的デコード、DeepSeek-V4.1向けkernel fusion・multi-stream実行関連変更を再確認した。",
-          "new": "この2つは分けて扱う。2026-09-17の差分確認では、公式リリースと開発元リポジトリを基準に9月15日以降のDeepSeek-V4.1向け圧縮KV・attention融合、FP4 indexer kernel融合、および主要LLMの正式公開を再確認した。"
+          "old": "この2つは分けて扱う。2026-09-17の差分確認では、公式リリースと開発元リポジトリを基準に9月15日以降のDeepSeek-V4.1向け圧縮KV・attention融合、FP4 indexer kernel融合、および主要LLMの正式公開を再確認した。",
+          "new": "この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。"
         },
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-15\n",
-          "text": "### 2026-09-17\n\n#### vLLM\n\n- **DeepSeek-V4.1でFlashMLA Mega AttentionとNVFP4圧縮KV cacheを統合 — merged 2026-09-16 UTC**\n\n  FlashMLAのmega-attention backendをDeepSeek-V4.1へ追加し、Q RoPE・sparse attention・inverse RoPE・FP8 castを1 launchへ融合した。圧縮KV recordはNVFP4を使い、従来のFP8系recordより約45%小さい。SM100では対応topologyで既定backendとなり、単一GB300のdecode microbenchmarkではTP1で最大約1.45倍。end-to-end評価ではNVFP4経路と従来FP8経路のaccuracy差はsampling noise内だった。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/56935\n\n#### SGLang\n\n- **DeepSeek-V4.1 low-ratio indexerのRoPE・FP4量子化・packing・cache storeを融合 — merged 2026-09-16 UTC**\n\n  key/queryのRoPE、FP4 fake quantization、68-byte index-K形式へのpacking、paged cache storeを専用CUDA/Triton kernelへまとめた。CUDA・Triton・reference pathで504条件のbyte-level一致を検証しており、DeepSeek-V4.1のFP4 indexerを複数kernelから融合経路へ移す基盤更新。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/39656\n\n#### 新規LLM\n\n- **Gemini 3.8 Live / Gemini 3.8 Live Extended Thinking — 2026-09-15 GA**: GoogleがLive API向けaudio-to-audio model 2種を一般提供。標準Liveは低latency対話、Extended Thinkingはlive audio中のbackground reasoningを重視する。\n\n  一次資料: https://ai.google.dev/gemini-api/docs/changelog\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "cb151bc782b7da86ee5ca757515fc5bd1cf1b583",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-15\n",
-          "text": "## 2026-09-17\n\n- **DeepSeek-V4.1向けFlashMLA Mega Attention + NVFP4圧縮KV cache — merged 2026-09-16 UTC**: Q RoPE、sparse attention、inverse RoPE、FP8 castをmega-attention kernelへ融合し、NVFP4 compressed KV recordを追加。SM100の対応topologyでは既定backendとなる。NVFP4 recordは従来のFP8系recordより約45%小さく、単一GB300・CUDA Graph有効のdecode microbenchmarkではTP1で最大約**1.45倍**。TP2〜TP8は概ね同等で、prefill性能は未測定。GPQA / GSM8Kのend-to-end比較ではaccuracy差はsampling noise内。[PR #56935](https://github.com/vllm-project/vllm/pull/56935)\n\n"
+          "anchor": "### 2026-09-17\n",
+          "text": "### 2026-09-20\n\n#### vLLM\n\n- **Kimi-K3 routed expert量子化を追加 — merged 2026-09-18 UTC**\n\n  Kimi-K3のMoE routed expertに量子化経路を追加し、`RedHatAI/Kimi-K3-NVFP4-REAP25`で検証した。routed expert側のweight footprintと帯域削減を狙う更新で、PR自体には対応するend-to-end速度比較は提示されていない。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/57430\n\n#### SGLang\n\n- **Ascend A5向けKimi-K3 servingを追加し、圧縮W4A8 MoE・shared-expert dual-stream等を統合 — merged 2026-09-18 UTC**\n\n  compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-stream、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、DSpark MTP向けFIA v2、prefill向けchunk KDA kernel等をまとめて導入した。4-node / TP32 / EP32、128K input・1K output・DSpark block 7の提示条件ではmean TTFT 5604.54 ms、mean TPOT 23.02 ms、throughput 47 tok/s。GSM8K 200問ではaccuracy 0.98。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/39589\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "ef63031d6a51ccf7dead7c27fa2f2ce6a5272e05",
+      "expected_blob_sha": "94956c1131ea0d6077bd4ea6a992e84e926b5e73",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 2026-09-15\n",
-          "text": "## 2026-09-17\n\n- **DeepSeek-V4.1 low-ratio indexerのRoPE + FP4 packingを融合 — merged 2026-09-16 UTC**: key/queryのRoPE、per-32 UE8M0 FP4 fake quantization、68-byte index-K形式へのpacking、paged cache storeをCUDA/Triton kernelへ統合。CUDA kernel・Triton pack kernel・reference pathを504条件でbyte単位照合し、round-to-nearest-evenを含むFP4 indexer経路を検証した。既存C4 indexerの既定roundingは変更しない。[PR #39656](https://github.com/sgl-project/sglang/pull/39656)\n\n- **Hopper向けblock-FP8 matmulにtiny-M専用SWAP_AB / SPLIT_K tuningを追加 — merged 2026-09-16 UTC**: DeepSeek-V4.1向けにH200の7 shapeへM=1専用のTriton kernel設定を追加し、M>=2は既存kernelを維持する。CUDA Graph replayを含めて検証し、既存configには影響しない限定最適化。[PR #39657](https://github.com/sgl-project/sglang/pull/39657)\n\n"
+          "anchor": "## 2026-09-17\n",
+          "text": "## 2026-09-20\n\n- **Ascend A5向けKimi-K3 servingを追加・MoE/DSpark/prefill経路をまとめて最適化 — merged 2026-09-18 UTC**: compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-streamと専用TP size、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、MTP branch向けFIA v2、prefill branch向けchunk KDA kernel、DSpark P/D分離修正を導入。4-node・TP32/EP32・128K input/1K output・DSpark block 7の提示条件ではmean TTFT **5604.54 ms**、mean TPOT **23.02 ms**、throughput **47 tok/s**。GSM8K 200問ではaccuracy **0.98**。比較対象を揃えたbefore/after速度差はPRにないため、改善率は未確定。[PR #39589](https://github.com/sgl-project/sglang/pull/39589)\n\n"
         }
       ]
     },
     {
       "path": "llm-releases/README.md",
-      "expected_blob_sha": "ee5ff1b19512b7c55c681de70a6f78fdf7035b86",
+      "expected_blob_sha": "336a8d985db3f1f7215014826e5e1944eed751d6",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-15**",
-          "new": "- リリース情報の最終確認: **2026-09-17**"
+          "old": "- リリース情報の最終確認: **2026-09-17**",
+          "new": "- リリース情報の最終確認: **2026-09-20**"
         },
         {
           "op": "replace_once",
-          "old": "2026-09-15に主要提供元の公式公開を再確認した。9月13日以降に現在追跡している主要model familyへ追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。",
-          "new": "2026-09-17に主要提供元の公式公開を再確認した。Googleは9月15日にLive API向けのGemini 3.8 LiveとGemini 3.8 Live Extended Thinkingを一般提供（GA）した。トップ表は各model familyの最新リリースを示す。"
-        },
-        {
-          "op": "replace_once",
-          "old": "| 2026-09-02 | Gemini 3.8 Flash | Gemini | text / image / audio / video入力、1M input context、64K outputを持つ高速汎用APIモデル。coding・agent task・multi-step reasoningを更新。 | [Gemini系](gemini.md) |",
-          "new": "| 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/gemini.md",
-      "expected_blob_sha": "c3d670d0ee21d94f656e068a5b02d5c5d505090b",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "| 2026-09-02 | Gemini 3.8 Flash |",
-          "text": "| 2026-09-15 | Gemini 3.8 Live | Live API向けの低latency audio-to-audioモデル。real-time voice agentと対話を主用途とし、interleaved reasoning、既定のasynchronous function calling、session client content updateを備える。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |\n| 2026-09-15 | Gemini 3.8 Live Extended Thinking | Live API向けの高reasoning audio-to-audioモデル。live audio interaction中のbackground reasoningを支援し、より深い推論が必要な音声agent用途を対象とする。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |\n"
+          "old": "2026-09-17に主要提供元の公式公開を再確認した。Googleは9月15日にLive API向けのGemini 3.8 LiveとGemini 3.8 Live Extended Thinkingを一般提供（GA）した。トップ表は各model familyの最新リリースを示す。",
+          "new": "2026-09-20に主要提供元の公式公開を再確認した。9月17日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。"
         }
       ]
     }
   ],
-  "summary": "2026-09-17の08:30 update route再実行: vLLM DeepSeek-V4.1 FlashMLA Mega Attention + NVFP4 compressed KV、SGLang DeepSeek-V4.1 FP4 indexer fusion / Hopper FP8 tuning、Gemini 3.8 Live / Live Extended Thinking GAを反映。"
+  "summary": "2026-09-20の08:30 update route: vLLM Kimi-K3 routed-expert quantization、SGLang Ascend A5向けKimi-K3 W4A8 MoE/DSpark/prefill最適化を追加。主要LLM正式公開は9月17日以降にトップ表更新対象なし。"
 }
