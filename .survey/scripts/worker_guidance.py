@@ -40,13 +40,43 @@ PROFILES = {
             "不足時のページ送りは precheck に任せ、別クエリへ切り替えるのは同一結果集合を使い切った後にする。",
         ],
     },
+    "recover_discovery_submissions.py": {
+        "task": "失敗・旧形式Discovery submissionの正規経路への回収",
+        "next": [
+            "標準出力の recovered_count / recovered[] を確認する。",
+            "recovered_count>0 の場合は各 recovered[].job_id と research_jobs_added を確認し、refresh_queue_snapshot.py で next-jobs.json を更新する。",
+            "next-jobs.json に ready Research/Audit が出たら claim_worker_with_banks.py の正規claim経路で1件だけ取得する。",
+            "回収できなかったsubmissionは手編集せず、対応する result の error / next_action / recovery_steps を確認する。",
+        ],
+        "recovery": [
+            "失敗済みDiscovery submissionを上書き・削除しない。",
+            "schema v3 precheck proofが不足している場合は process_discovery_precheck.py から新しい正規submissionを作る。",
+            "synthetic job_idを新規作成せず、self-describing submit_discovery_round または実在するready Discovery jobだけを使う。",
+            "修正後に recover_discovery_submissions.py → refresh_queue_snapshot.py の順で再確認する。",
+        ],
+    },
+    "refresh_queue_snapshot.py": {
+        "task": "Discovery反映後を含む次ジョブ一覧の再生成",
+        "next": [
+            ".survey/work-queue/next-jobs.json の counts / next_jobs を確認する。",
+            "ready Research/Audit がある場合は claim_worker_with_banks.py の正規claim経路で max_jobs=1 の割り当てを取得する。",
+            "Research/Audit がなく candidate在庫補充が必要なら、新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
+            "next-jobs.json を直接編集してResearch jobを追加・選択しない。",
+        ],
+        "recovery": [
+            "repo-root がリポジトリrootを指しているか確認する。",
+            "jobs/state/resultを直接修正せず、queue_worker.py でsubmission処理と整合を先に行う。",
+            "queue_worker.py 正常終了後に refresh_queue_snapshot.py を再実行する。",
+        ],
+    },
     "queue_worker.py": {
         "task": "キュー整合・次ジョブ一覧の更新",
         "next": [
+            ".survey/work-queue/results/ に今回の未処理submissionと同名のresultが生成されたか確認する。",
+            "submit_discovery_round result では ok=true / research_jobs_added / final_duplicate_filtered_count / next_action を確認する。",
             ".survey/work-queue/next-jobs.json の next_jobs と counts を確認する。",
-            "Research/Audit がある場合は claim request を作成し、claim_worker_with_banks.py の正規経路で max_jobs=1 の割り当てを取得する。",
-            "割り当てがなければ最新 queue を再確認し、Discovery が必要なら process_discovery_precheck.py の schema v3 経路へ進む。",
-            "next-jobs.json や state.json を直接編集してジョブを取得・完了扱いにしない。",
+            "ready Research/Audit がある場合は claim_worker_with_banks.py の正規経路で max_jobs=1 の割り当てを取得する。",
+            "Research/Audit がなくDiscovery補充が必要なら process_discovery_precheck.py の schema v3 経路へ進む。next-jobs.json や state.json を直接編集しない。",
         ],
         "recovery": [
             "work-queue の jobs / submissions / state を手作業で成功扱いに変更しない。",
