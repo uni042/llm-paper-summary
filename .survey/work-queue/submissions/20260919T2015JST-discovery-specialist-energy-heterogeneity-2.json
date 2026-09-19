@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.30391",
+      "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2606.30391",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-festina-energy-aware-serverless-llm-serving.md",
+      "priority": 87,
+      "reason": "共有GPU上のserverless LLM servingでrequest placement、SM partitioning、GPU operating point、workload consolidationをTTFT/TBT SLO下で協調制御するFestinaを提案。4種のSOTA serving system等との比較でSLO達成率を維持しつつenergy最大56%削減を報告し、共有GPU資源制御と電力最適化を統合する実装候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.12707",
+      "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2603.12707",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-heteroserve-cross-tier-gpu-heterogeneity.md",
+      "priority": 83,
+      "reason": "MLLMのvision encodingとlanguage generationをmodality境界で分離し、転送量をKV cacheのGB級からembeddingのMB級へ落としてcommodity PCIe上の異種GPU tierを利用するHeteroServeを実装。固定予算でTokens/$を37%改善し、異種GPU・分離推論の設計点として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2511.00807",
+      "title": "FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2511.00807",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-energy-efficient-heterogeneous-gpu-serving.md",
+      "priority": 80,
+      "reason": "地理分散・異種GPU群でparallelism、query routing、GPU frequency scaling、Least-Laxity-First schedulingを協調最適化し、production workloadでenergy 28.6%、emission 45.45%削減を報告する。単純なDVFSではなくGPU種別・時空間負荷・公平性を同時に扱うため、energy-aware serving系統の比較対象として価値がある。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-energy-heterogeneity-2",
+    "axis": "energy-aware serving・heterogeneous GPU・shared-GPU resource control",
+    "query_summary": "前roundのmemory pathから独立して、異種GPU、serverless/shared GPU、DVFS、電力・SLO協調制御を探索。AFlexは直近探索済みのため再投入せず、default branch canonical ID検索で未収録の実装・評価が強い3件を送信した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2608.01891", "arXiv:2609.03335"],
+    "next_axis_hint": "次はmulti-tenant isolation、GPU interference、request preemption/interception、agentic serving runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
