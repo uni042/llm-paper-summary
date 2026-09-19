@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0ab169f82c4835ab94982856","job_id":"job-research-8ff9887a327d8124","data":{"hardware":"継続事前学習は64基のNVIDIA A100でDeepSeek-Coder-6.7BとLlama3.1-8Bを各1週間未満。推論評価はAMD EPYC 7742、256GBホストメモリ、NVIDIA A100 GPUのサーバ。","software":"推論基盤はvLLM 0.6.2。学習データはStarCoderData由来1080億トークン。DeepSeek-Coder-6.7BとLlama3.1-8Bをfragment tokenizationで継続事前学習し、Llama3.1には比較用FIM能力も追加する。","methodology":"能力評価はHumanEval Infillingのsingle-line、multi-line、random-spanでpass@1、CrossCodeEvalで完全一致率と編集類似度を測る。元モデル+FIM、元モデル+EFIM、強化モデル+FIM、強化モデル+EFIMを比較する。推論評価は16ユーザー、各5ラウンド、平均入力2355/出力128トークンで、各ユーザーは前応答受信後に次要求を送る閉ループ負荷。BaselineはPSM再利用なし、FIMはPSMでprefix再利用、EFIMはprefix+suffix再利用。平均要求遅延、入力トークンスループット、要求スループット、KV再利用率を測り、ユーザー数感度も調べる。","scope":"主対象はコード穴埋めで、変化パターンは接頭部末尾への追加を中心に評価する。接尾部増分時はPSMへフォールバックする。推論は単一A100環境で、GPU KV容量を超える高同時実行ではEFIMの再利用率も低下する。学習費用比較のDeepSeek V3例は実測自社配備ではなく説明用試算。"},"reservation":{"claim_id":"claim-0ab169f82c4835ab94982856","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-e5893e2a1bdb6a4c8b277786",
+  "job_id": "job-research-2a8c8a978e102c67",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e5893e2a1bdb6a4c8b277786",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

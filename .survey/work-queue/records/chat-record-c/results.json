@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0ab169f82c4835ab94982856","job_id":"job-research-8ff9887a327d8124","data":{"overview":"fragment tokenizationなしでEFIMを直接使うと語途中生成を含む課題で品質が大きく落ちるが、強化モデルでは元FIMとほぼ同等まで回復する。推論では通常FIMのprefix再利用が平均遅延21%削減・スループット26%向上なのに対し、EFIMはprefixとsuffixを再利用して平均遅延52%削減、要求スループット98%向上を達成し、平均要求遅延を2秒未満へ下げる。","key_results":[{"metric":"平均要求遅延","value":"52%削減","baseline":"PSM再利用なしBaseline","condition":"2モデル、16 users、5 rounds、平均2355入力/128出力","interpretation":"prefixとsuffixの両KVを再利用し、プリフィル再計算を大幅に減らす。"},{"metric":"要求スループット","value":"98%向上","baseline":"Baseline","condition":"同一推論負荷","interpretation":"再利用範囲拡大で入力処理量を減らし、単一A100の処理要求数をほぼ倍増する。"},{"metric":"通常FIM再利用","value":"遅延21%削減・throughput 26%向上","baseline":"Baseline","condition":"prefix KVのみ再利用","interpretation":"従来要求間cacheにも効果はあるがsuffix再計算が残るためEFIMより小さい。"},{"metric":"KV再利用率","value":"EFIM 約80%、FIM 40%未満（低〜中同時実行域）","baseline":"FIM","condition":"ユーザー数感度試験","interpretation":"プロンプト変換で再利用可能範囲をほぼ倍化するが、GPU容量超過でEFIMも低下する。"},{"metric":"HumanEval random-span品質","value":"DeepSeek 76.77→52.44（未強化EFIM）、強化EFIM 75.61; Llama 62.99→38.35、強化EFIM 64.27","baseline":"original LLM with FIM","condition":"subtokenを含み得るrandom-span","interpretation":"直接EFIMの品質崩壊をfragment tokenizationが回復する。"},{"metric":"継続学習費用","value":"10,752 A100 GPU-hours","baseline":"Llama3.1-8B初期学習1.46M H100 GPU-hoursの0.74%","condition":"64 A100×7日を上限として試算","interpretation":"既存モデルへの能力追加は初期学習より小さい費用で可能。"}],"negative_results":"元モデルへEFIMをそのまま適用するとHumanEval random-spanでDeepSeekは76.77から52.44、Llamaは62.99から38.35へ低下し、CCEval完全一致率も大幅低下する。ユーザー数増加で完了要求KVがGPU容量を超えるとEFIM再利用率が落ち、遅延増加が急になる。接尾部側の増分ではEFIM形式を使わずPSMへ戻す。","interpretation":"穴埋めservingの再計算はKV保存容量不足だけでなく、プロンプトのトークン順序による論理的invalidatonから生じる。順序を再設計すれば既存prefix cacheをそのまま活用できるが、モデルが新しい生成境界を扱えるよう学習データ側も合わせて変える必要がある。","quality_impact":"single/multi-lineでは未強化EFIMでもFIMとの差は1%未満だが、subtokenが現れるrandom-span/CCEvalで顕著に悪化する。fragment tokenization後のEFIMは元FIMと概ね同等のpass@1、完全一致率、編集類似度を維持する。"},"reservation":{"claim_id":"claim-0ab169f82c4835ab94982856","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-e5893e2a1bdb6a4c8b277786",
+  "job_id": "job-research-2a8c8a978e102c67",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e5893e2a1bdb6a4c8b277786",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
