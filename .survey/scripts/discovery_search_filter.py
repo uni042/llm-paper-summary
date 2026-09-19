@@ -25,7 +25,7 @@ class SnapshotUnavailableError(RuntimeError):
 
 
 PageFetcher = Callable[[str | None], dict[str, Any]]
-DEFAULT_PREFETCH_UNSEEN = 10
+DEFAULT_PREFETCH_UNSEEN = 20
 REJECTION_LEDGER_SOURCE = "immutable_discovery_submissions.rejected_candidates"
 
 
@@ -255,7 +255,7 @@ def collect_until_unseen(
     ``fetch_page(cursor)`` returns an object with a ``records`` list and a
     ``next_cursor`` value. Intermediate pages are filtered and accumulated internally;
     the caller receives only the final buffer once ``target_unseen`` has been reached or
-    the provider is exhausted. The default threshold is ten unseen papers.
+    the provider is exhausted. The default threshold is twenty unseen papers.
     """
     if target_unseen <= 0:
         raise ValueError("target_unseen must be greater than zero")
