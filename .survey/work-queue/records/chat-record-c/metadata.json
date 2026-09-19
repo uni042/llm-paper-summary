@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ddbd5f7c97d18185436bf163",
-  "job_id": "job-research-1a87bd753fb86450",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddbd5f7c97d18185436bf163",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ddbd5f7c97d18185436bf163","job_id":"job-research-1a87bd753fb86450",
+ "data":{"canonical_id":"arXiv:2609.17863","arxiv_id":"2609.17863","doi":"10.48550/arXiv.2609.17863","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?","summary":"LLM推論最適化は異なるモデル・GPU・品質指標で個別speedupを報告するため、実配備で組合せを比較できない。本研究はQwen2.5-7B-Instruct/vLLM 0.12をL4、A100 80GB PCIe、H100 PCIeで54構成実測し、実測点で校正したシミュレータにより量子化、KV圧縮、投機的デコード、バッチング、疎注意と組合せを同一の品質・遅延・費用軸へ配置するPareto atlasを構築する。36構成中18が非支配、組合せは15中9がfrontierへ入り、単独方式21中9より高率だった。品質測定を入れるとnaive FP8 KV cacheの0/200正答など速度だけでは見えない破綻を排除できる。","list_summary":"54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。","authors":["Srikanta Datta Tumkur","Jay Iyer","Mehar Simhadri","Sai Pavan Kumar","Sai Kapil Kumar","Ramesh Nampelly"],"authors_affiliations":"Vizuara","published":"2026-09-15","publication":"arXiv:2609.17863v1 [cs.AI]","publication_type":"arXivプレプリント","publication_status":"arXiv v1公開","lineage":"推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching","topics":["LLM inference","Pareto frontier","quantization","KV cache","speculative decoding","batching","serving economics"],"importance":"個別最適化のspeedupを足し合わせるのではなく、同一モデル・GPU・品質軸でstackを比較し、制約別にどの構成が支配的かを示す。推論基盤選択の横断比較として有用。","implementation":"vLLM 0.12実測とVidur系profiled simulatorによるmeasure-then-simulate手法。RunPod実機でanchorを取得。","hardware_evaluation":"RunPod L4、A100 80GB PCIe、H100 PCIe。July 2026価格は$0.39/$1.39/$2.89 per hour。","quality_effect":"GSM8K 200問5-shotで精度を別測定し、AWQのstrict精度低下、FP8 weightsのほぼ無損失、naive FP8 KVの完全破綻を検出。","source":"https://arxiv.org/abs/2609.17863","sources":["https://arxiv.org/abs/2609.17863","https://arxiv.org/pdf/2609.17863"],"code":null,"project":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv PDF全文とReferences節まで確認。個別配列への転記は省略。","references_total":0},
+ "reservation":{"claim_id":"claim-ddbd5f7c97d18185436bf163","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
