@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:32:25 JST**
+> 自動生成: **2026-09-20 01:37:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **48** |
 | 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-20 00:48:02 JST（44分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-20 00:48:02 JST（49分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **3** | **0** | **1** | **0** | — |
+| Research | **12** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **68** | **8** | **7** | **0** | **1** | **0** | **0** |
+| 合計 | **66** | **5** | **4** | **0** | **1** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,29 +150,14 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
-  - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
-  - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0ff59bc0d504d0b2b89bbcc6.json`
-  - paper: `papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md`
-- **成功** `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?
-  - job: `.survey/work-queue/jobs/job-research-1a87bd753fb86450.json`
-  - result: `.survey/work-queue/results/research/attempt-bb1ec81341e2780a2eb5259f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bb1ec81341e2780a2eb5259f.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e5893e2a1bdb6a4c8b277786.json` (job `job-research-2a8c8a978e102c67`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-e5893e2a1bdb6a4c8b277786.json` (`ok=true`)
-- **成功** `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
-  - job: `.survey/work-queue/jobs/job-research-8ff9887a327d8124.json`
-  - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json`
-  - paper: `papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md`
+- 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-7c1d01d3a896395f0388795a.json` (job `job-research-7353bc1b63a704fc`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-7c1d01d3a896395f0388795a.json` (`ok=false`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -253,8 +238,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **637** |
-| └ Research | **488** |
+| 成功result未照合のimmutable submission | **638** |
+| └ Research | **489** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **2** |
