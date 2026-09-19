@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"canonical_id":"arXiv:2607.18141","title":"HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory","source_url":"https://arxiv.org/abs/2607.18141","paper_path":"papers/inference/01-offload-hierarchical-memory/2026-2607.18141-hymcache-cxl-hybrid-memory.md","priority":95,"reason":"CXL-hybrid memoryのdevice DRAMとSSD-backed capacityを組み合わせ、multi-turn KV reuseをTB級へ拡張する。request-level prefix prefetchとwrite bufferingでDRAMをread stagingに使い、実CXL-HM prototypeでlocal LMCache比3.0倍、PD分離構成1.45倍を報告。SSD/CXL/KV階層化の重点テーマに直結する。"},
+    {"canonical_id":"arXiv:2605.18071","title":"KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference","source_url":"https://arxiv.org/abs/2605.18071","paper_path":"papers/inference/01-offload-hierarchical-memory/2026-2605.18071-kvdrive-multi-tier-kv-cache.md","priority":94,"reason":"GPU・host DRAM・SSDの3階層でKV cache配置、pipeline scheduling、cross-tier coordinationを共同設計する長文脈推論system。I/OとCPU/GPU計算をoverlapする実装で精度を維持しつつ最大1.74倍throughputを報告し、SSDを単なる退避先でなくdecode pipelineの能動的tierとして扱う。"},
+    {"canonical_id":"arXiv:2606.16135","title":"SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing","source_url":"https://arxiv.org/abs/2606.16135","paper_path":"papers/inference/01-offload-hierarchical-memory/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md","priority":88,"reason":"同一server内の低KV需要modelが余剰GPU memoryを提供し、高需要modelのprefix KVをNVLink経由で共有するcross-model memory pooling。active layerのみlocal HBMへ保持し、vLLM/SGLang比でP99 TTFT最大69%削減、最大context 3.98倍を報告する。CPU/SSD offloadを避ける異種GPU memory tieringとして有用。"}
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {"run_key":"2026-09-19T17:00:00+09:00","round":"specialist-kv-hierarchy-3","axis":"長文脈KV・CXL/SSD階層・cross-model GPU memory sharing","query_summary":"MoE cache軸から独立してKV cacheのCXL/SSD/host/GPU階層化へ移動。Robust KV Cache Management (2607.16892) は既知候補として早期除外し、一次arXiv抄録でHyMCache、KVDrive、SwiftCacheを評価。最新mainのcanonical ID検索で未登録を確認した。","candidate_count":4,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2607.16892"],"next_axis_hint":"次はnetwork/RDMA KV transferまたはGPU runtime/kernelの新着へ移る","empty_round_reason":null}
+}
