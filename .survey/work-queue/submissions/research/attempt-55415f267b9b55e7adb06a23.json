@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-55415f267b9b55e7adb06a23",
+  "job_id": "job-research-57e41c4cd47dec82",
+  "claim_id": "claim-55415f267b9b55e7adb06a23",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "reason": "一次資料全文を再取得できなかった。IEEE Xplore document 11568525 / DOI 10.1109/LCA.2026.3703982 は2026-06-16公開のIEEE Computer Architecture Letters 25(2), pp.259-262として書誌・抄録を確認できたが、本文全文は取得できなかった。題名・DOIで公式/著者公開経路を再探索し、KAIST TERA Lab公式サイトとKAIST EE公式セミナーページでは同テーマのHBF資料および2026-02-10の『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』講演の存在を確認したものの、この査読論文そのものの全文ではないため代用しなかった。ResearchGateもfull-text unavailableで著者へのrequestのみ。二次資料やabstractから未確認の5-slot科学的内容を生成せず、再試行可能なblockedとして保存する。",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-a21e1445aad5-hbm-hbf-centric-memory-pooling-architecture-with-custom-base-die-for-terabyte-scale-llm-inference.md",
+  "retrieval_evidence": [
+    "https://ieeexplore.ieee.org/document/11568525/",
+    "https://tera.kaist.ac.kr/",
+    "https://ee.kaist.ac.kr/en/seminars/hbf-technology-workload-analysis-and-roadmap/",
+    "https://www.researchgate.net/publication/407166523_HBM-HBF-Centric_Memory_Pooling_Architecture_With_Custom_Base_Die_for_Terabyte-Scale_LLM_Inference"
+  ]
+}
