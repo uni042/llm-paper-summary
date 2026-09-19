@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T17:00:09+00:00",
+  "updated_at": "2026-09-19T17:04:03+00:00",
   "last_run_key": "2026-09-20T01:00:00+09:00",
-  "last_round": "manual-fixedsource-openalex-round1",
+  "last_round": "fixedsource-openalex-01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-agentic-kv-15",
-      "axis": "agent semanticsを使うKV eviction・prefetch・TTL・offload scheduling",
-      "query_summary": "agentic servingへ探索を広げ、CacheScout（2608.14624）、Tokencake（2510.18586）、Continuum（2511.02230）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はserving scheduler全般とspeculative decoding systemへ探索範囲を広げ、memory/offload系との差分が明確な強い未収録候補を探す。",
-      "source_submission": "work-queue/submissions/20260915T0826JST-discovery-specialist-agentic-kv-15.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-tiered-storage-5",
@@ -7462,6 +7447,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次roundは別queryとしてMoE expert offload/cacheまたはCXL/NVMe階層メモリを固定source_urlで探索する。",
       "source_submission": "work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json"
+    },
+    {
+      "run_key": "2026-09-20T01:00:00+09:00",
+      "round": "fixedsource-openalex-01",
+      "axis": "OpenAlex search: LLM inference serving KV cache",
+      "query_summary": "OpenAlexの単一固定検索結果URLをschema-v3 precheckへ渡し、page_size=5で同一cursor集合を3ページ走査。raw 15件からauthoritative identity precheckで既収録3件を除外し、未収録12件を軽量評価して強候補3件を送信した。",
+      "candidate_count": 12,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 9,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 7,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.25,
+      "final_duplicate_ratio": 0.2222222222222222,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次roundは同一検索URLの続きではなく、別collectorとして重要serving論文のforward citationまたはMoE expert offloadの固定検索結果集合を開始する。",
+      "source_submission": "work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json"
     }
   ],
   "axes": {
@@ -14209,16 +14212,16 @@
     },
     "OpenAlex search: LLM inference serving KV cache": {
       "last_run_key": "2026-09-20T01:00:00+09:00",
-      "rounds": 1,
-      "candidate_count": 15,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 12,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 12,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.2,
-      "final_duplicate_ratio": 0.0,
-      "next_axis_hint": "次roundは別queryとしてMoE expert offload/cacheまたはCXL/NVMe階層メモリを固定source_urlで探索する。"
+      "rounds": 2,
+      "candidate_count": 27,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 21,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 19,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2222222222222222,
+      "final_duplicate_ratio": 0.09523809523809523,
+      "next_axis_hint": "次roundは同一検索URLの続きではなく、別collectorとして重要serving論文のforward citationまたはMoE expert offloadの固定検索結果集合を開始する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -14452,6 +14455,29 @@
       "cooldown": false,
       "last_run_key": "2026-09-20T01:00:00+09:00",
       "last_round": "manual-fixedsource-openalex-round1"
+    },
+    "window-6578e929ae357fa3ee96": {
+      "topic": "llm-inference-serving-kv-cache",
+      "source": "openalex",
+      "date_range": "2025-01-01..2026-09-20",
+      "category": "inference-serving",
+      "citation_direction": "none",
+      "query_family": "large-language-model-inference-serving-kv-cache",
+      "search_window_key": "window-6578e929ae357fa3ee96",
+      "scan_count": 1,
+      "raw_result_count": 15,
+      "unseen_result_count": 12,
+      "duplicate_filtered_count": 3,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 12,
+      "candidate_accepted_count": 3,
+      "last_position": "cursor-after-page-3",
+      "unseen_rate": 0.8,
+      "duplicate_rate": 0.2,
+      "candidate_acceptance_rate": 0.25,
+      "cooldown": false,
+      "last_run_key": "2026-09-20T01:00:00+09:00",
+      "last_round": "fixedsource-openalex-01"
     }
   },
   "recent_search_windows": [
@@ -14664,6 +14690,27 @@
       "duplicate_rate": 0.2,
       "candidate_acceptance_rate": 1.0,
       "last_position": "3 cursor pages"
+    },
+    {
+      "topic": "llm-inference-serving-kv-cache",
+      "source": "openalex",
+      "date_range": "2025-01-01..2026-09-20",
+      "category": "inference-serving",
+      "citation_direction": "none",
+      "query_family": "large-language-model-inference-serving-kv-cache",
+      "search_window_key": "window-6578e929ae357fa3ee96",
+      "run_key": "2026-09-20T01:00:00+09:00",
+      "round": "fixedsource-openalex-01",
+      "raw_result_count": 15,
+      "unseen_result_count": 12,
+      "duplicate_filtered_count": 3,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 12,
+      "candidate_accepted_count": 3,
+      "unseen_rate": 0.8,
+      "duplicate_rate": 0.2,
+      "candidate_acceptance_rate": 0.25,
+      "last_position": "cursor-after-page-3"
     }
   ],
   "search_window_history_limit": 96,
