@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T15:31:03.237154+00:00",
+  "updated_at": "2026-09-19T15:38:26.678042+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T15:31:03.237154+00:00",
+      "last_recorded_at": "2026-09-19T15:38:26.678042+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 304,
+        "research_completed": 305,
         "audit_completed": 0,
         "discovery_completed": 191,
         "blocked": 39,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35390597143:1",
-          "recorded_at": "2026-09-18T20:17:33.261521+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35390597143",
-            "run_attempt": "1",
-            "source_sha": "6d1416f8ca0fbf36044344f69f255acb35afc773"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35390718463:1",
           "recorded_at": "2026-09-18T20:18:35.081209+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35452399444:1",
+          "recorded_at": "2026-09-19T15:38:26.678042+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35452399444",
+            "run_attempt": "1",
+            "source_sha": "e82106c8fc37da04b448d0d935b0a5e5ee18fad8"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23872,6 +23872,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-376e535ed84f7cfa",
+          "type": "research",
+          "canonical_id": "arXiv:2609.19969",
+          "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26607,7 +26615,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 768,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
