@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:33:40.286188+00:00",
+  "updated_at": "2026-09-19T06:35:49.041438+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:33:40.286188+00:00",
+      "last_recorded_at": "2026-09-19T06:35:49.041438+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18694,24 +18694,10 @@
         "discovery_completed": 149,
         "blocked": 38,
         "new_jobs": 235,
-        "new_papers": 284,
+        "new_papers": 291,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35337869512:1",
-          "recorded_at": "2026-09-18T11:08:13.660405+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35337869512",
-            "run_attempt": "1",
-            "source_sha": "7ce80756c1a365b3d189b4846b8b2aa0ef4e3eb6"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35342443212:1",
           "recorded_at": "2026-09-18T12:01:49.521989+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35426859368:1",
+          "recorded_at": "2026-09-19T06:35:49.041438+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "35426859368",
+            "run_attempt": "1",
+            "source_sha": "6d2bbd94790fc23d1935555470192cec964cb1b2"
+          },
+          "signals": [
+            "paper_materialized"
           ]
         }
       ],
@@ -25329,7 +25329,14 @@
         "arXiv:2603.28018",
         "arXiv:2607.08993",
         "arXiv:2607.16339",
-        "arXiv:2609.15504"
+        "arXiv:2609.15504",
+        "DOI:10.1109/hpca68181.2026.11408460",
+        "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+        "arXiv:2412.18934",
+        "arXiv:2504.11816",
+        "arXiv:2510.24051",
+        "arXiv:2608.00101",
+        "arXiv:2609.18123"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -25677,8 +25684,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 745,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 752,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

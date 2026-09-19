@@ -39,7 +39,7 @@ importance: 既存NVLSを単なる集合通信高速化器としてではなく�
 hardware_evaluation: NVIDIA DGX-H100を模した8 GPU・4 NVSwitch構成を主評価とし、GPU数32までのスケーラビリティもシミュレーション。NVLSシミュレータは実機NCCL AllReduce測定と比較し平均誤差3.87%。
 quality_effect: モデル品質を変える近似ではなく通信・実行順序を変えるシステム最適化であり、数値精度への品質劣化は主張していない。評価は主に性能シミュレーションである。
 references_checked_at: '2026-09-19'
-references_source: primary manuscript reference section
+references_source: arxiv-html-reference-section
 references_total: 54
 source: https://doi.org/10.1109/HPCA68181.2026.11408460
 sources:
@@ -49,7 +49,17 @@ sources:
 implementation: Accel-SimへHopper機能とCAIS命令・GPU側協調機構を追加し、BookSim2へNVLSおよびCAISのスイッチ内マージを追加したサイクル精密シミュレーション実装。論文中に公式コード公開URLの記載は確認できない。
 last_checked: '2026-09-19'
 code: ''
-references: []
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2105.13120
+  arxiv_id: '2105.13120'
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
 last_audited: null
 audit_version: 0
 ---

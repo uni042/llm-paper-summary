@@ -8,7 +8,7 @@
   "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
   "paper_path": "papers/inference/99-other-inference-systems/2020-2026.00098-tetris-efficient-long-context-llm-serving-with-chunkwise-dynamic-sequence-parallelism.md",
   "selection_reason": "ISCA 2026の査読論文。長文脈servingでsequence parallelismをrequest単位ではなくtoken chunk単位に動的割当し、disaggregated clusterでstage-specific parallelismとresource fragmentationを同時に扱う。最大4.35x TTFT改善、median TBT最大40.1%削減、request capacity最大45%増を報告する強いserving候補。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-19T00:02:41+00:00",
-  "completed_at": "2026-09-19T00:02:41+00:00",
-  "retry_not_before": "2026-09-19T02:31:31+00:00"
+  "retry_queued_at": "2026-09-19T06:34:33+00:00"
 }

@@ -8,7 +8,7 @@
   "source_url": "https://ieeexplore.ieee.org/document/11568525/",
   "paper_path": "papers/inference/99-other-inference-systems/2026-a21e1445aad5-hbm-hbf-centric-memory-pooling-architecture-with-custom-base-die-for-terabyte-scale-llm-inference.md",
   "selection_reason": "IEEE Computer Architecture Letters 2026の一次査読論文。HBM背後にHigh Bandwidth Flashをstackし、custom base dieでlayer-wise prefetchとbuffered write-backをhost非介在で処理してTB級memory poolを構成する。LLaMA-4 Maverickのsimulationで極端なmemory pressure下最大87.4x throughputを報告し、HBF/SSD階層memory設計の直接的な研究価値がある。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-19T00:59:19+00:00",
-  "completed_at": "2026-09-19T00:59:19+00:00",
-  "retry_not_before": "2026-09-19T02:31:31+00:00"
+  "retry_queued_at": "2026-09-19T06:34:33+00:00"
 }

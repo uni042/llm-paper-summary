@@ -17,5 +17,16 @@
   "created_at": "2026-09-16T19:06:02+00:00",
   "completed_at": "2026-09-19T02:20:06+00:00",
   "blocker": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2401.11240 を対象に、GitHub横断検索でarXiv PDF/absへの参照、LoRA serving paper list、CaraServe技術ノートまでは確認したが、著者公式またはarXiv一次本文の取得可能コピーは得られなかった。arXiv PDFの直接取得も試みたが、実行基盤が『URLをweb.runで先に開く必要がある』として拒否し、その時点でweb取得系は明示的な呼出し上限に達しており追加の一次資料経路を安全に開けなかった。二次ノートや検索断片から5-slotを推測生成していない。この取得制約は今回runの一次資料取得系に対する実際のplatform/tool limitだが、GitHub正本操作自体は継続可能であるためwhole-run failureにはせず、論文単位を一時blockedとして保存する。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-a1bac985be00bf6316d3c783.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a1bac985be00bf6316d3c783.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-19T02:20:06+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-19T02:20:06+00:00",
+      "reason": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2401.11240 を対象に、GitHub横断検索でarXiv PDF/absへの参照、LoRA serving paper list、CaraServe技術ノートまでは確認したが、著者公式またはarXiv一次本文の取得可能コピーは得られなかった。arXiv PDFの直接取得も試みたが、実行基盤が『URLをweb.runで先に開く必要がある』として拒否し、その時点でweb取得系は明示的な呼出し上限に達しており追加の一次資料経路を安全に開けなかった。二次ノートや検索断片から5-slotを推測生成していない。この取得制約は今回runの一次資料取得系に対する実際のplatform/tool limitだが、GitHub正本操作自体は継続可能であるためwhole-run failureにはせず、論文単位を一時blockedとして保存する。"
+    }
+  ],
+  "last_blocked_at": "2026-09-19T02:20:06+00:00",
+  "retry_not_before": "2026-09-19T07:34:33+00:00"
 }
