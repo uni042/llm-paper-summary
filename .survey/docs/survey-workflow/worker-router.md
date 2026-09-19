@@ -103,6 +103,20 @@ Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資�
 
 探索主体ワーカーのmulti-round submissionは自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
 
+### 4.3 Discovery submissionからResearchへの一本道
+
+Discovery後半は次の順序を正規経路とする。途中を手作業で代替してはならない。
+
+1. `process_discovery_precheck.py` のschema v3 resultが `READY_FOR_EVALUATION` / `evaluation_allowed=true` になったことを確認する。
+2. `allowed_records` だけを軽量評価し、候補0〜5件を `operation: submit_discovery_round` の不変submissionとして `.survey/work-queue/submissions/<unique>.json` に保存する。submissionは対応するprecheck result path / receiptを参照する。
+3. `queue_worker.py` にsubmission処理を任せる。workerはResearch job IDを合成したり、`jobs/*.json` / `state.json` を直接書き換えたりしない。
+4. 同名の `.survey/work-queue/results/<unique>.json` を確認し、`ok=true`、`research_jobs_added`、`final_duplicate_filtered_count`、`next_action` を読む。
+5. `refresh_queue_snapshot.py` または `queue_worker.py` が更新した `.survey/work-queue/next-jobs.json` を確認する。
+6. ready Research/Audit が現れたら `claim_worker_with_banks.py` の正規claim経路で**1件だけ**取得する。割当て後はclaim resultが指定したrecord bankを使い、Research処理へ進む。
+7. `research_jobs_added=0` でもrun終了理由にしない。最終重複排除や低優先度除外を確認し、必要なら別探索軸をschema v3 precheckから開始する。
+
+失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` → `claim_worker_with_banks.py` の順へ戻る。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
+
 1探索軸が0件、全重複、低採用率、単一provider障害でも、それだけでrunを終わらせない。通常検索、forward citation、backward reference、隣接分野、query family、providerを切り替える。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
 
 ## 5. 重複排除
