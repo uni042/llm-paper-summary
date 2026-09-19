@@ -38,6 +38,7 @@ TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
 DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")
 DISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
+DISCOVERY_FIXED_SOURCE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/FIXED_SOURCE_ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
@@ -368,11 +369,20 @@ def _submission_path_added_after_marker(
 
 
 def _iterative_discovery_precheck_required(sub: dict) -> bool:
-    """Require schema-v2 terminal precheck for submissions added after ITERATIVE_ENFORCED."""
+    """Require schema-v2+ terminal precheck for submissions added after ITERATIVE_ENFORCED."""
     return _submission_path_added_after_marker(
         sub,
         DISCOVERY_ITERATIVE_PRECHECK_MARKER,
         cache_key_suffix="iterative",
+    )
+
+
+def _fixed_source_discovery_precheck_required(sub: dict) -> bool:
+    """Require schema-v3 fixed-source pagination after FIXED_SOURCE_ENFORCED."""
+    return _submission_path_added_after_marker(
+        sub,
+        DISCOVERY_FIXED_SOURCE_PRECHECK_MARKER,
+        cache_key_suffix="fixed-source",
     )
 
 
@@ -412,23 +422,22 @@ def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
         "discovery_precheck_required",
         reason,
         next_action=(
-            "Route each raw search page/batch through the iterative Discovery precheck gate. "
-            "If it returns CONTINUE_FETCH, fetch the next page/cursor/window and chain a new request. "
-            "Evaluate candidates only after a workflow result returns READY_FOR_EVALUATION, then create "
-            "a NEW immutable Discovery submission that references that final result."
+            "Create one schema-v3 Discovery precheck request for a fixed provider search result URL/API query. "
+            "The precheck itself must fetch page 1, then page 2, and later pages of that SAME result set until "
+            "the unseen buffer is ready or the provider is exhausted. Then create a NEW immutable Discovery "
+            "submission referencing that final result."
         ),
         recovery_steps=[
             "Do not edit or overwrite the failed Discovery submission.",
-            "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with schema_version=2, "
+            "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with schema_version=3, "
             "operation 'precheck_discovery_candidates', request_id, collector_id, the same run_key/axis, "
-            "explicit provider_has_more, and the current raw search records.",
+            "provider, and one fixed source_url/API query.",
+            "Do not put hand-picked records[] in a schema-v3 request and do not change query/date/topic to emulate pagination.",
             "Wait for .survey/work-queue/discovery-precheck/results/<same-name>.json with ok=true.",
-            "If decision=CONTINUE_FETCH, do not evaluate candidates. Fetch the next page/cursor/window and "
-            "create a NEW request carrying previous_request_id and previous_receipt from that result.",
-            "Repeat until evaluation_allowed=true and decision=READY_FOR_EVALUATION.",
-            "Evaluate only records in that final result's results[] array; filtered records must not be re-added.",
+            "The workflow result must have evaluation_allowed=true and decision=READY_FOR_EVALUATION.",
+            "Evaluate only records in that result's results[] array; filtered records must not be re-added.",
             "Create a NEW submit_discovery_round submission and set discovery_precheck.request_id, "
-            "discovery_precheck.result_path, and discovery_precheck.receipt from the final result.",
+            "discovery_precheck.result_path, and discovery_precheck.receipt from that result.",
         ],
     )
 
@@ -498,24 +507,32 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
         raise _precheck_guidance("Discovery precheck receipt does not match the referenced result.")
 
     schema_version = result.get("schema_version")
+    fixed_source_required = _fixed_source_discovery_precheck_required(sub)
     iterative_required = _iterative_discovery_precheck_required(sub)
+    if fixed_source_required and (
+        isinstance(schema_version, bool)
+        or not isinstance(schema_version, int)
+        or schema_version < 3
+    ):
+        raise _precheck_guidance(
+            "This Discovery submission is after FIXED_SOURCE_ENFORCED and must reference a schema-v3 "
+            "fixed-source pagination result. Schema-v1/v2 results cannot authorize new submissions."
+        )
     if iterative_required and (
         isinstance(schema_version, bool)
         or not isinstance(schema_version, int)
         or schema_version < 2
     ):
         raise _precheck_guidance(
-            "This Discovery submission is after ITERATIVE_ENFORCED and must reference a schema-v2 "
-            "iterative precheck result. Historical schema-v1 results cannot authorize new submissions."
+            "This Discovery submission is after ITERATIVE_ENFORCED and must reference schema-v2 or newer precheck."
         )
-    if iterative_required or (
+    if fixed_source_required or iterative_required or (
         isinstance(schema_version, int) and not isinstance(schema_version, bool) and schema_version >= 2
     ):
         if result.get("evaluation_allowed") is not True or result.get("decision") != "READY_FOR_EVALUATION":
             raise _precheck_guidance(
-                "Referenced iterative Discovery precheck result is not final. "
-                "Follow next_action, fetch the next page/cursor/window, and continue the same collector "
-                "until READY_FOR_EVALUATION."
+                "Referenced Discovery precheck result is not final. Use the canonical precheck path and "
+                "reference only READY_FOR_EVALUATION."
             )
 
     meta = sub.get("discovery_stats") if isinstance(sub.get("discovery_stats"), dict) else {}
