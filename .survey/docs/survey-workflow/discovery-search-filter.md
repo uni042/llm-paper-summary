@@ -4,9 +4,13 @@
 
 ## 実行強制契約
 
-`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後、Scheduled Chatはこのfilterを任意の参照実装として扱わない。Discovery modeの各raw検索バッチは `.survey/work-queue/discovery-precheck/requests/*.json` へ保存し、専用workflowが最新mainからidentity snapshot/rejection ledgerを再構築して本filterを実行する。workerへ候補評価対象として渡してよいのはworkflow生成resultの `results[]` だけである。
+`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後、Scheduled Chatはこのfilterを任意の参照実装として扱わない。現在の強制経路は **workerがproviderの1ページ/1バッチを取得し、workflow precheckが未収録bufferを累積する反復protocol** とする。
 
-最終 `submit_discovery_round` は対応するworkflow生成resultのrequest_id/result_path/receiptを必須とし、queue processorがGit commit author provenanceとcandidate identityを検証する。これにより手順書の読み飛ばし、GitHub code search等の別経路、手書きresultによる迂回をfail-closedにする。拒否時はresultに正規precheck経路への `next_action` と `recovery_steps` を返す。
+最初のrequestは `schema_version: 2`、`collector_id`、`provider_has_more`、`records[]` を必須とし、`previous_request_id` / `previous_receipt` は付けない。専用workflowは最新mainからidentity snapshot/rejection ledgerを再構築してfilterを実行する。未収録bufferが `target_unseen`（既定10）未満で `provider_has_more=true` の場合、resultは `evaluation_allowed=false` / `decision=CONTINUE_FETCH` を返す。この段階ではcandidate評価もDiscovery submissionも禁止する。
+
+workerは次ページ/cursor/offset、またはpagination非公開providerなら次の同一collector内search windowを取得し、**新しいimmutable request**へ `previous_request_id` と `previous_receipt` を付けて送る。workflowは前回bufferを最新snapshotで再検証したうえで新ページを追加し、ページ間identity/alias重複も畳み込む。10件以上に達した、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` を返す。
+
+最終 `submit_discovery_round` は **READY_FOR_EVALUATIONを返した最終result** のrequest_id/result_path/receiptを必須とし、queue processorがGit commit author provenance、terminal判定、candidate identityを検証する。中間の `CONTINUE_FETCH` resultをsubmissionへ参照してもfail-closedで拒否する。これにより手順書の読み飛ばし、1ページだけの探索、GitHub code search等の別経路、手書きresultによる迂回を防ぐ。
 
 ## 正本
 
@@ -33,11 +37,11 @@ fuzzy title判定は `paper_identity.py` の共通実装を使い、既定thresh
 
 ## workerへ渡す前のprefetch buffer
 
-Discoveryの標準経路では、1ページごとの検索結果をcandidate評価workerへ返さない。`discovery_search_filter.collect_until_unseen(...)` がproviderのpage/cursor取得を内包し、既収録・既投入・過去の評価落ち・ページ間重複を除外した**未収録かつ未評価落ちの検索結果が10件たまるまで**複数ページを内部で取得・蓄積する。
+Discoveryの標準経路では、1ページごとの検索結果をcandidate評価workerへ返さない。`discovery_search_filter.collect_until_unseen(...)` が定義する「filterしながら10件までページを進める」意味論を、強制precheckではworker/workflowの反復protocolとして実現する。providerアクセス自体はworkerが担当し、workflow precheckが前回resultのbufferを受け継いでcanonical filter・再検証・ページ間dedupe・到達判定を担当する。
 
-標準閾値は `DEFAULT_PREFETCH_UNSEEN = 10` とする。10件はcandidate採用ノルマではなく、candidate評価へ一度に渡す前処理済み検索結果bufferの大きさである。10件のうち何件をcandidateへ採用するかは後段の品質評価で決める。
+標準閾値は `DEFAULT_PREFETCH_UNSEEN = 10` とする。10件はcandidate採用ノルマではなく、candidate評価へ一度に渡す前処理済み検索結果bufferの大きさである。10件未満かつproviderに続きがある間は `CONTINUE_FETCH` なので、workerは評価へ進まず次ページを取得する。
 
-最後に取得したページで10件を超えた場合、そのページ内の未収録結果を切り捨てないため、workerへ返るbufferは10件より多くてもよい。providerが尽きた場合は10件未満でも、その時点までのbufferを返す。
+最後に取得したページで10件を超えた場合、そのページ内の未収録結果を切り捨てない。providerが尽きた場合は10件未満でも `READY_FOR_EVALUATION` とし、その時点までの累積bufferを返す。
 
 ## 検索結果取得時の必須処理
 
@@ -79,7 +83,7 @@ collectorからworkerへ渡された論文をcandidate評価した結果、submi
 
 ## provider adapter契約
 
-`collect_until_unseen(fetch_page, ...)` の `fetch_page(cursor)` は、検索provider固有のpage/cursor/offset処理を隠蔽し、少なくとも次の形を返す。
+ローカル/テスト用の `collect_until_unseen(fetch_page, ...)` では `fetch_page(cursor)` がprovider固有のpage/cursor/offset処理を隠蔽する。Scheduled Chatの強制precheck経路では同じ責務をworkerが担い、各page/batchを新しいschema-v2 requestとして送る。概念上のprovider pageは少なくとも次の形に対応する。
 
 ```json
 {
