@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.16450",
+      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+      "source_url": "https://arxiv.org/abs/2609.16450",
+      "paper_path": "papers/inference/07-speculative-decoding/2026-2609.16450-early-bird-decoding.md",
+      "priority": 90,
+      "reason": "拡散LLMの推論で可変長ブロックと位置依存並列サンプリングを導入し、3モデル・4ベンチマークでvanilla比3.53–18.76x、Fast-dLLM比最大1.58xのthroughput改善を報告する推論高速化手法。"
+    },
+    {
+      "canonical_id": "arXiv:2502.08363",
+      "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+      "source_url": "https://arxiv.org/abs/2502.08363",
+      "paper_path": "papers/inference/10-sparse-attention/2025-2502.08363-top-theta-attention.md",
+      "priority": 86,
+      "reason": "学習不要の閾値型sparse attentionでTop-k探索依存を除き、生成時V-cache rowを約3x、prefill attention要素を最大10x削減する。公式実装があり推論メモリ・帯域最適化として直接性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.14864",
+      "title": "GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems",
+      "source_url": "https://arxiv.org/abs/2609.14864",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2609.14864-gguf-metadata-llamacpp-throughput.md",
+      "priority": 78,
+      "reason": "GGUF metadataからllama.cppのprefill/decode throughputを予測するroofline型モデルを、Apple M4 Max 2系統とRTX 5080、53構成・318測定で評価しており、ローカル推論基盤の性能モデリングとして有用。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-fixedsource-openalex-20260920T0159JST",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-fixedsource-openalex-20260920T0159JST.json",
+    "receipt": "sha256:3b844956f08afc9f7f84b040743f5b78f6f27acc909e210e98da937c06f56dd2"
+  },
+  "discovery_stats": {
+    "run_key": "2026-09-20T01:00:00+09:00",
+    "round": "manual-fixedsource-openalex-round1",
+    "axis": "OpenAlex search: LLM inference serving KV cache",
+    "query_summary": "単一OpenAlex検索結果URLを固定し、precheck内collect_until_unseenでcursor paginationを3ページ走査。15件を取得し3件を既収録として除外、12件の未収録bufferから推論システムとして直接性の高い3件を選別。",
+    "candidate_count": 15,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次roundは別queryとしてMoE expert offload/cacheまたはCXL/NVMe階層メモリを固定source_urlで探索する。",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "LLM inference serving KV cache",
+        "source": "OpenAlex",
+        "date_range": "2025-01-01:2026-09-20",
+        "category": "inference systems",
+        "citation_direction": "none",
+        "query_family": "keyword-search",
+        "raw_result_count": 15,
+        "unseen_result_count": 12,
+        "duplicate_filtered_count": 3,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 3,
+        "candidate_accepted_count": 3,
+        "position": "3 cursor pages"
+      }
+    ]
+  }
+}
