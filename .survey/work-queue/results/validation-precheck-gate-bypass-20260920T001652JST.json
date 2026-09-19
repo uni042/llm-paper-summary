@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission": "work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json",
+  "ok": false,
+  "error": "DiscoveryPrecheckError: Discovery precheck receipt is required for this run.",
+  "error_code": "discovery_precheck_required",
+  "retryable": true,
+  "next_action": "Route raw search results through the Discovery precheck gate, evaluate only the returned results[], then create a NEW immutable Discovery submission that references that result.",
+  "recovery_steps": [
+    "Do not edit or overwrite the failed Discovery submission.",
+    "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with operation 'precheck_discovery_candidates', request_id, the same run_key/axis, and raw search records.",
+    "Wait for .survey/work-queue/discovery-precheck/results/<same-name>.json with ok=true.",
+    "Evaluate only records in that result's results[] array; filtered records must not be re-added.",
+    "Create a NEW submit_discovery_round submission and set discovery_precheck.request_id, discovery_precheck.result_path, and discovery_precheck.receipt from the successful result."
+  ]
+}
