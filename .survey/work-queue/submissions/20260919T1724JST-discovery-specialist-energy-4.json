@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2608.25096",
+      "title": "Understanding the Energy Scaling of Large Language Model Inference Across Context Lengths and Attention Architectures",
+      "source_url": "https://arxiv.org/abs/2608.25096",
+      "rejection_reason": "GPU実測による有用なenergy characterizationだが、新しいserving/runtime mechanismの提案・実装が主寄与ではないためsystems候補としては不採用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-energy-4",
+    "axis": "energy-aware serving・GPU power control",
+    "query_summary": "network軸からenergy/powerへ切り替えた。Festinaは既知系統として除外し、2608.25096はcharacterization中心のため不採用。弱い候補で埋めなかった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2606.30391"],
+    "next_axis_hint": "CPU/NUMA・heterogeneous runtimeへ移る",
+    "empty_round_reason": "独立energy軸を走査したが新規systems mechanism候補が残らなかった"
+  }
+}
