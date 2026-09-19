@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-70dbcf11b20ef9fe6a096897",
   "job_id": "job-research-b41274093aac35dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-70dbcf11b20ef9fe6a096897",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "PC-HighはIntel i9-13900K（8高性能コア、最大5.4GHz）、192GBホストメモリ（67.2GB/s）、NVIDIA RTX 4090 24GB、PCIe 4.0。PC-LowはIntel i7-12700K（8高性能コア、最大4.9GHz）、64GBホストメモリ（38.4GB/s）、RTX 2080Ti 11GB、PCIe 3.0。サーバGPU比較では80GB A100を使用。",
+    "software": "PowerInferはllama.cppへ約4,200行のC++/CUDAを追加し、モデル配置、CPU-GPU協調実行、10個のニューロン対応演算子を実装。事前プロファイラ・配置ソルバはtransformersへ約400行のPythonを追加。比較対象はllama.cpp、SpecInfer、A100上のvLLM。",
+    "methodology": "OPT 7B/13B/30B/66B/175B、Bamboo-7B、Falcon(ReLU)-40B、LLaMA2(ReGLU) 7B/13B/70B、さらにSwiGLU系のQwen1.5-4B、LLaMA2-13B、Yi-34Bを対象とする。FP16とINT4重み、FP32中間活性を使用し、主な低遅延評価はバッチ1。Alpaca、ChatGPT prompts、Chatbot Arena由来の入力を用い、入力長8〜128、長文条件では入力1.5K・出力256も評価する。端末間比較、量子化、バッチサイズ、構成要素除去、予測器費用、疎演算子、下流タスク精度を測定する。",
+    "scope": "主眼は単一の消費者向けGPUとCPUを持つローカル低遅延推論で、特にReLU系の高い活性化疎性を持つモデルに強い。SwiGLU系では疎性が40〜53%程度で高速化が1.47〜1.7倍へ低下する。バッチ増加や長い事前充填では複数トークンの共同活性化により疎性が低下し、CPU負荷が増える。予測器学習は数時間を要する一回限りの事前処理であり、一般コーパスからモデルごとに作成する。"
+  },
+  "reservation": {"claim_id":"claim-70dbcf11b20ef9fe6a096897","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
