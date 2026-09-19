@@ -1,1 +1,64 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e1fd57ed695526cd97dd92b5","job_id":"job-research-153b45adc3c50a28","data":{"canonical_id":"arXiv:2505.09142","arxiv_id":"2505.09142","doi":"10.48550/arXiv.2505.09142","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI","cs.LG"]},"title":"ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor","summary":"ELISは自己回帰LLMの出力長を軽量なBGEベース予測器で推定し、50トークンの反復ごとに残り応答長を再予測して短い残作業を優先するISRTFスケジューラである。vLLMを反復実行・動的優先度へ拡張しKubernetes上へ実装、実サービス由来の到着分布を用いた評価でFCFS比の平均JCTを最大19.58%短縮し、50 H100 workerで18.77 RPSまでほぼ線形に拡張した。","list_summary":"応答長を50トークンごとに再予測して短い残作業を優先し、LLM servingの先頭待ちを減らすKubernetes/vLLMスケジューラ。","authors":["Seungbeom Choi","Jeonghoe Goo","Eunjoo Jeon","Mingyu Yang","Minsung Jang"],"authors_affiliations":"Cloud Research Team, Samsung SDS, South Korea","published":"2025-05-14","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1 (2025-05-14)","lineage":"LLM serving scheduling / response-length prediction / continuous batching / SRTF","topics":["LLMサービング","反復スケジューリング","応答長予測","vLLM","Kubernetes","優先度制御"],"importance":"出力長が未知な自己回帰LLMに対し、一回限りの予測ではなく生成途中の情報で残り長を更新することで、予測誤差を補正しながらSRTF型優先制御を実運用構成へ適用する。","implementation":"Python約3.1K行のfrontend/backendシステムとvLLMへの100行未満の変更で実装し、Kubernetes StatefulSet/Serviceとして配備。論文は公開コード・YAMLを提供すると記載するが、一次資料から確実なリポジトリURLは確認できなかった。","hardware_evaluation":"主評価は8×NVIDIA A100 80GB、拡張性評価は最大50×NVIDIA H100。予測器学習にもA100を使用。","quality_effect":"生成モデル本体をinstruction tuningせず独立BGE予測器を使うため生成品質への直接変更を避ける。性能は予測精度と到着負荷に依存し、一部条件ではFCFSよりJCTが悪化する。","source":"https://arxiv.org/abs/2505.09142","sources":["https://arxiv.org/abs/2505.09142","https://arxiv.org/html/2505.09142v1"],"code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":41},"reservation":{"claim_id":"claim-e1fd57ed695526cd97dd92b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f61b26d21a391bc924304828",
+  "job_id": "job-research-153b45adc3c50a28",
+  "data": {
+    "canonical_id": "arXiv:2505.09142",
+    "arxiv_id": "2505.09142",
+    "doi": "10.48550/arXiv.2505.09142",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    "title": "ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor",
+    "summary": "ELISは自己回帰LLMの出力長を軽量なBGEベース予測器で推定し、50トークンの反復ごとに残り応答長を再予測して短い残作業を優先するISRTFスケジューラである。vLLMを反復実行・動的優先度へ拡張しKubernetes上へ実装、実サービス由来の到着分布を用いた評価でFCFS比の平均JCTを最大19.58%短縮し、50 H100 workerで18.77 RPSまでほぼ線形に拡張した。",
+    "list_summary": "応答長を50トークンごとに再予測して短い残作業を優先し、LLM servingの先頭待ちを減らすKubernetes/vLLMスケジューラ。",
+    "authors": [
+      "Seungbeom Choi",
+      "Jeonghoe Goo",
+      "Eunjoo Jeon",
+      "Mingyu Yang",
+      "Minsung Jang"
+    ],
+    "authors_affiliations": "Cloud Research Team, Samsung SDS, South Korea",
+    "published": "2025-05-14",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint v1 (2025-05-14)",
+    "lineage": "LLM serving scheduling / response-length prediction / continuous batching / SRTF",
+    "topics": [
+      "LLMサービング",
+      "反復スケジューリング",
+      "応答長予測",
+      "vLLM",
+      "Kubernetes",
+      "優先度制御"
+    ],
+    "importance": "出力長が未知な自己回帰LLMに対し、一回限りの予測ではなく生成途中の情報で残り長を更新することで、予測誤差を補正しながらSRTF型優先制御を実運用構成へ適用する。",
+    "implementation": "Python約3.1K行のfrontend/backendシステムとvLLMへの100行未満の変更で実装し、Kubernetes StatefulSet/Serviceとして配備。論文は公開コード・YAMLを提供すると記載するが、一次資料から確実なリポジトリURLは確認できなかった。",
+    "hardware_evaluation": "主評価は8×NVIDIA A100 80GB、拡張性評価は最大50×NVIDIA H100。予測器学習にもA100を使用。",
+    "quality_effect": "生成モデル本体をinstruction tuningせず独立BGE予測器を使うため生成品質への直接変更を避ける。性能は予測精度と到着負荷に依存し、一部条件ではFCFSよりJCTが悪化する。",
+    "source": "https://arxiv.org/abs/2505.09142",
+    "sources": [
+      "https://arxiv.org/abs/2505.09142",
+      "https://arxiv.org/html/2505.09142v1"
+    ],
+    "code": null,
+    "last_checked": "2026-09-20",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary manuscript reference section",
+    "references_total": 41
+  },
+  "reservation": {
+    "claim_id": "claim-f61b26d21a391bc924304828",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
