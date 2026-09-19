@@ -108,7 +108,7 @@ def _current_orphan_submission_paths(
         for row in submissions
         if (not row["job_id"] or row["job_id"] not in jobs)
         and row["path"] not in terminally_rejected
-        and not (row["kind"] == "discovery" and _core._discovery_round_identity(row) is not None)
+        and _core._discovery_round_identity(row) is None
     }
 
 
@@ -133,9 +133,12 @@ def _direct_evidence_metrics(
         active=active,
         now=now,
     )
+    orphan_paths = _current_orphan_submission_paths(repo_root, submissions, results, jobs)
+    old_orphan_count = metrics["consistency"]["orphan_submissions"]
+    metrics["consistency"]["orphan_submissions"] = len(orphan_paths)
+    metrics["consistency_total"] -= old_orphan_count - len(orphan_paths)
     metrics["orphan_submission_paths"] = sorted(
-        str(path.relative_to(repo_root))
-        for path in _current_orphan_submission_paths(repo_root, submissions, results, jobs)
+        str(path.relative_to(repo_root)) for path in orphan_paths
     )
     return metrics
 
