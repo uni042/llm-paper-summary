@@ -1,16 +1,93 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c5756e924915f6f747a45346","job_id":"job-research-53def9917e580440",
- "data":{
-  "canonical_id":"arXiv:2411.01433","arxiv_id":"2411.01433","doi":"10.48550/arXiv.2411.01433","openreview_id":null,"title":"HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference",
-  "summary":"HOBBITは、GPUメモリに収まらない専門家混合モデルの推論で支配的になる専門家読込み遅延を、専門家ごとの動的重要度に応じた混合精度で削減するオフロード基盤である。ゲート出力を重要度の近似値として、キャッシュミス時に重要な専門家は高精度、重要度が低い専門家は低精度、極めて低いものは省略する。さらに隣接層のゲート入力類似性を使った適応プリフェッチと、最近性・頻度・高精度利用頻度・層距離を統合した多次元キャッシュを組み合わせる。llama.cpp上に実装し、Mixtral-8x7BとPhi-MoEをRTX 4090およびJetson AGX Orinで評価し、MoE-Infinity比で復号を最大9.93倍高速化しつつ精度低下を1%以内に抑えた。",
-  "list_summary":"重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。",
-  "authors":["Peng Tang","Jiacheng Liu","Xiaofeng Hou","Yifei Pu","Jing Wang","Pheng-Ann Heng","Chao Li","Minyi Guo"],"published":"2024-11-03","publication":"arXiv preprint","publication_type":"Preprint","publication_status":"arXiv v2; revised 2024-11-06","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},
-  "lineage":"MoE専門家オフロード / 混合精度 / 専門家キャッシュ","topics":["MoE専門家オフロード","混合精度","専門家プリフェッチ","専門家キャッシュ","エッジ推論"],
-  "importance":"専門家読込みが推論時間の85.5〜94.5%を占める条件で、重要度の低いキャッシュミス専門家だけを低精度版へ置換することでI/O量を動的に削減し、プリフェッチ失敗の罰則とキャッシュミス費用まで混合精度として統合した代表的MoEオフロード研究。",
-  "hardware_evaluation":"RTX 4090 24GB＋256GB CPUメモリ＋64 CPUコア＋PCIe 4.0と、32GB統合メモリ・12 CPUコアのJetson AGX Orinを使用。外部格納にはSamsung 980 PRO NVMe SSDを用い、理論7GB/s、実測約3GB/s。",
-  "quality_effect":"Mixtral-8x7BとPhi-MoEについてGSM8KとTruthfulQAを評価。Float16+Int4またはInt8+Int2の動的混合精度で、全評価条件の精度低下は1%以内。",
-  "source":"https://arxiv.org/abs/2411.01433","sources":["https://arxiv.org/abs/2411.01433","https://arxiv.org/html/2411.01433"],"implementation":"llama.cppの重み配置と計算経路を変更し約8,000行のC++/Cを追加。GPU中心モードとCPU-GPU協調モードを実装。","code":null,"last_checked":"2026-09-20",
-  "references":[{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},{"canonical_id":"arXiv:2312.17238","arxiv_id":"2312.17238"},{"canonical_id":"arXiv:2401.14361","arxiv_id":"2401.14361"},{"canonical_id":"arXiv:2402.07033","arxiv_id":"2402.07033"},{"canonical_id":"arXiv:2308.14352","arxiv_id":"2308.14352"},{"canonical_id":"arXiv:2312.12456","arxiv_id":"2312.12456"},{"canonical_id":"arXiv:2404.08763","arxiv_id":"2404.08763"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":55
- },
- "reservation":{"claim_id":"claim-c5756e924915f6f747a45346","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-58ec9dfded7ec0db6d9bb446",
+  "job_id": "job-research-53def9917e580440",
+  "data": {
+    "canonical_id": "arXiv:2411.01433",
+    "arxiv_id": "2411.01433",
+    "doi": "10.48550/arXiv.2411.01433",
+    "openreview_id": null,
+    "title": "HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference",
+    "summary": "HOBBITは、GPUメモリに収まらない専門家混合モデルの推論で支配的になる専門家読込み遅延を、専門家ごとの動的重要度に応じた混合精度で削減するオフロード基盤である。ゲート出力を重要度の近似値として、キャッシュミス時に重要な専門家は高精度、重要度が低い専門家は低精度、極めて低いものは省略する。さらに隣接層のゲート入力類似性を使った適応プリフェッチと、最近性・頻度・高精度利用頻度・層距離を統合した多次元キャッシュを組み合わせる。llama.cpp上に実装し、Mixtral-8x7BとPhi-MoEをRTX 4090およびJetson AGX Orinで評価し、MoE-Infinity比で復号を最大9.93倍高速化しつつ精度低下を1%以内に抑えた。",
+    "list_summary": "重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。",
+    "authors": [
+      "Peng Tang",
+      "Jiacheng Liu",
+      "Xiaofeng Hou",
+      "Yifei Pu",
+      "Jing Wang",
+      "Pheng-Ann Heng",
+      "Chao Li",
+      "Minyi Guo"
+    ],
+    "published": "2024-11-03",
+    "publication": "arXiv preprint",
+    "publication_type": "Preprint",
+    "publication_status": "arXiv v2; revised 2024-11-06",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
+    "lineage": "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+    "topics": [
+      "MoE専門家オフロード",
+      "混合精度",
+      "専門家プリフェッチ",
+      "専門家キャッシュ",
+      "エッジ推論"
+    ],
+    "importance": "専門家読込みが推論時間の85.5〜94.5%を占める条件で、重要度の低いキャッシュミス専門家だけを低精度版へ置換することでI/O量を動的に削減し、プリフェッチ失敗の罰則とキャッシュミス費用まで混合精度として統合した代表的MoEオフロード研究。",
+    "hardware_evaluation": "RTX 4090 24GB＋256GB CPUメモリ＋64 CPUコア＋PCIe 4.0と、32GB統合メモリ・12 CPUコアのJetson AGX Orinを使用。外部格納にはSamsung 980 PRO NVMe SSDを用い、理論7GB/s、実測約3GB/s。",
+    "quality_effect": "Mixtral-8x7BとPhi-MoEについてGSM8KとTruthfulQAを評価。Float16+Int4またはInt8+Int2の動的混合精度で、全評価条件の精度低下は1%以内。",
+    "source": "https://arxiv.org/abs/2411.01433",
+    "sources": [
+      "https://arxiv.org/abs/2411.01433",
+      "https://arxiv.org/html/2411.01433"
+    ],
+    "implementation": "llama.cppの重み配置と計算経路を変更し約8,000行のC++/Cを追加。GPU中心モードとCPU-GPU協調モードを実装。",
+    "code": null,
+    "last_checked": "2026-09-20",
+    "references": [
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2312.17238",
+        "arxiv_id": "2312.17238"
+      },
+      {
+        "canonical_id": "arXiv:2401.14361",
+        "arxiv_id": "2401.14361"
+      },
+      {
+        "canonical_id": "arXiv:2402.07033",
+        "arxiv_id": "2402.07033"
+      },
+      {
+        "canonical_id": "arXiv:2308.14352",
+        "arxiv_id": "2308.14352"
+      },
+      {
+        "canonical_id": "arXiv:2312.12456",
+        "arxiv_id": "2312.12456"
+      },
+      {
+        "canonical_id": "arXiv:2404.08763",
+        "arxiv_id": "2404.08763"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 55
+  },
+  "reservation": {
+    "claim_id": "claim-58ec9dfded7ec0db6d9bb446",
+    "worker_id": "llm-research-survey-scheduled-chat",
+    "worker_kind": "scheduled_chat"
+  }
 }

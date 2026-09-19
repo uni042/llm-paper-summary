@@ -1,10 +1,18 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c5756e924915f6f747a45346","job_id":"job-research-53def9917e580440",
- "data":{
-  "limitations":"評価モデルはMixtral-8x7BとPhi-MoEの2種類で、いずれもTop-2ルーティングのため、Top-kや専門家数が大きく異なるMoEへの一般化は未実証。T1/T2やLRU/LFU/LHU/FLDの合成重みは較正データで決める必要があり、モデルや利用分布が変わると再調整が必要になる。低精度専門家を事前に保持するため複数精度版の格納容量も必要である。プリフェッチはcudaMemcpyを中断できない実装制約に依存し、単独では復号を悪化させる場合がある。CPU-GPU協調モードではCPU演算子の実装効率がFiddlerより低く、Mixtralでは復号速度で僅かに劣る。",
-  "differences":"MoE-OffloadingやMoE-Infinityは専門家予測とキャッシュでミス回数・待ち時間を減らすが、ミスした専門家は基本的に元精度でロードする。HOBBITはミス罰則そのものを動的精度選択で縮め、その低い罰則をプリフェッチとキャッシュ評価へ伝播させる。EdgeMoEの専門家量子化は事前プロファイルに基づく静的ビット幅であるのに対し、HOBBITは現在トークンのゲート出力から重要度を判断する。AdapMoEの専門家省略より低精度代替を優先し、品質低下を抑える。FiddlerはCPU計算でデータ移動を避けるが、HOBBITの主経路はGPU中心で、CPU資源が弱いエッジ端末にも適用する。",
-  "implementation_status":"llama.cppを基盤として約8,000行のC++/Cを追加し、専門家の複数精度格納、動的ローダ、積み重ね型ゲート予測器、多次元キャッシュ、GPU中心およびCPU-GPU協調実行を実装。RTX 4090とJetson AGX Orinの実機、Samsung 980 PRO NVMe SSDで端末間性能を評価している。論文本文から公式コード配布URLは確認できない。",
-  "research_positioning":"MoE専門家オフロード系統の中で、キャッシュミス回数の削減だけでなく『ミス時に転送する専門家の精度を動的に変える』ことを中心に据えたシステムである。トークン単位の重要度、層単位の予測、系列単位のキャッシュを階層的に統合しており、専門家キャッシュ・プリフェッチ・量子化を相互依存させる非自明な設計例として位置付けられる。SSDを実際の次段記憶として評価しているため、SSD帯域が専門家読込みを律速するローカルMoE推論や、将来のNVMe直結プリフェッチ研究を比較する際の重要な基準点でもある。"
- },
- "reservation":{"claim_id":"claim-c5756e924915f6f747a45346","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-58ec9dfded7ec0db6d9bb446",
+  "job_id": "job-research-53def9917e580440",
+  "data": {
+    "limitations": "評価モデルはMixtral-8x7BとPhi-MoEの2種類で、いずれもTop-2ルーティングのため、Top-kや専門家数が大きく異なるMoEへの一般化は未実証。T1/T2やLRU/LFU/LHU/FLDの合成重みは較正データで決める必要があり、モデルや利用分布が変わると再調整が必要になる。低精度専門家を事前に保持するため複数精度版の格納容量も必要である。プリフェッチはcudaMemcpyを中断できない実装制約に依存し、単独では復号を悪化させる場合がある。CPU-GPU協調モードではCPU演算子の実装効率がFiddlerより低く、Mixtralでは復号速度で僅かに劣る。",
+    "differences": "MoE-OffloadingやMoE-Infinityは専門家予測とキャッシュでミス回数・待ち時間を減らすが、ミスした専門家は基本的に元精度でロードする。HOBBITはミス罰則そのものを動的精度選択で縮め、その低い罰則をプリフェッチとキャッシュ評価へ伝播させる。EdgeMoEの専門家量子化は事前プロファイルに基づく静的ビット幅であるのに対し、HOBBITは現在トークンのゲート出力から重要度を判断する。AdapMoEの専門家省略より低精度代替を優先し、品質低下を抑える。FiddlerはCPU計算でデータ移動を避けるが、HOBBITの主経路はGPU中心で、CPU資源が弱いエッジ端末にも適用する。",
+    "implementation_status": "llama.cppを基盤として約8,000行のC++/Cを追加し、専門家の複数精度格納、動的ローダ、積み重ね型ゲート予測器、多次元キャッシュ、GPU中心およびCPU-GPU協調実行を実装。RTX 4090とJetson AGX Orinの実機、Samsung 980 PRO NVMe SSDで端末間性能を評価している。論文本文から公式コード配布URLは確認できない。",
+    "research_positioning": "MoE専門家オフロード系統の中で、キャッシュミス回数の削減だけでなく『ミス時に転送する専門家の精度を動的に変える』ことを中心に据えたシステムである。トークン単位の重要度、層単位の予測、系列単位のキャッシュを階層的に統合しており、専門家キャッシュ・プリフェッチ・量子化を相互依存させる非自明な設計例として位置付けられる。SSDを実際の次段記憶として評価しているため、SSD帯域が専門家読込みを律速するローカルMoE推論や、将来のNVMe直結プリフェッチ研究を比較する際の重要な基準点でもある。"
+  },
+  "reservation": {
+    "claim_id": "claim-58ec9dfded7ec0db6d9bb446",
+    "worker_id": "llm-research-survey-scheduled-chat",
+    "worker_kind": "scheduled_chat"
+  }
 }
