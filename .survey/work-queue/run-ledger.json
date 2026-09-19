@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T09:35:54.679282+00:00",
+  "updated_at": "2026-09-19T09:37:46.316420+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T09:35:54.679282+00:00",
+      "last_recorded_at": "2026-09-19T09:37:46.316420+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 289,
+        "research_completed": 290,
         "audit_completed": 0,
         "discovery_completed": 162,
         "blocked": 38,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35347734616:1",
-          "recorded_at": "2026-09-18T13:04:42.597511+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35347734616",
-            "run_attempt": "1",
-            "source_sha": "ad465ee3bfc5aebd5816d3df8844327440625275"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35347803251:1",
           "recorded_at": "2026-09-18T13:07:07.617307+00:00",
@@ -19593,6 +19578,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35435205816:1",
+          "recorded_at": "2026-09-19T09:37:46.316420+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35435205816",
+            "run_attempt": "1",
+            "source_sha": "c041e6474cc789a76255be18689b0f95cbbf88eb"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23508,6 +23507,14 @@
           "title": "PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-0e6ed88f587a40d2",
+          "type": "research",
+          "canonical_id": "arXiv:2402.01528",
+          "title": "Decoding Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25898,7 +25905,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 752,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:37:23 JST**
+> 自動生成: **2026-09-19 18:37:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **43** |
+| 収録候補論文 | **42** |
 | 未claim Research job | **42** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-19 18:34:04 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-19 18:37:41 JST（5秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **43** |
+| canonical_id確認済みの一意な候補論文 | **42** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **43** |
+| 非終端Research job合計 | **42** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **2** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **19** | **19** | **0** | **0** | **0** | **25** |
-| 合計 | **20** | **20** | **19** | **0** | **1** | **0** | **25** |
+| 合計 | **21** | **20** | **19** | **0** | **0** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 18:37:41 JST** [research] `arXiv:2402.01528` — Decoding Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-0e6ed88f587a40d2.json`
+  - result: `.survey/work-queue/results/research/attempt-e8ec2848c993c87c9d340e2f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e8ec2848c993c87c9d340e2f.json`
+  - paper: `papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md`
 - **09-19 18:34:04 JST** [research] `arXiv:2602.06072` — PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference
   - job: `.survey/work-queue/jobs/job-research-c7f741bd6a7395ee.json`
   - result: `.survey/work-queue/results/research/attempt-35ffcfb18fd8c03e9c06c8cb.json` (`ok=true`)
@@ -166,10 +171,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2402.01528` — Decoding Speculative Decoding / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:35:39 JST** / heartbeat: **—** / lease expiry: **09-19 20:05:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0e6ed88f587a40d2.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -189,7 +192,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **43** |
+| ready | **42** |
 
 ### 候補の重複・識別情報欠損
 
@@ -209,7 +212,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **753** |
+| inference/training/survey配下の論文Markdown実体 | **754** |
 
 ### immutable submissionの未照合
 
