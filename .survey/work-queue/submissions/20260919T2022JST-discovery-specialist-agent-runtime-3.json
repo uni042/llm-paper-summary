@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02942",
+      "title": "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime",
+      "source_url": "https://arxiv.org/abs/2607.02942",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+      "priority": 86,
+      "reason": "agentic workflowの各LLM nodeについてmodel・verification policy・backendを物理計画として共同選択し、live backend pressureに応じて事前生成variantをruntime切替するcompiler-runtime co-design。4 workloadで高精度baseline比1.1〜6.8倍のmean latency改善を示し、agentic servingの制御層研究として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.27744",
+      "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.27744",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.27744-policy-driven-agentic-runtime.md",
+      "priority": 79,
+      "reason": "agent frameworkとserving engineの間にobserve/score/predict/actの4 primitiveを持つagent-aware runtime層を置き、KV cache policyをCacheSageとして具体実装。5実workloadでcache hit率+13〜37pp、mean TTFT 12〜29%低下、throughput 6〜14%向上を報告し、agent identityをserving policyへ接続する設計として有用。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-agent-runtime-3",
+    "axis": "agentic workflow physical planning・agent-aware serving runtime",
+    "query_summary": "multi-tenant isolationからagentic runtimeへ軸を移し、workflow compiler/runtimeとagent-aware policy layerを探索。FairInferenceとAgentSysBenchは既探索のため除外し、default branch canonical ID検索で未収録の2件を送信した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2609.18112", "arXiv:2608.15127"],
+    "next_axis_hint": "次はspeculative decoding runtime、draft scheduling、verification resource sharingへ移る",
+    "empty_round_reason": null
+  }
+}
