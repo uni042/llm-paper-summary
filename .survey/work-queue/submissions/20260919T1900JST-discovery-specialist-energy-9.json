@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.12449",
+      "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+      "source_url": "https://arxiv.org/abs/2609.12449",
+      "priority": 70,
+      "reason": "Recent implemented vLLM scheduler coupling inference SLOs with thermal/energy constraints on commercial liquid-cooled GPUs. It introduces heat-budget scheduling and electrical-informed heat-demand estimation and reports energy, throttling, and SLO results."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "identity": "arXiv:2602.02987",
+      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+      "source_url": "https://arxiv.org/abs/2602.02987",
+      "rejection_reason": "Primarily stochastic-control/queueing theory with numerical experiments rather than a concrete implemented inference-system mechanism; lower fit than systems implementations for this survey."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-energy-9",
+    "axis": "thermal-aware / energy-aware LLM serving scheduling",
+    "query_summary": "Switched from MoE to an independent energy/thermal systems axis. HeatCache is a recent implemented vLLM scheduling system and was not found by repository code search; a theory-dominant contention-control paper was rejected for systems-fit reasons.",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2609.12449"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Search GPU runtime/kernel or quantization-system omissions, then perform recent-new-paper sweep for September."
+  }
+}
