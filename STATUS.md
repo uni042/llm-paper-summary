@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:29:04 JST**
+> 自動生成: **2026-09-20 03:29:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **2** | **2** | **0** | **5** | **2** | — |
+| Research | **14** | **3** | **2** | **1** | **5** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **55** | **3** | **3** | **0** | **5** | **2** | **5** |
+| 合計 | **55** | **4** | **3** | **1** | **5** | **2** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,12 +151,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
   - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-6c0676d0cc5caf5a13ce6002.json` (job `job-research-0023a21511f803e1`)
 - **成功** `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor
   - job: `.survey/work-queue/jobs/job-research-153b45adc3c50a28.json`
   - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
@@ -246,8 +247,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **649** |
-| └ Research | **493** |
+| 成功result未照合のimmutable submission | **650** |
+| └ Research | **494** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **9** |
