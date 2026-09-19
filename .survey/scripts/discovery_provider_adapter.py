@@ -439,4 +439,9 @@ def make_fetcher(
             timeout=timeout,
             opener=opener,
         )
+    if provider in {"repository_references", "repository_reference_pool"}:
+        return repository_reference_pool_fetcher(
+            source_url,
+            page_size=page_size,
+        )
     raise DiscoveryProviderError(f"unsupported Discovery provider: {provider!r}")
