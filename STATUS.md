@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:11:41 JST**
+> 自動生成: **2026-09-20 04:12:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **102** |
 | 未claim Research job | **97** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間19分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間20分前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -182,7 +182,7 @@
 
 - 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.13537` — Dynamic HBM Repartitioning for Multi-Turn MoE Serving / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:06:20 JST** / heartbeat: **—** / lease expiry: **09-20 05:36:20 JST**
+  - claim: **09-20 04:12:01 JST** / heartbeat: **—** / lease expiry: **09-20 05:42:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-1182cce822dbe6dc.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
