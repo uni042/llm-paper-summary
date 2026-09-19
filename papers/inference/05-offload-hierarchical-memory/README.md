@@ -7,7 +7,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
-  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：2  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）

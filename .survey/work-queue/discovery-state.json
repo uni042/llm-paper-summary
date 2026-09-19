@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T13:08:51+00:00",
-  "last_run_key": "2026-09-19T22:00:00+09:00",
-  "last_round": "specialist-admission-batching-18",
+  "updated_at": "2026-09-19T14:03:40+00:00",
+  "last_run_key": "2026-09-19T23:00:00+09:00",
+  "last_round": "specialist-memory-runtime-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T02:00:00+09:00",
-      "round": "specialist-cxl-hybrid-memory-6",
-      "axis": "CXLハイブリッドメモリ・SSD-backed共有KV/context tier",
-      "query_summary": "SmartSSD単体のin-storage処理から、CXLでDRAMとSSDを統合したTB級共有KV/context tierへ探索軸を移した。HyMCache、ITME、Photonic-CXL applianceはいずれも最新default branchのcanonical ID検索で未収録、Library pending検索でも同一IDの耐久成果物を確認できなかったため候補化した。実CXL-HM prototypeを持つHyMCacheを最優先、production-grade CMM/NVMe評価とFPGA実証のITMEを次点、emulation/simulation中心のPhotonic-CXLを低めに設定した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "CXL/SSD共有KVから、CXLメモリpoolをMoE expert weightやmodel weight階層へ使う方式、またはNVMe computational storageでexpert/KV prefetchを協調する方式へ移る",
-      "source_submission": "work-queue/submissions/20260915T0232JST-discovery-specialist-cxl-hybrid-memory-6.json"
-    },
     {
       "run_key": "2026-09-15T03:00:00+09:00",
       "round": "specialist-memory-pooling-1",
@@ -7416,6 +7401,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "framework-specific runtime、KV transfer compression、then older 2024 systems omissionsのcitation/back-referenceへ移る",
       "source_submission": "work-queue/submissions/20260919T2350JST-discovery-specialist-admission-batching-18.json"
+    },
+    {
+      "run_key": "2026-09-19T23:00:00+09:00",
+      "round": "specialist-memory-runtime-1",
+      "axis": "HBM-host同時アクセス・CPU-free serving・portable local runtime",
+      "query_summary": "2026年のLLM inference/serving systemsを階層メモリ、GPU/SmartNIC runtime、ローカル推論backendの独立軸で走査。検索結果のabstractを軽量評価し、GitHub default branchでcanonical arXiv IDを再照合して未収録候補のみ提出した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "2609新着のGPU/CPU unified memory、CXL/remote memory、network/KV transfer、および収録済み重要論文のforward citationへ移る",
+      "source_submission": "work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json"
     }
   ],
   "axes": {
@@ -13900,6 +13903,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.75,
       "next_axis_hint": "framework-specific runtime、KV transfer compression、then older 2024 systems omissionsのcitation/back-referenceへ移る"
+    },
+    "HBM-host同時アクセス・CPU-free serving・portable local runtime": {
+      "last_run_key": "2026-09-19T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "2609新着のGPU/CPU unified memory、CXL/remote memory、network/KV transfer、および収録済み重要論文のforward citationへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
