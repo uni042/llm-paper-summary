@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-52fd234ea45de5f63b71cc39",
-  "job_id": "job-research-2dcd265cd3f3852c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-52fd234ea45de5f63b71cc39",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-52fd234ea45de5f63b71cc39","job_id":"job-research-2dcd265cd3f3852c","data":{"overview":"KVFlowは、将来のエージェント実行順を使って『もうすぐ再利用するKVを残す』ことと、追い出したKVを必要になる前にCPUから戻すことを組み合わせ、LRUと反応的ロードの双方の弱点を減らした。特に固定プロンプトが長くGPU容量を圧迫する場合に効果が大きく、A10Gの8192/32/32条件ではSGLang HiCache比1.83倍、GPUのみSGLang比2.91倍となる。高並行ではHiCacheの反応的ロードがスケジューリングを乱す条件でも、KVFlowは計算と転送を重ねてHiCache比最大2.19倍を達成する。","key_results":[{"metric":"単一ワークフロー高速化","value":"最大1.83倍 対SGLang HiCache、2.91倍 対GPU-only SGLang","baseline":"SGLang / SGLang HiCache","condition":"Llama-3.1-8B, A10G, fixed/dynamic/output=8192/32/32","interpretation":"長い固定prefixで再計算・反応的転送が高価なほど将来認識管理の効果が大きい。"},{"metric":"固定prefix長による平均高速化","value":"fixed 4096で1.28倍、8192で1.48倍","baseline":"比較構成に対するKVFlow","condition":"単一workflow設定群","interpretation":"cache miss費用が増えるほど能動管理の価値が上がる。"},{"metric":"高並行性能","value":"最大1.25倍 対SGLang、最大2.19倍 対HiCache","baseline":"GPU-only SGLang / LRU-based HiCache","condition":"単一H100、複数独立workflow","interpretation":"ロード中要求を飛ばすことでPCIe待ちによるGPU idleを抑える。"},{"metric":"現実的PEER型workload","value":"最大1.12倍 対SGLang、1.08倍 対HiCache","baseline":"SGLang / HiCache","condition":"4-agent、PEER Financial QA、数十〜数百token級prompt","interpretation":"合成の長大prefixほどではないが実用的workloadでも改善を確認。"}],"negative_results":"出力tokenが増えてdecode時間が全体を支配すると、cache loadingが占める比率が下がるためKVFlowの相対利得は縮小する。高並行でactive requestがGPU容量を使い切り再利用prefixを保持できない領域は対象外である。SGLangの断片化KV配置によるPCIe帯域未活用そのものはKVFlowも解決しない。","interpretation":"ワークフロー構造は単なるアプリケーション制御情報ではなく、次のKV再利用時刻を予測する強いヒントになる。履歴だけを見るLRUより将来実行距離を使い、さらに予測を先読みとスケジューリングへ接続することで、CPU階層キャッシュの転送遅延を隠せる。","quality_impact":"モデル重み、入力prompt、生成アルゴリズムを変更しないため、出力の意味的正しさを維持するシステム最適化である。"},"reservation":{"claim_id":"claim-52fd234ea45de5f63b71cc39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
