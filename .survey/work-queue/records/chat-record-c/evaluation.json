@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f61b26d21a391bc924304828",
-  "job_id": "job-research-153b45adc3c50a28",
-  "data": {
-    "hardware": "主評価クラスタはDual AMD EPYC 7H12、2TB RAM、8×NVIDIA A100 80GB HBM2。Ubuntu 20.04、CUDA 12.2、driver 535.183、vLLM 0.5.0を使用する。拡張性評価ではH100を1 workerあたり1 GPUとして最大50 workerまで使用する。予測器学習もA100で実施する。",
-    "software": "ELIS frontend/backendはPython約3.1K行。vLLMのpolicy・scheduler・entry pointへ100行未満の変更を加え、50トークン単位の反復実行と外部優先度制御を実装する。Kubernetesではfrontend/backendをpod化し、backendはStatefulSetで一意IDを維持する。応答長予測器はBAAI/bge-base-en-v1.5＋8全結合層、ReLU、hidden 1024、学習率1e-4、batch 16。",
-    "methodology": "OPT-6.7B/13B、LLaMA2-7B/13B、Vicuna-13Bを評価し、FCFS、提案ISRTF、真のprofiled latencyを使うoracle SJFを比較する。LMSYS-Chat-1Mから200 promptを同一集合でsamplingし順序をshuffle、各条件3回実施する。到着間隔はSamsung SDS FabriXの2か月・20万件超のtraceから推定したGamma分布（shape 0.73, scale 10.41）で生成する。batch size 1/2/4、平均request rateの複数倍率で平均JCTとqueueing delayを測る。拡張性は平均queue delayが0.5秒以下を保てる最大RPSで評価する。",
-    "scope": "実サービス由来の到着分布とKubernetes/vLLM実装を使う点は現実的だが、prompt内容自体はLMSYSからsamplingしたsimulationである。主JCT評価はA100上の5モデルで、H100評価はworker数拡張性が中心。SLO tail latency、異種GPU、複数モデル混在、予測器再学習の運用コスト、極端なburst時のstarvation/preemption効果は十分には評価されない。"
-  },
+  "attempt_id": "attempt-6c0676d0cc5caf5a13ce6002",
+  "job_id": "job-research-0023a21511f803e1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f61b26d21a391bc924304828",
+    "claim_id": "claim-6c0676d0cc5caf5a13ce6002",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
