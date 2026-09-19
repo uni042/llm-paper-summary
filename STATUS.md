@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:47:54 JST**
+> 自動生成: **2026-09-20 00:48:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
+| 収録候補論文 | **47** |
 | 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-20 00:43:12 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **52** |
+| 最終検証済みResearch収録 | **09-20 00:48:02 JST（5秒前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **2** | **1** | **1** | **0** | — |
+| Research | **15** | **4** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **84** | **7** | **3** | **1** | **1** | **0** | **2** |
+| 合計 | **85** | **7** | **4** | **0** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 00:48:02 JST** [research] `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
+  - job: `.survey/work-queue/jobs/job-research-8ff9887a327d8124.json`
+  - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json`
+  - paper: `papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md`
 - **09-20 00:43:12 JST** [research] `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?
   - job: `.survey/work-queue/jobs/job-research-1a87bd753fb86450.json`
   - result: `.survey/work-queue/results/research/attempt-bb1ec81341e2780a2eb5259f.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-83b90f0b9afa469d0eb73d37.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-83b90f0b9afa469d0eb73d37.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md`
-- **09-19 21:42:22 JST** [research] `DOI:10.1145/3797905.3807846` — CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool
-  - job: `.survey/work-queue/jobs/job-research-8f1455c9a8468d9c.json`
-  - result: `.survey/work-queue/results/research/attempt-9c6ab898d827d5aa2ca07235.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9c6ab898d827d5aa2ca07235.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md`
 
 ### Audit
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
   - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
@@ -164,7 +164,11 @@
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e5893e2a1bdb6a4c8b277786.json` (job `job-research-2a8c8a978e102c67`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-e5893e2a1bdb6a4c8b277786.json` (`ok=true`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json` (job `job-research-8ff9887a327d8124`)
+- **成功** `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
+  - job: `.survey/work-queue/jobs/job-research-8ff9887a327d8124.json`
+  - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f914ad852b23c42a60113aaf.json`
+  - paper: `papers/inference/04-kv-cache/2025-2505.21889-efim-infilling-kv-cache-reuse.md`
 
 #### Audit (:30)
 
@@ -194,10 +198,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 00:46:44 JST** / heartbeat: **—** / lease expiry: **09-20 02:16:44 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8ff9887a327d8124.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -217,7 +219,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -237,7 +239,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **770** |
+| inference/training/survey配下の論文Markdown実体 | **771** |
 
 ### immutable submissionの未照合
 
@@ -245,8 +247,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **637** |
-| └ Research | **488** |
+| 成功result未照合のimmutable submission | **636** |
+| └ Research | **487** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **2** |
