@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:02:39 JST**
+> 自動生成: **2026-09-20 04:04:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **102** |
 | 未claim Research job | **97** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間10分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（2時間12分前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -181,9 +181,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
-- `DOI:10.1145/3651890.3672274` — CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:02:29 JST** / heartbeat: **—** / lease expiry: **09-20 05:32:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-958b0ab5aeb9819d.json`
+- `arXiv:2405.04532` — QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving / worker `scheduled-chat-discovery-routing`
+  - claim: **09-20 04:04:41 JST** / heartbeat: **—** / lease expiry: **09-20 05:34:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0e84e93a7c48f41f.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
