@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7c1d01d3a896395f0388795a",
+  "attempt_id": "attempt-4ab7a2c9a05726d96681eda6",
   "job_id": "job-research-7353bc1b63a704fc",
   "data": {
     "hardware": "1BモデルはSamsung Galaxy S24 UltraのQualcomm SM8650 NPU、3BモデルはGalaxy S25 UltraのQualcomm SM8750 NPUで実機評価する。論文はS25系への商用展開と、Flip/Fold 7向けExynos展開予定も記載する。",
@@ -11,7 +11,7 @@
     "scope": "商用スマートフォン上の実測を重視したシステム評価であり、1B/3BのSamsung社内LLaMA系モデルとQualcomm NPUが中心。公開サーバGPU、他社SoC、より大きなLLM、任意rank LoRA、ユーザ定義スタイルへの一般化は直接評価されない。G-EvalはGPT-4.5を評価器として使うため、品質評価は自動評価器依存でもある。"
   },
   "reservation": {
-    "claim_id": "claim-7c1d01d3a896395f0388795a",
+    "claim_id": "claim-4ab7a2c9a05726d96681eda6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
