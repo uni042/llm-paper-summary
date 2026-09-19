@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2410.01228",
+      "title": "ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving",
+      "source_url": "https://arxiv.org/abs/2410.01228",
+      "priority": 80,
+      "reason": "ICML-2026-lineage co-serving system with SLO-aware token-level scheduling, layer-wise preemption, and incremental KV checkpoint/prefetch. It directly addresses harvesting stranded GPU capacity while preserving online latency and has strong end-to-end evaluation."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-coserving-15",
+    "axis": "online/offline co-serving / fine-grained GPU harvesting / preemption",
+    "query_summary": "Switched from agent serving to independent co-serving/GPU-harvesting work. ConServe was surfaced through the kvcached/Prism ecosystem, and its arXiv identity was not found by repository code search.",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2410.01228"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Inspect independent GPU isolation/sharing systems or older high-value omissions, then run empty-round checks on unrelated axes."
+  }
+}
