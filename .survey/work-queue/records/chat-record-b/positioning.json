@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-240fced74ff3bf00f6e22330",
-  "job_id": "job-research-ac3d391d822b215f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-240fced74ff3bf00f6e22330",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-240fced74ff3bf00f6e22330","job_id":"job-research-ac3d391d822b215f","data":{"limitations":"H100/H20と各GPU専用ConnectX-7、400Gbps RoCEという高速データセンター環境を前提にしており、NIC共有や低帯域ネットワークでは層ごとの通信を隠せない可能性がある。デコードのみを主要対象とし、プリフィルからデコードまでの完全なサービス経路の費用・遅延は別問題として残る。異種装置数の最適比はモデル、GQA比、文脈長、トレースで変わるため事前プロファイルが必要で、固定構成が常に最適ではない。大バッチ化とネットワーク・スケジューリングによりTBTは同種GPU方式より増え得る。独自ネットワークはNICのUARをGPUへマップしRDMA投入をCUDA側へ実装するため、可搬性と運用複雑性も高い。","differences":"DistServeやSplitwiseはプリフィルとデコードを別資源へ置く段階分離であり、Laminaはさらにデコード内部を注意と非注意へ分ける。FlexGenは層・トークン単位でCPU/GPU/ストレージを使う異種推論だが、層内演算子の計算/帯域特性に応じた別GPU配置は主眼ではない。vLLM/PagedAttentionはKVメモリ管理を効率化して同じGPU群の容量利用を改善するのに対し、LaminaはKV自体を別のメモリ最適GPU群へ移して容量比を物理的に拡張する。Mooncake等のKV分離がプリフィル/デコード間KV転送を中心にするのに対し、Laminaは各層・各デコード反復でQKVと注意出力を往復させるため、通信遅延最適化の要求がより厳しい。","implementation_status":"実システムLaminaを約6000行で実装し、H100/H20異種クラスタ上で運用トレースを用いて評価している。改造rdma-coreとGPU側RDMA制御を含む研究実装で、arXivメタデータ上では公式コードURLを確認できなかった。論文はarXiv v2（2025-04-10）のプレプリント。","research_positioning":"階層メモリ型オフロードの一種だが、CPUやSSDへ受動的にKVを退避するのではなく、KVを保持する装置自身が注意演算を実行する点が重要である。これによりKV転送を毎トークン計算GPUへ戻す必要を避け、代わりに小さいQ/K/V・注意出力を高速ネットワークで往復させる。計算資源とメモリ資源の分離、演算子粒度の異種配置、GPU主導ネットワークを統合したサービング設計として、オフロード系と分離サービング系の橋渡しに位置する。"},"reservation":{"claim_id":"claim-240fced74ff3bf00f6e22330","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
