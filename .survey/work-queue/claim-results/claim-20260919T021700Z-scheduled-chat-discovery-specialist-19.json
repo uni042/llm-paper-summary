@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T021700Z-scheduled-chat-discovery-specialist-19",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-66ea885d5e740aba",
+      "claim_id": "claim-fa2bf0d161766edfda517f4d",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-fa2bf0d161766edfda517f4d",
+      "claimed_at": "2026-09-19T02:15:47+00:00",
+      "expires_at": "2026-09-19T03:45:47+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-66ea885d5e740aba"
+      ],
+      "job": {
+        "job_id": "job-research-66ea885d5e740aba",
+        "type": "research",
+        "parent_job_id": "job-500decdb4fb2421b",
+        "priority": 79,
+        "canonical_id": "arXiv:2609.18123",
+        "title": "AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines",
+        "source_url": "https://arxiv.org/abs/2609.18123",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md",
+        "selection_reason": "vLLM/SGLangとGPU kernelのagent自動調整で生じるstrawman baseline、machine非移植性、飽和task、infrastructure defectを測定protocolとして封じるbenchmark。619 model callsと公開artifactを伴い、推論基盤最適化の評価信頼性を直接扱うためサーベイの監査・再現性面で価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T11:03:17+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T02:15:47+00:00",
+  "checkpoint_released": 0
+}
