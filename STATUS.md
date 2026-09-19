@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:07:27 JST**
+> 自動生成: **2026-09-20 03:10:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文 | **56** |
 | 未claim Research job | **54** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間15分前）** |
-| 整合性異常 | **9** |
+| 直近24hの検証済みResearch収録 | **46** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間18分前）** |
+| 整合性異常 | **11** |
 
 ## 現在の収録候補
 
@@ -237,11 +237,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **641** |
+| 成功result未照合のimmutable submission | **643** |
 | └ Research | **492** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **2** |
+| └ Other/Unknown | **4** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -258,10 +258,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **9** |
+| 対応jobなしsubmission（有効Discovery round除外） | **11** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **9** |
+| 異常レコード合計（重複排除） | **11** |
 
 ### 対応jobなしsubmissionの診断対象
 
@@ -273,6 +273,8 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
 - `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
 - `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
+- `.survey/work-queue/submissions/refcuration-eval-20260920-r1-a.json`
+- `.survey/work-queue/submissions/refcuration-eval-20260920-r1-b.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass2-20260920T001652JST.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
