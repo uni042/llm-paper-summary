@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"relation_to_repository":"DistServe、Splitwise、Mooncake等がprefill/decode分離による干渉除去・独立スケーリング・KV転送基盤を設計するのに対し、本論文は新規serving機構よりも比較方法と境界条件を主題とする。特に分離側2 GPU対colocation側1 GPUという既存比較の資源差を除き、2-GPU colocationを置くことで、分離そのものの利得を再評価する。CPU/DRAM/NVMeを介すKV移送も同一vLLM/LMCache基盤で比較するため、リポジトリのCPU/SSD offload系とphase-disaggregation系をつなぐ評価資料になる。","difference_from_prior_work":"DistServe等の高速GPU間転送中心の評価に、同資源colocation、CPU DRAM、NVMeの転送tierとenergy breakdownを加える。DynamoLLMやGPU DVFS研究がcolocated servingで周波数最適化を扱うのに対し、prefill/decodeを独立周波数設定できることが本当にenergy利得になるかを実測し、少なくとも本条件ではならないことを示す。","practical_takeaway":"分離サービングを既定の高速化手段とみなさず、GPU当たりprefill負荷、KV容量圧力、転送tier、TTFT/TPOT SLOを同時に見るべきである。小〜中batchでは同数GPUのcolocationがTTFTとenergyで有利になり得る一方、KVがGPU容量を圧迫する大batchや厳しいTPOTでは分離が有利になる。SSD/CPU経路はGPU直結より転送・energy費用が大きいので、容量拡張の価値がその費用を上回る領域で使うのが妥当。","caveats":"結果は2×A100 PCIe Gen3と3Bモデルの固定synthetic workloadに依存し、NVLink/RDMA、multi-node、実arrival trace、prefix reuse、より大規模モデルでは境界が変わり得る。dis-diskのTPOT挙動には未解明点が残る。"},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-73582856d4a4dd182ac985a1",
+  "job_id": "job-research-d0436ba646148687",
+  "data": {
+    "limitations": "追加の軽量モデル実行と対象モデルの複数位置評価により総演算量は増えるため、演算資源に余裕がない構成では効果がない。主要な壁時計評価は単一TPU v4、バッチサイズ1、T5-XXLに限られ、大規模バッチや現代GPU上の実装効率は直接評価していない。近似モデルと候補数γは推論中固定で、負荷や受理率に応じた動的選択は未検証である。ビーム探索への厳密適用は付録で概念を示すに留まり、テキスト以外の領域も未評価である。",
+    "differences": "蒸留、量子化、早期終了などは対象モデルの構造・重み・学習手順を変えるか出力を近似することが多いのに対し、本手法は対象モデルを変更せず、モデル外部の復号方式だけで高速化する。Blockwise Parallel Decodingは複数トークンを並列化するが主に貪欲復号で専用学習を必要とし、Shallow Aggressive Decodingは入力コピー性の高い課題に限定される。本論文は一般の確率標本化で対象分布を厳密に保存する点が異なる。独立して後に公表されたSpeculative SamplingはChinchilla 70Bで同様の考えを実証している。",
+    "implementation_status": "著者らはT5Xを基準としてT5-XXL用の投機的復号を実装し、単一TPU v4で実壁時計を測定している。既存チェックポイントをそのまま利用し、再学習不要であることを実証した。一方、論文およびPMLRの公開ページから公式実装コードの配布先は確認できない。",
+    "research_positioning": "投機的復号（speculative decoding）研究の基礎論文であり、その後のドラフトモデル学習、自己投機、木構造検証、複数トークン予測、MoE向け投機などの出発点となる。サーベイでは、モデル圧縮とは別の『直列依存を並列検証へ変換する損失なし推論高速化』系統の基準点として位置付けられる。特に受理率α、ドラフトコストc、候補数γの三要素で性能を整理する枠組みは、後続手法の差分を説明する際の比較軸になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-73582856d4a4dd182ac985a1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

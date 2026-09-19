@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"hardware":"1 nodeにNVIDIA A100 40GBを2基、同一PCIe Gen3 bridgeで接続。CPUはIntel Xeon E5-2697 v4 18-core 2.3/3.6GHz、DDR4 1TB、Samsung NVMe SSD 3.2TB。A100周波数範囲0.21〜1.41GHz。colocation/disaggregationとも2 GPUを使用して資源量を揃える。","software":"vLLM V1を各GPUの推論engineとし、LMCacheConnectorV1でKV transferを構成。GPU P2PはNVIDIA NIXLのcuda_ipc、CPU offloadは125GB DRAM＋Redis lookup、disk offloadは125GB NVMe＋fs_connectorで実装する。電力計測はpynvml/NVML、Intel RAPL、IPMI。","methodology":"Llama-3.2-3B、RandomDataset、input 16,384 tokens/output 256 tokens、infinite request rateを使用。Experiment 1はbatch 2〜64、KV総量3.5〜112GBでco-2gpus/dis-gpu/dis-cpu/dis-diskを比較し、median TTFT/TPOT、prefill/decode throughput、joule/tokenとhardware別energyを測る。Experiment 2はbatch 16でGPU frequencyを0.36〜1.26GHzへ掃引し、各構成のTTFT-energy/TPOT-energy Pareto frontierを構築する。","scope":"単一node、2×A100 40GB、PCIe Gen3、3Bモデル、固定16K input/256 outputのsynthetic workloadに限定される。NVLink/InfiniBand/RDMAの実測やmulti-node routing、実traceのarrival process、prefix reuse率の変動、より大規模model/MoE、最新GPUでの結果は含まれない。dis-diskがdis-cpuよりTPOTで速い予想外の現象は著者自身が未解明としている。"},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-73582856d4a4dd182ac985a1",
+  "job_id": "job-research-d0436ba646148687",
+  "data": {
+    "hardware": "壁時計時間の主要評価は単一TPU v4、バッチサイズ1で実施。対象はT5-XXL 11B、近似モデルはT5-small 77M、T5-base 250M、T5-large 800M。追加で受理率αをGPT系97M対6M、LaMDA 137B対100M・2B・8Bなどでも測定した。",
+    "software": "T5Xの標準復号実装を基準とし、同じ既存チェックポイントを用いた投機的復号を実装。翻訳はWMT EnDe、要約はCNN/DailyMailのT5 1.1系モデルを使用し、貪欲復号と温度1の標準標本化を比較した。",
+    "methodology": "英独翻訳とニュース要約について、対象モデルT5-XXL 11Bに対し近似モデル3規模を切り替え、候補数γと標本化温度を設定して実際の壁時計時間をT5X基準と比較した。さらに各条件で対象モデルが生成した1万トークンを用いて受理率αを測定し、理論的な期待高速化率と実測高速化率を照合した。GPT系モデルとLaMDAでは主にαを測り、異なるモデル規模・タスクでも近似モデルとの分布重なりが十分大きいかを確認した。",
+    "scope": "実壁時計高速化の中心評価はT5-XXL、単一TPU v4、バッチサイズ1に限定される。LaMDA 137Bなどでは受理率を示すが同じ詳細な壁時計比較は行っていない。手法は追加演算能力を利用して直列遅延を隠すため、演算そのものが完全に飽和している構成や大きなバッチでは同じ倍率を期待できない。画像などテキスト以外の領域は未評価である。"
+  },
+  "reservation": {
+    "claim_id": "claim-73582856d4a4dd182ac985a1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
