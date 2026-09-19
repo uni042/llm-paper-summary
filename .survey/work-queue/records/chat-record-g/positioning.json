@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8834d311401a99e374c1300d",
-  "job_id": "job-research-795118fce8eb1845",
-  "data": {
-    "positioning": "HashEvictはKV cache token evictionのうち、attention scoreを計算・蓄積せず削除を決めるpre-attention系に位置する。H2O/Scissorhandsが過去attentionを重要度として使うのに対し、現在queryとcached keyの幾何をLSHで近似する。Reformer/HyperAttentionのようにattention演算そのものをLSH近似へ置換せず、LSHはcache管理の削除index選択だけに使うため既存Transformerへ後付けしやすい。",
-    "differences": "最も近いnorm-based evictionはkey normとattentionの経験相関から静的に削除するが、長文検索向けに高attention tokenへ偏りreasoningでは多様性を失いやすい。HashEvictは現在queryごとにkeyとのcosine非類似をHamming距離で近似し、低関連tokenを逐次置換する。SubGenはLSH clusteringで代表keyを選ぶが全query/keyを先に見る必要があり初期VRAMが増えるのに対し、HashEvictは固定cache budgetでstreamingに更新する。KVQuant等のhidden-dimension量子化とは直交し、sequence dimensionのtoken数を減らす。",
-    "relation_to_prior_work": [
-      {
-        "work": "H2O / Scissorhands",
-        "difference": "attention scoreを一度計算して累積するのではなく、attention前のquery-key hash距離で削除対象を決める。"
-      },
-      {
-        "work": "norm-based KV eviction (Devoto et al.)",
-        "difference": "key単体の静的normではなく現在queryとのLSH類似度を使い、task依存のattention多様性を残す。"
-      },
-      {
-        "work": "Reformer / HyperAttention / KDEFormer",
-        "difference": "LSHでattention kernel自体を近似せず、通常attentionへ入れるtoken集合を管理するだけなので学習済みモデル構造を維持する。"
-      },
-      {
-        "work": "SubGen",
-        "difference": "全query/keyの事前clusteringではなく、固定cache内で新token到着ごとに1 slotをオンライン置換する。"
-      },
-      {
-        "work": "KVQuant / KIVI-like quantization",
-        "difference": "各KV vectorのbit幅ではなくsequence軸のtoken数を減らすため、hash overheadと量子化を組み合わせる余地がある。"
-      }
-    ],
-    "strengths": [
-      "attention-freeでありながらquery条件付きの動的削除を行う。",
-      "4bit～64bit hash ablationで小さいhashでも品質が安定し、管理構造を小さくできる。",
-      "reasoning、MCQ、retrieval、summarizationまで同一policyで評価し、norm-based方式のtask偏りを改善する。",
-      "GPU常駐hash tableでCPU offloadを不要にし、prefill throughputでattention accumulation方式を上回る。",
-      "モデル再学習やattention近似kernelへの置換を必要としない。"
-    ],
-    "limitations": [
-      "10% cache budgetなど極端な圧縮では品質が落ち、attention-based heavy hitterが有利な条件がある。",
-      "現在実装はhash bitを1bit packingせず8bit値で保存しており、メモリ効率は理論値未達。",
-      "全cached hashとのHamming比較を毎token行うため、大きい固定budgetでは管理計算自体のkernel最適化が重要になる。",
-      "主評価は8B Llama系で、70Bについてはメモリoverhead例示が中心でend-to-end品質・速度評価がない。",
-      "GovReportなど一部要約ではH2O/Scissorhandsより品質が低く、LSH関連度だけで全taskの重要度を完全には表現できない。"
-    ],
-    "implementation_status": "論文はcold-compress forkとして公開予定と記載するが、arXiv本文からHashEvict専用の確定公開repository URLは確認できない。実験実装はGPU上のhash tableを使用する。",
-    "research_positioning": "attentionを『重要度測定器』として使わず、その前段で安価な幾何近似からcache residencyを決める設計を示す。KeyDiffやECOKVのようなattention非依存・幾何的KV管理へつながる系統として、既存repositoryのother inference systemsから独立系統化する候補になる。",
-    "repository_fit": "現在はother-inference-systemsに適合するが、LSH/geometry-based pre-attention KV evictionが複数本集まればKV cache compression内のattention-free geometric eviction系統として分離する価値がある。"
-  },
+  "attempt_id": "attempt-8cb5acbf1abaf8dfe97fcec9",
+  "job_id": "job-research-b41274093aac35dc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8834d311401a99e374c1300d",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-8cb5acbf1abaf8dfe97fcec9",
+    "worker_id": "work-refcuration-validation-20260920",
+    "worker_kind": "work"
   }
 }

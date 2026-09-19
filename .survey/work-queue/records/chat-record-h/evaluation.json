@@ -2,55 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d9a35dbb4281d8a1c02121dd",
-  "job_id": "job-research-d66acc5736f090e9",
-  "data": {
-    "hardware": [
-      "NVIDIA RTX 4090"
-    ],
-    "software": [
-      "CUDA/C++",
-      "NVIDIA Nsight Compute",
-      "MSKernelBench",
-      "CUDAMaster"
-    ],
-    "model": [
-      "OpenAI o4-mini",
-      "DeepSeek-V3.2"
-    ],
-    "datasets": "MSKernelBenchの50演算。密行列7、疎行列8、正規化4、活性化7、損失3、LLM演算列6、テンソル処理4、ステンシル5、数学・アルゴリズム6。各演算をFP32/BF16で評価し、合計100課題。",
-    "baselines": [
-      "MSKernelBenchの素朴/参照CUDA実装",
-      "cuBLAS",
-      "cuDNN",
-      "cuSPARSE",
-      "Astraで最適化したSGLang演算"
-    ],
-    "correctness": "各入力規模でランダム試験を生成し、ground-truth実装との数値誤差が許容値内であることを要求する。関数名・引数などCインターフェースも固定し、コンパイル失敗は不正解。累積成功率のτ=0は機能正当性を表す。",
-    "settings": [
-      {
-        "name": "全体評価",
-        "description": "50演算×FP32/BF16の100課題をRTX 4090で最適化。CUDAMasterはR=3反復、候補ごとにD=3デバッグ試行。"
-      },
-      {
-        "name": "性能計測",
-        "description": "各入力規模で3回ウォームアップ後50回実行し平均時間を計測。最終性能スコアは理論計算量に基づく複雑度加重平均速度向上。"
-      },
-      {
-        "name": "代表演算比較",
-        "description": "SpMV CSR、2D Convolution、Dot ProductをcuSPARSE/cuDNN/cuBLASと、RMSNorm、SiLU&Mul、Merge Attention StatesをAstra最適化カーネルと比較。"
-      },
-      {
-        "name": "アブレーション",
-        "description": "反復/デバッグのFull、No Debug、Single Iteration、Single Runを比較し、さらにFiltered Profile、No Profile、Full Profileを比較。"
-      }
-    ],
-    "methodology": "マクロ指標は性能閾値τを超える正当な課題の割合。τ=0は正当性、τ=1は素朴基準を上回る割合、τ=2/4/8以上は高い速度向上の達成率を示す。ミクロ指標は同一の素朴基準に対するCUDAMasterと既存ライブラリ/研究実装の速度向上を直接比較する。",
-    "scope": "評価ハードウェアはRTX 4090の単一GPU、生成モデルはo4-miniとDeepSeek-V3.2の2系統、ベンチマークは50演算である。H100など別GPUや、実運用のLLMサービング全体での端から端効果は直接評価していない。"
-  },
+  "attempt_id": "attempt-fbd714a7af5228d9bdb7f483",
+  "job_id": "job-research-d5e83a73eb90a616",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9a35dbb4281d8a1c02121dd",
-    "worker_id": "work-library-repair-20260916",
+    "claim_id": "claim-fbd714a7af5228d9bdb7f483",
+    "worker_id": "work-refcuration-validation-20260920",
     "worker_kind": "work"
   }
 }

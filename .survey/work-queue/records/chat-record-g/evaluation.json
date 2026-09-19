@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8834d311401a99e374c1300d",
-  "job_id": "job-research-795118fce8eb1845",
-  "data": {
-    "evaluation_summary": "主にLlama3-8B-InstructをNVIDIA L4 24GBで評価し、16K長文要約のみLlama3.1-8B-InstructをH100 80GBで実行する。KV予算をfull cacheの10、30、50、70、90%へ変え、norm-based事前削除、H2O、Scissorhands、FastGenと比較する。自由回答、選択式、4K長文検索、16K要約を含め、品質、プリフィル/復号tokens/s、メモリ、attention loss、hash次元を測る。",
-    "scope": "モデル再学習なしのtoken eviction。GQA group size 4。最初の4 tokenと直近10 tokenは常時保持。Hash dimensionは主設定と4～64bit ablation。",
-    "hardware": [
-      "Google Cloud G2 with NVIDIA L4 24GB",
-      "NVIDIA H100 80GB for 16K summarization"
-    ],
-    "models": [
-      "Llama3-8B-Instruct",
-      "Llama3.1-8B-Instruct"
-    ],
-    "datasets": [
-      "GSM8K",
-      "MedQA 100-question sample",
-      "GSM8K multiple choice",
-      "MedQA multiple choice",
-      "Needle-in-a-Haystack",
-      "Common Words / RULER",
-      "MultiNews",
-      "GovReport"
-    ],
-    "workload": "KV cache budget 10/30/50/70/90%。long-context retrievalは4K、summarizationは16K。MultiNewsでprefill/decode throughputを計測。",
-    "baselines": [
-      "norm-based pre-attention eviction (Devoto et al.)",
-      "H2O attention accumulation",
-      "Scissorhands attention accumulation",
-      "FastGen profiling/hybrid retention",
-      "Full KV cache"
-    ],
-    "metrics": [
-      "BERTScore precision/recall/F1",
-      "ROUGE-1/2/L/Lsum",
-      "GPT-4 Judge",
-      "multiple-choice accuracy",
-      "string match score",
-      "prefill tokens/s",
-      "decode tokens/s",
-      "KV+hash memory",
-      "attention loss ratio"
-    ],
-    "predictor_accuracy": "予測器学習はない。LSHのhash dimension ablationでは4～64bitで大きな品質差がなく、8bitが最良だが高bitとの差は小さい。",
-    "control_knobs": "cache budget、hash dimension、常時保持prefix/recent token数、FastGen attention recovery fraction。"
-  },
+  "attempt_id": "attempt-8cb5acbf1abaf8dfe97fcec9",
+  "job_id": "job-research-b41274093aac35dc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8834d311401a99e374c1300d",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-8cb5acbf1abaf8dfe97fcec9",
+    "worker_id": "work-refcuration-validation-20260920",
+    "worker_kind": "work"
   }
 }

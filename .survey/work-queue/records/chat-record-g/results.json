@@ -2,67 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8834d311401a99e374c1300d",
-  "job_id": "job-research-795118fce8eb1845",
-  "data": {
-    "overview": "HashEvictは30～70%のKV圧縮域でreasoning、multiple-choice、long-context retrieval、summarizationの品質を高く維持し、attention-free norm evictionを広範に上回る。GSM8Kでは50% budgetでもBERTScore F1 0.880、MedQAでは0.855で、H2O/Scissorhandsと同等または上回る条件がある。MultiNewsでは30～90% budgetでprefill約20.3～21.2k tokens/s、decode約22.8 tokens/sを示し、H2O/Scissorhandsのprefill約13～14kより約1.5倍速い。50% budgetのattention lossは0.0336でnorm-based 0.0340とScissorhands 0.0448を下回る。",
-    "key_results": [
-      {
-        "metric": "KV compression with quality retention",
-        "value": "30–70% compression with strong task performance",
-        "baseline": "full cache and eviction baselines",
-        "condition": "reasoning, MCQ, retrieval, summarization",
-        "interpretation": "attention計算前のLSH関連度だけでも広いtaskで有用tokenを残せる。"
-      },
-      {
-        "metric": "GSM8K BERTScore F1",
-        "value": "0.880 at 50% cache budget",
-        "baseline": "norm 0.875, H2O 0.881, Scissorhands 0.879",
-        "condition": "Llama3-8B-Instruct",
-        "interpretation": "attention累積なしでattention-based方式に近い品質。"
-      },
-      {
-        "metric": "MedQA BERTScore F1",
-        "value": "0.855 at 50% cache budget",
-        "baseline": "norm 0.853, H2O 0.839, Scissorhands 0.839",
-        "condition": "100-question sample",
-        "interpretation": "reasoning QAではattention-based heavy-hitterより高い条件がある。"
-      },
-      {
-        "metric": "MultiNews prefill throughput",
-        "value": "~20.3–21.2k tokens/s at 30–90% budgets",
-        "baseline": "H2O/Scissorhands ~13.0–14.1k tokens/s",
-        "condition": "Llama3.1-8B-Instruct, H100",
-        "interpretation": "attention score蓄積を避けることで約1.5倍prefill。"
-      },
-      {
-        "metric": "FastGen prefill comparison",
-        "value": "~17× faster",
-        "baseline": "FastGen ~1.14–1.17k tokens/s",
-        "condition": "MultiNews throughput table",
-        "interpretation": "profiling/attention recoveryを含むhybrid方式より軽い。"
-      },
-      {
-        "metric": "attention loss ratio",
-        "value": "0.0336",
-        "baseline": "norm 0.0340, Scissorhands 0.0448, H2O 0.0139",
-        "condition": "GSM8K, 50% cache",
-        "interpretation": "LSHはnorm-basedより僅かに低くScissorhandsより低いattention massを捨てるが、H2Oには及ばない。"
-      }
-    ],
-    "negative_results": [
-      "cache budget 10%ではGSM8K等で品質低下が明確になり、極端な圧縮ではattention-based H2O/Scissorhandsが上回る条件がある。",
-      "Needle-in-a-Haystackでは50%以下で全方式のneedle recallが急落し、LSHでも情報消失を避けられない。",
-      "GovReportでは30～70%でnorm-basedと同程度またはやや上だが、H2O/Scissorhandsより低い条件がある。",
-      "実装は2値hashを8bit値で保持しており、理論的なbit-packed memory最適化をまだ実装していない。",
-      "Hamming scanはcache budgetが固定ならstep当たり定数だが、固定B自体が大きい場合は全cached key hashとの比較を行う。"
-    ],
-    "quality_impact": "近似evictionなのでfull cacheと完全同値ではない。中程度budgetでは複数taskで品質を維持または一部改善するが、10%など強い圧縮では低下する。",
-    "interpretation": "attention重要度を得るためにattentionを計算するという循環を、query-key幾何の安い2値近似で断ち切る。key normのような静的指標よりquery条件付きで、H2Oのようなattention履歴より計算が軽い中間設計点である。"
-  },
+  "attempt_id": "attempt-8cb5acbf1abaf8dfe97fcec9",
+  "job_id": "job-research-b41274093aac35dc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8834d311401a99e374c1300d",
-    "worker_id": "scheduled-chat-hourly-survey-20260916T145717JST",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-8cb5acbf1abaf8dfe97fcec9",
+    "worker_id": "work-refcuration-validation-20260920",
+    "worker_kind": "work"
   }
 }

@@ -2,55 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d9a35dbb4281d8a1c02121dd",
-  "job_id": "job-research-d66acc5736f090e9",
-  "data": {
-    "limitations": [
-      {
-        "name": "単一GPU世代",
-        "description": "評価はRTX 4090のみで、H100/B200などアーキテクチャが異なるGPUでは律速閾値、最適化パターン、既存ライブラリとの相対性能が変わり得る。"
-      },
-      {
-        "name": "基盤モデルが2種類",
-        "description": "o4-miniとDeepSeek-V3.2だけを主評価しており、他の商用/公開モデルで同じ成功率や費用特性が出るかは示されていない。"
-      },
-      {
-        "name": "ベンチマーク範囲",
-        "description": "50演算は多領域だが有限であり、通信カーネル、複数GPU協調、動的shape、実際の推論サーバ全体のスケジューリング等は中心対象ではない。"
-      },
-      {
-        "name": "端から端効果の未評価",
-        "description": "個別カーネルの速度向上は測るが、vLLM/SGLangなどサービング基盤へ組み込んだ際のTTFT、TPOT、throughput、電力、コンパイル償却時間は評価していない。"
-      },
-      {
-        "name": "実装公開位置の不明確さ",
-        "description": "論文はフレームワークとベンチマークをオープンソース化すると述べるが、確認できた一次公開先はデモページで、本体リポジトリURLは今回特定できなかった。"
-      }
-    ],
-    "differences": [
-      {
-        "name": "KernelBench系との差",
-        "description": "PyTorch/LLM演算中心ではなく、純C/CUDAで疎行列、ステンシル、数値計算を含め、各演算を複数規模・FP32/BF16で評価する。"
-      },
-      {
-        "name": "CudaForge等との差",
-        "description": "単にプロファイルをLLMへ返すのではなく、全課題の計測分布から律速分類閾値を作り、タイプ別に必要な指標だけを選択することで文脈量を抑える。"
-      },
-      {
-        "name": "Astraとの差",
-        "description": "SGLang由来カーネルに限定せず一般HPC演算まで対象にし、カーネルコードに加えてコンパイル・実行ツールチェーンの生成/修正もエージェント系へ含める。"
-      },
-      {
-        "name": "学習型CUDA生成との差",
-        "description": "KevinやCUDA-L1/L2のように専用モデルを強化学習するのではなく、既存の強力な基盤モデルへ構造化プロファイルと複数エージェントの反復手順を与える訓練不要の実行時最適化である。"
-      }
-    ],
-    "implementation_status": "MSKernelBench/CUDAMasterの公開デモあり。論文はフレームワークとベンチマークのオープンソース化を明記するが、今回確認できた一次URLから本体GitHubリポジトリは特定できない。",
-    "research_positioning": "推論カーネル最適化系統では、FlashAttentionや手書きCUDAの個別アルゴリズムではなく、『ハードウェア計測を使ってLLMがGPUごとの実装を自動改良するメタシステム』に位置する。特にLLM演算以外の不規則ワークロードを含む評価を導入したことで、既知のLLM最適化コードを記憶から再現しただけか、それとも律速に応じて新しい変換を選べるかを検証しやすい。将来的にはSGLang/vLLM等のカーネル更新をGPU世代ごとに自動再調整する仕組みへ接続し得るが、本論文自体はサービング統合までは扱わない。"
-  },
+  "attempt_id": "attempt-fbd714a7af5228d9bdb7f483",
+  "job_id": "job-research-d5e83a73eb90a616",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9a35dbb4281d8a1c02121dd",
-    "worker_id": "work-library-repair-20260916",
+    "claim_id": "claim-fbd714a7af5228d9bdb7f483",
+    "worker_id": "work-refcuration-validation-20260920",
     "worker_kind": "work"
   }
 }
