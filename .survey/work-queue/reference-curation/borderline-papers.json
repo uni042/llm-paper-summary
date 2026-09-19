@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:45:00+00:00",
-  "record_count": 27,
+  "updated_at": "2026-09-19T18:48:00+00:00",
+  "record_count": 32,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -336,6 +336,66 @@
       "last_checked_at": "2026-09-19T18:45:00+00:00",
       "linked_from": [],
       "title": "Large Language Diffusion Models"
+    },
+    "arXiv:2508.14544": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14544",
+      "identity_tokens": [
+        "arXiv:2508.14544"
+      ],
+      "reason": "Relevant scheduling formulation, but primarily theoretical/simulation-based rather than a full inference-system implementation; defer by default.",
+      "first_checked_at": "2026-09-19T18:48:00+00:00",
+      "last_checked_at": "2026-09-19T18:48:00+00:00",
+      "linked_from": [],
+      "title": "Adaptively Robust LLM Inference Optimization under Prediction Uncertainty"
+    },
+    "arXiv:2410.14257": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.14257",
+      "identity_tokens": [
+        "arXiv:2410.14257"
+      ],
+      "reason": "Serving-metrics/evaluation framework rather than a new serving-system mechanism; useful context but lower immediate systems value.",
+      "first_checked_at": "2026-09-19T18:48:00+00:00",
+      "last_checked_at": "2026-09-19T18:48:00+00:00",
+      "linked_from": [],
+      "title": "Revisiting Service Level Objectives and System Level Metrics in Large Language Model Serving"
+    },
+    "arXiv:2503.19786": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.19786",
+      "identity_tokens": [
+        "arXiv:2503.19786"
+      ],
+      "reason": "Broad model technical report rather than a focused inference/training systems contribution.",
+      "first_checked_at": "2026-09-19T18:48:00+00:00",
+      "last_checked_at": "2026-09-19T18:48:00+00:00",
+      "linked_from": [],
+      "title": "Gemma 3 Technical Report"
+    },
+    "arXiv:2401.02385": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.02385",
+      "identity_tokens": [
+        "arXiv:2401.02385"
+      ],
+      "reason": "Model release/training report with efficiency context but not a focused systems contribution.",
+      "first_checked_at": "2026-09-19T18:48:00+00:00",
+      "last_checked_at": "2026-09-19T18:48:00+00:00",
+      "linked_from": [],
+      "title": "TinyLlama: An Open-Source Small Language Model"
+    },
+    "arXiv:2508.06471": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.06471",
+      "identity_tokens": [
+        "arXiv:2508.06471"
+      ],
+      "reason": "Broad MoE model report with systems-relevant context, but lower priority than focused inference/training systems papers.",
+      "first_checked_at": "2026-09-19T18:48:00+00:00",
+      "last_checked_at": "2026-09-19T18:48:00+00:00",
+      "linked_from": [],
+      "title": "GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models"
     }
   }
 }
