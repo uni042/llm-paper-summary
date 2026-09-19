@@ -203,6 +203,14 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual([r["canonical_id"] for r in first["records"]], ["OpenAlex:W10", "OpenAlex:W11"])
         self.assertEqual([r["canonical_id"] for r in second["records"]], ["OpenAlex:W12"])
 
+    def test_make_fetcher_routes_repository_references(self) -> None:
+        fetch = discovery_provider_adapter.make_fetcher(
+            "repository_references",
+            discovery_provider_adapter.reference_pool.SOURCE_URL,
+            page_size=1,
+        )
+        self.assertTrue(callable(fetch))
+
     def test_rejects_unapproved_provider_host(self) -> None:
         with self.assertRaises(discovery_provider_adapter.DiscoveryProviderError):
             discovery_provider_adapter.semantic_scholar_fetcher(
