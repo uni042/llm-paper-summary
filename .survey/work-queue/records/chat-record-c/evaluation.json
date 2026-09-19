@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3aa111fe2ce9b9bc130ae594",
-  "job_id": "job-research-2dcd265cd3f3852c",
-  "data": {
-    "hardware": "単一ワークフロー評価はLlama-3.1-8BをNVIDIA A10G 24GB・PCIe Gen1 2GB/sで、Qwen2.5-32BをNVIDIA H100 80GB・PCIe Gen5 64GB/sで実行。高並行評価は単一H100を使用。",
-    "software": "SGLang v0.4.4を拡張したKVFlow試作。比較対象はGPUのみRadix cacheのSGLangと、CPU階層キャッシュを使うSGLang HiCache。温度0のgreedy decodingを使用。",
-    "methodology": "単一評価では10エージェント直列ワークフローを作り、固定prefix・動的suffix・出力長を制御した合成promptを使用。固定promptを複数回実行してcacheをwarm-up後、動的suffixを変えて10回実行し平均latencyを測る。高並行では固定prompt 512/1024 token等、dynamic/output各256 tokenで複数独立workflowを同時実行。さらにPEERテンプレートとFinancial QAを用いた4-agentの現実的模擬workloadも評価。",
-    "scope": "GPUメモリに再利用可能prefix cacheを残せる範囲が対象で、active requestだけで全GPU容量を使い切る過剰concurrencyは対象外。性能評価中心で、モデル品質は重み・prompt・decodingを変更しないため不変として扱う。"
-  },
+  "attempt_id": "attempt-42614834081dae5484b02f8c",
+  "job_id": "job-research-9c4412ae5a3ea169",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3aa111fe2ce9b9bc130ae594",
+    "claim_id": "claim-42614834081dae5484b02f8c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
