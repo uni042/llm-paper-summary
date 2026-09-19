@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T02:04:23.826942+00:00",
+  "updated_at": "2026-09-19T02:09:10.439664+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T02:04:23.826942+00:00",
+      "last_recorded_at": "2026-09-19T02:09:10.439664+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 281,
+        "research_completed": 282,
         "audit_completed": 0,
         "discovery_completed": 149,
         "blocked": 35,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35327810517:1",
-          "recorded_at": "2026-09-18T09:06:58.875702+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35327810517",
-            "run_attempt": "1",
-            "source_sha": "41867ad0bd1412c0b45503706a58f6d60ca08a20"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35328269760:1",
           "recorded_at": "2026-09-18T09:12:08.532630+00:00",
@@ -19594,6 +19580,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35414763327:1",
+          "recorded_at": "2026-09-19T02:09:10.439664+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35414763327",
+            "run_attempt": "1",
+            "source_sha": "1c889061588a274910136d343d6659751cf39772"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23317,6 +23317,14 @@
           "title": "Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e8f755e1fee9cc18",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/HPCA68181.2026.11408460",
+          "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25599,7 +25607,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 745,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }

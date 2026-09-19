@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:08:42 JST**
+> 自動生成: **2026-09-19 11:09:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **50** |
-| 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（3時間43分前）** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **47** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-19 11:09:05 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **50** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **50** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **11** | **15** | **6** | **9** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **13** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **14** | **18** | **9** | **9** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:09:05 JST** [research] `DOI:10.1109/HPCA68181.2026.11408460` — Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems
+  - job: `.survey/work-queue/jobs/job-research-e8f755e1fee9cc18.json`
+  - result: `.survey/work-queue/results/research/attempt-0083927c844f95c6af151465.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0083927c844f95c6af151465.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md`
 - **09-19 07:25:37 JST** [research] `arXiv:2402.15678` — Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution
   - job: `.survey/work-queue/jobs/job-research-b3f94863f38e0308.json`
   - result: `.survey/work-queue/results/research/attempt-89e2edf847dd8923a0885b8e.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-478619d2b2eab68cb5a0f0d3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-478619d2b2eab68cb5a0f0d3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md`
-- **09-19 05:15:47 JST** [research] `arXiv:2605.23294` — NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-8de660021e1eaf46.json`
-  - result: `.survey/work-queue/results/research/attempt-2c5886028263df416e6db1bd.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2c5886028263df416e6db1bd.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2605.23294-nasic-3d-nand-based-cam-selected-multibit-cim-architecture-for-efficient-on-device-mixture-of-experts-llm-inference.md`
 
 ### Audit
 
@@ -205,7 +205,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **50** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +225,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **745** |
+| inference/training/survey配下の論文Markdown実体 | **746** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +233,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **581** |
-| └ Research | **452** |
+| 成功result未照合のimmutable submission | **580** |
+| └ Research | **451** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
