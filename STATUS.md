@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:35:27 JST**
+> 自動生成: **2026-09-20 06:35:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -163,9 +163,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:33:45 JST** / heartbeat: **—** / lease expiry: **09-20 08:03:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b33b8317e97d5549.json`
+- `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:35:41 JST** / heartbeat: **—** / lease expiry: **09-20 08:05:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ac3d391d822b215f.json`
 
 #### Audit
 
