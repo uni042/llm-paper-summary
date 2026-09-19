@@ -350,17 +350,22 @@ def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:
         "discovery_precheck_required",
         reason,
         next_action=(
-            "Route raw search results through the Discovery precheck gate, evaluate only the returned "
-            "results[], then create a NEW immutable Discovery submission that references that result."
+            "Route each raw search page/batch through the iterative Discovery precheck gate. "
+            "If it returns CONTINUE_FETCH, fetch the next page/cursor/window and chain a new request. "
+            "Evaluate candidates only after a workflow result returns READY_FOR_EVALUATION."
         ),
         recovery_steps=[
             "Do not edit or overwrite the failed Discovery submission.",
-            "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with operation "
-            "'precheck_discovery_candidates', request_id, the same run_key/axis, and raw search records.",
+            "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with schema_version=2, "
+            "operation 'precheck_discovery_candidates', request_id, collector_id, the same run_key/axis, "
+            "explicit provider_has_more, and the current raw search records.",
             "Wait for .survey/work-queue/discovery-precheck/results/<same-name>.json with ok=true.",
-            "Evaluate only records in that result's results[] array; filtered records must not be re-added.",
+            "If decision=CONTINUE_FETCH, do not evaluate candidates. Fetch the next page/cursor/window and "
+            "create a NEW request carrying previous_request_id and previous_receipt from that result.",
+            "Repeat until evaluation_allowed=true and decision=READY_FOR_EVALUATION.",
+            "Evaluate only records in that final result's results[] array; filtered records must not be re-added.",
             "Create a NEW submit_discovery_round submission and set discovery_precheck.request_id, "
-            "discovery_precheck.result_path, and discovery_precheck.receipt from the successful result.",
+            "discovery_precheck.result_path, and discovery_precheck.receipt from the final result.",
         ],
     )
 
@@ -428,6 +433,15 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
         raise _precheck_guidance("Discovery precheck request_id does not match the referenced result.")
     if str(result.get("receipt") or "") != receipt:
         raise _precheck_guidance("Discovery precheck receipt does not match the referenced result.")
+
+    schema_version = result.get("schema_version")
+    if isinstance(schema_version, int) and not isinstance(schema_version, bool) and schema_version >= 2:
+        if result.get("evaluation_allowed") is not True or result.get("decision") != "READY_FOR_EVALUATION":
+            raise _precheck_guidance(
+                "Referenced iterative Discovery precheck result is not final. "
+                "Follow next_action, fetch the next page/cursor/window, and continue the same collector "
+                "until READY_FOR_EVALUATION."
+            )
 
     meta = sub.get("discovery_stats") if isinstance(sub.get("discovery_stats"), dict) else {}
     if str(result.get("run_key") or "") != str(meta.get("run_key") or ""):
