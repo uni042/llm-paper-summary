@@ -5,6 +5,7 @@ The pool is intentionally local and durable:
 - every structured reference in papers/{inference,training,survey} is considered;
 - references already represented by collected papers are removed;
 - papers durably marked unrelated are removed;
+- borderline papers are removed by default but can be explicitly reconsidered;
 - remaining candidates are ranked by how many collected papers point to them.
 
 This module is also used by discovery_provider_adapter as the
@@ -15,14 +16,16 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 import citation_graph
 
 SOURCE_URL = "repository://structured-references"
-DEFAULT_LEDGER = Path(".survey/work-queue/reference-curation/unrelated-papers.json")
+DEFAULT_UNRELATED_LEDGER = Path(".survey/work-queue/reference-curation/unrelated-papers.json")
+DEFAULT_BORDERLINE_LEDGER = Path(".survey/work-queue/reference-curation/borderline-papers.json")
+# Backward-compatible alias for the first implementation.
+DEFAULT_LEDGER = DEFAULT_UNRELATED_LEDGER
 
 
 def _candidate_record(ref: Any, canonical_id: str, identities: list[str]) -> dict[str, Any]:
@@ -48,15 +51,15 @@ def _candidate_record(ref: Any, canonical_id: str, identities: list[str]) -> dic
     return record
 
 
-def _load_unrelated_tokens(path: Path) -> set[str]:
+def _load_ledger_tokens(path: Path, *, label: str) -> set[str]:
     if not path.is_file():
         return set()
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict) or payload.get("schema_version") != 1:
-        raise ValueError(f"unrelated-paper ledger has unsupported schema: {path}")
+        raise ValueError(f"{label} ledger has unsupported schema: {path}")
     rows = payload.get("records")
     if not isinstance(rows, dict):
-        raise ValueError(f"unrelated-paper ledger is missing records: {path}")
+        raise ValueError(f"{label} ledger is missing records: {path}")
     tokens: set[str] = set()
     for key, row in rows.items():
         if isinstance(key, str) and key:
@@ -74,15 +77,31 @@ def build_reference_pool(
     repo_root: Path,
     *,
     unrelated_ledger_path: Path | None = None,
+    borderline_ledger_path: Path | None = None,
+    include_borderline: bool = False,
 ) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
-    ledger_path = Path(unrelated_ledger_path) if unrelated_ledger_path else repo_root / DEFAULT_LEDGER
+    unrelated_path = (
+        Path(unrelated_ledger_path)
+        if unrelated_ledger_path is not None
+        else repo_root / DEFAULT_UNRELATED_LEDGER
+    )
+    borderline_path = (
+        Path(borderline_ledger_path)
+        if borderline_ledger_path is not None
+        else repo_root / DEFAULT_BORDERLINE_LEDGER
+    )
 
     papers = citation_graph.load_records(repo_root)
     represented: set[str] = set()
     for paper in papers:
         represented.update(paper.identifiers)
-    unrelated = _load_unrelated_tokens(ledger_path)
+    unrelated = _load_ledger_tokens(unrelated_path, label="unrelated-paper")
+    borderline = (
+        set()
+        if include_borderline
+        else _load_ledger_tokens(borderline_path, label="borderline-paper")
+    )
 
     buckets: dict[str, dict[str, Any]] = {}
     alias_to_key: dict[str, str] = {}
@@ -115,6 +134,8 @@ def build_reference_pool(
             if any(identity in represented for identity in identities):
                 continue
             if any(identity in unrelated for identity in identities):
+                continue
+            if any(identity in borderline for identity in identities):
                 continue
 
             matched_keys = {alias_to_key[i] for i in identities if i in alias_to_key}
@@ -178,6 +199,8 @@ def build_reference_pool(
         "paper_count": len(papers),
         "represented_identity_count": len(represented),
         "unrelated_identity_count": len(unrelated),
+        "borderline_identity_count": len(borderline),
+        "borderline_excluded": not include_borderline,
         "candidate_count": len(candidates),
         "candidates": candidates,
     }
@@ -186,16 +209,39 @@ def build_reference_pool(
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
-    ap.add_argument("--ledger")
+    ap.add_argument("--ledger", help="deprecated alias of --unrelated-ledger")
+    ap.add_argument("--unrelated-ledger")
+    ap.add_argument("--borderline-ledger")
+    ap.add_argument(
+        "--include-borderline",
+        action="store_true",
+        help="explicit reconsideration mode; default Discovery excludes borderline papers",
+    )
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--limit", type=int, default=20)
     args = ap.parse_args()
     if args.offset < 0 or args.limit <= 0:
         ap.error("offset must be >= 0 and limit must be > 0")
+    if args.ledger and args.unrelated_ledger:
+        ap.error("use only one of --ledger and --unrelated-ledger")
 
     root = Path(args.root).resolve()
-    ledger = Path(args.ledger).resolve() if args.ledger else root / DEFAULT_LEDGER
-    pool = build_reference_pool(root, unrelated_ledger_path=ledger)
+    unrelated = (
+        Path(args.unrelated_ledger or args.ledger).resolve()
+        if (args.unrelated_ledger or args.ledger)
+        else root / DEFAULT_UNRELATED_LEDGER
+    )
+    borderline = (
+        Path(args.borderline_ledger).resolve()
+        if args.borderline_ledger
+        else root / DEFAULT_BORDERLINE_LEDGER
+    )
+    pool = build_reference_pool(
+        root,
+        unrelated_ledger_path=unrelated,
+        borderline_ledger_path=borderline,
+        include_borderline=args.include_borderline,
+    )
     selected = pool["candidates"][args.offset:args.offset + args.limit]
     out = {
         **{k: v for k, v in pool.items() if k != "candidates"},
@@ -207,13 +253,14 @@ def main() -> int:
     print(json.dumps(out, ensure_ascii=False, indent=2))
     print(
         f"[WORKER-GUIDE][完了] 構造化referencesから候補 {pool['candidate_count']} 件を構築し、"
-        f"無関係台帳の識別子 {pool['unrelated_identity_count']} 件を除外しました。",
+        f"無関係台帳 {pool['unrelated_identity_count']} 識別子、"
+        f"微妙台帳 {pool['borderline_identity_count']} 識別子を除外しました。",
         file=sys.stderr,
     )
     print(
-        "[WORKER-GUIDE][次] 上位候補を軽量評価してください。明確に対象外なら "
-        ".survey/scripts/reference_relevance_ledger.py mark-unrelated で先に永続記録し、"
-        "関連ありなら通常のDiscovery precheck/submission経路へ進めます。",
+        "[WORKER-GUIDE][次] 上位候補を軽量評価してください。対象外は mark-unrelated、"
+        "関連性や価値が微妙なら mark-borderline で先に永続記録し、"
+        "関連ありだけ通常のDiscovery precheck/submission経路へ進めます。",
         file=sys.stderr,
     )
     return 0

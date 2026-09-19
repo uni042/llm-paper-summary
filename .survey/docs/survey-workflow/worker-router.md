@@ -73,7 +73,7 @@ requestは `.survey/work-queue/discovery-precheck/requests/<request-id>.json` �
 ```yaml
 schema_version: 3
 operation: precheck_discovery_candidates
-provider: openalex | semantic_scholar | openalex_references
+provider: openalex | semantic_scholar | openalex_references | repository_references
 source_url: <固定した検索/API URL>
 collector_id: <同一探索軸の識別子>
 run_key: <今回runの識別子>
@@ -100,9 +100,10 @@ OpenAlexで直接ページ送り・引用関係を取得できる場合はOpenAl
 
 この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを上限の目安としてよい。
 
-- 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文は除外し、専用台帳 `.survey/work-queue/reference-curation/unrelated-papers.json` に登録済みの候補も除外する。
-- **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で専用台帳へ永続保存する。同じ論文を後続runで再判定しない。
-- 「重要度が低い」「今は優先しない」「関連性が微妙」だけでは無関係台帳へ入れない。永久除外してよいのは対象外と判断できる場合だけである。
+- 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文に加え、`.survey/work-queue/reference-curation/unrelated-papers.json` と `.survey/work-queue/reference-curation/borderline-papers.json` の登録済み候補を通常時は除外する。
+- **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で無関係台帳へ永続保存する。同じ論文を後続runで再判定しない。
+- **関連性・重要性・得られそうな知見が微妙で、現時点ではResearchへ送る価値が弱い候補**は `.survey/scripts/reference_relevance_ledger.py mark-borderline` で微妙台帳へ保存する。微妙台帳も通常の `repository_references` 探索ではデフォルト除外し、同じ候補を毎回評価し直さない。
+- 微妙台帳は永久除外ではない。後で明示的に再検討する場合だけ `reference_pool.py --include-borderline` を使って再び候補へ含めてよい。通常runでは使わない。
 - 関連ありの候補は一次資料でtitle/abstract/書誌を補完してから、当該schema v3 precheck result / receiptを参照する通常のDiscovery submissionへ送る。canonical IDだけをtitle代わりにして提出しない。
 - この経路からResearch jobを直接生成しない。Candidate投入以降は4.2〜4.3の一本道へ合流する。
 

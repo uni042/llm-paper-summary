@@ -360,6 +360,8 @@ def repository_reference_pool_fetcher(
     page_size: int = 100,
     repo_root: Path | None = None,
     unrelated_ledger_path: Path | None = None,
+    borderline_ledger_path: Path | None = None,
+    include_borderline: bool = False,
 ) -> Callable[[str | None], dict[str, Any]]:
     """Page through the repository-wide structured-reference candidate pool."""
     if source_url != reference_pool.SOURCE_URL:
@@ -369,14 +371,21 @@ def repository_reference_pool_fetcher(
     if page_size <= 0 or page_size > 100:
         raise ValueError("page_size must be between 1 and 100")
     root = Path(repo_root or Path.cwd()).resolve()
-    ledger = (
+    unrelated = (
         Path(unrelated_ledger_path)
         if unrelated_ledger_path is not None
-        else root / reference_pool.DEFAULT_LEDGER
+        else root / reference_pool.DEFAULT_UNRELATED_LEDGER
+    )
+    borderline = (
+        Path(borderline_ledger_path)
+        if borderline_ledger_path is not None
+        else root / reference_pool.DEFAULT_BORDERLINE_LEDGER
     )
     pool = reference_pool.build_reference_pool(
         root,
-        unrelated_ledger_path=ledger,
+        unrelated_ledger_path=unrelated,
+        borderline_ledger_path=borderline,
+        include_borderline=include_borderline,
     )
     records = list(pool["candidates"])
 
