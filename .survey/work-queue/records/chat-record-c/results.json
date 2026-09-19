@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-bb1ec81341e2780a2eb5259f",
-  "job_id": "job-research-1a87bd753fb86450",
-  "data": {
-    "overview": "校正gridでは36構成中18がPareto frontierに入り、stacked combinationは15中9（60%）、single methodは21中9（43%）だった。FP8 weight quantizationは全GPUでbaseline比0.61〜0.65x TPOTながらstrict GSM8K 0.760/FP16 0.765を維持し4 regime中3 winnerに入る。AWQはL4で0.34xまで高速化するがstrict accuracy 0.720で95% floor 0.726を僅かに下回る。naive FP8 KVはnormal throughputでも0/200正答となり品質guardで排除される。",
-    "key_results": [
-      {
-        "metric": "Pareto frontier到達率",
-        "value": "18/36; stacks 9/15 vs singles 9/21",
-        "baseline": "single-method configurations",
-        "condition": "calibrated grid",
-        "interpretation": "互換最適化のstackは単独方式よりfrontierへ残る割合が高い。"
-      },
-      {
-        "metric": "FP8 weight latency",
-        "value": "0.61–0.65x baseline TPOT",
-        "baseline": "FP16",
-        "condition": "L4/A100/H100全3 GPU",
-        "interpretation": "GPU間で比較的安定した速度向上を示し、品質も99.4%相当を保持するportable default。"
-      },
-      {
-        "metric": "AWQ-4bit latency",
-        "value": "L4 0.34x, A100 0.49x, H100 0.53x",
-        "baseline": "FP16",
-        "condition": "同一serving workload",
-        "interpretation": "budget GPUほどweight compressionの効果が大きいが品質floor境界にかかる。"
-      },
-      {
-        "metric": "GSM8K strict/flexible",
-        "value": "FP16 .765/.800; AWQ .720/.810; FP8 weights .760/.805; FP8 KV 0/0",
-        "baseline": "FP16",
-        "condition": "200 questions, 5-shot, greedy",
-        "interpretation": "AWQのstrict低下はformatting寄りだが、naive FP8 KVは完全な品質崩壊で速度だけでは検出不能。"
-      },
-      {
-        "metric": "low-cost/high-throughput winner",
-        "value": "$0.106/Mtoken",
-        "baseline": "他GPU/stack",
-        "condition": "throughput stack on A100",
-        "interpretation": "A100がthroughputとlow cost regimeを支配する。"
-      },
-      {
-        "metric": "simulator cross-campaign drift",
-        "value": "<1.5%",
-        "baseline": "three independent pod sessions",
-        "condition": "calibration constants",
-        "interpretation": "anchor外一般化の現実的な誤差目安として用いる。"
-      }
-    ],
-    "negative_results": "n-gram speculative decodingは二つのprompt設計で0.90〜0.98xとbaseline近傍で追加利得なし。draft-model speculationは対象stackで未実装。naive FP8 KV cacheはnormal throughputにもかかわらずGSM8K 0/200。AWQの95% quality floor不合格は0.720 vs 0.726でn=200の±3pp誤差内にある境界事例。",
-    "interpretation": "最適化の優劣はGPUとbinding constraintで変わるため単一speedup順位は存在しない。品質を測らないと壊れたKV量子化を推奨し得る一方、FP8 weightsのように複数GPUで速度と品質を両立する方式は多くのregimeで再登場する。",
-    "quality_impact": "品質軸を明示的に加えることで速度frontierと実用atlasを分離した。特にFP8 KVの破綻を除外し、AWQのformat-sensitiveな品質低下とFP8 weightsのほぼ無損失を区別する。"
-  },
+  "attempt_id": "attempt-0ab169f82c4835ab94982856",
+  "job_id": "job-research-8ff9887a327d8124",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-bb1ec81341e2780a2eb5259f",
+    "claim_id": "claim-0ab169f82c4835ab94982856",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
