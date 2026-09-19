@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15127",
+      "title": "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems",
+      "source_url": "https://arxiv.org/abs/2608.15127",
+      "priority": 80,
+      "reason": "Systems characterization of agentic workloads with production traces and concrete serving design explorations. It quantifies sandbox memory, heterogeneous resource affinity, idle persistent state, control-plane overhead, and caching opportunities, with measured improvements from placement/offload/cache designs."
+    },
+    {
+      "canonical_id": "arXiv:2603.09046",
+      "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+      "source_url": "https://arxiv.org/abs/2603.09046",
+      "priority": 74,
+      "reason": "Implemented mobile LLM serving system with flexible TrustZone memory/NPU isolation, LLM-aware memory management, secure pipeline, and multi-model scheduler. It has direct systems relevance and substantial measured TTFT/end-to-end improvements."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "identity": "arXiv:2609.19657",
+      "title": "PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.19657",
+      "rejection_reason": "Useful benchmark/characterization but explicitly does not introduce a new caching or serving mechanism; lower priority than mechanism-bearing systems papers for this repository's discovery criteria."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-agent-systems-6",
+    "axis": "agentic workload characterization / sandbox memory / secure mobile serving",
+    "query_summary": "Expanded agentic serving beyond scheduler-only work into systems characterization, sandbox/resource isolation, and prefix-cache measurement. Two mechanism-bearing systems candidates were accepted; a benchmark-only prefix study was rejected with reason.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 3,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2608.15127", "arXiv:2603.09046"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Switch to MoE expert placement/prefetch/cache or inference framework runtime updates to maintain independent coverage."
+  }
+}
