@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b33b8317e97d5549",
-      "type": "research",
-      "lane": null,
-      "priority": 95,
-      "canonical_id": "arXiv:2503.16525",
-      "title": "KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse",
-      "source_url": "https://arxiv.org/abs/2503.16525",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-ac3d391d822b215f",
       "type": "research",
       "lane": null,
@@ -103,6 +89,20 @@
       "title": "Efficient and Economic Large Language Model Inference with Attention Offloading",
       "source_url": "https://arxiv.org/abs/2405.01814",
       "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-708ae0cc33daae20",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2607.11586",
+      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference",
+      "source_url": "https://arxiv.org/abs/2607.11586",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2607.11586-hcrmap.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T21:37:35+00:00"
+  "generated_at": "2026-09-19T21:38:38+00:00"
 }
