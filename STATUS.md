@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:01:37 JST**
+> 自動生成: **2026-09-19 22:02:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **47** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（8分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（9分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **56** | **2** | **1** | **1** | **0** | **0** | **6** |
-| 合計 | **68** | **5** | **3** | **1** | **0** | **0** | **6** |
+| Discovery | **56** | **3** | **1** | **2** | **0** | **0** | **8** |
+| 合計 | **68** | **6** | **3** | **2** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 22:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **6件**
-- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **8件**
+- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control
 - round `specialist-flash-agent-runtime-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
   - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving
@@ -183,6 +183,10 @@
 - round `specialist-moe-cxl-history-2` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json`
   - 探索軸: 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-thermal-energy-3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T2222JST-discovery-specialist-thermal-energy-3.json`
+  - 探索軸: 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -238,10 +242,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **623** |
+| 成功result未照合のimmutable submission | **624** |
 | └ Research | **475** |
 | └ Audit | **2** |
-| └ Discovery | **146** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
