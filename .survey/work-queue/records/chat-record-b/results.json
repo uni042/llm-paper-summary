@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-292a5f32d168fabd11a080be",
-  "job_id": "job-research-7462825d21914fcd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-292a5f32d168fabd11a080be",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-292a5f32d168fabd11a080be","job_id":"job-research-7462825d21914fcd","data":{"overview":"A100 attention benchmarkでFlashAttention-2は初代FlashAttention比1.7〜3.0倍、Triton版比1.3〜2.5倍、standard attention比3〜10倍となり、最大230 TFLOPs/s、理論FP16/BF16性能の73%へ到達した。GPT 1.3B/2.7Bの8×A100学習では初代FlashAttention比最大1.3倍、非FlashAttention baseline比最大2.8倍で、225 TFLOPs/s/GPU・72% model FLOPs utilizationを達成した。","key_results":[{"metric":"attention kernel speedup","value":"FlashAttention比1.7〜3.0×","baseline":"FlashAttention","condition":"A100 80GB、seq 512〜16K、head dim 64/128、causal有無","interpretation":"I/O最適化後に残るparallelism/work partitioningが大きな性能余地だった。"},{"metric":"A100 kernel throughput","value":"最大230 TFLOPs/s、理論値73%","baseline":"A100 FP16/BF16 theoretical 312 TFLOPs/s","condition":"attention microbenchmark","interpretation":"exact attentionがGEMMに近いGPU効率へ到達する。"},{"metric":"standard attention比較","value":"最大10×高速","baseline":"PyTorch standard attention","condition":"A100 microbenchmark","interpretation":"N² intermediate HBM traffic削減と実行配置改善の合成効果。"},{"metric":"E2E GPT training","value":"最大225 TFLOPs/s/GPU、72% MFU","baseline":"FlashAttention / no-FlashAttention","condition":"GPT 1.3B/2.7B、context 2K/8K、8×A100","interpretation":"kernel高速化がattention-heavyな8K contextでE2Eへ大きく反映される。"},{"metric":"E2E speedup","value":"FlashAttention比最大1.3×、baseline比最大2.8×","baseline":"FlashAttention / no FlashAttention","condition":"8×A100 GPT training","interpretation":"attention以外のmodel計算が残るためkernel単体2倍前後よりE2E利得は小さい。"},{"metric":"H100参考性能","value":"最大335 TFLOPs/s","baseline":"same implementation","condition":"H100、新TMA/4th-gen Tensor Core専用最適化なし","interpretation":"移植だけでも高速だがH100固有機能の余地を残す。"}],"negative_results":"block sizeを大きくするとshared-memory trafficは減るがregister/shared-memory消費が増え、register spillingや容量超過で遅くなるため64/128の少数候補をhead dimensionごとに手動tuningする。H100固有命令、FP8、AMDは未最適化。長系列で計算量O(N²d)自体は変わらず、アルゴリズム的なsubquadratic attentionではない。","interpretation":"初代FlashAttentionでHBM trafficを削った後のボトルネックが、非Tensor-Core FLOPs、SM occupancy、warp間shared-memory通信へ移ったことを示す。FlashAttention-2は同じexact tilingを保ったまま、その新しいボトルネックに合わせてkernel execution mappingを再設計したため、追加の約2倍高速化を得る。","quality_impact":"standard softmax attentionと数学的に同じoutputとgradientを返し、近似・疎化・量子化を導入しない。したがってモデル品質への交換条件はなく、性能・実装複雑性・hardware tuningが主要な論点である。"},"reservation":{"claim_id":"claim-292a5f32d168fabd11a080be","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
