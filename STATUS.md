@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:18:10 JST**
+> 自動生成: **2026-09-19 11:18:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **44** |
 | 未claim Research job | **42** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 11:15:18 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-19 11:15:18 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -180,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.18123` — AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:15:47 JST** / heartbeat: **—** / lease expiry: **09-19 12:45:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-66ea885d5e740aba.json`
+- `DOI:10.1145/3797905.3807846` — CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 11:18:17 JST** / heartbeat: **—** / lease expiry: **09-19 12:48:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8f1455c9a8468d9c.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
