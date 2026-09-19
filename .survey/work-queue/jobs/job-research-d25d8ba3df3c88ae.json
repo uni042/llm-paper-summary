@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d25d8ba3df3c88ae",
+  "type": "research",
+  "parent_job_id": "job-d95074768a0a885f",
+  "priority": 72,
+  "canonical_id": "arXiv:2607.08215",
+  "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend",
+  "source_url": "https://arxiv.org/abs/2607.08215",
+  "paper_path": null,
+  "selection_reason": "Ascend 910上でMoE/マルチモーダル大規模推論を実運用する際のruntime・operator・parallelism・graph compilation・observability上の制約を実機検証するfield study。vLLM-Ascend/CANNの移植・serving system観点で、GPU以外の推論基盤に関する実証的systems資料として有用。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T12:03:00+00:00"
+}
