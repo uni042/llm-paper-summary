@@ -307,6 +307,69 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "add", fixed_source_marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
         subprocess.run(["git", "commit", "-qm", "enable fixed source discovery precheck"], cwd=self.repo, check=True)
 
+    def _enable_reference_pool_first(self) -> None:
+        marker = self.queue / "discovery-precheck" / "REFERENCE_POOL_FIRST_ENFORCED"
+        marker.write_text("repository_references first\n", encoding="utf-8")
+        subprocess.run(["git", "add", marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "enable repository reference pool first"], cwd=self.repo, check=True)
+        queue_worker._POST_MARKER_SUBMISSION_CACHE.clear()
+
+    def _commit_reference_pool_result(
+        self,
+        *,
+        unseen: int,
+        provider_exhausted: bool = True,
+        request_id: str = "ref-pool-first",
+    ) -> Path:
+        path = self.results / f"{request_id}.json"
+        records = (
+            [{"canonical_id": "arXiv:2609.99999", "title": "Reference Candidate"}]
+            if unseen
+            else []
+        )
+        allowed_records = (
+            [{
+                "primary_identity": "id:arXiv:2609.99999",
+                "identity_tokens": ["id:arXiv:2609.99999"],
+                "record": records[0],
+            }]
+            if unseen
+            else []
+        )
+        payload = {
+            "schema_version": 3,
+            "operation": "precheck_discovery_candidates",
+            "ok": True,
+            "request_id": request_id,
+            "collector_id": "reference-pool-test",
+            "run_key": "validation-round",
+            "axis": "structured-reference-first",
+            "provider": "repository_references",
+            "source_url": "repository://structured-references",
+            "target_unseen": 20,
+            "page_size": 100,
+            "pages_fetched": 1,
+            "next_cursor": None,
+            "target_reached": unseen >= 20,
+            "provider_exhausted": provider_exhausted,
+            "max_pages_reached": False,
+            "stop_reason": "PROVIDER_EXHAUSTED" if provider_exhausted else "TARGET_REACHED",
+            "evaluation_allowed": True,
+            "decision": "READY_FOR_EVALUATION",
+            "snapshot_source_commit": "abc123",
+            "unseen_result_count": unseen,
+            "results": records,
+            "allowed_records": allowed_records,
+            "receipt": f"sha256:{request_id}-{unseen}",
+        }
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        subprocess.run(["git", "add", path.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        env = dict(os.environ)
+        env["GIT_AUTHOR_NAME"] = "survey-discovery-precheck[bot]"
+        env["GIT_AUTHOR_EMAIL"] = "survey-discovery-precheck[bot]@users.noreply.github.com"
+        subprocess.run(["git", "commit", "-qm", f"reference pool {unseen}"], cwd=self.repo, check=True, env=env)
+        return path
+
     def tearDown(self) -> None:
         for name, value in self.originals.items():
             setattr(queue_worker, name, value)
@@ -487,6 +550,77 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
             queue_worker.validate_discovery_precheck(sub)
         self.assertIn("not emitted", str(ctx.exception))
+
+
+    def test_legacy_provider_is_rejected_until_reference_pool_is_empty(self) -> None:
+        self._enable_reference_pool_first()
+        self._commit_result()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission("legacy-without-reference-proof.json")
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(ctx.exception.code, "reference_pool_first_required")
+        self.assertIn("repository_references", ctx.exception.next_action)
+
+    def test_legacy_provider_is_allowed_after_same_run_zero_reference_pool(self) -> None:
+        self._enable_reference_pool_first()
+        self._commit_reference_pool_result(unseen=0)
+        self._commit_result()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission("legacy-after-empty-reference-pool.json")
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        sub["reference_pool_fallback"] = {
+            "request_id": "ref-pool-first",
+            "result_path": ".survey/work-queue/discovery-precheck/results/ref-pool-first.json",
+            "receipt": "sha256:ref-pool-first-0",
+        }
+        result = queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(result["provider"], "semantic_scholar")
+
+    def test_legacy_provider_is_rejected_when_reference_pool_still_has_candidate(self) -> None:
+        self._enable_reference_pool_first()
+        self._commit_reference_pool_result(unseen=1)
+        self._commit_result()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission("legacy-before-reference-pool-empty.json")
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        sub["reference_pool_fallback"] = {
+            "request_id": "ref-pool-first",
+            "result_path": ".survey/work-queue/discovery-precheck/results/ref-pool-first.json",
+            "receipt": "sha256:ref-pool-first-1",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(ctx.exception.code, "reference_pool_first_required")
+        self.assertIn("returns any unseen candidate", str(ctx.exception))
+
+    def test_repository_reference_provider_needs_no_fallback_proof(self) -> None:
+        self._enable_reference_pool_first()
+        self._commit_reference_pool_result(unseen=1)
+        sub = self._base_sub()
+        sub["discovery_stats"]["axis"] = "structured-reference-first"
+        sub["_file"] = self._commit_submission("reference-pool-direct.json")
+        sub["candidates"] = [{"canonical_id": "arXiv:2609.99999", "title": "Reference Candidate"}]
+        sub["discovery_precheck"] = {
+            "request_id": "ref-pool-first",
+            "result_path": ".survey/work-queue/discovery-precheck/results/ref-pool-first.json",
+            "receipt": "sha256:ref-pool-first-1",
+        }
+        result = queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(result["provider"], "repository_references")
 
 
 if __name__ == "__main__":

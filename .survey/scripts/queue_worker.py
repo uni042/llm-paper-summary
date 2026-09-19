@@ -39,6 +39,7 @@ MAX_DISCOVERY_CANDIDATES = 5
 DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")
 DISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
 DISCOVERY_FIXED_SOURCE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/FIXED_SOURCE_ENFORCED")
+DISCOVERY_REFERENCE_POOL_FIRST_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/REFERENCE_POOL_FIRST_ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
@@ -51,12 +52,22 @@ class DiscoveryPrecheckError(ValueError):
         self.recovery_steps = list(recovery_steps)
 
 DISCOVERY_INSTRUCTIONS = (
-    "Search primary sources for strong LLM inference-system papers not already "
-    "represented in the repository. Prefer recent work, but include an older "
-    "important omission when clearly worthwhile. Return at most 5 candidates. "
-    "Do not fill the list with weak papers."
+    "Start every Discovery run with the repository-wide structured-reference pool: "
+    "provider=repository_references and source_url=repository://structured-references, "
+    "target_unseen=20. Keep using this route on later Discovery runs while it returns "
+    "any unseen candidates; classify clear non-matches as unrelated and weak/borderline "
+    "papers in the durable relevance ledgers so they are not reconsidered. Only when "
+    "the first repository_references precheck for the current run returns zero unseen "
+    "records with provider_exhausted=true may you fall back to the previous normal-search, "
+    "backward-reference, or forward-citation routes. A fallback submission must carry "
+    "the zero-result reference_pool_fallback proof. Return at most 5 strong candidates "
+    "per submission; do not fill the list with weak papers."
 )
-DISCOVERY_COMPLETION = "Submit 0-5 strong candidates. Empty is valid."
+DISCOVERY_COMPLETION = (
+    "Keep mining repository_references while it has unseen candidates. Use legacy "
+    "Discovery routes only after a same-run zero-result reference-pool proof. "
+    "Submit 0-5 strong candidates per submission."
+)
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
     "record covering problem, novelty, method, evaluation conditions, key quantitative "
@@ -386,6 +397,15 @@ def _fixed_source_discovery_precheck_required(sub: dict) -> bool:
     )
 
 
+def _reference_pool_first_required(sub: dict) -> bool:
+    """Require structured-reference Discovery before legacy search routes."""
+    return _submission_path_added_after_marker(
+        sub,
+        DISCOVERY_REFERENCE_POOL_FIRST_MARKER,
+        cache_key_suffix="reference-pool-first",
+    )
+
+
 def _discovery_precheck_required(sub: dict) -> bool:
     """Require precheck for Discovery submissions introduced after the enforcement marker."""
     proof_present = isinstance(sub.get("discovery_precheck"), dict)
@@ -453,6 +473,100 @@ def _precheck_result_has_workflow_provenance(result_path: PurePosixPath) -> bool
         capture_output=True,
     )
     return proc.returncode == 0 and proc.stdout.strip() == "survey-discovery-precheck[bot]@users.noreply.github.com"
+
+
+def _reference_pool_guidance(reason: str) -> DiscoveryPrecheckError:
+    return DiscoveryPrecheckError(
+        "reference_pool_first_required",
+        reason,
+        next_action=(
+            "Run schema-v3 repository_references precheck first with "
+            "source_url=repository://structured-references and target_unseen=20. "
+            "If it returns any unseen records, evaluate that buffer and continue the "
+            "structured-reference curation route. Use legacy Discovery routes only after "
+            "the repository reference pool returns zero unseen records and is exhausted."
+        ),
+        recovery_steps=[
+            "Create a NEW schema-v3 precheck request with provider=repository_references, "
+            "source_url=repository://structured-references, target_unseen=20, and the same run_key.",
+            "Wait for the workflow-produced result; do not hand-write the result or skip the precheck.",
+            "If unseen_result_count > 0, evaluate only that reference-pool result and do not switch providers.",
+            "Classify clear non-matches with mark-unrelated and borderline candidates with mark-borderline before the next run.",
+            "Only if unseen_result_count=0 and provider_exhausted=true may a legacy provider be used.",
+            "For that legacy submission, attach reference_pool_fallback with request_id, result_path, and receipt from the zero-result repository_references precheck.",
+        ],
+    )
+
+
+def _validate_reference_pool_fallback(sub: dict, meta: dict[str, Any]) -> dict[str, Any]:
+    proof = sub.get("reference_pool_fallback")
+    if not isinstance(proof, dict):
+        raise _reference_pool_guidance(
+            "Legacy Discovery provider was used without a zero-result repository_references proof."
+        )
+
+    request_id = str(proof.get("request_id") or "").strip()
+    result_path_value = str(proof.get("result_path") or "").strip()
+    receipt = str(proof.get("receipt") or "").strip()
+    if not request_id or not result_path_value or not receipt:
+        raise _reference_pool_guidance(
+            "reference_pool_fallback must include request_id, result_path, and receipt."
+        )
+
+    result_path = PurePosixPath(result_path_value)
+    expected_prefix = (".survey", "work-queue", "discovery-precheck", "results")
+    if (
+        result_path.is_absolute()
+        or ".." in result_path.parts
+        or len(result_path.parts) != 5
+        or result_path.parts[:4] != expected_prefix
+        or result_path.suffix != ".json"
+    ):
+        raise _reference_pool_guidance(
+            "reference_pool_fallback.result_path must point to "
+            ".survey/work-queue/discovery-precheck/results/<name>.json."
+        )
+
+    result = read_json(ROOT.parent / Path(result_path.as_posix()), {}) or {}
+    if not result:
+        raise _reference_pool_guidance("The referenced repository reference-pool result does not exist.")
+    if not _precheck_result_has_workflow_provenance(result_path):
+        raise _reference_pool_guidance(
+            "The repository reference-pool fallback proof was not produced by the precheck workflow."
+        )
+    if result.get("ok") is not True or result.get("operation") != "precheck_discovery_candidates":
+        raise _reference_pool_guidance("The repository reference-pool fallback proof is not a successful precheck.")
+    if str(result.get("request_id") or "") != request_id or str(result.get("receipt") or "") != receipt:
+        raise _reference_pool_guidance("The repository reference-pool fallback proof identity does not match.")
+    schema_version = result.get("schema_version")
+    if isinstance(schema_version, bool) or not isinstance(schema_version, int) or schema_version < 3:
+        raise _reference_pool_guidance("The repository reference-pool fallback proof must use schema v3.")
+    if str(result.get("provider") or "") not in {"repository_references", "repository_reference_pool"}:
+        raise _reference_pool_guidance("Fallback proof must come from provider=repository_references.")
+    if str(result.get("source_url") or "") != "repository://structured-references":
+        raise _reference_pool_guidance(
+            "Fallback proof must come from source_url=repository://structured-references."
+        )
+    if str(result.get("run_key") or "") != str(meta.get("run_key") or ""):
+        raise _reference_pool_guidance(
+            "Fallback proof must use the same run_key as the legacy Discovery submission."
+        )
+    if result.get("evaluation_allowed") is not True or result.get("decision") != "READY_FOR_EVALUATION":
+        raise _reference_pool_guidance("Fallback proof must be a final READY_FOR_EVALUATION result.")
+    if result.get("provider_exhausted") is not True:
+        raise _reference_pool_guidance(
+            "Legacy Discovery is forbidden while the repository reference pool is not exhausted."
+        )
+    unseen = result.get("unseen_result_count")
+    if isinstance(unseen, bool) or not isinstance(unseen, int) or unseen != 0:
+        raise _reference_pool_guidance(
+            "Legacy Discovery is forbidden while repository_references returns any unseen candidate."
+        )
+    if result.get("results") not in ([], None) or result.get("allowed_records") not in ([], None):
+        raise _reference_pool_guidance(
+            "Zero-result fallback proof must not contain evaluable repository-reference candidates."
+        )
+    return result
 
 
 def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
@@ -540,6 +654,16 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
         raise _precheck_guidance("Discovery precheck run_key does not match this Discovery round.")
     if str(result.get("axis") or "") != str(meta.get("axis") or ""):
         raise _precheck_guidance("Discovery precheck axis does not match this Discovery round.")
+
+    if _reference_pool_first_required(sub):
+        provider = str(result.get("provider") or "")
+        if provider in {"repository_references", "repository_reference_pool"}:
+            if str(result.get("source_url") or "") != "repository://structured-references":
+                raise _reference_pool_guidance(
+                    "repository_references must use source_url=repository://structured-references."
+                )
+        else:
+            _validate_reference_pool_fallback(sub, meta)
 
     allowed_rows = result.get("allowed_records")
     if not isinstance(allowed_rows, list):
