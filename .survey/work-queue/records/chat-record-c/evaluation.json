@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-707dea46767d27bb3baa733f",
   "job_id": "job-research-376e535ed84f7cfa",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-707dea46767d27bb3baa733f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "大規模DeepSeek学習・推論基盤で評価。論文は推論系の融合カーネル、Encoder–Prefill–Decode分離、ホストDRAM分散SWAプール、SSD/ホスト永続KVを記述するが、主要能力表に単一のGPU機種・台数を統一ハードウェア条件としては提示しない。",
+    "software": "DeepSeek独自推論スタック。FlashMLAのfused-RoPE-attention-RoPE-cast、DeepGEMMのMega-Gate/Mega-mHC/Mega-MoE、TileKernels、DeepSelect TopKを利用。モデルチェックポイントはHugging Face公開。エージェント評価はClaude Code、Codex、OpenCode、Pi、mini-SWE、DeepSeek Harness各種を比較する。",
+    "methodology": "基礎モデルはDeepSeek-V4-Flash-Base、V4-Pro-Base、V4.1-Flash-Baseを同一内部枠組みで、知識、言語理解・推論、コード・数学、長文脈、マルチモーダルの多数ベンチマークで比較。事後学習モデルは推論・コードエージェント・サイバー・ツール利用・視覚エージェント等を比較する。DeepSWE v1.1は各タスクN=8、Terminal-Bench 2.1はN=3、Linuxコンテナ、temperature=1.0、top-p=0.95、1M-token context、最大500生成ラウンド。reasoning effort 25〜100の費用対精度、6系統8構成のscaffold頑健性、ProgramBenchとFrontierSWE v2での単一/複数エージェント時間予算比較も行う。KV圧縮については前世代とのbytes/token、永続容量比、デコードFLOPs増加を報告し、SWA限定再実行の品質影響を内部評価する。",
+    "scope": "中心はDeepSeek自身による内部評価であり、独立第三者再現ではない。能力比較には公開・非公開モデルを含み、scaffoldやAPI条件差の影響を完全には除けない。CSA2とSWA限定再実行の極端な境界条件は未網羅で、著者自身が追加stress testの必要性を明記する。"
+  },
+  "reservation": {"claim_id": "claim-707dea46767d27bb3baa733f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
