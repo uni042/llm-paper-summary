@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2505.23022",
+      "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2505.23022",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio.md",
+      "priority": 84,
+      "reason": "SLO-oriented serving system combining deadline-aware reordering/rejection, VBS-based admission control, credit-based batching and prediction; reports up to 14.4x goodput and 46.5% higher SLO adherence."
+    },
+    {
+      "canonical_id": "arXiv:2512.04013",
+      "title": "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
+      "source_url": "https://arxiv.org/abs/2512.04013",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve.md",
+      "priority": 83,
+      "reason": "Adaptive two-stage scheduling and dynamic token batching for tool-augmented LLM requests; reports 4.7-33.1x higher effective throughput than vLLM and up to 96.3% TTFT reduction."
+    },
+    {
+      "canonical_id": "arXiv:2510.14392",
+      "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.14392",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.14392-fairbatching.md",
+      "priority": 82,
+      "reason": "Fair prefill/decode batch formation with adaptive capacity and load estimation; realistic-trace evaluation reports up to 2.29x lower TTFT tail latency, 20% higher single-node capacity and 54.3% higher cluster capacity while maintaining TPOT SLOs."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-admission-batching-18",
+    "axis": "SLO-aware admission control・adaptive batching・augmented request scheduling",
+    "query_summary": "runtime adaptationからadmission/batchingへ移り、2025-2026のSLO-oriented servingを探索した。SCORPIO、AugServe、FairBatchingはいずれも実装されたserving/scheduler寄与と定量評価を持ち、canonical ID/titleをdefault branchで再検索して未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "framework-specific runtime、KV transfer compression、then older 2024 systems omissionsのcitation/back-referenceへ移る",
+    "empty_round_reason": null
+  }
+}
