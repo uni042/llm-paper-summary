@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-cff94da844c9d4caaf2fc60b",
-  "job_id": "job-research-1182cce822dbe6dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cff94da844c9d4caaf2fc60b",
-    "worker_id": "scheduled-chat-discovery-routing",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-cff94da844c9d4caaf2fc60b","job_id":"job-research-1182cce822dbe6dc","data":{"canonical_id":"arXiv:2609.13537","arxiv_id":"2609.13537","doi":"10.48550/arXiv.2609.13537","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Dynamic HBM Repartitioning for Multi-Turn MoE Serving","summary":"VAMPは、MoEサービングで固定されていた専門家重み領域とKVキャッシュ領域のHBM境界を実行時に動かす。KV割当不足時に専門家オフロード、接頭辞KV退避、要求プリエンプションの将来コストを比較し、専門家領域をCUDA仮想メモリ管理（VMM）でKV領域へページ再マップする。Qwen3-Next-80Bの2,103ターンSWE-agent再生でVAMP-15はvLLM比TTFT p90を26.1秒から1.10秒へ低減し、要求スループットを20.7%向上する一方、TPOTは31.1%増加した。","list_summary":"専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-cache cliffを緩和する。","authors":["Jinpyo Kim","Mingi Kwon","Younghoon Min","Jongryool Kim","Jishen Zhao"],"authors_affiliations":"University of California San Diego; SK hynix","published":"2026-09-11","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-09-11)","lineage":"MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving","topics":["MoE推論","専門家オフロード","KVキャッシュ","HBM再分割","CUDA VMM","マルチターン推論"],"importance":"MoEの疎な専門家実行と増大するマルチターンKV状態を別々の固定メモリ予算として扱わず、単一モデル内部で専門家HBMをKV容量へ変換し、退避・再計算・プリエンプションを同じ意思決定で比較する。","implementation":"vLLM 0.15.1へ約7,100行のパッチとして実装。PyTorch 2.9.1、CUDA 12.8、CUDA VMM、pinned host memory、専用copy stream、double-buffered expert stagingを使用。論文中に公式コード公開URLの記載は確認できない。","hardware_evaluation":"2×NVIDIA H100 PCIe (TP2, 94 GiB/GPU) と4×NVIDIA H200 NVLink (TP4, 140 GiB/GPU)でQwen3-Next-80B-A3B-Instructを評価。","quality_effect":"モデル計算自体は同じ専門家を実行して出力意味を変更しないが、専門家転送によりTPOTが増える。主要再生ではVAMP-15のTPOTが170.9msから224.0msへ31.1%増加。","source":"https://arxiv.org/abs/2609.13537","sources":["https://arxiv.org/abs/2609.13537","https://arxiv.org/html/2609.13537v1"],"code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary manuscript","references_total":31},"reservation":{"claim_id":"claim-cff94da844c9d4caaf2fc60b","worker_id":"scheduled-chat-discovery-routing","worker_kind":"scheduled_chat"}}
