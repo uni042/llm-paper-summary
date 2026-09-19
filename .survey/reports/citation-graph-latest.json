@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-19T11:08:52+00:00",
-  "paper_count": 759,
-  "edge_count": 4935,
+  "generated_at": "2026-09-19T13:05:12+00:00",
+  "paper_count": 764,
+  "edge_count": 4942,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 187,
-    "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 50,
+    "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 51,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md": 46,
     "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md": 62,
     "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md": 46,
@@ -213,6 +213,7 @@
     "papers/inference/06-kv-cache-memory/2026-2607.27090-inferscale-gpu-native-kv-injection.md": 0,
     "papers/inference/06-kv-cache-memory/2026-2609.13285-grouped-value-attention-efficient-kv-caching.md": 0,
     "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md": 0,
+    "papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md": 0,
     "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md": 0,
     "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md": 0,
     "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md": 4,
@@ -311,7 +312,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md": 0,
     "papers/inference/07-speculative-decoding/2025-2511.21669-dsd-distributed-edge-cloud-speculative-decoding.md": 3,
     "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md": 19,
-    "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md": 25,
+    "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md": 26,
     "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md": 1,
     "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md": 2,
     "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md": 0,
@@ -330,6 +331,7 @@
     "papers/inference/08-edge-on-device-llm-systems/2026-2609.06551-estream.md": 0,
     "papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md": 0,
     "papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md": 1,
+    "papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md": 1,
     "papers/inference/08-speculative-decoding/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md": 0,
     "papers/inference/08-speculative-decoding/2026-2609.15504-orthrus-numerical-precision-losslessness.md": 0,
     "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md": 0,
@@ -373,7 +375,7 @@
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.16857-shadowserve-smartnic-kv-fetching.md": 2,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md": 1,
-    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 59,
+    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 60,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md": 10,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md": 2,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md": 3,
@@ -434,12 +436,12 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md": 253,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md": 78,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md": 72,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 496,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 497,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md": 12,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md": 43,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md": 233,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md": 27,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 256,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 257,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md": 42,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md": 23,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md": 46,
@@ -449,7 +451,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md": 209,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md": 86,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md": 13,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md": 38,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md": 39,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md": 18,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md": 90,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md": 39,
@@ -593,6 +595,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.01579-omnipilot-uncertainty-aware-inference-advisor.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-kairos-load-aware-prefill-deflection.md": 0,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03333-spork-self-speculative-forking-agentic-llm.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md": 0,
@@ -673,6 +676,7 @@
     "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md": 11,
     "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md": 5,
     "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md": 0,
+    "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md": 0,
     "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md": 3,
     "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md": 0,
     "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md": 3,
@@ -734,6 +738,7 @@
     "papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md": 0,
     "papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md": 0,
     "papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md": 0,
+    "papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md": 0,
     "papers/inference/kv-cache/2608.19662.md": 0,
     "papers/inference/moe/2609.14643.md": 0,
     "papers/inference/scheduling/2607.02525.md": 0,
@@ -2366,6 +2371,9 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
     ],
     "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md": [],
+    "papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md"
+    ],
     "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
       "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
@@ -3264,6 +3272,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
       "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
     ],
+    "papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md": [],
     "papers/inference/08-speculative-decoding/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md": [],
     "papers/inference/08-speculative-decoding/2026-2609.15504-orthrus-numerical-precision-losslessness.md": [],
     "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md": [
@@ -5857,6 +5866,11 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md"
     ],
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+    ],
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03333-spork-self-speculative-forking-agentic-llm.md": [
       "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
@@ -6559,6 +6573,10 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14617-sageserve-multi-timescale-cloud-autoscaling.md",
       "papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md"
     ],
+    "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+    ],
     "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md": [
       "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
@@ -6706,7 +6724,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md": [
-      "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md"
+      "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md",
+      "papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2605.19893-specsa-sparse-speculative-verification.md": [
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
@@ -6936,6 +6955,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md"
     ],
     "papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md": [],
+    "papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md": [],
     "papers/inference/kv-cache/2608.19662.md": [
       "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
       "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md",

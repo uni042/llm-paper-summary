@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **733本**。
+収録論文: **738本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**733本**。
+推論論文：**738本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -60,7 +60,7 @@
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 5 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 14 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 15 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
@@ -72,16 +72,16 @@
 | [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 18 |
 | [08-quantization-kernels](08-quantization-kernels/README.md) | 1 |
-| [08-speculative-decoding](08-speculative-decoding/README.md) | 3 |
+| [08-speculative-decoding](08-speculative-decoding/README.md) | 4 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 17 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 77 |
 | [10-sparse-attention](10-sparse-attention/README.md) | 1 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 220 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 221 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 3 |
 | [kv-cache](kv-cache/README.md) | 1 |
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 80 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 82 |
 <!-- survey:auto:end -->

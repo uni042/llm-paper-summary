@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 759,
+  "active_count": 764,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -1600,6 +1600,13 @@
       ],
       "source_hash": "8f720b76f7b8305930526658841f30965f4319177b491652db174088ca633bf2"
     },
+    "arXiv:2609.15021": {
+      "path": "papers/inference/06-kv-cache-memory/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md",
+      "identifiers": [
+        "arXiv:2609.15021"
+      ],
+      "source_hash": "de620274f5604d0e2e7834bd0ee635a2584d9ba7d746417917019375e26fa46b"
+    },
     "arXiv:2609.17573": {
       "path": "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
       "identifiers": [
@@ -2489,6 +2496,13 @@
         "arXiv:2412.18934"
       ],
       "source_hash": "8a96fc3d9a393b3d954d518cc1ccb443a2ca0680095eb65c1b1d0780e97d00cd"
+    },
+    "arXiv:2509.04576": {
+      "path": "papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+      "identifiers": [
+        "arXiv:2509.04576"
+      ],
+      "source_hash": "a5675594e53e3f208e335771c97ce19eb77aa880d94d2b40f22a0a178fb78238"
     },
     "arXiv:2602.07223": {
       "path": "papers/inference/08-speculative-decoding/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md",
@@ -4499,6 +4513,13 @@
       ],
       "source_hash": "1133d55657c3273223de3be96ea593613463f9b676c32e4bc8799a0e02701392"
     },
+    "arXiv:2607.02942": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+      "identifiers": [
+        "arXiv:2607.02942"
+      ],
+      "source_hash": "44f54bed6c0262dbee8a769817876f82d879d8960f46a6ad2dcf936a681f798a"
+    },
     "arXiv:2607.03333": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03333-spork-self-speculative-forking-agentic-llm.md",
       "identifiers": [
@@ -5116,6 +5137,13 @@
       ],
       "source_hash": "a31459dd2883c2fec3d28f744254ea418858a2f6fd3f49ba639e29e7338d90b3"
     },
+    "arXiv:2506.10443": {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md",
+      "identifiers": [
+        "arXiv:2506.10443"
+      ],
+      "source_hash": "042cd6d26b15d4b566817d3944477cce6f3ee150fd7fd43b57216bbf71256b67"
+    },
     "arXiv:2506.11309": {
       "path": "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
       "identifiers": [
@@ -5583,6 +5611,13 @@
         "DOI:10.52202/085713-1587"
       ],
       "source_hash": "86c19af2f7daaf0de15384df27cd03ad0af3519dc60ca5011b182ff6455e123e"
+    },
+    "DOI:10.1145/3797905.3807846": {
+      "path": "papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md",
+      "identifiers": [
+        "DOI:10.1145/3797905.3807846"
+      ],
+      "source_hash": "831180e015a26909af100c5205454173bb844c42e51a10ddd9daf73455541f22"
     },
     "arXiv:2608.19662": {
       "path": "papers/inference/kv-cache/2608.19662.md",
@@ -6144,6 +6179,7 @@
     "arXiv:2609.13285": "arXiv:2609.13285",
     "DOI:10.48550/arxiv.2609.14872": "arXiv:2609.14872",
     "arXiv:2609.14872": "arXiv:2609.14872",
+    "arXiv:2609.15021": "arXiv:2609.15021",
     "arXiv:2609.17573": "arXiv:2609.17573",
     "DOI:10.48550/arxiv.2609.17983": "arXiv:2609.17983",
     "arXiv:2609.17983": "arXiv:2609.17983",
@@ -6332,6 +6368,7 @@
     "arXiv:2606.11244": "arXiv:2606.11244",
     "DOI:10.48550/arxiv.2412.18934": "arXiv:2412.18934",
     "arXiv:2412.18934": "arXiv:2412.18934",
+    "arXiv:2509.04576": "arXiv:2509.04576",
     "arXiv:2602.07223": "arXiv:2602.07223",
     "DOI:10.48550/arxiv.2609.15504": "arXiv:2609.15504",
     "arXiv:2609.15504": "arXiv:2609.15504",
@@ -6763,6 +6800,7 @@
     "DOI:10.48550/arxiv.2607.01579": "arXiv:2607.01579",
     "arXiv:2607.01579": "arXiv:2607.01579",
     "arXiv:2607.02043": "arXiv:2607.02043",
+    "arXiv:2607.02942": "arXiv:2607.02942",
     "DOI:10.48550/arxiv.2607.03333": "arXiv:2607.03333",
     "arXiv:2607.03333": "arXiv:2607.03333",
     "arXiv:2607.03948": "arXiv:2607.03948",
@@ -6900,6 +6938,7 @@
     "arXiv:2505.11329": "arXiv:2505.11329",
     "DOI:10.48550/arxiv.2506.02006": "arXiv:2506.02006",
     "arXiv:2506.02006": "arXiv:2506.02006",
+    "arXiv:2506.10443": "arXiv:2506.10443",
     "arXiv:2506.11309": "arXiv:2506.11309",
     "DOI:10.18653/v1/2025.findings-ijcnlp.25": "arXiv:2509.24832",
     "arXiv:2509.24832": "arXiv:2509.24832",
@@ -7002,6 +7041,7 @@
     "mlforsystems-neurips2024-paper41": "mlforsystems-neurips2024-paper41",
     "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
     "DOI:10.52202/085713-1587": "DOI:10.52202/085713-1587",
+    "DOI:10.1145/3797905.3807846": "DOI:10.1145/3797905.3807846",
     "DOI:10.48550/arxiv.2608.19662": "arXiv:2608.19662",
     "arXiv:2608.19662": "arXiv:2608.19662",
     "DOI:10.48550/arxiv.2609.14643": "arXiv:2609.14643",

@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T13:01:30+00:00",
+  "updated_at": "2026-09-19T13:02:08+00:00",
   "last_run_key": "2026-09-19T22:00:00+09:00",
-  "last_round": "specialist-flash-agent-runtime-1",
+  "last_round": "specialist-moe-cxl-history-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T12:00:00+09:00",
-      "round": "specialist-handoff-guard",
-      "axis": "handoff guard before new discovery axis",
-      "query_summary": "Latest GitHub canonical state was read first. candidate_inventory was 44 ready research candidates and actionable Research/Audit existed, so Discovery mode applied. At mode entry, less than 180 seconds remained until the next :00 Scheduled Chat slot, so discovery-exhaustive-run-policy prohibited starting a new independent discovery round; this empty durable submission records the run before handoff.",
-      "candidate_count": 0,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次のrunでdiscovery-state.jsonを再取得し、直近roundと重複しない新着・forward citation・隣接システム分野の有望軸から再開する",
-      "source_submission": "work-queue/submissions/20260915T1259JST-discovery-specialist-handoff-guard.json"
-    },
     {
       "run_key": "2026-09-15T14:00:00+09:00",
       "round": "specialist-moe-cache-router-1",
@@ -7338,6 +7323,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "HBFlex/Flash系のforward/backward citationからnear-storage computeとKV state placementを追い、その後MoE expert I/OとCXL/NVMe階層の未走査2025-2026論文へ移る",
       "source_submission": "work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json"
+    },
+    {
+      "run_key": "2026-09-19T22:00:00+09:00",
+      "round": "specialist-moe-cxl-history-2",
+      "axis": "2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer",
+      "query_summary": "新着Flash/HBF軸から独立して、2025-2026のMoE expert offload/SSDとCXL KV servingを期間指定で逆引きした。fMoEは直近runで既知候補として扱われているため再投入せず、OD-MoEとTraCTのcanonical ID/titleをdefault branchで再検索して未収録を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2502.05370"
+      ],
+      "next_axis_hint": "2025-2026のGPU direct storage・near-storage compute・KV transfer networking、または重要offload論文のforward citationへ移る",
+      "source_submission": "work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json"
     }
   ],
   "axes": {
@@ -13601,6 +13606,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.42857142857142855,
       "next_axis_hint": "HBFlex/Flash系のforward/backward citationからnear-storage computeとKV state placementを追い、その後MoE expert I/OとCXL/NVMe階層の未走査2025-2026論文へ移る"
+    },
+    "2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer": {
+      "last_run_key": "2026-09-19T22:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "2025-2026のGPU direct storage・near-storage compute・KV transfer networking、または重要offload論文のforward citationへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

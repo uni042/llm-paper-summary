@@ -1,0 +1,21 @@
+{
+  "job_id": "job-9a3fef00f270ac9d",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-19T13:01:57+00:00",
+  "completed_at": "2026-09-19T13:02:08+00:00",
+  "result_summary": {
+    "submitted_candidates": 2,
+    "final_duplicate_filtered_count": 2,
+    "research_jobs_added": 0
+  }
+}
