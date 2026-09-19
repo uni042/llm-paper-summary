@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:00:03 JST**
+> 自動生成: **2026-09-19 18:00:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **16** | **12** | **4** | **0** | **0** | **21** |
-| 合計 | **12** | **17** | **12** | **4** | **2** | **0** | **21** |
+| Discovery | **12** | **18** | **12** | **6** | **0** | **0** | **24** |
+| 合計 | **12** | **19** | **12** | **6** | **2** | **0** | **24** |
 
-- 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -115,8 +115,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **4件** / 候補: **21件**
-- 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding / 高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling / MoE expert cache・prefetch・OS page cache / 長文脈KV・CXL/SSD階層・cross-model GPU memory sharing / network/RDMA・KV transfer・topology-aware routing
+- 耐久探索round: **18件** / immutable submission: **18件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **6件** / 候補: **24件**
+- 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding / 高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling / MoE expert cache・prefetch・OS page cache / 長文脈KV・CXL/SSD階層・cross-model GPU memory sharing / network/RDMA・KV transfer・topology-aware routing / GPU attention kernel・operator-level DVFS・runtime / agentic serving・workflow-aware KV cache・speculative serving
 - round `specialist-os-pagecache-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
   - 探索軸: OS page cache・kernel-managed expert tiering
@@ -216,10 +216,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **610** |
+| 成功result未照合のimmutable submission | **612** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **149** |
+| └ Discovery | **151** |
 
 ### 厳格検証が未成立のcompleted job
 
