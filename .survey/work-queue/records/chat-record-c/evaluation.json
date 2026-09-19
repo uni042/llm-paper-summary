@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-df7f245a6a689a36570a6d97",
-  "job_id": "job-research-bf442cee1726bee0",
-  "data": {
-    "hardware": "NVIDIA H200 GPUを4基用いる単一ノードの実機環境。Qwen3.5-4B、9B、27Bを異なる実行先として構成し、複数モデル規模と検証呼び出しを含むサービングを測定する。",
-    "software": "DyserveはPython約1万行と計測器約4500行で実装し、整数線形計画にはPuLPとCBCを使用する。FlowでGPT-5.4により物理計画前のワークフローを生成し、FlowとLangGraph向けアダプタを実装する。検証方針は検証なしを含む8種類。",
-    "methodology": "LiveCodeBench 55件、GAIA 35件、ComplexFuncBench 100件、SWE-bench 40件を公式正解指標で評価し、時間切れ・未完了は不正解とする。品質・誤り影響の計測データは原則として評価要求と分離する。比較対象は27B固定、全ノード検証、Sherlock型の構造依存配置、利用可能な場合のMAS-Zero。単一要求の品質・平均壁時計時間に加え、定常到着とバースト到着でp95遅延、締切内かつ正解した割合である有効スループットを測る。さらに故障注入、共同選択の除去、誤り影響項の除去、技能別計測の統合、制御経路オーバーヘッドを個別に調べる。",
-    "scope": "実機評価だが、4 GPU・単一ノード・Qwen3.5一系列・事前に物質化された有向非巡回グラフに限定される。大規模クラスタ、実行中に構造自体が拡張されるワークフロー、別モデル系列への一般化は未検証。処理時間モデルは待ち行列を絶対予測するのではなく候補順位付けに使い、55ワークフローで予測時間と実測遅延の中央値Spearman相関0.67、候補対の順序一致75%を報告する。"
-  },
-  "reservation": {"claim_id": "claim-df7f245a6a689a36570a6d97", "worker_id": "scheduled-chat-llm-survey-2130", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-bbe39256ef1a577ca7b375df",
+  "job_id": "job-research-8f1455c9a8468d9c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bbe39256ef1a577ca7b375df",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
 }
