@@ -101,17 +101,26 @@ overflow research modeへ入ったrunでは、通常論文workerのhigh-backlog 
 
 ## 強制Discovery precheck gate
 
-`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後に新規作成されたDiscovery submissionでは、外部検索結果を直接candidate評価または `submit_discovery_round` へ渡してはならない。Discovery modeへ入ったら、各検索バッチのraw recordをまず次のimmutable requestとして保存する。
+`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後に新規作成されたDiscovery submissionでは、外部検索結果を直接candidate評価または `submit_discovery_round` へ渡してはならない。さらにschema-v2 precheckでは、**1ページだけ通して候補評価へ進むことも禁止**する。
+
+Discovery modeで1つの探索単位を開始したら `collector_id` を1つ固定し、providerの1ページ/1バッチずつ次のimmutable requestとして保存する。
 
 - request: `.survey/work-queue/discovery-precheck/requests/<unique>.json`
+- `schema_version: 2`
 - `operation: "precheck_discovery_candidates"`
-- 必須: `request_id`, 今回runの `run_key`, `axis`, `records[]`
+- 必須: `request_id`, `collector_id`, 今回runの `run_key`, `axis`, `provider_has_more`, `records[]`
+- 任意: `target_unseen`（省略時10）
+- 2ページ目以降は必須: 直前resultの `previous_request_id`, `previous_receipt`
 
-専用GitHub Actionsが最新mainから `queue_worker.existing_candidate_keys()` と同じidentity snapshotをその場で再構築し、`discovery_search_filter.py` を実行して、`.survey/work-queue/discovery-precheck/results/<same-name>.json` をworkflow botとして生成する。workerは `ok=true` のresultが出るまで候補評価へ進まず、**`results[]` に返されたrecordだけ**を評価対象にする。
+専用GitHub Actionsは最新mainから `queue_worker.existing_candidate_keys()` と同じidentity snapshot/rejection ledgerを再構築し、各ページをfilterする。前ページまでの未収録bufferも最新snapshotで再検証し、ページ間のprimary identity/alias重複を畳み込む。
 
-Discovery submissionには必ず `discovery_precheck.request_id`, `discovery_precheck.result_path`, `discovery_precheck.receipt` を入れる。queue processorはresultのworkflow-bot provenance、run_key/axis、receipt、candidate identityを照合し、resultに含まれないcandidateを受理しない。最終dedupeは並行workerとのrace防止として別途維持する。
+resultが `evaluation_allowed=false` / `decision=CONTINUE_FETCH` の場合、**candidate評価・priority付与・Discovery submissionは禁止**する。workerは同じ `collector_id/run_key/axis/target_unseen` のまま、次のpage/cursor/offsetを取得する。paginationを公開しないproviderでは、期間・arXiv月・引用方向・カテゴリ・query family等をずらした次の未走査windowを同じcollectorの次ページ相当として取得する。新しいrequestには直前resultの `request_id` と `receipt` を連結し、この反復を続ける。
 
-precheckを迂回したsubmissionはimmutable原本を上書きせず失敗resultになる。そのresultの `next_action` / `recovery_steps` に従い、raw search recordsから**新しいprecheck request**を作り、成功resultの `results[]` だけを再評価し、**新しいDiscovery submission**を作る。失敗submissionやprecheck resultを手書き修正して回避してはならない。
+未収録bufferが既定10件に達した、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` となる。この**最終resultの `results[]` だけ**を候補評価対象にする。providerが尽きた場合は10件未満でも評価へ進んでよい。
+
+Discovery submissionには必ず、READY_FOR_EVALUATIONを返した最終resultの `discovery_precheck.request_id`, `discovery_precheck.result_path`, `discovery_precheck.receipt` を入れる。queue processorはresultのworkflow-bot provenance、terminal判定、run_key/axis、receipt、candidate identityを照合し、中間 `CONTINUE_FETCH` resultやresultに含まれないcandidateを受理しない。最終dedupeは並行workerとのrace防止として別途維持する。
+
+precheckを迂回したsubmissionはimmutable原本を上書きせず失敗resultになる。そのresultの `next_action` / `recovery_steps` に従い、raw search recordsから**新しいschema-v2 precheck request**を作る。中間resultなら次ページ取得を継続し、READY_FOR_EVALUATIONになってから `results[]` を評価して**新しいDiscovery submission**を作る。失敗submissionやprecheck resultを手書き修正して回避してはならない。
 
 ## 二重探索・二重投入の防止
 
