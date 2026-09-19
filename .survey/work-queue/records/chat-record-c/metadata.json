@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-208eafaf198f5f787bed68e4",
   "job_id": "job-research-3899c287a2c2de7d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-208eafaf198f5f787bed68e4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.20706",
+    "arxiv_id": "2605.20706",
+    "doi": "10.48550/arXiv.2605.20706",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU",
+    "summary": "LlamaWebはllama.cppへ統合されたWebGPUバックエンドで、ブラウザ内LLM推論の三つの制約、すなわちタブ単位の厳しいメモリ上限、GPUベンダーをまたぐ性能差、多数の量子化形式への対応を同時に扱う。起動時の静的メモリ計画とOPFSからGPUへのストリーミング読込みで一時コピーを抑え、端末機能に応じて生成する調整可能なWGSLカーネル群で性能可搬性を確保し、量子化形式ごとの逆量子化処理を行列演算や注意機構へ組み込む。8ベンダー16端末、10モデル、複数の重み形式で評価し、既存ブラウザ推論基盤よりピークメモリを大幅に削減し、デコードではWebLLMより約54%、Transformers.jsより約69%高い幾何平均スループットを得た。一方、ブラウザ内プリフィルは高度な融合やサブグループ行列命令を使えないため既存基盤より遅く、可搬性と最高性能の差も明示している。",
+    "list_summary": "LlamaWebは静的メモリ計画、端末適応型WebGPUカーネル、量子化対応をllama.cppへ統合し、ブラウザ推論のメモリ消費とデコード性能を改善する。",
+    "authors": ["Reese Levine", "Rithik Sharma", "Nikhil Jain", "Abhijit Ramesh", "Zheyuan Chen", "Neha Abbas", "James Contini", "Tyler Sorensen"],
+    "authors_affiliations": "UC Santa Cruz; Microsoft Research",
+    "published": "2026-05-20",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル",
+    "topics": ["WebGPU", "llama.cpp", "ブラウザ推論", "静的メモリ計画", "量子化", "性能可搬性"],
+    "importance": "llama.cppの既存モデル資産をブラウザへ持ち込みつつ、単一GPUベンダーに依存しない実装を16端末で横断評価しており、ローカル推論基盤の可搬性と実用上の限界を具体化している。",
+    "hardware_evaluation": "NVIDIA、AMD、Intel、Apple、Qualcomm、Samsung、ARM、Imagination Technologiesの8ベンダー16 GPUを含み、デスクトップ、ノート、iOS、Android、Windows、Linux、macOSを横断して実機評価している。",
+    "quality_effect": "主手法は実行基盤でありモデル意味品質を意図的に近似しない。GPU演算はCPU参照実装との正規化平均二乗誤差で検証し、通常1e-7、f16では端末間丸め差を考慮して1e-6を許容する。量子化形式自体の品質差は本論文の主評価対象ではない。",
+    "source": "https://arxiv.org/abs/2605.20706",
+    "sources": ["https://arxiv.org/abs/2605.20706", "https://arbersephirotheca.github.io/files/llamas_on_the_web.pdf"],
+    "code": "https://github.com/ggml-org/llama.cpp",
+    "implementation": "llama.cppへ統合済みのオープンソースWebGPUバックエンド。中核は約8,470行のC++と44個・計約11,338行のカーネル雛形からなり、72種類の主要機械学習演算と23データ形式を支える。100件超の変更提案を通じてllama.cppへ統合された。",
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary-reference-section",
+    "references_total": 69
+  },
+  "reservation": {"claim_id": "claim-208eafaf198f5f787bed68e4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
