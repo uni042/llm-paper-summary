@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 09:59:29 JST**
+> 自動生成: **2026-09-19 10:29:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 07:25:37 JST（2時間33分前）** |
+| 最終検証済みResearch収録 | **09-19 07:25:37 JST（3時間3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **15** | **6** | **9** | **1** | **0** | — |
+| Research | **13** | **15** | **6** | **9** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **6** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **19** | **18** | **9** | **9** | **1** | **0** | **3** |
+| Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
+| 合計 | **16** | **18** | **9** | **9** | **1** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -117,18 +117,6 @@
   - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
   - 探索軸: programmable serving・agentic runtime・application-specific generation loop
-- **09-19 03:59:35 JST** job `job-43d9a8057337c9ad` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0408JST-discovery-specialist-nonarxiv-storage-1.json`
-  - 探索軸: 非arXiv systems/workshop・flash/PIM/CXL・storage datapath
-- **09-19 04:02:33 JST** job `job-9b8c216a46edd0b5` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260919T0418JST-discovery-specialist-near-memory-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0418JST-discovery-specialist-near-memory-2.json`
-  - 探索軸: in-storage retrieval・HBF hybrid・3D NAND CIM・product-level PIM integration
-- **09-19 04:02:42 JST** job `job-1e48c57afdf71a43` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260919T0427JST-discovery-specialist-network-serving-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0427JST-discovery-specialist-network-serving-3.json`
-  - 探索軸: network collective・compute-memory disaggregation・dynamic sequence parallelism・非arXiv serving systems
 
 ### 直近タスク
 
@@ -191,9 +179,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 09:30:39 JST** / lease expiry: **09-19 11:00:39 JST**
+  - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
 
 #### Audit
