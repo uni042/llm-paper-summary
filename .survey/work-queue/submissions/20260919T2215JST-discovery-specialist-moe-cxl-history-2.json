@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.03927",
+      "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2512.03927",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2512.03927-od-moe.md",
+      "priority": 90,
+      "reason": "Cacheless distributed MoE inference using multi-layer-ahead expert prediction and just-in-time loading; ten-node testbed reports 99.94% expert prediction accuracy and about 75% of fully GPU-cached decoding speed with one-third GPU memory. Strong expert offload/prefetch relevance."
+    },
+    {
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2512.18194-tract.md",
+      "priority": 92,
+      "reason": "Rack-scale disaggregated serving system using CXL shared memory for KV transfer and prefix-aware caching, implemented on NVIDIA Dynamo; reports up to 9.8x average TTFT reduction, 6.2x lower P99 latency, and 1.6x peak throughput over RDMA/DRAM baselines."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-moe-cxl-history-2",
+    "axis": "2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer",
+    "query_summary": "新着Flash/HBF軸から独立して、2025-2026のMoE expert offload/SSDとCXL KV servingを期間指定で逆引きした。fMoEは直近runで既知候補として扱われているため再投入せず、OD-MoEとTraCTのcanonical ID/titleをdefault branchで再検索して未収録を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2502.05370"],
+    "next_axis_hint": "2025-2026のGPU direct storage・near-storage compute・KV transfer networking、または重要offload論文のforward citationへ移る",
+    "empty_round_reason": null
+  }
+}
