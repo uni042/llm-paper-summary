@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:41:34 JST**
+> 自動生成: **2026-09-20 00:41:47 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **1** | **0** | **1** | **0** | — |
+| Research | **15** | **1** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **85** | **5** | **2** | **0** | **1** | **0** | **2** |
+| 合計 | **85** | **4** | **2** | **0** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,14 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
   - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0ff59bc0d504d0b2b89bbcc6.json`
   - paper: `papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-4f46d323b29b7bbf8b12aa9d.json` (job `job-research-1a87bd753fb86450`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-4f46d323b29b7bbf8b12aa9d.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -190,7 +188,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17863` — The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier? / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 00:40:17 JST** / heartbeat: **—** / lease expiry: **09-20 02:10:17 JST**
+  - claim: **09-20 00:41:39 JST** / heartbeat: **—** / lease expiry: **09-20 02:11:39 JST**
   - evidence: `.survey/work-queue/claims/job-research-1a87bd753fb86450.json`
 
 #### Audit
