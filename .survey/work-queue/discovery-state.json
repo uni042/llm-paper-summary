@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T18:10:15+00:00",
-  "last_run_key": "manual-eval-2026-09-20",
-  "last_round": "refcuration-eval-r1-b",
+  "updated_at": "2026-09-19T18:18:25+00:00",
+  "last_run_key": "manual-eval-2026-09-20-r2b",
+  "last_round": "refcuration-eval-r2-b",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,36 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-metakv-19",
-      "axis": "prompt-adaptive KV compression policy under latency/memory budgets",
-      "query_summary": "2026年9月の新着からsystem-aware memory managementを探索し、MetaKV（2609.07966）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、Actions反映後の最新queueもresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は2026年9月新着のserving/scheduling/MoE systemを追加探索し、最新queueのoverflow判定を再確認する。",
-      "source_submission": "work-queue/submissions/20260915T0834JST-discovery-specialist-metakv-19.json"
-    },
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-tangram-20",
-      "axis": "non-uniform KV compressionのpaging・static budget・load balancing",
-      "query_summary": "非一様KV圧縮をserving systemとして成立させる研究を探索し、Tangram（2606.06302）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はrecent 2608-2609のserving/memory/MoE systemへ戻り、Actions反映後のcandidate inventoryを再確認する。",
-      "source_submission": "work-queue/submissions/20260915T0836JST-discovery-specialist-tangram-20.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-crosspool-orbitflow-21",
@@ -7484,6 +7454,52 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle.",
       "source_submission": "work-queue/submissions/refcuration-eval-20260920-r1-b.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20-r2b",
+      "round": "refcuration-eval-r2-a",
+      "axis": "structured references relevance curation round 2 after alias fix",
+      "query_summary": "Structured-reference curation round 2 after DOI/arXiv alias normalization. Evaluated exactly 20 allowed records; one OpenReview record was identified as an alias of StreamingLLM and attached to the accepted arXiv candidate.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2309.17453",
+        "arXiv:2006.16668",
+        "arXiv:2402.02750",
+        "arXiv:2305.13245",
+        "arXiv:1911.02150"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r2-a.json"
+    },
+    {
+      "run_key": "manual-eval-2026-09-20-r2b",
+      "round": "refcuration-eval-r2-b",
+      "axis": "structured references relevance curation round 2 after alias fix",
+      "query_summary": "Structured-reference curation round 2 after DOI/arXiv alias normalization. Evaluated exactly 20 allowed records; one OpenReview record was identified as an alias of StreamingLLM and attached to the accepted arXiv candidate.",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2406.02069",
+        "arXiv:2411.01433",
+        "arXiv:2205.14135"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle.",
+      "source_submission": "work-queue/submissions/refcuration-eval-20260920-r2-b.json"
     }
   ],
   "axes": {
@@ -14267,6 +14283,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Continue structured-reference curation from the newly exposed top candidates after these classifications and Research identities settle."
+    },
+    "structured references relevance curation round 2 after alias fix": {
+      "last_run_key": "manual-eval-2026-09-20-r2b",
+      "rounds": 2,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 8,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue from the newly exposed reference-pool head after these classifications settle."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
