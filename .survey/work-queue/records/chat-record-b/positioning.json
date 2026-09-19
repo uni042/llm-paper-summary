@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-70dbcf11b20ef9fe6a096897",
   "job_id": "job-research-b41274093aac35dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-70dbcf11b20ef9fe6a096897",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "高速化は活性化疎性へ強く依存し、ReLU系の90%以上の疎性では大きいがSwiGLU系では1.47〜1.7倍程度に低下する。長い入力の事前充填や大きなバッチでは複数トークンが異なるニューロンを活性化して共同疎性が下がり、CPU計算が律速になる。GPU容量が小さいと高温ニューロンを十分常駐できず、CPU負荷が増える。モデルごとに一般コーパスで活性化を計測し予測器を数時間学習する事前費用が必要で、予測器自体もモデル重みの約7%相当の容量を持つ。実験は主に単一GPUのローカル低遅延推論であり、複数GPU・高スループット環境や近年のMoEモデルへの直接評価は行っていない。",
+    "differences": "llama.cpp型の層単位CPU-GPU分割はCPU側層を密計算するのに対し、PowerInferは同一層をニューロン粒度で分割し、頻繁に活性化するニューロンをGPUへ集める。FlexGen型GPU中心オフロードは重みをCPUからGPUへ反復転送するが、PowerInferは低温ニューロンをCPU上で直接計算し、重み転送を避ける。DejaVuも活性化予測で疎計算するが、全モデルをGPUへ置けるデータセンター条件を主対象とし、GPUに収まらないモデルでは活性ニューロン転送が問題になる。PowerInferは配置ソルバとCPU-GPU協調演算を加えて、限られたVRAM自体を設計対象にする。重み剪定による静的疎性とも異なり、学習済み重みを削除せず動的活性化疎性を利用する。",
+    "implementation_status": "オンライン推論基盤はllama.cpp派生としてC++/CUDA約4,200行、事前プロファイラ・配置ソルバはtransformers派生のPython約400行で実装され、論文は完全なオープンソース公開を報告する。OPT、LLaMA2、Falcon等を対象にRTX 4090/2080Ti実機で評価済み。",
+    "research_positioning": "CPUオフロード研究の中でも、層・テンソル単位ではなく動的活性化の長期頻度を利用してニューロン粒度でGPU常駐集合を作る系統に位置する。階層メモリ設計と条件付き計算を接続する代表例であり、後続の専門家混合モデルの高頻度エキスパート配置、予測プリフェッチ、SSD/CPU/GPU階層化を比較する際に『頻度に基づく常駐配置＋実行時選択』の基準点になる。特に、CPU側重みをGPUへ移送せず直接計算する判断と、通信費を含む配置最適化は、単純な容量拡張型オフロードとの差を明確にする。"
+  },
+  "reservation": {"claim_id":"claim-70dbcf11b20ef9fe6a096897","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
