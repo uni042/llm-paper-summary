@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 09:03:01 JST**
+> 自動生成: **2026-09-19 09:03:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **53** |
+| 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **51** |
 | 最終検証済みResearch収録 | **09-19 07:25:37 JST（1時間37分前）** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **53** |
+| canonical_id確認済みの一意な候補論文 | **52** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **53** |
+| 非終端Research job合計 | **52** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **21** | **15** | **6** | **9** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **6** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **27** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **27** | **18** | **9** | **9** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -191,10 +191,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/HPCA68181.2026.11408592` — PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 09:02:34 JST** / heartbeat: **—** / lease expiry: **09-19 10:32:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-399763992dea8e09.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 08:32:22 JST** / lease expiry: **09-19 10:02:22 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -217,7 +214,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **53** |
+| ready | **52** |
 
 ### 候補の重複・識別情報欠損
 
