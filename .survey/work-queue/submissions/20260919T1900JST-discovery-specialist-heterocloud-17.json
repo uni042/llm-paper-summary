@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.04357",
+      "title": "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
+      "source_url": "https://arxiv.org/abs/2605.04357",
+      "priority": 76,
+      "reason": "Adaptive heterogeneity-aware multi-LLM serving over heterogeneous cloud GPU resources; directly relevant to placement, cost efficiency, and multi-model serving."
+    },
+    {
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "priority": 77,
+      "reason": "Concrete heterogeneous spot-GPU serving system combining analytical performance estimation, dynamic-programming placement/parallelization, and output-preserving migration/fault tolerance with AWS evaluation."
+    },
+    {
+      "canonical_id": "arXiv:2602.12151",
+      "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
+      "source_url": "https://arxiv.org/abs/2602.12151",
+      "priority": 75,
+      "reason": "Serving system for spatial/temporal workload heterogeneity using heterogeneous model deployment, workload-aware scheduling, and adaptive deployment switching, evaluated on real traces."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-heterocloud-17",
+    "axis": "heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration",
+    "query_summary": "Changed from isolation/MoE to heterogeneous-cloud placement. Coral, ShuntServe, and OServe were surfaced as distinct serving systems and none of their arXiv IDs appeared in repository code search.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 3,
+    "accepted_count": 3,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2605.04357", "arXiv:2606.18600", "arXiv:2602.12151"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Continue with multi-LLM prewarming/shared-decode omissions or use independent distributed-network/storage axis."
+  }
+}
