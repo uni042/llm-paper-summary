@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 88,
+      "reason": "KV restorationをtoken/layer/GPUの3次元並列実行として再定式化し、recomputationとI/Oを構造依存に沿ってoverlapする。batch-aware schedulerで複数requestのcompute/I/O資源を共同配分し、既存手法比TTFTを10-62%削減しており、KV offload/restorationのsystems候補として強い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-kv-restoration-7",
+    "axis": "KV restoration・storage I/O overlap・3D parallelism",
+    "query_summary": "CXL/agent軸からSSD/NVMe・KV restorationへ移り、CacheFlowを一次arXiv抄録で確認。SwiftCache/Apt-Serve等の既知系統を除外し、2604.25080は最新main repo検索でID未登録を確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2606.16135","arXiv:2504.07494","arXiv:2605.03375","arXiv:2609.16161"],
+    "next_axis_hint": "speculative serving、network/RDMA、recent arrivals、older citation omissionsを確認する",
+    "empty_round_reason": null
+  }
+}
