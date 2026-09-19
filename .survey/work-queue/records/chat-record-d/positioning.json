@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5fffc5f2bfc3aa8b62dc1383",
-  "job_id": "job-research-c7f741bd6a7395ee",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5fffc5f2bfc3aa8b62dc1383",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5fffc5f2bfc3aa8b62dc1383","job_id":"job-research-c7f741bd6a7395ee",
+ "data":{
+  "limitations":"利得は要求長の不均一性とKV共有・断片化の程度に依存する。連続KV作業領域を作るコピー費用と追加メモリが必要で、群容量を過大にすると内部断片化が増える。実装評価はNVIDIA GPU中心であり、他社GPUやアクセラレータへの一般化は未検証である。オンライン群容量調整も数十デコード段階の観測を要するため、極端に短い要求や急激な負荷変動では追従前に処理が終わる可能性がある。",
+  "differences":"FlashAttentionが単一注意演算内のタイル化とSRAM再利用を主に最適化するのに対し、PackInferは複数要求の境界を越えて実行領域を再構成する。PagedAttentionがKVの動的ページ管理で外部断片化を抑えるのに対し、PackInferはその非連続ページから実行中の群に必要なKVを連続作業領域へ集約する。PrepackのようなKV並べ替えだけとも異なり、計算負荷均衡と共有接頭辞を考慮した入出力配置を同じ群決定へ統合する。",
+  "implementation_status":"論文では約1000行のCUDA/C++ライブラリを実装し、FlashAttention互換の置換APIとしてNano-vLLMへ統合して実GPUで評価している。公式公開コードURLは一次資料中で確認できず、実装公開状況は未確認。",
+  "research_positioning":"サービング層のスケジューラと注意カーネルの間を埋める方式として位置付けられる。要求単位のバッチ編成だけでは残るカーネル内部の不均衡を、複数要求を一つの実行領域へ詰めることで処理し、同時にKV配置も再構成する点が重要である。近似的なKV圧縮や疎注意とは直交し、注意結果を変えずに実行効率を上げるため、それらと組み合わせる余地がある。"
+ },
+ "reservation":{"claim_id":"claim-5fffc5f2bfc3aa8b62dc1383","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}
 }
