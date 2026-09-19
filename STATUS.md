@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:34:47 JST**
+> 自動生成: **2026-09-19 18:35:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **45** |
 | 未claim Research job | **44** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-19 18:34:04 JST（43秒前）** |
+| 最終検証済みResearch収録 | **09-19 18:34:04 JST（1分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/LCA.2026.3703982` — HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:34:33 JST** / heartbeat: **—** / lease expiry: **09-19 20:04:33 JST**
-  - evidence: `.survey/work-queue/claims/job-research-57e41c4cd47dec82.json`
+- `DOI:10.1109/LCA.2026.3660969` — H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
+  - claim: **09-19 18:35:14 JST** / heartbeat: **—** / lease expiry: **09-19 20:05:14 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9deede0a4d81ad54.json`
 
 #### Audit
 
@@ -217,8 +217,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **609** |
-| └ Research | **462** |
+| 成功result未照合のimmutable submission | **610** |
+| └ Research | **463** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
