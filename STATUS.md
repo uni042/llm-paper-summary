@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:43:45 JST**
+> 自動生成: **2026-09-20 05:44:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **94** |
 | 未claim Research job | **93** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-20 05:40:52 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 05:40:52 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -180,7 +180,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2503.01840` — EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test / worker `llm-research-survey-scheduled-chat`
-  - claim: **09-20 05:41:27 JST** / heartbeat: **—** / lease expiry: **09-20 06:41:27 JST**
+  - claim: **09-20 05:44:14 JST** / heartbeat: **—** / lease expiry: **09-20 06:44:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-e279074fae9402fc.json`
 
 #### Audit
@@ -229,8 +229,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **665** |
-| └ Research | **504** |
+| 成功result未照合のimmutable submission | **666** |
+| └ Research | **505** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
