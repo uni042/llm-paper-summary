@@ -1,17 +1,16 @@
-# Queue-based survey workflow v10
+# Queue-based survey workflow v10 — 実装リファレンス
 
 ワークフロー v10（workflow v10）は、GitHub `main` を唯一の正本としてキュー（queue）・状態（state）・論文同一性（identity）を管理し、Scheduled Chat / Work workerは探索、一次資料全文取得、科学的判断、監査判断、5スロット構造化研究レコード（five-slot structured research record）作成を担当する。
 
-この文書はキューと転送（transport）の契約を定義する。実行順・停止判定・fallback選択は重複定義せず、次を優先する。
+この文書はキュー（queue）と転送（transport）の**内部実装契約**を定義する。Scheduled Chat / Work ワーカーの実行順・役割分岐・探索・停止判定・fallback選択の唯一の正本は `worker-router.md` であり、この文書を別のワーカー指示として解釈してはならない。
 
-1. `worker-router.md`
-2. `always-on-worker.md`
-3. `claim-serial-policy.md`
-4. `fallback-routing.md`
-5. `continuation-policy.json`
-6. `backlog-resilience.md`
-7. `.survey/templates/paper.md`
-8. `.survey/work-queue/records/bank-registry.json`
+実装上の参照順位は次とする。
+
+1. `worker-router.md` — ワーカー行動の正本
+2. `continuation-policy.json` — 機械可読設定
+3. 本書 — queue / transport内部契約
+4. `.survey/templates/paper.md` — 研究レコード品質
+5. `.survey/work-queue/records/bank-registry.json` — record bank定義
 
 ## 1. Queue policy
 
@@ -171,6 +170,8 @@ result:
 
 ## 8. Discovery and compatibility submissions
 
+> ここにある互換記述はバックエンドの履歴読込専用であり、新規ワーカーが選択できる経路ではない。新規Discovery requestは `worker-router.md` に従いschema v3 fixed-source precheckだけを使う。
+
 Discovery、discovery統計、checkpoint-aware job request、offline seed等の軽量control transportはbackground laneで処理できる。
 
 探索主体workerのmulti-round Discoveryは、pre-issued Discovery jobに依存しない **self-describing round submission** を正規経路とする。各roundは `.survey/work-queue/submissions/*.json` に独立したimmutable fileとして保存し、少なくとも次を含める。
@@ -191,7 +192,9 @@ Discovery、discovery統計、checkpoint-aware job request、offline seed等の�
 
 ## 9. Library fallback and legacy read compatibility
 
-GitHub direct write不能時の正本は `fallback-routing.md`。外部fallbackはChatGPT Libraryのみ:
+> legacy read compatibilityは既存履歴の救済専用である。新規ワーカーは旧形式を生成しない。
+
+GitHub direct write不能時の正本は `worker-router.md`。外部fallbackはChatGPT Libraryのみ:
 
 `/LLM-survey-outbox/pending/<id>.json`
 
@@ -243,4 +246,4 @@ claim requestは `.survey/work-queue/claim-requests/` のJSONとして送る。`
 - claim resultの`record_bank` / `record_bank_fallback`をworkerが上書きしない
 - Library checkpoint済みjobは`checkpointed_jobs`で同workerの再精読対象から外せる
 
-詳細は `claim-serial-policy.md` を正本とする。
+詳細は `worker-router.md` を正本とする。

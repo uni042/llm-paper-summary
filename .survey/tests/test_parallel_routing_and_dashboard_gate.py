@@ -17,28 +17,17 @@ LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
 class SpecialistOverflowRoutingTests(unittest.TestCase):
-    def test_canonical_docs_route_specialist_to_research_above_50(self):
-        specialist = (DOCS / "discovery-specialist-worker.md").read_text(encoding="utf-8")
-        buffer_policy = (DOCS / "candidate-buffer-policy.md").read_text(encoding="utf-8")
+    def test_canonical_router_routes_specialist_to_research_above_50(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        self.assertIn("candidate_inventory > 50", router)
+        self.assertIn("overflow research mode", router)
+        self.assertIn("通常論文ワーカーと同じ研究処理", router)
 
-        for name, text in (
-            ("discovery-specialist-worker.md", specialist),
-            ("candidate-buffer-policy.md", buffer_policy),
-        ):
-            with self.subTest(document=name):
-                self.assertIn("candidate_inventory > 50", text)
-
-        self.assertIn("overflow research mode", specialist)
-        self.assertIn("通常論文workerと同じ", specialist)
-        self.assertNotIn(
-            "candidate在庫が50本、100本、それ以上でも、在庫数だけを理由に探索を弱めたり停止したりしない",
-            specialist,
-        )
-
-    def test_repository_tests_watch_overflow_policy_documents(self):
+    def test_repository_tests_watch_single_worker_router(self):
         text = REPOSITORY_TESTS.read_text(encoding="utf-8")
-        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/discovery-specialist-worker.md"), 2)
-        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/candidate-buffer-policy.md"), 2)
+        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/worker-router.md"), 2)
+        self.assertNotIn(".survey/docs/survey-workflow/discovery-specialist-worker.md", text)
+        self.assertNotIn(".survey/docs/survey-workflow/candidate-buffer-policy.md", text)
 
 
 class StatusPublishGateTests(unittest.TestCase):

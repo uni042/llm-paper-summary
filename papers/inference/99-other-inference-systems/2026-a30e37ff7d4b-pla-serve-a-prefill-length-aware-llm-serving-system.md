@@ -14,7 +14,7 @@ authors:
 - Huaxiu Yao
 - Jason Xue
 - Qirong Ho
-published: '2026'
+published: '2026-01-04'
 publication: Proceedings of Machine Learning and Systems 8 (MLSys 2026)
 publication_type: conference
 publication_status: published
@@ -42,6 +42,7 @@ references_source: MLSys 2026 proceedings PDF reference section
 references_total: 5
 source: https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf
 sources:
+- https://arxiv.org/abs/2601.11589
 - https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html
 - https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf
 code: https://github.com/Jianshu-She/LAPS

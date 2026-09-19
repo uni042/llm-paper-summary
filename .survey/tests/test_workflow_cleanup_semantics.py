@@ -43,19 +43,40 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
 
-    def test_discovery_docs_preserve_overflow_reader_mode(self):
-        for rel in (
-            ".survey/docs/survey-workflow/README.md",
-            ".survey/docs/survey-workflow/worker-router.md",
+    def test_worker_router_is_single_worker_policy(self):
+        readme = (ROOT / ".survey/docs/survey-workflow/README.md").read_text(encoding="utf-8")
+        router = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
+        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
+
+        self.assertIn("唯一の人間向け正本", readme)
+        self.assertIn("candidate_inventory > 50", router)
+        self.assertIn("overflow research mode", router)
+        self.assertIn("schema_version: 3", router)
+        self.assertIn("target_unseen: 20", router)
+        self.assertIn("実装リファレンス", queue)
+
+        retired_worker_surfaces = [
+            ".survey/docs/survey-workflow/always-on-worker.md",
+            ".survey/docs/survey-workflow/backlog-resilience.md",
             ".survey/docs/survey-workflow/candidate-buffer-policy.md",
+            ".survey/docs/survey-workflow/claim-serial-policy.md",
             ".survey/docs/survey-workflow/discovery-continuation-policy.md",
             ".survey/docs/survey-workflow/discovery-exhaustive-run-policy.md",
+            ".survey/docs/survey-workflow/discovery-search-filter.md",
+            ".survey/docs/survey-workflow/discovery-search-loop.md",
             ".survey/docs/survey-workflow/discovery-specialist-worker.md",
-        ):
+            ".survey/docs/survey-workflow/fallback-routing.md",
+            ".survey/docs/survey-workflow/run-liveness-policy.md",
+            ".github/workflows/manual-library-recovery.yml",
+            ".github/workflows/manual-serverlesslora-library-recovery.yml",
+            ".github/workflows/library-fallback-bundle-replay.yml",
+            "docs/superpowers/plans/2026-09-14-parallel-submission-batch.md",
+            "docs/superpowers/plans/2026-09-15-fallback-recovery-loop.md",
+            "docs/superpowers/plans/2026-09-17-claim-fast-wait.md",
+        ]
+        for rel in retired_worker_surfaces:
             with self.subTest(path=rel):
-                text = (ROOT / rel).read_text(encoding="utf-8")
-                self.assertIn("candidate_inventory > 50", text)
-                self.assertIn("overflow research mode", text)
+                self.assertFalse((ROOT / rel).exists(), rel)
 
     def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
         retired = [
@@ -73,6 +94,12 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         for rel in retired:
             with self.subTest(path=rel):
                 self.assertFalse((ROOT / rel).exists(), rel)
+
+    def test_repository_checker_requires_only_current_worker_docs(self):
+        checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
+        self.assertIn(".survey/docs/survey-workflow/worker-router.md", checker)
+        self.assertNotIn(".survey/docs/survey-workflow/fallback-routing.md", checker)
+        self.assertNotIn(".survey/docs/survey-workflow/backlog-resilience.md", checker)
 
     def test_maintenance_refreshes_metadata_coverage_before_health(self):
         workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
