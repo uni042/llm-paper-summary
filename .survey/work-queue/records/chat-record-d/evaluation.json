@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e8ec2848c993c87c9d340e2f",
-  "job_id": "job-research-0e6ed88f587a40d2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e8ec2848c993c87c9d340e2f",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e8ec2848c993c87c9d340e2f","job_id":"job-research-0e6ed88f587a40d2","data":{"hardware":"4台のNVIDIA A100 80GBを使用。","software":"Microsoft DeepSpeedへ投機的デコードを実装し、Sheared-LLaMAによる構造化枝刈りで専用ドラフトを生成。","methodology":"350件超の実験を実施。OPT-66BとLLaMA-65Bを主対象モデルとし、OPT-125M〜6.7B、LLaMA-7B/13Bなどをドラフトとして比較する。MMLUは5-shot、HellaSwagとChatbot Arenaはzero-shotの開放生成で、バッチ量1・貪欲デコードを基本条件とする。スループット、一反復当たり受理トークン数、ドラフト一段階遅延、対象検証遅延を測り、層数・幅を独立に変える微小評価も行う。温度0.5/1.0、Vicuna-33B、LLaMA 1/2/3.1系列、自己投機的デコードとの比較も含む。","scope":"実GPU上の推論評価で、主結論はA100上の自己回帰遅延特性に基づく。論文自身もH100やV100などで計算・帯域比が変われば最適ドラフトが変化し得ると分析しており、性能モデルで必要な遅延改善幅を検討する。"},"reservation":{"claim_id":"claim-e8ec2848c993c87c9d340e2f","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
