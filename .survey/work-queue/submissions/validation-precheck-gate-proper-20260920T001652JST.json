@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "validation-precheck-gate-20260920T001652JST",
+    "result_path": ".survey/work-queue/discovery-precheck/results/validation-precheck-gate-20260920T001652JST.json",
+    "receipt": "sha256:39031f5d0afb7aa1cd8d3dcf409f94cdd9cc531e564f0994ba862ccda7de24bc"
+  },
+  "discovery_stats": {
+    "run_key": "2026-09-20T00:16:52+09:00",
+    "round": "validation-proper",
+    "axis": "validation-precheck-gate",
+    "query_summary": "Controlled production validation using three real LLM-serving papers; authoritative precheck classified all three as already represented.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.16477",
+      "arXiv:2607.28150",
+      "arXiv:2607.08057"
+    ],
+    "accepted_canonical_ids": [],
+    "empty_round_reason": "All raw search results were removed by the mandatory authoritative precheck."
+  }
+}
