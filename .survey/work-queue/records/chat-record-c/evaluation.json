@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f9592fd052ad29b9a163d874",
-  "job_id": "job-research-f85e83252e35c61b",
-  "data": {},
+  "attempt_id": "attempt-e2ac0d42f447fbcb7a899c55",
+  "job_id": "job-research-a6905e04777fde1f",
+  "data": {
+    "hardware": "H200級acceleratorを共通computeとpackage areaでモデル化。HBFlexはGPUあたり6 HBF stack、stackあたり16 die×32 plane、planeあたり512 block×512 page（4KiB）、read 4us、program 75us、stack read 488GB/s/write 27.2GB/s、40MB SRAM/stack。HBM3eは24GB、0.8TB/s/stack。",
+    "software": "個別read/writeを扱うカスタムtrace-driven simulator。モデルはDeepSeek-V4-Pro、DeepSeek-V3、Hunyuan3、Qwen3-235B。",
+    "methodology": "Alibaba BailianのTo-B/To-C/Coding/Thinkingの4 production traceとQwen3で収集したSWE-bench traceを使用。H3、FlashAccel co-located/cascaded、integrated-stackと同一package-area予算で比較し、TTFT、TPOT、throughput、read-wave amplification、write stall、GC WAF、SRAM使用量を測定。SWE-benchはconcurrencyを変化させ、4096 concurrent tasksで累積ablationも実施。",
+    "scope": "実機HBFではなくトレース駆動シミュレーションであり、想定HBF latency/bandwidthとpackage-area正規化に依存する。4モデルと指定trace群に対するシステム性能・耐久評価が中心。"
+  },
   "reservation": {
-    "claim_id": "claim-f9592fd052ad29b9a163d874",
+    "claim_id": "claim-e2ac0d42f447fbcb7a899c55",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
