@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:49:41 JST**
+> 自動生成: **2026-09-20 07:29:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **89** |
-| 未claim Research job | **89** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-20 06:47:50 JST（1分前）** |
+| 未claim Research job | **88** |
+| 直近24hの検証済みResearch収録 | **38** |
+| 最終検証済みResearch収録 | **09-20 06:47:50 JST（42分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **3** | **0** | **0** | **0** | — |
+| Research | **12** | **5** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **6** | **4** | **0** | **0** | **0** | **5** |
+| Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **15** | **6** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -109,22 +109,6 @@
   - result: `.survey/work-queue/results/20260920T0204JST-specialist-moe-openalex-round1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
   - 探索軸: MoE expert cache offload placement prefetch inference systems
-- **09-20 01:04:25 JST** job `job-d8da75d9869c16a7` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
-  - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
-- **09-20 01:06:32 JST** job `job-7c3767a717022ebe` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260920T0111JST-discovery-specialist-energy-disagg-02.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
-  - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
-- **09-20 01:06:43 JST** job `job-b156f590044217bf` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260920T0112JST-discovery-specialist-elastic-kv-03.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json`
-  - 探索軸: CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction
-- **09-20 01:06:53 JST** job `job-b0b7be0cf94d2abc` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
-  - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
 - **09-20 02:04:03 JST** job `job-9b22461247bc5bb0` / 候補 **3件**
   - result: `.survey/work-queue/results/20260920T0202JST-discovery-fixedsource-openalex-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json`
@@ -180,8 +164,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 07:29:40 JST** / heartbeat: **—** / lease expiry: **09-20 08:59:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e12ae17b96a85ee5.json`
 
 #### Audit
 
