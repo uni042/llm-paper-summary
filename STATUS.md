@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:25:27 JST**
+> 自動生成: **2026-09-20 03:25:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **83** |
-| 未claim Research job | **81** |
+| 未claim Research job | **78** |
 | 直近24hの検証済みResearch収録 | **45** |
 | 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間33分前）** |
 | 整合性異常 | **16** |
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **2** | **2** | **0** | **2** | **1** | — |
+| Research | **14** | **2** | **2** | **0** | **5** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **55** | **3** | **3** | **0** | **2** | **1** | **5** |
+| 合計 | **55** | **3** | **3** | **0** | **5** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -183,7 +183,16 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **1件**
+- `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference / worker `work-refcuration-validation-20260920`
+  - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-53def9917e580440.json`
+- `arXiv:2312.12456` — PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU / worker `work-refcuration-validation-20260920`
+  - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b41274093aac35dc.json`
+- `arXiv:2306.00978` — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration / worker `work-refcuration-validation-20260920`
+  - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d5e83a73eb90a616.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `manual-refcuration-savecheck-20260920`
   - claim: **09-20 03:25:19 JST** / heartbeat: **09-20 03:25:19 JST** / lease expiry: **09-20 04:55:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
