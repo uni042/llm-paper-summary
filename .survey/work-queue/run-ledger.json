@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T09:43:57.527239+00:00",
+  "updated_at": "2026-09-19T09:48:31.505702+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T09:43:57.527239+00:00",
+      "last_recorded_at": "2026-09-19T09:48:31.505702+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 292,
+        "research_completed": 293,
         "audit_completed": 0,
         "discovery_completed": 162,
         "blocked": 38,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35363598431:1",
-          "recorded_at": "2026-09-18T15:41:07.655241+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35363598431",
-            "run_attempt": "1",
-            "source_sha": "8cbffe5410fce938adb04fc671f4f8ab8502ada9"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35366261555:1",
           "recorded_at": "2026-09-18T16:05:10.446683+00:00",
@@ -19589,6 +19575,20 @@
             "run_id": "35435479792",
             "run_attempt": "1",
             "source_sha": "9defdc4ab3c966c793d7a7bcbad5a6f6b7b2f6f2"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35435694330:1",
+          "recorded_at": "2026-09-19T09:48:31.505702+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35435694330",
+            "run_attempt": "1",
+            "source_sha": "15f53a966af3574a181938187d829f1528478666"
           },
           "signals": [
             "research_completed"
@@ -23529,6 +23529,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.25777",
           "title": "SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ee7c0fc62bdc554b",
+          "type": "research",
+          "canonical_id": "arXiv:2608.08340",
+          "title": "OpRAG: A Resource-Deterministic Runtime for GPU-Backed Multi-Stage RAG Workflows",
           "from": "ready",
           "to": "completed"
         }
