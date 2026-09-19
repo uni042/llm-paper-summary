@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **742本**。
+収録論文: **747本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**742本**。
+推論論文：**747本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -44,11 +44,13 @@
 | [03-offload-hierarchical-memory](03-offload-hierarchical-memory/README.md) | 3 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 9 |
 | [04-cpu-ssd-offload](04-cpu-ssd-offload/README.md) | 4 |
+| [04-kv-cache](04-kv-cache/README.md) | 1 |
 | [04-kv-prefix-cache](04-kv-prefix-cache/README.md) | 1 |
 | [04-moe-expert-offload-caching](04-moe-expert-offload-caching/README.md) | 2 |
 | [04-moe-offload-expert-cache](04-moe-offload-expert-cache/README.md) | 1 |
 | [04-moe-offload-routing](04-moe-offload-routing/README.md) | 1 |
 | [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 22 |
+| [05-kv-cache](05-kv-cache/README.md) | 1 |
 | [05-kv-cache-compression-quantization](05-kv-cache-compression-quantization/README.md) | 1 |
 | [05-kv-cache-memory-management](05-kv-cache-memory-management/README.md) | 7 |
 | [05-kv-cache-offloading](05-kv-cache-offloading/README.md) | 7 |
@@ -83,5 +85,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 86 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 89 |
 <!-- survey:auto:end -->

@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T16:06:53+00:00",
-  "last_run_key": "2026-09-20T01:01:07+09:00",
-  "last_round": "specialist-nvme-flash-04",
+  "updated_at": "2026-09-19T17:00:09+00:00",
+  "last_run_key": "2026-09-20T01:00:00+09:00",
+  "last_round": "manual-fixedsource-openalex-round1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 7,
-  "last_empty_round_reason": "All raw records were removed by authoritative precheck.",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-kvdrive-14",
-      "axis": "HBM/DRAM/SSD multi-tier KV placement・pipeline・cross-tier coordination",
-      "query_summary": "SSD-backed KVの近接研究を追加探索し、KVDrive（2605.18071）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はrecent 2026 serving scheduling、speculative decoding systems、またはGPU-direct/CXL/SSDに跨るデータ配置研究へ探索軸を広げる。",
-      "source_submission": "work-queue/submissions/20260915T0824JST-discovery-specialist-kvdrive-14.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-agentic-kv-15",
@@ -7459,6 +7444,24 @@
       ],
       "next_axis_hint": "Shift away from recently saturated memory/storage axes toward new September scheduling, networking, and speculative-serving papers.",
       "source_submission": "work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json"
+    },
+    {
+      "run_key": "2026-09-20T01:00:00+09:00",
+      "round": "manual-fixedsource-openalex-round1",
+      "axis": "OpenAlex search: LLM inference serving KV cache",
+      "query_summary": "単一OpenAlex検索結果URLを固定し、precheck内collect_until_unseenでcursor paginationを3ページ走査。15件を取得し3件を既収録として除外、12件の未収録bufferから推論システムとして直接性の高い3件を選別。",
+      "candidate_count": 15,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 12,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 12,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次roundは別queryとしてMoE expert offload/cacheまたはCXL/NVMe階層メモリを固定source_urlで探索する。",
+      "source_submission": "work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json"
     }
   ],
   "axes": {
@@ -14203,6 +14206,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Shift away from recently saturated memory/storage axes toward new September scheduling, networking, and speculative-serving papers."
+    },
+    "OpenAlex search: LLM inference serving KV cache": {
+      "last_run_key": "2026-09-20T01:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 15,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 12,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 12,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.2,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次roundは別queryとしてMoE expert offload/cacheまたはCXL/NVMe階層メモリを固定source_urlで探索する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -14413,6 +14429,29 @@
       "cooldown": false,
       "last_run_key": "2026-09-18T20:00:00+09:00",
       "last_round": "specialist-august-systems-3"
+    },
+    "window-e2fdd225fe4fba8889c0": {
+      "topic": "llm inference serving kv cache",
+      "source": "openalex",
+      "date_range": "2025-01-01:2026-09-20",
+      "category": "inference systems",
+      "citation_direction": "none",
+      "query_family": "keyword-search",
+      "search_window_key": "window-e2fdd225fe4fba8889c0",
+      "scan_count": 1,
+      "raw_result_count": 15,
+      "unseen_result_count": 12,
+      "duplicate_filtered_count": 3,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 3,
+      "candidate_accepted_count": 3,
+      "last_position": "3 cursor pages",
+      "unseen_rate": 0.8,
+      "duplicate_rate": 0.2,
+      "candidate_acceptance_rate": 1.0,
+      "cooldown": false,
+      "last_run_key": "2026-09-20T01:00:00+09:00",
+      "last_round": "manual-fixedsource-openalex-round1"
     }
   },
   "recent_search_windows": [
@@ -14604,6 +14643,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.0,
       "last_position": null
+    },
+    {
+      "topic": "llm inference serving kv cache",
+      "source": "openalex",
+      "date_range": "2025-01-01:2026-09-20",
+      "category": "inference systems",
+      "citation_direction": "none",
+      "query_family": "keyword-search",
+      "search_window_key": "window-e2fdd225fe4fba8889c0",
+      "run_key": "2026-09-20T01:00:00+09:00",
+      "round": "manual-fixedsource-openalex-round1",
+      "raw_result_count": 15,
+      "unseen_result_count": 12,
+      "duplicate_filtered_count": 3,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 3,
+      "candidate_accepted_count": 3,
+      "unseen_rate": 0.8,
+      "duplicate_rate": 0.2,
+      "candidate_acceptance_rate": 1.0,
+      "last_position": "3 cursor pages"
     }
   ],
   "search_window_history_limit": 96,

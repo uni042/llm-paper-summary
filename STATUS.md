@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 02:02:48 JST**
+> 自動生成: **2026-09-20 02:03:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **45** |
+| 収録候補論文 | **49** |
+| 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（10分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（11分前）** |
 | 整合性異常 | **8** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **49** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **49** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **2** | **2** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **53** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **67** | **6** | **6** | **0** | **1** | **1** | **0** |
+| Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
+| 合計 | **68** | **6** | **6** | **0** | **1** | **1** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -121,6 +121,10 @@
   - result: `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
   - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
+- **09-20 02:00:09 JST** job `job-efd454976a6235e0` / 候補 **3件**
+  - result: `.survey/work-queue/results/manual-fixedsource-openalex-20260920T0159JST-round1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
+  - 探索軸: OpenAlex search: LLM inference serving KV cache
 - **09-20 00:29:05 JST** job `job-d28909a47c5b1f9e` / 候補 **0件**
   - result: `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260920T0022JST-discovery-specialist-edge-measurement-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0022JST-discovery-specialist-edge-measurement-4.json`
   - 探索軸: GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張
-- **09-19 23:03:39 JST** job `job-d59af8c4d81ce8af` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2302JST-discovery-specialist-memory-runtime-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json`
-  - 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime
 
 ### 直近タスク
 
@@ -218,7 +218,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **49** |
 
 ### 候補の重複・識別情報欠損
 
@@ -249,8 +249,8 @@
 | 成功result未照合のimmutable submission | **641** |
 | └ Research | **491** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
-| └ Other/Unknown | **3** |
+| └ Discovery | **146** |
+| └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
 

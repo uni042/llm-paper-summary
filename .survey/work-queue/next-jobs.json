@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 775,
+      "completed": 776,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 46,
+      "ready": 49,
       "completed": 584,
       "superseded": 44,
       "deferred": 3,
@@ -19,11 +19,25 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 46,
-    "actively_claimed": 0,
-    "claimable": 46
+    "ready_research_audit": 49,
+    "actively_claimed": 1,
+    "claimable": 48
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-357db288defe3131",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2609.16450",
+      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+      "source_url": "https://arxiv.org/abs/2609.16450",
+      "paper_path": "papers/inference/07-speculative-decoding/2026-2609.16450-early-bird-decoding.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-6be1741cdc42b913",
       "type": "research",
@@ -109,28 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b85568c75bac4939",
+      "job_id": "job-research-8048d1362e569278",
       "type": "research",
       "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2605.05696",
-      "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
-      "source_url": "https://arxiv.org/abs/2605.05696",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-0e6e5ba9063713ac",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2604.13226",
-      "title": "KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs",
-      "source_url": "https://arxiv.org/abs/2604.13226",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md",
+      "priority": 86,
+      "canonical_id": "arXiv:2502.08363",
+      "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+      "source_url": "https://arxiv.org/abs/2502.08363",
+      "paper_path": "papers/inference/10-sparse-attention/2025-2502.08363-top-theta-attention.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T16:51:55+00:00"
+  "generated_at": "2026-09-19T17:02:07+00:00"
 }
