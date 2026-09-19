@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:29:18 JST**
+> 自動生成: **2026-09-20 03:30:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **83** |
-| 未claim Research job | **78** |
+| 未claim Research job | **79** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間37分前）** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間38分前）** |
 | 整合性異常 | **16** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **3** | **2** | **1** | **5** | **2** | — |
+| Research | **14** | **3** | **2** | **0** | **4** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **41** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **55** | **4** | **3** | **1** | **5** | **2** | **5** |
+| 合計 | **55** | **4** | **3** | **0** | **4** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,13 +151,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
   - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
   - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-6c0676d0cc5caf5a13ce6002.json` (job `job-research-0023a21511f803e1`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-6c0676d0cc5caf5a13ce6002.json` (job `job-research-0023a21511f803e1`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-6c0676d0cc5caf5a13ce6002.json` (`ok=false`)
 - **成功** `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor
   - job: `.survey/work-queue/jobs/job-research-153b45adc3c50a28.json`
   - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
@@ -184,12 +185,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **2件**
-- `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:52:38 JST** / heartbeat: **09-20 03:28:08 JST** / lease expiry: **09-20 04:58:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
-- `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `manual-refcuration-savecheck-20260920`
-  - claim: **09-20 03:25:19 JST** / heartbeat: **09-20 03:28:08 JST** / lease expiry: **09-20 04:58:08 JST**
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **0件**
+- `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 03:29:29 JST** / heartbeat: **—** / lease expiry: **09-20 04:59:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
 - `arXiv:2411.01433` — HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference / worker `work-refcuration-validation-20260920`
   - claim: **09-20 03:25:39 JST** / heartbeat: **—** / lease expiry: **09-20 04:55:39 JST**
