@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2309.08168",
+      "arxiv_id": "2309.08168",
+      "title": "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2309.08168",
+      "paper_path": "papers/inference/05-speculative-decoding/2023-2309.08168-draft-verify.md",
+      "priority": 94,
+      "reason": "Foundational self-speculative decoding approach that drafts by selectively skipping layers and verifies with the original model without extra draft-model memory."
+    },
+    {
+      "canonical_id": "arXiv:2405.04532",
+      "arxiv_id": "2405.04532",
+      "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2405.04532",
+      "paper_path": "papers/inference/08-quantization-kernels/2024-2405.04532-qserve.md",
+      "priority": 97,
+      "reason": "Quantization-and-system co-design for cloud LLM serving with W4A8KV4 execution, fused kernels, and strong throughput/cost results."
+    },
+    {
+      "canonical_id": "arXiv:2503.16525",
+      "arxiv_id": "2503.16525",
+      "title": "KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2503.16525",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md",
+      "priority": 95,
+      "reason": "Focused multi-tenant serving system for cross-request KV-cache reuse, targeting TTFT and shared-cache efficiency under long-context workloads."
+    },
+    {
+      "canonical_id": "arXiv:2310.07177",
+      "arxiv_id": "2310.07177",
+      "title": "Online Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2310.07177",
+      "paper_path": "papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md",
+      "priority": 93,
+      "reason": "Speculative-decoding system that continuously adapts draft models to live query distributions to improve acceptance rates under workload shift."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920T0346JST-offset100",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920T0346JST-offset100.json",
+    "receipt": "sha256:e8e76ca1e0879ea5e0f4cd2a6aa2c695b0c12d69d3e57269ab19808a9f334e8b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20T0346JST",
+    "round": "refcuration-stress-offset100-b",
+    "axis": "structured references stress probe at raw offset 100",
+    "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice b records were evaluated with unrelated/borderline papers durably classified.",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2309.08168",
+      "arXiv:2405.04532",
+      "arXiv:2503.16525",
+      "arXiv:2310.07177"
+    ],
+    "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer."
+  }
+}
