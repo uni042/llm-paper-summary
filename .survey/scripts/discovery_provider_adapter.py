@@ -166,6 +166,193 @@ def semantic_scholar_fetcher(
     return fetch_page
 
 
+
+OPENALEX_HOST = "api.openalex.org"
+
+
+def _openalex_record(work: dict[str, Any]) -> dict[str, Any] | None:
+    if not isinstance(work, dict):
+        return None
+    title = str(work.get("display_name") or work.get("title") or "").strip()
+    if not title:
+        return None
+    openalex_id = str(work.get("id") or "").rstrip("/").split("/")[-1]
+    doi = str(work.get("doi") or "").strip()
+    if doi.startswith("https://doi.org/"):
+        doi = doi[len("https://doi.org/"):]
+    source_url = None
+    primary = work.get("primary_location")
+    if isinstance(primary, dict):
+        source_url = primary.get("landing_page_url") or primary.get("pdf_url")
+    locations = work.get("locations")
+    arxiv_id = None
+    if isinstance(locations, list):
+        for location in locations:
+            if not isinstance(location, dict):
+                continue
+            for field in ("landing_page_url", "pdf_url"):
+                value = str(location.get(field) or "")
+                match = re.search(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})(?:v\d+)?", value)
+                if match:
+                    arxiv_id = match.group(1)
+                    source_url = source_url or f"https://arxiv.org/abs/{arxiv_id}"
+                    break
+            if arxiv_id:
+                break
+
+    record: dict[str, Any] = {
+        "title": title,
+        "source_url": source_url or (f"https://openalex.org/{openalex_id}" if openalex_id else None),
+        "year": work.get("publication_year"),
+        "published": work.get("publication_date") or None,
+    }
+    if arxiv_id:
+        record["canonical_id"] = f"arXiv:{arxiv_id}"
+        record["arxiv_id"] = arxiv_id
+    elif doi:
+        record["canonical_id"] = f"DOI:{doi}"
+        record["doi"] = doi
+    elif openalex_id:
+        record["canonical_id"] = f"OpenAlex:{openalex_id}"
+
+    authorships = work.get("authorships")
+    if isinstance(authorships, list):
+        names = []
+        for authorship in authorships:
+            author = authorship.get("author") if isinstance(authorship, dict) else None
+            if isinstance(author, dict) and author.get("display_name"):
+                names.append(str(author["display_name"]))
+        if names:
+            record["authors"] = names
+    return record
+
+
+def _validate_openalex_url(source_url: str, *, singleton: bool = False) -> tuple[Any, dict[str, list[str]]]:
+    parsed = urlparse(source_url)
+    if parsed.scheme != "https" or parsed.netloc != OPENALEX_HOST:
+        raise DiscoveryProviderError("OpenAlex source_url must use https://api.openalex.org")
+    if singleton:
+        if not re.fullmatch(r"/works/W\d+", parsed.path):
+            raise DiscoveryProviderError("OpenAlex references source_url must be a singleton /works/W... URL")
+    elif parsed.path != "/works":
+        raise DiscoveryProviderError("OpenAlex paginated source_url must use /works")
+    return parsed, parse_qs(parsed.query, keep_blank_values=True)
+
+
+def openalex_fetcher(
+    source_url: str,
+    *,
+    page_size: int = 100,
+    timeout: int = 30,
+    opener: Callable[..., Any] = urlopen,
+) -> Callable[[str | None], dict[str, Any]]:
+    """Build a cursor-paginated fetcher for one fixed OpenAlex /works result set."""
+    if page_size <= 0 or page_size > 100:
+        raise ValueError("page_size must be between 1 and 100")
+    parsed, base_qs = _validate_openalex_url(source_url)
+    for key in ("cursor", "page", "per_page"):
+        base_qs.pop(key, None)
+
+    def fetch_page(cursor: str | None) -> dict[str, Any]:
+        cursor_value = cursor if cursor is not None else "*"
+        qs = {k: list(v) for k, v in base_qs.items()}
+        qs["cursor"] = [cursor_value]
+        qs["per_page"] = [str(page_size)]
+        query = urlencode([(k, item) for k, values in qs.items() for item in values])
+        page_url = urlunparse(parsed._replace(query=query))
+        req = Request(
+            page_url,
+            headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
+        )
+        try:
+            with opener(req, timeout=timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except Exception as exc:
+            raise DiscoveryProviderError(f"OpenAlex page fetch failed at cursor {cursor_value!r}: {exc}") from exc
+        results = payload.get("results") if isinstance(payload, dict) else None
+        meta = payload.get("meta") if isinstance(payload, dict) else None
+        if not isinstance(results, list) or not isinstance(meta, dict):
+            raise DiscoveryProviderError("OpenAlex response is missing results[] or meta")
+        records = []
+        for work in results:
+            record = _openalex_record(work)
+            if record:
+                records.append(record)
+        next_value = meta.get("next_cursor")
+        next_cursor = str(next_value) if isinstance(next_value, str) and next_value else None
+        return {
+            "records": records,
+            "next_cursor": next_cursor,
+            "page_url": page_url,
+            "position": cursor_value,
+        }
+
+    return fetch_page
+
+
+def openalex_references_fetcher(
+    source_url: str,
+    *,
+    page_size: int = 100,
+    timeout: int = 30,
+    opener: Callable[..., Any] = urlopen,
+) -> Callable[[str | None], dict[str, Any]]:
+    """Page through one work's fixed referenced_works list in stable chunks."""
+    if page_size <= 0 or page_size > 100:
+        raise ValueError("page_size must be between 1 and 100")
+    parsed, _ = _validate_openalex_url(source_url, singleton=True)
+    req = Request(
+        source_url,
+        headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
+    )
+    try:
+        with opener(req, timeout=timeout) as response:
+            work = json.loads(response.read().decode("utf-8"))
+    except Exception as exc:
+        raise DiscoveryProviderError(f"OpenAlex reference-list fetch failed: {exc}") from exc
+    refs = work.get("referenced_works") if isinstance(work, dict) else None
+    if not isinstance(refs, list):
+        raise DiscoveryProviderError("OpenAlex work response is missing referenced_works[]")
+    work_ids = []
+    for value in refs:
+        ident = str(value or "").rstrip("/").split("/")[-1]
+        if re.fullmatch(r"W\d+", ident):
+            work_ids.append(ident)
+
+    def fetch_page(cursor: str | None) -> dict[str, Any]:
+        index = int(cursor or "0")
+        if index < 0:
+            raise DiscoveryProviderError("reference cursor must be non-negative")
+        chunk = work_ids[index:index + page_size]
+        if not chunk:
+            return {"records": [], "next_cursor": None, "position": index}
+        filter_value = "|".join(chunk)
+        url = "https://api.openalex.org/works?" + urlencode(
+            {"filter": f"openalex:{filter_value}", "per_page": str(len(chunk))}
+        )
+        page_req = Request(
+            url,
+            headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
+        )
+        try:
+            with opener(page_req, timeout=timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except Exception as exc:
+            raise DiscoveryProviderError(f"OpenAlex referenced-work batch fetch failed at {index}: {exc}") from exc
+        results = payload.get("results") if isinstance(payload, dict) else None
+        if not isinstance(results, list):
+            raise DiscoveryProviderError("OpenAlex referenced-work batch is missing results[]")
+        records = []
+        for item in results:
+            record = _openalex_record(item)
+            if record:
+                records.append(record)
+        next_index = index + len(chunk)
+        next_cursor = str(next_index) if next_index < len(work_ids) else None
+        return {"records": records, "next_cursor": next_cursor, "page_url": url, "position": index}
+
+    return fetch_page
+
 def make_fetcher(
     provider: str,
     source_url: str,
@@ -177,6 +364,20 @@ def make_fetcher(
     provider = str(provider or "").strip().casefold()
     if provider in {"semantic_scholar", "semanticscholar", "s2"}:
         return semantic_scholar_fetcher(
+            source_url,
+            page_size=page_size,
+            timeout=timeout,
+            opener=opener,
+        )
+    if provider in {"openalex", "open_alex"}:
+        return openalex_fetcher(
+            source_url,
+            page_size=page_size,
+            timeout=timeout,
+            opener=opener,
+        )
+    if provider in {"openalex_references", "open_alex_references"}:
+        return openalex_references_fetcher(
             source_url,
             page_size=page_size,
             timeout=timeout,
