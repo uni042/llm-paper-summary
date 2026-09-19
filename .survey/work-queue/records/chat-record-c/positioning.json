@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0ff59bc0d504d0b2b89bbcc6",
-  "job_id": "job-research-376e535ed84f7cfa",
-  "data": {
-    "limitations": "評価の多くはDeepSeek内部枠組みに依存し、KV圧縮機構単体の独立第三者再現や、公開された統一ハードウェア上のend-to-end serving throughput比較ではない。CSA2の疎選択誤り、SWA限定再実行の近似状態復元は未試験の極端な長文脈・cache-resumption境界で能力劣化を起こし得る。閉鎖モデルとの比較はscaffold・API・モデル更新差の影響を受ける。100万トークンを支える一方、全種類の極端入力を有限の内部テストで網羅できないことを著者自身が認める。",
-    "differences": "DeepSeek-V4-FlashはCSA/HCA混成とより大きなグローバルKV、永続SWA KVを使うのに対し、V4.1-Flashは純CSA2、層間KV/index再利用、FP4主KVへ移行する。YOCO系の層共有発想をCEDへ拡張し、デコーダglobal KVをエンコーダ最終状態から層固有射影する。IndexCache等の索引再利用だけでなく、主KV・indexer K・Top-K索引をモード別に共有する。通常のKV量子化研究が1エントリのbytesを減らすのに対し、本研究はKV生成層数・精度・永続化対象そのものを同時に減らす。Zero SWA Cachingの正確なL×n_win再計算に対して、SWA Bounded Replayはn_winだけの近似再実行へ変える。",
-    "implementation_status": "DeepSeek-V4.1-FlashのモデルチェックポイントはHugging Faceで公開。論文は実運用向けのEPD分離、ホストDRAMプール、永続KV管理、融合カーネルを具体的に記述し、DeepSeekの既存公開カーネル群を利用する。一方、この技術報告単独の完全な配備オーケストレータ一式が独立リポジトリとして公開されていることまでは確認できない。",
-    "research_positioning": "KVキャッシュ圧縮、疎注意、階層メモリ、SSD/ホスト永続キャッシュをモデル・システム共同設計で接続する代表例。特に『HBM常駐global KVを層間共有+FP4で縮小』『短寿命SWA KVをSSDからDRAM短TTLへ昇格』『欠損時だけ限定再計算』という寿命別配置は、SSD/NVMeオフロード研究に対して容量・帯域・再計算の三者トレードオフを明示する。単純なexpert offloadやKV pagingより上位のモデル構造変更を伴うため、既存推論基盤へ導入する際はカーネルとcache manager双方の対応が必要。"
-  },
+  "attempt_id": "attempt-ddbd5f7c97d18185436bf163",
+  "job_id": "job-research-1a87bd753fb86450",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0ff59bc0d504d0b2b89bbcc6",
+    "claim_id": "claim-ddbd5f7c97d18185436bf163",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
