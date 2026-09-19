@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -171,6 +172,66 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
             ["New A", "New B"],
         )
 
+    def test_schema_v3_precheck_fetches_same_result_set_until_target(self) -> None:
+        request = self.root / "request-v3.json"
+        request.write_text(
+            json.dumps(
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "req-v3",
+                    "collector_id": "collector-v3",
+                    "run_key": "validation-round",
+                    "axis": "memory",
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=llm+serving",
+                    "target_unseen": 2,
+                    "page_size": 2,
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        pages = {
+            None: {
+                "records": [
+                    {"canonical_id": "arXiv:2609.00001", "title": "Known"},
+                    {"canonical_id": "arXiv:2609.90001", "title": "New A"},
+                ],
+                "next_cursor": "2",
+            },
+            "2": {
+                "records": [
+                    {"source_url": "https://arxiv.org/abs/2609.90001", "title": "New A"},
+                    {"canonical_id": "arXiv:2609.90002", "title": "New B"},
+                ],
+                "next_cursor": "4",
+            },
+        }
+
+        def fetch_page(cursor):
+            return pages[cursor]
+
+        with patch.object(
+            process_discovery_precheck.discovery_provider_adapter,
+            "make_fetcher",
+            return_value=fetch_page,
+        ) as make_fetcher:
+            result = process_discovery_precheck.process_request(
+                request,
+                snapshot_dir=self.snapshot,
+                rejection_ledger_path=self.ledger,
+            )
+
+        make_fetcher.assert_called_once()
+        self.assertTrue(result["evaluation_allowed"])
+        self.assertEqual(result["decision"], "READY_FOR_EVALUATION")
+        self.assertEqual(result["stop_reason"], "TARGET_REACHED")
+        self.assertEqual(result["pages_fetched"], 2)
+        self.assertEqual(result["retrieval_duplicate_filtered_count"], 1)
+        self.assertEqual(result["cross_page_duplicate_filtered_count"], 1)
+        self.assertEqual([row["title"] for row in result["results"]], ["New A", "New B"])
+
     def test_iterative_request_requires_explicit_provider_has_more(self) -> None:
         request = self.root / "request-missing-more.json"
         request.write_text(
@@ -241,6 +302,11 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "add", iterative_marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
         subprocess.run(["git", "commit", "-qm", "enable iterative discovery precheck"], cwd=self.repo, check=True)
 
+        fixed_source_marker = self.queue / "discovery-precheck" / "FIXED_SOURCE_ENFORCED"
+        fixed_source_marker.write_text("schema_version=3\n", encoding="utf-8")
+        subprocess.run(["git", "add", fixed_source_marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "enable fixed source discovery precheck"], cwd=self.repo, check=True)
+
     def tearDown(self) -> None:
         for name, value in self.originals.items():
             setattr(queue_worker, name, value)
@@ -269,7 +335,7 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         self,
         *,
         author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com",
-        schema_version: int = 2,
+        schema_version: int = 3,
         evaluation_allowed: bool = True,
     ) -> Path:
         path = self.results / "req-1.json"
@@ -298,6 +364,14 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
                     "pages_processed": 1,
                     "evaluation_allowed": evaluation_allowed,
                     "decision": "READY_FOR_EVALUATION" if evaluation_allowed else "CONTINUE_FETCH",
+                }
+            )
+        if schema_version >= 3:
+            payload.update(
+                {
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=memory",
+                    "pages_fetched": 2,
                 }
             )
         path.write_text(
@@ -359,10 +433,23 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         }
         with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
             queue_worker.validate_discovery_precheck(sub)
-        self.assertIn("schema-v2", str(ctx.exception))
+        self.assertIn("schema-v3", str(ctx.exception))
+
+    def test_schema_v2_result_cannot_authorize_post_fixed_source_submission(self) -> None:
+        self._commit_result(schema_version=2)
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission()
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertIn("schema-v3", str(ctx.exception))
 
     def test_intermediate_iterative_result_cannot_authorize_submission(self) -> None:
-        self._commit_result(schema_version=2, evaluation_allowed=False)
+        self._commit_result(schema_version=3, evaluation_allowed=False)
         sub = self._base_sub()
         sub["_file"] = self._commit_submission()
         sub["discovery_precheck"] = {
