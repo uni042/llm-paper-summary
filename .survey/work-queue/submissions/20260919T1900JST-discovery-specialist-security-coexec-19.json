@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.25431",
+      "title": "Here is a GIFT: Enforcing User Data Isolation in LLM Serving via GPU Information Flow Tracking",
+      "source_url": "https://arxiv.org/abs/2608.25431",
+      "priority": 72,
+      "reason": "Implemented vLLM/DistServe security-system work for shared serving, using per-user encryption and static GPU-kernel information-flow rules with low measured throughput overhead. Adds an under-covered isolation dimension to serving systems."
+    },
+    {
+      "canonical_id": "arXiv:2604.16400",
+      "title": "CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2604.16400",
+      "priority": 70,
+      "reason": "Co-execution system sharing model parameters and replicas between parameter-efficient fine-tuning and inference, with adaptive two-timescale coordination and real-trace goodput evaluation."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-security-coexec-19",
+    "axis": "serving security isolation / inference-finetuning co-execution",
+    "query_summary": "Used two independent under-covered axes surfaced during the isolation search. GIFT and CoLLM were absent from repository code search and provide concrete evaluated system mechanisms rather than surveys or theory-only results.",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2608.25431", "arXiv:2604.16400"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Use repository identity snapshots to recheck this run's submissions while external search budget is constrained; continue with independent known omissions if dedupe confirms novelty."
+  }
+}
