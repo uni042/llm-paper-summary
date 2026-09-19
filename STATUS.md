@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 17:31:30 JST**
+> 自動生成: **2026-09-19 17:59:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **47** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（5時間57分前）** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（6時間25分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,12 +35,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **12** | **12** | **12** | **0** | **0** | **0** | **12** |
-| 合計 | **13** | **13** | **12** | **0** | **2** | **0** | **12** |
+| Discovery | **12** | **14** | **12** | **2** | **0** | **0** | **18** |
+| 合計 | **12** | **15** | **12** | **2** | **2** | **0** | **18** |
 
-- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -48,11 +48,7 @@
 
 ### Research
 
-- **09-19 11:33:35 JST** [research] `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications
-  - job: `.survey/work-queue/jobs/job-research-c2f58815c322fab7.json`
-  - result: `.survey/work-queue/results/research/attempt-3b62c6bd3d0c2191dd7cade2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3b62c6bd3d0c2191dd7cade2.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md`
+- 検証済み完了なし。
 
 ### Audit
 
@@ -119,8 +115,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **0件** / 候補: **12件**
-- 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding
+- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **2件** / 候補: **18件**
+- 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding / 高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling / MoE expert cache・prefetch・OS page cache
 - round `specialist-os-pagecache-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
   - 探索軸: OS page cache・kernel-managed expert tiering
@@ -220,10 +216,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **606** |
+| 成功result未照合のimmutable submission | **608** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
+| └ Discovery | **147** |
 
 ### 厳格検証が未成立のcompleted job
 
