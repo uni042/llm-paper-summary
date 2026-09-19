@@ -36,7 +36,7 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
-DISCOVERY_PRECHECK_CUTOVER = datetime.fromisoformat("2026-09-20T00:00:00+09:00")
+DISCOVERY_PRECHECK_CUTOVER = datetime.fromisoformat("2026-09-20T01:00:00+09:00")
 
 
 class DiscoveryPrecheckError(ValueError):
