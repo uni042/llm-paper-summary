@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:44:16 JST**
+> 自動生成: **2026-09-20 06:44:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **3** | **1** | **1** | **1** | **0** | — |
+| Research | **11** | **4** | **1** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **4** | **2** | **1** | **1** | **0** | **5** |
+| 合計 | **18** | **5** | **2** | **2** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,7 +139,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **2件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
 - **個別result未照合** `.survey/work-queue/submissions/research/attempt-bb1596f9270c7fb349dddddf.json` (job `job-research-576a090cf3d34dc3`)
@@ -148,6 +148,7 @@
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json` (job `job-research-ac3d391d822b215f`)
 
 #### Audit (:30)
 
@@ -170,9 +171,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:43:29 JST** / heartbeat: **—** / lease expiry: **09-20 08:13:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ac3d391d822b215f.json`
+- `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:44:37 JST** / heartbeat: **—** / lease expiry: **09-20 08:14:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7462825d21914fcd.json`
 
 #### Audit
 
@@ -220,8 +221,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **671** |
-| └ Research | **510** |
+| 成功result未照合のimmutable submission | **672** |
+| └ Research | **511** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
