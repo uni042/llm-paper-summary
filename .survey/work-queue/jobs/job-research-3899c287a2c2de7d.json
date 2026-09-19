@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2605.20706",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md",
   "selection_reason": "llama.cpp向けWebGPU backendとしてstatic memory planning、効率的model loading、複数量子化形式kernelを実装。16 devices/8 vendorsで評価し、既存browser framework比29-33%省メモリ、decode throughput 45-69%向上を報告する実装系論文。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T14:03:39+00:00"
+  "created_at": "2026-09-19T14:03:39+00:00",
+  "completed_at": "2026-09-19T14:39:47+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-208eafaf198f5f787bed68e4.json"
 }
