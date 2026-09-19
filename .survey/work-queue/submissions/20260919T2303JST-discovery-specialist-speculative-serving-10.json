@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2503.10325",
+      "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2503.10325",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2503.10325-cosine.md",
+      "priority": 84,
+      "reason": "CoSine decouples drafting and verification across heterogeneous nodes, adds expert drafter routing, token fusion, pipelined orchestration and adaptive speculation control; reports 23.2% lower latency and 32.5% higher throughput at equivalent resource cost."
+    },
+    {
+      "canonical_id": "arXiv:2506.11309",
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2506.11309",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec.md",
+      "priority": 88,
+      "reason": "Asynchronous disaggregated speculative-decoding system with parallel tree generation, tree-aware KV management and fused kernels; reports 1.75x average speedup and 348 tok/s for Llama3-70B on 8 Hopper GPUs."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-speculative-serving-10",
+    "axis": "speculative decoding serving・draft/verification disaggregation・runtime scheduling",
+    "query_summary": "mobile runtimeからspeculative servingへ切り替え、2025-2026のsystems論文を探索した。CoSineとSwiftSpecは明確なruntime/scheduling寄与と実測比較を持ち、default branchのcanonical ID/title検索で未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CPU/GPU heterogeneous local inference、model loading/serverless cold start、then DB/OS adjacent cache/storageへ移る",
+    "empty_round_reason": null
+  }
+}
