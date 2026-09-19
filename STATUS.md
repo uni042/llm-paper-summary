@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 03:20:21 JST**
+> 自動生成: **2026-09-20 03:22:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,8 +14,8 @@
 | 収録候補論文 | **72** |
 | 未claim Research job | **70** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間28分前）** |
-| 整合性異常 | **13** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（1時間30分前）** |
+| 整合性異常 | **16** |
 
 ## 現在の収録候補
 
@@ -237,11 +237,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **645** |
+| 成功result未照合のimmutable submission | **648** |
 | └ Research | **492** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **6** |
+| └ Other/Unknown | **9** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -258,10 +258,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **13** |
+| 対応jobなしsubmission（有効Discovery round除外） | **16** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **13** |
+| 異常レコード合計（重複排除） | **16** |
 
 ### 対応jobなしsubmissionの診断対象
 
@@ -277,6 +277,9 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - `.survey/work-queue/submissions/refcuration-eval-20260920-r1-b.json`
 - `.survey/work-queue/submissions/refcuration-eval-20260920-r2-a.json`
 - `.survey/work-queue/submissions/refcuration-eval-20260920-r2-b.json`
+- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-a.json`
+- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-b.json`
+- `.survey/work-queue/submissions/refcuration-eval-20260920-r3-c.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass2-20260920T001652JST.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
