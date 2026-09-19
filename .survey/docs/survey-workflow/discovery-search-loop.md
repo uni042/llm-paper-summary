@@ -1,6 +1,6 @@
 # Discovery automatic search loop
 
-この文書は、Discoveryで検索結果を1ページ/1バッチずつcandidate評価workerへ返さず、取得時filter/collector層で複数ページを先に消化してから評価対象をまとめて渡すための反復契約を定義する。Scheduled Chatの強制経路ではprovider取得をworker、buffer累積・重複除外・継続判定をworkflow precheckへ分割して実行する。
+この文書は、Discoveryで検索結果を1ページずつcandidate評価workerへ返さず、**1つの固定された検索結果URL/API query** をprecheckへ渡し、その同一結果集合のpage/cursor/offsetをcollectorが自動で進めてから評価対象をまとめて返す契約を定義する。Scheduled Chatの強制経路ではprovider取得・pagination・buffer累積・重複除外・継続判定をworkflow precheckが一括して実行する。
 
 ## 目的
 
@@ -8,23 +8,24 @@
 
 ## filter/collector内部の自動反復
 
-通常Discovery modeでは、1回の検索単位について次の処理をfilter/collector層の標準動作とする。
+通常Discovery modeでは、1回の検索単位について次を標準動作とする。
 
-1. workerがprovider adapterから現在cursorの1ページ/1バッチを取得し、schema-v2 precheck requestとして保存する。最初のrequestで `collector_id` を固定し、`provider_has_more` を明示する。
-2. workflow precheckが最新default branchのidentity snapshot、同snapshotの `_represented_papers.json`、`.survey/work-queue/discovery-rejections.json` を取得する。
-3. `discovery-search-filter.md` に従い、candidate評価より前にexact identity、represented-paper alias、過去のcandidate評価落ち結果を除外する。
-4. 前回resultがある場合はその未評価bufferを最新snapshotで再検証し、今回ページの未評価結果を追加する。同一primary identityだけでなく、arXiv / DOI / OpenReview / URL / exact normalized titleで同じpaperへ解決できるprovider結果もページ間で1件へ畳み込む。
-5. stable identifierを持たない検索結果については、first authorとpublication yearが一致し、normalized title similarityが高信頼thresholdを満たす場合だけrepresented-paper fuzzy matchを使う。stable identifierがある結果を似たtitleだけで除外しない。
-6. bufferが10件未満でproviderに次ページ/cursor/offsetがある場合は `evaluation_allowed=false` / `decision=CONTINUE_FETCH` を返す。workerはcandidate評価へ進まず、同じcollectorで次ページを取得して新しいrequestを作り、直前resultの `previous_request_id` / `previous_receipt` を連結して1へ戻る。
-7. 最後のページで10件を超えた場合は、そのページの未評価結果を切り捨てずbufferへ保持する。
-8. bufferが10件以上になった、providerが尽きた、または100ページ安全上限に達した場合だけ `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` を返し、その最終bufferだけをcandidate評価workerへ渡す。
-9. providerがpaginationを直接公開しない場合はprovider adapterが期間、arXiv月、引用方向、隣接キーワード、会議/カテゴリ等の検索窓をずらし、未走査集合を次cursor相当として供給する。同じqueryをそのまま繰り返さない。
+1. workerは検索provider上で**1つの結果集合を表すURL/API query**を決める。通常検索なら検索結果URL、被引用探索なら対象論文のcitations endpoint、参考文献探索ならreferences endpointを使う。
+2. workerはschema-v3 precheck requestへ `provider`, `source_url`, `collector_id`, `run_key`, `axis` を保存する。**検索結果record自体はworkerがrequestへ手書きしない。**
+3. workflow precheckがproviderのpage 1を取得し、canonical identity snapshot / represented-paper resolver / rejection ledgerで既収録・既投入・過去不採用・alias重複を除外する。
+4. 未収録bufferが `target_unseen`（既定10）未満でproviderに次page/cursor/offsetがある場合、`collect_until_unseen()` が**同じsource_urlの次ページ**を取得して3へ戻る。
+5. ページ間でもprimary identity / arXiv / DOI / URL / title aliasを畳み込み、重複候補をbufferへ二重投入しない。
+6. bufferが10件以上、provider exhaustion、または安全上限到達のいずれかでcollectorを終了する。
+7. workflow resultは最終bufferのみを `results[]` として返し、`evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` とする。
+8. candidate評価workerはこの最終 `results[]` だけを見る。
 
-つまりcandidate評価workerが通常見る単位は「検索1ページ」でも「中間precheck result」でもなく、**READY_FOR_EVALUATIONまで反復し、既収録・既投入・過去の評価落ち・同一paper aliasを除外済みの未評価検索結果buffer（標準10件前後）**である。
+**別キーワード、別期間、別カテゴリ、別citation directionへの変更はpaginationではない。** 1つの結果集合が尽きたあとに必要なら、別のDiscovery round / collectorとして新しい `source_url` を作る。同一collector内で「次ページ相当」と称してqueryを変更してはならない。
 
-## pagination非公開providerのsearch-window選択
+つまりcandidate評価workerが通常見る単位は「検索1ページ」ではなく、**1つの固定検索結果を必要なだけpage 1→2→3…と走査した後の、重複除外済み未評価buffer（標準10件前後）**である。
 
-paginationを公開しないproviderでは、検索窓をその場の記憶だけで選ばない。最新 `discovery-state.json` の `search_windows` / `recent_search_windows` を読み、`.survey/scripts/discovery_search_history.py` と同じ6次元keyで候補windowを比較する。
+## pagination非公開providerと次の探索軸
+
+paginationを公開しないproviderでは、そのproviderを同一collectorの自動ページ送りには使わない。結果集合を安定してページングできるAPI/provider adapterを優先する。別の期間・カテゴリ・引用方向・query familyへ移る場合は新しいDiscovery roundとして扱う。次roundの検索窓は、その場の記憶だけで選ばない。最新 `discovery-state.json` の `search_windows` / `recent_search_windows` を読み、`.survey/scripts/discovery_search_history.py` と同じ6次元keyで候補windowを比較する。
 
 window keyは次を含む。
 
