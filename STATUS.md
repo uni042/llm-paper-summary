@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:46:30 JST**
+> 自動生成: **2026-09-20 06:46:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **2** | **1** | **1** | **0** | — |
+| Research | **12** | **4** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **6** | **3** | **1** | **1** | **0** | **5** |
+| 合計 | **19** | **5** | **3** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,12 +139,11 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-292a5f32d168fabd11a080be.json` (job `job-research-7462825d21914fcd`)
+- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-292a5f32d168fabd11a080be.json` (job `job-research-7462825d21914fcd`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-292a5f32d168fabd11a080be.json` (`ok=false`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bb1596f9270c7fb349dddddf.json` (job `job-research-576a090cf3d34dc3`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-bb1596f9270c7fb349dddddf.json` (`ok=false`)
 - **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
@@ -177,9 +176,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:44:37 JST** / heartbeat: **—** / lease expiry: **09-20 08:14:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7462825d21914fcd.json`
+- `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:46:38 JST** / heartbeat: **—** / lease expiry: **09-20 08:16:38 JST**
+  - evidence: `.survey/work-queue/claims/job-research-576a090cf3d34dc3.json`
 
 #### Audit
 

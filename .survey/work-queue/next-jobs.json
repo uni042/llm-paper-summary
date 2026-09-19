@@ -95,14 +95,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-576a090cf3d34dc3",
+      "job_id": "job-research-7462825d21914fcd",
       "type": "research",
       "lane": null,
       "priority": 94,
-      "canonical_id": "arXiv:2308.16369",
-      "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
-      "source_url": "https://arxiv.org/abs/2308.16369",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+      "canonical_id": "DOI:10.48550/arxiv.2307.08691",
+      "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "source_url": "https://arxiv.org/abs/2307.08691",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T21:44:57+00:00"
+  "generated_at": "2026-09-19T21:46:45+00:00"
 }
