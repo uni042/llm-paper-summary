@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2407.15309",
+      "title": "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2407.15309",
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2407.15309-vtensor.md",
+      "priority": 88,
+      "reason": "Important GPU virtual-memory omission: decouples LLM computation from physical memory defragmentation using VMM-backed virtual tensors, reports 1.86x average model-level speedup and roughly 71.25% A100 memory freed versus vLLM, with kernel-level comparisons to SGLang/vLLM."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-vmm-memory-7",
+    "axis": "GPU virtual memory・KV fragmentation・memory allocator lineage",
+    "query_summary": "2025-2026だけでなく重要未収録の可能性があるVMM/fragmentation系へ範囲を広げた。vAttention/GMLakeは既知基礎系統として扱い、vTensorはcanonical ID/titleのdefault-branch検索で未収録だったため候補化した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2405.04437", "arXiv:2401.08156"],
+    "next_axis_hint": "prefix caching/data placementのOS・DB隣接研究、次いでedge/local inference runtimeの未収録重要論文へ移る",
+    "empty_round_reason": null
+  }
+}
