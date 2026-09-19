@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 17:03:56 JST**
+> 自動生成: **2026-09-19 17:04:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **5** | **0** | **5** | **0** | **0** | **6** |
-| 合計 | **7** | **6** | **0** | **5** | **1** | **0** | **6** |
+| Discovery | **0** | **7** | **0** | **7** | **0** | **0** | **9** |
+| 合計 | **7** | **8** | **0** | **7** | **1** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -110,8 +110,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **5件** / 候補: **6件**
-- 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **7件** / 候補: **9件**
+- 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism
 - round `specialist-flash-cim-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
   - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
@@ -131,6 +131,14 @@
 - round `specialist-heterogeneous-runtime-5` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T1729JST-discovery-specialist-heterogeneous-runtime-5.json`
   - 探索軸: CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-cxl-agent-6` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260919T1735JST-discovery-specialist-cxl-agent-6.json`
+  - 探索軸: CXL-PNM KV cache・agent sandbox runtime
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-kv-restoration-7` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T1741JST-discovery-specialist-kv-restoration-7.json`
+  - 探索軸: KV restoration・storage I/O overlap・3D parallelism
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -188,10 +196,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **611** |
+| 成功result未照合のimmutable submission | **613** |
 | └ Research | **459** |
 | └ Audit | **2** |
-| └ Discovery | **150** |
+| └ Discovery | **152** |
 
 ### 厳格検証が未成立のcompleted job
 
