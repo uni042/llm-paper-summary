@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.13605",
+      "title": "Orla: A Library for Serving LLM-Based Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2603.13605",
+      "priority": 73,
+      "reason": "Agent-serving layer with stage mapping, workflow orchestration, and workflow-boundary KV-state management across heterogeneous models/backends; evaluated for latency/cost and TTFT improvements."
+    },
+    {
+      "canonical_id": "arXiv:2605.06472",
+      "title": "Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management",
+      "source_url": "https://arxiv.org/abs/2605.06472",
+      "priority": 79,
+      "reason": "PBKV predicts future agent invocations and uses them conservatively for KV-cache eviction/prefetch in dynamic workflows. Three workflow benchmarks show speedups over LRU and KVFlow."
+    },
+    {
+      "canonical_id": "arXiv:2604.15186",
+      "title": "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines",
+      "source_url": "https://arxiv.org/abs/2604.15186",
+      "priority": 79,
+      "reason": "Concrete cluster serving system for arbitrary multi-LLM agent workflows, optimizing fractional GPU shares, tensor parallelism, replicas, placement, fragmentation and topology using aggregate execution shares; reports throughput/latency gains."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-agent-adjacent-14",
+    "axis": "adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation",
+    "query_summary": "Expanded the Pythia related-work neighborhood into three materially distinct agent-serving mechanisms and verified their primary arXiv abstracts. None of the three arXiv IDs appeared in repository code search.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 3,
+    "accepted_count": 3,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2603.13605", "arXiv:2605.06472", "arXiv:2604.15186"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Switch away from agent serving to independent co-serving/GPU harvesting or framework-runtime omissions."
+  }
+}
