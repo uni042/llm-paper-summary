@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:45:17 JST**
+> 自動生成: **2026-09-20 00:45:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -193,9 +193,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 00:42:53 JST** / heartbeat: **—** / lease expiry: **09-20 02:12:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8ff9887a327d8124.json`
+- `arXiv:2511.01633` — Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 00:45:23 JST** / heartbeat: **—** / lease expiry: **09-20 02:15:23 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2a8c8a978e102c67.json`
 
 #### Audit
 
