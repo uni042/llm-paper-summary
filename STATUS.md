@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:41:07 JST**
+> 自動生成: **2026-09-19 12:02:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **40** |
 | 未claim Research job | **39** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（7分前）** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（28分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **13** | **15** | **6** | **9** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **16** | **18** | **9** | **9** | **1** | **0** | **3** |
+| Discovery | **2** | **2** | **0** | **2** | **0** | **0** | **7** |
+| 合計 | **15** | **17** | **6** | **11** | **1** | **0** | **7** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -113,10 +113,6 @@
   - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
   - 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture
-- **09-19 06:01:55 JST** job `job-d209a14a1856b2db` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
-  - 探索軸: programmable serving・agentic runtime・application-specific generation loop
 
 ### 直近タスク
 
@@ -159,21 +155,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 06:00 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **3件**
-- 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference / heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture / programmable serving・agentic runtime・application-specific generation loop
-- round `specialist-edge-offload-3` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-edge-offload-3.json`
-  - 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-edge-offload-3.json` (`ok=true`)
-- round `specialist-heterogeneous-hardware-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
-  - 探索軸: heterogeneous inference hardware・FPGA memory-based compute・near-memory architecture
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json` (`ok=true`)
-- round `specialist-programmable-serving-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json`
-  - 探索軸: programmable serving・agentic runtime・application-specific generation loop
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T0600JST-discovery-specialist-programmable-serving-1.json` (`ok=true`)
+- 最新観測run: **2026-09-19 12:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **7件**
+- 探索軸: CXL・PIM・near-memory・chiplet LLM inference / 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving
+- round `specialist-cxl-pim-2` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-cxl-pim-2.json`
+  - 探索軸: CXL・PIM・near-memory・chiplet LLM inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-sep-new-systems-1` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-sep-new-systems-1.json`
+  - 探索軸: 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -230,10 +222,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **584** |
+| 成功result未照合のimmutable submission | **586** |
 | └ Research | **455** |
 | └ Audit | **2** |
-| └ Discovery | **127** |
+| └ Discovery | **129** |
 
 ### 厳格検証が未成立のcompleted job
 
