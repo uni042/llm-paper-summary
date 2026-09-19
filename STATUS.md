@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:29:26 JST**
+> 自動生成: **2026-09-19 22:29:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **51** |
 | 未claim Research job | **50** |
 | 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（36分前）** |
+| 最終検証済みResearch収録 | **09-19 21:52:39 JST（37分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -211,9 +211,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:27:48 JST** / heartbeat: **—** / lease expiry: **09-19 23:57:48 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a6905e04777fde1f.json`
+- `arXiv:2606.04511` — SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 22:29:41 JST** / heartbeat: **—** / lease expiry: **09-19 23:59:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f85e83252e35c61b.json`
 
 #### Audit
 
