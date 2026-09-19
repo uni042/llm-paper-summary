@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-854ea9c24744be653d5bb7d3",
+  "job_id": "job-research-3f8214d2f0afeac1",
+  "claim_id": "claim-854ea9c24744be653d5bb7d3",
+  "worker_id": "scheduled-chat-llm-survey",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.14249-energylens.md",
+  "status": "blocked",
+  "reason": "Primary-source full-text retrieval could not be completed in this invocation because the web retrieval subsystem explicitly reported approximately 0 calls remaining. The arXiv identity, title, authors, submission date, primary category, and abstract were confirmed, but the complete primary paper was not read. No five-slot scientific record was generated from partial text.",
+  "retrieval_evidence": [
+    "arXiv:2605.14249 identity and abstract were located through current web search results.",
+    "Search results confirmed primary category cs.LG and submission date 2026-05-14.",
+    "The retrieval subsystem then emitted an explicit near-limit signal stating approximately 0 calls remained, preventing safe full-paper retrieval and reference-section verification in this invocation."
+  ]
+}
