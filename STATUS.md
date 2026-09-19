@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 00:45:42 JST**
+> 自動生成: **2026-09-20 00:46:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **3** | **2** | **1** | **1** | **0** | — |
+| Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **70** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **84** | **6** | **3** | **1** | **1** | **0** | **2** |
+| 合計 | **84** | **6** | **3** | **0** | **1** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,8 +151,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 00:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-0ab169f82c4835ab94982856.json` (job `job-research-8ff9887a327d8124`)
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-0ab169f82c4835ab94982856.json` (job `job-research-8ff9887a327d8124`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-0ab169f82c4835ab94982856.json` (`ok=false`)
 - **成功** `arXiv:2609.19969` — DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-376e535ed84f7cfa.json`
   - result: `.survey/work-queue/results/research/attempt-0ff59bc0d504d0b2b89bbcc6.json` (`ok=true`)
