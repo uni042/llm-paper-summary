@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:03:18 JST**
+> 自動生成: **2026-09-20 01:04:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **47** |
 | 未claim Research job | **47** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-20 00:48:02 JST（15分前）** |
+| 最終検証済みResearch収録 | **09-20 00:48:02 JST（16分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **64** | **3** | **1** | **0** | **0** | **0** | **2** |
-| 合計 | **78** | **7** | **4** | **0** | **0** | **0** | **2** |
+| Discovery | **64** | **4** | **0** | **4** | **0** | **0** | **0** |
+| 合計 | **78** | **8** | **3** | **4** | **0** | **0** | **0** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -178,21 +178,25 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-20 00:16 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **2件**
-- 探索軸: validation-precheck-gate
-- round `validation-bypass` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
-  - 探索軸: validation-precheck-gate
+- 最新観測run: **2026-09-20 01:01 JST**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **0件**
+- 探索軸: recent heterogeneous KV memory pooling and robust KV reservation / energy-aware disaggregated Attention-FFN serving and operator-level DVFS / CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction / NVMe-direct KV offload and NAND-centric edge LLM inference
+- round `specialist-recent-memory-serving-01` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
+  - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `validation-bypass-2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/validation-precheck-gate-bypass2-20260920T001652JST.json`
-  - 探索軸: validation-precheck-gate
+- round `specialist-energy-disagg-02` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
+  - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
   - 個別result照合: なし（immutable round記録は確認済み）
-- round `validation-proper` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
-  - 探索軸: validation-precheck-gate
-  - 個別result照合: あり / `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
+- round `specialist-elastic-kv-03` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json`
+  - 探索軸: CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-nvme-flash-04` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
+  - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -247,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **636** |
+| 成功result未照合のimmutable submission | **640** |
 | └ Research | **487** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
+| └ Discovery | **149** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
