@@ -81,6 +81,25 @@ class ReferencePoolTest(unittest.TestCase):
         self.assertEqual(len(candidate["linked_from"]), 2)
         self.assertTrue(pool["borderline_excluded"])
 
+    def test_arxiv_doi_alias_is_excluded_by_borderline_ledger(self) -> None:
+        self._write_paper(
+            "a.md",
+            "arXiv:2609.00001",
+            "A",
+            [{"canonical_id": "arXiv:2505.09388"}],
+        )
+        reference_relevance_ledger.mark_borderline(
+            self.borderline,
+            canonical_id="DOI:10.48550/arxiv.2505.09388",
+            reason="broad model report",
+        )
+
+        pool = reference_pool.build_reference_pool(
+            self.root,
+            borderline_ledger_path=self.borderline,
+        )
+        self.assertEqual(pool["candidate_count"], 0)
+
     def test_borderline_is_default_exclusion_but_can_be_reconsidered(self) -> None:
         self._write_paper(
             "a.md",
