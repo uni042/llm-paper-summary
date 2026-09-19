@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:29:00 JST**
+> 自動生成: **2026-09-19 22:29:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **3** | **2** | **0** | **1** | **0** | — |
+| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **85** | **21** | **20** | **0** | **1** | **0** | **30** |
+| 合計 | **85** | **19** | **18** | **1** | **1** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,24 +150,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 19:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-b5f09b0fdcd071771ee2f21d.json` (job `job-research-ff33bdbdc4dfa309`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-b5f09b0fdcd071771ee2f21d.json` (`ok=false`)
-- **成功** `arXiv:2604.15186` — Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines
-  - job: `.survey/work-queue/jobs/job-research-188f6649e816eaae.json`
-  - result: `.survey/work-queue/results/research/attempt-cd9ea16c565464e02e01a24b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cd9ea16c565464e02e01a24b.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md`
-- **成功** `arXiv:2410.01228` — ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving
-  - job: `.survey/work-queue/jobs/job-research-b6a4fe55f122cf41.json`
-  - result: `.survey/work-queue/results/research/attempt-ff20bcaca705be66e1a1b76e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ff20bcaca705be66e1a1b76e.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md`
+- 最新観測run: **2026-09-19 21:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-077c5dd04f678c8541964e90.json` (job `job-research-a6905e04777fde1f`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 19:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 21:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -272,8 +261,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **622** |
-| └ Research | **475** |
+| 成功result未照合のimmutable submission | **623** |
+| └ Research | **476** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
