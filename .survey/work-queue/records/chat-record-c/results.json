@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e2ac0d42f447fbcb7a899c55","job_id":"job-research-a6905e04777fde1f","data":{"overview":"HBFlexは、同一のパッケージ面積予算でHBMを残す比較方式よりHBFのプレーン数と容量を増やし、その追加資源を動的KV管理で実際の処理性能へ変換した。SWE-benchの高並行条件ではFlashAccelに対して最大1.58倍、H3に対して最大3.30倍の平均スループット向上を示す。要素別には、保存配置と実行時アクセスを同時に平準化する読出し最適化が最大の性能寄与を持つ。計算窓を使うKV書戻しは書込み起因の停止をほぼ消し、寿命認識回収はGC書込み増幅をほぼ1まで下げる。したがって実用上の意味は、全HBF化で得た大容量を単なる容量増加で終わらせず、高並行LLMサービングの帯域・待ち時間・フラッシュ耐久性へ同時に結び付けられる点にある。","key_results":[{"metric":"平均スループット向上","value":"最大1.58倍 対FlashAccel、3.30倍 対H3","baseline":"FlashAccelおよびH3","condition":"SWE-bench、複数モデル・並行数","interpretation":"全HBFによる追加プレーンと動的KV管理を組み合わせるほど高並行時の効果が大きい。"},{"metric":"本番トレース遅延","value":"TTFT 1.20倍/1.33倍、TPOT 1.21倍/1.35倍 対FA-CLI/FA-CSI","baseline":"FlashAccelのco-located/cascaded構成","condition":"4モデル×4 Alibaba Bailianトレースの幾何平均","interpretation":"重み読出しとKVアクセスの双方が改善し、初回トークンと継続生成の両方を短縮する。"},{"metric":"読出し波増幅","value":"5.97倍→3.95倍→2.25倍","baseline":"ランダム配置→プレーン均衡配置→実行時平準化追加","condition":"DeepSeek-V3とQwen3-235B、全モデル・並行数構成平均","interpretation":"保存位置だけを均衡化しても不十分で、注意実行時のアクセス集中まで扱う必要がある。"},{"metric":"KV書込み停止時間","value":"4.54ms→69.12us→約0.003us/反復","baseline":"即時書戻し→ストライプ書戻し→計算窓認識書戻し","condition":"DeepSeek-V4-Pro、BailianとSWE-bench","interpretation":"物理的な書込み遅延を短縮せず、プレフィル計算へ重ねることで前景経路からほぼ除去する。"},{"metric":"GC書込み増幅","value":"11.98倍→1.24倍→1.04倍","baseline":"基準方式→寿命認識詰込み→遅延回収追加","condition":"DeepSeek-V3/Qwen3-235B、4 Bailianトレース","interpretation":"完全方式で平均89.39%削減し、余分なページ移動と消去による耐久性負担を大幅に減らす。"}],"negative_results":"計算窓認識書戻しの端から端までのスループット追加利得は約0.02倍と小さく、評価モデルではKV書込み量自体が全実行時間の小部分だった。高負荷プレーン退避は上位10%を超えると負荷均衡の改善が飽和する一方、SRAM使用量は増え続ける。評価は実HBFハードウェアではなくトレース駆動シミュレーションであり、想定遅延・帯域への依存が残る。","interpretation":"性能向上の主因はプレーン均衡配置と実行時読出し平準化である。書戻しとGCの工夫は、平均スループットだけでは小さく見えても、前景読出しへの長い停止を避け、NANDの寿命を損なう書込み増幅を抑えるため、全HBF構成を持続可能にする役割を持つ。単に高速フラッシュを増設するのではなく、KVの論理寿命とアクセスを物理プレーン・ブロックへ合わせることが重要である。","quality_impact":"推論アルゴリズムやモデル出力を近似する方式ではなく、メモリ配置・実行順序・回収時刻を変更する。そのため論文が示す主効果は性能、収容可能なKV量、フラッシュ耐久性であり、モデル精度を犠牲にする設計ではない。"},"reservation":{"claim_id":"claim-e2ac0d42f447fbcb7a899c55","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-52fd234ea45de5f63b71cc39",
+  "job_id": "job-research-2dcd265cd3f3852c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-52fd234ea45de5f63b71cc39",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
