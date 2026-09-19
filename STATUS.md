@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 07:32:27 JST**
+> 自動生成: **2026-09-20 08:26:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **89** |
 | 未claim Research job | **88** |
 | 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-20 06:47:50 JST（44分前）** |
+| 最終検証済みResearch収録 | **09-20 06:47:50 JST（1時間38分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **6** | **3** | **0** | **1** | **0** | — |
+| Research | **10** | **6** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **15** | **7** | **4** | **0** | **1** | **0** | **5** |
+| Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
+| 合計 | **10** | **7** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,18 +105,7 @@
 
 ### Discovery
 
-- **09-20 02:04:30 JST** job `job-9c9cc21b468d8cd8` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260920T0204JST-specialist-moe-openalex-round1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
-  - 探索軸: MoE expert cache offload placement prefetch inference systems
-- **09-20 02:04:03 JST** job `job-9b22461247bc5bb0` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260920T0202JST-discovery-fixedsource-openalex-01.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json`
-  - 探索軸: OpenAlex search: LLM inference serving KV cache
-- **09-20 02:00:09 JST** job `job-efd454976a6235e0` / 候補 **3件**
-  - result: `.survey/work-queue/results/manual-fixedsource-openalex-20260920T0159JST-round1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
-  - 探索軸: OpenAlex search: LLM inference serving KV cache
+- 検証済み成功なし。
 
 ### 直近タスク
 
