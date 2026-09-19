@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.14510",
+      "title": "CLO: Efficient LLM Inference System with CPU-Light KVCache Offloading via Algorithm-System Co-Design",
+      "source_url": "https://arxiv.org/abs/2511.14510",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.14510-clo.md",
+      "priority": 91,
+      "reason": "CPU-light KV offloading system with coarse head-wise GPU caching, prefetch+persistent cache, zero-copy PCIe transfer and GPU-centric synchronization; reports 9.3%-66.6% decoding-throughput improvement and releases code. Direct offload/hierarchical-memory fit."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-cpu-light-offload-11",
+    "axis": "CPU/GPU heterogeneous KV offload・PCIe zero-copy・GPU-centric synchronization",
+    "query_summary": "speculative servingからCPU/GPU heterogeneous local inferenceへ切り替えた。CLOはmillion-token KV offloadのCPU bottleneckを直接扱い、実装・実測・公開コードを持つ。canonical ID/titleをdefault branchで再検索し未収録を確認した。SwiftCache/Llumnixは既知系統として除外した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2606.16135", "arXiv:2406.03243"],
+    "next_axis_hint": "serverless model loading/cold-start、NVMe model weight loading、then long-context sparse attention offloadへ移る",
+    "empty_round_reason": null
+  }
+}
