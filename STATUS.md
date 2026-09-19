@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:19:21 JST**
+> 自動生成: **2026-09-20 04:19:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **100** |
 | 未claim Research job | **95** |
 | 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-20 04:17:50 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-20 04:17:50 JST（2分前）** |
 | 整合性異常 | **21** |
 
 ## 現在の収録候補
@@ -186,9 +186,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.16858` — EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:18:21 JST** / heartbeat: **—** / lease expiry: **09-20 05:48:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-726ba562ef40d04f.json`
+- `DOI:10.1145/3731569.3764815` — Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market / worker `scheduled-chat-discovery-routing`
+  - claim: **09-20 04:19:47 JST** / heartbeat: **—** / lease expiry: **09-20 05:49:47 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a568c8de790c8043.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-d0436ba646148687.json`
