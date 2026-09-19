@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T18:44:26+00:00",
-  "last_run_key": "manual-stress-2026-09-20T0340JST",
-  "last_round": "refcuration-stress-r1-b",
+  "updated_at": "2026-09-19T18:48:31+00:00",
+  "last_run_key": "manual-stress-2026-09-20T0346JST",
+  "last_round": "refcuration-stress-offset100-c",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,53 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-kvserve-25",
-      "axis": "service-aware KV communication compression・disaggregated serving",
-      "query_summary": "disaggregated servingのnetwork/storage bottleneckを探索し、KVServe（2605.13734）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 44でoverflow条件未満だった。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Actions反映後のinventoryを再確認し、overflow未満ならrecent distributed KV/prefix cache・MoE servingを追加探索する。",
-      "source_submission": "work-queue/submissions/20260915T0846JST-discovery-specialist-kvserve-25.json"
-    },
-    {
-      "run_key": "2026-09-15T14:00:00+09:00",
-      "round": "specialist-gpu-fault-state-2",
-      "axis": "GPU persistent kernel・LLM state checkpoint・CXL recovery",
-      "query_summary": "MoE cache-router軸から独立してGPU runtime/kernel側へ移り、LLM推論の常駐状態管理とfault toleranceを探索した。ConcordiaはGitHub code searchでarXiv ID未収録を確認し、一次arXivの書誌・abstractに基づき軽量評価した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次は収録済み重要KV/serving論文のforward citation、またはnetwork/RDMA隣接分野からKV transfer schedulingを探索する",
-      "source_submission": "work-queue/submissions/20260915T1410JST-discovery-specialist-gpu-fault-state-2.json"
-    },
-    {
-      "run_key": "2026-09-15T14:00:00+09:00",
-      "round": "specialist-network-kv-3",
-      "axis": "分離サービングのnetwork-aware KV transfer scheduling",
-      "query_summary": "GPU runtime軸からnetwork/RDMA隣接へ切り替え、prefill/decode間KV転送のtopology・congestionをscheduler判断へ取り込む研究を探索した。SmartGen等の既知候補を避け、NetKVはGitHub code searchでarXiv ID未収録を確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2607.28150"
-      ],
-      "next_axis_hint": "次は重要serving論文のbackward referenceから基礎的network/placement手法、または新着のagent memory physical storageへ移る",
-      "source_submission": "work-queue/submissions/20260915T1413JST-discovery-specialist-network-kv-3.json"
-    },
     {
       "run_key": "2026-09-15T16:00:00+09:00",
       "round": "specialist-disagg-energy-2",
@@ -7542,6 +7495,77 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false.",
       "source_submission": "work-queue/submissions/refcuration-stress-20260920T0340JST-r1-b.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20T0346JST",
+      "round": "refcuration-stress-offset100-a",
+      "axis": "structured references stress probe at raw offset 100",
+      "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice a records were evaluated with unrelated/borderline papers durably classified.",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 7,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2410.01035",
+        "arXiv:2502.16002",
+        "arXiv:2109.10465",
+        "arXiv:2311.04934",
+        "DOI:10.1145/3731569.3764815"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-a.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20T0346JST",
+      "round": "refcuration-stress-offset100-b",
+      "axis": "structured references stress probe at raw offset 100",
+      "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice b records were evaluated with unrelated/borderline papers durably classified.",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 7,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 7,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2309.08168",
+        "arXiv:2405.04532",
+        "arXiv:2503.16525",
+        "arXiv:2310.07177"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-b.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20T0346JST",
+      "round": "refcuration-stress-offset100-c",
+      "axis": "structured references stress probe at raw offset 100",
+      "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice c records were evaluated with unrelated/borderline papers durably classified.",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2401.07851",
+        "arXiv:2405.01814"
+      ],
+      "duplicate_canonical_ids": [
+        "OpenReview:RkRrPp7GKO",
+        "DOI:10.1109/hpca61900.2025.00102"
+      ],
+      "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-c.json"
     }
   ],
   "axes": {
@@ -14364,6 +14388,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false."
+    },
+    "structured references stress probe at raw offset 100": {
+      "last_run_key": "manual-stress-2026-09-20T0346JST",
+      "rounds": 3,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 18,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 18,
+      "accepted_count": 11,
+      "duplicate_ratio": 0.1,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
