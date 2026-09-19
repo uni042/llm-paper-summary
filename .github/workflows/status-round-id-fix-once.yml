@@ -1,0 +1,59 @@
+name: STATUS discovery round_id fix once
+on:
+  push:
+    branches: [status-fix-discovery-round-id-20260919]
+permissions:
+  contents: write
+jobs:
+  fix-test-commit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: status-fix-discovery-round-id-20260919
+          fetch-depth: 0
+      - name: Apply minimal fix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.survey/scripts/render_status_dashboard_core.py')
+          s=p.read_text()
+          old='round_id = str(stats.get("round") or "").strip()'
+          new='round_id = str(stats.get("round_id") or stats.get("round") or "").strip()'
+          assert s.count(old)==1, s.count(old)
+          p.write_text(s.replace(old,new), encoding='utf-8')
+          PY
+      - name: Regression checks
+        run: |
+          python -m py_compile .survey/scripts/render_status_dashboard_core.py
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          p=Path('.survey/scripts/render_status_dashboard_core.py')
+          spec=importlib.util.spec_from_file_location('status_core', p)
+          m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+          def row(stats): return {'payload': {'discovery_stats': stats}}
+          assert m._discovery_round_identity(row({'run_key':'rk','round_id':'round09'})) == ('rk','round09')
+          assert m._discovery_round_identity(row({'run_key':'rk','round':'legacy09'})) == ('rk','legacy09')
+          assert m._discovery_round_identity(row({'run_key':'rk'})) is None
+          assert m._discovery_round_identity(row({'round_id':'round09'})) is None
+          PY
+          if [ -d tests ]; then python -m unittest discover -s tests; fi
+      - name: Regenerate STATUS and verify false orphans disappear
+        run: |
+          python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('STATUS.md').read_text()
+          assert '| 整合性異常 | **0** |' in s, 'consistency anomalies remain'
+          PY
+      - name: Commit fix only and remove temporary workflow
+        run: |
+          rm .github/workflows/status-round-id-fix-once.yml
+          git checkout -- STATUS.md
+          git config user.name 'status-maintenance[bot]'
+          git config user.email 'status-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/render_status_dashboard_core.py .github/workflows/status-round-id-fix-once.yml
+          git commit -m 'fix: recognize discovery round_id in STATUS consistency check'
+          git push origin HEAD:status-fix-discovery-round-id-20260919
