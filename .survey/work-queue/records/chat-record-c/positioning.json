@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-64c4e36bcdb4f3fbb250ef67",
+  "attempt_id": "attempt-73b8f63ceffa41235b1708c8",
   "job_id": "job-research-c1b7543305e71c40",
   "data": {
     "limitations": "評価は2作業者、等しい集約重み、両作業者で同じKという簡略条件で、LLaMA-7B/13Bと68M草稿モデル、WMT14英独データに限定される。通信ペイロード比は評価するが、実ネットワーク帯域・往復遅延を含む端から端までの遅延や復号スループット改善率は測っていない。理論も最終生成品質や通信時間そのものではなく、分布L1偏りと受理率変動までを対象とする。作業者ごとに語彙やトークナイザが異なる場合は前提の同一語彙が崩れ、異なるK、非等重み、多数作業者、強いモデル異質性で上界がどの程度実用的かは追加検証が必要である。公式コードURLも確認できない。",
@@ -11,7 +11,7 @@
     "research_positioning": "LLM推論システム研究の中では、計算カーネルやKVメモリではなく分散推論の通信路を律速要因として扱う系統に位置付く。特に投機的復号とモデルアンサンブルを組み合わせた場合、並列検証で計算同期を減らしても語彙分布転送が新しい律速になることを示し、確率分布圧縮を受理率保証まで含めて設計する。エッジ・連合推論、分散投機的復号、通信圧縮の交点を埋める研究である。"
   },
   "reservation": {
-    "claim_id": "claim-64c4e36bcdb4f3fbb250ef67",
+    "claim_id": "claim-73b8f63ceffa41235b1708c8",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-64c4e36bcdb4f3fbb250ef67",
+  "attempt_id": "attempt-73b8f63ceffa41235b1708c8",
   "job_id": "job-research-c1b7543305e71c40",
   "data": {
     "problem": "連合LLM推論では、複数端末・作業者の異種LLMが同一語彙に対する確率分布を計算し、調整サーバが重み付き平均して次トークンを決める。通常の自己回帰生成では1トークンごとに全作業者の順伝播と同期が必要なため計算待ちが大きい。投機的復号を導入すれば小型草稿モデルが複数候補を先行生成し、各LLMが並列検証できるが、各草稿位置について語彙全体の確率分布を全作業者から送信する必要が残る。語彙が32K以上、確率がFP16なら1トークン当たり数百キロビット級となり、作業者数と草稿長に比例して上り通信量が増え、並列化による計算高速化を通信遅延が相殺する。既存の量子化や分割検証は、異種モデルの確率分布を重み付き集約する連合推論特有の分布整合性を直接扱わない。",
@@ -29,7 +29,7 @@
     "system_design": "方式は調整サーバ、小型草稿モデル、同一語彙を共有する複数の異種LLM作業者からなる。計算高速化は投機的復号、通信高速化は上位K送信、品質管理はサーバ側再構成と誤差上界が担当する。"
   },
   "reservation": {
-    "claim_id": "claim-64c4e36bcdb4f3fbb250ef67",
+    "claim_id": "claim-73b8f63ceffa41235b1708c8",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
