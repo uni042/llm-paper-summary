@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:11:17 JST**
+> 自動生成: **2026-09-19 11:11:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
+| 収録候補論文 | **47** |
 | 未claim Research job | **46** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-19 11:10:25 JST（52秒前）** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-19 11:11:24 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **15** | **6** | **9** | **2** | **0** | — |
+| Research | **13** | **15** | **6** | **9** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **3** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **15** | **18** | **9** | **9** | **2** | **0** | **3** |
+| 合計 | **16** | **18** | **9** | **9** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 11:11:24 JST** [research] `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System
+  - job: `.survey/work-queue/jobs/job-research-7b5d4afbd3eabe62.json`
+  - result: `.survey/work-queue/results/research/attempt-1f99c691ecf3b25036733d54.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1f99c691ecf3b25036733d54.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md`
 - **09-19 11:10:25 JST** [research] `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale
   - job: `.survey/work-queue/jobs/job-research-44bb3b5d160bad25.json`
   - result: `.survey/work-queue/results/research/attempt-ee58aa534ed82a58b5fa7386.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-b1510ac72994dff0cbb0df8f.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b1510ac72994dff0cbb0df8f.json`
   - paper: `papers/inference/03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md`
-- **09-19 05:23:55 JST** [research] `arXiv:2607.17538` — D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation
-  - job: `.survey/work-queue/jobs/job-research-b2d29fa9c529bdfd.json`
-  - result: `.survey/work-queue/results/research/attempt-49a5f136c96efe1a74ef7842.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-49a5f136c96efe1a74ef7842.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md`
 
 ### Audit
 
@@ -179,10 +179,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:10:35 JST** / heartbeat: **—** / lease expiry: **09-19 12:40:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7b5d4afbd3eabe62.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
@@ -205,7 +202,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +222,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **747** |
+| inference/training/survey配下の論文Markdown実体 | **748** |
 
 ### immutable submissionの未照合
 
@@ -233,8 +230,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **581** |
-| └ Research | **452** |
+| 成功result未照合のimmutable submission | **580** |
+| └ Research | **451** |
 | └ Audit | **2** |
 | └ Discovery | **127** |
 
