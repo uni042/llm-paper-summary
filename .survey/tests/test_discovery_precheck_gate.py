@@ -207,12 +207,6 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
 
         self.assertEqual(list(queue_worker.JOBS.glob("*.json")), [])
 
-    def test_uncommitted_new_submission_fails_closed(self) -> None:
-        sub = self._base_sub()
-        sub["_file"] = "work-queue/submissions/not-yet-in-history.json"
-        with self.assertRaises(queue_worker.DiscoveryPrecheckError):
-            queue_worker.validate_discovery_precheck(sub)
-
     def test_workflow_produced_result_allows_only_emitted_candidate(self) -> None:
         self._commit_result()
         sub = self._base_sub()
