@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-17**
+- フレームワーク差分の最終確認: **2026-09-20**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-17の差分確認では、公式リリースと開発元リポジトリを基準に9月15日以降のDeepSeek-V4.1向け圧縮KV・attention融合、FP4 indexer kernel融合、および主要LLMの正式公開を再確認した。
+この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,24 @@
 ---
 
 ## 最新更新
+
+### 2026-09-20
+
+#### vLLM
+
+- **Kimi-K3 routed expert量子化を追加 — merged 2026-09-18 UTC**
+
+  Kimi-K3のMoE routed expertに量子化経路を追加し、`RedHatAI/Kimi-K3-NVFP4-REAP25`で検証した。routed expert側のweight footprintと帯域削減を狙う更新で、PR自体には対応するend-to-end速度比較は提示されていない。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/57430
+
+#### SGLang
+
+- **Ascend A5向けKimi-K3 servingを追加し、圧縮W4A8 MoE・shared-expert dual-stream等を統合 — merged 2026-09-18 UTC**
+
+  compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-stream、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、DSpark MTP向けFIA v2、prefill向けchunk KDA kernel等をまとめて導入した。4-node / TP32 / EP32、128K input・1K output・DSpark block 7の提示条件ではmean TTFT 5604.54 ms、mean TPOT 23.02 ms、throughput 47 tok/s。GSM8K 200問ではaccuracy 0.98。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/39589
 
 ### 2026-09-17
 

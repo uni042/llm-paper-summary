@@ -29,6 +29,10 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-09-20
+
+- **Ascend A5向けKimi-K3 servingを追加・MoE/DSpark/prefill経路をまとめて最適化 — merged 2026-09-18 UTC**: compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-streamと専用TP size、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、MTP branch向けFIA v2、prefill branch向けchunk KDA kernel、DSpark P/D分離修正を導入。4-node・TP32/EP32・128K input/1K output・DSpark block 7の提示条件ではmean TTFT **5604.54 ms**、mean TPOT **23.02 ms**、throughput **47 tok/s**。GSM8K 200問ではaccuracy **0.98**。比較対象を揃えたbefore/after速度差はPRにないため、改善率は未確定。[PR #39589](https://github.com/sgl-project/sglang/pull/39589)
+
 ## 2026-09-17
 
 - **DeepSeek-V4.1 low-ratio indexerのRoPE + FP4 packingを融合 — merged 2026-09-16 UTC**: key/queryのRoPE、per-32 UE8M0 FP4 fake quantization、68-byte index-K形式へのpacking、paged cache storeをCUDA/Triton kernelへ統合。CUDA kernel・Triton pack kernel・reference pathを504条件でbyte単位照合し、round-to-nearest-evenを含むFP4 indexer経路を検証した。既存C4 indexerの既定roundingは変更しない。[PR #39656](https://github.com/sgl-project/sglang/pull/39656)
