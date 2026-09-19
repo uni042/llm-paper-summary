@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-208eafaf198f5f787bed68e4",
-  "job_id": "job-research-3899c287a2c2de7d",
-  "data": {
-    "limitations": "研究対象は単一GPU・低遅延のブラウザまたはローカル推論で、複数要求の動的バッチ処理や複数GPU分散は扱わない。主要ブラウザ評価はChrome中心で、Firefoxは同一Apple M3上で約52倍の性能差が観測され主要結果から除外されたため、WebGPU仕様の可搬性がブラウザ実装間の性能均一性を保証するわけではない。ブラウザでサブグループ行列命令が一般利用できずプリフィル性能が弱い。WebGPUにu16、bf16、ハードウェア固有4ビット型などが不足し、量子化形式の最適な読込みや専用演算器利用を妨げる。低性能端末ではタブメモリ上限のため大モデルや深いKVキャッシュを実行できない。",
-    "differences": "WebLLMはMLC-LLM、Transformers.jsはONNX Runtimeを通じてWebGPU推論を提供するが、LlamaWebはllama.cppの既存バックエンド抽象、GGUFモデル資産、多数の量子化形式をそのままブラウザへ持ち込む。WebLLMやTransformers.jsが動的バッファやモデルの一時CPUコピーを使う箇所に対し、LlamaWebは固定作業領域とOPFSからGPUへの小容量ストリーミングを使う。性能面では単一端末向けに固定最適化するのではなく、端末機能を見てWGSLカーネルを特殊化し、4社GPUの総当たり測定から性能可搬な既定値を選ぶ。ネイティブCUDA、HIP、Metal、SYCLほどハードウェア固有機能へ深く依存しない代わりに、端末によっては最高性能を譲る。",
-    "implementation_status": "実装はオープンソースでllama.cppへ統合済み。論文時点のWebGPUバックエンドは約8,470行のC++、44個・約11,338行のカーネル雛形、72主要演算、23データ形式を含み、100件超の変更提案を経て上流へ取り込まれている。ブラウザ統合はwllamaを拡張し、pre-wgsl前処理器も独立利用可能な部品として公開されている。",
-    "research_positioning": "本リポジトリでは、サーバ向け推論基盤とは異なる制約を持つローカル・ブラウザ推論系として位置付けるのが適切である。特にメモリ削減はモデル重みをCPUやSSDへ退避する階層オフロードではなく、ブラウザの一時コピーと動的確保をなくす実装上のメモリ計画である。一方、量子化重みのオンザフライ逆量子化、KVキャッシュ量子化、端末横断のカーネル調整は、llama.cpp系の実用推論性能を左右するため、量子化・カーネル・オンデバイス推論の系統と強く接続する。Qwen3.5-2B、Bonsai 1-bit、gpt-oss-20bまで実際の対応例があり、新しい重み形式をランタイムへ取り込む拡張基盤としても意味がある。"
-  },
-  "reservation": {"claim_id": "claim-208eafaf198f5f787bed68e4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-854ea9c24744be653d5bb7d3",
+  "job_id": "job-research-3f8214d2f0afeac1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-854ea9c24744be653d5bb7d3",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

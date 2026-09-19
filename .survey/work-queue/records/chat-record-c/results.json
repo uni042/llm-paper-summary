@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-208eafaf198f5f787bed68e4",
-  "job_id": "job-research-3899c287a2c2de7d",
-  "data": {
-    "overview": "LlamaWebはブラウザ推論で特にメモリ消費とデコード性能に強い。4つの端末・ブラウザ条件で正規化ピークメモリの幾何平均を比較するとWebLLMより49%、Transformers.jsより41%少なく、SafariでTransformers.jsが約10 GBまで増えてタブ停止した条件でも安定した。4社GPUのf16ブラウザ比較ではデコードの幾何平均がWebLLMより約54%、Transformers.jsより約69%高い。一方プリフィルはWebLLMの49%、Transformers.jsの79%に留まり、現在の安定ブラウザで利用できないサブグループ行列命令やカーネル融合の不足が弱点となる。ネイティブ比較でもCUDAやMetalには大きく負ける条件がある一方、VulkanやSYCLを上回る端末もあり、WebGPUの性能は端末と実装に強く依存する。",
-    "key_results": [
-      {"metric": "正規化ピークブラウザメモリ", "value": "WebLLMより49%少なく、Transformers.jsより41%少ない", "baseline": "WebLLM、Transformers.js", "condition": "Llama3.2 1B f16、Apple M4 ProのChrome/SafariとRTX 5080のLinux/Windows Chromeの4条件の幾何平均", "interpretation": "モデル全量の一時CPUコピーを避け、固定作業領域と小さなストリーミングバッファを使うことで、ブラウザのタブ上限へ近づく一時ピークと断片化を抑えた。"},
-      {"metric": "デコードスループット", "value": "WebLLMより約54%、Transformers.jsより約69%高い", "baseline": "WebLLM、Transformers.js", "condition": "Llama3.2 1B f16、NVIDIA RTX 5080、AMD RX 7900 XT、Intel Arc B580、Apple M4 Pro、Chrome", "interpretation": "デコードを支配する行列ベクトル積へ専用のレジスタ保持・協調縮約を使い、端末横断で調整したカーネル値を採用した効果が表れた。"},
-      {"metric": "プリフィルスループット", "value": "WebLLMの49%、Transformers.jsの79%", "baseline": "WebLLM、Transformers.js", "condition": "同じ4社GPUのブラウザf16比較", "interpretation": "ブラウザでは高性能なサブグループ行列機能がまだ一般利用できず、WebLLMの高度な演算融合やTransformers.jsのサブグループ最適化に対して、可搬性重視のレジスタタイル行列積が不利になった。"},
-      {"metric": "行列積カーネル性能", "value": "手作業既定値より平均41%高速", "baseline": "開発中にApple GPU中心で選んだ手作業パラメータ", "condition": "4ベンダーGPU、代表的LLM行列形状、数千構成の総当たり", "interpretation": "複数ベンダーの実測から平均性能と最悪低下を考慮して既定値を選ぶことで、単一GPUへの過適合を減らした。"},
-      {"metric": "WebGPU安全検査の費用", "value": "プリフィルで平均14%または23%、デコードで平均5%または1%低下", "baseline": "安全検査を無効化したWebGPU", "condition": "q4_k_mまたはf16、4社GPUのネイティブWebGPU比較", "interpretation": "境界外アクセスやゼロ除算を防ぐブラウザ向け検査は可搬安全性の代償となり、RTX 5080のプリフィルでは最大42%低下した。"},
-      {"metric": "低ビット量子化によるデコード変化", "value": "中性能群でq8_0からq4_k_mは8%向上、q4_k_mからq2_kは17%低下", "baseline": "隣接する重み形式", "condition": "Llama3.2 1B、KV深さ0を含む量子化横断評価", "interpretation": "低ビット化でメモリ転送量は減るが、汎用形式の逆量子化計算とWebGPUに適したデータ配置が追いつかず、ビット数を下げれば単調に高速化するわけではない。"}
-    ],
-    "negative_results": "最大の弱点はプリフィルで、ブラウザ内LlamaWebはWebLLMの49%、Transformers.jsの79%のスループットしか得られなかった。ネイティブ比較でもNVIDIAではCUDA/Vulkanがプリフィル最大10倍、デコード最大2.5倍高速で、Apple Metalもプリフィル2倍超、デコード約50%高速だった。FirefoxではApple M3上のq4_k_mモデルが約1トークン毎秒に留まり、Chromeの約52トークン毎秒との差が大きいため主要評価から除外された。低ビット量子化も速度向上が単調ではなく、現状は主としてメモリ削減技術である。",
-    "interpretation": "LlamaWebの利得は、ブラウザ特有のメモリ制約とデコードの帯域律速性に設計を合わせたところで大きい。静的確保と直接ストリーミングはOSやブラウザが違っても一時コピーを減らすため一貫してメモリを節約する。デコードでは行列ベクトル積が支配的で、レジスタ上の逆量子化と端末横断調整が効く。一方プリフィルは密な行列積が支配的で、WebGPUが安定ブラウザへ専用行列命令をまだ公開していないことと、演算融合不足が直接性能差になる。したがって機能可搬性は達成しても、最高性能はブラウザ実装と公開GPU機能に依存する。",
-    "quality_impact": "バックエンドの演算結果はCPU参照実装との正規化平均二乗誤差で検証する。通常閾値は1e-7で、f16ではGPUごとの丸め差を考慮して1e-6へ緩和する。開発中にf16累積で一部Apple GPU上のQwen2.5出力が破綻したため、該当行列積はf32累積へ変更しており、性能より数値安定性を優先した。量子化形式間のモデル精度比較は本論文の主評価ではない。"
-  },
-  "reservation": {"claim_id": "claim-208eafaf198f5f787bed68e4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-854ea9c24744be653d5bb7d3",
+  "job_id": "job-research-3f8214d2f0afeac1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-854ea9c24744be653d5bb7d3",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

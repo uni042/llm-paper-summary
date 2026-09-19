@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-208eafaf198f5f787bed68e4",
-  "job_id": "job-research-3899c287a2c2de7d",
-  "data": {
-    "hardware": "NVIDIA 3 GPU、AMD 1、Intel 2、macOS上のApple 3、iOS上のApple 2、Qualcomm 2、Samsung 1、ARM 1、Imagination Technologies 1の計16 GPUを使う。代表例はRTX 5080、RTX 5070、RX 7900 XT、Arc B580、Iris Xe、Apple M4/M3/M2、iPhone 17 Pro Max、Snapdragon X Elite、Galaxy S24、Mali、PowerVRで、Windows、Linux、macOS、iOS、Androidを横断する。",
-    "software": "llama.cppへ統合したLlamaWebをWebGPUで実行し、ブラウザでは主にChromeとDawnを用い、iOSではSafariを使う。比較対象はWebLLM、Transformers.js、llama.cppのCUDA・HIP・SYCL・Metal・Vulkan各バックエンドである。ブラウザ実行はwllama、Emscripten、Web Worker、OPFSを利用する。FirefoxはApple M3で約1トークン毎秒とChromeの約52トークン毎秒に比べ極端に遅かったため、主要結果から除外している。",
-    "methodology": "10モデルを16端末へ展開し、主にq4_k_m、Bonsaiではq1_0を使う。プリフィルは512トークン入力、デコードは128トークン生成で測定し、一部ではKVキャッシュ深さ0と2048を比較する。各実験を5回繰り返して平均し、全体で481ベンチマーク、累積約25時間を収集した。ブラウザ基盤比較では同じLlama3.2 1B f16モデルを4社GPUで動かし、メモリは新規ブラウザインスタンスからOS固有計測器でタブとGPU処理の使用量を追跡する。量子化比較ではq2_k、q4_k_m、q8_0、f16を高性能・中性能端末群で比較する。GPUカーネルの数値正しさはllama.cppのCPU参照実装と比較し、正規化平均二乗誤差を通常1e-7未満、f16では1e-6未満とする。",
-    "baselines": ["WebLLM", "Transformers.js", "llama.cpp CUDA", "llama.cpp HIP", "llama.cpp SYCL", "llama.cpp Metal", "llama.cpp Vulkan"],
-    "workloads": "LFM2.5-350M、Bonsai-1.7B、Gemma3-270M、Qwen3-0.6B、Granite4-1B、Qwen3.5-2B、SmolLM3-3B、Ministral3-3B、Gemma4-E2B、Llama3.2-1Bの10モデルを含み、通常Transformer、状態空間モデルとの混成、1ビットTransformerを横断する。",
-    "metrics": ["ピークブラウザメモリ", "プリフィルトークン毎秒", "デコードトークン毎秒", "端末・モデル実行可否", "KVキャッシュ深さによる性能変化", "安全検査による性能低下", "量子化形式別スループット"],
-    "scope": "16実端末上での実測であり、単一開発GPUだけの評価ではない。一方、研究対象は単一GPU・低遅延のローカル推論で、多要求の動的バッチ処理、複数GPU分散、サーバ向け高スループット処理は対象外である。ブラウザ差も大きく、主要結果はChrome中心でFirefoxの低性能を除外しているため、WebGPU仕様上の可搬性と各ブラウザ実装の実性能を分けて解釈する必要がある。低性能端末ではメモリ不足により大きなモデルや深いKVキャッシュを実行できない組合せがある。"
-  },
-  "reservation": {"claim_id": "claim-208eafaf198f5f787bed68e4", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-854ea9c24744be653d5bb7d3",
+  "job_id": "job-research-3f8214d2f0afeac1",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-854ea9c24744be653d5bb7d3",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
