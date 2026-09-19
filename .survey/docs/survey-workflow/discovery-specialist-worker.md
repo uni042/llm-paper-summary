@@ -116,7 +116,7 @@ Discovery modeで1つの探索単位を開始したら、workerは検索結果�
 
 このためworker側に `CONTINUE_FETCH` を返して別queryを「次ページ相当」として作らせない。**別キーワード、別期間、別カテゴリ、別citation directionは次ページではなく別Discovery roundである。**
 
-現在のprovider adapterはSemantic Scholarを標準とし、通常検索は `/paper/search`、収録論文を引用する論文は `/citations`、収録論文が引用する論文は `/references` を使える。検索結果web URLをadapterが認識できる場合はAPI endpointへ正規化する。
+現在の標準providerはOpenAlexとする。通常検索は `/works?search=...` をcursor paginationし、収録論文を引用する論文は `/works?filter=cites:W...` を同様に辿る。収録論文が引用する論文は対象workのsingletonから `referenced_works` を固定し、その集合を100件以下のbatchで順に取得する。Semantic Scholar adapterも残すが、無認証アクセスでHTTP 429になり得るためfallback扱いとする。
 
 workflow resultが `ok=true`, `evaluation_allowed=true`, `decision=READY_FOR_EVALUATION` になって初めてcandidate評価へ進む。候補評価対象はその最終 `results[]` のみとする。
 
