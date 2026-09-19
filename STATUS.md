@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 05:31:57 JST**
+> 自動生成: **2026-09-20 05:32:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -180,7 +180,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2312.12456` — PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU / worker `llm-research-survey-scheduled-chat`
-  - claim: **09-20 05:29:05 JST** / heartbeat: **—** / lease expiry: **09-20 06:29:05 JST**
+  - claim: **09-20 05:32:02 JST** / heartbeat: **—** / lease expiry: **09-20 06:32:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-b41274093aac35dc.json`
 
 #### Audit
