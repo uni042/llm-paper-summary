@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.04797",
+      "title": "Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator",
+      "source_url": "https://arxiv.org/abs/2603.04797",
+      "priority": 76,
+      "reason": "Systems/hardware-software co-design for dynamic LLM serving on near-memory processing. It includes spatially aware KV allocation, distributed tiled attention, inter-PE communication primitives, and quantitative GPU/NMP comparisons, making it relevant to hierarchical memory and inference-system architecture."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-nmp-memory-2",
+    "axis": "near-memory processing / 3D DRAM / KV allocation co-design",
+    "query_summary": "Shifted from CUDA virtual-memory reclamation to adjacent memory-system hardware/software co-design. Existing SuperInfer and vAttention were treated as known/high-overlap; Helios arXiv:2603.04797 was not found by repository code search and has concrete system mechanisms and evaluation.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.6666666667,
+    "accepted_canonical_ids": ["arXiv:2603.04797"],
+    "duplicate_canonical_ids": ["arXiv:2601.20309", "arXiv:2405.04437"],
+    "next_axis_hint": "Search CXL/NMP/PIM memory-side execution and memory pooling papers, then switch to network/KV-transfer scheduling if overlap rises."
+  }
+}
