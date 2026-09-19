@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T15:43:17.627578+00:00",
+  "updated_at": "2026-09-19T15:46:22.249845+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T15:43:17.627578+00:00",
+      "last_recorded_at": "2026-09-19T15:46:22.249845+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 306,
         "audit_completed": 0,
         "discovery_completed": 191,
-        "blocked": 39,
+        "blocked": 40,
         "new_jobs": 291,
         "new_papers": 307,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35390942567:1",
-          "recorded_at": "2026-09-18T20:21:07.119404+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35390942567",
-            "run_attempt": "1",
-            "source_sha": "88ea7d2c58ce8a0ff3ba3ad8a7b251d1c3bd6a16"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35391208144:1",
           "recorded_at": "2026-09-18T20:24:00.156778+00:00",
@@ -19597,6 +19583,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35452836490:1",
+          "recorded_at": "2026-09-19T15:46:22.249845+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35452836490",
+            "run_attempt": "1",
+            "source_sha": "2e097f241a289ff71707d421a6d8248b89fa09c3"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -23888,6 +23888,14 @@
           "title": "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2a8c8a978e102c67",
+          "type": "research",
+          "canonical_id": "arXiv:2511.01633",
+          "title": "Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -26623,7 +26631,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 768,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
