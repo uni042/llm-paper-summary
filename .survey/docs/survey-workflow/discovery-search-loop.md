@@ -4,7 +4,7 @@
 
 ## 目的
 
-検索ランキング上位が既収録論文や過去のcandidate評価落ち論文で埋まっていても、そのページだけをworkerへ渡して探索判断をさせない。`discovery_search_filter.collect_until_unseen(...)` が定義する「未評価結果を既定10件まで蓄積する」意味論を、実運用ではschema-v2 precheckの `CONTINUE_FETCH` / `READY_FOR_EVALUATION` 反復として強制する。
+検索ランキング上位が既収録論文や過去のcandidate評価落ち論文で埋まっていても、そのページだけをworkerへ渡して探索判断をさせない。`discovery_search_filter.collect_until_unseen(...)` が定義する「未評価結果を既定20件まで蓄積する」意味論を、実運用ではschema-v2 precheckの `CONTINUE_FETCH` / `READY_FOR_EVALUATION` 反復として強制する。
 
 ## filter/collector内部の自動反復
 
@@ -13,15 +13,15 @@
 1. workerは検索provider上で**1つの結果集合を表すURL/API query**を決める。通常検索なら検索結果URL、被引用探索なら対象論文のcitations endpoint、参考文献探索ならreferences endpointを使う。
 2. workerはschema-v3 precheck requestへ `provider`, `source_url`, `collector_id`, `run_key`, `axis` を保存する。**検索結果record自体はworkerがrequestへ手書きしない。**
 3. workflow precheckがproviderのpage 1を取得し、canonical identity snapshot / represented-paper resolver / rejection ledgerで既収録・既投入・過去不採用・alias重複を除外する。
-4. 未収録bufferが `target_unseen`（既定10）未満でproviderに次page/cursor/offsetがある場合、`collect_until_unseen()` が**同じsource_urlの次ページ**を取得して3へ戻る。
+4. 未収録bufferが `target_unseen`（既定20）未満でproviderに次page/cursor/offsetがある場合、`collect_until_unseen()` が**同じsource_urlの次ページ**を取得して3へ戻る。
 5. ページ間でもprimary identity / arXiv / DOI / URL / title aliasを畳み込み、重複候補をbufferへ二重投入しない。
-6. bufferが10件以上、provider exhaustion、または安全上限到達のいずれかでcollectorを終了する。
+6. bufferが20件以上、provider exhaustion、または安全上限到達のいずれかでcollectorを終了する。
 7. workflow resultは最終bufferのみを `results[]` として返し、`evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` とする。
 8. candidate評価workerはこの最終 `results[]` だけを見る。
 
 **別キーワード、別期間、別カテゴリ、別citation directionへの変更はpaginationではない。** 1つの結果集合が尽きたあとに必要なら、別のDiscovery round / collectorとして新しい `source_url` を作る。同一collector内で「次ページ相当」と称してqueryを変更してはならない。
 
-つまりcandidate評価workerが通常見る単位は「検索1ページ」ではなく、**1つの固定検索結果を必要なだけpage 1→2→3…と走査した後の、重複除外済み未評価buffer（標準10件前後）**である。
+つまりcandidate評価workerが通常見る単位は「検索1ページ」ではなく、**1つの固定検索結果を必要なだけpage 1→2→3…と走査した後の、重複除外済み未評価buffer（標準20件前後）**である。
 
 ## pagination非公開providerと次の探索軸
 
@@ -70,7 +70,7 @@ Actions側の `queue_worker.record_discovery_stats()` が単一writerとして `
 過去の多ラウンド探索では、探索そのものよりも **重複判定・継続判定・submission transport・非同期反映確認** の不整合が実効スループットを大きく落とした。以下を再発防止の標準則とする。
 
 1. **GitHub code searchをnovelty判定の正本にしない。** 過去にはcode searchで見つからない既収録論文を新規扱いし、最終dedupeで大量除外され、連続空ラウンド化した。探索前とwrite直前は、Actionsの最終ゲートと同系統のcanonical identity snapshot / represented-paper resolver / rejection ledgerを使う。
-2. **retrieval-stageで既知を落としてからpaginationを進める。** 既収録論文が上位を埋めるproviderでは、1ページ目をそのまま評価へ渡すと評価workerが既知論文ばかり処理する。各ページで既知・過去不採用・alias重複を即除外し、未評価bufferが標準10件前後になるまでcursor / offset / 次windowをcollector側で進める。
+2. **retrieval-stageで既知を落としてからpaginationを進める。** 既収録論文が上位を埋めるproviderでは、1ページ目をそのまま評価へ渡すと評価workerが既知論文ばかり処理する。各ページで既知・過去不採用・alias重複を即除外し、未評価bufferが標準20件前後になるまでcursor / offset / 次windowをcollector側で進める。
 3. **1 submission / accepted 0 / 全重複を停止条件にしない。** 過去には次探索軸が残っているのに1 roundで終了するrunがあり、探索量が不安定になった。continuation gateを毎round後に実際に評価し、未走査の有望軸がある限り次roundへ進む。Actions待ちも停止理由にしない。
 4. **multi-round submissionでjob IDを自作しない。** 過去にはActions待ちを避けるためsynthetic / terminal Discovery job IDを付けたsubmissionが大量に未処理となり、見かけ上の候補数だけ増えてResearch jobへmaterializeされなかった。探索主体workerのmulti-round経路ではself-describing `submit_discovery_round` を使い、`job_id` を付けない。
 5. **同一Scheduled Chat runでは `run_key` を固定する。** round時刻・submission時刻・Actions待ち後の再開時刻ごとにrun_keyを変えると、1時間の探索量・連続round・停止理由の可観測性が壊れる。予定実行枠またはrun開始時刻から決めた1つのrun_keyを全roundで共有する。
