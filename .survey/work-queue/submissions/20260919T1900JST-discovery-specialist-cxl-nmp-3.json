@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.22613",
+      "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.22613",
+      "priority": 77,
+      "reason": "Recent near-memory processing architecture for hybrid Attention/SSM/MoE inference with two-tier execution, concrete technology/architecture co-design, and end-to-end throughput, latency, energy, and area evaluation."
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "priority": 75,
+      "reason": "Directly relevant CXL memory-pooling/KV-cache systems work. It characterizes host-memory retrieval and evaluates a 32-TB photonic-CXL shared-memory appliance using emulation/simulation, including multi-turn TTFT impact."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-cxl-nmp-3",
+    "axis": "CXL memory pooling / photonic fabric / NMP for hybrid LLM inference",
+    "query_summary": "Expanded the NMP axis to recent CXL memory pooling and hybrid-model near-memory processing. MFS was recognized as an already-known networking result; NOVA and the Photonic-CXL appliance were not found by repository code search and have direct inference-system relevance.",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.3333333333,
+    "accepted_canonical_ids": ["arXiv:2608.22613", "arXiv:2607.27187"],
+    "duplicate_canonical_ids": ["arXiv:2603.17456"],
+    "next_axis_hint": "Switch away from memory hardware to scheduler/resource allocation and distributed serving new work to keep search independence."
+  }
+}
