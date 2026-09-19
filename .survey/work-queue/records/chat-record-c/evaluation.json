@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9c6ab898d827d5aa2ca07235",
-  "job_id": "job-research-8f1455c9a8468d9c",
+  "attempt_id": "attempt-83b90f0b9afa469d0eb73d37",
+  "job_id": "job-research-3ae1410a48dc456e",
   "data": {
-    "hardware": "主評価は3ノードで、各ノードにIntel Xeon 6960P 72物理コア、DRAM 256GB、NVIDIA H100 80GBを搭載する。各ノードはGen5 x16でTITAN-II CXLスイッチへ接続し、スイッチ背後にMicron CZ120 CXL Type-3 128GBカード6枚、合計768GBの共有プールを置く。拡張性評価では3、6、12ノードを扱う。",
-    "software": "Linux 6.2.6、CUDA 12.8、NCCL 2.28.3、nccl-tests 2.17.8。CXL-CCLはNCCLへ30行変更・980行追加した1020行の実装。DAXで共有領域を写像しCUDAホスト登録を用いる。",
-    "methodology": "200 Gbps InfiniBand上のRDMA型NCCLを主要比較対象とし、1MB〜4GBのメッセージでAllReduce、Broadcast、Gather、Scatter、AllGather、ReduceScatter、Reduce、AllToAllを測定する。完全版に加え、帯域集約だけを粗粒度で行う版と、インターリーブも重畳も行わない単純版を比較して構成要素の寄与を分離する。CXLプール単体のCPU遅延、GPU-CXL帯域、同一機器への並行アクセス競合も測定する。チャンク数感度、3〜12ノード拡張性、Llama-3-8BをWikipediaでFSDP学習する実用ケースも評価する。",
-    "scope": "主要性能は実物のCXLスイッチとメモリカードによる実機測定であり、エミュレーションだけではない。ただし大規模マルチホストCXL機器の入手性から最大12ノード・CXLカード6枚までで、数十〜数百ノードは対象外。GPUごとに方向別DMAエンジンが一つという制約や、カード側Gen5 x8帯域の影響を強く受ける。小メッセージではソフトウェア固定費が支配的になる。"
+    "hardware": "Xiaomi 14スマートフォン。CPUは4スレッドで測定し、GPUはOpenCL経路を使用する。",
+    "software": "MNN-LLMをllama.cpp、MLC-LLM、fastllmと比較。Qwen2-1.5B、Qwen2-7B、Llama3-8Bの量子化モデルを使用する。MLC-LLMはCPU非対応、fastllmはGPU非対応のため該当比較を除外する。",
+    "methodology": "入力長64、256、1024トークンでプリフィル速度とデコード速度を測定し、デコードは最大16トークンに制限する。CPUとGPUを分け、複数モデルで比較する。MLC-LLMは非対称量子化モデルの性能が低いため対称量子化結果を使い、他方式は非対称量子化を使うという条件差が明記される。メモリ最適化ではQwen2-7Bの埋め込み配置とKV先読み可能量を分析し、計算最適化ではCPU命令別タイル、GPU配置、LoRA計算順序を個別に説明する。",
+    "scope": "単一スマートフォン機種での実測が中心で、端末横断の一般化や消費電力は評価していない。比較方式間で量子化条件が完全には一致しない箇所がある。Flash階層の利点はUFS速度、DRAM帯域、層計算時間に依存し、長すぎるKVでは先読みでI/Oを隠し切れない。"
   },
   "reservation": {
-    "claim_id": "claim-9c6ab898d827d5aa2ca07235",
+    "claim_id": "claim-83b90f0b9afa469d0eb73d37",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }

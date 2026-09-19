@@ -2,39 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9c6ab898d827d5aa2ca07235",
-  "job_id": "job-research-8f1455c9a8468d9c",
+  "attempt_id": "attempt-83b90f0b9afa469d0eb73d37",
+  "job_id": "job-research-3ae1410a48dc456e",
   "data": {
-    "overview": "200 Gbps InfiniBandに対する平均高速化はAllGather 1.34倍、Broadcast 1.84倍、Gather 1.94倍、Scatter 1.07倍、AllReduce 1.50倍、ReduceScatter 1.43倍、Reduce 1.70倍、AllToAll 1.53倍と報告される。利点は複数CXLカードの合計帯域を使い、書込みと読出しを重ねられる大きな通信で出やすい。一方、小メッセージでは細粒度cudaMemcpyと同期の固定費が効き、ReduceScatterやScatter、AllToAllの一部条件ではInfiniBandを下回る。ノード数増加時のAllReduceは各ランクが全データを個別に読み削減するため、リング型の中間結果再利用ができず拡張性が弱い。",
+    "overview": "Xiaomi 14のCPU評価では、MNN-LLMはllama.cppに対してプリフィル最大8.6倍、デコード最大2.3倍、fastllmに対してプリフィル最大20.5倍、デコード最大8.9倍を報告する。GPUではllama.cppに対してプリフィル最大25.3倍、デコード最大7.1倍、MLC-LLMに対して最大2.8倍と1.7倍である。一方Qwen2-7Bの短い入力ではMLC-LLMが対称量子化の利点で上回る条件があり、全条件で優位ではない。Flash利用ではQwen2-7Bの埋め込みを移すとDRAMを約15%、bf16換算約2.18GB削減でき、KV先読みは計算時間内に収まる範囲なら追加I/Oを隠せる。",
     "key_results": [
       {
-        "metric": "8種の集団通信の平均高速化",
-        "value": "AllGather 1.34倍、Broadcast 1.84倍、Gather 1.94倍、Scatter 1.07倍、AllReduce 1.50倍、ReduceScatter 1.43倍、Reduce 1.70倍、AllToAll 1.53倍",
-        "baseline": "200 Gbps InfiniBand上のRDMA型実装",
-        "condition": "1MB〜4GBの可変メッセージ、CXL-CCL完全版",
-        "interpretation": "規則的配置で機器競合を避け、細粒度の公開・取得重畳で共有プールの合計帯域を通信ファブリックとして利用できる。"
+        "metric": "CPUプリフィル速度",
+        "value": "llama.cpp比最大8.6倍、fastllm比最大20.5倍",
+        "baseline": "llama.cpp、fastllm",
+        "condition": "Xiaomi 14、4 CPUスレッド、Qwen2-1.5B/7BとLlama3-8B、入力64〜1024トークン",
+        "interpretation": "命令幅に合わせた重み・入力配置、量子化行列積、コア負荷分散がモバイルCPUの演算資源を従来方式より効率よく使う。"
       },
       {
-        "metric": "Llama-3-8B FSDP学習",
-        "value": "1.11倍高速化、相互接続ハードウェア費2.75倍低減",
-        "baseline": "200 Gbps InfiniBand",
-        "condition": "Wikipediaデータセット、AllGatherとReduceScatterを用いる分散学習",
-        "interpretation": "単体通信だけでなく実際のLLM学習でも通信改善が全体性能へ反映され、CXLスイッチの価格差が設備費低減につながる。"
+        "metric": "GPU推論速度",
+        "value": "llama.cpp比プリフィル最大25.3倍・デコード最大7.1倍、MLC-LLM比最大2.8倍・1.7倍",
+        "baseline": "llama.cpp、MLC-LLM",
+        "condition": "Xiaomi 14 OpenCL GPU、複数モデル・入力長",
+        "interpretation": "連続アクセスと128ビット読出し、画像メモリに合わせた配置が帯域利用を改善するが、量子化方式差により一部条件ではMLC-LLMが有利。"
       },
       {
-        "metric": "チャンク数感度",
-        "value": "最大約9%の性能変動、4または8チャンクが良好",
-        "baseline": "1チャンクなど粗粒度設定",
-        "condition": "AllGather、1GBメッセージ",
-        "interpretation": "分割が少なすぎると書込み後読出し依存が長く残り重畳できないが、過度な細粒度化にも固定費があるため適切な粒度が必要。"
+        "metric": "埋め込みFlash配置のDRAM削減",
+        "value": "Qwen2-7Bで約15%、bf16換算約2.18GB削減",
+        "baseline": "全重みをDRAM保持",
+        "condition": "デコードで埋め込み表から現トークン分だけ読む性質を利用",
+        "interpretation": "利用率の低い大容量重みだけを低速Flashへ移すことで、層重みを退避する場合より小さい速度影響で容量を確保できる。"
       }
     ],
-    "negative_results": "小メッセージではcudaMemcpy呼出しと同期の固定費が相対的に大きく、ReduceScatterはInfiniBand比0.48倍、Scatterは0.46倍、AllToAllは0.7倍まで低下する条件がある。AllReduceは256MB超で平均約1.05倍に留まる条件があり、リング型InfiniBandが中間削減結果を再利用できるのに対しCXL-CCLは各ランクが全データを読むためである。3から6ノードへのAllReduce拡張で時間は2.1〜3.0倍、12ノードでは8.7〜12.2倍に増え、6枚のCXL機器への競合が深刻化する。",
-    "interpretation": "CXL共有メモリ方式はネットワーク処理をメモリコピーへ置き換えるだけでは十分でなく、複数機器への配置と生産者・消費者重畳が性能の鍵になる。大きな転送では固定費を償却しやすく、複数カードの帯域を生かせるが、小転送と全ランク全データ読出し型の演算ではGPUコピー起動や共有機器競合が支配的になる。",
-    "quality_impact": "通信層の変更であり、モデルの数値精度や生成品質を近似化する方式ではない。評価対象の集団通信意味論とFSDP学習処理を維持したまま通信時間と設備費を比較している。"
+    "negative_results": "FlashはLPDDR5Xより大幅に遅く、KVのFlash格納量が増えて先読み時間が層計算時間を超えると待ちが顕在化する。GPU評価ではQwen2-7Bの短い入力などでMLC-LLMがMNN-LLMを上回る条件があり、論文はMLC-LLMの対称量子化が有利と説明する。比較方式間の量子化条件も完全には同一でない。",
+    "interpretation": "大きな高速化は、LLMのプリフィルが計算律速、デコードがメモリ律速という段階差と、モバイルCPU/GPU固有のデータアクセス特性を別々に最適化した結果である。Flashは容量問題を解くが帯域は低いため、低利用重みの選別と計算中先読みがなければ速度低下へ転じる。",
+    "quality_impact": "量子化を含むため厳密な無損失最適化ではない。論文は精度影響が大きいLM headの精度を高く保つなどの設計を行うが、主評価は速度であり、各量子化構成のタスク精度を網羅的に比較する研究ではない。"
   },
   "reservation": {
-    "claim_id": "claim-9c6ab898d827d5aa2ca07235",
+    "claim_id": "claim-83b90f0b9afa469d0eb73d37",
     "worker_id": "scheduled-chat-llm-survey-2130",
     "worker_kind": "scheduled_chat"
   }
