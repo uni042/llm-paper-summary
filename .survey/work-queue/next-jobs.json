@@ -19,8 +19,8 @@
   },
   "claiming": {
     "ready_research_audit": 100,
-    "actively_claimed": 4,
-    "claimable": 96
+    "actively_claimed": 5,
+    "claimable": 95
   },
   "next_jobs": [
     {
@@ -60,20 +60,6 @@
       "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
       "source_url": "https://arxiv.org/abs/2405.04532",
       "paper_path": "papers/inference/08-quantization-kernels/2024-2405.04532-qserve.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-726ba562ef40d04f",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2406.16858",
-      "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
-      "source_url": "https://arxiv.org/abs/2406.16858",
-      "paper_path": "papers/inference/05-speculative-decoding/2024-2406.16858-eagle-2.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-ac3d391d822b215f",
+      "type": "research",
+      "lane": null,
+      "priority": 95,
+      "canonical_id": "arXiv:2405.01814",
+      "title": "Efficient and Economic Large Language Model Inference with Attention Offloading",
+      "source_url": "https://arxiv.org/abs/2405.01814",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-19T19:17:50+00:00"
+  "generated_at": "2026-09-19T19:19:15+00:00"
 }
