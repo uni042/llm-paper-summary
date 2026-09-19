@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:05:14 JST**
+> 自動生成: **2026-09-20 01:06:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **47** |
-| 未claim Research job | **47** |
+| 収録候補論文 | **48** |
+| 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-20 00:48:02 JST（17分前）** |
+| 最終検証済みResearch収録 | **09-20 00:48:02 JST（18分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **47** |
+| canonical_id確認済みの一意な候補論文 | **48** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **47** |
+| 非終端Research job合計 | **48** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **4** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **64** | **4** | **0** | **4** | **0** | **0** | **0** |
-| 合計 | **78** | **8** | **3** | **4** | **0** | **0** | **0** |
+| Discovery | **65** | **4** | **1** | **3** | **0** | **0** | **0** |
+| 合計 | **79** | **8** | **4** | **3** | **0** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -105,6 +105,10 @@
 
 ### Discovery
 
+- **09-20 01:04:25 JST** job `job-d8da75d9869c16a7` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
+  - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
 - **09-20 00:29:05 JST** job `job-d28909a47c5b1f9e` / 候補 **0件**
   - result: `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260919T2318JST-discovery-specialist-disagg-routing-4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2318JST-discovery-specialist-disagg-routing-4.json`
   - 探索軸: PD分離routing・selective KV transfer・multi-turn append-prefill
-- **09-19 23:06:56 JST** job `job-06aebe5281e357a6` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2324JST-discovery-specialist-serving-runtime-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2324JST-discovery-specialist-serving-runtime-5.json`
-  - 探索軸: speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching
 
 ### 直近タスク
 
@@ -179,12 +179,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-20 01:01 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **0件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **0件**
 - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation / energy-aware disaggregated Attention-FFN serving and operator-level DVFS / CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction / NVMe-direct KV offload and NAND-centric edge LLM inference
 - round `specialist-recent-memory-serving-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
   - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
 - round `specialist-energy-disagg-02` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
   - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
@@ -223,7 +223,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **47** |
+| ready | **48** |
 
 ### 候補の重複・識別情報欠損
 
@@ -251,10 +251,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **640** |
+| 成功result未照合のimmutable submission | **639** |
 | └ Research | **487** |
 | └ Audit | **2** |
-| └ Discovery | **149** |
+| └ Discovery | **148** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job

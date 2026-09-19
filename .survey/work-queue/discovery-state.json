@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T15:29:05+00:00",
-  "last_run_key": "2026-09-20T00:16:52+09:00",
-  "last_round": "validation-proper",
+  "updated_at": "2026-09-19T16:04:25+00:00",
+  "last_run_key": "2026-09-20T01:01:07+09:00",
+  "last_round": "specialist-recent-memory-serving-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "All raw search results were removed by the mandatory authoritative precheck.",
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "All raw records were removed by the mandatory authoritative precheck.",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T08:00:00+09:00",
-      "round": "specialist-kv-storage-network-11",
-      "axis": "SSD-backed KV I/O・selective KV network transfer・CXL shared KV memory",
-      "query_summary": "外部KV階層とdisaggregated transferへ探索軸を戻し、Tutti（2605.03375）、SmartGen（2607.28150）、TraCT（2512.18194）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だったためDiscovery専用のまま候補投入した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はCXL/photonic pooled memoryのKV管理、GPU-direct NVMe I/Oの近接研究、またはSSD-backed expert cacheへ探索を広げる。",
-      "source_submission": "work-queue/submissions/20260915T0818JST-discovery-specialist-kv-storage-network-11.json"
-    },
     {
       "run_key": "2026-09-15T08:00:00+09:00",
       "round": "specialist-cxl-kv-12",
@@ -7436,6 +7421,28 @@
       ],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json"
+    },
+    {
+      "run_key": "2026-09-20T01:01:07+09:00",
+      "round": "specialist-recent-memory-serving-01",
+      "axis": "recent heterogeneous KV memory pooling and robust KV reservation",
+      "query_summary": "SwiftCache, CrossPool, and robust KV reservation were found via recent primary arXiv search; mandatory authoritative precheck removed all three as already represented in canonical retrieval identities.",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2606.24506",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference.",
+      "source_submission": "work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json"
     }
   ],
   "axes": {
@@ -14128,6 +14135,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "recent heterogeneous KV memory pooling and robust KV reservation": {
+      "last_run_key": "2026-09-20T01:01:07+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
