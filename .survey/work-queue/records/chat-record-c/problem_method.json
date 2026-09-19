@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-ddbd5f7c97d18185436bf163",
-  "job_id": "job-research-1a87bd753fb86450",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddbd5f7c97d18185436bf163",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-ddbd5f7c97d18185436bf163","job_id":"job-research-1a87bd753fb86450",
+ "data":{"problem":"量子化、KV圧縮、投機的デコード、連続/SLO-aware batching、疎注意はそれぞれ別のモデル、GPU、prompt、品質指標で速度向上を報告するため、実配備の固定予算・品質floor・遅延SLOの下でどれを単独またはstackして選ぶべきか判断できない。speedupは加算できず、相互作用と品質劣化を無視した速度比較は誤った構成を選び得る。","novelty":"全方式を品質・TTFT/TPOT・cost/Mtokenの共通軸へ置き、実機anchorをprofiled simulatorの校正に使って組合せ空間を補間し、Pareto非支配集合と制約別winnerを明示する。単なるbenchmark表ではなく、価格・GPU・品質floorが変わるたびに再計算できるatlas protocolを成果物とする。","method_overview":"Qwen2.5-7B-InstructをvLLM 0.12で512-token入力/128-token出力としてL4、A100 80GB PCIe、H100 PCIe上で実測する。FP16 baseline、AWQ-4bit、online FP8 weights、naive FP8 KV cache、2種類のn-gram speculative decodingなどを三つのcampaignで計54 anchorとして取得する。各点でTTFT、TPOT P50/P99、throughput、GPU memory、GPU hourly priceから導くcost/Mtokenを記録し、別のGSM8K 200問5-shot greedy armでprecision別品質を測る。実測anchorへprofiled simulatorを合わせ、直接測れない互換stackやsparse attentionを含む36構成gridへ展開する。各構成をquality・latency・costの三軸でPareto dominance判定し、tight latency、高throughput、low cost、quality floor at minimum costの各制約で最適構成を選ぶ。測定点とsimulation点を区別し、価格変更時には同じprotocolで再計算する。","components":[{"name":"共通三軸Pareto表現","description":"すべての最適化を品質、遅延、費用の同じ座標へ写像する。品質はGSM8K strict/flexible accuracy、遅延はTTFTとTPOTのP50/P99、費用は実測throughputとGPU時間単価から算出した$/Mtokenを使い、throughputとGPU memoryを補助指標とする。他構成が全軸で同等以上かつ一軸で優れる場合をdominatedとして除外するため、速度だけ速いが品質を壊す構成を自動的に実用winnerから外せる。"},{"name":"実測anchorによる校正","description":"組合せ空間を全件実測する代わりに、L4/A100/H100上で合計54構成を実際に走らせる。synthetic prompt、realistic extractive prompt、最終six-arm matrixと品質stageを分けて取得し、独立pod session間の定数driftが1.5%未満であることを確認する。これらをprofiled simulatorのanchorにし、実機kernel・memory挙動を取り込んだ上で未測定stackを補間する。anchor batch sizeでは補間により一致するため、一般化誤差はcross-campaign driftで評価する。"},{"name":"最適化stack空間","description":"量子化、KV cache、speculation、batching、sparse attentionを単独だけでなく互換な組合せとして扱う。実測ではAWQ-4bit、FP8 weights、FP8 KV、n-gram speculationをanchorし、draft-model speculationはvLLM V1未実装とEAGLE head不在のため測定しない。sparse attentionはstock vLLM実装がないため唯一simulation-onlyとする。こうして『個別論文のspeedup』ではなく実際に積み重ねたときの支配関係を評価する。"},{"name":"品質guardと制約別atlas","description":"速度frontierをそのまま推奨せず、95% quality floorなどのguardを適用してdeployment regimeごとにwinnerを付ける。naive FP8 KVはnormal throughputでもGSM8K 0/200となるため速度Paretoには残り得るが、実用atlasからは排除される。tight latency、high throughput、low cost、quality floorの各制約でGPUとstackのwinnerを別々に示し、価格やkernel成熟度が変われば再計算する。"}],"system_design":"実測runnerがanchorと品質を収集し、校正profiled simulatorが未測定gridを補完、Pareto計算器が非支配点を抽出し、constraint labelerが各配備regimeのwinnerをatlasへ割り当てる四段構成。"},
+ "reservation":{"claim_id":"claim-ddbd5f7c97d18185436bf163","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
