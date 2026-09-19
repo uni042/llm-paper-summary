@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 11:12:28 JST**
+> 自動生成: **2026-09-19 11:12:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -180,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-19 11:11:32 JST** / heartbeat: **—** / lease expiry: **09-19 12:41:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7623de796f4f2b46.json`
+- `arXiv:2412.18934` — Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-19 11:12:48 JST** / heartbeat: **—** / lease expiry: **09-19 12:42:48 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c26aa10b960d27a4.json`
 - `arXiv:2510.24051` — Pie: A Programmable Serving System for Emerging LLM Applications / worker `scheduled-chat-llm-survey`
   - claim: **09-19 06:36:03 JST** / heartbeat: **09-19 10:29:05 JST** / lease expiry: **09-19 11:59:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-c2f58815c322fab7.json`
