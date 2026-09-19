@@ -2,92 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-84eae2b617467dab6d9fa45e",
-  "job_id": "job-research-b41274093aac35dc",
-  "data": {
-    "canonical_id": "arXiv:2312.12456",
-    "arxiv_id": "2312.12456",
-    "doi": "10.1145/3694715.3695964",
-    "openreview_id": null,
-    "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
-    "summary": "PowerInferは、消費者向けGPUに収まらない大規模言語モデルを低遅延で動かすため、推論時の活性化が少数の高頻度ニューロンへ偏る局所性を利用するCPU-GPU協調推論基盤である。一般コーパスで各ニューロンの活性化頻度を事前計測し、高頻度ニューロンをGPU、低頻度ニューロンをCPUへ配置する。実行時には層ごとの適応型予測器で活性ニューロンだけを選び、CPUとGPUの双方でニューロン粒度の疎演算を並行実行する。配置はGPU容量、メモリ帯域、同期費用を制約にした整数線形計画で決める。RTX 4090上ではFP16系でllama.cpp比平均7.23倍、最大11.69倍、INT4系で平均2.89倍、最大4.28倍の高速化を報告し、精度低下は小さい。",
-    "list_summary": "活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。",
-    "authors": [
-      "Yixin Song",
-      "Zeyu Mi",
-      "Haotong Xie",
-      "Haibo Chen"
-    ],
-    "published": "2023-12-16",
-    "publication": "ACM SIGOPS 30th Symposium on Operating Systems Principles (SOSP 2024)",
-    "publication_type": "Conference paper",
-    "publication_status": "Published; SOSP 2024",
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.OS"
-      ]
-    },
-    "lineage": "CPUオフロード / 活性化疎性 / 階層メモリ",
-    "topics": [
-      "CPUオフロード",
-      "活性化疎性",
-      "ニューロン配置",
-      "消費者向けGPU",
-      "疎演算"
-    ],
-    "importance": "層単位オフロードではなくニューロン単位の活性化局所性をGPU-CPU階層へ対応付け、消費者向けGPUで大規模モデルの低遅延推論を実機実証した代表的システム研究。",
-    "hardware_evaluation": "高性能PCはIntel i9-13900K、192GB RAM、RTX 4090 24GB、PCIe 4.0。低性能PCはIntel i7-12700K、64GB RAM、RTX 2080Ti 11GB、PCIe 3.0。比較用に80GB A100も使用。",
-    "quality_effect": "各層の活性予測器を95%以上の精度に調整し、OPT、Falcon、ReGLU系でPIQA、Winogrande、ARC-Challenge、MMLU、GSM8Kを比較。平均精度差は小さく、OPT-7Bでは密計算との出力コサイン類似度差への影響を約0.4%と報告。",
-    "source": "https://arxiv.org/abs/2312.12456",
-    "sources": [
-      "https://arxiv.org/abs/2312.12456",
-      "https://arxiv.org/html/2312.12456",
-      "https://doi.org/10.1145/3694715.3695964"
-    ],
-    "implementation": "llama.cppへ約4,200行のC++/CUDAを追加したオンライン推論基盤と、transformers上に約400行のPythonで構築した事前プロファイラ・配置ソルバを実装。論文はコードを完全公開したと記載する。",
-    "code": "https://github.com/SJTU-IPADS/PowerInfer",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "arxiv_id": "2309.06180"
-      },
-      {
-        "canonical_id": "arXiv:2303.06865",
-        "arxiv_id": "2303.06865"
-      },
-      {
-        "canonical_id": "arXiv:2301.00774",
-        "arxiv_id": "2301.00774"
-      },
-      {
-        "canonical_id": "arXiv:2305.09781",
-        "arxiv_id": "2305.09781"
-      },
-      {
-        "canonical_id": "arXiv:2309.10285",
-        "arxiv_id": "2309.10285"
-      },
-      {
-        "canonical_id": "arXiv:2310.04564",
-        "arxiv_id": "2310.04564"
-      },
-      {
-        "canonical_id": "arXiv:2404.08763",
-        "arxiv_id": "2404.08763"
-      },
-      {
-        "canonical_id": "arXiv:2406.05955",
-        "arxiv_id": "2406.05955"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 57
-  },
+  "attempt_id": "attempt-c5756e924915f6f747a45346",
+  "job_id": "job-research-53def9917e580440",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-84eae2b617467dab6d9fa45e",
+    "claim_id": "claim-c5756e924915f6f747a45346",
     "worker_id": "llm-research-survey-scheduled-chat",
     "worker_kind": "scheduled_chat"
   }
