@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 12:02:02 JST**
+> 自動生成: **2026-09-19 12:02:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **13** | **15** | **6** | **9** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **2** | **0** | **2** | **0** | **0** | **7** |
-| 合計 | **15** | **17** | **6** | **11** | **1** | **0** | **7** |
+| Discovery | **1** | **3** | **0** | **3** | **0** | **0** | **11** |
+| 合計 | **14** | **18** | **6** | **12** | **1** | **0** | **11** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -105,10 +105,6 @@
 
 ### Discovery
 
-- **09-19 06:02:20 JST** job `job-fc0b32f4684c9e75` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-edge-offload-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-edge-offload-3.json`
-  - 探索軸: device-edge-cloud multi-tier serving・recursive offloading・network-aware inference
 - **09-19 06:02:30 JST** job `job-8b03115ae2cdf87d` / 候補 **1件**
   - result: `.survey/work-queue/results/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json`
@@ -156,11 +152,15 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 12:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **7件**
-- 探索軸: CXL・PIM・near-memory・chiplet LLM inference / 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **11件**
+- 探索軸: CXL・PIM・near-memory・chiplet LLM inference / CPU-GPU/CXL協調・異種GPU・disaggregated serving制御 / 2026年9月新着・SSD近傍計算・KV圧縮・熱制約serving
 - round `specialist-cxl-pim-2` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-cxl-pim-2.json`
   - 探索軸: CXL・PIM・near-memory・chiplet LLM inference
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-heterogeneous-serving-3` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-heterogeneous-serving-3.json`
+  - 探索軸: CPU-GPU/CXL協調・異種GPU・disaggregated serving制御
   - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-sep-new-systems-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-sep-new-systems-1.json`
@@ -222,10 +222,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **586** |
+| 成功result未照合のimmutable submission | **587** |
 | └ Research | **455** |
 | └ Audit | **2** |
-| └ Discovery | **129** |
+| └ Discovery | **130** |
 
 ### 厳格検証が未成立のcompleted job
 
