@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2308.14352",
+      "arxiv_id": "2308.14352",
+      "title": "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2308.14352",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+      "priority": 94,
+      "reason": "Focused on-device MoE inference engine using storage hierarchy, expert preloading, and adaptive bit-width decisions to reduce sparse-model inference latency under mobile resource constraints."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3651890.3672274",
+      "arxiv_id": "2310.07240",
+      "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving",
+      "source_url": "https://doi.org/10.1145/3651890.3672274",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+      "priority": 97,
+      "reason": "Focused KV-cache compression and streaming system for context reuse, directly addressing network/storage transfer cost in LLM serving."
+    },
+    {
+      "canonical_id": "arXiv:2503.01840",
+      "arxiv_id": "2503.01840",
+      "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
+      "source_url": "https://arxiv.org/abs/2503.01840",
+      "paper_path": "papers/inference/05-speculative-decoding/2025-2503.01840-eagle-3.md",
+      "priority": 95,
+      "reason": "Strong speculative-decoding method that improves draft-token prediction with training-time feature integration and materially advances a core inference-acceleration lineage."
+    },
+    {
+      "canonical_id": "arXiv:2402.16363",
+      "arxiv_id": "2402.16363",
+      "title": "LLM Inference Unveiled: Survey and Roofline Model Insights",
+      "source_url": "https://arxiv.org/abs/2402.16363",
+      "paper_path": "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+      "priority": 88,
+      "reason": "Systems-oriented inference survey distinguished by roofline-model analysis of compute, memory, and hardware bottlenecks plus an open-source inference analyzer."
+    },
+    {
+      "canonical_id": "arXiv:2406.16858",
+      "arxiv_id": "2406.16858",
+      "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+      "source_url": "https://arxiv.org/abs/2406.16858",
+      "paper_path": "papers/inference/05-speculative-decoding/2024-2406.16858-eagle-2.md",
+      "priority": 96,
+      "reason": "Focused speculative-decoding contribution using dynamic draft trees to adapt speculation to token confidence and improve lossless generation speed."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-20260920T0340JST-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-20260920T0340JST-r1.json",
+    "receipt": "sha256:b587702739419731def5b014f6a7150934546fd2497f83abe2c711e9644be4e0"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20T0340JST",
+    "round": "refcuration-stress-r1-a",
+    "axis": "structured references relevance curation stress round 1",
+    "query_summary": "Stress-test round 1 over the first 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2308.14352",
+      "DOI:10.1145/3651890.3672274",
+      "arXiv:2503.01840",
+      "arXiv:2402.16363",
+      "arXiv:2406.16858"
+    ],
+    "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false."
+  }
+}
