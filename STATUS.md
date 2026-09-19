@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:03:45 JST**
+> 自動生成: **2026-09-19 19:04:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **5** | **15** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **24** | **11** | **5** | **6** | **0** | **0** | **15** |
-| 合計 | **29** | **26** | **11** | **6** | **0** | **0** | **15** |
+| Discovery | **24** | **13** | **5** | **8** | **0** | **0** | **17** |
+| 合計 | **29** | **28** | **11** | **8** | **0** | **0** | **17** |
 
-- 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -169,8 +169,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **11件** / immutable submission: **11件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **6件** / 候補: **15件**
-- 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / prefill/decode fairness / adaptive batching / SLO scheduling
+- 耐久探索round: **13件** / immutable submission: **13件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **8件** / 候補: **17件**
+- 探索軸: related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / near-memory processing / 3D DRAM / KV allocation co-design / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling
+- round `specialist-agent-related-13` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json`
+  - 探索軸: related-work path from agentic workload systems to predictability-driven agent-native serving
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `specialist-agent-scheduling-5` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
   - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
@@ -206,10 +210,6 @@
 - round `specialist-quant-runtime-10` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-quant-runtime-10.json`
   - 探索軸: quantized inference kernels / precision-aware KV memory and scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
-- round `specialist-recent-sweep-11` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-recent-sweep-11.json`
-  - 探索軸: September 2026 recent serving/offload/cache/runtime sweep
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -265,10 +265,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **621** |
+| 成功result未照合のimmutable submission | **623** |
 | └ Research | **468** |
 | └ Audit | **2** |
-| └ Discovery | **151** |
+| └ Discovery | **153** |
 
 ### 厳格検証が未成立のcompleted job
 
