@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-19T18:22:00+00:00",
-  "record_count": 9,
+  "updated_at": "2026-09-19T18:25:00+00:00",
+  "record_count": 10,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -69,12 +69,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2308.14508",
       "identity_tokens": [
-        "arXiv:2308.14508",
-        "DOI:10.18653/v1/2024.acl-long.172"
+        "DOI:10.18653/v1/2024.acl-long.172",
+        "arXiv:2308.14508"
       ],
       "reason": "Long-context benchmark paper; useful for evaluation but not itself a systems method.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:00+00:00",
       "linked_from": [],
       "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
     },
@@ -94,11 +94,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2309.11998",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.11998",
         "arXiv:2309.11998"
       ],
-      "reason": "Conversation dataset rather than an inference/training systems method or serving workload benchmark.",
+      "reason": "Dataset/corpus contribution rather than an LLM inference or training systems method.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:00+00:00",
       "linked_from": [],
       "title": "LMSYS-Chat-1M: A Large-Scale Real-World LLM Conversation Dataset"
     },
@@ -106,13 +107,27 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2108.07732",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2108.07732",
         "arXiv:2108.07732"
       ],
-      "reason": "Code-generation capability/method paper rather than an LLM systems contribution.",
+      "reason": "Capability/evaluation work on program synthesis rather than a systems contribution.",
       "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:00+00:00",
       "linked_from": [],
       "title": "Program Synthesis with Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2308.12950": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2308.12950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.12950",
+        "arXiv:2308.12950"
+      ],
+      "reason": "Code-model technical report rather than a focused inference/training systems contribution.",
+      "first_checked_at": "2026-09-19T18:25:00+00:00",
+      "last_checked_at": "2026-09-19T18:25:00+00:00",
+      "linked_from": [],
+      "title": "Code Llama: Open Foundation Models for Code"
     }
   }
 }
