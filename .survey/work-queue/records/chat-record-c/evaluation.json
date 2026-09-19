@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-52fd234ea45de5f63b71cc39","job_id":"job-research-2dcd265cd3f3852c","data":{"hardware":"単一ワークフロー評価はLlama-3.1-8BをNVIDIA A10G 24GB・PCIe Gen1 2GB/sで、Qwen2.5-32BをNVIDIA H100 80GB・PCIe Gen5 64GB/sで実行。高並行評価は単一H100を使用。","software":"SGLang v0.4.4を拡張したKVFlow試作。比較対象はGPUのみRadix cacheのSGLangと、CPU階層キャッシュを使うSGLang HiCache。温度0のgreedy decodingを使用。","methodology":"単一評価では10エージェント直列ワークフローを作り、固定prefix・動的suffix・出力長を制御した合成promptを使用。固定promptを複数回実行してcacheをwarm-up後、動的suffixを変えて10回実行し平均latencyを測る。高並行では固定prompt 512/1024 token等、dynamic/output各256 tokenで複数独立workflowを同時実行。さらにPEERテンプレートとFinancial QAを用いた4-agentの現実的模擬workloadも評価。","scope":"GPUメモリに再利用可能prefix cacheを残せる範囲が対象で、active requestだけで全GPU容量を使い切る過剰concurrencyは対象外。性能評価中心で、モデル品質は重み・prompt・decodingを変更しないため不変として扱う。"},"reservation":{"claim_id":"claim-52fd234ea45de5f63b71cc39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-22ad7565c9d243223bc06f67",
+  "job_id": "job-research-a6905e04777fde1f",
+  "data": {
+    "hardware": "H200級acceleratorを共通computeとpackage areaでモデル化。HBFlexはGPUあたり6 HBF stack、stackあたり16 die×32 plane、planeあたり512 block×512 page（4KiB）、read 4us、program 75us、stack read 488GB/s/write 27.2GB/s、40MB SRAM/stack。HBM3eは24GB、0.8TB/s/stack。",
+    "software": "個別read/writeを扱うカスタムtrace-driven simulator。モデルはDeepSeek-V4-Pro、DeepSeek-V3、Hunyuan3、Qwen3-235B。",
+    "methodology": "Alibaba BailianのTo-B/To-C/Coding/Thinkingの4 production traceとQwen3で収集したSWE-bench traceを使用。H3、FlashAccel co-located/cascaded、integrated-stackと同一package-area予算で比較し、TTFT、TPOT、throughput、read-wave amplification、write stall、GC WAF、SRAM使用量を測定。SWE-benchはconcurrencyを変化させ、4096 concurrent tasksで累積ablationも実施。",
+    "scope": "実機HBFではなくトレース駆動シミュレーションであり、想定HBF latency/bandwidthとpackage-area正規化に依存する。4モデルと指定trace群に対するシステム性能・耐久評価が中心。"
+  },
+  "reservation": {
+    "claim_id": "claim-22ad7565c9d243223bc06f67",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
