@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:41:51 JST**
+> 自動生成: **2026-09-20 01:42:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **48** |
+| 収録候補論文 | **47** |
 | 未claim Research job | **47** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-20 00:48:02 JST（53分前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-20 01:42:00 JST（6秒前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **48** |
+| canonical_id確認済みの一意な候補論文 | **47** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **48** |
+| 非終端Research job合計 | **47** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **13** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **66** | **5** | **4** | **1** | **1** | **0** | **0** |
+| 合計 | **67** | **5** | **5** | **0** | **0** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 01:42:00 JST** [research] `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
+  - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
+  - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
 - **09-20 00:48:02 JST** [research] `arXiv:2505.21889` — EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-8ff9887a327d8124.json`
   - result: `.survey/work-queue/results/research/attempt-f914ad852b23c42a60113aaf.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-86ffe82b1cb0e347b528f5b0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-86ffe82b1cb0e347b528f5b0.json`
   - paper: `papers/inference/08-speculative-decoding/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md`
-- **09-19 21:44:18 JST** [research] `arXiv:2506.10443` — MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices
-  - job: `.survey/work-queue/jobs/job-research-3ae1410a48dc456e.json`
-  - result: `.survey/work-queue/results/research/attempt-83b90f0b9afa469d0eb73d37.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-83b90f0b9afa469d0eb73d37.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md`
 
 ### Audit
 
@@ -151,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 01:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json` (job `job-research-7353bc1b63a704fc`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
+  - job: `.survey/work-queue/jobs/job-research-7353bc1b63a704fc.json`
+  - result: `.survey/work-queue/results/research/attempt-257fe813bf991760822038e3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-257fe813bf991760822038e3.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md`
 
 #### Audit (:30)
 
@@ -186,10 +190,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 01:40:23 JST** / heartbeat: **—** / lease expiry: **09-20 03:10:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7353bc1b63a704fc.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -209,7 +211,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **48** |
+| ready | **47** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +231,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **771** |
+| inference/training/survey配下の論文Markdown実体 | **772** |
 
 ### immutable submissionの未照合
 
@@ -237,8 +239,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **640** |
-| └ Research | **491** |
+| 成功result未照合のimmutable submission | **639** |
+| └ Research | **490** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **2** |
