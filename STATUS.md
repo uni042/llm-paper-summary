@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:36:03 JST**
+> 自動生成: **2026-09-19 22:36:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **51** |
+| 収録候補論文 | **50** |
 | 未claim Research job | **50** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-19 21:52:39 JST（43分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-19 22:36:16 JST（5秒前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **51** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **51** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **0** | **1** | **1** | **0** | — |
+| Research | **13** | **2** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **73** | **18** | **18** | **0** | **0** | **0** | **30** |
-| 合計 | **85** | **20** | **18** | **1** | **1** | **0** | **30** |
+| 合計 | **86** | **20** | **19** | **0** | **0** | **0** | **30** |
 
 - 最新Discovery runの耐久探索round: **18件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-19 22:36:16 JST** [research] `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
+  - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
+  - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md`
 - **09-19 21:52:39 JST** [research] `arXiv:2609.15021` — Shared KV Caching for Replicated 27B Inference: Correctness Failures and Performance Boundaries
   - job: `.survey/work-queue/jobs/job-research-0bb313ba6c58f22b.json`
   - result: `.survey/work-queue/results/research/attempt-e7ba10673d975ae5c16659a8.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-cf5ac77834bd3c3ec6c8a715.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cf5ac77834bd3c3ec6c8a715.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md`
-- **09-19 18:42:15 JST** [research] `arXiv:2401.11240` — CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-49ee16176ca66925.json`
-  - result: `.survey/work-queue/results/research/attempt-aad8189707bf1017dc2b3caf.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-aad8189707bf1017dc2b3caf.json`
-  - paper: `papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md`
 
 ### Audit
 
@@ -151,8 +151,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json` (job `job-research-a6905e04777fde1f`)
+- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **成功** `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution
+  - job: `.survey/work-queue/jobs/job-research-a6905e04777fde1f.json`
+  - result: `.survey/work-queue/results/research/attempt-22ad7565c9d243223bc06f67.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-22ad7565c9d243223bc06f67.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-52fd234ea45de5f63b71cc39.json` (job `job-research-2dcd265cd3f3852c`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-52fd234ea45de5f63b71cc39.json` (`ok=false`)
 
@@ -212,10 +216,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.18675` — HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:34:37 JST** / heartbeat: **—** / lease expiry: **09-20 00:04:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a6905e04777fde1f.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -235,7 +237,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **51** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -255,7 +257,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **764** |
+| inference/training/survey配下の論文Markdown実体 | **765** |
 
 ### immutable submissionの未照合
 
@@ -263,8 +265,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **627** |
-| └ Research | **480** |
+| 成功result未照合のimmutable submission | **626** |
+| └ Research | **479** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 

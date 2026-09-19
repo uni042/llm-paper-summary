@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T13:10:23.482996+00:00",
+  "updated_at": "2026-09-19T13:36:21.829607+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T13:10:23.482996+00:00",
+      "last_recorded_at": "2026-09-19T13:36:21.829607+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 300,
+        "research_completed": 301,
         "audit_completed": 0,
         "discovery_completed": 188,
         "blocked": 38,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35382096580:1",
-          "recorded_at": "2026-09-18T18:46:36.047832+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35382096580",
-            "run_attempt": "1",
-            "source_sha": "cac1659088262074766b9431ed7d6a6d69c7c657"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35382219417:1",
           "recorded_at": "2026-09-18T18:47:41.691030+00:00",
@@ -19595,6 +19581,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35446218265:1",
+          "recorded_at": "2026-09-19T13:36:21.829607+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35446218265",
+            "run_attempt": "1",
+            "source_sha": "88bd1266fb6f42d0e4f763c14b1f7dbbf46a99a6"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23806,6 +23806,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-a6905e04777fde1f",
+          "type": "research",
+          "canonical_id": "arXiv:2609.18675",
+          "title": "HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26500,7 +26508,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 764,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
