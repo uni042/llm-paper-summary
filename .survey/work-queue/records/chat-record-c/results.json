@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-1a88ffa8349a43c660f5f730",
-  "job_id": "job-research-188f6649e816eaae",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a88ffa8349a43c660f5f730",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1a88ffa8349a43c660f5f730","job_id":"job-research-188f6649e816eaae","data":{"overview":"Scepsyは個別LLMを独立配置する方式やユーザー指定配置に対し、同一GPU予算で最大2.4倍のピークスループット、同一スループットで最大27倍低い平均ワークフロー遅延を報告する。Aegaeon比較ではビーム探索で4 GPU時7.3倍、8 GPU時6.8倍のスループット、遅延は14.1倍・12.9倍改善した。RAGではスループット2.5倍・2.9倍、遅延3.4倍・4.5倍改善した。","key_results":[{"metric":"最大ピークスループット改善","value":"最大2.4×","baseline":"個別LLM最適化またはユーザー指定割り当て","condition":"同一GPU予算、現実的エージェントワークロード","interpretation":"LLM間の相対需要を共同最適化し、ボトルネックへ複製・並列資源を再配分する効果。"},{"metric":"最大平均遅延改善","value":"最大27×低減","baseline":"既存複数LLM/ワークフロー配置","condition":"同一目標スループット","interpretation":"余剰GPUを重要LLMのテンソル並列へ回し、ワークフロー全体の臨界経路を短縮する。"},{"metric":"Aegaeon対ビーム探索","value":"4 GPU 7.3×、8 GPU 6.8×高スループット; 遅延14.1×、12.9×改善","baseline":"Aegaeonの複数配置構成","condition":"ビーム探索","interpretation":"固定的なモデル単位多重化よりワークフロー需要に沿う配置が有利。"},{"metric":"Aegaeon対RAG","value":"4 GPU 2.5×、8 GPU 2.9×高スループット; 遅延3.4×、4.5×改善","baseline":"Aegaeon","condition":"RAG+reranker","interpretation":"異種LLMの負荷比を考慮することでRAG系でも改善する。"},{"metric":"Ayo対スループット","value":"ビーム探索3.2×/8.2×、RAG 2.1×/2.4×","baseline":"Ayo","condition":"4 GPU / 8 GPU","interpretation":"要求単位スケジューリングだけでなくGPU割り当て自体を到着率へ適応させる効果を示す。"}],"negative_results":"低到着率の遅延重視領域ではAyoの要求バッチ化等が一部点でScepsyをわずかに上回る。異なるLLM同士が同時にファンアウトする場合、現在の集約パイプラインは直列段として近似するため遅延を誤モデル化する。LLMが複数役割・複数ワークフローで再利用され二峰性負荷になる場合も単一集約分布では配置が最適でなくなる。長時間ツール処理は現在無視されるため、それが支配的なワークフローでは予測誤差が増える。","interpretation":"動的エージェント処理のすべての分岐を予測する必要はなく、定常状態のLLM別需要比だけでも資源配分には十分な情報を持つことを示す。これにより複雑なワークフロー解析を避けつつ、複製・テンソル並列・空間共有を同じ目的関数で選べる。","quality_impact":"モデルやエージェントアルゴリズムを変更しないため出力品質への近似は導入しない。性能改善は資源割り当てと配置によるもので、品質は元ワークフローに依存する。"},"reservation":{"claim_id":"claim-1a88ffa8349a43c660f5f730","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
