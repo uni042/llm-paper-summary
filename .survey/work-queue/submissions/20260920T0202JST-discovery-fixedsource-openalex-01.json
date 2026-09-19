@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.16450",
+      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+      "source_url": "https://arxiv.org/abs/2609.16450",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16450-early-bird-decoding.md",
+      "priority": 90,
+      "reason": "Diffusion LLM inference向けに可変長blockとposition-aware parallel samplingを導入し、pretrained weightsを変更せずservingへ組み込める。3 models/4 benchmarksでvanilla比3.53-18.76x throughput、強いbaseline Fast-dLLM比でも最大1.58xを報告しており、推論高速化の新規システム候補として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.14864",
+      "title": "GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems",
+      "source_url": "https://arxiv.org/abs/2609.14864",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14864-gguf-metadata-llama-cpp-throughput.md",
+      "priority": 82,
+      "reason": "GGUF metadataとroofline-shaped predictorからllama.cppのsingle-sequence throughputを予測し、Apple M4 Max 2系統とRTX 5080で実測評価する。llama.cpp・量子化・consumer hardwareの性能モデリングとして推論基盤系統を補完する。"
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
+      "title": "Component-aware self-speculative decoding for hybrid language models: An architectural viability study",
+      "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111505",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md",
+      "priority": 80,
+      "reason": "Hybrid LM内部のSSM/linear-attention subgraphをdrafterとして使うtraining-free self-speculative decodingを実測し、Qwen3.5/Falcon-H1系でarchitecture依存のacceptanceと実行stack上の限界を定量化する。最良theoretical speedupが0.986xというnegative resultも含め、hybrid推論最適化の設計境界として価値がある。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "DOI:10.30687/jolma/2723-9640/2026/01",
+      "title": "7 | 1 | 2026 Spinoza on Language",
+      "source_url": "https://doi.org/10.30687/jolma/2723-9640/2026/01",
+      "rejection_reason": "LLM推論システム研究ではなく対象外。"
+    },
+    {
+      "canonical_id": "DOI:10.1007/s10791-026-10449-7",
+      "title": "Cost efficient multimodal LLM deployment integrating tokenization economics MLOps and FinOps environments",
+      "source_url": "https://doi.org/10.1007/s10791-026-10449-7",
+      "rejection_reason": "MLOps/FinOps運用論が中心で、重点対象の具体的推論機構・runtime最適化の新規性が弱い。"
+    },
+    {
+      "canonical_id": "arXiv:2401.00625",
+      "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+      "source_url": "https://doi.org/10.1145/3845797",
+      "rejection_reason": "体系的surveyであり、新規推論システム機構の候補ではない。"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3847111",
+      "title": "Survey on Verifiable Machine Learning",
+      "source_url": "https://doi.org/10.1145/3847111",
+      "rejection_reason": "Verifiable ML surveyであり対象外。"
+    },
+    {
+      "canonical_id": "arXiv:2502.08363",
+      "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+      "source_url": "https://doi.org/10.1007/978-3-032-38398-3_54",
+      "rejection_reason": "主貢献がattention sparsification algorithmで、今回の推論system/runtime候補としては優先度が低い。"
+    },
+    {
+      "canonical_id": "DOI:10.21427/zs9c-0w38",
+      "title": "Optimizing Few-Shot Learning in Pruned Large Language Models with Task-Specific Prompts",
+      "source_url": "https://arrow.tudublin.ie/scschcomdis/289",
+      "rejection_reason": "few-shot prompting/モデルpruning評価が中心で推論基盤対象外。"
+    },
+    {
+      "canonical_id": "DOI:10.1038/s41598-026-71065-5",
+      "title": "Uncertainty-aware Bayesian federated learning for low-resource neural machine translation at the edge",
+      "source_url": "https://doi.org/10.1038/s41598-026-71065-5",
+      "rejection_reason": "federated learning/NMT研究でありLLM inference system対象外。"
+    },
+    {
+      "canonical_id": "arXiv:2609.15664",
+      "title": "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+      "source_url": "https://arxiv.org/abs/2609.15664",
+      "rejection_reason": "主対象がcollaborative learning/bilevel optimizationで、推論システム調査の対象外。"
+    },
+    {
+      "canonical_id": "arXiv:2609.15982",
+      "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+      "source_url": "https://arxiv.org/abs/2609.15982",
+      "rejection_reason": "skill routing/model behaviorが中心で、MoE expert placementやserving runtimeのroutingではないため対象外。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-fixedsource-openalex-20260920T0159JST",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-fixedsource-openalex-20260920T0159JST.json",
+    "receipt": "sha256:3b844956f08afc9f7f84b040743f5b78f6f27acc909e210e98da937c06f56dd2"
+  },
+  "discovery_stats": {
+    "run_key": "2026-09-20T01:00:00+09:00",
+    "round": "fixedsource-openalex-01",
+    "axis": "OpenAlex search: LLM inference serving KV cache",
+    "query_summary": "OpenAlexの単一固定検索結果URLをschema-v3 precheckへ渡し、page_size=5で同一cursor集合を3ページ走査。raw 15件からauthoritative identity precheckで既収録3件を除外し、未収録12件を軽量評価して強候補3件を送信した。",
+    "candidate_count": 12,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次roundは同一検索URLの続きではなく、別collectorとして重要serving論文のforward citationまたはMoE expert offloadの固定検索結果集合を開始する。",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "llm-inference-serving-kv-cache",
+        "source": "openalex",
+        "date_range": "2025-01-01..2026-09-20",
+        "category": "inference-serving",
+        "citation_direction": "none",
+        "query_family": "large-language-model-inference-serving-kv-cache",
+        "raw_result_count": 15,
+        "unseen_result_count": 12,
+        "duplicate_filtered_count": 3,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 12,
+        "candidate_accepted_count": 3,
+        "position": "cursor-after-page-3"
+      }
+    ]
+  }
+}
