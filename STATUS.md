@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:03:36 JST**
+> 自動生成: **2026-09-19 23:04:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **49** |
 | 未claim Research job | **48** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 22:37:55 JST（25分前）** |
+| 最終検証済みResearch収録 | **09-19 22:37:55 JST（26分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **73** | **2** | **0** | **2** | **0** | **0** | **6** |
-| 合計 | **87** | **5** | **2** | **2** | **1** | **0** | **6** |
+| Discovery | **72** | **3** | **0** | **3** | **0** | **0** | **9** |
+| 合計 | **86** | **6** | **2** | **3** | **1** | **0** | **9** |
 
-- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 23:00 JST**
-- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **2件** / 候補: **6件**
-- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **9件**
+- 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime / CXL共有KV・sparse attention remote memory・SmartNIC prefix caching / MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation
 - round `specialist-memory-runtime-1` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json`
   - 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime
@@ -183,6 +183,10 @@
 - round `specialist-cxl-network-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2308JST-discovery-specialist-cxl-network-2.json`
   - 探索軸: CXL共有KV・sparse attention remote memory・SmartNIC prefix caching
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `specialist-moe-offload-3` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260919T2313JST-discovery-specialist-moe-offload-3.json`
+  - 探索軸: MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -240,10 +244,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **629** |
+| 成功result未照合のimmutable submission | **630** |
 | └ Research | **480** |
 | └ Audit | **2** |
-| └ Discovery | **147** |
+| └ Discovery | **148** |
 
 ### 厳格検証が未成立のcompleted job
 
