@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 04:16:06 JST**
+> 自動生成: **2026-09-20 04:16:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -187,7 +187,7 @@
 
 - 未失効かつ非terminal jobのclaim: **5件** / 直近15分heartbeat: **0件**
 - `arXiv:2205.14135` — FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness / worker `scheduled-chat-discovery-routing`
-  - claim: **09-20 04:13:39 JST** / heartbeat: **—** / lease expiry: **09-20 05:43:39 JST**
+  - claim: **09-20 04:16:29 JST** / heartbeat: **—** / lease expiry: **09-20 05:46:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-25491a773c352e2c.json`
 - `arXiv:2211.17192` — Fast Inference from Transformers via Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 03:29:29 JST** / heartbeat: **09-20 04:00:01 JST** / lease expiry: **09-20 05:30:01 JST**
