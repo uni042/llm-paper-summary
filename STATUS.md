@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:47:28 JST**
+> 自動生成: **2026-09-20 06:47:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **91** |
-| 未claim Research job | **90** |
-| 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-20 06:44:57 JST（2分前）** |
+| 収録候補論文 | **90** |
+| 未claim Research job | **89** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-20 06:47:50 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **91** |
+| canonical_id確認済みの一意な候補論文 | **90** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **91** |
+| 非終端Research job合計 | **90** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **2** | **1** | **1** | **0** | — |
+| Research | **13** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **6** | **3** | **1** | **1** | **0** | **5** |
+| 合計 | **20** | **5** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 06:47:50 JST** [research] `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills
+  - job: `.survey/work-queue/jobs/job-research-576a090cf3d34dc3.json`
+  - result: `.survey/work-queue/results/research/attempt-aabaad10b18cbdb1c36dc544.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-aabaad10b18cbdb1c36dc544.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md`
 - **09-20 06:44:57 JST** [research] `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading
   - job: `.survey/work-queue/jobs/job-research-ac3d391d822b215f.json`
   - result: `.survey/work-queue/results/research/attempt-fa744ec1780cd6efcfcf4336.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-cdfba8deb741b6462d744e41.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cdfba8deb741b6462d744e41.json`
   - paper: `papers/inference/02-moe-expert-placement-caching/2026-2609.13537-dynamic-hbm-repartitioning.md`
-- **09-20 01:51:54 JST** [research] `arXiv:2505.09142` — ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor
-  - job: `.survey/work-queue/jobs/job-research-153b45adc3c50a28.json`
-  - result: `.survey/work-queue/results/research/attempt-f61b26d21a391bc924304828.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f61b26d21a391bc924304828.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md`
 
 ### Audit
 
@@ -139,12 +139,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **2件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-292a5f32d168fabd11a080be.json` (job `job-research-7462825d21914fcd`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-292a5f32d168fabd11a080be.json` (`ok=false`)
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-aabaad10b18cbdb1c36dc544.json` (job `job-research-576a090cf3d34dc3`)
+- **成功** `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills
+  - job: `.survey/work-queue/jobs/job-research-576a090cf3d34dc3.json`
+  - result: `.survey/work-queue/results/research/attempt-aabaad10b18cbdb1c36dc544.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-aabaad10b18cbdb1c36dc544.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md`
 - **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
@@ -177,9 +179,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:46:38 JST** / heartbeat: **—** / lease expiry: **09-20 08:16:38 JST**
-  - evidence: `.survey/work-queue/claims/job-research-576a090cf3d34dc3.json`
+- `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:47:44 JST** / heartbeat: **—** / lease expiry: **09-20 08:17:44 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7462825d21914fcd.json`
 
 #### Audit
 
@@ -199,7 +201,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **91** |
+| ready | **90** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +221,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **782** |
+| inference/training/survey配下の論文Markdown実体 | **783** |
 
 ### immutable submissionの未照合
 
@@ -227,8 +229,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **673** |
-| └ Research | **512** |
+| 成功result未照合のimmutable submission | **672** |
+| └ Research | **511** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
