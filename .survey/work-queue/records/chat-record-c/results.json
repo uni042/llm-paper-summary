@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bbe39256ef1a577ca7b375df","job_id":"job-research-8f1455c9a8468d9c","data":{"overview":"200 Gbps InfiniBandに対する平均高速化はAllGather 1.34倍、Broadcast 1.84倍、Gather 1.94倍、Scatter 1.07倍、AllReduce 1.50倍、ReduceScatter 1.43倍、Reduce 1.70倍、AllToAll 1.53倍と報告される。利点は複数CXLカードの合計帯域を使い、書込みと読出しを重ねられる大きな通信で出やすい。一方、小メッセージでは細粒度cudaMemcpyと同期の固定費が効き、ReduceScatterやScatter、AllToAllの一部条件ではInfiniBandを下回る。ノード数増加時のAllReduceは各ランクが全データを個別に読み削減するため、リング型の中間結果再利用ができず拡張性が弱い。","key_results":[{"metric":"8種の集団通信の平均高速化","value":"AllGather 1.34倍、Broadcast 1.84倍、Gather 1.94倍、Scatter 1.07倍、AllReduce 1.50倍、ReduceScatter 1.43倍、Reduce 1.70倍、AllToAll 1.53倍","baseline":"200 Gbps InfiniBand上のRDMA型実装","condition":"1MB〜4GBの可変メッセージ、CXL-CCL完全版","interpretation":"規則的配置で機器競合を避け、細粒度の公開・取得重畳で共有プールの合計帯域を通信ファブリックとして利用できる。"},{"metric":"Llama-3-8B FSDP学習","value":"1.11倍高速化、相互接続ハードウェア費2.75倍低減","baseline":"200 Gbps InfiniBand","condition":"Wikipediaデータセット、AllGatherとReduceScatterを用いる分散学習","interpretation":"単体通信だけでなく実際のLLM学習でも通信改善が全体性能へ反映され、CXLスイッチの価格差が設備費低減につながる。"},{"metric":"チャンク数感度","value":"最大約9%の性能変動、4または8チャンクが良好","baseline":"1チャンクなど粗粒度設定","condition":"AllGather、1GBメッセージ","interpretation":"分割が少なすぎると書込み後読出し依存が長く残り重畳できないが、過度な細粒度化にも固定費があるため適切な粒度が必要。"}],"negative_results":"小メッセージではcudaMemcpy呼出しと同期の固定費が相対的に大きく、ReduceScatterはInfiniBand比0.48倍、Scatterは0.46倍、AllToAllは0.7倍まで低下する条件がある。AllReduceは256MB超で平均約1.05倍に留まる条件があり、リング型InfiniBandが中間削減結果を再利用できるのに対しCXL-CCLは各ランクが全データを読むためである。3から6ノードへのAllReduce拡張で時間は2.1〜3.0倍、12ノードでは8.7〜12.2倍に増え、6枚のCXL機器への競合が深刻化する。","interpretation":"CXL共有メモリ方式はネットワーク処理をメモリコピーへ置き換えるだけでは十分でなく、複数機器への配置と生産者・消費者重畳が性能の鍵になる。大きな転送では固定費を償却しやすく、複数カードの帯域を生かせるが、小転送と全ランク全データ読出し型の演算ではGPUコピー起動や共有機器競合が支配的になる。","quality_impact":"通信層の変更であり、モデルの数値精度や生成品質を近似化する方式ではない。評価対象の集団通信意味論とFSDP学習処理を維持したまま通信時間と設備費を比較している。"},"reservation":{"claim_id":"claim-bbe39256ef1a577ca7b375df","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-7aff70bfd2cb5f9104c750c1",
+  "job_id": "job-research-3ae1410a48dc456e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7aff70bfd2cb5f9104c750c1",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
+}

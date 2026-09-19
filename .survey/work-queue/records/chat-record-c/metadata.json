@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bbe39256ef1a577ca7b375df","job_id":"job-research-8f1455c9a8468d9c","data":{"canonical_id":"DOI:10.1145/3797905.3807846","arxiv_id":null,"doi":"10.1145/3797905.3807846","openreview_id":null,"title":"CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool","summary":"複数ノードのGPU集団通信をRDMAネットワークだけに依存せず、CXL共有メモリプールへの書込みと読出しで実現する通信ライブラリ。CXL機器間にハードウェア細粒度インターリーブがなく、送信側の書込み完了を受信側が安全に知れず、書込み後読出し依存で並列性が落ちる問題に対し、規則的な通信パターンを使ったソフトウェア配置、細粒度分割による書込み・読出し重畳、共有メモリ上の軽量ドアベル同期を組み合わせる。実機CXLスイッチと6枚のメモリカードで200 Gbps InfiniBandと比較し、多くの集団通信とLlama-3-8B学習で高速化を示す。","list_summary":"CXL共有メモリをノード間GPU集団通信の媒体として使い、データ配置・細粒度重畳・ドアベル同期でRDMA型通信に対する性能とコストを改善する。","authors":["Dong Xu","Han Meng","Xinyu Chen","Dengcheng Zhu","Wei Tang","Fei Liu","Liguang Xie","Wu Xiang","Rui Shi","Yue Li","Henry Hu","Hui Zhang","Jianping Jiang","Dong Li"],"authors_affiliations":"ACM ICS 2026掲載情報を確認。","published":"2026-07-05","publication":"Proceedings of the 40th ACM International Conference on Supercomputing (ICS 2026)","publication_type":"Conference Paper","publication_status":"Published","lineage":"CXL shared memory / GPU collective communication / distributed LLM systems","topics":["CXL共有メモリ","GPU集団通信","分散LLM","メモリ中心通信"],"importance":"CXLメモリプールを容量拡張やKV保存だけでなく、GPU間通信ファブリックとして直接利用する実機システム研究。","hardware_evaluation":"Intel Xeon 6960P、NVIDIA H100 80GB、TITAN-II CXLスイッチ、Micron CZ120 CXL Type-3カード6枚を用いた実機評価。","quality_effect":"通信基盤の変更でありモデル出力品質は変更しない。学習ケースでは同じLlama-3-8B FSDP学習の通信時間を短縮する。","source":"https://doi.org/10.1145/3797905.3807846","sources":["https://doi.org/10.1145/3797905.3807846","https://dl.acm.org/doi/10.1145/3797905.3807846"],"code":null,"implementation":"NCCL 2.28.3を基に1020行で実装し、既存30行を変更、980行を追加。研究用途でありByteDance製品には組み込まれていないと明記される。公開コードURLは確認できなかった。","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":73},"reservation":{"claim_id":"claim-bbe39256ef1a577ca7b375df","worker_id":"scheduled-chat-llm-survey-2130","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7aff70bfd2cb5f9104c750c1",
+  "job_id": "job-research-3ae1410a48dc456e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7aff70bfd2cb5f9104c750c1",
+    "worker_id": "scheduled-chat-llm-survey-2130",
+    "worker_kind": "scheduled_chat"
+  }
+}
