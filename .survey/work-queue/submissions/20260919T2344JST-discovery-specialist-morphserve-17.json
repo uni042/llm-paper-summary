@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2506.02006",
+      "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing",
+      "source_url": "https://arxiv.org/abs/2506.02006",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2506.02006-morphserve.md",
+      "priority": 85,
+      "reason": "MorphServe dynamically swaps selected layers to quantized alternatives and resizes KV capacity at token granularity under load while preserving state; real-workload evaluation reports 92.45% fewer SLO violations and 2.2-3.9x P95 TTFT improvement without generation-quality loss."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T22:00:00+09:00",
+    "round": "specialist-morphserve-17",
+    "axis": "workload-aware runtime adaptation・quantized layer swapping・KV resizing",
+    "query_summary": "resilience/routingからKV compression/reuseとruntime adaptationへ移った。MorphServeは動的負荷に応じたlayer/KV状態変更をsystemsとして実装・評価しており、canonical ID/titleをdefault branchで再検索して未収録を確認した。FastCacheはMLLM寄り、C2KVは学習方式寄りのため今回の強いsystems候補から外した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "batching/admission control、request length prediction、then inference cost modelingへ移る",
+    "empty_round_reason": null
+  }
+}
