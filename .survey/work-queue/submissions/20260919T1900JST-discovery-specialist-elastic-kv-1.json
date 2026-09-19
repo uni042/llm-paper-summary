@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "priority": 78,
+      "reason": "LLM serving memory management systems paper with a concrete CUDA virtual-memory reclamation mechanism, scheduler integration, real implementation, and controlled evaluation. It directly studies reclaiming prefill reserve for KV cache and reports both mechanism costs and an important negative result versus chunked prefill."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-elastic-kv-1",
+    "axis": "KV cache dynamic reclamation / CUDA virtual memory / serving memory management",
+    "query_summary": "Searched recent LLM serving KV-cache memory-management work after excluding recent high-overlap hierarchical-memory and heterogeneous-runtime axes. arXiv:2608.23658 was not found in repository code search and was selected based on its implemented CUDA VMM mechanism and measured serving evaluation.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "novel_candidate_count": 1,
+    "accepted_count": 1,
+    "duplicate_ratio": 0.75,
+    "accepted_canonical_ids": ["arXiv:2608.23658"],
+    "duplicate_canonical_ids": ["arXiv:2606.16135", "arXiv:2607.16892", "arXiv:2606.06302"],
+    "next_axis_hint": "Move to GPU memory allocator / virtual-memory / paging work adjacent to serving, then recent scheduler-memory co-design rather than repeating heterogeneous KV tiering."
+  }
+}
