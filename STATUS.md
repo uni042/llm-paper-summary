@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:09:28 JST**
+> 自動生成: **2026-09-19 23:32:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **52** |
 | 未claim Research job | **51** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-19 22:37:55 JST（31分前）** |
+| 最終検証済みResearch収録 | **09-19 22:37:55 JST（54分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -222,9 +222,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2512.03416` — TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity / worker `scheduled-chat-llm-survey`
-  - claim: **09-19 22:37:49 JST** / heartbeat: **—** / lease expiry: **09-20 00:07:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9c4412ae5a3ea169.json`
+- `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI / worker `scheduled-chat-llm-survey`
+  - claim: **09-19 23:32:24 JST** / heartbeat: **—** / lease expiry: **09-20 01:02:24 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ca62fa2224d4eac8.json`
 
 #### Audit
 
