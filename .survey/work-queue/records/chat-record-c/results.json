@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-077c5dd04f678c8541964e90",
-  "job_id": "job-research-a6905e04777fde1f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-077c5dd04f678c8541964e90",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-077c5dd04f678c8541964e90","job_id":"job-research-a6905e04777fde1f","data":{"overview":"HBFlexは同一package-area予算でHBF資源を最大化し、FlashAccelとH3を上回る。高concurrencyほど容量とKV管理の効果が増え、read balancingが最大の寄与を持つ。writebackはcritical-path stallをほぼ消し、lifetime-aware reclamationはWAFをほぼ1へ下げる。","key_results":[{"metric":"平均throughput speedup","value":"最大1.58× vs FlashAccel、3.30× vs H3","baseline":"FA-CSI/FA-CLI/H3","condition":"SWE-bench、高concurrency側を含む評価","interpretation":"全HBF資源と動的KV管理の共同効果。"},{"metric":"production latency","value":"TTFT 1.20×/1.33×、TPOT 1.21×/1.35× vs FA-CLI/FA-CSI","baseline":"FlashAccel","condition":"4モデル×4 Bailian tracesの幾何平均","interpretation":"weight/KV双方のmemory service改善。"},{"metric":"read-wave amplification","value":"5.97×→3.95×→2.25×","baseline":"random→plane-balanced→+runtime balancing","condition":"DeepSeek-V3/Qwen3-235B、全model-concurrency構成平均","interpretation":"配置とruntime accessの両方を平準化する必要性を示す。"},{"metric":"write stall","value":"4.54ms→69.12us→約0.003us/iteration","baseline":"immediate→stripe→window-aware writeback","condition":"DeepSeek-V4-Pro、Bailian+SWE-bench","interpretation":"program latency自体を変えず計算へほぼ完全に隠蔽。"},{"metric":"GC write amplification","value":"11.98×→1.24×→1.04×","baseline":"baseline→lifetime packing→+deferred reclamation","condition":"DeepSeek-V3/Qwen3-235B、4 Bailian traces","interpretation":"完全方式で平均89.39%削減しendurance負担を大幅低減。"}],"negative_results":"window-aware writebackのend-to-end throughput追加利得は約0.02×と小さい。hot-plane offloadは10%を超えるとbalance改善が飽和する一方SRAM使用量が増える。評価は実HBF hardwareではなくsimulationである。","interpretation":"性能の主因はplane-balanced placementとruntime read balancingで、writebackとGC最適化は主に干渉除去と耐久性を支える。全HBF化だけでなく、NAND粒度へKV管理を合わせることが重要である。","quality_impact":"推論アルゴリズムやモデル精度を近似せず、メモリ配置・schedule・reclamationを変更するため、報告された効果は主に性能・容量・enduranceである。"},"reservation":{"claim_id":"claim-077c5dd04f678c8541964e90","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
