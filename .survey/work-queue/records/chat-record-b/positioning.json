@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-292a5f32d168fabd11a080be","job_id":"job-research-7462825d21914fcd","data":{"limitations":"計算量は依然O(N²d)で、長文脈のattention FLOPsそのものを削減する方式ではない。主要tuningはA100とhead dimension 64/128を中心に行われ、block sizeは手動選択である。H100ではTMA、4th-generation Tensor Cores、FP8を使っておらず、著者自身が追加1.5〜2倍の最適化余地を見込む。論文のE2E評価はtraining中心で、LLM servingのdecode latency、KV-cache管理、continuous batchingとの相互作用は直接評価されていない。","differences":"Standard attentionはS=QK^TとP=softmax(S)をN×NでHBMへmaterializeする。初代FlashAttentionはtilingとonline softmaxでこれを避け、HBM I/Oとmemoryを大幅削減した。FlashAttention-2はこのI/O-aware algorithmを置き換えるのではなく、I/O削減後に顕在化したGPU execution inefficiencyを対象にする。具体的にはsequence方向thread-block parallelismとQ-split warp partitioningが新しく、初代のbatch/head parallelismとsplit-K reductionを改善する。近似attentionやsparse attentionと異なり、計算するattention自体はexactである。","implementation_status":"公式CUDA実装がDao-AILab/flash-attentionで公開され、論文時点でcausal attention、forward/backward、MQA/GQAを扱う。A100で詳細benchmarkし、H100でも同一実装を測定している。arXiv v1（2023-07-17）のプレプリントで、実装は後続フレームワークに広く統合可能なkernel libraryとして提供される。","research_positioning":"長文脈attention最適化の中で、FlashAttentionがmemory hierarchy/I/O complexityを主題にしたのに対し、FlashAttention-2はGPU scheduler hierarchyに焦点を一段深めた仕事である。HBM↔SRAM、thread blocks↔SM、warps↔shared memoryという複数階層をそれぞれ最適化し、exact attentionのhardware efficiencyをGEMMへ近づける。LLM inferenceではprefill attention高速化の基盤kernelとして重要だが、decodeではKV-cacheアクセスと小query形状が異なるためserving-specific kernel研究とは区別される。"},"reservation":{"claim_id":"claim-292a5f32d168fabd11a080be","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-aabaad10b18cbdb1c36dc544",
+  "job_id": "job-research-576a090cf3d34dc3",
+  "data": {
+    "limitations": "Sarathiはthroughput中心の実行層最適化で、オンラインサービングの待ち行列遅延、TTFT/TBT SLO、公平性、preemptionは設計目標に含めない。最適chunk sizeはモデル、GPU、系列長、P:D比、タイルサイズに依存し、論文ではP:D比が事前に分かる前提の分析が多い。単一GPU実験の多くはbatch内要求が同じprefill/decode長という単純化を置く。実機評価は最大3K系列で、10K〜100K級長文脈ではattention二次コストとKV再読込みが支配的になり、線形演算融合の相対利得が低下し得る。64 A100のGPT-3結果は実機クラスタではなく、8GPU実測で5%以内を確認したプロファイル駆動simulationである。",
+    "differences": "FasterTransformer型のrequest-level batchingはbatch完了まで構成を固定し、Orca/vLLM型のiteration-level schedulingは各反復で要求を入れ替えるが、通常は新規要求のprefill全体を一度に投入する。Sarathiはprefill自体を複数反復へ分割するため、decodeと混ぜる機会を意図的に増やす。Orcaのprefill/decode overlapが到着時刻の副作用なのに対し、Sarathiは一つのprefill chunkと最大数のdecodeというbatch形状を明示的に作る。vLLM/PagedAttentionはKVメモリ割当を改善してbatch容量を増やす補完技術であり、Sarathiは同じ容量の中でtoken構成と演算融合を最適化する。FlashAttention/xFormersはattention kernel自体を高速化する補完技術で、Sarathiの主利得はQKV/O/FFNなど線形演算の重み再利用から来る。",
+    "implementation_status": "nanoGPTベースの研究実装でchunked-prefills、decode-maximal batching、混合線形演算、xFormers attention、事前確保KV cacheを実装している。LLaMA-13B/33Bは実GPUで測定し、GPT-3 PPは実測プロファイルから構築したsimulatorで評価する。arXiv v1（2023-08-31）のプレプリントで、arXivメタデータから公式コードURLは確認できなかった。",
+    "research_positioning": "LLMサービングのスケジューリング研究において、Sarathiはprefill/decodeを別フェーズとして分離するのではなく、両者の資源特性を同じGPU反復内で相補利用する系統に位置する。後のchunked prefill、continuous batching、prefill prioritization研究に重要な設計点を与える。特に『prefillを分割するとTTFTを平滑化できる』だけでなく、『compute-bound prefillへmemory-bound decodeをpiggybackして重み帯域を共有する』という機構を定量化し、pipeline parallelismのuniform micro-batchにも結び付けた点が特徴である。"
+  },
+  "reservation": {
+    "claim_id": "claim-aabaad10b18cbdb1c36dc544",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

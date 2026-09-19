@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-292a5f32d168fabd11a080be","job_id":"job-research-7462825d21914fcd","data":{"problem":"Standard attention materializes N×N score/probability matrices in HBM, making memory and I/O quadratic in sequence length. FlashAttention eliminates these intermediates with tiling and online softmax, but its first implementation still reaches only roughly 25〜50% of A100 theoretical throughput because expensive non-matmul FP32 operations remain, long-sequence/small-batch cases expose too few thread blocks, and split-K warp partitioning forces intermediate writes, synchronization, and reads through shared memory.","novelty":"FlashAttention-2 preserves exact tiled attention while attacking GPU execution inefficiencies left after I/O reduction. It delays output rescaling and stores only logsumexp to reduce non-matmul FLOPs, parallelizes along sequence blocks in addition to batch/head dimensions to raise SM occupancy, and changes intra-block warp partitioning from splitting K/V to splitting Q so each warp owns its output slice and avoids cross-warp reductions. It also supports causal masking, MQA and GQA without explicit KV duplication.","method_overview":"Inputs Q,K,V reside in HBM. The forward kernel partitions Q into row blocks and K/V into column blocks. Each thread block owns a Q row block, loads it to SRAM, then streams K/V blocks from HBM. For every tile it computes QK^T with Tensor-Core-friendly matmul, updates running row maximum and exponential sum for online softmax, and accumulates an unscaled output tile times V. Instead of repeatedly normalizing the output, it keeps the output unscaled until all K/V tiles are consumed, then performs one final normalization and writes output O plus row-wise logsumexp L to HBM. This computes exactly softmax(QK^T)V without materializing N×N S or P. Across the GPU, independent Q row blocks are scheduled as separate thread blocks, adding sequence-length parallelism when batch×heads is too small to fill SMs. Within each block, warps split Q rows while sharing K/V, so each warp accumulates a distinct output slice without shared-memory reduction. Backward reloads Q/K/V/O/dO and L, recomputes attention probabilities on chip, accumulates dQ/dK/dV, and parallelizes column blocks with atomic additions for shared dQ. The result is the same attention output/gradients with O(N) auxiliary memory but higher occupancy, fewer non-matmul operations, and less shared-memory traffic.","components":[{"name":"非行列積演算の削減","description":"A100ではFP16/BF16 Tensor Core matmulの理論性能が312 TFLOPs/sなのに対し非matmul FP32は19.5 TFLOPs/s程度なので、少数のscalar/vector操作でも高価になる。FlashAttention-2は各tileでoutputを正規化せずunscaled accumulatorを維持し、loop終了時だけ最終scaleを適用する。またbackward用にrow maxとexp sumを別々に保存せずlogsumexp Lだけを保存する。入出力は変えず、Tensor Coreが処理できない演算割合を減らしてkernel時間をmatmulへ寄せる。"},{"name":"系列長方向thread-block並列化","description":"初代FlashAttentionは主にbatch×headごとに1 thread blockを割り当てるため、長系列でbatchが小さい場合はA100の108 SMを埋められない。FlashAttention-2はforwardのQ row blocksを独立したthread blocksとして並列実行し、batch/headに加えてsequence dimensionからも並列度を得る。backwardではK/V column blockごとにthread blockを割り当て、共有されるdQ更新だけatomic addで統合する。長文脈ほどblock数が増えるため低occupancyを改善する。"},{"name":"warp間work partitioning再設計","description":"初代forwardのsplit-Kでは4 warpsがK/Vを分割して同じQへ掛けるため、各warpの部分outputをshared memoryへ書き、同期し、合算する必要がある。FlashAttention-2はQをwarps間で分割し、K/Vを共有する。各warpは自分のQ sliceからattention scoreとoutput sliceを最後まで担当でき、warp間reductionが不要になる。backwardもsplit-Kを避ける方向へ分割し、より複雑な依存で残る同期はあるもののshared-memory read/writeを減らす。"},{"name":"exact tiled attentionとmask/MQA/GQA","description":"HBMからQ/K/Vの小tileだけをSRAMへ載せ、online softmaxでrunning max・sumを更新しながらOを累積するためN×N score/probabilityをHBMへ書かない。causal maskでは未来側だけのblockを丸ごとskipし、境界blockだけmaskする。MQA/GQAでは複数query headsが共有するK/V headを物理複製せずindexingで参照し、backward時だけ共有headへのgradientを合算する。これらはattention値を近似せず、standard attentionと同じ結果を返す。"}],"system_design":"FlashAttention-2はアルゴリズム複雑度O(N²d)自体を変えず、データ移動とGPU上の仕事配置を最適化する。初代FlashAttentionのHBM↔SRAM tilingを土台に、非Tensor-Core処理を削り、thread-block数をsequence方向へ増やし、warp間通信を減らす三層の最適化を重ねる。block sizeは通常64/128の組合せをhead dimensionとshared-memory/register制約に応じて手動選択し、大きすぎるblockによるregister spillを避ける。"},"reservation":{"claim_id":"claim-292a5f32d168fabd11a080be","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-aabaad10b18cbdb1c36dc544",
+  "job_id": "job-research-576a090cf3d34dc3",
+  "data": {
+    "problem": "LLM推論のプリフィルは多数トークンを並列処理する行列×行列演算で、小さいバッチでもGPU計算能力を飽和できる。一方デコードは要求ごとに1トークンしか進まず、実用的なバッチサイズでは行列×ベクトルに近くメモリ帯域支配になる。LLaMA-13B/A6000ではバッチ1のデコード1トークンがプリフィルの約200倍高コストで、KV容量のため十分大きいバッチへ増やせない。さらにパイプライン並列では、プロンプト長、プリフィル/デコード混在、蓄積文脈長の差によって各マイクロバッチの実行時間が不均一になり、反復単位スケジューリングでもパイプラインバブルが残る。",
+    "novelty": "Sarathiは高効率なプリフィルと低効率なデコードを別々に最適化せず、プリフィルをGPUを飽和できる均一な断片へ分割し、各断片に可能な限り多くのデコードを相乗りさせる。線形演算ではプリフィルとデコードのトークンを一つの行列積へ融合するため、プリフィル用に一度GPUメモリから読み込んだモデル重みをデコードにも再利用でき、デコードの限界費用を大きく下げる。同時に各混合バッチの計算量を揃えることでパイプライン段間の実行時間差を縮める。チャンクサイズはプリフィル効率、相乗り可能なデコード数、P:D比、GPUタイル量子化を考慮して選ぶ。",
+    "method_overview": "入力要求はまずプリフィルとデコードの段階状態を持つ。新しい長いプロンプトは、モデル・GPUごとの事前プロファイルから選んだチャンクサイズCで複数のプリフィル断片へ分割する。各反復でスケジューラはプリフィル断片を原則1個選び、GPUメモリから許される最大要求数Bに対して残りB-1枠を進行中要求のデコードトークンで満たしてデコード最大化バッチを作る。線形層ではプリフィル断片とデコードトークンを連結し、一つの行列×行列演算としてQKV射影、出力射影、FFNを実行する。これにより重み読込みを共有する。注意演算はプリフィルとデコードで系列依存が異なるため別々に処理し、プリフィル断片は過去断片のKVを参照できる因果マスクを使って完全プリフィルと等価性を保つ。各断片終了後にKVを更新し、次反復で同じ要求の次断片またはデコードへ進む。複数の均一混合バッチをパイプライン並列へ流すと段間実行時間差が小さくなり、バブルが減る。最終出力は通常と同じ生成トークン列で、品質を変えずにGPU利用率とスループットを上げる。",
+    "components": [
+      {
+        "name": "チャンク化プリフィル",
+        "description": "長い入力プロンプトを一定サイズCの断片へ分割し、各反復で一部だけを処理する。後続断片の各queryがそれ以前の全tokenのkey/valueだけを参照するよう因果注意マスクを構成するため、断片化しても完全プリフィルと数学的に同じ結果を保つ。小さい断片ほど一つのプロンプトから多くの混合バッチを作れてデコードを相乗りさせる機会が増えるが、算術強度低下と過去KVの反復読込みが増える。したがってモデルとGPUを一度プロファイルし、GPUを十分飽和させながら相乗り機会も確保するサイズを選ぶ。"
+      },
+      {
+        "name": "デコード最大化バッチング",
+        "description": "各バッチにプリフィル断片を1個だけ入れ、GPUメモリ容量から決まる最大要求数Bの残りB-1枠をデコードで埋める。線形演算ではプリフィルtokenとdecode tokenを連結して同じ行列×行列演算へ融合するため、プリフィル用にロードしたモデル重みをデコードにも使える。注意だけはKV系列長が異なるためプリフィルとデコードを分離して計算する。LLaMA-13Bの例ではdecode-onlyの1token 12.49msに対し混合時の限界decode時間が1.2msとなり、重み帯域支配だったデコードを計算効率の高い処理へ変える。"
+      },
+      {
+        "name": "チャンクサイズ選択",
+        "description": "小さいCはP/C個のプリフィル断片を作るため、より多くのデコード反復を相乗りできるが、プリフィル自体のGPU利用率とKV再読込み費用が悪化する。バッチサイズBなら、全デコードをちょうど相乗りできる条件は概ねP:D=C/(B-1)となる。さらにGPU行列積はタイル境界で性能が段階的に変わるため、Cと相乗りデコード数の合計がタイルサイズの倍数になるよう調整する。SarathiはP:D比、系列長、モデル・GPU特性を基に、プリフィル損失よりデコード高速化が上回る点を選ぶ。"
+      },
+      {
+        "name": "均一マイクロバッチによるパイプライン効率化",
+        "description": "従来の反復単位スケジューリングでは、全プロンプトのプリフィル、デコードのみ、異なる文脈長のデコードが混在し、各マイクロバッチの実行時間が大きく変わる。Sarathiはプリフィルを同程度の計算量へ刻み、そこへデコードを詰めるため、各反復をGPU飽和かつ均一な作業単位へ近づける。この均一性によりパイプライン後段が前段の長いマイクロバッチを待つ時間が減る。GPT-3の8-way TP×8-way PPシミュレーションでは、これが中央値バブル時間6.29倍削減とE2E 1.91倍高速化につながる。"
+      }
+    ],
+    "system_design": "SarathiはモデルやKVの配置を変えるのではなく、実行時に同じGPUへ渡すtokenの構成を変える。プリフィルの高算術強度を『重みを効率よく読み込む土台』として利用し、その行列演算へ低算術強度のデコードを混ぜることで重み帯域費用を償却する。チャンク化はこの混合機会を一つのプロンプトから複数回作り、同時に作業単位を均一化する。注意の因果関係は専用マスクとKV更新で保持し、線形演算だけを融合するため意味論を変えない。単一GPUではdecode throughput、パイプライン並列ではさらにbubble削減が主要利得になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-aabaad10b18cbdb1c36dc544",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-292a5f32d168fabd11a080be","job_id":"job-research-7462825d21914fcd","data":{"hardware":"attention microbenchmarkはNVIDIA A100 80GB SXM4。H100でも新機能TMA/4th-gen Tensor Coresを使わない同実装を参考測定する。E2E GPT trainingは8×A100 80GB SXM。","software":"FlashAttention-2 CUDA kernelをPyTorch standard attention、初代FlashAttention、xFormers/CUTLASS系、Triton FlashAttentionと比較する。公式実装はDao-AILab/flash-attention。","methodology":"attention benchmarkはsequence 512〜16K、総token数16Kになるようbatch調整、hidden dimension 2048、head dimension 64/128、causal有無でforward/backwardを測定する。E2EはGPT-style 1.3B/2.7B、context 2K/8Kを8 A100で学習しTFLOPs/s/GPUとmodel FLOPs utilizationを比較する。","scope":"主評価はtraining forward/backward kernelで、autoregressive decode専用KV-cache kernelのserving latencyは直接評価しない。A100向けにblock sizeを手動tuningし、H100は新命令未利用。head dimensionsは主に64/128で、将来のFP8、AMD等はfuture work。"},"reservation":{"claim_id":"claim-292a5f32d168fabd11a080be","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-aabaad10b18cbdb1c36dc544",
+  "job_id": "job-research-576a090cf3d34dc3",
+  "data": {
+    "hardware": "実機はLLaMA-13BをNVIDIA A6000 48GB 1基、LLaMA-33BをA100 80GB 1基で評価する。大規模GPT-3は64×A100 80GBを8台サーバに配置し、ノード内8-way tensor parallel、ノード間8-way pipeline parallelを想定したプロファイル駆動シミュレーションで評価する。",
+    "software": "nanoGPT上にSarathiを実装し、xFormersのmemory-efficient attentionを使用する。KVキャッシュは各実験の最大系列長に合わせて事前確保し、生成に応じてインプレース更新する。Orca相当の反復単位スケジューリング比較は同じ混合バッチ実装を使い、バッチ形成方針だけを変えて実装差を抑える。",
+    "methodology": "単一GPUでは系列長1K/2K/3K、バッチサイズ、プリフィル対デコードtoken比P:D、チャンクサイズ64〜512を変え、decode token当たり時間とE2E tokens/msを測る。Orcaは全prefillを一度に投入するbest/worst caseと比較する。パイプライン評価では実機プロファイルから各演算と通信の回帰モデルを作り、8GPU DGXで予測誤差5%以内を確認した上で64 A100をシミュレートする。10K要求、系列長1K〜4KをZipf θ=0.4から取り、P:D=10、chunk=256でbubble時間と完了時間を比較する。",
+    "scope": "主対象はスループット最大化であり、オンライン要求の待ち行列遅延、公平性、SLO最適化は扱わない。単一GPU実機は13B/33Bと最大3K系列、大規模GPT-3はシミュレーションである。要求ごとのprefill/decode長が同一という単純化を多くの単一GPU実験で置き、可変長は大規模シミュレーションでのみ導入する。"
+  },
+  "reservation": {
+    "claim_id": "claim-aabaad10b18cbdb1c36dc544",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
