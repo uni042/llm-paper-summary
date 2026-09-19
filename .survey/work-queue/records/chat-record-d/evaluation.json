@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5fffc5f2bfc3aa8b62dc1383",
-  "job_id": "job-research-c7f741bd6a7395ee",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5fffc5f2bfc3aa8b62dc1383",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5fffc5f2bfc3aa8b62dc1383","job_id":"job-research-c7f741bd6a7395ee",
+ "data":{
+  "hardware":"既定はNVIDIA A100 40GB単体。分散評価では4台のA100を用い、異なるGPUへの一般化確認としてH200とA40も評価する。",
+  "software":"約1000行のCUDA/C++実装をFlashAttention互換APIとして構成し、Nano-vLLMへ統合。比較対象はFlashAttentionと、KV配置を並べ替えるPrepack。",
+  "methodology":"Alpaca、LMSYS、Text2SQLなど系列長分布の異なる実トレースを使い、Qwen3-4B、Mistral-7B、Qwen3-30B-A3B、Qwen3-32Bなどで評価する。TTFT、TBT、TTLT、トークンスループット、SM占有率、メモリ帯域を測定し、同一推論条件で5回の独立実行を平均する。群容量・バッチ量の掃引、計算詰め合わせと入出力詰め合わせの除去実験、異種GPU、テンソル並列度1と4も確認する。",
+  "scope":"実GPU上のカーネルおよびエンドツーエンド推論評価であり、シミュレーションではない。主評価は注意演算が支配的な異種系列長バッチで、利得は系列長の不均一度、共有接頭辞、群容量、KV再配置費用に依存する。学習やモデル品質改善は評価対象ではない。"
+ },
+ "reservation":{"claim_id":"claim-5fffc5f2bfc3aa8b62dc1383","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}
 }
