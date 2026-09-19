@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2606.26666",
+      "priority": 84,
+      "reason": "paged KV cacheを前提にdecode attentionのwork assignmentと実行方針を適応的に切り替えるserving/runtime研究。commodity GPU実機でFlashInferとの境界を含む評価を行い、長文decodeで1.063–1.399xのwall-throughput改善を報告するため、KV scheduling/runtime系統の未収録候補として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.08215",
+      "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend",
+      "source_url": "https://arxiv.org/abs/2607.08215",
+      "priority": 72,
+      "reason": "Ascend 910上でMoE/マルチモーダル大規模推論を実運用する際のruntime・operator・parallelism・graph compilation・observability上の制約を実機検証するfield study。vLLM-Ascend/CANNの移植・serving system観点で、GPU以外の推論基盤に関する実証的systems資料として有用。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T21:00:00+09:00",
+    "round": "specialist-runtime-hardware-2",
+    "axis": "page-aware decode runtime・non-GPU accelerator serving field study",
+    "query_summary": "SSD/MoE軸から独立して、commodity GPUのpaged decode schedulingと非GPU acceleratorのproduction inferenceへ探索軸を変更。arXiv:2606.26666と2607.08215を一次arXiv情報で軽量評価し、最新default branchのrepository searchで両IDの既収録を確認できなかったため候補化した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.0,
+    "accepted_canonical_ids": ["arXiv:2606.26666", "arXiv:2607.08215"],
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は2026年9月のagent serving runtime、disaggregated P/D network scheduling、またはGPU kernel/graph executionの新着へ移る。"
+  }
+}
