@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4f46d323b29b7bbf8b12aa9d",
+  "attempt_id": "attempt-bb1ec81341e2780a2eb5259f",
   "job_id": "job-research-1a87bd753fb86450",
   "data": {
     "overview": "校正gridでは36構成中18がPareto frontierに入り、stacked combinationは15中9（60%）、single methodは21中9（43%）だった。FP8 weight quantizationは全GPUでbaseline比0.61〜0.65x TPOTながらstrict GSM8K 0.760/FP16 0.765を維持し4 regime中3 winnerに入る。AWQはL4で0.34xまで高速化するがstrict accuracy 0.720で95% floor 0.726を僅かに下回る。naive FP8 KVはnormal throughputでも0/200正答となり品質guardで排除される。",
@@ -55,7 +55,7 @@
     "quality_impact": "品質軸を明示的に加えることで速度frontierと実用atlasを分離した。特にFP8 KVの破綻を除外し、AWQのformat-sensitiveな品質低下とFP8 weightsのほぼ無損失を区別する。"
   },
   "reservation": {
-    "claim_id": "claim-4f46d323b29b7bbf8b12aa9d",
+    "claim_id": "claim-bb1ec81341e2780a2eb5259f",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

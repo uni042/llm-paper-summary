@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4f46d323b29b7bbf8b12aa9d",
+  "attempt_id": "attempt-bb1ec81341e2780a2eb5259f",
   "job_id": "job-research-1a87bd753fb86450",
   "data": {
     "hardware": "RunPod L4、A100 80GB PCIe、H100 PCIe。2026年7月の時間単価はそれぞれ$0.39、$1.39、$2.89。三つの独立pod sessionを使う。",
@@ -11,7 +11,7 @@
     "scope": "モデルはQwen2.5-7B-Instruct一つ、実測品質taskはGSM8K一つでn=200（約±3 percentage points）。long-context/code/chatはprotocol表にはあるが今回品質実測していない。H2O/PyramidKVやscale-calibrated FP8 KV、EAGLE-3 draft speculationは実測anchorではない。sparse attentionは完全にsimulation依存。価格は2026年7月RunPod snapshot。"
   },
   "reservation": {
-    "claim_id": "claim-4f46d323b29b7bbf8b12aa9d",
+    "claim_id": "claim-bb1ec81341e2780a2eb5259f",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

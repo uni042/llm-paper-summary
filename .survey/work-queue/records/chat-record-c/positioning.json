@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-4f46d323b29b7bbf8b12aa9d",
+  "attempt_id": "attempt-bb1ec81341e2780a2eb5259f",
   "job_id": "job-research-1a87bd753fb86450",
   "data": {
     "limitations": "実測対象はQwen2.5-7B-Instruct、512-in/128-out、3 GPUに限定され、品質armもGSM8K 200問のみ。AWQ floor判定はsampling error内の境界。naive FP8 KVはscale calibrationなしなので、KIVI/H2O/PyramidKVや適切に校正したFP8 KV一般の品質を否定する結果ではない。draft-model speculationを実測できず、sparse attentionはsimulation-only。simulatorはanchor batch sizeで補間一致するが外挿精度を保証せず、価格とkernel maturityの変化で絶対座標は動く。",
@@ -11,7 +11,7 @@
     "research_positioning": "推論最適化の個別アルゴリズムではなく、量子化・KV cache・speculation・batching・sparse attention・GPU価格を同じ意思決定面へ統合する評価/設計選択層に位置する。リポジトリ内の各最適化系統を横断比較するとき、速度だけでなく品質floorと費用を含めた比較表を作る方法論上の基準点になる。"
   },
   "reservation": {
-    "claim_id": "claim-4f46d323b29b7bbf8b12aa9d",
+    "claim_id": "claim-bb1ec81341e2780a2eb5259f",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
