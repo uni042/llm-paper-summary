@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T17:03:32.050965+00:00",
+  "updated_at": "2026-09-19T19:13:10.716376+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T17:03:32.050965+00:00",
+      "last_recorded_at": "2026-09-19T19:13:10.716376+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 309,
+        "research_completed": 310,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 40,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35400429231:1",
-          "recorded_at": "2026-09-18T22:11:52.413644+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35400429231",
-            "run_attempt": "1",
-            "source_sha": "1a396634444019b67efe60ebab53e006ca9d984c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35400558857:1",
           "recorded_at": "2026-09-18T22:13:39.643934+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35463638964:1",
+          "recorded_at": "2026-09-19T19:13:10.716376+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35463638964",
+            "run_attempt": "1",
+            "source_sha": "7fa660223d402f8b66565fce963a6ec65e106bc5"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -23937,6 +23937,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-1182cce822dbe6dc",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13537",
+          "title": "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26713,7 +26721,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 773,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
