@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13161",
+      "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+      "source_url": "https://arxiv.org/abs/2609.13161",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md",
+      "priority": 91,
+      "reason": "prefill/decode分離をWAN越しの異種datacenterへ拡張し、RelayDecodeでKV転送とdecodeを重畳する3-tier構成を提案する。RadixCache、handoff、multi-stage orchestrationを組み合わせ、H100/H200異種配置でintra-DC homogeneous PD比SLA-compliant goodputのBenefit-Cost Ratioを最大37.5%改善。disaggregation・KV transfer・network schedulingの重点系統に強く合致する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-20T00:00:00+09:00",
+    "round": "specialist-cross-dc-disagg-3",
+    "axis": "cross-datacenter prefill/decode disaggregationとWAN KV transfer",
+    "query_summary": "disaggregated serving/autoscaling軸を探索。PDDを一次arXiv abstractで確認し、最新default branch検索で2609.13161が未収録であることを確認した。検索結果の多くは既知一般論または対象外で、強候補のみ1件送信した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はGPU kernel/runtime、quantization serving、communication collectivesの2026 systems論文へ軸を移す。",
+    "empty_round_reason": null
+  }
+}
