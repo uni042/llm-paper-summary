@@ -1,52 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T08:09:28+00:00",
+  "updated_at": "2026-09-19T09:00:05+00:00",
   "last_run_key": "2026-09-19T17:00:00+09:00",
-  "last_round": "specialist-citation-omissions-12",
+  "last_round": "specialist-moe-kernel-cache-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 12,
-  "last_empty_round_reason": "独立citation/reference経路も既知候補へ収束",
+  "consecutive_empty_rounds": 14,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-speculative-serving-4",
-      "axis": "投機的復号・高並列サービング・production評価",
-      "query_summary": "直前のscheduling軸から切り替え、投機的復号のload-aware verification、production benchmark、serving latency modelを探索した。SPECTREは決定論的research jobで既収録completedと確認し、DSpark・SPEED-Bench・latency modelは最新HEADで対応job不在を直接確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 3,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.25,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2605.08151"
-      ],
-      "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る",
-      "source_submission": "work-queue/submissions/20260913T0938JST-discovery-specialist-speculative-serving-4.json"
-    },
-    {
-      "run_key": "2026-09-13T09:28:10+09:00",
-      "round": "specialist-network-saturation-5",
-      "axis": "RDMA・分離サービング・KV転送",
-      "query_summary": "投機的復号の新規候補投入後、RDMA/network disaggregationへ軸を変更した。SmartGen (arXiv:2607.28150) と KVServe (arXiv:2605.13734) を一次arXivから再評価したが、決定論的research jobを最新HEADで直接確認すると双方とも既収録duplicateだった。CacheFlow・LMCacheも既収録で、追加に値する新規強候補は得られなかった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2607.28150",
-        "arxiv:2605.13734",
-        "arxiv:2604.25080",
-        "arxiv:2510.09665"
-      ],
-      "next_axis_hint": "network/KV転送軸は直後反復せず、異種GPU・電力制御・Superchip/CPU-GPU offloadなど資源管理系へ移る",
-      "source_submission": "work-queue/submissions/20260913T0941JST-discovery-specialist-network-saturation-5.json"
-    },
     {
       "run_key": "2026-09-13T09:28:10+09:00",
       "round": "specialist-multitenant-runtime-6",
@@ -7182,6 +7145,45 @@
       ],
       "next_axis_hint": "次回runは新着差分と今回submissionのActions反映後identityから再開",
       "source_submission": "work-queue/submissions/20260919T1700JST-round12-citation-omissions.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-memory-systems-1",
+      "axis": "高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling",
+      "query_summary": "直前runのcitation/reference収束を反復せず、2026年9月の階層メモリ・HBF・host/HBM・端末内memory pressure・thermal schedulingと、異種NPU/PIM operator schedulingへ軸を変更。検索結果から一次arXiv抄録を軽量評価し、canonical arXiv IDとtitleを最新mainのGitHub検索で投入直前に再照合して未登録5件を選定した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年8〜9月新着、またはGPU collective/networkingとKV transferの隣接軸へ移る",
+      "source_submission": "work-queue/submissions/20260919T1804JST-discovery-specialist-memory-systems-1.json"
+    },
+    {
+      "run_key": "2026-09-19T17:00:00+09:00",
+      "round": "specialist-moe-kernel-cache-2",
+      "axis": "MoE expert cache・prefetch・OS page cache",
+      "query_summary": "前roundの一般階層メモリからMoE expert cacheへ軸を変更。APEX (2608.11688) とCache-Aware Joint Router Adaptation (2609.04895) は直近canonical stateで既知候補として早期除外し、kernel-managed expert tieringを一次arXiv抄録で評価。最新mainのcanonical ID検索で未登録を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.11688",
+        "arXiv:2609.04895"
+      ],
+      "next_axis_hint": "次はKV transfer/RDMA・collective communication、または長文脈KV階層化の2026年8〜9月新着へ移る",
+      "source_submission": "work-queue/submissions/20260919T1809JST-discovery-specialist-moe-kernel-cache-2.json"
     }
   ],
   "axes": {
@@ -12873,6 +12875,32 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "次回runは新着差分と今回submissionのActions反映後identityから再開"
+    },
+    "高帯域フラッシュ・host/HBM同時利用・モバイル復元・熱制御・異種operator scheduling": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 5,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はMoE expert placement/cache/prefetchの2026年8〜9月新着、またはGPU collective/networkingとKV transferの隣接軸へ移る"
+    },
+    "MoE expert cache・prefetch・OS page cache": {
+      "last_run_key": "2026-09-19T17:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "次はKV transfer/RDMA・collective communication、または長文脈KV階層化の2026年8〜9月新着へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
