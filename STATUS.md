@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 06:37:44 JST**
+> 自動生成: **2026-09-20 06:38:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **93** |
 | 未claim Research job | **92** |
 | 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 05:45:06 JST（52分前）** |
+| 最終検証済みResearch収録 | **09-20 05:45:06 JST（53分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **12** | **2** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **7** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **3** | **1** | **0** | **1** | **0** | **5** |
+| 合計 | **19** | **3** | **1** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,11 +139,10 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-1b0b6909960f493a2fbeb493.json` (job `job-research-b33b8317e97d5549`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-1b0b6909960f493a2fbeb493.json` (`ok=false`)
+- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-240fced74ff3bf00f6e22330.json` (job `job-research-ac3d391d822b215f`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-240fced74ff3bf00f6e22330.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`)
 
 #### Audit (:30)
 
@@ -166,9 +165,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.11586` — HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 06:37:24 JST** / heartbeat: **—** / lease expiry: **09-20 08:07:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-708ae0cc33daae20.json`
+- `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 06:38:09 JST** / heartbeat: **—** / lease expiry: **09-20 08:08:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b33b8317e97d5549.json`
 
 #### Audit
 
@@ -216,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **667** |
-| └ Research | **506** |
+| 成功result未照合のimmutable submission | **668** |
+| └ Research | **507** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
