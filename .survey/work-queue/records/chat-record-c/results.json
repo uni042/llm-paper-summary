@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a1b38cbb586fe670600b1d26",
-  "job_id": "job-research-ee7c0fc62bdc554b",
-  "data": {
-    "overview": "OpRAGはLLM復号カーネルを変更せず、RAG周辺のデータ移動・埋め込み・検索・文脈準備・索引更新を決定論的に重畳することで端から端性能を改善した。32KチャンクのGPUパイプラインでは最良の近接競合よりLlama3-8Bで16.16%、Mistral-7Bで15.66%高速化し、RayScalableRAG比では約20.6%改善した。一般的なエージェント枠組みとの比較でも最良基準より約17.5〜17.8%高速で、Higress型検索ではRecall@5=1.0を維持しつつ検索遅延を約59%、生成を含む経路を約52〜54%削減した。これはGPUモデル処理だけでなく、復号外のオーケストレーションが実運用RAGの有意な律速であることを示す。",
-    "key_results": [
-      {
-        "metric": "端から端GPUパイプライン",
-        "value": "16.16% / 15.66%高速化",
-        "baseline": "nearest competitor",
-        "condition": "32K chunks、Llama3-8B / Mistral-7B、A100",
-        "interpretation": "同じモデル処理でも周辺段階を一体スケジュールすると総時間を短縮できる。"
-      },
-      {
-        "metric": "RayScalableRAG比",
-        "value": "20.57% / 20.71%高速化",
-        "baseline": "RayScalableRAG",
-        "condition": "Llama3-8B / Mistral-7B GPU pipeline",
-        "interpretation": "汎用分散タスク実行よりRAG固有演算子とデータ面が有利。"
-      },
-      {
-        "metric": "エージェント枠組み比較",
-        "value": "17.77% / 17.48%高速化",
-        "baseline": "最速のLangGraph",
-        "condition": "2×A100、32K chunks",
-        "interpretation": "動的制御の柔軟性だけでなく物理バッチ・データ移動管理が性能を左右する。"
-      },
-      {
-        "metric": "Higress型検索・生成",
-        "value": "検索59.20〜59.62%削減、生成経路52.48〜53.55%削減",
-        "baseline": "HigressRAG",
-        "condition": "dense-first top-128候補後にlexical rerank",
-        "interpretation": "物理検索順序を変えてもRecall@5=1.0を保ち、大幅な遅延削減を得る。"
-      }
-    ],
-    "negative_results": "Higress比較では完全候補空間へdense/lexicalを同時適用する基準に対し、OpRAGはdense-firstで128候補へ絞ってからlexical rerankするため、品質同等性は評価データ上のRecall@5=1.0で確認した範囲に限られる。更新処理は枠組み比較で一部基準より時間が増える場合があり、主利得は埋め込み・オーケストレーションに集中する。LLM復号自体を高速化する方式ではない。",
-    "interpretation": "バッチ固定費、シリアライズ、作業者起動、CPU/GPU相互待ちをΩとして見ると、ゼロコピー、永続作業者、有界キュー、長さ別バッチ、段階重畳がこのΩと直列待ちを削る。CPU強・弱スケーリングでも1024物理作業者まで最速構成を維持しており、GPU単体の局所最適化だけではない。",
-    "quality_impact": "モデル、コーパス、チャンク数、生成設定を維持して物理実行のみ変更する。Higress型検索ではRecall@5=1.000を報告し、検索上位5件の重なりを維持した。"
-  },
+  "attempt_id": "attempt-158b34272885fa400b854050",
+  "job_id": "job-research-2d2e170dd4157362",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a1b38cbb586fe670600b1d26",
+    "claim_id": "claim-158b34272885fa400b854050",
     "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
     "worker_kind": "scheduled_chat"
   }

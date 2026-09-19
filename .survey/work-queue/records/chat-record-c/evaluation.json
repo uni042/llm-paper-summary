@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a1b38cbb586fe670600b1d26",
-  "job_id": "job-research-ee7c0fc62bdc554b",
-  "data": {
-    "hardware": "A100 GPUを使用し、GPU枠組み比較は2台A100・32Kチャンク。CPU拡張評価では各ノード40物理コア、最大26ノード・1024物理作業者。",
-    "software": "Llama3-8BとMistral-7BをBF16、FlashAttention 2で実行。Arrow/Cylon、FAISS系ベクトル検索、長さ別バッチ、コンパイル済み埋め込み経路を利用。比較対象はRayScalableRAG、DaskScalableRAG、HigressRAG、LangChain、LangGraph、CrewAI、AutoGen等。",
-    "methodology": "32K RAGチャンクを用いる端から端GPUパイプライン、同一モデル・コーパス・チャンク数での枠組み比較、Higress型のハイブリッド検索・生成シナリオ、固定100MチャンクのCPU強スケーリングと作業者当たり95Kチャンクの弱スケーリングを評価する。埋め込み、更新、生成、総時間、chunks/s、検索遅延、Recall@5を測り、検索品質を保ったまま物理スケジュールだけを変更する。",
-    "scope": "LLM復号カーネルの高速化ではなく、その前後のデータ移動・埋め込み・検索・メモリ・更新のオーケストレーションを対象とする。Higress比較ではdense-first上位128候補へのlexical rerankingという異なる物理検索順序を用いるため、遅延だけでなくRecall@5も併記する。"
-  },
+  "attempt_id": "attempt-158b34272885fa400b854050",
+  "job_id": "job-research-2d2e170dd4157362",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a1b38cbb586fe670600b1d26",
+    "claim_id": "claim-158b34272885fa400b854050",
     "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
     "worker_kind": "scheduled_chat"
   }
