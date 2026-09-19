@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-30d00f89d27bcfb30faf78ef",
+  "job_id": "job-research-b33b8317e97d5549",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-30d00f89d27bcfb30faf78ef.json",
+  "error": "RecordValidationError: metadata.references[0] requires a normalized identity",
+  "processed_at": "2026-09-19T21:39:25+00:00",
+  "validation_errors": [
+    "metadata.references[0] requires a normalized identity"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
