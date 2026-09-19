@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-73b8f63ceffa41235b1708c8",
+  "attempt_id": "attempt-cf5ac77834bd3c3ec6c8a715",
   "job_id": "job-research-c1b7543305e71c40",
   "data": {
     "hardware": "サーバ・作業者構成をNVIDIA A800 GPU上で模擬する。2作業者はそれぞれLLaMA-7BとLLaMA-13Bを保持し、調整サーバは草稿用LLaMA-68Mを実行する。",
@@ -11,8 +11,8 @@
     "scope": "実験は2作業者、等重み、同一K、LLaMA-7B/13Bと68M草稿モデル、単一データセットに限定される。論文自身も端から端までの通信費、実測復号スループット、最終生成品質の理論解析を将来課題としており、大規模作業者数、非等重み、異なるK、実ネットワーク遅延での評価は示していない。"
   },
   "reservation": {
-    "claim_id": "claim-73b8f63ceffa41235b1708c8",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-cf5ac77834bd3c3ec6c8a715",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
     "worker_kind": "scheduled_chat"
   }
 }

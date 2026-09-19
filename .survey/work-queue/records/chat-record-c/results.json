@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-73b8f63ceffa41235b1708c8",
+  "attempt_id": "attempt-cf5ac77834bd3c3ec6c8a715",
   "job_id": "job-research-c1b7543305e71c40",
   "data": {
     "overview": "理論解析では、上位K外へ落ちた残余確率質量εが小さければ圧縮後の分布誤差と投機的復号の受理率変動も小さいことを示す。局所L1再構成誤差は再正規化方式で2εに等しく、残余質量再配分方式では2ε以下となる。複数作業者を重み付き集約した分布の偏りは2Σwiεi以下、受理率変動はその半分以下、すなわちΣwiεi以下である。実験では温度0.8、1.0、1.2の全条件でこれらの上界が成立し、残余質量再配分方式は集約偏りを一貫して小さくした。語彙32,000に対する強い圧縮でも平均偏りは小さく、通信量と忠実度の有利な交換関係を確認した。",
@@ -48,8 +48,8 @@
     "quality_impact": "損失圧縮なので完全同一生成を保証する方式ではない。実験は最終出力の正解率ではなく分布水準の忠実度を測り、平均偏りが小さいことと理論上界内に収まることを示す。"
   },
   "reservation": {
-    "claim_id": "claim-73b8f63ceffa41235b1708c8",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-cf5ac77834bd3c3ec6c8a715",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
     "worker_kind": "scheduled_chat"
   }
 }
