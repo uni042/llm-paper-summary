@@ -27,19 +27,56 @@ topics:
 hardware_evaluation: 実機評価。主にNVIDIA H200を使用し、付録では8×H200を推奨、PD分離評価は最低2 GPU。A100/H100も十分なメモリがあれば利用可能と記載。
 quality_effect: モデルの近似・量子化ではなくスケジューリング変更であり、生成品質を変更する機構ではない。評価の中心はTTFT、P90 TTFT、要求スループット、SLO違反率。
 references:
-- arxiv_id: '2312.07104'
-  canonical_id: arXiv:2312.07104
-- arxiv_id: '2401.09670'
-  canonical_id: arXiv:2401.09670
-- arxiv_id: '2507.17120'
-  canonical_id: arXiv:2507.17120
-- arxiv_id: '2309.11998'
-  canonical_id: arXiv:2309.11998
-- arxiv_id: '2403.01876'
-  canonical_id: arXiv:2403.01876
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2406.16937
+  arxiv_id: '2406.16937'
+- canonical_id: arXiv:2412.04504
+  arxiv_id: '2412.04504'
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: arXiv:2403.12031
+  arxiv_id: '2403.12031'
+- canonical_id: arXiv:2408.13510
+  arxiv_id: '2408.13510'
+- canonical_id: arXiv:2408.08147
+  arxiv_id: '2408.08147'
+- canonical_id: arXiv:2502.08773
+  arxiv_id: '2502.08773'
+- canonical_id: DOI:10.1145/3600006.3613165
+  arxiv_id: '2309.06180'
+- canonical_id: arXiv:2211.17192
+  arxiv_id: '2211.17192'
+- canonical_id: arXiv:2406.16858
+  arxiv_id: '2406.16858'
+- canonical_id: arXiv:2503.01840
+  arxiv_id: '2503.01840'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2504.07878
+  arxiv_id: '2504.07878'
+- canonical_id: arXiv:2403.01876
+  arxiv_id: '2403.01876'
+- canonical_id: arXiv:2408.12320
+  arxiv_id: '2408.12320'
+- canonical_id: arXiv:2410.14257
+  arxiv_id: '2410.14257'
+- canonical_id: arXiv:2502.11705
+  arxiv_id: '2502.11705'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2402.16363
+  arxiv_id: '2402.16363'
+- canonical_id: arXiv:2309.11998
+  arxiv_id: '2309.11998'
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+- canonical_id: arXiv:2507.17120
+  arxiv_id: '2507.17120'
+- canonical_id: arXiv:2401.09670
+  arxiv_id: '2401.09670'
 references_checked_at: '2026-09-19'
-references_source: MLSys 2026 proceedings PDF reference section
-references_total: 5
+references_source: arxiv-html-reference-section
+references_total: 40
 source: https://proceedings.mlsys.org/paper_files/paper/2026/file/bbb7506579431a85861a05fff048d3e1-Paper-Conference.pdf
 sources:
 - https://arxiv.org/abs/2601.11589
