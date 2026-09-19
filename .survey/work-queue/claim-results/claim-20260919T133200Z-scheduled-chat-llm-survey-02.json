@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T133200Z-scheduled-chat-llm-survey-02",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-f85e83252e35c61b",
+      "claim_id": "claim-f9592fd052ad29b9a163d874",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f9592fd052ad29b9a163d874",
+      "claimed_at": "2026-09-19T13:29:41+00:00",
+      "expires_at": "2026-09-19T14:59:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f85e83252e35c61b"
+      ],
+      "job": {
+        "job_id": "job-research-f85e83252e35c61b",
+        "type": "research",
+        "parent_job_id": "job-7d7711f38fa7059e",
+        "priority": 89,
+        "canonical_id": "arXiv:2606.04511",
+        "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.04511",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2606.04511-sparda.md",
+        "selection_reason": "Decoupled sparse-attention architecture predicts next-layer KV blocks to overlap CPU-to-GPU prefetch with current execution; reports up to 1.7x decode speedup and 5.3x higher decode throughput than non-offload sparse baseline, with released code.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T13:07:39+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T13:29:41+00:00",
+  "checkpoint_released": 0
+}

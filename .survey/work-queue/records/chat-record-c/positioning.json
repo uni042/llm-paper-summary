@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-077c5dd04f678c8541964e90","job_id":"job-research-a6905e04777fde1f","data":{"limitations":"主要評価は想定HBF特性を用いるトレース駆動シミュレーションで、実HBF silicon上のcontroller overhead、wear variation、thermal/power、failure behaviorは直接検証されていない。性能は多数planeを備えるHBF構成と十分なbase-die SRAMを前提とする。writeback最適化のthroughput寄与は評価モデルでは小さく、workload依存性がある。寿命予測はroot request開始時刻との相関を利用するため異なるrequest graphでは効果が変わり得る。","differences":"H3は動的KVをHBMへ残しHBFをread-mostly stateへ使うのに対し、HBFlexはHBMを除去して動的KVもHBFへ置く。FlashAccelはHBF上KVとlayout最適化を扱うが、HBFlexは論理reuseと物理stripingの分離、runtime attention balancing、prefill計算窓を使うprogram scheduling、寿命認識GCまで統合する。単純SSD/HBF offloadと異なり、host-I/O層ではなくstack内plane/block/page並列性を直接管理する。","implementation_status":"arXiv v1プレプリント。カスタムtrace-driven simulatorによる評価で、本文中に公式公開コードURLは確認できない。","research_positioning":"LLM向け階層メモリ研究のうち、高帯域フラッシュをHBMの補助ではなくaccelerator-local主メモリとして使う方向を押し進める。特にKVの細粒度論理状態とNANDの粗粒度物理操作の不一致を、配置・実行時schedule・program・GCのcross-layer共同設計で解く点がSSD/HBF活用系統に重要である。"},"reservation":{"claim_id":"claim-077c5dd04f678c8541964e90","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f9592fd052ad29b9a163d874",
+  "job_id": "job-research-f85e83252e35c61b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f9592fd052ad29b9a163d874",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

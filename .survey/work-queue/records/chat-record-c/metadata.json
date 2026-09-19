@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-077c5dd04f678c8541964e90","job_id":"job-research-a6905e04777fde1f","data":{"canonical_id":"arXiv:2609.18675","arxiv_id":"2609.18675","doi":"10.48550/arXiv.2609.18675","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution","summary":"HBFlexはHBMを残さずパッケージ全体を高帯域フラッシュ（HBF）へ割り当て、動的KVキャッシュの読み出し不均衡、書込みと読出しの干渉、混在寿命によるGC増幅を、配置・実行時スケジューリング、計算窓を使う書戻し、寿命認識回収で共同最適化するメモリシステムである。トレース駆動シミュレーションでFlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上を報告する。","list_summary":"全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。","authors":["Shuzhang Zhong","Weikai Xu","Yifan Zhou","Tongbin Zhao","Tenghao Zhao","Yifei Kang","Cunyin Chang","Shu Li","Guangyu Sun","Meng Li"],"authors_affiliations":"Peking University; HKUST; Alibaba Group","published":"2026-09-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-09-16)","lineage":"HBF / hierarchical memory / KV-cache management / LLM serving","topics":["高帯域フラッシュ","KVキャッシュ","階層メモリ","書戻しスケジューリング","ガベージコレクション"],"importance":"HBFを読取り専用寄りの補助層ではなく動的KVまで含む主メモリとして使うため、NANDのplane/block/page制約へLLM実行を合わせる。","implementation":"個別read/program/eraseをモデル化するカスタム・トレース駆動シミュレータで評価。公開コードURLは本文で確認できない。","hardware_evaluation":"H200級GPUと同一パッケージ面積をモデル化。GPUあたり6 HBF stack、stackあたり16 die×32 plane、40MB base-die SRAM。","quality_effect":"モデル出力品質を変える近似手法ではなくメモリ管理方式。評価は性能・容量・耐久性中心。","source":"https://arxiv.org/abs/2609.18675","sources":["https://arxiv.org/abs/2609.18675","https://arxiv.org/pdf/2609.18675"],"code":null,"last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary manuscript","references_total":42},"reservation":{"claim_id":"claim-077c5dd04f678c8541964e90","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f9592fd052ad29b9a163d874",
+  "job_id": "job-research-f85e83252e35c61b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f9592fd052ad29b9a163d874",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
