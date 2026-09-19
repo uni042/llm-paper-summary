@@ -2,68 +2,64 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ff20bcaca705be66e1a1b76e",
-  "job_id": "job-research-b6a4fe55f122cf41",
+  "attempt_id": "attempt-cd9ea16c565464e02e01a24b",
+  "job_id": "job-research-188f6649e816eaae",
   "data": {
-    "canonical_id": "arXiv:2410.01228",
-    "arxiv_id": "2410.01228",
-    "doi": "10.48550/arXiv.2410.01228",
+    "canonical_id": "arXiv:2604.15186",
+    "arxiv_id": "2604.15186",
+    "doi": "10.48550/arXiv.2604.15186",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
       "cross_list": [
-        "cs.LG"
+        "cs.AI"
       ]
     },
-    "title": "ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving",
-    "summary": "ConServeは、ピーク負荷に合わせて確保されたオンラインLLMサービングGPUの遊休時間を、遅延許容のオフライン推論で埋める共同サービングシステムである。オンライン要求のサービス品質目標（Service-Level Objective; SLO）を守るため、文脈量と処理トークン数から反復遅延を予測するトークン単位スケジューリング、Transformer層間の安全点でオフライン処理を中断する層単位プリエンプション、追加されたKVだけをCPUへ非同期保存して復帰時に先読みする増分KV管理を組み合わせる。実機評価ではオンラインP99遅延を比較対象より平均2.9倍改善しつつ、オフラインスループットを平均2.2倍高めた。",
-    "list_summary": "SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。",
+    "title": "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines",
+    "summary": "Scepsyは、分岐・反復・ファンアウトを含む複数LLMエージェント処理を、個々の制御フローを予測せずGPU群へ割り当てるサービングシステムである。各LLMがワークフロー全体の実行時間に占める相対比率が要求間で安定するという観測から、低水準のLLM呼び出しトレースと並列度別プロファイルを集約LLMパイプライン（Aggregate LLM Pipeline）へ変換する。この軽量予測器を使い、GPU分数、テンソル並列度、複製数を共同探索し、最後にNVLink等の接続構造と断片化を考慮して配置する。16 GPU評価では既存方式に対し最大2.4倍のピークスループットまたは最大27倍低い平均遅延を報告する。",
+    "list_summary": "LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。",
     "authors": [
-      "Yifan Qiao",
-      "Shu Anzai",
-      "Shan Yu",
-      "Haoran Ma",
-      "Shuo Yang",
-      "Yang Wang",
-      "Miryung Kim",
-      "Yongji Wu",
-      "Yang Zhou",
-      "Jiarong Xing",
-      "Joseph E. Gonzalez",
-      "Ion Stoica",
-      "Harry Xu"
+      "Marcel Wagenländer",
+      "Otto White",
+      "Britannio Jarrett",
+      "Pedro Silvestre",
+      "Yanda Tao",
+      "Guo Li",
+      "Huanzhou Zhu",
+      "Llúis Vilanova",
+      "Peter Pietzuch"
     ],
-    "authors_affiliations": "UC Berkeley; UCLA; Rice University; UC Davis; Intel",
-    "published": "2024-10-02",
-    "publication": "arXiv / ICML 2026",
-    "publication_type": "会議論文・プレプリント",
-    "publication_status": "ICML 2026 Poster; arXiv v2 (2025-09-03)",
-    "lineage": "LLM serving / workload co-location / scheduling / preemption / KV-cache management",
+    "authors_affiliations": "Imperial College London; Independent Researcher",
+    "published": "2026-04-16",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint v1",
+    "lineage": "agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement",
     "topics": [
-      "LLMサービング",
-      "オンライン・オフライン共同実行",
-      "GPU利用率",
-      "プリエンプション",
-      "KVキャッシュ"
+      "エージェントサービング",
+      "複数LLM",
+      "GPU割り当て",
+      "テンソル並列",
+      "GPU共有"
     ],
-    "importance": "LLM推論の同一モデル上でオンラインとオフライン要求をミリ秒粒度に共同実行し、遊休GPU回収と厳格なオンラインSLOを両立する設計を示す。",
-    "implementation": "vLLM 0.8.4を基盤に、層単位安全点、性能プロファイラ、ページ対応CPU KV領域、KV収集カーネル、専用CUDAストリームを実装。",
-    "hardware_evaluation": "8×NVIDIA H100 DGX。Llama-3.1 8BとQwen-2.5 14Bは1 H100、Llama-3.1 70Bは4 H100テンソル並列で評価。",
-    "quality_effect": "モデル出力品質を近似する方式ではなく、オンラインSLOとオフライン処理量の資源配分を変える。オフライン要求は中断されるがKV状態を保存・復元して推論を継続する。",
-    "source": "https://arxiv.org/abs/2410.01228",
+    "importance": "動的なエージェント制御フローそのものではなく、LLM別の定常的な相対需要をモデル化することで、任意フレームワークの複数LLMワークフローへ自動GPU割り当てを可能にする。",
+    "implementation": "約25K行のPythonプロトタイプ。Kubernetes、変更したdevice plugin、NVIDIA MPSを用い、vLLMやSGLang等の実行エンジンを対象とする。",
+    "hardware_evaluation": "16 GPUクラスタを中心に、4/8 GPU規模を含む評価。接続構造を考慮したテンソル並列配置を検証。",
+    "quality_effect": "モデル出力や推論アルゴリズムは変更せず、GPU資源配分と配置を最適化するため、品質近似は導入しない。",
+    "source": "https://arxiv.org/abs/2604.15186",
     "sources": [
-      "https://arxiv.org/abs/2410.01228",
-      "https://arxiv.org/pdf/2410.01228"
+      "https://arxiv.org/abs/2604.15186",
+      "https://arxiv.org/pdf/2604.15186"
     ],
-    "code": "",
+    "code": "https://github.com/anon/Scepsy",
     "last_checked": "2026-09-19",
     "references": [],
     "references_checked_at": "2026-09-19",
     "references_source": "primary manuscript",
-    "references_total": 72
+    "references_total": 67
   },
   "reservation": {
-    "claim_id": "claim-ff20bcaca705be66e1a1b76e",
+    "claim_id": "claim-cd9ea16c565464e02e01a24b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

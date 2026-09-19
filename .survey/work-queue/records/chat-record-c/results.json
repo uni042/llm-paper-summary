@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ff20bcaca705be66e1a1b76e",
-  "job_id": "job-research-b6a4fe55f122cf41",
+  "attempt_id": "attempt-cd9ea16c565464e02e01a24b",
+  "job_id": "job-research-188f6649e816eaae",
   "data": {
-    "overview": "ConServeはオンライン専用に近いP99遅延を保ちながら、遊休時間へオフライン推論を投入できた。実ワークロードのLlama-3.1 70Bではオフライン1553 tokens/sで、非プリエンプティブ上限の78%に達し、最良比較対象に対してP99 TTFTを平均2.04倍、TBTを2.86倍改善し、オフラインスループットを2.23倍高めた。Llama-3.1 8Bでは最適オフライン処理量の88%を保ち、DistServe-Pよりスループット2.5倍、オンライン遅延3倍超改善した。",
+    "overview": "Scepsyは個別LLMを独立配置する方式やユーザー指定配置に対し、同一GPU予算で最大2.4倍のピークスループット、同一スループットで最大27倍低い平均ワークフロー遅延を報告する。Aegaeon比較ではビーム探索で4 GPU時7.3倍、8 GPU時6.8倍のスループット、遅延は14.1倍・12.9倍改善した。RAGではスループット2.5倍・2.9倍、遅延3.4倍・4.5倍改善した。",
     "key_results": [
       {
-        "metric": "実ワークロード平均オンライン遅延改善",
-        "value": "P99 TTFT 2.04×、P99 TBT 2.86×改善",
-        "baseline": "各条件の最良比較対象",
-        "condition": "Llama-3.1 70B、BurstGPT + 3種オフラインデータ",
-        "interpretation": "細粒度の投入量制御と層単位中断により、オフライン処理の干渉をSLO内へ抑えた。"
+        "metric": "最大ピークスループット改善",
+        "value": "最大2.4×",
+        "baseline": "個別LLM最適化またはユーザー指定割り当て",
+        "condition": "同一GPU予算、現実的エージェントワークロード",
+        "interpretation": "LLM間の相対需要を共同最適化し、ボトルネックへ複製・並列資源を再配分する効果。"
       },
       {
-        "metric": "実ワークロード平均オフラインスループット",
-        "value": "2.23×向上、混合負荷で1553 tokens/s",
-        "baseline": "最良比較対象、混合負荷Sarathi-P 895 tokens/s",
-        "condition": "Llama-3.1 70B、4×H100",
-        "interpretation": "増分KV管理が長系列の頻繁な再計算を避け、非プリエンプティブ上限1995 tokens/sの78%まで到達した。"
+        "metric": "最大平均遅延改善",
+        "value": "最大27×低減",
+        "baseline": "既存複数LLM/ワークフロー配置",
+        "condition": "同一目標スループット",
+        "interpretation": "余剰GPUを重要LLMのテンソル並列へ回し、ワークフロー全体の臨界経路を短縮する。"
       },
       {
-        "metric": "負荷変動感度",
-        "value": "TTFT 1.68×、TBT 2.38×改善、オフライン3.62×向上",
-        "baseline": "最良比較対象",
-        "condition": "変動係数CVを変更した合成負荷",
-        "interpretation": "突発性が変わってもオンラインSLOとオフライン処理量の両立が維持される。"
+        "metric": "Aegaeon対ビーム探索",
+        "value": "4 GPU 7.3×、8 GPU 6.8×高スループット; 遅延14.1×、12.9×改善",
+        "baseline": "Aegaeonの複数配置構成",
+        "condition": "ビーム探索",
+        "interpretation": "固定的なモデル単位多重化よりワークフロー需要に沿う配置が有利。"
       },
       {
-        "metric": "アブレーション",
-        "value": "TBT 375→73ms、TTFT 1399→686→523ms、オフライン8810→11366 tokens/s",
-        "baseline": "Sarathi-Pから機構を段階追加",
-        "condition": "Llama-3.1 8B",
-        "interpretation": "SLO対応スケジューラが主にTBT、層単位中断がTTFT、増分KVがオフライン処理量へ寄与する。"
+        "metric": "Aegaeon対RAG",
+        "value": "4 GPU 2.5×、8 GPU 2.9×高スループット; 遅延3.4×、4.5×改善",
+        "baseline": "Aegaeon",
+        "condition": "RAG+reranker",
+        "interpretation": "異種LLMの負荷比を考慮することでRAG系でも改善する。"
       },
       {
-        "metric": "中断・KV管理費用",
-        "value": "安全点<10µs/単一GPU、4GPU平均167.2µs、KV 37GB/s、最大転送<7ms",
-        "baseline": "モデル実行262ms平均",
-        "condition": "H100、4層ごとの安全点",
-        "interpretation": "細粒度制御自体の費用がモデル実行より十分小さく、13ms以内の中断応答を実現する。"
+        "metric": "Ayo対スループット",
+        "value": "ビーム探索3.2×/8.2×、RAG 2.1×/2.4×",
+        "baseline": "Ayo",
+        "condition": "4 GPU / 8 GPU",
+        "interpretation": "要求単位スケジューリングだけでなくGPU割り当て自体を到着率へ適応させる効果を示す。"
       }
     ],
-    "negative_results": "入力が2K未満では比較対象も停止中KVをGPUへ保持しやすくConServeの優位が縮む。入力が16K超または出力128未満の計算集約条件ではオフラインへ回せる遊休計算が少ない。出力512超ではKVメモリ圧力が高まり、同時に保持できるオフライン要求数が減る。したがって、回収可能な遊休計算・メモリが元々少ない条件では共同サービングの上積みは限定される。",
-    "interpretation": "効果は単なる優先度制御ではなく、SLO余裕に合わせた計算投入、数層以内のGPU返却、履歴長と独立な増分状態退避を組み合わせた結果である。特に長いオフライン系列では従来プリエンプションの再計算費用が増えるため、増分KV方式の差が大きくなる。",
-    "quality_impact": "生成品質を近似・圧縮する方式ではないため、主要な品質トレードオフは報告されていない。代わりにオフライン要求の完了時刻がオンライン負荷に応じて伸びる。評価は出力品質ではなくオンラインP99 SLOとオフライン処理量を中心に行う。"
+    "negative_results": "低到着率の遅延重視領域ではAyoの要求バッチ化等が一部点でScepsyをわずかに上回る。異なるLLM同士が同時にファンアウトする場合、現在の集約パイプラインは直列段として近似するため遅延を誤モデル化する。LLMが複数役割・複数ワークフローで再利用され二峰性負荷になる場合も単一集約分布では配置が最適でなくなる。長時間ツール処理は現在無視されるため、それが支配的なワークフローでは予測誤差が増える。",
+    "interpretation": "動的エージェント処理のすべての分岐を予測する必要はなく、定常状態のLLM別需要比だけでも資源配分には十分な情報を持つことを示す。これにより複雑なワークフロー解析を避けつつ、複製・テンソル並列・空間共有を同じ目的関数で選べる。",
+    "quality_impact": "モデルやエージェントアルゴリズムを変更しないため出力品質への近似は導入しない。性能改善は資源割り当てと配置によるもので、品質は元ワークフローに依存する。"
   },
   "reservation": {
-    "claim_id": "claim-ff20bcaca705be66e1a1b76e",
+    "claim_id": "claim-cd9ea16c565464e02e01a24b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
