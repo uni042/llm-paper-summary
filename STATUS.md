@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 01:06:06 JST**
+> 自動生成: **2026-09-20 01:29:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **48** |
-| 未claim Research job | **48** |
-| 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-20 00:48:02 JST（18分前）** |
+| 未claim Research job | **47** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-20 00:48:02 JST（41分前）** |
 | 整合性異常 | **7** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **4** | **3** | **0** | **0** | **0** | — |
+| Research | **14** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **65** | **4** | **1** | **3** | **0** | **0** | **0** |
-| 合計 | **79** | **8** | **4** | **3** | **0** | **0** | **0** |
+| Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
+| 合計 | **68** | **8** | **7** | **0** | **1** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -109,6 +109,18 @@
   - result: `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
   - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
+- **09-20 01:06:32 JST** job `job-7c3767a717022ebe` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260920T0111JST-discovery-specialist-energy-disagg-02.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
+  - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
+- **09-20 01:06:43 JST** job `job-b156f590044217bf` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260920T0112JST-discovery-specialist-elastic-kv-03.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json`
+  - 探索軸: CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction
+- **09-20 01:06:53 JST** job `job-b0b7be0cf94d2abc` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
+  - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
 - **09-20 00:29:05 JST** job `job-d28909a47c5b1f9e` / 候補 **0件**
   - result: `.survey/work-queue/results/validation-precheck-gate-proper-20260920T001652JST.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/validation-precheck-gate-proper-20260920T001652JST.json`
@@ -133,18 +145,6 @@
   - result: `.survey/work-queue/results/20260919T2302JST-discovery-specialist-memory-runtime-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2302JST-discovery-specialist-memory-runtime-1.json`
   - 探索軸: HBM-host同時アクセス・CPU-free serving・portable local runtime
-- **09-19 23:06:25 JST** job `job-e758ff8e3f4dd769` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2308JST-discovery-specialist-cxl-network-2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2308JST-discovery-specialist-cxl-network-2.json`
-  - 探索軸: CXL共有KV・sparse attention remote memory・SmartNIC prefix caching
-- **09-19 23:06:36 JST** job `job-a761d3272ec6911d` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2313JST-discovery-specialist-moe-offload-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2313JST-discovery-specialist-moe-offload-3.json`
-  - 探索軸: MoE expert prefetch・CPU/GPU offload・edge bandwidth adaptation
-- **09-19 23:06:46 JST** job `job-4856cfe497ee1453` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T2318JST-discovery-specialist-disagg-routing-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T2318JST-discovery-specialist-disagg-routing-4.json`
-  - 探索軸: PD分離routing・selective KV transfer・multi-turn append-prefill
 
 ### 直近タスク
 
@@ -179,7 +179,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-20 01:01 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **3件** / 候補: **0件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **0件**
 - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation / energy-aware disaggregated Attention-FFN serving and operator-level DVFS / CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction / NVMe-direct KV offload and NAND-centric edge LLM inference
 - round `specialist-recent-memory-serving-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
@@ -188,22 +188,24 @@
 - round `specialist-energy-disagg-02` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
   - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260920T0111JST-discovery-specialist-energy-disagg-02.json` (`ok=true`)
 - round `specialist-elastic-kv-03` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json`
   - 探索軸: CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260920T0112JST-discovery-specialist-elastic-kv-03.json` (`ok=true`)
 - round `specialist-nvme-flash-04` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
   - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.18655` — Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 01:29:15 JST** / heartbeat: **—** / lease expiry: **09-20 02:59:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7353bc1b63a704fc.json`
 
 #### Audit
 
@@ -251,10 +253,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **639** |
+| 成功result未照合のimmutable submission | **636** |
 | └ Research | **487** |
 | └ Audit | **2** |
-| └ Discovery | **148** |
+| └ Discovery | **145** |
 | └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
