@@ -1,0 +1,10 @@
+{
+  "schema_version":1,
+  "operation":"submit_discovery_round",
+  "candidates":[],
+  "rejected_candidates":[
+    {"identity":"arXiv:2607.28633","title":"Topology-Aware Data Movement for Disaggregated GPU Inference","source_url":"https://arxiv.org/abs/2607.28633","rejection_reason":"主要なend-to-end評価が実機multi-node/CXL環境ではなくprojected analysisであり、正本の強い実測システム候補基準に対して証拠が不足するため。"},
+    {"identity":"arXiv:2606.03910","title":"NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference","source_url":"https://arxiv.org/abs/2606.03910","rejection_reason":"64-GPU fat-tree simulator中心の評価で、実推論基盤・実ネットワーク上のsystem validationが確認できず、現行候補在庫に追加する強度に達しないため。"}
+  ],
+  "discovery_stats":{"run_key":"2026-09-19T17:00:00+09:00","round":"specialist-network-kv-4","axis":"network/RDMA・KV transfer・topology-aware routing","query_summary":"KV階層化からnetwork transferへ軸を変更。PDD (2609.13161) とSmartGen (2607.28150) は既知候補として除外。Topology-Aware Data MovementとNetKVは一次arXiv抄録を評価したがsimulation/projected analysis中心のため品質基準で不採用。","candidate_count":4,"duplicate_filtered_count":2,"duplicate_canonical_ids":["arXiv:2609.13161","arXiv:2607.28150"],"next_axis_hint":"次はGPU kernel/runtime・attention実装、または古い重要systemの収録漏れへ移る","empty_round_reason":"network軸の未収録候補は実機評価不足で採用なし"}
+}
