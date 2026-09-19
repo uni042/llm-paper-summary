@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-f1d600cd7542c0db96d93c65",
-  "job_id": "job-research-e8f755e1fee9cc18",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f1d600cd7542c0db96d93c65",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f1d600cd7542c0db96d93c65","job_id":"job-research-e8f755e1fee9cc18","data":{"hardware":"主評価はNVIDIA DGX-H100を模した8 GPU・4 NVSwitch構成。Accel-SimへHopper相当GPU機能を追加し、BookSim2と統合してNVLink/NVSwitchをモデル化する。NVLinkは16 Bフリット、GPU↔スイッチ片道250 ns、往復約1マイクロ秒。NVSwitchのCAISマージ表は各ポート40 KB・320エントリ、各入力ポート8本の256深度仮想チャネルを持つ。ハードウェア面積はTSMC 12 nmでスイッチ追加回路約0.50 mm²（NVSwitchダイの1%未満）、GPU側TB群同期回路0.019 mm²/ダイ（H100面積の0.01%未満）と見積もる。","software":"Hopper対応へ拡張したAccel-SimとカスタムBookSim2を用い、NVLSのmultimem命令、スイッチ内マルチキャスト／リダクション、CAISの計算認識型命令・マージユニット・TB協調・データフロー最適化をモデル化する。GEMMはCUTLASS実装。比較対象はTP-NVLS、SP-NVLS、CoCoNet、FuseLib、T3、これらのNVLS拡張版、局所性認識TB配置LADMの計9方式にCAIS-Baseを加える。","methodology":"Mega-GPT-4B、Mega-GPT-8B、LLaMA-7Bの3モデルで学習と推論を評価し、推論は通信負荷の高いプリフィル段階を対象とする。シミュレータ容量と実行時間の制約から主要行列次元を実モデルの50%へ縮小し、計算対通信比を保つためSM数も50%へ減らす。設定はMega-GPT-4Bがhidden 2048、FFN 8192、24 heads、sequence 1024、batch 16、Mega-GPT-8Bが3072/12288/32/1024/12、LLaMA-7Bが4096/11264/32/3072/3。縮小系と実行可能なフル系を比較し、TP-NVLS比高速化が1.40倍対1.43倍と近いことを確認する。NVLSシミュレーションは1〜16 GBのNCCL AllReduceを実機と比較し平均誤差3.87%。GPU数は最大32まで拡張してスケーラビリティを確認する。","scope":"実機CAISハードウェアではなくサイクル精密シミュレーションによる評価であり、主要モデルもシミュレーション可能な縮小構成である。推論評価はプリフィル中心で、デコード主体の低バッチ・低演算密度条件や実際の大規模クラスタ運用、故障・混雑・異種GPU環境は直接評価していない。一方、NVLS部分は実機NCCL測定で較正し、縮小モデルの速度傾向もフル設定との比較で検証している。"},"reservation":{"claim_id":"claim-f1d600cd7542c0db96d93c65","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
