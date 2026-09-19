@@ -6,10 +6,10 @@
     "terminal_research_rejections"
   ],
   "updated_at": "2026-09-19T19:00:00+09:00",
-  "submission_count": 22,
+  "submission_count": 24,
   "research_terminal_rejection_count": 5,
-  "rejection_observation_count": 53,
-  "rejection_record_count": 51,
+  "rejection_observation_count": 55,
+  "rejection_record_count": 53,
   "ignored_without_identity": 0,
   "records": {
     "id:arXiv:2203.04910": {
@@ -298,6 +298,28 @@
       "source_submission": ".survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2602.02987": {
+      "primary_identity": "id:arXiv:2602.02987",
+      "identity_tokens": [
+        "id:arXiv:2602.02987",
+        "title:largescale llm inference with heterogeneous workloads prefilldecode contention and asymptotically optimal control",
+        "url:https://arxiv.org/abs/2602.02987"
+      ],
+      "canonical_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+      "source_url": "https://arxiv.org/abs/2602.02987",
+      "rejection_reason": "Primarily stochastic-control/queueing theory with numerical experiments rather than a concrete implemented inference-system mechanism; lower fit than systems implementations for this survey.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T19:00:00+09:00",
+      "last_rejected_at": "2026-09-19T19:00:00+09:00",
+      "axis": "thermal-aware / energy-aware LLM serving scheduling",
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T1900JST-discovery-specialist-energy-9.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2604.06668": {
       "primary_identity": "id:arXiv:2604.06668",
       "identity_tokens": [
@@ -384,6 +406,28 @@
       "axis": "network/RDMA・KV transfer・topology-aware routing",
       "run_key": "2026-09-19T17:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T1819JST-discovery-specialist-network-kv-4.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2607.17880": {
+      "primary_identity": "id:arXiv:2607.17880",
+      "identity_tokens": [
+        "id:arXiv:2607.17880",
+        "title:mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2607.17880"
+      ],
+      "canonical_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2607.17880",
+      "rejection_reason": "Primarily a theoretical online/offline algorithmic model with competitive-ratio and hardness results rather than an implemented LLM inference system with systems evaluation; lower fit for the repository's inference-system survey.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T19:00:00+09:00",
+      "last_rejected_at": "2026-09-19T19:00:00+09:00",
+      "axis": "MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache",
+      "run_key": "2026-09-19T19:00:00+09:00",
+      "source_submission": ".survey/work-queue/submissions/20260919T1900JST-discovery-specialist-moe-placement-8.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2607.28633": {
