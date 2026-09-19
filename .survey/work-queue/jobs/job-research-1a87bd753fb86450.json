@@ -16,12 +16,9 @@
   "schema_version": 1,
   "created_at": "2026-09-19T15:01:42+00:00",
   "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.components[0].description is too short | Japanese-first prose ratio is too low: 52.4% < 70% (Japanese=2178, Latin=1975)",
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
   "validation_errors": [
-    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
-    "problem_method.novelty must explain the paper-specific idea",
-    "problem_method.components[0].description is too short",
-    "Japanese-first prose ratio is too low: 52.4% < 70% (Japanese=2178, Latin=1975)"
+    "problem_method.method_overview must explain the end-to-end mechanism"
   ],
-  "last_validation_failed_at": "2026-09-19T15:40:05+00:00"
+  "last_validation_failed_at": "2026-09-19T15:41:29+00:00"
 }
