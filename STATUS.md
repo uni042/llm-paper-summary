@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 02:03:52 JST**
+> 自動生成: **2026-09-20 02:04:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **49** |
-| 未claim Research job | **48** |
+| 収録候補論文 | **50** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-20 01:51:54 JST（11分前）** |
-| 整合性異常 | **8** |
+| 最終検証済みResearch収録 | **09-20 01:51:54 JST（12分前）** |
+| 整合性異常 | **9** |
 
 ## 現在の収録候補
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **49** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **49** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **14** | **2** | **2** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **54** | **4** | **4** | **0** | **0** | **0** | **0** |
-| 合計 | **68** | **6** | **6** | **0** | **1** | **1** | **0** |
+| Discovery | **55** | **1** | **0** | **1** | **0** | **0** | **5** |
+| 合計 | **69** | **3** | **2** | **1** | **1** | **1** | **5** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -121,6 +121,10 @@
   - result: `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
   - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
+- **09-20 02:04:03 JST** job `job-9b22461247bc5bb0` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260920T0202JST-discovery-fixedsource-openalex-01.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json`
+  - 探索軸: OpenAlex search: LLM inference serving KV cache
 - **09-20 02:00:09 JST** job `job-efd454976a6235e0` / 候補 **3件**
   - result: `.survey/work-queue/results/manual-fixedsource-openalex-20260920T0159JST-round1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
@@ -141,10 +145,6 @@
   - result: `.survey/work-queue/results/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260920T0018JST-discovery-specialist-cross-dc-disagg-3.json`
   - 探索軸: cross-datacenter prefill/decode disaggregationとWAN KV transfer
-- **09-20 00:04:31 JST** job `job-df0940145eaddc32` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260920T0022JST-discovery-specialist-edge-measurement-4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260920T0022JST-discovery-specialist-edge-measurement-4.json`
-  - 探索軸: GPU runtime/quantized servingからedge continuum実測とcollective communicationへ拡張
 
 ### 直近タスク
 
@@ -171,25 +171,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-20 01:01 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **0件** / 候補: **0件**
-- 探索軸: recent heterogeneous KV memory pooling and robust KV reservation / energy-aware disaggregated Attention-FFN serving and operator-level DVFS / CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction / NVMe-direct KV offload and NAND-centric edge LLM inference
-- round `specialist-recent-memory-serving-01` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json`
-  - 探索軸: recent heterogeneous KV memory pooling and robust KV reservation
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json` (`ok=true`)
-- round `specialist-energy-disagg-02` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260920T0111JST-discovery-specialist-energy-disagg-02.json`
-  - 探索軸: energy-aware disaggregated Attention-FFN serving and operator-level DVFS
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0111JST-discovery-specialist-energy-disagg-02.json` (`ok=true`)
-- round `specialist-elastic-kv-03` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json`
-  - 探索軸: CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0112JST-discovery-specialist-elastic-kv-03.json` (`ok=true`)
-- round `specialist-nvme-flash-04` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260920T0113JST-discovery-specialist-nvme-flash-04.json`
-  - 探索軸: NVMe-direct KV offload and NAND-centric edge LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0113JST-discovery-specialist-nvme-flash-04.json` (`ok=true`)
+- 最新観測run: **2026-09-20 01:58 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **5件**
+- 探索軸: MoE expert cache offload placement prefetch inference systems
+- round `specialist-moe-offload-openalex-02` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
+  - 探索軸: MoE expert cache offload placement prefetch inference systems
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -218,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **49** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -249,8 +237,8 @@
 | 成功result未照合のimmutable submission | **641** |
 | └ Research | **491** |
 | └ Audit | **2** |
-| └ Discovery | **146** |
-| └ Other/Unknown | **2** |
+| └ Discovery | **145** |
+| └ Other/Unknown | **3** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -267,10 +255,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **8** |
+| 対応jobなしsubmission（有効Discovery round除外） | **9** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **8** |
+| 異常レコード合計（重複排除） | **9** |
 
 ### 対応jobなしsubmissionの診断対象
 
@@ -280,6 +268,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - `.survey/work-queue/submissions/20260919T1700JST-round10-rdma-network.json`
 - `.survey/work-queue/submissions/20260919T1700JST-round11-recent-crosscheck.json`
 - `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
+- `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
 - `.survey/work-queue/submissions/manual-fixedsource-openalex-20260920T0159JST-round1.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass-20260920T001652JST.json`
 - `.survey/work-queue/submissions/validation-precheck-gate-bypass2-20260920T001652JST.json`
