@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 22:04:54 JST**
+> 自動生成: **2026-09-19 22:05:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **12** | **3** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **56** | **14** | **1** | **13** | **0** | **0** | **22** |
-| 合計 | **68** | **17** | **3** | **13** | **0** | **0** | **22** |
+| Discovery | **56** | **16** | **1** | **15** | **0** | **0** | **26** |
+| 合計 | **68** | **19** | **3** | **15** | **0** | **0** | **26** |
 
-- 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -174,8 +174,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 22:00 JST**
-- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **13件** / 候補: **22件**
-- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control / GPU kernel/runtime・quantized execution・CUDA graph / distributed inference collective communication・runtime adaptation・interconnect / multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing / GPU virtual memory・KV fragmentation・memory allocator lineage / agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy / edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding / speculative decoding serving・draft/verification disaggregation・runtime scheduling / CPU/GPU heterogeneous KV offload・PCIe zero-copy・GPU-centric synchronization / serverless model loading・cold start・LoRA artifact sharing / long-context sparse attention・HBM/DRAM KV offload・lookahead prefetch / LLM serving autoscaling・P/D burst handling・SLO-aware provisioning
+- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **15件** / 候補: **26件**
+- 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving / 2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer / 2026年9月新着・thermal/power-aware LLM serving・facility/device co-control / GPU kernel/runtime・quantized execution・CUDA graph / distributed inference collective communication・runtime adaptation・interconnect / multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing / GPU virtual memory・KV fragmentation・memory allocator lineage / agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy / edge/mobile on-device runtime・multi-LoRA switching・self-speculative decoding / speculative decoding serving・draft/verification disaggregation・runtime scheduling / CPU/GPU heterogeneous KV offload・PCIe zero-copy・GPU-centric synchronization / serverless model loading・cold start・LoRA artifact sharing / long-context sparse attention・HBM/DRAM KV offload・lookahead prefetch / LLM serving autoscaling・P/D burst handling・SLO-aware provisioning / heterogeneous GPU serving・fine-grained dynamic parallelism・online dispatch / fault tolerance/recovery・hardware-aware multi-LLM routing
 - round `specialist-flash-agent-runtime-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2208JST-discovery-specialist-flash-agent-runtime-1.json`
   - 探索軸: 2026年9月新着・Flash/HBF階層メモリ・ローカルstate管理・agentic pipeline serving
@@ -270,10 +270,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **635** |
+| 成功result未照合のimmutable submission | **637** |
 | └ Research | **475** |
 | └ Audit | **2** |
-| └ Discovery | **158** |
+| └ Discovery | **160** |
 
 ### 厳格検証が未成立のcompleted job
 
