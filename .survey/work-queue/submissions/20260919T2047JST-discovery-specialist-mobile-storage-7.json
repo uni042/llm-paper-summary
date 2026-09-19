@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2506.10443",
+      "title": "MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2506.10443",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md",
+      "priority": 78,
+      "reason": "mobile LLM inference向けにquantizationとDRAM-Flash hybrid storageを統合し、CPU命令/GPU特性に合わせたweight/input layout、multicore load balancing、mixed precision等を備える汎用engine。主流LLM framework比最大8.6倍高速化を報告し、Flashを能動的memory tierとして扱うedge inference実装としてSSD系統にも関連する。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "arXiv:2609.08307",
+      "identity": "arXiv:2609.08307",
+      "title": "A Measurement Study of LLM Inference Trade-offs Across Edge Continuum Hardware",
+      "source_url": "https://arxiv.org/abs/2609.08307",
+      "rejection_reason": "実装・新規推論機構の提案ではなくedge hardware間のmeasurement studyが中心で、探索正本の強いinference-system candidate基準に対して優先度が低い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-19T20:00:00+09:00",
+    "round": "specialist-mobile-storage-7",
+    "axis": "mobile/on-device inference・DRAM-Flash hybrid storage・CPU/GPU runtime",
+    "query_summary": "prefix localityからedge/on-deviceへ軸を移し、Flash hybrid storageを持つMNN-LLMを採用。HybridGenは直近既探索、edge continuum measurement studyは新規system contributionが弱いため理由付き不採用とした。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2604.18529"],
+    "next_axis_hint": "次はserving admission control、SLO-aware batching、autoscaling/capacity planningへ移る",
+    "empty_round_reason": null
+  }
+}
