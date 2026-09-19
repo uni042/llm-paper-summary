@@ -9,9 +9,12 @@ from __future__ import annotations
 
 import json
 import re
+from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
+
+import reference_pool
 
 DEFAULT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
 S2_API_HOST = "api.semanticscholar.org"
