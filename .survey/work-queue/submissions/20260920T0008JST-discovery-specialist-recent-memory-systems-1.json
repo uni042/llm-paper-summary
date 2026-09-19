@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18063",
+      "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+      "source_url": "https://arxiv.org/abs/2609.18063",
+      "paper_path": "papers/inference/06-moe-inference/2026-2609.18063-edge0-ssd-moe-routing-prediction.md",
+      "priority": 95,
+      "reason": "SSDから35B級MoEをストリーミングするため、次層routingを1 token先に予測してstaged expertと実routingを一致させるprerouterを導入する。24GB単機で35B MoEを約20 tok/s、peak active memory 3GiBで実行し、framework/checkpoint/adapterも公開。SSD expert offload・prefetch・routing predictionの重点テーマに直接一致する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.17652",
+      "title": "Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches",
+      "source_url": "https://arxiv.org/abs/2609.17652",
+      "paper_path": "papers/inference/05-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv.md",
+      "priority": 94,
+      "reason": "host memoryへoffloadした百万token級KV indexのscan trafficを対象に、4-bit Kをbit-plane化しqueryごとに読むbit深度をreverse water-fillingで決定する。Qwen3-8B・1M tokensで136-bit scan比GPU時間1.67x高速、実coding-agent sessionでも精度/traffic trade-offを評価しており、階層メモリ・KV offloadの実装価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.16161",
+      "title": "LLM Inference in a Flash!",
+      "source_url": "https://arxiv.org/abs/2609.16161",
+      "paper_path": "papers/inference/07-storage-offload/2026-2609.16161-llm-inference-in-a-flash.md",
+      "priority": 94,
+      "reason": "Flash compute-in-memory上でLLM inferenceを成立させるためinteger-only quantizationとdictionary-based KV compressionを組み合わせ、weight/KV双方のデータ移動を削減する。Llama-3.1-8B/Qwen-2.5-7Bで限定的な精度劣化のままdynamic KV trafficを15x削減し、SSD/near-storage computeという重点系統に直接接続する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.17863",
+      "title": "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
+      "source_url": "https://arxiv.org/abs/2609.17863",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md",
+      "priority": 82,
+      "reason": "Qwen2.5-7B-Instruct/vLLM 0.12をL4/A100/H100で54構成実測し、quantization・KV cache・speculative decoding等のcost/quality/latency Pareto frontierを比較する。個別高速化の単純比較ではなく組合せと品質劣化を同一軸で評価しており、推論基盤の設計選択を横断比較する資料価値が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-20T00:00:00+09:00",
+    "round": "specialist-recent-memory-systems-1",
+    "axis": "2026-09中旬の新着memory/offload/MoE/inference-engineering systems",
+    "query_summary": "2609中旬のLLM inference/serving、KV cache、MoE offload、SSD/Flash、speculative decodingを横断検索し、一次arXiv abstractで軽量評価。SwiftCache/Tutti/CacheFlow等の既知候補は早期除外し、最新default branchのrepository検索でも4 arXiv IDが未収録であることをwrite直前に再確認した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2606.16135", "arXiv:2605.03375", "arXiv:2604.25080", "arXiv:2607.16892"],
+    "next_axis_hint": "次は2609.15-19のspeculative decoding runtime、GPU kernel/quantized serving、disaggregated schedulingを未走査集合として探索する。",
+    "empty_round_reason": null
+  }
+}
