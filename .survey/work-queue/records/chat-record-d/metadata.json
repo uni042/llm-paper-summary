@@ -2,62 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-aad8189707bf1017dc2b3caf",
-  "job_id": "job-research-49ee16176ca66925",
-  "data": {
-    "canonical_id": "arXiv:2401.11240",
-    "arxiv_id": "2401.11240",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference",
-    "summary": "多数のLoRAアダプタを一つの基盤LLMで共有して提供すると、GPUメモリを節約できる反面、未配置アダプタをホストからGPUへ読み込む間にコールドスタートが発生し、継続バッチ中の他要求まで遅らせる。CaraServeは読み込みと並行してCPUで新要求のプリフィル用LoRA計算を先行し、GPU転送完了後に処理を切り替える。さらにアダプタのランクによってバッチ遅延が変わる性質を性能モデル化し、既存要求のSLO違反増分が最小となるサーバへ要求を割り当てる。",
-    "list_summary": "LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。",
-    "authors": [
-      "Suyi Li",
-      "Hanfeng Lu",
-      "Tianyuan Wu",
-      "Minchen Yu",
-      "Qizhen Weng",
-      "Xusheng Chen",
-      "Yizhou Shan",
-      "Binhang Yuan",
-      "Wei Wang"
-    ],
-    "authors_affiliations": "HKUST; CUHK-Shenzhen; Shanghai AI Laboratory; Huawei Cloud",
-    "published": "2024-01-20",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling",
-    "topics": [
-      "LoRA serving",
-      "CPU offload",
-      "cold start",
-      "SLO scheduling"
-    ],
-    "importance": "アダプタ読込待ちをCPU先行計算で隠し、異種ランクの性能差を配置判断へ取り込む初期LoRAサービング研究。",
-    "hardware_evaluation": "A10 GPUを中心に単体評価し、8台A10テストベッドと60サーバ規模のシミュレーションでスケジューラを評価。",
-    "quality_effect": "LoRAの数学的計算をCPU/GPU間で分担するだけでモデル出力を近似しない。",
-    "source": "https://arxiv.org/abs/2401.11240",
-    "sources": [
-      "https://arxiv.org/abs/2401.11240",
-      "https://arxiv.org/pdf/2401.11240"
-    ],
-    "code": null,
-    "implementation": "LightLLMのLlama2推論モジュールへ統合し、Punica由来BGMV、PyBind11による専用CUDA演算子、PyTorch CPU LoRAプロセスを実装。論文は査読後の公開を予定すると記載。",
-    "last_checked": "2026-09-19",
-    "references": [],
-    "references_checked_at": "2026-09-19",
-    "references_source": "primary-reference-section",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-53f30943d2cb795096db98fc",
+  "job_id": "job-research-d0436ba646148687",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-aad8189707bf1017dc2b3caf",
-    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "claim_id": "claim-53f30943d2cb795096db98fc",
+    "worker_id": "manual-refcuration-savecheck-20260920",
     "worker_kind": "scheduled_chat"
   }
 }
