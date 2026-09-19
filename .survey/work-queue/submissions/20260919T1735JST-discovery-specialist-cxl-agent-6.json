@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.00321",
+      "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+      "source_url": "https://arxiv.org/abs/2511.00321",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2511.00321-cxl-pnm-kv-cache-management.md",
+      "priority": 91,
+      "reason": "CXL memory内PNMへKV token selectionをoffloadし、GPUへの非resident KV recallを削減する長文脈推論システム。405B/1M-tokenまで評価し、throughput最大21.9倍、energy/token最大60倍、cost efficiency最大7.3倍を報告しており、CXL/階層メモリ系の重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2607.23933",
+      "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
+      "source_url": "https://arxiv.org/abs/2607.23933",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2607.23933-specbox-speculative-sandbox-scheduling.md",
+      "priority": 82,
+      "reason": "agent servingでsandbox cold-startと常駐memoryのトレードオフを、生成途中のintent予測によるsandbox prewarming、dependency graph prefetch、semantic result cache、shared-memory transportで解くruntime。P99 latency最大2.9倍改善、peak memory 45.9%削減を示す。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T17:00:00+09:00",
+    "round": "specialist-cxl-agent-6",
+    "axis": "CXL-PNM KV cache・agent sandbox runtime",
+    "query_summary": "heterogeneous runtime候補からCXL/PNM関連とagent runtimeへ展開。2511.00321と2607.23933は一次arXiv情報を確認し、最新main repo検索でID未登録を再確認。Akashic/vLLM等の既知系統は除外した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2607.05708","arXiv:2309.06180"],
+    "next_axis_hint": "storage I/O scheduling、speculative runtime、recent arrivals、network crosscheckへ移る",
+    "empty_round_reason": null
+  }
+}
