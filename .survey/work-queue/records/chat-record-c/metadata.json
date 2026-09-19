@@ -1,1 +1,60 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ec063c93a77be760003754b8","job_id":"job-research-ee7c0fc62bdc554b","data":{"canonical_id":"arXiv:2608.08340","arxiv_id":"2608.08340","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"OpRAG: A Resource-Deterministic Runtime for GPU-Backed Multi-Stage RAG Workflows","summary":"OpRAGは、検索拡張生成の前処理、埋め込み、検索、メモリ参照、文脈構築、生成、索引更新を資源要件と通信様式を持つ第一級演算子として扱い、動的なエージェント判断を決定論的な実行区間へ逐次コンパイルする分散実行系である。Arrow/Cylonのゼロコピー経路、永続作業者、有界待ち行列、CPUトークナイザ先読み、長さ別GPU埋め込みバッチ、検索と生成の重畳によって、LLM復号カーネルを変えず周辺オーケストレーション費を削減する。","list_summary":"RAG各段階を資源・通信付き演算子へ変換し、ゼロコピー通信とCPU/GPU重畳で復号外のオーケストレーション律速を削減する。","authors":["Arup Kumar Sarker","Mills Staylor","Aymen Alsaadi","Gregor von Laszewski","Shantenu Jha","Geoffrey Fox"],"authors_affiliations":"University of Virginia; Rutgers University; Princeton Plasma Physics Laboratory","published":"2026-08-08","publication":"ACM Symposium on Cloud Computing 2026 (SoCC)","publication_type":"Conference paper","publication_status":"Accepted/Proceedings manuscript","lineage":"RAG runtime / distributed orchestration / agentic workflows","topics":["RAG serving","distributed runtime","GPU orchestration","zero-copy data plane"],"importance":"モデルサーバ外のRAG多段処理を資源管理対象として統一し、GPUが速くても周辺処理が律速になる問題を直接扱う。","hardware_evaluation":"A100 GPUでLlama3-8BとMistral-7BをBF16・FlashAttention 2で評価し、CPU側は最大1024物理作業者まで拡張。","quality_effect":"同じモデル・コーパス・チャンク数を維持し、検索評価ではRecall@5=1.0を確認。","source":"https://arxiv.org/abs/2608.08340","sources":["https://arxiv.org/abs/2608.08340","https://arxiv.org/pdf/2608.08340"],"code":null,"implementation":"Arrow/Cylonデータ経路、永続CPU/GPU作業者、有界待ち行列、長さ別埋め込みバッチ、CUDA graph向け反復形状、FAISS系検索を統合した実装を評価。公式コードURLは一次資料で確認できない。","last_checked":"2026-09-19","references":[],"references_checked_at":"2026-09-19","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-ec063c93a77be760003754b8","worker_id":"scheduled-chat-llm-survey-20260919T182739JST-quota","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a1b38cbb586fe670600b1d26",
+  "job_id": "job-research-ee7c0fc62bdc554b",
+  "data": {
+    "canonical_id": "arXiv:2608.08340",
+    "arxiv_id": "2608.08340",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "OpRAG: A Resource-Deterministic Runtime for GPU-Backed Multi-Stage RAG Workflows",
+    "summary": "OpRAGは、検索拡張生成の前処理、埋め込み、検索、メモリ参照、文脈構築、生成、索引更新を資源要件と通信様式を持つ第一級演算子として扱い、動的なエージェント判断を決定論的な実行区間へ逐次コンパイルする分散実行系である。Arrow/Cylonのゼロコピー経路、永続作業者、有界待ち行列、CPUトークナイザ先読み、長さ別GPU埋め込みバッチ、検索と生成の重畳によって、LLM復号カーネルを変えず周辺オーケストレーション費を削減する。",
+    "list_summary": "RAG各段階を資源・通信付き演算子へ変換し、ゼロコピー通信とCPU/GPU重畳で復号外のオーケストレーション律速を削減する。",
+    "authors": [
+      "Arup Kumar Sarker",
+      "Mills Staylor",
+      "Aymen Alsaadi",
+      "Gregor von Laszewski",
+      "Shantenu Jha",
+      "Geoffrey Fox"
+    ],
+    "authors_affiliations": "University of Virginia; Rutgers University; Princeton Plasma Physics Laboratory",
+    "published": "2026-08-08",
+    "publication": "ACM Symposium on Cloud Computing 2026 (SoCC)",
+    "publication_type": "Conference paper",
+    "publication_status": "Accepted/Proceedings manuscript",
+    "lineage": "RAG runtime / distributed orchestration / agentic workflows",
+    "topics": [
+      "RAG serving",
+      "distributed runtime",
+      "GPU orchestration",
+      "zero-copy data plane"
+    ],
+    "importance": "モデルサーバ外のRAG多段処理を資源管理対象として統一し、GPUが速くても周辺処理が律速になる問題を直接扱う。",
+    "hardware_evaluation": "A100 GPUでLlama3-8BとMistral-7BをBF16・FlashAttention 2で評価し、CPU側は最大1024物理作業者まで拡張。",
+    "quality_effect": "同じモデル・コーパス・チャンク数を維持し、検索評価ではRecall@5=1.0を確認。",
+    "source": "https://arxiv.org/abs/2608.08340",
+    "sources": [
+      "https://arxiv.org/abs/2608.08340",
+      "https://arxiv.org/pdf/2608.08340"
+    ],
+    "code": null,
+    "implementation": "Arrow/Cylonデータ経路、永続CPU/GPU作業者、有界待ち行列、長さ別埋め込みバッチ、CUDA graph向け反復形状、FAISS系検索を統合した実装を評価。公式コードURLは一次資料で確認できない。",
+    "last_checked": "2026-09-19",
+    "references": [],
+    "references_checked_at": "2026-09-19",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-a1b38cbb586fe670600b1d26",
+    "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+    "worker_kind": "scheduled_chat"
+  }
+}
