@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ba82b7e0582e687a14fee4a3",
-  "job_id": "job-research-e12ae17b96a85ee5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ba82b7e0582e687a14fee4a3",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ba82b7e0582e687a14fee4a3","job_id":"job-research-e12ae17b96a85ee5","data":{"overview":"単純な窓注意は先頭KVを追い出すと急激に破綻するが、先頭4トークン程度を直近窓へ加えるだけで再計算付き窓に近いパープレキシティへ戻る。Llama-2、MPT、Falcon、Pythiaの複数規模で400万トークン超まで安定した言語モデリングを確認し、再計算付きスライディング窓に対して最大22.2倍の高速化を報告する。専用シンクトークンを事前学習した160Mモデルでは、単一シンクだけで安定したストリーミング品質を維持できた。","key_results":[{"metric":"Llama-2-13B PG19パープレキシティ","value":"窓注意 5158.07、先頭4+直近1020で5.40、改行4+直近1020で5.60","baseline":"0+1024 window attention","condition":"PG19先頭書籍65Kトークン","interpretation":"先頭トークンの意味ではなく、注意シンクとしての位置的役割を保持するだけで崩壊をほぼ解消する。"},{"metric":"Llama-2-7Bの先頭トークン数切除","value":"0+4096: 3359.95、1+4095: 11.88、2+4094: 10.51、4+4092: 9.59、8+4088: 9.54","baseline":"直近KVのみ","condition":"連結PG19の400Kトークン","interpretation":"4個程度でほぼ飽和し、それ以上の固定保持による利得は小さい。"},{"metric":"長時間安定性","value":"400万トークン超","baseline":"密注意・窓注意","condition":"Llama-2 7B/13B/70B、Falcon 7B/40B、Pythia 2.8B/6.9B/12B、MPT 7B/30B","interpretation":"系列全長が学習窓を大幅に超えても、最近文脈に対する言語モデリングのパープレキシティを安定させる。"},{"metric":"ストリーミング高速化","value":"最大22.2倍","baseline":"sliding window with recomputation","condition":"同等の固定窓で連続生成","interpretation":"毎トークンで窓全体のKVを再構築せず、既存KVをローリング再利用する効果である。"},{"metric":"専用Sink Token事前学習","value":"1+1023でPPL 18.01、4+1020で18.02","baseline":"通常モデルは1+1023で18.49、4+1020で18.05","condition":"160Mモデル、PG19","interpretation":"一貫した専用シンクを学習時から与えると、複数の先頭トークンを保持する必要がなくなる。"}],"negative_results":"直近KVだけの窓注意はキャッシュ長を越えた直後にパープレキシティが桁違いに悪化する。先頭1〜2トークンだけではLlama-2等で完全には回復せず、通常事前学習モデルでは複数シンクが必要である。またStreamingLLMはキャッシュ外へ追い出した古い内容を参照できないため、400万トークンを『全て利用可能な文脈』として扱うものではない。","interpretation":"結果は、長時間生成の安定性に必要なのが全過去KVではなく、Softmax注意分布を固定する少数のシンクKVと最近の意味情報だという分離を支持する。これにより品質を保つための再計算を不要にし、固定メモリ化と高速化を同時に得る。","quality_impact":"最近の文脈に対する言語モデリング品質は再計算付き窓に近く維持される一方、保持窓より古い情報を必要とするタスク品質は保証しない。したがって『長文脈能力の拡張』ではなく『ストリーミング安定化』として解釈する必要がある。"},"reservation":{"claim_id":"claim-ba82b7e0582e687a14fee4a3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
