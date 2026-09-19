@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6ad53a550a3c7bedcb56aa8c","job_id":"job-research-c26aa10b960d27a4","data":{"limitations":"効果はCPUとGPUの性能比、CPUメモリ帯域、PCIe帯域へ強く依存し、付録の解析でも主プロセッサが極端に弱くPCIeが高速な構成などでは従来オフロードが有利になり得る。評価モデルはLLaMA2-Chat 7B/13BとVicuna 13B中心で、GQA/MoEを持つ新世代モデルや長文脈KV負荷への一般化は未検証。ドラフトはShareGPTで専用学習が必要で、ターゲットごとに学習費用がかかる。個人PC評価ではCPUターゲット8-bit量子化を併用するため、完全な無損失性はDovetail本体と量子化を分けて解釈する必要がある。","differences":"FlexGen等のオフロードは巨大モデル重みをCPUとGPU間で移動してGPU計算を使うため、低帯域PCIeでは通信が支配的になる。部分オフロードは一部層をCPUで計算するが、GPU VRAMが減るほど加速可能層も減る。SpecExecは投機的デコードをオフロードへ組み合わせるが、大量候補と重み転送の通信費が残る。DovetailはターゲットをCPU検証器として常駐させ、GPUドラフトとの間では候補と特徴だけを交換する点が異なる。通常EAGLE-2は高性能GPU向けに多数候補・軽量ドラフトを選ぶが、DovetailはCPU検証の並列性不足に合わせて候補を減らし、代わりにドラフトを深くする。","implementation_status":"公式コードがGitHubのddInference/Dovetailで公開されている。arXiv v2は2025-09-09更新。EAGLE-2系木状投機を基盤にDGFと複数ブロックドラフト、CPU/GPU異種実行を実装し、RTX 2080/3090、GTX 1050の実機で評価している。","research_positioning":"投機的デコードと階層／異種メモリ推論の境界に位置する。CPUを単なるオフロード先ではなくターゲットモデルの常駐計算装置として使い、GPUを高並列だが小容量のドラフト専用装置にするため、消費者向けGPUのVRAM制約を役割分担へ変換する。SSDやCPUオフロードで重み移動を減らす系統とは別に、モデル役割そのものをCPU/GPUへ分割してPCIe転送粒度をトークン級へ縮める設計として比較価値が高い。"},"reservation":{"claim_id":"claim-6ad53a550a3c7bedcb56aa8c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e55ee414ac2d0aef0a6fbcc3",
+  "job_id": "job-research-0e6ed88f587a40d2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e55ee414ac2d0aef0a6fbcc3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

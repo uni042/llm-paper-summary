@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6ad53a550a3c7bedcb56aa8c","job_id":"job-research-c26aa10b960d27a4","data":{"overview":"DovetailはCPUターゲット／GPUドラフト分離と異種環境向けドラフト最適化により、RTX 2080でLLaMA2-Chat 7BをHumanEval上CPU単独比3.78倍、RTX 3090で13Bを最大10.14倍高速化する。通常オフロードはRTX 2080でCPU単独の0.45倍まで低下し、SpecExecは7Bで2.98倍、13Bで7.10倍に留まる。約2.95GBのGPUメモリで動作し、GTX 1050 4GBでも8-bit CPUターゲットとの組合せでLLaMA2-Chat 7Bを6.35 token/s、Vicuna 13Bを3.36 token/sまで加速する。候補数削減と深いドラフトには最適点があり、ブロックを増やしすぎると受理長が伸びてもドラフト遅延で速度が下がる。","key_results":[{"metric":"LLaMA2-Chat 13B HumanEval高速化","value":"10.14×","baseline":"CPU-only 1.22 token/s","condition":"RTX 3090 + Xeon Silver 4310、temperature=0","interpretation":"DovetailはSpecExec 7.10×を上回り、CPU/GPU役割分離でオフロード通信を避ける利点が大きい。"},{"metric":"LLaMA2-Chat 7B HumanEval高速化","value":"3.78×","baseline":"CPU-only 2.12 token/s","condition":"RTX 2080 SUPER + Xeon Silver 4214R、temperature=0","interpretation":"8GB級旧GPUでもSpecExec 2.98×より高く、低VRAM環境で異種投機が有効。"},{"metric":"GPUメモリ要求","value":"Dovetail本体ピーク約2.95GB","baseline":"SpecExec約7GB超の代表構成","condition":"低VRAM異種配置","interpretation":"巨大ターゲットをCPUへ置くことで3GB級VRAMから投機的高速化を利用できる。"},{"metric":"GTX 1050個人PC速度","value":"LLaMA2-Chat 7B 6.35 token/s、Vicuna 13B 3.36 token/s","baseline":"CPU-only 3.65 / 1.88 token/s","condition":"GTX 1050 Mobile 4GB、CPUターゲット8-bit","interpretation":"極小GPUでも1.74〜1.79倍の高速化を維持するが、CPU並列性制約でサーバより利得は小さい。"},{"metric":"候補数削減効果","value":"EAGLE-2平均高速化1.67×→2.06×","baseline":"60候補→16候補","condition":"RTX 2080異種環境、4タスク平均","interpretation":"受理長が短くなってもCPU並列検証時間の削減が勝ち、異種環境では少数候補が適する。"}],"negative_results":"ドラフトを深くすれば受理率は上がるが無制限には有効でない。LLaMA2-Chat 7B HumanEvalではDGF付き5追加ブロックで2.77倍だが、6ブロック相当では受理長が5.90から5.98へ伸びても高速化が2.75倍へ低下し、ドラフト計算が新しいボトルネックになる。付録の理論解析でもCPU性能とGPU/PCIeの不均衡が極端な場合、異種投機的デコードがオフロードより有利とは限らない。","interpretation":"Dovetailの利点は、低VRAMを単にCPUメモリで補うのではなく、CPUを巨大ターゲットの検証器、GPUを小型ドラフトの予測器としてそれぞれ向く役割へ固定することにある。CPU検証が遅いからこそ候補数を減らし、その空いた時間予算を高精度ドラフトへ再配分するという逆説的な共同設計が速度を支える。","quality_impact":"投機的サンプリングはターゲット分布を維持するためDovetail本体は無損失高速化として設計される。サーバ評価では同一ターゲット精度を維持する。一方GTX 1050評価はCPUターゲットへ8-bit動的量子化を使うため、その結果の品質差は量子化に由来し得る。"},"reservation":{"claim_id":"claim-6ad53a550a3c7bedcb56aa8c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-e55ee414ac2d0aef0a6fbcc3",
+  "job_id": "job-research-0e6ed88f587a40d2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e55ee414ac2d0aef0a6fbcc3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

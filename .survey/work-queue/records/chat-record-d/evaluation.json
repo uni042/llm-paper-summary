@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6ad53a550a3c7bedcb56aa8c","job_id":"job-research-c26aa10b960d27a4","data":{"hardware":"旧型サーバ1はIntel Xeon Silver 4214R 24 cores + NVIDIA RTX 2080 SUPER 8GB、PCIe Gen3x16。サーバ2はXeon Silver 4310 24 cores + RTX 3090 24GB、PCIe Gen4x16。個人PCはCore i5-9300H 4 cores + GTX 1050 Mobile 4GB、PCIe Gen3x8。ドラフト学習は8×NVIDIA A800 80GB。","software":"LLaMA2-Chat 7B/13B、Vicuna 13Bをターゲットとし、EAGLE-2系ドラフトへ動的ゲート融合と1〜6 Transformerブロックを導入。公式実装を公開。サーバではターゲット32-bit、ドラフト16-bit、個人PCではターゲットをPyTorch動的8-bit量子化、ドラフト16-bitとする。","methodology":"MT-bench、HumanEval、GSM8K、Alpacaの4タスクでtemperature 0/1を評価し、平均受理長とCPU単独比高速化倍率を主要指標とする。比較対象はCPU-only、通常オフロード、SpecExec、異種配置へそのまま適用したEAGLE-2、TinyLlama/ShearedLlama等をドラフトにした構成。RTX 2080/3090では木幅10・深さ7・候補16、GTX 1050では木幅10・深さ4・候補7。ドラフトモデルはShareGPTで24 epoch、batch 16、bf16、AdamWで学習し、6ブロック時約1日。DGFとドラフト深さはアブレーションで分離評価する。","scope":"消費者向け・旧型CPU/GPUの単一ノード推論が対象で、データセンター級GPUにターゲット全体を載せられる環境では相対利得が小さくなる。個人PC結果にはターゲット8-bit量子化が含まれるため、Dovetail本体の無損失性と量子化品質は分けて解釈する必要がある。"},"reservation":{"claim_id":"claim-6ad53a550a3c7bedcb56aa8c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-e55ee414ac2d0aef0a6fbcc3",
+  "job_id": "job-research-0e6ed88f587a40d2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e55ee414ac2d0aef0a6fbcc3",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
