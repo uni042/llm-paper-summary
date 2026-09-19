@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 23:41:51 JST**
+> 自動生成: **2026-09-19 23:42:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **3** | **2** | **0** | **1** | **0** | — |
+| Research | **16** | **4** | **2** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **72** | **11** | **11** | **0** | **0** | **0** | **33** |
-| 合計 | **88** | **14** | **13** | **0** | **1** | **0** | **33** |
+| 合計 | **88** | **15** | **13** | **1** | **1** | **0** | **33** |
 
 - 最新Discovery runの耐久探索round: **11件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -151,7 +151,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-19 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
 - **成功** `arXiv:2606.00866` — Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI
   - job: `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
   - result: `.survey/work-queue/results/research/attempt-056e88f904b8cb0a268543b1.json` (`ok=true`)
@@ -162,6 +162,7 @@
   - result: `.survey/work-queue/results/research/attempt-208eafaf198f5f787bed68e4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-208eafaf198f5f787bed68e4.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-50cee29d6acc38369f1897e6.json` (job `job-research-7353bc1b63a704fc`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-854ea9c24744be653d5bb7d3.json` (job `job-research-3f8214d2f0afeac1`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-854ea9c24744be653d5bb7d3.json` (`ok=false`)
 
@@ -272,8 +273,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **628** |
-| └ Research | **481** |
+| 成功result未照合のimmutable submission | **629** |
+| └ Research | **482** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
