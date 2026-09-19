@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-20ee46a86ecf2a97d52cff02",
+  "attempt_id": "attempt-092a0a5a1923de06a9082271",
   "job_id": "job-research-7462825d21914fcd",
   "data": {
     "problem": "Standard attention materializes N×N score/probability matrices in HBM, making memory and I/O quadratic in sequence length. FlashAttention eliminates these intermediates with tiling and online softmax, but its first implementation still reaches only roughly 25〜50% of A100 theoretical throughput because expensive non-matmul FP32 operations remain, long-sequence/small-batch cases expose too few thread blocks, and split-K warp partitioning forces intermediate writes, synchronization, and reads through shared memory.",
@@ -29,7 +29,7 @@
     "system_design": "FlashAttention-2はアルゴリズム複雑度O(N²d)自体を変えず、データ移動とGPU上の仕事配置を最適化する。初代FlashAttentionのHBM↔SRAM tilingを土台に、非Tensor-Core処理を削り、thread-block数をsequence方向へ増やし、warp間通信を減らす三層の最適化を重ねる。block sizeは通常64/128の組合せをhead dimensionとshared-memory/register制約に応じて手動選択し、大きすぎるblockによるregister spillを避ける。"
   },
   "reservation": {
-    "claim_id": "claim-20ee46a86ecf2a97d52cff02",
+    "claim_id": "claim-092a0a5a1923de06a9082271",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

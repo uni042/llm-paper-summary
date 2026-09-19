@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-20ee46a86ecf2a97d52cff02",
+  "attempt_id": "attempt-092a0a5a1923de06a9082271",
   "job_id": "job-research-7462825d21914fcd",
   "data": {
     "hardware": "attention microbenchmarkはNVIDIA A100 80GB SXM4。H100でも新機能TMA/4th-gen Tensor Coresを使わない同実装を参考測定する。E2E GPT trainingは8×A100 80GB SXM。",
@@ -11,7 +11,7 @@
     "scope": "主評価はtraining forward/backward kernelで、autoregressive decode専用KV-cache kernelのserving latencyは直接評価しない。A100向けにblock sizeを手動tuningし、H100は新命令未利用。head dimensionsは主に64/128で、将来のFP8、AMD等はfuture work。"
   },
   "reservation": {
-    "claim_id": "claim-20ee46a86ecf2a97d52cff02",
+    "claim_id": "claim-092a0a5a1923de06a9082271",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

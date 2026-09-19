@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T223000Z-scheduled-chat-llm-survey-10l",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7462825d21914fcd",
+      "claim_id": "claim-092a0a5a1923de06a9082271",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-092a0a5a1923de06a9082271",
+      "claimed_at": "2026-09-19T21:48:51+00:00",
+      "expires_at": "2026-09-19T23:18:51+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7462825d21914fcd"
+      ],
+      "job": {
+        "job_id": "job-research-7462825d21914fcd",
+        "type": "research",
+        "parent_job_id": "job-57fc64f1296249ae",
+        "priority": 94,
+        "canonical_id": "DOI:10.48550/arxiv.2307.08691",
+        "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+        "source_url": "https://arxiv.org/abs/2307.08691",
+        "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md",
+        "selection_reason": "Core attention-kernel systems work improving GPU work partitioning and parallelism; directly relevant to inference kernel performance.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:10:15+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 32.1% < 70% (Japanese=1737, Latin=3672)",
+        "validation_errors": [
+          "Japanese-first prose ratio is too low: 32.1% < 70% (Japanese=1737, Latin=3672)"
+        ],
+        "last_validation_failed_at": "2026-09-19T21:46:44+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-same-job",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-20ee46a86ecf2a97d52cff02"
+      ],
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T21:48:51+00:00",
+  "checkpoint_released": 0
+}

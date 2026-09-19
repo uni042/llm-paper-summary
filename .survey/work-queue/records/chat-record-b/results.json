@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-20ee46a86ecf2a97d52cff02",
+  "attempt_id": "attempt-092a0a5a1923de06a9082271",
   "job_id": "job-research-7462825d21914fcd",
   "data": {
     "overview": "A100 attention benchmarkでFlashAttention-2は初代FlashAttention比1.7〜3.0倍、Triton版比1.3〜2.5倍、standard attention比3〜10倍となり、最大230 TFLOPs/s、理論FP16/BF16性能の73%へ到達した。GPT 1.3B/2.7Bの8×A100学習では初代FlashAttention比最大1.3倍、非FlashAttention baseline比最大2.8倍で、225 TFLOPs/s/GPU・72% model FLOPs utilizationを達成した。",
@@ -55,7 +55,7 @@
     "quality_impact": "standard softmax attentionと数学的に同じoutputとgradientを返し、近似・疎化・量子化を導入しない。したがってモデル品質への交換条件はなく、性能・実装複雑性・hardware tuningが主要な論点である。"
   },
   "reservation": {
-    "claim_id": "claim-20ee46a86ecf2a97d52cff02",
+    "claim_id": "claim-092a0a5a1923de06a9082271",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
