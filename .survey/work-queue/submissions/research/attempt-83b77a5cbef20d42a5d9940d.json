@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-83b77a5cbef20d42a5d9940d",
+  "job_id": "job-research-399763992dea8e09",
+  "claim_id": "claim-83b77a5cbef20d42a5d9940d",
+  "worker_id": "scheduled-chat-llm-survey-20260919T172734JST-turn11",
+  "worker_kind": "scheduled_chat",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely obtained through an official primary route in this retry. The official arXiv abstract page for arXiv:2412.20166 was successfully retrieved and confirms the current PIMphony title, authors, 21-page HPCA 2026 acceptance, cs.AR primary category with cs.AI cross-list, and official PDF/HTML/source links. The official arXiv HTML route failed in this runtime (DisabledError); the official PDF route was rejected because the 14,364,622-byte document exceeded the retrieval limit; and the official TeX source route was rejected as unsupported application/gzip. A complete ar5iv rendering was reachable and inspected only as route evidence, but because it is not an official primary-source endpoint and appears to expose an older LoL-PIM version, it was not used to construct a five-slot record. No scientific details were inferred from partial or secondary text.",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+}
