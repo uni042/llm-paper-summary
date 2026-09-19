@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-0ab169f82c4835ab94982856",
-  "job_id": "job-research-8ff9887a327d8124",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0ab169f82c4835ab94982856",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0ab169f82c4835ab94982856","job_id":"job-research-8ff9887a327d8124","data":{"limitations":"評価はDeepSeek-Coder-6.7BとLlama3.1-8Bのコード穴埋めに集中し、自然言語編集や他モデルでの一般化は未確認。推論実機は単一A100で、同時ユーザー増加によりGPU内KV容量を超えると再利用率が低下する。EFIMは接頭部末尾の増分に最も有効で、接尾部増分ではPSMへフォールバックする。既存モデルへ導入するにはfragment tokenizationによる継続事前学習が必要で、完全に学習不要なserving-only最適化ではない。","differences":"CachedAttention、Prompt Cache、Pensieve、ChunkAttentionなどはKVをCPU/ディスクへ拡張したり共有prefixを効率管理したりして物理的な保存・検索を改善する。EFIMは保存先を変えず、FIMプロンプトの並びを変えて接尾部を含む長い共通prefixを作るため直交的に併用できる。通常FIM学習が三分割位置付近にsubtoken例を作るのに対し、fragment tokenizationは多数断片を個別トークン化して系列全体へ語途中境界を分散させる。","implementation_status":"著者公式GitHubでソースコードを公開し、vLLM 0.6.2で実装評価。モデル構造変更は不要で、prompt transformerとsession poolは推論器前段へ追加できる。DeepSeek-Coder-6.7Bの強化モデルは実運用AI Code Assistantで使用されたと論文脚注が述べる。","research_positioning":"要求間KVキャッシュ再利用の中でも、cache managerではなくアプリケーション固有のprompt semanticsを変えて再利用率を高める系統。SSD/CPUオフロードが『無効でないKVをどこに置くか』を扱うのに対し、EFIMは『そもそもKVを無効にしないトークン順序』を作るため、階層キャッシュ研究と補完関係にある。"},"reservation":{"claim_id":"claim-0ab169f82c4835ab94982856","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
