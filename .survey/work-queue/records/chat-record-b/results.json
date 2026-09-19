@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-70dbcf11b20ef9fe6a096897",
   "job_id": "job-research-b41274093aac35dc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-70dbcf11b20ef9fe6a096897",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "RTX 4090搭載PCでは、FP16系モデルでPowerInferは平均8.32トークン/秒、最大16.06トークン/秒を達成し、llama.cpp比平均7.23倍、最大11.69倍、SpecInfer比平均6.19倍となった。INT4では平均13.20トークン/秒、最大29.08トークン/秒、llama.cpp比平均2.89倍、最大4.28倍。RTX 2080Ti環境でもFP16でllama.cpp比平均4.71倍、INT4で平均5.01倍を報告する。GPUへ割り当てられる活性ニューロン比率を高めることが性能の主要因であり、RTX 4090環境ではllama.cppの約20%からPowerInferの約70%へGPU負荷比率が上がった。",
+    "key_results": [
+      {"metric":"FP16生成速度の高速化","value":"平均7.23倍、最大11.69倍","baseline":"llama.cpp","condition":"PC-High、RTX 4090、バッチ1、複数のReLU/ReGLU系モデル","interpretation":"活性化ニューロンだけを計算し、高頻度ニューロンをGPUへ常駐させることでCPU密計算と重み転送を削減した。"},
+      {"metric":"INT4生成速度","value":"平均13.20トークン/秒、最大29.08トークン/秒；平均2.89倍、最大4.28倍","baseline":"llama.cpp","condition":"PC-High、INT4量子化モデル","interpretation":"量子化でGPUへ置けるニューロンが増えるため大規模モデルでも有効だが、量子化済みllama.cpp自体が高速なためFP16より相対倍率は小さい。"},
+      {"metric":"低性能PCでの高速化","value":"FP16平均4.71倍、最大7.06倍；INT4平均5.01倍、最大8.00倍","baseline":"llama.cpp","condition":"PC-Low、RTX 2080Ti 11GB","interpretation":"11GB VRAMでは高温ニューロンを十分GPUへ置けずCPU依存が増えるため、RTX 4090よりFP16の利得が縮小する。"},
+      {"metric":"長文入力条件の端末間遅延高速化","value":"2.50〜5.69倍","baseline":"llama.cpp","condition":"PC-High、入力1.5K、出力256、LLaMA(ReGLU)-13B/Falcon-40B/LLaMA(ReGLU)-70B","interpretation":"事前充填は密GPU計算へ切り替えるため差が小さいが、逐次生成段階で疎性が再び現れ全体では大きな短縮が残る。"},
+      {"metric":"GPU側ニューロン負荷比率","value":"平均約20%から約70%へ増加","baseline":"llama.cppの層単位配置","condition":"PC-High","interpretation":"配置ソルバが頻繁に活性化するニューロンをGPUへ集め、CPUが担う活性ニューロンを減らしたことを直接示す。"},
+      {"metric":"A100との生成速度差","value":"OPT-30Bで18%遅い、Falcon-40Bで23%遅い","baseline":"80GB A100上のvLLM","condition":"RTX 4090上PowerInfer、入力長1","interpretation":"llama.cppではA100比92〜93%遅かった差を大幅に縮小した。入力長64では差は28〜29%。"},
+      {"metric":"SwiGLU系高速化","value":"1.47〜1.7倍","baseline":"llama.cpp","condition":"Yi-34B、LLaMA2-13B等","interpretation":"活性化疎性が低いほどCPU計算が増え、PowerInferの効果が小さくなることを示す。"}
+    ],
+    "negative_results": "短い出力かつ長い入力では事前充填が支配的となり、高速化は1.07〜4倍まで低下する。バッチが大きくなると共同活性化で疎性が減り、速度向上率は低下する。SwiGLU系では1.47〜1.7倍に留まる。RTX 2080Tiで60GB級モデルを動かす場合、GPUが担う活性ニューロンは42%まで低下しCPUが律速となる。予測器は平均推論時間の10%未満だが、モデル重みの約7.09%相当の追加パラメータを必要とし、学習に数時間かかる。",
+    "interpretation": "性能はモデルの活性化疎性、活性化頻度の偏り、GPU VRAM容量、CPUメモリ帯域、層内同期費用の組合せで決まる。単純にCPUへ重みを置くのではなく、頻繁に使うニューロンをGPUへ集中させ、まれに使う少数ニューロンだけをCPUで直接計算することで、PCIe重み転送とCPU密計算の双方を避ける。構成要素除去では予測器・疎演算子だけで1.87〜3.32倍、協調実行追加で2.60〜7.80倍、配置方針追加で3.62〜11.69倍へ伸び、配置と通信制御が大きく寄与する。",
+    "quality_impact": "下流タスクの平均精度は密モデルと概ね近く、OPT-7Bは39.69%対39.67%、OPT-13Bは40.21%対40.48%、Falcon-40Bは56.23%対55.95%。ReGLU系では最大約0.94ポイントの平均低下が見られる。予測器の取りこぼしは出力への寄与が小さいニューロンに偏り、OPT-7Bの出力差はコサイン類似度分析で約0.4%と報告される。"
+  },
+  "reservation": {"claim_id":"claim-70dbcf11b20ef9fe6a096897","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
