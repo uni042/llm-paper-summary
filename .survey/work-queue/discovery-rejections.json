@@ -7,11 +7,99 @@
   ],
   "updated_at": "2026-09-19T19:00:00+09:00",
   "submission_count": 25,
-  "research_terminal_rejection_count": 5,
-  "rejection_observation_count": 56,
-  "rejection_record_count": 54,
+  "research_terminal_rejection_count": 9,
+  "rejection_observation_count": 60,
+  "rejection_record_count": 58,
   "ignored_without_identity": 0,
   "records": {
+    "id:DOI:10.1109/hpca68181.2026.11408592": {
+      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408592",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408592",
+        "title:pimphony overcoming bandwidth and capacity inefficiency in pimbased longcontext llm inference system",
+        "url:https://ieeexplore.ieee.org/document/11408592"
+      ],
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408592",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System",
+      "source_url": "https://ieeexplore.ieee.org/document/11408592/",
+      "rejection_reason": "Primary full text could not be safely obtained through an official primary route in this retry. The official arXiv abstract page for arXiv:2412.20166 was successfully retrieved and confirms the current PIMphony title, authors, 21-page HPCA 2026 acceptance, cs.AR primary category with cs.AI cross-list, and official PDF/HTML/source links. The official arXiv HTML route failed in this runtime (DisabledError); the official PDF route was rejected because the 14,364,622-byte document exceeded the retrieval limit; and the official TeX source route was rejected as unsupported application/gzip. A complete ar5iv rendering was reachable and inspected only as route evidence, but because it is not an official primary-source endpoint and appears to expose an older LoL-PIM version, it was not used to construct a five-slot record. No scientific details were inferred from partial or secondary text.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T10:04:33+00:00",
+      "last_rejected_at": "2026-09-19T10:04:33+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-83b77a5cbef20d42a5d9940d.json",
+      "origin": "research_blocked_permanent"
+    },
+    "id:DOI:10.1109/isca66397.2026.00098": {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00098",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00098",
+        "title:tetris efficient longcontext llm serving with chunkwise dynamic sequence parallelism",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00098"
+      ],
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00098",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
+      "rejection_reason": "Primary full text remains unavailable in this retry after materially distinct official routes. The official IEEE DOI resolves to IEEE Xplore document 11617445, but the runtime receives only the JavaScript/robot-verification gate rather than article text. The same-work arXiv record arXiv:2511.06247 is reachable on the official arXiv abstract endpoint and confirms the title lineage, authors, abstract and quantitative headline results, but arXiv explicitly marks the preprint withdrawn to align with the affiliated organization's internal publication policies, provides no PDF for the current version, and the official HTML route returns 404. Because the peer-reviewed ISCA article full text was not retrieved and the arXiv preprint is withdrawn/unavailable, no five-slot scientific record was generated from the abstract or secondary material.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T10:04:33+00:00",
+      "last_rejected_at": "2026-09-19T10:04:33+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-c4322b286efe70010b6b1d91.json",
+      "origin": "research_blocked_permanent"
+    },
+    "id:DOI:10.1109/lca.2026.3660969": {
+      "primary_identity": "id:DOI:10.1109/lca.2026.3660969",
+      "identity_tokens": [
+        "id:DOI:10.1109/lca.2026.3660969",
+        "title:h3 hybrid architecture using high bandwidth memory and high bandwidth flash for costefficient llm inference",
+        "url:https://doi.org/10.1109/LCA.2026.3660969"
+      ],
+      "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3660969",
+      "rejection_reason": "一次資料全文をこの再試行でも取得できなかった。DOI 10.1109/LCA.2026.3660969 と既知のIEEE Xplore公式PDF経路を再確認したが、この実行環境では本文へ到達できない。題名・DOI・著者による既知の別公式経路にも同一論文全文はなく、後続一次論文や二次解説はH3本文の代替証拠として使用しない。全文未読のまま抄録由来の最大2.69倍等から5-slotを推測せず、再試行可能なblockedとして耐久保存する。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T10:04:33+00:00",
+      "last_rejected_at": "2026-09-19T10:04:33+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-ee3e717815b7d022412e5e87.json",
+      "origin": "research_blocked_permanent"
+    },
+    "id:DOI:10.1109/lca.2026.3703982": {
+      "primary_identity": "id:DOI:10.1109/lca.2026.3703982",
+      "identity_tokens": [
+        "id:DOI:10.1109/lca.2026.3703982",
+        "title:hbmhbfcentric memory pooling architecture with custom base die for terabytescale llm inference",
+        "url:https://ieeexplore.ieee.org/document/11568525"
+      ],
+      "canonical_id": "DOI:10.1109/LCA.2026.3703982",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference",
+      "source_url": "https://ieeexplore.ieee.org/document/11568525/",
+      "rejection_reason": "一次資料全文をこの再試行でも取得できなかった。IEEE DOI 10.1109/LCA.2026.3703982 はこの実行環境から直接取得できず、既知のIEEE Xplore document 11568525にも全文経路を確立できなかった。著者所属KAISTの公式セミナーページでは同研究題目『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』の講演とHBF技術概要を確認したが、査読論文本文そのものではないため5-slotの根拠には使用しなかった。複数回の公式経路再試行後も本文未取得のため、抄録・講演概要・二次資料から科学的内容を推測せずblockedとして保存する。",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-19T10:04:33+00:00",
+      "last_rejected_at": "2026-09-19T10:04:33+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-11067fab859094f25d88d7c5.json",
+      "origin": "research_blocked_permanent"
+    },
     "id:arXiv:2203.04910": {
       "primary_identity": "id:arXiv:2203.04910",
       "identity_tokens": [
