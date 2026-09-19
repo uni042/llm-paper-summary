@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 20:04:25 JST**
+> 自動生成: **2026-09-19 20:09:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **46** |
-| 未claim Research job | **45** |
+| 収録候補論文 | **50** |
+| 未claim Research job | **49** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（29分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（34分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **46** |
+| canonical_id確認済みの一意な候補論文 | **50** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **46** |
+| 非終端Research job合計 | **50** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -37,8 +37,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **40** | **8** | **1** | **7** | **0** | **0** | **20** |
-| 合計 | **47** | **11** | **3** | **7** | **1** | **0** | **20** |
+| Discovery | **47** | **8** | **8** | **0** | **0** | **0** | **20** |
+| 合計 | **54** | **11** | **10** | **0** | **1** | **0** | **20** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -94,6 +94,34 @@
   - result: `.survey/work-queue/results/20260919T2008JST-discovery-specialist-memory-paths-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
   - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
+- **09-19 20:05:05 JST** job `job-f666c653bd64eec2` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
+  - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
+- **09-19 20:05:14 JST** job `job-64ce17a0f48858b0` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2022JST-discovery-specialist-agent-runtime-3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json`
+  - 探索軸: agentic workflow physical planning・agent-aware serving runtime
+- **09-19 20:05:23 JST** job `job-59c581bbcf7d84e1` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2028JST-discovery-specialist-lowbit-storage-4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2028JST-discovery-specialist-lowbit-storage-4.json`
+  - 探索軸: ultra-low-bit GPU kernel・near-storage/PIM sparse inference
+- **09-19 20:05:32 JST** job `job-130601eb91bbdc15` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260919T2034JST-discovery-specialist-moe-offload-5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2034JST-discovery-specialist-moe-offload-5.json`
+  - 探索軸: MoE expert offload・phase-aware prefetch/cache scheduling
+- **09-19 20:05:41 JST** job `job-c14c58101702bd65` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260919T2041JST-discovery-specialist-prefix-locality-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2041JST-discovery-specialist-prefix-locality-6.json`
+  - 探索軸: prefix locality・fair scheduling・KV reuse・communication-overlap prefetch
+- **09-19 20:05:51 JST** job `job-f5d1a72e40e8101f` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260919T2047JST-discovery-specialist-mobile-storage-7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2047JST-discovery-specialist-mobile-storage-7.json`
+  - 探索軸: mobile/on-device inference・DRAM-Flash hybrid storage・CPU/GPU runtime
+- **09-19 20:06:00 JST** job `job-011f4af32f9a6b4e` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260919T2053JST-discovery-specialist-slo-scaling-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2053JST-discovery-specialist-slo-scaling-8.json`
+  - 探索軸: operator-level autoscaling・SLO-aware KV reconfiguration・multi-SLO token allocation
 - **09-19 19:06:28 JST** job `job-fedfeb6fc48d7e58` / 候補 **3件**
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-adjacent-14.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
@@ -102,34 +130,6 @@
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-related-13.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json`
   - 探索軸: related-work path from agentic workload systems to predictability-driven agent-native serving
-- **09-19 19:01:40 JST** job `job-eede52e50f431a91` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-scheduling-5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
-  - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
-- **09-19 19:02:31 JST** job `job-7f0f0baa3d9ba4a7` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json`
-  - 探索軸: agentic workload characterization / sandbox memory / secure mobile serving
-- **09-19 19:06:42 JST** job `job-136bbed0754c23c7` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-coserving-15.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-coserving-15.json`
-  - 探索軸: online/offline co-serving / fine-grained GPU harvesting / preemption
-- **09-19 19:01:01 JST** job `job-81062042be174d85` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
-  - 探索軸: CXL memory pooling / photonic fabric / NMP for hybrid LLM inference
-- **09-19 19:00:28 JST** job `job-6a54a063ec9c9c50` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-elastic-kv-1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json`
-  - 探索軸: KV cache dynamic reclamation / CUDA virtual memory / serving memory management
-- **09-19 19:06:49 JST** job `job-321b6dfb8d533f50` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-energy-9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-energy-9.json`
-  - 探索軸: thermal-aware / energy-aware LLM serving scheduling
-- **09-19 19:06:56 JST** job `job-bd9f20068990b1ad` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-heterocloud-17.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-heterocloud-17.json`
-  - 探索軸: heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration
 
 ### 直近タスク
 
@@ -159,7 +159,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 20:00 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **7件** / 候補: **20件**
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **20件**
 - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control / agentic workflow physical planning・agent-aware serving runtime / ultra-low-bit GPU kernel・near-storage/PIM sparse inference / MoE expert offload・phase-aware prefetch/cache scheduling / prefix locality・fair scheduling・KV reuse・communication-overlap prefetch / mobile/on-device inference・DRAM-Flash hybrid storage・CPU/GPU runtime / operator-level autoscaling・SLO-aware KV reconfiguration・multi-SLO token allocation
 - round `specialist-memory-paths-1` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
@@ -168,31 +168,31 @@
 - round `specialist-energy-heterogeneity-2` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
   - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json` (`ok=true`)
 - round `specialist-agent-runtime-3` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json`
   - 探索軸: agentic workflow physical planning・agent-aware serving runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2022JST-discovery-specialist-agent-runtime-3.json` (`ok=true`)
 - round `specialist-lowbit-storage-4` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2028JST-discovery-specialist-lowbit-storage-4.json`
   - 探索軸: ultra-low-bit GPU kernel・near-storage/PIM sparse inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2028JST-discovery-specialist-lowbit-storage-4.json` (`ok=true`)
 - round `specialist-moe-offload-5` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260919T2034JST-discovery-specialist-moe-offload-5.json`
   - 探索軸: MoE expert offload・phase-aware prefetch/cache scheduling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2034JST-discovery-specialist-moe-offload-5.json` (`ok=true`)
 - round `specialist-prefix-locality-6` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2041JST-discovery-specialist-prefix-locality-6.json`
   - 探索軸: prefix locality・fair scheduling・KV reuse・communication-overlap prefetch
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2041JST-discovery-specialist-prefix-locality-6.json` (`ok=true`)
 - round `specialist-mobile-storage-7` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T2047JST-discovery-specialist-mobile-storage-7.json`
   - 探索軸: mobile/on-device inference・DRAM-Flash hybrid storage・CPU/GPU runtime
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2047JST-discovery-specialist-mobile-storage-7.json` (`ok=true`)
 - round `specialist-slo-scaling-8` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260919T2053JST-discovery-specialist-slo-scaling-8.json`
   - 探索軸: operator-level autoscaling・SLO-aware KV reconfiguration・multi-SLO token allocation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2053JST-discovery-specialist-slo-scaling-8.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -221,7 +221,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **46** |
+| ready | **50** |
 
 ### 候補の重複・識別情報欠損
 
@@ -249,10 +249,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **625** |
+| 成功result未照合のimmutable submission | **618** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **152** |
+| └ Discovery | **145** |
 
 ### 厳格検証が未成立のcompleted job
 

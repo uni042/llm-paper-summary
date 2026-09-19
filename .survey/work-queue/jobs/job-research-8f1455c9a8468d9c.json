@@ -8,7 +8,7 @@
   "source_url": "https://doi.org/10.1145/3797905.3807846",
   "paper_path": "papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md",
   "selection_reason": "ICS 2026の一次査読systems論文。複数nodeのGPU collective communicationをRDMAではなくCXL shared-memory pool経由で行うlibraryを設計し、TITAN-II CXL switchと6枚のMicron CZ120 memory cardを用いた実機評価を行う。LLM training/inferenceのmulti-node memory/interconnect pressureを対象とする隣接systems研究で、CXL memory-centric communication系統の補完価値が高い。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-19T09:39:00+00:00",
-  "completed_at": "2026-09-19T09:39:00+00:00",
-  "retry_not_before": "2026-09-19T11:04:33+00:00"
+  "retry_queued_at": "2026-09-19T11:07:59+00:00"
 }

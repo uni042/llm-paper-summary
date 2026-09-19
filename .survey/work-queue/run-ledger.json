@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T10:35:01.599040+00:00",
+  "updated_at": "2026-09-19T11:09:07.052145+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T10:35:01.599040+00:00",
+      "last_recorded_at": "2026-09-19T11:09:07.052145+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 295,
         "audit_completed": 0,
-        "discovery_completed": 177,
+        "discovery_completed": 184,
         "blocked": 38,
-        "new_jobs": 272,
-        "new_papers": 296,
+        "new_jobs": 282,
+        "new_papers": 298,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35368223088:1",
-          "recorded_at": "2026-09-18T16:24:28.283128+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35368223088",
-            "run_attempt": "1",
-            "source_sha": "b8a0ee2d2aae83312f2ec46ca6a9737f03ed2570"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35369384647:1",
           "recorded_at": "2026-09-18T16:35:51.633007+00:00",
@@ -19593,6 +19579,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35439078004:1",
+          "recorded_at": "2026-09-19T11:09:07.052145+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35439078004",
+            "run_attempt": "1",
+            "source_sha": "d330aa9cee656455771769b4b6b1e0aa13a364e1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -23676,6 +23677,62 @@
           "title": "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-011f4af32f9a6b4e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-130601eb91bbdc15",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-59c581bbcf7d84e1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-64ce17a0f48858b0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c14c58101702bd65",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f5d1a72e40e8101f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f666c653bd64eec2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25582,6 +25639,76 @@
           "type": "research",
           "canonical_id": "arXiv:2605.06472",
           "title": "Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management"
+        },
+        {
+          "job_id": "job-011f4af32f9a6b4e",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-130601eb91bbdc15",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-59c581bbcf7d84e1",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-64ce17a0f48858b0",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-c14c58101702bd65",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f5d1a72e40e8101f",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f666c653bd64eec2",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3ae1410a48dc456e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.10443",
+          "title": "MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices"
+        },
+        {
+          "job_id": "job-research-8ff9887a327d8124",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.21889",
+          "title": "EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse"
+        },
+        {
+          "job_id": "job-research-bf442cee1726bee0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.02942",
+          "title": "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
         }
       ],
       "new_paper_ids": [
@@ -25880,7 +26007,9 @@
         "arXiv:2402.01528",
         "arXiv:2602.06072",
         "arXiv:2604.25777",
-        "arXiv:2608.08340"
+        "arXiv:2608.08340",
+        "arXiv:2410.01228",
+        "arXiv:2604.15186"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -26176,7 +26305,14 @@
         ".survey/work-queue/results/20260919T1900JST-discovery-specialist-quant-runtime-10.json",
         ".survey/work-queue/results/20260919T1900JST-discovery-specialist-recent-sweep-11.json",
         ".survey/work-queue/results/20260919T1900JST-discovery-specialist-related-memory-12.json",
-        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-security-coexec-19.json"
+        ".survey/work-queue/results/20260919T1900JST-discovery-specialist-security-coexec-19.json",
+        ".survey/work-queue/results/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json",
+        ".survey/work-queue/results/20260919T2022JST-discovery-specialist-agent-runtime-3.json",
+        ".survey/work-queue/results/20260919T2028JST-discovery-specialist-lowbit-storage-4.json",
+        ".survey/work-queue/results/20260919T2034JST-discovery-specialist-moe-offload-5.json",
+        ".survey/work-queue/results/20260919T2041JST-discovery-specialist-prefix-locality-6.json",
+        ".survey/work-queue/results/20260919T2047JST-discovery-specialist-mobile-storage-7.json",
+        ".survey/work-queue/results/20260919T2053JST-discovery-specialist-slo-scaling-8.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -26253,8 +26389,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 757,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 759,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
