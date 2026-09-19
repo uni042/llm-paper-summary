@@ -2,7 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-5dce2562aaf6112c45659534",
+  "job_id": "job-research-d0436ba646148687",
+  "data": {
+    "hardware": "壁時計時間の主要評価は単一TPU v4、バッチサイズ1で実施。対象はT5-XXL 11B、近似モデルはT5-small 77M、T5-base 250M、T5-large 800M。追加で受理率αをGPT系97M対6M、LaMDA 137B対100M・2B・8Bなどでも測定した。",
+    "software": "T5Xの標準復号実装を基準とし、同じ既存チェックポイントを用いた投機的復号を実装。翻訳はWMT EnDe、要約はCNN/DailyMailのT5 1.1系モデルを使用し、貪欲復号と温度1の標準標本化を比較した。",
+    "methodology": "英独翻訳とニュース要約について、対象モデルT5-XXL 11Bに対し近似モデル3規模を切り替え、候補数γと標本化温度を設定して実際の壁時計時間をT5X基準と比較した。さらに各条件で対象モデルが生成した1万トークンを用いて受理率αを測定し、理論的な期待高速化率と実測高速化率を照合した。GPT系モデルとLaMDAでは主にαを測り、異なるモデル規模・タスクでも近似モデルとの分布重なりが十分大きいかを確認した。",
+    "scope": "実壁時計高速化の中心評価はT5-XXL、単一TPU v4、バッチサイズ1に限定される。LaMDA 137Bなどでは受理率を示すが同じ詳細な壁時計比較は行っていない。手法は追加演算能力を利用して直列遅延を隠すため、演算そのものが完全に飽和している構成や大きなバッチでは同じ倍率を期待できない。画像などテキスト以外の領域は未評価である。"
+  },
+  "reservation": {
+    "claim_id": "claim-5dce2562aaf6112c45659534",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
