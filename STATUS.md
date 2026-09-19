@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:42:25 JST**
+> 自動生成: **2026-09-19 18:43:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **40** |
-| 未claim Research job | **40** |
+| 未claim Research job | **39** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 18:42:15 JST（10秒前）** |
+| 最終検証済みResearch収録 | **09-19 18:42:15 JST（1分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **3** | **15** | **6** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **19** | **19** | **19** | **0** | **0** | **0** | **25** |
-| 合計 | **22** | **20** | **19** | **0** | **0** | **0** | **25** |
+| 合計 | **22** | **34** | **25** | **0** | **1** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **19件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -115,14 +115,44 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-19 13:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-73b8f63ceffa41235b1708c8.json` (job `job-research-c1b7543305e71c40`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-73b8f63ceffa41235b1708c8.json` (`ok=false`)
+- 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
+- immutable submission: **15件** / 検証済み成功: **6件** / result照合済み非成功: **9件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-01bc2c1e0ef21dcae1e71886.json` (job `job-research-7b5d4afbd3eabe62`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-01bc2c1e0ef21dcae1e71886.json` (`ok=false`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-11b5e62465ce56e739adae95.json` (job `job-research-c790156bc5f9f1f9`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-11b5e62465ce56e739adae95.json` (`ok=false`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-55ad2e2507991e421d05d6e8.json` (job `job-research-b3f94863f38e0308`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-55ad2e2507991e421d05d6e8.json` (`ok=false`)
+- **成功** `arXiv:2503.08467` — Accelerating MoE Model Inference with Expert Sharding
+  - job: `.survey/work-queue/jobs/job-research-b3520b6ffb18fc43.json`
+  - result: `.survey/work-queue/results/research/attempt-59bd34d06f011611b0132598.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-59bd34d06f011611b0132598.json`
+  - paper: `papers/inference/05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5adb86bd27e2666265386057.json` (job `job-research-56fbeb640bc1560d`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-5adb86bd27e2666265386057.json` (`ok=false`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-792a11fa4fd24a27f2b17f5c.json` (job `job-research-b3520b6ffb18fc43`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-792a11fa4fd24a27f2b17f5c.json` (`ok=false`)
+- **成功** `arXiv:2603.28018` — Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill
+  - job: `.survey/work-queue/jobs/job-research-56fbeb640bc1560d.json`
+  - result: `.survey/work-queue/results/research/attempt-85e31171313f0f31636868a0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-85e31171313f0f31636868a0.json`
+  - paper: `papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-894fefc24cb4ea7b63f3faa6.json` (job `job-research-7623de796f4f2b46`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-894fefc24cb4ea7b63f3faa6.json` (`ok=false`)
+- **成功** `arXiv:2402.15678` — Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution
+  - job: `.survey/work-queue/jobs/job-research-b3f94863f38e0308.json`
+  - result: `.survey/work-queue/results/research/attempt-89e2edf847dd8923a0885b8e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-89e2edf847dd8923a0885b8e.json`
+  - paper: `papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md`
+- **成功** `arXiv:2607.16339` — LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models
+  - job: `.survey/work-queue/jobs/job-research-3001166a9d479500.json`
+  - result: `.survey/work-queue/results/research/attempt-8a84e34f15c4ef8ffd049438.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8a84e34f15c4ef8ffd049438.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-19 13:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-19 07:00 JST** / worker `scheduled-chat-discovery-20260919T0700JST`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -176,8 +206,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.25777` — SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
+  - claim: **09-19 18:43:00 JST** / heartbeat: **—** / lease expiry: **09-19 20:13:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c1b7543305e71c40.json`
 
 #### Audit
 
@@ -225,8 +257,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **613** |
-| └ Research | **466** |
+| 成功result未照合のimmutable submission | **614** |
+| └ Research | **467** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
