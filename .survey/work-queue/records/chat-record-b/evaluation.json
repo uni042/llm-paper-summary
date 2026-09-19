@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e2c1eb9d827322f9fbb93f0b",
-  "job_id": "job-research-d5e83a73eb90a616",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e2c1eb9d827322f9fbb93f0b",
-    "worker_id": "llm-research-survey-scheduled-chat",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e2c1eb9d827322f9fbb93f0b","job_id":"job-research-d5e83a73eb90a616",
+ "data":{
+  "hardware":"速度評価は主にNVIDIA RTX 4090とJetson Orin。追加でラップトップRTX 4070 8GB、A100、Raspberry Piでも展開可能性を示す。RTX 4090はピーク約165TFLOPS、メモリ帯域約1TB/sとして屋根線分析し、バッチ1生成の算術強度が約1でメモリ律速とする。",
+  "software":"AWQ量子化器とTinyChat。TinyChatはPyTorchフロントエンド、GPU向けCUDA/PTX、CPU向けARM Neon/AVX等の装置別バックエンドを持つ。比較対象はRTN、GPTQ/GPTQ-Reorder、Hugging Face FP16、AutoGPTQ、llama.cpp、exllama等。",
+  "methodology":"重み専用グループ量子化を主対象とし、通常グループサイズ128、INT3/INT4を評価。AWQの尺度探索はPile由来の小規模較正集合を使い、αを0〜1の20点で探索する。品質はLLaMA/Llama-2/OPT/Mistral/MixtralのWikiText-2パープレキシティ、VicunaのGPT-4比較、OpenFlamingoのCOCO CIDEr、VILAの11視覚言語ベンチ、CodeLlamaのMBPP、Llama-2のGSM8Kで測る。速度はバッチ1、固定プロンプト4トークンから200トークン生成し中央値を使用する。較正効率と分布外一般化もPubMed/Enronで評価する。",
+  "scope":"主眼は端末上の低バッチ生成で、重みアクセスが支配するメモリ律速条件。W4A16/W3A16に適し、活性も低ビット化するW8A8とは設計目的が異なる。速度はTinyChatという専用実装込みの結果であり、AWQ重みを任意の汎用カーネルで実行した場合に同じ倍率を保証しない。INT2はAWQ単独ではなくGPTQとの併用で改善を示す。"
+ },
+ "reservation":{"claim_id":"claim-e2c1eb9d827322f9fbb93f0b","worker_id":"llm-research-survey-scheduled-chat","worker_kind":"scheduled_chat"}
 }
