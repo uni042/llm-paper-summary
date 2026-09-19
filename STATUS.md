@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 18:35:20 JST**
+> 自動生成: **2026-09-19 18:35:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/LCA.2026.3660969` — H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
-  - claim: **09-19 18:35:14 JST** / heartbeat: **—** / lease expiry: **09-19 20:05:14 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9deede0a4d81ad54.json`
+- `arXiv:2402.01528` — Decoding Speculative Decoding / worker `scheduled-chat-llm-survey-20260919T182739JST-quota`
+  - claim: **09-19 18:35:39 JST** / heartbeat: **—** / lease expiry: **09-19 20:05:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0e6ed88f587a40d2.json`
 
 #### Audit
 
@@ -217,8 +217,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **610** |
-| └ Research | **463** |
+| 成功result未照合のimmutable submission | **611** |
+| └ Research | **464** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 
