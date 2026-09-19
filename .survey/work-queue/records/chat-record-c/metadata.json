@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6c0676d0cc5caf5a13ce6002",
-  "job_id": "job-research-0023a21511f803e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c0676d0cc5caf5a13ce6002",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6c0676d0cc5caf5a13ce6002","job_id":"job-research-0023a21511f803e1","data":{"canonical_id":"arXiv:2601.08833","arxiv_id":"2601.08833","doi":"10.48550/arXiv.2601.08833","openreview_id":null,"arxiv_categories":{"primary":"cs.PF","cross_list":["cs.AI","cs.AR","cs.DC"]},"title":"Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications","summary":"prefill/decode分離サービングを、同数GPUを使う公平なcolocation基準、GPU直結・CPU DRAM・NVMe経由のKV転送、GPU周波数制御の組合せで再評価するベンチマーク研究。2×A100上のLlama-3.2-3Bでは分離の性能優位は負荷と転送媒体に依存し、2-GPU colocationが全batchでTTFT最良となる一方、大batchではKV evictionによりcolocationのTPOTが悪化する。段階別独立DVFSも分離構成の高い基礎エネルギーを覆せず、エネルギー節約を保証しない。","list_summary":"公平な2-GPU基準と複数KV転送階層・DVFSでprefill/decode分離を再評価し、性能・省電力の優位が条件依存であることを示す。","authors":["Jiaxi Li","Yue Zhu","Eun Kyung Lee","Klara Nahrstedt"],"authors_affiliations":"University of Illinois Urbana-Champaign; IBM Research","published":"2025-11-14","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1 (2025-11-14; arXiv identifier 2601.08833)","lineage":"prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS","topics":["分離サービング","KVキャッシュ転送","CPUオフロード","NVMeオフロード","DVFS","エネルギー効率"],"importance":"分離サービングの既存優位性を単一GPU colocationとの不公平な比較から切り離し、同じ2 GPU資源での基準、転送階層、負荷、エネルギーを同時に測ることで『いつ分離すべきか』の境界条件を示す。","implementation":"vLLM V1とLMCacheConnectorV1を用い、GPU P2PはNIXL/cuda_ipc、CPU経路はDRAM＋Redis lookup、disk経路はfs_connector＋NVMeで実装したベンチマーク。独自公開コードURLは一次資料で確認できない。","hardware_evaluation":"同一ノードの2×NVIDIA A100 40GB（PCIe Gen3 bridge）、Intel Xeon E5-2697 v4 18-core、1TB DDR4、3.2TB NVMe。GPU周波数0.21〜1.41GHz対応。","quality_effect":"モデル出力品質は変更せず、TTFT/TPOT/throughput/energyを評価対象とする。synthetic token workloadのため実アプリケーション品質は評価しない。","source":"https://arxiv.org/abs/2601.08833","sources":["https://arxiv.org/abs/2601.08833","https://arxiv.org/html/2601.08833v1"],"code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":59},"reservation":{"claim_id":"claim-6c0676d0cc5caf5a13ce6002","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
