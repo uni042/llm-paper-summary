@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 19:36:13 JST**
+> 自動生成: **2026-09-19 20:02:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **46** |
 | 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-19 19:34:56 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-19 19:34:56 JST（27分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -37,10 +37,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **7** | **3** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **39** | **20** | **20** | **0** | **0** | **0** | **31** |
-| 合計 | **46** | **23** | **22** | **0** | **1** | **0** | **31** |
+| Discovery | **40** | **2** | **1** | **1** | **0** | **0** | **7** |
+| 合計 | **47** | **5** | **3** | **1** | **1** | **0** | **7** |
 
-- 最新Discovery runの耐久探索round: **20件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **2件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-19 20:01:55 JST** job `job-f01200ff7b9a34ab` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260919T2008JST-discovery-specialist-memory-paths-1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
+  - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
 - **09-19 19:06:28 JST** job `job-fedfeb6fc48d7e58` / 候補 **3件**
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-adjacent-14.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-heterocloud-17.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-heterocloud-17.json`
   - 探索軸: heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration
-- **09-19 19:07:03 JST** job `job-ca8974d52c93b2d2` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260919T1900JST-discovery-specialist-isolation-moe-16.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-isolation-moe-16.json`
-  - 探索軸: multi-tenant performance isolation / adaptive persistent-kernel MoE serving
 
 ### 直近タスク
 
@@ -158,49 +158,17 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-19 19:00 JST**
-- 耐久探索round: **20件** / immutable submission: **20件** / 検証済み成功result: **20件** / 個別result照合: **20件** / 個別result未照合: **0件** / 候補: **31件**
-- 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation / related-work path from agentic workload systems to predictability-driven agent-native serving / agentic multi-turn scheduling / tool-call pauses / KV cache TTL / agentic workload characterization / sandbox memory / secure mobile serving / online/offline co-serving / fine-grained GPU harvesting / preemption / CXL memory pooling / photonic fabric / NMP for hybrid LLM inference / KV cache dynamic reclamation / CUDA virtual memory / serving memory management / thermal-aware / energy-aware LLM serving scheduling / heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration / multi-tenant performance isolation / adaptive persistent-kernel MoE serving / MoE expert load balancing / elastic placement / CPU-GPU scheduling and cache / MoE expert prediction / prefetch / CPU-GPU offload / multi-LLM prewarming / shared decode execution / near-memory processing / 3D DRAM / KV allocation co-design / prefill/decode intra-GPU disaggregation / quantized inference kernels / precision-aware KV memory and scheduling / September 2026 recent serving/offload/cache/runtime sweep / related-work path from elastic KV memory to GPU memory ballooning / multi-LLM co-serving / prefill/decode fairness / adaptive batching / SLO scheduling / serving security isolation / inference-finetuning co-execution
-- round `specialist-agent-adjacent-14` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json`
-  - 探索軸: adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-adjacent-14.json` (`ok=true`)
-- round `specialist-agent-related-13` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json`
-  - 探索軸: related-work path from agentic workload systems to predictability-driven agent-native serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-related-13.json` (`ok=true`)
-- round `specialist-agent-scheduling-5` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-scheduling-5.json`
-  - 探索軸: agentic multi-turn scheduling / tool-call pauses / KV cache TTL
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-scheduling-5.json` (`ok=true`)
-- round `specialist-agent-systems-6` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json`
-  - 探索軸: agentic workload characterization / sandbox memory / secure mobile serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-agent-systems-6.json` (`ok=true`)
-- round `specialist-coserving-15` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-coserving-15.json`
-  - 探索軸: online/offline co-serving / fine-grained GPU harvesting / preemption
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-coserving-15.json` (`ok=true`)
-- round `specialist-cxl-nmp-3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json`
-  - 探索軸: CXL memory pooling / photonic fabric / NMP for hybrid LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-cxl-nmp-3.json` (`ok=true`)
-- round `specialist-elastic-kv-1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-elastic-kv-1.json`
-  - 探索軸: KV cache dynamic reclamation / CUDA virtual memory / serving memory management
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-elastic-kv-1.json` (`ok=true`)
-- round `specialist-energy-9` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-energy-9.json`
-  - 探索軸: thermal-aware / energy-aware LLM serving scheduling
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-energy-9.json` (`ok=true`)
-- round `specialist-heterocloud-17` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-heterocloud-17.json`
-  - 探索軸: heterogeneous cloud/spot GPUs / multi-LLM placement / spatial-temporal orchestration
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-heterocloud-17.json` (`ok=true`)
-- round `specialist-isolation-moe-16` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260919T1900JST-discovery-specialist-isolation-moe-16.json`
-  - 探索軸: multi-tenant performance isolation / adaptive persistent-kernel MoE serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260919T1900JST-discovery-specialist-isolation-moe-16.json` (`ok=true`)
+- 最新観測run: **2026-09-19 20:00 JST**
+- 耐久探索round: **2件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **7件**
+- 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling / energy-aware serving・heterogeneous GPU・shared-GPU resource control
+- round `specialist-memory-paths-1` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json`
+  - 探索軸: SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T2008JST-discovery-specialist-memory-paths-1.json` (`ok=true`)
+- round `specialist-energy-heterogeneity-2` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json`
+  - 探索軸: energy-aware serving・heterogeneous GPU・shared-GPU resource control
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -257,10 +225,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **618** |
+| 成功result未照合のimmutable submission | **619** |
 | └ Research | **471** |
 | └ Audit | **2** |
-| └ Discovery | **145** |
+| └ Discovery | **146** |
 
 ### 厳格検証が未成立のcompleted job
 
