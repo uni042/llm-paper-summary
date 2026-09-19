@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-1b0b6909960f493a2fbeb493",
-  "job_id": "job-research-b33b8317e97d5549",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1b0b6909960f493a2fbeb493",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1b0b6909960f493a2fbeb493","job_id":"job-research-b33b8317e97d5549","data":{"overview":"KVShareは完全再計算に対してTTFTを最大9.39倍短縮し、高負荷時を含む入力スループットを平均1.2倍へ改善した。30 QPSでもTTFTを881 ms未満に維持したと報告する。品質面では、プリフィルのみのDHD再計算でCacheBlend比平均9.48%、EPIC比平均29.98%高い指標値となり、デコード再計算を加えるとプリフィルのみから平均16.76%改善し、既存手法比で平均20.38%高い。キャッシュ認識スケジューリング単体の切り分けではTTFTを最大33.8%削減した。","key_results":[{"metric":"TTFT短縮","value":"最大9.39×","baseline":"Full Recompute","condition":"複数利用者KV再利用、Qwen2.5-7B/Llama3.1-8B/Yi1.5-9B、L40S","interpretation":"可変長KV再利用でプリフィル計算を減らし、ヒット率別バッチングで高速要求が低ヒット率要求に待たされるのを抑える。"},{"metric":"入力スループット","value":"平均1.2×","baseline":"Full Recompute","condition":"QPSが8を超える高負荷域を含む複数利用者評価","interpretation":"他方式が高負荷で低下する一方、KVShareは30 QPSまで比較的安定する。"},{"metric":"高並行時TTFT","value":"30 QPSで881 ms未満","baseline":"FR、EPIC、CacheBlend","condition":"実ユーザー指示を用いた負荷試験","interpretation":"要求間再利用とキャッシュ認識スケジューリングの組合せが高負荷で特に効く。"},{"metric":"DHD品質改善","value":"プリフィルのみでCacheBlend比平均+9.48%、EPIC比平均+29.98%","baseline":"CacheBlend / EPIC","condition":"3モデル×GSM8K/DROP/SAMSum、再計算率10〜40%","interpretation":"KV偏差の大きさだけでなく注意重みを含めて出力影響を評価することで、同じ再計算予算を重要トークンへ集中できる。"},{"metric":"二段階再計算の品質","value":"プリフィルのみから平均+16.76%、既存手法比平均+20.38%","baseline":"prefill-onlyおよびSOTA方式","condition":"各デコード段階で追加3トークンを再計算","interpretation":"デコード中の注意ドリフトによる累積誤差を追加再計算で補正できる。"},{"metric":"スケジューリング寄与","value":"TTFT最大33.8%削減","baseline":"同じKV再利用方式でcache-aware scheduling無効","condition":"複数QPS設定","interpretation":"ヒット率が近い要求をまとめるだけでも低ヒット率要求によるバッチ遅延のマスキングを減らせる。"}],"negative_results":"デコード段階でDHDトークンを追加計算するとTPOTが増える。論文は追加Nトークンの再計算により各QPS条件でTPOTが大きく悪化し、追加トークンごとの性能費用が生じることを制約として明記する。また完全再計算の品質へ常に一致するわけではなく、例えば表1の一部設定では再計算率を上げても指標が単調改善しない。","interpretation":"KVShareの性能利得は単にキャッシュを多く当てることではなく、共有できる断片を増やす可変長検索、共有で壊れる注意を重要トークンだけ再計算して直すDHD、高ヒット率要求の高速性をバッチ内で保持するスケジューリングの三段構成から生じる。特に高QPSではスケジューリングが、品質面ではデコード再評価が追加利得を担う。","quality_impact":"Naiveな全KV再利用は品質を大きく落とすが、DHDは注意への影響が大きいトークンを選択的に再計算して完全再計算へ近づける。デコード再計算はさらに品質を改善する一方、TPOTとの交換条件があるため、再計算数は品質と生成速度の調整ノブになる。"},"reservation":{"claim_id":"claim-1b0b6909960f493a2fbeb493","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
