@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.19289",
+      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2603.19289",
+      "priority": 82,
+      "reason": "Directly relevant MoE inference optimization: internal-representation-based future-expert prediction/prefetch overlaps CPU-GPU transfers with compute, includes speculative expert execution and fallback estimators, is integrated into an optimized engine, and reports TPOT improvement."
+    },
+    {
+      "canonical_id": "arXiv:2511.10676",
+      "title": "Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.10676",
+      "priority": 76,
+      "reason": "MoE expert-prefetch method using same-layer pre-attention activations and lightweight ranking-aware predictors, including first-layer prefetch and measured prediction accuracy across DeepSeek/Qwen/Phi MoE models. Relevant to expert prefetch/cache lineage."
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T19:00:00+09:00",
+    "round": "specialist-moe-prefetch-7",
+    "axis": "MoE expert prediction / prefetch / CPU-GPU offload",
+    "query_summary": "Switched from agent systems to MoE expert prefetch. FlashMoE and MegaScale-Infer were known/high-overlap; two expert-prediction/prefetch papers were not found by repository code search and provide distinct mechanisms with quantitative evaluation.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "novel_candidate_count": 2,
+    "accepted_count": 2,
+    "duplicate_ratio": 0.5,
+    "accepted_canonical_ids": ["arXiv:2603.19289", "arXiv:2511.10676"],
+    "duplicate_canonical_ids": ["arXiv:2601.17063", "arXiv:2504.02263"],
+    "next_axis_hint": "Search MoE expert placement/load balancing or CPU/SSD expert caching distinct from prediction, then citation/reference omissions."
+  }
+}
