@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 07:31:01 JST**
+> 自動生成: **2026-09-20 07:31:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **3** | **0** | **1** | **0** | — |
+| Research | **12** | **6** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **15** | **6** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **15** | **7** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -123,7 +123,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **6件** / 検証済み成功: **3件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-092a0a5a1923de06a9082271.json` (job `job-research-7462825d21914fcd`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-092a0a5a1923de06a9082271.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
@@ -133,6 +133,8 @@
   - result: `.survey/work-queue/results/research/attempt-aabaad10b18cbdb1c36dc544.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-aabaad10b18cbdb1c36dc544.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-ba82b7e0582e687a14fee4a3.json` (job `job-research-e12ae17b96a85ee5`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-ba82b7e0582e687a14fee4a3.json` (`ok=false`)
 - **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
   - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
@@ -215,8 +217,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **674** |
-| └ Research | **513** |
+| 成功result未照合のimmutable submission | **675** |
+| └ Research | **514** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
