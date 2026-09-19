@@ -36,7 +36,7 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
-DISCOVERY_PRECHECK_CUTOVER = datetime.fromisoformat("2026-09-20T01:00:00+09:00")
+DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
@@ -266,18 +266,64 @@ def is_discovery_round_submission(sub: dict) -> bool:
     return True
 
 
+def _git_introducing_commit(relative_path: PurePosixPath) -> str | None:
+    """Return the commit that first introduced one repository path."""
+    import subprocess
+
+    proc = subprocess.run(
+        ["git", "log", "--diff-filter=A", "--format=%H", "--", relative_path.as_posix()],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    if proc.returncode != 0:
+        return None
+    commits = [line.strip() for line in proc.stdout.splitlines() if line.strip()]
+    return commits[-1] if commits else None
+
+
+def _git_is_ancestor(ancestor: str, descendant: str) -> bool:
+    import subprocess
+
+    proc = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", ancestor, descendant],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    return proc.returncode == 0
+
+
 def _discovery_precheck_required(sub: dict) -> bool:
-    """Require the canonical precheck for new runs without breaking historical submissions."""
-    meta = sub.get("discovery_stats") if isinstance(sub.get("discovery_stats"), dict) else {}
-    run_key = str(meta.get("run_key") or "").strip()
-    try:
-        parsed = datetime.fromisoformat(run_key.replace("Z", "+00:00"))
-    except ValueError:
-        # Historical run keys were not always ISO timestamps. Keep them readable.
-        return isinstance(sub.get("discovery_precheck"), dict)
-    if parsed.tzinfo is None:
-        return isinstance(sub.get("discovery_precheck"), dict)
-    return parsed >= DISCOVERY_PRECHECK_CUTOVER
+    """Require precheck for Discovery submissions introduced after the enforcement marker."""
+    proof_present = isinstance(sub.get("discovery_precheck"), dict)
+    source_submission = str(sub.get("_file") or "").strip()
+    if not source_submission:
+        # Direct/unit callers without a durable path remain explicit: if they present a
+        # proof, validate it; durable queue processing always sets _file.
+        return proof_present
+
+    source_path = PurePosixPath(source_submission)
+    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
+        return True
+    if len(source_path.parts) == 3 and source_path.parts[:2] == ("work-queue", "submissions"):
+        source_path = PurePosixPath(".survey") / source_path
+    elif len(source_path.parts) == 4 and source_path.parts[:3] == (".survey", "work-queue", "submissions"):
+        pass
+    else:
+        # Unexpected durable Discovery transport is not a compatibility escape hatch.
+        return True
+
+    marker_path = ROOT.parent / Path(DISCOVERY_PRECHECK_MARKER.as_posix())
+    if not marker_path.exists():
+        return proof_present
+
+    marker_commit = _git_introducing_commit(DISCOVERY_PRECHECK_MARKER)
+    submission_commit = _git_introducing_commit(source_path)
+    if not marker_commit or not submission_commit:
+        # Once the marker exists, inability to prove a submission predates it fails closed.
+        return True
+    return marker_commit == submission_commit or _git_is_ancestor(marker_commit, submission_commit)
 
 
 def _precheck_guidance(reason: str) -> DiscoveryPrecheckError:

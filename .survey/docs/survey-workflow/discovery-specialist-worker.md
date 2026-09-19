@@ -101,7 +101,7 @@ overflow research modeへ入ったrunでは、通常論文workerのhigh-backlog 
 
 ## 強制Discovery precheck gate
 
-2026-09-20 01:00 JST以降のDiscovery runでは、外部検索結果を直接candidate評価または `submit_discovery_round` へ渡してはならない。Discovery modeへ入ったら、各検索バッチのraw recordをまず次のimmutable requestとして保存する。
+`.survey/work-queue/discovery-precheck/ENFORCED` の導入commit以後に新規作成されたDiscovery submissionでは、外部検索結果を直接candidate評価または `submit_discovery_round` へ渡してはならない。Discovery modeへ入ったら、各検索バッチのraw recordをまず次のimmutable requestとして保存する。
 
 - request: `.survey/work-queue/discovery-precheck/requests/<unique>.json`
 - `operation: "precheck_discovery_candidates"`
