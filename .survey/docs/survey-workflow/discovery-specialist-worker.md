@@ -99,6 +99,20 @@ overflow research modeへ入ったrunでは、通常論文workerのhigh-backlog 
 
 固定件数で埋めない。1軸が0件または全重複なら別軸へ切り替える。
 
+## 強制Discovery precheck gate
+
+2026-09-20 00:00 JST以降のDiscovery runでは、外部検索結果を直接candidate評価または `submit_discovery_round` へ渡してはならない。Discovery modeへ入ったら、各検索バッチのraw recordをまず次のimmutable requestとして保存する。
+
+- request: `.survey/work-queue/discovery-precheck/requests/<unique>.json`
+- `operation: "precheck_discovery_candidates"`
+- 必須: `request_id`, 今回runの `run_key`, `axis`, `records[]`
+
+専用GitHub Actionsが最新mainから `queue_worker.existing_candidate_keys()` と同じidentity snapshotをその場で再構築し、`discovery_search_filter.py` を実行して、`.survey/work-queue/discovery-precheck/results/<same-name>.json` をworkflow botとして生成する。workerは `ok=true` のresultが出るまで候補評価へ進まず、**`results[]` に返されたrecordだけ**を評価対象にする。
+
+Discovery submissionには必ず `discovery_precheck.request_id`, `discovery_precheck.result_path`, `discovery_precheck.receipt` を入れる。queue processorはresultのworkflow-bot provenance、run_key/axis、receipt、candidate identityを照合し、resultに含まれないcandidateを受理しない。最終dedupeは並行workerとのrace防止として別途維持する。
+
+precheckを迂回したsubmissionはimmutable原本を上書きせず失敗resultになる。そのresultの `next_action` / `recovery_steps` に従い、raw search recordsから**新しいprecheck request**を作り、成功resultの `results[]` だけを再評価し、**新しいDiscovery submission**を作る。失敗submissionやprecheck resultを手書き修正して回避してはならない。
+
 ## 二重探索・二重投入の防止
 
 探索開始前とcandidate投入直前の **2段階** で重複判定する。
