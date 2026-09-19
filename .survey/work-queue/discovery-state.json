@@ -1,34 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-19T14:07:48+00:00",
+  "updated_at": "2026-09-19T14:08:16+00:00",
   "last_run_key": "2026-09-19T23:00:00+09:00",
-  "last_round": "specialist-storage-compute-10",
+  "last_round": "specialist-memory-scheduling-11",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
+  "consecutive_empty_rounds": 4,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-15T07:00:00+09:00",
-      "round": "specialist-fault-recovery-9",
-      "axis": "長時間LLMサービングのcheckpoint・KV復旧・耐障害性",
-      "query_summary": "fault-tolerant LLM servingを探索し、LUMEN（arXiv:2606.17787）、Concordia（arXiv:2606.23521）、Blackwell GPU confidential computingのSerialized Bridge（arXiv:2606.23969）、GhostServe（arXiv:2605.00831）を軽量評価した。最新identityで前3件は既収録、GhostServeのみ未収録だった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.17787",
-        "arXiv:2606.23521",
-        "arXiv:2606.23969"
-      ],
-      "next_axis_hint": "分離サービングのネットワーク転送、RDMA/NVLink/CXLファブリック、集合通信のランタイム適応へ移り、既収録通信系統から未収録候補を探索する。",
-      "source_submission": "work-queue/submissions/20260915T0741JST-discovery-specialist-fault-recovery-9.json"
-    },
     {
       "run_key": "2026-09-15T07:00:00+09:00",
       "round": "specialist-emulation-jit-security-11",
@@ -7419,6 +7400,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "GPU memory allocator・virtual memory・request migrationの既存取りこぼしを走査する",
       "source_submission": "work-queue/submissions/20260919T2351JST-discovery-specialist-storage-compute-10.json"
+    },
+    {
+      "run_key": "2026-09-19T23:00:00+09:00",
+      "round": "specialist-memory-scheduling-11",
+      "axis": "elastic GPU memory・PIM hierarchy・prediction-guided dispatch",
+      "query_summary": "GPU virtual memory/request migration周辺の既存取りこぼしを探索し、memory abstraction・hierarchical processing・multi-instance dispatchの独立3系統を抽出。canonical IDを最新default branchへ再照合した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "外部検索呼び出し枠が回復した次回はforward citationと未走査OS/storage/HPC軸を継続する",
+      "source_submission": "work-queue/submissions/20260919T2356JST-discovery-specialist-memory-scheduling-11.json"
     }
   ],
   "axes": {
@@ -14033,6 +14032,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "next_axis_hint": "GPU memory allocator・virtual memory・request migrationの既存取りこぼしを走査する"
+    },
+    "elastic GPU memory・PIM hierarchy・prediction-guided dispatch": {
+      "last_run_key": "2026-09-19T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "next_axis_hint": "外部検索呼び出し枠が回復した次回はforward citationと未走査OS/storage/HPC軸を継続する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

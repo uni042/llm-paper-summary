@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T14:05:57.954939+00:00",
+  "updated_at": "2026-09-19T14:09:27.868827+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T14:05:57.954939+00:00",
+      "last_recorded_at": "2026-09-19T14:09:27.868827+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 302,
         "audit_completed": 0,
-        "discovery_completed": 189,
+        "discovery_completed": 190,
         "blocked": 38,
-        "new_jobs": 288,
+        "new_jobs": 289,
         "new_papers": 305,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35386765540:1",
-          "recorded_at": "2026-09-18T19:35:30.327737+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35386765540",
-            "run_attempt": "1",
-            "source_sha": "86478316dfe1bce539e68ba4feee80e246958b35"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35387164144:1",
           "recorded_at": "2026-09-18T19:39:56.090290+00:00",
@@ -19596,6 +19582,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35447722564:1",
+          "recorded_at": "2026-09-19T14:09:27.868827+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35447722564",
+            "run_attempt": "1",
+            "source_sha": "f35c57254b611ed033904f1257ef89b8b2247072"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -23831,6 +23831,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-4df2d14fd1071111",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -25849,6 +25857,13 @@
           "type": "research",
           "canonical_id": "arXiv:2605.20706",
           "title": "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU"
+        },
+        {
+          "job_id": "job-4df2d14fd1071111",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -26464,7 +26479,8 @@
         ".survey/work-queue/results/20260919T2100JST-discovery-specialist-batching-fairness-8.json",
         ".survey/work-queue/results/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json",
         ".survey/work-queue/results/20260919T2350JST-discovery-specialist-admission-batching-18.json",
-        ".survey/work-queue/results/20260919T2302JST-discovery-specialist-memory-runtime-1.json"
+        ".survey/work-queue/results/20260919T2302JST-discovery-specialist-memory-runtime-1.json",
+        ".survey/work-queue/results/20260919T2356JST-discovery-specialist-memory-scheduling-11.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -26542,7 +26558,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 766,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
