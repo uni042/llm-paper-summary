@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-19 17:09:01 JST**
+> 自動生成: **2026-09-19 17:31:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **47** |
-| 未claim Research job | **46** |
+| 未claim Research job | **45** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-19 11:33:35 JST（5時間35分前）** |
+| 最終検証済みResearch収録 | **09-19 11:33:35 JST（5時間57分前）** |
 | 整合性異常 | **4** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **1** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **11** | **12** | **11** | **1** | **0** | **0** | **12** |
-| 合計 | **18** | **13** | **11** | **1** | **1** | **0** | **12** |
+| Discovery | **12** | **12** | **12** | **0** | **0** | **0** | **12** |
+| 合計 | **13** | **13** | **12** | **0** | **2** | **0** | **12** |
 
 - 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -53,36 +53,6 @@
   - result: `.survey/work-queue/results/research/attempt-3b62c6bd3d0c2191dd7cade2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3b62c6bd3d0c2191dd7cade2.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md`
-- **09-19 11:18:39 JST** [research] `arXiv:2609.18123` — AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines
-  - job: `.survey/work-queue/jobs/job-research-66ea885d5e740aba.json`
-  - result: `.survey/work-queue/results/research/attempt-fa2bf0d161766edfda517f4d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-fa2bf0d161766edfda517f4d.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md`
-- **09-19 11:15:18 JST** [research] `arXiv:2412.18934` — Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference
-  - job: `.survey/work-queue/jobs/job-research-c26aa10b960d27a4.json`
-  - result: `.survey/work-queue/results/research/attempt-6ad53a550a3c7bedcb56aa8c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6ad53a550a3c7bedcb56aa8c.json`
-  - paper: `papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md`
-- **09-19 11:13:03 JST** [research] `arXiv:2504.11816` — Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading
-  - job: `.survey/work-queue/jobs/job-research-7623de796f4f2b46.json`
-  - result: `.survey/work-queue/results/research/attempt-4acdd901db9ea9968da5dd65.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4acdd901db9ea9968da5dd65.json`
-  - paper: `papers/inference/03-offload-hierarchical-memory/2025-2504.11816-infersave-vm-selection-kv-offloading.md`
-- **09-19 11:11:24 JST** [research] `URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html` — PLA-Serve: A Prefill-Length-Aware LLM Serving System
-  - job: `.survey/work-queue/jobs/job-research-7b5d4afbd3eabe62.json`
-  - result: `.survey/work-queue/results/research/attempt-1f99c691ecf3b25036733d54.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1f99c691ecf3b25036733d54.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md`
-- **09-19 11:10:25 JST** [research] `arXiv:2608.00101` — Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale
-  - job: `.survey/work-queue/jobs/job-research-44bb3b5d160bad25.json`
-  - result: `.survey/work-queue/results/research/attempt-ee58aa534ed82a58b5fa7386.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ee58aa534ed82a58b5fa7386.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md`
-- **09-19 11:09:05 JST** [research] `DOI:10.1109/HPCA68181.2026.11408460` — Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems
-  - job: `.survey/work-queue/jobs/job-research-e8f755e1fee9cc18.json`
-  - result: `.survey/work-queue/results/research/attempt-0083927c844f95c6af151465.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0083927c844f95c6af151465.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md`
 
 ### Audit
 
@@ -102,6 +72,10 @@
   - result: `.survey/work-queue/results/20260919T1700JST-round11-recent-crosscheck.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round11-recent-crosscheck.json`
   - 探索軸: 2026年9月直近新着横断
+- **09-19 17:09:28 JST** job `job-39a41be225bc393e` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260919T1700JST-round12-citation-omissions.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
+  - 探索軸: recent candidatesの関連研究・過去1年重要omission横断
 - **09-19 17:03:37 JST** job `job-4c37098b536c4ac0` / 候補 **1件**
   - result: `.survey/work-queue/results/20260919T1708JST-discovery-specialist-flash-cim-1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
@@ -126,10 +100,6 @@
   - result: `.survey/work-queue/results/20260919T1735JST-discovery-specialist-cxl-agent-6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260919T1735JST-discovery-specialist-cxl-agent-6.json`
   - 探索軸: CXL-PNM KV cache・agent sandbox runtime
-- **09-19 17:06:56 JST** job `job-217dcf2075be4f9d` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260919T1741JST-discovery-specialist-kv-restoration-7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260919T1741JST-discovery-specialist-kv-restoration-7.json`
-  - 探索軸: KV restoration・storage I/O overlap・3D parallelism
 
 ### 直近タスク
 
@@ -149,7 +119,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-19 17:00 JST**
-- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **11件** / 個別result照合: **11件** / 個別result未照合: **1件** / 候補: **12件**
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **0件** / 候補: **12件**
 - 探索軸: OS page cache・kernel-managed expert tiering / RDMA・KV transfer・collective scheduling / 2026年9月直近新着横断 / recent candidatesの関連研究・過去1年重要omission横断 / Compute-in-Flash・SSD/Flash近傍計算・KV圧縮 / MoE expert cache・router adaptation・weight traffic / prefill/decode分離・WAN KV transfer・load-aware deflection / energy-aware serving・GPU power control / CPU/GPU/CXL・NUMA・cross-tier heterogeneous serving / CXL-PNM KV cache・agent sandbox runtime / KV restoration・storage I/O overlap・3D parallelism / speculative serving・KV migration・asynchronous decoding
 - round `specialist-os-pagecache-9` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round09-os-pagecache.json`
@@ -166,7 +136,7 @@
 - round `specialist-citation-omissions-12` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260919T1700JST-round12-citation-omissions.json`
   - 探索軸: recent candidatesの関連研究・過去1年重要omission横断
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260919T1700JST-round12-citation-omissions.json` (`ok=true`)
 - round `specialist-flash-cim-1` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json`
   - 探索軸: Compute-in-Flash・SSD/Flash近傍計算・KV圧縮
@@ -196,7 +166,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `DOI:10.1109/HPCA68181.2026.11408592` — PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System / worker `scheduled-chat-llm-survey-20260919T172734JST-turn11`
+  - claim: **09-19 17:31:20 JST** / heartbeat: **—** / lease expiry: **09-19 19:01:20 JST**
+  - evidence: `.survey/work-queue/claims/job-research-399763992dea8e09.json`
 - `DOI:10.1109/ISCA66397.2026.00098` — Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism / worker `scheduled-chat-llm-survey`
   - claim: **09-19 16:31:29 JST** / heartbeat: **—** / lease expiry: **09-19 18:01:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-21d6a425148ac99f.json`
@@ -247,11 +220,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **607** |
+| 成功result未照合のimmutable submission | **606** |
 | └ Research | **459** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **1** |
 
 ### 厳格検証が未成立のcompleted job
 
