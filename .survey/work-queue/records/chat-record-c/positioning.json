@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6b53b1926ec03fe03eb46c7c",
-  "job_id": "job-research-95a4661f225665ff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b53b1926ec03fe03eb46c7c",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6b53b1926ec03fe03eb46c7c","job_id":"job-research-95a4661f225665ff","data":{"positioning":"MoE-PHDSはslimmable/Once-for-All/MatFormerの『一モデル多動作点』思想を疎MoEのグローバルtop-kへ移し、既存事前学習チェックポイントを軽量SFTで後付け対応させる。トークン適応MoEが固定グローバル予算を入力ごとに再配分するのに対し、PHDSはサービス要求に応じてグローバル予算そのものを変えるため両者は補完関係にある。","differences":"Dynamic MoE、AdaMoE、DynaMoE等はトークン難易度から活性専門家数を変え、同じ要求内でも計算量が揺れる。PHDSは要求単位で一つのkを明示するのでFLOPs・遅延・電力を予測しやすい。Flextron等のmany-in-one LLMは層・幅の可変構造やルータを扱うが、PHDSは既存MoE構造を変えずtop-kだけを制御する。kごとに別Oracleを学習する現行運用と比べ、同一重みのためcross-k出力一致も高い。","relation_to_prior_work":[{"work":"Slimmable / Once-for-All / MatFormer","difference":"事前学習時から可変幅・部分網を設計する方式に対し、既存MoEへpost-hoc SFTだけでグローバルtop-k可変性を付与する。"},{"work":"Dynamic MoE / top-k(P) / AdaMoE","difference":"トークン単位で計算を適応配分するのではなく、サービス運用者が要求単位のグローバルkを宣言する。両者は組合せ可能。"},{"work":"DynaMoE","difference":"denseモデルをtoken-sparse MoEへ変換するpost-training方式に対し、PHDSは既存MoEの複数グローバル疎性への頑健性を学習する。"},{"work":"multiple well-specified checkpoints","difference":"各k専用モデルを別々にSFT・保存する代わりに一つの重みを全kで共有し、学習・保守コストと出力ドリフトを減らす。"}],"strengths":["既存MoEへアーキテクチャ変更なしで適用できる。","制御ノブがグローバルk一つで運用しやすい。","公開OLMoE/Qwenと内部モデルの複数族で評価する。","精度だけでなくcross-k回答一致を測りユーザー体験の安定性を評価する。","k専用モデル複数保持に比べ学習・配備の単純化を直接狙う。"],"limitations":["1B〜14.3Bモデル中心で巨大MoEへの拡張は未確認。","等サイズrouted expertだけを扱い、partial routingや異種専門家サイズは未評価。","k_pre/2未満では品質が急落し、任意に広い疎性範囲を保証しない。","coding・summarization等の生成中心課題を省く。","安全なk削減幅はモデル・タスク依存で、サービス側で品質検証が必要。"],"implementation_status":"既存MoEのtop-kルータへsoft maskとk別補助状態を加える軽量SFT方式。OLMoE/Qwen対応差分と設定JSONは機関承認後公開予定とされ、本文時点で確定リポジトリURLはない。","research_positioning":"MoEの疎性を学習時固定ハイパーパラメータから配備時サービスプリミティブへ変える研究で、SLA・負荷・電力に応じた要求単位のモデル弾力性を簡単な制御面で提供する。","repository_fit":"適応型専門家計算・圧縮系統に直接属し、動的top-k、token-adaptive routing、MoE servingの比較軸として『global runtime sparsity from one checkpoint』を追加する。"},"reservation":{"claim_id":"claim-6b53b1926ec03fe03eb46c7c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
