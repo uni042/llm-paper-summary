@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-citation-latest",
+    "summary": "Adaptive Expert Computation / Compression 配下の収録論文を引用する最新論文を探し、有用なものを論文候補へ追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.00575",
+      "title": "Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2609.00575",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md",
+      "priority": 99,
+      "reason": "PARSERはexpert残差の個別行列誤差ではなくexpert出力誤差を圧縮目的に置き換えるMoE圧縮法。Qwen/DeepSeekで同一peak memory reduction時の非圧縮モデルとのaccuracy gapを既存法比1.41x/1.44x縮小しており、Compression系統を直接更新する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.26650",
+      "title": "Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs",
+      "source_url": "https://arxiv.org/abs/2608.26650",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+      "priority": 98,
+      "reason": "MetaNetはtask-conditioned support-set controllerで層ごとのexpert retention thresholdとrouting biasを予測し、固定kをタスク条件付きに変える。DeepSeek-MoE-16B-Chatで平均active expertsを40%削減しつつMMLUを同等以上に保つ設定を示し、Adaptive Expert Computationに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.15299",
+      "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+      "source_url": "https://arxiv.org/abs/2608.15299",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.15299-maple-layer-wise-expert-allocation.md",
+      "priority": 98,
+      "reason": "MAPLEはpretrained MoEの重みを変えず、layer sensitivityからexpert budgetを非一様配分するplug-and-play方式。75% expert budgetで品質を維持・改善し、SGLang実装でsingle-GPU latency 32.2%減・throughput 47.4%増を報告しており、適応的expert数配分の実測系として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.18643",
+      "title": "Post-Trained MoE Can Skip Half Experts via Self-Distillation",
+      "source_url": "https://arxiv.org/abs/2605.18643",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md",
+      "priority": 97,
+      "reason": "ZEDAはpost-trained static MoEにzero-output expertを追加し二段階self-distillationでdynamic MoEへ変換する。Qwen3-30B-A3B/GLM-4.7-Flashでexpert FLOPsを50%以上削減し、約1.20x end-to-end speedupを報告しており、既存モデルを後処理でAdaptive Computation化する点が直接的。"
+    },
+    {
+      "canonical_id": "arXiv:2605.29350",
+      "title": "ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression",
+      "source_url": "https://arxiv.org/abs/2605.29350",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.29350-conmoe-prototype-reassignment-compression.md",
+      "priority": 96,
+      "reason": "ConMoEはexpert pruning/weight mergingではなく、保持expertをprototypeとして元expert参照を決定的に再割当するtraining-free compression。router interfaceを維持したままexpert poolを縮小し、DeepSeek-MoE-16Bで25%/50% routed-expert reduction時に強いbaselineを上回るため、Compression系統の設計差分として有用。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+    "round": "adaptive-forward-citation-seed-2402.14800-r1",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Adaptive Expert Computation / Compression の代表論文 arXiv:2402.14800 の Semantic Scholar citations 固定ソースを schema v3 precheck で2ページ走査。raw 160件から既知重複等を除外して未収録100件を得て、新着かつ系統への直接性が高い5件を選定した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次ラウンドは同系統の別seed論文をforward citationで走査し、shared identity snapshotで今回候補との重複を除外する。",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "Adaptive Expert Computation / Compression lineage forward citations",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2402.14800",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 160,
+        "unseen_result_count": 100,
+        "duplicate_filtered_count": 24,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 5,
+        "position": "2 pages"
+      }
+    ]
+  }
+}
