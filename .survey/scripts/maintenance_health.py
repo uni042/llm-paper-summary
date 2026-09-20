@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Maintenance-time health checks for the survey repository.
 
-The 24-run maintenance cycle uses this module after GC.  It deliberately limits
+The dedicated daily 08:30 maintenance run uses this module after GC. It limits
 self-repair to derived/snapshot state that can be reconstructed from canonical
-files.  Ambiguous queue or record-bank inconsistencies are reported rather than
+files. Ambiguous queue or record-bank inconsistencies are reported rather than
 mutated.
 """
 from __future__ import annotations
