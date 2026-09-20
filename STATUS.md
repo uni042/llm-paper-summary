@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:47:33 JST**
+> 自動生成: **2026-09-21 05:48:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **1** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **28** | **6** | **4** | **2** | **0** | **0** | **5** |
-| 合計 | **29** | **12** | **8** | **2** | **0** | **0** | **5** |
+| Discovery | **28** | **7** | **4** | **3** | **0** | **0** | **10** |
+| 合計 | **29** | **13** | **8** | **3** | **0** | **0** | **10** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -156,8 +156,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **2件** / 候補: **5件**
-- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **3件** / 候補: **10件**
+- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
   - 探索軸: backward structured references across repository
@@ -181,6 +181,10 @@
 - round `round-06` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
   - 探索軸: recent speculative decoding serving systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `round-07` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json`
+  - 探索軸: recent MoE expert prefetch prediction offload inference alternate provider
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -236,10 +240,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **915** |
+| 成功result未照合のimmutable submission | **916** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **201** |
+| └ Discovery | **202** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
