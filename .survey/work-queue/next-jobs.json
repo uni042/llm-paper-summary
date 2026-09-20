@@ -9,19 +9,19 @@
       "completed": 6
     },
     "research": {
-      "ready": 72,
+      "ready": 71,
       "completed": 611,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
       "rejected": 2,
-      "blocked": 3
+      "blocked": 4
     }
   },
   "claiming": {
-    "ready_research_audit": 72,
+    "ready_research_audit": 71,
     "actively_claimed": 0,
-    "claimable": 72
+    "claimable": 71
   },
   "next_jobs": [
     {
@@ -95,20 +95,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-9d57d4c95ee33e52",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2608.12114",
-      "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
-      "source_url": "https://arxiv.org/abs/2608.12114",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12114-file-backed-weights.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-a7f8650f63d4e4e7",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-77f5ab6e591a0176",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2310.01801",
+      "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
+      "source_url": "https://arxiv.org/abs/2310.01801",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T03:45:53+00:00"
+  "generated_at": "2026-09-20T03:47:19+00:00"
 }
