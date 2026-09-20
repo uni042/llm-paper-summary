@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-693ab3f00680341f1d1e2e10",
   "job_id": "job-research-53d31e41c03b4f2d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-693ab3f00680341f1d1e2e10",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "論文は再構成を実行する機構を扱い、いつ再構成を開始するか、どのパイプライン並列配置を目標に選ぶかは解かない。評価環境もA100とL40Sを各1基用いた2段構成であり、多数GPUや多段パイプライン、同種GPUクラスタ、複数モデル同時運用での拡張性は未評価である。再構成中は旧配置と新配置の層集合を一時的に共存させるため、現在使用中KV量が縮小後の安全容量を超える場合は再構成できない。レイヤースタッキングは断片化を減らすほど配置変更粒度を粗くするため、メモリ効率と適応性にトレードオフが残る。",
+    "differences": "vLLMやSGLang、DistServe、Llumnixなどはスケジューリング、KV管理、プリフィルとデコードの分離、インスタンス管理を改善するが、基本的には実行レイアウトを固定したまま性能を上げる。PipeLiveはその下のパイプライン並列レイヤー配置そのものを稼働中に変更する。近いHydraServeとFlexPipeは参加GPU集合の変更を扱うが、既存GPU集合内で大きく層を再配置する際のGPUメモリ制約とKV状態移動を同時には扱わない。DynaPipeは末尾段を中心とした限定的な層再分配で、KV移動量とメモリ制約を十分に扱わない。KVcachedのような仮想メモリ方式に対しては、毎推論ステップの仮想物理再対応付けを避け、非連続ブロックへの直接アクセスとレイヤースタッキングで即時のKV領域回収を狙う点が異なる。",
+    "implementation_status": "vLLM上に構築した実装を用いて実機評価しており、論文本文はPipeLiveをオープンソースのLLMサービングシステムと説明する。ただし今回確認できたarXiv一次資料本文とメタデータからは公式コードリポジトリURLを特定できなかったため、コードURLは未確認として扱う。",
+    "research_positioning": "リポジトリ内では、LLMサービングのスケジューリング・分離実行系統と、KVキャッシュ管理・移動系統をつなぐ論文として位置付けられる。特に異種GPUでの動的資源配置に対し、上位スケジューラが選んだ目標配置を実際に低停止で反映する実行機構を提供する点が重要である。将来的には、負荷予測やSLOに基づく配置選択器、テンソル並列・データ並列との共同再構成、より大規模な異種クラスタ制御と組み合わせる余地がある。"
+  },
+  "reservation": {"claim_id": "claim-693ab3f00680341f1d1e2e10", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
