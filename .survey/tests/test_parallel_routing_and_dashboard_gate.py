@@ -16,12 +16,15 @@ CANONICAL_RENDER = "render_status_dashboard.py --repo-root . --output STATUS.md"
 LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
-class SpecialistOverflowRoutingTests(unittest.TestCase):
-    def test_canonical_router_routes_specialist_to_research_above_50(self):
+class SharedWorkMixRoutingTests(unittest.TestCase):
+    def test_canonical_router_differs_only_by_work_mix(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("candidate_inventory > 50", router)
-        self.assertIn("overflow research mode", router)
-        self.assertIn("通常論文ワーカーと同じ研究処理", router)
+        self.assertIn("読解 3 : 探索 1", router)
+        self.assertIn("探索 3 : 読解 1", router)
+        self.assertIn("第3節の共通読解手順", router)
+        self.assertIn("第4節の共通探索手順", router)
+        self.assertIn("タスク固有の別モードを作る理由にはしない", router)
+        self.assertNotIn("通常論文ワーカーと同じ研究処理", router)
 
     def test_repository_tests_watch_single_worker_router(self):
         text = REPOSITORY_TESTS.read_text(encoding="utf-8")
