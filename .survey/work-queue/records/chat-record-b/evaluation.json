@@ -1,14 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-362ad2690372255c3afaa71b","job_id":"job-research-da8147ed3835966f",
-  "data":{
-    "hardware":"RunPod。基準の同種構成は8×NVIDIA H100-80G ($29.52/h)。異種設定はH100、A100、L40、A6000を組み合わせた5構成で、設定1〜4は同程度の価格予算、設定5は同種構成の70%予算。GPU間帯域はNCCLで実測。",
-    "software":"libP2Pを利用した分散タスク調整、NCCL並列通信、非同期NCCL SendRecv/CudaMemcpyによるKV転送。continuous batching、FlashAttention、PagedAttentionを統合。",
-    "methodology":"OPT-30BとLlama-2-70Bを用い、入力512 token超をheavy prefill、出力128 token超をheavy decodeとしてHPLD/HPHD/LPHD/LPLDの4合成ワークロードをAzure Conversationデータから生成する。offlineではクラスタを飽和させ、onlineでは平均到着率をピークスループットの75%に設定する。同価格帯で異種GPU向けHexGen、8×H100同種構成のDistServeと比較し、offline decoding throughput、online SLO達成率/遅延期限を測る。スケジューラについては最大流誘導辺交換を外した変種と遺伝的アルゴリズムを15回ずつ比較し、収束時間と推定/実測スループットを評価する。",
-    "scope":"異種GPU・異種ネットワーク上の分離LLMサービングを対象とし、モデル品質ではなく配置、並列化、KV転送、価格効率、スループット、SLOを評価する。",
-    "models":["OPT-30B","Llama-2-70B"],
-    "datasets_benchmarks":["Azure Conversation derived HPLD/HPHD/LPHD/LPLD traces","online request trace"],
-    "baselines":["HexGen","DistServe","HexGen-2 without max-flow-guided edge swap","genetic algorithm scheduler","vLLM (appendix)"],
-    "metrics":["decoding throughput (tokens/s)","inference latency deadline","SLO attainment","scheduler convergence time","estimated throughput","cloud price budget"]
-  },
-  "reservation":{"claim_id":"claim-362ad2690372255c3afaa71b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-7d885ba839f618fd75926d05",
+  "job_id": "job-research-ab19fa17920fb404",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7d885ba839f618fd75926d05",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
