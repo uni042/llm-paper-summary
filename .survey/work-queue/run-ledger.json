@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T09:45:32.150400+00:00",
+  "updated_at": "2026-09-20T09:48:05.927519+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T09:45:32.150400+00:00",
+      "last_recorded_at": "2026-09-20T09:48:05.927519+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 373,
         "audit_completed": 0,
         "discovery_completed": 197,
-        "blocked": 48,
+        "blocked": 49,
         "new_jobs": 312,
         "new_papers": 360,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35476723797:1",
-          "recorded_at": "2026-09-19T23:43:33.949972+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35476723797",
-            "run_attempt": "1",
-            "source_sha": "a98836c8379bb853a95a704faa769b20e378958a"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35479164297:1",
           "recorded_at": "2026-09-20T00:35:35.448026+00:00",
@@ -19592,6 +19578,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35503284828:1",
+          "recorded_at": "2026-09-20T09:48:05.927519+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35503284828",
+            "run_attempt": "1",
+            "source_sha": "9fabff6dd21329c62984f501a5c0c1a17ac880cc"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24539,6 +24539,14 @@
           "title": "Striped Attention: Faster Ring Attention for Causal Transformers",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-c0742ec707ffbbe8",
+          "type": "research",
+          "canonical_id": "arXiv:2405.14636",
+          "title": "PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -27475,7 +27483,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 821,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

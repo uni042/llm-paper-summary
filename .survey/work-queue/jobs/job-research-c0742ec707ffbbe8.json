@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2405.14636",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.14636-perllm.md",
   "selection_reason": "Edge-cloud LLM inference scheduler jointly optimizing service constraints, resource allocation, throughput, and energy cost.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T04:01:59+00:00"
+  "created_at": "2026-09-20T04:01:59+00:00",
+  "completed_at": "2026-09-20T09:48:00+00:00",
+  "blocker": "The primary-source web reader has reached its explicit per-run call limit, so the paper cannot be retrieved and read in full during this invocation without guessing.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json"
 }
