@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "operation": "submit_discovery_round",
-  "candidates": [
-    {"canonical_id":"arXiv:2604.10152","title":"SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding","source_url":"https://arxiv.org/abs/2604.10152","paper_path":"papers/inference/03-moe-expert-offload/2026-2604.10152-specmoe-self-assisted-speculative-decoding.md","priority":84,"reason":"追加draft modelや再学習を要求せずMoE自身を利用するself-assisted speculative decodingで、CPU-offloaded MoEのmemory/interconnect帯域を削減する推論システム。memory-constrained環境でthroughput最大4.30倍を報告し、expert offloadとspeculative decodingを直接結ぶ点が重要。"},
-    {"canonical_id":"arXiv:2605.11537","title":"Fast MoE Inference via Predictive Prefetching and Expert Replication","source_url":"https://arxiv.org/abs/2605.11537","paper_path":"papers/inference/03-moe-expert-offload/2026-2605.11537-predictive-prefetching-expert-replication.md","priority":80,"reason":"次batchで過負荷になるexpertを予測し動的に複製してexpert待ちとGPU idleを減らす方式。Switch-base-128/256でGPU利用率ほぼ100%、推論速度最大3倍を報告し、expert cache/offloadとは異なるload-balancing側の候補として比較価値がある。"}
-  ],
-  "discovery_stats":{"run_key":"2026-09-16T20:00:00+09:00","round":"specialist-moe-spec-replication-4","axis":"MoE self-assisted speculative decoding・expert replication","query_summary":"KV系からMoEへ軸を変更し、offloaded expertの帯域削減とhot expert競合の解消を狙う研究を探索した。DALIとCoX-MoEは過去探索で既知のため除外した。","candidate_count":4,"duplicate_filtered_count":2,"duplicate_canonical_ids":["arXiv:2602.03495","arXiv:2605.17889"],"next_axis_hint":"非GPUアクセラレータ・many-core/HPC向けLLM runtimeとメモリ帯域最適化へ展開する","empty_round_reason":null}
-}

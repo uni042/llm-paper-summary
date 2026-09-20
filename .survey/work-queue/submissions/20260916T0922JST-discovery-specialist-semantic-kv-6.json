@@ -1,5 +1,0 @@
-{
- "schema_version":1,"job_id":"job-b6f805c0cbcee3d4",
- "candidates":[{"canonical_id":"arXiv:2606.24467","title":"CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference","source_url":"https://arxiv.org/abs/2606.24467","paper_path":"papers/inference/03-kv-cache-memory/2026-2606.24467-compresskv-semantic-retrieval-kv-compression.md","priority":76,"reason":"GQAのattention headを同一視せずSemantic Retrieval Headsを識別して保持tokenを選び、layer別eviction errorでcache budgetを配分する。LongBench QAでKV 3%でもfull-cache性能97%以上、Needle-in-a-Haystackで0.7% storage時90% accuracyを報告し、system-aware KV retentionの比較対象として有用。"}],
- "discovery_stats":{"run_key":"2026-09-16T09:00:00+09:00","round":"specialist-semantic-kv-6","axis":"意味検索head・KV retention/compression","query_summary":"memory-system軸からKV表現・保持へ切り替え、GQA head機能を利用するsemantic retrieval guided compressionを探索した。MetaKVは直近探索済みのため反復せず、CompressKVのcanonical ID未登録を確認した。","candidate_count":2,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2609.07966"],"next_axis_hint":"新着2609 serving systems、特にheterogeneous disaggregationの引用・関連実装へ移る","empty_round_reason":null}
-}

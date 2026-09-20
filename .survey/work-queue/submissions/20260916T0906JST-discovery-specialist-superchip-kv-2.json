@@ -1,6 +1,0 @@
-{
-  "schema_version": 1,
-  "job_id": "job-b6f805c0cbcee3d4",
-  "candidates": [{"canonical_id":"arXiv:2601.20309","title":"SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips","source_url":"https://arxiv.org/abs/2601.20309","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20309-superinfer-superchip-kv-rotation.md","priority":84,"reason":"NVIDIA GH200のNVLink-C2Cで結合されたCPU-GPUメモリを前提に、SLO-aware rotary schedulerとfull-duplex KV transferを協調設計する。高負荷時のKV容量不足とhead-of-line blockingを対象にTTFT SLO達成率最大74.7%改善を報告し、PCIe offloadとは異なる統合メモリ階層の設計点として有用。"}],
-  "discovery_stats":{"run_key":"2026-09-16T09:00:00+09:00","round":"specialist-superchip-kv-2","axis":"Superchip統合CPU-GPUメモリ・KV rotation","query_summary":"GH200等のCPU-GPU高帯域結合を利用するKV offload、rotation、SLO schedulingへ探索軸を変更しrepository検索でcanonical ID未登録を確認した。","candidate_count":1,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"KV restorationをtoken/layer/GPUの多次元並列として扱う系統へ移る","empty_round_reason":null}
-}

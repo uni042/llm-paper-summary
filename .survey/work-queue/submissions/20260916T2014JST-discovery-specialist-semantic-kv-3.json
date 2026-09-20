@@ -1,6 +1,0 @@
-{
-  "schema_version": 1,
-  "operation": "submit_discovery_round",
-  "candidates": [{"canonical_id":"arXiv:2606.24467","title":"CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference","source_url":"https://arxiv.org/abs/2606.24467","paper_path":"papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-kv-compression.md","priority":83,"reason":"GQAの全headを一律に扱わずSemantic Retrieval Headsを同定し、意味的に重要なtokenを保持するとともにlayerごとのeviction errorで容量配分する。LongBench QAでKV 3%でもfull-cache性能97%以上、Needle-in-a-Haystackで0.7% KV storage時90% accuracyを報告し、head機能性を使うKV圧縮系として価値が高い。"}],
-  "discovery_stats":{"run_key":"2026-09-16T20:00:00+09:00","round":"specialist-semantic-kv-3","axis":"Semantic Retrieval Head・layer-aware KV圧縮","query_summary":"GPU内部prefetchから容量削減へ軸を変え、head semanticsとlayer-wise errorを使うKV圧縮を探索した。MetaKVは既知候補として除外し、CompressKVを未収録候補として確認した。","candidate_count":2,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2609.07966"],"next_axis_hint":"KVから離れ、MoEのexpert replication・speculative executionによる帯域削減へ移す","empty_round_reason":null}
-}

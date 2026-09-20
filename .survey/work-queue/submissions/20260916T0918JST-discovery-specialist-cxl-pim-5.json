@@ -1,5 +1,0 @@
-{
-  "schema_version":1,"job_id":"job-b6f805c0cbcee3d4",
-  "candidates":[{"canonical_id":"arXiv:2502.07578","title":"PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference","source_url":"https://arxiv.org/abs/2502.07578","paper_path":"papers/inference/02-cpu-offload/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md","priority":82,"reason":"CXL memory expansionとnear-bank processingを組み合わせ、GPUを使わずLLM推論を構成するCENT。CXL device間peer-to-peer/collectiveとmodel parallelismを含み、同程度電力のGPU比2.3x throughput、2.3x energy efficiency、5.2x tokens/dollarを報告する。CXL階層memoryとPIMの重要な設計点。"}],
-  "discovery_stats":{"run_key":"2026-09-16T09:00:00+09:00","round":"specialist-cxl-pim-5","axis":"CXL memory expansion・PIM・GPU-free inference","query_summary":"PNM軸からCXL接続PIMへ隣接展開し、GPU-free LLM inference systemの重要な過去候補をrepository canonical IDで未登録確認した。","candidate_count":2,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2607.27187"],"next_axis_hint":"新着2609のmemory-system/revision、またはMoE expert placementとCXL memoryの交差領域へ移る","empty_round_reason":null}
-}

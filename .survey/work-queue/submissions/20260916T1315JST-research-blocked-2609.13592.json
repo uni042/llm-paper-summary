@@ -1,5 +1,0 @@
-{
- "schema_version":1,"workflow_version":10,"kind":"research","job_id":"job-research-08ba7261bc105f34","claim_id":"claim-8dedafa8bb88234e4974139f","attempt_id":"attempt-8dedafa8bb88234e4974139f","worker_id":"scheduled-chat-discovery-specialist-00","status":"blocked",
- "reason":"The primary arXiv PDF for arXiv:2609.13592 was reached, but this invocation could only expose the first three pages of the 15-page PDF before the web retrieval budget was exhausted. A second direct retrieval attempt from the container failed with DNS NameResolutionError for arxiv.org. Workflow-v10 requires reading the primary source in full, so no completed five-slot record is generated from the partial text.",
- "retrieval_evidence":{"canonical_id":"arXiv:2609.13592","source_url":"https://arxiv.org/pdf/2609.13592","pdf_pages":15,"web_text_pages_observed":"0-2","container_fetch":"NameResolutionError: Failed to resolve arxiv.org","full_text_required":true,"completed_record_generated":false}
-}

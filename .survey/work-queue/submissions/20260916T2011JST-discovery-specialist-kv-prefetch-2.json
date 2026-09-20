@@ -1,6 +1,0 @@
-{
-  "schema_version": 1,
-  "operation": "submit_discovery_round",
-  "candidates": [{"canonical_id":"arXiv:2504.06319","title":"Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching","source_url":"https://arxiv.org/abs/2504.06319","paper_path":"papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md","priority":82,"reason":"KVをGPU HBMからL2へ非同期prefetchし、計算中の空き帯域とロードを重ねることでattentionのメモリ待ちを隠す実装研究。H20実機でattention kernel効率2.15倍、end-to-end throughput最大1.97倍を報告しており、容量削減ではなくメモリ階層内のデータ移動スケジューリングを扱う点が既存KV圧縮系と差別化される。"}],
-  "discovery_stats":{"run_key":"2026-09-16T20:00:00+09:00","round":"specialist-kv-prefetch-2","axis":"GPU L2・HBM間KV prefetch・帯域隠蔽","query_summary":"前roundの統合CPU/GPUメモリからGPU内部階層へ軸を変更し、KV prefetchとattention kernelのcompute-load overlapを探索した。","candidate_count":2,"duplicate_filtered_count":1,"duplicate_canonical_ids":["arXiv:2609.07966"],"next_axis_hint":"KVの保持量をhead/layer semanticsで適応制御する圧縮・retrieval-aware方式へ移す","empty_round_reason":null}
-}

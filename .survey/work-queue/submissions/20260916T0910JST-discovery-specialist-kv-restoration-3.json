@@ -1,6 +1,0 @@
-{
-  "schema_version": 1,
-  "job_id": "job-b6f805c0cbcee3d4",
-  "candidates": [{"canonical_id":"arXiv:2604.25080","title":"CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration","source_url":"https://arxiv.org/abs/2604.25080","paper_path":"papers/inference/03-kv-cache-memory/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md","priority":86,"reason":"長文LLMサービングのKV復元を再計算対I/Oの二択ではなくtoken・layer・GPUの3次元並列実行として再定式化し、batch-aware schedulerでcompute/I/Oを共同配分する。既存手法比でTTFTを10-62%削減しており、階層メモリとKV restoration schedulingの直接的な候補。"}],
-  "discovery_stats":{"run_key":"2026-09-16T09:00:00+09:00","round":"specialist-kv-restoration-3","axis":"KV cache restoration・compute/I/O多次元並列","query_summary":"KV cache復元のrecomputeと外部memory I/Oをtoken/layer/GPU軸で重ねるserving systemを探索し、canonical IDのrepository未登録を確認した。","candidate_count":1,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"retrieval-based sparse attention向けprocessing-near-memoryへ隣接展開する","empty_round_reason":null}
-}
