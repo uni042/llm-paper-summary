@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:35:34 JST**
+> 自動生成: **2026-09-20 14:36:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **1** | **0** | **0** | **2** | **2** | — |
+| Research | **24** | **9** | **3** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **24** | **2** | **1** | **0** | **2** | **2** | **5** |
+| 合計 | **24** | **10** | **4** | **0** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,14 +126,39 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 13:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-3c0144987279113ac5ae99fd.json` (job `job-research-b27d4d0f59f887b3`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-3c0144987279113ac5ae99fd.json` (`ok=false`)
+- 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **9件** / 検証済み成功: **3件** / result照合済み非成功: **6件** / 個別result未照合: **0件**
+- **成功** `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-3f4b0e4a187439dd.json`
+  - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4.json` (job `job-research-3f4b0e4a187439dd`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4.json` (`ok=false`)
+- **成功** `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
+  - job: `.survey/work-queue/jobs/job-research-abc92cd8a94f1144.json`
+  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee.json` (job `job-research-abc92cd8a94f1144`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee.json` (`ok=false`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-b4be6a1ab5725fa47fd44d34.json` (job `job-research-9d57d4c95ee33e52`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-b4be6a1ab5725fa47fd44d34.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-f50aea1a300a90e85b31bf68.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair1.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair1.json` (`ok=false`)
+- **成功** `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads
+  - job: `.survey/work-queue/jobs/job-research-4786c27e72f86caf.json`
+  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair2.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596.json` (`ok=false`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 13:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -151,9 +176,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **2件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 13:32:13 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
+  - claim: **09-20 14:35:40 JST** / heartbeat: **—** / lease expiry: **09-20 16:05:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-b27d4d0f59f887b3.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
