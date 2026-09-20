@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-f3691cd828efd3171a54ab5c",
+  "attempt_id": "attempt-c9fddc3f170c1ce1924365e6",
   "job_id": "job-research-e203c47aded67247",
   "data": {
     "problem": "標準TopKルーティングは各トークンを独立に扱い、予測難度にかかわらず必ずK個のエキスパートを割り当てる。論文の感度調査では、OLMoEでK=8から4または6へ減らした際、約60%のトークンは予測確率変化が小さい一方、約10〜15%は大きく変化し、必要計算量が均一でない。したがって固定Kは容易なトークンへ計算を過剰配分し、難しいトークンへ不足させる。既存の適応ルーティングは追加モジュール、追加ハイパーパラメータ、スクラッチからの学習を必要とするものが多く、既存の事前学習済みMoEへ軽量に導入しにくい。BatchTopKのようにバッチ全体で競争させる方式は、系列長・ドメイン・バッチサイズの変動で挙動が変わり、独立利用者の入力を同一競争へ入れる問題もある。",
@@ -25,7 +25,7 @@
     "system_design": "実装上は通常のルータースコア計算を保持し、選択演算の次元を系列へ拡張する。推論時はExpert CacheをKV Cacheと同様に読み書きし、各層の過去スコアを再計算しない。論文測定では標準TopK比で事前学習GPU時間が244.2から246.4へ約1%増、OLMoE推論スループットが141.23から139.41 tokens/sへ約1%低下、ピークメモリが18.21から18.35 GBへ約1%増に留まる。"
   },
   "reservation": {
-    "claim_id": "claim-f3691cd828efd3171a54ab5c",
+    "claim_id": "claim-c9fddc3f170c1ce1924365e6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
