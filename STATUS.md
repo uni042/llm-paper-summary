@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 02:45:07 JST**
+> 自動生成: **2026-09-21 03:02:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **200** |
 | 未claim Research job | **200** |
 | 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（2時間56分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（3時間13分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **9** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **10** | **7** | **5** | **0** | **0** | **0** | **5** |
+| 合計 | **9** | **7** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -108,11 +108,6 @@
   - result: `.survey/work-queue/results/research/attempt-83e541e2c7e7c88135f96320.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-83e541e2c7e7c88135f96320.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md`
-- **09-20 20:45:57 JST** [research] `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts
-  - job: `.survey/work-queue/jobs/job-research-92c83b7c2ec8a78f.json`
-  - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md`
 
 ### Audit
 
