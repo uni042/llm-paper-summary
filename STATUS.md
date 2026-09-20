@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 04:47:16 JST**
+> 自動生成: **2026-09-21 04:49:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **209** |
-| 未claim Research job | **209** |
+| 収録候補論文 | **214** |
+| 未claim Research job | **214** |
 | 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間59分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **209** |
+| canonical_id確認済みの一意な候補論文 | **214** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **209** |
+| 非終端Research job合計 | **214** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **2** | **5** | **2** | **2** | **0** | **0** | **10** |
-| 合計 | **6** | **11** | **6** | **2** | **0** | **0** | **10** |
+| Discovery | **3** | **5** | **3** | **1** | **0** | **0** | **10** |
+| 合計 | **7** | **11** | **7** | **1** | **0** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -98,6 +98,10 @@
   - result: `.survey/work-queue/results/20260921T0430JST-discovery-round-02-forward-mose.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-02-forward-mose.json`
   - 探索軸: forward citations of Elastic MoE for inference-time expert scaling retry
+- **09-21 04:47:10 JST** job `job-6a20cbde0c51a136` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0430JST-discovery-round-03-kv-memory.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-03-kv-memory.json`
+  - 探索軸: recent KV cache offload disaggregation remote memory LLM inference systems
 
 ### 直近タスク
 
@@ -139,7 +143,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 04:30 JST**
-- 耐久探索round: **4件** / immutable submission: **5件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **3件** / 候補: **10件**
+- 耐久探索round: **4件** / immutable submission: **5件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **2件** / 候補: **10件**
 - round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
 - 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling retry / recent KV cache offload disaggregation remote memory LLM inference systems / recent MoE expert cache offload prefetch placement LLM inference systems
 - round `round-01` / 候補 **0件**
@@ -153,7 +157,7 @@
 - round `round-03` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-03-kv-memory.json`
   - 探索軸: recent KV cache offload disaggregation remote memory LLM inference systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0430JST-discovery-round-03-kv-memory.json` (`ok=true`)
 - round `round-04` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-04-moe-systems.json`
   - 探索軸: recent MoE expert cache offload prefetch placement LLM inference systems
@@ -184,7 +188,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **209** |
+| ready | **214** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,10 +216,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **910** |
+| 成功result未照合のimmutable submission | **909** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **196** |
+| └ Discovery | **195** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job

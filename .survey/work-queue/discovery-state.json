@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T19:45:10+00:00",
+  "updated_at": "2026-09-20T19:47:10+00:00",
   "last_run_key": "2026-09-21T04:30:00+09:00",
-  "last_round": "round-02",
+  "last_round": "round-03",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,25 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T08:00:00+09:00",
-      "round": "specialist-moe-offload-5",
-      "axis": "MoE predictive prefetch・future-aware cache・graph-compatible offload",
-      "query_summary": "storage/階層memory隣接からMoE expert I/O schedulingへ展開。FlashMoE、ExactMoE、Speculating Experts等の既知候補を除外し、新着SeqMoEを評価した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2601.17063",
-        "arXiv:2608.15383",
-        "arXiv:2603.19289"
-      ],
-      "next_axis_hint": "SeqMoEの隣接としてexpert replication/load balancing、またはGPU runtime graph captureとoffload orchestrationの系統を探索する",
-      "source_submission": "work-queue/submissions/20260916T0825JST-discovery-specialist-moe-offload-5.json"
-    },
     {
       "run_key": "2026-09-16T08:00:00+09:00",
       "round": "specialist-moe-placement-6",
@@ -7789,6 +7770,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0430JST-discovery-round-02-forward-mose.json"
+    },
+    {
+      "run_key": "2026-09-21T04:30:00+09:00",
+      "round": "round-03",
+      "axis": "recent KV cache offload disaggregation remote memory LLM inference systems",
+      "query_summary": null,
+      "provider": "openalex",
+      "source_url": "https://api.openalex.org/works?search=LLM%20inference%20KV%20cache%20offload%20disaggregation%20remote%20memory&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+      "citation_direction": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0430JST-discovery-round-03-kv-memory.json"
     }
   ],
   "axes": {
@@ -14894,6 +14896,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 1,
       "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "recent KV cache offload disaggregation remote memory LLM inference systems": {
+      "last_run_key": "2026-09-21T04:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
