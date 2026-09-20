@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:25:05+00:00",
+  "updated_at": "2026-09-20T20:27:16+00:00",
   "last_run_key": "2026-09-21T05:01:46+09:00",
-  "last_round": "round-13",
+  "last_round": "round-14",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T09:00:00+09:00",
-      "round": "specialist-cxl-pim-5",
-      "axis": "CXL memory expansion・PIM・GPU-free inference",
-      "query_summary": "PNM軸からCXL接続PIMへ隣接展開し、GPU-free LLM inference systemの重要な過去候補をrepository canonical IDで未登録確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.27187"
-      ],
-      "next_axis_hint": "新着2609のmemory-system/revision、またはMoE expert placementとCXL memoryの交差領域へ移る",
-      "source_submission": "work-queue/submissions/20260916T0918JST-discovery-specialist-cxl-pim-5.json"
-    },
     {
       "run_key": "2026-09-16T09:00:00+09:00",
       "round": "specialist-semantic-kv-6",
@@ -7873,6 +7856,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0527JST-discovery-round-13-ssd.json"
+    },
+    {
+      "run_key": "2026-09-21T05:01:46+09:00",
+      "round": "round-14",
+      "axis": "OpenAlex recent LLM quantized inference runtime serving",
+      "query_summary": null,
+      "provider": "openalex",
+      "source_url": "https://api.openalex.org/works?search=LLM%20inference%20quantization%20runtime%20serving&sort=publication_date:desc&per-page=100",
+      "citation_direction": null,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0528JST-discovery-round-14-quant.json"
     }
   ],
   "axes": {
@@ -15186,6 +15190,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 5,
       "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "OpenAlex recent LLM quantized inference runtime serving": {
+      "last_run_key": "2026-09-21T05:01:46+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
