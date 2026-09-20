@@ -121,6 +121,47 @@ class CitationFirstDiscoveryPolicyTest(unittest.TestCase):
         finally:
             queue_worker.DISCOVERY_STATE = original
 
+    def test_same_direction_cannot_repeat_before_pair_is_completed(self) -> None:
+        original = queue_worker.DISCOVERY_STATE
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                queue_worker.DISCOVERY_STATE = Path(td) / "discovery-state.json"
+                run_key = "run-repeat"
+                queue_worker.DISCOVERY_STATE.write_text(
+                    json.dumps(
+                        {
+                            "history": [
+                                {
+                                    "run_key": run_key,
+                                    "citation_direction": "backward",
+                                }
+                            ]
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+                sub = {
+                    "discovery_stats": {
+                        "run_key": run_key,
+                        "round": "backward-again",
+                        "axis": "structured-reference-next-buffer",
+                    }
+                }
+                backward_result = {
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                }
+                with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+                    queue_worker._validate_citation_first_route(
+                        sub,
+                        backward_result,
+                        sub["discovery_stats"],
+                    )
+                self.assertEqual(ctx.exception.code, "citation_first_required")
+                self.assertIn("forward-citation", ctx.exception.next_action)
+        finally:
+            queue_worker.DISCOVERY_STATE = original
+
     def test_reference_pool_does_not_block_forward_citation(self) -> None:
         original = queue_worker.DISCOVERY_STATE
         try:
