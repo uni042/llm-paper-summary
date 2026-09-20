@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 116,
-      "completed": 627,
+      "ready": 115,
+      "completed": 628,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 116,
+    "ready_research_audit": 115,
     "actively_claimed": 1,
-    "claimable": 115
+    "claimable": 114
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-f4b6d40ae418a58e",
-      "type": "research",
-      "lane": null,
-      "priority": 95,
-      "canonical_id": "arXiv:2606.02091",
-      "title": "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2606.02091",
-      "paper_path": "papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-2442fe5802b5c31d",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-18c89b68d0c6c10d",
+      "type": "research",
+      "lane": null,
+      "priority": 95,
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.494",
+      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
+      "source_url": "https://aclanthology.org/2026.findings-acl.494/",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T06:14:43+00:00"
+  "generated_at": "2026-09-20T06:17:41+00:00"
 }

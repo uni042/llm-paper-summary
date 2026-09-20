@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:17:17 JST**
+> 自動生成: **2026-09-20 15:17:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **116** |
+| 収録候補論文 | **115** |
 | 未claim Research job | **114** |
-| 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-20 15:14:43 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **65** |
+| 最終検証済みResearch収録 | **09-20 15:17:41 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **116** |
+| canonical_id確認済みの一意な候補論文 | **115** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **116** |
+| 非終端Research job合計 | **115** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **33** | **6** | **6** | **0** | **2** | **0** | — |
+| Research | **34** | **7** | **7** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **33** | **7** | **7** | **0** | **2** | **0** | **5** |
+| 合計 | **34** | **8** | **8** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 15:17:41 JST** [research] `arXiv:2606.02091` — DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-f4b6d40ae418a58e.json`
+  - result: `.survey/work-queue/results/research/attempt-b269ed373464c47a4c4f738e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b269ed373464c47a4c4f738e.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md`
 - **09-20 15:14:43 JST** [research] `DOI:10.18653/v1/2025.emnlp-main.1079` — TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection
   - job: `.survey/work-queue/jobs/job-research-5cec4a19e423bce9.json`
   - result: `.survey/work-queue/results/research/attempt-7fd52d00bf1ebd2f2315994c.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
-- **09-20 14:16:31 JST** [research] `DOI:10.18653/v1/2025.emnlp-main.1306` — SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation
-  - job: `.survey/work-queue/jobs/job-research-6adaa29fadc3e53e.json`
-  - result: `.survey/work-queue/results/research/attempt-42612c6e8bec652339e69e2b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-42612c6e8bec652339e69e2b.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-swiftkv.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **7件** / 検証済み成功: **7件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -153,6 +153,11 @@
   - result: `.survey/work-queue/results/research/attempt-a81c3fda043b3840209ea896.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a81c3fda043b3840209ea896.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md`
+- **成功** `arXiv:2606.02091` — DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-f4b6d40ae418a58e.json`
+  - result: `.survey/work-queue/results/research/attempt-b269ed373464c47a4c4f738e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b269ed373464c47a4c4f738e.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md`
 - **成功** `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling
   - job: `.survey/work-queue/jobs/job-research-e0a5ea7f3cdd2886.json`
   - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
@@ -179,10 +184,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.02091` — DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:15:22 JST** / heartbeat: **—** / lease expiry: **09-20 16:45:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f4b6d40ae418a58e.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -205,7 +207,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **116** |
+| ready | **115** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +227,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **816** |
+| inference/training/survey配下の論文Markdown実体 | **817** |
 
 ### immutable submissionの未照合
 
