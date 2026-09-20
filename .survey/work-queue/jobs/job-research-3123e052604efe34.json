@@ -10,7 +10,7 @@
   "identifiers": [],
   "title": "CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration",
   "source_url": "https://www.semanticscholar.org/paper/1a98d6aef6ff14e0bec0410e1f9cc187b8e8e6bc",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md",
   "selection_reason": "attention headのsequential consistencyに応じcritical tokenのみ保持するhybrid KV cache。memory最大2.72倍削減、single decode 2.18倍、batch throughput 3.96倍。",
   "status": "ready",
   "workflow_version": 10,
