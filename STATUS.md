@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:17:52 JST**
+> 自動生成: **2026-09-20 20:18:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **180** |
 | 未claim Research job | **179** |
 | 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 20:14:15 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-20 20:14:15 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -157,7 +157,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2511.02237` — Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 20:14:45 JST** / heartbeat: **—** / lease expiry: **09-20 21:44:45 JST**
+  - claim: **09-20 20:18:01 JST** / heartbeat: **—** / lease expiry: **09-20 21:48:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-67ddaa9ed58fd85b.json`
 
 #### Audit
