@@ -1,0 +1,762 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0529JST-worker00-openalex-cpu-20",
+  "collector_id": "worker00-openalex-cpu-simd",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent CPU SIMD LLM inference runtime",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20CPU%20inference%20SIMD%20AVX%20runtime&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "501e54aefca26b0ba9d1142474ff5511975e3863",
+  "raw_search_result_count": 81,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 2,
+  "intra_batch_alias_duplicate_filtered_count": 2,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:26:22.397187+00:00",
+  "results": [
+    {
+      "title": "Rethinking Sparse Formats for RISC-V: A Hierarchical Approach to High-Performance SpMV",
+      "source_url": "https://arxiv.org/abs/2609.11352",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11352",
+      "arxiv_id": "2609.11352",
+      "authors": [
+        "Anna Pirova",
+        "Anastasia Vodeneeva",
+        "Konstantin Kovalev",
+        "Alexander Ustinov",
+        "Maksim Zagriadskov",
+        "Daniil Litvyakov",
+        "Arthur Kulik",
+        "Evgeny Kozinov",
+        "Valentin Volokitin",
+        "Iosif Meyerov"
+      ]
+    },
+    {
+      "title": "The Integer Alibi: Localizing Cross-Kernel Divergence in INT8-Quantized LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.13756",
+      "year": 2026,
+      "published": "2026-08-13",
+      "canonical_id": "arXiv:2608.13756",
+      "arxiv_id": "2608.13756",
+      "authors": [
+        "Teng-Ruei Chen"
+      ]
+    },
+    {
+      "title": "RVANNS: Mixed-Precision Indexing and Locality-Aware Graph Traversal on RISC-V",
+      "source_url": "https://arxiv.org/abs/2608.09077",
+      "year": 2026,
+      "published": "2026-08-10",
+      "canonical_id": "arXiv:2608.09077",
+      "arxiv_id": "2608.09077",
+      "authors": [
+        "Chengying Huan",
+        "Yudong Liu",
+        "Jianguo Wang",
+        "Lizheng Chen",
+        "Renling Yin",
+        "Weijia Chen",
+        "Ji Qi",
+        "Jiageng Yu",
+        "Junjie Xu",
+        "Jie M. Zhang",
+        "Chen Tian",
+        "Yanjun Wu"
+      ]
+    },
+    {
+      "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2608.08910",
+      "year": 2026,
+      "published": "2026-08-09",
+      "canonical_id": "arXiv:2608.08910",
+      "arxiv_id": "2608.08910",
+      "authors": [
+        "Matteo Grella"
+      ]
+    },
+    {
+      "title": "InSituANN: Revisiting IVF for PCIe-Efficient Billion-Scale Vector Search",
+      "source_url": "https://arxiv.org/abs/2608.08751",
+      "year": 2026,
+      "published": "2026-08-09",
+      "canonical_id": "arXiv:2608.08751",
+      "arxiv_id": "2608.08751",
+      "authors": [
+        "Yuemeng Xu",
+        "Zongxi Liu",
+        "Junyu Long",
+        "Yiming Huang",
+        "Jiarui Guo",
+        "Yangyujia Wang",
+        "Jiachen Xu",
+        "Dongyuan Yu",
+        "Zongwei Lv",
+        "Tong Yang"
+      ]
+    },
+    {
+      "title": "faster-enhancer.c: A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs",
+      "source_url": "https://arxiv.org/abs/2607.25350",
+      "year": 2026,
+      "published": "2026-07-28",
+      "canonical_id": "arXiv:2607.25350",
+      "arxiv_id": "2607.25350",
+      "authors": [
+        "Gyeongmin Kim"
+      ]
+    },
+    {
+      "title": "INT8 Quantization Makes ARM Edge Inference Dispatch-Invariant",
+      "source_url": "https://arxiv.org/abs/2607.23227",
+      "year": 2026,
+      "published": "2026-07-25",
+      "canonical_id": "arXiv:2607.23227",
+      "arxiv_id": "2607.23227",
+      "authors": [
+        "Sebastian A. Cruz Romero",
+        "Shenied E. Maldonado Guerra"
+      ]
+    },
+    {
+      "title": "TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization",
+      "source_url": "https://arxiv.org/abs/2607.16973",
+      "year": 2026,
+      "published": "2026-07-18",
+      "canonical_id": "arXiv:2607.16973",
+      "arxiv_id": "2607.16973",
+      "authors": [
+        "Navnit Shukla",
+        "Kamal Pandey",
+        "Omsankar Tiwari"
+      ]
+    },
+    {
+      "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM",
+      "source_url": "https://arxiv.org/abs/2607.14622",
+      "year": 2026,
+      "published": "2026-07-16",
+      "canonical_id": "arXiv:2607.14622",
+      "arxiv_id": "2607.14622",
+      "authors": [
+        "Hyunwoo Oh",
+        "Suyeon Jang",
+        "Hanning Chen",
+        "Sanggeon Yun",
+        "Ryozo Masukawa",
+        "Mohsen Imani"
+      ]
+    },
+    {
+      "title": "A Modern Multimodal Assistant on a 6 GB 2011 GPU: Stage-Validated, All-GPU CUDA Inference for Fermi",
+      "source_url": "https://arxiv.org/abs/2607.14568",
+      "year": 2026,
+      "published": "2026-07-16",
+      "canonical_id": "arXiv:2607.14568",
+      "arxiv_id": "2607.14568",
+      "authors": [
+        "A. C. Opus",
+        "J. Q. Lu"
+      ]
+    },
+    {
+      "title": "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving",
+      "source_url": "https://doi.org/10.15607/rss.2026.xxii.179",
+      "year": 2026,
+      "published": "2026-07-13",
+      "canonical_id": "DOI:10.15607/rss.2026.xxii.179",
+      "doi": "10.15607/rss.2026.xxii.179",
+      "authors": [
+        "Jin Xuanjin",
+        "Yanxin Dong",
+        "Bin Sun",
+        "Huan Xu",
+        "Zhihui Hao",
+        "Xianpeng Lang",
+        "Panpan Cai"
+      ]
+    },
+    {
+      "title": "Elastic Gang: Per-Token Membership Change for a Hard-Barriered LLM Inference Gang Co-Scheduled with OS Processes",
+      "source_url": "https://arxiv.org/abs/2607.04668",
+      "year": 2026,
+      "published": "2026-07-06",
+      "canonical_id": "arXiv:2607.04668",
+      "arxiv_id": "2607.04668",
+      "authors": [
+        "Daeyeon Son"
+      ]
+    },
+    {
+      "title": "Current Status, Challenges, and Prospects for Machine Vision Empowered by Edge Intelligence",
+      "source_url": "https://doi.org/10.1016/j.eng.2026.07.017",
+      "year": 2026,
+      "published": "2026-07-01",
+      "canonical_id": "DOI:10.1016/j.eng.2026.07.017",
+      "doi": "10.1016/j.eng.2026.07.017",
+      "authors": [
+        "Bingrui Zhao",
+        "Yaonan Wang",
+        "Hui Zhang",
+        "Hai Wang",
+        "Kaiwen Tang",
+        "Xiangdong Liao",
+        "Yurong Chen",
+        "Xuesan Su",
+        "Ating Yin"
+      ]
+    },
+    {
+      "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+      "source_url": "https://arxiv.org/abs/2608.20397",
+      "year": 2026,
+      "published": "2026-07-01",
+      "canonical_id": "arXiv:2608.20397",
+      "arxiv_id": "2608.20397",
+      "authors": [
+        "Mustafa Arslan"
+      ]
+    },
+    {
+      "title": "The RISC-V VecR extension: Adding internal registers to RVV",
+      "source_url": "https://doi.org/10.1145/3774895.3815548",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "DOI:10.1145/3774895.3815548",
+      "doi": "10.1145/3774895.3815548",
+      "authors": [
+        "Mariusz Szczepaniak",
+        "Syed Waqar Nabi",
+        "Νικέλα Παπαδοπούλου"
+      ]
+    },
+    {
+      "title": "MonaVec: A Training-Free Embedded Vector Search Kernel for Edge and Offline AI Systems",
+      "source_url": "https://arxiv.org/abs/2606.19458",
+      "year": 2026,
+      "published": "2026-06-17",
+      "canonical_id": "arXiv:2606.19458",
+      "arxiv_id": "2606.19458",
+      "authors": [
+        "Oğuzhan Yenen"
+      ]
+    },
+    {
+      "title": "Mojo: A Promising Tool for Scalable Financial AI Efficiency",
+      "source_url": "https://arxiv.org/abs/2606.16059",
+      "year": 2026,
+      "published": "2026-06-14",
+      "canonical_id": "arXiv:2606.16059",
+      "arxiv_id": "2606.16059",
+      "authors": [
+        "Henry Han"
+      ]
+    },
+    {
+      "title": "Signed Symmetric Quantization for Few-Bit Integers",
+      "source_url": "https://arxiv.org/abs/2607.08779",
+      "year": 2026,
+      "published": "2026-06-12",
+      "canonical_id": "arXiv:2607.08779",
+      "arxiv_id": "2607.08779",
+      "authors": [
+        "Ian Colbert",
+        "Eashan Dash",
+        "Pablo Monteagudo-Lago",
+        "Juan Amboage",
+        "Srinidhi N",
+        "Giuseppe Franco",
+        "Nicholas J. Fraser",
+        "Arun Ramachandran"
+      ]
+    },
+    {
+      "title": "Toward Intelligent Prefetching: A Survey on Complex Memory Access Prediction Techniques",
+      "source_url": "https://arxiv.org/abs/2606.09955",
+      "year": 2026,
+      "published": "2026-06-08",
+      "canonical_id": "arXiv:2606.09955",
+      "arxiv_id": "2606.09955",
+      "authors": [
+        "Sheel Sindhu Manohar"
+      ]
+    },
+    {
+      "title": "Compile Once, Differentiate Everywhere: A Differentiable Meta-Circular Interpreter",
+      "source_url": "https://arxiv.org/abs/2606.09930",
+      "year": 2026,
+      "published": "2026-06-07",
+      "canonical_id": "arXiv:2606.09930",
+      "arxiv_id": "2606.09930",
+      "authors": [
+        "Luke Sheneman"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.11352",
+      "identity_tokens": [
+        "id:arXiv:2609.11352",
+        "title:rethinking sparse formats for riscv a hierarchical approach to highperformance spmv",
+        "url:https://arxiv.org/abs/2609.11352"
+      ],
+      "record": {
+        "title": "Rethinking Sparse Formats for RISC-V: A Hierarchical Approach to High-Performance SpMV",
+        "source_url": "https://arxiv.org/abs/2609.11352",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11352",
+        "arxiv_id": "2609.11352",
+        "authors": [
+          "Anna Pirova",
+          "Anastasia Vodeneeva",
+          "Konstantin Kovalev",
+          "Alexander Ustinov",
+          "Maksim Zagriadskov",
+          "Daniil Litvyakov",
+          "Arthur Kulik",
+          "Evgeny Kozinov",
+          "Valentin Volokitin",
+          "Iosif Meyerov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13756",
+      "identity_tokens": [
+        "id:arXiv:2608.13756",
+        "title:the integer alibi localizing crosskernel divergence in int8quantized llm inference",
+        "url:https://arxiv.org/abs/2608.13756"
+      ],
+      "record": {
+        "title": "The Integer Alibi: Localizing Cross-Kernel Divergence in INT8-Quantized LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.13756",
+        "year": 2026,
+        "published": "2026-08-13",
+        "canonical_id": "arXiv:2608.13756",
+        "arxiv_id": "2608.13756",
+        "authors": [
+          "Teng-Ruei Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09077",
+      "identity_tokens": [
+        "id:arXiv:2608.09077",
+        "title:rvanns mixedprecision indexing and localityaware graph traversal on riscv",
+        "url:https://arxiv.org/abs/2608.09077"
+      ],
+      "record": {
+        "title": "RVANNS: Mixed-Precision Indexing and Locality-Aware Graph Traversal on RISC-V",
+        "source_url": "https://arxiv.org/abs/2608.09077",
+        "year": 2026,
+        "published": "2026-08-10",
+        "canonical_id": "arXiv:2608.09077",
+        "arxiv_id": "2608.09077",
+        "authors": [
+          "Chengying Huan",
+          "Yudong Liu",
+          "Jianguo Wang",
+          "Lizheng Chen",
+          "Renling Yin",
+          "Weijia Chen",
+          "Ji Qi",
+          "Jiageng Yu",
+          "Junjie Xu",
+          "Jie M. Zhang",
+          "Chen Tian",
+          "Yanjun Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08910",
+      "identity_tokens": [
+        "id:arXiv:2608.08910",
+        "title:tied tritplanes constraining ptqtp to a uniform ninelevel quantizer with a persistent folded format for diskstreamed mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2608.08910"
+      ],
+      "record": {
+        "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2608.08910",
+        "year": 2026,
+        "published": "2026-08-09",
+        "canonical_id": "arXiv:2608.08910",
+        "arxiv_id": "2608.08910",
+        "authors": [
+          "Matteo Grella"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08751",
+      "identity_tokens": [
+        "id:arXiv:2608.08751",
+        "title:insituann revisiting ivf for pcieefficient billionscale vector search",
+        "url:https://arxiv.org/abs/2608.08751"
+      ],
+      "record": {
+        "title": "InSituANN: Revisiting IVF for PCIe-Efficient Billion-Scale Vector Search",
+        "source_url": "https://arxiv.org/abs/2608.08751",
+        "year": 2026,
+        "published": "2026-08-09",
+        "canonical_id": "arXiv:2608.08751",
+        "arxiv_id": "2608.08751",
+        "authors": [
+          "Yuemeng Xu",
+          "Zongxi Liu",
+          "Junyu Long",
+          "Yiming Huang",
+          "Jiarui Guo",
+          "Yangyujia Wang",
+          "Jiachen Xu",
+          "Dongyuan Yu",
+          "Zongwei Lv",
+          "Tong Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25350",
+      "identity_tokens": [
+        "id:arXiv:2607.25350",
+        "title:fasterenhancerc a dependencyfree int8 runtime for streaming speech enhancement on commodity cpus",
+        "url:https://arxiv.org/abs/2607.25350"
+      ],
+      "record": {
+        "title": "faster-enhancer.c: A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs",
+        "source_url": "https://arxiv.org/abs/2607.25350",
+        "year": 2026,
+        "published": "2026-07-28",
+        "canonical_id": "arXiv:2607.25350",
+        "arxiv_id": "2607.25350",
+        "authors": [
+          "Gyeongmin Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23227",
+      "identity_tokens": [
+        "id:arXiv:2607.23227",
+        "title:int8 quantization makes arm edge inference dispatchinvariant",
+        "url:https://arxiv.org/abs/2607.23227"
+      ],
+      "record": {
+        "title": "INT8 Quantization Makes ARM Edge Inference Dispatch-Invariant",
+        "source_url": "https://arxiv.org/abs/2607.23227",
+        "year": 2026,
+        "published": "2026-07-25",
+        "canonical_id": "arXiv:2607.23227",
+        "arxiv_id": "2607.23227",
+        "authors": [
+          "Sebastian A. Cruz Romero",
+          "Shenied E. Maldonado Guerra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16973",
+      "identity_tokens": [
+        "id:arXiv:2607.16973",
+        "title:turbovec a case study in costefficient private retrieval for enterprise rag via codebookoblivious quantization",
+        "url:https://arxiv.org/abs/2607.16973"
+      ],
+      "record": {
+        "title": "TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization",
+        "source_url": "https://arxiv.org/abs/2607.16973",
+        "year": 2026,
+        "published": "2026-07-18",
+        "canonical_id": "arXiv:2607.16973",
+        "arxiv_id": "2607.16973",
+        "authors": [
+          "Navnit Shukla",
+          "Kamal Pandey",
+          "Omsankar Tiwari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14622",
+      "identity_tokens": [
+        "id:arXiv:2607.14622",
+        "title:exagemm exploration framework for cpudriven ml inference via associative inregister computing for lowbit gemm",
+        "url:https://arxiv.org/abs/2607.14622"
+      ],
+      "record": {
+        "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM",
+        "source_url": "https://arxiv.org/abs/2607.14622",
+        "year": 2026,
+        "published": "2026-07-16",
+        "canonical_id": "arXiv:2607.14622",
+        "arxiv_id": "2607.14622",
+        "authors": [
+          "Hyunwoo Oh",
+          "Suyeon Jang",
+          "Hanning Chen",
+          "Sanggeon Yun",
+          "Ryozo Masukawa",
+          "Mohsen Imani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14568",
+      "identity_tokens": [
+        "id:arXiv:2607.14568",
+        "title:a modern multimodal assistant on a 6 gb 2011 gpu stagevalidated allgpu cuda inference for fermi",
+        "url:https://arxiv.org/abs/2607.14568"
+      ],
+      "record": {
+        "title": "A Modern Multimodal Assistant on a 6 GB 2011 GPU: Stage-Validated, All-GPU CUDA Inference for Fermi",
+        "source_url": "https://arxiv.org/abs/2607.14568",
+        "year": 2026,
+        "published": "2026-07-16",
+        "canonical_id": "arXiv:2607.14568",
+        "arxiv_id": "2607.14568",
+        "authors": [
+          "A. C. Opus",
+          "J. Q. Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.15607/rss.2026.xxii.179",
+      "identity_tokens": [
+        "id:DOI:10.15607/rss.2026.xxii.179",
+        "title:vecqmdp vectorized pomdp planning on cpus for realtime autonomous driving",
+        "url:https://doi.org/10.15607/rss.2026.xxii.179"
+      ],
+      "record": {
+        "title": "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving",
+        "source_url": "https://doi.org/10.15607/rss.2026.xxii.179",
+        "year": 2026,
+        "published": "2026-07-13",
+        "canonical_id": "DOI:10.15607/rss.2026.xxii.179",
+        "doi": "10.15607/rss.2026.xxii.179",
+        "authors": [
+          "Jin Xuanjin",
+          "Yanxin Dong",
+          "Bin Sun",
+          "Huan Xu",
+          "Zhihui Hao",
+          "Xianpeng Lang",
+          "Panpan Cai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04668",
+      "identity_tokens": [
+        "id:arXiv:2607.04668",
+        "title:elastic gang pertoken membership change for a hardbarriered llm inference gang coscheduled with os processes",
+        "url:https://arxiv.org/abs/2607.04668"
+      ],
+      "record": {
+        "title": "Elastic Gang: Per-Token Membership Change for a Hard-Barriered LLM Inference Gang Co-Scheduled with OS Processes",
+        "source_url": "https://arxiv.org/abs/2607.04668",
+        "year": 2026,
+        "published": "2026-07-06",
+        "canonical_id": "arXiv:2607.04668",
+        "arxiv_id": "2607.04668",
+        "authors": [
+          "Daeyeon Son"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.eng.2026.07.017",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.eng.2026.07.017",
+        "title:current status challenges and prospects for machine vision empowered by edge intelligence",
+        "url:https://doi.org/10.1016/j.eng.2026.07.017"
+      ],
+      "record": {
+        "title": "Current Status, Challenges, and Prospects for Machine Vision Empowered by Edge Intelligence",
+        "source_url": "https://doi.org/10.1016/j.eng.2026.07.017",
+        "year": 2026,
+        "published": "2026-07-01",
+        "canonical_id": "DOI:10.1016/j.eng.2026.07.017",
+        "doi": "10.1016/j.eng.2026.07.017",
+        "authors": [
+          "Bingrui Zhao",
+          "Yaonan Wang",
+          "Hui Zhang",
+          "Hai Wang",
+          "Kaiwen Tang",
+          "Xiangdong Liao",
+          "Yurong Chen",
+          "Xuesan Su",
+          "Ating Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20397",
+      "identity_tokens": [
+        "id:arXiv:2608.20397",
+        "title:nexus depthadaptive kvcache splicing and retrievaldecoupled tool routing for agentic llms on unified memory",
+        "url:https://arxiv.org/abs/2608.20397"
+      ],
+      "record": {
+        "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+        "source_url": "https://arxiv.org/abs/2608.20397",
+        "year": 2026,
+        "published": "2026-07-01",
+        "canonical_id": "arXiv:2608.20397",
+        "arxiv_id": "2608.20397",
+        "authors": [
+          "Mustafa Arslan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774895.3815548",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774895.3815548",
+        "title:the riscv vecr extension adding internal registers to rvv",
+        "url:https://doi.org/10.1145/3774895.3815548"
+      ],
+      "record": {
+        "title": "The RISC-V VecR extension: Adding internal registers to RVV",
+        "source_url": "https://doi.org/10.1145/3774895.3815548",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "DOI:10.1145/3774895.3815548",
+        "doi": "10.1145/3774895.3815548",
+        "authors": [
+          "Mariusz Szczepaniak",
+          "Syed Waqar Nabi",
+          "Νικέλα Παπαδοπούλου"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.19458",
+      "identity_tokens": [
+        "id:arXiv:2606.19458",
+        "title:monavec a trainingfree embedded vector search kernel for edge and offline ai systems",
+        "url:https://arxiv.org/abs/2606.19458"
+      ],
+      "record": {
+        "title": "MonaVec: A Training-Free Embedded Vector Search Kernel for Edge and Offline AI Systems",
+        "source_url": "https://arxiv.org/abs/2606.19458",
+        "year": 2026,
+        "published": "2026-06-17",
+        "canonical_id": "arXiv:2606.19458",
+        "arxiv_id": "2606.19458",
+        "authors": [
+          "Oğuzhan Yenen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.16059",
+      "identity_tokens": [
+        "id:arXiv:2606.16059",
+        "title:mojo a promising tool for scalable financial ai efficiency",
+        "url:https://arxiv.org/abs/2606.16059"
+      ],
+      "record": {
+        "title": "Mojo: A Promising Tool for Scalable Financial AI Efficiency",
+        "source_url": "https://arxiv.org/abs/2606.16059",
+        "year": 2026,
+        "published": "2026-06-14",
+        "canonical_id": "arXiv:2606.16059",
+        "arxiv_id": "2606.16059",
+        "authors": [
+          "Henry Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08779",
+      "identity_tokens": [
+        "id:arXiv:2607.08779",
+        "title:signed symmetric quantization for fewbit integers",
+        "url:https://arxiv.org/abs/2607.08779"
+      ],
+      "record": {
+        "title": "Signed Symmetric Quantization for Few-Bit Integers",
+        "source_url": "https://arxiv.org/abs/2607.08779",
+        "year": 2026,
+        "published": "2026-06-12",
+        "canonical_id": "arXiv:2607.08779",
+        "arxiv_id": "2607.08779",
+        "authors": [
+          "Ian Colbert",
+          "Eashan Dash",
+          "Pablo Monteagudo-Lago",
+          "Juan Amboage",
+          "Srinidhi N",
+          "Giuseppe Franco",
+          "Nicholas J. Fraser",
+          "Arun Ramachandran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09955",
+      "identity_tokens": [
+        "id:arXiv:2606.09955",
+        "title:toward intelligent prefetching a survey on complex memory access prediction techniques",
+        "url:https://arxiv.org/abs/2606.09955"
+      ],
+      "record": {
+        "title": "Toward Intelligent Prefetching: A Survey on Complex Memory Access Prediction Techniques",
+        "source_url": "https://arxiv.org/abs/2606.09955",
+        "year": 2026,
+        "published": "2026-06-08",
+        "canonical_id": "arXiv:2606.09955",
+        "arxiv_id": "2606.09955",
+        "authors": [
+          "Sheel Sindhu Manohar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09930",
+      "identity_tokens": [
+        "id:arXiv:2606.09930",
+        "title:compile once differentiate everywhere a differentiable metacircular interpreter",
+        "url:https://arxiv.org/abs/2606.09930"
+      ],
+      "record": {
+        "title": "Compile Once, Differentiate Everywhere: A Differentiable Meta-Circular Interpreter",
+        "source_url": "https://arxiv.org/abs/2606.09930",
+        "year": 2026,
+        "published": "2026-06-07",
+        "canonical_id": "arXiv:2606.09930",
+        "arxiv_id": "2606.09930",
+        "authors": [
+          "Luke Sheneman"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:95c3097878974b21a68975e884a204525a3cf485e8bade36387c90163cbe9ebf",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
