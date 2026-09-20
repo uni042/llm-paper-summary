@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:38:18 JST**
+> 自動生成: **2026-09-20 12:38:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **75** |
+| 収録候補論文 | **74** |
 | 未claim Research job | **74** |
-| 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 12:17:21 JST（20分前）** |
+| 直近24hの検証済みResearch収録 | **46** |
+| 最終検証済みResearch収録 | **09-20 12:38:38 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **75** |
+| canonical_id確認済みの一意な候補論文 | **74** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **75** |
+| 非終端Research job合計 | **74** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **4** | **0** | **1** | **1** | **0** | — |
+| Research | **18** | **4** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **17** | **5** | **1** | **1** | **1** | **0** | **5** |
+| 合計 | **18** | **5** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:38:38 JST** [research] `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads
+  - job: `.survey/work-queue/jobs/job-research-4786c27e72f86caf.json`
+  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair2.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md`
 - **09-20 12:17:21 JST** [research] `arXiv:2109.10465` — Scalable and Efficient MoE Training for Multitask Multilingual Models
   - job: `.survey/work-queue/jobs/job-research-b2016b76225eff0c.json`
   - result: `.survey/work-queue/results/research/attempt-715ca0ac1e2c0533b0313a9c.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-4aedf8f4b7b74e0c27817979.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4aedf8f4b7b74e0c27817979.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md`
-- **09-20 09:51:20 JST** [research] `arXiv:2408.00741` — DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency
-  - job: `.survey/work-queue/jobs/job-research-872c3c76cc1c3eff.json`
-  - result: `.survey/work-queue/results/research/attempt-a3583b512bca09151ba946d2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a3583b512bca09151ba946d2.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md`
 
 ### Audit
 
@@ -112,12 +112,16 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **1件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-f50aea1a300a90e85b31bf68.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair1.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair1.json` (`ok=false`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair2.json` (job `job-research-4786c27e72f86caf`)
+- **成功** `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads
+  - job: `.survey/work-queue/jobs/job-research-4786c27e72f86caf.json`
+  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair2.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596.json` (`ok=false`)
 
@@ -141,10 +145,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:34:12 JST** / heartbeat: **—** / lease expiry: **09-20 14:04:12 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4786c27e72f86caf.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -164,7 +166,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **75** |
+| ready | **74** |
 
 ### 候補の重複・識別情報欠損
 
@@ -184,7 +186,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **797** |
+| inference/training/survey配下の論文Markdown実体 | **798** |
 
 ### immutable submissionの未照合
 
@@ -192,8 +194,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **690** |
-| └ Research | **529** |
+| 成功result未照合のimmutable submission | **689** |
+| └ Research | **528** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

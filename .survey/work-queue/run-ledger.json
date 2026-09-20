@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:33:50.051651+00:00",
+  "updated_at": "2026-09-20T03:38:43.879687+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:33:50.051651+00:00",
+      "last_recorded_at": "2026-09-20T03:38:43.879687+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 333,
+        "research_completed": 334,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 46,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35435694330:1",
-          "recorded_at": "2026-09-19T09:48:31.505702+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35435694330",
-            "run_attempt": "1",
-            "source_sha": "15f53a966af3574a181938187d829f1528478666"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35436283245:1",
           "recorded_at": "2026-09-19T10:05:49.502615+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35487078924:1",
+          "recorded_at": "2026-09-20T03:38:43.879687+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35487078924",
+            "run_attempt": "1",
+            "source_sha": "14ea88f2bb8f14c61462147eb3ecd8e9d7fef8b8"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -24177,6 +24177,14 @@
           "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-4786c27e72f86caf",
+          "type": "research",
+          "canonical_id": "arXiv:2401.11181",
+          "title": "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26968,7 +26976,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 788,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
