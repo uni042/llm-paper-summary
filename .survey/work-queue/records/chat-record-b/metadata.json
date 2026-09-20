@@ -1,98 +1,11 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-f2e51bafaabacfadeaecc0ee",
-  "job_id": "job-research-4892de26a5d749a2",
-  "data": {
-    "canonical_id": "arXiv:2408.10284",
-    "arxiv_id": "2408.10284",
-    "doi": "10.1145/3676536.3676741",
-    "title": "AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference",
-    "authors": [
-      "Shuzhang Zhong",
-      "Ling Liang",
-      "Yuan Wang",
-      "Runsheng Wang",
-      "Ru Huang",
-      "Meng Li"
-    ],
-    "summary": "AdapMoEは、メモリ容量が限られる端末上で混合エキスパート（Mixture-of-Experts; MoE）モデルを動かす際、必要なエキスパート重みをCPU側からGPUへ都度転送する待ち時間を主要ボトルネックとして扱う。感度に応じて各トークン・各層の活性エキスパート数を1または2へ変えるゲーティング、後続層のゲートを再利用する先読み、層ごとの需要に応じた動的計画法によるキャッシュ配分、タイル単位の転送・計算重畳を統合する。Mixtral 8x7B/8x22Bで、精度を維持しつつ平均活性エキスパート数を約25%削減し、Mixtral-Offloading比で平均1.35倍の高速化を報告する。",
-    "source": "https://arxiv.org/abs/2408.10284",
-    "sources": [
-      "https://arxiv.org/abs/2408.10284",
-      "https://arxiv.org/pdf/2408.10284",
-      "https://doi.org/10.1145/3676536.3676741"
-    ],
-    "code": "https://github.com/PKU-SEC-Lab/AdapMoE",
-    "publication": "ICCAD 2024",
-    "publication_type": "conference",
-    "published": "2024-08-19",
-    "publication_status": "published",
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "topics": [
-      "MoE推論",
-      "エキスパートオフロード",
-      "適応ゲーティング",
-      "先読み",
-      "キャッシュ管理"
-    ],
-    "implementation": "著者実装が公開されており、CUDAストリームを用いた転送・計算の重畳とエキスパートのタイル化を含む。",
-    "hardware_evaluation": "Mixtral-8x7BをRTX 4090とA6000、Mixtral-8x22BをA6000で評価し、GPU上に保持するエキスパート総数を変えて比較している。",
-    "quality_effect": "感度ベースの適応ゲーティングでは保守的な単一エキスパート選択率24%を用い、MMLUとARC-Challengeで元の固定top-2相当の精度を維持する設定を選んでいる。",
-    "last_checked": "2026-09-20",
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv PDF reference section",
-    "references_total": 20,
-    "references": [
-      {
-        "canonical_id": "arXiv:2312.17238",
-        "arxiv_id": "2312.17238"
-      },
-      {
-        "canonical_id": "arXiv:2308.12066",
-        "arxiv_id": "2308.12066"
-      },
-      {
-        "canonical_id": "arXiv:2401.04088",
-        "arxiv_id": "2401.04088"
-      },
-      {
-        "canonical_id": "arXiv:2310.07188",
-        "arxiv_id": "2310.07188"
-      },
-      {
-        "canonical_id": "arXiv:2401.14361",
-        "arxiv_id": "2401.14361"
-      },
-      {
-        "canonical_id": "arXiv:2308.14352",
-        "arxiv_id": "2308.14352"
-      },
-      {
-        "canonical_id": "arXiv:2306.07629",
-        "arxiv_id": "2306.07629"
-      },
-      {
-        "canonical_id": "arXiv:2207.04672",
-        "arxiv_id": "2207.04672"
-      },
-      {
-        "canonical_id": "arXiv:1701.06538",
-        "arxiv_id": "1701.06538"
-      },
-      {
-        "canonical_id": "arXiv:2009.03300",
-        "arxiv_id": "2009.03300"
-      }
-    ]
-  },
-  "reservation": {
-    "claim_id": "claim-f2e51bafaabacfadeaecc0ee",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f2e51bafaabacfadeaecc0ee","job_id":"job-research-4892de26a5d749a2",
+ "data":{
+  "canonical_id":"arXiv:2408.10284","arxiv_id":"2408.10284","doi":"10.1145/3676536.3676741","title":"AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference","authors":["Shuzhang Zhong","Ling Liang","Yuan Wang","Runsheng Wang","Ru Huang","Meng Li"],
+  "list_summary":"層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。",
+  "summary":"AdapMoEは、メモリ容量が限られる端末上で混合エキスパート（Mixture-of-Experts; MoE）モデルを動かす際、必要なエキスパート重みをCPU側からGPUへ都度転送する待ち時間を主要ボトルネックとして扱う。感度に応じて各トークン・各層の活性エキスパート数を1または2へ変えるゲーティング、後続層のゲートを再利用する先読み、層ごとの需要に応じた動的計画法によるキャッシュ配分、タイル単位の転送・計算重畳を統合する。Mixtral 8x7B/8x22Bで、精度を維持しつつ平均活性エキスパート数を約25%削減し、Mixtral-Offloading比で平均1.35倍の高速化を報告する。",
+  "source":"https://arxiv.org/abs/2408.10284","sources":["https://arxiv.org/abs/2408.10284","https://arxiv.org/pdf/2408.10284","https://doi.org/10.1145/3676536.3676741"],"code":"https://github.com/PKU-SEC-Lab/AdapMoE","publication":"ICCAD 2024","publication_type":"conference","published":"2024-08-19","publication_status":"published","arxiv_categories":{"primary":"cs.LG","cross_list":[]},"topics":["MoE推論","エキスパートオフロード","適応ゲーティング","先読み","キャッシュ管理"],"implementation":"著者実装が公開されており、CUDAストリームを用いた転送・計算の重畳とエキスパートのタイル化を含む。","hardware_evaluation":"Mixtral-8x7BをRTX 4090とA6000、Mixtral-8x22BをA6000で評価し、GPU上に保持するエキスパート総数を変えて比較している。","quality_effect":"感度ベースの適応ゲーティングでは保守的な単一エキスパート選択率24%を用い、MMLUとARC-Challengeで元の固定top-2相当の精度を維持する設定を選んでいる。","last_checked":"2026-09-20","references_checked_at":"2026-09-20","references_source":"arXiv PDF reference section","references_total":20,
+  "references":[{"canonical_id":"arXiv:2312.17238","arxiv_id":"2312.17238"},{"canonical_id":"arXiv:2308.12066","arxiv_id":"2308.12066"},{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},{"canonical_id":"arXiv:2310.07188","arxiv_id":"2310.07188"},{"canonical_id":"arXiv:2401.14361","arxiv_id":"2401.14361"},{"canonical_id":"arXiv:2308.14352","arxiv_id":"2308.14352"},{"canonical_id":"arXiv:2306.07629","arxiv_id":"2306.07629"},{"canonical_id":"arXiv:2207.04672","arxiv_id":"2207.04672"},{"canonical_id":"arXiv:1701.06538","arxiv_id":"1701.06538"},{"canonical_id":"arXiv:2009.03300","arxiv_id":"2009.03300"}]
+ },
+ "reservation":{"claim_id":"claim-f2e51bafaabacfadeaecc0ee","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
