@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-74ea5f7b171197036f26bc3e",
+  "attempt_id": "attempt-79d8395b6b34cb41081cfb7e",
   "job_id": "job-research-b0f3ab31cdfd9a01",
   "data": {
     "limitations": "最大評価規模は2.429B総パラメータで、フロンティア級MoEへの拡張、推論時の実測遅延・スループット、専門家並列通信量は直接評価していない。閾値は分布が安定するまで遅れるため4000ステップの専門家選択ウォームアップが重要で、データ分布が急変する継続学習やドメイン移行では再適応挙動が課題になり得る。さらに毎バッチの専門家使用率は厳密均衡ではなく、容量係数でメモリ超過を抑える設計が残る。",
@@ -10,5 +10,9 @@
     "implementation_status": "著者の公開GitHub実装あり。訓練入口、モデル・ルータ実装、専門家並列、設定、FineWeb-Edu取得、トークナイザ、CORE評価が含まれる。論文ではTCにScatterMoE、EC/ETに独自PyTorch実装を使用し、8基B200で実験している。",
     "research_positioning": "MoEの動的計算研究の中でも、推論後処理による専門家削減ではなく、訓練段階のルーティング制約を人口統計へ置き換える系統に位置する。特に専門家選択方式の品質・可変計算という利点を、因果的な自己回帰生成へ持ち込む橋渡しとして重要である。サービング最適化の観点では、トークンごとの起動専門家数が可変になるため計算量予測は難しくなるが、将来の専門家キャッシュや動的バッチ制御と組み合わせる際のルータ側基盤として関連する。"
   },
-  "reservation": {"claim_id":"claim-74ea5f7b171197036f26bc3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-79d8395b6b34cb41081cfb7e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

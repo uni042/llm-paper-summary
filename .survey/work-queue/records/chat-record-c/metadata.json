@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-74ea5f7b171197036f26bc3e",
+  "attempt_id": "attempt-79d8395b6b34cb41081cfb7e",
   "job_id": "job-research-b0f3ab31cdfd9a01",
   "data": {
     "canonical_id": "arXiv:2603.11535",
@@ -10,30 +10,71 @@
     "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
     "summary": "専門家選択型の混合専門家モデルでは、専門家側がバッチ内の上位トークンを選ぶことで負荷均衡と可変計算量を両立できる一方、未来トークンを含む集合で順位付けするため自己回帰生成では因果性を満たせない。本研究は各専門家のルータ得点分布の分位点を指数移動平均で追跡し、現在トークンの得点が閾値を超えた専門家だけを起動する専門家閾値ルーティングを提案する。これにより補助負荷均衡損失を使わず、トークンごとの専門家数を可変にしながら、訓練時と推論時に同一の因果的判定を利用する。",
     "source": "https://arxiv.org/abs/2603.11535",
-    "sources": ["https://arxiv.org/abs/2603.11535", "https://arxiv.org/html/2603.11535v1", "https://github.com/MasterGodzilla/Expert-Threshold-Routing"],
-    "authors": ["Hanchi Sun", "Yixin Liu", "Yonghui Wu", "Lichao Sun"],
+    "sources": [
+      "https://arxiv.org/abs/2603.11535",
+      "https://arxiv.org/html/2603.11535v1",
+      "https://github.com/MasterGodzilla/Expert-Threshold-Routing"
+    ],
+    "authors": [
+      "Hanchi Sun",
+      "Yixin Liu",
+      "Yonghui Wu",
+      "Lichao Sun"
+    ],
     "published": "2026-03-12",
     "publication": "arXiv preprint arXiv:2603.11535",
     "publication_type": "preprint",
     "publication_status": "preprint",
-    "arxiv_categories": {"primary": "cs.AI", "cross_list": ["cs.CL"]},
-    "topics": ["混合専門家モデル", "動的計算", "負荷均衡", "因果的ルーティング"],
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.CL"
+      ]
+    },
+    "topics": [
+      "混合専門家モデル",
+      "動的計算",
+      "負荷均衡",
+      "因果的ルーティング"
+    ],
     "implementation": "著者公開実装あり。Nanochatを基盤に、専門家閾値ルーティング、専門家並列通信、訓練・CORE評価コードを公開している。",
     "code": "https://github.com/MasterGodzilla/Expert-Threshold-Routing",
     "hardware_evaluation": "単一ノードのNVIDIA B200 180GBを8基使用して訓練。専門家並列では独自のall-to-all通信を実装し、分散AdamW/MuonはZeRO-2型同期を利用する。",
     "quality_effect": "d20の2.4B総パラメータモデルで、専門家閾値方式はトークン選択方式より検証交差エントロピーを0.067低下させ、CORE評価も改善した。近似による推論専用圧縮ではなく、訓練されたルーティング方式そのものの品質改善である。",
     "last_checked": "2026-09-20",
     "references": [
-      {"canonical_id":"arXiv:2401.06066","arxiv_id":"2401.06066"},
-      {"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},
-      {"canonical_id":"arXiv:2403.07652","arxiv_id":"2403.07652"},
-      {"canonical_id":"arXiv:2511.06494","arxiv_id":"2511.06494"},
-      {"canonical_id":"arXiv:2406.11794","arxiv_id":"2406.11794"},
-      {"canonical_id":"arXiv:2410.07348","arxiv_id":"2410.07348"}
+      {
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2403.07652",
+        "arxiv_id": "2403.07652"
+      },
+      {
+        "canonical_id": "arXiv:2511.06494",
+        "arxiv_id": "2511.06494"
+      },
+      {
+        "canonical_id": "arXiv:2406.11794",
+        "arxiv_id": "2406.11794"
+      },
+      {
+        "canonical_id": "arXiv:2410.07348",
+        "arxiv_id": "2410.07348"
+      }
     ],
     "references_checked_at": "2026-09-20",
     "references_source": "arXiv HTML v1 reference section",
     "references_total": 57
   },
-  "reservation": {"claim_id":"claim-74ea5f7b171197036f26bc3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-79d8395b6b34cb41081cfb7e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

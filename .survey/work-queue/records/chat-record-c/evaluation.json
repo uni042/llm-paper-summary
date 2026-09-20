@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-74ea5f7b171197036f26bc3e",
+  "attempt_id": "attempt-79d8395b6b34cb41081cfb7e",
   "job_id": "job-research-b0f3ab31cdfd9a01",
   "data": {
     "hardware": "単一ノードのNVIDIA B200 180GBを8基使用。専門家並列のall-to-all通信を独自実装し、分散AdamW/MuonはZeRO-2型の勾配同期を利用する。",
@@ -10,5 +10,9 @@
     "methodology": "575M総パラメータ・195M有効パラメータのd12と、2.429B総パラメータ・561M有効パラメータのd20を比較する。16ルーティング専門家と1共有専門家、系列長2048、FineWeb-Edu 100B由来データを用い、d12は10Bトークン、d20は11.2Bトークンを訓練する。専門家閾値方式はβ=0.999、最初の4000ステップを専門家選択方式でウォームアップする。比較対象は密モデル、通常のトークン選択、補助損失付きトークン選択、損失なし負荷均衡、複数選択集合サイズの専門家選択。評価は検証交差エントロピーとCORE評価を中心に、使用率、専門家特化、ルーティング安定性、訓練・評価差、ウォームアップ等を分析する。",
     "scope": "実機8基B200での事前学習評価だが、主眼はモデル品質とルーティング挙動であり、推論スループット、トークン毎遅延、通信量削減などのサービング性能を直接測定した論文ではない。モデル規模も最大2.4B総パラメータで、数百B級MoEへの品質・通信特性の一般化は未検証である。"
   },
-  "reservation": {"claim_id":"claim-74ea5f7b171197036f26bc3e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-79d8395b6b34cb41081cfb7e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
