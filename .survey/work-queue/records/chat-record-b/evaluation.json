@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-36a9cdcc5175155fa19ebfd4",
-  "job_id": "job-research-3f4b0e4a187439dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36a9cdcc5175155fa19ebfd4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-36a9cdcc5175155fa19ebfd4","job_id":"job-research-3f4b0e4a187439dd","data":{"hardware":"Llama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.2を中心に評価し、追加でLlama-3.1-70Bのquestion-agnostic LongBenchも検証する。効率試験はFlashAttention-2を共通利用し8Kから448K contextまでpeak memoryとdecoding latencyを測る。","software":"Ada-SnapKVとAda-Pyramidを実装し、flattened KV layout、custom CUDA kernel、variable-length FlashAttention、GQA-compatible selectionを使用する。","methodology":"Ruler 13データセットでは元cacheの20/40/60/80% budgetを使い、question-awareとquestion-agnosticの双方を評価する。LongBench 16データセットでは平均head budget 128/256/512/1024/2048の固定値に加え、sample長の偏りを考慮した10/20/40% ratio budgetも用いる。全実験でsafeguard α=0.2、観測窓32、max-pooling kernel 7を固定し、SnapKV、Pyramid、StreamingLLM、full cacheと比較する。","baselines":["SnapKV","Pyramid","StreamingLLM","full cache","uniform head-wise budget allocation"],"metrics":["Ruler average score","LongBench average score","relative eviction loss","peak memory footprint","decoding latency"],"scope":"品質評価は29データセットと複数モデル・budgetを含むが、理論はattention outputのL1 eviction loss上界を対象とし、上界低下が常に最終生成品質改善を保証するわけではない。α=0.2などの設定は固定評価であり、全モデルでの最適性は示していない。"},"reservation":{"claim_id":"claim-36a9cdcc5175155fa19ebfd4","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
