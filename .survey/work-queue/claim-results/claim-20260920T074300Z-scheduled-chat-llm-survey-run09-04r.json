@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T074300Z-scheduled-chat-llm-survey-run09-04r",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7441b15a7ee76c92",
+      "claim_id": "claim-f132295037f6bf230d13b845",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f132295037f6bf230d13b845",
+      "claimed_at": "2026-09-20T07:43:06+00:00",
+      "expires_at": "2026-09-20T09:13:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7441b15a7ee76c92"
+      ],
+      "job": {
+        "job_id": "job-research-7441b15a7ee76c92",
+        "type": "research",
+        "parent_job_id": "job-4a06419a3d931893",
+        "priority": 94,
+        "canonical_id": "arXiv:2410.13276",
+        "arxiv_id": "2410.13276",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
+        "source_url": "https://arxiv.org/abs/2410.13276",
+        "paper_path": "papers/inference/10-sparse-attention/2024-2410.13276-seerattention.md",
+        "selection_reason": "Learned block-level sparse attention with a block-sparse FlashAttention kernel; directly targets long-context prefill latency and GPU efficiency.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:14+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-20T07:42:39+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-a87f8c2a924fc4c3d1858893"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-a87f8c2a924fc4c3d1858893.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T07:43:06+00:00",
+  "checkpoint_released": 0
+}

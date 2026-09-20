@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a87f8c2a924fc4c3d1858893","job_id":"job-research-7441b15a7ee76c92","data":{"limitations":"本論文のAttnGateはプリフィル段階だけへ適用され、逐次デコード時の長いKV参照は高速化しない。元LLM重みを凍結しても注意接続自体を近似的に削るため厳密な品質保持方式ではなく、疎性を高めるとタスクによって低下し得る。評価モデルはLlama-3.1-8B-Instruct、主要ハードウェアはA100に集中しており、MoE、大規模モデル、他GPU世代への一般化は追加検証が必要である。ゲート蒸留には密な注意から教師ブロック地図を生成する計算が必要で、完全に訓練不要な方式ではない。","differences":"MInferenceは各ヘッドをVertical-Slash等の事前定義パターンへ割り当てヒューリスティックに疎インデックスを作るのに対し、SeerAttentionは入力ごとにゲートが任意の重要ブロックを予測する。MoAはオフライン探索でヘッドごとの静的パターンを決めるが、SeerAttentionは元モデルの注意地図から自己蒸留して文脈依存に変化する。DuoAttention等の固定役割分担とも異なり、ブロックマスクを毎入力生成する。細粒度TopK注意と比べると選択単位をFlashAttentionタイルへ揃え、疎性を実GPU速度へ変換することを優先する。","implementation_status":"Microsoftの公開実装があり、AttnGate学習、2D最大プール教師生成、ブロック疎FlashAttentionを含む。事前学習済みLlama-3.1-8B-Instructへ後付けし、0.5Bトークン程度の自己蒸留でゲートだけを訓練できる。推論時はTopKまたは閾値を指定でき、再学習せず疎性を変更可能である。","research_positioning":"長文プリフィル高速化の疎注意系統で、静的・手設計パターンから学習型ルーティングへ移る代表例である。MoEと同様に『どこを計算するか』を小さなゲートへ学習させる一方、ハードウェア効率のためブロック粒度を維持する点が特徴となる。KVキャッシュ圧縮やオフロードが保存・転送量を減らすのに対し、本方式はプリフィル時にそもそも計算・読み込みする注意タイルを減らすため補完関係にある。"},"reservation":{"claim_id":"claim-a87f8c2a924fc4c3d1858893","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f132295037f6bf230d13b845",
+  "job_id": "job-research-7441b15a7ee76c92",
+  "data": {
+    "limitations": "本論文のAttnGateはプリフィル段階だけへ適用され、逐次デコード時の長いKV参照は高速化しない。元LLM重みを凍結しても注意接続自体を近似的に削るため厳密な品質保持方式ではなく、疎性を高めるとタスクによって低下し得る。評価モデルはLlama-3.1-8B-Instruct、主要ハードウェアはA100に集中しており、MoE、大規模モデル、他GPU世代への一般化は追加検証が必要である。ゲート蒸留には密な注意から教師ブロック地図を生成する計算が必要で、完全に訓練不要な方式ではない。",
+    "differences": "MInferenceは各ヘッドをVertical-Slash等の事前定義パターンへ割り当てヒューリスティックに疎インデックスを作るのに対し、SeerAttentionは入力ごとにゲートが任意の重要ブロックを予測する。MoAはオフライン探索でヘッドごとの静的パターンを決めるが、SeerAttentionは元モデルの注意地図から自己蒸留して文脈依存に変化する。DuoAttention等の固定役割分担とも異なり、ブロックマスクを毎入力生成する。細粒度TopK注意と比べると選択単位をFlashAttentionタイルへ揃え、疎性を実GPU速度へ変換することを優先する。",
+    "implementation_status": "Microsoftの公開実装があり、AttnGate学習、2D最大プール教師生成、ブロック疎FlashAttentionを含む。事前学習済みLlama-3.1-8B-Instructへ後付けし、0.5Bトークン程度の自己蒸留でゲートだけを訓練できる。推論時はTopKまたは閾値を指定でき、再学習せず疎性を変更可能である。",
+    "research_positioning": "長文プリフィル高速化の疎注意系統で、静的・手設計パターンから学習型ルーティングへ移る代表例である。MoEと同様に『どこを計算するか』を小さなゲートへ学習させる一方、ハードウェア効率のためブロック粒度を維持する点が特徴となる。KVキャッシュ圧縮やオフロードが保存・転送量を減らすのに対し、本方式はプリフィル時にそもそも計算・読み込みする注意タイルを減らすため補完関係にある。"
+  },
+  "reservation": {
+    "claim_id": "claim-f132295037f6bf230d13b845",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

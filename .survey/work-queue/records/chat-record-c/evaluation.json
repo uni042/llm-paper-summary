@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a87f8c2a924fc4c3d1858893","job_id":"job-research-7441b15a7ee76c92","data":{"hardware":"主要実験はLlama-3.1-8B-Instructを単一NVIDIA A100 GPUで評価。ゲート蒸留は0.5Bトークンで約40 A100 GPU時間。","software":"元LLMの全注意から2D最大プール教師を生成するカスタムFlashAttention系カーネルと、TopK/閾値マスクを消費するブロック疎FlashAttentionカーネルを実装。ゲート以外のモデル重みは凍結する。","methodology":"精度はPG19パープレキシティ、LongBench、RULER、HellaSwag、MMLU、ARC-Challenge、GSM8Kで評価する。LongBench/RULERでは質問部分ではなく文脈部分へ疎性を適用し、MoA、MInference、DuoAttentionと比較する。ゲート・疎カーネルのブロック幅は64。速度は8K〜128K系列と複数疎性で密なFlashAttention-2および既存疎カーネルと比較し、ゲート自身のオーバーヘッドも含める。","scope":"SeerAttentionはこの論文ではプリフィル段階だけに適用し、逐次デコードの注意は高速化しない。モデル評価はLlama-3.1-8B-Instruct一系統が中心で、他アーキテクチャやGPU世代への一般化は未実証。学習後にTopK比率または閾値を変えられるため、固定の一疎性ではなく精度・速度曲線を評価する。"},"reservation":{"claim_id":"claim-a87f8c2a924fc4c3d1858893","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f132295037f6bf230d13b845",
+  "job_id": "job-research-7441b15a7ee76c92",
+  "data": {
+    "hardware": "主要実験はLlama-3.1-8B-Instructを単一NVIDIA A100 GPUで評価。ゲート蒸留は0.5Bトークンで約40 A100 GPU時間。",
+    "software": "元LLMの全注意から2D最大プール教師を生成するカスタムFlashAttention系カーネルと、TopK/閾値マスクを消費するブロック疎FlashAttentionカーネルを実装。ゲート以外のモデル重みは凍結する。",
+    "methodology": "精度はPG19パープレキシティ、LongBench、RULER、HellaSwag、MMLU、ARC-Challenge、GSM8Kで評価する。LongBench/RULERでは質問部分ではなく文脈部分へ疎性を適用し、MoA、MInference、DuoAttentionと比較する。ゲート・疎カーネルのブロック幅は64。速度は8K〜128K系列と複数疎性で密なFlashAttention-2および既存疎カーネルと比較し、ゲート自身のオーバーヘッドも含める。",
+    "scope": "SeerAttentionはこの論文ではプリフィル段階だけに適用し、逐次デコードの注意は高速化しない。モデル評価はLlama-3.1-8B-Instruct一系統が中心で、他アーキテクチャやGPU世代への一般化は未実証。学習後にTopK比率または閾値を変えられるため、固定の一疎性ではなく精度・速度曲線を評価する。"
+  },
+  "reservation": {
+    "claim_id": "claim-f132295037f6bf230d13b845",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
