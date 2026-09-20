@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r4",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、AdaMoEの被引用側からdynamic-k・adaptive routing・trajectory pruningを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.26287",
+      "title": "GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.26287",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md",
+      "priority": 95,
+      "reason": "gating entropyを不確実性指標としてexpert数を適応させるdynamic routing。"
+    },
+    {
+      "canonical_id": "arXiv:2606.01509",
+      "title": "ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2606.01509",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.01509-probmoe-probabilistic-routing.md",
+      "priority": 97,
+      "reason": "expert subsetを確率分布として扱いExact-kからdynamic-kへ一般化する微分可能routing。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICAISISAS68969.2026.11567792",
+      "title": "TDMoE: Tail-probability-based Dynamic-k MoE",
+      "source_url": "https://doi.org/10.1109/ICAISISAS68969.2026.11567792",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-tdmoe-tail-probability-dynamic-k.md",
+      "priority": 96,
+      "reason": "軽量predictorでtoken・layerごとのexpert数を予測するdynamic-k方式。"
+    },
+    {
+      "canonical_id": "arXiv:2601.15370",
+      "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+      "source_url": "https://arxiv.org/abs/2601.15370",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+      "priority": 95,
+      "reason": "null expertでcausal token-choice MoEにdata sparsityを導入しzero-compute slotを作る。"
+    },
+    {
+      "canonical_id": "arXiv:2512.18425",
+      "title": "MoE Pathfinder: Trajectory-driven Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2512.18425",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md",
+      "priority": 96,
+      "reason": "layer横断のexpert activation trajectoryをweighted graphとして扱いglobal path planningで非一様expert retentionを決める。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-adamoe",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-adamoe.json",
+    "receipt": "sha256:8f90b6d64d45a20aa474505567c0daaff479f16e743aa59204d8fd319b1e7267"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-max-2026-09-20",
+    "round": "adaptive-max-r4-adamoe-forward",
+    "axis": "forward citations of AdaMoE for dynamic-k and null-expert routing",
+    "query_summary": "AdaMoE forward citationsの未収録48件からdynamic-k・null expert・trajectory pruningの5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Merge Then Compress forward citationsへ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "adaptive expert computation",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2406.13233",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 54,
+        "unseen_result_count": 48,
+        "duplicate_filtered_count": 6,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 15,
+        "candidate_accepted_count": 5,
+        "position": "1 page"
+      }
+    ]
+  }
+}
