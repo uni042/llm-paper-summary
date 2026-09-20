@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-524e1ba9cb57a926cc0c9550","job_id":"job-research-7878dfa1090aac77","data":{"hardware":"論文は7B〜21B規模の4種類のMoE構成でpost-trainingと推論時k'変更を評価する。主評価はシステム速度ではなく、同じモデルで活性専門家数を変えた際の品質対計算予算曲線である。","software":"LoRAMoE型とFFN型MoEの双方を扱い、通常Top-kとEMoEを同じ訓練予算で比較する。","methodology":"LoRAMoE（LLaMA2-7Bに32 expert、k_train=2）、OLMoE-1B-7B-0924（k_train=8）、DeepSeek-V2-Lite（6 routed+2 shared）、ERNIE-4.5-21Bなど4構成を用いる。ARC-Challenge、ARC-Easy、GSM8K、HellaSwag、HumanEval、NaturalQuestions、TriviaQA、Winogrande、MMLUの9ベンチマーク平均を、複数の推論時k'で測定する。主要表は3回実行の平均と標準偏差を報告し、通常Top-kと同じ訓練時活性予算で比較する。アブレーションではco-activation samplingとhierarchical router lossの寄与を分離する。","scope":"推論時にk'を学習時より増減させる品質弾性を直接検証する一方、実際のtokens/s、GPUメモリ、Expert Parallel通信、サービングSLOなどシステム指標は中心評価ではない。k'増加は計算量を増やすため、品質向上が実環境の遅延予算に見合うかは別途測定が必要である。"},"reservation":{"claim_id":"claim-524e1ba9cb57a926cc0c9550","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-68ada84df4d15e6b33fe96ec",
+  "job_id": "job-research-f32c4d7018f358c2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-68ada84df4d15e6b33fe96ec",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

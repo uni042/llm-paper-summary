@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-524e1ba9cb57a926cc0c9550","job_id":"job-research-7878dfa1090aac77","data":{"canonical_id":"arXiv:2509.21892","arxiv_id":"2509.21892","title":"Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts","list_summary":"学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。","summary":"通常MoEは学習時Top-kを推論でも固定し、単純に推論時k'を増やすと未学習のエキスパート組合せが増えて性能が急落する。Elastic MoE（EMoE）は、より大きい候補集合から学習予算k_train個だけを確率的に選ぶstochastic co-activation samplingで計算量を増やさず多様な共活性関係を学習し、さらにrouter分布を一様分布から離すreverse-KL型hierarchical router lossで小予算でも信頼できる順位を形成する。アーキテクチャ変更なしに既存MoEへpost-training適用でき、LoRAMoE、OLMoE、DeepSeek-V2-Lite、ERNIE-4.5-21Bなど7B〜21Bの4構成・9ベンチマークで、学習時kの2〜3倍まで有効な推論時スケーリング範囲を拡大する。","source":"https://arxiv.org/html/2509.21892","sources":["https://arxiv.org/abs/2509.21892","https://arxiv.org/html/2509.21892","https://arxiv.org/pdf/2509.21892"],"authors":["Naibin Gu","Zhenyu Zhang","Yuchen Feng","Yilong Chen","Peng Fu","Zheng Lin","Shuohuan Wang","Yu Sun","Hua Wu","Weiping Wang","Haifeng Wang"],"published":"2025-09-26","publication":"arXiv preprint","publication_type":"preprint","publication_status":"arXiv v2 revised 2026-05-11","arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI","cs.LG"]},"topics":["MoE","elastic inference","test-time compute","routing","expert collaboration"],"implementation":"論文は既存MoEチェックポイントへアーキテクチャ変更なしでpost-training適用する訓練フレームワークとして実装・評価する。","code":null,"hardware_evaluation":"4種類の7B〜21B MoE構成を9ベンチマークで評価。論文本文の主要主張は推論時活性エキスパート数k'を変えた際の品質曲線で、速度システムベンチマークより計算予算と品質の弾性を評価対象とする。","quality_effect":"LoRAMoEのk_train=2ではTop-k平均がk'=2で47.88、k'=6で47.57へ低下する一方、EMoEは48.22から49.50へ上昇。OLMoE k_train=8でもEMoEはk'=8の41.97からk'=16の43.13へ伸びる。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"Primary arXiv HTML full text and references reviewed; no normalized repository reference IDs added in this pass.","references_total":0},"reservation":{"claim_id":"claim-524e1ba9cb57a926cc0c9550","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-68ada84df4d15e6b33fe96ec",
+  "job_id": "job-research-f32c4d7018f358c2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-68ada84df4d15e6b33fe96ec",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

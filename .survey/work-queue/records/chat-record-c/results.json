@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-524e1ba9cb57a926cc0c9550","job_id":"job-research-7878dfa1090aac77","data":{"overview":"標準Top-kは学習時kを超えて専門家を増やしても早期に頭打ち・低下するが、EMoEは広いk'範囲で性能を維持または単調改善する。LoRAMoE k_train=2では通常Top-k平均がk'=2の47.88からk'=4で48.05へわずかに上がった後k'=6で47.57へ低下するのに対し、EMoEは48.22、49.00、49.50と増加する。OLMoE k_train=8でも通常Top-kはk'=8の41.35からk'=16で41.09へ低下する一方、EMoEは41.97から43.13へ向上する。","key_results":[{"metric":"LoRAMoE 9課題平均","value":"49.50 ±0.65","baseline":"Top-k k'=6: 47.57 ±0.52","condition":"両者k_train=2、推論k'=6","interpretation":"学習時の3倍の専門家数でもEMoEは性能を伸ばし、標準方式のscaling wallを越える。"},{"metric":"OLMoE 9課題平均","value":"43.13 ±0.74","baseline":"Top-k k'=16: 41.09 ±0.75","condition":"両者k_train=8、推論k'=16","interpretation":"学習時2倍の活性数で標準Top-kは微減するが、EMoEはk'=8の41.97からさらに改善する。"},{"metric":"有効推論時スケーリング範囲","value":"最大2〜3× training-time k","baseline":"標準Top-kはわずかなk'増加後に劣化","condition":"4 MoE architectures, 9 benchmarks","interpretation":"単一チェックポイントでより広い品質対計算予算範囲を利用できる。"}],"negative_results":"弾性は無制限ではなく、論文が示す有効範囲は最大でも概ね学習時kの2〜3倍である。またk'を増やすほどFFN計算量は増えるため、品質改善がレイテンシやコスト改善を意味するわけではない。LoRAMoEではEMoE k'=1の45.68は標準Top-k k'=1の45.48と近く、最小予算で常に大幅改善するわけでもない。","interpretation":"性能崩壊の主因を単なるrouter順位誤差ではなく『訓練中に共同利用されなかったエキスパート同士の協調不足』として捉え、訓練計算量を増やさず共活性分布を広げることが、高予算側の外挿を可能にする。hierarchical router lossは逆に低予算側のTop-k prefixを強くし、両者の組合せが上下双方の弾性を作る。","quality_impact":"同じ訓練時活性予算で標準Top-kより高いピーク品質と広いk'範囲を得る。ただし実サービスではk'ごとの実測レイテンシとSLOに基づく予算選択が別途必要。"},"reservation":{"claim_id":"claim-524e1ba9cb57a926cc0c9550","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-68ada84df4d15e6b33fe96ec",
+  "job_id": "job-research-f32c4d7018f358c2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-68ada84df4d15e6b33fe96ec",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
