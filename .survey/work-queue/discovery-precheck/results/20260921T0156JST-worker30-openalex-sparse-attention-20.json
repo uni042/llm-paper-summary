@@ -1,0 +1,944 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0156JST-worker30-openalex-sparse-attention-20",
+  "collector_id": "worker30-openalex-sparse-attention",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "sparse attention serving kernel KV cache long context LLM inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=sparse%20attention%20serving%20kernel%20KV%20cache%20long%20context%20LLM%20inference&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg2NTc5MjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjAzNDY3MDM0J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "38659dfc2460166ff466a0ed348ea320f2724c18",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 41,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:57:08.544811+00:00",
+  "results": [
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2609.15636",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Pengfei Xia",
+        "Tuo Hao",
+        "Shengwei Li",
+        "Jinjing Chen",
+        "Shiru Wei",
+        "Wenjun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Leshan Li",
+        "Zhui Zhu",
+        "Xianglong Deng",
+        "Yaojian Chen",
+        "Qingfeng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhiyuan Liu"
+      ]
+    },
+    {
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "source_url": "https://arxiv.org/abs/2609.13141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13141",
+      "arxiv_id": "2609.13141",
+      "authors": [
+        "Zhiwei Li",
+        "Lei Zhu",
+        "Hao Gu",
+        "Xiang Hu",
+        "Yan Wang",
+        "Haitao Mi",
+        "Sirui Han",
+        "Leo Liang",
+        "Zhijiang Guo"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10952127/v1",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10952127/v1",
+      "doi": "10.21203/rs.3.rs-10952127/v1",
+      "authors": [
+        "Yue Ning",
+        "Zhenning Guo",
+        "Xiang Li",
+        "Wenjuan Guo"
+      ]
+    },
+    {
+      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.10441",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10441",
+      "arxiv_id": "2609.10441",
+      "authors": [
+        "Hongming Zhang",
+        "Zhaozhen Gu",
+        "Fengshuo Bai",
+        "Ming Hao",
+        "Qingyang Zhang",
+        "Yuanyuan Wang",
+        "Shi‐Yang Tang",
+        "Yanna Wang",
+        "Bo Xu"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "source_url": "https://arxiv.org/abs/2609.08443",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08443",
+      "arxiv_id": "2609.08443",
+      "authors": [
+        "Lin Guan",
+        "Jia‐Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ]
+    },
+    {
+      "title": "Miles v0.1: Production-Level Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.08368",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08368",
+      "arxiv_id": "2609.08368",
+      "authors": [
+        "RadixArk",
+        ":",
+        "Tom Chen",
+        "Mao Cheng",
+        "Shi Dong",
+        "Kangrui Du",
+        "Yanbin Jiang",
+        "Jiajun Li",
+        "Yiming Li",
+        "Tao Lin",
+        "Yusheng Su",
+        "Andy Ye",
+        "Yueming Yuan",
+        "Zhichen Zeng"
+      ]
+    },
+    {
+      "title": "FastE: Readout-Triggered Token Compression for LLM Embedding Inference",
+      "source_url": "https://arxiv.org/abs/2609.08407",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08407",
+      "arxiv_id": "2609.08407",
+      "authors": [
+        "J. Shu",
+        "Jinyong Wen",
+        "Baokun Wang",
+        "Zhongle Xie",
+        "Lidan Shou",
+        "Weiqiang Wang",
+        "Gang v. Chen"
+      ]
+    },
+    {
+      "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2609.07237",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07237",
+      "arxiv_id": "2609.07237",
+      "authors": [
+        "Siyu Li",
+        "Dong Wang",
+        "Jie Zhou",
+        "Wei Li",
+        "Yang Xu",
+        "Sijie Song"
+      ]
+    },
+    {
+      "title": "Characterizing Contention-Induced Reliability Collapse in KV-Cache Timing Side Channels for Multi-Tenant LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.06853",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06853",
+      "arxiv_id": "2609.06853",
+      "authors": [
+        "Rana Abu Bakar"
+      ]
+    },
+    {
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05821",
+      "arxiv_id": "2609.05821",
+      "authors": [
+        "Pengan Chen",
+        "Kaikai Zheng",
+        "Liang Hong",
+        "Lixia Yi",
+        "Jiyue Jiang",
+        "Jiayang Chen",
+        "Yixuan Wang",
+        "Yimin Fan",
+        "Xinyuan Liu",
+        "Jiayi Li",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Yu Li"
+      ]
+    },
+    {
+      "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
+      "source_url": "https://arxiv.org/abs/2609.03949",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03949",
+      "arxiv_id": "2609.03949",
+      "authors": [
+        "WenJie Fan"
+      ]
+    },
+    {
+      "title": "Efficient Attention for Time Series, Image and Video Understanding",
+      "source_url": "https://escholarship.org/uc/item/0c68b9w3",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "OpenAlex:W7213473761",
+      "authors": [
+        "Nhat Thanh Tran"
+      ]
+    },
+    {
+      "title": "From Language to Behavior: Scaling Sequence Transformers for Industrial Recommendation Ranking with Rec-Native Designs",
+      "source_url": "https://arxiv.org/abs/2609.01240",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "arXiv:2609.01240",
+      "arxiv_id": "2609.01240",
+      "authors": [
+        "Jie Chen",
+        "Xiangqian Yu",
+        "Yanchao Lian",
+        "Tan Lu",
+        "Run Yang",
+        "Zhen Shang",
+        "Xing Wang",
+        "Cheng Chen",
+        "Ke Hu",
+        "Qiang Li",
+        "Tianjiu Yin",
+        "Xiaobing Liu"
+      ]
+    },
+    {
+      "title": "Representation-Aware Modularity: Efficient Cross-Task Generalization for LLMs",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/638",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.24963/ijcai.2026/638",
+      "doi": "10.24963/ijcai.2026/638",
+      "authors": [
+        "Zheng Gong",
+        "Ying Sun",
+        "Chao Wang",
+        "Xiaohui Huo",
+        "Ping Li",
+        "Yi Zheng",
+        "Zhefeng Wang"
+      ]
+    },
+    {
+      "title": "CogEvol: Towards Efficient and Reliable Learning Environment Generation",
+      "source_url": "https://arxiv.org/abs/2608.30968",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "arXiv:2608.30968",
+      "arxiv_id": "2608.30968",
+      "authors": [
+        "Shangqing Tu",
+        "Daniel Zhang-Li",
+        "Yucheng Wang",
+        "Shiyu Gan",
+        "Yanpeng Wang",
+        "Huiqiang Rong",
+        "Mofei Chen",
+        "Shen Yang",
+        "Yini Chen",
+        "Yinuo Duan",
+        "Haoxuan Li",
+        "Ye He",
+        "Ye He",
+        "Zhanxin Hao",
+        "Yuxuan Wu",
+        "Mengting Tao",
+        "Yuqiu Liu",
+        "Jifan Yu",
+        "Jifan Yu",
+        "Bin Xu",
+        "Lei Hou",
+        "Lei Hou",
+        "Yu Zhang"
+      ]
+    },
+    {
+      "title": "AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2608.29208",
+      "year": 2026,
+      "published": "2026-08-29",
+      "canonical_id": "arXiv:2608.29208",
+      "arxiv_id": "2608.29208",
+      "authors": [
+        "Sunghwan Han",
+        "Youngtae Han",
+        "Youngmin Yi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://arxiv.org/abs/2609.15636"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://arxiv.org/abs/2609.15636",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Pengfei Xia",
+          "Tuo Hao",
+          "Shengwei Li",
+          "Jinjing Chen",
+          "Shiru Wei",
+          "Wenjun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://arxiv.org/abs/2609.12379"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://arxiv.org/abs/2609.12379",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Leshan Li",
+          "Zhui Zhu",
+          "Xianglong Deng",
+          "Yaojian Chen",
+          "Qingfeng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhiyuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13141",
+      "identity_tokens": [
+        "id:arXiv:2609.13141",
+        "title:sas simple attention sparsification via endtoend optimization of context ranking",
+        "url:https://arxiv.org/abs/2609.13141"
+      ],
+      "record": {
+        "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+        "source_url": "https://arxiv.org/abs/2609.13141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13141",
+        "arxiv_id": "2609.13141",
+        "authors": [
+          "Zhiwei Li",
+          "Lei Zhu",
+          "Hao Gu",
+          "Xiang Hu",
+          "Yan Wang",
+          "Haitao Mi",
+          "Sirui Han",
+          "Leo Liang",
+          "Zhijiang Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10952127/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10952127/v1",
+        "title:reasoningaware errorbounded kvcache compression and sparse attention for longcontext llms",
+        "url:https://doi.org/10.21203/rs.3.rs-10952127/v1"
+      ],
+      "record": {
+        "title": "Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10952127/v1",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10952127/v1",
+        "doi": "10.21203/rs.3.rs-10952127/v1",
+        "authors": [
+          "Yue Ning",
+          "Zhenning Guo",
+          "Xiang Li",
+          "Wenjuan Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10441",
+      "identity_tokens": [
+        "id:arXiv:2609.10441",
+        "title:convmem convolutional memory for longcontext reasoning",
+        "url:https://arxiv.org/abs/2609.10441"
+      ],
+      "record": {
+        "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.10441",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10441",
+        "arxiv_id": "2609.10441",
+        "authors": [
+          "Hongming Zhang",
+          "Zhaozhen Gu",
+          "Fengshuo Bai",
+          "Ming Hao",
+          "Qingyang Zhang",
+          "Yuanyuan Wang",
+          "Shi‐Yang Tang",
+          "Yanna Wang",
+          "Bo Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08443",
+      "identity_tokens": [
+        "id:arXiv:2609.08443",
+        "title:sequenceo1 endtoend ultralong 100k sequence modeling in recommendation with lowrank caching",
+        "url:https://arxiv.org/abs/2609.08443"
+      ],
+      "record": {
+        "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+        "source_url": "https://arxiv.org/abs/2609.08443",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08443",
+        "arxiv_id": "2609.08443",
+        "authors": [
+          "Lin Guan",
+          "Jia‐Qi Yang",
+          "Zhishan Zhao",
+          "Jiaqi Huang",
+          "Hangyu Wang",
+          "Longbin Li",
+          "Beichuan Zhang",
+          "Haonan Jiang",
+          "Jinan Ni",
+          "Xiangyu Fan",
+          "Xiaowen Li",
+          "Ziyao Ren",
+          "Yuhang Qi",
+          "Xiaolong Zhu",
+          "Xuanyuan Luo",
+          "Qiwei Chen",
+          "Yi Cheng",
+          "Lele Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08368",
+      "identity_tokens": [
+        "id:arXiv:2609.08368",
+        "title:miles v01 productionlevel posttraining",
+        "url:https://arxiv.org/abs/2609.08368"
+      ],
+      "record": {
+        "title": "Miles v0.1: Production-Level Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.08368",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08368",
+        "arxiv_id": "2609.08368",
+        "authors": [
+          "RadixArk",
+          ":",
+          "Tom Chen",
+          "Mao Cheng",
+          "Shi Dong",
+          "Kangrui Du",
+          "Yanbin Jiang",
+          "Jiajun Li",
+          "Yiming Li",
+          "Tao Lin",
+          "Yusheng Su",
+          "Andy Ye",
+          "Yueming Yuan",
+          "Zhichen Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08407",
+      "identity_tokens": [
+        "id:arXiv:2609.08407",
+        "title:faste readouttriggered token compression for llm embedding inference",
+        "url:https://arxiv.org/abs/2609.08407"
+      ],
+      "record": {
+        "title": "FastE: Readout-Triggered Token Compression for LLM Embedding Inference",
+        "source_url": "https://arxiv.org/abs/2609.08407",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08407",
+        "arxiv_id": "2609.08407",
+        "authors": [
+          "J. Shu",
+          "Jinyong Wen",
+          "Baokun Wang",
+          "Zhongle Xie",
+          "Lidan Shou",
+          "Weiqiang Wang",
+          "Gang v. Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07237",
+      "identity_tokens": [
+        "id:arXiv:2609.07237",
+        "title:cedar errorbounded residual routing for efficient longcontext attention",
+        "url:https://arxiv.org/abs/2609.07237"
+      ],
+      "record": {
+        "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+        "source_url": "https://arxiv.org/abs/2609.07237",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07237",
+        "arxiv_id": "2609.07237",
+        "authors": [
+          "Siyu Li",
+          "Dong Wang",
+          "Jie Zhou",
+          "Wei Li",
+          "Yang Xu",
+          "Sijie Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06853",
+      "identity_tokens": [
+        "id:arXiv:2609.06853",
+        "title:characterizing contentioninduced reliability collapse in kvcache timing side channels for multitenant llm serving",
+        "url:https://arxiv.org/abs/2609.06853"
+      ],
+      "record": {
+        "title": "Characterizing Contention-Induced Reliability Collapse in KV-Cache Timing Side Channels for Multi-Tenant LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.06853",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06853",
+        "arxiv_id": "2609.06853",
+        "authors": [
+          "Rana Abu Bakar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05821",
+      "identity_tokens": [
+        "id:arXiv:2609.05821",
+        "title:conduit a unified residualstream restoration framework for kv cache reuse in visionlanguage models",
+        "url:https://arxiv.org/abs/2609.05821"
+      ],
+      "record": {
+        "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.05821",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05821",
+        "arxiv_id": "2609.05821",
+        "authors": [
+          "Pengan Chen",
+          "Kaikai Zheng",
+          "Liang Hong",
+          "Lixia Yi",
+          "Jiyue Jiang",
+          "Jiayang Chen",
+          "Yixuan Wang",
+          "Yimin Fan",
+          "Xinyuan Liu",
+          "Jiayi Li",
+          "Zhanqiu Zhang",
+          "Yiwen Guo",
+          "Yu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03949",
+      "identity_tokens": [
+        "id:arXiv:2609.03949",
+        "title:vestigekv the nopemla kv cache carries its own sparseattention signal in a vestigial branch",
+        "url:https://arxiv.org/abs/2609.03949"
+      ],
+      "record": {
+        "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
+        "source_url": "https://arxiv.org/abs/2609.03949",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03949",
+        "arxiv_id": "2609.03949",
+        "authors": [
+          "WenJie Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7213473761",
+      "identity_tokens": [
+        "id:OpenAlex:W7213473761",
+        "title:efficient attention for time series image and video understanding",
+        "url:https://escholarship.org/uc/item/0c68b9w3"
+      ],
+      "record": {
+        "title": "Efficient Attention for Time Series, Image and Video Understanding",
+        "source_url": "https://escholarship.org/uc/item/0c68b9w3",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "OpenAlex:W7213473761",
+        "authors": [
+          "Nhat Thanh Tran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01240",
+      "identity_tokens": [
+        "id:arXiv:2609.01240",
+        "title:from language to behavior scaling sequence transformers for industrial recommendation ranking with recnative designs",
+        "url:https://arxiv.org/abs/2609.01240"
+      ],
+      "record": {
+        "title": "From Language to Behavior: Scaling Sequence Transformers for Industrial Recommendation Ranking with Rec-Native Designs",
+        "source_url": "https://arxiv.org/abs/2609.01240",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "arXiv:2609.01240",
+        "arxiv_id": "2609.01240",
+        "authors": [
+          "Jie Chen",
+          "Xiangqian Yu",
+          "Yanchao Lian",
+          "Tan Lu",
+          "Run Yang",
+          "Zhen Shang",
+          "Xing Wang",
+          "Cheng Chen",
+          "Ke Hu",
+          "Qiang Li",
+          "Tianjiu Yin",
+          "Xiaobing Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/638",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/638",
+        "title:representationaware modularity efficient crosstask generalization for llms",
+        "url:https://doi.org/10.24963/ijcai.2026/638"
+      ],
+      "record": {
+        "title": "Representation-Aware Modularity: Efficient Cross-Task Generalization for LLMs",
+        "source_url": "https://doi.org/10.24963/ijcai.2026/638",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.24963/ijcai.2026/638",
+        "doi": "10.24963/ijcai.2026/638",
+        "authors": [
+          "Zheng Gong",
+          "Ying Sun",
+          "Chao Wang",
+          "Xiaohui Huo",
+          "Ping Li",
+          "Yi Zheng",
+          "Zhefeng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.30968",
+      "identity_tokens": [
+        "id:arXiv:2608.30968",
+        "title:cogevol towards efficient and reliable learning environment generation",
+        "url:https://arxiv.org/abs/2608.30968"
+      ],
+      "record": {
+        "title": "CogEvol: Towards Efficient and Reliable Learning Environment Generation",
+        "source_url": "https://arxiv.org/abs/2608.30968",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "arXiv:2608.30968",
+        "arxiv_id": "2608.30968",
+        "authors": [
+          "Shangqing Tu",
+          "Daniel Zhang-Li",
+          "Yucheng Wang",
+          "Shiyu Gan",
+          "Yanpeng Wang",
+          "Huiqiang Rong",
+          "Mofei Chen",
+          "Shen Yang",
+          "Yini Chen",
+          "Yinuo Duan",
+          "Haoxuan Li",
+          "Ye He",
+          "Ye He",
+          "Zhanxin Hao",
+          "Yuxuan Wu",
+          "Mengting Tao",
+          "Yuqiu Liu",
+          "Jifan Yu",
+          "Jifan Yu",
+          "Bin Xu",
+          "Lei Hou",
+          "Lei Hou",
+          "Yu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29208",
+      "identity_tokens": [
+        "id:arXiv:2608.29208",
+        "title:adavla adaptive step flow matching for trainingfree acceleration of visionlanguageaction models",
+        "url:https://arxiv.org/abs/2608.29208"
+      ],
+      "record": {
+        "title": "AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models",
+        "source_url": "https://arxiv.org/abs/2608.29208",
+        "year": 2026,
+        "published": "2026-08-29",
+        "canonical_id": "arXiv:2608.29208",
+        "arxiv_id": "2608.29208",
+        "authors": [
+          "Sunghwan Han",
+          "Youngtae Han",
+          "Youngmin Yi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b2ecaa098e666fc3647d59111a47f6d17f17c4c8a774769585abfdbc8d88dac9",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,787 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0156JST-worker30-openalex-cxl-19",
+  "collector_id": "worker30-openalex-cxl",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "CXL shared memory KV cache LLM inference serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=CXL%20shared%20memory%20KV%20cache%20LLM%20inference%20serving&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzU5OTY4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0NDE2Mzg2MTYzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "38659dfc2460166ff466a0ed348ea320f2724c18",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 46,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:57:07.255579+00:00",
+  "results": [
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+      "source_url": "https://arxiv.org/abs/2608.21657",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21657",
+      "arxiv_id": "2608.21657",
+      "authors": [
+        "Peter Forcha",
+        "H. Kajekusumadhar",
+        "Mbua Peter",
+        "Muhammed Kawser",
+        "Audrey Cyriell Mo",
+        "Christophe Bobda"
+      ]
+    },
+    {
+      "title": "Anatomy of a Quantized Agent: VRAM Stability and Forecasting in Code-Synthesis Agentic Workloads",
+      "source_url": "https://arxiv.org/abs/2608.15117",
+      "year": 2026,
+      "published": "2026-08-15",
+      "canonical_id": "arXiv:2608.15117",
+      "arxiv_id": "2608.15117",
+      "authors": [
+        "Anubhab Banerjee"
+      ]
+    },
+    {
+      "title": "Architectural Implications of Agentic AI Workflows",
+      "source_url": "https://arxiv.org/abs/2608.04458",
+      "year": 2026,
+      "published": "2026-08-05",
+      "canonical_id": "arXiv:2608.04458",
+      "arxiv_id": "2608.04458",
+      "authors": [
+        "Jirong Yang",
+        "Peizhe Liu",
+        "Chaojie Zhang",
+        "Jovan Stojkovic"
+      ]
+    },
+    {
+      "title": "On Design Principles for Efficient Heterogeneous DRAM-PIM-GPU Systems",
+      "source_url": "https://arxiv.org/abs/2608.04169",
+      "year": 2026,
+      "published": "2026-08-04",
+      "canonical_id": "arXiv:2608.04169",
+      "arxiv_id": "2608.04169",
+      "authors": [
+        "Corey Lammie",
+        "Hadjer Benmeziane",
+        "William Simon",
+        "Irem Boybat"
+      ]
+    },
+    {
+      "title": "The Hidden Energy Cost of Scaling AI Hardware: A Comparative Analysis of Manufacturing and Operational Energy",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10120690/v1",
+      "year": 2026,
+      "published": "2026-07-22",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10120690/v1",
+      "doi": "10.21203/rs.3.rs-10120690/v1",
+      "authors": [
+        "Emre Salman",
+        "Abrar Abdurrob"
+      ]
+    },
+    {
+      "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+      "source_url": "https://arxiv.org/abs/2607.16836",
+      "year": 2026,
+      "published": "2026-07-18",
+      "canonical_id": "arXiv:2607.16836",
+      "arxiv_id": "2607.16836",
+      "authors": [
+        "Shuhao Zhang",
+        "H H Peng",
+        "Chun Ho",
+        "Yancan Mao",
+        "Yufeng Du",
+        "Liu S",
+        "Ruijie Qiu",
+        "Xiaofei Liao",
+        "Hai Jin"
+      ]
+    },
+    {
+      "title": "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.12839",
+      "year": 2026,
+      "published": "2026-07-14",
+      "canonical_id": "arXiv:2607.12839",
+      "arxiv_id": "2607.12839",
+      "authors": [
+        "Gregory Hyegang Jun",
+        "Wesley Pang",
+        "Eddie Richter",
+        "Mehdi Saeedi",
+        "Aporva Amarnath",
+        "Pallavi Ferrao",
+        "Deming Chen"
+      ]
+    },
+    {
+      "title": "RUBRIC: Realism--Utility Balanced Ranking for Imbalanced Classification",
+      "source_url": "https://arxiv.org/abs/2607.09816",
+      "year": 2026,
+      "published": "2026-07-10",
+      "canonical_id": "arXiv:2607.09816",
+      "arxiv_id": "2607.09816",
+      "authors": [
+        "Yanxuan Yu",
+        "Dong liu",
+        "Shu Wang",
+        "Wenxiao Zhao",
+        "Eric Jiang",
+        "Chang Liu",
+        "S Lu",
+        "Hui Pan",
+        "Ben Lengerich",
+        "Tong Geng",
+        "Renata Borovica-Gajic",
+        "Ying Nian Wu"
+      ]
+    },
+    {
+      "title": "Memory hierarchy in AI systems: dual contexts, estimation modelling, and optimisation strategies",
+      "source_url": "https://doi.org/10.18520/cs/v131/i1/64-76",
+      "year": 2026,
+      "published": "2026-07-10",
+      "canonical_id": "DOI:10.18520/cs/v131/i1/64-76",
+      "doi": "10.18520/cs/v131/i1/64-76",
+      "authors": [
+        "Manmohan Brahma",
+        "G. K. Patra"
+      ]
+    },
+    {
+      "title": "Harmonia: Enhancing Data Placement and Migration in Hybrid Storage Systems via Multi-Agent Reinforcement Learning",
+      "source_url": "https://doi.org/10.1145/3797905.3800507",
+      "year": 2026,
+      "published": "2026-07-02",
+      "canonical_id": "arXiv:2503.20507",
+      "arxiv_id": "2503.20507",
+      "authors": [
+        "Rakesh Nadig",
+        "Vamanan Arulchelvan",
+        "Rahul Bera",
+        "Taha Shahroodi",
+        "Gagandeep Singh",
+        "Andreas Kosmas Kakolyris",
+        "İsmail Emir Yüksel",
+        "Mohammad Sadrosadati",
+        "Jisung Park",
+        "Onur Cezmi Mutlu"
+      ]
+    },
+    {
+      "title": "IBEX: Internal Bandwidth‑Efficient Compression Architecture for Scalable CXL Memory Expansion",
+      "source_url": "https://doi.org/10.1145/3797905.3800521",
+      "year": 2026,
+      "published": "2026-07-02",
+      "canonical_id": "arXiv:2603.26131",
+      "arxiv_id": "2603.26131",
+      "authors": [
+        "Younghoon Ko",
+        "Hyemin Park",
+        "Hyuk-Jae Lee",
+        "Hyokeun Lee"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2606.30553",
+      "year": 2026,
+      "published": "2026-06-29",
+      "canonical_id": "arXiv:2606.30553",
+      "arxiv_id": "2606.30553",
+      "authors": [
+        "Yilong Zhao",
+        "Fangxin Liu",
+        "Onur Mutlu",
+        "Mingyu Gao",
+        "Jian Liu",
+        "Haibing Guan",
+        "Li Jiang"
+      ]
+    },
+    {
+      "title": "HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2606.21633",
+      "year": 2026,
+      "published": "2026-06-19",
+      "canonical_id": "arXiv:2606.21633",
+      "arxiv_id": "2606.21633",
+      "authors": [
+        "권오민",
+        "Doyeon Kim",
+        "Jongseok Park",
+        "Seung Yul Lee",
+        "Ion Stoica",
+        "Jae W. Lee"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions",
+      "source_url": "https://arxiv.org/abs/2606.16332",
+      "year": 2026,
+      "published": "2026-06-15",
+      "canonical_id": "arXiv:2606.16332",
+      "arxiv_id": "2606.16332",
+      "authors": [
+        "F Chen",
+        "Haibo Chen"
+      ]
+    },
+    {
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.13708",
+      "arxiv_id": "2606.13708",
+      "authors": [
+        "Bojie Li"
+      ]
+    },
+    {
+      "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+      "source_url": "https://arxiv.org/abs/2606.01725",
+      "year": 2026,
+      "published": "2026-06-01",
+      "canonical_id": "arXiv:2606.01725",
+      "arxiv_id": "2606.01725",
+      "authors": [
+        "Donghwan Kim",
+        "Prakhar Singh",
+        "Younghoon Min",
+        "Jongryool Kim",
+        "Jongse Park",
+        "Kiwan Maeng"
+      ]
+    },
+    {
+      "title": "Agent-X: Full Pipeline Acceleration of On-device AI Agents",
+      "source_url": "https://doi.org/10.1145/3745756.3809195",
+      "year": 2026,
+      "published": "2026-05-29",
+      "canonical_id": "arXiv:2605.10380",
+      "arxiv_id": "2605.10380",
+      "authors": [
+        "Jinha Chung",
+        "Byeongjun Shin",
+        "Jiin Kim",
+        "Minsoo Rhu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21657",
+      "identity_tokens": [
+        "id:arXiv:2608.21657",
+        "title:model compression and hardwareaware acceleration for deep learning on fpgas a codesign taxonomy and comparative analysis",
+        "url:https://arxiv.org/abs/2608.21657"
+      ],
+      "record": {
+        "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+        "source_url": "https://arxiv.org/abs/2608.21657",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21657",
+        "arxiv_id": "2608.21657",
+        "authors": [
+          "Peter Forcha",
+          "H. Kajekusumadhar",
+          "Mbua Peter",
+          "Muhammed Kawser",
+          "Audrey Cyriell Mo",
+          "Christophe Bobda"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15117",
+      "identity_tokens": [
+        "id:arXiv:2608.15117",
+        "title:anatomy of a quantized agent vram stability and forecasting in codesynthesis agentic workloads",
+        "url:https://arxiv.org/abs/2608.15117"
+      ],
+      "record": {
+        "title": "Anatomy of a Quantized Agent: VRAM Stability and Forecasting in Code-Synthesis Agentic Workloads",
+        "source_url": "https://arxiv.org/abs/2608.15117",
+        "year": 2026,
+        "published": "2026-08-15",
+        "canonical_id": "arXiv:2608.15117",
+        "arxiv_id": "2608.15117",
+        "authors": [
+          "Anubhab Banerjee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04458",
+      "identity_tokens": [
+        "id:arXiv:2608.04458",
+        "title:architectural implications of agentic ai workflows",
+        "url:https://arxiv.org/abs/2608.04458"
+      ],
+      "record": {
+        "title": "Architectural Implications of Agentic AI Workflows",
+        "source_url": "https://arxiv.org/abs/2608.04458",
+        "year": 2026,
+        "published": "2026-08-05",
+        "canonical_id": "arXiv:2608.04458",
+        "arxiv_id": "2608.04458",
+        "authors": [
+          "Jirong Yang",
+          "Peizhe Liu",
+          "Chaojie Zhang",
+          "Jovan Stojkovic"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04169",
+      "identity_tokens": [
+        "id:arXiv:2608.04169",
+        "title:on design principles for efficient heterogeneous drampimgpu systems",
+        "url:https://arxiv.org/abs/2608.04169"
+      ],
+      "record": {
+        "title": "On Design Principles for Efficient Heterogeneous DRAM-PIM-GPU Systems",
+        "source_url": "https://arxiv.org/abs/2608.04169",
+        "year": 2026,
+        "published": "2026-08-04",
+        "canonical_id": "arXiv:2608.04169",
+        "arxiv_id": "2608.04169",
+        "authors": [
+          "Corey Lammie",
+          "Hadjer Benmeziane",
+          "William Simon",
+          "Irem Boybat"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10120690/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10120690/v1",
+        "title:the hidden energy cost of scaling ai hardware a comparative analysis of manufacturing and operational energy",
+        "url:https://doi.org/10.21203/rs.3.rs-10120690/v1"
+      ],
+      "record": {
+        "title": "The Hidden Energy Cost of Scaling AI Hardware: A Comparative Analysis of Manufacturing and Operational Energy",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10120690/v1",
+        "year": 2026,
+        "published": "2026-07-22",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10120690/v1",
+        "doi": "10.21203/rs.3.rs-10120690/v1",
+        "authors": [
+          "Emre Salman",
+          "Abrar Abdurrob"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16836",
+      "identity_tokens": [
+        "id:arXiv:2607.16836",
+        "title:beyond storage state as a runtime control problem in parallel and distributed systems",
+        "url:https://arxiv.org/abs/2607.16836"
+      ],
+      "record": {
+        "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+        "source_url": "https://arxiv.org/abs/2607.16836",
+        "year": 2026,
+        "published": "2026-07-18",
+        "canonical_id": "arXiv:2607.16836",
+        "arxiv_id": "2607.16836",
+        "authors": [
+          "Shuhao Zhang",
+          "H H Peng",
+          "Chun Ho",
+          "Yancan Mao",
+          "Yufeng Du",
+          "Liu S",
+          "Ruijie Qiu",
+          "Xiaofei Liao",
+          "Hai Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.12839",
+      "identity_tokens": [
+        "id:arXiv:2607.12839",
+        "title:heteromosaic exposing and exploiting heterogeneous execution opportunities for energyefficient edge llm inference",
+        "url:https://arxiv.org/abs/2607.12839"
+      ],
+      "record": {
+        "title": "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.12839",
+        "year": 2026,
+        "published": "2026-07-14",
+        "canonical_id": "arXiv:2607.12839",
+        "arxiv_id": "2607.12839",
+        "authors": [
+          "Gregory Hyegang Jun",
+          "Wesley Pang",
+          "Eddie Richter",
+          "Mehdi Saeedi",
+          "Aporva Amarnath",
+          "Pallavi Ferrao",
+          "Deming Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09816",
+      "identity_tokens": [
+        "id:arXiv:2607.09816",
+        "title:rubric realismutility balanced ranking for imbalanced classification",
+        "url:https://arxiv.org/abs/2607.09816"
+      ],
+      "record": {
+        "title": "RUBRIC: Realism--Utility Balanced Ranking for Imbalanced Classification",
+        "source_url": "https://arxiv.org/abs/2607.09816",
+        "year": 2026,
+        "published": "2026-07-10",
+        "canonical_id": "arXiv:2607.09816",
+        "arxiv_id": "2607.09816",
+        "authors": [
+          "Yanxuan Yu",
+          "Dong liu",
+          "Shu Wang",
+          "Wenxiao Zhao",
+          "Eric Jiang",
+          "Chang Liu",
+          "S Lu",
+          "Hui Pan",
+          "Ben Lengerich",
+          "Tong Geng",
+          "Renata Borovica-Gajic",
+          "Ying Nian Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18520/cs/v131/i1/64-76",
+      "identity_tokens": [
+        "id:DOI:10.18520/cs/v131/i1/64-76",
+        "title:memory hierarchy in ai systems dual contexts estimation modelling and optimisation strategies",
+        "url:https://doi.org/10.18520/cs/v131/i1/64-76"
+      ],
+      "record": {
+        "title": "Memory hierarchy in AI systems: dual contexts, estimation modelling, and optimisation strategies",
+        "source_url": "https://doi.org/10.18520/cs/v131/i1/64-76",
+        "year": 2026,
+        "published": "2026-07-10",
+        "canonical_id": "DOI:10.18520/cs/v131/i1/64-76",
+        "doi": "10.18520/cs/v131/i1/64-76",
+        "authors": [
+          "Manmohan Brahma",
+          "G. K. Patra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.20507",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800507",
+        "id:arXiv:2503.20507",
+        "title:harmonia enhancing data placement and migration in hybrid storage systems via multiagent reinforcement learning",
+        "url:https://doi.org/10.1145/3797905.3800507"
+      ],
+      "record": {
+        "title": "Harmonia: Enhancing Data Placement and Migration in Hybrid Storage Systems via Multi-Agent Reinforcement Learning",
+        "source_url": "https://doi.org/10.1145/3797905.3800507",
+        "year": 2026,
+        "published": "2026-07-02",
+        "canonical_id": "arXiv:2503.20507",
+        "arxiv_id": "2503.20507",
+        "authors": [
+          "Rakesh Nadig",
+          "Vamanan Arulchelvan",
+          "Rahul Bera",
+          "Taha Shahroodi",
+          "Gagandeep Singh",
+          "Andreas Kosmas Kakolyris",
+          "İsmail Emir Yüksel",
+          "Mohammad Sadrosadati",
+          "Jisung Park",
+          "Onur Cezmi Mutlu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.26131",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800521",
+        "id:arXiv:2603.26131",
+        "title:ibex internal bandwidthefficient compression architecture for scalable cxl memory expansion",
+        "url:https://doi.org/10.1145/3797905.3800521"
+      ],
+      "record": {
+        "title": "IBEX: Internal Bandwidth‑Efficient Compression Architecture for Scalable CXL Memory Expansion",
+        "source_url": "https://doi.org/10.1145/3797905.3800521",
+        "year": 2026,
+        "published": "2026-07-02",
+        "canonical_id": "arXiv:2603.26131",
+        "arxiv_id": "2603.26131",
+        "authors": [
+          "Younghoon Ko",
+          "Hyemin Park",
+          "Hyuk-Jae Lee",
+          "Hyokeun Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.30553",
+      "identity_tokens": [
+        "id:arXiv:2606.30553",
+        "title:cosm a cooperative scheduling framework for concurrent pim and cpu execution on mobile devices",
+        "url:https://arxiv.org/abs/2606.30553"
+      ],
+      "record": {
+        "title": "COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices",
+        "source_url": "https://arxiv.org/abs/2606.30553",
+        "year": 2026,
+        "published": "2026-06-29",
+        "canonical_id": "arXiv:2606.30553",
+        "arxiv_id": "2606.30553",
+        "authors": [
+          "Yilong Zhao",
+          "Fangxin Liu",
+          "Onur Mutlu",
+          "Mingyu Gao",
+          "Jian Liu",
+          "Haibing Guan",
+          "Li Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21633",
+      "identity_tokens": [
+        "id:arXiv:2606.21633",
+        "title:herald highthroughput block diffusion llm serving via cpugpu cooperative kv cache retrieval",
+        "url:https://arxiv.org/abs/2606.21633"
+      ],
+      "record": {
+        "title": "HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval",
+        "source_url": "https://arxiv.org/abs/2606.21633",
+        "year": 2026,
+        "published": "2026-06-19",
+        "canonical_id": "arXiv:2606.21633",
+        "arxiv_id": "2606.21633",
+        "authors": [
+          "권오민",
+          "Doyeon Kim",
+          "Jongseok Park",
+          "Seung Yul Lee",
+          "Ion Stoica",
+          "Jae W. Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.16332",
+      "identity_tokens": [
+        "id:arXiv:2606.16332",
+        "title:smepilot characterizing and optimizing llm inference with scalable matrix extensions",
+        "url:https://arxiv.org/abs/2606.16332"
+      ],
+      "record": {
+        "title": "SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions",
+        "source_url": "https://arxiv.org/abs/2606.16332",
+        "year": 2026,
+        "published": "2026-06-15",
+        "canonical_id": "arXiv:2606.16332",
+        "arxiv_id": "2606.16332",
+        "authors": [
+          "F Chen",
+          "Haibo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.13708",
+      "identity_tokens": [
+        "id:arXiv:2606.13708",
+        "title:tiara a programmable linerate isa for remote memory access",
+        "url:https://arxiv.org/abs/2606.13708"
+      ],
+      "record": {
+        "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+        "source_url": "https://arxiv.org/abs/2606.13708",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.13708",
+        "arxiv_id": "2606.13708",
+        "authors": [
+          "Bojie Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01725",
+      "identity_tokens": [
+        "id:arXiv:2606.01725",
+        "title:characterization of multimodel agentic ai systems on general tasks via tracedriven simulation",
+        "url:https://arxiv.org/abs/2606.01725"
+      ],
+      "record": {
+        "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+        "source_url": "https://arxiv.org/abs/2606.01725",
+        "year": 2026,
+        "published": "2026-06-01",
+        "canonical_id": "arXiv:2606.01725",
+        "arxiv_id": "2606.01725",
+        "authors": [
+          "Donghwan Kim",
+          "Prakhar Singh",
+          "Younghoon Min",
+          "Jongryool Kim",
+          "Jongse Park",
+          "Kiwan Maeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.10380",
+      "identity_tokens": [
+        "id:DOI:10.1145/3745756.3809195",
+        "id:arXiv:2605.10380",
+        "title:agentx full pipeline acceleration of ondevice ai agents",
+        "url:https://doi.org/10.1145/3745756.3809195"
+      ],
+      "record": {
+        "title": "Agent-X: Full Pipeline Acceleration of On-device AI Agents",
+        "source_url": "https://doi.org/10.1145/3745756.3809195",
+        "year": 2026,
+        "published": "2026-05-29",
+        "canonical_id": "arXiv:2605.10380",
+        "arxiv_id": "2605.10380",
+        "authors": [
+          "Jinha Chung",
+          "Byeongjun Shin",
+          "Jiin Kim",
+          "Minsoo Rhu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:da86899b8486c72500efd28a7b46f6e185f892778882737c585fbff802c2cc64",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
