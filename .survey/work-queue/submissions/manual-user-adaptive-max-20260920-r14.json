@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r14",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、merging・differentiable pruning・neuron reconstruction系を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.04805",
+      "title": "PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference",
+      "source_url": "https://arxiv.org/abs/2511.04805",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-sparse-merging-bitpacked.md",
+      "priority": 98,
+      "reason": "training-free sparse expert mergingとbit-packed inferenceを組み合わせ、高compression ratioでもaccuracyと実行効率を両立する。"
+    },
+    {
+      "canonical_id": "arXiv:2510.14436",
+      "title": "MergeMoE: Efficient Compression of MoE Models via Expert Output Merging",
+      "source_url": "https://arxiv.org/abs/2510.14436",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.14436-mergemoe-output-merging.md",
+      "priority": 97,
+      "reason": "parameter averagingではなくexpert output mergingとして理論化し、MoE compressionのmerging原理を整理する。"
+    },
+    {
+      "canonical_id": "arXiv:2509.16105",
+      "title": "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2509.16105",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
+      "priority": 98,
+      "reason": "layerごとのexpert redundancy差に応じてpruning率を微分可能に適応させるnon-uniform compression。"
+    },
+    {
+      "canonical_id": "arXiv:2509.10377",
+      "title": "Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2509.10377",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md",
+      "priority": 97,
+      "reason": "expert-level drop後にneuron-level recombinationで機能を回復するtask-agnostic・retraining-free compression。"
+    },
+    {
+      "canonical_id": "arXiv:2509.19781",
+      "title": "Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference",
+      "source_url": "https://arxiv.org/abs/2509.19781",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.19781-task-aware-expert-merging-online.md",
+      "priority": 96,
+      "reason": "online inferenceでtask-aware adaptive routerとexpert mergingを組み合わせ、resource-constrained deployment向けにmodel footprintとrouting complexityを削減する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-merge-compress",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-merge-compress.json",
+    "receipt": "sha256:b625c9595029007fb123f307419f39ca6e7431f522462fa2fa8f964862f60877"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+    "round": "adaptive-max-r14-compression",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334",
+    "query_summary": "Merge Then Compress forward citationsからmerging・adaptive pruning・neuron reconstructionの5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "continue remaining high-directness Adaptive Expert Computation / Compression candidates",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "Adaptive Expert Computation / Compression",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2310.01334",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 100,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 50,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 30,
+        "candidate_accepted_count": 5,
+        "position": "prechecked result set"
+      }
+    ]
+  }
+}
