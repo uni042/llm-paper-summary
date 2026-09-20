@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2503.20552",
+      "arxiv_id": "2503.20552",
+      "title": "Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation",
+      "source_url": "https://arxiv.org/abs/2503.20552",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md",
+      "priority": 96,
+      "reason": "Attention-disaggregation serving system that offloads decode attention work to underutilized prefill resources to improve cluster utilization and throughput."
+    },
+    {
+      "canonical_id": "arXiv:2504.19442",
+      "arxiv_id": "2504.19442",
+      "title": "Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler",
+      "source_url": "https://arxiv.org/abs/2504.19442",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+      "priority": 94,
+      "reason": "Distributed Triton compiler extension supporting communication primitives and computation-memory-communication overlap across up to 64 devices."
+    },
+    {
+      "canonical_id": "arXiv:2506.04301",
+      "arxiv_id": "2506.04301",
+      "title": "The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective",
+      "source_url": "https://arxiv.org/abs/2506.04301",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2025-2506.04301-cost-dynamic-reasoning.md",
+      "priority": 90,
+      "reason": "System-level characterization of agentic/test-time-scaling workloads covering latency, resource use, energy, and datacenter power implications."
+    },
+    {
+      "canonical_id": "arXiv:2605.00528",
+      "arxiv_id": "2605.00528",
+      "title": "SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2605.00528",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+      "priority": 97,
+      "reason": "Workflow-level GPU scheduler for agentic inference that preserves/reuses intermediate KV state and coordinates affinity, batching, stealing, and fairness."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3620666.3651324",
+      "title": "IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System",
+      "source_url": "https://doi.org/10.1145/3620666.3651324",
+      "paper_path": "papers/inference/02-hardware-accelerators/2024-ianus-npu-pim-unified-memory.md",
+      "priority": 91,
+      "reason": "NPU-PIM unified-memory accelerator with PIM access scheduling and workload mapping; evaluated on transformer/GPT workloads with hardware prototype evidence."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset300",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset300.json",
+    "receipt": "sha256:6a869e9f0f800f7a0d763b28e587f54d6fe22f2ef81207be2f391f2301cce452"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20",
+    "round": "refcuration-stress-20260920-offset300-c",
+    "axis": "structured references stress probe at raw offset 300",
+    "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 300. Strong systems/memory/kernel/scheduling papers were retained; model reports, datasets, evaluation platforms, and agent application frameworks were classified out.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2503.20552",
+      "arXiv:2504.19442",
+      "arXiv:2506.04301",
+      "arXiv:2605.00528",
+      "DOI:10.1145/3620666.3651324"
+    ],
+    "next_axis_hint": "Probe relation_count≈3 references next; yield remains high at relation_count≈5."
+  }
+}
