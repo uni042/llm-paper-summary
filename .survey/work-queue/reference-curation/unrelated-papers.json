@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-20T03:59:00+00:00",
-  "record_count": 30,
+  "updated_at": "2026-09-20T04:04:00+00:00",
+  "record_count": 38,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -444,6 +444,126 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
       ],
       "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4"
+    },
+    "arXiv:2605.00674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00674",
+      "identity_tokens": [
+        "arXiv:2605.00674"
+      ],
+      "reason": "Evaluation platform/benchmark work rather than an inference or training systems contribution.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "title": "Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with LLMs"
+    },
+    "DOI:10.1007/s11704-024-40555-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11704-024-40555-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11704-024-40555-y"
+      ],
+      "reason": "Application/task survey rather than an LLM systems survey.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+      ],
+      "title": "Large language models for generative information extraction: a survey"
+    },
+    "DOI:10.1016/0304-3975(94)90151-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/0304-3975(94)90151-1",
+      "identity_tokens": [
+        "DOI:10.1016/0304-3975(94)90151-1"
+      ],
+      "reason": "General scheduling-theory paper; useful theoretical background to later LLM schedulers but not an LLM systems contribution.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Nonclairvoyant scheduling"
+    },
+    "DOI:10.1016/j.tcs.2004.05.023": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.tcs.2004.05.023",
+      "identity_tokens": [
+        "DOI:10.1016/j.tcs.2004.05.023"
+      ],
+      "reason": "General scheduling-theory paper rather than an LLM serving systems contribution.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Semi-clairvoyant scheduling"
+    },
+    "DOI:10.1016/s0167-8191(06)80021-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/s0167-8191(06)80021-9",
+      "identity_tokens": [
+        "DOI:10.1016/s0167-8191(06)80021-9"
+      ],
+      "reason": "Historical parallel-computing benchmark study, not sufficiently specific to the LLM systems survey.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md"
+      ],
+      "title": "The communication challenge for MPP: Intel Paragon and Meiko CS-2"
+    },
+    "DOI:10.1016/s0304-3975(02)00488-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/s0304-3975(02)00488-7",
+      "identity_tokens": [
+        "DOI:10.1016/s0304-3975(02)00488-7"
+      ],
+      "reason": "General scheduling-theory result rather than an LLM systems contribution.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Lower bounds for on-line single-machine scheduling"
+    },
+    "DOI:10.1016/s0377-2217(02)00123-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/s0377-2217(02)00123-6",
+      "identity_tokens": [
+        "DOI:10.1016/s0377-2217(02)00123-6"
+      ],
+      "reason": "Operations-research packing survey unrelated to LLM inference/training systems.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Two-dimensional packing problems: A survey"
+    },
+    "DOI:10.1038/s41592-019-0686-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41592-019-0686-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41592-019-0686-2"
+      ],
+      "reason": "General scientific-computing software paper rather than an LLM systems contribution.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md"
+      ],
+      "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python"
     }
   }
 }
