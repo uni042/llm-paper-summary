@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-19T18:48:00+00:00",
-  "record_count": 32,
+  "updated_at": "2026-09-20T03:50:00+00:00",
+  "record_count": 36,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -165,12 +165,21 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2401.06066",
       "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.70",
         "arXiv:2401.06066"
       ],
       "reason": "Strong MoE architecture paper, but primarily model architecture rather than serving/offload/parallel-runtime systems; retain for optional reconsideration.",
       "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
+        "papers/inference/05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md",
+        "papers/inference/06-moe-expert-offloading/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md"
+      ],
       "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     },
     "arXiv:2309.16609": {
@@ -396,6 +405,86 @@
       "last_checked_at": "2026-09-19T18:48:00+00:00",
       "linked_from": [],
       "title": "GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models"
+    },
+    "arXiv:2406.18665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.18665",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.18665",
+        "arXiv:2406.18665"
+      ],
+      "reason": "Cost/quality model routing is deployment-relevant, but this is primarily a learned routing method rather than a focused inference-system implementation.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/06-serving-scheduling/2025-2508.03611-block-predictive-load-balancing.md",
+        "papers/inference/06-serving-scheduling/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
+        "papers/inference/06-serving-scheduling/2026-2604.10907-routerwise-resource-allocation-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
+      ],
+      "title": "RouteLLM: Learning to Route LLMs with Preference Data"
+    },
+    "arXiv:2510.26692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.26692",
+      "identity_tokens": [
+        "arXiv:2510.26692"
+      ],
+      "reason": "Efficient attention architecture with deployment relevance, but primarily a model-architecture paper rather than a focused systems contribution.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.07447-dbms-inspired-cache-replacement-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07816-kalman-delta-networks-associative-memory.md",
+        "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md"
+      ],
+      "title": "Kimi Linear: An Expressive, Efficient Attention Architecture"
+    },
+    "arXiv:2401.05459": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.05459",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.05459",
+        "arXiv:2401.05459"
+      ],
+      "reason": "Broad personal-agent survey; systems efficiency is one component but the paper is not focused enough for immediate systems Research.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/05-kv-cache-offloading/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.01536-celty-dual-sparse-gpu-kernel.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/moe/2609.14643.md"
+      ],
+      "title": "Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security"
+    },
+    "arXiv:1905.12322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1905.12322",
+      "identity_tokens": [
+        "arXiv:1905.12322"
+      ],
+      "reason": "Important numerical-format background for efficient training, but not LLM-specific and lower priority than focused LLM training-system papers.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/06-expert-offloading/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2605.19893-specsa-sparse-speculative-verification.md",
+        "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md"
+      ],
+      "title": "A Study of BFLOAT16 for Deep Learning Training"
     }
   }
 }
