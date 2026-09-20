@@ -2,22 +2,73 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b7497b14d23d6038915986e3",
+  "attempt_id": "attempt-83e541e2c7e7c88135f96320",
   "job_id": "job-research-89e4b35d6854b9b6",
   "data": {
     "overview": "90%圧縮の主設定でPARSERは、QwenとDeepSeekの双方で比較法より高い平均精度を保ちながら、最も省メモリな比較法とほぼ同じピークGPUメモリを実現する。圧縮率を10～90%へ変えても精度優位が続き、同じ精度目標に必要なGPUメモリも少ない。追加の重要度基準・選択方式の切り分けから、改善は単なる較正データ利用ではなく、専門家出力に基づく次元重要度と層内大域選択の双方から生じることを示す。",
     "key_results": [
-      {"metric": "90%圧縮時の7課題平均精度", "value": "Qwen 49.24%、DeepSeek 47.16%", "baseline": "D2MoE 45.22%、41.66%；非圧縮59.12%、59.64%", "condition": "最後の3分の2の層を圧縮、Dolly-15K較正", "interpretation": "最良比較法に対して非圧縮モデルとの精度差をQwenで1.41倍、DeepSeekで1.44倍縮小する。"},
-      {"metric": "ピークGPUメモリ削減", "value": "Qwen 36.0%、DeepSeek 33.9%削減", "baseline": "非圧縮モデル", "condition": "90%圧縮", "interpretation": "精度改善を得てもメモリ削減は既存圧縮法と同等で、最小メモリ比較法との差はQwen 0.08%、DeepSeek 0.49%に留まる。"},
-      {"metric": "同一精度目標で必要なピークGPUメモリ", "value": "比較法はPARSERよりQwenで平均1.17倍、DeepSeekで平均1.16倍多い", "baseline": "MoE-I²、HC-SMoE、D2MoE、ResMoE", "condition": "非圧縮精度の90%、85%、80%を目標", "interpretation": "圧縮率そのものではなく実メモリを横軸にしてもPARSERの精度・メモリ交換関係が優れる。"},
-      {"metric": "出力重要度の切り分け", "value": "90/80/70%でQwen 49.24/52.76/54.43%、DeepSeek 47.16/51.90/55.15%", "baseline": "行列誤差最小化とWanda", "condition": "同じ残差疎化枠組みで重要度基準だけ変更", "interpretation": "三圧縮率平均で行列誤差基準よりQwen 1.09倍、DeepSeek 1.15倍高く、出力誤差を直接見る目的関数の寄与を確認する。"},
-      {"metric": "大域プーリングの切り分け", "value": "Qwen 49.24%、DeepSeek 47.16%", "baseline": "局所選択48.28%/45.12%、ルーティング頻度付き48.60%/46.56%", "condition": "90%圧縮", "interpretation": "専門家単位の粗い重みではなく次元ごとの出力影響を層全体で直接比較する方が有効である。"},
-      {"metric": "圧縮時間", "value": "Qwen 40.19分、DeepSeek 61.77分", "baseline": "ResMoE 34.23/53.83分、D2MoE 54.99/77.26分", "condition": "90%圧縮", "interpretation": "出力重要度推定でResMoEより約15～17%遅いが、一回限りの前処理でありD2MoEより速い。"},
-      {"metric": "サービング処理量", "value": "Qwen 18.64、DeepSeek 14.57トークン/秒", "baseline": "ResMoE 17.78/14.06、D2MoE 10.40/7.16", "condition": "圧縮モデル、WikiText入力", "interpretation": "残差を単一行列形で保持するため圧縮前処理の追加費用が推論時の低速化へ転化せず、比較法を最大1.05倍、2.03倍上回る。"}
+      {
+        "metric": "90%圧縮時の7課題平均精度",
+        "value": "Qwen 49.24%、DeepSeek 47.16%",
+        "baseline": "D2MoE 45.22%、41.66%；非圧縮59.12%、59.64%",
+        "condition": "最後の3分の2の層を圧縮、Dolly-15K較正",
+        "interpretation": "最良比較法に対して非圧縮モデルとの精度差をQwenで1.41倍、DeepSeekで1.44倍縮小する。"
+      },
+      {
+        "metric": "ピークGPUメモリ削減",
+        "value": "Qwen 36.0%、DeepSeek 33.9%削減",
+        "baseline": "非圧縮モデル",
+        "condition": "90%圧縮",
+        "interpretation": "精度改善を得てもメモリ削減は既存圧縮法と同等で、最小メモリ比較法との差はQwen 0.08%、DeepSeek 0.49%に留まる。"
+      },
+      {
+        "metric": "同一精度目標で必要なピークGPUメモリ",
+        "value": "比較法はPARSERよりQwenで平均1.17倍、DeepSeekで平均1.16倍多い",
+        "baseline": "MoE-I²、HC-SMoE、D2MoE、ResMoE",
+        "condition": "非圧縮精度の90%、85%、80%を目標",
+        "interpretation": "圧縮率そのものではなく実メモリを横軸にしてもPARSERの精度・メモリ交換関係が優れる。"
+      },
+      {
+        "metric": "出力重要度の切り分け",
+        "value": "90/80/70%でQwen 49.24/52.76/54.43%、DeepSeek 47.16/51.90/55.15%",
+        "baseline": "行列誤差最小化とWanda",
+        "condition": "同じ残差疎化枠組みで重要度基準だけ変更",
+        "interpretation": "三圧縮率平均で行列誤差基準よりQwen 1.09倍、DeepSeek 1.15倍高く、出力誤差を直接見る目的関数の寄与を確認する。"
+      },
+      {
+        "metric": "大域プーリングの切り分け",
+        "value": "Qwen 49.24%、DeepSeek 47.16%",
+        "baseline": "局所選択48.28%/45.12%、ルーティング頻度付き48.60%/46.56%",
+        "condition": "90%圧縮",
+        "interpretation": "専門家単位の粗い重みではなく次元ごとの出力影響を層全体で直接比較する方が有効である。"
+      },
+      {
+        "metric": "圧縮時間",
+        "value": "Qwen 40.19分、DeepSeek 61.77分",
+        "baseline": "ResMoE 34.23/53.83分、D2MoE 54.99/77.26分",
+        "condition": "90%圧縮",
+        "interpretation": "出力重要度推定でResMoEより約15～17%遅いが、一回限りの前処理でありD2MoEより速い。"
+      },
+      {
+        "metric": "サービング処理量",
+        "value": "Qwen 18.64、DeepSeek 14.57トークン/秒",
+        "baseline": "ResMoE 17.78/14.06、D2MoE 10.40/7.16",
+        "condition": "圧縮モデル、WikiText入力",
+        "interpretation": "残差を単一行列形で保持するため圧縮前処理の追加費用が推論時の低速化へ転化せず、比較法を最大1.05倍、2.03倍上回る。"
+      }
     ],
-    "negative_results": ["出力重要度は各隠れ次元を独立に評価するため、複数次元を同時削除したときの誤差間の強化・相殺を表す交差項を無視する。", "較正データ源をDolly-15KからC4やWikiTextへ変えるとDeepSeekの精度変動は最大標準偏差2.03ポイントとなり、分布依存性は完全には消えない。", "重要度推定により圧縮時間はResMoEよりQwenで1.17倍、DeepSeekで1.15倍長い。", "対象は推論時圧縮であり、学習・微調整中の圧縮へ理論をそのまま適用できない。"],
+    "negative_results": [
+      "出力重要度は各隠れ次元を独立に評価するため、複数次元を同時削除したときの誤差間の強化・相殺を表す交差項を無視する。",
+      "較正データ源をDolly-15KからC4やWikiTextへ変えるとDeepSeekの精度変動は最大標準偏差2.03ポイントとなり、分布依存性は完全には消えない。",
+      "重要度推定により圧縮時間はResMoEよりQwenで1.17倍、DeepSeekで1.15倍長い。",
+      "対象は推論時圧縮であり、学習・微調整中の圧縮へ理論をそのまま適用できない。"
+    ],
     "quality_impact": "圧縮率90%という強い設定でも、同程度の実メモリ削減を保ちながら比較法より非圧縮精度に近い。較正集合の種・規模を変えた場合の変動は小さく、データ源変更ではやや大きな変動が残る。",
     "interpretation": "改善の因果は、削除候補を『元残差行列に近いか』ではなく『専門家の最終出力をどれだけ変えるか』で順位付けすることにある。ゲート・アップ射影の誤差は活性化と要素積を介して隠れ表現へ伝わり、さらにダウン射影誤差と相互作用するため、行列単体の近似誤差は最終精度の代理指標として弱い。PARSERはこの結合構造を隠れ次元単位で評価し、さらに層全体で削除先を融通するので、同じ削減量でも低影響な残差を優先して除ける。"
   },
-  "reservation": {"claim_id": "claim-b7497b14d23d6038915986e3", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-83e541e2c7e7c88135f96320",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
