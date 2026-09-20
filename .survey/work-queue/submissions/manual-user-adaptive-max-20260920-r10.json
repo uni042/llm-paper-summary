@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r10",
+    "summary": "Alloc-MoEの被引用からtoken-adaptive shared/route decompositionとrefinement-aware compute allocationを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.10392",
+      "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+      "source_url": "https://arxiv.org/abs/2608.10392",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.10392-share-first-route-what-remains.md",
+      "priority": 99,
+      "reason": "shared computationを先に抽出し、残余に必要なexpert capacityをtoken-adaptiveに割り当てる統合設計。adaptive expert computationの最新直系候補。"
+    },
+    {
+      "canonical_id": "arXiv:2608.01784",
+      "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.01784",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.01784-reflex-refinement-aware-compute-allocation.md",
+      "priority": 95,
+      "reason": "diffusion LMでtokenのrefinement需要に応じてexpert budgetを変える。固定budgetを需要適応へ置き換える設計として有用。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-alloc-moe",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-alloc-moe.json",
+    "receipt": "sha256:3b74d7c0d9fad61998da6637392e105118b95d8dbda9304b606dd4356c3952c0"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+    "round": "adaptive-max-r10-alloc-followup",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2604.08133 (budget-aware expert activation allocation)",
+    "query_summary": "Alloc-MoE forward citationsの未収録3件からpage fitが強い2件を選定。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "memory-efficient adaptive routing seedへ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "budget-aware expert allocation",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2604.08133",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 4,
+        "unseen_result_count": 3,
+        "duplicate_filtered_count": 1,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 3,
+        "candidate_accepted_count": 2,
+        "position": "1 page"
+      }
+    ]
+  }
+}
