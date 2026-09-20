@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-391330299d0747934ae3c7ee",
-  "job_id": "job-research-abc92cd8a94f1144",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-391330299d0747934ae3c7ee",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-391330299d0747934ae3c7ee","job_id":"job-research-abc92cd8a94f1144","data":{"limitations":"KVを捨てる近似方式なので、極端な圧縮では完全KVより品質が落ちる。重要位置の選択は末尾観測窓の注意割当が生成中も有効という経験的性質に依存し、タスクやモデルがこの性質を満たさない場合の保証はない。主要な超長文速度・容量試験は単一A100 80GBであり、多GPU配信や連続バッチ下のスループット効果は中心評価ではない。公開実装も特定Transformers版を基準としており、新しい注意実装への互換性確認が必要である。","differences":"StreamLLMは最近トークンとattention sinkを固定保持し、H2OやScissorHandsは主に生成中に累積注意などからKVを削除する。SnapKVは長大なプロンプトKV自体を生成開始前に圧縮し、入力ごと・注意ヘッドごとに重要位置を選ぶ点が異なる。FastGenのような複数方策選択に対しても、末尾観測窓から直接将来参照位置を推定し、近傍プーリングで情報まとまりを保存する単純な一回処理を特徴とする。","implementation_status":"著者系のFasterDecoding/SnapKVリポジトリでApache-2.0の実装が公開され、Llama、Mistral、Mixtral向けモンキーパッチとLongBench実験を含む。論文の疑似コードと対応するsnapkv_utils実装があり、HuggingFace系へ少数変更で導入可能。","research_positioning":"KVキャッシュ最適化の中でも、量子化ではなくトークン選択によってプロンプト由来KVを削る系統の代表的初期手法である。生成中のevictionだけでは長い入力そのもののメモリ・注意計算を解決できないという問題設定を明確化し、入力依存かつヘッド別の重要位置選択を実用的な固定容量キャッシュへ落とし込んだ。後続手法を比較する際には、圧縮率だけでなく、観測窓が質問依存の重要情報をどこまで予測できるか、局所近傍をどう保持するかという軸を与える。"},"reservation":{"claim_id":"claim-391330299d0747934ae3c7ee","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
