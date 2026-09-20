@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-da94ea040a72507f8287f79f",
-  "job_id": "job-research-207dd824b238b749",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-da94ea040a72507f8287f79f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-da94ea040a72507f8287f79f","job_id":"job-research-207dd824b238b749","data":{"overview":"ECHOは低負荷BS=1でモデル・タスク横断1.63〜5.35倍の自己回帰比実時間高速化を示し、特にQwen3-235Bでは平均2.02倍でDDDの1.77倍、EAGLE-3の1.69倍を上回った。高同時実行では検証計算が飽和した後に固定木の無駄が顕在化し、Llama-3.1-8BのBS=256でEAGLE-3比8%、Qwen3-235BのBS=256で14.4%のスループット改善を示した。密な頻回判定より疎な判定が良く、深さごとのしきい値較正も単一しきい値より有効だった。","key_results":[{"metric":"低負荷実時間高速化","value":"最大5.35倍、全体で1.63〜5.35倍","baseline":"通常自己回帰デコード","condition":"BS=1、複数モデル・5ベンチマーク","interpretation":"候補木を信頼度に合わせて伸縮し、不要な検証候補を減らしながら受理長を確保する。"},{"metric":"Qwen3-235B平均高速化","value":"2.02倍。DDD 1.77倍より14%、EAGLE-3 1.69倍より19%高い","baseline":"DDDおよびEAGLE-3","condition":"BS=1、5ベンチマーク平均","interpretation":"巨大モデルの鋭い確率分布でも疎な信頼度判定が過剰な候補拡張を抑える。"},{"metric":"高負荷スループット","value":"Llama-3.1-8Bで10,703→11,551 tok/s、8%改善","baseline":"EAGLE-3","condition":"BS=256","interpretation":"検証が計算律速になった後、低信頼枝を早く打ち切ることで検証バッチの無駄を減らす。"},{"metric":"高負荷Qwen3-235Bスループット","value":"2,803→3,207 tok/s、14.4%改善","baseline":"EAGLE-3","condition":"BS=256","interpretation":"打ち切った低信頼要求の検証枠を高信頼要求の深さ拡張へ移し、固定予算内の受理トークン総数を増やす。"},{"metric":"疎な判定の寄与","value":"11,551対10,978 tok/sで約5%改善","baseline":"全深さで判定する密なゲート変種","condition":"Llama-3.1-8B、BS=256","interpretation":"中間深さの不確かな信頼度で頻繁に判断すると、判定コストと誤打切りが増える。"},{"metric":"深さ別しきい値の寄与","value":"3,046→3,207 tok/s、5.3%改善","baseline":"全深さ共通の固定しきい値","condition":"Qwen3-235B","interpretation":"深くなるほど正しい候補でも確率が低下するため、深さ別較正が過剰打切りと過剰拡張を同時に抑える。"}],"negative_results":"EAGLE-3のような固定木は低負荷では高い平均受理長を得られても、高同時実行で検証計算が飽和すると余分な枝がそのままスループット損失になる。逆に動的制御を全深さへ密に入れるとECHOより約5%遅くなる条件があり、制御回数を増やすほど良いわけではない。単一しきい値も深さによる確率分布の変化へ追従できず性能を落とす。","interpretation":"高同時実行で重要なのは1要求の平均受理長を最大化することではなく、固定された対象モデル検証計算の中でバッチ全体が何トークン前進できるかである。小型モデルは計算飽和が遅いため主に不要枝の切断が効き、235B級では早期に飽和するため要求間の予算再配分がより重要になる。","quality_impact":"対象モデル重みと投機的デコードの受理条件を変更しないため、通常自己回帰と同じ出力分布を保つ。高速化は候補生成・検証予算の配置変更によるもので、生成品質との交換ではない。"},"reservation":{"claim_id":"claim-da94ea040a72507f8287f79f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
