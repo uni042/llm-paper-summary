@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3e684f03399af677163ad4a2",
-  "job_id": "job-research-d223f7a181256e07",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e684f03399af677163ad4a2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3e684f03399af677163ad4a2","job_id":"job-research-d223f7a181256e07","data":{"limitations":"context-specific pair scoringは圧縮時に標準prefillのおよそ2倍のattention計算を追加するため、一回しか質問しないcontextでは償却できない場合がある。安全なcache ratioはtask依存で、retrieval-intensiveなPrefix-Suffix等は30%保持で性能が落ちる。主評価は単一A100で、実際のmulti-GPU serving engine全体のthroughput・batching効果は直接測っていない。圧縮はモデル出力挙動を完全には保持せず、privacy関連の拒否が圧縮後に変化する例があり、平均accuracy以外のalignment評価が必要である。chunked scoringはピークメモリを抑えるが総attention計算自体は初回prefillに対して追加される。","differences":"SnapKV/PyramidKV等は現在queryまたはtrailing contextのattentionから重要KVを選ぶため、そのqueryには強いが圧縮cacheを別queryへ再利用しにくい。KVzipは将来queryを使わず元context再構成をproxy taskにするため、一度圧縮したcacheをmulti-queryで共有できる。H2O等のprefill attention scoreとも異なり、元contextをdecode側から読み直すcross-attention sparsityを利用する。DuoAttentionのcontext-independent head mask最適化に対しては、synthetic passkey optimizationではなく自然文再構成scoreをhead-levelへ集約し、数時間・8GPUの最適化を数forwardへ置換する。KIVI/QServe等の量子化とは競合せず直交的に併用できる。","implementation_status":"公式GitHub snu-mllab/KVzipを公開。pair-level/head-level eviction、2K chunk scoring、FlashAttention-2、量子化統合を含む。NeurIPS 2025 Oral。","research_positioning":"KV cache最適化のうち、単発query向けオンラインevictionではなく、事前計算context cacheを複数queryへ再利用するcache-augmented generationやpersonal agent用途を狙うquery-agnostic compressionに位置する。再構成を自己教師的な情報保持判定として使い、KV memory削減とattention latency削減を同時に得る。オフロードやretrieval attentionとは異なりcache自体を物理的に小さくするため、それらと組み合わせる余地がある。"},"reservation":{"claim_id":"claim-3e684f03399af677163ad4a2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
