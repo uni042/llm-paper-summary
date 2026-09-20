@@ -162,8 +162,8 @@ def check(root, inventory):
             if "sources" in meta and (not isinstance(sources, list) or not sources):
                 issue("paper_invalid_metadata", name, "sources must be a non-empty list")
             published = meta.get("published")
-            if "published" in meta and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(published)):
-                issue("paper_invalid_metadata", name, "published must use YYYY-MM-DD")
+            if "published" in meta and not re.fullmatch(r"\d{4}-\d{2}(?:-\d{2})?", str(published)):
+                issue("paper_invalid_metadata", name, "published must use YYYY-MM or YYYY-MM-DD")
             if meta.get("arxiv_id"):
                 categories = meta.get("arxiv_categories")
                 if not isinstance(categories, dict) or not categories.get("primary"):
