@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:24:31+00:00",
+  "updated_at": "2026-09-20T20:25:05+00:00",
   "last_run_key": "2026-09-21T05:01:46+09:00",
-  "last_round": "round-12",
+  "last_round": "round-13",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T09:00:00+09:00",
-      "round": "specialist-pnm-attention-4",
-      "axis": "processing-near-memory・retrieval sparse attention・KV外置き",
-      "query_summary": "GPU外大容量memoryでKVとretrieval indexを処理するPNM/PIM隣接系統を探索し、repository canonical ID検索で未登録を確認した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "CXL/near-memoryとMoE expert placementを横断する異種memory scheduling、または新着2609系へ戻る",
-      "source_submission": "work-queue/submissions/20260916T0914JST-discovery-specialist-pnm-attention-4.json"
-    },
     {
       "run_key": "2026-09-16T09:00:00+09:00",
       "round": "specialist-cxl-pim-5",
@@ -7867,6 +7852,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0526JST-discovery-round-12-kernel.json"
+    },
+    {
+      "run_key": "2026-09-21T05:01:46+09:00",
+      "round": "round-13",
+      "axis": "OpenAlex recent SSD NVMe LLM inference offload",
+      "query_summary": null,
+      "provider": "openalex",
+      "source_url": "https://api.openalex.org/works?search=LLM%20inference%20SSD%20NVMe%20offload%20storage&sort=publication_date:desc&per-page=100",
+      "citation_direction": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0527JST-discovery-round-13-ssd.json"
     }
   ],
   "axes": {
@@ -15167,6 +15173,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 1,
       "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "OpenAlex recent SSD NVMe LLM inference offload": {
+      "last_run_key": "2026-09-21T05:01:46+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
