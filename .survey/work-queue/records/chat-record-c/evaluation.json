@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f7ba62a568920d99b231d2ff",
-  "job_id": "job-research-0f282c93dba72c85",
-  "data": {
-    "hardware": "推論の実測スループットは1.3Bモデルを単一NVIDIA A100でデコードして測定する。論文は160M、410M、1.3Bの三規模を比較し、各規模で同じ背骨・データ・トークン化器・最適化器・学習トークン予算を揃える。",
-    "software": "RoPE位置表現、SwiGLU全結合層、RMSNorm、グループ化クエリ注意機構を持つデコーダ専用背骨をPythia相当設定で構築する。MoE/TriRouteは8専門家・上位2選択で、制御器は幅128の二層多層パーセプトロン。AdamW、コサイン学習率、bf16を用い、各設定を3乱数種で学習する。",
-    "methodology": "PileとRedPajamaの重複除去混合データで、約20トークン/パラメータの計算最適予算として160Mは3.2B、410Mは8.2B、1.3Bは26Bトークンを学習する。比較対象は密モデル、MoD単独、MoE単独、KIVI型KV量子化単独、三方式を独立に格子探索して組み合わせた方式、TriRoute。代表点は密モデル比55%推論FLOPs・40% KVメモリで揃える。Pile検証パープレキシティ、LAMBADA/HellaSwag/PIQA/WinoGrande/ARCの下流精度に加え、希少実体、コード、数学、8k長文、GSM8Kを末尾事例として測定する。さらにFLOPs/トークン、KVバイト/トークン、単一A100上のデコードスループットを測る。",
-    "scope": "主評価は160M〜1.3Bの新規学習モデルであり、10B以上や実運用規模の巨大MoEは未検証である。注意モードは省略・局所・完全、KV精度は2/4/8/16ビットに固定され、KV追い出し自体は別軸として扱う。末尾頑健性は希少実体・コード・数学・長文などの代理指標であり、低資源言語など公平性の包括評価は行っていない。"
-  },
+  "attempt_id": "attempt-6f2e6a2b41a89ff181e07ec0",
+  "job_id": "job-research-159e5ee7f39d28f8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f7ba62a568920d99b231d2ff",
+    "claim_id": "claim-6f2e6a2b41a89ff181e07ec0",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

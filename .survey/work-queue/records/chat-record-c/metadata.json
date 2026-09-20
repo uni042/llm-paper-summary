@@ -2,57 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f7ba62a568920d99b231d2ff",
-  "job_id": "job-research-0f282c93dba72c85",
-  "data": {
-    "canonical_id": "arXiv:2607.06601",
-    "arxiv_id": "2607.06601",
-    "doi": "10.48550/arXiv.2607.06601",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
-    "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
-    "summary": "TriRouteは、注意機構の計算量、混合専門家モデル（Mixture-of-Experts; MoE）の専門家選択、KVキャッシュの量子化精度を別々に最適化すると、同じトークンの重要度に関する判断が食い違い、希少語や数値など重要な末尾事例へ十分な計算資源を配れない問題を扱う。共有された軽量制御器が各トークン・各層で注意機構を省略・局所・完全のどれにするか、どの専門家を使うか、KVキャッシュを2/4/8/16ビットのどれで保持するかを共同決定する。160M〜1.3Bモデルでは、密モデル比55%の推論FLOPsと40%のKVメモリという同一予算で、三方式を独立調整した比較対象より低いパープレキシティと高い下流精度を示し、1.3Bでは密モデルの約1.7倍のデコード速度を実測した。",
-    "list_summary": "注意機構・MoE専門家・KVキャッシュ精度を単一制御器で共同配分し、同一計算・メモリ予算で独立最適化より品質と希少事例の頑健性を改善する。",
-    "authors": [
-      "Andrii Balashov",
-      "Olena Ponomarova"
-    ],
-    "authors_affiliations": "一次資料記載の著者情報に基づく",
-    "published": "2026-07-07",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint",
-    "lineage": "conditional computation / mixture-of-experts / mixture-of-depths / KV-cache quantization / adaptive inference",
-    "topics": [
-      "条件付き計算",
-      "混合専門家モデル",
-      "適応型注意機構",
-      "KVキャッシュ量子化",
-      "共同ルーティング"
-    ],
-    "importance": "従来は独立に扱われていた計算深度・専門家・KV精度を、同じトークン重要度に基づく一つの予算付き意思決定へ統合し、単軸最適化の組合せで起きる跨軸崩壊と末尾品質低下を直接扱う。",
-    "implementation": "論文は制御器・費用モデル・損失の自己完結したPyTorch参照実装と学習設定の公開を記載している。",
-    "hardware_evaluation": "1.3Bモデルの推論スループットを単一NVIDIA A100で実測。学習は160M、410M、1.3Bの3規模を計算最適トークン数で実施。",
-    "quality_effect": "密モデル比55% FLOPs・40% KVメモリで、1.3BのPileパープレキシティ9.7は密モデル9.8と同等以上で、平均下流精度54.5は密モデル54.8に近い。希少実体・コード・数学・長文・GSM8Kでも独立組合せより密モデルへ近い。",
-    "source": "https://arxiv.org/abs/2607.06601",
-    "sources": [
-      "https://arxiv.org/abs/2607.06601",
-      "https://www.researchgate.net/publication/408623349_TriRoute_Unified_Learned_Routing_for_Joint_Adaptive_Attention_Experts_and_KV-Cache_Allocation"
-    ],
-    "code": "",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary manuscript reference section",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-6f2e6a2b41a89ff181e07ec0",
+  "job_id": "job-research-159e5ee7f39d28f8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f7ba62a568920d99b231d2ff",
+    "claim_id": "claim-6f2e6a2b41a89ff181e07ec0",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
