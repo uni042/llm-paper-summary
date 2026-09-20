@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-f41da056f98a23fc46687f34",
+  "job_id": "job-research-8f68f6b8d4d62651",
+  "claim_id": "claim-f41da056f98a23fc46687f34",
+  "worker_id": "scheduled-chat-llm-survey",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this attempt. The arXiv abstract/metadata page was retrievable, but direct official arXiv HTML and PDF fetches both returned DisabledError in the runtime. A third-party ResearchGate rendering exposed substantial text, but workflow policy requires primary-source full reading and forbids using third-party copies/summaries to fill the five-slot record.",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2608.15299 — official arXiv metadata/abstract retrievable",
+    "https://arxiv.org/html/2608.15299 — runtime DisabledError",
+    "https://arxiv.org/pdf/2608.15299 — runtime DisabledError",
+    "ResearchGate rendering found but intentionally not used as primary-source evidence"
+  ],
+  "blocked_at": "2026-09-20T13:35:00Z"
+}
