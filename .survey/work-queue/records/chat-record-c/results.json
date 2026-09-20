@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6b53b1926ec03fe03eb46c7c","job_id":"job-research-95a4661f225665ff","data":{"overview":"公開OLMoE/QwenはSFT方式に関係なく中程度のk低下へかなり頑健で、PHDSの最大価値は調整不足モデルで複数kを一つのチェックポイントへ安定統合する点にある。内部CommonSense170KではPHDSが対応Oracle付近の精度を保ちつつ、別々のOracleチェックポイントを切替える場合よりcross-k回答一致率を7〜22%高めた。運用上は複数k専用モデルを1個へ統合でき、図2の内部例では学習量を50%削減した。","key_results":[{"metric":"OLMoE runtime sparsity shift","value":"k=8→6で相対QA低下1.2%、WikiText perplexity増6.4%","baseline":"k=8","condition":"OLMoE-1B-7B-0125","interpretation":"事前学習MoE自体が20〜30%程度のk削減へ頑健。"},{"metric":"Qwen runtime sparsity shift","value":"k=4→3で精度低下0.43%、perplexity増1.2%","baseline":"k=4","condition":"Qwen1.5-MoE-A2.7B","interpretation":"単一チェックポイントのグローバルkを下げても小さな品質差に留まる。"},{"metric":"cross-k回答一致率","value":"Oracle別チェックポイント比+7〜22%","baseline":"異なるk用のwell-specified Oracle checkpoint","condition":"内部モデルk=(2,4),(4,6)","interpretation":"同じPHDS重みをkだけ変える方がユーザー向け出力の一貫性を保ちやすい。"},{"metric":"内部k_pre=4 accuracy","value":"PHDS [2,3,4]→3: k=2/3/4で0.7085/0.7140/0.72388","baseline":"Oracle4: 0.66113/0.70663/0.72013","condition":"CommonSense170K平均","interpretation":"低k mis-specificationでOracle4より大幅に頑健。"},{"metric":"内部k_pre=6 accuracy","value":"PHDS [4,5]→4: k=4/5/6で0.72063/0.73200/0.74025","baseline":"Oracle6: 0.72200/0.73163/0.73388","condition":"CommonSense170K平均","interpretation":"対応範囲でOracleと同等以上の点を持つ。"},{"metric":"学習運用コスト","value":"内部図示例で50%削減","baseline":"kごとに別チェックポイントを学習","condition":"一つのPHDS checkpointで複数kを提供","interpretation":"複数モデル学習・保守を単一SFTへ統合できる。"}],"negative_results":["k_evをk_pre/2未満へ下げると性能劣化が顕著になり、安全範囲ではない。","公開OLMoE/Qwenは元から頑健で、PHDSがNaive/Oracleを常に大幅に上回るわけではない。","kをk_preより増やしても、より密なkで事前学習したOracleの性能は回復できない。","評価は1B〜14.3Bで、より大規模MoEへのスケーラビリティは未確認。","coding・summarizationなど生成中心課題を省いており、回答スタイル変化と能力変化を完全には分離していない。"],"quality_impact":"実務的にはkを20〜30%下げる範囲で多くのモデル・課題が1〜2%程度以内の相対QA低下に留まるが、範囲はモデル依存である。PHDSは特に複数k間の安定性と回答一貫性を改善する。","interpretation":"PHDSは専門家を新しく作るのではなく、同じパラメータを複数の欠落パターンへSFT中に繰り返し曝露することで、k変更を分布外障害から既知の実行条件へ変える。低kアンカーは最も疎な条件で必要な注意・専門家役割へ終盤の更新を集中し、単一チェックポイントの広い動作領域を作る。"},"reservation":{"claim_id":"claim-6b53b1926ec03fe03eb46c7c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c017c04ebe8bfab8c1c97bd1",
+  "job_id": "job-research-f837d96601e69237",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c017c04ebe8bfab8c1c97bd1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

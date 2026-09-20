@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6b53b1926ec03fe03eb46c7c","job_id":"job-research-95a4661f225665ff","data":{"canonical_id":"arXiv:2509.23012","arxiv_id":"2509.23012","doi":"10.48550/arXiv.2509.23012","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"MoE-PHDS: One MoE checkpoint for flexible runtime sparsity","summary":"MoE-PHDS（Post Hoc Declared Sparsity）は、固定top-kで事前学習されたMoEを軽量な教師あり微調整で複数の実行時kへ対応させ、一つのチェックポイントから予測可能な精度・計算トレードオフを提供する。微調整中に複数kを一様サンプリングし、必要に応じて終盤を低kへ徐々に固定するカリキュラム・アンカーを使う。OLMoE、Qwen1.5-MoE、内部1B級モデルで、kを20〜30%下げても概ね1〜2%以内の相対QA低下に抑え、別々のk専用チェックポイントよりクロスk回答一致率を7〜22%改善する。","list_summary":"複数top-kを混ぜたSFTと低kアンカーにより、一つのMoEチェックポイントを複数の実行時疎性へ対応させ、SLA・エネルギー要求に応じてkを直接切り替える。","authors":["Lauren A. Hannah","Soheil Zibakhsh","Kumari Nishu","Arnav Kundu","Mohammad Samragh Razlighi","Mehrdad Farajtabar","Minsik Cho"],"authors_affiliations":"Apple Inc.; University of California, San Diego","published":"2025-09-27","publication":"arXiv preprint arXiv:2509.23012v1","publication_type":"arXivプレプリント","publication_status":"2025年9月27日投稿のarXiv初版。","lineage":"adaptive-expert-computation-compression","topics":["混合専門家モデル","実行時疎性","multi-k学習","SFT","SLA対応推論"],"importance":"複数k専用モデルを保持せず、単一チェックポイントのグローバルtop-kをサービス運用ノブとして安全に変更できるようにする。","hardware_evaluation":"A100 40GBを2〜8枚使用した学習・評価設定を付録で報告。","hardware_details":"内部CommonSense170Kは2×A100-40GB、内部データ・OLMoE・Qwen系は主に8×A100-40GB。","quality_effect":"公開モデルは元から中程度のk変更に頑健で、PHDSは特に調整不足の内部モデルでクロスk精度と回答一貫性を改善。","bottlenecks":["kごとの別チェックポイント管理","固定kによるSLA/エネルギー適応不能","極端な低kでの品質崩壊","複数k学習時の高k共活性干渉"],"evidence_locations":["第1節","第2節","第3節","第5節","付録A"],"source":"https://arxiv.org/abs/2509.23012","sources":["https://arxiv.org/abs/2509.23012","https://arxiv.org/html/2509.23012","https://arxiv.org/pdf/2509.23012"],"code":null,"implementation":"公開OLMoE/Qwenへ適用する差分と設定JSONを機関承認後に公開予定と本文に記載。現時点で確定公開URLは未記載。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2412.19437","title":"DeepSeek-V3 Technical Report"},{"canonical_id":"arXiv:2409.02060","title":"OLMoE: Open Mixture-of-Experts Language Models"},{"canonical_id":"arXiv:2502.12325","title":"From Dense to Dynamic: Token-Difficulty Driven MoEfication of Pre-trained LLMs"},{"canonical_id":"arXiv:2304.01933","title":"LLM-Adapters"}],"references_checked_at":"2026-09-20","references_source":"arXiv HTML参考文献節","references_total":4},"reservation":{"claim_id":"claim-6b53b1926ec03fe03eb46c7c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c017c04ebe8bfab8c1c97bd1",
+  "job_id": "job-research-f837d96601e69237",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c017c04ebe8bfab8c1c97bd1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
