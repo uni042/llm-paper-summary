@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5589a405f0ee58411def153e",
-  "job_id": "job-research-5cec4a19e423bce9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5589a405f0ee58411def153e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5589a405f0ee58411def153e","job_id":"job-research-5cec4a19e423bce9","data":{"hardware":"全実験はNVIDIA A100。1M超の系列ではテンソル並列を追加。RULERの8B規模評価は約8×A100でほぼ1日を要する。","software":"SGLang上に実装し、基盤注意はFlashInfer。選択ロジックはPyTorch、Paged Dot Product KernelはTriton、選択後注意はPaged Attentionを使用。","methodology":"Qwen2-7B-Instruct、Llama-3-8B-Instruct、Yi-1.5-6B-Chatの三モデルでInfiniteBench、RULER、LongBenchを評価する。比較対象はNTK-scaled RoPE、SelfExtend、StreamingLLM、InfLLM、SnapKV、InfiniGen、QUEST、RetrievalAttention、MInference等。長文脈再学習が必要な比較法はLlama-3-8B-Instruct-262k上でも比較する。生成は全てgreedy。標準TokenSelectは先頭128、選択k=2K、直近nlocal=512を注意対象とし、InfiniteBenchとLongBenchのSelection Cache閾値は0.9。RULERでは4K〜128Kの長さ別精度を測る。アブレーションでは生top-k、0/1ヘッド投票、ヘッド軟投票、選択数128〜16K、Selection Cache閾値を比較する。効率評価ではQwen2-7B-Instructで鍵値長128K、512K、1Mの単一事前充填チャンクを測りFlashInfer全注意と比較し、InfiniteBenchではSDPA、InfLLMとのエンドツーエンド遅延を比較する。","datasets":["InfiniteBench","RULER","LongBench"],"models":["Qwen2-7B-Instruct","Llama-3-8B-Instruct","Yi-1.5-6B-Chat","Llama-3-8B-Instruct-262k"],"baselines":["NTK-scaled RoPE","SelfExtend","StreamingLLM","InfLLM","SnapKV","InfiniGen","QUEST","RetrievalAttention","MInference","FlashInfer SDPA"],"metrics":["各長文脈課題スコア","RULER長さ別精度","重要トークン再現率","注意計算時間","エンドツーエンド遅延","Selection Cache hit rate"],"scope":"品質、長さ外挿、選択関数アブレーション、GPUカーネル効率、実サービング遅延を同じ実装で評価する。"},"reservation":{"claim_id":"claim-5589a405f0ee58411def153e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
