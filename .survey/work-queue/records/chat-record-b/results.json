@@ -1,18 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4aedf8f4b7b74e0c27817979","job_id":"job-research-a568c8de790c8043",
- "data":{
-  "overview":"Aegaeonは長尾マルチモデルworkloadで要求単位autoscalingのHOL blockingを解消し、16基H800の主要評価でServerlessLLMより2～2.5倍高い処理可能到着率/最大goodputを示す。RPS=0.1では10 decode GPUで70モデル、すなわちdecode GPU当たり7モデルを90% SLO attainment以上で支える。auto-scaling最適化は未最適化時から97%のoverhead削減を報告し、本番では47モデルを213基H20で提供して従来1,192基から82%削減した。",
-  "key_results":[
-   {"metric":"最大goodput/処理可能到着率","value":"2～2.5倍","baseline":"ServerlessLLM","condition":"16 H800、ShareGPT系、標準SLO TTFT 10s/TBT 100ms","interpretation":"token-level preemptionでモデル間HOL blockingを短縮し、モデル数やRPS増加時もGPUを高密度共有できる。"},
-   {"metric":"GPU当たりモデル集約度","value":"最大7モデル/decode GPU","baseline":"MuxServeはVRAM制約で最大2モデル/GPU","condition":"RPS=0.1、70モデル、10 decode GPU、90%以上SLO attainment","interpretation":"モデルweightを常駐させる多重化より、必要時に切り替える方式が長尾モデル市場で高いpooling効率を得る。"},
-   {"metric":"auto-scaling overhead削減","value":"97%削減","baseline":"未最適化vLLM scale-down/scale-up経路","condition":"component reuse、explicit memory management、fine-grained KV synchronization","interpretation":"数十秒級の切替をtoken-level schedulingに使える時間尺度へ落とす。評価では非隠蔽時も1秒未満、約半数はprefetchでほぼ即時。"},
-   {"metric":"本番GPU数","value":"1,192基→213基（82%削減）","baseline":"Aegaeon導入前のH20構成","condition":"Alibaba Cloud Model Studio、28個の1.8～7B TP=1モデルと19個の32～72B TP=4モデル","interpretation":"合成benchmarkだけでなく長尾モデル市場の実運用で大幅な資源削減を確認。"},
-   {"metric":"本番GPU利用率","value":"平均13.3～33.9%→48.1%","baseline":"導入前の低負荷/高負荷instance","condition":"70時間観測","interpretation":"冗長資源を残した本番でも利用率を引き上げ、観測可能なSLO違反・サービス中断なしと報告。"},
-   {"metric":"CPU KV cache断片化","value":"全体20%未満","baseline":"固定shape blockの素朴な管理","condition":"shape別slab allocation","interpretation":"異種モデルのKV shape差を吸収しつつDRAM浪費を抑える。"}
-  ],
-  "negative_results":"SLOを0.2倍（TTFT 2秒、TBT 20ms）まで厳しくすると、auto-scalingに使えるslackが減りAegaeonはMuxServeを上回らない。A10 24GBでは2モデル分weightを置けずprefetchを無効化する必要がある。MuxServeのようなstatic multiplexingは極端な低遅延条件では切替コストがないため有利になり得る。",
-  "interpretation":"効果の源泉は単なるweight loading高速化ではなく、要求完了を待たずtoken境界でモデルを切り替えられることにある。ただしその粒度を成立させるにはengine再初期化、memory fragmentation、KV転送をまとめて除去する必要があり、schedulerとsystems optimizationの両方が不可欠である。",
-  "quality_impact":"品質そのものではなくオンラインSLOを評価対象とし、標準条件でTTFT/TBT期限達成率を維持しながらgoodputを増やす。本番70時間では観測可能なSLO違反やサービス中断は報告されていない。"
- },
- "reservation":{"claim_id":"claim-4aedf8f4b7b74e0c27817979","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-6500850523776f2b702f4a6d",
+  "job_id": "job-research-954a443cf32500d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6500850523776f2b702f4a6d",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4aedf8f4b7b74e0c27817979","job_id":"job-research-a568c8de790c8043",
- "data":{
-  "hardware":"主要テストベッドは2ノード、合計16基のNVIDIA H800 80GB。各ノードは8基GPUをNVLINK接続し、2TB DDR5メモリと192 Intel Xeon Platinum 8469C CPUを搭載。感度分析では4基A10 24GBノード、および8基H800上で72BモデルをTP=4で評価。本番は複数リージョンに213基H20。",
-  "software":"AegaeonはvLLMの推論engine構成を分析・再利用し、モデルweight/KV cacheの明示的管理を追加。比較対象はServerlessLLM、MuxServe、およびoracle出力長を使うrequest-level SJFを加えたServerlessLLM+。モデルはQwen、Llama、InternLM、Yi等。",
-  "methodology":"ShareGPTを主データセットとし、入力長2倍のShareGPT-ix2、出力長2倍のShareGPT-ox2も作成。Poisson到着過程とランダムサンプリングで複数モデルworkloadを合成し、標準SLOをTTFT 10秒・TBT 100ms、overall SLO attainment 90%以上をgoodput境界として比較する。16 GPUでは6基をprefill、10基をdecodeへ固定。モデル数、1モデル当たりRPS、入力/出力長、SLO厳しさを変化させ、auto-scaling latency、KV同期、CPU KV断片化も分解評価する。本番評価はAlibaba Cloud Model Studioの実トラフィックを含む。",
-  "scope":"主要合成評価は6B～14Bモデルと16基H800に集中する。72B TP=4、A10、本番H20でも追加検証するが、比較baselineを含む全実験を全hardwareで反復してはいない。本番は冗長資源を持つため合成評価より利用率が低く、絶対値の直接比較には注意が必要。"
- },
- "reservation":{"claim_id":"claim-4aedf8f4b7b74e0c27817979","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6500850523776f2b702f4a6d",
+  "job_id": "job-research-954a443cf32500d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6500850523776f2b702f4a6d",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

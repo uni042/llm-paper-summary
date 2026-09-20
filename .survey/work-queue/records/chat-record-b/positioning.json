@@ -1,10 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4aedf8f4b7b74e0c27817979","job_id":"job-research-a568c8de790c8043",
- "data":{
-  "limitations":"主要baseline比較は16基H800、主に6B～14Bモデル、Poisson合成workloadで行われる。実運用は47モデル・213基H20まで示すが、導入前後で同一GPU数・同一負荷を固定した対照実験ではなく、冗長資源を含む運用比較である。token-level autoscalingは切替slackを必要とし、TTFT 2秒/TBT 20ms級の極端なSLOではstatic multiplexingに優位を失う。A10ではVRAM不足によりweight prefetchを使えない。公式公開コードURLは本文から確認できず、production implementationの再現性には制約がある。",
-  "differences":"ServerlessLLM、BlitzScale、ParaServe等はcold scale-upを高速化するが基本的にrequest granularityでモデルを入れ替える。MuxServe等は複数モデルを同時常駐させるため切替は軽いがVRAM容量がpooling上限となる。Aegaeonはtoken granularityの先取りscale-down/upでactive model数とGPU数の結び付きを弱め、そのためにKV退避・engine reuse・memory allocatorまで含むpreemptive path全体を最適化する点が異なる。DistServe等のprefill/decode disaggregationをmulti-model schedulingへ組み込み、各phaseに異なるpolicyを与える。",
-  "implementation_status":"vLLM系engineを基盤に実装し、H800/A10/H20で実測。Alibaba Cloud Model Studioへ3か月超ベータ展開され、1.8B～72Bの計47モデルを複数parallelism構成で運用している。論文本文に一般公開された公式コードrepositoryは記載されていない。",
-  "research_positioning":"マルチモデル推論で『モデルを常駐させて共有する』多重化と『要求境界で入れ替える』serverless autoscalingの中間ではなく、切替粒度そのものをtokenへ細分化する系統。特に長尾モデル市場や多数LoRA/派生モデルのように個々のRPSは低いが同時active数が多い環境で重要であり、SSD/CPU offload研究とはweight/KV移動をschedulerの先取り判断と統合する接点を持つ。"
- },
- "reservation":{"claim_id":"claim-4aedf8f4b7b74e0c27817979","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-6500850523776f2b702f4a6d",
+  "job_id": "job-research-954a443cf32500d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6500850523776f2b702f4a6d",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
