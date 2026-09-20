@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:39:59 JST**
+> 自動生成: **2026-09-20 14:40:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **125** |
+| 収録候補論文 | **124** |
 | 未claim Research job | **123** |
-| 直近24hの検証済みResearch収録 | **55** |
-| 最終検証済みResearch収録 | **09-20 14:16:31 JST（23分前）** |
+| 直近24hの検証済みResearch収録 | **56** |
+| 最終検証済みResearch収録 | **09-20 14:40:06 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **125** |
+| canonical_id確認済みの一意な候補論文 | **124** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **125** |
+| 非終端Research job合計 | **124** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **1** | **0** | **1** | **2** | **1** | — |
+| Research | **25** | **1** | **1** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **24** | **2** | **1** | **1** | **2** | **1** | **5** |
+| 合計 | **25** | **2** | **2** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 14:40:06 JST** [research] `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
+  - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
 - **09-20 14:16:31 JST** [research] `DOI:10.18653/v1/2025.emnlp-main.1306` — SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation
   - job: `.survey/work-queue/jobs/job-research-6adaa29fadc3e53e.json`
   - result: `.survey/work-queue/results/research/attempt-42612c6e8bec652339e69e2b.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee-repair1.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
-- **09-20 12:38:38 JST** [research] `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads
-  - job: `.survey/work-queue/jobs/job-research-4786c27e72f86caf.json`
-  - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair2.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json` (job `job-research-b27d4d0f59f887b3`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
+  - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
+  - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
 
 #### Audit (:30)
 
@@ -150,10 +154,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 14:39:11 JST** / heartbeat: **—** / lease expiry: **09-20 16:09:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b27d4d0f59f887b3.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -176,7 +177,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **125** |
+| ready | **124** |
 
 ### 候補の重複・識別情報欠損
 
@@ -196,7 +197,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **807** |
+| inference/training/survey配下の論文Markdown実体 | **808** |
 
 ### immutable submissionの未照合
 
@@ -204,8 +205,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **727** |
-| └ Research | **541** |
+| 成功result未照合のimmutable submission | **726** |
+| └ Research | **540** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
