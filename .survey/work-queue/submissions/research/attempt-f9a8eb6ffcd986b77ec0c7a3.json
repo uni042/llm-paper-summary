@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-f9a8eb6ffcd986b77ec0c7a3",
+  "job_id": "job-research-3b1c7287727937a1",
+  "claim_id": "claim-f9a8eb6ffcd986b77ec0c7a3",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
+  "status": "blocked",
+  "reason": "Primary arXiv full text could not be retrieved through the runtime. Both arXiv PDF and export.arXiv PDF official routes were attempted and rejected/disabled by the retrieval environment. No alternate conference/author/project official full-text copy was established, so the required full primary-source reading could not be completed and no five-slot record was inferred.",
+  "retrieval_evidence": [
+    {"route":"arXiv PDF","url":"https://arxiv.org/pdf/2609.06076","result":"DisabledError in runtime"},
+    {"route":"export.arXiv PDF","url":"https://export.arxiv.org/pdf/2609.06076","result":"not accessible via runtime"}
+  ]
+}
