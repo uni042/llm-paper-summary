@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-130c102f178d2a82b4f2f771",
-  "job_id": "job-research-529f8795f6dde556",
-  "data": {
-    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.558",
-    "arxiv_id": null,
-    "doi": "10.18653/v1/2026.findings-acl.558",
-    "openreview_id": null,
-    "title": "DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning",
-    "summary": "長い推論列ではデコードのたびに増大するKVキャッシュ全体を読むため、注意機構の帯域消費が支配的になる。DELTAはKVキャッシュ自体は完全に保持しつつ、少数の更新層だけで全注意を計算して重要ページを選び、その後の層では選択済みページだけへ注意を向ける訓練不要の疎注意方式である。層間で注意分布が強く相関する一方、生成の進行に伴って重要位置が徐々に移るという観測を利用し、精度を保ちながら長文推論の読み出し量とデコード遅延を削減する。",
-    "list_summary": "少数の更新層で重要KVページを動的に選び、後続層がその集合を再利用することで、完全なKV保持と推論精度を維持しつつ長文デコードを高速化する疎注意方式。",
-    "authors": [
-      "Hossein Entezari Zarch",
-      "Lei Gao",
-      "Chaoyi Jiang",
-      "Murali Annavaram"
-    ],
-    "authors_affiliations": "University of Southern California",
-    "published": "2026-07-02",
-    "publication": "Findings of the Association for Computational Linguistics: ACL 2026",
-    "publication_type": "Conference Findings paper",
-    "publication_status": "Published",
-    "lineage": "sparse-attention / KV-cache selection / long-context reasoning inference",
-    "topics": [
-      "疎注意",
-      "KVキャッシュ",
-      "長文推論",
-      "デコード高速化",
-      "層間注意再利用"
-    ],
-    "importance": "推論時のKVキャッシュを削除せず、層間相関を使って計算対象だけを絞ることで、精度低下を抑えながら実機デコードを高速化する。",
-    "hardware_evaluation": "単一ノードのNVIDIA A100 SXM4 40GBを最大8基使用し、モデル規模に応じて1〜4 GPUおよびテンソル並列で実測している。",
-    "quality_effect": "1kトークン相当の小さな注意予算でも既存の疎注意方式より高精度で、多くの条件で完全注意に近いか上回る精度を報告する。一方、更新層配置と予算設定への感度がある。",
-    "source": "https://aclanthology.org/2026.findings-acl.558/",
-    "sources": [
-      "https://aclanthology.org/2026.findings-acl.558/",
-      "https://aclanthology.org/2026.findings-acl.558.pdf"
-    ],
-    "code": "https://github.com/hoenza/DELTA",
-    "implementation": "FlashInferの実行時コンパイル機構で注意ロジットを取り出し、PyTorchのtopkでページを選択する公開実装。実験はページサイズ16のページ単位方式を使用する。",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-3e00451f32958b311cdc3f3c",
+  "job_id": "job-research-3cf2e0a916913e29",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-130c102f178d2a82b4f2f771",
+    "claim_id": "claim-3e00451f32958b311cdc3f3c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
