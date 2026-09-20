@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-latest-sweep-r48",
+    "summary": "最新のdistributed MoE load balancing取り残しを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.07964",
+      "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.07964",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.07964-easybalance-cross-layer-load-balancing.md",
+      "priority": 98,
+      "reason": "expert-device mappingを変更せず、複数layerの不均衡を横断的にまとめてscheduleすることでexpert-parallel推論のidleを削減する。実験ではGPU idlingを多くの条件で40%以上削減し、migration/replicationとは異なる低overheadなload balancing手法。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-latest-sweep-20260920-easybalance-exact",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-latest-sweep-20260920-easybalance-exact.json",
+    "receipt": "sha256:371280bc872cb4cf8859e7af36605b6f3f52aa8137e7b4cc99990926cc827f85"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-latest-sweep-2026-09-20",
+    "round": "latest-sweep-r48-easybalance",
+    "axis": "latest distributed MoE cross-layer load balancing",
+    "query_summary": "exact-title precheckでEasyBalanceを確認し追加。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "quantized instance routing"
+  }
+}
