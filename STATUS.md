@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:40:55 JST**
+> 自動生成: **2026-09-20 12:41:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **5** | **1** | **1** | **1** | **0** | — |
+| Research | **18** | **5** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **6** | **2** | **1** | **1** | **0** | **5** |
+| 合計 | **18** | **6** | **2** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,8 +112,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **1件** / result照合済み非成功: **3件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee.json` (job `job-research-abc92cd8a94f1144`)
+- immutable submission: **5件** / 検証済み成功: **1件** / result照合済み非成功: **4件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee.json` (job `job-research-abc92cd8a94f1144`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee.json` (`ok=false`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-f50aea1a300a90e85b31bf68.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair1.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
