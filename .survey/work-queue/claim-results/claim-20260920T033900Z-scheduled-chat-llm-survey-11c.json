@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T033900Z-scheduled-chat-llm-survey-11c",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-abc92cd8a94f1144",
+      "claim_id": "claim-391330299d0747934ae3c7ee",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-391330299d0747934ae3c7ee",
+      "claimed_at": "2026-09-20T03:39:06+00:00",
+      "expires_at": "2026-09-20T05:09:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-abc92cd8a94f1144"
+      ],
+      "job": {
+        "job_id": "job-research-abc92cd8a94f1144",
+        "type": "research",
+        "parent_job_id": "job-4b7aa531112dcd29",
+        "priority": 92,
+        "canonical_id": "arXiv:2404.14469",
+        "arxiv_id": "2404.14469",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+        "source_url": "https://arxiv.org/abs/2404.14469",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "selection_reason": "Practical fine-tuning-free per-head KV selection/compression method targeting long-context memory and generation speed.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:22:19+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T03:39:06+00:00",
+  "checkpoint_released": 0
+}

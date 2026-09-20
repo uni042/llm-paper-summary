@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f924026a9c059a8203a1b596",
-  "job_id": "job-research-4786c27e72f86caf",
-  "data": {
-    "limitations": "評価の主要モデルはOPT-13BでGPUはV100 4台に限られ、現行のより大規模なモデル・多数ノード・異種GPUへの一般化は未検証である。事前充填・復号間通信は実ネットワークではなく帯域に応じた待ち時間を入れるmockであり、実クラスタの輻輳やNIC共有は含まない。生成長予測は完全ではなく、実測精度では復号内予約方式の単独効果がvLLM greedyと同程度になる。HPLDでは資源使用増により性能/費用がvLLMより14%悪く、すべての負荷で分離が有利ではない。",
-    "differences": "Sarathiは事前充填をチャンク化するが事前充填と復号を同じチャンクへ混在させるのに対し、TetriInferは両フェーズ間の干渉を避けるため事前充填専用チャンクと復号専用インスタンスへ分離する。Splitwiseとは事前充填・復号分離が同時期の発想だが、TetriInferは干渉測定、固定サイズ事前充填、生成長予測を使う容量認識の二段階分散スケジューリングを一体化する。FastServeの多段優先度フィードバックキューに対し、TetriInferは作業集合とメモリ使用量を意識してインスタンス間・インスタンス内の二層で復号要求を配置する。",
-    "implementation_status": "研究試作としてvLLM上に実装済み。主要制御はPython、KVキャッシュ転送の低水準API接続はC++。論文は実GPUで推論処理を評価するが、ネットワークはmockであり、公開コードURLは一次資料から確認できなかった。",
-    "research_positioning": "大規模言語モデル配信の系統では、ページ化KVキャッシュや連続バッチのような単一インスタンス内最適化と、後続の事前充填・復号分離型配信の間をつなぐ初期研究に位置する。重要点は、分離そのものを目的化せず、異なる要求長が作る計算飽和・メモリ帯域・容量競合を干渉問題として定量化し、それぞれにチャンク化、フェーズ分離、予測付き配置を対応させたことである。後続の分離型配信を比較する際には、通信費用だけでなく、負荷種別によって分離利益が逆転する境界条件を示した基準として有用である。"
-  },
-  "reservation": {"claim_id": "claim-f924026a9c059a8203a1b596", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-391330299d0747934ae3c7ee",
+  "job_id": "job-research-abc92cd8a94f1144",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-391330299d0747934ae3c7ee",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

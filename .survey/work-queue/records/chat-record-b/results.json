@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f924026a9c059a8203a1b596",
-  "job_id": "job-research-4786c27e72f86caf",
-  "data": {
-    "overview": "TetriInferの利得は、復号が重い、または長短要求が混在して従来の同居実行で干渉が強いほど大きい。LPHDではvLLMに対して平均TTFTを97%、平均JCTを47%削減しながら総資源使用を38%削減し、性能/費用を2.4倍にした。Mixedでも平均TTFT 85%、平均JCT 50%、資源使用21%を削減した。一方、重い事前充填と重い復号が同時に支配的な条件では、KVキャッシュ転送と予測器同居の費用が増え、常に費用効率で勝つわけではない。",
-    "key_results": [
-      {"metric": "平均TTFT", "value": "97%削減", "baseline": "vanilla vLLM", "condition": "LPHD、128要求、TetriInferのRoCE/NVLink模擬設定", "interpretation": "重い復号を事前充填から分離することで、短い事前充填が復号反復に待たされる干渉をほぼ除去した。"},
-      {"metric": "平均JCT", "value": "47%削減", "baseline": "vanilla vLLM", "condition": "LPHD、128要求", "interpretation": "復号の可変バッチと分散配置により、長い生成要求による容量・先頭待ちの偏りを減らした。"},
-      {"metric": "総資源使用", "value": "38%削減、性能/費用2.4倍", "baseline": "vanilla vLLM", "condition": "LPHD", "interpretation": "フェーズを二種類のインスタンスへ分けても、処理短縮と役割再利用により単純な資源二倍化にはならない。"},
-      {"metric": "Mixed負荷", "value": "平均TTFT 85%削減、平均JCT 50%削減、資源使用21%削減、性能/費用1.9倍", "baseline": "vanilla vLLM", "condition": "ShareGPTから混合した128要求", "interpretation": "異種要求が混在するクラウド型負荷で三つの干渉対策を同時に適用する効果が最も実運用に近い形で現れる。"},
-      {"metric": "チャンク事前充填", "value": "FCFSで平均事前充填遅延86.4%削減、SJFでさらに平均待ち時間7.8%削減", "baseline": "vLLM固定バッチ", "condition": "OPT-13B TP=2、ChunkSize=512、PrefillSchedBatch=16", "interpretation": "計算飽和点を超える巨大な事前充填を分割し、GPUへ過剰な同時トークンを投入しないこと自体が大きな効果を持つ。"}
-    ],
-    "negative_results": "HPLDでは平均TTFT 9%、平均JCT 23%を改善した一方、資源使用が43%増え、性能/費用ではvLLMが14%優位だった。HPHDでもJCTは19%改善するが資源を7%多く使い、性能/費用改善は1.1倍に縮小する。また生成長予測器を大規模モデルと同居させるストレス試験では、大規模モデルの平均事前充填遅延が10%増え、スループットが12%低下した。200トークン幅の予測精度74.9%ではreserve-dynamicのJCTはvLLM greedyと同程度で、理想精度100%時の12%改善には届かない。",
-    "interpretation": "分離の利益は、同居による干渉削減量と、KVキャッシュ転送・小型予測器・追加インスタンス管理の費用との差で決まる。復号が重い場合は同居干渉が大きいため利益が勝ちやすい。逆に事前充填も復号も重いと、転送するKVキャッシュが大きく予測器の競合も増えるため、JCTが改善しても費用効率は悪化し得る。",
-    "quality_impact": "生成確率分布やモデル重みを近似する高速化ではないため、推論品質の低下を許容して得た速度向上ではない。生成長予測は配置判断だけに使われ、予測が外れると性能が落ちるが、生成内容そのものを変更する仕組みではない。"
-  },
-  "reservation": {"claim_id": "claim-f924026a9c059a8203a1b596", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-391330299d0747934ae3c7ee",
+  "job_id": "job-research-abc92cd8a94f1144",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-391330299d0747934ae3c7ee",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
