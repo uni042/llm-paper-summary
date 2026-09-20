@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2405.02842",
+      "arxiv_id": "2405.02842",
+      "title": "IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs",
+      "source_url": "https://arxiv.org/abs/2405.02842",
+      "paper_path": "papers/inference/02-cpu-offload/2024-2405.02842-iceformer.md",
+      "priority": 94,
+      "reason": "Training-free CPU inference acceleration for long-sequence Transformers, including LLaMA-class models, with substantial measured speedups."
+    },
+    {
+      "canonical_id": "arXiv:2405.03917",
+      "arxiv_id": "2405.03917",
+      "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
+      "source_url": "https://arxiv.org/abs/2405.03917",
+      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2405.03917-coupled-quantization.md",
+      "priority": 96,
+      "reason": "KV-cache coupled quantization exploiting cross-channel dependence to preserve quality at extremely low bit widths down to one bit."
+    },
+    {
+      "canonical_id": "arXiv:2405.05254",
+      "arxiv_id": "2405.05254",
+      "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models",
+      "source_url": "https://arxiv.org/abs/2405.05254",
+      "paper_path": "papers/inference/06-kv-cache-memory/2024-2405.05254-yoco.md",
+      "priority": 96,
+      "reason": "YOCO architecture shares global KV state across decoder layers, reducing inference memory and improving prefill latency/throughput at long context."
+    },
+    {
+      "canonical_id": "arXiv:2405.05803",
+      "arxiv_id": "2405.05803",
+      "title": "Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference",
+      "source_url": "https://arxiv.org/abs/2405.05803",
+      "paper_path": "papers/inference/04-conditional-computation/2024-2405.05803-vtw.md",
+      "priority": 90,
+      "reason": "Plug-in multimodal inference optimization that removes redundant visual tokens in deeper layers and reports over 40% compute reduction."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-deep-20260920-offset2000",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-deep-20260920-offset2000.json",
+    "receipt": "sha256:343ff493a270e2acee9ee4fb77228a63e2a953701326a880f8d598bf616ebd9e"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-deep-2026-09-20",
+    "round": "refcuration-stress-offset2000-2",
+    "axis": "structured references deep stress probe at raw offset 2000",
+    "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 2000 using primary sources. Strong systems, training infrastructure, memory, quantization, and serving papers were retained.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2405.02842",
+      "arXiv:2405.03917",
+      "arXiv:2405.05254",
+      "arXiv:2405.05803"
+    ],
+    "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1."
+  }
+}
