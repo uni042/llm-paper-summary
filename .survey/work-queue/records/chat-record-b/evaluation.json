@@ -2,47 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2f18ec233c0f768fe4b55277",
-  "job_id": "job-research-2442fe5802b5c31d",
-  "data": {
-    "hardware": "RTX 6000 Ada 48GB GPU、Intel i9-14900K 24コア/32スレッド、64GB RAM。単一バッチ低遅延推論。",
-    "software": "vLLM 0.6.6、Python/PyTorch。spec-decode workerへ約500 LoC追加。",
-    "methodology": "Mixtral 8x7B FP8、Phi-3.5 MoE FP8、OLMoE FP8、DeepSeekV1 FP16、Qwen-1.5 MoE FP16の5モデルを使う。専門家数、top-k、共有専門家有無が異なる構成を含む。GSM8K数学、HumanEvalコード、MT-Bench由来の自然言語抽出に加え、2〜3課題を等比率で混ぜた4混合負荷の計7負荷を評価する。混合負荷は10分以上、2万生成トークン以上。全モデルでn-gram投機、MixtralではEAGLEも評価する。静的K=1,2,3と非投機K=0を基準に、出力tokens/sec、TPOT、ETR、投機反復費用を測る。効用の予測性は5 MoE×3課題×複数Kの120点で検証。Cascade既定はtrial t=4、最大test T=16、set S=16。適応バックオフ、山登り探索、試験頻度のアブレーションとEAGLEへの一般化も測る。",
-    "datasets": [
-      "GSM8K",
-      "HumanEval",
-      "MT-Bench extraction",
-      "code+math mixed",
-      "math+extraction mixed",
-      "code+extraction mixed",
-      "all-3 mixed"
-    ],
-    "models": [
-      "Mixtral 8x7B FP8",
-      "Phi-3.5 MoE FP8",
-      "OLMoE FP8",
-      "DeepSeekV1 FP16",
-      "Qwen-1.5 MoE FP16"
-    ],
-    "baselines": [
-      "no speculation K=0",
-      "static n-gram K=1",
-      "static n-gram K=2",
-      "static n-gram K=3",
-      "EAGLE on Mixtral"
-    ],
-    "metrics": [
-      "output tokens/sec",
-      "time per output token TPOT",
-      "effective token rate ETR",
-      "verification overhead",
-      "speculation utility",
-      "worst-case slowdown"
-    ],
-    "scope": "低バッチ・メモリ帯域律速のMoEサービングを対象とし、高バッチ処理能力や複数GPU専門家並列は直接評価しない。"
-  },
+  "attempt_id": "attempt-efe23ce921e3469dda4204fc",
+  "job_id": "job-research-4892de26a5d749a2",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2f18ec233c0f768fe4b55277",
+    "claim_id": "claim-efe23ce921e3469dda4204fc",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
