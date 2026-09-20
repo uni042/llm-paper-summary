@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0bc2ef1f687d4e14b8fcddf2",
-  "job_id": "job-research-e2f947500152f11f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0bc2ef1f687d4e14b8fcddf2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0bc2ef1f687d4e14b8fcddf2","job_id":"job-research-e2f947500152f11f","data":{"canonical_id":"arXiv:2405.02842","arxiv_id":"2405.02842","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs","summary":"長系列TransformerをCPUで推論すると自己注意の二次計算・メモリが支配的になる。IceFormerは学習済みモデルを再学習せず、注意行列の大きい重みだけを近似的に選ぶ。一般の非正規化keyでも内積順位を最近傍順位へ変換できる高次元埋め込みを導入し、ランキング型k近傍探索Prioritized DCIで重要keyを検索する。因果マスクには探索データベースの増分更新で対応する。LRA、ZeroSCROLLS、LongEvalを複数CPUで評価し、LRA平均7.63倍、Vicuna-7B-16kのZeroSCROLLS平均2.73倍の注意高速化を、元モデル精度の98.6〜99.6%を保ちながら達成する。","list_summary":"一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。","authors":["Yuzhen Mao","Martin Ester","Ke Li"],"authors_affiliations":"Simon Fraser University","published":"2024-05-05","publication":"ICLR 2024","publication_type":"Conference paper","publication_status":"Published","lineage":"CPU長文推論・近似注意","topics":["CPU inference","long-context attention","k-nearest neighbor search","sparse attention"],"importance":"既存LLMを再学習せず因果注意にも適用でき、CPUで長文プロンプト処理を高速化する。","hardware_evaluation":"LRAはIntel Core i7-6850K 6-core、ZeroSCROLLSはAMD Ryzen 9 5950X 16-core、LongEvalはAMD Ryzen 9 5900X 12-core。LRA推論は4 CPU thread。","hardware_details":"Intel Core i7-6850K、AMD Ryzen 9 5950X、AMD Ryzen 9 5900X。","quality_effect":"LRAでは元Transformer精度の平均98.6%、ZeroSCROLLSではVicuna元性能の平均99.6%を維持。kを増やすと精度が上がる代わりに遅延が増える。","source":"https://arxiv.org/abs/2405.02842","sources":["https://arxiv.org/abs/2405.02842","https://arxiv.org/pdf/2405.02842","https://yuzhenmao.github.io/IceFormer/"],"code":"https://yuzhenmao.github.io/IceFormer/","implementation":"プロジェクトページでコードを公開。Prioritized DCIを因果マスク向け増分挿入に拡張し、PyTorch系Transformerの注意モジュールを置換する。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2004.05150","arxiv_id":"2004.05150"},{"canonical_id":"arXiv:2009.14794","arxiv_id":"2009.14794"},{"canonical_id":"arXiv:2106.06899","arxiv_id":"2106.06899"},{"canonical_id":"arXiv:2102.06621","arxiv_id":"2102.06621"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":4},"reservation":{"claim_id":"claim-0bc2ef1f687d4e14b8fcddf2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
