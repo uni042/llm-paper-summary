@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-714cd908ebdb24101574b59c",
+  "attempt_id": "attempt-6ec912c7d04e74dfb5926917",
   "job_id": "job-research-b27d4d0f59f887b3",
   "data": {
     "limitations": "主要結果はHy3系列とNVIDIA H20中心で、他モデル族・GPU・parallelismへのthroughput一般化は直接示されていない。D-cutはhardware/loadごとのruntime cost profileを必要とし、配備条件変更時は再profilingが必要である。DFlyはコード・数学に特化しており、高エントロピー会話ではMTPが優位な条件があるため、一つのcheckpointを全trafficへ適用する設計ではない。thinking modeもmatched trainingが必要で、no-think/high-think間の共有で受理長が大きく低下する。parallel backbone後のAR headは小さいが逐次処理を追加し、受理長増分がそのoverheadを上回る条件が必要である。論文はpreprintで、長期的な多様hardware上の再現性は今後の検証対象である。",
@@ -11,7 +11,7 @@
     "research_positioning": "推測デコード研究のうち、drafter architecture、acceptance-aligned training、serving-time verification schedulingを一つのend-to-end系として接続する研究に位置する。特に『平均benchmarkで一つのdrafterを選ぶ』前提を捨て、会話とコード・数学で構造・データを分け、さらにonline loadでverification depthを変えるため、モデル側最適化とサービング側resource allocationの橋渡しになっている。リポジトリ内ではspeculative decoding系統のEAGLE/MTP/parallel draftingと、LLM serving scheduling系統のbatch resource allocationの双方に関連する。"
   },
   "reservation": {
-    "claim_id": "claim-714cd908ebdb24101574b59c",
+    "claim_id": "claim-6ec912c7d04e74dfb5926917",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
