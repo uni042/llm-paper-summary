@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0149JST-worker30-openalex-cpu-gpu-offload-11b.json",
+  "precheck_receipt": "sha256:60b398b136427598564e74c353f3f67a27fbe6a83905a8eb5bccac395a428285",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "openalex-cpu-gpu-offload-11",
+    "axis": "CPU GPU offload activation sparsity heterogeneous LLM inference",
+    "query_summary": "Semantic Scholar 429後の正規recoveryとしてOpenAlex固定検索を実行。未評価集合を品質評価したが、周辺分野・既存系統との重なりが大きく新規投入を見送った。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "最新canonical stateとcontinuation gateを再評価する",
+    "empty_round_reason": "no_candidate_selected_after_quality_screen"
+  }
+}
