@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-483c9e80b9d0b60acbb8fb48",
-  "job_id": "job-research-67ddaa9ed58fd85b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-483c9e80b9d0b60acbb8fb48",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-483c9e80b9d0b60acbb8fb48","job_id":"job-research-67ddaa9ed58fd85b","data":{"overview":"OEAの相乗りは単純なtop-k0枝刈りより一貫して良いクロスエントロピー・固有専門家数Pareto前線を示し、複雑な一般形からk0だけの簡略形へ落としても性能を維持した。Qwen3-30Bのバッチ上限16ではk0=3で平均固有専門家数を48.8から25.1へ約49%削減し、MoE層平均遅延を175.7から106.8µsへ39%削減した。Qwen3-235Bではk0=5で平均119.4から101.4µsへ15%削減した。選択設定では標準誤差を考慮して基準精度から有意な低下を避けられる。","key_results":[{"metric":"Qwen3-30B MoE層平均遅延","value":"175.7→106.8µs、39%削減","baseline":"vanilla top-8","condition":"簡略OEA k0=3、最大バッチ16","interpretation":"固有専門家をほぼ半減するとメモリ律速遅延も大きく低下する。"},{"metric":"Qwen3-30B平均固有活性専門家数","value":"48.8→25.1","baseline":"vanilla","condition":"k0=3、4ベンチ平均","interpretation":"相乗りを使っても新規専門家を増やさないためTを約49%削減。"},{"metric":"Qwen3-235B MoE層平均遅延","value":"119.4→101.4µs、15%削減","baseline":"vanilla","condition":"k0=5、8×H100 TP","interpretation":"all-reduce固定費がある大規模TPでも改善するが相対利得は小さくなる。"},{"metric":"遅延対固有専門家数","value":"R²>0.99","baseline":"Qwen3-30B vanilla GPQAの層・decode step","condition":"実測Tと遅延の回帰","interpretation":"中程度バッチのMoE遅延を固有専門家数が強く説明する。"},{"metric":"Qwen3-30B AIME24","value":"k0=3: pruned 51.2、OEA 80.0、vanilla 80.4","baseline":"単純top-3枝刈り","condition":"複数回平均","interpretation":"すでにロードされる専門家への相乗りが大幅に品質を回復する。"},{"metric":"Qwen3-235B LiveCodeBench","value":"k0=5: pruned 53.5、OEA 66.1、vanilla 68.5","baseline":"単純top-5枝刈り","condition":"3回平均","interpretation":"相乗りで15ポイント超回復するが、この条件ではvanilla比約2ポイント低下が残る。"}],"negative_results":["累積確率p<1による基準専門家数の適応化は固定top-k0を上回らず、簡略形では削除された。","k_maxを元のkより9、10、11へ増やしても改善せず、10/11では悪化した。","maxPで下位順位の相乗りを禁止すると最適条件では不利で、元top-8外の専門家でも有用な場合がある。","Qwen3-235Bではテンソル並列all-reduceが残るため固有専門家削減ほど遅延が下がらず、速度向上は15%に留まる。","LiveCodeBenchなど一部設定ではOEAでもvanilla品質を完全には回復しない。"],"quality_impact":"k0を下げた単純枝刈りは品質を大きく落とすが、OEAは同じ必須専門家集合が決める固有ロード数を維持したまま他トークンの必須専門家へ相乗りし、多くの失われた精度を回復する。論文の推奨設定では統計的有意差を考慮して基準品質と同等な点を選べる。","interpretation":"メモリ律速MoEでは専門家へ何トークン追加するかより、専門家重みを一度ロードするかどうかの固定費が大きい。OEAはこの非線形費用構造を直接利用し、他トークンのため支払い済みの専門家へ追加トークンを載せる。したがってトークン単位top-k削減だけでは捨てるしかなかった計算を、バッチ全体の専門家和集合という共有資源へ変換できる。"},"reservation":{"claim_id":"claim-483c9e80b9d0b60acbb8fb48","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
