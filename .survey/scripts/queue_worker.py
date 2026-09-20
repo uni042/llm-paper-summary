@@ -16,6 +16,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any
+from urllib.parse import parse_qs, urlparse
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -40,6 +41,7 @@ DISCOVERY_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck
 DISCOVERY_ITERATIVE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/ITERATIVE_ENFORCED")
 DISCOVERY_FIXED_SOURCE_PRECHECK_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/FIXED_SOURCE_ENFORCED")
 DISCOVERY_REFERENCE_POOL_FIRST_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/REFERENCE_POOL_FIRST_ENFORCED")
+DISCOVERY_CITATION_FIRST_MARKER = PurePosixPath(".survey/work-queue/discovery-precheck/CITATION_FIRST_ENFORCED")
 
 
 class DiscoveryPrecheckError(ValueError):
@@ -52,21 +54,22 @@ class DiscoveryPrecheckError(ValueError):
         self.recovery_steps = list(recovery_steps)
 
 DISCOVERY_INSTRUCTIONS = (
-    "Start every Discovery run with the repository-wide structured-reference pool: "
-    "provider=repository_references and source_url=repository://structured-references, "
-    "target_unseen=20. Keep using this route on later Discovery runs while it returns "
-    "any unseen candidates; classify clear non-matches as unrelated and weak/borderline "
-    "papers in the durable relevance ledgers so they are not reconsidered. Only when "
-    "the first repository_references precheck for the current run returns zero unseen "
-    "records with provider_exhausted=true may you fall back to the previous normal-search, "
-    "backward-reference, or forward-citation routes. A fallback submission must carry "
-    "the zero-result reference_pool_fallback proof. Return at most 5 strong candidates "
+    "Use citation-first Discovery. The two primary directions are backward references "
+    "(papers cited by collected papers) and forward citations (new papers citing collected "
+    "papers). Start with the repository-wide structured-reference pool as the efficient "
+    "backward route, then run a lineage-scoped forward-citation refresh in the same run; "
+    "forward citation no longer waits for the reference pool to be exhausted. Use direct "
+    "per-seed references when structured reference metadata is incomplete. Classify clear "
+    "non-matches as unrelated and weak/borderline papers in the durable relevance ledgers. "
+    "Normal/new keyword search is fallback only after both citation directions have been "
+    "attempted in the same run. Keep target_unseen=20 and submit at most 5 strong candidates "
     "per submission; do not fill the list with weak papers."
 )
 DISCOVERY_COMPLETION = (
-    "Keep mining repository_references while it has unseen candidates. Use legacy "
-    "Discovery routes only after a same-run zero-result reference-pool proof. "
-    "Submit 0-5 strong candidates per submission."
+    "Keep alternating productive backward-reference and forward-citation windows, using "
+    "recorded search-window yield to choose seeds. Do not let a non-empty reference pool "
+    "block forward-citation refresh. Use normal/new search only after both citation "
+    "directions were attempted in the same run. Submit 0-5 strong candidates per submission."
 )
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
@@ -406,6 +409,57 @@ def _reference_pool_first_required(sub: dict) -> bool:
     )
 
 
+def _citation_first_required(sub: dict) -> bool:
+    """Require the citation-first route policy for submissions after its marker."""
+    return _submission_path_added_after_marker(
+        sub,
+        DISCOVERY_CITATION_FIRST_MARKER,
+        cache_key_suffix="citation-first",
+    )
+
+
+def _citation_direction_from_precheck_result(result: dict[str, Any] | None) -> str | None:
+    """Classify a fixed-source precheck as backward, forward, or non-citation search."""
+    if not isinstance(result, dict):
+        return None
+    provider = str(result.get("provider") or "").strip().casefold()
+    source_url = str(result.get("source_url") or "").strip()
+
+    if provider in {"repository_references", "repository_reference_pool", "openalex_references", "open_alex_references"}:
+        return "backward"
+
+    try:
+        parsed = urlparse(source_url)
+    except ValueError:
+        return None
+    path = parsed.path.rstrip("/").casefold()
+    if path.endswith("/references"):
+        return "backward"
+    if path.endswith("/citations"):
+        return "forward"
+
+    if provider in {"openalex", "open_alex"} and parsed.netloc.casefold() == "api.openalex.org" and path == "/works":
+        filters = ",".join(parse_qs(parsed.query, keep_blank_values=True).get("filter", []))
+        if any(part.strip().casefold().startswith("cites:") for part in filters.split(",")):
+            return "forward"
+    return None
+
+
+def _same_run_citation_directions(run_key: str) -> set[str]:
+    """Return citation directions durably completed for one Discovery run."""
+    if not run_key:
+        return set()
+    state = read_json(DISCOVERY_STATE, {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    return {
+        str(row.get("citation_direction"))
+        for row in history
+        if isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and str(row.get("citation_direction") or "") in {"backward", "forward"}
+    }
+
+
 def _explicit_user_directed_discovery(sub: dict) -> bool:
     """Return whether this round is tied to a current explicit user request.
 
@@ -514,6 +568,60 @@ def _reference_pool_guidance(reason: str) -> DiscoveryPrecheckError:
             "For that legacy submission, attach reference_pool_fallback with request_id, result_path, and receipt from the zero-result repository_references precheck.",
         ],
     )
+
+
+def _citation_first_guidance(reason: str, missing: list[str] | None = None) -> DiscoveryPrecheckError:
+    missing = list(missing or [])
+    labels = {
+        "backward": "backward-reference",
+        "forward": "forward-citation",
+    }
+    missing_text = ", ".join(labels.get(item, item) for item in missing)
+    suffix = f" Missing same-run direction(s): {missing_text}." if missing_text else ""
+    return DiscoveryPrecheckError(
+        "citation_first_required",
+        reason + suffix,
+        next_action=(
+            "Use schema-v3 fixed-source precheck on the missing citation direction. "
+            "Backward routes include repository_references/openalex_references/Semantic Scholar references; "
+            "forward routes include Semantic Scholar citations or OpenAlex works filtered with cites:W.... "
+            "Normal/new keyword search is allowed only after both directions have been attempted in this run."
+        ),
+        recovery_steps=[
+            "Do not edit or overwrite the failed Discovery submission.",
+            "For backward citation, prefer provider=repository_references with source_url=repository://structured-references; "
+            "use a direct seed references endpoint when structured metadata is incomplete.",
+            "For forward citation, choose a collected seed paper and use a fixed citations source, preferably newest-first.",
+            "Run each source through schema-v3 process_discovery_precheck.py with target_unseen=20 and submit 0-5 strong candidates.",
+            "After both citation directions are durably recorded for the same run_key, normal/new search may be used as a gap-filling fallback.",
+        ],
+    )
+
+
+def _validate_citation_first_route(sub: dict, result: dict[str, Any], meta: dict[str, Any]) -> str | None:
+    """Enforce citation directions as the primary Discovery routes."""
+    provider = str(result.get("provider") or "").strip().casefold()
+    if provider in {"repository_references", "repository_reference_pool"}:
+        if str(result.get("source_url") or "") != "repository://structured-references":
+            raise _citation_first_guidance(
+                "repository_references must use source_url=repository://structured-references."
+            )
+
+    direction = _citation_direction_from_precheck_result(result)
+    if direction in {"backward", "forward"}:
+        return direction
+    if _explicit_user_directed_discovery(sub):
+        return None
+
+    run_key = str(meta.get("run_key") or "").strip()
+    attempted = _same_run_citation_directions(run_key)
+    missing = [direction for direction in ("backward", "forward") if direction not in attempted]
+    if missing:
+        raise _citation_first_guidance(
+            "Normal/new-search Discovery cannot run before the citation-first pair is attempted.",
+            missing,
+        )
+    return None
 
 
 def _validate_reference_pool_fallback(sub: dict, meta: dict[str, Any]) -> dict[str, Any]:
@@ -673,7 +781,11 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
     if str(result.get("axis") or "") != str(meta.get("axis") or ""):
         raise _precheck_guidance("Discovery precheck axis does not match this Discovery round.")
 
-    if _reference_pool_first_required(sub):
+    if _citation_first_required(sub):
+        _validate_citation_first_route(sub, result, meta)
+    elif _reference_pool_first_required(sub):
+        # Historical submissions introduced after REFERENCE_POOL_FIRST_ENFORCED but
+        # before CITATION_FIRST_ENFORCED keep the original route-order contract.
         provider = str(result.get("provider") or "")
         if provider in {"repository_references", "repository_reference_pool"}:
             if str(result.get("source_url") or "") != "repository://structured-references":
@@ -862,6 +974,7 @@ def record_discovery_stats(
     sub: dict,
     accepted_count: int,
     final_duplicate_filtered_count: int = 0,
+    precheck_result: dict[str, Any] | None = None,
 ) -> bool:
     """Persist per-axis discovery yield once for a processed submission.
 
@@ -907,11 +1020,30 @@ def record_discovery_stats(
         if novel_count else 0.0
     )
 
+    provider = (
+        str(precheck_result.get("provider") or "").strip()
+        if isinstance(precheck_result, dict)
+        else str(meta.get("provider") or "").strip()
+    )
+    source_url = (
+        str(precheck_result.get("source_url") or "").strip()
+        if isinstance(precheck_result, dict)
+        else str(meta.get("source_url") or "").strip()
+    )
+    citation_direction = (
+        _citation_direction_from_precheck_result(precheck_result)
+        if isinstance(precheck_result, dict)
+        else str(meta.get("citation_direction") or "").strip() or None
+    )
+
     row = {
         "run_key": meta.get("run_key"),
         "round": meta.get("round"),
         "axis": axis,
         "query_summary": meta.get("query_summary"),
+        "provider": provider or None,
+        "source_url": source_url or None,
+        "citation_direction": citation_direction,
         "candidate_count": candidate_count,
         "duplicate_filtered_count": duplicate_count,
         "novel_candidate_count": novel_count,
@@ -1045,6 +1177,7 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
         sub,
         accepted_count=added,
         final_duplicate_filtered_count=final_duplicate_filtered_count,
+        precheck_result=precheck_result if isinstance(precheck_result, dict) else None,
     )
 
 
