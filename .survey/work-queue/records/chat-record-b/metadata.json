@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d9175409e1e36a47b3e6d387",
-  "job_id": "job-research-b8f01545319d9604",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9175409e1e36a47b3e6d387",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d9175409e1e36a47b3e6d387","job_id":"job-research-b8f01545319d9604","data":{"canonical_id":"arXiv:2605.26297","arxiv_id":"2605.26297","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Agentic AI Workload Characteristics","summary":"ReAct型エージェントを単発の長文要求ではなく、同じ文脈へ何度も再入場し、ツール結果を追加しながらKV状態を成長させる状態保持型負荷として実測した特性研究。Claude Code、Harbor、vLLM、OpenTelemetryを結合して5種類のエージェント課題を追跡し、入力の84.6〜99.5%が文脈キャッシュへ当たり、LLM時間の91.0〜98.6%をデコードが占めることを示す。失敗時の再試行はターン数と文脈を同時に膨張させ、ツール種別も前半の読取・探索から後半の実行・書込へ変化する。","list_summary":"ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。","authors":["Yichao Yuan","Ankita Nayak","Souvik Kundu","Nishil Talati"],"authors_affiliations":"University of Illinois Urbana-Champaign; Gimlet Labs; Intel","published":"2026-05-25","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"agentic serving workload characterization / KV-cache / inference benchmarking","topics":["エージェント推論","KVキャッシュ","文脈再利用","vLLM","ツール実行","ワークロード特性"],"importance":"エージェント負荷では生の入力長からプリフィル支配と推定するのが誤りで、文脈再利用が効く限りデコード支配になることを定量化し、KV保持・スケジューリング・オフロード設計の前提を与える。","hardware_evaluation":"NVIDIA H100 NVL 2基を12本のNVLinkで接続し、Intel Xeon Platinum 8592+ CPUを使用。vLLM v0.20.0をテンソル並列2で動作させる。","quality_effect":"生成品質改善手法ではなく特性測定。推論モードの違いが軌跡長へ影響し、Gemmaでは思考ありの方が失敗再試行を抑えて総ターン数を大幅に減らす例がある。","source":"https://arxiv.org/abs/2605.26297","sources":["https://arxiv.org/abs/2605.26297","https://arxiv.org/pdf/2605.26297"],"code":null,"implementation":"Claude CodeエージェントをHarborで実行し、独自ゲートウェイで要求をvLLMへ転送、OpenTelemetry/Jaegerの推論トレースとエージェント側ツール時間・実行結果を要求単位に対応付ける計測基盤。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-d9175409e1e36a47b3e6d387","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
