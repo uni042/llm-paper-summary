@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:15:05 JST**
+> 自動生成: **2026-09-20 14:15:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **126** |
 | 未claim Research job | **124** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-20 14:12:13 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 14:12:13 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -178,7 +178,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.18653/v1/2025.emnlp-main.1306` — SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation / worker `scheduled-chat-discovery-overflow`
-  - claim: **09-20 14:12:43 JST** / heartbeat: **—** / lease expiry: **09-20 15:42:43 JST**
+  - claim: **09-20 14:15:23 JST** / heartbeat: **—** / lease expiry: **09-20 15:45:23 JST**
   - evidence: `.survey/work-queue/claims/job-research-6adaa29fadc3e53e.json`
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-20 15:02:13 JST**
