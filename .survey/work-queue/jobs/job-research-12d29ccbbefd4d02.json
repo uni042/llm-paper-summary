@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-12d29ccbbefd4d02",
+  "type": "research",
+  "parent_job_id": "job-02f790281a1fd3fa",
+  "priority": 89,
+  "canonical_id": "arXiv:2406.11430",
+  "arxiv_id": "2406.11430",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression",
+  "source_url": "https://arxiv.org/abs/2406.11430",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+  "selection_reason": "Focused KV-cache compression technique using simple norm-based importance estimation; useful baseline and design point for cache eviction systems.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T03:59:36+00:00"
+}

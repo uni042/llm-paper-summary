@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 790,
+      "completed": 799,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 71,
+      "ready": 109,
       "completed": 611,
       "superseded": 44,
       "deferred": 3,
@@ -19,11 +19,39 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 71,
+    "ready_research_audit": 109,
     "actively_claimed": 0,
-    "claimable": 71
+    "claimable": 109
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-53d31e41c03b4f2d",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2604.12171",
+      "title": "PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.12171",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-d9598f14ff4bcd81",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:1910.02054",
+      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+      "source_url": "https://arxiv.org/abs/1910.02054",
+      "paper_path": "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-6882c5cf191305a1",
       "type": "research",
@@ -67,70 +95,42 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-726ba562ef40d04f",
+      "job_id": "job-research-207dd824b238b749",
       "type": "research",
       "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2406.16858",
-      "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
-      "source_url": "https://arxiv.org/abs/2406.16858",
-      "paper_path": "papers/inference/05-speculative-decoding/2024-2406.16858-eagle-2.md",
+      "priority": 97,
+      "canonical_id": "arXiv:2604.09603",
+      "title": "ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios",
+      "source_url": "https://arxiv.org/abs/2604.09603",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2604.09603-echo.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-708ae0cc33daae20",
+      "job_id": "job-research-b27d4d0f59f887b3",
       "type": "research",
       "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2607.11586",
-      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference",
-      "source_url": "https://arxiv.org/abs/2607.11586",
-      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2607.11586-hcrmap.md",
+      "priority": 97,
+      "canonical_id": "arXiv:2607.25852",
+      "title": "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.25852",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-a7f8650f63d4e4e7",
+      "job_id": "job-research-2ce5fda4ee4799b0",
       "type": "research",
       "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:1909.08053",
-      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
-      "source_url": "https://arxiv.org/abs/1909.08053",
-      "paper_path": "papers/training/03-pipeline-parallel-modular-training/2019-1909.08053-megatron-lm.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-c4dbc458851f604c",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2404.08509",
-      "title": "Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction",
-      "source_url": "https://arxiv.org/abs/2404.08509",
-      "paper_path": "papers/inference/06-serving-scheduling/2024-2404.08509-ssjf.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-77f5ab6e591a0176",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2310.01801",
-      "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
-      "source_url": "https://arxiv.org/abs/2310.01801",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "priority": 97,
+      "canonical_id": "DOI:10.1145/3676641.3715996",
+      "title": "POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference",
+      "source_url": "https://doi.org/10.1145/3676641.3715996",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T03:47:19+00:00"
+  "generated_at": "2026-09-20T04:00:21+00:00"
 }

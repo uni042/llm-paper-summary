@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-51de804389577a72",
+  "type": "research",
+  "parent_job_id": "job-02f790281a1fd3fa",
+  "priority": 96,
+  "canonical_id": "arXiv:2407.02490",
+  "arxiv_id": "2407.02490",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+  "source_url": "https://arxiv.org/abs/2407.02490",
+  "paper_path": "papers/inference/10-sparse-attention/2024-2407.02490-minference.md",
+  "selection_reason": "Dynamic sparse-attention inference system targeting long-context prefill, with practical kernel/system optimizations and substantial latency reduction.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T03:59:36+00:00"
+}
