@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
   "job_id": "job-research-e405cf8340f00512",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89bc644c23d78357d6c68f4d",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価は8台A100を600 GB/s NVLinkで接続した単一サーバ、Llama-2 7B/13B、ShareGPT/OpenThoughtsに限られ、より遅い相互接続や大規模多ノード構成で遠隔注意を局所注意時間内に隠せるかは未検証である。NVIDIA MPSとCUDA Graphへ依存する実装なので、異種アクセラレータでは同じ資源分離・同期機構を別途用意する必要がある。オフロード率上限は事前カーネル計測と実行時統計の両方へ依存し、ワークロードが急変すると追従前に資源競合が起こりうる。低負荷では利得が小さく、遠隔実行が局所注意より遅くなる条件では同期待ちが性能を相殺する。",
+    "differences": "DistServeやSplitwiseなどのプリフィル・デコード分離は段階間干渉を避ける代わりにGPU群を資源島へ分ける。Adrenalineはその分離を撤回せず、デコード注意というメモリ律速部分だけをプリフィル側へ戻して相補的な遊休資源を使う。専用の注意GPUや計算ストレージを追加する注意分離方式と違い、既存プリフィルGPUの余剰HBMを利用するため追加ハードウェアを要求しない。単純な固定比率オフロードとも異なり、HBM容量・帯域、非注意カーネルの計算境界、現在系列長、サービス品質目標を組み合わせて要求単位で判断する。",
+    "implementation_status": "vLLM 0.6.3を基盤とした公式実装がASISysから公開されている。CUDA Graph、NVIDIA MPS、注意実行器、代理サーバ上の大域スケジューラを含み、Apache-2.0ライセンスでコードが提供される。論文は2025年3月公開のarXivプレプリントである。",
+    "research_positioning": "プリフィル・デコード分離配信の次段階として、段階単位ではなくTransformer内部の演算特性まで見て資源を再配置する研究に位置する。プリフィルは計算律速、デコード注意はHBM律速、デコード非注意演算はバッチ増加で計算利用を上げられるという非対称性を利用し、クラスタ全体の遊休資源を追加GPUなしで結び直す。P/D分離のスケジューリング研究と注意分離・KV配置研究の接点にあり、特に異種資源プーリングや細粒度分離配信を検討する際の比較基準になる。"
+  },
+  "reservation": {"claim_id": "claim-89bc644c23d78357d6c68f4d", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
