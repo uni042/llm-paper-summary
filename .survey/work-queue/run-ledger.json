@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:07:34.081662+00:00",
+  "updated_at": "2026-09-20T03:11:14.151852+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:07:34.081662+00:00",
+      "last_recorded_at": "2026-09-20T03:11:14.151852+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 330,
+        "research_completed": 331,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 44,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35435090609:1",
-          "recorded_at": "2026-09-19T09:35:54.679282+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35435090609",
-            "run_attempt": "1",
-            "source_sha": "ce3a8d53b7924c8796b0ff3f0ea1548372eefded"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35435205816:1",
           "recorded_at": "2026-09-19T09:37:46.316420+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35485740792",
             "run_attempt": "1",
             "source_sha": "674537978abe71a31322319f78ecd3308fa5fdfb"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35485899814:1",
+          "recorded_at": "2026-09-20T03:11:14.151852+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35485899814",
+            "run_attempt": "1",
+            "source_sha": "945f6374033f7767294090b216a3b5b45401f794"
           },
           "signals": [
             "research_completed"
@@ -24135,6 +24135,14 @@
           "type": "research",
           "canonical_id": "arXiv:2006.16668",
           "title": "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8b52cc53189781e3",
+          "type": "research",
+          "canonical_id": "arXiv:2402.02750",
+          "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
           "from": "ready",
           "to": "completed"
         }
