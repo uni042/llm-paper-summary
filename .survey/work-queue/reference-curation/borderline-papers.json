@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T03:59:00+00:00",
-  "record_count": 47,
+  "updated_at": "2026-09-20T04:04:00+00:00",
+  "record_count": 51,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -665,6 +665,66 @@
         "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md"
       ],
       "title": "Accelerating Transformer Inference for Translation via Parallel Decoding"
+    },
+    "arXiv:2604.15804": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.15804",
+      "identity_tokens": [
+        "arXiv:2604.15804"
+      ],
+      "reason": "Broad multimodal model technical report with efficient-inference architecture context, but not a focused systems paper.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"
+      ],
+      "title": "Qwen3.5-Omni Technical Report"
+    },
+    "arXiv:2604.22750": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.22750",
+      "identity_tokens": [
+        "arXiv:2604.22750"
+      ],
+      "reason": "Useful agent workload/economics characterization, but less directly systems-oriented than the retained infrastructure/serving characterization work.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md"
+      ],
+      "title": "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks"
+    },
+    "DOI:10.1007/s10107-024-02118-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10107-024-02118-8",
+      "identity_tokens": [
+        "DOI:10.1007/s10107-024-02118-8"
+      ],
+      "reason": "Theoretical scheduling work relevant as background to non-clairvoyant LLM scheduling, but not itself an LLM systems implementation.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Competitive kill-and-restart and preemptive strategies for non-clairvoyant scheduling"
+    },
+    "DOI:10.1016/j.mejo.2016.04.006": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.mejo.2016.04.006",
+      "identity_tokens": [
+        "DOI:10.1016/j.mejo.2016.04.006"
+      ],
+      "reason": "Hardware process-design background used by accelerator studies, but not an LLM systems contribution on its own.",
+      "first_checked_at": "2026-09-20T04:04:00+00:00",
+      "last_checked_at": "2026-09-20T04:04:00+00:00",
+      "linked_from": [
+        "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+        "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "title": "ASAP7: A 7-nm finFET predictive process design kit"
     }
   }
 }
