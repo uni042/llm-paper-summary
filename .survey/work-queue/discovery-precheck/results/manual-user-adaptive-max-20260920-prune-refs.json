@@ -1,0 +1,1234 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-prune-refs",
+  "collector_id": "manual-user-adaptive-max-prune-refs",
+  "run_key": "manual-user-adaptive-max-2026-09-20-backrefs",
+  "axis": "explicit user request: backward references of Adaptive Expert Computation / Compression seed arXiv:2402.14800 (Not All Experts Are Equal references)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/references",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "eebc8d97f38ca6d8fe0983c0b673e9c98a330447",
+  "raw_search_result_count": 37,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 31,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:59:58.442048+00:00",
+  "results": [
+    {
+      "title": "MathCoder: Seamless Code Integration in LLMs for Enhanced Mathematical Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/cddb552f6c3464a54a02b0b64b2d1af56c086606",
+      "year": 2023,
+      "published": "2023-10-05",
+      "abstract": "The recently released GPT-4 Code Interpreter has demonstrated remarkable proficiency in solving challenging math problems, primarily attributed to its ability to seamlessly reason with natural language, generate code, execute code, and continue reasoning based on the execution output. In this paper, we present a method to fine-tune open-source language models, enabling them to use code for modeling and deriving math equations and, consequently, enhancing their mathematical reasoning abilities. We propose a method of generating novel and high-quality datasets with math problems and their code-based solutions, referred to as MathCodeInstruct. Each solution interleaves natural language, code, and execution results. We also introduce a customized supervised fine-tuning and inference approach. This approach yields the MathCoder models, a family of models capable of generating code-based solutions for solving challenging math problems. Impressively, the MathCoder models achieve state-of-the-art scores among open-source LLMs on the MATH (45.2%) and GSM8K (83.9%) datasets, substantially outperforming other open-source alternatives. Notably, the MathCoder model not only surpasses ChatGPT-3.5 and PaLM-2 on GSM8K and MATH but also outperforms GPT-4 on the competition-level MATH dataset. The dataset and models will be released at https://github.com/mathllm/MathCoder.",
+      "canonical_id": "arXiv:2310.03731",
+      "arxiv_id": "2310.03731",
+      "authors": [
+        "Ke Wang",
+        "Houxing Ren",
+        "Aojun Zhou",
+        "Zimu Lu",
+        "Sichun Luo",
+        "Weikang Shi",
+        "Renrui Zhang",
+        "Linqi Song",
+        "Mingjie Zhan",
+        "Hongsheng Li"
+      ]
+    },
+    {
+      "title": "MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning",
+      "source_url": "https://www.semanticscholar.org/paper/a3dd7d33dfaa9e02e43d92e900cba01f52d8c4b9",
+      "year": 2023,
+      "published": "2023-09-11",
+      "abstract": "We introduce MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, our meticulously curated instruction tuning dataset. MathInstruct is compiled from 13 math datasets with intermediate rationales, six of which have rationales newly curated by us. It presents a unique hybrid of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and also ensures extensive coverage of diverse fields in math. The hybrid of CoT and PoT not only unleashes the potential of tool use but also allows different thought processes for different math problems. As a result, the MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%. Remarkably, our MAmmoTH-7B model reaches 33% on MATH (a competition-level dataset), which exceeds the best open-source 7B model (WizardMath) by 23%, and the MAmmoTH-34B model achieves 44% accuracy on MATH, even surpassing GPT-4's CoT result. Our work underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.",
+      "canonical_id": "arXiv:2309.05653",
+      "arxiv_id": "2309.05653",
+      "authors": [
+        "Xiang Yue",
+        "Xingwei Qu",
+        "Ge Zhang",
+        "Yao Fu",
+        "Wenhao Huang",
+        "Huan Sun",
+        "Yu Su",
+        "Wenhu Chen"
+      ]
+    },
+    {
+      "title": "Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification",
+      "source_url": "https://www.semanticscholar.org/paper/1dbd58bd8768ba0dada2e7c84aa2fe0b9f418ebc",
+      "year": 2023,
+      "published": "2023-08-15",
+      "abstract": "Recent progress in large language models (LLMs) like GPT-4 and PaLM-2 has brought significant advancements in addressing math reasoning problems. In particular, OpenAI's latest version of GPT-4, known as GPT-4 Code Interpreter, shows remarkable performance on challenging math datasets. In this paper, we explore the effect of code on enhancing LLMs' reasoning capability by introducing different constraints on the \\textit{Code Usage Frequency} of GPT-4 Code Interpreter. We found that its success can be largely attributed to its powerful skills in generating and executing code, evaluating the output of code execution, and rectifying its solution when receiving unreasonable outputs. Based on this insight, we propose a novel and effective prompting method, explicit \\uline{c}ode-based \\uline{s}elf-\\uline{v}erification~(CSV), to further boost the mathematical reasoning potential of GPT-4 Code Interpreter. This method employs a zero-shot prompt on GPT-4 Code Interpreter to encourage it to use code to self-verify its answers. In instances where the verification state registers as ``False'', the model shall automatically amend its solution, analogous to our approach of rectifying errors during a mathematics examination. Furthermore, we recognize that the states of the verification result indicate the confidence of a solution, which can improve the effectiveness of majority voting. With GPT-4 Code Interpreter and CSV, we achieve an impressive zero-shot accuracy on MATH dataset \\textbf{(53.9\\% $\\to$ 84.3\\%)}.",
+      "canonical_id": "arXiv:2308.07921",
+      "arxiv_id": "2308.07921",
+      "authors": [
+        "Aojun Zhou",
+        "Ke Wang",
+        "Zimu Lu",
+        "Weikang Shi",
+        "Sichun Luo",
+        "Zipeng Qin",
+        "Shaoqing Lu",
+        "Anya Jia",
+        "Linqi Song",
+        "Mingjie Zhan",
+        "Hongsheng Li"
+      ]
+    },
+    {
+      "title": "Prune Spatio-temporal Tokens by Semantic-aware Temporal Accumulation",
+      "source_url": "https://www.semanticscholar.org/paper/8c7b0b0d4b2a6c20a58c3b0878fa35117fca3cca",
+      "year": 2023,
+      "published": "2023-08-08",
+      "abstract": "Transformers have become the primary backbone of the computer vision community due to their impressive performance. However, the unfriendly computation cost impedes their potential in the video recognition domain. To optimize the speed-accuracy trade-off, we propose Semanticaware Temporal Accumulation score (STA) to prune spatiotemporal tokens integrally. STA score considers two critical factors: temporal redundancy and semantic importance. The former depicts a specific region based on whether it is a new occurrence or a seen entity by aggregating token-to-token similarity in consecutive frames while the latter evaluates each token based on its contribution to the overall prediction. As a result, tokens with higher scores of STA carry more temporal redundancy as well as lower semantics thus being pruned. Based on the STA score, we are able to progressively prune the tokens without introducing any additional parameters or requiring further re-training. We directly apply the STA module to off-the-shelf ViT and VideoSwin backbones, and the empirical results on Kinetics-400 and Something-Something V2 achieve over 30% computation reduction with a negligible ~ 0.2% accuracy drop. The code is released at https://github.com/Mark12Ding/STA.",
+      "canonical_id": "arXiv:2308.04549",
+      "arxiv_id": "2308.04549",
+      "authors": [
+        "Shuangrui Ding",
+        "Peisen Zhao",
+        "Xiaopeng Zhang",
+        "Rui Qian",
+        "H. Xiong",
+        "Qi Tian"
+      ]
+    },
+    {
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/57e849d0de13ed5f91d086936296721d4ff75a75",
+      "year": 2023,
+      "published": "2023-02-27",
+      "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+      "canonical_id": "arXiv:2302.13971",
+      "arxiv_id": "2302.13971",
+      "authors": [
+        "Hugo Touvron",
+        "Thibaut Lavril",
+        "Gautier Izacard",
+        "X. Martinet",
+        "M. Lachaux",
+        "Timothée Lacroix",
+        "Baptiste Rozière",
+        "Naman Goyal",
+        "Eric Hambro",
+        "Faisal Azhar",
+        "Aur'elien Rodriguez",
+        "Armand Joulin",
+        "Edouard Grave",
+        "Guillaume Lample"
+      ]
+    },
+    {
+      "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+      "source_url": "https://www.semanticscholar.org/paper/909ad57ce8caa6b390a65ae09db352d27d8f3996",
+      "year": 2023,
+      "published": "2023-01-02",
+      "abstract": "We show for the first time that large-scale generative pretrained transformer (GPT) family models can be pruned to at least 50% sparsity in one-shot, without any retraining, at minimal loss of accuracy. This is achieved via a new pruning method called SparseGPT, specifically designed to work efficiently and accurately on massive GPT-family models. We can execute SparseGPT on the largest available open-source models, OPT-175B and BLOOM-176B, in under 4.5 hours, and can reach 60% unstructured sparsity with negligible increase in perplexity: remarkably, more than 100 billion weights from these models can be ignored at inference time. SparseGPT generalizes to semi-structured (2:4 and 4:8) patterns, and is compatible with weight quantization approaches. The code is available at: https://github.com/IST-DASLab/sparsegpt.",
+      "canonical_id": "arXiv:2301.00774",
+      "arxiv_id": "2301.00774",
+      "authors": [
+        "Elias Frantar",
+        "Dan Alistarh"
+      ]
+    },
+    {
+      "title": "Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model",
+      "source_url": "https://www.semanticscholar.org/paper/77638cb15b7c2cbb031eb103081ce881297904b3",
+      "year": 2022,
+      "published": "2022-12-19",
+      "abstract": "The recently released NLLB-200 is a set of multilingual Neural Machine Translation models that cover 202 languages. The largest model is based on a Mixture of Experts architecture and achieves SoTA results across many language pairs. It contains 54.5B parameters and requires at least four 32GB GPUs just for inference.In this work, we propose a pruning method that enables the removal of up to 80% of experts without further finetuning and with a negligible loss in translation quality, which makes it feasible to run the model on a single 32GB GPU. Further analysis suggests that our pruning metrics can identify language-specific experts.",
+      "canonical_id": "arXiv:2212.09811",
+      "arxiv_id": "2212.09811",
+      "authors": [
+        "Yeskendir Koishekenov",
+        "Vassilina Nikoulina",
+        "Alexandre Bérard"
+      ]
+    },
+    {
+      "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/43014fc85c4860487336579ec98f509fec1803f7",
+      "year": 2022,
+      "published": "2022-11-29",
+      "abstract": "We present MegaBlocks, a system for efficient Mixture-of-Experts (MoE) training on GPUs. Our system is motivated by the limitations of current frameworks, which restrict the dynamic routing in MoE layers to satisfy the constraints of existing software and hardware. These formulations force a tradeoff between model quality and hardware efficiency, as users must choose between dropping tokens from the computation or wasting computation and memory on padding. To address these limitations, we reformulate MoE computation in terms of block-sparse operations and develop new block-sparse GPU kernels that efficiently handle the dynamism present in MoEs. Our approach never drops tokens and maps efficiently to modern hardware, enabling end-to-end training speedups of up to 40% over MoEs trained with the state-of-the-art Tutel library and 2.4x over DNNs trained with the highly-optimized Megatron-LM framework.",
+      "canonical_id": "arXiv:2211.15841",
+      "arxiv_id": "2211.15841",
+      "authors": [
+        "Trevor Gale",
+        "D. Narayanan",
+        "C. Young",
+        "M. Zaharia"
+      ]
+    },
+    {
+      "title": "An Algorithm–Hardware Co-Optimized Framework for Accelerating N:M Sparse Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/a262a3d81f72e4b07558e636489e85ca88045156",
+      "year": 2022,
+      "published": "2022-08-12",
+      "abstract": "The Transformer has been an indispensable staple in deep learning. However, for real-life applications, it is very challenging to deploy efficient Transformers due to the immense parameters and operations of models. To relieve this burden, exploiting sparsity is an effective approach to accelerate Transformers. Newly emerging Ampere graphics processing units (GPUs) leverage a 2:4 sparsity pattern to achieve model acceleration, while it can hardly meet the diverse algorithm and hardware constraints when deploying models. By contrast, we propose an algorithm–hardware co-optimized framework to flexibly and efficiently accelerate Transformers by utilizing general N:M sparsity patterns. First, from an algorithm perspective, we propose a sparsity inheritance mechanism along with inherited dynamic pruning (IDP) to obtain a series of N:M sparse candidate Transformers rapidly. A model compression scheme is further proposed to significantly reduce the storage requirement for deployment. Second, from a hardware perspective, we present a flexible and efficient hardware architecture, namely, STA, to achieve significant speedup when deploying N:M sparse Transformers. STA features not only a computing engine unifying both sparse–dense and dense–dense matrix multiplications with high computational efficiency but also a scalable softmax module eliminating the latency from intermediate off-chip data communication. Experimental results show that, compared to other methods, N:M sparse Transformers, generated using IDP, achieves an average of 6.7% improvement on accuracy with high training efficiency. Moreover, STA can achieve <inline-formula> <tex-math notation=\"LaTeX\">$14.47\\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$11.33\\times $ </tex-math></inline-formula> speedups compared to Intel i9-9900X and NVIDIA RTX 2080 Ti, respectively, and perform <inline-formula> <tex-math notation=\"LaTeX\">$2.00 \\,\\,\\sim 19.47 \\times $ </tex-math></inline-formula> faster inference than the state-of-the-art field-programmable gate array (FPGA)-based accelerators for Transformers.",
+      "canonical_id": "arXiv:2208.06118",
+      "arxiv_id": "2208.06118",
+      "authors": [
+        "Chao Fang",
+        "Aojun Zhou",
+        "Zhongfeng Wang"
+      ]
+    },
+    {
+      "title": "Task-Specific Expert Pruning for Sparse Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/25eab8218ed04a77bbe46a346eba6df1d7486de8",
+      "year": 2022,
+      "published": "2022-06-01",
+      "abstract": "The sparse Mixture-of-Experts (MoE) model is powerful for large-scale pre-training and has achieved promising results due to its model capacity. However, with trillions of parameters, MoE is hard to be deployed on cloud or mobile environment. The inference of MoE requires expert parallelism, which is not hardware-friendly and communication expensive. Especially for resource-limited downstream tasks, such sparse structure has to sacrifice a lot of computing efficiency for limited performance gains. In this work, we observe most experts contribute scarcely little to the MoE fine-tuning and inference. We further propose a general method to progressively drop the non-professional experts for the target downstream task, which preserves the benefits of MoE while reducing the MoE model into one single-expert dense model. Our experiments reveal that the fine-tuned single-expert model could preserve 99.3% benefits from MoE across six different types of tasks while enjoying 2x inference speed with free communication cost.",
+      "canonical_id": "arXiv:2206.00277",
+      "arxiv_id": "2206.00277",
+      "authors": [
+        "Tianyu Chen",
+        "Shaohan Huang",
+        "Yuan Xie",
+        "Binxing Jiao",
+        "Daxin Jiang",
+        "Haoyi Zhou",
+        "Jianxin Li",
+        "Furu Wei"
+      ]
+    },
+    {
+      "title": "On the Representation Collapse of Sparse Mixture of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/c26bb68806a992bf4fc85b5639e1657a445c4781",
+      "year": 2022,
+      "published": "2022-04-20",
+      "abstract": "Sparse mixture of experts provides larger model capacity while requiring a constant computational overhead. It employs the routing mechanism to distribute input tokens to the best-matched experts according to their hidden representations. However, learning such a routing mechanism encourages token clustering around expert centroids, implying a trend toward representation collapse. In this work, we propose to estimate the routing scores between tokens and experts on a low-dimensional hypersphere. We conduct extensive experiments on cross-lingual language model pre-training and fine-tuning on downstream tasks. Experimental results across seven multilingual benchmarks show that our method achieves consistent gains. We also present a comprehensive analysis on the representation and routing behaviors of our models. Our method alleviates the representation collapse issue and achieves more consistent routing than the baseline mixture-of-experts methods.",
+      "canonical_id": "arXiv:2204.09179",
+      "arxiv_id": "2204.09179",
+      "authors": [
+        "Zewen Chi",
+        "Li Dong",
+        "Shaohan Huang",
+        "Damai Dai",
+        "Shuming Ma",
+        "Barun Patra",
+        "Saksham Singhal",
+        "Payal Bajaj",
+        "Xia Song",
+        "Furu Wei"
+      ]
+    },
+    {
+      "title": "A Fast Post-Training Pruning Framework for Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/fb145e1e49d3269d8223c7710e22b45438613ff0",
+      "year": 2022,
+      "published": "2022-03-29",
+      "abstract": "Pruning is an effective way to reduce the huge inference cost of Transformer models. However, prior work on pruning Transformers requires retraining the models. This can add high training cost and high complexity to model deployment, making it difficult to use in many practical situations. To address this, we propose a fast post-training pruning framework for Transformers that does not require any retraining. Given a resource constraint and a sample dataset, our framework automatically prunes the Transformer model using structured sparsity methods. To retain high accuracy without retraining, we introduce three novel techniques: (i) a lightweight mask search algorithm that finds which heads and filters to prune based on the Fisher information; (ii) mask rearrangement that complements the search algorithm; and (iii) mask tuning that reconstructs the output activations for each layer. We apply our method to BERT-base and DistilBERT, and we evaluate its effectiveness on GLUE and SQuAD benchmarks. Our framework achieves up to 2.0x reduction in FLOPs and 1.56x speedup in inference latency, while maintaining<1% loss in accuracy. Importantly, our framework prunes Transformers in less than 3 minutes on a single GPU, which is over two orders of magnitude faster than existing pruning approaches that retrain the models.",
+      "canonical_id": "arXiv:2204.09656",
+      "arxiv_id": "2204.09656",
+      "authors": [
+        "Woosuk Kwon",
+        "Sehoon Kim",
+        "Michael W. Mahoney",
+        "Joseph Hassoun",
+        "K. Keutzer",
+        "A. Gholami"
+      ]
+    },
+    {
+      "title": "Training Verifiers to Solve Math Word Problems",
+      "source_url": "https://www.semanticscholar.org/paper/d6045d2ccc9c09ca1671348de86d07da6bc28eea",
+      "year": 2021,
+      "published": "2021-10-27",
+      "abstract": "State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline.",
+      "canonical_id": "arXiv:2110.14168",
+      "arxiv_id": "2110.14168",
+      "authors": [
+        "K. Cobbe",
+        "V. Kosaraju",
+        "Mo Bavarian",
+        "Mark Chen",
+        "Heewoo Jun",
+        "Lukasz Kaiser",
+        "Matthias Plappert",
+        "Jerry Tworek",
+        "Jacob Hilton",
+        "Reiichiro Nakano",
+        "Christopher Hesse",
+        "John Schulman"
+      ]
+    },
+    {
+      "title": "Accelerating Sparse Deep Neural Networks",
+      "source_url": "https://www.semanticscholar.org/paper/90d5e6f8d3b9f2617b3a3cf00fb02e730eb011cb",
+      "year": 2021,
+      "published": "2021-04-16",
+      "abstract": "As neural network model sizes have dramatically increased, so has the interest in various techniques to reduce their parameter counts and accelerate their execution. An active area of research in this field is sparsity - encouraging zero values in parameters that can then be discarded from storage or computations. While most research focuses on high levels of sparsity, there are challenges in universally maintaining model accuracy as well as achieving significant speedups over modern matrix-math hardware. To make sparsity adoption practical, the NVIDIA Ampere GPU architecture introduces sparsity support in its matrix-math units, Tensor Cores. We present the design and behavior of Sparse Tensor Cores, which exploit a 2:4 (50%) sparsity pattern that leads to twice the math throughput of dense matrix units. We also describe a simple workflow for training networks that both satisfy 2:4 sparsity pattern requirements and maintain accuracy, verifying it on a wide range of common tasks and model architectures. This workflow makes it easy to prepare accurate models for efficient deployment on Sparse Tensor Cores.",
+      "canonical_id": "arXiv:2104.08378",
+      "arxiv_id": "2104.08378",
+      "authors": [
+        "Asit K. Mishra",
+        "J. Latorre",
+        "Jeff Pool",
+        "Darko Stosic",
+        "Dusan Stosic",
+        "Ganesh Venkatesh",
+        "Chong Yu",
+        "P. Micikevicius"
+      ]
+    },
+    {
+      "title": "Measuring Mathematical Problem Solving With the MATH Dataset",
+      "source_url": "https://www.semanticscholar.org/paper/57d1e7ac339e783898f2c3b1af55737cbeee9fc5",
+      "year": 2021,
+      "published": "2021-03-05",
+      "abstract": "Many intellectual endeavors require mathematical problem solving, but this skill remains beyond the capabilities of computers. To measure this ability in machine learning models, we introduce MATH, a new dataset of 12,500 challenging competition mathematics problems. Each problem in MATH has a full step-by-step solution which can be used to teach models to generate answer derivations and explanations. To facilitate future research and increase accuracy on MATH, we also contribute a large auxiliary pretraining dataset which helps teach models the fundamentals of mathematics. Even though we are able to increase accuracy on MATH, our results show that accuracy remains relatively low, even with enormous Transformer models. Moreover, we find that simply increasing budgets and model parameter counts will be impractical for achieving strong mathematical reasoning if scaling trends continue. While scaling Transformers is automatically solving most other text-based tasks, scaling is not currently solving MATH. To have more traction on mathematical problem solving we will likely need new algorithmic advancements from the broader research community.",
+      "canonical_id": "arXiv:2103.03874",
+      "arxiv_id": "2103.03874",
+      "authors": [
+        "Dan Hendrycks",
+        "Collin Burns",
+        "Saurav Kadavath",
+        "Akul Arora",
+        "Steven Basart",
+        "Eric Tang",
+        "D. Song",
+        "J. Steinhardt"
+      ]
+    },
+    {
+      "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N: M Transposable Masks",
+      "source_url": "https://www.semanticscholar.org/paper/b4d207a2096aee4a3764933373eef6edb574c952",
+      "year": 2021,
+      "published": "2021-02-16",
+      "abstract": "Unstructured pruning reduces the memory footprint in deep neural networks (DNNs). Recently, researchers proposed different types of structural pruning intending to reduce also the computation complexity. In this work, we first suggest a new measure called mask-diversity which correlates with the expected accuracy of the different types of structural pruning. We focus on the recently suggested N:M fine-grained block sparsity mask, in which for each block of M weights, we have at least N zeros. While N:M fine-grained block sparsity allows acceleration in actual modern hardware, it can be used only to accelerate the inference phase. In order to allow for similar accelerations in the training phase, we suggest a novel transposable fine-grained sparsity mask, where the same mask can be used for both forward and backward passes. Our transposable mask guarantees that both the weight matrix and its transpose follow the same sparsity pattern; thus, the matrix multiplication required for passing the error backward can also be accelerated. We formulate the problem of finding the optimal transposable-mask as a minimum-cost flow problem. Additionally, to speed up the minimum-cost flow computation, we also introduce a fast linear-time approximation that can be used when the masks dynamically change during training. Our experiments suggest a 2x speed-up in the matrix multiplications with no accuracy degradation over vision and language models. Finally, to solve the problem of switching between different structure constraints, we suggest a method to convert a pre-trained model with unstructured sparsity to an N:M fine-grained block sparsity model with little to no training. A reference implementation can be found at https://github.com/papers-submission/structured_transposable_masks.",
+      "canonical_id": "arXiv:2102.08124",
+      "arxiv_id": "2102.08124",
+      "authors": [
+        "Itay Hubara",
+        "Brian Chmiel",
+        "Moshe Island",
+        "Ron Banner",
+        "S. Naor",
+        "Daniel Soudry"
+      ]
+    },
+    {
+      "title": "Learning N: M Fine-grained Structured Sparse Neural Networks From Scratch",
+      "source_url": "https://www.semanticscholar.org/paper/5e38dc1ccf33ac1df09b8eb6476f110cb3d1966f",
+      "year": 2021,
+      "published": "2021-02-08",
+      "abstract": "Sparsity in Deep Neural Networks (DNNs) has been widely studied to compress and accelerate the models on resource-constrained environments. It can be generally categorized into unstructured fine-grained sparsity that zeroes out multiple individual weights distributed across the neural network, and structured coarse-grained sparsity which prunes blocks of sub-networks of a neural network. Fine-grained sparsity can achieve a high compression ratio but is not hardware friendly and hence receives limited speed gains. On the other hand, coarse-grained sparsity cannot simultaneously achieve both apparent acceleration on modern GPUs and decent performance. In this paper, we are the first to study training from scratch an N:M fine-grained structured sparse network, which can maintain the advantages of both unstructured fine-grained sparsity and structured coarse-grained sparsity simultaneously on specifically designed GPUs. Specifically, a 2 : 4 sparse network could achieve 2× speed-up without performance drop on Nvidia A100 GPUs. Furthermore, we propose a novel and effective ingredient, sparse-refined straight-through estimator (SR-STE), to alleviate the negative influence of the approximated gradients computed by vanilla STE during optimization. We also define a metric, Sparse Architecture Divergence (SAD), to measure the sparse network’s topology change during the training process. Finally, We justify SR-STE’s advantages with SAD and demonstrate the effectiveness of SR-STE by performing comprehensive experiments on various tasks. Anonymous code and model will be at available at https://github.com/anonymous-NM-sparsity/NM-sparsity.",
+      "canonical_id": "arXiv:2102.04010",
+      "arxiv_id": "2102.04010",
+      "authors": [
+        "Aojun Zhou",
+        "Yukun Ma",
+        "Junnan Zhu",
+        "Jianbo Liu",
+        "Zhijie Zhang",
+        "Kun Yuan",
+        "Wenxiu Sun",
+        "Hongsheng Li"
+      ]
+    },
+    {
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+      "year": 2021,
+      "published": "2021-01-11",
+      "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+      "canonical_id": "arXiv:2101.03961",
+      "arxiv_id": "2101.03961",
+      "authors": [
+        "W. Fedus",
+        "Barret Zoph",
+        "Noam Shazeer"
+      ]
+    },
+    {
+      "title": "Transformers: State-of-the-Art Natural Language Processing",
+      "source_url": null,
+      "year": 2020,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+      "year": 2020,
+      "published": "2020-05-28",
+      "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+      "canonical_id": "arXiv:2005.14165",
+      "arxiv_id": "2005.14165",
+      "authors": [
+        "Tom B. Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah",
+        "J. Kaplan",
+        "Prafulla Dhariwal",
+        "Arvind Neelakantan",
+        "Pranav Shyam",
+        "G. Sastry",
+        "Amanda Askell",
+        "S. Agarwal",
+        "Ariel Herbert-Voss",
+        "Gretchen Krueger",
+        "T. Henighan",
+        "R. Child",
+        "A. Ramesh",
+        "Daniel M. Ziegler",
+        "Jeff Wu",
+        "Clemens Winter",
+        "Christopher Hesse",
+        "Mark Chen",
+        "Eric Sigler",
+        "Ma-teusz Litwin",
+        "Scott Gray",
+        "Benjamin Chess",
+        "Jack Clark",
+        "Christopher Berner",
+        "Sam McCandlish",
+        "Alec Radford",
+        "I. Sutskever",
+        "Dario Amodei"
+      ]
+    },
+    {
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+      "source_url": "https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+      "year": 2019,
+      "published": "2019-10-23",
+      "abstract": "Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts every language problem into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled datasets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new \"Colossal Clean Crawled Corpus\", we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our dataset, pre-trained models, and code.",
+      "canonical_id": "arXiv:1910.10683",
+      "arxiv_id": "1910.10683",
+      "authors": [
+        "Colin Raffel",
+        "Noam Shazeer",
+        "Adam Roberts",
+        "Katherine Lee",
+        "Sharan Narang",
+        "Michael Matena",
+        "Yanqi Zhou",
+        "Wei Li",
+        "Peter J. Liu"
+      ]
+    },
+    {
+      "title": "Channel Pruning for Accelerating Very Deep Neural Networks",
+      "source_url": "https://www.semanticscholar.org/paper/ee53c9480132fc0d09b1192226cb2c460462fd6d",
+      "year": 2017,
+      "published": "2017-07-19",
+      "abstract": "In this paper, we introduce a new channel pruning method to accelerate very deep convolutional neural networks. Given a trained CNN model, we propose an iterative two-step algorithm to effectively prune each layer, by a LASSO regression based channel selection and least square reconstruction. We further generalize this algorithm to multi-layer and multi-branch cases. Our method reduces the accumulated error and enhance the compatibility with various architectures. Our pruned VGG-16 achieves the state-of-the-art results by 5× speed-up along with only 0.3% increase of error. More importantly, our method is able to accelerate modern networks like ResNet, Xception and suffers only 1.4%, 1.0% accuracy loss under 2× speedup respectively, which is significant.",
+      "canonical_id": "arXiv:1707.06168",
+      "arxiv_id": "1707.06168",
+      "authors": [
+        "Yihui He",
+        "Xiangyu Zhang",
+        "Jian Sun"
+      ]
+    },
+    {
+      "title": "Adaptive Mixtures of Local Experts",
+      "source_url": "https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56",
+      "year": 1991,
+      "published": "1991-03-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+      "doi": "10.1162/neco.1991.3.1.79",
+      "authors": [
+        "R. Jacobs",
+        "Michael I. Jordan",
+        "S. Nowlan",
+        "Geoffrey E. Hinton"
+      ]
+    },
+    {
+      "title": "2023. Metamath: Bootstrap your own mathematical questions for large language models",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2023. Mixture of experts explained",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2023. Gpt-4 technical report",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2024. Solving challenging math word problems using GPT-4",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2023. A framework for few-shot language model evaluation",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2023. Gemini: a family of highly capable multimodal models",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "OpenAI",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "Model r Pruning Skipping GSM8K (5-shot) Mixtral 8x7B 8 58.61 8 ✓ 54.28 6 ✓ 51.25 6",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2310.03731",
+      "identity_tokens": [
+        "id:arXiv:2310.03731",
+        "title:mathcoder seamless code integration in llms for enhanced mathematical reasoning",
+        "url:https://www.semanticscholar.org/paper/cddb552f6c3464a54a02b0b64b2d1af56c086606"
+      ],
+      "record": {
+        "title": "MathCoder: Seamless Code Integration in LLMs for Enhanced Mathematical Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/cddb552f6c3464a54a02b0b64b2d1af56c086606",
+        "year": 2023,
+        "published": "2023-10-05",
+        "abstract": "The recently released GPT-4 Code Interpreter has demonstrated remarkable proficiency in solving challenging math problems, primarily attributed to its ability to seamlessly reason with natural language, generate code, execute code, and continue reasoning based on the execution output. In this paper, we present a method to fine-tune open-source language models, enabling them to use code for modeling and deriving math equations and, consequently, enhancing their mathematical reasoning abilities. We propose a method of generating novel and high-quality datasets with math problems and their code-based solutions, referred to as MathCodeInstruct. Each solution interleaves natural language, code, and execution results. We also introduce a customized supervised fine-tuning and inference approach. This approach yields the MathCoder models, a family of models capable of generating code-based solutions for solving challenging math problems. Impressively, the MathCoder models achieve state-of-the-art scores among open-source LLMs on the MATH (45.2%) and GSM8K (83.9%) datasets, substantially outperforming other open-source alternatives. Notably, the MathCoder model not only surpasses ChatGPT-3.5 and PaLM-2 on GSM8K and MATH but also outperforms GPT-4 on the competition-level MATH dataset. The dataset and models will be released at https://github.com/mathllm/MathCoder.",
+        "canonical_id": "arXiv:2310.03731",
+        "arxiv_id": "2310.03731",
+        "authors": [
+          "Ke Wang",
+          "Houxing Ren",
+          "Aojun Zhou",
+          "Zimu Lu",
+          "Sichun Luo",
+          "Weikang Shi",
+          "Renrui Zhang",
+          "Linqi Song",
+          "Mingjie Zhan",
+          "Hongsheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.05653",
+      "identity_tokens": [
+        "id:arXiv:2309.05653",
+        "title:mammoth building math generalist models through hybrid instruction tuning",
+        "url:https://www.semanticscholar.org/paper/a3dd7d33dfaa9e02e43d92e900cba01f52d8c4b9"
+      ],
+      "record": {
+        "title": "MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning",
+        "source_url": "https://www.semanticscholar.org/paper/a3dd7d33dfaa9e02e43d92e900cba01f52d8c4b9",
+        "year": 2023,
+        "published": "2023-09-11",
+        "abstract": "We introduce MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, our meticulously curated instruction tuning dataset. MathInstruct is compiled from 13 math datasets with intermediate rationales, six of which have rationales newly curated by us. It presents a unique hybrid of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and also ensures extensive coverage of diverse fields in math. The hybrid of CoT and PoT not only unleashes the potential of tool use but also allows different thought processes for different math problems. As a result, the MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%. Remarkably, our MAmmoTH-7B model reaches 33% on MATH (a competition-level dataset), which exceeds the best open-source 7B model (WizardMath) by 23%, and the MAmmoTH-34B model achieves 44% accuracy on MATH, even surpassing GPT-4's CoT result. Our work underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.",
+        "canonical_id": "arXiv:2309.05653",
+        "arxiv_id": "2309.05653",
+        "authors": [
+          "Xiang Yue",
+          "Xingwei Qu",
+          "Ge Zhang",
+          "Yao Fu",
+          "Wenhao Huang",
+          "Huan Sun",
+          "Yu Su",
+          "Wenhu Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.07921",
+      "identity_tokens": [
+        "id:arXiv:2308.07921",
+        "title:solving challenging math word problems using gpt4 code interpreter with codebased selfverification",
+        "url:https://www.semanticscholar.org/paper/1dbd58bd8768ba0dada2e7c84aa2fe0b9f418ebc"
+      ],
+      "record": {
+        "title": "Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification",
+        "source_url": "https://www.semanticscholar.org/paper/1dbd58bd8768ba0dada2e7c84aa2fe0b9f418ebc",
+        "year": 2023,
+        "published": "2023-08-15",
+        "abstract": "Recent progress in large language models (LLMs) like GPT-4 and PaLM-2 has brought significant advancements in addressing math reasoning problems. In particular, OpenAI's latest version of GPT-4, known as GPT-4 Code Interpreter, shows remarkable performance on challenging math datasets. In this paper, we explore the effect of code on enhancing LLMs' reasoning capability by introducing different constraints on the \\textit{Code Usage Frequency} of GPT-4 Code Interpreter. We found that its success can be largely attributed to its powerful skills in generating and executing code, evaluating the output of code execution, and rectifying its solution when receiving unreasonable outputs. Based on this insight, we propose a novel and effective prompting method, explicit \\uline{c}ode-based \\uline{s}elf-\\uline{v}erification~(CSV), to further boost the mathematical reasoning potential of GPT-4 Code Interpreter. This method employs a zero-shot prompt on GPT-4 Code Interpreter to encourage it to use code to self-verify its answers. In instances where the verification state registers as ``False'', the model shall automatically amend its solution, analogous to our approach of rectifying errors during a mathematics examination. Furthermore, we recognize that the states of the verification result indicate the confidence of a solution, which can improve the effectiveness of majority voting. With GPT-4 Code Interpreter and CSV, we achieve an impressive zero-shot accuracy on MATH dataset \\textbf{(53.9\\% $\\to$ 84.3\\%)}.",
+        "canonical_id": "arXiv:2308.07921",
+        "arxiv_id": "2308.07921",
+        "authors": [
+          "Aojun Zhou",
+          "Ke Wang",
+          "Zimu Lu",
+          "Weikang Shi",
+          "Sichun Luo",
+          "Zipeng Qin",
+          "Shaoqing Lu",
+          "Anya Jia",
+          "Linqi Song",
+          "Mingjie Zhan",
+          "Hongsheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.04549",
+      "identity_tokens": [
+        "id:arXiv:2308.04549",
+        "title:prune spatiotemporal tokens by semanticaware temporal accumulation",
+        "url:https://www.semanticscholar.org/paper/8c7b0b0d4b2a6c20a58c3b0878fa35117fca3cca"
+      ],
+      "record": {
+        "title": "Prune Spatio-temporal Tokens by Semantic-aware Temporal Accumulation",
+        "source_url": "https://www.semanticscholar.org/paper/8c7b0b0d4b2a6c20a58c3b0878fa35117fca3cca",
+        "year": 2023,
+        "published": "2023-08-08",
+        "abstract": "Transformers have become the primary backbone of the computer vision community due to their impressive performance. However, the unfriendly computation cost impedes their potential in the video recognition domain. To optimize the speed-accuracy trade-off, we propose Semanticaware Temporal Accumulation score (STA) to prune spatiotemporal tokens integrally. STA score considers two critical factors: temporal redundancy and semantic importance. The former depicts a specific region based on whether it is a new occurrence or a seen entity by aggregating token-to-token similarity in consecutive frames while the latter evaluates each token based on its contribution to the overall prediction. As a result, tokens with higher scores of STA carry more temporal redundancy as well as lower semantics thus being pruned. Based on the STA score, we are able to progressively prune the tokens without introducing any additional parameters or requiring further re-training. We directly apply the STA module to off-the-shelf ViT and VideoSwin backbones, and the empirical results on Kinetics-400 and Something-Something V2 achieve over 30% computation reduction with a negligible ~ 0.2% accuracy drop. The code is released at https://github.com/Mark12Ding/STA.",
+        "canonical_id": "arXiv:2308.04549",
+        "arxiv_id": "2308.04549",
+        "authors": [
+          "Shuangrui Ding",
+          "Peisen Zhao",
+          "Xiaopeng Zhang",
+          "Rui Qian",
+          "H. Xiong",
+          "Qi Tian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2302.13971",
+      "identity_tokens": [
+        "id:arXiv:2302.13971",
+        "title:llama open and efficient foundation language models",
+        "url:https://www.semanticscholar.org/paper/57e849d0de13ed5f91d086936296721d4ff75a75"
+      ],
+      "record": {
+        "title": "LLaMA: Open and Efficient Foundation Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/57e849d0de13ed5f91d086936296721d4ff75a75",
+        "year": 2023,
+        "published": "2023-02-27",
+        "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+        "canonical_id": "arXiv:2302.13971",
+        "arxiv_id": "2302.13971",
+        "authors": [
+          "Hugo Touvron",
+          "Thibaut Lavril",
+          "Gautier Izacard",
+          "X. Martinet",
+          "M. Lachaux",
+          "Timothée Lacroix",
+          "Baptiste Rozière",
+          "Naman Goyal",
+          "Eric Hambro",
+          "Faisal Azhar",
+          "Aur'elien Rodriguez",
+          "Armand Joulin",
+          "Edouard Grave",
+          "Guillaume Lample"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2301.00774",
+      "identity_tokens": [
+        "id:arXiv:2301.00774",
+        "title:sparsegpt massive language models can be accurately pruned in oneshot",
+        "url:https://www.semanticscholar.org/paper/909ad57ce8caa6b390a65ae09db352d27d8f3996"
+      ],
+      "record": {
+        "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+        "source_url": "https://www.semanticscholar.org/paper/909ad57ce8caa6b390a65ae09db352d27d8f3996",
+        "year": 2023,
+        "published": "2023-01-02",
+        "abstract": "We show for the first time that large-scale generative pretrained transformer (GPT) family models can be pruned to at least 50% sparsity in one-shot, without any retraining, at minimal loss of accuracy. This is achieved via a new pruning method called SparseGPT, specifically designed to work efficiently and accurately on massive GPT-family models. We can execute SparseGPT on the largest available open-source models, OPT-175B and BLOOM-176B, in under 4.5 hours, and can reach 60% unstructured sparsity with negligible increase in perplexity: remarkably, more than 100 billion weights from these models can be ignored at inference time. SparseGPT generalizes to semi-structured (2:4 and 4:8) patterns, and is compatible with weight quantization approaches. The code is available at: https://github.com/IST-DASLab/sparsegpt.",
+        "canonical_id": "arXiv:2301.00774",
+        "arxiv_id": "2301.00774",
+        "authors": [
+          "Elias Frantar",
+          "Dan Alistarh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2212.09811",
+      "identity_tokens": [
+        "id:arXiv:2212.09811",
+        "title:memoryefficient nllb200 languagespecific expert pruning of a massively multilingual machine translation model",
+        "url:https://www.semanticscholar.org/paper/77638cb15b7c2cbb031eb103081ce881297904b3"
+      ],
+      "record": {
+        "title": "Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model",
+        "source_url": "https://www.semanticscholar.org/paper/77638cb15b7c2cbb031eb103081ce881297904b3",
+        "year": 2022,
+        "published": "2022-12-19",
+        "abstract": "The recently released NLLB-200 is a set of multilingual Neural Machine Translation models that cover 202 languages. The largest model is based on a Mixture of Experts architecture and achieves SoTA results across many language pairs. It contains 54.5B parameters and requires at least four 32GB GPUs just for inference.In this work, we propose a pruning method that enables the removal of up to 80% of experts without further finetuning and with a negligible loss in translation quality, which makes it feasible to run the model on a single 32GB GPU. Further analysis suggests that our pruning metrics can identify language-specific experts.",
+        "canonical_id": "arXiv:2212.09811",
+        "arxiv_id": "2212.09811",
+        "authors": [
+          "Yeskendir Koishekenov",
+          "Vassilina Nikoulina",
+          "Alexandre Bérard"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2211.15841",
+      "identity_tokens": [
+        "id:arXiv:2211.15841",
+        "title:megablocks efficient sparse training with mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/43014fc85c4860487336579ec98f509fec1803f7"
+      ],
+      "record": {
+        "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/43014fc85c4860487336579ec98f509fec1803f7",
+        "year": 2022,
+        "published": "2022-11-29",
+        "abstract": "We present MegaBlocks, a system for efficient Mixture-of-Experts (MoE) training on GPUs. Our system is motivated by the limitations of current frameworks, which restrict the dynamic routing in MoE layers to satisfy the constraints of existing software and hardware. These formulations force a tradeoff between model quality and hardware efficiency, as users must choose between dropping tokens from the computation or wasting computation and memory on padding. To address these limitations, we reformulate MoE computation in terms of block-sparse operations and develop new block-sparse GPU kernels that efficiently handle the dynamism present in MoEs. Our approach never drops tokens and maps efficiently to modern hardware, enabling end-to-end training speedups of up to 40% over MoEs trained with the state-of-the-art Tutel library and 2.4x over DNNs trained with the highly-optimized Megatron-LM framework.",
+        "canonical_id": "arXiv:2211.15841",
+        "arxiv_id": "2211.15841",
+        "authors": [
+          "Trevor Gale",
+          "D. Narayanan",
+          "C. Young",
+          "M. Zaharia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2208.06118",
+      "identity_tokens": [
+        "id:arXiv:2208.06118",
+        "title:an algorithmhardware cooptimized framework for accelerating nm sparse transformers",
+        "url:https://www.semanticscholar.org/paper/a262a3d81f72e4b07558e636489e85ca88045156"
+      ],
+      "record": {
+        "title": "An Algorithm–Hardware Co-Optimized Framework for Accelerating N:M Sparse Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/a262a3d81f72e4b07558e636489e85ca88045156",
+        "year": 2022,
+        "published": "2022-08-12",
+        "abstract": "The Transformer has been an indispensable staple in deep learning. However, for real-life applications, it is very challenging to deploy efficient Transformers due to the immense parameters and operations of models. To relieve this burden, exploiting sparsity is an effective approach to accelerate Transformers. Newly emerging Ampere graphics processing units (GPUs) leverage a 2:4 sparsity pattern to achieve model acceleration, while it can hardly meet the diverse algorithm and hardware constraints when deploying models. By contrast, we propose an algorithm–hardware co-optimized framework to flexibly and efficiently accelerate Transformers by utilizing general N:M sparsity patterns. First, from an algorithm perspective, we propose a sparsity inheritance mechanism along with inherited dynamic pruning (IDP) to obtain a series of N:M sparse candidate Transformers rapidly. A model compression scheme is further proposed to significantly reduce the storage requirement for deployment. Second, from a hardware perspective, we present a flexible and efficient hardware architecture, namely, STA, to achieve significant speedup when deploying N:M sparse Transformers. STA features not only a computing engine unifying both sparse–dense and dense–dense matrix multiplications with high computational efficiency but also a scalable softmax module eliminating the latency from intermediate off-chip data communication. Experimental results show that, compared to other methods, N:M sparse Transformers, generated using IDP, achieves an average of 6.7% improvement on accuracy with high training efficiency. Moreover, STA can achieve <inline-formula> <tex-math notation=\"LaTeX\">$14.47\\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$11.33\\times $ </tex-math></inline-formula> speedups compared to Intel i9-9900X and NVIDIA RTX 2080 Ti, respectively, and perform <inline-formula> <tex-math notation=\"LaTeX\">$2.00 \\,\\,\\sim 19.47 \\times $ </tex-math></inline-formula> faster inference than the state-of-the-art field-programmable gate array (FPGA)-based accelerators for Transformers.",
+        "canonical_id": "arXiv:2208.06118",
+        "arxiv_id": "2208.06118",
+        "authors": [
+          "Chao Fang",
+          "Aojun Zhou",
+          "Zhongfeng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2206.00277",
+      "identity_tokens": [
+        "id:arXiv:2206.00277",
+        "title:taskspecific expert pruning for sparse mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/25eab8218ed04a77bbe46a346eba6df1d7486de8"
+      ],
+      "record": {
+        "title": "Task-Specific Expert Pruning for Sparse Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/25eab8218ed04a77bbe46a346eba6df1d7486de8",
+        "year": 2022,
+        "published": "2022-06-01",
+        "abstract": "The sparse Mixture-of-Experts (MoE) model is powerful for large-scale pre-training and has achieved promising results due to its model capacity. However, with trillions of parameters, MoE is hard to be deployed on cloud or mobile environment. The inference of MoE requires expert parallelism, which is not hardware-friendly and communication expensive. Especially for resource-limited downstream tasks, such sparse structure has to sacrifice a lot of computing efficiency for limited performance gains. In this work, we observe most experts contribute scarcely little to the MoE fine-tuning and inference. We further propose a general method to progressively drop the non-professional experts for the target downstream task, which preserves the benefits of MoE while reducing the MoE model into one single-expert dense model. Our experiments reveal that the fine-tuned single-expert model could preserve 99.3% benefits from MoE across six different types of tasks while enjoying 2x inference speed with free communication cost.",
+        "canonical_id": "arXiv:2206.00277",
+        "arxiv_id": "2206.00277",
+        "authors": [
+          "Tianyu Chen",
+          "Shaohan Huang",
+          "Yuan Xie",
+          "Binxing Jiao",
+          "Daxin Jiang",
+          "Haoyi Zhou",
+          "Jianxin Li",
+          "Furu Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2204.09179",
+      "identity_tokens": [
+        "id:arXiv:2204.09179",
+        "title:on the representation collapse of sparse mixture of experts",
+        "url:https://www.semanticscholar.org/paper/c26bb68806a992bf4fc85b5639e1657a445c4781"
+      ],
+      "record": {
+        "title": "On the Representation Collapse of Sparse Mixture of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/c26bb68806a992bf4fc85b5639e1657a445c4781",
+        "year": 2022,
+        "published": "2022-04-20",
+        "abstract": "Sparse mixture of experts provides larger model capacity while requiring a constant computational overhead. It employs the routing mechanism to distribute input tokens to the best-matched experts according to their hidden representations. However, learning such a routing mechanism encourages token clustering around expert centroids, implying a trend toward representation collapse. In this work, we propose to estimate the routing scores between tokens and experts on a low-dimensional hypersphere. We conduct extensive experiments on cross-lingual language model pre-training and fine-tuning on downstream tasks. Experimental results across seven multilingual benchmarks show that our method achieves consistent gains. We also present a comprehensive analysis on the representation and routing behaviors of our models. Our method alleviates the representation collapse issue and achieves more consistent routing than the baseline mixture-of-experts methods.",
+        "canonical_id": "arXiv:2204.09179",
+        "arxiv_id": "2204.09179",
+        "authors": [
+          "Zewen Chi",
+          "Li Dong",
+          "Shaohan Huang",
+          "Damai Dai",
+          "Shuming Ma",
+          "Barun Patra",
+          "Saksham Singhal",
+          "Payal Bajaj",
+          "Xia Song",
+          "Furu Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2204.09656",
+      "identity_tokens": [
+        "id:arXiv:2204.09656",
+        "title:a fast posttraining pruning framework for transformers",
+        "url:https://www.semanticscholar.org/paper/fb145e1e49d3269d8223c7710e22b45438613ff0"
+      ],
+      "record": {
+        "title": "A Fast Post-Training Pruning Framework for Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/fb145e1e49d3269d8223c7710e22b45438613ff0",
+        "year": 2022,
+        "published": "2022-03-29",
+        "abstract": "Pruning is an effective way to reduce the huge inference cost of Transformer models. However, prior work on pruning Transformers requires retraining the models. This can add high training cost and high complexity to model deployment, making it difficult to use in many practical situations. To address this, we propose a fast post-training pruning framework for Transformers that does not require any retraining. Given a resource constraint and a sample dataset, our framework automatically prunes the Transformer model using structured sparsity methods. To retain high accuracy without retraining, we introduce three novel techniques: (i) a lightweight mask search algorithm that finds which heads and filters to prune based on the Fisher information; (ii) mask rearrangement that complements the search algorithm; and (iii) mask tuning that reconstructs the output activations for each layer. We apply our method to BERT-base and DistilBERT, and we evaluate its effectiveness on GLUE and SQuAD benchmarks. Our framework achieves up to 2.0x reduction in FLOPs and 1.56x speedup in inference latency, while maintaining<1% loss in accuracy. Importantly, our framework prunes Transformers in less than 3 minutes on a single GPU, which is over two orders of magnitude faster than existing pruning approaches that retrain the models.",
+        "canonical_id": "arXiv:2204.09656",
+        "arxiv_id": "2204.09656",
+        "authors": [
+          "Woosuk Kwon",
+          "Sehoon Kim",
+          "Michael W. Mahoney",
+          "Joseph Hassoun",
+          "K. Keutzer",
+          "A. Gholami"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2110.14168",
+      "identity_tokens": [
+        "id:arXiv:2110.14168",
+        "title:training verifiers to solve math word problems",
+        "url:https://www.semanticscholar.org/paper/d6045d2ccc9c09ca1671348de86d07da6bc28eea"
+      ],
+      "record": {
+        "title": "Training Verifiers to Solve Math Word Problems",
+        "source_url": "https://www.semanticscholar.org/paper/d6045d2ccc9c09ca1671348de86d07da6bc28eea",
+        "year": 2021,
+        "published": "2021-10-27",
+        "abstract": "State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline.",
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168",
+        "authors": [
+          "K. Cobbe",
+          "V. Kosaraju",
+          "Mo Bavarian",
+          "Mark Chen",
+          "Heewoo Jun",
+          "Lukasz Kaiser",
+          "Matthias Plappert",
+          "Jerry Tworek",
+          "Jacob Hilton",
+          "Reiichiro Nakano",
+          "Christopher Hesse",
+          "John Schulman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2104.08378",
+      "identity_tokens": [
+        "id:arXiv:2104.08378",
+        "title:accelerating sparse deep neural networks",
+        "url:https://www.semanticscholar.org/paper/90d5e6f8d3b9f2617b3a3cf00fb02e730eb011cb"
+      ],
+      "record": {
+        "title": "Accelerating Sparse Deep Neural Networks",
+        "source_url": "https://www.semanticscholar.org/paper/90d5e6f8d3b9f2617b3a3cf00fb02e730eb011cb",
+        "year": 2021,
+        "published": "2021-04-16",
+        "abstract": "As neural network model sizes have dramatically increased, so has the interest in various techniques to reduce their parameter counts and accelerate their execution. An active area of research in this field is sparsity - encouraging zero values in parameters that can then be discarded from storage or computations. While most research focuses on high levels of sparsity, there are challenges in universally maintaining model accuracy as well as achieving significant speedups over modern matrix-math hardware. To make sparsity adoption practical, the NVIDIA Ampere GPU architecture introduces sparsity support in its matrix-math units, Tensor Cores. We present the design and behavior of Sparse Tensor Cores, which exploit a 2:4 (50%) sparsity pattern that leads to twice the math throughput of dense matrix units. We also describe a simple workflow for training networks that both satisfy 2:4 sparsity pattern requirements and maintain accuracy, verifying it on a wide range of common tasks and model architectures. This workflow makes it easy to prepare accurate models for efficient deployment on Sparse Tensor Cores.",
+        "canonical_id": "arXiv:2104.08378",
+        "arxiv_id": "2104.08378",
+        "authors": [
+          "Asit K. Mishra",
+          "J. Latorre",
+          "Jeff Pool",
+          "Darko Stosic",
+          "Dusan Stosic",
+          "Ganesh Venkatesh",
+          "Chong Yu",
+          "P. Micikevicius"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2103.03874",
+      "identity_tokens": [
+        "id:arXiv:2103.03874",
+        "title:measuring mathematical problem solving with the math dataset",
+        "url:https://www.semanticscholar.org/paper/57d1e7ac339e783898f2c3b1af55737cbeee9fc5"
+      ],
+      "record": {
+        "title": "Measuring Mathematical Problem Solving With the MATH Dataset",
+        "source_url": "https://www.semanticscholar.org/paper/57d1e7ac339e783898f2c3b1af55737cbeee9fc5",
+        "year": 2021,
+        "published": "2021-03-05",
+        "abstract": "Many intellectual endeavors require mathematical problem solving, but this skill remains beyond the capabilities of computers. To measure this ability in machine learning models, we introduce MATH, a new dataset of 12,500 challenging competition mathematics problems. Each problem in MATH has a full step-by-step solution which can be used to teach models to generate answer derivations and explanations. To facilitate future research and increase accuracy on MATH, we also contribute a large auxiliary pretraining dataset which helps teach models the fundamentals of mathematics. Even though we are able to increase accuracy on MATH, our results show that accuracy remains relatively low, even with enormous Transformer models. Moreover, we find that simply increasing budgets and model parameter counts will be impractical for achieving strong mathematical reasoning if scaling trends continue. While scaling Transformers is automatically solving most other text-based tasks, scaling is not currently solving MATH. To have more traction on mathematical problem solving we will likely need new algorithmic advancements from the broader research community.",
+        "canonical_id": "arXiv:2103.03874",
+        "arxiv_id": "2103.03874",
+        "authors": [
+          "Dan Hendrycks",
+          "Collin Burns",
+          "Saurav Kadavath",
+          "Akul Arora",
+          "Steven Basart",
+          "Eric Tang",
+          "D. Song",
+          "J. Steinhardt"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2102.08124",
+      "identity_tokens": [
+        "id:arXiv:2102.08124",
+        "title:accelerated sparse neural training a provable and efficient method to find n m transposable masks",
+        "url:https://www.semanticscholar.org/paper/b4d207a2096aee4a3764933373eef6edb574c952"
+      ],
+      "record": {
+        "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N: M Transposable Masks",
+        "source_url": "https://www.semanticscholar.org/paper/b4d207a2096aee4a3764933373eef6edb574c952",
+        "year": 2021,
+        "published": "2021-02-16",
+        "abstract": "Unstructured pruning reduces the memory footprint in deep neural networks (DNNs). Recently, researchers proposed different types of structural pruning intending to reduce also the computation complexity. In this work, we first suggest a new measure called mask-diversity which correlates with the expected accuracy of the different types of structural pruning. We focus on the recently suggested N:M fine-grained block sparsity mask, in which for each block of M weights, we have at least N zeros. While N:M fine-grained block sparsity allows acceleration in actual modern hardware, it can be used only to accelerate the inference phase. In order to allow for similar accelerations in the training phase, we suggest a novel transposable fine-grained sparsity mask, where the same mask can be used for both forward and backward passes. Our transposable mask guarantees that both the weight matrix and its transpose follow the same sparsity pattern; thus, the matrix multiplication required for passing the error backward can also be accelerated. We formulate the problem of finding the optimal transposable-mask as a minimum-cost flow problem. Additionally, to speed up the minimum-cost flow computation, we also introduce a fast linear-time approximation that can be used when the masks dynamically change during training. Our experiments suggest a 2x speed-up in the matrix multiplications with no accuracy degradation over vision and language models. Finally, to solve the problem of switching between different structure constraints, we suggest a method to convert a pre-trained model with unstructured sparsity to an N:M fine-grained block sparsity model with little to no training. A reference implementation can be found at https://github.com/papers-submission/structured_transposable_masks.",
+        "canonical_id": "arXiv:2102.08124",
+        "arxiv_id": "2102.08124",
+        "authors": [
+          "Itay Hubara",
+          "Brian Chmiel",
+          "Moshe Island",
+          "Ron Banner",
+          "S. Naor",
+          "Daniel Soudry"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2102.04010",
+      "identity_tokens": [
+        "id:arXiv:2102.04010",
+        "title:learning n m finegrained structured sparse neural networks from scratch",
+        "url:https://www.semanticscholar.org/paper/5e38dc1ccf33ac1df09b8eb6476f110cb3d1966f"
+      ],
+      "record": {
+        "title": "Learning N: M Fine-grained Structured Sparse Neural Networks From Scratch",
+        "source_url": "https://www.semanticscholar.org/paper/5e38dc1ccf33ac1df09b8eb6476f110cb3d1966f",
+        "year": 2021,
+        "published": "2021-02-08",
+        "abstract": "Sparsity in Deep Neural Networks (DNNs) has been widely studied to compress and accelerate the models on resource-constrained environments. It can be generally categorized into unstructured fine-grained sparsity that zeroes out multiple individual weights distributed across the neural network, and structured coarse-grained sparsity which prunes blocks of sub-networks of a neural network. Fine-grained sparsity can achieve a high compression ratio but is not hardware friendly and hence receives limited speed gains. On the other hand, coarse-grained sparsity cannot simultaneously achieve both apparent acceleration on modern GPUs and decent performance. In this paper, we are the first to study training from scratch an N:M fine-grained structured sparse network, which can maintain the advantages of both unstructured fine-grained sparsity and structured coarse-grained sparsity simultaneously on specifically designed GPUs. Specifically, a 2 : 4 sparse network could achieve 2× speed-up without performance drop on Nvidia A100 GPUs. Furthermore, we propose a novel and effective ingredient, sparse-refined straight-through estimator (SR-STE), to alleviate the negative influence of the approximated gradients computed by vanilla STE during optimization. We also define a metric, Sparse Architecture Divergence (SAD), to measure the sparse network’s topology change during the training process. Finally, We justify SR-STE’s advantages with SAD and demonstrate the effectiveness of SR-STE by performing comprehensive experiments on various tasks. Anonymous code and model will be at available at https://github.com/anonymous-NM-sparsity/NM-sparsity.",
+        "canonical_id": "arXiv:2102.04010",
+        "arxiv_id": "2102.04010",
+        "authors": [
+          "Aojun Zhou",
+          "Yukun Ma",
+          "Junnan Zhu",
+          "Jianbo Liu",
+          "Zhijie Zhang",
+          "Kun Yuan",
+          "Wenxiu Sun",
+          "Hongsheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2101.03961",
+      "identity_tokens": [
+        "id:arXiv:2101.03961",
+        "title:switch transformers scaling to trillion parameter models with simple and efficient sparsity",
+        "url:https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13"
+      ],
+      "record": {
+        "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+        "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+        "year": 2021,
+        "published": "2021-01-11",
+        "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+        "canonical_id": "arXiv:2101.03961",
+        "arxiv_id": "2101.03961",
+        "authors": [
+          "W. Fedus",
+          "Barret Zoph",
+          "Noam Shazeer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:transformers stateoftheart natural language processing",
+      "identity_tokens": [
+        "title:transformers stateoftheart natural language processing"
+      ],
+      "record": {
+        "title": "Transformers: State-of-the-Art Natural Language Processing",
+        "source_url": null,
+        "year": 2020,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2005.14165",
+      "identity_tokens": [
+        "id:arXiv:2005.14165",
+        "title:language models are fewshot learners",
+        "url:https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0"
+      ],
+      "record": {
+        "title": "Language Models are Few-Shot Learners",
+        "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "year": 2020,
+        "published": "2020-05-28",
+        "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+        "canonical_id": "arXiv:2005.14165",
+        "arxiv_id": "2005.14165",
+        "authors": [
+          "Tom B. Brown",
+          "Benjamin Mann",
+          "Nick Ryder",
+          "Melanie Subbiah",
+          "J. Kaplan",
+          "Prafulla Dhariwal",
+          "Arvind Neelakantan",
+          "Pranav Shyam",
+          "G. Sastry",
+          "Amanda Askell",
+          "S. Agarwal",
+          "Ariel Herbert-Voss",
+          "Gretchen Krueger",
+          "T. Henighan",
+          "R. Child",
+          "A. Ramesh",
+          "Daniel M. Ziegler",
+          "Jeff Wu",
+          "Clemens Winter",
+          "Christopher Hesse",
+          "Mark Chen",
+          "Eric Sigler",
+          "Ma-teusz Litwin",
+          "Scott Gray",
+          "Benjamin Chess",
+          "Jack Clark",
+          "Christopher Berner",
+          "Sam McCandlish",
+          "Alec Radford",
+          "I. Sutskever",
+          "Dario Amodei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1910.10683",
+      "identity_tokens": [
+        "id:arXiv:1910.10683",
+        "title:exploring the limits of transfer learning with a unified texttotext transformer",
+        "url:https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b"
+      ],
+      "record": {
+        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "source_url": "https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "year": 2019,
+        "published": "2019-10-23",
+        "abstract": "Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts every language problem into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled datasets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new \"Colossal Clean Crawled Corpus\", we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our dataset, pre-trained models, and code.",
+        "canonical_id": "arXiv:1910.10683",
+        "arxiv_id": "1910.10683",
+        "authors": [
+          "Colin Raffel",
+          "Noam Shazeer",
+          "Adam Roberts",
+          "Katherine Lee",
+          "Sharan Narang",
+          "Michael Matena",
+          "Yanqi Zhou",
+          "Wei Li",
+          "Peter J. Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1707.06168",
+      "identity_tokens": [
+        "id:arXiv:1707.06168",
+        "title:channel pruning for accelerating very deep neural networks",
+        "url:https://www.semanticscholar.org/paper/ee53c9480132fc0d09b1192226cb2c460462fd6d"
+      ],
+      "record": {
+        "title": "Channel Pruning for Accelerating Very Deep Neural Networks",
+        "source_url": "https://www.semanticscholar.org/paper/ee53c9480132fc0d09b1192226cb2c460462fd6d",
+        "year": 2017,
+        "published": "2017-07-19",
+        "abstract": "In this paper, we introduce a new channel pruning method to accelerate very deep convolutional neural networks. Given a trained CNN model, we propose an iterative two-step algorithm to effectively prune each layer, by a LASSO regression based channel selection and least square reconstruction. We further generalize this algorithm to multi-layer and multi-branch cases. Our method reduces the accumulated error and enhance the compatibility with various architectures. Our pruned VGG-16 achieves the state-of-the-art results by 5× speed-up along with only 0.3% increase of error. More importantly, our method is able to accelerate modern networks like ResNet, Xception and suffers only 1.4%, 1.0% accuracy loss under 2× speedup respectively, which is significant.",
+        "canonical_id": "arXiv:1707.06168",
+        "arxiv_id": "1707.06168",
+        "authors": [
+          "Yihui He",
+          "Xiangyu Zhang",
+          "Jian Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1162/neco.1991.3.1.79",
+      "identity_tokens": [
+        "id:DOI:10.1162/neco.1991.3.1.79",
+        "title:adaptive mixtures of local experts",
+        "url:https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56"
+      ],
+      "record": {
+        "title": "Adaptive Mixtures of Local Experts",
+        "source_url": "https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56",
+        "year": 1991,
+        "published": "1991-03-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+        "doi": "10.1162/neco.1991.3.1.79",
+        "authors": [
+          "R. Jacobs",
+          "Michael I. Jordan",
+          "S. Nowlan",
+          "Geoffrey E. Hinton"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:2023 metamath bootstrap your own mathematical questions for large language models",
+      "identity_tokens": [
+        "title:2023 metamath bootstrap your own mathematical questions for large language models"
+      ],
+      "record": {
+        "title": "2023. Metamath: Bootstrap your own mathematical questions for large language models",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2023 mixture of experts explained",
+      "identity_tokens": [
+        "title:2023 mixture of experts explained"
+      ],
+      "record": {
+        "title": "2023. Mixture of experts explained",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2023 gpt4 technical report",
+      "identity_tokens": [
+        "title:2023 gpt4 technical report"
+      ],
+      "record": {
+        "title": "2023. Gpt-4 technical report",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2024 solving challenging math word problems using gpt4",
+      "identity_tokens": [
+        "title:2024 solving challenging math word problems using gpt4"
+      ],
+      "record": {
+        "title": "2024. Solving challenging math word problems using GPT-4",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2023 a framework for fewshot language model evaluation",
+      "identity_tokens": [
+        "title:2023 a framework for fewshot language model evaluation"
+      ],
+      "record": {
+        "title": "2023. A framework for few-shot language model evaluation",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2023 gemini a family of highly capable multimodal models",
+      "identity_tokens": [
+        "title:2023 gemini a family of highly capable multimodal models"
+      ],
+      "record": {
+        "title": "2023. Gemini: a family of highly capable multimodal models",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:openai",
+      "identity_tokens": [
+        "title:openai"
+      ],
+      "record": {
+        "title": "OpenAI",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:model r pruning skipping gsm8k 5shot mixtral 8x7b 8 5861 8 5428 6 5125 6",
+      "identity_tokens": [
+        "title:model r pruning skipping gsm8k 5shot mixtral 8x7b 8 5861 8 5428 6 5125 6"
+      ],
+      "record": {
+        "title": "Model r Pruning Skipping GSM8K (5-shot) Mixtral 8x7B 8 58.61 8 ✓ 54.28 6 ✓ 51.25 6",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    }
+  ],
+  "receipt": "sha256:cb9d49bcb263ad9122367821b5f30a572105907c2b3ad16475477238592b456a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
