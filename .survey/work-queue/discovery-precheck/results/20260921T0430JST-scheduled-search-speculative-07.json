@@ -1,0 +1,980 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0430JST-scheduled-search-speculative-07",
+  "collector_id": "scheduled-20260921T0430JST-search-speculative",
+  "run_key": "2026-09-21T04:30:00+09:00",
+  "axis": "recent speculative decoding draft verification parallel decoding LLM inference systems",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=speculative%20decoding%20draft%20verification%20parallel%20decoding%20LLM%20inference&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "IlsxNzg4MzkzNjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjA4NzIzMjE1J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7a826df14501c57f91c30ffdfc053553d1b7334d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 9,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 9,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T19:51:50.501787+00:00",
+  "results": [
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions",
+      "source_url": "https://doi.org/10.1145/3846171",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.1145/3846171",
+      "doi": "10.1145/3846171",
+      "authors": [
+        "Yuyang Ji",
+        "Wenjian Xu",
+        "Xiaohong Qian",
+        "Lei Zhang",
+        "Jian Wan"
+      ]
+    },
+    {
+      "title": "Reason What Matters: Retrieval-Grounded Reasoning for Universal Multimodal Embeddings",
+      "source_url": "https://arxiv.org/abs/2609.15296",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15296",
+      "arxiv_id": "2609.15296",
+      "authors": [
+        "Mingzhou Jiang",
+        "Peixi Wu",
+        "Hang Cheng",
+        "Yunhao Zhou",
+        "Biao Yang",
+        "Wei Yuan",
+        "Yun Li",
+        "Fan Yang",
+        "Wenwu Ou",
+        "Honghui He"
+      ]
+    },
+    {
+      "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+      "source_url": "https://arxiv.org/abs/2609.15030",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15030",
+      "arxiv_id": "2609.15030",
+      "authors": [
+        "Frank Li"
+      ]
+    },
+    {
+      "title": "StepAudio 3 Realtime Technical Report",
+      "source_url": "https://arxiv.org/abs/2609.14005",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.14005",
+      "arxiv_id": "2609.14005",
+      "authors": [
+        "Bin Lin",
+        "Bo Zhao",
+        "Boyang Zhang",
+        "Boyong Wu",
+        "Chao Yan",
+        "Chen Geng",
+        "Chen Wu",
+        "Cheng Yi",
+        "Chengli Feng",
+        "Chenglin Zhu",
+        "Chengting Feng",
+        "Chengyuan Yao",
+        "Daijiao Liu",
+        "DanNi Wan",
+        "Daxin Jiang",
+        "Dongjian Li",
+        "Dongqing Pang",
+        "Fei Tian",
+        "Feng Tian",
+        "Future Li",
+        "Gang Yu",
+        "Guanglong Yang",
+        "Haoyang Zhang",
+        "Hongyuan Wang",
+        "Jia Peng",
+        "Jiahao Song",
+        "Jialong Xue",
+        "Jiamin Fan",
+        "Jiangjie Zhen",
+        "Jianzheng Gao",
+        "Jincheng Wen",
+        "Jinghua Liang",
+        "Jinglan Gong",
+        "Jun Chen",
+        "Li Xie",
+        "Liang Zhao",
+        "Lifang Zhang",
+        "Lingli Ji",
+        "Lun Cai",
+        "Min Xu",
+        "Peilin Li",
+        "Peng Yang",
+        "Pengfei Tan",
+        "Qingjian Lin",
+        "Qinxin Du",
+        "Ruijie Xiong",
+        "Runze Li",
+        "Shenghua Hu",
+        "Shengqian Qin",
+        "Shi Qiu",
+        "Siqi Tu",
+        "Siyi Zhou",
+        "Tianjiao Deng",
+        "Wanying Lu",
+        "Weiming Niu",
+        "Wen Sun",
+        "WenWen Qu",
+        "Xiangyu Zhang",
+        "Xianwei Zhang",
+        "Xiaosu Su",
+        "Xing Chen",
+        "Xinyu Liu",
+        "Xuerui Yang",
+        "Yan Wu",
+        "Yang Li",
+        "Yang Yang",
+        "Yechang Huang",
+        "Yibo Zhu",
+        "Yifan Zhang",
+        "Yinuo Yan",
+        "Youjun Chen",
+        "Yu Fu",
+        "Yu Luo",
+        "Yu Zhou",
+        "Yujie Chen",
+        "Yumang Wang",
+        "Y L Ju",
+        "Yuxiang Yang",
+        "Yuxin Li",
+        "Yuxin Zhang",
+        "Zekai Liu",
+        "Zengwei Yao",
+        "Zhaoxin Yuan",
+        "Zhenwei Mou",
+        "Zhiquan Zhang",
+        "Zhiyue Wu",
+        "Zichao Li",
+        "Zichao Zhou",
+        "Ziqi Ren",
+        "Zixuan Wang"
+      ]
+    },
+    {
+      "title": "Bypass Observation: A Conceptual Design of a Non-Intrusive Layer-Wise Semantic Extraction Architecture",
+      "source_url": "https://arxiv.org/abs/2609.13807",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13807",
+      "arxiv_id": "2609.13807",
+      "authors": [
+        "Haibin Tong",
+        "Jiang Yu"
+      ]
+    },
+    {
+      "title": "LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.13682",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13682",
+      "arxiv_id": "2609.13682",
+      "authors": [
+        "Prateek Kumar Sikdar"
+      ]
+    },
+    {
+      "title": "Skill Issue: Lessons from Optimizing Repository SKILLs for Coding Agents",
+      "source_url": "https://arxiv.org/abs/2609.12742",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12742",
+      "arxiv_id": "2609.12742",
+      "authors": [
+        "Mykhailo Kozyrev",
+        "Andrei Kozyrev",
+        "Anton Podkopaev"
+      ]
+    },
+    {
+      "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+      "source_url": "https://arxiv.org/abs/2609.11291",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11291",
+      "arxiv_id": "2609.11291",
+      "authors": [
+        "HyoJung Han"
+      ]
+    },
+    {
+      "title": "Recommendation Retrievers Need Verifiers: Universal Generative Reranking for Sequential Recommendations",
+      "source_url": "https://arxiv.org/abs/2609.12270",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.12270",
+      "arxiv_id": "2609.12270",
+      "authors": [
+        "Benyu Zhang",
+        "Qiang Zhang",
+        "Rui Li",
+        "Qunshu Zhang",
+        "D. A. Tandon",
+        "Neeraj Bhatia"
+      ]
+    },
+    {
+      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+      "source_url": "https://arxiv.org/abs/2609.10715",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10715",
+      "arxiv_id": "2609.10715",
+      "authors": [
+        "NCP Team",
+        "Jiaqi Cao",
+        "Chiyu Chen",
+        "Shuang Cheng",
+        "Xu Cheng",
+        "Beiya Dai",
+        "Yufan Feng",
+        "Kewen Ge",
+        "Ruijun Ge",
+        "Jiayi Huang",
+        "Yang Jiao",
+        "Dahua Lin",
+        "Zhouhan Lin",
+        "Yifan Liu",
+        "Yuliang Liu",
+        "Biqing Qi",
+        "Mowen Ruan",
+        "Junzhe Shen",
+        "Yunchong Song",
+        "Hao Sun",
+        "Zhongbo Tian",
+        "Yixuan Wang",
+        "Rubin Wei",
+        "Jiaxin Xiong",
+        "Kangyu Yang",
+        "Qian Yao",
+        "Qi Zhang",
+        "Bowen Zhou"
+      ]
+    },
+    {
+      "title": "Studying Without a Syllabus: Task-Agnostic Environment Preprocessing",
+      "source_url": "https://arxiv.org/abs/2609.10824",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10824",
+      "arxiv_id": "2609.10824",
+      "authors": [
+        "Vinay Samuel",
+        "Varun Ursekar",
+        "Vijay S. Kalmath",
+        "Apaar Shanker",
+        "Veronica Chatrath",
+        "Yuan Xue"
+      ]
+    },
+    {
+      "title": "VST: Verifiable Structured Transport for Auditable Agent-to-Agent Alpha Discovery",
+      "source_url": "https://arxiv.org/abs/2609.07065",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07065",
+      "arxiv_id": "2609.07065",
+      "authors": [
+        "Yuqi Li",
+        "Siyuan Liu",
+        "Bingjun Liu"
+      ]
+    },
+    {
+      "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.07108",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07108",
+      "arxiv_id": "2609.07108",
+      "authors": [
+        "Zili Wang",
+        "Zhaopeng Qiu",
+        "Yuekai Zhang",
+        "Shuang Yu",
+        "Junjie Lai"
+      ]
+    },
+    {
+      "title": "Recurrent State Encoders for Efficient Neural Combinatorial Optimization",
+      "source_url": "https://doi.org/10.1007/978-3-032-37670-1_4",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2509.05084",
+      "arxiv_id": "2509.05084",
+      "authors": [
+        "Tim Dernedde",
+        "Daniela Thyssens",
+        "Lars Schmidt-Thieme"
+      ]
+    },
+    {
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.06324",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06324",
+      "arxiv_id": "2609.06324",
+      "authors": [
+        "Lin Yao"
+      ]
+    },
+    {
+      "title": "EuroAlpaca: Task-Preserving Localisation of Instruction Data for European Languages",
+      "source_url": "https://arxiv.org/abs/2609.05043",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05043",
+      "arxiv_id": "2609.05043",
+      "authors": [
+        "Aleix Sant",
+        "Jordi Luque",
+        "Carlos Escolano"
+      ]
+    },
+    {
+      "title": "Persistent Teacher Anchoring for Tool-Using Agents",
+      "source_url": "https://arxiv.org/abs/2609.04773",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.04773",
+      "arxiv_id": "2609.04773",
+      "authors": [
+        "Hyun Bin Park",
+        "Kyungho Song",
+        "Sangmin Lee",
+        "Du-Seong Chang"
+      ]
+    },
+    {
+      "title": "Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2609.05275",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05275",
+      "arxiv_id": "2609.05275",
+      "authors": [
+        "Mostafa Elhoushi",
+        "Alex Pretko",
+        "Nolan Dey",
+        "Bin Zhang",
+        "Gavia Gray",
+        "Gurpreet Gosal",
+        "Abdulrahman Mahmoud",
+        "Shane Bergsma",
+        "Joel Hestness"
+      ]
+    },
+    {
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05707",
+      "arxiv_id": "2609.05707",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Antonios Valkanas",
+        "Yilun Zhu",
+        "Shervin Malmasi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3846171",
+      "identity_tokens": [
+        "id:DOI:10.1145/3846171",
+        "title:towards optimal speculative decoding a comprehensive survey on optimizations and future directions",
+        "url:https://doi.org/10.1145/3846171"
+      ],
+      "record": {
+        "title": "Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions",
+        "source_url": "https://doi.org/10.1145/3846171",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.1145/3846171",
+        "doi": "10.1145/3846171",
+        "authors": [
+          "Yuyang Ji",
+          "Wenjian Xu",
+          "Xiaohong Qian",
+          "Lei Zhang",
+          "Jian Wan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15296",
+      "identity_tokens": [
+        "id:arXiv:2609.15296",
+        "title:reason what matters retrievalgrounded reasoning for universal multimodal embeddings",
+        "url:https://arxiv.org/abs/2609.15296"
+      ],
+      "record": {
+        "title": "Reason What Matters: Retrieval-Grounded Reasoning for Universal Multimodal Embeddings",
+        "source_url": "https://arxiv.org/abs/2609.15296",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15296",
+        "arxiv_id": "2609.15296",
+        "authors": [
+          "Mingzhou Jiang",
+          "Peixi Wu",
+          "Hang Cheng",
+          "Yunhao Zhou",
+          "Biao Yang",
+          "Wei Yuan",
+          "Yun Li",
+          "Fan Yang",
+          "Wenwu Ou",
+          "Honghui He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15030",
+      "identity_tokens": [
+        "id:arXiv:2609.15030",
+        "title:validating hybridstate cache recovery for glm53flash with vllm and lmcache",
+        "url:https://arxiv.org/abs/2609.15030"
+      ],
+      "record": {
+        "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+        "source_url": "https://arxiv.org/abs/2609.15030",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15030",
+        "arxiv_id": "2609.15030",
+        "authors": [
+          "Frank Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14005",
+      "identity_tokens": [
+        "id:arXiv:2609.14005",
+        "title:stepaudio 3 realtime technical report",
+        "url:https://arxiv.org/abs/2609.14005"
+      ],
+      "record": {
+        "title": "StepAudio 3 Realtime Technical Report",
+        "source_url": "https://arxiv.org/abs/2609.14005",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.14005",
+        "arxiv_id": "2609.14005",
+        "authors": [
+          "Bin Lin",
+          "Bo Zhao",
+          "Boyang Zhang",
+          "Boyong Wu",
+          "Chao Yan",
+          "Chen Geng",
+          "Chen Wu",
+          "Cheng Yi",
+          "Chengli Feng",
+          "Chenglin Zhu",
+          "Chengting Feng",
+          "Chengyuan Yao",
+          "Daijiao Liu",
+          "DanNi Wan",
+          "Daxin Jiang",
+          "Dongjian Li",
+          "Dongqing Pang",
+          "Fei Tian",
+          "Feng Tian",
+          "Future Li",
+          "Gang Yu",
+          "Guanglong Yang",
+          "Haoyang Zhang",
+          "Hongyuan Wang",
+          "Jia Peng",
+          "Jiahao Song",
+          "Jialong Xue",
+          "Jiamin Fan",
+          "Jiangjie Zhen",
+          "Jianzheng Gao",
+          "Jincheng Wen",
+          "Jinghua Liang",
+          "Jinglan Gong",
+          "Jun Chen",
+          "Li Xie",
+          "Liang Zhao",
+          "Lifang Zhang",
+          "Lingli Ji",
+          "Lun Cai",
+          "Min Xu",
+          "Peilin Li",
+          "Peng Yang",
+          "Pengfei Tan",
+          "Qingjian Lin",
+          "Qinxin Du",
+          "Ruijie Xiong",
+          "Runze Li",
+          "Shenghua Hu",
+          "Shengqian Qin",
+          "Shi Qiu",
+          "Siqi Tu",
+          "Siyi Zhou",
+          "Tianjiao Deng",
+          "Wanying Lu",
+          "Weiming Niu",
+          "Wen Sun",
+          "WenWen Qu",
+          "Xiangyu Zhang",
+          "Xianwei Zhang",
+          "Xiaosu Su",
+          "Xing Chen",
+          "Xinyu Liu",
+          "Xuerui Yang",
+          "Yan Wu",
+          "Yang Li",
+          "Yang Yang",
+          "Yechang Huang",
+          "Yibo Zhu",
+          "Yifan Zhang",
+          "Yinuo Yan",
+          "Youjun Chen",
+          "Yu Fu",
+          "Yu Luo",
+          "Yu Zhou",
+          "Yujie Chen",
+          "Yumang Wang",
+          "Y L Ju",
+          "Yuxiang Yang",
+          "Yuxin Li",
+          "Yuxin Zhang",
+          "Zekai Liu",
+          "Zengwei Yao",
+          "Zhaoxin Yuan",
+          "Zhenwei Mou",
+          "Zhiquan Zhang",
+          "Zhiyue Wu",
+          "Zichao Li",
+          "Zichao Zhou",
+          "Ziqi Ren",
+          "Zixuan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13807",
+      "identity_tokens": [
+        "id:arXiv:2609.13807",
+        "title:bypass observation a conceptual design of a nonintrusive layerwise semantic extraction architecture",
+        "url:https://arxiv.org/abs/2609.13807"
+      ],
+      "record": {
+        "title": "Bypass Observation: A Conceptual Design of a Non-Intrusive Layer-Wise Semantic Extraction Architecture",
+        "source_url": "https://arxiv.org/abs/2609.13807",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13807",
+        "arxiv_id": "2609.13807",
+        "authors": [
+          "Haibin Tong",
+          "Jiang Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13682",
+      "identity_tokens": [
+        "id:arXiv:2609.13682",
+        "title:layerroute adaptive layerskipping with lorapreserved quality for efficient llm inference",
+        "url:https://arxiv.org/abs/2609.13682"
+      ],
+      "record": {
+        "title": "LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.13682",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13682",
+        "arxiv_id": "2609.13682",
+        "authors": [
+          "Prateek Kumar Sikdar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12742",
+      "identity_tokens": [
+        "id:arXiv:2609.12742",
+        "title:skill issue lessons from optimizing repository skills for coding agents",
+        "url:https://arxiv.org/abs/2609.12742"
+      ],
+      "record": {
+        "title": "Skill Issue: Lessons from Optimizing Repository SKILLs for Coding Agents",
+        "source_url": "https://arxiv.org/abs/2609.12742",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12742",
+        "arxiv_id": "2609.12742",
+        "authors": [
+          "Mykhailo Kozyrev",
+          "Andrei Kozyrev",
+          "Anton Podkopaev"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11291",
+      "identity_tokens": [
+        "id:arXiv:2609.11291",
+        "title:offtarget effects of responsestyle alignment in a korean 27b language model",
+        "url:https://arxiv.org/abs/2609.11291"
+      ],
+      "record": {
+        "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+        "source_url": "https://arxiv.org/abs/2609.11291",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11291",
+        "arxiv_id": "2609.11291",
+        "authors": [
+          "HyoJung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12270",
+      "identity_tokens": [
+        "id:arXiv:2609.12270",
+        "title:recommendation retrievers need verifiers universal generative reranking for sequential recommendations",
+        "url:https://arxiv.org/abs/2609.12270"
+      ],
+      "record": {
+        "title": "Recommendation Retrievers Need Verifiers: Universal Generative Reranking for Sequential Recommendations",
+        "source_url": "https://arxiv.org/abs/2609.12270",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.12270",
+        "arxiv_id": "2609.12270",
+        "authors": [
+          "Benyu Zhang",
+          "Qiang Zhang",
+          "Rui Li",
+          "Qunshu Zhang",
+          "D. A. Tandon",
+          "Neeraj Bhatia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10715",
+      "identity_tokens": [
+        "id:arXiv:2609.10715",
+        "title:ncparchpreview technical report moving towards latent space language models through next concept prediction",
+        "url:https://arxiv.org/abs/2609.10715"
+      ],
+      "record": {
+        "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+        "source_url": "https://arxiv.org/abs/2609.10715",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10715",
+        "arxiv_id": "2609.10715",
+        "authors": [
+          "NCP Team",
+          "Jiaqi Cao",
+          "Chiyu Chen",
+          "Shuang Cheng",
+          "Xu Cheng",
+          "Beiya Dai",
+          "Yufan Feng",
+          "Kewen Ge",
+          "Ruijun Ge",
+          "Jiayi Huang",
+          "Yang Jiao",
+          "Dahua Lin",
+          "Zhouhan Lin",
+          "Yifan Liu",
+          "Yuliang Liu",
+          "Biqing Qi",
+          "Mowen Ruan",
+          "Junzhe Shen",
+          "Yunchong Song",
+          "Hao Sun",
+          "Zhongbo Tian",
+          "Yixuan Wang",
+          "Rubin Wei",
+          "Jiaxin Xiong",
+          "Kangyu Yang",
+          "Qian Yao",
+          "Qi Zhang",
+          "Bowen Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10824",
+      "identity_tokens": [
+        "id:arXiv:2609.10824",
+        "title:studying without a syllabus taskagnostic environment preprocessing",
+        "url:https://arxiv.org/abs/2609.10824"
+      ],
+      "record": {
+        "title": "Studying Without a Syllabus: Task-Agnostic Environment Preprocessing",
+        "source_url": "https://arxiv.org/abs/2609.10824",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10824",
+        "arxiv_id": "2609.10824",
+        "authors": [
+          "Vinay Samuel",
+          "Varun Ursekar",
+          "Vijay S. Kalmath",
+          "Apaar Shanker",
+          "Veronica Chatrath",
+          "Yuan Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07065",
+      "identity_tokens": [
+        "id:arXiv:2609.07065",
+        "title:vst verifiable structured transport for auditable agenttoagent alpha discovery",
+        "url:https://arxiv.org/abs/2609.07065"
+      ],
+      "record": {
+        "title": "VST: Verifiable Structured Transport for Auditable Agent-to-Agent Alpha Discovery",
+        "source_url": "https://arxiv.org/abs/2609.07065",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07065",
+        "arxiv_id": "2609.07065",
+        "authors": [
+          "Yuqi Li",
+          "Siyuan Liu",
+          "Bingjun Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07108",
+      "identity_tokens": [
+        "id:arXiv:2609.07108",
+        "title:online draft cotraining for speculative decoding in largescale longcontext rl posttraining",
+        "url:https://arxiv.org/abs/2609.07108"
+      ],
+      "record": {
+        "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.07108",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07108",
+        "arxiv_id": "2609.07108",
+        "authors": [
+          "Zili Wang",
+          "Zhaopeng Qiu",
+          "Yuekai Zhang",
+          "Shuang Yu",
+          "Junjie Lai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.05084",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-37670-1_4",
+        "id:arXiv:2509.05084",
+        "title:recurrent state encoders for efficient neural combinatorial optimization",
+        "url:https://doi.org/10.1007/978-3-032-37670-1_4"
+      ],
+      "record": {
+        "title": "Recurrent State Encoders for Efficient Neural Combinatorial Optimization",
+        "source_url": "https://doi.org/10.1007/978-3-032-37670-1_4",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2509.05084",
+        "arxiv_id": "2509.05084",
+        "authors": [
+          "Tim Dernedde",
+          "Daniela Thyssens",
+          "Lars Schmidt-Thieme"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06324",
+      "identity_tokens": [
+        "id:arXiv:2609.06324",
+        "title:a ticket from marginals to joints couplednoise distillation for onestep block generation in diffusion language models",
+        "url:https://arxiv.org/abs/2609.06324"
+      ],
+      "record": {
+        "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.06324",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06324",
+        "arxiv_id": "2609.06324",
+        "authors": [
+          "Lin Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05043",
+      "identity_tokens": [
+        "id:arXiv:2609.05043",
+        "title:euroalpaca taskpreserving localisation of instruction data for european languages",
+        "url:https://arxiv.org/abs/2609.05043"
+      ],
+      "record": {
+        "title": "EuroAlpaca: Task-Preserving Localisation of Instruction Data for European Languages",
+        "source_url": "https://arxiv.org/abs/2609.05043",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05043",
+        "arxiv_id": "2609.05043",
+        "authors": [
+          "Aleix Sant",
+          "Jordi Luque",
+          "Carlos Escolano"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04773",
+      "identity_tokens": [
+        "id:arXiv:2609.04773",
+        "title:persistent teacher anchoring for toolusing agents",
+        "url:https://arxiv.org/abs/2609.04773"
+      ],
+      "record": {
+        "title": "Persistent Teacher Anchoring for Tool-Using Agents",
+        "source_url": "https://arxiv.org/abs/2609.04773",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.04773",
+        "arxiv_id": "2609.04773",
+        "authors": [
+          "Hyun Bin Park",
+          "Kyungho Song",
+          "Sangmin Lee",
+          "Du-Seong Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05275",
+      "identity_tokens": [
+        "id:arXiv:2609.05275",
+        "title:dont drop dropout optimizing layer sparsity for efficient llm training and inference",
+        "url:https://arxiv.org/abs/2609.05275"
+      ],
+      "record": {
+        "title": "Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference",
+        "source_url": "https://arxiv.org/abs/2609.05275",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05275",
+        "arxiv_id": "2609.05275",
+        "authors": [
+          "Mostafa Elhoushi",
+          "Alex Pretko",
+          "Nolan Dey",
+          "Bin Zhang",
+          "Gavia Gray",
+          "Gurpreet Gosal",
+          "Abdulrahman Mahmoud",
+          "Shane Bergsma",
+          "Joel Hestness"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05707",
+      "identity_tokens": [
+        "id:arXiv:2609.05707",
+        "title:intraprompt parallel decoding for commoncontext question answering",
+        "url:https://arxiv.org/abs/2609.05707"
+      ],
+      "record": {
+        "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+        "source_url": "https://arxiv.org/abs/2609.05707",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05707",
+        "arxiv_id": "2609.05707",
+        "authors": [
+          "Theodore Glavas",
+          "Nikhita Vedula",
+          "Dushyanta Dhyani",
+          "Antonios Valkanas",
+          "Yilun Zhu",
+          "Shervin Malmasi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:522911b380ad5193638b588b6d8269ec8f3a504ff7fdecb3c732e9963098362c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
