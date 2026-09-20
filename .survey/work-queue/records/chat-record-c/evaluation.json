@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-5648936959aa67c66ac34543",
   "job_id": "job-research-e203c47aded67247",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5648936959aa67c66ac34543",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "LLM微調整はOLMoE-7B-A1BとQwen1.5-14B-A2.7Bを8基のNVIDIA A100で実施。182MパラメータのMoE事前学習も8基のNVIDIA A100を使用し、The Pile約300億トークン・60,000ステップで学習する。推論効率測定はOLMoEでhuggingface.generate()とKV Cacheを有効化して比較する。",
+    "software": "公式実装はY-Research-SBU/SeqTopK。下流微調整は論文記載の既存コード基盤を利用し、評価はGSM8K、MBPP、HumanEval、要約、法律タスクを中心に実施する。事前学習ではAdamW、ZeRO最適化、余弦学習率スケジュールを用いる。",
+    "methodology": "微調整ではOLMoEの64ルーティングエキスパートに対してK=8,4,2を比較し、Qwen1.5-MoEでは4共有エキスパートに加えて60ルーティングエキスパートからK=4を選ぶ。比較対象は標準TopK、MRL-TopK、BatchTopKで、GSM8K・HumanEval・要約・法律はゼロショット、MBPPは3ショット。事前学習では182M規模でTopK、ReMoE、SeqTopKを同じ総エキスパート予算で比較し、LAMBADA、RACE、ARC-Easy、ARC-Challengeをゼロショット評価する。さらに学習GPU時間、推論tokens/s、ピークメモリ、境界値、バッチサイズ感度、追加学習なし適用を検証する。",
+    "scope": "実機A100上の学習・推論測定を含み、単なるFLOPs推定ではない。一方、実験対象は主にOLMoE、Qwen1.5-MoEと182M規模の自前MoEであり、密モデルには適用できない。推論測定はHugging Face生成経路で、専用高性能サービング基盤や大規模分散推論での速度・負荷分散は直接評価していない。"
+  },
+  "reservation": {"claim_id": "claim-5648936959aa67c66ac34543", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
