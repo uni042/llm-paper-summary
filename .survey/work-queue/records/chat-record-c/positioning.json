@@ -2,49 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-42612c6e8bec652339e69e2b",
-  "job_id": "job-research-6adaa29fadc3e53e",
-  "data": {
-    "positioning": "SwiftKVはKVキャッシュを外部記憶へ逃がす方式ではなく、プリフィル時にKVを作るため必要だった後半層計算そのものを減らすモデル変換である。剪定はモデル層や重みを削って入力・生成双方の計算を減らすのに対し、SwiftKVは元の全層を残し、入力だけを途中で早期退出させる。生成トークンは全層を通るため、長入力・短出力でプリフィル支配となるサービングに特化する。",
-    "differences": "FFN-SkipLLM等の動的層飛ばしは入力と生成の双方で層を省く一方、SwiftKVは入力だけ後半層の注意と全結合を省き、必要なKVは中間隠れ状態から各後続層の射影で作る。MiniCache等の層間KV共有は主にメモリ削減が目的だが、SwiftKVは計算削減が主でAcrossKVを追加選択できる。疎注意は非常に長い文脈で注意演算を削るのに対し、SwiftKVは注意だけでなく全結合層も省くため中程度の文脈でも効く。",
-    "relation_to_prior_work": [
-      {
-        "work": "FFN-SkipLLM",
-        "difference": "生成側まで動的に全結合層を飛ばす方式に対し、入力だけを後半層から外し、生成トークンは元モデルの全層を維持する。"
-      },
-      {
-        "work": "MiniCache / cross-layer KV sharing",
-        "difference": "KVメモリ削減単独ではなく、後半層のプリフィル計算削減を主目的とし、層間共有はAcrossKVとして追加する。"
-      },
-      {
-        "work": "モデル剪定・蒸留",
-        "difference": "全モデルを縮小して数十億〜数百億トークン再学習する方式に対し、元重みを残し後半QKV射影だけを680Mトークン程度で蒸留する。"
-      },
-      {
-        "work": "疎注意",
-        "difference": "注意演算の一部だけを省く方式に対し、後半層の入力について問い合わせ・注意・出力射影・全結合をまとめて省く。"
-      }
-    ],
-    "strengths": [
-      "入力と生成を非対称に扱い、生成品質に重要な全層復号を維持する。",
-      "3Bから405B、密モデル、MoE、潜在注意まで幅広い品質評価がある。",
-      "vLLMとSGLangへ実装し実サービング処理量と遅延を評価する。",
-      "更新対象を後半QKV射影に限定し蒸留費用を小さくする。",
-      "AcrossKVとKV量子化を組み合わせ、計算律速とメモリ律速の双方へ対応できる。"
-    ],
-    "limitations": [
-      "50%を超えるプリフィル削減では品質低下が急速に大きくなる。",
-      "変換後に軽量とはいえモデルごとの蒸留が必要。",
-      "長文品質を保つには長文データを追加した専用蒸留手順が有効で、通常蒸留だけでは差が広がる。",
-      "入力が短い、または出力が非常に長く復号支配となる負荷では相対利得が小さい。",
-      "AcrossKVの共有度を上げるとメモリは減るが品質との交換条件が生じる。"
-    ],
-    "implementation_status": "学習コードとレシピはSnowflakeのArcticTraining、最適化推論はArcticInferenceで公開。vLLMとSGLangへ統合し、チャンク化プリフィルと共存する。",
-    "research_positioning": "プリフィル最適化をランタイムだけでなくモデル構造と軽量蒸留の共同設計として扱った研究である。KVを保持・転送する費用だけでなく、KVを作るための後半層計算そのものを不要にするため、長入力企業負荷の計算律速に直接効く。",
-    "repository_fit": "KVキャッシュ・プリフィル高速化系統に適合し、KV圧縮、キャッシュ再利用、疎注意、層飛ばしと比較して、計算削減とメモリ削減を分離して調整する設計点を提供する。"
-  },
+  "attempt_id": "attempt-2090f392d3d3b4cf6817709b",
+  "job_id": "job-research-da8147ed3835966f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-42612c6e8bec652339e69e2b",
+    "claim_id": "claim-2090f392d3d3b4cf6817709b",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
