@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-36775161dea47254d363d39c",
+  "job_id": "job-research-89e4b35d6854b9b6",
+  "claim_id": "claim-36775161dea47254d363d39c",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "record_bank": "c",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be safely retrieved in this run. Direct arXiv HTML and abstract-page fetches were attempted but the runtime returned DisabledError. An arXiv metadata mirror exposed only abstract/version metadata, and the authors' official PARSER GitHub repository exposed implementation/reproduction details but is not a substitute for reading the paper's full primary text. Per workflow policy, no five-slot record was inferred from abstract/code alone.",
+  "retrieval_evidence": [
+    {"route":"arXiv HTML","url":"https://arxiv.org/html/2609.00575","result":"DisabledError in runtime"},
+    {"route":"arXiv abstract","url":"https://arxiv.org/abs/2609.00575","result":"DisabledError in runtime"},
+    {"route":"arXiv metadata mirror","url":"https://vpn.luca-server.com/px/aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzI2MDkuMDA1NzU","result":"abstract/version metadata only; full text not retrieved"},
+    {"route":"authors' official implementation","url":"https://github.com/OSSS-KU/PARSER","result":"implementation and reproduction details available, but not paper full text"}
+  ]
+}
