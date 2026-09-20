@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2407.15891",
+      "arxiv_id": "2407.15891",
+      "title": "RazorAttention: Efficient KV Cache Compression Through Retrieval Heads",
+      "source_url": "https://arxiv.org/abs/2407.15891",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention.md",
+      "priority": 92,
+      "reason": "Retrieval-head-aware KV-cache compression method designed to reduce long-context inference memory while preserving critical retrieval behavior."
+    },
+    {
+      "canonical_id": "arXiv:2408.10284",
+      "arxiv_id": "2408.10284",
+      "title": "AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2408.10284",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2024-2408.10284-adapmoe.md",
+      "priority": 95,
+      "reason": "Algorithm-system co-design for edge MoE inference combining adaptive expert activation, prefetching, and cache management to reduce loading overhead."
+    },
+    {
+      "canonical_id": "arXiv:2410.18248",
+      "arxiv_id": "2410.18248",
+      "title": "Fast Inference for Augmented Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.18248",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md",
+      "priority": 94,
+      "reason": "LAMPS is a vLLM-based scheduler for augmented LLM requests with API gaps, jointly optimizing KV-memory handling and request scheduling."
+    },
+    {
+      "canonical_id": "arXiv:2412.14838",
+      "arxiv_id": "2412.14838",
+      "title": "DynamicKV: Task-Aware Adaptive KV Cache Compression for Long Context LLMs",
+      "source_url": "https://arxiv.org/abs/2412.14838",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.14838-dynamickv.md",
+      "priority": 92,
+      "reason": "Task-aware adaptive KV-cache compression that varies retention according to workload/context characteristics rather than using one static policy."
+    },
+    {
+      "canonical_id": "arXiv:2503.06823",
+      "arxiv_id": "2503.06823",
+      "title": "eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference",
+      "source_url": "https://arxiv.org/abs/2503.06823",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md",
+      "priority": 95,
+      "reason": "Memory-efficient MoE serving system using expert prediction/loading and task-aware SLO scheduling, reporting major memory and throughput gains."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset300",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset300.json",
+    "receipt": "sha256:6a869e9f0f800f7a0d763b28e587f54d6fe22f2ef81207be2f391f2301cce452"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20",
+    "round": "refcuration-stress-20260920-offset300-b",
+    "axis": "structured references stress probe at raw offset 300",
+    "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 300. Strong systems/memory/kernel/scheduling papers were retained; model reports, datasets, evaluation platforms, and agent application frameworks were classified out.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2407.15891",
+      "arXiv:2408.10284",
+      "arXiv:2410.18248",
+      "arXiv:2412.14838",
+      "arXiv:2503.06823"
+    ],
+    "next_axis_hint": "Probe relation_count≈3 references next; yield remains high at relation_count≈5."
+  }
+}
