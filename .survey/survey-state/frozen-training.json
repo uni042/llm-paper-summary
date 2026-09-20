@@ -1,8 +1,9 @@
 {
   "schema_version": 2,
-  "source_commit": "metadata-backfill-2026-09-11",
+  "source_commit": "training-freeze-reconciled-2026-09-20",
   "policy": "No new training paper entries. Existing training papers and README/index files may be edited; stored blob SHAs are historical baseline references only.",
   "files": {
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md": "e1c1284b10c3f8284d856f1dc55c44ad07b81ed2",
     "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": "27a078cfba6dbcac88bdfa616881b8335dea8b35",
     "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md": "90e0e317e7413b647dbb1684644b72ecc9d27891",
     "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md": "bc39df8a5074020dc738499c06af37b9b18e9b0f",
@@ -17,12 +18,17 @@
     "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md": "f44bd725d5e56e21d6f8d126728f246915b26f9f",
     "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md": "97f7f281ba78d0ee52ccff2e83e8a75f7656c020",
     "papers/training/01-training-offload-memory-systems/README.md": "0a2ba84cea5f1a11588e0a1331b212410375112b",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md": "7e88f9f70199bbb647800e2394bf0be8203a86f8",
+    "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md": "1ed2345747d8f3a4863ecfd215151d87ac304d4a",
     "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md": "d1b9866062db53248d7d0b461fe34c84b9f93142",
+    "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md": "70406689ed88565a034d4a4730bb5f08e788db2c",
     "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md": "66eda1f7f6d20cd9013f8e9ef49a7d4318266337",
     "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md": "68498c5004c98f43a5c1250d4056e13a089795cc",
     "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md": "408f6ff8655f08178f23f0fed76c15bdfb849021",
     "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md": "294da28ecb695dd674cde969d6d20b78775da7b2",
     "papers/training/02-distributed-heterogeneous-moe-training/README.md": "b904d0b6540201997ec7f5ca38118d690163ea8e",
+    "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md": "8e1edbf992e75c188d491f86bae5b480105bd636",
+    "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md": "40c86f13b02bb49d3ad9fa79fa4b41f364abb0d5",
     "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md": "0d4afedb32c06ebffc5d3e4b96e5f9330b3d396a",
     "papers/training/03-pipeline-parallel-modular-training/README.md": "c1272d6087034b71d01ee9f3b9d5f4290abfd749",
     "papers/training/README.md": "1a052bd6972255205fc5b0628c0d420984a9688f"
