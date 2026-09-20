@@ -1,33 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T22:03:32+00:00",
+  "updated_at": "2026-09-20T22:07:59+00:00",
   "last_run_key": "2026-09-21T06:58:37+09:00",
-  "last_round": "hourly00-forward-specoffload-02",
+  "last_round": "hourly00-backward-repair-01b",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T17:00:00+09:00",
-      "round": "specialist-semantic-prefix-eviction-8",
-      "axis": "semantic-aware prefix cache eviction・online adaptation",
-      "query_summary": "CXL/SSD階層そのものからキャッシュ管理政策へ軸を移し、prefix KVの再利用価値を意味種別とオンラインfeedbackで学習する研究を探索した。既知HyMCache/Photonic-CXLは重複として除外した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.18141",
-        "arXiv:2607.27187"
-      ],
-      "next_axis_hint": "wireless/edgeなど配置距離とprefix reuseを同時最適化する分散cache placementへ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r8-saecache.json"
-    },
     {
       "run_key": "2026-09-16T17:00:00+09:00",
       "round": "specialist-smartnic-prefix-fetch-9",
@@ -8041,6 +8023,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-backward-repair-01b",
+      "axis": "repository structured backward references",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0707JST-hourly00-discovery-backward-repair-01b.json"
     }
   ],
   "axes": {
@@ -15692,6 +15695,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 0,
       "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "repository structured backward references": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
