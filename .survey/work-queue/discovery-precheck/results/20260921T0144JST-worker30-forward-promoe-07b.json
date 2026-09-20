@@ -1,0 +1,662 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0144JST-worker30-forward-promoe-07b",
+  "collector_id": "worker30-forward-promoe",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "forward citations from ProMoE expert prefetch lineage",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2410.22134/citations?fields=title,abstract,year,authors,url,externalIds,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d103bd5b56118708818b030a4352848421c1dd65",
+  "raw_search_result_count": 51,
+  "retrieval_duplicate_filtered_count": 34,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 2,
+  "intra_batch_alias_duplicate_filtered_count": 2,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:43:56.988851+00:00",
+  "results": [
+    {
+      "title": "SmartMage: Dynamic Modality Orchestration for 3D Scene Understanding",
+      "source_url": "https://www.semanticscholar.org/paper/ac2deb048fc671a97d7fca7bec9b42dcca82f3cf",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Understanding 3D scenes is fundamental to embodied intelligence, requiring joint reasoning over heterogeneous information from multiple modalities, including visual and geometric cues. However, the relevance of these modalities often varies across queries. Existing Multimodal Large Language Models (MLLMs) typically rely on fixed modality combinations, overlooking query-dependent modality needs. Such a rigid design can introduce semantic noise from irrelevant modalities while underutilizing more informative ones, leading to wasted computation and diluted reasoning. To address these challenges, this paper proposes SmartMage, a unified MLLM that dynamically orchestrates heterogeneous modalities for semantic-aware 3D scene understanding. Specifically, SmartMage incorporates: (1) a Semantic-guided Modality Adaptive RouTing (SMART) module that selects task-relevant modalities using semantic priors, text-modality alignment, and modality quality; and (2) a Modality-Aware Gating Expert (MAGE) module that leverages modality priors to guide expert activation, fostering adaptive specialization in multimodal reasoning. Empirically, SmartMage achieves state-of-the-art performance across five 3D scene understanding benchmarks, and attains competitive results on RGB-only video understanding benchmarks. In our diagnostic benchmark ScanFacet, tasks are divided into fine-grained semantic categories, enabling analysis of modality combinations preferred by each semantic type. The observed modality-semantic patterns provide further evidence of SmartMage's effectiveness. Project page: https://yuecheong.github.io/SmartMage/.",
+      "canonical_id": "arXiv:2608.05137",
+      "arxiv_id": "2608.05137",
+      "authors": [
+        "Yue Zhang",
+        "Yingzhao Jian",
+        "Yunqi Xu",
+        "Xiaoxiao Sun",
+        "He-He Fan"
+      ]
+    },
+    {
+      "title": "Budgeting Bytes: A Windowed Storage Roofline and Dual-Budget Architecture Ablations for Storage-Bound LLM Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+      "year": 2026,
+      "published": "2026-07-29",
+      "abstract": "Autoregressive decoding on cheap hardware is bound not by FLOPs but by the bytes each generated token must move across the slowest populated tier of a memory hierarchy. We treat bytes-per-token as a first-class design axis, organized by an address-determinism taxonomy that classifies parameters by when their fetch address becomes known during a token's forward pass (A0: at token sampling; A1: before attention; A2: layerwise data-dependent; A3: always read). This reduces prefetch scheduling to single-machine feasibility with release times, yielding a closed-form windowed roofline. We run dual-budget (bytes-per-token times storage) ablations across three sub-100M scales, then take the framework to real large-MoE deployment and report a substantial negative result the roofline predicts: on an 8GB edge board running Qwen3-30B-A3B (4-bit, 18GB), the model overflows RAM and decode is pinned at the eMMC bandwidth ceiling; predictive expert prefetch does not help -- not temporal-locality prefetch (net-negative), not even a trace-driven oracle with perfect prediction -- because the binding constraint is byte volume over a saturated bus, which prefetch cannot reduce. The lever that works is reducing bytes-per-token until the model fits the fast tier: quantized to fit a 16GB unified-memory device, the same model runs GPU-resident at 11.5 tok/s (22x). We reconcile this with GPU-serving expert-prefetch predictors: a frozen-model probe predicts Qwen3-30B routing from the pre-attention state at 91.2%, a scale-invariant predictability property, but this converts to throughput only where the fast tier caches most of the model and per-token transfer is comparable to compute -- measured to hold on an A100 PCIe-offload path and to fail on bandwidth-walled edge storage. Predictability is not speedup; we chart where the gap closes.",
+      "canonical_id": "arXiv:2609.04238",
+      "arxiv_id": "2609.04238",
+      "authors": [
+        "Hanhaodi Zhang"
+      ]
+    },
+    {
+      "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+      "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+      "doi": "10.1109/ICWS72778.2026.00157",
+      "authors": [
+        "Yanjun Shu",
+        "Wei-Ye Yan",
+        "Zhuang-Yu Ma",
+        "Jian Yang",
+        "Yan-Ming Jiang",
+        "Min Li",
+        "Tian-Yu Luo",
+        "De-Cheng Zuo"
+      ]
+    },
+    {
+      "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+      "source_url": "https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b",
+      "year": 2026,
+      "published": "2026-05-25",
+      "abstract": "The Mixture-of-Experts (MoE) architecture has demonstrated notable advantages by enabling model scaling without a proportional increase in computational cost. However, due to the large model size, deployment typically requires substantial memory resources that are often unavailable on consumer-grade devices. MoE offloading strategies have been proposed to address this. However, PCIe bandwidth constraints lead to noticeably slower inference during offloading. Several methods, such as expert caching, prefetching, and hybrid CPU/GPU inference, have been introduced to mitigate this issue. Yet, they still suffer from load imbalance across devices, low hardware utilization, and significant transfer latency, which become particularly severe when handling ultra-large models (e.g., ≥ 400B). To address these challenges, this paper proposes SMOE, a hybrid CPU/GPU inference framework for MoE LLMs based on dynamic expert caching, to improve inference efficiency and hardware utilization on consumer-grade devices. SMOE adopts specialized optimization strategies for the prefilling and decoding stages. For the prefilling, it employs an on-demand expert loading strategy optimized with pipeline techniques to schedule experts at runtime dynamically. For the decoding, it introduces a novel token-wise prefetch strategy that maximizes computation-communication overlap, enabling expert scheduling across CPU and GPU without incurring noticeable transfer delays. In addition, SMOE implements an efficient cache management strategy to make use of the limited GPU memory. Experimental evaluations on consumer-grade devices with ultra-large MoE models demonstrate that SMOE achieves a speedup of up to 8.68× over the baseline and 2.98× over the SOTA method in the prefilling stage, with the benefit increasing as the length grows. In the decoding stage, SMOE achieves up to 20.9% faster inference compared to the baseline, while other caching- and prefetching-based methods fail to handle ultra-large models such as 671B. These results show that SMOE achieves efficient inference acceleration for ultra-large MoE models on consumer-grade devices.",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+      "doi": "10.1109/IPDPS65963.2026.00101",
+      "authors": [
+        "Rui Zhang",
+        "Bo Yang",
+        "Rongji Wang",
+        "Xuemei Peng",
+        "Zeyi Wen"
+      ]
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+      "year": 2026,
+      "published": "2026-05-07",
+      "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ]
+    },
+    {
+      "title": "MCP+: Reducing Tool Cold-Start Latency via Predictive Context Routing",
+      "source_url": "https://www.semanticscholar.org/paper/fab165e01dd9200083184edc840a8eb195f9d997",
+      "year": 2026,
+      "published": "2026-05-01",
+      "abstract": "The Model Context Protocol (MCP) provides a common mechanism through which AI agents can access external tools and services. In its current form, however, tools are typically initialized only when the agent requests them. As a result, workflows involving multiple processing stages may experience additional delays because operations such as schema discovery, database connection setup, file loading, and environment preparation are performed at runtime. To address this limitation, we introduce MCP+, an extension of MCP that incorporates Predictive Context Routing (PCR),MCP+ addresses this limitation by preparing execution contexts before they are explicitly requested by a tool. Rather than relying entirely on reactive initialization, the framework estimates which tools may be required in upcoming workflow stages and prepares relevant resources in advance. It incorporates a lightweight prediction model, a confidence-based routing queue to guide prefetching decisions, an asynchronous context-loading mechanism, and a cache that retains initialized resources such as CSV schemas, template objects, and database connections. A complete implementation was developed, including an MCP+ server, workflow-trace generator, prediction module, and benchmarking environment. Evaluation on representative data-processing workflows showed latency improvements ranging from $15 \\%$ to $36 \\%$, resulting in faster execution on standard hardware. By reducing repeated initialization costs, MCP+ improves the efficiency of MCP-based systems and supports more responsive AI-agent workflows.",
+      "canonical_id": "DOI:10.1109/IC3SIS69949.2026.11608312",
+      "doi": "10.1109/IC3SIS69949.2026.11608312",
+      "authors": [
+        "Atul Agarwal"
+      ]
+    },
+    {
+      "title": "Self-Speculative Decoding for On-device MoE Acceleration",
+      "source_url": "https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17",
+      "year": 2026,
+      "published": "2026-04-12",
+      "abstract": "The sparse mixture-of-experts (MoE) architecture is a promising backbone of foundation models for a wide range of applications in edge. However, deploying them locally presents a significant challenge to memory-constrained GPUs. Previous techniques utilize CPUs for expert offloading, which suffer from inaccurate expert prefetching and on-demand loading latency. To address these challenges, we propose self-speculative MoE ( SS-MoE ), an algorithm-system co-design framework that facilitates inference under limited GPU memory. Our insight is that only a subset of routed experts, i.e., draft model, can still tackle easy tasks and generate draft tokens. Second, we deem GPU memory as the experts cache, and on-demand update it to mitigate IO overhead. Draft tokens from fewer routed experts are generated quickly, and these experts are then routed for verification. Additionally, we design a confidence-based policy to adaptively accept or verify draft tokens, which selectively decreases or increases the number of verification tokens of speculative decoding and achieves acceleration. Notably, under conservative verification, our approach preserves model accuracy and surpasses the decoding speed of the 4-bit quantized counterpart model. Under adaptive verification, our method significantly enhances decoding speed by 3.72x over state-of-the-art methods while maintaining nearly lossless accuracy.",
+      "canonical_id": "DOI:10.1145/3774904.3792218",
+      "doi": "10.1145/3774904.3792218",
+      "authors": [
+        "Peirong Zheng",
+        "Wenchao Xu",
+        "Haozhao Wang"
+      ]
+    },
+    {
+      "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
+      "source_url": "https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645",
+      "year": 2026,
+      "published": "2026-03-22",
+      "abstract": "Mixture-of-experts (MoE) architectures enable scalable Large Language Models (LLMs) with reduced computational overhead, yet their deployment on memory-constrained edge devices is hindered by substantial memory demands. Traditional expert-offloading techniques mitigate memory constraints but often significantly increase inference latency. We introduce MoE-APEX, an Adaptive Precision EXpert offloading system that optimizes MoE inference for edge architectures by dynamically managing expert precision. Our core innovation is to replace less critical cache-miss experts with low-precision variants, reducing loading latency while maintaining accuracy. MoE-APEX introduces three innovative techniques that map the natural hierarchy of MoE computation: (1) a token-level dynamic expert loading mechanism, (2) a layer-level adaptive expert prefetching technique, and (3) a sequence-level cost-aware expert caching policy. These innovations enable MoE-APEX to leverage the benefits of mixed-precision expert inference fully. Implemented atop Llama.cpp, MoE-APEX achieves decoding speedups ranging from 1.34x to 9.75x compared to state-of-the-art MoE offloading systems across diverse edge devices, offering a robust solution for efficient MoE deployment in resource-constrained environments.",
+      "canonical_id": "DOI:10.1145/3779212.3790187",
+      "doi": "10.1145/3779212.3790187",
+      "authors": [
+        "Peng Tang",
+        "Jiacheng Liu",
+        "Xiaofeng Hou",
+        "Yi-Fei Pu",
+        "Jing Wang",
+        "Pheng-Ann Heng",
+        "Chao Li",
+        "Minyi Guo"
+      ]
+    },
+    {
+      "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
+      "source_url": "https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b",
+      "year": 2025,
+      "published": "2025-12-18",
+      "abstract": "Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n<k) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.",
+      "canonical_id": "arXiv:2512.17073",
+      "arxiv_id": "2512.17073",
+      "authors": [
+        "Zhenyu Liu",
+        "Yunzhen Liu",
+        "Zehao Fan",
+        "Garrett Gagnon",
+        "Yayue Hou",
+        "Nan Wu",
+        "Yangwook Kang",
+        "Liu Liu"
+      ]
+    },
+    {
+      "title": "MoE-OPU: An FPGA Overlay Processor Leveraging Expert Parallelism for MoE-based Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe",
+      "year": 2025,
+      "published": "2025-10-26",
+      "abstract": "The advent of Large Language Models (LLMs) like DeepSeek, empowered by the Mixture-of-Experts (MoE) architecture, has driven significant advancements across diverse applications. However, a critical challenge arises during inference: Only a small fraction of experts are activated, causing severe token allocation imbalances among experts. This inefficiency poses substantial storage and computational burdens on resource-constrained devices, exacerbated by the lack of optimization strategies that integrate expert usage-aware parameter pruning and parallel scheduling, ultimately leading to suboptimal resource utilization. To address these limitations, we propose MoE-OPU, an FPGA-based overlay processor that optimizes parallel MoE inference through three key innovations. First, we introduce N:M sparsity (1:4/2:4/4:8/6:8/8:8) in the MLP layers and mixed-precision quantization (BF16/FP8/INT4) guided by expert activation frequency, reducing the parameter size by up to 2.76× while maintaining model accuracy (only 1.53% average drop after fine-tuning). Second, a lightweight prediction network dynamically predicts next-layer \"hot\" experts by analyzing historical activation patterns and current hidden states, achieving an average prediction hit rate of 83.4%. Third, a reconfigurable multi-core architecture maximizes the utilization of HBM bandwidth via a systolic array that natively supports sparse and mixed-precision computations, coupled with parallel concatenation to balance compute and memory efficiency. Experimental results on a Xilinx V80 FPGA with the DeepSeek-V2-lite model demonstrate that MoE-OPU outperforms the NVIDIA A100 GPU, delivering a 6.78× higher token throughput. Compared to RTX 4090 and U200 FPGA, MoE-OPU achieves 13.37× and 7.85× improvements, respectively. These advancements highlight the potential of algorithm-hardware co-design for scalable deployment of MoE-based LLMs on edge devices.",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240807",
+      "doi": "10.1109/ICCAD66269.2025.11240807",
+      "authors": [
+        "Shaoqiang Lu",
+        "Yangbo Wei",
+        "Junhong Qian",
+        "Chen Wu",
+        "Xiao Shi",
+        "Lei He"
+      ]
+    },
+    {
+      "title": "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models",
+      "source_url": "https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8",
+      "year": 2025,
+      "published": "2025-10-12",
+      "abstract": "Due to the sparse nature of Mixture-of-Experts (MoE) models, they are particularly suitable for hybrid CPU/GPU inference, especially in low-concurrency scenarios. This hybrid approach leverages both the large, cost-effective memory capacity of CPU/DRAM and the high bandwidth of GPU/VRAM. However, existing hybrid solutions remain bottlenecked by CPU computation limits and CPU-GPU synchronization overheads, severely restricting their ability to efficiently run state-of-the-art large MoE models, such as the 671B DeepSeek-V3/R1. This paper presents KTransformers, a high-performance inference system designed specifically for efficient heterogeneous computing of diverse MoE models. KTransformers employs optimized, AMX-specialized kernels that fully utilize the computational capabilities of modern CPUs and incorporates an asynchronous CPU-GPU task scheduling mechanism to minimize overhead—achieving 4.62–19.74× prefilling speedups and 1.25–4.09× decoding speedups compared to existing systems. Furthermore, we propose a novel Expert Deferral mechanism that strategically enhances the potential for overlapping CPU and GPU computations, increasing CPU utilization from typically below 75% to almost 100%. This yields up to 1.45× additional throughput beyond the aforementioned optimizations, with an average model accuracy drop of no more than 0.5% across a diverse set of benchmarks. The resulting system, KTransformers, substantially enhances the accessibility of large MoE models for local users who prioritize security or intend to dig into the internals of the models. As a result, it has already been widely adopted within both the open-source community and industry.",
+      "canonical_id": "DOI:10.1145/3731569.3764843",
+      "doi": "10.1145/3731569.3764843",
+      "authors": [
+        "Hongtao Chen",
+        "Weiyu Xie",
+        "Bo Zhang",
+        "Jing Tang",
+        "Jiahao Wang",
+        "Jianwei Dong",
+        "Shao-Yuan Chen",
+        "Zi-Wei Yuan",
+        "Chen Lin",
+        "Cheng Qiu",
+        "Yuening Zhu",
+        "Qingliang Ou",
+        "Jia-Qi Liao",
+        "Xianglin Chen",
+        "Zhiyuan Ai",
+        "Yong-Wei Wu",
+        "Mingxing Zhang"
+      ]
+    },
+    {
+      "title": "DS-MoE: Dynamic Expert Scheduling for Efficient MoE-based LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1a2811fab1891af3703e336b515afd4ef64c1e48",
+      "year": 2025,
+      "published": "2025-09-19",
+      "abstract": "Mixture-of-Experts (MoE) models achieve state-of-the-art performance across diverse machine learning tasks. A notable advantage is their ability to scale up the model size significantly while operating within a similar computational budget. However, their deployment on memory-constrained device remains a critical challenge. While GPUs enable high-speed inference, the enormous memory footprint of expert modules in MoE models often necessitates the use of offloading techniques to run the models-this in turn leads to frequent data transfers between the CPU and GPU. To tackle this issue, we propose DS-MoE, an MoE acceleration framework optimized for memory-constrained GPUs via expert offloading and suboptimal expert scheduling. DS-MoE dynamically offloads non-critical experts to CPU memory to relieve GPU memory pressure. A graceful accuracy maintenance mechanism further ensures minimal precision loss. Extensive experiments on benchmarks show that DS-MoE achieves a speed improvement of up to $1.53 \\times$ compared to traditional expert offloading methods, while maintaining comparable model accuracy.",
+      "canonical_id": "DOI:10.1109/ICITES66466.2025.11274315",
+      "doi": "10.1109/ICITES66466.2025.11274315",
+      "authors": [
+        "You Zhou",
+        "Qi Sun",
+        "Yu Li"
+      ]
+    },
+    {
+      "title": "CoMoE: Collaborative Optimization of Expert Aggregation and Offloading for MoE-based LLMs at Edge",
+      "source_url": "https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9",
+      "year": 2025,
+      "published": "2025-08-10",
+      "abstract": "The proliferation of large language models (LLMs) has driven the adoption of Mixture-of-Experts (MoE) architectures as a promising solution to scale model capacity while controlling computational costs. However, deploying MoE models in resource-constrained mobile edge computing environments presents significant challenges due to their large memory footprint and dynamic expert activation patterns. To address these challenges, we propose a novel dynamic resource-aware collaborative optimization framework that jointly optimizes expert aggregation granularity and offloading strategies based on real-time device resource states, network conditions, and input characteristics in mobile edge environments, denoted as CoMoE. In CoMoE, we first systematically analyze existing expert aggregation techniques, including expert parameter merging,knowledge distillation,and parameter sharing decomposition, identifying their limitations in dynamic mobile environments.We then investigate expert offloading strategies encompassing expert prediction and prefetching, expert caching and scheduling, and multi-tier storage architectures, revealing the interdependencies between routing decisions and offloading performance.The CoMoE incorporates adaptive scheduling mechanisms that respond to user mobility and varying network conditions, enabling efficient MoE deployment across heterogeneous edge devices. Extensive experiments on real mobile edge testbeds demonstrate that CoMoE achieves approximately 70% reduction in memory usage compared to baseline methods, 10.5% lower inference latency than existing expert offloading techniques, while maintaining model performance stability. For large-scale MoE models (e.g,7.4B-parameter Switch-Base-128), the CoMoE reduces memory requirements from 15.6GB to 4.7GB, enabling deployment on resource-constrained mobile edge devices that previously could only support much smaller models.",
+      "canonical_id": "arXiv:2508.09208",
+      "arxiv_id": "2508.09208",
+      "authors": [
+        "Muqing Li",
+        "Ning Li",
+        "Xin Yuan",
+        "Wenchao Xu",
+        "Quan Chen",
+        "Song Guo",
+        "Hai-Jun Zhang"
+      ]
+    },
+    {
+      "title": "Uni3D-MoE: Scalable Multimodal 3D Scene Understanding via Mixture of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/6e6f29025e5ff96a9fc609d014784af6c39609ee",
+      "year": 2025,
+      "published": "2025-05-27",
+      "abstract": "Recent advancements in multimodal large language models (MLLMs) have demonstrated considerable potential for comprehensive 3D scene understanding. However, existing approaches typically utilize only one or a limited subset of 3D modalities, resulting in incomplete representations of 3D scenes and reduced interpretive accuracy. Furthermore, different types of queries inherently depend on distinct modalities, indicating that uniform processing of all modality tokens may fail to effectively capture query-specific context. To address these challenges, we propose Uni3D-MoE, a sparse Mixture-of-Experts (MoE)-based 3D MLLM designed to enable adaptive 3D multimodal fusion. Specifically, Uni3D-MoE integrates a comprehensive set of 3D modalities, including multi-view RGB and depth images, bird's-eye-view (BEV) maps, point clouds, and voxel representations. At its core, our framework employs a learnable routing mechanism within the sparse MoE-based large language model, dynamically selecting appropriate experts at the token level. Each expert specializes in processing multimodal tokens based on learned modality preferences, thus facilitating flexible collaboration tailored to diverse task-specific requirements. Extensive evaluations on standard 3D scene understanding benchmarks and specialized datasets demonstrate the efficacy of Uni3D-MoE.",
+      "canonical_id": "arXiv:2505.21079",
+      "arxiv_id": "2505.21079",
+      "authors": [
+        "Yue Zhang",
+        "Yingzhao Jian",
+        "Hehe Fan",
+        "Yi Yang",
+        "Roger Zimmermann"
+      ]
+    },
+    {
+      "title": "of the 24th USENIX Conference on File and Storage Technologies",
+      "source_url": "https://www.semanticscholar.org/paper/aba2023ff78101b79586b9de04ca0239d05e938d",
+      "year": null,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d",
+      "authors": [
+        "Xin Zheng",
+        "Dong-Liang Wei",
+        "Jian-Xiang Gao",
+        "Yi-Xin Song",
+        "Ze-Yu Mi",
+        "Hai-Bo Chen"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.05137",
+      "identity_tokens": [
+        "id:arXiv:2608.05137",
+        "title:smartmage dynamic modality orchestration for 3d scene understanding",
+        "url:https://www.semanticscholar.org/paper/ac2deb048fc671a97d7fca7bec9b42dcca82f3cf"
+      ],
+      "record": {
+        "title": "SmartMage: Dynamic Modality Orchestration for 3D Scene Understanding",
+        "source_url": "https://www.semanticscholar.org/paper/ac2deb048fc671a97d7fca7bec9b42dcca82f3cf",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Understanding 3D scenes is fundamental to embodied intelligence, requiring joint reasoning over heterogeneous information from multiple modalities, including visual and geometric cues. However, the relevance of these modalities often varies across queries. Existing Multimodal Large Language Models (MLLMs) typically rely on fixed modality combinations, overlooking query-dependent modality needs. Such a rigid design can introduce semantic noise from irrelevant modalities while underutilizing more informative ones, leading to wasted computation and diluted reasoning. To address these challenges, this paper proposes SmartMage, a unified MLLM that dynamically orchestrates heterogeneous modalities for semantic-aware 3D scene understanding. Specifically, SmartMage incorporates: (1) a Semantic-guided Modality Adaptive RouTing (SMART) module that selects task-relevant modalities using semantic priors, text-modality alignment, and modality quality; and (2) a Modality-Aware Gating Expert (MAGE) module that leverages modality priors to guide expert activation, fostering adaptive specialization in multimodal reasoning. Empirically, SmartMage achieves state-of-the-art performance across five 3D scene understanding benchmarks, and attains competitive results on RGB-only video understanding benchmarks. In our diagnostic benchmark ScanFacet, tasks are divided into fine-grained semantic categories, enabling analysis of modality combinations preferred by each semantic type. The observed modality-semantic patterns provide further evidence of SmartMage's effectiveness. Project page: https://yuecheong.github.io/SmartMage/.",
+        "canonical_id": "arXiv:2608.05137",
+        "arxiv_id": "2608.05137",
+        "authors": [
+          "Yue Zhang",
+          "Yingzhao Jian",
+          "Yunqi Xu",
+          "Xiaoxiao Sun",
+          "He-He Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04238",
+      "identity_tokens": [
+        "id:arXiv:2609.04238",
+        "title:budgeting bytes a windowed storage roofline and dualbudget architecture ablations for storagebound llm decoding",
+        "url:https://www.semanticscholar.org/paper/1b18672e495f2bf8a45476fb291a5bc2bdbf6158"
+      ],
+      "record": {
+        "title": "Budgeting Bytes: A Windowed Storage Roofline and Dual-Budget Architecture Ablations for Storage-Bound LLM Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+        "year": 2026,
+        "published": "2026-07-29",
+        "abstract": "Autoregressive decoding on cheap hardware is bound not by FLOPs but by the bytes each generated token must move across the slowest populated tier of a memory hierarchy. We treat bytes-per-token as a first-class design axis, organized by an address-determinism taxonomy that classifies parameters by when their fetch address becomes known during a token's forward pass (A0: at token sampling; A1: before attention; A2: layerwise data-dependent; A3: always read). This reduces prefetch scheduling to single-machine feasibility with release times, yielding a closed-form windowed roofline. We run dual-budget (bytes-per-token times storage) ablations across three sub-100M scales, then take the framework to real large-MoE deployment and report a substantial negative result the roofline predicts: on an 8GB edge board running Qwen3-30B-A3B (4-bit, 18GB), the model overflows RAM and decode is pinned at the eMMC bandwidth ceiling; predictive expert prefetch does not help -- not temporal-locality prefetch (net-negative), not even a trace-driven oracle with perfect prediction -- because the binding constraint is byte volume over a saturated bus, which prefetch cannot reduce. The lever that works is reducing bytes-per-token until the model fits the fast tier: quantized to fit a 16GB unified-memory device, the same model runs GPU-resident at 11.5 tok/s (22x). We reconcile this with GPU-serving expert-prefetch predictors: a frozen-model probe predicts Qwen3-30B routing from the pre-attention state at 91.2%, a scale-invariant predictability property, but this converts to throughput only where the fast tier caches most of the model and per-token transfer is comparable to compute -- measured to hold on an A100 PCIe-offload path and to fail on bandwidth-walled edge storage. Predictability is not speedup; we chart where the gap closes.",
+        "canonical_id": "arXiv:2609.04238",
+        "arxiv_id": "2609.04238",
+        "authors": [
+          "Hanhaodi Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00157",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00157",
+        "title:towards efficient and reliable ondevice multiagent systems challenges technologies and explorations",
+        "url:https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda"
+      ],
+      "record": {
+        "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+        "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+        "doi": "10.1109/ICWS72778.2026.00157",
+        "authors": [
+          "Yanjun Shu",
+          "Wei-Ye Yan",
+          "Zhuang-Yu Ma",
+          "Jian Yang",
+          "Yan-Ming Jiang",
+          "Min Li",
+          "Tian-Yu Luo",
+          "De-Cheng Zuo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdps65963.2026.00101",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00101",
+        "title:efficient moe inference on single consumergrade gpu with dynamic expert caching",
+        "url:https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b"
+      ],
+      "record": {
+        "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+        "source_url": "https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b",
+        "year": 2026,
+        "published": "2026-05-25",
+        "abstract": "The Mixture-of-Experts (MoE) architecture has demonstrated notable advantages by enabling model scaling without a proportional increase in computational cost. However, due to the large model size, deployment typically requires substantial memory resources that are often unavailable on consumer-grade devices. MoE offloading strategies have been proposed to address this. However, PCIe bandwidth constraints lead to noticeably slower inference during offloading. Several methods, such as expert caching, prefetching, and hybrid CPU/GPU inference, have been introduced to mitigate this issue. Yet, they still suffer from load imbalance across devices, low hardware utilization, and significant transfer latency, which become particularly severe when handling ultra-large models (e.g., ≥ 400B). To address these challenges, this paper proposes SMOE, a hybrid CPU/GPU inference framework for MoE LLMs based on dynamic expert caching, to improve inference efficiency and hardware utilization on consumer-grade devices. SMOE adopts specialized optimization strategies for the prefilling and decoding stages. For the prefilling, it employs an on-demand expert loading strategy optimized with pipeline techniques to schedule experts at runtime dynamically. For the decoding, it introduces a novel token-wise prefetch strategy that maximizes computation-communication overlap, enabling expert scheduling across CPU and GPU without incurring noticeable transfer delays. In addition, SMOE implements an efficient cache management strategy to make use of the limited GPU memory. Experimental evaluations on consumer-grade devices with ultra-large MoE models demonstrate that SMOE achieves a speedup of up to 8.68× over the baseline and 2.98× over the SOTA method in the prefilling stage, with the benefit increasing as the length grows. In the decoding stage, SMOE achieves up to 20.9% faster inference compared to the baseline, while other caching- and prefetching-based methods fail to handle ultra-large models such as 671B. These results show that SMOE achieves efficient inference acceleration for ultra-large MoE models on consumer-grade devices.",
+        "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+        "doi": "10.1109/IPDPS65963.2026.00101",
+        "authors": [
+          "Rui Zhang",
+          "Bo Yang",
+          "Rongji Wang",
+          "Xuemei Peng",
+          "Zeyi Wen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05899",
+      "identity_tokens": [
+        "id:arXiv:2605.05899",
+        "title:vismmoe exploiting visualexpert affinity for efficient visuallanguage moe offloading",
+        "url:https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd"
+      ],
+      "record": {
+        "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+        "source_url": "https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+        "year": 2026,
+        "published": "2026-05-07",
+        "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+        "canonical_id": "arXiv:2605.05899",
+        "arxiv_id": "2605.05899",
+        "authors": [
+          "Cheng Xu",
+          "Xiaofeng Hou",
+          "Jiacheng Liu",
+          "Chao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ic3sis69949.2026.11608312",
+      "identity_tokens": [
+        "id:DOI:10.1109/ic3sis69949.2026.11608312",
+        "title:mcp reducing tool coldstart latency via predictive context routing",
+        "url:https://www.semanticscholar.org/paper/fab165e01dd9200083184edc840a8eb195f9d997"
+      ],
+      "record": {
+        "title": "MCP+: Reducing Tool Cold-Start Latency via Predictive Context Routing",
+        "source_url": "https://www.semanticscholar.org/paper/fab165e01dd9200083184edc840a8eb195f9d997",
+        "year": 2026,
+        "published": "2026-05-01",
+        "abstract": "The Model Context Protocol (MCP) provides a common mechanism through which AI agents can access external tools and services. In its current form, however, tools are typically initialized only when the agent requests them. As a result, workflows involving multiple processing stages may experience additional delays because operations such as schema discovery, database connection setup, file loading, and environment preparation are performed at runtime. To address this limitation, we introduce MCP+, an extension of MCP that incorporates Predictive Context Routing (PCR),MCP+ addresses this limitation by preparing execution contexts before they are explicitly requested by a tool. Rather than relying entirely on reactive initialization, the framework estimates which tools may be required in upcoming workflow stages and prepares relevant resources in advance. It incorporates a lightweight prediction model, a confidence-based routing queue to guide prefetching decisions, an asynchronous context-loading mechanism, and a cache that retains initialized resources such as CSV schemas, template objects, and database connections. A complete implementation was developed, including an MCP+ server, workflow-trace generator, prediction module, and benchmarking environment. Evaluation on representative data-processing workflows showed latency improvements ranging from $15 \\%$ to $36 \\%$, resulting in faster execution on standard hardware. By reducing repeated initialization costs, MCP+ improves the efficiency of MCP-based systems and supports more responsive AI-agent workflows.",
+        "canonical_id": "DOI:10.1109/IC3SIS69949.2026.11608312",
+        "doi": "10.1109/IC3SIS69949.2026.11608312",
+        "authors": [
+          "Atul Agarwal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792218",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792218",
+        "title:selfspeculative decoding for ondevice moe acceleration",
+        "url:https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17"
+      ],
+      "record": {
+        "title": "Self-Speculative Decoding for On-device MoE Acceleration",
+        "source_url": "https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17",
+        "year": 2026,
+        "published": "2026-04-12",
+        "abstract": "The sparse mixture-of-experts (MoE) architecture is a promising backbone of foundation models for a wide range of applications in edge. However, deploying them locally presents a significant challenge to memory-constrained GPUs. Previous techniques utilize CPUs for expert offloading, which suffer from inaccurate expert prefetching and on-demand loading latency. To address these challenges, we propose self-speculative MoE ( SS-MoE ), an algorithm-system co-design framework that facilitates inference under limited GPU memory. Our insight is that only a subset of routed experts, i.e., draft model, can still tackle easy tasks and generate draft tokens. Second, we deem GPU memory as the experts cache, and on-demand update it to mitigate IO overhead. Draft tokens from fewer routed experts are generated quickly, and these experts are then routed for verification. Additionally, we design a confidence-based policy to adaptively accept or verify draft tokens, which selectively decreases or increases the number of verification tokens of speculative decoding and achieves acceleration. Notably, under conservative verification, our approach preserves model accuracy and surpasses the decoding speed of the 4-bit quantized counterpart model. Under adaptive verification, our method significantly enhances decoding speed by 3.72x over state-of-the-art methods while maintaining nearly lossless accuracy.",
+        "canonical_id": "DOI:10.1145/3774904.3792218",
+        "doi": "10.1145/3774904.3792218",
+        "authors": [
+          "Peirong Zheng",
+          "Wenchao Xu",
+          "Haozhao Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3779212.3790187",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790187",
+        "title:moeapex an efficient moe inference system with adaptive precision expert offloading",
+        "url:https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645"
+      ],
+      "record": {
+        "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
+        "source_url": "https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645",
+        "year": 2026,
+        "published": "2026-03-22",
+        "abstract": "Mixture-of-experts (MoE) architectures enable scalable Large Language Models (LLMs) with reduced computational overhead, yet their deployment on memory-constrained edge devices is hindered by substantial memory demands. Traditional expert-offloading techniques mitigate memory constraints but often significantly increase inference latency. We introduce MoE-APEX, an Adaptive Precision EXpert offloading system that optimizes MoE inference for edge architectures by dynamically managing expert precision. Our core innovation is to replace less critical cache-miss experts with low-precision variants, reducing loading latency while maintaining accuracy. MoE-APEX introduces three innovative techniques that map the natural hierarchy of MoE computation: (1) a token-level dynamic expert loading mechanism, (2) a layer-level adaptive expert prefetching technique, and (3) a sequence-level cost-aware expert caching policy. These innovations enable MoE-APEX to leverage the benefits of mixed-precision expert inference fully. Implemented atop Llama.cpp, MoE-APEX achieves decoding speedups ranging from 1.34x to 9.75x compared to state-of-the-art MoE offloading systems across diverse edge devices, offering a robust solution for efficient MoE deployment in resource-constrained environments.",
+        "canonical_id": "DOI:10.1145/3779212.3790187",
+        "doi": "10.1145/3779212.3790187",
+        "authors": [
+          "Peng Tang",
+          "Jiacheng Liu",
+          "Xiaofeng Hou",
+          "Yi-Fei Pu",
+          "Jing Wang",
+          "Pheng-Ann Heng",
+          "Chao Li",
+          "Minyi Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.17073",
+      "identity_tokens": [
+        "id:arXiv:2512.17073",
+        "title:bandwidthefficient adaptive mixtureofexperts via lowrank compensation",
+        "url:https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b"
+      ],
+      "record": {
+        "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
+        "source_url": "https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b",
+        "year": 2025,
+        "published": "2025-12-18",
+        "abstract": "Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n<k) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.",
+        "canonical_id": "arXiv:2512.17073",
+        "arxiv_id": "2512.17073",
+        "authors": [
+          "Zhenyu Liu",
+          "Yunzhen Liu",
+          "Zehao Fan",
+          "Garrett Gagnon",
+          "Yayue Hou",
+          "Nan Wu",
+          "Yangwook Kang",
+          "Liu Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccad66269.2025.11240807",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240807",
+        "title:moeopu an fpga overlay processor leveraging expert parallelism for moebased large language models",
+        "url:https://www.semanticscholar.org/paper/aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe"
+      ],
+      "record": {
+        "title": "MoE-OPU: An FPGA Overlay Processor Leveraging Expert Parallelism for MoE-based Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe",
+        "year": 2025,
+        "published": "2025-10-26",
+        "abstract": "The advent of Large Language Models (LLMs) like DeepSeek, empowered by the Mixture-of-Experts (MoE) architecture, has driven significant advancements across diverse applications. However, a critical challenge arises during inference: Only a small fraction of experts are activated, causing severe token allocation imbalances among experts. This inefficiency poses substantial storage and computational burdens on resource-constrained devices, exacerbated by the lack of optimization strategies that integrate expert usage-aware parameter pruning and parallel scheduling, ultimately leading to suboptimal resource utilization. To address these limitations, we propose MoE-OPU, an FPGA-based overlay processor that optimizes parallel MoE inference through three key innovations. First, we introduce N:M sparsity (1:4/2:4/4:8/6:8/8:8) in the MLP layers and mixed-precision quantization (BF16/FP8/INT4) guided by expert activation frequency, reducing the parameter size by up to 2.76× while maintaining model accuracy (only 1.53% average drop after fine-tuning). Second, a lightweight prediction network dynamically predicts next-layer \"hot\" experts by analyzing historical activation patterns and current hidden states, achieving an average prediction hit rate of 83.4%. Third, a reconfigurable multi-core architecture maximizes the utilization of HBM bandwidth via a systolic array that natively supports sparse and mixed-precision computations, coupled with parallel concatenation to balance compute and memory efficiency. Experimental results on a Xilinx V80 FPGA with the DeepSeek-V2-lite model demonstrate that MoE-OPU outperforms the NVIDIA A100 GPU, delivering a 6.78× higher token throughput. Compared to RTX 4090 and U200 FPGA, MoE-OPU achieves 13.37× and 7.85× improvements, respectively. These advancements highlight the potential of algorithm-hardware co-design for scalable deployment of MoE-based LLMs on edge devices.",
+        "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240807",
+        "doi": "10.1109/ICCAD66269.2025.11240807",
+        "authors": [
+          "Shaoqiang Lu",
+          "Yangbo Wei",
+          "Junhong Qian",
+          "Chen Wu",
+          "Xiao Shi",
+          "Lei He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3731569.3764843",
+      "identity_tokens": [
+        "id:DOI:10.1145/3731569.3764843",
+        "title:ktransformers unleashing the full potential of cpugpu hybrid inference for moe models",
+        "url:https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8"
+      ],
+      "record": {
+        "title": "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models",
+        "source_url": "https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8",
+        "year": 2025,
+        "published": "2025-10-12",
+        "abstract": "Due to the sparse nature of Mixture-of-Experts (MoE) models, they are particularly suitable for hybrid CPU/GPU inference, especially in low-concurrency scenarios. This hybrid approach leverages both the large, cost-effective memory capacity of CPU/DRAM and the high bandwidth of GPU/VRAM. However, existing hybrid solutions remain bottlenecked by CPU computation limits and CPU-GPU synchronization overheads, severely restricting their ability to efficiently run state-of-the-art large MoE models, such as the 671B DeepSeek-V3/R1. This paper presents KTransformers, a high-performance inference system designed specifically for efficient heterogeneous computing of diverse MoE models. KTransformers employs optimized, AMX-specialized kernels that fully utilize the computational capabilities of modern CPUs and incorporates an asynchronous CPU-GPU task scheduling mechanism to minimize overhead—achieving 4.62–19.74× prefilling speedups and 1.25–4.09× decoding speedups compared to existing systems. Furthermore, we propose a novel Expert Deferral mechanism that strategically enhances the potential for overlapping CPU and GPU computations, increasing CPU utilization from typically below 75% to almost 100%. This yields up to 1.45× additional throughput beyond the aforementioned optimizations, with an average model accuracy drop of no more than 0.5% across a diverse set of benchmarks. The resulting system, KTransformers, substantially enhances the accessibility of large MoE models for local users who prioritize security or intend to dig into the internals of the models. As a result, it has already been widely adopted within both the open-source community and industry.",
+        "canonical_id": "DOI:10.1145/3731569.3764843",
+        "doi": "10.1145/3731569.3764843",
+        "authors": [
+          "Hongtao Chen",
+          "Weiyu Xie",
+          "Bo Zhang",
+          "Jing Tang",
+          "Jiahao Wang",
+          "Jianwei Dong",
+          "Shao-Yuan Chen",
+          "Zi-Wei Yuan",
+          "Chen Lin",
+          "Cheng Qiu",
+          "Yuening Zhu",
+          "Qingliang Ou",
+          "Jia-Qi Liao",
+          "Xianglin Chen",
+          "Zhiyuan Ai",
+          "Yong-Wei Wu",
+          "Mingxing Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icites66466.2025.11274315",
+      "identity_tokens": [
+        "id:DOI:10.1109/icites66466.2025.11274315",
+        "title:dsmoe dynamic expert scheduling for efficient moebased llm inference",
+        "url:https://www.semanticscholar.org/paper/1a2811fab1891af3703e336b515afd4ef64c1e48"
+      ],
+      "record": {
+        "title": "DS-MoE: Dynamic Expert Scheduling for Efficient MoE-based LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1a2811fab1891af3703e336b515afd4ef64c1e48",
+        "year": 2025,
+        "published": "2025-09-19",
+        "abstract": "Mixture-of-Experts (MoE) models achieve state-of-the-art performance across diverse machine learning tasks. A notable advantage is their ability to scale up the model size significantly while operating within a similar computational budget. However, their deployment on memory-constrained device remains a critical challenge. While GPUs enable high-speed inference, the enormous memory footprint of expert modules in MoE models often necessitates the use of offloading techniques to run the models-this in turn leads to frequent data transfers between the CPU and GPU. To tackle this issue, we propose DS-MoE, an MoE acceleration framework optimized for memory-constrained GPUs via expert offloading and suboptimal expert scheduling. DS-MoE dynamically offloads non-critical experts to CPU memory to relieve GPU memory pressure. A graceful accuracy maintenance mechanism further ensures minimal precision loss. Extensive experiments on benchmarks show that DS-MoE achieves a speed improvement of up to $1.53 \\times$ compared to traditional expert offloading methods, while maintaining comparable model accuracy.",
+        "canonical_id": "DOI:10.1109/ICITES66466.2025.11274315",
+        "doi": "10.1109/ICITES66466.2025.11274315",
+        "authors": [
+          "You Zhou",
+          "Qi Sun",
+          "Yu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09208",
+      "identity_tokens": [
+        "id:arXiv:2508.09208",
+        "title:comoe collaborative optimization of expert aggregation and offloading for moebased llms at edge",
+        "url:https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9"
+      ],
+      "record": {
+        "title": "CoMoE: Collaborative Optimization of Expert Aggregation and Offloading for MoE-based LLMs at Edge",
+        "source_url": "https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9",
+        "year": 2025,
+        "published": "2025-08-10",
+        "abstract": "The proliferation of large language models (LLMs) has driven the adoption of Mixture-of-Experts (MoE) architectures as a promising solution to scale model capacity while controlling computational costs. However, deploying MoE models in resource-constrained mobile edge computing environments presents significant challenges due to their large memory footprint and dynamic expert activation patterns. To address these challenges, we propose a novel dynamic resource-aware collaborative optimization framework that jointly optimizes expert aggregation granularity and offloading strategies based on real-time device resource states, network conditions, and input characteristics in mobile edge environments, denoted as CoMoE. In CoMoE, we first systematically analyze existing expert aggregation techniques, including expert parameter merging,knowledge distillation,and parameter sharing decomposition, identifying their limitations in dynamic mobile environments.We then investigate expert offloading strategies encompassing expert prediction and prefetching, expert caching and scheduling, and multi-tier storage architectures, revealing the interdependencies between routing decisions and offloading performance.The CoMoE incorporates adaptive scheduling mechanisms that respond to user mobility and varying network conditions, enabling efficient MoE deployment across heterogeneous edge devices. Extensive experiments on real mobile edge testbeds demonstrate that CoMoE achieves approximately 70% reduction in memory usage compared to baseline methods, 10.5% lower inference latency than existing expert offloading techniques, while maintaining model performance stability. For large-scale MoE models (e.g,7.4B-parameter Switch-Base-128), the CoMoE reduces memory requirements from 15.6GB to 4.7GB, enabling deployment on resource-constrained mobile edge devices that previously could only support much smaller models.",
+        "canonical_id": "arXiv:2508.09208",
+        "arxiv_id": "2508.09208",
+        "authors": [
+          "Muqing Li",
+          "Ning Li",
+          "Xin Yuan",
+          "Wenchao Xu",
+          "Quan Chen",
+          "Song Guo",
+          "Hai-Jun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21079",
+      "identity_tokens": [
+        "id:arXiv:2505.21079",
+        "title:uni3dmoe scalable multimodal 3d scene understanding via mixture of experts",
+        "url:https://www.semanticscholar.org/paper/6e6f29025e5ff96a9fc609d014784af6c39609ee"
+      ],
+      "record": {
+        "title": "Uni3D-MoE: Scalable Multimodal 3D Scene Understanding via Mixture of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/6e6f29025e5ff96a9fc609d014784af6c39609ee",
+        "year": 2025,
+        "published": "2025-05-27",
+        "abstract": "Recent advancements in multimodal large language models (MLLMs) have demonstrated considerable potential for comprehensive 3D scene understanding. However, existing approaches typically utilize only one or a limited subset of 3D modalities, resulting in incomplete representations of 3D scenes and reduced interpretive accuracy. Furthermore, different types of queries inherently depend on distinct modalities, indicating that uniform processing of all modality tokens may fail to effectively capture query-specific context. To address these challenges, we propose Uni3D-MoE, a sparse Mixture-of-Experts (MoE)-based 3D MLLM designed to enable adaptive 3D multimodal fusion. Specifically, Uni3D-MoE integrates a comprehensive set of 3D modalities, including multi-view RGB and depth images, bird's-eye-view (BEV) maps, point clouds, and voxel representations. At its core, our framework employs a learnable routing mechanism within the sparse MoE-based large language model, dynamically selecting appropriate experts at the token level. Each expert specializes in processing multimodal tokens based on learned modality preferences, thus facilitating flexible collaboration tailored to diverse task-specific requirements. Extensive evaluations on standard 3D scene understanding benchmarks and specialized datasets demonstrate the efficacy of Uni3D-MoE.",
+        "canonical_id": "arXiv:2505.21079",
+        "arxiv_id": "2505.21079",
+        "authors": [
+          "Yue Zhang",
+          "Yingzhao Jian",
+          "Hehe Fan",
+          "Yi Yang",
+          "Roger Zimmermann"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d",
+      "identity_tokens": [
+        "id:SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d",
+        "title:of the 24th usenix conference on file and storage technologies",
+        "url:https://www.semanticscholar.org/paper/aba2023ff78101b79586b9de04ca0239d05e938d"
+      ],
+      "record": {
+        "title": "of the 24th USENIX Conference on File and Storage Technologies",
+        "source_url": "https://www.semanticscholar.org/paper/aba2023ff78101b79586b9de04ca0239d05e938d",
+        "year": null,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d",
+        "authors": [
+          "Xin Zheng",
+          "Dong-Liang Wei",
+          "Jian-Xiang Gao",
+          "Yi-Xin Song",
+          "Ze-Yu Mi",
+          "Hai-Bo Chen"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b49f9ece98a773fd7553b5b3dfeb9c714c653766d63679af5349fad45d157255",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
