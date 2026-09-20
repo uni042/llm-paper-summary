@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r30",
+    "summary": "Adaptive Expert Computation / Compression の前方引用を追加探索し、dynamic top-k・joint adaptive routing・expert mergingを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.06601",
+      "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
+      "source_url": "https://arxiv.org/abs/2607.06601",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md",
+      "priority": 99,
+      "reason": "token/layerごとにattention mode・expert subset・KV bit-widthを同一controllerで共同決定し、compute/memory budget下でexpert数も適応配分する拡張的adaptive computation。"
+    },
+    {
+      "canonical_id": "arXiv:2608.30567",
+      "title": "TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI",
+      "source_url": "https://arxiv.org/abs/2608.30567",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
+      "priority": 98,
+      "reason": "Quantile Routingによるdynamic top-kでtokenごとにexpert数を適応配分し、平均compute budgetとload balanceを両立する実モデルでの直接例。"
+    },
+    {
+      "canonical_id": "arXiv:2608.08627",
+      "title": "UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models",
+      "source_url": "https://arxiv.org/abs/2608.08627",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+      "priority": 96,
+      "reason": "functional similarityでexpertをgraph coarseningし、routing exposureに応じてlayer-adaptiveに重要expertを保護しながら複数serving budgetへ圧縮する。"
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109617",
+      "title": "MoEP: Compact and efficient sparsity with modular expert paths",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.109617",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "priority": 92,
+      "reason": "dense modelを固定総parameter budgetのままtoken-dependent sparse modular pathsへ変換し、layer-level conditional computationの設計点を示す。標準MoEとの差も比較できる。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-expert-choice-fwd",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-expert-choice-fwd.json",
+    "receipt": "sha256:a664f2ea2285fc5ab781c320c207200ea1d58310f09d5afb344d9a3eca455f21"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+    "round": "adaptive-max-r30-forward-adaptive-routing",
+    "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
+    "query_summary": "Expert Choice Routingの前方引用からjoint adaptive routing・dynamic top-k・adaptive expert merging・modular sparse pathの4件を追加。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "continue remaining forward-citation seeds with high-yield windows"
+  }
+}
