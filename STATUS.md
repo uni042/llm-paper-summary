@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:17:59 JST**
+> 自動生成: **2026-09-20 12:18:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **77** |
 | 未claim Research job | **76** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 12:17:21 JST（38秒前）** |
+| 最終検証済みResearch収録 | **09-20 12:17:21 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **9** | **9** | **0** | **1** | **0** | — |
+| Research | **17** | **10** | **9** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **17** | **10** | **10** | **0** | **1** | **0** | **5** |
+| 合計 | **17** | **11** | **10** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **9件** / 検証済み成功: **9件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **10件** / 検証済み成功: **9件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -158,6 +158,7 @@
   - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json`
   - paper: `papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-fbff7b50969572eba56c0514.json` (job `job-research-3cf2e0a916913e29`)
 
 #### Audit (:30)
 
@@ -230,8 +231,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **685** |
-| └ Research | **524** |
+| 成功result未照合のimmutable submission | **686** |
+| └ Research | **525** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
