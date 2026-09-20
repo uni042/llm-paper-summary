@@ -1,0 +1,280 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-forwardcite-adaptive-20260920-expertflow",
+  "collector_id": "manual-user-forwardcite-adaptive-expertflow",
+  "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.17954",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2410.17954/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "082e5fdaac2fc8d2c5233149ad0517ec97591e78",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:21:23.548474+00:00",
+  "results": [
+    {
+      "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+      "source_url": "https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Recent work has shown that fine-tuning decoder-only large language models (LLMs) for retrieval yields strong first-stage retrievers, with effectiveness improving as backbones grow in size. However, every query and document must pass through the full model, so encoding cost increases with model size. Mixture-of-Experts (MoE) LLMs activate only a subset of parameters per token and are widely used to scale generative models, yet remain underexplored as retrievers. We systematically study MoE backbones for retrieval by training MoE and dense LLMs from several families using the same procedure, evaluating them across diverse datasets, and measuring query encoding time under the same serving configuration. We show that MoE retrievers outperform dense retrievers with comparable active parameter counts by up to 3.0 nDCG@10 points on BEIR. One of our strongest MoE retrievers matches an 8B dense retriever with 59% fewer active parameters and 18% lower query encoding time. We further show that the number of experts used for query encoding can be reduced without retraining or re-indexing, retaining more than 99% of retrieval effectiveness while reducing query encoding time by up to 26%. Recent rerankers provide only modest additional gains over strong MoE first stages, which often match or exceed the reranked configurations we evaluate. Together, these results show that MoE LLMs can be strong and efficient first-stage retrievers.",
+      "canonical_id": "arXiv:2609.13486",
+      "arxiv_id": "2609.13486",
+      "authors": [
+        "Anubhav Shrestha",
+        "Safal Shrestha",
+        "Minwu Kim",
+        "Torsten Suel",
+        "Keith Ross"
+      ]
+    },
+    {
+      "title": "POSTER: Prediction-Enhanced Expert Prefetching and Eviction for MoE Offloading via PRED-MoE",
+      "source_url": "https://www.semanticscholar.org/paper/7e64b4a12190ea42c161b5b5d511f7ffcc3a505d",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Mixture-of-Experts (MoE) models improve scaling by activating a small number of experts per token. However, the combined memory requirements of all experts may exceed the GPU's available high-bandwidth memory (HBM) during inference. Inference frameworks such as vLLM and HuggingFace address the problem by offloading experts to CPU memory and moving them to the GPU's HBM as needed. While enabling inference of large models with limited HBM, this CPU-GPU traffic overhead slows down token generation. We present PRED-MoE, a novel prefetching and eviction framework for MoE offloading. PRED-MoE uses a lightweight predictor to assess which experts are most likely to be required for prefetching and ranks experts by their near-future activation likelihood for eviction. Preliminary evaluation over the Qwen3-30B-A3B model and the MMLU-Pro dataset indicates that PRED-MoE reduces the TPOT of vLLM and HuggingFace by up to 3.02× and 28.62× respectively.",
+      "canonical_id": "DOI:10.1145/3789240.3830285",
+      "doi": "10.1145/3789240.3830285",
+      "authors": [
+        "Wenchen Han",
+        "S. Vargaftik",
+        "M. Mitzenmacher",
+        "Ran Ben Basat"
+      ]
+    },
+    {
+      "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
+      "source_url": "https://www.semanticscholar.org/paper/713a7a26abccf4ed48c6563e44cc9a27d000fd7d",
+      "year": 2026,
+      "published": "2026-07-23",
+      "abstract": "Efficient multimodal inference is increasingly constrained not only by model quality or FLOP count, but also by the cost of preserving, moving, routing, caching, and quantizing multimodal representations under latency, memory, and energy constraints. This paper reviews recent advances in efficient vision-language and multimodal large language models, covering visual token compression, video token management, KV-cache optimization, Mixture-of-Experts (MoE) routing, low-bit quantization, edge deployment, and hardware-aware benchmarking. We argue that these techniques cannot be treated as independent optimizations. Visual token compression alters downstream feature distributions and MoE routing decisions, routing behavior affects expert utilization and quantization sensitivity, quantized router logits influence expert assignment, KV-cache policies determine retained multimodal evidence, and hardware constraints often transform computational savings into memory and communication bottlenecks. We organize the literature around these interactions and identify key design trade-offs, including accuracy versus token budget, static versus adaptive compression, sparse routing efficiency versus expert collapse, and low-bit inference versus modality-specific degradation. Finally, we introduce Temporal Routing Consistency as a diagnostic for video MoE models and highlight open research directions in routing-aware compression, cross-modal cache management, hardware-aware co-design, and unified benchmarking for multimodal edge intelligence.",
+      "canonical_id": "arXiv:2607.20981",
+      "arxiv_id": "2607.20981",
+      "authors": [
+        "Jay Gor",
+        "Karm Dave",
+        "Akshita Abrol",
+        "Rajesh Gupta",
+        "Sudeep Tanwar",
+        "Zhengkui Wang"
+      ]
+    },
+    {
+      "title": "Hardware-Aware Mixed-Precision Scheduling for Edge MoE Inference on GPU-NDP Systems",
+      "source_url": "https://www.semanticscholar.org/paper/c5186100bbaf157383925300066a77fd2d3522b8",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Mixture-of-Experts (MoE) models reduce computation by activating only a small subset of experts, but their dynamic expert routing introduces severe memory access bottlenecks on resource-constrained edge devices. Existing near-data processing (NDP) and mixed-precision methods remain constrained by the severe memory bandwidth wall on edge devices, especially under small-batch autoregressive decoding. This paper proposes a hardware-aware mixed-precision dynamic scheduling algorithm for GPU-NDP heterogeneous systems. Guided by gating probabilities, the scheduler estimates expert importance and adaptively assigns bit-widths through first-order differences. To improve heterogeneous execution efficiency, it further relies on hardware latency lookup tables to dynamically adjust task mapping and balance GPU and NDP workloads. Experiments on three MoE models show that the proposed method achieves up to 3.75x speedup over the GPU-DIMM baseline and up to 1.88x and 1.46x speedup over MoE-APEX and Hermes, respectively, with a maximum perplexity increase of only 0.183.",
+      "canonical_id": "DOI:10.1109/ISSET70600.2026.11682279",
+      "doi": "10.1109/ISSET70600.2026.11682279",
+      "authors": [
+        "Qi Zhang",
+        "Puyang Hong",
+        "Xin Cao",
+        "Xue-Feng Cai",
+        "Yi-Xuan He",
+        "Bo-Rui An",
+        "Ming Zhu",
+        "Bo Liu"
+      ]
+    },
+    {
+      "title": "Affinity Is Not Enough: Recovering the Free Energy Principle in Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/0315ce3d737d2a0c64668726e29386478765dfc0",
+      "year": 2026,
+      "published": "2026-05-01",
+      "abstract": "Sparse MoE routing fails at domain transitions, where the current token belongs to one distribution and the next to another. In a controlled experiment (4 experts, 5 seeds), standard affinity routing assigns only 0.006 +/- 0.001 probability to the correct expert at the transition. Three lightweight gate modifications raise this to 0.748 +/- 0.002 (124x), cutting experts needed for 99% coverage from infeasible to a small constant: temporal memory (beta), a per-expert LIF membrane potential accumulating routing context across tokens; precision-weighted gating (Pi), a per-expert inverse variance of recent prediction error, yielding 31x contrast between reliable and unreliable experts; and anticipatory routing, a next-state predictor conditioned on the beta-accumulated hidden state. The mechanisms draw from Friston's Free Energy Principle and use LIF dynamics from spiking neural networks. An ablation across all 2^3 subsets reveals a super-additive beta x Ant interaction: anticipation alone gives nothing (+0.000 +/- 0.001); beta alone gives modest gain (+0.295 +/- 0.013); combined they close 75% of the oracle gap (+0.741 +/- 0.002, exceeding the sum by +0.446 +/- 0.014). This is structural: a stateless predictor cannot detect approaching transitions because pre-transition tokens are distributionally identical to within-domain tokens. In a character-level MoE LM (5 seeds), beta-routing reduces transition-step BPC from 6.56 +/- 0.01 (Standard) to 4.01 +/- 0.15 (beta-MoE); the beta + Ant gate places 0.86 +/- 0.02 probability on the correct domain expert before that domain appears in input, vs 0.42 +/- 0.12 for Standard MoE. Reference implementations (~200 lines each): https://github.com/russellwmy/affinity-is-not-enough",
+      "canonical_id": "arXiv:2605.00604",
+      "arxiv_id": "2605.00604",
+      "authors": [
+        "Man-Yung Wong"
+      ]
+    },
+    {
+      "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+      "source_url": "https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8",
+      "year": 2026,
+      "published": "2026-02-05",
+      "abstract": "Mixture-of-Experts (MoE) architectures are evolving towards finer granularity to improve parameter efficiency. However, existing MoE designs face an inherent trade-off between the granularity of expert specialization and hardware execution efficiency. We propose OmniMoE, a system-algorithm co-designed framework that pushes expert granularity to its logical extreme. OmniMoE introduces vector-level Atomic Experts, enabling scalable routing and execution within a single MoE layer, while retaining a shared dense MLP branch for general-purpose processing. Although this atomic design maximizes capacity, it poses severe challenges for routing complexity and memory access. To address these, OmniMoE adopts a system-algorithm co-design: (i) a Cartesian Product Router that decomposes the massive index space to reduce routing complexity from O(N) to O(sqrt(N)); and (ii) Expert-Centric Scheduling that inverts the execution order to turn scattered, memory-bound lookups into efficient dense matrix operations. Validated on seven benchmarks, OmniMoE (with 1.7B active parameters) achieves 50.9% zero-shot accuracy across seven benchmarks, outperforming coarse-grained (e.g., DeepSeekMoE) and fine-grained (e.g., PEER) baselines. Crucially, OmniMoE reduces inference latency from 73ms to 6.7ms (a 10.9-fold speedup) compared to PEER, demonstrating that massive-scale fine-grained MoE can be fast and accurate. Our code is open-sourced at https://github.com/flash-algo/omni-moe.",
+      "canonical_id": "arXiv:2602.05711",
+      "arxiv_id": "2602.05711",
+      "authors": [
+        "Jingze Shi",
+        "Zhangyang Peng",
+        "Yizhang Zhu",
+        "Yi-Fan Wu",
+        "Guang Liu",
+        "Yuyu Luo"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.13486",
+      "identity_tokens": [
+        "id:arXiv:2609.13486",
+        "title:mixtureofexperts language models can be strong and efficient retrievers",
+        "url:https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b"
+      ],
+      "record": {
+        "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+        "source_url": "https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Recent work has shown that fine-tuning decoder-only large language models (LLMs) for retrieval yields strong first-stage retrievers, with effectiveness improving as backbones grow in size. However, every query and document must pass through the full model, so encoding cost increases with model size. Mixture-of-Experts (MoE) LLMs activate only a subset of parameters per token and are widely used to scale generative models, yet remain underexplored as retrievers. We systematically study MoE backbones for retrieval by training MoE and dense LLMs from several families using the same procedure, evaluating them across diverse datasets, and measuring query encoding time under the same serving configuration. We show that MoE retrievers outperform dense retrievers with comparable active parameter counts by up to 3.0 nDCG@10 points on BEIR. One of our strongest MoE retrievers matches an 8B dense retriever with 59% fewer active parameters and 18% lower query encoding time. We further show that the number of experts used for query encoding can be reduced without retraining or re-indexing, retaining more than 99% of retrieval effectiveness while reducing query encoding time by up to 26%. Recent rerankers provide only modest additional gains over strong MoE first stages, which often match or exceed the reranked configurations we evaluate. Together, these results show that MoE LLMs can be strong and efficient first-stage retrievers.",
+        "canonical_id": "arXiv:2609.13486",
+        "arxiv_id": "2609.13486",
+        "authors": [
+          "Anubhav Shrestha",
+          "Safal Shrestha",
+          "Minwu Kim",
+          "Torsten Suel",
+          "Keith Ross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3830285",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3830285",
+        "title:poster predictionenhanced expert prefetching and eviction for moe offloading via predmoe",
+        "url:https://www.semanticscholar.org/paper/7e64b4a12190ea42c161b5b5d511f7ffcc3a505d"
+      ],
+      "record": {
+        "title": "POSTER: Prediction-Enhanced Expert Prefetching and Eviction for MoE Offloading via PRED-MoE",
+        "source_url": "https://www.semanticscholar.org/paper/7e64b4a12190ea42c161b5b5d511f7ffcc3a505d",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Mixture-of-Experts (MoE) models improve scaling by activating a small number of experts per token. However, the combined memory requirements of all experts may exceed the GPU's available high-bandwidth memory (HBM) during inference. Inference frameworks such as vLLM and HuggingFace address the problem by offloading experts to CPU memory and moving them to the GPU's HBM as needed. While enabling inference of large models with limited HBM, this CPU-GPU traffic overhead slows down token generation. We present PRED-MoE, a novel prefetching and eviction framework for MoE offloading. PRED-MoE uses a lightweight predictor to assess which experts are most likely to be required for prefetching and ranks experts by their near-future activation likelihood for eviction. Preliminary evaluation over the Qwen3-30B-A3B model and the MMLU-Pro dataset indicates that PRED-MoE reduces the TPOT of vLLM and HuggingFace by up to 3.02× and 28.62× respectively.",
+        "canonical_id": "DOI:10.1145/3789240.3830285",
+        "doi": "10.1145/3789240.3830285",
+        "authors": [
+          "Wenchen Han",
+          "S. Vargaftik",
+          "M. Mitzenmacher",
+          "Ran Ben Basat"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20981",
+      "identity_tokens": [
+        "id:arXiv:2607.20981",
+        "title:beyond independent optimization compression moe routing and quantization interactions in multimodal edge intelligence",
+        "url:https://www.semanticscholar.org/paper/713a7a26abccf4ed48c6563e44cc9a27d000fd7d"
+      ],
+      "record": {
+        "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
+        "source_url": "https://www.semanticscholar.org/paper/713a7a26abccf4ed48c6563e44cc9a27d000fd7d",
+        "year": 2026,
+        "published": "2026-07-23",
+        "abstract": "Efficient multimodal inference is increasingly constrained not only by model quality or FLOP count, but also by the cost of preserving, moving, routing, caching, and quantizing multimodal representations under latency, memory, and energy constraints. This paper reviews recent advances in efficient vision-language and multimodal large language models, covering visual token compression, video token management, KV-cache optimization, Mixture-of-Experts (MoE) routing, low-bit quantization, edge deployment, and hardware-aware benchmarking. We argue that these techniques cannot be treated as independent optimizations. Visual token compression alters downstream feature distributions and MoE routing decisions, routing behavior affects expert utilization and quantization sensitivity, quantized router logits influence expert assignment, KV-cache policies determine retained multimodal evidence, and hardware constraints often transform computational savings into memory and communication bottlenecks. We organize the literature around these interactions and identify key design trade-offs, including accuracy versus token budget, static versus adaptive compression, sparse routing efficiency versus expert collapse, and low-bit inference versus modality-specific degradation. Finally, we introduce Temporal Routing Consistency as a diagnostic for video MoE models and highlight open research directions in routing-aware compression, cross-modal cache management, hardware-aware co-design, and unified benchmarking for multimodal edge intelligence.",
+        "canonical_id": "arXiv:2607.20981",
+        "arxiv_id": "2607.20981",
+        "authors": [
+          "Jay Gor",
+          "Karm Dave",
+          "Akshita Abrol",
+          "Rajesh Gupta",
+          "Sudeep Tanwar",
+          "Zhengkui Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isset70600.2026.11682279",
+      "identity_tokens": [
+        "id:DOI:10.1109/isset70600.2026.11682279",
+        "title:hardwareaware mixedprecision scheduling for edge moe inference on gpundp systems",
+        "url:https://www.semanticscholar.org/paper/c5186100bbaf157383925300066a77fd2d3522b8"
+      ],
+      "record": {
+        "title": "Hardware-Aware Mixed-Precision Scheduling for Edge MoE Inference on GPU-NDP Systems",
+        "source_url": "https://www.semanticscholar.org/paper/c5186100bbaf157383925300066a77fd2d3522b8",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Mixture-of-Experts (MoE) models reduce computation by activating only a small subset of experts, but their dynamic expert routing introduces severe memory access bottlenecks on resource-constrained edge devices. Existing near-data processing (NDP) and mixed-precision methods remain constrained by the severe memory bandwidth wall on edge devices, especially under small-batch autoregressive decoding. This paper proposes a hardware-aware mixed-precision dynamic scheduling algorithm for GPU-NDP heterogeneous systems. Guided by gating probabilities, the scheduler estimates expert importance and adaptively assigns bit-widths through first-order differences. To improve heterogeneous execution efficiency, it further relies on hardware latency lookup tables to dynamically adjust task mapping and balance GPU and NDP workloads. Experiments on three MoE models show that the proposed method achieves up to 3.75x speedup over the GPU-DIMM baseline and up to 1.88x and 1.46x speedup over MoE-APEX and Hermes, respectively, with a maximum perplexity increase of only 0.183.",
+        "canonical_id": "DOI:10.1109/ISSET70600.2026.11682279",
+        "doi": "10.1109/ISSET70600.2026.11682279",
+        "authors": [
+          "Qi Zhang",
+          "Puyang Hong",
+          "Xin Cao",
+          "Xue-Feng Cai",
+          "Yi-Xuan He",
+          "Bo-Rui An",
+          "Ming Zhu",
+          "Bo Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.00604",
+      "identity_tokens": [
+        "id:arXiv:2605.00604",
+        "title:affinity is not enough recovering the free energy principle in mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/0315ce3d737d2a0c64668726e29386478765dfc0"
+      ],
+      "record": {
+        "title": "Affinity Is Not Enough: Recovering the Free Energy Principle in Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/0315ce3d737d2a0c64668726e29386478765dfc0",
+        "year": 2026,
+        "published": "2026-05-01",
+        "abstract": "Sparse MoE routing fails at domain transitions, where the current token belongs to one distribution and the next to another. In a controlled experiment (4 experts, 5 seeds), standard affinity routing assigns only 0.006 +/- 0.001 probability to the correct expert at the transition. Three lightweight gate modifications raise this to 0.748 +/- 0.002 (124x), cutting experts needed for 99% coverage from infeasible to a small constant: temporal memory (beta), a per-expert LIF membrane potential accumulating routing context across tokens; precision-weighted gating (Pi), a per-expert inverse variance of recent prediction error, yielding 31x contrast between reliable and unreliable experts; and anticipatory routing, a next-state predictor conditioned on the beta-accumulated hidden state. The mechanisms draw from Friston's Free Energy Principle and use LIF dynamics from spiking neural networks. An ablation across all 2^3 subsets reveals a super-additive beta x Ant interaction: anticipation alone gives nothing (+0.000 +/- 0.001); beta alone gives modest gain (+0.295 +/- 0.013); combined they close 75% of the oracle gap (+0.741 +/- 0.002, exceeding the sum by +0.446 +/- 0.014). This is structural: a stateless predictor cannot detect approaching transitions because pre-transition tokens are distributionally identical to within-domain tokens. In a character-level MoE LM (5 seeds), beta-routing reduces transition-step BPC from 6.56 +/- 0.01 (Standard) to 4.01 +/- 0.15 (beta-MoE); the beta + Ant gate places 0.86 +/- 0.02 probability on the correct domain expert before that domain appears in input, vs 0.42 +/- 0.12 for Standard MoE. Reference implementations (~200 lines each): https://github.com/russellwmy/affinity-is-not-enough",
+        "canonical_id": "arXiv:2605.00604",
+        "arxiv_id": "2605.00604",
+        "authors": [
+          "Man-Yung Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05711",
+      "identity_tokens": [
+        "id:arXiv:2602.05711",
+        "title:omnimoe an efficient moe by orchestrating atomic experts at scale",
+        "url:https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8"
+      ],
+      "record": {
+        "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+        "source_url": "https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8",
+        "year": 2026,
+        "published": "2026-02-05",
+        "abstract": "Mixture-of-Experts (MoE) architectures are evolving towards finer granularity to improve parameter efficiency. However, existing MoE designs face an inherent trade-off between the granularity of expert specialization and hardware execution efficiency. We propose OmniMoE, a system-algorithm co-designed framework that pushes expert granularity to its logical extreme. OmniMoE introduces vector-level Atomic Experts, enabling scalable routing and execution within a single MoE layer, while retaining a shared dense MLP branch for general-purpose processing. Although this atomic design maximizes capacity, it poses severe challenges for routing complexity and memory access. To address these, OmniMoE adopts a system-algorithm co-design: (i) a Cartesian Product Router that decomposes the massive index space to reduce routing complexity from O(N) to O(sqrt(N)); and (ii) Expert-Centric Scheduling that inverts the execution order to turn scattered, memory-bound lookups into efficient dense matrix operations. Validated on seven benchmarks, OmniMoE (with 1.7B active parameters) achieves 50.9% zero-shot accuracy across seven benchmarks, outperforming coarse-grained (e.g., DeepSeekMoE) and fine-grained (e.g., PEER) baselines. Crucially, OmniMoE reduces inference latency from 73ms to 6.7ms (a 10.9-fold speedup) compared to PEER, demonstrating that massive-scale fine-grained MoE can be fast and accurate. Our code is open-sourced at https://github.com/flash-algo/omni-moe.",
+        "canonical_id": "arXiv:2602.05711",
+        "arxiv_id": "2602.05711",
+        "authors": [
+          "Jingze Shi",
+          "Zhangyang Peng",
+          "Yizhang Zhu",
+          "Yi-Fan Wu",
+          "Guang Liu",
+          "Yuyu Luo"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:2b4e1289722e197710a7d747ef2462b7551534f3711f022f8ed3d6e55afb6b69",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
