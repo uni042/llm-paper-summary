@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:46:25 JST**
+> 自動生成: **2026-09-20 14:46:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **124** |
+| 収録候補論文 | **123** |
 | 未claim Research job | **122** |
-| 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-20 14:40:06 JST（6分前）** |
+| 直近24hの検証済みResearch収録 | **57** |
+| 最終検証済みResearch収録 | **09-20 14:46:36 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **124** |
+| canonical_id確認済みの一意な候補論文 | **123** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **124** |
+| 非終端Research job合計 | **123** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **2** | **1** | **1** | **2** | **1** | — |
+| Research | **26** | **2** | **2** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **25** | **3** | **2** | **1** | **2** | **1** | **5** |
+| 合計 | **26** | **3** | **3** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 14:46:36 JST** [research] `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling
+  - job: `.survey/work-queue/jobs/job-research-e0a5ea7f3cdd2886.json`
+  - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json`
+  - paper: `papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md`
 - **09-20 14:40:06 JST** [research] `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md`
-- **09-20 12:42:01 JST** [research] `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
-  - job: `.survey/work-queue/jobs/job-research-abc92cd8a94f1144.json`
-  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee-repair1.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
 
 ### Audit
 
@@ -127,13 +127,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (job `job-research-e0a5ea7f3cdd2886`)
+- **成功** `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling
+  - job: `.survey/work-queue/jobs/job-research-e0a5ea7f3cdd2886.json`
+  - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json`
+  - paper: `papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md`
 
 #### Audit (:30)
 
@@ -155,10 +159,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 14:45:20 JST** / heartbeat: **—** / lease expiry: **09-20 16:15:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e0a5ea7f3cdd2886.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -181,7 +182,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **124** |
+| ready | **123** |
 
 ### 候補の重複・識別情報欠損
 
@@ -201,7 +202,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **808** |
+| inference/training/survey配下の論文Markdown実体 | **809** |
 
 ### immutable submissionの未照合
 
@@ -209,8 +210,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **729** |
-| └ Research | **543** |
+| 成功result未照合のimmutable submission | **728** |
+| └ Research | **542** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
