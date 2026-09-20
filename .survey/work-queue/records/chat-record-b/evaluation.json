@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4820a43b7a07e3bffb732f02","job_id":"job-research-6e90b18bc4767f7c","data":{"hardware":"カーネル性能はNVIDIA A6000 GPUでバッチ1、系列長2K/4K/16Kを測定する。容量評価ではA100-80GB単体および8 GPU構成を用い、LLaMA-7Bで100万〜1000万トークン級のKV保持可能性を算出する。","software":"対象はLLaMA-7B/13B/30B/65B、Llama-2-7B/13B/70B、Llama-3-8B/70B、Mistral-7B。比較は一様intX、NormalFloat nfX、Atom、FlexGen、長文脈ではKIVI。公式実装は専用CUDAカーネル、量子化、長文脈評価コードを含む。","methodology":"Wikitext-2とC4でteacher forcingによる全入力トークンのパープレキシティを測定し、KVQuantはWikitext-2学習集合から長さ2Kの16サンプルで校正する。4/3/2ビット、外れ値0〜1%を比較し、LLaMA-2-7B-32KとLlama-2-70B-32K LongLoRAでは系列長別パープレキシティと50サンプルのpasskey retrievalを測る。LongBenchは最大入力31500、RULERは最大32Kで評価する。各要素の寄与はKey量子化軸、RoPE前後、感度重み、外れ値率、校正データを切り替える切除実験で確認する。","scope":"容量の100万/1000万トークン値はKVメモリ圧縮からのハードウェア収容評価であり、元モデル自体が1000万トークンを意味的に利用できることを保証しない。実測速度はA6000上の4ビット専用行列ベクトルカーネル中心で、全モデル・全ビット幅の端末間遅延を網羅するものではない。"},"reservation":{"claim_id":"claim-4820a43b7a07e3bffb732f02","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-1e7b670e9a35584762c55c56",
+  "job_id": "job-research-6e90b18bc4767f7c",
+  "data": {
+    "hardware": "カーネル性能はNVIDIA A6000 GPUでバッチ1、系列長2K/4K/16Kを測定する。容量評価ではA100-80GB単体および8 GPU構成を用い、LLaMA-7Bで100万〜1000万トークン級のKV保持可能性を算出する。",
+    "software": "対象はLLaMA-7B/13B/30B/65B、Llama-2-7B/13B/70B、Llama-3-8B/70B、Mistral-7B。比較は一様intX、NormalFloat nfX、Atom、FlexGen、長文脈ではKIVI。公式実装は専用CUDAカーネル、量子化、長文脈評価コードを含む。",
+    "methodology": "Wikitext-2とC4でteacher forcingによる全入力トークンのパープレキシティを測定し、KVQuantはWikitext-2学習集合から長さ2Kの16サンプルで校正する。4/3/2ビット、外れ値0〜1%を比較し、LLaMA-2-7B-32KとLlama-2-70B-32K LongLoRAでは系列長別パープレキシティと50サンプルのpasskey retrievalを測る。LongBenchは最大入力31500、RULERは最大32Kで評価する。各要素の寄与はKey量子化軸、RoPE前後、感度重み、外れ値率、校正データを切り替える切除実験で確認する。",
+    "scope": "容量の100万/1000万トークン値はKVメモリ圧縮からのハードウェア収容評価であり、元モデル自体が1000万トークンを意味的に利用できることを保証しない。実測速度はA6000上の4ビット専用行列ベクトルカーネル中心で、全モデル・全ビット幅の端末間遅延を網羅するものではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-1e7b670e9a35584762c55c56",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
