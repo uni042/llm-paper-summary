@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a9d3088ad5c08f86656b47ed",
+  "attempt_id": "attempt-f2e51bafaabacfadeaecc0ee",
   "job_id": "job-research-4892de26a5d749a2",
   "data": {
     "limitations": "実証はMixtral 8x7B/8x22BとRTX 4090/A6000に集中し、異なるMoE構造やGPUベンダ、複数GPU、SSD直結の階層メモリでは検証されていない。感度と先読み統計にはオフラインのサンプルデータを使うため、入力分布が大きく変わる場合の頑健性は未評価である。第1層の先読みには任意の補助予測ゲート学習が必要で、完全な学習不要方式ではない。キャッシュ割当モデルは層ごとの確率を簡略化しており、実際の時間変動やエキスパート間の非一様な転送コストを完全には表さない。",
@@ -11,7 +11,7 @@
     "research_positioning": "MoEエキスパートオフロード系統の中で、AdapMoEは『何をロードするか』をゲーティングで削減し、『いつロードするか』を先読みで前倒しし、『何を常駐させるか』を動的計画法で配分し、『残るロードをどう隠すか』をタイル実行で処理する統合型の研究である。個別のキャッシュ置換や予測器だけでなく、アルゴリズム上の近似とGPU実行系を結合して端末推論のPCIeボトルネックへ対処する点が、リポジトリのMoEオフロード・階層メモリ系統で重要である。"
   },
   "reservation": {
-    "claim_id": "claim-a9d3088ad5c08f86656b47ed",
+    "claim_id": "claim-f2e51bafaabacfadeaecc0ee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

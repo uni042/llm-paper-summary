@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a9d3088ad5c08f86656b47ed",
+  "attempt_id": "attempt-f2e51bafaabacfadeaecc0ee",
   "job_id": "job-research-4892de26a5d749a2",
   "data": {
     "hardware": "実機GPU評価。Mixtral-8x7BはGeForce RTX 4090およびRTX A6000、Mixtral-8x22BはRTX A6000で測定する。論文冒頭ではA100と4090のメモリ・帯域特性も動機分析に用いるが、主要性能図の実測対象は4090/A6000である。",
@@ -11,7 +11,7 @@
     "scope": "評価はMixtral系2サイズとNVIDIA GPU 2種類に限定され、端末向けオフロード状況を模した実機測定である。異なるMoEルータ構造、AMD等の別GPU、SSDを直接介する階層、複数GPU、長期サービス負荷での一般化は論文中で実証していない。精度評価もMMLU/ARC-Challenge中心であり、24%単一エキスパート設定を超える攻めた圧縮では精度低下が起こり得る。"
   },
   "reservation": {
-    "claim_id": "claim-a9d3088ad5c08f86656b47ed",
+    "claim_id": "claim-f2e51bafaabacfadeaecc0ee",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
