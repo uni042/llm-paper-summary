@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:04:11 JST**
+> 自動生成: **2026-09-20 18:04:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **5** | **3** | **0** | **1** | **0** | — |
+| Research | **36** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **6** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **5** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,14 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2aa6f3a5ce12c662b86bbbe1.json`
   - paper: `papers/inference/02-cpu-offload/2024-2405.02842-iceformer.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-362ad2690372255c3afaa71b.json` (job `job-research-da8147ed3835966f`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-362ad2690372255c3afaa71b.json` (`ok=false`)
 - **成功** `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling
   - job: `.survey/work-queue/jobs/job-research-76aff8aad6f29ebc.json`
   - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
@@ -169,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:02:17 JST** / heartbeat: **—** / lease expiry: **09-20 19:32:17 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ab19fa17920fb404.json`
+- `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:04:18 JST** / heartbeat: **—** / lease expiry: **09-20 19:34:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
 
 #### Audit
 
