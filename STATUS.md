@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:43:53 JST**
+> 自動生成: **2026-09-20 18:44:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **5** | **4** | **1** | **1** | **0** | — |
+| Research | **37** | **5** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **6** | **5** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **6** | **5** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -148,7 +148,8 @@
   - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json`
   - paper: `papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f8b09fceaf979c451783d9d6.json` (job `job-research-8c68e144047ac9bb`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f8b09fceaf979c451783d9d6.json` (job `job-research-8c68e144047ac9bb`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-f8b09fceaf979c451783d9d6.json` (`ok=false`)
 
 #### Audit (:30)
 
