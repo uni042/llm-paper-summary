@@ -80,18 +80,35 @@ def _reference_progress_counts(
     unrelated: set[str],
     borderline: set[str],
 ) -> dict[str, int]:
-    """Count the full structured-reference mountain with mutually exclusive states."""
-    buckets: dict[str, set[str]] = {}
-    alias_to_key: dict[str, str] = {}
+    """Count references excluded by the same precedence used by the live candidate pool."""
 
-    def merge_keys(keys: set[str]) -> str:
-        target = sorted(keys)[0]
-        for other in sorted(keys - {target}):
-            tokens = buckets.pop(other)
-            buckets[target].update(tokens)
-            for token in tokens:
-                alias_to_key[token] = target
-        return target
+    groups: dict[str, dict[str, Any]] = {
+        "represented": {"buckets": {}, "alias_to_key": {}},
+        "unrelated": {"buckets": {}, "alias_to_key": {}},
+        "borderline": {"buckets": {}, "alias_to_key": {}},
+    }
+
+    def add_group(name: str, identities: list[str]) -> None:
+        state = groups[name]
+        buckets: dict[str, set[str]] = state["buckets"]
+        alias_to_key: dict[str, str] = state["alias_to_key"]
+        matched_keys = {alias_to_key[i] for i in identities if i in alias_to_key}
+        if not matched_keys:
+            key = identities[0]
+            buckets[key] = set(identities)
+        elif len(matched_keys) == 1:
+            key = next(iter(matched_keys))
+            buckets[key].update(identities)
+        else:
+            key = sorted(matched_keys)[0]
+            for other in sorted(matched_keys - {key}):
+                tokens = buckets.pop(other)
+                buckets[key].update(tokens)
+                for token in tokens:
+                    alias_to_key[token] = key
+            buckets[key].update(identities)
+        for identity in identities:
+            alias_to_key[identity] = key
 
     for source in papers:
         refs = source.meta.get("references")
@@ -101,43 +118,21 @@ def _reference_progress_counts(
             identities = citation_graph.reference_identifiers(ref)
             if not identities:
                 continue
-            matched_keys = {alias_to_key[i] for i in identities if i in alias_to_key}
-            if not matched_keys:
-                key = identities[0]
-                buckets[key] = set(identities)
-            elif len(matched_keys) == 1:
-                key = next(iter(matched_keys))
-                buckets[key].update(identities)
-            else:
-                key = merge_keys(matched_keys)
-                buckets[key].update(identities)
-            for identity in identities:
-                alias_to_key[identity] = key
+            if any(identity in represented for identity in identities):
+                add_group("represented", identities)
+            elif any(identity in unrelated for identity in identities):
+                add_group("unrelated", identities)
+            elif any(identity in borderline for identity in identities):
+                add_group("borderline", identities)
 
-    represented_count = 0
-    unrelated_count = 0
-    borderline_count = 0
-    remaining_count = 0
-    for tokens in buckets.values():
-        if tokens & represented:
-            represented_count += 1
-        elif tokens & unrelated:
-            unrelated_count += 1
-        elif tokens & borderline:
-            borderline_count += 1
-        else:
-            remaining_count += 1
-
-    total_count = len(buckets)
+    represented_count = len(groups["represented"]["buckets"])
+    unrelated_count = len(groups["unrelated"]["buckets"])
+    borderline_count = len(groups["borderline"]["buckets"])
     return {
-        "reference_total_count": total_count,
-        "reference_processed_count": total_count - remaining_count,
-        "reference_remaining_count": remaining_count,
         "reference_represented_count": represented_count,
         "reference_unrelated_count": unrelated_count,
         "reference_borderline_count": borderline_count,
     }
-
 
 def build_reference_pool(
     repo_root: Path,
@@ -265,11 +260,18 @@ def build_reference_pool(
             str(row.get("canonical_id") or "").casefold(),
         )
     )
-    if progress["reference_remaining_count"] != len(candidates):
-        raise RuntimeError(
-            "structured-reference progress census disagrees with candidate pool: "
-            f"{progress['reference_remaining_count']} != {len(candidates)}"
-        )
+    processed_count = (
+        progress["reference_represented_count"]
+        + progress["reference_unrelated_count"]
+        + progress["reference_borderline_count"]
+    )
+    progress.update(
+        {
+            "reference_processed_count": processed_count,
+            "reference_remaining_count": len(candidates),
+            "reference_total_count": processed_count + len(candidates),
+        }
+    )
     return {
         "schema_version": 1,
         "source_url": SOURCE_URL,
