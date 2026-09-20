@@ -1,0 +1,201 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T053937JST-worker00-openalex-cpu-kernel-05",
+  "collector_id": "scheduled-20260921T052937JST-openalex-cpu-kernel",
+  "run_key": "2026-09-21T05:29:37+09:00",
+  "axis": "recent CPU SIMD AMX SME LLM inference kernels",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20CPU%20SIMD%20AMX%20SME%20kernel&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b84bcbf686fb7c708fef958b44b4a55adf5e73d",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:40:31.108823+00:00",
+  "results": [
+    {
+      "title": "Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX",
+      "source_url": "https://arxiv.org/abs/2606.25426",
+      "year": 2026,
+      "published": "2026-06-24",
+      "canonical_id": "arXiv:2606.25426",
+      "arxiv_id": "2606.25426",
+      "authors": [
+        "Deyvik Bhan"
+      ]
+    },
+    {
+      "title": "SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions",
+      "source_url": "https://arxiv.org/abs/2606.16332",
+      "year": 2026,
+      "published": "2026-06-15",
+      "canonical_id": "arXiv:2606.16332",
+      "arxiv_id": "2606.16332",
+      "authors": [
+        "F Chen",
+        "Haibo Chen"
+      ]
+    },
+    {
+      "title": "LP-GEMM: Integrating Layout Propagation into GEMM Operations",
+      "source_url": "http://arxiv.org/abs/2604.04599",
+      "year": 2026,
+      "published": "2026-04-06",
+      "canonical_id": "arXiv:2604.04599",
+      "arxiv_id": "2604.04599",
+      "authors": [
+        "César Guedes Carneiro",
+        "Lucas Alvarenga",
+        "Guido Araujo",
+        "Sandro Rigo"
+      ]
+    },
+    {
+      "title": "Quantisation of LLMs on modern CPU architectures",
+      "source_url": "https://hdl.handle.net/2117/460726",
+      "year": 2026,
+      "published": "2026-01-27",
+      "canonical_id": "OpenAlex:W7154879701",
+      "authors": [
+        "Hugo Centeno Fidalgo"
+      ]
+    },
+    {
+      "title": "Parallel Scan on Ascend AI Accelerators",
+      "source_url": "https://doi.org/10.1109/ipdpsw66978.2025.00216",
+      "year": 2025,
+      "published": "2025-06-03",
+      "canonical_id": "arXiv:2505.15112",
+      "arxiv_id": "2505.15112",
+      "authors": [
+        "Bartłomiej Wróblewski",
+        "Gioele Gottardo",
+        "Anastasios Zouzias"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.25426",
+      "identity_tokens": [
+        "id:arXiv:2606.25426",
+        "title:above the inner loop exceeding accelerate at llm prefill gemm on the m1 amx",
+        "url:https://arxiv.org/abs/2606.25426"
+      ],
+      "record": {
+        "title": "Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX",
+        "source_url": "https://arxiv.org/abs/2606.25426",
+        "year": 2026,
+        "published": "2026-06-24",
+        "canonical_id": "arXiv:2606.25426",
+        "arxiv_id": "2606.25426",
+        "authors": [
+          "Deyvik Bhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.16332",
+      "identity_tokens": [
+        "id:arXiv:2606.16332",
+        "title:smepilot characterizing and optimizing llm inference with scalable matrix extensions",
+        "url:https://arxiv.org/abs/2606.16332"
+      ],
+      "record": {
+        "title": "SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions",
+        "source_url": "https://arxiv.org/abs/2606.16332",
+        "year": 2026,
+        "published": "2026-06-15",
+        "canonical_id": "arXiv:2606.16332",
+        "arxiv_id": "2606.16332",
+        "authors": [
+          "F Chen",
+          "Haibo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.04599",
+      "identity_tokens": [
+        "id:arXiv:2604.04599",
+        "title:lpgemm integrating layout propagation into gemm operations",
+        "url:http://arxiv.org/abs/2604.04599"
+      ],
+      "record": {
+        "title": "LP-GEMM: Integrating Layout Propagation into GEMM Operations",
+        "source_url": "http://arxiv.org/abs/2604.04599",
+        "year": 2026,
+        "published": "2026-04-06",
+        "canonical_id": "arXiv:2604.04599",
+        "arxiv_id": "2604.04599",
+        "authors": [
+          "César Guedes Carneiro",
+          "Lucas Alvarenga",
+          "Guido Araujo",
+          "Sandro Rigo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7154879701",
+      "identity_tokens": [
+        "id:OpenAlex:W7154879701",
+        "title:quantisation of llms on modern cpu architectures",
+        "url:https://hdl.handle.net/2117/460726"
+      ],
+      "record": {
+        "title": "Quantisation of LLMs on modern CPU architectures",
+        "source_url": "https://hdl.handle.net/2117/460726",
+        "year": 2026,
+        "published": "2026-01-27",
+        "canonical_id": "OpenAlex:W7154879701",
+        "authors": [
+          "Hugo Centeno Fidalgo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15112",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdpsw66978.2025.00216",
+        "id:arXiv:2505.15112",
+        "title:parallel scan on ascend ai accelerators",
+        "url:https://doi.org/10.1109/ipdpsw66978.2025.00216"
+      ],
+      "record": {
+        "title": "Parallel Scan on Ascend AI Accelerators",
+        "source_url": "https://doi.org/10.1109/ipdpsw66978.2025.00216",
+        "year": 2025,
+        "published": "2025-06-03",
+        "canonical_id": "arXiv:2505.15112",
+        "arxiv_id": "2505.15112",
+        "authors": [
+          "Bartłomiej Wróblewski",
+          "Gioele Gottardo",
+          "Anastasios Zouzias"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:44fab5ece9291c9cb2a70a539dfd75d01805fddd74c69f6bc83a949c64db971e",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
