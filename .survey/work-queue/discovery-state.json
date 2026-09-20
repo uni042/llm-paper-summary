@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T22:12:13+00:00",
+  "updated_at": "2026-09-20T22:15:20+00:00",
   "last_run_key": "2026-09-21T06:58:37+09:00",
-  "last_round": "hourly00-forward-smoothquant-06b",
+  "last_round": "hourly00-forward-deepspeedmoe-10",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,40 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-collective-agent-kv-6",
-      "axis": "multi-agent collective KV sharing・All-Gather redundancy elimination",
-      "query_summary": "agent-aware cacheから通信構造側へ展開し、同期multi-agent roundのAll-Gatherが生むKV重複をcollective reuseで除去する研究を探索した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2510.18586"
-      ],
-      "next_axis_hint": "GPU runtime/compilerのpersistent megakernelとdynamic schedulingへ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T1919JST-discovery-specialist-collective-agent-kv-6.json"
-    },
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-gpu-megakernel-7",
-      "axis": "GPU runtime/compiler・persistent dynamic megakernel",
-      "query_summary": "CPU control-plane削減からGPU runtime/compilerへ展開し、kernel launch overhead、persistent kernel、dynamic shape/data dependencyを扱う新しいmegakernel abstractionを探索した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.07609"
-      ],
-      "next_axis_hint": "network/DPU側のKV transferとRDMA congestion-aware schedulingへ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T1921JST-discovery-specialist-gpu-megakernel-7.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-network-routing-8",
@@ -8067,6 +8033,48 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-backward-09",
+      "axis": "repository structured backward references batch 2",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-forward-deepspeedmoe-10",
+      "axis": "forward citations of DeepSpeed-MoE large-scale MoE inference",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2201.05596/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json"
     }
   ],
   "axes": {
@@ -15809,6 +15817,32 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 3,
       "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "repository structured backward references batch 2": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward citations of DeepSpeed-MoE large-scale MoE inference": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null

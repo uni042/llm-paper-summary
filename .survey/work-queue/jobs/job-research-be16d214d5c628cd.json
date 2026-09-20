@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-be16d214d5c628cd",
+  "type": "research",
+  "parent_job_id": "job-12568c96b9a4cf81",
+  "priority": 99,
+  "canonical_id": "arXiv:2608.04502",
+  "arxiv_id": "2608.04502",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+  "source_url": "https://www.semanticscholar.org/paper/7abcf6581731dc0e18b15305095ec0619756835d",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md",
+  "selection_reason": "MoEのAttention-FFN disaggregationとcollocated配置を同一budget/SLO下で分析的にprovisionし、deployment評価を68.8–83.5%削減しつつglobal optimumを回収。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:15:20+00:00"
+}

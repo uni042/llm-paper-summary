@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:16:38 JST**
+> 自動生成: **2026-09-21 07:16:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **331** |
-| 未claim Research job | **331** |
+| 収録候補論文 | **335** |
+| 未claim Research job | **335** |
 | 直近24hの検証済みResearch収録 | **74** |
 | 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間28分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **331** |
+| canonical_id確認済みの一意な候補論文 | **335** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **331** |
+| 非終端Research job合計 | **335** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **50** | **16** | **8** | **3** | **0** | **0** | **55** |
-| 合計 | **50** | **22** | **12** | **3** | **0** | **0** | **55** |
+| Discovery | **52** | **16** | **10** | **1** | **0** | **0** | **55** |
+| 合計 | **52** | **22** | **14** | **1** | **0** | **0** | **55** |
 
 - 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -103,14 +103,14 @@
   - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json`
   - 探索軸: forward citations of SmoothQuant efficient LLM inference quantization
-- **09-21 06:11:09 JST** job `job-435d396a91e7c8ca` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json`
-  - 探索軸: forward citations of DeepSpeed-MoE inference system
-- **09-21 06:22:45 JST** job `job-fed66daa02b16496` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260921T0619JST-hourly00-discovery-backward-required.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0619JST-hourly00-discovery-backward-required.json`
-  - 探索軸: repository-wide structured references for LLM inference systems
+- **09-21 07:15:12 JST** job `job-7330f8a70eb3403a` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0712JST-hourly00-discovery-backward-09.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json`
+  - 探索軸: repository structured backward references batch 2
+- **09-21 07:15:20 JST** job `job-12568c96b9a4cf81` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json`
+  - 探索軸: forward citations of DeepSpeed-MoE large-scale MoE inference
 
 ### 直近タスク
 
@@ -152,7 +152,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **8件** / 候補: **55件**
+- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **6件** / 候補: **55件**
 - 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of DistServe disaggregated prefill-decode LLM serving / repository structured backward references batch 2 / forward citations of DeepSpeed-MoE large-scale MoE inference / forward citations of H2O KV cache eviction and efficient inference
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
@@ -220,7 +220,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **331** |
+| ready | **335** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **929** |
+| 成功result未照合のimmutable submission | **927** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **215** |
+| └ Discovery | **213** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job

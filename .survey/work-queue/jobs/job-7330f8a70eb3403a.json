@@ -1,0 +1,23 @@
+{
+  "job_id": "job-7330f8a70eb3403a",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-20T22:15:04+00:00",
+  "completed_at": "2026-09-20T22:15:12+00:00",
+  "result_summary": {
+    "submitted_candidates": 0,
+    "final_duplicate_filtered_count": 0,
+    "research_jobs_added": 0,
+    "precheck_request_id": "20260921T0711JST-hourly00-backward-09",
+    "precheck_snapshot_source_commit": "d080b410fcaeb33dbb8e11eeec66238fb83958c3"
+  }
+}
