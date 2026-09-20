@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-6ec912c7d04e74dfb5926917",
+  "attempt_id": "attempt-37851a31293499313033e7f8",
   "job_id": "job-research-b27d4d0f59f887b3",
   "data": {
     "hardware": "主サービング評価はHy3-295B-A21BをTP=8で8×NVIDIA H20上に配置。D-cut本番トラフィック再生は同構成で並行度2〜64。モジュール性能分析も単一ノード8×H20（各96GB）で実施し、60秒warm-up後4秒をNsight Systemsでprofileする。",
@@ -51,7 +51,7 @@
     "scope": "大規模MoEターゲットとH20中心の実機評価であり、Hy3系列に対する結果が中心。DFlyは特にコード・数学の構造化出力を狙い、会話ではMTPが優位な条件がある。D-cutはHunyuan本番traffic再生で評価されるが、異なるGPU・モデル・parallelismではcost profileの再取得が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-6ec912c7d04e74dfb5926917",
+    "claim_id": "claim-37851a31293499313033e7f8",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

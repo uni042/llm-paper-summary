@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6ec912c7d04e74dfb5926917",
+  "attempt_id": "attempt-37851a31293499313033e7f8",
   "job_id": "job-research-b27d4d0f59f887b3",
   "data": {
     "overview": "MTPではTraining-Time Testとtarget rolloutにより深いdraft位置の受理率が大きく改善し、DFlyではhybrid target conditioning、hidden correction、コード・数学データ強化が段階的に受理長を伸ばす。Hy3-A21BではDFlyの平均受理長がMTP 3.00、DFlash 3.69に対して4.79となり、並行度4〜64の全点で最高平均スループットを達成した。高負荷本番trafficではD-cutが受理長をほぼ維持しつつ検証slotを削り、DFlyが飽和する並行度48超でもスループットを伸ばした。",
@@ -62,7 +62,7 @@
     "quality_impact": "rejection-sampling型の推測検証によりターゲット分布を保持する設計で、モデル品質を近似的に落として速度を得る方式ではない。"
   },
   "reservation": {
-    "claim_id": "claim-6ec912c7d04e74dfb5926917",
+    "claim_id": "claim-37851a31293499313033e7f8",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
