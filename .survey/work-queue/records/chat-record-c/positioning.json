@@ -2,50 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-82f210d05fe49128bf6c17e8",
-  "job_id": "job-research-27175547de1e3880",
-  "data": {
-    "positioning": "Triton-distributedはLLMサービングの要求スケジューラではなく、分散推論・学習を構成する通信計算カーネルをPythonから生成するコンパイラ基盤である。FLUXやCOMETのような高度に手調整された重ね合わせ方式が示した性能機構を、OpenSHMEM互換プリミティブとTritonのコード生成へ取り込み、NVIDIA/AMDをまたぐ再利用可能なプログラミングモデルへ一般化する。",
-    "differences": "既存Tritonが単一GPUの計算カーネルを主対象とするのに対し、遠隔メモリアクセス、信号同期、ノード間通信をコンパイラの第一級要素へ追加する。NCCL/RCCLの集団通信を計算の前後に呼ぶ方式と異なり、タイル単位のデータ依存を明示して通信途中から計算を開始する。FLUXのような専用CUDA/CUTLASS融合実装に対しては、より高水準なPython記述と複数ハードウェア対応を優先しつつ近い性能を狙う。",
-    "relation_to_prior_work": [
-      {
-        "work": "Triton",
-        "difference": "単一デバイス中心のTritonへOpenSHMEM互換通信と分散同期を追加し、分散カーネルを同じPythonモデルで記述する。"
-      },
-      {
-        "work": "FLUX",
-        "difference": "CUDA/CUTLASSを用いた専用の通信計算融合に対し、Tritonカーネルへ少数の通信・同期プリミティブを加える再利用可能なコンパイラ経路を提供する。"
-      },
-      {
-        "work": "NCCL / RCCL",
-        "difference": "集団通信を独立操作として待つのではなく、一方向通信と信号を使いタイル単位で計算と重ね合わせる。"
-      },
-      {
-        "work": "DeepEP",
-        "difference": "MoE向け手書きCUDA通信ライブラリに対し、数百行規模のPythonカーネルでAllToAllを表現する。ただし128 GPUではIBGDA非対応によりDeepEPが優位。"
-      }
-    ],
-    "strengths": [
-      "計算と通信を同じPythonレベルで記述でき、CUDA/C++とPythonの二重実装負担を減らす。",
-      "NVIDIAとAMDの双方で同じ抽象化を実証する。",
-      "ノード内・ノード間、GEMM、MoE、FlashDecode、AllToAllまで幅広い通信形態を扱う。",
-      "タイル順序、通信プロトコル、資源分割、自動調整を一つのコンパイラ基盤へまとめる。",
-      "最大64 GPUの実機評価と公開実装がある。"
-    ],
-    "limitations": [
-      "評価の中心はカーネル単位で、エンドツーエンドのLLMサービング性能やスケジューリングとの相互作用は直接評価していない。",
-      "MoE+ReduceScatterは2ノードで弱スケーリングが悪く、専用通信カーネルが必要。",
-      "AllToAllはIBRCを使い、IBGDAを使うDeepEPに128 GPUで劣る。",
-      "性能はハードウェアトポロジと手法ごとのタイル・資源設定に依存し、自動化されても分散同期の設計知識は必要。",
-      "低遅延通信で大きなバッファを確保してメモリ管理を簡略化する箇所があり、DeepEPよりメモリ消費が増える。"
-    ],
-    "implementation_status": "ByteDance SeedがTriton-distributedをGitHub公開している。Triton拡張、NVSHMEM/ROCSHMEM連携、NVIDIA PTXとAMDGCN生成を実装し、論文の複数カーネルを実機評価している。",
-    "research_positioning": "LLM時代の分散コンパイラ研究として、通信を外部ライブラリ呼び出しではなくコンパイラが扱うデータ依存・資源割当へ取り込み、手書き通信計算融合の知見を高水準言語へ移す研究である。",
-    "repository_fit": "推論基盤のカーネル・実行時コンパイル系統に直接適合する。特にMoE通信、分散長文デコード、通信計算重ね合わせを同じコンパイラ抽象化で扱うため、推論フレームワーク下層の通信カーネル設計を比較する基準になる。"
-  },
+  "attempt_id": "attempt-bbc6c14d4fcb44b8a7c50e4e",
+  "job_id": "job-research-0ad72717e3fdb154",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-82f210d05fe49128bf6c17e8",
-    "worker_id": "scheduled-chat-discovery",
+    "claim_id": "claim-bbc6c14d4fcb44b8a7c50e4e",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
