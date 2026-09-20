@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:02:11 JST**
+> 自動生成: **2026-09-20 18:02:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -166,9 +166,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 17:59:50 JST** / heartbeat: **—** / lease expiry: **09-20 19:29:50 JST**
-  - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
+- `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:02:17 JST** / heartbeat: **—** / lease expiry: **09-20 19:32:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ab19fa17920fb404.json`
 
 #### Audit
 
