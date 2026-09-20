@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:56:20 JST**
+> 自動生成: **2026-09-21 05:57:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **38** | **10** | **10** | **0** | **0** | **0** | **22** |
-| 合計 | **38** | **16** | **14** | **0** | **0** | **0** | **22** |
+| Discovery | **38** | **12** | **10** | **2** | **0** | **0** | **30** |
+| 合計 | **38** | **18** | **14** | **2** | **0** | **0** | **30** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **0件** / 候補: **22件**
-- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems / forward citations of FlexGen for hierarchical-memory inference systems / forward citations of Splitwise for disaggregated LLM serving
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **2件** / 候補: **30件**
+- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems / forward citations of FlexGen for hierarchical-memory inference systems / forward citations of Splitwise for disaggregated LLM serving / forward citations of Mooncake for KV-centric disaggregated serving / forward citations of MoE-Lightning for offloaded MoE inference
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
   - 探索軸: backward structured references across repository
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **909** |
+| 成功result未照合のimmutable submission | **911** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **195** |
+| └ Discovery | **197** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
