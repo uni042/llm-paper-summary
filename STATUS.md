@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 17:43:12 JST**
+> 自動生成: **2026-09-20 17:43:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **3** | **2** | **0** | **2** | **0** | — |
+| Research | **39** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **39** | **4** | **3** | **0** | **2** | **0** | **5** |
+| 合計 | **39** | **3** | **3** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,9 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-1183d9b80698481178086936.json` (job `job-research-e2f947500152f11f`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-1183d9b80698481178086936.json` (`ok=false`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling
   - job: `.survey/work-queue/jobs/job-research-76aff8aad6f29ebc.json`
   - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
@@ -163,7 +161,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 17:41:47 JST** / heartbeat: **—** / lease expiry: **09-20 19:11:47 JST**
+  - claim: **09-20 17:43:33 JST** / heartbeat: **—** / lease expiry: **09-20 19:13:33 JST**
   - evidence: `.survey/work-queue/claims/job-research-e2f947500152f11f.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
