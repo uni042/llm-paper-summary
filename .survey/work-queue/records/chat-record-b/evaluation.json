@@ -1,3 +1,42 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-95a787743074667431de8920","job_id":"job-research-e0a5ea7f3cdd2886","data":{"hardware":"GPU 8基の単一サーバ。各GPUは96GB HBMを持ち、GPU間は400GB/s超の高速専用接続。ホストは44コアIntel CPU 2基とDDR5 2TB。","software":"SGLangを基盤にSem-MoEを約5000行のPythonと複数のTriton通信カーネルで実装し、全対全通信にはDeepEPも統合する。","methodology":"Qwen3-30B-A3BとDeepSeek-V2-Liteを主対象とし、MMLU、lmsys-chat-1m、ShareGPT-Vicuna-unfilteredのプロンプトを使う。各データ集合の20%で活性化予測と専門家配置表を作り、残り80%から評価要求を採る。要求率を10〜175 req/sで変え、データ並列注意では初回トークン遅延と終端間遅延を最軽負荷時の5倍以内とするSLO下の最大スループットを測る。テンソル並列注意では要求率1 req/sで入力長256、512、1024を比較する。局所活性化率、専門家層遅延、負荷不均衡率、予測精度も分解評価する。","datasets":["MMLU","lmsys-chat-1m","ShareGPT-Vicuna-unfiltered"],"models":["DeepSeek-V2-Lite","Qwen3-30B-A3B","Moonlight-16B"],"baselines":["SGLang with DeepEP","MoETuner","vanilla expert placement"],"metrics":["throughput","TTFT","end-to-end latency","local activation rate","expert-layer latency","load imbalance rate","routing prediction F1"],"scope":"高速相互接続を持つ8GPU単一サーバが中心で、データ並列注意とテンソル並列注意の双方を評価する。主結果はDeepSeek-V2-LiteとQwen3-30B-A3Bで、付録にMoonlight-16Bを追加する。"},"reservation":{"claim_id":"claim-95a787743074667431de8920","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-22c6cd91832db65b7ee858af",
+  "job_id": "job-research-e0a5ea7f3cdd2886",
+  "data": {
+    "hardware": "GPU 8基の単一サーバ。各GPUは96GB HBMを持ち、GPU間は400GB/s超の高速専用接続。ホストは44コアIntel CPU 2基とDDR5 2TB。",
+    "software": "SGLangを基盤にSem-MoEを約5000行のPythonと複数のTriton通信カーネルで実装し、全対全通信にはDeepEPも統合する。",
+    "methodology": "Qwen3-30B-A3BとDeepSeek-V2-Liteを主対象とし、MMLU、lmsys-chat-1m、ShareGPT-Vicuna-unfilteredのプロンプトを使う。各データ集合の20%で活性化予測と専門家配置表を作り、残り80%から評価要求を採る。要求率を10〜175 req/sで変え、データ並列注意では初回トークン遅延と終端間遅延を最軽負荷時の5倍以内とするSLO下の最大スループットを測る。テンソル並列注意では要求率1 req/sで入力長256、512、1024を比較する。局所活性化率、専門家層遅延、負荷不均衡率、予測精度も分解評価する。",
+    "datasets": [
+      "MMLU",
+      "lmsys-chat-1m",
+      "ShareGPT-Vicuna-unfiltered"
+    ],
+    "models": [
+      "DeepSeek-V2-Lite",
+      "Qwen3-30B-A3B",
+      "Moonlight-16B"
+    ],
+    "baselines": [
+      "SGLang with DeepEP",
+      "MoETuner",
+      "vanilla expert placement"
+    ],
+    "metrics": [
+      "throughput",
+      "TTFT",
+      "end-to-end latency",
+      "local activation rate",
+      "expert-layer latency",
+      "load imbalance rate",
+      "routing prediction F1"
+    ],
+    "scope": "高速相互接続を持つ8GPU単一サーバが中心で、データ並列注意とテンソル並列注意の双方を評価する。主結果はDeepSeek-V2-LiteとQwen3-30B-A3Bで、付録にMoonlight-16Bを追加する。"
+  },
+  "reservation": {
+    "claim_id": "claim-22c6cd91832db65b7ee858af",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
