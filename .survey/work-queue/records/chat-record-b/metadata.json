@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d6d0f050a2bc6af8b178330b",
-  "job_id": "job-research-d5278ec0af97bd4e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d6d0f050a2bc6af8b178330b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d6d0f050a2bc6af8b178330b","job_id":"job-research-d5278ec0af97bd4e","data":{"canonical_id":"arXiv:2110.02861","arxiv_id":"2110.02861","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"8-bit Optimizers via Block-wise Quantization","summary":"Adamなどの状態付き最適化器が保持する32ビット統計は学習メモリの33〜75%を占め得る。本研究は状態を2048要素の小ブロックごとに正規化し、外れ値の影響を局所化して8ビット動的量子化する。更新時だけレジスタ内で32ビットへ復号し、更新後に再量子化する。言語モデルでは不安定な埋め込み層だけ32ビット状態と層正規化を残す。1.5B言語モデルを含む多様な課題で32ビット最適化器と同等性能を保ち、最大8.5GBのGPUメモリを削減する。","list_summary":"最適化器状態を小ブロック単位の非線形8ビット量子化で圧縮し、外れ値を局所化して32ビット相当の学習安定性を保ちながら訓練メモリを削減する方式。","authors":["Tim Dettmers","Mike Lewis","Sam Shleifer","Luke Zettlemoyer"],"authors_affiliations":"Facebook AI Research; University of Washington","published":"2022-04-25","publication":"ICLR 2022","publication_type":"Conference paper","publication_status":"Published","lineage":"training memory / optimizer-state quantization / low precision training","topics":["最適化器状態","8ビット量子化","学習メモリ","Adam","ブロック量子化"],"importance":"Adam状態を1パラメータ8バイトから2バイトへ圧縮し、大規模学習でモデルやバッチへ使えるGPUメモリを増やす。","hardware_evaluation":"主要ベンチマークはV100、RoBERTa/GPT系事前学習はA100。独自CUDAカーネルとPyTorch実装を評価。","quality_effect":"1.5B言語モデル、GLUE、ImageNet、翻訳、MoCo、RoBERTaで32ビット最適化器と同等の指標を維持。大規模言語モデルでは安定埋め込み層が重要。","source":"https://arxiv.org/abs/2110.02861","sources":["https://arxiv.org/abs/2110.02861","https://arxiv.org/pdf/2110.02861"],"code":"https://github.com/facebookresearch/bitsandbytes","implementation":"CUDAカーネルとPyTorchのドロップイン実装。状態をブロックごとに8ビット保存し、更新時はレジスタで復号・32ビット演算・再量子化する。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-d6d0f050a2bc6af8b178330b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
