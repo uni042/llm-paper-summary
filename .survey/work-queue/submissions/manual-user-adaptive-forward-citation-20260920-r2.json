@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-citation-latest-2",
+    "summary": "Adaptive Expert Computation / Compression 配下の別seed論文についても被引用側を確認し、追加で直接性の高い最新候補を登録する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.06076",
+      "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+      "source_url": "https://arxiv.org/abs/2609.06076",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
+      "priority": 98,
+      "reason": "pruning/merging後のcompressed MoEを最終成果物ではなく小規模post-compression adjustmentの初期値として捉え直す実証研究。2つのMoE LLM、4圧縮法、3 retention ratio、28 benchmarkで比較し、3000 C4例・1 epochのFull FTで性能gapを平均37.3%回復しており、圧縮後の実用trade-offを直接補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.24938",
+      "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.24938",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md",
+      "priority": 98,
+      "reason": "ExFoldはprefillとdecodeを共通のbudgeted output-approximationとして扱い、除外expertの寄与をretained expertへfoldするtraining-free手法。vLLM pluginとCUDA kernelで最大1.41x TTFT、2.45x TPOT、平均品質約99%維持を報告し、expert削減とserving実測を直接結ぶ。"
+    },
+    {
+      "canonical_id": "arXiv:2608.07890",
+      "title": "Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2608.07890",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.07890-router-sensitivity-prunable-experts.md",
+      "priority": 97,
+      "reason": "router-only lightweight adaptationで生じるrouter norm変化をexpert重要度としてone-shot pruningに使う。Mixtralでexpert半減時にmemory 49%減・per-token latency 37%減を報告し、理論的pruning signalを低コスト適応で実用化する点がCompression系統に有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.07814",
+      "title": "Shape Mutating Expert Compression:LorExperts and BTExperts",
+      "source_url": "https://arxiv.org/abs/2608.07814",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md",
+      "priority": 97,
+      "reason": "LorExpertsはexpert co-activation communityごとにdominant expertを残し他expertをlow-rank correction化してrouterを維持する圧縮法。Qwen3-30B-A3B/Gemma-4-26B-A4Bの約50% expert compressionで既存法より良好な品質保持を報告し、BTExpertsは共有計算のamortizationまで扱う。"
+    },
+    {
+      "canonical_id": "arXiv:2605.14438",
+      "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+      "source_url": "https://arxiv.org/abs/2605.14438",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md",
+      "priority": 96,
+      "reason": "BEAMはfixed Top-Kをtoken-adaptive binary maskへ置き換えるdynamic routing手法で、custom CUDA kernelをvLLMへ統合。元性能98%以上を保ちつつMoE layer FLOPs最大85%削減、decode最大2.5x、throughput最大1.4xを報告しておりAdaptive Expert Computationに直接対応する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-merge-compress",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-merge-compress.json",
+    "receipt": "sha256:b625c9595029007fb123f307419f39ca6e7431f522462fa2fa8f964862f60877"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+    "round": "adaptive-forward-citation-seed-2310.01334-r2",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334",
+    "query_summary": "Merge Then Compress (arXiv:2310.01334) の Semantic Scholar citations 固定ソースをschema v3 precheckで走査。raw 100件から未収録50件を得て、新着かつAdaptive Expert Computation / Compressionへの直接性が高い5件を追加選定した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "XMoE/AdaMoE/ExpertFlowのforward citation結果も確認し、今回2 submissionと重複しない強候補だけ追加する。",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "Adaptive Expert Computation / Compression lineage forward citations",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2310.01334",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 100,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 14,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 15,
+        "candidate_accepted_count": 5,
+        "position": "1 page"
+      }
+    ]
+  }
+}
