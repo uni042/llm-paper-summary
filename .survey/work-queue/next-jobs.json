@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 112,
-    "actively_claimed": 1,
-    "claimable": 111
+    "actively_claimed": 2,
+    "claimable": 110
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-18c89b68d0c6c10d",
-      "type": "research",
-      "lane": null,
-      "priority": 95,
-      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.494",
-      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
-      "source_url": "https://aclanthology.org/2026.findings-acl.494/",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-264bf27e36d7341a",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-7441b15a7ee76c92",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2410.13276",
+      "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
+      "source_url": "https://arxiv.org/abs/2410.13276",
+      "paper_path": "papers/inference/10-sparse-attention/2024-2410.13276-seerattention.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T06:37:50+00:00"
+  "generated_at": "2026-09-20T06:40:13+00:00"
 }
