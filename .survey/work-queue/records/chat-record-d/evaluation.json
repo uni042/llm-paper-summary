@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
-  "job_id": "job-research-51de804389577a72",
-  "data": {
-    "hardware": "主要な遅延測定は単一NVIDIA A100 GPU、bfloat16で実施する。100万トークン条件では8B級モデルのプリフィルを測り、補足として8台A100でテンソル並列と文脈並列を併用した構成も報告する。カーネル単体ではA字型、垂直斜線型、ブロック疎型、FlashAttention-2の遅延とインデックス構築時間を文脈長ごとに分解する。",
-    "software": "PyTorch上の独自実装を用い、密注意の基盤にFlashAttention、疎カーネル記述にTriton、垂直列の疎処理にPITを利用する。全実験は貪欲デコードを用い、比較方式もプリフィルだけ疎化しデコードは密計算とする。",
-    "methodology": "長文脈能力はInfiniteBench、RULER、Needle In A Haystack、PG-19で評価する。モデルはLLaMA-3-8B-Instructの262K/1M版、GLM-4-9B-1M、Yi-9B-200Kを中心に、針探索ではPhi-3-Mini-128KとQwen2-7B-128Kも含む。比較対象はStreamingLLM、その拡張窓版、InfLLM、静的インデックス版など。InfiniteBenchは平均約214Kトークンで、検索、質問応答、コード、対話、要約を含む。RULERでは複数長の複合検索・集約能力、PG-19では最大100Kの言語モデル困惑度を測る。さらに各パターンを除いた除去実験で動的インデックスと三形状の寄与を分離する。",
-    "scope": "実機GPU上のシステム評価であり、主要な速度主張はA100上のプリフィルに限定される。方式は学習不要で複数の長文脈モデルへ適用されるが、デコード自体の高速化を主張するものではない。H100やMI300Xへの移植可能性はTriton実装に基づく見通しで、論文の中心的な速度値はA100実測として解釈する必要がある。",
-    "baselines": ["FlashAttention-2", "StreamingLLM", "StreamingLLM with dilated window", "StreamingLLM with strided window", "InfLLM", "MInference with static indices"],
-    "datasets": ["InfiniteBench", "RULER", "Needle In A Haystack", "PG-19"],
-    "models": ["LLaMA-3-8B-Instruct-262K", "LLaMA-3-8B-Instruct-1M", "GLM-4-9B-1M", "Yi-9B-200K", "Phi-3-Mini-128K", "Qwen2-7B-128K", "LLaMA-3-70B-Instruct-262K"]
-  },
-  "reservation": {"claim_id": "claim-0ab84ae32ed1ca16a3e50130", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-6246bd4f8827dbfcc3bc3a62",
+  "job_id": "job-research-be4feb2ff4a84f5b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6246bd4f8827dbfcc3bc3a62",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
-  "job_id": "job-research-51de804389577a72",
-  "data": {
-    "limitations": "主要な高速化対象はプリフィルの注意計算であり、デコード段階そのものの計算・KVキャッシュ帯域を直接減らす方式ではない。各ヘッドの形状選択は代表入力を使った事前探索に依存し、モデルや注意特性が大きく変われば設定を再探索する必要がある。動的疎化は近似なので、入力ごとの重要位置推定が外れたり疎度を強めすぎたりすると品質が低下する。短い文脈では密カーネル自体が十分速く、インデックス構築費の相対比が大きいため利得が小さい。主要速度評価はA100中心であり、他GPUへの移植可能性は示されるものの同じ倍率を全ハードウェアへ一般化できない。",
-    "differences": "StreamingLLMのような固定の冒頭トークン＋局所窓だけを使う方式と異なり、MInferenceはヘッドごとの形状は固定しても、垂直線やブロックの具体的位置を入力ごとに更新する。InfLLMのように外部記憶から関連部分を検索する方式とも異なり、Transformer内部の注意計算そのものを疎カーネルへ置き換える。状態空間モデルや線形注意のような学習時の構造変更を必要とせず、既存の学習済み長文脈LLMへ後付けできる点がシステム上の差である。またSnapKVのようなデコード時KVキャッシュ圧縮とは対象段階が異なり、論文では両者を併用できることも確認している。",
-    "implementation_status": "公式のMicrosoft実装が公開され、PyTorch、Triton、FlashAttention、PITを使う参照実装が利用可能である。後続の公式リポジトリ更新ではSGLangおよびvLLMへの疎注意カーネル統合も案内されており、研究用試作に留まらず実装系へ展開されている。論文版はNeurIPS 2024 Spotlightとして公開済み。",
-    "research_positioning": "長文脈推論の高速化を、KVキャッシュの保存量削減ではなくプリフィル注意の演算量削減から攻める系統に位置する。特に『入力ごとに変わる疎性』と『ヘッドごとには安定する空間形状』を分離し、前者だけをオンライン推定する設計は、完全固定疎注意と高コストな細粒度動的疎注意の中間を埋める。GPUカーネル実装を探索目的関数へ組み込んだ点も、理論演算量だけでなく実測速度を重視する推論システム研究として重要である。長文脈プリフィル、疎注意カーネル、KV圧縮の組合せを考える際の基準点になる。"
-  },
-  "reservation": {"claim_id": "claim-0ab84ae32ed1ca16a3e50130", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-6246bd4f8827dbfcc3bc3a62",
+  "job_id": "job-research-be4feb2ff4a84f5b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6246bd4f8827dbfcc3bc3a62",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

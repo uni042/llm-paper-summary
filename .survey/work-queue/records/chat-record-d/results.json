@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
-  "job_id": "job-research-51de804389577a72",
-  "data": {
-    "overview": "MInferenceの利得は文脈が長いほど大きく、単一A100では100K、300K、500K、1Mトークンでそれぞれ1.8倍、4.1倍、6.8倍、10倍のプリフィル高速化を報告する。100万トークンでは約30分を3分へ短縮した。一方で品質は単なる固定窓より安定しており、検索位置が入力ごとに変わる課題でも動的インデックスが重要情報を追従する。カーネル単体ではブロック疎型が最大30倍、垂直斜線型でも13倍の高速化を示すが、オンラインのインデックス構築が一定割合を占めるため、短い文脈では密計算との差が小さい。",
-    "key_results": [
-      {"metric": "プリフィル高速化倍率", "value": "10×", "baseline": "FlashAttention-2による密注意", "condition": "1Mトークン、単一A100", "interpretation": "二乗注意の大部分を疎カーネルで省き、プリフィル時間を約30分から3分へ短縮した。"},
-      {"metric": "文脈長別プリフィル高速化倍率", "value": "1.8× / 4.1× / 6.8× / 10×", "baseline": "FlashAttention-2", "condition": "100K / 300K / 500K / 1Mトークン、単一A100", "interpretation": "文脈が長くなるほど実カーネル内の疎性が増えるため、疎インデックス構築費を上回る利得が拡大する。"},
-      {"metric": "RULER平均性能", "value": "89.6", "baseline": "StreamingLLM 59.3、InfLLM 72.9", "condition": "GLM-4-9B-1M、64KまでのRULER表", "interpretation": "固定局所窓や外部記憶型より複合的な長文脈能力を保ち、性能85%以上という有効文脈基準を64Kまで維持した。"},
-      {"metric": "PG-19困惑度差", "value": "密注意より+0.2", "baseline": "FlashAttention-2による密注意", "condition": "100Kトークンの長文脈言語モデル評価", "interpretation": "近似疎注意による品質損失は小さく、StreamingLLMより良い困惑度を維持した。"},
-      {"metric": "垂直斜線型除去実験の平均値", "value": "38.8 → 35.9（斜線主体） / 18.6（垂直主体）", "baseline": "完全なMInference", "condition": "LLaMA-3-8B-Instruct-262K、InfiniteBench", "interpretation": "斜線成分が広い能力を支え、垂直成分もKV検索のような入力依存検索で追加の性能を担うことを示す。"}
-    ],
-    "negative_results": "短文脈では疎カーネルと密カーネルの差が小さく、10Kトークンでは各カーネルが1ms未満で近い。動的インデックス構築は垂直斜線型で総時間の約5〜15%、ブロック疎型で約25%を占め、後者では平均化とブロック行列積が追加費用になる。静的インデックスへ置き換えるとKV検索の正解率がほぼゼロまで落ちる条件があり、三種類のうち一種類だけへ統一しても性能が低下する。したがって、短い入力や動的意味関連が弱い課題では複雑な疎化の費用対効果が小さく、パターン推定を誤ると品質損失が生じる。",
-    "interpretation": "高速化が長文脈ほど増えるのは、密注意が系列長の二乗で増える一方、選択する疎領域の割合が文脈長とともに小さくなり、200K超では実カーネルの疎性が90%を超えるためである。固定窓方式より品質が高いのは、ヘッドごとの大まかな空間形状だけを事前固定し、具体的な重要列やブロックは入力ごとに再推定するためである。特にKV検索では任意のキーが検索対象になりうるため固定マスクが外れやすく、動的成分の寄与が大きい。",
-    "quality_impact": "厳密な無損失方式ではなく注意要素を近似的に削るため、密注意との差が生じうる。ただし評価ではInfiniteBenchの多くの課題、RULER、Needle In A Haystack、PG-19で密注意に近い品質を維持し、一部では密注意を上回る値も観測される。これは疎化そのものが品質向上を保証する意味ではなく、評価変動や不要注意の除去も含みうるため、主張は『大幅な速度改善に対して品質低下が小さい』と解釈するのが妥当である。"
-  },
-  "reservation": {"claim_id": "claim-0ab84ae32ed1ca16a3e50130", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-6246bd4f8827dbfcc3bc3a62",
+  "job_id": "job-research-be4feb2ff4a84f5b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6246bd4f8827dbfcc3bc3a62",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
