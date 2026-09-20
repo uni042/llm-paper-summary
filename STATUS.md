@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:06:49 JST**
+> 自動生成: **2026-09-20 22:06:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **213** |
+| 収録候補論文 | **212** |
 | 未claim Research job | **212** |
-| 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-20 22:01:31 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **88** |
+| 最終検証済みResearch収録 | **09-20 22:06:53 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **213** |
+| canonical_id確認済みの一意な候補論文 | **212** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **213** |
+| 非終端Research job合計 | **212** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **30** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **31** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **30** | **4** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **31** | **4** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 22:06:53 JST** [research] `arXiv:2607.06601` — TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation
+  - job: `.survey/work-queue/jobs/job-research-0f282c93dba72c85.json`
+  - result: `.survey/work-queue/results/research/attempt-f7ba62a568920d99b231d2ff.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f7ba62a568920d99b231d2ff.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md`
 - **09-20 22:01:31 JST** [research] `arXiv:2605.30876` — dMoE: dLLMs with Learnable Block Experts
   - job: `.survey/work-queue/jobs/job-research-d4631c2cf9f2d1d7.json`
   - result: `.survey/work-queue/results/research/attempt-7d70a7f1bc8e9a1e1635f401.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-1487e2feb0d7ced553b8414c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1487e2feb0d7ced553b8414c.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md`
-- **09-20 20:08:22 JST** [research] `arXiv:2608.10392` — Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation
-  - job: `.survey/work-queue/jobs/job-research-08b5458cb63307f5.json`
-  - result: `.survey/work-queue/results/research/attempt-ae173bcae95c3292b53fd3a9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ae173bcae95c3292b53fd3a9.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.10392-share-first-route-what-remains.md`
 
 ### Audit
 
@@ -164,10 +164,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.06601` — TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 22:05:38 JST** / heartbeat: **—** / lease expiry: **09-20 23:35:38 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0f282c93dba72c85.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -187,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **213** |
+| ready | **212** |
 
 ### 候補の重複・識別情報欠損
 
@@ -207,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **857** |
+| inference/training/survey配下の論文Markdown実体 | **858** |
 
 ### immutable submissionの未照合
 
@@ -215,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **846** |
-| └ Research | **596** |
+| 成功result未照合のimmutable submission | **845** |
+| └ Research | **595** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **103** |

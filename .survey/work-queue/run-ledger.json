@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T13:01:37.810407+00:00",
+  "updated_at": "2026-09-20T13:06:57.799001+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T13:01:37.810407+00:00",
+      "last_recorded_at": "2026-09-20T13:06:57.799001+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 387,
+        "research_completed": 388,
         "audit_completed": 0,
         "discovery_completed": 218,
         "blocked": 56,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35491246007:1",
-          "recorded_at": "2026-09-20T05:16:36.743653+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35491246007",
-            "run_attempt": "1",
-            "source_sha": "8ac424c5397c4b7a6052edd6bef2c90b222913c5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35492237826:1",
           "recorded_at": "2026-09-20T05:40:11.630423+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35512280658",
             "run_attempt": "1",
             "source_sha": "28ac34695821e1fc7d311577a5a23d42e160cbc9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35512543360:1",
+          "recorded_at": "2026-09-20T13:06:57.799001+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35512543360",
+            "run_attempt": "1",
+            "source_sha": "9aceb722d2ce2b7340f4d337d017de8250ee4b64"
           },
           "signals": [
             "research_completed"
@@ -24883,6 +24883,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.30876",
           "title": "dMoE: dLLMs with Learnable Block Experts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0f282c93dba72c85",
+          "type": "research",
+          "canonical_id": "arXiv:2607.06601",
+          "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
           "from": "ready",
           "to": "completed"
         }
