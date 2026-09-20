@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-384c21db2f0f88434c7e5ef8",
-  "job_id": "job-research-8b52cc53189781e3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-384c21db2f0f88434c7e5ef8",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-384c21db2f0f88434c7e5ef8","job_id":"job-research-8b52cc53189781e3","data":{"limitations":"2ビットの有効性は注意方式に依存し、MQAのFalcon-7Bでは元々KVが小さく2ビット化の精度損失が大きいため4ビットが推奨される。直近残差窓と量子化スケール/ゼロ点のメタデータがあるため理論上の8倍圧縮がそのまま総メモリ削減にはならない。難しい算術推論ではGSM8Kのように低下が残り、グループサイズを大きくしすぎると誤差が増える。効率評価は単一A100と特定ワークロード中心で、量子化カーネル自体のオーバーヘッドも完全には消えていない。","differences":"FlexGen等の4ビットKV量子化がキーと値へ同じグループ方式を適用するのに対し、KIVIは分布と注意誤差を分析してキーをチャネル単位、値をトークン単位に分け、2ビットまで下げる。SmoothQuantは重み・活性値の変換で8ビット化を容易にするが4ビット以下では精度が落ちやすい。KVQuantは同時期にキーのチャネル外れ値へ着目した並行研究である。H2OやStreamingLLMなどの削除方式と異なりKIVIは全トークンを保持して精度だけを落とし、PagedAttentionやオフロードなどのメモリ管理方式とは直交するため併用できる。","implementation_status":"公開コードがあり、Hugging Face Transformers上でLlama/Falcon/Mistral系へ適用できる。CUDAの混合精度行列積とTriton量子化カーネルを含み、単なる模擬量子化だけでなくA100上のピークメモリ・スループットを実測している。重み専用量子化との併用も設計上可能である。","research_positioning":"KVキャッシュ圧縮系統で、後学習型の極低ビット量子化を実際の推論速度へ結び付けた代表的手法に位置付く。特にキーと値で量子化軸を変える非対称設計と、高精度の直近残差窓は後続KV量子化の比較基準になる。オフロード・ページング・トークン削除がKVの配置や保持数を減らすのに対し、KIVIは1要素当たりのバイト数を減らすため、階層メモリやPagedAttentionと組み合わせて容量・帯域の両方を削る余地がある。"},"reservation":{"claim_id":"claim-384c21db2f0f88434c7e5ef8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
