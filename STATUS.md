@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:03:16 JST**
+> 自動生成: **2026-09-20 12:03:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **82** |
 | 未claim Research job | **81** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-20 11:55:25 JST（7分前）** |
+| 最終検証済みResearch収録 | **09-20 11:55:25 JST（8分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **5** | **4** | **0** | **1** | **1** | — |
+| Research | **12** | **5** | **4** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **12** | **6** | **5** | **0** | **1** | **1** | **5** |
+| 合計 | **12** | **6** | **5** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -123,8 +123,7 @@
   - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
   - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-31c2c5e14daaa2ebda862c39.json` (job `job-research-06ec3586821ff3bb`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-31c2c5e14daaa2ebda862c39.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-494231538c84c48296aa17b3.json` (job `job-research-06ec3586821ff3bb`)
 - **成功** `DOI:10.1145/3731569.3764815` — Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market
   - job: `.survey/work-queue/jobs/job-research-a568c8de790c8043.json`
   - result: `.survey/work-queue/results/research/attempt-4aedf8f4b7b74e0c27817979.json` (`ok=true`)
@@ -156,9 +155,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 11:55:54 JST** / heartbeat: **09-20 12:00:59 JST** / lease expiry: **09-20 13:30:59 JST**
+  - claim: **09-20 12:03:25 JST** / heartbeat: **—** / lease expiry: **09-20 13:33:25 JST**
   - evidence: `.survey/work-queue/claims/job-research-06ec3586821ff3bb.json`
 
 #### Audit
@@ -207,8 +206,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **682** |
-| └ Research | **521** |
+| 成功result未照合のimmutable submission | **683** |
+| └ Research | **522** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
