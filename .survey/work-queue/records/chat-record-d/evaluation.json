@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-6246bd4f8827dbfcc3bc3a62",
-  "job_id": "job-research-be4feb2ff4a84f5b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6246bd4f8827dbfcc3bc3a62",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6246bd4f8827dbfcc3bc3a62","job_id":"job-research-be4feb2ff4a84f5b","data":{"hardware":"Ubuntu 20.04、AMD EPYC 7742 CPU 2基、1.5TB RAM、NVIDIA A100 40GB GPU 4基。重心学習は単一GPUでk-meansを100反復する。","software":"PyTorchとHuggingFace Transformersを基盤に連結量子化を実装。","methodology":"LLaMA-7b、LLaMA-13b、LLaMA-2-7b、LLaMA-2-13b、Mistral-7bの5モデルを用いる。WikiText-2学習集合から2048トークンの16系列を校正に使い、評価集合とは分離する。WikiText-2とC4では各モデルの最大文脈長でパープレキシティを測り、WinoGrande、PIQA、ARC Challengeではゼロショット正解率を測る。FP16、整数量子化、NormalFloat、KVQuantと比較し、1、2、4ビット相当を評価する。チャネル連結数とフィッシャー誘導重心のアブレーション、重心学習時間と重心表容量も測る。","datasets":["WikiText-2","C4","WinoGrande","PIQA","ARC Challenge"],"models":["LLaMA-7b","LLaMA-13b","LLaMA-2-7b","LLaMA-2-13b","Mistral-7b"],"baselines":["FP16鍵値キャッシュ","INT量子化","NormalFloat量子化","KVQuant","KVQuant 1%外れ値保持"],"metrics":["パープレキシティ","ゼロショット正解率","1浮動小数点値当たりビット数","重心学習時間","重心表パラメータ数"],"scope":"短〜中程度の最大文脈長2048〜8192で品質を中心に評価する。実サービングのエンドツーエンド遅延や処理能力は直接測定していない。"},"reservation":{"claim_id":"claim-6246bd4f8827dbfcc3bc3a62","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
