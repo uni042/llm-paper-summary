@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-3ee76817e29cd5c6",
+  "type": "research",
+  "parent_job_id": "job-fa9e3ba772afe5d8",
+  "priority": 97,
+  "canonical_id": "arXiv:2404.19429",
+  "arxiv_id": "2404.19429",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
+  "source_url": "https://arxiv.org/abs/2404.19429",
+  "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+  "selection_reason": "Compiler-based MoE training system that overlaps all-to-all communication with computation across the whole training graph.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T04:01:36+00:00"
+}

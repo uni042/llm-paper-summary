@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T04:00:21+00:00",
+  "updated_at": "2026-09-20T04:02:10+00:00",
   "last_run_key": "manual-stress-2026-09-20",
   "last_round": "refcuration-stress-20260920-offset1000-b",
   "paper_stock_zero_count": 3,
@@ -10,71 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T01:00:00+09:00",
-      "round": "specialist-related-serving-2",
-      "axis": "分離サービングのnetwork-aware routing・MoE expert residency・非同期prefill",
-      "query_summary": "新着軸から離れ、既存のP/D分離・MoE serving系統に近い関連研究を検索し、network-aware decode routing、expert paging、attention/MoE非同期分離の3方向を軽量評価した。各arXiv IDを最新GitHubで再照合し未収録だった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "CXL/Kubernetes共有メモリやexpert-locality routingなど、memory fabricと配置制御の隣接軸へ移る",
-      "source_submission": "work-queue/submissions/20260916T0111JST-discovery-specialist-related-serving-2.json"
-    },
-    {
-      "run_key": "2026-09-16T01:00:00+09:00",
-      "round": "specialist-memory-fabric-3",
-      "axis": "CXL共有KVメモリ・Kubernetes資源化・MoE expert-locality routing",
-      "query_summary": "storage/network軸からmemory fabricと配置制御へ展開し、Composable CXLをKubernetes共有KV tierにする新着研究と、MoE expert localityをPD decode routingへ使うvLLM研究を軽量評価した。最新GitHub検索でcanonical ID未収録を確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "forward citationとは別に、OS/GPU runtime隣接からI/O scheduling・memory pressure・kernel/runtime co-designを探索する",
-      "source_submission": "work-queue/submissions/20260916T0114JST-discovery-specialist-memory-fabric-3.json"
-    },
-    {
-      "run_key": "2026-09-16T01:00:00+09:00",
-      "round": "specialist-runtime-kernel-4",
-      "axis": "GPU runtime・fused decompression kernel・L2 KV prefetch",
-      "query_summary": "OS/GPU runtime隣接へ軸を移し、推論時の重み展開とGEMM融合、KVをGPU L2へ非同期prefetchする2研究を軽量評価した。SwiftCache等の既知収録候補は除外し、canonical IDがGitHub検索で未収録の2件だけを送信する。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135"
-      ],
-      "next_axis_hint": "最低4軸到達後も、reference/backward citationからSSD/GDS・expert streamingの基礎研究、または最新framework実装に対応する論文を探索可能",
-      "source_submission": "work-queue/submissions/20260916T0117JST-discovery-specialist-runtime-kernel-4.json"
-    },
-    {
-      "run_key": "2026-09-16T01:00:00+09:00",
-      "round": "specialist-backward-storage-5",
-      "axis": "SSD/GDS・expert streamingの関連基礎研究再確認",
-      "query_summary": "直前のruntime/storage候補からbackward/related方向へ探索し、GPU-centric SSD KV I/OのTuttiとmulti-chiplet Expert Streamingを再評価した。両方とも既にrepository identity/discovery historyで収録済みのため候補投入せず、同じ検索族の反復を避ける。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.03375",
-        "arXiv:2603.27624"
-      ],
-      "next_axis_hint": "次は新着cs.OS/cs.PFのLLM inference隣接、またはframework releaseから対応する未収録paperを逆引きする",
-      "source_submission": "work-queue/submissions/20260916T0120JST-discovery-specialist-backward-storage-5.json"
-    },
     {
       "run_key": "2026-09-16T01:00:00+09:00",
       "round": "specialist-os-pf-6",
@@ -7638,6 +7573,97 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Low-relation references still contain strong recent systems papers; continue structured-reference exploration rather than falling back to ordinary search.",
       "source_submission": "work-queue/submissions/refcuration-stress-drain-trigger-20260920.json"
+    },
+    {
+      "run_key": "manual-stress-deep-2026-09-20",
+      "round": "refcuration-stress-offset2000-1",
+      "axis": "structured references deep stress probe at raw offset 2000",
+      "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 2000 using primary sources. Strong systems, training infrastructure, memory, quantization, and serving papers were retained.",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2404.15778",
+        "arXiv:2404.19429",
+        "arXiv:2405.00263",
+        "arXiv:2405.01481"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920-offset2000-1.json"
+    },
+    {
+      "run_key": "manual-stress-deep-2026-09-20",
+      "round": "refcuration-stress-offset2000-2",
+      "axis": "structured references deep stress probe at raw offset 2000",
+      "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 2000 using primary sources. Strong systems, training infrastructure, memory, quantization, and serving papers were retained.",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2405.02842",
+        "arXiv:2405.03917",
+        "arXiv:2405.05254",
+        "arXiv:2405.05803"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920-offset2000-2.json"
+    },
+    {
+      "run_key": "manual-stress-deep-2026-09-20",
+      "round": "refcuration-stress-offset2000-3",
+      "axis": "structured references deep stress probe at raw offset 2000",
+      "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 2000 using primary sources. Strong systems, training infrastructure, memory, quantization, and serving papers were retained.",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arXiv:2405.07135",
+        "arXiv:2405.12981",
+        "arXiv:2405.13019",
+        "arXiv:2405.14636"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1.",
+      "source_submission": "work-queue/submissions/refcuration-stress-20260920-offset2000-3.json"
+    },
+    {
+      "run_key": "manual-stress-2026-09-20",
+      "round": "refcuration-stress-20260920-offset1000-b",
+      "axis": "structured references stress probe at raw offset 1000",
+      "query_summary": "Evaluated a 20-record structured-reference sample at relation_count≈2. Recent 2026 papers were verified against primary sources; generic scheduling, application surveys, benchmarks, and historical background references were classified out.",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 17,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.15,
+      "accepted_canonical_ids": [
+        "arXiv:2606.02091",
+        "arXiv:2607.25852",
+        "DOI:10.1109/cloud67622.2025.00028"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Low-relation references still contain strong recent systems papers; continue structured-reference exploration rather than falling back to ordinary search.",
+      "source_submission": "work-queue/submissions/refcuration-stress-drain-trigger2-20260920.json"
     }
   ],
   "axes": {
@@ -14476,15 +14502,15 @@
     },
     "structured references stress probe at raw offset 1000": {
       "last_run_key": "manual-stress-2026-09-20",
-      "rounds": 3,
-      "candidate_count": 60,
+      "rounds": 4,
+      "candidate_count": 80,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 60,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 57,
+      "novel_candidate_count": 80,
+      "final_duplicate_filtered_count": 6,
+      "post_final_dedupe_count": 74,
       "accepted_count": 8,
       "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.05,
+      "final_duplicate_ratio": 0.075,
       "next_axis_hint": "Low-relation references still contain strong recent systems papers; continue structured-reference exploration rather than falling back to ordinary search."
     },
     "structured references stress probe at raw offset 200": {
@@ -14525,6 +14551,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Probe relation_count≈2 references next; yield has dropped but remains nonzero."
+    },
+    "structured references deep stress probe at raw offset 2000": {
+      "last_run_key": "manual-stress-deep-2026-09-20",
+      "rounds": 3,
+      "candidate_count": 60,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 60,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 60,
+      "accepted_count": 12,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

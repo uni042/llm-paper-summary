@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 799,
+      "completed": 803,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 109,
+      "ready": 121,
       "completed": 611,
       "superseded": 44,
       "deferred": 3,
@@ -19,25 +19,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 109,
-    "actively_claimed": 0,
-    "claimable": 109
+    "ready_research_audit": 121,
+    "actively_claimed": 1,
+    "claimable": 120
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-53d31e41c03b4f2d",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2604.12171",
-      "title": "PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving",
-      "source_url": "https://arxiv.org/abs/2604.12171",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-d9598f14ff4bcd81",
       "type": "research",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-989ee0a4e32cc6c3",
+      "type": "research",
+      "lane": null,
+      "priority": 97,
+      "canonical_id": "arXiv:2605.00528",
+      "title": "SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2605.00528",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T04:00:21+00:00"
+  "generated_at": "2026-09-20T04:04:20+00:00"
 }

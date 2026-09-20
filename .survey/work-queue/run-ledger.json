@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:55:31.051221+00:00",
+  "updated_at": "2026-09-20T04:04:19.450898+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:55:31.051221+00:00",
+      "last_recorded_at": "2026-09-20T04:04:19.450898+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,28 +18691,13 @@
       "counts": {
         "research_completed": 336,
         "audit_completed": 0,
-        "discovery_completed": 193,
+        "discovery_completed": 197,
         "blocked": 47,
-        "new_jobs": 296,
+        "new_jobs": 312,
         "new_papers": 339,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35439078004:1",
-          "recorded_at": "2026-09-19T11:09:07.052145+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35439078004",
-            "run_attempt": "1",
-            "source_sha": "d330aa9cee656455771769b4b6b1e0aa13a364e1"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35441651010:1",
           "recorded_at": "2026-09-19T12:02:09.044287+00:00",
@@ -19597,6 +19582,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35487955795:1",
+          "recorded_at": "2026-09-20T04:04:19.450898+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35487955795",
+            "run_attempt": "1",
+            "source_sha": "2dceda87c7360ea9eaf0f9991782d307b05e08ee"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -24208,6 +24207,38 @@
           "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-df8aec0f6f334a00",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e15688be90de3114",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-fa9e3ba772afe5d8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-fef9a49e30426bee",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26282,6 +26313,118 @@
           "type": "research",
           "canonical_id": "arXiv:2609.14864",
           "title": "GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems"
+        },
+        {
+          "job_id": "job-df8aec0f6f334a00",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e15688be90de3114",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-fa9e3ba772afe5d8",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-fef9a49e30426bee",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-05f57bc36c570458",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.00263",
+          "title": "Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge"
+        },
+        {
+          "job_id": "job-research-0ad72717e3fdb154",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.01481",
+          "title": "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment"
+        },
+        {
+          "job_id": "job-research-3ee76817e29cd5c6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2404.19429",
+          "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping"
+        },
+        {
+          "job_id": "job-research-47d3b689c2eeb296",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.07135",
+          "title": "Post Training Quantization of Large Language Models with Microscaling Formats"
+        },
+        {
+          "job_id": "job-research-69af59c3cf5bef42",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.05803",
+          "title": "Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference"
+        },
+        {
+          "job_id": "job-research-76aff8aad6f29ebc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2404.15778",
+          "title": "BASS: Batched Attention-optimized Speculative Sampling"
+        },
+        {
+          "job_id": "job-research-82b8ef403de7a370",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.13019",
+          "title": "A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models"
+        },
+        {
+          "job_id": "job-research-ab19fa17920fb404",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.12981",
+          "title": "Reducing Transformer Key-Value Cache Size with Cross-Layer Attention"
+        },
+        {
+          "job_id": "job-research-be4feb2ff4a84f5b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.03917",
+          "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization"
+        },
+        {
+          "job_id": "job-research-c0742ec707ffbbe8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.14636",
+          "title": "PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services"
+        },
+        {
+          "job_id": "job-research-e2f947500152f11f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.02842",
+          "title": "IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs"
+        },
+        {
+          "job_id": "job-research-f8d11555626eb92a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.05254",
+          "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models"
         }
       ],
       "new_paper_ids": [
@@ -27011,7 +27154,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 800,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-ab19fa17920fb404",
+  "type": "research",
+  "parent_job_id": "job-df8aec0f6f334a00",
+  "priority": 94,
+  "canonical_id": "arXiv:2405.12981",
+  "arxiv_id": "2405.12981",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Reducing Transformer Key-Value Cache Size with Cross-Layer Attention",
+  "source_url": "https://arxiv.org/abs/2405.12981",
+  "paper_path": "papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md",
+  "selection_reason": "Cross-Layer Attention shares KV heads between adjacent layers, extending MQA/GQA to further reduce KV-cache memory while preserving accuracy.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T04:01:59+00:00"
+}
