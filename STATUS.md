@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:52:59 JST**
+> 自動生成: **2026-09-21 05:54:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **274** |
 | 未claim Research job | **274** |
 | 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間4分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間6分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **35** | **8** | **7** | **1** | **0** | **0** | **13** |
-| 合計 | **35** | **14** | **11** | **1** | **0** | **0** | **13** |
+| Discovery | **35** | **10** | **7** | **3** | **0** | **0** | **22** |
+| 合計 | **35** | **16** | **11** | **3** | **0** | **0** | **22** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **1件** / 候補: **13件**
-- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **3件** / 候補: **22件**
+- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems / forward citations of FlexGen for hierarchical-memory inference systems / forward citations of Splitwise for disaggregated LLM serving
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
   - 探索軸: backward structured references across repository
@@ -185,6 +185,14 @@
 - round `round-08` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json`
   - 探索軸: forward citations of H2O for KV cache serving systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `round-09` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json`
+  - 探索軸: forward citations of FlexGen for hierarchical-memory inference systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `round-10` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json`
+  - 探索軸: forward citations of Splitwise for disaggregated LLM serving
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -240,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **910** |
+| 成功result未照合のimmutable submission | **912** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **196** |
+| └ Discovery | **198** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
