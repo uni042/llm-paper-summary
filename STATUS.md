@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:05:47 JST**
+> 自動生成: **2026-09-20 14:05:58 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **128** |
+| 収録候補論文 | **127** |
 | 未claim Research job | **126** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-20 14:03:07 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **53** |
+| 最終検証済みResearch収録 | **09-20 14:05:53 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **128** |
+| canonical_id確認済みの一意な候補論文 | **127** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **128** |
+| 非終端Research job合計 | **127** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **9** | **3** | **0** | **2** | **0** | — |
+| Research | **22** | **9** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **21** | **10** | **4** | **0** | **2** | **0** | **5** |
+| 合計 | **22** | **10** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 14:05:53 JST** [research] `arXiv:2605.00528` — SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters
+  - job: `.survey/work-queue/jobs/job-research-989ee0a4e32cc6c3.json`
+  - result: `.survey/work-queue/results/research/attempt-44b24147d79154a807dce87e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-44b24147d79154a807dce87e.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md`
 - **09-20 14:03:07 JST** [research] `DOI:10.1145/3676641.3715996` — POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference
   - job: `.survey/work-queue/jobs/job-research-2ce5fda4ee4799b0.json`
   - result: `.survey/work-queue/results/research/attempt-0909991ec40a7b696d97ff81.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json`
   - paper: `papers/inference/10-sparse-attention/2024-2406.10774-quest.md`
-- **09-20 12:11:09 JST** [research] `arXiv:2402.02750` — KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache
-  - job: `.survey/work-queue/jobs/job-research-8b52cc53189781e3.json`
-  - result: `.survey/work-queue/results/research/attempt-6d86d84ba0b861b36b84973e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6d86d84ba0b861b36b84973e.json`
-  - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2402.02750-kivi.md`
 
 ### Audit
 
@@ -176,10 +176,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.00528` — SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters / worker `scheduled-chat-discovery-overflow`
-  - claim: **09-20 14:03:36 JST** / heartbeat: **—** / lease expiry: **09-20 15:33:36 JST**
-  - evidence: `.survey/work-queue/claims/job-research-989ee0a4e32cc6c3.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-20 15:02:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-b27d4d0f59f887b3.json`
@@ -202,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **128** |
+| ready | **127** |
 
 ### 候補の重複・識別情報欠損
 
@@ -222,7 +219,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **804** |
+| inference/training/survey配下の論文Markdown実体 | **805** |
 
 ### immutable submissionの未照合
 
@@ -230,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **721** |
-| └ Research | **535** |
+| 成功result未照合のimmutable submission | **720** |
+| └ Research | **534** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
