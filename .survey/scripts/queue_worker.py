@@ -555,7 +555,7 @@ def _reference_pool_guidance(reason: str) -> DiscoveryPrecheckError:
             "Run schema-v3 repository_references precheck first with "
             "source_url=repository://structured-references and target_unseen=20. "
             "If it returns any unseen records, evaluate that buffer and continue the "
-            "structured-reference curation route. Use legacy Discovery routes only after "
+            "structured-reference curation route. Use non-reference fixed-source search fallback only after "
             "the repository reference pool returns zero unseen records and is exhausted."
         ),
         recovery_steps=[
@@ -564,8 +564,8 @@ def _reference_pool_guidance(reason: str) -> DiscoveryPrecheckError:
             "Wait for the workflow-produced result; do not hand-write the result or skip the precheck.",
             "If unseen_result_count > 0, evaluate only that reference-pool result and do not switch providers.",
             "Classify clear non-matches with mark-unrelated and borderline candidates with mark-borderline before the next run.",
-            "Only if unseen_result_count=0 and provider_exhausted=true may a legacy provider be used.",
-            "For that legacy submission, attach reference_pool_fallback with request_id, result_path, and receipt from the zero-result repository_references precheck.",
+            "Only if unseen_result_count=0 and provider_exhausted=true may a non-reference fixed-source provider be used.",
+            "For that search-fallback submission, attach reference_pool_fallback with request_id, result_path, and receipt from the zero-result repository_references precheck.",
         ],
     )
 
@@ -635,7 +635,7 @@ def _validate_reference_pool_fallback(sub: dict, meta: dict[str, Any]) -> dict[s
     proof = sub.get("reference_pool_fallback")
     if not isinstance(proof, dict):
         raise _reference_pool_guidance(
-            "Legacy Discovery provider was used without a zero-result repository_references proof."
+            "A non-reference fixed-source Discovery provider was used without a zero-result repository_references proof."
         )
 
     request_id = str(proof.get("request_id") or "").strip()
@@ -682,18 +682,18 @@ def _validate_reference_pool_fallback(sub: dict, meta: dict[str, Any]) -> dict[s
         )
     if str(result.get("run_key") or "") != str(meta.get("run_key") or ""):
         raise _reference_pool_guidance(
-            "Fallback proof must use the same run_key as the legacy Discovery submission."
+            "Fallback proof must use the same run_key as the search-fallback Discovery submission."
         )
     if result.get("evaluation_allowed") is not True or result.get("decision") != "READY_FOR_EVALUATION":
         raise _reference_pool_guidance("Fallback proof must be a final READY_FOR_EVALUATION result.")
     if result.get("provider_exhausted") is not True:
         raise _reference_pool_guidance(
-            "Legacy Discovery is forbidden while the repository reference pool is not exhausted."
+            "Non-reference fixed-source Discovery is forbidden while the repository reference pool is not exhausted."
         )
     unseen = result.get("unseen_result_count")
     if isinstance(unseen, bool) or not isinstance(unseen, int) or unseen != 0:
         raise _reference_pool_guidance(
-            "Legacy Discovery is forbidden while repository_references returns any unseen candidate."
+            "Non-reference fixed-source Discovery is forbidden while repository_references returns any unseen candidate."
         )
     if result.get("results") not in ([], None) or result.get("allowed_records") not in ([], None):
         raise _reference_pool_guidance(
