@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-483c9e80b9d0b60acbb8fb48",
-  "job_id": "job-research-67ddaa9ed58fd85b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-483c9e80b9d0b60acbb8fb48",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-483c9e80b9d0b60acbb8fb48","job_id":"job-research-67ddaa9ed58fd85b","data":{"evaluation_summary":"Qwen3-30B-A3BとQwen3-235B-A22Bで評価する。まずFineWeb-Eduの長系列から約100万トークン規模を使い、k0、累積確率p、最大追加数k_max、探索順位maxP、バッチサイズ8/16/32/64を掃引し、クロスエントロピー増分と平均固有活性専門家数のPareto前線を比較する。次に簡略OEAをSGLangへ統合し、AIME24、MATH500、GPQA、LiveCodeBenchで複数回生成評価する。30Bは主に単一H100 80GB、235Bは8×H100 HGX/NVSwitchのテンソル並列で実行し、各層・各デコードステップのバッチサイズ、固有専門家数、MoE遅延を記録する。","scope":"自己回帰デコードの中程度バッチに焦点を当てる。プリフィルは専門家負荷が高いためOEAを適用しない。30Bと235Bという二規模で品質と実機遅延を測るが、他モデル族、専門家並列、異種GPU、非常に大きいバッチは主評価外。","hardware":["NVIDIA H100 80GB","8×NVIDIA H100 HGX","NVSwitch"],"models":["Qwen3-30B-A3B","Qwen3-235B-A22B"],"datasets":["FineWeb-Edu","AIME24","MATH500","GPQA","LiveCodeBench"],"workload":"クロスエントロピー評価は各8192トークン以上のFineWeb-Edu系列から構成し、同一デコード位置のトークンだけで相乗りを計算する。下流生成はtemperature 0.6、top-p 0.95、最大32768生成トークン、SGLang上で最大実行要求数16。","baselines":["vanilla top-8 Qwen3","Phase 1のみのtop-k0枝刈り","一般形OEA","簡略OEA"],"metrics":["クロスエントロピー差","下流精度","平均固有活性専門家数","MoE層デコード遅延µs","遅延削減率","固有専門家数と遅延のR²"],"control_knobs":"一般形はk0={4..8}、k_max={7..11}、p={0.4..1.0}、maxP={8,16,32,128}、B={8,16,32,64}を掃引。簡略形はk0のみを残し、p=1、k_max=元k、maxP=N。"},"reservation":{"claim_id":"claim-483c9e80b9d0b60acbb8fb48","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
