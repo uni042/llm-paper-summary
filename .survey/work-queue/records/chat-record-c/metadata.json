@@ -2,30 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-53c9640aa2c8756a83217d2e",
-  "job_id": "job-research-264bf27e36d7341a",
-  "data": {
-    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.2153",
-    "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
-    "list_summary": "対象モデルの注意重みでドラフト側KVキャッシュの重要文脈を動的選択し、再学習なしで長文の投機的復号を高速化する拡張。",
-    "summary": "長い入力で投機的復号の性能が早期に崩れる問題に対し、再学習なしで既存方式へ追加できる拡張を提案する。対象モデルの注意重みを利用してドラフトモデルのKVキャッシュから現在の生成に重要な文脈チャンクを動的に選び、ドラフトの計算量と対象モデルとの分布ずれを同時に抑える。さらに事前充填と検証に効率的注意機構を組み合わせ、短い入力での既存方式の強みを維持しながら長文要約と長い推論出力で実測速度を改善する。",
-    "source": "https://aclanthology.org/2026.findings-acl.2153/",
-    "sources": ["https://aclanthology.org/2026.findings-acl.2153/", "https://aclanthology.org/2026.findings-acl.2153.pdf"],
-    "authors": ["Jungyoub Cha", "Hyunjong Kim", "Sungzoon Cho"],
-    "published": "2026-07-02",
-    "publication": "Findings of the Association for Computational Linguistics: ACL 2026",
-    "publication_type": "conference_findings",
-    "publication_status": "published",
-    "topics": ["投機的復号", "長文推論", "KVキャッシュ", "効率的注意機構"],
-    "implementation": "著者実装が公開されている。論文は既存の投機的復号へ追加できる再学習不要の構成として評価している。",
-    "code": "https://github.com/jycha98/SpecExtend",
-    "last_checked": "2026-09-20",
-    "hardware_evaluation": "主要な実測は単一 NVIDIA A100 80GB GPU 上で実施。付録では一部ドラフトモデル学習に4基のA100 40GB GPUを使用したと記載される。",
-    "quality_effect": "投機的復号の検証・補正規則を変えないため出力分布は標準の投機的復号と同様に保持される。CMRはドラフト精度を改善し、近似的な品質劣化との交換ではなく受理長と速度を改善する。",
-    "references": [{"canonical_id":"arXiv:2401.10774","arxiv_id":"2401.10774"},{"canonical_id":"arXiv:2302.01318","arxiv_id":"2302.01318"},{"canonical_id":"arXiv:2307.08691","arxiv_id":"2307.08691"},{"canonical_id":"arXiv:2501.12948","arxiv_id":"2501.12948"},{"canonical_id":"arXiv:2408.11049","arxiv_id":"2408.11049"},{"canonical_id":"arXiv:2404.11912","arxiv_id":"2404.11912"},{"canonical_id":"arXiv:2309.17453","arxiv_id":"2309.17453"},{"canonical_id":"arXiv:2502.17421","arxiv_id":"2502.17421"}],
-    "references_checked_at": "2026-09-20",
-    "references_source": "ACL Anthology primary PDF reference section",
-    "references_total": 25
-  },
-  "reservation": {"claim_id":"claim-53c9640aa2c8756a83217d2e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-61774f4ac669457f0e035bd8",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-61774f4ac669457f0e035bd8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

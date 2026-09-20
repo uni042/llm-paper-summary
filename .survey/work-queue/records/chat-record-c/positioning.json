@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-53c9640aa2c8756a83217d2e",
-  "job_id": "job-research-264bf27e36d7341a",
-  "data": {
-    "limitations": "対象モデルの完全KVキャッシュは削減しないため、長文で増大する対象モデル側の事前充填・復号計算は残る。したがって入力長増加に伴う絶対速度低下を消すものではない。評価は主として7B〜8B級モデルの単一A100実測であり、大規模分散サービング、多利用者混在、より大きな対象モデルへの一般化は直接検証されていない。長文専用ドラフトを学習するLongSpec等を速度で上回るものでもない。",
-    "differences": "TriForceやMagicDecは極長文で対象モデル側の疎なKVを使ってドラフトするため、モデル重みが支配的な中程度の長さでは大型モデルを動かす費用が残る。LongSpecは長文専用ドラフトを学習するのに対し、SpecExtendは既存の小型ドラフトを再学習せず利用する。StreamingLLMの静的位置削除と異なり、対象モデルの注意重みを用いて現在必要な遠距離文脈を動的に選ぶため、速度だけでなくドラフト精度と対象モデルとの整合も改善する。",
-    "implementation_status": "著者コードがGitHubで公開されており、論文はVicuna、LongChat、Llama-3.1、EAGLE、EAGLE-3等との組合せを実装・評価している。FlashAttention、Hybrid Tree Attention、モデル間検索の統合が必要で、対象モデル最終層だけ注意重みを取得する変更を加える。",
-    "research_positioning": "長文向け投機的復号の中でも、KVキャッシュが支配的になる極端な長さだけでなく、それ以前の中程度の長さで起きる速度低下を明示的に対象化した研究である。小型ドラフトのモデル重み上の利点を残しつつ、対象モデルを検索信号源として利用してドラフト文脈を整えるため、投機的復号とKVキャッシュ削減を結ぶ位置にある。既存の短文向け高性能ドラフトをそのまま長文へ拡張できる差し込み型の設計として、再学習方式と静的キャッシュ削減方式の間を埋める。"
-  },
+  "attempt_id": "attempt-61774f4ac669457f0e035bd8",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-53c9640aa2c8756a83217d2e",
+    "claim_id": "claim-61774f4ac669457f0e035bd8",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
