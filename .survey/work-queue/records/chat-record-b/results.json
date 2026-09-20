@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-7d885ba839f618fd75926d05","job_id":"job-research-ab19fa17920fb404","data":{"overview":"CLA2はMQAのKVキャッシュを層方向にさらに2倍削減しながら、1B/3Bの双方でperplexity悪化を小さく保つ。1Bのlearning-rate調整後ではH128-MQAの10240 bytes/token・validation perplexity 12.39に対し、H128-MQA-CLA2は5120 bytes/tokenで12.43、Wikitextでは19.30対19.29だった。同じ5120 bytes/tokenのH64-MQAはvalidation 12.74、Wikitext 20.00で、CLA2が明確に良い。3BでもH128-MQA-CLA2は通常H128-MQAの半分の8192 bytes/tokenでvalidation 9.34対9.52、Wikitext 13.25対13.63とむしろ改善した。別3B実験のH64-MQA-CLA2は通常H64-MQAの半分の4096 bytes/tokenでWikitext 12.99対12.94と差0.05に留まった。","key_results":[{"metric":"1B KV cache削減とvalidation perplexity","value":"10240→5120 bytes/token (2×削減), 12.39→12.43","baseline":"H128-MQA","condition":"1B、best learning rate","interpretation":"KV容量を半減してもperplexity悪化は0.04 point。"},{"metric":"1B同一KV予算でのperplexity","value":"12.74→12.43 validation、20.00→19.29 Wikitext","baseline":"H64-MQA (5120 bytes/token)","condition":"H128-MQA-CLA2も5120 bytes/token","interpretation":"層共有で節約した容量を大きいhead dimensionへ使う方が精度/メモリ交換に有利。"},{"metric":"3B H128 CLA2","value":"16384→8192 bytes/token、validation 9.52→9.34、Wikitext 13.63→13.25","baseline":"H128-MQA","condition":"3B、100B training tokens","interpretation":"半分のKV容量でperplexityが悪化せず改善するケースも確認。"},{"metric":"3B H64 CLA2","value":"8192→4096 bytes/token、Wikitext 12.94→12.99","baseline":"H64-MQA","condition":"second 3B experiment","interpretation":"半分のKV容量でperplexity差は0.05 point。"},{"metric":"CLA sharing factor ablation","value":"CLA2が最良","baseline":"CLA3/CLA4/non-uniform sharing","condition":"1B design-space exploration","interpretation":"より大きな共有率より隣接2層共有が安定したPareto改善を示す。"}],"negative_results":"CLA3/CLA4は通常MQAよりPareto改善するが同一KV容量のCLA2よりperplexityが悪い。非均一な共有配置もuniform CLA2より悪い。CLAは各attention層で共有KVを再読込するためcore attentionのmemory bandwidth/latencyを直接削減しない。end-to-end長文サービングの速度改善は未評価でfuture workとされる。3B第2実験は別クラスタ・別software stack・別data orderで再学習しており、第1実験と数値を直接比較しにくい。","interpretation":"KV head数だけでなく『独立KVを持つ層数』も精度を大きく損なわず削減できる。CLA2とMQAを組み合わせると、同じhead dimensionのまま容量を半減するか、同じ容量でhead dimensionを大きくして精度を上げる選択肢が得られる。","quality_impact":"1B/3Bで通常MQA比2倍のKV削減に対するperplexity変化は概ね1%未満で、downstream 7タスクでは各モデルが一貫して勝敗する傾向はなく、おおむね近い性能を示す。"},"reservation":{"claim_id":"claim-7d885ba839f618fd75926d05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5605d7717d39930ab2f4dcc5",
+  "job_id": "job-research-da8147ed3835966f",
+  "data": {
+    "overview": "同じ価格予算ではHexGen-2がHexGenに対して最大1.5倍・平均1.4倍、8×H100上のDistServeに対して最大2.0倍・平均1.3倍のサービングスループットを達成した。オンライン評価では比較対象より平均1.5倍低い遅延期限を達成する。異種設定の予算を同種H100構成より30%削減した設定5でもDistServeと同程度の性能を保ち、一部ワークロードでは30%上回る。最大流誘導辺交換を含むスケジューラは全ワークロードで90〜120秒以内に配置を見つけ、辺交換なし/遺伝的探索より平均1.8倍高いスループットの配置へ高速に収束した。",
+    "key_results": [
+      {
+        "metric": "DistServe比サービングスループット",
+        "value": "最大2.0倍、平均1.3倍",
+        "baseline": "DistServe on homogeneous H100 cluster",
+        "condition": "同程度の価格予算、OPT-30B/Llama-2-70B、複数workload",
+        "interpretation": "異種GPUでも分離配置とKV通信を共同最適化すれば同価格の同種高性能GPU構成を上回れる。"
+      },
+      {
+        "metric": "HexGen比サービングスループット",
+        "value": "最大1.5倍、平均1.4倍",
+        "baseline": "HexGen",
+        "condition": "異種GPU設定、複数workload",
+        "interpretation": "同居型異種配置に対し、事前充填/復号分離と段階別並列化が有効。"
+      },
+      {
+        "metric": "オンライン遅延期限",
+        "value": "平均1.5倍低減",
+        "baseline": "HexGen/DistServe counterparts",
+        "condition": "online arrival rate=cluster peak throughputの75%",
+        "interpretation": "スループットだけでなく要求遅延/SLO側にも改善が及ぶ。"
+      },
+      {
+        "metric": "価格効率",
+        "value": "30%低い予算でも同等、特定workloadでは30%高性能",
+        "baseline": "DistServe homogeneous setup",
+        "condition": "heterogeneous setting 5=$20.5/h vs homogeneous $29.52/h",
+        "interpretation": "安価な異種GPUを組み合わせて同等サービス水準を狙える。"
+      },
+      {
+        "metric": "スケジューラ収束",
+        "value": "90〜120秒、平均1.8倍高いserving throughputの配置",
+        "baseline": "edge-swap無効変種およびgenetic algorithm",
+        "condition": "heterogeneous setting 1、4 workload、各15回",
+        "interpretation": "最大流のボトルネック情報を使う辺交換が局所最小回避と探索高速化に寄与する。"
+      }
+    ],
+    "negative_results": "性能利得はワークロードと異種構成に依存し、すべてのケースで同じ倍率ではない。スケジューラは静的に測定したGPU/通信特性とワークロード条件を入力とし、配置探索に90〜120秒を要する。評価モデルはOPT-30BとLlama-2-70B、GPU種類はH100/A100/L40/A6000に限られ、より新しいモデルやBlackwell世代、極端に動的な故障/帯域変化は本文の主要評価対象ではない。",
+    "interpretation": "異種環境では単に安価なGPUを増やすだけでなく、計算特性が異なる事前充填と復号を別資源へ割り当て、KV転送が低帯域リンクを通らないよう配置することが重要である。最大流表現により計算ノード容量とネットワーク容量を同じ要求流量として扱えるため、どちらか一方だけを最適化して別のボトルネックを作る問題を避けられる。",
+    "quality_impact": "モデルの近似や量子化を行わないため生成品質を変更する方式ではない。主な効果は同じモデル・要求に対するサービング性能、SLO、価格効率の改善である。"
+  },
+  "reservation": {
+    "claim_id": "claim-5605d7717d39930ab2f4dcc5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
