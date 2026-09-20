@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 11:51:25 JST**
+> 自動生成: **2026-09-20 11:51:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **84** |
+| 収録候補論文 | **83** |
 | 未claim Research job | **83** |
-| 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-20 11:47:29 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-20 11:51:33 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **84** |
+| canonical_id確認済みの一意な候補論文 | **83** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **84** |
+| 非終端Research job合計 | **83** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **2** | **1** | **1** | **0** | — |
+| Research | **11** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **10** | **4** | **3** | **1** | **1** | **0** | **5** |
+| 合計 | **11** | **4** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 11:51:33 JST** [research] `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
+  - job: `.survey/work-queue/jobs/job-research-7462825d21914fcd.json`
+  - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
+  - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
 - **09-20 11:47:29 JST** [research] `DOI:10.48550/arxiv.2302.01318` — Accelerating Large Language Model Decoding with Speculative Sampling
   - job: `.survey/work-queue/jobs/job-research-954a443cf32500d8.json`
   - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-fa744ec1780cd6efcfcf4336.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json`
   - paper: `papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md`
-- **09-20 06:42:02 JST** [research] `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
-  - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
-  - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
 
 ### Audit
 
@@ -112,8 +112,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json` (job `job-research-7462825d21914fcd`)
+- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
+  - job: `.survey/work-queue/jobs/job-research-7462825d21914fcd.json`
+  - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
+  - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
 - **成功** `DOI:10.1145/3731569.3764815` — Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market
   - job: `.survey/work-queue/jobs/job-research-a568c8de790c8043.json`
   - result: `.survey/work-queue/results/research/attempt-4aedf8f4b7b74e0c27817979.json` (`ok=true`)
@@ -145,10 +149,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 11:47:54 JST** / heartbeat: **—** / lease expiry: **09-20 13:17:54 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7462825d21914fcd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -168,7 +170,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **84** |
+| ready | **83** |
 
 ### 候補の重複・識別情報欠損
 
@@ -188,7 +190,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **790** |
+| inference/training/survey配下の論文Markdown実体 | **791** |
 
 ### immutable submissionの未照合
 
@@ -196,8 +198,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **682** |
-| └ Research | **521** |
+| 成功result未照合のimmutable submission | **681** |
+| └ Research | **520** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

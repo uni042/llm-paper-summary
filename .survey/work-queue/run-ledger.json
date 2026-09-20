@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T02:47:34.555451+00:00",
+  "updated_at": "2026-09-20T02:51:37.359450+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T02:47:34.555451+00:00",
+      "last_recorded_at": "2026-09-20T02:51:37.359450+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 326,
+        "research_completed": 327,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 44,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35433454697:1",
-          "recorded_at": "2026-09-19T09:02:00.132568+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35433454697",
-            "run_attempt": "1",
-            "source_sha": "df14dc0cf191f1b9ebd66e52ed7f45f01534ee87"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35434808141:1",
           "recorded_at": "2026-09-19T09:29:13.406287+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35484887683",
             "run_attempt": "1",
             "source_sha": "4ea216ae89f4f5c23399c2a492130c25408835f3"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35485066115:1",
+          "recorded_at": "2026-09-20T02:51:37.359450+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35485066115",
+            "run_attempt": "1",
+            "source_sha": "8552dba11921642e78805bf5592185a5a9a5fd78"
           },
           "signals": [
             "research_completed"
@@ -24103,6 +24103,14 @@
           "type": "research",
           "canonical_id": "DOI:10.48550/arxiv.2302.01318",
           "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7462825d21914fcd",
+          "type": "research",
+          "canonical_id": "DOI:10.48550/arxiv.2307.08691",
+          "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
           "from": "ready",
           "to": "completed"
         }
