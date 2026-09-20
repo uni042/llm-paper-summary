@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-715ca0ac1e2c0533b0313a9c",
-  "job_id": "job-research-b2016b76225eff0c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-715ca0ac1e2c0533b0313a9c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-715ca0ac1e2c0533b0313a9c","job_id":"job-research-b2016b76225eff0c","data":{"limitations":"3.5Tはシステム容量の支援規模であり、その規模のZ-code M3を収束まで学習して品質評価した結果ではない。CPUオフロードはホストメモリ容量とGPU-CPU帯域へ依存し、後続のNVMe/SSD階層は扱わない。専門家All-to-All通信はクラスタネットワークへ依存し、専門家当たりバッチが小さいと行列積効率も低下する。モデル品質実験の50言語データには社内並列コーパスが含まれ完全再現が難しい。専門家枝刈りは単純な利用頻度またはランダム選択で、タスク別の最適専門家選択は未解決である。","differences":"GShard/Switchが専門家・データ・モデル並列で巨大MoEを実現する一方、DeepSpeed MoEは共有非専門家状態のデータ並列複製をZeROで除去し、さらにZeRO-OffloadでCPUメモリまで利用する点がシステム上の差である。GShardの自動SPMD分割がコンパイラによる配置自動化を中心とするのに対し、本研究はDeepSpeedの既存ZeRO・テンソル並列・専門家並列をプロセス群として組み合わせる。モデル側ではSwitchの容量超過処理へランダムトークン選択を追加し、専門家を集約・枝刈り可能な部品として扱う。","implementation_status":"DeepSpeedライブラリへオープンソース実装され、MoEレイヤは既存モデルへ数行で追加できる。専門家並列グループ初期化APIが他の並列次元との通信構成を隠蔽し、ZeRO/ZeRO-Offloadやテンソル分割との併用をサポートする。A100実機でGPU当たり演算効率と複数GPUスケーリングを評価している。","research_positioning":"分散・異種MoE学習系統で、MoE特有の専門家並列とDenseモデル由来のZeRO/オフロードを統合した重要な接続点に位置する。GShardが条件付き計算と自動シャーディングを確立した後、本研究はGPUメモリ内に閉じないCPU階層をMoEへ持ち込み、共有基底モデルの拡張も同時に扱う。後続の専門家オフロード、階層メモリMoE、CPU/NVMe専門家キャッシュ研究に対して、学習時状態オフロードと専門家配置を分離して考える基準になる。"},"reservation":{"claim_id":"claim-715ca0ac1e2c0533b0313a9c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
