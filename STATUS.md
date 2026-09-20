@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 03:57:32 JST**
+> 自動生成: **2026-09-21 04:01:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **208** |
 | 未claim Research job | **208** |
 | 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間9分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間13分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **6** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **7** | **7** | **5** | **0** | **0** | **0** | **5** |
+| 合計 | **6** | **7** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -93,11 +93,6 @@
   - result: `.survey/work-queue/results/research/attempt-f7ba62a568920d99b231d2ff.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f7ba62a568920d99b231d2ff.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md`
-- **09-20 22:01:31 JST** [research] `arXiv:2605.30876` — dMoE: dLLMs with Learnable Block Experts
-  - job: `.survey/work-queue/jobs/job-research-d4631c2cf9f2d1d7.json`
-  - result: `.survey/work-queue/results/research/attempt-7d70a7f1bc8e9a1e1635f401.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7d70a7f1bc8e9a1e1635f401.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md`
 
 ### Audit
 
