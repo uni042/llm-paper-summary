@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-098c5b91676f2a1a4d4737af",
-  "job_id": "job-research-f018d8c28f4995e5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-098c5b91676f2a1a4d4737af",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-098c5b91676f2a1a4d4737af","job_id":"job-research-f018d8c28f4995e5","data":{"limitations":"事前計算キャッシュは元テキストより非常に大きく、文書長に応じて可変長になるため、大規模知識ベースでの保存・索引・読込が難しい。圧縮併用ではなお精度低下が残る。評価はLlama 1B～8Bと主に質問応答・要約で、本番検索基盤やネットワーク転送を含む端から端のサービス評価ではない。誤差棒や統計的有意性も報告されない。","differences":"PromptCacheは独立キャッシュを直接再利用するが文書間注意を復元せず、原方式では位置不整合も残る。CacheBlendは重要トークンの約18%と第1層全体を再計算して混合するため精度を補える一方オンライン計算が増える。BlockAttentionは独立ブロック注意で微調整するが文書間を積極的に接続しない。TurboRAGの境界特殊トークンは文書と一緒にオフライン計算され局所注意しか持たないのに対し、KVLinkのリンクトークンは推論時に再計算され先行全文書へ注意する。","implementation_status":"公式コードとモデル実装をUCSB-NLP-Chang/KVLinkで公開。NeurIPS 2025 Main Conference採択。Llama-3.2-1B/3B、Llama-3.1-8Bで学習・評価し、位置再符号化、専用注意マスク、リンクトークン、圧縮変種まで実装する。","research_positioning":"任意位置の鍵・値キャッシュ再利用を、単なるシステムキャッシュではなくモデル側の軽量学習と組み合わせて成立させる系統。特に検索拡張生成で文書単位の再利用率が高い場合、プリフィル計算をオフラインへ移せる。付録が高頻度キャッシュを高速層、低頻度キャッシュをSSDなど安価な層へ置く階層保存を明示しており、SSDオフロード・キャッシュ配置研究との接点が強い。"},"reservation":{"claim_id":"claim-098c5b91676f2a1a4d4737af","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
