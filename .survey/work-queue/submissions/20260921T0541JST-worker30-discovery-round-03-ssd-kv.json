@@ -1,0 +1,10 @@
+{
+  "operation":"submit_discovery_round",
+  "candidates":[
+    {"title":"Fast State Restoration in LLM Serving with HCache","source_url":"http://arxiv.org/abs/2410.05004","canonical_id":"arXiv:2410.05004","arxiv_id":"2410.05004","year":2024,"published":"2024-10-07","reason":"Direct LLM serving systems work on hierarchical cache/state restoration, strongly relevant to KV-cache offload and fast restart/migration paths.","priority":86},
+    {"title":"PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices","source_url":"http://arxiv.org/abs/2504.03664","canonical_id":"arXiv:2504.03664","arxiv_id":"2504.03664","year":2025,"published":"2025-03-15","reason":"Direct inference offloading system for consumer devices using pipelined placement/transfer; relevant to hierarchical memory and low-resource LLM inference.","priority":88},
+    {"title":"Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices","source_url":"https://arxiv.org/abs/2512.21835","canonical_id":"arXiv:2512.21835","arxiv_id":"2512.21835","year":2025,"published":"2025-12-26","reason":"Direct edge LLM serving system combining offloading and pipeline parallelism without model-quality loss; relevant to distributed heterogeneous inference.","priority":90}
+  ],
+  "discovery_stats":{"run_key":"2026-09-21T05:32:01+09:00","round":"round-03","axis":"recent SSD NVMe KV cache offload for LLM inference","trigger":"scheduled_worker","evaluated_count":19,"selected_count":3},
+  "discovery_precheck":{"request_id":"20260921T053201JST-worker30-openalex-ssd-kv-05","result_path":".survey/work-queue/discovery-precheck/results/20260921T053201JST-worker30-openalex-ssd-kv-05.json","receipt":"sha256:f700b2ff1102d148662fd8c2989a4aa29c2596dbd550283c3fe9eb0c60ca1161"}
+}
