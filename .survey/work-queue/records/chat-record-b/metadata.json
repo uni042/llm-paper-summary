@@ -2,49 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bdf0c488544312e64b741a67",
-  "job_id": "job-research-be4feb2ff4a84f5b",
+  "attempt_id": "attempt-95845744b63d99732374d3b0",
+  "job_id": "job-research-f8d11555626eb92a",
   "data": {
-    "canonical_id": "arXiv:2405.03917",
-    "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
-    "list_summary": "鍵値活性のチャネル間依存を利用して複数チャネルを共同量子化し、極低ビットでも品質劣化を抑える連結量子化を提案する。",
-    "summary": "連結量子化（Coupled Quantization; CQ）は、鍵値活性埋め込みの異なるチャネルが強く依存し、複数チャネルの同時エントロピーが周辺エントロピー総和より遅く増える観測を利用する。連続チャネルを群に分け、各群を多次元重心へ共同量子化することで、独立なチャネル単位量子化より情報効率を高める。さらにフィッシャー情報行列の対角近似で重要活性を重み付けした重心学習を導入する。5モデル、WikiText-2、C4、WinoGrande、PIQA、ARC Challengeで評価し、特に1〜2ビットで既存の密量子化を大幅に上回り、1ビットでも実用的な品質を維持した。",
-    "source": "https://arxiv.org/html/2405.03917",
+    "canonical_id": "arXiv:2405.05254",
+    "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models",
+    "list_summary": "自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。",
+    "summary": "YOCOは自己回帰言語モデルを自己デコーダと交差デコーダの二段へ分けるデコーダ・デコーダ構造である。前半はゲート付き保持またはスライディング窓注意により定数規模の状態で文脈を処理し、その最終表現から一組の大域鍵値キャッシュを生成する。後半の全交差デコーダ層は同じ鍵値を共有するため、通常Transformerの層数×文脈長に比例する鍵値メモリをほぼ文脈長だけへ削減する。さらに事前充填では後半を通らず早期終了できる。3Bモデルを1.6兆トークンまで学習し、160M〜13Bのスケーリング、1M文脈、H100上の推論を評価し、品質を保ちながら大幅なメモリ・遅延・処理能力改善を示す。",
+    "source": "https://arxiv.org/html/2405.05254v2",
     "sources": [
-      "https://arxiv.org/abs/2405.03917",
-      "https://arxiv.org/html/2405.03917"
+      "https://arxiv.org/abs/2405.05254",
+      "https://arxiv.org/html/2405.05254v2",
+      "https://aka.ms/YOCO"
     ],
     "authors": [
-      "Tianyi Zhang",
-      "Jonah Yi",
-      "Zhaozhuo Xu",
-      "Anshumali Shrivastava"
+      "Yutao Sun",
+      "Li Dong",
+      "Yi Zhu",
+      "Shaohan Huang",
+      "Wenhui Wang",
+      "Shuming Ma",
+      "Quanlu Zhang",
+      "Jianyong Wang",
+      "Furu Wei"
     ],
-    "published": "2024-05-07",
+    "published": "2024-05-08",
     "publication": "arXiv preprint",
     "publication_type": "preprint",
     "publication_status": "preprint",
-    "primary_category": "cs.LG",
+    "primary_category": "cs.CL",
     "cross_list_categories": [],
     "topics": [
-      "鍵値キャッシュ量子化",
-      "連結量子化",
-      "チャネル間依存",
-      "フィッシャー誘導重心学習"
+      "長文脈推論",
+      "鍵値キャッシュ共有",
+      "デコーダ・デコーダ構造",
+      "ゲート付き保持"
     ],
-    "implementation": "論文はPyTorchとHuggingFace Transformersに基づく実装で評価している。本文で公式コード公開先は確認できない。",
-    "code": null,
+    "implementation": "公式コードはaka.ms/YOCOから公開。推論評価ではゲート付き保持用Tritonカーネルを実装。",
+    "code": "https://aka.ms/YOCO",
     "last_checked": "2026-09-20",
-    "hardware_evaluation": "Ubuntu 20.04、AMD EPYC 7742 CPU 2基、1.5TB RAM、NVIDIA A100 40GB GPU 4基のサーバで評価。重心学習は単一GPUで実施。",
-    "quality_effect": "近似量子化であり完全無損失ではない。4ビットではFP16に近く、1〜2ビットでは従来の密量子化より大幅に品質を保つが、1ビットではFP16との差が残る。",
+    "hardware_evaluation": "推論プロファイルはH100 80GB GPU。1M長文脈学習にはCUBEの内部版を使用。",
+    "quality_effect": "構造変更を伴う再学習型手法で、既存モデルへ後付けする圧縮ではない。3Bおよび160M〜13Bの比較ではTransformerと同等以上の言語モデル品質を示す。",
     "references": [],
     "references_checked_at": "2026-09-20",
-    "references_source": "arXiv v1 full-text reference section",
-    "references_total": 37
+    "references_source": "arXiv v2 full-text reference section",
+    "references_total": 45
   },
   "reservation": {
-    "claim_id": "claim-bdf0c488544312e64b741a67",
-    "worker_id": "scheduled-chat-discovery-hourly",
+    "claim_id": "claim-95845744b63d99732374d3b0",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

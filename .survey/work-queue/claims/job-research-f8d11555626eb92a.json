@@ -1,25 +1,31 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-480662bc3f90f56bffdcef2f",
+  "claim_id": "claim-95845744b63d99732374d3b0",
   "job_id": "job-research-f8d11555626eb92a",
   "worker_id": "scheduled-chat-llm-survey",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-480662bc3f90f56bffdcef2f",
-  "request_id": "claim-20260920T0606Z-scheduled-chat-llm-survey-12",
-  "claimed_at": "2026-09-20T06:06:12+00:00",
-  "expires_at": "2026-09-20T07:36:12+00:00",
+  "attempt_id": "attempt-95845744b63d99732374d3b0",
+  "request_id": "claim-20260920T0610Z-scheduled-chat-llm-survey-14",
+  "claimed_at": "2026-09-20T06:08:47+00:00",
+  "expires_at": "2026-09-20T07:38:47+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-f8d11555626eb92a"
   ],
-  "record_bank": "d",
-  "record_bank_root": ".survey/work-queue/records/chat-record-d",
+  "previous_claim_id": "claim-480662bc3f90f56bffdcef2f",
+  "record_bank": "b",
+  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-480662bc3f90f56bffdcef2f"
+  ],
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-480662bc3f90f56bffdcef2f.json",
+  "record_bank_root": ".survey/work-queue/records/chat-record-b",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-d/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+    "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-b/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
   }
 }
