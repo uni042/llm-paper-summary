@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-524e1ba9cb57a926cc0c9550",
-  "job_id": "job-research-7878dfa1090aac77",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-524e1ba9cb57a926cc0c9550",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-524e1ba9cb57a926cc0c9550","job_id":"job-research-7878dfa1090aac77","data":{"limitations":"推論時k'を増やすほど活性FFN計算は比例して増えるため、品質向上と実レイテンシの最適点はハードウェア・バッチ・並列構成依存である。論文の中心は品質弾性であり、tokens/sやHBM、通信を含むシステム評価は限定的。弾性範囲も無限ではなく最大2〜3倍程度で、訓練時k_idealの外側への一般化は保証されない。post-trainingが必要なため、既存チェックポイントを完全にtraining-freeで切替える方式ではない。","differences":"Harder Task Needs More Experts等の動的ルーティングが固定総計算予算内でトークン間に専門家数を再配分するのに対し、EMoEはサービス全体の利用可能計算予算そのものが変わる状況でk'を上下させる。Matryoshka型の複数予算訓練と近い目的だが、EMoEは大きい候補プールから標準k_train個だけをMonte Carlo的に抽出して共同学習範囲を広げ、reverse-KLでrouter順位を階層化することで、追加専門家計算を伴わない訓練を狙う。","implementation_status":"アーキテクチャ変更なしで既存MoEへpost-training適用する方式として、LoRA-basedとFFN-basedの双方、4モデル規模で実証されている。arXiv本文では独立した公式コードURLは明示確認できなかったため、実装公開状況は未確認として扱う。","research_positioning":"推論時計算スケーリングをCoT長や反復深さではなくMoEの幅、すなわち同時活性専門家数で実現する研究。サービング側が負荷やSLOに応じてk'を選ぶ制御と組み合わせることで、複数サイズのモデルを保持せず一つの重み集合から品質対計算量を調整できる。"},"reservation":{"claim_id":"claim-524e1ba9cb57a926cc0c9550","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
