@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-70943e20a527c6aa030a2179",
-  "job_id": "job-research-92c83b7c2ec8a78f",
-  "data": {
-    "overview": "MAESTROは両MoEモデル・両圧縮率で平均性能維持率が最良で、特に50%圧縮でもGPT-OSS-20B 92.59%、Qwen3-30B 93.40%を維持した。均一層別枝刈り、自己回帰遷移集計、LoRA回復学習はいずれもアブレーションで寄与が確認される。圧縮処理自体はGPT-OSS-20B 25%で約24分で、REAP約22分に近く、MoP約63分より約2.5倍速い。",
-    "key_results": [
-      {
-        "metric": "GPT-OSS-20B 25%圧縮 平均性能維持率",
-        "value": "98.90%",
-        "baseline": "REAP 97.67%、MoP 95.63%、HC-SMoE 90.46%",
-        "condition": "32専門家/層、25%構造枝刈り、LoRA回復学習後",
-        "interpretation": "最良ベースラインREAPを相対1.26%上回り、タスク間標準偏差も1.90%で最小。"
-      },
-      {
-        "metric": "GPT-OSS-20B 50%圧縮 平均性能維持率",
-        "value": "92.59%",
-        "baseline": "REAP 89.37%、MoP 88.41%、HC-SMoE 83.71%",
-        "condition": "50%構造枝刈り、LoRA回復学習後",
-        "interpretation": "強い圧縮でも25% HC-SMoEの90.46%を上回り、圧縮率増加時の低下は6.31ポイントに留まる。"
-      },
-      {
-        "metric": "Qwen3-30B 25%圧縮 平均性能維持率",
-        "value": "99.40%",
-        "baseline": "REAP 98.13%、HC-SMoE 87.47%",
-        "condition": "128専門家/層、MoPは活性保存メモリ不足で未評価",
-        "interpretation": "専門家数が大きく異なるモデルでも大域遷移ランキングが有効で、World accuracy 70.00は元モデル69.43も上回る。"
-      },
-      {
-        "metric": "Qwen3-30B 50%圧縮 平均性能維持率",
-        "value": "93.40%",
-        "baseline": "REAP 90.25%、HC-SMoE 74.58%",
-        "condition": "50%構造枝刈り、LoRA回復学習後",
-        "interpretation": "REAPより3.15ポイント高い。タスク間標準偏差は10.50%でREAP 7.10%より悪い点は例外的な弱点。"
-      },
-      {
-        "metric": "GPT-OSS-20B 25% 圧縮処理時間",
-        "value": "約24分",
-        "baseline": "REAP 約22分、MoP 約63分、HC-SMoE 約3.5分",
-        "condition": "回復学習時間を除外",
-        "interpretation": "自己回帰遷移集計でREAPよりわずかに重いが、MoPより約2.5倍高速で保持性能は高い。"
-      }
-    ],
-    "negative_results": "均一制約を外すと一部層が12〜14専門家まで過剰に削られ、平均性能維持率は98.90%から97.90%へ低下する。自己回帰遷移集計を単一パスへ置き換えると97.76%へ低下し、標準偏差も増える。回復学習を外すと78.54%まで大幅低下し、圧縮後の出力分布再調整が不可欠である。Qwen3-30B 50%ではタスク間標準偏差がREAPより大きい。",
-    "interpretation": "局所頻度だけでは見えない層間経路を定常分布へ集約することで、特定タスクだけに強い専門家ではなく複数タスクの経路を支える専門家を残しやすい。500サンプルへ増やしても平均保持率は98.93%と250サンプル98.90%からほぼ変わらず、50・100サンプルでは分散が増えるため、単純にキャリブレーション量を増やせば良いわけではない。",
-    "quality_impact": "25%圧縮では一部の生成・ドメイン指標が元モデルをわずかに上回るが、これは枝刈りと回復学習後のベンチマーク結果であり一般的な品質向上を保証しない。50%では平均品質は明確に低下するものの、比較した構造圧縮法の中では低下幅が小さい。"
-  },
+  "attempt_id": "attempt-b7497b14d23d6038915986e3",
+  "job_id": "job-research-89e4b35d6854b9b6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-70943e20a527c6aa030a2179",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-b7497b14d23d6038915986e3",
+    "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
 }
