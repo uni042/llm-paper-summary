@@ -1,13 +1,14 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-175fe59944f6ca42687384fc",
-  "job_id": "job-research-529f8795f6dde556",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-175fe59944f6ca42687384fc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-175fe59944f6ca42687384fc","job_id":"job-research-529f8795f6dde556",
+ "data":{
+   "hardware":"単一ノードのNVIDIA A100 SXM4 40GBを8基搭載した環境。詳細分析では1.5Bを1 GPU、7Bを2 GPUのテンソル並列、14Bを4 GPUのテンソル並列で測定する。",
+   "software":"DELTAはFlashInferの実行時コンパイル機構から注意ロジットを取得し、PyTorchの上位選択演算でページを選ぶ。比較対象のQuestとRaaSはHugging Face Transformers上で再現して条件をそろえる。",
+   "methodology":"DeepSeek-R1-Distill-Qwen 1.5B・7B・14BとDeepSeek-R1-Distill-Llama 8Bを対象に、AIME 2024、AIME 2025は各30問、GPQA-DiamondとMATH500は先頭100問を評価する。精度実験の標準設定はページサイズ16、総予算64ページ=1kトークン、直近保持8ページ=128トークン。比較対象は完全注意、選択型Quest、追い出し型RaaS。速度測定では1.5B、バッチ64、最大18k生成の合成デコード列を用い、全体デコード時間、トークン毎秒、各ステップ時間を測る。追加分析は4集合から各30問を集めたMixed120でΔ層配置と直近窓の感度を調べる。",
+   "datasets":["AIME-2024","AIME-2025","GPQA-Diamond","MATH500","Mixed120"],
+   "models":["DeepSeek-R1-Distill-Qwen-1.5B","DeepSeek-R1-Distill-Qwen-7B","DeepSeek-R1-Distill-Qwen-14B","DeepSeek-R1-Distill-Llama-8B"],
+   "baselines":["Full attention","Quest","RaaS"],
+   "metrics":["正答率","生成長","デコード時間","スループット","1ステップ順伝播時間"],
+   "scope":"実機GPU上の推論評価であり、主対象は蒸留DeepSeek-R1系列の数学・科学推論である。一般会話、コード生成、他アーキテクチャや他GPUへの一般化は未検証で、速度測定の主要な定量結果は特定の1.5Bモデル・バッチ64・長文合成デコード条件に基づく。"
+ },
+ "reservation":{"claim_id":"claim-175fe59944f6ca42687384fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
