@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T03:56:00+00:00",
-  "record_count": 38,
+  "updated_at": "2026-09-20T03:59:00+00:00",
+  "record_count": 47,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -521,6 +521,150 @@
         "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
       ],
       "title": "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism"
+    },
+    "arXiv:1706.02677": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1706.02677",
+      "identity_tokens": [
+        "arXiv:1706.02677"
+      ],
+      "reason": "Important distributed-training background, but image-classification-focused and outside the LLM systems scope for immediate Research.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/02-hardware-accelerators/2025-2506.17615-equarx-quantized-allreduce-xla.md",
+        "papers/inference/05-kv-cache-memory-management/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour"
+    },
+    "arXiv:1802.05668": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1802.05668",
+      "identity_tokens": [
+        "arXiv:1802.05668"
+      ],
+      "reason": "General neural-network compression work; useful historical background but not focused on LLM systems.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/02-hardware-accelerators/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md",
+        "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
+      ],
+      "title": "Model Compression via Distillation and Quantization"
+    },
+    "arXiv:2103.13630": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2103.13630",
+      "identity_tokens": [
+        "arXiv:2103.13630"
+      ],
+      "reason": "Broad neural-network quantization survey rather than an LLM-specific systems contribution.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/02-hardware-accelerators/2025-2506.17615-equarx-quantized-allreduce-xla.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md"
+      ],
+      "title": "A Survey of Quantization Methods for Efficient Neural Network Inference"
+    },
+    "arXiv:2106.08295": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.08295",
+      "identity_tokens": [
+        "arXiv:2106.08295"
+      ],
+      "reason": "Broad quantization background rather than a focused LLM inference-system paper.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
+      ],
+      "title": "A White Paper on Neural Network Quantization"
+    },
+    "arXiv:2110.07602": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.07602",
+      "identity_tokens": [
+        "arXiv:2110.07602"
+      ],
+      "reason": "Parameter-efficient tuning method rather than a training-system implementation.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md"
+      ],
+      "title": "P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks"
+    },
+    "arXiv:2203.01104": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.01104",
+      "identity_tokens": [
+        "arXiv:2203.01104"
+      ],
+      "reason": "Primarily a model-architecture contribution; relevant MoE background but lower systems-specific value.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+      ],
+      "title": "A Parameter-Efficient Mixture-of-Experts Architecture for Pre-trained Language Models"
+    },
+    "arXiv:2203.07259": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.07259",
+      "identity_tokens": [
+        "arXiv:2203.07259"
+      ],
+      "reason": "Model-pruning optimization with systems relevance, but lower immediate value than runtime/memory/serving papers.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md"
+      ],
+      "title": "The Optimal BERT Surgeon: Scalable and Accurate Second-Order Pruning for Large Language Models"
+    },
+    "arXiv:2210.02414": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.02414",
+      "identity_tokens": [
+        "arXiv:2210.02414"
+      ],
+      "reason": "Broad model technical report rather than a focused training/inference systems paper.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/02-hardware-accelerators/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+      ],
+      "title": "GLM-130B: An Open Bilingual Pre-trained Model"
+    },
+    "arXiv:2305.10427": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.10427",
+      "identity_tokens": [
+        "arXiv:2305.10427"
+      ],
+      "reason": "Task-specific machine-translation decoding acceleration; relevant precursor but lower priority than general LLM inference systems.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md"
+      ],
+      "title": "Accelerating Transformer Inference for Translation via Parallel Decoding"
     }
   }
 }
