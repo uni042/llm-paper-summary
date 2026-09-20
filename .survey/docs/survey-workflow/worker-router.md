@@ -228,4 +228,4 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 4. maintenance workflowの結果を確認し、可能なら完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false` と結果状態が耐久反映されたことまで確認する。
 5. 最終報告には非論文更新点に加え、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
 
-これは毎時 `:30` workerの24回に1回に相当する日次maintenanceとして扱う。maintenance実行の責任は08:30 JSTの `:30` workerに集約し、通常runでは定期maintenanceを発火させない。
+maintenance実行の責任は08:30 JSTの `:30` workerに集約する。通常runでは定期maintenanceを発火させず、旧run-countカウンタも実行条件に使わない。
