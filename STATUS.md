@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:45:02 JST**
+> 自動生成: **2026-09-20 12:45:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **73** |
+| 収録候補論文 | **72** |
 | 未claim Research job | **72** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-20 12:42:01 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **48** |
+| 最終検証済みResearch収録 | **09-20 12:45:53 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **73** |
+| canonical_id確認済みの一意な候補論文 | **72** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **73** |
+| 非終端Research job合計 | **72** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **7** | **2** | **0** | **1** | **0** | — |
+| Research | **18** | **8** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **17** | **8** | **3** | **0** | **1** | **0** | **5** |
+| 合計 | **18** | **9** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:45:53 JST** [research] `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-3f4b0e4a187439dd.json`
+  - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md`
 - **09-20 12:42:01 JST** [research] `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
   - job: `.survey/work-queue/jobs/job-research-abc92cd8a94f1144.json`
   - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
   - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
-- **09-20 11:47:29 JST** [research] `DOI:10.48550/arxiv.2302.01318` — Accelerating Large Language Model Decoding with Speculative Sampling
-  - job: `.survey/work-queue/jobs/job-research-954a443cf32500d8.json`
-  - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6500850523776f2b702f4a6d.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md`
 
 ### Audit
 
@@ -112,7 +112,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **7件** / 検証済み成功: **2件** / result照合済み非成功: **5件** / 個別result未照合: **0件**
+- immutable submission: **8件** / 検証済み成功: **3件** / result照合済み非成功: **5件** / 個別result未照合: **0件**
+- **成功** `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-3f4b0e4a187439dd.json`
+  - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4.json` (job `job-research-3f4b0e4a187439dd`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4.json` (`ok=false`)
 - **成功** `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
@@ -154,10 +159,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:42:32 JST** / heartbeat: **—** / lease expiry: **09-20 14:12:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3f4b0e4a187439dd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -177,7 +180,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **73** |
+| ready | **72** |
 
 ### 候補の重複・識別情報欠損
 
@@ -197,7 +200,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **799** |
+| inference/training/survey配下の論文Markdown実体 | **800** |
 
 ### immutable submissionの未照合
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:42:03.669087+00:00",
+  "updated_at": "2026-09-20T03:45:56.475834+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:42:03.669087+00:00",
+      "last_recorded_at": "2026-09-20T03:45:56.475834+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 335,
+        "research_completed": 336,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 46,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35436466106:1",
-          "recorded_at": "2026-09-19T10:09:28.543125+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35436466106",
-            "run_attempt": "1",
-            "source_sha": "201a915346de02436383096bb18398752c796907"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35437731736:1",
           "recorded_at": "2026-09-19T10:34:08.386666+00:00",
@@ -19594,6 +19580,20 @@
             "run_id": "35487241518",
             "run_attempt": "1",
             "source_sha": "41d860cc1becf92d9167515c45213316fb669bef"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35487413205:1",
+          "recorded_at": "2026-09-20T03:45:56.475834+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35487413205",
+            "run_attempt": "1",
+            "source_sha": "8c922121cb9837781027d4be5c71234dd19c5285"
           },
           "signals": [
             "research_completed"
@@ -24190,6 +24190,14 @@
           "type": "research",
           "canonical_id": "arXiv:2404.14469",
           "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-3f4b0e4a187439dd",
+          "type": "research",
+          "canonical_id": "arXiv:2407.11550",
+          "title": "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
           "from": "ready",
           "to": "completed"
         }
