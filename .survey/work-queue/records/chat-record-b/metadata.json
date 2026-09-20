@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-36a9cdcc5175155fa19ebfd4",
-  "job_id": "job-research-3f4b0e4a187439dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36a9cdcc5175155fa19ebfd4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-36a9cdcc5175155fa19ebfd4","job_id":"job-research-3f4b0e4a187439dd","data":{"canonical_id":"arXiv:2407.11550","arxiv_id":"2407.11550","title":"Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference","list_summary":"注意ヘッドごとの集中度に応じて同一層内のKV保持予算を再配分し、既存Top-k圧縮の総容量を変えずにeviction損失を下げる手法。","summary":"従来のKVキャッシュevictionは各注意ヘッドへ同じ保持数を割り当てるため、少数位置へ注意が集中するヘッドでは予算を浪費し、分散したヘッドでは重要KVを捨てやすい。Ada-KVはeviction前後の注意出力のL1差に上界を導き、その上界を最小化するには層内全ヘッドの注意重みから総予算B個の最大値を選び、各ヘッドが何個選ばれたかをその保持予算にすればよいと示す。SnapKVやPyramidへ追加でき、質問既知・未知の双方で品質を改善し、可変長FlashAttentionとflattened cache、CUDA kernelにより元手法と同等のメモリ・復号効率を維持する。","source":"https://arxiv.org/abs/2407.11550","sources":["https://arxiv.org/abs/2407.11550","https://arxiv.org/pdf/2407.11550","https://github.com/FFY0/AdaKV"],"authors":["Yuan Feng","Junlin Lv","Yukun Cao","Xike Xie","S. Kevin Zhou"],"published":"2024-07-16","publication":"NeurIPS 2025","publication_type":"conference","publication_status":"NeurIPS 2025; arXiv v5 dated 2025-10-16","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"topics":["KVキャッシュ圧縮","適応的予算配分","長文推論","注意ヘッド"],"implementation":"公開コードFFY0/AdaKV。層内ヘッドごとの可変KV長をflattened cache layoutへ格納し、custom CUDA kernelとvariable-length FlashAttentionで更新・復号する。GQAでは同一KV group内のattention weight平均を選択基準にする。","code":"https://github.com/FFY0/AdaKV","hardware_evaluation":"Llama-3.1-8B/70BとMistral-7B系で長文評価を行い、FlashAttention-2を用いた最大448K contextまでのpeak memoryとdecoding latencyを比較する。","quality_effect":"損失ありKV evictionの品質低下を、同一総キャッシュ予算のままヘッド間予算を適応化して緩和する。特に質問を圧縮時に使えないquestion-agnostic条件で改善が大きい。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2404.14469","arxiv_id":"2404.14469"},{"canonical_id":"arXiv:2306.14048","arxiv_id":"2306.14048"},{"canonical_id":"arXiv:2307.03172","arxiv_id":"2307.03172"},{"canonical_id":"arXiv:2105.03011","arxiv_id":"2105.03011"},{"canonical_id":"arXiv:2104.05938","arxiv_id":"2104.05938"},{"canonical_id":"arXiv:2306.14893","arxiv_id":"2306.14893"}],"references_checked_at":"2026-09-20","references_source":"https://arxiv.org/pdf/2407.11550","references_total":67},"reservation":{"claim_id":"claim-36a9cdcc5175155fa19ebfd4","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
