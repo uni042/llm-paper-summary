@@ -17,5 +17,16 @@
   "created_at": "2026-09-19T17:04:30+00:00",
   "completed_at": "2026-09-20T03:33:46+00:00",
   "blocker": "Primary-source retrieval blocked in this run. The official arXiv abstract page for arXiv:2608.06989 was accessible and verified title/authors/date/abstract, but materially distinct official full-text routes https://arxiv.org/html/2608.06989, https://arxiv.org/pdf/2608.06989, and https://arxiv.org/e-print/2608.06989 each returned a retrieval DisabledError in the available web runtime. Search indexing exposed third-party mirrors/reviews, but those are not acceptable substitutes for full primary-source reading, so no five-slot scientific content was inferred from them. Retry the same paper through an official arXiv full-text/PDF/e-print route in a later run.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-20T03:33:46+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-20T03:33:46+00:00",
+      "reason": "Primary-source retrieval blocked in this run. The official arXiv abstract page for arXiv:2608.06989 was accessible and verified title/authors/date/abstract, but materially distinct official full-text routes https://arxiv.org/html/2608.06989, https://arxiv.org/pdf/2608.06989, and https://arxiv.org/e-print/2608.06989 each returned a retrieval DisabledError in the available web runtime. Search indexing exposed third-party mirrors/reviews, but those are not acceptable substitutes for full primary-source reading, so no five-slot scientific content was inferred from them. Retry the same paper through an official arXiv full-text/PDF/e-print route in a later run."
+    }
+  ],
+  "last_blocked_at": "2026-09-20T03:33:46+00:00",
+  "retry_not_before": "2026-09-20T04:54:17+00:00"
 }

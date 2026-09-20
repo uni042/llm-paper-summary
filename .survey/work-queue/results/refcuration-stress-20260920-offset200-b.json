@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission": "work-queue/submissions/refcuration-stress-20260920-offset200-b.json",
+  "ok": false,
+  "error": "DiscoveryPrecheckError: Discovery precheck run_key does not match this Discovery round.",
+  "error_code": "discovery_precheck_required",
+  "retryable": true,
+  "next_action": "Create one schema-v3 Discovery precheck request for a fixed provider search result URL/API query. The precheck itself must fetch page 1, then page 2, and later pages of that SAME result set until the unseen buffer is ready or the provider is exhausted. Then create a NEW immutable Discovery submission referencing that final result.",
+  "recovery_steps": [
+    "Do not edit or overwrite the failed Discovery submission.",
+    "Create .survey/work-queue/discovery-precheck/requests/<unique>.json with schema_version=3, operation 'precheck_discovery_candidates', request_id, collector_id, the same run_key/axis, provider, and one fixed source_url/API query.",
+    "Do not put hand-picked records[] in a schema-v3 request and do not change query/date/topic to emulate pagination.",
+    "Wait for .survey/work-queue/discovery-precheck/results/<same-name>.json with ok=true.",
+    "The workflow result must have evaluation_allowed=true and decision=READY_FOR_EVALUATION.",
+    "Evaluate only records in that result's results[] array; filtered records must not be re-added.",
+    "Create a NEW submit_discovery_round submission and set discovery_precheck.request_id, discovery_precheck.result_path, and discovery_precheck.receipt from that result."
+  ]
+}
