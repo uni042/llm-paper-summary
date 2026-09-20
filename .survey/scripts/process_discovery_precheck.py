@@ -5,7 +5,7 @@ Schema v3 is the production path: a request supplies one fixed provider search-r
 URL/API query, and this processor drives discovery_search_filter.collect_until_unseen()
 across page 1, page 2, ... of that SAME result set before candidate evaluation.
 
-Schema v2 remains readable only for already-created transitional requests.
+Historical schema-v1/v2 results remain readable by queue_worker for old submissions, but this processor accepts only new schema-v3 requests.
 """
 from __future__ import annotations
 
@@ -118,51 +118,13 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def _validate_v2_request(request: dict[str, Any]) -> dict[str, Any]:
-    out = _base_fields(request)
-    records = request.get("records")
-    if not isinstance(records, list) or any(not isinstance(record, dict) for record in records):
-        raise DiscoveryPrecheckRequestError("schema-v2 records must be a list of objects")
-    if len(records) > 100:
-        raise DiscoveryPrecheckRequestError("schema-v2 records may contain at most 100 search results")
-    provider_has_more = request.get("provider_has_more")
-    if not isinstance(provider_has_more, bool):
-        raise DiscoveryPrecheckRequestError("schema-v2 provider_has_more must be an explicit boolean")
-
-    previous_request_id = request.get("previous_request_id")
-    previous_receipt = request.get("previous_receipt")
-    if previous_request_id is None and previous_receipt is None:
-        previous_request_id = previous_receipt = None
-    elif previous_request_id is None or previous_receipt is None:
-        raise DiscoveryPrecheckRequestError(
-            "schema-v2 previous_request_id and previous_receipt must be provided together"
-        )
-    else:
-        previous_request_id = _safe_id(previous_request_id, "previous_request_id")
-        previous_receipt = str(previous_receipt or "").strip()
-        if not previous_receipt.startswith("sha256:"):
-            raise DiscoveryPrecheckRequestError("previous_receipt must be a sha256 receipt")
-    out.update(
-        {
-            "schema_version": 2,
-            "records": records,
-            "provider_has_more": provider_has_more,
-            "previous_request_id": previous_request_id,
-            "previous_receipt": previous_receipt,
-        }
-    )
-    return out
-
-
 def _validate_request(request: dict[str, Any]) -> dict[str, Any]:
     version = request.get("schema_version")
-    if isinstance(version, bool) or not isinstance(version, int):
-        raise DiscoveryPrecheckRequestError("schema_version must be an integer")
-    if version >= 3:
-        return _validate_v3_request(request)
-    if version == 2:
-        return _validate_v2_request(request)
-    raise DiscoveryPrecheckRequestError("schema_version must be >= 2")
+    if version != SCHEMA_VERSION:
+        raise DiscoveryPrecheckRequestError(
+            f"schema_version must be exactly {SCHEMA_VERSION}; legacy request schemas are no longer executable"
+        )
+    return _validate_v3_request(request)
 
 
 def _manifest_source_commit(snapshot_dir: Path) -> str | None:
@@ -285,138 +247,6 @@ def _process_v3(
     }
 
 
-def _load_previous_v2(request_path: Path, request: dict[str, Any]) -> dict[str, Any] | None:
-    previous_request_id = request["previous_request_id"]
-    if previous_request_id is None:
-        return None
-    path = _results_dir(request_path) / f"{previous_request_id}.json"
-    if not path.is_file():
-        raise DiscoveryPrecheckRequestError(f"previous precheck result does not exist yet: {previous_request_id}")
-    previous = _read_object(path)
-    if previous.get("ok") is not True or previous.get("operation") != OPERATION:
-        raise DiscoveryPrecheckRequestError("previous precheck result is not successful")
-    if int(previous.get("schema_version") or 0) != 2:
-        raise DiscoveryPrecheckRequestError("schema-v2 request may only chain from schema-v2 result")
-    if str(previous.get("request_id") or "") != previous_request_id:
-        raise DiscoveryPrecheckRequestError("previous result request_id mismatch")
-    if str(previous.get("receipt") or "") != request["previous_receipt"]:
-        raise DiscoveryPrecheckRequestError("previous precheck receipt mismatch")
-    for field in ("collector_id", "run_key", "axis"):
-        if str(previous.get(field) or "") != str(request[field]):
-            raise DiscoveryPrecheckRequestError(f"previous result {field} mismatch")
-    if previous.get("evaluation_allowed") is not False or previous.get("decision") != "CONTINUE_FETCH":
-        raise DiscoveryPrecheckRequestError("previous schema-v2 result is already terminal")
-    return previous
-
-
-def _process_v2(
-    request_path: Path,
-    request: dict[str, Any],
-    *,
-    snapshot_dir: Path,
-    rejection_ledger_path: Path,
-) -> dict[str, Any]:
-    """Compatibility for already-created transitional page-batch requests."""
-    previous = _load_previous_v2(request_path, request)
-    prior_results = list(previous.get("results") or []) if previous else []
-    prior_filtered = discovery_search_filter.filter_search_batch(
-        prior_results,
-        snapshot_dir=snapshot_dir,
-        rejection_ledger_path=rejection_ledger_path,
-    )
-    current_filtered = discovery_search_filter.filter_search_batch(
-        request["records"],
-        snapshot_dir=snapshot_dir,
-        rejection_ledger_path=rejection_ledger_path,
-    )
-    combined = discovery_search_filter.filter_search_batch(
-        list(prior_filtered["results"]) + list(current_filtered["results"]),
-        snapshot_dir=snapshot_dir,
-        rejection_ledger_path=rejection_ledger_path,
-    )
-    results = list(combined["results"])
-    pages_processed = int(previous.get("pages_processed") or 0) + 1 if previous else 1
-    target_reached = len(results) >= request["target_unseen"]
-    provider_exhausted = not request["provider_has_more"]
-    max_pages_reached = pages_processed >= MAX_PAGES
-    evaluation_allowed = target_reached or provider_exhausted or max_pages_reached
-    decision = "READY_FOR_EVALUATION" if evaluation_allowed else "CONTINUE_FETCH"
-    if target_reached:
-        stop_reason = "TARGET_REACHED"
-    elif provider_exhausted:
-        stop_reason = "PROVIDER_EXHAUSTED"
-    elif max_pages_reached:
-        stop_reason = "MAX_PAGES_REACHED"
-    else:
-        stop_reason = None
-    allowed = _allowed_records(results)
-    source_commit = _manifest_source_commit(snapshot_dir)
-    receipt = _receipt(
-        {
-            "schema_version": 2,
-            "request_id": request["request_id"],
-            "collector_id": request["collector_id"],
-            "previous_request_id": request["previous_request_id"],
-            "previous_receipt": request["previous_receipt"],
-            "run_key": request["run_key"],
-            "axis": request["axis"],
-            "pages_processed": pages_processed,
-            "evaluation_allowed": evaluation_allowed,
-            "snapshot_source_commit": source_commit,
-            "allowed_identity_tokens": [row["identity_tokens"] for row in allowed],
-        }
-    )
-    return {
-        "schema_version": 2,
-        "operation": OPERATION,
-        "ok": True,
-        "request_id": request["request_id"],
-        "collector_id": request["collector_id"],
-        "previous_request_id": request["previous_request_id"],
-        "run_key": request["run_key"],
-        "axis": request["axis"],
-        "target_unseen": request["target_unseen"],
-        "pages_processed": pages_processed,
-        "provider_has_more": request["provider_has_more"],
-        "target_reached": target_reached,
-        "provider_exhausted": provider_exhausted,
-        "max_pages_reached": max_pages_reached,
-        "stop_reason": stop_reason,
-        "evaluation_allowed": evaluation_allowed,
-        "decision": decision,
-        "snapshot_source_commit": source_commit,
-        "raw_search_result_count": (int(previous.get("raw_search_result_count") or 0) if previous else 0)
-        + len(request["records"]),
-        "retrieval_duplicate_filtered_count": (
-            int(previous.get("retrieval_duplicate_filtered_count") or 0) if previous else 0
-        ) + int(current_filtered["retrieval_duplicate_filtered_count"]),
-        "represented_paper_match_filtered_count": (
-            int(previous.get("represented_paper_match_filtered_count") or 0) if previous else 0
-        ) + int(current_filtered["represented_paper_match_filtered_count"]),
-        "rejection_ledger_filtered_count": (
-            int(previous.get("rejection_ledger_filtered_count") or 0) if previous else 0
-        ) + int(current_filtered["rejection_ledger_filtered_count"]),
-        "intra_batch_duplicate_filtered_count": (
-            int(previous.get("intra_batch_duplicate_filtered_count") or 0) if previous else 0
-        ) + int(current_filtered["intra_batch_duplicate_filtered_count"]),
-        "cross_page_duplicate_filtered_count": (
-            int(previous.get("cross_page_duplicate_filtered_count") or 0) if previous else 0
-        ) + len(prior_filtered["results"]) + len(current_filtered["results"]) - len(results),
-        "unseen_result_count": len(results),
-        "results": results,
-        "allowed_records": allowed,
-        "receipt": receipt,
-        "next_action": (
-            "Legacy schema-v2 result. Do not use this path for new Discovery work. "
-            + (
-                "Evaluate only results[] and migrate the next round to schema v3."
-                if evaluation_allowed
-                else "Finish this already-created chain only; new rounds must use schema v3 source_url pagination."
-            )
-        ),
-    }
-
-
 def process_request(
     request_path: Path,
     *,
@@ -427,14 +257,7 @@ def process_request(
     request = _validate_request(_read_object(request_path))
     snapshot_dir = Path(snapshot_dir)
     rejection_ledger_path = Path(rejection_ledger_path)
-    if request["schema_version"] >= 3:
-        return _process_v3(
-            request,
-            snapshot_dir=snapshot_dir,
-            rejection_ledger_path=rejection_ledger_path,
-        )
-    return _process_v2(
-        request_path,
+    return _process_v3(
         request,
         snapshot_dir=snapshot_dir,
         rejection_ledger_path=rejection_ledger_path,
