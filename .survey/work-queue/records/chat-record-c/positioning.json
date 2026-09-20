@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5bbc7a536961b780dedd56b5",
-  "job_id": "job-research-76aff8aad6f29ebc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5bbc7a536961b780dedd56b5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5bbc7a536961b780dedd56b5","job_id":"job-research-76aff8aad6f29ebc","data":{"limitations":"全評価が単一A100 40GBで、複数GPU・分散推論や最新GPUでの効果は不明である。主な実験は同一プロンプトから複数系列を生成する条件で、異なるプロンプト混在では系列長差が大きくなりBASS-PADとSPLITの優劣が変わり得る。最大デコードGPU利用率も15.8%に留まり、プリフィル70%超との差が大きい。ドラフトモデル選択は受理率だけで決まらず、ドラフト自身の遅延との調整が必要である。","differences":"従来の単一系列投機的デコードはドラフト長方向だけに並列性を作る。BASSは系列バッチ方向も同時に使いながら、系列ごとの棄却位置を独立に保つ点が異なる。SpecInferの木状候補やMedusa/EAGLEのドラフト生成法とは直交し、BASSの中心は不規則長注意を効率的に処理するシステム機構である。Suらのバッチ投機方式が棄却トークンをマスクして系列長を揃えるのに対し、BASSは棄却分を保持せず系列を異なる長さで進める。","implementation_status":"論文実験は改変DeepSpeedと専用CUDA/CUTLASSカーネルで実装される。DeepSpeed、vLLM、CUTLASS自体の公開URLは示されるが、BASS固有実装の公開リポジトリは論文本文では確認できない。","research_positioning":"投機的デコードのアルゴリズム研究とGPUカーネル最適化の中間に位置する。受理規則そのものを近似せず、複数系列を扱ったときに発生する不規則KV長を注意カーネル側で解消することで、低遅延と高いGPU利用率を両立させる。サービスが同一要求に複数候補を返す用途では、単一系列のトークン速度だけでなく時間制約内に完成する候補数を増やし、最終的な正解機会まで改善できることを示した点も重要である。"},"reservation":{"claim_id":"claim-5bbc7a536961b780dedd56b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
