@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:12:25 JST**
+> 自動生成: **2026-09-20 20:13:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -157,7 +157,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2510.19366` — MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 20:09:19 JST** / heartbeat: **—** / lease expiry: **09-20 21:39:19 JST**
+  - claim: **09-20 20:12:57 JST** / heartbeat: **—** / lease expiry: **09-20 21:42:57 JST**
   - evidence: `.survey/work-queue/claims/job-research-5ce9880c62119377.json`
 
 #### Audit
