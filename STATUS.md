@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:09:41 JST**
+> 自動生成: **2026-09-20 19:10:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **96** |
 | 未claim Research job | **95** |
 | 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 19:05:05 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-20 19:05:05 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **9** | **6** | **0** | **1** | **0** | — |
+| Research | **36** | **9** | **6** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **10** | **7** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **10** | **7** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **9件** / 検証済み成功: **6件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
+- immutable submission: **9件** / 検証済み成功: **6件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -143,8 +143,7 @@
   - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-726aa6f9d7bb4140731a500b.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-a1f91ed5c60955cb4265b431.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-a1f91ed5c60955cb4265b431.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json` (job `job-research-2e7cd1c4e1dc851d`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json` (job `job-research-c0742ec707ffbbe8`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-bb698348ca635e022360ff70.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json` (job `job-research-d5278ec0af97bd4e`, failure_class `state_or_transport_guard`)
@@ -187,7 +186,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 19:05:47 JST** / heartbeat: **—** / lease expiry: **09-20 20:35:47 JST**
+  - claim: **09-20 19:09:50 JST** / heartbeat: **—** / lease expiry: **09-20 20:39:50 JST**
   - evidence: `.survey/work-queue/claims/job-research-2e7cd1c4e1dc851d.json`
 
 #### Audit
@@ -236,8 +235,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **763** |
-| └ Research | **577** |
+| 成功result未照合のimmutable submission | **764** |
+| └ Research | **578** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
