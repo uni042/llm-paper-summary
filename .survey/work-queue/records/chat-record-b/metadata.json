@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-4820a43b7a07e3bffb732f02",
-  "job_id": "job-research-6e90b18bc4767f7c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4820a43b7a07e3bffb732f02",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4820a43b7a07e3bffb732f02","job_id":"job-research-6e90b18bc4767f7c",
+  "data":{"canonical_id":"arXiv:2401.18079","arxiv_id":"2401.18079","doi":"10.48550/arXiv.2401.18079","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization","summary":"KVQuantは、長文脈推論でモデル重み以上に支配的になる鍵・値キャッシュのメモリ量を、2〜4ビットの超低精度量子化で削減する方式である。Keyのチャネル別・RoPE適用前量子化、感度重み付き非一様量子化、ベクトル別の密・疎外れ値分離、注意シンク保護を組み合わせる。3ビット＋1%外れ値ではLLaMA/Llama-2/Llama-3/Mistral群でfp16比のパープレキシティ悪化を0.1未満に抑えつつ約4.8倍のKVメモリ削減を達成し、2ビットではLLaMA-7Bの100万トークンを単一A100-80GB、1000万トークンを8 GPUで保持可能と見積もる。専用CUDAカーネルでは4ビットKey/Value行列ベクトル積をfp16比最大約1.7倍高速化する。","list_summary":"Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。","authors":["Coleman Hooper","Sehoon Kim","Hiva Mohammadzadeh","Michael W. Mahoney","Yakun Sophia Shao","Kurt Keutzer","Amir Gholami"],"authors_affiliations":"University of California, Berkeley; ICSI; LBNL","published":"2024-01-31","publication":"NeurIPS 2024","publication_type":"国際会議論文","publication_status":"Published; arXiv v6","lineage":"KV cache quantization / long-context inference / activation compression","topics":["KVキャッシュ量子化","長文脈推論","非一様量子化","外れ値分離","CUDAカーネル"],"importance":"KVキャッシュのKeyとValueで異なる外れ値構造を明示的に利用し、サブ4ビット領域で精度と実装速度を両立した代表的なKV量子化研究。","implementation":"公式SqueezeAILab/KVQuant実装は量子化・長文脈評価・専用CUDAカーネルを公開している。","hardware_evaluation":"カーネル遅延はA6000 GPU、長文脈容量はA100-80GB単体および8 GPU構成を対象に評価・見積もりする。","quality_effect":"3ビット＋1%外れ値では主要モデル群でfp16比パープレキシティ悪化0.1未満。2ビットでは一部RULERタスクの低下が大きく、圧縮率を上げるほど長距離検索品質の劣化が現れる。","source":"https://arxiv.org/abs/2401.18079","sources":["https://arxiv.org/abs/2401.18079","https://ar5iv.labs.arxiv.org/html/2401.18079","https://github.com/SqueezeAILab/KVQuant"],"code":"https://github.com/SqueezeAILab/KVQuant","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2308.14508","arxiv_id":"2308.14508"},{"canonical_id":"arXiv:2306.15595","arxiv_id":"2306.15595"},{"canonical_id":"arXiv:2309.12307","arxiv_id":"2309.12307"},{"canonical_id":"arXiv:2208.07339","arxiv_id":"2208.07339"},{"canonical_id":"arXiv:2305.14314","arxiv_id":"2305.14314"},{"canonical_id":"arXiv:2306.03078","arxiv_id":"2306.03078"},{"canonical_id":"arXiv:2310.01801","arxiv_id":"2310.01801"},{"canonical_id":"arXiv:2308.16137","arxiv_id":"2308.16137"},{"canonical_id":"arXiv:2306.07629","arxiv_id":"2306.07629"},{"canonical_id":"arXiv:2310.06825","arxiv_id":"2310.06825"}],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":45},
+  "reservation":{"claim_id":"claim-4820a43b7a07e3bffb732f02","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
