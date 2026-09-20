@@ -2,83 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-3bb75bb690b745e4b4b44fd7",
-  "job_id": "job-research-76aff8aad6f29ebc",
-  "data": {
-    "canonical_id": "arXiv:2404.15778",
-    "arxiv_id": "2404.15778",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "BASS: Batched Attention-optimized Speculative Sampling",
-    "summary": "通常の投機的デコードは単一系列では低遅延だが、複数系列を単純にまとめると系列ごとの棄却位置が異なるため、最初の棄却へ全系列を揃えるか、不規則長テンソルを非効率に扱う必要がある。BASSは各系列が異なる数のドラフトトークンを受理したままバッチ処理を続けるため、注意機構だけを不規則長対応に作り替える。最大長まで埋めるBASS-PADと系列別カーネルを並列起動するBASS-SPLITを用意し、さらに直前の受理数からドラフト長を動的調整する。単一A100上でOPT、CodeGen、7.8Bコードモデルを評価し、通常デコードや単一系列投機より低遅延かつ高いGPU利用率を示す。",
-    "list_summary": "系列ごとに異なる投機受理長を保ったまま注意計算をバッチ化し、動的ドラフト長調整で複数応答の遅延とGPU利用率を改善する方式。",
-    "authors": [
-      "Haifeng Qian",
-      "Sujan Kumar Gonugondla",
-      "Sungsoo Ha",
-      "Mingyue Shang",
-      "Sanjay Krishna Gouda",
-      "Ramesh Nallapati",
-      "Sudipta Sengupta",
-      "Xiaofei Ma",
-      "Anoop Deoras"
-    ],
-    "authors_affiliations": "AWS AI Labs / AWS NGDE / Amazon AGI",
-    "published": "2024-04-24",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "投機的デコード・バッチ推論",
-    "topics": [
-      "speculative decoding",
-      "batched inference",
-      "attention kernels",
-      "GPU utilization"
-    ],
-    "importance": "単一系列中心だった投機的デコードを実サービスの複数系列生成へ拡張し、不規則長注意の実装選択まで評価する。",
-    "hardware_evaluation": "全実験を単一NVIDIA A100 40GB GPUで実施。",
-    "hardware_details": "NVIDIA A100 40GB。",
-    "quality_effect": "投機的サンプリングは主モデル分布を保つ方式で、XSumのROUGE-2は通常デコードとほぼ同等。時間制約付きHumanEvalでは複数候補を返せることでPass@First 43%、Pass@Finished 61%まで向上。",
-    "source": "https://arxiv.org/abs/2404.15778",
-    "sources": [
-      "https://arxiv.org/abs/2404.15778",
-      "https://arxiv.org/pdf/2404.15778"
-    ],
-    "code": null,
-    "implementation": "改変DeepSpeed上に不規則長注意CUDAカーネル、INT8量子化・融合カーネル、動的ドラフト長制御を実装。論文は専用コード公開URLを示していない。",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.10774",
-        "arxiv_id": "2401.10774"
-      },
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "arxiv_id": "2302.01318"
-      },
-      {
-        "canonical_id": "arXiv:2305.09781",
-        "arxiv_id": "2305.09781"
-      },
-      {
-        "canonical_id": "arXiv:2310.18813",
-        "arxiv_id": "2310.18813"
-      },
-      {
-        "canonical_id": "arXiv:2401.15077",
-        "arxiv_id": "2401.15077"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 5
-  },
+  "attempt_id": "attempt-0bc2ef1f687d4e14b8fcddf2",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3bb75bb690b745e4b4b44fd7",
+    "claim_id": "claim-0bc2ef1f687d4e14b8fcddf2",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

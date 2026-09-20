@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3bb75bb690b745e4b4b44fd7",
-  "job_id": "job-research-76aff8aad6f29ebc",
-  "data": {
-    "overview": "BASSは三つの主モデルで通常デコードより低い系列遅延を示し、独自7.8Bモデルでは最初の系列を最大3.23倍、全系列平均を最大2.94倍高速化した。バッチ8・INT8では平均5.8ms/トークンで通常デコード12.3msに対し2.15倍、約1.1Kトークン/秒を達成する。GPUピーク利用率は15.8%で、通常デコードの最高値の3倍超、単一系列投機の約10倍と報告する。2.5秒のHumanEval時間制約では通常デコードが完了できない条件でも複数候補を返し、Pass@First 43%、Pass@Finished 61%まで上げる。",
-    "key_results": [
-      {
-        "metric": "平均1トークン遅延",
-        "value": "5.8 ms、2.15倍高速化",
-        "baseline": "通常デコード12.3 ms",
-        "condition": "7.8Bコードモデル、INT8、バッチ8、310Mドラフト、HumanEval",
-        "interpretation": "バッチ方向とドラフト方向の並列性を同時に使い、個別系列の低遅延を保ちながらスループットを増やす。"
-      },
-      {
-        "metric": "最初の系列の高速化",
-        "value": "最大3.23倍",
-        "baseline": "DeepSpeed通常デコード",
-        "condition": "7.8Bコードモデル、BF16、バッチ4、HumanEval",
-        "interpretation": "複数候補を生成してもユーザーへ最初の結果を返す時間を短縮できる。"
-      },
-      {
-        "metric": "時間制約内のコード正解率",
-        "value": "Pass@First 43%、Pass@Finished 61%",
-        "baseline": "単一系列投機は両指標とも30%台、通常デコードは2.5秒内に完了せず",
-        "condition": "7.8Bモデル、HumanEval、256トークン、2.5秒予算",
-        "interpretation": "高速化で同じ時間内に複数候補を完成させられるため、分布を変えずともサービス水準の正解機会が増える。"
-      },
-      {
-        "metric": "GPUピーク利用率",
-        "value": "15.8%",
-        "baseline": "通常デコード最高値の3倍超、単一系列投機の約10倍",
-        "condition": "論文のデコード評価、単一A100",
-        "interpretation": "系列とドラフトの二軸並列化がメモリ帯域律速の空き演算資源をより多く使う。"
-      }
-    ],
-    "negative_results": "バッチが大きくなるほど最初と最後に終わる系列の遅延差が広がり、最後の系列では高速化が小さくなる。BASS-SPLITは評価した同一プロンプト条件でカーネル起動費がゼロ埋めの無駄演算を上回りBASS-PADより遅い。大きく高精度なドラフトモデルは受理率が高くてもドラフト生成自体が遅く、全体遅延を悪化させる場合がある。デコードGPU利用率15.8%は改善しているが、プリフィルの70%超に比べなお低い。",
-    "interpretation": "投機的デコードの利益は主モデルが複数候補を一括検証して重み読出しを償却することにある。BASSは系列ごとの棄却位置を独立にすることでバッチ化による受理率低下を避け、注意だけを不規則長対応にして他層では通常バッチの重み共有を残す。ドラフトモデルは単体品質より主モデルとの一致率と生成費の積で選ぶ必要があり、動的ドラフト長はその一致度の時間変動へ追随する。",
-    "quality_impact": "投機的サンプリングは主モデルのサンプリング分布を保つため、XSumのROUGE-2は通常デコードとほぼ同等である。HumanEvalのPass@Batch差も同じバッチ条件では概ね小さく、時間制約評価の品質向上は近似による品質変更ではなく、制限時間内により多くの候補を生成・順位付けできることから生じる。"
-  },
+  "attempt_id": "attempt-0bc2ef1f687d4e14b8fcddf2",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3bb75bb690b745e4b4b44fd7",
+    "claim_id": "claim-0bc2ef1f687d4e14b8fcddf2",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

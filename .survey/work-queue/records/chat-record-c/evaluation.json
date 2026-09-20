@@ -2,41 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3bb75bb690b745e4b4b44fd7",
-  "job_id": "job-research-76aff8aad6f29ebc",
-  "data": {
-    "hardware": "全実験は単一NVIDIA A100 40GB GPU。",
-    "software": "改変DeepSpeedを主実装とし、通常デコード比較にDeepSpeedとvLLM 0.3.0を使用。INT8ではCUTLASS系INT8→INT32行列積と融合量子化カーネルを利用。",
-    "methodology": "OPT 13B+OPT 125M/350MをXSum 11,334例・1-shot・128生成トークン・ROUGE-2で評価。CodeGen-Mono 16B+350Mと独自7.8B+310M/510M/1BをHumanEval 164例・256生成トークン・Pass@Batch等で評価する。通常デコード、vLLM、単一系列投機、BASSを比較し、バッチごとの最初・最後・平均の1トークン遅延、GPU利用率、時間制約2.5秒内の正解率を測る。BASS-PAD対SPLITと固定対動的ドラフト長もアブレーションする。",
-    "scope": "単一A100での実機評価で、複数系列生成の遅延と利用率を詳細に測る。複数GPU分散、最新世代GPU、連続バッチングとの統合は評価していない。同一プロンプトから複数候補を作る条件が中心で、異なるプロンプト混在への適用可能性は述べるが詳細実験はない。",
-    "models": [
-      "OPT 13B",
-      "CodeGen-Mono 16B",
-      "custom 7.8B code model"
-    ],
-    "datasets_benchmarks": [
-      "XSum",
-      "HumanEval"
-    ],
-    "baselines": [
-      "DeepSpeed regular decoding",
-      "vLLM 0.3.0 regular decoding",
-      "single-sequence speculative decoding",
-      "BASS-SPLIT",
-      "fixed draft length"
-    ],
-    "metrics": [
-      "per-token latency",
-      "speedup",
-      "ROUGE-2",
-      "Pass@Batch",
-      "Pass@First",
-      "Pass@Finished",
-      "GPU utilization"
-    ]
-  },
+  "attempt_id": "attempt-0bc2ef1f687d4e14b8fcddf2",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3bb75bb690b745e4b4b44fd7",
+    "claim_id": "claim-0bc2ef1f687d4e14b8fcddf2",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
