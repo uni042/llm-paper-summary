@@ -1,16 +1,51 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-073e43ba7e8010937d87f5f7","job_id":"job-research-2ce5fda4ee4799b0",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0909991ec40a7b696d97ff81",
+  "job_id": "job-research-2ce5fda4ee4799b0",
   "data": {
-    "evaluation_summary":"A100 80GB実機でYi-6B、Llama-2-7B、Llama-3-8Bを用い、カーネル単体とSarathi-Serve統合後の端から端までのサービングを評価する。注意単体では1000超のハイブリッドバッチを走査し、文脈長4K〜20K、プリフィルチャンク512〜2Kを変える。比較対象はFlashAttention直列、CUDAストリーム並列、HFuseによるwarp融合、FlashInfer直列・一括処理。端から端では元のvLLMとSarathi-Serveを比較し、オフライン処理量とオンラインTTFT・TBT・要求完了遅延を測る。",
-    "scope":"実機評価であり、Yi-6BはA100 1基、Llama-2-7BとLlama-3-8BはA100 2基のテンソル並列。長文・ハイブリッドバッチが中心で、注意が直列実行時間の20%以上を占める条件を注意単体評価の対象とする。Hopper世代とFlashAttention-3への拡張は将来課題。",
-    "hardware":["NVIDIA A100 80GB 1基（Yi-6B）","NVIDIA A100 80GB 2基・テンソル並列（Llama-2-7B、Llama-3-8B）","Ubuntu 22.04 / CUDA 12.4 / PyTorch 2.4"],
-    "models":["Yi-6B","Llama-2-7B","Llama-3-8B"],
-    "datasets":["arXiv-Summarization由来ワークロード","内部企業ワークロード"],
-    "workload":"オンライン評価は各2048要求、文脈長4K〜32K。内部ワークロードは平均10.5Kトークン、arXiv系は平均9.5K。到着はポアソン分布でシステム容量付近まで負荷を上げる。オフラインは16Kトークンの長文要求をYi-6Bで1000件、Llama-2-7B/Llama-3-8Bで各2000件処理する。",
-    "baselines":["FlashAttention 2.6.1のプリフィル・デコード直列実行","FlashAttentionを別CUDAストリームで並列実行","HFuseによるFlashAttention warp融合","FlashInfer 0.2.0直列実行","FlashInferのプリフィル用カーネルで一括処理","元のvLLMスケジューラ","Sarathi-Serve"],
-    "metrics":["注意カーネル実行時間と高速化率","1分当たり処理要求数","先頭トークン時間（TTFT）","トークン間時間（TBT）","要求完了遅延","200ms/500ms超の生成停止を経験する要求割合","注意カーネル消費エネルギー"],
-    "control_knobs":"文脈長、デコードバッチ数、プリフィルチャンク長、SM当たりCTA数、CTA割当方針、プリフィルKV方向分割数、プリフィル対デコード比を変えて感度を評価する。",
-    "artifact":"再現成果物はCUDA 12.4、GCC 11.4、Python 3.12、PyTorch 2.4を指定し、GitHub、Docker、Zenodoで公開。主要実験は約18時間。"
+    "evaluation_summary": "A100 80GB実機でYi-6B、Llama-2-7B、Llama-3-8Bを用い、カーネル単体とSarathi-Serve統合後の端から端までのサービングを評価する。注意単体では1000超のハイブリッドバッチを走査し、文脈長4K〜20K、プリフィルチャンク512〜2Kを変える。比較対象はFlashAttention直列、CUDAストリーム並列、HFuseによるwarp融合、FlashInfer直列・一括処理。端から端では元のvLLMとSarathi-Serveを比較し、オフライン処理量とオンラインTTFT・TBT・要求完了遅延を測る。",
+    "scope": "実機評価であり、Yi-6BはA100 1基、Llama-2-7BとLlama-3-8BはA100 2基のテンソル並列。長文・ハイブリッドバッチが中心で、注意が直列実行時間の20%以上を占める条件を注意単体評価の対象とする。Hopper世代とFlashAttention-3への拡張は将来課題。",
+    "hardware": [
+      "NVIDIA A100 80GB 1基（Yi-6B）",
+      "NVIDIA A100 80GB 2基・テンソル並列（Llama-2-7B、Llama-3-8B）",
+      "Ubuntu 22.04 / CUDA 12.4 / PyTorch 2.4"
+    ],
+    "models": [
+      "Yi-6B",
+      "Llama-2-7B",
+      "Llama-3-8B"
+    ],
+    "datasets": [
+      "arXiv-Summarization由来ワークロード",
+      "内部企業ワークロード"
+    ],
+    "workload": "オンライン評価は各2048要求、文脈長4K〜32K。内部ワークロードは平均10.5Kトークン、arXiv系は平均9.5K。到着はポアソン分布でシステム容量付近まで負荷を上げる。オフラインは16Kトークンの長文要求をYi-6Bで1000件、Llama-2-7B/Llama-3-8Bで各2000件処理する。",
+    "baselines": [
+      "FlashAttention 2.6.1のプリフィル・デコード直列実行",
+      "FlashAttentionを別CUDAストリームで並列実行",
+      "HFuseによるFlashAttention warp融合",
+      "FlashInfer 0.2.0直列実行",
+      "FlashInferのプリフィル用カーネルで一括処理",
+      "元のvLLMスケジューラ",
+      "Sarathi-Serve"
+    ],
+    "metrics": [
+      "注意カーネル実行時間と高速化率",
+      "1分当たり処理要求数",
+      "先頭トークン時間（TTFT）",
+      "トークン間時間（TBT）",
+      "要求完了遅延",
+      "200ms/500ms超の生成停止を経験する要求割合",
+      "注意カーネル消費エネルギー"
+    ],
+    "control_knobs": "文脈長、デコードバッチ数、プリフィルチャンク長、SM当たりCTA数、CTA割当方針、プリフィルKV方向分割数、プリフィル対デコード比を変えて感度を評価する。",
+    "artifact": "再現成果物はCUDA 12.4、GCC 11.4、Python 3.12、PyTorch 2.4を指定し、GitHub、Docker、Zenodoで公開。主要実験は約18時間。"
   },
-  "reservation":{"claim_id":"claim-073e43ba7e8010937d87f5f7","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0909991ec40a7b696d97ff81",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
 }

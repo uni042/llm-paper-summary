@@ -1,20 +1,81 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-073e43ba7e8010937d87f5f7","job_id":"job-research-2ce5fda4ee4799b0",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0909991ec40a7b696d97ff81",
+  "job_id": "job-research-2ce5fda4ee4799b0",
   "data": {
-    "overview":"POD-Attentionは1000超のハイブリッドバッチで注意計算をFlashAttention直列実行より最大59%、平均28%高速化し、評価点の25%では理論上の完全重畳に対して10%以内へ到達した。Sarathi-Serveへ統合するとオフライン処理量をモデル別に19〜22%改善し、オンラインではSarathiの低TBT特性を維持しながらTTFTと要求完了遅延を大きく下げる。",
-    "key_results":[
-      {"metric":"注意計算高速化","value":"最大59%、平均28%","baseline":"FlashAttentionプリフィル・デコード直列実行","condition":"3モデル、1000超のハイブリッドバッチ","interpretation":"演算律速と帯域律速の注意CTAを同じSMへ共配置することで両資源を同時利用する。"},
-      {"metric":"理論ピークへの接近","value":"評価条件の25%で理論ピーク高速化の10%以内","baseline":"完全重畳の理論値","condition":"注意単体評価","interpretation":"SM認識配置が多くの条件でほぼ完全な資源重畳を実現する。"},
-      {"metric":"オフライン処理量","value":"Sarathi比 Yi-6B 22%、Llama-2-7B 20%、Llama-3-8B 19%向上","baseline":"Sarathi-Serve","condition":"16K長文要求","interpretation":"注意だけでなく端から端のサービング処理量へ利得が波及する。"},
-      {"metric":"P99 TTFT","value":"Sarathi比最大4.3倍短縮","baseline":"Sarathi-Serve","condition":"オンライン、内部・arXiv系ワークロード","interpretation":"ハイブリッドバッチ内でプリフィルがデコードと資源競合する時間を短縮する。"},
-      {"metric":"P99 TBT","value":"Sarathi比10〜20%短縮","baseline":"Sarathi-Serve","condition":"オンライン評価","interpretation":"Sarathiの生成停止抑制を維持しつつ各反復の注意時間も削る。"},
-      {"metric":"P99要求完了遅延","value":"vLLM比最大42%短縮（内部106.8秒対151.8秒）、arXiv系最大17%短縮（333秒対401.2秒）","baseline":"元のvLLM","condition":"高負荷オンライン評価","interpretation":"TTFTだけを優先するvLLMより、全要求の完了時間と対話性の均衡を改善する。"},
-      {"metric":"注意カーネル消費エネルギー","value":"最大35%、平均20.5%削減","baseline":"FlashAttention直列実行","condition":"注意単体プロファイル","interpretation":"実行時間短縮にほぼ比例してエネルギーも減る。"},
-      {"metric":"比例CTA割当","value":"50:50割当より最大14%高速","baseline":"固定50:50 CTA割当","condition":"8K文脈・負荷増加時","interpretation":"少数側の処理をSM全体へ散らし資源重畳と競合抑制を両立する。"}
+    "overview": "POD-Attentionは1000超のハイブリッドバッチで注意計算をFlashAttention直列実行より最大59%、平均28%高速化し、評価点の25%では理論上の完全重畳に対して10%以内へ到達した。Sarathi-Serveへ統合するとオフライン処理量をモデル別に19〜22%改善し、オンラインではSarathiの低TBT特性を維持しながらTTFTと要求完了遅延を大きく下げる。",
+    "key_results": [
+      {
+        "metric": "注意計算高速化",
+        "value": "最大59%、平均28%",
+        "baseline": "FlashAttentionプリフィル・デコード直列実行",
+        "condition": "3モデル、1000超のハイブリッドバッチ",
+        "interpretation": "演算律速と帯域律速の注意CTAを同じSMへ共配置することで両資源を同時利用する。"
+      },
+      {
+        "metric": "理論ピークへの接近",
+        "value": "評価条件の25%で理論ピーク高速化の10%以内",
+        "baseline": "完全重畳の理論値",
+        "condition": "注意単体評価",
+        "interpretation": "SM認識配置が多くの条件でほぼ完全な資源重畳を実現する。"
+      },
+      {
+        "metric": "オフライン処理量",
+        "value": "Sarathi比 Yi-6B 22%、Llama-2-7B 20%、Llama-3-8B 19%向上",
+        "baseline": "Sarathi-Serve",
+        "condition": "16K長文要求",
+        "interpretation": "注意だけでなく端から端のサービング処理量へ利得が波及する。"
+      },
+      {
+        "metric": "P99 TTFT",
+        "value": "Sarathi比最大4.3倍短縮",
+        "baseline": "Sarathi-Serve",
+        "condition": "オンライン、内部・arXiv系ワークロード",
+        "interpretation": "ハイブリッドバッチ内でプリフィルがデコードと資源競合する時間を短縮する。"
+      },
+      {
+        "metric": "P99 TBT",
+        "value": "Sarathi比10〜20%短縮",
+        "baseline": "Sarathi-Serve",
+        "condition": "オンライン評価",
+        "interpretation": "Sarathiの生成停止抑制を維持しつつ各反復の注意時間も削る。"
+      },
+      {
+        "metric": "P99要求完了遅延",
+        "value": "vLLM比最大42%短縮（内部106.8秒対151.8秒）、arXiv系最大17%短縮（333秒対401.2秒）",
+        "baseline": "元のvLLM",
+        "condition": "高負荷オンライン評価",
+        "interpretation": "TTFTだけを優先するvLLMより、全要求の完了時間と対話性の均衡を改善する。"
+      },
+      {
+        "metric": "注意カーネル消費エネルギー",
+        "value": "最大35%、平均20.5%削減",
+        "baseline": "FlashAttention直列実行",
+        "condition": "注意単体プロファイル",
+        "interpretation": "実行時間短縮にほぼ比例してエネルギーも減る。"
+      },
+      {
+        "metric": "比例CTA割当",
+        "value": "50:50割当より最大14%高速",
+        "baseline": "固定50:50 CTA割当",
+        "condition": "8K文脈・負荷増加時",
+        "interpretation": "少数側の処理をSM全体へ散らし資源重畳と競合抑制を両立する。"
+      }
     ],
-    "negative_results":["FlashInferのプリフィル用カーネルでプリフィルとデコードを一括処理すると高文脈長で最大40%悪化し、デコードの余分な演算がプリフィルと競合する。","HFuseは中央値で11%改善するがstragglerによりFlashAttention直列より最大13%遅くなる場合がある。","P:D比が12未満ではデコードのみ、18超ではプリフィルのみの反復が増え、重畳機会が減るためPOD-Attentionの利得が小さくなる。","8 CTA/SMは一部条件のみわずかに改善し、多くの条件で2/4 CTA構成より悪化する。"],
-    "quality_impact":"正確な注意計算を維持するカーネル実装の最適化であり、近似・量子化・枝刈りによる品質低下を伴わない。",
-    "interpretation":"利得はプリフィルとデコードが同じ反復へ混在し、注意が十分大きい条件で最大になる。長文では注意の割合が増え、プリフィルのTensor Core需要とデコードのHBM帯域需要を同じSMで重ねる余地が大きい。逆に片方だけのバッチでは相補資源を重ねる対象がない。融合時には単に同時実行するだけでなく、デコードの余分なTensor Core使用とプリフィルの余分な帯域使用を抑えることが性能の鍵になる。"
+    "negative_results": [
+      "FlashInferのプリフィル用カーネルでプリフィルとデコードを一括処理すると高文脈長で最大40%悪化し、デコードの余分な演算がプリフィルと競合する。",
+      "HFuseは中央値で11%改善するがstragglerによりFlashAttention直列より最大13%遅くなる場合がある。",
+      "P:D比が12未満ではデコードのみ、18超ではプリフィルのみの反復が増え、重畳機会が減るためPOD-Attentionの利得が小さくなる。",
+      "8 CTA/SMは一部条件のみわずかに改善し、多くの条件で2/4 CTA構成より悪化する。"
+    ],
+    "quality_impact": "正確な注意計算を維持するカーネル実装の最適化であり、近似・量子化・枝刈りによる品質低下を伴わない。",
+    "interpretation": "利得はプリフィルとデコードが同じ反復へ混在し、注意が十分大きい条件で最大になる。長文では注意の割合が増え、プリフィルのTensor Core需要とデコードのHBM帯域需要を同じSMで重ねる余地が大きい。逆に片方だけのバッチでは相補資源を重ねる対象がない。融合時には単に同時実行するだけでなく、デコードの余分なTensor Core使用とプリフィルの余分な帯域使用を抑えることが性能の鍵になる。"
   },
-  "reservation":{"claim_id":"claim-073e43ba7e8010937d87f5f7","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0909991ec40a7b696d97ff81",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
 }
