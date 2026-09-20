@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-8eee4a640ec2d03e43ea9f98",
-  "job_id": "job-research-2dff89406766fc1d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8eee4a640ec2d03e43ea9f98",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8eee4a640ec2d03e43ea9f98","job_id":"job-research-2dff89406766fc1d","data":{"hardware":"評価対象は21.9B ERNIE-4.5-21B-A3B-PT、30.5B Qwen3-30B-A3B、46.7B Mixtral-8x7B、106.9B GLM-4.5-Air、107.8B Llama-4-Scout、480.2B Qwen3-Coder-480B-A35B-FP8、1.026T Kimi-K2-Instruct-W4A16。論文は品質圧縮を主眼とし、特定GPU上の速度測定は主要評価ではない。","software":"REAPとbaseline compressionはPyTorch実装。公式コードはCerebrasResearch/reap。","methodology":"各層のexpertを25%または50%削除/統合し、圧縮後fine-tuningなしのone-shot条件で比較する。baselineはfrequency pruning、Expert Activation Norm、M-SMoE、HC-SMoE。<=110Bは校正1,024 samplesを2,048 tokenへpackし、>=110Bは12,228 samples、最大16,384 tokenを使用。C4、evol-codealpaca、xlam-function-calling、SWE-smith-trajectories、WritingPrompts、math SFTなど一般・domain-specific校正を使う。評価はMC、EvalPlus/LiveCode等code generation、SWE-Bench Verified、BFCLv3 tool-use、GSM8K/MATH-500、WildBench creative writing。<=50Bのcoding/MCは3 seed平均、より大規模モデル等は原則1 seed。","scope":"20B級から1T級まで高・低granularity、shared expert有無、量子化済み大規模モデルを含む広いarchitectureで評価する。一方、圧縮後の実測GPUメモリ節約量、tokens/s、ロード時間は主要表に含まれず、品質中心。domain-specific calibrationへの依存が強く、分布外利用時のone-shot頑健性には注意が必要。"},"reservation":{"claim_id":"claim-8eee4a640ec2d03e43ea9f98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
