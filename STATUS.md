@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 02:36:18 JST**
+> 自動生成: **2026-09-21 02:36:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **11** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **12** | **7** | **5** | **0** | **0** | **0** | **5** |
+| 合計 | **11** | **7** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -222,10 +222,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **887** |
+| 成功result未照合のimmutable submission | **889** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **173** |
+| └ Discovery | **175** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
