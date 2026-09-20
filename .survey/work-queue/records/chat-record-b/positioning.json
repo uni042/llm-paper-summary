@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-0b14b95da2b3a2abc2e9855f",
-  "job_id": "job-research-9824d8080e264ed4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0b14b95da2b3a2abc2e9855f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0b14b95da2b3a2abc2e9855f","job_id":"job-research-9824d8080e264ed4","data":{"limitations":"evictionしたKVは後から必要になっても復元できず、累積注意が将来重要度を表さない入力では誤削除が連鎖する。Heavy-Hitterとrecentの予算配分は固定的な代表設定が中心で、最適比率は層・head・taskごとに変わり得る。理論保証は注意価値のsubmodularityなどの仮定を置くため、任意の実モデルで無条件に成立する保証ではない。初期システム実装はFlexGen/OPT中心で、性能比較にはoffloadの有無や利用可能batchの差も含まれる。4 million streamingは固定KVで処理を継続できることを示すが、モデルが遠い全履歴を完全に記憶するわけではない。","differences":"Local/StreamingLLM系は最近トークンや固定先頭sinkを内容非依存に残すのに対し、H2Oは実際の累積注意から内容依存の過去Heavy-Hitterを更新する。Sparse Transformer fixed/stridedは固定接続パターンだが、H2Oはdecode時に保持集合を動的変更する。KVQuant/KIVI等の量子化は全または多くのKVを低ビットで保持するのに対し、H2Oはトークン単位でKVを削除するため直交し、論文でも量子化併用を検証する。後続のSnapKV等と同じKV eviction系統の初期代表例であり、オンライン累積注意を直接重要度にする点が特徴。","implementation_status":"NeurIPS 2023。公式FMInference/H2Oコードを公開。FlexGen統合ではKV領域事前確保、recent循環キュー、evicted slot直接上書きを実装し、T4/A100でend-to-end測定。後続版ではHugging Face系利用も提供されている。","research_positioning":"KVキャッシュを『全履歴を保存する再計算回避バッファ』から『限られた容量で将来有用な状態を保持するcache』として明示的に捉え、古典的evictionとattention sparsityを結びつけた研究。重要トークンの履歴依存保持とrecent windowの二本立ては、その後のKV eviction研究の基本設計の一つとなった。メモリ階層/offload研究に対しては転送対象そのものを減らし、量子化研究に対しては保持要素数を減らすため、両者と積み重ね可能である。"},"reservation":{"claim_id":"claim-0b14b95da2b3a2abc2e9855f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
