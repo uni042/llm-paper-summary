@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-f99914b9bbfb8b9c4e33456a",
-  "job_id": "job-research-59739220ff5250cc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f99914b9bbfb8b9c4e33456a",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f99914b9bbfb8b9c4e33456a","job_id":"job-research-59739220ff5250cc","data":{"hardware":"主要評価のGPU型番は本文主要節で明示されない。制約説明では100B級DeepSeek-R1のMATH-500 500問評価に8×A100で数日必要と記載。","software":"著者実装を公開。復号attention値からtokenごとの最新重要時刻と最大再帰間隔を追跡し、観測窓ごとにKVを削除。","methodology":"DeepSeek-R1-Distill-Llama-8B、DeepSeek-R1-Distill-Qwen-7B、Qwen3-4B、QwQ-32Bを数学GSM8K/MATH-500/AIME、科学QAのGPQA Diamond、コードのLiveCodeBenchで評価する。FullKV、RaaS、H2O、TOVA、CAKE、R-KVと同じKV予算比で精度を比較する。主要条件はGSM8K/MATH-500が50%、AIMEが30%、GPQAが50%、LiveCodeBenchが40%。さらにLlama-3.1-8B-Instructで一般長文QA/要約も検証し、観測窓・score項・閾値のablation、0〜8k生成でのKVメモリ変化と長生成時overheadを測る。","scope":"長い思考連鎖を生成する復号段階のKV削除が中心。再学習なしの推論時圧縮で、4B〜32B reasoning modelと一部一般長文生成を対象にする。","models":["DeepSeek-R1-Distill-Llama-8B","DeepSeek-R1-Distill-Qwen-7B","Qwen3-4B","QwQ-32B","Llama-3.1-8B-Instruct"],"datasets_benchmarks":["GSM8K","MATH-500","AIME","GPQA Diamond","LiveCodeBench","PIQA","long-document summarization"],"baselines":["FullKV","RaaS","H2O","TOVA","CAKE","R-KV"],"metrics":["task accuracy","KV cache budget ratio","KV cache memory usage","inference efficiency","ablation accuracy"]},"reservation":{"claim_id":"claim-f99914b9bbfb8b9c4e33456a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
