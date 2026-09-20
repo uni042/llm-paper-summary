@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:11:30 JST**
+> 自動生成: **2026-09-20 22:12:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **211** |
-| 未claim Research job | **210** |
+| 収録候補論文 | **210** |
+| 未claim Research job | **209** |
 | 直近24hの検証済みResearch収録 | **89** |
 | 最終検証済みResearch収録 | **09-20 22:10:28 JST（1分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **211** |
+| canonical_id確認済みの一意な候補論文 | **210** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **211** |
+| 非終端Research job合計 | **210** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -165,9 +165,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3712285.3759903` — Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 22:11:21 JST** / heartbeat: **—** / lease expiry: **09-20 23:41:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-69e7666b88522bc6.json`
+- `arXiv:2604.20156` — Temporally Extended Mixture-of-Experts Models / worker `scheduled-chat-discovery-specialist`
+  - claim: **09-20 22:12:00 JST** / heartbeat: **—** / lease expiry: **09-20 23:42:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c095c39c7faada9.json`
 
 #### Audit
 
@@ -187,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **211** |
+| ready | **210** |
 
 ### 候補の重複・識別情報欠損
 
@@ -215,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **845** |
-| └ Research | **595** |
+| 成功result未照合のimmutable submission | **846** |
+| └ Research | **596** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **103** |
