@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 13:05:01 JST**
+> 自動生成: **2026-09-20 13:05:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **121** |
-| 未claim Research job | **120** |
+| 収録候補論文 | **132** |
+| 未claim Research job | **131** |
 | 直近24hの検証済みResearch収録 | **48** |
 | 最終検証済みResearch収録 | **09-20 12:45:53 JST（19分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **121** |
+| canonical_id確認済みの一意な候補論文 | **132** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **121** |
+| 非終端Research job合計 | **132** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -184,7 +184,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **121** |
+| ready | **132** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,8 +212,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **717** |
-| └ Research | **531** |
+| 成功result未照合のimmutable submission | **718** |
+| └ Research | **532** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
