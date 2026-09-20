@@ -58,7 +58,9 @@ class RunLivenessPolicyTests(unittest.TestCase):
         for name in retired:
             with self.subTest(name=name):
                 self.assertNotIn(name, router)
-        self.assertIn("queue-v10.md", router)
+        self.assertNotIn("queue-v10.md", router)
+        self.assertIn("実装リファレンス", router)
+        self.assertIn("補完しない", router)
         self.assertIn("continuation_gate.py", router)
 
 
