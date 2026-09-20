@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-3d00beb8c812c5e7",
+  "type": "research",
+  "parent_job_id": "job-c44a110e87a6bd80",
+  "priority": 96,
+  "canonical_id": "arXiv:2609.15311",
+  "arxiv_id": "2609.15311",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+  "source_url": "https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68",
+  "paper_path": null,
+  "selection_reason": "Triton operatorを直接扱えるmodern GPU cycle-accurate simulatorでasync data movement・tensor core・fine-grained sync等をmodel化。RTX5090/H100/B200の131構成でcycle MAPE 5.24%。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:20:28+00:00"
+}

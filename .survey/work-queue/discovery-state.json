@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T22:17:43+00:00",
+  "updated_at": "2026-09-20T22:20:28+00:00",
   "last_run_key": "2026-09-21T06:58:37+09:00",
-  "last_round": "hourly00-forward-flexgen-12",
+  "last_round": "hourly00-forward-sglang-13",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,26 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-forward-citations-10",
-      "axis": "重要新規系統のforward citation追跡",
-      "query_summary": "Tutti、Blink、TraCT、SPICEを起点に被引用・派生研究を探索したが、取得できた一次/準一次候補は既知論文・実装更新・解説が中心で、新規強候補は得られなかった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.03375",
-        "arXiv:2604.07609",
-        "arXiv:2512.18194",
-        "arXiv:2608.21240"
-      ],
-      "next_axis_hint": "重要論文のbackward referenceから未収録の基盤研究を確認する",
-      "source_submission": "work-queue/submissions/20260916T1930JST-discovery-specialist-forward-citations-10.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-backward-refs-11",
@@ -8078,6 +8058,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0717JST-hourly00-discovery-forward-flexgen-12.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-forward-sglang-13",
+      "axis": "forward citations of SGLang structured generation serving runtime",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0720JST-hourly00-discovery-forward-sglang-13.json"
     }
   ],
   "axes": {
@@ -15872,6 +15873,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 5,
       "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward citations of SGLang structured generation serving runtime": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
