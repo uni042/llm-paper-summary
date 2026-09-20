@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5648936959aa67c66ac34543",
+  "attempt_id": "attempt-dc485e69d626bab8b4a8a5c7",
   "job_id": "job-research-e203c47aded67247",
   "data": {
     "overview": "SeqTopKは総活性エキスパート数を標準TopKと同じに保ったまま、OLMoEとQwen1.5-MoEの複数タスク平均を改善し、差はスパース性が高いほど拡大した。特にOLMoEでK=2まで削った条件では平均22.04となり、TopKの14.49を7.55点上回る。実装コストは小さく、事前学習GPU時間・推論スループット・ピークメモリはいずれも約1%程度の差に収まる。ただし追加微調整なしでTopK学習済みモデルへオンラインSeqTopKだけを適用すると平均性能はわずかに低下し、文脈依存配分を学習する短い微調整が主要な性能向上に必要である。",
     "key_results": [
-      {"metric": "OLMoE 5タスク平均", "value": "31.49", "baseline": "TopK 29.74", "condition": "OLMoE-A1B-7B、K=8/64、同一微調整条件", "interpretation": "標準スパース設定でも系列単位の予算再配分により平均1.75点向上し、論文記載では相対約5.9%の改善となる。"},
-      {"metric": "OLMoE 5タスク平均（高スパース）", "value": "22.04", "baseline": "TopK 14.49", "condition": "OLMoE-A1B-7B、K=2/64", "interpretation": "固定Kで計算が不足する極端なスパース領域ほど、難しいトークンへ予算を移す効果が大きく、平均7.55点の差になる。"},
-      {"metric": "Qwen1.5-MoE 5タスク平均", "value": "43.19", "baseline": "TopK 41.72", "condition": "Qwen1.5-MoE-A2.7B、4共有エキスパート＋K=4/60ルーティングエキスパート", "interpretation": "共有エキスパートを持つ別アーキテクチャでも平均1.47点向上し、方式がOLMoE固有ではないことを示す。"},
-      {"metric": "事前学習ゼロショット4タスク平均", "value": "40.25", "baseline": "TopK 38.51", "condition": "182M MoE、128 experts、K=4、The Pile約300億トークン", "interpretation": "事前学習段階でも高スパース設定でSeqTopKがTopKとReMoEを上回り、微調整専用の効果ではない。"},
-      {"metric": "推論スループット", "value": "139.41 tokens/s", "baseline": "TopK 141.23 tokens/s", "condition": "OLMoE、huggingface.generate()、KV Cache有効", "interpretation": "Expert Cacheと系列競争の追加処理による速度低下は約1%で、性能改善に対するシステム負担は小さい。"}
+      {
+        "metric": "OLMoE 5タスク平均",
+        "value": "31.49",
+        "baseline": "TopK 29.74",
+        "condition": "OLMoE-A1B-7B、K=8/64、同一微調整条件",
+        "interpretation": "標準スパース設定でも系列単位の予算再配分により平均1.75点向上し、論文記載では相対約5.9%の改善となる。"
+      },
+      {
+        "metric": "OLMoE 5タスク平均（高スパース）",
+        "value": "22.04",
+        "baseline": "TopK 14.49",
+        "condition": "OLMoE-A1B-7B、K=2/64",
+        "interpretation": "固定Kで計算が不足する極端なスパース領域ほど、難しいトークンへ予算を移す効果が大きく、平均7.55点の差になる。"
+      },
+      {
+        "metric": "Qwen1.5-MoE 5タスク平均",
+        "value": "43.19",
+        "baseline": "TopK 41.72",
+        "condition": "Qwen1.5-MoE-A2.7B、4共有エキスパート＋K=4/60ルーティングエキスパート",
+        "interpretation": "共有エキスパートを持つ別アーキテクチャでも平均1.47点向上し、方式がOLMoE固有ではないことを示す。"
+      },
+      {
+        "metric": "事前学習ゼロショット4タスク平均",
+        "value": "40.25",
+        "baseline": "TopK 38.51",
+        "condition": "182M MoE、128 experts、K=4、The Pile約300億トークン",
+        "interpretation": "事前学習段階でも高スパース設定でSeqTopKがTopKとReMoEを上回り、微調整専用の効果ではない。"
+      },
+      {
+        "metric": "推論スループット",
+        "value": "139.41 tokens/s",
+        "baseline": "TopK 141.23 tokens/s",
+        "condition": "OLMoE、huggingface.generate()、KV Cache有効",
+        "interpretation": "Expert Cacheと系列競争の追加処理による速度低下は約1%で、性能改善に対するシステム負担は小さい。"
+      }
     ],
     "negative_results": "追加微調整なしでTopK微調整済みOLMoEへオンラインSeqTopKを適用した場合、5タスク平均はTopK 29.74に対して29.34で、即時置換だけでは改善しない。論文は100ステップ未満の追加微調整で文脈依存ルーティングを学習する必要を示す。またBatchTopKは評価バッチサイズに敏感で、MRL-TopKはスパース性を高めると大きく劣化する。SeqTopK自身も推論スループットが約1%低下し、ピークメモリが18.21 GBから18.35 GBへ増える。",
     "interpretation": "改善の中心は新しいエキスパートや追加パラメータではなく、同じT×K個の計算枠をどのトークンへ使うかという配分自由度にある。Kが十分大きい条件では固定配分の余裕があるため差は限定的だが、K=2のような極端なスパース条件では難しいトークンの計算不足が支配的になり、系列内再配分の価値が増す。Expert Cacheは未来情報を使えない生成時にこの原理を近似し、速度・メモリ増を小さく抑える。",
     "quality_impact": "近似的・適応的なルーティング方式であり、品質無損失を保証する手法ではない。微調整済みSeqTopKでは同一総予算のTopKより品質が上がる一方、学習なしの置換では小幅な品質低下が確認されるため、運用上はモデル・タスクに対する短い適応学習を前提に評価すべきである。"
   },
-  "reservation": {"claim_id": "claim-5648936959aa67c66ac34543", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-dc485e69d626bab8b4a8a5c7",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
