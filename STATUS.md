@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:29:01 JST**
+> 自動生成: **2026-09-20 19:30:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **101** |
 | 未claim Research job | **100** |
 | 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 19:20:46 JST（8分前）** |
+| 最終検証済みResearch収録 | **09-20 19:20:46 JST（9分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **11** | **9** | **0** | **1** | **0** | — |
+| Research | **38** | **12** | **9** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **38** | **12** | **10** | **0** | **1** | **0** | **5** |
+| 合計 | **38** | **13** | **10** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **11件** / 検証済み成功: **9件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **12件** / 検証済み成功: **9件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **成功** `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications
   - job: `.survey/work-queue/jobs/job-research-6778a26f7c6381c5.json`
   - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
@@ -138,6 +138,8 @@
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json`
   - paper: `papers/inference/10-sparse-attention/2026-delta.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-36775161dea47254d363d39c.json` (job `job-research-89e4b35d6854b9b6`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-36775161dea47254d363d39c.json` (`ok=false`)
 - **成功** `arXiv:2310.07177` — Online Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-3cf2e0a916913e29.json`
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
@@ -167,11 +169,6 @@
   - result: `.survey/work-queue/results/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json`
   - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md`
-- **成功** `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
-  - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
-  - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json`
-  - paper: `papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md`
 
 #### Audit (:30)
 
@@ -244,8 +241,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **766** |
-| └ Research | **578** |
+| 成功result未照合のimmutable submission | **767** |
+| └ Research | **579** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **41** |
