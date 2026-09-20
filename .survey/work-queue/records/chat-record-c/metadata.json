@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-5a2d8cb943b02cb27fc0083a",
-  "job_id": "job-research-6e63ee697d71f91d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5a2d8cb943b02cb27fc0083a",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5a2d8cb943b02cb27fc0083a","job_id":"job-research-6e63ee697d71f91d","data":{"canonical_id":"arXiv:2606.09886","arxiv_id":"2606.09886","title":"SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs","list_summary":"Top-kで同時起動する専門家集合を協力ゲームとして評価し、Shapley風の貢献度と層別品質カバレッジで再学習なしの専門家枝刈りを行う。","summary":"MoEの専門家枝刈りでは頻度やゲート値など専門家単独の指標が一般的だが、実際の出力はTop-k専門家の共同作用で生じる。SHAPEはタスク別キャリブレーションで観測した専門家連合と頻度を協力ゲームとして扱い、部分連合の効用を共起統計で近似したShapley風スコアを計算する。各層で非負貢献質量の一定割合を覆う最小専門家集合を選び、二分探索で全体keep率へ合わせる。Qwen3-30B-A3B、GPT-OSS-20B、DeepSeek-V2-Liteで20%・40%枝刈りを再学習なしで評価し、ピークVRAM削減と高い精度維持を報告する。","source":"https://arxiv.org/abs/2606.09886","sources":["https://arxiv.org/abs/2606.09886","https://arxiv.org/html/2606.09886","https://github.com/Alizen-1009/Shapley-Moe"],"authors":["Yuhao Zhang"],"published":"2026-06-03","publication":"arXiv preprint arXiv:2606.09886","publication_type":"preprint","publication_status":"preprint","arxiv_categories":{"primary":"cs.LG","cross_list":[]},"topics":["混合専門家モデル","専門家枝刈り","Shapley値","協力ゲーム","GPUメモリ削減"],"implementation":"著者公開コードあり。タスク別ルーティング記録からShapley風専門家価値を推定し、品質カバレッジ規則で構造枝刈りする。","code":"https://github.com/Alizen-1009/Shapley-Moe","hardware_evaluation":"32K文脈長・バッチ1でピークGPUメモリを未枝刈り、20%、40%枝刈り間で比較し、専門家削除率に応じた明確なVRAM低下を確認。GPU型や絶対VRAM値は本文テキストでは明記されない。","quality_effect":"20%枝刈りではQwen3 82.43対基準82.92、GPT-OSS 82.44対82.12、DeepSeek-V2-Lite 62.44対62.08。40%でも81.31、79.02、58.81を維持し、単純頻度・ゲート基準より頑健。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2510.13999","arxiv_id":"2510.13999"},{"canonical_id":"arXiv:2503.07605","arxiv_id":"2503.07605"},{"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388"},{"canonical_id":"arXiv:2512.18425","arxiv_id":"2512.18425"}],"references_checked_at":"2026-09-20","references_source":"arXiv HTML v1 reference section","references_total":35},"reservation":{"claim_id":"claim-5a2d8cb943b02cb27fc0083a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
