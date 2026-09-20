@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:17:29 JST**
+> 自動生成: **2026-09-21 05:17:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **9** | **7** | **4** | **2** | **0** | **0** | **5** |
-| 合計 | **13** | **13** | **8** | **2** | **0** | **0** | **5** |
+| Discovery | **10** | **7** | **5** | **1** | **0** | **0** | **5** |
+| 合計 | **14** | **13** | **9** | **1** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -106,6 +106,10 @@
   - result: `.survey/work-queue/results/20260921T0511JST-discovery-round-04-backward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0511JST-discovery-round-04-backward.json`
   - 探索軸: backward-reference structured repository-wide round 4
+- **09-21 05:16:04 JST** job `job-f20aeb95ea9030ce` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0516JST-discovery-round-05-openalex-memory.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0516JST-discovery-round-05-openalex-memory.json`
+  - 探索軸: OpenAlex recent LLM inference memory offloading
 - **09-21 04:41:56 JST** job `job-5ce2fc5cb7683904` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0430JST-discovery-round-01-backward-recovery.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-01-backward-recovery.json`
@@ -167,7 +171,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:01 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **3件** / 候補: **5件**
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **2件** / 候補: **5件**
 - 探索軸: backward-reference structured repository-wide / forward citations of Elastic MoE for inference-time expert scaling / backward-reference structured repository-wide continuation / backward-reference structured repository-wide round 4 / OpenAlex recent LLM inference memory offloading / OpenAlex recent MoE serving expert cache offloading
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0504JST-discovery-round-01-backward.json`
@@ -192,7 +196,7 @@
 - round `round-05` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0516JST-discovery-round-05-openalex-memory.json`
   - 探索軸: OpenAlex recent LLM inference memory offloading
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0516JST-discovery-round-05-openalex-memory.json` (`ok=true`)
 - round `round-06` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0517JST-discovery-round-06-openalex-moe.json`
   - 探索軸: OpenAlex recent MoE serving expert cache offloading
@@ -251,10 +255,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **911** |
+| 成功result未照合のimmutable submission | **910** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **197** |
+| └ Discovery | **196** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job

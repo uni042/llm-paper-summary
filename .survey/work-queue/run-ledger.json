@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T20:11:08.434052+00:00",
+  "updated_at": "2026-09-20T20:17:44.262133+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -28848,6 +28848,66 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json",
         ".survey/work-queue/results/20260921T0505JST-discovery-round-02-forward.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35534966502",
+      "first_recorded_at": "2026-09-20T20:17:44.262133+00:00",
+      "last_recorded_at": "2026-09-20T20:17:44.262133+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35534966502:1",
+          "recorded_at": "2026-09-20T20:17:44.262133+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35534966502",
+            "run_attempt": "1",
+            "source_sha": "213f4415cd75e3e1e708ff66ddfdb0349f2d80c4"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-f20aeb95ea9030ce",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-f20aeb95ea9030ce",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0516JST-discovery-round-05-openalex-memory.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,
