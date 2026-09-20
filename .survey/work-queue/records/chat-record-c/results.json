@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6f2e6a2b41a89ff181e07ec0",
-  "job_id": "job-research-159e5ee7f39d28f8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6f2e6a2b41a89ff181e07ec0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6f2e6a2b41a89ff181e07ec0","job_id":"job-research-159e5ee7f39d28f8",
+  "data":{"overview":"SMoEは既存最良方式に対し、バッチ1のTPOTを平均24%、バッチ3を平均35%削減した。Qwen2-57B-A14B+A6000ではバッチ3で48%、バッチ1で34%削減し、PCIe/CPU待ちが支配的な高速GPUほど置換の効果が大きい。GPU専門家キャッシュ率は全設定で既存最良より少なくとも65%改善した。入力処理のTTFTも平均11%削減したが、ここは専門家活性が密なため置換よりCPU-GPU-転送パイプラインの寄与が中心である。αが0.35未満では品質変動は概して小さい。","key_results":[{"metric":"デコードTPOT削減","value":"平均35%","baseline":"既存最良方式","condition":"バッチ3、三設定平均","interpretation":"複数トークンで上位専門家を相互に再利用でき、PCIe比率も高まるため置換の効果が大きい。"},{"metric":"Qwen+A6000 TPOT削減","value":"48%","baseline":"既存最良方式","condition":"S3、バッチ3","interpretation":"GPU計算が速くPCIe/CPU待ちが支配する条件で、低得点専門家ロードを消す効果が最大化する。"},{"metric":"GPU専門家キャッシュ率改善","value":"少なくとも65%改善","baseline":"既存最良方式","condition":"全評価設定","interpretation":"置換候補をキャッシュへ残す得点履歴追い出しと置換ルータが、実際にGPU内再利用を増やす。"},{"metric":"TTFT削減","value":"平均11%","baseline":"既存最良方式","condition":"入力処理、バッチ1","interpretation":"入力処理は活性が密で置換余地が小さいため、主にCPU/GPU/PCIeの重畳による改善である。"},{"metric":"Qwen GSM8K","value":"85.6%","baseline":"元モデル85.7%","condition":"α=0.25","interpretation":"大きなデコード高速化を得ながら算術品質をほぼ維持する。"}],"negative_results":"RTX 3080 TiのS1ではバッチ3のTPOT削減は平均27%、バッチ1は20%に留まり、GPUがCPUより十分高速でないとGPU命中率向上の価値が小さくなる。αを大きくしすぎると元専門家と代替専門家の得点差が広がり品質変動が増え、コード系では変動が目立つ。入力処理はほぼ全専門家が活性化するため、デコードほど置換によるキャッシュ効率改善が効かない。","interpretation":"主要な高速化源は、従来必ず払っていた低得点専門家のPCIe転送を『別のGPU常駐専門家を使う』ことで消す点にある。キャッシュ追い出しは置換候補を増やし、上位専門家限定の先読みは重要な転送だけを計算へ重ね、負荷分散は残余をCPUとPCIeへ分けるため、各機構が同じボトルネックへ段階的に効く。","quality_impact":"Qwen α=0.25ではGaokao 76.1対元73.5、WiC 60.7対60.5、GSM8K 85.6対85.7、MMLU 71.0対71.0、HumanEval 53.3対53.0で、置換は多くの課題でほぼ無損失。一方α増大時は一部課題で低下するため遅延制約に応じたしきい値選択が必要。"},
+  "reservation":{"claim_id":"claim-6f2e6a2b41a89ff181e07ec0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
