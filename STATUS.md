@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:43:44 JST**
+> 自動生成: **2026-09-20 14:44:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **124** |
 | 未claim Research job | **122** |
 | 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-20 14:40:06 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-20 14:40:06 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **25** | **1** | **1** | **0** | **2** | **1** | — |
+| Research | **25** | **2** | **1** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **25** | **2** | **2** | **0** | **2** | **1** | **5** |
+| 合計 | **25** | **3** | **2** | **1** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-22c6cd91832db65b7ee858af.json` (job `job-research-e0a5ea7f3cdd2886`)
 - **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
@@ -208,8 +209,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **727** |
-| └ Research | **541** |
+| 成功result未照合のimmutable submission | **728** |
+| └ Research | **542** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
