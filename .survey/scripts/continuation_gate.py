@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """Deterministic stop/continue gate for Scheduled Chat survey workers.
 
-The gate decides whether the whole run may stop for the common hourly paper
-worker. The :00 and :30 schedules are identical. When candidate_inventory is
-provided, candidate_inventory >= 50 selects Discovery and candidate_inventory < 50
-selects Research/Audit. Existing per-mode quotas remain progression floors.
-Transport backlogs, claim-result propagation delay, and job-local failures are not
-stop conditions when repository state remains readable and no explicit hard
-condition holds.
+The gate decides whether the whole run may stop for either hourly paper-worker
+profile. Research-heavy and discovery-heavy workers share the same continuation
+semantics; their only paper-work difference is the work mix selected by the
+canonical router. Transport backlogs, claim-result propagation delay, and
+job-local failures are not stop conditions when repository state remains readable
+and no explicit hard condition holds.
 
 Hourly Scheduled Chat workers use a one-hour run window measured from the actual
 invocation start. The nominal :00/:30 schedule boundary is retained only as a
@@ -37,25 +36,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     any_durable_transport = bool(args.github_write or fallback_writable)
 
     worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
-    candidate_inventory_raw = getattr(args, "candidate_inventory", None)
-    candidate_inventory = (
-        max(int(candidate_inventory_raw), 0)
-        if candidate_inventory_raw is not None
-        else None
-    )
-    explicit_work_mode = str(getattr(args, "work_mode", "auto") or "auto").strip().lower()
-    if explicit_work_mode == "auto":
-        if candidate_inventory is not None:
-            work_mode = "discovery" if candidate_inventory >= 50 else "research"
-            mode_source = "candidate_inventory"
-        else:
-            work_mode = "discovery" if worker_kind == "discovery" else "research"
-            mode_source = "legacy_worker_kind_fallback"
-    else:
-        work_mode = explicit_work_mode
-        mode_source = "explicit_work_mode"
-    papers_added_this_invocation = max(int(getattr(args, "papers_added_this_invocation", 0) or 0), 0)
-    research_minimum_papers = max(int(getattr(args, "research_minimum_papers", 3) or 3), 1)
     claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     submission_state_checked = bool(
         getattr(args, "submission_state_checked", False)
@@ -72,7 +52,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
-    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_since_last_novel, 0)
+    minimum_rounds_remaining = 0  # legacy compatibility field; no task-specific discovery floor remains
 
     if args.platform_limit:
         reasons.append("platform_limit_reached")
@@ -130,45 +110,32 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     hard_stop = bool(reasons)
+    # worker_kind is retained as a compatibility label only.  It must not
+    # change continuation semantics; work-mix selection belongs to worker-router.md.
     if reasons:
         decision = "STOP_RUN"
         required_action = "FINALIZE"
         finalization_allowed = True
-    elif work_mode == "discovery":
-        if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN"
-            finalization_allowed = False
-        elif discovery_exhausted and not next_axis_available and not independent_work:
-            reasons.append("discovery_exhausted_after_minimum_rounds")
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
-        else:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
-            finalization_allowed = False
+    elif not claim_state_checked:
+        decision = "CONTINUE"
+        required_action = "CHECK_CLAIM_STATE"
+        finalization_allowed = False
+    elif transient_claim_wait:
+        decision = "CONTINUE"
+        required_action = "WAIT_FOR_CLAIM_RESULT"
+        finalization_allowed = False
+    elif not submission_state_checked:
+        decision = "CONTINUE"
+        required_action = "CHECK_SUBMISSION_STATE"
+        finalization_allowed = False
+    elif transient_submission_wait and not independent_work:
+        decision = "CONTINUE"
+        required_action = "WAIT_FOR_SUBMISSION_RESULT"
+        finalization_allowed = False
     else:
-        if not claim_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_CLAIM_STATE"
-            finalization_allowed = False
-        elif transient_claim_wait:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_CLAIM_RESULT"
-            finalization_allowed = False
-        elif not submission_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_SUBMISSION_STATE"
-            finalization_allowed = False
-        elif transient_submission_wait and not independent_work:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_SUBMISSION_RESULT"
-            finalization_allowed = False
-        else:
-            decision = "CONTINUE"
-            required_action = "CONTINUE_WORK"
-            finalization_allowed = False
+        decision = "CONTINUE"
+        required_action = "CONTINUE_WORK"
+        finalization_allowed = False
 
     write_scope = "none"
     write_action = "normal"
@@ -248,17 +215,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "finalization_allowed": finalization_allowed,
         "stop_reasons": reasons,
         "worker_kind": worker_kind,
-        "candidate_inventory": candidate_inventory,
-        "work_mode": work_mode,
-        "mode_source": mode_source,
-        "papers_added_this_invocation": papers_added_this_invocation,
-        "research_minimum_papers": research_minimum_papers,
-        "research_quota_remaining": max(research_minimum_papers - papers_added_this_invocation, 0),
         "discovery_rounds_completed": discovery_rounds_completed,
         "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
         "discovery_reset_progress_known": discovery_reset_progress_known,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
+        "legacy_discovery_progression_ignored": True,
         "discovery_exhausted": discovery_exhausted,
         "next_axis_available": next_axis_available,
         "write_failure_scope": write_scope,
@@ -292,11 +254,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "claim/submission results are polled every 10 real seconds using the same target identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
-            "The :00 and :30 schedules are the same paper task. When candidate_inventory is "
-            "provided, >=50 selects Discovery and <50 selects Research/Audit; worker_kind is only "
-            "a fallback for old callers. Discovery keeps its minimum-round progression floor and "
-            "Research exposes the three-paper quota state; hard handoff/platform/durability/read "
-            "failures override ordinary continuation."
+            "The normal/discovery worker_kind label is compatibility metadata only and never "
+            "changes stop or continuation semantics. Work-type balance is selected by the common "
+            "router; hard handoff/platform/durability/read failures override ordinary continuation."
         ),
     }
 
@@ -325,10 +285,6 @@ def main() -> int:
     ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
     ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
     ap.add_argument("--worker-kind", choices=("normal", "discovery"), default="normal")
-    ap.add_argument("--candidate-inventory", type=int, default=None)
-    ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
-    ap.add_argument("--papers-added-this-invocation", type=int, default=0)
-    ap.add_argument("--research-minimum-papers", type=int, default=3)
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
     ap.add_argument("--discovery-rounds-since-last-novel", type=int, default=None)
     ap.add_argument("--discovery-min-rounds", type=int, default=4)
