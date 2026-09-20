@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a3583b512bca09151ba946d2",
-  "job_id": "job-research-872c3c76cc1c3eff",
-  "data": {
-    "hardware": "8基のNVIDIA H100 GPUを搭載したサーバ群。プロファイルではDGX H100を使用し、TP2/TP4/TP8と0.8/1.2/1.6/2.0GHz級の周波数を比較する。",
-    "software": "vLLM上にDynamoLLMを実装。Llama2-70Bを主評価とし、Llama2-13B、Llama3-70B、Mixtral-8x7B/8x22B、Falcon-180B等も特性確認。PuLP MILP、SciPy補間、BERT-base出力長分類器を使用。",
-    "methodology": "Microsoft Azure Coding/Conversationサービスの本番級1週間トレースから入力・出力長と負荷を取得し、短中長9分類を作る。SLOはunloaded単一request latencyの5倍を基本とし、TTFT/TBTで判定。実験は複数負荷・複数トレース対でSinglePool、MultiPool、ScaleInst、ScaleShard、ScaleFreq等の切除baselineと比較する。低/中/高負荷、出力長分類精度、pool数、再構成オーバーヘッドも感度分析する。",
-    "scope": "主結果はH100クラスタとAzure由来トレースに基づき、他GPU世代・電力料金・炭素強度では最適構成が変わる。運用炭素を主に評価し、embodied carbonの動的最適化は将来課題。"
-  },
+  "attempt_id": "attempt-5ea6e0dabdb5053729aff0d5",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a3583b512bca09151ba946d2",
+    "claim_id": "claim-5ea6e0dabdb5053729aff0d5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

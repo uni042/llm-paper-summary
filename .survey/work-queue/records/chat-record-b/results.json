@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a3583b512bca09151ba946d2",
-  "job_id": "job-research-872c3c76cc1c3eff",
-  "data": {
-    "overview": "大規模H100クラスタとAzure本番級トレースで、DynamoLLMはSLOを満たしながら平均52%のエネルギー、38%の運用炭素排出、61%の顧客コストを削減する。節電効果は低負荷ほど大きく、SinglePool比で低負荷57%、中負荷42%、高負荷15%のエネルギー削減を示す。出力長予測が60%精度まで低下しても、完全予測比のエネルギー増加は25%、TTFT増加は12.3%に抑える。",
-    "key_results": [
-      {
-        "metric": "平均エネルギー削減",
-        "value": "52%",
-        "baseline": "SinglePool系固定/部分動的構成",
-        "condition": "H100クラスタ、Azure production-level traces",
-        "interpretation": "要求分離と三つの制御ノブを同時利用することで大幅な節電を得る。"
-      },
-      {
-        "metric": "運用炭素削減",
-        "value": "38%",
-        "baseline": "基準構成",
-        "condition": "サービスレベル評価",
-        "interpretation": "エネルギー削減が運用時炭素排出削減へ反映される。"
-      },
-      {
-        "metric": "顧客コスト削減",
-        "value": "61%",
-        "baseline": "基準構成",
-        "condition": "SLO維持",
-        "interpretation": "GPU資源のright-sizingと低エネルギー構成がコストにも寄与する。"
-      },
-      {
-        "metric": "負荷別エネルギー削減",
-        "value": "低57%、中42%、高15%",
-        "baseline": "SinglePool",
-        "condition": "Poisson到着のlow/medium/high load",
-        "interpretation": "高負荷ではSLO slackが小さく高周波・高並列が必要なため節電余地が縮む。"
-      },
-      {
-        "metric": "出力長予測誤差感度",
-        "value": "40%誤分類でenergy +25%、TTFT +12.3%",
-        "baseline": "予測100%",
-        "condition": "Dyn-60%対Dyn-100%",
-        "interpretation": "誤分類を検出して再構成・再振り分けするため予測器精度への依存は限定的。"
-      },
-      {
-        "metric": "要求長別最適構成例",
-        "value": "Llama2-70B SSはTP2 1.2GHz、LLはTP8 1.6GHz",
-        "baseline": "一律構成",
-        "condition": "medium 2000 TPS、5x SLO",
-        "interpretation": "同じモデルでも要求形状だけでエネルギー最適並列度・周波数が大きく異なる。"
-      }
-    ],
-    "negative_results": "高負荷では節電余地が15%まで縮み、SLO制約が強いほど高性能構成を選ばざるを得ない。GPU周波数変更やreshardを頻繁に行うと遷移オーバーヘッドで性能が落ちるため、変更コストを無視した制御は逆効果。pool数を増やしすぎても資源断片化が起きる。",
-    "interpretation": "エネルギー最小は最低電力と一致せず、低周波で処理時間が伸びれば総Whが増える。DynamoLLMは性能プロファイルとSLOを同時に見ることで、要求種別・負荷ごとに必要十分なGPU数、並列度、周波数を選ぶ。",
-    "quality_impact": "モデル重みや生成アルゴリズムは変更しないため言語品質の近似誤差は導入しない。品質側の制約はサービス性能SLOであり、TTFT/TBT違反を避けるよう構成を選ぶ。"
-  },
+  "attempt_id": "attempt-5ea6e0dabdb5053729aff0d5",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a3583b512bca09151ba946d2",
+    "claim_id": "claim-5ea6e0dabdb5053729aff0d5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
