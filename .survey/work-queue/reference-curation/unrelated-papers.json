@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-20T03:50:00+00:00",
-  "record_count": 21,
+  "updated_at": "2026-09-20T03:56:00+00:00",
+  "record_count": 24,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -294,6 +294,60 @@
         "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md"
       ],
       "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery"
+    },
+    "arXiv:2403.04132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.04132",
+      "identity_tokens": [
+        "arXiv:2403.04132"
+      ],
+      "reason": "Evaluation platform/benchmark paper rather than an inference or training systems optimization.",
+      "first_checked_at": "2026-09-20T03:56:00+00:00",
+      "last_checked_at": "2026-09-20T03:56:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md"
+      ],
+      "title": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference"
+    },
+    "arXiv:2406.17557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17557",
+      "identity_tokens": [
+        "arXiv:2406.17557"
+      ],
+      "reason": "Dataset/data-curation contribution rather than an LLM inference or training systems method.",
+      "first_checked_at": "2026-09-20T03:56:00+00:00",
+      "last_checked_at": "2026-09-20T03:56:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/06-kv-cache-memory/2026-2609.13285-grouped-value-attention-efficient-kv-caching.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07816-kalman-delta-networks-associative-memory.md"
+      ],
+      "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale"
+    },
+    "arXiv:2407.16741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.16741",
+      "identity_tokens": [
+        "arXiv:2407.16741"
+      ],
+      "reason": "Agent application/development platform rather than an LLM inference or training systems optimization.",
+      "first_checked_at": "2026-09-20T03:56:00+00:00",
+      "last_checked_at": "2026-09-20T03:56:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/99-other-inference-systems/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+        "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+      ],
+      "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents"
     }
   }
 }
