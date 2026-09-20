@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 06:14:00 JST**
+> 自動生成: **2026-09-21 06:14:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **301** |
 | 未claim Research job | **301** |
 | 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間25分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間26分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **41** | **6** | **1** | **3** | **0** | **0** | **9** |
-| 合計 | **41** | **12** | **5** | **3** | **0** | **0** | **9** |
+| Discovery | **41** | **7** | **1** | **3** | **0** | **0** | **14** |
+| 合計 | **41** | **13** | **5** | **3** | **0** | **0** | **14** |
 
-- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:58 JST**
-- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **5件** / 候補: **9件**
-- 探索軸: forward citations of DeepSpeed-MoE inference system / forward citations of DeepSpeed-MoE inference system, continuation range / forward citations of SmoothQuant for efficient LLM inference quantization / repository-wide structured references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling / forward citations of MoE-Infinity offloading-efficient MoE serving
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **14件**
+- 探索軸: forward citations of DeepSpeed-MoE inference system / forward citations of DeepSpeed-MoE inference system, continuation range / forward citations of SmoothQuant for efficient LLM inference quantization / forward citations of Sequoia hardware-aware speculative decoding / repository-wide structured references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling / forward citations of MoE-Infinity offloading-efficient MoE serving
 - round `hourly00-forward-deepspeedmoe-04` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json`
   - 探索軸: forward citations of DeepSpeed-MoE inference system
@@ -165,6 +165,10 @@
 - round `hourly00-forward-smoothquant-06` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0612JST-hourly00-discovery-round-06-smoothquant-forward.json`
   - 探索軸: forward citations of SmoothQuant for efficient LLM inference quantization
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-sequoia-07` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0614JST-hourly00-discovery-round-07-sequoia-forward.json`
+  - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
   - 個別result照合: なし（immutable round記録は確認済み）
 - round `hourly00-backward-01` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-backward-01.json`
@@ -232,10 +236,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **918** |
+| 成功result未照合のimmutable submission | **919** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **204** |
+| └ Discovery | **205** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
