@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T09:41:30.499438+00:00",
+  "updated_at": "2026-09-20T09:45:32.150400+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T09:41:30.499438+00:00",
+      "last_recorded_at": "2026-09-20T09:45:32.150400+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 372,
+        "research_completed": 373,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 48,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35471534517:1",
-          "recorded_at": "2026-09-19T21:49:21.046592+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35471534517",
-            "run_attempt": "1",
-            "source_sha": "39e2d85c6eff019f6efe26d3579f1e6bead38845"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35476723797:1",
           "recorded_at": "2026-09-19T23:43:33.949972+00:00",
@@ -19589,6 +19575,20 @@
             "run_id": "35502995670",
             "run_attempt": "1",
             "source_sha": "c71de05367cef4483a74997596c9d815231cdca9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35503173524:1",
+          "recorded_at": "2026-09-20T09:45:32.150400+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35503173524",
+            "run_attempt": "1",
+            "source_sha": "659a6896f3de0fc5b301e0753d1ef39875fb1872"
           },
           "signals": [
             "research_completed"
@@ -24529,6 +24529,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.26297",
           "title": "Agentic AI Workload Characteristics",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8c68e144047ac9bb",
+          "type": "research",
+          "canonical_id": "arXiv:2311.09431",
+          "title": "Striped Attention: Faster Ring Attention for Causal Transformers",
           "from": "ready",
           "to": "completed"
         }
