@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-81939bee41b7da9c",
+  "type": "research",
+  "parent_job_id": "job-bb24d3e1ba400df7",
+  "priority": 95,
+  "canonical_id": "arXiv:2608.01784",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
+  "source_url": "https://arxiv.org/abs/2608.01784",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.01784-reflex-refinement-aware-compute-allocation.md",
+  "selection_reason": "diffusion LMでtokenのrefinement需要に応じてexpert budgetを変える。固定budgetを需要適応へ置き換える設計として有用。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:41:40+00:00"
+}

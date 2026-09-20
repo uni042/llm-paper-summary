@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 816,
+      "completed": 819,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 133,
+      "ready": 137,
       "completed": 652,
       "superseded": 46,
       "deferred": 3,
@@ -19,11 +19,25 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 133,
+    "ready_research_audit": 137,
     "actively_claimed": 1,
-    "claimable": 132
+    "claimable": 136
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-08b5458cb63307f5",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2608.10392",
+      "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+      "source_url": "https://arxiv.org/abs/2608.10392",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.10392-share-first-route-what-remains.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-f837d96601e69237",
       "type": "research",
@@ -123,20 +137,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-6882c5cf191305a1",
-      "type": "research",
-      "lane": null,
-      "priority": 97,
-      "canonical_id": "arXiv:2408.12757",
-      "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
-      "source_url": "https://arxiv.org/abs/2408.12757",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T10:40:45+00:00"
+  "generated_at": "2026-09-20T10:44:08+00:00"
 }

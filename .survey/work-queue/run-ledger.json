@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:40:57.303428+00:00",
+  "updated_at": "2026-09-20T10:44:20.998489+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:40:57.303428+00:00",
+      "last_recorded_at": "2026-09-20T10:44:20.998489+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 377,
         "audit_completed": 0,
-        "discovery_completed": 200,
+        "discovery_completed": 203,
         "blocked": 52,
-        "new_jobs": 330,
+        "new_jobs": 337,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35485066115:1",
-          "recorded_at": "2026-09-20T02:51:37.359450+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35485066115",
-            "run_attempt": "1",
-            "source_sha": "8552dba11921642e78805bf5592185a5a9a5fd78"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35485235549:1",
           "recorded_at": "2026-09-20T02:55:30.651791+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35505612084",
             "run_attempt": "1",
             "source_sha": "a2db8d2ef9d386799c8fb1d9fe287ae3af05d661"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35505625615:1",
+          "recorded_at": "2026-09-20T10:44:20.998489+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35505625615",
+            "run_attempt": "1",
+            "source_sha": "e8404a0a3ad5cc429cd296d6249d737d445f16b7"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -24628,6 +24628,30 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-9a0495865d51b159",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bb24d3e1ba400df7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f44f8790dbdf2f36",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26940,6 +26964,55 @@
           "type": "research",
           "canonical_id": "arXiv:2602.07616",
           "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models"
+        },
+        {
+          "job_id": "job-9a0495865d51b159",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-bb24d3e1ba400df7",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f44f8790dbdf2f36",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-08b5458cb63307f5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.10392",
+          "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation"
+        },
+        {
+          "job_id": "job-research-81939bee41b7da9c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01784",
+          "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models"
+        },
+        {
+          "job_id": "job-research-f32c4d7018f358c2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08780",
+          "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference"
+        },
+        {
+          "job_id": "job-research-f6f44c938a31a9f9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.11192",
+          "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models"
         }
       ],
       "new_paper_ids": [
