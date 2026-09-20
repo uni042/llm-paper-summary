@@ -13,7 +13,6 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import build_status_dashboard as evidence
-import reference_pool
 
 
 KINDS = ("research", "audit", "discovery")
@@ -46,22 +45,50 @@ def _candidate_count(submissions: list[dict[str, Any]]) -> int:
 
 
 def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
-    """Recompute structured-reference progress from durable papers and relevance ledgers."""
-    try:
-        pool = reference_pool.build_reference_pool(repo_root)
-    except Exception as exc:
+    """Read the latest durable repository-reference precheck progress snapshot."""
+    rows: list[tuple[datetime, dict[str, Any]]] = []
+    root = repo_root / ".survey/work-queue/discovery-precheck/results"
+    for _, payload in evidence._iter_json(root):
+        if payload.get("ok") is not True:
+            continue
+        if str(payload.get("provider") or "") not in {"repository_references", "repository_reference_pool"}:
+            continue
+        progress = payload.get("provider_progress")
+        if not isinstance(progress, dict):
+            continue
+        observed_at = evidence._parse_dt(payload.get("progress_observed_at"))
+        if observed_at is None:
+            observed_at = datetime.min.replace(tzinfo=timezone.utc)
+        rows.append((observed_at, progress))
+
+    if not rows:
         return {
             "available": False,
-            "error": f"{type(exc).__name__}: {exc}",
+            "error": "repository-reference progress snapshot has not been generated yet",
+        }
+
+    _, progress = max(rows, key=lambda row: row[0])
+    required = (
+        "reference_total_count",
+        "reference_processed_count",
+        "reference_remaining_count",
+        "reference_represented_count",
+        "reference_unrelated_count",
+        "reference_borderline_count",
+    )
+    if any(key not in progress for key in required):
+        return {
+            "available": False,
+            "error": "latest repository-reference progress snapshot is incomplete",
         }
     return {
         "available": True,
-        "total": int(pool["reference_total_count"]),
-        "processed": int(pool["reference_processed_count"]),
-        "remaining": int(pool["reference_remaining_count"]),
-        "represented": int(pool["reference_represented_count"]),
-        "unrelated": int(pool["reference_unrelated_count"]),
-        "borderline": int(pool["reference_borderline_count"]),
+        "total": int(progress["reference_total_count"]),
+        "processed": int(progress["reference_processed_count"]),
+        "remaining": int(progress["reference_remaining_count"]),
+        "represented": int(progress["reference_represented_count"]),
+        "unrelated": int(progress["reference_unrelated_count"]),
+        "borderline": int(progress["reference_borderline_count"]),
     }
 
 
@@ -69,7 +96,7 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
     lines = ["## 構造化references探索状況", ""]
     if progress.get("available") is not True:
         lines.extend([
-            "- 現在の構造化references候補プールを再計算できませんでした。",
+            "- 構造化references探索の進捗スナップショットはまだありません。",
             f"- 診断: {progress.get('error') or 'unknown error'}",
             "",
         ])
@@ -91,11 +118,10 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         "",
         f"- 消化率: **{ratio:.1f}%**",
         "- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。",
-        "- 件数は現在のpaper実体と無関係/微妙台帳から毎回再計算します。",
+        "- 探索時にpaper実体と無関係/微妙台帳から再計算した値を、schema-v3 precheck resultへ耐久保存して表示します。",
         "",
     ])
     return lines
-
 
 def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int]:
     """Count current research candidates only from durable job records.
@@ -901,7 +927,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
-        "- **構造化references探索状況**: 現在のpaper実体のstructured referencesと無関係/微妙台帳を直接読み、候補を一意化して総候補・処理済み・未処理を毎回再計算します。",
+        "- **構造化references探索状況**: schema-v3 repository-reference precheck resultに耐久保存されたprovider進捗を表示します。値自体は探索時にpaper実体と無関係/微妙台帳から再計算されます。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
         "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
         "",
