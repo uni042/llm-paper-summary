@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:33:19 JST**
+> 自動生成: **2026-09-20 09:33:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **89** |
 | 未claim Research job | **88** |
 | 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-20 06:47:50 JST（2時間45分前）** |
+| 最終検証済みResearch収録 | **09-20 06:47:50 JST（2時間46分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **5** | **3** | **0** | **1** | **0** | — |
+| Research | **10** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **10** | **6** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **10** | **2** | **1** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -111,31 +111,14 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-092a0a5a1923de06a9082271.json` (job `job-research-7462825d21914fcd`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-092a0a5a1923de06a9082271.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5955db85de95e6c2e1066e60.json` (job `job-research-708ae0cc33daae20`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-5955db85de95e6c2e1066e60.json` (`ok=false`)
-- **成功** `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills
-  - job: `.survey/work-queue/jobs/job-research-576a090cf3d34dc3.json`
-  - result: `.survey/work-queue/results/research/attempt-aabaad10b18cbdb1c36dc544.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-aabaad10b18cbdb1c36dc544.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md`
-- **成功** `arXiv:2503.16525` — KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse
-  - job: `.survey/work-queue/jobs/job-research-b33b8317e97d5549.json`
-  - result: `.survey/work-queue/results/research/attempt-d80fbebf0499dacc4d34fe5f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d80fbebf0499dacc4d34fe5f.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md`
-- **成功** `arXiv:2405.01814` — Efficient and Economic Large Language Model Inference with Attention Offloading
-  - job: `.survey/work-queue/jobs/job-research-ac3d391d822b215f.json`
-  - result: `.survey/work-queue/results/research/attempt-fa744ec1780cd6efcfcf4336.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-fa744ec1780cd6efcfcf4336.json`
-  - paper: `papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md`
+- 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-10c06465d193886d3d8c75fb.json` (job `job-research-e12ae17b96a85ee5`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-10c06465d193886d3d8c75fb.json` (`ok=false`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 06:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -204,8 +187,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **675** |
-| └ Research | **514** |
+| 成功result未照合のimmutable submission | **676** |
+| └ Research | **515** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
