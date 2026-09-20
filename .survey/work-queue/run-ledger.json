@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T04:09:37.755356+00:00",
+  "updated_at": "2026-09-20T04:13:51.285142+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T04:09:37.755356+00:00",
+      "last_recorded_at": "2026-09-20T04:13:51.285142+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 338,
+        "research_completed": 339,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35443308591:1",
-          "recorded_at": "2026-09-19T12:36:12.485140+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35443308591",
-            "run_attempt": "1",
-            "source_sha": "cbc0ff4c844f8d7140ea67fbb6c0eba4f8068f62"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35443615772:1",
           "recorded_at": "2026-09-19T12:42:25.927256+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35488416683",
             "run_attempt": "1",
             "source_sha": "d9ae4afd3bd214ada63c1c088ddc2196ebb275aa"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35488598157:1",
+          "recorded_at": "2026-09-20T04:13:51.285142+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35488598157",
+            "run_attempt": "1",
+            "source_sha": "a8e18bde5655ce5e8e9e592550e897c7409401bb"
           },
           "signals": [
             "research_completed"
@@ -24253,6 +24253,14 @@
           "type": "research",
           "canonical_id": "arXiv:1910.02054",
           "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-207dd824b238b749",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09603",
+          "title": "ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios",
           "from": "ready",
           "to": "completed"
         }

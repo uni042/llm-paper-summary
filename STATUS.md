@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 13:12:08 JST**
+> 自動生成: **2026-09-20 13:13:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **130** |
+| 収録候補論文 | **129** |
 | 未claim Research job | **129** |
-| 直近24hの検証済みResearch収録 | **50** |
-| 最終検証済みResearch収録 | **09-20 13:09:32 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **51** |
+| 最終検証済みResearch収録 | **09-20 13:13:48 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,11 +23,16 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **130** |
+| canonical_id確認済みの一意な候補論文 | **129** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **130** |
+| 非終端Research job合計 | **129** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
+
+## 構造化references探索状況
+
+- 構造化references探索の進捗スナップショットはまだありません。
+- 診断: repository-reference progress snapshot has not been generated yet
 
 ## 件数サマリー
 
@@ -35,10 +40,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **9** | **3** | **0** | **1** | **0** | — |
+| Research | **20** | **9** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **19** | **10** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **20** | **10** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +53,11 @@
 
 ### Research
 
+- **09-20 13:13:48 JST** [research] `arXiv:2604.09603` — ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios
+  - job: `.survey/work-queue/jobs/job-research-207dd824b238b749.json`
+  - result: `.survey/work-queue/results/research/attempt-a18ba59d385be8e704c64c6d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a18ba59d385be8e704c64c6d.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2604.09603-echo.md`
 - **09-20 13:09:32 JST** [research] `arXiv:1910.02054` — ZeRO: Memory Optimizations Toward Training Trillion Parameter Models
   - job: `.survey/work-queue/jobs/job-research-d9598f14ff4bcd81.json`
   - result: `.survey/work-queue/results/research/attempt-424d7c9bd547a6273a4b2a1c.json` (`ok=true`)
@@ -93,11 +103,6 @@
   - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json`
   - paper: `papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md`
-- **09-20 12:03:55 JST** [research] `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-06ec3586821ff3bb.json`
-  - result: `.survey/work-queue/results/research/attempt-494231538c84c48296aa17b3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-494231538c84c48296aa17b3.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2309.08168-draft-verify.md`
 
 ### Audit
 
@@ -161,10 +166,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.09603` — ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 13:10:01 JST** / heartbeat: **—** / lease expiry: **09-20 14:40:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-207dd824b238b749.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -184,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **130** |
+| ready | **129** |
 
 ### 候補の重複・識別情報欠損
 
@@ -204,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **802** |
+| inference/training/survey配下の論文Markdown実体 | **803** |
 
 ### immutable submissionの未照合
 
@@ -251,6 +254,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。
 - **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
 - **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
+- **構造化references探索状況**: schema-v3 repository-reference precheck resultに耐久保存されたprovider進捗を表示します。値自体は探索時にpaper実体と無関係/微妙台帳から再計算されます。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
 - **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
 
