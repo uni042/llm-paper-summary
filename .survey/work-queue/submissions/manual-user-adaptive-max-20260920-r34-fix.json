@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r34-fix",
+    "summary": "Adaptive Expert Computation / Compression の前方引用からexpert importance指標の因果妥当性を監査する研究を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.10703",
+      "title": "From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2606.10703",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md",
+      "priority": 97,
+      "reason": "routing頻度・activation norm・routing weightなど観測統計をpruning importanceとして使う妥当性を介入実験で監査する。expert pruning候補選択の根拠そのものを検証するため、圧縮研究の比較基盤として有用。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-task-prune-fwd",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-task-prune-fwd.json",
+    "receipt": "sha256:3e41ccbb163a59b8f3e0986db40c8d8c1677e57564d1349c65cf8d78f2d80370"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+    "round": "manual-user-adaptive-max-20260920-r34-fix",
+    "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)",
+    "query_summary": "Task-Specific Expert Pruningの前方引用からexpert importanceのcausal auditを追加。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "continue Adaptive Expert Computation / Compression forward-citation expansion"
+  }
+}
