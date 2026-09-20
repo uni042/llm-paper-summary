@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-dc485e69d626bab8b4a8a5c7",
+  "attempt_id": "attempt-0a552544ab2dcbe33abaf790",
   "job_id": "job-research-e203c47aded67247",
   "data": {
     "limitations": "対象はスパースMoEのルーティングであり密モデルには直接適用できない。系列単位の競争は学習時には系列全体を見られるが、自回帰推論では未来スコアを利用できないため、Expert Cacheを使うオンライン版は過去割当を遡及修正しない近似となる。追加学習なしの置換ではTopKよりわずかに品質が低く、主要な改善には短い微調整が必要である。評価モデルと実機環境も限定され、専用サービングエンジン、多ノードMoE、非常に長い文脈、異種バッチでの運用特性は未検証である。",
@@ -11,8 +11,8 @@
     "research_positioning": "適応的エキスパート計算の中でも、エキスパートの削除・圧縮や層ごとの固定配分ではなく、トークン間で同一計算予算を再配分するルーティング粒度の研究に位置する。高スパースMoEほど効果が拡大する結果は、エキスパート数削減を進めた際の品質維持策として重要であり、層単位の予算配分やエキスパートキャッシュ／オフロードとは直交的に組み合わせられる可能性がある。一方、実計算量を削減する方式ではなく同じ総活性数をより有効に使う方式なので、主目的は速度向上ではなく固定計算予算下の品質改善である。"
   },
   "reservation": {
-    "claim_id": "claim-dc485e69d626bab8b4a8a5c7",
-    "worker_id": "scheduled-chat-discovery-hourly",
+    "claim_id": "claim-0a552544ab2dcbe33abaf790",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
