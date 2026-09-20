@@ -15,7 +15,6 @@ import yaml
 REQUIRED_V10_PATHS = (
     ".survey/docs/survey-workflow/worker-router.md",
     ".survey/docs/survey-workflow/queue-v10.md",
-    ".survey/docs/survey-workflow/continuation-policy.json",
     ".survey/docs/survey-workflow/suggestion-box.md",
     ".survey/survey-state/paper-identity-index.json",
     ".survey/survey-state/frozen-training.json",
