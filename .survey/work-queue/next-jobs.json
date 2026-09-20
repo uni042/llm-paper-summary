@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 909,
+      "completed": 911,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 359,
+      "ready": 362,
       "completed": 668,
       "superseded": 46,
       "deferred": 3,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 359,
+    "ready_research_audit": 362,
     "actively_claimed": 0,
-    "claimable": 359
+    "claimable": 362
   },
   "next_jobs": [
     {
@@ -38,6 +38,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-bfb106674c4d8bfe",
+      "type": "research",
+      "lane": null,
+      "priority": 104,
+      "canonical_id": "arXiv:2608.08878",
+      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
+      "paper_path": null,
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-f0b1ffeacc3b0ccd",
+      "type": "research",
+      "lane": null,
+      "priority": 104,
+      "canonical_id": "arXiv:2608.21836",
+      "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
+      "paper_path": null,
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-bb3c83e7ecc75edd",
       "type": "research",
       "lane": null,
@@ -46,6 +74,20 @@
       "title": "SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs",
       "source_url": "https://www.semanticscholar.org/paper/dbf67d0f22b702fc06e4fcd516a4226830b859ec",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-50400bb966b2b5a1",
+      "type": "research",
+      "lane": null,
+      "priority": 103,
+      "canonical_id": "DOI:10.1109/TC.2026.3701443",
+      "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
+      "paper_path": null,
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -94,48 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-a5d6d7156c3ffec6",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.1145/3789240.3829159",
-      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
-      "source_url": "https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-3f706ddceb51-dualpath-accelerating-agentic-llm-inference-by-harvesting-disaggregated-kv-cache-storage-i-o.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-b865a4d050e3e427",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.14778/3827998.3828047",
-      "title": "PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage",
-      "source_url": "https://www.semanticscholar.org/paper/4c43bf9b5db42abd015e006496498ef7a013aa7a",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-03793bd297310cea",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "arXiv:2609.15636",
-      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
-      "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T23:10:14+00:00"
+  "generated_at": "2026-09-20T23:10:57+00:00"
 }
