@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f99914b9bbfb8b9c4e33456a","job_id":"job-research-59739220ff5250cc","data":{"canonical_id":"DOI:10.18653/v1/2026.acl-long.1683","arxiv_id":null,"doi":"10.18653/v1/2026.acl-long.1683","openreview_id":null,"arxiv_categories":{"primary":null,"cross_list":[]},"title":"LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning","summary":"長い思考連鎖では生成tokenが数千〜16kへ伸び、KVキャッシュがGPUメモリを圧迫する。従来の現在注意値や累積注意値による貪欲削除は、一時的に注意が低くても後で再び重要になるtokenを早期削除する。LazyEvictionはtoken重要度再帰現象を観測し、重要になった時刻間の最大再帰間隔を追跡する。W復号stepごとの観測窓で削除を遅延し、最終重要時刻からの経過と最大再帰間隔から将来重要度を予測してKVを保持する。4B〜32Bの推論モデルと数学・科学QA・コード生成で、FullKVの30〜50%予算でも近い精度を保ち、従来KV圧縮を上回る。","list_summary":"一時的に注意が下がって後で再重要化するtokenを最大再帰間隔で予測し、観測窓ごとの遅延削除で長い推論のKVキャッシュを圧縮する方式。","authors":["Haoyue Zhang","Hualei Zhang","Xiaosong Ma","Jie Zhang","Song Guo"],"authors_affiliations":"The Hong Kong University of Science and Technology; The Hong Kong Polytechnic University","published":"2026-07-02","publication":"ACL 2026 Long Papers","publication_type":"Conference paper","publication_status":"Published","lineage":"長時間推論向けKVキャッシュ削除","topics":["KV cache eviction","long reasoning","token importance recurrence","attention sparsity"],"importance":"長い推論ではtoken重要度が時間を置いて再発することを実測し、単step貪欲削除ではなく将来の再重要化を予測するKV保持へ転換した。","hardware_evaluation":"本文主要節では評価GPU型を明示していない。4B〜32B推論モデルを評価。100B級評価の資源例として8×A100でMATH-500 500問に数日を要すると記載。","hardware_details":"主要評価ハードウェアの型番は本文から確認できず。","quality_effect":"FullKVの30〜50% KV予算で数学・科学QA・コード生成の精度を概ね維持し、複数条件で既存削除法を上回る。","source":"https://aclanthology.org/2026.acl-long.1683/","sources":["https://aclanthology.org/2026.acl-long.1683/","https://aclanthology.org/2026.acl-long.1683.pdf"],"code":"https://github.com/Halo-949/LazyEviction","implementation":"復号時にattention threshold超過時刻と最大再帰間隔をtokenごとに更新し、W step間隔で最新W tokenを常時保持した上で残りをMRI中心scoreで選別する。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2309.17453","arxiv_id":"2309.17453"},{"canonical_id":"arXiv:2401.06104","arxiv_id":"2401.06104"},{"canonical_id":"arXiv:2408.03675","arxiv_id":"2408.03675"},{"canonical_id":"arXiv:2502.11147","arxiv_id":"2502.11147"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":4},"reservation":{"claim_id":"claim-f99914b9bbfb8b9c4e33456a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5f2844ad503568d40a7ed5ff",
+  "job_id": "job-research-7975c226ad04d80a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5f2844ad503568d40a7ed5ff",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

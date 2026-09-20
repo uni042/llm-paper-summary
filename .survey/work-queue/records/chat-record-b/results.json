@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f99914b9bbfb8b9c4e33456a","job_id":"job-research-59739220ff5250cc","data":{"overview":"LazyEvictionはFullKVの30〜50%だけを保持する厳しい予算でも、4種類のreasoning modelと複数領域で既存KV削除法より高い精度を示した。GSM8K 50%予算ではDS-Llama 80.06対FullKV 81.73、DS-Qwen 88.40対89.92。MATH-500 50%ではDS-Llamaが75.2でFullKV 74.8を上回り、DS-Qwenも85.4対86.0に近い。AIME 30%ではDS-Llama 30.0でFullKVと同値、QwQ-32B 66.7対73.3。GPQA 50%では36.9/54.6でFullKV 37.4/55.7に近く、LiveCodeBench 40%でも56.90/51.72で既存圧縮を上回る。","key_results":[{"metric":"GSM8K accuracy at 50% KV budget","value":"DS-Llama 80.06、DS-Qwen 88.40、Qwen3 91.50、QwQ 93.48","baseline":"FullKV 81.73/89.92/93.32/95.61","condition":"KV budget ratio 50%","interpretation":"半分のKVでもFullKVに近い数学推論精度を維持。"},{"metric":"MATH-500 accuracy at 50% KV budget","value":"75.2/85.4/85.8/85.4","baseline":"FullKV 74.8/86.0/87.2/87.2","condition":"4 reasoning models","interpretation":"DS-LlamaではFullKVを上回り、他モデルも小さい差に抑える。"},{"metric":"GPQA Diamond at 50% KV budget","value":"36.9 DS-Llama、54.6 DS-Qwen","baseline":"FullKV 37.4、55.7","condition":"science QA","interpretation":"数学以外の推論でも精度をほぼ維持。"},{"metric":"LiveCodeBench at 40% KV budget","value":"56.90 DS-Llama、51.72 DS-Qwen","baseline":"FullKV 58.62、55.17","condition":"code generation","interpretation":"60%削減でもH2O/TOVA/RaaS/R-KVを上回る。"},{"metric":"H1 score ablation","value":"-3.95点 DS-Llama、-5.62点 DS-Qwen","baseline":"full LazyEviction","condition":"GSM8K setting","interpretation":"最終重要時刻からMRIまでの経過を使う生存確率が主要寄与。"}],"negative_results":"観測窓Wはmodel/taskごとのMRI分布に依存し、本文実装はtest sampleの1%をoffline解析して80% tokenを覆う閾値を選ぶため実運用では非効率かつdata leakage懸念がある。一般的な非reasoning言語モデルではMRIが10未満と短く、H2O/RaaSなど累積attention法との差が小さい。100B級モデルは未評価。観測窓中はKV数が一時的にbudgetを超えるためメモリ使用量が少し変動し、score追跡の追加計算もある。","interpretation":"長い推論ではtoken重要度が単調に減るのではなく、問題条件や中間結論が後段で再利用される。現在値や累積値だけでは低注意の休眠区間に重要tokenを捨てるが、MRIは再利用の時間尺度を保持するため、将来重要化の直前までKVを残せる。","quality_impact":"30〜50% KV budgetでFullKVに近い精度を保ち、特に既存貪欲削除が崩れやすい長い推論で改善が大きい。一般長文生成では利得が小さくなる。"},"reservation":{"claim_id":"claim-f99914b9bbfb8b9c4e33456a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5f2844ad503568d40a7ed5ff",
+  "job_id": "job-research-7975c226ad04d80a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5f2844ad503568d40a7ed5ff",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
