@@ -1,0 +1,737 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0153JST-worker30-openalex-nvme-16",
+  "collector_id": "worker30-openalex-nvme-offload",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "NVMe SSD flash offload KV cache weights LLM inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=NVMe%20SSD%20flash%20offload%20KV%20cache%20weights%20LLM%20inference&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2efa0587e680997e9607607fafd58bbfce4f4157",
+  "raw_search_result_count": 37,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:54:02.202514+00:00",
+  "results": [
+    {
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+      "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "doi": "10.1016/j.hcc.2026.100428",
+      "authors": [
+        "Yu Duan",
+        "Jiateng Li",
+        "Navya Goli",
+        "Yuma Ishimura",
+        "Yiyang Li",
+        "Umamaheswara Rao Tida",
+        "Zhenge Jia"
+      ]
+    },
+    {
+      "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2608.08910",
+      "year": 2026,
+      "published": "2026-08-09",
+      "canonical_id": "arXiv:2608.08910",
+      "arxiv_id": "2608.08910",
+      "authors": [
+        "Matteo Grella"
+      ]
+    },
+    {
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.09084",
+      "year": 2026,
+      "published": "2026-07-10",
+      "canonical_id": "arXiv:2607.09084",
+      "arxiv_id": "2607.09084",
+      "authors": [
+        "Linhui Xiao",
+        "Guiping Cao",
+        "Mingyue Guo",
+        "Xianchao Guan",
+        "Fan Yang",
+        "Ming Tao",
+        "Xin Li",
+        "Yuxin Peng",
+        "Yaowei Wang"
+      ]
+    },
+    {
+      "title": "GNStor: Design of GPU-Native High-Performance Remote All-Flash Array",
+      "source_url": "https://arxiv.org/abs/2606.04908",
+      "year": 2026,
+      "published": "2026-06-03",
+      "canonical_id": "arXiv:2606.04908",
+      "arxiv_id": "2606.04908",
+      "authors": [
+        "Shushu Yi",
+        "Wenbo Wu",
+        "Guoci Chen",
+        "Junrong Zhu",
+        "Shengwen Liang",
+        "Bo Mao",
+        "Chenying Huan",
+        "Chen Tian",
+        "Jie Zhang (64655)"
+      ]
+    },
+    {
+      "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+      "source_url": "https://doi.org/10.1145/3745756.3809234",
+      "year": 2026,
+      "published": "2026-05-29",
+      "canonical_id": "arXiv:2511.11907",
+      "arxiv_id": "2511.11907",
+      "authors": [
+        "Huawei Zhang",
+        "Chunwei Xia",
+        "Zheng Wang"
+      ]
+    },
+    {
+      "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives",
+      "source_url": "https://arxiv.org/abs/2609.10347",
+      "year": 2026,
+      "published": "2026-05-11",
+      "canonical_id": "arXiv:2609.10347",
+      "arxiv_id": "2609.10347",
+      "authors": [
+        "Harshita Gupta",
+        "Mayank Kabra",
+        "Rakesh Nadig",
+        "Nika Mansouri Ghiasi",
+        "Sahand Divsalar",
+        "FATMA NİSA BOSTANCI",
+        "Ataberk Olgun",
+        "Konstantinos Kanellopoulos",
+        "J H Park",
+        "Haiyu Mao",
+        "A. Giray Yağlıkçı",
+        "Mohammad Sadrosadati",
+        "Onur Mutlu"
+      ]
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://arxiv.org/abs/2605.05899",
+      "year": 2026,
+      "published": "2026-05-07",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ]
+    },
+    {
+      "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+      "source_url": "https://arxiv.org/abs/2604.02442",
+      "year": 2026,
+      "published": "2026-04-02",
+      "canonical_id": "arXiv:2604.02442",
+      "arxiv_id": "2604.02442",
+      "authors": [
+        "Yanpeng Hu",
+        "Yiwei Yang",
+        "Yusheng Zheng",
+        "Estabon Ramos",
+        "Jianchang Su",
+        "Andi Quinn",
+        "Wei Zhang"
+      ]
+    },
+    {
+      "title": "A Survey on the Use of AI/ML for Storage System Design and Optimization",
+      "source_url": "https://hal.science/hal-05528520",
+      "year": 2026,
+      "published": "2026-02-26",
+      "canonical_id": "OpenAlex:W7133286581",
+      "authors": [
+        "Jalil Boukhobza",
+        "Suren Byna",
+        "Yuan-Hao Chang",
+        "Shadi Ibrahim",
+        "Safdar Jamil",
+        "Youngjae Kim",
+        "Chieh-Lin Tsai",
+        "Mai Zheng",
+        "Zhou, Amelie, Chi"
+      ]
+    },
+    {
+      "title": "AILZO: Hierarchical Weight Streaming and Memory Economics for LLM Agents on a 6 GiB GPU",
+      "source_url": "https://doi.org/10.2139/ssrn.7332578",
+      "year": 2026,
+      "published": "2026-01-01",
+      "canonical_id": "DOI:10.2139/ssrn.7332578",
+      "doi": "10.2139/ssrn.7332578",
+      "authors": [
+        "Sherif Rashwan"
+      ]
+    },
+    {
+      "title": "Towards Fully-fledged GPU Multitasking via Proactive Memory Scheduling",
+      "source_url": "http://arxiv.org/abs/2512.24637",
+      "year": 2025,
+      "published": "2025-12-31",
+      "canonical_id": "arXiv:2512.24637",
+      "arxiv_id": "2512.24637",
+      "authors": [
+        "Weihang SHEN",
+        "Yinqiu Chen",
+        "Rong Chen",
+        "Haibo Chen"
+      ]
+    },
+    {
+      "title": "In-Storage Acceleration of Retrieval Augmented Generation as a Service",
+      "source_url": "https://doi.org/10.1145/3695053.3731032",
+      "year": 2025,
+      "published": "2025-06-20",
+      "canonical_id": "DOI:10.1145/3695053.3731032",
+      "doi": "10.1145/3695053.3731032",
+      "authors": [
+        "Rohan Mahapatra",
+        "Harsha Santhanam",
+        "Christopher Priebe",
+        "Hanyang Xu",
+        "Hadi Esmaeilzadeh"
+      ]
+    },
+    {
+      "title": "PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices",
+      "source_url": "http://arxiv.org/abs/2504.03664",
+      "year": 2025,
+      "published": "2025-03-15",
+      "canonical_id": "arXiv:2504.03664",
+      "arxiv_id": "2504.03664",
+      "authors": [
+        "Liu, Yangyijian",
+        "Jun Li",
+        "Wu-Jun Li"
+      ]
+    },
+    {
+      "title": "Code generation and runtime techniques for enabling data-efficient deep learning training on GPUs",
+      "source_url": "http://arxiv.org/abs/2412.04747",
+      "year": 2024,
+      "published": "2024-12-06",
+      "canonical_id": "arXiv:2412.04747",
+      "arxiv_id": "2412.04747",
+      "authors": [
+        "Kun Wu"
+      ]
+    },
+    {
+      "title": "LoHan: Low-Cost High-Performance Framework to Fine-Tune 100B Model on a Consumer GPU",
+      "source_url": "http://arxiv.org/abs/2403.06504",
+      "year": 2024,
+      "published": "2024-03-11",
+      "canonical_id": "arXiv:2403.06504",
+      "arxiv_id": "2403.06504",
+      "authors": [
+        "Changyue Liao",
+        "Mo Sun",
+        "Zihan Yang",
+        "Xie, Jun",
+        "Kaiqi Chen",
+        "Binhang Yuan",
+        "Fei Wu",
+        "Zeke Wang"
+      ]
+    },
+    {
+      "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+      "source_url": "http://arxiv.org/abs/2401.08092",
+      "year": 2024,
+      "published": "2024-01-16",
+      "canonical_id": "arXiv:2401.08092",
+      "arxiv_id": "2401.08092",
+      "authors": [
+        "Mengwei Xu",
+        "Wangsong Yin",
+        "Dongqi Cai",
+        "Rongjie Yi",
+        "Daliang Xu",
+        "Qipeng Wang",
+        "Bingyang Wu",
+        "Yihao Zhao",
+        "Chen Yang",
+        "Shihe Wang",
+        "Qiyang Zhang",
+        "Zhen-Yan Lu",
+        "Li Zhang",
+        "Shangguang Wang",
+        "Yuanchun Li",
+        "Yunxin Liu",
+        "Xin Jin",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "Training and Serving System of Foundation Models: A Comprehensive Survey",
+      "source_url": "http://arxiv.org/abs/2401.02643",
+      "year": 2024,
+      "published": "2024-01-05",
+      "canonical_id": "arXiv:2401.02643",
+      "arxiv_id": "2401.02643",
+      "authors": [
+        "Jiahang Zhou",
+        "Yanyu Chen",
+        "Zicong Hong",
+        "Wuhui Chen",
+        "Yue Yu",
+        "Tao Zhang",
+        "Hui Wang",
+        "Chuanfu Zhang",
+        "Zibin Zheng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100428",
+        "title:sok towards a usercentric privacypreserving and reliable ai agent via ondevice llm personalization",
+        "url:https://doi.org/10.1016/j.hcc.2026.100428"
+      ],
+      "record": {
+        "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+        "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+        "doi": "10.1016/j.hcc.2026.100428",
+        "authors": [
+          "Yu Duan",
+          "Jiateng Li",
+          "Navya Goli",
+          "Yuma Ishimura",
+          "Yiyang Li",
+          "Umamaheswara Rao Tida",
+          "Zhenge Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08910",
+      "identity_tokens": [
+        "id:arXiv:2608.08910",
+        "title:tied tritplanes constraining ptqtp to a uniform ninelevel quantizer with a persistent folded format for diskstreamed mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2608.08910"
+      ],
+      "record": {
+        "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2608.08910",
+        "year": 2026,
+        "published": "2026-08-09",
+        "canonical_id": "arXiv:2608.08910",
+        "arxiv_id": "2608.08910",
+        "authors": [
+          "Matteo Grella"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09084",
+      "identity_tokens": [
+        "id:arXiv:2607.09084",
+        "title:a survey on the green development of large models from resourceefficient architectures to hardwaresoftware codesign",
+        "url:https://arxiv.org/abs/2607.09084"
+      ],
+      "record": {
+        "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+        "source_url": "https://arxiv.org/abs/2607.09084",
+        "year": 2026,
+        "published": "2026-07-10",
+        "canonical_id": "arXiv:2607.09084",
+        "arxiv_id": "2607.09084",
+        "authors": [
+          "Linhui Xiao",
+          "Guiping Cao",
+          "Mingyue Guo",
+          "Xianchao Guan",
+          "Fan Yang",
+          "Ming Tao",
+          "Xin Li",
+          "Yuxin Peng",
+          "Yaowei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04908",
+      "identity_tokens": [
+        "id:arXiv:2606.04908",
+        "title:gnstor design of gpunative highperformance remote allflash array",
+        "url:https://arxiv.org/abs/2606.04908"
+      ],
+      "record": {
+        "title": "GNStor: Design of GPU-Native High-Performance Remote All-Flash Array",
+        "source_url": "https://arxiv.org/abs/2606.04908",
+        "year": 2026,
+        "published": "2026-06-03",
+        "canonical_id": "arXiv:2606.04908",
+        "arxiv_id": "2606.04908",
+        "authors": [
+          "Shushu Yi",
+          "Wenbo Wu",
+          "Guoci Chen",
+          "Junrong Zhu",
+          "Shengwen Liang",
+          "Bo Mao",
+          "Chenying Huan",
+          "Chen Tian",
+          "Jie Zhang (64655)"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11907",
+      "identity_tokens": [
+        "id:DOI:10.1145/3745756.3809234",
+        "id:arXiv:2511.11907",
+        "title:kvswap diskaware kv cache offloading for longcontext ondevice inference",
+        "url:https://doi.org/10.1145/3745756.3809234"
+      ],
+      "record": {
+        "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+        "source_url": "https://doi.org/10.1145/3745756.3809234",
+        "year": 2026,
+        "published": "2026-05-29",
+        "canonical_id": "arXiv:2511.11907",
+        "arxiv_id": "2511.11907",
+        "authors": [
+          "Huawei Zhang",
+          "Chunwei Xia",
+          "Zheng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10347",
+      "identity_tokens": [
+        "id:arXiv:2609.10347",
+        "title:certiflash a formal verification framework for flash translation layers in computational solid state drives",
+        "url:https://arxiv.org/abs/2609.10347"
+      ],
+      "record": {
+        "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives",
+        "source_url": "https://arxiv.org/abs/2609.10347",
+        "year": 2026,
+        "published": "2026-05-11",
+        "canonical_id": "arXiv:2609.10347",
+        "arxiv_id": "2609.10347",
+        "authors": [
+          "Harshita Gupta",
+          "Mayank Kabra",
+          "Rakesh Nadig",
+          "Nika Mansouri Ghiasi",
+          "Sahand Divsalar",
+          "FATMA NİSA BOSTANCI",
+          "Ataberk Olgun",
+          "Konstantinos Kanellopoulos",
+          "J H Park",
+          "Haiyu Mao",
+          "A. Giray Yağlıkçı",
+          "Mohammad Sadrosadati",
+          "Onur Mutlu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05899",
+      "identity_tokens": [
+        "id:arXiv:2605.05899",
+        "title:vismmoe exploiting visualexpert affinity for efficient visuallanguage moe offloading",
+        "url:https://arxiv.org/abs/2605.05899"
+      ],
+      "record": {
+        "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+        "source_url": "https://arxiv.org/abs/2605.05899",
+        "year": 2026,
+        "published": "2026-05-07",
+        "canonical_id": "arXiv:2605.05899",
+        "arxiv_id": "2605.05899",
+        "authors": [
+          "Cheng Xu",
+          "Xiaofeng Hou",
+          "Jiacheng Liu",
+          "Chao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02442",
+      "identity_tokens": [
+        "id:arXiv:2604.02442",
+        "title:reflux reversible compute placement for cxlenabled storage",
+        "url:https://arxiv.org/abs/2604.02442"
+      ],
+      "record": {
+        "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+        "source_url": "https://arxiv.org/abs/2604.02442",
+        "year": 2026,
+        "published": "2026-04-02",
+        "canonical_id": "arXiv:2604.02442",
+        "arxiv_id": "2604.02442",
+        "authors": [
+          "Yanpeng Hu",
+          "Yiwei Yang",
+          "Yusheng Zheng",
+          "Estabon Ramos",
+          "Jianchang Su",
+          "Andi Quinn",
+          "Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7133286581",
+      "identity_tokens": [
+        "id:OpenAlex:W7133286581",
+        "title:a survey on the use of aiml for storage system design and optimization",
+        "url:https://hal.science/hal-05528520"
+      ],
+      "record": {
+        "title": "A Survey on the Use of AI/ML for Storage System Design and Optimization",
+        "source_url": "https://hal.science/hal-05528520",
+        "year": 2026,
+        "published": "2026-02-26",
+        "canonical_id": "OpenAlex:W7133286581",
+        "authors": [
+          "Jalil Boukhobza",
+          "Suren Byna",
+          "Yuan-Hao Chang",
+          "Shadi Ibrahim",
+          "Safdar Jamil",
+          "Youngjae Kim",
+          "Chieh-Lin Tsai",
+          "Mai Zheng",
+          "Zhou, Amelie, Chi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.2139/ssrn.7332578",
+      "identity_tokens": [
+        "id:DOI:10.2139/ssrn.7332578",
+        "title:ailzo hierarchical weight streaming and memory economics for llm agents on a 6 gib gpu",
+        "url:https://doi.org/10.2139/ssrn.7332578"
+      ],
+      "record": {
+        "title": "AILZO: Hierarchical Weight Streaming and Memory Economics for LLM Agents on a 6 GiB GPU",
+        "source_url": "https://doi.org/10.2139/ssrn.7332578",
+        "year": 2026,
+        "published": "2026-01-01",
+        "canonical_id": "DOI:10.2139/ssrn.7332578",
+        "doi": "10.2139/ssrn.7332578",
+        "authors": [
+          "Sherif Rashwan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.24637",
+      "identity_tokens": [
+        "id:arXiv:2512.24637",
+        "title:towards fullyfledged gpu multitasking via proactive memory scheduling",
+        "url:http://arxiv.org/abs/2512.24637"
+      ],
+      "record": {
+        "title": "Towards Fully-fledged GPU Multitasking via Proactive Memory Scheduling",
+        "source_url": "http://arxiv.org/abs/2512.24637",
+        "year": 2025,
+        "published": "2025-12-31",
+        "canonical_id": "arXiv:2512.24637",
+        "arxiv_id": "2512.24637",
+        "authors": [
+          "Weihang SHEN",
+          "Yinqiu Chen",
+          "Rong Chen",
+          "Haibo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3695053.3731032",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3731032",
+        "title:instorage acceleration of retrieval augmented generation as a service",
+        "url:https://doi.org/10.1145/3695053.3731032"
+      ],
+      "record": {
+        "title": "In-Storage Acceleration of Retrieval Augmented Generation as a Service",
+        "source_url": "https://doi.org/10.1145/3695053.3731032",
+        "year": 2025,
+        "published": "2025-06-20",
+        "canonical_id": "DOI:10.1145/3695053.3731032",
+        "doi": "10.1145/3695053.3731032",
+        "authors": [
+          "Rohan Mahapatra",
+          "Harsha Santhanam",
+          "Christopher Priebe",
+          "Hanyang Xu",
+          "Hadi Esmaeilzadeh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.03664",
+      "identity_tokens": [
+        "id:arXiv:2504.03664",
+        "title:pipo pipelined offloading for efficient inference on consumer devices",
+        "url:http://arxiv.org/abs/2504.03664"
+      ],
+      "record": {
+        "title": "PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices",
+        "source_url": "http://arxiv.org/abs/2504.03664",
+        "year": 2025,
+        "published": "2025-03-15",
+        "canonical_id": "arXiv:2504.03664",
+        "arxiv_id": "2504.03664",
+        "authors": [
+          "Liu, Yangyijian",
+          "Jun Li",
+          "Wu-Jun Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.04747",
+      "identity_tokens": [
+        "id:arXiv:2412.04747",
+        "title:code generation and runtime techniques for enabling dataefficient deep learning training on gpus",
+        "url:http://arxiv.org/abs/2412.04747"
+      ],
+      "record": {
+        "title": "Code generation and runtime techniques for enabling data-efficient deep learning training on GPUs",
+        "source_url": "http://arxiv.org/abs/2412.04747",
+        "year": 2024,
+        "published": "2024-12-06",
+        "canonical_id": "arXiv:2412.04747",
+        "arxiv_id": "2412.04747",
+        "authors": [
+          "Kun Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.06504",
+      "identity_tokens": [
+        "id:arXiv:2403.06504",
+        "title:lohan lowcost highperformance framework to finetune 100b model on a consumer gpu",
+        "url:http://arxiv.org/abs/2403.06504"
+      ],
+      "record": {
+        "title": "LoHan: Low-Cost High-Performance Framework to Fine-Tune 100B Model on a Consumer GPU",
+        "source_url": "http://arxiv.org/abs/2403.06504",
+        "year": 2024,
+        "published": "2024-03-11",
+        "canonical_id": "arXiv:2403.06504",
+        "arxiv_id": "2403.06504",
+        "authors": [
+          "Changyue Liao",
+          "Mo Sun",
+          "Zihan Yang",
+          "Xie, Jun",
+          "Kaiqi Chen",
+          "Binhang Yuan",
+          "Fei Wu",
+          "Zeke Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.08092",
+      "identity_tokens": [
+        "id:arXiv:2401.08092",
+        "title:a survey of resourceefficient llm and multimodal foundation models",
+        "url:http://arxiv.org/abs/2401.08092"
+      ],
+      "record": {
+        "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+        "source_url": "http://arxiv.org/abs/2401.08092",
+        "year": 2024,
+        "published": "2024-01-16",
+        "canonical_id": "arXiv:2401.08092",
+        "arxiv_id": "2401.08092",
+        "authors": [
+          "Mengwei Xu",
+          "Wangsong Yin",
+          "Dongqi Cai",
+          "Rongjie Yi",
+          "Daliang Xu",
+          "Qipeng Wang",
+          "Bingyang Wu",
+          "Yihao Zhao",
+          "Chen Yang",
+          "Shihe Wang",
+          "Qiyang Zhang",
+          "Zhen-Yan Lu",
+          "Li Zhang",
+          "Shangguang Wang",
+          "Yuanchun Li",
+          "Yunxin Liu",
+          "Xin Jin",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.02643",
+      "identity_tokens": [
+        "id:arXiv:2401.02643",
+        "title:training and serving system of foundation models a comprehensive survey",
+        "url:http://arxiv.org/abs/2401.02643"
+      ],
+      "record": {
+        "title": "Training and Serving System of Foundation Models: A Comprehensive Survey",
+        "source_url": "http://arxiv.org/abs/2401.02643",
+        "year": 2024,
+        "published": "2024-01-05",
+        "canonical_id": "arXiv:2401.02643",
+        "arxiv_id": "2401.02643",
+        "authors": [
+          "Jiahang Zhou",
+          "Yanyu Chen",
+          "Zicong Hong",
+          "Wuhui Chen",
+          "Yue Yu",
+          "Tao Zhang",
+          "Hui Wang",
+          "Chuanfu Zhang",
+          "Zibin Zheng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:0c17d03d2ad61f1491b5d217d8ef5089b1dff6b0293bfa20889deb9f70fa4b4a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
