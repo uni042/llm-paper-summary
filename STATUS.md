@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:55:11 JST**
+> 自動生成: **2026-09-21 05:55:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **274** |
-| 未claim Research job | **274** |
+| 収録候補論文 | **286** |
+| 未claim Research job | **286** |
 | 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間6分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **274** |
+| canonical_id確認済みの一意な候補論文 | **286** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **274** |
+| 非終端Research job合計 | **286** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **35** | **10** | **7** | **3** | **0** | **0** | **22** |
-| 合計 | **35** | **16** | **11** | **3** | **0** | **0** | **22** |
+| Discovery | **38** | **10** | **10** | **0** | **0** | **0** | **22** |
+| 合計 | **38** | **16** | **14** | **0** | **0** | **0** | **22** |
 
 - 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -99,18 +99,18 @@
   - result: `.survey/work-queue/results/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json`
   - 探索軸: recent MoE expert prefetch prediction offload inference alternate provider
-- **09-21 05:32:50 JST** job `job-7cf235b2465d2a2c` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
-  - 探索軸: repository-wide structured references for LLM inference systems
-- **09-21 05:36:10 JST** job `job-99746c3421d040c0` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0536JST-discovery-forward-flashattention-02.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0536JST-discovery-forward-flashattention-02.json`
-  - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
-- **09-21 05:36:15 JST** job `job-3549744addf9ad2c` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0537JST-discovery-forward-elasticmoe-03.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0537JST-discovery-forward-elasticmoe-03.json`
-  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
+- **09-21 05:55:03 JST** job `job-e4f0f1b8147e14bd` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json`
+  - 探索軸: forward citations of H2O for KV cache serving systems
+- **09-21 05:55:09 JST** job `job-9b3ac06162ea42d5` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json`
+  - 探索軸: forward citations of FlexGen for hierarchical-memory inference systems
+- **09-21 05:55:15 JST** job `job-1b641245769d4db2` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json`
+  - 探索軸: forward citations of Splitwise for disaggregated LLM serving
 
 ### 直近タスク
 
@@ -152,7 +152,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **7件** / 個別result照合: **7件** / 個別result未照合: **3件** / 候補: **22件**
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **0件** / 候補: **22件**
 - 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems / forward citations of FlexGen for hierarchical-memory inference systems / forward citations of Splitwise for disaggregated LLM serving
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
@@ -185,15 +185,15 @@
 - round `round-08` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json`
   - 探索軸: forward citations of H2O for KV cache serving systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json` (`ok=true`)
 - round `round-09` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json`
   - 探索軸: forward citations of FlexGen for hierarchical-memory inference systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json` (`ok=true`)
 - round `round-10` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json`
   - 探索軸: forward citations of Splitwise for disaggregated LLM serving
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -220,7 +220,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **274** |
+| ready | **286** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **912** |
+| 成功result未照合のimmutable submission | **909** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **198** |
+| └ Discovery | **195** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
