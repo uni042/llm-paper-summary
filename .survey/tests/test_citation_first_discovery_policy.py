@@ -97,7 +97,7 @@ class CitationFirstDiscoveryPolicyTest(unittest.TestCase):
                         sub["discovery_stats"],
                     )
                 self.assertEqual(ctx.exception.code, "citation_first_required")
-                self.assertIn("forward-citation", ctx.exception.next_action)
+                self.assertIn("forward routes", ctx.exception.next_action)
 
                 queue_worker.DISCOVERY_STATE.write_text(
                     json.dumps(
@@ -158,7 +158,7 @@ class CitationFirstDiscoveryPolicyTest(unittest.TestCase):
                         sub["discovery_stats"],
                     )
                 self.assertEqual(ctx.exception.code, "citation_first_required")
-                self.assertIn("forward-citation", ctx.exception.next_action)
+                self.assertIn("forward routes", ctx.exception.next_action)
         finally:
             queue_worker.DISCOVERY_STATE = original
 
