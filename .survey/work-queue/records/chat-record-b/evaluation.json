@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a86622b38716752ba65bde87",
-  "job_id": "job-research-42834c639c34d742",
-  "data": {
-    "hardware": "主要評価はJetson TX2（8GB、GPU）、Raspberry Pi 4B（CPU）、追加モバイル評価はXiaomi 14（16GB、Snapdragon 8 Gen 3）。JetsonではSSDとHDDも比較する。",
-    "software": "7種類のMoE LLMを評価し、Switch Transformer base系列、GLaM系等に加え、後続評価ではMiniCPM MoE 8x2Bをmllm C++エンジンで実装。baselineはIO-FREE（全RAM）、IO-EXP（expert on-demand）、IO-QEXP（量子化expert on-demand）、STI pipeline。",
-    "methodology": "memory budgetと許容accuracy lossを変化させ、TPOT、sample latency、peak memory、storage size、Rouge-2等を測定する。offline quantization/profileにはXSum/SAMSum等の数百sampleを用い、expert個別INT2感度、全expert bitwidth候補、activation conditional probabilityを構築。ablationでquantization(Q)、preload pipeline(P)、expert cache(C)を順次追加し寄与を測る。Xiaomi 14ではnon-expertをgroup32 INT4、4 big CPU coresでMiniCPM MoEを評価する。",
-    "scope": "最適化対象は主に単一requestのautoregressive decode。prefillや複数token/requestをまとめて処理する場面では多くのexpertが同時活性化しsparsity利得が薄れるため適用外と明記される。offline profileはデータ分布依存で、許容accuracy lossはsoft goalである。"
-  },
+  "attempt_id": "attempt-46bebe4124d9b569eda95755",
+  "job_id": "job-research-872c3c76cc1c3eff",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a86622b38716752ba65bde87",
+    "claim_id": "claim-46bebe4124d9b569eda95755",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

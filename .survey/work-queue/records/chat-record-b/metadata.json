@@ -2,85 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a86622b38716752ba65bde87",
-  "job_id": "job-research-42834c639c34d742",
-  "data": {
-    "canonical_id": "arXiv:2308.14352",
-    "arxiv_id": "2308.14352",
-    "doi": "10.48550/arXiv.2308.14352",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
-    "summary": "EdgeMoEは、MoE型LLMの大部分を占める低頻度expert重みを外部ストレージへ置き、常用non-expert重みだけをRAMへ常駐させるオンデバイス推論エンジンである。expertごとの量子化感度に応じた混合ビット幅、前層のexpert活性から次層expertを予測する先読み、expert bufferのキャッシュ管理を組み合わせ、I/Oを圧縮・隠蔽する。Jetson TX2とRaspberry Pi 4Bでは動的expert loading比で約2.55〜3.25倍、量子化expert baseline比1.19〜2.12倍、STI比1.22〜2.77倍のTPOT高速化を報告する。Xiaomi 14上のMiniCPM MoE 8x2Bでも全常駐比63%メモリ削減、量子化動的loading比25%高速化を示す。",
-    "list_summary": "MoE expertを外部ストレージ化し、expert別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。",
-    "authors": [
-      "Rongjie Yi",
-      "Liwei Guo",
-      "Shiyun Wei",
-      "Ao Zhou",
-      "Shangguang Wang",
-      "Mengwei Xu"
-    ],
-    "authors_affiliations": "Beijing University of Posts and Telecommunications; University of Electronic Science and Technology of China; Zhongguancun Laboratory",
-    "published": "2023-08-28",
-    "publication": "arXiv preprint",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv",
-    "lineage": "MoE inference / on-device LLM / expert offloading / expert caching",
-    "topics": [
-      "MoE",
-      "モバイル推論",
-      "expert offload",
-      "混合精度量子化",
-      "expert preloading"
-    ],
-    "importance": "expertが巨大だが疎にしか使われないMoE固有性をストレージ階層へ写像し、SSD/HDDとRAM間のexpert I/Oを量子化・予測・キャッシュで削減する初期オンデバイスMoEシステム。",
-    "implementation": "PyTorch prototypeに加え、mllm C++エンジン上でMiniCPM MoE 8x2B/Xiaomi 14を評価。公式UbiquitousLearning/mllmで実装を公開。",
-    "hardware_evaluation": "Jetson TX2、Raspberry Pi 4B、Xiaomi 14 Snapdragon 8 Gen 3。SSD/HDD差も評価。",
-    "quality_effect": "expert別ビット幅をユーザー許容精度損失に合わせて調整し、代表構成では約2%以内の品質低下を狙う。",
-    "source": "https://arxiv.org/abs/2308.14352",
-    "sources": [
-      "https://arxiv.org/abs/2308.14352",
-      "https://ar5iv.labs.arxiv.org/html/2308.14352",
-      "https://github.com/UbiquitousLearning/mllm"
-    ],
-    "code": "https://github.com/UbiquitousLearning/mllm",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2210.17323",
-        "arxiv_id": "2210.17323"
-      },
-      {
-        "canonical_id": "arXiv:2306.07629",
-        "arxiv_id": "2306.07629"
-      },
-      {
-        "canonical_id": "arXiv:2308.15030",
-        "arxiv_id": "2308.15030"
-      },
-      {
-        "canonical_id": "arXiv:2306.00978",
-        "arxiv_id": "2306.00978"
-      },
-      {
-        "canonical_id": "arXiv:2401.04088",
-        "arxiv_id": "2401.04088"
-      },
-      {
-        "canonical_id": "arXiv:2006.16668",
-        "arxiv_id": "2006.16668"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary manuscript reference section",
-    "references_total": 96
-  },
+  "attempt_id": "attempt-46bebe4124d9b569eda95755",
+  "job_id": "job-research-872c3c76cc1c3eff",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a86622b38716752ba65bde87",
+    "claim_id": "claim-46bebe4124d9b569eda95755",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a86622b38716752ba65bde87",
-  "job_id": "job-research-42834c639c34d742",
-  "data": {
-    "limitations": "主対象はsingle-request autoregressive decodeで、prefillや複数token同時処理ではexpert sparsityが低下し適用できない。activation予測はoffline datasetで作る統計に依存し、分布変化でhit率が低下し得る。expert-wise bitwidth探索は各expertの感度測定を伴いofflineコストがあり、許容精度損失Pはsoft targetで厳密保証ではない。予測missではstorage I/Oを待つためIO-FREEより遅く、低速CPUではdequantization負担により全量子化RAM常駐が有利な場合もある。",
-    "differences": "STIのようなgeneric layer prefetchは実行順が固定のdense modelを想定するのに対し、EdgeMoEはrouter未確定のexpertをactivation-path条件付き確率で予測する。単純expert swappingはactivated expertをrouter後に読むだけだが、EdgeMoEは事前preloadとcacheを加える。GPTQ/AWQ等のweight quantizationは全重みのbitwidthを下げる方向で、EdgeMoEはexpertだけをstorage階層化し、expertごとに異なるbitwidthを割り当てるため併用可能。クラウドMoE servingのexpert parallelismとは異なり、単一COTS edge device内のRAM-storage I/Oが中心課題である。",
-    "implementation_status": "PyTorch prototypeでSwitch Transformer等7 MoEモデルをJetson TX2/Raspberry Pi 4B上評価。追加版ではmllm C++エンジン上でMiniCPM MoE 8x2BをXiaomi 14へ実装。公式コードはUbiquitousLearning/mllmで公開される。",
-    "research_positioning": "MoE offload研究の中でも、SSD/HDDを単なる不足RAMの退避先ではなく『cold expertの常設層』として扱い、hot non-expertとの温度差を階層配置へ変換した点が重要である。さらにexpert activation pathの相関をprefetch signalに使うため、SSD/NVMe活用、expert cache、I/O scheduling研究へ直接つながる。現代の大規模MoEをGPU/CPU/NVMe階層で動かす設計に対し、予測・圧縮・cacheを統合する先行例として位置づけられる。"
-  },
+  "attempt_id": "attempt-46bebe4124d9b569eda95755",
+  "job_id": "job-research-872c3c76cc1c3eff",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a86622b38716752ba65bde87",
+    "claim_id": "claim-46bebe4124d9b569eda95755",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
