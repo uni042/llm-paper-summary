@@ -586,6 +586,24 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         result = queue_worker.validate_discovery_precheck(sub)
         self.assertEqual(result["provider"], "semantic_scholar")
 
+    def test_explicit_user_directed_provider_may_override_reference_pool_order(self) -> None:
+        self._enable_reference_pool_first()
+        self._commit_result()
+        sub = self._base_sub()
+        sub["_file"] = self._commit_submission("user-directed-forward-citation.json")
+        sub["discovery_precheck"] = {
+            "request_id": "req-1",
+            "result_path": ".survey/work-queue/discovery-precheck/results/req-1.json",
+            "receipt": "sha256:receipt",
+        }
+        sub["discovery_stats"]["trigger"] = "explicit_user_request"
+        sub["user_directed_request"] = {
+            "request_id": "chat-explicit-forward-citation-1",
+            "summary": "Find recent papers citing the selected Adaptive Expert Computation / Compression lineage.",
+        }
+        result = queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(result["provider"], "semantic_scholar")
+
     def test_legacy_provider_is_rejected_when_reference_pool_still_has_candidate(self) -> None:
         self._enable_reference_pool_first()
         self._commit_reference_pool_result(unseen=1)
