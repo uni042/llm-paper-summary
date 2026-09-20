@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-10c06465d193886d3d8c75fb",
+  "attempt_id": "attempt-d96484c2d2d3c4cd1838a754",
   "job_id": "job-research-e12ae17b96a85ee5",
   "data": {
     "overview": "単純な窓注意は先頭KVを追い出すと急激に破綻するが、先頭4トークン程度を直近窓へ加えるだけで再計算付き窓に近いパープレキシティへ戻る。Llama-2、MPT、Falcon、Pythiaの複数規模で400万トークン超まで安定した言語モデリングを確認し、再計算付きスライディング窓に対して最大22.2倍の高速化を報告する。専用シンクトークンを事前学習した160Mモデルでは、単一シンクだけで安定したストリーミング品質を維持できた。",
@@ -48,7 +48,7 @@
     "quality_impact": "最近の文脈に対する言語モデリング品質は再計算付き窓に近く維持される一方、保持窓より古い情報を必要とするタスク品質は保証しない。したがって『長文脈能力の拡張』ではなく『ストリーミング安定化』として解釈する必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-10c06465d193886d3d8c75fb",
+    "claim_id": "claim-d96484c2d2d3c4cd1838a754",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

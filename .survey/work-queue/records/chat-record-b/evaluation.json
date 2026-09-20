@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-10c06465d193886d3d8c75fb",
+  "attempt_id": "attempt-d96484c2d2d3c4cd1838a754",
   "job_id": "job-research-e12ae17b96a85ee5",
   "data": {
     "hardware": "評価対象はLlama-2 7B/13B/70B、MPT 7B/30B、Falcon 7B/40B、Pythia 2.8B/6.9B/12B。専用シンクトークンの事前学習実験では160Mパラメータモデルを8基のNVIDIA A6000 GPUで学習する。",
@@ -11,7 +11,7 @@
     "scope": "主張は『無限に長い入力全体を理解する』ことではなく、有限キャッシュ内の最近情報を使った継続言語モデリングを系列全長に依存しないメモリと計算で安定化することに限定される。遠い過去の内容を保持・検索する能力は評価目的外であり、長文脈検索や文書QAの代替ではない。"
   },
   "reservation": {
-    "claim_id": "claim-10c06465d193886d3d8c75fb",
+    "claim_id": "claim-d96484c2d2d3c4cd1838a754",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
