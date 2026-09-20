@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r37",
+    "summary": "Adaptive Expert Computation / Compression の前方引用からoffloading時のsemantic predictionとexpert substitutionを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.24963/ijcai.2026/657",
+      "title": "DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/657",
+      "paper_path": "papers/inference/03-expert-prefetch/2026-domoe-domain-aware-semantic-expert-prediction.md",
+      "priority": 98,
+      "reason": "domain-specific routing tableとsemantic matching範囲の制限でprediction精度とoverheadを両立し、offload時のexpert hit ratioとthroughputを改善する。"
+    },
+    {
+      "canonical_id": "arXiv:2508.18983",
+      "title": "SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution",
+      "source_url": "https://arxiv.org/abs/2508.18983",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md",
+      "priority": 99,
+      "reason": "低重要度active expertをGPU常駐の機能的類似expertで代替し、offload transfer自体を回避するalgorithm-system co-design。48% decoding latency削減と60%以上cache hitを報告する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-cross-lineage",
+    "round": "adaptive-max-r37-offload-descendants",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Not All Experts Are Equalの前方引用からDoMoEとSMoEを関連系統へ追加。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "finish current stage after queue ingestion and fresh-seed precheck"
+  }
+}
