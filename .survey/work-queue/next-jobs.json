@@ -19,8 +19,8 @@
   },
   "claiming": {
     "ready_research_audit": 114,
-    "actively_claimed": 1,
-    "claimable": 113
+    "actively_claimed": 2,
+    "claimable": 112
   },
   "next_jobs": [
     {
@@ -94,20 +94,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-9c3fc1bfa46c87d0",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2311.04934",
-      "title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference",
-      "source_url": "https://arxiv.org/abs/2311.04934",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-98f40fbe8624cabd",
       "type": "research",
       "lane": null,
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-7059e5a5af8e2266",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2305.17118",
+      "title": "Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time",
+      "source_url": "https://arxiv.org/abs/2305.17118",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T07:30:16+00:00"
+  "generated_at": "2026-09-20T07:32:42+00:00"
 }

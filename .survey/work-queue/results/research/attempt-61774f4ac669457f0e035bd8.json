@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-61774f4ac669457f0e035bd8",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-61774f4ac669457f0e035bd8.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.arxiv_categories.primary is required for arXiv papers | metadata.references[2] duplicates an earlier reference identity | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+  "processed_at": "2026-09-20T07:32:41+00:00",
+  "validation_errors": [
+    "metadata.arxiv_categories.primary is required for arXiv papers",
+    "metadata.references[2] duplicates an earlier reference identity",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
