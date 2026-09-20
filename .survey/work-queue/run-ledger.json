@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T06:01:38.603445+00:00",
+  "updated_at": "2026-09-20T06:02:33.164765+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T06:01:38.603445+00:00",
+      "last_recorded_at": "2026-09-20T06:02:33.164765+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 347,
+        "research_completed": 348,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35447561955:1",
-          "recorded_at": "2026-09-19T14:05:57.954939+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35447561955",
-            "run_attempt": "1",
-            "source_sha": "fa62d86dbed3d01fd2d9bb5fca17f58fcd06829c"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35447722564:1",
           "recorded_at": "2026-09-19T14:09:27.868827+00:00",
@@ -19592,6 +19577,20 @@
             "run_id": "35493133772",
             "run_attempt": "1",
             "source_sha": "7214046abebe4a7f930f4d35f5c9988e3cf2935f"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35493171863:1",
+          "recorded_at": "2026-09-20T06:02:33.164765+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35493171863",
+            "run_attempt": "1",
+            "source_sha": "e432d2f44de17573a9903fa1c78ec4ae51c4ef2e"
           },
           "signals": [
             "research_completed"
@@ -24324,6 +24323,14 @@
           "type": "research",
           "canonical_id": "arXiv:2407.02490",
           "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d223f7a181256e07",
+          "type": "research",
+          "canonical_id": "arXiv:2505.23416",
+          "title": "KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction",
           "from": "ready",
           "to": "completed"
         }
