@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:10:47 JST**
+> 自動生成: **2026-09-20 14:11:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **127** |
 | 未claim Research job | **125** |
 | 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-20 14:05:53 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-20 14:05:53 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -178,7 +178,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2404.19429` — Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping / worker `scheduled-chat-discovery-overflow`
-  - claim: **09-20 14:09:10 JST** / heartbeat: **—** / lease expiry: **09-20 15:39:10 JST**
+  - claim: **09-20 14:11:05 JST** / heartbeat: **—** / lease expiry: **09-20 15:41:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-3ee76817e29cd5c6.json`
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-20 15:02:13 JST**
