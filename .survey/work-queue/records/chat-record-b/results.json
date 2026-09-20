@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0b14b95da2b3a2abc2e9855f",
-  "job_id": "job-research-9824d8080e264ed4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0b14b95da2b3a2abc2e9855f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0b14b95da2b3a2abc2e9855f","job_id":"job-research-9824d8080e264ed4","data":{"overview":"H2Oは20%程度のKV予算で多くのタスクをfull cacheに近い品質で維持し、KVメモリを約5倍削減する。OPT-30Bの20%予算ではCOPA 84〜85、OpenBookQA 43、PiQA 78.45、Winogrande 69.06とfull cacheに近い一方、Localのみは48/25.2/55.82/49.17まで崩れる。FlexGen統合では削減メモリを大きなbatchやoffload回避へ使い、最大3倍のFlexGen比スループットと1.9倍の同一batch遅延短縮を得る。","key_results":[{"metric":"20% KV予算でのOPT-30B品質","value":"COPA 84.00、OpenBookQA 43.00、PiQA 78.45、Winogrande 69.06","baseline":"full cache 85.00/43.20/78.51/70.24、Local 48.00/25.20/55.82/49.17","condition":"5-shot、Heavy-Hitter+Local","interpretation":"最近性だけでは失う古い重要KVを累積注意で残すことでfull品質へ近づく。"},{"metric":"KVメモリ削減","value":"20%予算で約5倍、タスクによって5〜10倍でも比較可能品質","baseline":"full KV cache","condition":"OPT/LLaMA/GPT-NeoX、複数タスク","interpretation":"保持トークン数そのものを削るため、系列長に比例するKV容量の係数を直接下げる。"},{"metric":"T4 synthetic throughput","value":"OPT-6.7B 512+1024でH2O 52.1 token/s、FlexGen 16.9；OPT-30B 512+512で18.83対8.5","baseline":"FlexGen","condition":"T4 16GB、20% budget","interpretation":"キャッシュ縮小によりbatch増加・offload削減が可能になりend-to-end throughputが向上する。"},{"metric":"A100 latency","value":"OPT-6.7B batch24 2048+2048で99.5s→53.5s、OPT-13B batch4 5000+5000で214.2s→155.4s","baseline":"FlexGen","condition":"A100 80GB、20% budget","interpretation":"同一batchでもKVアクセス量削減により最大約1.9倍低遅延。"},{"metric":"A100 throughput","value":"OPT-6.7B batch24で494.1→918.9 token/s、batch64はFlexGen OOMに対しH2O 1161.0 token/s","baseline":"FlexGen","condition":"2048+2048、A100 80GB","interpretation":"メモリ余裕がbatch上限を引き上げ、容量削減が直接並列度へ転換される。"},{"metric":"streaming length","value":"PG-19で最大4 million tokensまでstreaming評価","baseline":"StreamLLM","condition":"Heavy-Hitter+local固定budget","interpretation":"固定キャッシュで長時間継続でき、要約等では固定先頭sinkより内容適応的な保持が有利。"}],"negative_results":"Localのみ、Heavy-Hitterのみの片側構成ではfull cache比2.85〜22.75%の性能低下があり、両者の併用が必要。固定Sparse Transformerも20%予算で最大35%低下する。evictionは不可逆なので重要トークンの誤削除が後続生成へ伝播する。","interpretation":"H2Oのシステム利得は注意演算を少なくするだけでなく、KVメモリ縮小でより大きいbatchをGPUへ置けること、CPU offloadが不要になるケースがあることから生じる。品質面では長期的重要度を累積注意、短期的重要度をrecent windowで分担する構造が効く。","quality_impact":"20%前後では多くのベンチマークでfull cacheに近いが、品質保証はタスク・モデル・budget依存である。極端な圧縮や重要度分布が変化する入力では、削除済みKVを取り戻せないことが主要リスクとなる。"},"reservation":{"claim_id":"claim-0b14b95da2b3a2abc2e9855f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
