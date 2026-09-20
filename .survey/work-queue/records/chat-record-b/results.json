@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-3e00451f32958b311cdc3f3c",
-  "job_id": "job-research-3cf2e0a916913e29",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e00451f32958b311cdc3f3c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3e00451f32958b311cdc3f3c","job_id":"job-research-3cf2e0a916913e29",
+ "data":{"overview":"オンライン知識蒸留により、配備前に全問い合わせ分布を知らなくても下書きモデルの受理率を継続的に引き上げられる。4種類の課題では受理率改善が0.1〜0.65に達し、実機測定で通常の自己回帰推論に対して1.42〜2.17倍の高速化を得た。分布を人工的に切り替える試験では境界直後に受理率が落ちるが、新領域の要求を処理するにつれて回復する。言語・話題別の専門下書きは単一モデルより受理率をさらに0.1〜0.2高める一方、常駐メモリを増やす。",
+ "key_results":[
+ {"metric":"トークン間遅延と高速化","value":"Spiderで23.53 ms、2.17倍高速化","baseline":"投機的復号なしの目標モデル生成","condition":"TinyLLaMA-1.1B下書き、Vicuna-33B目標、単一A100 80GB、バッチ1","interpretation":"下書きと目標の速度差が大きく、オンライン蒸留で高い受理率を得る組では一回の大型モデル呼び出しから多くの確定トークンを得られる。"},
+ {"metric":"4課題の実測高速化","value":"1.42〜2.17倍","baseline":"投機的復号なし","condition":"Spider、GSM8K、Alpaca-finance、CodeSearchNet Pythonで蒸留下書きを使用","interpretation":"受理率改善が理論上の指標だけでなく、単一A100上の実際のトークン間遅延短縮へ結び付く。"},
+ {"metric":"オフライン蒸留後の受理率","value":"Vicuna-7B/Spiderで0.28から0.76、FLAN-T5-XL/Spiderで0.13から0.78","baseline":"未蒸留の下書きモデル","condition":"教師サンプリングと順方向KL、2エポック","interpretation":"教師の確率分布を使う知識蒸留はラベルだけの微調整より下書き分布を目標へ強く整合でき、オンライン更新の学習目的として有効である。"},
+ {"metric":"専門下書きによる受理率","value":"単一下書きより0.1〜0.2向上","baseline":"全話題を一つの下書きモデルで処理","condition":"LMSYS Chatbot Arenaの言語別・話題別ルーティング","interpretation":"各下書きが扱う問い合わせ分布を狭めることで、小容量モデルでも領域固有の頻出パターンへ適応しやすくなる。"},
+ {"metric":"Medusaとの組合せ","value":"SpiderでMedusa単独1.34倍からOSD併用2.01倍","baseline":"Medusa-v1単独","condition":"Medusa追加ヘッドをオンライン微調整","interpretation":"OSDの考え方は独立下書きモデルに限定されず、目標モデル内の投機ヘッドにも適用できる。"}
+ ],
+ "negative_results":"分布が切り替わる境界では受理率が一時的に大きく低下し、オンライン更新が新分布を学ぶまで回復しない。専門下書きを5個常駐させる例では総量800Mとなり、7B目標に対する追加メモリ比率が単一下書きの約2%から約10%へ増える。最適な再生バッファ保持・追い出し方針、更新間隔、専門モデル数と分類方式は未解決である。受理率が低い条件では下書き費用が相対的に重くなり、7B/160Mの組では受理率0.5で投機なしより遅い0.95倍になる測定もある。",
+ "interpretation":"投機的復号の利得は下書きと目標の速度比だけでなく受理率αへ強く依存する。OSDは目標モデルの検証から無料で得られる教師分布を使ってαを上げるため、目標モデルを追加実行せず大型モデルの呼び出し頻度を下げる。分布が狭いほど小型モデルが近似しやすいため、オンライン適応と専門ルーティングは相補的に働く。ただし学習・常駐メモリの追加費用があるため、負荷と分布変化速度に応じた更新制御が必要になる。",
+ "quality_impact":"標準投機的復号の受理・棄却と補正サンプリングを変更しないため、理論上の最終出力分布は目標モデルに一致する。OSDは下書き候補の当たりやすさを改善するだけで、目標モデルの生成品質を近似モデルへ置き換える方式ではない。"},
+ "reservation":{"claim_id":"claim-3e00451f32958b311cdc3f3c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
