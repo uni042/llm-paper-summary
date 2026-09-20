@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r6",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、圧縮粒度・予算可変・量子化の異なる強候補を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.27866",
+      "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models",
+      "source_url": "https://arxiv.org/abs/2606.27866",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.27866-flexmoe-nested-intra-expert-pruning.md",
+      "priority": 98,
+      "reason": "単一学習runから複数budgetのnested subnetworkを生成し、online budget switchingまで扱う可変予算圧縮。"
+    },
+    {
+      "canonical_id": "arXiv:2606.18304",
+      "title": "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
+      "source_url": "https://arxiv.org/abs/2606.18304",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.18304-attribution-coverage-structural-pruning.md",
+      "priority": 97,
+      "reason": "expert内部channel redundancyを捉え、prune-ratio allocationをcoverage maximizationとして解く構造化圧縮。"
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116244",
+      "title": "RS-MoE: Coupled expert compression via activation-peak guided collaborative decomposition",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116244",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-rs-moe-coupled-expert-compression.md",
+      "priority": 96,
+      "reason": "activation peakを使ってexpert間を協調分解するcoupled compressionで、独立圧縮とは異なる設計軸を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2606.00079",
+      "title": "BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2606.00079",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.00079-bitsmoe-spectral-bit-allocation.md",
+      "priority": 97,
+      "reason": "shared basisとexpert-specific spectral factorを分け、activation-aware mixed-precision bit allocationでMoE量子化を最適化する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.13997",
+      "title": "HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2605.13997",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md",
+      "priority": 96,
+      "reason": "pairwise similarityでは見えないexpert tripletのmerge障害をsimplicial topologyで捉え、learning-free compressionの選択問題へ使う。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-max-2026-09-20",
+    "round": "adaptive-max-r6-compression-diverse",
+    "axis": "diverse MoE compression methods from lineage forward citations",
+    "query_summary": "Not All Experts Are Equalのforward citation未収録集合から圧縮原理が重ならない5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "expert merging/training-free specializationへ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "MoE compression diversity",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2402.14800",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 160,
+        "unseen_result_count": 100,
+        "duplicate_filtered_count": 24,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 25,
+        "candidate_accepted_count": 5,
+        "position": "2 pages"
+      }
+    ]
+  }
+}
