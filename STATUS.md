@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 06:08:15 JST**
+> 自動生成: **2026-09-21 06:09:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **40** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **40** | **9** | **4** | **3** | **0** | **0** | **6** |
+| Discovery | **40** | **4** | **0** | **4** | **0** | **0** | **8** |
+| 合計 | **40** | **10** | **4** | **4** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:58 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **6件**
-- 探索軸: repository-wide structured references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling / forward citations of MoE-Infinity offloading-efficient MoE serving
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **8件**
+- 探索軸: forward citations of DeepSpeed-MoE inference system / repository-wide structured references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling / forward citations of MoE-Infinity offloading-efficient MoE serving
+- round `hourly00-forward-deepspeedmoe-04` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json`
+  - 探索軸: forward citations of DeepSpeed-MoE inference system
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `hourly00-backward-01` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-backward-01.json`
   - 探索軸: repository-wide structured references for LLM inference systems
@@ -220,10 +224,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **915** |
+| 成功result未照合のimmutable submission | **917** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **201** |
+| └ Discovery | **203** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
