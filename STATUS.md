@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:46:41 JST**
+> 自動生成: **2026-09-20 12:47:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **72** |
 | 未claim Research job | **71** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-20 12:45:53 JST（48秒前）** |
+| 最終検証済みResearch収録 | **09-20 12:45:53 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **8** | **3** | **0** | **1** | **0** | — |
+| Research | **18** | **9** | **3** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **9** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **18** | **10** | **4** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **3件** / result照合済み非成功: **5件** / 個別result未照合: **0件**
+- immutable submission: **9件** / 検証済み成功: **3件** / result照合済み非成功: **5件** / 個別result未照合: **1件**
 - **成功** `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference
   - job: `.survey/work-queue/jobs/job-research-3f4b0e4a187439dd.json`
   - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
@@ -127,6 +127,7 @@
   - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee.json` (job `job-research-abc92cd8a94f1144`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-b4be6a1ab5725fa47fd44d34.json` (job `job-research-9d57d4c95ee33e52`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-f50aea1a300a90e85b31bf68.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f924026a9c059a8203a1b596-repair1.json` (job `job-research-4786c27e72f86caf`, failure_class `content_validation`)
@@ -210,8 +211,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **691** |
-| └ Research | **530** |
+| 成功result未照合のimmutable submission | **692** |
+| └ Research | **531** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
