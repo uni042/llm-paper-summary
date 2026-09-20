@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-eda6a759c3d074c07a647fb0",
-  "job_id": "job-research-765eee68b506c6ff",
-  "data": {
-    "hardware": "実モデル上でLlama-3-8B-Instruct、Mistral-7B-Instruct-v0.2、123B Mistral-Large-Instruct-2411を評価。注意挙動行列の構築時間はLlamaとMistral-7Bで測定し、長文脈推論時の先頭トークン遅延とピークメモリも実測する。",
-    "software": "前向き計算を差し替えたKV圧縮実装と、平坦化キャッシュへ直接追記する専用CUDAカーネルを使用。著者実装は公開済み。",
-    "methodology": "LongBenchの16データセットとLongBench v2を含む計27データセットを用いる。質問既知圧縮では64〜8192等の固定トークン予算、質問未知圧縮では文脈長の10%、20%、40%等の保持率を用いる。比較対象はSnapKV、PyramidKV、DuoAttention、HeadKV-R、HeadKV-R2。さらにINFscの逆順配分、挙動成分の除去、スコア集約法、β感度を検証する。",
-    "scope": "シミュレーションだけではなく実モデル推論の精度、遅延、メモリを測る。ただし主評価は英語長文脈ベンチマークであり、多言語・言語横断への一般化は未検証。人工針による事前プロファイルと実タスクの相関もNarrativeQAと2WikiMultihopQAで検証する。"
-  },
+  "attempt_id": "attempt-a1f91ed5c60955cb4265b431",
+  "job_id": "job-research-2e7cd1c4e1dc851d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-eda6a759c3d074c07a647fb0",
+    "claim_id": "claim-a1f91ed5c60955cb4265b431",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

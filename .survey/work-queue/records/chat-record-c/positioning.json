@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-eda6a759c3d074c07a647fb0",
-  "job_id": "job-research-765eee68b506c6ff",
-  "data": {
-    "limitations": "主評価が英語ベンチマークであり、多言語・言語横断で4種の注意挙動やINFscが同じ意味を持つかは未検証である。人工針によるプロファイルが必要で、モデルや言語が変われば再検証が必要になる可能性がある。KV追い出し自体は近似なので、極端な容量制約や重要度推定のずれでは必要情報を失う。",
-    "differences": "SnapKVやPyramidKVが主にヘッド内の注意重要度や階層的予算を使うのに対し、REALはヘッド間の機能差を失敗例まで含めて測る。DuoAttentionは検索ヘッド、HeadKV-R/R2は検索・推論の成功挙動を重視するが、REALは偏りと注意散漫を偽陽性・偽陰性として明示的に罰し、成功と失敗の両側から予算を決める。",
-    "implementation_status": "著者公式コードが公開されている。論文実装は平坦化KVキャッシュ、前向き計算の差し替え、デコード時の直接追記CUDAカーネルを含む。",
-    "research_positioning": "KVキャッシュ圧縮の研究系統では、単純なトークン重要度選択からヘッド役割に応じた配分へ進んだ流れを、さらに失敗挙動の診断へ拡張した方式として位置付けられる。特に『どのKVを残すか』だけでなく『どのヘッドへ容量を与えるか』を、推論失敗の原因と結び付けた点が重要である。"
-  },
+  "attempt_id": "attempt-a1f91ed5c60955cb4265b431",
+  "job_id": "job-research-2e7cd1c4e1dc851d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-eda6a759c3d074c07a647fb0",
+    "claim_id": "claim-a1f91ed5c60955cb4265b431",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
