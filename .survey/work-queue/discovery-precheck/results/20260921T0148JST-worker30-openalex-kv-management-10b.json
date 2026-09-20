@@ -1,0 +1,872 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0148JST-worker30-openalex-kv-management-10b",
+  "collector_id": "worker30-openalex-kv-management",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "dynamic KV cache management sparse attention long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20dynamic%20KV%20cache%20management%20sparse%20attention%20long%20context%20inference&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg2OTI0ODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjAzNjgyNjY5J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "29b6d71d10b3bc3348bb6e8acfb06f4ee4f49b5a",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 39,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:48:10.772163+00:00",
+  "results": [
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Leshan Li",
+        "Zhui Zhu",
+        "Xianglong Deng",
+        "Yaojian Chen",
+        "Qingfeng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhiyuan Liu"
+      ]
+    },
+    {
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "source_url": "https://arxiv.org/abs/2609.13141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13141",
+      "arxiv_id": "2609.13141",
+      "authors": [
+        "Zhiwei Li",
+        "Lei Zhu",
+        "Hao Gu",
+        "Xiang Hu",
+        "Yan Wang",
+        "Haitao Mi",
+        "Sirui Han",
+        "Leo Liang",
+        "Zhijiang Guo"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.10441",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10441",
+      "arxiv_id": "2609.10441",
+      "authors": [
+        "Hongming Zhang",
+        "Zhaozhen Gu",
+        "Fengshuo Bai",
+        "Ming Hao",
+        "Qingyang Zhang",
+        "Yuanyuan Wang",
+        "Shi‐Yang Tang",
+        "Yanna Wang",
+        "Bo Xu"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "SymbolicLight V2: Hybrid Neuromorphic Architecture and Sparse Execution for Low-Energy Language Inference",
+      "source_url": "https://arxiv.org/abs/2609.09772",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09772",
+      "arxiv_id": "2609.09772",
+      "authors": [
+        "Ting Liu"
+      ]
+    },
+    {
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+      "source_url": "https://arxiv.org/abs/2609.10714",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10714",
+      "arxiv_id": "2609.10714",
+      "authors": [
+        "Yu Ma",
+        "Zhen Gao",
+        "Li Qiao",
+        "Xiaoyuan Zhang",
+        "Mahdi Boloursaz Mashhadi",
+        "Yin Xu",
+        "Wenjun Xu",
+        "Xiaodong Xu",
+        "Kaibin Huang",
+        "Jiangzhou Wang",
+        "Rahim Tafazolli",
+        "Sheng Chen",
+        "Tony Q. S. Quek",
+        "Ping Zhang"
+      ]
+    },
+    {
+      "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2609.07237",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07237",
+      "arxiv_id": "2609.07237",
+      "authors": [
+        "Siyu Li",
+        "Dong Wang",
+        "Jie Zhou",
+        "Wei Li",
+        "Yang Xu",
+        "Sijie Song"
+      ]
+    },
+    {
+      "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.07108",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07108",
+      "arxiv_id": "2609.07108",
+      "authors": [
+        "Zili Wang",
+        "Zhaopeng Qiu",
+        "Yuekai Zhang",
+        "Shuang Yu",
+        "Junjie Lai"
+      ]
+    },
+    {
+      "title": "Characterizing Contention-Induced Reliability Collapse in KV-Cache Timing Side Channels for Multi-Tenant LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.06853",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06853",
+      "arxiv_id": "2609.06853",
+      "authors": [
+        "Rana Abu Bakar"
+      ]
+    },
+    {
+      "title": "Companion-style QA Assistance in Ego-Vision",
+      "source_url": "https://arxiv.org/abs/2609.06721",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06721",
+      "arxiv_id": "2609.06721",
+      "authors": [
+        "Hangyu Qin",
+        "Junbin Xiao",
+        "Shenglang Zhang",
+        "Angela Yao"
+      ]
+    },
+    {
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05821",
+      "arxiv_id": "2609.05821",
+      "authors": [
+        "Pengan Chen",
+        "Kaikai Zheng",
+        "Liang Hong",
+        "Lixia Yi",
+        "Jiyue Jiang",
+        "Jiayang Chen",
+        "Yixuan Wang",
+        "Yimin Fan",
+        "Xinyuan Liu",
+        "Jiayi Li",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Yu Li"
+      ]
+    },
+    {
+      "title": "DODR: Deterministic Operator-Driven Reasoning in Latent Space",
+      "source_url": "https://arxiv.org/abs/2609.04782",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.04782",
+      "arxiv_id": "2609.04782",
+      "authors": [
+        "Weicai Huang"
+      ]
+    },
+    {
+      "title": "CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2609.03675",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03675",
+      "arxiv_id": "2609.03675",
+      "authors": [
+        "Jing Jiang",
+        "Yiran Ling",
+        "Ruonan Li",
+        "Dimitrios Stamoulis",
+        "Jie Liu"
+      ]
+    },
+    {
+      "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2609.02780",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "arXiv:2609.02780",
+      "arxiv_id": "2609.02780",
+      "authors": [
+        "Jitai Hao",
+        "Ke Yang",
+        "Qiang Huang",
+        "Jun Yu"
+      ]
+    },
+    {
+      "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.02108",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "arXiv:2609.02108",
+      "arxiv_id": "2609.02108",
+      "authors": [
+        "Haobo Xu",
+        "Sirui Chen",
+        "Yuanchen Bei",
+        "Lingjie Chen",
+        "Yuchen Yan",
+        "Dongqi Fu",
+        "Jingrui He",
+        "Hanghang Tong"
+      ]
+    },
+    {
+      "title": "What Happens When the Model Eats the Stack? Rethinking the Research Agenda for Data Agents to Withstand the Bitter Lesson",
+      "source_url": "https://arxiv.org/abs/2609.03141",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "arXiv:2609.03141",
+      "arxiv_id": "2609.03141",
+      "authors": [
+        "Liana Patel",
+        "Siddharth Jha",
+        "Negar Arabzadeh",
+        "Carlos Guestrin",
+        "Ion Stoica",
+        "Matei Zaharia"
+      ]
+    },
+    {
+      "title": "MemoVAD: Resource-Efficient Video Anomaly Detection via Dynamic Semantic Memory in Edge Computing Scenarios",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/618",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.24963/ijcai.2026/618",
+      "doi": "10.24963/ijcai.2026/618",
+      "authors": [
+        "Guo Li",
+        "Jiandian Zeng",
+        "Yang Li (7082)",
+        "Zihao Peng",
+        "Ke Chen",
+        "Tian Wang"
+      ]
+    },
+    {
+      "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.00595",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "arXiv:2609.00595",
+      "arxiv_id": "2609.00595",
+      "authors": [
+        "Rui Yang",
+        "Junjie Xu",
+        "Zhengyu Liu",
+        "Neil Fendley",
+        "Yang Hong",
+        "Ziyang Li",
+        "Yinzhi Cao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://arxiv.org/abs/2609.12379"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://arxiv.org/abs/2609.12379",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Leshan Li",
+          "Zhui Zhu",
+          "Xianglong Deng",
+          "Yaojian Chen",
+          "Qingfeng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhiyuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13141",
+      "identity_tokens": [
+        "id:arXiv:2609.13141",
+        "title:sas simple attention sparsification via endtoend optimization of context ranking",
+        "url:https://arxiv.org/abs/2609.13141"
+      ],
+      "record": {
+        "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+        "source_url": "https://arxiv.org/abs/2609.13141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13141",
+        "arxiv_id": "2609.13141",
+        "authors": [
+          "Zhiwei Li",
+          "Lei Zhu",
+          "Hao Gu",
+          "Xiang Hu",
+          "Yan Wang",
+          "Haitao Mi",
+          "Sirui Han",
+          "Leo Liang",
+          "Zhijiang Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10441",
+      "identity_tokens": [
+        "id:arXiv:2609.10441",
+        "title:convmem convolutional memory for longcontext reasoning",
+        "url:https://arxiv.org/abs/2609.10441"
+      ],
+      "record": {
+        "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.10441",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10441",
+        "arxiv_id": "2609.10441",
+        "authors": [
+          "Hongming Zhang",
+          "Zhaozhen Gu",
+          "Fengshuo Bai",
+          "Ming Hao",
+          "Qingyang Zhang",
+          "Yuanyuan Wang",
+          "Shi‐Yang Tang",
+          "Yanna Wang",
+          "Bo Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09772",
+      "identity_tokens": [
+        "id:arXiv:2609.09772",
+        "title:symboliclight v2 hybrid neuromorphic architecture and sparse execution for lowenergy language inference",
+        "url:https://arxiv.org/abs/2609.09772"
+      ],
+      "record": {
+        "title": "SymbolicLight V2: Hybrid Neuromorphic Architecture and Sparse Execution for Low-Energy Language Inference",
+        "source_url": "https://arxiv.org/abs/2609.09772",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09772",
+        "arxiv_id": "2609.09772",
+        "authors": [
+          "Ting Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10714",
+      "identity_tokens": [
+        "id:arXiv:2609.10714",
+        "title:from semantic to token communication the next paradigm for largemodeldriven 6g intelligent connectivity",
+        "url:https://arxiv.org/abs/2609.10714"
+      ],
+      "record": {
+        "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+        "source_url": "https://arxiv.org/abs/2609.10714",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10714",
+        "arxiv_id": "2609.10714",
+        "authors": [
+          "Yu Ma",
+          "Zhen Gao",
+          "Li Qiao",
+          "Xiaoyuan Zhang",
+          "Mahdi Boloursaz Mashhadi",
+          "Yin Xu",
+          "Wenjun Xu",
+          "Xiaodong Xu",
+          "Kaibin Huang",
+          "Jiangzhou Wang",
+          "Rahim Tafazolli",
+          "Sheng Chen",
+          "Tony Q. S. Quek",
+          "Ping Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07237",
+      "identity_tokens": [
+        "id:arXiv:2609.07237",
+        "title:cedar errorbounded residual routing for efficient longcontext attention",
+        "url:https://arxiv.org/abs/2609.07237"
+      ],
+      "record": {
+        "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+        "source_url": "https://arxiv.org/abs/2609.07237",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07237",
+        "arxiv_id": "2609.07237",
+        "authors": [
+          "Siyu Li",
+          "Dong Wang",
+          "Jie Zhou",
+          "Wei Li",
+          "Yang Xu",
+          "Sijie Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07108",
+      "identity_tokens": [
+        "id:arXiv:2609.07108",
+        "title:online draft cotraining for speculative decoding in largescale longcontext rl posttraining",
+        "url:https://arxiv.org/abs/2609.07108"
+      ],
+      "record": {
+        "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.07108",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07108",
+        "arxiv_id": "2609.07108",
+        "authors": [
+          "Zili Wang",
+          "Zhaopeng Qiu",
+          "Yuekai Zhang",
+          "Shuang Yu",
+          "Junjie Lai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06853",
+      "identity_tokens": [
+        "id:arXiv:2609.06853",
+        "title:characterizing contentioninduced reliability collapse in kvcache timing side channels for multitenant llm serving",
+        "url:https://arxiv.org/abs/2609.06853"
+      ],
+      "record": {
+        "title": "Characterizing Contention-Induced Reliability Collapse in KV-Cache Timing Side Channels for Multi-Tenant LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.06853",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06853",
+        "arxiv_id": "2609.06853",
+        "authors": [
+          "Rana Abu Bakar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06721",
+      "identity_tokens": [
+        "id:arXiv:2609.06721",
+        "title:companionstyle qa assistance in egovision",
+        "url:https://arxiv.org/abs/2609.06721"
+      ],
+      "record": {
+        "title": "Companion-style QA Assistance in Ego-Vision",
+        "source_url": "https://arxiv.org/abs/2609.06721",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06721",
+        "arxiv_id": "2609.06721",
+        "authors": [
+          "Hangyu Qin",
+          "Junbin Xiao",
+          "Shenglang Zhang",
+          "Angela Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05821",
+      "identity_tokens": [
+        "id:arXiv:2609.05821",
+        "title:conduit a unified residualstream restoration framework for kv cache reuse in visionlanguage models",
+        "url:https://arxiv.org/abs/2609.05821"
+      ],
+      "record": {
+        "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.05821",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05821",
+        "arxiv_id": "2609.05821",
+        "authors": [
+          "Pengan Chen",
+          "Kaikai Zheng",
+          "Liang Hong",
+          "Lixia Yi",
+          "Jiyue Jiang",
+          "Jiayang Chen",
+          "Yixuan Wang",
+          "Yimin Fan",
+          "Xinyuan Liu",
+          "Jiayi Li",
+          "Zhanqiu Zhang",
+          "Yiwen Guo",
+          "Yu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04782",
+      "identity_tokens": [
+        "id:arXiv:2609.04782",
+        "title:dodr deterministic operatordriven reasoning in latent space",
+        "url:https://arxiv.org/abs/2609.04782"
+      ],
+      "record": {
+        "title": "DODR: Deterministic Operator-Driven Reasoning in Latent Space",
+        "source_url": "https://arxiv.org/abs/2609.04782",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.04782",
+        "arxiv_id": "2609.04782",
+        "authors": [
+          "Weicai Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03675",
+      "identity_tokens": [
+        "id:arXiv:2609.03675",
+        "title:cofie coarsetofine evidence selection for efficient streaming video understanding",
+        "url:https://arxiv.org/abs/2609.03675"
+      ],
+      "record": {
+        "title": "CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2609.03675",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03675",
+        "arxiv_id": "2609.03675",
+        "authors": [
+          "Jing Jiang",
+          "Yiran Ling",
+          "Ruonan Li",
+          "Dimitrios Stamoulis",
+          "Jie Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02780",
+      "identity_tokens": [
+        "id:arXiv:2609.02780",
+        "title:shallowstream index shallow then answer deep for streaming video understanding",
+        "url:https://arxiv.org/abs/2609.02780"
+      ],
+      "record": {
+        "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2609.02780",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "arXiv:2609.02780",
+        "arxiv_id": "2609.02780",
+        "authors": [
+          "Jitai Hao",
+          "Ke Yang",
+          "Qiang Huang",
+          "Jun Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02108",
+      "identity_tokens": [
+        "id:arXiv:2609.02108",
+        "title:predict dont iterate efficient adaptivelength infilling for diffusion language models",
+        "url:https://arxiv.org/abs/2609.02108"
+      ],
+      "record": {
+        "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.02108",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "arXiv:2609.02108",
+        "arxiv_id": "2609.02108",
+        "authors": [
+          "Haobo Xu",
+          "Sirui Chen",
+          "Yuanchen Bei",
+          "Lingjie Chen",
+          "Yuchen Yan",
+          "Dongqi Fu",
+          "Jingrui He",
+          "Hanghang Tong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03141",
+      "identity_tokens": [
+        "id:arXiv:2609.03141",
+        "title:what happens when the model eats the stack rethinking the research agenda for data agents to withstand the bitter lesson",
+        "url:https://arxiv.org/abs/2609.03141"
+      ],
+      "record": {
+        "title": "What Happens When the Model Eats the Stack? Rethinking the Research Agenda for Data Agents to Withstand the Bitter Lesson",
+        "source_url": "https://arxiv.org/abs/2609.03141",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "arXiv:2609.03141",
+        "arxiv_id": "2609.03141",
+        "authors": [
+          "Liana Patel",
+          "Siddharth Jha",
+          "Negar Arabzadeh",
+          "Carlos Guestrin",
+          "Ion Stoica",
+          "Matei Zaharia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/618",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/618",
+        "title:memovad resourceefficient video anomaly detection via dynamic semantic memory in edge computing scenarios",
+        "url:https://doi.org/10.24963/ijcai.2026/618"
+      ],
+      "record": {
+        "title": "MemoVAD: Resource-Efficient Video Anomaly Detection via Dynamic Semantic Memory in Edge Computing Scenarios",
+        "source_url": "https://doi.org/10.24963/ijcai.2026/618",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.24963/ijcai.2026/618",
+        "doi": "10.24963/ijcai.2026/618",
+        "authors": [
+          "Guo Li",
+          "Jiandian Zeng",
+          "Yang Li (7082)",
+          "Zihao Peng",
+          "Ke Chen",
+          "Tian Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00595",
+      "identity_tokens": [
+        "id:arXiv:2609.00595",
+        "title:sok when safe agents fail together the security of multi agent llm systems",
+        "url:https://arxiv.org/abs/2609.00595"
+      ],
+      "record": {
+        "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+        "source_url": "https://arxiv.org/abs/2609.00595",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "arXiv:2609.00595",
+        "arxiv_id": "2609.00595",
+        "authors": [
+          "Rui Yang",
+          "Junjie Xu",
+          "Zhengyu Liu",
+          "Neil Fendley",
+          "Yang Hong",
+          "Ziyang Li",
+          "Yinzhi Cao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:46ccfc222995431c695646b8bd91edf4cc811ac5820785fd4914d56588cca1c1",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
