@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:21:31 JST**
+> 自動生成: **2026-09-20 15:21:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **115** |
 | 未claim Research job | **113** |
 | 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-20 15:17:41 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-20 15:17:41 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **34** | **8** | **7** | **0** | **2** | **0** | — |
+| Research | **34** | **7** | **7** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **34** | **9** | **8** | **0** | **2** | **0** | **5** |
+| 合計 | **34** | **8** | **8** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **7件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **7件** / 検証済み成功: **7件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -158,8 +158,6 @@
   - result: `.survey/work-queue/results/research/attempt-b269ed373464c47a4c4f738e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b269ed373464c47a4c4f738e.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f2383c99186b0edb3dfe445b.json` (job `job-research-2442fe5802b5c31d`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-f2383c99186b0edb3dfe445b.json` (`ok=false`)
 - **成功** `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling
   - job: `.survey/work-queue/jobs/job-research-e0a5ea7f3cdd2886.json`
   - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
@@ -188,7 +186,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2506.20675` — Utility-Driven Speculative Decoding for Mixture-of-Experts / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:18:59 JST** / heartbeat: **—** / lease expiry: **09-20 16:48:59 JST**
+  - claim: **09-20 15:21:41 JST** / heartbeat: **—** / lease expiry: **09-20 16:51:41 JST**
   - evidence: `.survey/work-queue/claims/job-research-2442fe5802b5c31d.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
