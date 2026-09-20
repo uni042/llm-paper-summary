@@ -1,1 +1,48 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f8b09fceaf979c451783d9d6","job_id":"job-research-8c68e144047ac9bb","data":{"overview":"Striped Attentionは長い系列ほど、また系列並列度が高いほどRing Attentionに対する利得が増える。256k系列ではA100で1.41〜1.45倍、TPUv4で1.39〜1.50倍のエンドツーエンド高速化を達成し、16 TPUv4・786k系列では最大1.65倍へ伸びる。256kでの絶対スループットも1B/3B/7Bすべて改善し、A100では1118→1581、491→713、400→573 tokens/sとなる。","key_results":[{"metric":"256k学習高速化","value":"A100で1.41倍/1.45倍/1.43倍、TPUv4で1.39倍/1.50倍/1.44倍","baseline":"Ring Attention","condition":"1B/3B/7B、系列長262,144、A100メッシュ(2,4)、TPUv4メッシュ(2,8)","interpretation":"入力配置だけの変更でもモデル全体の学習時間を約4〜5割短縮でき、3Bで最大の利得を得る。"},{"metric":"A100絶対スループット","value":"1B 1118→1581、3B 491→713、7B 400→573 tokens/s","baseline":"Ring Attention","condition":"8×A100 80GB、256k系列","interpretation":"注意カーネル単体ではなくエンドツーエンドの学習トークン処理量が増える。"},{"metric":"TPUv4絶対スループット","value":"1B 3959→5440、3B 1064→1592、7B 786→1133 tokens/s","baseline":"Ring Attention","condition":"16×TPUv4、256k系列","interpretation":"異なるアクセラレータでも負荷均等化の効果が再現される。"},{"metric":"最大高速化","value":"1.65倍","baseline":"Ring Attention","condition":"16 TPUv4、系列長786k級","interpretation":"ブロック内タイル数が増える長系列ほど、因果マスクで省略できる計算割合が理論上限へ近づく。"}],"negative_results":"A100では最小の装置内ブロック4096×4096に対してタイルが2048×4096なので、Striped Attentionでも省略できる完全マスクタイルが生じず高速化が出ない。改善は注意部分だけに作用し、MLPやその他の計算、通信などは残るため、理論上の注意2倍高速化がそのままモデル全体2倍にはならない。短系列・小ブロックでは順列方式の利得が小さい。","interpretation":"Ring Attentionの通信アルゴリズムそのものより、因果マスクとデータ配置の組合せが同期負荷を決めていた。全装置へ同程度の三角計算を配ると、各ラウンドの最大装置時間を下げられる。長系列では一ブロック中のタイルが増えて約半分の不要計算を細かく飛ばせるため、系列長と系列並列度の増加が利得を拡大する。","quality_impact":"厳密な注意であり、近似的な疎化やトークン削除を行わない。トークン、位置ID、教師ラベルを整合した順列で扱うことで、元の因果Transformerと同じ学習目的を維持する。"},"reservation":{"claim_id":"claim-f8b09fceaf979c451783d9d6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-726aa6f9d7bb4140731a500b",
+  "job_id": "job-research-8c68e144047ac9bb",
+  "data": {
+    "overview": "Striped Attentionは長い系列ほど、また系列並列度が高いほどRing Attentionに対する利得が増える。256k系列ではA100で1.41〜1.45倍、TPUv4で1.39〜1.50倍のエンドツーエンド高速化を達成し、16 TPUv4・786k系列では最大1.65倍へ伸びる。256kでの絶対スループットも1B/3B/7Bすべて改善し、A100では1118→1581、491→713、400→573 tokens/sとなる。",
+    "key_results": [
+      {
+        "metric": "256k学習高速化",
+        "value": "A100で1.41倍/1.45倍/1.43倍、TPUv4で1.39倍/1.50倍/1.44倍",
+        "baseline": "Ring Attention",
+        "condition": "1B/3B/7B、系列長262,144、A100メッシュ(2,4)、TPUv4メッシュ(2,8)",
+        "interpretation": "入力配置だけの変更でもモデル全体の学習時間を約4〜5割短縮でき、3Bで最大の利得を得る。"
+      },
+      {
+        "metric": "A100絶対スループット",
+        "value": "1B 1118→1581、3B 491→713、7B 400→573 tokens/s",
+        "baseline": "Ring Attention",
+        "condition": "8×A100 80GB、256k系列",
+        "interpretation": "注意カーネル単体ではなくエンドツーエンドの学習トークン処理量が増える。"
+      },
+      {
+        "metric": "TPUv4絶対スループット",
+        "value": "1B 3959→5440、3B 1064→1592、7B 786→1133 tokens/s",
+        "baseline": "Ring Attention",
+        "condition": "16×TPUv4、256k系列",
+        "interpretation": "異なるアクセラレータでも負荷均等化の効果が再現される。"
+      },
+      {
+        "metric": "最大高速化",
+        "value": "1.65倍",
+        "baseline": "Ring Attention",
+        "condition": "16 TPUv4、系列長786k級",
+        "interpretation": "ブロック内タイル数が増える長系列ほど、因果マスクで省略できる計算割合が理論上限へ近づく。"
+      }
+    ],
+    "negative_results": "A100では最小の装置内ブロック4096×4096に対してタイルが2048×4096なので、Striped Attentionでも省略できる完全マスクタイルが生じず高速化が出ない。改善は注意部分だけに作用し、MLPやその他の計算、通信などは残るため、理論上の注意2倍高速化がそのままモデル全体2倍にはならない。短系列・小ブロックでは順列方式の利得が小さい。",
+    "interpretation": "Ring Attentionの通信アルゴリズムそのものより、因果マスクとデータ配置の組合せが同期負荷を決めていた。全装置へ同程度の三角計算を配ると、各ラウンドの最大装置時間を下げられる。長系列では一ブロック中のタイルが増えて約半分の不要計算を細かく飛ばせるため、系列長と系列並列度の増加が利得を拡大する。",
+    "quality_impact": "厳密な注意であり、近似的な疎化やトークン削除を行わない。トークン、位置ID、教師ラベルを整合した順列で扱うことで、元の因果Transformerと同じ学習目的を維持する。"
+  },
+  "reservation": {
+    "claim_id": "claim-726aa6f9d7bb4140731a500b",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

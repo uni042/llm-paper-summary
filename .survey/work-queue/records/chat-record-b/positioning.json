@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f8b09fceaf979c451783d9d6","job_id":"job-research-8c68e144047ac9bb","data":{"limitations":"利得は因果注意と十分大きな装置内ブロックを前提とし、双方向注意には同じマスク省略がない。タイル粒度が粗いと理論上マスクされた要素があってもタイル全体を計算する必要があり、A100の最小ブロックでは高速化しない。入力を縞状へ並べるため、位置ID、教師ラベル、その他トークン位置依存の処理を一貫して並べ替える必要がある。評価はJAXのRing Attention基盤とA100/TPUに限定され、他の通信トポロジや現代的なFlashAttention実装との統合性能は未評価である。","differences":"Ring Attentionは連続した系列区間を各装置へ割り当てるため、因果マスク下でラウンドごとの装置負荷が偏る。Striped Attentionは通信順序や厳密注意の計算式を変えず、初期データ配置とマスク規則だけを変えて各装置の省略可能計算を均等化する。近似的な疎注意やコンテキスト並列の通信削減とは異なり、通信量を直接減らすより計算側の同期最大時間を下げる。","implementation_status":"著者がJAX実装を公開しており、既存Ring Attentionコードベースの拡張としてA100、TPUv3、TPUv4で実測している。入力順列、位置ID/教師ラベル順列、Striped用因果マスクとタイル省略を実装する。","research_positioning":"超長系列Transformer学習の系列並列化における負荷分散最適化であり、Ring Attentionの正確性とメモリ拡張性を保ったまま因果構造を計算削減へ変換する。特に『通信を重ね合わせても同期先の最遅装置が全計算なら速くならない』という分散注意固有の問題を、データレイアウトで解く。後続のコンテキスト並列、リング型注意、負荷均等化方式を比較する基準点として有用である。"},"reservation":{"claim_id":"claim-f8b09fceaf979c451783d9d6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-726aa6f9d7bb4140731a500b",
+  "job_id": "job-research-8c68e144047ac9bb",
+  "data": {
+    "limitations": "利得は因果注意と十分大きな装置内ブロックを前提とし、双方向注意には同じマスク省略がない。タイル粒度が粗いと理論上マスクされた要素があってもタイル全体を計算する必要があり、A100の最小ブロックでは高速化しない。入力を縞状へ並べるため、位置ID、教師ラベル、その他トークン位置依存の処理を一貫して並べ替える必要がある。評価はJAXのRing Attention基盤とA100/TPUに限定され、他の通信トポロジや現代的なFlashAttention実装との統合性能は未評価である。",
+    "differences": "Ring Attentionは連続した系列区間を各装置へ割り当てるため、因果マスク下でラウンドごとの装置負荷が偏る。Striped Attentionは通信順序や厳密注意の計算式を変えず、初期データ配置とマスク規則だけを変えて各装置の省略可能計算を均等化する。近似的な疎注意やコンテキスト並列の通信削減とは異なり、通信量を直接減らすより計算側の同期最大時間を下げる。",
+    "implementation_status": "著者がJAX実装を公開しており、既存Ring Attentionコードベースの拡張としてA100、TPUv3、TPUv4で実測している。入力順列、位置ID/教師ラベル順列、Striped用因果マスクとタイル省略を実装する。",
+    "research_positioning": "超長系列Transformer学習の系列並列化における負荷分散最適化であり、Ring Attentionの正確性とメモリ拡張性を保ったまま因果構造を計算削減へ変換する。特に『通信を重ね合わせても同期先の最遅装置が全計算なら速くならない』という分散注意固有の問題を、データレイアウトで解く。後続のコンテキスト並列、リング型注意、負荷均等化方式を比較する基準点として有用である。"
+  },
+  "reservation": {
+    "claim_id": "claim-726aa6f9d7bb4140731a500b",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
