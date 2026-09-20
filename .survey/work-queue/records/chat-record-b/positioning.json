@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-7d885ba839f618fd75926d05",
-  "job_id": "job-research-ab19fa17920fb404",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7d885ba839f618fd75926d05",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-7d885ba839f618fd75926d05","job_id":"job-research-ab19fa17920fb404","data":{"limitations":"CLAは学習済みモデルへそのまま適用するpost-training圧縮ではなく、K/V projection配置を変えたモデルを事前学習する必要がある。共有KVは各attention層で再度メモリから読むため、KVキャッシュ保存容量は減ってもcore attentionの帯域や1 step latencyを直接減らさない。長文・大batchのend-to-end serving throughput/latencyは論文では未評価でfuture work。主要規模は1B/3Bであり、数十B〜数百Bモデルへのスケーリングは未実証。pipeline parallelismでは共有層を同一stageへ置くかKVをstage間通信する必要がある。","differences":"MQA/GQAは同一層内で複数query headがKV headを共有し、KVキャッシュのhead次元を削減する。CLAはこれと直交して隣接層がKV活性を共有し、層次元を削減する。KVQuant等の量子化は保存bit数、H2O/Scissorhands等のevictionはtoken数、CacheGenは転送表現を削減するのに対し、CLAはアーキテクチャ自体の独立KV projection数を減らす。FlashAttentionは単一passのIOを最適化するが、CLAはpass間に永続するKV保存容量を狙う。","implementation_status":"PyTorchで1B/3Bモデルをscratch学習して実証。CLAはattention blockから一部K/V projectionを除き、前層KVを参照する比較的単純なアーキテクチャ変更として実装できる。論文本文で独立した公開コードURLは確認できない。","research_positioning":"KVキャッシュ圧縮のうち、量子化・token eviction・offloadではなくモデル設計時の構造共有に属する。MQA/GQAで既にhead方向の冗長性を削った後にも層方向の冗長性が残ることを示し、特にMQA+CLA2を保守的な設計レシピとして提示する。将来の長文サービングでは、節約したKV容量をbatch拡大や長期cache persistenceへ転換できる可能性がある。"},"reservation":{"claim_id":"claim-7d885ba839f618fd75926d05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
