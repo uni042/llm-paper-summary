@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0e90bb35472b526a5318b2c6",
-  "job_id": "job-research-ff5accb2a519d706",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0e90bb35472b526a5318b2c6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0e90bb35472b526a5318b2c6","job_id":"job-research-ff5accb2a519d706","data":{"canonical_id":"arXiv:2602.07616","arxiv_id":"2602.07616","title":"SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models","list_summary":"バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。","summary":"MoEのバッチ復号では各トークンの疎なTop-K選択を合算すると多数のエキスパートが同時活性化し、メモリ帯域律速の復号で重み読み出しと通信が増える。SEREは一般データで事前計算した層別エキスパート類似度を用い、バッチ内の各トークンで上位S個の主要エキスパートを必ず保持し、それ以外の副次エキスパートを最も類似する主要エキスパートへ再ルーティングする。類似度が閾値未満の固有エキスパートは保持するため、冗長性に応じて活性数を動的に削減する。再学習や静的枝刈りを不要とし、専用CUDAカーネルをvLLMへ1行で組み込める。Qwen1.5-MoE、DeepSeekV2-Lite、Qwen3-30B-A3BをNVIDIA H20上で評価し、複数推論課題で小さな品質低下に抑えつつ最大2.0倍の高速化を報告する。","source":"https://arxiv.org/html/2602.07616","sources":["https://arxiv.org/abs/2602.07616","https://arxiv.org/html/2602.07616","https://arxiv.org/pdf/2602.07616","https://github.com/JL-Cheng/SERE"],"authors":["Juntong Wu","Jialiang Cheng","Fuyu Lv","Ou Dan","Li Yuan"],"published":"2026-02-07","publication":"ICLR 2026","publication_type":"conference","publication_status":"Published as a conference paper at ICLR 2026; arXiv v1 submitted 2026-02-07","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"topics":["MoE","batch decoding","expert rerouting","vLLM","CUDA"],"implementation":"公式実装は専用CUDAカーネルを含み、vLLMへ1行の変更で統合できると論文が説明する。","code":"https://github.com/JL-Cheng/SERE","hardware_evaluation":"全実験はNVIDIA H20 GPUで実施。速度評価は各モデルを単一GPU上のvLLMで配備し、入力128・出力32トークン、QPSを変化させてTime per Output Tokenを測定する。","quality_effect":"Qwen1.5-MoE-A2.7Bでは元Top4平均48.52に対しSERE top2, rho=0.3が47.25でTPOTを17.29msから13.93msへ短縮。論文全体では最大2.0倍高速化を報告する。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"Primary arXiv HTML full text and reference section were reviewed; no normalized repository reference IDs were added in this pass.","references_total":0},"reservation":{"claim_id":"claim-0e90bb35472b526a5318b2c6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
