@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:14:30 JST**
+> 自動生成: **2026-09-20 15:14:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **117** |
+| 収録候補論文 | **116** |
 | 未claim Research job | **115** |
-| 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-20 15:10:13 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **64** |
+| 最終検証済みResearch収録 | **09-20 15:14:43 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **117** |
+| canonical_id確認済みの一意な候補論文 | **116** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **117** |
+| 非終端Research job合計 | **116** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **32** | **6** | **5** | **1** | **2** | **0** | — |
+| Research | **33** | **6** | **6** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **32** | **7** | **6** | **1** | **2** | **0** | **5** |
+| 合計 | **33** | **7** | **7** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 15:14:43 JST** [research] `DOI:10.18653/v1/2025.emnlp-main.1079` — TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection
+  - job: `.survey/work-queue/jobs/job-research-5cec4a19e423bce9.json`
+  - result: `.survey/work-queue/results/research/attempt-7fd52d00bf1ebd2f2315994c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-7fd52d00bf1ebd2f2315994c.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2025-token-select.md`
 - **09-20 15:10:13 JST** [research] `arXiv:2405.05254` — You Only Cache Once: Decoder-Decoder Architectures for Language Models
   - job: `.survey/work-queue/jobs/job-research-f8d11555626eb92a.json`
   - result: `.survey/work-queue/results/research/attempt-95845744b63d99732374d3b0.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-42612c6e8bec652339e69e2b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-42612c6e8bec652339e69e2b.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-swiftkv.md`
-- **09-20 14:12:13 JST** [research] `arXiv:2404.19429` — Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping
-  - job: `.survey/work-queue/jobs/job-research-3ee76817e29cd5c6.json`
-  - result: `.survey/work-queue/results/research/attempt-70a666fee11f193ab86cf1e3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-70a666fee11f193ab86cf1e3.json`
-  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -138,7 +138,11 @@
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-7fd52d00bf1ebd2f2315994c.json` (job `job-research-5cec4a19e423bce9`)
+- **成功** `DOI:10.18653/v1/2025.emnlp-main.1079` — TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection
+  - job: `.survey/work-queue/jobs/job-research-5cec4a19e423bce9.json`
+  - result: `.survey/work-queue/results/research/attempt-7fd52d00bf1ebd2f2315994c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-7fd52d00bf1ebd2f2315994c.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2025-token-select.md`
 - **成功** `arXiv:2405.05254` — You Only Cache Once: Decoder-Decoder Architectures for Language Models
   - job: `.survey/work-queue/jobs/job-research-f8d11555626eb92a.json`
   - result: `.survey/work-queue/results/research/attempt-95845744b63d99732374d3b0.json` (`ok=true`)
@@ -175,10 +179,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.18653/v1/2025.emnlp-main.1079` — TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:13:52 JST** / heartbeat: **—** / lease expiry: **09-20 16:43:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5cec4a19e423bce9.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -201,7 +202,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **117** |
+| ready | **116** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +222,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **815** |
+| inference/training/survey配下の論文Markdown実体 | **816** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +230,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **735** |
-| └ Research | **549** |
+| 成功result未照合のimmutable submission | **734** |
+| └ Research | **548** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
