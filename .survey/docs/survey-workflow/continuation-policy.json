@@ -143,5 +143,17 @@
       "manual_serverlesslora_recovery_workflow",
       "library_replay_bundle_workflow"
     ]
+  },
+  "discovery_route_policy": {
+    "mode": "citation_first",
+    "primary_directions": [
+      "backward",
+      "forward"
+    ],
+    "backward_primary_provider": "repository_references",
+    "forward_primary_strategy": "lineage_scoped_forward_citation_refresh",
+    "reference_pool_blocks_forward": false,
+    "normal_search_role": "fallback_after_same_run_backward_and_forward_attempts",
+    "rule": "Normal Discovery prioritizes the citation graph in both directions. Process at least one backward-reference window and one forward-citation window for the same run_key before normal/new keyword search. A non-empty structured-reference pool does not block forward-citation refresh. After both directions are attempted, continue with the citation direction/seed that has the best recent yield; use normal search only to fill gaps."
   }
 }
