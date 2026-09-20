@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:39:34 JST**
+> 自動生成: **2026-09-20 09:39:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **87** |
-| 未claim Research job | **87** |
+| 未claim Research job | **86** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-20 09:39:31 JST（3秒前）** |
+| 最終検証済みResearch収録 | **09-20 09:39:31 JST（26秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **2** | **0** | **0** | **0** | — |
+| Research | **12** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **12** | **3** | **3** | **0** | **0** | **0** | **5** |
+| 合計 | **12** | **3** | **3** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -144,8 +144,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2306.14048` — H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 09:39:51 JST** / heartbeat: **—** / lease expiry: **09-20 11:09:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9824d8080e264ed4.json`
 
 #### Audit
 
