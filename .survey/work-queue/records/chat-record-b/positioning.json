@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b00534d1eda56e9a95608aea",
-  "job_id": "job-research-18c89b68d0c6c10d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b00534d1eda56e9a95608aea",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b00534d1eda56e9a95608aea","job_id":"job-research-18c89b68d0c6c10d","data":{"limitations":"OjaKVは学習率、decode更新間隔T、更新バッファ長、フルランク保持top-kなど固定ハイパーパラメータを持ち、モデルやタスクごとに調整が必要になり得る。Oja更新はSVD再計算より軽いが静的圧縮より計算負荷があり、実測decode遅延は10.9～13.4%増える。再構成誤差は注意摂動と理論的関係を持つものの、全下流タスクでの意味的重要度を完全には表さない。主要ハードウェアはH100で、帯域・演算比の異なるGPUでの損益分岐は未評価である。","differences":"EigenAttention/StaticPCAは校正データから作った固定基底を全入力へ適用するが、OjaKVはprefillとdecodeの現在活性から基底を継続更新する。Palu/ReCalKVのような重み分解型と違い、モデル重みや学習済み構造を変更せずKV表現側だけで導入できる。StreamingLLM/SnapKV等のtoken selectionはトークンを捨てるのに対し、OjaKVは大多数を低ランクで残し、高誤差トークンをフルランク保持するため情報削除の軸が異なる。論文は両者が直交し、token evictionとの併用でメモリ削減を乗算できると位置付ける。","implementation_status":"Findings of ACL 2026採択済みで、著者公式GitHub実装が公開されている。標準FlashAttentionへ再構成K/Vを渡す経路を実装し、専用低ランクattention kernelを必須としない。H100上で実際のTTFT、decode latency、GPU memoryまで測定しており、精度だけのシミュレーションではない。","research_positioning":"KVキャッシュ最適化系統では、OjaKVは『どのトークンを残すか』と『どの部分空間で圧縮するか』を同時に文脈適応させる低ランク圧縮研究である。特に静的校正基底が長いdecode中の分布移動へ追随できない点をオンラインPCAで解決し、長期推論やRULERのような動的文脈で改善幅が大きい。オフロードとは異なり転送先メモリを増やさずGPU上の表現次元を縮めるため、量子化・token eviction・CPUオフロードと組み合わせられる補完的な手法として位置付けられる。"},"reservation":{"claim_id":"claim-b00534d1eda56e9a95608aea","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
