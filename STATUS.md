@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 21:04:02 JST**
+> 自動生成: **2026-09-20 21:04:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -168,7 +168,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.00575` — Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 21:00:31 JST** / heartbeat: **—** / lease expiry: **09-20 22:30:31 JST**
+  - claim: **09-20 21:04:14 JST** / heartbeat: **—** / lease expiry: **09-20 22:34:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-89e4b35d6854b9b6.json`
 
 #### Audit
