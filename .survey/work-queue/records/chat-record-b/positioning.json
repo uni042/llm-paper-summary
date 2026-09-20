@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-391a60b20009f8118bae73b5",
-  "job_id": "job-research-8fc74c0fbb46c30e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-391a60b20009f8118bae73b5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-391a60b20009f8118bae73b5","job_id":"job-research-8fc74c0fbb46c30e","data":{"limitations":"KV本体を全保持するためGPUメモリ容量そのものは削減せず、極長文脈でキャッシュが収まらない問題には量子化・オフロード等との併用が必要。先頭2層は疎性が低く全注意を残す。固定Top-K予算は入力・タスクに応じた調整が必要で、過小な予算は精度を落とす。ページ上界は保守的なので、同じページ内でチャネルごとの最大値が別トークンに由来すると重要度を過大評価し不要ページを選ぶ可能性がある。効率評価は7B級、RTX4090/Ada 6000、FlashInfer中心である。","differences":"H2O、TOVA、StreamingLLMは過去の注意や位置に基づきKVを永久削除するため、後から重要になる遠方トークンを復元できない。Questは全KVを保持し現在Qごとに再選択する。SparQも現在Qから近似重要度を得るがチャネル刈り込みによるトークン単位選択で、QuestはKのページ範囲上界を使いPagedAttentionの物理ページと一致した粒度で選ぶため実装上の連続ロード削減が容易である。量子化方式とは直交し、実際にAWQ重みと併用してより大きな端から端速度向上を示す。","implementation_status":"公開コードとFlashInferベースの専用CUDA実装があり、重要度推定、Top-K、疎注意を実GPUで評価している。単なる精度シミュレーションではなく、RTX4090で個別カーネル、Ada 6000で端から端生成を測定する。PagedAttention互換のページインデックスを疎ロードへ渡す構造のため、ページ型KV管理基盤への統合を意識した設計である。","research_positioning":"疎注意・KVキャッシュ管理系統で、注意のクエリ依存性を保ちながら動的KV選択を実システム高速化へ結び付けた方式である。永続的なKV削除と全注意の中間に位置し、容量を犠牲にせず帯域だけを削る。KIVIのようなKV量子化が1要素当たりバイト数を減らし、Questが読むページ数を減らすため両者は相補的であり、SSD/CPUオフロード系でもページ重要度をプリフェッチ優先度へ利用できる可能性がある。"},"reservation":{"claim_id":"claim-391a60b20009f8118bae73b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
