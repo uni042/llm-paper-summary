@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T13:41:31.209660+00:00",
+  "updated_at": "2026-09-20T13:42:10.128737+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T13:41:31.209660+00:00",
+      "last_recorded_at": "2026-09-20T13:42:10.128737+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 389,
         "audit_completed": 0,
         "discovery_completed": 218,
-        "blocked": 58,
+        "blocked": 59,
         "new_jobs": 393,
         "new_papers": 395,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35493403131:1",
-          "recorded_at": "2026-09-20T06:08:16.428688+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35493403131",
-            "run_attempt": "1",
-            "source_sha": "9b5fdf8380c468dd6e8d9191fc847bbd1ae58e6a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35493515126:1",
           "recorded_at": "2026-09-20T06:10:19.162657+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35514185040",
             "run_attempt": "1",
             "source_sha": "11c2cf72ae8b3bde963a74af7779c4ecd9787067"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35514218121:1",
+          "recorded_at": "2026-09-20T13:42:10.128737+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35514218121",
+            "run_attempt": "1",
+            "source_sha": "d1897f28c73a1669cc0b4e9319e1e6d704caf9c1"
           },
           "signals": [
             "job_blocked"
@@ -24915,6 +24915,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.20156",
           "title": "Temporally Extended Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-00f6a78e028bd698",
+          "type": "research",
+          "canonical_id": "arXiv:2606.27866",
+          "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models",
           "from": "ready",
           "to": "blocked"
         }
