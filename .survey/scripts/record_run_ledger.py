@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Capture meaningful worker transitions into a bounded Scheduled Chat run ledger.
+"""Capture meaningful worker transitions into a bounded run ledger.
 
-A Scheduled Chat run may trigger queue-processing workflows many times. Events sharing
-the same maintenance-cycle ``last_counted_run_key`` are merged into one ledger entry so
-the retention limit means Scheduled Chat runs, not background jobs. Workflow no-ops do
-not touch the ledger.
+The maintenance scheduler no longer owns run identity. A caller may provide an explicit
+SURVEY_RUN_KEY when multiple workflow events belong to one logical Scheduled Chat run;
+otherwise each GitHub workflow run is recorded independently. Workflow no-ops do not
+touch the ledger.
 """
 
 from __future__ import annotations
@@ -60,7 +60,6 @@ def collect_snapshot(root: Path) -> dict[str, Any]:
         p.relative_to(root).as_posix() for p in archive_dir.glob("*.json")
     ) if archive_dir.is_dir() else []
 
-    maintenance = load_json(survey / "work-queue/maintenance-cycle.json") or {}
     return {
         "captured_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "jobs": jobs,
@@ -68,7 +67,7 @@ def collect_snapshot(root: Path) -> dict[str, Any]:
         "active_count": identity.get("active_count"),
         "result_files": result_files,
         "fallback_archive_files": archive_files,
-        "source_run_key": maintenance.get("last_counted_run_key"),
+        "source_run_key": os.environ.get("SURVEY_RUN_KEY"),
     }
 
 
