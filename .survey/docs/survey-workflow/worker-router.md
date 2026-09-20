@@ -18,28 +18,25 @@
 
 実際の起動時刻を1回取得し、`actual_invocation_start` として固定する。予定時刻や前回runの時刻を再利用しない。通常の時間枠は起動時刻から3600秒で、残り600秒以下では新しい独立作業を開始しない。残り180秒以下では耐久保存と安全な引き継ぎだけを行う。
 
-## 2. 作業配分と共通ルーティング
+## 2. 共通ルーター
 
-毎時 `:30` の読解主体タスクと毎時 `:00` の探索主体タスクは、**同じ実行手順を使う**。論文作業における両者の違いは、読解側（Research / Audit）と探索側（Discovery）の**作業配分（work mix）だけ**である。作業種別を選んだ後は、どちらのタスクから来たかを条件分岐に使ってはならない。
+毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じタスク・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新状態から `candidate_inventory` を取得し、次の1条件だけで今回の論文作業モードを決める。
 
-標準の作業配分:
+- **`candidate_inventory >= 50` → 探索（Discovery）**
+- **`candidate_inventory < 50` → 読解（Research / Audit）**
 
-- **読解主体（research-heavy）**: 読解 3 : 探索 1
-- **探索主体（discovery-heavy）**: 探索 3 : 読解 1
+maintenance対象または08:30 JSTの専用更新条件だけは、この分岐より優先して専用経路へ入る。
 
-各runの開始時と1作業単位の完了ごとに、最新queue / claim / discovery stateを取り直して次の作業種別を選ぶ。配分は固定件数ノルマではなく、run全体で目標比率へ寄せるための**重み付きラウンドロビン（weighted round-robin）**として扱う。
+モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
-1. maintenance対象または08:30 JSTの専用更新条件なら、それぞれ専用経路へ入る。
-2. それ以外では、今回のwork mixと、このrunですでに完了した読解単位数・探索単位数を比較し、目標比率に対して不足している側を次に選ぶ。
-3. 読解側が選ばれ、実行可能なResearch / Audit jobがある → **第3節の共通読解手順**へ進む。
-4. 探索側が選ばれ、Discoveryを実行可能 → **第4節の共通探索手順**へ進む。
-5. 選ばれた側に実行可能作業がない場合は、もう一方へフォールバックする。片側の在庫不足だけでrunを終了しない。
-6. どちらか一方を実行した後は必ず共通ルーターへ戻り、最新状態とwork mixから次の1作業単位を再選択する。
+候補数は最新の耐久状態から毎run取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら探索を選ぶ。
 
-作業単位は、読解側ではResearch / Auditの1 job、探索側では耐久保存まで完了した1 Discovery roundとする。Auditは読解側へ数える。
+ノルマは維持する。
 
-候補在庫の多寡は「その側に実行可能作業があるか」を判断する入力には使うが、**タスク固有の別モードを作る理由にはしない**。旧 `candidate_inventory > 50` のoverflow research mode、探索タスクだけの最低Discoveryラウンド数、読解タスクだけの追加論文本数quotaは使わない。件数維持のために弱い候補を採用しない。
+- **読解モード**: 今回の起動中に新規論文を最低3本、一次資料全文→5スロット→preflight→不変submission→最新mainへの耐久反映まで完了させる。3本は停止上限ではない。
+- **探索モード**: 最低4つの materially distinct なDiscovery roundを耐久保存する。4 roundは停止上限ではない。単一roundの0件・重複のみでは終了しない。
 
+handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
@@ -70,7 +67,7 @@
 4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を耐久保存して次の独立jobへ進む。`blocked` descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` / `retrieval_evidence` / `blocked_at` だけを持つ状態専用transportとし、`record_bank`、`paper_path`、`record_slots`、`expected_blob_sha` その他のrecord transport fieldを絶対に混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **非同期待ちを不要な同期障壁にしない。** claim/result/submissionの同じIDを保持して所定間隔で確認し、待ち時間には次候補の一次資料経路確認、identity/queue同期、既読slot整理などclaim競合を起こさない準備を行う。未完了claimを増やしたり同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research claimは常に1件だけ保持し、完了またはstatus-only耐久保存後に次へ進む。
-7. **タスク固有の件数quotaを停止条件にしない。** 読解主体・探索主体の違いはwork mixだけとし、どちらもcontinuation/finalization gateまたは実際のhard stopまで安全に共通ルーターへ戻って次の独立作業を選ぶ。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+7. **読解3本ノルマは維持する。** `papers_added_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。3本到達は停止上限ではなく、continuation/finalization gateが継続を要求するなら次のResearch / Auditへ進む。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
 
@@ -133,6 +130,10 @@ target_unseen: 20
 7. **探索効率を記録する。** `discovery_stats.search_windows` に種論文、引用方向 `forward`、取得件数、未収録件数、評価件数、採用件数を残す。後続runでは採用率の高かった種論文を優先し、0件が続く種論文を毎回先頭から調べ直さない。
 
 この方法が特に有効なのは、既存系統が2024〜2025年の代表論文を含み、2026年の新手法がその代表論文を関連研究として引用し始めている場合である。単純なキーワード検索より、対象系統との接続根拠を保ったまま最新研究へ追従しやすい。
+
+### 4.2 探索ノルマ
+
+探索モードでは、hard stopまたはhandoff guardがない限り、**最低4つの materially distinct なDiscovery round**を耐久保存する。4 roundは停止上限ではない。1 round完了、0件、重複のみ、単一provider障害、単一探索軸の飽和は終了理由にしない。4 round到達後も有望な次軸がある場合は継続する。
 
 ### 4.2 Candidate投入
 
