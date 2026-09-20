@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-76fbde0c7b747f7dc5bad2a5",
-  "job_id": "job-research-bb33e470bd8a5f8f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-76fbde0c7b747f7dc5bad2a5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-76fbde0c7b747f7dc5bad2a5","job_id":"job-research-bb33e470bd8a5f8f","data":{"hardware":"Intel Xeon CPU、128GBホストメモリ、40GB NVIDIA A100 Tensor Core GPU 4基。最大生成トークン数は各モデル1000に設定する。","software":"OpenMoE、TinyMixtral、Mixtral-8x7B、Mixtral-8x22Bを対象とし、eMoEはDeepSpeed-FastGen上にPython/PyTorchで実装する。エキスパート予測器候補としてGPT-2、BERT-base、XLNet系を比較し、最終的に約0.108BパラメータのXLNetを採用する。比較にはvLLM、DeepSpeed-FastGen、全エキスパート常駐Baseline、Random、Pre-Gated MoE、MoEInfinityを用いる。","methodology":"XSUM要約、金融Tweet感情分類、SQuAD質問応答、見出し意味類似度、Human-assistant会話の5タスクを使用する。公開MoE生成要求トレースがないため、要求数をPoisson分布、タスク種別を一様な多項分布で生成した合成クライアントトレースを用いる。品質は全エキスパート常駐時の出力を正解とし、事前学習BERTによる意味類似度で測る。終端トークンまで生成し、到着率を0.1 req/s刻みで変えてエンドツーエンド遅延を比較する。エキスパートロード率20～80%、バッチサイズ、プロンプト長、予測器呼出周期、タスク認識の有無を変え、メモリ、類似度、遅延、スループット、予測精度を評価する。","scope":"4種類のMoEモデルと5種類のNLPタスク、4基A100環境での実機評価である。要求トレースは実サービス由来ではなく合成で、連続要求の文脈相関とタスク種別が明示できる前提を置く。タスク抽出はプロファイル済みキーワード照合であり、未知タスクや複雑な複合指示への頑健性は示されていない。品質指標も人手評価やタスク正解率ではなく、全エキスパート出力とのBERT意味類似度が中心である。"},"reservation":{"claim_id":"claim-76fbde0c7b747f7dc5bad2a5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
