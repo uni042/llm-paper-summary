@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6d7a6414e2062e2233d5009c","job_id":"job-research-2b2648af1ffd1107","data":{"hardware":"ドラフタ学習は単一NVIDIA H200、壁時計推論高速化はNVIDIA L40Sで測定。","software":"SpecForgeのDFlash実装で学習し、DFlash著者の公式ベンチマークコードで同一復号設定を比較。","methodology":"Qwen3-4Bの3層・5層ドラフタを温度0/1で評価し、Llama-3.1-8B-InstructとQwen3-8Bへも3層設定を展開。GSM8K、MATH-500、HumanEval、MBPP、MT-Bench、Alpacaの6ベンチマークで平均放出長と自己回帰復号比の実測高速化を報告する。比較はDFlash固定減衰、Top-3接頭辞マスク、受理率直接最適化。","scope":"損失なし投機的デコードの並列単一軌跡ドラフタに限定した評価であり、逐次ドラフタや木構造ドラフタへの導出適用は未検証。ブロック長8/12/16、平滑化係数、対象モデル変更の感度を追加評価する。"},"reservation":{"claim_id":"claim-6d7a6414e2062e2233d5009c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-682f2ca2eca58d18d9e46ca8",
+  "job_id": "job-research-2b2648af1ffd1107",
+  "data": {
+    "hardware": "ドラフタ学習は単一NVIDIA H200、壁時計推論高速化はNVIDIA L40Sで測定。",
+    "software": "SpecForgeのDFlash実装で学習し、DFlash著者の公式ベンチマークコードで同一復号設定を比較。",
+    "methodology": "Qwen3-4Bの3層・5層ドラフタを温度0/1で評価し、Llama-3.1-8B-InstructとQwen3-8Bへも3層設定を展開。GSM8K、MATH-500、HumanEval、MBPP、MT-Bench、Alpacaの6ベンチマークで平均放出長と自己回帰復号比の実測高速化を報告する。比較はDFlash固定減衰、Top-3接頭辞マスク、受理率直接最適化。",
+    "scope": "損失なし投機的デコードの並列単一軌跡ドラフタに限定した評価であり、逐次ドラフタや木構造ドラフタへの導出適用は未検証。ブロック長8/12/16、平滑化係数、対象モデル変更の感度を追加評価する。"
+  },
+  "reservation": {
+    "claim_id": "claim-682f2ca2eca58d18d9e46ca8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

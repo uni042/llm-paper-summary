@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6d7a6414e2062e2233d5009c","job_id":"job-research-2b2648af1ffd1107","data":{"overview":"Qwen3-4Bでは3層・5層、温度0/1の全主要設定でDFlash固定減衰より平均放出長と壁時計高速化が改善した。温度0の3層設定では6ベンチマーク平均高速化が2.93倍から3.20倍、平均放出長が4.10から4.52へ上昇し、5層では2.98倍から3.27倍、4.38から4.85へ上昇した。改善はLlama-3.1-8BとQwen3-8Bにも移り、受理接頭辞へ到達する確率を重みに含めることが主要因である。","key_results":[{"metric":"平均推論高速化","value":"3.20倍","baseline":"DFlash 2.93倍","condition":"Qwen3-4B、3層、B=16、温度0、6ベンチマーク平均","interpretation":"学習損失だけの変更で実測壁時計高速化を約9.2%改善。"},{"metric":"平均放出長","value":"4.52","baseline":"DFlash 4.10","condition":"Qwen3-4B、3層、B=16、温度0","interpretation":"一回の検証で受理される連続トークン数が約10.2%増える。"},{"metric":"MATH-500高速化","value":"最大4.47倍","baseline":"自己回帰復号1倍","condition":"Qwen3-4B、5層、温度0","interpretation":"数学推論で長い受理接頭辞を得て高い実測高速化に到達。"},{"metric":"学習時間増加","value":"2.3%","baseline":"DFlash 173 ms/step","condition":"単一H200、3層、B=16、49,993反復平均","interpretation":"動的位置重み計算の追加費用は177 ms/stepに留まる。"},{"metric":"受理長代理との順位相関","value":"0.84","baseline":"単純確率和0.79","condition":"MATH-500 128プロンプト、3層DFlash","interpretation":"累積接頭辞確率を使う代理量が実際の放出長をよりよく追跡する。"}],"negative_results":"平滑化係数α=0では累積確率積が消失し、平均放出長は約1.0で停滞する。α=0.9では確率が1へ寄りすぎて適応信号が弱まる。継続価値だけを使う変種はDFlash比約2%改善に留まり、累積接頭辞因子を含む方式より7〜9%低い。対象モデル確率を代理に使う変種も完全版より弱い。","interpretation":"受理は最初の誤りで打ち切られるため、後半位置の価値は『そこまで接頭辞が通る確率』と『そこから先に伸ばせる長さ』の両方で決まる。D-PACEはこの構造を学習重みに反映し、前半が改善すると自動的に後半へ信号を移すため、固定指数減衰より受理長へ直結する。","quality_impact":"対象モデルによる検証を維持する損失なし投機的デコードなので、対象モデルの出力分布を変更しない。改善対象は受理長と速度であり、生成品質を犠牲にする近似復号ではない。"},"reservation":{"claim_id":"claim-6d7a6414e2062e2233d5009c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-682f2ca2eca58d18d9e46ca8",
+  "job_id": "job-research-2b2648af1ffd1107",
+  "data": {
+    "overview": "Qwen3-4Bでは3層・5層、温度0/1の全主要設定でDFlash固定減衰より平均放出長と壁時計高速化が改善した。温度0の3層設定では6ベンチマーク平均高速化が2.93倍から3.20倍、平均放出長が4.10から4.52へ上昇し、5層では2.98倍から3.27倍、4.38から4.85へ上昇した。改善はLlama-3.1-8BとQwen3-8Bにも移り、受理接頭辞へ到達する確率を重みに含めることが主要因である。",
+    "key_results": [
+      {
+        "metric": "平均推論高速化",
+        "value": "3.20倍",
+        "baseline": "DFlash 2.93倍",
+        "condition": "Qwen3-4B、3層、B=16、温度0、6ベンチマーク平均",
+        "interpretation": "学習損失だけの変更で実測壁時計高速化を約9.2%改善。"
+      },
+      {
+        "metric": "平均放出長",
+        "value": "4.52",
+        "baseline": "DFlash 4.10",
+        "condition": "Qwen3-4B、3層、B=16、温度0",
+        "interpretation": "一回の検証で受理される連続トークン数が約10.2%増える。"
+      },
+      {
+        "metric": "MATH-500高速化",
+        "value": "最大4.47倍",
+        "baseline": "自己回帰復号1倍",
+        "condition": "Qwen3-4B、5層、温度0",
+        "interpretation": "数学推論で長い受理接頭辞を得て高い実測高速化に到達。"
+      },
+      {
+        "metric": "学習時間増加",
+        "value": "2.3%",
+        "baseline": "DFlash 173 ms/step",
+        "condition": "単一H200、3層、B=16、49,993反復平均",
+        "interpretation": "動的位置重み計算の追加費用は177 ms/stepに留まる。"
+      },
+      {
+        "metric": "受理長代理との順位相関",
+        "value": "0.84",
+        "baseline": "単純確率和0.79",
+        "condition": "MATH-500 128プロンプト、3層DFlash",
+        "interpretation": "累積接頭辞確率を使う代理量が実際の放出長をよりよく追跡する。"
+      }
+    ],
+    "negative_results": "平滑化係数α=0では累積確率積が消失し、平均放出長は約1.0で停滞する。α=0.9では確率が1へ寄りすぎて適応信号が弱まる。継続価値だけを使う変種はDFlash比約2%改善に留まり、累積接頭辞因子を含む方式より7〜9%低い。対象モデル確率を代理に使う変種も完全版より弱い。",
+    "interpretation": "受理は最初の誤りで打ち切られるため、後半位置の価値は『そこまで接頭辞が通る確率』と『そこから先に伸ばせる長さ』の両方で決まる。D-PACEはこの構造を学習重みに反映し、前半が改善すると自動的に後半へ信号を移すため、固定指数減衰より受理長へ直結する。",
+    "quality_impact": "対象モデルによる検証を維持する損失なし投機的デコードなので、対象モデルの出力分布を変更しない。改善対象は受理長と速度であり、生成品質を犠牲にする近似復号ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-682f2ca2eca58d18d9e46ca8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
