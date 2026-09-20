@@ -23,12 +23,8 @@
     "hard_finalize_seconds": 180,
     "actual_start_deadline_preferred": true,
     "compatibility_schedule_fallback": true,
-    "applies_to_worker_kinds": [
-      "normal",
-      "discovery"
-    ],
     "implementation": ".survey/scripts/continuation_gate.py",
-    "rule": "Both hourly paper-worker compatibility kinds use the same run-local handoff policy: capture actual invocation start once, define run_deadline = actual_start + run_window_seconds, and before starting any independent work unit pass the remaining time to continuation_gate.py. Within handoff_guard_seconds start no new unit; within hard_finalize_seconds perform only durable finalization. The compatibility worker_kind label must not change Research/Audit or Discovery execution semantics."
+    "rule": "Both hourly paper workers use the same run-local handoff policy: capture actual invocation start once, define run_deadline = actual_start + run_window_seconds, and before starting any independent work unit pass the remaining time to continuation_gate.py. Within handoff_guard_seconds start no new unit; within hard_finalize_seconds perform only durable finalization. Automatic mode requires the latest durable candidate_inventory; schedule labels and legacy worker kinds never select Research/Audit or Discovery."
   },
   "stop_run_only_if": [
     "actual_start_run_deadline_within_handoff_guard",
