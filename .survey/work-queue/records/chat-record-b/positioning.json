@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-46bebe4124d9b569eda95755","job_id":"job-research-872c3c76cc1c3eff","data":{"limitations":"評価はH100中心で、GPU世代・電力価格・炭素強度・ネットワーク構成が変わればプロファイル再取得が必要。出力長予測器は81%精度で誤分類処理を持つが、極端な予測外負荷ではretryやSLO余裕を消費する。頻繁なVM起動・reshard・周波数変更には実測オーバーヘッドがあり、短い安定期間では変更しない方がよい。主最適化は運用エネルギー・運用炭素で、追加GPUを用いるscale-outがembodied carbonへ与える影響の統合最適化は将来課題。","differences":"一般的なautoscalingは主にインスタンス数、GPU DVFS研究は周波数、LLM serving schedulerはthroughput/latencyを個別に最適化する。DynamoLLMはLLM要求のprefill/decode比とSLO異質性を使い、インスタンス数・テンソル並列度・GPU周波数を階層的に同時制御する。Splitwise等のphase disaggregationやvLLM/PagedAttentionは推論基盤内部の効率化であり、その上で使う資源構成を選ぶDynamoLLMとは直交する。","implementation_status":"HPCA 2025採択。vLLM上の実装で、cluster/pool managerは専用VM上のgRPCサービス、instance managerは各LLM instanceと同居。PuLP MILP、SciPy補間、BERT-base出力長予測を利用し、Azure production-level traceの一部を公開している。","research_positioning":"LLM servingを性能最大化だけでなくSLO制約付きエネルギー最小化問題として扱う代表的研究。特に要求種別ごとの異なるエネルギー最適点をpool分離で利用し、時間変動には階層的な資源再構成で追随する。将来の異種GPU、disaggregated serving、電力・炭素連動schedulerへ接続しやすいクラスタ制御層である。"},"reservation":{"claim_id":"claim-46bebe4124d9b569eda95755","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a3583b512bca09151ba946d2",
+  "job_id": "job-research-872c3c76cc1c3eff",
+  "data": {
+    "limitations": "評価はH100中心で、GPU世代・電力価格・炭素強度・ネットワーク構成が変わればプロファイル再取得が必要。出力長予測器は81%精度で誤分類処理を持つが、極端な予測外負荷ではretryやSLO余裕を消費する。頻繁なVM起動・reshard・周波数変更には実測オーバーヘッドがあり、短い安定期間では変更しない方がよい。主最適化は運用エネルギー・運用炭素で、追加GPUを用いるscale-outがembodied carbonへ与える影響の統合最適化は将来課題。",
+    "differences": "一般的なautoscalingは主にインスタンス数、GPU DVFS研究は周波数、LLM serving schedulerはthroughput/latencyを個別に最適化する。DynamoLLMはLLM要求のprefill/decode比とSLO異質性を使い、インスタンス数・テンソル並列度・GPU周波数を階層的に同時制御する。Splitwise等のphase disaggregationやvLLM/PagedAttentionは推論基盤内部の効率化であり、その上で使う資源構成を選ぶDynamoLLMとは直交する。",
+    "implementation_status": "HPCA 2025採択。vLLM上の実装で、cluster/pool managerは専用VM上のgRPCサービス、instance managerは各LLM instanceと同居。PuLP MILP、SciPy補間、BERT-base出力長予測を利用し、Azure production-level traceの一部を公開している。",
+    "research_positioning": "LLM servingを性能最大化だけでなくSLO制約付きエネルギー最小化問題として扱う代表的研究。特に要求種別ごとの異なるエネルギー最適点をpool分離で利用し、時間変動には階層的な資源再構成で追随する。将来の異種GPU、disaggregated serving、電力・炭素連動schedulerへ接続しやすいクラスタ制御層である。"
+  },
+  "reservation": {
+    "claim_id": "claim-a3583b512bca09151ba946d2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
