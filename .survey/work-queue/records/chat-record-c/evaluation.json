@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-745f84fe29e16642827eabf3",
-  "job_id": "job-research-98f40fbe8624cabd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-745f84fe29e16642827eabf3",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-745f84fe29e16642827eabf3","job_id":"job-research-98f40fbe8624cabd","data":{"hardware":"特記のない実験はNVIDIA H200 GPU、バッチサイズ1。対象モデルはQwen3-4B、Qwen3-8B、Qwen3-30B-A3B-Thinking-2507。","software":"DFlash型ドラフトを基盤にSFTはSpecForge、OPD段階はverlで実装。実サービング評価はSGLangとFlashAttention 3バックエンドを使用する。","methodology":"数学はGSM8K、MATH-500、AIME25、コードはMBPP、HumanEval、SWE-bench Lite、分布外対話はMT-Benchを評価する。Qwen3-4B/8Bでは思考モード有効・無効、温度0と0.6を比較し、EAGLE-3とDFlashの訓練計算量をSFT＋OPD総量へ合わせる。速度は通常自己回帰生成に対する実測高速化倍率、ドラフト品質は一検証ラウンド当たり平均受理長で測る。SGLangでは同時実行数1、4、8、16、32のスループットをDFlashと比較する。","training":"OPD用プロンプトは16K件で、GSM8K 2K、MATH 5K、AoPS 4K、CodeAlpaca 5K。Draft-OPDは6 SFT epoch後から8 epochのOPDを行い、AdamW、学習率3e-4、cosine schedule、warmup比0.05、棄却位置減衰gamma=0.8。最大応答長は思考有効4096、無効2048。比較DFlash/EAGLE-3は同じデータで10 SFT epoch。","scope":"主実験はQwen3系列とDFlash型並列ドラフトに限定される。思考モード評価は最大8192生成トークン、非思考は2048。思考モード訓練は計算制約で4096トークンに切られるため、長い推論後半の状態を十分に学べていない可能性がある。品質指標を別途測らないのは、推論時の無損失検証が対象モデル分布を厳密に維持するためである。"},"reservation":{"claim_id":"claim-745f84fe29e16642827eabf3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
