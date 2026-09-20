@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-715ca0ac1e2c0533b0313a9c","job_id":"job-research-b2016b76225eff0c","data":{"hardware":"40GB NVIDIA A100 GPUクラスタ。システム容量は最大512 GPUで解析・実証し、計算効率は隠れ次元2048〜4096、専門家当たりバッチ8192トークン等で測定。","software":"DeepSpeed MoE。専門家並列、データ並列、ZeRO Stage 2、ZeRO-Offload、テンソル分割を統合。モデル側はMoEレイヤAPIと並列プロセス群初期化APIを提供する。","methodology":"システム評価は支援可能な総/非専門家パラメータ、GPU当たりTFLOPS、GPU数増加時のスループットを測る。学習手法はWMT-10の32.5M文対で専門家数1/8/16/32/64、ランダムトークン選択・グループ・単純方式、専門家集約、枝刈りを比較する。大規模Z-code M3は50言語の336Bトークン（43B並列+293B単言語）、MT+DAEを中心に1タスク当たり有効バッチ1.5Mトークンで事前学習し、98方向翻訳、公開WMT、WikiLingua、704方向XY翻訳、XNLIを評価する。10Bモデルは64専門家、0.7B基底、top-1ゲート、学習capacity factor 1.0、評価2.0。","scope":"システム容量の兆パラメータ結果と、実際のZ-code M3品質評価は同一モデル規模ではない。品質の主モデルは10Bで、3.5Tはシステムが支援可能な規模。GPUはA100 40GB世代で、CPUオフロード性能はCPU/PCIe構成へ依存する。多言語データの大部分は社内データを含む。"},"reservation":{"claim_id":"claim-715ca0ac1e2c0533b0313a9c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-fbff7b50969572eba56c0514",
+  "job_id": "job-research-3cf2e0a916913e29",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fbff7b50969572eba56c0514",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

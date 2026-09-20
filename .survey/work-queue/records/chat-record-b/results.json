@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-715ca0ac1e2c0533b0313a9c","job_id":"job-research-b2016b76225eff0c","data":{"overview":"DeepSpeed MoEは専門家並列とZeRO系メモリ最適化を直交させ、専門家数だけでなく基底モデルも拡張できるようにした。ZeRO-Offload併用では512 A100 40GB上で3.5兆パラメータ超を支援し、GPUメモリ内に限定される既存方式の約400Bから8倍以上の容量を実現する。隠れ次元4096ではGPU当たり120 TFLOPS超を示し、GPU数増加に対してほぼ線形のスループット拡張を報告する。10B/64専門家Z-code M3は同等FLOPsの0.7B密モデルよりサンプル効率と多言語品質を大幅に改善した。","key_results":[{"metric":"支援可能MoE規模","value":"3.5兆パラメータ超","baseline":"既存GPUメモリ内MoE 約4000億","condition":"512×A100 40GB、ZeRO-Offload併用","interpretation":"最適化状態・勾配をCPUへ移すことで総GPUメモリ壁を越え、同じクラスタで約8倍以上のモデル容量を扱える。"},{"metric":"同規模モデルに必要なGPU数","value":"400Bを64 GPU","baseline":"従来方式は約512 GPU","condition":"DeepSpeed MoEの多次元並列とオフロード","interpretation":"メモリ冗長性削減により同じモデル規模を約8分の1のGPU資源で保持できる容量上の利点を示す。"},{"metric":"GPU計算効率","value":"120 TFLOPS/GPU超","baseline":"隠れ次元2048では75 TFLOPS/GPU","condition":"Transformer MoE、隠れ次元4096、専門家当たり8192トークン","interpretation":"大きな行列積と十分な専門家バッチを確保すれば疎ルーティングを含めてもA100を高効率に利用できる。"},{"metric":"同一損失到達更新数","value":"64専門家は密0.7Bの約10分の1","baseline":"Z-code 0.7B密モデルがloss 4.3へ到達する更新数","condition":"WMT系MT、同一基底設定","interpretation":"専門家容量は計算量を大きく増やさず学習サンプル効率を改善し、モデル容量増加の価値を示す。"},{"metric":"50言語翻訳平均BLEU","value":"37.15","baseline":"非MoE多言語32.76、二言語別33.05","condition":"Z-code M3 10B、社内50言語テスト","interpretation":"疎10Bモデルは単一多言語密モデルだけでなく言語別モデル群も上回る。"}],"negative_results":"専門家数増加には収益逓減があり、学習初期は少数専門家モデルとの差が小さい。ルーティング容量超過を単純な系列順で処理すると後方トークンが系統的に落ち、グループ方式は改善するが動的バッチングを難しくしてパディングを増やす。英語から他言語への翻訳では専門家利用・ルーティングが改善余地として残る。ZeRO-OffloadとZ-code M3のより大きな基底モデル統合は将来課題とされ、3.5T容量支援がそのまま3.5T品質学習実証を意味しない。","interpretation":"MoEでは専門家重みと共有基底重みで最適な並列化が異なる。専門家をAll-to-Allで分散しつつ、共有状態の複製をZeROで除去し、容量だけが限界になった状態をCPUオフロードで逃がすことで、疎モデル特有の『計算できるのにメモリへ載らない』問題を解く。RTSは容量制約を学習バイアスではなくランダムな正則化へ変換する。","quality_impact":"公開WMTではZ-code M3 10Bが平均BLEU 34.85でM2M-100 12Bの31.89を上回る。WikiLinguaでは密Z-code/mBARTに平均約7.5 ROUGEの改善、XY翻訳704方向では密0.7B比+1.37 BLEU、XNLIはzero-shot 80.27対77.42、translate-train 82.77対79.59と約3ポイント改善する。"},"reservation":{"claim_id":"claim-715ca0ac1e2c0533b0313a9c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-fbff7b50969572eba56c0514",
+  "job_id": "job-research-3cf2e0a916913e29",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fbff7b50969572eba56c0514",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
