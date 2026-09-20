@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-098c5b91676f2a1a4d4737af",
-  "job_id": "job-research-f018d8c28f4995e5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-098c5b91676f2a1a4d4737af",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-098c5b91676f2a1a4d4737af","job_id":"job-research-f018d8c28f4995e5","data":{"hardware":"Llama-3.2-1B/3BとLlama-3.1-8Bを8基のH100で6,000ステップ微調整する。最初のトークンまでの時間の効率評価はA100 80GB上のLlama-3.1-8Bを含み、1,000～5,000トークン級の入力で測定する。","software":"基盤モデルはLlama-3.2-1B-Instruct、3B-Instruct、Llama-3.1-8B-Instruct。比較は位置補正を追加したPromptCache、18%のトークンを再計算するCacheBlend、BlockAttention、付録でTurboRAG。公式KVLinkコードを公開。","methodology":"質問応答はNaturalQuestions、2WikiMQA、TriviaQA、HotpotQA、MuSiQue、要約はMultiNewsとSamsum。NaturalQuestionsでは正解文書を10位置へ順に置いて平均精度を計算し、TriviaQAはContrieverで10文書取得する。要約はROUGE-L。リンク数0/1/5を比較し、通常連結で微調整した上限も置く。一般能力はGSM8K、MMLU、IFEval、ARC、PiQA、SciQ、WinoGrande、HellaSwag。圧縮は50%・75%でLLMLinguaと改良AnLLMを評価する。","scope":"主要精度評価はLlama 1B/3B/8Bと7個の再利用タスク。誤差棒は報告せず、著者は学習が安定し評価が貪欲生成であることを理由とする。実運用のキャッシュデータベース、ネットワーク、階層ストレージを含む端から端の本番システム評価は行っていない。"},"reservation":{"claim_id":"claim-098c5b91676f2a1a4d4737af","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
