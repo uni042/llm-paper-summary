@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:41:35 JST**
+> 自動生成: **2026-09-20 15:41:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **112** |
+| 収録候補論文 | **111** |
 | 未claim Research job | **110** |
-| 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-20 15:37:50 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **69** |
+| 最終検証済みResearch収録 | **09-20 15:41:40 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **112** |
+| canonical_id確認済みの一意な候補論文 | **111** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **112** |
+| 非終端Research job合計 | **111** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **3** | **2** | **1** | **2** | **0** | — |
+| Research | **36** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **4** | **3** | **1** | **2** | **0** | **5** |
+| 合計 | **36** | **4** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 15:41:40 JST** [research] `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
+  - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
+  - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md`
 - **09-20 15:37:50 JST** [research] `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
   - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
   - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-a81c3fda043b3840209ea896.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a81c3fda043b3840209ea896.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md`
-- **09-20 15:01:35 JST** [research] `arXiv:2407.02490` — MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention
-  - job: `.survey/work-queue/jobs/job-research-51de804389577a72.json`
-  - result: `.survey/work-queue/results/research/attempt-0ab84ae32ed1ca16a3e50130.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0ab84ae32ed1ca16a3e50130.json`
-  - paper: `papers/inference/10-sparse-attention/2024-2407.02490-minference.md`
 
 ### Audit
 
@@ -127,13 +127,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
   - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
   - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
   - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (job `job-research-18c89b68d0c6c10d`)
+- **成功** `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
+  - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
+  - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md`
 - **成功** `arXiv:2408.10284` — AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference
   - job: `.survey/work-queue/jobs/job-research-4892de26a5d749a2.json`
   - result: `.survey/work-queue/results/research/attempt-f2e51bafaabacfadeaecc0ee.json` (`ok=true`)
@@ -160,10 +164,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:40:57 JST** / heartbeat: **—** / lease expiry: **09-20 17:10:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-18c89b68d0c6c10d.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -186,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **112** |
+| ready | **111** |
 
 ### 候補の重複・識別情報欠損
 
@@ -206,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **820** |
+| inference/training/survey配下の論文Markdown実体 | **821** |
 
 ### immutable submissionの未照合
 
@@ -214,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **740** |
-| └ Research | **554** |
+| 成功result未照合のimmutable submission | **739** |
+| └ Research | **553** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
