@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-34fda1e4845e29f50bd2e325",
-  "job_id": "job-research-3ee76817e29cd5c6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-34fda1e4845e29f50bd2e325",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-34fda1e4845e29f50bd2e325","job_id":"job-research-3ee76817e29cd5c6","data":{"overview":"Lancetはwhole-graph重畳により、Switch gateでA100上最大1.21倍・平均1.17倍、V100上最大1.30倍・平均1.22倍の端から端高速化を比較対象に対して達成する。Batch Prioritized gateでもA100最大1.24倍・平均1.17倍、V100最大1.24倍・平均1.21倍。非重畳all-to-all時間はRAF比A100最大69%/V100最大83%、Tutel比A100最大66%/V100最大77%削減する。","key_results":[{"metric":"Switch gate端から端高速化","value":"A100最大1.21倍・平均1.17倍、V100最大1.30倍・平均1.22倍","baseline":"DeepSpeed / Tutel / RAFの最良比較","condition":"16〜64 GPU weak scaling、GPT2-S/L-MoE","interpretation":"expert局所を超えて非MoE計算とdWまでall-to-allへ重ねることでiteration全体が短縮する。"},{"metric":"Batch Prioritized gate高速化","value":"A100最大1.24倍・平均1.17倍、V100最大1.24倍・平均1.21倍","baseline":"Tutel / RAF","condition":"routing制約で主にMoE後計算だけpipeline可能","interpretation":"forwardの探索範囲が狭くてもdW schedulingとMoE後計算で十分な重畳余地が残る。"},{"metric":"非重畳communication削減","value":"RAF比A100最大69%、V100最大83%；Tutel比A100最大66%、V100最大77%","baseline":"RAF / Tutel","condition":"4ノードiteration breakdown","interpretation":"Lancetの主効果が単なるkernel高速化ではなくcommunication hiding拡大であることを示す。"},{"metric":"cost model誤差","value":"平均百分率誤差3.83%","baseline":"実測iteration time","condition":"全model・clusterの計測集約","interpretation":"DPとdW schedulingの候補比較に十分な予測精度。"},{"metric":"compiler最適化時間","value":"評価モデルの大半で20分未満","baseline":"なし","condition":"1 GPUでoperator benchmarkを実行","interpretation":"探索はtraining cluster全体を占有せず事前compile段階で完了できる。"}],"negative_results":["partition/pipelineは重畳を増やす一方、小operator化により総計算時間自体はRAFより増える場合がある。","partition数を増やしすぎるとOOMまたはkernel起動・低SM利用のoverheadが増え、最大ρを8から4/2へ下げる必要がある。","DeepSpeedは一部A100 GPT2-S-MoE条件でメモリ要求が高くOOMとなる。","FSDP/ZeRO3のforward all-gatherやtensor/sequence parallel通信との干渉は追加schedulingが必要で、統合評価は将来課題。","irregular expert計算はpaddingによる余分な計算を残し、block-sparse kernel等との併用余地がある。"],"quality_impact":"特殊gateがpartition間でexpert capacityを引き継ぎ、未分割batchと同じtoken routing/dropを保つため数学的等価性を維持する。","interpretation":"既存方式の限界はall-to-allがexpert計算より長く、expertを完全に隠しても通信が残る点にある。Lancetはforwardでは非MoE演算をpipelineへ取り込み、backwardではpartitionなしでdWを通信区間へ移すため、異なる依存関係から独立した重畳余地を足し合わせる。V100で最大利得が大きいのは通信対計算比やpartition overheadの違いで隠せる通信割合が変わるためであり、forward partitionだけでなくdW schedulingも併用する方が両model・両clusterで一貫して速い。"},"reservation":{"claim_id":"claim-34fda1e4845e29f50bd2e325","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
