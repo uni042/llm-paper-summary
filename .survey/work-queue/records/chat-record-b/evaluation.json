@@ -2,33 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-726aa6f9d7bb4140731a500b",
-  "job_id": "job-research-8c68e144047ac9bb",
-  "data": {
-    "hardware": "8×NVIDIA A100 80GBをNVLink接続、4×TPUv3チップ、16×TPUv4チップの3環境。",
-    "software": "Ring Attention公開JAX実装を拡張。GPU注意行列積はTensorFloat-32、TPUはbfloat16、その他は原則bfloat16。",
-    "methodology": "Ring AttentionとStriped Attentionを同じJAX基盤・最適タイル寸法で比較する。モデルは1B/3B/7B、系列長8k〜256kを中心に、TPUv4では786k超まで拡張。系列並列度2〜8、モデル並列度1〜4を変える。GPUタイルは2048×4096、TPUは2048×2048。256kではA100 8基のメッシュ(2,4)、TPUv4 16基の(2,8)で絶対トークン/秒と高速化倍率を測る。",
-    "datasets": [
-      "合成された長系列の因果言語モデル学習負荷"
-    ],
-    "models": [
-      "1B causal Transformer",
-      "3B causal Transformer",
-      "7B causal Transformer"
-    ],
-    "baselines": [
-      "Ring Attention"
-    ],
-    "metrics": [
-      "エンドツーエンド学習高速化倍率",
-      "tokens/s",
-      "理論最大高速化",
-      "注意タイル省略率"
-    ],
-    "scope": "厳密な因果自己注意を分散学習するシステム性能評価。品質指標は近似を導入しないため主対象ではなく、GPU/TPU上の長系列学習スループットを測る。最短ブロックではタイル粒度のためGPU側に計算省略が出ない条件も含む。"
-  },
+  "attempt_id": "attempt-d6d0f050a2bc6af8b178330b",
+  "job_id": "job-research-d5278ec0af97bd4e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-726aa6f9d7bb4140731a500b",
+    "claim_id": "claim-d6d0f050a2bc6af8b178330b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
