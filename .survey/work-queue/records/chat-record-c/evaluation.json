@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ade4ad902d6f7670ee635b88",
-  "job_id": "job-research-2e7cd1c4e1dc851d",
-  "data": {
-    "hardware": "A100級計算資源とHBM-PIMを組み合わせる構成を使用。各HBM-PIMスタックは16 GB、8チャネル、3.2 Gbps、各バンクに666 MHz処理器を置き、スタック当たり12.8 TFLOPSをモデル化する。ARU/FASは7 nm想定でRTL合成する。",
-    "software": "vLLMで実モデルのCUDAカーネルとアクセスを採取し、GPGPU-Sim 4.0とRamulator 2.0を統合したシステムシミュレータへ再生。PIM制約とPFM制御器をRamulatorへ追加する。",
-    "methodology": "LLaMA3-8B、DeepSeekMoE-16B、Mixtral 8x7B、GPT-OSS-120Bを対象に、NPUのみ、分離メモリ型PSM、PIM偏重統合メモリ型PUMと比較する。バッチ1・4の遅延重視条件と128〜512のスループット重視条件、異なる入力・出力長を評価する。シミュレータは実A100と既存NPU-PIMシミュレータに照合し、誤差は-15.57%〜0%、平均-5.14%。",
-    "scope": "主な性能値は実機そのものではなく、実ワークロードから取得したカーネル・メモリアクセストレースを用いる検証済みシステムシミュレーションである。面積はRTL合成による。したがって実製品NPU-PIMでのエンドツーエンド実測ではない点を区別する必要がある。"
-  },
+  "attempt_id": "attempt-6d7a6414e2062e2233d5009c",
+  "job_id": "job-research-2b2648af1ffd1107",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ade4ad902d6f7670ee635b88",
+    "claim_id": "claim-6d7a6414e2062e2233d5009c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

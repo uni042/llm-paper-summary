@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ade4ad902d6f7670ee635b88",
-  "job_id": "job-research-2e7cd1c4e1dc851d",
-  "data": {
-    "overview": "PFMは、静的なPIM偏重配置やNPU/PIM分離配置の弱点を、同一物理ページを両デバイスから効率良く読める共同配置と実行時演算切替で緩和する。小バッチではNPUのみ・PSM・PUMに対し平均でそれぞれ1.04倍、2.10倍、2.23倍の高速化を示し、大バッチのスループットではPUM比平均1.55倍、最大2.32倍に達する。MoEでは活性エキスパート数の段階変動へ追随するため静的割当との差が大きく、NPU/PIM双方で90%以上の帯域利用率を維持する。",
-    "key_results": [
-      {
-        "metric": "大バッチ推論スループット",
-        "value": "PUM比平均1.55倍、最大2.32倍",
-        "baseline": "PIM偏重統合メモリPUM",
-        "condition": "バッチ128〜512、LLaMA3/DeepSeekMoE/Mixtral/GPT-OSS",
-        "interpretation": "物理再配置なしの動的演算切替が、固定PIM向け配置のNPU帯域低下を避ける。"
-      },
-      {
-        "metric": "プリフィル遅延",
-        "value": "3.43倍短縮",
-        "baseline": "PUM",
-        "condition": "単一バッチ、入力1024・出力128",
-        "interpretation": "共同最適化配置が計算律速プリフィル時のNPU帯域を回復する。"
-      },
-      {
-        "metric": "MoEブロック遅延",
-        "value": "NPUのみ比1.76倍、PSM比2.01倍、PUM比2.05倍短縮",
-        "baseline": "各比較方式",
-        "condition": "MoEモデルの動的エキスパート活性",
-        "interpretation": "段階ごとの活性度に応じたNPU/PIM選択が静的配置の負荷不均衡を減らす。"
-      },
-      {
-        "metric": "帯域利用率",
-        "value": "NPU 92.10%、PIM 94.85%",
-        "baseline": "PUMのNPU側は代表形状で14.33〜23.52%",
-        "condition": "Mixtral推論のQKV、KV、MoE重みアクセス",
-        "interpretation": "一つの物理配置から両アクセス様式を高効率に供給できる。"
-      },
-      {
-        "metric": "制御器面積",
-        "value": "2.82 mm²",
-        "baseline": "A100有効HBMインターフェース領域57.0 mm²",
-        "condition": "7 nm想定RTL合成",
-        "interpretation": "追加面積は同領域の4.95%、全ダイ換算0.34%相当。"
-      }
-    ],
-    "negative_results": "動的な物理再配置方式はデータ移動が大きく、Oracle比でDeepSeekMoE 13.61%、GPT-OSS 53.6%、Mixtral 49.83%低い。PFM自身もオフラインプロファイルと32項目の対応付け表に依存し、モデル集合や活性傾向が大きく変わると再プロファイルまたは表拡張が必要になる。",
-    "interpretation": "PFMの利益は、NPU向け配置とPIM向け配置のどちらか一方を選ぶのではなく、両者の物理要件を共同最適化し、要求順序だけを実行時に変えることで得られる。プリフィルではNPUのチャネル帯域、デコードや低活性MoEではPIMのバンク並列性を維持できるため、相ごとに最適実行先が変わっても再配置費用を払わない。",
-    "quality_impact": "演算近似や量子化を導入する方式ではなく、データ配置・アドレス解釈・実行デバイスを変えるシステム最適化であるため、モデル品質を意図的に下げる要因はない。評価は性能シミュレーション中心で、精度指標の変化を主張する論文ではない。"
-  },
+  "attempt_id": "attempt-6d7a6414e2062e2233d5009c",
+  "job_id": "job-research-2b2648af1ffd1107",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ade4ad902d6f7670ee635b88",
+    "claim_id": "claim-6d7a6414e2062e2233d5009c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
