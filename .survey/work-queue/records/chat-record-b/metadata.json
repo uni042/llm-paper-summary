@@ -1,1 +1,57 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5589a405f0ee58411def153e","job_id":"job-research-5cec4a19e423bce9","data":{"canonical_id":"DOI:10.18653/v1/2025.emnlp-main.1079","title":"TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection","list_summary":"各問い合わせで重要な鍵値をトークン単位に選び、ヘッド軟投票・選択キャッシュ・ページ化内積カーネルで長文脈注意を高精度かつ高速化する。","summary":"TokenSelectは学習不要の動的トークン単位鍵値選択法である。長文脈注意の重要トークンが非連続に散在し、ブロック選択では取りこぼすという観測から、各注意ヘッドでQK内積を計算し、ヘッドごとにソフトマックス正規化した重要度を合算する軟投票で上位kトークンを選ぶ。連続問い合わせの類似性を利用して選択結果を再利用するSelection Cacheを導入し、ページサイズ1の鍵値管理とTriton製Paged Dot Product Kernelで不連続HBM配置の選択I/Oを抑える。Qwen2-7B、Llama-3-8B、Yi-1.5-6BとInfiniteBench、RULER、LongBenchで評価し、注意計算最大23.84倍、従来長文脈法比エンドツーエンド最大2.28倍を達成する。","source":"https://aclanthology.org/2025.emnlp-main.1079/","sources":["https://aclanthology.org/2025.emnlp-main.1079/","https://aclanthology.org/2025.emnlp-main.1079.pdf","https://github.com/pzs19/TokenSelect"],"authors":["Wei Wu","Zhuoshi Pan","Kun Fu","Chao Wang","Liyi Chen","Yunchu Bai","Tianfu Wang","Zheng Wang","Hui Xiong"],"published":"2025-11","publication":"Proceedings of EMNLP 2025","publication_type":"conference","publication_status":"published","primary_category":null,"cross_list_categories":[],"topics":["鍵値キャッシュ選択","疎注意","長文脈推論","長さ外挿","SGLang"],"implementation":"公式コードpzs19/TokenSelect。SGLang上でPyTorchとTritonを用い、ページ化内積カーネルとページ化注意を実装。","code":"https://github.com/pzs19/TokenSelect","last_checked":"2026-09-20","hardware_evaluation":"全実験にNVIDIA A100を使用。1M超ではテンソル並列を追加。RULERの8B評価は約8×A100でほぼ1日を要する。","quality_effect":"近似疎注意だが、トークン単位選択により小さい予算でもブロック選択より品質を維持する。選択キャッシュ閾値を下げ過ぎると動的検索課題で劣化する。","references":[],"references_checked_at":"2026-09-20","references_source":"ACL Anthology published PDF reference section","references_total":null},"reservation":{"claim_id":"claim-5589a405f0ee58411def153e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7fd52d00bf1ebd2f2315994c",
+  "job_id": "job-research-5cec4a19e423bce9",
+  "data": {
+    "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1079",
+    "title": "TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection",
+    "list_summary": "各問い合わせで重要な鍵値をトークン単位に選び、ヘッド軟投票・選択キャッシュ・ページ化内積カーネルで長文脈注意を高精度かつ高速化する。",
+    "summary": "TokenSelectは学習不要の動的トークン単位鍵値選択法である。長文脈注意の重要トークンが非連続に散在し、ブロック選択では取りこぼすという観測から、各注意ヘッドでQK内積を計算し、ヘッドごとにソフトマックス正規化した重要度を合算する軟投票で上位kトークンを選ぶ。連続問い合わせの類似性を利用して選択結果を再利用するSelection Cacheを導入し、ページサイズ1の鍵値管理とTriton製Paged Dot Product Kernelで不連続HBM配置の選択I/Oを抑える。Qwen2-7B、Llama-3-8B、Yi-1.5-6BとInfiniteBench、RULER、LongBenchで評価し、注意計算最大23.84倍、従来長文脈法比エンドツーエンド最大2.28倍を達成する。",
+    "source": "https://aclanthology.org/2025.emnlp-main.1079/",
+    "sources": [
+      "https://aclanthology.org/2025.emnlp-main.1079/",
+      "https://aclanthology.org/2025.emnlp-main.1079.pdf",
+      "https://github.com/pzs19/TokenSelect"
+    ],
+    "authors": [
+      "Wei Wu",
+      "Zhuoshi Pan",
+      "Kun Fu",
+      "Chao Wang",
+      "Liyi Chen",
+      "Yunchu Bai",
+      "Tianfu Wang",
+      "Zheng Wang",
+      "Hui Xiong"
+    ],
+    "published": "2025-11",
+    "publication": "Proceedings of EMNLP 2025",
+    "publication_type": "conference",
+    "publication_status": "published",
+    "primary_category": null,
+    "cross_list_categories": [],
+    "topics": [
+      "鍵値キャッシュ選択",
+      "疎注意",
+      "長文脈推論",
+      "長さ外挿",
+      "SGLang"
+    ],
+    "implementation": "公式コードpzs19/TokenSelect。SGLang上でPyTorchとTritonを用い、ページ化内積カーネルとページ化注意を実装。",
+    "code": "https://github.com/pzs19/TokenSelect",
+    "last_checked": "2026-09-20",
+    "hardware_evaluation": "全実験にNVIDIA A100を使用。1M超ではテンソル並列を追加。RULERの8B評価は約8×A100でほぼ1日を要する。",
+    "quality_effect": "近似疎注意だが、トークン単位選択により小さい予算でもブロック選択より品質を維持する。選択キャッシュ閾値を下げ過ぎると動的検索課題で劣化する。",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "ACL Anthology published PDF reference section",
+    "references_total": null
+  },
+  "reservation": {
+    "claim_id": "claim-7fd52d00bf1ebd2f2315994c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

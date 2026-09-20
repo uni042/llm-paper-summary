@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5589a405f0ee58411def153e","job_id":"job-research-5cec4a19e423bce9","data":{"overview":"主結果は、TokenSelectが元の鍵値を保持したまま注意対象だけをトークン単位で動的に絞ることで、長さ外挿の品質と実GPU速度を同時に改善したことである。InfiniteBenchでは2K選択＋512直近という3K未満の予算でもQwen2-7B平均49.08、Llama-3-8B平均43.90、Yi-1.5-6B平均36.77となり、より大きい予算を使うInfLLMを全モデルで上回った。RULERでも128Kまで元モデルの能力を大きく延長し、Qwen2-7Bでは2K+512で平均66.63、4K+4Kで75.17を得た。実用面では専用ページ化内積カーネルにより1M鍵値長の注意計算をFlashInfer全注意比最大23.84倍、エンドツーエンドではSDPA比最大4.70倍、既存長文脈法比最大2.28倍高速化した。つまりアルゴリズム上の疎性をGPUの実時間短縮へ落とし込みつつ、ブロック選択より少ないトークン予算で遠距離情報を保持できる。","key_results":[{"metric":"InfiniteBench平均、Qwen2-7B","value":"49.08","baseline":"InfLLM 32.06、StreamingLLM 16.07、元モデル25.13","condition":"TokenSelect 2K選択+512直近+先頭128","interpretation":"小さい注意予算で検索系を含む長文脈品質と長さ外挿を改善する。"},{"metric":"InfiniteBench平均、Llama-3-8B","value":"43.90","baseline":"InfLLM 39.23、StreamingLLM 16.37、元モデル18.21","condition":"未長文脈再学習モデル","interpretation":"追加学習なしでも事前学習窓を超える入力へ外挿できる。"},{"metric":"RULER平均、Qwen2-7B","value":"66.63（2K+512）、75.17（4K+4K）","baseline":"InfLLM 29.82 / 36.30、StreamingLLM 38.53","condition":"4K〜128K","interpretation":"同等または小さい予算でブロック選択より長さ増加に強い。"},{"metric":"ヘッド軟投票アブレーション R.KV","value":"86.60","baseline":"生top-k 16.60、0/1ヘッド投票22.40","condition":"Qwen2-7B InfiniteBench、2K+512","interpretation":"ヘッドごとの尺度差を正規化して投票することが難しい検索で決定的に効く。"},{"metric":"注意計算高速化","value":"最大23.84倍","baseline":"FlashInfer全注意","condition":"Qwen2-7B、1M鍵値長、単一事前充填チャンク","interpretation":"トークン選択と専用ページ化内積実装が理論疎化を実速度へ変換する。"},{"metric":"エンドツーエンド高速化","value":"SDPA比最大4.70倍、既存長文脈法比最大2.28倍","baseline":"FlashInfer SDPA、InfLLM","condition":"InfiniteBench","interpretation":"選択オーバーヘッド込みでもサービング全体を高速化する。"},{"metric":"Selection Cache一回のヒット効果","value":"約0.5ms/step削減","baseline":"毎ステップ再選択","condition":"7B、128K文脈","interpretation":"連続問い合わせの類似性を利用して復号時選択コストを償却できる。"}],"negative_results":"Selection Cacheの閾値を下げて再利用率を上げると多くの課題では小幅劣化に留まるが、R.KVのような動的な精密検索では大きく悪化する。LlamaとYiでは選択予算を4K+4Kへ増やすと一部で性能が下がり、単純に多く読めば常に良いわけではない。学習不要なので基礎モデル固有の弱点は直せず、Yi-1.5-6BがUUIDを正しく復唱できない問題は残る。長文脈評価自体も高価で、8B RULERは約8×A100をほぼ一日使う。","interpretation":"注意の重要位置は疎だが連続ブロックにはまとまらず、ヘッドごとのログイット尺度も異なる。トークン単位に分解しヘッド内正規化後に合意を取ることで、少数の重要位置を高い再現率で選べる。実装では鍵値本体のコピーではなくインデックスだけをページ化経路へ渡すため、細粒度選択のI/O弱点を抑える。","quality_impact":"近似疎注意だが、元鍵値を削除しないため次の問い合わせで別トークンを再選択できる。選択数とSelection Cache閾値が品質・速度の主な調整点となる。"},"reservation":{"claim_id":"claim-5589a405f0ee58411def153e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-7fd52d00bf1ebd2f2315994c",
+  "job_id": "job-research-5cec4a19e423bce9",
+  "data": {
+    "overview": "主結果は、TokenSelectが元の鍵値を保持したまま注意対象だけをトークン単位で動的に絞ることで、長さ外挿の品質と実GPU速度を同時に改善したことである。InfiniteBenchでは2K選択＋512直近という3K未満の予算でもQwen2-7B平均49.08、Llama-3-8B平均43.90、Yi-1.5-6B平均36.77となり、より大きい予算を使うInfLLMを全モデルで上回った。RULERでも128Kまで元モデルの能力を大きく延長し、Qwen2-7Bでは2K+512で平均66.63、4K+4Kで75.17を得た。実用面では専用ページ化内積カーネルにより1M鍵値長の注意計算をFlashInfer全注意比最大23.84倍、エンドツーエンドではSDPA比最大4.70倍、既存長文脈法比最大2.28倍高速化した。つまりアルゴリズム上の疎性をGPUの実時間短縮へ落とし込みつつ、ブロック選択より少ないトークン予算で遠距離情報を保持できる。",
+    "key_results": [
+      {
+        "metric": "InfiniteBench平均、Qwen2-7B",
+        "value": "49.08",
+        "baseline": "InfLLM 32.06、StreamingLLM 16.07、元モデル25.13",
+        "condition": "TokenSelect 2K選択+512直近+先頭128",
+        "interpretation": "小さい注意予算で検索系を含む長文脈品質と長さ外挿を改善する。"
+      },
+      {
+        "metric": "InfiniteBench平均、Llama-3-8B",
+        "value": "43.90",
+        "baseline": "InfLLM 39.23、StreamingLLM 16.37、元モデル18.21",
+        "condition": "未長文脈再学習モデル",
+        "interpretation": "追加学習なしでも事前学習窓を超える入力へ外挿できる。"
+      },
+      {
+        "metric": "RULER平均、Qwen2-7B",
+        "value": "66.63（2K+512）、75.17（4K+4K）",
+        "baseline": "InfLLM 29.82 / 36.30、StreamingLLM 38.53",
+        "condition": "4K〜128K",
+        "interpretation": "同等または小さい予算でブロック選択より長さ増加に強い。"
+      },
+      {
+        "metric": "ヘッド軟投票アブレーション R.KV",
+        "value": "86.60",
+        "baseline": "生top-k 16.60、0/1ヘッド投票22.40",
+        "condition": "Qwen2-7B InfiniteBench、2K+512",
+        "interpretation": "ヘッドごとの尺度差を正規化して投票することが難しい検索で決定的に効く。"
+      },
+      {
+        "metric": "注意計算高速化",
+        "value": "最大23.84倍",
+        "baseline": "FlashInfer全注意",
+        "condition": "Qwen2-7B、1M鍵値長、単一事前充填チャンク",
+        "interpretation": "トークン選択と専用ページ化内積実装が理論疎化を実速度へ変換する。"
+      },
+      {
+        "metric": "エンドツーエンド高速化",
+        "value": "SDPA比最大4.70倍、既存長文脈法比最大2.28倍",
+        "baseline": "FlashInfer SDPA、InfLLM",
+        "condition": "InfiniteBench",
+        "interpretation": "選択オーバーヘッド込みでもサービング全体を高速化する。"
+      },
+      {
+        "metric": "Selection Cache一回のヒット効果",
+        "value": "約0.5ms/step削減",
+        "baseline": "毎ステップ再選択",
+        "condition": "7B、128K文脈",
+        "interpretation": "連続問い合わせの類似性を利用して復号時選択コストを償却できる。"
+      }
+    ],
+    "negative_results": "Selection Cacheの閾値を下げて再利用率を上げると多くの課題では小幅劣化に留まるが、R.KVのような動的な精密検索では大きく悪化する。LlamaとYiでは選択予算を4K+4Kへ増やすと一部で性能が下がり、単純に多く読めば常に良いわけではない。学習不要なので基礎モデル固有の弱点は直せず、Yi-1.5-6BがUUIDを正しく復唱できない問題は残る。長文脈評価自体も高価で、8B RULERは約8×A100をほぼ一日使う。",
+    "interpretation": "注意の重要位置は疎だが連続ブロックにはまとまらず、ヘッドごとのログイット尺度も異なる。トークン単位に分解しヘッド内正規化後に合意を取ることで、少数の重要位置を高い再現率で選べる。実装では鍵値本体のコピーではなくインデックスだけをページ化経路へ渡すため、細粒度選択のI/O弱点を抑える。",
+    "quality_impact": "近似疎注意だが、元鍵値を削除しないため次の問い合わせで別トークンを再選択できる。選択数とSelection Cache閾値が品質・速度の主な調整点となる。"
+  },
+  "reservation": {
+    "claim_id": "claim-7fd52d00bf1ebd2f2315994c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
