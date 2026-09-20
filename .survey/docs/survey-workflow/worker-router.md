@@ -64,6 +64,18 @@
 - claim resultが返したbankを無視して別bankへ書かない。
 - 1本処理したことだけをrun終了理由にしない。
 
+### 3.1 実運用で確立した高スループット原則
+
+以下は品質基準を緩める高速化ではなく、全文精読・検証・耐久保存を維持したまま重複作業を減らすための標準手順である。
+
+1. **全文読解済み成果を捨てない。** 初回全文精読後はrecord bankと既存5スロットを再利用し、validation失敗時は指摘されたslotだけを一次資料に基づいて修復する。一次証拠が不足・変更していない限り、全文を最初から読み直さない。
+2. **初回5スロットをvalidator下限ぎりぎりにしない。** 問題設定は「問題＋既存法で解けない理由」、method overviewは入力から出力までのend-to-end流れ、各componentは「入力・内部処理・出力・他componentとの接続」を十分に記述する。短すぎる説明によるrepair往復を減らす。
+3. **一次資料は取得できた時に一度で必要範囲を読む。** 完全なarXiv HTMLが使えるなら優先し、必要ならPDF、OpenReview/会議公式、著者・プロジェクト公式コピーへ進む。同一資料を小分けに再取得せず、手法・評価・結果・ablation・限界・関連研究までまとめて確認する。
+4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を耐久保存して次の独立jobへ進む。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
+5. **非同期待ちを不要な同期障壁にしない。** claim/result/submissionの同じIDを保持して所定間隔で確認し、待ち時間には次候補の一次資料経路確認、identity/queue同期、既読slot整理などclaim競合を起こさない準備を行う。未完了claimを増やしたり同一requestを重複発行しない。
+6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research claimは常に1件だけ保持し、完了またはstatus-only耐久保存後に次へ進む。
+7. **件数目標は最低条件として扱う。** run固有の追加quotaがある場合、quota到達だけで停止せず、continuation/finalization gateまたは実際のhard stopまで安全に次の独立作業を続ける。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+
 ## 4. Discovery の唯一の入口
 
 新規Discoveryは**固定ソース precheck schema v3** だけを使う。ワーカーが検索結果を数件だけ手でJSONへ詰め、schema v1/v2として投入してはならない。
