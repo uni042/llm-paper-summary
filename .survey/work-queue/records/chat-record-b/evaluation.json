@@ -1,1 +1,43 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d9175409e1e36a47b3e6d387","job_id":"job-research-b8f01545319d9604","data":{"hardware":"NVIDIA H100 NVL GPU 2基を12本のNVLinkで接続し、Intel Xeon Platinum 8592+ CPUを使用。","software":"vLLM v0.20.0公式Docker、テンソル並列2、OpenTelemetry、Jaeger、Harbor、Claude Code、独自要求ゲートウェイ。","methodology":"Qwen3.6-27BとGemma4-31Bを各々思考あり・即時応答で実行し、ADE-Bench、DABStep、GAIA、SWE-bench Pro、Terminal-Bench 2.0を評価する。DABStepとSWE-bench Proは各100件を無作為抽出。ターン数、累積文脈、出力構成、成功失敗、LLM対ツール時間、キャッシュ命中率、プリフィル対デコード時間、ツール種類・命令・時間・返却量・失敗率を記録する。同時実行数はKVキャッシュの追い出しが起きないよう制御し、理想的な文脈再利用条件を測定する。","datasets":["ADE-Bench","DABStep","GAIA","SWE-bench Pro","Terminal-Bench 2.0"],"models":["Qwen3.6-27B","Gemma4-31B"],"baselines":["思考ありモードと即時応答モードの比較","成功軌跡と失敗軌跡の比較"],"metrics":["ターン数","累積文脈トークン","キャッシュ命中率","プリフィル時間比","デコード時間比","ツール時間比","ツール失敗率","返却トークン数"],"scope":"ReAct型Claude Codeエージェントを対象に、キャッシュ追い出しのない制御環境で単一サーバ上の特性を測る。多数エージェント同時実行によるKVスラッシング、オフロード、再計算、異なるエージェント枠組みやGPU構成は直接評価しない。"},"reservation":{"claim_id":"claim-d9175409e1e36a47b3e6d387","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d9bfe22acbd9e709c4fcf1f8",
+  "job_id": "job-research-b8f01545319d9604",
+  "data": {
+    "hardware": "NVIDIA H100 NVL GPU 2基を12本のNVLinkで接続し、Intel Xeon Platinum 8592+ CPUを使用。",
+    "software": "vLLM v0.20.0公式Docker、テンソル並列2、OpenTelemetry、Jaeger、Harbor、Claude Code、独自要求ゲートウェイ。",
+    "methodology": "Qwen3.6-27BとGemma4-31Bを各々思考あり・即時応答で実行し、ADE-Bench、DABStep、GAIA、SWE-bench Pro、Terminal-Bench 2.0を評価する。DABStepとSWE-bench Proは各100件を無作為抽出。ターン数、累積文脈、出力構成、成功失敗、LLM対ツール時間、キャッシュ命中率、プリフィル対デコード時間、ツール種類・命令・時間・返却量・失敗率を記録する。同時実行数はKVキャッシュの追い出しが起きないよう制御し、理想的な文脈再利用条件を測定する。",
+    "datasets": [
+      "ADE-Bench",
+      "DABStep",
+      "GAIA",
+      "SWE-bench Pro",
+      "Terminal-Bench 2.0"
+    ],
+    "models": [
+      "Qwen3.6-27B",
+      "Gemma4-31B"
+    ],
+    "baselines": [
+      "思考ありモードと即時応答モードの比較",
+      "成功軌跡と失敗軌跡の比較"
+    ],
+    "metrics": [
+      "ターン数",
+      "累積文脈トークン",
+      "キャッシュ命中率",
+      "プリフィル時間比",
+      "デコード時間比",
+      "ツール時間比",
+      "ツール失敗率",
+      "返却トークン数"
+    ],
+    "scope": "ReAct型Claude Codeエージェントを対象に、キャッシュ追い出しのない制御環境で単一サーバ上の特性を測る。多数エージェント同時実行によるKVスラッシング、オフロード、再計算、異なるエージェント枠組みやGPU構成は直接評価しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-d9bfe22acbd9e709c4fcf1f8",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
