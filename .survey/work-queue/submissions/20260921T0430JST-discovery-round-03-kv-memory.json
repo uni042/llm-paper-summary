@@ -1,0 +1,23 @@
+{
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"title":"Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics","source_url":"https://arxiv.org/abs/2606.01502","canonical_id":"arXiv:2606.01502","arxiv_id":"2606.01502","year":2026,"published":"2026-05-31","reason":"Direct inference-systems study of cross-instance attention redistribution and GPU-fabric communication; directly informs KV/latent-attention placement.","priority":94},
+    {"title":"Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking","source_url":"https://doi.org/10.1145/3802107","canonical_id":"arXiv:2603.12831","arxiv_id":"2603.12831","year":2026,"published":"2026-05-18","reason":"Direct heterogeneous LLM serving contribution combining CPU/GPU attention placement with SLO-aware serving; recent and systems-focused.","priority":95},
+    {"title":"Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models","source_url":"https://arxiv.org/abs/2605.11277","canonical_id":"arXiv:2605.11277","arxiv_id":"2605.11277","year":2026,"published":"2026-05-11","reason":"Direct MoE inference acceleration via expert-aware processing-in-memory and dynamic adaptation; strongly aligned with expert placement/offload systems.","priority":94},
+    {"title":"Pooling Engram Conditional Memory in Large Language Models using CXL","source_url":"http://arxiv.org/abs/2603.10087","canonical_id":"arXiv:2603.10087","arxiv_id":"2603.10087","year":2026,"published":"2026-03-10","reason":"Direct CXL memory-pooling work for conditional LLM memory, relevant to hierarchical memory and disaggregated inference.","priority":93},
+    {"title":"ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System","source_url":"https://arxiv.org/abs/2602.13692","canonical_id":"arXiv:2602.13692","arxiv_id":"2602.13692","year":2026,"published":"2026-02-14","reason":"Direct agentic LLM inference-system contribution focused on program-aware execution and serving efficiency; recent systems work.","priority":92}
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-21T04:30:00+09:00",
+    "round": "round-03",
+    "axis": "recent KV cache offload disaggregation remote memory LLM inference systems",
+    "trigger": "scheduled_worker",
+    "evaluated_count": 20,
+    "selected_count": 5
+  },
+  "discovery_precheck": {
+    "request_id": "20260921T0430JST-scheduled-search-kv-03",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260921T0430JST-scheduled-search-kv-03.json",
+    "receipt": "sha256:34de9caf2f93bf584e51c90379187d4cb76f23c3535aeecab457823755b5eb4e"
+  }
+}
