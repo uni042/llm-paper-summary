@@ -20,24 +20,10 @@
   },
   "claiming": {
     "ready_research_audit": 181,
-    "actively_claimed": 0,
-    "claimable": 181
+    "actively_claimed": 1,
+    "claimable": 180
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-5ce9880c62119377",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "arXiv:2510.19366",
-      "title": "MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs",
-      "source_url": "https://arxiv.org/abs/2510.19366",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-67ddaa9ed58fd85b",
       "type": "research",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-ff5accb2a519d706",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2602.07616",
+      "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models",
+      "source_url": "https://arxiv.org/abs/2602.07616",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T11:08:22+00:00"
+  "generated_at": "2026-09-20T11:12:15+00:00"
 }
