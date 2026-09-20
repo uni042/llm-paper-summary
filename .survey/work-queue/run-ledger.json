@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T00:41:55.676093+00:00",
+  "updated_at": "2026-09-20T00:47:44.886969+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T00:41:55.676093+00:00",
+      "last_recorded_at": "2026-09-20T00:47:44.886969+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 322,
+        "research_completed": 323,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 43,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35415278593:1",
-          "recorded_at": "2026-09-19T02:19:15.075527+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35415278593",
-            "run_attempt": "1",
-            "source_sha": "70167f76ba3ce8e8edef7e4612d1ca23c427786d"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35415313509:1",
           "recorded_at": "2026-09-19T02:20:10.118586+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35479428147",
             "run_attempt": "1",
             "source_sha": "17e49b96a0041ef8598533582a725592b2c9fc03"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35479693062:1",
+          "recorded_at": "2026-09-20T00:47:44.886969+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35479693062",
+            "run_attempt": "1",
+            "source_sha": "188efa60292f7ef629e0b76262fe619f12107215"
           },
           "signals": [
             "research_completed"
@@ -24063,6 +24063,14 @@
           "type": "research",
           "canonical_id": "arXiv:2306.14048",
           "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-42834c639c34d742",
+          "type": "research",
+          "canonical_id": "arXiv:2308.14352",
+          "title": "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
           "from": "ready",
           "to": "completed"
         }
