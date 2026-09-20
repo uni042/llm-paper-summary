@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 123,
-      "completed": 620,
+      "ready": 122,
+      "completed": 621,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 123,
+    "ready_research_audit": 122,
     "actively_claimed": 1,
-    "claimable": 122
+    "claimable": 121
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-821e549f36e154dd",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2502.00937",
-      "title": "ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving",
-      "source_url": "https://arxiv.org/abs/2502.00937",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-d223f7a181256e07",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-be4feb2ff4a84f5b",
+      "type": "research",
+      "lane": null,
+      "priority": 96,
+      "canonical_id": "arXiv:2405.03917",
+      "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
+      "source_url": "https://arxiv.org/abs/2405.03917",
+      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2405.03917-coupled-quantization.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T05:46:36+00:00"
+  "generated_at": "2026-09-20T05:49:26+00:00"
 }

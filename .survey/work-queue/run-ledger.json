@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T05:46:41.563461+00:00",
+  "updated_at": "2026-09-20T05:49:32.004677+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T05:46:41.563461+00:00",
+      "last_recorded_at": "2026-09-20T05:49:32.004677+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 345,
+        "research_completed": 346,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35446218265:1",
-          "recorded_at": "2026-09-19T13:36:21.829607+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35446218265",
-            "run_attempt": "1",
-            "source_sha": "88bd1266fb6f42d0e4f763c14b1f7dbbf46a99a6"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35446319988:1",
           "recorded_at": "2026-09-19T13:37:59.562781+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35492519633",
             "run_attempt": "1",
             "source_sha": "f680f008135246da5bf0232caaf84ccd23160b23"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35492636751:1",
+          "recorded_at": "2026-09-20T05:49:32.004677+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35492636751",
+            "run_attempt": "1",
+            "source_sha": "4d336da43f6ec9efdf8d631578f1097061176ec9"
           },
           "signals": [
             "research_completed"
@@ -24308,6 +24308,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.04398",
           "title": "Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-821e549f36e154dd",
+          "type": "research",
+          "canonical_id": "arXiv:2502.00937",
+          "title": "ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving",
           "from": "ready",
           "to": "completed"
         }

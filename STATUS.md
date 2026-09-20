@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:49:16 JST**
+> 自動生成: **2026-09-20 14:49:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **123** |
+| 収録候補論文 | **122** |
 | 未claim Research job | **121** |
-| 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-20 14:46:36 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **58** |
+| 最終検証済みResearch収録 | **09-20 14:49:26 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **123** |
+| canonical_id確認済みの一意な候補論文 | **122** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **123** |
+| 非終端Research job合計 | **122** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **26** | **3** | **2** | **1** | **2** | **0** | — |
+| Research | **27** | **3** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **26** | **4** | **3** | **1** | **2** | **0** | **5** |
+| 合計 | **27** | **4** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 14:49:26 JST** [research] `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
+  - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
+  - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-16712b93d70f46eb3fb21fac.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md`
 - **09-20 14:46:36 JST** [research] `arXiv:2503.04398` — Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling
   - job: `.survey/work-queue/jobs/job-research-e0a5ea7f3cdd2886.json`
   - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-26cd74667eb00ab5badaabeb.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-26cd74667eb00ab5badaabeb.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md`
-- **09-20 12:45:53 JST** [research] `arXiv:2407.11550` — Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-3f4b0e4a187439dd.json`
-  - result: `.survey/work-queue/results/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-36a9cdcc5175155fa19ebfd4-repair1.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-16712b93d70f46eb3fb21fac.json` (job `job-research-821e549f36e154dd`)
+- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
+  - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
+  - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-16712b93d70f46eb3fb21fac.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md`
 - **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
@@ -160,10 +164,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 14:47:12 JST** / heartbeat: **—** / lease expiry: **09-20 16:17:12 JST**
-  - evidence: `.survey/work-queue/claims/job-research-821e549f36e154dd.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -186,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **123** |
+| ready | **122** |
 
 ### 候補の重複・識別情報欠損
 
@@ -206,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **809** |
+| inference/training/survey配下の論文Markdown実体 | **810** |
 
 ### immutable submissionの未照合
 
@@ -214,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **729** |
-| └ Research | **543** |
+| 成功result未照合のimmutable submission | **728** |
+| └ Research | **542** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
