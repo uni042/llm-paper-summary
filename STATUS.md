@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:08:25 JST**
+> 自動生成: **2026-09-20 15:09:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **118** |
 | 未claim Research job | **116** |
 | 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-20 15:08:10 JST（15秒前）** |
+| 最終検証済みResearch収録 | **09-20 15:08:10 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **31** | **5** | **4** | **0** | **2** | **0** | — |
+| Research | **31** | **4** | **4** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **31** | **6** | **5** | **0** | **2** | **0** | **5** |
+| 合計 | **31** | **5** | **5** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -138,8 +138,6 @@
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-480662bc3f90f56bffdcef2f.json` (job `job-research-f8d11555626eb92a`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-480662bc3f90f56bffdcef2f.json` (`ok=false`)
 - **成功** `arXiv:2505.23416` — KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction
   - job: `.survey/work-queue/jobs/job-research-d223f7a181256e07.json`
   - result: `.survey/work-queue/results/research/attempt-a81c3fda043b3840209ea896.json` (`ok=true`)
@@ -173,7 +171,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2405.05254` — You Only Cache Once: Decoder-Decoder Architectures for Language Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:06:12 JST** / heartbeat: **—** / lease expiry: **09-20 16:36:12 JST**
+  - claim: **09-20 15:08:47 JST** / heartbeat: **—** / lease expiry: **09-20 16:38:47 JST**
   - evidence: `.survey/work-queue/claims/job-research-f8d11555626eb92a.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
