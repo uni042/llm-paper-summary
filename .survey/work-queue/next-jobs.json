@@ -9,17 +9,18 @@
       "completed": 6
     },
     "research": {
-      "ready": 111,
+      "ready": 110,
       "completed": 636,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
-      "rejected": 2
+      "rejected": 2,
+      "blocked": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 111,
-    "actively_claimed": 2,
+    "ready_research_audit": 110,
+    "actively_claimed": 1,
     "claimable": 109
   },
   "next_jobs": [
@@ -94,14 +95,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-c7bef3f1698aa85a",
+      "job_id": "job-research-7059e5a5af8e2266",
       "type": "research",
       "lane": null,
       "priority": 94,
-      "canonical_id": "arXiv:2410.18248",
-      "title": "Fast Inference for Augmented Large Language Models",
-      "source_url": "https://arxiv.org/abs/2410.18248",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md",
+      "canonical_id": "arXiv:2305.17118",
+      "title": "Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time",
+      "source_url": "https://arxiv.org/abs/2305.17118",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T07:45:29+00:00"
+  "generated_at": "2026-09-20T07:46:54+00:00"
 }

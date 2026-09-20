@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T07:44:04.334849+00:00",
+  "updated_at": "2026-09-20T07:46:59.591152+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T07:44:04.334849+00:00",
+      "last_recorded_at": "2026-09-20T07:46:59.591152+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 361,
         "audit_completed": 0,
         "discovery_completed": 197,
-        "blocked": 47,
+        "blocked": 48,
         "new_jobs": 312,
         "new_papers": 360,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35463638964:1",
-          "recorded_at": "2026-09-19T19:13:10.716376+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35463638964",
-            "run_attempt": "1",
-            "source_sha": "7fa660223d402f8b66565fce963a6ec65e106bc5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35463890925:1",
           "recorded_at": "2026-09-19T19:17:55.187095+00:00",
@@ -19592,6 +19578,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35497769628:1",
+          "recorded_at": "2026-09-20T07:46:59.591152+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35497769628",
+            "run_attempt": "1",
+            "source_sha": "8f4c74588799a899eb5aa5dd556341c00e61bca4"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24435,6 +24435,14 @@
           "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-c7bef3f1698aa85a",
+          "type": "research",
+          "canonical_id": "arXiv:2410.18248",
+          "title": "Fast Inference for Augmented Large Language Models",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -27371,7 +27379,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 821,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
