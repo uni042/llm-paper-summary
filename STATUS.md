@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:45:47 JST**
+> 自動生成: **2026-09-20 20:46:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **186** |
+| 収録候補論文 | **185** |
 | 未claim Research job | **185** |
-| 直近24hの検証済みResearch収録 | **88** |
-| 最終検証済みResearch収録 | **09-20 20:43:09 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **89** |
+| 最終検証済みResearch収録 | **09-20 20:45:57 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **186** |
+| canonical_id確認済みの一意な候補論文 | **185** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **186** |
+| 非終端Research job合計 | **185** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **4** | **2** | **1** | **1** | **0** | — |
+| Research | **40** | **4** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **39** | **5** | **3** | **1** | **1** | **0** | **5** |
+| 合計 | **40** | **5** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 20:45:57 JST** [research] `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts
+  - job: `.survey/work-queue/jobs/job-research-92c83b7c2ec8a78f.json`
+  - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md`
 - **09-20 20:43:09 JST** [research] `arXiv:2606.09886` — SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs
   - job: `.survey/work-queue/jobs/job-research-6e63ee697d71f91d.json`
   - result: `.survey/work-queue/results/research/attempt-5a4b45332ca9b9f0a0bd90d0.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json`
   - paper: `papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md`
-- **09-20 19:05:05 JST** [research] `DOI:10.18653/v1/2026.acl-long.1811` — REAL: REtrieval-reAsoning and Logic-constructed Attention Behaviors for Long-Context KV Cache Compression
-  - job: `.survey/work-queue/jobs/job-research-765eee68b506c6ff.json`
-  - result: `.survey/work-queue/results/research/attempt-eda6a759c3d074c07a647fb0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-eda6a759c3d074c07a647fb0.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-real-kv.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 20:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-2ba79169b09085044fd31ab0.json` (job `job-research-0f282c93dba72c85`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-2ba79169b09085044fd31ab0.json` (`ok=true`)
 - **成功** `arXiv:2603.11535` — Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing
@@ -140,7 +140,11 @@
   - result: `.survey/work-queue/results/research/attempt-5a4b45332ca9b9f0a0bd90d0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5a4b45332ca9b9f0a0bd90d0.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json` (job `job-research-92c83b7c2ec8a78f`)
+- **成功** `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts
+  - job: `.survey/work-queue/jobs/job-research-92c83b7c2ec8a78f.json`
+  - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md`
 
 #### Audit (:30)
 
@@ -162,10 +166,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 20:44:46 JST** / heartbeat: **—** / lease expiry: **09-20 22:14:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-92c83b7c2ec8a78f.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -185,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **186** |
+| ready | **185** |
 
 ### 候補の重複・識別情報欠損
 
@@ -205,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **853** |
+| inference/training/survey配下の論文Markdown実体 | **854** |
 
 ### immutable submissionの未照合
 
@@ -213,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **813** |
-| └ Research | **592** |
+| 成功result未照合のimmutable submission | **812** |
+| └ Research | **591** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **74** |
