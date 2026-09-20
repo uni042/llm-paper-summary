@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-79d8395b6b34cb41081cfb7e",
+  "attempt_id": "attempt-3abd5ab214b6f2e829c399c9",
   "job_id": "job-research-b0f3ab31cdfd9a01",
   "data": {
     "hardware": "単一ノードのNVIDIA B200 180GBを8基使用。専門家並列のall-to-all通信を独自実装し、分散AdamW/MuonはZeRO-2型の勾配同期を利用する。",
@@ -11,7 +11,7 @@
     "scope": "実機8基B200での事前学習評価だが、主眼はモデル品質とルーティング挙動であり、推論スループット、トークン毎遅延、通信量削減などのサービング性能を直接測定した論文ではない。モデル規模も最大2.4B総パラメータで、数百B級MoEへの品質・通信特性の一般化は未検証である。"
   },
   "reservation": {
-    "claim_id": "claim-79d8395b6b34cb41081cfb7e",
+    "claim_id": "claim-3abd5ab214b6f2e829c399c9",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
