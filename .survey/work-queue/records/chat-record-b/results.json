@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-16712b93d70f46eb3fb21fac",
-  "job_id": "job-research-821e549f36e154dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-16712b93d70f46eb3fb21fac",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-16712b93d70f46eb3fb21fac","job_id":"job-research-821e549f36e154dd","data":{"overview":"主要結果として、固定128GPUでModServeはvLLM一体配備よりLlama3.2-11Bで3.3倍、InternVL-26Bで5.5倍高いSLO内最大スループットを達成した。一日本番バーストを自動拡縮すると、P99末尾遅延SLOを守りながら必要GPU数をそれぞれ41.3%と25%削減した。実用上は、画像処理をLLM backendから独立拡縮することで、画像バースト時に高価な言語モデルGPUまで一緒に増やす過剰確保を避けつつ、画像並列化とモダリティ別ルーティングで先頭待ちも抑えられることを意味する。","key_results":[{"metric":"maximum throughput under TTFT/TBT SLO","value":"3.3× (Llama3.2-11B), 5.5× (InternVL-26B)","baseline":"vLLM monolith","condition":"static 16 servers / 128 A100 GPUs","interpretation":"段階分離、画像並列化、モダリティ認識ルーティングにより固定資源で処理できる要求量を大幅に増加。"},{"metric":"GPU cost under autoscaling","value":"41.3% fewer GPUs (Llama3.2), 25% fewer GPUs (InternVL)","baseline":"vLLM monolith autoscaling","condition":"one-day production trace with image-driven burst, tail SLO maintained","interpretation":"画像負荷だけ増えた時にImage Poolを独立拡縮でき、LLM backendの不要な増設を回避する。"},{"metric":"static TTFT after decoupling","value":"average/P99 -27%/-42% Llama3.2; -46%/-47% InternVL","baseline":"vLLM monolith","condition":"128 GPUs fixed allocation","interpretation":"分離だけでも資源競合を除き、画像符号化を多くの小インスタンスへ並列化できる。"},{"metric":"additional scheduling/routing TTFT reduction","value":"scheduling average/P99 -12%/-25%; routing -14%/-32%","baseline":"preceding ModServe ablation stage","condition":"production-trace workload","interpretation":"段階分離後も要求サイズ不均一による先頭待ちが残り、モダリティ認識制御が追加効果を持つ。"},{"metric":"PD disaggregation composition","value":"average TTFT up to 2.8×, P90 up to 3.2× improvement","baseline":"PD-Monolith","condition":"InternVL-26B, 32 GPUs for image encoding + prefill","interpretation":"prefill/decode分離だけでは解消しない画像符号化競合を追加のstage disaggregationで削減する。"},{"metric":"image token transfer overhead","value":"InfiniBand RDMA P99 5ms; <0.5% CroAttn TTFT and <0.3% DecOnly TTFT","baseline":"stage-local execution","condition":"varying image embedding sizes","interpretation":"段階分離による画像トークン転送費用は高速ネットワークでは小さい。"}],"negative_results":"Image:Text Instance比を12:16までText側へ寄せると画像符号器数が一体配備より少なくなり性能が逆転するため、分離だけでは適切な容量配分を保証しない。Ethernet TCPでは画像トークン転送がP50 100ms、P99 180msとなり、InfiniBandより効果が縮小する。評価モデルは最大90Bで、さらに大きい本番モデルや音声モダリティは直接評価していない。","interpretation":"改善量はモデル構造と負荷構成で変わる。交差注意モデルは画像トークン増加がLLM backendを比較的圧迫しないため画像プール独立拡縮の費用効果が大きく、デコーダのみモデルは画像トークンも自己注意へ入るためText Poolも増やす必要がある。","quality_impact":"段階配置とスケジューリングを変えるだけでモデル計算やトークンを近似削減しないため、生成品質を犠牲にする方式ではない。"},"reservation":{"claim_id":"claim-16712b93d70f46eb3fb21fac","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
