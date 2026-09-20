@@ -21,5 +21,16 @@
   "created_at": "2026-09-20T10:24:57+00:00",
   "completed_at": "2026-09-20T11:30:49+00:00",
   "blocker": "Primary-source full text could not be safely retrieved in this run. Official arXiv HTML and abstract endpoints for arXiv:2608.24938 were attempted and returned tool-level DisabledError; export.arxiv.org API/PDF routes were also attempted and were inaccessible. Search located third-party renderings (alphaXiv, Academus, Hugging Face Papers), but these are not materially distinct official primary-source copies and therefore were not used to fabricate a completed five-slot record. Retrieval evidence timestamp: 2026-09-20T11:30Z.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-c017c04ebe8bfab8c1c97bd1.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c017c04ebe8bfab8c1c97bd1.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-20T11:30:49+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-20T11:30:49+00:00",
+      "reason": "Primary-source full text could not be safely retrieved in this run. Official arXiv HTML and abstract endpoints for arXiv:2608.24938 were attempted and returned tool-level DisabledError; export.arxiv.org API/PDF routes were also attempted and were inaccessible. Search located third-party renderings (alphaXiv, Academus, Hugging Face Papers), but these are not materially distinct official primary-source copies and therefore were not used to fabricate a completed five-slot record. Retrieval evidence timestamp: 2026-09-20T11:30Z."
+    }
+  ],
+  "last_blocked_at": "2026-09-20T11:30:49+00:00",
+  "retry_not_before": "2026-09-20T12:50:22+00:00"
 }

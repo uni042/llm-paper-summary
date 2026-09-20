@@ -75,6 +75,6 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 7年前（2019-10〜2020-09）
 
 - **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：10  
   データ並列で重複する最適化器状態・勾配・パラメータをGPU間分割し、必要時だけ通信することで、モデル並列の細粒度通信を避けつつ巨大モデル学習のメモリ効率を高める基盤方式。
 <!-- survey:auto:end -->

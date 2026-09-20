@@ -21,5 +21,16 @@
   "created_at": "2026-09-20T11:38:29+00:00",
   "completed_at": "2026-09-20T11:44:18+00:00",
   "blocker": "Primary arXiv HTML for arXiv:2607.06601 was successfully retrieved and read through the method and start of experimental setup (HTML lines 0-295), but the run exhausted the web retrieval call limit before the remaining primary-source sections (results, limitations, appendices, references) could be fetched. Direct container network retrieval of the arXiv PDF was also attempted and failed due runtime DNS/network isolation. Because the full primary source was not read, no five-slot record was fabricated. This is a transient run-local retrieval/tool limit and should be retried.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-2ba79169b09085044fd31ab0.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-2ba79169b09085044fd31ab0.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-20T11:44:18+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-20T11:44:18+00:00",
+      "reason": "Primary arXiv HTML for arXiv:2607.06601 was successfully retrieved and read through the method and start of experimental setup (HTML lines 0-295), but the run exhausted the web retrieval call limit before the remaining primary-source sections (results, limitations, appendices, references) could be fetched. Direct container network retrieval of the arXiv PDF was also attempted and failed due runtime DNS/network isolation. Because the full primary source was not read, no five-slot record was fabricated. This is a transient run-local retrieval/tool limit and should be retried."
+    }
+  ],
+  "last_blocked_at": "2026-09-20T11:44:18+00:00",
+  "retry_not_before": "2026-09-20T12:50:22+00:00"
 }
