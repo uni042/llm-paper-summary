@@ -2,45 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-09fd18d9c803c17379a43783",
-  "job_id": "job-research-ab19fa17920fb404",
-  "data": {
-    "hardware": "NVIDIA H100 GPUs。",
-    "software": "PyTorch、BF16 mixed precision、FP32 gradient all-reduce/accumulation、AdamW。",
-    "methodology": "Llama-like pre-norm/SwiGLU/RoPEモデルをSlimPajamaからscratchで学習。1Bモデルは20層・hidden 2048・30B tokens、3Bモデルは32層・hidden 3072・100B tokens、sequence length 2048。1BではMHA/GQA/MQA、MQA+CLA2、GQA+CLA2、CLA3/4、非均一共有を広く比較し、learning-rate sweepも実施。3BでもMQAとMQA+CLA2をhead dimension 128/64/32で比較。held-out SlimPajama validation perplexity、Wikitext perplexity、LM Eval Harnessの7 downstream benchmark、16-bit KV bytes/tokenを評価。",
-    "scope": "事前学習時にattention architectureを変更してKVキャッシュ容量とモデル精度の交換関係を評価する。既存学習済みモデルへのpost-training変換やend-to-end serving throughputは対象外。",
-    "models": [
-      "1B Llama-like Transformer",
-      "3B Llama-like Transformer"
-    ],
-    "datasets_benchmarks": [
-      "SlimPajama",
-      "Wikitext",
-      "HellaSwag",
-      "PIQA",
-      "WinoGrande",
-      "SciQ",
-      "OpenBookQA",
-      "BoolQ",
-      "ARC-Easy"
-    ],
-    "baselines": [
-      "MHA",
-      "GQA4",
-      "GQA2",
-      "MQA with multiple head dimensions",
-      "CLA3/CLA4",
-      "non-uniform CLA2"
-    ],
-    "metrics": [
-      "KV cache bytes per token",
-      "validation perplexity",
-      "Wikitext perplexity",
-      "downstream accuracy"
-    ]
-  },
+  "attempt_id": "attempt-f99914b9bbfb8b9c4e33456a",
+  "job_id": "job-research-59739220ff5250cc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-09fd18d9c803c17379a43783",
+    "claim_id": "claim-f99914b9bbfb8b9c4e33456a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

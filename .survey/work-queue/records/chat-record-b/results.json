@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-09fd18d9c803c17379a43783",
-  "job_id": "job-research-ab19fa17920fb404",
-  "data": {
-    "overview": "CLA2はMQAのKVキャッシュを層方向にさらに2倍削減しながら、1B/3Bの双方でperplexity悪化を小さく保つ。1Bのlearning-rate調整後ではH128-MQAの10240 bytes/token・validation perplexity 12.39に対し、H128-MQA-CLA2は5120 bytes/tokenで12.43、Wikitextでは19.30対19.29だった。同じ5120 bytes/tokenのH64-MQAはvalidation 12.74、Wikitext 20.00で、CLA2が明確に良い。3BでもH128-MQA-CLA2は通常H128-MQAの半分の8192 bytes/tokenでvalidation 9.34対9.52、Wikitext 13.25対13.63とむしろ改善した。別3B実験のH64-MQA-CLA2は通常H64-MQAの半分の4096 bytes/tokenでWikitext 12.99対12.94と差0.05に留まった。",
-    "key_results": [
-      {
-        "metric": "1B KV cache削減とvalidation perplexity",
-        "value": "10240→5120 bytes/token (2×削減), 12.39→12.43",
-        "baseline": "H128-MQA",
-        "condition": "1B、best learning rate",
-        "interpretation": "KV容量を半減してもperplexity悪化は0.04 point。"
-      },
-      {
-        "metric": "1B同一KV予算でのperplexity",
-        "value": "12.74→12.43 validation、20.00→19.29 Wikitext",
-        "baseline": "H64-MQA (5120 bytes/token)",
-        "condition": "H128-MQA-CLA2も5120 bytes/token",
-        "interpretation": "層共有で節約した容量を大きいhead dimensionへ使う方が精度/メモリ交換に有利。"
-      },
-      {
-        "metric": "3B H128 CLA2",
-        "value": "16384→8192 bytes/token、validation 9.52→9.34、Wikitext 13.63→13.25",
-        "baseline": "H128-MQA",
-        "condition": "3B、100B training tokens",
-        "interpretation": "半分のKV容量でperplexityが悪化せず改善するケースも確認。"
-      },
-      {
-        "metric": "3B H64 CLA2",
-        "value": "8192→4096 bytes/token、Wikitext 12.94→12.99",
-        "baseline": "H64-MQA",
-        "condition": "second 3B experiment",
-        "interpretation": "半分のKV容量でperplexity差は0.05 point。"
-      },
-      {
-        "metric": "CLA sharing factor ablation",
-        "value": "CLA2が最良",
-        "baseline": "CLA3/CLA4/non-uniform sharing",
-        "condition": "1B design-space exploration",
-        "interpretation": "より大きな共有率より隣接2層共有が安定したPareto改善を示す。"
-      }
-    ],
-    "negative_results": "CLA3/CLA4は通常MQAよりPareto改善するが同一KV容量のCLA2よりperplexityが悪い。非均一な共有配置もuniform CLA2より悪い。CLAは各attention層で共有KVを再読込するためcore attentionのmemory bandwidth/latencyを直接削減しない。end-to-end長文サービングの速度改善は未評価でfuture workとされる。3B第2実験は別クラスタ・別software stack・別data orderで再学習しており、第1実験と数値を直接比較しにくい。",
-    "interpretation": "KV head数だけでなく『独立KVを持つ層数』も精度を大きく損なわず削減できる。CLA2とMQAを組み合わせると、同じhead dimensionのまま容量を半減するか、同じ容量でhead dimensionを大きくして精度を上げる選択肢が得られる。",
-    "quality_impact": "1B/3Bで通常MQA比2倍のKV削減に対するperplexity変化は概ね1%未満で、downstream 7タスクでは各モデルが一貫して勝敗する傾向はなく、おおむね近い性能を示す。"
-  },
+  "attempt_id": "attempt-f99914b9bbfb8b9c4e33456a",
+  "job_id": "job-research-59739220ff5250cc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-09fd18d9c803c17379a43783",
+    "claim_id": "claim-f99914b9bbfb8b9c4e33456a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
