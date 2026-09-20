@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a57cb67e08f4bd0d41131033",
+  "attempt_id": "attempt-f7ba62a568920d99b231d2ff",
   "job_id": "job-research-0f282c93dba72c85",
   "data": {
     "limitations": "評価は160M〜1.3Bに限られ、10B以上や活性FLOPs 8%級の極端な疎性で共同制御が安定するかは未確認である。注意モードを省略・局所・完全、KV精度を2/4/8/16ビットへ固定しており、連続的な注意範囲や検索型疎注意、量子化群サイズの学習、KV自体を保持するか否かの追い出し判断は扱わない。実運用では不規則注意、混合精度ページ化KV、層ごとの制御器同期がカーネル効率を下げ、理論FLOPs削減ほど遅延が縮まらない。末尾評価も代理指標で、低資源言語などの公平性は追加検証が必要である。",
@@ -10,5 +10,9 @@
     "implementation_status": "プレプリント段階。本文は学習設定を公開し、付録に制御器・費用モデル・損失の自己完結したPyTorch参照実装があると記載する。実測は単一A100の1.3Bまでで、vLLMやSGLang等の生産ランタイムへ最適化統合した評価は示していない。",
     "research_positioning": "適応型推論の複数軸を共同最適化する研究であり、専門家数だけを動かす適応MoE、層を省略する深さ混合、KV圧縮を横断する。特に『トークン重要度』を共有潜在表現として使いながら、読み出し・変換・記憶を別々に最終決定する設計は、将来の推論ランタイムで計算・メモリ・帯域を一体スケジューリングする方向へつながる。一方、実用化には不規則な注意機構と混合精度KVを効率よく処理するカーネル・ページ管理が必要で、アルゴリズム利得とシステム実装の間に残る差を明示している。"
   },
-  "reservation": {"claim_id": "claim-a57cb67e08f4bd0d41131033", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7ba62a568920d99b231d2ff",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

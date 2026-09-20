@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a57cb67e08f4bd0d41131033",
+  "attempt_id": "attempt-f7ba62a568920d99b231d2ff",
   "job_id": "job-research-0f282c93dba72c85",
   "data": {
     "overview": "TriRouteは密モデル比55%の推論FLOPsと40%のKVメモリという代表予算で、三つの機構を独立調整した組合せより160M〜1.3Bの全規模で良い品質を示した。1.3BではPileパープレキシティ9.7、平均下流精度54.5で、全費用の密モデル9.8/54.8へほぼ一致する。単一A100の実測デコードは密モデル比1.7倍で、独立組合せの1.55倍を上回る。末尾事例でも希少実体18.9、コード4.3、数学12.4、8k長文10.9、GSM8K 4.5となり、独立組合せ20.6/4.6/13.7/12.0/3.6より密モデルへ近い。",
     "key_results": [
-      {"metric": "1.3B Pile検証パープレキシティ", "value": "9.7", "baseline": "密モデル9.8、独立組合せ10.1", "condition": "FLOPs=0.55、KVメモリ=0.40", "interpretation": "約半分の推論費用で密モデルと同等の平均言語モデル品質へ到達し、独立最適化を上回る。"},
-      {"metric": "1.3B平均下流精度", "value": "54.5", "baseline": "密モデル54.8、独立組合せ53.5", "condition": "LAMBADA/HellaSwag/PIQA/WinoGrande/ARC平均、同一予算", "interpretation": "計算とメモリを削減しても密モデルの精度をほぼ維持し、独立組合せより1.0ポイント高い。"},
-      {"metric": "実測デコード高速化", "value": "1.7倍", "baseline": "密モデル1.0倍、独立組合せ1.55倍", "condition": "1.3B、単一NVIDIA A100", "interpretation": "FLOPsとKV帯域の共同削減が実時間へ反映されるが、理論上の約1.8倍には届かず不規則カーネル等のオーバーヘッドが残る。"},
-      {"metric": "希少実体パープレキシティ", "value": "18.9", "baseline": "密モデル18.5、独立組合せ20.6", "condition": "1.3B、代表予算", "interpretation": "独立な省計算が希少トークンを過度に節約する問題を、共同制御で大幅に抑える。"},
-      {"metric": "GSM8K完全一致", "value": "4.5", "baseline": "密モデル4.8、独立組合せ3.6", "condition": "1.3B、代表予算", "interpretation": "数値トークンへ注意・KV精度・全結合計算を選択的に配ることで算術末尾性能を保ちやすい。"}
+      {
+        "metric": "1.3B Pile検証パープレキシティ",
+        "value": "9.7",
+        "baseline": "密モデル9.8、独立組合せ10.1",
+        "condition": "FLOPs=0.55、KVメモリ=0.40",
+        "interpretation": "約半分の推論費用で密モデルと同等の平均言語モデル品質へ到達し、独立最適化を上回る。"
+      },
+      {
+        "metric": "1.3B平均下流精度",
+        "value": "54.5",
+        "baseline": "密モデル54.8、独立組合せ53.5",
+        "condition": "LAMBADA/HellaSwag/PIQA/WinoGrande/ARC平均、同一予算",
+        "interpretation": "計算とメモリを削減しても密モデルの精度をほぼ維持し、独立組合せより1.0ポイント高い。"
+      },
+      {
+        "metric": "実測デコード高速化",
+        "value": "1.7倍",
+        "baseline": "密モデル1.0倍、独立組合せ1.55倍",
+        "condition": "1.3B、単一NVIDIA A100",
+        "interpretation": "FLOPsとKV帯域の共同削減が実時間へ反映されるが、理論上の約1.8倍には届かず不規則カーネル等のオーバーヘッドが残る。"
+      },
+      {
+        "metric": "希少実体パープレキシティ",
+        "value": "18.9",
+        "baseline": "密モデル18.5、独立組合せ20.6",
+        "condition": "1.3B、代表予算",
+        "interpretation": "独立な省計算が希少トークンを過度に節約する問題を、共同制御で大幅に抑える。"
+      },
+      {
+        "metric": "GSM8K完全一致",
+        "value": "4.5",
+        "baseline": "密モデル4.8、独立組合せ3.6",
+        "condition": "1.3B、代表予算",
+        "interpretation": "数値トークンへ注意・KV精度・全結合計算を選択的に配ることで算術末尾性能を保ちやすい。"
+      }
     ],
     "negative_results": "理論FLOPs比0.55なら約1.8倍高速化が期待されるが実測は1.7倍に留まり、注意モードがトークン・ヘッドごとに不規則になること、KV精度が混在すること、各層の制御器同期が原因として挙げられる。共同学習は単軸方式より不安定で、軸別白色化やエントロピー下限を外すと跨軸崩壊が再発する。学習時間も同一トークン数の密モデルより約8%増える。10B以上や極端な8%活性FLOPs領域は未検証である。",
     "interpretation": "利得の本質は、三軸を一律に削るのではなく、トークンごとの役割に応じて資源の種類を分けて残せる点にある。解析では文頭・希少語・固有名詞へ完全注意と高精度KVを配り、コードや数値へ全結合計算を厚くする傾向が現れた。注意とKV精度の相互情報量は約0.31 natと強く、全結合計算は他軸と0.08 nat以下でより独立しており、共有幹＋専用頭という構造と整合する。",
     "quality_impact": "代表予算では密モデル品質をほぼ維持しながら約半分のFLOPsと40%のKVメモリへ削減する。平均品質だけでなく希少実体・コード・数学・長文・算術で独立組合せより劣化が小さく、末尾品質を守る資源配分が主要な強みである。"
   },
-  "reservation": {"claim_id": "claim-a57cb67e08f4bd0d41131033", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-f7ba62a568920d99b231d2ff",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
