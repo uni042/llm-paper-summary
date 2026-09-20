@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:39:09 JST**
+> 自動生成: **2026-09-20 20:39:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **188** |
 | 未claim Research job | **187** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-20 20:36:19 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 20:36:19 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -157,9 +157,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 20:36:54 JST** / heartbeat: **—** / lease expiry: **09-20 22:06:54 JST**
-  - evidence: `.survey/work-queue/claims/job-research-92c83b7c2ec8a78f.json`
+- `arXiv:2606.09886` — SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 20:39:32 JST** / heartbeat: **—** / lease expiry: **09-20 22:09:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6e63ee697d71f91d.json`
 
 #### Audit
 
