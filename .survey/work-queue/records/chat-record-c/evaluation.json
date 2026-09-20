@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b16e1c4e099c7c51205be842","job_id":"job-research-6adaa29fadc3e53e","data":{"evaluation_summary":"品質評価はLlama-3.1/3.2、Qwen2.5、Mistral、DeepSeek-V2-Liteなど3Bから405Bまでの複数構成で行い、ARC-Challenge、Winogrande、HellaSwag、TruthfulQA、MMLU、GSM8K等を用いる。性能評価はvLLM/SGLangへ統合したLlama-3.1-8B/70BをH100上で動かし、入力長2K〜128K、各要求出力256トークンで処理量、先頭トークン時間、出力トークン時間を測る。","scope":"密モデル、小型・大型モデル、FP8 405B、MoEかつ潜在注意を使うDeepSeek-V2-Liteまで品質を検証する。長文品質はRULERで4K〜128Kを評価。性能の中心はH100上のLlama-3.1-8B/70B。","hardware":["NVIDIA H100 80GBを中心とした推論評価","Llama-3.1-8B蒸留: 8 H100で約3時間","Llama-3.1-70B蒸留: 32 H100・4ノードで約5時間","70B推論: 4 H100で評価"],"models":["Llama-3.1-8B/70B/405B-Instruct","Llama-3.2-3B-Instruct","Qwen2.5-14B-Instruct","Mistral-Small-Instruct-2409","DeepSeek-V2-Lite-Chat"],"datasets":["蒸留: UltraChat、SlimOrca、OpenHermes-2.5、合計約680M Llama-3.1 tokens","品質: ARC-Challenge、Winogrande、HellaSwag、TruthfulQA、MMLU、GSM8K","長文: RULER","実負荷: ShareGPT"],"baselines":["元モデル","FFN-SkipLLM","Llama-3.1-Nemotron-51B-Instruct","DarwinLM-8.4B","理想化した全層KV統合方式"],"metrics":["各品質課題の正解率と平均値","入力＋出力総処理量 token/s","正規化TFLOPS/GPU","先頭トークン時間","出力トークン当たり時間","KVメモリ削減率"],"workload":"一括推論では約15Mトークン相当の要求を投入し、各要求256出力トークン。入力長2K、8K、32K、128K等を比較。対話型評価では到着率を変え、キュー飽和前後の遅延を測る。"},"reservation":{"claim_id":"claim-b16e1c4e099c7c51205be842","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-42612c6e8bec652339e69e2b",
+  "job_id": "job-research-6adaa29fadc3e53e",
+  "data": {
+    "evaluation_summary": "品質評価はLlama-3.1/3.2、Qwen2.5、Mistral、DeepSeek-V2-Liteなど3Bから405Bまでの複数構成で行い、ARC-Challenge、Winogrande、HellaSwag、TruthfulQA、MMLU、GSM8K等を用いる。性能評価はvLLM/SGLangへ統合したLlama-3.1-8B/70BをH100上で動かし、入力長2K〜128K、各要求出力256トークンで処理量、先頭トークン時間、出力トークン時間を測る。",
+    "scope": "密モデル、小型・大型モデル、FP8 405B、MoEかつ潜在注意を使うDeepSeek-V2-Liteまで品質を検証する。長文品質はRULERで4K〜128Kを評価。性能の中心はH100上のLlama-3.1-8B/70B。",
+    "hardware": [
+      "NVIDIA H100 80GBを中心とした推論評価",
+      "Llama-3.1-8B蒸留: 8 H100で約3時間",
+      "Llama-3.1-70B蒸留: 32 H100・4ノードで約5時間",
+      "70B推論: 4 H100で評価"
+    ],
+    "models": [
+      "Llama-3.1-8B/70B/405B-Instruct",
+      "Llama-3.2-3B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "Mistral-Small-Instruct-2409",
+      "DeepSeek-V2-Lite-Chat"
+    ],
+    "datasets": [
+      "蒸留: UltraChat、SlimOrca、OpenHermes-2.5、合計約680M Llama-3.1 tokens",
+      "品質: ARC-Challenge、Winogrande、HellaSwag、TruthfulQA、MMLU、GSM8K",
+      "長文: RULER",
+      "実負荷: ShareGPT"
+    ],
+    "baselines": [
+      "元モデル",
+      "FFN-SkipLLM",
+      "Llama-3.1-Nemotron-51B-Instruct",
+      "DarwinLM-8.4B",
+      "理想化した全層KV統合方式"
+    ],
+    "metrics": [
+      "各品質課題の正解率と平均値",
+      "入力＋出力総処理量 token/s",
+      "正規化TFLOPS/GPU",
+      "先頭トークン時間",
+      "出力トークン当たり時間",
+      "KVメモリ削減率"
+    ],
+    "workload": "一括推論では約15Mトークン相当の要求を投入し、各要求256出力トークン。入力長2K、8K、32K、128K等を比較。対話型評価では到着率を変え、キュー飽和前後の遅延を測る。"
+  },
+  "reservation": {
+    "claim_id": "claim-42612c6e8bec652339e69e2b",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}

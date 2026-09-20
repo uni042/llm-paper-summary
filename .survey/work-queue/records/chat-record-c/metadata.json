@@ -1,1 +1,78 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b16e1c4e099c7c51205be842","job_id":"job-research-6adaa29fadc3e53e","data":{"canonical_id":"DOI:10.18653/v1/2025.emnlp-main.1306","arxiv_id":null,"doi":"10.18653/v1/2025.emnlp-main.1306","openreview_id":null,"arxiv_categories":{"primary":null,"cross_list":[]},"title":"SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation","summary":"SwiftKVは、企業向け推論で入力が出力より大幅に長くプリフィル計算が支配的になる状況に対し、後半Transformer層の入力隠れ状態が互いに近いことを利用して、入力トークンだけを後半層から早期退出させるモデル変換である。ある中間層の出力から後続全層のKVを直接射影し、後続層では入力トークンの問い合わせ射影、注意、出力射影、全結合計算を省く。一方、生成トークンは全層を通常どおり通すため復号計算を変更しない。変換で生じる品質差は、元モデルを教師として後半層のQKV射影だけを10億トークン未満で蒸留して回復する。さらにAcrossKVで複数後続層のKVを共有できる。25〜50%のプリフィル計算削減を幅広いモデルで小さい品質差に抑え、vLLM/SGLang実装では処理量を最大2倍、先頭トークン時間を最大50%、出力トークン時間を最大60%改善する。","list_summary":"後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。","authors":["Aurick Qiao","Zhewei Yao","Samyam Rajbhandari","Yuxiong He"],"authors_affiliations":"Snowflake AI Research","published":"2025-11-04","publication":"EMNLP 2025 Main Conference, pages 25734–25753","publication_type":"査読付き国際会議論文","publication_status":"EMNLP 2025本会議論文。","lineage":"kv-cache-offload-recomputation","topics":["プリフィル高速化","KVキャッシュ","モデル変換","知識蒸留","LLMサービング"],"importance":"復号品質を支える全モデルを残したまま、入力トークンだけの後半層計算を削るため、長入力・短出力の実運用負荷で計算量を直接減らす。","hardware_evaluation":"H100を中心にLlama-3.1-8B/70BのvLLM/SGLang実機推論を評価し、405Bを含む複数モデルの品質も評価。","hardware_details":"Llama-3.1-8Bの蒸留は8 H100で3時間、70Bは32 H100・4ノードで5時間。70B推論は4 H100で16K token/s超を報告。","quality_effect":"25%削減では平均品質差0.5%未満、40〜50%削減でも多くのモデルで平均1〜2%程度。50%を超えると品質が急速に低下する。","bottlenecks":["長入力のプリフィル演算","後半層で類似する隠れ状態の反復計算","KVメモリ制約","プリフィルと復号のGPU時間競合"],"evidence_locations":["§1 Introduction","§3 Design and Implementation","§4 Main Results","§5 Ablations and Discussions","Appendix A"],"source":"https://aclanthology.org/2025.emnlp-main.1306/","sources":["https://aclanthology.org/2025.emnlp-main.1306/","https://aclanthology.org/2025.emnlp-main.1306.pdf"],"code":"https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference","implementation":"vLLMとSGLangへ統合し、チャンク化プリフィルと併用可能。学習レシピと推論実装を公開。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"}],"references_checked_at":"2026-09-20","references_source":"ACL Anthology PDF参考文献節","references_total":75},"reservation":{"claim_id":"claim-b16e1c4e099c7c51205be842","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-42612c6e8bec652339e69e2b",
+  "job_id": "job-research-6adaa29fadc3e53e",
+  "data": {
+    "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1306",
+    "arxiv_id": null,
+    "doi": "10.18653/v1/2025.emnlp-main.1306",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": null,
+      "cross_list": []
+    },
+    "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
+    "summary": "SwiftKVは、企業向け推論で入力が出力より大幅に長くプリフィル計算が支配的になる状況に対し、後半Transformer層の入力隠れ状態が互いに近いことを利用して、入力トークンだけを後半層から早期退出させるモデル変換である。ある中間層の出力から後続全層のKVを直接射影し、後続層では入力トークンの問い合わせ射影、注意、出力射影、全結合計算を省く。一方、生成トークンは全層を通常どおり通すため復号計算を変更しない。変換で生じる品質差は、元モデルを教師として後半層のQKV射影だけを10億トークン未満で蒸留して回復する。さらにAcrossKVで複数後続層のKVを共有できる。25〜50%のプリフィル計算削減を幅広いモデルで小さい品質差に抑え、vLLM/SGLang実装では処理量を最大2倍、先頭トークン時間を最大50%、出力トークン時間を最大60%改善する。",
+    "list_summary": "後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。",
+    "authors": [
+      "Aurick Qiao",
+      "Zhewei Yao",
+      "Samyam Rajbhandari",
+      "Yuxiong He"
+    ],
+    "authors_affiliations": "Snowflake AI Research",
+    "published": "2025-11-04",
+    "publication": "EMNLP 2025 Main Conference, pages 25734–25753",
+    "publication_type": "査読付き国際会議論文",
+    "publication_status": "EMNLP 2025本会議論文。",
+    "lineage": "kv-cache-offload-recomputation",
+    "topics": [
+      "プリフィル高速化",
+      "KVキャッシュ",
+      "モデル変換",
+      "知識蒸留",
+      "LLMサービング"
+    ],
+    "importance": "復号品質を支える全モデルを残したまま、入力トークンだけの後半層計算を削るため、長入力・短出力の実運用負荷で計算量を直接減らす。",
+    "hardware_evaluation": "H100を中心にLlama-3.1-8B/70BのvLLM/SGLang実機推論を評価し、405Bを含む複数モデルの品質も評価。",
+    "hardware_details": "Llama-3.1-8Bの蒸留は8 H100で3時間、70Bは32 H100・4ノードで5時間。70B推論は4 H100で16K token/s超を報告。",
+    "quality_effect": "25%削減では平均品質差0.5%未満、40〜50%削減でも多くのモデルで平均1〜2%程度。50%を超えると品質が急速に低下する。",
+    "bottlenecks": [
+      "長入力のプリフィル演算",
+      "後半層で類似する隠れ状態の反復計算",
+      "KVメモリ制約",
+      "プリフィルと復号のGPU時間競合"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§3 Design and Implementation",
+      "§4 Main Results",
+      "§5 Ablations and Discussions",
+      "Appendix A"
+    ],
+    "source": "https://aclanthology.org/2025.emnlp-main.1306/",
+    "sources": [
+      "https://aclanthology.org/2025.emnlp-main.1306/",
+      "https://aclanthology.org/2025.emnlp-main.1306.pdf"
+    ],
+    "code": "https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference",
+    "implementation": "vLLMとSGLangへ統合し、チャンク化プリフィルと併用可能。学習レシピと推論実装を公開。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "ACL Anthology PDF参考文献節",
+    "references_total": 75
+  },
+  "reservation": {
+    "claim_id": "claim-42612c6e8bec652339e69e2b",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}
