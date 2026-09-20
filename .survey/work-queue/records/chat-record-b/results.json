@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-d9175409e1e36a47b3e6d387",
-  "job_id": "job-research-b8f01545319d9604",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9175409e1e36a47b3e6d387",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d9175409e1e36a47b3e6d387","job_id":"job-research-b8f01545319d9604","data":{"overview":"エージェント負荷は長い入力を毎回処理する負荷ではなく、長寿命のKV状態へ反復再入場するデコード中心負荷として現れる。実測キャッシュ命中率は84.6〜99.5%、デコードはLLM時間の91.0〜98.6%を占める。SWE-bench Proは平均68.7K〜80.1Kトークンの大きな文脈を持ち、失敗軌跡はターン数と文脈の双方を増幅する。ツールは負荷ごとに性質が異なり、GAIAでは外部検索等により最大28.7%の時間をツールが占める。","key_results":[{"metric":"実測文脈キャッシュ命中率","value":"84.6〜99.5%","baseline":"各ターンの全入力トークン","condition":"キャッシュ追い出しなしの5ベンチマーク・4モデル設定","interpretation":"過去文脈の大半が再利用され、各ターンで新規プリフィルが必要なのは追加部分だけである。"},{"metric":"LLM時間に占めるデコード","value":"91.0〜98.6%","baseline":"プリフィル+デコード時間","condition":"同じ理想キャッシュ条件","interpretation":"巨大な累積入力にもかかわらず、再利用が効くとプリフィルは1.4〜9.0%に留まり、最適化対象はデコードとKV保持へ移る。"},{"metric":"SWE-bench Pro累積文脈","value":"平均68.7K〜80.1K、最大146K〜166Kトークン","baseline":"他のエージェント課題","condition":"Gemma/Qwenの思考あり・即時応答","interpretation":"ターン数が最大でなくても一回ごとの観測やコード情報が大きいとKV容量圧力が高くなり、ターン数と文脈量を別指標で扱う必要がある。"},{"metric":"GemmaのADEターン数","value":"思考あり平均18.0ターン、即時応答平均108.8ターン、後者最大786ターン","baseline":"同一モデルの思考あり","condition":"ADE-Bench","interpretation":"思考トークン自体は生成量を増やすが、失敗した編集の反復を避けることで総軌跡を短縮し、推論モードのコストは単純な思考長だけでは決まらない。"},{"metric":"失敗Edit率","value":"Gemma Instant/ADEで2,757回中95.4%失敗","baseline":"他モデル・課題","condition":"ADE-Bench","interpretation":"失敗→エラー観測→再試行のループがモデル呼出回数と文脈成長を同時に増やし、長尾負荷を形成する。"}],"negative_results":"測定した高いキャッシュ命中率とデコード支配は、全文脈がGPUへ常駐しスラッシングしない理想条件である。実運用で多数の長文脈エージェントを並行するとKV容量を超え、追い出し、オフロード、再計算によって命中率低下とプリフィル増加が起こりうる。また思考ありモデルが常に安価なわけではなく、モデル・課題によって効果は異なる。","interpretation":"エージェントサービングでは入力長だけを見てプリフィル最適化へ偏るべきではない。保持できる限り過去文脈は再利用されるため、デコード効率と長寿命KVの配置・保持が第一級の問題になる。同時に、失敗したツール呼出や大きなツール観測は新規トークンを追加して将来のKV容量を増やすため、モデルサーバとツール実行系を別々に最適化するだけでは不十分である。","quality_impact":"品質改善手法ではないが、思考あり/なしが成功率と軌跡効率を変えるため、低遅延設定が必ずしも低総コストにならないことを示す。特に失敗回復の良し悪しが資源消費へ直結する。"},"reservation":{"claim_id":"claim-d9175409e1e36a47b3e6d387","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
