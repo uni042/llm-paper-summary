@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:33:01 JST**
+> 自動生成: **2026-09-20 18:33:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **103** |
+| 収録候補論文 | **102** |
 | 未claim Research job | **102** |
-| 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 18:11:14 JST（21分前）** |
+| 直近24hの検証済みResearch収録 | **81** |
+| 最終検証済みResearch収録 | **09-20 18:33:09 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **103** |
+| canonical_id確認済みの一意な候補論文 | **102** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **103** |
+| 非終端Research job合計 | **102** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **36** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **2** | **1** | **1** | **1** | **0** | **5** |
+| 合計 | **36** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:33:09 JST** [research] `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
+  - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
+  - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json`
+  - paper: `papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md`
 - **09-20 18:11:14 JST** [research] `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning
   - job: `.survey/work-queue/jobs/job-research-59739220ff5250cc.json`
   - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md`
-- **09-20 16:35:54 JST** [research] `arXiv:2311.04934` — Prompt Cache: Modular Attention Reuse for Low-Latency Inference
-  - job: `.survey/work-queue/jobs/job-research-9c3fc1bfa46c87d0.json`
-  - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cb9b65cad9eb01765ba97d06.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json` (job `job-research-7975c226ad04d80a`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
+  - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
+  - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json`
+  - paper: `papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md`
 
 #### Audit (:30)
 
@@ -150,10 +154,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:32:08 JST** / heartbeat: **—** / lease expiry: **09-20 20:02:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7975c226ad04d80a.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -173,7 +175,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **103** |
+| ready | **102** |
 
 ### 候補の重複・識別情報欠損
 
@@ -193,7 +195,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **832** |
+| inference/training/survey配下の論文Markdown実体 | **833** |
 
 ### immutable submissionの未照合
 
@@ -201,8 +203,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **758** |
-| └ Research | **572** |
+| 成功result未照合のimmutable submission | **757** |
+| └ Research | **571** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
