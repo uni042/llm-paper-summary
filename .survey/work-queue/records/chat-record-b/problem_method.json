@@ -5,10 +5,10 @@
   "novelty":"Aegaeonはモデルのscale-down/scale-upを要求境界ではなく各トークン境界で先取り実行する。さらにプリフィルとデコードを別GPU群へ分離し、前者を同一モデル要求のgrouped FCFS、後者をSLOに応じたweighted round-robinで処理する。切替自体を実用化するため、推論エンジン部品再利用、自己管理VRAM、CPU統合KVキャッシュ、重みプリフェッチ、KVキャッシュの細粒度同期を一体化し、従来数十秒級の切替を1秒未満へ短縮する。",
   "method_overview":"要求はproxyからプリフィルinstanceへ入り、同一モデルの既存groupを優先しつつ最小負荷instanceへ配置される。プリフィル完了後のKVキャッシュをデコード側へ渡し、デコードschedulerは各要求のTBT期限とモデル切替コストを考慮してモデル別work listをweighted round-robinで回す。異なるモデルへ移る際は現在モデルをトークン境界で先取り停止し、KVをCPU側統合キャッシュへ退避、次モデルの重みをGPUへ展開してKVを復帰する。engine/worker、distributed executor、scheduler等はinstance寿命中再利用し、モデル固有の重みとKVだけを交換する。GPUメモリは重みとKV用に一括確保した自己管理bufferをbump allocationし、PyTorch allocatorの断片化とGCを回避する。CPU側KVは異なるshapeをslabに分けて管理し、重みはDRAM cacheからpage-locked staging buffer経由で転送、可能なら次モデルをprefetchする。KV転送はレイヤ単位のイベント同期で推論と重ね、全KV転送完了を待つblocking barrierを避ける。",
   "components":[
-   {"name":"トークン単位先取り自動スケーリング","description":"activeな要求を完了まで占有させずトークン境界で停止し、待機モデルへGPUを渡すことでモデル間HOL blockingを抑える。要求単位のactive model数にGPU数が縛られる制約を外す。"},
-   {"name":"プリフィル・デコード分離スケジューリング","description":"プリフィルは同一モデル要求をgroup化したFCFSでTTFTと切替回数を両立し、デコードはweighted round-robinでTBT期限違反を抑える。両処理を同一GPUで優先度付けする方式のworkload感度を避ける。"},
-   {"name":"部品再利用と明示的メモリ管理","description":"distributed executor等を毎回初期化せず再利用し、GPU重み/KV領域を自己管理bufferから割り当てる。CPU側は統合KV cacheとモデルcacheを管理し、GC・page pinning・断片化を切替経路から除去する。"},
-   {"name":"重みプリフェッチと細粒度KV同期","description":"次に必要なモデル重みをDRAMからstage bufferへ先読みし、KV cacheはレイヤ単位で非同期転送して推論と重ねることでscale-down/upのデータ移動を隠蔽する。"}
+   {"name":"トークン単位先取り自動スケーリング","description":"activeな要求を要求完了までGPUへ固定せず、生成トークンの境界で安全に停止してKV状態を退避し、SLO期限が迫る別モデルへGPUを渡す。これにより、長いデコードが後続モデルのTTFTを丸ごと塞ぐ要求単位のhead-of-line blockingを分割する。GPU必要数を同時active model数へ直接比例させる従来autoscalingの制約を弱め、個々の到着率が低い長尾モデルを少数GPUへ集約できる。"},
+   {"name":"プリフィル・デコード分離スケジューリング","description":"計算量とSLOが異なるprefillとdecodeを別instance群へ分離する。prefill側は同一モデル要求を既存groupへ優先的にまとめるgrouped FCFSでモデル切替回数を抑えながらTTFTを管理し、decode側はモデル別work listをweighted round-robinで巡回して各tokenのTBT期限を守る。両phaseを同じGPUでprefill-first/decode-firstにする場合のburstや長文への感度を避ける設計である。"},
+   {"name":"部品再利用と明示的メモリ管理","description":"distributed executor、通信系、scheduler、tokenizerなどモデル非依存のengine部品をinstance起動時に一度だけ初期化し、切替時にはモデルweightとKV cacheだけを交換する。さらにVRAMのweight/KV領域を大きな自己管理bufferとして一括確保しbump allocationすることでPyTorch caching allocator由来の断片化と数秒のgarbage collectionを回避する。CPU側もKV shape別slabを持つ統合cacheを使い、page pinningの再実行とDRAM浪費を抑える。"},
+   {"name":"重みプリフェッチと細粒度KV同期","description":"モデルweightはCPU DRAMのmodel cacheからpage-locked staging bufferを介してGPUへ高速転送し、schedulerが次モデルを予測できる場合はprefetch streamで先読みして切替待ちを隠す。KV cacheは全量転送完了を待つ単一barrierではなく、レイヤやblock単位のイベントで転送と推論を同期させ、利用可能になった部分から処理を進める。これによりscale-down時の退避とscale-up時の復帰を計算と重ね、token-level切替に必要な1秒未満のlatencyへ近づける。"}
   ],
   "system_design":"proxy/load balancer、Redis等の共有状態、プリフィルinstance群、デコードinstance群、各instance内scheduler、preemptive auto-scaling層、モデルcache、統合CPU/GPU KV cacheから構成される。複数parallelism構成は別Aegaeon deploymentとして運用する。"
  },
