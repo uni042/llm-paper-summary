@@ -36,7 +36,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     fallback_writable = bool(args.library_writable)
     any_durable_transport = bool(args.github_write or fallback_writable)
 
-    worker_kind = str(getattr(args, "worker_kind", "normal") or "normal").strip().lower()
     candidate_inventory_raw = getattr(args, "candidate_inventory", None)
     candidate_inventory = (
         max(int(candidate_inventory_raw), 0)
@@ -45,12 +44,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     )
     explicit_work_mode = str(getattr(args, "work_mode", "auto") or "auto").strip().lower()
     if explicit_work_mode == "auto":
-        if candidate_inventory is not None:
-            work_mode = "discovery" if candidate_inventory >= 50 else "research"
-            mode_source = "candidate_inventory"
-        else:
-            work_mode = "discovery" if worker_kind == "discovery" else "research"
-            mode_source = "legacy_worker_kind_fallback"
+        if candidate_inventory is None:
+            raise ValueError(
+                "candidate_inventory is required when work_mode=auto; "
+                "schedule labels and legacy worker kinds are not routing inputs"
+            )
+        work_mode = "discovery" if candidate_inventory >= 50 else "research"
+        mode_source = "candidate_inventory"
     else:
         work_mode = explicit_work_mode
         mode_source = "explicit_work_mode"
@@ -247,7 +247,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "required_action": required_action,
         "finalization_allowed": finalization_allowed,
         "stop_reasons": reasons,
-        "worker_kind": worker_kind,
         "candidate_inventory": candidate_inventory,
         "work_mode": work_mode,
         "mode_source": mode_source,
@@ -292,9 +291,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "claim/submission results are polled every 10 real seconds using the same target identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
-            "The :00 and :30 schedules are the same paper task. When candidate_inventory is "
-            "provided, >=50 selects Discovery and <50 selects Research/Audit; worker_kind is only "
-            "a fallback for old callers. Discovery keeps its minimum-round progression floor and "
+            "The :00 and :30 schedules are the same paper task. In automatic mode, candidate_inventory "
+            "is mandatory: >=50 selects Discovery and <50 selects Research/Audit. Schedule labels "
+            "and legacy worker kinds never select a mode. Discovery keeps its minimum-round progression floor and "
             "Research exposes the three-paper quota state; hard handoff/platform/durability/read "
             "failures override ordinary continuation."
         ),
@@ -324,7 +323,6 @@ def main() -> int:
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
     ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
     ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
-    ap.add_argument("--worker-kind", choices=("normal", "discovery"), default="normal")
     ap.add_argument("--candidate-inventory", type=int, default=None)
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
     ap.add_argument("--papers-added-this-invocation", type=int, default=0)
