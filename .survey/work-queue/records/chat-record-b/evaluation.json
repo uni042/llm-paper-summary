@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-6868419a4cc373f656554634",
-  "job_id": "job-research-264bf27e36d7341a",
-  "data": {
-    "hardware": "主要実験は単一のNVIDIA A100 80GB GPU。Vicuna/LongChat向けEAGLEドラフトの学習には4基のA100 40GB GPUを使用したと付録に記載される。",
-    "software": "標準の木構造投機的復号、EAGLE、EAGLE-3を基盤に、FlashAttention、FlashDecoding互換のHybrid Tree Attention、モデル間検索を組み合わせる。比較対象はFlashDecoding、TriForce、MagicDec、StreamingLLM等。",
-    "methodology": "長文要約ではVicuna-7B-16KまたはLongChat-7B-16Kを対象モデルとし、Vicuna/LLaMA-68MまたはEAGLEをドラフトとしてGovReport、PG-19、BookSumを1K〜16K入力で評価し、256トークンを生成する。各入力長で20入力を抽出し各2回実行して平均する。長い推論ではDeepSeek-R1-Distill-Llama-8BとEAGLE-3をAIME-24で最大32K生成まで評価する。さらにLlama-3.1-8B-InstructとEAGLE/EAGLE-3、およびPG-19で最大128K入力も調べる。",
-    "scope": "実GPU上の単一GPUレイテンシ・トークン毎秒・平均受理長を中心とした評価であり、分散サービングや多利用者スループットの評価ではない。長文要約、長い推論、針検索を含み、短文から128Kまでの入力長依存性を確認する一方、主結果は7B〜8B級対象モデルと特定のドラフト構成に集中する。"
-  },
-  "reservation": {"claim_id": "claim-6868419a4cc373f656554634", "worker_id": "scheduled-chat-llm-survey-01", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-cc13e3599ff115e99b385e88",
+  "job_id": "job-research-da8147ed3835966f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-cc13e3599ff115e99b385e88",
+    "worker_id": "scheduled-chat-llm-survey-01",
+    "worker_kind": "scheduled_chat"
+  }
 }

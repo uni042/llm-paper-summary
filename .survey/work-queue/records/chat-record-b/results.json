@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6868419a4cc373f656554634",
-  "job_id": "job-research-264bf27e36d7341a",
-  "data": {
-    "overview": "SpecExtendは入力長が伸びるほど崩れやすい標準投機的復号の受理長と実効速度を回復し、特に8K〜16K以上で効果が大きい。長文要約では既存ドラフトモデルを再学習せず、16K入力で標準投機的復号に対して最大2.84倍、長い推論ではEAGLE-3へ追加して3.86倍の高速化を示した。アブレーションではモデル間検索が16Kで最大の寄与を持ち、単なる注意カーネル高速化だけでなくドラフト精度の回復が主要因であることを示す。",
-    "key_results": [
-      {"metric": "標準投機的復号に対する速度向上", "value": "最大2.84倍", "baseline": "SpecExtendなしの標準投機的復号", "condition": "Llama-3.1-8B-Instruct系を含む16K長文要約設定", "interpretation": "長い入力で低下するドラフト精度と注意計算の双方を改善し、既存投機方式への追加だけで大きな速度回復を得た。"},
-      {"metric": "長い推論での速度向上", "value": "標準EAGLE-3比3.86倍、単純自己回帰比3.73倍", "baseline": "EAGLE-3単体および単純自己回帰生成", "condition": "DeepSeek-R1-Distill-Llama-8B / EAGLE-3、AIME-24、最大32K生成", "interpretation": "短文では強いEAGLE-3が長い生成で急激に失うドラフト精度をモデル間検索が回復し、長い思考列でも投機の利点を維持した。"},
-      {"metric": "ドラフト精度の改善", "value": "平均受理長で最大2.55倍", "baseline": "SpecExtendなし", "condition": "最大16K入力の新しいモデル構成", "interpretation": "対象モデル由来の重要文脈を小型ドラフトへ与えることで、静的位置削除より対象・ドラフト分布を近づけられることを示す。"},
-      {"metric": "構成要素単独の速度寄与", "value": "16KでCMR 1.46倍、FlashAttention 1.25倍、Hybrid Tree Attention 1.19倍", "baseline": "Vicuna-7B/68Mの標準木構造投機的復号", "condition": "GovReport、16K入力", "interpretation": "最も大きい寄与はモデル間検索であり、カーネル高速化だけでは説明できない。"},
-      {"metric": "極長入力での速度", "value": "128Kで22.59 tokens/s、標準設定8.45 tokens/s", "baseline": "SpecExtendなし", "condition": "Llama-3.1-8B-Instruct / EAGLE、PG-19、128K入力", "interpretation": "KVキャッシュが主要律速になる領域でも縮小ドラフトKVが有効で、標準投機的復号の急激な劣化を緩和する。"}
-    ],
-    "negative_results": "入力が長くなるほどトークン生成速度そのものは依然として低下する。対象モデルは完全KVキャッシュで前向き計算するため、対象側の事前充填と復号が長文で律速として残る。また長文専用に学習したLongSpecのような方式を速度で上回るところまでは到達しない。Hybrid Tree Attentionは短い入力では小さな追加費用があり、論文では4K超でのみ有効化している。",
-    "interpretation": "中程度の長さではモデル重みがまだ大きな律速なので、大型対象モデル自身をドラフトに使う長文向け方式は不利である。SpecExtendは小型ドラフトを維持したまま、そのKVだけを対象モデルの注意情報で意味的に絞るため、計算量を下げつつ受理率も上げられる。入力がさらに長くKV容量が支配的になっても縮小ドラフトKVは効くが、対象モデル側の完全KV処理は残るため改善率には上限がある。",
-    "quality_impact": "標準の投機的復号が持つ検証・補正手続きを維持する損失なしの高速化であり、生成品質を落として速度を得る方式ではない。報告された改善は主に受理長、レイテンシ、トークン毎秒の改善で、対象モデルの出力分布を近似へ変更するものではない。"
-  },
-  "reservation": {"claim_id": "claim-6868419a4cc373f656554634", "worker_id": "scheduled-chat-llm-survey-01", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-cc13e3599ff115e99b385e88",
+  "job_id": "job-research-da8147ed3835966f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-cc13e3599ff115e99b385e88",
+    "worker_id": "scheduled-chat-llm-survey-01",
+    "worker_kind": "scheduled_chat"
+  }
 }
