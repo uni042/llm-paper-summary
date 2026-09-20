@@ -12,14 +12,13 @@
   "source_url": "https://arxiv.org/abs/2311.04934",
   "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
   "selection_reason": "Serving-oriented prompt/KV state reuse system that precomputes reusable attention states for shared prompt modules and substantially reduces TTFT.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-19T18:48:21+00:00",
-  "completed_at": "2026-09-20T02:36:00+00:00",
   "blocker": "一次資料の全文を安全に取得できなかったため、このattemptでは全文精読・5-slot生成を行わない。arXiv HTML full renderingは取得経路でDisabledError、arXiv PDF直接取得も失敗。MLSys 2024公式posterページとGoogle Research公式publicationページは取得できたが、いずれも本文全文ではなく抄録・書誌情報までだった。二次資料から科学的内容を補完せず再試行対象としてblocked保存する。",
   "status_submission": ".survey/work-queue/submissions/research/attempt-5ea6e0dabdb5053729aff0d5.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-20T02:36:00+00:00",
-  "retry_not_before": "2026-09-20T04:54:17+00:00"
+  "retry_queued_at": "2026-09-20T07:06:00+00:00"
 }

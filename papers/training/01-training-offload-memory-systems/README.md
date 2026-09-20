@@ -5,7 +5,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 この系統では、それらを**CPUメモリやNVMe SSDへ一時的に逃がし、次に必要になる前にGPUへ戻す**方式に加え、CPU DRAMそのものをモデル状態の正本としてGPUへ必要な層だけを流す方式もまとめる。GPU計算中の非同期I/O、未使用時間を利用したSSD退避、CPUバッファ削減、最適化器更新との重畳、複数I/O経路、層単位のstreamingなどにより、**容量を増やしつつ転送待ちをどこまで隠せるか**が主要な課題になる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（14本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -69,6 +69,12 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 5年前（2021-10〜2022-09）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：40  
   学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
+
+### 7年前（2019-10〜2020-09）
+
+- **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：7  
+  データ並列で重複する最適化器状態・勾配・パラメータをGPU間分割し、必要時だけ通信することで、モデル並列の細粒度通信を避けつつ巨大モデル学習のメモリ効率を高める基盤方式。
 <!-- survey:auto:end -->

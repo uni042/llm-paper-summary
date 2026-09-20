@@ -45,19 +45,88 @@ evidence_locations:
 - §6 Related Work
 - Appendix A Artifact Appendix
 references:
+- canonical_id: arXiv:2409.17264
+  arxiv_id: '2409.17264'
 - canonical_id: arXiv:2403.02310
-  title: 'Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve'
-- canonical_id: arXiv:2309.06180
-  title: Efficient Memory Management for Large Language Model Serving with PagedAttention
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+  doi: 10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2411.11217
+  arxiv_id: '2411.11217'
+- canonical_id: arXiv:2406.06858
+  arxiv_id: '2406.06858'
+- canonical_id: arXiv:2307.08691
+  openreview_id: mZn2Xyh9Ec
 - canonical_id: arXiv:2205.14135
-  title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
+- canonical_id: DOI:10.1109/inpar.2012.6339596
+  doi: 10.1109/inpar.2012.6339596
+- canonical_id: arXiv:2401.08671
+  arxiv_id: '2401.08671'
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: OpenReview:stXtBqyTWX
+  openreview_id: stXtBqyTWX
+- canonical_id: DOI:10.1145/3503222.3507778
+  doi: 10.1145/3503222.3507778
+- canonical_id: DOI:10.1109/cgo57630.2024.10444873
+  doi: 10.1109/cgo57630.2024.10444873
+- canonical_id: arXiv:2412.08585
+  arxiv_id: '2412.08585'
+- canonical_id: DOI:10.1145/2600212.2600228
+  doi: 10.1145/2600212.2600228
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/cgo53902.2022.9741270
+  doi: 10.1109/cgo53902.2022.9741270
+- canonical_id: DOI:10.1109/tpds.2014.2313342
+  doi: 10.1109/tpds.2014.2313342
+- canonical_id: DOI:10.1145/3572848.3577479
+  doi: 10.1145/3572848.3577479
+- canonical_id: DOI:10.1145/2451116.2451160
+  doi: 10.1145/2451116.2451160
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2405.04437
+  doi: 10.1145/3669940.3707256
+- canonical_id: arXiv:2405.10480
+  arxiv_id: '2405.10480'
+- canonical_id: OpenReview:tVConYid20
+  openreview_id: tVConYid20
+- canonical_id: arXiv:2401.00588
+- canonical_id: arXiv:2312.12456
+  doi: 10.1145/3694715.3695964
+- canonical_id: arXiv:2408.00741
+  arxiv_id: '2408.00741'
+- canonical_id: DOI:10.1109/sc.2014.21
+  doi: 10.1109/sc.2014.21
+- canonical_id: DOI:10.1145/3567955.3567959
+  doi: 10.1145/3567955.3567959
+- canonical_id: DOI:10.1109/hpca.2016.7446078
+  doi: 10.1109/hpca.2016.7446078
+- canonical_id: DOI:10.1145/2751205.2751213
+  doi: 10.1145/2751205.2751213
+- canonical_id: DOI:10.1145/3694715.3695948
+  doi: 10.1145/3694715.3695948
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: DOI:10.1109/micro.2012.19
+  doi: 10.1109/micro.2012.19
 - canonical_id: arXiv:2501.01005
-  title: 'FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving'
+  arxiv_id: '2501.01005'
+- canonical_id: DOI:10.1145/3018743.3018754
+  doi: 10.1145/3018743.3018754
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1109/tc.2022.3214088
+  doi: 10.1109/tc.2022.3214088
+- canonical_id: arXiv:2312.07104
+  openreview_id: VqkAKQibpq
+- canonical_id: arXiv:2401.09670
 - canonical_id: arXiv:2408.12757
-  title: 'NanoFlow: Towards Optimal Large Language Model Serving Throughput'
+  arxiv_id: '2408.12757'
 references_checked_at: '2026-09-20'
-references_source: arXiv HTML参考文献節
-references_total: 68
+references_source: arxiv-html-reference-section
+references_total: 66
 source: https://arxiv.org/abs/2410.18038
 sources:
 - https://arxiv.org/abs/2410.18038

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **772本**。
+収録論文: **791本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**772本**。
+推論論文：**791本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -49,9 +49,9 @@
 | [04-moe-expert-offload-caching](04-moe-expert-offload-caching/README.md) | 3 |
 | [04-moe-offload-expert-cache](04-moe-offload-expert-cache/README.md) | 1 |
 | [04-moe-offload-routing](04-moe-offload-routing/README.md) | 1 |
-| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 22 |
+| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 23 |
 | [05-kv-cache](05-kv-cache/README.md) | 1 |
-| [05-kv-cache-compression-quantization](05-kv-cache-compression-quantization/README.md) | 3 |
+| [05-kv-cache-compression-quantization](05-kv-cache-compression-quantization/README.md) | 4 |
 | [05-kv-cache-memory-management](05-kv-cache-memory-management/README.md) | 8 |
 | [05-kv-cache-offloading](05-kv-cache-offloading/README.md) | 7 |
 | [05-memory-architecture-near-data](05-memory-architecture-near-data/README.md) | 1 |
@@ -60,26 +60,26 @@
 | [05-offload-hierarchical-memory](05-offload-hierarchical-memory/README.md) | 2 |
 | [05-pim-near-memory](05-pim-near-memory/README.md) | 1 |
 | [05-speculative-decoding](05-speculative-decoding/README.md) | 9 |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 18 |
 | [06-expert-offloading](06-expert-offloading/README.md) | 2 |
-| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 15 |
-| [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
+| [06-kv-cache-memory](06-kv-cache-memory/README.md) | 16 |
+| [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 7 |
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
 | [06-serving-scheduling](06-serving-scheduling/README.md) | 16 |
-| [06-speculative-decoding](06-speculative-decoding/README.md) | 9 |
+| [06-speculative-decoding](06-speculative-decoding/README.md) | 12 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 44 |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 47 |
 | [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 19 |
 | [08-quantization-kernels](08-quantization-kernels/README.md) | 2 |
 | [08-speculative-decoding](08-speculative-decoding/README.md) | 4 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 5 |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 17 |
-| [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 79 |
-| [10-sparse-attention](10-sparse-attention/README.md) | 2 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 225 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 18 |
+| [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 80 |
+| [10-sparse-attention](10-sparse-attention/README.md) | 3 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 229 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 3 |
 | [kv-cache](kv-cache/README.md) | 1 |
 | [moe](moe/README.md) | 1 |
