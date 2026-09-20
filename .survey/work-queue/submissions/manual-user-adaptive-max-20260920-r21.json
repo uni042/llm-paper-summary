@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r21",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、basis sharing・dual sparsity・sequence-level expert sharingを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2508.05257",
+      "title": "MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs",
+      "source_url": "https://arxiv.org/abs/2508.05257",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md",
+      "priority": 97,
+      "reason": "expert固有行列の一部をshared basisの線形結合として再parameterizeし、expert間共通構造を利用してmemory footprintを圧縮する。"
+    },
+    {
+      "canonical_id": "arXiv:2508.18376",
+      "title": "DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction",
+      "source_url": "https://arxiv.org/abs/2508.18376",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2508.18376-dualsparse-moe.md",
+      "priority": 97,
+      "reason": "post-training expert partitioningでtensor-level sparsityを増やしつつneuron-level sparsityと再構成を協調させる二重sparsity圧縮。"
+    },
+    {
+      "canonical_id": "arXiv:2602.00879",
+      "title": "Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2602.00879",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.00879-dynamic-expert-sharing.md",
+      "priority": 95,
+      "reason": "parallel decoding block全体でcompact expert coresetを選び、token単位のexpert explosionをsequence-level sharingへ置き換えてmemory trafficを抑える。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+    "round": "adaptive-max-r21-structural-compression",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Not All Experts Are Equal forward citationsからbasis compression・dual sparsity・sequence-level expert sharingの3件を選定。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "global pruning / principled expert merging",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "structural MoE compression",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2402.14800",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 160,
+        "unseen_result_count": 100,
+        "duplicate_filtered_count": 24,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 55,
+        "candidate_accepted_count": 3,
+        "position": "2 pages"
+      }
+    ]
+  }
+}
