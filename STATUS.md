@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 11:34:46 JST**
+> 自動生成: **2026-09-20 11:35:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **87** |
 | 未claim Research job | **86** |
 | 直近24hの検証済みResearch収録 | **36** |
-| 最終検証済みResearch収録 | **09-20 09:51:20 JST（1時間43分前）** |
+| 最終検証済みResearch収録 | **09-20 09:51:20 JST（1時間44分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **6** | **5** | **0** | **1** | **1** | — |
+| Research | **11** | **6** | **5** | **1** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **7** | **6** | **0** | **1** | **1** | **5** |
+| 合計 | **11** | **7** | **6** | **1** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2306.14048` — H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models
   - job: `.survey/work-queue/jobs/job-research-9824d8080e264ed4.json`
   - result: `.survey/work-queue/results/research/attempt-0b14b95da2b3a2abc2e9855f.json` (`ok=true`)
@@ -123,8 +123,7 @@
   - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5ea6e0dabdb5053729aff0d5.json` (job `job-research-9c3fc1bfa46c87d0`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-5ea6e0dabdb5053729aff0d5.json` (`ok=false`)
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5ea6e0dabdb5053729aff0d5.json` (job `job-research-9c3fc1bfa46c87d0`)
 - **成功** `arXiv:2408.00741` — DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency
   - job: `.survey/work-queue/jobs/job-research-872c3c76cc1c3eff.json`
   - result: `.survey/work-queue/results/research/attempt-a3583b512bca09151ba946d2.json` (`ok=true`)
