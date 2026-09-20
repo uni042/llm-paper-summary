@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T04:04:00+00:00",
-  "record_count": 51,
+  "updated_at": "2026-09-20T04:10:00+00:00",
+  "record_count": 55,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -725,6 +725,62 @@
         "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
       ],
       "title": "ASAP7: A 7-nm finFET predictive process design kit"
+    },
+    "arXiv:2404.16645": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.16645",
+      "identity_tokens": [
+        "arXiv:2404.16645"
+      ],
+      "reason": "Broad model technical report with training engineering details, but not a focused systems contribution for immediate Research.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+      ],
+      "title": "Tele-FLM Technical Report"
+    },
+    "arXiv:2404.16914": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.16914",
+      "identity_tokens": [
+        "arXiv:2404.16914"
+      ],
+      "reason": "Useful MoE load characterization and prediction study, but it stops short of implementing the placement/resource-allocation system it motivates.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md"
+      ],
+      "title": "Prediction Is All MoE Needs: Expert Load Distribution Goes from Fluctuating to Stabilizing"
+    },
+    "arXiv:2405.04674": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.04674",
+      "identity_tokens": [
+        "arXiv:2405.04674"
+      ],
+      "reason": "Application-oriented document analytics optimization; efficiency is relevant but less central than core inference/training systems work.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md"
+      ],
+      "title": "Towards Accurate and Efficient Document Analytics with Large Language Models"
+    },
+    "arXiv:2405.15179": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15179",
+      "identity_tokens": [
+        "arXiv:2405.15179"
+      ],
+      "reason": "Parameter-efficient fine-tuning method rather than a training-system implementation.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+      ],
+      "title": "VB-LoRA: Extreme Parameter Efficient Fine-Tuning with Vector Banks"
     }
   }
 }
