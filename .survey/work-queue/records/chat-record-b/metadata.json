@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6500850523776f2b702f4a6d",
-  "job_id": "job-research-954a443cf32500d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6500850523776f2b702f4a6d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"canonical_id":"DOI:10.48550/arxiv.2302.01318","arxiv_id":"2302.01318","doi":"10.48550/arXiv.2302.01318","openreview_id":null,"title":"Accelerating Large Language Model Decoding with Speculative Sampling","summary":"投機的サンプリング（speculative sampling）は、小型ドラフトモデルでKトークンを逐次生成し、大型ターゲットモデルでその短い継続を一括採点して、修正棄却サンプリングによりターゲット分布を数値誤差の範囲で厳密に復元する。70B Chinchillaを16 TPU v4で評価し、XSumで約1.9～2.0倍、HumanEvalで2.46倍のデコード高速化を、モデル改変やサンプル品質低下なしに示した。","list_summary":"小型ドラフトの複数候補を大型モデルで並列検証し、出力分布を変えず70B Chinchillaのデコードを最大約2.5倍高速化。","authors":["Charlie Chen","Sebastian Borgeaud","Geoffrey Irving","Jean-Baptiste Lespiau","Laurent Sifre","John Jumper"],"published":"2023-02-02","publication":"arXiv:2302.01318","publication_type":"Preprint","publication_status":"arXiv preprint","arxiv_categories":["cs.CL"],"lineage":"投機的デコード / lossless decoding acceleration","topics":["投機的サンプリング","投機的デコード","修正棄却サンプリング","LLM推論高速化","低バッチ遅延"],"importance":"投機的デコードの基礎論文の一つで、Leviathanらと独立・同時期に、分布保存の棄却サンプリングと大規模分散70Bモデルでの実測を示した。","hardware_evaluation":"Chinchilla 70Bと4Bドラフトを主に16 TPU v4で実行。ドラフトは同じ16 TPU v4上で1.8ms/token、Chinchillaは14.1ms/token。","quality_effect":"理論上ターゲット分布をhardware numerics内で保存。XSum ROUGE-2とHumanEval pass率でもArSとSpSが同等であることを実証。","source":"https://arxiv.org/abs/2302.01318","sources":["https://arxiv.org/abs/2302.01318","https://ar5iv.labs.arxiv.org/html/2302.01318"],"implementation":"アルゴリズム2として完全な手順を提示。4B・8層の幅広ドラフトモデルをChinchillaと同一tokenizer/datasetで訓練し、同一16 TPU v4構成で実行。","code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":27},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
