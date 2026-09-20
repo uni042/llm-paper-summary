@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0bc2ef1f687d4e14b8fcddf2","job_id":"job-research-e2f947500152f11f","data":{"overview":"LRAではIceFormerが元Transformerに対し平均7.63倍のattention高速化を達成しながら平均98.6%の精度を維持し、同程度精度の効率Transformerより平均3.04倍速い。ピークメモリも全5タスクで最小で、元Transformerより最大0.862GB削減した。Vicuna-7b-v1.5-16kのZeroSCROLLSでは10タスク平均attention時間4.38秒から1.60秒へ2.73倍高速化し、平均スコア23.9から23.8、すなわち99.6%を維持した。LongEvalでも3k〜16kへpromptが伸びるほど元注意との差が拡大し、ほぼ同一精度を保つ。","key_results":[{"metric":"LRA平均attention高速化","value":"7.63倍","baseline":"vanilla Transformer","condition":"5 LRA tasks、Intel i7-6850K、4 threads","interpretation":"再学習なしの疎候補探索でも長系列CPU注意の二次計算を大幅に削減できる。"},{"metric":"LRA平均精度保持率","value":"98.6%","baseline":"vanilla Transformer accuracy=100%相対","condition":"5 LRA tasks","interpretation":"上位keyだけを計算する近似誤差は小さく、速度向上に対する品質損失を抑える。"},{"metric":"ZeroSCROLLS平均attention時間","value":"1.60秒、2.73倍高速化","baseline":"Vicuna-7b-v1.5-16k vanilla 4.38秒","condition":"10 tasks、平均7.5k tokens、Ryzen 9 5950X","interpretation":"実際のLLaMA 2系decoder-only LLMへ再学習なしで適用して長文prompt処理を高速化する。"},{"metric":"ZeroSCROLLS平均品質","value":"23.8、元の99.6%","baseline":"Vicuna vanilla 23.9","condition":"10 long-context tasks","interpretation":"因果注意でも探索近似による下流タスク性能低下は平均0.4%に留まる。"},{"metric":"ピークメモリ削減","value":"最大0.862 GB","baseline":"vanilla Transformer","condition":"LRA、batch 1","interpretation":"疎なattention計算によりCPUメモリ消費も抑え、索引の追加メモリを含めても全タスクで最小となる。"}],"negative_results":"速度と精度にはkによる明確な交換関係があり、候補key数を3から10へ増やすと精度は改善する一方でattention時間が増える。IceFormerは近似注意なので元Transformerと完全同値ではない。LLM実験ではReformerは共有Q/K制約、LARAとNyströmformerは因果マスク非対応、再学習型手法は学習済みVicunaへ直接適用できないため比較対象から除外され、全方式との同条件比較ではない。評価はCPUとprompt処理中心である。","interpretation":"注意weightの大半が小さいという疎性を利用しつつ、固定疎パターンを学習時に埋め込まず入力ごとに重要keyを探索する点が性能保持に効く。非対称埋め込みで任意ノルムkeyの内積順位を最近傍順位へ正確に変換し、Prioritized DCIの高recall探索で候補選択誤りを抑える。系列が長いほど全key総当たりとの差が広がるためLongEvalで長さ増加とともに相対利得が大きくなる。","quality_impact":"LRAでは元モデル精度の平均98.6%、ZeroSCROLLSでは平均99.6%を保持する。個別ZeroSCROLLSでも10タスクすべて99.0%以上を保つ一方、H-Transformer-1Dは平均32.5%まで低下した。kを増やせば元注意へ近づくため、利用者は許容精度に応じて速度を調整できる。"},"reservation":{"claim_id":"claim-0bc2ef1f687d4e14b8fcddf2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-1183d9b80698481178086936",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {
+    "overview": "LRAではIceFormerが元Transformerに対し平均7.63倍のattention高速化を達成しながら平均98.6%の精度を維持し、同程度精度の効率Transformerより平均3.04倍速い。ピークメモリも全5タスクで最小で、元Transformerより最大0.862GB削減した。Vicuna-7b-v1.5-16kのZeroSCROLLSでは10タスク平均attention時間4.38秒から1.60秒へ2.73倍高速化し、平均スコア23.9から23.8、すなわち99.6%を維持した。LongEvalでも3k〜16kへpromptが伸びるほど元注意との差が拡大し、ほぼ同一精度を保つ。",
+    "key_results": [
+      {
+        "metric": "LRA平均attention高速化",
+        "value": "7.63倍",
+        "baseline": "vanilla Transformer",
+        "condition": "5 LRA tasks、Intel i7-6850K、4 threads",
+        "interpretation": "再学習なしの疎候補探索でも長系列CPU注意の二次計算を大幅に削減できる。"
+      },
+      {
+        "metric": "LRA平均精度保持率",
+        "value": "98.6%",
+        "baseline": "vanilla Transformer accuracy=100%相対",
+        "condition": "5 LRA tasks",
+        "interpretation": "上位keyだけを計算する近似誤差は小さく、速度向上に対する品質損失を抑える。"
+      },
+      {
+        "metric": "ZeroSCROLLS平均attention時間",
+        "value": "1.60秒、2.73倍高速化",
+        "baseline": "Vicuna-7b-v1.5-16k vanilla 4.38秒",
+        "condition": "10 tasks、平均7.5k tokens、Ryzen 9 5950X",
+        "interpretation": "実際のLLaMA 2系decoder-only LLMへ再学習なしで適用して長文prompt処理を高速化する。"
+      },
+      {
+        "metric": "ZeroSCROLLS平均品質",
+        "value": "23.8、元の99.6%",
+        "baseline": "Vicuna vanilla 23.9",
+        "condition": "10 long-context tasks",
+        "interpretation": "因果注意でも探索近似による下流タスク性能低下は平均0.4%に留まる。"
+      },
+      {
+        "metric": "ピークメモリ削減",
+        "value": "最大0.862 GB",
+        "baseline": "vanilla Transformer",
+        "condition": "LRA、batch 1",
+        "interpretation": "疎なattention計算によりCPUメモリ消費も抑え、索引の追加メモリを含めても全タスクで最小となる。"
+      }
+    ],
+    "negative_results": "速度と精度にはkによる明確な交換関係があり、候補key数を3から10へ増やすと精度は改善する一方でattention時間が増える。IceFormerは近似注意なので元Transformerと完全同値ではない。LLM実験ではReformerは共有Q/K制約、LARAとNyströmformerは因果マスク非対応、再学習型手法は学習済みVicunaへ直接適用できないため比較対象から除外され、全方式との同条件比較ではない。評価はCPUとprompt処理中心である。",
+    "interpretation": "注意weightの大半が小さいという疎性を利用しつつ、固定疎パターンを学習時に埋め込まず入力ごとに重要keyを探索する点が性能保持に効く。非対称埋め込みで任意ノルムkeyの内積順位を最近傍順位へ正確に変換し、Prioritized DCIの高recall探索で候補選択誤りを抑える。系列が長いほど全key総当たりとの差が広がるためLongEvalで長さ増加とともに相対利得が大きくなる。",
+    "quality_impact": "LRAでは元モデル精度の平均98.6%、ZeroSCROLLSでは平均99.6%を保持する。個別ZeroSCROLLSでも10タスクすべて99.0%以上を保つ一方、H-Transformer-1Dは平均32.5%まで低下した。kを増やせば元注意へ近づくため、利用者は許容精度に応じて速度を調整できる。"
+  },
+  "reservation": {
+    "claim_id": "claim-1183d9b80698481178086936",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

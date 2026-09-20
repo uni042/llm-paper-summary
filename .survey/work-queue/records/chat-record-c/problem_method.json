@@ -1,1 +1,32 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-0bc2ef1f687d4e14b8fcddf2","job_id":"job-research-e2f947500152f11f","data":{"problem":"標準自己注意は各queryと全keyの内積を計算し、その全attention weightでvalueを加重するため、系列長に対して時間・空間が二次増加する。CPUのみの端末では長文LLMのプロンプト処理が特に重い。固定疎注意や低ランク近似は高速でも、その制約を前提に再学習が必要だったり、既存LLMの因果マスクに適用できなかったり、再学習なしでは近似誤差が大きい。学習済みLLMへそのまま差し込め、一般のkey・queryと因果マスクを扱い、高精度とCPU実行速度を同時に満たす必要がある。","novelty":"注意行列が実用上疎であることを利用し、各queryについて大きなattention weightを持つ少数keyだけを計算する。その際、keyのノルムが異なると単純な最近傍探索では内積順位を再現できない問題を、keyとqueryをd+1次元へ非対称に写像して全key埋め込みのノルムを揃えることで解く。これにより最大内積の順位がユークリッド最近傍順位へ一致し、既存学習済み重みを変更せずk近傍探索で重要keyを発見できる。高速かつ高recallなランキング型Prioritized DCIを採用し、因果マスク向けにkeyの増分追加も実装する。","method_overview":"各注意層でkey集合Kとquery Qを受け取る。まず層内keyの最大ノルム以上の定数cを使い、key kを[k/c, sqrt(1-||k||^2/c^2)]へ、query qを[q/||q||,0]へ写像する。この変換後はkey埋め込みが同一ノルムとなり、queryとのユークリッド距離が小さい順序と元のq^T kが大きい順序が一致する。したがってsoftmax attentionで重要なkey候補を、全内積を計算せずk近傍探索から得られる。探索にはランダム方向上の順位を用いるPrioritized DCIを使う。固定類似度閾値のLSH型と異なり常に所定数の候補を返すため、key分布に応じて実質閾値が変わりattentionの相対順位と相性がよい。候補keyについてだけ正確な内積、softmax、value加重を計算し、それ以外のattention weightをゼロとして疎近似する。各層のkeyは前層出力に依存するため探索索引は層ごとに構築する。decoder-only LLMの因果マスクでは未来keyを索引から除外し、トークンが有効になるたびPrioritized DCIのソート済み構造へO(log m)で増分挿入する。これにより生成位置ごとに索引を全面再構築しない。","components":[{"name":"一般key向け非対称埋め込み","description":"単純な最近傍探索がattention上位keyを見つけられるのはkeyノルムが等しい場合に限られる。IceFormerは各keyを元次元dからd+1へ写像し、最後の座標にノルム差を吸収させて全key埋め込みの長さを揃える。一方queryは単位正規化した元成分にゼロを付加する。この変換では変換後query-key距離の順位が元の内積q^T kの逆順位と一致するため、softmax前スコアが大きいkeyを最近傍として検索できる。入力は任意ノルムの学習済みkey/query、出力は最近傍探索可能な埋め込みで、モデルパラメータやattentionパターンの学習制約を追加しない。因果マスクなどで許可されないkeyは探索集合から除外すればよく、既存モデルへ推論時だけ適用できる。"},{"name":"Prioritized DCIによる上位key探索","description":"近似最近傍探索は高速でもrecallが低いと多層Transformerで誤差が累積するため、IceFormerは12種類を比較し、構築と検索のrecall-遅延バランスが良いPrioritized DCIを選ぶ。これは複数のランダム射影方向でkeyを順位付けし、queryに近い順位の候補を優先的に調べるランキング型手法である。固定bucket閾値を使うLSHと違い、常にk個の近傍を返すのでkey分布に応じて探索幅が実質的に変化し、attentionが相対スコアで決まる性質に合う。検索で得た候補だけ元の正確なattention scoreとvalue加重を計算するため、探索近似は候補選択へ限定される。kを増やせば精度は上がるが計算も増えるため、速度と精度の明示的な調整ノブになる。"},{"name":"因果マスク向け増分索引","description":"decoder-only LLMでは位置iのqueryが未来keyへ注意してはならず、生成が一位置進むごとに新しいkeyが探索対象へ加わる。毎トークンで近傍探索データベースを再構築すると索引構築費が高速化を相殺する。IceFormerはPrioritized DCIの内部が射影値のソート済みリストであることを利用し、各新keyを二分探索木相当の操作でO(log m)挿入・削除できるよう拡張する。これにより現在までにunmaskされたkeyだけを候補集合として維持し、因果制約を保ったまま索引を再利用する。入力は各層で逐次得られる新key、出力は更新済み探索索引で、Vicuna-7B-16kの長文プロンプト処理にも同じ注意置換を適用できる。"}],"system_design":"CPU推論時に各Transformer注意モジュールをIceFormerへ置換し、モデル重みは変更しない。層ごとに変換済みkeyのPrioritized DCI索引を構築・更新し、各queryではk候補だけに標準attentionを計算する。双方向注意では一括索引、因果注意では増分索引を用いる。計算量から全query-key組のmn項を除き、疎なvalueアクセスによってメモリ使用量も削減する。"},"reservation":{"claim_id":"claim-0bc2ef1f687d4e14b8fcddf2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-1183d9b80698481178086936",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {
+    "problem": "標準自己注意は各queryと全keyの内積を計算し、その全attention weightでvalueを加重するため、系列長に対して時間・空間が二次増加する。CPUのみの端末では長文LLMのプロンプト処理が特に重い。固定疎注意や低ランク近似は高速でも、その制約を前提に再学習が必要だったり、既存LLMの因果マスクに適用できなかったり、再学習なしでは近似誤差が大きい。学習済みLLMへそのまま差し込め、一般のkey・queryと因果マスクを扱い、高精度とCPU実行速度を同時に満たす必要がある。",
+    "novelty": "注意行列が実用上疎であることを利用し、各queryについて大きなattention weightを持つ少数keyだけを計算する。その際、keyのノルムが異なると単純な最近傍探索では内積順位を再現できない問題を、keyとqueryをd+1次元へ非対称に写像して全key埋め込みのノルムを揃えることで解く。これにより最大内積の順位がユークリッド最近傍順位へ一致し、既存学習済み重みを変更せずk近傍探索で重要keyを発見できる。高速かつ高recallなランキング型Prioritized DCIを採用し、因果マスク向けにkeyの増分追加も実装する。",
+    "method_overview": "各注意層でkey集合Kとquery Qを受け取る。まず層内keyの最大ノルム以上の定数cを使い、key kを[k/c, sqrt(1-||k||^2/c^2)]へ、query qを[q/||q||,0]へ写像する。この変換後はkey埋め込みが同一ノルムとなり、queryとのユークリッド距離が小さい順序と元のq^T kが大きい順序が一致する。したがってsoftmax attentionで重要なkey候補を、全内積を計算せずk近傍探索から得られる。探索にはランダム方向上の順位を用いるPrioritized DCIを使う。固定類似度閾値のLSH型と異なり常に所定数の候補を返すため、key分布に応じて実質閾値が変わりattentionの相対順位と相性がよい。候補keyについてだけ正確な内積、softmax、value加重を計算し、それ以外のattention weightをゼロとして疎近似する。各層のkeyは前層出力に依存するため探索索引は層ごとに構築する。decoder-only LLMの因果マスクでは未来keyを索引から除外し、トークンが有効になるたびPrioritized DCIのソート済み構造へO(log m)で増分挿入する。これにより生成位置ごとに索引を全面再構築しない。",
+    "components": [
+      {
+        "name": "一般key向け非対称埋め込み",
+        "description": "単純な最近傍探索がattention上位keyを見つけられるのはkeyノルムが等しい場合に限られる。IceFormerは各keyを元次元dからd+1へ写像し、最後の座標にノルム差を吸収させて全key埋め込みの長さを揃える。一方queryは単位正規化した元成分にゼロを付加する。この変換では変換後query-key距離の順位が元の内積q^T kの逆順位と一致するため、softmax前スコアが大きいkeyを最近傍として検索できる。入力は任意ノルムの学習済みkey/query、出力は最近傍探索可能な埋め込みで、モデルパラメータやattentionパターンの学習制約を追加しない。因果マスクなどで許可されないkeyは探索集合から除外すればよく、既存モデルへ推論時だけ適用できる。"
+      },
+      {
+        "name": "Prioritized DCIによる上位key探索",
+        "description": "近似最近傍探索は高速でもrecallが低いと多層Transformerで誤差が累積するため、IceFormerは12種類を比較し、構築と検索のrecall-遅延バランスが良いPrioritized DCIを選ぶ。これは複数のランダム射影方向でkeyを順位付けし、queryに近い順位の候補を優先的に調べるランキング型手法である。固定bucket閾値を使うLSHと違い、常にk個の近傍を返すのでkey分布に応じて探索幅が実質的に変化し、attentionが相対スコアで決まる性質に合う。検索で得た候補だけ元の正確なattention scoreとvalue加重を計算するため、探索近似は候補選択へ限定される。kを増やせば精度は上がるが計算も増えるため、速度と精度の明示的な調整ノブになる。"
+      },
+      {
+        "name": "因果マスク向け増分索引",
+        "description": "decoder-only LLMでは位置iのqueryが未来keyへ注意してはならず、生成が一位置進むごとに新しいkeyが探索対象へ加わる。毎トークンで近傍探索データベースを再構築すると索引構築費が高速化を相殺する。IceFormerはPrioritized DCIの内部が射影値のソート済みリストであることを利用し、各新keyを二分探索木相当の操作でO(log m)挿入・削除できるよう拡張する。これにより現在までにunmaskされたkeyだけを候補集合として維持し、因果制約を保ったまま索引を再利用する。入力は各層で逐次得られる新key、出力は更新済み探索索引で、Vicuna-7B-16kの長文プロンプト処理にも同じ注意置換を適用できる。"
+      }
+    ],
+    "system_design": "CPU推論時に各Transformer注意モジュールをIceFormerへ置換し、モデル重みは変更しない。層ごとに変換済みkeyのPrioritized DCI索引を構築・更新し、各queryではk候補だけに標準attentionを計算する。双方向注意では一括索引、因果注意では増分索引を用いる。計算量から全query-key組のmn項を除き、疎なvalueアクセスによってメモリ使用量も削減する。"
+  },
+  "reservation": {
+    "claim_id": "claim-1183d9b80698481178086936",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

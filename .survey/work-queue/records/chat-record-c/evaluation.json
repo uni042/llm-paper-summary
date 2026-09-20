@@ -1,1 +1,46 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0bc2ef1f687d4e14b8fcddf2","job_id":"job-research-e2f947500152f11f","data":{"hardware":"LRA: Intel Core i7-6850K 6-Core、ZeroSCROLLS: AMD Ryzen 9 5950X 16-Core、LongEval: AMD Ryzen 9 5900X 12-Core。LRA推論は4 CPU threads。","software":"PyTorch系LRA実装を共通基盤にattention moduleのみ差し替え。Prioritized DCIを因果マスク向け増分更新へ拡張。","methodology":"まずFashion-MNIST 60,000 key/10,000 query/784次元のtop-10探索で12種類のk-NNSのrecallと索引構築+検索時間を比較する。LRAの5タスクでは最大4k系列、batch 1で元Transformerと7種の効率注意を比較し、分類精度、attention wall time、ピークメモリを測る。LLM評価はVicuna-7b-v1.5-16kへ推論時のみIceFormerを適用し、ZeroSCROLLS 10タスクの3k〜10k promptとLongEvalの3k〜16k promptでattention遅延とタスク精度を比較する。","scope":"CPU上の長文prompt処理を対象に、双方向Transformerとdecoder-only LLMの双方を評価する。モデル全体の生成スループットよりattention module時間が主要指標で、GPU推論やデコード時KV-cache最適化は対象外。","models":["vanilla Transformer on LRA","Vicuna-7b-v1.5-16k"],"datasets_benchmarks":["Fashion-MNIST","Long Range Arena","ZeroSCROLLS","LongEval"],"baselines":["vanilla Transformer","Reformer","LARA","Nyströmformer","H-Transformer-1D","Longformer","Performer","Linformer"],"metrics":["accuracy","attention wall-clock time","speedup","peak memory","nearest-neighbor recall","ZeroSCROLLS task score"]},"reservation":{"claim_id":"claim-0bc2ef1f687d4e14b8fcddf2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-1183d9b80698481178086936",
+  "job_id": "job-research-e2f947500152f11f",
+  "data": {
+    "hardware": "LRA: Intel Core i7-6850K 6-Core、ZeroSCROLLS: AMD Ryzen 9 5950X 16-Core、LongEval: AMD Ryzen 9 5900X 12-Core。LRA推論は4 CPU threads。",
+    "software": "PyTorch系LRA実装を共通基盤にattention moduleのみ差し替え。Prioritized DCIを因果マスク向け増分更新へ拡張。",
+    "methodology": "まずFashion-MNIST 60,000 key/10,000 query/784次元のtop-10探索で12種類のk-NNSのrecallと索引構築+検索時間を比較する。LRAの5タスクでは最大4k系列、batch 1で元Transformerと7種の効率注意を比較し、分類精度、attention wall time、ピークメモリを測る。LLM評価はVicuna-7b-v1.5-16kへ推論時のみIceFormerを適用し、ZeroSCROLLS 10タスクの3k〜10k promptとLongEvalの3k〜16k promptでattention遅延とタスク精度を比較する。",
+    "scope": "CPU上の長文prompt処理を対象に、双方向Transformerとdecoder-only LLMの双方を評価する。モデル全体の生成スループットよりattention module時間が主要指標で、GPU推論やデコード時KV-cache最適化は対象外。",
+    "models": [
+      "vanilla Transformer on LRA",
+      "Vicuna-7b-v1.5-16k"
+    ],
+    "datasets_benchmarks": [
+      "Fashion-MNIST",
+      "Long Range Arena",
+      "ZeroSCROLLS",
+      "LongEval"
+    ],
+    "baselines": [
+      "vanilla Transformer",
+      "Reformer",
+      "LARA",
+      "Nyströmformer",
+      "H-Transformer-1D",
+      "Longformer",
+      "Performer",
+      "Linformer"
+    ],
+    "metrics": [
+      "accuracy",
+      "attention wall-clock time",
+      "speedup",
+      "peak memory",
+      "nearest-neighbor recall",
+      "ZeroSCROLLS task score"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-1183d9b80698481178086936",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
