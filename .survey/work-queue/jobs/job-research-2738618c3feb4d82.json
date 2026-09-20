@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-2738618c3feb4d82",
+  "type": "research",
+  "parent_job_id": "job-7a8308f7b6ef1671",
+  "priority": 97,
+  "canonical_id": "arXiv:2609.19683",
+  "arxiv_id": "2609.19683",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration",
+  "source_url": "https://www.semanticscholar.org/paper/0d477e5ec93c4d3e478e57e960c1d54a51fdb679",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md",
+  "selection_reason": "VLMのメモリ帯域律速に対し、共有mantissaと要素別exponentを用いる4.5-bit形式と専用acceleratorを共同設計。NVFP4同等以上の精度、Focus比2.3–4.5倍speedup・1.4–2.9倍省エネを報告し、低bit推論hardware/system系統への直接性が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T21:08:46+00:00"
+}

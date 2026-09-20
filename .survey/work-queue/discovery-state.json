@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T21:06:17+00:00",
+  "updated_at": "2026-09-20T21:08:46+00:00",
   "last_run_key": "2026-09-21T06:00:07+09:00-hourly30",
-  "last_round": "round-02",
+  "last_round": "round-03",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T17:00:00+09:00",
-      "round": "specialist-cpu-gpu-moe-coexecution-3",
-      "axis": "AMX CPU-GPU協調MoE・coalesced expert execution",
-      "query_summary": "MoE expert offloadの隣接として、転送先読みではなくCPU-GPU共同計算・expert配置・batch構成を統合する推論系を探索し、canonical ID重複をGitHub正本で確認した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "分離prefill/decodeの負荷偏りをdecode側余剰計算で吸収するスケジューリングへ軸を移す",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r3-cox-moe.json"
-    },
     {
       "run_key": "2026-09-16T17:00:00+09:00",
       "round": "specialist-prefill-deflection-4",
@@ -8013,6 +7998,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "別の前方引用seedまたは後方引用の次の未評価集合",
       "source_submission": "work-queue/submissions/20260921T0604JST-hourly30-discovery-round-02-backward.json"
+    },
+    {
+      "run_key": "2026-09-21T06:00:07+09:00-hourly30",
+      "round": "round-03",
+      "axis": "forward citations of H2O for KV-cache efficient inference",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0608JST-hourly30-discovery-round-03-h2o-forward.json"
     }
   ],
   "axes": {
@@ -15615,6 +15621,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "別の前方引用seedまたは後方引用の次の未評価集合"
+    },
+    "forward citations of H2O for KV-cache efficient inference": {
+      "last_run_key": "2026-09-21T06:00:07+09:00-hourly30",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
