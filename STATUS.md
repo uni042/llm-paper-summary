@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:10:39 JST**
+> 自動生成: **2026-09-21 05:11:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **4** | **0** | **3** | **0** | **0** | **0** |
-| 合計 | **9** | **10** | **4** | **3** | **0** | **0** | **0** |
+| Discovery | **7** | **4** | **2** | **1** | **0** | **0** | **0** |
+| 合計 | **11** | **10** | **6** | **1** | **0** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,14 @@
 
 ### Discovery
 
+- **09-21 05:08:33 JST** job `job-8568b8b1c995b662` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
+  - 探索軸: backward-reference structured repository-wide
+- **09-21 05:08:45 JST** job `job-079abec9c4fbe585` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-02-forward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-02-forward.json`
+  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
 - **09-21 04:41:56 JST** job `job-5ce2fc5cb7683904` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0430JST-discovery-round-01-backward-recovery.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-01-backward-recovery.json`
@@ -151,7 +159,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:01 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **0件**
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **2件** / 候補: **0件**
 - 探索軸: backward-reference structured repository-wide / forward citations of Elastic MoE for inference-time expert scaling / backward-reference structured repository-wide continuation
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0504JST-discovery-round-01-backward.json`
@@ -160,11 +168,11 @@
 - round `round-01b` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
   - 探索軸: backward-reference structured repository-wide
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
 - round `round-02` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-02-forward.json`
   - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0505JST-discovery-round-02-forward.json` (`ok=true`)
 - round `round-03` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0509JST-discovery-round-03-backward.json`
   - 探索軸: backward-reference structured repository-wide continuation
@@ -223,10 +231,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **912** |
+| 成功result未照合のimmutable submission | **910** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **198** |
+| └ Discovery | **196** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
