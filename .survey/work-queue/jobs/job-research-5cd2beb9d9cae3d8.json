@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2605.08575",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
   "selection_reason": "既存pretrained MoE内部にあるintra-expert activation sparsityを利用し、expert粒度の外側だけでなく内部計算も削減する。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:54:04+00:00"
+  "created_at": "2026-09-20T10:54:04+00:00",
+  "completed_at": "2026-09-20T14:49:17+00:00",
+  "blocker": "The official arXiv HTML full text was successfully retrieved, but the external web retrieval tool reached its explicit per-run call limit before the remaining evaluation/results/appendix sections could be read and verified. The paper is therefore not marked read and no five-slot scientific record is synthesized from the partially inspected text.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-7f1cfa62b8748ba1f034c4fa.json"
 }
