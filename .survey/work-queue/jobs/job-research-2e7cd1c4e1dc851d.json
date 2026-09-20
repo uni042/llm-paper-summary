@@ -8,11 +8,14 @@
   "source_url": "https://arxiv.org/abs/2608.06989",
   "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md",
   "selection_reason": "prefill/decodeやMoE routingで実行deviceが変化する問題に対し、物理layoutとNPU/PIM向けlogical viewを分離するdual-view memoryとruntime schedulingを提案。LLMで最大2.32x throughput改善を報告する階層memory研究。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T17:04:30+00:00"
+  "created_at": "2026-09-19T17:04:30+00:00",
+  "completed_at": "2026-09-20T03:33:46+00:00",
+  "blocker": "Primary-source retrieval blocked in this run. The official arXiv abstract page for arXiv:2608.06989 was accessible and verified title/authors/date/abstract, but materially distinct official full-text routes https://arxiv.org/html/2608.06989, https://arxiv.org/pdf/2608.06989, and https://arxiv.org/e-print/2608.06989 each returned a retrieval DisabledError in the available web runtime. Search indexing exposed third-party mirrors/reviews, but those are not acceptable substitutes for full primary-source reading, so no five-slot scientific content was inferred from them. Retry the same paper through an official arXiv full-text/PDF/e-print route in a later run.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json"
 }

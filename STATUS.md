@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:32:41 JST**
+> 自動生成: **2026-09-20 12:33:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **76** |
+| 収録候補論文 | **75** |
 | 未claim Research job | **75** |
 | 直近24hの検証済みResearch収録 | **45** |
-| 最終検証済みResearch収録 | **09-20 12:17:21 JST（15分前）** |
+| 最終検証済みResearch収録 | **09-20 12:17:21 JST（16分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **76** |
+| canonical_id確認済みの一意な候補論文 | **75** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **76** |
+| 非終端Research job合計 | **75** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **10** | **9** | **0** | **1** | **0** | — |
+| Research | **17** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **17** | **11** | **10** | **0** | **1** | **0** | **5** |
+| 合計 | **17** | **2** | **1** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -111,59 +111,14 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **10件** / 検証済み成功: **9件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
-  - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
-  - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-098c5b91676f2a1a4d4737af.json`
-  - paper: `papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md`
-- **成功** `DOI:10.48550/arxiv.2307.08691` — FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
-  - job: `.survey/work-queue/jobs/job-research-7462825d21914fcd.json`
-  - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
-  - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
-- **成功** `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-06ec3586821ff3bb.json`
-  - result: `.survey/work-queue/results/research/attempt-494231538c84c48296aa17b3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-494231538c84c48296aa17b3.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2309.08168-draft-verify.md`
-- **成功** `DOI:10.1145/3731569.3764815` — Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market
-  - job: `.survey/work-queue/jobs/job-research-a568c8de790c8043.json`
-  - result: `.survey/work-queue/results/research/attempt-4aedf8f4b7b74e0c27817979.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4aedf8f4b7b74e0c27817979.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md`
-- **成功** `DOI:10.48550/arxiv.2302.01318` — Accelerating Large Language Model Decoding with Speculative Sampling
-  - job: `.survey/work-queue/jobs/job-research-954a443cf32500d8.json`
-  - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6500850523776f2b702f4a6d.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md`
-- **成功** `arXiv:2402.02750` — KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache
-  - job: `.survey/work-queue/jobs/job-research-8b52cc53189781e3.json`
-  - result: `.survey/work-queue/results/research/attempt-6d86d84ba0b861b36b84973e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6d86d84ba0b861b36b84973e.json`
-  - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2402.02750-kivi.md`
-- **成功** `arXiv:2109.10465` — Scalable and Efficient MoE Training for Multitask Multilingual Models
-  - job: `.survey/work-queue/jobs/job-research-b2016b76225eff0c.json`
-  - result: `.survey/work-queue/results/research/attempt-715ca0ac1e2c0533b0313a9c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-715ca0ac1e2c0533b0313a9c.json`
-  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md`
-- **成功** `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
-  - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json`
-  - paper: `papers/inference/10-sparse-attention/2024-2406.10774-quest.md`
-- **成功** `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
-  - job: `.survey/work-queue/jobs/job-research-710ff1d6feeafd76.json`
-  - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json`
-  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-fbff7b50969572eba56c0514.json` (job `job-research-3cf2e0a916913e29`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-fbff7b50969572eba56c0514.json` (`ok=true`)
+- 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-f50aea1a300a90e85b31bf68.json` (`ok=true`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -181,10 +136,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:32:33 JST** / heartbeat: **—** / lease expiry: **09-20 14:02:33 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2e7cd1c4e1dc851d.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -204,7 +157,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **76** |
+| ready | **75** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,8 +185,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **686** |
-| └ Research | **525** |
+| 成功result未照合のimmutable submission | **687** |
+| └ Research | **526** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
