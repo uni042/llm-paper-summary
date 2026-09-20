@@ -4,10 +4,19 @@
   "slot": "problem_method",
   "attempt_id": "attempt-3c0144987279113ac5ae99fd",
   "job_id": "job-research-b27d4d0f59f887b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3c0144987279113ac5ae99fd",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "推測デコードは小さなドラフタが複数トークンを提案し、ターゲットモデルが一括検証することで自己回帰生成を高速化するが、実運用の要求分布は会話、コード、数学、ツール利用、エージェント処理で大きく異なる。高エントロピー会話では深い候補ほど受理率が急減し、長いブロックを作る価値が低い。一方、コードや数学は構文・識別子・形式的推論により長い予測可能区間があり、並列ブロック生成が有利になる。既存研究は平均化されたベンチマーク混合上で一つのドラフタを最適化しがちで、構造・訓練分布・検証深度をワークロードと実行時負荷に合わせて協調させていない。さらにブロック並列ドラフタは同一ブロック内の実現済み前トークンを条件にできず、suffix側の受理率が落ちる。",
+    "novelty": "AngelSpecは単一万能ドラフタではなく、ワークロードごとに構造と訓練データを共特化する。短い自己回帰MTPは多様な会話中心データで訓練し、ブロック並列DFlyはコード・数学を強化する。DFlyはDFlashの共有非線形ターゲット特徴とDFlare型の層別ターゲットビューを加算するhybrid conditioning、並列backbone後に前トークンを使う軽量自己回帰head、受理長に整合する二段階lossを組み合わせる。サービング側ではD-cutを統合し、検証トークンを要求ごとの固定深度ではなくbatch全体の共有資源として扱い、prefix受理確率と実機profiling済みcostからglobal budgetを動的に決める。",
+    "method_overview": "訓練時、会話向けMTPではターゲットbackboneとLM headを凍結し、一つのMTP blockを複数logical depthで共有して自己回帰unrollするTraining-Time Testを行う。各depthは直前の自己生成tokenとdraft KVを受け、ターゲットのdepth-shifted分布へ蒸留される。初期はoverlapを直接意識するLK loss、続いて期待受理長を表すend-to-end TV lossへ切り替える。コード・数学向けDFlyでは複数target layer hidden stateをFCで共有変換した特徴と、draft layerごとのsoftmax重み付きtarget layer融合を加算・正規化して各draft layerへ渡す。parallel backboneはblock全位置を一括生成し、その後のhidden-correction headが各位置のhidden stateと実際に選ばれた直前token embeddingを使って分布を逐次補正する。cold startはD-PACE重み付きhybrid LK、最終段はend-to-end TVを使う。推論時D-cutは各要求のprefix survivalから追加検証位置の期待効用を推定し、hardware/loadごとのprofiled latency costと組み合わせてbatch全体の検証budgetを決定、各要求ではprefix性を保ったまま低効用suffixを削り、残った位置をdense batchへpackしてターゲット検証する。",
+    "components": [
+      {"name": "共有パラメータ多深度MTPとTraining-Time Test", "description": "一つのMTP blockをD回再帰利用し、depthごとに一つ先へずらしたtarget分布で監督する。depth 1以降にはground truthではなく直前depthのargmax予測を入力し、増大するdraft KVと推論時attention構造を再現するため、teacher forcingと実推論の状態分布差を縮める。長文脈ではUlysses sequence parallelismとdepth分のhaloを使い、128k tokenまで検証している。"},
+      {"name": "DFly hybrid target-conditioning backbone", "description": "DFlash型の複数target layerを連結してFC変換する共有contextと、draft layerごとに異なるsoftmax重みでtarget layerを融合する層別contextを加算しRMSNormする。共有branchがcross-layer interactionを保持し、層別branchがdraft depthごとのtarget feature選好を与える。追加パラメータは主にD×T個の融合scalarである。"},
+      {"name": "前トークン依存hidden-correction head", "description": "parallel backboneが各block位置のmarginal分布を一括生成した後、各位置のdraft hidden stateと実際に選ばれた直前token embeddingをSwiGLU補正へ入力してresidual加算しLM headへ渡す。高価なbackboneは並列のまま、小さなheadだけを左から右へ実行してblock内の自己回帰依存を回復する。"},
+      {"name": "受理整合二段階損失", "description": "cold startではtarget/draft分布のKLとTVを混ぜたLK lossをD-PACEの位置重みで加重し、初期の弱いTV gradientを避ける。整合後は各depthのdistribution overlapの積から期待受理長を直接近似するend-to-end TV lossへ切り替え、浅い位置の誤りが後続全体を無効にする性質を目的関数へ反映する。"},
+      {"name": "D-cut動的検証予算", "description": "各要求のdraft confidenceからprefix survivalと追加位置の期待進捗を推定し、同時要求全体で価値の高いprefixへ検証slotを配分する。さらにGPU、batch size、並列構成、CUDA Graph経路ごとのprofiled costを使ってglobal budget自体を負荷に応じて変え、軽負荷では深く、高負荷では積極的にsuffixを削る。"},
+      {"name": "AngelSpec訓練基盤", "description": "推論engineがtarget hidden stateを生成しtraining workerへstreamする分離構成、document-aware packing、MTP長文脈訓練、MTP/DFly共通loss interface、実際の推測デコードでMALと位置別受理率を測るevaluation serverを提供する。vLLM/HuggingFace側へpluginでtarget hidden extractionを注入し、trainer forkを避ける。"}
+    ],
+    "system_design": "AngelSpecはtarget hidden-state生成を担う推論workerとdraft訓練workerを分離し、MTPまたはDFlyを共通trainerで訓練する。訓練中は専用evaluation GPU上のvLLMで実推測デコードを周期実行する。配備時は会話系にMTP、構造化コード・数学系にDFlyを対応させ、DFlyの長blockはD-cutが現在のbatch負荷とhardware profileに合わせて検証深度を切り詰める。"
+  },
+  "reservation": {"claim_id": "claim-3c0144987279113ac5ae99fd", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
