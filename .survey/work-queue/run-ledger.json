@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T05:49:32.004677+00:00",
+  "updated_at": "2026-09-20T06:01:38.603445+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T05:49:32.004677+00:00",
+      "last_recorded_at": "2026-09-20T06:01:38.603445+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 346,
+        "research_completed": 347,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35446319988:1",
-          "recorded_at": "2026-09-19T13:37:59.562781+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35446319988",
-            "run_attempt": "1",
-            "source_sha": "c0d1ee159b2433407821825df4cabc7da781f3eb"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35447561955:1",
           "recorded_at": "2026-09-19T14:05:57.954939+00:00",
@@ -19592,6 +19578,20 @@
             "run_id": "35492636751",
             "run_attempt": "1",
             "source_sha": "4d336da43f6ec9efdf8d631578f1097061176ec9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35493133772:1",
+          "recorded_at": "2026-09-20T06:01:38.603445+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35493133772",
+            "run_attempt": "1",
+            "source_sha": "7214046abebe4a7f930f4d35f5c9988e3cf2935f"
           },
           "signals": [
             "research_completed"
@@ -24316,6 +24316,14 @@
           "type": "research",
           "canonical_id": "arXiv:2502.00937",
           "title": "ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-51de804389577a72",
+          "type": "research",
+          "canonical_id": "arXiv:2407.02490",
+          "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
           "from": "ready",
           "to": "completed"
         }

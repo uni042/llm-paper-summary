@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:00:51 JST**
+> 自動生成: **2026-09-20 15:01:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **122** |
+| 収録候補論文 | **121** |
 | 未claim Research job | **119** |
-| 直近24hの検証済みResearch収録 | **58** |
-| 最終検証済みResearch収録 | **09-20 14:49:26 JST（11分前）** |
+| 直近24hの検証済みResearch収録 | **59** |
+| 最終検証済みResearch収録 | **09-20 15:01:35 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **122** |
+| canonical_id確認済みの一意な候補論文 | **121** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **122** |
+| 非終端Research job合計 | **121** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **4** | **3** | **0** | **3** | **1** | — |
+| Research | **28** | **3** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **27** | **5** | **4** | **0** | **3** | **1** | **5** |
+| 合計 | **28** | **4** | **4** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 15:01:35 JST** [research] `arXiv:2407.02490` — MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention
+  - job: `.survey/work-queue/jobs/job-research-51de804389577a72.json`
+  - result: `.survey/work-queue/results/research/attempt-0ab84ae32ed1ca16a3e50130.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0ab84ae32ed1ca16a3e50130.json`
+  - paper: `papers/inference/10-sparse-attention/2024-2407.02490-minference.md`
 - **09-20 14:49:26 JST** [research] `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-424d7c9bd547a6273a4b2a1c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-424d7c9bd547a6273a4b2a1c.json`
   - paper: `papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md`
-- **09-20 13:07:05 JST** [research] `arXiv:2604.12171` — PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-53d31e41c03b4f2d.json`
-  - result: `.survey/work-queue/results/research/attempt-26cd74667eb00ab5badaabeb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-26cd74667eb00ab5badaabeb.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md`
 
 ### Audit
 
@@ -127,14 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-16712b93d70f46eb3fb21fac.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-206de3a6d433e93dd5ba5f49.json` (job `job-research-d223f7a181256e07`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-206de3a6d433e93dd5ba5f49.json` (`ok=false`)
 - **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
@@ -166,13 +164,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2505.23416` — KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 14:56:09 JST** / heartbeat: **09-20 14:59:33 JST** / lease expiry: **09-20 16:29:33 JST**
+  - claim: **09-20 15:01:27 JST** / heartbeat: **—** / lease expiry: **09-20 16:31:27 JST**
   - evidence: `.survey/work-queue/claims/job-research-d223f7a181256e07.json`
-- `arXiv:2407.02490` — MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 14:57:59 JST** / heartbeat: **—** / lease expiry: **09-20 16:27:59 JST**
-  - evidence: `.survey/work-queue/claims/job-research-51de804389577a72.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -195,7 +190,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **122** |
+| ready | **121** |
 
 ### 候補の重複・識別情報欠損
 
@@ -215,7 +210,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **810** |
+| inference/training/survey配下の論文Markdown実体 | **811** |
 
 ### immutable submissionの未照合
 
