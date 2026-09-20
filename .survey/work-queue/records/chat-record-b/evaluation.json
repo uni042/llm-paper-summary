@@ -1,5 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3e00451f32958b311cdc3f3c","job_id":"job-research-3cf2e0a916913e29",
- "data":{"hardware":"主要な遅延測定は単一NVIDIA A100 80GB、バッチ1。論文はArena実運用トレースの計算利用率も分析し、余剰計算で小型下書きを更新できる余地を議論する。","software":"遅延測定にllama.cppを使用。公開OSD実装あり。話題分類には67M規模の蒸留BERT分類器を利用する。","methodology":"目標モデルはVicuna-7BとFLAN-T5-XL 3B、下書きはそれぞれLLaMA-160MとT5-small 80M。Spider、GSM8K、CodeSearchNet Python、Alpaca-financeで候補数5、オンライン更新間隔8として受理率を評価する。オフライン蒸留では2エポック学習し、教師・生徒・混合サンプリングと順方向KL、逆方向KL、JSDを比較する。オンライン評価では10%データで蒸留後に固定する静的下書きを比較対象とし、直近50要求の受理率を追跡する。分布変化試験は4データ集合を各2,000件ずつ連結する。実負荷は4か月のLMSYS Chatbot Arena会話を言語・話題別に分ける。遅延はVicuna-7B/LLaMA-160MとVicuna-33B/TinyLLaMA-1.1Bを単一A100で測定する。","datasets":["Spider","GSM8K","CodeSearchNet Python","Alpaca-finance","LMSYS Chatbot Arena"],"models":["Vicuna-7B","FLAN-T5-XL 3B","LLaMA-160M","T5-small 80M","Vicuna-33B","TinyLLaMA-1.1B"],"baselines":["静的な投機的復号","10%データによるオフライン蒸留","全データを使うオフライン蒸留","Medusa-v1"],"metrics":["トークン受理率","トークン間遅延","高速化倍率","更新計算量","下書きモデル常駐メモリ"],"scope":"実機A100上の投機的復号遅延と、合成したオンラインストリームおよび実Chatbot Arena会話での適応を評価する。学習更新と推論の完全な同時実行によるサービス品質影響、最適な再生バッファ追い出し、専門下書き数の自動決定は評価範囲外である。"},
- "reservation":{"claim_id":"claim-3e00451f32958b311cdc3f3c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d9175409e1e36a47b3e6d387",
+  "job_id": "job-research-b8f01545319d9604",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d9175409e1e36a47b3e6d387",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
