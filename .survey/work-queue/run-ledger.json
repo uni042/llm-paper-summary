@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:43:15.009976+00:00",
+  "updated_at": "2026-09-20T11:44:24.791334+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:43:15.009976+00:00",
+      "last_recorded_at": "2026-09-20T11:44:24.791334+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 383,
         "audit_completed": 0,
         "discovery_completed": 210,
-        "blocked": 54,
+        "blocked": 55,
         "new_jobs": 366,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35487463402:1",
-          "recorded_at": "2026-09-20T03:47:24.558086+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35487463402",
-            "run_attempt": "1",
-            "source_sha": "249add251ff42374096117db22b65f61275d60f7"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35487667143:1",
           "recorded_at": "2026-09-20T03:55:31.051221+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35508648756:1",
+          "recorded_at": "2026-09-20T11:44:24.791334+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35508648756",
+            "run_attempt": "1",
+            "source_sha": "565ab8c6c8782f52e2c999b50483ed163e3ee7dc"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24772,6 +24772,14 @@
           "title": "SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-0f282c93dba72c85",
+          "type": "research",
+          "canonical_id": "arXiv:2607.06601",
+          "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -28112,7 +28120,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
