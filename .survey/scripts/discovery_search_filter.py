@@ -289,6 +289,7 @@ def collect_until_unseen(
     next_cursor: str | None = cursor
     provider_exhausted = False
     max_pages_reached = False
+    provider_progress: dict[str, Any] | None = None
 
     while len(results) < target_unseen:
         if pages_fetched >= max_pages:
@@ -304,6 +305,9 @@ def collect_until_unseen(
         next_value = page.get("next_cursor")
         if next_value is not None and not isinstance(next_value, str):
             raise TypeError("next_cursor must be a string or null")
+        page_progress = page.get("provider_progress")
+        if provider_progress is None and isinstance(page_progress, dict):
+            provider_progress = dict(page_progress)
 
         filtered = filter_search_batch(
             records,
@@ -378,6 +382,7 @@ def collect_until_unseen(
         "cross_page_alias_duplicate_filtered_count": cross_page_alias_duplicate_filtered_count,
         "unresolved_identity_count": unresolved_identity_count,
         "unseen_result_count": len(results),
+        "provider_progress": provider_progress,
     }
 
 
