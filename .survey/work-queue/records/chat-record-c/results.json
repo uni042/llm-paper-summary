@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-61774f4ac669457f0e035bd8","job_id":"job-research-9c3fc1bfa46c87d0","data":{"overview":"Prompt Cacheは長い共通入力を再計算せずKV状態を読み出すことでTTFTを大幅に短縮する。LongBench平均約5KトークンではGPUメモリ保存時5〜10倍、CPUメモリからGPUへ転送する場合でも1.5〜3倍の短縮を示す。CPU推論では注意計算が相対的に高価なため最大70倍まで改善した。一方、デコード時間自体は変わらず、長い出力ではエンドツーエンド改善率が小さくなる。","key_results":[{"metric":"GPU TTFT高速化","value":"GPUメモリ保存で5〜10倍、CPUメモリ保存で1.5〜3倍","baseline":"通常KVキャッシュ","condition":"Llama2 7B、LongBench平均約5Kトークン、RTX 4090/A40/A100","interpretation":"キャッシュ済みKVをGPUから直接読む構成が上限、CPUから転送する構成が下限に相当し、再計算削減が転送費を上回る。"},{"metric":"CPU TTFT高速化","value":"Intelで最大70倍、AMDで最大20倍","baseline":"通常KVキャッシュ","condition":"Llama2 7B、LongBench、i9-13900KとRyzen 9 7950X","interpretation":"CPUでは長文注意計算が高価なため、メモリコピーへ置き換える効果がGPUより大きい。"},{"metric":"3K文脈のTTFT","value":"900 msから90 ms","baseline":"通常KVキャッシュ","condition":"RTX 4090、Llama2 7B、3K文脈","interpretation":"TTFTは約10倍短縮する一方、後続トークン時間は双方約32 msで同じ。"},{"metric":"KV保存メモリ","value":"Llama 7Bで0.50 MB/token、Llama 70Bで2.5 MB/token","baseline":"なし","condition":"16-bit KV状態","interpretation":"大規模モデルでは1Kトークンのモジュールだけで数GBとなり、GPUだけで多数モジュールを保持するのは難しい。"},{"metric":"コード生成事例","value":"GPU TTFT 4倍改善","baseline":"通常生成","condition":"CodeLlama 7B、複数ソースファイルをモジュール化","interpretation":"構造化された再利用文脈を複数組み合わせる用途でも出力を保ったまま高速化できる。"}],"negative_results":"Prompt Cacheが直接減らすのは先頭トークンまでの入力計算で、後続デコードのトークン時間は変わらない。そのため生成トークン数が多いほど総応答時間に占める効果は薄まる。CPU保存はGPU保存よりホスト・デバイス転送が増え、キャッシュされない文章比率が高いデータでは改善も小さい。さらにKV保存量はモデル規模とキャッシュトークン数に比例し、Llama 70Bでは1Kトークン当たり約2.5GBとなる。","interpretation":"通常プリフィルの自己注意計算は文脈長に対して二次的に増えるのに対し、キャッシュKVのメモリコピーは線形に増えるため、長い共通文脈ほど差が広がる。大きいモデルでも注意計算量の増加に対してコピー増加は小さく、再利用率が高いサービスほど有利になる。","quality_impact":"モジュールを独立に符号化するためモジュール外への注意を省く近似は入るが、LongBenchのLlama2、MPT、Falconでは多くの指標が比較対象と近く、論文は全体として精度を維持すると評価する。ただしPassage Retrievalなど個別条件では数ポイントの低下も見られるため完全な数値同一性を保証する方式ではない。"},"reservation":{"claim_id":"claim-61774f4ac669457f0e035bd8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-58fed7e57ba9f56b62bd697a",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "data": {
+    "overview": "Prompt Cacheは長い共通入力を再計算せずKV状態を読み出すことでTTFTを大幅に短縮する。LongBench平均約5KトークンではGPUメモリ保存時5〜10倍、CPUメモリからGPUへ転送する場合でも1.5〜3倍の短縮を示す。CPU推論では注意計算が相対的に高価なため最大70倍まで改善した。一方、デコード時間自体は変わらず、長い出力ではエンドツーエンド改善率が小さくなる。",
+    "key_results": [
+      {
+        "metric": "GPU TTFT高速化",
+        "value": "GPUメモリ保存で5〜10倍、CPUメモリ保存で1.5〜3倍",
+        "baseline": "通常KVキャッシュ",
+        "condition": "Llama2 7B、LongBench平均約5Kトークン、RTX 4090/A40/A100",
+        "interpretation": "キャッシュ済みKVをGPUから直接読む構成が上限、CPUから転送する構成が下限に相当し、再計算削減が転送費を上回る。"
+      },
+      {
+        "metric": "CPU TTFT高速化",
+        "value": "Intelで最大70倍、AMDで最大20倍",
+        "baseline": "通常KVキャッシュ",
+        "condition": "Llama2 7B、LongBench、i9-13900KとRyzen 9 7950X",
+        "interpretation": "CPUでは長文注意計算が高価なため、メモリコピーへ置き換える効果がGPUより大きい。"
+      },
+      {
+        "metric": "3K文脈のTTFT",
+        "value": "900 msから90 ms",
+        "baseline": "通常KVキャッシュ",
+        "condition": "RTX 4090、Llama2 7B、3K文脈",
+        "interpretation": "TTFTは約10倍短縮する一方、後続トークン時間は双方約32 msで同じ。"
+      },
+      {
+        "metric": "KV保存メモリ",
+        "value": "Llama 7Bで0.50 MB/token、Llama 70Bで2.5 MB/token",
+        "baseline": "なし",
+        "condition": "16-bit KV状態",
+        "interpretation": "大規模モデルでは1Kトークンのモジュールだけで数GBとなり、GPUだけで多数モジュールを保持するのは難しい。"
+      },
+      {
+        "metric": "コード生成事例",
+        "value": "GPU TTFT 4倍改善",
+        "baseline": "通常生成",
+        "condition": "CodeLlama 7B、複数ソースファイルをモジュール化",
+        "interpretation": "構造化された再利用文脈を複数組み合わせる用途でも出力を保ったまま高速化できる。"
+      }
+    ],
+    "negative_results": "Prompt Cacheが直接減らすのは先頭トークンまでの入力計算で、後続デコードのトークン時間は変わらない。そのため生成トークン数が多いほど総応答時間に占める効果は薄まる。CPU保存はGPU保存よりホスト・デバイス転送が増え、キャッシュされない文章比率が高いデータでは改善も小さい。さらにKV保存量はモデル規模とキャッシュトークン数に比例し、Llama 70Bでは1Kトークン当たり約2.5GBとなる。",
+    "interpretation": "通常プリフィルの自己注意計算は文脈長に対して二次的に増えるのに対し、キャッシュKVのメモリコピーは線形に増えるため、長い共通文脈ほど差が広がる。大きいモデルでも注意計算量の増加に対してコピー増加は小さく、再利用率が高いサービスほど有利になる。",
+    "quality_impact": "モジュールを独立に符号化するためモジュール外への注意を省く近似は入るが、LongBenchのLlama2、MPT、Falconでは多くの指標が比較対象と近く、論文は全体として精度を維持すると評価する。ただしPassage Retrievalなど個別条件では数ポイントの低下も見られるため完全な数値同一性を保証する方式ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-58fed7e57ba9f56b62bd697a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
