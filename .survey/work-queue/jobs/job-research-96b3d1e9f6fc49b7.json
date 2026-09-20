@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-96b3d1e9f6fc49b7",
+  "type": "research",
+  "parent_job_id": "job-d6ac1ce03302d648",
+  "priority": 98,
+  "canonical_id": "arXiv:2608.07458",
+  "arxiv_id": "2608.07458",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+  "source_url": "https://www.semanticscholar.org/paper/6b1afffee709753c80d1959fb99cbf558b9b32cd",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07458-coinrag-contextualized-information-nugget-kv-cache-reuse-for-long-context-rag.md",
+  "selection_reason": "RAGのchunk単位KV再利用を細粒度semantic nuggetへ分解しoffline計算済みKVを合成。LongBenchで高速prefill予算下のF1を平均5.3%相対改善。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:11:26+00:00"
+}

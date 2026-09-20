@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T22:02:59.871943+00:00",
+  "updated_at": "2026-09-20T22:14:35.637622+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -29980,6 +29980,335 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0700JST-hourly00-discovery-backward-01.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35540832459",
+      "first_recorded_at": "2026-09-20T22:14:35.637622+00:00",
+      "last_recorded_at": "2026-09-20T22:14:35.637622+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 6,
+        "blocked": 0,
+        "new_jobs": 33,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35540832459:1",
+          "recorded_at": "2026-09-20T22:14:35.637622+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35540832459",
+            "run_attempt": "1",
+            "source_sha": "038569c12f8cd423257ce90c761dd95d2e779fe6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-03c06d8367dd20c5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6227c77115c9655a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6f6155b9ee5b5eac",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ccd6957cbc0e3f2b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d6ac1ce03302d648",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e4f8f4196ff22878",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-03c06d8367dd20c5",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6227c77115c9655a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6f6155b9ee5b5eac",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ccd6957cbc0e3f2b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-d6ac1ce03302d648",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e4f8f4196ff22878",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-03793bd297310cea",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15636",
+          "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash"
+        },
+        {
+          "job_id": "job-research-289804590f1b694f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3832810.3832827",
+          "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape"
+        },
+        {
+          "job_id": "job-research-2c7017c3e2e97290",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/TCAD.2025.3648674",
+          "title": "DuoPIM: RRAM–DRAM Hybrid PIM Acceleration for Flexible-Batch LLM Decoding"
+        },
+        {
+          "job_id": "job-research-324d91b08021a955",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.19659",
+          "title": "FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration"
+        },
+        {
+          "job_id": "job-research-384393fce738e0be",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08135",
+          "title": "KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization"
+        },
+        {
+          "job_id": "job-research-3c0256304cd034ce",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.11186",
+          "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration"
+        },
+        {
+          "job_id": "job-research-435dfcefc35588f8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3838177.3841737",
+          "title": "FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure"
+        },
+        {
+          "job_id": "job-research-51f4efd90b7a5e12",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09240",
+          "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution"
+        },
+        {
+          "job_id": "job-research-52d0317097624bef",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.06763",
+          "title": "Trees from Marginals: Autoregressive drafting with factorized priors"
+        },
+        {
+          "job_id": "job-research-548d7e4cd563f6b8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.16824",
+          "title": "CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents"
+        },
+        {
+          "job_id": "job-research-55e652fd722a1d9f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/JIOT.2026.3709703",
+          "title": "Co-Optimizing Request Scheduling and KV Caching for Edge LLM Serving"
+        },
+        {
+          "job_id": "job-research-68365ee603a68033",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.04974",
+          "title": "AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks"
+        },
+        {
+          "job_id": "job-research-7a81d607f9538816",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.25053",
+          "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels"
+        },
+        {
+          "job_id": "job-research-82ca57f0d331b40f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3745756.3809243",
+          "title": "VLMCache: Efficient On-Device Vision-Language Model Inference"
+        },
+        {
+          "job_id": "job-research-96b3d1e9f6fc49b7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.07458",
+          "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG"
+        },
+        {
+          "job_id": "job-research-97a84b19cac36f28",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.17826",
+          "title": "Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State"
+        },
+        {
+          "job_id": "job-research-a5d6d7156c3ffec6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3789240.3829159",
+          "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O"
+        },
+        {
+          "job_id": "job-research-a748d42a4b0082c7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17107",
+          "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable"
+        },
+        {
+          "job_id": "job-research-b865a4d050e3e427",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.14778/3827998.3828047",
+          "title": "PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage"
+        },
+        {
+          "job_id": "job-research-baad806afa0723b4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.14672",
+          "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows"
+        },
+        {
+          "job_id": "job-research-bec5c755173b872c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.13126",
+          "title": "MiniPIC: Flexible Position-Independent Caching in <100LOC"
+        },
+        {
+          "job_id": "job-research-c27f3a6ec993f9ab",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01651",
+          "title": "Bole: Efficient Tree Speculation for Hybrid-Attention Language Models"
+        },
+        {
+          "job_id": "job-research-c324e0325a4a2def",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.14647",
+          "title": "D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding"
+        },
+        {
+          "job_id": "job-research-ceb9b2d0b0c9c441",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3832810.3832814",
+          "title": "SSQT: A Hardware-Friendly Fusion Compression Framework of Structured Sparsification and Sensitivity-Driven Quantization for Large-Scale Language Models"
+        },
+        {
+          "job_id": "job-research-dde4fdefdee6c368",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11687",
+          "title": "Structured Transforms for Low-Overhead Quantization of Language Models"
+        },
+        {
+          "job_id": "job-research-e8fc0b179d448dda",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.28069",
+          "title": "SemPIC: Learning Semantic Position-Independent KV Caches"
+        },
+        {
+          "job_id": "job-research-f2c000a0ecb53008",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3832810.3832922",
+          "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json",
+        ".survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json",
+        ".survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json",
+        ".survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-distserve-08b.json",
+        ".survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-pagedattention-05b.json",
+        ".survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,

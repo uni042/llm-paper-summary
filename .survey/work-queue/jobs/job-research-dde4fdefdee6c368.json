@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-dde4fdefdee6c368",
+  "type": "research",
+  "parent_job_id": "job-6227c77115c9655a",
+  "priority": 98,
+  "canonical_id": "arXiv:2609.11687",
+  "arxiv_id": "2609.11687",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Structured Transforms for Low-Overhead Quantization of Language Models",
+  "source_url": "https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md",
+  "selection_reason": "Kashin分解のdense random transformを符号ランダム化DCTへ置換してO(N log N)化し、2-bit factor codeをnative 2-bit hardware向けに構造化。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:12:13+00:00"
+}

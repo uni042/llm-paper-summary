@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-97a84b19cac36f28",
+  "type": "research",
+  "parent_job_id": "job-e4f8f4196ff22878",
+  "priority": 100,
+  "canonical_id": "arXiv:2608.17826",
+  "arxiv_id": "2608.17826",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State",
+  "source_url": "https://www.semanticscholar.org/paper/347aa172a1463ddb6e3b56ae21965f57fdfe7039",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md",
+  "selection_reason": "階層KV cacheの外部保持量と復元時ローカル作業集合を分離しwindowed restorationでpeak stagingをO(W)化。SSD最適化で512K restore TTFT 43.1→17.6秒。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:11:38+00:00"
+}

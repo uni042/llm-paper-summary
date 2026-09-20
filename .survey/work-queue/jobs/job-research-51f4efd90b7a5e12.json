@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-51f4efd90b7a5e12",
+  "type": "research",
+  "parent_job_id": "job-6227c77115c9655a",
+  "priority": 96,
+  "canonical_id": "arXiv:2609.09240",
+  "arxiv_id": "2609.09240",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+  "source_url": "https://www.semanticscholar.org/paper/ad439a49b2602753b8acef14613508b559588e6e",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md",
+  "selection_reason": "Qwen3-8Bのpost-training ternarisationをlossless packingと直接packed executionまで実測し15.52 token/s・7.35GiBを報告。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:12:13+00:00"
+}

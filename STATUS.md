@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:14:16 JST**
+> 自動生成: **2026-09-21 07:14:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **304** |
-| 未claim Research job | **304** |
+| 収録候補論文 | **331** |
+| 未claim Research job | **331** |
 | 直近24hの検証済みResearch収録 | **74** |
 | 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間26分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **304** |
+| canonical_id確認済みの一意な候補論文 | **331** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **304** |
+| 非終端Research job合計 | **331** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **44** | **14** | **2** | **7** | **0** | **0** | **46** |
-| 合計 | **44** | **20** | **6** | **7** | **0** | **0** | **46** |
+| Discovery | **50** | **14** | **8** | **1** | **0** | **0** | **46** |
+| 合計 | **50** | **20** | **12** | **1** | **0** | **0** | **46** |
 
 - 最新Discovery runの耐久探索round: **14件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -79,6 +79,30 @@
   - result: `.survey/work-queue/results/20260921T0707JST-hourly00-discovery-backward-repair-01b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0707JST-hourly00-discovery-backward-repair-01b.json`
   - 探索軸: repository structured backward references
+- **09-21 07:11:14 JST** job `job-03c06d8367dd20c5` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json`
+  - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
+- **09-21 07:11:26 JST** job `job-d6ac1ce03302d648` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json`
+  - 探索軸: forward citations of KVLink efficient KV cache reuse
+- **09-21 07:11:38 JST** job `job-e4f8f4196ff22878` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json`
+  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
+- **09-21 07:11:49 JST** job `job-ccd6957cbc0e3f2b` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-distserve-08b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-distserve-08b.json`
+  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
+- **09-21 07:12:01 JST** job `job-6f6155b9ee5b5eac` / 候補 **4件**
+  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-pagedattention-05b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-pagedattention-05b.json`
+  - 探索軸: forward citations of PagedAttention/vLLM memory-efficient LLM serving
+- **09-21 07:12:13 JST** job `job-6227c77115c9655a` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json`
+  - 探索軸: forward citations of SmoothQuant efficient LLM inference quantization
 - **09-21 06:11:09 JST** job `job-435d396a91e7c8ca` / 候補 **2件**
   - result: `.survey/work-queue/results/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json`
@@ -87,30 +111,6 @@
   - result: `.survey/work-queue/results/20260921T0619JST-hourly00-discovery-backward-required.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0619JST-hourly00-discovery-backward-required.json`
   - 探索軸: repository-wide structured references for LLM inference systems
-- **09-21 05:41:36 JST** job `job-5079ad94e40e3371` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-01-backward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
-  - 探索軸: backward structured references across repository
-- **09-21 05:41:48 JST** job `job-2fae2e91bed27cba` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json`
-  - 探索軸: forward citations of vLLM PagedAttention
-- **09-21 05:42:11 JST** job `job-f7229f717fccdf28` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json`
-  - 探索軸: recent SSD NVMe KV cache offload for LLM inference
-- **09-21 05:42:23 JST** job `job-50d21e6a131eb546` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-04-moe-cache.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-04-moe-cache.json`
-  - 探索軸: recent MoE expert cache offload serving systems
-- **09-21 05:48:01 JST** job `job-cd7ebe8d747babfe` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-05-survey.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-05-survey.json`
-  - 探索軸: recent surveys of LLM inference serving memory and systems
-- **09-21 05:48:09 JST** job `job-5cd466dd55f046c8` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-06-specdecode.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
-  - 探索軸: recent speculative decoding serving systems
 
 ### 直近タスク
 
@@ -152,7 +152,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **12件** / 候補: **46件**
+- 耐久探索round: **14件** / immutable submission: **14件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **6件** / 候補: **46件**
 - 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of DistServe disaggregated prefill-decode LLM serving / repository structured backward references batch 2
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
@@ -185,15 +185,15 @@
 - round `hourly00-forward-sequoia-07b` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json`
   - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json` (`ok=true`)
 - round `hourly00-forward-kvlink-03b` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json`
   - 探索軸: forward citations of KVLink efficient KV cache reuse
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json` (`ok=true`)
 - round `hourly00-forward-lmcache-04b` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json`
   - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -220,7 +220,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **304** |
+| ready | **331** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **933** |
+| 成功result未照合のimmutable submission | **927** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **219** |
+| └ Discovery | **213** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
