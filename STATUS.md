@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 04:01:50 JST**
+> 自動生成: **2026-09-21 04:03:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **208** |
 | 未claim Research job | **208** |
 | 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間13分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間15分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **6** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **6** | **7** | **5** | **0** | **0** | **0** | **5** |
+| Discovery | **0** | **1** | **0** | **1** | **0** | **0** | **2** |
+| 合計 | **6** | **7** | **4** | **1** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -141,13 +141,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-20 01:58 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **5件**
-- 探索軸: MoE expert cache offload placement prefetch inference systems
-- round `specialist-moe-offload-openalex-02` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260920T0204JST-specialist-moe-openalex-round1.json`
-  - 探索軸: MoE expert cache offload placement prefetch inference systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260920T0204JST-specialist-moe-openalex-round1.json` (`ok=true`)
+- 最新観測run: **2026-09-21 04:01 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: repository structured references backward citation curation
+- round `scheduled-backward-structured-references-01` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260921T0403JST-discovery-backward-01.json`
+  - 探索軸: repository structured references backward citation curation
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -202,10 +202,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **906** |
+| 成功result未照合のimmutable submission | **907** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **192** |
+| └ Discovery | **193** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
