@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-a23c984134283281d819be9c",
-  "job_id": "job-research-1d4c48939bbf9fa8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a23c984134283281d819be9c",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a23c984134283281d819be9c","job_id":"job-research-1d4c48939bbf9fa8",
+ "data":{"canonical_id":"arXiv:2509.01322","arxiv_id":"2509.01322","doi":"10.48550/arXiv.2509.01322","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI","cs.DC","cs.LG"]},"title":"LongCat-Flash Technical Report","summary":"LongCat-Flashは総5600億パラメータのMoEモデルで、トークンごとの難しさに応じて実計算を動的配分するゼロ計算専門家と、専門家並列通信を前段の密FFN計算へ重ねるショートカット接続MoEを組み合わせる。ルータは通常専門家と入力をそのまま返すゼロ計算専門家からK個を選び、通常専門家の平均選択数をPID制御付きバイアスで約8個へ維持することで、実活性パラメータを18.6B～31.3B、平均27Bへ変動させる。さらにScMoEは層をまたぐ短絡で全対全通信と密計算の重複窓を拡大する。20兆超トークンの学習を30日以内に完了し、H800上の大規模推論で100トークン/秒超、100万出力トークン当たり0.70ドルを報告する。","list_summary":"ゼロ計算専門家でトークンごとの活性計算量を18.6B～31.3Bへ動的配分し、ScMoEで専門家通信を密計算へ重ね、560B MoEの学習・推論効率を高める。","authors":["Meituan LongCat Team"],"authors_affiliations":"Meituan LongCat Team","published":"2025-09-01","publication":"arXiv:2509.01322v2","publication_type":"arXivプレプリント","publication_status":"2025年9月1日v1投稿、2025年9月19日v2改訂。","lineage":"adaptive-expert-computation-compression","topics":["混合専門家モデル","動的計算配分","ゼロ計算専門家","専門家並列","計算通信重複","大規模学習"],"importance":"ゼロ計算専門家を560B級実モデルへ展開し、トークン単位の可変活性パラメータと通信重複を大規模学習・推論で実証する。","hardware_evaluation":"数万アクセラレータ規模で学習し、H800大規模配備で推論性能を測定。","hardware_details":"H800 GPUを推論評価に使用。学習は数万アクセラレータ規模。ノード内NVLinkとノード間RDMAを専門家並列通信に使用。","quality_effect":"ゼロ計算専門家の計算量一致比較で検証損失を改善し、ScMoEは複数モデル規模・注意方式で基準モデルとほぼ同一の学習損失曲線を示す。","bottlenecks":["全トークンへ固定計算量を割り当てる非効率","専門家並列の全対全通信","大規模MoEのルータ負荷不均衡","GPU/CPUスケジューリング負担"],"evidence_locations":["§2 Architecture","§3 Pre-Training","§5 Training Infrastructures","§6 Inference and Deployment","Appendix A"],"source":"https://arxiv.org/abs/2509.01322","sources":["https://arxiv.org/abs/2509.01322","https://arxiv.org/html/2509.01322v2","https://arxiv.org/pdf/2509.01322"],"code":"https://github.com/meituan-longcat/LongCat-Flash-Chat","implementation":"モデル重みをMITライセンスで公開し、SGLangとvLLM向け配備対応を提供。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2410.07348","title":"MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts"},{"canonical_id":"arXiv:2404.05019","title":"Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts"},{"canonical_id":"arXiv:2405.04434","title":"DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"},{"canonical_id":"arXiv:2408.15664","title":"Auxiliary-Loss-Free Load Balancing Strategy for Mixture-of-Experts"}],"references_checked_at":"2026-09-20","references_source":"arXiv HTML参考文献節","references_total":4},
+ "reservation":{"claim_id":"claim-a23c984134283281d819be9c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}
 }
