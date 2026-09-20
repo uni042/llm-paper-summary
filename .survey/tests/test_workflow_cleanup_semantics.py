@@ -62,6 +62,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/docs/survey-workflow/candidate-buffer-policy.md",
             ".survey/docs/survey-workflow/claim-serial-policy.md",
             ".survey/docs/survey-workflow/discovery-continuation-policy.md",
+            ".survey/docs/survey-workflow/continuation-policy.json",
             ".survey/docs/survey-workflow/discovery-exhaustive-run-policy.md",
             ".survey/docs/survey-workflow/discovery-search-filter.md",
             ".survey/docs/survey-workflow/discovery-search-loop.md",
