@@ -2,63 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-6d86d84ba0b861b36b84973e",
-  "job_id": "job-research-8b52cc53189781e3",
-  "data": {
-    "canonical_id": "arXiv:2402.02750",
-    "arxiv_id": "2402.02750",
-    "doi": "10.48550/arXiv.2402.02750",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
-    "summary": "KIVIは、LLMのKVキャッシュ分布を分析し、キーには固定チャネルの外れ値があるためチャネル単位、値にはその構造がなく注意出力でトークン混合されるためトークン単位で量子化すべきと示した。これに基づき、古いKVを2ビットのグループ量子化で保持し直近最大128トークンを高精度残差として残す、追加学習不要の非対称KV量子化を提案する。CUDA/Triton実装で逆量子化と行列積を融合し、Llama系で品質をほぼ維持しつつピークメモリを最大2.6分の1、バッチを最大4倍、実ワークロードのスループットを2.35〜3.47倍にした。",
-    "list_summary": "キーはチャネル単位、値はトークン単位で2ビット量子化し、直近KVだけ高精度保持することで追加学習なしにKVメモリと帯域を削減し最大3.47倍のスループットを得る。",
-    "authors": [
-      "Zirui Liu",
-      "Jiayi Yuan",
-      "Hongye Jin",
-      "Shaochen (Henry) Zhong",
-      "Zhaozhuo Xu",
-      "Vladimir Braverman",
-      "Beidi Chen",
-      "Xia Hu"
-    ],
-    "published": "2024-02-05",
-    "publication": "ICML 2024 / arXiv:2402.02750",
-    "publication_type": "Conference",
-    "publication_status": "Published",
-    "lineage": "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
-    "topics": [
-      "KVキャッシュ量子化",
-      "2ビット量子化",
-      "長文脈推論",
-      "GPUメモリ",
-      "推論スループット"
-    ],
-    "importance": "KVのキーと値で最適な量子化軸が異なることを分布と注意演算から示し、2ビットKV量子化を実用的なGPU実装まで落とし込んだ代表的手法。",
-    "hardware_evaluation": "効率評価は単一NVIDIA A100 80GB。精度評価はLlama/Llama-2、Falcon、Mistral系。",
-    "quality_effect": "Llama/Mistralでは2ビットKVでLM-Evalの精度低下は概ね2%以内、LongBench平均も16ビットに近い。Falcon-7BはMQAで元々KVが小さく、2ビットでは低下が大きいため4ビットが必要。",
-    "source": "https://arxiv.org/abs/2402.02750",
-    "sources": [
-      "https://arxiv.org/abs/2402.02750",
-      "https://arxiv.org/html/2402.02750"
-    ],
-    "implementation": "Hugging Face Transformers上に実装。CUDAで逆量子化をタイル行列積へ融合し、Tritonでグループ量子化カーネルを実装。重み専用量子化と併用可能。",
-    "code": "https://github.com/jy-yuan/KIVI",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 46
-  },
+  "attempt_id": "attempt-391a60b20009f8118bae73b5",
+  "job_id": "job-research-8fc74c0fbb46c30e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6d86d84ba0b861b36b84973e",
+    "claim_id": "claim-391a60b20009f8118bae73b5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

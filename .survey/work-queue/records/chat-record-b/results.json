@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6d86d84ba0b861b36b84973e",
-  "job_id": "job-research-8b52cc53189781e3",
-  "data": {
-    "overview": "KIVIはキーと値に異なる量子化軸を使うことで、単純な2ビットKV量子化で生じる精度崩壊を回避した。Llama/MistralではLM-Evalの低下を概ね2%以内、LongBench平均を16ビットとほぼ同等に保ちながらKVを2ビット化できる。Llama-2-7Bの実ワークロードではモデル重み込みピークメモリを最大2.6分の1にし、同程度のメモリ上限でバッチを最大4倍へ拡大して2.35〜3.47倍のスループットを得た。",
-    "key_results": [
-      {
-        "metric": "ピークメモリ削減",
-        "value": "最大2.6倍少ない",
-        "baseline": "FP16 KVキャッシュ",
-        "condition": "Llama-2-7B、モデル重み込み、単一A100 80GB",
-        "interpretation": "KVだけでなく総ピークメモリが大きく減るため、同一GPUで同時要求数を増やせる。"
-      },
-      {
-        "metric": "最大バッチサイズ",
-        "value": "最大4倍",
-        "baseline": "FP16 KVキャッシュでメモリ不足になるバッチ",
-        "condition": "ShareGPT型ワークロード、平均入力161・出力338トークン",
-        "interpretation": "KV容量削減が直接バッチ余地へ変換され、GPU計算資源をより高い並列度で利用できる。"
-      },
-      {
-        "metric": "スループット",
-        "value": "2.35〜3.47倍",
-        "baseline": "FP16 KVキャッシュ",
-        "condition": "Llama-2-7B、A100 80GB、残差長32/128を含む実装",
-        "interpretation": "容量削減とKV読み出し量削減に加え、より大きいバッチを使えることが実ワークロードの処理量増加へつながる。"
-      },
-      {
-        "metric": "キー注意スコア相対誤差",
-        "value": "チャネル単位9.60",
-        "baseline": "トークン単位47.00",
-        "condition": "Llama-2-13B、2ビット相当の分布解析",
-        "interpretation": "固定チャネル外れ値をチャネルごとのスケールへ隔離することがキー量子化の主要因である。"
-      },
-      {
-        "metric": "値の注意出力相対誤差",
-        "value": "トークン単位3.55",
-        "baseline": "チャネル単位49.89",
-        "condition": "Llama-2-13B",
-        "interpretation": "値では単純な再構成誤差より、疎な注意で重要トークンの誤差を独立に保つことが重要である。"
-      }
-    ],
-    "negative_results": "キーと値の両方をトークン単位2ビットにするとLlama-2-13B CoQAが66.37から52.93へ低下し、両方をチャネル単位にすると2.88まで崩壊する。Falcon-7BはMQAによりKVが元々強く圧縮されており2ビットKIVIでは精度低下が比較的大きく、4ビットが必要になる。グループサイズを128へ広げるとGSM8K性能が20.77付近から17.29へ低下する。量子化処理自体にもオーバーヘッドが残り、著者は前後演算との追加融合を今後の課題としている。",
-    "interpretation": "KVキャッシュは一様な活性値ではなく、キーと値で注意演算中の役割と誤差感度が異なる。極低ビット化を成功させた理由は、キーのチャネル外れ値と値のトークン混合という異なる誤差源へ量子化軸を合わせたこと、さらに直近KVを高精度で残して難しい局所依存を保護したことにある。システム側では逆量子化を行列積へ融合し、圧縮したデータを再度全面展開しないことで帯域削減を保持する。",
-    "quality_impact": "Llama/Mistralの主要生成評価では2ビット化による低下は小さい。LongBench平均はLlama2-7Bで44.52→44.27、13Bで44.85→44.69、Mistral-7Bで46.58→45.85。Llama-2-13BのGSM8Kは22.67→20.77と難しい推論で差が出るが、高精度残差窓が低下を緩和する。"
-  },
+  "attempt_id": "attempt-391a60b20009f8118bae73b5",
+  "job_id": "job-research-8fc74c0fbb46c30e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6d86d84ba0b861b36b84973e",
+    "claim_id": "claim-391a60b20009f8118bae73b5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
