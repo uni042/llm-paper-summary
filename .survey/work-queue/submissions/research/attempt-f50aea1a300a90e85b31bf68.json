@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-f50aea1a300a90e85b31bf68",
+  "job_id": "job-research-2e7cd1c4e1dc851d",
+  "claim_id": "claim-f50aea1a300a90e85b31bf68",
+  "worker_id": "scheduled-chat-llm-survey",
+  "status": "blocked",
+  "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md",
+  "reason": "Primary-source retrieval blocked in this run. The official arXiv abstract page for arXiv:2608.06989 was accessible and verified title/authors/date/abstract, but materially distinct official full-text routes https://arxiv.org/html/2608.06989, https://arxiv.org/pdf/2608.06989, and https://arxiv.org/e-print/2608.06989 each returned a retrieval DisabledError in the available web runtime. Search indexing exposed third-party mirrors/reviews, but those are not acceptable substitutes for full primary-source reading, so no five-slot scientific content was inferred from them. Retry the same paper through an official arXiv full-text/PDF/e-print route in a later run."
+}
