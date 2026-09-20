@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:34:23 JST**
+> 自動生成: **2026-09-20 18:34:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **102** |
+| 収録候補論文 | **101** |
 | 未claim Research job | **101** |
-| 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 18:33:09 JST（1分前）** |
+| 直近24hの検証済みResearch収録 | **81** |
+| 最終検証済みResearch収録 | **09-20 18:34:30 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **102** |
+| canonical_id確認済みの一意な候補論文 | **101** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **102** |
+| 非終端Research job合計 | **101** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **37** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **3** | **2** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **3** | **3** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:34:30 JST** [research] `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
+  - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
+  - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json`
+  - paper: `papers/inference/10-sparse-attention/2026-delta.md`
 - **09-20 18:33:09 JST** [research] `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
   - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
   - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-f132295037f6bf230d13b845.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f132295037f6bf230d13b845.json`
   - paper: `papers/inference/10-sparse-attention/2024-2410.13276-seerattention.md`
-- **09-20 16:40:00 JST** [research] `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models
-  - job: `.survey/work-queue/jobs/job-research-98f40fbe8624cabd.json`
-  - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json` (job `job-research-529f8795f6dde556`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
+  - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
+  - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json`
+  - paper: `papers/inference/10-sparse-attention/2026-delta.md`
 - **成功** `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
   - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
   - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
@@ -155,10 +159,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:33:33 JST** / heartbeat: **—** / lease expiry: **09-20 20:03:33 JST**
-  - evidence: `.survey/work-queue/claims/job-research-529f8795f6dde556.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -178,7 +180,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **102** |
+| ready | **101** |
 
 ### 候補の重複・識別情報欠損
 
@@ -198,7 +200,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **833** |
+| inference/training/survey配下の論文Markdown実体 | **834** |
 
 ### immutable submissionの未照合
 
@@ -206,8 +208,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **758** |
-| └ Research | **572** |
+| 成功result未照合のimmutable submission | **757** |
+| └ Research | **571** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
