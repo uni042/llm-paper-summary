@@ -1,0 +1,158 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-alloc-moe",
+  "collector_id": "manual-user-adaptive-max-alloc-moe",
+  "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2604.08133 (budget-aware expert activation allocation)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2604.08133/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b8c89cdd8d4c71d9facda9b599bf3bc145681ef",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:34:52.118849+00:00",
+  "results": [
+    {
+      "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+      "source_url": "https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Recent work has shown that fine-tuning decoder-only large language models (LLMs) for retrieval yields strong first-stage retrievers, with effectiveness improving as backbones grow in size. However, every query and document must pass through the full model, so encoding cost increases with model size. Mixture-of-Experts (MoE) LLMs activate only a subset of parameters per token and are widely used to scale generative models, yet remain underexplored as retrievers. We systematically study MoE backbones for retrieval by training MoE and dense LLMs from several families using the same procedure, evaluating them across diverse datasets, and measuring query encoding time under the same serving configuration. We show that MoE retrievers outperform dense retrievers with comparable active parameter counts by up to 3.0 nDCG@10 points on BEIR. One of our strongest MoE retrievers matches an 8B dense retriever with 59% fewer active parameters and 18% lower query encoding time. We further show that the number of experts used for query encoding can be reduced without retraining or re-indexing, retaining more than 99% of retrieval effectiveness while reducing query encoding time by up to 26%. Recent rerankers provide only modest additional gains over strong MoE first stages, which often match or exceed the reranked configurations we evaluate. Together, these results show that MoE LLMs can be strong and efficient first-stage retrievers.",
+      "canonical_id": "arXiv:2609.13486",
+      "arxiv_id": "2609.13486",
+      "authors": [
+        "Anubhav Shrestha",
+        "Safal Shrestha",
+        "Minwu Kim",
+        "Torsten Suel",
+        "Keith Ross"
+      ]
+    },
+    {
+      "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+      "source_url": "https://www.semanticscholar.org/paper/e37a91ba84a94b2c9ac665d1ad20de62ab449a62",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Mixture-of-experts (MoE) models have recently moved beyond routing a fixed number of complete experts. Shared-expert designs preserve reusable knowledge, fine-grained methods vary computation within experts, and dynamic routers adapt the number of active experts. Yet these decisions are usually made independently, overlooking a basic dependency: extracting reusable computation changes both what remains and how much expert capacity the remainder needs. We study this dependency by decomposing sparsely upcycled feed-forward experts into key-value channels. Co-activated experts align at a subset of value positions; removing these positions changes expert preference; and greater shared coverage is associated with lower residual expert demand. These observations lead to one principle: share first, then route what remains. We instantiate it in UniF-MoE, a unified framework for token-adaptive MoE computation. Each expert is partitioned into aligned blocks. A shared-demand score sets the shared block count and pathway weight, key prototypes select the shared content, and the complementary demand determines the residual expert count through cumulative routing mass. A Gram regularizer separates and normalizes router embeddings, promoting diverse routing directions, sparse expert overlap, and a simple routing geometry. Experiments on DomainBed and GLUE show that this unified design improves predictive performance over representative static and dynamic MoEs while reducing activated computation, inference latency, and memory. Code is available at https://github.com/existence0420/UniF-MoE.",
+      "canonical_id": "arXiv:2608.10392",
+      "arxiv_id": "2608.10392",
+      "authors": [
+        "Gong-Li Zhang",
+        "Zhulin Liu",
+        "C. L. Philip Chen"
+      ]
+    },
+    {
+      "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/6f09da09efb90bcae5e4dd5943c3b3128580a59b",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "Mixture-of-experts (MoE) models increase parameter capacity by activating only a small subset of experts for each token. This conditional-computation paradigm has enabled autoregressive language models to scale model capacity without a proportional increase in per-token computation. In diffusion language models (DLMs), however, each denoising forward jointly revisits all token positions despite their sharply different refinement demands, while the default fixed token-choice routing assigns them a uniform expert budget, creating a mismatch between expert computation and refinement demand. We argue that MoE inference in DLMs should therefore be viewed as refinement-aware compute allocation across heterogeneous token refinement states. We propose REFLEX (\\textbf{RE}finement-aware \\textbf{FLEX}ible expert allocation), a training-free method that keeps the default router unchanged while reorganizing expert computation around the evolving refinement process. Specifically, REFLEX introduces a coarse-to-fine hierarchy for expert-budget allocation that aligns computation with block-relative refinement roles while using the Frontier-Progress Score to resolve active-block priorities. Across multiple widely used benchmarks on two representative MoE-based DLMs, LLaDA-MoE and LLaDA2.0-mini, REFLEX reduces allocated expert computation by 15\\% on average while preserving or even improving generation quality on most benchmarks relative to default routing. Compared with autoregressive-style variable-expert routing methods, REFLEX also yields a more consistent quality--computation trade-off, further supporting the importance of allocating expert computation according to the heterogeneous refinement demands exposed within each denoising forward.",
+      "canonical_id": "arXiv:2608.01784",
+      "arxiv_id": "2608.01784",
+      "authors": [
+        "Xiang-Wen Xia",
+        "Chen Yan",
+        "Yiming Zhang",
+        "Jia-Zhen Liu",
+        "Hongyu Zhang",
+        "Wuyang Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.13486",
+      "identity_tokens": [
+        "id:arXiv:2609.13486",
+        "title:mixtureofexperts language models can be strong and efficient retrievers",
+        "url:https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b"
+      ],
+      "record": {
+        "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+        "source_url": "https://www.semanticscholar.org/paper/4f00c1cbd513f669a7ffc96f685e2fc26700250b",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Recent work has shown that fine-tuning decoder-only large language models (LLMs) for retrieval yields strong first-stage retrievers, with effectiveness improving as backbones grow in size. However, every query and document must pass through the full model, so encoding cost increases with model size. Mixture-of-Experts (MoE) LLMs activate only a subset of parameters per token and are widely used to scale generative models, yet remain underexplored as retrievers. We systematically study MoE backbones for retrieval by training MoE and dense LLMs from several families using the same procedure, evaluating them across diverse datasets, and measuring query encoding time under the same serving configuration. We show that MoE retrievers outperform dense retrievers with comparable active parameter counts by up to 3.0 nDCG@10 points on BEIR. One of our strongest MoE retrievers matches an 8B dense retriever with 59% fewer active parameters and 18% lower query encoding time. We further show that the number of experts used for query encoding can be reduced without retraining or re-indexing, retaining more than 99% of retrieval effectiveness while reducing query encoding time by up to 26%. Recent rerankers provide only modest additional gains over strong MoE first stages, which often match or exceed the reranked configurations we evaluate. Together, these results show that MoE LLMs can be strong and efficient first-stage retrievers.",
+        "canonical_id": "arXiv:2609.13486",
+        "arxiv_id": "2609.13486",
+        "authors": [
+          "Anubhav Shrestha",
+          "Safal Shrestha",
+          "Minwu Kim",
+          "Torsten Suel",
+          "Keith Ross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10392",
+      "identity_tokens": [
+        "id:arXiv:2608.10392",
+        "title:share first route what remains a unified framework for tokenadaptive moe computation",
+        "url:https://www.semanticscholar.org/paper/e37a91ba84a94b2c9ac665d1ad20de62ab449a62"
+      ],
+      "record": {
+        "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+        "source_url": "https://www.semanticscholar.org/paper/e37a91ba84a94b2c9ac665d1ad20de62ab449a62",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Mixture-of-experts (MoE) models have recently moved beyond routing a fixed number of complete experts. Shared-expert designs preserve reusable knowledge, fine-grained methods vary computation within experts, and dynamic routers adapt the number of active experts. Yet these decisions are usually made independently, overlooking a basic dependency: extracting reusable computation changes both what remains and how much expert capacity the remainder needs. We study this dependency by decomposing sparsely upcycled feed-forward experts into key-value channels. Co-activated experts align at a subset of value positions; removing these positions changes expert preference; and greater shared coverage is associated with lower residual expert demand. These observations lead to one principle: share first, then route what remains. We instantiate it in UniF-MoE, a unified framework for token-adaptive MoE computation. Each expert is partitioned into aligned blocks. A shared-demand score sets the shared block count and pathway weight, key prototypes select the shared content, and the complementary demand determines the residual expert count through cumulative routing mass. A Gram regularizer separates and normalizes router embeddings, promoting diverse routing directions, sparse expert overlap, and a simple routing geometry. Experiments on DomainBed and GLUE show that this unified design improves predictive performance over representative static and dynamic MoEs while reducing activated computation, inference latency, and memory. Code is available at https://github.com/existence0420/UniF-MoE.",
+        "canonical_id": "arXiv:2608.10392",
+        "arxiv_id": "2608.10392",
+        "authors": [
+          "Gong-Li Zhang",
+          "Zhulin Liu",
+          "C. L. Philip Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01784",
+      "identity_tokens": [
+        "id:arXiv:2608.01784",
+        "title:reflex rethinking moe inference as refinementaware compute allocation in diffusion language models",
+        "url:https://www.semanticscholar.org/paper/6f09da09efb90bcae5e4dd5943c3b3128580a59b"
+      ],
+      "record": {
+        "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/6f09da09efb90bcae5e4dd5943c3b3128580a59b",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "Mixture-of-experts (MoE) models increase parameter capacity by activating only a small subset of experts for each token. This conditional-computation paradigm has enabled autoregressive language models to scale model capacity without a proportional increase in per-token computation. In diffusion language models (DLMs), however, each denoising forward jointly revisits all token positions despite their sharply different refinement demands, while the default fixed token-choice routing assigns them a uniform expert budget, creating a mismatch between expert computation and refinement demand. We argue that MoE inference in DLMs should therefore be viewed as refinement-aware compute allocation across heterogeneous token refinement states. We propose REFLEX (\\textbf{RE}finement-aware \\textbf{FLEX}ible expert allocation), a training-free method that keeps the default router unchanged while reorganizing expert computation around the evolving refinement process. Specifically, REFLEX introduces a coarse-to-fine hierarchy for expert-budget allocation that aligns computation with block-relative refinement roles while using the Frontier-Progress Score to resolve active-block priorities. Across multiple widely used benchmarks on two representative MoE-based DLMs, LLaDA-MoE and LLaDA2.0-mini, REFLEX reduces allocated expert computation by 15\\% on average while preserving or even improving generation quality on most benchmarks relative to default routing. Compared with autoregressive-style variable-expert routing methods, REFLEX also yields a more consistent quality--computation trade-off, further supporting the importance of allocating expert computation according to the heterogeneous refinement demands exposed within each denoising forward.",
+        "canonical_id": "arXiv:2608.01784",
+        "arxiv_id": "2608.01784",
+        "authors": [
+          "Xiang-Wen Xia",
+          "Chen Yan",
+          "Yiming Zhang",
+          "Jia-Zhen Liu",
+          "Hongyu Zhang",
+          "Wuyang Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:3b74d7c0d9fad61998da6637392e105118b95d8dbda9304b606dd4356c3952c0",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
