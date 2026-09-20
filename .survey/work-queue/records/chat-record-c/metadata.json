@@ -2,58 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f132295037f6bf230d13b845",
-  "job_id": "job-research-7441b15a7ee76c92",
-  "data": {
-    "canonical_id": "arXiv:2410.13276",
-    "arxiv_id": "2410.13276",
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
-    "list_summary": "Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。",
-    "summary": "長文LLMの全注意は系列長に対して二次計算となる一方、実際の注意地図には入力・層・ヘッドごとに異なる強い疎性が存在する。SeerAttentionは固定パターンやヒューリスティックの代わりに、各注意層へAttention Gate（AttnGate）を追加して重要ブロックを学習予測する。QとKを系列方向にブロックプーリングし、小さな線形変換後の積からブロック重要度を出す。全注意地図を2次元最大プーリングした分布を教師としてゲートだけを自己蒸留し、元LLM重みは凍結する。推論ではTopKまたは閾値で二値ブロックマスクを作り、タイルサイズを合わせたブロック疎FlashAttentionが非活性ブロックのI/Oと計算を省く。",
-    "source": "https://arxiv.org/abs/2410.13276",
-    "sources": [
-      "https://arxiv.org/abs/2410.13276",
-      "https://arxiv.org/pdf/2410.13276"
-    ],
-    "authors": [
-      "Yizhao Gao",
-      "Zhichen Zeng",
-      "Dayou Du",
-      "Shijie Cao",
-      "Peiyuan Zhou",
-      "Jiaxing Qi",
-      "Junjie Lai",
-      "Hayden Kwok-Hay So",
-      "Ting Cao",
-      "Fan Yang",
-      "Mao Yang"
-    ],
-    "published": "2024-10-17",
-    "publication": "arXiv",
-    "publication_type": "preprint",
-    "publication_status": "preprint",
-    "topics": [
-      "疎注意",
-      "長文推論",
-      "プリフィル",
-      "FlashAttention"
-    ],
-    "implementation": "Llama-3.1-8B-Instructへゲートを追加し、元モデルを凍結した自己蒸留で学習。ブロック疎FlashAttentionカーネルと全注意地図の2D最大プーリング教師を効率的に生成するカスタムカーネルを実装。",
-    "code": "https://github.com/microsoft/SeerAttention",
-    "last_checked": "2026-09-20",
-    "hardware_evaluation": "Llama-3.1-8B-Instructのゲート学習は0.5Bトークン、約40 A100 GPU時間。速度評価は単一A100で、128K系列・90%疎性時にFlashAttention-2比7.3倍の注意カーネル高速化を報告。",
-    "quality_effect": "元LLM重みを凍結し注意ブロックを近似的に省くため厳密無損失ではない。PG19、LongBench、RULER、短文タスクで疎性と精度の交換関係を評価し、テスト時にTopK比率または閾値を変えて交換点を調整できる。",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv v4 primary PDF reference section",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-df7a80addf0ba7c0728d75ec",
+  "job_id": "job-research-7059e5a5af8e2266",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f132295037f6bf230d13b845",
+    "claim_id": "claim-df7a80addf0ba7c0728d75ec",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
