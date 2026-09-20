@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T02:51:37.359450+00:00",
+  "updated_at": "2026-09-20T02:55:30.651791+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T02:51:37.359450+00:00",
+      "last_recorded_at": "2026-09-20T02:55:30.651791+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 327,
+        "research_completed": 328,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 44,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35434808141:1",
-          "recorded_at": "2026-09-19T09:29:13.406287+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35434808141",
-            "run_attempt": "1",
-            "source_sha": "3c0e6a252ed2dfeda30c3939481d440186ee9aa5"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35434846285:1",
           "recorded_at": "2026-09-19T09:30:05.063400+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35485066115",
             "run_attempt": "1",
             "source_sha": "8552dba11921642e78805bf5592185a5a9a5fd78"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35485235549:1",
+          "recorded_at": "2026-09-20T02:55:30.651791+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35485235549",
+            "run_attempt": "1",
+            "source_sha": "a2049d319947afc930602d29edc6a6906dba4556"
           },
           "signals": [
             "research_completed"
@@ -24111,6 +24111,14 @@
           "type": "research",
           "canonical_id": "DOI:10.48550/arxiv.2307.08691",
           "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f018d8c28f4995e5",
+          "type": "research",
+          "canonical_id": "arXiv:2502.16002",
+          "title": "KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse",
           "from": "ready",
           "to": "completed"
         }
