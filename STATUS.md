@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:44:51 JST**
+> 自動生成: **2026-09-20 16:45:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **111** |
 | 未claim Research job | **109** |
 | 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-20 16:44:01 JST（50秒前）** |
+| 最終検証済みResearch収録 | **09-20 16:44:01 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **3** | **3** | **0** | **2** | **0** | — |
+| Research | **37** | **4** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **4** | **4** | **0** | **2** | **0** | **5** |
+| 合計 | **37** | **5** | **4** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models
   - job: `.survey/work-queue/jobs/job-research-98f40fbe8624cabd.json`
   - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
@@ -138,6 +138,8 @@
   - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cb9b65cad9eb01765ba97d06.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-df7a80addf0ba7c0728d75ec.json` (job `job-research-7059e5a5af8e2266`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-df7a80addf0ba7c0728d75ec.json` (`ok=false`)
 - **成功** `arXiv:2410.13276` — SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs
   - job: `.survey/work-queue/jobs/job-research-7441b15a7ee76c92.json`
   - result: `.survey/work-queue/results/research/attempt-f132295037f6bf230d13b845.json` (`ok=true`)
@@ -218,8 +220,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **744** |
-| └ Research | **558** |
+| 成功result未照合のimmutable submission | **745** |
+| └ Research | **559** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
