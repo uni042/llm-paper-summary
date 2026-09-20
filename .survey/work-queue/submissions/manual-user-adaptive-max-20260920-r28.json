@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r28",
+    "summary": "Adaptive Expert Computation / Compression の前方引用を追加探索し、expert pruningの直接的な有力候補を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.09886",
+      "title": "SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2606.09886",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md",
+      "priority": 99,
+      "reason": "top-kで共同動作するexpertの相互作用をShapley風に評価し、coalition-awareにglobal budget下でexpert pruningする。独立expert scoreの弱点を直接補う新しい圧縮軸。"
+    },
+    {
+      "canonical_id": "arXiv:2504.07807",
+      "title": "Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.07807",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2504.07807-cluster-driven-expert-pruning.md",
+      "priority": 98,
+      "reason": "layer内の機能的に類似したexpertをcluster化し、layer横断で冗長clusterを削るadaptive task-specific compression。expert redundancy利用を体系化する。"
+    },
+    {
+      "canonical_id": "arXiv:2504.05586",
+      "title": "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
+      "source_url": "https://arxiv.org/abs/2504.05586",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+      "priority": 98,
+      "reason": "expert importance判定・one-shot/iterative dropping・補正を統一比較し、MoE expert droppingの選択基準を提供する圧縮研究。"
+    },
+    {
+      "canonical_id": "arXiv:2407.00945",
+      "title": "Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs",
+      "source_url": "https://arxiv.org/abs/2407.00945",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2407.00945-efficient-expert-pruning.md",
+      "priority": 97,
+      "reason": "gradient-free evolutionary searchで総expert数とactive expert数の両方を削減し、memory削減と推論加速を同時に狙う直接的expert pruning。"
+    },
+    {
+      "canonical_id": "arXiv:2410.08589",
+      "title": "Retraining-Free Merging of Sparse MoE via Hierarchical Clustering",
+      "source_url": "https://arxiv.org/abs/2410.08589",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
+      "priority": 97,
+      "reason": "expert outputの階層clusterによりtask-agnostic・retraining-freeでexpertを統合し、router依存性を抑えつつparameter footprintを縮小する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-task-prune-fwd",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-task-prune-fwd.json",
+    "receipt": "sha256:3e41ccbb163a59b8f3e0986db40c8d8c1677e57564d1349c65cf8d78f2d80370"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+    "round": "adaptive-max-r28-forward-pruning-core",
+    "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)",
+    "query_summary": "Task-Specific Expert Pruningの前方引用から直接的なpruning/merging 5件を追加。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "continue same forward-citation result for additional direct compression candidates"
+  }
+}
