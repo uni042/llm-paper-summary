@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-3b676d8b0647321f3ab94c21",
   "job_id": "job-research-08b5458cb63307f5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3b676d8b0647321f3ab94c21",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "evaluation_summary": "視覚ではImageNet事前学習済みDeiT-S/16の第8・10層をUniF-MoE化し、DomainBedのPACS、VLCS、OfficeHome、TerraIncognita、DomainNetで領域外精度を評価する。言語ではBERT-large-casedの第20・22層を変換し、GLUEのCoLA、MRPC、QNLI、MNLI、RTEを評価する。固定top-k、動的MoE、共有・細粒度MoEなどと比較し、精度だけでなく活性パラメータ、FLOPs、学習・推論時間、実行時メモリも測る。各結果は3シード平均で、付録に標準偏差を示す。",
+    "scope": "視覚と自然言語の双方で評価し、RTX 3090実機で実行時間とメモリを測定している。大規模生成LLMの自己回帰デコードや複数GPU専門家並列は直接評価していないため、巨大MoEサービングへの性能数値の直接一般化には注意が必要である。",
+    "hardware": ["NVIDIA GeForce RTX 3090", "AMD EPYC 75F3", "503 GiBホストメモリ"],
+    "models": ["DeiT-S/16", "BERT-large-cased", "GMoE", "EMoE", "DynMoE", "MASS"],
+    "datasets": ["PACS", "VLCS", "OfficeHome", "TerraIncognita", "DomainNet", "CoLA", "MRPC", "QNLI", "MNLI", "RTE"],
+    "workload": "DomainBedでは各領域を順番に保留し、残り領域で学習・検証して領域外精度を測る。GLUEでは公式学習・検証分割を使い、最大系列長128、バッチ32、最大10エポックで評価する。",
+    "baselines": ["DeiT-S/16", "GMoE", "EMoE", "EMoE-L", "LFME", "DMDA", "PC-MoE", "DynMoE", "MASS", "BERT-large", "固定top-1/2/4/8 MoE"],
+    "metrics": ["領域外精度", "GLUEタスク得点", "活性パラメータ数", "FLOPs", "学習時間/step", "推論時間/step", "学習時メモリ", "推論時メモリ", "平均活性ブロック数"],
+    "control_knobs": "視覚は残余専門家K=6、ブロックB=8、言語はK=16、B=16。多様性正則化係数、共有需要、累積残余専門家選択、原型ブロック選択をアブレーションする。"
+  },
+  "reservation": {"claim_id": "claim-3b676d8b0647321f3ab94c21", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
