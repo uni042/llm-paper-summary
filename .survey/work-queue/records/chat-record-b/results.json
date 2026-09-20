@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b269ed373464c47a4c4f738e",
-  "job_id": "job-research-f4b6d40ae418a58e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b269ed373464c47a4c4f738e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b269ed373464c47a4c4f738e","job_id":"job-research-f4b6d40ae418a58e","data":{"overview":"主結果は、ブロック拡散ドラフトの条件付けを層ごとに分化すると、ドラフトを深くしても受理長の利得が飽和せず、実時間高速化まで一貫して伸びることを三つの標的モデルで確認した点である。greedy復号の6課題平均でDFlareはQwen3-4Bを5.52倍、Qwen3-8Bを5.46倍、GPT-OSS-20Bを3.91倍高速化し、DFlashの4.99倍、5.05倍、3.71倍をそれぞれ10.6%、8.1%、5.4%上回った。平均受理長も7.47、7.33、4.93となりDFlash比15.5%、14.7%、5.8%改善した。温度1の確率的復号でも優位性が残る。5→7ドラフト層と5→9標的特徴でDFlareは単調改善する一方DFlashは早く飽和し、240万件までデータを増やしても速度が伸び続けたため、構造改善が単発の精度向上ではなく容量スケーリングを解放したことを示す。","key_results":[{"metric":"greedy平均実時間高速化 Qwen3-4B","value":"5.52倍","baseline":"DFlash 4.99倍、EAGLE3 2.49倍","condition":"6課題平均、temperature=0","interpretation":"DFlash比10.6%の速度改善。"},{"metric":"greedy平均受理長 Qwen3-4B","value":"7.47 tokens","baseline":"DFlash 6.47","condition":"block size 16","interpretation":"DFlash比15.5%改善し、一回の標的検証でより多く進む。"},{"metric":"greedy平均実時間高速化 Qwen3-8B","value":"5.46倍","baseline":"DFlash 5.05倍、EAGLE3 2.35倍","condition":"6課題平均","interpretation":"DFlash比8.1%改善。"},{"metric":"greedy平均実時間高速化 GPT-OSS-20B","value":"3.91倍","baseline":"DFlash 3.71倍","condition":"6課題平均","interpretation":"標的とドラフトの能力差が大きい20Bでも5.4%の追加速度利得を維持する。"},{"metric":"stochastic平均 Qwen3-4B","value":"4.53倍、受理長6.21","baseline":"DFlash 4.35倍、受理長5.60","condition":"temperature=1","interpretation":"標本化で受理が難しくなっても受理長10.9%の優位性を保つ。"},{"metric":"構造アブレーション平均","value":"DFlare 3.37倍/τ4.52","baseline":"softmax除去3.31/4.47、KV分離除去3.35/4.48、漸進損失除去3.34/4.47","condition":"Qwen3-4B、GSM8K/HumanEval/MTBench","interpretation":"三要素がそれぞれ小さいが一貫した寄与を持つ。"}],"negative_results":"DFlareは高性能ドラフトを別途学習する必要があり、7層ドラフトと240万件学習データによる一回限りの学習費用は大きい。論文自身もこれを第一の制約とする。さらに240万件でもデータ拡張による改善が飽和しておらず、計算資源不足のためより大規模な学習を試せていない。GPT-OSS-20BではQwen3より標的とドラフトの表現能力差が大きく、絶対受理長と追加改善率が小さい。確率的復号では全手法の受理長がgreedyより低下する。","interpretation":"DFlashでは全層へ同じ標的融合特徴を渡すため追加ドラフト層が似た入力を処理し、深度を増しても冗長になりやすい。DFlareは各層が異なる標的層混合を学ぶため追加層が別の情報を担当でき、標的特徴数を増やしたときも補完情報を利用できる。異種鍵値射影と漸進損失がこの層別表現力を補強し、受理長の伸びが追加ドラフト計算を上回るため実時間速度も改善する。","quality_impact":"投機検証は標的モデルが一致接頭辞を確定するため、ドラフト改善は主に受理率と速度へ影響し、標的分布の品質を近似で置き換える方式ではない。"},"reservation":{"claim_id":"claim-b269ed373464c47a4c4f738e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
