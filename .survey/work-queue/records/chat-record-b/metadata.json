@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-16712b93d70f46eb3fb21fac","job_id":"job-research-821e549f36e154dd","data":{"canonical_id":"arXiv:2502.00937","title":"ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving","list_summary":"画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。","summary":"ModServeは、大規模マルチモーダルモデルの画像前処理・画像符号化・言語モデル処理を一体配備すると、段階ごとに最適な並列度・バッチ・拡縮が異なるうえ画像バーストが先頭待ちを起こす問題に対し、画像インスタンスとテキストインスタンスを分離する。オフライン段階別プロファイルから各プールの並列度、最大バッチ、自動拡縮を独立決定し、画像トークン負荷とテキスト負荷を別々に見て要求を振り分ける。画像は要求内でも複数画像インスタンスへ分散し、生成済み画像トークンはRDMAで選択済みテキストインスタンスが引き取る。Azure本番トレースを用いた128GPU評価ではvLLM一体配備比3.3〜5.5倍のスループットをSLO内で達成し、GPU費用を25〜41.3%削減した。","source":"https://arxiv.org/html/2502.00937v3","sources":["https://arxiv.org/abs/2502.00937","https://arxiv.org/html/2502.00937v3","https://github.com/Azure/AzurePublicDataset"],"authors":["Haoran Qiu","Anish Biswas","Zihan Zhao","Jayashree Mohan","Alind Khare","Esha Choukse","Íñigo Goiri","Zeyu Zhang","Haiying Shen","Chetan Bansal","Ramachandran Ramjee","Rodrigo Fonseca"],"published":"2025-02-02","publication":"ACM SoCC 2025","publication_type":"conference","publication_status":"published","primary_category":"cs.DC","cross_list_categories":["cs.AI"],"topics":["multimodal model serving","resource disaggregation","autoscaling","modality-aware scheduling","tail latency"],"implementation":"約5000行のPython。Text InstanceはvLLM 0.7.2、Image InstanceはHuggingFace Transformers、プール管理はgRPC、画像トークン転送はNCCLとGPU Direct RDMAを利用する。","code":null,"last_checked":"2026-09-20","hardware_evaluation":"16台のDGX-A100、合計128×NVIDIA A100 80GB。サーバ内NVLINK 3.0、サーバ間InfiniBand。各サーバは96 AMD EPYC CPU coresと1900GiB DRAM。","quality_effect":"モデル計算自体を近似せず、処理段階の配置・並列度・ルーティング・拡縮を変更するシステム最適化である。","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv v3 full-text reference section","references_total":50},"reservation":{"claim_id":"claim-16712b93d70f46eb3fb21fac","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3e684f03399af677163ad4a2",
+  "job_id": "job-research-d223f7a181256e07",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3e684f03399af677163ad4a2",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
