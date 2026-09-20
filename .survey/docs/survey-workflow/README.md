@@ -4,7 +4,7 @@ Scheduled Chat / Work のワーカー（worker）が実行判断のために読�
 
 ## ワーカーが読むもの
 
-各runの開始時は最新 `main` と同じHEADの `worker-router.md` を最初に読み、役割分岐（routing）、作業配分（work mix）、読解・探索、保存、継続・停止、最終化を同書だけから決めます。
+各runの開始時は最新 `main` と同じHEADの `worker-router.md` を最初に読み、モード分岐（routing）、読解・探索、保存、継続・停止、最終化を同書だけから決めます。
 
 ライブ状態や品質テンプレートは**手順書ではなく入力データ**です。`worker-router.md` が必要とする場面でだけ参照します。
 
