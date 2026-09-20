@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3bfbd9f2b2c22f927f203849","job_id":"job-research-92c83b7c2ec8a78f","data":{"hardware":"クラウドGPUサーバー上のNVIDIA A100 80GBを8基使用。圧縮、LoRA回復学習、17ベンチマーク評価を同環境で実施する。","software":"PyTorch、Hugging Face Transformers、PEFT、Language Model Evaluation Harnessを使用。比較手法は対象モデルへ手動適応し、枝刈り方式以外の条件をそろえる。","methodology":"GPT-OSS-20B（各層32専門家）とQwen3-30B（各層128専門家）を25%・50%圧縮する。キャリブレーションはSlimOrca 250サンプル、文脈長512、自己回帰生成100ステップ。ε=10^-5、パワー反復許容差10^-6、最大1000反復。圧縮後はSlimOrca 2000会話・1024トークンでLoRA rank 16、alpha 16、dropoutなし、AdamW、最大学習率2e-4、10%線形ウォームアップ後線形減衰、バッチ2、1エポック回復学習する。比較対象はRandom、HC-SMoE、Mosaic Pruning、REAP。WikiText-2、LAMBADA、PIQA、PROST、CommonsenseQA、ARC-Easy/Challenge、MedQA、OpenBookQA、BLiMP、BoolQ、Winogrande、COQA、Winogender、TruthfulQA、Moral Stories等17タスクを生成、世界知識、ドメイン、NLU/NLI、安全性・バイアス・倫理の5群へ集約し、元モデルに対する平均性能維持率と標準偏差を報告する。","scope":"構造削除により総専門家パラメータと常駐メモリが減ることは設計上明確だが、論文は実配備時のピークVRAM、トークン毎遅延、生成スループット、消費電力を直接測定していない。圧縮処理時間はGPT-OSS-20B 25%で約24分と報告される。"},"reservation":{"claim_id":"claim-3bfbd9f2b2c22f927f203849","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-5a2d8cb943b02cb27fc0083a",
+  "job_id": "job-research-6e63ee697d71f91d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a2d8cb943b02cb27fc0083a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

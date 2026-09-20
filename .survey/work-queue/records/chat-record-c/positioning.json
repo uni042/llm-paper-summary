@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3bfbd9f2b2c22f927f203849","job_id":"job-research-92c83b7c2ec8a78f","data":{"limitations":"重要度モデルは一次マルコフ仮定で、次層の専門家選択が直前層より前の長いルーティング履歴へ依存する場合を直接表現できない。削除単位も専門家全体の二値判断に限定され、専門家内部の幅削減、量子化、層削除などとの混合圧縮は扱わない。キャリブレーション分布への依存もあり、サンプル数を増やしすぎても頻出ドメインへの偏りが生じ得る。実配備の遅延、スループット、電力、ピークVRAMは直接評価されていない。","differences":"REAPやMoE-Pruner等の局所的なルータ・活性・重み指標と異なり、MAESTROは隣接層間の遷移を全層の循環確率過程へまとめ、定常分布で専門家を順位付けする。HC-SMoEのような専門家統合ではなく専門家を物理削除するため、統合誤差を避けつつパラメータ数を直接減らす。Mosaic Pruningのように全専門家出力を全キャリブレーショントークン分保持せず、ルーティング遷移カウントを主に使うため128専門家/層のQwen3でも実行できる。","implementation_status":"PyTorch/Hugging Faceベースで実装され、論文は著者GitHubプロフィールとプロジェクトサイトを提示する。A100 8基でGPT-OSS-20BとQwen3-30Bの圧縮を実証し、遷移カウントのキャッシュ、構造テンソル削除、PEFTによるLoRA回復、LM Evaluation Harness評価まで実装している。","research_positioning":"MoE圧縮のうち、実行時に専門家をキャッシュ・オフロードする系統ではなく、不要専門家を事前に構造削除して常駐メモリそのものを減らす系統に属する。特に専門家重要度を単独の利用頻度ではなく層をまたぐ自己回帰経路として扱う点が、専門家配置・キャッシュ研究にも有用な観測を与える。SSDやCPUへの階層オフロードと組み合わせる場合、まずMAESTROで低重要度専門家を恒久削除し、残存専門家のみをキャッシュ対象にする複合設計が考えられるが、その組合せ自体は本論文では未評価である。"},"reservation":{"claim_id":"claim-3bfbd9f2b2c22f927f203849","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5a2d8cb943b02cb27fc0083a",
+  "job_id": "job-research-6e63ee697d71f91d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a2d8cb943b02cb27fc0083a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
