@@ -18,33 +18,29 @@
 
 実際の起動時刻を1回取得し、`actual_invocation_start` として固定する。予定時刻や前回runの時刻を再利用しない。通常の時間枠は起動時刻から3600秒で、残り600秒以下では新しい独立作業を開始しない。残り180秒以下では耐久保存と安全な引き継ぎだけを行う。
 
-## 2. 役割分岐
+## 2. 作業配分と共通ルーティング
 
-通常論文ワーカーは毎時 `:30`、探索主体ワーカーは毎時 `:00` を基本とする。08:30 JSTはフレームワーク・LLM更新専用である。
+毎時 `:30` の読解主体タスクと毎時 `:00` の探索主体タスクは、**同じ実行手順を使う**。論文作業における両者の違いは、読解側（Research / Audit）と探索側（Discovery）の**作業配分（work mix）だけ**である。作業種別を選んだ後は、どちらのタスクから来たかを条件分岐に使ってはならない。
 
-通常論文ワーカーでは、研究・監査・探索より先にmaintenance状態を確認する。
+標準の作業配分:
 
-1. `maintenance_pending = true` または24回周期のmaintenance対象 → maintenance専用。
-2. 08:30 JST → その他更新専用。
-3. 毎時 `:00` の探索主体ワーカー → 下記の在庫水位で探索または overflow research mode。
-4. それ以外の通常論文ワーカー → Research / Auditを優先し、必要に応じてDiscoveryを補充。
+- **読解主体（research-heavy）**: 読解 3 : 探索 1
+- **探索主体（discovery-heavy）**: 探索 3 : 読解 1
 
-探索主体ワーカーの切替条件:
+各runの開始時と1作業単位の完了ごとに、最新queue / claim / discovery stateを取り直して次の作業種別を選ぶ。配分は固定件数ノルマではなく、run全体で目標比率へ寄せるための**重み付きラウンドロビン（weighted round-robin）**として扱う。
 
-- **`candidate_inventory > 50`** かつ実行可能なResearch/Auditあり → **overflow research mode**。通常論文ワーカーと同じ研究処理へ入る。
-- 50以下、または実行可能なResearch/Auditなし → Discovery mode。
+1. maintenance対象または08:30 JSTの専用更新条件なら、それぞれ専用経路へ入る。
+2. それ以外では、今回のwork mixと、このrunですでに完了した読解単位数・探索単位数を比較し、目標比率に対して不足している側を次に選ぶ。
+3. 読解側が選ばれ、実行可能なResearch / Audit jobがある → **第3節の共通読解手順**へ進む。
+4. 探索側が選ばれ、Discoveryを実行可能 → **第4節の共通探索手順**へ進む。
+5. 選ばれた側に実行可能作業がない場合は、もう一方へフォールバックする。片側の在庫不足だけでrunを終了しない。
+6. どちらか一方を実行した後は必ず共通ルーターへ戻り、最新状態とwork mixから次の1作業単位を再選択する。
 
-通常論文ワーカーの候補水位:
+作業単位は、読解側ではResearch / Auditの1 job、探索側では耐久保存まで完了した1 Discovery roundとする。Auditは読解側へ数える。
 
-- `candidate_inventory > 50`: Research / Auditのみを優先。
-- 25〜50: Research / Auditを優先し、新規Discoveryを行わない。
-- 15〜24: Researchを進めながらDiscovery補充を積極化。
-- 0〜14: 枯渇防止のためDiscovery比重を上げる。
-- 実行可能なResearch/Auditが0: Discoveryへ進む。
+候補在庫の多寡は「その側に実行可能作業があるか」を判断する入力には使うが、**タスク固有の別モードを作る理由にはしない**。旧 `candidate_inventory > 50` のoverflow research mode、探索タスクだけの最低Discoveryラウンド数、読解タスクだけの追加論文本数quotaは使わない。件数維持のために弱い候補を採用しない。
 
-件数維持のために弱い候補を採用しない。
-
-## 3. Research / Audit の唯一の処理ループ
+## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
 2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが未完了claimを複数保持しない。
@@ -74,9 +70,9 @@
 4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を耐久保存して次の独立jobへ進む。`blocked` descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` / `retrieval_evidence` / `blocked_at` だけを持つ状態専用transportとし、`record_bank`、`paper_path`、`record_slots`、`expected_blob_sha` その他のrecord transport fieldを絶対に混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **非同期待ちを不要な同期障壁にしない。** claim/result/submissionの同じIDを保持して所定間隔で確認し、待ち時間には次候補の一次資料経路確認、identity/queue同期、既読slot整理などclaim競合を起こさない準備を行う。未完了claimを増やしたり同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research claimは常に1件だけ保持し、完了またはstatus-only耐久保存後に次へ進む。
-7. **件数目標は最低条件として扱う。** run固有の追加quotaがある場合、quota到達だけで停止せず、continuation/finalization gateまたは実際のhard stopまで安全に次の独立作業を続ける。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+7. **タスク固有の件数quotaを停止条件にしない。** 読解主体・探索主体の違いはwork mixだけとし、どちらもcontinuation/finalization gateまたは実際のhard stopまで安全に共通ルーターへ戻って次の独立作業を選ぶ。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
-## 4. Discovery の唯一の入口
+## 4. 探索（Discovery）の共通入口
 
 新規Discoveryは**固定ソース precheck schema v3** だけを使う。ワーカーが検索結果を数件だけ手でJSONへ詰め、schema v1/v2として投入してはならない。
 
@@ -144,7 +140,7 @@ Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資�
 
 1回のDiscovery submissionへ送るcandidateは0〜5件。**5件はrun上限ではなく1 submissionの上限**である。
 
-探索主体ワーカーのmulti-round submissionは自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
+Discoveryのmulti-round submissionは、どちらのwork mixから探索を選んだ場合でも自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
 
 ### 4.3 Discovery submissionからResearchへの一本道
 
@@ -160,7 +156,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` → `claim_worker_with_banks.py` の順へ戻る。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
 
-引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
+引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。1 Discovery roundが耐久保存まで完了したら共通ルーターへ戻り、work mixと最新状態から次の作業種別を再選択する。
 
 ## 5. 重複排除
 
@@ -223,4 +219,4 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 
 08:30 JSTの更新workerは `framework-updates/**`、`llm-releases/**` と必要な `.survey/update-worker/**` だけを扱う。同じrunでResearch / Audit / Discoveryを行わない。
 
-maintenance runは `.github/workflows/maintenance.yml` に委譲し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行する。探索主体ワーカーの `:00` runは通常論文ワーカーの24-run maintenance counterへ加算しない。
+maintenance runは `.github/workflows/maintenance.yml` に委譲し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行する。maintenanceの周期管理は論文作業のwork mixとは独立した運用状態として扱い、読解・探索の手順を分岐させる理由にしない。
