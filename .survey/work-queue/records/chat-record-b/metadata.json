@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-3e00451f32958b311cdc3f3c",
-  "job_id": "job-research-3cf2e0a916913e29",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e00451f32958b311cdc3f3c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3e00451f32958b311cdc3f3c","job_id":"job-research-3cf2e0a916913e29",
+ "data":{"canonical_id":"arXiv:2310.07177","arxiv_id":"2310.07177","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"Online Speculative Decoding","summary":"投機的復号は小型の下書きモデルが大型の目標モデルの次トークンを正確に予測できるほど高速になるが、実サービスの問い合わせ分布は学習時と異なり時間とともに変化する。OSDは投機的復号中に既に得られる下書き側と目標側の確率分布を再利用し、目標モデルを教師とする知識蒸留で下書きモデルを定期更新する。さらに言語や話題ごとに複数の下書きモデルへルーティングし、各モデルが学ぶ分布を狭める。追加の目標モデル推論を要求せず受理率を0.1〜0.65改善し、実測で1.42〜2.17倍の遅延短縮を報告する。","list_summary":"投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。","authors":["Xiaoxuan Liu","Lanxiang Hu","Peter Bailis","Alvin Cheung","Zhijie Deng","Ion Stoica","Hao Zhang"],"authors_affiliations":"UC Berkeley; UC San Diego; Google; Shanghai Jiao Tong University","published":"2024-07-21","publication":"Proceedings of the 41st International Conference on Machine Learning (ICML 2024), PMLR 235","publication_type":"Conference paper","publication_status":"Published","lineage":"投機的復号・オンライン適応・知識蒸留","topics":["投機的復号","オンライン学習","知識蒸留","問い合わせルーティング","LLM推論"],"importance":"静的な下書きモデルを前提とせず、実運用で自然に得られる検証信号から問い合わせ分布へ継続適応させることで、分布変化下でも投機的復号の受理率を維持する。","hardware_evaluation":"遅延測定はllama.cppを用い単一NVIDIA A100 80GB、バッチ1で実施。Vicuna-7B/LLaMA-160MとVicuna-33B/TinyLLaMA-1.1Bの組を評価する。","quality_effect":"標準投機的復号の受理・補正手順を維持するため、最終出力分布は目標モデルに従う。オンライン更新は下書きモデルの予測分布を目標へ近づけ、品質変更ではなく受理率改善を狙う。","source":"https://arxiv.org/abs/2310.07177","sources":["https://arxiv.org/abs/2310.07177","https://arxiv.org/pdf/2310.07177"],"code":"https://github.com/LiuXiaoxuanPKU/OSD","implementation":"公開実装あり。投機的復号の検証時に誤り位置と目標確率を収集し、再生バッファを一定間隔で知識蒸留に用いて小型下書きモデルを更新する。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2312.11462","arxiv_id":"2312.11462"},{"canonical_id":"arXiv:2210.11416","arxiv_id":"2210.11416"},{"canonical_id":"arXiv:2110.14168","arxiv_id":"2110.14168"},{"canonical_id":"arXiv:2306.08543","arxiv_id":"2306.08543"},{"canonical_id":"arXiv:2311.08252","arxiv_id":"2311.08252"},{"canonical_id":"arXiv:1503.02531","arxiv_id":"1503.02531"},{"canonical_id":"arXiv:1909.09436","arxiv_id":"1909.09436"},{"canonical_id":"arXiv:2001.08361","arxiv_id":"2001.08361"},{"canonical_id":"arXiv:2401.12522","arxiv_id":"2401.12522"},{"canonical_id":"arXiv:2308.04623","arxiv_id":"2308.04623"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":10},
+ "reservation":{"claim_id":"claim-3e00451f32958b311cdc3f3c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
