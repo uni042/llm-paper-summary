@@ -185,12 +185,15 @@ def check(root, inventory):
     maintenance_name = ".survey/work-queue/maintenance-cycle.json"
     maintenance = json_objects.get(maintenance_name, {})
     if isinstance(maintenance, dict):
-        cadence = maintenance.get("cadence_runs")
-        count = maintenance.get("runs_since_maintenance")
-        if cadence != 24:
-            issue("maintenance_cadence", maintenance_name, f"Expected cadence_runs=24, got {cadence!r}")
-        if not isinstance(count, int) or count < 0 or count >= 24:
-            issue("maintenance_counter", maintenance_name, f"Invalid runs_since_maintenance={count!r}")
+        pending = maintenance.get("maintenance_pending")
+        schedule_owner = maintenance.get("schedule_owner")
+        schedule = maintenance.get("schedule")
+        if not isinstance(pending, bool):
+            issue("maintenance_pending", maintenance_name, f"Invalid maintenance_pending={pending!r}")
+        if schedule_owner != "scheduled_chat_0830_jst_30_worker":
+            issue("maintenance_schedule_owner", maintenance_name, f"Unexpected schedule_owner={schedule_owner!r}")
+        if schedule != "daily_0830_jst":
+            issue("maintenance_schedule", maintenance_name, f"Unexpected schedule={schedule!r}")
     return {
         "schema_version": 3,
         "source_commit": inventory.get("source_commit"),
