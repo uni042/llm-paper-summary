@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-f2e323416158860a",
+  "type": "research",
+  "parent_job_id": "job-1132c15f96f87d90",
+  "priority": 98,
+  "canonical_id": "arXiv:2608.15584",
+  "arxiv_id": "2608.15584",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "GraniKV: Asymmetric Granularity KV-Cache Paging for Multi-Agent Systems with Long Shared Prefix",
+  "source_url": "https://www.semanticscholar.org/paper/1e7525745039a88cd6a0e58c0526ef6695ec9214",
+  "paper_path": null,
+  "selection_reason": "Production paged-serving KV layer using asymmetric paging for shared prefixes versus request suffixes plus regime-aware backend dispatch; reports up to 2.16x output-token throughput.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:57:03+00:00"
+}

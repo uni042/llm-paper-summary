@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-25a675a94380dcd5",
+  "type": "research",
+  "parent_job_id": "job-12aaf1e50ad88d56",
+  "priority": 96,
+  "canonical_id": "arXiv:2605.19775",
+  "arxiv_id": "2605.19775",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Understanding Inference Scaling for LLMS: Bottlenecks, Trade-Offs, and Performance Principles",
+  "source_url": "https://www.semanticscholar.org/paper/930b5019707807053d41976f1cb09512a8dd9b18",
+  "paper_path": null,
+  "selection_reason": "System characterization across 8B–671B models and DP/TP/PP configurations, including reasoning-workload capacity bottlenecks and dense-vs-MoE scaling behavior.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:57:11+00:00"
+}
