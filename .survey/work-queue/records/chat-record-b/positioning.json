@@ -1,13 +1,8 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3e00451f32958b311cdc3f3c",
-  "job_id": "job-research-3cf2e0a916913e29",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e00451f32958b311cdc3f3c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3e00451f32958b311cdc3f3c","job_id":"job-research-3cf2e0a916913e29",
+ "data":{"limitations":"オンライン学習には勾配更新用の計算資源と重み反映機構が必要で、サービス負荷が常に高い環境では余剰計算を確保できない可能性がある。論文は更新間隔I、再生バッファの保持・追い出し、専門下書きモデル数、最適なルーティング規則を固定的に解いておらず運用調整が必要である。分布変化直後には受理率が一時低下するため急激な変化へ無遅延で追従できない。複数専門モデルは受理率を上げる代わりに常駐メモリを増やす。評価は主に単一A100・バッチ1の遅延で、学習と高負荷推論を同時実行した場合の尾部遅延やサービス品質は十分に測っていない。",
+ "differences":"従来の投機的復号は配備後の下書きモデルを固定し、候補木、多候補、検索、追加ヘッドなどで静的な受理率を改善することが多い。OSDは方式そのものを置き換えるのではなく、配備中に得られる目標モデルの検証分布を教師信号として下書き器を継続更新する直交的な枠組みである。DistillSpecも知識蒸留を投機的復号へ使うが、OSDはオンライン分布変化と複数専門下書きへのルーティングまで扱う。Medusaの追加ヘッドにもオンライン更新を適用でき、Spiderでは単独1.34倍から併用2.01倍へ改善している。",
+ "implementation_status":"著者がOSDコードを公開している。論文ではllama.cppを用いた単一A100実測、LLaMA/T5系下書きの蒸留、Chatbot Arena要求の言語・話題ルーティングまで評価しており、単なる分析ではなくオンライン更新アルゴリズムの試作実装を含む。",
+ "research_positioning":"投機的復号の研究軸を『より良い静的下書きを作る』から『実際の問い合わせ分布へ配備後も適応する』へ拡張したシステム・学習方式である。目標モデル検証時の確率分布を追加推論なしで学習データ化するため、運用ログを下書き器の継続改善へ直接循環させる。特にサービスごとに話題や言語が偏り、時間変化する状況で価値が高い。一方、更新計算と複数モデル常駐という新しい資源管理問題を持ち込むため、推論スケジューラと学習スケジューラを統合した後続研究へつながる。"},
+ "reservation":{"claim_id":"claim-3e00451f32958b311cdc3f3c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
