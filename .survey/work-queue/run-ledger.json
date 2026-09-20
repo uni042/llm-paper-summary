@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T02:55:30.651791+00:00",
+  "updated_at": "2026-09-20T03:04:00.545666+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T02:55:30.651791+00:00",
+      "last_recorded_at": "2026-09-20T03:04:00.545666+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 328,
+        "research_completed": 329,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 44,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35434846285:1",
-          "recorded_at": "2026-09-19T09:30:05.063400+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35434846285",
-            "run_attempt": "1",
-            "source_sha": "6d9f75c1a9f78bf512e4fd275644b7505e1bb6b0"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35435039428:1",
           "recorded_at": "2026-09-19T09:34:09.149290+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35485235549",
             "run_attempt": "1",
             "source_sha": "a2049d319947afc930602d29edc6a6906dba4556"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35485593401:1",
+          "recorded_at": "2026-09-20T03:04:00.545666+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35485593401",
+            "run_attempt": "1",
+            "source_sha": "68519de50be55496ba7143e2e8a6d470f560c8fc"
           },
           "signals": [
             "research_completed"
@@ -24119,6 +24119,14 @@
           "type": "research",
           "canonical_id": "arXiv:2502.16002",
           "title": "KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-06ec3586821ff3bb",
+          "type": "research",
+          "canonical_id": "arXiv:2309.08168",
+          "title": "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
           "from": "ready",
           "to": "completed"
         }
