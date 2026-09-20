@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 13:05:40 JST**
+> 自動生成: **2026-09-20 13:06:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **132** |
 | 未claim Research job | **131** |
 | 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-20 12:45:53 JST（19分前）** |
+| 最終検証済みResearch収録 | **09-20 12:45:53 JST（20分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -163,7 +163,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.12171` — PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 13:02:54 JST** / heartbeat: **—** / lease expiry: **09-20 14:32:54 JST**
+  - claim: **09-20 13:05:52 JST** / heartbeat: **—** / lease expiry: **09-20 14:35:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-53d31e41c03b4f2d.json`
 
 #### Audit
