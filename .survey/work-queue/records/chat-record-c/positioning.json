@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-483c9e80b9d0b60acbb8fb48",
-  "job_id": "job-research-67ddaa9ed58fd85b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-483c9e80b9d0b60acbb8fb48",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-483c9e80b9d0b60acbb8fb48","job_id":"job-research-67ddaa9ed58fd85b","data":{"positioning":"OEAは専門家を恒久削除する枝刈り、トークンごとの専門家数を変える動的ルーティング、専門家をホストから先読みするオフロード方式とは異なり、バッチ内で既に発生する専門家ロードを共有資源として使う推論時ルーティングである。目的関数を各トークンの専門家数ではなくバッチ固有活性専門家数Tへ置くことで、メモリ律速デコードの実機遅延へ直接対応する。","differences":"動的top-p/top-k方式は各トークンのルータ分布だけで専門家数を決めるが、OEAは最低基準をトークン単独で決めた後、他トークンが同じステップで必要とする専門家集合を追加情報として利用する。静的枝刈りはモデル容量を恒久的に減らすが、OEAは元専門家をすべて保持しバッチごとに選択を変える。オフロード・先読みは必要専門家の転送を隠すのに対し、OEAはそもそもそのステップでロードする固有専門家数を減らす。","relation_to_prior_work":[{"work":"Dynamic MoE / top-p routing","difference":"各トークンの必要専門家数を独立決定する方式に対し、OEAはトークン別基準を保証した後でバッチ全体の既ロード専門家へ相乗りする。"},{"work":"Expert pruning","difference":"専門家をモデルから永久削除せず、全容量を保持したままデコードステップごとに固有活性集合を縮める。"},{"work":"Expert offloading/prefetching","difference":"転送対象を予測・隠蔽するのではなく、HBMからSRAMへロードする必要がある固有専門家そのものを減らす。"},{"work":"Batch-aware rerouting","difference":"バッチ構成だけでルーティングを変えて品質が不安定になる方式に対し、各トークンへ上位k0のバッチ非依存基準を先に保証する。"}],"strengths":["モデル再学習を要求しない。","既存ルータ得点とバッチ集合演算だけで適用できる。","30B単GPUと235B 8GPUの両方で実機遅延を測る。","固有専門家数と遅延のR²>0.99を実測し最適化対象を検証する。","単純枝刈りとの比較で相乗り固有の品質回復を分離する。"],"limitations":["利得は専門家がメモリ律速になる中程度デコードバッチに依存し、計算律速の大バッチやプリフィルでは小さくなる。","相乗り機会はバッチ内トークンの専門家選択分布に依存し、バッチ1では消える。","専門家並列を跨ぐ通信・配置まで共同最適化しておらず、論文も将来拡張として挙げる。","全層へ同じルーティング設定を用い、層ごとの異質性を活用していない。","ルータ改変への頑健性は既存学習済みモデルの性質に依存し、専用の共同学習は行わない。"],"implementation_status":"SGLangへOEAルータを統合し、Qwen3-30B単一H100およびQwen3-235B 8×H100 HGXでデコード実機評価を実施。本文で公開コードURLは確認できない。","research_positioning":"MoEデコードをトークン単位疎性ではなくバッチ単位の重みロード集合として捉え直すシステム指向ルーティング研究であり、今後の専門家キャッシュ・オフロード・配置最適化と組み合わせやすい。","repository_fit":"適応型専門家計算・圧縮とMoE推論基盤の交点に位置する。特に、バッチ内の専門家再利用をルーティングへフィードバックするため、expert cacheやoffload研究との比較・統合候補として重要。"},"reservation":{"claim_id":"claim-483c9e80b9d0b60acbb8fb48","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
