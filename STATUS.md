@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:35:19 JST**
+> 自動生成: **2026-09-20 09:35:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **89** |
+| 収録候補論文 | **88** |
 | 未claim Research job | **88** |
-| 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-20 06:47:50 JST（2時間47分前）** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-20 09:35:29 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **89** |
+| canonical_id確認済みの一意な候補論文 | **88** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **89** |
+| 非終端Research job合計 | **88** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **1** | **0** | **1** | **1** | **0** | — |
+| Research | **11** | **1** | **1** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **10** | **2** | **1** | **1** | **1** | **0** | **5** |
+| 合計 | **11** | **2** | **2** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 09:35:29 JST** [research] `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
+  - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
+  - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d96484c2d2d3c4cd1838a754.json`
+  - paper: `papers/inference/05-kv-cache-memory-management/2023-2309.17453-streamingllm.md`
 - **09-20 06:47:50 JST** [research] `arXiv:2308.16369` — SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills
   - job: `.survey/work-queue/jobs/job-research-576a090cf3d34dc3.json`
   - result: `.survey/work-queue/results/research/attempt-aabaad10b18cbdb1c36dc544.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-210ab028fb8916623648a61a.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-210ab028fb8916623648a61a.json`
   - paper: `papers/inference/09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md`
-- **09-20 04:13:06 JST** [research] `arXiv:2609.13537` — Dynamic HBM Repartitioning for Multi-Turn MoE Serving
-  - job: `.survey/work-queue/jobs/job-research-1182cce822dbe6dc.json`
-  - result: `.survey/work-queue/results/research/attempt-cdfba8deb741b6462d744e41.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-cdfba8deb741b6462d744e41.json`
-  - paper: `papers/inference/02-moe-expert-placement-caching/2026-2609.13537-dynamic-hbm-repartitioning.md`
 
 ### Audit
 
@@ -112,8 +112,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-d96484c2d2d3c4cd1838a754.json` (job `job-research-e12ae17b96a85ee5`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
+  - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
+  - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d96484c2d2d3c4cd1838a754.json`
+  - paper: `papers/inference/05-kv-cache-memory-management/2023-2309.17453-streamingllm.md`
 
 #### Audit (:30)
 
@@ -135,10 +139,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 09:34:42 JST** / heartbeat: **—** / lease expiry: **09-20 11:04:42 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e12ae17b96a85ee5.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -158,7 +160,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **89** |
+| ready | **88** |
 
 ### 候補の重複・識別情報欠損
 
@@ -178,7 +180,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **783** |
+| inference/training/survey配下の論文Markdown実体 | **784** |
 
 ### immutable submissionの未照合
 
@@ -186,8 +188,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **677** |
-| └ Research | **516** |
+| 成功result未照合のimmutable submission | **676** |
+| └ Research | **515** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

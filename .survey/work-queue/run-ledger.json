@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-19T23:43:33.949972+00:00",
+  "updated_at": "2026-09-20T00:35:35.448026+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-19T23:43:33.949972+00:00",
+      "last_recorded_at": "2026-09-20T00:35:35.448026+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 319,
+        "research_completed": 320,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 43,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35415080567:1",
-          "recorded_at": "2026-09-19T02:15:23.998053+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35415080567",
-            "run_attempt": "1",
-            "source_sha": "7485a6c3ed4725f5c10611c6e5e4f99edecb3e8a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35415122633:1",
           "recorded_at": "2026-09-19T02:15:58.267442+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35479164297:1",
+          "recorded_at": "2026-09-20T00:35:35.448026+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35479164297",
+            "run_attempt": "1",
+            "source_sha": "dc6d9b25fd61e692d8724c1bdb241985912f29ba"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -24041,6 +24041,14 @@
           "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-e12ae17b96a85ee5",
+          "type": "research",
+          "canonical_id": "arXiv:2309.17453",
+          "title": "Efficient Streaming Language Models with Attention Sinks",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26827,7 +26835,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 783,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
