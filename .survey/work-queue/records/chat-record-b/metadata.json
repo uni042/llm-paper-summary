@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0b14b95da2b3a2abc2e9855f",
-  "job_id": "job-research-9824d8080e264ed4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0b14b95da2b3a2abc2e9855f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0b14b95da2b3a2abc2e9855f","job_id":"job-research-9824d8080e264ed4","data":{"canonical_id":"arXiv:2306.14048","arxiv_id":"2306.14048","doi":"10.48550/arXiv.2306.14048","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models","summary":"H2Oは、生成中の注意スコア累積が少数トークンへ強く偏るヘビーヒッター現象を利用し、重要な過去トークンと最新トークンだけをKVキャッシュへ残す動的eviction方式である。注意行列が95%以上疎で、累積注意がべき乗則的に集中する観測から、各デコード段階の局所統計だけでヘビーヒッターを更新する。20%キャッシュ予算でも多くのOPT/LLaMA/GPT-NeoX評価で全KVに近い品質を保ち、FlexGen実装ではKVメモリを約5倍削減する。OPT-6.7B/30BでFlexGen比最大3倍、DeepSpeed/Accelerate比最大29倍のスループットを示し、同一バッチではFlexGen比最大1.9倍の遅延短縮を報告する。","list_summary":"累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。","authors":["Zhenyu Zhang","Ying Sheng","Tianyi Zhou","Tianlong Chen","Lianmin Zheng","Ruisi Cai","Zhao Song","Yuandong Tian","Christopher Ré","Clark Barrett","Zhangyang Wang","Beidi Chen"],"authors_affiliations":"UT Austin; Stanford; UC San Diego; UC Berkeley; Adobe Research; Meta AI; Carnegie Mellon University","published":"2023-06-24","publication":"NeurIPS 2023","publication_type":"国際会議論文","publication_status":"Published","lineage":"KV cache eviction / heavy hitters / sparse attention / efficient inference","topics":["KVキャッシュ削除","ヘビーヒッター","注意スパース性","生成推論","動的キャッシュ"],"importance":"再学習なしの事前学習済みLLMで、注意履歴から重要トークンをオンライン選別してKVキャッシュ量を削減する代表的研究。","implementation":"公式FMInference/H2O実装はFlexGen上のキャッシュ削除とHugging Face系実装を公開する。","hardware_evaluation":"品質評価は主にA100-80GB、システム性能はT4-16GBとA100-80GBで測定し、CPU offloadを含む構成も比較する。","quality_effect":"20%予算では多くのタスクで全KVと同等に近いが、Localのみ・Heavy-Hitterのみでは性能低下し、極端な予算やタスク依存で精度差が残る。","source":"https://arxiv.org/abs/2306.14048","sources":["https://arxiv.org/abs/2306.14048","https://ar5iv.labs.arxiv.org/html/2306.14048","https://github.com/FMInference/H2O"],"code":"https://github.com/FMInference/H2O","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2211.05102","arxiv_id":"2211.05102"},{"canonical_id":"arXiv:2001.04451","arxiv_id":"2001.04451"},{"canonical_id":"arXiv:1904.10509","arxiv_id":"1904.10509"},{"canonical_id":"arXiv:2009.14794","arxiv_id":"2009.14794"},{"canonical_id":"arXiv:2201.08239","arxiv_id":"2201.08239"},{"canonical_id":"arXiv:2206.07682","arxiv_id":"2206.07682"}],"references_checked_at":"2026-09-20","references_source":"primary manuscript reference section","references_total":145},"reservation":{"claim_id":"claim-0b14b95da2b3a2abc2e9855f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
