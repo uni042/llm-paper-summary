@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-20T04:04:00+00:00",
-  "record_count": 38,
+  "updated_at": "2026-09-20T04:10:00+00:00",
+  "record_count": 42,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -564,6 +564,62 @@
         "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md"
       ],
       "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python"
+    },
+    "arXiv:2404.18424": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18424",
+      "identity_tokens": [
+        "arXiv:2404.18424"
+      ],
+      "reason": "Information-retrieval representation method rather than an LLM inference/training systems contribution.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/kv-cache/2608.19662.md"
+      ],
+      "title": "PromptReps: Prompting Large Language Models to Generate Dense and Sparse Representations for Zero-Shot Document Retrieval"
+    },
+    "arXiv:2405.06211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.06211",
+      "identity_tokens": [
+        "arXiv:2405.06211"
+      ],
+      "reason": "RAG/application-method survey rather than an inference/training systems survey.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+    },
+    "arXiv:2405.07883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07883",
+      "identity_tokens": [
+        "arXiv:2405.07883"
+      ],
+      "reason": "Tokenizer adaptation method rather than an LLM systems contribution.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md"
+      ],
+      "title": "Zero-Shot Tokenizer Transfer"
+    },
+    "arXiv:2405.14838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14838",
+      "identity_tokens": [
+        "arXiv:2405.14838"
+      ],
+      "reason": "Reasoning/training methodology rather than an inference or training systems optimization.",
+      "first_checked_at": "2026-09-20T04:10:00+00:00",
+      "last_checked_at": "2026-09-20T04:10:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md"
+      ],
+      "title": "From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step"
     }
   }
 }
