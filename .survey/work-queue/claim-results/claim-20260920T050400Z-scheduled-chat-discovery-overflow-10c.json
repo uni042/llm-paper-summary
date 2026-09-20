@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T050400Z-scheduled-chat-discovery-overflow-10c",
+  "worker_id": "scheduled-chat-discovery-overflow",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-989ee0a4e32cc6c3",
+      "claim_id": "claim-44b24147d79154a807dce87e",
+      "worker_id": "scheduled-chat-discovery-overflow",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-44b24147d79154a807dce87e",
+      "claimed_at": "2026-09-20T05:03:36+00:00",
+      "expires_at": "2026-09-20T06:33:36+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-989ee0a4e32cc6c3"
+      ],
+      "job": {
+        "job_id": "job-research-989ee0a4e32cc6c3",
+        "type": "research",
+        "parent_job_id": "job-faf5972fc440ac4d",
+        "priority": 97,
+        "canonical_id": "arXiv:2605.00528",
+        "arxiv_id": "2605.00528",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2605.00528",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+        "selection_reason": "Workflow-level GPU scheduler for agentic inference that preserves/reuses intermediate KV state and coordinates affinity, batching, stealing, and fairness.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:59+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T05:03:36+00:00",
+  "checkpoint_released": 0
+}
