@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T14:40:44.343368+00:00",
+  "updated_at": "2026-09-20T14:43:45.592123+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T14:40:44.343368+00:00",
+      "last_recorded_at": "2026-09-20T14:43:45.592123+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 391,
+        "research_completed": 392,
         "audit_completed": 0,
         "discovery_completed": 218,
         "blocked": 59,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35493845228:1",
-          "recorded_at": "2026-09-20T06:17:44.640832+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35493845228",
-            "run_attempt": "1",
-            "source_sha": "206631bf4a5f1f0e471fe048d968939d0850a153"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35494057112:1",
           "recorded_at": "2026-09-20T06:22:44.708781+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35517207715",
             "run_attempt": "1",
             "source_sha": "4c8248f0153ebf0dd5b3f8387f7c4e81e34d94fb"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35517328296:1",
+          "recorded_at": "2026-09-20T14:43:45.592123+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35517328296",
+            "run_attempt": "1",
+            "source_sha": "a151fa58f69227e8a71efe8c13b9e5dc4d1a3be6"
           },
           "signals": [
             "research_completed"
@@ -24939,6 +24939,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.07616",
           "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7878dfa1090aac77",
+          "type": "research",
+          "canonical_id": "arXiv:2509.21892",
+          "title": "Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts",
           "from": "ready",
           "to": "completed"
         }
