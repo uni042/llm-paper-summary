@@ -14,6 +14,7 @@ import hashlib
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -272,6 +273,7 @@ def _process_v3(
         "unresolved_identity_count": collected["unresolved_identity_count"],
         "unseen_result_count": collected["unseen_result_count"],
         "provider_progress": collected.get("provider_progress"),
+        "progress_observed_at": datetime.now(timezone.utc).isoformat(),
         "results": results,
         "allowed_records": allowed,
         "receipt": receipt,
