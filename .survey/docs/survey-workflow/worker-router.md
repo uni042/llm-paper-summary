@@ -22,14 +22,14 @@
 
 毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じタスク・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新状態から `candidate_inventory` を取得し、次の1条件だけで今回の論文作業モードを決める。
 
-- **`candidate_inventory >= 50` → 探索（Discovery）**
-- **`candidate_inventory < 50` → 読解（Research / Audit）**
+- **`candidate_inventory >= 50` → 読解（Research / Audit）**
+- **`candidate_inventory < 50` → 探索（Discovery）**
 
 maintenance対象または08:30 JSTの専用更新条件だけは、この分岐より優先して専用経路へ入る。
 
 モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
-候補数は最新の耐久状態から毎run取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら探索を選ぶ。
+候補数は最新の耐久状態から毎run取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら読解を選ぶ。
 
 ノルマは維持する。
 
