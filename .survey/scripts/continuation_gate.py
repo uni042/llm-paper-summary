@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Deterministic stop/continue gate for Scheduled Chat survey workers.
 
-The gate decides whether the whole run may stop and, for the discovery-specialist
-worker, whether the next action must be another discovery round. Transport
-backlogs, claim-result propagation delay, and job-local failures are not stop
-conditions when repository state remains readable and no explicit hard condition
-holds.
+The gate decides whether the whole run may stop for either hourly paper-worker
+profile. Research-heavy and discovery-heavy workers share the same continuation
+semantics; their only paper-work difference is the work mix selected by the
+canonical router. Transport backlogs, claim-result propagation delay, and
+job-local failures are not stop conditions when repository state remains readable
+and no explicit hard condition holds.
 
 Hourly Scheduled Chat workers use a one-hour run window measured from the actual
 invocation start. The nominal :00/:30 schedule boundary is retained only as a
@@ -51,7 +52,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
-    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_since_last_novel, 0)
+    minimum_rounds_remaining = 0  # legacy compatibility field; no task-specific discovery floor remains
 
     if args.platform_limit:
         reasons.append("platform_limit_reached")
@@ -109,45 +110,32 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     hard_stop = bool(reasons)
-    if worker_kind == "discovery" and not hard_stop:
-        if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN"
-            finalization_allowed = False
-        elif discovery_exhausted and not next_axis_available and not independent_work:
-            reasons.append("discovery_exhausted_after_minimum_rounds")
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
-        else:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
-            finalization_allowed = False
+    # worker_kind is retained as a compatibility label only.  It must not
+    # change continuation semantics; work-mix selection belongs to worker-router.md.
+    if reasons:
+        decision = "STOP_RUN"
+        required_action = "FINALIZE"
+        finalization_allowed = True
+    elif not claim_state_checked:
+        decision = "CONTINUE"
+        required_action = "CHECK_CLAIM_STATE"
+        finalization_allowed = False
+    elif transient_claim_wait:
+        decision = "CONTINUE"
+        required_action = "WAIT_FOR_CLAIM_RESULT"
+        finalization_allowed = False
+    elif not submission_state_checked:
+        decision = "CONTINUE"
+        required_action = "CHECK_SUBMISSION_STATE"
+        finalization_allowed = False
+    elif transient_submission_wait and not independent_work:
+        decision = "CONTINUE"
+        required_action = "WAIT_FOR_SUBMISSION_RESULT"
+        finalization_allowed = False
     else:
-        if reasons:
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
-        elif not claim_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_CLAIM_STATE"
-            finalization_allowed = False
-        elif transient_claim_wait:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_CLAIM_RESULT"
-            finalization_allowed = False
-        elif not submission_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_SUBMISSION_STATE"
-            finalization_allowed = False
-        elif transient_submission_wait and not independent_work:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_SUBMISSION_RESULT"
-            finalization_allowed = False
-        else:
-            decision = "CONTINUE"
-            required_action = "CONTINUE_WORK"
-            finalization_allowed = False
+        decision = "CONTINUE"
+        required_action = "CONTINUE_WORK"
+        finalization_allowed = False
 
     write_scope = "none"
     write_action = "normal"
@@ -232,6 +220,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_reset_progress_known": discovery_reset_progress_known,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
+        "legacy_discovery_progression_ignored": True,
         "discovery_exhausted": discovery_exhausted,
         "next_axis_available": next_axis_available,
         "write_failure_scope": write_scope,
@@ -265,10 +254,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "claim/submission results are polled every 10 real seconds using the same target identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
-            "Discovery specialist runs may use exhaustion as a voluntary stop reason only when "
-            "reset-aware progress since the latest novel candidate is explicitly supplied and "
-            "satisfies the minimum progression floor; hard handoff/platform/durability/read "
-            "failures override that floor."
+            "The normal/discovery worker_kind label is compatibility metadata only and never "
+            "changes stop or continuation semantics. Work-type balance is selected by the common "
+            "router; hard handoff/platform/durability/read failures override ordinary continuation."
         ),
     }
 
