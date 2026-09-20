@@ -1,0 +1,963 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker30-20260921-023117-attnkernel-8",
+  "collector_id": "worker30-openalex-attnkernel",
+  "run_key": "2026-09-21T02:31:17+09:00-worker30",
+  "axis": "GPU attention kernels and inference runtime",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20attention%20kernel%20GPU%20inference%20FlashAttention&filter=from_publication_date:2025-01-01&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg2OTI0ODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjAzNjEzMTU0J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f55d851446ded42453f54617287539f57f31f4de",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 23,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:37:37.100595+00:00",
+  "results": [
+    {
+      "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation",
+      "source_url": "https://arxiv.org/abs/2609.19702",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "arXiv:2609.19702",
+      "arxiv_id": "2609.19702",
+      "authors": [
+        "Daeun Kim",
+        "Jian Hong",
+        "Changhun Oh",
+        "Yoonsung Kim",
+        "Yoonhyeong Lee",
+        "Jongse Park"
+      ]
+    },
+    {
+      "title": "ResonatorLM: Causal Resonant Field Mixing for Efficient Long-Context Language Modeling",
+      "source_url": "https://doi.org/10.1007/978-3-032-38398-3_36",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2607.05583",
+      "arxiv_id": "2607.05583",
+      "authors": [
+        "Archie Chaudhury"
+      ]
+    },
+    {
+      "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+      "source_url": "https://arxiv.org/abs/2609.15311",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15311",
+      "arxiv_id": "2609.15311",
+      "authors": [
+        "Siying Yu",
+        "Yixun Hong",
+        "Guozhi Qiu",
+        "Jingci Liu",
+        "Feng Gu",
+        "C. Geng",
+        "Zhengrong Wang",
+        "Chen Zhang",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows",
+      "source_url": "https://arxiv.org/abs/2609.15863",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15863",
+      "arxiv_id": "2609.15863",
+      "authors": [
+        "Xiaofeng Mao",
+        "Peijia Lin",
+        "Shaohao Rui",
+        "Yibo Zhang",
+        "Haibin Wan",
+        "Weijie Ma"
+      ]
+    },
+    {
+      "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+      "source_url": "https://arxiv.org/abs/2609.14306",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14306",
+      "arxiv_id": "2609.14306",
+      "authors": [
+        "Shrey Pandit",
+        "Xuan-Phi Nguyen",
+        "Yiran Zhao",
+        "Shafiq Joty"
+      ]
+    },
+    {
+      "title": "TriCalRAG: A Three-Strategy, Retrieval-Augmented Benchmark for On-Premise LLM-Based Root Cause Analysis in AIOps",
+      "source_url": "https://arxiv.org/abs/2609.14762",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14762",
+      "arxiv_id": "2609.14762",
+      "authors": [
+        "Rohit Patel",
+        "Susil Kumar Mohanty",
+        "Jeenal Chaudhary"
+      ]
+    },
+    {
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "source_url": "https://arxiv.org/abs/2609.12815",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12815",
+      "arxiv_id": "2609.12815",
+      "authors": [
+        "Deifilia Kieckhefen",
+        "Juan Pedro Gutiérrez Hermosillo Muriedas",
+        "Lars H. Heyen",
+        "Mathis Bode",
+        "Iida Hakulinen",
+        "Andreas Herten",
+        "Chelsea Maria John",
+        "Thorsten Kurth",
+        "Anni Moisala",
+        "Asena Karolin Özdemir",
+        "Kaleb Phipps",
+        "Oskar Taubert",
+        "Arvid Weyrauch",
+        "Markus Götz",
+        "Charlotte Debus"
+      ]
+    },
+    {
+      "title": "Attention Quantization for Tabular Foundation Models",
+      "source_url": "https://arxiv.org/abs/2609.13031",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13031",
+      "arxiv_id": "2609.13031",
+      "authors": [
+        "Jonas M. Kübler",
+        "Benjamin Jäger",
+        "Klemens Flöge",
+        "Noah Hollmann",
+        "Frank Hutter"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Leshan Li",
+        "Zhui Zhu",
+        "Xianglong Deng",
+        "Yaojian Chen",
+        "Qingfeng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhiyuan Liu"
+      ]
+    },
+    {
+      "title": "Unleashing the Power of Equality Saturation for Tensor Program Superoptimization",
+      "source_url": "https://arxiv.org/abs/2609.12330",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12330",
+      "arxiv_id": "2609.12330",
+      "authors": [
+        "Qi Zhan",
+        "Xing Hu",
+        "Xin Xia",
+        "Shanping Li"
+      ]
+    },
+    {
+      "title": "AMDKernelVault: Large-Scale Datasets and Agentic Training for AMD GPU Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2609.12471",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12471",
+      "arxiv_id": "2609.12471",
+      "authors": [
+        "Ji Liu",
+        "Saptarshi Majumder",
+        "Yiqing Huang",
+        "Wenwen Ouyang",
+        "Umang Pandey",
+        "Zeping Li",
+        "C.H. Chen",
+        "Zihao An",
+        "Puyuan Yang",
+        "Zekai Li",
+        "Sina Rafati",
+        "Ziqiong Liu",
+        "Pratik Prabhanjan Brahma",
+        "Dong Li",
+        "Zicheng Liu",
+        "Sharon Zhou",
+        "Emad Barsoum"
+      ]
+    },
+    {
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "source_url": "https://arxiv.org/abs/2609.13141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13141",
+      "arxiv_id": "2609.13141",
+      "authors": [
+        "Zhiwei Li",
+        "Lei Zhu",
+        "Hao Gu",
+        "Xiang Hu",
+        "Yan Wang",
+        "Haitao Mi",
+        "Sirui Han",
+        "Leo Liang",
+        "Zhijiang Guo"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13585",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13585",
+      "arxiv_id": "2609.13585",
+      "authors": [
+        "Ziming Mao",
+        "Yihan Zhang",
+        "Shawn Wei Chew",
+        "Shuang Ma",
+        "Costin Raiciu",
+        "Yang Zhou",
+        "Scott Shenker",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13612",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13612",
+      "arxiv_id": "2609.13612",
+      "authors": [
+        "Varun Kumar Dasoju",
+        "Tian Zhao"
+      ]
+    },
+    {
+      "title": "One Spectrum, Two Resources: Data-Memory Scaling in Autoregressive Prediction",
+      "source_url": "https://arxiv.org/abs/2609.13500",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13500",
+      "arxiv_id": "2609.13500",
+      "authors": [
+        "Chiwun Yang",
+        "Xiaoyu Li"
+      ]
+    },
+    {
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2609.11873",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11873",
+      "arxiv_id": "2609.11873",
+      "authors": [
+        "Yi Duan",
+        "Ying Liu",
+        "Zirui Tang",
+        "Haodong Chen",
+        "Jun Zhou",
+        "Yumou Liu",
+        "Xu BangRui",
+        "Yukai Wu",
+        "Sidi Chen",
+        "Yuhan Zhou",
+        "Haoyu Wang",
+        "Xiaoyou Yu",
+        "Shaokun Han",
+        "Xuzhou Zhu",
+        "Le Zhou",
+        "Bolin Lu",
+        "Wei Zhou",
+        "Jiachen Liu",
+        "Nuozhou Fang",
+        "Jiaxin Tian",
+        "Ruoyu Chen",
+        "Yuxuan Li",
+        "Kai Zuo",
+        "Kaiyan Zhang",
+        "Qianyu Yang",
+        "Zijie Wang",
+        "黎国樑",
+        "Conghui He",
+        "Zhiyuan Liu",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Zhoufutu Wen",
+        "Jihua Kang",
+        "Xuanhe Zhou",
+        "Fan Wu"
+      ]
+    },
+    {
+      "title": "Biology-in-the-loop: Amortized Adaptive Hit Discovery in CRISPR Screens",
+      "source_url": "https://arxiv.org/abs/2609.11877",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11877",
+      "arxiv_id": "2609.11877",
+      "authors": [
+        "Carl Edwards",
+        "Edward De Brouwer",
+        "Xiner Li",
+        "Namkyeong Lee",
+        "Ehsan Hajiramezanali",
+        "Anne Biton",
+        "Sara Mostafavi",
+        "Gabriele Scalia"
+      ]
+    },
+    {
+      "title": "$Φ$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+      "source_url": "https://arxiv.org/abs/2609.10226",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10226",
+      "arxiv_id": "2609.10226",
+      "authors": [
+        "Leilei Ding",
+        "Shumin Wang",
+        "Yuting Huang",
+        "Fanqi Wan",
+        "Yinmin Zhang",
+        "Qi Han",
+        "Yiming Xu",
+        "Feiyuan Zhang",
+        "Xiaomeng Chu",
+        "Guoliang You",
+        "Wuyang Zhang",
+        "Daxin Jiang",
+        "Yanyong Zhang"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.19702",
+      "identity_tokens": [
+        "id:arXiv:2609.19702",
+        "title:understanding and exploiting diagonal attention sparsity in autoregressive image generation",
+        "url:https://arxiv.org/abs/2609.19702"
+      ],
+      "record": {
+        "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation",
+        "source_url": "https://arxiv.org/abs/2609.19702",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "arXiv:2609.19702",
+        "arxiv_id": "2609.19702",
+        "authors": [
+          "Daeun Kim",
+          "Jian Hong",
+          "Changhun Oh",
+          "Yoonsung Kim",
+          "Yoonhyeong Lee",
+          "Jongse Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05583",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-38398-3_36",
+        "id:arXiv:2607.05583",
+        "title:resonatorlm causal resonant field mixing for efficient longcontext language modeling",
+        "url:https://doi.org/10.1007/978-3-032-38398-3_36"
+      ],
+      "record": {
+        "title": "ResonatorLM: Causal Resonant Field Mixing for Efficient Long-Context Language Modeling",
+        "source_url": "https://doi.org/10.1007/978-3-032-38398-3_36",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2607.05583",
+        "arxiv_id": "2607.05583",
+        "authors": [
+          "Archie Chaudhury"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15311",
+      "identity_tokens": [
+        "id:arXiv:2609.15311",
+        "title:flashgpusim enabling gpu modeling for modern architectures and ai workloads",
+        "url:https://arxiv.org/abs/2609.15311"
+      ],
+      "record": {
+        "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+        "source_url": "https://arxiv.org/abs/2609.15311",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15311",
+        "arxiv_id": "2609.15311",
+        "authors": [
+          "Siying Yu",
+          "Yixun Hong",
+          "Guozhi Qiu",
+          "Jingci Liu",
+          "Feng Gu",
+          "C. Geng",
+          "Zhengrong Wang",
+          "Chen Zhang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15863",
+      "identity_tokens": [
+        "id:arXiv:2609.15863",
+        "title:lynnrealomni native multimodal video generation for agentic visual workflows",
+        "url:https://arxiv.org/abs/2609.15863"
+      ],
+      "record": {
+        "title": "LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows",
+        "source_url": "https://arxiv.org/abs/2609.15863",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15863",
+        "arxiv_id": "2609.15863",
+        "authors": [
+          "Xiaofeng Mao",
+          "Peijia Lin",
+          "Shaohao Rui",
+          "Yibo Zhang",
+          "Haibin Wan",
+          "Weijie Ma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14306",
+      "identity_tokens": [
+        "id:arXiv:2609.14306",
+        "title:flattening every memory peak in longcontext mixtureofexperts training",
+        "url:https://arxiv.org/abs/2609.14306"
+      ],
+      "record": {
+        "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+        "source_url": "https://arxiv.org/abs/2609.14306",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14306",
+        "arxiv_id": "2609.14306",
+        "authors": [
+          "Shrey Pandit",
+          "Xuan-Phi Nguyen",
+          "Yiran Zhao",
+          "Shafiq Joty"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14762",
+      "identity_tokens": [
+        "id:arXiv:2609.14762",
+        "title:tricalrag a threestrategy retrievalaugmented benchmark for onpremise llmbased root cause analysis in aiops",
+        "url:https://arxiv.org/abs/2609.14762"
+      ],
+      "record": {
+        "title": "TriCalRAG: A Three-Strategy, Retrieval-Augmented Benchmark for On-Premise LLM-Based Root Cause Analysis in AIOps",
+        "source_url": "https://arxiv.org/abs/2609.14762",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14762",
+        "arxiv_id": "2609.14762",
+        "authors": [
+          "Rohit Patel",
+          "Susil Kumar Mohanty",
+          "Jeenal Chaudhary"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12815",
+      "identity_tokens": [
+        "id:arXiv:2609.12815",
+        "title:4d parallelism unlocks exascale bayesian neural networks for highfidelity atmospheric modeling",
+        "url:https://arxiv.org/abs/2609.12815"
+      ],
+      "record": {
+        "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+        "source_url": "https://arxiv.org/abs/2609.12815",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12815",
+        "arxiv_id": "2609.12815",
+        "authors": [
+          "Deifilia Kieckhefen",
+          "Juan Pedro Gutiérrez Hermosillo Muriedas",
+          "Lars H. Heyen",
+          "Mathis Bode",
+          "Iida Hakulinen",
+          "Andreas Herten",
+          "Chelsea Maria John",
+          "Thorsten Kurth",
+          "Anni Moisala",
+          "Asena Karolin Özdemir",
+          "Kaleb Phipps",
+          "Oskar Taubert",
+          "Arvid Weyrauch",
+          "Markus Götz",
+          "Charlotte Debus"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13031",
+      "identity_tokens": [
+        "id:arXiv:2609.13031",
+        "title:attention quantization for tabular foundation models",
+        "url:https://arxiv.org/abs/2609.13031"
+      ],
+      "record": {
+        "title": "Attention Quantization for Tabular Foundation Models",
+        "source_url": "https://arxiv.org/abs/2609.13031",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13031",
+        "arxiv_id": "2609.13031",
+        "authors": [
+          "Jonas M. Kübler",
+          "Benjamin Jäger",
+          "Klemens Flöge",
+          "Noah Hollmann",
+          "Frank Hutter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://arxiv.org/abs/2609.12379"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://arxiv.org/abs/2609.12379",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Leshan Li",
+          "Zhui Zhu",
+          "Xianglong Deng",
+          "Yaojian Chen",
+          "Qingfeng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhiyuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12330",
+      "identity_tokens": [
+        "id:arXiv:2609.12330",
+        "title:unleashing the power of equality saturation for tensor program superoptimization",
+        "url:https://arxiv.org/abs/2609.12330"
+      ],
+      "record": {
+        "title": "Unleashing the Power of Equality Saturation for Tensor Program Superoptimization",
+        "source_url": "https://arxiv.org/abs/2609.12330",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12330",
+        "arxiv_id": "2609.12330",
+        "authors": [
+          "Qi Zhan",
+          "Xing Hu",
+          "Xin Xia",
+          "Shanping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12471",
+      "identity_tokens": [
+        "id:arXiv:2609.12471",
+        "title:amdkernelvault largescale datasets and agentic training for amd gpu kernel optimization",
+        "url:https://arxiv.org/abs/2609.12471"
+      ],
+      "record": {
+        "title": "AMDKernelVault: Large-Scale Datasets and Agentic Training for AMD GPU Kernel Optimization",
+        "source_url": "https://arxiv.org/abs/2609.12471",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12471",
+        "arxiv_id": "2609.12471",
+        "authors": [
+          "Ji Liu",
+          "Saptarshi Majumder",
+          "Yiqing Huang",
+          "Wenwen Ouyang",
+          "Umang Pandey",
+          "Zeping Li",
+          "C.H. Chen",
+          "Zihao An",
+          "Puyuan Yang",
+          "Zekai Li",
+          "Sina Rafati",
+          "Ziqiong Liu",
+          "Pratik Prabhanjan Brahma",
+          "Dong Li",
+          "Zicheng Liu",
+          "Sharon Zhou",
+          "Emad Barsoum"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13141",
+      "identity_tokens": [
+        "id:arXiv:2609.13141",
+        "title:sas simple attention sparsification via endtoend optimization of context ranking",
+        "url:https://arxiv.org/abs/2609.13141"
+      ],
+      "record": {
+        "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+        "source_url": "https://arxiv.org/abs/2609.13141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13141",
+        "arxiv_id": "2609.13141",
+        "authors": [
+          "Zhiwei Li",
+          "Lei Zhu",
+          "Hao Gu",
+          "Xiang Hu",
+          "Yan Wang",
+          "Haitao Mi",
+          "Sirui Han",
+          "Leo Liang",
+          "Zhijiang Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13585",
+      "identity_tokens": [
+        "id:arXiv:2609.13585",
+        "title:mkernel fast multigpu multinode fused kernels",
+        "url:https://arxiv.org/abs/2609.13585"
+      ],
+      "record": {
+        "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13585",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13585",
+        "arxiv_id": "2609.13585",
+        "authors": [
+          "Ziming Mao",
+          "Yihan Zhang",
+          "Shawn Wei Chew",
+          "Shuang Ma",
+          "Costin Raiciu",
+          "Yang Zhou",
+          "Scott Shenker",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13612",
+      "identity_tokens": [
+        "id:arXiv:2609.13612",
+        "title:attnfuse a composable dsl for compiling attentions to fused gpu kernels",
+        "url:https://arxiv.org/abs/2609.13612"
+      ],
+      "record": {
+        "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13612",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13612",
+        "arxiv_id": "2609.13612",
+        "authors": [
+          "Varun Kumar Dasoju",
+          "Tian Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13500",
+      "identity_tokens": [
+        "id:arXiv:2609.13500",
+        "title:one spectrum two resources datamemory scaling in autoregressive prediction",
+        "url:https://arxiv.org/abs/2609.13500"
+      ],
+      "record": {
+        "title": "One Spectrum, Two Resources: Data-Memory Scaling in Autoregressive Prediction",
+        "source_url": "https://arxiv.org/abs/2609.13500",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13500",
+        "arxiv_id": "2609.13500",
+        "authors": [
+          "Chiwun Yang",
+          "Xiaoyu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11873",
+      "identity_tokens": [
+        "id:arXiv:2609.11873",
+        "title:the last ai built by humans toward genuine recursive selfimprovement",
+        "url:https://arxiv.org/abs/2609.11873"
+      ],
+      "record": {
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "source_url": "https://arxiv.org/abs/2609.11873",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11873",
+        "arxiv_id": "2609.11873",
+        "authors": [
+          "Yi Duan",
+          "Ying Liu",
+          "Zirui Tang",
+          "Haodong Chen",
+          "Jun Zhou",
+          "Yumou Liu",
+          "Xu BangRui",
+          "Yukai Wu",
+          "Sidi Chen",
+          "Yuhan Zhou",
+          "Haoyu Wang",
+          "Xiaoyou Yu",
+          "Shaokun Han",
+          "Xuzhou Zhu",
+          "Le Zhou",
+          "Bolin Lu",
+          "Wei Zhou",
+          "Jiachen Liu",
+          "Nuozhou Fang",
+          "Jiaxin Tian",
+          "Ruoyu Chen",
+          "Yuxuan Li",
+          "Kai Zuo",
+          "Kaiyan Zhang",
+          "Qianyu Yang",
+          "Zijie Wang",
+          "黎国樑",
+          "Conghui He",
+          "Zhiyuan Liu",
+          "Bowen Zhou",
+          "Zhiyuan Liu",
+          "Zhoufutu Wen",
+          "Jihua Kang",
+          "Xuanhe Zhou",
+          "Fan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11877",
+      "identity_tokens": [
+        "id:arXiv:2609.11877",
+        "title:biologyintheloop amortized adaptive hit discovery in crispr screens",
+        "url:https://arxiv.org/abs/2609.11877"
+      ],
+      "record": {
+        "title": "Biology-in-the-loop: Amortized Adaptive Hit Discovery in CRISPR Screens",
+        "source_url": "https://arxiv.org/abs/2609.11877",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11877",
+        "arxiv_id": "2609.11877",
+        "authors": [
+          "Carl Edwards",
+          "Edward De Brouwer",
+          "Xiner Li",
+          "Namkyeong Lee",
+          "Ehsan Hajiramezanali",
+          "Anne Biton",
+          "Sara Mostafavi",
+          "Gabriele Scalia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10226",
+      "identity_tokens": [
+        "id:arXiv:2609.10226",
+        "title:φbench can large language models engineer the infrastructure that powers them",
+        "url:https://arxiv.org/abs/2609.10226"
+      ],
+      "record": {
+        "title": "$Φ$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+        "source_url": "https://arxiv.org/abs/2609.10226",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10226",
+        "arxiv_id": "2609.10226",
+        "authors": [
+          "Leilei Ding",
+          "Shumin Wang",
+          "Yuting Huang",
+          "Fanqi Wan",
+          "Yinmin Zhang",
+          "Qi Han",
+          "Yiming Xu",
+          "Feiyuan Zhang",
+          "Xiaomeng Chu",
+          "Guoliang You",
+          "Wuyang Zhang",
+          "Daxin Jiang",
+          "Yanyong Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a1d5349b179db2be2f4f5261d82fcd368cb72fe51fa3cbccc8c1d9b7a7735548",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
