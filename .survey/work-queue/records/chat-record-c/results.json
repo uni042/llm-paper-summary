@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5a2d8cb943b02cb27fc0083a","job_id":"job-research-6e63ee697d71f91d","data":{"overview":"SHAPEは20%枝刈りで3モデルすべての平均精度をほぼ維持し、GPT-OSS-20BとDeepSeek-V2-Liteでは基準平均をわずかに上回った。40%では低下するがQwen3-30B-A3Bで81.31対基準82.92、GPT-OSS-20Bで79.02対82.12を維持し、Qwen3のRandom/Frequency/GatingやRAEP/EASY-EPより平均が高い。品質カバレッジは同じShapleyスコアのglobal・layer-wise選択より一貫して高く、構造保護の寄与も分離されている。","key_results":[{"metric":"Qwen3-30B-A3B 平均精度 20%枝刈り","value":"82.43","baseline":"未枝刈り82.92、EASY-EP 82.35、RAEP 81.86、Frequency 72.16","condition":"7タスク、各タスク25例キャリブレーション、追加訓練なし","interpretation":"0.49ポイントの低下で20%の専門家を削除し、比較枝刈り基準中で最高平均。"},{"metric":"Qwen3-30B-A3B 平均精度 40%枝刈り","value":"81.31","baseline":"EASY-EP 79.05、RAEP 74.22、Gating 59.29、Random 28.76","condition":"40%専門家削除、追加訓練なし","interpretation":"強い枝刈りで差が拡大し、GPQA-Diamondは67.68で未枝刈り58.59も上回る一方、HumanEvalは89.63へ低下する。"},{"metric":"GPT-OSS-20B 平均精度","value":"20%: 82.44、40%: 79.02","baseline":"未枝刈り82.12","condition":"同一7タスク","interpretation":"20%では平均を維持・微増し、40%でも約3.1ポイント低下に抑える。"},{"metric":"DeepSeek-V2-Lite 平均精度","value":"20%: 62.44、40%: 58.81","baseline":"未枝刈り62.08","condition":"より小さい冗長余地のモデル","interpretation":"20%では維持するが40%では3.27ポイント低下し、小規模バックボーンほど枝刈り耐性が低い。"},{"metric":"品質カバレッジのアブレーション","value":"Qwen3 40%: 81.31","baseline":"Global 80.49、Layer-wise 79.58","condition":"同じShapley系スコアで選択規則のみ変更","interpretation":"全層一括の過剰枝刈りと各層固定配分の双方より、貢献質量カバレッジで層別容量を可変にする方が安定する。"}],"negative_results":"40%枝刈りでは推論・コード系が敏感で、Qwen3 HumanEvalは95.73から89.63、GPT-OSSは95.73から85.41へ低下する。DeepSeek-V2-Liteは40%で平均58.81まで落ち、モデル容量が小さいほど冗長性余地が狭い。推定値の負値はノイズまたは破壊的相互作用として0へ切り上げるため、負の協力効果そのものは選択へ活用しない。","interpretation":"単純な活性頻度やゲート値は高頻度専門家を残せても、組合せの中で代替困難な専門家を区別できず、40%枝刈りで大きく崩れる。SHAPEは共起する残り専門家が他連合でも成立するかを差し引くため、協力上の不可欠性をより直接反映する。層ごとの貢献質量カバレッジはタスクに応じて残存専門家数を変え、層崩壊を防ぐ。","quality_impact":"20%程度なら再学習なしでも平均品質をほぼ維持できるが、40%ではタスク依存の劣化が明確になる。タスク別に枝刈り構成を作るため、報告品質は対象タスク分布への適合を含んでおり、汎用モデル全能力の保存を意味しない。"},"reservation":{"claim_id":"claim-5a2d8cb943b02cb27fc0083a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5a4b45332ca9b9f0a0bd90d0",
+  "job_id": "job-research-6e63ee697d71f91d",
+  "data": {
+    "overview": "SHAPEは20%枝刈りで3モデルすべての平均精度をほぼ維持し、GPT-OSS-20BとDeepSeek-V2-Liteでは基準平均をわずかに上回った。40%では低下するがQwen3-30B-A3Bで81.31対基準82.92、GPT-OSS-20Bで79.02対82.12を維持し、Qwen3のRandom/Frequency/GatingやRAEP/EASY-EPより平均が高い。品質カバレッジは同じShapleyスコアのglobal・layer-wise選択より一貫して高く、構造保護の寄与も分離されている。",
+    "key_results": [
+      {
+        "metric": "Qwen3-30B-A3B 平均精度 20%枝刈り",
+        "value": "82.43",
+        "baseline": "未枝刈り82.92、EASY-EP 82.35、RAEP 81.86、Frequency 72.16",
+        "condition": "7タスク、各タスク25例キャリブレーション、追加訓練なし",
+        "interpretation": "0.49ポイントの低下で20%の専門家を削除し、比較枝刈り基準中で最高平均。"
+      },
+      {
+        "metric": "Qwen3-30B-A3B 平均精度 40%枝刈り",
+        "value": "81.31",
+        "baseline": "EASY-EP 79.05、RAEP 74.22、Gating 59.29、Random 28.76",
+        "condition": "40%専門家削除、追加訓練なし",
+        "interpretation": "強い枝刈りで差が拡大し、GPQA-Diamondは67.68で未枝刈り58.59も上回る一方、HumanEvalは89.63へ低下する。"
+      },
+      {
+        "metric": "GPT-OSS-20B 平均精度",
+        "value": "20%: 82.44、40%: 79.02",
+        "baseline": "未枝刈り82.12",
+        "condition": "同一7タスク",
+        "interpretation": "20%では平均を維持・微増し、40%でも約3.1ポイント低下に抑える。"
+      },
+      {
+        "metric": "DeepSeek-V2-Lite 平均精度",
+        "value": "20%: 62.44、40%: 58.81",
+        "baseline": "未枝刈り62.08",
+        "condition": "より小さい冗長余地のモデル",
+        "interpretation": "20%では維持するが40%では3.27ポイント低下し、小規模バックボーンほど枝刈り耐性が低い。"
+      },
+      {
+        "metric": "品質カバレッジのアブレーション",
+        "value": "Qwen3 40%: 81.31",
+        "baseline": "Global 80.49、Layer-wise 79.58",
+        "condition": "同じShapley系スコアで選択規則のみ変更",
+        "interpretation": "全層一括の過剰枝刈りと各層固定配分の双方より、貢献質量カバレッジで層別容量を可変にする方が安定する。"
+      }
+    ],
+    "negative_results": "40%枝刈りでは推論・コード系が敏感で、Qwen3 HumanEvalは95.73から89.63、GPT-OSSは95.73から85.41へ低下する。DeepSeek-V2-Liteは40%で平均58.81まで落ち、モデル容量が小さいほど冗長性余地が狭い。推定値の負値はノイズまたは破壊的相互作用として0へ切り上げるため、負の協力効果そのものは選択へ活用しない。",
+    "interpretation": "単純な活性頻度やゲート値は高頻度専門家を残せても、組合せの中で代替困難な専門家を区別できず、40%枝刈りで大きく崩れる。SHAPEは共起する残り専門家が他連合でも成立するかを差し引くため、協力上の不可欠性をより直接反映する。層ごとの貢献質量カバレッジはタスクに応じて残存専門家数を変え、層崩壊を防ぐ。",
+    "quality_impact": "20%程度なら再学習なしでも平均品質をほぼ維持できるが、40%ではタスク依存の劣化が明確になる。タスク別に枝刈り構成を作るため、報告品質は対象タスク分布への適合を含んでおり、汎用モデル全能力の保存を意味しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-5a4b45332ca9b9f0a0bd90d0",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

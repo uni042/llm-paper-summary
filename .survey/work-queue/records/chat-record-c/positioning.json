@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5a2d8cb943b02cb27fc0083a","job_id":"job-research-6e63ee697d71f91d","data":{"limitations":"厳密なShapley値ではなく、ルータが観測した固定サイズTop-k連合と共起包含回数だけから部分連合効用を近似するため、未観測連合や真の損失変化は評価しない。タスクごとに25例の校正データと専用枝刈り構成を作るため、混合ドメインや未知タスクへ同じ構成を転用した場合の性能は示されない。負の貢献は0へ切り上げるので破壊的相互作用の情報は捨てる。40%では特にコード・推論タスクの劣化が残り、GPU型、絶対VRAM値、遅延、スループット、帯域の詳細も本文テキストからは確認できない。","differences":"Frequency/Gating/SEAP等が専門家を独立採点するのに対し、SHAPEは同時起動したTop-k集合を協力ゲームとして扱い、専門家を抜いた残り集合の代替可能性を共起統計から差し引く。MAESTROのような層間遷移を大域経路として扱う方式とも異なり、SHAPEは同一層内の専門家協力に焦点を当てる。選択段階も全層global rankingや各層固定個数ではなく、各層のShapley質量を一定割合保つ最小集合を作り、共通カバレッジを全体予算へ二分探索する。","implementation_status":"公開コードあり。既存ルータのTop-k記録だけを利用する訓練不要方式で、Qwen3-30B-A3B、GPT-OSS-20B、DeepSeek-V2-Liteの3バックボーンへ適用している。32K文脈・バッチ1でピークVRAM削減も実測し、専門家プール縮小が配備メモリへ反映されることを確認する。","research_positioning":"専門家枝刈り研究の中で、重要度推定を単体専門家から同一層内の協力構造へ拡張する系統に位置する。MAESTROが層間ルーティング軌跡を定常分布で評価するのに対し、SHAPEはTop-k同時活性の補完性・代替性をShapley風に評価するため、両者は異なる相互作用軸を扱う。オフロードや専門家キャッシュの前段でタスク別に専門家プール自体を削減すれば常駐・転送対象を減らせる可能性があるが、階層メモリとの統合は本論文では未評価である。"},"reservation":{"claim_id":"claim-5a2d8cb943b02cb27fc0083a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5a4b45332ca9b9f0a0bd90d0",
+  "job_id": "job-research-6e63ee697d71f91d",
+  "data": {
+    "limitations": "厳密なShapley値ではなく、ルータが観測した固定サイズTop-k連合と共起包含回数だけから部分連合効用を近似するため、未観測連合や真の損失変化は評価しない。タスクごとに25例の校正データと専用枝刈り構成を作るため、混合ドメインや未知タスクへ同じ構成を転用した場合の性能は示されない。負の貢献は0へ切り上げるので破壊的相互作用の情報は捨てる。40%では特にコード・推論タスクの劣化が残り、GPU型、絶対VRAM値、遅延、スループット、帯域の詳細も本文テキストからは確認できない。",
+    "differences": "Frequency/Gating/SEAP等が専門家を独立採点するのに対し、SHAPEは同時起動したTop-k集合を協力ゲームとして扱い、専門家を抜いた残り集合の代替可能性を共起統計から差し引く。MAESTROのような層間遷移を大域経路として扱う方式とも異なり、SHAPEは同一層内の専門家協力に焦点を当てる。選択段階も全層global rankingや各層固定個数ではなく、各層のShapley質量を一定割合保つ最小集合を作り、共通カバレッジを全体予算へ二分探索する。",
+    "implementation_status": "公開コードあり。既存ルータのTop-k記録だけを利用する訓練不要方式で、Qwen3-30B-A3B、GPT-OSS-20B、DeepSeek-V2-Liteの3バックボーンへ適用している。32K文脈・バッチ1でピークVRAM削減も実測し、専門家プール縮小が配備メモリへ反映されることを確認する。",
+    "research_positioning": "専門家枝刈り研究の中で、重要度推定を単体専門家から同一層内の協力構造へ拡張する系統に位置する。MAESTROが層間ルーティング軌跡を定常分布で評価するのに対し、SHAPEはTop-k同時活性の補完性・代替性をShapley風に評価するため、両者は異なる相互作用軸を扱う。オフロードや専門家キャッシュの前段でタスク別に専門家プール自体を削減すれば常駐・転送対象を減らせる可能性があるが、階層メモリとの統合は本論文では未評価である。"
+  },
+  "reservation": {
+    "claim_id": "claim-5a4b45332ca9b9f0a0bd90d0",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
