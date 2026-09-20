@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-f924026a9c059a8203a1b596",
   "job_id": "job-research-4786c27e72f86caf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f924026a9c059a8203a1b596",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "単一サーバにNVIDIA V100 32GB HBMを4台、Xeon Gold 5218R、256GB DRAMを搭載。大規模モデルはOPT-13B、生成長予測器はOPT-125M。主要なGPU推論は実機で実行する。",
+    "software": "vLLMを比較対象かつ実装基盤として使用し、TetriInfer側は固定サイズ事前充填、SJF事前充填スケジューラ、分散復号負荷分散、reserve-dynamic復号スケジューラを組み合わせる。生成長予測器はShareGPT 75K件で学習する。",
+    "methodology": "ShareGPTから128要求を抽出し、事前充填512トークン超をheavy、復号128トークン超をheavyとして、LPLD、LPHD、HPLD、HPHD、Mixedの5負荷を構成する。指標は初回トークン時間（TTFT）、ジョブ完了時間（JCT）、事前充填・復号インスタンスの合算資源使用時間、そこから得る性能/費用。ネットワークは実測転送ではなくmockで200Gbps RoCEと300GB/s NVLink相当の待ち時間を挿入する。マイクロベンチマークではチャンク事前充填、生成長予測、インスタンス内外の復号スケジューリングを個別に比較する。",
+    "baselines": ["vanilla vLLM", "FCFS/SJF/LJF prefill policies", "vLLM greedy decode scheduling", "random/imbalance inter-decode placement"],
+    "metrics": ["TTFT", "JCT", "resource usage time", "performance per dollar", "throughput", "prediction accuracy"],
+    "scope": "GPU計算部分はV100実機評価だが、事前充填・復号間ネットワーク帯域は待ち時間模擬であり、実クラスタのNIC競合や多ノード障害を直接測っていない。モデルも主にOPT-13Bで、結果をより大規模な現行モデルへそのまま外挿するには注意が必要である。"
+  },
+  "reservation": {"claim_id": "claim-f924026a9c059a8203a1b596", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
