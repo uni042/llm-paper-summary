@@ -2,84 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-70a666fee11f193ab86cf1e3",
-  "job_id": "job-research-3ee76817e29cd5c6",
-  "data": {
-    "canonical_id": "arXiv:2404.19429",
-    "arxiv_id": "2404.19429",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
-    "summary": "Lancetは、MoE学習で全対全通信とエキスパート計算だけを重ねても通信時間の方が長く残る問題に対し、重畳対象を学習グラフ全体へ拡張するコンパイラ最適化である。順伝播ではMoE前後の非MoE計算までバッチ方向へ分割し、ゲートの容量状態を分割間で引き継ぐことで未分割時と同じトークン割当・dropを保ちながら、irregular all-to-allと計算をパイプライン化する。逆伝播では全対全通信に依存しない重み勾配計算をbest-fit貪欲法で通信区間へ移動する。分割範囲と分割数は演算・通信cost modelと動的計画法で選び、過分割によるkernel起動・低利用率を避ける。A100/V100最大64 GPUでDeepSpeed、Tutel、RAFと比較し、非重畳通信をTutel比最大77%削減、端から端学習を最大1.3倍高速化する。",
-    "list_summary": "MoE学習の全対全通信をエキスパートだけでなく非MoE計算と重み勾配計算まで学習グラフ全体で重ね、最大1.3倍高速化する。",
-    "authors": [
-      "Chenyu Jiang",
-      "Ye Tian",
-      "Zhen Jia",
-      "Shuai Zheng",
-      "Chuan Wu",
-      "Yida Wang"
-    ],
-    "authors_affiliations": "The University of Hong Kong; Amazon Web Services; Boson AI",
-    "published": "2024-04-30",
-    "publication": "Proceedings of the 7th MLSys Conference, 2024",
-    "publication_type": "査読付き国際会議論文",
-    "publication_status": "MLSys 2024掲載。arXiv:2404.19429v1は2024年4月30日公開。",
-    "lineage": "distributed-heterogeneous-moe-training",
-    "topics": [
-      "MoE学習",
-      "全対全通信",
-      "計算通信重畳",
-      "コンパイラ最適化",
-      "動的計画法"
-    ],
-    "importance": "MoE通信隠蔽の探索範囲をエキスパート局所から学習グラフ全体へ広げ、順伝播・逆伝播で異なる依存関係を使って通信待ちを削る。",
-    "hardware_evaluation": "Amazon EC2 p4de.24xlargeのA100-80GBとp3dn.24xlargeのV100を各最大8ノード・64 GPUで評価。",
-    "hardware_details": "A100ノードは8 GPU・4×100Gbps NIC、V100ノードは8 GPU・100Gbps NIC。Ubuntu 20.06、CUDA 11.3、NCCL 2.12.12 PXN。",
-    "quality_effect": "分割・再スケジューリング後も未分割グラフと数学的に等価なトークン割当と演算を保ち、学習精度を変えない。",
-    "bottlenecks": [
-      "MoE all-to-all通信",
-      "エキスパート計算だけでは隠し切れない通信残り時間",
-      "過分割によるkernel起動オーバーヘッド",
-      "ゲート容量に依存する分割の数学的非等価性"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§2 Background and Motivation",
-      "§4 Weight Gradient Scheduling",
-      "§5 Operator Partition and Pipeline",
-      "§6 Implementation",
-      "§7 Evaluation",
-      "§8 Discussion"
-    ],
-    "source": "https://arxiv.org/abs/2404.19429",
-    "sources": [
-      "https://arxiv.org/abs/2404.19429",
-      "https://arxiv.org/pdf/2404.19429"
-    ],
-    "code": null,
-    "implementation": "Apache TVM系RAFコンパイラ上の2つのIR変換passとして約13K行C++で実装。NCCL通信とTutel由来MoE dispatch kernelを使用。公開コードURLは本文から確認できない。",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.06066",
-        "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
-      },
-      {
-        "canonical_id": "arXiv:2401.04088",
-        "title": "Mixtral of Experts"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv PDF参考文献節",
-    "references_total": 45
-  },
+  "attempt_id": "attempt-b16e1c4e099c7c51205be842",
+  "job_id": "job-research-6adaa29fadc3e53e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-70a666fee11f193ab86cf1e3",
+    "claim_id": "claim-b16e1c4e099c7c51205be842",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

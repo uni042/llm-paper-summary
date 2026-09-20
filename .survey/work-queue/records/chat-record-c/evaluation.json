@@ -2,43 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-70a666fee11f193ab86cf1e3",
-  "job_id": "job-research-3ee76817e29cd5c6",
-  "data": {
-    "evaluation_summary": "Amazon EC2のA100-80GBクラスタとV100クラスタを各8ノード・最大64 GPUまで使い、GPT-2の隔Transformer blockをMoE化した12層/24層モデルをWikiTextで学習する。各GPUにexpert 2個を置きGPU数とexpert数を比例拡張し、weak scalingでDeepSpeed 0.5.8、Tutel 0.3、未最適化RAFとiteration timeを比較する。routing制約の違いを見るためSwitch gateとBatch Prioritized gateの双方を評価し、Tutelはpartition数1/2/4/8から最良値を採用する。",
-    "scope": "実機分散学習評価で、A100とV100の2世代、16/32/64 GPU規模を中心に検証する。モデルはGPT-2ベースの合成MoE 2種、datasetはWikiText、sequence長512に固定されており、現代の数十〜数百B級LLMやFSDP/ZeRO3との同時利用は直接評価していない。",
-    "hardware": [
-      "EC2 p4de.24xlarge: 1ノード8×NVIDIA A100 80GB、4×100Gbps NIC、最大8ノード",
-      "EC2 p3dn.24xlarge: 1ノード8×NVIDIA V100、100Gbps NIC、最大8ノード",
-      "Ubuntu 20.06、CUDA 11.3、NCCL 2.12.12 PXN"
-    ],
-    "models": [
-      "GPT2-S-MoE: 12層、hidden 768、隔block FFNをMoE化",
-      "GPT2-L-MoE: 24層、hidden 1024、隔block FFNをMoE化",
-      "各GPU expert 2個、GPU数とexpert数を比例拡張"
-    ],
-    "datasets": [
-      "WikiText"
-    ],
-    "workload": "sequence長512。A100ではGPU当たりbatch 24（S）/48（L）、V100では16（S）/8（L）。SGD+momentum。weak scalingでlocal batchを固定し総batchをGPU数に比例させる。",
-    "baselines": [
-      "DeepSpeed 0.5.8（Tutel kernelなし）",
-      "Tutel 0.3（all-to-allとexpert計算を重畳、partition 1/2/4/8を探索）",
-      "RAF without Lancet"
-    ],
-    "metrics": [
-      "training iteration time / throughput",
-      "非重畳communication time",
-      "overlapped time",
-      "計算時間",
-      "cost model prediction error",
-      "compiler optimization time"
-    ],
-    "hyperparameters": "最大partition数ρ=8、OOM時4または2。group size γはMoE層間に5 groupとなるよう設定。最大partition range ιは2つのMoE層間の実行時間とし、MoE層ごとに1 pipelineを形成。",
-    "gating": "Switch gateはMoE前後の計算をpipelineへ含められ、Batch Prioritized gateは主にMoE後の計算のみを含められるため、routing方式による探索範囲差も評価する。"
-  },
+  "attempt_id": "attempt-b16e1c4e099c7c51205be842",
+  "job_id": "job-research-6adaa29fadc3e53e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-70a666fee11f193ab86cf1e3",
+    "claim_id": "claim-b16e1c4e099c7c51205be842",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
