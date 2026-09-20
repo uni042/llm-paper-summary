@@ -2,43 +2,86 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bbc6c14d4fcb44b8a7c50e4e",
+  "attempt_id": "attempt-57d5d091923e08545a3ff388",
   "job_id": "job-research-0ad72717e3fdb154",
   "data": {
     "canonical_id": "arXiv:2405.01481",
     "arxiv_id": "2405.01481",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
     "title": "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
     "summary": "大規模言語モデルの整合学習では、強化学習、人間選好モデル、参照方策、生成処理を同時に扱うため、単純な分散学習だけでは多数GPUを効率良く使えない。本論文はNeMo-Alignerを提示し、Megatron-LMの3次元並列化、役割の異なるモデル間の非同期通信、推論時のTensorRT-LLM統合、重みの再配置と再フィットを組み合わせる。これによりPPOを中心とする整合学習を1000 GPU級まで拡張し、DPO、SteerLM、SPIN、LoRAにも同じ基盤を広げている。評価ではLlama 3 70Bで構成要素ごとの寄与とスケーリングを測り、Llama 3.1 405BのPPOを1008基のH100で実行可能であることを示した。",
     "list_summary": "整合学習の複数モデルを分散配置し、TensorRT-LLM生成・非同期通信・重み再配置を統合して、PPOを1000 GPU級まで拡張する学習基盤。",
-    "authors": ["Gerald Shen", "Zhilin Wang", "Olivier Delalleau", "Jiaqi Zeng", "Yi Dong", "Daniel Egert", "Shengyang Sun", "Jimmy Zhang", "Sahil Jain", "Ali Taghibakhshi", "Markel Sanz Ausin", "Ashwath Aithal", "Oleksii Kuchaiev"],
+    "authors": [
+      "Gerald Shen",
+      "Zhilin Wang",
+      "Olivier Delalleau",
+      "Jiaqi Zeng",
+      "Yi Dong",
+      "Daniel Egert",
+      "Shengyang Sun",
+      "Jimmy Zhang",
+      "Sahil Jain",
+      "Ali Taghibakhshi",
+      "Markel Sanz Ausin",
+      "Ashwath Aithal",
+      "Oleksii Kuchaiev"
+    ],
     "authors_affiliations": "NVIDIA",
     "published": "2024-05-02",
     "publication": "COLM 2024",
     "publication_type": "Conference paper",
     "publication_status": "Published",
     "lineage": "大規模分散学習・整合学習基盤",
-    "topics": ["LLM alignment", "distributed training", "RLHF", "PPO", "DPO", "TensorRT-LLM"],
+    "topics": [
+      "LLM alignment",
+      "distributed training",
+      "RLHF",
+      "PPO",
+      "DPO",
+      "TensorRT-LLM"
+    ],
     "importance": "大規模整合学習を実システムとして1000 GPU級へ拡張し、生成処理を学習系へ統合する具体的設計とアブレーションを示す。",
     "hardware_evaluation": "H100 80GB SXMを8基搭載するノード群を用い、NVLinkとInfiniBand接続で70B級を最大768 GPU、405B級を1008 GPUまで評価。",
     "hardware_details": "H100-80GB-SXM、ノード内NVLink、ノード間InfiniBand。",
     "quality_effect": "PPO後のLlama 3 70BはMT-Bench 7.96から8.13へ改善。LoRA SteerLMは全パラメータ学習7.54に対して7.43で、著者はベンチマークのノイズ範囲と説明する。",
     "source": "https://arxiv.org/abs/2405.01481",
-    "sources": ["https://arxiv.org/abs/2405.01481", "https://arxiv.org/pdf/2405.01481"],
+    "sources": [
+      "https://arxiv.org/abs/2405.01481",
+      "https://arxiv.org/pdf/2405.01481"
+    ],
     "code": "https://github.com/NVIDIA/NeMo-Aligner",
     "implementation": "Apache 2.0で公開されたNeMo-Aligner実装。Megatron-LM、NeMo、Transformer Engine、TensorRT-LLM、PyTritonを組み合わせる。",
     "last_checked": "2026-09-20",
     "references": [
-      {"canonical_id": "arXiv:2310.12036", "arxiv_id": "2310.12036"},
-      {"canonical_id": "arXiv:2212.08073", "arxiv_id": "2212.08073"},
-      {"canonical_id": "arXiv:2305.14233", "arxiv_id": "2305.14233"},
-      {"canonical_id": "arXiv:2310.01377", "arxiv_id": "2310.01377"}
+      {
+        "canonical_id": "arXiv:2310.12036",
+        "arxiv_id": "2310.12036"
+      },
+      {
+        "canonical_id": "arXiv:2212.08073",
+        "arxiv_id": "2212.08073"
+      },
+      {
+        "canonical_id": "arXiv:2305.14233",
+        "arxiv_id": "2305.14233"
+      },
+      {
+        "canonical_id": "arXiv:2310.01377",
+        "arxiv_id": "2310.01377"
+      }
     ],
     "references_checked_at": "2026-09-20",
     "references_source": "primary-reference-section",
     "references_total": 4
   },
-  "reservation": {"claim_id": "claim-bbc6c14d4fcb44b8a7c50e4e", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-57d5d091923e08545a3ff388",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,17 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bbc6c14d4fcb44b8a7c50e4e",
+  "attempt_id": "attempt-57d5d091923e08545a3ff388",
   "job_id": "job-research-0ad72717e3fdb154",
   "data": {
     "hardware": "主なPPOシステム評価は、1ノード8基のH100 80GB SXM、ノード内NVLink、ノード間InfiniBandで行う。Llama 3 70Bの方策・価値系では8+4、16+8、32+16、64+32ノードを比較し、最大768 GPUを使用する。Llama 3.1 405Bでは方策84ノード、価値側42ノード、合計1008 H100を使用する。",
     "software": "Megatron-LMとNeMoを学習基盤とし、Transformer Engine、分散融合Adam、PyTriton、TensorRT-LLMとTensorRT再フィットを組み合わせる。DPO、SteerLM、SPIN、LoRAも同一ツールキットで実装される。",
     "methodology": "PPOのスケーリングでは初回のTensorRT-LLMエンジン構築を除き、その後5ステップの平均と標準偏差で1ステップ時間を測る。70Bではロールアウト大域バッチ128の8+4対16+8ノード比較と、大域バッチ1024の16+8から64+32ノード比較を行う。構成要素アブレーションではTensorRT-LLM統合、推論時再配置、再フィット、非同期要求を一つずつ外す。品質面ではLlama 3 70B PPOをMT-BenchとGPT-4-Turbo判定で比較し、DPO、SteerLM、SPINについても各再現設定のMT-Benchを報告する。",
     "scope": "実機GPU上の大規模評価であり、PPOシステムのスケーリングと主要最適化の寄与を直接測る。一方、中心的な性能測定はNVIDIA H100と同社ソフトウェア群に依存し、他GPUや異種クラスタへの一般化は実証していない。405B評価は実行可能性とステップ時間を示すが、70Bほど詳細な構成要素比較は行わない。",
-    "models": ["Llama 3 70B", "Llama 3.1 405B", "Mistral-7B", "Llama 2 70B"],
-    "datasets_benchmarks": ["HelpSteer2", "MT-Bench", "UltraChat", "UltraFeedback", "Open Assistant"],
-    "baselines": ["NeMo Generate without TensorRT-LLM integration", "full-parameter SteerLM", "Zephyr-7B-Beta", "published SPIN result"],
-    "metrics": ["PPO step time", "relative speedup", "response generation time", "MT-Bench", "samples/GPU/s", "minimum GPU count"]
+    "models": [
+      "Llama 3 70B",
+      "Llama 3.1 405B",
+      "Mistral-7B",
+      "Llama 2 70B"
+    ],
+    "datasets_benchmarks": [
+      "HelpSteer2",
+      "MT-Bench",
+      "UltraChat",
+      "UltraFeedback",
+      "Open Assistant"
+    ],
+    "baselines": [
+      "NeMo Generate without TensorRT-LLM integration",
+      "full-parameter SteerLM",
+      "Zephyr-7B-Beta",
+      "published SPIN result"
+    ],
+    "metrics": [
+      "PPO step time",
+      "relative speedup",
+      "response generation time",
+      "MT-Bench",
+      "samples/GPU/s",
+      "minimum GPU count"
+    ]
   },
-  "reservation": {"claim_id": "claim-bbc6c14d4fcb44b8a7c50e4e", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-57d5d091923e08545a3ff388",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
