@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4198d6e57abb83d655f6b5bb",
-  "job_id": "job-research-ff5accb2a519d706",
-  "data": {
-    "overview": "SEREは元モデルの全エキスパート容量を残したまま、バッチごとに冗長な副次エキスパートだけを類似主要エキスパートへ寄せることで、単純Top-K削減やLYNXより品質低下を大幅に抑える。Qwen1.5-MoEではTop2設定で元Top4平均48.52に対して47.25を保ち、TPOTを17.29msから13.93msへ短縮する。より攻めたTop1でもrho=0.3で平均39.82となり、単純Top1の28.89やLYNX top1の15.33を大きく上回る。論文全体では最大2.0倍の復号高速化を報告する。",
-    "key_results": [
-      {
-        "metric": "Qwen1.5-MoE 8課題平均精度",
-        "value": "47.25",
-        "baseline": "元Top4 48.52",
-        "condition": "SERE top2, rho=0.3; QPS=16のTPOT比較",
-        "interpretation": "平均精度差を1.27点に抑えながらTPOTを17.29msから13.93msへ短縮する。"
-      },
-      {
-        "metric": "Qwen1.5-MoE TPOT",
-        "value": "13.93 ms",
-        "baseline": "元Top4 17.29 ms",
-        "condition": "SERE top2, rho=0.3, QPS=16",
-        "interpretation": "約19%の出力トークン時間短縮で、単純Top2の13.53msに近い速度を品質を大きく保ったまま得る。"
-      },
-      {
-        "metric": "Qwen1.5-MoE 高削減時8課題平均",
-        "value": "39.82",
-        "baseline": "単純Top1 28.89; LYNX top1 15.33",
-        "condition": "SERE top1, rho=0.3",
-        "interpretation": "副次エキスパートを強く削る条件でも類似度による重要エキスパート保護が単純削減より大幅に品質を維持する。"
-      },
-      {
-        "metric": "最大復号高速化",
-        "value": "2.0x",
-        "baseline": "元MoEバッチ復号",
-        "condition": "論文の3モデル・QPS別vLLM速度評価の最大値",
-        "interpretation": "専用CUDA実装で活性エキスパート削減を実際のメモリ帯域・復号時間削減へ変換できる。"
-      }
-    ],
-    "negative_results": "速度と品質には明確なトレードオフがある。Qwen1.5-MoEでSERE top1, rho=0.3は元Top4平均48.52から39.82へ低下し、強い削減は無損失ではない。rhoを高めると固有エキスパートをより多く保持して品質を守る一方、活性削減と速度利得は小さくなる。また単純Top2はTPOT 13.53msとSERE top2 rho=0.3の13.93msよりわずかに速いが、平均精度は42.85まで低下する。",
-    "interpretation": "主要エキスパートの保持だけでなく、類似度が低い副次エキスパートを『代替不能』として残すことが品質維持の鍵である。固定的にエキスパート数を減らすのではなく、バッチの実際のルーティング集合と層別機能類似度の交点で削減対象を決めるため、冗長なバッチでは積極的、専門性が必要なバッチでは保守的に振る舞える。",
-    "quality_impact": "近似的な再ルーティングであり品質完全保持を保証しないが、同程度の速度帯の単純Top-K削減や静的統合より高い精度を示す。運用ではSとrhoをサービスの品質許容度に合わせて選ぶ必要がある。"
-  },
+  "attempt_id": "attempt-524e1ba9cb57a926cc0c9550",
+  "job_id": "job-research-7878dfa1090aac77",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4198d6e57abb83d655f6b5bb",
+    "claim_id": "claim-524e1ba9cb57a926cc0c9550",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
