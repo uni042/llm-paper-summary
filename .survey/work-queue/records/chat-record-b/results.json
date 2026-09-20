@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-71ae9f2bc33df845149e972b",
+  "attempt_id": "attempt-a86622b38716752ba65bde87",
   "job_id": "job-research-42834c639c34d742",
   "data": {
     "overview": "EdgeMoEはexpertをstorageへ退避する単純on-demand方式に対し、Jetson TX2でTPOTを2.64〜3.03倍、Raspberry Piで2.55〜3.25倍高速化する。expert量子化済みIO-QEXP比でも1.19〜2.12倍、STI比1.22〜2.77倍で、量子化だけでなくactivation予測とcacheが効く。ablationではST-base-8/TX2で0.789sからQ後0.392s、preload後0.305s、cache後0.245sへ段階的に短縮する。",
@@ -55,7 +55,7 @@
     "quality_impact": "mixed-bit探索は許容損失Pに合わせてexpert精度を配分し、表のSwitch構成では0.89〜1.95% lossでstorageを0.81〜0.95GBへ削減する。offline dataset変更でも概ね約2%以内だが、soft constraintであり厳密保証ではない。"
   },
   "reservation": {
-    "claim_id": "claim-71ae9f2bc33df845149e972b",
+    "claim_id": "claim-a86622b38716752ba65bde87",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

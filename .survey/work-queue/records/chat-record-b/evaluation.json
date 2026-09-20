@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-71ae9f2bc33df845149e972b",
+  "attempt_id": "attempt-a86622b38716752ba65bde87",
   "job_id": "job-research-42834c639c34d742",
   "data": {
     "hardware": "主要評価はJetson TX2（8GB、GPU）、Raspberry Pi 4B（CPU）、追加モバイル評価はXiaomi 14（16GB、Snapdragon 8 Gen 3）。JetsonではSSDとHDDも比較する。",
@@ -11,7 +11,7 @@
     "scope": "最適化対象は主に単一requestのautoregressive decode。prefillや複数token/requestをまとめて処理する場面では多くのexpertが同時活性化しsparsity利得が薄れるため適用外と明記される。offline profileはデータ分布依存で、許容accuracy lossはsoft goalである。"
   },
   "reservation": {
-    "claim_id": "claim-71ae9f2bc33df845149e972b",
+    "claim_id": "claim-a86622b38716752ba65bde87",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
