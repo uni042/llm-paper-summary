@@ -5,58 +5,18 @@
   "attempt_id": "attempt-206de3a6d433e93dd5ba5f49",
   "job_id": "job-research-d223f7a181256e07",
   "data": {
-    "overview": "主結果は、KVzipが将来queryを使わない一回のcontext圧縮で、Qwen/LLaMA/Gemmaと12種類の長文脈taskにまたがって多くの条件でcacheを20〜30%まで縮めてもほぼ性能を維持し、既存query-aware法が90%保持でも崩れるmulti-query条件を大幅に改善したことである。実用上は、文書やpersonal historyのKVを質問ごとに再prefillせず共有しながら、KV memoryを3〜4倍、FlashAttention復号attention latencyを約2倍削減でき、量子化とも重ねられる。",
+    "overview": "主結果は、KVzipが将来の質問を使わない一回の文脈圧縮で、Qwen、LLaMA、Gemmaと12種類の長文脈課題にまたがり、多くの条件でキャッシュを20〜30%まで縮めてもほぼ性能を維持し、既存の質問依存法が90%保持でも崩れる複数質問条件を大幅に改善したことである。実用上は、文書や個人履歴の鍵値を質問ごとに再事前充填せず共有しながら、鍵値メモリを3〜4倍、FlashAttentionの復号注意遅延を約2倍削減でき、量子化とも重ねられる。",
     "key_results": [
-      {
-        "metric": "KV cache reduction",
-        "value": "3–4× smaller; up to 70% eviction with negligible loss",
-        "baseline": "full KV / query-aware eviction",
-        "condition": "diverse tasks and models, contexts up to 170K",
-        "interpretation": "reconstruction-critical KVだけを残すことで、将来queryを知らずに高圧縮を維持する。"
-      },
-      {
-        "metric": "FlashAttention decoding latency",
-        "value": "approximately 2× reduction",
-        "baseline": "full KV cache",
-        "condition": "compressed variable-length KV cache",
-        "interpretation": "保持key/value列が短くなるためmemoryだけでなく復号attention計算も削減する。"
-      },
-      {
-        "metric": "query-agnostic multi-task retention",
-        "value": "near-lossless at 20–30% cache on contextual tasks; some redundant tasks tolerate 10%",
-        "baseline": "H2O/SnapKV/PyramidKV",
-        "condition": "Qwen2.5-7B-1M, 12 benchmarks",
-        "interpretation": "既存法は90% retentionでもmulti-queryで劣化する一方、再構成scoreはtask間で一般化する。"
-      },
-      {
-        "metric": "quantization composition",
-        "value": "16.3GB → 1.2GB",
-        "baseline": "16-bit full KV",
-        "condition": "124K input, 4-bit KV + 70% eviction",
-        "interpretation": "KV量子化とevictionの削減効果を積み重ねられる。"
-      },
-      {
-        "metric": "compression overhead",
-        "value": "about 2× standard prefill compute; <2% extra peak memory",
-        "baseline": "standard prefill",
-        "condition": "LLaMA3.1-8B, 124K context, A100, 2K chunks",
-        "interpretation": "contextごと一度の追加計算と引き換えに、その後の複数queryでmemory/latency利得を償却する。"
-      },
-      {
-        "metric": "context-independent head scoring",
-        "value": "few forward passes within 1 minute",
-        "baseline": "DuoAttention several hours on 8-GPU node",
-        "condition": "head-level eviction",
-        "interpretation": "モデルごとの静的head maskを安価に作れ、配備後compression overheadをなくせる。"
-      }
+      {"metric":"鍵値キャッシュ削減","value":"3〜4倍小型化、最大70%削除でも損失は僅少","baseline":"完全鍵値キャッシュ、質問依存削除法","condition":"複数の課題とモデル、最大170Kの文脈","interpretation":"再構成に重要な鍵値だけを残すことで、将来質問を知らずに高圧縮を維持する。"},
+      {"metric":"FlashAttention復号遅延","value":"約2倍削減","baseline":"完全鍵値キャッシュ","condition":"可変長の圧縮鍵値キャッシュ","interpretation":"保持する鍵値列が短くなるため、メモリだけでなく復号時の注意計算も削減する。"},
+      {"metric":"質問非依存の複数課題性能保持","value":"文脈課題では20〜30%保持でほぼ無損失、冗長性の高い一部課題は10%保持にも耐える","baseline":"H2O、SnapKV、PyramidKV","condition":"Qwen2.5-7B-1M、12ベンチマーク","interpretation":"既存法は90%保持でも複数質問で劣化する一方、再構成得点は課題間で一般化する。"},
+      {"metric":"量子化との合成","value":"16.3GBから1.2GB","baseline":"16ビット完全鍵値キャッシュ","condition":"124K入力、4ビット鍵値と70%削除","interpretation":"鍵値量子化と削除の削減効果を積み重ねられる。"},
+      {"metric":"圧縮計算負荷","value":"標準事前充填の約2倍の計算、追加ピークメモリは2%未満","baseline":"標準事前充填","condition":"LLaMA3.1-8B、124K文脈、A100、2K分割","interpretation":"文脈ごと一度の追加計算と引き換えに、その後の複数質問でメモリと遅延の利得を償却する。"},
+      {"metric":"文脈非依存ヘッド得点","value":"数回の前向き計算で1分以内","baseline":"DuoAttentionは8GPUノードで数時間","condition":"ヘッド単位削除","interpretation":"モデルごとの静的ヘッドマスクを安価に作り、配備後の圧縮計算負荷をなくせる。"}
     ],
-    "negative_results": "Retr.Prefix-Suffixのようなretrieval-intensive taskは30% cacheで例外的に性能低下し、タスクごとに安全なbudgetが異なる。context-specific pair scoringは約2倍prefill計算を一度追加する。softmax-free CUDA variantは高速化と性能trade-offがある。さらにDecodingTrustのprivacy例ではfull cache時の拒否が40%圧縮後に解除され電話番号を回答しており、平均task精度が保たれてもalignment behaviorが同一とは限らない。",
-    "interpretation": "再構成時のcross-attentionはprefill self-attentionより疎で、QA・要約・推論の異なるqueryが必要とするKVを包含するためquery非依存scoreとして働く。高冗長contextでは削除がattention distractionを減らして性能改善する場合もあるが、精密retrievalはより多くのKVを必要とする。",
-    "quality_impact": "近似圧縮でありlosslessではない。多くのbenchmarkでは20〜30%保持までnegligible lossだが、個別taskとsafety/alignment behaviorの変化を確認してbudgetを選ぶ必要がある。"
+    "negative_results": "Retr.Prefix-Suffixのような検索負荷の高い課題は30%保持で例外的に性能低下し、課題ごとに安全な予算が異なる。文脈固有の対単位得点は約2倍の事前充填計算を一度追加する。ソフトマックスを省くCUDA版は高速化と性能の交換関係がある。さらにDecodingTrustの個人情報例では完全キャッシュ時の拒否が40%圧縮後に解除され電話番号を回答しており、平均課題精度が保たれても整合性挙動が同一とは限らない。",
+    "interpretation": "再構成時の交差注意は事前充填時の自己注意より疎で、質問応答・要約・推論の異なる質問が必要とする鍵値を包含するため、質問非依存得点として働く。高冗長文脈では削除が注意の散漫化を減らして性能改善する場合もあるが、精密検索はより多くの鍵値を必要とする。",
+    "quality_impact": "近似圧縮であり完全無損失ではない。多くのベンチマークでは20〜30%保持まで損失は僅少だが、個別課題と安全性・整合性挙動の変化を確認して予算を選ぶ必要がある。"
   },
-  "reservation": {
-    "claim_id": "claim-206de3a6d433e93dd5ba5f49",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-206de3a6d433e93dd5ba5f49","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
