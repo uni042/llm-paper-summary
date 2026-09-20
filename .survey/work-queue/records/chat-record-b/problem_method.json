@@ -2,35 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-a81c3fda043b3840209ea896",
-  "job_id": "job-research-d223f7a181256e07",
-  "data": {
-    "problem": "長文脈LLMでは文脈トークンごとのkey/valueを全層・全KV headに保持するため、文脈長に比例してメモリと復号attention時間が増える。Qwen2.5-14Bでは120K tokenのFP16 KV cacheが約33GBとなり、同精度の28GB model parametersを超える。既存のSnapKVやPyramidKV等は直近クエリがどの文脈KVへattentionするかを見て削除するため、一つの質問には有効でも、その質問向けに圧縮したcacheを別質問へ再利用すると必要KVが失われる。毎クエリ元文脈を再prefillすれば精度は戻るが、事前計算cacheを再利用したいpersonal agentや文書cache用途の計算節約を失う。将来クエリを知らずに多様な質問へ通用する重要KVを選ぶ必要がある。",
-    "novelty": "KVzipは将来クエリを重要度計算へ使わず、『圧縮されたKVだけから元文脈を再構成できるなら、そのKVは多様な下流タスクにも必要情報を保持する』という再構成基準を導入する。元文脈cacheを保持した状態でrepeat promptと元文脈を教師強制入力し、再構成側queryから元cache内の各KV pairが受ける最大attentionを重要度とする。再構成attentionはprefill自己attentionより疎で、QA・要約・推論など異なる下流queryが使うKVを広く包含する。さらに長文脈では固定chunk再構成で得点メモリを文脈長から切り離し、head-levelへ集約すればモデルごと一度だけ測るcontext-independent圧縮にも使える。",
-    "method_overview": "入力は元文脈c、対象LLM、その文脈を通常prefillして得た完全KV cache、目標cache保持率rである。処理1では将来の質問を一切使わず、完全cacheを条件にrepeat promptと元文脈を連結した系列を教師強制で一回処理する。各層・KV headについて、再構成系列のqueryと元文脈cacheのkey間attentionを計算し、元cacheの各KV pairが全query head・全再構成位置から受けた最大attentionを重要度scoreにする。処理2では全headを横断してscore上位r%を保持する非均等budget、またはheadごとにbudgetを与える方式で低score KVを削除する。system promptのKVは保持する。処理3では長い文脈を2K token程度の固定chunkへ分割し、各chunkをrepeat promptとともに独立再構成する。2個目以降は直前chunk末尾8 tokenをpromptへ入れ、各chunkに対応する元cache keyだけを使ってscoreを集約する。これによりscore matrixのピークメモリをO(m^2)へ固定し、score集約自体を文脈長に対して線形化する。処理4で完成した圧縮cacheを保存し、以後の任意queryは元文脈を再prefillせず同じcacheを共有して通常復号する。出力は小さい再利用可能KV cacheと、そのcacheを使った回答である。pair-level scoreをsequence方向maxでhead-levelへ集約すれば、一冊の英語book等で一度scoreを作り、別contextにも同じhead maskを適用するcontext-independent modeとなり、配備後の圧縮overheadをゼロにできる。量子化cacheとも直交し、4-bit KVと70% evictionを重ねて124K文脈を16.3GBから1.2GBへ縮小できる。",
-    "components": [
-      {
-        "name": "文脈再構成によるquery非依存重要度",
-        "description": "完全KV cacheを文脈の圧縮表現とみなし、そのcacheから元文脈を再現する仕事をLLM自身にさせる。repeat promptと元文脈を教師強制で与えるため実際に逐次生成する必要はなく、一回のforwardで再構成位置のqueryを得られる。各層・KV headで再構成queryと元cache keyのattentionを計算し、元KV pairごとに全grouped queryと全再構成位置の最大値をscoreにする。最大値を使うため、特定の一箇所で強く必要なKVを平均で埋没させない。再構成attentionは元prefill自己attentionより疎でありながら、異なるQA、要約、推論のattention高値領域を包含する観測があり、将来queryを知らない重要度代理として働く。"
-      },
-      {
-        "name": "chunked scoringによる長文脈対応",
-        "description": "元文脈全体をrepeat promptと連結してattention matrixを作ると、score取得に必要なmatrixが文脈長二乗で増え、FlashAttentionの通常のblock処理だけではsoftmax後にquery方向maxを取る依存を処理しにくい。そこで文脈を固定長m=2K tokenへ分け、各chunkだけを再構成対象として順番にscoreを計算する。二番目以降は直前chunk末尾8 tokenをrepeat promptへ含め、開始位置を示す。各chunkでは対応する元cache keyをsubsampleして小さなmatrixを作り、得たscoreを元位置へ戻す。これによりscore演算のピークメモリはO(m^2)で文脈長に依存せず、集約score計算はO(mn)になる。compression計算はprefill約2倍だがcontextごと一度で済む。"
-      },
-      {
-        "name": "非均等KV budgetとhead-level拡張",
-        "description": "pair-levelでは全attention headのscoreをまとめて順位付けし、目標保持率rに達するまで高score KVを残す。headごとに同数を残すのではなく、情報量が大きいheadへより多くのKV slotを割り当てられるため、同じ総cache budgetで精度を保ちやすい。system prompt部分は削除しない。さらに各headのpair-level scoreをsequence方向の最大値で集約するとhead importanceを得られ、DuoAttention型のhead-level evictionへそのまま使える。一冊88K tokenの英語bookで得たhead scoreを他contextへ使うcontext-independent modeでは、配備後は新contextごとの再構成score計算が不要になる。DuoAttentionの合成passkey最適化が8GPUで数時間かかるのに対し、KVzip head scoreは数forward、1分以内で得られる。"
-      },
-      {
-        "name": "再利用cache・量子化との合成と実行時効果",
-        "description": "圧縮は元文脈のprefill直後に一度行い、その後は質問ごとに同じ圧縮cacheを複製または参照して通常のautoregressive decodingを行う。既存query-aware法のように各質問を含めて再prefillしないため、多質問文書QAやpersonal history cacheで初期計算を償却できる。保持KV数が減ることでcache memoryだけでなくFlashAttentionが読むkey/value列も短くなり、124K文脈の実測で復号attention遅延を約2倍短縮する。削除はKV量子化と独立なので、QServeのW8A8KV4へ同じimportance maskを適用でき、16-bit 16.3GBのcacheを4-bit化と70%削除で1.2GBまで縮小する。圧縮は近似なので性能曲線を見てbudgetを選ぶ必要があり、privacy refusalなど振る舞い変化も評価対象になる。"
-      }
-    ],
-    "system_design": "KVzipは既存Transformer重みを再学習せず、prefill後のKV cacheに対する一回のimportance scoringとevictionとして挿入できる。長文脈scoreは2K chunkで処理し、圧縮cacheはvariable-length FlashAttention-2で復号する。pair-level、uniform/non-uniform budget、head-level、context-independent modeを持ち、KV量子化とも併用可能である。"
-  },
+  "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
+  "job_id": "job-research-e405cf8340f00512",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a81c3fda043b3840209ea896",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-89bc644c23d78357d6c68f4d",
+    "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
 }
