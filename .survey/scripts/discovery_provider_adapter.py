@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
@@ -391,20 +392,47 @@ def repository_reference_pool_fetcher(
         include_borderline=include_borderline,
     )
     records = list(pool["candidates"])
+    provider_progress = {
+        key: int(pool[key])
+        for key in (
+            "reference_total_count",
+            "reference_processed_count",
+            "reference_remaining_count",
+            "reference_represented_count",
+            "reference_unrelated_count",
+            "reference_borderline_count",
+        )
+    }
+    status_reported = False
 
     def fetch_page(cursor: str | None) -> dict[str, Any]:
+        nonlocal status_reported
         index = int(cursor or "0")
         if index < 0:
             raise DiscoveryProviderError("repository reference cursor must be non-negative")
         chunk = records[index:index + page_size]
         next_index = index + len(chunk)
         next_cursor = str(next_index) if next_index < len(records) else None
+        if not status_reported:
+            print(
+                "[WORKER-GUIDE][探索状況] "
+                f"構造化references 総候補 {provider_progress['reference_total_count']}件 / "
+                f"処理済み {provider_progress['reference_processed_count']}件 / "
+                f"未処理 {provider_progress['reference_remaining_count']}件 / "
+                f"収録済み {provider_progress['reference_represented_count']}件 / "
+                f"無関係 {provider_progress['reference_unrelated_count']}件 / "
+                f"微妙 {provider_progress['reference_borderline_count']}件 / "
+                f"今回offset {index}",
+                file=sys.stderr,
+            )
+            status_reported = True
         return {
             "records": chunk,
             "next_cursor": next_cursor,
             "page_url": source_url,
             "position": index,
             "pool_candidate_count": len(records),
+            "provider_progress": provider_progress,
         }
 
     return fetch_page
