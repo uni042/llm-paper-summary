@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T12:57:49+00:00",
-  "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
-  "last_round": "adaptive-max-r39-direct-forward-leftovers",
+  "updated_at": "2026-09-20T19:41:56+00:00",
+  "last_run_key": "2026-09-21T04:30:00+09:00",
+  "last_round": "round-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T08:00:00+09:00",
-      "round": "specialist-latent-memory-3",
-      "axis": "latent-space inference・constant-memory long-context recall",
-      "query_summary": "KV page管理から表現レベルへ探索軸を変更し、segment latent inferenceとresidual-vector reconstructionによるmemory/compute削減を評価した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "constant-memory recurrent/linear-attention系へ展開し、uncertainty-aware associative memoryやstreaming horizon評価を確認する",
-      "source_submission": "work-queue/submissions/20260916T0818JST-discovery-specialist-latent-memory-3.json"
-    },
     {
       "run_key": "2026-09-16T08:00:00+09:00",
       "round": "specialist-recurrent-memory-4",
@@ -7777,6 +7762,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "LExI/BuddyMoE/Cost-Aware Expert Execution の未消化forward citationを追加する。",
       "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r39.json"
+    },
+    {
+      "run_key": "2026-09-21T04:30:00+09:00",
+      "round": "round-01",
+      "axis": "repository-wide structured backward references for LLM inference systems",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0430JST-discovery-round-01-backward-recovery.json"
     }
   ],
   "axes": {
@@ -14859,6 +14865,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "continue Adaptive Expert Computation / Compression forward-citation expansion"
+    },
+    "repository-wide structured backward references for LLM inference systems": {
+      "last_run_key": "2026-09-21T04:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
