@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-982ad17a239ebb28dac11e22",
+  "job_id": "job-research-901c881ed2cc963f",
+  "claim_id": "claim-982ad17a239ebb28dac11e22",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+  "status": "blocked",
+  "reason": "The runtime could retrieve the arXiv abstract and third-party paper renderings, but not the primary arXiv full text through an official route. No conference/author/project official full-text copy was found in the checked routes. The workflow requires primary-source full reading, so no five-slot record was inferred from abstracts or third-party renderings.",
+  "retrieval_evidence": [
+    {"route":"arXiv abstract","url":"https://arxiv.org/abs/2608.26650","result":"abstract metadata surfaced; primary full text unavailable in runtime"},
+    {"route":"Academus rendering","url":"https://academ.us/article/2608.26650/","result":"abstract only; explicitly reports interactive HTML unavailable"},
+    {"route":"DeepPaper rendering","url":"https://arxiv.deeppaper.ai/papers/2608.26650v1","result":"third-party abstract/rendering; not treated as primary source"}
+  ]
+}
