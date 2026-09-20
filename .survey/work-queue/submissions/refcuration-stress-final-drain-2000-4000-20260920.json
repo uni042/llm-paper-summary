@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.2153",
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "source_url": "https://aclanthology.org/2026.findings-acl.2153/",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-specextend.md",
+      "priority": 95,
+      "reason": "Long-context speculative-decoding enhancement combining efficient attention with target-guided draft-model KV selection without retraining."
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.494",
+      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
+      "source_url": "https://aclanthology.org/2026.findings-acl.494/",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md",
+      "priority": 95,
+      "reason": "Online low-rank KV compression with adaptive subspace tracking and a hybrid full-rank anchor policy, compatible with FlashAttention."
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.558",
+      "title": "DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning",
+      "source_url": "https://aclanthology.org/2026.findings-acl.558/",
+      "paper_path": "papers/inference/10-sparse-attention/2026-delta.md",
+      "priority": 94,
+      "reason": "Training-free layer-aware sparse attention reusing intermediate attention maps to reduce attended tokens and long-reasoning latency."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-deep-20260920-offset4000",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-deep-20260920-offset4000.json",
+    "receipt": "sha256:6698427f95f4db824e6d23b5fae60aae3485d22e00fa2c035ace4a8b5aecdaca"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-deep-2026-09-20",
+    "round": "refcuration-stress-offset4000-3",
+    "axis": "structured references deep stress probe at raw offset 4000",
+    "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 4000 using ACL Anthology primary records. Strong KV-cache, speculative-decoding, sparse-attention, and prefill-optimization papers were retained.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "DOI:10.18653/v1/2026.findings-acl.2153",
+      "DOI:10.18653/v1/2026.findings-acl.494",
+      "DOI:10.18653/v1/2026.findings-acl.558"
+    ],
+    "next_axis_hint": "The tail remains productive; continue structured-reference curation rather than switching to ordinary search."
+  }
+}
