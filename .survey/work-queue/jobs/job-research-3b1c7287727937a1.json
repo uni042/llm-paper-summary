@@ -12,15 +12,15 @@
   "source_url": "https://arxiv.org/abs/2609.06076",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
   "selection_reason": "pruning/merging後のcompressed MoEを最終成果物ではなく小規模post-compression adjustmentの初期値として捉え直す実証研究。2つのMoE LLM、4圧縮法、3 retention ratio、28 benchmarkで比較し、3000 C4例・1 epochのFull FTで性能gapを平均37.3%回復しており、圧縮後の実用trade-offを直接補完する。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T10:24:57+00:00",
-  "blocker": "Primary arXiv full text could not be retrieved through the runtime. Both arXiv PDF and export.arXiv PDF official routes were attempted and rejected/disabled by the retrieval environment. No alternate conference/author/project official full-text copy was established, so the required full primary-source reading could not be completed and no five-slot record was inferred.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-f9a8eb6ffcd986b77ec0c7a3.json",
+  "blocker": "Primary-source full text could not be safely retrieved in this attempt. The paper is identified as an EMNLP 2026 main-conference acceptance and the authors' official GitHub implementation repository was found, but neither supplies the required full primary paper text through the available runtime. Direct official arXiv HTML and PDF retrieval both returned DisabledError. Third-party full-text renderings were not used to infer a five-slot record.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ffae19a59bee16c485d3d07c.json",
   "blocked_attempts": 1,
   "last_recorded_blocked_event": "2026-09-20T11:05:39+00:00",
   "block_history": [
@@ -31,5 +31,6 @@
     }
   ],
   "last_blocked_at": "2026-09-20T11:05:39+00:00",
-  "retry_queued_at": "2026-09-20T12:59:45+00:00"
+  "retry_queued_at": "2026-09-20T12:59:45+00:00",
+  "completed_at": "2026-09-20T13:41:26+00:00"
 }

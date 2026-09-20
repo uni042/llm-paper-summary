@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:41:14 JST**
+> 自動生成: **2026-09-20 22:41:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **207** |
-| 未claim Research job | **206** |
+| 収録候補論文 | **205** |
+| 未claim Research job | **204** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-20 22:10:28 JST（30分前）** |
+| 最終検証済みResearch収録 | **09-20 22:10:28 JST（31分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **207** |
+| canonical_id確認済みの一意な候補論文 | **205** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **207** |
+| 非終端Research job合計 | **205** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **4** | **0** | **2** | **1** | **0** | — |
+| Research | **29** | **4** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **29** | **5** | **1** | **2** | **1** | **0** | **5** |
+| 合計 | **29** | **5** | **1** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,13 +127,15 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **2件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-769c5731a70c4b5146c3ee76.json` (job `job-research-f837d96601e69237`)
+- immutable submission: **4件** / 検証済み成功: **0件** / result照合済み非成功: **4件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-769c5731a70c4b5146c3ee76.json` (job `job-research-f837d96601e69237`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-769c5731a70c4b5146c3ee76.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-a56fb97ebb61025c85c8af06.json` (job `job-research-901c881ed2cc963f`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-a56fb97ebb61025c85c8af06.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f41da056f98a23fc46687f34.json` (job `job-research-8f68f6b8d4d62651`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-f41da056f98a23fc46687f34.json` (`ok=true`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-ffae19a59bee16c485d3d07c.json` (job `job-research-3b1c7287727937a1`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-ffae19a59bee16c485d3d07c.json` (job `job-research-3b1c7287727937a1`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-ffae19a59bee16c485d3d07c.json` (`ok=true`)
 
 #### Audit (:30)
 
@@ -156,9 +158,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 22:40:32 JST** / heartbeat: **—** / lease expiry: **09-21 00:10:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f837d96601e69237.json`
+- `arXiv:2606.27866` — FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 22:41:17 JST** / heartbeat: **—** / lease expiry: **09-21 00:11:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-00f6a78e028bd698.json`
 
 #### Audit
 
@@ -178,7 +180,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **207** |
+| ready | **205** |
 
 ### 候補の重複・識別情報欠損
 
