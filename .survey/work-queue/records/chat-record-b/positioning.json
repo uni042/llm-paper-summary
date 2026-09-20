@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f2e51bafaabacfadeaecc0ee",
-  "job_id": "job-research-4892de26a5d749a2",
-  "data": {
-    "limitations": "実証はMixtral 8x7B/8x22BとRTX 4090/A6000に集中し、異なるMoE構造やGPUベンダ、複数GPU、SSD直結の階層メモリでは検証されていない。感度と先読み統計にはオフラインのサンプルデータを使うため、入力分布が大きく変わる場合の頑健性は未評価である。第1層の先読みには任意の補助予測ゲート学習が必要で、完全な学習不要方式ではない。キャッシュ割当モデルは層ごとの確率を簡略化しており、実際の時間変動やエキスパート間の非一様な転送コストを完全には表さない。",
-    "differences": "Mixtral-Offloadingが主にLRUキャッシュとトークン間の選択傾向を使うのに対し、AdapMoEは層感度で活性数自体を減らし、層別にキャッシュ容量も変える。MoE-Infinityの前層選択からの予測に対し、後続層自身のゲート関数を現在活性へ適用して予測精度を高める。Pre-gated MoEのように本体構造を変更して前層で次層ゲートを決めるのではなく、既存ゲート再利用を中心にして直接導入しやすくする。FlexGenやDeepSpeedのような密モデル向け一括オフロードとも異なり、疎なエキスパート需要を明示的に利用する。",
-    "implementation_status": "著者公式コードがPKU-SEC-Lab/AdapMoEとして公開され、論文はICCAD 2024採択版としてCUDAストリーム、タイル転送、適応ゲーティング・先読み・キャッシュを統合したシステムを実装して実機評価している。比較用Mixtral-Offloadingも同一基盤上へ改良移植しており、単なるシミュレーション提案ではない。",
-    "research_positioning": "MoEエキスパートオフロード系統の中で、AdapMoEは『何をロードするか』をゲーティングで削減し、『いつロードするか』を先読みで前倒しし、『何を常駐させるか』を動的計画法で配分し、『残るロードをどう隠すか』をタイル実行で処理する統合型の研究である。個別のキャッシュ置換や予測器だけでなく、アルゴリズム上の近似とGPU実行系を結合して端末推論のPCIeボトルネックへ対処する点が、リポジトリのMoEオフロード・階層メモリ系統で重要である。"
-  },
+  "attempt_id": "attempt-76fbde0c7b747f7dc5bad2a5",
+  "job_id": "job-research-bb33e470bd8a5f8f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f2e51bafaabacfadeaecc0ee",
+    "claim_id": "claim-76fbde0c7b747f7dc5bad2a5",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
