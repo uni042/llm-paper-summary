@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:08:28.603143+00:00",
+  "updated_at": "2026-09-20T11:14:19.371052+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:08:28.603143+00:00",
+      "last_recorded_at": "2026-09-20T11:14:19.371052+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 378,
+        "research_completed": 379,
         "audit_completed": 0,
         "discovery_completed": 210,
         "blocked": 53,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35486174322:1",
-          "recorded_at": "2026-09-20T03:17:25.996747+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35486174322",
-            "run_attempt": "1",
-            "source_sha": "fc77700bd8a622878252b01eb70999d8bddec937"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35486228576:1",
           "recorded_at": "2026-09-20T03:18:55.276401+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35506988142",
             "run_attempt": "1",
             "source_sha": "9200c40841acdb3f6146f4dcf41b6d94f4eced4e"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35507253325:1",
+          "recorded_at": "2026-09-20T11:14:19.371052+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35507253325",
+            "run_attempt": "1",
+            "source_sha": "1cf963e2a940cef3ccbd7f39258a74dc4a6e2cde"
           },
           "signals": [
             "research_completed"
@@ -24722,6 +24722,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.10392",
           "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-5ce9880c62119377",
+          "type": "research",
+          "canonical_id": "arXiv:2510.19366",
+          "title": "MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs",
           "from": "ready",
           "to": "completed"
         }
