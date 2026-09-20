@@ -1,13 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-073e43ba7e8010937d87f5f7",
-  "job_id": "job-research-2ce5fda4ee4799b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-073e43ba7e8010937d87f5f7",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-073e43ba7e8010937d87f5f7","job_id":"job-research-2ce5fda4ee4799b0",
+  "data": {
+    "positioning":"POD-AttentionはLLMサービングの要求スケジューラやKVメモリ管理を置き換える方式ではなく、Sarathi-Serve等が作るハイブリッドバッチの注意演算をカーネル内部で最適化する。FlashAttention、FlashDecoding、FlashInferがプリフィルまたはデコードを個別に高速化するのに対し、POD-Attentionは両者の相補的なGPU資源需要を同じSM上で同時利用する点が中心である。",
+    "differences":"CUDAストリームや素朴なCTA並列は異種処理のSM共配置を保証できず、warp単位の水平融合は一方の処理が長引くstragglerとCTA同期の影響を受ける。POD-AttentionはCTAをSMへ配置した後で担当を決めるため、GPUのハードウェア配置を変更せず共配置を保証し、CTA間の独立性も維持する。NanoFlowが大きいバッチを演算単位の小バッチへ分割してCUDAストリームで異種演算を重ねるのに対し、POD-Attentionは一つのハイブリッドバッチ内部の注意を融合するため、長文で注意比率が高い条件を主対象とする。",
+    "relation_to_prior_work":[
+      {"work":"FlashAttention / FlashDecoding / FlashInfer","difference":"各フェーズを個別に最適化するのではなく、プリフィルとデコード注意を単一カーネルへ融合し相補資源を同時利用する。"},
+      {"work":"Sarathi-Serve","difference":"Sarathi-Serveのチャンク化プリフィルとハイブリッドバッチを維持したまま、注意部分の直列実行をPOD-Attentionへ置換して処理量と遅延を改善する。"},
+      {"work":"vLLM","difference":"要求スケジューリングやPagedAttentionではなく、ハイブリッドバッチ時のGPU注意カーネル資源利用を改善する。"},
+      {"work":"NanoFlow","difference":"演算単位の小バッチをストリームで重ねる方式に対し、POD-Attentionは同一注意カーネル内でCTAをSM認識配置する。NanoFlowは大バッチ・短文、POD-Attentionは注意比率の高い長文で相対的に適する。"}
+    ],
+    "strengths":["ハードウェアCTAスケジューラを変更せずSM単位の異種処理共配置を実現する。","カーネル単体だけでなくSarathi-Serve統合後のオフライン・オンライン性能を実機で評価する。","Yi-6B、Llama-2-7B、Llama-3-8BでKVヘッド数の異なる構成を評価する。","公開Docker・GitHub・Zenodo成果物と再現手順がある。","性能だけでなくエネルギー、TTFT、TBT、要求完了遅延まで測る。"],
+    "limitations":["主評価はNVIDIA A100であり、HopperとFlashAttention-3への対応は論文時点で将来課題。","利得はプリフィルとデコードが混在するハイブリッドバッチの割合に依存し、片方だけが支配するワークロードでは小さい。","注意が全反復時間の小さい短文条件では端から端の改善余地も小さい。","プリフィル・デコード比、文脈長、チャンク長によって最適なCTA構成が変わるため実行時選択が必要。","2GPUを超える大規模テンソル並列や異種GPUでの一般化は評価されていない。"],
+    "implementation_status":"FlashAttention 2.6.1を基礎とするCUDA実装をSarathi-Serveへ統合し、GitHubのmicrosoft/vattention内pod_attn、Docker、Zenodoで成果物を公開している。ASPLOS 2025のartifact appendixに再現環境と実行コマンドが記載されている。",
+    "research_positioning":"LLMサービングにおけるプリフィル・デコード干渉を、ノード分離やスケジューリングだけでなくGPUカーネル内の資源相補性として扱った研究である。長文ハイブリッドバッチで注意が支配的になる状況に対し、SMレベルのソフトウェア配置制御という実装可能な解を示す。",
+    "repository_fit":"推論系のカーネル・ランタイム最適化系統に直接該当する。特にSarathi-Serve、FlashAttention、FlashInfer、NanoFlow、vLLMとの比較軸として、プリフィルとデコードを同一SMで重畳する設計点を追加する。"
+  },
+  "reservation":{"claim_id":"claim-073e43ba7e8010937d87f5f7","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
 }
