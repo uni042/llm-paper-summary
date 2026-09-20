@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "request_id": "20260921T0430JST-scheduled-forward-elasticmoe-02",
+  "collector_id": "scheduled-20260921T0430JST-forward-elasticmoe",
+  "run_key": "2026-09-21T04:30:00+09:00",
+  "axis": "forward citations of Elastic MoE for inference-time expert scaling",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2509.21892/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "max_pages": 20
+}
