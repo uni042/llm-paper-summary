@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r8",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、zero-compute expert系の被引用からadaptive skipping・sequence-level allocation・compute compressionを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.07616",
+      "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models",
+      "source_url": "https://arxiv.org/abs/2602.07616",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md",
+      "priority": 98,
+      "reason": "batch decodingでsecondary expertを類似primary expertへ動的rerouteし、batch-level redundancyに応じてactive expertsを減らす。vLLM向けCUDA kernelも持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2602.02443",
+      "title": "Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE",
+      "source_url": "https://arxiv.org/abs/2602.02443",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
+      "priority": 95,
+      "reason": "fine-grained MoEのrouter score head/tail構造を利用し、high-confidence expertsを維持しつつtailだけをstochasticに選ぶtraining-free expert allocation。"
+    },
+    {
+      "canonical_id": "arXiv:2601.21420",
+      "title": "ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation",
+      "source_url": "https://arxiv.org/abs/2601.21420",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.21420-conceptmoe-token-concept-compression.md",
+      "priority": 96,
+      "reason": "semanticに近いtokenをconcept表現へ動的圧縮し、保存computeを難しい部分へ再配分するimplicit compute allocation。"
+    },
+    {
+      "canonical_id": "arXiv:2511.06494",
+      "title": "Route Experts by Sequence, not by Token",
+      "source_url": "https://arxiv.org/abs/2511.06494",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+      "priority": 98,
+      "reason": "sequence全体のT×K budgetをtoken間で再配分し、難しいtokenへ多くexpertを割り当てるSeqTopK。pretrained MoEと互換で追加overheadも小さい。"
+    },
+    {
+      "canonical_id": "arXiv:2510.02345",
+      "title": "Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression",
+      "source_url": "https://arxiv.org/abs/2510.02345",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+      "priority": 97,
+      "reason": "online expert clustering、shared base + low-rank residual、hierarchical routingを統合し、load imbalance・redundancy・communication overheadを同時に扱う。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-zero-compute",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-zero-compute.json",
+    "receipt": "sha256:4fb1362626d2d45f4aaa1636593f6b334cf82dab720fc2d19bacf2bec1e59f55"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+    "round": "adaptive-max-r8-zero-compute-a",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)",
+    "query_summary": "zero-compute系forward citationsからadaptive re-routing・sequence-level allocation・structured compressionの5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "continue with remaining high-directness candidates or adjacent seed forward citations",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "zero-compute experts / adaptive skipping",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2410.07348",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 61,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 11,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 30,
+        "candidate_accepted_count": 5,
+        "position": "1 page"
+      }
+    ]
+  }
+}
