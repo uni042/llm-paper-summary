@@ -1,0 +1,88 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-latest-sweep-20260920-rapidgemm-exact",
+  "collector_id": "manual-user-latest-sweep-20260920-rapidgemm-exact",
+  "run_key": "manual-user-latest-sweep-2026-09-20",
+  "axis": "RapidGEMM efficient tile-agnostic GEMM Mixture-of-Experts training",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=RapidGEMM%20Efficient%20Tile-agnostic%20GEMM%20Mixture-of-Experts%20Training&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 50,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "749c1318199f35e0548c192758c8cac73956063b",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T13:00:18.063502+00:00",
+  "results": [
+    {
+      "title": "RapidGEMM: An Efficient Tile-agnostic GEMM for Mixture-of-Experts Training",
+      "source_url": "https://doi.org/10.1145/3832810.3832915",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "DOI:10.1145/3832810.3832915",
+      "doi": "10.1145/3832810.3832915",
+      "authors": [
+        "Le Xu",
+        "Yutao Sun",
+        "Yingbo Hao",
+        "Li Dong",
+        "Yilei Yang",
+        "Weijiang Xu",
+        "Youshan Miao",
+        "Hangbo Bao",
+        "Furu Wei",
+        "Qiong Luo"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832915",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832915",
+        "title:rapidgemm an efficient tileagnostic gemm for mixtureofexperts training",
+        "url:https://doi.org/10.1145/3832810.3832915"
+      ],
+      "record": {
+        "title": "RapidGEMM: An Efficient Tile-agnostic GEMM for Mixture-of-Experts Training",
+        "source_url": "https://doi.org/10.1145/3832810.3832915",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "DOI:10.1145/3832810.3832915",
+        "doi": "10.1145/3832810.3832915",
+        "authors": [
+          "Le Xu",
+          "Yutao Sun",
+          "Yingbo Hao",
+          "Li Dong",
+          "Yilei Yang",
+          "Weijiang Xu",
+          "Youshan Miao",
+          "Hangbo Bao",
+          "Furu Wei",
+          "Qiong Luo"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8c7daa2bc9a0a6763a0ed8a7939f134cd121fd572863d31980c539ad80495b31",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
