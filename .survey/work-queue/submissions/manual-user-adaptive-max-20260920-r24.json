@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r24",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、calibration-free task-agnostic expert pruningを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.18492",
+      "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2603.18492",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.18492-aimer-calibration-free-pruning.md",
+      "priority": 98,
+      "reason": "calibration dataを使わずweight concentrationからexpert redundancyを評価し、task-agnostic expert pruningの前処理コストとdata sensitivityを解消する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-merge-compress",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-merge-compress.json",
+    "receipt": "sha256:b625c9595029007fb123f307419f39ca6e7431f522462fa2fa8f964862f60877"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+    "round": "adaptive-max-r24-aimer",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334",
+    "query_summary": "Merge Then Compress forward citationsからAIMERを選定。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "foundational adaptive routing",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "calibration-free expert pruning",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2310.01334",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 100,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 14,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 35,
+        "candidate_accepted_count": 1,
+        "position": "1 page"
+      }
+    ]
+  }
+}
