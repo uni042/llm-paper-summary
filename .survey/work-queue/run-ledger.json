@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T20:20:54.161810+00:00",
+  "updated_at": "2026-09-20T20:23:55.124435+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -29003,6 +29003,184 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0517JST-discovery-round-06-openalex-moe.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35535220625",
+      "first_recorded_at": "2026-09-20T20:23:55.124435+00:00",
+      "last_recorded_at": "2026-09-20T20:23:55.124435+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 4,
+        "blocked": 0,
+        "new_jobs": 14,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35535220625:1",
+          "recorded_at": "2026-09-20T20:23:55.124435+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35535220625",
+            "run_attempt": "1",
+            "source_sha": "f0b47d7e7f2ca52943e819150d2c9e141ffa33bb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-1a356d7c46d6248e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-a1758bddbe30cf10",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-a2ada465f9ccaf11",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e907b81ce8de63df",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-1a356d7c46d6248e",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-a1758bddbe30cf10",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-a2ada465f9ccaf11",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-e907b81ce8de63df",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-411c0f7386496cf9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.13263",
+          "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches"
+        },
+        {
+          "job_id": "job-research-4f3d063490df512a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15039",
+          "title": "SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing"
+        },
+        {
+          "job_id": "job-research-784815ee56689f0c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.24963/ijcai.2026/502",
+          "title": "M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU"
+        },
+        {
+          "job_id": "job-research-a5925137e7067bb8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3838177.3841726",
+          "title": "MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson"
+        },
+        {
+          "job_id": "job-research-aa3e3c19262a245a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.14213",
+          "title": "Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution"
+        },
+        {
+          "job_id": "job-research-ba8c177dd369949f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.07786",
+          "title": "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-ca56f81ba7248b99",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09823",
+          "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding"
+        },
+        {
+          "job_id": "job-research-ce081c207f1ded58",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08566",
+          "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents"
+        },
+        {
+          "job_id": "job-research-cf624ab39be56123",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03949",
+          "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch"
+        },
+        {
+          "job_id": "job-research-d69ddf3864beda69",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.4108/eetiot.13349",
+          "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0520JST-discovery-round-07-speculative.json",
+        ".survey/work-queue/results/20260921T0521JST-discovery-round-08-kv.json",
+        ".survey/work-queue/results/20260921T0522JST-discovery-round-09-sparse.json",
+        ".survey/work-queue/results/20260921T0522JST-discovery-round-10-edge.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,

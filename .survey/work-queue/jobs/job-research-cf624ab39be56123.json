@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-cf624ab39be56123",
+  "type": "research",
+  "parent_job_id": "job-1a356d7c46d6248e",
+  "priority": 97,
+  "canonical_id": "arXiv:2609.03949",
+  "arxiv_id": "2609.03949",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
+  "source_url": "https://arxiv.org/abs/2609.03949",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-sparse-attention-signal-in-a-vestigial-branch.md",
+  "selection_reason": "Recent KV-cache/sparse-attention method exploiting an internal signal for efficient attention; directly relevant to KV optimization and sparse inference.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:21:46+00:00"
+}
