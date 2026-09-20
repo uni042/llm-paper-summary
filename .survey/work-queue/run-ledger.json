@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T01:43:51.133329+00:00",
+  "updated_at": "2026-09-20T02:36:03.856674+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T01:43:51.133329+00:00",
+      "last_recorded_at": "2026-09-20T02:36:03.856674+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 324,
         "audit_completed": 0,
         "discovery_completed": 193,
-        "blocked": 43,
+        "blocked": 44,
         "new_jobs": 296,
         "new_papers": 327,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35426859368:1",
-          "recorded_at": "2026-09-19T06:35:49.041438+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35426859368",
-            "run_attempt": "1",
-            "source_sha": "6d2bbd94790fc23d1935555470192cec964cb1b2"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35430952974:1",
           "recorded_at": "2026-09-19T08:04:55.331460+00:00",
@@ -19598,6 +19584,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35484393996:1",
+          "recorded_at": "2026-09-20T02:36:03.856674+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35484393996",
+            "run_attempt": "1",
+            "source_sha": "13744eb8f2464b2f49ce22ae0561333d9015943a"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24081,6 +24081,14 @@
           "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-9c3fc1bfa46c87d0",
+          "type": "research",
+          "canonical_id": "arXiv:2311.04934",
+          "title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -26872,7 +26880,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 788,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
