@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:03:50 JST**
+> 自動生成: **2026-09-20 19:04:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **97** |
 | 未claim Research job | **96** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 18:45:26 JST（18分前）** |
+| 最終検証済みResearch収録 | **09-20 18:45:26 JST（19分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **7** | **5** | **0** | **1** | **0** | — |
+| Research | **37** | **8** | **5** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **8** | **6** | **0** | **1** | **0** | **5** |
+| 合計 | **37** | **9** | **6** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **7件** / 検証済み成功: **5件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **8件** / 検証済み成功: **5件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -157,6 +157,7 @@
   - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-da2aebbde976d20453f0ceeb.json`
   - paper: `papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-eda6a759c3d074c07a647fb0.json` (job `job-research-765eee68b506c6ff`)
 
 #### Audit (:30)
 
@@ -221,7 +222,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **840** |
+| inference/training/survey配下の論文Markdown実体 | **843** |
 
 ### immutable submissionの未照合
 
@@ -229,8 +230,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **762** |
-| └ Research | **576** |
+| 成功result未照合のimmutable submission | **763** |
+| └ Research | **577** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
