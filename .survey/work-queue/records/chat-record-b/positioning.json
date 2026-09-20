@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-5589a405f0ee58411def153e",
-  "job_id": "job-research-5cec4a19e423bce9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5589a405f0ee58411def153e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5589a405f0ee58411def153e","job_id":"job-research-5cec4a19e423bce9","data":{"limitations":"学習不要であるため基礎モデルの能力上限を超えて誤認識そのものを修正できず、Yi-1.5-6BのUUID復唱失敗のような弱点は残る。Selection Cacheは類似問い合わせで選択を再利用する近似なので、閾値を下げ過ぎるとR.KV等の動的検索で大幅に品質低下する。選択トークン数も多ければ常に良いわけではなく、一部モデルでは大予算で悪化する。全鍵値自体は保持するため鍵値メモリ容量は削減せず、主に注意計算量と長さ外挿を改善する。1M級評価は依然高価で、8B RULERは8×A100でほぼ一日を要する。","differences":"StreamingLLM等の固定疎パターンは問い合わせを見ず遠距離情報を捨てる。H2O、TOVA、SnapKVは履歴重要度で鍵値を永久削除する。InfLLM、QUEST、MInferenceは問い合わせ依存だが主にブロック単位で選ぶため非連続な重要トークンを粗く扱う。TokenSelectは元鍵値を保持し、各問い合わせでトークン単位のQK重要度を計算して選択する。さらにヘッド内正規化による軟投票、Selection Cache、ページサイズ1のSGLang鍵値管理、Triton製Paged Dot Product Kernelまで含め、細粒度選択を実GPUで成立させる。","implementation_status":"公式コードpzs19/TokenSelectを公開。SGLang、PyTorch、Triton、FlashInfer/Paged Attentionを組み合わせたサービング実装。","research_positioning":"TokenSelectは鍵値キャッシュ最適化のうち、保存済み鍵値を削除・量子化する方式ではなく、各注意計算で『どの過去トークンを読むか』を動的に選ぶ検索型疎注意に位置する。全鍵値を保持するのでメモリ容量そのものは減らない一方、問い合わせが変われば以前読まなかった位置も再選択でき、永久削除法より情報損失を避けやすい。\n\n中心的な差は選択粒度である。QUESTやInfLLM等のブロック単位法はGPU実装しやすいが、重要トークンが非連続に散ると一つの重要位置のために周囲の無関係トークンも読み、別ブロックの重要位置を予算から落とす。TokenSelectはページサイズ1で各位置を候補にし、QK内積から直接重要度を測る。ヘッドごとの内積尺度差に対しては各ヘッド内ソフトマックス後に合算するため、単純な全ヘッドtop-kより多様なヘッドの要求を反映できる。\n\n細粒度化は選択計算と不連続メモリアクセスを増やすため、アルゴリズムだけなら高速化を失う。論文はここをシステム設計で補い、選択鍵値本体を連続バッファへコピーせずインデックスだけをページ化注意へ渡す。Paged Dot Product Kernelも散在ページから直接内積を計算するため、トークン単位選択の品質利得を1M鍵値長で23.84倍の注意計算高速化へ結び付けた。このアルゴリズム・カーネル協調が単なる疎注意提案との重要な差である。\n\nSelection Cacheは時間方向の冗長性を利用する。復号の連続問い合わせは似ており、選択集合も重なるので、コサイン類似度が高い間は前回インデックスを再利用する。これは鍵値内容のキャッシュではなく『検索結果のキャッシュ』であり、選択器自身のコストを削減する。難しい検索では再利用を控える必要があり、閾値が速度と動的適応性の調整ノブになる。\n\nオフロードや階層メモリとの相性もよい。TokenSelectは必要位置のインデックスを明示するため、全鍵値をCPUやSSDに保持し選択位置だけGPUへ転送する階層構成へ接続しやすい。ただし本論文の実装はGPU上のページ化鍵値を前提にしており、CPU/SSD転送遅延を含む評価はしていない。量子化とも直交し、保存鍵値を低ビット化した上でTokenSelectが読む位置数を減らす二軸最適化が考えられる。\n\nリポジトリ内では、KVzipやSnapKVが『何を残すか』、KIVI等が『何ビットで残すか』を扱うのに対し、TokenSelectは『全体を残したまま今回何を読むか』を扱う。特に長さ外挿では注意参加数をモデルが慣れた一定規模へ抑えること自体が品質維持にも寄与し、速度最適化と分布外長への対処を同じ選択機構で行う点が特徴である。"},"reservation":{"claim_id":"claim-5589a405f0ee58411def153e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
