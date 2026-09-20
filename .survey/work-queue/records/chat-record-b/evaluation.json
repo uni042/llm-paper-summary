@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0b14b95da2b3a2abc2e9855f",
-  "job_id": "job-research-9824d8080e264ed4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0b14b95da2b3a2abc2e9855f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0b14b95da2b3a2abc2e9855f","job_id":"job-research-9824d8080e264ed4","data":{"hardware":"品質評価と長系列評価は主にNVIDIA A100 80GB。システム性能はT4 16GBとA100 80GBを用い、モデル/KVがGPUに収まらない構成ではCPU offloadを有効化する。","software":"OPT各サイズ（6.7B〜175B）、LLaMA、GPT-NeoX-20Bを対象とし、HELMとlm-eval-harnessの8タスク、AlpacaEval/MT-Bench、PG-19 streamingを評価。システム比較はFlexGen、DeepSpeed ZeRO-Inference、Hugging Face Accelerate。","methodology":"KV予算をprompt長の4%、10%、20%、60%、100%で変化させ、Local、Sparse Transformer fixed/strided、full cacheと比較する。HELMのXSUM/CNN-DailyMailは各1000サンプル・zero-shot、lm-eval-harnessのCOPA/MathQA/OpenBookQA/PiQA/RTE/Winograndeは主に5-shot。システム評価はprefillとdecode、H2Oキャッシュ構築時間を全て含むend-to-end token/sとlatencyを測定し、synthetic prompt/generation長と実データXSUMを使う。A100では最大10K系列、T4ではCPU offloadを含む。","scope":"OPTは2K系列で学習されているため、4K〜10Kのシステム測定は将来の長文脈モデルに対する性能ポテンシャルを示す目的であり、その長さでのOPT意味品質を保証しない。理論保証は注意価値のsubmodularity等の仮定を必要とする。"},"reservation":{"claim_id":"claim-0b14b95da2b3a2abc2e9855f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
