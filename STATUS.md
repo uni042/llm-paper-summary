@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:06:10 JST**
+> 自動生成: **2026-09-20 18:06:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **105** |
+| 収録候補論文 | **104** |
 | 未claim Research job | **104** |
-| 直近24hの検証済みResearch収録 | **78** |
-| 最終検証済みResearch収録 | **09-20 18:05:23 JST（47秒前）** |
+| 直近24hの検証済みResearch収録 | **79** |
+| 最終検証済みResearch収録 | **09-20 18:06:15 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **105** |
+| canonical_id確認済みの一意な候補論文 | **104** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **105** |
+| 非終端Research job合計 | **104** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **5** | **4** | **1** | **1** | **0** | — |
+| Research | **38** | **5** | **5** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **6** | **5** | **1** | **1** | **0** | **5** |
+| 合計 | **38** | **6** | **6** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:06:15 JST** [research] `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
+  - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
+  - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json`
+  - paper: `papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md`
 - **09-20 18:05:23 JST** [research] `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment
   - job: `.survey/work-queue/jobs/job-research-da8147ed3835966f.json`
   - result: `.survey/work-queue/results/research/attempt-5605d7717d39930ab2f4dcc5.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-53c9640aa2c8756a83217d2e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json`
   - paper: `papers/inference/05-speculative-decoding/2026-specextend.md`
-- **09-20 15:41:40 JST** [research] `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
-  - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
-  - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json` (job `job-research-ab19fa17920fb404`)
+- immutable submission: **5件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
+  - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
+  - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json`
+  - paper: `papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md`
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
@@ -170,10 +174,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:05:17 JST** / heartbeat: **—** / lease expiry: **09-20 19:35:17 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ab19fa17920fb404.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -193,7 +195,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **105** |
+| ready | **104** |
 
 ### 候補の重複・識別情報欠損
 
@@ -213,7 +215,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **830** |
+| inference/training/survey配下の論文Markdown実体 | **831** |
 
 ### immutable submissionの未照合
 
@@ -221,8 +223,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **754** |
-| └ Research | **568** |
+| 成功result未照合のimmutable submission | **753** |
+| └ Research | **567** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
