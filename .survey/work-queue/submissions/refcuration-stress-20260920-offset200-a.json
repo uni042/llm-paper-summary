@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset200",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset200.json",
+    "receipt": "sha256:39456e0f338ae3b9002e59106e77471eaf65cc97e89f21f5b22d55cb74e928a1"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2410.13276",
+      "arxiv_id": "2410.13276",
+      "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
+      "source_url": "https://arxiv.org/abs/2410.13276",
+      "paper_path": "papers/inference/10-sparse-attention/2024-2410.13276-seerattention.md",
+      "priority": 94,
+      "reason": "Learned block-level sparse attention with a block-sparse FlashAttention kernel; directly targets long-context prefill latency and GPU efficiency."
+    },
+    {
+      "canonical_id": "arXiv:2502.07903",
+      "arxiv_id": "2502.07903",
+      "title": "HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment",
+      "source_url": "https://arxiv.org/abs/2502.07903",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md",
+      "priority": 96,
+      "reason": "Focused heterogeneous-GPU disaggregated serving system co-optimizing phase placement, parallelism, and KV communication."
+    },
+    {
+      "canonical_id": "arXiv:2503.04398",
+      "arxiv_id": "2503.04398",
+      "title": "Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling",
+      "source_url": "https://arxiv.org/abs/2503.04398",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md",
+      "priority": 96,
+      "reason": "MoE serving system that jointly schedules expert placement and request/token placement to reduce all-to-all communication, implemented in SGLang."
+    },
+    {
+      "canonical_id": "arXiv:2506.20675",
+      "arxiv_id": "2506.20675",
+      "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2506.20675",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2025-2506.20675-cascade.md",
+      "priority": 95,
+      "reason": "vLLM-based MoE speculative-decoding framework that detects when speculation hurts and dynamically chooses draft length from measured utility."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3676641.3715996",
+      "title": "POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference",
+      "source_url": "https://doi.org/10.1145/3676641.3715996",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+      "priority": 97,
+      "reason": "GPU attention kernel explicitly co-schedules prefill and decode work on the same multiprocessors to improve utilization, throughput, and latency."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20-offset200",
+    "round": "refcuration-stress-offset200-a",
+    "axis": "structured references stress probe at raw offset 200",
+    "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 200; systems papers were submitted while weak-fit items were durably classified.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2410.13276",
+      "arXiv:2502.07903",
+      "arXiv:2503.04398",
+      "arXiv:2506.20675",
+      "DOI:10.1145/3676641.3715996"
+    ],
+    "next_axis_hint": "Continue deeper structured-reference probes; systems yield remains substantial at relation_count 6-7."
+  }
+}
