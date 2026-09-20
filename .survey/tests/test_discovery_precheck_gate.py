@@ -54,32 +54,46 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.tmp.cleanup()
 
-    def test_processor_only_emits_unseen_records_and_receipt(self) -> None:
+    def test_schema_v3_processor_only_emits_unseen_records_and_receipt(self) -> None:
         request = self.root / "request.json"
         request.write_text(
             json.dumps(
                 {
-                    "schema_version": 2,
+                    "schema_version": 3,
                     "operation": "precheck_discovery_candidates",
                     "request_id": "req-1",
                     "collector_id": "collector-1",
                     "run_key": "validation-round",
                     "axis": "memory",
-                    "provider_has_more": False,
-                    "records": [
-                        {"canonical_id": "arXiv:2609.00001", "title": "Known"},
-                        {"canonical_id": "arXiv:2609.99999", "title": "New"},
-                    ],
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=memory",
+                    "target_unseen": 20,
+                    "page_size": 20,
                 }
             ),
             encoding="utf-8",
         )
 
-        result = process_discovery_precheck.process_request(
-            request,
-            snapshot_dir=self.snapshot,
-            rejection_ledger_path=self.ledger,
-        )
+        def fetch_page(cursor):
+            self.assertIsNone(cursor)
+            return {
+                "records": [
+                    {"canonical_id": "arXiv:2609.00001", "title": "Known"},
+                    {"canonical_id": "arXiv:2609.99999", "title": "New"},
+                ],
+                "next_cursor": None,
+            }
+
+        with patch.object(
+            process_discovery_precheck.discovery_provider_adapter,
+            "make_fetcher",
+            return_value=fetch_page,
+        ):
+            result = process_discovery_precheck.process_request(
+                request,
+                snapshot_dir=self.snapshot,
+                rejection_ledger_path=self.ledger,
+            )
 
         self.assertTrue(result["ok"])
         self.assertEqual(result["retrieval_duplicate_filtered_count"], 1)
@@ -91,86 +105,6 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
         self.assertEqual(result["decision"], "READY_FOR_EVALUATION")
         self.assertEqual(result["stop_reason"], "PROVIDER_EXHAUSTED")
         self.assertIn("id:arXiv:2609.99999", result["allowed_records"][0]["identity_tokens"])
-
-    def test_iterative_processor_forces_next_page_and_collapses_cross_page_duplicate(self) -> None:
-        request1 = self.root / "request-1.json"
-        request1.write_text(
-            json.dumps(
-                {
-                    "schema_version": 2,
-                    "operation": "precheck_discovery_candidates",
-                    "request_id": "req-page-1",
-                    "collector_id": "collector-pages",
-                    "run_key": "validation-round",
-                    "axis": "citations",
-                    "target_unseen": 2,
-                    "provider_has_more": True,
-                    "records": [
-                        {"canonical_id": "arXiv:2609.90001", "title": "New A"},
-                        {"canonical_id": "arXiv:2609.00001", "title": "Known"},
-                    ],
-                }
-            ),
-            encoding="utf-8",
-        )
-
-        first = process_discovery_precheck.process_request(
-            request1,
-            snapshot_dir=self.snapshot,
-            rejection_ledger_path=self.ledger,
-        )
-        self.assertFalse(first["evaluation_allowed"])
-        self.assertEqual(first["decision"], "CONTINUE_FETCH")
-        self.assertEqual(first["unseen_result_count"], 1)
-        self.assertEqual(first["pages_processed"], 1)
-
-        results_dir = self.root / "results"
-        results_dir.mkdir()
-        (results_dir / "req-page-1.json").write_text(
-            json.dumps(first),
-            encoding="utf-8",
-        )
-
-        request2 = self.root / "request-2.json"
-        request2.write_text(
-            json.dumps(
-                {
-                    "schema_version": 2,
-                    "operation": "precheck_discovery_candidates",
-                    "request_id": "req-page-2",
-                    "collector_id": "collector-pages",
-                    "run_key": "validation-round",
-                    "axis": "citations",
-                    "target_unseen": 2,
-                    "provider_has_more": True,
-                    "previous_request_id": "req-page-1",
-                    "previous_receipt": first["receipt"],
-                    "records": [
-                        {
-                            "source_url": "https://arxiv.org/abs/2609.90001",
-                            "title": "New A",
-                        },
-                        {"canonical_id": "arXiv:2609.90002", "title": "New B"},
-                    ],
-                }
-            ),
-            encoding="utf-8",
-        )
-
-        second = process_discovery_precheck.process_request(
-            request2,
-            snapshot_dir=self.snapshot,
-            rejection_ledger_path=self.ledger,
-        )
-        self.assertTrue(second["evaluation_allowed"])
-        self.assertEqual(second["decision"], "READY_FOR_EVALUATION")
-        self.assertEqual(second["stop_reason"], "TARGET_REACHED")
-        self.assertEqual(second["pages_processed"], 2)
-        self.assertEqual(second["cross_page_duplicate_filtered_count"], 1)
-        self.assertEqual(
-            [row["title"] for row in second["results"]],
-            ["New A", "New B"],
-        )
 
     def test_schema_v3_precheck_fetches_same_result_set_until_target(self) -> None:
         request = self.root / "request-v3.json"
@@ -232,29 +166,6 @@ class DiscoveryPrecheckProcessorTest(unittest.TestCase):
         self.assertEqual(result["cross_page_duplicate_filtered_count"], 1)
         self.assertEqual([row["title"] for row in result["results"]], ["New A", "New B"])
 
-    def test_iterative_request_requires_explicit_provider_has_more(self) -> None:
-        request = self.root / "request-missing-more.json"
-        request.write_text(
-            json.dumps(
-                {
-                    "schema_version": 2,
-                    "operation": "precheck_discovery_candidates",
-                    "request_id": "req-missing-more",
-                    "collector_id": "collector-missing-more",
-                    "run_key": "validation-round",
-                    "axis": "references",
-                    "records": [],
-                }
-            ),
-            encoding="utf-8",
-        )
-
-        with self.assertRaises(process_discovery_precheck.DiscoveryPrecheckRequestError):
-            process_discovery_precheck.process_request(
-                request,
-                snapshot_dir=self.snapshot,
-                rejection_ledger_path=self.ledger,
-            )
 
 
 class DiscoveryPrecheckGateTest(unittest.TestCase):
