@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-f8b09fceaf979c451783d9d6",
-  "job_id": "job-research-8c68e144047ac9bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f8b09fceaf979c451783d9d6",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f8b09fceaf979c451783d9d6","job_id":"job-research-8c68e144047ac9bb","data":{"canonical_id":"arXiv:2311.09431","arxiv_id":"2311.09431","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Striped Attention: Faster Ring Attention for Causal Transformers","summary":"Ring Attentionは系列を連続区間で各装置へ分割するため、因果マスク下では同じ通信ラウンドに全計算が必要な装置とほぼ全てマスクされる装置が混在し、最も遅い装置に同期時間が支配される。Striped Attentionはトークン位置を装置数で割った剰余ごとに縞状へ再配置し、各装置へ系列全域の位置を均等に持たせる。これにより毎ラウンドで各装置がほぼ半分のマスク済みタイルを同程度に省略できる。厳密な注意結果を維持したまま、256k系列で最大1.45〜1.50倍、16 TPUv4・786k系列で最大1.65倍の学習高速化を示す。","list_summary":"Ring Attentionの連続分割を縞状のトークン配置へ変え、因果マスクで省略できる計算を全装置へ均等化して長文Transformer学習を高速化する厳密注意方式。","authors":["William Brandon","Aniruddha Nrusimha","Kevin Qian","Zachary Ankner","Tian Jin","Zhiye Song","Jonathan Ragan-Kelley"],"authors_affiliations":"MIT CSAIL; MosaicML; MIT EECS","published":"2023-11-15","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"Ring Attention / sequence parallelism / exact distributed attention","topics":["分散注意","系列並列","因果注意","長文脈学習","負荷分散"],"importance":"因果注意の理論上約半分の不要計算を、Ring Attentionの同期負荷不均衡のため活用できない問題を、入力配置だけの変更で解消し、GPU/TPUの長系列学習を高速化する。","hardware_evaluation":"8×NVIDIA A100 80GB NVLink、4×TPUv3、16×TPUv4で1B/3B/7Bモデルを評価。","quality_effect":"注意計算は近似せず、順列同変性を利用して元の因果注意と同じ出力を得る厳密方式。位置IDと学習目標も同じ順列で並べ替える。","source":"https://arxiv.org/abs/2311.09431","sources":["https://arxiv.org/abs/2311.09431","https://arxiv.org/pdf/2311.09431"],"code":"https://github.com/exists-forall/striped_attention","implementation":"Ring AttentionのJAX実装を拡張し、入力・位置ID・学習目標の縞状順列と因果マスク規則を変更。既存のリング通信とタイル単位の計算省略を再利用する。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-f8b09fceaf979c451783d9d6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
